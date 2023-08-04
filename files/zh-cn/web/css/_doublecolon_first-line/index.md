@@ -1,8 +1,9 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line (:first-line)"
 slug: Web/CSS/::first-line
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 **`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) （CSS 伪元素）在某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes) （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。
 
@@ -26,7 +27,7 @@ slug: Web/CSS/::first-line
 >
 > 因为过去的浏览器都实现过 CSS 2 的规则，所以现在那些支持 :: 的浏览器通常同时也支持 : 的形式。
 >
-> 如果需要支持老旧的浏览器，那么`:first-line` 是唯一的选择，反之，更推荐使用`::first-line。`
+> 如果需要支持老旧的浏览器，那么 `:first-line` 是唯一的选择，反之，更推荐使用 `::first-line`。
 
 ## 语法
 
@@ -41,14 +42,18 @@ slug: Web/CSS/::first-line
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-transform: uppercase }
+p::first-line {
+  text-transform: uppercase;
+}
 ```
 
 #### 输出
@@ -62,14 +67,18 @@ p::first-line { text-transform: uppercase }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { margin-left: 20px }
+p::first-line {
+  margin-left: 20px;
+}
 ```
 
 #### 输出
@@ -83,14 +92,18 @@ p::first-line { margin-left: 20px }
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-sed do eiusmod tempor incididunt ut labore.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
+</p>
 ```
 
 #### CSS
 
 ```css
-p::first-line { text-indent: 20px }
+p::first-line {
+  text-indent: 20px;
+}
 ```
 
 #### 输出
@@ -103,7 +116,7 @@ p::first-line { text-indent: 20px }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.first-line")}}
+{{Compat}}
 
 ## 参见
 

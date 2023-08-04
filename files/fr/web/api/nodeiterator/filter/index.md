@@ -1,15 +1,8 @@
 ---
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/NodeIterator/filter
 ---
+
 {{APIRef("DOM")}}
 
 La méthode en lecture seule **`NodeIterator.filter`** renvoie un objet {{domxref("NodeFilter")}}, c'est-à-dire un objet implémentant la méthode `acceptNode(node)`, utilisée pour filtrer les noeuds.
@@ -26,10 +19,14 @@ nodeFilter = nodeIterator.filter;
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 nodeFilter = nodeIterator.filter;
 ```

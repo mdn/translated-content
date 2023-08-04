@@ -2,6 +2,7 @@
 title: CSSGroupingRule.deleteRule()
 slug: Web/API/CSSGroupingRule/deleteRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`deleteRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、子 CSS ルールの一覧からある CSS ルールを取り除きます。
@@ -9,7 +10,7 @@ slug: Web/API/CSSGroupingRule/deleteRule
 ## 構文
 
 ```js
-deleteRule(index)
+deleteRule(index);
 ```
 
 ### 引数

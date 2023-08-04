@@ -1,14 +1,8 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS Animations
-  - Experimental
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Анимации** - это модуль CSS, который позволяет анимировать изменение значений CSS-свойств, используя опорные кадры (_keyframes_). Для управления поведением таких анимаций можно задать хронометражную функцию, длительность, количество повторов и другие атрибуты.

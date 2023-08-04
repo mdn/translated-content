@@ -1,12 +1,8 @@
 ---
 title: XSLT の概要
 slug: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
-tags:
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 ---
+
 [« Transforming XML with XSLT](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 eXtensible Stylesheet Language/Transform は非常に強力な言語であり、この記事の全体的な議論はこの記事の範囲をはるかに超えていますが、基本的な概念の簡単な説明は Netscape の機能の説明の理解に役立ちます。

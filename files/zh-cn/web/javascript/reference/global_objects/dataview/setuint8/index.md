@@ -2,6 +2,7 @@
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 ---
+
 {{JSRef}}
 
 **`setUint8()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (无符号字节)。
@@ -30,7 +31,7 @@ dataview.setUint8(byteOffset, value)
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

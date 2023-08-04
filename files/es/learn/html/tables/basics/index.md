@@ -1,9 +1,8 @@
 ---
 title: Conceptos básicos de las tablas HTML
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
-original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conceptos básicos como filas y celdas, encabezados, celdas que abarcan múltiples columnas y filas, y la forma de agrupar todas las celdas de una columna para aplicarles estilo.
@@ -30,13 +29,13 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
 
 Una tabla es un conjunto estructurado de datos distribuidos en filas y columnas (**datos tabulados**). Una tabla permite buscar con rapidez y facilidad valores entre diferentes tipos de datos que indiquen algún tipo de conexión. Por ejemplo, una persona y su edad, o un día de la semana o el horario de una piscina municipal.
 
-![Una tabla de datos de ejemplo que muestra los nombres y las edades de algunas personas: Chris 38, Dennis 45, Sarah 29, Karen 47.](https://mdn.mozillademos.org/files/14583/numbers-table.png)
+![Una tabla de datos de ejemplo que muestra los nombres y las edades de algunas personas: Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-![Una tabla de datos que muestra unos horarios de clases natación](https://mdn.mozillademos.org/files/14587/swimming-timetable.png)
+![Una tabla de datos que muestra unos horarios de clases natación](swimming-timetable.png)
 
 Las tablas se utilizan con mucha frecuencia en la sociedad desde hace años, como lo demuestra este documento censal de los EUA de 1800:
 
-![Un pergamino muy antiguo; cuesta un poco leer los datos, pero muestra con claridad que las tablas de datos ya se utilizaban en 1800.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![Un pergamino muy antiguo; cuesta un poco leer los datos, pero muestra con claridad que las tablas de datos ya se utilizaban en 1800.](1800-census.jpg)
 
 Por lo tanto, no es de extrañar que los creadores de HTML proporcionen un medio con el que estructurar y presentar datos en tablas en la web.
 
@@ -206,47 +205,47 @@ Las tablas HTML están pensadas para utilizarse con datos tabulados. Por desgrac
 
 En resumen, es una mala idea usar tablas para el diseño en lugar de las [técnicas de diseño CSS](/es/docs/Learn/CSS/CSS_layout). Las razones principales son las siguientes:
 
-1.  **Las tablas de diseño reducen la accesibilidad para los usuarios con discapacidad visual**: Los [lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) que utilizan las personas con visibilidad reducida interpretan las etiquetas de una página HTML y leen su contenido para el usuario. Puesto que las tablas no son la herramienta adecuada para el diseño y el marcado es más complejo que con las técnicas de diseño CSS, la salida de los lectores de pantalla será confusa para estos usuarios.
-2.  **Las tablas generan estructuras incorrectas**: Como ya se mencionó, los diseños de tabla suelen involucrar estructuras de marcado más complejas que las técnicas de diseño. Esto puede dificultar la escritura, el mantenimiento y la depuración del código.
-3.  **Las tablas no tienen respuesta adaptativa automática**: Cuando usas contenedores de diseño adecuados (tales como {{HTMLElement ("header")}}, {{HTMLElement ("section")}}, {{HTMLElement ("article")}} o {{HTMLElement ("div")}}), su ancho predeterminado es el 100% de su elemento padre. En cambio, las tablas se dimensionan de forma predeterminada según su contenido, por lo que se necesitan medidas adicionales para que el diseño de la tabla funcione de manera efectiva en todos los dispositivos.
+1. **Las tablas de diseño reducen la accesibilidad para los usuarios con discapacidad visual**: Los [lectores de pantalla](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) que utilizan las personas con visibilidad reducida interpretan las etiquetas de una página HTML y leen su contenido para el usuario. Puesto que las tablas no son la herramienta adecuada para el diseño y el marcado es más complejo que con las técnicas de diseño CSS, la salida de los lectores de pantalla será confusa para estos usuarios.
+2. **Las tablas generan estructuras incorrectas**: Como ya se mencionó, los diseños de tabla suelen involucrar estructuras de marcado más complejas que las técnicas de diseño. Esto puede dificultar la escritura, el mantenimiento y la depuración del código.
+3. **Las tablas no tienen respuesta adaptativa automática**: Cuando usas contenedores de diseño adecuados (tales como {{HTMLElement ("header")}}, {{HTMLElement ("section")}}, {{HTMLElement ("article")}} o {{HTMLElement ("div")}}), su ancho predeterminado es el 100% de su elemento padre. En cambio, las tablas se dimensionan de forma predeterminada según su contenido, por lo que se necesitan medidas adicionales para que el diseño de la tabla funcione de manera efectiva en todos los dispositivos.
 
 ## Aprendizaje activo: Crea tu primera tabla
 
 Ya hemos hablado bastante sobre la teoría de las tablas, así que veamos un ejemplo práctico y construyamos una tabla simple.
 
-1.  En primer lugar, haz una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador.
-2.  El contenido de cada tabla está delimitado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Element/table)**. Añádelas al cuerpo de tu código HTML.
-3.  El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Element/td)** ('td' significa 'table data', _datos de tabla_). Añade lo siguiente dentro de tus etiquetas de tabla:
+1. En primer lugar, haz una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador.
+2. El contenido de cada tabla está delimitado entre estas dos etiquetas: **[`<table></table>`](/es/docs/Web/HTML/Element/table)**. Añádelas al cuerpo de tu código HTML.
+3. El contenedor más pequeño dentro de una tabla es una celda, que se crea con un elemento **[`<td>`](/es/docs/Web/HTML/Element/td)** ('td' significa 'table data', _datos de tabla_). Añade lo siguiente dentro de tus etiquetas de tabla:
 
-    ```html
-    <td>Hola, soy tu primera celda.</td>
-    ```
+   ```html
+   <td>Hola, soy tu primera celda.</td>
+   ```
 
-4.  Si quieres una fila de cuatro celdas, tienes que copiar estas etiquetas tres veces. Actualiza el contenido de la tabla para que se vea así:
+4. Si quieres una fila de cuatro celdas, tienes que copiar estas etiquetas tres veces. Actualiza el contenido de la tabla para que se vea así:
 
-    ```html
-    <td>Hola, soy tu primera celda.</td>
-    <td>Soy tu segunda celda.</td>
-    <td>Soy tu tercera celda.</td>
-    <td>Soy tu cuarta celda.</td>
-    ```
+   ```html
+   <td>Hola, soy tu primera celda.</td>
+   <td>Soy tu segunda celda.</td>
+   <td>Soy tu tercera celda.</td>
+   <td>Soy tu cuarta celda.</td>
+   ```
 
 Como verás, las celdas no se colocan una debajo de la otra, sino que se alinean automáticamente entre sí en la misma fila. Cada elemento \<td> crea una sola celda, y juntas forman la primera fila. Cada celda que agregamos hace crecer la fila.
 
 Para detener el crecimiento de esta fila y comenzar a colocar las celdas posteriores en una segunda fila, necesitamos usar el elemento **[`<tr>`](/es/docs/Web/HTML/Element/tr)** ('tr' significa 'table raw', _fila de tabla_). Vamos a verlo en detalle.
 
-1.  Coloca las cuatro celdas que has creado dentro de las etiquetas `<tr>`, de esta forma:
+1. Coloca las cuatro celdas que has creado dentro de las etiquetas `<tr>`, de esta forma:
 
-    ```html
-    <tr>
-      <td>Hola, soy tu primera celda.</td>
-      <td>Soy tu segunda celda.</td>
-      <td>Soy tu tercera celda.</td>
-      <td>Soy tu cuarta celda.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hola, soy tu primera celda.</td>
+     <td>Soy tu segunda celda.</td>
+     <td>Soy tu tercera celda.</td>
+     <td>Soy tu cuarta celda.</td>
+   </tr>
+   ```
 
-2.  Ahora que has hecho una fila, intenta hacer una o dos más: cada fila debe estar delimitada por un elemento `<tr>` adicional, con cada celda contenida en un `<td>`.
+2. Ahora que has hecho una fila, intenta hacer una o dos más: cada fila debe estar delimitada por un elemento `<tr>` adicional, con cada celda contenida en un `<td>`.
 
 Esto debería dar como resultado una tabla similar a la siguiente:
 
@@ -307,10 +306,10 @@ Ahora nos vamos a centrar en los encabezados de tabla: celdas especiales que van
     <td>Hábitos alimentarios</td>
     <td>Come las sobras de todos</td>
 
-<td>Mordisquea la comida</td>
+    <td>Mordisquea la comida</td>
     <td>Come en abundancia</td>
 
-<td>Come hasta que revienta</td>
+    <td>Come hasta que revienta</td>
   </tr>
 </table>
 ```
@@ -363,9 +362,9 @@ El problema aquí es que, si bien puedes distinguir lo que sucede, no es tan fá
 
 Intentemos mejorar esta tabla.
 
-1.  Primero, haz una copia local de nuestros archivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
-2.  Para reconocer los encabezados de la tabla como encabezados, tanto visual como semánticamente, puedes usar el elemento **[`<th>`](/es/docs/Web/HTML/Element/th)** ('th' significa 'table header', _encabezado de tabla_). Funciona exactamente igual que un `<td>`, excepto que denota un encabezado, no una celda normal. Entra en el código HTML, y cambiar todos los elementos `<td>` que delimitan los encabezados de tabla por elementos `<th>`.
-3.  Guarda tu HTML y cárgalo en un navegador. Los encabezados deberían verse como tal.
+1. Primero, haz una copia local de nuestros archivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
+2. Para reconocer los encabezados de la tabla como encabezados, tanto visual como semánticamente, puedes usar el elemento **[`<th>`](/es/docs/Web/HTML/Element/th)** ('th' significa 'table header', _encabezado de tabla_). Funciona exactamente igual que un `<td>`, excepto que denota un encabezado, no una celda normal. Entra en el código HTML, y cambiar todos los elementos `<td>` que delimitan los encabezados de tabla por elementos `<th>`.
+3. Guarda tu HTML y cárgalo en un navegador. Los encabezados deberían verse como tal.
 
 > **Nota:** Puedes encontrar nuestro ejemplo terminado en [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
@@ -399,14 +398,12 @@ El marcado inicial se ve así:
     <td>Semental</td>
   </tr>
   <tr>
-
-<th>Cocodrilo</th>
+    <th>Cocodrilo</th>
   </tr>
   <tr>
+    <th>Pollo</th>
 
-<th>Pollo</th>
-
-<td>Gallina</td>
+    <td>Gallina</td>
   </tr>
   <tr>
     <td>Gallo</td>
@@ -448,14 +445,14 @@ Necesitamos una forma de hacer que «Animales», «Hipopótamo» y «Cocodrilo»
 
 Usemos `colspan` y `rowspan` para mejorar esta tabla.
 
-1.  Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
-2.  Luego, usa `colspan` para extender las celdas «Animales», «Hipopótamo» y «Cocodrilo» dos columnas más allá.
-3.  Por último, usa `rowspan` para extender las celdas de «Caballo» y «Pollo» dos filas más abajo.
-4.  Guarda tu código y ábrelo en un navegador para ver la mejora.
+1. Primero, haz una copia local de nuestros archivos [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) en un directorio nuevo de tu ordenador. El HTML contiene el mismo ejemplo sobre perros que viste arriba.
+2. Luego, usa `colspan` para extender las celdas «Animales», «Hipopótamo» y «Cocodrilo» dos columnas más allá.
+3. Por último, usa `rowspan` para extender las celdas de «Caballo» y «Pollo» dos filas más abajo.
+4. Guarda tu código y ábrelo en un navegador para ver la mejora.
 
 > **Nota:** Puedes encontrar nuestro ejemplo terminado en [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
-## Proporcionar un estilo común a las columnas.
+## Proporcionar un estilo común a las columnas
 
 Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Elemento/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Elemento/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
 
@@ -500,14 +497,13 @@ Esto no es ideal, porque hay que repetir la información de estilo en las tres c
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
+    <th>Dato 1</th>
 
-<th>Dato 1</th>
-
-<th>Dato 2</th>
+    <th>Dato 2</th>
   </tr>
   <tr>
     <td>Calcuta</td>
@@ -526,7 +522,7 @@ Si quisiéramos aplicar la información de estilo a ambas columnas, podríamos i
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 
@@ -542,14 +538,14 @@ A continuación puedes ver el horario de una profesora de idiomas. El viernes ti
 
 Recrea la tabla a partir de los pasos siguientes.
 
-1.  Primero, haz una copia local de nuestro archivo [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) en un directorio nuevo de tu ordenador. El HTML contiene la misma tabla que viste arriba, menos la información de estilo de las columnas.
-2.  Añade un elemento `<colgroup>` en la parte superior de la tabla, justo debajo de la etiqueta `<table>`, en la que puedes añadir tus elementos `<col>` (consulta los pasos restantes a continuación).
-3.  Las dos primeras columnas deben dejarse sin estilo.
-4.  Añade un color de fondo a la tercera columna. El valor para tu atributo de `style` es `background-color:#97DB9A;`
-5.  Establece un ancho distinto para la cuarta columna. El valor de tu atributo de `style` es `width: 42px;`
-6.  Añade un color de fondo a la quinta columna. El valor para tu atributo de `style` es `background-color:#97DB9A;`
-7.  Añade un color de fondo diferente más un borde a la sexta columna, para indicar que este es un día especial porque da clases de un idioma diferente. Los valores para tu atributo de `style` son `background-color:#DCC48E; border:4px solid #C1437A;`
-8.  Los últimos dos días los tiene libres, así que no establezcas ningún color de fondo, pero sí un valor para el ancho; el valor para el atributo de `style` es `width: 42px;`
+1. Primero, haz una copia local de nuestro archivo [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) en un directorio nuevo de tu ordenador. El HTML contiene la misma tabla que viste arriba, menos la información de estilo de las columnas.
+2. Añade un elemento `<colgroup>` en la parte superior de la tabla, justo debajo de la etiqueta `<table>`, en la que puedes añadir tus elementos `<col>` (consulta los pasos restantes a continuación).
+3. Las dos primeras columnas deben dejarse sin estilo.
+4. Añade un color de fondo a la tercera columna. El valor para tu atributo de `style` es `background-color:#97DB9A;`
+5. Establece un ancho distinto para la cuarta columna. El valor de tu atributo de `style` es `width: 42px;`
+6. Añade un color de fondo a la quinta columna. El valor para tu atributo de `style` es `background-color:#97DB9A;`
+7. Añade un color de fondo diferente más un borde a la sexta columna, para indicar que este es un día especial porque da clases de un idioma diferente. Los valores para tu atributo de `style` son `background-color:#DCC48E; border:4px solid #C1437A;`
+8. Los últimos dos días los tiene libres, así que no establezcas ningún color de fondo, pero sí un valor para el ancho; el valor para el atributo de `style` es `width: 42px;`
 
 Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, puedes encontrar nuestra versión en GitHub como [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (o también puedes consultarlo [en vivo](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
@@ -558,9 +554,3 @@ Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, p
 Con esto casi hemos abarcado todos los conceptos básicos de las tablas HTML. En el próximo artículo, veremos algunas características un poco más avanzadas de las tablas y comenzaremos a pensar acerca de su accesibilidad para las personas con discapacidad visual.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## En este módulo
-
-- [Conceptos básicos de las tablas en HTML](/es/docs/Learn/HTML/Tables/Basics)
-- [Funciones avanzadas de las tablas HTML y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced)
-- [Estructuración de datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)

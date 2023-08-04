@@ -1,9 +1,9 @@
 ---
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
@@ -17,9 +17,9 @@ Hay un objeto especial `scale` disponible en Phaser con algunos métodos prácti
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -38,7 +38,7 @@ Las otras dos lineas de código en la función `preload()` son responsables de a
 También podemos agregar un color de fondo personalizado a nuestro lienzo, por lo que no se mantendrá negro. El objeto `stage` tiene una propiedad `backgroundColor` para este propósito, que podemos establecer usando la sintaxis de definición de color de CSS. Agregue la siguiente línea debajo de las otras tres que agregó anteriormente:
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## Compara tu código
@@ -49,6 +49,6 @@ Puedes verificar el código final de esta lección en la demostración en vivo a
 
 ## Pasos siguientes
 
-Ahora que hemos configurado el escalamiento de nuestro juego, continuemos con la tercera lección y descubramos cómo [cargar los assets e imprimirlos en la pantalla](https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
+Ahora que hemos configurado el escalamiento de nuestro juego, continuemos con la tercera lección y descubramos cómo [cargar los assets e imprimirlos en la pantalla](/es/docs/Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}

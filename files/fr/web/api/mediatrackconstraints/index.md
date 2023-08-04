@@ -1,20 +1,8 @@
 ---
 title: DoubleRange
 slug: Web/API/MediaTrackConstraints
-tags:
-  - API
-  - API Media Streams
-  - API de capture multimédia et de flux
-  - Contraintes
-  - Dictionnaire
-  - DoubleRange
-  - Interface
-  - Media
-  - Reference
-  - WebRTC
-translation_of: Web/API/DoubleRange
-original_slug: Web/API/DoubleRange
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 Le dictionnaire **`DoubleRange`** est utilisé pour définir une plage de valeurs à virgule flottante double précision autorisées pour une propriété, avec l'une ou les deux valeurs maximale et minimale spécifiées. Le dictionnaire {{domxref("ConstrainDouble")}} est basé sur cela, en l'augmentant pour prendre également en charge les valeurs exactes et idéales.

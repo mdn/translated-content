@@ -2,24 +2,25 @@
 title: HTMLDataListElement
 slug: Web/API/HTMLDataListElement
 l10n:
-  sourceCommit: d766739f2a7c02812a0a15a0383588c2ada4e6bd
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLDataListElement`** インターフェイスは、（継承元である {{domxref("HTMLElement")}} オブジェクトインターフェイスからの継承によって利用できるもの以外に） {{ HTMLElement("datalist") }} 要素およびその内容を操作するための特別なプロパティを提供します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります_。
 
-- {{domxref("HTMLDataListElement.options")}} {{readonlyInline}}
+- {{domxref("HTMLDataListElement.options")}} {{ReadOnlyInline}}
   - : 含まれる option 要素の集合を表す {{domxref("HTMLCollection")}} です。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります_。
 
 ## 仕様書
 

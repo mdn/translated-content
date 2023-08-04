@@ -2,6 +2,7 @@
 title: NDEFReadingEvent.NDEFReadingEvent()
 slug: Web/API/NDEFReadingEvent/NDEFReadingEvent
 ---
+
 {{securecontext_header}}{{APIRef()}}
 
 **`NDEFReadingEvent()`** コンストラクターは、新しい {{domxref("NDEFReadingEvent")}} オブジェクトを作成します。これは {{DOMxRef("NDEFReader")}} によって得られる新しい NFC 読み取りに対して配信するイベントを表します。

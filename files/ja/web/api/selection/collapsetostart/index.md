@@ -2,6 +2,7 @@
 title: collapseToStart
 slug: Web/API/Selection/collapseToStart
 ---
+
 {{ApiRef}}
 
 ## 概要

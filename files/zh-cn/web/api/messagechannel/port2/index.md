@@ -2,6 +2,7 @@
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}}接口的 **`port2`** 是一个只读属性，返回消息通道的第二个端口，该端口连接到通道另一端的上下文，也就是发送消息时的目的地。
@@ -24,15 +25,15 @@ channel.port2;
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -49,8 +50,8 @@ function handleMessage(e) {
 
 ## Browser compatibility
 
-{{Compat("api.MessageChannel.port2")}}
+{{Compat}}
 
 ## See also
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

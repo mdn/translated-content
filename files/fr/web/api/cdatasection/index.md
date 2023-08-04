@@ -1,14 +1,8 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-tags:
-  - API
-  - DOM
-  - Interface
-  - Référence(2)
-  - Section
-translation_of: Web/API/CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`CDATASection`** représente une section CDATA qui peut être utilisée dans un document XML afin d'inclure des portions de texte qui ne sont pas échappées (les symboles < et & présents dans ces portions n'ont pas besoin d'être échappés comme ils doivent l'être normalement dans un document XML).
@@ -16,7 +10,7 @@ L'interface **`CDATASection`** représente une section CDATA qui peut être util
 En termes de balisage, une section CDATA a la forme suivante :
 
 ```html
-<![CDATA[  ... ]]>
+<![CDATA[ ... ]]>
 ```
 
 Par exemple :

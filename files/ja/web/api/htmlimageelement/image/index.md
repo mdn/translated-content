@@ -2,11 +2,12 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。
 
-> **Note:** この関数を CSS の [`image()`](</ja/docs/Web/CSS/image/image>) 関数と混同しないでください。
+> **メモ:** この関数を CSS の [`image()`](</ja/docs/Web/CSS/image/image>) 関数と混同しないでください。
 
 ## 構文
 
@@ -19,9 +20,9 @@ new Image(width, height)
 ### 引数
 
 - `width` {{optional_inline}}
-  - : 画像の幅（つまり {{HTMLAttrxRef("width", "img")}} 属性に対応する値）です。
+  - : 画像の幅（つまり [`width`](/ja/docs/Web/HTML/Element/img#width) 属性に対応する値）です。
 - `height` {{optional_inline}}
-  - : 画像の高さ（つまり {{HTMLAttrxRef("height", "img")}} 属性に対応する値）です。
+  - : 画像の高さ（つまり [`height`](/ja/docs/Web/HTML/Element/img#height) 属性に対応する値）です。
 
 ## 使用上の注意
 

@@ -4,6 +4,7 @@ slug: Glossary/Site
 l10n:
   sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
+
 De façon informelle, un _site_ est un site web, c'est-à-dire un ensemble de pages web, servies depuis un même domaine, et maintenues par une seule organisation.
 
 Les navigateurs doivent parfois distinguer précisément les différents sites. Par exemple, un navigateur ne doit partager des cookies [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) que pour le même site que celui qui a écrit ces cookies.

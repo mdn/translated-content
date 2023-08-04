@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`getUTCHours()`** メソッドは、協定世界時に基づき、指定された日時の「時」を返します。
@@ -17,34 +13,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 
 ## 構文
 
-```
-dateObj.getUTCHours()
+```js-nolint
+getUTCHours()
 ```
 
 ### 返値
 
-協定世界時に基づき、与えられた日時の「時」を表す 0 から 23 までの間の整数値。
+数値です。
+`Date` オブジェクトが有効な日時を表している場合、指定された日時の協定世界時での「時」を表す、0 から 23 までの整数を指定します。
+それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
 
 ## 例
 
 ### getUTCHours() の使用
 
-次の例は、現在時刻の「時」部を変数 `hours` に代入します。
+次の例は、現在時刻の「時」の部分を変数 `hours` に代入します。
 
 ```js
-var today = new Date();
-var hours = today.getUTCHours();
+const today = new Date();
+const hours = today.getUTCHours();
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutchours', 'Date.prototype.getUTCHours')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getUTCHours")}}
+{{Compat}}
 
 ## 関連情報
 

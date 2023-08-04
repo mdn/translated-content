@@ -2,6 +2,7 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAudioElement`** 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。
@@ -39,7 +40,7 @@ _以下方法是未标准化的，请勿使用._
 你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 `HTMLAudioElement` ：
 
 ```js
-var audioElement = new Audio('car_horn.wav');
+var audioElement = new Audio("car_horn.wav");
 ```
 
 然后你可以在这个元素上调用 `play()` 方法
@@ -53,16 +54,16 @@ audioElement.play();
 一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：
 
 ```js
-var audioElement = new Audio('car_horn.wav');
-audioElement.addEventListener('loadeddata', () => {
+var audioElement = new Audio("car_horn.wav");
+audioElement.addEventListener("loadeddata", () => {
   let duration = audioElement.duration;
   // duration 变量现在存放音频的播放时长（单位秒）
-})
+});
 ```
 
 ## 事件
 
-_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用_ [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
+_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法。使用_ [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
 
 ## 规范
 
@@ -70,7 +71,7 @@ _从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAudioElement")}}
+{{Compat}}
 
 ## 参见
 

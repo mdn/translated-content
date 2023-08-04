@@ -2,6 +2,7 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** オブジェクトは、座標系における二次元または三次元の点を表します。最大三次元までの座標の値、およびオプションで視点の値も含まれます。 `DOMPoint` は {{domxref("DOMPointReadOnly")}} に基づいていますが、そのプロパティの値を変更することができます。
@@ -39,7 +40,7 @@ _`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承し�
 
 ## 例
 
-[WebXR 機器 API](/en-US/docs/Web/API/WebXR_Device_API) では、位置や向きを表すために `DOMPointReadOnly` 値が使用されます。以下のスニペットでは、 XR 機器（VR ヘッドセットや AR 機能付き携帯電話など）のポーズは {{domxref("XRSession")}} アニメーションフレームの中で {{domxref("XRFrame.getViewerPose()")}} を呼び出すことで取得することができ、それから結果の {{domxref("XRPose")}} の {{domxref("XRPose.transform","transform")}} プロパティにアクセスしています。これには 2 つの `DOMPointReadOnly` 属性があります。ベクトルを表す {{domxref("XRRigidTransform.position","position")}} と、クォータニオンを表す {{domxref("XRViewerPose.orientation","orientation")}} です。
+[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) では、位置や向きを表すために `DOMPointReadOnly` 値が使用されます。以下のスニペットでは、 XR 機器（VR ヘッドセットや AR 機能付き携帯電話など）のポーズは {{domxref("XRSession")}} アニメーションフレームの中で {{domxref("XRFrame.getViewerPose()")}} を呼び出すことで取得することができ、それから結果の {{domxref("XRPose")}} の {{domxref("XRPose.transform","transform")}} プロパティにアクセスしています。これには 2 つの `DOMPointReadOnly` 属性があります。ベクトルを表す {{domxref("XRRigidTransform.position","position")}} と、クォータニオンを表す {{domxref("XRViewerPose.orientation","orientation")}} です。
 
 ```js
 function onXRFrame(time, xrFrame) {
@@ -49,14 +50,25 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log('XR Viewer Position: {x: ' + roundToTwo(position.x)
-                                 + ', y: ' + roundToTwo(position.y)
-                                 + ', z: ' + roundToTwo(position.z));
+    console.log(
+      "XR Viewer Position: {x: " +
+        roundToTwo(position.x) +
+        ", y: " +
+        roundToTwo(position.y) +
+        ", z: " +
+        roundToTwo(position.z),
+    );
 
-    console.log('XR Viewer Orientation: {x: ' + roundToTwo(orientation.x)
-                                    + ', y: ' + roundToTwo(orientation.y)
-                                    + ', z: ' + roundToTwo(orientation.z)
-                                    + ', w: ' + roundToTwo(orientation.w));
+    console.log(
+      "XR Viewer Orientation: {x: " +
+        roundToTwo(orientation.x) +
+        ", y: " +
+        roundToTwo(orientation.y) +
+        ", z: " +
+        roundToTwo(orientation.z) +
+        ", w: " +
+        roundToTwo(orientation.w),
+    );
   }
 }
 ```

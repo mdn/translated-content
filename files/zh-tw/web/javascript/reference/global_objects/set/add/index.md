@@ -2,6 +2,7 @@
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 **`add()`** 會在一個 `Set` 物件的尾端加上一個指定 `value` 的新元素。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 ## 語法
 
-```plain
+```js
 mySet.add(value);
 ```
 
@@ -31,7 +32,7 @@ mySet.add(value);
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // chainable
+mySet.add(5).add("some text"); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]
@@ -43,9 +44,9 @@ console.log(mySet);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.delete()")}}

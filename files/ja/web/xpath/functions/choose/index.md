@@ -1,17 +1,13 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
-tags:
-  - Function
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Functions/choose
 ---
+
 {{ XsltRef() }}
 
 `choose` 関数は正負値に基づいて、指定されたオブジェクトのうち 1 つを返します。
 
-> **Note:** **注意:** このメソッドは廃止予定である `if()` の代わりに使われるべきです。
+> **メモ:** このメソッドは廃止予定である `if()` の代わりに使われるべきです。
 
 ### 構文
 
@@ -32,7 +28,7 @@ choose( boolean , object1, object2 )
 
 もし与えられた正負値が正であれば、1 つめのオブジェクトが戻される。そうでなければ 2 つめのオブジェクトが戻される。
 
-> **Note:** **注意:** 値が戻らないものまで含めて、全てのパラメータが評価される。
+> **メモ:** 値が戻らないものまで含めて、全てのパラメータが評価される。
 
 ### 定義
 

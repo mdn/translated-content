@@ -2,6 +2,7 @@
 title: Window.top
 slug: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 返回窗口层级最顶层窗口的引用。

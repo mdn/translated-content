@@ -2,6 +2,7 @@
 title: History.state
 slug: Web/API/History/state
 ---
+
 {{APIRef("History API")}}
 
 **`History.state`** プロパティは、履歴スタックの一番上の状態を表す値を返します。これは {{domxref("Window/popstate_event", "popstate")}} イベントを待つことなく、状態を見ることができる方法です。

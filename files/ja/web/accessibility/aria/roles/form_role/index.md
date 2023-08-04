@@ -1,12 +1,8 @@
 ---
-title: 'ARIA: form ロール'
-slug: Web/Accessibility/ARIA/Roles/Form_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Form_Role
+title: "ARIA: form ロール"
+slug: Web/Accessibility/ARIA/Roles/form_role
 ---
+
 フォーム (`form`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、HTML のフォームと同等の機能を提供するページ上の要素のグループを識別するために使用できます。
 
 ```html
@@ -17,13 +13,13 @@ translation_of: Web/Accessibility/ARIA/Roles/Form_Role
 
 これは、ユーザーの連絡先を収集して保存するフォームです。
 
-> **Warning:** **重要**: 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
+> **警告:** 十分に正当な理由がない限り、ARIA の フォーム (`form`) ロールではなく、HTML の {{htmlelement("form")}} 要素を使用してフォームコントロールを格納してください。 HTML の `<form>` 要素は、支援技術にフォームがあることを伝えるのに十分です。
 
 ## 説明
 
 フォーム (`form`) ランドマーク ([landmark](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)) は、(メイン ([`main`](/ja/docs/Web/Accessibility/ARIA/Roles/Main_role)) や検索 ([`search`](/ja/docs/Web/Accessibility/ARIA/Roles/Search_role)) など) 他の名前付きランドマークが適切でない場合に、全体として結合してフォームを作成する、項目とオブジェクトのコレクションを含むコンテンツのリージョンを識別します。
 
-> **Note:** {{htmlelement("form")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`form`) ランドマークとして自動的に伝えられます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を使用することを常に好むべきです。
+> **メモ:** {{htmlelement("form")}} 要素を使用すると、アクセス可能な名前が提供されている場合、コンテンツのセクションがフォーム (`form`) ランドマークとして自動的に伝えられます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を使用することを常に好むべきです。
 
 可能であれば、HTML の {{htmlelement("form")}} 要素を使用してください。 `<form>` 要素は、アクセス可能な名前 (`aria-labelledby`、`aria-label`、`title` など) がある場合にフォーム (`form`) ランドマークを定義します。 ユーザーがフォームの目的を理解できるように、文書内の各フォームに一意のラベルを付けるようにしてください。 このラベルは、支援技術のユーザーだけでなく、全てのユーザーに表示するべきです。 フォームを検索機能に使用する場合は、フォーム (`form`) ランドマークの代わりに検索 (`search`) ランドマークを使用してください。
 
@@ -47,24 +43,34 @@ translation_of: Web/Accessibility/ARIA/Roles/Form_Role
 ```html
 <div role="form" id="send-comment" aria-label="コメントを追加">
   <label for="username">ユーザー名</label>
-  <input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text">
+  <input
+    id="username"
+    name="username"
+    autocomplete="nickname"
+    autocorrect="off"
+    type="text" />
 
   <label for="email">電子メール</label>
-  <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+  <input
+    id="email"
+    name="email"
+    autocomplete="email"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    type="text" />
 
   <label for="comment">コメント</label>
   <textarea id="comment" name="comment"></textarea>
 
-  <input value="コメント" type="submit">
+  <input value="コメント" type="submit" />
 </div>
 ```
 
 代わりに `<form>` を使用することをお勧めします。
 
 ```html
-<form id="send-comment" aria-label="コメントを追加">
-  ....
-</form>
+<form id="send-comment" aria-label="コメントを追加">....</form>
 ```
 
 ## アクセシビリティに関する懸念
@@ -113,10 +119,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Form_Role
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#form","ARIA Form Role")}}                                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_form","Role Form")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -132,4 +135,4 @@ TBD
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

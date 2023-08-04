@@ -2,6 +2,7 @@
 title: GamepadHapticActuator.pulse()
 slug: Web/API/GamepadHapticActuator/pulse
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("GamepadHapticActuator")}} インターフェイスの **`pulse()`** メソッドは、指定された期間、特定の強度でハードウェアパルスを作成します。
@@ -19,7 +20,7 @@ gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ...
 - _duration_
   - : パルスの持続時間をミリ秒で表す double 。
 
-> **Note:** `pulse()` への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。
+> **メモ:** `pulse()` への繰り返しの呼び出しは、それらがまた進行中である場合、以前の呼び出しをオーバーライドします。
 
 ### 返り値
 
@@ -31,9 +32,7 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                                         | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuator-pulse', 'pulse()')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleSheet`** 接口代表一个 [CSS](/zh-CN/docs/Web/CSS) 样式表，并允许检查和编辑样式表中的规则列表。它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。
@@ -11,7 +12,8 @@ slug: Web/API/CSSStyleSheet
 例如，{{domxref("CSSStyleRule")}} 对象中的一条规则可能包含这样的样式：
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```
@@ -53,7 +55,7 @@ h1, h2 {
 _这些遗留属性是很久以前由微软提出的，不应该再使用，但这些属性短期内不会被移除。_
 
 - {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}
-  - : `rules` 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}， 其中包含样式表中所有规则的一个最新列表。
+  - : `rules` 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}，其中包含样式表中所有规则的一个最新列表。
 
 ## 遗留方法
 
@@ -78,13 +80,13 @@ _这些遗留方法是很久以前由微软提出的，应尽量避免使用，�
 
 以下是将样式表链接到文档的一些方式（可能不完整）：
 
-| 样式表与文档链接的原因                                                           | 是否出现在`document. styleSheets` 列表中 | 获取样式表对象所在的元素/规则                                        | 所在对象的接口                                                                                                                  | 从所在对象获取 CSSStyleSheet 对象                                        |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 文档中的{{HTMLElement("style")}} 和{{HTMLElement("link")}} 元素 | 是                                       | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, 或 {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| 使用 CSS {{cssxref("@import")}} 从其他样式表导入并应用到文档的规则         | 是                                       | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}} | {{domxref("CSSImportRule")}}                                                                                            | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
-| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document          | 是                                       | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("ProcessingInstruction")}}                                                                                | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| HTTP 链接头部                                                                    | 是                                       | _N/A_                                                                | N/A                                                                                                                             | N/A                                                                      |
-| 用户代理（默认）样式表                                                           | 否                                       | N/A                                                                  | N/A                                                                                                                             | N/A                                                                      |
+| 样式表与文档链接的原因                                                  | 是否出现在`document. styleSheets` 列表中 | 获取样式表对象所在的元素/规则                        | 所在对象的接口                                                                                     | 从所在对象获取 CSSStyleSheet 对象                      |
+| ----------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 文档中的{{HTMLElement("style")}} 和{{HTMLElement("link")}} 元素         | 是                                       | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}    | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, 或 {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| 使用 CSS {{cssxref("@import")}} 从其他样式表导入并应用到文档的规则      | 是                                       | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}} | {{domxref("CSSImportRule")}}                                                                       | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
+| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document | 是                                       | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}    | {{domxref("ProcessingInstruction")}}                                                               | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| HTTP 链接头部                                                           | 是                                       | _N/A_                                                | N/A                                                                                                | N/A                                                    |
+| 用户代理（默认）样式表                                                  | 否                                       | N/A                                                  | N/A                                                                                                | N/A                                                    |
 
 ## 规范
 
@@ -92,7 +94,7 @@ _这些遗留方法是很久以前由微软提出的，应尽量避免使用，�
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet")}}
+{{Compat}}
 
 ## 参见
 

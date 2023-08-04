@@ -1,8 +1,8 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 ---
+
 {{JSRef}}
 
 **`handler.has()`** 方法是针对 {{jsxref("Operators/in", "in")}} 操作符的代理方法。
@@ -13,8 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 
 ```js
 var p = new Proxy(target, {
-  has: function(target, prop) {
-  }
+  has: function (target, prop) {},
 });
 ```
 
@@ -56,15 +55,17 @@ var p = new Proxy(target, {
 下面的代码拦截了 {{jsxref("Operators/in", "in")}} 操作符。
 
 ```js
-var p = new Proxy({}, {
-  has: function(target, prop) {
-    console.log('called: ' + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    has: function (target, prop) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p); // "called: a"
-                       // true
+console.log("a" in p); // "called: a"; outputs true
 ```
 
 下面的代码违反了约束。
@@ -73,12 +74,12 @@ console.log('a' in p); // "called: a"
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  has: function(target, prop) {
+  has: function (target, prop) {
     return false;
-  }
+  },
 });
 
-'a' in p; // TypeError is thrown
+"a" in p; // TypeError is thrown
 ```
 
 ## 规范

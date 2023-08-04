@@ -2,6 +2,7 @@
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.readyState** 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 XHR 客戶端可以為下列其中一種狀態：
@@ -31,17 +32,17 @@ slug: Web/API/XMLHttpRequest/readyState
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('UNSENT', xhr.readyState); // readyState will be 0
+console.log("UNSENT", xhr.readyState); // readyState will be 0
 
-xhr.open('GET', '/api', true);
-console.log('OPENED', xhr.readyState); // readyState will be 1
+xhr.open("GET", "/api", true);
+console.log("OPENED", xhr.readyState); // readyState will be 1
 
 xhr.onprogress = function () {
-    console.log('LOADING', xhr.readyState); // readyState will be 3
+  console.log("LOADING", xhr.readyState); // readyState will be 3
 };
 
 xhr.onload = function () {
-    console.log('DONE', xhr.readyState); // readyState will be 4
+  console.log("DONE", xhr.readyState); // readyState will be 4
 };
 
 xhr.send(null);
@@ -53,4 +54,4 @@ xhr.send(null);
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.readyState")}}
+{{Compat}}

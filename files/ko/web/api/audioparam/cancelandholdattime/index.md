@@ -1,18 +1,8 @@
 ---
 title: AudioParam.cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Experimental
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelAndHoldAtTime
-  - cancelValuesAndHoldAtTime
-browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioParam")}} 인터페이스의 **`cancelAndHoldAtTime()`** 속성은 `AudioParam` 에 예정된 모든 미래의 변화를 취소하지만 다른 메서드를 사용하여 추가적인 변화가 만들어지기 전까지 주어진 시간에서 `AudioParam` 의 값을 유지합니다.
@@ -20,7 +10,7 @@ browser-compat: api.AudioParam.cancelAndHoldAtTime
 ## 구문
 
 ```js
-var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime);
 ```
 
 ### 매개변수

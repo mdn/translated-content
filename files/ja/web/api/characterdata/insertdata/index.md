@@ -1,7 +1,10 @@
 ---
-title: CharacterData.insertData()
+title: "CharacterData: insertData() メソッド"
 slug: Web/API/CharacterData/insertData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
+
 {{APIRef("DOM")}}
 
 **`insertData()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、指定されたデータをこの `CharacterData` ノードの現在のデータの、既存のデータの先頭からのオフセットの位置に挿入します。
@@ -9,7 +12,7 @@ slug: Web/API/CharacterData/insertData
 
 ## 構文
 
-```js
+```js-nolint
 characterData.insertData(offset, data)
 ```
 
@@ -23,7 +26,7 @@ characterData.insertData(offset, data)
 
 ### 返値
 
-None.
+なし。
 
 ## 例外
 
@@ -33,12 +36,12 @@ None.
 ## 例
 
 ```html
-<span>Result: </span>A string.
+<span>結果: </span>A string.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.insertData(2, "long ");
 ```

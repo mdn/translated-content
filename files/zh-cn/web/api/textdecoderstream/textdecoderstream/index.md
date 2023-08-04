@@ -2,13 +2,14 @@
 title: TextDecoderStream()
 slug: Web/API/TextDecoderStream/TextDecoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 **`TextDecoderStream()`** 构造函数创建一个新的 {{domxref("TextDecoderStream")}} 对象，该对象用于将二进制编码的文本流转换为字符串。
 
 ## 语法
 
-```js
+```js-nolint
 new TextDecoderStream(label)
 new TextDecoderStream(label, options)
 ```

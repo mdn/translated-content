@@ -2,6 +2,7 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`italics()`** method creates an {{HTMLElement("i")}} HTML element that causes a string to be italic.
@@ -23,10 +24,11 @@ The `italics()` method embeds a string in an `<i>` tag: `"<i>str</i>"`.
 The following example uses string methods to change the formatting of a string:
 
 ```js
-var worldString = 'Hello, world'; console.log(worldString.blink());  // Hello, world
-console.log(worldString.bold());  // Hello, world
+var worldString = "Hello, world";
+console.log(worldString.blink()); // Hello, world
+console.log(worldString.bold()); // Hello, world
 console.log(worldString.italics()); //Hello, world
-console.log(worldString.strike());  // Hello, world
+console.log(worldString.strike()); // Hello, world
 ```
 
 ## Specifications

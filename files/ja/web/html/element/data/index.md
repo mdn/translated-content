@@ -1,17 +1,13 @@
 ---
-title: <data>
+title: "<data>: データ要素"
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/data
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
-{{HTMLRef}}
 
-**HTML の `<data>` 要素**は、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、 {{HTMLElement("time")}} 要素を使用する必要があります。
+{{HTMLSidebar}}
+
+**`<data>`** は [HTML](/ja/docs/Web/HTML) の要素で、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、{{HTMLElement("time")}} 要素を使用する必要があります。
 
 {{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
 
@@ -19,7 +15,9 @@ translation_of: Web/HTML/Element/data
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -54,7 +52,7 @@ translation_of: Web/HTML/Element/data
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールナシ</a
+          >対応するロールなし</a
         >
       </td>
     </tr>
@@ -71,9 +69,9 @@ translation_of: Web/HTML/Element/data
 
 ## 属性
 
-この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を含みます。
+この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("value")}}
+- `value`
   - : この属性は要素の内容を機械可読な形式で指定します。
 
 ## 例
@@ -83,22 +81,23 @@ translation_of: Web/HTML/Element/data
 ```html
 <p>新製品</p>
 <ul>
- <li><data value="398">ミニケチャップ</data></li>
- <li><data value="399">ジャンボケチャップ</data></li>
- <li><data value="400">メガジャンボケチャップ</data></li>
+  <li><data value="398">ミニケチャップ</data></li>
+  <li><data value="399">ジャンボケチャップ</data></li>
+  <li><data value="400">メガジャンボケチャップ</data></li>
 </ul>
 ```
 
+### 結果
+
+{{EmbedLiveSample('Examples')}}
+
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-data-element', '&lt;data&gt;')}}             | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 関連情報
 

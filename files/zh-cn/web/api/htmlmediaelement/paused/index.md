@@ -2,6 +2,7 @@
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 `属性 (只读)HTMLMediaElement.paused` 告诉视频是否正在暂停
@@ -21,7 +22,7 @@ _仅限暂停状态 因网络原因造成的缓冲状态仍然会告诉你不在
 ## 例子
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 
@@ -31,7 +32,7 @@ console.log(obj.paused); // true
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.paused")}}
+{{Compat}}
 
 ## 参考文档
 

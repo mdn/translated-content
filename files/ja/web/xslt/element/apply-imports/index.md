@@ -1,13 +1,8 @@
 ---
 title: <xsl:apply-imports>
 slug: Web/XSLT/Element/apply-imports
-tags:
-  - XSLT
-  - apply-imports
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/apply-imports
 ---
+
 {{ XsltRef() }}
 
 `<xsl:apply-imports>` 要素は非常に秘密で、複雑なスタイルシートで主に使用されます。インポートの優先順位では、メインスタイルシートのテンプレートルールは、インポートされたスタイルシートのテンプレートルールより優先される必要があります。ただし、メインスタイルシートの同等のルールではなく、(低い優先順位の) インポートされたスタイルシートからテンプレートルールを使用するようにプロセッサを強制することが可能な場合があります。

@@ -2,6 +2,7 @@
 title: WebGLVertexArrayObject
 slug: Web/API/WebGLVertexArrayObject
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLVertexArrayObject`**接口是[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API)的一部分，顶点数组对象 (VAOs) 指向顶点数组数据，并提供不同顶点数据集合的名称。
@@ -33,7 +34,7 @@ gl.bindVertexArray(vao);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLVertexArrayObject")}}
+{{Compat}}
 
 ## 相关链接
 

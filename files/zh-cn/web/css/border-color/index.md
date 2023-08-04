@@ -2,11 +2,12 @@
 title: border-color
 slug: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 ## 概括
 
-`CSS属性` **`border-color`** 是一个用于设置元素四个边框颜色的快捷属性： {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}
+CSS 属性 **`border-color`** 是一个用于设置元素四个边框颜色的快捷属性： {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}。
 
 {{cssinfo}}
 
@@ -25,7 +26,7 @@ border-color: red yellow green;
 /* border-color: top right bottom left; 四值语法 */
 border-color: red yellow green blue;
 
-border-color: inherit
+border-color: inherit;
 ```
 
 ### 取值
@@ -58,7 +59,8 @@ border-color: inherit
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -66,7 +68,8 @@ border-color: inherit
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -74,7 +77,8 @@ border-color: inherit
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -82,7 +86,8 @@ border-color: inherit
 </div>
 <div id="trbl">
   <p><code>border-color: cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

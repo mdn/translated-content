@@ -2,6 +2,7 @@
 title: Element.classList
 slug: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`** 是一个只读属性，返回一个元素 `class` 属性的动态 {{domxref("DOMTokenList")}} 集合。这可以用于操作 class 集合。
@@ -17,8 +18,8 @@ slug: Web/API/Element/classList
 ## 示例
 
 ```js
-const div = document.createElement('div');
-div.className = 'foo';
+const div = document.createElement("div");
+div.className = "foo";
 
 // 初始状态：<div class="foo"></div>
 console.log(div.outerHTML);
@@ -34,7 +35,7 @@ console.log(div.outerHTML);
 div.classList.toggle("visible");
 
 // add/remove visible, depending on test conditional, i less than 10
-div.classList.toggle("visible", i < 10 );
+div.classList.toggle("visible", i < 10);
 
 console.log(div.classList.contains("foo"));
 

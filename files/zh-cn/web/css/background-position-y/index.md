@@ -2,6 +2,7 @@
 title: background-position-y
 slug: Web/CSS/background-position-y
 ---
+
 {{CSSRef}}
 
 ## 摘要
@@ -64,7 +65,7 @@ background-position-y: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-position-y")}}
+{{Compat}}
 
 ## 另见
 

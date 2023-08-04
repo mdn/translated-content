@@ -1,42 +1,37 @@
 ---
 title: Request.method
 slug: Web/API/Request/method
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Fetch")}}{{SeeCompatTable}}
 
-{{domxref("Request")}} インターフェースの **`method`** 読み取り専用プロパティには、リクエストメソッド（` GET、``POST など）を含みます。 `
+{{APIRef("Fetch")}}
 
-## 構文
+**`method`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストのメソッド（`GET`、`POST` など）を保持します。
 
-```
-var myMode = request.mode;
-```
+## 値
 
-### 値
-
-リクエストメソッドを示す {{domxref("ByteString")}}。
+リクエストメソッドを示す文字列です。
 
 ## 例
 
-次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストメソッドを変数に保存しています：
+次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストメソッドを変数に保存しています。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myMethod = myRequest.method; // GET
+const myRequest = new Request('flowers.jpg');
+const myMethod = myRequest.method; // GET
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                 | 状態                     | コメント           |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-method','method')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Request.method")}}
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

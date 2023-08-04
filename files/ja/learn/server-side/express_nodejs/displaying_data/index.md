@@ -1,7 +1,8 @@
 ---
-title: 'Express チュートリアル Part 5: ライブラリデータの表示'
+title: "Express チュートリアル Part 5: ライブラリデータの表示"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 これで[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)の Web サイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。
@@ -24,15 +25,15 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 次のサブ記事では、必要な Web サイトページを表示するために必要なさまざまな機能を追加するプロセスについて説明します。次のものに進む前に、順番にこれらのそれぞれを読み、作業する必要があります。
 
-1.  [async を使用した非同期フロー制御](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2.  [テンプレートプライマー](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3.  [LocalLibrary 基本テンプレート](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4.  [ホームページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5.  [ブックリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6.  [ブックインスタンスリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7.  [moment を使用した日付のフォーマット](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8.  [著者リストページとジャンルリストページのチャレンジ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9.  [ジャンル詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+1. [async を使用した非同期フロー制御](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+2. [テンプレートプライマー](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+3. [LocalLibrary 基本テンプレート](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+4. [ホームページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+5. [ブックリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+6. [ブックインスタンスリストページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+7. [moment を使用した日付のフォーマット](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+8. [著者リストページとジャンルリストページのチャレンジ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+9. [ジャンル詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
 10. [本の詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
 11. [著者詳細ページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
 12. [ブックインスタンス詳細ページとチャレンジ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
@@ -51,15 +52,3 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Moment](http://momentjs.com/docs/) (Moment ドキュメント)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュール
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館の Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトン Web サイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

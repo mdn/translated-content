@@ -1,14 +1,8 @@
 ---
 title: Document.documentURI
 slug: Web/API/Document/documentURI
-tags:
-  - API
-  - DOM
-  - Document
-  - Propriétés
-  - URI
-translation_of: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 La propriété **`documentURI`** de l'interface {{domxref("Document")}} renvoie l'emplacement du document sous forme "string" (_chaîne de caractères_).

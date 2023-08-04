@@ -1,15 +1,8 @@
 ---
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
+
 {{JSRef}}
 
 **`Int16Array`** は型付き配列で、プラットフォームのバイト順による 2 の補数形式の 16 ビット符号付き整数値の配列を表します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。

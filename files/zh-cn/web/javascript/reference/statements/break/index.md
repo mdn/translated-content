@@ -2,6 +2,7 @@
 title: break
 slug: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 **break 语句**中止当前循环，{{jsxref("Statements/switch", "switch")}}语句或{{jsxref("Statements/label", "label")}} 语句，并把程序控制流转到紧接着被中止语句后面的语句。
@@ -67,15 +68,14 @@ switch (food) {
 下面的代码中一起使用 `break` 语句和被标记的块语句。一个 `break` 语句必须内嵌在它引用的标记中。注意，`inner_block` 内嵌在 `outer_block` 中。
 
 ```js
-outer_block:{
-
-  inner_block:{
-    console.log ('1');
-    break outer_block;      // breaks out of both inner_block and outer_block
-    console.log (':-(');    // skipped
+outer_block: {
+  inner_block: {
+    console.log("1");
+    break outer_block; // breaks out of both inner_block and outer_block
+    console.log(":-("); // skipped
   }
 
-  console.log ('2');        // skipped
+  console.log("2"); // skipped
 }
 ```
 

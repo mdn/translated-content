@@ -1,7 +1,10 @@
 ---
-title: HTMLElement.tabIndex
+title: "HTMLElement: tabIndex プロパティ"
 slug: Web/API/HTMLElement/tabIndex
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`tabIndex`** は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、現在の要素のタブの順序を表します。
@@ -22,7 +25,7 @@ slug: Web/API/HTMLElement/tabIndex
 ## 例
 
 ```js
-const b1 = document.getElementById('button1');
+const b1 = document.getElementById("button1");
 
 b1.tabIndex = 1;
 ```

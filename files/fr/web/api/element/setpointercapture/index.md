@@ -1,15 +1,8 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-tags:
-  - API
-  - Capture
-  - DOM
-  - Element
-  - Méthodes
-  - Pointeur
-translation_of: Web/API/Element/setPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 La _Pointer capture_ (_capture de pointeur_) permet de re-cibler des événements pour un événement de pointeur particulier ({{domxref ("PointerEvent")}}) vers un élément particulier au lieu de la cible normale à l'emplacement d'un pointeur. Cela peut être utilisé pour garantir qu'un élément continue à recevoir des événements de pointeur même si le contact du périphérique de pointeur se déplace hors de l'élément (par exemple en faisant défiler).
@@ -39,20 +32,20 @@ Cette méthode renvoie `void` et lance une {{domxref("DOMException")}} nommée `
 
 ```html
 <html>
-<script>
-function downHandler(ev) {
- var el=document.getElementById("target");
- //L'élément cible  ('target') recevra/capturera d'autres évènements
- el.setPointerCapture(ev.pointerId);
-}
-function init() {
- var el=document.getElementById("target");
- el.onpointerdown = downHandler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
+  <script>
+    function downHandler(ev) {
+      var el = document.getElementById("target");
+      //L'élément cible  ('target') recevra/capturera d'autres évènements
+      el.setPointerCapture(ev.pointerId);
+    }
+    function init() {
+      var el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 

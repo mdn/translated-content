@@ -2,6 +2,7 @@
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 全域屬性 **`NaN`** 表示「非數值」（Not-A-Number）的數值。
@@ -29,14 +30,16 @@ NaN
 `NaN` 不等於（`==`、`!=`、`===`、`!==`）任何值，包括 NaN 本身。請使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 來確認某個數值是否為 NaN。Or perform a self-comparison: NaN, and only NaN, will compare unequal to itself.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
 
-function valueIsNaN(v) { return v !== v; }
-valueIsNaN(1);          // false
-valueIsNaN(NaN);        // true
+function valueIsNaN(v) {
+  return v !== v;
+}
+valueIsNaN(1); // false
+valueIsNaN(NaN); // true
 valueIsNaN(Number.NaN); // true
 ```
 
@@ -48,7 +51,7 @@ valueIsNaN(Number.NaN); // true
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.NaN")}}
+{{Compat}}
 
 ## 參見
 

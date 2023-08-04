@@ -2,6 +2,7 @@
 title: サイドバー
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
+
 {{AddonSidebar}}
 
 サイドバーはブラウザーウィンドウの横、ウェブページの隣に表示されるペイン（枠）です。サイドバーについて、その指定方法、デザイン、使用例などを説明します。
@@ -20,7 +21,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

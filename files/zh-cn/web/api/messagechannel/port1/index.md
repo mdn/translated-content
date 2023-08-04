@@ -2,6 +2,7 @@
 title: MessageChannel.port1
 slug: Web/API/MessageChannel/port1
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} 的只读属性 **`port1`** 返回消息通道的第一个端口，此端口连接到源上下文通道。
@@ -24,15 +25,15 @@ channel.port1;
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -49,7 +50,7 @@ function handleMessage(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageChannel.port1")}}
+{{Compat}}
 
 ## 参考
 

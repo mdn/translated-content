@@ -1,24 +1,20 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setTime()`** メソッドは、{{jsxref("Date")}} オブジェクトを協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す時刻に設定します。
 
-{{EmbedInteractiveExample("pages/js/date-settime.html")}}
+{{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
 
 ## 構文
 
-```
-dateObj.setTime(timeValue)
+```js-nolint
+setTime(timeValue)
 ```
 
 ### 引数
@@ -39,20 +35,18 @@ dateObj.setTime(timeValue)
 ### setTime() の使用
 
 ```js
-var theBigDay = new Date('July 1, 1999');
-var sameAsBigDay = new Date();
+const theBigDay = new Date('July 1, 1999');
+const sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setTime")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,16 +1,8 @@
 ---
-title: 'Window: cut event'
+title: "Window: cut event"
 slug: Web/API/Window/cut_event
-tags:
-  - API
-  - API Presse-papiers
-  - Cut
-  - Evènement
-  - Reference
-  - Web
-  - Window
-translation_of: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une action de "cut" via l'interface utilisateur du navigateur.
@@ -41,8 +33,8 @@ La cible d'origine de cet événement est le {{domxref("Element")}} qui était l
 ## Exemples
 
 ```js
-window.addEventListener('cut', (event) => {
-    console.log('cut action initiated')
+window.addEventListener("cut", (event) => {
+  console.log("cut action initiated");
 });
 ```
 

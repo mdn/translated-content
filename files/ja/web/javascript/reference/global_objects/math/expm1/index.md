@@ -1,13 +1,8 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
+
 {{JSRef}}
 
 **`Math.expm1()`** 関数は `ex - 1` (`x` は引数、 {{jsxref("Math.E", "e", "", 1)}} は自然対数の底) を返します。
@@ -39,8 +34,8 @@ Math.expm1(x)
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## ポリフィル
@@ -48,16 +43,16 @@ Math.expm1(1);  // 1.718281828459045
 これは {{jsxref("Math.exp()")}} 関数の助けを借りてエミュレートすることができます。
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

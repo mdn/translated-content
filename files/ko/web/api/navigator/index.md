@@ -1,17 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
-browser-compat: api.Navigator
-translation_of: Web/API/Navigator
 ---
+
 {{APIRef("DOM4")}}
 
 **`Navigator`** 인터페이스는 {{glossary("user agent", "사용자 에이전트")}}의 상태와 신원 정보를 나타내며, 스크립트로 해당 정보를 질의할 때와 애플리케이션을 특정 활동에 등록할 때 사용합니다.

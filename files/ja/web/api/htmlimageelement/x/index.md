@@ -1,7 +1,11 @@
 ---
-title: HTMLImageElement.x
+title: "HTMLImageElement: x プロパティ"
+short-title: x
 slug: Web/API/HTMLImageElement/x
+l10n:
+  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`x`** プロパティは読み取り専用で、ルート要素の原点からの相対座標で {{HTMLElement("img")}} 要素の左端の x 座標を示します。
@@ -17,7 +21,7 @@ slug: Web/API/HTMLImageElement/x
 
 ![要素に関連するさまざまなボックスの関係を示す図](boxmodel-3.png)
 
-> **Note:** `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
+> **メモ:** `x` プロパティは、画像の {{cssxref("display")}} プロパティの計算値が `table-column` または `table-column-group` である場合にのみ有効です。言い換えれば、いずれかが {{HTMLElement("img")}} に直接設定されているか、包含要素から継承されているか、または {{HTMLElement("col")}} や {{HTMLElement("colgroup")}} で記述されている列内にあることが必要です。
 
 ## 例
 
@@ -41,7 +45,7 @@ slug: Web/API/HTMLImageElement/x
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"</td>
+    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
   </th>
 </table>
 <pre id="log">
@@ -54,11 +58,11 @@ slug: Web/API/HTMLImageElement/x
 
 ```js
 let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo")
+let tbl = document.getElementById("userinfo");
 
-let log = msg => {
+let log = (msg) => {
   logBox.innerHTML += `${msg}<br>`;
-}
+};
 
 let cell = tbl.rows[1].cells[2];
 let image = cell.querySelector("img");
@@ -88,7 +92,8 @@ table {
   font-family: sans-serif;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(100, 100, 100);
   padding: 10px 14px;
 }

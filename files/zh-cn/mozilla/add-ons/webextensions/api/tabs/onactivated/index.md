@@ -2,14 +2,15 @@
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
+
 {{AddonSidebar()}}当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
 
 ## 语法
 
 ```js
-browser.tabs.onActivated.addListener(listener)
-browser.tabs.onActivated.removeListener(listener)
-browser.tabs.onActivated.hasListener(listener)
+browser.tabs.onActivated.addListener(listener);
+browser.tabs.onActivated.removeListener(listener);
+browser.tabs.onActivated.hasListener(listener);
 ```
 
 此事件有三个方法：
@@ -19,7 +20,7 @@ browser.tabs.onActivated.hasListener(listener)
 - `removeListener(listener)`
   - : 停止监听此事件。 `listener` 参数是将要移除的监听。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false。`
+  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false`。
 
 ## addListener 语法
 
@@ -43,7 +44,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.onActivated")}}
+{{Compat}}
 
 ## 示例
 
@@ -51,8 +52,7 @@ browser.tabs.onActivated.hasListener(listener)
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log("Tab " + activeInfo.tabId + " was activated");
 }
 
 browser.tabs.onActivated.addListener(handleActivated);

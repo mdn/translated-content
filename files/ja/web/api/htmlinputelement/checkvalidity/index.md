@@ -1,16 +1,23 @@
 ---
-title: HTMLInputElement.checkValidity()
+title: "HTMLInputElement: checkValidity() メソッド"
 slug: Web/API/HTMLInputElement/checkValidity
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.checkValidity()`** メソッドは、その要素の値の妥当性を示す論理値を返します。値が無効である場合、このメソッドは要素に {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントを発行します。
 
 ## 構文
 
-```js
-element.checkValidity();
+```js-nolint
+checkValidity()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -26,6 +33,6 @@ element.checkValidity();
 
 ## 関連情報
 
+- [reportValidity](/ja/docs/Web/API/HTMLInputElement/reportValidity)
 - [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)

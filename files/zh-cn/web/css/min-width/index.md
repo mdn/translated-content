@@ -2,7 +2,8 @@
 title: min-width
 slug: Web/CSS/min-width
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 ## 概述
 
@@ -58,9 +59,13 @@ min-width: unset
 ## 示例
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## 规范

@@ -2,6 +2,7 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadButton`** 接口定义了在一个手柄或其他控制器的唯一的一个按键，允许访问不同控制器设备可用类型的按钮的当前状态。
@@ -23,37 +24,37 @@ slug: Web/API/GamepadButton
 
 ```js
 function gameLoop() {
-  if(navigator.webkitGetGamepads) {
+  if (navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
-    if(gp.buttons[0] == 1) {
+    if (gp.buttons[0] == 1) {
       b--;
-    } else if(gp.buttons[1] == 1) {
+    } else if (gp.buttons[1] == 1) {
       a++;
-    } else if(gp.buttons[2] == 1) {
+    } else if (gp.buttons[2] == 1) {
       b++;
-    } else if(gp.buttons[3] == 1) {
+    } else if (gp.buttons[3] == 1) {
       a--;
     }
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
+    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = a * 2 + "px";
+  ball.style.top = b * 2 + "px";
 
   var start = rAF(gameLoop);
-};
+}
 ```
 
 ## 规范
@@ -62,8 +63,8 @@ function gameLoop() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GamepadButton")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 [使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)

@@ -1,19 +1,8 @@
 ---
 title: PerformanceTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceTiming/domContentLoadedEventStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domContentLoadedEventStart
-translation_of: Web/API/PerformanceTiming/domContentLoadedEventStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.domContentLoadedEventStart`](/fr/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.

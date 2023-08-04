@@ -1,11 +1,8 @@
 ---
 title: Комбинатор столбцов
 slug: Web/CSS/Column_combinator
-tags:
-  - Вёрстка
-  - Селекторы
-translation_of: Web/CSS/Column_combinator
 ---
+
 {{CSSRef("Selectors")}}{{SeeCompatTable}}
 
 **Комбинатор столбцов** (`||`) помещается между двумя селекторами CSS. Он соответствует только тем элементам, которым соответствует второй селектор, которые принадлежат элементам столбца, соответствующим первому.
@@ -19,9 +16,11 @@ col.selected || td {
 
 ## Синтаксис
 
-    column-selector || cell-selector {
-      /* свойства стиля */
-    }
+```
+column-selector || cell-selector {
+  /* свойства стиля */
+}
+```
 
 ## Примеры
 

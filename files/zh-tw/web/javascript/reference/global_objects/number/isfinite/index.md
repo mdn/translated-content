@@ -2,6 +2,7 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef}}
 
 **`Number.isFinite()`** 方法會判斷傳入的值是否為有限數（finite number）。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 ## 語法
 
-```plain
+```js-nolint
 Number.isFinite(value)
 ```
 
@@ -30,25 +31,27 @@ In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this 
 ## 範例
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+Number.isFinite("0"); // false, would've been true with
+// global isFinite('0')
+Number.isFinite(null); // false, would've been true with
+// global isFinite(null)
 ```
 
 ## Polyfill
 
 ```js
-Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+Number.isFinite =
+  Number.isFinite ||
+  function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## 規範
@@ -57,7 +60,7 @@ Number.isFinite = Number.isFinite || function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## 參見
 

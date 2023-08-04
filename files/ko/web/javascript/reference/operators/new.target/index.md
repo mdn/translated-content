@@ -1,13 +1,8 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 **`new.target`** 속성(property)은 함수 또는 생성자가 [new](/ko/docs/Web/JavaScript/Reference/Operators/new) 연산자를 사용하여 호출됐는지를 감지할 수 있습니다. [new](/ko/docs/Web/JavaScript/Reference/Operators/new) 연산자로 인스턴스화된 생성자 및 함수에서, `new.target`은 생성자 또는 함수 참조를 반환합니다. 일반 함수 호출에서는, `new.target`은 {{jsxref("undefined")}}입니다.

@@ -2,6 +2,7 @@
 title: 方法定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 自 ECMAScript 2015 開始，引入了一種於物件初始器（objects initializers）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
@@ -30,18 +31,18 @@ var obj = {
 
 ## 說明
 
-這個簡短的語法和在 ECMAScript 2015 引入 [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) 類似。
+這個簡短的語法和在 ECMAScript 2015 引入 [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) 類似。
 
 請看以下程式碼：
 
 ```js
 var obj = {
-  foo: function() {
+  foo: function () {
     /* code */
   },
-  bar: function() {
+  bar: function () {
     /* code */
-  }
+  },
 };
 ```
 
@@ -54,7 +55,7 @@ var obj = {
   },
   bar() {
     /* code */
-  }
+  },
 };
 ```
 
@@ -70,18 +71,16 @@ var obj = {
 var obj2 = {
   g: function* () {
     var index = 0;
-    while (true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // The same object using shorthand syntax
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while (true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -98,20 +97,20 @@ console.log(it.next().value); // 1
 var obj3 = {
   f: async function () {
     await some_promise;
-  }
+  },
 };
 
 // The same object using shorthand syntax
 var obj3 = {
   async f() {
     await some_promise;
-  }
+  },
 };
 ```
 
 ### Async generator methods
 
-[Generator methods](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[Generator methods](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 var obj4 = {
@@ -119,16 +118,16 @@ var obj4 = {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 
 // The same object using shorthand syntax
 var obj4 = {
-  async* f() {
-   yield 1;
-   yield 2;
-   yield 3;
-  }
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 ```
 
@@ -138,14 +137,14 @@ All method definitions are not constructors and will throw a {{jsxref("TypeError
 
 ```js example-bad
 var obj = {
-  method() {}
+  method() {},
 };
-new obj.method; // TypeError: obj.method is not a constructor
+new obj.method(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
+new obj.g(); // TypeError: obj.g is not a constructor (changed in ES2016)
 ```
 
 ## 範例
@@ -154,8 +153,10 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 ```js
 var obj = {
-  a: 'foo',
-  b() { return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -166,9 +167,15 @@ The shorthand syntax also supports computed property names.
 
 ```js
 var bar = {
-  foo0: function() { return 0; },
-  foo1() { return 1; },
-  ['foo' + 2]() { return 2; }
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0
@@ -182,7 +189,7 @@ console.log(bar.foo2()); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## 參見
 

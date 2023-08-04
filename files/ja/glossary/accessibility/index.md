@@ -2,6 +2,7 @@
 title: Accessibility (アクセシビリティ)
 slug: Glossary/Accessibility
 ---
+
 _Web アクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y までの間に 11 文字が挟まれているため、このように略す) は、身体的および技術的な制約によらず、Web サイトを使いやすく保つためのベストプラクティスです。Web アクセシビリティは、{{Glossary("W3C")}} の {{Glossary("WAI","Web Accessibility Initiative")}} (略称: WAI) によって、標準化と議論がされています。
 
 ## 関連項目
@@ -9,7 +10,7 @@ _Web アクセシビリティ_ (略語: **A11Y**、Accessibility の A から Y 
 ### 一般知識
 
 - [MDN 上 の アクセシビリティについてのリソース](/ja/docs/Web/Accessibility)
-- Wikipedia 上の {{Interwiki("wikipedia", "アクセシビリティ")}}
+- Wikipedia 上の [アクセシビリティ](https://ja.wikipedia.org/wiki/アクセシビリティ)
 
 ### Web アクセシビリティについて学ぶ
 

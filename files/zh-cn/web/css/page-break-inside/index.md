@@ -2,6 +2,7 @@
 title: page-break-inside
 slug: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
 **`page-break-inside`** CSS 属性调整当前元素内的分页符。
@@ -43,16 +44,19 @@ page-break-inside: unset;
     <span>A list</span>
     <ol>
       <li>one</li>
-<!--       <li>two</li> -->
+      <!-- <li>two</li> -->
     </ol>
   </section>
   <ul>
     <li>one</li>
-<!--     <li>two</li> -->
+    <!-- <li>two</li> -->
   </ul>
   <p>This is the second paragraph.</p>
   <p>This is the third paragraph, it contains more text.</p>
-  <p>This is the fourth paragraph. It has a little bit more text than the third one.</p>
+  <p>
+    This is the fourth paragraph. It has a little bit more text than the third
+    one.
+  </p>
 </div>
 ```
 
@@ -67,7 +71,10 @@ page-break-inside: unset;
   column-width: 100px;
 }
 
-.list, ol, ul, p {
+.list,
+ol,
+ul,
+p {
   break-inside: avoid;
 }
 
@@ -75,7 +82,9 @@ p {
   background-color: #8ca0ff;
 }
 
-ol, ul, .list {
+ol,
+ul,
+.list {
   margin: 0.5em 0;
   display: block;
   background-color: orange;
@@ -100,5 +109,5 @@ p:first-child {
 
 ## See also
 
-- [`page-break-after`](/en-US/docs/CSS/page-break-after), [`page-break-before`](/en-US/docs/CSS/page-break-before)
-- [`orphans`](/en-US/docs/CSS/orphans), [`widows`](/en-US/docs/CSS/widows)
+- [`page-break-after`](/zh-CN/docs/CSS/page-break-after), [`page-break-before`](/zh-CN/docs/CSS/page-break-before)
+- [`orphans`](/zh-CN/docs/CSS/orphans), [`widows`](/zh-CN/docs/CSS/widows)

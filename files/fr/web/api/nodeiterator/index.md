@@ -1,13 +1,8 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
-tags:
-  - API
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/NodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`NodeIterator`** représente un itérateur pour les membres d'une liste des nœuds dans un sous-arbre du DOM. Les nœuds seront renvoyés dans l'ordre du document.

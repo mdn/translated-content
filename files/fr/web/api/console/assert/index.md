@@ -1,13 +1,8 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - débogage
-translation_of: Web/API/console/assert
+slug: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message d'erreur dans la console si l'assertion est fausse. Si l'assertion est vraie, rien ne se produit.

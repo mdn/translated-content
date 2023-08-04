@@ -1,17 +1,8 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - Layout
-  - Reference
-  - Web
-  - 색
-translation_of: Web/CSS/color
 ---
+
 {{CSSRef}}
 
 **`color`** [CSS](/ko/docs/Web/API/CSS) 속성은 요소의 글씨 및 [글씨 장식](/ko/docs/Web/CSS/text-decoration)의 전경색과 {{cssxref("currentcolor")}}의 값을 설정합니다. `currentcolor`는 다른 속성에서 사용할 수 있는 간접적인 값이며, {{cssxref("border-color")}} 등 일부 속성의 기본값입니다.

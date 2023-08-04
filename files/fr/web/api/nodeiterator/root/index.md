@@ -1,15 +1,8 @@
 ---
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriété
-translation_of: Web/API/NodeIterator/root
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`NodeIterator.root`** représente le {{DOMxref("Node")}} qui est la racine de ce que le {{DOMxref("NodeIterator")}} traverse.
@@ -24,10 +17,14 @@ root = nodeIterator.root;
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = nodeIterator.root; // document.body dans ce cas
 ```

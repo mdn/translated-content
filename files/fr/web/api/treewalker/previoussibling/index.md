@@ -1,14 +1,8 @@
 ---
 title: TreeWalker.previousSibling()
 slug: Web/API/TreeWalker/previousSibling
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/TreeWalker/previousSibling
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.previousSibling()`** déplace le {{domxref("Node")}} courant vers son frère précédent, le cas échéant, et renvoie le frère trouvé. S'il n'y en a pas, elle renvoie `null` et le noeud actuel est inchangé.
@@ -23,10 +17,14 @@ node = treeWalker.previousSibling();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.previousSibling(); // renvoie null car il n'y a pas de frère précédent
 ```

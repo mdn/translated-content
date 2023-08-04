@@ -2,6 +2,7 @@
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
+
 {{JSRef}}
 
 **`join()`** 方法會將陣列（或一個[類陣列（array-like）物件](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）中所有的元素連接、合併成一個字串，並回傳此字串。
@@ -34,11 +35,11 @@ arr.join([separator])
 下方的範例中，首先宣告一個陣列—`a`，其中有三個元素。接著分別用：預設值、逗號、加號和空字串將陣列連接。
 
 ```js
-var a = ['Wind', 'Rain', 'Fire'];
-a.join();      // 'Wind,Rain,Fire'
-a.join(', ');  // 'Wind, Rain, Fire'
-a.join(' + '); // 'Wind + Rain + Fire'
-a.join('');    // 'WindRainFire'
+var a = ["Wind", "Rain", "Fire"];
+a.join(); // 'Wind,Rain,Fire'
+a.join(", "); // 'Wind, Rain, Fire'
+a.join(" + "); // 'Wind + Rain + Fire'
+a.join(""); // 'WindRainFire'
 ```
 
 ### 合併一個類陣列（array-like）物件
@@ -50,7 +51,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 //expected output: "1,a,true"
 ```
 
@@ -60,7 +61,7 @@ f(1, 'a', true);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## 參見
 

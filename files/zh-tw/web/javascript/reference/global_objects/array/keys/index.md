@@ -2,6 +2,7 @@
 title: Array.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** 方法會回傳一個包含陣列中的每一個索引之鍵（keys）的新 **`Array Iterator`** 物件。
@@ -23,11 +24,11 @@ arr.keys()
 ### 鍵迭代器不會乎略陣列中的空元素
 
 ```js
-var arr = ['a', , 'c'];
+var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## 規範
@@ -36,7 +37,7 @@ console.log(denseKeys);  // [0, 1, 2]
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## 概述
@@ -35,7 +36,7 @@ str.anchor(name)
 
 ## 示例
 
-### 例子：使用 `anchor`
+### 示例：使用 `anchor`
 
 ```js
 var myString = "Table of Contents";

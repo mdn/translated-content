@@ -2,9 +2,10 @@
 title: clearTimeout()
 slug: Web/API/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
-`WindowOrWorkerGlobalScope` 内置的**`clearTimeout()`**方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。
+`WindowOrWorkerGlobalScope` 内置的 **`clearTimeout()`** 方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。
 
 ## 语法
 
@@ -25,25 +26,33 @@ scope.clearTimeout(timeoutID)
 
 ```js
 var alarm = {
-  remind: function(aMessage) {
+  remind: function (aMessage) {
     alert(aMessage);
     delete this.timeoutID;
   },
 
-  setup: function() {
+  setup: function () {
     this.cancel();
     var self = this;
-    this.timeoutID = window.setTimeout(function(msg) {self.remind(msg);}, 1000, "Wake up!");
+    this.timeoutID = window.setTimeout(
+      function (msg) {
+        self.remind(msg);
+      },
+      1000,
+      "Wake up!",
+    );
   },
 
-  cancel: function() {
-    if(typeof this.timeoutID == "number") {
+  cancel: function () {
+    if (typeof this.timeoutID == "number") {
       window.clearTimeout(this.timeoutID);
       delete this.timeoutID;
     }
-  }
+  },
 };
-window.onclick = function() { alarm.setup() };
+window.onclick = function () {
+  alarm.setup();
+};
 ```
 
 ## 注意
@@ -54,9 +63,9 @@ window.onclick = function() { alarm.setup() };
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.clearTimeout")}}
+{{Compat}}
 
 ## 更多
 
@@ -64,4 +73,4 @@ window.onclick = function() { alarm.setup() };
 - {{domxref("WindowTimers.setInterval()")}}
 - {{domxref("WindowTimers.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)
+- [_Daemons_ management](/zh-CN/docs/JavaScript/Timers/Daemons)

@@ -1,17 +1,8 @@
 ---
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
-tags:
-  - CSS
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - grid
-  - masonry
-  - masonry-auto-flow
-browser-compat: css.properties.masonry-auto-flow
-translation_of: Web/CSS/masonry-auto-flow
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

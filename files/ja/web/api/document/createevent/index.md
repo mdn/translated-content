@@ -2,7 +2,8 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 ---
-> **Warning:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
+
+> **警告:** `createEvent` とともに使用される多くのメソッド (`initCustomEvent` など) は非推奨です。代わりに [イベントのコンストラクター](/ja/docs/Web/API/CustomEvent) を使用してください。
 
 {{ApiRef("DOM")}}
 
@@ -21,15 +22,19 @@ var event = document.createEvent(type);
 
 ```js
 // イベントを作成します。
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // イベントの名前を 'build' に定義します。
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // イベントを待受します。
-elem.addEventListener('build', function (e) {
-  // e.target が elem に対応する
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target が elem に対応する
+  },
+  false,
+);
 
 // ターゲットは任意の Element やほかの EventTarget にすることができます。
 elem.dispatchEvent(event);

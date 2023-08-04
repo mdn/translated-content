@@ -2,13 +2,14 @@
 title: Clipboard.read()
 slug: Web/API/Clipboard/read
 ---
+
 {{APIRef("Clipboard API")}}
 
 **`read()`** は {{domxref("Clipboard")}} インターフェイスのメソッドで、クリップボードの内容のコピーを要求し、返されたプロミス ({{jsxref("Promise")}}) が解決されるとそのデータを取得できます。 {{domxref("Clipboard.readText", "readText()")}} とは異なり、 `read()` メソッドは画像など任意のデータを取得することができます。
 
 クリップボードから読み込みを行うためには、まず `"clipboard-read"` 権限を取得する必要があります。
 
-> **Note:** 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
+> **メモ:** 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
 ## 構文
 
@@ -34,7 +35,7 @@ read()
 
 この例では、クリップボードの読み取りを確認または許可して、画像データを取得し、空のフレームに画像データを表示します。
 
-> **Note:** 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
+> **メモ:** 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
 
 #### HTML
 
@@ -95,6 +96,6 @@ async function pasteImage() {
 
 ## 関連情報
 
-- [クリップボード API](/en-US/docs/Web/API/Clipboard_API)
+- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async Clipboard article](https://web.dev/async-clipboard/)

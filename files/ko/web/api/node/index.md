@@ -1,18 +1,15 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - DOM
-  - Node
-translation_of: Web/API/Node
 ---
+
 {{APIRef("DOM")}}
 
-**`Node`**는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다
+**`Node`** 는 여러 가지 DOM 타입들이 상속하는 인터페이스이며 그 다양한 타입들을 비슷하게 처리할 수 있게 한다. 예를들어, 똑같은 메소드를 상속하거나 똑같은 방식으로 테스트를 할수있다
 
 다음의 인터페이스들은 모두 `Node`로부터 메소드와 프라퍼티를 상속한다: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} ({{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDATASection")}}이 상속), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}
 
-이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 null을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.
+이 인터페이스들은 메소드나 프라퍼티가 적합하지 않은 경우에 `null`을 반환할 수 있다. 그들은 예외를 발생할 수 있다 - 예를 들어 자식이 있을 수 없는 노드 타입에 자식을 추가할 때 말이다.
 
 ## 프라퍼티 <속성>
 
@@ -32,7 +29,7 @@ _부모인 {{domxref("EventTarget")}}으로부터 프라퍼티를 상속한다_.
   - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
     Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml "Linkification: http://www.w3.org/1999/xhtml") namespace in both HTML and XML trees.
+  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
     Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.
@@ -44,17 +41,17 @@ _부모인 {{domxref("EventTarget")}}으로부터 프라퍼티를 상속한다_.
   - | : Returns an `unsigned short` representing the type of the node. Possible values are: | Name | Value |
     | ------------------------------------------------------------------------------------- | ---- | ----- |
     | `ELEMENT_NODE`                                                                        | `1`  |
-    | `ATTRIBUTE_NODE` {{deprecated_inline()}}                                     | `2`  |
+    | `ATTRIBUTE_NODE` {{deprecated_inline()}}                                              | `2`  |
     | `TEXT_NODE`                                                                           | `3`  |
-    | `CDATA_SECTION_NODE` {{deprecated_inline()}}                                 | `4`  |
-    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                              | `5`  |
-    | `ENTITY_NODE` {{deprecated_inline()}}                                        | `6`  |
+    | `CDATA_SECTION_NODE` {{deprecated_inline()}}                                          | `4`  |
+    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                                       | `5`  |
+    | `ENTITY_NODE` {{deprecated_inline()}}                                                 | `6`  |
     | `PROCESSING_INSTRUCTION_NODE`                                                         | `7`  |
     | `COMMENT_NODE`                                                                        | `8`  |
     | `DOCUMENT_NODE`                                                                       | `9`  |
     | `DOCUMENT_TYPE_NODE`                                                                  | `10` |
     | `DOCUMENT_FRAGMENT_NODE`                                                              | `11` |
-    | `NOTATION_NODE` {{deprecated_inline()}}                                      | `12` |
+    | `NOTATION_NODE` {{deprecated_inline()}}                                               | `12` |
 - {{domxref("Node.nodeValue")}}
   - : Is a {{domxref("DOMString")}} representing the value of an object. For most `Node` type, this returns `null` and any set operation is ignored. For nodes of type `TEXT_NODE` ({{domxref("Text")}} objects), `COMMENT_NODE` ({{domxref("Comment")}} objects), and `PROCESSING_INSTRUCTION_NODE` ({{domxref("ProcessingInstruction")}} objects), the value corresponds to the text data contained in the object.
 - {{domxref("Node.ownerDocument")}} {{readonlyInline}}
@@ -132,7 +129,7 @@ _부모인 {{domxref("EventTarget")}}으로부터 메소드를 상속한다_.\[1
 The following function recursively cycles all child nodes of a node and executes a callback function upon them (and upon the parent node itself).
 
 ```js
-function DOMComb (oParent, oCallback) {
+function DOMComb(oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -144,26 +141,30 @@ function DOMComb (oParent, oCallback) {
 
 #### Syntax
 
-    DOMComb(parentNode, callbackFunction);
+```js
+DOMComb(parentNode, callbackFunction);
+```
 
 #### Description
 
-Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this") objects.
+Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/ko/docs/JavaScript/Reference/Operators/this) objects.
 
 #### Parameters
 
 - `parentNode`
   - : The parent node (`Node Object`).
 - `callbackFunction`
-  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : The callback function ([`Function`](/ko/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Sample usage
 
 The following example send to the `console.log` the text content of the body:
 
 ```js
-function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function printContent() {
+  if (this.nodeValue) {
+    console.log(this.nodeValue);
+  }
 }
 
 onload = function () {
@@ -175,7 +176,9 @@ onload = function () {
 
 ```js
 Element.prototype.removeAll = function () {
-  while (this.firstChild) { this.removeChild(this.firstChild); }
+  while (this.firstChild) {
+    this.removeChild(this.firstChild);
+  }
   return this;
 };
 ```

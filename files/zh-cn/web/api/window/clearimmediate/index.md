@@ -2,6 +2,7 @@
 title: window.clearImmediate
 slug: Web/API/Window/clearImmediate
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -12,15 +13,15 @@ slug: Web/API/Window/clearImmediate
 
 ## 语法
 
-```js
-window.clearImmediate(immediateID)
+```js-nolint
+clearImmediate(immediateID)
 ```
 
 这里的 immediateID 是由{{ domxref("window.setImmediate") }}返回的。
 
 ## 例子
 
-```
+```js
 var immediateID = setImmediate(function () {
   // Run some code
 }
@@ -32,7 +33,7 @@ document.getElementById("button").addEventListener(function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.clearImmediate")}}
+{{Compat}}
 
 ## 相关链接
 

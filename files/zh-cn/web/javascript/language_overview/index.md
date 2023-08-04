@@ -1,23 +1,23 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
-slug: Web/JavaScript/Language_Overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
+slug: Web/JavaScript/Language_overview
 ---
+
 {{jsSidebar}}
 
-为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。 JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
+为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
 
 我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。
 
 几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 [Ecma International](http://www.ecma-international.org)（一个欧洲标准化组织），{{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 [ECMAScript 第三版](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。
 
-> **备注：** 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。
+> **备注：** 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript。
 
 与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，[Node.js](http://nodejs.org) 之类的服务器端环境，NoSQL 数据库（如开源的 [Apache CouchDB](http://couchdb.apache.org)）、嵌入式计算机，以及包括 [GNOME](http://www.gnome.org)（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。
 
 ## 概览
 
-JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。
+JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。
 
 先从任何编程语言都不可缺少的组成部分——“类型”开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：
 
@@ -82,7 +82,7 @@ parseInt("010", 10); // 10
 一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：
 
 ```js
-parseInt("010");  //  8
+parseInt("010"); //  8
 parseInt("0x10"); // 16
 ```
 
@@ -99,9 +99,9 @@ JavaScript 还有一个类似的内置函数 {{jsxref("Global_Objects/parseFloat
 一元运算符 + 也可以把数字字符串转换成数值：
 
 ```js
-+ "42";   // 42
-+ "010";  // 10
-+ "0x10"; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 如果给定的字符串不存在数值形式，函数会返回一个特殊的值 {{jsxref("NaN")}}（Not a Number 的缩写）：
@@ -129,10 +129,10 @@ JavaScript 还有两个特殊值：[`Infinity`](/zh-CN/docs/Web/JavaScript/Refer
 -1 / 0; // -Infinity
 ```
 
-可以使用内置函数 [`isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite) 来判断一个变量是否是一个有穷数， 如果类型为`Infinity`, `-Infinity` 或 `NaN 则返回 false`：
+可以使用内置函数 [`isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite) 来判断一个变量是否是一个有穷数，如果类型为`Infinity`, `-Infinity` 或 `NaN 则返回 false`：
 
 ```js
-isFinite(1/0); // false
+isFinite(1 / 0); // false
 isFinite(Infinity); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
@@ -145,7 +145,7 @@ isFinite("0"); // true
 Number.isFinite("0"); // false
 ```
 
-> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。
+> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同，只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。
 
 ## 字符串
 
@@ -179,7 +179,7 @@ JavaScript 包含布尔类型，这个类型的变量有两个可能的值，分
 也可以使用 `Boolean()` 函数进行显式转换：
 
 ```js
-Boolean(''); // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -189,13 +189,13 @@ JavaScript 支持包括 `&&`（逻辑与）、`||` （逻辑或）和`!`（逻�
 
 ## 变量
 
-在 JavaScript 中声明一个新变量的方法是使用关键字 [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) 、[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) 和 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)：
+在 JavaScript 中声明一个新变量的方法是使用关键字 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)：
 
 **`let`** 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 下面是使用 **`let`** 声明变量作用域的例子：
@@ -224,7 +224,7 @@ var a;
 var name = "simon";
 ```
 
-一个使用 **`var` **声明变量的语句块的例子：
+一个使用 **`var`** 声明变量的语句块的例子：
 
 ```js
 // myVarVariable 在这里 *能* 被引用
@@ -238,7 +238,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 `undefined`。
 
-JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
+JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
 
 ## 运算符
 
@@ -250,7 +250,7 @@ x += 5; // 等价于 x = x + 5;
 
 可以使用 `++` 和 `--` 分别实现变量的自增和自减。两者都可以作为前缀或后缀操作符使用。
 
-[`+` 操作符](</zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#.E5.8A.A0.E6.B3.95_(.2B)>)还可以用来连接字符串：
+[`+` 操作符](</zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#.E5.8A.A0.E6.B3.95_(.2B)>) 还可以用来连接字符串：
 
 ```js
 "hello" + " world"; // hello world
@@ -268,7 +268,7 @@ x += 5; // 等价于 x = x + 5;
 JavaScript 中的[比较操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)使用 `<`、`>`、`<=` 和 `>=`，这些运算符对于数字和字符串都通用。相等的比较稍微复杂一些。由两个“`=`（等号）”组成的相等运算符有类型自适应的功能，具体例子如下：
 
 ```js
-123 == "123" // true
+123 == "123"; // true
 1 == true; // true
 ```
 
@@ -309,7 +309,7 @@ while (true) {
 var input;
 do {
   input = get_input();
-} while (inputIsNotValid(input))
+} while (inputIsNotValid(input));
 ```
 
 JavaScript 的 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环与 C 和 Java 中的相同：使用时可以在一行代码中提供控制信息。
@@ -351,46 +351,46 @@ var name = cachedName || (cachedName = getName());
 类似地，JavaScript 也有一个用于条件表达式的三元操作符：
 
 ```js
-var allowed = (age > 18) ? "yes" : "no";
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 在需要多重分支时可以使用基于一个数字或字符串的 `switch` 语句：
 
 ```js
-switch(action) {
-    case 'draw':
-        drawIt();
-        break;
-    case 'eat':
-        eatIt();
-        break;
-    default:
-        doNothing();
+switch (action) {
+  case "draw":
+    drawIt();
+    break;
+  case "eat":
+    eatIt();
+    break;
+  default:
+    doNothing();
 }
 ```
 
-如果你不使用 `break` 语句，JavaScript 解释器将会执行之后 `case` 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 `break。`
+如果你不使用 `break` 语句，JavaScript 解释器将会执行之后 `case` 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 `break`。
 
 ```js
-switch(a) {
-    case 1: // 继续向下
-    case 2:
-        eatIt();
-        break;
-    default:
-        doNothing();
+switch (a) {
+  case 1: // 继续向下
+  case 2:
+    eatIt();
+    break;
+  default:
+    doNothing();
 }
 ```
 
 `default` 语句是可选的。`switch` 和 `case` 都可以使用需要运算才能得到结果的表达式；在 `switch` 的表达式和 `case` 的表达式是使用 `===` 严格相等运算符进行比较的：
 
 ```js
-switch(1 + 3){
-    case 2 + 2:
-        yay();
-        break;
-    default:
-        neverhappens();
+switch (1 + 3) {
+  case 2 + 2:
+    yay();
+    break;
+  default:
+    neverhappens();
 }
 ```
 
@@ -426,13 +426,13 @@ var obj = {};
 
 ```js
 var obj = {
-    name: "Carrot",
-    _for: "Max",//'for' 是保留字之一，使用'_for'代替
-    details: {
-        color: "orange",
-        size: 12
-    }
-}
+  name: "Carrot",
+  _for: "Max", //'for' 是保留字之一，使用'_for'代替
+  details: {
+    color: "orange",
+    size: 12,
+  },
+};
 ```
 
 对象的属性可以通过链式（chain）表示方法进行访问：
@@ -451,7 +451,7 @@ function Person(name, age) {
 }
 
 // 定义一个对象
-var You = new Person('You', 24);
+var You = new Person("You", 24);
 // 我们创建了一个新的 Person，名称是 "You"
 // ("You" 是第一个参数，24 是第二个参数..)
 ```
@@ -460,7 +460,7 @@ var You = new Person('You', 24);
 
 ```js
 // 点表示法 (dot notation)
-obj.name = 'Simon';
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -468,21 +468,21 @@ var name = obj.name;
 
 ```js
 // 括号表示法 (bracket notation)
-obj['name'] = 'Simon';
-var name = obj['name'];
+obj["name"] = "Simon";
+var name = obj["name"];
 // can use a variable to define a key
-var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')
+var user = prompt("what is your key?");
+obj[user] = prompt("what is its value?");
 ```
 
 这两种方法在语义上也是相同的。第二种方法的优点在于属性的名称被看作一个字符串，这就意味着它可以在运行时被计算，缺点在于这样的代码有可能无法在后期被解释器优化。它也可以被用来访问某些以[预留关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)作为名称的属性的值：
 
 ```js
-obj.for = 'Simon'; // 语法错误，因为 for 是一个预留关键字
-obj["for"] = 'Simon'; // 工作正常
+obj.for = "Simon"; // 语法错误，因为 for 是一个预留关键字
+obj["for"] = "Simon"; // 工作正常
 ```
 
-> **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
+> **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
 
 关于对象和原型的详情参见： [Object.prototype](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). 解释对象原型和对象原型链可以参见：[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
@@ -522,14 +522,14 @@ a.length; // 101
 如果试图访问一个不存在的数组索引，会得到 `undefined`：
 
 ```js
-typeof(a[90]); // undefined
+typeof a[90]; // undefined
 ```
 
 可以通过如下方式遍历一个数组：
 
 ```js
 for (var i = 0; i < a.length; i++) {
-    // Do something with a[i]
+  // Do something with a[i]
 }
 ```
 
@@ -541,7 +541,7 @@ for (const currentValue of a) {
 }
 ```
 
-遍历数组的另一种方法是使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环， 然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 `Array.prototype` 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：
+遍历数组的另一种方法是使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环，然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 `Array.prototype` 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：
 
 ```js
 for (var i in a) {
@@ -552,7 +552,7 @@ for (var i in a) {
 ECMAScript 5 增加了另一个遍历数组的方法，[`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)：
 
 ```js
-["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
   // 操作 currentValue 或者 array[index]
 });
 ```
@@ -586,8 +586,8 @@ a.push(item);
 
 ```js
 function add(x, y) {
-    var total = x + y;
-    return total;
+  var total = x + y;
+  return total;
 }
 ```
 
@@ -604,18 +604,18 @@ add(); // NaN
 
 ```js
 add(2, 3, 4); // 5
- // 将前两个值相加，4 被忽略了
+// 将前两个值相加，4 被忽略了
 ```
 
 这看上去有点蠢。函数实际上是访问了函数体中一个名为 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 的内部对象，这个对象就如同一个类似于数组的对象一样，包括了所有被传入的参数。让我们重写一下上面的函数，使它可以接收任意个数的参数：
 
 ```js
 function add() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum;
 }
 
 add(2, 3, 4, 5); // 14
@@ -625,11 +625,11 @@ add(2, 3, 4, 5); // 14
 
 ```js
 function avg() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
 }
 avg(2, 3, 4, 5); // 3.5
 ```
@@ -648,15 +648,15 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
+> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表——但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
 
 ```js
 function avgArray(arr) {
-    var sum = 0;
-    for (var i = 0, j = arr.length; i < j; i++) {
-        sum += arr[i];
-    }
-    return sum / arr.length;
+  var sum = 0;
+  for (var i = 0, j = arr.length; i < j; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
 }
 avgArray([2, 3, 4, 5]); // 3.5
 ```
@@ -674,12 +674,12 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 JavaScript 允许你创建匿名函数：
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
+var avg = function () {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
 };
 ```
 
@@ -688,9 +688,9 @@ var avg = function() {
 ```js
 var a = 1;
 var b = 2;
-(function() {
-    var b = 3;
-    a += b;
+(function () {
+  var b = 3;
+  a += b;
 })();
 
 a; // 4
@@ -701,14 +701,15 @@ JavaScript 允许以递归方式调用函数。递归在处理树形结构（比
 
 ```js
 function countChars(elm) {
-    if (elm.nodeType == 3) { // 文本节点
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += countChars(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // 文本节点
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += countChars(child);
+  }
+  return count;
 }
 ```
 
@@ -716,14 +717,15 @@ function countChars(elm) {
 
 ```js
 var charsInBody = (function counter(elm) {
-    if (elm.nodeType == 3) { // 文本节点
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += counter(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // 文本节点
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += counter(child);
+  }
+  return count;
 })(document.body);
 ```
 
@@ -739,19 +741,19 @@ var charsInBody = (function counter(elm) {
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last
-    };
+  return {
+    first: first,
+    last: last,
+  };
 }
 function personFullName(person) {
-    return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-    return person.last + ', ' + person.first;
+  return person.last + ", " + person.first;
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -760,23 +762,23 @@ personFullNameReversed(s); // "Willison, Simon"
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last,
-        fullName: function() {
-            return this.first + ' ' + this.last;
-        },
-        fullNameReversed: function() {
-            return this.last + ', ' + this.first;
-        }
-    }
+  return {
+    first: first,
+    last: last,
+    fullName: function () {
+      return this.first + " " + this.last;
+    },
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
+  };
 }
 s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // Willison, Simon
 ```
 
-上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](https://developer.mozilla.org/en/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用“点”运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
+上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](/zh-CN/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用“点”运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
 
 ```js
 s = makePerson("Simon", "Willison");
@@ -790,14 +792,14 @@ fullName(); // undefined undefined
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = function() {
-        return this.first + ' ' + this.last;
-    }
-    this.fullNameReversed = function() {
-        return this.last + ', ' + this.first;
-    }
+  this.first = first;
+  this.last = last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
+  };
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
+  };
 }
 var s = new Person("Simon", "Willison");
 ```
@@ -810,16 +812,16 @@ var s = new Person("Simon", "Willison");
 
 ```js
 function personFullName() {
-    return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-    return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = personFullName;
-    this.fullNameReversed = personFullNameReversed;
+  this.first = first;
+  this.last = last;
+  this.fullName = personFullName;
+  this.fullNameReversed = personFullNameReversed;
 }
 ```
 
@@ -827,15 +829,15 @@ function Person(first, last) {
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
+  this.first = first;
+  this.last = last;
 }
-Person.prototype.fullName = function() {
-    return this.first + ' ' + this.last;
-}
-Person.prototype.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
-}
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
+};
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
+};
 ```
 
 `Person.prototype` 是一个可以被 `Person` 的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 `Person` 某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 `Person.prototype` 来判断是否存在这样一个属性。所以，任何分配给 `Person.prototype` 的东西对通过 `this` 对象构造的实例都是可用的。
@@ -844,11 +846,11 @@ Person.prototype.fullNameReversed = function() {
 
 ```js
 s = new Person("Simon", "Willison");
-s.firstNameCaps();  // TypeError on line 1: s.firstNameCaps is not a function
+s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
-    return this.first.toUpperCase()
-}
+Person.prototype.firstNameCaps = function () {
+  return this.first.toUpperCase();
+};
 s.firstNameCaps(); // SIMON
 ```
 
@@ -858,13 +860,13 @@ s.firstNameCaps(); // SIMON
 var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function() {
-    var r = "";
-    for (var i = this.length - 1; i >= 0; i--) {
-        r += this[i];
-    }
-    return r;
-}
+String.prototype.reversed = function () {
+  var r = "";
+  for (var i = this.length - 1; i >= 0; i--) {
+    r += this[i];
+  }
+  return r;
+};
 s.reversed(); // nomiS
 ```
 
@@ -880,9 +882,9 @@ s.reversed(); // nomiS
 var s = new Person("Simon", "Willison");
 s; // [object Object]
 
-Person.prototype.toString = function() {
-    return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 s.toString(); // <Person: Simon Willison>
 ```
 
@@ -890,9 +892,9 @@ s.toString(); // <Person: Simon Willison>
 
 ```js
 function trivialNew(constructor, ...args) {
-    var o = {}; // 创建一个对象
-    constructor.apply(o, args);
-    return o;
+  var o = {}; // 创建一个对象
+  constructor.apply(o, args);
+  return o;
 }
 ```
 
@@ -914,7 +916,7 @@ var bill = new Person("William", "Orange");
 
 ```js
 function lastNameCaps() {
-    return this.last.toUpperCase();
+  return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
@@ -949,9 +951,9 @@ function parentFunc() {
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
-  }
+  };
 }
 var add5 = makeAdder(5);
 var add20 = makeAdder(20);

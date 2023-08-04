@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.getFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 ---
+
 {{JSRef}}
 
 **`getFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
@@ -53,9 +47,7 @@ dataview.getFloat64(0); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat64', 'DataView.prototype.getFloat64')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

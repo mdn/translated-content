@@ -1,16 +1,8 @@
 ---
 title: Window.locationbar
 slug: Web/API/Window/locationbar
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 `locationbar` オブジェクトを返し、これで表示/非表示を確認することができます。
@@ -45,12 +37,7 @@ var visible = window.locationbar.visible;
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-locationbar',
-        'Window.locationbar')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-locationbar',
-        'Window.locationbar')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

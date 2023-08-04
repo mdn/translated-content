@@ -1,21 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints.echoCancellation
 slug: Web/API/MediaTrackSupportedConstraints/echoCancellation
-page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - echoCancellation
-browser-compat: api.MediaTrackSupportedConstraints.echoCancellation
-translation_of: Web/API/MediaTrackSupportedConstraints/echoCancellation
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`echoCancellation`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `echoCancellation` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

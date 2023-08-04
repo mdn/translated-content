@@ -2,6 +2,7 @@
 title: Creating hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。
@@ -12,12 +13,12 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
       <th scope="row">需求：</th>
       <td>
         我們在
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 入門</a
         >
         中介紹過的 HTML 基礎，以及在
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 的文字基礎知識</a
         >
         中介紹過的文字格式化技巧。
@@ -42,11 +43,12 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ## 解析連結
 
-一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 {{htmlattrxref("href", "a")}} 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
+一個基本的連結由 {{htmlelement("a")}} 元素包裹一段文字而成(當然也不一定要是文字，見下方的[區塊級連結](#區塊級連結block-level_links))，同時，你需要將網路位址填入 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性中，這個屬性有時也被叫做**超文字參考(Hypertext Reference)**或**目標(target)**。
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a href="https://www.mozilla.org/en-US/">the Mozilla homepage</a>.
 </p>
 ```
 
@@ -59,10 +61,14 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 另外一個你可能會想在連結中附加的屬性是 `title`，它的目的是攜帶一個補充訊息到連結上，好比說目標網頁有什麼樣的資訊，或者是一些警告訊息，範例如下：
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/en-US/"
-   title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+<p>
+  I'm creating a link to
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
+          mission and how to contribute"
+    >the Mozilla homepage</a
+  >.
 </p>
 ```
 
@@ -82,11 +88,13 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### 區塊級連結(Block-level links)
 
-就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
+就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
-  <img src="mozilla-image.png" alt="mozilla logo that links to the mozilla homepage">
+  <img
+    src="mozilla-image.png"
+    alt="mozilla logo that links to the mozilla homepage" />
 </a>
 ```
 
@@ -109,8 +117,10 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 - **在相同目錄裡：**如果你要連結的兩個檔案處在同一個的目錄下，你只需要寫指向的檔案名稱就行了。比方說，如果你想在 `index.html` (最上層的那個) 中加入一個通往 `contacts.html` 的超連結，你要用的 URL 就是 `contacts.html`：
 
   ```html
-  <p>Want to contact a specific staff member?
-  Find details on our <a href="contacts.html">contacts page</a>.</p>
+  <p>
+    Want to contact a specific staff member? Find details on our
+    <a href="contacts.html">contacts page</a>.
+  </p>
   ```
 
 - **往下到子目錄中**：如果你想要在 `index.html` (還是最上層的那個) 中加入一個指向 `projects/index.html` 的超連結，在指出你要的檔案之前，你需要先往下進到 `projects` 目錄裡。要做到這件事，你可以先指出目錄名稱，然後加上一個 /，最後再加上檔案名稱。因此你要寫的 URL 會是 `projects/index.html`：
@@ -129,7 +139,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ### 文件片段 (Document fragments)
 
-並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 {{htmlattrxref("id")}} 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
+並不是每次都只能連到文件的頂端，你也可以連到 HTML 文件中的某個部分，而這個部分叫做**文件片段(document fragment)**。要做到這件事，你得先為你要連的元素設定 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，通常你可以把連結設在標題(heading)上，像是下面這樣：
 
 ```html
 <h2 id="Mailing_address">Mailing address</h2>
@@ -138,13 +148,19 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 要連到特定的 `id`，你得在你的 URL 的後面加上一個 # 號，像這樣：
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 你甚至可以利用文件片段來連到*同個文件的其他部分*：
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### 絕對 URL vs. 相對 URL
@@ -178,18 +194,13 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 **好的**連結文字：[下載 Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  下載 Firefox
-</a></p>
+<p><a href="https://firefox.com/">下載 Firefox</a></p>
 ```
 
 **不好的**連結文字：[點這裡](https://firefox.com/)來下載 Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  點這裡
-</a>
-來下載 Firefox</p>
+<p><a href="https://firefox.com/">點這裡</a>來下載 Firefox</p>
 ```
 
 其它小訣竅：
@@ -204,7 +215,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 經過之前的說明，你可能會覺得無論如何都應該採用絕對連結，畢竟它們不會像相對連結一樣，因為頁面被搬移而失效。然而，對於相同網站內的連結，你應該盡量使用相對連結 (連到別的網站的連結必須使用絕對連結)，原因如下：
 
 - 首先，由於相對 URL 通常比絕對 URL 來得短，因此使用它可以增進原始碼的可讀性。
-- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
+- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
 
 ### 要連到非 HTML 的資源時請先聲明
 
@@ -216,17 +227,19 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 讓我們來看一些可以改善這些情況的方法：
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  下載銷售報告(PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    下載銷售報告(PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/" target="_blank">
-  觀看影片(將在新分頁開啟串流，HD 畫質)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/" target="_blank">
+    觀看影片(將在新分頁開啟串流，HD 畫質)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  遊玩賽車遊戲(需要 Flash)
-</a></p>
+<p><a href="http://www.example.com/car-game">遊玩賽車遊戲(需要 Flash) </a></p>
 ```
 
 ### 當連結會觸發下載時，使用下載屬性
@@ -234,8 +247,9 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 當你連結一個需要下載的資源時，你可以使用 `download` 屬性來提供一個預設的儲存檔名。以下範例是最新版的 Windows 版 Firefox 的下載連結：
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
   下載Windows上的最新版Firefox (64-bit) (English, US)
 </a>
 ```
@@ -276,7 +290,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 它的結果會像是這樣：[Send email to nowhere](mailto:nowhere@mozilla.org)。
 
-事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 {{htmlattrxref("href", "a")}} 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
+事實上，電子郵件地址是選填的。如果你將它留空 (也就是說，你的 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 只寫了 "mailto:")，使用者的 mail client 會開啟一個寄信視窗，其中並沒有指定收信人，這在使用「分享」連結時非常有用，使用者可以自行決定要寄給誰。
 
 ### 指定細節
 
@@ -285,12 +299,13 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 下面是一個包含 cc、bcc(密件副本)、subject 和 body 的範例：
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```
 
-> **備註：** 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
+> **備註：** 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method)來得知有那些常用的查詢記號。
 
 以下是 `mailto` URL 的其他例子：
 
@@ -302,22 +317,10 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 小試身手！
 
-你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
+你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
 
 ## 總結
 
 總而言之，以上就是超連結的介紹了！ 稍後你在後續的課程中學到如何位連結增添樣式時，還會再碰到它們。HTML 的下一章，我們將繼續討論文字語義(text semantics)，並看一些進階／不常見的特性，相信你會獲益良多的 — 下一站是：進階文字格式化技巧！
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## 在本主題中的內容
-
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

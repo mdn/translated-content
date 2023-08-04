@@ -2,6 +2,7 @@
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
+
 {{JSRef}}
 
 > **警告：** 尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非 JavaScript 核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 替代它。
@@ -33,17 +34,17 @@ str.substr(start[, length])
 
 ## 示例
 
-### 例子：使用 `substr`
+### 示例：使用 `substr`
 
 ```js
 var str = "abcdefghij";
 
-console.log("(1,2): "    + str.substr(1,2));   // (1,2): bc
-console.log("(-3,2): "   + str.substr(-3,2));  // (-3,2): hi
-console.log("(-3): "     + str.substr(-3));    // (-3): hij
-console.log("(1): "      + str.substr(1));     // (1): bcdefghij
-console.log("(-20, 2): " + str.substr(-20,2)); // (-20, 2): ab
-console.log("(20, 2): "  + str.substr(20,2));  // (20, 2):
+console.log("(1,2): " + str.substr(1, 2)); // (1,2): bc
+console.log("(-3,2): " + str.substr(-3, 2)); // (-3,2): hi
+console.log("(-3): " + str.substr(-3)); // (-3): hij
+console.log("(1): " + str.substr(1)); // (1): bcdefghij
+console.log("(-20, 2): " + str.substr(-20, 2)); // (-20, 2): ab
+console.log("(20, 2): " + str.substr(20, 2)); // (20, 2):
 ```
 
 ## 兼容旧环境（Polyfill）
@@ -52,24 +53,23 @@ Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该�
 
 ```js
 // only run when the substr function is broken
-if ('ab'.substr(-1) != 'b')
-{
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // did we get a negative start, calculate how much it is
       // from the beginning of the string
       if (start < 0) start = this.length + start;
 
       // call the original function
       return substr.call(this, start, length);
-    }
-  }(String.prototype.substr);
+    };
+  })(String.prototype.substr);
 }
 ```
 

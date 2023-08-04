@@ -1,8 +1,8 @@
 ---
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
-translation_of: Web/API/Clipboard/write
 ---
+
 {{APIRef("Clipboard API")}}
 
 La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitraire, comme des images, vers le presse-papier. Elle peut être utilisé pour implémenter une fonctionalité de copier coller.
@@ -28,22 +28,25 @@ Une {{jsxref("Promise")}} qui sera résolut quand les données seront écrite da
 
 ## Exemple
 
-Cette fonction d'exemple remplace l'actuel contenut du presse-papier par le texte spécifié en paramètre.
+Cette fonction d'exemple remplace l'actuel contenu du presse-papier par le texte spécifié en paramètre.
 
 ```js
 function setClipboard(text) {
   let data = new DataTransfer();
 
   data.items.add(text, "text/plain");
-  navigator.clipboard.write(data).then(function() {
-    /* success */
-  }, function() {
-    /* failure */
-  });
+  navigator.clipboard.write(data).then(
+    function () {
+      /* success */
+    },
+    function () {
+      /* failure */
+    },
+  );
 }
 ```
 
-Le code commence par la creation d'un nouveau objet {{domxref("DataTransfer")}} dans lequel le texte est placé pour être envoyé au presse-papier. {{domxref("DataTransferItemList.add()")}} est appelé pour ajouté le texte à`DataTransfer`, ensuite `write()` est appelé, en spécifiant une function d'accomplissement et une fonction d'erreur.
+Le code commence par la creation d'un nouveau objet {{domxref("DataTransfer")}} dans lequel le texte est placé pour être envoyé au presse-papier. {{domxref("DataTransferItemList.add()")}} est appelé pour ajouté le texte à `DataTransfer`, ensuite `write()` est appelé, en spécifiant une function d'accomplissement et une fonction d'erreur.
 
 ## Spécifications
 

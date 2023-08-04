@@ -2,6 +2,7 @@
 title: document.documentElement
 slug: Web/API/Document/documentElement
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.documentElement`** 是一个会返回文档对象（{{domxref("document")}}）的根{{domxref("Element", "元素")}}的只读属性（如 HTML 文档的 {{HTMLElement("html")}} 元素）。
@@ -20,8 +21,8 @@ const firstTier = rootElement.childNodes;
 
 // firstTier 是由根元素的所有子节点组成的一个 NodeList
 for (let i = 0; i < firstTier.length; i++) {
-   // 使用根节点的每个子节点
-   // 如 firstTier[i]
+  // 使用根节点的每个子节点
+  // 如 firstTier[i]
 }
 ```
 

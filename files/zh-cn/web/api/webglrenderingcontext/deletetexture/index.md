@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
 ---
+
 {{APIRef("WebGL")}}WebGLRenderingContext.deleteTexture() 方法删除指定的{{domxref("WebGLTexture")}}对象。如果纹理已被删除，则此方法无效。
 
 ## Syntax
@@ -24,8 +25,8 @@ void gl.deleteTexture(texture);
 ### Deleting a texture
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 
 // ...
@@ -39,7 +40,7 @@ gl.deleteTexture(texture);
 
 ## Browser compatibility
 
-{{Compat("api.WebGLRenderingContext.deleteTexture")}}
+{{Compat}}
 
 ## See also
 

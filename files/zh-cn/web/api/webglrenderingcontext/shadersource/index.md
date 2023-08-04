@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.shaderSource()`** 方法用于设置 {{domxref("WebGLShader")}} 着色器（顶点着色器及片元着色器）的 GLSL 程序代码。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中的 **`WebGLRenderingContext.shaderSource()`** 方法用于设置 {{domxref("WebGLShader")}} 着色器（顶点着色器及片元着色器）的 GLSL 程序代码。
 
 ## 语法
 
@@ -38,7 +39,7 @@ var source = gl.getShaderSource(shader);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.shaderSource")}}
+{{Compat}}
 
 ## 另见
 

@@ -1,18 +1,8 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - String
-  - UTF-32
-  - Unicode
-  - ポリフィル
-browser-compat: javascript.builtins.String.fromCodePoint
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 **`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントのシーケンスを使って生成された文字列を返します。

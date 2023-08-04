@@ -1,14 +1,8 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
+
 {{JSRef}}
 
 **`charCodeAt()`** メソッドは、指定された位置にある UTF-16 コードユニットを表す `0` から `65535` までの整数を返します。
@@ -36,7 +30,7 @@ str.charCodeAt(index)
 
 Unicode コードポイントの範囲は、 `0` から `1114111` (`0x10FFFF`) です。最初の 128 の Unicode コードポイントは、 ASCII 文字エンコーディングに直接対応しています。 (Unicode についての詳細は、[Java Script ガイド](/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)を参照してください。)
 
-> **Note:** **注:** `charCodeAt()` は常に `65536` より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。
+> **メモ:** `charCodeAt()` は常に `65536` より小さい値を返すことに注意してください。これは、より高いコードポイントは、実際の文字を含むように使用されている (下の値) の "代理" 擬似文字のペアで表されているためです。
 >
 > これにより、 `65536` 以上の値の個々の文字について完全な文字を検証したり再現したりするためには、 `charCodeAt(i)` だけではなく、 `charCodeAt(i+1)` (2 文字の文字列を検証/再現する場合) か `codePointAt(i)` を代わりに使用する必要があります。下記の例 2 と 3 を見てください。
 
@@ -134,9 +128,7 @@ function knownCharCodeAt(str, idx) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.charcodeat', 'String.prototype.charCodeAt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

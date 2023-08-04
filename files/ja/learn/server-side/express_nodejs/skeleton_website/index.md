@@ -1,7 +1,8 @@
 ---
-title: 'Express チュートリアル Part 2: スケルトン Web サイトの作成'
+title: "Express チュートリアル Part 2: スケルトン Web サイトの作成"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -18,7 +19,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 次のセクションでは、アプリケーションジェネレータを呼び出す方法を示し、さまざまな ビュー/CSS オプションについて簡単に説明します。また、スケルトン Web サイトの構造についても説明します。最後に、Web サイトを実行してそれが機能することを確認する方法を紹介します。
 
-> **Note:** Express アプリケーションジェネレータは、Express アプリケーション用の唯一のジェネレータというわけではありません。また、生成されたプロジェクトはファイルやディレクトリーを構造化する唯一実行可能な方法というわけではありません。しかしながら、生成されたサイトは、拡張と理解が容易なモジュール構造を持っています。最小限の Express アプリケーションについては、[Hello world の例](https://expressjs.com/ja/starter/hello-world.html) (Express ドキュメント) を参照してください。
+> **メモ:** Express アプリケーションジェネレータは、Express アプリケーション用の唯一のジェネレータというわけではありません。また、生成されたプロジェクトはファイルやディレクトリーを構造化する唯一実行可能な方法というわけではありません。しかしながら、生成されたサイトは、拡張と理解が容易なモジュール構造を持っています。最小限の Express アプリケーションについては、[Hello world の例](https://expressjs.com/ja/starter/hello-world.html) (Express ドキュメント) を参照してください。
 
 ## アプリケーションジェネレータを使用する
 
@@ -57,13 +58,13 @@ express
 
 `--view` を使用してビュー (テンプレート) エンジンを選択したり、`--css` を使用して CSS 生成エンジンを選択したりすることもできます。
 
-> **Note:** テンプレートエンジンを選択するためのその他のオプション (`--hogan`、`--ejs`、`--hbs` など) は推奨されません。`--view` (または `-v`)を使用してください。
+> **メモ:** テンプレートエンジンを選択するためのその他のオプション (`--hogan`、`--ejs`、`--hbs` など) は推奨されません。`--view` (または `-v`)を使用してください。
 
 ### どのビューエンジンを使うべきですか？
 
 Express Application Generator を使用すると、[EJS](https://www.npmjs.com/package/ejs)、[Hbs](http://github.com/donpark/hbs)、[Pug](https://pugjs.org/api/getting-started.html) (Jade)、[Twig](https://www.npmjs.com/package/twig)、[Vash](https://www.npmjs.com/package/vash) など、一般的なビュー/テンプレートエンジンを多数設定できます。ただし、ビューオプションを指定しない場合はデフォルトで Jade が選択されます。 Express 自体は、[一般的な](https://github.com/expressjs/express/wiki#template-engines)他のテンプレート言語の多くをサポートすることができます。
 
-> **Note:** ジェネレータでサポートされていないテンプレートエンジンを使用したい場合は、[Express でテンプレートエンジンを使用する](https://expressjs.com/ja/guide/using-template-engines.html) (Express ドキュメント) およびターゲットビューエンジンのドキュメントを参照してください。
+> **メモ:** ジェネレータでサポートされていないテンプレートエンジンを使用したい場合は、[Express でテンプレートエンジンを使用する](https://expressjs.com/ja/guide/using-template-engines.html) (Express ドキュメント) およびターゲットビューエンジンのドキュメントを参照してください。
 
 一般的に、あなたが必要とするすべての機能を提供し、あなたがより早く生産的になることを可能にするテンプレートエンジンを選ぶべきです ー もしくは言い換えれば、同じ方法で、他のコンポーネントを選択するということです。テンプレートエンジンを比較する際に考慮すべき点がいくつかあります。
 
@@ -81,7 +82,7 @@ Express Application Generator を使用すると、[EJS](https://www.npmjs.com/p
   - 非同期操作とストリーミングのサポート
   - サーバだけでなくクライアントでも使用できます。テンプレートエンジンをクライアント上で使用できる場合、これによりデータを提供し、レンダリングの全部または大部分をクライアント側で行うことができます
 
-> **Note:** **Tip:** インターネット上には、さまざまなオプションを比較するのに役立つ多くのリソースがあります。
+> **メモ:** **Tip:** インターネット上には、さまざまなオプションを比較するのに役立つ多くのリソースがあります。
 
 このプロジェクトでは、[Pug](https://pugjs.org/api/getting-started.html) テンプレートエンジン (これは最近名前が変更された Jade エンジンです) を使用します。これは最も一般的な Express/JavaScript テンプレート言語の 1 つで、ジェネレータによってそのままサポートされているためです。
 
@@ -89,7 +90,7 @@ Express Application Generator を使用すると、[EJS](https://www.npmjs.com/p
 
 Express Application Generator を使用すると、最も一般的な CSS スタイルシートエンジン ([LESS](http://lesscss.org/)、[SASS](http://sass-lang.com/)、[Compass](http://compass-style.org/)、[Stylus](http://stylus-lang.com/)) を使用するように構成されたプロジェクトを作成できます。
 
-> **Note:** CSS にはいくつかの制限があり、特定のタスクを困難にします。CSS スタイルシートエンジンを使用すると、CSS を定義するためのより強力な構文を使用してから、ブラウザーで使用するためにその定義を通常の CSS にコンパイルできます。
+> **メモ:** CSS にはいくつかの制限があり、特定のタスクを困難にします。CSS スタイルシートエンジンを使用すると、CSS を定義するためのより強力な構文を使用してから、ブラウザーで使用するためにその定義を通常の CSS にコンパイルできます。
 
 テンプレートエンジンと同様に、チームを最も生産的にすることができるスタイルシートエンジンを使用する必要があります。このプロジェクトでは、CSS 要件が他のものを使用することを正当化するのに十分に複雑ではないため、通常の CSS (デフォルト) を使用します。
 
@@ -143,28 +144,28 @@ express express-locallibrary-tutorial --view=pug
 
 これで、完全なスケルトンプロジェクトが完成しました。 ウェブサイトは実際にはそれほど多くは行っていませんが、それがどのように機能するかを示すために実行する価値があります。
 
-1.  まず、依存関係をインストールします (`install` コマンドはプロジェクトの **package.json** ファイルにリストされているすべての依存関係パッケージを取得します)
+1. まず、依存関係をインストールします (`install` コマンドはプロジェクトの **package.json** ファイルにリストされているすべての依存関係パッケージを取得します)
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
-2.  その後、アプリケーションを実行します
+2. その後、アプリケーションを実行します
 
-    - Windows では、次のコマンドを使用します
+   - Windows では、次のコマンドを使用します
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - macOS または Linux では、次のコマンドを使用します
+   - macOS または Linux では、次のコマンドを使用します
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
-3.  その後、ブラウザーに <http://localhost:3000/> をロードしてアプリにアクセスします
+3. その後、ブラウザーに <http://localhost:3000/> をロードしてアプリにアクセスします
 
 次のようなブラウザーページが表示されるはずです。
 
@@ -172,7 +173,7 @@ express express-locallibrary-tutorial --view=pug
 
 自分自身で _localhost:3000_ に提供している、動作する Express アプリケーションがあります。
 
-> **Note:** `npm start` コマンドを使用してアプリを起動することもできます。示されているように DEBUG 変数を指定すると、コンソールロギング/デバッグが有効になります。たとえば、上記のページにアクセスすると、次のようなデバッグ出力が表示されます。
+> **メモ:** `npm start` コマンドを使用してアプリを起動することもできます。示されているように DEBUG 変数を指定すると、コンソールロギング/デバッグが有効になります。たとえば、上記のページにアクセスすると、次のようなデバッグ出力が表示されます。
 >
 > ```bash
 > >SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -233,7 +234,7 @@ npm install -g nodemon
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **Note:** プロジェクト内のファイルを編集した場合は、サーバが再起動します (またはコマンドプロンプトで `rs` と入力していつでも再起動できます)。あなたはまだページを更新するためにブラウザーを再読み込みする必要があるでしょう。
+> **メモ:** プロジェクト内のファイルを編集した場合は、サーバが再起動します (またはコマンドプロンプトで `rs` と入力していつでも再起動できます)。あなたはまだページを更新するためにブラウザーを再読み込みする必要があるでしょう。
 >
 > "start" は実際には名前付きスクリプトにマップされた NPM コマンドなので、ここでは単に `npm start` ではなく "`npm run <scriptname>`" を呼び出す必要があります。起動スクリプトのコマンドを置き換えることもできますが、開発中は nodemon を使用するだけなので、新しいスクリプトコマンドを作成するのが理にかなっています。
 
@@ -323,10 +324,10 @@ scripts セクションは "start" スクリプトを定義します。これは
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
-> **Note:** `require()` は、現在のファイルにモジュールをインポートするために使われるグローバル Node 関数です。 ここでは相対パスを使用し、オプションの (.**js**) ファイル拡張子を省略して **app.js** モジュールを指定します。
+> **メモ:** `require()` は、現在のファイルにモジュールをインポートするために使われるグローバル Node 関数です。 ここでは相対パスを使用し、オプションの (.**js**) ファイル拡張子を省略して **app.js** モジュールを指定します。
 
 このファイルのコードの残りの部分では、特定のポート (環境変数で定義されているか、変数が定義されていない場合は 3000 で定義されている) に設定された `app` を使用して Node HTTP サーバをセットアップします。 今のところ、コードについて他に何も知る必要はありません (このファイル内のすべてが "定型句" です) が、興味があればお気軽にレビューしてください。
 
@@ -346,21 +347,21 @@ module.exports = app;
 **app.js** ファイルを詳しく見ていきましょう。まず、NPM を使用してアプリケーション用に以前にダウンロードした express、serve-favicon、morgan、cookie-parser など、`require()` を使用していくつかの便利な Node ライブラリをファイルにインポートします。path は、ファイルとディレクトリーのパスを解析するためのコア Node ライブラリです。
 
 ```js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
 ```
 
 それから routes ディレクトリーから `require()` モジュールを呼び出します。これらのモジュール/ファイルには、関連する "ルート" (URL パス) の特定のセットを処理するためのコードが含まれています。たとえばライブラリ内のすべての本をリストするためにスケルトンアプリケーションを拡張するときは、本関連のルートを処理するための新しいファイルを追加します。
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
-> **Note:** この時点で、モジュールをインポートしたばかりです。 実際にはまだそのルートを使用していません (これはファイルの少し下まで行われます)。
+> **メモ:** この時点で、モジュールをインポートしたばかりです。 実際にはまだそのルートを使用していません (これはファイルの少し下まで行われます)。
 
 次に、インポートした Express モジュールを使ってアプリオブジェクトを作成し、それを使ってビュー (テンプレート) エンジンを設定します。エンジンの設定には 2 つの部分があります。まず、 '`views`' の値を設定して、テンプレートが保存されるフォルダを指定します (この場合はサブフォルダの **/views**)。それから '`view engine`' の値を設定してテンプレートライブラリ (この場合は "pug") を指定します。
 
@@ -368,8 +369,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 次の一連の関数は `app.use()` を呼び出してミドルウェアライブラリをリクエスト処理チェーンに追加します。以前インポートしたサードパーティのライブラリに加えて、Express がプロジェクトルートの **/public** ディレクトリーにあるすべての静的ファイルを処理するようにするために、`express.static` ミドルウェアを使用します。
@@ -377,41 +378,41 @@ app.set('view engine', 'pug');
 ```js
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 他のすべてのミドルウェアがセットアップされたので、(以前にインポートした) ルート処理コードをリクエスト処理チェーンに追加します。 インポートされたコードは、サイトのさまざまな部分に特定のルートを定義します。
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
-> **Note:** 上記で指定されたパス ('/' と '`/users'`) は、インポートされたファイルで定義されているルートの接頭辞として扱われます。たとえば、インポートされたユーザーモジュールが `/profile` のルートを定義している場合は、`/users/profile` でそのルートにアクセスします。 ルートの詳細については後の記事で説明します。
+> **メモ:** 上記で指定されたパス ('/' と '`/users'`) は、インポートされたファイルで定義されているルートの接頭辞として扱われます。たとえば、インポートされたユーザーモジュールが `/profile` のルートを定義している場合は、`/users/profile` でそのルートにアクセスします。 ルートの詳細については後の記事で説明します。
 
 ファイルの最後のミドルウェアは、エラーと HTTP 404 レスポンス用のハンドラメソッドを追加します。
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -426,12 +427,12 @@ module.exports = app;
 ルートファイル **/routes/users.js** を以下に示します (ルートファイルは同様の構造を共有しているので、**index.js** も表示する必要はありません)。まず、express モジュールをロードし、それを使って `express.Router` オブジェクトを取得します。それからそのオブジェクトのルートを指定し、最後にモジュールからルーターをエクスポートします (これがファイルが **app.js** にインポートされることを可能にするものです)。
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -439,7 +440,7 @@ module.exports = router;
 
 このルートは、正しいパターンの HTTP `GET` リクエストが検出されたときに必ず呼び出されるコールバックを定義します。一致パターンは、モジュールのインポート時に指定された経路 ('`/users`') と、このファイルで定義されているもの ('`/`') です。 つまり、このルートは `/users/` の URL が受信されたときに使用されます。
 
-> **Note:** **Tip:** これを試すには、node を使用してサーバを実行し、ブラウザーの URL (<http://localhost:3000/users/>) にアクセスしてください。「リソースで応答してください」というメッセージが表示されます。
+> **メモ:** **Tip:** これを試すには、node を使用してサーバを実行し、ブラウザーの URL (<http://localhost:3000/users/>) にアクセスしてください。「リソースで応答してください」というメッセージが表示されます。
 
 上記の関心事の 1 つは、コールバック関数が 3 番目の引数 '`next`' を持ち、したがって単純なルートコールバックではなくミドルウェア関数であることです。このコードでは現在 `next` 引数を使用していませんが、`'/'` ルートパスに複数のルートハンドラを追加したい場合、将来的には役に立つかもしれません。
 
@@ -449,8 +450,8 @@ module.exports = router;
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 
@@ -480,15 +481,3 @@ block content
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express ドキュメント)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュール
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館の Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトン Web サイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

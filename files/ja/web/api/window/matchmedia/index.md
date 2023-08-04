@@ -1,15 +1,8 @@
 ---
 title: window.matchMedia
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-translation_of: Web/API/Window/matchMedia
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -40,9 +33,7 @@ if (window.matchMedia( "(min-width: 400px)" ).matches) {
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ互換性
 

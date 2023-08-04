@@ -1,7 +1,8 @@
 ---
-title: 'Window: blur event'
+title: "Window: blur event"
 slug: Web/API/Window/blur_event
 ---
+
 {{APIRef}}
 
 当元素失去焦点时，**`blur`**事件将触发。
@@ -64,19 +65,20 @@ slug: Web/API/Window/blur_event
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### 结果
@@ -89,11 +91,11 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.blur_event")}}
+{{Compat}}
 
-{{DOMxRef(" document. activeelement ")}}的值在处理 ({{bug(452307)}}) 时因浏览器而异 ;({{bug(452307)}}):IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。
+{{DOMxRef("document. activeelement")}} 的值在处理时因浏览器而异（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。
 
 ## 参见
 
-- 相关联事件: {{domxref("Window/focus_event", "focus")}}
+- 相关联事件：{{domxref("Window/focus_event", "focus")}}
 - Element 目标上的这个事件:{{domxref("Element/blur_event", "blur")}} 事件

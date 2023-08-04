@@ -1,16 +1,27 @@
 ---
-title: HTMLInputElement.select()
+title: "HTMLInputElement: select() メソッド"
 slug: Web/API/HTMLInputElement/select
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement.select()`** メソッドは、{{HTMLElement("textarea")}} 要素またはテキストフィールドを含む {{HTMLElement("input")}} 要素内のすべてのテキストを選択します。
 
 ## 構文
 
-```js
-element.select();
+```js-nolint
+select()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -19,7 +30,7 @@ element.select();
 ### HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Hello world!">
+<input type="text" id="text-box" size="20" value="Hello world!" />
 <button onclick="selectText()">テキストを選択</button>
 ```
 
@@ -27,7 +38,7 @@ element.select();
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.select();
 }
@@ -35,7 +46,7 @@ function selectText() {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## メモ
 
@@ -46,7 +57,9 @@ function selectText() {
 ```html
 <input onClick="this.select();" value="Sample Text" />
 <!-- equivalent to -->
-<input onClick="this.setSelectionRange(0, this.value.length);" value="Sample Text" />
+<input
+  onClick="this.setSelectionRange(0, this.value.length);"
+  value="Sample Text" />
 ```
 
 ## 仕様書

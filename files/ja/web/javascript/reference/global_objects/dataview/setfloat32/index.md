@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
 ---
+
 {{JSRef}}
 
 **`setFloat32()`** メソッドは、符号付き 32 ビット浮動小数点数 (float) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
@@ -52,9 +46,7 @@ dataview.getFloat32(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("video")}}和{{htmlelement("audio")}} — 这些元素通过自带的 API 来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。
@@ -35,9 +36,12 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -45,7 +49,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的{{htmlattrxref("controls", "video")}}属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
+你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -63,9 +67,9 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 ### 入门
 
-想要使用这个示例的代码来入门，请下载[media-player-start.zip](https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip) 并解压到您的硬盘上的一个新建目录里。如果想要下载[examples repo](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
+想要使用这个示例的代码来入门，请下载 [media-player-start.zip](https://github.com/mdn/learning-area/raw/main/javascript/apis/video-audio/start/media-player-start.zip) 并解压到你的硬盘上的一个新建目录里。如果想要下载[示例仓库](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
 
-下载并解压之后，如果您加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
+下载并解压之后，如果你加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
 
 #### 探索 HTML
 
@@ -96,7 +100,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 - 控件 HTML 大概是最有趣的：
 
   - 我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.
-  - 每个`<button>` 都有一个`class名` , 一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
+  - 每个`<button>` 都有一个 `class` 名，一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
   - 有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩，我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的`<div>` 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的，[点击查看完成版本](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### 探索 CSS
@@ -119,7 +123,8 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
   display: flex;
 }
 
-.player:hover .controls, player:focus .controls {
+.player:hover .controls,
+player:focus .controls {
   opacity: 1;
 }
 ```
@@ -132,13 +137,14 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 ```css
 @font-face {
-   font-family: 'HeydingsControlsRegular';
-   src: url('fonts/heydings_controls-webfont.eot');
-   src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/heydings_controls-webfont.woff') format('woff'),
-        url('fonts/heydings_controls-webfont.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
+  font-family: "HeydingsControlsRegular";
+  src: url("fonts/heydings_controls-webfont.eot");
+  src:
+    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.woff") format("woff"),
+    url("fonts/heydings_controls-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 button:before {
@@ -156,7 +162,7 @@ button:before {
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
 - 我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。
-- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
+- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
 图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
@@ -176,7 +182,7 @@ button:before {
 
 .timer div {
   position: absolute;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   left: 0;
   top: 0;
   width: 0;
@@ -203,34 +209,34 @@ button:before {
 1. 在与 index.html 文件相同的目录下创建新的 JavaScript 文件。命名为 `custom-player.js`。
 2. 在此文件的顶部，插入以下代码：
 
-    ```js
-    var media = document.querySelector('video');
-    var controls = document.querySelector('.controls');
+   ```js
+   var media = document.querySelector("video");
+   var controls = document.querySelector(".controls");
 
-    var play = document.querySelector('.play');
-    var stop = document.querySelector('.stop');
-    var rwd = document.querySelector('.rwd');
-    var fwd = document.querySelector('.fwd');
+   var play = document.querySelector(".play");
+   var stop = document.querySelector(".stop");
+   var rwd = document.querySelector(".rwd");
+   var fwd = document.querySelector(".fwd");
 
-    var timerWrapper = document.querySelector('.timer');
-    var timer = document.querySelector('.timer span');
-    var timerBar = document.querySelector('.timer div');
-    ```
+   var timerWrapper = document.querySelector(".timer");
+   var timer = document.querySelector(".timer span");
+   var timerBar = document.querySelector(".timer div");
+   ```
 
-    这里我们创建变量来保存对我们想要操作的所有对象的引用。有如下三组：
+   这里我们创建变量来保存对我们想要操作的所有对象的引用。有如下三组：
 
-    - `<video>` 元素，和控制栏。
-    - 播放/暂停，停止，快退，和快进按钮。
-    - 进度条外面的 `<div>`，数字计时器的 `<span>`，以及内部的 `<div>` 会随着视频播放逐渐变宽。
+   - `<video>` 元素，和控制栏。
+   - 播放/暂停，停止，快退，和快进按钮。
+   - 进度条外面的 `<div>`，数字计时器的 `<span>`，以及内部的 `<div>` 会随着视频播放逐渐变宽。
 
 3. 接下来，在代码的底部插入以下内容：
 
-    ```js
-    media.removeAttribute('controls');
-    controls.style.visibility = 'visible';
-    ```
+   ```js
+   media.removeAttribute("controls");
+   controls.style.visibility = "visible";
+   ```
 
-    这两行从视频中删除默认浏览器控件，并使自定义控件可见。
+   这两行从视频中删除默认浏览器控件，并使自定义控件可见。
 
 #### 播放和暂停视频
 
@@ -238,147 +244,147 @@ button:before {
 
 1. 首先，将以下内容添加到您代码的底部，以便于在单击播放按钮时调用 `playPauseMedia()`函数：
 
-    ```js
-    play.addEventListener('click', playPauseMedia);
-    ```
+   ```js
+   play.addEventListener("click", playPauseMedia);
+   ```
 
 2. 现在定义 `playPauseMedia()` 函数——再次添加以下内容到您代码底部：
 
-    ```js
-    function playPauseMedia() {
-      if(media.paused) {
-        play.setAttribute('data-icon','u');
-        media.play();
-      } else {
-        play.setAttribute('data-icon','P');
-        media.pause();
-      }
-    }
-    ```
+   ```js
+   function playPauseMedia() {
+     if (media.paused) {
+       play.setAttribute("data-icon", "u");
+       media.play();
+     } else {
+       play.setAttribute("data-icon", "P");
+       media.pause();
+     }
+   }
+   ```
 
-    我们使用 if 语句来检查视频是否暂停。如果视频已暂停，{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于 0 的时间段都是视频暂停状态。如果已暂停，我们把 play 按钮的 `data-icon` 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。
+   我们使用 if 语句来检查视频是否暂停。如果视频已暂停，{{domxref("HTMLMediaElement.paused")}} 属性将返回 true，任何视频没有播放的时间，包括第一次加载时处于 0 的时间段都是视频暂停状态。如果已暂停，我们把 play 按钮的 `data-icon` 属性值设置成"u", 用以表示 "暂停" 按钮图标，并且调用{{domxref("HTMLMediaElement.play()")}} 函数播放视频。
 
-    点击第二次，按钮将会切换回去——"播放"按钮图标将会再次显示，并且视频将会被{{domxref("HTMLMediaElement.paused()")}} 函数暂停。
+   点击第二次，按钮将会切换回去——"播放"按钮图标将会再次显示，并且视频将会被{{domxref("HTMLMediaElement.paused()")}} 函数暂停。
 
 #### 暂停视频
 
-1. 接下来，让我们添加处理视频停止的方法。添加以下的 [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) 行在你之前添加的内容的下面：
+1. 接下来，让我们添加处理视频停止的方法。添加以下的 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 行在你之前添加的内容的下面：
 
-    ```js
-    stop.addEventListener('click', stopMedia);
-    media.addEventListener('ended', stopMedia);
-    ```
+   ```js
+   stop.addEventListener("click", stopMedia);
+   media.addEventListener("ended", stopMedia);
+   ```
 
-    {{event("click")}} 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由{{event("ended")}} 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
+   [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由[`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
-2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia() 后面`添加以下函数：
+2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
 
-    ```plain
-    function stopMedia() {
-      media.pause();
-      media.currentTime = 0;
-      play.setAttribute('data-icon','P');
-    }
-    ```
+   ```plain
+   function stopMedia() {
+     media.pause();
+     media.currentTime = 0;
+     play.setAttribute('data-icon','P');
+   }
+   ```
 
-    在 HTMLMediaElement API 中没有 `stop()` 方法——等效的办法是先用 `pause()` 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为 0。设置 `currentTime` 的值（单位：秒）将会立刻使视频跳到该位置。
+   在 HTMLMediaElement API 中没有 `stop()` 方法——等效的办法是先用 `pause()` 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为 0。设置 `currentTime` 的值（单位：秒）将会立刻使视频跳到该位置。
 
-    之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。
+   之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。
 
 #### 探索快进和快退
 
 有许多方法可以实现快退和快进功能;在这里，我们向您展示了一种相对复杂的方式，当按意外顺序按下不同的按钮时，它不会中断。
 
-1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)：
+1. 首先，在前面的代码之下添加以下两个[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)：
 
-    ```js
-    rwd.addEventListener('click', mediaBackward);
-    fwd.addEventListener('click', mediaForward);
-    ```
+   ```js
+   rwd.addEventListener("click", mediaBackward);
+   fwd.addEventListener("click", mediaForward);
+   ```
 
 2. 现在转到事件处理函数 - 在以前的函数下面添加以下代码来定义`mediaBackward（）`和`mediaForward（）`：
 
-    ```js
-    var intervalFwd;
-    var intervalRwd;
+   ```js
+   var intervalFwd;
+   var intervalRwd;
 
-    function mediaBackward() {
-      clearInterval(intervalFwd);
-      fwd.classList.remove('active');
+   function mediaBackward() {
+     clearInterval(intervalFwd);
+     fwd.classList.remove("active");
 
-      if(rwd.classList.contains('active')) {
-        rwd.classList.remove('active');
-        clearInterval(intervalRwd);
-        media.play();
-      } else {
-        rwd.classList.add('active');
-        media.pause();
-        intervalRwd = setInterval(windBackward, 200);
-      }
-    }
+     if (rwd.classList.contains("active")) {
+       rwd.classList.remove("active");
+       clearInterval(intervalRwd);
+       media.play();
+     } else {
+       rwd.classList.add("active");
+       media.pause();
+       intervalRwd = setInterval(windBackward, 200);
+     }
+   }
 
-    function mediaForward() {
-      clearInterval(intervalRwd);
-      rwd.classList.remove('active');
+   function mediaForward() {
+     clearInterval(intervalRwd);
+     rwd.classList.remove("active");
 
-      if(fwd.classList.contains('active')) {
-        fwd.classList.remove('active');
-        clearInterval(intervalFwd);
-        media.play();
-      } else {
-        fwd.classList.add('active');
-        media.pause();
-        intervalFwd = setInterval(windForward, 200);
-      }
-    }
-    ```
+     if (fwd.classList.contains("active")) {
+       fwd.classList.remove("active");
+       clearInterval(intervalFwd);
+       media.play();
+     } else {
+       fwd.classList.add("active");
+       media.pause();
+       intervalFwd = setInterval(windForward, 200);
+     }
+   }
+   ```
 
-    您会注意到，首先我们初始化两个变量 - intervalFwd 和 intervalRwd - 您将在后面发现它们的用途。
+   您会注意到，首先我们初始化两个变量 - intervalFwd 和 intervalRwd - 您将在后面发现它们的用途。
 
-    让我们逐步浏览`mediaBackward()`（`mediaForward()`的功能性完全相同，但效果相反）：
+   让我们逐步浏览`mediaBackward()`（`mediaForward()`的功能性完全相同，但效果相反）：
 
-    1. 我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下`fwd`（快进）按钮后再按下`rwd`（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。
-    2. 使用`if`语句检查是否已在`rwd`按钮上设置了用来指示它已被按下的`active`类。{{domxref("classList")}}是一个非常方便的属性，存在于每个元素上 ––它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用`classList.contains（）`方法检查列表是否包含`active`类。这将返回布尔值`true/false`结果。
-    3. 如果在`rwd`按钮上设置了`active`，我们使用`classList.remove（）`删除它，清除第一次按下按钮时设置的间隔（参见下面的更多解释），并使用{{domxref("HTMLMediaElement.play()")}}取消快退并开始正常播放视频。
-    4. 如果尚未设置，使用`classList.add（）`将`active`类添加到`rwd`按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置`intervalRwd`变量为 {{domxref("setInterval()")}} 的调用。调用时，`setInterval（）`会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次`windBackward（）`函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止 {{domxref("setInterval()")}} 运行，你必须调用 {{domxref("clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。
+   1. 我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下`fwd`（快进）按钮后再按下`rwd`（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。
+   2. 使用`if`语句检查是否已在`rwd`按钮上设置了用来指示它已被按下的`active`类。{{domxref("classList")}}是一个非常方便的属性，存在于每个元素上 ––它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用`classList.contains（）`方法检查列表是否包含`active`类。这将返回布尔值`true/false`结果。
+   3. 如果在`rwd`按钮上设置了`active`，我们使用`classList.remove（）`删除它，清除第一次按下按钮时设置的间隔（参见下面的更多解释），并使用{{domxref("HTMLMediaElement.play()")}}取消快退并开始正常播放视频。
+   4. 如果尚未设置，使用`classList.add（）`将`active`类添加到`rwd`按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置`intervalRwd`变量为 {{domxref("setInterval()")}} 的调用。调用时，`setInterval（）`会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次`windBackward（）`函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止 {{domxref("setInterval()")}} 运行，你必须调用 {{domxref("clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。
 
 3. 最后，对于本节，定义在 setInterval（）调用中需要调用的 windBackward（）和 windForward（）函数。在以上两个函数下面添加以下内容：
 
-    ```js
-    function windBackward() {
-      if(media.currentTime <= 3) {
-        rwd.classList.remove('active');
-        clearInterval(intervalRwd);
-        stopMedia();
-      } else {
-        media.currentTime -= 3;
-      }
-    }
+   ```js
+   function windBackward() {
+     if (media.currentTime <= 3) {
+       rwd.classList.remove("active");
+       clearInterval(intervalRwd);
+       stopMedia();
+     } else {
+       media.currentTime -= 3;
+     }
+   }
 
-    function windForward() {
-      if(media.currentTime >= media.duration - 3) {
-        fwd.classList.remove('active');
-        clearInterval(intervalFwd);
-        stopMedia();
-      } else {
-        media.currentTime += 3;
-      }
-    }
-    ```
+   function windForward() {
+     if (media.currentTime >= media.duration - 3) {
+       fwd.classList.remove("active");
+       clearInterval(intervalFwd);
+       stopMedia();
+     } else {
+       media.currentTime += 3;
+     }
+   }
+   ```
 
-    同样，我们将完成这些功能中的第一个，因为它们几乎完全相同，但彼此相反。在`windBackward（）`中，我们执行以下操作 ––请记住，当间隔处于活动状态时，此函数每 200 毫秒运行一次。
+   同样，我们将完成这些功能中的第一个，因为它们几乎完全相同，但彼此相反。在`windBackward（）`中，我们执行以下操作 ––请记住，当间隔处于活动状态时，此函数每 200 毫秒运行一次。
 
-    1. 我们从一个`if`语句开始，该语句检查当前时间是否小于 3 秒，即，如果再倒退三秒将使其超过视频的开始。这会导致奇怪的行为，所以如果是这种情况，我们通过调用`stopMedia（）`来停止视频播放，从倒带按钮中删除`active`类，并清除`intervalRwd`间隔以停止快退功能。如果我们没有做到最后一步，视频将永远保持快退。
-    2. 如果当前时间不在视频开始的 3 秒内，我们只需通过执行`media.currentTime-=3`从当前时间中删除三秒。因此，实际上，我们将视频快退 3 秒，每 200 毫秒一次。
+   1. 我们从一个`if`语句开始，该语句检查当前时间是否小于 3 秒，即，如果再倒退三秒将使其超过视频的开始。这会导致奇怪的行为，所以如果是这种情况，我们通过调用`stopMedia（）`来停止视频播放，从倒带按钮中删除`active`类，并清除`intervalRwd`间隔以停止快退功能。如果我们没有做到最后一步，视频将永远保持快退。
+   2. 如果当前时间不在视频开始的 3 秒内，我们只需通过执行`media.currentTime-=3`从当前时间中删除三秒。因此，实际上，我们将视频快退 3 秒，每 200 毫秒一次。
 
 #### 更新已用时间
 
-我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 {{event("timeupdate")}}事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加`addEventListener（）`行：
 
 ```js
-media.addEventListener('timeupdate', setTime);
+media.addEventListener("timeupdate", setTime);
 ```
 
 现在定义`setTime（）`函数。在文件底部添加以下内容：
@@ -391,22 +397,23 @@ function setTime() {
   var secondValue;
 
   if (minutes < 10) {
-    minuteValue = '0' + minutes;
+    minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
   if (seconds < 10) {
-    secondValue = '0' + seconds;
+    secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
   }
 
-  var mediaTime = minuteValue + ':' + secondValue;
+  var mediaTime = minuteValue + ":" + secondValue;
   timer.textContent = mediaTime;
 
-  var barLength = timerWrapper.clientWidth * (media.currentTime/media.duration);
-  timerBar.style.width = barLength + 'px';
+  var barLength =
+    timerWrapper.clientWidth * (media.currentTime / media.duration);
+  timerBar.style.width = barLength + "px";
 }
 ```
 
@@ -427,8 +434,8 @@ function setTime() {
 首先，在`stopMedia（）`函数中添加以下行 ––任何地方都可以：
 
 ```js
-rwd.classList.remove('active');
-fwd.classList.remove('active');
+rwd.classList.remove("active");
+fwd.classList.remove("active");
 clearInterval(intervalRwd);
 clearInterval(intervalFwd);
 ```
@@ -449,29 +456,19 @@ clearInterval(intervalFwd);
 2. 由于 `<audio>` 元素具有相同的{{domxref("HTMLMediaElement")}}功能，因此您可以轻松地将此播放器用于 `<audio>` 元素。试着这样做。
 3. 你能找到一种方法将计时器内部的 `<div>` 元素转换为真正的搜索条/ 滑动条 - 也就是说，当你点击条形图上的某个位置时，它会跳转到视频播放中的相对位置吗？作为提示，您可以通过[`getBoundingClientRect()`](/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法找出元素左/右和上/下侧的 X 和 Y 值，而且你可以通过 {{domxref("Document")}} 对象调用的 click 事件的事件对象找到鼠标单击的坐标。举个栗子：
 
-    ```js
-    document.onclick = function(e) {
-      console.log(e.x) + ',' + console.log(e.y)
-    }
-    ```
+   ```js
+   document.onclick = function (e) {
+     console.log(e.x) + "," + console.log(e.y);
+   };
+   ```
 
-## 另请参阅
+## 参见
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)— \<video>和\<audio>的简单指南。
-- [Audio and video delivery](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio 与 video 操作](/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — 操作 audio 和 video 的详细指南，例如：使用 [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)，等等。
+- [Audio and video delivery](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
+- [Audio 与 video 操作](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — 操作 audio 和 video 的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API), [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)，等等。
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
-- [Media formats supported by the HTML audio and video elements](/en-US/docs/Web/HTML/Supported_media_formats).
+- [Media formats supported by the HTML audio and video elements](/zh-CN/docs/Web/HTML/Supported_media_formats).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

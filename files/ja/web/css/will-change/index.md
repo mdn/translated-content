@@ -1,30 +1,22 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 変更予定
-  - Reference
-  - recipe:css-property
-  - transition
-  - トランジション
-translation_of: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`will-change`** プロパティは、どのような要素の変更が予測されているかブラウザーに助言します。ブラウザーは要素が実際に変更される前に、最適化をセットアップすることができます。この種の最適化は、実際に変化が求められる前に、潜在的に高コストの処理を行うことで、ページの応答を向上させることができます。
 
-> **Warning:** **重要:** `will-change` は既存の性能問題を扱うための最終解決手段として使用することを意図しています。予想されるパフォーマンス問題に使用しないでください。
+> **警告:** `will-change` は既存の性能問題を扱うための最終解決手段として使用することを意図しています。予想されるパフォーマンス問題に使用しないでください。
 
 ```css
 /* キーワード値 */
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* <custom-ident> の例 */
-will-change: opacity;          /* <custom-ident> の例 */
-will-change: left, top;        /* 2つの <animateable-feature> の例 */
+will-change: transform; /* <custom-ident> の例 */
+will-change: opacity; /* <custom-ident> の例 */
+will-change: left, top; /* 2つの <animateable-feature> の例 */
 
 /* グローバル値 */
 will-change: inherit;
@@ -81,28 +73,26 @@ will-change: unset;
 これはスクリプトから `will-change` プロパティを適用する方法を示しています。おそらく多くの場合はこのようにします。
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // 要素がホバーされたとき、will-change を設定する
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // アニメーションのキーフレームブロックで
   // 変更されるであろう最適化可能なプロパティ
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('CSS Will Change', '#will-change', 'will-change')}} | {{Spec2('CSS Will Change')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

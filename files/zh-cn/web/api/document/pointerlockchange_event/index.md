@@ -1,7 +1,8 @@
 ---
-title: 'Document: pointerlockchange event'
+title: "Document: pointerlockchange event"
 slug: Web/API/Document/pointerlockchange_event
 ---
+
 {{APIRef}}
 
 `pointerlockchange` 事件当指针解锁或者被锁定时触发
@@ -34,8 +35,8 @@ slug: Web/API/Document/pointerlockchange_event
 使用 `addEventListener()`:
 
 ```js
-document.addEventListener('pointerlockchange', (event) => {
-  console.log('Pointer lock changed');
+document.addEventListener("pointerlockchange", (event) => {
+  console.log("Pointer lock changed");
 });
 ```
 
@@ -43,7 +44,7 @@ document.addEventListener('pointerlockchange', (event) => {
 
 ```js
 document.onpointerlockchange = (event) => {
-  console.log('Pointer lock changed');
+  console.log("Pointer lock changed");
 };
 ```
 
@@ -53,7 +54,7 @@ document.onpointerlockchange = (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.pointerlockchange_event")}}
+{{Compat}}
 
 ## 参考
 

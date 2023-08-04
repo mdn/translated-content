@@ -1,14 +1,8 @@
 ---
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
+
 {{JSRef}}
 
 **`String.raw()`** 静的メソッドは、[文字列リテラル](/ja/docs/Web/JavaScript/Reference/template_strings)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています (それでも違いがあります。[この問題に関するスレッド](https://bugs.chromium.org/p/v8/issues/detail?id=5016)の説明を参照してください)。この関数は、テンプレート文字列の生の文字列形式を取得するために使用されます。つまり、置換 (例えば `${foo}`) は行われますが、エスケープ (例えば `\n`) は実行されません。
@@ -88,9 +82,7 @@ String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

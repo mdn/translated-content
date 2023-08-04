@@ -2,6 +2,7 @@
 title: 标识互联网上的内容
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 ---
+
 {{HTTPSidebar}}
 
 HTTP 请求的内容通称为"资源"。”资源“这一概念非常宽泛，它可以是一份文档，一张图片，或所有其他你能够想到的格式。每个资源都由一个 ({{Glossary("URI")}}) 来进行标识。
@@ -16,8 +17,8 @@ URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/zh-CN/docs/Learn/
+https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
 在浏览器的地址栏中输入上述任一地址，浏览器就会加载相应的网页（资源）。
@@ -40,7 +41,7 @@ urn:ietf:rfc:7230
 上面两个 URN 标识了下面的资源：
 
 - 乔治·奥威尔所著的《1984》
-- IETF 规范 7230，超文本传输 ​​ 协议 (HTTP/1.1)：Message Syntax and Routing.
+- IETF 规范 7230，超文本传输 协议 (HTTP/1.1)：Message Syntax and Routing.
 
 ## 统一资源标识符的语法 (URI)
 
@@ -49,18 +50,18 @@ urn:ietf:rfc:7230
 - ![Protocol](mdn-url-protocol@x2.png)
   - : `http://`告诉浏览器使用何种协议。对于大部分 Web 资源，通常使用 HTTP 协议或其安全版本，HTTPS 协议。另外，浏览器也知道如何处理其他协议。例如， `mailto:` 协议指示浏览器打开邮件客户端；`ftp:`协议指示浏览器处理文件传输。常见的方案有：
 
-| 方案        | 描述                                                                  |
-| ----------- | --------------------------------------------------------------------- |
-| data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                           |
-| file        | 指定主机上文件的名称                                                  |
-| ftp         | [文件传输协议](/en-US/docs/Glossary/FTP)                              |
-| http/https  | [超文本传输 ​​ 协议／安全的超文本传输协议](/en-US/docs/Glossary/HTTP) |
-| mailto      | 电子邮件地址                                                          |
-| ssh         | 安全 shell                                                            |
-| tel         | 电话                                                                  |
-| urn         | 统一资源名称                                                          |
-| view-source | 资源的源代码                                                          |
-| ws/wss      | （加密的）[WebSocket](/zh-CN/docs/WebSockets) 连接                    |
+| 方案        | 描述                                                               |
+| ----------- | ------------------------------------------------------------------ |
+| data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                        |
+| file        | 指定主机上文件的名称                                               |
+| ftp         | [文件传输协议](/zh-CN/docs/Glossary/FTP)                           |
+| http/https  | [超文本传输 协议／安全的超文本传输协议](/zh-CN/docs/Glossary/HTTP) |
+| mailto      | 电子邮件地址                                                       |
+| ssh         | 安全 shell                                                         |
+| tel         | 电话                                                               |
+| urn         | 统一资源名称                                                       |
+| view-source | 资源的源代码                                                       |
+| ws/wss      | （加密的）[WebSocket](/zh-CN/docs/WebSockets) 连接                 |
 
 ### 主机
 
@@ -85,12 +86,12 @@ urn:ietf:rfc:7230
 ### 片段
 
 - ![Anchor](mdn-url-anchor@x2.png)
-  - : `#SomewhereInTheDocument` 是资源本身的某一部分的一个锚点。锚点代表资源内的一种“书签”，它给予浏览器显示位于该“加书签”点的内容的指示。 例如，在 HTML 文档上，浏览器将滚动到定义锚点的那个点上；在视频或音频文档上，浏览器将转到锚点代表的那个时间。值得注意的是 # 号后面的部分，也称为片段标识符，永远不会与请求一起发送到服务器。
+  - : `#SomewhereInTheDocument` 是资源本身的某一部分的一个锚点。锚点代表资源内的一种“书签”，它给予浏览器显示位于该“加书签”点的内容的指示。例如，在 HTML 文档上，浏览器将滚动到定义锚点的那个点上；在视频或音频文档上，浏览器将转到锚点代表的那个时间。值得注意的是 # 号后面的部分，也称为片段标识符，永远不会与请求一起发送到服务器。
 
 ## 示例
 
 ```plain
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/zh-CN/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

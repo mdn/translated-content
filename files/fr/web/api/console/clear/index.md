@@ -1,8 +1,8 @@
 ---
 title: clear()
-slug: Web/API/Console/clear
-translation_of: Web/API/Console/clear
+slug: Web/API/console/clear
 ---
+
 {{APIRef("Console API")}}
 
 Vide la console.

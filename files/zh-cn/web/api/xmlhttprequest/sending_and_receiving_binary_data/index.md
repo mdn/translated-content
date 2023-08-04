@@ -2,11 +2,12 @@
 title: 发送和接收二进制数据
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
+
 ## 使用 JavaScript 类型数组接受二进制数据
 
 可以通过设置一个 XMLHttpRequest 对象的 `responseType`属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。`response` 属性的值会根据 `responseType` 属性包含实体主体（entity body），它可能会是一个 `ArrayBuffer`、`Blob`、`Document`、`JSON`, string，或者为`NULL(如果请求未完成或失败)`
 
-下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。 你需要一个 png 解码库（[png decoding library](https://github.com/devongovett/png.js/)）。
+下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。你需要一个 png 解码库（[png decoding library](https://github.com/devongovett/png.js/)）。
 
 ```js
 var oReq = new XMLHttpRequest();
@@ -33,7 +34,7 @@ var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "blob";
 
-oReq.onload = function(oEvent) {
+oReq.onload = function (oEvent) {
   var blob = oReq.response;
   // ...
 };
@@ -48,11 +49,11 @@ oReq.send();
 ```js
 function load_binary_resource(url) {
   var req = new XMLHttpRequest();
-  req.open('GET', url, false);
+  req.open("GET", url, false);
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType('text/plain; charset=x-user-defined');
+  req.overrideMimeType("text/plain; charset=x-user-defined");
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status != 200) return "";
   return req.responseText;
 }
 ```
@@ -81,10 +82,10 @@ oReq.onload = function (oEvent) {
   // 上传完成后。
 };
 
-var bb = new BlobBuilder(); // 需要合适的前缀: window.MozBlobBuilder 或者 window.WebKitBlobBuilder
-bb.append('abc123');
+var bb = new BlobBuilder(); // 需要合适的前缀：window.MozBlobBuilder 或者 window.WebKitBlobBuilder
+bb.append("abc123");
 
-oReq.send(bb.getBlob('text/plain'));
+oReq.send(bb.getBlob("text/plain"));
 ```
 
 ## 将类型数组作为二进制数据发送
@@ -95,18 +96,18 @@ oReq.send(bb.getBlob('text/plain'));
 var myArray = new ArrayBuffer(512);
 var longInt8View = new Uint8Array(myArray);
 
-for (var i=0; i< longInt8View.length; i++) {
+for (var i = 0; i < longInt8View.length; i++) {
   longInt8View[i] = i % 255;
 }
 
-var xhr = new XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 xhr.open("POST", url, false);
 xhr.send(myArray);
 ```
 
 上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。
 
-> **备注：** 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
+> **备注：** 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象的功能。
 
 ## 提交表单和上传文件
 
@@ -132,24 +133,28 @@ req.sendAsBinary(aBody);
 
 ```js
 // 新建一个文件流。
-var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                       .createInstance(Components.interfaces.nsIFileInputStream);
+var stream = Components.classes[
+  "@mozilla.org/network/file-input-stream;1"
+].createInstance(Components.interfaces.nsIFileInputStream);
 stream.init(file, 0x04 | 0x08, 0644, 0x04); // file 是一个 nsIFile 对象实例
 
 // 设置文件的 MIME 类型
-var mimeType = "text\/plain";
+var mimeType = "text/plain";
 try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"]
-          .getService(Components.interfaces.nsIMIMEService);
+  var mimeService = Components.classes["@mozilla.org/mime;1"].getService(
+    Components.interfaces.nsIMIMEService,
+  );
   mimeType = mimeService.getTypeFromFile(file); // file 是一个 nsIFile 对象实例
+} catch (oEvent) {
+  /* 丢弃异常，使用默认的 text/plain 类型 */
 }
-catch (oEvent) { /* 丢弃异常，使用默认的 text/plain 类型 */ }
 
 // 发送
-var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-                    .createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open('PUT', url, false); // 同步模式！
-req.setRequestHeader('Content-Type', mimeType);
+var req = Components.classes[
+  "@mozilla.org/xmlextras/xmlhttprequest;1"
+].createInstance(Components.interfaces.nsIXMLHttpRequest);
+req.open("PUT", url, false); // 同步模式！
+req.setRequestHeader("Content-Type", mimeType);
 req.send(stream);
 ```
 

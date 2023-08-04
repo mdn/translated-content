@@ -2,6 +2,7 @@
 title: document.bgColor
 slug: Web/API/Document/bgColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 廃止された `bgColor` プロパティは、現在の文書の背景色を取得または設定します。

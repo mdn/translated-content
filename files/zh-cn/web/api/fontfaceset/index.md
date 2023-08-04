@@ -2,9 +2,10 @@
 title: FontFaceSet
 slug: Web/API/FontFaceSet
 ---
+
 {{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-[CSS 字体加载 API](/en-US/docs/Web/API/CSS_Font_Loading_API) 的 **`FontFaceSet`** 管理着字体们的加载和可查询的字体们下载状态。
+[CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 的 **`FontFaceSet`** 管理着字体们的加载和可查询的字体们下载状态。
 
 ## Properties
 
@@ -14,11 +15,11 @@ slug: Web/API/FontFaceSet
 ## Events
 
 - {{domxref("FontFaceSet.onloading")}}
-  - : 当{{event("loading")}}相关事件发生时触发{{domxref("EventListener")}} ，表示 font-face 集已经开始加载了。
+  - : 当 `loading` 相关事件发生时触发 {{domxref("EventListener")}}，表示 font-face 集已经开始加载了。
 - {{domxref("FontFaceSet.onloadingdone")}}
-  - : 当{{event("loading")}}相关事件发生时触发{{domxref("EventListener")}} ，表示 font-face 集已经完成加载了。
+  - : 当 `loading` 相关事件发生时触发 {{domxref("EventListener")}}，表示 font-face 集已经完成加载了。
 - {{domxref("FontFaceSet.onloadingerror")}}
-  - : 当{{event("loading")}}相关事件发生时触发{{domxref("EventListener")}} ，表示 font-face 集加载时产生了一个错误。
+  - : 当 `loading` 相关事件发生时触发 {{domxref("EventListener")}}，表示 font-face 集加载时产生了一个错误。
 
 ## Methods
 
@@ -35,10 +36,10 @@ slug: Web/API/FontFaceSet
 - {{domxref("FontFaceSet.ready", "FontFaceSet.ready()")}}
   - : 准备操作已完成且开始解析字体时返回一个 {{jsxref("Promise")}} 。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("api.FontFaceSet")}}
+{{Compat}}

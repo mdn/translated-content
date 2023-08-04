@@ -2,6 +2,7 @@
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSMediaRule`** は、単一の CSS の {{cssxref("@media")}} ルールを表すインターフェイスです。

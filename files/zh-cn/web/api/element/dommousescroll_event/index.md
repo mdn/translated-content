@@ -2,6 +2,7 @@
 title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 ---
+
 {{ Non-standard_header() }}
 
 The DOM `DOMMouseScroll` event is fired asynchronously when mouse wheel or similar device is operated and the accumulated scroll amount becomes over 1 line or 1 page since last event. It's represented by the {{ domxref("MouseScrollEvent") }} interface.
@@ -39,7 +40,7 @@ Trusted events are never fired with 0.
 
 ## Browser compatibility
 
-{{Compat("api.Element.DOMMouseScroll_event")}}
+{{Compat}}
 
 ## See also
 

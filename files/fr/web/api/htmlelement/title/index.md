@@ -1,14 +1,8 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Propriété
-  - Reference
-translation_of: Web/API/HTMLElement/title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.
@@ -32,7 +26,7 @@ element.title = chn;
 ## Exemple
 
 ```js
- bouton1.title = "cliquer pour rafraîchir";
+bouton1.title = "cliquer pour rafraîchir";
 ```
 
 ## Spécifications

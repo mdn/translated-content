@@ -1,15 +1,8 @@
 ---
 title: Notification.lang
-slug: Web/API/notification/lang
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-translation_of: Web/API/Notification/lang
+slug: Web/API/Notification/lang
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`lang`** de l'interface {{domxref ("Notification")}} indique la langue utilisée dans la notification, comme définis à l'aide de l'option `lang` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.

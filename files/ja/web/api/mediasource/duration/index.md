@@ -1,19 +1,8 @@
 ---
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - duration
-translation_of: Web/API/MediaSource/duration
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`duration`** プロパティは、現在表示されているメディアの期間（長さ）を取得および設定します。
@@ -64,9 +53,7 @@ function sourceOpen (_) {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-mediasource-duration', 'duration')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

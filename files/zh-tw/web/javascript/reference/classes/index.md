@@ -2,6 +2,7 @@
 title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Classes
 
 ## 定義類別
 
-類別實際上是一種特別的函數([functions](/en-US/docs/Web/JavaScript/Reference/Functions))，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述([class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class))和類別宣告([class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class))。
+類別實際上是一種特別的函數([functions](/zh-TW/docs/Web/JavaScript/Reference/Functions))，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述([class expressions](/zh-TW/docs/Web/JavaScript/Reference/Operators/class))和類別宣告([class declarations](/zh-TW/docs/Web/JavaScript/Reference/Statements/class))。
 
 ### 類別宣告
 
@@ -36,7 +37,7 @@ class Polygon {}
 
 ### 類別敘述
 
-**類別敘述**是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 [.name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 屬性存取。）
+**類別敘述**是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 [.name](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 屬性存取。）
 
 ```js
 // unnamed
@@ -64,7 +65,7 @@ var Polygon = class Polygon {
 
 ### Strict mode
 
-*類別宣告*與*類別敘述*的主體都會以[嚴格模式(strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))執行，也就是說，建構子、靜態方法和原型方法、getter 及 setter 函數等都會以嚴格模式執行。
+*類別宣告*與*類別敘述*的主體都會以[嚴格模式(strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode))執行，也就是說，建構子、靜態方法和原型方法、getter 及 setter 函數等都會以嚴格模式執行。
 
 ### 建構子
 
@@ -74,7 +75,7 @@ var Polygon = class Polygon {
 
 ### 原型方法
 
-參見 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+參見 [method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 
 ```js
 class Polygon {
@@ -99,21 +100,21 @@ console.log(square.area); //100
 
 ### 靜態方法(Static methods)
 
-關鍵字 [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
+關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
 
 ```js
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    static distance(a, b) {
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
 
-        return Math.sqrt(dx*dx + dy*dy);
-    }
+    return Math.sqrt(dx * dx + dy * dy);
+  }
 }
 
 const p1 = new Point(5, 5);
@@ -202,7 +203,7 @@ obj.speak(); // Animal {}
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -210,15 +211,15 @@ eat(); // undefined
 若我們將上述程式用傳統的函式基礎類別(function based classes)表達，自動裝箱則會依據 this 在其被呼叫的函式中所綁定的值發生。
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -230,7 +231,7 @@ eat(); // 全域物件
 
 ## 用 `extends` 建立子類別
 
-關鍵字 [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) 是在類別宣告或是類別敘述中建立子類別的方法。
+關鍵字 [`extends`](/zh-TW/docs/Web/JavaScript/Reference/Classes/extends) 是在類別宣告或是類別敘述中建立子類別的方法。
 
 ```js
 class Animal {
@@ -239,17 +240,17 @@ class Animal {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Dog extends Animal {
   speak() {
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -258,21 +259,21 @@ d.speak(); // Mitzie barks.
 你也可以擴充(extends)傳統的函式基礎"類別"。
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 
 Animal.prototype.speak = function () {
-  console.log(this.name + ' makes a noise.');
-}
+  console.log(this.name + " makes a noise.");
+};
 
 class Dog extends Animal {
   speak() {
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -281,8 +282,8 @@ d.speak(); // Mitzie barks.
 ```js
 var Animal = {
   speak() {
-    console.log(this.name + ' makes a noise.');
-  }
+    console.log(this.name + " makes a noise.");
+  },
 };
 
 class Dog {
@@ -294,7 +295,7 @@ class Dog {
 // 如果你沒有用以下的方法，當你呼叫speak時會出現TypeError
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -307,19 +308,21 @@ d.speak(); // Mitzie makes a noise.
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## 用 `super` 呼叫父類別
 
-關鍵字 [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) 是用來提供一個類別呼叫其父類別的函數。
+關鍵字 [`super`](/zh-TW/docs/Web/JavaScript/Reference/Operators/super) 是用來提供一個類別呼叫其父類別的函數。
 
 ```js
 class Cat {
@@ -328,18 +331,18 @@ class Cat {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Lion extends Cat {
   speak() {
     super.speak();
-    console.log(this.name + ' roars.');
+    console.log(this.name + " roars.");
   }
 }
 
-var l = new Lion('Fuzzy');
+var l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.
@@ -363,9 +366,9 @@ TBD
 
 ## 參見
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [`class` declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)
 - {{jsxref("Operators/super", "super")}}
 - [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [extends](/zh-TW/docs/Web/JavaScript/Reference/Classes/extends)

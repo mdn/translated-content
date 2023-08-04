@@ -2,7 +2,8 @@
 title: CSS 层叠
 slug: Web/CSS/Cascade
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。
 
@@ -31,18 +32,18 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
 1. 它首先过滤来自不同源的全部规则，并保留要应用到指定元素上的那些规则。这意味着这些规则的选择器匹配指定元素，同时也是一个合适的 @规则（at-rule）的一部分。
 2. 其次，它依据重要性对这些规则进行排序。即是指，规则后面是否跟随者 !import 以及规则的来源。层叠是按升序排列的，这意味着来着用户自定义样式表的 !important 值比用户代理样式表的普通值优先级高：
 
-    |     | 来源                       | 重要程度     |
-    | --- | -------------------------- | ------------ |
-    | 1   | 用户代理                   | 普通         |
-    | 2   | 用户                       | 普通         |
-    | 3   | 页面作者                   | 普通         |
-    | 4   | CSS 动画                   | 见下节       |
-    | 5   | 页面作者                   | `!important` |
-    | 6   | 用户                       | `!important` |
-    | 7   | 用户代理                   | `!important` |
-    | 8   | css 过渡 (css transitions) |              |
+   |     | 来源                       | 重要程度     |
+   | --- | -------------------------- | ------------ |
+   | 1   | 用户代理                   | 普通         |
+   | 2   | 用户                       | 普通         |
+   | 3   | 页面作者                   | 普通         |
+   | 4   | CSS 动画                   | 见下节       |
+   | 5   | 页面作者                   | `!important` |
+   | 6   | 用户                       | `!important` |
+   | 7   | 用户代理                   | `!important` |
+   | 8   | css 过渡 (css transitions) |              |
 
-3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/en-US/docs/CSS/Specificity)。
+3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/CSS/Specificity)。
 
 ## 重置样式
 
@@ -52,7 +53,7 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 
 ## CSS 动画与层叠
 
-[CSS 动画](/en-US/docs/CSS/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
+[CSS 动画](/zh-CN/docs/CSS/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
 
 当有多个满足条件的关键帧时，在最重要的文档里面最后定义的关键帧会被选中，而不会是将它们组合在一起。
 
@@ -63,31 +64,41 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 **用户代理 CSS：**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 **网页作者 CSS1：**
 
 ```css
-li { margin-left: 0 } /* This is a reset */
+li {
+  margin-left: 0;
+} /* This is a reset */
 ```
 
 **网页作者 CSS2：**
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-  li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 ```
 
 **用户 CSS：**
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML：**
@@ -104,21 +115,21 @@ li { margin-left: 0 } /* This is a reset */
 故是这 3 条声明的竞争：
 
 ```css
-margin-left: 0
+margin-left: 0;
 ```
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 ```css
-margin-left: 1px
+margin-left: 1px;
 ```
 
 由于是在屏幕显示，所以最后一条舍弃，而前两条的选择器相同，因此优先级也相同，故最终选择的是后者：
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 注意尽管定义在用户 CSS 里面的声明有更高的优先级，但它并不会被选中，因为层叠算法是先于优先级算法的。
@@ -137,10 +148,10 @@ margin-left: 3px
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

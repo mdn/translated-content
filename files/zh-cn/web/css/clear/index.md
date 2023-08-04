@@ -2,15 +2,16 @@
 title: clear
 slug: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 **`clear`** [CSS](/zh-CN/docs/CSS) 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。`clear` 属性适用于浮动和非浮动元素。
 
 {{EmbedInteractiveExample("pages/css/clear.html")}}
 
-当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/CSS/box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/CSS/box_model)的下方。这个非浮动块的[垂直外边距](/zh-CN/docs/CSS/margin_collapsing)会折叠。
+当应用于非浮动块时，它将非浮动块的[边框边界](/zh-CN/docs/CSS/box_model)移动到所有相关浮动元素[外边界](/zh-CN/docs/CSS/box_model)的下方。这个非浮动块的顶部外边距会折叠。
 
-另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将元素的[外边界](/zh-CN/docs/CSS/box_model)移动到所有相关的浮动元素[外边框边界](/zh-CN/docs/CSS/box_model)的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。
+另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将底部元素的[外边界边缘](/zh-CN/docs/CSS/box_model)移动到所有相关的浮动元素外边界边缘的下方。这会影响后面浮动元素的布局，因为后面的浮动元素的位置无法高于它之前的元素。
 
 要被清除的相关浮动元素指的是在相同[块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context)中的前置浮动。
 
@@ -68,7 +69,10 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="left">This paragraph clears left.</p>
 </div>
@@ -77,9 +81,9 @@ clear: unset;
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
   border: 1px solid black;
@@ -96,7 +100,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -111,7 +115,10 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="right">This paragraph clears right.</p>
 </div>
@@ -120,9 +127,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
   border: 1px solid black;
@@ -133,13 +140,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -154,8 +161,15 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="both">This paragraph clears both.</p>
 </div>
 ```
@@ -163,9 +177,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
   border: 1px solid black;
@@ -176,13 +190,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 45%;
@@ -197,7 +211,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.clear")}}
+{{Compat}}
 
 ## 参见
 

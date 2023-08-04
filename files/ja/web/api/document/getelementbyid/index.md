@@ -2,6 +2,7 @@
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Document")}} の **`getElementById()`** メソッドは、 {{domxref("Element.id", "id")}} プロパティが指定された文字列に一致する要素を表す {{domxref("Element")}} オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
@@ -29,14 +30,14 @@ var element = document.getElementById(id);
 
 ```html
 <html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -44,7 +45,7 @@ var element = document.getElementById(id);
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  var elem = document.getElementById("para");
   elem.style.color = newColor;
 }
 ```
@@ -90,21 +91,16 @@ function changeColor(newColor) {
 **文書内にない要素** は `getElementById()` で検索されません。要素を作成し ID を割り当てたとき、 `getElementById()` でアクセスする前に {{domxref("Node.insertBefore()")}} またはそのたぐいのメソッドで、要素を文書ツリーに挿入しておく必要があります。
 
 ```js
-var element = document.createElement('div');
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el は null になります
+var element = document.createElement("div");
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el は null になります
 ```
 
 **HTML 以外の文書**の場合。 DOM の実装では、どの属性が ID 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の DTD で定義されていない限り ID 類とみなされません。 `id` 属性は [XHTML](/ja/docs/XHTML), [XUL](/ja/docs/XUL) などの一般的な場合には ID 類として定義されています。属性が ID 類であるかどうかが分からない実装では、 `null` を返すでしょう。
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                       |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}}         | {{Spec2('DOM1')}}         | インターフェイスの初回定義 |
-| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                             | {{Spec2('DOM2 Core')}}     | DOM 1 の置き換え           |
-| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                             | {{Spec2('DOM3 Core')}}     | DOM 2 の置き換え           |
-| {{SpecName('DOM WHATWG','#dom-nonelementparentnode-getelementbyid','getElementById')}} | {{Spec2('DOM WHATWG')}} | DOM 3 を置き換える予定     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

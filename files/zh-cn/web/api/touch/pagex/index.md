@@ -2,6 +2,7 @@
 title: Touch.pageX
 slug: Web/API/Touch/pageX
 ---
+
 {{ ApiRef() }}
 
 ### 概述

@@ -1,21 +1,13 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-  - ウェブ
-browser-compat: http.headers.Connection
-translation_of: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
 **`Connection`** 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が `keep-alive` であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。
 
-> **Warning:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、[HTTP/2 では禁止されています](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)。Chrome と Firefox は HTTP/2 レスポンスでそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
+> **警告:** {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、[HTTP/2 では禁止されています](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)。Chrome と Firefox は HTTP/2 レスポンスでそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
 
 標準のホップバイホップヘッダー ({{HTTPHeader("Keep-Alive")}}、{{HTTPHeader("Transfer-Encoding")}}、{{HTTPHeader("TE")}}、{{HTTPHeader("Connection")}}、{{HTTPHeader("Trailer")}}、{{HTTPHeader("Upgrade")}}、{{HTTPHeader("Proxy-Authorization")}}、{{HTTPHeader("Proxy-Authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `Connection` ヘッダーに列挙する必要があります。したがって、これを解釈する最初のプロキシーはそれを消費する必要があり、その先に転送してはいけません。標準のホップバイホップヘッダーも列挙する必要があります。
 

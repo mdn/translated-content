@@ -1,14 +1,8 @@
 ---
 title: element.hasAttribute
 slug: Web/API/Element/hasAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/hasAttribute
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.hasAttribute()`** renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non.
@@ -29,18 +23,19 @@ var result = element.hasAttribute(name);
 ```js
 var foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // faire quelque chose
+  // faire quelque chose
 }
 ```
 
 ## Polyfill
 
 ```js
-;(function(prototype) {
-    prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &&
-                  this.attributes[name].specified);
-    }
+(function (prototype) {
+  prototype.hasAttribute =
+    prototype.hasAttribute ||
+    function (name) {
+      return !!(this.attributes[name] && this.attributes[name].specified);
+    };
 })(Element.prototype);
 ```
 

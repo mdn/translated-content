@@ -2,6 +2,7 @@
 title: DataTransfer
 slug: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer`** 物件被用來保存使用者於拖放操作過程中的資料，其中可能包含了一至多項資料以及多種資料類型。要瞭解拖放操作的更多細節，請參考[拖放操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)一文。
@@ -21,7 +22,7 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
   - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : An array of {{domxref("DOMString","strings")}} giving the formats that were set in the {{event("dragstart")}} event.
+  - : An array of {{domxref("DOMString","strings")}} giving the formats that were set in the [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) event.
 
 ### Gecko properties
 
@@ -78,11 +79,11 @@ Every method and property listed in this document has its own reference page and
 
 ## 瀏覽器相容性
 
-{{Compat("api.DataTransfer")}}
+{{Compat}}
 
 ## 參見
 
-- [Drag and drop](/Web/Guide/HTML/Drag_and_drop)
-- [Drag Operations](/Web/Guide/HTML/Drag_operations)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Drag and drop](/zh-TW/docs/Web/Guide/HTML/Drag_and_drop)
+- [Drag Operations](/zh-TW/docs/Web/Guide/HTML/Drag_operations)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)

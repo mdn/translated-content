@@ -2,6 +2,7 @@
 title: PageTransitionEvent
 slug: Web/API/PageTransitionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 Page transition events fire when a webpage is being loaded or unloaded.
@@ -19,10 +20,9 @@ EventPageTransitionEvent
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body onpageshow="myFunction(event)">
-</body>
+  <body onpageshow="myFunction(event)"></body>
 </html>
 ```
 
@@ -30,11 +30,11 @@ EventPageTransitionEvent
 
 ```js
 function myFunction(event) {
-    if (event.persisted) {
-        alert("The page was cached by the browser");
-    } else {
-        alert("The page was NOT cached by the browser");
-    }
+  if (event.persisted) {
+    alert("The page was cached by the browser");
+  } else {
+    alert("The page was NOT cached by the browser");
+  }
 }
 ```
 

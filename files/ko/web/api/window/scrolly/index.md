@@ -1,22 +1,17 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Window
-  - 스크롤
-translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef("CSSOM View")}}
 
 {{domxref("Window")}} 인터페이스의 **`scrollY`** 읽기 전용 속성은 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다. 최신 브라우저에서는 값의 정밀도가 픽셀보다 작으므로 반드시 정숫값을 반환하는건 아닙니다. 수평 스크롤은 {{domxref("Window.scrollX", "scrollX")}} 속성을 사용하여 가져올 수 있습니다.
 
 ## 구문
 
-    var y = window.scrollY
+```js
+var y = window.scrollY;
+```
 
 ### 값
 
@@ -31,7 +26,7 @@ translation_of: Web/API/Window/scrollY
 ```js
 // make sure and go down to the second page
 if (window.scrollY) {
-  window.scroll(0, 0);  // reset the scroll position to the top left of the document.
+  window.scroll(0, 0); // reset the scroll position to the top left of the document.
 }
 
 window.scrollByPages(1);
@@ -51,10 +46,18 @@ window.pageYOffset === window.scrollY; // 항상 true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## 명세

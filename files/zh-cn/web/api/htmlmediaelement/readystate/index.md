@@ -2,6 +2,7 @@
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.readyState`** 属性返回音频/视频的当前就绪状态。
@@ -30,19 +31,17 @@ var readyState = audioOrVideo.readyState;
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+var obj = document.getElementById("example");
 
-obj.addEventListener('loadeddata', function() {
-
-  if(obj.readyState >= 2) {
+obj.addEventListener("loadeddata", function () {
+  if (obj.readyState >= 2) {
     obj.play();
   }
-
 });
 ```
 
@@ -52,7 +51,7 @@ obj.addEventListener('loadeddata', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.readyState")}}
+{{Compat}}
 
 ## 你或许还可以看看
 

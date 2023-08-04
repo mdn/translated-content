@@ -1,14 +1,8 @@
 ---
 title: DataView.prototype.getUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
-tags:
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 ---
+
 {{JSRef}}
 
 **`getUint32()`** メソッドは、符号なし 32 ビット整数 (unsigned long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
@@ -53,9 +47,7 @@ dataview.getUint32(1); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

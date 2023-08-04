@@ -1,13 +1,8 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
 **`<use>`** 要素は SVG 文書の中からノード取り出して、別の場所に複製します。
@@ -40,7 +35,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 
-> **Warning:** SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の[互換性一覧表](#browser_compatibility)を参照)。
+> **警告:** SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の[互換性一覧表](#browser_compatibility)を参照)。
 
 ## 属性
 
@@ -63,9 +58,9 @@ That's why the circles have different x positions, but the same stroke value.
   - : The height of the use element.
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `0`; _Animatable_: **yes**
 
-> **Note:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
+> **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
 
-> **Note:** SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
+> **メモ:** SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
 
 ### グローバル属性
 
@@ -90,10 +85,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |          |
-| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

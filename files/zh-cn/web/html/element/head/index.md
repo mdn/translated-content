@@ -2,11 +2,12 @@
 title: <head>
 slug: Web/HTML/Element/head
 ---
+
 ## 概述
 
 **HTML head 元素** 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。
 
-- _[内容类别](/en-US/docs/HTML/Content_categories)_ 无
+- _[内容类别](/zh-CN/docs/HTML/Content_categories)_ 无
 - *允许内容*至少包含一个{{HTMLElement("title")}} 元素来指定文档的标题信息，除非标题已经从更高等级协议中指定（{{HTMLElement("iframe")}} ）。
 - _允许父元素_{{HTMLElement("html")}} 元素
 - _DOM 接口_ {{domxref("HTMLHeadElement")}}
@@ -15,7 +16,7 @@ slug: Web/HTML/Element/head
 
 该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("profile")}} {{Deprecated_Inline}}
+- `profile` {{Deprecated_Inline}}
   - : 一个由空格分隔的 URL 列表，这些 URL 包含着有关页面的配置信息。
 
 ## 示例
@@ -43,6 +44,6 @@ slug: Web/HTML/Element/head
 
 ## 相关链接
 
-- 可用于\<head>元素内的元素有: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
+- 可用于\<head>元素内的元素有：{{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

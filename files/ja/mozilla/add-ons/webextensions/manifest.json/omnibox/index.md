@@ -2,6 +2,7 @@
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

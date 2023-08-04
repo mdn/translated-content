@@ -1,34 +1,29 @@
 ---
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
+l10n:
+  sourceCommit: 7455f0c585ea29fa85ea09e11716b70f76241f5b
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`audioTracks`** 読み取り専用プロパティは、`SourceBuffer` 内に現在含まれている音声トラックのリストを返します。
+{{APIRef("Media Source Extensions")}}
 
-## 構文
+**`audioTracks`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、この `SourceBuffer` 内に現在含まれている音声トラックのリストを返します。
 
-```
-var myAudioTracks = sourceBuffer.audioTracks;
-```
+## 値
 
-### 値
-
-{{domxref("AudioTrackList")}} オブジェクト。
+{{domxref("AudioTrackList")}} オブジェクトです。
 
 ## 例
 
-未定
+TBD
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                     | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-audiotracks', 'audioTracks')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.audioTracks")}}
+{{Compat}}
 
 ## 関連情報
 

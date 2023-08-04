@@ -2,16 +2,18 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
+
 {{JSRef}}
 
-**`flat()`** 方法会按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回。
+**`flat()`** 方法创建一个新的数组，并根据指定深度递归地将所有子数组元素拼接到新的数组中。
 
 {{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
 ## 语法
 
-```js
-var newArray = arr.flat([depth])
+```js-nolint
+flat()
+flat(depth)
 ```
 
 ### 参数
@@ -21,185 +23,84 @@ var newArray = arr.flat([depth])
 
 ### 返回值
 
-一个包含将数组与子数组中所有元素的新数组。
+一个新的数组，其中包含拼接后的子数组元素。
+
+## 描述
+
+`flat()` 方法属于[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它不会改变 `this` 数组，而是返回一个[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)，该浅拷贝包含了原始数组中相同的元素。
+
+如果待展开的数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，`flat()` 方法会忽略其中的空槽。例如，如果 `depth` 是 1，那么根数组和第一层嵌套数组中的空槽都会被忽略，但在更深的嵌套数组中的空槽则会与这些数组一起保留。
+
+`flat()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只需要 `this` 值具有 `length` 属性和整数键属性即可。但是，如果要展开元素，则它们必须是数组。
 
 ## 示例
 
-### 扁平化嵌套数组
+### 展平嵌套数组
 
 ```js
-var arr1 = [1, 2, [3, 4]];
+const arr1 = [1, 2, [3, 4]];
 arr1.flat();
 // [1, 2, 3, 4]
 
-var arr2 = [1, 2, [3, 4, [5, 6]]];
+const arr2 = [1, 2, [3, 4, [5, 6]]];
 arr2.flat();
 // [1, 2, 3, 4, [5, 6]]
 
-var arr3 = [1, 2, [3, 4, [5, 6]]];
+const arr3 = [1, 2, [3, 4, [5, 6]]];
 arr3.flat(2);
 // [1, 2, 3, 4, 5, 6]
 
-//使用 Infinity，可展开任意深度的嵌套数组
-var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### 扁平化与数组空项
+### 在稀疏数组上使用 flat()
 
-`flat()` 方法会移除数组中的空项：
+`flat()` 方法删除数组中的空槽：
 
 ```js
-var arr4 = [1, 2, , 4, 5];
-arr4.flat();
-// [1, 2, 4, 5]
+const arr5 = [1, 2, , 4, 5];
+console.log(arr5.flat()); // [1, 2, 4, 5]
+
+const array = [1, , 3, ["a", , "c"]];
+console.log(array.flat()); // [ 1, 3, "a", "c" ]
+
+const array2 = [1, , 3, ["a", , ["d", , "e"]]];
+console.log(array2.flat()); // [ 1, 3, "a", ["d", empty, "e"] ]
+console.log(array2.flat(2)); // [ 1, 3, "a", "d", "e"]
 ```
 
-## 替代方案
+### 在非数组对象上调用 flat()
 
-### 使用 `reduce` 与 `concat`
-
-```js
-var arr = [1, 2, [3, 4]];
-
-// 展开一层数组
-arr.flat();
-// 等效于
-arr.reduce((acc, val) => acc.concat(val), []);
-// [1, 2, 3, 4]
-
-// 使用扩展运算符 ...
-const flattened = arr => [].concat(...arr);
-```
-
-### reduce + concat + isArray + recursivity
+`flat()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。如果元素不是数组，则直接将其附加到结果中。如果元素是数组，则根据 `depth` 参数进行展开操作。
 
 ```js
-// 使用 reduce、concat 和递归展开无限多层嵌套的数组
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
-function flatDeep(arr, d = 1) {
-   return d > 0 ? arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
-                : arr.slice();
+const arrayLike = {
+  length: 3,
+  0: [1, 2],
+  // 嵌套的类数组对象不会被展平
+  1: { length: 2, 0: 3, 1: 4 },
+  2: 5,
 };
-flatDeep(arr1, Infinity);
-// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+console.log(Array.prototype.flat.call(arrayLike));
+// [ 1, 2, { '0': 3, '1': 4, length: 2 }, 5 ]
 ```
 
-### forEach+isArray+push+recursivity
+## 规范
 
-```js
-// forEach 遍历数组会自动跳过空元素
-const eachFlat = (arr = [], depth = 1) => {
-  const result = []; // 缓存递归结果
-  // 开始递归
-  (function flat(arr, depth) {
-    // forEach 会自动去除数组空位
-    arr.forEach((item) => {
-      // 控制递归深度
-      if (Array.isArray(item) && depth > 0) {
-        // 递归数组
-        flat(item, depth - 1)
-      } else {
-        // 缓存元素
-        result.push(item)
-      }
-    })
-  })(arr, depth)
-  // 返回递归结果
-  return result;
-}
-
-// for of 循环不能去除数组空位，需要手动去除
-const forFlat = (arr = [], depth = 1) => {
-  const result = [];
-  (function flat(arr, depth) {
-    for (let item of arr) {
-      if (Array.isArray(item) && depth > 0) {
-        flat(item, depth - 1)
-      } else {
-        // 去除空元素，添加非 undefined 元素
-        item !== void 0 && result.push(item);
-      }
-    }
-  })(arr, depth)
-  return result;
-}
-```
-
-### 使用堆栈 stack
-
-```js
-// 无递归数组扁平化，使用堆栈
-// 注意：深度的控制比较低效，因为需要检查每一个值的深度
-// 也可能在 shift / unshift 上进行 w/o 反转，但是末端的数组 OPs 更快
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
-function flatten(input) {
-  const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // 使用 pop 从 stack 中取出并移除值
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // 使用 push 送回内层数组中的元素，不会改动原始输入
-      stack.push(...next);
-    } else {
-      res.push(next);
-    }
-  }
-  // 反转恢复原数组的顺序
-  return res.reverse();
-}
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
-```
-
-```js
-// 递归版本的反嵌套
-function flatten(array) {
-  var flattend = [];
-  (function flat(array) {
-    array.forEach(function(el) {
-      if (Array.isArray(el)) flat(el);
-      else flattend.push(el);
-    });
-  })(array);
-  return flattend;
-}
-```
-
-### Use `Generator` function
-
-```js
-function* flatten(array) {
-    for (const item of array) {
-        if (Array.isArray(item)) {
-            yield* flatten(item);
-        } else {
-            yield item;
-        }
-    }
-}
-
-var arr = [1, 2, [3, 4, [5, 6]]];
-const flattened = [...flatten(arr)];
-// [1, 2, 3, 4, 5, 6]
-```
-
-Please do not add polyfills on this article. For reference, please check: <https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500>
-
-## Specifications
-
-| Specification                                                                                           | Status   | Comment            |
-| ------------------------------------------------------------------------------------------------------- | -------- | ------------------ |
-| [ECMAScript 2019](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flat) | Finished | Initial definition |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## 参见
 
+- [`core-js` 中 `Array.prototype.flat` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}

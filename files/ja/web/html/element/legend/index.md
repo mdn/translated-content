@@ -1,26 +1,33 @@
 ---
-title: <legend>
+title: "<legend>: フィールドセット凡例要素"
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/legend
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
-{{HTMLRef}}
 
-**HTML の `<legend>` 要素**は、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
+{{HTMLSidebar}}
+
+**`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
+
+## 属性
+
+この要素には、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
+
+## 例
+
+`<legend>` の使用例は、 {{HTMLElement("form")}} のページを参照してください。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>なし</td>
     </tr>
@@ -31,8 +38,8 @@ translation_of: Web/HTML/Element/legend
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a> (h1–h6
-        要素)
+        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        （h1–h6 要素）
       </td>
     </tr>
     <tr>
@@ -67,26 +74,14 @@ translation_of: Web/HTML/Element/legend
   </tbody>
 </table>
 
-## 属性
-
-この要素には、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
-
-## 例
-
-`<legend>` の使用例は、 {{ HTMLElement("form") }} のページを参照してください。
-
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#the-legend-element", "&lt;legend&gt;")}}     | {{Spec2("HTML WHATWG")}} | `legend` 要素を定義 |
-| {{SpecName("HTML5 W3C", "sec-forms.html#the-legend-element", "&lt;legend&gt;")}} | {{Spec2("HTML5 W3C")}}     |                     |
-| {{SpecName("HTML4.01", "interact/forms.html#h-17.10", "&lt;legend&gt;")}}             | {{Spec2("HTML4.01")}}     | 初回定義            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.legend")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/form_role)

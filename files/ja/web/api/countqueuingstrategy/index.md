@@ -2,6 +2,7 @@
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`CountQueuingStrategy`** インターフェイスは、ストリームの構築時に使用できる組み込みのチャンクカウントキューイング戦略を提供します。
@@ -43,9 +44,7 @@ var size = queueingStrategy.size();
 
 ## 仕様
 
-| 仕様                                                                             | 状態                         | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#cqs-class','CountQueuingStrategy')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

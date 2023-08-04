@@ -2,6 +2,7 @@
 title: <acronym>
 slug: Web/HTML/Element/acronym
 ---
+
 {{deprecated_header}}
 
 ## 简介
@@ -23,7 +24,10 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 ## 例子
 
 ```html
-<p>The <acronym title="World Wide Web">WWW</acronym> is only one component of the Internet.</p>
+<p>
+  The <acronym title="World Wide Web">WWW</acronym> is only one component of the
+  Internet.
+</p>
 ```
 
 ## 默认样式
@@ -32,7 +36,7 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 
 - 一些浏览器，像 Internet Explorer，赋予它和 {{HTMLElement("span")}} 元素相同的样式。
 - Opera, Firefox，和 一些其他的浏览器在元素内容下方添加了一条点状的下划线。
-- 一小部分浏览器不仅添加了点状下划线， 而且 put it in small caps; 为避免这种样式， 可以在 CSS 中添加{{cssxref('font-variant')}}`: none` 处理这种情况。
+- 一小部分浏览器不仅添加了点状下划线，而且 put it in small caps; 为避免这种样式，可以在 CSS 中添加{{cssxref('font-variant')}}`: none` 处理这种情况。
 
 因此强烈建议 Web 作者们不要依赖默认的样式。
 
@@ -42,10 +46,10 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.acronym")}}
+{{Compat}}
 
 ## 另见
 
 - {{HTMLElement("abbr")}} HTML 元素
 
-{{HTMLRef}}
+{{HTMLSidebar}}

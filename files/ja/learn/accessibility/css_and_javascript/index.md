@@ -2,6 +2,7 @@
 title: CSS と JavaScript のアクセシビリティの ベスト・プラクティス
 slug: Learn/Accessibility/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS と JavaScript も、適切に使えばアクセシブルなウェブ体験を可能にしてくれる可能性がありますが、誤用すると、大幅にアクセシビリティを悪化させることがあります。本記事では、複雑なコンテンツでもできる限りアクセシブルにすることを保証するために考慮すべき、CSS と JavaScript のベスト・プラクティスのいくつかを概観します。
@@ -48,7 +49,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -75,7 +77,8 @@ p, li {
 強調したテキストに対して、なんらかの単純な色付けを加えたいかもしれません。
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -87,7 +90,10 @@ strong, em {
 略語、頭文字語、つまり頭文字で表したものを、その展開形と関連付けることを可能とする要素は、たとえば以下のようなものです。
 
 ```html
-<p>ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr>を使ってマークアップされています。</p>
+<p>
+  ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr
+  >を使ってマークアップされています。
+</p>
 ```
 
 この場合も、なんらかの単純な方法でスタイルを付けたいかもしれません。
@@ -98,14 +104,16 @@ abbr {
 }
 ```
 
-略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)を参照してください。
+略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)を参照してください。
 
 #### リンク
 
 ハイパーリンク——ウェブ上の新たな場所に行く方法——は、たとえば以下のようなものです。
 
 ```html
-<p><a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。</p>
+<p>
+  <a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。
+</p>
 ```
 
 ある種のとても簡単なリンクのスタイル付けを以下に示します。
@@ -115,7 +123,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -141,7 +151,7 @@ a:active {
 ```html
 <div>
   <label for="name">お名前を入力してください</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -165,7 +175,7 @@ a:active {
 
 問題を起こさない程度に十分にコントラストが大きいかどうかを調べる簡単な方法があります。前景色と背景色を入力して調べることができる、コントラストのチェック用ツールが、オンライン上にいくつもあります。たとえば、WebAIM の [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) は、簡単に使えますし、色のコントラストに関して WCAG の基準に適合するためには何を行えば良いのかについて、説明もしてくれます。
 
-> **Note:** コントラスト比を高くすることによって、光沢のある画面のスマートフォンまたはタブレットを使う人が陽光のような明るい環境でページを読みやすくもなるでしょう。
+> **メモ:** コントラスト比を高くすることによって、光沢のある画面のスマートフォンまたはタブレットを使う人が陽光のような明るい環境でページを読みやすくもなるでしょう。
 
 もう一つ別のコツは、標識や案内について色だけに頼らないことです。というのも、色だけに頼るのは、色が見えない人々にとってまったく良くないからです。必須のフォーム・フィールドを赤でマークする代わりに、たとえば、アスタリスクと赤でマークしましょう。
 
@@ -179,7 +189,7 @@ a:active {
 
 一方で、 {{cssxref("visibility")}}`:hidden` も {{cssxref("display")}}`:none` も、スクリーン・リーダーからコンテンツを隠してしまうので、使うべきではありません。もちろん、スクリーン・リーダーからこのコンテンツを隠したいと思う然るべき理由がない限りは、ということですが。
 
-> **Note:** [Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/) には、この話題をめぐる多くのさらに有用な詳細があります。
+> **メモ:** [Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/) には、この話題をめぐる多くのさらに有用な詳細があります。
 
 ### ユーザーがスタイルを上書きできることを受け入れる
 
@@ -226,13 +236,13 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 
 この種のフォーム検査はひかえめです。JavaScript が利用できなくても、依然としてまったく申し分なくフォームを使えます。それに、分別のあるフォームの実装なら何であれ、サーバーサイドの検査も作動させておくことでしょう。なぜなら、悪意のあるユーザーがクライアントサイドの検査を (たとえば、ブラウザーで JavaScript をオフにしておくことによって) 迂回することは、あまりに容易だからです。クライアントサイドの検査は、それでも実際に、エラーを報告するためには有用なのです。ユーザーは、自分のおかした間違いについて、サーバーまでのラウンドトリップおよびページリロードを待つ必要なしに、すぐに知ることができます。これは使い勝手の上での明らかな利点です。
 
-> **Note:** この単純なデモではサーバーサイドの検査を実装しませんでした。
+> **メモ:** この単純なデモではサーバーサイドの検査を実装しませんでした。
 
 このフォーム検査も、とてもアクセシブルにしておきました。{{htmlelement("label")}} 要素を用いて、フォーム・ラベルがそのラベルの入力欄に曖昧な点なしに紐付けられるようにして、それによってスクリーン・リーダーがラベルを一緒に読み上げられるようにしました。
 
 ```html
 <label for="name">お名前を入力してください (Enter your name):</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 フォームが送信されるときにだけ検査をしています。これは、UI をあまりに頻繁に更新しないようにするため、そして、スクリーン・リーダーのユーザーを (また、おそらくは他のユーザーも) 潜在的に混乱させることがないようにするためです。
@@ -241,22 +251,22 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
 ```
 
-> **Note:** この例では、絶対的な位置指定を用いてエラーメッセージ・ボックスを隠したり見せたりしています。visibility や display などの他の方法を使っているわけではありません。なぜなら、絶対的な位置指定は、スクリーン・リーダーがコンテンツを読めるようにしておくことを妨げないからです。
+> **メモ:** この例では、絶対的な位置指定を用いてエラーメッセージ・ボックスを隠したり見せたりしています。visibility や display などの他の方法を使っているわけではありません。なぜなら、絶対的な位置指定は、スクリーン・リーダーがコンテンツを読めるようにしておくことを妨げないからです。
 
 現実のフォーム検査は、これよりもっと複雑でしょう。入力された名前が実際に名前のようであることを確認したいかもしれませんし、入力された年齢が実際に数であり、かつ現実的である (たとえば、負数ではなく、4 桁でもない、など) ということを確認したいかもしれません。ここでは、各入力フィールドに値が入れられたことを確認する (`if(testItem.input.value === '')` という) 簡単な検査を実装しただけです。
 
@@ -266,11 +276,15 @@ function validate(e) {
 
 ```js
 function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -280,7 +294,7 @@ function createLink(testItem) {
 
 各リンクは二つの役割を果たします。つまり、何のエラーなのかを教えてくれますし、さらに、そのリンクをクリックする / アクティブにすると問題の入力要素へ直接ジャンプして入力を訂正できるようになっています。
 
-> **Note:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ({{bug(277178)}} を参照).
+> **メモ:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ([Firefox バグ 277178](https://bugzil.la/277178) を参照).
 
 さらに、ソース順における先頭に `errorField` を置いてあります (CSS を使って、UI 上では別のところに配置してありますが)。これが意味することは、ユーザーが、ページの最初に戻ることで、自分のフォーム送信でまさに何が間違っているのかも分かるし、問題の入力要素にも行ける、ということです。
 
@@ -295,9 +309,9 @@ function createLink(testItem) {
 
 もっと詳細に [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) を扱う次の記事で、これらの属性について説明します。
 
-> **Note:** HTML5 フォームには `required` 属性や `min`/`minlength` 属性や `max`/`maxlength` 属性のような組み込みの検査の仕組みがあること (より詳しくは、{{htmlelement("input")}} 要素のリファレンスを参照) について考える読者もおそらくいることでしょう。このデモでは、結局これらの属性は使いませんでした。なぜなら、これらの属性についてのクロスブラウザー・サポートが当てにならないからです (たとえば IE10 以上のみでのサポートだったり、Safari ではサポートされていなかったりします)。
+> **メモ:** HTML5 フォームには `required` 属性や `min`/`minlength` 属性や `max`/`maxlength` 属性のような組み込みの検査の仕組みがあること (より詳しくは、{{htmlelement("input")}} 要素のリファレンスを参照) について考える読者もおそらくいることでしょう。このデモでは、結局これらの属性は使いませんでした。なぜなら、これらの属性についてのクロスブラウザー・サポートが当てにならないからです (たとえば IE10 以上のみでのサポートだったり、Safari ではサポートされていなかったりします)。
 
-> **Note:** WebAIM の [Usable and Accessible Form Validation and Error Recovery](http://webaim.org/techniques/formvalidation/) は、アクセシブルなフォーム検査についてのさらに有用な情報をいくつか教えてくれます。
+> **メモ:** WebAIM の [Usable and Accessible Form Validation and Error Recovery](http://webaim.org/techniques/formvalidation/) は、アクセシブルなフォーム検査についてのさらに有用な情報をいくつか教えてくれます。
 
 ### JavaScript のアクセシビリティのその他の問題
 
@@ -332,13 +346,3 @@ imgThumb.onblur = hideImg;
 次は WAI-ARIA の番です!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは?](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

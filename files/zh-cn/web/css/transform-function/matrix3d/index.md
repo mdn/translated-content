@@ -1,15 +1,15 @@
 ---
 title: matrix3d()
 slug: Web/CSS/transform-function/matrix3d
-original_slug: Web/CSS/transform-function/matrix3d()
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`matrix3d()`** 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 ## 语法
 
-`matrix3d()` 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。
+`matrix3d()` 函数由 16 个参数指定。这些参数以列为主的顺序进行描述。
 
 ```
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
@@ -71,9 +71,9 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ```html
 <div class="foo">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
-necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat sit
+  soluta, quisquam exercitationem delectus qui unde in facere necessitatibus aut
+  quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
 </div>
 ```
 
@@ -90,7 +90,6 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-
 }
 .foo {
   width: 50%;
@@ -101,7 +100,7 @@ body {
   text-align: center;
   font-family: system-ui, sans-serif;
   font-size: 14px;
-   /* Setting up animation for better demonstration */
+  /* Setting up animation for better demonstration */
   animation: MotionScale 2s alternate linear infinite;
 }
 
@@ -116,29 +115,13 @@ body {
         Translates every Z point by 0
         Scales down by 10%
     */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
-
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1);
   }
   50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
   }
   to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
   }
 }
 ```

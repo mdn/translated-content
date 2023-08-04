@@ -2,9 +2,10 @@
 title: PromiseRejectionEvent.promise
 slug: Web/API/PromiseRejectionEvent/promise
 ---
+
 {{APIRef("HTML DOM") }}
 
-{{domxref("PromiseRejectionEvent")}}事件对象的**`promise`**属性是只读的，表明 Promise 被 reject 的原因。您可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解 Promise 为什么被 reject。
+{{domxref("PromiseRejectionEvent")}}事件对象的 **`promise`** 属性是只读的，表明 Promise 被 reject 的原因。您可以通过检查{{domxref("PromiseRejectionEvent.reason")}}来了解 Promise 为什么被 reject。
 
 ## Syntax
 
@@ -23,15 +24,14 @@ promise = PromiseRejectionEvent.promise
 {{domxref("event.preventDefault()")}} 用来表明该 promise 已被处理
 
 ```js
-window.onunhandledrejection = function(event) {
+window.onunhandledrejection = function (event) {
   if (event.reason.code && event.reason.code == "Module not ready") {
-    window.requestIdleCallback(function(deadline) {
-      loadModule(event.reason.moduleName)
-        .then(performStartup);
+    window.requestIdleCallback(function (deadline) {
+      loadModule(event.reason.moduleName).then(performStartup);
     });
     event.preventDefault();
   }
-}
+};
 ```
 
 ## Specifications
@@ -40,11 +40,11 @@ window.onunhandledrejection = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.PromiseRejectionEvent.promise")}}
+{{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}
-- {{event("rejectionhandled")}}
-- {{event("unhandledrejection")}}
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

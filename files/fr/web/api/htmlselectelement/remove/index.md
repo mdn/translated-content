@@ -1,8 +1,8 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
-translation_of: Web/API/HTMLSelectElement/remove
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La méthode **`HTMLSelectElement.remove()`** enlève l'option à l'index choisi dans la liste des options de cet objet select.
@@ -41,7 +41,6 @@ sel.remove(1);
     <option value="3">Option: Value 3</option>
   </select>
 */
-
 ```
 
 ## Spécifications

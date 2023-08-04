@@ -2,6 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 **`background-attachment`** [CSS](/zh-CN/docs/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
@@ -43,7 +44,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -52,10 +53,9 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
 </p>
 ```
 
@@ -71,7 +71,7 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -81,19 +81,17 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
-
-  Suddenly she came upon a little three-legged table, all made of solid
-  glass; there was nothing on it except a tiny golden key, and Alice's
-  first thought was that it might belong to one of the doors of the hall;
-  but, alas! either the locks were too large, or the key was too small,
-  but at any rate it would not open any of them. However, on the second
-  time round, she came upon a low curtain she had not noticed before, and
-  behind it was a little door about fifteen inches high: she tried the
-  little golden key in the lock, and to her great delight it fitted!
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
+  Suddenly she came upon a little three-legged table, all made of solid glass;
+  there was nothing on it except a tiny golden key, and Alice's first thought
+  was that it might belong to one of the doors of the hall; but, alas! either
+  the locks were too large, or the key was too small, but at any rate it would
+  not open any of them. However, on the second time round, she came upon a low
+  curtain she had not noticed before, and behind it was a little door about
+  fifteen inches high: she tried the little golden key in the lock, and to her
+  great delight it fitted!
 </p>
 ```
 
@@ -109,7 +107,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## 参见
 

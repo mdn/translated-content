@@ -1,15 +1,8 @@
 ---
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
-tags:
-  - API
-  - Interface
-  - Performance Timeline API
-  - PerformanceEntry
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'objet **`PerformanceEntry`** encapsule une seule mesure de performance qui fait partie de la _chronologie de performance_. Une _entrée de performance_ peut être créée directement en faisant _[une marque](/fr/docs/Web/API/PerformanceMark)_ ou _[une mesure](/fr/docs/Web/API/PerformanceMeasure)_ (par exemple en appelant la méthode [`mark()`](/fr/docs/Web/API/Performance/mark)) à un point explicite d'une application. Les entrées de performance sont également créées de manière indirecte, par exemple en chargeant une ressource (telle qu'une image).
@@ -55,10 +48,7 @@ function print_PerformanceEntries() {
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  let properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
+  let properties = ["name", "entryType", "startTime", "duration"];
 
   for (let i = 0; i < properties.length; i++) {
     // Vérifie chaque propriété

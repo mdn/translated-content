@@ -1,15 +1,8 @@
 ---
 title: MessageChannel.port2
 slug: Web/API/MessageChannel/port2
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - MessageChannel
-  - Property
-  - Reference
-translation_of: Web/API/MessageChannel/port2
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} インターフェースの **`port2`** 読み取り専用プロパティは、メッセージチャンネルの第 2 ポートを返します。このポートは、チャンネルの元となるコンテキストに付属します。
@@ -53,10 +46,7 @@ function handleMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                                     | 備考                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-messagechannel-port2','port2')}}             | {{Spec2('HTML WHATWG')}}             | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
-| {{SpecName('HTML5 Web Messaging', '#dom-messagechannel-port2','port2')}} | {{Spec2('HTML5 Web Messaging')}} | 仕様の W3C バージョン。                                         |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

@@ -1,15 +1,8 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 **`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
@@ -62,9 +55,7 @@ console.log(a, b);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

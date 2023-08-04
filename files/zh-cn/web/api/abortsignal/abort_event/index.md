@@ -2,6 +2,7 @@
 title: AbortSignal.onabort
 slug: Web/API/AbortSignal/abort_event
 ---
+
 {{APIRef("DOM")}}
 
 当事件关联的请求被中止时，触发 {{domxref("AbortSignal")}} 接口的 **`abort`** 事件，例如，调用 {{domxref("AbortController.abort()")}}。
@@ -11,8 +12,8 @@ slug: Web/API/AbortSignal/abort_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置一个事件处理器属性。
 
 ```js
-addEventListener('abort', (event) => { })
-onabort = (event) => { }
+addEventListener("abort", (event) => {});
+onabort = (event) => {};
 ```
 
 ## 事件类型
@@ -29,8 +30,8 @@ onabort = (event) => { }
 const controller = new AbortController();
 const signal = controller.signal;
 
-signal.addEventListener('abort', () => {
-  console.log('Request aborted');
+signal.addEventListener("abort", () => {
+  console.log("Request aborted");
 });
 ```
 
@@ -40,7 +41,7 @@ signal.addEventListener('abort', () => {
 const controller = new AbortController();
 const signal = controller.signal;
 signal.onabort = () => {
-  console.log('Request aborted');
+  console.log("Request aborted");
 };
 ```
 

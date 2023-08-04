@@ -1,16 +1,9 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - text-decoration
-translation_of: Web/HTML/Element/s
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<s>` 要素**は取り消し線を引いた文字列を表示します。 `<s>` 要素はすでに適切または正確ではなくなった事柄を表現します。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は {{HTMLElement("del")}} と {{HTMLElement("ins")}} の方が適しているので、こちらを使用してください。
 
@@ -74,7 +67,7 @@ translation_of: Web/HTML/Element/s
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **Note:** **実装におけるメモ:** Gecko 1.9.2 以前はこの要素に {{domxref("HTMLSpanElement")}} インターフェイスを実装しています。
+> **メモ:** **実装におけるメモ:** Gecko 1.9.2 以前はこの要素に {{domxref("HTMLSpanElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -118,10 +111,7 @@ s::after {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C','textlevel-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

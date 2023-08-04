@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
-translation_of: Web/API/HTMLElement/outerText
 ---
+
 {{APIRef("DOM")}}
 
 {{ Non-standard_header() }}
@@ -19,7 +19,7 @@ translation_of: Web/API/HTMLElement/outerText
 
 Microsoft [has a description on MSDN](<https://msdn.microsoft.com/en-us/library/ms534311(v=vs.85).aspx>).
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

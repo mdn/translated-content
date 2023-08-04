@@ -1,8 +1,8 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-original_slug: Web/API/document.createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 **`Document.createTreeWalker()`** 方法，能建立一個 {{domxref("TreeWalker")}} 物件並傳回.
@@ -47,13 +47,17 @@ The following example goes through all nodes in the body, reduces the set of nod
 var treeWalker = document.createTreeWalker(
   document.body,
   NodeFilter.SHOW_ELEMENT,
-  { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-  false
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 
 var nodeList = [];
 
-while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 ```
 
 ## Specifications
@@ -62,7 +66,7 @@ while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 ## Browser compatibility
 
-{{Compat("api.Document.createTreeWalker")}}
+{{Compat}}
 
 ## See also
 

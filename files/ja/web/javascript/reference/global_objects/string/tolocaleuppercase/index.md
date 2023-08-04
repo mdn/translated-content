@@ -1,15 +1,8 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 **`toLocaleUpperCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて大文字に変換して返します。
@@ -62,10 +55,7 @@ let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

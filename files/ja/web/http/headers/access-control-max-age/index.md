@@ -1,13 +1,8 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Max-Age`** レスポンスヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}の結果 (つまり {{HTTPHeader("Access-Control-Allow-Methods")}} および {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーに含まれる情報) をキャッシュすることができる時間の長さを示します。
@@ -55,9 +50,7 @@ Access-Control-Max-Age: 600
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                     | 備考       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#http-access-control-max-age', 'Access-Control-Max-Age')}} | {{Spec2("Fetch")}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

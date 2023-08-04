@@ -2,13 +2,14 @@
 title: getBBox()
 slug: Web/API/SVGGraphicsElement/getBBox
 ---
+
 {{APIRef}}
 
 **`SVGGraphicsElement.getBBox()`** で、オブジェクトが収まる最小の矩形の座標を特定することができます。返される座標は、現在の SVG 空間、すなわち対象の要素に含まれる位置に関する属性すべてを適用した後の空間に従います。
 
 メモ: `getBBox` は要素がまだレンダリングされていない場合でも、メソッドが呼び出されたときに実際の境界ボックスを返します。また、要素またはその親に適用される変換は無視します。
 
-> **Note:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
+> **メモ:** `getBBox` は {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}} とは異なる値を返します。後者はビューポートからの相対値を返します。
 
 ## 構文
 
@@ -59,9 +60,7 @@ rectBoundingClientRect.setAttribute('height', boundingClientRectGroup.height);
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                     | 備考                           |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------ |
-| {{SpecName('SVG1.1', 'types.html#__svg__SVGLocatable__getBBox', 'getBBox')}} | {{Spec2('SVG1.1')}} | 初回定義 (SVG 要素のみに適用). |
+{{Specifications}}
 
 ## 関連情報
 

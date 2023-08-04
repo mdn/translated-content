@@ -1,12 +1,8 @@
 ---
-title: 'ARIA: alert ロール'
-slug: Web/Accessibility/ARIA/Roles/Alert_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Alert_Role
+title: "ARIA: alert ロール"
+slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
+
 アラート ([`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert)) ロールは、要素が動的に更新されたことをユーザーに通知するために使用できます。 ロールが追加されると、スクリーンリーダーは更新されたコンテンツの読み上げを即座に開始します。 ユーザーがアラートを閉じることを期待する場合は、代わりにアラートダイアログ ([`alertdialog`](/ja/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role)) ロールを使用するべきです。
 
 ## 説明
@@ -22,7 +18,9 @@ translation_of: Web/Accessibility/ARIA/Roles/Alert_Role
 アラートをトリガーする最も基本的な方法は、デフォルトで `display: none;` を持つ要素に `role="alert"` を追加することです。 CSS や JavaScript で [`display`](/ja/docs/Web/CSS/CSS_Display) の値を変更すると、自動的にスクリーンリーダーがコンテンツを読み上げるようになります。
 
 ```html
-<p role="alert" style="display: none;">要素が表示されるとアラートがトリガーされます。</p>
+<p role="alert" style="display: none;">
+  要素が表示されるとアラートがトリガーされます。
+</p>
 ```
 
 CSS だけでアラートをトリガーすることは可能ですが、ブラウザやスクリーンリーダーのサポートが増え、イベントハンドラやフォームの検証などのより大きなユーザーインタラクションの一部として、より適切な場合が多いため、JavaScript を使用する方がよいでしょう。 JavaScript を使用すると、開発者はアラートの追加と削除を適切に制御できます。
@@ -33,11 +31,11 @@ CSS だけでアラートをトリガーすることは可能ですが、ブラ�
 ```
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', triggerAlert);
+const btn = document.querySelector("button");
+btn.addEventListener("click", triggerAlert);
 
 function triggerAlert() {
-  var alertEl = document.querySelector('.alert');
+  var alertEl = document.querySelector(".alert");
   alertEl.setAttribute("role", "alert");
 }
 ```
@@ -48,10 +46,7 @@ function triggerAlert() {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                                             |
-| ---------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alert","Alert")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#alert","Alert")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 
@@ -60,4 +55,4 @@ function triggerAlert() {
 - [ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [alert ロールの使用](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

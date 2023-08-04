@@ -1,17 +1,19 @@
 ---
-title: 'ARIA: dialog ロール'
+title: "ARIA: dialog ロール"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
-tags:
-  - ARIA
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ---
+
 ダイアログ ([`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog)) ロールは、ウェブアプリケーションやウェブページの残りの部分からコンテンツや UI を分離する HTML ベースのアプリケーションのダイアログやウィンドウをマークアップするために使用します。 ダイアログは通常、オーバーレイを使用して残りのページコンテンツの上に配置されます。 ダイアログはノンモーダル (ダイアログ外のコンテンツともやりとり可能) またはモーダル (ダイアログ内のコンテンツのみとやりとり可能) のいずれかになります。
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">あなたの個人情報が更新されました</h2>
-  <p id="dialog1Desc">情報は、ユーザーアカウントのセクションでいつでも変更できます。</p>
+  <p id="dialog1Desc">
+    情報は、ユーザーアカウントのセクションでいつでも変更できます。
+  </p>
   <button>閉じる</button>
 </div>
 ```
@@ -32,14 +34,19 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ダイアログにすでに表示されているタイトルバーがある場合、そのバーの中のテキストを使用してダイアログ自体にラベルを付けることができます。 これを達成する最善の方法は、`role="dialog"` 要素に `aria-labelledby` 属性を使用することです。 さらに、ダイアログがダイアログタイトル以外に追加の説明テキストを含んでいる場合、このテキストは `aria-describedby` 属性を使用してダイアログに関連付けることができます。 このアプローチは、次のコードスニペットに示されています。
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">あなたの個人情報が更新されました</h2>
-  <p id="dialog1Desc">情報は、ユーザーアカウントのセクションでいつでも変更できます。</p>
+  <p id="dialog1Desc">
+    情報は、ユーザーアカウントのセクションでいつでも変更できます。
+  </p>
   <button>閉じる</button>
 </div>
 ```
 
-> **Note:** なお、非仮想モードで動作するスクリーンリーダーが認識するために、ダイアログのタイトルと説明のテキストがフォーカス可能である必要はありません。 ARIA のダイアログロールとラベル付けの手法を組み合わせることで、スクリーンリーダーは、フォーカスがダイアログに移動したときにダイアログの情報をアナウンスするべきです。
+> **メモ:** なお、非仮想モードで動作するスクリーンリーダーが認識するために、ダイアログのタイトルと説明のテキストがフォーカス可能である必要はありません。 ARIA のダイアログロールとラベル付けの手法を組み合わせることで、スクリーンリーダーは、フォーカスがダイアログに移動したときにダイアログの情報をアナウンスするべきです。
 
 ### 必要な JavaScript 機能
 
@@ -69,38 +76,41 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 
 ダイアログが正しくラベル付けされ、フォーカスがダイアログ内の要素 (多くの場合、ボタンなどのインタラクティブな要素) に移動された時、スクリーンリーダーは、フォーカスされた要素をアナウンスするとともに、ダイアログのアクセス可能なロール、名前、および任意で説明をアナウンスするべきです。
 
-> **Note:** 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があり、アナウンスの順序は使用する支援技術によって異なる場合があります。 上記の情報はこれらの意見の 1 つであり、したがって規範的ではありません。
+> **メモ:** 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があり、アナウンスの順序は使用する支援技術によって異なる場合があります。 上記の情報はこれらの意見の 1 つであり、したがって規範的ではありません。
 
 ## 例
 
 #### フォームを含むダイアログ
 
 ```html
- <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-   <h2 id="dialog1Title">加入申込書</h2>
-   <p id="dialog1Desc">私たちは、この情報を第三者と共有することはありません。</p>
-   <form>
-     <p>
-       <label for="firstName">名</label>
-       <input id="firstName" type="text" />
-     </p>
-     <p>
-       <label for="lastName">姓</label>
-       <input id="lastName" type="text"/>
-     </p>
-     <p>
-       <label for="interests">興味</label>
-       <textarea id="interests"></textarea>
-     </p>
-     <p>
-       <input type="checkbox" id="autoLogin"/>
-       <label for="autoLogin">自動ログイン？</label>
-     </p>
-     <p>
-         <input type="submit" value="情報を保存する"/>
-     </p>
-   </form>
- </div>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">加入申込書</h2>
+  <p id="dialog1Desc">私たちは、この情報を第三者と共有することはありません。</p>
+  <form>
+    <p>
+      <label for="firstName">名</label>
+      <input id="firstName" type="text" />
+    </p>
+    <p>
+      <label for="lastName">姓</label>
+      <input id="lastName" type="text" />
+    </p>
+    <p>
+      <label for="interests">興味</label>
+      <textarea id="interests"></textarea>
+    </p>
+    <p>
+      <input type="checkbox" id="autoLogin" />
+      <label for="autoLogin">自動ログイン？</label>
+    </p>
+    <p>
+      <input type="submit" value="情報を保存する" />
+    </p>
+  </form>
+</div>
 ```
 
 #### 動作する例
@@ -109,13 +119,11 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 
 ### 注
 
-> **Note:** キーボードユーザーがダイアログ外の要素にフォーカスを移動するのを防ぐことは可能ですが、スクリーンリーダーのユーザーは、スクリーンリーダーの仮想カーソルを使用してそのコンテンツにナビゲートできるかもしれません。 開発者は、モーダルダイアログがアクティブな間、モーダルダイアログ外のコンテンツに全てのユーザーがアクセスできないようにすることが重要です。
+> **メモ:** キーボードユーザーがダイアログ外の要素にフォーカスを移動するのを防ぐことは可能ですが、スクリーンリーダーのユーザーは、スクリーンリーダーの仮想カーソルを使用してそのコンテンツにナビゲートできるかもしれません。 開発者は、モーダルダイアログがアクティブな間、モーダルダイアログ外のコンテンツに全てのユーザーがアクセスできないようにすることが重要です。
 
 ## 仕様
 
-| 仕様                                                 | 状態                     |
-| ---------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#dialog","dialog")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -126,4 +134,4 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 - [ARIA: alertdialog ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alertdiialog_Role)
 - [alertdialog ロールの使用](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

@@ -1,9 +1,8 @@
 ---
 title: <radialGradient>
 slug: Web/SVG/Element/radialGradient
-translation_of: Web/SVG/Element/radialGradient
-browser-compat: svg.elements.radialGradient
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<radialGradient>`** permet de définir des dégradés radiaux qui peuvent être appliqués aux éléments de remplissage ou de contour des éléments graphiques.
@@ -13,12 +12,18 @@ L'élément SVG **`<radialGradient>`** permet de définir des dégradés radiaux
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 10 10"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="monDegrade">
       <stop offset="10%" stop-color="gold" />

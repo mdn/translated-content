@@ -2,6 +2,7 @@
 title: Chrome との非互換性
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互換性があるように設計されています。可能な限り、それぞれのブラウザー向けに書かれた拡張機能は最低限の変更で Firefox で実行できるように設計されています。
@@ -15,13 +16,13 @@ Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互�
 Chrome では、拡張機能は `chrome` ネームスペースを使って特権 JavaScript API にアクセスします:
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 WebExtensions は同等の API に `browser` ネームスペースを使ってアクセスします:
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 多くの API は非同期です。 Chrome では、非同期 API はコールバックを使用して値を返し、{{WebExtAPIRef("runtime.lastError")}}がエラーを通知します:
@@ -35,13 +36,10 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
-同様の WebExtensions API では[ promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
+同様の WebExtensions API では [promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を利用します:
 
 ```js
 function logCookie(c) {
@@ -52,9 +50,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
@@ -76,7 +72,7 @@ setCookie.then(logCookie, logError);
 
 - `notifications.create()`の `"basic"` [`type`](/ja/Add-ons/WebExtensions/API/notifications/TemplateType)を指定した場合の、 `iconUrl` は Firefox では任意です。Chrome では必須です。
 - 通知はユーザーがクリックするとすぐに消去されます。 これは Chrome では当てはまりません。
-- `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 ` chrome.notifications.create() ``のコールバック `関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
+- `notifications.create()` を複数回連続して呼び出すと、Firefox が通知を一切表示しなくなることがあります。 `chrome.notifications.create()` のコールバック 関数内に入るまでの時間は、後続のスクリプトが実行されるまで待つほど十分な時間ではありません。
 
 #### [proxy](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 
@@ -131,7 +127,7 @@ chrome では、コンテンツスクリプトから`/api`のような相対 URL
 
 ## manifest.json のキー
 
-メインの[ manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
+メインの[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ページには、manifest.json のキーのブラウザーサポートを説明する表が含まれています。 特定のキーのサポートに関する警告がある場合、表にアスタリスク "\*"付きで示され、キーのリファレンスページには注意事項が説明されています。
 
 これらの表は、 [GitHub で JSON ファイル](https://github.com/mdn/browser-compat-data)として保存された互換性データから生成されます。
 

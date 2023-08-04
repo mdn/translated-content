@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
+
 {{JSRef}}
 
 **`flags`** プロパティは、現在の正規表現オブジェクトの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2)から成る文字列を返します。
@@ -47,9 +39,7 @@ if (RegExp.prototype.flags === undefined) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-get-regexp.prototype.flags", "RegExp.prototype.flags")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

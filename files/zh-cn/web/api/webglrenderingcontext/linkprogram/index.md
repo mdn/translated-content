@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 ---
+
 {{APIRef("WebGL")}}
 {{domxref("WebGLRenderingContext")}} 接口的**linkProgram()**方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
 
@@ -31,9 +32,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
-  throw new Error('Could not compile WebGL program. \n\n' + info);
+  throw new Error("Could not compile WebGL program. \n\n" + info);
 }
 ```
 
@@ -43,7 +44,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.linkProgram")}}
+{{Compat}}
 
 ## 参考
 

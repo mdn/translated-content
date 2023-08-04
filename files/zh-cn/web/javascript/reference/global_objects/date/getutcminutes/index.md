@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCMinutes()`** 方法以世界时为标准，返回一个指定的日期对象的分钟数。
@@ -22,9 +23,9 @@ dateObj.getUTCMinutes()
 
 `getUTCMinutes()` 返回一个 0 到 59 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCMinutes()` 方法
+### 示例：使用 `getUTCMinutes()` 方法
 
 下例将当前时间的分钟部分赋值给变量 `minutes`。
 

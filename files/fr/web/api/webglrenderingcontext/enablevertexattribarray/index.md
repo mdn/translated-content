@@ -1,22 +1,8 @@
 ---
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
-tags:
-  - 3D
-  - API
-  - API WebGL
-  - Attributs des Sommets
-  - Graphiques
-  - Méthode
-  - Reference
-  - Tableau des Attributs
-  - WebGL
-  - WebGLRenderingContext
-  - enableVertexAttribArray
-  - shader de sommet
-  - sommet
-translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode {{domxref ("WebGLRenderingContext")}} **`enableVertexAttribArray()` -** qui fait partie de l'API WebGL - active le tableau générique des attributs de sommet à l'indice spécifié dans la liste des tableaux d'attributs.
@@ -56,12 +42,17 @@ Ce code — un extrait de l'exemple complet [Un exemple d'animation 2D WebGL de 
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-aVertexPosition =
-    gl.getAttribLocation(programmeShader, "aVertexPosition");
+aVertexPosition = gl.getAttribLocation(programmeShader, "aVertexPosition");
 
 gl.enableVertexAttribArray(aVertexPosition);
-gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-      gl.FLOAT, false, 0, 0);
+gl.vertexAttribPointer(
+  aVertexPosition,
+  vertexNumComponents,
+  gl.FLOAT,
+  false,
+  0,
+  0,
+);
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```

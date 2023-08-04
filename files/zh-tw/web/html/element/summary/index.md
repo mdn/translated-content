@@ -2,9 +2,8 @@
 title: <summary>
 slug: Web/HTML/Element/summary
 ---
-{{HTMLRef}}
 
-## Summary
+{{HTMLSidebar}}
 
 The HTML _summary_ element (`<summary>`) is used as a summary, caption, or legend for the content of a {{HTMLElement("details")}} element.
 
@@ -17,7 +16,7 @@ The HTML _summary_ element (`<summary>`) is used as a summary, caption, or legen
 | Permitted content        | [Phrasing content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Phrasing_content) or one element of [Heading content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Heading_content) |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tag omission             | None, both the start tag and the end tag are mandatory.                                                                                                                               |
-| Permitted parent element | The {{HTMLElement("details")}} element.                                                                                                                                     |
+| Permitted parent element | The {{HTMLElement("details")}} element.                                                                                                                                               |
 | Normative document       | [HTML5, section 4.11.2](https://html.spec.whatwg.org/multipage/forms.html#the-summary-element)                                                                                        |
 
 ## Attributes
@@ -32,7 +31,7 @@ This element implements the {{domxref("HTMLElement")}} interface.
 
 ```html
 <details style="color: blue; margin-left: 15px; margin-bottom: 10px;">
-<p>In summation, get details from the link on the next line</p>
+  <p>In summation, get details from the link on the next line</p>
 </details>
 ```
 
@@ -46,7 +45,7 @@ Please see the {{HTMLElement("details")}} page for examples on \<summary>.
 
 ## Browser compatibility
 
-{{Compat("html.elements.summary")}}
+{{Compat}}
 
 ## See also
 

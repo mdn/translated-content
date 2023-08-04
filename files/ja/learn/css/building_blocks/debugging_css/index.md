@@ -2,6 +2,7 @@
 title: CSS のデバッグ
 slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 CSS を書くとき、期待どおりに動作していないように見える問題が発生する場合があります。セレクターは合っているはずなのに何も起こらなかったり、ボックスのサイズが期待したどおりにならなかったりなどです。この記事では CSS の問題をデバッグする方法について案内し、何が起こっているかを調べるのに各モダンブラウザーのデベロッパーツールはどう役立つかを示します。
@@ -58,7 +59,7 @@ DevTools を使ってプロパティを追加することができます。お�
 
 ![DevToolsパネル、新しいプロパティをルールに追加し、フォントのオートコンプリートを開く](inspecting3-font-size.png)
 
-> **Note:** ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは[、CSS の確認と編集を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)ご覧ください。
+> **メモ:** ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは[、CSS の確認と編集を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)ご覧ください。
 
 ## ボックスモデルについて
 
@@ -74,7 +75,7 @@ DevTools を使ってプロパティを追加することができます。お�
 
 ![DevToolsのレイアウトセクション](inspecting4-box-model.png)
 
-> **Note:** 詳細については[、ボックスモデルの調査と検査を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)ご覧ください。
+> **メモ:** 詳細については[、ボックスモデルの調査と検査を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)ご覧ください。
 
 ## 詳細度に関する問題の解決
 
@@ -158,24 +159,3 @@ CSS の問題を解決する場合、DevTools は非常に役立ちます。CSS 
 CSS を使いこなせるようになると、問題を発見するのが早くなることに気づくでしょう。しかし、最も経験豊富な人でも、「一体何が起こっているのか」と疑問に思うことがあります。体系的なアプローチをとり、テストケースを減らし、他の人に問題を説明すると、通常、修正が見つかります。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [共役](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

@@ -2,11 +2,12 @@
 title: Animations and tweens
 slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
 
 为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现 Phaser 动画和补间。
 
@@ -19,7 +20,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 接下来，我们将加载 spritesheet - 将以下行放在`preload()`函数的底部：
 
 ```js
-game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
+game.load.spritesheet("ball", "img/wobble.png", 20, 20);
 ```
 
 而不是加载单个图像的球，我们可以加载整个 spritesheet - 不同图像的集合。我们将按顺序显示精灵，创造动画的幻觉。该`spritesheet()`方法的两个额外的表格确定给定 spritesheet 文件中每个单个框架的宽度和高度，指示程序如何切割以获取单个框架。
@@ -29,8 +30,8 @@ game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
 接下来，进入你的 create() 函数，找到加载球精灵的行，下面的调用`animations.add()`如下所示：
 
 ```js
-ball = game.add.sprite(50, 250, 'ball');
-ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
+ball = game.add.sprite(50, 250, "ball");
+ball.animations.add("wobble", [0, 1, 0, 2, 0, 1, 0, 2, 0], 24);
 ```
 
 要向对象添加动画，我们使用该`animations.add()`方法，其中包含以下参数
@@ -45,9 +46,9 @@ ball.animations.add('wobble', [0,1,0,2,0,1,0,2,0], 24);
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -55,7 +56,7 @@ function update() {
 
 ```js
 function ballHitPaddle(ball, paddle) {
-    ball.animations.play('wobble');
+  ball.animations.play("wobble");
 }
 ```
 
@@ -69,9 +70,9 @@ function ballHitPaddle(ball, paddle) {
 
 ```js
 var killTween = game.add.tween(brick.scale);
-killTween.to({x:0,y:0}, 200, Phaser.Easing.Linear.None);
-killTween.onComplete.addOnce(function(){
-    brick.kill();
+killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
+killTween.onComplete.addOnce(function () {
+  brick.kill();
 }, this);
 killTween.start();
 ```
@@ -86,7 +87,9 @@ killTween.start();
 这是补间定义的扩展版本，但是我们也可以使用速记语法：
 
 ```js
-game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 100);
+game.add
+  .tween(brick.scale)
+  .to({ x: 2, y: 2 }, 500, Phaser.Easing.Elastic.Out, true, 100);
 ```
 
 这个补间将使用弹性宽松在半秒内将砖的比例翻倍，将自动启动，延迟 100 毫秒。
@@ -99,6 +102,6 @@ game.add.tween(brick.scale).to({x:2,y:2}, 500, Phaser.Easing.Elastic.Out, true, 
 
 ## 下一步
 
-动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)输入。
+动画和 tweens 看起来很不错，但我们可以添加更多的我们的游戏 - 在下一节我们将看看处理[按钮](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)输入。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}

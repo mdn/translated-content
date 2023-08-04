@@ -2,6 +2,7 @@
 title: FileReader.result
 slug: Web/API/FileReader/result
 ---
+
 {{APIRef("File API")}}
 
 返回文件的内容。只有在读取操作完成后，此属性才有效，返回的数据的格式取决于是使用哪种读取方法来执行读取操作的。
@@ -22,7 +23,7 @@ var file = instanceOfFileReader.result
 
 ## 浏览器兼容性
 
-{{Compat("api.FileReader.result")}}
+{{Compat}}
 
 ## 参见
 

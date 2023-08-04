@@ -1,17 +1,8 @@
 ---
 title: 配置
 slug: Web/SVG/Tutorial/Positions
-tags:
-  - Beginner
-  - Coordinate systems
-  - Coordinates
-  - Drawing
-  - Graphics
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Positions
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 
 この記事では、 Scalable Vector Graphics (SVG) がどのようにオブジェクトの位置や大きさを表現しているのか、座標系や、スケーラブルなコンテキストにおける「ピクセル」の測定値の意味などを紹介します。
@@ -20,7 +11,7 @@ translation_of: Web/SVG/Tutorial/Positions
 
 ![](canvas_default_grid.png)SVG はすべての要素に対して座標系または**グリッド**システムを使用しており、これは [canvas](/ja/docs/Web/API/Canvas_API) (またはその他多くのコンピュータ描画ルーチン) で使用されているものと同様です。すなわち、文書の左上隅を点 (0,0)、すなわち原点と見なします。位置は、左上からのピクセル単位で測定され、正の x 方向は右に、正の y 方向は下になります。これは、子どもの頃に教わったグラフの描き方 (Y 軸が反転している) とは少し違うことに注意してください。しかし、これは HTML の要素の配置方法と同じです (既定では、左書きの文書では同様に考えられますが、右書きの文書は X を右から左に配置します)。
 
-#### 例:
+#### 例
 
 次の要素、
 

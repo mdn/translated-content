@@ -1,7 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-translation_of: Web/CSS/line-height
 ---
 {{CSSRef}}
 
@@ -33,9 +32,9 @@ line-height: unset;
 
 Свойство `line-height` задаётся с помощью:
 
-- [`<числа>`](#<number>)
-- [`<величины>`](#<length>)
-- [`<процентного соотношения>`](#<percentage>)
+- [`<числа>`](#number)
+- [`<величины>`](#length)
+- [`<процентного соотношения>`](#percentage)
 - ключевого слова [`normal`](#normal).
 
 ### Значения

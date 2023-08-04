@@ -1,7 +1,8 @@
 ---
-title: 'Window: hashchange event'
+title: "Window: hashchange event"
 slug: Web/API/Window/hashchange_event
 ---
+
 {{APIRef}}
 
 当 URL 的片段标识符更改时，将触发**hashchange**事件 (跟在＃符号后面的 URL 部分，包括＃符号)
@@ -34,16 +35,20 @@ slug: Web/API/Window/hashchange_event
 你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `hashchange` 事件：
 
 ```js
-window.addEventListener('hashchange', function() {
-  console.log('The hash has changed!')
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    console.log("The hash has changed!");
+  },
+  false,
+);
 ```
 
 或使用 `onhashchange` 事件处理程序属性：
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
+  if (location.hash === "#cool-feature") {
     console.log("You're visiting a cool feature!");
   }
 }
@@ -57,7 +62,7 @@ window.onhashchange = locationHashChanged;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.hashchange_event")}}
+{{Compat}}
 
 ## 参见
 

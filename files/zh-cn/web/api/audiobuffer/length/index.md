@@ -2,6 +2,7 @@
 title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `length` property of the {{ domxref("AudioBuffer") }} interface returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.
@@ -30,7 +31,7 @@ var channels = 2;
 var frameCount = audioCtx.sampleRate * 2.0;
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (var channel = 0; channel < channels; channel++) {
@@ -44,7 +45,7 @@ button.onclick = function() {
   }
 
   console.log(myArrayBuffer.length);
-}
+};
 ```
 
 ## 规范
@@ -53,7 +54,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.length")}}
+{{Compat}}
 
 ## See also
 

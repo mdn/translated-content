@@ -2,6 +2,7 @@
 title: Element
 slug: Web/API/Element
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element`** 介面表示了一個在 {{domxref("Document")}} 中的物件，其描述了各類型元素的共同屬性與方法，`Element` 的子介面則定義了不同類型元素的具體行為並增加額外的功能。例如 {{domxref("HTMLElement")}} 為所有 HTML 元素的基礎介面，而 {{domxref("SVGElement")}} 則是定義所有 SVG 元素的介面。
@@ -41,9 +42,11 @@ _Inherits properties from its parent interface, {{domxref("Node")}}, and by exte
 - {{ domxref("Element.localName") }} {{readOnlyInline}}
   - : A {{domxref("DOMString")}} representing the local part of the qualified name of the element.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
+
   - : The namespace URI of the element, or `null` if it is no namespace.
 
     > **備註：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
+
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }} {{readOnlyInline}}
   - : Is a {{ domxref("Element") }}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}
@@ -82,9 +85,9 @@ _Inherits properties from its parent interface, {{domxref("Node")}}, and by exte
 ### 事件處理器
 
 - {{ domxref("Element.ongotpointercapture") }}
-  - : Returns the event handler for the {{event("gotpointercapture")}} event type.
+  - : Returns the event handler for the `gotpointercapture` event type.
 - {{ domxref("Element.onlostpointercapture") }}
-  - : Returns the event handler for the {{event("lostpointercapture")}} event type.
+  - : Returns the event handler for the `lostpointercapture` event type.
 - {{ domxref("Element.onwheel") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `wheel` event.
 
@@ -187,4 +190,4 @@ _Inherits methods from its parents {{domxref("Node")}}, and its own parent, {{do
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element")}}
+{{Compat}}

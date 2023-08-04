@@ -1,16 +1,8 @@
 ---
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
+
 {{JSRef}}
 
 **`unicode`** プロパティは、 "`u`" フラグが正規表現で使われているかどうかを示します。`unicode` は正規表現インスタンスごとの読み取り専用プロパティです。
@@ -35,9 +27,7 @@ console.log(regex.unicode); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

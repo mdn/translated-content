@@ -2,13 +2,14 @@
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
 ---
+
 {{AddonSidebar}}
 
 ブラウザー拡張機能がブラウザーのテーマを更新できるようにします。
 
 この API を使用するには、拡張機能の [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "theme" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を要求しなければなりません。
 
-> **Note:** バックグランドファイルでテーマをセットアップする場合、'theme' [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を宣言しなければなりません。さもなければ、manifest の [theme](/ja/Add-ons/WebExtensions/manifest.json/theme) 関数を使用できません。
+> **メモ:** バックグランドファイルでテーマをセットアップする場合、'theme' [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を宣言しなければなりません。さもなければ、manifest の [theme](/ja/Add-ons/WebExtensions/manifest.json/theme) 関数を使用できません。
 
 ## 型
 

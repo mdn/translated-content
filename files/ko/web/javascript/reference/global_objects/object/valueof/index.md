@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 메서드는 특정 객체의 원시 값을 반환합니다.

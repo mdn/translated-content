@@ -2,6 +2,9 @@
 title: CSS 參考文件
 slug: Web/CSS/Reference
 ---
+
+{{CSSRef}}
+
 Use this **CSS reference** to browse an [alphabetical index](#index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
 
 ## 基本語法規則
@@ -45,7 +48,7 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 
 ## Selectors
 
-### [Basic selectors](/zh-TW/docs/Web/CSS/CSS_Selectors#Basic_selectors)
+### Basic selectors
 
 - [Type selector](/zh-TW/docs/Web/CSS/Type_selectors) `elementname`
 - [Class selector](/zh-TW/docs/Web/CSS/Class_selectors) `.classname`
@@ -53,14 +56,14 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 - [Universal selector](/zh-TW/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
 - [Attribute selector](/zh-TW/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
-### [Combinators](/zh-TW/docs/Web/CSS/CSS_Selectors#Combinators)
+### Combinators
 
 - [Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
 - [General sibling combinator](/zh-TW/docs/Web/CSS/General_sibling_selectors) `A ~ B`
 - [Child combinator](/zh-TW/docs/Web/CSS/Child_selectors) `A > B`
 - [Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_selectors) `A B`
 
-### [Pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes)
+### Pseudo-classes
 
 - {{ Cssxref(":active") }}
 - {{cssxref(':any')}}
@@ -109,7 +112,7 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 - {{ Cssxref(":valid") }}
 - {{ Cssxref(":visited") }}
 
-### [Pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements)
+### Pseudo-elements
 
 - {{ Cssxref("::after") }}
 - {{ Cssxref("::backdrop") }}
@@ -154,9 +157,9 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 - [Box model](/zh-TW/docs/Web/CSS/box_model)
 - [Containing block](/zh-TW/docs/Web/CSS/All_About_The_Containing_Block)
 - [Layout mode](/zh-TW/docs/Web/CSS/Layout_mode)
-- [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/zh-TW/docs/Web/CSS/Replaced_element)
-- [Stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/zh-TW/docs/Web/Guide/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

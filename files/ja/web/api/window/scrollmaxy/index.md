@@ -1,19 +1,8 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
-tags:
-  - API
-  - DOM_0
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Non-standard
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/scrollMaxY
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 **`Window.scrollMaxY`** は読み取り専用プロパティで、文書が縦方向にスクロールできる最大ピクセル数を返します。

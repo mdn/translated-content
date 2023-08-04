@@ -1,18 +1,8 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
-tags:
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/initial-letter
 ---
+
 {{CSSRef}}
 
 `initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
@@ -69,17 +59,17 @@ initial-letter: unset;
 #### CSS
 
 ```css
-.normal {
+.normal::first-letter {
   -webkit-initial-letter: normal;
   initial-letter: normal;
 }
 
-.onefive {
+.onefive::first-letter {
   -webkit-initial-letter: 1.5;
   initial-letter: 1.5;
 }
 
-.three {
+.three::first-letter {
   -webkit-initial-letter: 3.0;
   initial-letter: 3.0;
 }
@@ -91,9 +81,7 @@ initial-letter: unset;
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS3 Inline', '#sizing-drop-initials', 'initial-letter')}} | {{Spec2('CSS3 Inline')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

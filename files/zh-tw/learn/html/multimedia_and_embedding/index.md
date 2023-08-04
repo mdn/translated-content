@@ -2,6 +2,7 @@
 title: Multimedia and Embedding
 slug: Learn/HTML/Multimedia_and_embedding
 ---
+
 {{LearnSidebar}}
 
 到目前為止，我們已經看到了很多文字，但是只使用文字讓人感到無聊。讓我們開始研究如何透過更有趣的內容讓網絡變得活躍起來！本單元探討如何使用 HTML 在您的網頁中包增加媒體，包括可以嵌入圖像的不同方式，以及如何嵌入影片，音訊甚至整個網頁。
@@ -10,7 +11,7 @@ slug: Learn/HTML/Multimedia_and_embedding
 
 在此單元開始之前，我們假設你對 HTML 基礎知識 (如[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)) 已經有一定的了解，如果還沒有，建議您先預習該部分再回來。
 
-> **備註：** 如果你所操作的電腦、平板或裝置環境不允許你建立自己的檔案，你可以在諸如 [JSBin](https://jsbin.com/) 或[Thimble](https://thimble.mozilla.org/) 這樣的網站上嘗試(多數的)範例程式碼。
+> **備註：** 如果你所操作的電腦、平板或裝置環境不允許你建立自己的檔案，你可以在諸如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 這樣的網站上嘗試(多數的)範例程式碼。
 
 ## 導覽
 

@@ -2,6 +2,7 @@
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 The global **`undefined`** property represents the primitive value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's {{Glossary("Primitive", "primitive types")}}.
@@ -30,10 +31,15 @@ A variable that has not been assigned a value is of type undefined. A method or 
 > //DON'T DO THIS
 >
 > // logs "foo string"
-> (function() { var undefined = 'foo'; console.log(undefined, typeof undefined); })();
+> (function () {
+>   var undefined = "foo";
+>   console.log(undefined, typeof undefined);
+> })();
 >
 > // logs "foo string"
-> (function(undefined) { console.log(undefined, typeof undefined); })('foo');
+> (function (undefined) {
+>   console.log(undefined, typeof undefined);
+> })("foo");
 > ```
 
 ## 範例
@@ -45,10 +51,9 @@ You can use `undefined` and the strict equality and inequality operators to dete
 ```js
 var x;
 if (x === undefined) {
-   // these statements execute
-}
-else {
-   // these statements do not execute
+  // these statements execute
+} else {
+  // these statements do not execute
 }
 ```
 
@@ -60,8 +65,8 @@ Alternatively, {{jsxref("Operators/typeof", "typeof")}} can be used:
 
 ```js
 var x;
-if (typeof x === 'undefined') {
-   // these statements execute
+if (typeof x === "undefined") {
+  // these statements execute
 }
 ```
 
@@ -69,12 +74,13 @@ One reason to use {{jsxref("Operators/typeof", "typeof")}} is that it does not t
 
 ```js
 // x has not been declared before
-if (typeof x === 'undefined') { // evaluates to true without errors
-   // these statements execute
+if (typeof x === "undefined") {
+  // evaluates to true without errors
+  // these statements execute
 }
 
-if (x === undefined) { // throws a ReferenceError
-
+if (x === undefined) {
+  // throws a ReferenceError
 }
 ```
 
@@ -87,12 +93,12 @@ The {{jsxref("Operators/void", "void")}} operator is a third alternative.
 ```js
 var x;
 if (x === void 0) {
-   // these statements execute
+  // these statements execute
 }
 
 // y has not been declared before
 if (y === void 0) {
-   // throws a - Uncaught ReferenceError: y is not defined
+  // throws a - Uncaught ReferenceError: y is not defined
 }
 ```
 
@@ -102,4 +108,4 @@ if (y === void 0) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

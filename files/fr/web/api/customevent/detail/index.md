@@ -1,13 +1,8 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Évènement personnalisé
-translation_of: Web/API/CustomEvent/detail
 ---
+
 {{APIRef("DOM")}}
 
 Le **`detail`** de la propriété en lecture seule de l'interface {{domxref("CustomEvent")}} renvoie toutes les données transmises lors de l'initialisation de l'évènement.
@@ -28,13 +23,15 @@ Toute donnée initialisée avec l'évènement.
 
 ```js
 // ajoute un écouteur d'évènement approprié
-obj.addEventListener("cat", function(e) { process(e.detail) });
+obj.addEventListener("cat", function (e) {
+  process(e.detail);
+});
 
 // crée et distribue l'évènement
 let event = new CustomEvent("cat", {
   detail: {
-    hazcheeseburger: true
-  }
+    hazcheeseburger: true,
+  },
 });
 obj.dispatchEvent(event);
 

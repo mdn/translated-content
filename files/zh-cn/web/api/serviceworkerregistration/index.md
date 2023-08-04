@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -54,16 +55,22 @@ This code snippet is from the [service worker registration-events sample](https:
 Any new service workers are registered; if there's an existing service worker, the code overrides its default scope so that the registration applies to the current directory and everything underneath it. The example also reports any registration failures.
 
 ```js
-if ('serviceWorker' in navigator) {
-  document.querySelector('#availability').innerText = 'are';
-  document.querySelector('#controlled').innerText = navigator.serviceWorker.controller ? 'is' : 'is not';
-  navigator.serviceWorker.register('service-worker.js', {scope: './'}).then(function(registration) {
-    document.querySelector('#register').textContent = 'succeeded';
-  }).catch(function(error) {
-    document.querySelector('#register').textContent = 'failed: ' + error;
-  });
+if ("serviceWorker" in navigator) {
+  document.querySelector("#availability").innerText = "are";
+  document.querySelector("#controlled").innerText = navigator.serviceWorker
+    .controller
+    ? "is"
+    : "is not";
+  navigator.serviceWorker
+    .register("service-worker.js", { scope: "./" })
+    .then(function (registration) {
+      document.querySelector("#register").textContent = "succeeded";
+    })
+    .catch(function (error) {
+      document.querySelector("#register").textContent = "failed: " + error;
+    });
 } else {
-  document.querySelector('#availability').innerText = 'are not';
+  document.querySelector("#availability").innerText = "are not";
 }
 ```
 
@@ -73,7 +80,7 @@ if ('serviceWorker' in navigator) {
 
 ## Browser compatibility
 
-{{Compat("api.ServiceWorkerRegistration")}}
+{{Compat}}
 
 ## See also
 

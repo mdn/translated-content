@@ -1,17 +1,8 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - margin-inline
-  - recipe:css-shorthand-property
-browser-compat: css.properties.margin-inline
-translation_of: Web/CSS/margin-inline
 ---
+
 {{CSSRef}}
 
 The **`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。

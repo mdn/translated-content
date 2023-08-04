@@ -1,14 +1,6 @@
 ---
 title: 곱하기 할당 (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Multiplication_assignment
-browser-compat: javascript.operators.multiplication_assignment
 ---
 {{jsSidebar("Operators")}}
 

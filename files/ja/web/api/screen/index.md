@@ -2,6 +2,7 @@
 title: Screen
 slug: Web/API/Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 `Screen` インターフェイスは画面を表し、通常は、現在のウィンドウが描画されている画面であり、 {{DOMxRef("window.screen")}} を使用して取得されます。
@@ -17,7 +18,7 @@ _親である {{domxref("EventTarget")}} から継承したプロパティもあ
 - {{DOMxRef("Screen.availTop")}} {{Non-standard_Inline}}
   - : 永続的または半永続的なユーザーインターフェイス機能に割り当てられていない最初のピクセルの y 座標を指定します。
 - {{DOMxRef("Screen.availLeft")}} {{Non-standard_Inline}}
-  - : スクリーンの左端からの、最初の利用可能なピクセルの値を返します。​
+  - : スクリーンの左端からの、最初の利用可能なピクセルの値を返します。
 - {{DOMxRef("Screen.availHeight")}}
   - : Windows のタスクバーなど、オペレーティングシステムが表示する永続的または半永続的なユーザーインターフェイス機能を除いた画面の高さをピクセル単位で指定します。
 - {{DOMxRef("Screen.availWidth")}}

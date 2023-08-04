@@ -1,8 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope.skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
-translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} 의 **`ServiceWorkerGlobalScope.skipWaiting()`** 메소드는 waiting 상태의 서비스 워커를 active 상태의 서비스 워커로 변경하도록 강제한다.
@@ -12,7 +12,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.skipWaiting().then(function() {
+ServiceWorkerGlobalScope.skipWaiting().then(function () {
   //Do something
 });
 ```
@@ -28,7 +28,7 @@ ServiceWorkerGlobalScope.skipWaiting().then(function() {
 다음 예시는 active 상태의 서비스 워커가 이미 존재하는지의 여부에 관계없이, 새로 설치된 서비스 워커가 `activating` 상태로 진행되도록 한다.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
   // skipWaiting()가 반환하는 promise는 안전하게 무시될 수 있다.
   self.skipWaiting();
 
@@ -37,11 +37,11 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

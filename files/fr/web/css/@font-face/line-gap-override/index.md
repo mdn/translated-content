@@ -1,9 +1,8 @@
 ---
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
-translation_of: Web/CSS/@font-face/line-gap-override
-browser-compat: css.at-rules.font-face.line-gap-override
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`line-gap-override`** définit la mesure de l'écart de lignes de la police. La mesure de l'écart de lignes peut être l'écart recommandé par la police ou encore un écart externe.

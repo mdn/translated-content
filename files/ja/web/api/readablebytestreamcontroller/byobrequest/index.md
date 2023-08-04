@@ -2,6 +2,7 @@
 title: ReadableByteStreamController.byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`byobRequest`** 読み取り専用プロパティは、現在の BYOB プルリクエストを返します。 保留中のリクエストがない場合は `undefined` を返します。
@@ -22,9 +23,7 @@ var request = readableByteStreamController.byobRequest;
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rbs-controller-byob-request","byobRequest")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

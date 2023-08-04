@@ -1,13 +1,8 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef}}
 
 **`Math.sign()`** 関数は、引数として渡された数値の符号が**正**か**負**かを表す +/- 1 を返します。 `Math.sign()` に渡された数が 0 であれば、 +/- 0 を返します。なお、数値が正である場合、明示的な (+) は返され**ません**。
@@ -43,13 +38,13 @@ Math.sign(x)
 
 ```js
 if (!Math.sign) {
-  Math.sign = function(x) {
+  Math.sign = function (x) {
     // If x is NaN, the result is NaN.
     // If x is -0, the result is -0.
     // If x is +0, the result is +0.
     // If x is negative and not -0, the result is -1.
     // If x is positive and not +0, the result is +1.
-    return ((x > 0) - (x < 0)) || +x;
+    return (x > 0) - (x < 0) || +x;
     // A more aesthetic pseudo-representation:
     //
     // ( (x > 0) ? 1 : 0 )  // if x is positive, then positive one
@@ -69,21 +64,19 @@ if (!Math.sign) {
 ### Math.sign() の使用
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

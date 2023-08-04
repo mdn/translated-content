@@ -2,6 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{ JSRef }}
 
 **`Set`** 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### 值的相等
 
-因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于 -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的 “_Key equality for -0 and 0_”。
+因为 Set 中的值总是唯一的，所以需要判断两个值是否相等。在 ECMAScript 规范的早期版本中，这不是基于和===操作符中使用的算法相同的算法。具体来说，对于 Set，+0（+0 严格相等于 -0）和 -0 是不同的值。然而，在 ECMAScript 2015 规范中这点已被更改。有关详细信息，请参阅[浏览器兼容性](#浏览器兼容性)表中的“_Key equality for -0 and 0_”。
 
 另外，`NaN` 和 `undefined` 都可以被存储在 Set 中，`NaN` 之间被视为相同的值（NaN 被认为是相同的，尽管 NaN !== NaN）。
 
@@ -40,7 +41,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 - {{jsxref("Set.delete", "Set.prototype.delete(<em>value</em>)")}}
   - : 移除值为 `value` 的元素，并返回一个布尔值来表示是否移除成功。`Set.prototype.has(value)` 会在此之后返回 `false`。
 - {{jsxref("Set.prototype.entries()")}}
-  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值的 `[value, value]` 数组。为了使这个方法和 `Map` 对象保持相似， 每个值的键和值相等。
+  - : 返回一个新的迭代器对象，该对象包含 `Set` 对象中的按插入顺序排列的所有元素的值的 `[value, value]` 数组。为了使这个方法和 `Map` 对象保持相似，每个值的键和值相等。
 - {{jsxref("Set.forEach", "Set.prototype.forEach(<em>callbackFn</em>[, <em>thisArg</em>])")}}
   - : 按照插入顺序，为 Set 对象中的每一个值调用一次 callBackFn。如果提供了`thisArg`参数，回调中的 `this` 会是这个参数。
 - {{jsxref("Set.has", "Set.prototype.has(<em>value</em>)")}}
@@ -63,22 +64,22 @@ mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
 mySet.add(5); // Set [ 1, 5 ]
 mySet.add("some text"); // Set [ 1, 5, "some text" ]
-let o = {a: 1, b: 2};
+let o = { a: 1, b: 2 };
 mySet.add(o);
 
-mySet.add({a: 1, b: 2}); // o 指向的是不同的对象，所以没问题
+mySet.add({ a: 1, b: 2 }); // o 指向的是不同的对象，所以没问题
 
 mySet.has(1); // true
 mySet.has(3); // false
-mySet.has(5);              // true
-mySet.has(Math.sqrt(25));  // true
+mySet.has(5); // true
+mySet.has(Math.sqrt(25)); // true
 mySet.has("Some Text".toLowerCase()); // true
 mySet.has(o); // true
 
 mySet.size; // 5
 
-mySet.delete(5);  // true，从 set 中移除 5
-mySet.has(5);     // false, 5 已经被移除
+mySet.delete(5); // true，从 set 中移除 5
+mySet.has(5); // false, 5 已经被移除
 
 mySet.size; // 4，刚刚移除一个值
 
@@ -113,17 +114,17 @@ mySet.has(document.querySelector("body")); // true
 
 // Set 和 Array 互换
 mySet2 = new Set([1, 2, 3, 4]);
-mySet2.size;               // 4
-[...mySet2];               // [1,2,3,4]
+mySet2.size; // 4
+[...mySet2]; // [1,2,3,4]
 
 // 可以通过如下代码模拟求交集
-let intersection = new Set([...set1].filter(x => set2.has(x)));
+let intersection = new Set([...set1].filter((x) => set2.has(x)));
 
 // 可以通过如下代码模拟求差集
-let difference = new Set([...set1].filter(x => !set2.has(x)));
+let difference = new Set([...set1].filter((x) => !set2.has(x)));
 
 // 用 forEach 迭代
-mySet.forEach(function(value) {
+mySet.forEach(function (value) {
   console.log(value);
 });
 
@@ -137,62 +138,62 @@ mySet.forEach(function(value) {
 
 ```js
 function isSuperset(set, subset) {
-    for (let elem of subset) {
-        if (!set.has(elem)) {
-            return false;
-        }
+  for (let elem of subset) {
+    if (!set.has(elem)) {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
 
 function union(setA, setB) {
-    let _union = new Set(setA);
-    for (let elem of setB) {
-        _union.add(elem);
-    }
-    return _union;
+  let _union = new Set(setA);
+  for (let elem of setB) {
+    _union.add(elem);
+  }
+  return _union;
 }
 
 function intersection(setA, setB) {
-    let _intersection = new Set();
-    for (let elem of setB) {
-        if (setA.has(elem)) {
-            _intersection.add(elem);
-        }
+  let _intersection = new Set();
+  for (let elem of setB) {
+    if (setA.has(elem)) {
+      _intersection.add(elem);
     }
-    return _intersection;
+  }
+  return _intersection;
 }
 
 function symmetricDifference(setA, setB) {
-    let _difference = new Set(setA);
-    for (let elem of setB) {
-        if (_difference.has(elem)) {
-            _difference.delete(elem);
-        } else {
-            _difference.add(elem);
-        }
+  let _difference = new Set(setA);
+  for (let elem of setB) {
+    if (_difference.has(elem)) {
+      _difference.delete(elem);
+    } else {
+      _difference.add(elem);
     }
-    return _difference;
+  }
+  return _difference;
 }
 
 function difference(setA, setB) {
-    let _difference = new Set(setA);
-    for (let elem of setB) {
-        _difference.delete(elem);
-    }
-    return _difference;
+  let _difference = new Set(setA);
+  for (let elem of setB) {
+    _difference.delete(elem);
+  }
+  return _difference;
 }
 
 //Examples
 let setA = new Set([1, 2, 3, 4]),
-    setB = new Set([2, 3]),
-    setC = new Set([3, 4, 5, 6]);
+  setB = new Set([2, 3]),
+  setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB);          // => true
-union(setA, setC);               // => Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC);        // => Set [3, 4]
+isSuperset(setA, setB); // => true
+union(setA, setC); // => Set [1, 2, 3, 4, 5, 6]
+intersection(setA, setC); // => Set [3, 4]
 symmetricDifference(setA, setC); // => Set [1, 2, 5, 6]
-difference(setA, setC);          // => Set [1, 2]
+difference(setA, setC); // => Set [1, 2]
 ```
 
 ### `Array` 相关
@@ -213,22 +214,22 @@ console.log([...mySet]); // 与 myArray 完全一致
 
 ```js
 // Use to remove duplicate elements from the array
-const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
-console.log([...new Set(numbers)])
+const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
+console.log([...new Set(numbers)]);
 // [2, 3, 4, 5, 6, 7, 32]
 ```
 
 ### `String` 相关
 
 ```js
-let text = 'India';
+let text = "India";
 
-let mySet = new Set(text);  // Set {'I', 'n', 'd', 'i', 'a'}
-mySet.size;  // 5
+let mySet = new Set(text); // Set {'I', 'n', 'd', 'i', 'a'}
+mySet.size; // 5
 
 // 大小写敏感 & duplicate ommision
-new Set("Firefox")  // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
-new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ## 规范

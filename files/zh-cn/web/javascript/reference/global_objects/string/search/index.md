@@ -2,6 +2,7 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 **`search()`** 方法执行正则表达式和 {{jsxref("String")}} 对象之间的一个搜索匹配。
@@ -29,7 +30,7 @@ str.search(regexp)
 
 ## 示例
 
-### 例子：使用 `search()`
+### 示例：使用 `search()`
 
 下面的例子中用两个不同的正则表达式对同一个字符串执行搜索匹配，得到一个成功匹配（正数返回值）和一个失败匹配（-1）。
 
@@ -51,6 +52,6 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation
 
 ## 参见
 
-- [在 JavaScript 中使用正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [在 JavaScript 中使用正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}

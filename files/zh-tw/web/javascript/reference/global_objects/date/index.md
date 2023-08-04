@@ -2,6 +2,7 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef}}
 
 建立一個 JavaScript **`Date`** 物件來指向某一個時間點。Date 物件是基於世界標準時間（UTC） 1970 年 1 月 1 日開始的毫秒數值來儲存時間。
@@ -81,7 +82,16 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 
 ### Date.prototype 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype', '方法')}}
+- {{jsxref("Date.now()")}}
+  - : 回傳對應於當下時間的數值 - 1970/01/01 00:00:00 (UTC) 到當下的毫秒數。
+- {{jsxref("Date.parse()")}}
+
+  - : 解析字串所表示的時間，回傳由 1970/01/01 00:00:00 (UTC) 到該時間的毫秒數值。
+
+    > **備註：** 由於瀏覽器之間的不同與差異，強烈不建議使用 `Date.parse` 。
+
+- {{jsxref("Date.UTC()")}}
+  - : 需要傳入與建構子相同的參數數目（即 2 到 7 個），會得到由 1970-01-01 00:00:00 UTC 到該日期時間的毫秒數。（輸入的參數會視為世界標準時間，而非本地時間）
 
 ## 範例
 
@@ -93,8 +103,8 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 
 ```js
 var today = new Date();
-var birthday = new Date('December 17, 1995 03:24:00');
-var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date("December 17, 1995 03:24:00");
+var birthday = new Date("1995-12-17T03:24:00");
 var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
@@ -107,9 +117,9 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // 過時的方法，98 在這裡對應到 1998 年
-date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### 計算執行時間
@@ -142,10 +152,12 @@ var elapsed = end.getTime() - start.getTime(); // 執行程式經過的毫秒數
 // 測試一個函數執行時間，並返回其回傳值
 function printElapsedTime(fTest) {
   var nStartTime = Date.now(),
-      vReturn = fTest(),
-      nEndTime = Date.now();
+    vReturn = fTest(),
+    nEndTime = Date.now();
 
-  console.log('Elapsed time: ' + String(nEndTime - nStartTime) + ' milliseconds');
+  console.log(
+    "Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds",
+  );
   return vReturn;
 }
 

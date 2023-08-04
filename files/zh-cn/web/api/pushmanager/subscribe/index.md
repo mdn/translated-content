@@ -2,6 +2,7 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} 的 **`subscribe()`** 接口订阅了一个推送服务。
@@ -11,7 +12,7 @@ slug: Web/API/PushManager/subscribe
 ## 语法
 
 ```
-​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+PushManager.subscribe(options).then(function(pushSubscription) { ... } );
 ```
 
 ### 参数
@@ -59,7 +60,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## 浏览器兼容性
 
-{{Compat("api.PushManager.subscribe")}}
+{{Compat}}
 
 ## 另见
 

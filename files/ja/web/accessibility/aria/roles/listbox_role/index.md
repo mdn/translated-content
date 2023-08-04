@@ -1,12 +1,8 @@
 ---
-title: 'ARIA: listbox ロール'
+title: "ARIA: listbox ロール"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
+
 リストボックス (`listbox`) ロールは、HTML の `<select>` 要素とは異なり、画像を含むことができる、1 つまたは複数の静的な項目をユーザーが選択できるリストに使用します。
 
 ## 説明
@@ -131,20 +127,20 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 ユーザーがオプションを選択すると、以下が起こる必要があります。
 
-1.  前に選択したオプションの選択を解除し、`aria-selected` を `false` に設定するか、属性を完全に削除して、新しく選択を解除したオプションの外観を選択されていないように変更します。
-2.  新しく選択したオプションを選択し、オプションに `aria-selected="true"` を設定し、新しく選択したオプションの外観を選択されているように変更します。
-3.  リストボックスの `aria-activedescendant` の値を、新しく選択したオプションの `id` に更新します。
-4.  オプションのブラー (blur) 、フォーカス、選択状態を視覚的に処理します。
+1. 前に選択したオプションの選択を解除し、`aria-selected` を `false` に設定するか、属性を完全に削除して、新しく選択を解除したオプションの外観を選択されていないように変更します。
+2. 新しく選択したオプションを選択し、オプションに `aria-selected="true"` を設定し、新しく選択したオプションの外観を選択されているように変更します。
+3. リストボックスの `aria-activedescendant` の値を、新しく選択したオプションの `id` に更新します。
+4. オプションのブラー (blur) 、フォーカス、選択状態を視覚的に処理します。
 
 #### 複数選択リストボックスでオプションの状態をトグルする
 
 ユーザーがオプションをクリックしたり、オプションにフォーカスしているときに<kbd>スペース</kbd>を押すなどして、オプションの状態をトグルすると、以下が起こる必要があります。
 
-1.  現在フォーカスされているオプションの `aria-selected` ステート (状態) をトグルし、`aria-selected` の状態を `false` なら `true` に、`true` なら `false` に変更します。
-2.  選択状態を反映するようにオプションの外観を変更します。
-3.  オプションを選択の解除へトグルしている場合でも、リストボックスの `aria-activedescendant` の値を、ユーザーが直前にインタラクトしたオプションの `id` に更新します。
+1. 現在フォーカスされているオプションの `aria-selected` ステート (状態) をトグルし、`aria-selected` の状態を `false` なら `true` に、`true` なら `false` に変更します。
+2. 選択状態を反映するようにオプションの外観を変更します。
+3. オプションを選択の解除へトグルしている場合でも、リストボックスの `aria-activedescendant` の値を、ユーザーが直前にインタラクトしたオプションの `id` に更新します。
 
-> **Note:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを追加することでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 `<option>` 要素を子孫に持つ `<select>` 要素は、必要な全てのインタラクションをネイティブに処理します。
+> **メモ:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを追加することでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 `<option>` 要素を子孫に持つ `<select>` 要素は、必要な全てのインタラクションをネイティブに処理します。
 
 ## 例
 
@@ -154,17 +150,23 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 ```html
 <p id="listbox1label" role="label">色を選択:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">緑</div>
-    <div role="option" id="listbox1-2">オレンジ</div>
-    <div role="option" id="listbox1-3">赤</div>
-    <div role="option" id="listbox1-4">青</div>
-    <div role="option" id="listbox1-5">紫</div>
-    <div role="option" id="listbox1-6">ペリウィンクル</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    緑
+  </div>
+  <div role="option" id="listbox1-2">オレンジ</div>
+  <div role="option" id="listbox1-3">赤</div>
+  <div role="option" id="listbox1-4">青</div>
+  <div role="option" id="listbox1-5">紫</div>
+  <div role="option" id="listbox1-6">ペリウィンクル</div>
 </div>
 ```
 
@@ -173,12 +175,12 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 ```html
 <label for="listbox1">色を選択:</label>
 <select id="listbox1">
-   <option selected>緑</option>
-   <option>オレンジ</option>
-   <option>赤</option>
-   <option>青</option>
-   <option>紫</option>
-   <option>ペリウィンクル</option>
+  <option selected>緑</option>
+  <option>オレンジ</option>
+  <option>赤</option>
+  <option>青</option>
+  <option>紫</option>
+  <option>ペリウィンクル</option>
 </select>
 ```
 
@@ -198,10 +200,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#listbox","ARIA listbox role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#Listbox","Listbox Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -219,4 +218,4 @@ TBD
 - [ARIA のベストプラクティス — リストボックス](https://www.w3.org/TR/wai-aria-practices/#Listbox) (英語)
 - [ARIA のロールモデル — リストボックス](https://www.w3.org/TR/wai-aria-1.1/#listbox) (英語)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

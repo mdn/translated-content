@@ -1,10 +1,10 @@
 ---
 title: height
 slug: Web/CSS/height
-browser-compat: css.properties.height
 l10n:
-  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2eabcebf471d56ef12239e2565f26d952e8a8cab2e
+  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2e
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`height`** especifica la altura de un elemento. Por defecto, la propiedad define la altura del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). Sin embargo, si {{cssxref("box-sizing")}} está configurado como `border-box`, determina la altura del [área de borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
@@ -36,6 +36,7 @@ height: revert;
 height: revert-layer;
 height: unset;
 ```
+
 ### Valores
 
 - {{cssxref("&lt;length&gt;")}}
@@ -54,7 +55,7 @@ height: unset;
   - : Utiliza la fórmula _fit-content_ con el espacio disponible sustituido por el argumento especificado, es decir `min(max-content, max(min-content, <length-percentage>))`
 - {{cssxref("clamp", "clamp()")}}
   - : Permite seleccionar un valor medio dentro de un rango de valores entre un mínimo y un máximo definidos.
-   
+
 ## Problemas de accesibilidad
 
 Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscurecen otros contenidos cuando la página se amplía para aumentar el tamaño del texto.
@@ -81,9 +82,8 @@ Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscu
 <div id="taller">Yo tengo 50 píxeles.</div>
 <div id="shorter">Yo tengo 25 píxeles de altura.</div>
 <div id="parent">
-  <div id="child">
-    Yo tengo la mitad de altura de mi padre
-  </div>
+  <div id="child">Yo tengo la mitad de altura de mi padre</div>
+</div>
 ```
 
 #### CSS
@@ -112,6 +112,7 @@ div {
   width: 75%;
 }
 ```
+
 #### Result
 
 {{EmbedLiveSample('Setting_height_using_pixels_and_percentages', 'auto', 240)}}
@@ -126,9 +127,7 @@ div {
 
 ## Véase también
 
-- [El modelo de caja](
-  /es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-  )
+- [El modelo de caja](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}

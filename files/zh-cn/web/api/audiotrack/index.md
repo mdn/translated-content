@@ -2,6 +2,7 @@
 title: AudioTrack
 slug: Web/API/AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrack`** 接口表示从 HTML 介质元件中的一个单一的音轨， {{HTMLElement("audio")}} 或 {{HTMLElement("video")}}. 访问`AudioTrack` 对象的最常见用途是切换其{{domxref("AudioTrack.enabled", "enabled")}} 属性，以使轨道静音和取消静音。
@@ -35,14 +36,14 @@ var tracks = el.audioTracks;
 第一个示例获取媒体上的第一个音轨：
 
 ```js
-var firstTrack = tracks [0];
+var firstTrack = tracks[0];
 ```
 
 下一个示例扫描所有媒体的音轨，启用用户首选语言中的任何一种 (取自变量`userLanguage`) 并禁用任何其他语音。
 
 ```js
-tracks.forEach(function(track){
-  if(track.language === userLanguage){
+tracks.forEach(function (track) {
+  if (track.language === userLanguage) {
     track.enabled = true;
   } else {
     track.enabled = false;

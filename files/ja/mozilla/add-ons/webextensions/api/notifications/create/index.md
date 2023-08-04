@@ -2,6 +2,7 @@
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
+
 {{AddonSidebar()}}
 
 通知を生成、表示します。
@@ -12,15 +13,15 @@ You can optionally provide an ID for the notification. If you omit the ID, an ID
 
 This is an asynchronous function that returns a [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Warning:** If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
+> **警告:** If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
 
 ## 書式
 
 ```js
 var creating = browser.notifications.create(
-  id,                   // optional string
-  options               // NotificationOptions
-)
+  id, // optional string
+  options, // NotificationOptions
+);
 ```
 
 ### パラメータ
@@ -45,7 +46,7 @@ Create and display a basic notification periodically, using an {{WebExtAPIRef("a
 Note that you'll need the "alarms" [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -58,18 +59,18 @@ than a minute.
 */
 var CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -80,7 +81,7 @@ browser.browserAction.onClicked.addListener(()=> {
 Display a similar notification, but add buttons naming cakes, and log the selected cake when a button is clicked:
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -95,25 +96,26 @@ var CAKE_INTERVAL = 0.1;
 
 var buttons = [
   {
-    "title": "Chocolate"
-  }, {
-    "title": "Battenberg"
-  }
+    title: "Chocolate",
+  },
+  {
+    title: "Battenberg",
+  },
 ];
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake",
-    "buttons": buttons
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
+    buttons: buttons,
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -128,4 +130,4 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

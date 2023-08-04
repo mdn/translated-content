@@ -1,12 +1,8 @@
 ---
-title: 'ARIA: complementary ロール'
-slug: Web/Accessibility/ARIA/Roles/Complementary_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
+title: "ARIA: complementary ロール"
+slug: Web/Accessibility/ARIA/Roles/complementary_role
 ---
+
 補足 (`complementary`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、メインコンテンツに関連する補助セクションを指定するために使用され、しかも分離しても単独で成り立つことができます。 これらのセクションは、サイドバーやコールアウトボックスとして表示されることがよくあります。 可能であれば、代わりに HTML の {{htmlelement("aside")}} 要素を使用してください。
 
 ```html
@@ -22,7 +18,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 
 補足 (`complementary`) ロールは[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマーク (landmark) は、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 補足 (`complementary`) ランドマークロールを持つコンテナー内にリストされたコンテンツは、文書のメインのコンテンツから分離されている場合でも意味をなすべきです。
 
-> **Note:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
+> **メモ:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
 
 ## 例
 
@@ -30,13 +26,25 @@ translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 <div role="complementary">
   <h2>トレンド記事</h2>
   <ul>
-     <li><a href="#">あなたがすべての気分を感じさせる18のツイート</a></li>
-     <li><a href="#">私は完璧な昼食用の容器を見つけたので、それを探すのを停止する</a></li>
-     <li><a href="#">最終的に私たちがこれらの食品と呼ぶべきものを決定する時が来た</a></li>
-     <li><a href="#">Tumblr で今週見た17の本当に良い投稿</a></li>
-     <li><a href="#">10の親のハック、私たちはそれらを試したので、働くことを知っている</a></li>
-   </ul>
- </div>
+    <li><a href="#">あなたがすべての気分を感じさせる18のツイート</a></li>
+    <li>
+      <a href="#"
+        >私は完璧な昼食用の容器を見つけたので、それを探すのを停止する</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        >最終的に私たちがこれらの食品と呼ぶべきものを決定する時が来た</a
+      >
+    </li>
+    <li><a href="#">Tumblr で今週見た17の本当に良い投稿</a></li>
+    <li>
+      <a href="#"
+        >10の親のハック、私たちはそれらを試したので、働くことを知っている</a
+      >
+    </li>
+  </ul>
+</div>
 ```
 
 ## アクセシビリティに関する懸念
@@ -79,10 +87,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Complementary_role
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#complementary","ARIA: Complementary role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_complementary","Complementary landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -98,4 +103,4 @@ TBD
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisited | HTML5 Doctor](http://html5doctor.com/aside-revisited/)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

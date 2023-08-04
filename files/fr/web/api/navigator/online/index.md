@@ -1,9 +1,8 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-translation_of: Web/API/Navigator/onLine
-browser-compat: api.Navigator.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété en lecture seule **`Navigator.onLine`** est un booléen indiquant le statut de connectivité du navigateur. `true` indique que le navigateur accède au réseau et `false` indique que le navigateur est hors ligne. Cette propriété est mise à jour lorsque la connectivité réseau change. La mise à jour se produit lorsque la personne suit un lien ou qu'un script effectue une requête vers une page distante. Ainsi, la propriété peut renvoyer `false` lorsqu'une personne clique sur un lien après avoir perdu l'accès à Internet.
@@ -28,9 +27,9 @@ Pour vérifier que le réseau est accessible, on pourra utiliser `navigator.onLi
 
 ```js
 if (navigator.onLine) {
-  console.log('connecté');
+  console.log("connecté");
 } else {
-  console.log('hors ligne');
+  console.log("hors ligne");
 }
 ```
 
@@ -41,9 +40,13 @@ Si le navigateur ne prend pas en charge `navigator.onLine`, l'exemple précéden
 Pour gérer les changements liés à l'état du réseau, on pourra utiliser la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) afin de créer des gestionnaires d'évènements pour `online` et `offline`, comme dans l'exemple qui suit&nbsp;:
 
 ```js
-window.addEventListener('offline', function(e) { console.log('hors ligne'); });
+window.addEventListener("offline", function (e) {
+  console.log("hors ligne");
+});
 
-window.addEventListener('online', function(e) { console.log('connecté'); });
+window.addEventListener("online", function (e) {
+  console.log("connecté");
+});
 ```
 
 ## Spécifications

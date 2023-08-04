@@ -1,13 +1,8 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-tags:
-  - API
-  - Geolocation
-  - Méthode
-  - Reference
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle de l'appareil.
@@ -38,13 +33,13 @@ navigator.geolocation.getCurrentPosition(success[, error[, [options]])
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Votre position actuelle est :');
+  console.log("Votre position actuelle est :");
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude : ${crd.longitude}`);
   console.log(`La précision est de ${crd.accuracy} mètres.`);

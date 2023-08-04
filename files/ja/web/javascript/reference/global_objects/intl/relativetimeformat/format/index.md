@@ -1,15 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-tags:
-  - IntI
-  - Internationalization
-  - JavaScript
-  - Method
-  - Reference
-  - RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/
 ## 構文
 
 ```js
-relativeTimeFormat.format(value, unit)
+relativeTimeFormat.format(value, unit);
 ```
 
 ### 引数
@@ -46,9 +39,9 @@ relativeTimeFormat.format(value, unit)
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // other values: "lookup"
-    numeric: "always", // other values: "auto"
-    style: "long", // other values: "short" or "narrow"
+  localeMatcher: "best fit", // other values: "lookup"
+  numeric: "always", // other values: "auto"
+  style: "long", // other values: "short" or "narrow"
 });
 
 // 負の値 (-1) を使った相対時間の書式化
@@ -80,9 +73,7 @@ rtf.format(1, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態      | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---- |
-| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.format', 'RelativeTimeFormat.format()')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

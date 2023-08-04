@@ -1,7 +1,8 @@
 ---
-title: 'RangeError: repeat count must be non-negative'
+title: "RangeError: repeat count must be non-negative"
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -24,16 +25,16 @@ RangeError: Invalid count value (Chrome)
 ### 无效的
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError
+"abc".repeat(-1); // RangeError
 ```
 
 ### 有效的
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## See also

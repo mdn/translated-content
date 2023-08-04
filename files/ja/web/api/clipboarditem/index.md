@@ -2,6 +2,7 @@
 title: ClipboardItem
 slug: Web/API/ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 **`ClipboardItem`** は{{domxref('Clipboard API', 'クリップボード API', '', 1)}} のインターフェイスで、 {{domxref('Clipboard API', 'クリップボード API', '', 1)}} を介して読み書きする単一の形式の項目を表します。読み書きはそれぞれ {{domxref("clipboard.read()")}} と {{domxref("clipboard.write()")}} で行います。
@@ -10,9 +11,9 @@ slug: Web/API/ClipboardItem
 
 クリップボードの内容へのアクセスは[権限 API](/ja/docs/Web/API/Permissions_API) の下で制限されています。クリップボードへの書き込み権限は、ページがアクティブなタブにあるときに自動的に付与されます。 `clipboard-read` 権限は要求する必要があり、これはクリップボードからデータを読もうとすることで行えます。
 
-> **Note:** テキストを扱うには、 {{domxref("Clipboard")}} インターフェイスの {{domxref("Clipboard.readText()")}} および {{domxref("Clipboard.writeText()")}} メソッドをご覧ください。
+> **メモ:** テキストを扱うには、 {{domxref("Clipboard")}} インターフェイスの {{domxref("Clipboard.readText()")}} および {{domxref("Clipboard.writeText()")}} メソッドをご覧ください。
 
-> **Note:** 一度に渡すことができるクリップボードの項目は 1 つだけです。
+> **メモ:** 一度に渡すことができるクリップボードの項目は 1 つだけです。
 
 ## コンストラクター
 

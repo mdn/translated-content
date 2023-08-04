@@ -1,37 +1,38 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Title
-translation_of: Web/HTML/Global_attributes/title
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`title`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-典型的な用途は以下の通りです。
+`title` 属性の主な用途は、 {{HTMLElement("iframe")}} 要素の支援技術のためのラベル付けです。
 
-- {{HTMLElement("iframe")}} 要素の支援技術のためのラベル付け
-- プログラム的に関連付けれた{{HTMLElement("input")}} 要素のためのラベルを、実際の {{HTMLElement("label")}} の代替として提供
-- [データ表](/ja/docs/Web/HTML/Element/table)内のコントロールのラベル付け
+`title` 属性は、[データ表](/ja/docs/Web/HTML/Element/table)内のコントロールのラベル付けに使用することもできます。
 
-`title` 属性は {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}}, {{HTMLElement("menuitem")}} の各要素において、追加の意味を持ちます。
+`title` 属性は、[`<link rel="stylesheet">`](/ja/docs/Web/HTML/Element/link) に追加すると、代替のスタイルシートを作成することができます。代替スタイルシートを `<link rel="alternate">` で定義する場合、この属性は必須であり、空でない文字列を設定する必要があります。
+
+{{htmlelement('abbr')}} の開始タグに `title` を記述する場合は、略語や頭字語の完全な展開形である必要があります。可能であれば、`title` を使用するのではなく、略語や頭字語を最初に使用する際に、 `<abbr>` を使用して略語をマークアップし、プレーンテキストで略語の展開形を提供してください。こうすることで、すべてのユーザーがその略語や頭字語が、どのような名前や用語を短縮しているのかを知ることができ、同時にユーザーエージェントには、コンテンツをどのように告知すればよいかのヒントを提供することができます。
+
+{{HTMLElement("input")}} 要素にプログラム的に関連付けられたラベルを提供するために `title` を使用することができますが、これは良い習慣ではありません。代わりに {{HTMLElement("label")}} を使用してください。
 
 ## 複数行のタイトル
 
-`title` 属性は複数の行を含むことができます。それぞれの `U+000A LINE FEED` (`LF`) 文字が改行を表します。いくつか注意しなければならないのは、これが次のように二行にわたって描画されることです。
+`title` 属性は複数の行を含むことができます。それぞれの `U+000A LINE FEED` (`LF`) 文字が改行を表します。いくつか注意しなければならないのは、これが次のように 2 行にわたって描画されることです。
 
 ### HTML
 
 ```html
-<p>Newlines in <code>title</code> should be taken into account,
-like <abbr title="This is a
-multiline title">example</abbr>.</p>
+<p>
+  Newlines in <code>title</code> should be taken into account, like
+  <span title="This is a
+multiline title" >example</span>.
+</p>
 ```
 
 ### 結果
@@ -48,7 +49,7 @@ multiline title">example</abbr>.</p>
 
 ```html
 <div title="CoolTip">
-  <p>Hovering here will show “CoolTip”.</p>
+  <p>Hovering here will show "CoolTip".</p>
   <p title="">Hovering here will show nothing.</p>
 </div>
 ```
@@ -69,25 +70,20 @@ multiline title">example</abbr>.</p>
 
 これは、ブラウザーが表示するページを追加支援技術が解釈することによる複合性について、ブラウザーの互換性に一貫性がないためです。ツールチップ効果が必要であれば、上記の閲覧方法でもアクセスできる[もっとアクセシブルな技術を使用する](https://inclusive-components.design/tooltips-toggletips/)方が効果的です。
 
-- [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://www.w3.org/TR/html/dom.html#the-title-attribute)
-- [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+- [3.2.5.1. The title attribute | W3C HTML 5.2: 3. Semantics, structure, and APIs of HTML documents](https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute)
+- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 - [Tooltips & Toggletips - Inclusive Components](https://inclusive-components.design/tooltips-toggletips/)
 - [The Trials and Tribulations of the Title Attribute - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考                                                                                                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、{{SpecName('HTML5 W3C')}} から変更なし。                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。 {{SpecName("HTML4.01")}} から、真にグローバルな属性になりました。                                                                                                                                                                           |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}     | {{Spec2('HTML4.01')}}     | {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("title")}} を除くすべての要素で対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.global_attributes.title")}}
+{{Compat}}
 
 ## 関連情報
 
-- すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
 - {{domxref("HTMLElement.title")}} は、この属性を反映します。

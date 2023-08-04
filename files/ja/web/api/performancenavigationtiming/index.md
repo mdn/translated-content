@@ -2,6 +2,7 @@
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 **`PerformanceNavigationTiming`** インターフェイスは、ブラウザーの文書ナビゲーションイベントに関するメトリックを格納および取得するためのメソッドとプロパティを提供します。たとえば、このインターフェイスを使用して、文書のロードまたはアンロードにかかる時間を判断できます。
@@ -61,9 +62,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Navigation Timing Level 2', '#sec-PerformanceNavigationTiming', 'PerformanceNavigationTiming')}} | {{Spec2('Navigation Timing Level 2')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

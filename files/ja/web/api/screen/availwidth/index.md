@@ -2,6 +2,7 @@
 title: Screen.availWidth
 slug: Web/API/Screen/availWidth
 ---
+
 {{APIRef("CSSOM View")}}
 
 **`Screen.availWidth`** プロパティは、ウィンドウで利用可能な水平方向の空間をピクセル数で返します。

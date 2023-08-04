@@ -2,6 +2,7 @@
 title: ProgressEvent
 slug: Web/API/ProgressEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`ProgressEvent`** interface represents events measuring progress of an underlying process, like an HTTP request (for an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).
@@ -34,19 +35,19 @@ _Also inherits methods_ from its parent {{domxref("Event")}}.
 The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
 
 ```js
-  var progressBar = document.getElementById("p"),
-      client = new XMLHttpRequest()
-  client.open("GET", "magical-unicorns")
-  client.onprogress = function(pe) {
-    if(pe.lengthComputable) {
-      progressBar.max = pe.total
-      progressBar.value = pe.loaded
-    }
+var progressBar = document.getElementById("p"),
+  client = new XMLHttpRequest();
+client.open("GET", "magical-unicorns");
+client.onprogress = function (pe) {
+  if (pe.lengthComputable) {
+    progressBar.max = pe.total;
+    progressBar.value = pe.loaded;
   }
-  client.onloadend = function(pe) {
-    progressBar.value = pe.loaded
-  }
-  client.send()
+};
+client.onloadend = function (pe) {
+  progressBar.value = pe.loaded;
+};
+client.send();
 ```
 
 ## 規格
@@ -55,7 +56,7 @@ The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest"
 
 ## 瀏覽器相容性
 
-{{Compat("api.ProgressEvent")}}
+{{Compat}}
 
 ## 參見
 

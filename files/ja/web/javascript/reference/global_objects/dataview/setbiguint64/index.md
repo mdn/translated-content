@@ -1,18 +1,8 @@
 ---
 title: DataView.prototype.setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - TypedArrays
-  - setBigUint64
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
-browser-compat: javascript.builtins.DataView.setBigUint64
 ---
+
 {{JSRef}}
 
 **`setBigUint64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位の指定されたオフセット位置に格納します。

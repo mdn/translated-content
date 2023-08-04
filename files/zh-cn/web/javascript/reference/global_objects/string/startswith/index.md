@@ -2,6 +2,7 @@
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
+
 {{JSRef}}
 
 **`startsWith()`** 方法用来判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 `true` 或 `false`。
@@ -23,7 +24,7 @@ str.startsWith(searchString[, position])
 
 ### 返回值
 
-如果在字符串的开头找到了给定的字符则返回**`true`**；否则返回**`false`**。
+如果在字符串的开头找到了给定的字符则返回 **`true`**；否则返回 **`false`**。
 
 ## 描述
 
@@ -35,12 +36,12 @@ str.startsWith(searchString[, position])
 
 ```js
 if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, pos) {
-            pos = !pos || pos < 0 ? 0 : +pos;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+  Object.defineProperty(String.prototype, "startsWith", {
+    value: function (search, pos) {
+      pos = !pos || pos < 0 ? 0 : +pos;
+      return this.substring(pos, pos + search.length) === search;
+    },
+  });
 }
 ```
 
@@ -53,8 +54,8 @@ Mathias Bynens 在 Github 上提供了[一份更为稳定有效（完全符合 E
 ```js
 var str = "To be, or not to be, that is the question.";
 
-alert(str.startsWith("To be"));         // true
-alert(str.startsWith("not to be"));     // false
+alert(str.startsWith("To be")); // true
+alert(str.startsWith("not to be")); // false
 alert(str.startsWith("not to be", 10)); // true
 ```
 

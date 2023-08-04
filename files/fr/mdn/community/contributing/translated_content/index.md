@@ -1,12 +1,8 @@
 ---
 title: Localiser MDN
 slug: MDN/Community/Contributing/Translated_content
-tags:
-  - Localization
-  - MDN Meta
-  - l10n
-original_slug: MDN/Contribute/Localize
 ---
+
 {{MDNSidebar}}
 
 Depuis le 14 décembre 2020, MDN fonctionne sur la nouvelle plateforme [Yari](https://github.com/mdn/yari) basée sur GitHub. Cela présente de nombreux avantages pour MDN, mais nous avons dû apporter des changements radicaux à la façon dont nous gérons la localisation. En effet, nous nous sommes retrouvés avec un grand nombre de contenus non maintenus et obsolètes dans nos langues autres que l'anglais et nous voulons mieux les gérer à l'avenir.
@@ -42,7 +38,7 @@ Nous avons actuellement dégelé les langues suivantes :
 ### Russe (ru)
 
 - Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Contributeurs actuels : [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
 
 ## Autres sujets de localisation sur MDN
 

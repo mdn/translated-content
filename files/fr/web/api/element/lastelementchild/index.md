@@ -1,9 +1,8 @@
 ---
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
-translation_of: Web/API/Element/lastElementChild
-browser-compat: api.Element.lastElementChild
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.lastElementChild`** renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant au dernier élément enfant de l'élément courant (celui sur lequel on a appelé la propriété), ou `null` s'il n'y a pas d'éléments enfants.
@@ -18,15 +17,15 @@ Un objet [`Element`](/fr/docs/Web/API/Element) ou `null`
 
 ```html
 <ul id="list">
-  <li>Premier    (1)</li>
-  <li>Deuxième   (2)</li>
-  <li>Troisième  (3)</li>
+  <li>Premier (1)</li>
+  <li>Deuxième (2)</li>
+  <li>Troisième (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.lastElementChild.textContent);
-// Troisième  (3)
+  const list = document.getElementById("list");
+  console.log(list.lastElementChild.textContent);
+  // Troisième  (3)
 </script>
 ```
 

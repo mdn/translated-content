@@ -2,6 +2,7 @@
 title: 方法的定义
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 从 ECMAScript 2015 开始，在对象初始器中引入了一种更简短定义方法的语法，这是一种把方法名直接赋给函数的简写方式。
@@ -30,18 +31,18 @@ var obj = {
 
 ## 描述
 
-该简写语法与 ECMAScript 2015 的[getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)和[setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)语法类似。
+该简写语法与 ECMAScript 2015 的[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)和[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)语法类似。
 
 如下代码：
 
 ```js
 var obj = {
-  foo: function() {
+  foo: function () {
     /* code */
   },
-  bar: function() {
+  bar: function () {
     /* code */
-  }
+  },
 };
 ```
 
@@ -54,7 +55,7 @@ var obj = {
   },
   bar() {
     /* code */
-  }
+  },
 };
 ```
 
@@ -62,7 +63,7 @@ var obj = {
 
 ### 生成器方法
 
-[生成器方法](/en-US/docs/Web/JavaScript/Reference/Statements/function*)也可以用这种简写语法定义。使用它们时，
+[生成器方法](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)也可以用这种简写语法定义。使用它们时，
 
 - 简写语法中的星号（\*）必须出现在生成器名前，也就是说`* g(){}`可以正常工作，而`g *(){}`不行。
 - 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
@@ -70,20 +71,18 @@ var obj = {
 ```js
 // 用有属性名的语法定义方法（ES6 之前）：
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // 同一个方法，简写语法：
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -100,20 +99,20 @@ console.log(it.next().value); // 1
 var obj3 = {
   f: async function () {
     await some_promise;
-  }
+  },
 };
 
 // 同一个方法，简写语法：
 var obj3 = {
   async f() {
     await some_promise;
-  }
+  },
 };
 ```
 
 ### Async 生成器方法
 
-[生成器方法](/en-US/docs/Web/JavaScript/Reference/Statements/function*)也能成为 {{jsxref("Statements/async_function", "async", "", 1)}}.
+[生成器方法](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)也能成为 {{jsxref("Statements/async_function", "async", "", 1)}}.
 
 ```js
 var obj4 = {
@@ -121,16 +120,16 @@ var obj4 = {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 
 // The same object using shorthand syntax
 var obj4 = {
-  async* f() {
-   yield 1;
-   yield 2;
-   yield 3;
-  }
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 ```
 
@@ -140,14 +139,14 @@ var obj4 = {
 
 ```js example-bad
 var obj = {
-  method() {}
+  method() {},
 };
-new obj.method; // TypeError: obj.method is not a constructor
+new obj.method(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
+new obj.g(); // TypeError: obj.g is not a constructor (changed in ES2016)
 ```
 
 ## 示例
@@ -156,8 +155,10 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 ```js
 var obj = {
-  a : "foo",
-  b(){ return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -168,9 +169,15 @@ console.log(obj.b()); // "foo"
 
 ```js
 var bar = {
-  foo0: function() { return 0; },
-  foo1() { return 1; },
-  ['foo' + 2]() { return 2; }
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0
@@ -188,6 +195,6 @@ console.log(bar.foo2()); // 2
 
 ## 参见
 
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
+- [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

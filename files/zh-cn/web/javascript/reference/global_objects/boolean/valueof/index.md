@@ -2,6 +2,7 @@
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 方法返回一个{{jsxref("Boolean")}}对象的原始值。
@@ -30,7 +31,7 @@ bool.valueOf()
 
 ```js
 x = new Boolean();
-myVar = x.valueOf()      // assigns false to myVar
+myVar = x.valueOf(); // assigns false to myVar
 ```
 
 ## 规范

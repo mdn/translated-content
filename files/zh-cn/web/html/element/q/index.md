@@ -2,7 +2,8 @@
 title: <q>
 slug: Web/HTML/Element/q
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以请不要引入换行符; 对于长的文本的引用请使用 {{HTMLElement("blockquote")}} 替代。
 
@@ -37,7 +38,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 \<q>标签拥有 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。
 
 ## 示例
@@ -45,10 +46,11 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 ### HTML 内容
 
 ```html
-<p>Everytime Kenny is killed, Stan will announce
-   <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
-     Oh my God, you/they killed Kenny!
-   </q>.
+<p>
+  Everytime Kenny is killed, Stan will announce
+  <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
+    Oh my God, you/they killed Kenny! </q
+  >.
 </p>
 ```
 
@@ -60,7 +62,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.q")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,13 +2,14 @@
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
 ## 概述
 
 返回调用指定函数的函数。
 
-该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-CN/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
+该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-CN/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看[Firefox bug 65683](https://bugzil.la/65683)), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
 
 ## 描述
 
@@ -21,9 +22,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 注意，在使用递归调用时，你不能使用此属性来重现出调用栈。请考虑以下代码：
 
 ```js
-function f(n) { g(n-1) }
-function g(n) { if(n>0) f(n); else stop() }
-f(2)
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) f(n);
+  else stop();
+}
+f(2);
 ```
 
 当 `stop()` 函数被调用时，调用栈是这样的：
@@ -35,14 +41,14 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 由于下面的表达式为 true (只保留函数最后一次被调用时的 caller)：
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 所以如果你尝试在 `stop()` 函数中获取调用栈的话：
 
 ```js
 var f = stop;
-var stack = "调用栈:";
+var stack = "调用栈：";
 while (f) {
   stack += "\n" + f.name;
   f = f.caller;
@@ -53,18 +59,17 @@ while (f) {
 
 有一个特殊属性 `__caller__`, 可以返回调用当前函数的函数的活动对象 (可以用来重现出整个调用栈), 但由于安全原因的考虑，该属性已被删除。
 
-## 例子
+## 示例
 
-### 例子：检测一个函数的 `caller` 属性的值
+### 示例：检测一个函数的 `caller` 属性的值
 
 下例用来得出一个函数是被谁调用的。
 
 ```js
 function myFunc() {
-   if (myFunc.caller == null) {
-      return ("该函数在全局作用域内被调用！");
-   } else
-      return ("调用我的是函数是" + myFunc.caller);
+  if (myFunc.caller == null) {
+    return "该函数在全局作用域内被调用！";
+  } else return "调用我的是函数是" + myFunc.caller;
 }
 ```
 

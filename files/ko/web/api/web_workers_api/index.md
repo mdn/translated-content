@@ -1,15 +1,8 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
-  - 워커
-  - 웹 워커
-translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **웹 워커**(Web worker)는 스크립트 연산을 웹 어플리케이션의 주 실행 스레드와 분리된 별도의 백그라운드 스레드에서 실행할 수 있는 기술입니다. 웹 워커를 통해 무거운 작업을 분리된 스레드에서 처리하면 주 스레드(보통 UI 스레드)가 멈추거나 느려지지 않고 동작할 수 있습니다.
@@ -18,7 +11,7 @@ translation_of: Web/API/Web_Workers_API
 
 워커는 이름을 지정한 JavaScript 파일을 구동하는 객체로서 {{domxref("Worker.Worker", "Worker()")}} 등의 생성자로 생성합니다. 해당 파일은 현재 {{domxref("window")}}와는 다른 전역 맥락에서 동작하는 워커 스레드에서 작동합니다. 이 때, 전역 맥락은 전용 워커(단일 스크립트에서만 사용하는 워커)의 경우 {{domxref("DedicatedWorkerGlobalScope")}} 객체이고, 공유 워커(여러 스크립트에서 공유하는 워커)의 경우 {{domxref("SharedWorkerGlobalScope")}} 객체입니다.
 
-원하는 코드는 뭐든 워커 스레드에서 실행할 수 있으나 몇 가지 예외가 존재합니다. 예를 들어 워커에서 DOM을 직접 조작할 수 없고, {{domxref("window")}}의 일부 메서드와 속성은 사용할 수 없습니다. 그러나 [WebSocket](/ko/docs/Web/API/WebSockets_API)과 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 포함한 많은 수의 항목은 사용 가능합니다. [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")에서 더 자세히 알아보세요.
+원하는 코드는 뭐든 워커 스레드에서 실행할 수 있으나 몇 가지 예외가 존재합니다. 예를 들어 워커에서 DOM을 직접 조작할 수 없고, {{domxref("window")}}의 일부 메서드와 속성은 사용할 수 없습니다. 그러나 [WebSocket](/ko/docs/Web/API/WebSockets_API)과 [IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 포함한 많은 수의 항목은 사용 가능합니다. [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)에서 더 자세히 알아보세요.
 
 워커와 메인 스레드 간의 데이터 교환은 메시지 시스템을 사용합니다. 양측 모두 postMessage() 메서드를 사용해 전송하고, `onmessage` 이벤트 처리기(메시지는 {{Event("Message")}}의 `data` 속성에 들어있습니다)를 사용해 수신합니다. 전송하는 데이터는 복사하며 공유하지 않습니다.
 
@@ -68,4 +61,4 @@ translation_of: Web/API/Web_Workers_API
 - [`Worker` 인터페이스](/ko/docs/Web/API/Worker)
 - [`SharedWorker` 인터페이스](/ko/docs/Web/API/SharedWorker)
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers")
+- [워커에서 사용할 수 있는 함수와 클래스](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

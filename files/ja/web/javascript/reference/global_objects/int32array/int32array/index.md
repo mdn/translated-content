@@ -1,13 +1,8 @@
 ---
 title: Int32Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 ---
+
 {{JSRef}}
 
 **`Int32Array()`** は型付き配列のコンストラクターで、プラットフォームのバイト順による 2 の補数形式の 32 ビット符号付き整数値の配列を生成します。バイト順の制御が必要な場合は、代わりに {{jsxref("DataView")}} を使用してください。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
@@ -66,9 +61,7 @@ var int32 = new Int32Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

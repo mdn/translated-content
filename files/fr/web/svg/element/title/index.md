@@ -1,13 +1,8 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Description
-translation_of: Web/SVG/Element/title
 ---
+
 {{SVGRef}}
 
 Tout élément graphique ou conteneur dans un dessin SVG peut définir un titre en utilisant un élément **`<title>`**, ce titre ne peut contenir que du texte.
@@ -50,14 +45,11 @@ Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTi
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
-| {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.title")}}
+{{Compat}}
 
 ## Voir aussi
 

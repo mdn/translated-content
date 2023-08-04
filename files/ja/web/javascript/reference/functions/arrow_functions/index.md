@@ -1,16 +1,8 @@
 ---
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - 関数
-  - 中級者
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.arrow_functions
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 **アロー関数式**は、従来の [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)の簡潔な代替構文ですが、制限があり、すべての場面で使用することができるわけではできません。
@@ -29,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 
 「従来の関数」を分解して、最もシンプルな「アロー関数」に段階的に変えていきましょう。
 
-> **Note:** 途中の各ステップは有効な「アロー関数」です。
+> **メモ:** 途中の各ステップは有効な「アロー関数」です。
 
 ```js
 // 従来の関数

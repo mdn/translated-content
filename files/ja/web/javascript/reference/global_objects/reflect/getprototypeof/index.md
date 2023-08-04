@@ -1,14 +1,8 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.getPrototypeOf()`** メソッドは、{{jsxref("Object.getPrototypeOf()")}} とほぼ同じメソッドです。これは指定したオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティの値) を返します。
@@ -69,9 +63,7 @@ Reflect.getPrototypeOf(Object('foo'))  // String.prototype
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

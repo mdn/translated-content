@@ -1,16 +1,9 @@
 ---
 title: SVG Attribute reference
 slug: Web/SVG/Attribute
-tags:
-  - NeedsHelp
-  - NeedsTranslation
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - TopicStub
-translation_of: Web/SVG/Attribute
 ---
-« [SVG](/en/SVG "en/SVG") / [SVG Element reference](/en/SVG/Element "en/SVG/Element") »
+
+« [SVG](/en/SVG) / [SVG Element reference](/en/SVG/Element) »
 
 ## SVG Attributes
 

@@ -2,11 +2,12 @@
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AnalyserNode") }} 接口的 **`smoothingTimeConstant`** 属性是一个双精度浮点型 (double) 的值， 表示最后一个分析帧的平均常数。它基本上是当前缓冲区和 AnalyserNode 处理的最后一个缓冲区之间的平均值，并导致在值变化时随着时间推移得到一个更平滑的集合。
+{{ domxref("AnalyserNode") }} 接口的 **`smoothingTimeConstant`** 属性是一个双精度浮点型 (double) 的值，表示最后一个分析帧的平均常数。它基本上是当前缓冲区和 AnalyserNode 处理的最后一个缓冲区之间的平均值，并导致在值变化时随着时间推移得到一个更平滑的集合。
 
-`smoothingTimeConstant 属性的默认值为` `0.8`; 值的范围必须在 `0` \~ `1` 之间。如果设置为 0，则不进行平均，而值为 1 意味着 "在计算值时重叠上一个缓冲区和当前缓冲区相当多", 它基本上平滑了 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 调用的变化。
+`smoothingTimeConstant` 属性的默认值为 `0.8`; 值的范围必须在 `0` \~ `1` 之间。如果设置为 0，则不进行平均，而值为 1 意味着 "在计算值时重叠上一个缓冲区和当前缓冲区相当多", 它基本上平滑了 {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}} 调用的变化。
 
 在技术术语中，我们应用一个 [布莱克曼窗](http://webaudio.github.io/web-audio-api/#blackman-window) 并随着时间推移去平滑值。大部分情况下，默认值是较好的。
 
@@ -79,7 +80,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.smoothingTimeConstant")}}
+{{Compat}}
 
 ## 相关内容
 

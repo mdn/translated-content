@@ -2,6 +2,7 @@
 title: label
 slug: Web/JavaScript/Reference/Statements/label
 ---
+
 {{jsSidebar("Statements")}}
 
 **标记语句**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句一起使用。标记就是在一条语句前面加个可以引用的标识符（identifier）。
@@ -28,25 +29,25 @@ label :
 
 需要注意的是，JavaScript 没有 `goto` 语句，标记只能和 `break` 或 `continue` 一起使用。
 
-在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 “`let`” 作为标签名称。它会抛出一个 {{jsxref("SyntaxError")}}（因为 let 是一个保留的标识符）。
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用“`let`”作为标签名称。它会抛出一个 {{jsxref("SyntaxError")}}（因为 let 是一个保留的标识符）。
 
 ## 示例
 
 ### 在 `for` 循环中使用带标记的 `continue` 语句
 
 ```js
-    var i, j;
+var i, j;
 
-    loop1:
-    for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-       loop2:
-       for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-          if (i === 1 && j === 1) {
-             continue loop1;
-          }
-          console.log('i = ' + i + ', j = ' + j);
-       }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
     }
+    console.log("i = " + i + ", j = " + j);
+  }
+}
 
 // Output is:
 //   "i = 0, j = 0"
@@ -67,8 +68,7 @@ label :
 var itemsPassed = 0;
 var i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -84,15 +84,15 @@ for (i = 0; i < items.length; i++) {
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i == 1 && j == 1) {
-         break loop1;
-      }
-      console.log("i = " + i + ", j = " + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i == 1 && j == 1) {
+      break loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -111,10 +111,9 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
 var allPass = true;
 var i, j;
 
-top:
-for (i = 0; items.length; i++)
+top: for (i = 0; items.length; i++)
   for (j = 0; j < tests.length; i++)
-    if (!tests[j].pass(items[i])){
+    if (!tests[j].pass(items[i])) {
       allPass = false;
       break top;
     }
@@ -126,11 +125,11 @@ for (i = 0; items.length; i++)
 
 ```js
 foo: {
-  console.log('face');
+  console.log("face");
   break foo;
-  console.log('this will not be executed');
+  console.log("this will not be executed");
 }
-console.log('swap');
+console.log("swap");
 
 // this will log:
 
@@ -149,7 +148,7 @@ L: function F() {}
 在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中，这会抛出 {{jsxref("SyntaxError")}}：
 
 ```js
-'use strict';
+"use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```

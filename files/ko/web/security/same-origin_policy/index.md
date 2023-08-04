@@ -1,16 +1,8 @@
 ---
 title: 동일 출처 정책
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - 교차 출처 정책
-  - 동일 출처 정책
-translation_of: Web/Security/Same-origin_policy
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
 
 **동일 출처 정책**(same-origin policy)은 어떤 {{Glossary("origin", "출처")}}에서 불러온 문서나 스크립트가 다른 출처에서 가져온 리소스와 상호작용하는 것을 제한하는 중요한 보안 방식입니다. 동일 출처 정책은 잠재적으로 해로울 수 있는 문서를 분리함으로써 공격받을 수 있는 경로를 줄여줍니다.
@@ -84,7 +76,7 @@ document.domain = "company.com";
 
 ### 교차 출처 접근 허용하기
 
-[CORS](/ko/docs/Web/HTTP/CORS "HTTP/Access_control_CORS")를 사용해 교차 출처 접근을 허용하세요. CORS는 {{glossary("HTTP")}}의 일부로, 어떤 호스트에서 자신의 콘텐츠를 불러갈 수 있는지 서버에 지정할 수 있는 방법입니다.
+[CORS](/ko/docs/Web/HTTP/CORS)를 사용해 교차 출처 접근을 허용하세요. CORS는 {{glossary("HTTP")}}의 일부로, 어떤 호스트에서 자신의 콘텐츠를 불러갈 수 있는지 서버에 지정할 수 있는 방법입니다.
 
 ### 교차 출처 접근 막기
 
@@ -104,24 +96,24 @@ document.domain = "company.com";
 
 교차 출처에서 `Window`의 다음 항목에 접근할 수 있습니다.
 
-| 메서드                                       |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| 메서드                            |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| 속성                                     |            |
-| ---------------------------------------- | ---------- |
-| {{domxref("window.closed")}}     | 읽기 전용. |
-| {{domxref("window.frames")}}     | 읽기 전용. |
-| {{domxref("window.length")}}     | 읽기 전용. |
+| 속성                           |            |
+| ------------------------------ | ---------- |
+| {{domxref("window.closed")}}   | 읽기 전용. |
+| {{domxref("window.frames")}}   | 읽기 전용. |
+| {{domxref("window.length")}}   | 읽기 전용. |
 | {{domxref("window.location")}} | 읽기/쓰기. |
-| {{domxref("window.opener")}}     | 읽기 전용. |
-| {{domxref("window.parent")}}     | 읽기 전용. |
+| {{domxref("window.opener")}}   | 읽기 전용. |
+| {{domxref("window.parent")}}   | 읽기 전용. |
 | {{domxref("window.self")}}     | 읽기 전용. |
-| {{domxref("window.top")}}         | 읽기 전용. |
-| {{domxref("window.window")}}     | 읽기 전용. |
+| {{domxref("window.top")}}      | 읽기 전용. |
+| {{domxref("window.window")}}   | 읽기 전용. |
 
 일부 브라우저는 위의 항목보다 더 많은 접근을 허용할 수도 있습니다.
 
@@ -129,12 +121,12 @@ document.domain = "company.com";
 
 교차 출처에서 `Location`의 다음 항목에 접근할 수 있습니다.
 
-| 메서드                                   |
-| ---------------------------------------- |
+| 메서드                          |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| 속성                                 |            |
-| ------------------------------------ | ---------- |
+| 속성                         |            |
+| ---------------------------- | ---------- |
 | {{domxref("URLUtils.href")}} | 쓰기 전용. |
 
 일부 브라우저는 위의 항목보다 더 많은 접근을 허용할 수도 있습니다.

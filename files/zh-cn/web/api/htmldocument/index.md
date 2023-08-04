@@ -2,6 +2,7 @@
 title: HTMLDocument
 slug: Web/API/HTMLDocument
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDocument`** 是 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 的一个抽象接口，它提供了 XML 文档里没有出现的特殊属性和方法。

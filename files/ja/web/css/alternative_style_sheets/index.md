@@ -1,16 +1,8 @@
 ---
 title: 代替スタイルシート
 slug: Web/CSS/Alternative_style_sheets
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - NeedsCompatTable
-  - NeedsUpdate
-  - Reference
-  - ガイド
-translation_of: Web/CSS/Alternative_style_sheets
 ---
+
 {{cssref}}
 
 ウェブページに**代替スタイルシート**を指定すると、ユーザーのニーズや設定に応じて複数のバージョンのページを見る方法を提供します。
@@ -51,14 +43,7 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考                                                                                                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#rel-alternate', 'link type "alternate"')}}                                             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#the-link-is-an-alternative-stylesheet', 'alternative stylesheet')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#attr-style-title', 'the "title" attribute for the style element')}}         | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', '#attr-meta-http-equiv-default-style', 'meta http-equiv="default-style")')}} | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSSOM', '#css-style-sheet-collections', 'CSS Style Sheet Collections')}}                         | {{Spec2('CSSOM')}}         | CSS OM 仕様書は、**スタイルシートセット名**と、その**無効フラグ**、**推奨される CSS スタイルシートセット名** の概念を定義しています。 これらがどのように指定されるのかを定義し、 HTML 仕様書が **_CSS スタイルシートの作成時_**に定義する必要がある HTML に依存した動作を定義できるようにしています。 |
-| {{SpecName("HTML4.01", "present/styles.html#h-14.3", "Alternative style sheets")}}                             | {{Spec2("HTML4.01")}}     | 以前は、 HTML 仕様書自体で推奨及び代替スタイルシートの概念を定義していました。                                                                                                                                                                                                                        |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

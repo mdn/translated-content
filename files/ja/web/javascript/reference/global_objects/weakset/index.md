@@ -1,13 +1,8 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** オブジェクトは、コレクションに弱く参照された*オブジェクト*を格納することができます。
@@ -21,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 - `WeakSet` は**オブジェクトのみ**のコレクションです。 {{jsxref("Set")}} のように、任意の型の自由な値を入れることはできません。
 - `WeakSet` は*弱い参照*です。コレクション内のオブジェクトへの*弱い参照*で保持されます。 `WeakSet` 内に格納されているオブジェクトへの参照が他にない場合、ガベージコレクションにより削除されます。
 
-  > **Note:** **注:** これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 `WeakSets` は列挙可能ではありません。
+  > **メモ:** これは、このコレクションに格納されているオブジェクトの現在のリストが存在しないことを意味します。 `WeakSets` は列挙可能ではありません。
 
 ### 使用例: 循環参照の検出
 
@@ -100,9 +95,7 @@ ws.has(bar);    // true, bar は残っている
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

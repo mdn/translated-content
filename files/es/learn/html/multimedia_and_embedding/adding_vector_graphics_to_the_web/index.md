@@ -1,20 +1,8 @@
 ---
 title: Agregar Gráficos Vectoriales a la Web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Aprender
-  - Guía
-  - HTML
-  - Imagenes
-  - Principiante
-  - Raster
-  - SVG
-  - Vector
-  - graficos
-  - iframe
-  - img
-translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.
@@ -25,11 +13,11 @@ Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen ta
       <th scope="row">Prerequisitos:</th>
       <td>
         Debe conocer los
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >conceptos básicos de HTML</a
         >
         y cómo
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >insertar imágenes en su documento</a
         >
       </td>
@@ -54,9 +42,9 @@ Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede enc
 
 La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.
 
-![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![Two star images](raster-vector-default-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
 > **Nota:** Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
 
@@ -69,10 +57,12 @@ Además, los archivos de imágenes vectoriales son mucho más ligeros que sus eq
 Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:
 
 ```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -97,7 +87,7 @@ Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bue
 
 Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.
 
-> **Nota:** En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe[ ](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)[cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> **Nota:** En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe [cómo preparar SVGs para la web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Agregar SVG a sus páginas
 
@@ -109,10 +99,10 @@ Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo nec
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="triangle with all three sides equal"
-    height="87"
-    width="100" />
+  src="equilateral.svg"
+  alt="triangle with all three sides equal"
+  height="87"
+  width="100" />
 ```
 
 #### Pros
@@ -129,10 +119,13 @@ Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo nec
 
 ### Solución de problemas y compatibilidad con varios navegadores
 
-Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo {{htmlattrxref ("srcset", "img")}} ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
+Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo [`srcset`](/es/docs/Web/HTML/Element/img#srcset) ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
 
 ```html
-<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+<img
+  src="equilateral.png"
+  alt="triangle with equal sides"
+  srcset="equilateral.svg" />
 ```
 
 También puede usar SVG como imágenes de fondo CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que entienden, mientras que los navegadores más nuevos cargarán el SVG:
@@ -153,7 +146,7 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -173,13 +166,13 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> ](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)[—](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)[ otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 
 Aquí hay una revisión rápida:
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="Triangle with three unequal sides" />
 </iframe>
 ```
 
@@ -199,11 +192,12 @@ Si se queda atascado y no puede hacer que su código funcione, siempre puede res
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
 <svg width="100%" height="100%">
@@ -218,110 +212,113 @@ Hello!
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Reset">
-<input id="solution" type="button" value="Show solution" disabled>
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Show solution';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Show solution";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Show solution') {
-textarea.value = solutionEntry;
-solution.value = 'Hide solution';
-} else {
-textarea.value = userEntry;
-solution.value = 'Show solution';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
 });
 
-const htmlSolution = '';
+const htmlSolution = "";
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-const scrollPos = textarea.scrollTop;
-const caretPos = textarea.selectionStart;
-const front = (textarea.value).substring(0, caretPos);
-const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const scrollPos = textarea.scrollTop;
+  const caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
-// We only want to save the state when the user code is being shown,
-// not the solution, so that solution is not saved over the user code
-if(solution.value === 'Show solution') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -342,12 +339,3 @@ En el próximo artículo de este módulo, exploraremos las imágenes adaptables 
 - [Cómo escalar SVGs](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> a \<iframe> - otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Agregar gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes adaptables](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de presentación de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

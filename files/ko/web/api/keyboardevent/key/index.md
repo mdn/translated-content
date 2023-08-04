@@ -1,15 +1,6 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - UI Events
-browser-compat: api.KeyboardEvent.key
 ---
 
 {{APIRef("UI Events")}}
@@ -214,7 +205,7 @@ window.addEventListener(
     // 두 번 동작하는 것을 막기 위해 기본 동작을 취소합니다.
     event.preventDefault();
   },
-  true
+  true,
 );
 ```
 

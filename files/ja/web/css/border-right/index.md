@@ -1,36 +1,29 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-right
-translation_of: Web/CSS/border-right
 ---
+
 {{CSSRef}}
 
 **`border-right`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
 {{EmbedInteractiveExample("pages/css/border-right.html")}}
 
-他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり・・・
+他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり……
 
 ```css
 border-right-style: dotted;
 border-right: thick green;
 ```
 
-・・・は、実際には以下と同じです・・・
+……は、実際には以下と同じです……
 
 ```css
 border-right-style: dotted;
 border-right: none thick green;
 ```
 
-・・・そして、 `border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+……そして、 `border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 

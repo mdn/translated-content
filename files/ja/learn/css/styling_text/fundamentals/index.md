@@ -2,6 +2,7 @@
 title: 基本的なテキストとフォントの装飾
 slug: Learn/CSS/Styling_text/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
@@ -14,14 +15,14 @@ slug: Learn/CSS/Styling_text/Fundamentals
 
 HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素のコンテンツボックス内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
 
-> **Note:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)の記事に戻って見直してください。
+> **メモ:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)の記事に戻って見直してください。
 
 テキストを装飾するために使用される CSS プロパティは、一般的に次の 2 つのカテゴリに分類されます。 この記事では、これらのプロパティを個別に説明します。
 
 - **フォントスタイル**: テキストに適用されるフォントに影響するプロパティで、適用するフォント、大きさ、太字、斜体などに影響します。
 - **テキストのレイアウトスタイル**: テキストの間隔やその他のレイアウト機能に影響するプロパティで、例えば、行間や文字間のスペースや、コンテンツボックス内でのテキストの配置方法などを操作できます。
 
-> **Note:** 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素でラップしたり、{{cssxref("::first-letter")}}（要素のテキストの最初の文字を選択）、{{cssxref("::first-line")}}（要素のテキストの最初の行を選択）、{{cssxref("::selection")}}（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の疑似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
+> **メモ:** 要素内のテキストはすべて単一の実体として影響を受けることに注意してください。 テキストの一部分を（{{htmlelement("span")}} や {{htmlelement("strong")}} など）適切な要素でラップしたり、{{cssxref("::first-letter")}}（要素のテキストの最初の文字を選択）、{{cssxref("::first-line")}}（要素のテキストの最初の行を選択）、{{cssxref("::selection")}}（現在カーソルで強調表示されているテキストを選択）のようなテキスト固有の疑似要素を使用しない限り、テキストの一部分を選択して装飾することはできません。
 
 ## フォント
 
@@ -32,12 +33,13 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 [完成した例](http://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
@@ -61,12 +63,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('Color', '100%', 220) }}
@@ -100,9 +103,9 @@ p {
 | Trebuchet MS    | sans-serif | このフォントの使用には注意が必要です — モバイル OS では広く使用されていません。                                                                                                                                                               |
 | Verdana         | sans-serif |                                                                                                                                                                                                                                               |
 
-> **Note:** さまざまなリソースの中で、[cssfontstack.com](http://www.cssfontstack.com/) ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。
+> **メモ:** さまざまなリソースの中で、[cssfontstack.com](http://www.cssfontstack.com/) ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。
 
-> **Note:** ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、**ウェブフォント**（web fonts）です。 これはもう少し複雑で、このモジュールの後の別の記事でこれを議論するでしょう。
+> **メモ:** ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、**ウェブフォント**（web fonts）です。 これはもう少し複雑で、このモジュールの後の別の記事でこれを議論するでしょう。
 
 #### デフォルトフォント
 
@@ -132,7 +135,7 @@ p {
 
 リストされているフォントがどれも利用できない場合、ブラウザーが少なくともほぼ適切なものを提供できるように、スタックの最後に適切な総称フォント名を指定することをお勧めします。 この点を強調するために、他のオプションが利用できない場合、段落にはブラウザーのデフォルトの serif フォントを使用します — これは通常は Times New Roman です — これは sans-serif フォントには不適切です！
 
-> **Note:** `Trebuchet MS` のように、複数の単語を含むフォント名は `"Trebuchet MS"` のように引用符で囲む必要があります。
+> **メモ:** `Trebuchet MS` のように、複数の単語を含むフォント名は `"Trebuchet MS"` のように引用符で囲む必要があります。
 
 #### font-family の例
 
@@ -152,12 +155,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
@@ -176,8 +180,10 @@ occasion such as this that he did.</p>
 
 ```html
 <!-- ドキュメントのベースフォントサイズは 16px です -->
-<article> <!-- ここのフォントサイズが 1.5em の場合 -->
-  <p>My paragraph</p> <!-- 20px のフォントサイズにするにはどう計算しますか？ -->
+<article>
+  <!-- ここのフォントサイズが 1.5em の場合 -->
+  <p>My paragraph</p>
+  <!-- 20px のフォントサイズにするにはどう計算しますか？ -->
 </article>
 ```
 
@@ -194,12 +200,13 @@ occasion such as this that he did.</p>
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -228,7 +235,7 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
 
   - `normal`: テキストを通常のフォントに設定します（既存のイタリック体をオフにします）。
   - `italic`: 利用できる場合は、*イタリック体版のフォント*を使用するようにテキストを設定します。 利用できない場合は、代わりに `oblique` でイタリック体をシミュレートします。
-  - `oblique`: 通常版を斜め ​​ にして作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。
+  - `oblique`: 通常版を斜めにして作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。
 
 - {{cssxref("font-weight")}}: テキストの太さを設定します。 利用可能なフォントのバリエーションが多数ある場合（_-light_、_-normal_、_-bold_、_-extrabold_、_-black_ など）、これには多くの値がありますが、現実的には `normal` と `bold` 以外のものを使用することはほとんどありません。
 
@@ -245,6 +252,7 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
   - `full-width`: 例えば、ラテン文字を（中国語、日本語、韓国語など）アジア言語のグリフと一緒に揃えて、等幅フォントのように、固定幅の四角形の中にすべてのグリフを書く（written inside a fixed-width square）ように変換します。
 
 - {{cssxref("text-decoration")}}: フォントのテキスト飾りを設定/設定解除します（主にリンクのデフォルトの下線を解除するために使用します）。 使用可能な値は次のとおりです。
+
   - `none`: 既に存在するテキスト飾りをすべて解除します。
   - `underline`: **テキストに下線を引きます**。
   - `overline`: テキストに上線を付けます。
@@ -261,12 +269,13 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -307,17 +316,18 @@ text-shadow: 4px 4px 5px red;
 3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
 4. 影のベースカラー — 任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を取ります。 含まれていない場合、デフォルトは `black` です。
 
-> **Note:** 注: 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
+> **メモ:** 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
 
 #### 複数の影
 
 複数の影の値をコンマで区切って含めることで、次のように同じテキストに複数の影を付けることができます。
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 これを Tommy the cat の例の {{htmlelement("h1")}} 要素に適用すると、結果は次のようになります。
@@ -327,12 +337,13 @@ text-shadow: -1px -1px 1px #aaa,
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -343,10 +354,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -362,7 +374,7 @@ p {
 
 {{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-> **Note:** Sitepoint の記事 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
+> **メモ:** Sitepoint の記事 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
 
 ## テキストのレイアウト
 
@@ -384,12 +396,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -400,10 +413,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -435,12 +449,13 @@ line-height: 1.5;
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -451,10 +466,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -492,12 +508,13 @@ p::first-line {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -508,10 +525,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -579,7 +597,10 @@ p {
 完全な例は次のようになります。
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## 能動的学習: テキストの装飾で遊ぶ
@@ -589,20 +610,37 @@ font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Some sample text for your delight</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -615,8 +653,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -624,7 +662,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
@@ -642,11 +680,3 @@ window.addEventListener("load", drawOutput);
 この記事のテキストで遊んで楽しんでくださいね！ 次の記事では、HTML リストの装飾について知っておくべきことをすべて説明します。
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
-- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

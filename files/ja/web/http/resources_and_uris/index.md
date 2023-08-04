@@ -1,16 +1,8 @@
 ---
 title: リソースと URI
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - MIME
-  - MIME タイプ
-  - URI
-  - URL
-  - リソース
-  - 概要
-translation_of: Web/HTTP/Resources_and_URIs
 ---
+
 {{HTTPSidebar}}
 
 HTTP により、ブラウザーやその他の{{Glossary("user agent", "ユーザーエージェント")}}は、インターネット上の様々な*リソース*と通信することができます。このために、ブラウザーはリソースの*識別*および*場所*の両方が必要です。これら二つの情報が {{glossary("URI")}} によって記述されます。

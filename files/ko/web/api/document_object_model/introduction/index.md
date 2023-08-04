@@ -1,13 +1,8 @@
 ---
 title: DOM 소개
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - DOM
-  - 가이드
-  - 문서
-translation_of: Web/API/Document_Object_Model/Introduction
-original_slug: Web/API/Document_Object_Model/소개
 ---
+
 이 문서는 {{glossary("DOM")}}에 대한 개념을 간략하게 소개하는 문서이다: DOM 이 무엇이며, 그것이 어떻게 {{glossary("HTML")}}, {{glossary("XML")}} 문서들을 위한 구조를 제공하는지, 어떻게 DOM 에 접근하는지, API 가 어떻게 사용되는지에 대한 참조 정보와 예제들을 제공한다.
 
 ## DOM 이란?
@@ -56,7 +51,7 @@ DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라�
 스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/DOM/window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/DOM/window) object 로 부터 [`alert()`](/ko/docs/DOM/window.alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
 
 ```html
-<body onload="window.alert('welcome to my home page!');">
+<body onload="window.alert('welcome to my home page!');"></body>
 ```
 
 아래의 자바스크립트는 문서가 로드될 때(모든 DOM을 사용할 수 있게 되는 때임) 실행되는 함수를 정의하였다. 이 함수는 새로운 H1 element 를 생성하고, element 에 text 를 추가하며, H1 을 이 문서의 트리에 추가한다.
@@ -65,19 +60,17 @@ DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라�
 <html>
   <head>
     <script>
-       // run this function when the document is loaded
-       window.onload = function() {
-
-         // create a couple of elements in an otherwise empty HTML page
-         var heading = document.createElement("h1");
-         var heading_text = document.createTextNode("Big Head!");
-         heading.appendChild(heading_text);
-         document.body.appendChild(heading);
-      }
+      // run this function when the document is loaded
+      window.onload = function () {
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+      };
     </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 
@@ -186,8 +179,7 @@ var table = document.getElementById("table");
 var tableAttrs = table.attributes; // Node/Element interface
 for (var i = 0; i < tableAttrs.length; i++) {
   // HTMLTableElement interface: border attribute
-  if(tableAttrs[i].nodeName.toLowerCase() == "border")
-    table.border = "1";
+  if (tableAttrs[i].nodeName.toLowerCase() == "border") table.border = "1";
 }
 // HTMLTableElement interface: summary attribute
 table.summary = "note: increased border";
@@ -228,35 +220,47 @@ table.summary = "note: increased border";
   <head>
     <title>DOM Tests</title>
     <script type="application/javascript">
-    function setBodyAttr(attr,value){
-      if (document.body) eval('document.body.'+attr+'="'+value+'"');
-      else notSupported();
-    }
+      function setBodyAttr(attr, value) {
+        if (document.body) eval("document.body." + attr + '="' + value + '"');
+        else notSupported();
+      }
     </script>
   </head>
   <body>
     <div style="margin: .5in; height: 400;">
-      <p><b><tt>text</tt>color</b></p>
+      <p>
+        <b><tt>text</tt>color</b>
+      </p>
       <form>
-        <select onChange="setBodyAttr('text',
+        <select
+          onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);">
-          <option value="black">black
-          <option value="darkblue">darkblue
+          <option value="black">black</option>
+          <option value="darkblue">darkblue</option>
         </select>
-        <p><b><tt>bgColor</tt></b></p>
-        <select onChange="setBodyAttr('bgColor',
+        <p>
+          <b><tt>bgColor</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('bgColor',
         this.options[this.selectedIndex].value);">
-          <option value="white">white
-          <option value="lightgrey">gray
+          <option value="white">white</option>
+          <option value="lightgrey">gray</option>
         </select>
-        <p><b><tt>link</tt></b></p>
-        <select onChange="setBodyAttr('link',
+        <p>
+          <b><tt>link</tt></b>
+        </p>
+        <select
+          onChange="setBodyAttr('link',
         this.options[this.selectedIndex].value);">
-          <option value="blue">blue
-          <option value="green">green
-        </select>  <small>
-        <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
-        (sample link)</a></small><br>
+          <option value="blue">blue</option>
+          <option value="green">green</option>
+        </select>
+        <small>
+          <a href="http://www.brownhen.com/dom_api_top.html" id="sample">
+            (sample link)</a
+          ></small
+        ><br />
       </form>
       <form>
         <input type="button" value="version" onclick="ver()" />
@@ -267,8 +271,6 @@ table.summary = "note: increased border";
 ```
 
 단일 페이지(예를 들어, 웹 페이지의 색상에 영향을 주는 property 설정하는) 안의 수많은 interfaces 를 테스트하기 위해 설정 버튼, textfield, 또는 다른 HTML elements를 사용하여 유사한 테스트 페이지를 만들 수 있다. 아래의 스크린샷은 테스트를 위해 어떻게 interfaces를 그룹화하는지에 대한 아이디어를 제공하고 있다.
-
-<figure><figcaption>Figure 0.1 Sample DOM Test Page</figcaption><img alt="Image:DOM_Ref_Introduction_to_the_DOM.gif" class="internal" src="/@api/deki/files/173/=DOM_Ref_Introduction_to_the_DOM.gif"></figure>
 
 이 예제에서 드롭다운 메뉴는 웹 페이지에서 DOM 접근가능한 배경색상(`bgColor`), 하이퍼링크 색상(`aLink`), 텍스트 색상(`text`)을 동적으로 업데이트한다. 어떻게 자신의 test pages 를 디자인하더라도, interface 테스트는 DOM 을 효과적으로 사용하는 법을 배우는 데 매우 중요한 수단임을 명심하라.
 

@@ -2,12 +2,13 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
+
 {{JSRef}}
 
-**`values()`** 方法會回傳一個包含陣列中的每一個索引之對應值（values）的新 **`Array Iterator`** 物件。
+**`values()`** 方法會回傳一個包含陣列中的每一個索引之對應值（value）的新 **`Array Iterator`** 物件。
 
 ```js
-var a = ['w', 'y', 'k', 'o', 'p'];
+var a = ["w", "y", "k", "o", "p"];
 var iterator = a.values();
 
 console.log(iterator.next().value); // w
@@ -19,7 +20,7 @@ console.log(iterator.next().value); // p
 
 ## 語法
 
-```plain
+```js-nolint
 arr.values()
 ```
 
@@ -29,10 +30,10 @@ arr.values()
 
 ## 範例
 
-### 使用 [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈進行迭代
+### 使用 for...of 迴圈進行迭代
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var iterator = arr.values();
 
 for (let letter of iterator) {
@@ -46,7 +47,7 @@ for (let letter of iterator) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## 參見
 

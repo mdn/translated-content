@@ -1,8 +1,8 @@
 ---
 title: PermissionStatus.onchange
 slug: Web/API/PermissionStatus/change_event
-original_slug: Web/API/PermissionStatus/onchange
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("PermissionStatus")}} インターフェイス の **`onchange`** イベントハンドラは、{{domxref("PermissionStatus.state")}} プロパティが変更されるたびに呼び出されます。
@@ -27,10 +27,8 @@ navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API','#widl-PermissionStatus-onchange','onchange')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PermissionStatus.onchange")}}
+{{Compat}}

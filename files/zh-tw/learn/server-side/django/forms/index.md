@@ -1,10 +1,11 @@
 ---
-title: 'Django Tutorial Part 9: Working with forms'
+title: "Django Tutorial Part 9: Working with forms"
 slug: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-在本教程中，我們將向您展示，如何在 Django 中使用 HTML 表單，特別是編寫表單以創建，更新和刪除模型實例的最簡單方法。作為本演示的一部分，我們將擴展 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，以便圖書館員，可以使用我們自己的表單（而不是使用管理員應用程序）更新圖書，創建，更新和刪除作者。
+在本教程中，我們將向您展示，如何在 Django 中使用 HTML 表單，特別是編寫表單以創建，更新和刪除模型實例的最簡單方法。作為本演示的一部分，我們將擴展 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，以便圖書館員，可以使用我們自己的表單（而不是使用管理員應用程序）更新圖書，創建，更新和刪除作者。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -13,7 +14,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         完成先前所有的教程, 包含
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django Tutorial Part 8: User authentication and permissions</a
         >.
       </td>
@@ -32,9 +33,9 @@ slug: Learn/Server-side/Django/Forms
 
 ## 概述
 
-[HTML 表單](/en-US/docs/Web/Guide/HTML/Forms)是網頁上的一組一個或多個字段/小組件，可用於從用戶收集信息以提交到服務器。 表單是一種用於收集用戶輸入的靈活機制，因為有合適的小部件可以輸入許多不同類型的數據，包括文本框，複選框，單選按鈕，日期選擇器等。表單也是與服務器共享數據的相對安全的方式， 因為它們允許我們在具有跨站點請求偽造保護的`POST` 請求中發送數據。
+[HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms)是網頁上的一組一個或多個字段/小組件，可用於從用戶收集信息以提交到服務器。 表單是一種用於收集用戶輸入的靈活機制，因為有合適的小部件可以輸入許多不同類型的數據，包括文本框，複選框，單選按鈕，日期選擇器等。表單也是與服務器共享數據的相對安全的方式， 因為它們允許我們在具有跨站點請求偽造保護的`POST` 請求中發送數據。
 
-儘管到目前為止，本教程中尚未創建任何表單，但我們已經在 Django Admin 網站中遇到過這些表單-例如，下面的屏幕截圖顯示了一種用於編輯我們的[Book](/en-US/docs/Learn/Server-side/Django/Models) 模型的表單，該表單由許多選擇列表和 文字編輯器。
+儘管到目前為止，本教程中尚未創建任何表單，但我們已經在 Django Admin 網站中遇到過這些表單-例如，下面的屏幕截圖顯示了一種用於編輯我們的[Book](/zh-TW/docs/Learn/Server-side/Django/Models) 模型的表單，該表單由許多選擇列表和 文字編輯器。
 
 ![Admin Site - Book Add](admin_book_add.png)
 
@@ -44,7 +45,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## HTML 表單
 
-首先簡要介紹一下 [HTML Forms](/en-US/docs/Learn/HTML/Forms)。 考慮一個簡單的 HTML 表單，其中有一個用於輸入某些“團隊”名稱的文本字段及其相關標籤：
+首先簡要介紹一下 [HTML Forms](/zh-TW/docs/Learn/HTML/Forms)。 考慮一個簡單的 HTML 表單，其中有一個用於輸入某些「團隊」名稱的文本字段及其相關標籤：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -52,13 +53,17 @@ slug: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
-雖然這裡只有一個用於輸入團隊名稱的文本字段，但是表單可以具有任意數量的其他輸入元素及其關聯的標籤。字段的`type` 屬性定義將顯示哪種小部件。字段的 `name` 和`id` 用於標識 JavaScript / CSS / HTML 中的字段，而 `value`定義該字段在首次顯示時的初始值。匹配的團隊標籤是使用`label` 標籤指定的（請參見上面的“輸入名稱”），其中的 `for` 字段包含相關`input`的`id` 值。
+雖然這裡只有一個用於輸入團隊名稱的文本字段，但是表單可以具有任意數量的其他輸入元素及其關聯的標籤。字段的`type` 屬性定義將顯示哪種小部件。字段的 `name` 和`id` 用於標識 JavaScript / CSS / HTML 中的字段，而 `value`定義該字段在首次顯示時的初始值。匹配的團隊標籤是使用`label` 標籤指定的（請參見上面的「輸入名稱」），其中的 `for` 字段包含相關`input`的`id` 值。
 
 `submit` 輸入將顯示為一個按鈕（默認情況下），用戶可以按下該按鈕以將表單中所有其他輸入元素中的數據上載到服務器（在這種情況下，僅是`team_name`）。表單屬性定義用於發送數據的 HTTP`method` 以及服務器上數據的目的地（`action`）：
 
@@ -68,9 +73,9 @@ slug: Learn/Server-side/Django/Forms
   - 如果數據將導致服務器數據庫的更改，則應始終使用`POST` 方法，因為這樣可以使它更能抵抗跨站點的偽造請求攻擊。
   - `GET` 方法應僅用於不更改用戶數據的表單（例如搜索表單）。建議您在希望添加書籤或共享 URL 時使用。
 
-服務器的角色是首先呈現初始表單狀態-包含空白字段，或預填充初始值。用戶按下“提交”按鈕後，服務器將從 Web 瀏覽器接收帶有值的表單數據，並且必須驗證信息。如果表單包含無效數據，則服務器應再次顯示該表單，這一次將在“有效”字段中顯示用戶輸入的數據，並顯示描述無效字段問題的消息。服務器收到包含所有有效表單數據的請求後，便可以執行適當的操作（例如，保存數據，返回搜索結果，上傳文件等），然後通知用戶。
+服務器的角色是首先呈現初始表單狀態-包含空白字段，或預填充初始值。用戶按下「提交」按鈕後，服務器將從 Web 瀏覽器接收帶有值的表單數據，並且必須驗證信息。如果表單包含無效數據，則服務器應再次顯示該表單，這一次將在「有效」字段中顯示用戶輸入的數據，並顯示描述無效字段問題的消息。服務器收到包含所有有效表單數據的請求後，便可以執行適當的操作（例如，保存數據，返回搜索結果，上傳文件等），然後通知用戶。
 
-可以想像，創建 HTML，驗證返回的數據，在需要時使用錯誤報告重新顯示輸入的數據以及對有效數據執行所需的操作都需要花費大量精力才能“正確”。 Django 通過刪除一些繁瑣且重複的代碼，使此操作變得更加容易！
+可以想像，創建 HTML，驗證返回的數據，在需要時使用錯誤報告重新顯示輸入的數據以及對有效數據執行所需的操作都需要花費大量精力才能「正確」。 Django 通過刪除一些繁瑣且重複的代碼，使此操作變得更加容易！
 
 ## Django 表單處理流程
 
@@ -83,17 +88,17 @@ Django 的表單處理使用了我們在以前的教程中學到的所有相同�
 
 1. 在用戶第一次請求時顯示默認表單。
 
-    - 該表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能會預先填充有初始值（例如，如果您正在更改記錄或具有有用的默認初始值）。
-    - 由於此表單與任何用戶輸入的數據均不相關（儘管它可能具有初始值），因此在這一點上被稱為未綁定。
+   - 該表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能會預先填充有初始值（例如，如果您正在更改記錄或具有有用的默認初始值）。
+   - 由於此表單與任何用戶輸入的數據均不相關（儘管它可能具有初始值），因此在這一點上被稱為未綁定。
 
 2. 從提交請求中接收數據並將其綁定到表單。
 
-    - 將數據綁定到表單意味著當我們需要重新顯示表單時，用戶輸入的數據和任何錯誤均可用。
+   - 將數據綁定到表單意味著當我們需要重新顯示表單時，用戶輸入的數據和任何錯誤均可用。
 
 3. 清理並驗證數據。
 
-    - 清理數據會對輸入執行清理操作（例如，刪除可能用於向服務器發送惡意內容的無效字符），並將其轉換為一致的 Python 類型。
-    - 驗證會檢查該值是否適合該字段（例如，日期範圍正確，時間不要太短或太長等）
+   - 清理數據會對輸入執行清理操作（例如，刪除可能用於向服務器發送惡意內容的無效字符），並將其轉換為一致的 Python 類型。
+   - 驗證會檢查該值是否適合該字段（例如，日期範圍正確，時間不要太短或太長等）
 
 4. 如果任何數據無效，則這次重新顯示該表單，其中包含用戶填充的所有值和問題字段的錯誤消息。
 5. 如果所有數據均有效，請執行所需的操作（例如，保存數據，發送和發送電子郵件，返回搜索結果，上傳文件等）
@@ -101,7 +106,7 @@ Django 的表單處理使用了我們在以前的教程中學到的所有相同�
 
 Django 提供了許多工具和方法來幫助您完成上述任務。 最基本的是 `Form`類，它簡化了表單 HTML 的生成和數據清除/驗證的過程。 在下一節中，我們將使用頁面的實際示例描述表單如何工作，以使圖書館員可以續訂書籍。
 
-> **備註：** 當我們討論 Django 的更多“高級”表單框架類時，了解`Form`的使用方式將對您有所幫助。
+> **備註：** 當我們討論 Django 的更多「高級」表單框架類時，了解`Form`的使用方式將對您有所幫助。
 
 ## 使用表單和功能視圖續訂表單
 
@@ -130,7 +135,7 @@ class RenewBookForm(forms.Form):
 
 In this case we have a single [`DateField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3 weeks)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), and will be rendered using the default [widget](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/2.0/ref/forms/widgets/#django.forms.DateInput).
 
-There are many other types of form fields, which you will largely recognise from their similarity to the equivalent model field classes: [`BooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelchoicefield)​​​​.
+There are many other types of form fields, which you will largely recognise from their similarity to the equivalent model field classes: [`BooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelchoicefield).
 
 The arguments that are common to most fields are listed below (these have sensible default values):
 
@@ -293,7 +298,7 @@ If the form is valid, then we can start to use the data, accessing it through th
 
 > **警告：** While you can also access the form data directly through the request (for example `request.POST['renewal_date']` or `request.GET['renewal_date']` (if using a GET request) this is NOT recommended. The cleaned data is sanitised, validated, and converted into Python-friendly types.
 
-The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case we use `HttpResponseRedirect` and `reverse()` to redirect to the view named `'all-borrowed'` (this was created as the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself)). If you didn't create that page consider redirecting to the home page at URL '/').
+The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case we use `HttpResponseRedirect` and `reverse()` to redirect to the view named `'all-borrowed'` (this was created as the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself)). If you didn't create that page consider redirecting to the home page at URL '/').
 
 That's everything needed for the form handling itself, but we still need to restrict access to the view to librarians. We should probably create a new permission in `BookInstance` ("`can_renew`"), but to keep things simple here we just use the `@permission_required` function decorator with our existing `can_mark_returned` permission.
 
@@ -343,7 +348,7 @@ def renew_book_librarian(request, pk):
 
 Create the template referenced in the view (**/catalog/templates/catalog/book_renew_librarian.html**) and copy the code below into it:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
@@ -374,28 +379,42 @@ All that's left is the `\{{form}}` template variable, which we passed to the tem
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
 
-> **備註：** It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table` tags above).​​​​​​ This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
+> **備註：** It is perhaps not obvious because we only have one field, but by default every field is defined in its own table row (which is why the variable is inside `table` tags above). This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
 
 If you were to enter an invalid date, you'd additionally get a list of the errors rendered in the page (shown in bold below).
 
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -415,15 +434,15 @@ For more examples of how to manually render forms in templates and dynamically l
 
 ### Testing the page
 
-If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
+If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
 > **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
-You can alternatively manually construct a test URL like this — [http://127.0.0.1:8000/catalog/book/*\<bookinstance_id>*/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
+You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
 ### What does it look like?
 
@@ -538,31 +557,29 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 ### Templates
 
-The "create" and "update" views use the same template by default, which will be named after your model: **model_name\_form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, e.g. `template_name_suffix = '_other_suffix'`)
+The "create" and "update" views use the same template by default, which will be named after your model: **model_name_form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, e.g. `template_name_suffix = '_other_suffix'`)
 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
 <form action="" method="post">
-    {% csrf_token %}
-    <table>
+  {% csrf_token %}
+  <table>
     \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" />
-
+  </table>
+  <input type="submit" value="Submit" />
 </form>
 {% endblock %}
 ```
 
 This is similar to our previous forms, and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the **format model_name\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the **format model_name_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -573,7 +590,7 @@ The "delete" view expects to find a template named with the **format model_name\
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}
@@ -605,11 +622,11 @@ Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot, because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot, because it looks just like the "create" page!
 
-Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
+Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
 ![](forms_example_delete_author.png)
 
@@ -637,21 +654,3 @@ There is a lot more that can be done with forms (check out our See also list bel
 - [Generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

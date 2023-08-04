@@ -1,13 +1,8 @@
 ---
 title: Transformations de base
 slug: Web/SVG/Tutorial/Basic_Transformations
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Basic_Transformations
-original_slug: Web/SVG/Tutoriel/Transformations_de_base
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
 
 Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais avant toute chose, il faut vous présenter l'élément `<g>`. Cet assistant va vous permettre d'assigner des attributs à un ensemble d'éléments. En fait, c'est bien son seul rôle. Par exemple :
@@ -16,10 +11,10 @@ Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais ava
 
 ```html
 <svg width="30" height="10">
-    <g fill="red">
-        <rect x="0" y="0" width="10" height="10" />
-        <rect x="20" y="0" width="10" height="10" />
-    </g>
+  <g fill="red">
+    <rect x="0" y="0" width="10" height="10" />
+    <rect x="20" y="0" width="10" height="10" />
+  </g>
 </svg>
 ```
 
@@ -33,7 +28,7 @@ Il peut être nécessaire de décaler un élément, même s'il est possible de d
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -49,7 +44,7 @@ Appliquer une rotation à un élément est assez simple : il suffit d'utiliser l
 
 ```html
 <svg width="31" height="31">
-    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
 </svg>
 ```
 
@@ -63,7 +58,12 @@ Les transformations peuvent être concaténées, séparées par des espaces. Par
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" />
+  <rect
+    x="0"
+    y="0"
+    width="10"
+    height="10"
+    transform="translate(30,40) rotate(45)" />
 </svg>
 ```
 

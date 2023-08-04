@@ -2,6 +2,7 @@
 title: Symbol.keyFor()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 ---
+
 {{JSRef("Global_Objects", "Symbol")}}
 
 ## 概述
@@ -17,7 +18,7 @@ Symbol.keyFor(sym);
 ### 参数
 
 - sym
-  - : 必选参数，需要查找键值的某个 Symbol 。
+  - : 必选参数，需要查找键值的某个 Symbol。
 
 ### 返回值
 
@@ -34,7 +35,7 @@ var localSym = Symbol();
 Symbol.keyFor(localSym); // undefined，
 
 // 以下 Symbol 不是保存在全局 Symbol 注册表中
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## 规范

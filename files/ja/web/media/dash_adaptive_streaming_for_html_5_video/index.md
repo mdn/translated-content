@@ -1,8 +1,8 @@
 ---
 title: HTML 5 ビデオ用の DASH アダプティブストリーミング
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
+
 Dynamic Adaptive Streaming over HTTP (DASH) は、アダプティブストリーミングプロトコルです。これは動画の再生を維持するためにネットワークパフォーマンスに応じてビデオストリームのビットレートを切り替えることを可能にします。
 
 ## ブラウザーの対応
@@ -58,7 +58,7 @@ ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
 -an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
 ```
 
-### 2. マニフェストファイルを作成する:
+### 2. マニフェストファイルを作成する
 
 ```
 ffmpeg \
@@ -84,8 +84,8 @@ ffmpeg \
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Your browser does not support the video tag.
 </video>
 ```

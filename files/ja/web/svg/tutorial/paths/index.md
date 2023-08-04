@@ -1,19 +1,15 @@
 ---
-title: Paths
+title: パス
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - Intermediate
-  - SVG
-  - SVG チュートリアル
-  - SVG:Tutorial
-  - 中級者向け
-translation_of: Web/SVG/Tutorial/Paths
+l10n:
+  sourceCommit: f22e42182591e38590c9add80de91a51bce3cde2
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-{{SVGElement('path')}} 要素は、 SVG の[基本図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)ライブラリの中でもっとも強力な要素です。これは、直線、曲線、弧などを作成するために用いることができます。
+{{SVGElement('path')}} 要素は、 SVG の[基本図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)ライブラリーの中でもっとも強力な要素です。これは、直線、曲線、弧などを作成するために用いることができます。
 
-パスは、複数の直線や曲線を組み合わせて複雑な形状を作ります。直線だけで構成された複雑な形状は、 [`<polyline>`](/ja/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline) として作成することができます。 `<polyline>` と `<path>` は似たような形状を作ることができますが、 `<polyline>` は曲線を表現するのに大量の小さな直線を必要とするため、大きなサイズにはうまく拡大することができません。
+パスは、複数の直線や曲線を組み合わせて複雑な形状を作ります。直線だけで構成された複雑な形状は、 [`<polyline>`](/ja/docs/Web/SVG/Tutorial/Basic_Shapes#多角形) として作成することができます。 `<polyline>` と `<path>` は似たような形状を作ることができますが、 `<polyline>` は曲線を表現するのに大量の小さな直線を必要とするため、大きなサイズにはうまく拡大することができません。
 
 SVG を描画する際には、パスをよく理解しておくことが重要です。XML エディターやテキストエディターを使用して複雑なパスを作成するのはお勧めできませんが、それらがどのように機能するかを理解しておけば、 SVG の表示問題を特定して修復することができます。
 
@@ -37,7 +33,7 @@ m dx dy
 
 以下の例では点 (`10`,`10`) だけがある状態になります。ただし、パスだけを描画してもこれらの点が表示されないことに注意してください。
 
-![](Blank_Path_Area.png)
+![](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -128,13 +124,13 @@ m dx dy
 
 ここで最後にある座標 (`x`,`y`) は、線の終点にしたい場所です。他の 2 組は制御点です。 (`x1`,`y1`) は曲線の始点向けの制御点、 (`x2`,`y2`) は曲線の終点向けの制御点です。制御点は各々の点から始まる線の傾斜を本質的に説明するものです。このときベジェ関数は、線の始めで確立した傾斜からもう一方の側の傾斜へ至るなめらかな曲線を作成します。
 
-![Cubic Bézier Curves with grid](Cubic_Bézier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
 
   <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
-  <path d="M 70 10 C 70 20, 120 20, 120 10" stroke="black" fill="transparent"/>
+  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
   <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
   <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
   <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
@@ -160,7 +156,7 @@ m dx dy
 
 この構文の例を以下に示しますが、左の図では、指定された制御点が赤、推定された制御点が青で示されています。
 
-![ShortCut_Cubic_Bézier_with_grid.png](ShortCut_Cubic_Bézier_with_grid.png)
+![](shortcut_cubic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +166,7 @@ m dx dy
 
 もう一つの種類のベジェ曲線は二次ベジェ曲線 `Q` であり、こちらは三次ベジェ曲線よりシンプルな曲線です。基本的に制御点を 1 つだけ必要とし、それは始点側と終点側両方の曲線の傾斜を定義します。このコマンドは制御点と曲線の終点を示す 2 つの引数を持ちます。
 
-> **Note:** `q` コマンドにおける座標の差分は、どちらも前回の点からの相対座標です (すなわち `dx` と `dy` は `dx1` と `dy1` に対する相対座標ではありません)。
+> **メモ:** `q` コマンドにおける座標の差分は、どちらも前回の点からの相対座標です (すなわち `dx` と `dy` は `dx1` と `dy1` に対する相対座標ではありません)。
 
 ```
  Q x1 y1, x y
@@ -178,7 +174,7 @@ m dx dy
  q dx1 dy1, dx dy
 ```
 
-![Quadratic Bézier with grid](Quadratic_Bézier_with_grid.png)
+![Quadratic Bézier with grid](quadratic_bézier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +221,7 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 3 番目の引数は、円弧の回転度を示します。これは次の説明が最適です。
 
-![SVGArcs_XAxisRotation_with_grid](SVGArcs_XAxisRotation_with_grid.png)
+![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
 ```xml
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
@@ -242,7 +238,7 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 上の画像の回転していない楕円については、円弧の始点と終点から引かれた線が楕円の中心を通るので、 2 つの異なる円弧があるだけで、 4 つの円弧から選択できるわけではありません。少し修正した例では、 4 つの異なる円弧を形成する 2 つの楕円を見ることができます。
 
-![Show the 4 arcs on the Ellipse example](SVGArcs_XAxisRotation_with_grid_ellipses.png)
+![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
@@ -261,11 +257,11 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 青い楕円は、時計回りか反時計回りかによって、2 つの円弧を描いていることに注意してください。それぞれの楕円には、短い円弧と長い円弧がある。2 つの楕円は互いに鏡像になっている。これらの楕円は、開始点 → 終了点から形成された線に沿って反転している。
 
-開始点 → 終了点が楕円の `x`, `y` 半径が到達できる距離よりも遠い場合、楕円の半径は最小に拡大され、開始点 → 終了点に到達できるようになります。このページの一番下にあるインタラクティブなコードペンがこのことをよく示しています。楕円の半径が拡大を必要とするほど大きいかどうかを判断するには、[このような方程式系](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1>)を解く必要があります。この計算は、開始 → 終了 (`110`, `215`)→(`150.71`, `170.29`) の非回転楕円についてのものです。解 (x, y) は楕円の中心である．楕円の半径が小さすぎると、解は[虚数](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1>)になります。この 2 番目の計算は、開始 → 終了 (`110`, `215`)→(`162.55`, `162.45`) の非回転楕円の場合です。楕円がかろうじて拡大されただけなので、この解には小さな虚数成分が含まれています。
+開始点 → 終了点が楕円の `x`, `y` 半径が到達できる距離よりも遠い場合、楕円の半径は最小に拡大され、開始点 → 終了点に到達できるようになります。このページの一番下にあるインタラクティブなコードペンがこのことをよく示しています。楕円の半径が拡大を必要とするほど大きいかどうかを判断するには、[このような方程式系](https://www.wolframalpha.com/input/?i=solve+\(\(110+-+x\)%5E2%2F36%5E2\)+%2B+\(\(215+-+y\)%5E2%2F60%5E2\)+%3D+1,+\(\(150.71+-+x\)%5E2%2F36%5E2\)+%2B+\(\(170.29+-+y\)%5E2%2F60%5E2\)+%3D+1)を解く必要があります。この計算は、開始 → 終了 (`110`, `215`)→(`150.71`, `170.29`) の非回転楕円についてのものです。解 (x, y) は楕円の中心である．楕円の半径が小さすぎると、解は[虚数](https://www.wolframalpha.com/input/?i=solve+\(\(110+-+x\)%5E2%2F30%5E2\)+%2B+\(\(215+-+y\)%5E2%2F50%5E2\)+%3D+1,+\(\(162.55+-+x\)%5E2%2F30%5E2\)+%2B+\(\(162.45+-+y\)%5E2%2F50%5E2\)+%3D+1)になります。この 2 番目の計算は、開始 → 終了 (`110`, `215`)→(`162.55`, `162.45`) の非回転楕円の場合です。楕円がかろうじて拡大されただけなので、この解には小さな虚数成分が含まれています。
 
 前述した 4 つの異なるパスは、次の 2 つのパラメータフラグによって決定されます。前述したように、パスが移動する楕円にはまだ 2 つの可能性があり、両方の楕円上には 2 つの異なる可能性のあるパスがあり、4 つの可能性のあるパスが与えられます。最初のパラメータは `large-arc-flag` です。これは単純に円弧が 180 度より大きいか小さいかを決定します。2 番目のパラメータは `sweep-flag` フラグです。これは、円弧が正の角度で動き始めるか負の角度で動き始めるかを決定します。以下の例は、4 つの可能性のあるすべての組み合わせと、それぞれの場合の 2 つの円を示しています。
 
-![](/@api/deki/files/345/=SVGArcs_Flags.png)
+![](svgarcs_flags.png)
 
 ```xml
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
@@ -286,6 +282,6 @@ SVG を用いて作成できる別のタイプの曲線が円弧 `A` コマン�
 
 円弧は、図面の中で円や楕円のピースを簡単に作成する方法です。例えば、円グラフでは、各ピースごとに異なる円弧が必要になります。
 
-から SVG に移行する場合、弧は習得するのが最も難しいものですが、はるかに強力なものになります。完全な円と楕円だけは、 SVG の円弧が苦手な形状です。円の周りを回るあらゆるパスの始点と終点が同じ点であるため、選択できる円の数は無限にあり、実際のパスは不定になるからです。パスの始点と終点を少しずらして、別のパスセグメントでつなぐことで近いものを描くことができます。例えば、半円ごとに円弧を描くことも可能です。このような場合は、実際の {{SVGElement("circle")}} や {{SVGElement("ellipse")}} ノードを使った方が簡単なことが多いです。<http://codepen.io/lingtalfi/pen/yaLWJG> のインタラクティブなデモは、 SVG の円弧の背後にある概念を理解するのに役立つかもしれません。 (Chrome と Firefox のみでテストしました。お使いのブラウザでは動作しないかもしれません)。
+ {{HTMLElement("canvas")}} から SVG に移行する場合、弧は習得するのが最も難しいものですが、はるかに強力なものになります。完全な円と楕円だけは、 SVG の円弧が苦手な形状です。円の周りを回るあらゆるパスの始点と終点が同じ点であるため、選択できる円の数は無限にあり、実際のパスは不定になるからです。パスの始点と終点を少しずらして、別のパスセグメントでつなぐことで近いものを描くことができます。例えば、半円ごとに円弧を描くことも可能です。このような場合は、実際の {{SVGElement("circle")}} や {{SVGElement("ellipse")}} ノードを使った方が簡単なことが多いです。 <https://codepen.io/lingtalfi/pen/yaLWJG> のインタラクティブなデモは、 SVG の円弧の背後にある概念を理解するのに役立つかもしれません。 (Chrome と Firefox のみでテストしました。お使いのブラウザーでは動作しないかもしれません)。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

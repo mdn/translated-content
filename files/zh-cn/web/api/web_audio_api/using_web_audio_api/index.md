@@ -2,6 +2,7 @@
 title: Web Audio API 的运用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 让我们来看看 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 入门。我们将简要介绍一些概念，然后学习一个简单的允许我们加载音轨，播放暂停，改变音量和立体声声像的音箱例子。
 
 Web Audio API 并不会取代\<audio>音频元素，倒不如说它是\<audio>的补充更好，就好比如\<canvas>与\<img>共存的关系。你使用来实现音频的方式取决于你的使用情况。如果你只是想控制一个简单的音轨的播放，\<audio>或许是一个更好更快的选择。如果你想实现更多复杂的音频处理，以及播放，Web Audio API 提供了更多的优势以及控制。
@@ -47,7 +48,7 @@ const audioContext = new AudioContext();
 
 ## 加载声音
 
-现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。 此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。
+现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。
 
 ```js
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
@@ -59,7 +60,7 @@ const audioContext = new AudioContext();
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -79,7 +80,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -99,40 +100,46 @@ track.connect(audioContext.destination);
 
 ```js
 // select our play button
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
+playButton.addEventListener(
+  "click",
+  function () {
     // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
     // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 我们也需要考虑到当音频播放完毕后做什么。我们的 `HTMLMediaElement` 一旦播放完毕会触发一个 `ended` 事件，所以我们可以监听它并运行相应代码：
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## 关于 Web Audio 编辑器
 
 Firefox 有一个名为 [Web Audio editor](/zh-CN/docs/Tools/Web_Audio_Editor) 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio 选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。
 
-![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](https://mdn.mozillademos.org/files/16198/web-audio-editor.png)
+![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](web-audio-editor.png)
 
 > **备注：** Web Audio 编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中 Default Developer Tools 部分中的 Web Audio 复选框来显示它。
 
@@ -169,11 +176,15 @@ track.connect(gainNode).connect(audioContext.destination);
 所以当用户更改输入节点值时，获取此输入值并更新增益值：
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener(
+  "input",
+  function () {
     gainNode.gain.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 > **备注：** 节点对象的值（例如， `GainNode.gain` ）不是简单值；它们实际上是 {{domxref("AudioParam")}} 类型对象 — 这些被称为参数。这也是为什么我们需要设置 `GainNode.gain` 的 `value` 属性，而不是直接设置 `gain` 的值。这使得它们更加的灵活，允许传入一系列特定的值以在例如一段时间内改变。
@@ -186,7 +197,7 @@ volumeControl.addEventListener('input', function() {
 
 如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。
 
-> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}， 它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
+> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
 
 为了使其可视化，我们将使我们的音频图如下：
 
@@ -201,7 +212,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 
 > **备注：** 目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。
 
-这里我们的范围从-1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
+这里我们的范围从 -1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
 
 ```js
 <input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
@@ -210,11 +221,15 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 与我们之前一样，我们使用来自这个 input 的值来调整我们的 panner 的值：
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener(
+  "input",
+  function () {
     panner.pan.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 让我们再次调整我们的音频图，将所有节点连接在一起：
@@ -239,7 +254,7 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](http://mdn.github.io/violent-theremin/)， 一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
+另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](http://mdn.github.io/violent-theremin/)，一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
 
 ![A page full of rainbow colours, with two buttons labeled Clear screen and mute. ](violent-theremin.png)
 
@@ -255,15 +270,15 @@ Web Audio API 包含在音频上下文的处理音频操作，以及已被设计
 
 音频节点通过输入与输出进行连接，形成一个链，从一个或多个源出发，通过一个或更多的节点，最终到输出终端（你也可以不提供输出终端，换句话说，如果只是想使一些音频数据可视化）。一个简单经典的 web Audio 的工作流程如下：
 
-1\. 构建音频上下文 AudioContext 对象；
+1. 构建音频上下文 AudioContext 对象；
 
-2\. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
+2. 在 AudioContext 对象内，构建音源，比如\<audio>，oscillator，stream
 
-3\. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
+3. 构建效果节点 effectNode，比如混响，双二阶滤波器，声相，压限器
 
-4\. 选择最终的音频目的地，比如说你的系统扬声器
+4. 选择最终的音频目的地，比如说你的系统扬声器
 
-5\. 连接源到效果，效果到输出终端
+5. 连接源到效果，效果到输出终端
 
 ### 构建 AudioContext 对象
 
@@ -288,7 +303,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 现在我们有了 AudioContext，可以用这个来做很多事。第一件我们需要做的事是玩音乐。音频可以来自于多样的地方：
 
 - 通过 JavaScript 直接生成一个音频节点比如 oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。
-- 从原 PCM 数据构建: AudioContext 有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.
+- 从原 PCM 数据构建：AudioContext 有解密被支持的音频格式的多种方法。看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.
 - 来自于 HTML 音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.
 - 直接来自于 [WebRTC](/zh-CN/docs/WebRTC)，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.
 
@@ -328,7 +343,7 @@ gainNode.connect(audioCtx.destination);
 
 这个将会创造一个如下音频节点图：
 
-![](https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
+![](voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
 
 > **备注：** Firefox32 以上版本已有完整的 firefox 开发者工具包括 [Web Audio Editor](/zh-CN/docs/Tools/Web_Audio_Editor), 一个对测试 web audio 表的 bug 非常有用的东西。
 
@@ -337,7 +352,7 @@ gainNode.connect(audioCtx.destination);
 现在 audio 节点图已经建立，我们可以设置属性值及调用音频节点的方法来调节想要的音效。在这个简单的例子，我们可以设置特殊的音调，以赫兹为单位，设置为特殊类型，以及指示音乐播放：
 
 ```js
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = 2500; // value in hertz
 oscillator.start();
 ```
@@ -356,7 +371,7 @@ var initialVol = 0.5;
 
 // set options for the oscillator
 
-oscillator.type = 'sine'; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
+oscillator.type = "sine"; // sine wave — other values are 'square', 'sawtooth', 'triangle' and 'custom'
 oscillator.frequency.value = initialFreq; // value in hertz
 oscillator.start();
 
@@ -377,13 +392,23 @@ var CurY;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    CurX = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-    CurY = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  CurX = window.Event
+    ? e.pageX
+    : event.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  CurY = window.Event
+    ? e.pageY
+    : event.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    oscillator.frequency.value = (CurX/WIDTH) * maxFreq;
-    gainNode.gain.value = (CurY/HEIGHT) * maxVol;
+  oscillator.frequency.value = (CurX / WIDTH) * maxFreq;
+  gainNode.gain.value = (CurY / HEIGHT) * maxVol;
 
-    canvasDraw();
+  canvasDraw();
 }
 ```
 
@@ -392,28 +417,44 @@ function updatePage(e) {
 每次鼠标的移动，canvasDraw() 方法会被调用，鼠标停留的位置会画出一个多圆圈组成的小簇，它的大小以及颜色会基于 frequency/gain 的值。
 
 ```js
-function random(number1,number2) {
-  var randomNo = number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
+function random(number1, number2) {
+  var randomNo =
+    number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
   return randomNo;
 }
 
-var canvas = document.querySelector('.canvas');
+var canvas = document.querySelector(".canvas");
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
 
-var canvasCtx = canvas.getContext('2d');
+var canvasCtx = canvas.getContext("2d");
 
 function canvasDraw() {
   rX = CurX;
   rY = CurY;
-  rC = Math.floor((gainNode.gain.value/maxVol)*30);
+  rC = Math.floor((gainNode.gain.value / maxVol) * 30);
 
   canvasCtx.globalAlpha = 0.2;
 
-  for(i=1;i<=15;i=i+2) {
+  for (i = 1; i <= 15; i = i + 2) {
     canvasCtx.beginPath();
-    canvasCtx.fillStyle = 'rgb(' + 100+(i*10) + ',' + Math.floor((gainNode.gain.value/maxVol)*255) + ',' + Math.floor((oscillator.frequency.value/maxFreq)*255) + ')';
-    canvasCtx.arc(rX+random(0,50),rY+random(0,50),rC/2+i,(Math.PI/180)*0,(Math.PI/180)*360,false);
+    canvasCtx.fillStyle =
+      "rgb(" +
+      100 +
+      i * 10 +
+      "," +
+      Math.floor((gainNode.gain.value / maxVol) * 255) +
+      "," +
+      Math.floor((oscillator.frequency.value / maxFreq) * 255) +
+      ")";
+    canvasCtx.arc(
+      rX + random(0, 50),
+      rY + random(0, 50),
+      rC / 2 + i,
+      (Math.PI / 180) * 0,
+      (Math.PI / 180) * 360,
+      false,
+    );
     canvasCtx.fill();
     canvasCtx.closePath();
   }
@@ -425,10 +466,10 @@ function canvasDraw() {
 当静音按钮点击，以下方法会被调用，disconnect 方法，将切断 gain node 与 destination 节点的链接，有效阻止了节点图的链接，所以没有声音会被产生。再次点击效果相反。
 
 ```js
-var mute = document.querySelector('.mute');
+var mute = document.querySelector(".mute");
 
-mute.onclick = function() {
-  if(mute.id == "") {
+mute.onclick = function () {
+  if (mute.id == "") {
     gainNode.disconnect(audioCtx.destination);
     mute.id = "activated";
     mute.innerHTML = "Unmute";
@@ -437,7 +478,7 @@ mute.onclick = function() {
     mute.id = "";
     mute.innerHTML = "Mute";
   }
-}
+};
 ```
 
 ## 其他节点选择
@@ -458,18 +499,18 @@ var distortion = audioCtx.createWaveShaper();
 
 ```js
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 ```
 
 在 Voice-change-O-matic 的演示中，我们连接到 audio 图表上的 ditortion 节点，当需要的时候可以运用：

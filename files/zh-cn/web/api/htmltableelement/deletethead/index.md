@@ -2,6 +2,7 @@
 title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteTHead()`** 方法删除指定 {{HtmlElement("table")}} 的 {{HTMLElement("thead")}} 元素。
@@ -12,7 +13,7 @@ slug: Web/API/HTMLTableElement/deleteTHead
 HTMLTableElement.deleteTHead();
 ```
 
-## 例子
+## 示例
 
 本示例使用 JavaScript 删除表格的头部。
 
@@ -20,22 +21,31 @@ HTMLTableElement.deleteTHead();
 
 ```html
 <table>
-  <thead><th>Name</th><th>Occupation</th></thead>
-  <tr><td>Bob</td><td>Plumber</td></tr>
-  <tr><td>Jim</td><td>Roofer</td></tr>
+  <thead>
+    <th>Name</th>
+    <th>Occupation</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>Plumber</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>Roofer</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteTHead();
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -43,4 +53,4 @@ table.deleteTHead();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLTableElement.deleteTHead")}}
+{{Compat}}

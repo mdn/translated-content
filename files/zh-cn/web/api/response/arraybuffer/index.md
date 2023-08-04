@@ -2,6 +2,7 @@
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 {{domxref("Response")}}上的方法 **`arrayBuffer()`** 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。
@@ -34,25 +35,25 @@ Once `getData()` has finished running, we start the audio source playing with `s
 function getData() {
   source = audioCtx.createBufferSource();
 
-  var myRequest = new Request('viper.ogg');
+  var myRequest = new Request("viper.ogg");
 
-  fetch(myRequest).then(function(response) {
-    response.arrayBuffer().then(function(buffer) {
-      audioCtx.decodeAudioData(buffer, function(decodedData) {
+  fetch(myRequest).then(function (response) {
+    response.arrayBuffer().then(function (buffer) {
+      audioCtx.decodeAudioData(buffer, function (decodedData) {
         source.buffer = decodedData;
         source.connect(audioCtx.destination);
       });
     });
   });
-};
+}
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 ```
 
 ## 规范
@@ -61,7 +62,7 @@ play.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.arrayBuffer")}}
+{{Compat}}
 
 ## 参考
 

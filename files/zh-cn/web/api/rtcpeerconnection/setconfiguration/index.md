@@ -2,6 +2,7 @@
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCPeerConnection.setConfiguration()`** method sets the current configuration of the {{domxref("RTCPeerConnection")}} based on the values included in the specified {{domxref("RTCConfiguration")}} object. This lets you change the ICE servers used by the connection and which transport policies to use.
@@ -40,22 +41,27 @@ RTCPeerConnection.setConfiguration(configuration);
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 
 ```js
-var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+var restartConfig = {
+  iceServers: [
+    {
+      urls: "turn:asia.myturnserver.net",
+      username: "allie@oopcode.com",
+      credential: "topsecretpassword",
+    },
+  ],
 };
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-})
-.then(function() {
-  // send the offer to the other peer using the signaling server
-})
-.catch(reportError);
+myPeerConnection
+  .createOffer({ iceRestart: true })
+  .then(function (offer) {
+    return myPeerConnection.setLocalDescription(offer);
+  })
+  .then(function () {
+    // send the offer to the other peer using the signaling server
+  })
+  .catch(reportError);
 ```
 
 First, a new {{domxref("RTCConfiguration")}} is created, `restartConfig`, specifying the new ICE server and its credentials. This is then passed into `setConfiguration()`. ICE negotiation is restarted by calling {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}, specifying `true` as the value of the `iceRestart` option. From there, we handle the process as usual, by setting the local description to the returned offer and then sending that offer to the other peer.
@@ -66,7 +72,7 @@ First, a new {{domxref("RTCConfiguration")}} is created, `restartConfig`, specif
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.setConfiguration")}}
+{{Compat}}
 
 ## See also
 

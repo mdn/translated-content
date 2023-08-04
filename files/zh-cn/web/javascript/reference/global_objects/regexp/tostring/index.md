@@ -2,6 +2,7 @@
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## 概述
@@ -24,7 +25,7 @@ regexObj.toString()
 
 ## 示例
 
-### 例子：使用 `toString`
+### 示例：使用 `toString`
 
 下例输出 `RegExp` 对象的字符串值：
 

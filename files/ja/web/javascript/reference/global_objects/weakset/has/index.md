@@ -1,14 +1,8 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。
@@ -46,9 +40,7 @@ mySet.has(obj);     // returns false
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

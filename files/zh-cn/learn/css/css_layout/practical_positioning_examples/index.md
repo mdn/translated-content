@@ -2,6 +2,7 @@
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>预备知识：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
             >Introduction to CSS</a
           >.)
         </p>
@@ -34,13 +35,13 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
+> **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
 
 你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
-> **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
+> **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
-在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件—— [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
+在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件—— [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
 ```html
 <section class="info-box">
@@ -53,17 +54,32 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -77,7 +93,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 这样我们已经得到了一个{{htmlelement("section")}}元素带有类（`class`）为 `info-box`。此元素又包含一个 {{htmlelement("ul")}} 和一个 {{htmlelement("div")}}。无序列表包含三个列表项，列表项有链接在内，实际上将成为用于点击后显示内容面板的选项卡。 `div` 包含三个{{htmlelement("article")}} 元素，构成对应于每个选项卡的内容面板。每个面板包含一些示例内容。
 
-这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
+这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
 
 ### 一般设置
 
@@ -149,7 +165,8 @@ body {
 最后，对于本节，我们将会在链接状态上设置一些样式。首先，我们要设置标签的 `:focus` 和 `:hover` 状态，让他们在获得焦点/鼠标悬浮的时候看起来不同，给用户提供一些可视化反馈。其次，当某个选项卡的类（ `class` ）出现 `active` 时，我们为其设置一条相同的样式规则。我们将通过使用 JavaScript 来设置，当一个标签被点击时。把这些 CSS 放置在你的其他样式后面：
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -199,39 +216,39 @@ body {
 让这些特性工作的最后一步是添加一些 JavaScript。添加下列一块代码，准确的写在你的开始和结束的{{htmlelement("script")}}标签之间（在接下来的 HTML 内容中你将会发现这些）：
 
 ```js
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+var tabs = document.querySelectorAll(".info-box li a");
+var panels = document.querySelectorAll(".info-box article");
 
-for(i = 0; i < tabs.length; i++) {
+for (i = 0; i < tabs.length; i++) {
   var tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      if(tabs[i].getAttribute('class')) {
-        tabs[i].removeAttribute('class');
+  tab.onclick = function () {
+    for (i = 0; i < tabs.length; i++) {
+      if (tabs[i].getAttribute("class")) {
+        tabs[i].removeAttribute("class");
       }
     }
 
-    tab.setAttribute('class', 'active');
+    tab.setAttribute("class", "active");
 
-    for(i = 0; i < panels.length; i++) {
-      if(panels[i].getAttribute('class')) {
-        panels[i].removeAttribute('class');
+    for (i = 0; i < panels.length; i++) {
+      if (panels[i].getAttribute("class")) {
+        panels[i].removeAttribute("class");
       }
     }
 
-    panels[tabPos].setAttribute('class', 'active-panel');
-  }
+    panels[tabPos].setAttribute("class", "active-panel");
+  };
 }
 ```
 
 这些代码做了如下工作：
 
 - 首先我们保存所有的选项卡和所有的面板引用到两个变量中，名为 `tabs` 和 `panels`，这样此后我们可以容易地为它们做事。
-- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。 运行时， 函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
+- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。运行时，函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
 - 在 `setTabHandler()` 函数中，这个标签创建了一个 `onclick` 事件来处理点击，所以当标签被点击的时候，接下来会发生：
 
   - 用一个 `for` 循环清除所有标签当前存在的类。
@@ -249,7 +266,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
 
-在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
+在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
 
 ### 添加 HTML
 
@@ -258,14 +275,30 @@ function setTabHandler(tab, tabPos) {
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -314,7 +347,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
-在一开始，老规矩在我们的 Githib 代码仓库拷贝[hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)([源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html))。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
+在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 
 ```css
 <label for="toggle">❔</label>
@@ -397,7 +430,7 @@ aside {
 这是最后要添加的一点 CSS ——把这些放到你的 CSS 底部：
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
@@ -411,12 +444,3 @@ input[type=checkbox]:checked + aside {
 这样完成了我们对定位的关注——现在，你应该理解基本机制的工作原理，同样理解了怎样应用这些知识去构建一些有趣的用户界面功能，不要由于你还未完全理解所有的知识而担心——定位是一个相当高级的话题，你可以随时读这篇文章来帮助你的理解。下一个主题我们将转向 Flexbox。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)

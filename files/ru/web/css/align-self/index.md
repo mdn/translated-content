@@ -1,17 +1,12 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - CSS
-  - flexbox
-  - Свойства
-translation_of: Web/CSS/align-self
 ---
 {{CSSRef}}
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items "en/CSS/flex-align"). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
+Свойство [CSS](/ru/docs/CSS) **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en/CSS/align-items). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
 
 {{cssinfo}}
 
@@ -57,7 +52,8 @@ align-self: unset;
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
-  - : The effect of this keyword is dependent of the layout mode we are in:\* In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
+  - : The effect of this keyword is dependent of the layout mode we are in:
+    - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
     - For flex items, the keyword behaves as `stretch`.
     - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
@@ -74,7 +70,7 @@ align-self: unset;
   - : The flex item's margin box is centered within the line on the cross-axis. If the cross-size of the item is larger than the flex container, it will overflow equally in both directions.
 - `baseline first baseline`
   `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
@@ -99,7 +95,7 @@ align-self: unset;
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 {{CSSRef}}
 

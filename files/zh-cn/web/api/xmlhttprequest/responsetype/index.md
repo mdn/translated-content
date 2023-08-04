@@ -2,6 +2,7 @@
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{DOMxRef("XMLHttpRequest")}} 属性 **`responseType`** 是一个枚举字符串值，用于指定响应中包含的数据类型。

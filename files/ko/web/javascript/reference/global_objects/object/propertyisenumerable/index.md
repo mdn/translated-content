@@ -1,13 +1,8 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 **`propertyIsEnumerable()`** 메서드는 특정 속성이 열거가능한지 여부를 나타내는 불리언 값을 반환합니다.

@@ -1,16 +1,18 @@
 ---
-title: Element.removeAttributeNS()
+title: "Element: removeAttributeNS() メソッド"
+short-title: removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
 l10n:
-  sourceCommit: 196cc4ff3068a59b962a3fe1cbb960eb72ef542b
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
+
 {{ APIRef("DOM") }}
 
 **`removeAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、要素から指定された属性を取り除きます。
 
 ## 構文
 
-```js
+```js-nolint
 removeAttributeNS(namespace, attrName)
 ```
 

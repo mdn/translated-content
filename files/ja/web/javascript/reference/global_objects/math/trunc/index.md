@@ -1,14 +1,8 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
+
 {{JSRef}}
 
 **`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
@@ -42,11 +36,11 @@ The integer part of the given number.
 
 ```js
 if (!Math.trunc) {
-  Math.trunc = function(v) {
+  Math.trunc = function (v) {
     v = +v;
     if (!isFinite(v)) return v;
 
-    return (v - v % 1)   ||   (v < 0 ? -0 : v === 0 ? v : 0);
+    return v - (v % 1) || (v < 0 ? -0 : v === 0 ? v : 0);
 
     // returns:
     //  0        ->  0
@@ -78,21 +72,19 @@ if (!Math.trunc) {
 ### Math.trunc() の使用
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

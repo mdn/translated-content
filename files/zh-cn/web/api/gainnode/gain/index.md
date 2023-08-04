@@ -2,6 +2,7 @@
 title: GainNode.gain
 slug: Web/API/GainNode/gain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("GainNode") }} 接口的 `gain` 属性是一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，表示要应用的增益量。

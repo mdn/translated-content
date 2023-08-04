@@ -1,15 +1,9 @@
 ---
 title: SVG element reference
 slug: Web/SVG/Element
-tags:
-  - NeedsTranslation
-  - SVG
-  - SVG Reference
-  - SVG 엘리먼트
-  - TopicStub
-translation_of: Web/SVG/Element
 ---
-« [SVG](/ko/docs/SVG "SVG") / [SVG Attribute reference](/ko/docs/SVG/Attribute "SVG/Attribute") »
+
+« [SVG](/ko/docs/SVG) / [SVG Attribute reference](/ko/docs/SVG/Attribute) »
 
 ## SVG 엘리먼트들
 

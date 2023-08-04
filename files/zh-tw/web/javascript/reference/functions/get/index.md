@@ -2,6 +2,7 @@
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
@@ -42,12 +43,12 @@ getter 可以用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delet
 
 ```js
 var obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length == 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test".
 ```
 
@@ -66,20 +67,26 @@ delete obj.latest;
 若想在任何時候給現有物件添增 getter，請使用 {{jsxref("Object.defineProperty()")}}。
 
 ```js
-var o = {a: 0};
+var o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### 使用計算屬性名
 
 ```js
-var expr = 'foo';
+var expr = "foo";
 
 var obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -117,16 +124,18 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
 const obj = new Example();
 console.log(obj.hello);
 // "world"
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
+console.log(
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+);
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```
 
@@ -136,13 +145,13 @@ console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello')
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## 參見
 
 - [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 教學的[定義 Getter 與 Setter](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

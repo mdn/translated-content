@@ -2,6 +2,7 @@
 title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
 ---
+
 {{ApiRef}}{{deprecated_header}}
 
 **`Navigator.vendorSub`** プロパティは読み取り専用で、ベンダーバージョン番号が付いたベンダーの部分文字列です。仕様書ではブラウザーが常に空文字列を返して良いことになっているため、このプロパティから頼れる回答を期待しないでください。
@@ -30,9 +31,7 @@ window.navigator.vendorSub
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-vendorsub', 'NavigatorID: vendorSub')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

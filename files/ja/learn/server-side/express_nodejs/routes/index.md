@@ -1,7 +1,8 @@
 ---
-title: 'Express チュートリアル Part 4: ルートとコントローラ'
+title: "Express チュートリアル Part 4: ルートとコントローラ"
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 このチュートリアルでは、地域図書館 Web サイトで最終的に必要となるすべてのリソースエンドポイントに対して、"ダミー" ハンドラ関数を使用してルート (URL 処理コード) を設定します。完成すると、ルート処理コードのためのモジュール構造が得られます。これは、次の記事の実際のハンドラ関数で拡張できます。Express を使ってモジュラールートを作成する方法についても、非常によく理解しています。
@@ -34,7 +35,7 @@ A route is a section of Express code that associates an HTTP verb (`GET`, `POST`
 
 There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
 
-> **Note:** We discussed Express application routes briefly in our [Express Introduction > Creating route handlers](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers). Other than providing better support for modularization (as discussed in the first subsection below), using _Router_ is very similar to defining routes directly on the _Express application object_.
+> **メモ:** We discussed Express application routes briefly in our [Express Introduction > Creating route handlers](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Creating_route_handlers). Other than providing better support for modularization (as discussed in the first subsection below), using _Router_ is very similar to defining routes directly on the _Express application object_.
 
 The rest of this section provides an overview of how the `Router` can be used to define the routes.
 
@@ -47,30 +48,30 @@ First we create routes for a wiki in a module named **wiki.js**. The code first 
 ```js
 // wiki.js - Wiki route module.
 
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Home page route.
-router.get('/', function (req, res) {
-  res.send('Wiki home page');
-})
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
+});
 
 // About page route.
-router.get('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
 
 module.exports = router;
 ```
 
-> **Note:** Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.
+> **メモ:** Above we are defining our route handler callbacks directly in the router functions. In the LocalLibrary we'll define these callbacks in a separate controller module.
 
 To use the router module in our main app file we first `require()` the route module (**wiki.js**). We then call `use()` on the _Express_ application to add the Router to the middleware handling path, specifying an URL path of 'wiki'.
 
 ```js
-var wiki = require('./wiki.js');
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 The two routes defined in our wiki route module are then accessible from `/wiki/` and `/wiki/about/`.
@@ -80,14 +81,14 @@ The two routes defined in our wiki route module are then accessible from `/wiki/
 Our module above defines a couple of typical route functions. The "about" route (reproduced below) is defined using the `Router.get()` method, which responds only to HTTP GET requests. The first argument to this method is the URL path while the second is a callback function that will be invoked if an HTTP GET request with the path is received.
 
 ```js
-router.get('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
 ```
 
 The callback takes three arguments (usually named as shown: `req`, `res`, `next`), that will contain the HTTP Request object, HTTP response, and the _next_ function in the middleware chain.
 
-> **Note:** Router functions are [Express middleware](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
+> **メモ:** Router functions are [Express middleware](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware), which means that they must either complete (respond to) the request or call the `next` function in the chain. In the case above we complete the request using `send()`, so the `next` argument is not used (and we choose not to specify it).
 >
 > The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
@@ -97,14 +98,14 @@ The callback function here calls [`send()`](https://expressjs.com/en/4x/api.html
 
 The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
 ```js
-router.post('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.post("/about", function (req, res) {
+  res.send("About this wiki");
+});
 ```
 
 ### Route paths
@@ -118,7 +119,7 @@ Route paths can also be string patterns. String patterns use a subset of regular
 - \* : The endpoint may have an arbitrary string where the \* character is placed. E.g. a route path of `'ab\*cd'` will match endpoints `abcd`, `abXcd`, `abSOMErandomTEXTcd`, and so on.
 - () : Grouping match on a set of characters to perform another operation on. E.g. `'/ab(cd)?e'` will peform a ? match on (cd) —it will match `abe` and `abcde`.
 
-The route paths can also be JavaScript [regular expressions](/ja/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish `and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
+The route paths can also be JavaScript [regular expressions](/ja/docs/Web/JavaScript/Guide/Regular_Expressions). For example, the route path below will match `catfish` and `dogfish`, but not `catflap`, `catfishhead`, and so on. Note that the path for a regular expression uses regular expression syntax (it is not a quoted string as in the previous cases).
 
 ```js
 app.get(/.*fish$/, function (req, res) {
@@ -126,7 +127,7 @@ app.get(/.*fish$/, function (req, res) {
 })
 ```
 
-> **Note:** Most of our routes for the LocalLibrary will simply use strings and not string patterns and regular expressions. We'll also use route parameters as discussed in the next section.
+> **メモ:** Most of our routes for the LocalLibrary will simply use strings and not string patterns and regular expressions. We'll also use route parameters as discussed in the next section.
 
 ### Route parameters
 
@@ -142,9 +143,9 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 })
 ```
 
-The names of route parameters must be made up of “word characters” (A-Z, a-z, 0-9, and \_).
+The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
-> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+> **メモ:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
 
 That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](http://expressjs.com/en/starter/basic-routing.html) and [Routing guide](http://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
@@ -163,7 +164,7 @@ The first home page and list pages don't encode any additional information. Whil
 
 By contrast the other URLs are used to act on a specific document/model instance—these encode the identity of the item in the URL (shown as `<id>` above). We'll use path parameters to extract the encoded information and pass it to the route handler (and in a later article we'll use this to dynamically determine what information to get from the database). By encoding the information in our URL we only need one route for every resource of a particular type (e.g. one route to handle the display of every single book item).
 
-> **Note:** Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
+> **メモ:** Express allows you to construct your URLs any way you like — you can encode information in the body of the URL as shown above or use URL `GET` parameters (e.g. `/book/?id=6`). Whichever approach you use, the URLs should be kept clean, logical and readable ([check out the W3C advice here](https://www.w3.org/Provider/Style/URI)).
 
 Next we create our route handler callback functions and route code for all the above URLs.
 
@@ -187,46 +188,46 @@ Start by creating a folder for our controllers in the project root (**/controlle
 Open the **/controllers/authorController.js** file and type in the following code:
 
 ```js
-var Author = require('../models/author');
+var Author = require("../models/author");
 
 // Display list of all Authors.
-exports.author_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author list');
+exports.author_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author list");
 };
 
 // Display detail page for a specific Author.
-exports.author_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author detail: ' + req.params.id);
+exports.author_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author detail: " + req.params.id);
 };
 
 // Display Author create form on GET.
-exports.author_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author create GET');
+exports.author_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author create GET");
 };
 
 // Handle Author create on POST.
-exports.author_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author create POST');
+exports.author_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author create POST");
 };
 
 // Display Author delete form on GET.
-exports.author_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author delete GET');
+exports.author_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author delete GET");
 };
 
 // Handle Author delete on POST.
-exports.author_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author delete POST');
+exports.author_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author delete POST");
 };
 
 // Display Author update form on GET.
-exports.author_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author update GET');
+exports.author_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author update GET");
 };
 
 // Handle Author update on POST.
-exports.author_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author update POST');
+exports.author_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author update POST");
 };
 ```
 
@@ -239,46 +240,46 @@ All the functions have the standard form of an _Express middleware function_, wi
 Open the **/controllers/bookinstanceController.js** file and copy in the following code (this follows an identical pattern to the `Author` controller module):
 
 ```js
-var BookInstance = require('../models/bookinstance');
+var BookInstance = require("../models/bookinstance");
 
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance list');
+exports.bookinstance_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance list");
 };
 
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance detail: ' + req.params.id);
+exports.bookinstance_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance detail: " + req.params.id);
 };
 
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance create GET');
+exports.bookinstance_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance create GET");
 };
 
 // Handle BookInstance create on POST.
-exports.bookinstance_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance create POST');
+exports.bookinstance_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance create POST");
 };
 
 // Display BookInstance delete form on GET.
-exports.bookinstance_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance delete GET');
+exports.bookinstance_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance delete GET");
 };
 
 // Handle BookInstance delete on POST.
-exports.bookinstance_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance delete POST');
+exports.bookinstance_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance delete POST");
 };
 
 // Display BookInstance update form on GET.
-exports.bookinstance_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance update GET');
+exports.bookinstance_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance update GET");
 };
 
 // Handle bookinstance update on POST.
-exports.bookinstance_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance update POST');
+exports.bookinstance_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance update POST");
 };
 ```
 
@@ -287,46 +288,46 @@ exports.bookinstance_update_post = function(req, res) {
 Open the **/controllers/genreController.js** file and copy in the following text (this follows an identical pattern to the `Author` and `BookInstance` files):
 
 ```js
-var Genre = require('../models/genre');
+var Genre = require("../models/genre");
 
 // Display list of all Genre.
-exports.genre_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre list');
+exports.genre_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre list");
 };
 
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
+exports.genre_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre detail: " + req.params.id);
 };
 
 // Display Genre create form on GET.
-exports.genre_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre create GET');
+exports.genre_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create GET");
 };
 
 // Handle Genre create on POST.
-exports.genre_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre create POST');
+exports.genre_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create POST");
 };
 
 // Display Genre delete form on GET.
-exports.genre_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre delete GET');
+exports.genre_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete GET");
 };
 
 // Handle Genre delete on POST.
-exports.genre_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre delete POST');
+exports.genre_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete POST");
 };
 
 // Display Genre update form on GET.
-exports.genre_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre update GET');
+exports.genre_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update GET");
 };
 
 // Handle Genre update on POST.
-exports.genre_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre update POST');
+exports.genre_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update POST");
 };
 ```
 
@@ -335,50 +336,50 @@ exports.genre_update_post = function(req, res) {
 Open the **/controllers/bookController.js** file and copy in the following code. This follows the same pattern as the other controller modules, but additionally has an `index()` function for displaying the site welcome page:
 
 ```js
-var Book = require('../models/book');
+var Book = require("../models/book");
 
-exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
+exports.index = function (req, res) {
+  res.send("NOT IMPLEMENTED: Site Home Page");
 };
 
 // Display list of all books.
-exports.book_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book list');
+exports.book_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book list");
 };
 
 // Display detail page for a specific book.
-exports.book_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book detail: ' + req.params.id);
+exports.book_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book detail: " + req.params.id);
 };
 
 // Display book create form on GET.
-exports.book_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book create GET');
+exports.book_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book create GET");
 };
 
 // Handle book create on POST.
-exports.book_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book create POST');
+exports.book_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book create POST");
 };
 
 // Display book delete form on GET.
-exports.book_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book delete GET');
+exports.book_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book delete GET");
 };
 
 // Handle book delete on POST.
-exports.book_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book delete POST');
+exports.book_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book delete POST");
 };
 
 // Display book update form on GET.
-exports.book_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book update GET');
+exports.book_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book update GET");
 };
 
 // Handle book update on POST.
-exports.book_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book update POST');
+exports.book_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book update POST");
 };
 ```
 
@@ -396,124 +397,142 @@ The skeleton already has a **./routes** folder containing routes for the _index_
     catalog.js
 ```
 
-Open **/routes/\*\***catalog.js\*\* and copy in the code below:
+Open `/routes/catalog.js` and copy in the code below:
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Require controller modules.
-var book_controller = require('../controllers/bookController');
-var author_controller = require('../controllers/authorController');
-var genre_controller = require('../controllers/genreController');
-var book_instance_controller = require('../controllers/bookinstanceController');
+var book_controller = require("../controllers/bookController");
+var author_controller = require("../controllers/authorController");
+var genre_controller = require("../controllers/genreController");
+var book_instance_controller = require("../controllers/bookinstanceController");
 
 /// BOOK ROUTES ///
 
 // GET catalog home page.
-router.get('/', book_controller.index);
+router.get("/", book_controller.index);
 
 // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
-router.get('/book/create', book_controller.book_create_get);
+router.get("/book/create", book_controller.book_create_get);
 
 // POST request for creating Book.
-router.post('/book/create', book_controller.book_create_post);
+router.post("/book/create", book_controller.book_create_post);
 
 // GET request to delete Book.
-router.get('/book/:id/delete', book_controller.book_delete_get);
+router.get("/book/:id/delete", book_controller.book_delete_get);
 
 // POST request to delete Book.
-router.post('/book/:id/delete', book_controller.book_delete_post);
+router.post("/book/:id/delete", book_controller.book_delete_post);
 
 // GET request to update Book.
-router.get('/book/:id/update', book_controller.book_update_get);
+router.get("/book/:id/update", book_controller.book_update_get);
 
 // POST request to update Book.
-router.post('/book/:id/update', book_controller.book_update_post);
+router.post("/book/:id/update", book_controller.book_update_post);
 
 // GET request for one Book.
-router.get('/book/:id', book_controller.book_detail);
+router.get("/book/:id", book_controller.book_detail);
 
 // GET request for list of all Book items.
-router.get('/books', book_controller.book_list);
+router.get("/books", book_controller.book_list);
 
 /// AUTHOR ROUTES ///
 
 // GET request for creating Author. NOTE This must come before route for id (i.e. display author).
-router.get('/author/create', author_controller.author_create_get);
+router.get("/author/create", author_controller.author_create_get);
 
 // POST request for creating Author.
-router.post('/author/create', author_controller.author_create_post);
+router.post("/author/create", author_controller.author_create_post);
 
 // GET request to delete Author.
-router.get('/author/:id/delete', author_controller.author_delete_get);
+router.get("/author/:id/delete", author_controller.author_delete_get);
 
 // POST request to delete Author.
-router.post('/author/:id/delete', author_controller.author_delete_post);
+router.post("/author/:id/delete", author_controller.author_delete_post);
 
 // GET request to update Author.
-router.get('/author/:id/update', author_controller.author_update_get);
+router.get("/author/:id/update", author_controller.author_update_get);
 
 // POST request to update Author.
-router.post('/author/:id/update', author_controller.author_update_post);
+router.post("/author/:id/update", author_controller.author_update_post);
 
 // GET request for one Author.
-router.get('/author/:id', author_controller.author_detail);
+router.get("/author/:id", author_controller.author_detail);
 
 // GET request for list of all Authors.
-router.get('/authors', author_controller.author_list);
+router.get("/authors", author_controller.author_list);
 
 /// GENRE ROUTES ///
 
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 //POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 
 // GET request to delete Genre.
-router.get('/genre/:id/delete', genre_controller.genre_delete_get);
+router.get("/genre/:id/delete", genre_controller.genre_delete_get);
 
 // POST request to delete Genre.
-router.post('/genre/:id/delete', genre_controller.genre_delete_post);
+router.post("/genre/:id/delete", genre_controller.genre_delete_post);
 
 // GET request to update Genre.
-router.get('/genre/:id/update', genre_controller.genre_update_get);
+router.get("/genre/:id/update", genre_controller.genre_update_get);
 
 // POST request to update Genre.
-router.post('/genre/:id/update', genre_controller.genre_update_post);
+router.post("/genre/:id/update", genre_controller.genre_update_post);
 
 // GET request for one Genre.
-router.get('/genre/:id', genre_controller.genre_detail);
+router.get("/genre/:id", genre_controller.genre_detail);
 
 // GET request for list of all Genre.
-router.get('/genres', genre_controller.genre_list);
+router.get("/genres", genre_controller.genre_list);
 
 /// BOOKINSTANCE ROUTES ///
 
 // GET request for creating a BookInstance. NOTE This must come before route that displays BookInstance (uses id).
-router.get('/bookinstance/create', book_instance_controller.bookinstance_create_get);
+router.get(
+  "/bookinstance/create",
+  book_instance_controller.bookinstance_create_get,
+);
 
 // POST request for creating BookInstance.
-router.post('/bookinstance/create', book_instance_controller.bookinstance_create_post);
+router.post(
+  "/bookinstance/create",
+  book_instance_controller.bookinstance_create_post,
+);
 
 // GET request to delete BookInstance.
-router.get('/bookinstance/:id/delete', book_instance_controller.bookinstance_delete_get);
+router.get(
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_get,
+);
 
 // POST request to delete BookInstance.
-router.post('/bookinstance/:id/delete', book_instance_controller.bookinstance_delete_post);
+router.post(
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_post,
+);
 
 // GET request to update BookInstance.
-router.get('/bookinstance/:id/update', book_instance_controller.bookinstance_update_get);
+router.get(
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_get,
+);
 
 // POST request to update BookInstance.
-router.post('/bookinstance/:id/update', book_instance_controller.bookinstance_update_post);
+router.post(
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_post,
+);
 
 // GET request for one BookInstance.
-router.get('/bookinstance/:id', book_instance_controller.bookinstance_detail);
+router.get("/bookinstance/:id", book_instance_controller.bookinstance_detail);
 
 // GET request for list of all BookInstance.
-router.get('/bookinstances', book_instance_controller.bookinstance_list);
+router.get("/bookinstances", book_instance_controller.bookinstance_list);
 
 module.exports = router;
 ```
@@ -532,12 +551,12 @@ Open **/routes/index.js** and replace the existing route with the function below
 
 ```js
 // GET home page.
-router.get('/', function(req, res) {
-  res.redirect('/catalog');
+router.get("/", function (req, res) {
+  res.redirect("/catalog");
 });
 ```
 
-> **Note:** This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> **メモ:** This is our first use of the [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 
@@ -546,20 +565,20 @@ The last step is to add the routes to the middleware chain. We do this in `app.j
 Open **app.js** and require the catalog route below the other routes (add the third line shown below, underneath the other two):
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
+var catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
 ```
 
 Next, add the catalog route to the middleware stack below the other routes (add the third line shown below, underneath the other two):
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 ```
 
-> **Note:** We have added our catalog module at a path `'/catalog'`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
+> **メモ:** We have added our catalog module at a path `'/catalog'`. This is prepended to all of the paths defined in the catalog module. So for example, to access a list of books, the URL will be: `/catalog/books/`.
 
 That's it. We should now have routes and skeleton functions enabled for all the URLs that we will eventually support on the LocalLibrary website.
 
@@ -610,15 +629,3 @@ Then navigate to a number of LocalLibrary URLs, and verify that you don't get an
 - [Routing guide](http://expressjs.com/ja/guide/routing.html) (Express ドキュメント)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュール
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館の Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトン Web サイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

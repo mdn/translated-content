@@ -2,6 +2,7 @@
 title: focusout
 slug: Web/API/Element/focusout_event
 ---
+
 当元素即将失去焦点时，focusout 事件被触发。focusout 事件和 [blur](/zh-CN/docs/Web/Events/blur) 事件之间的主要区别在于后者不会冒泡。
 
 ## 基本信息
@@ -21,12 +22,12 @@ slug: Web/API/Element/focusout_event
 
 ## 属性
 
-| Property                                 | Type                                               | Description                                |
-| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------ |
+| Property                           | Type                                     | Description                                |
+| ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target losing focus.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                   | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                       | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                       | Whether the event is cancellable or not.   |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
 
 ## 规范
@@ -35,11 +36,11 @@ slug: Web/API/Element/focusout_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.focusout_event")}}
+{{Compat}}
 
 ## 相关事件
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/zh-CN/docs/Web/API/Element/focus_event)
+- [`blur`](/zh-CN/docs/Web/API/Element/blur_event)
+- [`focusin`](/zh-CN/docs/Web/API/Element/focusin_event)
+- [`focusout`](/zh-CN/docs/Web/API/Element/focusout_event)

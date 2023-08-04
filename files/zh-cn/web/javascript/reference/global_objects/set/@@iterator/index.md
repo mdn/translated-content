@@ -2,6 +2,7 @@
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 属性的初始值和 {{jsxref("Set.prototype.values()", "values")}} 属性的初始值是同一个函数。
@@ -24,7 +25,7 @@ mySet[Symbol.iterator]
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 
@@ -39,7 +40,7 @@ console.log(setIter.next().value); // Object
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 

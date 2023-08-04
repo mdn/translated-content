@@ -1,15 +1,8 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.font-variant-alternates
-translation_of: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 **`font-variant-alternates`** は CSS のプロパティで、代替書体の使用を制御します。代替書体は {{cssxref("@font-feature-values")}} で定義された代替名で参照される可能性があります。
@@ -63,7 +56,7 @@ font-variant-alternates: unset;
 
   - : この関数は、[フルーロン](https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%AD%E3%83%B3)およびその他の飾り書体などの装飾を有効にします。 OpenType の `ornm` の値に相当します (例: `ornm 2`)。
 
-    > **Note:** テキストの意味を保持するために、フォントデザイナーは、 Unicode のディングバット文字に一致しない装飾を、ビュレット文字 (U+2022) の装飾的な変種として含めるべきです。既存のフォントの中には、このアドバイスに従わないものもあるので注意が必要です。
+    > **メモ:** テキストの意味を保持するために、フォントデザイナーは、 Unicode のディングバット文字に一致しない装飾を、ビュレット文字 (U+2022) の装飾的な変種として含めるべきです。既存のフォントの中には、このアドバイスに従わないものもあるので注意が必要です。
 
 - `annotation()`
   - : この関数は、丸数字や鏡文字などの注釈表記を有効にします。この函数は丸数字又は鏡文字などの表記を有効にします。この引数は、フォント固有の名前を数値に対応づけたものです。 OpenType の `nalt` の値に相当します (例: `nalt 2`)。
@@ -106,7 +99,7 @@ p {
 
 ### 結果
 
-> **Note:** この例を有効にするには、 OpenType フォントの _Leitura Display Swashes_ をインストールする必要があります。試験用途の無償版が、 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes) などにあります。
+> **メモ:** この例を有効にするには、 OpenType フォントの _Leitura Display Swashes_ をインストールする必要があります。試験用途の無償版が、 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes) などにあります。
 
 {{ EmbedLiveSample('Enabling swash glyphs') }}
 

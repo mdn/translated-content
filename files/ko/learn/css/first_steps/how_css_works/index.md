@@ -1,8 +1,8 @@
 ---
 title: CSS 작동 방식
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -22,7 +22,7 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >의 기본 지식 및 HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습.)
@@ -51,7 +51,7 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
 
 다음 그림은 작업의 간단한 보기를 제공합니다.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## DOM 정보
 
@@ -92,7 +92,9 @@ P
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## DOM 에 CSS 적용하기
@@ -138,7 +140,7 @@ span {
 아래 예에서 나는 영국 영어 철자를 색상에 사용했는데, 그 속성은 인식되지 않기 때문에 유효하지 않습니다. 그래서 내 단락은 파란색으로 표시되지 않았습니다. 그러나 다른 모든 CSS 가 적용 되었습니다. 유효하지 않은 라인만 무시됩니다.
 
 ```html
-<p> 나는 이 텍스트를 크고 굵은 파란색으로 표시하고 싶습니다.</p>
+<p>나는 이 텍스트를 크고 굵은 파란색으로 표시하고 싶습니다.</p>
 ```
 
 ```css
@@ -169,11 +171,3 @@ p {
 이 강의를 거의 끝냈습니다; 할 일이 하나 더 있습니다. 다음 기사에서는 [새로운 지식을 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge) 하여 예제의 스타일을 변경하여 작업의 일부 CSS 를 테스트 합니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식을 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -1,14 +1,8 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Number
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef}}
 
 **`Math.round()`** 関数は、引数として与えた数を四捨五入して、もっとも近似の整数を返します。
@@ -41,18 +35,16 @@ Math.round(x)
 ### round の使用
 
 ```js
-Math.round( 20.49); //  20
-Math.round( 20.5 ); //  21
-Math.round( 42   ); //  42
-Math.round(-20.5 ); // -20
+Math.round(20.49); //  20
+Math.round(20.5); //  21
+Math.round(42); //  42
+Math.round(-20.5); // -20
 Math.round(-20.51); // -21
 ```
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.round', 'Math.round')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

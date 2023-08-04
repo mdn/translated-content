@@ -1,16 +1,8 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - direction
-translation_of: Web/API/Notification/dir
+slug: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notification")}} indique le sens du texte de la notification, définis à l'aide de l'option `dir` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.
@@ -18,7 +10,7 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 ## Syntaxe
 
 ```js
-Notification.dir
+Notification.dir;
 ```
 
 ### Valeur

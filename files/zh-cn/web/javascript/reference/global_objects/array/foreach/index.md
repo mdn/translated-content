@@ -2,6 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 方法对数组的每个元素执行一次给定的函数。
@@ -10,120 +11,119 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ## 语法
 
-```plain
-arr.forEach(callback(currentValue [, index [, array]])[, thisArg])
+```js-nolint
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
 ```
 
 ### 参数
 
-- `callback`
-
-  - : 为数组中每个元素执行的函数，该函数接收一至三个参数：
-
-    - `currentValue`
+- `callbackFn`
+  - : 为数组中每个元素执行的函数。并会丢弃它的返回值。该函数被调用时将传入以下参数：
+    - `element`
       - : 数组中正在处理的当前元素。
-    - `index` {{optional_inline}}
+    - `index`
       - : 数组中正在处理的当前元素的索引。
-    - `array` {{optional_inline}}
-      - : `forEach()` 方法正在操作的数组。
-
+    - `array`
+      - : 调用了 `forEach()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 可选参数。当执行回调函数 `callback` 时，用作 `this` 的值。
+  - : 执行 `callbackFn` 时用作 `this` 的值。参见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
-{{jsxref("undefined")}}。
+`undefined`。
 
 ## 描述
 
-`forEach()` 方法按升序为数组中含有效值的每一项执行一次 `callback` 函数，那些已删除或者未初始化的项将被跳过（例如在稀疏数组上）。
+`forEach()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按索引升序地为数组中的每个元素调用一次提供的 `callbackFn` 函数。与 {{jsxref("Array.prototype.map()", "map()")}} 不同，`forEach()` 总是返回 {{jsxref("undefined")}}，而且不能继续链式调用。其典型的用法是在链式调用的末尾执行某些操作。
 
-可依次向 `callback` 函数传入三个参数：
+`callbackFn` 仅对已赋值的数组索引调用。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽，它不会被调用。
 
-1. 数组当前项的值
-2. 数组当前项的索引
-3. 数组对象本身
+`forEach()` 不会改变其调用的数组，但是，作为 `callbackFn` 的函数可以更改数组。请注意，在第一次调用 `callbackFn` _之前_，数组的长度已经被保存。因此：
 
-如果 `thisArg` 参数有值，则每次 `callback` 函数被调用时，`this` 都会指向 `thisArg` 参数。如果省略了 `thisArg` 参数，或者其值为 `null` 或 `undefined`，`this` 则指向全局对象。按照[函数观察到 `this` 的常用规则](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，`callback` 函数最终可观察到 `this` 值。
+- 当调用 `forEach()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
+- 已经访问过的索引的更改不会导致 `callbackFn` 再次调用它们。
+- 如果 `callbackFn` 更改了数组中已经存在但尚未访问的元素，则传递给 `callbackFn` 的值将是在访问该元素时的值。已经被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素不会被访问。
 
-`forEach()` 遍历的范围在第一次调用 `callback` 前就会确定。调用 `forEach` 后添加到数组中的项不会被 `callback` 访问到。如果已经存在的值被改变，则传递给 `callback` 的值是 `forEach()` 遍历到他们那一刻的值。已删除的项不会被遍历到。如果已访问的元素在迭代时被删除了（例如使用 {{jsxref("Array.prototype.shift()", "shift()")}}），之后的元素将被跳过——[参见下面的示例](#如果数组在迭代时被修改了，则其他元素会被跳过。)。
+> **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
-`forEach()` 为每个数组元素执行一次 `callback` 函数；与 {{jsxref("Array.prototype.map()", "map()")}} 或者 {{jsxref("Array.prototype.reduce()", "reduce()")}} 不同的是，它总是返回 {{jsxref("undefined")}} 值，并且不可链式调用。其典型用例是在一个调用链的最后执行副作用（side effects，函数式编程上，指函数进行 返回结果值 以外的操作）。
+`forEach()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
-`forEach()` 被调用时，不会改变原数组，也就是调用它的数组（尽管 `callback` 函数在被调用时可能会改变原数组）。（译注：此处说法可能不够明确，具体可参考 EMCA 语言规范：'`forEach` does not directly mutate the object on which it is called but the object may be mutated by the calls to `callbackfn`.'，即 `forEach` 不会直接改变调用它的对象，但是那个对象可能会被 `callback` 函数改变。）
+除非抛出异常，否则没有办法停止或中断 `forEach()` 循环。如果有这样的需求，则不应该使用 `forEach()` 方法。
 
-> **备注：** 除了抛出异常以外，没有办法中止或跳出 `forEach()` 循环。如果你需要中止或跳出循环，`forEach()` 方法不是应当使用的工具。
->
-> 若你需要提前终止循环，你可以使用：
->
-> - 一个简单的 [for](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环
-> - [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) / [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环
-> - {{jsxref("Array.prototype.every()")}}
-> - {{jsxref("Array.prototype.some()")}}
-> - {{jsxref("Array.prototype.find()")}}
-> - {{jsxref("Array.prototype.findIndex()")}}
->
-> 这些数组方法则可以对数组元素判断，以便确定是否需要继续遍历：
->
-> - {{jsxref("Array.prototype.every()", "every()")}}
-> - {{jsxref("Array.prototype.some()", "some()")}}
-> - {{jsxref("Array.prototype.find()", "find()")}}
-> - {{jsxref("Array.prototype.findIndex()", "findIndex()")}}
->
-> 译者注：只要条件允许，也可以使用 {{jsxref("Array.prototype.filter()", "filter()")}} 提前过滤出需要遍历的部分，再用 `forEach()` 处理。
+可以通过像 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 和 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 这样的循环语句来实现提前终止。当不需要进一步迭代时，诸如 {{jsxref("Array/every", "every()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/find", "find()")}} 和 {{jsxref("Array/findIndex", "findIndex()")}} 等数组方法也会立即停止迭代。
+
+`forEach()` 期望的是一个同步函数，它不会等待 Promise 兑现。在使用 Promise（或异步函数）作为 `forEach` 回调时，请确保你意识到这一点可能带来的影响。
+
+```js
+const ratings = [5, 4, 5];
+let sum = 0;
+
+const sumFunction = async (a, b) => a + b;
+
+ratings.forEach(async (rating) => {
+  sum = await sumFunction(sum, rating);
+});
+
+console.log(sum);
+// 期望的输出：14
+// 实际的输出：0
+```
+
+如果希望按顺序的或者并发的执行一系列操作，可以[查看 promise 组合](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#组合)。
 
 ## 示例
 
-### 不对未初始化的值进行任何操作（稀疏数组）
+### 在稀疏数组上使用 forEach()
 
-如你所见，`3` 和 `7` 之间空缺的数组单元未被 `forEach()` 调用 `callback` 函数，或进行任何其他操作。
-
-```js
-const arraySparse = [1,3,,7];
+```js-nolint
+const arraySparse = [1, 3, /* empty */, 7];
 let numCallbackRuns = 0;
 
-arraySparse.forEach(function(element){
-  console.log(element);
+arraySparse.forEach((element) => {
+  console.log({ element });
   numCallbackRuns++;
 });
 
-console.log("numCallbackRuns: ", numCallbackRuns);
+console.log({ numCallbackRuns });
 
-// 1
-// 3
-// 7
-// numCallbackRuns: 3
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
 ```
+
+如你所见，不会为索引 2 处的缺失值调用回调函数。
 
 ### 将 for 循环转换为 forEach
 
 ```js
-const items = ['item1', 'item2', 'item3'];
-const copy = [];
+const items = ["item1", "item2", "item3"];
+const copyItems = [];
 
 // before
-for (let i=0; i<items.length; i++) {
-  copy.push(items[i]);
+for (let i = 0; i < items.length; i++) {
+  copyItems.push(items[i]);
 }
 
 // after
-items.forEach(function(item){
-  copy.push(item);
+items.forEach((item) => {
+  copyItems.push(item);
 });
 ```
 
 ### 打印出数组的内容
 
-> **备注：** 为了在控制台中显示数组的内容，你可以使用 [`console.table()`](/zh-CN/docs/Web/API/Console/table) 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
+> **备注：** 为了在控制台中显示数组的内容，你可以使用 {{domxref("console/table", "console.table()")}} 来展示经过格式化的数组。下面的例子则是另一种使用 `forEach()` 的格式化的方法。
 
 下面的代码会为每一个数组元素输出一行记录：
 
 ```js
-function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
-}
+const logArrayElements = (element, index /*, array */) => {
+  console.log(`a[${index}] = ${element}`);
+};
 
-// 注意索引 2 被跳过了，因为在数组的这个位置没有项
+// 注意，索引 2 被跳过，因为数组中这个位置没有内容
 [2, 5, , 9].forEach(logArrayElements);
 // logs:
 // a[0] = 2
@@ -131,193 +131,111 @@ function logArrayElements(element, index, array) {
 // a[3] = 9
 ```
 
-### 使用 `thisArg`
+### 使用 thisArg
 
 举个勉强的例子，按照每个数组中的元素值，更新一个对象的属性：
 
 ```js
-function Counter() {
-  this.sum = 0;
-  this.count = 0;
+class Counter {
+  constructor() {
+    this.sum = 0;
+    this.count = 0;
+  }
+  add(array) {
+    // 只有函数表达式才有自己的 this 绑定
+    array.forEach(function countEntry(entry) {
+      this.sum += entry;
+      ++this.count;
+    }, this);
+  }
 }
-Counter.prototype.add = function(array) {
-  array.forEach(function(entry) {
-    this.sum += entry;
-    ++this.count;
-  }, this);
-  // ^---- Note
-};
 
 const obj = new Counter();
 obj.add([2, 5, 9]);
-obj.count;
-// 3 === (1 + 1 + 1)
-obj.sum;
-// 16 === (2 + 5 + 9)
+console.log(obj.count); // 3
+console.log(obj.sum); // 16
 ```
 
-因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callback` 函数，作为它的 `this` 值。
+因为 `thisArg` 参数（`this`）传给了 `forEach()`，每次调用时，它都被传给 `callbackFn` 函数，作为它的 `this` 值。
 
 > **备注：** 如果使用[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来传入函数参数， `thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 {{jsxref("Operators/this", "this")}} 值。
 
-### 对象复制器函数
+### 对象复制函数
 
-下面的代码会创建一个给定对象的副本。 创建对象的副本有不同的方法，以下是只是一种方法，并解释了 `Array.prototype.forEach()` 是如何使用 ECMAScript 5 `Object.*` 元属性（meta property）函数工作的。
+下面的代码会创建一个给定对象的副本。创建对象的副本有不同的方法，以下是只是一种方法，并解释了 `Array.prototype.forEach()` 是如何使用 `Object.*` 实用工具函数。
 
 ```js
-function copy(obj) {
+const copy = (obj) => {
   const copy = Object.create(Object.getPrototypeOf(obj));
   const propNames = Object.getOwnPropertyNames(obj);
-
-  propNames.forEach(function(name) {
+  propNames.forEach((name) => {
     const desc = Object.getOwnPropertyDescriptor(obj, name);
     Object.defineProperty(copy, name, desc);
   });
-
   return copy;
-}
+};
 
 const obj1 = { a: 1, b: 2 };
 const obj2 = copy(obj1); // 现在 obj2 看起来和 obj1 一模一样了
 ```
 
-### 如果数组在迭代时被修改了，则其他元素会被跳过。
+### 在迭代期间修改数组
 
-下面的例子会输出 "one", "two", "four"。当到达包含值 "two" 的项时，整个数组的第一个项被移除了，这导致所有剩下的项上移一个位置。因为元素 "four" 正位于在数组更前的位置，所以 "three" 会被跳过。 `forEach()` 不会在迭代之前创建数组的副本。
+下面的例子会输出 `one`, `two`, `four`。
+
+当到达包含值 `two` 的项时，整个数组的第一个项被移除了，这导致所有剩下的项上移一个位置。因为元素 `four` 正位于在数组更前的位置，所以 `three` 会被跳过。
+
+`forEach()` 不会在迭代之前创建数组的副本。
 
 ```js
-var words = ['one', 'two', 'three', 'four'];
-words.forEach(function(word) {
+const words = ["one", "two", "three", "four"];
+words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
-    words.shift();
+  if (word === "two") {
+    words.shift(); //'one' 将从数组中删除
   }
-});
-// one
-// two
-// four
+}); // one // two // four
+
+console.log(words); // ['two', 'three', 'four']
 ```
 
 ### 扁平化数组
 
-下面的示例仅用于学习目的。如果你想使用内置方法来扁平化数组，你可以考虑使用 {{jsxref("Array.prototype.flat()")}}（预计将成为 ES2019 的一部分，并且已在主要浏览器中实现）或参考其 polyfill。
+下面的示例仅用于学习目的。如果你想使用内置方法来扁平化数组，你可以考虑使用 {{jsxref("Array.prototype.flat()")}}。
 
 ```js
-/**
- * Flattens passed array in one dimensional array
- *
- * @params {array} arr
- * @returns {array}
- */
-function flatten(arr) {
+const flatten = (arr) => {
   const result = [];
-
-  arr.forEach((i) => {
-    if (Array.isArray(i))
-      result.push(...flatten(i));
-    else
-      result.push(i);
-  })
-
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      result.push(...flatten(item));
+    } else {
+      result.push(item);
+    }
+  });
   return result;
-}
+};
 
-// Usage
-const problem = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
-
-flatten(problem); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// 用例
+const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
+console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-## 针对 promise 或 async 函数的使用备注
+### 在非数组对象上调用 forEach()
 
-如果使用 promise 或 async 函数作为 `forEach()` 等类似方法的 `callback` 参数，最好对造成的执行顺序影响多加考虑，否则容易出现错误。
-
-```js
-let ratings = [5, 4, 5];
-
-let sum = 0;
-
-let sumFunction = async function (a, b) {
-    return a + b;
-}
-
-ratings.forEach(async function(rating) {
-    sum = await sumFunction(sum, rating);
-})
-
-console.log(sum);
-// Expected output: 14
-// Actual output: 0
-```
-
-## Polyfill
-
-`forEach()` 是在第五版本里被添加到 ECMA-262 标准的；这样它可能在标准的其他实现中不存在，你可以在你调用 `forEach()` 之前插入下面的代码，在本地不支持的情况下使用 `forEach()`。该算法是 ECMA-262 第 5 版中指定的算法。它假定 {{jsxref("Object")}} 和 {{jsxref("TypeError")}} 拥有它们的初始值，且 `callback.call` 等价于 {{jsxref("Function.prototype.call()")}}。
+`forEach()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.18
-// Reference: http://es5.github.io/#x15.4.4.18
-if (!Array.prototype.forEach) {
-
-  Array.prototype.forEach = function(callback, thisArg) {
-
-    var T, k;
-
-    if (this == null) {
-      throw new TypeError(' this is null or not defined');
-    }
-
-    // 1. Let O be the result of calling toObject() passing the
-    // |this| value as the argument.
-    var O = Object(this);
-
-    // 2. Let lenValue be the result of calling the Get() internal
-    // method of O with the argument "length".
-    // 3. Let len be toUint32(lenValue).
-    var len = O.length >>> 0;
-
-    // 4. If isCallable(callback) is false, throw a TypeError exception.
-    // See: http://es5.github.com/#x9.11
-    if (typeof callback !== "function") {
-      throw new TypeError(callback + ' is not a function');
-    }
-
-    // 5. If thisArg was supplied, let T be thisArg; else let
-    // T be undefined.
-    if (arguments.length > 1) {
-      T = thisArg;
-    }
-
-    // 6. Let k be 0
-    k = 0;
-
-    // 7. Repeat, while k < len
-    while (k < len) {
-
-      var kValue;
-
-      // a. Let Pk be ToString(k).
-      //    This is implicit for LHS operands of the in operator
-      // b. Let kPresent be the result of calling the HasProperty
-      //    internal method of O with argument Pk.
-      //    This step can be combined with c
-      // c. If kPresent is true, then
-      if (k in O) {
-
-        // i. Let kValue be the result of calling the Get internal
-        // method of O with argument Pk.
-        kValue = O[k];
-
-        // ii. Call the Call internal method of callback with T as
-        // the this value and argument list containing kValue, k, and O.
-        callback.call(T, kValue, k, O);
-      }
-      // d. Increase k by 1.
-      k++;
-    }
-    // 8. return undefined
-  };
-}
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+};
+Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
+// 2
+// 3
+// 4
 ```
 
 ## 规范
@@ -330,11 +248,14 @@ if (!Array.prototype.forEach) {
 
 ## 参见
 
+- [`core-js` 中 `Array.prototype.forEach` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.filter()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("Map.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

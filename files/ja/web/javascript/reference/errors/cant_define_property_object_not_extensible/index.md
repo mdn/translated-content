@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "can't define property "x": "obj" is not extensible" は {{jsxref("Object.preventExtensions()")}} でオブジェクトが拡張可能ではなくなったため、その時点で存在していたプロパティを設定できなかった際に発生します。

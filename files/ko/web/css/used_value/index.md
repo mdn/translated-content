@@ -1,11 +1,8 @@
 ---
 title: 사용값
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **사용값**은 [계산값](/ko/docs/Web/CSS/computed_value)에 모든 계산을 수행한 후의 결과 값입니다.
@@ -64,7 +61,7 @@ div {
 ```js
 function updateUsedWidth(id) {
   var div = document.querySelector(`#${id}`);
-  var par = div.querySelector('.show-used-width');
+  var par = div.querySelector(".show-used-width");
   var wid = window.getComputedStyle(div)["width"];
   par.textContent = `Used width: ${wid}.`;
 }
@@ -76,7 +73,7 @@ function updateAllUsedWidths() {
 }
 
 updateAllUsedWidths();
-window.addEventListener('resize', updateAllUsedWidths);
+window.addEventListener("resize", updateAllUsedWidths);
 ```
 
 ### 결과

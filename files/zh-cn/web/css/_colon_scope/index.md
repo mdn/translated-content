@@ -1,7 +1,8 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 **`:scope`** 属于 [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)，它表示作为选择器要匹配的参考点的元素。
@@ -56,29 +57,31 @@ if (paragraph.matches(":scope")) {
 #### JavaScript
 
 ```js
-var context = document.getElementById('context');
-var selected = context.querySelectorAll(':scope > div');
+var context = document.getElementById("context");
+var selected = context.querySelectorAll(":scope > div");
 
-document.getElementById('results').innerHTML = Array.prototype.map.call(selected, function (element) {
-    return '#' + element.getAttribute('id');
-}).join(', ');
+document.getElementById("results").innerHTML = Array.prototype.map
+  .call(selected, function (element) {
+    return "#" + element.getAttribute("id");
+  })
+  .join(", ");
 ```
 
 #### HTML
 
 ```html
 <div id="context">
-    <div id="element-1">
-        <div id="element-1.1"></div>
-        <div id="element-1.2"></div>
-    </div>
-    <div id="element-2">
-        <div id="element-2.1"></div>
-    </div>
+  <div id="element-1">
+    <div id="element-1.1"></div>
+    <div id="element-1.2"></div>
+  </div>
+  <div id="element-2">
+    <div id="element-2.1"></div>
+  </div>
 </div>
 <p>
-    Selected elements ids :
-    <span id="results"></span>
+  Selected elements ids :
+  <span id="results"></span>
 </p>
 ```
 
@@ -92,7 +95,7 @@ document.getElementById('results').innerHTML = Array.prototype.map.call(selected
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.scope")}}
+{{Compat}}
 
 ## 参见
 

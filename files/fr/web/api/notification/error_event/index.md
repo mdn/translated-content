@@ -1,17 +1,8 @@
 ---
 title: Notification.onerror
 slug: Web/API/Notification/error_event
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - onerror
-translation_of: Web/API/Notification/onerror
-original_slug: Web/API/notification/onerror
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété **`onerror`** de l'interface {{domxref ("Notification")}} spécifie un écouteur d'événements pour recevoir les événements {{domxref ("HTMLElement/error_event", "error")}}. Ces événements se produisent lorsque quelque chose ce déroule mal avec une {{domxref ("Notification")}} (dans de nombreux cas, une erreur qui empêche l'affichage de la notification.)

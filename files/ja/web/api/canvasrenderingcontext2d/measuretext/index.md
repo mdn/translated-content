@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
 ---
+
 {{APIRef}}
 
 `CanvasRenderingContext2D.measureText()` メソッドは、測定したテキストの情報（例えば幅など）を持つ {{domxref("TextMetrics")}} オブジェクトを返します。

@@ -2,9 +2,12 @@
 title: submit
 slug: Web/API/HTMLFormElement/submit_event
 ---
+
+{{APIRef}}
+
 `submit` 事件會在表單送出時觸發。
 
-要注意的是，`submit` 事件**只會**在 [form element](/en-US/docs/Web/HTML/Element/form) 上觸發， [button](/en-US/docs/Web/HTML/Element/button) 或是 [submit input](/en-US/docs/Web/HTML/Element/input) 則不會觸發。（送出的是「表單」，而非「按鈕」）
+要注意的是，`submit` 事件**只會**在 [form element](/zh-TW/docs/Web/HTML/Element/form) 上觸發， [button](/zh-TW/docs/Web/HTML/Element/button) 或是 [submit input](/zh-TW/docs/Web/HTML/Element/input) 則不會觸發。（送出的是「表單」，而非「按鈕」）
 
 ## 基本資料
 
@@ -24,12 +27,12 @@ slug: Web/API/HTMLFormElement/submit_event
 
 ## 屬性
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## 規範
 

@@ -1,13 +1,6 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/number
 ---
 {{CSSRef}}
 

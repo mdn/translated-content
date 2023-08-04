@@ -2,6 +2,7 @@
 title: Keyboard
 slug: Web/API/Keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`Keyboard`** interface of the the [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
@@ -28,10 +29,9 @@ The following example demonstrates how to get the location- or layout-specific s
 ```js
 if (navigator.keyboard) {
   var keyboard = navigator.keyboard;
-  keyboard.getLayoutMap()
-  .then(keyboardLayoutMap => {
-    var upKey = keyboardLayoutMap.get('KeyW');
-    window.alert('Press ' + upKey + ' to move up.');
+  keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+    var upKey = keyboardLayoutMap.get("KeyW");
+    window.alert("Press " + upKey + " to move up.");
   });
 } else {
   // Do something else.
@@ -44,4 +44,4 @@ if (navigator.keyboard) {
 
 ## Browser compatibility
 
-{{Compat("api.Keyboard")}}
+{{Compat}}

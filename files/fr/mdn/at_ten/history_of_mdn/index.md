@@ -1,24 +1,27 @@
 ---
 title: L'histoire de MDN
 slug: MDN/At_ten/History_of_MDN
-tags:
-  - MDN
-translation_of: MDN_at_ten/History_of_MDN
-original_slug: MDN_a_dix_ans/Histoire_MDN
 ---
-Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN regardent dans le rétroviseur des dix dernières années de [developer.mozilla.org](https://developer.mozilla.org) et imaginent la décennie à venir. Vous pourrez entendre l'histoire des différentes migrations entre les logiciels de wiki, la façon dont la communauté a été construite et découvrir de nombreuses anecdotes de l'histoire du site. Le groupe réuni discute également des défis actuels et des projets sur lesquels la communauté MDN travaille cette année.
+
+Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN regardent dans le rétroviseur des dix dernières années de [developer.mozilla.org](/) et imaginent la décennie à venir. Vous pourrez entendre l'histoire des différentes migrations entre les logiciels de wiki, la façon dont la communauté a été construite et découvrir de nombreuses anecdotes de l'histoire du site. Le groupe réuni discute également des défis actuels et des projets sur lesquels la communauté MDN travaille cette année.
 
 ### Audio
 
 ```html hidden
 <audio controls="controls">
-  Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré. Vous pouvez télécharger et l'utiliser depuis : https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
-  <source src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3" type="audio/mp3">
+  Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré.
+  Vous pouvez télécharger et l'utiliser depuis :
+  https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
+  <source
+    src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3"
+    type="audio/mp3" />
 </audio>
 ```
 
 ```css hidden
- body{margin-top:8px;}
+body {
+  margin-top: 8px;
+}
 ```
 
 {{ EmbedLiveSample('Audio', 'auto', '50px') }}

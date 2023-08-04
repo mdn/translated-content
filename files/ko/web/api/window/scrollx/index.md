@@ -1,21 +1,17 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - 스크롤
-translation_of: Web/API/Window/scrollX
 ---
+
 {{APIRef("CSSOM View")}}
 
 {{domxref("Window")}} 인터페이스의 **`scrollX`** 읽기 전용 속성은 문서가 수평으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다. 최신 브라우저에서는 값의 정밀도가 픽셀보다 작으므로 반드시 정숫값을 반환하는건 아닙니다. 수직 스크롤은 {{domxref("Window.scrollY", "scrollY")}} 속성을 사용하여 가져올 수 있습니다.
 
 ## 구문
 
-    var x = window.scrollX
+```js
+var x = window.scrollX;
+```
 
 ### 값
 
@@ -31,7 +27,7 @@ translation_of: Web/API/Window/scrollX
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 
@@ -47,10 +43,18 @@ window.pageXOffset === window.scrollX; // 항상 true
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## 명세

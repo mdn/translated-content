@@ -1,17 +1,8 @@
 ---
 title: Window.releaseEvents()
 slug: Web/API/Window/releaseEvents
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Method
-  - Non-standard
-  - Reference
-  - Window
-  - releaseEvents
-translation_of: Web/API/Window/releaseEvents
 ---
+
 {{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
 
 このウィンドウが指定された種類のイベントを捕捉することを解除します。

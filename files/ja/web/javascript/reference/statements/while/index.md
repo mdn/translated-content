@@ -1,13 +1,8 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
-  - while
-translation_of: Web/JavaScript/Reference/Statements/while
 ---
+
 {{jsSidebar("Statements")}}
 
 **while 文**は、テスト条件が true と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
@@ -55,9 +50,7 @@ while (n < 3) {
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

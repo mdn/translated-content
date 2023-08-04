@@ -2,6 +2,7 @@
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ---
+
 {{JSRef}}
 
 **`flags`**属性返回一个字符串，由当前正则表达式对象的标志组成。
@@ -17,19 +18,19 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ### 使用`flags`
 
 ```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+/foo/gi.flags; // "gi"
+/bar/muy.flags; // "muy"
 ```
 
 ## Polyfill
 
 ```js
 if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
+  Object.defineProperty(RegExp.prototype, "flags", {
     configurable: true,
-    get: function() {
+    get: function () {
       return this.toString().match(/[gimuy]*$/)[0];
-    }
+    },
   });
 }
 ```

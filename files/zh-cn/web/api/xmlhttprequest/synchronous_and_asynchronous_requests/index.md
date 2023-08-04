@@ -2,6 +2,7 @@
 title: 同步和异步请求
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
+
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。
 
 同步请求阻止代码的执行，这会导致屏幕上出现“冻结”和无响应的用户体验。
@@ -40,25 +41,25 @@ xhr.send(null);
 
 ### 例子：创建一个标准的方法来读取外部文件
 
-在一些需求情况下，必须读取多个外部文件。这是一个标准的函数. 该函数使用 `XMLHttpRequest` 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。
+在一些需求情况下，必须读取多个外部文件。这是一个标准的函数。该函数使用 `XMLHttpRequest` 对象进行异步请求。而且可以为每个文件读取完成后指定不同的回调函数。
 
 ```js
 function xhrSuccess() {
-    this.callback.apply(this, this.arguments);
+  this.callback.apply(this, this.arguments);
 }
 
 function xhrError() {
-    console.error(this.statusText);
+  console.error(this.statusText);
 }
 
 function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    var xhr = new XMLHttpRequest();
-    xhr.callback = callback;
-    xhr.arguments = Array.prototype.slice.call(arguments, 2);
-    xhr.onload = xhrSuccess;
-    xhr.onerror = xhrError;
-    xhr.open("GET", url, true);
-    xhr.send(null);
+  var xhr = new XMLHttpRequest();
+  xhr.callback = callback;
+  xhr.arguments = Array.prototype.slice.call(arguments, 2);
+  xhr.onload = xhrSuccess;
+  xhr.onerror = xhrError;
+  xhr.open("GET", url, true);
+  xhr.send(null);
 }
 ```
 
@@ -66,13 +67,13 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 
 ```js
 function showMessage(message) {
-    console.log(message + this.responseText);
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", showMessage, "New message!\n\n");
 ```
 
-实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数 “通过“ XHR 对象到成功回调函数。
+实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数“通过“XHR 对象到成功回调函数。
 
 第 1 行声明 XHR 操作成功完成时调用的函数。它又调用已经分配给 XHR 对象（第 7 行）属性的 loadFile 函数（本例中为函数 showMessage）的调用中指定的回调函数。提供给调用函数 loadFile 的附加参数（如果有的话）被“应用”到回调函数的运行中。
 
@@ -92,23 +93,23 @@ loadFile("message.txt", showMessage, "New message!\n\n");
 
 ```js
 function loadFile(url, timeout, callback) {
-    var args = Array.prototype.slice.call(arguments, 3);
-    var xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
-    };
-    xhr.onload = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                callback.apply(xhr, args);
-            } else {
-                console.error(xhr.statusText);
-            }
-        }
-    };
-    xhr.open("GET", url, true);
-    xhr.timeout = timeout;
-    xhr.send(null);
+  var args = Array.prototype.slice.call(arguments, 3);
+  var xhr = new XMLHttpRequest();
+  xhr.ontimeout = function () {
+    console.error("The request for " + url + " timed out.");
+  };
+  xhr.onload = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback.apply(xhr, args);
+      } else {
+        console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.timeout = timeout;
+  xhr.send(null);
 }
 ```
 
@@ -117,8 +118,8 @@ function loadFile(url, timeout, callback) {
 用法：
 
 ```js
-function showMessage (message) {
-    console.log(message + this.responseText);
+function showMessage(message) {
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", 2000, showMessage, "New message!\n");
@@ -126,11 +127,11 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 如上，我们指定的超时时间为 2000 ms。
 
-> **备注：** `timeout`属性添加于 Gecko 12.0 {{Gecko("12.0")}}。
+> **备注：** `timeout` 属性添加于 Gecko 12.0。
 
 ## 同步请求
 
-> **备注：** 从 Gecko 30.0 {{ geckoRelease("30.0") }}，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。
+> **备注：** 从 Gecko 30.0，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。
 
 同步 XHR 通常会导致网络挂起。但开发人员通常不会注意到这个问题，因为在网络状况不佳或服务器响应速度慢的情况下，挂起只会显示同步 XHR 现在处于弃用状态。建议开发人员远离这个 API。
 
@@ -142,7 +143,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ```js
 var request = new XMLHttpRequest();
-request.open('GET', 'http://www.mozilla.org/', false);
+request.open("GET", "http://www.mozilla.org/", false);
 request.send(null);
 if (request.status === 200) {
   console.log(request.responseText);
@@ -164,19 +165,19 @@ if (request.status === 200) {
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var oMyWorker = new Worker("myTask.js");
-  oMyWorker.onmessage = function(oEvent) {
-    alert("Worker said: " + oEvent.data);
-  };
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDN Example</title>
+    <script type="text/javascript">
+      var oMyWorker = new Worker("myTask.js");
+      oMyWorker.onmessage = function (oEvent) {
+        alert("Worker said: " + oEvent.data);
+      };
 
-  oMyWorker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      oMyWorker.postMessage("Hello");
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -205,18 +206,18 @@ self.onmessage = function (oEvent) {
 
 ### 将同步 XHR 用例调整到 Beacon API
 
-在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 [window.onunload](/zh-CN/docs/Web/API/Window/onunload)和[window.onbeforeunload](/zh-CN/docs/Web/API/Window/onbeforeunload) 事件期间一样。 您应该考虑使用带有 `Keepalive` 标志的 `fetch` API。 当 `keepalive` 的 `fetch` 不可用时，可以考虑使用 [navigator.sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) API 可以支持这些用例，通常在提供良好 UX 的同时。
+在某些情况下，XMLHttpRequest 的同步使用是不可替代的，就像在 [window.onunload](/zh-CN/docs/Web/API/Window/onunload)和[window.onbeforeunload](/zh-CN/docs/Web/API/Window/onbeforeunload) 事件期间一样。您应该考虑使用带有 `Keepalive` 标志的 `fetch` API。当 `keepalive` 的 `fetch` 不可用时，可以考虑使用 [navigator.sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) API 可以支持这些用例，通常在提供良好 UX 的同时。
 
 以下示例（来自 [sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) 文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步 XMLHttpRequest 将数据提交给服务器。这导致页面的卸载被延迟。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
-    client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-    client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    client.send(analyticsData);
+  var client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
 }
 ```
 
@@ -225,10 +226,10 @@ function logData() {
 以下示例显示了使用 **`sendBeacon()`** 方法将数据提交给服务器的理论分析代码模式。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    navigator.sendBeacon("/log", analyticsData);
+  navigator.sendBeacon("/log", analyticsData);
 }
 ```
 
@@ -237,4 +238,4 @@ function logData() {
 - [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/zh-CN/docs/AJAX)
-- [`navigator.sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/zh-CN/docs/Web/API/Navigator/sendBeacon)

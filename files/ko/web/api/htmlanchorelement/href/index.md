@@ -1,16 +1,8 @@
 ---
 title: HTMLHyperlinkElementUtils.href
 slug: Web/API/HTMLAnchorElement/href
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Location
-  - Property
-  - Reference
-translation_of: Web/API/HTMLHyperlinkElementUtils/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.href`** 속성은 온전한 URL을 값으로 가지는 {{domxref("USVString")}}입니다.

@@ -1,16 +1,8 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - delete
-translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`delete()`** de l'interface {{domxref("FormData")}} supprime une clé et sa (ses) valeur(s) d'un objet `FormData`.
@@ -43,7 +35,7 @@ var formData = new FormData(myForm);
 Vous pouvez supprimer les clés et leurs valeurs en utilisant `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## Spécifications

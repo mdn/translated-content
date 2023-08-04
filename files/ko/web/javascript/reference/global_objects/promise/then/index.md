@@ -1,14 +1,8 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
+
 {{JSRef}}
 
 **`then()`** 메서드는 {{domxref("Promise")}}를 리턴하고 두 개의 콜백 함수를 인수로 받습니다. 하나는 `Promise`가 **이행**했을 때, 다른 하나는 **거부**했을 때를 위한 콜백 함수입니다.

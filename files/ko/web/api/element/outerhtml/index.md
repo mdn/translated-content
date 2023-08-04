@@ -1,17 +1,8 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - Parsing
-  - Property
-  - Reference
-  - Serializing
-translation_of: Web/API/Element/outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 `outerHTML` 속성은 요소(element)의 자식 요소를 포함하여 요소를 나타내는 직렬화된 HTML 파편을 가져옵니다. 또한 주어진 문자열에서 파싱한 노드로 요소를 대체할 수 있습니다.
@@ -75,7 +66,7 @@ console.log(container.firstChild.nodeName); // "P"를 출력합니다.
 
 ```js
 var div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 // 많은 브라우저에서 DOMException 예외를 발생시킵니다.
 console.log(div.outerHTML); // 결과: "<div></div>"
 ```

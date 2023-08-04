@@ -1,12 +1,8 @@
 ---
-title: ':valid'
+title: ":valid"
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:valid
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:valid`** permet de cibler tout élément {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. On peut ainsi facilement mettre en forme les champs correctement remplis par l'utilisateur.
@@ -59,11 +55,11 @@ input:required:valid {
 ```html
 <form>
   <label>Veuillez saisir une URL :</label>
-  <input type="url">
-  <br>
-  <br>
+  <input type="url" />
+  <br />
+  <br />
   <label>Veuillez saisir une adresse électronique :</label>
-  <input type="email" required>
+  <input type="email" required />
 </form>
 ```
 
@@ -80,15 +76,11 @@ La couleur rouge est généralement utilisée afin d'indiquer une valeur invalid
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                                  |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                          |
-| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux contraintes de validation. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Voir aussi
 

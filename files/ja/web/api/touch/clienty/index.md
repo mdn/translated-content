@@ -1,15 +1,8 @@
 ---
 title: Touch.clientY
 slug: Web/API/Touch/clientY
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
-translation_of: Web/API/Touch/clientY
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`Touch.clientY`** は読み取り専用プロパティで、タッチ点のビューポートからのスクロールオフセットは含まない相対 Y 座標を返します。
@@ -56,10 +49,7 @@ src.addEventListener('touchend', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                               | 状態                                 | 備考                 |
-| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Touch Events 2','#dom-touch-clienty')}} | {{Spec2('Touch Events 2')}} | 前の版から変更なし。 |
-| {{SpecName('Touch Events', '#widl-Touch-clientY')}} | {{Spec2('Touch Events')}}     | 初回定義             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

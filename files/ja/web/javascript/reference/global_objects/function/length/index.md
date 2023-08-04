@@ -1,12 +1,8 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** プロパティは、関数が期待する引数の数を示します。
@@ -46,9 +42,7 @@ console.log((function(a, b = 1, c) {}).length);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -4,6 +4,7 @@ slug: Web/API/console/table
 l10n:
   sourceCommit: 49b07e57dba92be3982e3c0035bc48e7a5036f97
 ---
+
 {{APIRef("Console API")}}
 
 **`console.table()`** メソッドは、表形式のデータを表として表示します。
@@ -50,7 +51,11 @@ console.table(me);
 ```js
 // 配列の配列
 
-const people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -117,8 +122,8 @@ console.table([john, jane, emily], ["firstName"]);
 ## 構文
 
 ```js
-table(data)
-table(data, columns)
+table(data);
+table(data, columns);
 ```
 
 ### 引数

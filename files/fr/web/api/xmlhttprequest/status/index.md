@@ -1,8 +1,8 @@
 ---
 title: XMLHttpRequest.status
 slug: Web/API/XMLHttpRequest/status
-translation_of: Web/API/XMLHttpRequest/status
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété en lecture seule XMLHttpRequest.status renvoie le code d'état HTTP numérique de la réponse de XMLHttpRequest.
@@ -13,17 +13,17 @@ Avant que la demande ne se termine, la valeur du statut est 0. Les navigateurs s
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('UNSENT: ', xhr.status);
+console.log("UNSENT: ", xhr.status);
 
-xhr.open('GET', '/server');
-console.log('OPENED: ', xhr.status);
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
 
 xhr.onprogress = function () {
-  console.log('LOADING: ', xhr.status);
+  console.log("LOADING: ", xhr.status);
 };
 
 xhr.onload = function () {
-  console.log('DONE: ', xhr.status);
+  console.log("DONE: ", xhr.status);
 };
 
 xhr.send();

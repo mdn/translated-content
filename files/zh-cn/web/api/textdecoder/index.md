@@ -2,15 +2,41 @@
 title: TextDecoder
 slug: Web/API/TextDecoder
 ---
+
 {{APIRef("Encoding API")}}
 
-**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `utf-8`、`iso-8859-2`、`koi8`、`cp1261`，`gbk` 等等。解码器将字节流作为输入，并提供代码点流作为输出。
+**`TextDecoder`** 接口表示一个文本解码器，一个解码器只支持一种特定文本编码，例如 `UTF-8`、`ISO-8859-2`、`KOI8-R`、`GBK`，等等。解码器将字节流作为输入，并提供码位流作为输出。
 
-## 例子
+{{AvailableInWorkers}}
+
+## 构造函数
+
+- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
+  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成码位流。
+
+## 属性
+
+_`TextDecoder` 接口不继承任何属性。_
+
+- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
+  - : 一个包含的解码器名称的字符串，即描述 `TextDecoder` 将使用的方法的字符串。
+- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
+  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示错误模式是否致命。
+- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
+  - : 一个{{jsxref('Boolean', '布尔值', '', '1')}}，表示是否忽略[字节顺序标记（BOM）](https://www.w3.org/International/questions/qa-byte-order-mark)标记。
+
+## 方法
+
+_`TextDecoder` 接口不继承任何方法_。
+
+- {{DOMxRef("TextDecoder.prototype.decode()")}}
+  - : 返回一个字符串，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
+
+## 示例
 
 ### 用类型化数组表示文本
 
-本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的数组类型表示： {{jsxref("Uint8Array")}}, {{jsxref("Int8Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Int32Array")}}
+本示例展示如何解码中文/日语字符![](2019-05-21_191907.png)，用五个不同的类型化数组表示：{{jsxref("Uint8Array")}}、{{jsxref("Int8Array")}}、{{jsxref("Uint16Array")}}、{{jsxref("Int16Array")}} 和 {{jsxref("Int32Array")}}。
 
 ```js
 let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
@@ -30,36 +56,15 @@ console.log(utf8decoder.decode(i32arr));
 
 ### 处理非 UTF8 文本
 
-在此示例中，我们对俄语文本“Привет，мир！”( "Hello, world.")进行解码。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定 Windows-1251 字符编码，适用于西里尔字母。
+在此示例中，我们对俄语文本“Привет，мир！”进行编码，它的意思是（"Hello, world."）。在我们的 {{domxref("TextDecoder/TextDecoder", "TextDecoder()")}} 构造函数中，我们指定适用于西里尔字母的 Windows-1251 字符编码。
 
 ```js
-let win1251decoder = new TextDecoder('windows-1251');
-let bytes = new Uint8Array([207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33]);
+const win1251decoder = new TextDecoder("windows-1251");
+const bytes = new Uint8Array([
+  207, 240, 232, 226, 229, 242, 44, 32, 236, 232, 240, 33,
+]);
 console.log(win1251decoder.decode(bytes)); // Привет, мир!
 ```
-
-## 构造函数
-
-- {{DOMxRef("TextDecoder.TextDecoder", "TextDecoder()")}}
-  - : 返回一个新构造的 `TextDecoder`，它使用参数中指定的解码方法生成代码点流。
-
-## 属性
-
-_`TextDecoder` 接口不继承任何属性。_
-
-- {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
-  - : {{DOMxRef("DOMString")}}所包含的解码器的名称，表示`TextDecoder`所使用的解码方法的字符串。
-- {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : 布尔值，{{jsxref('Boolean')}}，是否显示致命错误。
-- {{DOMxRef("TextDecoder.prototype.ignoreBOM")}} {{ReadOnlyInline}}
-  - : 布尔值，{{jsxref('Boolean')}}，是否忽略 BOM（byte order marker）标记。
-
-## 方法
-
-_`TextDecoder` 接口不继承任何方法_。
-
-- {{DOMxRef("TextDecoder.prototype.decode()")}}
-  - : 返回一个{{DOMxRef("DOMString")}}，其中包含使用特定 `TextDecoder` 对象的方法解码的文本。
 
 ## 规范
 
@@ -67,12 +72,10 @@ _`TextDecoder` 接口不继承任何方法_。
 
 ## 浏览器兼容性
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
 - {{DOMxRef("TextEncoder")}} 接口描述了逆操作。
-- [`StringView`](/en-US/Add-ons/Code_snippets/StringView) –基于类型数组的字符串的类似 C 的表示形式
 - 一个[垫片](http://code.google.com/p/stringencoding/)，允许在不支持它的浏览器使用这个接口。
-- [`Components.utils.importGlobalProperties`](/en-US/docs/Components.utils.importGlobalProperties)
-- [Node.js 支持从 v11.0.0 全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)
+- [Node.js 从 v11.0.0 开始支持全局导出](https://nodejs.org/api/util.html#util_class_util_textdecoder)

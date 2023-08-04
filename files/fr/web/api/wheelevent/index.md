@@ -1,14 +1,8 @@
 ---
 title: WheelEvent
 slug: Web/API/WheelEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
-translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 L'interface **`WheelEvent`** représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.

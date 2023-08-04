@@ -1,16 +1,8 @@
 ---
 title: document.createElementNS
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Elements
-  - Méthodes
-  - URI
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.

@@ -1,57 +1,67 @@
 ---
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
+l10n:
+  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
 ---
+
 {{ APIRef("Web Audio API") }}
 
-インターフェースの`start()`メソッドは、オーディオバッファの再生をスケジュールするために使われます。
+`start()` は {{ domxref("AudioBufferSourceNode") }} インターフェイスのメソッドで、
+このメソッドは、バッファーに含まれる音声データの再生を予約したり、すぐに再生を開始したりするために使用されます。
 
 ## 構文
 
-```js
-var source = audioCtx.createBufferSource();
-source.start(when, offset, duration);
+```js-nolint
+start(when)
+start(when, offset)
+start(when, offset, duration)
 ```
+
+### 引数
+
+- `when` {{optional_inline}}
+  - : 音が鳴り始めるべき時刻（秒単位）。 {{domxref("AudioContext")}} が使用するのと同じ時間座標系で指定します。もし `when` が ({{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}} よりも小さいか、 0 であれば、音の再生はすぐに開始されます。**既定値は 0 です。**
+- `offset` {{optional_inline}}
+  - : 音声バッファー内で再生を始めるべき時刻を、 `AudioContext` と同じ時間座標系で秒単位で指定したオフセットです。例えば、 10 秒の音声クリップの半分から再生を始めるには、 `offset` は 5 となります。既定値である 0 は、音声バッファの先頭から再生を始めます。再生される音声の終わりを過ぎたオフセット（音声バッファーの {{domxref("AudioBuffer.duration", "duration")}} や {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} 属性に基づく）は、許容範囲内の最大値に暗黙に収められます。サウンドへのオフセットの計算は、現在の再生速度ではなく、音声バッファー本来のサンプルレートを使用して行われるため、サウンドが通常の 2 倍の速度で再生されている場合でも、 10 秒の音声バッファーの中間の点は 5 となります。
+- `duration` {{optional_inline}}
+  - : サウンドの再生時間を秒単位で指定します。この引数が指定されなかった場合、サウンドは自然に終了するか、 {{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドを使用して停止されるまで再生されます。この引数を使用すると、 `start(when, offset)` を呼び出してから `stop(when+duration)` を使用するのと機能的に同じになります。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 3 つの時間引数のうち 1 つ以上に負の値が指定された場合に発生します。時間物理学の法則を改ざんしようとしないでください。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : `start()` が既に呼び出されていた場合に発生します。この関数は `AudioBufferSourceNode` が生きている間に一度だけ呼び出すことができます。
 
 ## 例
 
-最も単純なオーディオバッファの再生方法—この場合は何もパラメータを指定する必要はありません。
+最も単純な例は、音声バッファー再生を最初から始めるだけです。この場合、引数を指定する必要はありません。
 
 ```js
 source.start();
 ```
 
-次はそれよりも複雑な再生方法です。1 秒待った後、オーディオバッファの 3 秒経過した位置から、10 秒間再生します。
+次はそれよりも複雑な再生方法です。1 秒待った後、音声バッファーの 3 秒経過した位置から、10 秒間再生します。
 
 ```js
-source.start(audioCtx.currentTime + 1,3,10);
+source.start(audioCtx.currentTime + 1, 3, 10);
 ```
 
-> **Note:** **注:** start()の使い方の完全な例は{{domxref("AudioContext.decodeAudioData")}}を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
+> **メモ:** `start()` の使い方の完全な例は {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} を参照してください。[コードをすぐに実行する](https://mdn.github.io/webaudio-examples/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)こともできます。
 
-### 戻り値
+## 仕様書
 
-なし
+{{Specifications}}
 
-## 引数
+## ブラウザーの互換性
 
-- when
-  - : `whenパラメータ`は、再生が*いつ*始まるかを決定します。`when`の時刻を過ぎると、再生が始まります。このメソッドが 2 回以上、または`AudioBufferSourceNode.stop()`の後に呼ばれると、例外が発生します
-- offset
-  - : `offset`パラメータは、再生が*どこから*始まるかを決定します
-- duration
-  - : `duration`パラメータは、デフォルトは音声の長さから`offset`の値を引いた値で、再生時間を決定します
+{{Compat}}
 
-## 仕様
+## 関連情報
 
-| Specification                                                                                                                                                        | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |         |
-
-## ブラウザ互換性
-
-{{Compat("api.AudioBufferSourceNode.start")}}
-
-## 参考
-
-- [Using the Web Audio API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,19 +1,8 @@
 ---
 title: 音声と動画の加工
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Audio
-  - Canvas
-  - Examples
-  - Guide
-  - HTML5
-  - Media
-  - Video
-  - Web Audio API
-  - WebGL
-  - developer recommendation
-translation_of: Web/Guide/Audio_and_video_manipulation
 ---
+
 ウェブのよいところは、複数の技術をまとめて新しいものを作ることができる点です。ネイティブの音声や動画をブラウザー上で利用できるということは、これらのデータストリームを {{htmlelement("canvas")}}、[WebGL](/ja/docs/Web/WebGL)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API) を利用して操作することで、音声や動画に直接変更を加えることができることを意味します。例えば音声にリバーブやコンプレッション効果をかけたり、動画にグレイスケールやセピアのフィルターをかけたりすることができます。この記事では、必要なことを説明するためのリファレンスを提供します。
 
 ## 動画の加工
@@ -26,10 +15,10 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 一般的なテクニックは次のようになります。
 
-1.  {{htmlelement("video")}} 要素からのフレームを中間の {{htmlelement("canvas")}} 要素に描画します。
-2.  中間の `<canvas>` 要素からデータを取得し、それを加工します。
-3.  加工したデータを「画面」の `<canvas>` を通じて描画します。
-4.  一時停止し、繰り返します。
+1. {{htmlelement("video")}} 要素からのフレームを中間の {{htmlelement("canvas")}} 要素に描画します。
+2. 中間の `<canvas>` 要素からデータを取得し、それを加工します。
+3. 加工したデータを「画面」の `<canvas>` を通じて描画します。
+4. 一時停止し、繰り返します。
 
 例えば、動画を処理してグレースケールで表示する場合を考えてみましょう。この場合、ソース動画と出力のグレースケールのフレームの両方を表示します。通常、「動画をグレースケールで再生」機能を実装する場合、 `display: none` を `<video>` 要素のスタイルに追加して、ソース動画が画面に描画されず、変更されたフレームのみが表示されるキャンバスが表示されるようにします。
 
@@ -38,9 +27,18 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 動画プレイヤーと、 `<canvas>` 要素は次のように記述します。
 
 ```html
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 
 <canvas id="my-canvas" width="480" height="270"></canvas>
@@ -52,7 +50,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 ```js
 var processor = {
-  timerCallback: function() {
+  timerCallback: function () {
     if (this.video.paused || this.video.ended) {
       return;
     }
@@ -63,26 +61,34 @@ var processor = {
     }, 16); // roughly 60 frames per second
   },
 
-  doLoad: function() {
+  doLoad: function () {
     this.video = document.getElementById("my-video");
     this.c1 = document.getElementById("my-canvas");
     this.ctx1 = this.c1.getContext("2d");
     var self = this;
 
-    this.video.addEventListener("play", function() {
-      self.width = self.video.width;
-      self.height = self.video.height;
-      self.timerCallback();
-    }, false);
+    this.video.addEventListener(
+      "play",
+      function () {
+        self.width = self.video.width;
+        self.height = self.video.height;
+        self.timerCallback();
+      },
+      false,
+    );
   },
 
-  computeFrame: function() {
+  computeFrame: function () {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     var frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     var l = frame.data.length / 4;
 
     for (var i = 0; i < l; i++) {
-      var grey = (frame.data[i * 4 + 0] + frame.data[i * 4 + 1] + frame.data[i * 4 + 2]) / 3;
+      var grey =
+        (frame.data[i * 4 + 0] +
+          frame.data[i * 4 + 1] +
+          frame.data[i * 4 + 2]) /
+        3;
 
       frame.data[i * 4 + 0] = grey;
       frame.data[i * 4 + 1] = grey;
@@ -91,14 +97,14 @@ var processor = {
     this.ctx1.putImageData(frame, 0, 0);
 
     return;
-  }
+  },
 };
 ```
 
 ページの読み込み後に、次のように呼び出してください。
 
 ```js
-processor.doLoad()
+processor.doLoad();
 ```
 
 #### 結果
@@ -107,7 +113,7 @@ processor.doLoad()
 
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
-> **Note:** 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
+> **メモ:** 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
@@ -115,7 +121,7 @@ processor.doLoad()
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-> **Note:** [このデモのソースコードは GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
+> **メモ:** [このデモのソースコードは GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) にあります ([ライブで表示](https://mdn.github.io/webgl-examples/tutorial/sample8/)も)。
 
 ### 再生速度
 
@@ -126,22 +132,27 @@ processor.doLoad()
 #### HTML
 
 ```html
-<video id="my-video" controls
-       src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v">
-</video>
+<video
+  id="my-video"
+  controls
+  src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"></video>
 ```
 
 #### JavaScript
 
 ```js
-var myVideo = document.getElementById('my-video');
+var myVideo = document.getElementById("my-video");
 myVideo.playbackRate = 2;
 ```
 
 ```html hidden
 <video id="my-video" controls="true" width="480" height="270">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -149,35 +160,36 @@ myVideo.playbackRate = 2;
 </div>
 <textarea id="code" class="playable-code">
 var myVideo = document.getElementById('my-video');
-myVideo.playbackRate = 2;</textarea>
+myVideo.playbackRate = 2;</textarea
+>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function setPlaybackRate() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   setPlaybackRate();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setPlaybackRate);
-window.addEventListener('load', setPlaybackRate);
+textarea.addEventListener("input", setPlaybackRate);
+window.addEventListener("load", setPlaybackRate);
 ```
 
 {{ EmbedLiveSample('Playable_code', 700, 425) }}
 
-> **Note:** [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
+> **メモ:** [playbackRate のデモ](https://jsbin.com/qomuvefu/2/edit)を試してみてください。
 
 ## 音声の加工
 
@@ -187,12 +199,12 @@ window.addEventListener('load', setPlaybackRate);
 
 Web Audio API は、様々なソースから音声を受け取り、それを処理してを受信し、それを処理して音を処理した後に送信する出力機器を表す {{domxref("AudioDestinationNode")}} に送り出すことができます。
 
-| この音声ソースの場合...                                                                                                                                                   | この Web Audio ノード型を使用してください node type      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| HTML の {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の音声トラック                                                                       | {{domxref("MediaElementAudioSourceNode")}} |
-| メモリ内の生の音声データバッファー                                                                                                                                        | {{domxref("AudioBufferSourceNode")}}         |
-| サイン波やその他の合成波形を生成するオシレーター                                                                                                                          | {{domxref("OscillatorNode")}}                 |
-| [WebRTC](/ja/docs/Web/API/WebRTC_API) の音声トラック (例えば {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得できるマイク入力) | {{domxref("MediaStreamAudioSourceNode")}} |
+| この音声ソースの場合...                                                                                                                                 | この Web Audio ノード型を使用してください node type |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| HTML の {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の音声トラック                                                                     | {{domxref("MediaElementAudioSourceNode")}}          |
+| メモリ内の生の音声データバッファー                                                                                                                      | {{domxref("AudioBufferSourceNode")}}                |
+| サイン波やその他の合成波形を生成するオシレーター                                                                                                        | {{domxref("OscillatorNode")}}                       |
+| [WebRTC](/ja/docs/Web/API/WebRTC_API) の音声トラック (例えば {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使用して取得できるマイク入力) | {{domxref("MediaStreamAudioSourceNode")}}           |
 
 ### 音声フィルター
 
@@ -201,17 +213,17 @@ Web Audio API では {{domxref("BiquadFilterNode")}} を利用することで様
 #### HTML
 
 ```html
-<video id="my-video" controls
-       src="myvideo.mp4" type="video/mp4">
-</video>
+<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript
 
 ```js
 var context = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter = context.createBiquadFilter();
+  audioSource = context.createMediaElementSource(
+    document.getElementById("my-video"),
+  ),
+  filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
@@ -222,9 +234,18 @@ filter.gain.value = 25;
 ```
 
 ```html hidden
-<video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+<video
+  id="my-video"
+  controls="true"
+  width="480"
+  height="270"
+  crossorigin="anonymous">
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
 </video>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -233,41 +254,44 @@ filter.gain.value = 25;
 <textarea id="code" class="playable-code">
 filter.type = "lowshelf";
 filter.frequency.value = 1000;
-filter.gain.value = 25;</textarea>
+filter.gain.value = 25;</textarea
+>
 ```
 
 ```js hidden
-var context     = new AudioContext(),
-    audioSource = context.createMediaElementSource(document.getElementById("my-video")),
-    filter      = context.createBiquadFilter();
+var context = new AudioContext(),
+  audioSource = context.createMediaElementSource(
+    document.getElementById("my-video"),
+  ),
+  filter = context.createBiquadFilter();
 audioSource.connect(filter);
 filter.connect(context.destination);
 
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function setFilter() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   setFilter();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', setFilter);
-window.addEventListener('load', setFilter);
+textarea.addEventListener("input", setFilter);
+window.addEventListener("load", setFilter);
 ```
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **Note:** [CORS](/ja/docs/Web/HTTP/Access_control_CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> **メモ:** [CORS](/ja/docs/Web/HTTP/Access_control_CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 
@@ -282,7 +306,7 @@ window.addEventListener('load', setFilter);
 - ノッチ: 指定された周波数帯を除き、全ての音を通過させます
 - オールパス: 周波数に関わらず全ての音を通過させますが、幾つかの周波数間の相関係を変更します
 
-> **Note:** 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
+> **メモ:** 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
 
 ### たたみ込みとインパルス
 
@@ -320,7 +344,7 @@ source.start(0);
 context.listener.setPosition(0, 0, 0);
 ```
 
-> **Note:** [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
+> **メモ:** [GitHub リポジトリに例](https://github.com/mdn/webaudio-examples/tree/master/panner-node)があります ([ライブ版](https://mdn.github.io/webaudio-examples/panner-node/)も)。
 
 ## JavaScript によるコーデック
 
@@ -335,7 +359,7 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **Note:** AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
+> **メモ:** AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
 
 ## 例
 

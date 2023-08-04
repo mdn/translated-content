@@ -1,27 +1,37 @@
 ---
-title: HTMLFormElement.length
+title: "HTMLFormElement: length プロパティ"
+short-title: length
 slug: Web/API/HTMLFormElement/length
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
-{{ApiRef}}
 
-## 概要
+{{APIRef("HTML DOM")}}
 
-`length` は {{htmlelement("form")}} 要素内のフォームコントロールの数を返します。
+**`HTMLFormElement.length`** は読み取り専用のプロパティで、 {{HTMLElement("form")}} 要素に含まれるコントロールの数を返します。
 
-## 構文
+フォームのコントロールの一覧には {{domxref("HTMLFormElement.elements", "elements")}} プロパティを使用してアクセスすることができます。
 
-```
-integer = form.length
-```
+これは `<form>` 要素の子孫である要素、および `form` プロパティを使用してフォームのメンバーになった要素の両方が含まれます。
+
+このプロパティで扱われる要素は、 {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} （ただし、 "image" 型のものは、歴史的な理由によって除外されます）、{{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} です。
+
+## 値
+
+数値です。
 
 ## 例
 
 ```js
 if (document.getElementById("form1").length > 1) {
-  // more than one form control here
+  // 複数のフォームコントロールがある場合
 }
 ```
 
 ## 仕様書
 
-- [DOM Level 2: length](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

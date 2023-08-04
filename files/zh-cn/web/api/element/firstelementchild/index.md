@@ -2,6 +2,7 @@
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.firstElementChild`** 只读属性，返回对象的第一个子 {{domxref("元素")}}, 如果没有子元素，则为 null。
@@ -18,15 +19,15 @@ var element = node.firstElementChild;
 
 ```html
 <ul id="foo">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-var foo = document.getElementById('foo');
-// yields: First  (1)
-console.log(foo.firstElementChild.textContent);
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // 输出 "First (1)"
 </script>
 ```
 
@@ -61,11 +62,9 @@ console.log(foo.firstElementChild.textContent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.firstElementChild")}}
+{{Compat}}
 
 ## 参见
-
-## [Ed](/zh-CN/docs/Web/API/Element/lastElementChild$edit#参见)
 
 - 纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。
 - 实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。

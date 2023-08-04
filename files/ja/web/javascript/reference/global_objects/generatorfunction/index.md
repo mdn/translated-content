@@ -1,16 +1,8 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
-  - コンストラクター
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef}}
 
 **`GeneratorFunction` コンストラクター**は、新しい{{jsxref("Statements/function*", "ジェネレーター関数", "", 1)}}オブジェクトを生成します。 JavaScript では、すべてのジェネレーター関数が実際に `GeneratorFunction` オブジェクトです。
@@ -40,7 +32,7 @@ new GeneratorFunction ([arg1[, arg2[, ...argN]],] functionBody)
 
 関数に渡されたすべての引数は、渡された順に、作成される関数内の引数の識別子の名前として扱われます。
 
-> **Note:** **注:** {{jsxref("Statements/function*", "ジェネレーター関数")}}が `GeneratorFunction` コンストラクターによって生成された場合、生成コンテキストのクロージャは作成されません。常にグローバルスコープに生成されます。
+> **メモ:** {{jsxref("Statements/function*", "ジェネレーター関数")}}が `GeneratorFunction` コンストラクターによって生成された場合、生成コンテキストのクロージャは作成されません。常にグローバルスコープに生成されます。
 >
 > 実行すると、ローカル変数とグローバルグローバル変数にのみアクセスでき、 `GeneratorFunction` コンストラクターが呼び出されたスコープの変数にはアクセスできません。
 >
@@ -61,9 +53,7 @@ console.log(iterator.next().value); // 20
 
 ## 仕様書
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

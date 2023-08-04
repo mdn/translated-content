@@ -2,6 +2,9 @@
 title: <noframes>
 slug: Web/HTML/Element/noframes
 ---
+
+{{HTMLSidebar}}{{deprecated_header}}
+
 ## 概述
 
 `<noframes>` 是个 HTML 元素，用于支持不支持 {{HTMLElement("frame")}} 元素的浏览器，或者这样配置的浏览器。
@@ -12,7 +15,7 @@ slug: Web/HTML/Element/noframes
 
 ## 属性
 
-就像其它 HTML 元素那样，这个元素支持 [全局属性](/en-US/HTML/Global_attributes)。
+就像其他 HTML 元素那样，这个元素支持 [全局属性](/zh-CN/HTML/Global_attributes)。
 
 ## 示例
 
@@ -20,7 +23,11 @@ slug: Web/HTML/Element/noframes
 <frameset cols="50%,50%">
   <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
   <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-  <noframes><p>It seems your browser does not support frames or is not configured do so.</p></noframes>
+  <noframes>
+    <p>
+      It seems your browser does not support frames or is not configured do so.
+    </p>
+  </noframes>
 </frameset>
 ```
 
@@ -29,4 +36,4 @@ slug: Web/HTML/Element/noframes
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("frame")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

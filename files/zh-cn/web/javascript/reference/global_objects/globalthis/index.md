@@ -2,6 +2,7 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 全局属性 `globalThis` 包含全局的 `this` 值，类似于全局对象（global object）。
@@ -38,15 +39,21 @@ globalThis
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // 此环境中没有 setTimeout 方法！
 }
 ```
@@ -54,7 +61,7 @@ if (typeof globals.setTimeout !== 'function') {
 但是有了 `globalThis` 之后，只需要：
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   //  此环境中没有 setTimeout 方法！
 }
 ```

@@ -1,29 +1,25 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
+l10n:
+  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
 ---
+
 {{JSRef}}
 
-**`getMilliseconds()`** メソッドは、ローカル時間に基づき、指定された日時の「ミリ秒」を返します。
+**`getMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を返します。
 
 {{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
 
 ## 構文
 
-```
-dateObj.getMilliseconds()
+```js-nolint
+getMilliseconds()
 ```
 
 ### 返値
 
-ローカル時間に基づき、指定された日時の「ミリ秒」を表す 0 から 999 までの間の数値。
+地方時に基づき、指定された日時の「ミリ秒」を表す 0 から 999 までの間の数値。
 
 ## 例
 
@@ -32,19 +28,17 @@ dateObj.getMilliseconds()
 次の例は、現在時刻のミリ秒部を変数 `milliseconds` に代入します。
 
 ```js
-var today = new Date();
-var milliseconds = today.getMilliseconds();
+const today = new Date();
+const milliseconds = today.getMilliseconds();
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getMilliseconds")}}
+{{Compat}}
 
 ## 関連情報
 

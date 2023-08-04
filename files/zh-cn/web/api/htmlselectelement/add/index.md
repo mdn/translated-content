@@ -2,6 +2,7 @@
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.add()`** 方法用于向 `select` 元素的 `option` 元素集合中添加一个元素。
@@ -19,7 +20,7 @@ collection.add(item[, before]);
 
 ### 异常
 
-- 如果传入的 _item_ 是 `{{domxref("HTMLSelectElement")}}` 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
+- 如果传入的 _item_ 是 {{domxref("HTMLSelectElement")}} 的祖先元素，`HierarchyRequestError` 类型的 {{domxref("DOMError")}} 会被抛出。
 
 ## 示例
 
@@ -130,4 +131,4 @@ sel.add(opt, sel.options[1]);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.add")}}
+{{Compat}}

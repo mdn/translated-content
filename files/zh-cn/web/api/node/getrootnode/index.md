@@ -2,6 +2,7 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Node")}} 接口的 **`getRootNode()`** 方法返回上下文中的根节点，如果 shadow DOM 可用，则对 shadow DOM 同样适用。
@@ -16,7 +17,7 @@ var root = node.getRootNode(options);
 
 - `options` {{optional_inline}}
 
-  - : 获取根节点时的可选参数对象. 下列值可供选择：
+  - : 获取根节点时的可选参数对象。下列值可供选择：
 
     - `composed`: {{jsxref('Boolean')}} 如果检索到 shadow Root 需要返回，则设置为（`false`，默认值），如果跳过 shadow Root 检索普通 Root 则设置为（`true`）。
 
@@ -40,29 +41,30 @@ rootNode = node.rootNode;
 ```html
 <!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
 <div class="js-parent">
-    <div class="js-child"></div>
+  <div class="js-child"></div>
 </div>
 <div class="js-shadowHost"></div>
 <script>
-    // work on Chrome 54+，Opera41+
+  // work on Chrome 54+，Opera41+
 
-    var parent = document.querySelector('.js-parent'),
-        child = document.querySelector('.js-child'),
-        shadowHost = document.querySelector('.js-shadowHost');
+  var parent = document.querySelector(".js-parent"),
+    child = document.querySelector(".js-child"),
+    shadowHost = document.querySelector(".js-shadowHost");
 
-    console.log(parent.getRootNode().nodeName); // #document
-    console.log(child.getRootNode().nodeName); // #document
+  console.log(parent.getRootNode().nodeName); // #document
+  console.log(child.getRootNode().nodeName); // #document
 
-    // create a ShadowRoot
-    var shadowRoot = shadowHost.attachShadow({mode:'open'});
-    shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
-        + '<div class="js-shadowChild">content</div>';
-    var shadowChild = shadowRoot.querySelector('.js-shadowChild');
+  // create a ShadowRoot
+  var shadowRoot = shadowHost.attachShadow({ mode: "open" });
+  shadowRoot.innerHTML =
+    "<style>div{background:#2bb8aa;}</style>" +
+    '<div class="js-shadowChild">content</div>';
+  var shadowChild = shadowRoot.querySelector(".js-shadowChild");
 
-    // The default value of composed is false
-    console.log(shadowChild.getRootNode() === shadowRoot); // true
-    console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
-    console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
+  // The default value of composed is false
+  console.log(shadowChild.getRootNode() === shadowRoot); // true
+  console.log(shadowChild.getRootNode({ composed: false }) === shadowRoot); // true
+  console.log(shadowChild.getRootNode({ composed: true }).nodeName); // #document
 </script>
 ```
 
@@ -72,4 +74,4 @@ rootNode = node.rootNode;
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.getRootNode")}}
+{{Compat}}

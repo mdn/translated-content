@@ -1,14 +1,8 @@
 ---
 title: contrast()
 slug: Web/CSS/filter-function/contrast
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Reference
-translation_of: Web/CSS/filter-function/contrast()
-original_slug: Web/CSS/filter-function/contrast()
 ---
+
 {{cssref}}
 
 **`contrast()`** [CSS](/ko/docs/Web/CSS) 함수는 주어진 이미지의 대비를 조절합니다. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.

@@ -1,15 +1,8 @@
 ---
 title: TaskAttributionTiming.containerType
 slug: Web/API/TaskAttributionTiming/containerType
-tags:
-  - API
-  - Long Tasks API
-  - Performance
-  - Property
-  - Reference
-  - TaskAttributionTiming
-translation_of: Web/API/TaskAttributionTiming/containerType
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 {{domxref("TaskAttributionTiming")}} インターフェイスの **`containerType`** 読み取り専用プロパティは、フレームコンテナのタイプ（`iframe`、`embed`、`object` のいずれか）を返します。
@@ -26,9 +19,7 @@ var containerType = TaskAttributionTiming.containerType;
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containertype','containerType')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

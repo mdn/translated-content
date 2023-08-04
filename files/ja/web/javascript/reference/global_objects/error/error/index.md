@@ -1,12 +1,8 @@
 ---
 title: Error() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
+
 {{JSRef}}
 
 **`Error`** コンストラクターは、エラーオブジェクトを生成します。
@@ -30,21 +26,19 @@ new Error([message[, fileName[, lineNumber]]])
 
 ### 関数呼び出しか new による構築か
 
-`Error` が関数のように使用された場合 -- {{JSxRef("Operators/new", "new")}} がなかった場合、 `Error` オブジェクトを返します。したがって、 `Error` を呼び出すだけで `Error` オブジェクトを `new` キーワードから構築した場合と同じものを出力します。
+`Error` が関数のように使用された場合 — {{JSxRef("Operators/new", "new")}} がなかった場合、 `Error` オブジェクトを返します。したがって、 `Error` を呼び出すだけで `Error` オブジェクトを `new` キーワードから構築した場合と同じものを出力します。
 
 ```js
 // これは...
 const x = Error('関数呼び出しによって生成されました。')
 
-​​​​// ...これと同じ機能です。
+// ...これと同じ機能です。
 const y = new Error('"new" キーワードによって生成されました。')
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

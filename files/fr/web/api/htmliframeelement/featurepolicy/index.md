@@ -1,15 +1,8 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - HTMLIFrameElement
-  - Policy
-  - Property
-translation_of: Web/API/HTMLIFrameElement/featurePolicy
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HTMLIFrameElement")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour consulter facilement les règles de fonctionnalités appliquées à un élément `<iframe>` spécifique.
@@ -17,7 +10,7 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HT
 ## Syntaxe
 
 ```js
-var policy = HTMLIFrameElement.featurePolicy
+var policy = HTMLIFrameElement.featurePolicy;
 ```
 
 ### Valeur

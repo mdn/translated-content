@@ -1,14 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
+
 {{JSRef}}
 
 **`URIError`** オブジェクトは、グローバル URI 処理関数が間違った方法で使用された場合のエラーを表します。
@@ -69,9 +63,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,8 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} 인터페이스의 **`devicePixelRatio`** 읽기 전용 속성은 현재 표시 장치의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다. CSS 픽셀의 크기를 물리적 픽셀의 크기로 나눈 값으로 해석해도 됩니다. 또 다른 해석은, 하나의 CSS 픽셀을 그릴 때 사용해야 하는 장치 픽셀의 수라고 할 수 있습니다.
@@ -19,7 +13,9 @@ translation_of: Web/API/Window/devicePixelRatio
 
 ## 구문
 
-    value = window.devicePixelRatio
+```js
+value = window.devicePixelRatio;
+```
 
 ## 예제
 
@@ -36,8 +32,8 @@ A {{htmlelement("canvas")}} can appear too blurry on retina screens. Use `window
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Set display size (css pixels).
 var size = 200;
@@ -55,9 +51,9 @@ ctx.scale(scale, scale);
 ctx.fillStyle = "#bada55";
 ctx.fillRect(10, 10, 300, 300);
 ctx.fillStyle = "#ffffff";
-ctx.font = '18px Arial';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
+ctx.font = "18px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
 
 var x = size / 2;
 var y = size / 2;
@@ -66,7 +62,7 @@ var textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![This image describe the impact of different value on retina display. ](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png)
+[![This image describe the impact of different value on retina display.](devicepixelration_diff..png)](https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff.png)]
 
 ### Monitoring screen resolution or zoom level changes
 
@@ -84,7 +80,7 @@ const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
-}
+};
 
 updatePixelRatio();
 
@@ -104,12 +100,14 @@ The HTML creates the boxes containing the instructions and the `pixel-ratio` box
 ```html
 <div class="container">
   <div class="inner-container">
-    <p>This example demonstrates the effect of zooming the page in
-       and out (or moving it to a screen with a different scaling
-       factor) on the value of the property <code>Window.devicePixelRatio</code>.
-       Try it and watch what happens!</p>
+    <p>
+      This example demonstrates the effect of zooming the page in and out (or
+      moving it to a screen with a different scaling factor) on the value of the
+      property <code>Window.devicePixelRatio</code>. Try it and watch what
+      happens!
+    </p>
   </div>
-    <div class="pixel-ratio"></div>
+  <div class="pixel-ratio"></div>
 </div>
 ```
 

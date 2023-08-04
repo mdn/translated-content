@@ -1,20 +1,15 @@
 ---
-title: Notification.badge
-slug: Web/API/notification/badge
+title: Notification：badge 属性
+slug: Web/API/Notification/badge
 ---
-{{SeeCompatTable}}{{APIRef("Notifications API")}}
 
-当没有足够的空间来显示通知本身时，{{domxref("Notification")}}接口的 **`badge`** 属性返回用于表示通知的图像 URL。
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-## 语法
+当没有足够的空间来显示通知本身时，{{domxref("Notification")}} 接口的 **`badge`** 属性返回用于表示通知的图像 URL。
 
-```plain
-var url = Notification.badge
-```
+## 值
 
-### 值
-
-包含一个 URL 的 {{domxref('USVString')}} 。
+一个包含 URL 的字符串。
 
 ## 规范
 
@@ -22,4 +17,4 @@ var url = Notification.badge
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.badge")}}
+{{Compat}}

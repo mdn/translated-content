@@ -1,16 +1,8 @@
 ---
 title: ブロック整形コンテキスト
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Reference
-  - Web
-spec-urls: https://drafts.csswg.org/css-display/#block-formatting-context
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **ブロック整形コンテキスト** (block formatting context, BFC) は、ウェブページにおける CSS の視覚的なレンダリングの一部です。ブロックボックスのレイアウトが行われ、浮動が他の要素と相互作用する領域です。
@@ -38,7 +30,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 - 外部の浮動要素を追いやります。
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)を抑止します。
 
-> **Note:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
+> **メモ:** フレックス／グリッドコンテナー ({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) は新しいフレックス／グリッド整形コンテキストを確立します。これは、レイアウト以外はブロック整形コンテキストに類似しています。フレックス／グリッドコンテナーの中に利用できる浮動子要素はありませんが、外部の浮動要素を除外したり、マージンの折りたたみを抑制したりすることはできます。
 
 ## 例
 
@@ -68,22 +60,22 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 
 ```html
 <section>
-    <div class="box">
-        <div class="float">浮動ボックスです。</div>
-        <p>コンテナー内のコンテンツです。</p>
-    </div>
+  <div class="box">
+    <div class="float">浮動ボックスです。</div>
+    <p>コンテナー内のコンテンツです。</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="overflow:auto">
-        <div class="float">浮動ボックスです。</div>
-        <p><code>overflow:auto</code> のコンテナー内のコンテンツです。</p>
-    </div>
+  <div class="box" style="overflow:auto">
+    <div class="float">浮動ボックスです。</div>
+    <p><code>overflow:auto</code> のコンテナー内のコンテンツです。</p>
+  </div>
 </section>
 <section>
-    <div class="box" style="display:flow-root">
-        <div class="float">浮動ボックスです。</div>
-        <p><code>display:flow-root</code> のコンテナー内のコンテンツです。</p>
-    </div>
+  <div class="box" style="display:flow-root">
+    <div class="float">浮動ボックスです。</div>
+    <p><code>display:flow-root</code> のコンテナー内のコンテンツです。</p>
+  </div>
 </section>
 ```
 
@@ -91,23 +83,23 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .5);
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -128,7 +120,10 @@ section {
 </section>
 <section>
   <div class="float">外部の浮動要素の大きさを変えてみてください</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+  <div class="box" style="display:flow-root">
+    <p><code>display:flow-root</code></p>
+    <p></p>
+  </div>
 </section>
 ```
 
@@ -136,26 +131,26 @@ section {
 
 ```css
 section {
-    height:150px;
+  height: 150px;
 }
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
 }
 .box[style] {
-    background-color: aliceblue;
-    border: 5px solid steelblue;
+  background-color: aliceblue;
+  border: 5px solid steelblue;
 }
 .float {
-    float: left;
-    overflow: hidden; /* required by resize:both */
-    resize: both;
-    margin-right:25px;
-    width: 200px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, .75);
-    border: 1px solid black;
-    padding: 10px;
+  float: left;
+  overflow: hidden; /* required by resize:both */
+  resize: both;
+  margin-right: 25px;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -183,7 +178,8 @@ inline-block で width:\<percentage> を使用するよりも、この場合は�
 #### CSS
 
 ```css
-.blue, .red-inner {
+.blue,
+.red-inner {
   height: 50px;
   margin: 10px 0;
 }

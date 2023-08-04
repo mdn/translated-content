@@ -1,13 +1,8 @@
 ---
 title: Content type
 slug: Web/SVG/Content_type
-tags:
-  - NeedsTechnicalReview
-  - SVG
-  - Types
-  - data types
-translation_of: Web/SVG/Content_type
 ---
+
 SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
 
 ## Angle (角度)
@@ -73,17 +68,17 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     The following are examples of legal clock values:
 
     - Full clock values:
-      `02:30:03 `= 2 hours, 30 minutes and 3 seconds
+      `02:30:03` = 2 hours, 30 minutes and 3 seconds
       `50:00:10.25` = 50 hours, 10 seconds and 250 milliseconds
     - Partial clock value:
-      `02:33 `= 2 minutes and 33 seconds
+      `02:33` = 2 minutes and 33 seconds
       `00:10.5` = 10.5 seconds = 10 seconds and 500 milliseconds
     - Timecount values:
-      `3.2h `= 3.2 hours = 3 hours and 12 minutes
-      `45min `= 45 minutes
-      `30s `= 30 seconds
-      `5ms `= 5 milliseconds
-      `12.467 `= 12 seconds and 467 milliseconds
+      `3.2h` = 3.2 hours = 3 hours and 12 minutes
+      `45min`= 45 minutes
+      `30s` = 30 seconds
+      `5ms` = 5 milliseconds
+      `12.467`= 12 seconds and 467 milliseconds
 
     Fractional values are just (base 10) floating point definitions of seconds. Thus:
 
@@ -173,7 +168,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 
   - : An **I**nternationalized **R**esource **I**dentifier.
 
-    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at <http://example.com> might have the following \_IRI_:
+    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following _IRI_:
 
     ```
     http://example.com/someDrawing.svg
@@ -185,7 +180,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    _IRI_s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both \_IRI_s and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an \_IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    _IRI_s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 

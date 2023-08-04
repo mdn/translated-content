@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerRegistration")}} 接口的 **`unregister`** 方法用于取消对 service worker 的注册并返回一个 {{jsxref("Promise")}}。没有找到注册时，这个 promise 返回 `false` ，否则，不论取消成功与否都返回 `true` （当其他人在同一作用域调用了 {{domxref("ServiceWorkerContainer.register")}} 可能取消失败）service worker 会在取消注册前完成一切正在进行的操作。
@@ -28,18 +29,21 @@ Promise 返回一个 bool 值表示 service worker 是否被取消注册。
 下面的简单例子中注册了一个 service worker，然后立即取消了：
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // registration worked
-    console.log('Registration succeeded.');
-    registration.unregister().then(function(boolean) {
-      // if boolean = true, unregister is successful
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw-test/sw.js", { scope: "sw-test" })
+    .then(function (registration) {
+      // registration worked
+      console.log("Registration succeeded.");
+      registration.unregister().then(function (boolean) {
+        // if boolean = true, unregister is successful
+      });
+    })
+    .catch(function (error) {
+      // registration failed
+      console.log("Registration failed with " + error);
     });
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
+}
 ```
 
 ## 规范
@@ -48,7 +52,7 @@ if ('serviceWorker' in navigator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.ServiceWorkerRegistration.unregister")}}
+{{Compat}}
 
 ## 参见
 

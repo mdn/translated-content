@@ -1,13 +1,8 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLDivElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLDivElement`** fournit certaines propriétés spécifiques (en plus de celles qui proviennent de l'interface {{domxref("HTMLElement")}} via l'héritage) afin de manipuler les éléments {{HtmlElement("div")}}.

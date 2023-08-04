@@ -1,8 +1,8 @@
 ---
 title: <mtr>
 slug: Web/MathML/Element/mtr
-translation_of: Web/MathML/Element/mtr
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElement("mtable") }} 要素の中にしか現れません。この要素は [HTML](/ja/docs/HTML) の {{ HTMLElement("tr") }} 要素に似ています。
@@ -30,10 +30,7 @@ MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElem
 
 ## 仕様
 
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mtr', 'mtr') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mtr', 'mtr') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

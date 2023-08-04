@@ -2,6 +2,7 @@
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
 ---
+
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
 **Broadcast Channel API** 可以实现同 {{glossary("origin", "源")}} 下浏览器不同窗口，Tab 页，frame 或者 iframe 下的 {{glossary("browsing context", "浏览器上下文")}} (通常是同一个网站下不同的页面) 之间的简单通讯。
@@ -22,7 +23,7 @@ slug: Web/API/Broadcast_Channel_API
 
 ```js
 // 连接到广播频道
-var bc = new BroadcastChannel('test_channel');
+var bc = new BroadcastChannel("test_channel");
 ```
 
 ### 发送消息
@@ -31,18 +32,20 @@ var bc = new BroadcastChannel('test_channel');
 
 ```js
 // 发送简单消息的示例
-bc.postMessage('This is a test message.');
+bc.postMessage("This is a test message.");
 ```
 
 不只是 {{domxref("DOMString")}}，任意类型的对象都可以被发送。此 API 不会将消息与任何的语义相关联，因此通道的参与者有必要知道预期的消息类型和消息的消费方式。
 
 ### 接收消息
 
-当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 {{event("message")}} 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
+当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
 
 ```js
 // 简单示例，用于将事件打印到控制台
-bc.onmessage = function (ev) { console.log(ev); }
+bc.onmessage = function (ev) {
+  console.log(ev);
+};
 ```
 
 ### 与频道断开连接
@@ -51,7 +54,7 @@ bc.onmessage = function (ev) { console.log(ev); }
 
 ```js
 // 断开频道连接
-bc.close()
+bc.close();
 ```
 
 ## 总结
@@ -64,7 +67,7 @@ Broadcast Channel API 是一个非常简单的 API，内部包含了跨上下文
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,6 +2,7 @@
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 ---
+
 {{SeeCompatTable}}{{APIRef("DOM Events")}}
 
 {{domxref("InputEvent")}} 接口中的只读属性 **`dataTransfer`** 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。
@@ -24,27 +25,34 @@ var dataTransfer = inputEvent.dataTransfer
 
 ```html
 <p><span style="font-weight: bold; color: blue">Whoa, bold blue text!</span></p>
-<p><span style="font-weight: italic; color: red">Exciting: italic red text!</span></p>
+<p>
+  <span style="font-weight: italic; color: red"
+    >Exciting: italic red text!</span
+  >
+</p>
 <p>Boring normal text ;-(</p>
 
-<hr>
+<hr />
 
-<p contenteditable="true">Go on, try pasting some content into this editable paragraph and see what happens!</p>
+<p contenteditable="true">
+  Go on, try pasting some content into this editable paragraph and see what
+  happens!
+</p>
 
 <p class="result"></p>
 ```
 
 ```js
-var editable = document.querySelector('p[contenteditable]');
-var result = document.querySelector('.result')
+var editable = document.querySelector("p[contenteditable]");
+var result = document.querySelector(".result");
 var dataTransferObj;
 
-editable.addEventListener('input', (e) => {
-  result.textContent = e.dataTransfer.getData('text/html');
+editable.addEventListener("input", (e) => {
+  result.textContent = e.dataTransfer.getData("text/html");
 });
 ```
 
-{{EmbedLiveSample('Examples', '100%', 250)}}
+{{EmbedLiveSample('示例', '100%', 250)}}
 
 ## 规范
 
@@ -52,4 +60,4 @@ editable.addEventListener('input', (e) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.InputEvent.dataTransfer")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: outline-offset
 slug: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -43,7 +44,7 @@ p {
   outline: dashed thin;
   /* Move the outline 10px away from the border */
   outline-offset: 10px;
-  border:1px solid black;
+  border: 1px solid black;
 }
 ```
 
@@ -67,4 +68,4 @@ outline: multiple offsets;
 
 ## Browser compatibility
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

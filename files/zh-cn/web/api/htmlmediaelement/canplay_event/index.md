@@ -1,7 +1,8 @@
 ---
-title: 'HTMLMediaElement: canplay'
+title: "HTMLMediaElement: canplay"
 slug: Web/API/HTMLMediaElement/canplay_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplay` 事件在终端可以播放媒体文件时（但估计还没有加载足够的数据来播放媒体直到其结束，即后续可能需要停止以进一步缓冲内容）被触发。
@@ -42,20 +43,20 @@ slug: Web/API/HTMLMediaElement/canplay_event
 使用 `addEventListener()`：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('canplay', (event) => {
-  console.log('Video can start, but not sure it will play through.');
+video.addEventListener("canplay", (event) => {
+  console.log("Video can start, but not sure it will play through.");
 });
 ```
 
 使用 `oncanplay` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log('Video can start, but not sure it will play through.');
+  console.log("Video can start, but not sure it will play through.");
 };
 ```
 

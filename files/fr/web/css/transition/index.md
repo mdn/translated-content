@@ -1,13 +1,8 @@
 ---
 title: transition
 slug: Web/CSS/transition
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transitions CSS
-translation_of: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.
@@ -33,7 +28,9 @@ transition: margin-right 4s ease-in-out;
 transition: margin-right 4s ease-in-out 1s;
 
 /* S'applique à deux propriétés */
-transition: margin-right 4s, color 1s;
+transition:
+  margin-right 4s,
+  color 1s;
 
 /* S'applique à toutes les propriétés modifiées */
 transition: all 0.5s ease-out;
@@ -59,9 +56,13 @@ Chacune des propriétés de transition décrit la transition qui devrait être a
 
 Si la liste des valeurs est trop courte pour les différentes propriétés, les valeurs seront répétées. Si la liste est trop longue, elle sera tronquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -69,15 +70,11 @@ Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les tr
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Voir aussi
 

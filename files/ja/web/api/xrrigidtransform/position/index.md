@@ -2,6 +2,7 @@
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRRigidTransform")}} の **`position`** 読み取り専用プロパティは、変換の平行移動成分を記述する、メートルで指定された 3D 点を提供する {{domxref("DOMPointReadOnly")}} オブジェクトです。
@@ -16,7 +17,7 @@ let pos = xrRigidTransform.position;
 
 変換行列の 3D 位置成分を示す読み取り専用の {{domxref("DOMPointReadOnly")}}。 単位はメートルです。
 
-> **Note:** **注**: 点の `w` 成分は常に 1.0 です。
+> **メモ:** 点の `w` 成分は常に 1.0 です。
 
 ## 例
 
@@ -64,9 +65,7 @@ WebXR で使用するグラフィックスコンテキストを設定した後�
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                     | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-position","XRRigidTransform.position")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

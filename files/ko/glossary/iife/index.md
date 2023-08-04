@@ -1,17 +1,13 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - 디자인패턴
-  - 자바스크립트
-  - 즉시실행함수
-translation_of: Glossary/IIFE
 ---
-**즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
+
+**즉시 실행 함수 표현**(**IIFE, Immediately Invoked Function Expression**)은 정의되자마자 즉시 실행되는 {{glossary("Javascript")}} {{glossary("Function")}} 를 말한다.
 
 ```js
 (function () {
-    statements
+  statements;
 })();
 ```
 
@@ -25,18 +21,18 @@ translation_of: Glossary/IIFE
 
 ```js
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
-aName // throws "Uncaught ReferenceError: aName is not defined"
+aName; // throws "Uncaught ReferenceError: aName is not defined"
 ```
 
 IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.
 
 ```js
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // 즉시 결과를 생성한다.
 result; // "Barry"
@@ -44,9 +40,9 @@ result; // "Barry"
 
 ## 같이 보기
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
+- [Quick example](/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions) (at the end of the "Functions" section, right before "Custom objects")
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
+- [Glossary](/ko/docs/Glossary)
 
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

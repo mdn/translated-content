@@ -2,6 +2,7 @@
 title: Hoisting (巻き上げ、ホイスティング)
 slug: Glossary/Hoisting
 ---
+
 巻き上げ (Hoisting) は、[ECMAScript® 2015 言語仕様](http://www.ecma-international.org/ecma-262/6.0/index.html)より前には、どんな規範的な仕様書にもなかったものです。巻き上げは JavaScript の実行コンテキスト (特に作成と実行のフェーズで) では一般的な方法と考えられていました。しかし、巻き上げの概念は誤解に繋がる可能性があります。
 
 概念的には、例えば、厳密な定義では、変数や関数の宣言が物理的にコードの先頭に移動されることを示唆していますが、実際にはそうではありません。変数や関数の宣言は*コンパイル*時にメモリに格納されますが、コード内で入力された場所は変わりません。
@@ -69,12 +70,11 @@ console.log(x + " " + y); // '1 undefined'
 // JavaScript は宣言のみを巻き上げるので、 y の値の表示はこうなる。
 var y = 2; // y の宣言と初期化
 
-
 // 例 2
 // 巻き上げは行われないが、初期化は (まだ宣言されていない場合は) 宣言も行うので、変数は利用できる。
 
-a = 'Cran'; // Initialize a
-b = 'berry'; // Initialize b
+a = "Cran"; // Initialize a
+b = "berry"; // Initialize b
 console.log(a + "" + b); // 'Cranberry'
 ```
 

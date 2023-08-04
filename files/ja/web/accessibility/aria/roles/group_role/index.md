@@ -1,13 +1,8 @@
 ---
 title: group ロールの使用
 slug: Web/Accessibility/ARIA/Roles/group_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 ---
+
 ### 説明
 
 このテクニックは、[`group`](http://www.w3.org/TR/wai-aria/#group) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
@@ -32,7 +27,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 - スクリーンリーダーは、フォーカスが最初にその中のコントロールに着くとグループをアナウンスし、もし [`aria-describedby`](http://www.w3.org/TR/wai-aria/#aria-describedby) が設定されていれば、その説明が読み上げられます。 これに続いて、フォーカスされたコントロールをアナウンスすることができます。
 - スクリーン拡大鏡でグループが拡大されることがあります。
 
-> **Note:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ### 例
 
@@ -42,7 +37,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">動物</span>
   </div>
@@ -50,7 +50,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
     <div id="birds" role="treeitem">
       <span tabindex="-1">鳥</span>
     </div>
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">猫</span>
     </div>
@@ -90,7 +95,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 #### 動作する例
 
-- Unknown Title (http\://test.cita.illinois.edu/aria/tree/tree2.php) **\[broken link]**
+- Unknown Title (`http://test.cita.illinois.edu/aria/tree/tree2.php`) **\[broken link]**
 
 ### 注
 

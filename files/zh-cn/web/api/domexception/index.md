@@ -2,9 +2,10 @@
 title: DOMException
 slug: Web/API/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
-**`DOMException`** 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为**异常**，**exception**）。 这基本上是在 Web API 中如何描述错误情况的
+**`DOMException`** 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为**异常**，**exception**）。这基本上是在 Web API 中如何描述错误情况的
 
 每个异常都有一个名称 **name**，一个采用骆驼式命名法的简短字符串，用于描述识别错误或异常情况。
 
@@ -45,31 +46,31 @@ slug: Web/API/DOMException
 - `NotSupportedError`
   - : 不支持的操作。 (Legacy code value: `9` and legacy constant name: `NOT_SUPPORTED_ERR`)
 - `InvalidStateError`
-  - : 对象是一个无效的状态. (Legacy code value: `11` and legacy constant name: `INVALID_STATE_ERR`)
+  - : 对象是一个无效的状态。(Legacy code value: `11` and legacy constant name: `INVALID_STATE_ERR`)
 - `SyntaxError`
-  - : 字符串不匹配预期的模式. (Legacy code value: `12` and legacy constant name: `SYNTAX_ERR`)
+  - : 字符串不匹配预期的模式。(Legacy code value: `12` and legacy constant name: `SYNTAX_ERR`)
 - `InvalidModificationError`
   - : 对象不能被这种方式修改。 (Legacy code value: `13` and legacy constant name: `INVALID_MODIFICATION_ERR`)
 - `NamespaceError`
-  - : 操作在 XML 名称空间是不允许的. (Legacy code value: `14` and legacy constant name: `NAMESPACE_ERR`)
+  - : 操作在 XML 名称空间是不允许的。(Legacy code value: `14` and legacy constant name: `NAMESPACE_ERR`)
 - `InvalidAccessError`
   - : 对象不支持此操作或参数 (Legacy code value: `15` and legacy constant name: `INVALID_ACCESS_ERR`)
 - `TypeMismatchError` {{deprecated_inline}}
-  - : 对象的类型不匹配预期的类型. (Legacy code value: `17` and legacy constant name: `TYPE_MISMATCH_ERR`) 这个值已被弃用， JavaScript {{jsxref("TypeError")}} 异常被提出而不是`DOMException`
+  - : 对象的类型不匹配预期的类型。(Legacy code value: `17` and legacy constant name: `TYPE_MISMATCH_ERR`) 这个值已被弃用，JavaScript {{jsxref("TypeError")}} 异常被提出而不是`DOMException`
 - `SecurityError` {{experimental_inline}}
   - : 操作不安全。 (Legacy code value: `18` and legacy constant name: `SECURITY_ERR`)
 - `NetworkError` {{experimental_inline}}
-  - : 网络错误发生. (Legacy code value: `19` and legacy constant name: ` NETWORK_ER``R `)
+  - : 网络错误发生。(Legacy code value: `19` and legacy constant name: `NETWORK_ERR`)
 - `AbortError` {{experimental_inline}}
-  - : T 操作中止. (Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
+  - : T 操作中止。(Legacy code value: `20` and legacy constant name: `ABORT_ERR`)
 - `URLMismatchError` {{experimental_inline}}
   - : 给定的 URL 不匹配另一个 URL。 (Legacy code value: `21` and legacy constant name: `URL_MISMATCH_ERR`)
 - `QuotaExceededError` {{experimental_inline}}
   - : 给定配额已经超过了 (Legacy code value: `22` and legacy constant name: `QUOTA_EXCEEDED_ERR`)
 - `TimeoutError` {{experimental_inline}}
-  - : 操作超时. (Legacy code value: `23` and legacy constant name: `TIMEOUT_ERR`)
+  - : 操作超时。(Legacy code value: `23` and legacy constant name: `TIMEOUT_ERR`)
 - `InvalidNodeTypeError` {{experimental_inline}}
-  - : 这个操作的节点是不正确的或祖先是不正确的. (Legacy code value: `24` and legacy constant name: `INVALID_NODE_TYPE_ERR`)
+  - : 这个操作的节点是不正确的或祖先是不正确的。(Legacy code value: `24` and legacy constant name: `INVALID_NODE_TYPE_ERR`)
 - `sDataCloneError` {{experimental_inline}}
   - : 对象不可被克隆。 (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
 - `EncodingError` {{experimental_inline}}
@@ -99,7 +100,7 @@ slug: Web/API/DOMException
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException")}}
+{{Compat}}
 
 ## 参见
 

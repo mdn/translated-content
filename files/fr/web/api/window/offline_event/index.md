@@ -1,14 +1,8 @@
 ---
-title: 'Window: Evenement offline'
+title: "Window: Evenement offline"
 slug: Web/API/Window/offline_event
-tags:
-  - API
-  - Event
-  - Offline
-  - Reference
-  - Window
-translation_of: Web/API/Window/offline_event
 ---
+
 {{APIRef}}
 
 L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de {{domxref("Navigator.onLine")}} bascule à `false`.
@@ -40,8 +34,8 @@ L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche l
 
 ```js
 //version addEventListener
-window.addEventListener('offline', (event) => {
-    console.log("La Connexion au réseau est perdu.");
+window.addEventListener("offline", (event) => {
+  console.log("La Connexion au réseau est perdu.");
 });
 
 // onoffline version

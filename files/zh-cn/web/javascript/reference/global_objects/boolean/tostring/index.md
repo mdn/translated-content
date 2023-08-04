@@ -2,6 +2,7 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回表示指定的布尔对象的字符串。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 
 ## 语法
 
-```js
+```js-nolint
 toString()
 ```
 

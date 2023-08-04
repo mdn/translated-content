@@ -1,16 +1,17 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
 
 ```plain
 Firefox:
-句法错误: "use strict" 不允许在带默认参数的函数中
-句法错误: "use strict" 不允许在带 rest 参数的函数中
-句法错误: "use strict" 不允许在带解构参数的函数中
+句法错误："use strict" 不允许在带默认参数的函数中
+句法错误："use strict" 不允许在带 rest 参数的函数中
+句法错误："use strict" 不允许在带解构参数的函数中
 
 Chrome:
 句法错误：非法的'use strict'指令，在带有非简单参数列表的函数中
@@ -44,11 +45,11 @@ function sum(a=1, b=2) {
 }
 ```
 
-如果这个函数应该处于 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
+如果这个函数应该处于 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：
 
 ```js example-good
 "use strict";
-function sum(a=1, b=2) {
+function sum(a = 1, b = 2) {
   return a + b;
 }
 ```
@@ -68,7 +69,7 @@ var sum = function sum([a, b]) {
 这可以转换为以下表达式：
 
 ```js example-good
-var sum = (function() {
+var sum = (function () {
   "use strict";
   return function sum([a, b]) {
     return a + b;
@@ -99,7 +100,7 @@ var callback = (() => {
 })();
 ```
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "函数语句", "", 1)}}

@@ -1,15 +1,8 @@
 ---
 title: PerformanceNavigationTiming
 slug: Web/API/PerformanceNavigationTiming
-tags:
-  - API
-  - Interface
-  - Navigation Timing API
-  - Performance Timeline API
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 L'interface **`PerformanceNavigationTiming`** fournit des méthodes et des propriétés pour stocker et récupérer des métriques concernant les événements de navigation de document du navigateur. Par exemple, cette interface peut être utilisée pour déterminer le temps nécessaire au chargement ou au déchargement d'un document.

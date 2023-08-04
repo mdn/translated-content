@@ -2,6 +2,7 @@
 title: CSSConditionRule.conditionText
 slug: Web/API/CSSConditionRule/conditionText
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`conditionText`** は {{domxref("CSSConditionRule")}} インターフェイスのプロパティで、この CSS ルールのテキストを返したり設定したりします。
@@ -27,7 +28,7 @@ let myRules = document.styleSheets[0].cssRules;
 let text = myRules[0].conditionText;
 console.log(text); // "(min-width: 500px)"
 text = "(min-width: 400px)";
-console.log(text);  // "(min-width: 400px)"
+console.log(text); // "(min-width: 400px)"
 ```
 
 ## 仕様書

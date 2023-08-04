@@ -2,6 +2,7 @@
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 1 つ以上のアイテムをストレージ領域に保存または上書きします。
@@ -18,7 +19,7 @@ let settingItem = browser.storage.<storageType>.set(
 )
 ```
 
-`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "sync ストレージ領域を指します。 sync ストレージ内のアイテムはブラウザーによって同期され、ログイン(Firefox sync や Google アカウントなど)しているブラウザー・デバイスの全てのインスタンスで利用できます。") または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local "この項目についての文書はまだ書かれていません。書いてみませんか？") の書き込み可能なストレージタイプです。
+`<storageType>` は [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) または [`storage.local`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) の書き込み可能なストレージタイプです。
 
 ### Parameters
 
@@ -54,32 +55,29 @@ function gotMonster(item) {
 }
 
 function onError(error) {
-  console.log(error)
+  console.log(error);
 }
 
 // オブジェクトを2つ定義
 var monster = {
   name: "Kraken",
   tentacles: true,
-  eyeCount: 10
-}
+  eyeCount: 10,
+};
 
 var kitten = {
   name: "Moggy",
   tentacles: false,
-  eyeCount: 2
-}
+  eyeCount: 2,
+};
 
 // オブジェクト2つを格納
-browser.storage.local.set({kitten, monster})
-  .then(setItem, onError);
+browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
-browser.storage.local.get("kitten")
-  .then(gotKitten, onError);
-browser.storage.local.get("monster")
-  .then(gotMonster, onError);
+browser.storage.local.get("kitten").then(gotKitten, onError);
+browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。
+> **メモ:** この API は Chromium の [`chrome.storage`](https://developer.chrome.com/extensions/storage) API に基づいています。また、このドキュメントは [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) における Chromium のコードに基づいています。

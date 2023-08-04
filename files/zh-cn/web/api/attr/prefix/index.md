@@ -2,6 +2,7 @@
 title: Attr.prefix
 slug: Web/API/Attr/prefix
 ---
+
 {{APIRef("DOM")}}
 
 **`Attr.prefix`** 为只读属性，返回指定标签属性的名字空间前缀，如果没有前缀则返回 `null`。
@@ -32,7 +33,7 @@ string = attribute.prefix
 
 ## 浏览器兼容性
 
-{{Compat("api.Attr.prefix")}}
+{{Compat}}
 
 ## 参考
 

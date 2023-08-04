@@ -2,6 +2,7 @@
 title: Range.startOffset
 slug: Web/API/Range/startOffset
 ---
+
 {{ ApiRef("Range") }}
 
 **`Range.startOffset`** 是一个只读属性，用于返回一个表示 `Range` 在 `startContainer` 中的起始位置的数字。
@@ -20,8 +21,8 @@ startRangeOffset = range.startOffset;
 
 ```js
 range = document.createRange();
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 startRangeOffset = range.startOffset;
 ```
 
@@ -31,7 +32,7 @@ startRangeOffset = range.startOffset;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.startOffset")}}
+{{Compat}}
 
 ## 参见
 

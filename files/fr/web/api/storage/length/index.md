@@ -1,14 +1,8 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Stockage
-  - Web Stockage
-translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.
@@ -29,9 +23,9 @@ La fonction suivante ajoute trois éléments au localStorage du domaine courant 
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
+  localStorage.setItem("bgcolor", "yellow");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "cats.png");
 
   localStorage.length; // retourne 3 si localStorage est vide au préalable
 }

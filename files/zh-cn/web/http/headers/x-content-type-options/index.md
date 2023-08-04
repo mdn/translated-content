@@ -2,6 +2,7 @@
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 **`X-Content-Type-Options`** HTTP 消息头相当于一个提示标志，被服务器用来提示客户端一定要遵循在 {{HTTPHeader("Content-Type")}} 首部中对 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的设定，而不能对其进行修改。这就禁用了客户端的 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing)行为，换句话说，也就是意味着网站管理员确定自己的设置没有问题。
@@ -12,9 +13,9 @@ slug: Web/HTTP/Headers/X-Content-Type-Options
 
 注意：`nosniff` 只应用于 "`script`" 和 "`style`" 两种类型。事实证明，将其应用于图片类型的文件会导致[与现有的站点冲突](https://github.com/whatwg/fetch/issues/395)。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -25,6 +26,7 @@ X-Content-Type-Options: nosniff
 ## 指令
 
 - `nosniff`
+
   - : 下面两种情况的请求将被阻止：
 
     - 请求类型是"`style`" 但是 MIME 类型不是 "`text/css`"，

@@ -2,6 +2,7 @@
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
+
 {{JSRef}}
 
 静态方法 **`Atomics.wait()`** 确保了一个在 {{jsxref("Int32Array")}} 数组中给定位置的值没有发生变化、仍然是给定的值时进程将会睡眠，直到被唤醒或超时。该方法返回一个字符串，值为`"ok"`, `"not-equal"`, 或 `"timed-out"` 之一。

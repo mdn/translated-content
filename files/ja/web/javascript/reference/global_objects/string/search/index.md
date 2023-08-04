@@ -1,15 +1,8 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 **`search()`** メソッドは、対象の {{jsxref("String")}} オブジェクトが正規表現で一致するかどうかを調べるためのメソッドです。
@@ -24,7 +17,10 @@ str.search(regexp)
 
 ### 引数
 
-<dl><dt><code><var>regexp</var></code></dt><dd><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>正規表現オブジェクトです。</dd><dd>正規表現でないオブジェクト <code><var>regexp</var></code> が渡された場合は {{jsxref("RegExp")}} オブジェクトに <code>new RegExp(<var>regexp</var>)</code> を使用して暗黙的に変換されます。</dd></dl>
+- `regexp`
+  - : [regular expression](/ja/docs/Web/JavaScript/Guide/Regular_Expressions) 正規表現オブジェクトです。
+
+    正規表現でないオブジェクト `regexp` が渡された場合は {{jsxref("RegExp")}} オブジェクトに `new RegExp(regexp)` を使用して暗黙的に変換されます。
 
 ### 返値
 
@@ -52,9 +48,7 @@ console.log(str.search(reDot)) // '.' ドット記号が見つからないので
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

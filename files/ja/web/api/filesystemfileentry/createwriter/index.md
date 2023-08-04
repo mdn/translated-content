@@ -2,6 +2,7 @@
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
 ---
+
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`createWriter()`** メソッドは、ディレクトリー項目によって表現されるファイルにデータを書き込むために使用します。

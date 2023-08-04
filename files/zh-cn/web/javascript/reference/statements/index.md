@@ -2,6 +2,7 @@
 title: 语句和声明
 slug: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 应用程序是由许多语法正确的语句组成的。单个语句可以跨多行。如果每个语句用分号隔开，那么多个语句可以在一行中出现。本页的内容并不是一个关键字，而是一组关键字。
@@ -21,7 +22,7 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/Empty", "Empty")}}
   - : 空语句用来表示没有语句的情况，尽管 JavaScript 语法期望有语句提供。
 - {{jsxref("Statements/if...else", "if...else")}}
-  - : 如果指定的条件是 true ，则执行相匹配的一个语句，若为 false，则执行另一个语句。
+  - : 如果指定的条件是 true，则执行相匹配的一个语句，若为 false，则执行另一个语句。
 - {{jsxref("Statements/switch", "switch")}}
   - : 计算表达式，将子句于表达式的值做匹配，执行与该值相关联的语句。
 - {{jsxref("Statements/throw", "throw")}}
@@ -60,9 +61,9 @@ JavaScript 应用程序是由许多语法正确的语句组成的。单个语句
 - {{jsxref("Statements/for...in", "for...in")}}
   - : 无序遍历对象的可枚举属性。语句针对每个唯一的属性。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 遍历可迭代的对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_Generators))，对每个不同属性的属性，调用一个自定义的有执行语句的迭代钩子。
+  - : 遍历可迭代的对象（包括 {{jsxref("Global_Objects/Array","数组")}}、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators))，对每个不同属性的属性，调用一个自定义的有执行语句的迭代钩子。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : 在异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_Generators)上迭代，调用自定义迭代钩子，其中包含要为每个不同属性的值执行的语句。
+  - : 在异步可迭代对象、类数组对象、[迭代器和生成器](/zh-CN/docs/JavaScript/Guide/Iterators_and_generators)上迭代，调用自定义迭代钩子，其中包含要为每个不同属性的值执行的语句。
 - {{jsxref("Statements/while", "while")}}
   - : 创建一个循环语句，循环会一直持续到该语句条件表达式的值为 false。先执行条件表达式，然后执行语句。
 

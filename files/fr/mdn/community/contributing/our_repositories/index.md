@@ -1,16 +1,8 @@
 ---
 title: Où se trouve tout sur MDN ? Un guide de nos dépôts
 slug: MDN/Community/Contributing/Our_repositories
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
-  - Beginners
-  - Repos
-translation_of: MDN/Contribute/Where_is_everything
-original_slug: MDN/Contribute/Where_is_everything
 ---
+
 {{MDNSidebar}}
 
 MDN est un projet complexe avec de nombreux composants. Contribuer au site est facile au début, si vous avez quelques connaissances de GitHub et que vous commencez par corriger des fautes de frappe ou améliorer des extraits de code. Cependant, lorsque vous commencez à faire des contributions plus importantes, comme l'ajout de nouvelles pages entières, vous remarquerez que de nombreux éléments du contenu ne sont pas stockés dans les sources de la page et proviennent d'ailleurs.

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.muted`** 表示媒体元素是否被静音。
@@ -20,7 +21,7 @@ A {{domxref("Boolean")}}. `true` 表示被静音， `false` 表示未被静音�
 ## Example
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.muted); // false
 ```
 
@@ -30,7 +31,7 @@ console.log(obj.muted); // false
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.muted")}}
+{{Compat}}
 
 ## See also
 

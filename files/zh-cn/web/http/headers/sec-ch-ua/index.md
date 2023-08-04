@@ -2,6 +2,7 @@
 title: Sec-CH-UA
 slug: Web/HTTP/Headers/Sec-CH-UA
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头（header）提供用户代理的品牌（brand）和重要的版本信息。

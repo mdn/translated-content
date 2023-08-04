@@ -1,12 +1,8 @@
 ---
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
-tags:
-  - API
-  - Reference
-  - WebGL
-translation_of: Web/API/WebGLFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
@@ -25,8 +21,8 @@ L'objet `WebGLFramebuffer` ne définit aucune méthode ou propriété en propre,
 ### Création d'un tampon d'image
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createFramebuffer();
 ```
 

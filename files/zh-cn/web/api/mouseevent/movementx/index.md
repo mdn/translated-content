@@ -2,9 +2,10 @@
 title: MouseEvent.movementX
 slug: Web/API/MouseEvent/movementX
 ---
+
 {{APIRef("DOM Events")}}
 
-**`MouseEvent.movementX`** 是只读属性，它提供了当前事件和上一个{{event("mousemove")}}事件之间鼠标在水平方向上的移动值。换句话说，这个值是这样计算的 : `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
+**`MouseEvent.movementX`** 是只读属性，它提供了当前事件和上一个[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)事件之间鼠标在水平方向上的移动值。换句话说，这个值是这样计算的 : `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
 
 ## 语法
 
@@ -22,9 +23,9 @@ var xShift = instanceOfMouseEvent.movementX
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.movementX")}}
+{{Compat}}
 
 ## 相关
 
 - {{ domxref("MouseEvent") }}
-- [Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock)
+- [Pointer Lock](/zh-CN/docs/WebAPI/Pointer_Lock)

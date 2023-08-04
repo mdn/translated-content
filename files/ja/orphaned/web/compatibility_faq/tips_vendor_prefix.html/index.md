@@ -1,8 +1,8 @@
 ---
 title: mobile版Firefox向けベンダープレフィックス対処方法まとめ
 slug: orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
-original_slug: Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 ---
+
 ## 概要
 
 ベンダープレフィックス(接頭辞)付きのプロパティや値は、Firefox、Chrome 等のブラウザ毎に実装が異なり、また PC 版と mobile 版でも異なるため、細かな配慮が必要です。

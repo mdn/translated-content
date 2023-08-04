@@ -1,16 +1,8 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-collapse
-translation_of: Web/CSS/border-collapse
 ---
+
 {{CSSRef}}
 
 **`border-collapse`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlElement("table")}}) の中のセルが境界を共有するか分離するかを設定します。

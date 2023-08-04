@@ -2,6 +2,7 @@
 title: DataTransfer.items
 slug: Web/API/DataTransfer/items
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{domxref("DataTransfer")}}的`items` 属性只读，是拖动操作中 {{domxref("DataTransferItem","数据传输项")}}的{{domxref("DataTransferItemList","列表")}}。该列表包含了操作中每一项目的对应项，如果操作没有项目，则列表为空。
@@ -91,8 +92,7 @@ function dragover_handler(ev) {
 
 ## 参见
 
-- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

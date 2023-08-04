@@ -2,6 +2,7 @@
 title: Headers.get()
 slug: Web/API/Headers/get
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 **`get()`** 方法以 {{domxref("ByteString")}} 形式从 Headers 对象中返回指定 header 的全部值。如果 Header 对象中不存在请求的 header，则返回 `null`。
@@ -34,16 +35,16 @@ var myHeaders = new Headers(); // Currently empty
 可以通过 get() 方法来获取 header 中的值：
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 如果存在多个 header 值，那么只有第一个值会被返回：
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns "deflate,gzip"
 ```
 
 > **备注：** {{domxref("Headers.getAll")}} used to have this functionality, with {{domxref("Headers.get")}} returning only the first value added to the `Headers` object. The latest spec has removed `getAll()`, and updated `get()` to return all values.
@@ -54,7 +55,7 @@ myHeaders.get('Accept-Encoding'); // Returns "deflate,gzip"
 
 ## Browser compatibility
 
-{{Compat("api.Headers.get")}}
+{{Compat}}
 
 ## See also
 

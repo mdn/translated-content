@@ -1,14 +1,8 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - Reference
-  - inFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
@@ -41,26 +35,24 @@ isFinite(testValue)
 ### isFinite の使用
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true が返される、より堅牢性の高い
-                     // Number.isFinite(null) では false となる
+isFinite(null); // true が返される、より堅牢性の高い
+// Number.isFinite(null) では false となる
 
-isFinite('0');       // true が返される、より堅牢性の高い
-                     // Number.isFinite("0") では false となる
+isFinite("0"); // true が返される、より堅牢性の高い
+// Number.isFinite("0") では false となる
 ```
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.readyState`** プロパティは {{domxref("document")}} の読み込み状態を記述します。
@@ -37,7 +38,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // ページが完全に読み込み完了。
-    console.log(`最初の CSS ルール: ${document.styleSheets[0].cssRules[0].cssText}`);
+    console.log(
+      `最初の CSS ルール: ${document.styleSheets[0].cssRules[0].cssText}`,
+    );
     break;
 }
 ```
@@ -47,10 +50,10 @@ switch (document.readyState) {
 ```js
 // DOMContentLoaded イベントの代替
 document.onreadystatechange = function () {
-  if (document.readyState === 'interactive') {
+  if (document.readyState === "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange を load イベントの代替とする
@@ -58,20 +61,19 @@ document.onreadystatechange = function () {
 ```js
 // load イベントの代替
 document.onreadystatechange = function () {
-  if (document.readyState === 'complete') {
+  if (document.readyState === "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange を DOM の挿入や変更のイベントリスナーとして DOMContentLoaded の前に使用
 
 ```js
-document.addEventListener('readystatechange', (event) => {
-  if (event.target.readyState === 'interactive') {
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "interactive") {
     initLoader();
-  }
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === "complete") {
     initApp();
   }
 });

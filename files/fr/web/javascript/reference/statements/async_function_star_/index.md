@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Statements/async_function*
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Statements")}}
 
 Une déclaration **`async function*`** définit _une fonction génératrice asynchrone_, qui renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator).
@@ -16,13 +17,13 @@ Il est aussi possible de définir des fonctions génératrices asynchrones à l'
 
 ```js
 async function* nom(param0) {
-  instructions
+  instructions;
 }
 async function* nom(param0, param1) {
-  instructions
+  instructions;
 }
 async function* nom(param0, param1, /* … ,*/ paramN) {
-  instructions
+  instructions;
 }
 ```
 
@@ -50,7 +51,9 @@ async function* toto() {
   yield Promise.reject(1);
 }
 
-toto().next().catch((e) => console.error(e));
+toto()
+  .next()
+  .catch((e) => console.error(e));
 ```
 
 Qui affichera `1` dans la console, car la promesse ainsi générée déclenche une erreur et le résultat dans l'itérateur déclenche une erreur également. La propriété `value` du résultat d'un générateur asynchrone résolu ne sera pas une autre promesse.
@@ -70,7 +73,8 @@ async function* monGenerateur(etape) {
 }
 
 const gen = monGenerateur(2);
-gen.next()
+gen
+  .next()
   .then((res) => {
     console.log(res); // { value: 0, done: false }
     return gen.next();
@@ -101,13 +105,13 @@ async function* readFiles(directory) {
     if (stats.isFile()) {
       yield {
         name: file,
-        content: await fs.readFile(file, 'utf8'),
+        content: await fs.readFile(file, "utf8"),
       };
     }
   }
 }
 
-const files = readFiles('.');
+const files = readFiles(".");
 console.log((await files.next()).value);
 // Exemple de sortie : { name: 'fichier1.txt', content: '...' }
 console.log((await files.next()).value);

@@ -1,13 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-slice
 ---
+
 {{CSSRef}}
 
 **`border-image-slice`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("border-image-source")}}로 설정한 이미지를 여러 개의 영역으로 나눕니다. 이렇게 나눠진 영역이 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image)를 이룹니다.

@@ -2,6 +2,7 @@
 title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.create()`** は、`parentId` で指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} の配下に、ブックマークやフォルダを作成するメソッドです。フォルダを作成する場合は、{{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} の引数を省略するか空にします。
@@ -11,8 +12,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ```js
 browser.bookmarks.create(
   bookmark, // CreateDetails
-  callback  // 関数（省略可）
-)
+  callback, // 関数（省略可）
+);
 ```
 
 ### 引数
@@ -39,17 +40,21 @@ function onBookmarkAdded(bookmarkItem) {
   console.log("Bookmark added with ID: " + bookmarkItem.id);
 }
 
-chrome.bookmarks.create({
-  title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
-}, onBookmarkAdded);
+chrome.bookmarks.create(
+  {
+    title: "bookmarks.create() on MDN",
+    url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
+  },
+  onBookmarkAdded,
+);
 ```
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,4 +81,4 @@ chrome.bookmarks.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

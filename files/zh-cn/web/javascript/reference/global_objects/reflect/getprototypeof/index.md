@@ -2,6 +2,7 @@
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ---
+
 {{JSRef}}
 
 静态方法 **`Reflect.getPrototypeOf()`** 与 {{jsxref("Object.getPrototypeOf()")}} 方法几乎是一样的。都是返回指定对象的原型（即内部的 `[[Prototype]]` 属性的值）。

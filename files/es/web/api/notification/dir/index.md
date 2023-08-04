@@ -1,17 +1,8 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - dir
-translation_of: Web/API/Notification/dir
-browser-compat: api.Notification.dir
+slug: Web/API/Notification/dir
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propiedad `dir` de solo lectura de la interfaz {{domxref("Notification")}} indica la direccion del texto en la notificación, como se especifica en la opción `dir` del constructor {{domxref("Notification.Notification","Notification()")}}.
@@ -38,11 +29,11 @@ El siguiente código ejecuta una notificación; se crea un simple objeto `option
 
 ```js
 var options = {
-  body: 'Do you like my body?',
-  dir: 'rtl'
-}
+  body: "Do you like my body?",
+  dir: "rtl",
+};
 
-var n = new Notification('Notificación de prueba', options);
+var n = new Notification("Notificación de prueba", options);
 
 console.log(n.dir); // Deberia retornar 'rtl'
 ```

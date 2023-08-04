@@ -2,6 +2,7 @@
 title: 設定ページを実装する
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
+
 {{AddonSidebar}}
 
 設定ページは、ユーザーに拡張機能の設定を確認して変える方法を与えます(「プリファレンス」や「オプション」とも呼ばれます)。
@@ -12,7 +13,7 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
 - HTML からインクルードされる、ストレージから設定ページに投入し、ユーザーが変更した時に保存された設定を更新するスクリプトを書く。
 - HTML ファイルのパスを manifest.json の [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) キーに設定する。これにより、HTML 文書が、拡張機能の名前や説明と共に、文書ブラウザーのアドオンマネージャーに表示される。
 
-> **Note:** [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
+> **メモ:** [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
 
 ## 簡単な拡張機能
 
@@ -22,7 +23,6 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -33,7 +33,6 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -59,7 +58,6 @@ document.body.style.border = "10px solid blue";
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -82,7 +80,6 @@ document.body.style.border = "10px solid blue";
       "id": "addon@example.com"
     }
   }
-
 }
 ```
 
@@ -95,24 +92,21 @@ document.body.style.border = "10px solid blue";
 次に "options.html" を提供する約束をしたので、作成します。"settings" ディレクトリー内にその名前でファイルを作成して、次の中身を与えます:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -124,12 +118,11 @@ document.body.style.border = "10px solid blue";
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -151,18 +144,18 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 - 文書が読み込まれた時、"color" の値を [`storage.sync.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) を使ってストレージから取り出します。値が未設定なら、既定の "blue" を用います。これで値を `sync` ストレージ領域から取得できます。
 - ユーザーが "Save" を押して送信した時、テキストボックスの値を [`storage.sync.set()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) を用いて保存します。これで値を `sync` ストレージ領域に保存できます。
 
-> **Note:** 記: 別々の .js ファイルの指定が必要です。インライン JavaScript は使用できません。
+> **メモ:** 別々の .js ファイルの指定が必要です。インライン JavaScript は使用できません。
 
 ローカルストレージがふさわしいと感じる場合、代わりにローカルストレージに設定値を保存できます。
 
-> **Note:** Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーに拡張機能の ID をセットしておく必要があります。
+> **メモ:** Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーに拡張機能の ID をセットしておく必要があります。
 
 最後に、ストレージから枠の色を読むのに "borderify.js" を更新します:
 
-> **Warning:** バージョン 52 より前の Firefox の [browser.storage.local.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の Firefox で動作させるには、`onGot()` の中で 2 回出てくる `item.color` を `item[0].color` に変えないといけません。
+> **警告:** バージョン 52 より前の Firefox の [browser.storage.local.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の Firefox で動作させるには、`onGot()` の中で 2 回出てくる `item.color` を `item[0].color` に変えないといけません。
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 

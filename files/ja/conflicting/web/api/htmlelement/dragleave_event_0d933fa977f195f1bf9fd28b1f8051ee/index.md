@@ -4,6 +4,7 @@ slug: >-
   conflicting/Web/API/HTMLElement/dragleave_event_0d933fa977f195f1bf9fd28b1f8051ee
 original_slug: Web/API/Document/dragleave_event
 ---
+
 {{APIRef}}
 
 `dragleave` イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。

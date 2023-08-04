@@ -2,6 +2,7 @@
 title: Clipboard
 slug: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}} {{SecureContext_Header}}
 
 **`Clipboard`** 接口实现了 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)，如果用户授予了相应的权限，其就能提供系统剪贴板的读写访问能力。在 Web 应用程序中，Clipboard API 可用于实现剪切、复制和粘贴功能。
@@ -22,7 +23,7 @@ slug: Web/API/Clipboard
 
 ## 方法
 
-*`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。*
+_`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。_
 
 - {{domxref("Clipboard.read()","read()")}}
   - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}} 对象。在检索到数据后，promise 将兑现一个 {{domxref("ClipboardItem")}} 对象的数组来提供剪切板数据。

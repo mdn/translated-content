@@ -2,6 +2,7 @@
 title: パケット
 slug: Glossary/Packet
 ---
+
 パケット、またはネットワークパケットはは、ネットワーク上で送られる整形されたデータの塊です。パケットはユーザーデータと制御情報を含みます。ユーザーデータは*ペイロード*として知られています。制御情報はペイロードを送るための制御情報です。この制御情報は、送信元と送信先のネットワークアドレス、順序情報、エラー検知コードで構成されており、通常パケットのヘッダーとフッターで見られます。
 
 ## パケットに含まれるもの
@@ -33,5 +34,5 @@ slug: Glossary/Packet
 ## 使用したリファレンス
 
 - <https://en.wikipedia.org/wiki/Network_packet>
-- [https://en.m.wikipedia.org/wiki/Hop\_(networking)](<https://en.wikipedia.org/wiki/Hop_(networking)>)
+- <https://en.wikipedia.org/wiki/Hop_(networking)>
 - <https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736>

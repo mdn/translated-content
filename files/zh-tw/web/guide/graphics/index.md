@@ -2,6 +2,7 @@
 title: 網頁上的圖像
 slug: Web/Guide/Graphics
 ---
+
 現代網站或應用程式通常都配有圖像。我們可以很容易地使用{{HTMLElement("img")}}元素呈現靜態圖像 , 或藉由使用{{cssxref("background-image")}} 設定 HTML 的背景元素性質。你常會想要建立動態圖像或在事後操縱圖像。這些文章將讓你知道如何達成這些效果。
 
 ## 2D 圖像

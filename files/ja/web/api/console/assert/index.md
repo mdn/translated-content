@@ -4,6 +4,7 @@ slug: Web/API/console/assert
 l10n:
   sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---
+
 {{APIRef("Console API")}}
 
 **`console.assert()`** は、検査結果が false になった場合に、コンソールへエラーメッセージを出力します。検査結果が true になる場合は何も行いません。
@@ -13,13 +14,13 @@ l10n:
 ## 構文
 
 ```js
-assert(assertion, obj1)
-assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* … ,*/ objN)
+assert(assertion, obj1);
+assert(assertion, obj1, obj2);
+assert(assertion, obj1, obj2, /* … ,*/ objN);
 
-assert(assertion, msg)
-assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* … ,*/ substN)
+assert(assertion, msg);
+assert(assertion, msg, subst1);
+assert(assertion, msg, subst1, /* … ,*/ substN);
 ```
 
 ### 引数
@@ -42,7 +43,7 @@ assert(assertion, msg, subst1, /* … ,*/ substN)
 次のコード例は、アサーションに続く JavaScript オブジェクトの使用を示しています。
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number++) {
   console.log(`the # is ${number}`);
   console.assert(number % 2 === 0, { number, errorMsg });

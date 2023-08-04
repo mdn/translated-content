@@ -2,6 +2,7 @@
 title: Screen.height
 slug: Web/API/Screen/height
 ---
+
 {{APIRef}}
 
 ## 概述
@@ -18,7 +19,7 @@ iHeight = window.screen.height
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-   // something is occupying some screen real estate!
+  // something is occupying some screen real estate!
 }
 ```
 

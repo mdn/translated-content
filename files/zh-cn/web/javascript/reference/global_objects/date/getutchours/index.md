@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCHours()`** 方法以世界时为标准，返回一个指定的日期对象的小时数。
@@ -22,9 +23,9 @@ dateObj.getUTCHours()
 
 `getUTCHours()` 返回一个 0 到 23 的整数。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCHours()` 方法
+### 示例：使用 `getUTCHours()` 方法
 
 下例将当前时间的小时部分赋值给变量 `hours`。
 

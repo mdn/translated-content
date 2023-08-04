@@ -1,14 +1,8 @@
 ---
 title: XPath スニペット
 slug: Web/XPath/Snippets
-tags:
-  - XML
-  - XPath
-  - XSLT
-  - スニペット
-  - 例
-translation_of: Web/XPath/Snippets
 ---
+
 この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する[DOM Level 3 XPath 仕様](http://www.w3.org/TR/DOM-Level-3-XPath/)の標準インタフェースに基づく簡単なユーティリティ関数の簡単な例です。スニペットは実際にあなた自身のコードの中で使用できる関数です。
 
 ### ノード指定の評価関数
@@ -24,13 +18,15 @@ translation_of: Web/XPath/Snippets
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
-    aNode.documentElement : aNode.ownerDocument.documentElement);
+  var nsResolver = xpe.createNSResolver(
+    aNode.ownerDocument == null
+      ? aNode.documentElement
+      : aNode.ownerDocument.documentElement,
+  );
   var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   var found = [];
   var res;
-  while (res = result.iterateNext())
-    found.push(res);
+  while ((res = result.iterateNext())) found.push(res);
   return found;
 }
 ```
@@ -38,14 +34,14 @@ function evaluateXPath(aNode, aExpr) {
 この関数は **`new XPathEvaluator()`** コンストラクタを使用していますが、Firefox、Chrome、Opera、Safari ではサポートされているものの、Edge または Internet Explorer ではサポートされていません。Edge または Internet Explorer のユーザーがアクセスできる Web ドキュメント内のスクリプトは、 **`new XPathEvaluator()`** の呼び出しを次のフラグメントに置き換える必要があります。
 
 ```js
-  // XPathEvaluator is implemented on objects that implement Document
-  var xpe = aNode.ownerDocument || aNode;
+// XPathEvaluator is implemented on objects that implement Document
+var xpe = aNode.ownerDocument || aNode;
 ```
 
 その場合、[XPathNSResolver](/ja/docs/Web/API/document/createNSResolver)の作成は次のように単純化できます。
 
 ```js
-  var nsResolver = xpe.createNSResolver(xpe.documentElement);
+var nsResolver = xpe.createNSResolver(xpe.documentElement);
 ```
 
 ただし、`createNSResolver`は、XPath 式の名前空間プレフィックスが問い合わせる文書の名前空間プレフィックスと一致する（かつデフォルトの名前空間が使用されていない(回避策については[document.createNSResolver](/ja/docs/Web/API/document/createNSResolver)を参照)）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
@@ -91,32 +87,40 @@ results = evaluateXPath(people, "/people/person[2]");
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
-results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
+results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 alert(results.length);
 ```
 
 ### docEvaluateArray
 
-以下は、ネームスペースリゾルバなどの特別な必要性に関わらず、XPath の結果を配列に取得（順序づけ）する簡単なユーティリティ関数です。そうでない場合は、[`document.evaluate()`](/ja/docs/Web/API/document/evaluate "en/DOM/document.evaluate")のより複雑な構文は避けてください [`XPathResult`](/ja/docs/Web/API/XPathResult "en/XPathResult")の特別なイテレータ（代わりに配列を返す）を使用する必要があります。
+以下は、ネームスペースリゾルバなどの特別な必要性に関わらず、XPath の結果を配列に取得（順序づけ）する簡単なユーティリティ関数です。そうでない場合は、[`document.evaluate()`](/ja/docs/Web/API/document/evaluate)のより複雑な構文は避けてください [`XPathResult`](/ja/docs/Web/API/XPathResult)の特別なイテレータ（代わりに配列を返す）を使用する必要があります。
 
-##### 例: シンプルな `docEvaluateArray​()` ユーティリティ関数を定義する
+##### 例: シンプルな `docEvaluateArray()` ユーティリティ関数を定義する
 
 ```js
 // Example usage:
 // var els = docEvaluateArray('//a');
 // alert(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray (expr, doc, context, resolver) {
-    var i, result, a = [];
-    doc = doc || (context ? context.ownerDocument : document);
-    resolver = resolver || null;
-    context = context || doc;
+function docEvaluateArray(expr, doc, context, resolver) {
+  var i,
+    result,
+    a = [];
+  doc = doc || (context ? context.ownerDocument : document);
+  resolver = resolver || null;
+  context = context || doc;
 
-    result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-    for(i = 0; i < result.snapshotLength; i++) {
-        a[i] = result.snapshotItem(i);
-    }
-    return a;
+  result = doc.evaluate(
+    expr,
+    context,
+    resolver,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null,
+  );
+  for (i = 0; i < result.snapshotLength; i++) {
+    a[i] = result.snapshotItem(i);
+  }
+  return a;
 }
 ```
 
@@ -124,36 +128,54 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 次の関数は、要素と XML 文書を渡して、その要素につながる一意の文字列 XPath 式を検索することを可能にします。
 
-##### 例: `getXPathForElement​​()` ユーティリティ関数を定義する
+##### 例: `getXPathForElement()` ユーティリティ関数を定義する
 
 ```js
 function getXPathForElement(el, xml) {
-	var xpath = '';
-	var pos, tempitem2;
+  var xpath = "";
+  var pos, tempitem2;
 
-	while(el !== xml.documentElement) {
-		pos = 0;
-		tempitem2 = el;
-		while(tempitem2) {
-			if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
-				pos += 1;
-			}
-			tempitem2 = tempitem2.previousSibling;
-		}
+  while (el !== xml.documentElement) {
+    pos = 0;
+    tempitem2 = el;
+    while (tempitem2) {
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+        // If it is ELEMENT_NODE of the same name
+        pos += 1;
+      }
+      tempitem2 = tempitem2.previousSibling;
+    }
 
-		xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath =
+      "*[name()='" +
+      el.nodeName +
+      "' and namespace-uri()='" +
+      (el.namespaceURI === null ? "" : el.namespaceURI) +
+      "'][" +
+      pos +
+      "]" +
+      "/" +
+      xpath;
 
-		el = el.parentNode;
-	}
-	xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
-	xpath = xpath.replace(/\/$/, '');
-	return xpath;
+    el = el.parentNode;
+  }
+  xpath =
+    "/*" +
+    "[name()='" +
+    xml.documentElement.nodeName +
+    "' and namespace-uri()='" +
+    (el.namespaceURI === null ? "" : el.namespaceURI) +
+    "']" +
+    "/" +
+    xpath;
+  xpath = xpath.replace(/\/$/, "");
+  return xpath;
 }
 ```
 
 ### 関連資料
 
-- [XPath](/ja/docs/Web/XPath "en/XPath")
+- [XPath](/ja/docs/Web/XPath)
 - [Forum discussion on this topic](http://forums.mozillazine.org/viewtopic.php?t=229106)
 
 ## 合わせてお読みください

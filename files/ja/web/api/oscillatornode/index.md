@@ -1,12 +1,15 @@
 ---
 title: OscillatorNode
 slug: Web/API/OscillatorNode
+l10n:
+  sourceCommit: 41a60bd5745ad1a068f858186e31bb538701e728
 ---
+
 {{APIRef("Web Audio API")}}
 
-**OscillatorNode** インタフェースは、正弦波などの周期的な波形を表します。これは、指定された波形で、特定の周波数の一定のトーンを発生させる、オーディオ処理モジュール {{domxref("AudioScheduledSourceNode")}} です。
+**`OscillatorNode`** インターフェイスは、正弦波などの周期的な波形を表します。これは、 {{domxref("AudioScheduledSourceNode")}} 音声処理モジュールの一種で、指定された周波数の波を作成させ、実質的には一定の音になります。
 
-この OscillatorNode は {{domxref("AudioContext.createOscillator()")}} で生成されます。常に 1 つの出力だけをもち、入力はありません。基本的なプロパティのデフォルト値 （定義 については {{domxref("AudioNode")}} を参照）は、次のとおりです。
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -19,77 +22,77 @@ slug: Web/API/OscillatorNode
       <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row">チャンネル カウントモード</th>
+      <th scope="row">チャンネルカウントモード</th>
       <td><code>max</code></td>
     </tr>
     <tr>
-      <th scope="row">チャンネル カウント</th>
+      <th scope="row">チャンネルカウント</th>
       <td><code>2</code> (デフォルトのカウントモードでは使用されません。)</td>
     </tr>
     <tr>
-      <th scope="row">チャンネル 解釈</th>
+      <th scope="row">チャンネルの解釈</th>
       <td><code>speakers</code></td>
     </tr>
   </tbody>
 </table>
 
-## コンストラクタ
+## コンストラクター
 
 - {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-  - : ノードの [properties](#properties) の初期値を任意で設定し、新しい OscillatorNode のインスタンスを作成します。
-    任意なプロパティ変更が不要で、初期値そのままで良いならば、単にファクトリメソッド、{{domxref("AudioContext.createOscillator()")}} を呼び出すことができます。
+  - : 新しい `OscillatorNode` オブジェクトのインスタンスを作成します。オプションとして、ノードの[プロパティ](#プロパティ)に既定値を指定したオブジェクトを提供します。別の方法として、 {{domxref("BaseAudioContext.createOscillator()")}} ファクトリーメソッドを使用することも可能です。[AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の作成)を参照してください。
 
 ## プロパティ
 
-親インターフェース、_{{domxref("AudioScheduledSourceNode")}}_ のプロパティ継承に加え、以下のプロパティがあります。
+_親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からプロパティを継承しており、さらに以下のプロパティがあります。_
 
 - {{domxref("OscillatorNode.frequency")}}
-  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} であり、振動数・周波数をヘルツ (hertz、記号：Hz)で表わしたものです。(AudioParam は読み取り専用ですが、この値は設定できます。)初期値は 440 HZ (標準 A(ラ) 音) です。
-
-<!---->
-
+  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、振動数・周波数をヘルツ（hertz、記号：Hz）で表わしたものです。（`AudioParam` は読み取り専用ですが、この値はそうではありません）。初期値は 440 Hz （中央 A （ラ）音）です。
 - {{domxref("OscillatorNode.detune")}}
-  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} であり、振動の離調をセントで表わしたものです。(AudioParam は読み取り専用ですが、この値は設定できます。)初期値は 0 です。
-
-<!---->
-
+  - : [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} であり、発振音の離調をセント単位で表します（`AudioParam` は読み取り専用ですが、この値が表す値はそうでありません）。既定値は 0 です。
 - {{domxref("OscillatorNode.type")}}
-  - : 再生する波形の種類を指定する文字列です。いくつかの標準値の中から 1 つ、または、{{domxref("PeriodicWave")}} を使用した、カスタム波形を設定することができます。設定する波の種類により、それぞれに合わせたトーンが生成されます。初期値は sine (サイン波) です。
+  - : 再生する波形の種類を指定する文字列です。いくつかの標準値の中から 1 つ、または、 `custom` で {{domxref("PeriodicWave")}} を使用したカスタム波形を設定することができます。波形が異なれば、音色も異なります。標準的な値は `"sine"`, `"square"`, `"sawtooth"`, `"triangle"`, `"custom"` です。既定値は `"sine"` です。
+
+### イベントハンドラー
+
+- {{domxref("OscillatorNode.onended")}}
+  - : 音の再生が停止したときに発行される {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} イベントに対するイベントハンドラーを設定します。
 
 ## メソッド
 
-親である _{{domxref("AudioScheduledSourceNode")}}_ のメソッド継承に加え、以下のメソッドがあります。
+_親インターフェイスである {{domxref("AudioScheduledSourceNode")}} からメソッドを継承しており、さらに以下のメソッドがあります。_
 
 - {{domxref("OscillatorNode.setPeriodicWave()")}}
-  - : 標準的な波形の代わりに、{{domxref("PeriodicWave")}} で設定した周期的な波形が、カスタムな波形として設定されます。これは、廃止された {{domxref("OscillatorNode.setWaveTable()")}} メソッドの代わりです。
+  - : 標準的な波形の代わりに使用する、周期的な波形を記述した {{domxref("PeriodicWave")}} を設定します。これを呼び出すと `type` は `custom` に設定されます。
+- {{domxref("OscillatorNode.start()")}}
+  - : 音色の再生を開始する正確な時間を指定します。
+- {{domxref("OscillatorNode.stop()")}}
+  - : 音色の再生を停止する時間を指定します。
 
-## Examples
+## 例
 
-次の例は、AudioContext を使用し、オシレーターノードでトーンを再生する、基本的な例です。応用例については、[Violent Theremin のデモ](http://mdn.github.io/violent-theremin/)をチェックしてみてください。 (コードは [app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) を参照してください。)
+以下の例は、 {{domxref("AudioContext")}} を使用して発振器ノードを作成し、その上で音の再生を開始する基本的な使用方法を示しています。応用例としては、 [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) をご覧ください（関連するコードは [app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) を参照してください）。
 
 ```js
-// create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// ウェブオーディオ API コンテキストの作成
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-// create Oscillator node
-var oscillator = audioCtx.createOscillator();
+// Oscillator　ノードを作成します。
+const oscillator = audioCtx.createOscillator();
 
 oscillator.type = 'square';
-oscillator.frequency.value = 440; // value in hertz
+oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // ヘルツ単位の値
 oscillator.connect(audioCtx.destination);
 oscillator.start();
 ```
 
-## Specifications
+## 仕様書
 
-| Specification                                                                                                | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-oscillatornode-interface', 'OscillatorNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.OscillatorNode")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- [Using the Web Audio API](/ja/docs/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,18 +2,19 @@
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
 ---
+
 {{HTTPSidebar}}
 
-**`Accept-Language`** 请求头允许客户端声明它可以理解的自然语言，以及优先选择的区域方言。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)，服务器可以从诸多备选项中选择一项进行应用， 并使用 {{HTTPHeader("Content-Language")}} 应答头通知客户端它的选择。浏览器会基于其用户界面语言为这个请求头设置合适的值，即便是用户可以进行修改，但是这种情况极少发生（因为可增加指纹独特性，通常也不被鼓励）（译者注：通常只在测试网站的多语言支持时手动修改它；或为进一步减少指纹独特性，改为最常见的英文）。
+**`Accept-Language`** 请求头允许客户端声明它可以理解的自然语言，以及优先选择的区域方言。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)，服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Language")}} 应答头通知客户端它的选择。浏览器会基于其用户界面语言为这个请求头设置合适的值，即便是用户可以进行修改，但是这种情况极少发生（因为可增加指纹独特性，通常也不被鼓励）（译者注：通常只在测试网站的多语言支持时手动修改它；或为进一步减少指纹独特性，改为最常见的英文）。
 
 当服务器无法通过其他方式来确定应当使用的语言时——例如某一特定的 URL，这是用户明确指定的——这个请求头可以用作提示。建议服务器端永远不要覆盖明确指定的信息。`Accept-Language` 消息头的内容通常不在用户的掌控之中（例如在国外旅行时到提供网络服务的场所上网）；另外用户可能会想要浏览非本地用户界面语言的页面。
 
 如果服务器不能提供任何可以匹配的语言的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少被采用，取而代之的是将其忽略。
 
-| Header type                                                                          | {{Glossary("Request header")}} |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                                       |
-| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                                      |
+| Header type                                                     | {{Glossary("Request header")}} |
+| --------------------------------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}}                           | no                             |
+| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                            |
 
 ## 语法
 

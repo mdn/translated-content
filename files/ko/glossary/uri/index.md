@@ -1,14 +1,8 @@
 ---
 title: URI
 slug: Glossary/URI
-tags:
-  - Glossary
-  - HTTP
-  - Search
-  - URI
-  - URL
-translation_of: Glossary/URI
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **URI**(Uniform Resource Identifier)는 하나의 리소스를 가리키는 문자열입니다. 가장 흔한 URI는 {{glossary("URL")}}로, 웹 상에서의 위치로 리소스를 식별합니다. 반면, {{glossary("URN")}}은 주어진 이름공간 안의 이름으로 리소스를 식별합니다. 도서의 ISBN을 예시로 사용할 수 있습니다.

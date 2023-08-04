@@ -2,9 +2,8 @@
 title: column-rule-width
 slug: Web/CSS/column-rule-width
 ---
-{{ CSSRef("CSS Multi-columns") }}
 
-## Summary
+{{CSSRef("CSS Multi-columns")}}
 
 CSS 特性 `column-rule-width` 让你可以设置在多列布局中被画在两列之间的规则（线条）的宽度。
 
@@ -37,7 +36,9 @@ column-rule-width: inherit;
 ## Example
 
 ```css
-#header {column-rule-width: thick;}
+#header {
+  column-rule-width: thick;
+}
 ```
 
 ## Specifications
@@ -46,4 +47,4 @@ column-rule-width: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.column-rule-width")}}
+{{Compat}}

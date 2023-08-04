@@ -1,9 +1,8 @@
 ---
-title: 'Notification: evento error'
+title: "Notification: evento error"
 slug: Web/API/Notification/error_event
-page-type: web-api-event
-browser-compat: api.Notification.error_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 El evento **`error`** de la interfaz de {{domxref("Notification")}} se activa cuando algo sale mal con una {{domxref("Notification")}} (en muchos casos, un error que impide que se muestre la notificación).
@@ -13,9 +12,9 @@ El evento **`error`** de la interfaz de {{domxref("Notification")}} se activa cu
 Use el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
 
 ```js
-addEventListener('error', event => { });
+addEventListener("error", (event) => {});
 
-onerror = event => { };
+onerror = (event) => {};
 ```
 
 ## Tipo de evento

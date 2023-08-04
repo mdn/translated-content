@@ -1,10 +1,11 @@
 ---
 title: OpenType 字体特性指南
-slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
+slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 ---
+
 {{CSSRef}}
 
-字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字母风格。 它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ），字偶距（kerning，调整特定字母组合的间距），分数形式，数字风格，和一票其他内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。
+字体特性（font feature）或变体（variant）指的是在同一个 OpenType 字体中包含的不同的字形或字母风格。它包括了连字（ligature，由字符组合而成的特殊字形，如“ﬁ”或“ﬄ” ），字偶距（kerning，调整特定字母组合的间距），分数形式，数字风格，和一票其他内容。这些都被称为 OpenType 特性，而且可以通过特定属性和一种底层属性指定（见 {{cssxref("font-feature-settings")}}）来控制。本文将介绍在 CSS 中使用 OpenType 字体特性的全部内容。
 
 某些字体中启用了这些特性的一或多个（通常是字偶距 \[kerning] 和默认连字），而其他特性留给设计师或开发者选择性地在特定场景中启用。
 
@@ -69,7 +70,7 @@ and notice that the lower case 'a' reverts to its regular form and the lower cas
 #### More about alternates
 
 - <https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates>
-- [https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates](/zh-CN/docs/Web/CSS/font-variant-alternates)
+- [https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-alternates](/zh-CN/docs/Web/CSS/font-variant-alternates)
 
 ### 连字（{{cssxref("font-variant-ligatures")}}）
 
@@ -147,7 +148,9 @@ According to the specification you can either supply just the 4-character featur
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 
@@ -164,14 +167,14 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

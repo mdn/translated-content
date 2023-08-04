@@ -2,6 +2,9 @@
 title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
+
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 
 现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在 SVG 绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间 CSS，使用 CSS 嵌入段落，或者使用外部引用的 CSS 文件。你会发现大部分 web 上的 SVG 使用的是行间 CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。
@@ -18,7 +21,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
        fill-opacity="0.5" stroke-opacity="0.8"/>
 ```
 
-此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由` fill-opacity `和` stroke-opacity `两个属性控制。
+此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由 `fill-opacity` 和 `stroke-opacity` 两个属性控制。
 
 > **備註：** FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
 
@@ -26,7 +29,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 除了颜色属性，还有其他一些属性用来控制绘制边框的方式。
 
-![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
+![](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -48,7 +51,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 还有一个`stroke-linejoin`属性，用来控制两条边框线段之间，用什么方式连接。
 
-![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
+![](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -78,7 +81,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 最后，你可以使用`stroke-dasharray`属性，将边框定义成虚线。
 
-![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
+![](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -112,7 +115,7 @@ CSS 可以通过 style 属性插入到元素的行间:
  <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
 ```
 
-或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/en/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
+或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/zh-TW/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
 
 ```xml
 <?xml version="1.0" standalone="no"?>

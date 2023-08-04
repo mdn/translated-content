@@ -4,18 +4,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 l10n:
   sourceCommit: ae586f9996f622b40379283f727febe94258b8c0
 ---
+
 {{JSRef}}
 
 **`Object.hasOwn()`** 静的メソッドは、指定されたオブジェクトが、指定されたプロパティを自身のプロパティとして持っている場合に `true` を返します。そのプロパティが継承されている場合、または存在しない場合、このメソッドは `false` を返します。
 
-> **Note:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
+> **メモ:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
 
 ## 構文
 
 ```js
-hasOwn(instance, prop)
+hasOwn(instance, prop);
 ```
 
 ### 引数
@@ -23,7 +24,7 @@ hasOwn(instance, prop)
 - `instance`
   - : テストする JavaScript オブジェクトのインスタンス。
 - `prop`
-  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)  。
+  - : テストするプロパティの名前の {{jsxref("String")}} または [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返値
 
@@ -43,16 +44,16 @@ hasOwn(instance, prop)
 
 ```js
 const example = {};
-Object.hasOwn(example, 'prop');   // false - 'prop' は定義されていない
+Object.hasOwn(example, "prop"); // false - 'prop' は定義されていない
 
-example.prop = 'exists';
-Object.hasOwn(example, 'prop');   // true - 'prop' は定義されている
+example.prop = "exists";
+Object.hasOwn(example, "prop"); // true - 'prop' は定義されている
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - null として定義されている
+Object.hasOwn(example, "prop"); // true - null として定義されている
 
 example.prop = undefined;
-Object.hasOwn(example, 'prop');   // true - undefined として定義されている
+Object.hasOwn(example, "prop"); // true - undefined として定義されている
 ```
 
 ### 直接のプロパティと継承されたプロパティ
@@ -61,17 +62,17 @@ Object.hasOwn(example, 'prop');   // true - undefined として定義されて�
 
 ```js
 const example = {};
-example.prop = 'exists';
+example.prop = "exists";
 
 // `hasOwn` は直接のプロパティの場合のみ true を返す
-Object.hasOwn(example, 'prop');             // returns true
-Object.hasOwn(example, 'toString');         // returns false
-Object.hasOwn(example, 'hasOwnProperty');   // returns false
+Object.hasOwn(example, "prop"); // returns true
+Object.hasOwn(example, "toString"); // returns false
+Object.hasOwn(example, "hasOwnProperty"); // returns false
 
 // `in` 演算子は直接または継承されたプロパティの場合に true を返す
-'prop' in example;                          // returns true
-'toString' in example;                      // returns true
-'hasOwnProperty' in example;                // returns true
+"prop" in example; // returns true
+"toString" in example; // returns true
+"hasOwnProperty" in example; // returns true
 ```
 
 ### オブジェクトのプロパティの反復処理
@@ -101,9 +102,9 @@ for (const name in example) {
 {{jsxref("Array")}} の要素は直接のプロパティとして定義されているので、`hasOwn()` メソッドで特定のインデックスが存在するかどうかを調べることができます。
 
 ```js
-const fruits = ['Apple', 'Banana','Watermelon', 'Orange'];
-Object.hasOwn(fruits, 3);   // true ('Orange')
-Object.hasOwn(fruits, 4);   // false - not defined
+const fruits = ["Apple", "Banana", "Watermelon", "Orange"];
+Object.hasOwn(fruits, 3); // true ('Orange')
+Object.hasOwn(fruits, 4); // false - not defined
 ```
 
 ### hasOwnProperty の問題となるケース
@@ -115,10 +116,10 @@ const foo = {
   hasOwnProperty() {
     return false;
   },
-  bar: 'The dragons be out of office',
+  bar: "The dragons be out of office",
 };
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar); //true - hasOwnProperty() が再実装されていても結果に影響しない
 }
 ```
@@ -127,8 +128,8 @@ if (Object.hasOwn(foo, 'bar')) {
 
 ```js
 const foo = Object.create(null);
-foo.prop = 'exists';
-if (Object.hasOwn(foo, 'prop')) {
+foo.prop = "exists";
+if (Object.hasOwn(foo, "prop")) {
   console.log(foo.prop); //true - オブジェクトの作成方法に関係なく動作する
 }
 ```

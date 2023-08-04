@@ -1,16 +1,9 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - Веб
-  - Элемент
-translation_of: Web/HTML/Element/data
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<data>`** связывает данное содержимое с машиночитаемым представлением. Если содержимое относится к времени или дате, необходимо использовать элемент {{HTMLElement("time")}}.
 

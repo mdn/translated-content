@@ -2,6 +2,7 @@
 title: HashChangeEvent.oldURL
 slug: Web/API/HashChangeEvent/oldURL
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`oldURL`** 为 {{domxref("HashChangeEvent")}} 接口的只读属性，其值为窗口导航改变前的 URL。
@@ -19,8 +20,8 @@ let oldEventUrl = event.oldURL;
 ## 示例
 
 ```js
-window.addEventListener('hashchange', function(event) {
-  console.log('Hash changed from ' + event.oldURL);
+window.addEventListener("hashchange", function (event) {
+  console.log("Hash changed from " + event.oldURL);
 });
 ```
 

@@ -1,14 +1,8 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - Server error
-  - Status code
-  - サーバーエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/500
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`500 Internal Server Error`** サーバーエラーレスポンスコードは、サーバーがリクエストを実行を妨げる予期しない条件に遭遇したことを示します。

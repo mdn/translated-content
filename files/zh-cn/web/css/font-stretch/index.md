@@ -2,9 +2,8 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 **`font-stretch`** 属性为字体定义一个正常或经过伸缩变形的字体外观，这个属性并不会通过伸展/缩小而改变字体的几何外形，如{{cssxref("font-feature-settings")}}和{{cssxref("font-variant")}}属性，它仅仅意味着当有多种字体可供选择时，会为字体选择最适合的大小。
 
@@ -54,21 +53,33 @@ Font stretch values are interpolated in discrete steps. The interpolation happen
 ### HTML
 
 ```html
-<div class="ultra stretch"> This is text with the font extremely expanded</div>
-<div class="stretch"> This is text with the font stretched</div>
-<div class="normal"> This is text without font stretching</div>
-<div class="condensed"> This is text with the font condensed</div>
-<div class="ultra condensed"> This is text with the font extremely condensed</div>
+<div class="ultra stretch">This is text with the font extremely expanded</div>
+<div class="stretch">This is text with the font stretched</div>
+<div class="normal">This is text without font stretching</div>
+<div class="condensed">This is text with the font condensed</div>
+<div class="ultra condensed">
+  This is text with the font extremely condensed
+</div>
 ```
 
 ### CSS
 
 ```css
-.ultra.stretch{font-stretch: ultra-expanded;}
-.stretch {font-stretch: expanded;}
-.normal {font-stretch: normal;}
-.condensed {font-stretch: condensed;}
-.ultra.condensed {font-stretch: ultra-condensed;}
+.ultra.stretch {
+  font-stretch: ultra-expanded;
+}
+.stretch {
+  font-stretch: expanded;
+}
+.normal {
+  font-stretch: normal;
+}
+.condensed {
+  font-stretch: condensed;
+}
+.ultra.condensed {
+  font-stretch: ultra-condensed;
+}
 ```
 
 ### Result
@@ -83,4 +94,4 @@ The CSS property `font-stretch` was initially defined in CSS 2, but dropped in C
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-stretch")}}
+{{Compat}}

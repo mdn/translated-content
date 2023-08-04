@@ -1,14 +1,8 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - String
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** メソッドは、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。
@@ -64,9 +58,7 @@ let greetList = ['こんにちは', ' ', '佐藤さん', '!']
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

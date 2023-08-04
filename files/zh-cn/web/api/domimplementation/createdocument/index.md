@@ -2,6 +2,7 @@
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 **`DOMImplementation.createDocument()`方法创建并返回一个** {{domxref("XMLDocument")}}对象。
@@ -24,21 +25,25 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 ## 例子
 
 ```js
-var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
-body.setAttribute('id', 'abc');
+var doc = document.implementation.createDocument(
+  "http://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+var body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
 doc.documentElement.appendChild(body);
-alert(doc.getElementById('abc')); // [object HTMLBodyElement]
+alert(doc.getElementById("abc")); // [object HTMLBodyElement]
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.DOMImplementation.createDocument")}}
+{{Compat}}
 
-## 另请参见
+## 参见
 
 - 归属它的 {{domxref("DOMImplementation")}} 接口。

@@ -2,6 +2,7 @@
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 DOM 规范中的 `MutationObserver()` 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。
@@ -30,12 +31,12 @@ var observer = new MutationObserver(callback);
 ```js
 function callback(mutationList, observer) {
   mutationList.forEach((mutation) => {
-    switch(mutation.type) {
-      case 'childList':
+    switch (mutation.type) {
+      case "childList":
         /* 从树上添加或移除一个或更多的子节点；参见 mutation.addedNodes 与
            mutation.removedNodes */
         break;
-      case 'attributes':
+      case "attributes":
         /* mutation.target 中某节点的一个属性值被更改；该属性名称在 mutation.attributeName 中，
            该属性之前的值为 mutation.oldValue */
         break;
@@ -55,10 +56,10 @@ function callback(mutationList, observer) {
 ```js
 var targetNode = document.querySelector("#someElement");
 var observerOptions = {
-  childList: true,  // 观察目标子节点的变化，是否有添加或者删除
+  childList: true, // 观察目标子节点的变化，是否有添加或者删除
   attributes: true, // 观察属性变动
-  subtree: true     // 观察后代节点，默认为 false
-}
+  subtree: true, // 观察后代节点，默认为 false
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -76,4 +77,4 @@ observer.observe(targetNode, observerOptions);
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

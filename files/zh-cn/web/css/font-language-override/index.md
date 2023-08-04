@@ -2,6 +2,7 @@
 title: font-language-override
 slug: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 **font-language-override** CSS 属性控制在指定的语言中使用特定的字形。
@@ -11,8 +12,8 @@ slug: Web/CSS/font-language-override
 font-language-override: normal;
 
 /* 字符串作为值 */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 
 /* 使用全局值 */
 font-language-override: initial;
@@ -49,7 +50,9 @@ font-language-override: unset;
 
 ```html
 <p class="para1">Default language setting.</p>
-<p class="para2">This is a string with the <code>font-language-override</code> set to Danish.</p>
+<p class="para2">
+  This is a string with the <code>font-language-override</code> set to Danish.
+</p>
 ```
 
 #### CSS
@@ -74,8 +77,8 @@ p.para2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}.

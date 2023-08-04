@@ -1,13 +1,8 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
-translation_of: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}{{SeeCompatTable}}
 
 Renvoi le paramètre utilisateur de **do-not-track**. Cette valeur est "1" si l´utilisateur a demandé de ne pas être suivi par les sites web, le contenu ou la publicité.

@@ -2,9 +2,10 @@
 title: Node.firstChild
 slug: Web/API/Node/firstChild
 ---
+
 {{ ApiRef("DOM") }}
 
-**Node.firstChild** 只读属性返回树中节点的第一个子节点，如果节点是无子节点，则返回 `null。`
+**Node.firstChild** 只读属性返回树中节点的第一个子节点，如果节点是无子节点，则返回 `null`。
 
 ### 语法
 

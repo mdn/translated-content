@@ -2,6 +2,7 @@
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} 接口的 **`mode`** 属性用来控制媒体片段添加到 `SourceBuffer` 时的顺序是可以任意的还是有严格顺序的。
@@ -36,8 +37,8 @@ mode 的初始值是在使用 `mediasource.addsourcebuffer()` 创建 `SourceBuff
 
 ```js
 const curMode = sourceBuffer.mode;
-if (curMode === 'segments') {
-  sourceBuffer.mode = 'sequence';
+if (curMode === "segments") {
+  sourceBuffer.mode = "sequence";
 }
 ```
 

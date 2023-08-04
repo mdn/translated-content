@@ -1,22 +1,15 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - JavaScript
-  - Mehtod
-  - Object
-  - Prototype
-  - Reference
-  - isPrototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 **`isPrototypeOf()`** メソッドは、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
-> **Note:** `isPrototypeOf()` は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"`object instanceof AFunction`" 式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
+> **メモ:** `isPrototypeOf()` は、{{jsxref("Operators/instanceof", "instanceof")}} 演算子とは異なります。"`object instanceof AFunction`" 式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
 
 ## 構文
 
@@ -76,9 +69,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -89,4 +80,4 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

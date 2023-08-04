@@ -2,6 +2,7 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 StyleSheetLists 接口表示一个 StyleSheet 的列表。
@@ -10,7 +11,7 @@ StyleSheetLists 接口表示一个 StyleSheet 的列表。
 
 ## 范例
 
-### 使用 for 循环获取文档 [styleSheet](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet) 对象
+### 使用 for 循环获取文档 [styleSheet](/zh-CN/docs/Web/API/CSSStyleSheet) 对象
 
 ```plain
 for (var i=0; i < document.styleSheets.length; i++){

@@ -1,17 +1,8 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch API")}}
 
 L'interface **`Request`** de l'[API Fetch](/fr/docs/Web/API/Fetch_API) représente une demande de ressource.
@@ -82,7 +73,7 @@ Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domx
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis renvoyons certaines valeurs de propriété de la requête:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const URL = request.url;
 const method = request.method;
@@ -93,8 +84,8 @@ Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en t
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -102,7 +93,10 @@ fetch(request)
 Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu du body pour une requête api qui nécessite une charge utile de body:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const URL = request.url;
 const method = request.method;
@@ -116,17 +110,18 @@ Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request`
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on api server!');
+      throw new Error("Something went wrong on api server!");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```

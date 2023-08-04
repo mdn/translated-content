@@ -2,9 +2,10 @@
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`blob()`** メソッドは、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。
+{{domxref("PushMessageData")}} インターフェイスの **`blob()`** メソッドは、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。
 
 ## 構文
 
@@ -12,11 +13,11 @@ slug: Web/API/PushMessageData/blob
 var myBlob = PushEvent.data.blob();
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 {{domxref("Blob")}}。
 
@@ -30,13 +31,11 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushMessageData-blob-Blob', 'blob()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushMessageData.blob")}}
 

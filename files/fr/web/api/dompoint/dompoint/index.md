@@ -1,14 +1,8 @@
 ---
 title: DOMPoint.DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
-tags:
-  - API
-  - Constructeurs
-  - DOM
-  - Géométrie
-  - Quadrilatère
-translation_of: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 Le constructeur **`DOMPoint()`** crée un nouvel objet {{domxref("DOMPoint")}}.

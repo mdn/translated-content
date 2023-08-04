@@ -2,6 +2,7 @@
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API を利用すると、拡張機能からブラウザーのブックマークシステムにアクセスしたり、操作することができます。ページをブックマークしたり、既存のブックマークを取得したり、ブックマークを編集・削除・整理することが可能です。
@@ -69,9 +70,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,4 +100,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

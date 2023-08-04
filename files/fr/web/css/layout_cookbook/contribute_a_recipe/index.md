@@ -1,14 +1,8 @@
 ---
 title: Contribuer à une recette
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - Guide
-  - MDN
-  - Meta
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
-original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette
 ---
+
 {{CSSRef}}
 
 Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans cette section de MDN, nous vous expliquons ici quelles étapes suivre pour que vos exemples soient publiés.
@@ -27,13 +21,13 @@ Une recette se décompose comme suit :
 2. Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
 3. Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
 
-    1. Les spécifications sommaires
-    2. La recette
-    3. Les choix effectués
-    4. Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
-    5. Les points relatifs à l'accessibilité
-    6. La compatibilité des navigateurs
-    7. D'éventuelles ressources additionnelles
+   1. Les spécifications sommaires
+   2. La recette
+   3. Les choix effectués
+   4. Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
+   5. Les points relatifs à l'accessibilité
+   6. La compatibilité des navigateurs
+   7. D'éventuelles ressources additionnelles
 
 ### 1. Construire le motif
 
@@ -55,7 +49,7 @@ Dans l'en-tête, il y a deux blocs pour le style. Le premier concerne les élém
 
 Le HTML du composant doit être ajouté deux fois. Pour commencer dans la section avec la classe `preview` puis dans l'élément `textarea` `playable-html`.
 
-Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section  `playable-css`.
+Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section `playable-css`.
 
 Pour voir un exemple existant et comprendre les différentes parties, vous pouvez consulter [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) qui est utilisé sur la page [Comment centrer un élément](/fr/docs/Web/CSS/Layout_cookbook/Center_an_element).
 

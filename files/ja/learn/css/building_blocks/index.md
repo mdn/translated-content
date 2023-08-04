@@ -2,13 +2,20 @@
 title: CSS の構成要素
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 このモジュールは [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)から派生しています。CSS の言語や文法に慣れてきて、それを使う上での基本的な経験を得てきたという前提で、もう少し掘り下げてみましょう。カスケードと継承・セレクターの全種類・単位・サイズ設定・背景と枠線・デバッグなどを見ていきます。
 
 ここでの目的は、[テキストの装飾](/ja/docs/Learn/CSS/Styling_text)や [CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)などのより具体的な分野に進む前に、適切な CSS を書くための手法を知り、すべての重要な理論を理解できるようになることです。
 
-> **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者を目指している方へ
+>
+> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 前提知識
 
@@ -19,7 +26,7 @@ slug: Learn/CSS/Building_blocks
 3. [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で説明されている HTML についての基礎知識に慣れ親しんでいること。
 4. [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)で説明されている CSS の基本について理解していること。
 
-> **Note:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です
+> **メモ:** 自分自身でファイルを作れない環境 (タブレットやその他の端末) で作業する場合、(ほとんどの) コードサンプルは [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったオンラインコーディングプログラムで試すことが可能です
 
 ## ガイド
 

@@ -1,13 +1,8 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 **`flex-basis`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 아이템의 초기 크기를 지정합니다. {{cssxref("box-sizing")}}을 따로 지정하지 않는다면 콘텐츠 박스의 크기를 변경합니다.
@@ -51,7 +46,7 @@ flex-basis: unset;
 
     > **역사:** 원래 `flex-basis: auto`의 뜻은 자신의 `width` 또는 `height` 속성의 값을 사용하라는 것이었습니다.
 
-    - 그 후 `flex-basis: auto`는 자동 크기조절로 바뀌고, 기존의 `auto`는 `main-size`로 바뀌었습니다. [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922)에서 구현 기록을 볼 수 있습니다.[bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316)에서 되돌려져 `auto` 가 다시 `width` / `height` 속성을 가리키게 됐고, 대신 새로운 `content` 키워드가 자동 크기조절을 맡게 됐습니다. ({{bug("1105111")}}에서 볼 수 있습니다)
+    - 그 후 `flex-basis: auto`는 자동 크기조절로 바뀌고, 기존의 `auto`는 `main-size`로 바뀌었습니다. [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922)에서 구현 기록을 볼 수 있습니다.[bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316)에서 되돌려져 `auto` 가 다시 `width` / `height` 속성을 가리키게 됐고, 대신 새로운 `content` 키워드가 자동 크기조절을 맡게 됐습니다. ([Firefox bug 1105111](https://bugzil.la/1105111)에서 볼 수 있습니다)
 
 ### 형식 구문
 

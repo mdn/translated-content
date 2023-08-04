@@ -1,10 +1,8 @@
 ---
 title: floor
 slug: Web/XPath/Functions/floor
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/floor
 ---
+
 {{ XsltRef() }}
 
 `floor` 함수는 10진수를 평가하고 10진수보다 크지 않는(작거나 같은) 가장 큰 정수를 반환합니다.

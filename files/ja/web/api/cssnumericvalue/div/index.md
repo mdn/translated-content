@@ -2,6 +2,7 @@
 title: CSSNumericValue.div()
 slug: Web/API/CSSNumericValue/div
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`div()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` を指定された値で除算します。
@@ -9,7 +10,7 @@ slug: Web/API/CSSNumericValue/div
 ## 構文
 
 ```js
-div(number)
+div(number);
 ```
 
 ### 引数

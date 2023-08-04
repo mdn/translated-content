@@ -2,6 +2,7 @@
 title: Performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 The **`clearResourceTimings()`** method removes all {{domxref("PerformanceEntry","performance entries")}} with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the {{domxref("Performance.setResourceTimingBufferSize()")}} method.
@@ -28,7 +29,7 @@ performance.clearResourceTimings();
 ```js
 function load_resource() {
   var image = new Image();
-  image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
+  image.src = "https://developer.mozilla.org/mdn-social-share.png";
 }
 function clear_performance_timings() {
   if (performance === undefined) {
@@ -48,10 +49,8 @@ function clear_performance_timings() {
   }
   // getEntries should now return zero
   var p = performance.getEntriesByType("resource");
-  if (p.length == 0)
-    console.log("... Performance data buffer cleared");
-  else
-    console.log("... Performance data buffer NOT cleared!");
+  if (p.length == 0) console.log("... Performance data buffer cleared");
+  else console.log("... Performance data buffer NOT cleared!");
 }
 ```
 
@@ -61,4 +60,4 @@ function clear_performance_timings() {
 
 ## Browser compatibility
 
-{{Compat("api.Performance.clearResourceTimings")}}
+{{Compat}}

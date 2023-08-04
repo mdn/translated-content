@@ -1,14 +1,8 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-translation_of: Web/CSS/@media/inverted-colors
 ---
+
 {{cssref}}
 
 [CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.

@@ -2,6 +2,7 @@
 title: Location.assign()
 slug: Web/API/Location/assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Location.assign()`** 方法会触发窗口加载并显示指定的 URL 的内容。
@@ -25,7 +26,9 @@ location.assign(url);
 
 ```js
 // 跳转到 Location.reload() 这篇文章
-document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload');
+document.location.assign(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/Location/reload",
+);
 ```
 
 ## 规范
@@ -34,7 +37,7 @@ document.location.assign('https://developer.mozilla.org/zh-CN/docs/Web/API/Locat
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.assign")}}
+{{Compat}}
 
 ## 相关内容
 

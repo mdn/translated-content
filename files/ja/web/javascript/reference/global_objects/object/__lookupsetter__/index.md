@@ -1,16 +1,8 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Polyfill
-browser-compat: javascript.builtins.Object.lookupSetter
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`__lookupSetter__`** メソッドは、指定されたプロパティに結びつけられているセッター関数を返します。
@@ -18,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ## 構文
 
 ```js
-__lookupSetter__(sprop)
+__lookupSetter__(sprop);
 ```
 
 ### 引数
@@ -44,15 +36,15 @@ __lookupSetter__(sprop)
 var obj = {
   set foo(value) {
     this.bar = value;
-  }
+  },
 };
 
 // 標準外かつ非推奨の方法
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
 // 標準準拠の方法
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 
@@ -67,10 +59,10 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 ## 関連情報
 
 - `Object.prototype.__lookupSetter__` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - {{jsxref("Functions/set", "set")}} 演算子
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} と
   {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)

@@ -2,6 +2,7 @@
 title: <map>
 slug: Web/HTML/Element/map
 ---
+
 > **备注：** 这篇文章翻译不完整
 
 **HTML `<map>` 属性** 与 {{HTMLElement("area")}} 属性一起使用来定义一个图像映射 (一个可点击的链接区域).
@@ -35,7 +36,7 @@ slug: Web/HTML/Element/map
 
 这个元素拥有[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : name 属性 给 map 一个名字用来查询，这个属性是必须的，值必须不能为空并且不能带空格。name 属性不准与同文档中其他 map 元素的值相同，如果 id 属性也被添加，name 属性和 id 属性的值必须相同。
 
 ## 示例
@@ -56,10 +57,10 @@ slug: Web/HTML/Element/map
 The live example above should appear similar to the following images (when using your keyboard tab key):
 
 _For the `left.html` link:_
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 _For the `right.html` link_
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 规范
 
@@ -67,11 +68,11 @@ _For the `right.html` link_
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 另见
 
 - {{HTMLElement("a")}}
 - {{HTMLElement("area")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

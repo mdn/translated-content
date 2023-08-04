@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 ---
+
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
 {{domxref("DocumentOrShadowRoot")}} 接口的 **`elementFromPoint()`** 方法返回给定坐标点下最上层的 {{domxref('element')}} 元素。
@@ -32,24 +33,24 @@ var element = document.elementFromPoint(x, y);
 ## 示例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>elementFromPoint example</title>
+  <head>
+    <title>elementFromPoint example</title>
 
-<script>
-function changeColor(newColor) {
-  elem = document.elementFromPoint(2, 2);
-  elem.style.color = newColor;
-}
-</script>
-</head>
+    <script>
+      function changeColor(newColor) {
+        elem = document.elementFromPoint(2, 2);
+        elem.style.color = newColor;
+      }
+    </script>
+  </head>
 
-<body>
-<p id="para1">Some text here</p>
-<button onclick="changeColor('blue');">blue</button>
-<button onclick="changeColor('red');">red</button>
-</body>
+  <body>
+    <p id="para1">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 

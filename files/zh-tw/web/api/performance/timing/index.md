@@ -1,8 +1,8 @@
 ---
 title: Performance.timing
 slug: Web/API/Performance/timing
-original_slug: Web/API/Performance.timing
 ---
+
 {{APIRef("Performance")}}
 
 ## 摘要

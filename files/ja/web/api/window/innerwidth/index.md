@@ -1,18 +1,8 @@
 ---
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Layout
-  - Property
-  - Reference
-  - Window
-  - innerWidth
-  - width
-translation_of: Web/API/Window/innerWidth
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} の **`innerWidth`** プロパティは読み取り専用で、ウィンドウの内部の幅をピクセル単位で返します。これには垂直スクロールバーがある場合、その幅を含みます。
@@ -55,9 +45,7 @@ var intOuterFramesetWidth = top.innerWidth;
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('CSSOM View', '#dom-window-innerwidth', 'window.innerWidth')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

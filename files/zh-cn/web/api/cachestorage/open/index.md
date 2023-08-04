@@ -2,6 +2,7 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口的 **`open()`** 方法返回一个 resolve 为匹配 `cacheName` 的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}} .
@@ -12,9 +13,9 @@ slug: Web/API/CacheStorage/open
 
 ```js
 // "caches" is a global read-only variable, which is an instance of CacheStorage,
-// For more info, refer to: https://developer.mozilla.org/en-US/docs/Web/API/caches
+// For more info, refer to: https://developer.mozilla.org/zh-CN/docs/Web/API/caches
 
-caches.open(cacheName).then(function(cache) {
+caches.open(cacheName).then(function (cache) {
   // Do something with your cache
 });
 ```
@@ -37,16 +38,20 @@ caches.open(cacheName).then(function(cache) {
 3. 如果此操作失败（例如，因为网络已关闭），则返回备用响应。
 
 ```js
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(response) {
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
+var cachedResponse = caches
+  .match(event.request)
+  .catch(function () {
+    return fetch(event.request);
+  })
+  .then(function (response) {
+    caches.open("v1").then(function (cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## 规范
@@ -55,7 +60,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.CacheStorage.open")}}
+{{Compat}}
 
 ## See also
 

@@ -2,9 +2,10 @@
 title: 构造方法
 slug: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
-**`constructor`** 是一种用于创建和初始化[`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。
+**`constructor`** 是一种用于创建和初始化[`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -16,7 +17,7 @@ constructor([arguments]) { ... }
 
 ## 描述
 
-在一个类中只能有一个名为 “constructor” 的特殊方法。 一个类中出现多次构造函数 (`constructor)`方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。
+在一个类中只能有一个名为“constructor”的特殊方法。一个类中出现多次构造函数 (`constructor)`方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。
 
 在一个构造方法中可以使用`super`关键字来调用一个父类的构造方法。
 
@@ -32,21 +33,21 @@ constructor([arguments]) { ... }
 
 ```js
 class Square extends Polygon {
-    constructor(length) {
-        // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
-        super(length, length);
-        // 注意：在派生类中，必须先调用 super() 才能使用 "this"。
-        // 忽略这个，将会导致一个引用错误。
-        this.name = 'Square';
-    }
-    get area() {
-        return this.height * this.width;
-    }
-    set area(value) {
-        // 注意：不可使用 this.area = value
-        // 否则会导致循环 call setter 方法导致爆栈
-        this._area = value;
-    }
+  constructor(length) {
+    // 在这里，它调用了父类的构造函数，并将 lengths 提供给 Polygon 的"width"和"height"
+    super(length, length);
+    // 注意：在派生类中，必须先调用 super() 才能使用 "this"。
+    // 忽略这个，将会导致一个引用错误。
+    this.name = "Square";
+  }
+  get area() {
+    return this.height * this.width;
+  }
+  set area(value) {
+    // 注意：不可使用 this.area = value
+    // 否则会导致循环 call setter 方法导致爆栈
+    this._area = value;
+  }
 }
 ```
 
@@ -56,15 +57,15 @@ class Square extends Polygon {
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygon";
-    }
+  constructor() {
+    this.name = "Polygon";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}
@@ -106,7 +107,7 @@ constructor(...args) {
 
 ## 参阅
 
-- [super()](/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [super()](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

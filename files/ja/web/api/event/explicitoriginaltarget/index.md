@@ -1,14 +1,18 @@
 ---
-title: Event.explicitOriginalTarget
+title: "Event: explicitOriginalTarget プロパティ"
+short-title: explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
+
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`explicitOriginalTarget`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、このイベントの無名ではない元のターゲットを返します。
 
 イベントが無名境界通過以外の何らかの理由で再ターゲットされた場合、再ターゲットが発生する前にターゲットに設定されます。
 
-例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（{{Bug(185889)}} 参照）。この場合、 [`currentTarget`](/ja/docs/Web/API/Event/currentTarget) は親ノードを表示し、このプロパティはテキストノードを表示することになります。
+例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（[Webkit バグ 185889](https://bugzil.la/185889) 参照）。この場合、 [`currentTarget`](/ja/docs/Web/API/Event/currentTarget) は親ノードを表示し、このプロパティはテキストノードを表示することになります。
 
 このプロパティは [`originalTarget`](/ja/docs/Web/API/Event/originalTarget) とも異なり、無名のコンテンツを含むことはありません。
 

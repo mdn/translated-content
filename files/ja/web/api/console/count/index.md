@@ -4,6 +4,7 @@ slug: Web/API/console/count
 l10n:
   sourceCommit: 710132ffea066697d23e1978478d36090fb448d7
 ---
+
 {{APIRef("Console API")}}
 
 **`console.count()`** メソッドは、 `count()` を実際に呼び出した回数を記録します。
@@ -13,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-count()
-count(label)
+count();
+count(label);
 ```
 
 ### 引数

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/import
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Operators")}}
 
 L'appel `import()`, généralement appelé _import dynamique_, est une expression semblable à une fonction qui permet de charger un module ECMAScript de façon asynchrone et dynamique dans un environnement qui peut ne pas être un module.
@@ -13,7 +14,7 @@ L'appel `import()`, généralement appelé _import dynamique_, est une expressio
 ## Syntaxe
 
 ```js
-import(nomModule)
+import(nomModule);
 ```
 
 L'appel `import()` a une syntaxe qui ressemble à celle d'un appel de fonction, mais `import` est bien un mot-clé et pas une fonction. On ne peut pas créer de synonyme comme avec `const monImport = import`, cela déclenchera une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
@@ -117,8 +118,8 @@ Ici, on charge 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc.,
 ```js
 Promise.all(
   Array.from({ length: 10 }).map((_, index) =>
-    import(`/modules/module-${index}.js`)
-  )
+    import(`/modules/module-${index}.js`),
+  ),
 ).then((modules) => modules.forEach((module) => module.load()));
 ```
 

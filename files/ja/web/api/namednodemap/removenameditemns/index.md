@@ -4,6 +4,7 @@ slug: Web/API/NamedNodeMap/removeNamedItemNS
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
+
 {{APIRef("DOM")}}
 
 **`removedNamedItemNS()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、指定された名前空間とローカル名に対応する {{domxref("Attr")}} をこのマップから取り除きます。
@@ -18,7 +19,7 @@ removeNamedItem(namespace, localName);
 
 - `namespace`
   - : このマップから取り除く属性の名前空間です。
-    > **Warning:** `namespace` は名前空間の URI であり、接頭辞ではありません。
+    > **警告:** `namespace` は名前空間の URI であり、接頭辞ではありません。
 
 - `localName`
   - : このマップから取り除く属性のローカル名です。

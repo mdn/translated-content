@@ -2,6 +2,7 @@
 title: CSS レイアウト入門
 slug: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 この記事では、以前のモジュールで既に触れた CSS レイアウト機能のいくつか（さまざまな {{cssxref("display")}} の値など）を要約し、このモジュール全体で取り上げるいくつかの概念を紹介します。
@@ -47,7 +48,7 @@ CSS のページレイアウト技術によって、ウェブページに含ま�
 
 上下に並んで表示される要素は*ブロック*要素と呼ばれています。段落内の個々の単語と同じように横に並んで表示される*インライン*要素とは対照的です。
 
-> **Note:** ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向（Block Direction）と呼ばれます。 ブロック方向は、英語などの横書きモード（Horizontal Writing Mode）の言語では垂直に走ります。 日本語のような縦書きモード（Vertical Writing Mode）では、どの言語でも水平に走ります。 対応するインライン方向（Inline Direction）は、インラインコンテンツ（文など）が走る方向です。
+> **メモ:** ブロック要素のコンテンツがレイアウトされる方向は、ブロック方向（Block Direction）と呼ばれます。 ブロック方向は、英語などの横書きモード（Horizontal Writing Mode）の言語では垂直に走ります。 日本語のような縦書きモード（Vertical Writing Mode）では、どの言語でも水平に走ります。 対応するインライン方向（Inline Direction）は、インラインコンテンツ（文など）が走る方向です。
 
 CSS で何かをレイアウトするとその要素を通常フローから遠ざけることになりますが、ページ上の多くの要素は通常フローにしたがって適宜レイアウトされます。これが、構造化された HTML 文書から始めることが非常に重要である理由です。 なぜなら、多くの要素のレイアウトに一から悪戦苦闘するかわりに、あらかじめ多くのものがレイアウトされている現状で作業できるからです。
 
@@ -76,14 +77,15 @@ CSS でページレイアウトを実現するための主な方法は、`displa
 ただし、`display: flex` を親に追加すると、3 つの項目は列に配置されます。 これは、それらが*フレックス項目*になり、フレックスボックスがそれらに与えるいくつかの初期値を使用するためです。 {{cssxref("flex-direction")}} の初期値は `row` なので、行として表示されます。 {{cssxref("align-items")}} プロパティの初期値は `stretch` であるため、それらはすべて最も高い項目の高さまで伸びているように見えます。 これは、項目がフレックスコンテナの高さまで伸びることを意味します。 この場合、項目は最も高い項目によって定義されます。 項目はすべてコンテナの先頭に配置され、行の末尾に余分なスペースが残ります。
 
 ```css hidden
-* {box-sizing: border-box;}
-
-.wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+* {
+  box-sizing: border-box;
 }
 
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
@@ -107,37 +109,38 @@ CSS でページレイアウトを実現するための主な方法は、`displa
 この単純な例として、すべての子項目に `1` の値の {{cssxref("flex")}} プロパティを追加できます。 これにより、末尾にスペースを残すのではなく、すべての項目が拡大してコンテナがいっぱいになります。 より多くのスペースがあるならば、項目はより広くなり、スペースが少ないと狭くなります。 さらに、マークアップに別の要素を追加すると、項目はすべてスペースを空けるために小さくなります — サイズに関係なく、同じ大きさのスペースを占めるようにサイズが調整されます。
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: flex;
+  display: flex;
 }
 
 .wrapper > div {
-    flex: 1;
+  flex: 1;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Flex_2', '300', '200') }}
 
-> **Note:** これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の記事を参照してください。
+> **メモ:** これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の記事を参照してください。
 
 ## グリッドレイアウト
 
@@ -146,33 +149,34 @@ CSS でページレイアウトを実現するための主な方法は、`displa
 繰り返しになりますが、`display: grid` という特定の `display` の値でグリッドレイアウト（Grid Layout）をオンにすることができます。 以下の例では、コンテナといくつかの子要素とともに、`flex` の例と同様のマークアップを使用しています。 `display: grid` の使用に加えて、{{cssxref("grid-template-rows")}} プロパティと {{cssxref("grid-template-columns")}} プロパティをそれぞれ使用して、親の行と列のトラックをいくつか定義します。 それぞれ `1fr` の 3 列と `100px` の 2 行を定義しました。 子要素に規則を置く必要はなく、自動的にグリッドが作成したセルに配置されます。
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
-    <div class="box4">Four</div>
-    <div class="box5">Five</div>
-    <div class="box6">Six</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
+  <div class="box6">Six</div>
 </div>
 ```
 
@@ -181,51 +185,52 @@ CSS でページレイアウトを実現するための主な方法は、`displa
 グリッドを作成したら、上記の自動配置のふるまいに頼らずに、明示的に項目を配置できます。 以下の 2 番目の例では、同じグリッドを定義しましたが、今回は 3 つの子項目を使用しています。 {{cssxref("grid-column")}} プロパティと {{cssxref("grid-row")}} プロパティを使用して各項目の開始ラインと終了ラインを設定しました。 これにより、項目が複数のトラックにまたがるようになります。
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 
 .box1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 1;
 }
 
 .box2 {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 .box3 {
-    grid-row: 2;
-    grid-column: 3;
+  grid-row: 2;
+  grid-column: 3;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">One</div>
-    <div class="box2">Two</div>
-    <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Grid_2', '300', '330') }}
 
-> **Note:** これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。 詳細については、[グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)の記事を参照してください。
+> **メモ:** これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。 詳細については、[グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)の記事を参照してください。
 
 このガイドの残りの部分では、他のレイアウト方法について説明します。 これは、ページの主なレイアウト構造にとってはそれほど重要ではありませんが、それでも特定のタスクを達成するのに役立ちます。 各レイアウトタスクの性質を理解することで、デザインの特定の構成要素を見たときに、それに最も適したレイアウトの種類が明らかになることがすぐにわかります。
 
@@ -244,21 +249,21 @@ CSS でページレイアウトを実現するための主な方法は、`displa
 
 ```css hidden
 body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 p {
-    line-height: 2;
-    word-spacing: 0.1rem;
+  line-height: 2;
+  word-spacing: 0.1rem;
 }
 
 .box {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -267,21 +272,31 @@ p {
 
 <div class="box">Float</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css
 .box {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 30px;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
 }
 ```
 
 {{ EmbedLiveSample('Float_1', '100%', 600) }}
 
-> **Note:** フロートについては、[float と clear](/ja/docs/Learn/CSS/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどのテクニックの前は、列レイアウトの作成方法としてフロートが使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。 これらについては、[過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
+> **メモ:** フロートについては、[float と clear](/ja/docs/Learn/CSS/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどのテクニックの前は、列レイアウトの作成方法としてフロートが使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。 これらについては、[過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
 
 ## 位置指定のテクニック
 
@@ -318,11 +333,11 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -361,19 +376,19 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
   position: relative;
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   top: 30px;
   left: 30px;
 }
@@ -412,21 +427,21 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
-    position: absolute;
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
-    top: 30px;
-    left: 30px;
+  position: absolute;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  top: 30px;
+  left: 30px;
 }
 ```
 
@@ -455,33 +470,61 @@ p {
 
 <div class="positioned">Fixed</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
 body {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .positioned {
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
-    position: fixed;
-    top: 30px;
-    left: 30px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
 }
 ```
 
@@ -494,13 +537,41 @@ body {
 ```html hidden
 <h1>Sticky positioning</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Sticky</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -510,8 +581,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -528,7 +599,7 @@ body {
 
 {{ EmbedLiveSample('Sticky_1', '100%', 200) }}
 
-> **Note:** 位置指定の詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の記事をご覧ください。
+> **メモ:** 位置指定の詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の記事をご覧ください。
 
 ## 表レイアウト
 
@@ -545,15 +616,15 @@ HTML 表は表形式のデータを表示するのに適していますが、何
   <p>First of all, tell us your name and age.</p>
   <div>
     <label for="fname">First name:</label>
-    <input type="text" id="fname">
+    <input type="text" id="fname" />
   </div>
   <div>
     <label for="lname">Last name:</label>
-    <input type="text" id="lname">
+    <input type="text" id="lname" />
   </div>
   <div>
     <label for="age">Age:</label>
-    <input type="text" id="age">
+    <input type="text" id="age" />
   </div>
 </form>
 ```
@@ -576,7 +647,8 @@ form div {
   display: table-row;
 }
 
-form label, form input {
+form label,
+form input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -616,37 +688,55 @@ form p {
 
 ```html
 <div class="container">
-    <h1>Multi-column layout</h1>
+  <h1>Multi-column layout</h1>
 
-    <p>Paragraph 1.</p>
-    <p>Paragraph 2.</p>
-
+  <p>Paragraph 1.</p>
+  <p>Paragraph 2.</p>
 </div>
 ```
 
 このコンテナでは 200 ピクセルの `column-width` を使用しているため、ブラウザーはコンテナに収まるだけの数の 200 ピクセルの列を作成し、作成された列間で残りのスペースを共有します。
 
 ```html hidden
-    <div class="container">
-        <h1>Multi-column Layout</h1>
+<div class="container">
+  <h1>Multi-column Layout</h1>
 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-
-        <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-    </div>
-
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
+</div>
 ```
 
 ```css hidden
-body { max-width: 800px; margin: 0 auto; }
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
 ```
 
 ```css
-    .container {
-        column-width: 200px;
-    }
+.container {
+  column-width: 200px;
+}
 ```
 
 {{ EmbedLiveSample('Multicol_1', '100%', 200) }}
@@ -656,18 +746,3 @@ body { max-width: 800px; margin: 0 auto; }
 この記事では、知っておくべきすべてのレイアウト技術について簡単に説明しました。 個々の技術の詳細については、続けて読んでください！
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

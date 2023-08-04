@@ -2,6 +2,7 @@
 title: Node.hasChildNodes
 slug: Web/API/Node/hasChildNodes
 ---
+
 {{ApiRef}}
 
 ### 概述
@@ -21,8 +22,8 @@ element.hasChildNodes()
 ```js
 var foo = document.getElementById("foo");
 
-if ( foo.hasChildNodes() ) {
-  foo.removeChild( foo.childNodes[0] );
+if (foo.hasChildNodes()) {
+  foo.removeChild(foo.childNodes[0]);
 }
 ```
 

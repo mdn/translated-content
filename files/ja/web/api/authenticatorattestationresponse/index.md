@@ -2,13 +2,14 @@
 title: AuthenticatorAttestationResponse
 slug: Web/API/AuthenticatorAttestationResponse
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`AuthenticatorAttestationResponse`** は [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) のインターフェイスで、 {{domxref('CredentialsContainer.create()')}} に {{domxref('PublicKeyCredential')}} を渡すと返されます。そして、生成された新しいキーペアの暗号化信頼ルートを提供します。このレスポンスは認証情報の生成を完了させるために、信頼されている側のサーバーに送信されます。
 
 このインターフェイスは {{domxref("AuthenticatorResponse")}} を継承しています。
 
-> **Note:** **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
+> **メモ:** このインターフェイスは最上位のコンテキストに限定されています。 {{HTMLElement("iframe")}} 要素の中で使用しても、何も効果がありません。
 
 ## プロパティ
 
@@ -56,9 +57,7 @@ navigator.credentials.create({ publicKey })
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('WebAuthn','#authenticatorattestationresponse', 'AuthenticatorAttestationResponse interface')}} | {{Spec2('WebAuthn')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

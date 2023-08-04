@@ -2,9 +2,10 @@
 title: Headers.entries()
 slug: Web/API/Headers/entries
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
-**`Headers.entries()`** 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对.
+**`Headers.entries()`** 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对。
 
 > **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中是可用的。
 
@@ -23,12 +24,12 @@ headers.entries();
 ```js
 // Create a test Headers object
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // Display the key/value pairs
 for (var pair of myHeaders.entries()) {
-   console.log(pair[0]+ ': '+ pair[1]);
+  console.log(pair[0] + ": " + pair[1]);
 }
 ```
 

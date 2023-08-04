@@ -2,11 +2,12 @@
 title: AudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 ---
+
 音频环境{{ domxref("AudioContext") }} 接口的 `createBuffer() 方法用于新建一个空`白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。
 
 更多关于音频片段 (Audio Buffer) 的细节，请参考{{ domxref("AudioBuffer") }}页面。
 
-> **备注：** `createBuffer()` 曾被用于接收压缩后的音频数据，并返回被解码的音频，但是这项功能现在已经被移除，因为所有的解码工作应当在主线程中被完成，`createBuffer()` 阻塞了其他代码的执行。异步方法 `decodeAudioData()` 能够完成相同的工作 —— 传入一个压缩过的音频（如 MP3 格式的文件），并直接返回一个可以通过 {{ domxref("AudioBufferSourceNode") }} 播放的 {{ domxref("AudioBuffer") }} 。因此播放诸如 MP3 等格式的压缩音频时，你应当使用 `decodeAudioData() 方法。`
+> **备注：** `createBuffer()` 曾被用于接收压缩后的音频数据，并返回被解码的音频，但是这项功能现在已经被移除，因为所有的解码工作应当在主线程中被完成，`createBuffer()` 阻塞了其他代码的执行。异步方法 `decodeAudioData()` 能够完成相同的工作 —— 传入一个压缩过的音频（如 MP3 格式的文件），并直接返回一个可以通过 {{ domxref("AudioBufferSourceNode") }} 播放的 {{ domxref("AudioBuffer") }}。因此播放诸如 MP3 等格式的压缩音频时，你应当使用 `decodeAudioData()` 方法。
 
 ## 语法
 
@@ -56,9 +57,9 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -67,19 +68,23 @@ var channels = 2;
 // 创建一个 采样率与音频环境 (AudioContext) 相同的 时长 2 秒的 音频片段。
 var frameCount = audioCtx.sampleRate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // 使用白噪声填充;
   // 就是 -1.0 到 1.0 之间的随机数
   for (var channel = 0; channel < channels; channel++) {
-   // 这允许我们读取实际音频片段 (AudioBuffer) 中包含的数据
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // 这允许我们读取实际音频片段 (AudioBuffer) 中包含的数据
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // 获取一个 音频片段源节点 (AudioBufferSourceNode)。
@@ -92,7 +97,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // 开始播放声源
   source.start();
-}
+};
 ```
 
 ## 规范
@@ -101,7 +106,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createBuffer")}}
+{{Compat}}
 
 ## 相关链接
 

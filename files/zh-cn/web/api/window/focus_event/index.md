@@ -1,7 +1,8 @@
 ---
-title: 'Window: focus event'
+title: "Window: focus event"
 slug: Web/API/Window/focus_event
 ---
+
 {{APIRef}}
 
 当元素获得焦点时， **`focus`** 事件就会触发。
@@ -65,24 +66,25 @@ slug: Web/API/Window/focus_event
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### 结果
 
-{{EmbedLiveSample("Live_example")}}
+{{EmbedLiveSample("在线示例")}}
 
 ## 规范
 
@@ -90,9 +92,9 @@ window.addEventListener('focus', play);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.focus_event")}}
+{{Compat}}
 
 ## 参考
 
 - 相关联事件： {{domxref("Window/blur_event", "blur")}}
-- `Element` 目标上的这个事件: {{domxref("Element/focus_event", "focus")}} 事件
+- `Element` 目标上的这个事件：{{domxref("Element/focus_event", "focus")}} 事件

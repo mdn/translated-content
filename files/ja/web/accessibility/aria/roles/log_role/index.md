@@ -1,13 +1,8 @@
 ---
 title: log ロールの使用
 slug: Web/Accessibility/ARIA/Roles/log_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 ---
+
 ### 説明
 
 このテクニックは、[`log`](http://www.w3.org/TR/wai-aria/#log) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
@@ -28,7 +23,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 - `aria-live="assertive"` が設定されておらず、ユーザーが中断されている場合を除き、スクリーンリーダーは、ユーザーがアイドル状態のときにログ内の変更をアナウンスするべきです。
 - スクリーン拡大鏡は、ログ更新が発生したことを視覚的に示すことができます。
 
-> **Note:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
+> **メモ:** 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。
 
 ### 例
 
@@ -49,8 +44,10 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
   <ul id="chatRegion" aria-live="polite" aria-atomic="false">
     <li>AJAX チャットの使用を開始するには、ユーザー名を選択してください。</li>
   </ul>
-  <ul id="userListRegion" aria-live="off" aria-relevant="additions removals text">
-  </ul>
+  <ul
+    id="userListRegion"
+    aria-live="off"
+    aria-relevant="additions removals text"></ul>
 </div>
 ```
 

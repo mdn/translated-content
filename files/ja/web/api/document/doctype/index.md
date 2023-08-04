@@ -2,6 +2,7 @@
 title: Document.doctype
 slug: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 現在の文書に関連付けられた文書型宣言 (Document Type Declaration) (DTD) を返します。返されるオブジェクトは、 {{domxref("DocumentType")}} インターフェイスを持ちます。 `DocumentType` を生成するには {{domxref("DOMImplementation.createDocumentType()")}} を使用してください。
@@ -20,10 +21,17 @@ doctype = document.doctype;
 var doctypeObj = document.doctype;
 
 console.log(
-  "doctypeObj.name: "           + doctypeObj.name            + "\n" +
-  "doctypeObj.internalSubset: " + doctypeObj.internalSubset  + "\n" +
-  "doctypeObj.publicId: "       + doctypeObj.publicId        + "\n" +
-  "doctypeObj.systemId: "       + doctypeObj.systemId
+  "doctypeObj.name: " +
+    doctypeObj.name +
+    "\n" +
+    "doctypeObj.internalSubset: " +
+    doctypeObj.internalSubset +
+    "\n" +
+    "doctypeObj.publicId: " +
+    doctypeObj.publicId +
+    "\n" +
+    "doctypeObj.systemId: " +
+    doctypeObj.systemId,
 );
 ```
 
@@ -35,9 +43,7 @@ DOM レベル 2 では、文書型宣言の編集に対応していません。
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-doctype', 'Document: doctype')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

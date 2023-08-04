@@ -2,6 +2,7 @@
 title: IntersectionObserver.disconnect()
 slug: Web/API/IntersectionObserver/disconnect
 ---
+
 {{APIRef("Intersection Observer API")}}{{domxref("IntersectionObserver")}} 的`disconnect()`方法终止对所有目标元素可见性变化的观察。
 
 ## 语法

@@ -1,7 +1,8 @@
 ---
-title: 'Performance: resourcetimingbufferfull イベント'
+title: "Performance: resourcetimingbufferfull イベント"
 slug: Web/API/Performance/resourcetimingbufferfull_event
 ---
+
 {{APIRef}}
 
 `resourcetimingbufferfull` イベントは、ブラウザーのリソースタイミングバッファーがいっぱいになると発生します。

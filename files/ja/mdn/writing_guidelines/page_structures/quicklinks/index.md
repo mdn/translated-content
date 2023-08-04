@@ -1,10 +1,10 @@
 ---
 title: クイックリンク
 slug: MDN/Writing_guidelines/Page_structures/Quicklinks
-original_slug: MDN/Structures/Quicklinks
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN はページへのクイックリンクの追加に対応しています。これらのボックスは、 MDN 上の他のページやサイト外のページへの階層的なリストを含むことができます。この記事では、クイックリンクボックスの生成方法を解説します。
@@ -21,15 +21,34 @@ MDN はページへのクイックリンクの追加に対応しています。�
 <section id="Quick_links">
   <ol>
     <li><a href="http://docs.ckeditor.com/">CKEditor documentation site</a></li>
-    <li><a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a></li>
+    <li>
+      <a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a>
+    </li>
     <li class="toggle">
-      <details><summary>Style guides</summary>
-      <ol>
-        <li><a href="http://www.economist.com/research/StyleGuide/">The Economist style guide</a></li>
-        <li><a href="https://www.amazon.com/gp/product/0226104036/">The Chicago manual of style</a></li>
-        <li><a href="http://www.answers.com/library/Dictionary">Answers.com dictionary</a></li>
-        <li><a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a></li>
-      </ol>
+      <details>
+        <summary>Style guides</summary>
+        <ol>
+          <li>
+            <a href="http://www.economist.com/research/StyleGuide/"
+              >The Economist style guide</a
+            >
+          </li>
+          <li>
+            <a href="https://www.amazon.com/gp/product/0226104036/"
+              >The Chicago manual of style</a
+            >
+          </li>
+          <li>
+            <a href="http://www.answers.com/library/Dictionary"
+              >Answers.com dictionary</a
+            >
+          </li>
+          <li>
+            <a href="http://www.wsu.edu/~brians/errors/"
+              >Common Errors in English</a
+            >
+          </li>
+        </ol>
       </details>
     </li>
   </ol>
@@ -54,7 +73,7 @@ MDN はページへのクイックリンクの追加に対応しています。�
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
   - : CSS リファレンスページの標準クイックリンクを構築します。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs)
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
   - : HTML リファレンスページの標準クイックリンクを構築します。
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
   - : 現在のページ（または指定したページ）の子を宛先として使用して、クイックリンクのセットを作成します。

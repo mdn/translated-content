@@ -1,7 +1,8 @@
 ---
-title: 'HTMLMediaElement: durationchange 事件'
+title: "HTMLMediaElement: durationchange 事件"
 slug: Web/API/HTMLMediaElement/durationchange_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `durationchange` 事件会在 `duration` 属性更新时被触发。
@@ -53,20 +54,20 @@ slug: Web/API/HTMLMediaElement/durationchange_event
 使用 `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('durationchange', (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+video.addEventListener("durationchange", (event) => {
+  console.log("Not sure why, but the duration of the video has changed.");
 });
 ```
 
 使用 `ondurationchange` 事件处理器属性：
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.ondurationchange = (event) => {
-  console.log('Not sure why, but the duration of the video has changed.');
+  console.log("Not sure why, but the duration of the video has changed.");
 };
 ```
 
@@ -76,7 +77,7 @@ video.ondurationchange = (event) => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.durationchange_event")}}
+{{Compat}}
 
 ## Related Events
 

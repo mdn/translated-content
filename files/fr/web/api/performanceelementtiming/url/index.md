@@ -1,15 +1,8 @@
 ---
 title: PerformanceElementTiming.url
 slug: Web/API/PerformanceElementTiming/url
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - url
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/url
 ---
+
 {{APIRef("Element Timing API")}}
 
 La propriété en lecture seule **`url`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie l'URL initiale de la demande de ressource lorsque l'élément est une image.
@@ -29,7 +22,11 @@ Une [`DOMString`](/fr/docs/Web/API/DOMString) qui est l'URL initiale de la deman
 Dans cet exemple, appeler `entry.url` renvoie `https://example.com/image.jpg`.
 
 ```html
-<img src="https://example.com/image.jpg" alt="une belle imahe" elementtiming="big-image" id="myImage">
+<img
+  src="https://example.com/image.jpg"
+  alt="une belle imahe"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

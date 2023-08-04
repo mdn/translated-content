@@ -2,6 +2,7 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 `CustomEvent` 接口表示由程序出于某个目的而创建的事件。

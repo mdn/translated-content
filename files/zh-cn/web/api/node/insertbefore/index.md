@@ -2,6 +2,7 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.insertBefore()`** 方法在参考节点之前插入一个拥有指定父节点的子节点。如果给定的子节点是对文档中现有节点的引用，`insertBefore()` 会将其从当前位置移动到新位置（在将节点附加到其他节点之前，不需要从其父节点删除该节点）。
@@ -58,7 +59,7 @@ parentDiv.insertBefore(newNode, sp2); //隐式转换到节点类型
 //实验二结束
 
 //实验三：referenceNode 为字符类型的 "undefined"
-var sp2 = "undefined"; //不存在 id 为"childElement"的referenceNode
+var sp2 = "undefined"; //不存在 id 为"childElement"的 referenceNode
 parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 //实验三结束
 </script>
@@ -72,16 +73,16 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 </div>
 
 <script>
-//创建一个新的、普通的<span>元素
-var sp1 = document.createElement("span");
+  //创建一个新的、普通的<span>元素
+  var sp1 = document.createElement("span");
 
-//插入节点之前，要获得节点的引用
-var sp2 = document.getElementById("childElement");
-//获得父节点的引用
-var parentDiv = sp2.parentNode;
+  //插入节点之前，要获得节点的引用
+  var sp2 = document.getElementById("childElement");
+  //获得父节点的引用
+  var parentDiv = sp2.parentNode;
 
-//在 DOM 中在 sp2 之前插入一个新元素
-parentDiv.insertBefore(sp1, sp2);
+  //在 DOM 中在 sp2 之前插入一个新元素
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -101,7 +102,7 @@ parentDiv.insertBefore(sp1, sp2.nextSibling);
 
 ```js
 //插入节点之前，要获得节点的引用
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 //获得第一个子节点的引用
 var theFirstChild = parentElement.firstChild;
 
@@ -112,7 +113,7 @@ var newElement = document.createElement("div");
 parentElement.insertBefore(newElement, theFirstChild);
 ```
 
-当元素没有首节点时，`firstChild` 返回 `null`。该元素仍然会被插入到父元素中，位于最后一个节点后面。又由于父元素没有第一个子节点，也没有最后一个子节点。 最终，新元素成为唯一的子元素。
+当元素没有首节点时，`firstChild` 返回 `null`。该元素仍然会被插入到父元素中，位于最后一个节点后面。又由于父元素没有第一个子节点，也没有最后一个子节点。最终，新元素成为唯一的子元素。
 
 ## 规范
 

@@ -1,14 +1,8 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/tab-size
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`tab-size`** 속성은 탭 문자(U+0009)의 너비를 조절합니다.

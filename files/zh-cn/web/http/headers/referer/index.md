@@ -2,6 +2,7 @@
 title: Referer
 slug: Web/HTTP/Headers/Referer
 ---
+
 {{HTTPSidebar}}
 
 **`Referer`** 请求头包含了当前请求页面的来源页面的地址，即表示当前页面是通过此来源页面里的链接进入的。服务端一般使用 `Referer` 请求头识别访问来源，可能会以此进行统计分析、日志记录以及缓存优化等。
@@ -15,9 +16,9 @@ slug: Web/HTTP/Headers/Referer
 - 来源页面采用的协议为表示本地文件的 "file" 或者 "data" URI；
 - 当前请求页面采用的是非安全协议，而来源页面采用的是安全协议（HTTPS）。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 
@@ -33,7 +34,7 @@ Referer: <url>
 ## 示例
 
 ```plain
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ```
 
 ## 规范

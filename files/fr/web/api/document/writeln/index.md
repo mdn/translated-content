@@ -1,13 +1,8 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Écrit une chaine de caractères suivie d'un retour de ligne.

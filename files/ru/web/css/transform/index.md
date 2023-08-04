@@ -1,15 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - transform
-  - Вёрстка
-  - Свойство CSS
-  - наклон
-  - поворот
-  - трансформация
-translation_of: Web/CSS/transform
 ---
 {{CSSRef}}
 
@@ -60,7 +51,7 @@ transform: initial;
 transform: unset;
 ```
 
-Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#<transform-function>).
+Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#transform-function).
 
 ### Значения
 

@@ -2,6 +2,7 @@
 title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 ---
+
 {{AddonSidebar()}}
 
 Fires when the captive portal state changes.
@@ -9,9 +10,9 @@ Fires when the captive portal state changes.
 ## Syntax
 
 ```js
-browser.captivePortal.onStateChanged.addListener(callback)
-browser.captivePortal.onStateChanged.removeListener(listener)
-browser.captivePortal.onStateChanged.hasListener(listener)
+browser.captivePortal.onStateChanged.addListener(callback);
+browser.captivePortal.onStateChanged.removeListener(listener);
+browser.captivePortal.onStateChanged.hasListener(listener);
 ```
 
 Events have three functions:
@@ -43,14 +44,14 @@ function handlePortalStatus(portalstatusInfo) {
   console.log("The portal status is now: " + portalstatusInfo.details);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.captivePortal.onStateChanged")}}
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

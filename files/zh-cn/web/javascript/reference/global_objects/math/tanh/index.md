@@ -2,6 +2,7 @@
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 函数将会返回一个数的双曲正切函数值，公式如下：
@@ -34,9 +35,9 @@ Math.tanh(x)
 ### 使用 `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## 向下兼容
@@ -44,10 +45,13 @@ Math.tanh(1);        // 0.7615941559557649
 `tanh()` 可以通过 {{jsxref("Math.exp()")}} 函数实现：
 
 ```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+  };
 ```
 
 ## 规范

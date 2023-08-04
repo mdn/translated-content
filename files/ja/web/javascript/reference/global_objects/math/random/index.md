@@ -1,22 +1,15 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Math.random()
-  - Method
-  - Random
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
+
 {{JSRef}}
 
 **`Math.random()`** 関数は、 0 以上 1 未満 (0 は含むが、 1 は含まない) の範囲で浮動小数点の擬似乱数を返します。その範囲ではほぼ均一な分布で、ユーザーは範囲の拡大をすることができます。実装側で乱数生成アルゴリズムの初期シードを選択します。ユーザーが初期シードを選択、またはリセットすることは出来ません。
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
-> **Note:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えて*いません*。セキュリティに関連する目的では使用しないでください。代わりに Web Crypto API (より具体的には {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} メソッド) を使用してください。
+> **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えて*いません*。セキュリティに関連する目的では使用しないでください。代わりに Web Crypto API (より具体的には {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}} メソッド) を使用してください。
 
 ## 構文
 
@@ -62,7 +55,7 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Note:** `Math.round()` を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
+> **メモ:** `Math.round()` を使う方が魅力的かもしれませんが、その場合は乱数が不均一な分布に従うことになるので、ユーザーのニーズに合わないかもしれません。
 
 ### 包括的に 2 つの値の間のランダムな整数を得る
 
@@ -78,9 +71,7 @@ function getRandomIntInclusive(min, max) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.random', 'Math.random')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

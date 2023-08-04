@@ -1,13 +1,8 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/padding-top
 ---
+
 {{CSSRef}}
 
 **`padding-top`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.

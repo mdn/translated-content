@@ -2,6 +2,7 @@
 title: TransformStreamDefaultController.enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定的分块排入流的可读端。
@@ -10,7 +11,7 @@ slug: Web/API/TransformStreamDefaultController/enqueue
 
 ## 语法
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 

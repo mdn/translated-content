@@ -1,10 +1,11 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-本教程擴展了我們的[LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為主頁添加了一個基於會話的訪問計數器。這是一個相對簡單的例子，但它確實顯示了，如何使用會話框架，為匿名用戶提供持久的行為。
+本教程擴展了我們的[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為主頁添加了一個基於會話的訪問計數器。這是一個相對簡單的例子，但它確實顯示了，如何使用會話框架，為匿名用戶提供持久的行為。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Django/Sessions
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -26,7 +27,7 @@ slug: Learn/Server-side/Django/Sessions
 
 ## 概覽
 
-我們在之前的教程中創建的[LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站允許用戶瀏覽目錄中的書籍和作者。 雖然內容是從數據庫動態生成的，但每個用戶在使用該網站時基本上都可以訪問相同的頁面和信息類型。
+我們在之前的教程中創建的[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站允許用戶瀏覽目錄中的書籍和作者。 雖然內容是從數據庫動態生成的，但每個用戶在使用該網站時基本上都可以訪問相同的頁面和信息類型。
 
 在一個"真實"的庫中，您可能希望根據用戶以前對網站的使用，首選項等為單個用戶提供定制的體驗。例如，您可以隱藏或存儲用戶下次訪問網站時之前已確認的警告消息，或尊重他們的偏好（例如，他們希望在每個頁面上顯示的搜索結果的數量）。
 
@@ -34,11 +35,11 @@ slug: Learn/Server-side/Django/Sessions
 
 ## What are sessions?
 
-Web 瀏覽器和服務器之間的所有通信都是通過 HTTP 協議進行的，該協議是無狀態的。該協議是無狀態的事實意味著客戶端和服務器之間的消息是完全相互獨立的-沒有基於先前消息的“序列”或行為的概念。因此，如果您想擁有一個跟踪與客戶之間正在進行的關係的站點，則需要自己實施。
+Web 瀏覽器和服務器之間的所有通信都是通過 HTTP 協議進行的，該協議是無狀態的。該協議是無狀態的事實意味著客戶端和服務器之間的消息是完全相互獨立的-沒有基於先前消息的「序列」或行為的概念。因此，如果您想擁有一個跟踪與客戶之間正在進行的關係的站點，則需要自己實施。
 
-會話是 Django（以及大多數 Internet）使用的機制，用於跟踪站點與特定瀏覽器之間的“狀態”。會話允許您在每個瀏覽器中存儲任意數據，並且只要瀏覽器連接，該數據就可用於站點。然後，與會話相關聯的單個數據項被一個\`\`鍵''引用，該鍵既用於存儲又用於檢索數據。
+會話是 Django（以及大多數 Internet）使用的機制，用於跟踪站點與特定瀏覽器之間的「狀態」。會話允許您在每個瀏覽器中存儲任意數據，並且只要瀏覽器連接，該數據就可用於站點。然後，與會話相關聯的單個數據項被一個\`\`鍵''引用，該鍵既用於存儲又用於檢索數據。
 
-Django 使用包含特殊會話 ID 的 cookie 來標識每個瀏覽器及其與站點的關聯會話。默認情況下，實際會話數據默認存儲在站點數據庫中（這比將數據存儲在 cookie 中更安全，因為 cookie 在 cookie 中更容易受到惡意用戶的攻擊）。您可以將 Django 配置為將會話數據存儲在其他位置（緩存，文件或是“安全” Cookie），但是默認位置是一個很好且相對安全的選擇。
+Django 使用包含特殊會話 ID 的 cookie 來標識每個瀏覽器及其與站點的關聯會話。默認情況下，實際會話數據默認存儲在站點數據庫中（這比將數據存儲在 cookie 中更安全，因為 cookie 在 cookie 中更容易受到惡意用戶的攻擊）。您可以將 Django 配置為將會話數據存儲在其他位置（緩存，文件或是「安全」 Cookie），但是默認位置是一個很好且相對安全的選擇。
 
 ## Enabling sessions
 
@@ -64,7 +65,7 @@ MIDDLEWARE = [
 
 `session` 屬性是一個類似於字典的對象，您可以在視圖中隨意讀取和寫入多次，並根據需要對其進行修改。 您可以執行所有正常的字典操作，包括清除所有數據，測試是否存在鍵，循環訪問數據等。儘管如此，在大多數情況下，您只會使用標準的\`\`字典''API 來獲取和設置值。
 
-下面的代碼片段顯示瞭如何獲取，設置和刪除與當前會話（瀏覽器）相關的鍵“ `my_car`”的某些數據。
+下面的代碼片段顯示瞭如何獲取，設置和刪除與當前會話（瀏覽器）相關的鍵「 `my_car`」的某些數據。
 
 > **備註：** Django 的一大優點是，您無需考慮將會話綁定到視圖中當前請求的機制。 如果我們在視圖中使用以下片段，我們將知道有關`my_car` 的信息僅與發送當前請求的瀏覽器相關聯。
 
@@ -93,7 +94,7 @@ del request.session['my_car']
 request.session['my_car'] = 'mini'
 ```
 
-如果您要更新會話數據中的某些信息，則 Django 將不會識別您已對會話進行了更改並保存了數據（例如，如果要在“ `my_car`”數據中更改“ `wheels`”數據， 如下所示）。 在這種情況下，您需要將會話明確標記為已修改。
+如果您要更新會話數據中的某些信息，則 Django 將不會識別您已對會話進行了更改並保存了數據（例如，如果要在「 `my_car`」數據中更改「 `wheels`」數據， 如下所示）。 在這種情況下，您需要將會話明確標記為已修改。
 
 ```python
 # Session object not directly modified, only data within the session. Session changes not saved!
@@ -139,7 +140,7 @@ def index(request):
 
 將以下區塊底部看到的行添加到\`\`動態內容''部分底部的主 HTML 模板(**/locallibrary/catalog/templates/index.html**)中以顯示上下文變量：
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -150,7 +151,9 @@ def index(request):
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.
+</p>
 ```
 
 保存更改，然後重新啟動測試服務器。 每次刷新頁面時，數字都會更新。
@@ -166,21 +169,3 @@ def index(request):
 - [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

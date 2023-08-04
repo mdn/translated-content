@@ -2,6 +2,7 @@
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
+
 {{JSRef}}
 
 The **`Int16Array`** typed array represents an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
@@ -15,7 +16,7 @@ new Int16Array(object);
 new Int16Array(buffer [, byteOffset [, length]]);
 ```
 
-For more information about the constructor syntax and the parameters, see _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+For more information about the constructor syntax and the parameters, see _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -23,8 +24,6 @@ For more information about the constructor syntax and the parameters, see _[Type
   - : Returns a number value of the element size. `2` in the case of an `Int16Array`.
 - Int16Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Int16Array` type: "Int16Array".
 - {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -120,7 +119,7 @@ console.log(int16.length); // 2
 console.log(int16.BYTES_PER_ELEMENT); // 2
 
 // From an array
-var arr = new Int16Array([21,31]);
+var arr = new Int16Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -157,6 +156,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

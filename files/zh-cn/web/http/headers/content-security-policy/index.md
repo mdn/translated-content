@@ -2,13 +2,14 @@
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}HTTP 响应头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定服务器的源和脚本结束点。这将帮助防止跨站脚本攻击（`Cross-Site Script`）（{{Glossary("XSS")}}）。
 
 如需更多信息，请查阅[Content Security Policy (CSP)](/zh-CN/docs/Web/HTTP/CSP)。
 
-| 头部类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 头部类型                              | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -23,6 +24,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 通过获取指令来控制某些可能被加载的确切的资源类型的位置。
 
 - {{CSP("child-src")}}
+
   - : **child-src**：为 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 和其他内嵌浏览器内容（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）定义合法的源地址。
 
     > **警告：** 如果开发者希望管控内嵌浏览器内容和 web worker 应分别使用 {{CSP("frame-src")}} 和 {{CSP("worker-src")}} 指令，来相对的取代 **`child-src`**。
@@ -42,7 +44,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : **media-src**：限制通过 {{HTMLElement("audio")}}、{{HTMLElement("video")}} 或 {{HTMLElement("track")}} 标签加载的媒体文件的源地址。
 - {{CSP("object-src")}}
-  - : **object-src**：限制 {{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}} 标签的源地址。
+  - : **object-src**：限制 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 标签的源地址。
 
 > **备注：** 被 `object-src` 控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如 `<iframe>` 中的安全属性 `sandbox` 和 `allow`）。因此**建议**限制该指令的使用（比如，如果可行，将 `object-src` 显式设置为 `'none'`）。
 
@@ -53,7 +55,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : 限制层叠样式表文件源。
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : 指定[WebRTC](https://developer.mozilla.org/docs/Web/API/WebRTC_API)连接的合法源地址。
+  - : 指定[WebRTC](/docs/Web/API/WebRTC_API)连接的合法源地址。
 - {{CSP("worker-src")}}
   - : 限制 {{domxref("Worker")}}、{{domxref("SharedWorker")}} 或 {{domxref("ServiceWorker")}} 脚本源。
 
@@ -66,20 +68,20 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("plugin-types")}}
   - : 通过限制可以加载的资源类型来限制哪些插件可以被嵌入到文档中。
 - {{CSP("sandbox")}}
-  - : 类似 {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} 属性，为请求的资源启用沙盒。
+  - : 类似 {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 属性，为请求的资源启用沙盒。
 - {{CSP("disown-opener")}} {{Deprecated_Inline}}
   - : 确保资源在导航的时候能够脱离父页面。（windown.opener 对象）Ensures a resource will disown its opener when navigated to.
 
-### 导航指令 | Navigation directives
+### 导航指令
 
 导航指令管理用户能打开的链接或者表单可提交的链接
 
 - {{CSP("form-action")}}
   - : 限制能被用来作为给定上下文的表单提交的目标 URL（说白了，就是限制 form 的 action 属性的链接地址）
 - {{CSP("frame-ancestors")}}
-  - : 指定可能嵌入页面的有效父项 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}}.
+  - : 指定可能嵌入页面的有效父项 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}}。
 - {{CSP("navigation-to")}} {{experimental_inline}}
-  - : 限制文档可以通过以下任何方式访问 URL (如 a, form, window\.location, window\.open 等)
+  - : 限制文档可以通过以下任何方式访问 URL，包括 {{HTMLElement("form")}}（如果未指定 {{CSP("form-action")}}）、{{HTMLElement("a")}}、{{DOMxRef("window.location")}}、{{DOMxRef("window.open")}} 等。
 
 ### 报告指令
 
@@ -111,7 +113,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 CSP 允许在一个资源中指定多个策略，包括通过 `Content-Security-Policy` 头，以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头，和 {{HTMLElement("meta")}} 组件。
 
-你可以像以下实例一样多次调用 `Content-Security-Policy` 头。 特别注意这里的 {{CSP("connect-src")}} 指令。 尽管第二个策略允许连接，第一个策略仍然包括了 `connect-src 'none'`。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，`connect-src 'none'` 强制开启。
+你可以像以下实例一样多次调用 `Content-Security-Policy` 头。特别注意这里的 {{CSP("connect-src")}} 指令。尽管第二个策略允许连接，第一个策略仍然包括了 `connect-src 'none'`。添加了附加的策略后，只会让资源保护的能力更强，也就是说不会有接口可以被允许访问，等同于最严格的策略，`connect-src 'none'` 强制开启。
 
 ```plain
 Content-Security-Policy: default-src 'self' http://example.com;

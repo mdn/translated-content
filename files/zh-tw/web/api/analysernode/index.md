@@ -2,6 +2,7 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information. It is an {{domxref("AudioNode")}} that passes the audio stream unchanged from the input to the output, but allows you to take the generated data, process it, and create audio visualizations.
@@ -134,7 +135,7 @@ function draw() {
 
 ## Browser compatibility
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## See also
 

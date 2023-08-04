@@ -1,16 +1,10 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemref
-translation_of: Web/HTML/Global_attributes/itemref
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
@@ -19,7 +13,7 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 `itemref` 属性は `itemscope` 属性が指定された要素のみで指定することができます。
 
-> **Note:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
+> **メモ:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
 
 ## 例
 
@@ -43,11 +37,11 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -66,10 +60,9 @@ translation_of: Web/HTML/Global_attributes/itemref
 ## 関連情報
 
 - [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
-- マイクロデータに関連する他のグローバル属性
+- マイクロデータに関連する他のグローバル属性:
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
+  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)

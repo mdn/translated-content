@@ -2,11 +2,12 @@
 title: PerformanceTiming.domComplete
 slug: Web/API/PerformanceTiming/domComplete
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要
 
-**`PerformanceTiming.domComplete`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为主文档的解析器结束工作，{{domxref("Document.readyState")}} 变为 `'complete'且相当于` {{event("readystatechange")}} 事件被触发时的 Unix 毫秒时间戳。
+**`PerformanceTiming.domComplete`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为主文档的解析器结束工作，{{domxref("Document.readyState")}} 变为 `'complete'且相当于` [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件被触发时的 Unix 毫秒时间戳。
 
 ## 语法
 

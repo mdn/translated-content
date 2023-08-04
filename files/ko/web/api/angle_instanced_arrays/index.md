@@ -1,8 +1,8 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
-translation_of: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef ( "WebGL")}}
 
 이 **`ANGLE_instanced_arrays`**확장은 [WebGL API의](/ko/docs/Web/API/WebGL_API) 일부이며 동일한 객체 또는 동일한 객체 그룹을 같은 정점 데이터, 기본 개수 및 유형을 공유하는 경우 여러 번 그릴 수 있습니다.
@@ -34,14 +34,12 @@ WebGL 확장은 {{domxref ( "WebGLRenderingContext.getExtension()")}} 메서드�
 확장 기능 사용 :
 
 ```js
-var ext = gl.getExtension ( 'ANGLE_instanced_arrays');
+var ext = gl.getExtension("ANGLE_instanced_arrays");
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                         | 지위                                             | 논평       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------- |
-| {{SpecName ( 'ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}} | {{Spec2 ( 'ANGLE_instanced_arrays')}} | 초기 정의. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

@@ -1,8 +1,8 @@
 ---
 title: AbstractRange.collapsed
 slug: Web/API/AbstractRange/collapsed
-translation_of: Web/API/AbstractRange/collapsed
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("AbstractRange")}}의 범위가 축소된 read-only 속성은 범위의 시작 위치와 끝 위치가 같을 경우 true를 반환합니다.
@@ -10,7 +10,7 @@ translation_of: Web/API/AbstractRange/collapsed
 ## 문법
 
 ```js
-    var isCollpased = range.collapsed
+var isCollpased = range.collapsed;
 ```
 
 ### Value

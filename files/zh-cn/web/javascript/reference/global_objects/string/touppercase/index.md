@@ -2,6 +2,7 @@
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 **`toUpperCase()`** 方法将调用该方法的字符串转为大写形式并返回（如果调用该方法的值不是字符串类型会被强制转换）。
@@ -32,18 +33,18 @@ str.toUpperCase()
 ### 基本用法
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 将非字符串类型的 `this` （上下文）转为字符串
 
-此方法会将任何非字符串类型的值转为字符串， 当你将其上下文 `this` 值设置为非字符串类型
+此方法会将任何非字符串类型的值转为字符串，当你将其上下文 `this` 值设置为非字符串类型
 
 ```js
 const a = String.prototype.toUpperCase.call({
   toString: function toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

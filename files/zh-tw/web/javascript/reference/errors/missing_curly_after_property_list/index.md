@@ -1,7 +1,8 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 訊息
@@ -38,10 +39,10 @@ Correct would be:
 var obj = {
   a: 1,
   b: { myProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 
 ## 參見
 
-- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)

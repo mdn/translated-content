@@ -1,14 +1,8 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-tags:
-  - API
-  - Affichage
-  - DOM
-  - Méthodes
-  - Plein écran
-translation_of: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 La méthode **`Document.exitFullscreen()`** extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.
@@ -27,9 +21,9 @@ document.exitFullscreen();
 // Click bascule en mode plein écran
 document.onclick = function (event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document.exitFullscreen();
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```
@@ -50,4 +44,4 @@ document.onclick = function (event) {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/fr/docs/HTML/Element/iframe#allowfullscreen)

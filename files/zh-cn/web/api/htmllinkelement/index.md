@@ -2,6 +2,7 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLLinkElement`** interface represents reference information for external resources and the relationship of those resources to a document and vice-versa. This object inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
@@ -27,13 +28,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}, and {{domxref(
 - {{domxref("HTMLLinkElement.media")}}
   - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+  - : Is a {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMTokenList")}} that reflects the [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
@@ -62,7 +63,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Browser compatibility
 
-{{Compat("api.HTMLLinkElement")}}
+{{Compat}}
 
 ## See also
 

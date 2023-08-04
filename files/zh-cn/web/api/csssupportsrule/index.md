@@ -2,9 +2,10 @@
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
 ---
+
 {{APIRef("CSSOM")}}
 
-该 **`CSSSupportsRule`** 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule). 它实现了 {{domxref("CSSConditionRule")}} 接口，因此 {{domxref("CSSRule 指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 `12` (`CSSRule.SUPPORTS_RULE`).
+该 **`CSSSupportsRule`** 接口描述了代表一个 CSS 对象{{cssxref("@supports")}} [at-rule](/zh-CN/docs/Web/CSS/At-rule). 它实现了 {{domxref("CSSConditionRule")}} 接口，因此 {{domxref("CSSRule 指定规则")}} 和{{domxref("CSSGroupingRule")}} 用一个类型值接口 `12` (`CSSRule.SUPPORTS_RULE`).
 
 ## 句法
 
@@ -29,7 +30,7 @@ slug: Web/API/CSSSupportsRule
 
 ## 游览器兼容性
 
-{{Compat("api.CSSSupportsRule")}}
+{{Compat}}
 
 ## See also
 

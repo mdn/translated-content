@@ -1,14 +1,8 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - WebSocket
-  - リファレンス
-  - 情報
-translation_of: Web/HTTP/Status/101
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`101 Switching Protocols`** レスポンスコードは、 {{HTTPHeader("Upgrade")}} リクエストヘッダーを含むメッセージが送られたクライアントが要求する際に、サーバーが切り替えようとしているプロトコルを示します。

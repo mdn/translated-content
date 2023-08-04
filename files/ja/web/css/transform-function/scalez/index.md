@@ -1,15 +1,8 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-original_slug: Web/CSS/transform-function/scaleZ()
-browser-compat: css.types.transform-function.scaleZ
 ---
+
 {{CSSRef}}
 
 **`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -20,7 +13,7 @@ browser-compat: css.types.transform-function.scaleZ
 
 上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-> **Note:** `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
+> **メモ:** `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
 
 ## 構文
 
@@ -136,8 +129,8 @@ div {
 
 ## 関連情報
 
-- [`scaleX()`](/ja/docs/Web/CSS/transform-function/scaleX())
-- [`scaleY()`](/ja/docs/Web/CSS/transform-function/scaleY())
+- [`scaleX()`](</ja/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleY()`](</ja/docs/Web/CSS/transform-function/scaleY()>)
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
 - {{cssxref("transform-origin")}}

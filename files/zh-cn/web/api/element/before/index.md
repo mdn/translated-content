@@ -2,6 +2,7 @@
 title: Element.before()
 slug: Web/API/Element/before
 ---
+
 {{APIRef("DOM")}} {{SeeCompatTable}}
 
 **`ChildNode.before`** 方法可以在`ChildNode` 这个节点的父节点中插入一些列的 {{domxref("Node")}} 或者 {{domxref("DOMString")}} 对象，位置就是在`ChildNode` 节点的前面，{{domxref("DOMString")}} 对象其实和 {{domxref("Text")}} 节点一样的方式来完成插入的。
@@ -70,7 +71,7 @@ console.log(parent.outerHTML);
 The `before()` 不能配合 with 声明使用，See {{jsxref("Symbol.unscopables")}} for more information.
 
 ```js
-with(node) {
+with (node) {
   before("foo");
 }
 // ReferenceError: before is not defined
@@ -84,10 +85,10 @@ with(node) {
 // from: https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/before()/before().md
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('before')) {
+    if (item.hasOwnProperty("before")) {
       return;
     }
-    Object.defineProperty(item, 'before', {
+    Object.defineProperty(item, "before", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -97,11 +98,13 @@ with(node) {
 
         argArr.forEach(function (argItem) {
           var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+          docFrag.appendChild(
+            isNode ? argItem : document.createTextNode(String(argItem)),
+          );
         });
 
         this.parentNode.insertBefore(docFrag, this);
-      }
+      },
     });
   });
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
@@ -113,7 +116,7 @@ with(node) {
 
 ## Browser compatibility
 
-{{Compat("api.Element.before")}}
+{{Compat}}
 
 ## See also
 

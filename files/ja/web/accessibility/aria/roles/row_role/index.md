@@ -1,32 +1,28 @@
 ---
-title: 'ARIA: row ロール'
-slug: Web/Accessibility/ARIA/Roles/Row_Role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Row_Role
+title: "ARIA: row ロール"
+slug: Web/Accessibility/ARIA/Roles/row_role
 ---
+
 行ロール (`role="row"`) を持つ要素は、表形式の構造内に並んだセルの一行です。 行には、1 つ以上のセル、グリッドセル、列ヘッダー、場合によっては行ヘッダーが含まれます。 行は、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)) 内に含まれ、任意で行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)) 内に含まれることもあります。
 
 ```html
 <div role="table" aria-label="人口" aria-describedby="country_population_desc">
-   <div id="country_population_desc">国別世界人口</div>
-   <div role="rowgroup">
-      <div role="row">
-         <span role="columnheader" aria-sort="descending">国</span>
-         <span role="columnheader" aria-sort="none">人口</span>
-      </div>
-   </div>
-   <div role="rowgroup">
-     <div role="row">
-        <span role="cell">フィンランド</span>
-        <span role="cell">550 万</span>
-     </div>
-     <div role="row">
-        <span role="cell">フランス</span>
-        <span role="cell">6700 万</span>
-     </div>
+  <div id="country_population_desc">国別世界人口</div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="columnheader" aria-sort="descending">国</span>
+      <span role="columnheader" aria-sort="none">人口</span>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="cell">フィンランド</span>
+      <span role="cell">550 万</span>
+    </div>
+    <div role="row">
+      <span role="cell">フランス</span>
+      <span role="cell">6700 万</span>
+    </div>
   </div>
 </div>
 ```
@@ -43,7 +39,7 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 表形式の構造を持つインタラクティブなウィジェットを作成するには、代わりにグリッドパターンを使用します。 インタラクションが個々のセルの選択状態を提供する場合や、上下左右のナビゲーションを提供する場合や、ユーザーインターフェイスでセルの順序を入れ替えたり、ドラッグアンドドロップなどで個々のセルの順序を変更したりできる場合は、代わりにグリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)) やツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)) を使用してください。
 
-> **Note:** 可能な限り、ネイティブな HTML の表要素 (`<table>`) を表の行要素 (`<tr>`) と共に使用することを強く推奨します。
+> **メモ:** 可能な限り、ネイティブな HTML の表要素 (`<table>`) を表の行要素 (`<tr>`) と共に使用することを強く推奨します。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -113,33 +109,39 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 無し。 ソート可能な列については、列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)) ロールを参照してください。
 
-> **Note:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
+> **メモ:** ARIA の使用の第一のルールは、要素を転用して ARIA のロール、ステート、プロパティを**追加する**ことでアクセス可能にするのではなく、必要としている意味論と振る舞いがすでに組み込まれているネイティブな機能を使用できることです。 可能な限り、ARIA の表ロールの代わりに HTML の `<table>` 要素を使用してください。
 
 ## 例
 
 ```html
-<div role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <div id="semantic_elements_table_desc">ARIA のロールの代わりに使用する意味論的な要素</div>
+<div
+  role="table"
+  aria-label="意味論的な要素"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    ARIA のロールの代わりに使用する意味論的な要素
+  </div>
   <div role="rowgroup">
-     <div role="row">
-       <span role="columnheader" aria-sort="none">ARIA のロール</span>
-       <span role="columnheader" aria-sort="none">意味論的な要素</span>
-     </div>
-   </div>
-   <div role="rowgroup">
-    <div role="row" aria-rowindex="11">
-       <span role="cell">header</span>
-       <span role="cell">h1</span>
+    <div role="row">
+      <span role="columnheader" aria-sort="none">ARIA のロール</span>
+      <span role="columnheader" aria-sort="none">意味論的な要素</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+  </div>
+  <div role="rowgroup">
+    <div role="row" aria-rowindex="11">
+      <span role="cell">header</span>
+      <span role="cell">h1</span>
+    </div>
+    <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="cell">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="cell">term</span>
       <span role="cell">dt</span>
     </div>
@@ -154,33 +156,39 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 データ表構造には、`<table>`、`<tbody>`、`<thead>`、`<tr>`、`<th>`、`<td>` などのみを使用してください。 これらに ARIA ロールを追加することで、CSS などで表のネイティブな意味論が取り除かれても、アクセシビリティを確保することができます。 ARIA の表ロールの関連するユースケースは、`display: grid` など、CSS の `display` プロパティによって表のネイティブな意味論がオーバーライドされる場合です。 この場合、ARIA の表ロールを使用して意味論を追加し直すことができます。
 
 ```html
-<table role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <caption id="semantic_elements_table_desc">ARIA のロールの代わりに使用する意味論的な要素</caption>
+<table
+  role="table"
+  aria-label="意味論的な要素"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <caption id="semantic_elements_table_desc">
+    ARIA のロールの代わりに使用する意味論的な要素
+  </caption>
   <thead role="rowgroup">
-     <tr role="row">
-       <th role="columnheader" aria-sort="none">ARIA のロール</th>
-       <th role="columnheader" aria-sort="none">意味論的な要素</th>
-     </tr>
+    <tr role="row">
+      <th role="columnheader" aria-sort="none">ARIA のロール</th>
+      <th role="columnheader" aria-sort="none">意味論的な要素</th>
+    </tr>
   </thead>
   <tbody role="rowgroup">
-     <tr role="row" aria-rowindex="11">
-       <td role="cell">header</td>
-       <td role="cell">h1</td>
-     </tr>
-     <tr role="row" aria-rowindex="16">
-       <td role="cell">header</td>
-       <td role="cell">h6</td>
-     </tr>
-     <tr role="row" aria-rowindex="18">
-       <td role="cell">rowgroup</td>
-       <td role="cell">thead</td>
-     </tr>
-     <tr role="row" aria-rowindex="24">
-       <td role="cell">term</td>
-       <td role="cell">dt</td>
-     </tr>
-   </tbody>
- </table>
+    <tr role="row" aria-rowindex="11">
+      <td role="cell">header</td>
+      <td role="cell">h1</td>
+    </tr>
+    <tr role="row" aria-rowindex="16">
+      <td role="cell">header</td>
+      <td role="cell">h6</td>
+    </tr>
+    <tr role="row" aria-rowindex="18">
+      <td role="cell">rowgroup</td>
+      <td role="cell">thead</td>
+    </tr>
+    <tr role="row" aria-rowindex="24">
+      <td role="cell">term</td>
+      <td role="cell">dt</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 上記は、表の意味論的な書き方です。 ARIA のロールが必要になるのは、[`display` プロパティを `flex` や `grid`](/ja/docs/Web/CSS/display#accessibility_concerns) に設定するなどして、表のネイティブな意味論、つまり表の行が完全に破壊されてしまう場合だけです (訳注: ここでの grid は、CSS グリッドレイアウトというグリッドロールとは全く別のものであることに注意してください) 。
@@ -191,13 +199,10 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                                             |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#row","ARIA row role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#row","ARIA row role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 
 - [HTML の表の行要素](/ja/docs/Web/HTML/Element/tr)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

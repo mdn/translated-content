@@ -1,9 +1,8 @@
 ---
-title: 'Evaluación: Estructurando datos planetarios'
+title: "Evaluación: Estructurando datos planetarios"
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
-original_slug: Learn/HTML/Tablas/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sistema solar y tu los estructurarás en una tabla HTML.
@@ -31,7 +30,7 @@ En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sis
 
 Para comenzar esta evaluación, crea una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), y [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) en una nueva carpeta de tu ordenador.
 
-> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
+> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
 
 ## Resumen del proyecto
 
@@ -39,7 +38,7 @@ Estás trabajando en la escuela; tus estudiantes están estudiando los planetas 
 
 La tabla finalizada debería de verse así:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 
@@ -47,13 +46,13 @@ También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/
 
 Los siguientes pasos describen lo que necesitas para completar el ejemplo de la tabla. Todos los datos que necesitarás están en el archivo `planets-data.txt`. Si tienes problemas para visualizar los datos, mira el ejemplo de arriba o intentalo dibujando un diagrama.
 
-1.  Abre tu copia de `blank-template.html`, y comienza la tabla dándole un contenedor exterior, una cabecera y un cuerpo. No necesitas un pie de tabla en este ejemplo.
-2.  Añade el subtítulo proporcionado a tu tabla.
-3.  Añade una línea a la cabecera que contenga todos los encabezados de columna.
-4.  Crea todas las líneas con su contenido, asegurandote marcar como cabecera aquellas celdas que lo sean.
-5.  Asegurate de que el contenido esta insertado en las celdas correctas — en los datos del .txt, cada línea del planeta esta al lado de su planeta asociado.
-6.  Añade atributos para que las líneas y columnas del encabezado no se puedan confundir con las líneas, columnas o grupos de líneas a las que encabezan.
-7.  Añade un borde negro alrededor de la columna que contiene los nombres de los planetas y sus encabezados.
+1. Abre tu copia de `blank-template.html`, y comienza la tabla dándole un contenedor exterior, una cabecera y un cuerpo. No necesitas un pie de tabla en este ejemplo.
+2. Añade el subtítulo proporcionado a tu tabla.
+3. Añade una línea a la cabecera que contenga todos los encabezados de columna.
+4. Crea todas las líneas con su contenido, asegurandote marcar como cabecera aquellas celdas que lo sean.
+5. Asegurate de que el contenido esta insertado en las celdas correctas — en los datos del .txt, cada línea del planeta esta al lado de su planeta asociado.
+6. Añade atributos para que las líneas y columnas del encabezado no se puedan confundir con las líneas, columnas o grupos de líneas a las que encabezan.
+7. Añade un borde negro alrededor de la columna que contiene los nombres de los planetas y sus encabezados.
 
 ## Pistas y consejos
 

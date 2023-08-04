@@ -2,6 +2,7 @@
 title: 支付请求接口
 slug: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 支付请求 API 为商家和支付者提供了统一的用户体验。它并非提供一种新的支付方式，而是让用户可以在原有的支付方式中进行选择，并使商家可以获悉用户的支付情况。
@@ -22,7 +23,7 @@ slug: Web/API/Payment_Request_API
 
 你可以在[Using the Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)中查看完整指南。
 
-> **备注：** 此 API 只有在设置了{{htmlattrxref("allowpaymentrequest","iframe")}}属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
+> **备注：** 此 API 只有在设置了[`allowpaymentrequest`](/zh-CN/docs/Web/HTML/Element/iframe#allowpaymentrequest)属性时才支持{{htmlelement("iframe")}}元素的跨域使用。
 
 ## 接口
 
@@ -53,7 +54,7 @@ slug: Web/API/Payment_Request_API
 ### “保存卡信息并自动扣款”规范的相关词典
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : 一个对象，提供了当用户更改支付信息时，{{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}}中传送通过{{event("paymentmethodchange")}}事件传送给 {{domxref("PaymentRequest")}}的*删节的*地址信息。
+  - : 一个对象，提供了当用户更改支付信息时，{{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} 中传送通过 {{domxref('PaymentMethodChangeEvent', 'paymentmethodchange')}} 事件传送给 {{domxref("PaymentRequest")}} 的*删节的*地址信息。
 - {{domxref("BasicCardErrors")}}
   - : 一个对象，提供了{{domxref("BasicCardResponse")}}中无效信息的相关错误提示。错误发生时，该对象被传送给{{domxref("PaymentRequest")}}，作为{{domxref("PaymentValidationErrors")}}对象中{{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}}属性的值。
 - {{domxref('BasicCardRequest')}}
@@ -69,7 +70,7 @@ slug: Web/API/Payment_Request_API
 
 ### 支付请求接口
 
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## 相关文档
 

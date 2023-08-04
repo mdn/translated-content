@@ -2,6 +2,7 @@
 title: AudioBuffer
 slug: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioBuffer`** インターフェイスはメモリー上の短い音声を表すもので、 {{ domxref("AudioContext.decodeAudioData()") }} メソッドで音声ファイルから生成されたり、 {{ domxref("AudioContext.createBuffer()") }} を使って生のデータから生成されたりします。 AudioBuffer に入れた後、その音声は {{ domxref("AudioBufferSourceNode") }} に渡せば再生できます。
@@ -79,4 +80,4 @@ source.start();
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,7 +1,8 @@
 ---
-title: 'NDEFReader: readingerror イベント'
+title: "NDEFReader: readingerror イベント"
 slug: Web/API/NDEFReader/readingerror_event
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `readingerror` は {{DOMxRef("NDEFReader")}} インターフェイスのイベントで、 NFC タグの読み取りの際にエラーが発生するたびに発行されます。例えば、タグがリーダーの磁気誘導範囲から離れたときです。
@@ -22,7 +23,7 @@ onreadingerror = event => { };
 
 ## 例
 
-次の例は、 `onreading` と `onreadinger` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
+次の例は、 `onreading` と `onreadingerror` の両方のイベントハンドラーを使用してイベントを処理する方法を示しています。
 
 ```js
 const ndef = new NDEFReader();

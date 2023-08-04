@@ -2,6 +2,7 @@
 title: background-image
 slug: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
@@ -23,9 +24,11 @@ slug: Web/CSS/background-image
 可以提供由逗号分隔的多个值来指定多个背景图像：
 
 ```css
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('https://mdn.mozillademos.org/files/7693/catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 ```
 
 ### 取值
@@ -47,13 +50,9 @@ background-image:
 
 ```html
 <div>
-  <p class="catsandstars">
-    This paragraph is full of cats<br />and stars.
-  </p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">
-    Here are more cats for you.<br />Look at them!
-  </p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -63,27 +62,24 @@ background-image:
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-image: none;
   background-color: transparent;
 }
 
 div {
-  background-image:
-      url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
-  background-image:
-      url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-      url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```
 
-#### 运行结果
+#### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 无障碍相关
 
@@ -100,7 +96,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-image")}}
+{{Compat}}
 
 \[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
 

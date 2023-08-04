@@ -1,13 +1,8 @@
 ---
 title: window.parent
 slug: Web/API/Window/parent
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Window
-translation_of: Web/API/Window/parent
 ---
+
 {{ APIRef() }}
 
 ## 概要
@@ -34,7 +29,7 @@ if (window.parent !== window.top) {
 
 ## 仕様
 
-- [HTML Standard](http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
+- [HTML Standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
 
 ## 関連情報
 

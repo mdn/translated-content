@@ -2,6 +2,7 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **{{domxref("Navigator")}}** 的方法 **`registerProtocolHandler()`** 让 web 站点为自身注册用于打开或处理特定 URL 方案（又名协议）的能力。
@@ -30,7 +31,7 @@ navigator.registerProtocolHandler(scheme, url, title);
 
   - : 一个用户可理解的处理器标题。标题会展示给用户，例如弹出对话框“允许这个站点处理 \[scheme] 链接吗？”或者在浏览器设置中列出注册的处理器时。
 
-    > **备注：** 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。 建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。
+    > **备注：** 出于欺骗的考虑，标题已从规范中删除，但当前所有的浏览器仍要求使用该标题。建议始终设置标题，因为支持更新规范的浏览器很可能会向后兼容，并且仍接受标题（但不使用它）。
 
 ### 异常
 
@@ -76,9 +77,11 @@ navigator.registerProtocolHandler(scheme, url, title);
 如果您的网站是 `https://www.google.com/`，则可以为其注册一个协议处理程序来处理 `web+burger:`链接，如下所示：
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.com/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://www.google.com/?uri=%s",
+  "Burger handler",
+);
 ```
 
 这将创建一个处理程序，该处理程序允许使用 `web+burger:` 链接将用户发送到您的网站，并将访问的 Burger URL 插入`%s`占位符。
@@ -97,7 +100,7 @@ navigator.registerProtocolHandler("web+burger",
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.registerProtocolHandler")}}
+{{Compat}}
 
 ## 参见
 

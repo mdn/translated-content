@@ -2,6 +2,7 @@
 title: DOMPoint.x
 slug: Web/API/DOMPoint/x
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェイスの **`x`** プロパティは、空間内のある点の水平座標 x を保持します。

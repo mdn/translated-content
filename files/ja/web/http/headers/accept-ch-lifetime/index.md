@@ -1,12 +1,8 @@
 ---
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
-tags:
-  - Client hints
-  - HTTP
-  - header
-translation_of: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`Accept-CH-Lifetime`** ヘッダーは、クライアントが後続のリクエストにどの[クライアントヒント](/ja/docs/Glossary/Client_hints)のヘッダーを含める必要があるかを指定する {{HTTPHeader("Accept-CH")}} ヘッダーの値の永続性を指定するためにサーバーによって設定されます。
@@ -28,7 +24,7 @@ translation_of: Web/HTTP/Headers/Accept-CH-Lifetime
   </tbody>
 </table>
 
-> **Note:** **注**: クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して永続化する必要があります。
+> **メモ:** クライアントヒントには、安全なオリジン（TLS 経由）でのみアクセスできます。 Accept-CH ヘッダーと Accept-CH-Lifetime ヘッダーは、クライアントヒントが確実に送信されるように、すべての安全なリクエストに対して永続化する必要があります。
 
 ## 構文
 

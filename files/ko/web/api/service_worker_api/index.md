@@ -1,19 +1,9 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - Landing
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - Workers
-  - 서비스 워커
-  - 오프라인
-translation_of: Web/API/Service_Worker_API
 ---
-{{ServiceWorkerSidebar}}
+
+{{securecontext_header}}{{APIRef("Service Workers API")}}
 
 서비스 워커는 웹 응용 프로그램, 브라우저, 그리고 (사용 가능한 경우) 네트워크 사이의 프록시 서버 역할을 합니다. 서비스 워커의 개발 의도는 여러가지가 있지만, 그 중에서도 효과적인 오프라인 경험을 생성하고, 네트워크 요청을 가로채서 네트워크 사용 가능 여부에 따라 적절한 행동을 취하고, 서버의 자산을 업데이트할 수 있습니다. 또한 푸시 알림과 백그라운드 동기화 API로의 접근도 제공합니다.
 
@@ -37,9 +27,9 @@ translation_of: Web/API/Service_Worker_API
 
 서비스 워커를 살펴보면 다음과 같은 생명주기를 볼 수 있습니다.
 
-1.  다운로드
-2.  설치
-3.  활성화
+1. 다운로드
+2. 설치
+3. 활성화
 
 서비스 워커가 제어하는 사이트/페이지에 사용자가 처음 접근하는 순간 서비스 워커가 즉시 다운로드됩니다.
 
@@ -118,7 +108,7 @@ translation_of: Web/API/Service_Worker_API
 - {{DOMxRef("ServiceWorkerRegistration")}} {{Experimental_Inline}}
   - : Represents a service worker registration.
 - {{DOMxRef("ServiceWorkerState")}} {{Experimental_Inline}}
-  - : Associated with its [`ServiceWorker`](/ko/docs/Web/API/ServiceWorker "The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.")'s state.
+  - : Associated with its [`ServiceWorker`](/ko/docs/Web/API/ServiceWorker)'s state.
 - {{DOMxRef("SyncEvent")}} {{Non-standard_Inline}}
   - : The SyncEvent interface represents a sync action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 - {{DOMxRef("SyncManager")}} {{Non-standard_Inline}}
@@ -132,7 +122,7 @@ translation_of: Web/API/Service_Worker_API
 
 ## 같이 보기
 
-- [ServiceWorker 쿡북](https://serviceworke.rs)
+- [ServiceWorker 쿡북](https://github.com/mdn/serviceworker-cookbook)
 - [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [서비스 워커 기초 코드 예제](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

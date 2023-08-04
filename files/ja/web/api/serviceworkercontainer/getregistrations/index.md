@@ -1,15 +1,18 @@
 ---
 title: ServiceWorkerContainer.getRegistrations()
 slug: Web/API/ServiceWorkerContainer/getRegistrations
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
+
 {{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`getRegistrations()`** メソッドは、`ServiceWorkerContainer` に関するすべての {{domxref("ServiceWorkerRegistration")}} を配列で取得します。 このメソッドは、{{domxref("ServiceWorkerRegistration")}} の配列に解決される {{jsxref("Promise")}} を返します。
+**`getRegistrations()`** は {{domxref("ServiceWorkerContainer")}} インターフェイスのメソッドで、この `ServiceWorkerContainer` に関するすべての {{domxref("ServiceWorkerRegistration")}} を配列で取得します。 このメソッドは、 {{domxref("ServiceWorkerRegistration")}} の配列に解決される {{jsxref("Promise")}} を返します。
 
 ## 構文
 
-```
-serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistrations) { ... });
+```js-nolint
+getRegistrations()
 ```
 
 ### 引数
@@ -23,17 +26,15 @@ serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistratio
 ## 例
 
 ```js
-navigator.serviceWorker.getRegistrations().then(function(registrations) {
-  document.querySelector('#status').textContent = 'ServiceWorkerRegistrations が見つかりました。';
+navigator.serviceWorker.getRegistrations().then((registrations) => {
+  document.querySelector('#status').textContent = 'ServiceWorkerRegistration が見つかりました。';
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#navigator-service-worker-getRegistrations', 'getRegistrations()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerContainer.getRegistrations")}}
+{{Compat}}

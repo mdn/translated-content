@@ -1,14 +1,8 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-tags:
-  - Class
-  - JavaScript
-  - Object
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 ---
+
 {{JSRef}}
 
 **`ReferenceError`** オブジェクトは存在しない変数が参照された場合のエラーを表します。
@@ -69,9 +63,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

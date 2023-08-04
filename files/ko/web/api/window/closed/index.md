@@ -1,21 +1,17 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 **`Window.closed`** 읽기 전용 속성은 참조한 창이 닫혔는지 여부를 나타냅니다.
 
 ## 구문
 
-    const isClosed = windowRef.closed;
+```js
+const isClosed = windowRef.closed;
+```
 
 ### 값
 
@@ -30,7 +26,7 @@ translation_of: Web/API/Window/closed
 ```js
 // Check that an opener exists and is not closed
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = 'http://www.mozilla.org';
+  window.opener.location.href = "http://www.mozilla.org";
 }
 ```
 
@@ -49,7 +45,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Open a new popup window
-    popupWindow = window.open('popup.html', 'dataWindow');
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

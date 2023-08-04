@@ -1,17 +1,8 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - NeedsLiveSample
-  - リファレンス
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.font-variant-east-asian
-translation_of: Web/CSS/font-variant-east-asian
 ---
+
 {{CSSRef}}
 
 CSS の **`font-variant-numeric`** プロパティは、日本語と中国語のような東アジアの字形の違いを制御するために使用します。

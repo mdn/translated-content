@@ -1,16 +1,13 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/padding-right
 ---
+
 {{CSSRef}}
 
 ## Summary
 
-[CSS](https://developer.mozilla.org/en/CSS "CSS") свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](https://developer.mozilla.org/en/CSS/box_model#padding "http://developer.mozilla.org/en/CSS/Box_model#padding")) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
+[CSS](/en/CSS) свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](/en/CSS/box_model#padding)) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
 
 {{cssinfo}}
 

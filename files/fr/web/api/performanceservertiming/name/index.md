@@ -1,16 +1,8 @@
 ---
 title: PerformanceServerTiming.name
 slug: Web/API/PerformanceServerTiming/name
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - name
-translation_of: Web/API/PerformanceServerTiming/name
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`name`** retourne une valeur [`DOMString`](/fr/docs/Web/API/DOMString) qui est le nom de la métrique spécifiée par le serveur.

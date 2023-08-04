@@ -1,13 +1,6 @@
 ---
 title: Псевдоклассы
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Reference
-  - Псевдоклассы
-  - Селекторы
-translation_of: Web/CSS/Pseudo-classes
-original_slug: Web/CSS/Псевдо-классы
 ---
 {{CSSRef}}
 
@@ -25,9 +18,11 @@ div:hover {
 
 ## Синтаксис
 
-    selector:pseudo-class {
-      property: value;
-    }
+```
+selector:pseudo-class {
+  property: value;
+}
+```
 
 Как и с обычными классами, можно совмещать вместе в одном селекторе любое число псевдоклассов.
 

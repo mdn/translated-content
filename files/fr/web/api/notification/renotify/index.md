@@ -1,18 +1,8 @@
 ---
 title: Notification.renotify
-slug: Web/API/notification/renotify
-tags:
-  - API
-  - API Notifications
-  - Experimental
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - renotifier
-  - renotify
-translation_of: Web/API/Notification/renotify
+slug: Web/API/Notification/renotify
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`renotify`** de l'interface {{domxref ("Notification")}} spécifie si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne, comme spécifié comme définis à l'aide de l'option `renotify` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.
@@ -20,7 +10,7 @@ La propriété en lecture seule **`renotify`** de l'interface {{domxref ("Notifi
 ## Syntaxe
 
 ```js
-Notification.renotify
+Notification.renotify;
 ```
 
 ### Valeur

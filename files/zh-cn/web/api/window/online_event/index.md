@@ -2,6 +2,7 @@
 title: Window：online 事件
 slug: Web/API/Window/online_event
 ---
+
 {{APIRef}}
 
 当浏览器能够访问网络，且 {{domxref("Navigator.onLine")}} 的值被设为 `true` 时，{{domxref("Window")}} 接口的 **`online`** 事件将被触发。
@@ -35,8 +36,8 @@ slug: Web/API/Window/online_event
 
 ```js
 // addEventListener version
-window.addEventListener('online', (event) => {
-    console.log("You are now connected to the network.");
+window.addEventListener("online", (event) => {
+  console.log("You are now connected to the network.");
 });
 
 // ononline version

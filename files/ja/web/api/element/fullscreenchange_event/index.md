@@ -1,35 +1,34 @@
 ---
-title: 'Element: fullscreenchange イベント'
+title: "Element: fullscreenchange イベント"
+short-title: fullscreenchange
 slug: Web/API/Element/fullscreenchange_event
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef}}
 
 `fullscreenchange` イベントは、ある要素 ({{domxref("Element")}}) が全画面モードに切り替わったり、終了したりした直後に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("Element.onfullscreenchange", "onfullscreenchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントは、全画面モードに移行しようとしている、あるいは全画面モードから脱出しようとしている `Element` に送られます。
 
-このイベントは、全画面モードへ移行または終了する要素 (`Element`) へ送られます。
+`Element` が全画面モードに移行しようとしているのか、終了しようとしているのかを判別するには、 {{domxref("Document.fullscreenElement")}} の値をチェックしてください。この値が `null` ならば、要素が全画面モードを終了するところであり、そうでなければ全画面モードに移行するところです。
+
+このイベントはキャンセルできません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('fullscreenchange', (event) => { });
+
+onfullscreenchange = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -44,41 +43,50 @@ slug: Web/API/Element/fullscreenchange_event
 ### HTML
 
 ```html
- <h1>fullscreenchange event example</h1>
- <div id="fullscreen-div">
-   <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
- </div>
+<h1>fullscreenchange event example</h1>
+<div id="fullscreen-div">
+  <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
+</div>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById('fullscreen-div').addEventListener('fullscreenchange', (event) => {
-  // document.fullscreenElement will point to the element that
-  // is in fullscreen mode if there is one. If not, the value
-  // of the property is null.
+function fullscreenchanged (event) {
+  // document.fullscreenElement は、全画面モードにある要素があれば
+  // それを指します。要素がなければ、このプロパティの値は null に
+  // あります。
   if (document.fullscreenElement) {
-    console.log(`Element: ${document.fullscreenElement.id} entered fullscreen mode.`);
+    console.log(
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`,
+    );
   } else {
-    console.log('Leaving full-screen mode.');
+    console.log("Leaving fullscreen mode.");
   }
-});
+}
 
-document.getElementById('toggle-fullscreen').addEventListener('click', (event) => {
-  if (document.fullscreenElement) {
-    // exitFullscreen is only available on the Document object.
-    document.exitFullscreen();
-  } else {
-    document.getElementById('fullscreen-div').requestFullscreen();
-  }
-});
+const el = document.getElementById("fullscreen-div");
+
+el.addEventListener("fullscreenchange", fullscreenchanged);
+// or
+el.onfullscreenchange = fullscreenchanged;
+
+// トグルボタンがクリックされたら、全画面モードを切り替える
+document
+  .getElementById("toggle-fullscreen")
+  .addEventListener("click", (event) => {
+    if (document.fullscreenElement) {
+      // exitFullscreen は Document オブジェクトでのみ使用可
+      document.exitFullscreen();
+    } else {
+      el.requestFullscreen();
+    }
+  });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                     | 状態            |
-| ------------------------------------------------------------------------------------------ | --------------- |
-| [Fullscreen API](https://fullscreen.spec.whatwg.org/ "The 'Fullscreen API' specification") | Living Standard |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -88,5 +96,5 @@ document.getElementById('toggle-fullscreen').addEventListener('click', (event) =
 
 - [Document: fullscreenchange イベント](/ja/docs/Web/API/Document/fullscreenchange_event)
 - [Element: fullscreenerror イベント](/ja/docs/Web/API/Element/fullscreenerror_event)
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)

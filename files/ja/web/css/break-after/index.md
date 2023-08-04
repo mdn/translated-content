@@ -1,16 +1,8 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.break-after
-translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 **`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
@@ -112,7 +104,7 @@ break-after: unset;
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **Note:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
+> **メモ:** ブラウザーにおいては `always` の値は `page-break-*` において、段区切りではなくページ区切りとして実装されています。したがって、 Level 4 の仕様書では `always` の値ではなく `page` の別名となっています。
 
 ## 公式定義
 

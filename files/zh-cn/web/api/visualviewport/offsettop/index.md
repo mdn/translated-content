@@ -2,6 +2,7 @@
 title: VisualViewport.offsetTop
 slug: Web/API/VisualViewport/offsetTop
 ---
+
 {{SeeCompatTable}}{{APIRef("Visual Viewport")}}
 
 {{domxref("VisualViewport")}} 接口的只读属性 **`offsetTop`** 返回视觉视口的顶部相对于布局视口的顶部的偏移量，以 CSS 像素为单位。
@@ -22,4 +23,4 @@ var offsetTop = VisualViewport.offsetTop
 
 ## 浏览器兼容性
 
-{{Compat("api.VisualViewport.offsetTop")}}
+{{Compat}}

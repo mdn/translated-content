@@ -1,21 +1,15 @@
 ---
 title: 종속
 slug: Web/CSS/Cascade
-tags:
-  - CSS
-  - Guide
-  - Introduction
-  - Layout
-  - Reference
-translation_of: Web/CSS/Cascade
 ---
+
 {{CSSRef}}
 
-**종속(Cascade)**이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} [정의](/ko/docs/Web/API/CSSStyleDeclaration)가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.
+**종속**(**Cascade**)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} [정의](/ko/docs/Web/API/CSSStyleDeclaration)가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.
 
 ## Which CSS entities participate in the cascade
 
-Only CSS declarations, that is property/value pairs, participate in the cascade. This means that [at-rules](/ko/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. In these cases, only the at-rule as a whole participates in the cascade: here, the `@font-face` identified by its [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptor. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
+Only CSS declarations, that is property/value pairs, participate in the cascade. This means that [at-rules](/ko/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. In these cases, only the at-rule as a whole participates in the cascade: here, the `@font-face` identified by its [`font-family`](/ko/docs/Web/CSS/@font-face/font-family) descriptor. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
 
@@ -148,7 +142,7 @@ margin-left: 3px
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -1,9 +1,8 @@
 ---
 title: Rust から WebAssembly にコンパイルする
-slug: WebAssembly/Rust_to_wasm
-l10n:
-  sourceCommit: 51f2cde58fff4a44242577b2540bdfdfc525dda4
+slug: WebAssembly/Rust_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Rust のコードがあれば、それを [WebAssembly](/ja/docs/WebAssembly) (wasm) にコンパイルすることができます。このチュートリアルでは Rust プロジェクトをコンパイルして既存のウェブアプリケーションで使用するために必要なことについて説明します。
@@ -25,16 +24,16 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 
 ### Rust のインストール
 
-[Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
+[Install Rust](https://www.rust-lang.org/install.html) ページに行って指示に従い、Rust をインストールしてください。これによって "rustup" と呼ばれる複数のバージョンの Rust を管理できるようにするツールがインストールされます。既定の設定では、通常の Rust 開発で使いたいであろう最新の安定版 Rust リリースをインストールします。rustup は Rust コンパイラーの `rustc` や Rust のパッケージマネージャーの `cargo` や Rust の標準ライブラリーの `rust-std` やいくつかの助けになるドキュメント — `rust-docs` をインストールします。
 
-> **Note:** **メモ**: インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
+> **メモ:** インストール後のメモで、cargo の `bin` ディレクトリーをシステムの `PATH` に追加する必要があるという点に注意してください。これは自動的に追加されるはずですが、有効にするためにターミナルを再起動する必要があります。
 
 ### wasm-pack
 
 パッケージをビルドするには、`wasm-pack` という追加のツールが必要です。これは `npm` 向けに正しくパッケージングをすることだけでなく、WebAssembly にコードをコンパイルするのにも役立ちます。ダウンロードしてインストールするには、ターミナルに次のコマンドを入力します。
 
 ```bash
-$ cargo install wasm-pack
+cargo install wasm-pack
 ```
 
 ## WebAssembly パッケージのビルド
@@ -46,7 +45,7 @@ $ cargo new --lib hello-wasm
      Created library `hello-wasm` project
 ```
 
-これにより新たなライブラリが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
+これにより新たなライブラリーが出発に必要なものすべてと一緒に `hello-wasm` という名前のサブディレクトリーに作成されます。
 
 ```plain
 +-- Cargo.toml
@@ -98,11 +97,11 @@ pub fn greet(name: &str) {
 use wasm_bindgen::prelude::*;
 ```
 
-ライブラリは Rust では「クレート」と呼ばれます。
+ライブラリーは Rust では「クレート」と呼ばれます。
 
 理解できましたか？ _Cargo_ が*クレート*を取り入れるのです。
 
-3 行目にはコードをライブラリから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
+3 行目にはコードをライブラリーから自分のコードにインポートする `use` コマンドがあります。この場合、`wasm_bindgen::prelude` モジュールにあるものすべてをインポートしています。これらの機能は次の節で使用します。
 
 次の節に移動する前に、もう少し `wasm-bindgen` について話しておいたほうがいいでしょう。
 
@@ -148,7 +147,7 @@ pub fn greet(name: &str) {
 
 これは alert() に渡されるので、この関数を呼び出すと "Hello, Steve!" と書かれたアラートボックスが現れるでしょう。
 
-ライブラリを書いたので、それをビルドしましょう。
+ライブラリーを書いたので、それをビルドしましょう。
 
 ### コードを WebAssembly にコンパイルする
 
@@ -182,7 +181,7 @@ wasm-bindgen = "0.2"
 すべてのセットアップが完了したので、ビルドしましょう。ターミナルに以下のものを入力してください。
 
 ```bash
-$ wasm-pack build --target web
+wasm-pack build --target web
 ```
 
 このコマンドは多くのことをします (そして時間がかかます。特に初めて `wasm-pack` を実行したときはそうです)。それらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
@@ -206,19 +205,18 @@ $ wasm-pack build --target web
 まず、プロジェクトのルートに `index.html` という名前のファイルを作成し、以下のような内容にしてみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
     <script type="module">
-      import init, {greet} from "./pkg/hello_wasm.js";
-      init()
-        .then(() => {
-          greet("WebAssembly")
-        });
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
     </script>
   </body>
 </html>
@@ -226,9 +224,9 @@ $ wasm-pack build --target web
 
 このファイルのスクリプトは、js グルーコードをインポートし、wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
 
-プロジェクトのルートディレクトリに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
+プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server` ）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server)を参考にしてください。
 
-> **Note:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
+> **メモ:** 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。
 
 ウェブサーバーから `index.html` を読み込む （Python3 の例を使用する場合: `http://localhost:8000`）。 画面上にアラートボックスが現れ、 `Hello, WebAssembly!` と表示されます。 JavaScript から Rust へ、そして Rust から JavaScript への呼び出しに成功しました。
 
@@ -239,7 +237,7 @@ WebAssembly モジュールを npm で使用する場合、いくつかの変更
 まず、Rust を target bundler オプションで再コンパイルすることから始めましょう。
 
 ```bash
-$ wasm-pack build --target bundler
+wasm-pack build --target bundler
 ```
 
 ### Node.js と npm のインストール
@@ -251,8 +249,8 @@ Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getti
 次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、 \`npm link\` を使用しましょう。
 
 ```bash
-$ cd pkg
-$ npm link
+cd pkg
+npm link
 ```
 
 Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージができました。JavaScript から利用する準備ができており、ユーザーが Rust をインストールすることを必要としません。コードに含まれているのは WebAssembly コードであり、Rust のソースではないのです。
@@ -264,10 +262,10 @@ Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージ
 `pkg` ディレクトリーの外に戻り、新たなディレクトリー `site` を作成し、そこでこれを試してみましょう。
 
 ```bash
-$ cd ..
-$ mkdir site
-$ cd site
-$ npm link hello-wasm
+cd ..
+mkdir site
+cd site
+npm link hello-wasm
 ```
 
 新しいファイル `package.json` を作成し、次のコードをそこに書き込んでください。
@@ -291,14 +289,14 @@ $ npm link hello-wasm
 次に、Webpack を設定する必要があります。`webpack.config.js` を作成し、そこに次のことを記入してください。
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
@@ -310,15 +308,15 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 });
 ```
 
-まこれは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
+これは新しいモジュールを `node_modules` フォルダーからインポートします。これは最善の方法ではないと思いますが、デモなので、これでいいでしょう。一度そのモジュールが読み込まれると、そこから `greet` 関数を呼び出し、`"WebAssembly"` を文字列として渡します。ここに特別なことはなにもありませんが、Rust コードを呼び出していることに注意してください。JavaScript コードから観察する限り、これはただの普通のモジュールです。
 
 最後に HTML ファイルが必要です。 `index.html` を作成し、次の内容を追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
@@ -330,8 +328,8 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 ファイルを作りました。これを試してみましょう。
 
 ```bash
-$ npm install
-$ npm run serve
+npm install
+npm run serve
 ```
 
 これでウェブサーバーが起動します。 `http://localhost:8080` を読み込んでください。 `Hello, WebAssembly!` と書かれたアラートボックスが画面に出てくるはずです。JavaScript からの Rust の呼び出しと Rust からの JavaScript の呼び出しに成功しました。

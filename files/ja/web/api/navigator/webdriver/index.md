@@ -2,6 +2,7 @@
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
 ---
+
 {{SeeCompatTable}}{{APIRef("WebDriver")}}
 
 **`webdriver`** は {{domxref("navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。
@@ -27,9 +28,7 @@ A {{JSxRef("Boolean")}}
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("WebDriver","#dom-navigatorautomationinformation-webdriver","webdriver")}} | {{Spec2("WebDriver")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

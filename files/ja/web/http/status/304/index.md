@@ -1,20 +1,15 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - ステータスコード
-  - リダイレクト
-  - リファレンス
-translation_of: Web/HTTP/Status/304
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`304 Not Modified`** クライアントリダイレクトレスポンスコードは、リクエストされたリソースを再送する必要がないことを示します。これはキャッシュされたリソースへの暗黙のリダイレクトです。これは、{{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストのようなリクエストメソッドが {{glossary("safe")}} である場合、またはリクエストが条件付きで {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーを使用しているときに発生します。
 
 {{HTTPStatus("200")}} `OK` と同等のレスポンスは {{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Content-Location")}}、{{HTTPHeader("Date")}}、{{HTTPHeader("ETag")}}、{{HTTPHeader("Expires")}} および {{HTTPHeader("Vary")}} ヘッダーを含みます。
 
-> **Note:** 多くのブラウザーの[開発ツールのネットワークパネル](/ja/docs/Tools/Network_Monitor)は `304` レスポンスにつながる追加のリクエストを作成するため、開発者はローカルキャッシュへのアクセスを見ることができます。
+> **メモ:** 多くのブラウザーの[開発ツールのネットワークパネル](/ja/docs/Tools/Network_Monitor)は `304` レスポンスにつながる追加のリクエストを作成するため、開発者はローカルキャッシュへのアクセスを見ることができます。
 
 ## ステータス
 

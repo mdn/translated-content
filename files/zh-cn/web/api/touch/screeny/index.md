@@ -2,6 +2,7 @@
 title: Touch.screenY
 slug: Web/API/Touch/screenY
 ---
+
 {{ ApiRef() }}
 
 ### 概述

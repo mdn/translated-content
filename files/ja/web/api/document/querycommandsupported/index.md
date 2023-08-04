@@ -2,6 +2,7 @@
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 **`Document.queryCommandSupported()`** メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。
@@ -9,7 +10,7 @@ slug: Web/API/Document/queryCommandSupported
 ## 構文
 
 ```js
-queryCommandSupported(command)
+queryCommandSupported(command);
 ```
 
 ### 引数
@@ -30,7 +31,7 @@ queryCommandSupported(command)
 ```js
 var flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // ...何か行う
 }
 ```

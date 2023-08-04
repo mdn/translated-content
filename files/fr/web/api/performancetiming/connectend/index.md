@@ -1,19 +1,8 @@
 ---
 title: PerformanceTiming.connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - connectEnd
-translation_of: Web/API/PerformanceTiming/connectEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.

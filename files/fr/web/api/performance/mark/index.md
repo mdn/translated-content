@@ -1,14 +1,8 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`mark()`** crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} dans le _tampon d'entrée de performance_ du navigateur avec le nom donné en argument.
@@ -22,7 +16,7 @@ La méthode `mark()` stocke ses données en interne sous la forme d'objets {{dom
 ## Syntaxe
 
 ```js
-  performance.mark(name);
+performance.mark(name);
 ```
 
 ### Arguments

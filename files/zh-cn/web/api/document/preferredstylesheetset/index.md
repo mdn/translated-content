@@ -2,6 +2,7 @@
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}
 
 **`preferredStyleSheetSet`** 属性会依网页作者的喜好回传阶层样式集。
@@ -20,7 +21,9 @@ preferredStyleSheetSet = document.preferredStyleSheetSet
 
 ```js
 if (document.preferredStyleSheetSet) {
-  console.log("The preferred style sheet set is: " + document.preferredStyleSheetSet);
+  console.log(
+    "The preferred style sheet set is: " + document.preferredStyleSheetSet,
+  );
 } else {
   console.log("There is no preferred style sheet.");
 }
@@ -32,7 +35,7 @@ if (document.preferredStyleSheetSet) {
 
 ## 浏览器相容性
 
-{{Compat("api.Document.preferredStyleSheetSet")}}
+{{Compat}}
 
 ## 参见
 

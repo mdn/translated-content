@@ -2,6 +2,7 @@
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -28,15 +29,15 @@ var re = /pattern/flags;
 或
 
 ```js
-var re = new RegExp('pattern', 'flags');
+var re = new RegExp("pattern", "flags");
 ```
 
-| 标记 | 说明                                                                                              |
-| ---- | ------------------------------------------------------------------------------------------------- |
-| `g`  | 整体检索。                                                                                        |
-| i    | 忽略大小写检索。                                                                                  |
-| m    | 多行检索。                                                                                        |
-| u    | Unicode; 将模式视为 Unicode 码点的序列                                                            |
+| 标记 | 说明                                                                                   |
+| ---- | -------------------------------------------------------------------------------------- |
+| `g`  | 整体检索。                                                                             |
+| i    | 忽略大小写检索。                                                                       |
+| m    | 多行检索。                                                                             |
+| u    | Unicode; 将模式视为 Unicode 码点的序列                                                 |
 | y    | sticky 检索将从目标字符串的当前位置开始匹配。参阅{{jsxref("RegExp.sticky", "sticky")}} |
 
 ## 示例
@@ -63,7 +64,7 @@ let obj = {
 
 ```js example-good
 let obj = {
-  url: '/docs/Web'
+  url: "/docs/Web",
 };
 ```
 
@@ -79,5 +80,5 @@ let obj = {
 
 ## 相关页面
 
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - [XRegEx flags](http://xregexp.com/flags/) – 正则表达式库提供新的四个标记 (`n`, `s`, `x`, `A`)

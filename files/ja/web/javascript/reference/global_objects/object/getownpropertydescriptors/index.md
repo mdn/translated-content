@@ -1,12 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptors()`** メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
@@ -56,7 +52,7 @@ _プロパティディスクリプタ_ は、次の属性のいくつかを持�
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -70,19 +66,14 @@ superclass.prototype = {
   // Define your methods and properties here
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define your methods and properties here
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define your methods and properties here
+});
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,15 +1,8 @@
 ---
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/Element/dblclick_event
-tags:
-  - API
-  - Event Handler
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/ondblclick
-original_slug: Web/API/GlobalEventHandlers/ondblclick
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`ondblclick`** property는 현재 요소(element)의 onDblClick 이벤트 핸들러 코드를 돌려줍니다.
@@ -23,7 +16,9 @@ element.ondblclick = function;
 - `function` 은 사용자 정의 함수이며, () 나 변수를 제외하고 생성할 수 있고 또는 아래와 같이 함수명을 선언하지 않고 생성할 수 있습니다.
 
 ```js
-element.ondblclick = function() { console.log("ondblclick event detected!"); };
+element.ondblclick = function () {
+  console.log("ondblclick event detected!");
+};
 ```
 
 ## 예제
@@ -40,7 +35,7 @@ element.ondblclick = function() { console.log("ondblclick event detected!"); };
 ### JavaScript
 
 ```js
-let log = document.getElementById('log');
+let log = document.getElementById("log");
 
 document.ondblclick = logDoubleClick;
 

@@ -1,17 +1,8 @@
 ---
 title: Notification.requireInteraction
-slug: Web/API/notification/requireInteraction
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - Web
-  - requireInteraction
-translation_of: Web/API/Notification/requireInteraction
+slug: Web/API/Notification/requireInteraction
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`requireInteraction`** de l'interface {{domxref ("Notification")}} renvoie un {{jsxref ("Boolean")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. Ceci peut être défini à l'aide de l'option `requireInteraction` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification()")}}.
@@ -19,7 +10,7 @@ La propriété en lecture seule **`requireInteraction`** de l'interface {{domxre
 ## Syntaxe
 
 ```js
-Notification.requireInteraction
+Notification.requireInteraction;
 ```
 
 ### Valeur

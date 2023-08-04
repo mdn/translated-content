@@ -2,6 +2,7 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 ---
+
 {{apiref("DOM")}}
 
 **`preventDefault()`** は {{domxref("Event")}} インターフェイスのメソッドで、{{Glossary("user agent", "ユーザーエージェント")}}に、このイベントが明示的に処理されない場合に、その既定のアクションを通常どおりに行うべきではないことを伝えます。

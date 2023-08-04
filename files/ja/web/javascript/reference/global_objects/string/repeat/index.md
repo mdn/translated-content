@@ -1,15 +1,8 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
+
 {{JSRef}}
 
 **`repeat()`** メソッドは、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
@@ -100,9 +93,7 @@ if (!String.prototype.repeat) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

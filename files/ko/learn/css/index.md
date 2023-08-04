@@ -1,14 +1,8 @@
 ---
 title: CSS를 이용한 HTML 스타일링 익히기
 slug: Learn/CSS
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Landing
-  - Topic
-translation_of: Learn/CSS
 ---
+
 {{LearnSidebar}}
 
 {{glossary("CSS")}}(Cascading Stylesheets – 종속형 스타일시트)는 {{glossary("HTML")}}을 익힌 후 가장 먼저 배워야할 웹기술입니다. HTML이 콘텐츠의 구조와 의미를 정의하는 반면 CSS는 스타일과 레이아웃을 지정합니다. 예를 들어, CSS를 사용하면 콘텐츠의 글꼴, 색상, 크기 및 간격을 변경하거나, 여러 개의 열로 분할하거나, 애니메이션이나 기타 장식 효과를 추가할 수 있습니다.

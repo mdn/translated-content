@@ -1,18 +1,8 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - motion-path
-  - offset-path
-  - recipe:css-property
-browser-compat: css.properties.offset-path
-translation_of: Web/CSS/offset-path
 ---
+
 {{CSSRef}}
 
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる移動経路と、親コンテナーまたは SVG 座標系の中での要素の配置を指定します。
@@ -53,7 +43,7 @@ offset-path: unset;
 - `ray()`
   - : 最大 3 つの値を取り、ボックスの位置から始まり、指定された角度で定義された方向に進む線分であるパスを定義します。定義は角度で、 CSS のグラデーションの角度と同様に、 `0deg` を上にして正の角度を時計回り方向に増加させます。続く寸法の値は CSS の半径方向のグラデーションの寸法の値に似ており、 `closest-side` から `farthest-corner` まで、そしてキーワード `contain` です。
 - `url()`
-  - : SVG 図形の ID の参照です。 -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` -- のいずれかで、図形の形状をパスとして使用します。
+  - : SVG 図形の ID の参照です。 — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` — のいずれかで、図形の形状をパスとして使用します。
 - `<basic-shape>`
 
   - : [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)、たとえば `circle()`, `ellipse()`, `inset()`, `polygon()`, `path()` を指定します。

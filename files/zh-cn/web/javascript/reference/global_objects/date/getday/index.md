@@ -2,6 +2,7 @@
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
+
 {{JSRef}}
 
 **`getDay()`** 方法根据本地时间，返回一个具体日期中一周的第几天，0 表示星期天。对于某个月中的第几天，参考{{jsxref("Date.prototype.getDate()")}}.
@@ -10,15 +11,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 
 ## 语法
 
-```js
-dateObj.getDay()
+```js-nolint
+getDay()
 ```
 
 ### 返回值
 
-根据本地时间，返回一个 0 到 6 之间的整数值，代表星期几： 0 代表星期日， 1 代表星期一，2 代表星期二， 依次类推。
+根据本地时间，返回一个 0 到 6 之间的整数值，代表星期几：0 代表星期日，1 代表星期一，2 代表星期二，依次类推。
 
-## 例子
+## 示例
 
 ### 使用`getDay()`
 
@@ -34,10 +35,10 @@ console.log(weekday); // 1
 > **备注：** 如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的`options` 参数，从而返回这天的全称（如`"Monday"`）.使用此方法，结果会更加国际化：
 >
 > ```js
-> var options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> var options = { weekday: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // Monday
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Montag
 > ```
 

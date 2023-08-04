@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を設定します。
@@ -17,14 +13,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 
 ## 構文
 
-```
-dateObj.setMinutes(minutesValue[, secondsValue[, msValue]])
-```
-
-### JavaScript 1.3 より前のバージョン
-
-```
-dateObj.setMinutes(minutesValue)
+```js-nolint
+setMinutes(minutesValue)
+setMinutes(minutesValue, secondsValue)
+setMinutes(minutesValue, secondsValue, msValue)
 ```
 
 ### 引数
@@ -51,19 +43,17 @@ dateObj.setMinutes(minutesValue)
 ### setMinutes() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setMinutes(45);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setminutes', 'Date.prototype.setMinutes')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setMinutes")}}
+{{Compat}}
 
 ## 関連情報
 

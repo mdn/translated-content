@@ -1,18 +1,8 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-tags:
-  - API
-  - Apps
-  - Batería
-  - Battery
-  - Firefox OS
-  - Gecko DOM Reference
-  - WebAPI
-  - aplicaciones
-translation_of: Web/API/BatteryManager/dischargingTime
-browser-compat: api.BatteryManager.dischargingTime
 ---
+
 {{deprecated_header}}{{APIRef("Battery API")}}
 
 Indíca la cantidad de tiempo, en segundos,
@@ -44,10 +34,11 @@ o si el sistema es incapaz de calcular el tiempo de descarga.
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   var time = battery.dischargingTime;
 
-  document.querySelector("#dischargingTime").textContent = battery.dischargingTime;
+  document.querySelector("#dischargingTime").textContent =
+    battery.dischargingTime;
 });
 ```
 

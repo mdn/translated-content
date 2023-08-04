@@ -1,8 +1,8 @@
 ---
 title: JavaScript のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
+
 {{MDNSidebar}}
 
 以下のガイドラインは、 MDN Web Docs における JavaScript のコード例の書き方について述べています。これは、できるだけ多くの人に理解されるような簡潔な例を書くためのシンプルなリストです。もし、もっと詳しく説明したものが欲しければ、 [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) をお勧めします。これは、私たちのガイドラインと概ね互換性があります。
@@ -17,14 +17,16 @@ original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 
   ```js example-good
   function myFunc() {
-    console.log('Hello!');
-  };
+    console.log("Hello!");
+  }
   ```
 
   次のようにしないでください。
 
   ```js example-bad
-  function myFunc() { console.log('Hello!'); };
+  function myFunc() {
+    console.log("Hello!");
+  }
   ```
 
 - すべての文はセミコロン (";") で終わらせてください。私たちは、JavaScript では技術的にオプションであるにもかかわらず、すべてのコードサンプルでセミコロンを必須としていますが、これは、各文の終わりをより明確に、より正確に示すコードにつながると考えるからです。
@@ -37,18 +39,18 @@ original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 - 演算子とオペランド、引数などの間にはスペースを入れてください。例えば、次のような場合はスペースを入れた方が読みやすくなります。
 
   ```js example-good
-  if (dayOfWeek === 7 && weather === 'sunny') {
-    goOnTrip('beach', 'car', ['ice cream', 'bucket and spade', 'beach towel']);
+  if (dayOfWeek === 7 && weather === "sunny") {
+    goOnTrip("beach", "car", ["ice cream", "bucket and spade", "beach towel"]);
   }
   ```
 
 こちらの方が読みにくくなります。
 
-  ```js example-bad
-  if (dayOfWeek===7&&weather==='sunny'){
-    goOnTrip('beach','car',['ice cream','bucket and spade','beach towel']);
-  }
-  ```
+```js example-bad
+if (dayOfWeek === 7 && weather === "sunny") {
+  goOnTrip("beach", "car", ["ice cream", "bucket and spade", "beach towel"]);
+}
+```
 
 - 開閉括弧の前後にスペースを入れないでください。例: `( myVar )` ではなく、`(myVar)` を使用してください。
 
@@ -65,10 +67,10 @@ original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ```js example-good
 function myFunc() {
   // ブラウザーの JS コンソールに文字列 'Hello' を出力する
-  console.log('Hello');
+  console.log("Hello");
   // 新しい段落を作成し、その中に中身を入れて、 <body> に追加します。
-  let para = document.createElement('p');
-  para.textContent = 'My new paragraph';
+  let para = document.createElement("p");
+  para.textContent = "My new paragraph";
   document.body.appendChild(para);
 }
 ```
@@ -86,7 +88,7 @@ MDN Web Docs のコード例では、最近のよく対応されている JavaSc
 このようにしてください。
 
 ```js example-good
-let myArray = [ ];
+let myArray = [];
 ```
 
 このようにしないでください。
@@ -106,13 +108,13 @@ const pets = [];
 次のようにしてください。
 
 ```js example-good
-pets.push('cat');
+pets.push("cat");
 ```
 
 次のようにしないでください。
 
 ```js example-bad
-pets[pets.length] = 'cat';
+pets[pets.length] = "cat";
 ```
 
 ## 条件文
@@ -126,8 +128,8 @@ pets[pets.length] = 'cat';
 - `for`/`for...of` ループを使用する場合は、初期化子を `let` キーワードで適切に定義してください。
 
   ```js example-good
-  let cats = ['Athena', 'Luna'];
-  for(let i of cats) {
+  let cats = ["Athena", "Luna"];
+  for (let i of cats) {
     console.log(i);
   }
   ```
@@ -135,7 +137,7 @@ pets[pets.length] = 'cat';
   以下の例は、スペースや初期化に関する推奨ガイドラインに従ったものではありません。
 
   ```js example-bad
-  let cats = ['Athena', 'Luna'];
+  let cats = ["Athena", "Luna"];
   for (i of cats) {
     console.log(i);
   }
@@ -146,13 +148,13 @@ pets[pets.length] = 'cat';
 switch 文はこのように整形してください。
 
 ```js example-good
-let expr = 'Papayas';
+let expr = "Papayas";
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     // 期待される出力: "Mangoes and papayas are $2.79 a pound."
     break;
   default:
@@ -169,13 +171,13 @@ switch (expr) {
 
 ```js example-good
 if (iceCream) {
-  alert('Woo hoo!');
+  alert("Woo hoo!");
 }
 ```
 
 以下の例は、スペースのガイドラインに従ったものではありません。
 
-```js example-bad
+```js-nolint example-bad
 if (iceCream){
   alert('Woo hoo!');
 }
@@ -188,8 +190,7 @@ if (iceCream){
 ```js example-good
 try {
   console.log(results);
-}
-catch(e) {
+} catch (e) {
   console.error(e);
 }
 ```
@@ -204,20 +205,20 @@ catch(e) {
 
 ```js example-good
 function sayHello() {
-  alert('Hello!');
-};
+  alert("Hello!");
+}
 ```
 
 このようにしないでください。
 
 ```js example-bad
 function SayHello() {
-  alert('Hello!');
-};
+  alert("Hello!");
+}
 
 function notVeryObviousName() {
-  alert('Hello!');
-};
+  alert("Hello!");
+}
 ```
 
 ### 関数の宣言
@@ -237,9 +238,9 @@ function notVeryObviousName() {
   このようにしないでください。
 
   ```js example-bad
-  let sum = function(a, b) {
+  let sum = function (a, b) {
     return a + b;
-  }
+  };
   ```
 
 - 関数を引数として必要とするメソッドの内部で無名関数を使用する場合、コードを短くすっきりさせるためにアロー関数を使用することは（必須ではありませんが）許容されます。
@@ -248,16 +249,14 @@ function notVeryObviousName() {
 
   ```js example-good
   const array1 = [1, 2, 3, 4];
-  let sum = array1.reduce((a, b) =>
-    a + b
-  );
+  let sum = array1.reduce((a, b) => a + b);
   ```
 
   このように書くこともできます。
 
   ```js example-good
   const array1 = [1, 2, 3, 4];
-  let sum = array1.reduce(function(a, b) {
+  let sum = array1.reduce(function (a, b) {
     return a + b;
   });
   ```
@@ -271,13 +270,13 @@ function notVeryObviousName() {
 オブジェクトのインスタンスを定義する場合（リテラルまたはコンストラクター経由）、インスタンス名には lowerCamelCase を使用します。
 
 ```js example-good
-let hanSolo = new Person('Han Solo', 25, 'male');
+let hanSolo = new Person("Han Solo", 25, "male");
 
 let hanSolo = {
-  name: 'Han Solo',
+  name: "Han Solo",
   age: 25,
-  gender: 'male'
-}
+  gender: "male",
+};
 ```
 
 ### オブジェクトの作成
@@ -287,7 +286,7 @@ let hanSolo = {
 このようにしてください。
 
 ```js example-good
-let myObject = { };
+let myObject = {};
 ```
 
 このようにしないでください。
@@ -312,7 +311,7 @@ class Person {
 
   greeting() {
     console.log(`Hi! I'm ${this.name}`);
-  };
+  }
 }
 ```
 
@@ -331,12 +330,12 @@ class Teacher extends Person {
 [条件（または三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)は、以下のように単一の行にまとめて記述してください。
 
 ```js example-good
-let status = (age >= 18) ? 'adult' : 'minor';
+let status = age >= 18 ? "adult" : "minor";
 ```
 
 コードが読みにくくなるので、以下のように条件演算子を入れ子にしないでください。
 
-```js example-bad
+```js-nolint example-bad
 let status = (age >= 18)
   ? 'adult'
   : 'minor';
@@ -349,14 +348,14 @@ let status = (age >= 18)
 厳密等価演算子、不等価演算子はこのように使用します。
 
 ```js example-good
-name === 'Chris';
+name === "Chris";
 age !== 25;
 ```
 
 以下のように、等価演算子、不等価演算子を使用しないでください。
 
 ```js example-bad
-name == 'Chris';
+name == "Chris";
 age != 25;
 ```
 
@@ -373,15 +372,15 @@ age != 25;
 これは、テンプレートリテラルを使用する際の推奨される方法の一例です。
 
 ```js example-good
-let myName = 'Chris';
+let myName = "Chris";
 console.log(`Hi! I'm ${myName}!`);
 ```
 
 このようにしないでください。
 
 ```js example-bad
-let myName = 'Chris';
-console.log('Hi! I\'m' + myName + '!');
+let myName = "Chris";
+console.log("Hi! I'm" + myName + "!");
 ```
 
 ### ノードのテキストコンテンツ
@@ -391,16 +390,16 @@ DOM ノードに文字列を挿入する場合、 {{DOMxRef("Node.textContent")}
 以下の例は、 `textContent` の使い方を示したものです。
 
 ```js example-good
-let text = 'Hello to all you good people';
-const para = document.createElement('p');
+let text = "Hello to all you good people";
+const para = document.createElement("p");
 para.textContent = text;
 ```
 
 文字列を DOM ノードに挿入するのに `innerHTML` は使用しないでください。
 
 ```js example-bad
-let text = 'Hello to all you good people';
-const para = document.createElement('p');
+let text = "Hello to all you good people";
+const para = document.createElement("p");
 para.innerHTML = text;
 ```
 
@@ -423,10 +422,10 @@ let speed = distance / time;
 ```js example-bad
 let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 
-let s = d/t;
+let s = d / t;
 ```
 
-> **Note:** 人間が読める意味のある名前を使わなくても良いのは、ループの反復子に `i` や `j` などを使用するような、非常に一般的に認識されている慣習が存在する場合だけです。
+> **メモ:** 人間が読める意味のある名前を使わなくても良いのは、ループのイテレーターに `i` や `j` などを使用するような、非常に一般的に認識されている慣習が存在する場合だけです。
 
 ### 変数の宣言
 
@@ -435,39 +434,39 @@ let s = d/t;
 - 変数が再代入されない場合は、 `const` を推奨します。
 
   ```js example-good
-  const myName = 'Chris';
+  const myName = "Chris";
   console.log(myName);
   ```
 
 - そうでない場合は `let` を使用してください。
 
   ```js example-good
-  let myAge = '40';
+  let myAge = "40";
   myAge++;
-  console.log('Happy birthday!');
+  console.log("Happy birthday!");
   ```
 
 - この例では `const` を使用すべきところを `let` を使用しています。これはこれで動作はしますが、 MDN のコード例では避けてください。
 
   ```js example-bad
-  let myName = 'Chris';
+  let myName = "Chris";
   console.log(myName);
   ```
 
 この例では、再代入される変数に const を使用しています。再代入されるとエラーが発生します。
 
-  ```js example-bad
-  const myAge = '40';
-  myAge++;
-  console.log('Happy birthday!');
-  ```
+```js example-bad
+const myAge = "40";
+myAge++;
+console.log("Happy birthday!");
+```
 
 この例では `var` を使用していますが、MDN のコード例では、本当に必要な場合以外は避けるべきです。
 
-  ```js example-bad
-  var myAge = '40';
-  var myName = 'Chris';
-  ```
+```js example-bad
+var myAge = "40";
+var myName = "Chris";
+```
 
 ## 関連情報
 
@@ -477,5 +476,5 @@ let s = d/t;
   - [`fetch()` の例](/ja/docs/Web/API/fetch#例)
   - [`fillRect()` の例](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect#例) （Canvas 2D の例は、古いスタイルの `var` をまだ使用していますが、概ね良好です）。
   - [Payment Request API の `show()`](/ja/docs/Web/API/PaymentRequest/show) （{{DOMxRef("PaymentRequest")}} の例は、全般的にかなり良いものです）。
-  - [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
+  - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
   - [メディア能力 API の使用](/ja/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API) （ガイドでコードスニペットを使用するための、より一般的な良い実践）。

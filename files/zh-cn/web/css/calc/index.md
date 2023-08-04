@@ -1,8 +1,8 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 calc() 此 [CSS](/zh-CN/docs/Web/CSS) 函数允许在声明 CSS 属性值时执行一些计算。它可以用在如下场合：{{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、或 {{cssxref("&lt;integer&gt;")}}。
@@ -90,8 +90,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```
@@ -136,6 +136,6 @@ h1 {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)

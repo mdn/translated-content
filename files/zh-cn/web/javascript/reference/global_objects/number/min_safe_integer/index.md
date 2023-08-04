@@ -2,6 +2,7 @@
 title: Number.MIN_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MIN_SAFE_INTEGER`** 代表在 JavaScript 中最小的安全的 integer 型数字 (`-(2^53 - 1)`)。
@@ -17,8 +18,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ## 示例
 
 ```js
-Number.MIN_SAFE_INTEGER // -9007199254740991
--(Math.pow(2, 53) - 1)  // -9007199254740991
+Number.MIN_SAFE_INTEGER; // -9007199254740991
+-(Math.pow(2, 53) - 1); // -9007199254740991
 ```
 
 ## 规范

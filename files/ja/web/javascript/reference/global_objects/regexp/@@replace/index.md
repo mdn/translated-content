@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expression
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 **`[@@replace]()`** メソッドは文字列内の `this` パターンの一部または、すべての一致箇所を `replacement` で置き換え、置換結果を新しい文字列として返します。 `replacement` は文字列にするか、関数にしてすべての一致箇所ごとに呼び出されるようにすることができます。
@@ -90,9 +83,7 @@ console.log(newstr); // ###34567
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

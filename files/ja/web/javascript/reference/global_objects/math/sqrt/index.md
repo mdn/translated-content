@@ -1,13 +1,8 @@
 ---
 title: Math.sqrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sqrt
 ---
+
 {{JSRef}}
 
 **`Math.sqrt()`** 関数は、ある数の平方根を返します。すなわち、
@@ -45,17 +40,15 @@ Math.sqrt(x)
 Math.sqrt(9); // 3
 Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

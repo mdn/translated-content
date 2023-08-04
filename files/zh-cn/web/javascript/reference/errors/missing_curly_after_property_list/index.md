@@ -1,7 +1,8 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -16,7 +17,7 @@ SyntaxError: missing } after property list
 
 ## 哪里出错了？
 
-在[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的时候语法出错了。可能是遗漏了一个大括号，也可能是遗漏了逗号。还要检查是否以正确的顺序关闭了大括号或括号。 缩进或格式化代码也许可以更好帮助你看清这些芜杂的。
+在[对象初始化](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的时候语法出错了。可能是遗漏了一个大括号，也可能是遗漏了逗号。还要检查是否以正确的顺序关闭了大括号或括号。缩进或格式化代码也许可以更好帮助你看清这些芜杂的。
 
 ## 示例
 
@@ -38,10 +39,10 @@ var obj = {
 var obj = {
   a: 1,
   b: { myProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 
 ## 相关
 
-- [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Object initializer](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)

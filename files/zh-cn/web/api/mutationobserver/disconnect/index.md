@@ -2,9 +2,10 @@
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 ---
+
 {{APIRef("DOM WHATWG")}}
 
-{{domxref("MutationObserver")}} 的 **`disconnect()`** 方法告诉观察者停止观察变动。 可以通过调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法来重用观察者。
+{{domxref("MutationObserver")}} 的 **`disconnect()`** 方法告诉观察者停止观察变动。可以通过调用其 {{domxref("MutationObserver.observe", "observe()")}} 方法来重用观察者。
 
 ## 语法
 
@@ -34,8 +35,8 @@ mutationObserver.disconnect()
 var targetNode = document.querySelector("#someElement");
 var observerOptions = {
   childList: true,
-  attributes: true
-}
+  attributes: true,
+};
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
@@ -51,4 +52,4 @@ observer.disconnect();
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.disconnect")}}
+{{Compat}}

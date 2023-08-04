@@ -1,15 +1,8 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
+
 {{JSRef}}
 
 **`return()`** メソッドは、指定された値を返してジェネレーターを終了します。
@@ -71,9 +64,7 @@ g.return(1); // { value: 1, done: true }
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.return', 'Generator.prototype.return')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

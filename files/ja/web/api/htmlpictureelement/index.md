@@ -1,28 +1,31 @@
 ---
 title: HTMLPictureElement
 slug: Web/API/HTMLPictureElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-**`HTMLPictureElement`** インタフェースは、{{HTMLElement("picture")}} HTML 要素をあらわします。これは固有のプロパティやメソッドを実装していません。
+{{APIRef("HTML DOM")}}
+
+**`HTMLPictureElement`** インタフェースは、HTML の {{HTMLElement("picture")}} 要素を表します。これは固有のプロパティやメソッドを実装していません。
+
+{{InheritanceDiagram}}
 
 ## プロパティ
 
-_固有のプロパティはありませんが、親要素である {{domxref("HTMLElement")}} のプロパティを継承します。_
+_固有のプロパティはありませんが、親要素である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 ## メソッド
 
-_固有のメソッドはありませんが、親要素である {{domxref("HTMLElement")}} のメソッドを継承します。_
+_固有のメソッドはありませんが、親要素である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-| 仕様                                                                                                             | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "edits.html#the-picture-element", "HTMLPictureElement")}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLPictureElement")}}
+{{Compat}}
 
 ## 関連情報
 

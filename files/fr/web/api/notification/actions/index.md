@@ -1,16 +1,8 @@
 ---
 title: Notification.actions
-slug: Web/API/notification/actions
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - actions
-translation_of: Web/API/Notification/actions
+slug: Web/API/Notification/actions
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété **`actions`** en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option `actions` lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.
@@ -22,7 +14,7 @@ Il s'agit d'une liste des actions définies par l'application que l'utilisateur 
 ## Syntaxe
 
 ```js
-Notification.actions
+Notification.actions;
 ```
 
 ### Valeur

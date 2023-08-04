@@ -2,9 +2,10 @@
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
+
 {{JSRef}}
 
-静态方法 **`Reflect.deleteProperty()`** 允许用于删除属性。它很像 [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete) ，但它是一个函数。
+静态方法 **`Reflect.deleteProperty()`** 允许用于删除属性。它很像 [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) ，但它是一个函数。
 
 ## 语法
 
@@ -48,7 +49,7 @@ arr; // [1, 2, 3, , 5]
 Reflect.deleteProperty({}, "foo"); // true
 
 // 如果属性不可配置，返回 false
-Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 规范
@@ -62,4 +63,4 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
 ## 相关链接
 
 - {{jsxref("Reflect")}}
-- [`delete` operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete` operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)

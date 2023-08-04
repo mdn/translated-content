@@ -1,13 +1,8 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`AudioParam`** représente un paramètre audio, en général un paramètre d'un {{domxref ("AudioNode")}} tel qu'un {{ domxref("GainNode.gain") }}. On peut lui donner une valeur spécifique ou définir une variation de valeur qui intervient à un certain moment et selon un certain fonctionnement.

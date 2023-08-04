@@ -1,18 +1,21 @@
 ---
-title: 画面の向きを制御する
+title: 画面の向きの制御
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
+l10n:
+  sourceCommit: af01703d0f7ec0d5f44dd094e595f252b96050d2
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
-画面の向きは、[端末の向き](/ja/docs/WebAPI/Detecting_device_orientation)と異なる場合があります。端末が自身の向きを検知することができない場合でも、画面には向きがあります。また端末が自身の向きを知ることが可能であっても、Web アプリケーションのインターフェイスを維持または適合するために画面の向きを制御できるとよいでしょう。
+画面の向きとは、ブラウザーの[ビューポート](/ja/docs/Glossary/Viewport)がランドスケープモード（つまり、ビューポートの幅がその高さよりも大きい）か、そうでなければポートレートモード（ビューポートの高さがその幅よりも大きい）であるかを参照するものです。
 
-CSS と JavaScript の双方に、画面の向きを扱う方法がいくつかあります。第一の方法は [orientation メディアクエリ](/ja/docs/CSS/Media_queries#orientation)です。これはブラウザウィンドウがランドスケープモード (すなわち幅が高さより大きい) かポートレートモード (高さが幅より大きい) かに基づいて、CSS を使用してコンテンツのレイアウトを調整できます。
+CSS は [`orientation`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
 
-第二の方法は、画面自身の現在の向きを取得して最終的に固定するために使用できる、JavaScript の Screen Orientation API です。
+[画面方向 API](/ja/docs/Web/API/Screen_Orientation_API) は、画面の内側へ作業するためのプログラム的な JavaScript API を提供します。これには、ビューポートを特定の方向に固定する機能が含まれます。
 
 ## 向きに基づいてレイアウトを調整する
 
-向きの変化についてのもっとも一般的なケースのひとつが、端末の向きに基づいてコンテンツのレイアウトを変更したいときです。例えば、端末のディスプレイで最長の寸法に沿ってボタンバーを引き伸ばしたいでしょう。メディアクエリを使用して、簡単かつ自動的にこれを行うことができます。
+向きの変化についてのもっとも一般的なケースのひとつが、端末の向きに基づいてコンテンツのレイアウトを変更したいときです。例えば、端末のディスプレイで最長の寸法に沿ってボタンバーを引き伸ばしたいでしょう。メディアクエリーを使用して、簡単かつ自動的にこれを行うことができます。
 
 以下の HTML コードによる例を見てみましょう。
 
@@ -23,16 +26,22 @@ CSS と JavaScript の双方に、画面の向きを扱う方法がいくつか�
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
-画面の向きに応じて固有のスタイルを扱うために、CSS で orientation メディアクエリに頼ります。
+画面の向きに応じて固有のスタイルを扱うために、CSS で orientation メディアクエリーに頼ります。
 
 ```css
 /* 始めに、共通のスタイルを定義しましょう */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -44,17 +53,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -64,7 +73,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -95,64 +104,73 @@ li {
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 結果は以下のとおりです。
 
-| 縦長                                                                                                 | 横長                                                                                                 |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">縦長</th>
+      <th scope="col">横長</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div>
+          {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }}
+        </div>
+      </td>
+      <td>
+        <div>
+          {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-> **Note:** **メモ:** orientation メディアクエリは、実際は端末の向きではなくブラウザウィンドウ (または iframe) の向きに応じて適用されます。
+> **メモ:** orientation メディアクエリーは、実際は端末の向きではなくブラウザーウィンドウ (または iframe) の向きに応じて適用されます。
 
 ## 画面の向きを固定する
 
-> **Warning:** **警告:** この API は実験的であり現在は `moz` 接頭辞付きで、[Firefox OS](/ja/docs/Mozilla/Firefox_OS "Mozilla/Firefox_OS") および [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android "Mozilla/Firefox_for_Android") で使用できます。また、Windows 8.1 以降の Internet Explorer では `ms` 接頭辞付きで使用できます。
+一部の端末（主にモバイル端末）は、画面に表示している内容をいつでも読めるようにするため、端末の向きに基づいて画面の向きを動的に変更できます。この動作はテキストコンテンツにはとても適していますが、そのような変化を好まないコンテンツも存在します。例えば端末の向きに基づくゲームでは、そのような向きの変化によって混乱してしまうでしょう。
 
-一部の端末 (主にモバイル端末) は、画面に表示している内容をいつでも読めるようにするため、端末の向きに基づいて画面の向きを動的に変更できます。この動作はテキストコンテンツにはとても適していますが、そのような変化を好まないコンテンツも存在します。例えば端末の向きに基づくゲームでは、そのような向きの変化によって混乱してしまうでしょう。
+画面方向 API は、そのような変化を抑制したり制御したりするものです。
 
-Screen Orientation API は、そのような変化を抑制したり制御したりするものです。
+### 向きの変化の監視
 
-### 向きの変化をリッスンする
-
-{{event("orientationchange")}} イベントは、端末が画面の向きを変更する度に発生します。また、向きそのものを {{domxref("Screen.orientation")}} プロパティで読み取ることが可能です。
+{{domxref("Window.orientationchange_event", "orientationchange")}} イベントは、端末が画面の向きを変更する度に発生します。また、向きそのものを {{domxref("Screen.orientation")}} プロパティで読み取ることが可能です。
 
 ```js
-screen.addEventListener("orientationchange", function () {
-  console.log("The orientation of the screen is: " + Screen.orientation);
+screen.addEventListener("orientationchange", () => {
+  console.log(`The orientation of the screen is: ${screen.orientation}`);
 });
 ```
 
 ### 向きの変更を抑制する
 
-任意の Web アプリケーションが、自身の要望に合うように画面を固定できます。{{domxref("Screen.lockOrientation()")}} メソッドを使用して画面の固定を、また {{domxref("Screen.unlockOrientation()")}} メソッドで固定の解除を行います。
+どのウェブアプリケーションでも、必要に応じて画面をロックすることができます。画面のロックは {{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} メソッドを使用して行い、ロック解除は {{domxref("ScreenOrientation.unlock()", "screen.orientation.unlock()")}} メソッドを使用して行います。
 
-{{domxref("Screen.lockOrientation()")}} は、適用する固定方式を定義する文字列 (または一連の文字列) を受け入れます。受け入れる値: `portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary`、`portrait`、`landscape` (それぞれの値について知るために {{domxref("Screen.lockOrientation")}} をご覧ください)。
+{{domxref("ScreenOrientation.lock()", "screen.orientation.lock()")}} は、適用するロック方式を定義する文字列として、`any`、`natural`、`portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary`、`portrait`、`landscape` のいずれかを受け入れます。
 
 ```js
-Screen.lockOrientation('landscape');
+screen.orientation.lock();
 ```
 
-> **Note:** **メモ:** 画面の固定はウェブアプリケーションに従属します。アプリケーション A が `landscape` に固定、またアプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{event("orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
+ロックに成功した後に解決される[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)を返します。
+
+> **メモ:** 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
-> ただし、固定の要求を満たすために向きを変更しなければならない場合は、向きの固定で {{event("orientationchange")}} イベントが発生してもかまいません。
-
-## Firefox OS および Android: マニフェストを使用して向きをロックする
-
-Firefox OS および Android 版 Firefox (近いうちにデスクトップ版 Firefox も対応予定) 特有の向きをロックする方法として、アプリのマニフェストで [orientation](/ja/Apps/Build/Manifest#orientation) フィールドを設定できます。例を示します:
-
-```json
-"orientation": "portrait"
-```
+> ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることでで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
 
 ## 関連情報
 
-- {{domxref("Screen.orientation")}}
-- {{domxref("Screen.lockOrientation()")}}
-- {{domxref("Screen.unlockOrientation()")}}
-- {{domxref("Screen.onorientationchange")}}
-- [orientation メディアクエリ](/ja/docs/CSS/Media_queries#orientation "CSS/Media queries#orientation")
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- {{domxref("Screen.orientation", "screen.orientation")}}
+- {{domxref("ScreenOrientation")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
+- [orientation メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#orientation)

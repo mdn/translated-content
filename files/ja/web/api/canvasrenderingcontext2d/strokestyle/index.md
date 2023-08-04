@@ -1,29 +1,23 @@
 ---
-title: CanvasRenderingContext2D.strokeStyle
+title: "CanvasRenderingContext2D: strokeStyle プロパティ"
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeStyle`** はキャンバス 2D API のプロパティで、図形の辺（輪郭）に使用する色、グラデーション、またはパターンを指定します。既定値は `#000` （黒色）です。
 
-> **Note:** 輪郭と塗りつぶしのスタイル例については、 [canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
+> **メモ:** 輪郭と塗りつぶしのスタイル例については、 [canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) をご覧ください。
 
-## 構文
+## 値
 
-```js
-ctx.strokeStyle = color;
-ctx.strokeStyle = gradient;
-ctx.strokeStyle = pattern;
-```
+以下のいずれかです。
 
-### オプション
-
-- `color`
-  - : {{domxref("DOMString")}} で、 [CSS](/ja/docs/Web/CSS) の {{cssxref("&lt;color&gt;")}} 値として解析されるものです。
-- `gradient`
-  - : {{domxref("CanvasGradient")}} オブジェクト（線形または放射グラデーション）。
-- `pattern`
-  - : {{domxref("CanvasPattern")}} オブジェクト（繰り返し画像）。
+- CSS の {{cssxref("&lt;color&gt;")}} 値として解釈される文字列。
+- {{domxref("CanvasGradient")}} オブジェクト（線形または放射状のグラデーション）。
+- {{domxref("CanvasPattern")}} オブジェクト（繰り返し画像）。
 
 ## 例
 
@@ -40,10 +34,10 @@ ctx.strokeStyle = pattern;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = 'blue';
+ctx.strokeStyle = "blue";
 ctx.strokeRect(10, 10, 100, 100);
 ```
 
@@ -60,7 +54,7 @@ ctx.strokeRect(10, 10, 100, 100);
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+const ctx = document.getElementById("canvas").getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -93,8 +87,10 @@ for (let i = 0; i < 6; i++) {
 WebKit および Blink ベースのブラウザーの場合、このプロパティに加えて、非標準で非推奨のメソッド `ctx.setStrokeColor()` が実装されています。
 
 ```js
-setStrokeColor(color, optional alpha);
-setStrokeColor(grayLevel, optional alpha);
+setStrokeColor(color);
+setStrokeColor(color, alpha);
+setStrokeColor(grayLevel);
+setStrokeColor(grayLevel, alpha);
 setStrokeColor(r, g, b, a);
 setStrokeColor(c, m, y, k, a);
 ```

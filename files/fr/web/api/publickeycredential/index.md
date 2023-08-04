@@ -1,15 +1,8 @@
 ---
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
-tags:
-  - API
-  - Interface
-  - PublicKeyCredential
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/PublicKeyCredential
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 L'interface **`PublicKeyCredential`** fournit des informations relative à la paire constituée par une clé publique et une clé privée. Cette paire constitue une information d'authentification qui permet de se connecter à un service en utilisant un paire de clé asymétrique (permettant de prévenir les attaques par _phishing_ ou liées à des fuites de données).

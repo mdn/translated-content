@@ -1,17 +1,8 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-tags:
-  - API
-  - DOM
-  - Event
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - 이벤트
-translation_of: Web/API/Window/event
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Window")}} 객체의 **`event`** 속성은 웹 사이트의 코드가 현재 처리 중인 {{domxref("Event")}}를 반환합니다. 이벤트 처리기 바깥에서는 항상 {{jsxref("undefined")}}입니다.

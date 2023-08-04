@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.getExtension()
 slug: Web/API/WebGLRenderingContext/getExtension
 ---
+
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.getExtension()`** 方法可以启用一个 [WebGL](/en-US/docs/Web/API/WebGL_API) 扩展。
+**`WebGLRenderingContext.getExtension()`** 方法可以启用一个 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 扩展。
 
 ## 语法
 
@@ -26,10 +27,10 @@ gl.getExtension(name);
 当一个 WebGL 扩展被启用后，就可以使用该扩展提供的方法、属性和常量。
 
 ```js
-var canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 ```
 
 ## WebGL 扩展

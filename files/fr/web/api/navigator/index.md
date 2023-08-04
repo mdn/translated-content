@@ -1,16 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
-translation_of: Web/API/Navigator
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`Navigator`** représente l'état et l'identité de l'agent utilisateur courant. Elle permet aux scripts de consulter ces informations et de s'enregistrer en vue de certaines activités.

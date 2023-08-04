@@ -2,6 +2,7 @@
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`lineNumber`** 属性的值为抛出错误的代码在其源文件中所在的行号。
@@ -11,18 +12,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ### 使用 `lineNumber`
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### 监听 `error` 事件的示例
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineNumber); // 5
 });
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 ```
 
@@ -34,7 +35,7 @@ throw e;
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.Error.lineNumber")}}
+{{Compat}}
 
 ## 相关内容
 

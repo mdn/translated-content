@@ -1,13 +1,8 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-tags:
-  - HTTP
-  - Reference
-  - ステータスコード
-  - 成功
-translation_of: Web/HTTP/Status/201
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`201 Created`** 成功ステータスレスポンスコードは、リクエストが成功してリソースの作成が完了したことを表します。レスポンスが返される前に、新たなリソースが作成され、レスポンスメッセージの本文にて新しいリソースが返されます。その位置はリクエスト URL、または {{HTTPHeader("Location")}} ヘッダーの内容となります。

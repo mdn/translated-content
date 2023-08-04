@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`height`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の高さを表します。

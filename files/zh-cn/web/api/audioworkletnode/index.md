@@ -2,6 +2,7 @@
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}} {{SeeCompatTable}}
 
 虽然这个接口可以在 [secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts) 之外调用，但是 {{domxref("BaseAudioContext.audioWorklet")}} 属性不行，从而 {{domxref("AudioWorkletProcessor")}} 不能在外部定义。
@@ -20,7 +21,7 @@ _也继承父类的属性，{{domxref("AudioNode")}}_.
 - {{domxref("AudioWorkletNode.port")}} {{readonlyinline}}
   - : 返回一个 {{domxref("MessagePort")}} 用于节点与其关联的 {{domxref("AudioWorkletProcessor")}} 间的双向通讯。另一端在处理器属性{{domxref("AudioWorkletProcessor.port", "port")}} 下可用。
 - {{domxref("AudioWorkletNode.parameters")}} {{readonlyinline}}
-  - : 返回一个 {{domxref("AudioParamMap")}} — {{domxref("AudioParam")}} 对象的集合。它们在创建 `AudioWorkletProcessor`的过程中被实例化. 如果 `AudioWorkletProcessor` 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 `AudioWorkletNode` 创建 `AudioParam` 对象。通过这种机制，使得 `AudioParam` 对象可以从 `AudioWorkletNode` 中访问。你可以在与其关联的 `AudioWorkletProcessor` 中使用它的值。
+  - : 返回一个 {{domxref("AudioParamMap")}} — {{domxref("AudioParam")}} 对象的集合。它们在创建 `AudioWorkletProcessor`的过程中被实例化。如果 `AudioWorkletProcessor` 有一个静态的 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} getter，从其返回的 {{domxref("AudioParamDescriptor")}} 数组用于在 `AudioWorkletNode` 创建 `AudioParam` 对象。通过这种机制，使得 `AudioParam` 对象可以从 `AudioWorkletNode` 中访问。你可以在与其关联的 `AudioWorkletProcessor` 中使用它的值。
 
 ### Event handlers
 
@@ -42,27 +43,30 @@ _AudioWorkletNode 接口未定义其自己的任何方法。_
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
-    output.forEach(channel => {
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1
+        channel[i] = Math.random() * 2 - 1;
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 接下来，在脚本主文件中一个 `AudioWorkletNode` 实例，并传递处理器的名称，然后将该实例连接到一个 audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor",
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 ## 规范
@@ -71,7 +75,7 @@ whiteNoiseNode.connect(audioContext.destination)
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioWorkletNode")}}
+{{Compat}}
 
 ## See also
 

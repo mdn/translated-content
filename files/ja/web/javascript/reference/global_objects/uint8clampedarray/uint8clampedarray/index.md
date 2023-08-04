@@ -1,13 +1,8 @@
 ---
 title: Uint8ClampedArray() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 **`Uint8ClampedArray()`** は型付き配列のコンストラクターで、 0-255 に制約される 8 ビット符号なし整数値の配列を生成します。指定された値が \[0,255] の範囲を超えた場合、 0 または 255 が代わりに設定されます。整数以外を指定しようとすると、最も近い整数が設定されます。中身は `0` で初期化されます。生成されると、配列の中の要素はオブジェクトのメソッドを使用するか、配列の標準的な添字の構文を使用するか (すなわち、ブラケット構文を使用するか) して参照することができます。
@@ -68,9 +63,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

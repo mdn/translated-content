@@ -2,6 +2,7 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 ---
+
 {{JSRef}}
 
 **`copyWithin()`** 方法會對陣列的一部分進行淺拷貝至同一陣列的另一位置並回傳此陣列，而不修改其大小。
@@ -52,7 +53,7 @@ The `copyWithin` method is a mutable method. It does not alter the length of `th
 [1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
 // [1, 2, 3, 3, 4]
 
-[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
 // {0: 1, 3: 1, length: 5}
 
 // ES2015 Typed Arrays are subclasses of Array
@@ -71,33 +72,38 @@ i32a.copyWithin(0, 2);
 ```js
 if (!Array.prototype.copyWithin) {
   Array.prototype.copyWithin =
-  // Array: Number[, Number[, Number]]
-  function copyWithin(target, start, stop) {
-    var positiveT = target >= 0,
+    // Array: Number[, Number[, Number]]
+    function copyWithin(target, start, stop) {
+      var positiveT = target >= 0,
         positiveS = (start = start | 0) >= 0,
-        length    = this.length,
-        zero      = 0,
-        r         = function() {return ((+new Date) * Math.random()).toString(36)},
+        length = this.length,
+        zero = 0,
+        r = function () {
+          return (+new Date() * Math.random()).toString(36);
+        },
         delimiter = "\b" + r() + "-" + r() + "-" + r() + "\b",
         hold;
 
-    stop = stop || this.length;
-    hold = this.slice.apply(this,
-      positiveT?
-        [start, stop]:
-      positiveS?
-        [start, -target]:
-      [start])
-    .join(delimiter);
+      stop = stop || this.length;
+      hold = this.slice
+        .apply(
+          this,
+          positiveT ? [start, stop] : positiveS ? [start, -target] : [start],
+        )
+        .join(delimiter);
 
-    return this.splice.apply(this,
-      positiveT?
-        [target, stop - start, hold]:
-      positiveS?
-        [target, stop, hold]:
-      [target, start, hold]),
-            this.join(delimiter).split(delimiter).slice(zero, length);
-  }
+      return (
+        this.splice.apply(
+          this,
+          positiveT
+            ? [target, stop - start, hold]
+            : positiveS
+            ? [target, stop, hold]
+            : [target, start, hold],
+        ),
+        this.join(delimiter).split(delimiter).slice(zero, length)
+      );
+    };
 }
 ```
 
@@ -107,7 +113,7 @@ if (!Array.prototype.copyWithin) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## 參見
 

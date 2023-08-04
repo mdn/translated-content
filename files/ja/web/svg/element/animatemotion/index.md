@@ -1,17 +1,13 @@
 ---
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
-tags:
-  - Element
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。
 
-> **Note:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
+> **メモ:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
 ```css hidden
 html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
@@ -47,7 +43,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
   - : この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。
     _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
-> **Note:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
+> **メモ:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
 
 ### アニメーション属性
 
@@ -75,10 +71,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
-| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

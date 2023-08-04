@@ -1,11 +1,8 @@
 ---
 title: round
 slug: Web/XPath/Functions/round
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/round
 ---
+
 {{ XsltRef() }}
 
 `round` 関数は、与えられた数値に最も近い整数を返します。
@@ -18,12 +15,12 @@ round(decimal )
 
 ### 引数
 
-- _`decimal`_
+- `decimal`
   - : 丸められる小数。
 
 ### 返値
 
-*`decimal`* よりも小さいか、大きいか、等しい、最も近い整数。
+`decimal` よりも小さいか、大きいか、等しい、最も近い整数。
 
 ### 注
 

@@ -1,13 +1,8 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 ---
+
 {{JSRef}}
 
 **`toExponential()`** 메서드는 숫자를 지수 표기법으로 표기해 반환합니다.

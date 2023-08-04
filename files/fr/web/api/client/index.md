@@ -1,18 +1,8 @@
 ---
 title: Client
 slug: Web/API/Client
-tags:
-  - API
-  - Client
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerClient
-  - ServiceWorkers
-translation_of: Web/API/Client
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface `Client` de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) représente la portée d'exécution d'un {{domxref("Worker")}} ou {{domxref("SharedWorker")}}. Les clients {{domxref("Window")}} sont représentés par le plus spécifique {{domxref("WindowClient")}}. Vous pouvez obtenir les objets `Client`/`WindowClient` via les méthodes {{domxref("Clients.matchAll","Clients.matchAll()")}} et {{domxref("Clients.get","Clients.get()")}}.
@@ -40,17 +30,17 @@ Ce message est contenu dans une promesse qui est résolue si la réponse ne cont
 ```js
 // client service worker (par exemple un document)
 function sendMessage(message) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     // Notez que c'est la version du ServiceWorker.postMessage
     navigator.serviceWorker.controller.postMessage(message);
-    window.serviceWorker.onMessage = function(e) {
+    window.serviceWorker.onMessage = function (e) {
       resolve(e.data);
     };
   });
 }
 
 // Contrôle du service worker
-self.addEventListener("message", function(e) {
+self.addEventListener("message", function (e) {
   // e.source est un object client
   e.source.postMessage("Hello! Your message was: " + e.data);
 });

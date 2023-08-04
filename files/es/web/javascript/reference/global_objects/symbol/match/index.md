@@ -1,12 +1,10 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-browser-compat: javascript.builtins.Symbol.match
 l10n:
   sourceCommit: 7e90bb68293370a2419eb28016f1803b594111ba
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.match`** especifica la coincidencia de una expresión regular con una cadena. Esta función es llamada por el método {{jsxref("String.prototype.match()")}}.
@@ -21,7 +19,7 @@ Esta función también se utiliza para identificar si los objetos tienen el comp
 
 ## Ejemplos
 
-### Desactivar la comprobación de `isRegExp`.
+### Desactivar la comprobación de `isRegExp`
 
 El siguiente código lanzará un {{jsxref("TypeError")}}:
 

@@ -2,6 +2,7 @@
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`to()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、数値をある単位から他の単位へ変換します。
@@ -9,7 +10,7 @@ slug: Web/API/CSSNumericValue/to
 ## 構文
 
 ```js
-to(unit)
+to(unit);
 ```
 
 ### 引数

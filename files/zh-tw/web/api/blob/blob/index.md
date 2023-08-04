@@ -2,6 +2,7 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** 建構式會回傳一個新建立的 {{domxref("Blob")}} 物件。新物件的內容是由 _array_ 參數的成員值串連所構成。
@@ -24,7 +25,7 @@ var aBlob = new Blob( array, options );
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 ```
 
 ## 規範
@@ -33,7 +34,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## 參見
 

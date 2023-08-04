@@ -2,15 +2,16 @@
 title: 使用 IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的方法。IndexedDB 为生成 Web Application 提供了丰富的查询能力，使我们的应用在在线和离线时都可以正常工作。
 
 ## 关于本文档
 
-本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](/zh-CN/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
 
-有关 IndexedDB API 的参考手册，请参见 [IndexedDB](https://developer.mozilla.org/en/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
+有关 IndexedDB API 的参考手册，请参见 [IndexedDB](/zh-CN/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
 
 ## 基本模式
 
@@ -30,15 +31,23 @@ IndexedDB 鼓励使用的基本模式如下所示：
 
 ### 使用实验版本的 IndexedDB
 
-如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码:
+如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码：
 
 ```js
 // In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // DON'T use "var indexedDB = ..." if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
 ```
 
@@ -46,7 +55,9 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 ```js
 if (!window.indexedDB) {
-    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.")
+  window.alert(
+    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.",
+  );
 }
 ```
 
@@ -59,9 +70,9 @@ if (!window.indexedDB) {
 var request = window.indexedDB.open("MyTestDatabase");
 ```
 
-看到了吗？ 打开数据库就像任何其他操作一样 — 你必须进行 "request"。
+看到了吗？打开数据库就像任何其他操作一样 — 你必须进行 "request"。
 
-open 请求不会立即打开数据库或者开始一个事务。 对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase) 对象的实例。
+open 请求不会立即打开数据库或者开始一个事务。对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/zh-CN/docs/IndexedDB/IDBDatabase) 对象的实例。
 
 该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，`open` 操作会创建该数据库，然后 `onupgradeneeded` 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
 
@@ -76,29 +87,29 @@ open 请求不会立即打开数据库或者开始一个事务。 对 `open()` �
 几乎所有我们产生的请求我们在处理的时候首先要做的就是添加成功和失败处理函数：
 
 ```js
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Do something with request.errorCode!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Do something with request.result!
 };
 ```
 
-`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。 一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
+`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
 
-IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/en/IndexedDB#Storage_limits)）。
+IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/zh-CN/IndexedDB#Storage_limits)）。
 
-显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。 隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
+显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
 
-现在，假设用户已经允许了你的要创建一个数据库的请求，同时你也已经收到了一个来触发 success 回调的 success 事件；然后呢？这里的 request 是通过调用 `indexedDB.open()` 产生的， 所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望把它保存下来以供后面使用。你的代码看起来可能像这样：
+现在，假设用户已经允许了你的要创建一个数据库的请求，同时你也已经收到了一个来触发 success 回调的 success 事件；然后呢？这里的 request 是通过调用 `indexedDB.open()` 产生的，所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望把它保存下来以供后面使用。你的代码看起来可能像这样：
 
 ```js
 var db;
 var request = indexedDB.open("MyTestDatabase");
-request.onerror = function(event) {
+request.onerror = function (event) {
   alert("Why didn't you allow my web app to use IndexedDB?!");
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   db = event.target.result;
 };
 ```
@@ -108,7 +119,7 @@ request.onsuccess = function(event) {
 如上文所述，错误事件遵循冒泡机制。错误事件都是针对产生这些错误的请求的，然后事件冒泡到事务，然后最终到达数据库对象。如果你希望避免为所有的请求都增加错误处理程序，你可以替代性的仅对数据库对象添加一个错误处理程序，像这样：
 
 ```js
-db.onerror = function(event) {
+db.onerror = function (event) {
   // Generic error handler for all errors targeted at this database's
   // requests!
   alert("Database error: " + event.target.errorCode);
@@ -125,7 +136,7 @@ db.onerror = function(event) {
 
 ```js
 // 该事件仅在较新的浏览器中实现了
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   // 保存 IDBDataBase 接口
   var db = event.target.result;
 
@@ -144,7 +155,7 @@ WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及
 
 ### 构建数据库
 
-现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/en/IndexedDB#gloss_key_path) 还是 [key generator](/en/IndexedDB#gloss_key_generator)。
+现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/zh-CN/IndexedDB#gloss_key_path) 还是 [key generator](/zh-CN/IndexedDB#gloss_key_generator)。
 
 下面的表格显示了几种不同的提供键的方法。
 
@@ -165,7 +176,7 @@ WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及
 // 我们的客户数据看起来像这样。
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 ```
 
@@ -178,10 +189,10 @@ const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
-request.onerror = function(event) {
+request.onerror = function (event) {
   // 错误处理
 };
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // 建立一个对象仓库来存储我们客户的相关信息，我们选择 ssn 作为键路径（key path）
@@ -195,10 +206,12 @@ request.onupgradeneeded = function(event) {
   objectStore.createIndex("email", "email", { unique: true });
 
   // 使用事务的 oncomplete 事件确保在插入数据前对象仓库已经创建完毕
-  objectStore.transaction.oncomplete = function(event) {
+  objectStore.transaction.oncomplete = function (event) {
     // 将数据保存到新创建的对象仓库
-    var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
-    customerData.forEach(function(customer) {
+    var customerObjectStore = db
+      .transaction("customers", "readwrite")
+      .objectStore("customers");
+    customerData.forEach(function (customer) {
       customerObjectStore.add(customer);
     });
   };
@@ -207,11 +220,11 @@ request.onupgradeneeded = function(event) {
 
 正如前面提到的，`onupgradeneeded` 是我们唯一可以修改数据库结构的地方。在这里面，我们可以创建和删除对象存储空间以及构建和删除索引。
 
-对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers” 的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是 “ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。
+对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers”的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是“ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。
 
-我们也请求了一个名为 “name” 的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
+我们也请求了一个名为“name”的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
 
-我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/en/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
+我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/zh-CN/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
 
 ### 使用键生成器
 
@@ -226,19 +239,18 @@ request.onupgradeneeded = function(event) {
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
+  var db = event.target.result;
 
-    var db = event.target.result;
+  // 设置 autoIncrement 标志为 true 来创建一个名为 names 的对象仓库
+  var objStore = db.createObjectStore("names", { autoIncrement: true });
 
-    // 设置 autoIncrement 标志为 true 来创建一个名为 names 的对象仓库
-    var objStore = db.createObjectStore("names", { autoIncrement : true });
-
-    // 因为 names 对象仓库拥有键生成器，所以它的键会自动生成。
-    // 被插入的数据可以表示如下：
-    // key : 1 => value : "Bill"
-    // key : 2 => value : "Donna"
-    customerData.forEach(function(customer) {
-        objStore.add(customer.name);
-    });
+  // 因为 names 对象仓库拥有键生成器，所以它的键会自动生成。
+  // 被插入的数据可以表示如下：
+  // key : 1 => value : "Bill"
+  // key : 2 => value : "Donna"
+  customerData.forEach(function (customer) {
+    objStore.add(customer.name);
+  });
 };
 ```
 
@@ -248,7 +260,7 @@ request.onupgradeneeded = function (event) {
 
 你需要开启一个事务才能对你的创建的数据库进行操作。事务来自于数据库对象，而且你必须指定你想让这个事务跨越哪些对象仓库。一旦你处于一个事务中，你就可以目标对象仓库发出请求。你要决定是对数据库进行更改还是只需从中读取数据。事务提供了三种模式：`readonly`、`readwrite` 和 `versionchange`。
 
-想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 `versionchange` 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器 ，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 `name`，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 `versionchange` 事务。
+想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 `versionchange` 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 `name`，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 `versionchange` 事务。
 
 使用 `readonly` 或 `readwrite` 模式都可以从已存在的对象仓库里读取记录。但只有在 `readwrite` 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：`storeNames` (作用域，一个你想访问的对象仓库的数组），事务模式 `mode`（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 `mode` 时，默认为 `readonly` 模式。
 
@@ -280,18 +292,18 @@ var transaction = db.transaction(["customers"], "readwrite");
 
 ```js
 // 在所有数据添加完毕后的处理
-transaction.oncomplete = function(event) {
+transaction.oncomplete = function (event) {
   alert("All done!");
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = function (event) {
   // 不要忘记错误处理！
 };
 
 var objectStore = transaction.objectStore("customers");
-customerData.forEach(function(customer) {
+customerData.forEach(function (customer) {
   var request = objectStore.add(customer);
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     // event.target.result === customer.ssn;
   };
 });
@@ -304,10 +316,11 @@ customerData.forEach(function(customer) {
 删除数据是非常类似的：
 
 ```js
-var request = db.transaction(["customers"], "readwrite")
-                .objectStore("customers")
-                .delete("444-44-4444");
-request.onsuccess = function(event) {
+var request = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers")
+  .delete("444-44-4444");
+request.onsuccess = function (event) {
   // 删除成功！
 };
 ```
@@ -320,10 +333,10 @@ request.onsuccess = function(event) {
 var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // 错误处理！
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // 对 request.result 做些操作！
   alert("Name for SSN 444-44-4444 is " + request.result.name);
 };
@@ -332,7 +345,10 @@ request.onsuccess = function(event) {
 对于一个“简单”的提取这里的代码有点多了。下面看我们怎么把它再缩短一点，假设你在数据库的级别上来进行的错误处理：
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = function (event) {
   alert("Name for SSN 444-44-4444 is " + event.target.result.name);
 };
 ```
@@ -349,12 +365,14 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 现在我们已经去除了一些数据，修改一下并把它插回数据库的操作时非常简单的。让我们来稍微更新一下上例中的数据。
 
 ```js
-var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+var objectStore = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // 错误处理
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // 获取我们想要更新的数据
   var data = event.target.result;
 
@@ -363,12 +381,12 @@ request.onsuccess = function(event) {
 
   // 把更新过的对象放回数据库
   var requestUpdate = objectStore.put(data);
-   requestUpdate.onerror = function(event) {
-     // 错误处理
-   };
-   requestUpdate.onsuccess = function(event) {
-     // 完成，数据已更新！
-   };
+  requestUpdate.onerror = function (event) {
+    // 错误处理
+  };
+  requestUpdate.onsuccess = function (event) {
+    // 完成，数据已更新！
+  };
 };
 ```
 
@@ -383,33 +401,31 @@ request.onsuccess = function(event) {
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     alert("Name for SSN " + cursor.key + " is " + cursor.value.name);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("No more entries!");
   }
 };
 ```
 
-`openCursor()` 函数需要几个参数。首先，你可以使用一个 key range 对象来限制被检索的项目的范围。第二，你可以指定你希望进行迭代的方向。在上面的示例中，我们在以升序迭代所有的对象。游标成功的回调有点特别。游标对象本身是请求的 `result` （上面我们使用的是简写形式，所以是 `event.target.result`）。然后实际的 key 和 value 可以根据游标对象的 `key` 和 `value` 属性被找到。如果你想要保持继续前行，那么你必须调用游标上的 `continue()` 。当你已经到达数据的末尾时（或者没有匹配 `openCursor()` 请求的条目）你仍然会得到一个成功回调，但是 `result` 属性是 `undefined。`
+`openCursor()` 函数需要几个参数。首先，你可以使用一个 key range 对象来限制被检索的项目的范围。第二，你可以指定你希望进行迭代的方向。在上面的示例中，我们在以升序迭代所有的对象。游标成功的回调有点特别。游标对象本身是请求的 `result` （上面我们使用的是简写形式，所以是 `event.target.result`）。然后实际的 key 和 value 可以根据游标对象的 `key` 和 `value` 属性被找到。如果你想要保持继续前行，那么你必须调用游标上的 `continue()` 。当你已经到达数据的末尾时（或者没有匹配 `openCursor()` 请求的条目）你仍然会得到一个成功回调，但是 `result` 属性是 `undefined`。
 
 使用游标的一种常见模式是提取出在一个对象存储空间中的所有对象然后把它们添加到一个数组中，像这样：
 
 ```js
 var customers = [];
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
-  }
-  else {
-    alert("以获取所有客户信息: " + customers);
+  } else {
+    alert("以获取所有客户信息：" + customers);
   }
 };
 ```
@@ -417,7 +433,7 @@ objectStore.openCursor().onsuccess = function(event) {
 > **备注：** 可选地，你可以使用 `getAll()` 来处理这种情况（以及 `getAllKeys()`）。下面的代码的效果和上例相同：
 >
 > ```js
-> objectStore.getAll().onsuccess = function(event) {
+> objectStore.getAll().onsuccess = function (event) {
 >   alert("Got all customers: " + event.target.result);
 > };
 > ```
@@ -435,26 +451,33 @@ objectStore.openCursor().onsuccess = function(event) {
 
 var index = objectStore.index("name");
 
-index.get("Donna").onsuccess = function(event) {
+index.get("Donna").onsuccess = function (event) {
   alert("Donna's SSN is " + event.target.result.ssn);
 };
 ```
 
-“name” 游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
+“name”游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
 
 如果你需要访问带有给定 `name` 的所有的记录你可以使用一个游标。你可以在索引上打开两个不同类型的游标。一个常规游标映射索引属性到对象存储空间中的对象。一个键索引映射索引属性到用来存储对象存储空间中的对象的键。不同之处被展示如下：
 
 ```js
-index.openCursor().onsuccess = function(event) {
+index.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key 是一个 name，就像 "Bill", 然后 cursor.value 是整个对象。
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    alert(
+      "Name: " +
+        cursor.key +
+        ", SSN: " +
+        cursor.value.ssn +
+        ", email: " +
+        cursor.value.email,
+    );
     cursor.continue();
   }
 };
 
-index.openKeyCursor().onsuccess = function(event) {
+index.openKeyCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key 是一个 name，就像 "Bill", 然后 cursor.value 是那个 SSN。
@@ -486,7 +509,7 @@ var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // 使用其中的一个键范围，把它作为 openCursor()/openKeyCursor 的第一个参数
-index.openCursor(boundKeyRange).onsuccess = function(event) {
+index.openCursor(boundKeyRange).onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // 当匹配时进行一些操作
@@ -498,7 +521,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 有时候你可能想要以倒序而不是正序（所有游标的默认顺序）来遍历。切换方向是通过传递 `prev` 到 `openCursor()` 方法来实现的：
 
 ```js
-objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+objectStore.openCursor(boundKeyRange, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // 进行一些操作
@@ -510,7 +533,7 @@ objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
 如果你只是想改变遍历的方向，而不想对结果进行筛选，你只需要给第一个参数传入 null。
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function(event) {
+objectStore.openCursor(null, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -519,10 +542,10 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 };
 ```
 
-因为 “name” 索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。 当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
+因为“name”索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
 
 ```js
-index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
+index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -540,18 +563,18 @@ index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
 ```js
 var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
-openReq.onblocked = function(event) {
+openReq.onblocked = function (event) {
   // 如果其他的一些页签加载了该数据库，在我们继续之前需要关闭它们
   alert("请关闭其他由该站点打开的页签！");
 };
 
-openReq.onupgradeneeded = function(event) {
+openReq.onupgradeneeded = function (event) {
   // 其他的数据已经被关闭，一切就绪
   db.createObjectStore(/* ... */);
   useDatabase(db);
 };
 
-openReq.onsuccess = function(event) {
+openReq.onsuccess = function (event) {
   var db = event.target.result;
   useDatabase(db);
   return;
@@ -560,9 +583,11 @@ openReq.onsuccess = function(event) {
 function useDatabase(db) {
   // 当由其他页签请求了版本变更时，确认添加了一个会被通知的事件处理程序。
   // 这里允许其他页签来更新数据库，如果不这样做，版本升级将不会发生知道用户关闭了这些页签。
-  db.onversionchange = function(event) {
+  db.onversionchange = function (event) {
     db.close();
-    alert("A new version of this page is ready. Please reload or close this tab!");
+    alert(
+      "A new version of this page is ready. Please reload or close this tab!",
+    );
   };
 
   // 处理数据库
@@ -575,7 +600,7 @@ function useDatabase(db) {
 
 IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建它的站点的源（典型情况下，就是站点的域或是子域），所以它不能被任何其他源访问。
 
-第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)（参见 {{bug("1147821")}}）。
+第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)（参见 [Firefox bug 1147821](https://bugzil.la/1147821)）。
 
 ## 浏览器关闭警告
 
@@ -583,11 +608,11 @@ IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建�
 
 1. 受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。
 2. 所有的事务完成后，数据库连接就会关闭。
-3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
+3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{domxref("IDBDatabase/close_event", "close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
 
-上述的行为只在 Firefox 50、Google Chrome 31（近似的） 发行版本中支持。
+上述的行为只在 Firefox 50、Google Chrome 31（近似的）发行版本中支持。
 
-在这些版本之前的浏览器，事务会静默中断，并且 {{event("close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
+在这些版本之前的浏览器，事务会静默中断，并且 {{domxref("IDBDatabase/close_event", "close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
 
 由于用户可以在任何时候关闭浏览器，因此你不能依赖于任何特定事务的完成。并且在老版本的浏览器，你甚至都无法感知它们是否顺利完成。针对这种行为这里有一些启示：
 
@@ -597,7 +622,7 @@ Since the user can exit the browser at any time, this means that you cannot rely
 
 其次，你不应该把数据库事务绑定到卸载事件上。如果卸载事件被浏览器关闭所触发，卸载事件处理函数中的任何事务都不会完成。跨浏览器会话维护信息的直观的实现方法时在浏览器（或特定页）打开时从数据库读取它，在用户和浏览器交互式更新它，然后在浏览器（或页面）关闭时保存至数据库。然而，这并不会生效。这样一来，数据库事务会在卸载事件句柄中被创建，但由于它们时异步的，所以它们在它们执行之前就会被中断。
 
-实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 {{ bug(870645)}}。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
+实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 [Firefox bug 870645](https://bugzil.la/870645)。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
 
 至少通过添加中断提醒和 {{domxref("IDBDatabse.onclose")}}，你可以得知它何时关闭了。
 
@@ -623,137 +648,132 @@ Mozilla 已经在 Firefox 43+ 中实现了对 IndexedDB 数据进行地区化排
 ### HTML 内容
 
 ```html
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    <h1>IndexedDB Demo: storing blobs, e-publication example</h1>
-    <div class="note">
-      <p>
-        Works and tested with:
-      </p>
-      <div id="compat">
-      </div>
-    </div>
+<h1>IndexedDB Demo: storing blobs, e-publication example</h1>
+<div class="note">
+  <p>Works and tested with:</p>
+  <div id="compat"></div>
+</div>
 
-    <div id="msg">
-    </div>
+<div id="msg"></div>
 
-    <form id="register-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-title" class="required">
-                Title:
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-title" name="pub-title" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-biblioid" class="required">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid" name="pub-biblioid"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-year">
-                Year:
-              </label>
-            </td>
-            <td>
-              <input type="number" id="pub-year" name="pub-year" />
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-file">
-                File image:
-              </label>
-            </td>
-            <td>
-              <input type="file" id="pub-file"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-file-url">
-                Online-file image URL:<br/>
-                <span class="note">(same origin URL)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-file-url" name="pub-file-url"/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<form id="register-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-title" class="required"> Title: </label>
+        </td>
+        <td>
+          <input type="text" id="pub-title" name="pub-title" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-biblioid" class="required">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-biblioid" name="pub-biblioid" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-year"> Year: </label>
+        </td>
+        <td>
+          <input type="number" id="pub-year" name="pub-year" />
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-file"> File image: </label>
+        </td>
+        <td>
+          <input type="file" id="pub-file" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-file-url">
+            Online-file image URL:<br />
+            <span class="note">(same origin URL)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-file-url" name="pub-file-url" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="button-pane">
-        <input type="button" id="add-button" value="Add Publication" />
-        <input type="reset" id="register-form-reset"/>
-      </div>
-    </form>
+  <div class="button-pane">
+    <input type="button" id="add-button" value="Add Publication" />
+    <input type="reset" id="register-form-reset" />
+  </div>
+</form>
 
-    <form id="delete-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-biblioid-to-delete">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="key-to-delete">
-                Key:<br/>
-                <span class="note">(for example 1, 2, 3, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="key-to-delete"
-                     name="key-to-delete" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="button-pane">
-        <input type="button" id="delete-button" value="Delete Publication" />
-        <input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" />
-      </div>
-    </form>
+<form id="delete-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-biblioid-to-delete">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pub-biblioid-to-delete"
+            name="pub-biblioid-to-delete" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="key-to-delete">
+            Key:<br />
+            <span class="note">(for example 1, 2, 3, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="key-to-delete" name="key-to-delete" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-pane">
+    <input type="button" id="delete-button" value="Delete Publication" />
+    <input
+      type="button"
+      id="clear-store-button"
+      value="Clear the whole store"
+      class="destructive" />
+  </div>
+</form>
 
-    <form id="search-form">
-      <div class="button-pane">
-        <input type="button" id="search-list-button"
-               value="List database content" />
-      </div>
-    </form>
+<form id="search-form">
+  <div class="button-pane">
+    <input
+      type="button"
+      id="search-list-button"
+      value="List database content" />
+  </div>
+</form>
 
-    <div>
-      <div id="pub-msg">
-      </div>
-      <div id="pub-viewer">
-      </div>
-      <ul id="pub-list">
-      </ul>
-    </div>
+<div>
+  <div id="pub-msg"></div>
+  <div id="pub-viewer"></div>
+  <ul id="pub-list"></ul>
+</div>
 ```
 
 ### CSS 内容
@@ -851,20 +871,22 @@ input {
 ```js
 (function () {
   var COMPAT_ENVS = [
-    ['Firefox', ">= 16.0"],
-    ['Google Chrome',
-     ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+    ["Firefox", ">= 16.0"],
+    [
+      "Google Chrome",
+      ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support",
+    ],
   ];
-  var compat = $('#compat');
+  var compat = $("#compat");
   compat.empty();
   compat.append('<ul id="compat-list"></ul>');
-  COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('<li>' + val[0] + ': ' + val[1] + '</li>');
+  COMPAT_ENVS.forEach(function (val, idx, array) {
+    $("#compat-list").append("<li>" + val[0] + ": " + val[1] + "</li>");
   });
 
-  const DB_NAME = 'mdn-demo-indexeddb-epublications';
+  const DB_NAME = "mdn-demo-indexeddb-epublications";
   const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = 'publications';
+  const DB_STORE_NAME = "publications";
 
   var db;
 
@@ -887,12 +909,14 @@ input {
 
     req.onupgradeneeded = function (evt) {
       console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(
-        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      var store = evt.currentTarget.result.createObjectStore(DB_STORE_NAME, {
+        keyPath: "id",
+        autoIncrement: true,
+      });
 
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
+      store.createIndex("biblioid", "biblioid", { unique: true });
+      store.createIndex("title", "title", { unique: false });
+      store.createIndex("year", "year", { unique: false });
     };
   }
 
@@ -906,9 +930,9 @@ input {
   }
 
   function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req = store.clear();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       displayActionSuccess("Store cleared");
       displayPubList(store);
     };
@@ -920,10 +944,9 @@ input {
 
   function getBlob(key, store, success_callback) {
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var value = evt.target.result;
-      if (value)
-        success_callback(value.blob);
+      if (value) success_callback(value.blob);
     };
   }
 
@@ -933,12 +956,12 @@ input {
   function displayPubList(store) {
     console.log("displayPubList");
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readonly');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readonly");
 
-    var pub_msg = $('#pub-msg');
+    var pub_msg = $("#pub-msg");
     pub_msg.empty();
-    var pub_list = $('#pub-list');
+    var pub_list = $("#pub-list");
     pub_list.empty();
     // Resetting the iframe so that it doesn't display previous content
     newViewerFrame();
@@ -949,18 +972,21 @@ input {
     // transaction, and their results are returned in the same order.
     // Thus the count text below will be displayed before the actual pub list
     // (not that it is algorithmically important in this case).
-    req.onsuccess = function(evt) {
-      pub_msg.append('<p>There are <strong>' + evt.target.result +
-                     '</strong> record(s) in the object store.</p>');
+    req.onsuccess = function (evt) {
+      pub_msg.append(
+        "<p>There are <strong>" +
+          evt.target.result +
+          "</strong> record(s) in the object store.</p>",
+      );
     };
-    req.onerror = function(evt) {
+    req.onerror = function (evt) {
       console.error("add error", this.error);
       displayActionFailure(this.error);
     };
 
     var i = 0;
     req = store.openCursor();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var cursor = evt.target.result;
 
       // If the cursor is pointing at something, ask for the data
@@ -969,21 +995,31 @@ input {
         req = store.get(cursor.key);
         req.onsuccess = function (evt) {
           var value = evt.target.result;
-          var list_item = $('<li>' +
-                            '[' + cursor.key + '] ' +
-                            '(biblioid: ' + value.biblioid + ') ' +
-                            value.title +
-                            '</li>');
-          if (value.year != null)
-            list_item.append(' - ' + value.year);
+          var list_item = $(
+            "<li>" +
+              "[" +
+              cursor.key +
+              "] " +
+              "(biblioid: " +
+              value.biblioid +
+              ") " +
+              value.title +
+              "</li>",
+          );
+          if (value.year != null) list_item.append(" - " + value.year);
 
-          if (value.hasOwnProperty('blob') &&
-              typeof value.blob != 'undefined') {
+          if (
+            value.hasOwnProperty("blob") &&
+            typeof value.blob != "undefined"
+          ) {
             var link = $('<a href="' + cursor.key + '">File</a>');
-            link.on('click', function() { return false; });
-            link.on('mouseenter', function(evt) {
-                      setInViewer(evt.target.getAttribute('href')); });
-            list_item.append(' / ');
+            link.on("click", function () {
+              return false;
+            });
+            link.on("mouseenter", function (evt) {
+              setInViewer(evt.target.getAttribute("href"));
+            });
+            list_item.append(" / ");
             list_item.append(link);
           } else {
             list_item.append(" / No attached file");
@@ -1003,9 +1039,9 @@ input {
   }
 
   function newViewerFrame() {
-    var viewer = $('#pub-viewer');
+    var viewer = $("#pub-viewer");
     viewer.empty();
-    var iframe = $('<iframe />');
+    var iframe = $("<iframe />");
     viewer.append(iframe);
     return iframe;
   }
@@ -1013,50 +1049,51 @@ input {
   function setInViewer(key) {
     console.log("setInViewer:", arguments);
     key = Number(key);
-    if (key == current_view_pub_key)
-      return;
+    if (key == current_view_pub_key) return;
 
     current_view_pub_key = key;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readonly');
-    getBlob(key, store, function(blob) {
+    var store = getObjectStore(DB_STORE_NAME, "readonly");
+    getBlob(key, store, function (blob) {
       console.log("setInViewer blob:", blob);
       var iframe = newViewerFrame();
 
       // It is not possible to set a direct link to the
       // blob to provide a mean to directly download it.
-      if (blob.type == 'text/html') {
+      if (blob.type == "text/html") {
         var reader = new FileReader();
-        reader.onload = (function(evt) {
+        reader.onload = function (evt) {
           var html = evt.target.result;
-          iframe.load(function() {
-            $(this).contents().find('html').html(html);
+          iframe.load(function () {
+            $(this).contents().find("html").html(html);
           });
-        });
+        };
         reader.readAsText(blob);
-      } else if (blob.type.indexOf('image/') == 0) {
-        iframe.load(function() {
-          var img_id = 'image-' + key;
+      } else if (blob.type.indexOf("image/") == 0) {
+        iframe.load(function () {
+          var img_id = "image-" + key;
           var img = $('<img id="' + img_id + '"/>');
-          $(this).contents().find('body').html(img);
+          $(this).contents().find("body").html(img);
           var obj_url = window.URL.createObjectURL(blob);
-          $(this).contents().find('#' + img_id).attr('src', obj_url);
+          $(this)
+            .contents()
+            .find("#" + img_id)
+            .attr("src", obj_url);
           window.URL.revokeObjectURL(obj_url);
         });
-      } else if (blob.type == 'application/pdf') {
-        $('*').css('cursor', 'wait');
+      } else if (blob.type == "application/pdf") {
+        $("*").css("cursor", "wait");
         var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function() {
-          $('*').css('cursor', 'auto');
+        iframe.load(function () {
+          $("*").css("cursor", "auto");
         });
-        iframe.attr('src', obj_url);
+        iframe.attr("src", obj_url);
         window.URL.revokeObjectURL(obj_url);
       } else {
-        iframe.load(function() {
-          $(this).contents().find('body').html("No view available");
+        iframe.load(function () {
+          $(this).contents().find("body").html("No view available");
         });
       }
-
     });
   }
 
@@ -1073,10 +1110,10 @@ input {
     console.log("addPublicationFromUrl:", arguments);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open("GET", url, true);
     // Setting the wanted responseType to "blob"
     // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = 'blob';
+    xhr.responseType = "blob";
     xhr.onload = function (evt) {
       if (xhr.status == 200) {
         console.log("Blob retrieved");
@@ -1084,8 +1121,11 @@ input {
         console.log("Blob:", blob);
         addPublication(biblioid, title, year, blob);
       } else {
-        console.error("addPublicationFromUrl error:",
-        xhr.responseText, xhr.status);
+        console.error(
+          "addPublicationFromUrl error:",
+          xhr.responseText,
+          xhr.status,
+        );
       }
     };
     xhr.send();
@@ -1119,17 +1159,17 @@ input {
   function addPublication(biblioid, title, year, blob) {
     console.log("addPublication arguments:", arguments);
     var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != 'undefined')
-      obj.blob = blob;
+    if (typeof blob != "undefined") obj.blob = blob;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req;
     try {
       req = store.add(obj);
     } catch (e) {
-      if (e.name == 'DataCloneError')
-        displayActionFailure("This engine doesn't know how to clone a Blob, " +
-                             "use Firefox");
+      if (e.name == "DataCloneError")
+        displayActionFailure(
+          "This engine doesn't know how to clone a Blob, " + "use Firefox",
+        );
       throw e;
     }
     req.onsuccess = function (evt) {
@@ -1137,7 +1177,7 @@ input {
       displayActionSuccess();
       displayPubList(store);
     };
-    req.onerror = function() {
+    req.onerror = function () {
       console.error("addPublication error", this.error);
       displayActionFailure(this.error);
     };
@@ -1148,10 +1188,10 @@ input {
    */
   function deletePublicationFromBib(biblioid) {
     console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.index('biblioid');
-    req.get(biblioid).onsuccess = function(evt) {
-      if (typeof evt.target.result == 'undefined') {
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
+    var req = store.index("biblioid");
+    req.get(biblioid).onsuccess = function (evt) {
+      if (typeof evt.target.result == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1169,18 +1209,18 @@ input {
   function deletePublication(key, store) {
     console.log("deletePublication:", arguments);
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readwrite");
 
     // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var record = evt.target.result;
       console.log("record:", record);
-      if (typeof record == 'undefined') {
+      if (typeof record == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1188,7 +1228,7 @@ input {
       // the deletion. If the key was a Number for creation, then it needs to
       // be a Number for deletion.
       req = store.delete(key);
-      req.onsuccess = function(evt) {
+      req.onsuccess = function (evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1206,38 +1246,38 @@ input {
   }
 
   function displayActionSuccess(msg) {
-    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('<span class="action-success">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Success: " + msg : "Success";
+    $("#msg").html('<span class="action-success">' + msg + "</span>");
   }
   function displayActionFailure(msg) {
-    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('<span class="action-failure">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Failure: " + msg : "Failure";
+    $("#msg").html('<span class="action-failure">' + msg + "</span>");
   }
   function resetActionStatus() {
     console.log("resetActionStatus ...");
-    $('#msg').empty();
+    $("#msg").empty();
     console.log("resetActionStatus DONE");
   }
 
   function addEventListeners() {
     console.log("addEventListeners");
 
-    $('#register-form-reset').click(function(evt) {
+    $("#register-form-reset").click(function (evt) {
       resetActionStatus();
     });
 
-    $('#add-button').click(function(evt) {
+    $("#add-button").click(function (evt) {
       console.log("add ...");
-      var title = $('#pub-title').val();
-      var biblioid = $('#pub-biblioid').val();
+      var title = $("#pub-title").val();
+      var biblioid = $("#pub-biblioid").val();
       if (!title || !biblioid) {
         displayActionFailure("Required field(s) missing");
         return;
       }
-      var year = $('#pub-year').val();
-      if (year != '') {
+      var year = $("#pub-year").val();
+      if (year != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year))  {
+        if (isNaN(year)) {
           displayActionFailure("Invalid year");
           return;
         }
@@ -1246,14 +1286,14 @@ input {
         year = null;
       }
 
-      var file_input = $('#pub-file');
+      var file_input = $("#pub-file");
       var selected_file = file_input.get(0).files[0];
       console.log("selected_file:", selected_file);
       // Keeping a reference on how to reset the file input in the UI once we
       // have its value, but instead of doing that we rather use a "reset" type
       // input in the HTML form.
       //file_input.val(null);
-      var file_url = $('#pub-file-url').val();
+      var file_url = $("#pub-file-url").val();
       if (selected_file) {
         addPublication(biblioid, title, year, selected_file);
       } else if (file_url) {
@@ -1261,19 +1301,18 @@ input {
       } else {
         addPublication(biblioid, title, year);
       }
-
     });
 
-    $('#delete-button').click(function(evt) {
+    $("#delete-button").click(function (evt) {
       console.log("delete ...");
-      var biblioid = $('#pub-biblioid-to-delete').val();
-      var key = $('#key-to-delete').val();
+      var biblioid = $("#pub-biblioid-to-delete").val();
+      var key = $("#key-to-delete").val();
 
-      if (biblioid != '') {
+      if (biblioid != "") {
         deletePublicationFromBib(biblioid);
-      } else if (key != '') {
+      } else if (key != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == '' || isNaN(key))  {
+        if (key == "" || isNaN(key)) {
           displayActionFailure("Invalid key");
           return;
         }
@@ -1282,20 +1321,18 @@ input {
       }
     });
 
-    $('#clear-store-button').click(function(evt) {
+    $("#clear-store-button").click(function (evt) {
       clearObjectStore();
     });
 
-    var search_button = $('#search-list-button');
-    search_button.click(function(evt) {
+    var search_button = $("#search-list-button");
+    search_button.click(function (evt) {
       displayPubList();
     });
-
   }
 
   openDb();
   addEventListeners();
-
 })(); // Immediately-Invoked Function Expression (IIFE)
 ```
 
@@ -1303,13 +1340,13 @@ input {
 
 > **备注：** `window.indexedDB.open()` 是异步的。该方法在 `success` 事件触发前很长一段时间就执行完毕。这意味着一个调用 `open()` 和 `onsuccess` 的方法（例如 `openDb()`），会在 `onsuccess` 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 `transaction()` 和 `get()`。
 
-## 另请参阅
+## 参见
 
 如有需要，请进一步阅读以获取更多信息。
 
 ### 参考
 
-- [IndexedDB 接口参考](https://developer.mozilla.org/en/IndexedDB)
+- [IndexedDB 接口参考](/zh-CN/IndexedDB)
 - [Indexed Database 接口说明](http://www.w3.org/TR/IndexedDB/)
 - [在 Chrome 中使用 IndexedDB](/zh-CN/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [在 Firefox 中使用 JavaScript 生成器](/zh-CN/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
@@ -1322,7 +1359,7 @@ input {
 
 ### 库
 
-- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不持支 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
+- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不支持 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
 - [dexie.js](http://www.dexie.org/): 对 IndexedDB 的封装，通过提供更友好和简单语法以进行快速的编码开发。
 - [ZangoDB](https://github.com/erikolson186/zangodb): 一个类 MongoDB 的 IndexedDB 接口实现，提供了诸如过滤、投影、排序、更新和聚合等大多数 MongoDB 常见的特性。
 - [JsStore](http://jsstore.net/): 一个具备类 SQL 语法的简单和先进的 IndexedDB 封装实现。

@@ -1,16 +1,8 @@
 ---
 title: DOMRectReadOnly.x
 slug: Web/API/DOMRectReadOnly/x
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Rectangle
-  - x
-translation_of: Web/API/DOMRectReadOnly/x
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`x`** de l'interface **`DOMRectReadOnly`** représente la coordonnée x d' l'origine du `DOMRect`.

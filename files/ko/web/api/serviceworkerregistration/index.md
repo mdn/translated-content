@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -49,7 +38,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ko/docs/Web/API/EventListener "This method is called whenever an event occurs of the type for which the EventListener interface was registered.") property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/ko/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Methods
 
@@ -69,33 +58,36 @@ _Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
 In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-  .then(function(registration) {
-    registration.addEventListener('updatefound', function() {
-      // If updatefound is fired, it means that there's
-      // a new service worker being installed.
-      var installingWorker = registration.installing;
-      console.log('A new service worker is being installed:',
-        installingWorker);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(function (registration) {
+      registration.addEventListener("updatefound", function () {
+        // If updatefound is fired, it means that there's
+        // a new service worker being installed.
+        var installingWorker = registration.installing;
+        console.log(
+          "A new service worker is being installed:",
+          installingWorker,
+        );
 
-      // You can listen for changes to the installing service worker's
-      // state via installingWorker.onstatechange
+        // You can listen for changes to the installing service worker's
+        // state via installingWorker.onstatechange
+      });
+    })
+    .catch(function (error) {
+      console.log("Service worker registration failed:", error);
     });
-  })
-  .catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
 } else {
-  console.log('Service workers are not supported.');
+  console.log("Service workers are not supported.");
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

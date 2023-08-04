@@ -4,6 +4,7 @@ slug: Web/API/console/error
 l10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
+
 {{APIRef("Console API")}}
 
 **`console.error()`** メソッドは、エラーメッセージをウェブコンソールに出力します。
@@ -13,10 +14,10 @@ l10n:
 ## 構文
 
 ```js
-error(obj1)
-error(obj1, /* …, */ objN)
-error(msg)
-error(msg, subst1, /* …, */ substN)
+error(obj1);
+error(obj1, /* …, */ objN);
+error(msg);
+error(msg, subst1, /* …, */ substN);
 ```
 
 ### 引数
@@ -44,5 +45,5 @@ error(msg, subst1, /* …, */ substN)
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)

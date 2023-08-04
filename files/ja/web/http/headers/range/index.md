@@ -1,18 +1,11 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-tags:
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Request header
-  - リクエストヘッダー
-translation_of: Web/HTTP/Headers/Range
 ---
+
 {{HTTPSidebar}}
 
-**`Range`** は HTTP のリクエストヘッダーで、サーバーが返すべき文書の部分を示します。1 つの `Range` ヘッダーで複数の部分を一度にリクエストすることができ、サーバーはこれらの範囲をマルチパートの文書で返すことができます。サーバーが範囲を送り返す場合、サーバーはレスポンスに {{HTTPStatus("206")}}` Partial Content` を使用します。範囲が無効な場合、サーバは {{HTTPStatus("416")}}` Range Not Satisfiable` エラーを返します。サーバーは `Range` ヘッダ－を無視して、文書全体を {{HTTPStatus("200")}} のステータスコードで返すこともできます。
+**`Range`** は HTTP のリクエストヘッダーで、サーバーが返すべき文書の部分を示します。1 つの `Range` ヘッダーで複数の部分を一度にリクエストすることができ、サーバーはこれらの範囲をマルチパートの文書で返すことができます。サーバーが範囲を送り返す場合、サーバーはレスポンスに {{HTTPStatus("206")}} `Partial Content` を使用します。範囲が無効な場合、サーバは {{HTTPStatus("416")}} `Range Not Satisfiable` エラーを返します。サーバーは `Range` ヘッダ－を無視して、文書全体を {{HTTPStatus("200")}} のステータスコードで返すこともできます。
 
 <table class="properties">
   <tbody>
@@ -84,5 +77,5 @@ Range: bytes=0-499, -500
 - {{HTTPHeader("If-Range")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
-- {{HTTPStatus("206")}}` Partial Content`
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`

@@ -1,15 +1,8 @@
 ---
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/NodeIterator/detach
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`NodeIterator.detach()`** est une non opération, conservée seulement pour la rétro-compatibilité.
@@ -26,10 +19,14 @@ nodeIterator.detach();
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 nodeIterator.detach(); // détache l'itérateur
 

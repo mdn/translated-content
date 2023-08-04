@@ -1,32 +1,30 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
+l10n:
+  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
+
 {{JSRef}}
 
 **`Array.of()`** メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-**`Array.of()`** と `Array` コンストラクタの違いは整数引数の扱いにあります。**`Array.of(7)`** は単一の要素、`7` を持つ配列を作成しますが、**`Array(7)`** は `length` プロパティが 7 の空の配列を作成します（**注:** これは実際の `undefined` の値を持つスロットではなく、7 つの空のスロットの配列を意味します）。
+**`Array.of()`** と `Array` コンストラクタの違いは整数引数の扱いにあります。**`Array.of(7)`** は単一の要素、`7` を持つ配列を作成しますが、**`Array(7)`** は `length` プロパティが 7 の空の配列を作成します（これは {{jsxref("undefined")}} の値を持つ実在のスロットではなく、7 つの空のスロットの配列を意味します）。
 
 ```js
-Array.of(7);       // [7]
-Array.of(1, 2, 3); // [1, 2, 3]
+Array.of(7); // [7]
+Array(7); // array of 7 empty slots
 
-Array(7);          // 7 つの空のスロットの配列
+Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3);    // [1, 2, 3]
 ```
 
 ## 構文
 
-```
-Array.of(element0[, element1[, ...[, elementN]]])
+```js
+Array.of(element0)
+Array.of(element0, element1)
+Array.of(element0, element1, /* … ,*/ elementN)
 ```
 
 ### 引数
@@ -38,32 +36,6 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 新しい {{jsxref("Array")}} インスタンス。
 
-## 解説
-
-この関数は、ECMAScript 標準の第 6 版の一部です。詳しい情報は、[`Array.of` と `Array.from` 提案](https://gist.github.com/rwaldron/1074126)、[`Array.of` 互換コード](https://gist.github.com/rwaldron/3186576) をご覧ください。
-
-- {{jsxref("Array")}}
-- {{jsxref("Array.from()")}}
-- {{jsxref("TypedArray.of()")}}
-
-## ポリフィル
-
-以下のコードを他のコードよりも前に記述する事により、ネイティブで実装されていなくても、`Array.of()` が使用可能になります。
-
-```js
-if (!Array.of) {
-  Array.of = function() {
-    return Array.prototype.slice.call(arguments);
-    // Or
-    let vals = [];
-    for(let prop in arguments){
-        vals.push(arguments[prop]);
-    }
-    return vals;
-  }
-}
-```
-
 ## 例
 
 ### Array.of の使用
@@ -74,18 +46,20 @@ Array.of(1, 2, 3);   // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Array.of` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
 - {{jsxref("Array")}}
 - {{jsxref("Array.from()")}}
 - {{jsxref("TypedArray.of()")}}
+- [`Array.of()` と `Array.from()` の提案](https://gist.github.com/rwaldron/1074126)
+- [`Array.of()` のポリフィル](https://gist.github.com/rwaldron/3186576)

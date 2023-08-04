@@ -2,6 +2,7 @@
 title: Animation.playState
 slug: Web/API/Animation/playState
 ---
+
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 作为一个 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的属性，**`Animation.playState`** 能够返回并设置一个可枚举值来描述一个动画的回放状态。
@@ -36,29 +37,25 @@ Animation.playState = newState;
 ```js
 // 创建泪珠动画
 
-tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // 获取每一滴随机泪珠
-      duration: getRandomMsRange(2000, 6000), // 获取每一滴随机泪珠
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
-  el.playState = 'paused';
+tears.forEach(function (el) {
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // 获取每一滴随机泪珠
+    duration: getRandomMsRange(2000, 6000), // 获取每一滴随机泪珠
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
+  el.playState = "paused";
 });
-
 
 // 结尾需要现出时播放眼泪降落动画
 
-tears.forEach(function(el) {
-  el.playState = 'playing';
+tears.forEach(function (el) {
+  el.playState = "playing";
 });
-
 
 // 暂停并重置正在哭泣时的泪滴动画
 
-tears.forEach(function(el) {
+tears.forEach(function (el) {
   el.playState = "paused";
   el.currentTime = 0;
 });
@@ -70,7 +67,7 @@ tears.forEach(function(el) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.playState")}}
+{{Compat}}
 
 ## 参见
 

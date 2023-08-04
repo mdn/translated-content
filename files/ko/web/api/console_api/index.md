@@ -1,16 +1,8 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - Console API
-  - Overview
-  - console
-  - 로그
-  - 로깅
-  - 콘솔
-translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 **Console API**는 코드의 특정 지점에서 값이나 변수를 기록하고, 작업의 소요 시간을 알아내는 등 개발자가 사용할 수 있는 디버깅 기능을 제공합니다.
@@ -34,7 +26,7 @@ Console API는 사유 API로 시작하였으며, 브라우저가 각자 다른 �
 ## 예제
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Output "Hello world" to the console
 console.log(myString);

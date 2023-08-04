@@ -2,6 +2,7 @@
 title: 触摸事件
 slug: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 为了给基于触摸的用户界面提供高质量的支持，触摸事件提供了在触摸屏或触控板上解释手指（或触控笔）活动的能力。
@@ -38,8 +39,9 @@ slug: Web/API/Touch_events
 <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
   你的浏览器不支持 canvas 元素。
 </canvas>
-<br>
-日志：<pre id="log" style="border: 1px solid #ccc;"></pre>
+<br />
+日志：
+<pre id="log" style="border: 1px solid #ccc;"></pre>
 ```
 
 ### 设置事件处理器
@@ -52,8 +54,8 @@ window.onload = function startup() {
   el.addEventListener("touchstart", handleStart, false);
   el.addEventListener("touchend", handleEnd, false);
   el.addEventListener("touchmove", handleMove, false);
-  log("初始化成功。")
-}
+  log("初始化成功。");
+};
 ```
 
 该函数为 {{ HTMLElement("canvas") }} 元素设置了所有相关的事件监听器，使事件在触发时能够得到处理。
@@ -66,7 +68,7 @@ window.onload = function startup() {
 const ongoingTouches = [];
 ```
 
-当 {{event("touchstart")}} 事件触发时，平面上即出现一个新的触摸点，继而调用 `handleStart()` ：
+当 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件触发时，平面上即出现一个新的触摸点，继而调用 `handleStart()` ：
 
 ```js
 function handleStart(evt) {
@@ -90,13 +92,13 @@ function handleStart(evt) {
 }
 ```
 
-{{ domxref("event.preventDefault()") }} 阻止了浏览器继续处理触摸（和鼠标）事件。 然后我们取得上下文，从事件的 {{ domxref("TouchEvent.changedTouches") }} 属性中获得已改变的触摸点列表。
+{{ domxref("event.preventDefault()") }} 阻止了浏览器继续处理触摸（和鼠标）事件。然后我们取得上下文，从事件的 {{ domxref("TouchEvent.changedTouches") }} 属性中获得已改变的触摸点列表。
 
 上述列表中所有的 {{ domxref("Touch") }} 对象即为当前所有活动的触摸点，把它们置于一个数组中，然后为每个触摸绘制起点。我们设置线条宽度为四像素，所以恰好会绘制一个半径为 4 像素的圆。
 
 #### 当触摸移动时绘制
 
-在触摸平面上移动一根或者几根手指会触发 {{event("touchmove")}} 事件，从而将调用`handleMove()` 函数。本例中这个函数用于更新触摸点信息，并为每个触摸点从之前位置到当前位置之间绘制直线。
+在触摸平面上移动一根或者几根手指会触发 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件，从而将调用`handleMove()` 函数。本例中这个函数用于更新触摸点信息，并为每个触摸点从之前位置到当前位置之间绘制直线。
 
 ```js
 function handleMove(evt) {
@@ -112,7 +114,13 @@ function handleMove(evt) {
     if (idx >= 0) {
       log("继续第 " + idx + "个触摸。");
       ctx.beginPath();
-      log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
+      log(
+        "ctx.moveTo(" +
+          ongoingTouches[idx].pageX +
+          ", " +
+          ongoingTouches[idx].pageY +
+          ");",
+      );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
       ctx.lineTo(touches[i].pageX, touches[i].pageY);
@@ -137,7 +145,7 @@ function handleMove(evt) {
 
 #### 触摸结束处理
 
-用户的手指从表面抬起时将触发 {{event("touchend")}} 事件。我们通过调用下面的 `handleEnd()` 函数来处理此类事件。 这个函数的工作就是为每个结束的触摸点绘制最后一个片段，然后将触摸点从 `ongoingTouches` 数组中移除。
+用户的手指从表面抬起时将触发 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) 事件。我们通过调用下面的 `handleEnd()` 函数来处理此类事件。这个函数的工作就是为每个结束的触摸点绘制最后一个片段，然后将触摸点从 `ongoingTouches` 数组中移除。
 
 ```js
 function handleEnd(evt) {
@@ -145,7 +153,7 @@ function handleEnd(evt) {
   log("触摸结束。");
   const el = document.getElementsByTagName("canvas")[0];
   const ctx = el.getContext("2d");
-   touches = evt.changedTouches;
+  touches = evt.changedTouches;
 
   for (let i = 0; i < touches.length; i++) {
     const color = colorForTouch(touches[i]);
@@ -167,11 +175,11 @@ function handleEnd(evt) {
 }
 ```
 
-这个函数与上一个很相像，唯一的实质性区别就是在调用 [`Array.splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 时， 我们把用过的触摸实体从 `ongoingTouches` 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。
+这个函数与上一个很相像，唯一的实质性区别就是在调用 [`Array.splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 时，我们把用过的触摸实体从 `ongoingTouches` 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。
 
 #### 触摸取消处理
 
-如果用户的手指不小心滑入浏览器界面，或者触摸需要取消时，会触发 {{event("touchcancel")}} 事件。从而会调用下面的 `handleCancel()` 函数：
+如果用户的手指不小心滑入浏览器界面，或者触摸需要取消时，会触发 [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) 事件。从而会调用下面的 `handleCancel()` 函数：
 
 ```js
 function handleCancel(evt) {
@@ -190,11 +198,11 @@ function handleCancel(evt) {
 
 ### 便捷函数
 
-本例中使用了几个便捷函数，有必要简单了解一下，对理解其它代码很有帮助。
+本例中使用了几个便捷函数，有必要简单了解一下，对理解其他代码很有帮助。
 
 #### 为每个触摸点选择一个颜色
 
-为了区分每个触摸点绘制的内容，我们引入 `colorForTouch()` 函数，根据每个触摸点所独有的标记设定一个颜色。 这个标记在这里可能是一个无意义的数字，但我们至少可以利用它“对于每个触摸点的值都不同”这一特性。
+为了区分每个触摸点绘制的内容，我们引入 `colorForTouch()` 函数，根据每个触摸点所独有的标记设定一个颜色。这个标记在这里可能是一个无意义的数字，但我们至少可以利用它“对于每个触摸点的值都不同”这一特性。
 
 ```js
 function colorForTouch(touch) {
@@ -223,7 +231,7 @@ function copyTouch(touch) {
   return {
     identifier: touch.identifier,
     pageX: touch.pageX,
-    pageY: touch.pageY
+    pageY: touch.pageY,
   };
 }
 ```
@@ -241,7 +249,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // 未找到
+  return -1; // 未找到
 }
 ```
 
@@ -260,16 +268,19 @@ function log(msg) {
 
 ## 附加信息
 
-本节提供了在 web 应用中处理触摸事件的其它信息。
+本节提供了在 web 应用中处理触摸事件的其他信息。
 
 ### 处理点击
 
-由于在 {{event("touchstart")}}（或系列 {{event("touchmove")}} 事件里的首个）中调用 `preventDefault()` 也会阻止相应的鼠标事件的触发，因此一般情况下我们在{{event("touchmove")}} 而不是 {{event("touchstart")}} 中调用它，这样，鼠标事件仍可正常触发，链接等部件也可继续工作。有些框架采取了一个替代方案，使用触摸事件代替鼠标事件来达到相同目的。 (下面的示例过于简单，可能产生奇怪的行为。这里仅仅作为一个引导。)
+由于在 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event)（或系列 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件里的首个）中调用 `preventDefault()` 也会阻止相应的鼠标事件的触发，因此一般情况下我们在[`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 而不是 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 中调用它，这样，鼠标事件仍可正常触发，链接等部件也可继续工作。有些框架采取了一个替代方案，使用触摸事件代替鼠标事件来达到相同目的。 (下面的示例过于简单，可能产生奇怪的行为。这里仅仅作为一个引导。)
 
 ```js
 function onTouch(evt) {
   evt.preventDefault();
-  if (evt.touches.length > 1 || (evt.type == "touchend" && evt.touches.length > 0))
+  if (
+    evt.touches.length > 1 ||
+    (evt.type == "touchend" && evt.touches.length > 0)
+  )
     return;
 
   const newEvt = document.createEvent("MouseEvents");
@@ -291,9 +302,23 @@ function onTouch(evt) {
       break;
   }
 
-  newEvt.initMouseEvent(type, true, true, evt.originalTarget.ownerDocument.defaultView, 0,
-    touch.screenX, touch.screenY, touch.clientX, touch.clientY,
-    evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
+  newEvt.initMouseEvent(
+    type,
+    true,
+    true,
+    evt.originalTarget.ownerDocument.defaultView,
+    0,
+    touch.screenX,
+    touch.screenY,
+    touch.clientX,
+    touch.clientY,
+    evt.ctrlKey,
+    evt.altKey,
+    evt.shiftKey,
+    evt.metaKey,
+    0,
+    null,
+  );
   evt.originalTarget.dispatchEvent(newEvt);
 }
 ```
@@ -310,7 +335,7 @@ function onTouch(evt) {
 
 ### `Touch`
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ### Firefox，触摸事件以及多进程（e10s）
 

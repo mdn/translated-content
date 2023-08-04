@@ -2,11 +2,12 @@
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
 
-filterUnits 属性定义{{ SVGAttr("x") }}, {{ SVGAttr("y") }}, {{ SVGAttr("width") }} 和{{ SVGAttr("height") }}使用的坐标系系统。
+{{SVGRef}}
 
-如果 filterUnits 属性未指定，那么效果如同指定了值为`objectBoundingBox.`
+filterUnits 属性定义 {{ SVGAttr("x") }}、{{ SVGAttr("y") }}、{{ SVGAttr("width") }} 和 {{ SVGAttr("height") }} 使用的坐标系系统。
+
+如果 filterUnits 属性未指定，那么效果如同指定了值为 `objectBoundingBox`。
 
 ## Usage context
 

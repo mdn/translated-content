@@ -2,6 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 用 **export** 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。
@@ -29,7 +30,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 ```
 
 - `nameN`
-  - : 外部檔案使用 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 時，用於辨認的名稱。
+  - : 外部檔案使用 [`import`](/zh-TW/docs/Web/JavaScript/Reference/Statements/import) 時，用於辨認的名稱。
 
 ## 使用說明
 
@@ -48,7 +49,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 - 預設 export （一個 js 檔案只能有一個）:
 
   ```js
-  export default function() {}
+  export default function () {}
   // 或是 'export default class {}'
   // 結尾不用分號
   ```
@@ -91,14 +92,14 @@ function cube(x) {
 }
 const foo = Math.PI + Math.SQRT2;
 var graph = {
-    options:{
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function(){
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 export { cube, foo, graph };
 ```
 
@@ -110,14 +111,14 @@ export { cube, foo, graph };
 //open the page in a httpserver,otherwise there will be a CORS policy error.
 //script demo.js
 
-import { cube, foo, graph } from 'my-module';
+import { cube, foo, graph } from "my-module";
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### 使用預設輸出
@@ -134,7 +135,7 @@ export default function cube(x) {
 外部檔案的 import 用法：
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 
@@ -146,7 +147,7 @@ Note 注意預設輸出不能使用 var, let , const。
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## 參見
 

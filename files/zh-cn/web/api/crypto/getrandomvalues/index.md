@@ -2,6 +2,7 @@
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 **`Crypto.getRandomValues()`** 方法让你可以获取符合密码学要求的安全的随机值。传入参数的数组被随机值填充（在加密意义上的随机）。
@@ -34,7 +35,7 @@ window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+  console.log(array[i]);
 }
 ```
 
@@ -44,7 +45,7 @@ for (var i = 0; i < array.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Crypto.getRandomValues")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}}接口的 **`forEach()`** 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。
@@ -50,12 +51,9 @@ node.appendChild(kid3);
 
 let list = node.childNodes;
 
-list.forEach(
-  function(currentValue, currentIndex, listObj) {
-    console.log(currentValue + ', ' + currentIndex + ', ' + this);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(currentValue + ", " + currentIndex + ", " + this);
+}, "myThisArg");
 ```
 
 上述代码会产生以下结果：
@@ -72,12 +70,12 @@ list.forEach(
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
-    };
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
 }
 ```
 
@@ -85,7 +83,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ```js
 if (window.NodeList && !NodeList.prototype.forEach) {
-   NodeList.prototype.forEach = Array.prototype.forEach;
+  NodeList.prototype.forEach = Array.prototype.forEach;
 }
 ```
 
@@ -97,7 +95,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## Browser Compatibility
 
-{{Compat("api.NodeList.forEach")}}
+{{Compat}}
 
 ## See also
 

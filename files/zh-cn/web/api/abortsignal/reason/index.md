@@ -2,6 +2,7 @@
 title: AbortSignal.reason
 slug: Web/API/AbortSignal/reason
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **`reason`** 返回一个使用 JavaScript 值表示的中止原因。
@@ -26,10 +27,10 @@ if (signal.aborted) {
   if (signal.reason) {
     console.log(`Request aborted with reason: ${signal.reason}`);
   } else {
-    console.log('Request aborted but no reason was given.');
+    console.log("Request aborted but no reason was given.");
   }
 } else {
-  console.log('Request not aborted');
+  console.log("Request not aborted");
 }
 ```
 

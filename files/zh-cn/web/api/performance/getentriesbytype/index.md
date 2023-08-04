@@ -2,6 +2,7 @@
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
 ---
+
 {{APIRef("Performance Timeline API")}}**`getEntriesByType()`** 方法返回给定类型的 {{domxref("PerformanceEntry")}} 列表
 
 The list's members (_entries_) can be created by making performance _marks_ or _measures_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at explicit points in time.
@@ -47,32 +48,46 @@ function usePerformanceEntryMethods() {
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     log("Entry[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Begin", entryType: "mark"});
-  for (var i=0; i < p.length; i++) {
+  p = performance.getEntries({ name: "Begin", entryType: "mark" });
+  for (var i = 0; i < p.length; i++) {
     log("Begin[" + i + "]");
     checkPerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (var i = 0; i < p.length; i++) {
+    log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 ```
@@ -83,4 +98,4 @@ function usePerformanceEntryMethods() {
 
 ## Browser compatibility
 
-{{Compat("api.Performance.getEntriesByType")}}
+{{Compat}}

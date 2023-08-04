@@ -2,6 +2,7 @@
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 **`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。
@@ -43,13 +44,12 @@ async 函式內部可以使用 {{jsxref("Operators/await", "await")}} 表達式�
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
-
 
 async function add1(x) {
   const a = await resolveAfter2Seconds(20);
@@ -57,19 +57,18 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add1(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
-
 
 async function add2(x) {
   const p_a = resolveAfter2Seconds(20);
   const p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  return x + (await p_a) + (await p_b);
 }
 
-add2(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+add2(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 
@@ -84,10 +83,10 @@ add2(10).then(v => {
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
+    .catch((e) => {
       return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // returns a promise
     });
 }
@@ -100,7 +99,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);
@@ -115,7 +114,7 @@ async function getProcessedData(url) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## 參見
 

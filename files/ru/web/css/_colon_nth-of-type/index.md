@@ -1,14 +1,8 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:nth-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:nth-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов.

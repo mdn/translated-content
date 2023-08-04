@@ -1,8 +1,8 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** est un `long` qui représente l'index du premier élément sélectionné {{HTMLElement("option")}}. La valeur `-1` indique qu'aucun élément est sélectionné.
@@ -33,15 +33,15 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select');
-var pElem = document.getElementById('p');
+var selectElem = document.getElementById("select");
+var pElem = document.getElementById("p");
 
 // Quand une nouvelle <option> est selectionnée
-selectElem.addEventListener('change', function() {
+selectElem.addEventListener("change", function () {
   var index = selectElem.selectedIndex;
   // Rapporter cette donnée au <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
-})
+  pElem.innerHTML = "selectedIndex: " + index;
+});
 ```
 
 {{EmbedLiveSample("Exemple", "200px", "80px")}}

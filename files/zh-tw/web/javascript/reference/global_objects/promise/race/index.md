@@ -2,13 +2,14 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
+
 {{JSRef}}
 
 **`Promise.race(iterable)`** 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。
 
 ## 語法
 
-```plain
+```js
 Promise.race(iterable);
 ```
 
@@ -29,7 +30,7 @@ Promise.race(iterable);
 
 ### `Promise.race` 的非同步性質
 
-以下例子演示了 `Promise.race` `的非同步性質：`
+以下例子演示了 `Promise.race` 的非同步性質：
 
 ```js
 // we are passing as argument an array of promises that are already resolved,
@@ -41,9 +42,9 @@ var p = Promise.race(resolvedPromisesArray);
 console.log(p);
 
 // using setTimeout we can execute code after the stack is empty
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
 });
 
 // logs, in order:
@@ -57,9 +58,9 @@ setTimeout(function(){
 ```js
 var foreverPendingPromise = Promise.race([]);
 console.log(foreverPendingPromise);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(foreverPendingPromise);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(foreverPendingPromise);
 });
 
 // logs, in order:
@@ -81,10 +82,10 @@ var p2 = Promise.race(arr2);
 
 console.log(p);
 console.log(p2);
-setTimeout(function(){
-    console.log('the stack is now empty');
-    console.log(p);
-    console.log(p2);
+setTimeout(function () {
+  console.log("the stack is now empty");
+  console.log(p);
+  console.log(p2);
 });
 
 // logs, in order:
@@ -95,48 +96,54 @@ setTimeout(function(){
 // Promise { <state>: "fulfilled", <value>: "non-Promise value" }
 ```
 
-### 使用 `Promise.race` – 及 [`setTimeout`](/en-US/docs/Web/API/setTimeout) 的範例
+### 使用 `Promise.race` 及 `setTimeout` 的範例
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 500, 'one');
+var p1 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "one");
 });
-var p2 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 100, 'two');
+var p2 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "two");
 });
 
-Promise.race([p1, p2]).then(function(value) {
+Promise.race([p1, p2]).then(function (value) {
   console.log(value); // "two"
   // Both resolve, but p2 is faster
 });
 
-var p3 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 100, 'three');
+var p3 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "three");
 });
-var p4 = new Promise(function(resolve, reject) {
-    setTimeout(reject, 500, 'four');
-});
-
-Promise.race([p3, p4]).then(function(value) {
-  console.log(value); // "three"
-  // p3 is faster, so it resolves
-}, function(reason) {
-  // Not called
+var p4 = new Promise(function (resolve, reject) {
+  setTimeout(reject, 500, "four");
 });
 
-var p5 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 500, 'five');
+Promise.race([p3, p4]).then(
+  function (value) {
+    console.log(value); // "three"
+    // p3 is faster, so it resolves
+  },
+  function (reason) {
+    // Not called
+  },
+);
+
+var p5 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "five");
 });
-var p6 = new Promise(function(resolve, reject) {
-    setTimeout(reject, 100, 'six');
+var p6 = new Promise(function (resolve, reject) {
+  setTimeout(reject, 100, "six");
 });
 
-Promise.race([p5, p6]).then(function(value) {
-  // Not called
-}, function(reason) {
-  console.log(reason); // "six"
-  // p6 is faster, so it rejects
-});
+Promise.race([p5, p6]).then(
+  function (value) {
+    // Not called
+  },
+  function (reason) {
+    console.log(reason); // "six"
+    // p6 is faster, so it rejects
+  },
+);
 ```
 
 ## 規範
@@ -145,7 +152,7 @@ Promise.race([p5, p6]).then(function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.race")}}
+{{Compat}}
 
 ## 參見
 

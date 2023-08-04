@@ -2,6 +2,7 @@
 title: <mark>
 slug: Web/HTML/Element/mark
 ---
+
 ## 概要
 
 HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突出显示的文本，这是由于标记的段落在封闭上下文中的相关性或重要性造成的。
@@ -26,7 +27,7 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 - 另外，\<mark>元素还用来显示与用户当前活动相关的一部分文档内容。例如，它可能被用于显示匹配搜索结果中的单词。
 - 不要为了语法高亮而用 `<mark>` 元素; 你应该用 _{{HTMLElement("strong")}}_ 元素结合适当的 CSS 来实现这个目的（语法高亮）。
 
-> **备注：** 不要把 `<mark>` 元素和 {{HTMLElement("strong")}} 元素搞混淆；{{HTMLElement("strong")}} 元素用来表示文本在上下文的重要性的， 而 `<mark>` 元素是用来表示上下文的关联性的。
+> **备注：** 不要把 `<mark>` 元素和 {{HTMLElement("strong")}} 元素搞混淆；{{HTMLElement("strong")}} 元素用来表示文本在上下文的重要性的，而 `<mark>` 元素是用来表示上下文的关联性的。
 
 ## 示例
 
@@ -44,10 +45,10 @@ HTML 标记文本元素 (< Mark >) 表示为引用或符号目的而标记或突
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.mark")}}
+{{Compat}}
 
 ## 参见
 
 - Other [text-level semantics elements](/zh-CN/docs/HTML/Text-level_semantics_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("b")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -2,9 +2,10 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
+The **`CSSStyleSheet`** interface represents a single [CSS](/zh-TW/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
 
 A style sheet consists of _{{domxref("CSSRule", "rules", "", 1)}}_, such as _{{domxref("CSSStyleRule", "style rules", "", 1)}} _("`h1,h2 { font-size: 16pt }"`), various _at-rules_ (`@import`, `@media`, ...), etc. This interface lets you inspect and modify the list of rules in the stylesheet.
 
@@ -41,13 +42,13 @@ A `CSSStyleSheet` object is created and inserted into the document's `styleSheet
 
 A (possibly incomplete) list of ways a style sheet can be associated with a document follows:
 
-| Reason for the style sheet to be associated with the document                                  | Appears in `document. styleSheets` list | Getting the owner element/rule given the style sheet object          | The interface for the owner object                                                                                              | Getting the CSSStyleSheet object from the owner                          |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| {{HTMLElement("style")}} and {{HTMLElement("link")}} elements in the document | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, or {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| CSS {{cssxref("@import")}} rule in other style sheets applied to the document            | Yes                                     | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}} | {{domxref("CSSImportRule")}}                                                                                            | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
-| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document                        | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}     | {{domxref("ProcessingInstruction")}}                                                                                | {{domxref("LinkStyle.sheet", ".sheet")}}                     |
-| HTTP Link Header                                                                               | Yes                                     | _N/A_                                                                | N/A                                                                                                                             | N/A                                                                      |
-| User agent (default) style sheets                                                              | No                                      | N/A                                                                  | N/A                                                                                                                             | N/A                                                                      |
+| Reason for the style sheet to be associated with the document                 | Appears in `document. styleSheets` list | Getting the owner element/rule given the style sheet object | The interface for the owner object                                                                 | Getting the CSSStyleSheet object from the owner        |
+| ----------------------------------------------------------------------------- | --------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| {{HTMLElement("style")}} and {{HTMLElement("link")}} elements in the document | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}           | {{domxref("HTMLLinkElement")}}, {{domxref("HTMLStyleElement")}}, or {{domxref("SVGStyleElement")}} | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| CSS {{cssxref("@import")}} rule in other style sheets applied to the document | Yes                                     | {{domxref("CSSStyleSheet.ownerRule", ".ownerRule")}}        | {{domxref("CSSImportRule")}}                                                                       | {{domxref("CSSImportRule.styleSheet", ".styleSheet")}} |
+| `<?xml-stylesheet ?>` processing instruction in the (non-HTML) document       | Yes                                     | {{domxref("StyleSheet.ownerNode", ".ownerNode")}}           | {{domxref("ProcessingInstruction")}}                                                               | {{domxref("LinkStyle.sheet", ".sheet")}}               |
+| HTTP Link Header                                                              | Yes                                     | _N/A_                                                       | N/A                                                                                                | N/A                                                    |
+| User agent (default) style sheets                                             | No                                      | N/A                                                         | N/A                                                                                                | N/A                                                    |
 
 ## Specifications
 
@@ -55,8 +56,8 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 
 ## Browser compatibility
 
-{{Compat("api.CSSStyleSheet")}}
+{{Compat}}
 
 ## See also
 
-- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-TW/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

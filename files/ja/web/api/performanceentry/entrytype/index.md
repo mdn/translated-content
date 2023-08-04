@@ -2,6 +2,7 @@
 title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`entryType`** プロパティは、たとえば "`mark`" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}} を返します。このプロパティは読み取り専用です。
@@ -46,7 +47,7 @@ function run_PerformanceEntry() {
 
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
-	for (var i=0; i < entriesNamedBegin.length; i++) {
+  for (var i=0; i < entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
       console.log("Entry is type: " + typeOfEntry);
   }
@@ -56,10 +57,7 @@ function run_PerformanceEntry() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | ステータス                                               | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype', 'entryType')}} | {{Spec2('Performance Timeline Level 2')}} |          |
-| {{SpecName('Performance Timeline', '#dom-performanceentry-entrytype', 'entryType')}}             | {{Spec2('Performance Timeline')}}             | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

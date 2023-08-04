@@ -2,13 +2,14 @@
 title: 讓球碰到牆壁後反彈
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 這是 [Gamedev Canvas tutorial](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch)中的第三步 你可以在以下的連結中查看原始碼[Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( [later](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection) ) 使球可以再碰到邊緣時反彈.
+很好我們現在可以讓球移動了, 但目前他會在移動到邊緣後消失, 這使我們少了點樂趣! 為了解決這個問題我們稍後會加入一些碰撞處理 ( [later](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection) ) 使球可以再碰到邊緣時反彈.
 
 ## 簡單的碰撞偵測
 
@@ -23,7 +24,7 @@ var ballRadius = 10;
 接著更新繪製球的 `drawBall()` 函數，加入以下內容:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ## 從頂部和底部反彈
@@ -31,18 +32,18 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 總共有四面牆壁會與球發生碰撞 — 首先處理上方的牆壁，我們在每個影格檢查球是否有接觸到 Canvas 上方壁面 —如果是的話，我們將扭轉球的運動，所以它將開始在相反的方向移動，並保持在可見邊界。記住坐標係從左上角開始，我們可以得到這樣的東西：
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
-如果球位置的 Y 值低於零，改變 Y 軸上的運動的方向，通過設置它等於本身，扭轉。如果球是向上移動的速度為每幀的 2 個像素，現在它將移動“了”的速度為- 2 像素，這實際上等於在每幀的 2 個像素的速度向下移動。
+如果球位置的 Y 值低於零，改變 Y 軸上的運動的方向，通過設置它等於本身，扭轉。如果球是向上移動的速度為每幀的 2 個像素，現在它將移動「了」的速度為- 2 像素，這實際上等於在每幀的 2 個像素的速度向下移動。
 
 上面的代碼將處理球反彈的頂部邊緣，所以現在讓我們想想下邊緣：
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -50,8 +51,8 @@ if(y + dy > canvas.height) {
 我們可以將這兩個語句為一個節省代碼冗長：
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -62,12 +63,12 @@ if(y + dy > canvas.height || y + dy < 0) {
 我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。它實際上是非常相似的，你所要做的就是重複 X 而不是 Y 的陳述：
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -82,11 +83,11 @@ if(y + dy > canvas.height || y + dy < 0) {
 這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新您添加到的最後一個代碼：
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -102,6 +103,6 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 ## 下一步
 
-我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 [Paddle and keyboard controls](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
+我們現在已經進入了舞台，我們的球是移動和停留在遊戲板上。 在第四章中，我們將討論實現一個可控制的球拍 - 參見 [Paddle and keyboard controls](/zh-TW/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

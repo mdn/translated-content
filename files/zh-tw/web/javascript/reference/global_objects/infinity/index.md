@@ -2,6 +2,7 @@
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 全域 **`Infinity`** 屬性是一個表示無窮大的數值。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 ## 語法
 
-```plain
+```js-nolint
 Infinity
 ```
 
@@ -25,11 +26,11 @@ Infinity
 ## 範例
 
 ```js
-console.log(Infinity         ); /* Infinity */
-console.log(Infinity + 1     ); /* Infinity */
-console.log(Math.pow(10,1000)); /* Infinity */
-console.log(Math.log(0)      ); /* -Infinity */
-console.log(1 / Infinity     ); /* 0 */
+console.log(Infinity); /* Infinity */
+console.log(Infinity + 1); /* Infinity */
+console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(Math.log(0)); /* -Infinity */
+console.log(1 / Infinity); /* 0 */
 ```
 
 ## 規範
@@ -38,7 +39,7 @@ console.log(1 / Infinity     ); /* 0 */
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Infinity")}}
+{{Compat}}
 
 ## 參見
 

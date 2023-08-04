@@ -2,15 +2,16 @@
 title: DataTransfer.setDragImage()
 slug: Web/API/DataTransfer/setDragImage
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
-发生拖动时，从拖动目标 ({{event("dragstart")}}事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
+发生拖动时，从拖动目标 ([`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
 
 图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。该方法的 x 和 y 坐标是图像应该相对于鼠标指针出现的偏移量。
 
 坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
-通常在 {{event("dragstart")}} 事件处理程序中调用此方法。
+通常在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件处理程序中调用此方法。
 
 ## 语法
 
@@ -62,7 +63,7 @@ function dragstart_handler(ev) {
  // 设置拖动的格式和数据。使用事件目标的 id 作为数据
  ev.dataTransfer.setData("text/plain", ev.target.id);
  // 创建一个图像并且使用它作为拖动图像
- // 请注意： 改变 "example.gif" 为一个已经存在的图片
+ // 请注意：改变 "example.gif" 为一个已经存在的图片
  // 或者，一个还没有创建出来的图片，那么浏览器将会使用默认的拖动图片
  // 译者注：默认的拖动图片与拖动对象没有联系。一般是一个小型文件图标
  var img = new Image();
@@ -104,8 +105,7 @@ function drop_handler(ev) {
 
 ## 参见
 
-- [HTML 拖放 API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多个项目](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

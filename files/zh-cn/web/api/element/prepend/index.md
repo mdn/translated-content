@@ -2,6 +2,7 @@
 title: Element.prepend()
 slug: Web/API/Element/prepend
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.prepend`** 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是 HTML 代码）。
@@ -66,7 +67,7 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 ```js
 var parent = document.createElement("div");
 
-with(parent) {
+with (parent) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined
@@ -79,19 +80,23 @@ with(parent) {
 ```js
 // from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
 (function (arr) {
-    arr.forEach(function (item) {
-        item.prepend = item.prepend || function () {
-            var argArr = Array.prototype.slice.call(arguments),
-                docFrag = document.createDocumentFragment();
+  arr.forEach(function (item) {
+    item.prepend =
+      item.prepend ||
+      function () {
+        var argArr = Array.prototype.slice.call(arguments),
+          docFrag = document.createDocumentFragment();
 
-            argArr.forEach(function (argItem) {
-                var isNode = argItem instanceof Node;
-                docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
-            });
+        argArr.forEach(function (argItem) {
+          var isNode = argItem instanceof Node;
+          docFrag.appendChild(
+            isNode ? argItem : document.createTextNode(String(argItem)),
+          );
+        });
 
-            this.insertBefore(docFrag, this.firstChild);
-        };
-    });
+        this.insertBefore(docFrag, this.firstChild);
+      };
+  });
 })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 ```
 
@@ -101,7 +106,7 @@ with(parent) {
 
 ## 兼容性
 
-{{Compat("api.Element.prepend")}}
+{{Compat}}
 
 ## See also
 

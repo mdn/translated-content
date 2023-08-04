@@ -1,16 +1,13 @@
 ---
 title: MathML 属性リファレンス
 slug: Web/MathML/Attribute
-tags:
-  - MathML
-  - MathML Reference
-translation_of: Web/MathML/Attribute
 ---
+
 {{MathMLRef}}
 
 これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する[要素のページ](/ja/docs/Web/MathML/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Global_attributes)にあります。 MathML における値と単位についてのメモは[値](/ja/docs/Web/MathML/Attribute/Values)ページにあります。
 
-> **Note:** 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、このドキュメントは言語のうちブラウザーに関連するサブセットに焦点を当てています。それ以外の MathML 属性の詳細については、 [MathML Full](https://w3c.github.io/mathml/) 仕様書を参照してください。
+> **メモ:** 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、このドキュメントは言語のうちブラウザーに関連するサブセットに焦点を当てています。それ以外の MathML 属性の詳細については、 [MathML Full](https://w3c.github.io/mathml/) 仕様書を参照してください。
 
 <table class="standard-table">
   <thead>

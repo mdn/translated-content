@@ -2,6 +2,7 @@
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 ---
+
 {{JSRef}}
 
 **`getInt32()`** 方法从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 相对于起始位置偏移 n 个字节处开始，获取一个 32-bit 数 (长整型，4 个字节)。
@@ -34,7 +35,7 @@ dataview.getInt32(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移量获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

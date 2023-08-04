@@ -1,24 +1,20 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`getSeconds()`** メソッドは、地方時に基づき、指定した日時の「秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
 
 ## 構文
 
-```
-dateObj.getSeconds()
+```js-nolint
+getSeconds()
 ```
 
 ### 返値
@@ -29,24 +25,22 @@ dateObj.getSeconds()
 
 ### getSeconds() の使用
 
-以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクト `Xmas95` の値に基づき、変数 `seconds` に 30 という値を代入します。
+以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクトである `xmas95` の値に基づき、変数 `seconds` に 30 という値を代入します。
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
-var seconds = Xmas95.getSeconds();
+const xmas95 = new Date('December 25, 1995 23:15:30');
+const seconds = xmas95.getSeconds();
 
 console.log(seconds); // 30
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getSeconds")}}
+{{Compat}}
 
 ## 関連情報
 

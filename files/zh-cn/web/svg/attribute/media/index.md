@@ -2,16 +2,19 @@
 title: media
 slug: Web/SVG/Attribute/media
 ---
+
 {{SVGRef}}
 
-**`media`**属性指定只有符合{{Glossary("media query")}}的样式表才会被应用。
+**`media`** 属性指定只有符合{{Glossary("media query")}}的样式表才会被应用。
 
 只有一个元素使用这个属性： {{SVGElement("style")}}
 
 ## 示例
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -19,10 +22,14 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
   <style>
-    rect { fill: black; }
+    rect {
+      fill: black;
+    }
   </style>
   <style media="all and (min-width: 600px)">
-    rect { fill: seagreen; }
+    rect {
+      fill: seagreen;
+    }
   </style>
 
   <text y="15">Resize the window to see the effect</text>
@@ -34,7 +41,7 @@ html, body, svg {
 
 ## Usage notes
 
-| Value         | [`<media-query-list>`](/en-US/docs/Web/CSS/@media#media-query-list) |
+| Value         | [`<media-query-list>`](/zh-CN/docs/Web/CSS/@media#media-query-list) |
 | ------------- | ------------------------------------------------------------------- |
 | Default value | `all`                                                               |
 | Animatable    | Yes                                                                 |

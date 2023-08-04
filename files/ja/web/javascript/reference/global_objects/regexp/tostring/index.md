@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは正規表現を表す文字列を返します。
@@ -57,9 +50,7 @@ new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

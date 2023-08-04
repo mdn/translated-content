@@ -2,6 +2,7 @@
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 **`encodeURI()`** 函数通过将特定字符的每个实例替换为一个、两个、三或四转义序列来对统一资源标识符 (URI) 进行编码 (该字符的 UTF-8 编码仅为四转义序列) 由两个 "代理" 字符组成)。
@@ -43,20 +44,20 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
 
 ```js
 // 编码高 - 低位完整字符 ok
-console.log(encodeURI('\uD800\uDFFF'));
+console.log(encodeURI("\uD800\uDFFF"));
 
 // 编码单独的高位字符抛出 "Uncaught URIError: URI malformed"
-console.log(encodeURI('\uD800'));
+console.log(encodeURI("\uD800"));
 
 // 编码单独的低位字符抛出 "Uncaught URIError: URI malformed"
-console.log(encodeURI('\uDFFF'));
+console.log(encodeURI("\uDFFF"));
 ```
 
 并且需要注意，如果 URL 需要遵循较新的[RFC3986](http://tools.ietf.org/html/rfc3986)标准，那么方括号是被保留的 (给 IPv6)，因此对于那些没有被编码的 URL 部分 (例如主机)，可以使用下面的代码：
 
 ```js
-function fixedEncodeURI (str) {
-    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+function fixedEncodeURI(str) {
+  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
 }
 ```
 

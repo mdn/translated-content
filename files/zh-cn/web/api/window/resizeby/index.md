@@ -2,6 +2,7 @@
 title: Window.resizeBy()
 slug: Web/API/Window/resizeBy
 ---
+
 {{APIRef}}
 
 ## 概述

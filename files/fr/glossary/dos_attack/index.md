@@ -1,12 +1,8 @@
 ---
 title: Attaque DoS
 slug: Glossary/DOS_attack
-tags:
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/DOS_attack
-original_slug: Glossaire/Attaque_DOS
 ---
+
 Le déni de service ou DoS (Denial of Service) est une attaque réseau qui empêche l'utilisation légitime des ressources d'un {{glossary("serveur")}} en surchargeant celui-ci de requêtes.
 
 Les ordinateurs disposent de ressources limitées, puissance de calcul ou mémoire par exemple. Lorsqu'elles atteignent leurs limites, le programme peut se bloquer ou planter, ce qui le rend indisponible. Une attaque DoS consiste en diverses techniques pour saturer ces ressources et faire en sorte qu'un serveur ou un réseau ne soit plus disponible pour ses utilisateurs légitimes, ou au moins pour faire fonctionner le serveur plus lentement.
@@ -25,6 +21,6 @@ Les attaques DoS sont plus une catégorie d'attaques qu'un type particulier d'at
 
 ## Voir aussi
 
-- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_d%C3%A9ni_de_service) sur Wikipédia
+- [Attaque par déni de service](https://fr.wikipedia.org/wiki/Attaque_par_déni_de_service) sur Wikipédia
 - [Déni de service sur OWASP](https://www.owasp.org/index.php/Denial_of_Service)
 - {{Glossary("Distributed Denial of Service","DDoS")}}

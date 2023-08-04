@@ -2,6 +2,7 @@
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 **`Number.isSafeInteger()`** 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。
@@ -33,14 +34,14 @@ Number.isSafeInteger(testValue)
 ## 示例
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53))       // false
-Number.isSafeInteger(Math.pow(2, 53) - 1)   // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger("3");                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## Polyfill

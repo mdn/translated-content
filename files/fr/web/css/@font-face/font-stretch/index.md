@@ -1,13 +1,8 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@font-face/font-stretch
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`font-stretch`** permet aux auteurs de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
@@ -35,7 +30,7 @@ font-stretch: 200%;
 
 /* Valeurs multiples */
 font-stretch: 75% 125%;
-font-stretch: condensed ultra-condensed;;
+font-stretch: condensed ultra-condensed;
 ```
 
 ### Valeurs
@@ -123,8 +118,9 @@ Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-stretch: 87.5% 112.5%;
 }
 ```
@@ -138,14 +134,11 @@ Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoi
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-stretch')}} | {{Spec2('CSS4 Fonts')}} |              |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-stretch')}} | {{Spec2('CSS3 Fonts')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-stretch")}}
+{{Compat}}
 
 ## Voir aussi
 

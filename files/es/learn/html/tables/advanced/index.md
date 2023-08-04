@@ -1,9 +1,8 @@
 ---
 title: Funciones avanzadas de las tablas HTML y accesibilidad
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
-original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 En el segundo artículo de este módulo, analizamos algunas características más avanzadas de las tablas HTML, como los subtítulos/resúmenes, la agrupación de filas en las secciones del encabezado, el cuerpo y el pie de página; y también analizamos la accesibilidad de las tablas para usuarios con discapacidad visual.
@@ -35,7 +34,9 @@ Puedes dar un título a tu tabla colocándolo dentro de un elemento {{htmlelemen
 
 ```html
 <table>
-  <caption>Dinosaurios en el período Jurásico</caption>
+  <caption>
+    Dinosaurios en el período Jurásico
+  </caption>
 
   ...
 </table>
@@ -45,15 +46,15 @@ Como puedes deducir a partir del breve ejemplo anterior, el título debe contene
 
 Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
-> **Nota:** El atributo {{htmlattrxref("summary","table")}} también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque {{htmlattrxref("summary","table")}} está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> **Nota:** El atributo [`summary`](/es/docs/Web/HTML/Element/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Element/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
 
 ### Aprendizaje activo: Añadir un subtítulo
 
 Vamos a probarlo con un ejemplo del artículo anterior.
 
-1.  Abre el ejemplo del horario de clases de la profesora de idiomas del final de [conocimientos básicos de las tablas HTML](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#Aprendizaje_activo_colgroup_y_col), o haz una copia local de nuestro archivo [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
-2.  Añade un título adecuado a la tabla.
-3.  Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
+1. Abre el ejemplo del horario de clases de la profesora de idiomas del final de [conocimientos básicos de las tablas HTML](/es/docs/Learn/HTML/Tablas/Conceptos_b%C3%A1sicos_de_las_tablas_HTML#Aprendizaje_activo_colgroup_y_col), o haz una copia local de nuestro archivo [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+2. Añade un título adecuado a la tabla.
+3. Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
 
 > **Nota:** Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -75,146 +76,143 @@ Para utilizarlos:
 
 Pongamos en acción estos elementos nuevos.
 
-1.  En primer lugar, haz una copia local de [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en una carpeta nueva de tu ordenador.
-2.  Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
-3.  Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
-4.  Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
-5.  Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
-6.  Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
+1. En primer lugar, haz una copia local de [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en una carpeta nueva de tu ordenador.
+2. Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
+3. Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
+4. Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
+5. Luego, añade un atributo [`colspan`](/es/docs/Web/HTML/Element/td#colspan) para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
+6. Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
 
-    ```css
-    tbody {
-      font-size: 95%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 95%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
-7.  Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
+7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
 
 > **Nota:** No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/Learn/CSS/First_steps) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Tu tabla final debería tener un aspecto similar al siguiente:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title> Mi historial de gastos </title>
+    <meta charset="utf-8" />
+    <title>Mi historial de gastos</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 4px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 4px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 2px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 2px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Cómo elegí gastar mi dinero
+      </caption>
+      <thead>
+        <tr>
+          <th>Compra</th>
 
-</head>
-<body>
-<table>
+          <th>Ubicación</th>
+          <th>Fecha</th>
+          <th>Revisión</th>
 
-<caption> Cómo elegí gastar mi dinero </caption>
-<thead>
-<tr>
-<th> Compra </th>
+          <th>Coste (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Corte de pelo</td>
 
-<th> Ubicación </th>
-<th> Fecha </th>
-<th> Revisión </th>
+          <td>Peluquería</td>
+          <td>12/09</td>
 
-<th> Coste (€) </th>
-</tr>
-</thead>
-<tfoot>
-<tr>
-<td colspan="4">SUM</td>
-<td>118</td>
-</tr>
-</tfoot>
-<tbody>
-<tr>
-<td> Corte de pelo </td>
+          <td>Gran idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasaña</td>
 
-<td> Peluquería </td>
-<td>12/09</td>
+          <td>Restaurante</td>
+          <td>12/09</td>
+          <td>Arrepentimiento</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Zapatos</td>
+          <td>Zapatería</td>
+          <td>13/09</td>
 
-<td> Gran idea </td>
-<td>30</td>
-</tr>
-<tr>
+          <td>Mucho arrepentimiento</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Pasta de dientes</td>
+          <td>Supermercado</td>
+          <td>13/09</td>
 
-<td> Lasaña </td>
-
-<td> Restaurante </td>
-<td>12/09</td>
-<td> Arrepentimiento </td>
-<td>18</td>
-</tr>
-<tr>
-
-<td> Zapatos </td>
-<td> Zapatería </td>
-<td>13/09</td>
-
-<td> Mucho arrepentimiento </td>
-<td>65</td>
-</tr>
-<tr>
-<td> Pasta de dientes </td>
-<td> Supermercado </td>
-<td>13/09</td>
-
-<td> Bien </td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-
-</body>
+          <td>Bien</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
 ```
 
@@ -359,7 +357,7 @@ Repasemos brevemente cómo usamos las tablas de datos. Una tabla puede ser una h
 
 Pero, ¿y si no puedes hacer esas asociaciones visuales? ¿Cómo podrías leer una tabla como la anterior? Las personas con discapacidad visual a menudo usan un lector de pantalla que les lee la información de las páginas web. Esto no resulta un problema cuando lees un texto sin formato, pero interpretar una tabla puede ser un gran desafío para una persona ciega. Sin embargo, con el marcado adecuado podemos reemplazar las asociaciones visuales por otras asociaciones de tipo programático.
 
-> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los[ datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment "datos de la OMS sobre la discapacidad visual").
+> **Nota:** Hay en torno a 253 millones de personas con discapacidad visual según los [datos de la OMS de 2017](https://www.who.int/es/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 Esta sección del artículo proporciona técnicas adicionales para conferir a las tablas la mayor accesibilidad posible.
 
@@ -371,7 +369,7 @@ Ya expusimos los encabezados en nuestro artículo anterior; consulta [Añadir en
 
 ### El atributo scope
 
-Un nuevo tema para este artículo es el atributo {{htmlattrxref ("scope", "th")}}, que se puede añadir al elemento `<th>` para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:
+Un nuevo tema para este artículo es el atributo [`scope`](/es/docs/Web/HTML/Element/th#scope), que se puede añadir al elemento `<th>` para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:
 
 ```html
 <thead>
@@ -391,10 +389,10 @@ Y también cada fila podría tener un encabezado definido de esta manera (si añ
 <tr>
   <th scope="row">Corte de pelo</th>
 
-<td>Peluquería</td>
+  <td>Peluquería</td>
   <td>12/09</td>
 
-<td>Gran idea</td>
+  <td>Gran idea</td>
   <td>30</td>
 </tr>
 ```
@@ -405,10 +403,10 @@ El atributo `scope` tiene dos valores posibles más: `colgroup` y `rowgroup`. Se
 
 ### Los atributos de id y encabezados
 
-Una alternativa al uso del atributo `scope` es usar los atributos {{htmlattrxref ("id")}} y {{htmlattrxref ("headers", "td")}} para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
+Una alternativa al uso del atributo `scope` es usar los atributos [`id`](/es/docs/Web/HTML/Global_attributes#id) y [`headers`](/es/docs/Web/HTML/Element/td#headers) para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
 
-1.  Añades un `id` único a cada elemento `<th>`.
-2.  Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.
+1. Añades un `id` único a cada elemento `<th>`.
+2. Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.
 
 Esto le da a tu tabla HTML una definición explícita de la posición de cada celda en la tabla definida por los encabezados de cada columna y fila de la que forma parte, como en una hoja de cálculo. Para que funcione bien, la tabla necesita tanto encabezados de columna como encabezados de fila.
 
@@ -425,16 +423,15 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Corte de pelo</th>
-  <td headers="location haircut">Peluquería</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Gran idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Corte de pelo</th>
+    <td headers="location haircut">Peluquería</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Gran idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```
 
@@ -442,9 +439,9 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 
 ### Aprendizaje activo: jugar con scope y headers
 
-1.  Para este ejercicio final, te proponemos que primero hagas copias locales de [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en un directorio nuevo.
-2.  Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
-3.  Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
+1. Para este ejercicio final, te proponemos que primero hagas copias locales de [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) y [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) en un directorio nuevo.
+2. Ahora intenta añadir los atributos `scope` adecuados para hacer que esta tabla sea más accesible.
+3. Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
 
 > **Nota:** Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
@@ -453,9 +450,3 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## En este módulo
-
-- [Conceptos básicos de las tablas en HTML](/es/docs/Learn/HTML/Tables/Basics)
-- [Funciones avanzadas de las tablas HTML y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced)
-- [Estructuración de datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)

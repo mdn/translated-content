@@ -2,6 +2,7 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
@@ -32,8 +33,8 @@ for ([initialization]; [condition]; [final-expression])
 
 ```js
 for (var i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -46,18 +47,18 @@ for (var i = 0; i < 9; i++) {
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
 像初始化块一样，条件块也是可选的。如果省略此表达式，则必须确保在循环体内跳出，以防创建死循环。
 
 ```js
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 ```
 
@@ -79,26 +80,31 @@ for (;;) {
 
 ```js
 function showOffsetPos(sId) {
-
-  var nLeft = 0, nTop = 0;
+  var nLeft = 0,
+    nTop = 0;
 
   for (
-
-    var oItNode = document.getElementById(sId); /* initialization */
-
-    oItNode; /* condition */
-
-    nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
-
+    var oItNode = document.getElementById(sId) /* initialization */;
+    oItNode /* condition */;
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent /* final-expression */
   ); /* 分号 semicolon */
 
-  console.log('Offset position of \'' + sId + '\' element:\n left: ' + nLeft + 'px;\n top: ' + nTop + 'px;');
-
+  console.log(
+    "Offset position of '" +
+      sId +
+      "' element:\n left: " +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;",
+  );
 }
 
 /* Example call: */
 
-showOffsetPos('content');
+showOffsetPos("content");
 
 // Output:
 // "Offset position of "content" element:
@@ -116,7 +122,7 @@ showOffsetPos('content');
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Statements/empty", "empty statement", "", 0)}}
 - {{jsxref("Statements/break", "break")}}

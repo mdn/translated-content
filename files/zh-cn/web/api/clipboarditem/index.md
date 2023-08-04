@@ -2,6 +2,7 @@
 title: ClipboardItem
 slug: Web/API/ClipboardItem
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 The **`ClipboardItem`** interface of the {{domxref('Clipboard API')}} represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
@@ -42,17 +43,17 @@ Here we're writing a new {{domxref("ClipboardItem.ClipboardItem()")}} to the {{d
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
-  } catch(err) {
+    console.log("Fetched image copied.");
+  } catch (err) {
     console.error(err.name, err.message);
   }
 }
@@ -68,14 +69,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         // we can now use blob here
       }
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }
@@ -88,7 +86,7 @@ async function getClipboardContents() {
 
 ## Browser compatibility
 
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 > **备注：** Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
 

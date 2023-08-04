@@ -1,13 +1,8 @@
 ---
 title: CSSValue
 slug: Web/API/CSSValue
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSValue
 ---
+
 {{APIRef ("DOM")}}L'interface **CSSValue** représente la valeur calculée actuelle d'une propriété CSS.
 
 ## Propriétés

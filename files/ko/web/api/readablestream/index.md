@@ -1,8 +1,8 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
-translation_of: Web/API/ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ko/docs/Web/API/Streams_API)의 `ReadableStream` 인터페이스는 바이트 데이터를 읽을수 있는 스트림을 제공합니다. [Fetch API](/ko/docs/Web/API/Fetch_API)는 Response 객체의 body 속성을 통하여 `ReadableStream`의 구체적인 인스턴스를 제공합니다.
@@ -26,7 +26,7 @@ translation_of: Web/API/ReadableStream
 - {{domxref("ReadableStream.pipeThrough()")}}
   - : Provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
 - {{domxref("ReadableStream.pipeTo()")}}
-  - : 인자로 넘기는 {{domxref("WritableStream")}}과 현재의 ReadableStream을 연결하고 프로미스를 리턴합니다. 이 프로미스는 파이핑 프로세스가 성공적으로 완료될때 fullfil되며 애러가 발생했을때 reject됩니다.
+  - : 인자로 넘기는 {{domxref("WritableStream")}}과 현재의 ReadableStream을 연결하고 프로미스를 리턴합니다. 이 프로미스는 파이핑 프로세스가 성공적으로 완료될때 fulfil되며 애러가 발생했을때 reject됩니다.
 - {{domxref("ReadableStream.tee()")}}
   - : The `tee` method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
 
@@ -54,21 +54,21 @@ fetch("https://www.example.org/").then((response) => {
           controller.enqueue(value);
           push();
         });
-      };
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

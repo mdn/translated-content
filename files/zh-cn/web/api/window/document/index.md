@@ -2,6 +2,7 @@
 title: window.document
 slug: Web/API/Window/document
 ---
+
 {{ ApiRef() }}
 
 **`window.document`** 返回当前窗口内的文档节点（{{domxref("document")}}）
@@ -11,7 +12,7 @@ slug: Web/API/Window/document
 ## 语法
 
 ```js
-doc = window.document
+doc = window.document;
 ```
 
 ## 参数
@@ -21,19 +22,17 @@ doc = window.document
 ## 例子
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-   <title>Hello, World!</title>
-</head>
-<body>
-
-<script type="text/javascript">
-   var doc = window.document;
-   alert( doc.title);    // 弹出: Hello, World!
-</script>
-
-</body>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var doc = window.document;
+      alert(doc.title); // 弹出：Hello, World!
+    </script>
+  </body>
 </html>
 ```
 
@@ -43,4 +42,4 @@ doc = window.document
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.document")}}
+{{Compat}}

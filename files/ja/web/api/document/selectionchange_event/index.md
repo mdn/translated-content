@@ -1,7 +1,8 @@
 ---
-title: 'Document: selectionchange イベント'
+title: "Document: selectionchange イベント"
 slug: Web/API/Document/selectionchange_event
 ---
+
 {{APIRef}}
 
 **`selectionchange`** イベントは [Selection API](/ja/docs/Web/API/Selection_API) の一部で、文書における現在のテキストの選択が変更された際に発生します。
@@ -33,7 +34,7 @@ slug: Web/API/Document/selectionchange_event
 
 ```js
 // addEventListener version
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   console.log(document.getSelection());
 });
 
@@ -45,9 +46,7 @@ document.onselectionchange = () => {
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Selection API', '#selectionchange-event', 'selectionchange')}} | {{Spec2('Selection API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

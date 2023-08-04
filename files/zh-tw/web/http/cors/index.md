@@ -2,6 +2,7 @@
 title: 跨來源資源共用（CORS）
 slug: Web/HTTP/CORS
 ---
+
 {{HTTPSidebar}}
 
 跨來源資源共用（Cross-Origin Resource Sharing ({{Glossary("CORS")}})）是一種使用額外 {{Glossary("HTTP")}} 標頭令目前瀏覽網站的{{Glossary("user agent","使用者代理")}}取得存取其他來源（網域）伺服器特定資源權限的機制。當使用者代理請求一個不是目前文件來源——例如來自於不同網域（domain）、通訊協定（protocol）或通訊埠（port）的資源時，會建立一個**跨來源 HTTP 請求（cross-origin HTTP request）**。
@@ -28,7 +29,7 @@ slug: Web/HTTP/CORS
 - 網頁字體（跨網域 CSS 的 `@font-face` 的字體用途），[所以伺服器可以佈署 TrueType 字體，並限制只讓信任的網站跨站載入](http://www.webfonts.info/wiki/index.php?title=%40font-face_support_in_Firefox)。
 - [WebGL 紋理](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 以 [`drawImage`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/drawImage) 繪製到 Canvas 畫布上的圖形／影片之影格。
-- CSS 樣式表（讓 [CSSOM](/zh-TW/docs/Web/CSS/CSSOM_View) 存取）。
+- CSS 樣式表（讓 [CSSOM](/zh-TW/docs/Web/CSS/CSSOM_view) 存取）。
 - 指令碼（for unmuted exceptions）。
 
 本文主要討論跨來源資源共用與相關必要的 HTTP 標頭。
@@ -86,11 +87,11 @@ slug: Web/HTTP/CORS
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -305,7 +306,7 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 因此直到瀏覽器趕上規範之前，你可以使用下列一或兩種方法來解決這個限制：
 
 - 變更伺服器端的行為以避免預檢以及／或是避免重新導向——假如你對被請求的伺服擁有控制權
-- 變更請求為[簡單請求](zh-TW/docs/Web/HTTP/Access_control_CORS#Simple_requests)，讓預檢不會發生
+- 變更請求為[簡單請求](/zh-TW/docs/Web/HTTP/Access_control_CORS#Simple_requests)，讓預檢不會發生
 
 但若難以實施以上方法，仍有其他可行的方式：
 
@@ -322,11 +323,11 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();
@@ -402,7 +403,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 `origin` 參數指定了一個可以存取資源的 URI。瀏覽器必定會執行此檢查。對一個**不帶有**身分驗證的請求，伺服器可以指定一個「\*」作為萬用字元（wildcard），從而允許任何來源存取資源。
 
-舉例來說，要允許 http\://mozilla.org 存取資源，你可以指定：
+舉例來說，要允許 `http://mozilla.org` 存取資源，你可以指定：
 
 ```plain
 Access-Control-Allow-Origin: http://mozilla.org
@@ -502,7 +503,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ### 相容性備註
 

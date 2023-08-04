@@ -1,15 +1,8 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
+
 {{JSRef}}
 
 **`test()`** メソッドは、正規表現と指定された文字列の一致を調べるための検索を実行します。 `true` または `false` を返します。
@@ -72,7 +65,7 @@ function testInput(re, str) {
 
 その後にさらに `test(str)` を呼び出すと、 `str` を `lastIndex` から検索します。 `lastIndex` プロパティは `test()` が `true` を返すたびに増え続けます。
 
-> **Note:** **補足:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
+> **メモ:** `test()` が `true` を返す限り、 `lastIndex` は別な文字列をテストした場合であっても、リセット*されません*。
 
 `test()` が `false` を返した場合、正規表現の `lastIndex` プロパティを呼び出すと `0` にリセットされます。
 
@@ -99,9 +92,7 @@ regex.test('foobar')  //false
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.test', 'RegExp.test')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

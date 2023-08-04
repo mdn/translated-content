@@ -2,6 +2,7 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRectReadOnly`** 接口通过详细列出 {{domxref("DOMRect")}} 所使用的标准属性来定义一个属性不可变的矩形。
@@ -9,7 +10,7 @@ slug: Web/API/DOMRectReadOnly
 ## 构造函数
 
 - {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : 用来创建新的 `DOMRectReadOnly` 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回 “Illegal constructor” 类型错误。
+  - : 用来创建新的 `DOMRectReadOnly` 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回“Illegal constructor”类型错误。
 
 ## 属性
 
@@ -28,7 +29,7 @@ slug: Web/API/DOMRectReadOnly
 - {{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}
   - : 返回 `DOMRect` 的底部坐标值（通常与 `y + height` 相同）。
 - {{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}
-  - : 返回 `DOMRect` 的左坐标值（通常与 `x​​​​​​​` 相同）。
+  - : 返回 `DOMRect` 的左坐标值（通常与 `x` 相同）。
 
 ## 静态方法
 
@@ -41,7 +42,7 @@ slug: Web/API/DOMRectReadOnly
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMRectReadOnly")}}
+{{Compat}}
 
 ## 其他
 

@@ -2,6 +2,7 @@
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API")}}
 
 ## 概述
@@ -18,6 +19,8 @@ var fileInput = document.getElementById("myfileinput");
 var files = fileInput.files;
 
 for (var i = 0; i < files.length; i++) {
-  alert(files[i].name + " has a last modified date of " + files[i].lastModifiedDate);
+  alert(
+    files[i].name + " has a last modified date of " + files[i].lastModifiedDate,
+  );
 }
 ```

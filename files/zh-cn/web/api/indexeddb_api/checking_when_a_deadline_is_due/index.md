@@ -2,13 +2,14 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。
 
 ![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/en-US/docs/Web/API/notification), and [Vibration](/en-US/docs/Web/Guide/API/Vibration) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](http://mdn.github.io/to-do-notifications/).
+The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/notification), and [Vibration](/zh-CN/docs/Web/Guide/API/Vibration) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## 基本问题
 
@@ -114,11 +115,11 @@ function checkDeadlines() {
 First we grab the current date and time by creating a blank `Date` object. Easy huh? It's about to get a bit more complex.
 
 ```js
-  var minuteCheck  = now.getMinutes();
-  var hourCheck    = now.getHours();
-  var dayCheck     = now.getDate();
-  var monthCheck   = now.getMonth();
-  var yearCheck    = now.getFullYear();
+var minuteCheck = now.getMinutes();
+var hourCheck = now.getHours();
+var dayCheck = now.getDate();
+var monthCheck = now.getMonth();
+var yearCheck = now.getFullYear();
 ```
 
 The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
@@ -135,45 +136,46 @@ The `Date` object has a number of methods to extract various parts of the date a
 Next we create another IndexedDB `objectStore`, and use the `openCursor()` method to open a cursor, which is basically a way in IndexedDB to iterate through all the items in the store. We then loop through all the items in the cursor for as long as there is a valid item left in the cursor.
 
 ```js
-      switch(cursor.value.month) {
-        case "January":
-          var monthNumber = 0;
-          break;
-        case "February":
-          var monthNumber = 1;
-          break;
+switch (cursor.value.month) {
+  case "January":
+    var monthNumber = 0;
+    break;
+  case "February":
+    var monthNumber = 1;
+    break;
 
-        // other lines removed from listing for brevity
+  // other lines removed from listing for brevity
 
-        case "December":
-          var monthNumber = 11;
-          break;
-        default:
-          alert('Incorrect month entered in database.');
-      }
+  case "December":
+    var monthNumber = 11;
+    break;
+  default:
+    alert("Incorrect month entered in database.");
+}
 ```
 
 我们要做的第一件事是将我们存储在数据库中的月份名称转换为 JavaScript 将理解的月份号码。如前所述，JavaScript Date 对象将月份值创建为 0 到 11 之间的数字。
 
 ```js
-      if(+(cursor.value.hours) == hourCheck &&
-         +(cursor.value.minutes) == minuteCheck &&
-         +(cursor.value.day) == dayCheck &&
-         monthNumber == monthCheck &&
-         cursor.value.year == yearCheck &&
-         notified == "no") {
-
-        // If the numbers all do match, run the createNotification()
-        // function to create a system notification
-        createNotification(cursor.value.taskTitle);
-      }
+if (
+  +cursor.value.hours == hourCheck &&
+  +cursor.value.minutes == minuteCheck &&
+  +cursor.value.day == dayCheck &&
+  monthNumber == monthCheck &&
+  cursor.value.year == yearCheck &&
+  notified == "no"
+) {
+  // If the numbers all do match, run the createNotification()
+  // function to create a system notification
+  createNotification(cursor.value.taskTitle);
+}
 ```
 
 With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.
 
 The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g. 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
 
-The `notified == "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
+The `notified == "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
 
 ```js
     // now we need to update the value of notified to "yes" in this particular data object, so the

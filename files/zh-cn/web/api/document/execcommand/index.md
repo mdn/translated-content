@@ -2,9 +2,10 @@
 title: document.execCommand
 slug: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand` **方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
+当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand`** 方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
 
 大多数命令影响`document`的 [selection](/zh-CN/docs/Web/API/Selection)（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用`contentEditable`时，调用 `execCommand()` 将影响当前活动的可编辑元素。
 
@@ -25,7 +26,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `aCommandName`
   - : 一个 {{domxref("DOMString")}} ，命令的名称。可用命令列表请参阅 [命令](#命令) 。
 - `aShowDefaultUI`
-  - : 一个 {{jsxref("Boolean")}}， 是否展示用户界面，一般为 false。Mozilla 没有实现。
+  - : 一个 {{jsxref("Boolean")}}，是否展示用户界面，一般为 false。Mozilla 没有实现。
 - `aValueArgument`
   - : 一些命令（例如 insertImage）需要额外的参数（insertImage 需要提供插入 image 的 url），默认为 null。
 
@@ -52,7 +53,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `delete`
   - : 删除选中部分。
 - `enableAbsolutePositionEditor`
-  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ({{bug(1449564)}})。
+  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ([Firefox bug 1449564](https://bugzil.la/1449564))。
 - `enableInlineTableEditing`
   - : 启用或禁用表格行和列插入和删除控件。(IE 浏览器不支持)
 - `enableObjectResizing`
@@ -64,17 +65,17 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `foreColor`
   - : 在插入点或者选中文字部分修改字体颜色。需要提供一个颜色值字符串作为参数。
 - `formatBlock`
-  - : 添加一个 HTML 块式标签在包含当前选择的行，如果已经存在了，更换包含该行的块元素 (在 Firefox 中，BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用 (例如. "H1", "P", "DL", "BLOCKQUOTE"). (IE 浏览器仅仅支持标题标签 H1 - H6, ADDRESS，和 PRE，使用时还必须包含标签分隔符 < >, 例如 "\<H1>".)
+  - : 添加一个 HTML 块式标签在包含当前选择的行，如果已经存在了，更换包含该行的块元素 (在 Firefox 中，BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用 (例如。"H1", "P", "DL", "BLOCKQUOTE"). (IE 浏览器仅仅支持标题标签 H1 - H6, ADDRESS，和 PRE，使用时还必须包含标签分隔符 < >, 例如 "\<H1>".)
 - `forwardDelete`
-  - : 删除光标所在位置的字符。 和按下删除键一样。
+  - : 删除光标所在位置的字符。和按下删除键一样。
 - `heading`
-  - : 添加一个标题标签在光标处或者所选文字上。 需要提供标签名称字符串作为参数 (例如. "H1", "H6"). (IE 和 Safari 不支持)
+  - : 添加一个标题标签在光标处或者所选文字上。需要提供标签名称字符串作为参数（例如："H1"、"H6"）（IE 和 Safari 不支持）
 - `hiliteColor`
-  - : 更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS 必须开启此功能。(IE 浏览器不支持)
+  - : 更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。UseCSS 必须开启此功能。（IE 浏览器不支持）
 - `increaseFontSize`
   - : 在选择或插入点周围添加一个 BIG 标签。(IE 浏览器不支持)
 - `indent`
-  - : 缩进选择或插入点所在的行， 在 Firefox 中，如果选择多行，但是这些行存在不同级别的缩进，只有缩进最少的行被缩进。
+  - : 缩进选择或插入点所在的行，在 Firefox 中，如果选择多行，但是这些行存在不同级别的缩进，只有缩进最少的行被缩进。
 - `insertBrOnReturn`
   - : 控制当按下 Enter 键时，是插入 br 标签还是把当前块元素变成两个。(IE 浏览器不支持)
 - `insertHorizontalRule`
@@ -124,10 +125,10 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `unlink`
   - : 去除所选的锚链接的\<a>标签
 - `useCSS` {{Deprecated_inline}}
-  - : 切换使用 HTML tags 还是 CSS 来生成标记。要求一个布尔值 true/false 作为参数。注：这个属性是逻辑上的倒退 (例如. use false to use CSS, true to use HTML).(IE 不支持)
+  - : 切换使用 HTML tags 还是 CSS 来生成标记。要求一个布尔值 true/false 作为参数。注：这个属性是逻辑上的倒退（例如：use false to use CSS, true to use HTML）。（IE 不支持）
     该属性已经废弃，使用 styleWithCSS 代替。
 - `styleWithCSS`
-  - : 用这个取代 useCSS 命令。 参数如预期的那样工作，i.e. true modifies/generates 风格的标记属性，false 生成格式化元素。
+  - : 用这个取代 useCSS 命令。参数如预期的那样工作，i.e. true modifies/generates 风格的标记属性，false 生成格式化元素。
 - `AutoUrlDetect`
   - : 更改浏览器自动链接行为（仅 IE 浏览器支持）
 

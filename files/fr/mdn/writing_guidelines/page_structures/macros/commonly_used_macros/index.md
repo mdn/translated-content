@@ -1,9 +1,8 @@
 ---
 title: Macros usuelles
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-translation_of: MDN/Structures/Macros/Commonly-used_macros
-original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
+
 {{MDNSidebar}}
 
 Cette page énumère les différentes macros utilisées sur MDN. Pour plus d'informations sur leur utilisation, voir [Utiliser les macros](/fr/docs/MDN/Structures/Macros).
@@ -74,19 +73,6 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut HTML universel si aucun nom d'élément n'est indiqué</a> ou attribut d'un élément si le nom de ce dernier est fourni.
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}}</code> devra être remplacé par <code>[`lang`](/fr/docs/Web/HTML/Global_attributes/lang)</code>.
-        <code>\{{HTMLAttrxRef("type","input")}}</code> devra être remplacé par <code>[`type`](/fr/docs/Web/HTML/Element/input#attr-type)</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
@@ -152,30 +138,8 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
         <code>\{{HTTPStatus("404")}}</code> devra être remplacé par <code>[`404`](/fr/docs/Web/HTTP/Status/404)</code>
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/event.ejs">Event</a>.
-      </td>
-      <td>
-        <a href="/fr/docs/Web/Events">Référence des évènements</a> (/Web/Events)
-      </td>
-      <td>
-        <div class="note">
-          <p>
-            <strong>Note :</strong> Cette macro n'est plus particulièrement utile, car les évènements sont désormais placés sous leur élément DOM associé. <code>\{{DOMxRef("Document.wheel_event")}}</code> devrait être remplacé par
-            <code>[`Document.wheel_event`](/fr/docs/Web/API/Document/wheel_event)</code>
-          </p>
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>
-
-### Liens vers des rapports de bogue
-
-La macro [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) permet de créer un lien vers un bogue de bugzilla.mozilla.org avec la syntaxe `\{{Bug(123456)}}`. Un tel appel devrait être remplacé par `[bogue Mozilla 123456](https://bugzilla.mozilla.org/show_bug.cgi?id=123456)`.
-
-La macro [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) fournit un lien vers la base de bogues de WebKit. Un tel lien devrait être remplacé par `[bogue WebKit 7890](https://bugs.webkit.org/show_bug.cgi?id=7890)`.
 
 ### Navigation entre les pages de chapitre d'un guide
 
@@ -196,7 +160,7 @@ Pour la macro [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/
 Pour chaque grand ensemble de pages, on a des macros qui aident à la navigation sous la forme d'une barre à gauche. Elles permettent généralement de remonter à la page racine de la référence/du guide/du tutoriel et placent l'article dans la catégorie correspondante au sein de cette barre.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) génère la barre latérale pour les pages de la référence CSS.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) génère la barre latérale pour les pages de la référence HTML.
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) génère la barre latérale pour les pages de la référence HTML.
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) génère la barre latérale pour les pages des références des API web.
 
 ## Mise en forme

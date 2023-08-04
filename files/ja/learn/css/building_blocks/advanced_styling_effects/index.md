@@ -2,6 +2,7 @@
 title: ボックスの高度なエフェクト
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 この記事はトリックの箱として機能し、ボックスの影、ブレンドモード、フィルタのようなボックスの装飾に使用できる高度な機能のいくつかを紹介します。
@@ -22,7 +23,10 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -37,11 +41,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -64,7 +72,10 @@ article {
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -77,16 +88,21 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
 }
 ```
 
@@ -114,19 +130,22 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -138,7 +157,7 @@ button:active {
 
 ボタンが押されたとき、アクティブ状態は最初のボックスの影を非常に暗い内側の影と交換し、押されているボタンの外観を与えます。
 
-> **Note:** `box-shadow` 値に設定できる別の項目があります — 色の値の直前に別の長さの値をオプションで設定できるのが、**広がり半径**（spread radius）です。 設定すると、影が元のボックスよりも大きくなります。 あまり一般的ではありませんが、言及する価値があります。
+> **メモ:** `box-shadow` 値に設定できる別の項目があります — 色の値の直前に別の長さの値をオプションで設定できるのが、**広がり半径**（spread radius）です。 設定すると、影が元のボックスよりも大きくなります。 あまり一般的ではありませんが、言及する価値があります。
 
 ## フィルタ
 
@@ -165,12 +184,12 @@ p {
 }
 
 .filter {
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
 }
 
 .box-shadow {
-  box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -185,7 +204,7 @@ p {
 - フィルタは非常に新しく、Microsoft Edge を含む最近のほとんどのブラウザーでサポートされていますが、Internet Explorer ではまったくサポートされていません。 デザインにフィルタを使用する場合は、コンテンツがフィルタなしで使用可能であることを確認する必要があります。
 - `-webkit-` 接頭辞が付いたバージョンの `filter` プロパティが含まれていることがわかります。 これは{{glossary("Vendor Prefix","ベンダー接頭辞")}}と呼ばれ、新しい機能の実装を完了する前にブラウザーによって使用され、その機能をサポートし、接頭辞の付かないバージョンと衝突せずにその機能を試すことができます。 ベンダー接頭辞はウェブ開発者によって使われることを意図していませんが、実験的な機能が本当に望まれるならば本番ページで使われることもあります。 この場合、現在のところ Chrome / Safari / Opera のサポートには `-webkit-` バージョンのプロパティが必要ですが、Edge と Firefox は最後の接頭辞の付かないバージョンを使用します。
 
-> **Note:** コードで接頭辞を使用する場合は、接頭辞が必要なバージョンと接頭辞の付かないバージョンを必ずすべて含めてください。 そうすれば、可能な限り最大数のブラウザーでこの機能を使用できるようになり、後でブラウザーが接頭辞をなくすときに接頭辞の付かないバージョンも使用できます。 また、これらの実験的な機能は変更される可能性があるため、コードが壊れる可能性があります。 接頭辞が削除されるまで、これらの機能を試してみることが本当に最善です。
+> **メモ:** コードで接頭辞を使用する場合は、接頭辞が必要なバージョンと接頭辞の付かないバージョンを必ずすべて含めてください。 そうすれば、可能な限り最大数のブラウザーでこの機能を使用できるようになり、後でブラウザーが接頭辞をなくすときに接頭辞の付かないバージョンも使用できます。 また、これらの実験的な機能は変更される可能性があるため、コードが壊れる可能性があります。 接頭辞が削除されるまで、これらの機能を試してみることが本当に最善です。
 
 その他のフィルタの例が [filters.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)も参照）。
 
@@ -200,17 +219,15 @@ CSS でブレンドモードを使用する次の 2 つのプロパティがあ�
 
 こちらの [blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) サンプルページ（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)を参照）、および {{cssxref("&lt;blend-mode&gt;")}} リファレンスページには、ここに掲載されている以外にもたくさんの例があります。
 
-> **Note:** ブレンドモードもまた非常に新しいもので、フィルタよりもサポートが多少劣ります。 Edge にはまだサポートがありませんし、Safari はブレンドモードオプションのいくつかをサポートするだけです。
+> **メモ:** ブレンドモードもまた非常に新しいもので、フィルタよりもサポートが多少劣ります。 Edge にはまだサポートがありませんし、Safari はブレンドモードオプションのいくつかをサポートするだけです。
 
 ### background-blend-mode
 
 ここでも、これをよりよく理解できるように、いくつかの例を見てみましょう。 まず、{{cssxref("background-blend-mode")}} です — ここでは次のいくつかの簡単な {{htmlelement("div")}} を示すことで、オリジナルとブレンドバージョンを比較できます。
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 次にいくつかの CSS です — `<div>` に 1 つの背景画像と緑色の背景色を追加しています。
@@ -242,20 +259,14 @@ div {
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -304,7 +315,7 @@ article div:last-child {
 
 ここでは、乗算混合（multiply mix）ブレンドが 2 つの背景画像だけでなく、その下の `<div>` からの色もブレンドしていることがわかります。
 
-> **Note:** {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} など、上記のレイアウトプロパティの一部を理解していなくても心配しないでください。 これらについては、[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)のモジュールで詳しく説明します。
+> **メモ:** {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} など、上記のレイアウトプロパティの一部を理解していなくても心配しないでください。 これらについては、[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)のモジュールで詳しく説明します。
 
 ## -webkit-background-clip: text
 
@@ -321,7 +332,7 @@ article div:last-child {
 
 本番環境でこのような機能を使用したい場合は、ブラウザー間で徹底的なテストを行い、機能が機能しない場合でもサイトが引き続き使用可能であることを確認してください。
 
-> **Note:** 完全な `-webkit-background-clip: text` のコードの例については、[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) を参照してください（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)も参照）。
+> **メモ:** 完全な `-webkit-background-clip: text` のコードの例については、[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) を参照してください（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)も参照）。
 
 ## 能動的学習: いくつかのエフェクトを用いた実験
 
@@ -330,13 +341,24 @@ article div:last-child {
 間違えた場合は、_Reset_ ボタンを使用して例をいつでもリセットできます。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><div class="style-me">
-</div></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<div class="style-me">
+</div></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">.style-me {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+.style-me {
   width: 280px;
   height: 130px;
   padding: 10px;
@@ -345,12 +367,19 @@ article div:last-child {
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea>
+} </textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -363,8 +392,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -372,7 +401,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
@@ -390,13 +419,3 @@ window.addEventListener("load", drawOutput);
 この記事が楽しかったことを願っています — ぴかぴかのおもちゃで遊ぶのは概してそうで、最先端のブラウザーで、どのような種類のツールが使用可能になりつつあるのかを見るのはいつも面白いです。 [ボックスの装飾](/ja/docs/Learn/CSS/Styling_boxes)の記事の終わりに到達したので、次に私たちの評価であなたのボックスの装飾のスキルをテストします。
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## このモジュール内の文書
-
-- [ボックスモデルの復習](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-- [背景](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [境界線](/ja/docs/Learn/CSS/Styling_boxes/Borders)
-- [表の装飾](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)
-- [ボックスの高度なエフェクト](/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-- [装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [かっこいいボックス](/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)

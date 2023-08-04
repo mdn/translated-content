@@ -1,8 +1,8 @@
 ---
 title: DOMTokenList.values()
 slug: Web/API/DOMTokenList/values
-translation_of: Web/API/DOMTokenList/values
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant aux développeurs de passer en revue toutes les valeurs contenues dans la `DOMTokenList`. Individuellement, les valeurs sont des objets {{domxref("DOMString")}} (_chaînes de caractères_).
@@ -38,8 +38,8 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
-for(var value of iterator) {
-  span.textContent += value + ' ++ ';
+for (var value of iterator) {
+  span.textContent += value + " ++ ";
 }
 ```
 

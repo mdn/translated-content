@@ -1,14 +1,8 @@
 ---
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - fragment
-translation_of: Web/API/DocumentFragment/querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DocumentFragment.querySelectorAll()`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments du {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), qui correspondent avec le groupe spécifié de sélecteurs.

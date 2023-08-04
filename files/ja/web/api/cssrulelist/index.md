@@ -2,6 +2,7 @@
 title: CSSRuleList
 slug: Web/API/CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSRuleList` は読み取り専用の {{domxref("CSSRule")}} オブジェクトの順序付きコレクションを表します。
@@ -32,7 +33,10 @@ slug: Web/API/CSSRuleList
 
 ```css
 body {
-  font-family: system-ui,-apple-system,sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   margin: 2em;
 }
 

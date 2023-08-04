@@ -2,25 +2,26 @@
 title: 主页
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
+
 我们创建的第一个页面，是网站的主页面，可以从网站的根目录 (`'/'`) ，或者 catalog 的根目录 (`catalog/`) 访问。这将呈现一些网站的静态文字描述，以及动态计算数据库中不同记录类型的“计数”。
 
 我们已经为主页创建了一个路由。为了完成页面，我们需要更新控制器函数，以从数据库中提取记录的“计数”，并创建一个可用于呈现页面的视图（模板）。
 
 ## 路由
 
-在 [前面的教程](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)，我们创建 index 页面路由。此处要提醒的是，所有的路由函式，都定义在 **/routes/catalog.js**:
+在 [前面的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)，我们创建 index 页面路由。此处要提醒的是，所有的路由函式，都定义在 **/routes/catalog.js**:
 
 ```js
 // GET catalog home page.
-router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix
+router.get("/", book_controller.index); //This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
 在 **/controllers/bookController.js** 中，定义回调函数参数 (`book_controller.index`) ：
 
 ```js
-exports.index = function(req, res, next) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
-}
+exports.index = function (req, res, next) {
+  res.send("NOT IMPLEMENTED: Site Home Page");
+};
 ```
 
 我们扩展这个控制器函数，以从我们的模型获取信息，然后使用模板（视图）渲染它。
@@ -29,13 +30,13 @@ exports.index = function(req, res, next) {
 
 索引控制器函数需要获取以下有关信息，即数据库中有多少`Book`，`BookInstance`，可用的`BookInstance`，`Author`和`Genre`记录，将这些数据渲染到模板中，以创建 HTML 页面，然后将其返回到 HTTP 响应中。
 
-> **备注：** 我们使用[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如[使用数据库](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)[(Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)）中讨论的那样，并且还可以返回 `Query` ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值`null`）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。
+> **备注：** 我们使用[`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) 方法来获取每个模型的实例数量。这在具有一组可选条件的模型上进行调用，以匹配第一个参数，而回调放在第二个参数（如[使用数据库](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)[(Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)）中讨论的那样，并且还可以返回 `Query` ，然后稍后以回调执行它。当数据库返回计数时，将返回该回调，并将错误值（或空值`null`）作为第一个参数，并将记录计数（如果存在错误，则返回 null）作为第二个参数。
 >
 > ```js
-> SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
->  // ... do something if there is an err
->  // ... do something with the count if there was no error
->  });
+> SomeModel.count({ a_model_field: "match_value" }, function (err, count) {
+>   // ... do something if there is an err
+>   // ... do something with the count if there was no error
+> });
 > ```
 
 打开 **/controllers/bookController.js**. 在文件顶部附近，您应该看到导出的 `index()` 函数。
@@ -48,37 +49,43 @@ exports.index = function(req, res, next) {
 }
 ```
 
-用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (`require()`) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块 _async_ 。
+用以下代码片段替换上面的所有代码。这要做的第一件事，是导入 (`require()`) 所有模型（以粗体突出高亮显示）。我们需要这样做，是因为我们将使用它们来获取记录的计数。然后它会导入异步模块 _async_。
 
 ```js
-var Book = require('../models/book');
-var Author = require('../models/author');
-var Genre = require('../models/genre');
-var BookInstance = require('../models/bookinstance');
+var Book = require("../models/book");
+var Author = require("../models/author");
+var Genre = require("../models/genre");
+var BookInstance = require("../models/bookinstance");
 
-var async = require('async');
+var async = require("async");
 
-exports.index = function(req, res) {
-
-    async.parallel({
-        book_count: function(callback) {
-            Book.count({}, callback); // Pass an empty object as match condition to find all documents of this collection
-        },
-        book_instance_count: function(callback) {
-            BookInstance.count({}, callback);
-        },
-        book_instance_available_count: function(callback) {
-            BookInstance.count({status:'Available'}, callback);
-        },
-        author_count: function(callback) {
-            Author.count({}, callback);
-        },
-        genre_count: function(callback) {
-            Genre.count({}, callback);
-        },
-    }, function(err, results) {
-        res.render('index', { title: 'Local Library Home', error: err, data: results });
-    });
+exports.index = function (req, res) {
+  async.parallel(
+    {
+      book_count: function (callback) {
+        Book.count({}, callback); // Pass an empty object as match condition to find all documents of this collection
+      },
+      book_instance_count: function (callback) {
+        BookInstance.count({}, callback);
+      },
+      book_instance_available_count: function (callback) {
+        BookInstance.count({ status: "Available" }, callback);
+      },
+      author_count: function (callback) {
+        Author.count({}, callback);
+      },
+      genre_count: function (callback) {
+        Genre.count({}, callback);
+      },
+    },
+    function (err, results) {
+      res.render("index", {
+        title: "Local Library Home",
+        error: err,
+        data: results,
+      });
+    },
+  );
 };
 ```
 

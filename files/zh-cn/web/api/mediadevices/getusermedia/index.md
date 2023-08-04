@@ -2,9 +2,10 @@
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("WebRTC")}}
 
-**`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其它轨道类型。
+**`MediaDevices.getUserMedia()`** 会提示用户给予使用媒体输入的许可，媒体输入会产生一个{{domxref("MediaStream")}}，里面包含了请求的媒体类型的轨道。此流可以包含一个视频轨道（来自硬件或者虚拟视频源，比如相机、视频采集设备和屏幕共享服务等等）、一个音频轨道（同样来自硬件或虚拟音频源，比如麦克风、A/D 转换器等等），也可能是其他轨道类型。
 
 它返回一个 {{jsxref("Promise")}} 对象，成功后会`resolve`回调一个 {{domxref("MediaStream")}} 对象。若用户拒绝了使用权限，或者需要的媒体源不可用，`promise`会`reject`回调一个 `PermissionDeniedError` 或者 `NotFoundError` 。
 
@@ -13,13 +14,14 @@ slug: Web/API/MediaDevices/getUserMedia
 通常你可以使用 {{domxref("navigator.mediaDevices")}} 来获取 {{domxref("MediaDevices")}} ，例如：
 
 ```js
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  /* 使用这个 stream stream */
-})
-.catch(function(err) {
-  /* 处理 error */
-});
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    /* 使用这个 stream stream */
+  })
+  .catch(function (err) {
+    /* 处理 error */
+  });
 ```
 
 ## 语法
@@ -53,7 +55,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     }
     ```
 
-    浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其它的分辨率。
+    浏览器会试着满足这个请求参数，但是如果无法准确满足此请求中参数要求或者用户选择覆盖了请求中的参数时，有可能返回其他的分辨率。
 
     强制要求获取特定的尺寸时，可以使用关键字`min`、`max` 或者 `exact`（就是 min == max）。以下参数表示要求获取最低为 1280x720 的分辨率。
 
@@ -113,7 +115,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
 ### 异常
 
-返回一个失败状态的 Promise，这个 Promise 失败后的回调函数带一个{{domxref("DOMException")}}对象作为其参数。 可能的异常有：
+返回一个失败状态的 Promise，这个 Promise 失败后的回调函数带一个{{domxref("DOMException")}}对象作为其参数。可能的异常有：
 
 - `AbortError`［中止错误］
   - : 尽管用户和操作系统都授予了访问设备硬件的权利，而且未出现可能抛出`NotReadableError`异常的硬件问题，但仍然有一些问题的出现导致了设备无法被使用。
@@ -148,20 +150,23 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 // 想要获取一个最接近 1280x720 的相机分辨率
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (mediaStream) {
+    var video = document.querySelector("video");
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  }); // 总是在最后检查错误
 ```
 
 ### 在旧的浏览器中使用新的 API
 
-这是一个使用 `navigator.mediaDevices.getUserMedia()`的例子，带一个 polyfill 以适应旧的浏览器。 要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 [adapter.js](https://github.com/webrtc/adapter) polyfill 来替代。
+这是一个使用 `navigator.mediaDevices.getUserMedia()`的例子，带一个 polyfill 以适应旧的浏览器。要注意的是这个 polyfill 并不能修正一些约束语法上的遗留差异，这表示约束在某些浏览器上可能不会很好地运行。推荐使用处理了约束的 [adapter.js](https://github.com/webrtc/adapter) polyfill 来替代。
 
 ```js
 // 老的浏览器可能根本没有实现 mediaDevices，所以我们可以先设置一个空的对象
@@ -172,40 +177,43 @@ if (navigator.mediaDevices === undefined) {
 // 一些浏览器部分支持 mediaDevices。我们不能直接给对象设置 getUserMedia
 // 因为这样可能会覆盖已有的属性。这里我们只会在没有 getUserMedia 属性的时候添加它。
 if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = function(constraints) {
-
+  navigator.mediaDevices.getUserMedia = function (constraints) {
     // 首先，如果有 getUserMedia 的话，就获得它
-    var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    var getUserMedia =
+      navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // 一些浏览器根本没实现它 - 那么就返回一个 error 到 promise 的 reject 来保持一个统一的接口
     if (!getUserMedia) {
-      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+      return Promise.reject(
+        new Error("getUserMedia is not implemented in this browser"),
+      );
     }
 
     // 否则，为老的 navigator.getUserMedia 方法包裹一个 Promise
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       getUserMedia.call(navigator, constraints, resolve, reject);
     });
-  }
+  };
 }
 
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-.then(function(stream) {
-  var video = document.querySelector('video');
-  // 旧的浏览器可能没有 srcObject
-  if ("srcObject" in video) {
-    video.srcObject = stream;
-  } else {
-    // 防止在新的浏览器里使用它，应为它已经不再支持了
-    video.src = window.URL.createObjectURL(stream);
-  }
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then(function (stream) {
+    var video = document.querySelector("video");
+    // 旧的浏览器可能没有 srcObject
+    if ("srcObject" in video) {
+      video.srcObject = stream;
+    } else {
+      // 防止在新的浏览器里使用它，应为它已经不再支持了
+      video.src = window.URL.createObjectURL(stream);
+    }
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
 ```
 
 ### 帧率
@@ -222,14 +230,16 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 
 ```js
 var front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+document.getElementById("flip-button").onclick = function () {
+  front = !front;
+};
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+var constraints = { video: { facingMode: front ? "user" : "environment" } };
 ```
 
 ## 权限
 
-在一个可安装的 app（如[Firefox OS app](/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
+在一个可安装的 app（如[Firefox OS app](/zh-CN/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
 
 ```js
 "permissions": {
@@ -242,7 +252,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 }
 ```
 
-参见 [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
+参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
 
 ## 规范
 
@@ -250,7 +260,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## 参考
 

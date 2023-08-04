@@ -1,13 +1,8 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertySymbols()`** メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
@@ -17,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySym
 ## 構文
 
 ```js
-Object.getOwnPropertySymbols(obj)
+Object.getOwnPropertySymbols(obj);
 ```
 
 ### 引数
@@ -41,24 +36,22 @@ Object.getOwnPropertySymbols(obj)
 
 ```js
 var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+var a = Symbol("a");
+var b = Symbol.for("b");
 
-obj[a] = 'localSymbol';
-obj[b] = 'globalSymbol';
+obj[a] = "localSymbol";
+obj[b] = "globalSymbol";
 
 var objectSymbols = Object.getOwnPropertySymbols(obj);
 
 console.log(objectSymbols.length); // 2
-console.log(objectSymbols);        // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]);     // Symbol(a)
+console.log(objectSymbols); // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]); // Symbol(a)
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

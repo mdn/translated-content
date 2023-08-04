@@ -1,12 +1,8 @@
 ---
 title: table.width
 slug: Web/API/HTMLTableElement/width
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLTableElement/width
 ---
+
 {{ ApiRef() }}
 
 ### 요약
@@ -15,14 +11,18 @@ translation_of: Web/API/HTMLTableElement/width
 
 ### 구문
 
-    HTMLTableElement.width =width;
-    varwidth =HTMLTableElement.width;
+```js
+HTMLTableElement.width = width;
+var width = HTMLTableElement.width;
+```
 
 [`width`](http://www.w3.org/TR/1999/REC-html401-19991224/struct/tables.html#adef-width-TABLE)가 픽셀수나 퍼센트 값으로 너비를 나타내는 문자열인 곳.
 
 ### 예제
 
-    mytable.width = "75%";
+```js
+mytable.width = "75%";
+```
 
 ## 명세서
 

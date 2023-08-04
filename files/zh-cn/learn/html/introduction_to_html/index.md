@@ -2,13 +2,14 @@
 title: HTML 简介
 slug: Learn/HTML/Introduction_to_HTML
 ---
+
 {{LearnSidebar}}
 
 就其核心而言，{{glossary("HTML")}} 是一种相当简单的、由不同{{glossary("Element", "元素")}}组成的标记语言，它可以被应用于文本片段，使文本在文档中具有不同的含义（它是段落吗？它是项目列表吗？它是表格吗？），将文档结构化为逻辑块（文档是否有头部？有三列内容？有一个导航菜单？），并且可以将图片，影像等内容嵌入到页面中。本模块将介绍前两个用途，并且介绍一些 HTML 的基本概念和语法。
 
 ## 前言
 
-尽管你无需事先拥有任何 HTML 相关知识以学习该模块，你仍至少需要熟悉一些使用电脑的基础知识，并会被动地使用网络（也就是看着它，浏览内容）。你需要配置基础的开发环境（详细说明请参见[安装基本软件](zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)页面），并且懂得如何创建和管理文件（在[处理文件](zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)页面中有详细说明） —— 它们都是我们纯新手 [Web 开发入门](zh-CN/docs/Learn/Getting_started_with_the_web)模块的一部分。
+尽管你无需事先拥有任何 HTML 相关知识以学习该模块，你仍至少需要熟悉一些使用电脑的基础知识，并会被动地使用网络（也就是看着它，浏览内容）。你需要配置基础的开发环境（详细说明请参见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)页面），并且懂得如何创建和管理文件（在[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)页面中有详细说明） —— 它们都是我们纯新手 [Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)模块的一部分。
 
 > **备注：** 如果你正在一台你不能创建文件的设备上作业，那么你需要在在线编程工具上运行（大多数）代码示例，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等。
 

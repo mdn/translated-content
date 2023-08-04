@@ -2,6 +2,7 @@
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`RTCPeerConnection`** 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。
@@ -36,11 +37,11 @@ _该接口的属性继承了其父接口，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.connectionState")}} {{ReadOnlyInline}}
   - : 只读 connectionState 属性通过返回由枚举 RTCPeerConnectionState 指定的字符串值之一来指示对等连接的当前状态。
 - {{domxref("RTCPeerConnection.currentLocalDescription")}} {{ReadOnlyInline}}
-  - : 只读属性 RTCPeerConnection.currentLocalDescription 返回一个描述连接本地端的 RTCSessionDescription 对象，因为自上次 RTCPeerConnection 完成协商并连接到远程对等体之后，它最近成功协商。 还包括可能已经由 ICE 代理生成的任何 ICE 候选者的列表，因为首先被描述的描述所表示的要约或答案。
+  - : 只读属性 RTCPeerConnection.currentLocalDescription 返回一个描述连接本地端的 RTCSessionDescription 对象，因为自上次 RTCPeerConnection 完成协商并连接到远程对等体之后，它最近成功协商。还包括可能已经由 ICE 代理生成的任何 ICE 候选者的列表，因为首先被描述的描述所表示的要约或答案。
 - {{domxref("RTCPeerConnection.currentRemoteDescription")}} {{ReadOnlyInline}}
-  - : 只读属性 RTCPeerConnection.currentRemoteDescription 返回一个 RTCSessionDescription 对象，描述连接的远程端，因为最近一次 RTCPeerConnection 完成协商并连接到远程对等体后最近成功协商。 还包括可能已经由 ICE 代理生成的任何 ICE 候选者的列表，因为首先被描述的描述所表示的要约或答案。
+  - : 只读属性 RTCPeerConnection.currentRemoteDescription 返回一个 RTCSessionDescription 对象，描述连接的远程端，因为最近一次 RTCPeerConnection 完成协商并连接到远程对等体后最近成功协商。还包括可能已经由 ICE 代理生成的任何 ICE 候选者的列表，因为首先被描述的描述所表示的要约或答案。
 - {{domxref("RTCPeerConnection.defaultIceServers")}} {{ReadOnlyInline}}
-  - : 只读属性 RTCPeerConnection.defaultIceServers 根据 RTCIceServer 字典返回一个对象数组，该字典指示如果在 RTCConfiguration 中没有提供给 RTCPeerConnection 的默认情况下，浏览器将使用 ICE 服务器。 然而，浏览器根本不需要提供任何默认的 ICE 服务器。
+  - : 只读属性 RTCPeerConnection.defaultIceServers 根据 RTCIceServer 字典返回一个对象数组，该字典指示如果在 RTCConfiguration 中没有提供给 RTCPeerConnection 的默认情况下，浏览器将使用 ICE 服务器。然而，浏览器根本不需要提供任何默认的 ICE 服务器。
 - {{domxref("RTCPeerConnection.iceConnectionState")}} {{ReadOnlyInline}}
   - : 只读属性 RTCPeerConnection.iceConnectionState 返回与 RTCPeerConnection 关联的 ICE 代理的状态类型为 RTCIceConnectionState 的枚举。
 - {{domxref("RTCPeerConnection.iceGatheringState")}} {{ReadOnlyInline}}
@@ -50,7 +51,7 @@ _该接口的属性继承了其父接口，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.localDescription")}} {{ReadOnlyInline}}
   - : 只读属性，返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。
 - {{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}
-  - : 只读属性，返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变。`
+  - : 只读属性，返回一个 `RTCIdentityAssertion`，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 `null` 值。一旦被设置，它不能被一般方法改变。
 - {{domxref("RTCPeerConnection.pendingLocalDescription")}} {{ReadOnlyInline}}
   - : blah
 - {{domxref("RTCPeerConnection.pendingRemoteDescription")}} {{ReadOnlyInline}}
@@ -60,7 +61,7 @@ _该接口的属性继承了其父接口，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.sctp")}} {{ReadOnlyInline}}
   - : blah
 - {{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}
-  - : 返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和 RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。
+  - : 返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和 RTCP 协议的选项，以及被 ICE 服务器收集到的 candidates(连接候选者)。当 {{domxref("RTCPeerConnection.signalingState")}} 的值改变时，对象上的 {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} 事件会被触发。
 
 ### 基本用法
 
@@ -143,7 +144,7 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 
 - {{domxref("RTCPeerConnection.iceConnectionState")}} {{ReadOnlyInline}}
 
-  - : 返回一个 RTCIceConnectionState 类型的结构体，这个结构体描述了连接的 ICE 连接状态。当这个状态的值改变时，这个对象会触发一个{{event("iceconnectionstatechange")}} 事件。状态可能存在的值如下：
+  - : 返回一个 RTCIceConnectionState 类型的结构体，这个结构体描述了连接的 ICE 连接状态。当这个状态的值改变时，这个对象会触发一个 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件。状态可能存在的值如下：
 
     - "new": ICE 服务器正在收集地址或正在等待远端的 candidates(这两种情况可能同时存在)。
     - `"checking"`: ICE 服务器找到了远端的 candidates（连接候选者）,这些 candidates 至少有一个，同时 ICE 服务器在检测这些 candidates，尽管它可能还没有找到连接。此刻，ICE 服务器可能仍在收集 candidates（连接候选者）。
@@ -164,12 +165,12 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 - {{domxref("RTCPeerConnection.localDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("RTCSessionDescription")}} ，它描述了这条连接的本地端的会话控制（用户会话所需的属性以及配置信息）。如果本地的会话控制还没有被设置，它的值就会是 null。
 - {{domxref("RTCPeerConnection.peerIdentity")}} {{ReadOnlyInline}}
-  - : 返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变。`
+  - : 返回一个`RTCIdentityAssertion，它由一组信息构成，包括一个域名（idp）以及一个名称（name），它们代表了这条连接的远端机器的身份识别信息。如果远端机器还没有被设置以及校验，这个属性会返回一个 null 值。一旦被设置，它不能被一般方法改变`。
 - {{domxref("RTCPeerConnection.remoteDescription")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("RTCSessionDescription")}} 它描述了这条连接的远端机器的会话控制，如果远端机器还未被设置，它的值会是 null。
 - {{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}
 
-  - : 返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和 RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。 它可能取下列的值：
+  - : 返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和 RTCP 协议的选项，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的 {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} 事件会被触发。它可能取下列的值：
 
     - `"stable"`: 没有 SDP offer/answer 正在被交换，连接仍然处于初始化状态。
     - `"have-local-offer"`: 这条连接的本地端机器已经本地应用了一个 SDP offer。
@@ -181,27 +182,27 @@ _这个接口从它的父元素中继承属性，{{domxref("EventTarget")}}._
 ### 事件处理器
 
 - {{domxref("RTCPeerConnection.onaddstream")}}
-  - : 是收到{{event("addstream")}} 事件时调用的事件处理器。 Such an event is 当{{domxref("MediaStream")}} 被远端机器添加到这条连接时，该事件会被触发。 当调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法时，这个事件就会被立即触发，它不会等待 SDP 协商的结果。
+  - : 是收到 `addstream` 事件时调用的事件处理器。Such an event is 当{{domxref("MediaStream")}} 被远端机器添加到这条连接时，该事件会被触发。当调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法时，这个事件就会被立即触发，它不会等待 SDP 协商的结果。
 - {{domxref("RTCPeerConnection.ondatachannel")}}
-  - : 是收到{{event("datachannel")}} 事件时调用的事件处理器。 当一个 {{domxref("RTCDataChannel")}} 被添加到连接时，这个事件被触发。
+  - : 是收到 `datachannel` 事件时调用的事件处理器。当一个 {{domxref("RTCDataChannel")}} 被添加到连接时，这个事件被触发。
 - {{domxref("RTCPeerConnection.onicecandidate")}}
-  - : 是收到 {{event("icecandidate")}} 事件时调用的事件处理器.。当一个 {{domxref("RTCICECandidate")}} 对象被添加时，这个事件被触发。
+  - : 是收到 `icecandidate` 事件时调用的事件处理器.。当一个 {{domxref("RTCICECandidate")}} 对象被添加时，这个事件被触发。
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
-  - : 是收到{{event("iceconnectionstatechange")}}事件时调用的事件处理器 。 当{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} 改变时，这个事件被触发。
+  - : 是收到 `iceconnectionstatechange` 事件时调用的事件处理器。当{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} 改变时，这个事件被触发。
 - {{domxref("RTCPeerConnection.onidentityresult")}}
-  - : 是收到 {{event("identityresult")}}事件时调用的事件处理器。 当通过{{domxref("RTCPeerConnection.getIdentityAssertion()", "getIdentityAssertion()")}}生成身份断言，或在生成一个 answer 或一个 offer 的过程中，这个事件被触发。
+  - : 是收到 `identityresult` 事件时调用的事件处理器。当通过{{domxref("RTCPeerConnection.getIdentityAssertion()", "getIdentityAssertion()")}}生成身份断言，或在生成一个 answer 或一个 offer 的过程中，这个事件被触发。
 - {{domxref("RTCPeerConnection.onidpassertionerror")}}
-  - : 是收到 {{event("idpassertionerror")}} 事件时调用的事件处理器。当生成一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。
+  - : 是收到 `idpassertionerror` 事件时调用的事件处理器。当生成一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。
 - {{domxref("RTCPeerConnection.onidpvalidationerror")}}
-  - : 是收到 {{event("idpvalidationerror")}} 事件时调用的事件处理器。当检查 一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。
+  - : 是收到 `idpvalidationerror` 事件时调用的事件处理器。当检查 一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。
 - {{domxref("RTCPeerConnection.onnegotiationneeded")}}
-  - : 是收到{{event("negotiationneeded")}} 事件时调用的事件处理器， 浏览器发送该事件以告知在将来某一时刻需要协商。
+  - : 是收到 `negotiationneeded` 事件时调用的事件处理器，浏览器发送该事件以告知在将来某一时刻需要协商。
 - {{domxref("RTCPeerConnection.onpeeridentity")}}
-  - : 是收到{{event("peeridentity")}} 事件时调用的事件处理器，当一条连接的 peer identify 被设置以及校验后，该事件被触发
+  - : 是收到 `peeridentity` 事件时调用的事件处理器，当一条连接的 peer identify 被设置以及校验后，该事件被触发
 - {{domxref("RTCPeerConnection.onremovestream")}}
-  - : 是收到{{event("removestream")}} 事件时调用的事件处理器，当一条{{domxref("MediaStream")}} 从连接上移除时，该事件被触发。
+  - : 是收到 `removestream` 事件时调用的事件处理器，当一条{{domxref("MediaStream")}} 从连接上移除时，该事件被触发。
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
-  - : 是收到{{event("signalingstatechange")}} 事件时调用的事件处理器，当{{domxref("RTCPeerConnection.signalingState", "signalingState")}}的值发生改变时，该事件被触发。
+  - : 是收到 `signalingstatechange` 事件时调用的事件处理器，当{{domxref("RTCPeerConnection.signalingState", "signalingState")}}的值发生改变时，该事件被触发。
 
 ## 方法
 

@@ -2,6 +2,7 @@
 title: WebSocket.url
 slug: Web/API/WebSocket/url
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.url`** read-only property returns the absolute URL of the {{domxref("WebSocket")}} as resolved by the constructor.
@@ -16,7 +17,7 @@ var url = aWebSocket.url;
 
 ## 返回值
 
-A [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString).
+A [`DOMString`](/zh-CN/docs/Web/API/DOMString).
 
 ## 规范
 
@@ -24,4 +25,4 @@ A [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString).
 
 ## 浏览器兼容性
 
-{{Compat("api.WebSocket.url")}}
+{{Compat}}

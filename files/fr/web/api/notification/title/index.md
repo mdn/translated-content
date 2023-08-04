@@ -1,17 +1,8 @@
 ---
 title: Notification.title
-slug: Web/API/notification/title
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - Title
-  - Titre
-translation_of: Web/API/Notification/title
+slug: Web/API/Notification/title
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`title`** de l'interface {{domxref ("Notification")}} indique le titre de la notification, comme définis à l'aide de l'option `silent` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()") }} constructeur.
@@ -19,7 +10,7 @@ La propriété en lecture seule **`title`** de l'interface {{domxref ("Notificat
 ## Syntaxe
 
 ```js
-Notification.title
+Notification.title;
 ```
 
 ### Valeur

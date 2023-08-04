@@ -2,7 +2,8 @@
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
 ---
-{{cssref}}
+
+{{CSSRef}}
 
 Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
 
@@ -23,11 +24,23 @@ The alternate stylesheets are commonly specified using a {{HTMLElement("link")}}
 一般使用<{{HTMLElement("link")}}>指定可替换样式表。在这个标签中指定`rel="alternate stylesheet"` 属性和 `title="..."`属性
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css" />
 
-<link href="default.css" rel="stylesheet" type="text/css" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" type="text/css" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" type="text/css" title="Basic">
+<link
+  href="default.css"
+  rel="stylesheet"
+  type="text/css"
+  title="Default Style" />
+<link
+  href="fancy.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="Fancy" />
+<link
+  href="basic.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="Basic" />
 ```
 
 In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.
@@ -51,7 +64,7 @@ No matter what style is selected, the rules from the reset.css stylesheet will a
 Any stylesheet in a document falls into one of the following categories:
 
 - **Persistent** (no `rel="alternate"`, no `title=""`): always applies to the document.
-- **Preferred** (no `rel="alternate"`, with `title="..."` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored. See [Correctly Using Titles With External Stylesheets](/en-US/docs/Correctly_Using_Titles_With_External_Stylesheets) for a more detailed discussion.
+- **Preferred** (no `rel="alternate"`, with `title="..."` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored. See [Correctly Using Titles With External Stylesheets](/zh-CN/docs/Correctly_Using_Titles_With_External_Stylesheets) for a more detailed discussion.
 - **Alternate** (`rel="alternate stylesheet"`, `title="..."` must be specified): disabled by default, can be selected.
 
 When style sheets are referenced with a `title` attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same `title` are part of the same choice. Style sheets linked without a `title` attribute are always applied.

@@ -2,6 +2,7 @@
 title: Clipboard.readText()
 slug: Web/API/Clipboard/readText
 ---
+
 {{APIRef("Clipboard API")}}
 
 **{{domxref("Clipboard")}}** インターフェイスの **`readText()`** メソッドは、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxref("Promise")}}) を返します。

@@ -1,15 +1,8 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
-  - outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 **`Window.outerWidth`** は読み取り専用のプロパティで、ブラウザーウィンドウの外側の幅を返します。これはサイドバー (展開されている場合)、ウィンドウの操作部分、ウィンドウをリサイズする境界やハンドルを含む、ブラウザーウィンドウ全体の幅を表します。
@@ -22,9 +15,7 @@ translation_of: Web/API/Window/outerWidth
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

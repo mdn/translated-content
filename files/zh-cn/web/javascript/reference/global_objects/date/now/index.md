@@ -2,6 +2,7 @@
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
+
 {{JSRef}}
 
 **`Date.now()`** 方法返回自 1970 年 1 月 1 日 00:00:00 (UTC) 到当前时间的毫秒数。
@@ -29,12 +30,11 @@ var timeInMs = Date.now();
 
 ```js
 // reduced time precision (2ms) in Firefox 60
-Date.now()
+Date.now();
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 Date.now();

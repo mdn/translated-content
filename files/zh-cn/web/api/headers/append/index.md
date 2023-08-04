@@ -2,9 +2,10 @@
 title: Headers.append()
 slug: Web/API/Headers/append
 ---
+
 {{APIRef("Fetch")}}
 
-在一个`Headers`对象内部，{{domxref("Headers")}}接口的**`append()`**方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
+在一个`Headers`对象内部，{{domxref("Headers")}}接口的 **`append()`** 方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。
 
 {{domxref("Headers.set")}} 和 `append()` 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而`append()`会追加到值序列的尾部。
 
@@ -12,8 +13,8 @@ slug: Web/API/Headers/append
 
 ## 语法
 
-```js
-myHeaders.append(name,value);
+```js-nolint
+append(name, value)
 ```
 
 ### 参数
@@ -38,16 +39,16 @@ var myHeaders = new Headers(); // Currently empty
 可以通过 append() 方法添加 header:
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 如果指定 header 不存在，`append()`将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，`append()`将会把指定值添加到值队列的末尾。
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.getAll("Accept-Encoding"); // Returns [ "deflate", "gzip" ]
 ```
 
 要使用新值覆盖旧值，请使用{{domxref("Headers.set")}}。
@@ -58,7 +59,7 @@ myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
 
 ## 浏览器兼容性
 
-{{Compat("api.Headers.append")}}
+{{Compat}}
 
 ## 参见
 

@@ -1,16 +1,8 @@
 ---
 title: Web Audio API의 기본 개념
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
-tags:
-  - 가이드
-  - 미디어
-  - 오디오
-  - 웹오디오API
-  - 웹오디오API이론
-  - 이론
-  - 컨셉
-translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
+
 오디오가 어떻게 여러분의 앱을 통해서 전송(route)되는지를 설계하는 동안 여러분이 적절한 결정을 내리는 것을 돕기 위해, 이 문서는 Web Audio API의 기능이 어떻게 동작하는가를 뒷받침하는 얼마간의 오디오 이론을 설명합니다. 이 문서를 읽는다고 해서 여러분이 숙련된 사운드 엔지니어가 될 수는 없지만, 왜 Web Audio API가 이렇게 동작하는지를 이해하기에 충분한 배경지식을 줄 것입니다.
 
 ## 오디오 그래프
@@ -19,13 +11,13 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 하나 또는 더 많은 소스에서 시작하고, 하나 또는 더 많은 노드를 통과하고, 그리고서 도착지(destination)에서 끝나는 체인(chain)을 형성하며, 오디오 노드는 입력과 출력을 통해 연결되어 있습니다. 그러나, 예를 들어 여러분이 단지 오디오 데이터를 시각화하기를 원한다면 도착지를 반드시 제공할 필요는 없습니다. 웹 오디오의 단순하고, 일반적인 작업 흐름은 다음과 같습니다:
 
-1.  오디오 컨텍스트를 생성합니다.
-2.  컨텍스트 내에서, 다음과 같이 소스를 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.
-3.  효과 노드를 생성하는데, 예를 들자면 reverb, biquad filter, panner, 또는 compressor가 있습니다.
-4.  사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.
-5.  오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.
+1. 오디오 컨텍스트를 생성합니다.
+2. 컨텍스트 내에서, 다음과 같이 소스를 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.
+3. 효과 노드를 생성하는데, 예를 들자면 reverb, biquad filter, panner, 또는 compressor가 있습니다.
+4. 사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.
+5. 오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.
 
-<div class="notecard note"><h4>채널 표기법</h4><p>한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 <a href="https://en.wikipedia.org/wiki/Surround_sound#Channel_notation">채널 표기법</a>이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 <strong>서브 우퍼</strong>(subwoofer)로 불립니다.</p></div>
+> **참고:** 한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 [채널 표기법](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 **서브 우퍼**(subwoofer)로 불립니다.
 
 ![오디오 컨텍스트라고 써진 외부 상자와 소스, 효과, 목적지라고 써진 세 개의 내부 상자를 가진 하나의 간단한 도표. 세 개의 내부 상자는 좌에서 우를 향하는 화살표를 사이에 가지고 있는데, 이는 오디오 정보의 흐름을 나타냅니다.](webaudioapi_en.svg)
 
@@ -42,7 +34,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 ## 오디오 데이터: 무엇이 샘플 속에 들어있는가
 
-오디오 신호가 처리될 때, **샘플링**이란 [연속 신호](https://en.wikipedia.org/wiki/Continuous_signal "Continuous signal")(continuous signal)의 [불연속 신호](https://en.wikipedia.org/wiki/Discrete_signal "Discrete signal")(discrete signal)로의 전환을 의미합니다; 또는 달리 말하면, 라이브로 연주하고 있는 밴드와 같이, 연속적인 음파를 컴퓨터가 오디오를 구별되는 단위로 다룰 수 있게 허용하는 일련의 샘플들로 전환하는 것을 의미합니다.
+오디오 신호가 처리될 때, **샘플링**이란 [연속 신호](https://en.wikipedia.org/wiki/Continuous_signal)(continuous signal)의 [불연속 신호](https://en.wikipedia.org/wiki/Discrete_signal)(discrete signal)로의 전환을 의미합니다; 또는 달리 말하면, 라이브로 연주하고 있는 밴드와 같이, 연속적인 음파를 컴퓨터가 오디오를 구별되는 단위로 다룰 수 있게 허용하는 일련의 샘플들로 전환하는 것을 의미합니다.
 
 더 많은 정보는 위키피디아 문서 [샘플링 (신호 처리)](https://en.wikipedia.org/wiki/Sampling_%28signal_processing%29)에서 찾을 수 있습니다.
 
@@ -63,7 +55,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 버퍼가 재생될 때, 여러분은 제일 왼쪽의 샘플 프레임을 들을 것이고, 그리고서 다음에 있는 제일 오른쪽의 샘플 프레임 등등을 들을 것입니다. 스테레오의 경우에, 여러분은 양 채널을 동시에 들을 것입니다. 샘플 프레임은 대단히 유용한데, 왜냐하면 샘플 프레임은 채널의 수에 독립적이고, 정밀한 오디오 조작을 함에 있어 유용한 방법으로 시간을 나타내기 때문입니다.
 
-> **참고:** **노트**: 프레임 카운트로부터 초로 시간을 얻기 위해서는, 프레임의 수를 샘플 레이트로 나누십시오. 샘플의 수로부터 프레임의 수를 얻기 위해서는, 채널 카운트로 나누십시오.
+> **참고:** 프레임 카운트로부터 초로 시간을 얻기 위해서는, 프레임의 수를 샘플 레이트로 나누십시오. 샘플의 수로부터 프레임의 수를 얻기 위해서는, 채널 카운트로 나누십시오.
 
 두 개의 간단한 예제입니다:
 
@@ -72,11 +64,11 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **참고:** **노트**: [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio "Digital audio")에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency "Sampling frequency")입니다. 왜 44.1kHz일까요?
+> **참고:** [디지털 오디오](https://en.wikipedia.org/wiki/Digital_audio)에서, **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (또한 **44.1 kHz**로 표현되어짐) 은 일반적인 [샘플링 주파수](https://en.wikipedia.org/wiki/Sampling_frequency)입니다. 왜 44.1kHz일까요?
 >
-> 첫째로, 왜냐하면 인간의 [가청 범위](https://en.wikipedia.org/wiki/Hearing_range "Hearing range")(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. [표본화 정리](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem "Nyquist–Shannon sampling theorem")(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.
+> 첫째로, 왜냐하면 인간의 [가청 범위](https://en.wikipedia.org/wiki/Hearing_range)(hearing range)는 대략적으로 20 Hz에서 20,000 Hz이기 때문입니다. [표본화 정리](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)(Nyquist–Shannon sampling theorem)에 의하여, 샘플링 주파수는 반드시 재생하기를 원하는 최대 주파수의 2배보다 커야 합니다. 그러므로, 샘플링 레이트는 40 kHz보다 커야만 합니다.
 >
-> 둘째로, 신호는 반드시 샘플링 전에 [저주파 통과 필터](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter")(low-pass filter)를 거쳐야만 합니다, 그렇지 않으면 [에일리어싱](https://en.wikipedia.org/wiki/Aliasing)(aliasing)이 발생합니다. 이상적인 저주파 통과 필터는 완벽히 20 kHz 아래의 주파수들을 (약화시키는 일 없이) 통과시키고 완벽히 20 kHz 위의 주파수들을 잘라낼 것이지만, 실제로는 [천이 대역](https://en.wikipedia.org/wiki/Transition_band "Transition band")(transition band)이 필수적인데, 여기서 주파수들은 부분적으로 약화됩니다. 천이 대역이 넓을수록, [주파수 중복방지 필터](https://en.wikipedia.org/wiki/Anti-aliasing_filter "Anti-aliasing filter")(anti-aliasing filter)를 만들기 쉽고 경제적입니다. 44.1 kHz 샘플링 주파수는 2.05 kHz 천이 대역을 감안합니다.
+> 둘째로, 신호는 반드시 샘플링 전에 [저주파 통과 필터](https://en.wikipedia.org/wiki/Low-pass_filter)(low-pass filter)를 거쳐야만 합니다, 그렇지 않으면 [에일리어싱](https://en.wikipedia.org/wiki/Aliasing)(aliasing)이 발생합니다. 이상적인 저주파 통과 필터는 완벽히 20 kHz 아래의 주파수들을 (약화시키는 일 없이) 통과시키고 완벽히 20 kHz 위의 주파수들을 잘라낼 것이지만, 실제로는 [천이 대역](https://en.wikipedia.org/wiki/Transition_band)(transition band)이 필수적인데, 여기서 주파수들은 부분적으로 약화됩니다. 천이 대역이 넓을수록, [주파수 중복방지 필터](https://en.wikipedia.org/wiki/Anti-aliasing_filter)(anti-aliasing filter)를 만들기 쉽고 경제적입니다. 44.1 kHz 샘플링 주파수는 2.05 kHz 천이 대역을 감안합니다.
 
 만약 위의 이 호출을 사용한다면, 여러분은 44100Hz (아주 일반적입니다, 대부분의 보통 사운드 카드는 이 레이트에서 실행됩니다) 에서 실행되는 AudioContext에서 재생될 때 0.5초동안 지속될 두 개의 채널을 가진 스테레오 버퍼를 얻을 것입니다. (22050 프레임 / 44100Hz = 0.5초)
 
@@ -87,19 +79,23 @@ var buffer = context.createBuffer(1, 22050, 22050);
 
 만약 이 호출을 사용한다면, 여러분은 44100Hz에서 실행되는 AudioContext에서 재생될 때 자동적으로 44100Hz로 _리샘플_(resample)되고 1.0초동안 지속될 단지 하나의 채널을 가진 모노 버퍼를 얻을 것입니다. (44100 프레임 / 44100Hz = 1초)
 
-> **참고:** **노트**: 오디오 리샘플링은 이미지 리사이징과 몹시 유사합니다. 예를 들어 여러분이 16 x 16 이미지를 가지고 있지만 32 x 32 영역을 채우고 싶다고 가정해 봅시다. 당신은 리사이즈 (또는 리샘플) 합니다. 결과는 더 낮은 품질을 가지지만 (리사이징 알고리즘에 따라서, 흐릿하거나 각질 수 있습니다), 리사이즈된 이미지가 더 적은 공간을 차지한 채로 작동은 합니다. 리샘플된 오디오는 정확히 동일합니다: 여러분은 공간을 저장하지만, 실제로는 높은 주파수의 콘텐츠 또는 고음의 소리를 적절히 재생할 수 없을 것입니다.
+> **참고:** 오디오 리샘플링은 이미지 리사이징과 몹시 유사합니다. 예를 들어 여러분이 16 x 16 이미지를 가지고 있지만 32 x 32 영역을 채우고 싶다고 가정해 봅시다. 당신은 리사이즈 (또는 리샘플) 합니다. 결과는 더 낮은 품질을 가지지만 (리사이징 알고리즘에 따라서, 흐릿하거나 각질 수 있습니다), 리사이즈된 이미지가 더 적은 공간을 차지한 채로 작동은 합니다. 리샘플된 오디오는 정확히 동일합니다: 여러분은 공간을 저장하지만, 실제로는 높은 주파수의 콘텐츠 또는 고음의 소리를 적절히 재생할 수 없을 것입니다.
 
 ### 평면(planar) 대 인터리브(interleaved) 버퍼
 
 Web Audio API는 평면 버퍼 포맷을 사용합니다. 왼쪽과 오른쪽 채널은 다음과 같이 저장됩니다:
 
-    LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (16 프레임의 버퍼에 대해)
+```
+LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (16 프레임의 버퍼에 대해)
+```
 
 이것은 오디오 프로세싱에서 아주 일반적입니다: 이것은 각 채널을 독립적으로 처리하기 쉽게 만들어줍니다.
 
 대안은 인터리브 버퍼 포맷을 사용하는 것입니다:
 
-    LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (16 프레임의 버퍼에 대해)
+```
+LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (16 프레임의 버퍼에 대해)
+```
 
 이 포맷은 많은 프로세싱 없이 오디오를 저장하고 재생하는 데 아주 일반적인데, 예를 들자면 디코드된 MP3 스트림이 있습니다.
 
@@ -345,7 +341,7 @@ Web Audio API는 **오직** 평면 버퍼만을 드러내는데, 왜냐하면 �
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : 현재 파형, 또는 시간 영역, 데이터를 이것 안으로 전달된 {{jsxref("Uint8Array")}} (unsigned byte array) 안으로 복사합니다.
 
-> **참고:** **노트**: 더 많은 정보를 보시려면, [Web Audio API로 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 문서를 참조하세요.
+> **참고:** 더 많은 정보를 보시려면, [Web Audio API로 시각화](/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 문서를 참조하세요.
 
 ## 공간화
 
@@ -359,7 +355,7 @@ panner의 위치는 right-hand 데카르트 좌표 (Cartesian coordinate)로 기
 
 ![AudioListener의 위와 앞의 벡터 위치를 보고 있는데, 위와 앞 벡터는 서로 90°에 있습니다.](webaudiolistenerreduced.png)
 
-> **참고:** **노트**: 더 많은 정보를 보시려면, [Web audio 공간화 기본](/ko/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) 문서를 참조하세요.
+> **참고:** 더 많은 정보를 보시려면, [Web audio 공간화 기본](/ko/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) 문서를 참조하세요.
 
 ## 팬 인(fan-in)과 팬 아웃(fan-out)
 

@@ -1,24 +1,20 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
-**`getMonth()`** メソッドは、地方時に基づき、指定された日付の「月」を表す 0 を基点とした値 (すなわち 0 が年の最初の月を示す) を返します。
+**`getMonth()`** メソッドは、地方時に基づき、指定された日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 
 {{EmbedInteractiveExample("pages/js/date-getmonth.html","shorter")}}
 
 ## 構文
 
-```
-dateObj.getMonth()
+```js-nolint
+getMonth()
 ```
 
 ### 返値
@@ -29,19 +25,19 @@ dateObj.getMonth()
 
 ### getMonth() の使用
 
-以下の 2 行目の文は、{{jsxref("Global_Objects/Date", "Date")}} オブジェクト `Xmas95` の値に基づき、変数 `month` に 11 という値を代入します。
+以下の 2 行目の文は、{{jsxref("Date")}} オブジェクトである `xmas95` の値に基づき、変数 `month` に 11 という値を代入します。
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
-var month = Xmas95.getMonth();
+const xmas95 = new Date('December 25, 1995 23:15:30');
+const month = xmas95.getMonth();
 
 console.log(month); // 11
 ```
 
-> **Note:** **注:** 必要であれば、月の完全な名前 (例えば `January` ) は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat#Using_options) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> **メモ:** 必要に応じて、月の完全な名前（例えば `January` ）は [`Intl.DateTimeFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat#options_の使用) に `options` 引数を付けることで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
-> var options = { month: 'long'};
+> const options = { month: 'long'};
 > console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
 > // December
 > console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
@@ -50,13 +46,11 @@ console.log(month); // 11
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.getmonth', 'Date.prototype.getMonth')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getMonth")}}
+{{Compat}}
 
 ## 関連情報
 

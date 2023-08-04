@@ -2,7 +2,8 @@
 title: <noscript>
 slug: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 如果页面上的脚本类型不受支持或者当前在浏览器中关闭了脚本，则在 **HTML \<noscript> 元素**中定义脚本未被执行时的替代内容。
 
@@ -19,7 +20,7 @@ slug: Web/HTML/Element/noscript
 
    <p>当脚本被禁用并且它不是 {{HTMLElement("head")}} 元素的子元素时：任何 transparent content 都可以，但是在它的后代中必须没有 <code>&lt;noscript&gt;</code>元素。</p>
 
-   <p>否则：flow content 或 phrasing content 。</p>
+   <p>否则：flow content 或 phrasing content。</p>
    </td>
   </tr>
   <tr>
@@ -71,4 +72,4 @@ Rocks!
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

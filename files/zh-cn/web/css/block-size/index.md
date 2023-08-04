@@ -1,55 +1,63 @@
 ---
-title: 块级尺寸
+title: block-size
 slug: Web/CSS/block-size
 ---
-{{CSSRef}}{{SeeCompatTable}}CSS 的 block-size 属性定义了元素区块的水平宽度和垂直高度，也就是{{cssxref("width")}}或{{cssxref("height")}}属性，它们的大小取决于写入模式，即{{cssxref("writing-mode")}}的值。{{EmbedInteractiveExample("pages/css/block-size.html")}}
 
-## 语句
+{{CSSRef}}
+
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`block-size`** 根据元素的书写模式定义了元素块的横向或纵向尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("width")}} 或 {{CSSXref("height")}} 属性。
+
+若为纵向书写模式，则 `block-size` 的值对应于元素的宽度；否则对应于元素的高度。与此相关的属性为 {{CSSXref("inline-size")}}，此属性定义了元素另一方向的尺度。
+
+{{EmbedInteractiveExample("pages/css/block-size.html")}}
+
+## 语法
 
 ```css
-/* <length> values */
+/* <length> 值 */
 block-size: 300px;
 block-size: 25em;
 
-/* <percentage> values */
+/* <percentage> 值 */
 block-size: 75%;
 
-/* Keyword values */
-block-size: 25em border-box;
-block-size: 75% content-box;
+/* 关键词值 */
 block-size: max-content;
 block-size: min-content;
-block-size: available;
-block-size: fit-content;
+block-size: fit-content(20em);
 block-size: auto;
 
-/* Global values */
+/* 全局值 */
 block-size: inherit;
 block-size: initial;
-block-size: unset;If the writing mode is vertically oriented, the value of block-size relates to the width of the element; otherwise, it relates to the height of the element. A related property is {{cssxref("inline-size")}}, which defines the other dimension of the element.
+block-size: revert;
+block-size: revert-layer;
+block-size: unset;
 ```
 
-如果写入模式为垂直方向，block-size 的值与元素的宽度有关，否则取决于元素的高度。相关的属性是定义了元素的其它大小的{{cssxref("inline-size")}}。
+### 取值
 
-## 语句
+`block-size` 属性的取值与 {{cssxref("width")}} 和 {{cssxref("height")}} 属性相同。
 
-### 值
+## 形式定义
 
-`block-size` `属性的值是`p{{cssxref("width")}} 属性与 {{cssxref("height")}} 属性的值的结合。
+{{cssinfo}}
 
-### 正式语句
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
-### HTML
+### 竖排文本的块向尺寸
+
+#### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">示例文本</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .exampleText {
@@ -59,7 +67,9 @@ block-size: unset;If the writing mode is vertically oriented, the value of block
 }
 ```
 
-{{EmbedLiveSample("Example")}}
+#### 结果
+
+{{EmbedLiveSample("竖排文本的块向尺寸")}}
 
 ## 规范
 
@@ -67,9 +77,9 @@ block-size: unset;If the writing mode is vertically oriented, the value of block
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.block-size")}}
+{{Compat}}
 
-## 相关链接
+## 参见
 
-- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
+- 对应的实体属性：{{CSSXref("width")}} 和 {{CSSXref("height")}}
 - {{cssxref("writing-mode")}}

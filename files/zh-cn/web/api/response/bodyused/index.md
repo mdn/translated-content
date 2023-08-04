@@ -2,6 +2,7 @@
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable }}
 
 **`bodyUsed`** 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。
@@ -25,22 +26,26 @@ var myBodyUsed = response.bodyUsed;
 ### HTML Content
 
 ```html
-<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+<img
+  class="my-image"
+  src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png" />
 ```
 
 ### JS Content
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
+var myImage = document.querySelector(".my-image");
+fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
+  .then(function (response) {
     console.log(response.bodyUsed);
     var res = response.blob();
     console.log(response.bodyUsed);
     return res;
-}).then(function(response) {
+  })
+  .then(function (response) {
     var objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});
+  });
 ```
 
 {{EmbedLiveSample('示例', '100%', '250px')}}
@@ -51,10 +56,10 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.bodyUsed")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

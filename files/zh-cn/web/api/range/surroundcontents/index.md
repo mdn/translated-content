@@ -2,9 +2,10 @@
 title: Range.surroundContents
 slug: Web/API/Range/surroundContents
 ---
+
 {{ ApiRef("Range") }}
 
-**`Range.surroundContents()` **方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。
+**`Range.surroundContents()`** 方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。
 
 这个方法与 `newNode.appendChild(range.extractContents()); range.insertNode(newNode)` 等价。应用以后， `newNode` 包含在 `range` 的边界点中。
 
@@ -41,7 +42,7 @@ range.surroundContents(newParent);
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -49,8 +50,8 @@ range.surroundContents(newParent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.surroundContents")}}
+{{Compat}}
 
 ## 参见
 
-- [The DOM interfaces index](/en-US/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)

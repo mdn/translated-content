@@ -2,6 +2,7 @@
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`Navigator.oscpu`** プロパティは、現在のオペレーティングシステムを識別する文字列を返します。
@@ -28,7 +29,7 @@ oscpuInfo = navigator.oscpu
 | Linux 64 ビット (32 ビット版) | `uname -s` の出力結果に `i686 on x86_64`を加えたもの |
 | Linux                         | `uname -sm` の出力結果                               |
 
-1.  x.y はオペレーティングシステムのバージョンを参照
+1. x.y はオペレーティングシステムのバージョンを参照
 
 ## 例
 
@@ -46,9 +47,7 @@ osInfo(); // alerts "Windows NT 6.0" for example
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-oscpu', 'NavigatorID: oscpu')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

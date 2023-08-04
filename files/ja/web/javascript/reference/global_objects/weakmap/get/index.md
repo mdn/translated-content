@@ -1,14 +1,8 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
+
 {{JSRef}}
 
 **`get()`** メソッドは、`WeakMap` オブジェクトから指定された要素を返します。
@@ -44,9 +38,7 @@ wm.get('baz');  // undefined を返す
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

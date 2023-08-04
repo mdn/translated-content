@@ -2,6 +2,7 @@
 title: 409 Conflict
 slug: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
 响应状态码 **`409 Conflict`** 表示请求与服务器端目标资源的当前状态相冲突。

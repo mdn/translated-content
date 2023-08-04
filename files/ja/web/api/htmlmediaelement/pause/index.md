@@ -1,14 +1,17 @@
 ---
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
+l10n:
+  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.pause()`** メソッドはメディアの再生を一時停止します。 メディアがすでに一時停止状態にある場合、このメソッドは効果がありません。
 
 ## 構文
 
-```js
+```js-nolint
 pause()
 ```
 

@@ -2,6 +2,7 @@
 title: Storage
 slug: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API) 中的 **`Storage`** 介面提供了存取特定 domain session 及本機儲存的方法。舉例而言，它能夠對存取的資料進行新增、刪除、修改，
@@ -35,29 +36,29 @@ slug: Web/API/Storage
 如果沒有，便執行另一個函示 `populateStorage()`，他使用 {{domxref("Storage.setItem()")}} 先設定 storage 項目的值，然後才執行`setStyles()`。
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 }
 setStyles();
 
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 }
 
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -69,7 +70,7 @@ function setStyles() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 **debugger 的宣告**會執行可用的除錯功能，例如設定斷點。如果沒有可用的除錯功能，這個宣告沒有任何作用。
@@ -18,8 +19,8 @@ debugger;
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // 執行並驗證一些潛在的問題、或是單步執行之類的。
+  debugger;
+  // 執行並驗證一些潛在的問題、或是單步執行之類的。
 }
 ```
 
@@ -33,7 +34,7 @@ function potentiallyBuggyCode() {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.debugger")}}
+{{Compat}}
 
 ## 參見
 

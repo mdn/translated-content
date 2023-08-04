@@ -2,6 +2,7 @@
 title: Element.scrollTopMax
 slug: Web/API/Element/scrollTopMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`Element.scrollTopMax`** 返回一个只读 Number 表示元素所能滚动的最大高度
@@ -16,9 +17,9 @@ var pxl = elt.scrollTopMax;
 
 此属性不在当前规范中
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Element.scrollTopMax")}}
+{{Compat}}
 
 ## See also
 

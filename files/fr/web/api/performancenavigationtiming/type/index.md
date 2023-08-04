@@ -1,15 +1,8 @@
 ---
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
-translation_of: Web/API/PerformanceNavigationTiming/type
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`type`** renvoie une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type de navigation. La valeur doit être l'une des suivantes :
@@ -46,13 +39,18 @@ function print_nav_timing_data() {
     console.log("= Entrée de navigation : entry[" + i + "]");
     let p = perfEntries[i];
     // propriétés du DOM
-    console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
+    console.log(
+      "Contenu du DOM chargé = " +
+        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
+    );
     console.log("Contenu du DOM complet = " + p.domComplete);
     console.log("Contenu du DOM interactif = " + p.interactive);
 
     // temps de chargement et de déchargement des documents
     console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart));
+    console.log(
+      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
+    );
 
     // autres propriétés
     console.log("type = " + p.type);

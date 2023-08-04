@@ -1,15 +1,8 @@
 ---
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
-tags:
-  - HSTS
-  - HTTP
-  - HTTPS
-  - セキュリティ
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Strict-Transport-Security`** レスポンスヘッダー (しばしば {{Glossary("HSTS")}} と略されます) は、ウェブサイトがブラウザーに HTTP の代わりに HTTPS を用いて通信を行うよう指示するためのものです。
@@ -50,11 +43,11 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 ## 解説
 
-もし、訪問者が http\://www\.foo.com/ または単に foo.com と入力したとき、ウェブサイトが接続を HTTP で受け付け、 HTTPS にリダイレクトするようになっていると、訪問者はリダイレクトされる前にまず、暗号化されないバージョンのサイトと通信する可能性があります。これは中間者攻撃の機会を作ってしまいます。リダイレクトは訪問者を、本来のサイトの安全なバージョンではなく、悪意のあるサイトに導くために利用される可能性があるからです。
+もし、訪問者が `http://www.foo.com/` または単に foo.com と入力したとき、ウェブサイトが接続を HTTP で受け付け、 HTTPS にリダイレクトするようになっていると、訪問者はリダイレクトされる前にまず、暗号化されないバージョンのサイトと通信する可能性があります。これは中間者攻撃の機会を作ってしまいます。リダイレクトは訪問者を、本来のサイトの安全なバージョンではなく、悪意のあるサイトに導くために利用される可能性があるからです。
 
 HTTP の Strict Transport Security ヘッダーは、ブラウザーに対してサイトを HTTP を使用して読み込まず、サイトへのすべてのアクセスを、自動的に HTTP から HTTPS リクエストに変換するよう指示することができます。
 
-> **Note:** **メモ:** サイトに HTTP を使用してアクセスしたとき、ブラウザーは `Strict-Transport-Security` ヘッダーを無視します。これは攻撃者が HTTP 接続に介入して、ヘッダーを挿入したり削除したりするかもしれないからです。ウェブサイトに HTTPS でアクセスして、証明書のエラーがない場合、ブラウザーはサイトが HTTPS でアクセスできることを知り、 `Strict-Transport-Security` ヘッダーを信用します。
+> **メモ:** サイトに HTTP を使用してアクセスしたとき、ブラウザーは `Strict-Transport-Security` ヘッダーを無視します。これは攻撃者が HTTP 接続に介入して、ヘッダーを挿入したり削除したりするかもしれないからです。ウェブサイトに HTTPS でアクセスして、証明書のエラーがない場合、ブラウザーはサイトが HTTPS でアクセスできることを知り、 `Strict-Transport-Security` ヘッダーを信用します。
 
 ### 事例
 
@@ -93,9 +86,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 仕様書
 
-| 仕様書                       | 状態                     | 備考     |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -106,6 +97,6 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - ブログ記事: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - ブログ記事: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP の記事: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
+- Wikipedia: [HTTP Strict Transport Security](https://ja.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 - ブラウザー試験サイト: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
 - [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

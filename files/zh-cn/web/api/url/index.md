@@ -2,11 +2,12 @@
 title: URL
 slug: Web/API/URL
 ---
+
 {{APIRef("URL API")}}
 
-**`URL`**接口用于解析，构造，规范化和编码 {{glossary("URL", "URLs")}}。 它通过提供允许您轻松阅读和修改 URL 组件的属性来工作。 通常，通过在调用 URL 的构造函数时将 URL 指定为字符串或提供相对 URL 和基本 URL 来创建新的 URL 对象。 然后，您可以轻松读取 URL 的已解析组成部分或对 URL 进行更改。
+**`URL`** 接口用于解析，构造，规范化和编码 {{glossary("URL")}}。它通过提供允许您轻松阅读和修改 URL 组件的属性来工作。通常，通过在调用 URL 的构造函数时将 URL 指定为字符串或提供相对 URL 和基本 URL 来创建新的 URL 对象。然后，您可以轻松读取 URL 的已解析组成部分或对 URL 进行更改。
 
-如果浏览器尚不支持{{domxref("URL.URL", "URL()")}}构造函数，则可以使用{{domxref("Window")}}中的{{domxref("Window.URL")}}属性。 确保检查您的任何目标浏览器是否要求对此添加前缀。
+如果浏览器尚不支持{{domxref("URL.URL", "URL()")}}构造函数，则可以使用{{domxref("Window")}}中的{{domxref("Window.URL")}}属性。确保检查您的任何目标浏览器是否要求对此添加前缀。
 
 {{AvailableInWorkers}}
 
@@ -34,9 +35,9 @@ slug: Web/API/URL
 - {{domxref("URL.port", "port")}}
   - : 包含 URL 端口号的 {{domxref("USVString")}}。
 - {{domxref("URL.protocol", "protocol")}}
-  - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'。`
+  - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'`。
 - {{domxref("URL.search", "search")}}
-  - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串； 如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
+  - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : {{domxref("URLSearchParams")}}对象，可用于访问`search`中找到的各个查询参数。
 - {{domxref("URL.username","username")}}
@@ -45,9 +46,9 @@ slug: Web/API/URL
 ## 方法
 
 - {{domxref("URL.toString", "toString()")}}
-  - : 返回包含整个 URL 的{{domxref("USVString")}}。 它是{{domxref("URL.href")}}的同义词，尽管它不能用于修改值。
+  - : 返回包含整个 URL 的{{domxref("USVString")}}。它是{{domxref("URL.href")}}的同义词，尽管它不能用于修改值。
 - {{domxref("URL.toJSON", "toJSON()")}}
-  - : 返回包含整个 URL 的{{domxref("USVString")}}。 它返回与`href`属性相同的字符串。
+  - : 返回包含整个 URL 的{{domxref("USVString")}}。它返回与`href`属性相同的字符串。
 
 ## 静态方法
 
@@ -73,7 +74,7 @@ url.hash = 'tabby';
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
-URL 根据 {{RFC(3986)}}中的规则进行编码。 例如：
+URL 根据 {{RFC(3986)}}中的规则进行编码。例如：
 
 ```plain
 url.pathname = 'démonstration.html';
@@ -102,7 +103,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## 浏览器兼容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,13 +1,8 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
-tags:
-  - API
-  - Animation
-  - Reference
-  - Web Animations
-translation_of: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 L'**API Web Animations** permet de synchroniser et de chronométrer les changements de présentation d'une page Web, c'est-à-dire l'animation d'éléments DOM. Pour ce faire, il combine deux modèles : le modèle de synchronisation et le modèle d'animation.

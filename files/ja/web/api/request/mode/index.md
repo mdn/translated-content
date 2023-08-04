@@ -1,55 +1,58 @@
 ---
 title: Request.mode
 slug: Web/API/Request/mode
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Fetch")}}{{SeeCompatTable}}
 
-{{domxref("Request")}} インターフェースの **`mode`** 読み取り専用プロパティは、リクエストのモード（たとえば、` cors、``no-cors、``cors-with-forced-preflight、``same-origin `）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
+{{APIRef("Fetch")}}
 
-## 構文
+**`mode`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのモード（たとえば、`cors`、`no-cors`、`same-origin`、`navigate`、`websocket`）を保持します。これは、オリジン間リクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
 
-```
-var myMode = request.mode;
-```
+## 値
 
-### 値
+- `RequestMode` の値です。
 
-{{domxref("RequestMode")}} の値は以下のいずれかです。
+  - : _mode_ に関連する値には、次のものが使用できます。
 
-- `same-origin` — このモードを設定してほかのオリジンにリクエストをした場合、結果は単純にエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
-- `no-cors` — `HEAD か` ` GET、``POST  `以外のメソッドを防ぎます。任意の ServiceWorkers がこれらをインターセプトする場合、[シンプルヘッダー](https://fetch.spec.whatwg.org/#simple-header)を除いてヘッダーを追加したりオーバーライドしたりできなくなります。加えて、JavaScript は解決された {{domxref("Response")}} のプロパティにはアクセスできません。これは ServiceWorkers が Web のセマンティクスに影響を与えないことを保証し、ドメインを跨いでデータが流出することでセキュリティやプライバシーの問題が生じるのを防ぎます。
-- `cors` — クロスオリジンリクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/Access_control_CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーだけが {{domxref("Response")}} で使用できますが、body は読み取り可能です。
-- `navigate` — ナビゲーションを許可します。`navigate` は HTML ナビゲーションによってのみ利用されることを意図しています。ナビゲーションリクエストはドキュメント間のナビゲーションの場合にだけ生成されます。
+    - `same-origin`
+      - : このモードを設定してほかのオリジンにリクエストをした場合、結果はエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
+    - `no-cors`
+      - : メソッドが `HEAD`、`GET`、`POST` 以外にならないようにし、ヘッダーが[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のものにならないようにします。サービスワーカーがこれらのリクエストに介入した場合、[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のヘッダーを追加したり上書きしたりすることはできません。さらに、 JavaScript で結果の {{domxref("Response")}} のプロパティにアクセスすることはできません。これは、サービスワーカーがウェブの意味づけに影響を与えないようにし、ドメイン間でデータが漏れることによって生じるセキュリティとプライバシーの問題を防ぐためです。
+    - `cors`
+      - : オリジン間リクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーしか {{domxref("Response")}} からは見えないようになりますが、本体は読み取り可能です。
+    - `navigate`
+      - : ナビゲーションに対応しているモードです。 `navigate` 値は HTML ナビゲーションでのみ使用されることを意図しています。 navigate リクエストは文書内のナビゲーションをするときだけ作成されます。
+    - `websocket`
+      - : [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続を確立するときだけ使用される特殊なモードです。
 
-#### デフォルトの mode
+#### 既定のモード
 
-リクエストは様々な方法で初期化されますが、mode の値はその方法によって変わります。
+リクエストは様々な方法で開始されますが、リクエストのモードは、それが開始された具体的な手段によって異なります。
 
-たとえば、`Request`オブジェクトが{{domxref("Request.Request")}}コンストラクタで生成された場合、`mode`の値は`cors`にセットされます。
+たとえば、 `Request` オブジェクトが {{domxref("Request.Request", "Request()")}} コンストラクターで生成された場合、 `mode` の値は `cors` に設定されます。
 
-しかし、リクエストが{{domxref("Request.Request")}}コンストラクタ以外で生成された場合は`mode`として通常`no-cors`がセットされます。たとえばマークアップから生成された埋め込みリソースのようなリクエストは、[`crossorigin`](/ja/docs/Web/HTML/CORS_settings_attributes)アトリビュートが設定されていない限り、`no-cors`を利用します。そのようなものの例として、{{HTMLElement("link")}} や {{HTMLElement("script")}} エレメント（ただしモジュールを除く）、{{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} エレメントなどが存在します。
+しかし、リクエストが {{domxref("Request.Request", "Request()")}} コンストラクター以外で生成された場合は、ふつう `no-cors` がモードとして設定されます。たとえば、マークアップから生成された埋め込みリソースのようなリクエストは、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が設定されていない限り、 `no-cors`を利用します。そのようなものの例として、 {{HTMLElement("link")}} や {{HTMLElement("script")}} 要素（ただしモジュールを除く）、 {{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} 要素などが存在します。
 
 ## 例
 
-以下のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストモードを変数に保存しています：
+以下のスニペットは、 {{domxref("Request.Request", "Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストモードを変数に保存しています。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myMode = myRequest.mode; // 既定で "cors" を返す。
+const myRequest = new Request('flowers.jpg');
+const myMode = myRequest.mode; // returns "cors" by default
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                             | 状態                     | コメント           |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-mode','mode')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Request.mode")}}
 
-## 関連項目
+## 関連情報
 
-- [**ServiceWorker API**](/ja/docs/Web/API/ServiceWorker_API)
-- [**HTTP access control (CORS)**](/ja/docs/Web/HTTP/Access_control_CORS)
-- [**HTTP**](/ja/docs/Web/HTTP)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)

@@ -2,13 +2,14 @@
 title: 流程控制與例外處理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以用這些陳述式來增加程式的互動性。這個章節將會概要介紹陳述式。
 
 [JavaScript 參考](/zh-TW/docs/Web/JavaScript/Reference/Statements)中有比本章更多關於陳述式的細節。 在 Javascript 程式碼中，分號（;）被用來隔開陳述式。
 
-任何 JavaScript 運算式也是一個陳述式。 有關運算式的完整資訊，請參閱[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)。
+任何 JavaScript 運算式也是一個陳述式。 有關運算式的完整資訊，請參閱[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)。
 
 ## 區塊陳述式
 
@@ -25,7 +26,7 @@ JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以
 }
 ```
 
-### **範例**
+### 範例
 
 區塊陳述式經常與流程控制陳述式（例如：`if`、`for`、`while`）搭配使用。
 
@@ -97,7 +98,7 @@ if (指定條件) {
 
 建議不要在以賦值作爲條件運算式，因為"賦值"常常被和"等於"搞混。 例如， 不要寫出如下面的程式碼:
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
   /* 陳述式 */
 }
@@ -132,17 +133,20 @@ if (b) // 這會是 True
 if (b == true) // 這會是 false
 ```
 
-#### **範例**
+#### 範例
 
-在下面的範例中，函式 `checkData` 回傳 `true` 當 `Text` 物件的長度爲三；否則， 顯示出 alert 並回傳 `false`。
+在下面的範例中，函式 `checkData` 回傳 `true` 當 `Text` 物件的長度爲三；否則，顯示出 alert 並回傳 `false`。
 
 ```js
 function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
-    alert("請輸入恰好三個字元. " +
-    document.form1.threeChar.value + " is not valid.");
+    alert(
+      "請輸入恰好三個字元. " +
+        document.form1.threeChar.value +
+        " is not valid.",
+    );
     return false;
   }
 }
@@ -171,7 +175,7 @@ switch (運算式) {
 
 與每個 `case` 子句相關聯的 `break` 陳述式（選擇性）確保程序在發現匹配的陳述式之後退出 `switch`，並在 `switch` 後的陳述式中繼續執行。 如果省略 `break`，程序將繼續在 `switch` 陳述式中的下一個陳述式執行。
 
-#### **範例**
+#### 範例
 
 在下面範例中，如果變數 `fruittype` 為「Bananas」，程序將與「Bananas」匹配並執行相關陳述式。 當遇到 `break` 時，程序離開 `switch` 並執行 `switch` 後的陳述式。 如果省略 `break`，也將執行 case 「Cherries」的陳述式。
 
@@ -196,7 +200,7 @@ switch (fruittype) {
     console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-   console.log("Sorry, we are out of " + fruittype + ".");
+    console.log("Sorry, we are out of " + fruittype + ".");
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -226,13 +230,17 @@ throw expression;
 您可以拋出任何運算式，而不僅僅是特定類型的運算式。以下的程式碼會拋出一些不同類型的例外：
 
 ```js
-throw "Error2";   // 字串形態
-throw 42;         // 數字形態
-throw true;       // True/False
-throw {toString: function() { return "我是物件!"; } };
+throw "Error2"; // 字串形態
+throw 42; // 數字形態
+throw true; // True/False
+throw {
+  toString: function () {
+    return "我是物件!";
+  },
+};
 ```
 
-> **備註：** 您可以在拋出例外時指定物件。 然後，可以在 catch 區塊中引用對象的屬性。
+> **備註：** 您可以在拋出例外時指定物件。然後，可以在 catch 區塊中引用對象的屬性。
 
 ```js
 // 創建類型爲 UserException 的物件
@@ -243,9 +251,9 @@ function UserException(message) {
 
 // 讓例外轉換成整齊的字串當它被當作字串使用時
 // （舉例來說:於 error console）
-UserException.prototype.toString = function() {
+UserException.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // 創建一個物件的實例並丟出它
 throw new UserException("Value too high");
@@ -262,8 +270,20 @@ throw new UserException("Value too high");
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
@@ -271,10 +291,10 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // 函式可以丟出例外
-}
-catch (e) {
+} catch (e) {
   monthName = "unknown";
   logMyErrors(e); // 將例外傳至例外處理機制
 }
@@ -297,8 +317,7 @@ catch (catchID) {
 ```js
 try {
   throw "myException"; // 產生例外
-}
-catch (e) {
+} catch (e) {
   // 用於處理例外的陳述式
   logMyErrors(e); // 將例外物件傳給 error handler
 }
@@ -314,7 +333,7 @@ catch (e) {
 openMyFile();
 try {
   writeMyFile(theData); // 可能產生例外
-} catch(e) {
+} catch (e) {
   handleError(e); // 處理可能發生的例外
 } finally {
   closeMyFile(); // 總是在 try 結束後關閉檔案
@@ -328,10 +347,10 @@ function f() {
   try {
     console.log(0);
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // 這個回傳會被擱置
-                 // 直到 finally 區塊結束
+    // 直到 finally 區塊結束
     console.log(2); // 不會到達這裏
   } finally {
     console.log(3);
@@ -350,10 +369,10 @@ f(); // console 0, 1, 3; 會回傳false
 function f() {
   try {
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // 此處的 throw 陳述式將被擱置到
-             // finally區塊結束
+    // finally 區塊結束
   } finally {
     return false; // 覆寫先前的"throw"
   }
@@ -362,9 +381,9 @@ function f() {
 
 try {
   f();
-} catch(e) {
-  // 這裏永遠不可能到達因為在f函式中catch的throw
-  // 被finally中的return覆寫了
+} catch (e) {
+  // 這裏永遠不可能到達因為在 f 函式中 catch 的 throw
+  // 被 finally 中的 return 覆寫了
   console.log('caught outer "bogus"');
 }
 
@@ -377,7 +396,7 @@ try {
 
 ### 使用 `Error` 物件
 
-根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
+根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見[巢狀 try 區塊](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)位於 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 參考資料頁面。
 
 假如您要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 `catch` 區塊並不要區分你自己的例外和系統的），你可以使用 `Error` 構造子。舉例來說：
 
@@ -416,20 +435,23 @@ catch (e) {
 
 ```js
 function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-    request.onload = function() {
+    request.open("GET", url);
+    request.responseType = "blob";
+    request.onload = function () {
       if (request.status === 200) {
         resolve(request.response);
       } else {
-        reject(Error('Image didn\'t load successfully; error code:'
-                     + request.statusText));
+        reject(
+          Error(
+            "Image didn't load successfully; error code:" + request.statusText,
+          ),
+        );
       }
     };
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
+    request.onerror = function () {
+      reject(Error("There was a network error."));
     };
     request.send();
   });

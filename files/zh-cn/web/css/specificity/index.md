@@ -2,9 +2,10 @@
 title: 优先级
 slug: Web/CSS/Specificity
 ---
+
 {{CSSRef}}
 
-浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/en/CSS/CSS_Reference#Selectors)组成的匹配规则。
+浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/CSS/CSS_Reference#Selectors)组成的匹配规则。
 
 ## 优先级是如何计算的？
 
@@ -24,7 +25,7 @@ slug: Web/CSS/Specificity
 2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) (例如，`.example`)，属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
 3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
 
-**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['``'](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择符**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择符**（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/zh-CN/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
 您可以访问 ["Specificity" in "Cascade and inheritance"](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2) 或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
@@ -45,26 +46,36 @@ slug: Web/CSS/Specificity
 1. 更好地利用 CSS 级联属性
 2. 使用更具体的规则。在您选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    无论 c​ss 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
+   无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
 
 3. 对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
-    ```css
-    #myId#myId span { color: yellow; }
-    .myClass.myClass span { color: orange; }
-    ```
+   ```css
+   #myId#myId span {
+     color: yellow;
+   }
+   .myClass.myClass span {
+     color: orange;
+   }
+   ```
 
 #### 什么的情况下可以使用 `!important`：
 
@@ -104,20 +115,28 @@ p.awesome {
 
 #### 怎样覆盖 `!important`
 
-A) 很简单，只需再添加一条 带 `!important` 的 CSS 规则，再给这个给选择器更高的优先级（添加一个标签，ID 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则比胜）。
+A) 很简单，只需再添加一条 带 `!important` 的 CSS 规则，再给这个给选择器更高的优先级（添加一个标签，ID 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则必胜）。
 
 一些拥有更高优先级的例子：
 
 ```css
-   table td { height: 50px !important; }
-.myTable td { height: 50px !important; }
-#myTable td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.myTable td {
+  height: 50px !important;
+}
+#myTable td {
+  height: 50px !important;
+}
 ```
 
 B) 或者使用相同的选择器，但是置于已有的样式之后：
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) 或干脆改写原来的规则，以避免使用 `!important`。
@@ -173,9 +192,9 @@ div:not(.outer) p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_not_exception-example")}}
+{{EmbedLiveSample(":is() 和 :not() 例外规则")}}
 
-### `:where()` 例外规则 {{Experimental_Inline}}
+### `:where()` 例外规则
 
 {{SeeCompatTable}}
 
@@ -207,8 +226,14 @@ div p {
 将其应用于以下的 HTML 时：
 
 ```html hidden
-<div id=no-where-support>
-⚠️ Your browser doesn't support the <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where">:where()</a></code> pseudo-class.
+<div id="no-where-support">
+  ⚠️ Your browser doesn't support the
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where"
+      >:where()</a
+    ></code
+  >
+  pseudo-class.
 </div>
 ```
 
@@ -223,7 +248,7 @@ div p {
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample("The_where_exception")}}
+{{EmbedLiveSample(":where() 例外规则")}}
 
 ### 基于形式的优先级（Form-based specificity）
 
@@ -326,10 +351,10 @@ h1 {
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

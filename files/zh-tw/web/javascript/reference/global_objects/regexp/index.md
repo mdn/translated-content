@@ -2,6 +2,7 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 物件被用來比對符合自訂規則的文字。
@@ -10,17 +11,17 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 ## 說明
 
-建立 `RegExp` 物件有兩種方式：_文字表示法 (literal notation)_ 和 _建構子 (constructor)。_
+建立 `RegExp` 物件有兩種方式：_文字表示法_（literal notation）和*建構子*（constructor）。
 
-- **文字表示法** 的參數，頭尾以斜線標註，且不使用引號標註。
-- **建構子函式** 的參數，頭尾不以斜線標註，但使用引號標註。
+- **文字表示法**的參數，頭尾以斜線標註，且不使用引號標註。
+- **建構子函式**的參數，頭尾不以斜線標註，但使用引號標註。
 
 以下的表達式會建立出相同的正規表達式:
 
 ```js
-/ab+c/i
-new RegExp(/ab+c/, 'i') // literal notation
-new RegExp('ab+c', 'i') // constructor
+/ab+c/i;
+new RegExp(/ab+c/, "i"); // literal notation
+new RegExp("ab+c", "i"); // constructor
 ```
 
 The literal notation provides a compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.
@@ -34,13 +35,13 @@ When using the constructor function, the normal string escape rules (preceding s
 For example, the following are equivalent:
 
 ```js
-let re = /\w+/
-let re = new RegExp('\\w+')
+let re = /\w+/;
+let re = new RegExp("\\w+");
 ```
 
 ## Constructor
 
-- [`RegExp()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
+- [`RegExp()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
   - : Creates a regular expression object.
 
 ## Properties
@@ -62,7 +63,7 @@ The global `RegExp` object has no methods of its own. However, it does inherit s
 
 ### Properties
 
-See also [deprecated `RegExp` properties.](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
+See also [deprecated `RegExp` properties.](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties)
 
 Note that several of the {{JSxRef("RegExp")}} properties have both long and short (Perl-like) names. Both names always refer to the same value. Perl is the programming language from which JavaScript modeled its regular expressions.
 
@@ -117,10 +118,10 @@ The following script uses the {{jsxref("String.prototype.replace()", "replace()"
 In the replacement text, the script uses `$1` and `$2` to indicate the results of the corresponding matching parentheses in the regular expression pattern.
 
 ```js
-let re = /(\w+)\s(\w+)/
-let str = 'John Smith'
-let newstr = str.replace(re, '$2, $1')
-console.log(newstr)
+let re = /(\w+)\s(\w+)/;
+let str = "John Smith";
+let newstr = str.replace(re, "$2, $1");
+console.log(newstr);
 ```
 
 This displays `"Smith, John"`.
@@ -130,9 +131,9 @@ This displays `"Smith, John"`.
 The default line ending varies depending on the platform (Unix, Windows, etc.). The line splitting provided in this example works on all platforms.
 
 ```js
-let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
-let lines = text.split(/\r\n|\r|\n/)
-console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+let text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
+let lines = text.split(/\r\n|\r|\n/);
+console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
 Note that the order of the patterns in the regular expression matters.
@@ -140,7 +141,7 @@ Note that the order of the patterns in the regular expression matters.
 ### Using regular expression on multiple lines
 
 ```js
-let s = 'Please yes\nmake my day!'
+let s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // Returns null
@@ -151,17 +152,17 @@ s.match(/yes[^]*day/);
 
 ### Using a regular expression with the sticky flag
 
-The [sticky flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
+The [sticky flag](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) indicates that the regular expression performs sticky matching in the target string by attempting to match starting at {{jsxref("RegExp.prototype.lastIndex")}}.
 
 ```js
-let str = '#foo#'
-let regex = /foo/y
+let str = "#foo#";
+let regex = /foo/y;
 
-regex.lastIndex = 1
-regex.test(str)      // true
-regex.lastIndex = 5
-regex.test(str)      // false (lastIndex is taken into account with sticky flag)
-regex.lastIndex      // 0 (reset after match failure)
+regex.lastIndex = 1;
+regex.test(str); // true
+regex.lastIndex = 5;
+regex.test(str); // false (lastIndex is taken into account with sticky flag)
+regex.lastIndex; // 0 (reset after match failure)
 ```
 
 ### The difference between the sticky flag and the global flag
@@ -170,7 +171,8 @@ With the sticky flag y, the next match has to happen at the lastIndex position, 
 
 ```js
 re = /\d/y;
-while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
+while ((r = re.exec("123 456")))
+  console.log(r, "AND re.lastIndex", re.lastIndex);
 
 // [ '1', index: 0, input: '123 456', groups: undefined ] AND re.lastIndex 1
 // [ '2', index: 1, input: '123 456', groups: undefined ] AND re.lastIndex 2
@@ -189,27 +191,27 @@ To match characters from other languages such as Cyrillic or Hebrew, use `\uhhhh
 This example demonstrates how one can separate out Unicode characters from a word.
 
 ```js
-let text = 'Образец text на русском языке'
-let regex = /[\u0400-\u04FF]+/g
+let text = "Образец text на русском языке";
+let regex = /[\u0400-\u04FF]+/g;
 
-let match = regex.exec(text)
-console.log(match[0])        // logs 'Образец'
-console.log(regex.lastIndex) // logs '7'
+let match = regex.exec(text);
+console.log(match[0]); // logs 'Образец'
+console.log(regex.lastIndex); // logs '7'
 
-let match2 = regex.exec(text)
-console.log(match2[0])       // logs 'на' [did not log 'text']
-console.log(regex.lastIndex) // logs '15'
+let match2 = regex.exec(text);
+console.log(match2[0]); // logs 'на' [did not log 'text']
+console.log(regex.lastIndex); // logs '15'
 
 // and so on
 ```
 
-The [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`. One can also use an external resource for getting the complete Unicode block range for different scripts, such as [Regexp-Unicode-block](http://kourge.net/projects/regexp-unicode-block).
+The [Unicode property escapes](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) feature introduces a solution, by allowing for a statement as simple as `\p{scx=Cyrl}`. One can also use an external resource for getting the complete Unicode block range for different scripts, such as [Regexp-Unicode-block](http://kourge.net/projects/regexp-unicode-block).
 
 ### Extracting sub-domain name from URL
 
 ```js
-let url = 'http://xxx.domain.com'
-console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
+let url = "http://xxx.domain.com";
+console.log(/[^.]+/.exec(url)[0].substr(7)); // logs 'xxx'
 ```
 
 ## Specifications
@@ -218,7 +220,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ### Firefox-specific notes
 
@@ -226,13 +228,13 @@ Starting with Firefox 34, in the case of a capturing group with quantifiers prev
 
 ```js
 // Firefox 33 or older
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 });
 // 'group:'
 
 // Firefox 34 or newer
-'x'.replace(/x(.)?/g, function(m, group) {
+"x".replace(/x(.)?/g, function (m, group) {
   console.log("'group:" + group + "'");
 });
 // 'group:undefined'
@@ -242,6 +244,6 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

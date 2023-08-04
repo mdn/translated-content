@@ -1,13 +1,8 @@
 ---
 title: String() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/String/String
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/String
 ---
+
 {{JSRef}}
 
 **`String`** コンストラクターは新しい {{jsxref("String")}} オブジェクトを生成するために使用します。関数として呼び出された場合は、{{Glossary("string", "プリミティブ文字列", "", 1)}}への型変換を行うので、普通はより便利です。
@@ -39,9 +34,7 @@ typeof new String('Hello world'); // object
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string-constructor', 'String constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

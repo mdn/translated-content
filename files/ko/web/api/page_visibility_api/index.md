@@ -1,13 +1,8 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Documents
-  - Tutorials
-translation_of: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 **Page Visibility API**는 웹페이지가 visible 또는 focus 상태인지 당신이 알도록 한다. 탭 브라우징 사용시에, background 에 어떤 웹페이지가 존재하면서 유저에게 보이지 않을 가능성이 있다. 사용자가 웹페이지를 최소화하거나 다른 탭으로 이동했을 때, 이 API 는 페이지의 visibility 를 관찰하는 {{event("visibilitychange")}} 이벤트를 전달한다. 당신은 이벤트를 감지할 수 있고, 어떠한 action 을 수행하거나 다르게 반응할 수 있다. 예를 들어, 당신의 웹 앱이 video 를 재생한다면, 사용자가 다른 브라우저를 보고 있을 때 video 를 pause 하고, 탭으로 돌아왔을 때 다시 재생할 수 있다. 사용자는 video 에서 자신의 위치를 잃지 않고 계속 시청할 수 있다.
@@ -34,7 +29,8 @@ Visibility states of an {{HTMLElement("iframe")}} 의 visibility 상태는 부�
 ```js
 // Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -58,39 +54,51 @@ function handleVisibilityChange() {
 }
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
-if (typeof document.addEventListener === "undefined" || typeof document[hidden] === "undefined") {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document[hidden] === "undefined"
+) {
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
 ## Properties overview
 
-### `document.hidden` <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only</span>
+### `document.hidden` Read only
 
 페이지가 사용자에게 보이지 않는 것으로 간주되는 상태일 경우 `true` 를 반환하고, 그렇지 않을 경우 `false` 를 반환한다.
 
-### `document.visibilityState` <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only</span>
+### `document.visibilityState` Read only
 
 는 document 의 visibility 상태를 나타내는 `string`. 가능한 values:
 
 - `visible` : 페이지 컨텐츠가 적어도 부분적으로 보일 수 있다. 실제로 이것은 페이지가 최소화되지 않은 window 의 맨 앞쪽 탭임을 의미한다.
 - `hidden` : 페이지 컨텐츠가 사용자에게 보이지 않는다. 실제로 이것은 document 가 뒤쪽 탭이거나 최소화된 window 의 부분이거나, OS Screen 의 lock 이 활성화되어 있음을 의미한다.
-- `prerender` : 페이지 컨텐츠가 프리렌더되고 있으며 유저에게 보이지 않는다 (`document.hidden `목적으로 숨겨진 것으로 간주). document 는 이 상태에서 시작될 수도 있지만, 다른 값으로부터 이 상태로 전환되지는 않을 것이다. 참고: 브라우저 지원은 optional 하다.
+- `prerender` : 페이지 컨텐츠가 프리렌더되고 있으며 유저에게 보이지 않는다 (`document.hidden` 목적으로 숨겨진 것으로 간주). document 는 이 상태에서 시작될 수도 있지만, 다른 값으로부터 이 상태로 전환되지는 않을 것이다. 참고: 브라우저 지원은 optional 하다.
 - `unloaded` : 페이지가 메모리로부터 unload 되고 있다. 참고: 브라우저 지원은 optional 하다.
 
 ```js
@@ -98,7 +106,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -106,7 +114,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -116,5 +124,5 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## See also
 
-- Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") by Google
+- Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) on the IEBlog.
+- Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

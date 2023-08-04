@@ -2,6 +2,7 @@
 title: クライアントサイドウェブ開発ツールの理解
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
 ---
+
 {{LearnSidebar}}
 
 クライアントサイドツールには、なかなか難しいものもありますが、この記事シリーズでは、いくつかの一般的なクライアントサイドツールの種類について、その目的を示し、一緒に連携させることができるツール、パッケージマネージャを使ったインストール方法、
@@ -13,7 +14,13 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools
 
 ここで紹介しているツールを使う前に、まずはコアの[HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、[JavaScript](/ja/docs/Learn/JavaScript)の基礎を学習することをお勧めします。
 
-> **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者を目指している方へ
+>
+> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## ガイド
 

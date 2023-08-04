@@ -1,13 +1,8 @@
 ---
 title: polyline
 slug: Web/SVG/Element/polyline
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/polyline
 ---
+
 {{SVGRef}}
 
 ## 概要
@@ -20,16 +15,16 @@ translation_of: Web/SVG/Element/polyline
 
 ## 例
 
-» [polyline.svg](polyline.svg "https://developer.mozilla.orgpolyline.svg")
+» [polyline.svg](polyline.svg)
 
 ## 属性
 
 ### グローバル属性
 
-- [条件処理属性](/ja/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [コア属性](/ja/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [グラフィカルイベント属性](/ja/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [条件処理属性](/ja/SVG/Attribute#ConditionalProccessing) »
+- [コア属性](/ja/SVG/Attribute#Core) »
+- [グラフィカルイベント属性](/ja/SVG/Attribute#GraphicalEvent) »
+- [プレゼンテーション属性](/ja/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -41,14 +36,11 @@ translation_of: Web/SVG/Element/polyline
 
 ## DOM インターフェイス
 
-この要素は [`SVGPolylineElement`](/ja/DOM/SVGPolylineElement "en/DOM/SVGPolylineElement") インターフェイスを提供します。
+この要素は [`SVGPolylineElement`](/ja/DOM/SVGPolylineElement) インターフェイスを提供します。
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                     | コメント   |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'shapes.html#PolylineElement', '&lt;polyline&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

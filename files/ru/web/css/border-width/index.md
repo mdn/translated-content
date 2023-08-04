@@ -1,8 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -15,12 +15,14 @@ CSS-свойство {{cssxref("border-width")}} определяет ширин
 
 [Общий синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
 
-    border-width: ширина                  /* Одно значение */
-    border-width: вертикальная горизонтальная    /* Два значения */
-    border-width: верх горизонтальная основание    /* Три значения */
-    border-width: верх право основание лево  /* Четыре значения */
+```css
+border-width: ширина                  /* Одно значение */
+border-width: вертикальная горизонтальная    /* Два значения */
+border-width: верх горизонтальная основание    /* Три значения */
+border-width: верх право основание лево  /* Четыре значения */
 
-    border-width: inherit /* Родительское значение */
+border-width: inherit /* Родительское значение */
+```
 
 ### Values
 

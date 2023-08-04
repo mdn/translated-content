@@ -1,12 +1,8 @@
 ---
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
-tags:
-  - API
-  - Reference
-  - WebGL
-translation_of: Web/API/WebGLBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 L'interface **WebGLBuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente un objet tampon opaque stockant des données telles que des sommets ou des couleurs.
@@ -25,8 +21,8 @@ L'objet `WebGLBuffer` ne définit aucune méthode ou propriété en propre, et s
 ### Création d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 ```
 

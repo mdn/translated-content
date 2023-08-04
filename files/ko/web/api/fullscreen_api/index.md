@@ -1,9 +1,8 @@
 ---
 title: Using fullscreen mode
 slug: Web/API/Fullscreen_API
-translation_of: Web/API/Fullscreen_API
-original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 **Fullscreen API** 는 특정 요소{{DOMxRef("Element")}}(와 해당 자손들을)를 full-screen mode로 표시하고, 더 이상 필요하지 않으면 full-screen mode를 종료하는 메서드를 추가합니다. 이렇게 하면 사용자의 전체 화면을 사용하여, 온라인 게임과 같은 원하는 내용을 표시할 수 있습니다. full-screen mode가 종료될 때까지 화면에서 브라우저의 모든 유저 인터페이스 요소와 기타 응용 프로그램을 제거할 수 있습니다.
@@ -101,11 +100,15 @@ _Fullscreen API는 full-screen mode를 켜고 끌 때 혹은, full-screen mode�
 페이지가 로드되면, 이 코드가 실행되어 <kbd>Enter</kbd> 키 를 주시하는 이벤트 리스너를 설정합니다.
 
 ```js
-document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keypress",
+  function (e) {
+    if (e.keyCode === 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Toggling full-screen mode
@@ -128,11 +131,11 @@ function toggleFullScreen() {
 
 full-screen mode가 이미 활성화 된 경우(`fullscreenElement` 가 `null`이 아닌 경우), `document`에서 {{DOMxRef("Document.exitFullscreen", "exitFullscreen()")}}을 호출하여 full-screen mode를 종료합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

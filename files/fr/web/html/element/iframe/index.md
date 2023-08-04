@@ -1,23 +1,9 @@
 ---
-title: '<iframe> : l''élément de cadre intégré'
+title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Element/iframe
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
-translation_of: Web/HTML/Element/iframe
-browser-compat: html.elements.iframe
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<iframe>`** représente un [contexte de navigation](/fr/docs/Glossary/Browsing_context) imbriqué qui permet en fait d'obtenir une page HTML intégrée dans la page courante.
 
@@ -226,8 +212,11 @@ L'exemple qui suit utilise la page située à <https://example.org> pour l'inté
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-        title="Exemple d'iframe" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="Exemple d'iframe"
+  width="400"
+  height="300">
 </iframe>
 ```
 

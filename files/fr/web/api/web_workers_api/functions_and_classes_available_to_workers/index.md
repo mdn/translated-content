@@ -4,6 +4,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 l10n:
   sourceCommit: 818941994eb1765f2196c9b588314b12e7b9f66f
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 En plus de l'ensemble des fonctions standard [JavaScript](/fr/docs/Web/JavaScript) (telles que [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), [`JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON), etc.), des fonctions du DOM sont disponibles pour les <i lang="en">workers</i>. Cet article en fournit la liste.

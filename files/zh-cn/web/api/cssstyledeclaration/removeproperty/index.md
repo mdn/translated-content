@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSStyleDeclaration.removeProperty()` 方法移除 style 对象的一个属性。
@@ -30,7 +31,7 @@ var oldValue = style.removeProperty(property);
 
 ```js
 var declaration = document.styleSheets[0].rules[0].style;
-var oldValue = declaration.removeProperty('margin');
+var oldValue = declaration.removeProperty("margin");
 ```
 
 ## Specifications

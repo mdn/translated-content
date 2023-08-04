@@ -2,6 +2,7 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 ---
+
 {{APIRef("Canvas API")}}
 
 Canvas 2D API の **`Path2D.addPath()`** メソッドは、パスに対して引数でパスを追加します。
@@ -56,9 +57,7 @@ ctx.fill(p1);
 
 ## 仕様
 
-| Specification                                                                                                    | Status                           | Comment  |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.styleSheets
 slug: Web/API/Document/styleSheets
 ---
+
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
 **`styleSheets` 是** {{domxref("DocumentOrShadowRoot")}} 接口定义的只读属性，它会返回一个 {{domxref('StyleSheetList')}} / {{domxref('CSSStyleSheet')}} 对象，这个对象对应的是通过引入或者嵌入文档中的样式表。
@@ -10,7 +11,7 @@ slug: Web/API/Document/styleSheets
 
 ```js
 function getStyleSheet(unique_title) {
-  for (var i=0; i<document.styleSheets.length; i++) {
+  for (var i = 0; i < document.styleSheets.length; i++) {
     var sheet = document.styleSheets[i];
     if (sheet.title == unique_title) {
       return sheet;

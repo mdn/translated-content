@@ -2,6 +2,7 @@
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
 ---
+
 {{APIRef}}{{seecompattable}}
 
 {{domxref("Document")}} インターフェイスの **`hasStorageAccess()`** メソッドは、文書がファーストパーティのストレージへのアクセス権を持っているかどうかを真偽値で解決する {{jsxref("Promise")}} を返します。
@@ -27,7 +28,7 @@ Promise が解決され、関数が最初に呼び出されたときにユーザ
 ## 例
 
 ```js
-document.hasStorageAccess().then(hasAccess => {
+document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // ストレージへのアクセスはすでに許可されています。
   } else {

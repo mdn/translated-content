@@ -2,6 +2,7 @@
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`queueMicrotask()`** は {{domxref("Window")}} または {{domxref("Worker")}} インターフェイスのメソッドです。ブラウザーのイベントループへ制御が戻る前の安全なタイミングで実行されるマイクロタスクをキューします。
@@ -57,7 +58,6 @@ MyElement.prototype.loadData = function (url) {
 ```
 
 ## queueMicrotask() が利用できない場合
-<!-- ## When queueMicrotask() isn't available -->
 
 以下のコードは基本的にはモダンエンジンの `queueMicrotask()` のモンキーパッチです。即時解決される promise を用いてマイクロタスクを生成します。
 

@@ -1,13 +1,6 @@
 ---
 title: 웹 개발자 안내서
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/Guide
 ---
 
 MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 예시를 추가하거나 API 또는 기능을 사용하는 방법을 가르치는 것을 목표로 합니다. 이 페이지는 가장 인기 있는 자료로 연결됩니다.

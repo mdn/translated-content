@@ -1,13 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS Date Type
-  - CSS Shapes
-  - Reference
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 **`<basic-shape>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}, {{cssxref("offset-path")}} 속성이 사용할 형태를 정의합니다.
@@ -126,7 +121,7 @@ When animating between one `<basic-shape>` and another, the rules below are appl
 
 ### Animated polygon
 
-In this example, we use the [@keyframes](/en-US/docs/Web/CSS/@keyframes) at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.
+In this example, we use the [@keyframes](/ko/docs/Web/CSS/@keyframes) at-rule to animate a clip path between two polygons. Note that both polygons have the same number of vertices, which is necessary for this type of animation to work.
 
 #### HTML
 
@@ -161,11 +156,11 @@ div {
 
 {{EmbedLiveSample('Animated_polygon','340', '340')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
@@ -173,4 +168,4 @@ div {
 
 - Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [Edit Shape Paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [Overview of CSS Shapes](/ko/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)

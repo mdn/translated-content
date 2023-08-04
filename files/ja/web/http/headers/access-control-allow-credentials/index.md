@@ -1,17 +1,8 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
-tags:
-  - Access-Control-Allow-Credentials
-  - CORS
-  - HTTP
-  - Reference
-  - credentials
-  - header
-  - レスポンスヘッダー
-  - 資格情報
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Credentials`** レスポンスヘッダーは、リクエストの資格情報モード ({{domxref("Request.credentials")}}) が `include` である場合に、レスポンスをフロントエンドの JavaScript コードに公開するかどうかをブラウザーに指示します。
@@ -79,9 +70,7 @@ fetch(url, {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

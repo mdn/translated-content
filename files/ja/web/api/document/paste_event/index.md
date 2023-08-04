@@ -1,7 +1,8 @@
 ---
-title: 'Document: paste イベント'
+title: "Document: paste イベント"
 slug: Web/API/Document/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから「貼り付け」操作を実行したときに発生します。
@@ -32,16 +33,14 @@ slug: Web/API/Document/paste_event
 ## 例
 
 ```js
-document.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+document.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

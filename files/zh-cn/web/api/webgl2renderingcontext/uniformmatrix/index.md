@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`** 方法向 uniform 变量中传入指定的矩阵值。
@@ -27,7 +28,7 @@ void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional
 - location
   - : 一个包含想要修改的 uniform 变量的{{domxref("WebGLUniformLocation")}} 对象
 - transpose
-  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。 在 webgl 中必须为`false`。
+  - : 一个决定是否转置矩阵的布尔值（ {{domxref("GLboolean")}}。在 webgl 中必须为`false`。
 - data
   - : 一个包含方阵中浮点数的类数组对象 (TypeArray) {{jsxref("Float32Array")}}。
 
@@ -47,7 +48,7 @@ gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.uniformMatrix2fv")}}
+{{Compat}}
 
 ## 令见
 

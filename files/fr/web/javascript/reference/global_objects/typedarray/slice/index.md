@@ -1,18 +1,8 @@
 ---
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** renvoie une copie superficielle (shallow copy) d'un fragment du tableau typé courant dans un nouveau tableau typé. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.slice()")}}_._ _TypedArray_ est utilisé par la suite de façon générique pour réprésenter l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -45,11 +35,11 @@ Si un nouvel élément est ajouté à l'un des deux tableaux typés, l'autre ne 
 ## Exemples
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -59,10 +49,10 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.slice) {
-  Object.defineProperty(Uint8Array.prototype, 'slice', {
-    value: function (begin, end){
+  Object.defineProperty(Uint8Array.prototype, "slice", {
+    value: function (begin, end) {
       return new Uint8Array(Array.prototype.slice.call(this, begin, end));
-    }
+    },
   });
 }
 ```
@@ -73,14 +63,11 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.slice")}}
+{{Compat}}
 
 ## Voir aussi
 

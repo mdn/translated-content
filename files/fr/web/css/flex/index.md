@@ -1,8 +1,8 @@
 ---
 title: flex
 slug: Web/CSS/flex
-translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 La propriété **`flex`** est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.
@@ -19,43 +19,33 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 
 ```html hidden
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item initial">initial</div>
-   <div class="item initial">initial</div>
-
+  <div class="item auto">auto</div>
+  <div class="item initial">initial</div>
+  <div class="item initial">initial</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item auto">auto</div>
-   <div class="item auto">auto</div>
-   <div class="item none">none</div>
-
+  <div class="item auto">auto</div>
+  <div class="item auto">auto</div>
+  <div class="item none">none</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item initial">initial</div>
-   <div class="item none">none</div>
-   <div class="item none">none</div>
-
+  <div class="item initial">initial</div>
+  <div class="item none">none</div>
+  <div class="item none">none</div>
 </div>
 
 <div class="flex-container">
-
-   <div class="item four">4</div>
-   <div class="item two">2</div>
-   <div class="item one">1</div>
-
+  <div class="item four">4</div>
+  <div class="item two">2</div>
+  <div class="item one">1</div>
 </div>
 ```
 
@@ -65,11 +55,11 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
 }
 
 .flex-container {
-   background-color: #F4F7F8;
-   resize: horizontal;
-   overflow: hidden;
-   display: flex;
-   margin: 1em;
+  background-color: #f4f7f8;
+  resize: horizontal;
+  overflow: hidden;
+  display: flex;
+  margin: 1em;
 }
 
 .item {
@@ -77,7 +67,7 @@ Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initi
   padding: 0.5em;
   width: 110px;
   min-width: 0;
-  background-color: #1B5385;
+  background-color: #1b5385;
   color: white;
   font-family: monospace;
 }
@@ -185,9 +175,13 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 > **Note :** Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -212,8 +206,10 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 ```html
 <div id="flex-container">
-    <div class="flex-item" id="flex">Boîte flexible (cliquer pour passer à la boîte « normale »)</div>
-    <div class="raw-item" id="raw">Boîte « normale » </div>
+  <div class="flex-item" id="flex">
+    Boîte flexible (cliquez pour basculer l’affichage de la boîte « normale »)
+  </div>
+  <div class="raw-item" id="raw">Boîte « normale »</div>
 </div>
 ```
 
@@ -222,7 +218,7 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 ```js
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
-flex.addEventListener("click", function() {
+flex.addEventListener("click", function () {
   raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
@@ -249,15 +245,11 @@ flex.addEventListener("click", function() {
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,8 +1,8 @@
 ---
 title: Java
 slug: Glossary/Java
-translation_of: Glossary/Java
 ---
+
 Java는 {{glossary("Compile", "컴파일")}}이 되고, {{glossary("OOP", "객체 지향적")}}이며, 휴대성이 높은 {{Glossary("computer programming", "프로그래밍")}} 언어이다.
 
 자바는 정적으로 타이핑되며 C와 유사한 구문을 가지고 있다. 이는 쉽게 사용 가능한 기능이 있는 대형 라이브러리인 Java Software Development Kit와 함께 제공된다.
@@ -15,4 +15,4 @@ Java는 {{glossary("Compile", "컴파일")}}이 되고, {{glossary("OOP", "객�
 
 - Wikipedia 의 [Java](<https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)>)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/ko/docs/Glossary")}}

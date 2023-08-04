@@ -2,6 +2,7 @@
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
+
 {{LearnSidebar}}
 
 所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
@@ -22,12 +23,12 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 #### HTML input 类型
 
-HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是高度可预测的。如果一个浏览器不能理解 {{HTMLElement("input")}}元素的 {{htmlattrxref("type","input")}} 属性，它将会后退到`text`一样的行为。
+HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是高度可预测的。如果一个浏览器不能理解 {{HTMLElement("input")}}元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，它将会后退到`text`一样的行为。
 
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -60,7 +61,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 
 有两种在 HTML 表单中定义按钮的方式：
 
-- {{htmlattrxref("type","input")}} 属性值为 `button`、`submit`、`reset` 或 `image` 的 {{HTMLElement("input")}} 元素
+- [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `button`、`submit`、`reset` 或 `image` 的 {{HTMLElement("input")}} 元素
 - {{HTMLElement("button")}} 元素
 
 ##### {{HTMLElement("input")}}
@@ -68,7 +69,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 {{HTMLElement("input")}} 元素可能使得通过元素选择器应用 CSS 变得有些困难：
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 如果我们把所有 input 的外框移除，我们能否只恢复 input 按钮的默认外观？
@@ -76,7 +77,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 ```css
 input {
   /* 这条规则关闭了含有外边框的 input 类型的默认渲染效果，包括了使用 input 元素定义的按钮 */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* 这条规则并不能恢复默认渲染行为！ */
@@ -99,8 +100,8 @@ input[type="button"] {
 
 {{HTMLElement("button")}} 元素曾经受到两个问题的影响，现在已经得到解决：
 
-- 在旧版本的 Internet Explorer 中，存在一个错误，当点击 {{HTMLElement("button")}} 元素时，会发送该元素开始和结束标签之间的 HTML 内容，而不是 {{htmlattrxref("value", "button")}} 属性中的值。仅在需要发送该值时才会出现问题，例如当数据处理取决于用户点击的按钮时。
-- 某些非常旧的浏览器不使用 `submit` 作为 {{htmlattrxref("type","button")}} 属性的默认值。即使在现代浏览器中得到了解决，也推荐总是设置 {{HTMLElement("button")}} 元素的 {{htmlattrxref("type","button")}} 属性。
+- 在旧版本的 Internet Explorer 中，存在一个错误，当点击 {{HTMLElement("button")}} 元素时，会发送该元素开始和结束标签之间的 HTML 内容，而不是 [`value`](/zh-CN/docs/Web/HTML/Element/button#value) 属性中的值。仅在需要发送该值时才会出现问题，例如当数据处理取决于用户点击的按钮时。
+- 某些非常旧的浏览器不使用 `submit` 作为 [`type`](/zh-CN/docs/Web/HTML/Element/button#type) 属性的默认值。即使在现代浏览器中得到了解决，也推荐总是设置 {{HTMLElement("button")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/button#type) 属性。
 
 ```html
 <!-- 某些情形下，点击按钮将发送 "<em>Do A</em>" 而不是值"A" -->
@@ -158,18 +159,18 @@ API 的兼容性是最大的问题。由于这个原因，与“非侵入式（u
 ```js
 Modernizr.load({
   // 这会测试你的浏览器是否支持 HTML5 表单验证 API
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // 如果浏览器不支持它，则会加载以下 polyfill
-  nope : form-validation-API-polyfill.js,
+  nope: form - validation - API - polyfill.js,
 
   // 无论如何，你的核心 App 文件依赖于该 API 被加载
-  both : app.js,
+  both: app.js,
 
   // 一旦加载了这两个文件，就会调用该函数来初始化应用程序
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 
@@ -186,18 +187,6 @@ Modernizr 团队按照惯例维护着[一个优秀的 polyfill 列表](https://g
 正如你所看到的，处理旧式浏览器不仅仅是表单问题。而是一整套技术；但是掌握所有这些技术超出了本文的范围。基本的前提是，在开始挑战之前，要考虑改变默认的实现方式是否值得做这些工作。
 
 如果你阅读了 [HTML 表单指南](/zh-CN/docs/Learn/Forms)中的所有文章，你应该可以放心的使用表单了。如果你想探索新技术，请帮助我们提升指南的写作水平。
-
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

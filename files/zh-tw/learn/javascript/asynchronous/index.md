@@ -2,6 +2,7 @@
 title: 非同步的 JavaScript
 slug: Learn/JavaScript/Asynchronous
 ---
+
 {{LearnSidebar}}
 
 在本單元我們來討論非同步的（ {{Glossary("asynchronous")}} ） {{Glossary("JavaScript")}} ，為何其如此重要，並了解它如何有效率的處理像是從伺服器獲取資源的這類潛在性阻塞（ blocking ）操作

@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - indexof
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、指定されたオブジェクトのプリミティブな値を返します。
@@ -25,7 +19,7 @@ object.valueOf()
 
 指定されたオブジェクトのプリミティブ値を返します。
 
-> **Note:** [(単項) プラス符号](/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus)を `valueOf` の省略形として使用することができる場合があります。例えば、 `+new Number()` などです。[単項プラスの使用](#Using_unary_plus)も参照してください。
+> **メモ:** [(単項) プラス符号](/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus)を `valueOf` の省略形として使用することができる場合があります。例えば、 `+new Number()` などです。[単項プラスの使用](#Using_unary_plus)も参照してください。
 
 ## 解説
 
@@ -53,7 +47,7 @@ MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 myNumberType.valueOf()
 ```
 
-> **Note:** **注:**文字列型の文脈にあるオブジェクトは {{jsxref("Object.toString", "toString()")}} メソッドを通じて変換されますが、これは {{jsxref("String")}} オブジェクトが `valueOf` を使って文字列型に変換されるのとは違います。すべてのオブジェクトは、 "`[object type]`" としか出力されないかもしれませんが、文字列変換できます。しかし多くのオブジェクトは数値や真偽値や関数には変換できません。
+> **メモ:** 文字列型の文脈にあるオブジェクトは {{jsxref("Object.toString", "toString()")}} メソッドを通じて変換されますが、これは {{jsxref("String")}} オブジェクトが `valueOf` を使って文字列型に変換されるのとは違います。すべてのオブジェクトは、 "`[object type]`" としか出力されないかもしれませんが、文字列変換できます。しかし多くのオブジェクトは数値や真偽値や関数には変換できません。
 
 ## 例
 
@@ -94,9 +88,7 @@ myObj + 3; // 7
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

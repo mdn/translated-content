@@ -1,13 +1,8 @@
 ---
 title: SVGDescElement
 slug: Web/API/SVGDescElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-translation_of: Web/API/SVGDescElement
 ---
+
 {{APIRef("SVG")}}
 
 L'interface **`SVGDescElement`** correspond à l'élément {{SVGElement("desc")}}.

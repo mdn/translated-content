@@ -2,6 +2,7 @@
 title: box-shadow
 slug: Web/CSS/box-shadow
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`box-shadow`** 属性用于在元素的框架上添加阴影效果。你可以在同一个元素上设置多个阴影效果，并用逗号将他们分隔开。该属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色。
@@ -10,7 +11,7 @@ slug: Web/CSS/box-shadow
 
 你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
 
-[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
+[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_box_model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
 
 ## 语法
 
@@ -28,7 +29,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* 任意数量的阴影，以逗号分隔 */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* 全局关键字 */
 box-shadow: inherit;
@@ -86,11 +89,14 @@ box-shadow: unset;
 #### HTML
 
 ```html
-<blockquote><q>You may shoot me with your words,<br/>
-You may cut me with your eyes,<br/>
-You may kill me with your hatefulness,<br/>
-But still, like air, I'll rise.</q>
-<p>&mdash; Maya Angelou</p>
+<blockquote>
+  <q
+    >You may shoot me with your words,<br />
+    You may cut me with your eyes,<br />
+    You may kill me with your hatefulness,<br />
+    But still, like air, I'll rise.</q
+  >
+  <p>&mdash; Maya Angelou</p>
 </blockquote>
 ```
 
@@ -100,9 +106,9 @@ But still, like air, I'll rise.</q>
 blockquote {
   padding: 20px;
   box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.1),
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 ```
 
@@ -120,16 +126,17 @@ blockquote {
 
 ```css
 p {
-  box-shadow: 0 0 0 2em #F4AAB9,
-              0 0 0 4em #66CCFF;
+  box-shadow:
+    0 0 0 2em #f4aab9,
+    0 0 0 4em #66ccff;
   margin: 4em;
-  padding:1em;
+  padding: 1em;
 }
 ```
 
 {{EmbedLiveSample('设置偏移量和 blur 为零', '300', '300')}}
 
-当 `x-offset`, `y-offset`, 和 `blur` 都是 0, 盒阴影将是一个四边都是一样长度的带有颜色的`outline`. 当设置了多个阴影时，阴影绘制由最后一个开始， 故第一个设置的阴影将覆盖在后设置的阴影之上。当`border-radius设置为0时（也是其默认值）`, 阴影的四角将没有弧度。当我们设置了`border-radius`为其他不为 0 的值时，阴影的四角也随之形成弧度。
+当 `x-offset`、`y-offset` 和 `blur` 都是 0，盒阴影将是一个四边都是一样长度的带有颜色的`outline`。当设置了多个阴影时，阴影绘制由最后一个开始，故第一个设置的阴影将覆盖在后设置的阴影之上。当 `border-radius` 设置为 0 时（也是其默认值），阴影的四角将没有弧度。当我们设置了 `border-radius` 为其他不为 0 的值时，阴影的四角也随之形成弧度。
 
 我们通常在元素上增加一个大小为最大阴影宽度的`margin`值以保证阴影不会覆盖到相邻的元素或者覆盖到元素的`border`上。`box-shadow`属性不会影响到盒模型的构成。
 
@@ -141,7 +148,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-shadow")}}
+{{Compat}}
 
 ## 参见
 

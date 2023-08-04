@@ -1,20 +1,8 @@
 ---
 title: border-block-start-width
 slug: Web/CSS/border-block-start-width
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-block
-  - border-block-start
-  - border-block-start-width
-  - border-block-width
-  - recipe:css-property
-browser-compat: css.properties.border-block-start-width
-translation_of: Web/CSS/border-block-start-width
 ---
+
 {{CSSRef}}
 
 **`border-block-start-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, {{cssxref("border-left-width")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

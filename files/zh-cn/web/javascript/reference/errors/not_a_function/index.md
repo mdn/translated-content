@@ -2,6 +2,7 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 ---
+
 {{jsSidebar("Errors")}}JavaScript 异常"is not a function"会在试图去调用一个像函数一样的值，但是该值实际上不是函数时被抛出。
 
 ## 信息
@@ -19,9 +20,9 @@ TypeError: "x" is not a function
 
 问题出在你试图去调用一个像函数一样的值，但是该值实际上不是函数，有时候你的代码需要调用一些函数，但是那种值并不能当作函数来被调用。
 
-也许函数名称上有错别字？ 也许你正在调用 Object 对象没有这个方法？ 例如，在 JavaScript 中单纯的对象 (Object) 没有**map**函数，但是 JavaScript 数组 (Array) 对象却有这个函数。
+也许函数名称上有错别字？也许你正在调用 Object 对象没有这个方法？例如，在 JavaScript 中单纯的对象 (Object) 没有**map**函数，但是 JavaScript 数组 (Array) 对象却有这个函数。
 
-再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。 所以你必须提供一个函数，以使这些方法正常工作：
+再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。所以你必须提供一个函数，以使这些方法正常工作：
 
 - 当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
 
@@ -31,7 +32,7 @@ TypeError: "x" is not a function
 
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
-## 例子
+## 示例
 
 ### 函数的名称错误
 
@@ -55,7 +56,7 @@ var x = document.getElementById("foo");
 ```js example-bad
 var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -67,7 +68,7 @@ obj.map(function(num) {
 ```js example-good
 var numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -80,17 +81,16 @@ numbers.map(function(num) {
 
 ```js example-bad
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.name = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.name = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
@@ -100,17 +100,16 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 
 ```js example-good
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.dogName = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.dogName = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
@@ -124,7 +123,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 
 ```js example-bad
 const sixteen = 2(3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //Uncaught TypeError: 2 is not a function
 ```
 
@@ -132,7 +131,7 @@ alert('2 x (3 + 5) is ' + String(sixteen));
 
 ```js example-good
 const sixteen = 2 * (3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //2 x (3 + 5) is 16
 ```
 
@@ -168,4 +167,4 @@ import helpers from './helpers'
 
 ## 相关
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)

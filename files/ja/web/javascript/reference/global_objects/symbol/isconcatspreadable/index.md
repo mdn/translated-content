@@ -1,13 +1,8 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
+
 {{JSRef}}
 
 **`Symbol.isConcatSpreadable`** は、{{jsxref("Array.prototype.concat()")}} メソッドを使用してオブジェクトを配列の要素に平坦化する場合の設定として使用されます。
@@ -67,13 +62,11 @@ let fakeArray = {
 x.concat(fakeArray)  // [1, 2, 3, "hello", "world"]
 ```
 
-> **Note:** **注:** `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。
+> **メモ:** `length` プロパティは、追加するオブジェクトプロパティの数を制御するために使用されます。上記の例では、`length:2` は 2 つのプロパティを追加する必要があることを示しています。
 
 ## 仕様
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.isconcatspreadable', 'Symbol.isconcatspreadable')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

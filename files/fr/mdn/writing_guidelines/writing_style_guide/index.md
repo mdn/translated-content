@@ -1,19 +1,8 @@
 ---
 title: Guide stylistique
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - Documentation
-  - Guide
-  - Guidelines
-  - MDN
-  - MDN Meta
-  - MDN Web Docs
-  - MDN style guide
-  - Style guide
-  - Writing style guide
-translation_of: MDN/Guidelines/Writing_style_guide
-original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 Afin de présenter la documentation de façon organisée, cohérente et facile à lire, le guide stylistique de MDN décrit la façon dont le texte doit être organisé, orthographié, mis en forme, etc. Il s'agit ici de règles générales plutôt que de consignes strictes. Le contenu importe plus que la forme et il n'y a pas d'obligation à apprendre ce guide avant de contribuer. Toutefois, ne soyez pas surpris⋅e si une contributrice ou un contributeur édite une de vos éditions pour respecter ce guide.

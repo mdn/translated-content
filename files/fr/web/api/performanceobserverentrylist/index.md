@@ -1,13 +1,8 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
-tags:
-  - API
-  - Interface
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceObserverEntryList
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 L'interface **`PerformanceObserverEntryList`** est une liste d'[événements de performance](/fr/docs/Web/API/PerformanceEntry) qui ont été explicitement _observés_ via la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe).
@@ -28,13 +23,13 @@ L'interface **`PerformanceObserverEntryList`** est une liste d'[événements de 
 ```js
 // Crée un observateur pour tous les types d'événements de performance
 // la liste est de type PerformanceObserveEntryList
-const observe_all = new PerformanceObserver(function(list, obs) {
+const observe_all = new PerformanceObserver(function (list, obs) {
   let perfEntries = list.getEntries();
   for (let i = 0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
     // faire quelque chose avec
   }
-})
+});
 ```
 
 ## Spécifications

@@ -2,9 +2,10 @@
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
+
 {{AddonSidebar}}
 
-WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは**[ ](/ja/docs/Web/HTML/Element/script)**[\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。
+WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。
 
 この記事では CSP とは何かと、デフォルトポリシーとは何で拡張機能にはどんな意味があるのかと、拡張機能が既定の CSP を変更する方法を簡単に説明します。
 
@@ -13,15 +14,14 @@ WebExtension APIs で開発される拡張機能には、既定で適用され�
 ウェブサイトと同様に、拡張機能はさまざまなソースからコンテンツを読み込めます。例えば、ブラウザーアクションのポップアップは HTML 文書として指定できて、通常のウェブページのようにさまざまなソースからの JavaScript と CSS を入れることができます:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <!--Some HTML content here-->
 
     <!--
@@ -31,13 +31,11 @@ WebExtension APIs で開発される拡張機能には、既定で適用され�
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"></script>
 
     <!-- Include my popup's own script-->
     <script src="popup.js"></script>
   </body>
-
 </html>
 ```
 
@@ -65,7 +63,7 @@ WebExtension APIs で開発される拡張機能には、既定で適用され�
 既定の CSP の下では、拡張機能のローカルにある [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースだけを読み込みできます。例えば、拡張機能の文書内にこんな行があるとします:
 
 ```html
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
 これは要求したリソースを読み込みません: 静かに失敗し、このリソースから取ってきたはずのいかなるオブジェクトも見つかりません。この解決方法が 2 つあります:
@@ -94,7 +92,9 @@ var f = new Function("console.log('foo');");
 既定の CSP ではインライン JavaScript は実行されません。これは `<script>` タグで直接置かれた JavaScript と、インラインイベントハンドラーの両方とも許可されず、つまり次のことは許可されません:
 
 ```html
-<script>console.log("foo");</script>
+<script>
+  console.log("foo");
+</script>
 ```
 
 ```html

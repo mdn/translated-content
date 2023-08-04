@@ -1,16 +1,8 @@
 ---
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/collation
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.collation`** est une propriété (à laquelle on accède via un accesseur) qui renvoie le [type de collation](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour l'instance de `Locale` courante. La collation est la méthode qui permet d'ordonner des chaînes de caractères en fonction des règles de la locale.
@@ -164,19 +156,17 @@ console.log(stringColl.collation); // Affichera "emoji" dans la console
 Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale) possède un deuxième argument optionnel qui est un objet de configuration. Chaque propriété de cet objet pourra permettre de préciser une extension à la locale, y compris un type de collation. Pour définir le type de collation, on pourra utiliser une propriété `collation` sur cet objet avec une des valeurs indiquées ci-avant :
 
 ```js
-let configColl = new Intl.Locale("en-Latn-US", {collation: "emoji"});
+let configColl = new Intl.Locale("en-Latn-US", { collation: "emoji" });
 console.log(configColl.collation); // Affichera "emoji" dans la console
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.collation`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.collation) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.collation")}}
+{{Compat}}
 
 ## Voir aussi
 

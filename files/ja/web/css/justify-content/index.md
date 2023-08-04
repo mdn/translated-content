@@ -1,15 +1,8 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ボックス配置
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-content
-translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`justify-content`** プロパティは、フレックスコンテナーの{{Glossary("Main Axis", "主軸")}}およびグリッドコンテナーのインライン軸に沿って、中身のアイテムの間や周囲に間隔を配置する方法を定義します。
@@ -95,7 +88,7 @@ justify-content: unset;
 
   - : 各アイテムの主軸に沿った寸法の合計が配置コンテナーの寸法よりも小さい場合、寸法が `auto` のアイテムは、 {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) での制約を尊重しつつ、 (比例的にではなく) 均等に引き伸ばされ、主軸方向の寸法の合計が配置コンテナーを満たすようになります。
 
-    > **Note:** `stretch` はフレキシブルボックス (フレックスボックス) は対応していません。
+    > **メモ:** `stretch` はフレキシブルボックス (フレックスボックス) は対応していません。
 
 - `safe`
   - : 配置キーワードと共に使用します。選択されたキーワードによって、アイテムが配置コンテナーをあふれてデータの損失が発生する場合、アイテムは配置モードが `start` であったかのように配置されます。

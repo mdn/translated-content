@@ -1,10 +1,11 @@
 ---
 title: Console.groupEnd()
-slug: Web/API/Console/groupEnd
+slug: Web/API/console/groupEnd
 ---
+
 {{APIRef("Console API")}}
 
-在 [Web 控制台](/en-US/docs/Tools/Web_Console)中退出一格缩进 (结束分组). 请参阅 {{domxref("console")}} 中的[Using groups in the console](/en-US/docs/Web/API/console#Using_groups_in_the_console) 来获取它的用法和示例。
+在 [Web 控制台](/zh-CN/docs/Tools/Web_Console)中退出一格缩进 (结束分组). 请参阅 {{domxref("console")}} 中的[Using groups in the console](/zh-CN/docs/Web/API/console#Using_groups_in_the_console) 来获取它的用法和示例。
 
 {{AvailableInWorkers}}
 
@@ -24,7 +25,7 @@ None.
 
 ## 浏览器兼容性
 
-{{Compat("api.console.groupEnd")}}
+{{Compat}}
 
 ## See also
 

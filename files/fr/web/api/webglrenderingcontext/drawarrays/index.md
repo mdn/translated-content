@@ -1,14 +1,8 @@
 ---
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) dessine des primitives à partir de données tabulaires.

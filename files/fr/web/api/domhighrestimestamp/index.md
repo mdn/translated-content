@@ -1,8 +1,8 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 Le type **`DOMHighResTimeStamp`** est un `double` et est utilisé pour stocker une valeur temporelle. La valeur peut représenter un point dans le temps ou la différence entre deux points dans le temps.
@@ -18,12 +18,11 @@ Dans Firefox, l'option `privacy.reduceTimerPrecision` est activée par défaut e
 
 ```js
 // précision temporelle réduite (2ms) dans Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // précision temporelle réduite avec `privacy.resistFingerprinting` activé
 event.timeStamp;
@@ -37,7 +36,7 @@ Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la préc
 
 ## Propriétés
 
-*Ce type n'a pas de propriétés. C'est une valeur à virgule flottante double précision.*
+_Ce type n'a pas de propriétés. C'est une valeur à virgule flottante double précision._
 
 ### Valeur
 

@@ -2,6 +2,7 @@
 title: 使用IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
+
 IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不論是線上或線下我們的應用都可以進行資料存取。
 
 ## 關於本文
@@ -30,11 +31,19 @@ IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不�
 
 ```js
 // In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // DON'T use "var indexedDB = ..." if you're not in a function.
 // Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
 ```
 
@@ -42,7 +51,9 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 
 ```js
 if (!window.indexedDB) {
-    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
+  window.alert(
+    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.",
+  );
 }
 ```
 
@@ -57,7 +68,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 注意到了嗎，開啟資料庫必須要進行請求。
 
-開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
+開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
 
 Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#Updating_the_version_of_the_database)有更詳細的說明。
 
@@ -66,10 +77,10 @@ Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫
 幾乎所有第一件要對請求做的事都是產生 success 和 error 事件處理器:
 
 ```js
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Do something with request.errorCode!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Do something with request.result!
 };
 ```
@@ -78,17 +89,17 @@ request.onsuccess = function(event) {
 
 IndexedDB 的 API 設計上盡量減少錯誤處理，所以不太常看到錯誤事件，不過開啟資料庫的時候還是有一些狀況會產產生錯誤，最常見的狀況是使用者拒絕我們建立資料庫。
 
-IndexedDB 設計目標之一為存放大量資料以供離線使用(請參考["儲存限制"](/en/IndexedDB#Storage_limits)了解更多細節)。但很明顯地，瀏覽器又不樂見一些廣告網站或惡意網站汙染電腦，所以當任一個網路應用第一次開啟 IndexedDB 資料庫，瀏覽器會徵詢使用者是否准許其作業；同時在私密瀏覽中開啟作業也會失敗，因為私密瀏覽不會留下任何瀏覽痕跡。
+IndexedDB 設計目標之一為存放大量資料以供離線使用(請參考["儲存限制"](/zh-TW/IndexedDB#Storage_limits)了解更多細節)。但很明顯地，瀏覽器又不樂見一些廣告網站或惡意網站汙染電腦，所以當任一個網路應用第一次開啟 IndexedDB 資料庫，瀏覽器會徵詢使用者是否准許其作業；同時在私密瀏覽中開啟作業也會失敗，因為私密瀏覽不會留下任何瀏覽痕跡。
 
 這裡呼叫 indexedDB.open()開啟 indexedDB 資料庫並回傳 request 物件，假設使用者允許我們建立 indexedDB 資料庫，我們也收到 suceess 事件觸發了 success 回呼函數(callback)，request 物件的 result 屬性會是一個 IDBDatabase 物件 ，接下來便是要儲存這個物件之後使用。下方是整個作業的示範程式碼:
 
 ```js
 var db;
 var request = indexedDB.open("MyTestDatabase");
-request.onerror = function(event) {
+request.onerror = function (event) {
   alert("Why didn't you allow my web app to use IndexedDB?!");
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   db = request.result;
 };
 ```
@@ -98,7 +109,7 @@ request.onsuccess = function(event) {
 錯誤事件會向上傳遞；錯誤事件以產生錯誤之請求為目標觸發，然後一路傳遞到交易，最後到資料庫物件；如果不想要為每一個請求新增錯誤處理器，可以改為資料庫物件加入一個錯誤處理器。
 
 ```js
-db.onerror = function(event) {
+db.onerror = function (event) {
   // Generic error handler for all errors targeted at this database's
   // requests!
   alert("Database error: " + event.target.errorCode);
@@ -113,7 +124,7 @@ db.onerror = function(event) {
 
 ```js
 // This event is only implemented in recent browsers
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // Create an objectStore for this database
@@ -135,7 +146,7 @@ Webkit 支援最新標準不過只有 Chrome 23 才開始導入，而較舊不�
 
 ### 結構化資料庫
 
-indexedDB 不用資料表而是物件存檔，物件存檔可以有很多。一筆物件存檔裡的資料值對應一筆資料鍵，依據使用{資料鍵路徑([key path](/en/IndexedDB#gloss_key_path))}或{資料鍵產生器([key generator](/en/IndexedDB#gloss_key_generator))}。
+indexedDB 不用資料表而是物件存檔，物件存檔可以有很多。一筆物件存檔裡的資料值對應一筆資料鍵，依據使用{資料鍵路徑([key path](/zh-TW/IndexedDB#gloss_key_path))}或{資料鍵產生器([key generator](/zh-TW/IndexedDB#gloss_key_generator))}。
 
 下表列出資料建各類產生途徑:
 
@@ -156,16 +167,16 @@ indexedDB 不用資料表而是物件存檔，物件存檔可以有很多。一�
 // This is what our customer data looks like.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
-  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
+  { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" },
 ];
 const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Handle errors.
 };
-request.onupgradeneeded = function(event) {
+request.onupgradeneeded = function (event) {
   var db = event.target.result;
 
   // Create an objectStore to hold information about our customers. We're
@@ -209,19 +220,19 @@ request.onupgradeneeded = function(event) {
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
-    var db = event.target.result;
+  var db = event.target.result;
 
-    // Create another object store called "names" with the autoIncrement flag set as true.
-    var objStore = db.createObjectStore("names", { autoIncrement : true });
+  // Create another object store called "names" with the autoIncrement flag set as true.
+  var objStore = db.createObjectStore("names", { autoIncrement: true });
 
-    // Because the "names" object store has the key generator, the key for the name value is generated automatically.
-    // The added records would be like:
-    // key : 1 => value : "Bill"
-    // key : 2 => value : "Donna"
-    for (var i in customerData) {
-        objStore.add(customerData[i].name);
-    }
-}
+  // Because the "names" object store has the key generator, the key for the name value is generated automatically.
+  // The added records would be like:
+  // key : 1 => value : "Bill"
+  // key : 2 => value : "Donna"
+  for (var i in customerData) {
+    objStore.add(customerData[i].name);
+  }
+};
 ```
 
 關於資料鍵產生器細節，請參考["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept)。
@@ -251,18 +262,18 @@ var transaction = db.transaction(["customers"], "readwrite");
 
 ```js
 // Do something when all the data is added to the database.
-transaction.oncomplete = function(event) {
+transaction.oncomplete = function (event) {
   alert("All done!");
 };
 
-transaction.onerror = function(event) {
+transaction.onerror = function (event) {
   // Don't forget to handle errors!
 };
 
 var objectStore = transaction.objectStore("customers");
 for (var i in customerData) {
   var request = objectStore.add(customerData[i]);
-  request.onsuccess = function(event) {
+  request.onsuccess = function (event) {
     // event.target.result == customerData[i].ssn;
   };
 }
@@ -275,10 +286,11 @@ for (var i in customerData) {
 移除資料十分容易:
 
 ```js
-var request = db.transaction(["customers"], "readwrite")
-                .objectStore("customers")
-                .delete("444-44-4444");
-request.onsuccess = function(event) {
+var request = db
+  .transaction(["customers"], "readwrite")
+  .objectStore("customers")
+  .delete("444-44-4444");
+request.onsuccess = function (event) {
   // It's gone!
 };
 ```
@@ -291,10 +303,10 @@ request.onsuccess = function(event) {
 var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
-request.onerror = function(event) {
+request.onerror = function (event) {
   // Handle errors!
 };
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   // Do something with the request.result!
   alert("Name for SSN 444-44-4444 is " + request.result.name);
 };
@@ -303,7 +315,10 @@ request.onsuccess = function(event) {
 假設我們把錯誤處理放在資料庫層級，我們可以再縮短上面的程式碼如下:
 
 ```js
-db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+db
+  .transaction("customers")
+  .objectStore("customers")
+  .get("444-44-4444").onsuccess = function (event) {
   alert("Name for SSN 444-44-4444 is " + event.target.result.name);
 };
 ```
@@ -317,13 +332,12 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     alert("Name for SSN " + cursor.key + " is " + cursor.value.name);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("No more entries!");
   }
 };
@@ -336,13 +350,12 @@ objectStore.openCursor().onsuccess = function(event) {
 ```js
 var customers = [];
 
-objectStore.openCursor().onsuccess = function(event) {
+objectStore.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     customers.push(cursor.value);
     cursor.continue();
-  }
-  else {
+  } else {
     alert("Got all customers: " + customers);
   }
 };
@@ -353,7 +366,7 @@ objectStore.openCursor().onsuccess = function(event) {
 Mozilla 瀏覽器自己做了一個 getAll()方法來方便一次取得所有 cursor 下的資料值，這個方法相當方便，不過請小心未來它有可能會消失。以下程式碼的效果和上面的一樣:
 
 ```js
-objectStore.getAll().onsuccess = function(event) {
+objectStore.getAll().onsuccess = function (event) {
   alert("Got all customers: " + event.target.result);
 };
 ```
@@ -366,7 +379,7 @@ objectStore.getAll().onsuccess = function(event) {
 
 ```js
 var index = objectStore.index("name");
-index.get("Donna").onsuccess = function(event) {
+index.get("Donna").onsuccess = function (event) {
   alert("Donna's SSN is " + event.target.result.ssn);
 };
 ```
@@ -376,16 +389,23 @@ index.get("Donna").onsuccess = function(event) {
 如果我們想要查看特定名字下所有的資料，可以利用 cursor。有兩種 cursor 能用在索引上，第一種一般 cursor 會比對索引值並回傳整份資料(物件存檔中的物件)，第二種資料鍵 cursor 則只會回傳資料鍵值，請參考下方範例比較兩者差異:
 
 ```js
-index.openCursor().onsuccess = function(event) {
+index.openCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    alert(
+      "Name: " +
+        cursor.key +
+        ", SSN: " +
+        cursor.value.ssn +
+        ", email: " +
+        cursor.value.email,
+    );
     cursor.continue();
   }
 };
 
-index.openKeyCursor().onsuccess = function(event) {
+index.openKeyCursor().onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the SSN.
@@ -398,7 +418,7 @@ index.openKeyCursor().onsuccess = function(event) {
 
 ### 設定指標查詢範圍和方向
 
-如果想要限定指標查詢範圍，那麼在乎叫 openCursor()或 openKeyCursor()時第一個參數要傳入[IDBKeyRange](/en/IndexedDB/IDBKeyRange)物件以限制範圍。IDBKeyRange 物件能夠只聚焦在單一資料鍵上或者一段上下限區間；上下限區間可以是封閉(含界限)或開放(不含界限)，請看以下範例:
+如果想要限定指標查詢範圍，那麼在乎叫 openCursor()或 openKeyCursor()時第一個參數要傳入[IDBKeyRange](/zh-TW/IndexedDB/IDBKeyRange)物件以限制範圍。IDBKeyRange 物件能夠只聚焦在單一資料鍵上或者一段上下限區間；上下限區間可以是封閉(含界限)或開放(不含界限)，請看以下範例:
 
 ```js
 // Only match "Donna"
@@ -416,7 +436,7 @@ var upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 // Match anything between "Bill" and "Donna", but not including "Donna"
 var boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
-index.openCursor(boundKeyRange).onsuccess = function(event) {
+index.openCursor(boundKeyRange).onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the matches.
@@ -428,7 +448,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 有時候我們會想要由大到小查看資料而非預設由小到大方向，傳入第二個"prev"字串便能做到:
 
 ```js
-objectStore.openCursor(null, "prev").onsuccess = function(event) {
+objectStore.openCursor(null, "prev").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -440,7 +460,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 由於"name"索引不具唯一性，所以一個名字下可能會出現多筆資料，此時如果想要避開這多筆資料，請傳入"nextunique"或"prevunique"做為第二個方向參數，當傳入之後，如一個名字下遇到多筆資料，則只有資料鍵最小的資料會被回傳。
 
 ```js
-index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+index.openKeyCursor(null, "nextunique").onsuccess = function (event) {
   var cursor = event.target.result;
   if (cursor) {
     // Do something with the entries.
@@ -458,29 +478,29 @@ index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
 ```js
 var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
-openReq.onblocked = function(event) {
+openReq.onblocked = function (event) {
   // If some other tab is loaded with the database, then it needs to be closed
   // before we can proceed.
   alert("Please close all other tabs with this site open!");
 };
 
-openReq.onupgradeneeded = function(event) {
+openReq.onupgradeneeded = function (event) {
   // All other databases have been closed. Set everything up.
   db.createObjectStore(/* ... */);
   useDatabase(db);
-}
+};
 
-openReq.onsuccess = function(event) {
+openReq.onsuccess = function (event) {
   var db = event.target.result;
   useDatabase(db);
   return;
-}
+};
 
 function useDatabase(db) {
   // Make sure to add a handler to be notified if another page requests a version
   // change. We must close the database. This allows the other page to upgrade the database.
   // If you don't do this then the upgrade won't happen until the user closes the tab.
-  db.onversionchange = function(event) {
+  db.onversionchange = function (event) {
     db.close();
     alert("A new version of this page is ready. Please reload!");
   };
@@ -491,8 +511,7 @@ function useDatabase(db) {
 
 ## 安全性
 
-IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。
-就像對載入{{ HTMLElement("frame") }}和{{ HTMLElement("iframe") }}網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入{{ HTMLElement("frame") }}和{{ HTMLElement("iframe") }}網頁上運作，詳情請見{{ bug(595307) }}。
+IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
 
 ## 瀏覽器關閉風險
 
@@ -502,144 +521,139 @@ IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for
 
 第二、永遠不要在 unload 事件中執行資料庫交易，因為如果 unload 事件是觸發在瀏覽器關閉下，任何資料庫交易都不會發生，或許，瀏覽器(或分頁)打開時讀取資料庫，更新資料庫當使用者編輯資料，當瀏覽器(或分頁)關閉時儲存資料這樣的做法比較直覺，不過資料庫的操作是非同步進行地，所以瀏覽器關閉的執行會在資料庫操作前發生，進而中斷後續非同步的資料庫交易，所以在 unload 事件中執行資料庫交易是行不通地。
 
-事實上不論瀏覽器是否正常關閉，都沒有任何方法保證 IndexedDB 交易能夠順利完成，請見{{ bug(870645) }}。
+事實上不論瀏覽器是否正常關閉，都沒有任何方法保證 IndexedDB 交易能夠順利完成，請見 [Firefox bug 870645](https://bugzil.la/870645)。
 
 ## 完整 IndexedDB 範例
 
 ### HTML
 
 ```html
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    <h1>IndexedDB Demo: storing blobs, e-publication example</h1>
-    <div class="note">
-      <p>
-        Works and tested with:
-      </p>
-      <div id="compat">
-      </div>
-    </div>
+<h1>IndexedDB Demo: storing blobs, e-publication example</h1>
+<div class="note">
+  <p>Works and tested with:</p>
+  <div id="compat"></div>
+</div>
 
-    <div id="msg">
-    </div>
+<div id="msg"></div>
 
-    <form id="register-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-title" class="required">
-                Title:
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-title" name="pub-title" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-biblioid" class="required">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid" name="pub-biblioid"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-year">
-                Year:
-              </label>
-            </td>
-            <td>
-              <input type="number" id="pub-year" name="pub-year" />
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-file">
-                File image:
-              </label>
-            </td>
-            <td>
-              <input type="file" id="pub-file"/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="pub-file-url">
-                Online-file image URL:<br/>
-                <span class="note">(same origin URL)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-file-url" name="pub-file-url"/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<form id="register-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-title" class="required"> Title: </label>
+        </td>
+        <td>
+          <input type="text" id="pub-title" name="pub-title" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-biblioid" class="required">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-biblioid" name="pub-biblioid" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-year"> Year: </label>
+        </td>
+        <td>
+          <input type="number" id="pub-year" name="pub-year" />
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-file"> File image: </label>
+        </td>
+        <td>
+          <input type="file" id="pub-file" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="pub-file-url">
+            Online-file image URL:<br />
+            <span class="note">(same origin URL)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="pub-file-url" name="pub-file-url" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="button-pane">
-        <input type="button" id="add-button" value="Add Publication" />
-        <input type="reset" id="register-form-reset"/>
-      </div>
-    </form>
+  <div class="button-pane">
+    <input type="button" id="add-button" value="Add Publication" />
+    <input type="reset" id="register-form-reset" />
+  </div>
+</form>
 
-    <form id="delete-form">
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <label for="pub-biblioid-to-delete">
-                Bibliographic ID:<br/>
-                <span class="note">(ISBN, ISSN, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="key-to-delete">
-                Key:<br/>
-                <span class="note">(for example 1, 2, 3, etc.)</span>
-              </label>
-            </td>
-            <td>
-              <input type="text" id="key-to-delete"
-                     name="key-to-delete" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="button-pane">
-        <input type="button" id="delete-button" value="Delete Publication" />
-        <input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" />
-      </div>
-    </form>
+<form id="delete-form">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <label for="pub-biblioid-to-delete">
+            Bibliographic ID:<br />
+            <span class="note">(ISBN, ISSN, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="pub-biblioid-to-delete"
+            name="pub-biblioid-to-delete" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="key-to-delete">
+            Key:<br />
+            <span class="note">(for example 1, 2, 3, etc.)</span>
+          </label>
+        </td>
+        <td>
+          <input type="text" id="key-to-delete" name="key-to-delete" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="button-pane">
+    <input type="button" id="delete-button" value="Delete Publication" />
+    <input
+      type="button"
+      id="clear-store-button"
+      value="Clear the whole store"
+      class="destructive" />
+  </div>
+</form>
 
-    <form id="search-form">
-      <div class="button-pane">
-        <input type="button" id="search-list-button"
-               value="List database content" />
-      </div>
-    </form>
+<form id="search-form">
+  <div class="button-pane">
+    <input
+      type="button"
+      id="search-list-button"
+      value="List database content" />
+  </div>
+</form>
 
-    <div>
-      <div id="pub-msg">
-      </div>
-      <div id="pub-viewer">
-      </div>
-      <ul id="pub-list">
-      </ul>
-    </div>
+<div>
+  <div id="pub-msg"></div>
+  <div id="pub-viewer"></div>
+  <ul id="pub-list"></ul>
+</div>
 ```
 
 ### CSS
@@ -737,20 +751,22 @@ input {
 ```js
 (function () {
   var COMPAT_ENVS = [
-    ['Firefox', ">= 16.0"],
-    ['Google Chrome',
-     ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+    ["Firefox", ">= 16.0"],
+    [
+      "Google Chrome",
+      ">= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support",
+    ],
   ];
-  var compat = $('#compat');
+  var compat = $("#compat");
   compat.empty();
   compat.append('<ul id="compat-list"></ul>');
-  COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('<li>' + val[0] + ': ' + val[1] + '</li>');
+  COMPAT_ENVS.forEach(function (val, idx, array) {
+    $("#compat-list").append("<li>" + val[0] + ": " + val[1] + "</li>");
   });
 
-  const DB_NAME = 'mdn-demo-indexeddb-epublications';
+  const DB_NAME = "mdn-demo-indexeddb-epublications";
   const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = 'publications';
+  const DB_STORE_NAME = "publications";
 
   var db;
 
@@ -773,12 +789,14 @@ input {
 
     req.onupgradeneeded = function (evt) {
       console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(
-        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+      var store = evt.currentTarget.result.createObjectStore(DB_STORE_NAME, {
+        keyPath: "id",
+        autoIncrement: true,
+      });
 
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
+      store.createIndex("biblioid", "biblioid", { unique: true });
+      store.createIndex("title", "title", { unique: false });
+      store.createIndex("year", "year", { unique: false });
     };
   }
 
@@ -792,9 +810,9 @@ input {
   }
 
   function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req = store.clear();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       displayActionSuccess("Store cleared");
       displayPubList(store);
     };
@@ -806,10 +824,9 @@ input {
 
   function getBlob(key, store, success_callback) {
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var value = evt.target.result;
-      if (value)
-        success_callback(value.blob);
+      if (value) success_callback(value.blob);
     };
   }
 
@@ -819,12 +836,12 @@ input {
   function displayPubList(store) {
     console.log("displayPubList");
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readonly');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readonly");
 
-    var pub_msg = $('#pub-msg');
+    var pub_msg = $("#pub-msg");
     pub_msg.empty();
-    var pub_list = $('#pub-list');
+    var pub_list = $("#pub-list");
     pub_list.empty();
     // Resetting the iframe so that it doesn't display previous content
     newViewerFrame();
@@ -835,18 +852,21 @@ input {
     // transaction, and their results are returned in the same order.
     // Thus the count text below will be displayed before the actual pub list
     // (not that it is algorithmically important in this case).
-    req.onsuccess = function(evt) {
-      pub_msg.append('<p>There are <strong>' + evt.target.result +
-                     '</strong> record(s) in the object store.</p>');
+    req.onsuccess = function (evt) {
+      pub_msg.append(
+        "<p>There are <strong>" +
+          evt.target.result +
+          "</strong> record(s) in the object store.</p>",
+      );
     };
-    req.onerror = function(evt) {
+    req.onerror = function (evt) {
       console.error("add error", this.error);
       displayActionFailure(this.error);
     };
 
     var i = 0;
     req = store.openCursor();
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var cursor = evt.target.result;
 
       // If the cursor is pointing at something, ask for the data
@@ -855,21 +875,31 @@ input {
         req = store.get(cursor.key);
         req.onsuccess = function (evt) {
           var value = evt.target.result;
-          var list_item = $('<li>' +
-                            '[' + cursor.key + '] ' +
-                            '(biblioid: ' + value.biblioid + ') ' +
-                            value.title +
-                            '</li>');
-          if (value.year != null)
-            list_item.append(' - ' + value.year);
+          var list_item = $(
+            "<li>" +
+              "[" +
+              cursor.key +
+              "] " +
+              "(biblioid: " +
+              value.biblioid +
+              ") " +
+              value.title +
+              "</li>",
+          );
+          if (value.year != null) list_item.append(" - " + value.year);
 
-          if (value.hasOwnProperty('blob') &&
-              typeof value.blob != 'undefined') {
+          if (
+            value.hasOwnProperty("blob") &&
+            typeof value.blob != "undefined"
+          ) {
             var link = $('<a href="' + cursor.key + '">File</a>');
-            link.on('click', function() { return false; });
-            link.on('mouseenter', function(evt) {
-                      setInViewer(evt.target.getAttribute('href')); });
-            list_item.append(' / ');
+            link.on("click", function () {
+              return false;
+            });
+            link.on("mouseenter", function (evt) {
+              setInViewer(evt.target.getAttribute("href"));
+            });
+            list_item.append(" / ");
             list_item.append(link);
           } else {
             list_item.append(" / No attached file");
@@ -889,9 +919,9 @@ input {
   }
 
   function newViewerFrame() {
-    var viewer = $('#pub-viewer');
+    var viewer = $("#pub-viewer");
     viewer.empty();
-    var iframe = $('<iframe />');
+    var iframe = $("<iframe />");
     viewer.append(iframe);
     return iframe;
   }
@@ -899,50 +929,51 @@ input {
   function setInViewer(key) {
     console.log("setInViewer:", arguments);
     key = Number(key);
-    if (key == current_view_pub_key)
-      return;
+    if (key == current_view_pub_key) return;
 
     current_view_pub_key = key;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readonly');
-    getBlob(key, store, function(blob) {
+    var store = getObjectStore(DB_STORE_NAME, "readonly");
+    getBlob(key, store, function (blob) {
       console.log("setInViewer blob:", blob);
       var iframe = newViewerFrame();
 
       // It is not possible to set a direct link to the
       // blob to provide a mean to directly download it.
-      if (blob.type == 'text/html') {
+      if (blob.type == "text/html") {
         var reader = new FileReader();
-        reader.onload = (function(evt) {
+        reader.onload = function (evt) {
           var html = evt.target.result;
-          iframe.load(function() {
-            $(this).contents().find('html').html(html);
+          iframe.load(function () {
+            $(this).contents().find("html").html(html);
           });
-        });
+        };
         reader.readAsText(blob);
-      } else if (blob.type.indexOf('image/') == 0) {
-        iframe.load(function() {
-          var img_id = 'image-' + key;
+      } else if (blob.type.indexOf("image/") == 0) {
+        iframe.load(function () {
+          var img_id = "image-" + key;
           var img = $('<img id="' + img_id + '"/>');
-          $(this).contents().find('body').html(img);
+          $(this).contents().find("body").html(img);
           var obj_url = window.URL.createObjectURL(blob);
-          $(this).contents().find('#' + img_id).attr('src', obj_url);
+          $(this)
+            .contents()
+            .find("#" + img_id)
+            .attr("src", obj_url);
           window.URL.revokeObjectURL(obj_url);
         });
-      } else if (blob.type == 'application/pdf') {
-        $('*').css('cursor', 'wait');
+      } else if (blob.type == "application/pdf") {
+        $("*").css("cursor", "wait");
         var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function() {
-          $('*').css('cursor', 'auto');
+        iframe.load(function () {
+          $("*").css("cursor", "auto");
         });
-        iframe.attr('src', obj_url);
+        iframe.attr("src", obj_url);
         window.URL.revokeObjectURL(obj_url);
       } else {
-        iframe.load(function() {
-          $(this).contents().find('body').html("No view available");
+        iframe.load(function () {
+          $(this).contents().find("body").html("No view available");
         });
       }
-
     });
   }
 
@@ -959,21 +990,24 @@ input {
     console.log("addPublicationFromUrl:", arguments);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+    xhr.open("GET", url, true);
     // Setting the wanted responseType to "blob"
     // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = 'blob';
+    xhr.responseType = "blob";
     xhr.onload = function (evt) {
-                           if (xhr.status == 200) {
-                             console.log("Blob retrieved");
-                             var blob = xhr.response;
-                             console.log("Blob:", blob);
-                             addPublication(biblioid, title, year, blob);
-                           } else {
-                             console.error("addPublicationFromUrl error:",
-                                           xhr.responseText, xhr.status);
-                           }
-                         };
+      if (xhr.status == 200) {
+        console.log("Blob retrieved");
+        var blob = xhr.response;
+        console.log("Blob:", blob);
+        addPublication(biblioid, title, year, blob);
+      } else {
+        console.error(
+          "addPublicationFromUrl error:",
+          xhr.responseText,
+          xhr.status,
+        );
+      }
+    };
     xhr.send();
 
     // We can't use jQuery here because as of jQuery 1.8.3 the new "blob"
@@ -1005,17 +1039,17 @@ input {
   function addPublication(biblioid, title, year, blob) {
     console.log("addPublication arguments:", arguments);
     var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != 'undefined')
-      obj.blob = blob;
+    if (typeof blob != "undefined") obj.blob = blob;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
     var req;
     try {
       req = store.add(obj);
     } catch (e) {
-      if (e.name == 'DataCloneError')
-        displayActionFailure("This engine doesn't know how to clone a Blob, " +
-                             "use Firefox");
+      if (e.name == "DataCloneError")
+        displayActionFailure(
+          "This engine doesn't know how to clone a Blob, " + "use Firefox",
+        );
       throw e;
     }
     req.onsuccess = function (evt) {
@@ -1023,7 +1057,7 @@ input {
       displayActionSuccess();
       displayPubList(store);
     };
-    req.onerror = function() {
+    req.onerror = function () {
       console.error("addPublication error", this.error);
       displayActionFailure(this.error);
     };
@@ -1034,10 +1068,10 @@ input {
    */
   function deletePublicationFromBib(biblioid) {
     console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.index('biblioid');
-    req.get(biblioid).onsuccess = function(evt) {
-      if (typeof evt.target.result == 'undefined') {
+    var store = getObjectStore(DB_STORE_NAME, "readwrite");
+    var req = store.index("biblioid");
+    req.get(biblioid).onsuccess = function (evt) {
+      if (typeof evt.target.result == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1055,18 +1089,18 @@ input {
   function deletePublication(key, store) {
     console.log("deletePublication:", arguments);
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    if (typeof store == "undefined")
+      store = getObjectStore(DB_STORE_NAME, "readwrite");
 
     // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
     var req = store.get(key);
-    req.onsuccess = function(evt) {
+    req.onsuccess = function (evt) {
       var record = evt.target.result;
       console.log("record:", record);
-      if (typeof record == 'undefined') {
+      if (typeof record == "undefined") {
         displayActionFailure("No matching record found");
         return;
       }
@@ -1074,7 +1108,7 @@ input {
       // the deletion. If the key was a Number for creation, then it needs to
       // be a Number for deletion.
       req = store.delete(key);
-      req.onsuccess = function(evt) {
+      req.onsuccess = function (evt) {
         console.log("evt:", evt);
         console.log("evt.target:", evt.target);
         console.log("evt.target.result:", evt.target.result);
@@ -1088,42 +1122,42 @@ input {
     };
     req.onerror = function (evt) {
       console.error("deletePublication:", evt.target.errorCode);
-      };
+    };
   }
 
   function displayActionSuccess(msg) {
-    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('<span class="action-success">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Success: " + msg : "Success";
+    $("#msg").html('<span class="action-success">' + msg + "</span>");
   }
   function displayActionFailure(msg) {
-    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('<span class="action-failure">' + msg + '</span>');
+    msg = typeof msg != "undefined" ? "Failure: " + msg : "Failure";
+    $("#msg").html('<span class="action-failure">' + msg + "</span>");
   }
   function resetActionStatus() {
     console.log("resetActionStatus ...");
-    $('#msg').empty();
+    $("#msg").empty();
     console.log("resetActionStatus DONE");
   }
 
   function addEventListeners() {
     console.log("addEventListeners");
 
-    $('#register-form-reset').click(function(evt) {
+    $("#register-form-reset").click(function (evt) {
       resetActionStatus();
     });
 
-    $('#add-button').click(function(evt) {
+    $("#add-button").click(function (evt) {
       console.log("add ...");
-      var title = $('#pub-title').val();
-      var biblioid = $('#pub-biblioid').val();
+      var title = $("#pub-title").val();
+      var biblioid = $("#pub-biblioid").val();
       if (!title || !biblioid) {
         displayActionFailure("Required field(s) missing");
         return;
       }
-      var year = $('#pub-year').val();
-      if (year != '') {
+      var year = $("#pub-year").val();
+      if (year != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year))  {
+        if (isNaN(year)) {
           displayActionFailure("Invalid year");
           return;
         }
@@ -1132,14 +1166,14 @@ input {
         year = null;
       }
 
-      var file_input = $('#pub-file');
+      var file_input = $("#pub-file");
       var selected_file = file_input.get(0).files[0];
       console.log("selected_file:", selected_file);
       // Keeping a reference on how to reset the file input in the UI once we
       // have its value, but instead of doing that we rather use a "reset" type
       // input in the HTML form.
       //file_input.val(null);
-      var file_url = $('#pub-file-url').val();
+      var file_url = $("#pub-file-url").val();
       if (selected_file) {
         addPublication(biblioid, title, year, selected_file);
       } else if (file_url) {
@@ -1147,19 +1181,18 @@ input {
       } else {
         addPublication(biblioid, title, year);
       }
-
     });
 
-    $('#delete-button').click(function(evt) {
+    $("#delete-button").click(function (evt) {
       console.log("delete ...");
-      var biblioid = $('#pub-biblioid-to-delete').val();
-      var key = $('#key-to-delete').val();
+      var biblioid = $("#pub-biblioid-to-delete").val();
+      var key = $("#key-to-delete").val();
 
-      if (biblioid != '') {
+      if (biblioid != "") {
         deletePublicationFromBib(biblioid);
-      } else if (key != '') {
+      } else if (key != "") {
         // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == '' || isNaN(key))  {
+        if (key == "" || isNaN(key)) {
           displayActionFailure("Invalid key");
           return;
         }
@@ -1168,20 +1201,18 @@ input {
       }
     });
 
-    $('#clear-store-button').click(function(evt) {
+    $("#clear-store-button").click(function (evt) {
       clearObjectStore();
     });
 
-    var search_button = $('#search-list-button');
-    search_button.click(function(evt) {
+    var search_button = $("#search-list-button");
+    search_button.click(function (evt) {
       displayPubList();
     });
-
   }
 
   openDb();
   addEventListeners();
-
 })(); // Immediately-Invoked Function Expression (IIFE)
 ```
 
@@ -1195,7 +1226,7 @@ input {
 
 參照
 
-- [IndexedDB API Reference](/en/IndexedDB)
+- [IndexedDB API Reference](/zh-TW/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 

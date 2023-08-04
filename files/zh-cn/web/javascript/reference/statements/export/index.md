@@ -2,11 +2,12 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 在创建 JavaScript 模块时，**`export`** 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。
 
-无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。 export 语句不能用在嵌入式脚本中。
+无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。export 语句不能用在嵌入式脚本中。
 
 ## 语法
 
@@ -83,20 +84,20 @@ export default class { .. }
 
 ```js
 // 文件 test.js
-let k; export default k = 12;
+let k;
+export default k = 12;
 ```
 
 ```js
 // 另一个文件
-import m from './test'; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
-console.log(m);        // 输出为 12
+import m from "./test"; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
+console.log(m); // 输出为 12
 ```
 
 你也可以重命名命名导出以避免命名冲突：
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export { myFunction as function1, myVariable as variable };
 ```
 
 ### 重导出 / 聚合
@@ -106,15 +107,13 @@ export { myFunction as function1,
 这个可以使用“export from”语法实现：
 
 ```js
-export { default as function1,
-         function2 } from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 与之形成对比的是联合使用导入和导出：
 
 ```js
-import { default as function1,
-         function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
@@ -123,17 +122,17 @@ export { function1, function2 };
 > **备注：** 尽管与 import 等效，但以下语法在语法上无效：
 
 ```js
-import DefaultExport from 'bar.js'; // 有效的
+import DefaultExport from "bar.js"; // 有效的
 ```
 
 ```js
-export DefaultExport from 'bar.js'; // 无效的
+export DefaultExport from "bar.js"; // 无效的
 ```
 
 这里正确的做法是重命名这个导出：
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 ## 示例
@@ -151,14 +150,14 @@ function cube(x) {
 const foo = Math.PI + Math.SQRT2;
 
 var graph = {
-    options: {
-        color:'white',
-        thickness:'2px'
-    },
-    draw: function() {
-        console.log('From graph draw function');
-    }
-}
+  options: {
+    color: "white",
+    thickness: "2px",
+  },
+  draw: function () {
+    console.log("From graph draw function");
+  },
+};
 
 export { cube, foo, graph };
 ```
@@ -166,22 +165,22 @@ export { cube, foo, graph };
 然后，在你的 HTML 页面的顶级模块中：
 
 ```js
-import { cube, foo, graph } from 'my-module.js';
+import { cube, foo, graph } from "my-module.js";
 
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 着重注意以下几点：
 
 - 在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理
-- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/en-US/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
+- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
 
 ### 使用默认导出
 
@@ -198,7 +197,7 @@ export default function cube(x) {
 然后，在另一个脚本中，可以直接导入默认导出：
 
 ```js
-import cube from './my-module.js';
+import cube from "./my-module.js";
 console.log(cube(3)); // 27
 ```
 
@@ -230,15 +229,15 @@ export myClass;
 // parentModule.js 中
 // 仅仅聚合 childModule1 和 childModule2 中的导出
 // 以重新导出他们
-export { myFunction, myVariable } from 'childModule1.js';
-export { myClass } from 'childModule2.js';
+export { myFunction, myVariable } from "childModule1.js";
+export { myClass } from "childModule2.js";
 ```
 
 ```js
 // 顶层模块中
 // 我们可以从单个模块调用所有导出，因为 parentModule 事先
 // 已经将他们“收集”/“打包”到一起
-import { myFunction, myVariable, myClass } from 'parentModule.js'
+import { myFunction, myVariable, myClass } from "parentModule.js";
 ```
 
 ## 规范
@@ -252,7 +251,7 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 ## 参见
 
 - {{jsxref("Statements/import", "import")}}
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
+- [JavaScript modules](/zh-CN/docs/Web/JavaScript/Guide/Modules) guide
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)

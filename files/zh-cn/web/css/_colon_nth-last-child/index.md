@@ -1,7 +1,8 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 **`:nth-last-child()`** 这个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 从兄弟节点中从后往前匹配处于某些位置的元素
@@ -23,9 +24,9 @@ slug: Web/CSS/:nth-last-child
 ### Keyword values
 
 - `odd`
-  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如: 1, 3, 5 等。
+  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是奇数，比如：1, 3, 5 等。
 - `even`
-  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如: 2, 4, 6 等。
+  - : 代表一些元素，它们在所在的兄弟节点中，从后往前计算的数字位置是偶数，比如：2, 4, 6 等。
 
 ### Functional notation
 
@@ -68,16 +69,16 @@ slug: Web/CSS/:nth-last-child
       <td>First line</td>
     </tr>
     <tr>
-       <td>Second line</td>
+      <td>Second line</td>
     </tr>
     <tr>
-       <td>Third line</td>
+      <td>Third line</td>
     </tr>
     <tr>
-       <td>Fourth line</td>
+      <td>Fourth line</td>
     </tr>
     <tr>
-       <td>Fifth line</td>
+      <td>Fifth line</td>
     </tr>
   </tbody>
 </table>
@@ -91,12 +92,12 @@ table {
 }
 
 /* Selects the last three elements */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Selects every element starting from the second to last item */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -137,8 +138,8 @@ tr:nth-last-child(2) {
 ```css
 /* If there are at least three list items,
    style them all */
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```

@@ -2,11 +2,8 @@
 title: Window.defaultStatus
 slug: Web/API/Window/defaultStatus
 ---
-{{deprecated_header}}
 
-{{ APIRef() }}
-
-## Summary
+{{ APIRef() }}{{deprecated_header}}
 
 获取或设置给定窗口的状态栏文本。
 
@@ -33,7 +30,7 @@ window.defaultStatus = sMsg;
 
 ## Notes
 
-页面 HTML 加载完成后要设置状态栏内容可以使用 [window.status](/en/Gecko_DOM_Reference/window/status).
+页面 HTML 加载完成后要设置状态栏内容可以使用 [window.status](/zh-CN/Gecko_DOM_Reference/window/status).
 
 ## Specification
 

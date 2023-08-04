@@ -1,8 +1,8 @@
 ---
 title: WAI-ARIA ロール
 slug: Web/Accessibility/ARIA/Roles
-translation_of: Web/Accessibility/ARIA/Roles
 ---
+
 このページは、MDN で説明されているすべての WAI-ARIA ロールをカバーするリファレンスページを一覧にしています。ロールの完全なリストについては、[ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques)をご覧ください。
 
 {{SubpagesWithSummaries}}
@@ -11,7 +11,7 @@ translation_of: Web/Accessibility/ARIA/Roles
 - [banner](/ja/docs/Web/Accessibility/ARIA/Roles/Banner_Role)
 - [Combobox](/ja/docs/Web/Accessibility/ARIA/Roles/Combobox_Role)
 - [Command](/ja/docs/Web/Accessibility/ARIA/Roles/Command_Role)
-- [Columnheader ](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)(Estelle)
+- [Columnheader](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role) (Estelle)
 - [complementary](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role)
 - [composite](/ja/docs/Web/Accessibility/ARIA/Roles/Composite_Role)
 - [Definition](/ja/docs/Web/Accessibility/ARIA/Roles/Definition_Role)

@@ -2,15 +2,16 @@
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
 ---
+
 {{HTTPSidebar}}
 
 **Trailer** 是一个响应首部，允许发送方在分块发送的消息后面添加额外的元信息，这些元信息可能是随着消息主体的发送动态生成的，比如消息的完整性校验，消息的数字签名，或者消息经过处理之后的最终状态等。
 
 > **备注：** 请求首部 {{HTTPHeader("TE")}} 需要设置 trailers 来允许挂载字段。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## 语法
 
@@ -21,6 +22,7 @@ Trailer: header-names
 ## 指令
 
 - `header-names`
+
   - : 出现在分块信息挂载部分的消息首部。以下首部字段**不允许**出现：
 
     - 用于信息分帧的首部 (例如{{HTTPHeader("Transfer-Encoding")}} 和 {{HTTPHeader("Content-Length")}}),

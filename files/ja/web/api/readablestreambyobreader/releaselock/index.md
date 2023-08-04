@@ -2,6 +2,7 @@
 title: ReadableStreamBYOBReader.releaseLock()
 slug: Web/API/ReadableStreamBYOBReader/releaseLock
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`releaseLock()`** メソッドは、ストリーム上のリーダーのロックを解除します。 ロックを解除すると、リーダーはアクティブではなくなります。
@@ -35,9 +36,7 @@ readableStreamBYOBReader.releaseLock();
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-release-lock","releaseLock()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

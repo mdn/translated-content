@@ -1,14 +1,8 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
-tags:
-  - API
-  - Arrêter
-  - DOM
-  - Méthodes
-  - Worker
-translation_of: Web/API/DedicatedWorkerGlobalScope/close
 ---
+
 {{APIRef("Web Workers API")}}
 
 La méthode **`close()`** de l'interface {{domxref("DedicatedWorkerGlobalScope")}} ferme toutes les tâches placées dans la boucle de l'évènement `DedicatedWorkerGlobalScope`, fermant effectivement cette portée particulière.

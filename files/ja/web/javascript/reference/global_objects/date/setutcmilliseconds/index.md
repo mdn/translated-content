@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setUTCMilliseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を設定します。
@@ -17,8 +13,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds
 
 ## 構文
 
-```
-dateObj.setUTCMilliseconds(millisecondsValue)
+```js-nolint
+setUTCMilliseconds(millisecondsValue)
 ```
 
 ### 引数
@@ -39,19 +35,17 @@ dateObj.setUTCMilliseconds(millisecondsValue)
 ### setUTCMilliseconds() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCMilliseconds(500);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setUTCMilliseconds")}}
+{{Compat}}
 
 ## 関連情報
 

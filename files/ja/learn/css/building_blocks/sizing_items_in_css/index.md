@@ -2,6 +2,7 @@
 title: CSS によるサイズ設定
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
 これまでのさまざまなレッスンで、CSS を使用してウェブページ上のアイテムのサイズを調整するいくつかの方法に出会いました。デザイン作業をしていくうえで、それぞれの手法がどれほど大事かを理解することが重要です。このレッスンでは、CSS によって要素のサイズを設定する方法をまとめ、サイジングに役立ついくつかの用語を定義します。
@@ -72,7 +73,7 @@ HTML 要素には自然なサイズがあり、CSS の影響を受ける前に�
 
 この手法は、画像を*レスポンシブ*にするために使用されます。そのため、より小さなデバイスで表示すると、適切に縮小されます。ただし、この手法を使用して非常に大きな画像を読み込んでから、ブラウザーで縮小するべきではありません。画像は、デザインに表示される最大サイズに必要なサイズよりも大きくならないように適切なサイズにするべきです。大きすぎる画像をダウンロードすると、サイトが遅くなり、ユーザーが従量制の接続を使用している場合は、より多くの費用がかかる可能性があります。
 
-> **Note:** [レスポンシブ画像技術の](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)詳細をご覧ください。
+> **メモ:** [レスポンシブ画像技術の](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)詳細をご覧ください。
 
 ## ビューポートに関する単位
 
@@ -91,24 +92,3 @@ HTML 要素には自然なサイズがあり、CSS の影響を受ける前に�
 このレッスンでは、Web 上のサイズを決定するときに遭遇する可能性があるいくつかの重要な問題の概要を説明しました。[CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)に移ると、さまざまなレイアウトメソッドを習得する際にサイズ設定が非常に重要になるため、先に進む前に、ここで概念を理解しておくことをお勧めします。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

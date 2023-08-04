@@ -1,7 +1,8 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -21,15 +22,15 @@ SyntaxError: expected '=>' after argument list, got "x"
 
 ## 哪里出错了？
 
-期望获得一个特定的语法结构，但得到了其他的。 可能只是一个简单的错字。
+期望获得一个特定的语法结构，但得到了其他的。可能只是一个简单的错字。
 
 ## 示例
 
 ### 期望的表达式
 
-例如，在调用函数时，不允许使用尾随逗号。 有尾逗号的时候，JavaScript 会期望有另一个参数，可以是任何表达式。
+例如，在调用函数时，不允许使用尾随逗号。有尾逗号的时候，JavaScript 会期望有另一个参数，可以是任何表达式。
 
-```js example-bad
+```js-nolint example-bad
 Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
 ```
@@ -38,7 +39,7 @@ Math.max(2, 42,);
 
 ```js example-good
 Math.max(2, 42);
-Math.max(2, 42, 13+37);
+Math.max(2, 42, 13 + 37);
 ```
 
 ## 相关

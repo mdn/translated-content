@@ -2,6 +2,7 @@
 title: 実用的な位置指定の例
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}
 
 この記事では、位置指定でどのようなことができるかを説明するために、実際に使用されるいくつかの例を作成する方法を示します。
@@ -16,11 +17,11 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **Note:** 完成した例は、[info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **メモ:** 完成した例は、[info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 「別々のタブを別々のウェブページとして作成し、タブをクリックして別々のページに移動させて同様の効果を生み出すだけでよいのではないでしょうか？」と考えるかもしれません。 このコードならもっと簡単なものになりますが、実際には個々の「ページ」ビューは実際には新しくロードされたウェブページになるため、ビュー間で情報を保存し、この機能をより大きな UI デザインに統合するのは難しくなります。 さらに、いわゆる「シングルページアプリ」は、特にモバイルウェブ UI の場合、非常に人気が高まっています。 なぜなら、すべてのコンテンツを表示するために必要な HTTP リクエストの数が減り、パフォーマンスが向上するからです。
 
-> **Note:** ウェブ開発者の中には、一度に 1 ページの情報だけをロードし、[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) などの JavaScript 機能を使用して表示される情報を動的に変更することで、さらに問題を解決するものもあります。 しかし、学習の現時点では、物事をできるだけシンプルに保ちたいと思います。 後で JavaScript がいくつかありますが、ほんの少しだけです。
+> **メモ:** ウェブ開発者の中には、一度に 1 ページの情報だけをロードし、[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) などの JavaScript 機能を使用して表示される情報を動的に変更することで、さらに問題を解決するものもあります。 しかし、学習の現時点では、物事をできるだけシンプルに保ちたいと思います。 後で JavaScript がいくつかありますが、ほんの少しだけです。
 
 まず始めに、出発点の HTML ファイル [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html) のローカルコピーを作成してください。 これをローカルコンピュータの適当な場所に保存して、テキストエディタで開きます。 `body` に含まれる HTML を見てみましょう。
 
@@ -35,17 +36,32 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -104,7 +120,7 @@ body {
 }
 ```
 
-> **Note:** この例では、チェーンの先頭に `.info-box` を持つ子孫セレクタを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
+> **メモ:** この例では、チェーンの先頭に `.info-box` を持つ子孫セレクタを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
 
 次に、水平方向のタブのスタイルを設定します。 リスト項目は、一列に並ぶようにすべて左にフロートさせ、行頭記号（bullet）を取り除くために {{cssxref("list-style-type")}} を `none` に設定し、{{cssxref("width")}} を `150px` に設定しているので、それらは情報ボックス全体にうまく収まります。 {{htmlelement("a")}} 要素は {{cssxref("display")}}`: inline-block` に設定されているので、一列に並んでいてもスタイル可能で、他のさまざまなプロパティを使用して、タブボタンに適したスタイルになっています。
 
@@ -131,7 +147,8 @@ body {
 最後に、このセクションでは、リンク状態にいくつかのスタイルを設定します。 最初に、フォーカス時やホバー時にタブの状態が異なるように {{cssxref(":focus")}} と {{cssxref(":hover")}} の状態を設定し、ユーザーに視覚的なフィードバックを提供します。 次に、タブの 1 つに `active` のクラスが存在する場合、それに同じスタイルを設定する規則を設定します。 これをタブがクリックされたときに JavaScript を使用して設定します。 次の CSS を他のスタイルの下に配置します。
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -225,7 +242,7 @@ function setTabHandler(tab, tabPos) {
 
 ![](fixed-info-box.png)
 
-> **Note:** 完成した例は、[fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **メモ:** 完成した例は、[fixed-info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 出発点として、記事の最初のセクションで完成させた例を使用するか、Github リポジトリから [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) のローカルコピーを作成することができます。
 
@@ -236,18 +253,34 @@ function setTabHandler(tab, tabPos) {
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
-> **Note:** お好みにより、本物のコンテンツで偽のコンテンツを自由に変更してもかまいません。
+> **メモ:** お好みにより、本物のコンテンツで偽のコンテンツを自由に変更してもかまいません。
 
 ### 既存の CSS への変更
 
@@ -290,7 +323,7 @@ function setTabHandler(tab, tabPos) {
 
 ![](hidden-sliding-panel.png)
 
-> **Note:** 完成した例は、[hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
+> **メモ:** 完成した例は、[hidden-info-panel.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) でライブで確認できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。 記事のこのセクションで何を構築するのかを理解するために、ぜひチェックしてください。
 
 まず始めに、Github リポジトリから [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) のローカルコピーを作成します。 これは前の例から続いていないので、新鮮な出発点ファイルが必要です。 ファイル内の HTML を見てみましょう。
 
@@ -306,7 +339,7 @@ function setTabHandler(tab, tabPos) {
 
 {{htmlelement("label")}} 要素と {{htmlelement("input")}} 要素から始めましょう — `<label>` 要素は通常、アクセシビリティの目的でテキストラベルをフォーム要素に関連付けるために使用します（スクリーンリーダーのユーザーが、どの説明がどのフォーム要素に対応しているかを確認できるようにします）。 ここでは、`for` 属性と `id` 属性を使用して `<input>` チェックボックスに関連付けられています。
 
-> **Note:** 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
+> **メモ:** 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
 
 ここでは、これらの要素を少し異なる目的で使用します — `<label>` 要素のもう 1 つの便利な副作用は、チェックボックス自体だけでなく、チェックボックスのラベルをクリックしてチェックボックスをチェックできることです。 これはよく知られた[チェックボックスハック](https://css-tricks.com/the-checkbox-hack/)（英語）をもたらしました。 それはボタンを切り替えることによって要素を制御する JavaScript フリーの方法を提供します。 制御する要素は、他の 2 つに続く {{htmlelement("aside")}} 要素です（簡潔にするために、上記のコードリストからそのコンテンツを省略しました）。
 
@@ -375,7 +408,7 @@ aside {
 追加する CSS の最後の部分がもう 1 つあります。 CSS の下部に次のコードを追加してください。
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
@@ -387,18 +420,3 @@ input[type=checkbox]:checked + aside {
 ## まとめ
 
 それでは、位置指定の見方を締めくくります — これまでのところ、基本的な仕組みがどのように機能するのか、またこれらを適用して興味深い UI 機能を構築する方法を理解しているはずです。 これをすぐに理解できなくても心配しないでください — 位置指定はかなり高度なトピックであり、理解を助けるために記事をいつでも再び参照することができます。 次の話題はフレックスボックスです。
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

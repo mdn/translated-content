@@ -2,6 +2,7 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 ## 摘要
@@ -19,7 +20,7 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
   - : 返回一个{{domxref("DOMString")}}类型。内容为一个用户代理指定的标签，来标识该轨道的来源，比如“internal microphone”。该字符串可以为空，并且在没有源与这个轨道连接的情况下会一直为空。当该轨道从它的源上分离时，这个值也不会改变。
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
-  - : 返回一个布尔类型的值，为 true 时表示轨道是静音，其它为 false。
+  - : 返回一个布尔类型的值，为 true 时表示轨道是静音，其他为 false。
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : 返回一个布尔类型的值，为 true 时表示该轨道是只读的，比如视频文件源或一个被设置为不能修改的摄像头源，或则为 false。
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
@@ -35,15 +36,15 @@ slug: Web/API/MediaStreamTrack
 ### 事件处理
 
 - {{domxref("MediaStreamTrack.onstarted")}}
-  - : 这是{{event("started")}}事件在这个对象上被触发时调用的事件处理器{{event("Event_handlers", "event handler")}}，这时一个新的{{domxref("MediaStreamTrack")}}对象被添加到轨道源上。
+  - : 这是 `started` 事件在这个对象上被触发时调用的事件处理器，这时一个新的 {{domxref("MediaStreamTrack")}} 对象被添加到轨道源上。
 - {{domxref("MediaStreamTrack.onmute")}}
-  - : 这是{{event("mute")}}事件在这个对象被触发时调用的事件处理器{{event("Event_handlers", "event handler")}}，这时这个流被中断。
+  - : 这是 `mute` 事件在这个对象被触发时调用的事件处理器，这时这个流被中断。
 - {{domxref("MediaStreamTrack.onunmute")}}
-  - : 这是{{event("unmute")}}事件在这个对象上被触发时调用的事件处理器{{event("Event_handlers", "event handler")}}，未实现。
+  - : 这是 `unmute` 事件在这个对象上被触发时调用的事件处理器，未实现。
 - {{domxref("MediaStreamTrack.onoverconstrained")}}
-  - : 这是{{event("overconstrained")}}事件在这个对象上被触发时调用的事件处理器{{event("overconstrained")}}，未实现。
+  - : 这是 `overconstrained` 事件在这个对象上被触发时调用的事件处理器，未实现。
 - {{domxref("MediaStreamTrack.oneended")}}
-  - : 这是{{event("ended_(MediaStream)", "ended")}}事件在这个对象被触发时调用的事件处理器{{event("Event_handlers", "event handler")}}，未实现。
+  - : 这是 `ended` 事件在这个对象被触发时调用的事件处理器，未实现。
 
 ## 方法
 
@@ -66,8 +67,8 @@ slug: Web/API/MediaStreamTrack
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
-## 相关内容
+## 参见
 
 - [Using the MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API)

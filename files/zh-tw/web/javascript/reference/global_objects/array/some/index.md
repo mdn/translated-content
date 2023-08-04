@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** 方法會透過給定函式、測試陣列中是否至少有一個元素，通過該函式所實作的測試。這方法回傳的是布林值。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/some
 
 ## 語法
 
-```plain
+```js-nolint
 arr.some(callback[, thisArg])
 ```
 
@@ -42,7 +43,7 @@ The `some()` method executes the `callback` function once for each element prese
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `some()` does not mutate the array on which it is called.
 
@@ -59,7 +60,7 @@ function isBiggerThan10(element, index, array) {
   return element > 10;
 }
 
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -70,8 +71,8 @@ function isBiggerThan10(element, index, array) {
 [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)能給相同的測試，提供更簡潔的語法。
 
 ```js
-[2, 5, 8, 1, 4].some(x => x > 10); //false
-[12, 5, 8, 1, 4].some(x => x > 10); // true
+[2, 5, 8, 1, 4].some((x) => x > 10); //false
+[12, 5, 8, 1, 4].some((x) => x > 10); // true
 ```
 
 {{ EmbedLiveSample('使用箭頭函式測試') }}
@@ -81,16 +82,16 @@ function isBiggerThan10(element, index, array) {
 To mimic the function of the `includes()` method, this custom function returns `true` if the element exists in the array:
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
+  return arr.some(function (arrVal) {
     return val === arrVal;
   });
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 {{ EmbedLiveSample('測試陣列元素的數值是否存在') }}
@@ -98,14 +99,14 @@ checkAvailability(fruits, 'banana'); // true
 ### Checking whether a value exists using an arrow function
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 {{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function') }}
@@ -113,24 +114,24 @@ checkAvailability(fruits, 'banana'); // true
 ### Converting any value to Boolean
 
 ```js
-const TRUTHY_VALUES = [true, 'true', 1];
+const TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  'use strict';
+  "use strict";
 
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
+  return TRUTHY_VALUES.some(function (t) {
     return t === value;
   });
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 {{ EmbedLiveSample('Converting_any_value_to_Boolean') }}
@@ -143,14 +144,14 @@ getBoolean('true');  // true
 // Production steps of ECMA-262, Edition 5, 15.4.4.17
 // Reference: http://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
-  Array.prototype.some = function(fun, thisArg) {
-    'use strict';
+  Array.prototype.some = function (fun, thisArg) {
+    "use strict";
 
     if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
+      throw new TypeError("Array.prototype.some called on null or undefined");
     }
 
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 
@@ -176,7 +177,7 @@ if (!Array.prototype.some) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## 參見
 

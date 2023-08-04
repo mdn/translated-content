@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
+
 {{JSRef}}
 
 **`[@@replace]()`** 方法会在一个字符串中用给定的替换器，替换所有符合正则模式的匹配项，并返回替换后的新字符串结果。用来替换的参数可以是一个字符串或是一个针对每次匹配的回调函数。
@@ -19,7 +20,7 @@ regexp[Symbol.replace](str, newSubStr|function)
 - `str`
   - : 正则替换的目标字符串。
 - `newSubStr (replacement)`
-  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式； 见{{jsxref("String.prototype.replace()")}}页的{{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}部分。
+  - : 类型为 {{jsxref("String")}} 的替换器。支持大多数特殊的替换匹配模式；见{{jsxref("String.prototype.replace()")}}页的{{jsxref("String.prototype.replace", "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}部分。
 - `function (replacement)`
   - : 生成新的子字符串的回调函数替换器。作用于该函数的参数的详细描述见{{jsxref("String.prototype.replace()")}}页的 {{jsxref("String.prototype.replace", "Specifying a function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} 部分。
 
@@ -32,9 +33,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 如果匹配模式也是{{jsxref("RegExp")}}对象，这个方法在 {{jsxref("String.prototype.replace()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 该方法是为了在 RegExp 子类中自定义匹配的替换模式。
@@ -49,9 +50,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 
 ```js
 var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+var str = "2016-01-01";
+var newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### 在子类中使用 @@replace
@@ -74,9 +75,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+var re = new MyRegExp("\\d", "", 3);
+var str = "01234567";
+var newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

@@ -2,6 +2,7 @@
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
 ---
+
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
 **`mode`** 是 {{domxref("ShadowRoot")}} 的只读属性，它返回 `ShadowRoot` 创建时的模式 ("`open`" 或者 "`closed`") 。
@@ -24,4 +25,4 @@ var mode = shadowRoot.mode
 
 ## Browser compatibility
 
-{{Compat("api.ShadowRoot.mode")}}
+{{Compat}}

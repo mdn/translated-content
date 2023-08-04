@@ -2,6 +2,7 @@
 title: ツールバーにボタンを追加する
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
+
 {{AddonSidebar}}
 
 ツールバーボタンは拡張機能で利用できる主な UI コンポーネントです。ツールバーボタンはブラウザーツールバーに存在してアイコンを含んでいます。ユーザーがアイコンをクリックした時、下記の 2 つのいずれかが起こります:
@@ -22,7 +23,6 @@ WebExtension API では、こうしたボタンの種類は "ブラウザーア�
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -38,7 +38,6 @@ WebExtension API では、こうしたボタンの種類は "ブラウザーア�
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -58,7 +57,7 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -69,7 +68,7 @@ browser.browserAction.onClicked.addListener(openPage);
 
 ここで完全な拡張機能は次のようです:
 
-```html
+```plain
 button/
     icons/
         page-16.png
@@ -88,7 +87,6 @@ button/
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -102,7 +100,6 @@ button/
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -115,21 +112,20 @@ button/
 さてポップアップを作らねばなりません。"popup" というディレクトリーを作成してその中に "choose_page.html" というファイルを作ります。中身は次の通り:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
 
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -138,7 +134,8 @@ button/
 "popup" ディレクトリーに"choose_page.css" というファイルを作って、次の中身を入れます:
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -151,7 +148,7 @@ html, body {
 }
 
 .page-choice:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -160,16 +157,15 @@ html, body {
 次に、"popup" ディレクトリーに"choose_page.js" ファイルを作成し、次の中身を入れます:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
 
   var chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
-
 });
 ```
 

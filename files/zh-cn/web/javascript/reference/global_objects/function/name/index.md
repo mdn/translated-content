@@ -2,6 +2,7 @@
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
+
 {{JSRef("Global_Objects", "Function")}}`function.name` 属性返回函数实例的名称。
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}
@@ -14,16 +15,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 函数的 `name` 属性可用于在调试工具或错误消息中标识该函数。它对语言本身没有任何意义。
 
-`name` 属性是只读的，不能用赋值操作符修改:
+`name` 属性是只读的，不能用赋值操作符修改：
 
 ```js
 function someFunction() {}
 
-someFunction.name = 'otherFunction';
+someFunction.name = "otherFunction";
 console.log(someFunction.name); // someFunction
 ```
 
-想要改变它, 请使用 {{jsxref("Object.defineProperty()")}}.
+想要改变它，请使用 {{jsxref("Object.defineProperty()")}}.
 
 `name` 属性通常是从函数的定义方式推断出来的。在下面的部分中，我们将描述推断它的各种方法。
 
@@ -34,8 +35,8 @@ console.log(someFunction.name); // someFunction
 `name` 属性会返回函数的名称。
 
 ```js
-function doSomething() { }
-doSomething.name;  // "doSomething"
+function doSomething() {}
+doSomething.name; // "doSomething"
 ```
 
 ### 构造函数的名称
@@ -43,7 +44,7 @@ doSomething.name;  // "doSomething"
 使用`new Function(...)`语法创建的函数或只是 `Function(...) create` {{jsxref("Function")}}对象及其名称为“anonymous”。
 
 ```js
-(new Function).name; // "anonymous"
+new Function().name; // "anonymous"
 ```
 
 ### 推断函数名称
@@ -51,9 +52,9 @@ doSomething.name;  // "doSomething"
 变量和方法可以从句法位置推断匿名函数的名称（ECMAScript 2015 中新增）。
 
 ```js
-var f = function() {};
+var f = function () {};
 var object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -64,12 +65,16 @@ console.log(object.someMethod.name); // "someMethod"
 
 ```js
 var object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 
 console.log(object.someMethod.name); // "object_someMethod"
 
-try { object_someMethod } catch(e) { alert(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  alert(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
@@ -78,10 +83,10 @@ try { object_someMethod } catch(e) { alert(e); }
 ```js
 var object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'otherMethod';
+object.someMethod.name = "otherMethod";
 console.log(object.someMethod.name); // someMethod
 ```
 
@@ -91,7 +96,7 @@ console.log(object.someMethod.name); // someMethod
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -101,7 +106,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} 所创建的函数将会在函数的名称前加上"bound " 。
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -111,8 +116,8 @@ foo.bind({}).name; // "bound foo"
 
 ```js
 var o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -125,7 +130,7 @@ descriptor.set.name; // "set foo";
 你可以使用`obj.constructor.name`来检查对象的“类”（但请务必阅读以下警告）：
 
 ```js
-function Foo() {}  // ES2015 Syntax: class Foo {}
+function Foo() {} // ES2015 Syntax: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"
@@ -142,15 +147,15 @@ class Foo {
 }
 ```
 
-使用`static name()`方法`Foo.name`不再保存实际的类名称，而是引用`name()`函数对象。 ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：
+使用`static name()`方法`Foo.name`不再保存实际的类名称，而是引用`name()`函数对象。ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：
 
 ```js
 function Foo() {}
-Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};
+Object.defineProperty(Foo, "name", { writable: true });
+Foo.name = function () {};
 ```
 
-通过`fooInstance.constructor.name`获取`fooInstance`类不会给我们所有的类名，而是静态类方法的引用。 例如：
+通过`fooInstance.constructor.name`获取`fooInstance`类不会给我们所有的类名，而是静态类方法的引用。例如：
 
 ```js
 var fooInstance = new Foo();
@@ -160,7 +165,7 @@ console.log(fooInstance.constructor.name); // logs function name()
 你也可以从 ES5 语法示例中看到，在 Chrome 或 Firefox 的中静态定义的`Foo.name`变得可写。内置定义在没有自定义静态定义时是只读的：
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name);
 //如果 Foo 具有静态 name() 属性，则输出“Hello”，否则为“Foo”
 ```
@@ -175,8 +180,8 @@ console.log(Foo.name);
 var sym1 = Symbol("foo");
 var sym2 = Symbol();
 var o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1]: function () {},
+  [sym2]: function () {},
 };
 
 o[sym1].name; // "[foo]"
@@ -190,29 +195,29 @@ o[sym2].name; // ""
 例如下面的代码：
 
 ```js
-function Foo() {};
+function Foo() {}
 var foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
 可能被压缩为：
 
 ```js
-function a() {};
+function a() {}
 var b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' is an instance of 'Foo'");
 } else {
-  console.log('Oops!');
+  console.log("Oops!");
 }
 ```
 
-在未压缩版本中，程序运行到真实分支并打印`'foo' is an instance of 'Foo'`。 而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于`Function.name`，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。
+在未压缩版本中，程序运行到真实分支并打印`'foo' is an instance of 'Foo'`。而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于`Function.name`，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。
 
 ## 规范
 

@@ -2,6 +2,7 @@
 title: Screen.availWidth
 slug: Web/API/Screen/availWidth
 ---
+
 {{ APIRef() }}
 
 ## 概述

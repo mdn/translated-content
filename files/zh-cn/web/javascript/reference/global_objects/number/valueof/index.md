@@ -2,6 +2,7 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述
@@ -29,8 +30,8 @@ var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
-console.log(num);           // 10
-console.log(typeof num);    // number
+console.log(num); // 10
+console.log(typeof num); // number
 ```
 
 ## 规范

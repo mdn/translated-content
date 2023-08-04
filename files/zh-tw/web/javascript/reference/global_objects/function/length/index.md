@@ -2,6 +2,7 @@
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** property 表示該 function 預期被傳入的參數數量
@@ -25,13 +26,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 以此類推. */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 以此類推. */
 
-console.log((function(...args) {}).length); /* 0, rest parameter 不包含在內 */
+console.log(function (...args) {}.length); /* 0, rest parameter 不包含在內 */
 
-console.log((function(a, b = 1, c) {}).length); /* 1 */
+console.log(function (a, b = 1, c) {}.length); /* 1 */
 // 只有在預設參數前的參數會被算到，也就是只有 a 會被視為必須傳入的參數
 // 而 c 將被預設為 undefined
 ```
@@ -44,6 +45,6 @@ console.log((function(a, b = 1, c) {}).length); /* 1 */
 
 {{Compat}}
 
-## 可參閱
+## 參見
 
 - {{jsxref("Function")}}

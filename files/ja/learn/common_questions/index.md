@@ -2,6 +2,7 @@
 title: よくある質問
 slug: Learn/Common_questions
 ---
+
 {{LearnSidebar}}
 
 学習領域のこの章では、構造化された中心的な学習経路（例えば、[HTML](/ja/docs/Learn/HTML) や [CSS](/ja/docs/Learn/CSS) 学習記事）には必ずしも含まれない、よく出る質問に対する回答を提供するように設計されています。この記事は単独でこれだけを読んでも理解できるものになっています。

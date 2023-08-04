@@ -1,8 +1,8 @@
 ---
 title: Document.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-original_slug: Web/API/Document/onafterscriptexecute
 ---
+
 {{ApiRef("DOM")}}{{non-standard_header}}
 
 **`Document.onafterscriptexecute`** プロパティは、静的な {{HTMLElement("script")}} 要素のスクリプトの実行が終了したときに呼び出される関数を参照します。要素が {{domxref("Node.appendChild()", "appendChild()")}} などで動的に追加された場合には呼び出されません。
@@ -22,14 +22,14 @@ function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
-document.addEventListener('afterscriptexecute', finished, true);
+document.addEventListener("afterscriptexecute", finished, true);
 ```
 
 [ライブ例を表示](/samples/html/currentScript.html)
 
 ## 仕様書
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## ブラウザーの互換性
 

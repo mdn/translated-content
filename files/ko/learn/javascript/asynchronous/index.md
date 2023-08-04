@@ -1,22 +1,10 @@
 ---
-title: Asynchronous JavaScript
+title: 비동기 JavaScript
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Landing
-  - Promises
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
-translation_of: Learn/JavaScript/Asynchronous
+l10n:
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
+
 {{LearnSidebar}}
 
 이 과정에서 우리는 {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}와 이것이 중요한 이유, 서버에서 리소스를 가져오는 것과 같은 잠재적 블로킹 연산을 어떻게 효과적으로 다룰 수 있을지에 대해 살펴봅니다.
@@ -40,7 +28,7 @@ Asynchronous Javascript는 상당히 고급 주제에 속하고, 시도해보기
 - [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
   - : **동기**와 **비동기** 프로그램이 무엇인지, 비동기 기술을 자주 사용해야하는 이유, 역사적으로 Javascript에서 비동기 함수가 구현된 방식 및 문제를 살펴봅니다.
 - [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : 프로미스와 프로미스 기반 API를 어떻게 사용하는지 알아봅니다. 또한 `async`와  `await` 키워드를 소개합니다.
+  - : 프로미스와 프로미스 기반 API를 어떻게 사용하는지 알아봅니다. 또한 `async` 와 `await` 키워드를 소개합니다.
 - [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
   - : 자신만의 프로미스 기반 API를 구현하는 방법을 간략하게 설명합니다.
 - [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)

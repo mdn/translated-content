@@ -2,6 +2,7 @@
 title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 接口的 **`delete()`** 方法会从 `FormData` 对象中删除指定键，即 key，和它对应的值，即 value。
@@ -34,7 +35,7 @@ var formData = new FormData(myForm);
 你可以通过 `delete()` 方法来删除键值对：
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## 规范
@@ -43,7 +44,7 @@ formData.delete('username');
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.delete")}}
+{{Compat}}
 
 ## 参见
 

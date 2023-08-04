@@ -2,6 +2,7 @@
 title: GainNode.gain
 slug: Web/API/GainNode/gain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("GainNode") }} 介面的 `gain` 屬性是 [a-rate](/zh-TW/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，代表增益的數值。
@@ -22,7 +23,7 @@ gainNode.gain.value = 0.5;
 
 ## 範例
 
-{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
+See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
 
 ## 規格
 
@@ -30,7 +31,7 @@ gainNode.gain.value = 0.5;
 
 ## 瀏覽器相容度
 
-{{Compat("api.GainNode.gain")}}
+{{Compat}}
 
 ## 參見
 

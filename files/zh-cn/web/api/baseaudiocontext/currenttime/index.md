@@ -2,34 +2,47 @@
 title: AudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
-`currentTime是`{{ domxref("AudioContext") }}的一个 read-only`属性，返回`double 秒（从 0 开始）表示一个只增不减的硬件时间戳，可以用来控制音频回放，实现可视化时间轴等等。
+`currentTime` 是 {{ domxref("AudioContext") }} 的一个只读属性，返回表示只增不减的硬件时间戳的双精度浮点数，可以用来控制音频回放，实现可视化时间轴等等。该值从 0 开始。
 
-## 语法
+## 值
+
+一个双精度浮点数。
+
+## 示例
 
 ```js
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
+// 旧式的 webkit/blink 浏览器需要一个前缀
+
+// …
+
 console.log(audioCtx.currentTime);
 ```
 
-### 返回值
+## 降低时间精度
 
-A double.
-
-## 例子
-
-> **备注：** 想要*完整的 Web Audio 例子的话*，可以去[MDN Github repo](https://github.com/mdn/)看 DEMO（例如[panner-node](https://github.com/mdn/panner-node)）。_不妨试试在浏览器控制台输入_`audioCtx.currentTime`。
+为了防止时间攻击和指纹识别，`audioCtx.currentTime` 的精度可能会根据浏览器的设置而被四舍五入。在 Firefox 中，`privacy.reduceTimerPrecision` 参数默认是启用的，在 Firefox 59 中默认为 20us；在 Firefox 60 中则为 2ms。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-// Older webkit/blink browsers require a prefix
+// Firefox 60 中时间精度降低到了 2ms
+audioCtx.currentTime;
+// 23.404
+// 24.192
+// 25.514
+// …
 
-...
-
-console.log(audioCtx.currentTime);
+// 启用 `privacy.resistFingerprinting` 标志以降低时间精度
+audioCtx.currentTime;
+// 49.8
+// 50.6
+// 51.7
+// …
 ```
+
+在 Firefox 中，也可以启用 `privacy.resistFingerprinting` 标志，精度值将达到 100ms 或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 标志的值，会更大。
 
 ## 规范
 
@@ -37,8 +50,8 @@ console.log(audioCtx.currentTime);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.currentTime")}}
+{{Compat}}
 
-## 另见
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

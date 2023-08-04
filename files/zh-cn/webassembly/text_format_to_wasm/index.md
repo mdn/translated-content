@@ -1,7 +1,8 @@
 ---
 title: 将 WebAssembly 文本格式转换为 wasm
-slug: WebAssembly/Text_format_to_wasm
+slug: WebAssembly/Text_format_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly 有一个基于 S-表达式的文本表示形式，设计为在文本编辑器，浏览器开发人员工具等中暴露的一个中间形式。本文解释了它是如何工作的一些内容以及如何使用可用的工具把文本格式文件转换为.wasm 汇编格式文件。
@@ -33,9 +34,9 @@ WebAssembly 函数 exported_func 是被导出供我们的环境（比如，使�
 3. 当你安装好工具之后，将/wabt/out 目录添加到你的系统路径。
 4. 下一步，执行 wat2wasm 程序，把输入文件的路径传递给它，紧跟一个-o 参数，然后是输出文件的路径：
 
-    ```bash
-    wat2wasm simple.wat -o simple.wasm
-    ```
+   ```bash
+   wat2wasm simple.wat -o simple.wasm
+   ```
 
 该命令会把 wasm 输出到一个叫做 simple.wasm 的文件，该文件包含了.wasm 汇编代码。
 

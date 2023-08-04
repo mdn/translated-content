@@ -1,21 +1,8 @@
 ---
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
-translation_of: Web/API/VideoTrack/id
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`id`** プロパティは、**{{domxref("VideoTrack")}}** によって表されるトラックを一意に識別する文字列を含みます。 この ID を {{domxref("VideoTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられたメディア内の特定のトラックを見つけることができます。
@@ -34,9 +21,7 @@ var trackID = VideoTrack.id;
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

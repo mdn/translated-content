@@ -2,9 +2,10 @@
 title: 開発者ツールパネル
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
-> **Note:** この機能は Firefox 54 以降で利用できます。
+> **メモ:** この機能は Firefox 54 以降で利用できます。
 
 拡張機能が開発者にとって有用なツールを提供する場合、その UI をブラウザーの開発者ツールに新しいパネルとして追加することが可能です。
 
@@ -39,14 +40,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 拡張機能はインスペクターウィンドウの中で [`devtools.inspectedWindow.eval()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) を使うか、バックグラウンドスクリプトからメッセージを渡してコンテンツスクリプトに挿入することで、コードを実行することができます。この方法のより詳しくは[開発ツールの拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)を参照してください。

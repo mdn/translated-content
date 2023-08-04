@@ -1,17 +1,8 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriété
-  - Reference
-translation_of: Web/API/Document/domain
 ---
+
 {{ApiRef}}
 
 Retourne/définit la partie domaine de l'origine du document courant, telle qu'utilisée par la [politique d'origine identique](/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
@@ -19,7 +10,8 @@ Retourne/définit la partie domaine de l'origine du document courant, telle qu'u
 ## Syntaxe
 
 ```js
-var chaineDomaine = document.domain; document.domain = chaine;
+var chaineDomaine = document.domain;
+document.domain = chaine;
 ```
 
 ## Exemple
@@ -29,12 +21,11 @@ var chaineDomaine = document.domain; document.domain = chaine;
 // ce script ferme la fenêtre
 var mauvaisDomaine = "www.example.xxx";
 
-if (document.domain == mauvaisDomaine )
-   window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
+if (document.domain == mauvaisDomaine) window.close(); // juste un exemple - window.close() n'a parfois aucun effet.
 ```
 
 ```js
-// Pour l'URI https://developer.mozilla.org/en-US/docs/Web, ce qui
+// Pour l'URI https://developer.mozilla.org/fr/docs/Web, ce qui
 // suit définit le domaine comme étant la chaîne "developer.mozilla.org"
 var domaine = document.domain;
 ```
@@ -47,7 +38,7 @@ Mozilla vous laissera la définir à un superdomaine de la valeur courante, cont
 
 Si cette propriété est définie avec succès, la partie "port" de l'origine est également définie à null.
 
-Mozilla fait la distinction entre la propriété d'un `document.domain` qui n'a jamais été modifiée d'une explicitement définie avec le même domaine que l'URL du document, même si la propriété renvoie la même valeur dans les deux cas. Un document est autorisé à accéder à un autre si il ont tous deux défini `document.domain` à la même valeur, indiquant leur intention de coopérer, ou si aucun des deux n'a défini `document.domain` et que les domaines dans les URLs sont les mêmes ([implementation](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199)). Sans cette politique spéciale, chaque site serait sujet au Cross-Site-Scripting (XSS)  depuis ses sous-domaines (par exemple, <https://bugzilla.mozilla.org> pourrait être attaqué par des pièces jointes de bugs sur <https://bug*.bugzilla.mozilla.org>).
+Mozilla fait la distinction entre la propriété d'un `document.domain` qui n'a jamais été modifiée d'une explicitement définie avec le même domaine que l'URL du document, même si la propriété renvoie la même valeur dans les deux cas. Un document est autorisé à accéder à un autre si il ont tous deux défini `document.domain` à la même valeur, indiquant leur intention de coopérer, ou si aucun des deux n'a défini `document.domain` et que les domaines dans les URLs sont les mêmes ([implementation](https://mxr.mozilla.org/mozilla-central/source/caps/nsPrincipal.cpp?rev=ecb7068b07a1&mark=199-215#199)). Sans cette politique spéciale, chaque site serait sujet au Cross-Site-Scripting (XSS) depuis ses sous-domaines (par exemple, <https://bugzilla.mozilla.org> pourrait être attaqué par des pièces jointes de bugs sur <https://bug*.bugzilla.mozilla.org>).
 
 ## Spécification
 

@@ -1,10 +1,6 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - CSS-свойство
-translation_of: Web/CSS/padding-left
 ---
 {{CSSRef}}
 
@@ -42,7 +38,7 @@ padding-left: unset;
 
 ### Формальный синтаксис
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Примеры
 

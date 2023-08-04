@@ -2,6 +2,7 @@
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -29,7 +30,7 @@ Math.log(x)
 
 ## 示例
 
-### 例子 1:使用`Math.log`
+### 示例 1:使用`Math.log`
 
 下面的函数返回指定变量的自然对数：
 
@@ -40,17 +41,17 @@ Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
-### 例子 2：使用 `Math.log` 时基于不同的底数
+### 示例 2：使用 `Math.log` 时基于不同的底数
 
 下面的函数返回以 `x` 为底 `y` 的对数（即 logx y）：
 
 ```js
 function getBaseLog(x, y) {
-    return Math.log(y) / Math.log(x);
+  return Math.log(y) / Math.log(x);
 }
 ```
 
-如果你运行 ` getBaseLog(10, 1000)，则会返回``2.9999999999999996，非常接近实际答案：3，原因是浮点数精度问题。 `
+如果你运行 `getBaseLog(10, 1000)`，则会返回 `2.9999999999999996`，非常接近实际答案：3，原因是浮点数精度问题。
 
 ## 规范
 

@@ -2,9 +2,10 @@
 title: RTCTrackEvent
 slug: Web/API/RTCTrackEvent
 ---
+
 {{APIRef("WebRTC")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** represents the {{event("track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}. The target is the `RTCPeerConnection` object to which the track is being added.
+The [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) interface **`RTCTrackEvent`** represents the {{domxref("RTCPeerConnection.track_event", "track")}} event, which is sent when a new {{domxref("MediaStreamTrack")}} is added to an {{domxref("RTCRtpReceiver")}} which is part of the {{domxref("RTCPeerConnection")}}. The target is the `RTCPeerConnection` object to which the track is being added.
 
 This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
@@ -45,10 +46,14 @@ You can add a `track` event listener to be notified when the new track is availa
 This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `videobox` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
 
 ```js
-peerConnection.addEventListener("track", e => {
-  let videoElement = document.getElementById("videobox");
-  videoElement.srcObject = e.streams[0];
-}, false);
+peerConnection.addEventListener(
+  "track",
+  (e) => {
+    let videoElement = document.getElementById("videobox");
+    videoElement.srcObject = e.streams[0];
+  },
+  false,
+);
 ```
 
 ## Specifications
@@ -57,4 +62,4 @@ peerConnection.addEventListener("track", e => {
 
 ## Browser compatibility
 
-{{Compat("api.RTCTrackEvent")}}
+{{Compat}}

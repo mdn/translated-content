@@ -1,9 +1,8 @@
 ---
 title: Controles de formulario originales
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
-original_slug: Learn/HTML/Forms/The_native_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
@@ -39,43 +38,43 @@ Ya conoces algunos elementos de formulario, incluidos {{HTMLelement ('form')}}, 
 
 Los campos de texto {{htmlelement ("input")}} son los controles de formulario más básicos. Son un modo muy cómodo de permitir al usuario introducir cualquier tipo de datos, y ya hemos visto algunos ejemplos sencillos.
 
-> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida ](/es/docs/Rich-Text_Editing_in_Mozilla "/en-US/docs/Rich-Text_Editing_in_Mozilla")(negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
+> **Nota:** Los campos de texto de los formularios HTML son controles de entrada de texto sencillos sin formato. Esto significa que no puedes usarlos para aplicar una [edición enriquecida](/es/docs/Rich-Text_Editing_in_Mozilla) (negrita, cursiva, etc.). Todos los controles de formulario que encuentres con texto enriquecido son controles de formulario personalizados creados con HTML, CSS y JavaScript.
 
 Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
-- Se pueden marcar como {{htmlattrxref ("readonly","input")}} (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o {{htmlattrxref ("disabled","input")}} (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
-- Pueden tener un {{htmlattrxref ("placeholder","input")}}; se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
-- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength "/en-US/docs/HTML/Element/input#attr-maxlength") (el número máximo de caracteres que se pueden poner en la caja de texto).
-- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck "/en-US/docs/HTML/Element/input#attr-spellcheck") (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
+- Se pueden marcar como [`readonly`](/es/docs/Web/HTML/Element/input#readonly) (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o [`disabled`](/es/docs/Web/HTML/Element/input#disabled) (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
+- Pueden tener un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder); se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
+- Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
+- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
 > **Nota:** El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
 
 ### Campos de texto de una sola línea
 
-Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElement ("input")}} cuyo valor de atributo {{htmlattrxref ("type","input")}} se establece en `text`, u omitiendo por completo el atributo {{htmlattrxref ( "type","input")}} (`text` es el valor predeterminado). El valor `text` de este atributo también es el valor alternativo si el navegador no reconoce el valor que has especificado para el atributo {{htmlattrxref ("type","input")}} (por ejemplo, si especificas `type="color"` y el navegador no está dotado en origen de un control de selección de colores).
+Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElement ("input")}} cuyo valor de atributo [`type`](/es/docs/Web/HTML/Element/input#type) se establece en `text`, u omitiendo por completo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (`text` es el valor predeterminado). El valor `text` de este atributo también es el valor alternativo si el navegador no reconoce el valor que has especificado para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (por ejemplo, si especificas `type="color"` y el navegador no está dotado en origen de un control de selección de colores).
 
 > **Nota:** Puedes encontrar ejemplos de todos los tipos de campo de texto de una sola línea en GitHub en [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 Aquí hay un ejemplo básico de campo de texto de una sola línea:
 
 ```html
-<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
 Los campos de texto de una sola línea solo tienen una restricción verdadera: si escribes el texto con saltos de línea, el navegador elimina esos saltos de línea antes de enviar los datos al servidor.
 
 _La captura de pantalla siguiente muestra los tipos de entrada de texto predeterminado, activo (con el foco) y deshabilitado en Firefox 71 y Safari en macOS y en Chrome 79 y Edge 18 en Windows 10._
 
-![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para  una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](https://mdn.mozillademos.org/files/17021/disabled.png)
+![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
-> **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo {{htmlattrxref ("type", "input")}} que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+> **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
 #### Campo de contraseña
 
 Uno de los tipos de entrada originales era el tipo de campo de texto `password`:
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 El valor de la contraseña no añade restricciones especiales al texto que se introduce, pero oculta el valor que se introduce en el campo (por ejemplo, con puntos o asteriscos) para impedir que otros puedan leerlo.
@@ -89,7 +88,7 @@ Los navegadores reconocen las implicaciones de seguridad de enviar datos de form
 Otro control de texto original es el tipo de entrada `hidden`. Se usa para crear un control de formulario que es invisible para el usuario, pero que aun así se envía al servidor junto con el resto de los datos del formulario una vez se transmiten; por ejemplo, es posible que desees enviar una marca de tiempo al servidor que indique cuándo se realizó un pedido. Al estar oculto, el usuario no puede ver ni editar su valor intencionadamente, el control nunca recibirá el foco y un lector de pantalla tampoco lo detectará.
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 Si creas un elemento así, es necesario establecer sus atributos `name` y `value`. Su valor puede establecerse dinámicamente a través de JavaScript. El tipo de entrada oculta no debe tener ninguna etiqueta asociada.
@@ -111,14 +110,14 @@ Para una usabilidad/accesibilidad óptima, te recomendamos delimitar cada lista 
 Las casillas de verificación se crean estableciendo el atributo [`type`](/es/docs/Web/HTML/Attributes/type) del elemento {{HTMLElement ("input")}} en el valor {{HTMLElement ("input / checkbox", "checkbox")}}.
 
 ```html
-<input type="checkbox" id="carrots" name="carrots" value="carrots" checked>
+<input type="checkbox" id="carrots" name="carrots" value="carrots" checked />
 ```
 
 Al incluir el atributo [`checked`](/es/docs/Web/HTML/Attributes/checked), la casilla de verificación se marca automáticamente cuando se carga la página. Al hacer clic en la casilla de verificación o en su etiqueta asociada, la casilla de verificación se activa o desactiva.
 
 Las capturas de pantalla siguientes muestran casillas de verificación predeterminadas, activas (con el foco) y deshabilitadas en Firefox 71 y Safari 13 en macOS y Chrome 79 y Edge 18 en Windows 10:
 
-![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17024/checkboxes.png)
+![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](checkboxes.png)
 
 > **Nota:** Las casillas de verificación y los botones de opción con atributo [`checked`](/es/docs/Web/HTML/Attributes/checked) al cargarse coinciden con la pseudoclase {{cssxref ('<code>:default</code>')}}, incluso aunque ya no estén seleccionadas. Las que están seleccionadas coinciden con la pseudoclase `{{cssxref(':checked')}}`.
 
@@ -126,13 +125,13 @@ Debido a su naturaleza activa-inactiva, las casillas de verificación se conside
 
 ### Botón de opción
 
-Un botón de opción se crea estableciendo el atributo {{htmlattrxref ("type", "input")}} del elemento {{HTMLElement ("input")}} en el valor `radio`:
+Un botón de opción se crea estableciendo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento {{HTMLElement ("input")}} en el valor `radio`:
 
 ```html
-<input type="radio" id="soup" name="meal" checked>
+<input type="radio" id="soup" name="meal" checked />
 ```
 
-Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo {{htmlattrxref ("name", "input")}}, se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.
+Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo [`name`](/es/docs/Web/HTML/Element/input#name), se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.
 
 ```html
 <fieldset>
@@ -140,15 +139,15 @@ Es posible asociar diversos botones de opción. Si comparten el mismo valor de a
   <ul>
     <li>
       <label for="soup">Sopa</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
+      <input type="radio" id="soup" name="meal" value="soup" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
+      <input type="radio" id="curry" name="meal" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
+      <input type="radio" id="pizza" name="meal" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -156,7 +155,7 @@ Es posible asociar diversos botones de opción. Si comparten el mismo valor de a
 
 Las capturas de pantalla siguientes muestran botones de opción sin seleccionar y seleccionados, algunos con el foco y otros desactivados sin seleccionar y seleccionados, en Firefox 71 y Safari 13 en MacOS y Chrome 79 y Edge 18 en Windows 10.
 
-![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17022/radios.png)
+![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](radios.png)
 
 ## Botones
 
@@ -180,57 +179,53 @@ A continuación puedes encontrar ejemplos de cada tipo de botón `<input>`, junt
 ### enviar
 
 ```html
-<button type="submit">
-    Este es un <strong>botón de envío</strong>
-</button>
+<button type="submit">Este es un <strong>botón de envío</strong></button>
 
-<input type="submit" value="Este es un botón de envío">
+<input type="submit" value="Este es un botón de envío" />
 ```
 
 ### reiniciar
 
 ```html
-<button type="reset">
-    Este es un <strong>botón de reinicio</strong>
-</button>
+<button type="reset">Este es un <strong>botón de reinicio</strong></button>
 
-<input type="reset" value="Este es un botón de reinicio">
+<input type="reset" value="Este es un botón de reinicio" />
 ```
 
 ### anónimo
 
 ```html
-<button type="button">
-    Este es un <strong>botón anónimo</strong>
-</button>
+<button type="button">Este es un <strong>botón anónimo</strong></button>
 
-<input type="button" value="Este es un botón anónimo">
+<input type="button" value="Este es un botón anónimo" />
 ```
 
 Los botones siempre se comportan igual, independientemente de su usas un elemento {{HTMLElement ("button")}} o un elemento {{HTMLElement ("input")}}. Sin embargo, como puedes ver en los ejemplos, los elementos {{HTMLElement ("button")}} te permiten usar HTML en tu contenido, que se inserta entre las etiquetas `<button>` de apertura y cierre. Los elementos {{HTMLElement ("input")}}, por otro lado, son elementos vacíos; el contenido que muestran está inserto en el atributo `value` y, por lo tanto, solo acepta contenido de texto sin formato.
 
 Los ejemplos siguientes muestran los tipos de entrada de botones predeterminados, activos y deshabilitados: en Firefox 71 y Safari 13 en macOS, y Chrome 79 y Edge 18 en Windows 10.
 
-![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17023/buttons.png)
+![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](buttons.png)
 
 ### Botón de imagen
 
 El control **botón de imagen** se muestra exactamente como un elemento {{HTMLElement ("img")}}, excepto que cuando el usuario hace clic en él, se comporta como un botón de envío.
 
-Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en el valor `image`. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.
+Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en el valor `image`. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.
 
 ```html
-<input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30">
+<input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30" />
 ```
 
 Si el botón de imagen se usa para enviar un formulario, este control no envía su valor; en lugar de ello se envían las coordenadas X e Y del clic que se ha hecho sobre la imagen (las coordenadas son relativas a la imagen, lo que significa que la esquina superior izquierda de la imagen representa la coordenada (0, 0)). Las coordenadas se envían como dos pares clave/valor:
 
-- La clave del valor X es el valor del atributo {{htmlattrxref ("name","input")}} seguido de la cadena de caracteres «_.x_».
-- La clave del valor Y es el valor del atributo {{htmlattrxref ("name","input")}} seguido de la cadena de caracteres «_.y_».
+- La clave del valor X es el valor del atributo [`name`](/es/docs/Web/HTML/Element/input#name) seguido de la cadena de caracteres «_.x_».
+- La clave del valor Y es el valor del atributo [`name`](/es/docs/Web/HTML/Element/input#name) seguido de la cadena de caracteres «_.y_».
 
 Por ejemplo, cuando haces clic en las coordenadas (123, 456) de la imagen y se hace el envío por el método `get`, verás los valores añadidos a la URL de la manera siguiente:
 
-    http://foo.com?pos.x=123&pos.y=456
+```
+http://foo.com?pos.x=123&pos.y=456
+```
 
 Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data).
 
@@ -238,51 +233,41 @@ Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en qu
 
 Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
 
-Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo {{htmlattrxref ("accept","input")}}. Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo {{htmlattrxref ("multiple","input")}}.
+Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo [`accept`](/es/docs/Web/HTML/Element/input#accept). Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple).
 
 #### Ejemplo
 
 En este ejemplo, se crea un control de selección de archivos que solicita archivos de imágenes gráficas. El usuario puede seleccionar múltiples archivos en este caso.
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 En algunos dispositivos móviles, el control de selección de archivos puede acceder a fotos, vídeos y audio capturados directamente por la cámara y el micrófono del dispositivo y añadir información de captura al atributo `accept` de la manera siguiente:
 
-    <input type="file" accept="image/*;capture=camera">
-    <input type="file" accept="video/*;capture=camcorder">
-    <input type="file" accept="audio/*;capture=microphone">
+```html
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
+```
 
 ## Atributos comunes
 
 Muchos de los elementos que se utilizan para definir controles de formulario tienen sus atributos específicos propios. Sin embargo, hay un conjunto de atributos que son comunes para todos los elementos de formulario. Ya has conocido algunos, pero a continuación encontrarás una lista de esos atributos comunes para referencias futuras:
 
-| Nombre del atributo                                      | Valor por defecto | Descripción                                                                                                                                                                                                                                                                                                                                                                                           |
-| -------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`autofocus`](/es/docs/Web/HTML/Attributes/autofocus) | false             | Este atributo booleano te permite especificar que el elemento ha de tener el foco de entrada automáticamente cuando se carga la página. En un documento, solo un elemento asociado a un formulario puede tener este atributo especificado.                                                                                                                                                            |
+| Nombre del atributo                                   | Valor por defecto | Descripción                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`autofocus`](/es/docs/Web/HTML/Attributes/autofocus) | false             | Este atributo booleano te permite especificar que el elemento ha de tener el foco de entrada automáticamente cuando se carga la página. En un documento, solo un elemento asociado a un formulario puede tener este atributo especificado.                                                                                                                                                    |
 | [`disabled`](/es/docs/Web/HTML/Attributes/disabled)   | false             | Este atributo booleano indica que el usuario no puede interactuar con el elemento. Si no se especifica este atributo, el elemento hereda su configuración del elemento que lo contiene, por ejemplo, {{HTMLElement ("fieldset")}}. Si el elemento que lo contiene no tiene el atributo establecido en `disabled`, el elemento está habilitado.                                                |
 | [`form`](/es/docs/Web/HTML/Attributes/form)           |                   | El elemento `<form>` con el que está asociado el control, que se usa cuando no está anidado dentro de ese formulario. El valor del atributo debe ser el atributo `id` de un elemento {{HTMLElement ("form")}} del mismo documento. Esto te permite asociar un formulario con un control de formulario que esté fuera de aquel, incluso si está dentro de un elemento de formulario diferente. |
-| [`name`](/es/docs/Web/HTML/Attributes/name)           |                   | El nombre del elemento; se envía con los datos del formulario.                                                                                                                                                                                                                                                                                                                                        |
-| [`value`](/es/docs/Web/HTML/Attributes/value)         |                   | El valor inicial del elemento.                                                                                                                                                                                                                                                                                                                                                                        |
+| [`name`](/es/docs/Web/HTML/Attributes/name)           |                   | El nombre del elemento; se envía con los datos del formulario.                                                                                                                                                                                                                                                                                                                                |
+| [`value`](/es/docs/Web/HTML/Attributes/value)         |                   | El valor inicial del elemento.                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Conclusión
 
 Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto original que se introdujo en los primeros días de HTML, que es compatible con todos los navegadores. En el artículo siguiente veremos los valores del atributo `type` que se han añadido en HTML5 más recientemente.
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario HTML](/es/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Cómo estructurar un formulario HTML](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [Los controles básicos de formulario originales](/es/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Tipos de entrada HTML5](/es/docs/Learn/HTML/Forms/HTML5_input_types)
-- [Controles de formulario adicionales](/es/docs/Learn/HTML/Forms/Additional_form_controls)
-- [Pseudoclases UI](/es/docs/Learn/HTML/Forms/UI_pseudo-classes)
-- [Aplicar estilo a formularios HTML](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Validación de datos en un formulario](/es/docs/Learn/HTML/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

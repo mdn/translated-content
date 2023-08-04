@@ -2,6 +2,7 @@
 title: Comment
 slug: Web/API/Comment
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Comment`** 接口代表标签（markup）之间的文本符号（textual notations）。尽管它通常不会显示出来，但是在查看源码时可以看到它们。在 HTML 和 XML 里，注释（Comments）为 '`<!--`' 和 '`-->`' 之间的内容。在 XML 里，注释中不能出现字符序列 '`--`'。
@@ -25,7 +26,7 @@ _该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}
 
 ## 浏览器兼容性
 
-{{Compat("api.Comment")}}
+{{Compat}}
 
 ## 参见
 

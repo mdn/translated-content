@@ -1,8 +1,8 @@
 ---
 title: Event attributes
 slug: Learn/JavaScript/Building_blocks/Events
-original_slug: Web/Guide/HTML/Event_attributes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 每一個 HTML 元素都可以放置事件屬性，以藉此於事件發生時能執行 JavaScript 程式。事件屬性的名稱都有一個前綴「on」，例如當使用者點選元素時要執行指定的 JavaScript，可以使用 `onclick` 屬性並把要執行的 JavaScript 當成屬性值。
@@ -13,7 +13,7 @@ In the JavaScript code executed in response to the event, `this` is bound to the
 
 While these attributes can at times be attractively easy to use, you should avoid using them. Instead, use the {{domxref("EventTarget.addEventListener()")}} function to add a listener for the event.
 
-Event attributes can be blocked by using [Content Security Policy](/en-US/docs/Security/CSP/Introducing_Content_Security_Policy) which if used, blocks all inline scripts unless the _'unsafe-inline'_ keyword is used.
+Event attributes can be blocked by using [Content Security Policy](/zh-TW/docs/Security/CSP/Introducing_Content_Security_Policy) which if used, blocks all inline scripts unless the _'unsafe-inline'_ keyword is used.
 
 ## Example using event attributes
 
@@ -28,7 +28,8 @@ This example appends text to an element each time time the {{HTMLElement("div")}
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
     </script>
   </head>
@@ -54,14 +55,17 @@ Instead, you should use {{domxref("EventTarget.addEventListener()")}}, as shown 
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
 
       // Called when the page is done loading; this is where we do any setup we need,
       // such as creating event listeners for the elements in the page.
 
       function setup() {
-        document.getElementById("click").addEventListener("click", doSomething, true);
+        document
+          .getElementById("click")
+          .addEventListener("click", doSomething, true);
       }
 
       // Install an event handler on the window to receive the "load" event, which

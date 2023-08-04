@@ -1,12 +1,13 @@
 ---
 title: 内存管理
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## 简介
 
-像 C 语言这样的底层语言一般都有底层的内存管理接口，比如 `malloc()`和`free()`。相反，JavaScript 是在创建变量（对象，字符串等）时自动进行了分配内存，并且在不使用它们时“自动”释放。 释放的过程称为垃圾回收。这个“自动”是混乱的根源，并让 JavaScript（和其他高级语言）开发者错误的感觉他们可以不关心内存管理。
+像 C 语言这样的底层语言一般都有底层的内存管理接口，比如 `malloc()`和`free()`。相反，JavaScript 是在创建变量（对象，字符串等）时自动进行了分配内存，并且在不使用它们时“自动”释放。释放的过程称为垃圾回收。这个“自动”是混乱的根源，并让 JavaScript（和其他高级语言）开发者错误的感觉他们可以不关心内存管理。
 
 ## 内存生命周期
 
@@ -30,20 +31,24 @@ var s = "azerty"; // 给字符串分配内存
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; // 给对象及其包含的值分配内存
 
 // 给数组及其包含的值分配内存（就像对象一样）
 var a = [1, null, "abra"];
 
-function f(a){
+function f(a) {
   return a + 2;
 } // 给函数（可调用的对象）分配内存
 
 // 函数表达式也能分配一个对象
-someElement.addEventListener('click', function(){
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function () {
+    someElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### 通过函数调用分配内存
@@ -53,7 +58,7 @@ someElement.addEventListener('click', function(){
 ```js
 var d = new Date(); // 分配一个 Date 对象
 
-var e = document.createElement('div'); // 分配一个 DOM 元素
+var e = document.createElement("div"); // 分配一个 DOM 元素
 ```
 
 有些方法分配新变量或者新对象：
@@ -87,7 +92,7 @@ var a3 = a.concat(a2);
 
 ### 引用
 
-垃圾回收算法主要依赖于引用的概念。在内存管理的环境中，一个对象如果有访问另一个对象的权限（隐式或者显式），叫做一个对象引用另一个对象。例如，一个 Javascript 对象具有对它[原型](/en/JavaScript/Guide/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
+垃圾回收算法主要依赖于引用的概念。在内存管理的环境中，一个对象如果有访问另一个对象的权限（隐式或者显式），叫做一个对象引用另一个对象。例如，一个 Javascript 对象具有对它[原型](/zh-CN/JavaScript/Guide/Inheritance_and_the_prototype_chain)的引用（隐式引用）和对它属性的引用（显式引用）。
 
 在这里，“对象”的概念不仅特指 JavaScript 对象，还包括函数作用域（或者全局词法作用域）。
 
@@ -100,25 +105,24 @@ var a3 = a.concat(a2);
 ```js
 var o = {
   a: {
-    b:2
-  }
+    b: 2,
+  },
 };
 // 两个对象被创建，一个作为另一个的属性被引用，另一个被分配给变量 o
 // 很显然，没有一个可以被垃圾收集
 
-
 var o2 = o; // o2 变量是第二个对“这个对象”的引用
 
-o = 1;      // 现在，“这个对象”只有一个 o2 变量的引用了，“这个对象”的原始引用 o 已经没有
+o = 1; // 现在，“这个对象”只有一个 o2 变量的引用了，“这个对象”的原始引用 o 已经没有
 
 var oa = o2.a; // 引用“这个对象”的 a 属性
-               // 现在，“这个对象”有两个引用了，一个是 o2，一个是 oa
+// 现在，“这个对象”有两个引用了，一个是 o2，一个是 oa
 
 o2 = "yo"; // 虽然最初的对象现在已经是零引用了，可以被垃圾回收了
-           // 但是它的属性 a 的对象还在被 oa 引用，所以还不能回收
+// 但是它的属性 a 的对象还在被 oa 引用，所以还不能回收
 
 oa = null; // a 属性的那个对象现在也是零引用了
-           // 它可以被垃圾回收了
+// 它可以被垃圾回收了
 ```
 
 #### 限制：循环引用
@@ -126,7 +130,7 @@ oa = null; // a 属性的那个对象现在也是零引用了
 该算法有个限制：无法处理循环引用的事例。在下面的例子中，两个对象被创建，并互相引用，形成了一个循环。它们被调用之后会离开函数作用域，所以它们已经没有用了，可以被回收了。然而，引用计数算法考虑到它们互相都有至少一次引用，所以它们不会被回收。
 
 ```js
-function f(){
+function f() {
   var o = {};
   var o2 = {};
   o.a = o2; // o 引用 o2
@@ -144,7 +148,7 @@ IE 6, 7 使用引用计数方式对 DOM 对象进行垃圾回收。该方式常�
 
 ```js
 var div;
-window.onload = function(){
+window.onload = function () {
   div = document.getElementById("myDivElement");
   div.circularReference = div;
   div.lotsOfData = new Array(10000).join("*");
@@ -175,4 +179,4 @@ window.onload = function(){
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance](https://developer.mozilla.org/en-US/docs/Mozilla/Performance)
+- [Performance](/zh-CN/docs/Mozilla/Performance)

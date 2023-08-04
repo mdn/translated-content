@@ -1,15 +1,8 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-synthesis
-translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 **`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、太字やイタリックの字体がない場合に、ブラウザーが合成してよいかどうかを制御します。

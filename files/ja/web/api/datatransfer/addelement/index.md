@@ -2,18 +2,19 @@
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{Non-standard_header()}}
 
 **`DataTransfer.addElement()`** メソッドは、与えられた要素にドラッグソースを設定します。この要素は {{domxref("HTMLElement/drag_event", "drag")}} と {{domxref("HTMLElement/dragend_event", "dragend")}} イベントが発生する要素となり、既定のターゲット（ドラッグされたノード）とはなりません。
 
-> **Note:** このメソッドは Firefox 固有です。
+> **メモ:** このメソッドは Firefox 固有です。
 
 ## 構文
 
 ```js
-addElement(element)
+addElement(element);
 ```
 
 ### 引数
@@ -30,8 +31,7 @@ addElement(element)
 この例では、`addElement()` メソッドの使用例を示します。
 
 ```js
-function change_drag_node(event, node)
-{
+function change_drag_node(event, node) {
   const dt = event.dataTransfer;
   dt.addElement(node);
 }

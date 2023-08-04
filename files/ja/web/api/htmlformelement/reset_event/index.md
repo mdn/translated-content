@@ -1,31 +1,28 @@
 ---
-title: 'HTMLFormElement: reset イベント'
+title: "HTMLFormElement: reset イベント"
+short-title: reset
 slug: Web/API/HTMLFormElement/reset_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef}}
 
 **`reset`** イベントは {{HTMLElement("form")}} がリセットされたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり (ただし、バブリングしない単純なイベントとして指定されている)</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onreset")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+
+```js
+addEventListener("reset", (event) => {});
+
+onreset = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -35,8 +32,8 @@ slug: Web/API/HTMLFormElement/reset_event
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="reset">Reset form</button>
 </form>
 <p id="log"></p>
@@ -46,12 +43,12 @@ slug: Web/API/HTMLFormElement/reset_event
 
 ```js
 function logReset(event) {
-  log.textContent = `Form reset! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('reset', logReset);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("reset", logReset);
 ```
 
 ### 結果
@@ -60,16 +57,11 @@ form.addEventListener('reset', logReset);
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-reset", "reset")}}             | {{Spec2("UI Events")}} | 変更なし |
-| {{SpecName("HTML5.2", "fullindex.html#eventdef-global-reset", "reset")}} | {{Spec2("HTML5.2")}} | 変更なし |
-| {{SpecName("HTML5.1", "fullindex.html#eventdef-global-reset", "reset")}} | {{Spec2("HTML5.1")}} | 変更なし |
-| {{SpecName("HTML5 W3C", "index.html#events-0", "reset")}}                     | {{Spec2("HTML5 W3C")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLFormElement.reset_event")}}
+{{Compat}}
 
 ## 関連情報
 

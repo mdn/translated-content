@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setHours()`** メソッドは、地方時に基づき、指定された日付の「時」を設定し、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された {{jsxref("Date")}} インスタンスが表す時刻までの間のミリ秒単位の数値を返します。
@@ -17,14 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 
 ## 構文
 
-```
-dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
-```
-
-### JavaScript 1.3 以前
-
-```
-dateObj.setHours(hoursValue)
+```js-nolint
+setHours(hoursValue)
+setHours(hoursValue, minutesValue)
+setHours(hoursValue, minutesValue, secondsValue)
+setHours(hoursValue, minutesValue, secondsValue, msValue)
 ```
 
 ### 引数
@@ -53,19 +46,17 @@ dateObj.setHours(hoursValue)
 ### setHours() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setHours(7);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setHours")}}
+{{Compat}}
 
 ## 関連情報
 

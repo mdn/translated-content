@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines
 l10n:
   sourceCommit: 4d6913ea91fa5dd65f843d715f1878a8d015b49f
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs est un projet <i lang="en">open source</i>. Dans les sections qui suivent, nous verrons ce qui y est documenté et comment. Pour en savoir plus sur _les façons de contribuer_, veuillez consulter [les règles de contribution](/fr/docs/MDN/Community).

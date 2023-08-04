@@ -2,6 +2,7 @@
 title: THREE.js によるバウンディングボリューム衝突検出
 slug: Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
 ---
+
 {{GamesSidebar}}
 
 この記事では、**Three.js ライブラリーを使用してバウンディングボックスとバウンディングスフィアの間の衝突検出**を実装する方法を示します。 これを読む前に、まず[三次元の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)の紹介記事を読み、かつ Three.js に関する基本的な知識があることを前提としています。
@@ -17,22 +18,25 @@ Three.js には、**数学的なボリューム**（mathematical volumes）と�
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({}),
+);
 
 knot.geometry.computeBoundingBox();
 const knotBBox = new Box3(
   knot.geometry.boundingBox.min,
-  knot.geometry.boundingBox.max);
+  knot.geometry.boundingBox.max,
+);
 ```
 
-> **Note:** `boundingBox` プロパティは、`Mesh` ではなく、`Geometry` 自体を参照として使用します。 したがって、`Mesh` に適用された拡大縮小、位置などの変換は、計算するボックスの計算では無視されます。
+> **メモ:** `boundingBox` プロパティは、`Mesh` ではなく、`Geometry` 自体を参照として使用します。 したがって、`Mesh` に適用された拡大縮小、位置などの変換は、計算するボックスの計算では無視されます。
 
 前の問題を修正するより簡単な代替方法は、後で `Box3.setFromObject` を使用してこれらの境界を設定することです。 これにより、3D エンティティの**変換** _と_ **子メッシュ**も考慮して寸法が計算されます。
 
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({}),
+);
 
 const knotBBox = new Box3(new THREE.Vector3(), new THREE.Vector3());
 knotBBox.setFromObject(knot);
@@ -45,11 +49,13 @@ knotBBox.setFromObject(knot);
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new MeshNormalMaterial({}));
+  new MeshNormalMaterial({}),
+);
 
 const knotBSphere = new Sphere(
   knot.position,
-  knot.geometry.boundingSphere.radius);
+  knot.geometry.boundingSphere.radius,
+);
 ```
 
 残念ながら、`Sphere` インスタンスに `Box3.setFromObject` に相当するものはありません。 したがって、変換を適用したり、`Mesh` の位置を変更したりする場合は、バウンディングスフィアを手動で更新する必要があります。 例えば次のようにです。
@@ -78,7 +84,7 @@ knotBBox.containsPoint(point);
 knotBbox.intersectsBox(otherBox);
 ```
 
-> **Note:** これは、`Box3` が別のものを _完全に_ 包んでいるかどうかをチェックする `Box3.containsBox` メソッドとは異なります。
+> **メモ:** これは、`Box3` が別のものを _完全に_ 包んでいるかどうかをチェックする `Box3.containsBox` メソッドとは異なります。
 
 #### `Sphere` 対 `Sphere`
 
@@ -99,12 +105,12 @@ knotBSphere.intersectsSphere(otherSphere);
 
 THREE.Sphere.__closest = new THREE.Vector3();
 THREE.Sphere.prototype.intersectsBox = function (box) {
-    // get box closest point to sphere center by clamping
-    THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
-    THREE.Sphere.__closest.clamp(box.min, box.max);
+  // get box closest point to sphere center by clamping
+  THREE.Sphere.__closest.set(this.center.x, this.center.y, this.center.z);
+  THREE.Sphere.__closest.clamp(box.min, box.max);
 
-    const distance =  this.center.distanceToSquared(THREE.Sphere.__closest);
-    return distance < (this.radius * this.radius);
+  const distance = this.center.distanceToSquared(THREE.Sphere.__closest);
+  return distance < this.radius * this.radius;
 };
 ```
 
@@ -137,7 +143,7 @@ THREE.Sphere.prototype.intersectsBox = function (box) {
 ```js
 const knot = new THREE.Mesh(
   new THREE.TorusKnotGeometry(0.5, 0.1),
-  new THREE.MeshNormalMaterial({})
+  new THREE.MeshNormalMaterial({}),
 );
 const knotBoxHelper = new THREE.BoxHelper(knot, 0x00ff00);
 scene.add(knotBoxHelper);

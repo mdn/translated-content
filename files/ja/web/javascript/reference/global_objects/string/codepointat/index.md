@@ -1,15 +1,8 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
+
 {{JSRef}}
 
 **`codePointAt()`** メソッドは、 Unicode コードポイント値である負ではない整数を返します。
@@ -118,9 +111,7 @@ if (!String.prototype.codePointAt) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.codepointat', 'String.prototype.codePointAt')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

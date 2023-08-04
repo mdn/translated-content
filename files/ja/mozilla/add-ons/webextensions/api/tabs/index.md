@@ -2,6 +2,7 @@
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 ブラウザーのタブシステムとやりとりします。
@@ -24,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : タブがミュートされているかを示す真理値と、最後の変更の理由からなるオブジェクト。
 - {{WebExtAPIRef("tabs.PageSettings")}}
-  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF "Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF.")メソッドにおいて、どのように PDF を描画するかを制御する。
+  - : [`tabs.saveAsPDF()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF)メソッドにおいて、どのように PDF を描画するかを制御する。
 - {{WebExtAPIRef("tabs.Tab")}}
   - : タブについての情報を含む。
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -66,7 +67,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : 特定のウィンドウ内のすべてのタブについての情報を取り出す。
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab "This type contains information about a tab.") オブジェクトとして取り出す。
+  - : スクリプトが実行されているタブについての情報を [`tabs.Tab`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) オブジェクトとして取り出す。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
   - : あるウィンドウにおいてタブが選択されているかを得る。
 - {{WebExtAPIRef("tabs.getZoom()")}}
@@ -151,9 +152,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -180,4 +182,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

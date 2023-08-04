@@ -1,15 +1,8 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.get()`** メソッドは、オブジェクト (`target[propertyKey]`) からプロパティを関数として取得するように動作します。
@@ -79,9 +72,7 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

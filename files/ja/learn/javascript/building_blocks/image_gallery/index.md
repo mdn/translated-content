@@ -2,6 +2,7 @@
 title: イメージギャラリー
 slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 JavaScript の基本的な構成要素を見てきたところで、これからたくさんのウェブサイトで見かける項目、JavaScript で動作するイメージギャラリーをつくってみることで、あなたが得た繰り返し、関数、条件とイベントの知識を試してみましょう。
@@ -14,7 +15,7 @@ JavaScript の基本的な構成要素を見てきたところで、これから
 
 この評価を始めるために、サンプルが入っているサイトから [ZIP ファイル](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) を取得して、コンピュータのどこかに展開しておきます。
 
-> **Note:** 別の方法として, この評価を行うために [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の `<script>`/`<style>` 要素にそれらを貼り付けてください 。
+> **メモ:** 別の方法として, この評価を行うために [JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使うことができます。これらのオンラインエディターに HTML、CSS、JavaScript を貼り付けることができます。利用するオンラインエディターが JavaScript/CSS パネルに分かれていなければ、 HTML ページの中の `<script>`/`<style>` 要素にそれらを貼り付けてください 。
 
 ## プロジェクト概要
 
@@ -24,14 +25,12 @@ HTML、CSS と画像および数行の JavaScript のコードが提供されて
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 例ではこのように見えます:
@@ -61,8 +60,8 @@ JavaScript に必要なもの:
 
 必要なこと:
 
-1.  "Looping through images" コメントの下のセクションのコードを全 5 画像をループする繰り返し処理のなかに置いて下さい — 各画像を表現する 5 つの数についてループするだけです。
-2.  各ループの反復で、プレースホルダー `xxx` の値を画像のパスに等しい文字列で置き換えてください。それぞれの場合で `src` 属性の値をこの値に設定します。いずれの場合も画像は画像ディレクトリーにあり、`pic1.jpg`、`pic2.jpg` というようなファイル名になっています。
+1. "Looping through images" コメントの下のセクションのコードを全 5 画像をループする繰り返し処理のなかに置いて下さい — 各画像を表現する 5 つの数についてループするだけです。
+2. 各ループの反復で、プレースホルダー `xxx` の値を画像のパスに等しい文字列で置き換えてください。それぞれの場合で `src` 属性の値をこの値に設定します。いずれの場合も画像は画像ディレクトリーにあり、`pic1.jpg`、`pic2.jpg` というようなファイル名になっています。
 
 ### onclick ハンドラーをそれぞれのサムネール画像に追加する
 
@@ -74,14 +73,14 @@ JavaScript に必要なもの:
 
 暗くする/明るくする `<button>` が残っています。`btn` という変数に `<button>` への参照を格納するコードはすでにご紹介しています。それらに `onclick` ハンドラーに追加する必要があります:
 
-1.  `<button>` にセットされている現在のクラス名をチェックしますーこれもまた、`getAttribute()` を使えば取得できます。
-2.  クラス名が `"dark"` なら、`<button>` のクラスを ([`setAttribute()`](/ja/docs/Web/API/Element/setAttribute) を使って) `"light"` に変更します。テキストも "Lighten" にします。そして、オーバーレイ` <div>` の {{cssxref("background-color")}} を `"rgba(0,0,0,0.5)"` にします。
-3.  クラス名が` "dark"` でなければ、`<button>` のクラスを `"dark"` に変更します。テキストを "Darken" に戻します。そしてオーバーレイ `<div>` の {{cssxref("background-color")}} を `"rgba(0,0,0,0)"` にします。
+1. `<button>` にセットされている現在のクラス名をチェックしますーこれもまた、`getAttribute()` を使えば取得できます。
+2. クラス名が `"dark"` なら、`<button>` のクラスを ([`setAttribute()`](/ja/docs/Web/API/Element/setAttribute) を使って) `"light"` に変更します。テキストも "Lighten" にします。そして、オーバーレイ `<div>` の {{cssxref("background-color")}} を `"rgba(0,0,0,0.5)"` にします。
+3. クラス名が `"dark"` でなければ、`<button>` のクラスを `"dark"` に変更します。テキストを "Darken" に戻します。そしてオーバーレイ `<div>` の {{cssxref("background-color")}} を `"rgba(0,0,0,0)"` にします。
 
 次のコードは上記の 2 と 3 で示された変更を行う基本的なものです。
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -95,13 +94,3 @@ overlay.style.backgroundColor = xxx;
 組織されたコースの一部としてこの評価を行う場合、採点のため先生/メンターにあなたの成果を提出してください。もし、自習なら、[このエクササイズに関するディスカッションのスレッド](https://discourse.mozilla.org/t/image-gallery-assessment/24687) や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャネルで尋ねれば、採点ガイドが簡単に得られるでしょう。まずエクササイズに挑戦してください。ーごまかしても何も得られません！
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

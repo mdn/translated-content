@@ -2,6 +2,7 @@
 title: document.anchors
 slug: Web/API/Document/anchors
 ---
+
 {{APIRef("DOM")}}
 
 {{deprecated_header()}}
@@ -19,9 +20,9 @@ nodeList = document.anchors
 ### 例子
 
 ```js
-if ( document.anchors.length >= 5 ) {
-    dump("dump found too many anchors");
-    window.location = "http://www.google.com";
+if (document.anchors.length >= 5) {
+  dump("dump found too many anchors");
+  window.location = "http://www.google.com";
 }
 ```
 
@@ -75,7 +76,7 @@ if ( document.anchors.length >= 5 ) {
 
 ### 备注
 
-由于向后兼容的原因，该属性只返回那些拥有` name 属性的 a 元素，而不是那些拥有``id `属性的`a`元素。
+由于向后兼容的原因，该属性只返回那些拥有 `name` 属性的 `a` 元素，而不是那些拥有 `id` 属性的 `a` 元素。
 
 ### 规范
 

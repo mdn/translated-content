@@ -2,6 +2,7 @@
 title: FormData.values()
 slug: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.values()`** 方法返回一个允许遍历该对象中所有值的 {{jsxref("Iteration_protocols",'迭代器')}} 。这些值是 {{domxref("USVString")}} 或是{{domxref("Blob")}} 对象。
@@ -23,12 +24,12 @@ formData.values();
 ```js
 //创建一个 FormData 测试对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 //显示值
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
@@ -45,7 +46,7 @@ value2
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.values")}}
+{{Compat}}
 
 ## 相关链接
 

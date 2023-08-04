@@ -1,13 +1,9 @@
 ---
 title: WebGL을 사용한 객체 애니메이션
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
-tags:
-  - WebGL
-  - 애니메이션
-  - 회전
-translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 앞 단원에서의 예제 코드는 정지되어 있는 것처럼 보이지만 사실은 15밀리초마다 한 번 씩 WebGL 장면(Scene)을 다시 그리도록 설정되어 있습니다. 그려질 객체의 상태가 계속 똑같기 때문에, 똑같은 객체를 15밀리초마다 계속 다시 그리고 있는 것입니다. 이제 우리가 그린 정사각형을 실제로 움직이게 만들어 보겠습니다.
 
@@ -41,7 +37,7 @@ mvPopMatrix();
 실제로 애니메이션 효과가 나타나도록 하려면 `squareRotation` 값을 시간이 지남에 따라 계속 변경해주는 코드를 추가해야 합니다. `lastSquareUpdateTime`이라는 변수에 마지막으로 다시 그렸던 시각을 저장하고, 다음과 같은 코드를 `drawScene()`에 추가합니다:
 
 ```js
-var currentTime = (new Date).getTime();
+var currentTime = new Date().getTime();
 if (lastSquareUpdateTime) {
   var delta = currentTime - lastSquareUpdateTime;
 
@@ -115,7 +111,7 @@ function mvPushMatrix(m) {
 
 function mvPopMatrix() {
   if (!mvMatrixStack.length) {
-    throw("Can't pop from an empty matrix stack.");
+    throw "Can't pop from an empty matrix stack.";
   }
 
   mvMatrix = mvMatrixStack.pop();
@@ -123,7 +119,7 @@ function mvPopMatrix() {
 }
 
 function mvRotate(angle, v) {
-  var inRadians = angle * Math.PI / 180.0;
+  var inRadians = (angle * Math.PI) / 180.0;
 
   var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
   multMatrix(m);

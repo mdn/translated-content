@@ -2,6 +2,7 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 类（class）通过 **static** 关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
@@ -26,12 +27,12 @@ static methodName() { ... }
 
 ```js
 class StaticMethodCall {
-    static staticMethod() {
-        return 'Static method has been called';
-    }
-    static anotherStaticMethod() {
-        return this.staticMethod() + ' from another static method';
-    }
+  static staticMethod() {
+    return "Static method has been called";
+  }
+  static anotherStaticMethod() {
+    return this.staticMethod() + " from another static method";
+  }
 }
 StaticMethodCall.staticMethod();
 // 'Static method has been called'
@@ -46,15 +47,15 @@ StaticMethodCall.anotherStaticMethod();
 
 ```js
 class StaticMethodCall {
-    constructor() {
-        console.log(StaticMethodCall.staticMethod());
-        // 'static method has been called.'
-        console.log(this.constructor.staticMethod());
-        // 'static method has been called.'
-    }
-    static staticMethod() {
-        return 'static method has been called.';
-    }
+  constructor() {
+    console.log(StaticMethodCall.staticMethod());
+    // 'static method has been called.'
+    console.log(this.constructor.staticMethod());
+    // 'static method has been called.'
+  }
+  static staticMethod() {
+    return "static method has been called.";
+  }
 }
 ```
 
@@ -63,7 +64,7 @@ class StaticMethodCall {
 下面的例子说明了这几点：
 
 1. 静态方法如何在类上实现。
-2. 具有静态成员的类，可以被子类化 。
+2. 具有静态成员的类，可以被子类化。
 3. 什么情况下静态方法可以调用，什么情况下不能调用。
 
 ```js
@@ -73,21 +74,19 @@ class Tripple {
   }
 }
 
-
 class BiggerTripple extends Tripple {
   static tripple(n) {
     return super.tripple(n) * super.tripple(n);
   }
 }
 
-
-console.log(Tripple.tripple());// 3
-console.log(Tripple.tripple(6));// 18
+console.log(Tripple.tripple()); // 3
+console.log(Tripple.tripple(6)); // 18
 
 let tp = new Tripple();
 
-console.log(BiggerTripple.tripple(3));// 81（不会受父类实例化的影响）
-console.log(tp.tripple());// 'tp.tripple 不是一个函数'.
+console.log(BiggerTripple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
 ```
 
 ## 规范

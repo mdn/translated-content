@@ -1,14 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - CSS Containment
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/contain
 ---
 {{CSSRef}}
 

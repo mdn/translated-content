@@ -2,6 +2,7 @@
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
+
 {{JSRef}}
 
 **`Number.isInteger()`** 方法用来判断给定的参数是否为整数。
@@ -30,29 +31,33 @@ Number.isInteger(value)
 ## 示例
 
 ```js
-Number.isInteger(0);         // true
-Number.isInteger(1);         // true
-Number.isInteger(-100000);   // true
+Number.isInteger(0); // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
 
-Number.isInteger(0.1);       // false
-Number.isInteger(Math.PI);   // false
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
 
-Number.isInteger(Infinity);  // false
+Number.isInteger(Infinity); // false
 Number.isInteger(-Infinity); // false
-Number.isInteger("10");      // false
-Number.isInteger(true);      // false
-Number.isInteger(false);     // false
-Number.isInteger([1]);       // false
+Number.isInteger("10"); // false
+Number.isInteger(true); // false
+Number.isInteger(false); // false
+Number.isInteger([1]); // false
 ```
 
 ## Polyfill
 
 ```js
-Number.isInteger = Number.isInteger || function(value) {
-    return typeof value === "number" &&
-           isFinite(value) &&
-           Math.floor(value) === value;
-};
+Number.isInteger =
+  Number.isInteger ||
+  function (value) {
+    return (
+      typeof value === "number" &&
+      isFinite(value) &&
+      Math.floor(value) === value
+    );
+  };
 ```
 
 ## 规范

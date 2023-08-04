@@ -1,14 +1,8 @@
 ---
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - fragment
-translation_of: Web/API/DocumentFragment/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`DocumentFragment.querySelector()`** renvoie le premier élément ou `null` si aucune correspondance n'est trouvée, dans le {{domxref("DocumentFragment")}} (en utilisant la traversée en profondeur des noeuds du document), avec le groupe spécifié de sélecteurs.
@@ -47,10 +41,10 @@ L'argument chaîne transmis à `querySelector` doit suivre la syntaxe CSS. Pour 
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // Ne correspond à rien
-document.querySelector('#foo\\\\bar') // Correspond au premier div
-document.querySelector('#foo:bar')     //  Ne correspond à rien
-document.querySelector('#foo\\:bar')   // Correspond au second div
+  document.querySelector("#foo\bar"); // Ne correspond à rien
+  document.querySelector("#foo\\\\bar"); // Correspond au premier div
+  document.querySelector("#foo:bar"); //  Ne correspond à rien
+  document.querySelector("#foo\\:bar"); // Correspond au second div
 </script>
 ```
 

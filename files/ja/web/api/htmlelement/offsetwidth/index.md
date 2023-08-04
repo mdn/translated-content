@@ -1,7 +1,10 @@
 ---
-title: HTMLElement.offsetWidth
+title: "HTMLElement: offsetWidth プロパティ"
 slug: Web/API/HTMLElement/offsetWidth
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetWidth`** は読み取り専用プロパティで、要素のレイアウト幅を整数として返します。
@@ -14,11 +17,11 @@ slug: Web/API/HTMLElement/offsetWidth
 
 要素の `offsetWidth` ピクセル値に対応する整数です。 `offsetWidth` プロパティは読み取り専用です。
 
-> **Note:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
+> **メモ:** このプロパティは、値を整数に丸めます。 小数値が必要な場合は、{{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
 ## 例
 
-![](dimensions-offset.png)
+![大きなパディング、境界、マージンを持つ要素の例です。offsetWidth` は、パディングと境界を含み、マージンを除いた要素のレイアウト幅である。](dimensions-offset.png)
 
 ## 仕様書
 

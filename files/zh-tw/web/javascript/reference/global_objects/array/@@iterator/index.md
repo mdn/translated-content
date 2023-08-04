@@ -2,6 +2,7 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 屬性的初始值與 {{jsxref("Array.prototype.values()", "values()")}} 屬性的初始值為相同的的函式物件。
@@ -14,14 +15,14 @@ arr[Symbol.iterator]()
 
 ### 回傳值
 
-陣列的**迭代器（iterator）**函式，預設與 {{jsxref("Array.prototype.values()", "values()")}} 函式相同。
+陣列的**迭代器**（iterator）函式，預設與 {{jsxref("Array.prototype.values()", "values()")}} 函式相同。
 
 ## 範例
 
 ### 使用 `for...of` 迴圈進行迭代
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
@@ -33,7 +34,7 @@ for (let letter of eArr) {
 ### 另一種迭代方式
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
@@ -48,7 +49,7 @@ console.log(eArr.next().value); // p
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## 參見
 

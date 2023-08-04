@@ -1,10 +1,11 @@
 ---
 title: 网格布局的基本概念
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
+
 {{CSSRef}}
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
+[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
 
 ## 什么是网格？
 
@@ -30,21 +31,21 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以 CSS 中的**z-index**属性来控制重叠区域显示的优先级。
 
-Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
+Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
 
 ## 网格容器
 
 我们通过在元素上声明 `display：grid` 或 `display：inline-grid` 来创建一个网格容器。一旦我们这样做，这个元素的所有直系子元素将成为网格元素。
 
-在这个例子中，这有一个类名为 `wrapper` 的`div` 元素作为容器 ，它内部有五个子元素。
+在这个例子中，这有一个类名为 `wrapper` 的`div` 元素作为容器，它内部有五个子元素。
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -57,7 +58,9 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -103,11 +106,11 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -119,7 +122,9 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -143,7 +148,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{EmbedLiveSample('grid_first', '610', '200')}}
+{{EmbedLiveSample('网格轨道', '610', '200')}}
 
 ### `fr` 单位
 
@@ -151,11 +156,11 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -167,7 +172,9 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -191,7 +198,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}
+{{ EmbedLiveSample('fr 单位', '220', '180') }}
 
 在下面的这个例子中，我们创建定义了一个`2fr`轨道和两个`1fr`轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
 
@@ -211,7 +218,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-### 在轨道清单中使用`repeat()`
+### 在轨道清单中使用 `repeat()`
 
 有着多轨道的大型网格可使用 `repeat()` 标记来重复部分或整个轨道列表。如下方的网格定义：
 
@@ -259,11 +266,11 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
@@ -276,30 +283,32 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
 {{ EmbedLiveSample('隐式和显式网格', '230', '420') }}
 
-### 轨道大小和`minmax()`
+### 轨道大小和 `minmax()`
 
 在设置一个显式的网格或者定义自动创建的行和列的大小的时候，我们也许想给网格一个最小的尺寸，确保他们能扩大到容纳他里面添加的内容。举个例子，我想让我的行的高度永远不会缩小到 100 像素以下，但是如果我的内容延伸到 300 像素高了我想让我的行高也延伸到这个高度。
 
@@ -314,31 +323,34 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -356,7 +368,7 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
 
-网格线的编号顺序取决于文章的书写模式。在从左至右书写的语言中，编号为 1 的网格线位于最左边。在从右至左书写的语言中，编号为 1 的网格线位于最右边。 网格线也可以被命名，我们将在稍后的教程中看到如何完成这一操作。
+网格线的编号顺序取决于文章的书写模式。在从左至右书写的语言中，编号为 1 的网格线位于最左边。在从右至左书写的语言中，编号为 1 的网格线位于最右边。网格线也可以被命名，我们将在稍后的教程中看到如何完成这一操作。
 
 ### 跨轨道放置网格元素
 
@@ -368,52 +380,54 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
-   <div class="box5">Five</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box2 {
-    grid-column-start: 1;
-    grid-row-start: 3;
-    grid-row-end: 5;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -423,7 +437,7 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ## 网格单元
 
-一个网格单元是在一个网格元素中最小的单位， 从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义在一个父级元素当中，那么他的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。
+一个网格单元是在一个网格元素中最小的单位，从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义在一个父级元素当中，那么他的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。
 
 ![The first cell of the grid highlighted](1_grid_cell.png)
 
@@ -439,42 +453,44 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-column-gap: 10px;
-   grid-row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -488,15 +504,15 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ```html
 <div class="wrapper">
-    <div class="box box1">
-        <div class="nested">a</div>
-        <div class="nested">b</div>
-        <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
+  </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
@@ -506,34 +522,36 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -547,133 +565,137 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 > **备注：** 子网格还并未在任何浏览器中实现，并且随时有可能从规范中移除。
 
-在当前的规范中，我们可以将上面的嵌套网格的例子进行修改，使用 `display: subgrid` 而不是 `display: grid，然后移除轨道定义。嵌套网格将会使用父级网格元素中的轨道定义来排列它其中的网格元素。`
+在当前的规范中，我们可以将上面的嵌套网格的例子进行修改，使用 `display: subgrid` 而不是 `display: grid`，然后移除轨道定义。嵌套网格将会使用父级网格元素中的轨道定义来排列它其中的网格元素。
 
 需要指出的是嵌套网格有同时有两个单位 — 行和列。隐式子网格的概念是没有的，这意味着你需要确保父级网格元素为了容纳所有的子网格元素需要包含足够的行与列的轨道。
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   display: subgrid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: subgrid;
 }
 ```
 
-## 使用`z-index`控制层级
+## 使用 `z-index` 控制层级
 
 多个网格项目可以占用同一个网格单位。如果我们回到之前根据网格线编号放置网格项目的话，我们可以更改此项来使两个网格项目重叠。
 
 ```html
 <div class="wrapper">
-   <div class="box box1">One</div>
-   <div class="box box2">Two</div>
-   <div class="box box3">Three</div>
-   <div class="box box4">Four</div>
-   <div class="box box5">Five</div>
+  <div class="box box1">One</div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box2 {
-   grid-column-start: 1;
-   grid-row-start: 2;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '210', '410') }}
+{{ EmbedLiveSample('使用 z-index 控制层级', '210', '410') }}
 
-网格项目 `box2` 现在覆盖于 `box1 之上，其覆盖顺序遵循文档流的原始顺序（后来居上）。`
+网格项目 `box2` 现在覆盖于 `box1` 之上，其覆盖顺序遵循文档流的原始顺序（后来居上）。
 
 ### 控制顺序
 
-我们可以在网格项目发生重叠时使用 `z-index` 属性控制重叠的顺序 - 就像放置网格项目一样。如果我们给 `box2` 设定一个低于 `box1 的` `z-index` 值的话，`box2将会显示在 box1 的下方。`
+我们可以在网格项目发生重叠时使用 `z-index` 属性控制重叠的顺序——就像放置网格项目一样。如果我们给 `box2` 设定一个低于 `box1` 的 `z-index` 值的话，`box2` 将会显示在 box1 的下方。
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-auto-rows: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
 }
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   z-index: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 2;
 }
 .box2 {
-   grid-column-start: 1;
-   grid-row-start: 2;
-   grid-row-end: 4;
-   z-index: 1;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 1;
 }
 ```
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">One</div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">One</div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
 </div>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 .box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 .nested {
-    border: 2px solid #ffec99;
-    border-radius: 5px;
-    background-color: #fff9db;
-    padding: 1em;
+  border: 2px solid #ffec99;
+  border-radius: 5px;
+  background-color: #fff9db;
+  padding: 1em;
 }
 ```
 
@@ -681,4 +703,4 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ## 下一步
 
-在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)。
+在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)。

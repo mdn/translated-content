@@ -2,6 +2,7 @@
 title: 文件物件模型 (DOM)
 slug: Web/API/Document_Object_Model
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 **文件物件模型（_Document Object Model, DOM_）**是 HTML、XML 和 SVG 文件的程式介面。它提供了一個文件（樹）的結構化表示法，並定義讓程式可以存取並改變文件架構、風格和內容的方法。DOM 提供了文件以擁有屬性與函式的節點與物件組成的結構化表示。節點也可以附加事件處理程序，一旦觸發事件就會執行處理程序。 本質上，它將網頁與腳本或程式語言連結在一起。
@@ -265,7 +266,7 @@ slug: Web/API/Document_Object_Model
 
 這裡是資料型態的 DOM API，在 SVG 特性和性質的定義中被使用。
 
-> **備註：** 從 {{Gecko("5.0")}} 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
+> **備註：** 從 Gecko 5.0 開始，下列 SVG 相關的 DOM 介面物件的表示清單，現在可以被索引且可以像陣列般被取用；此外，他們也有 length 屬性來標示其清單中的項目個數：{{domxref("SVGLengthList")}}、{{domxref("SVGNumberList")}}、{{domxref("SVGPathSegList")}}，和 {{domxref("SVGPointList")}}。
 
 #### 靜態類型
 

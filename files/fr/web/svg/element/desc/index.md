@@ -1,12 +1,8 @@
 ---
 title: desc
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Description
-translation_of: Web/SVG/Element/desc
 ---
+
 {{SVGRef}}
 
 Tout élément graphique ou conteneur dans un dessin SVG peut définir une description en utilisant l'élément **`<desc>`**, cette description ne peut contenir que du texte.
@@ -33,9 +29,9 @@ _(Aucun)_
 
 Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement).
 
-## Compatibilitée des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## Voir aussi
 

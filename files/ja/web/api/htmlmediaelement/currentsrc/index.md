@@ -1,7 +1,10 @@
 ---
 title: HTMLMediaElement.currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.currentSrc`** プロパティには、選択されたメディアリソースの絶対 URL が入っています。この選択は、例えば、ウェブサーバーがユーザーのディスプレイの解像度に基づいてメディアファイルを選択した場合に発生する可能性があります。 `networkState` プロパティが `EMPTY` の場合、値は空の文字列です。
@@ -13,7 +16,7 @@ slug: Web/API/HTMLMediaElement/currentSrc
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.currentSrc); // ""
 ```
 

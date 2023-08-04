@@ -2,6 +2,7 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **class 声明**创建一个基于原型继承的具有给定名称的新类。
@@ -33,7 +34,7 @@ class name [extends] {
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -42,7 +43,7 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -54,8 +55,8 @@ class Square extends Polygon {
 > 重复声明一个类会引起类型错误。
 >
 > ```js
-> class Foo {};
-> class Foo {};
+> class Foo {}
+> class Foo {}
 > // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 >
@@ -63,7 +64,7 @@ class Square extends Polygon {
 >
 > ```js
 > let Foo = class {};
-> class Foo {};
+> class Foo {}
 > // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 
@@ -77,6 +78,6 @@ class Square extends Polygon {
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`function` declaration](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
+- [`class` expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
+- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)

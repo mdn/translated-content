@@ -1,16 +1,8 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`sup()`** メソッドは、文字列が上付き文字として表示されるように HTML の {{HTMLElement("sup")}} 要素を生成します。
@@ -48,9 +40,7 @@ console.log('これは' + subText.sub() + 'の見え方を示しています。'
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

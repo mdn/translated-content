@@ -2,6 +2,7 @@
 title: Range.startOffset
 slug: Web/API/Range/startOffset
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.startOffset`** は読み取り専用プロパティで、 `startContainer` の `Range` の開始位置を表す数値を返します。

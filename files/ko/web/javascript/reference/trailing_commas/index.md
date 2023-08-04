@@ -1,21 +1,8 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
-  - 구문
-  - 자바스크립트
-  - 콤마
-  - 트레일링 콤마
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
+
 {{JsSidebar("More")}}
 
 **Trailing commas** ("final commas"라고도 불립니다)는 새로운 엘리먼트나 매개변수, 속성을 JavaScript 코드에 추가할 때 유용합니다. 새로운 속성을 추가할 때, 마지막 줄에 trailing comma가 있다면 그 줄을 수정 없이 그대로 복사해 쓸 수 있습니다. 이외에도 버전 관리 이력이 간단해지고 코드 편집이 더 편해진다는 장점이 있습니다.
@@ -76,7 +63,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-Trailing comma는 클래스나 객체의 [메소드 정의](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)에도 사용할 수 있습니다.
+Trailing comma는 클래스나 객체의 [메소드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)에도 사용할 수 있습니다.
 
 ```js
 class C {
@@ -104,7 +91,7 @@ Math.max(10, 20,);
 
 ### 잘못된 trailing comma
 
-함수의 매개변수 정의나 호출에 쉼표만 있을 경우 {{Jsxref("SyntaxError")}}가 발생합니다. 또한, [rest 매개변수](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용할 때는 trailing comma를 사용할 수 없습니다.
+함수의 매개변수 정의나 호출에 쉼표만 있을 경우 {{Jsxref("SyntaxError")}}가 발생합니다. 또한, [rest 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용할 때는 trailing comma를 사용할 수 없습니다.
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -117,7 +104,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 구조 분해 할당에서의 trailing comma
 
-[구조 분해 할당](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
 
 ```js
 // Trailing comma가 있는 배열 구조 분해

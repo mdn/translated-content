@@ -1,24 +1,22 @@
 ---
 title: Date.prototype.setUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`setUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。
 
-{{EmbedInteractiveExample("pages/js/date-setutcmonth.html")}}
+{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
 
 ## 構文
 
-```
-dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
+```js-nolint
+setUTCFullYear(yearValue)
+setUTCFullYear(yearValue, monthValue)
+setUTCFullYear(yearValue, monthValue, dayValue)
 ```
 
 ### 引数
@@ -45,19 +43,17 @@ dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
 ### setUTCFullYear() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCFullYear(1997);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setUTCFullYear")}}
+{{Compat}}
 
 ## 関連情報
 

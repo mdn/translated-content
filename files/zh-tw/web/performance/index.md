@@ -1,8 +1,10 @@
 ---
 title: 網路性能
 slug: Web/Performance
-original_slug: Web/性能
 ---
+
+{{QuickLinksWithSubPages}}
+
 Web 性能是負載時間和運行時的客觀度量和用戶體驗。Web 性能是指站點加載、交互和回應所需的時間，以及用戶交互過程中內容的流暢程度——滾動是否流暢?按鈕可點擊嗎?彈出窗口加載和顯示的速度是否很快?它們的動畫是否流暢?Web 性能包括加載時間、每秒幀數和交互時間等客觀度量，以及加載內容所需時間的主觀體驗。
 
 一個站點的回應時間越長，就會有越多的用戶放棄這個站點。重要的是最小化加載和回應時間，並添加額外的特性來隱藏延遲，使體驗盡可能快地可用並具有交互性，同時非同步地加載體驗的較長尾部分。
@@ -37,7 +39,7 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 - 表演時間
   - : 性能時間軸標準定義了對性能介面的擴展，以支持應用程式中的客戶端延遲測量。這些介面可以一起用來幫助確定應用程式的性能瓶頸。
 - 用戶時間 API
-  - : 使用用戶計時 API 的“標記”和“度量”條目類型來創建特定於應用程式的時間戳——這是流覽器性能時間表的一部分。
+  - : 使用用戶計時 API 的「標記」和「度量」條目類型來創建特定於應用程式的時間戳——這是流覽器性能時間表的一部分。
 - 幀定時 API
   - : PerformanceFrameTiming 介面提供有關流覽器事件迴圈的幀計時數據。
 - 燈塔 API
@@ -123,7 +125,7 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 - 延遲加載
   - : 在初始頁面加載時加載所有 web 應用程式資產並不總是必要的。延遲加載是將頁面上的資產(如腳本、圖像等)的加載延遲到以後的某個時間點。當這些資產確實需要的時候。
 - 使用 import()延遲加載 JavaScript
-  - : 術語“延遲加載”通常指加載時不需要的資產的延遲加載技術，例如僅在圖像滾動到視圖中時才加載折疊下麵的圖像。現在有了加載 JavaScript 的本地特性!在本指南中，我們將討論 dynamic import()語句，這是一個較新的流覽器特性，可以根據需要加載 JavaScript 模組。
+  - : 術語「延遲加載」通常指加載時不需要的資產的延遲加載技術，例如僅在圖像滾動到視圖中時才加載折疊下麵的圖像。現在有了加載 JavaScript 的本地特性!在本指南中，我們將討論 dynamic import()語句，這是一個較新的流覽器特性，可以根據需要加載 JavaScript 模組。
 - 使用資源提示控制資源交付
   - : 當涉及到資源優先順序和交付時，流覽器通常比我們更清楚，但是他們離 clairyovant 還很遠。本地流覽器特性使我們能夠在流覽器連接到另一個伺服器時提示它，或者在流覽器知道它需要資源之前預加載資源。如果使用得當，這可以讓快速體驗看起來更快。在本文中，我們將介紹一些本地流覽器特性，如 rel=preconnect、rel=dn -prefetch、rel=prefetch 和 rel=preload，以及如何充分利用它們。
 - 績效預算
@@ -190,7 +192,7 @@ APIs
   - [requestIdleCallback()](/zh-TW/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/zh-TW/docs/Web/API/Beacon_API/Using_the_Beacon_API)
-- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Web/HTTP/Link_prefetching_FAQ), and prerender
+- Resource Hints - [dns-prefetch](/zh-TW/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-TW/docs/Glossary/Prefetch), and prerender
 - [Fetchevent.navigationPreload](/zh-TW/docs/Web/API/FetchEvent/navigationPreload)
 - [Performance Server Timing API](/zh-TW/docs/Web/API/PerformanceServerTiming)
 

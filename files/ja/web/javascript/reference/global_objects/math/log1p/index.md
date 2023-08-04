@@ -1,14 +1,8 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
+
 {{JSRef}}
 
 **`Math.log1p()`** 関数は、 1 + 数値の ({{jsxref("Math.E", "e")}} を底とする) 自然対数を返します。
@@ -47,17 +41,17 @@ log(1 + x) を計算すると、 x が小さければ、 x にとても近い答
 これは次の関数でエミュレートできます。
 
 ```js
-Math.log1p = Math.log1p || function(x) {
-  x = Number(x);
-  if (x < -1 || x !== x)
-    return NaN;
-  if (x === 0 || x === Infinity)
-    return x;
+Math.log1p =
+  Math.log1p ||
+  function (x) {
+    x = Number(x);
+    if (x < -1 || x !== x) return NaN;
+    if (x === 0 || x === Infinity) return x;
 
-  var nearX = (x + 1) - 1;
+    var nearX = x + 1 - 1;
 
-  return nearX === 0 ? x : x * (Math.log(x + 1) / nearX);
-};
+    return nearX === 0 ? x : x * (Math.log(x + 1) / nearX);
+  };
 ```
 
 ## 例
@@ -65,17 +59,15 @@ Math.log1p = Math.log1p || function(x) {
 ### Math.log1p() の使用
 
 ```js
-Math.log1p(1);  // 0.6931471805599453
-Math.log1p(0);  // 0
+Math.log1p(1); // 0.6931471805599453
+Math.log1p(0); // 0
 Math.log1p(-1); // -Infinity
 Math.log1p(-2); // NaN
 ```
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log1p', 'Math.log1p')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

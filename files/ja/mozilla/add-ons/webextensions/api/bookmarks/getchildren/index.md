@@ -2,6 +2,7 @@
 title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.getChildren()`** は、ブックマークフォルダの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。
@@ -10,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 
 ```js
 browser.bookmarks.getChildren(
-  id,      // 文字列
-  callback // 関数
-)
+  id, // 文字列
+  callback, // 関数
+);
 ```
 
 ### Parameters
@@ -48,8 +49,8 @@ chrome.bookmarks.getChildren(bookmarkItemId, gotChildren);
 
 ```js
 function toggleBookmark(folderNode, title, url) {
-  chrome.bookmarks.getChildren(folderNode.id, function(results) {
-    let node = results.find(function(el) {
+  chrome.bookmarks.getChildren(folderNode.id, function (results) {
+    let node = results.find(function (el) {
       return el.title === title;
     });
 
@@ -62,7 +63,7 @@ function toggleBookmark(folderNode, title, url) {
       chrome.bookmarks.create({
         parentId: folderNode.id,
         title: title,
-        url: url
+        url: url,
       });
     }
   });
@@ -77,9 +78,10 @@ function toggleBookmark(folderNode, title, url) {
 
 そうではなかった場合、新しいブックマークを作成するために {{WebExtAPIRef("bookmarks.create()")}} が呼び出します。この際、引数 `folderNode` で与えられていたフォルダ ID を新しい親フォルダの ID に指定し、合わせて `title` と `url` も指定します。
 
-> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getChildren) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ function toggleBookmark(folderNode, title, url) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

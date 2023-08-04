@@ -2,6 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef}}
 
 **`every()`** 方法會測試陣列中的所有元素是否都通過了由給定之函式所實作的測試。
@@ -40,7 +41,7 @@ The `every` method executes the provided `callback` function once for each eleme
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `every`, it will be used as callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `every`, it will be used as callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `every` does not mutate the array on which it is called.
 
@@ -58,17 +59,17 @@ The following example tests whether all elements in the array are bigger than 10
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
 ### Using arrow functions
 
-[Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
+[Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter syntax for the same test.
 
 ```js
-[12, 5, 8, 130, 44].every(x => x >= 10); // false
-[12, 54, 18, 130, 44].every(x => x >= 10); // true
+[12, 5, 8, 130, 44].every((x) => x >= 10); // false
+[12, 54, 18, 130, 44].every((x) => x >= 10); // true
 ```
 
 ## Polyfill
@@ -77,12 +78,12 @@ function isBigEnough(element, index, array) {
 
 ```js
 if (!Array.prototype.every) {
-  Array.prototype.every = function(callbackfn, thisArg) {
-    'use strict';
+  Array.prototype.every = function (callbackfn, thisArg) {
+    "use strict";
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the this
@@ -95,7 +96,7 @@ if (!Array.prototype.every) {
     var len = O.length >>> 0;
 
     // 4. If IsCallable(callbackfn) is false, throw a TypeError exception.
-    if (typeof callbackfn !== 'function') {
+    if (typeof callbackfn !== "function") {
       throw new TypeError();
     }
 
@@ -109,7 +110,6 @@ if (!Array.prototype.every) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -119,7 +119,6 @@ if (!Array.prototype.every) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal method
         //    of O with argument Pk.
         kValue = O[k];
@@ -147,7 +146,7 @@ if (!Array.prototype.every) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## 參見
 

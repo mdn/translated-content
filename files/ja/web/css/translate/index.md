@@ -1,15 +1,8 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 座標変換
-  - recipe:css-property
-browser-compat: css.properties.translate
-translation_of: Web/CSS/translate
 ---
+
 {{CSSRef}}
 
 **`translate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、平行移動の座標変換を独自に、 {{CSSxRef("transform")}} プロパティから独立して指定することができます。これは一般的なユーザーインターフェイスの用途に適しており、 `transform` の値で指定する変換関数を正確に思い出す必要がなくなります。

@@ -2,13 +2,14 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGGraphicsElement`** インターフェイスは、直接グループにグラフィックを描画することを主な目的とした SVG 要素を表します。
 
 {{InheritanceDiagram(600, 120)}}
 
-> **Note:** **メモ:** このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
+> **メモ:** このインターフェイスは SVG 2 で導入され、 SVG 1.1 で導入された {{domxref("SVGLocatable")}} および {{domxref("SVGTransformable")}} インターフェイスを置き換えています。
 
 ## プロパティ
 
@@ -30,9 +31,7 @@ _このインターフェイスは親である {{domxref("SVGElement")}} から�
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("SVG2", "types.html#InterfaceSVGGraphicsElement", "SVGGraphicsElement")}} | {{Spec2("SVG2")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

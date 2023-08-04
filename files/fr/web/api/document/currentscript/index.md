@@ -1,14 +1,8 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Reference
-  - Script
-translation_of: Web/API/Document/currentScript
 ---
+
 {{ApiRef("DOM")}}
 
 Retourne l'élément {{HTMLElement("script")}} dont le script est en cours de traitement.

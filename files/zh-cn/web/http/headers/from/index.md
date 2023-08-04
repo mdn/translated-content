@@ -2,6 +2,7 @@
 title: From
 slug: Web/HTTP/Headers/From
 ---
+
 {{HTTPSidebar}}
 
 请求首部 **`From`** 中包含一个电子邮箱地址，这个电子邮箱地址属于发送请求的用户代理的实际掌控者的人类用户。
@@ -10,9 +11,9 @@ slug: Web/HTTP/Headers/From
 
 > **警告：** 不可以将 From 首部用于访问控制或者身份验证。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

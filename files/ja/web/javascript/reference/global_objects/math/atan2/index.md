@@ -1,13 +1,8 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
+
 {{JSRef}}
 
 **`Math.atan2()`** 関数は、`Math.atan2(y, x)` に対して点 (0, 0) から点 (x, y) までの半直線と、正の x 軸の間の平面上での角度 (ラジアン単位) を返します。
@@ -35,7 +30,7 @@ Math.atan2(y, x)
 
 `Math.atan2()` メソッドは、`(x, y)` 座標のシータ角を表す -π から π までの数値を返します。これは、ラジアン単位で表された、正の X 軸と点 `(x, y)` の間の反時計回りの角度です。このメソッドへ渡す引数は、初めに y 座標、次に x 座標であることに注意してください。
 
-![A simple diagram showing the angle returned by atan2(y, x)](https://mdn.mozillademos.org/files/11557/atan2.png)
+![A simple diagram showing the angle returned by atan2(y, x)](atan2.png)
 
 `Math.atan2()` は、`x` と `y` が別々に渡され、 `Math.atan()` は 2 つの引数の比率が渡されます。
 
@@ -64,9 +59,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

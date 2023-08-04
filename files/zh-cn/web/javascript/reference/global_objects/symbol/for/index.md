@@ -2,6 +2,7 @@
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
+
 {{JSRef}}
 
 **`Symbol.for(key)`** 方法会根据给定的键 `key`，来从运行时的 symbol 注册表中找到对应的 symbol，如果找到了，则返回它，否则，新建一个与该键关联的 symbol，并放入全局 symbol 注册表中。
@@ -40,10 +41,8 @@ symbol 注册表中的记录结构：
 Symbol.for("foo"); // 创建一个 symbol 并放入 symbol 注册表中，键为 "foo"
 Symbol.for("foo"); // 从 symbol 注册表中读取键为"foo"的 symbol
 
-
 Symbol.for("bar") === Symbol.for("bar"); // true，证明了上面说的
 Symbol("bar") === Symbol("bar"); // false，Symbol() 函数每次都会返回新的一个 symbol
-
 
 var sym = Symbol.for("mario");
 sym.toString();

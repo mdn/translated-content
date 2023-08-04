@@ -1,13 +1,8 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT2`** プロパティは、 1/2 の平方根、約 0.707 を表します。
@@ -36,9 +31,7 @@ getRoot1_2(); // 0.7071067811865476
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

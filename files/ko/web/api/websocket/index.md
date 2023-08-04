@@ -1,13 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - Interface
-  - WebSocket
-browser-compat: api.WebSocket
-translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 `WebSocket` 객체는 [WebSocket](/ko/docs/Web/API/WebSockets_API) 서버 연결의 생성과 관리 및 연결을 통한 데이터 송수신 API를 제공합니다.
@@ -62,16 +57,16 @@ translation_of: Web/API/WebSocket
 
 ```js
 // WebSocket 연결 생성
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // 연결이 열리면
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
+socket.addEventListener("open", function (event) {
+  socket.send("Hello Server!");
 });
 
 // 메시지 수신
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", function (event) {
+  console.log("Message from server ", event.data);
 });
 ```
 

@@ -1,11 +1,11 @@
 ---
 title: 高级设计 HTML 表单
 slug: Learn/Forms/Advanced_form_styling
-original_slug: Learn/HTML/Forms/Advanced_styling_for_HTML_forms
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms/Property_compatibility_table_for_form_widgets", "Learn/HTML/Forms")}}
 
-在本文中，我们将看到[HTML](/en-US/docs/HTML)表单怎样使用[CSS](/en-US/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/en-US/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+
+在本文中，我们将看到[HTML](/zh-CN/docs/HTML)表单怎样使用[CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
 
 在继续之前，让我们回忆一下两种表单小部件：
 
@@ -55,14 +55,14 @@ HTML 和 CSS 最新的发展扩展了 CSS 的表现力：
 
 > **警告：** 尽管 这些尝试很有趣，但**它们是非标准的，也就是不可靠的。**. 如果你使用它们 (也许你并不常用)，你要自己承担风险，使用非标准的属性[对于 Web 并不是好事](http://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/) 。
 
-- [Mozilla CSS 扩展](/en-US/docs/CSS/CSS_Reference/Mozilla_Extensions)
+- [Mozilla CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Mozilla_Extensions)
 
   - {{cssxref(":-moz-placeholder")}}
   - {{cssxref(":-moz-submit-invalid")}}
   - {{cssxref(":-moz-ui-invalid")}}
   - {{cssxref(":-moz-ui-valid")}}
 
-- [WebKit CSS 扩展](/en-US/docs/CSS/CSS_Reference/Webkit_Extensions)
+- [WebKit CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions)
 
   - {{cssxref("::-webkit-input-placeholder")}}
   - [其他](http://trac.webkit.org/wiki/Styling%20Form%20Controls)
@@ -75,13 +75,13 @@ HTML 和 CSS 最新的发展扩展了 CSS 的表现力：
 
 基于 WebKit(Chrome, Safari) 和 Gecko(Firefox) 的浏览器提供更高级的 HTML 部件定制。它们也实现了跨平台，因此需要一种方式把原生小部件转换为用户可设置样式的小部件。
 
-为此，它们使用了专有属性：{{cssxref("-webkit-appearance")}}或{{cssxref("-moz-appearance")}}。这**些属性是非标准的，不应该使用。**事实上，它们在 WebKit 和 Gecko 中的表现也是不相同的。然而，有一个值很好用：`none`，用这个值，你（几乎完全）能控制一个已知小部件的样式。
+为此，它们使用了专有属性：{{cssxref("-webkit-appearance")}}或{{cssxref("-moz-appearance")}}。**这些属性是非标准的，不应该使用**。事实上，它们在 WebKit 和 Gecko 中的表现也是不相同的。然而，有一个值很好用：`none`，用这个值，你（几乎完全）能控制一个已知小部件的样式。
 
 因此，如果你在应用一个元素的样式时遇到麻烦，可以尝试使用那些专有属性。我们下面有一些例子，这个属性最成功的例子是 WebKit 浏览器中的搜索域的样式：
 
 ```html
 <form>
-    <input type="search">
+  <input type="search" />
 </form>
 ```
 
@@ -111,18 +111,18 @@ input[type=search] {
 让我们研究一下下面的测试用例：
 
 ```html
-<span><input type="checkbox"></span>
+<span><input type="checkbox" /></span>
 ```
 
 ```css
 span {
-    display: inline-block;
-    background: red;
+  display: inline-block;
+  background: red;
 }
 
-input[type=checkbox] {
-    width : 100px;
-    height: 100px;
+input[type="checkbox"] {
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -145,15 +145,20 @@ input[type=checkbox] {
 <form>
   <fieldset>
     <p>
-      <input type="checkbox" id="first" name="fruit-1" value="cherry">
+      <input type="checkbox" id="first" name="fruit-1" value="cherry" />
       <label for="first">I like cherry</label>
     </p>
     <p>
-      <input type="checkbox" id="second" name="fruit-2" value="banana" disabled>
+      <input
+        type="checkbox"
+        id="second"
+        name="fruit-2"
+        value="banana"
+        disabled />
       <label for="second">I can't like banana</label>
     </p>
     <p>
-      <input type="checkbox" id="third" name="fruit-3" value="strawberry">
+      <input type="checkbox" id="third" name="fruit-3" value="strawberry" />
       <label for="third">I like strawberry</label>
     </p>
   </fieldset>
@@ -171,26 +176,26 @@ form {
   display: inline-block;
 
   padding: 0;
-  margin : 0;
+  margin: 0;
 }
 
 fieldset {
-  border : 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin : 0;
+  margin: 0;
   padding: 1em;
 }
 
 label {
-  cursor : pointer;
+  cursor: pointer;
 }
 
 p {
-  margin : 0;
+  margin: 0;
 }
 
-p+p {
-  margin : .5em 0 0;
+p + p {
+  margin: 0.5em 0 0;
 }
 ```
 
@@ -208,25 +213,26 @@ p+p {
 - 我们将使用 CSS3 选择器来实现定制的样式，为了支持旧版浏览器，可以在所有选择器前设置{{cssxref(":root")}}伪类。目前所有我们需要支持的浏览器都支持{{cssxref(":root")}}伪类，但是其他的并不能保证。这是一个过滤旧的 Internet Explorer 的便利方式的例子。那些旧版浏览器将看到传统的复选框，而新式的浏览器可以看到定制的复选框。
 
 ```css
-:root input[type=checkbox] {
+:root input[type="checkbox"] {
   /* original check box are push outside the viexport */
   position: absolute;
   left: -1000em;
 }
 ```
 
-现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/en-US/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/en-US/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
+现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
 
 ```css
-:root input[type=checkbox] + label:before {
+:root input[type="checkbox"] + label:before {
   content: "";
   display: inline-block;
-  width  : 16px;
-  height : 16px;
-  margin : 0 .5em 0 0;
-  background: url("https://developer.mozilla.org/files/4173/checkbox-sprite.png") no-repeat 0 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 0.5em 0 0;
+  background: url("https://developer.mozilla.org/files/4173/checkbox-sprite.png")
+    no-repeat 0 0;
 
-/* The following is used to adjust the position of
+  /* The following is used to adjust the position of
    the check boxes on the text baseline */
 
   vertical-align: bottom;
@@ -238,15 +244,15 @@ p+p {
 在初始复选框上使用{{cssxref(":checked")}}和{{cssxref(":disabled")}}伪类来改变定制复选框的状态。因为使用了 CSS 精灵，我们需要做的只是修改背景的位置。
 
 ```css
-:root input[type=checkbox]:checked + label:before {
+:root input[type="checkbox"]:checked + label:before {
   background-position: 0 -16px;
 }
 
-:root input[type=checkbox]:disabled + label:before {
+:root input[type="checkbox"]:disabled + label:before {
   background-position: 0 -32px;
 }
 
-:root input[type=checkbox]:checked:disabled + label:before {
+:root input[type="checkbox"]:checked:disabled + label:before {
   background-position: 0 -48px;
 }
 ```
@@ -254,14 +260,14 @@ p+p {
 最后一件（但是很重要的）事情：当用户使用键盘从一个表单小部件导航到另一个表单小部件时，每个小部件都应该被显式聚焦。因为我们隐藏了初始的复选框，我们必须自己实现这个特性，让用户知道定制复选框在表单中的位置，下列的 CSS 实现了它们聚焦。
 
 ```css
-:root input[type=checkbox]:focus + label:before {
+:root input[type="checkbox"]:focus + label:before {
   outline: 1px dotted black;
 }
 ```
 
 你可以在线查看结果：
 
-{{EmbedLiveSample("A_more_complex_example", 250, 130)}}
+{{EmbedLiveSample("更复杂的例子", 250, 130)}}
 
 ### Dealing with the select nightmare
 
@@ -277,26 +283,27 @@ p+p {
 
 ```css
 select {
-  width   : 80px;
-  padding : 10px;
+  width: 80px;
+  padding: 10px;
 }
 
 option {
-  padding : 5px;
-  color   : red;
+  padding: 5px;
+  color: red;
 }
 ```
 
 下面的表格显示了在两种情况下不同浏览器的处理方式。头两列就是上面的例子。后面两列使用了其他的定制 CSS，可以对小部件的外观进行更多的控制：
 
 ```css
-select, option {
-  -webkit-appearance : none; /* To gain control over the appearance on WebKit/Chromium */
-  -moz-appearance : none; /* To gain control over the appearance on Gecko */
+select,
+option {
+  -webkit-appearance: none; /* To gain control over the appearance on WebKit/Chromium */
+  -moz-appearance: none; /* To gain control over the appearance on Gecko */
 
   /* To gain control over the appearance on and Trident (IE)
      Note that it also works on Gecko and has partial effects on WebKit */
-  background : none;
+  background: none;
 }
 ```
 
@@ -320,25 +327,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15672/firefox-mac-select-1-closed.png"
+          src="firefox-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15673/firefox-mac-select-1-open.png"
+          src="firefox-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15674/firefox-mac-select-2-closed.png"
+          src="firefox-mac-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15675/firefox-mac-select-2-open.png"
+          src="firefox-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -347,25 +354,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15692/firefox-windows-select-1-closed.png"
+          src="firefox-windows-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15693/firefox-windows-select-1-open.png"
+          src="firefox-windows-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15694/firefox-windows-select-2-closed.png"
+          src="firefox-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15695/firefox-windows-select-2-open.png"
+          src="firefox-windows-select-2-open.png"
         />
       </td>
     </tr>
@@ -374,25 +381,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15677/chrome-mac-select-1-closed.png"
+          src="chrome-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15678/chrome-mac-select-1-open.png"
+          src="chrome-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15684/chrome-windows-select-2-closed.png"
+          src="chrome-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15680/chrome-mac-select-2-open.png"
+          src="chrome-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -401,25 +408,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15682/chrome-windows-select-1-closed.png"
+          src="chrome-windows-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15683/chrome-windows-select-1-open.png"
+          src="chrome-windows-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15684/chrome-windows-select-2-closed.png"
+          src="chrome-windows-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15685/chrome-windows-select-2-open.png"
+          src="chrome-windows-select-2-open.png"
         />
       </td>
     </tr>
@@ -428,25 +435,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15702/opera-mac-select-1-closed.png"
+          src="opera-mac-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15703/opera-mac-select-1-open.png"
+          src="opera-mac-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15704/opera-mac-select-2-closed.png"
+          src="opera-mac-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15705/opera-mac-select-2-open.png"
+          src="opera-mac-select-2-open.png"
         />
       </td>
     </tr>
@@ -455,25 +462,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15697/ie11-select-1-closed.png"
+          src="ie11-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15698/ie11-select-1-open.png"
+          src="ie11-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15699/ie11-select-2-closed.png"
+          src="ie11-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15700/ie11-select-2-open.png"
+          src="ie11-select-2-open.png"
         />
       </td>
     </tr>
@@ -482,25 +489,25 @@ select, option {
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15687/edge-select-1-closed.png"
+          src="edge-select-1-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15688/edge-select-1-open.png"
+          src="edge-select-1-open.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15689/edge-select-2-closed.png"
+          src="edge-select-2-closed.png"
         />
       </td>
       <td>
         <img
           alt=""
-          src="https://mdn.mozillademos.org/files/15690/edge-select-2-open.png"
+          src="edge-select-2-open.png"
         />
       </td>
     </tr>
@@ -516,13 +523,13 @@ select, option {
 
 在我们的例子中，只使用了三个 CSS 属性，在考虑使用更多 CSS 属性时，可以想象是很混乱的。正如我们看到的，CSS 始终不适合用来修改这些小部件的外观，但是仍然可以用来稍微做一些事情。如果愿意的话，可以演示一下在不同操作系统和浏览器之间的区别。
 
-我们也可以帮助了解在下一章节中哪个属性更合适：[Properties compatibility table for form widgets](/en-US/docs/Properties_compatibility_table_for_forms_widgets)
+我们也可以帮助了解在下一章节中哪个属性更合适：[Properties compatibility table for form widgets](/zh-CN/docs/Properties_compatibility_table_for_forms_widgets)
 
 ## 走向更完美表单之路：有用的库和 polyfills（腻子）
 
 虽然对于复选框和单选按钮而言，CSS 的表示方式足够丰富，但是对更高级的小部件来说差距仍然很大。即使可以用{{HTMLElement("select")}}元素作一些事情，但是对 file 小部件的样式完全没用。对于日期选择器也同样如此。
 
-要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
+要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
 
 - [Uni-form](http://sprawsm.com/uni-form/)是一个对采用 CSS 样式的表单标记实现标准化的框架，在使用 jQuery 时，还提供一些附加特性，但这是可选的。
 - [Formalize](http://formalize.me/)是对公共 JavaScript 框架的扩展（如 jQuery, Dojo, YUI 等），有助于规范和定制表单。
@@ -536,29 +543,16 @@ select, option {
 
 记住，使用 CSS 和 JavaScript 是有副作用的。所以在选择使用那些库时，应该在脚本失败的情况下能回滚样式表。脚本失败的原因很多，尤其在手机应用中，因此你需要尽可能好的设计你的 Web 站点或应用。
 
-## 相关链接
+## 总结
 
-虽然 HTML 表单使用 CSS 仍有一些黑洞，但通常也有方法绕过它们。即使没有清楚的，通用的解决方案，但新式的浏览器也提供了新的可能性。目前最好的方法是更多的学习不同浏览器支持 CSS 的方式，并应用于 HTML 表单小部件。
+虽然 HTML 表单使用 CSS 仍有一些困难，但通常也有方法绕过它们。即使没有清楚的，通用的解决方案，但新式的浏览器也提供了新的可能性。目前最好的方法是更多的学习不同浏览器支持 CSS 的方式，并应用于 HTML 表单小部件。
 
-在本指南的下一章节中，我们将探讨不同的 HTML 表单小部件怎样很好的支持更重要的 CSS 属性：[Properties compatibility table for form widgets](/en-US/docs/Properties_compatibility_table_for_forms_widgets).
+在本指南的下一章节中，我们将探讨现代浏览器中用于为不同表单状态添加样式的可用的 [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)。
 
-## 相关链接
+{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-- [Dive into HTML5: Forms](http://diveintohtml5.info/forms.html)
-- [Useful ideas and guidelines for good web form design](http://www.smashingmagazine.com/2011/06/27/useful-ideas-and-guidelines-for-good-web-form-design/)
+### 进阶内容
 
-{{PreviousMenuNext("Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms/Property_compatibility_table_for_form_widgets", "Learn/HTML/Forms")}}
-
-## 在本单元中
-
-- [Your first HTML form](/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

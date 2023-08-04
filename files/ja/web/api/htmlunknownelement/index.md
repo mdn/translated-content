@@ -2,6 +2,7 @@
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLUnknownElement`** インターフェイスは不正な HTML 要素である事を表します。{{domxref("HTMLElement")}} インターフェイスを継承しますが、追加のメソッドやプロパティは実装しません。
@@ -18,10 +19,7 @@ slug: Web/API/HTMLUnknownElement
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 策定状況                         | コメント                                      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#htmlunknownelement", "HTMLUnknownElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更無し |
-| {{SpecName('HTML5 W3C', "dom.html#htmlunknownelement", "HTMLUnknownElement")}}         | {{Spec2('HTML5 W3C')}}     | 最初期の定義                                  |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

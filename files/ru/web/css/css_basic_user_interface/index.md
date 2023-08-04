@@ -1,13 +1,8 @@
 ---
 title: CSS Basic User Interface
-slug: Web/CSS/CSS_Basic_User_Interface
-tags:
-  - CSS
-  - CSS Basic User Interface
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface
+slug: Web/CSS/CSS_basic_user_interface
 ---
+
 {{CSSRef}}
 
 **CSS Basic User Interface** is a CSS module that lets you define the rendering and functionality of features related to the user interface.

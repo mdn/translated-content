@@ -1,7 +1,8 @@
 ---
-title: 'HTMLMediaElement: play event'
+title: "HTMLMediaElement: play event"
 slug: Web/API/HTMLMediaElement/play_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 当 `paused` 属性由 `true` 转换为 `false` 时触发 `play` 事件，事件触发原因一般为 `play()` 方法调用，或者 `autoplay` 标签设置。
@@ -51,22 +52,26 @@ slug: Web/API/HTMLMediaElement/play_event
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('play', (event) => {
-  console.log('The Boolean paused property is now false. Either the ' +
-  'play() method was called or the autoplay attribute was toggled.');
+video.addEventListener("play", (event) => {
+  console.log(
+    "The Boolean paused property is now false. Either the " +
+      "play() method was called or the autoplay attribute was toggled.",
+  );
 });
 ```
 
 Using the `onplay` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplay = (event) => {
-  console.log('The Boolean paused property is now false. Either the ' +
-  'play() method was called or the autoplay attribute was toggled.');
+  console.log(
+    "The Boolean paused property is now false. Either the " +
+      "play() method was called or the autoplay attribute was toggled.",
+  );
 };
 ```
 
@@ -76,7 +81,7 @@ video.onplay = (event) => {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement.play_event")}}
+{{Compat}}
 
 ## Related Events
 

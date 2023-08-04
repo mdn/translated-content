@@ -1,38 +1,47 @@
 ---
-title: 'ServiceWorkerGlobalScope: message event'
+title: "ServiceWorkerGlobalScope: message イベント"
 slug: Web/API/ServiceWorkerGlobalScope/message_event
+l10n:
+  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
-{{APIRef}}
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`message`** イベントは、着信メッセージを受信したときに発生します。 制御されたページは、{{domxref("ServiceWorker.postMessage()")}} メソッドを使用して、サービスワーカーにメッセージを送信できます。
+{{APIRef("Service Workers API")}}
+
+**`message`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスのイベントで、着信メッセージを受信したときに発生します。 制御されたページは、 {{domxref("Worker.postMessage()", "ServiceWorker.postMessage()")}} メソッドを使用して、サービスワーカーにメッセージを送信することができます。
 サービスワーカーは、任意で、制御されたページに対応する {{domxref("Client.postMessage()")}} を介して返信することができます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("ExtendableMessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/API/ServiceWorkerGlobalScope/onmessage"
-            >onmessage</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("message", (event) => {});
+
+onmessage = (event) => {};
+```
+
+## イベント型
+
+{{domxref("ExtendableMessageEvent")}} です。 {{domxref("ExtendableEvent")}} を継承しています。
+
+{{InheritanceDiagram("ExtendableMessageEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("ExtendableEvent")}} からプロパティを継承しています_。
+
+- {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
+  - : イベントのデータを返します。任意のデータ型にすることができます。
+- {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
+  - : メッセージを送信した {{domxref("Client")}} のオリジンを返します。
+- {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)において、イベントソースの最後のイベント ID を表します。これは空文字列です。
+- {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
+  - : メッセージを送信した {{domxref("Client")}} オブジェクトへの参照を返します。
+- {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
+  - : 関連するメッセージチャネルのポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
 
 ## 例
 
@@ -41,26 +50,24 @@ slug: Web/API/ServiceWorkerGlobalScope/message_event
 ```js
 // 制御されているページ内
 if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("service-worker.js");
 
-  navigator.serviceWorker.register('service-worker.js');
-
-  navigator.serviceWorker.addEventListener('message', event => {
+  navigator.serviceWorker.addEventListener("message", (event) => {
     // event は MessageEvent オブジェクトです
     console.log(`The service worker sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then( registration => {
+  navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
-
 }
 ```
 
-次のように、サービスワーカーは、`message` イベントをリッスンしてメッセージを受信できます。
+サービスワーカーは、次のようにして "message" イベントを待ち受けすることでメッセージを受け取ることができます。
 
 ```js
 // サービスワーカー内
-addEventListener('message', event => {
+addEventListener("message", (event) => {
   // event は ExtendableMessageEvent オブジェクトです
   console.log(`The client sent me a message: ${event.data}`);
 
@@ -68,19 +75,29 @@ addEventListener('message', event => {
 });
 ```
 
-## 仕様
+また、スクリプトは `onmessage` を使用してメッセージを待ち受けすることもできます。
 
-| 仕様                                                                                                                 | 状態                                 |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('Service Workers', '#eventdef-serviceworkerglobalscope-message', 'message')}} | {{Spec2('Service Workers')}} |
+```js
+// service-worker.js
+self.onmessage = (event) => {
+  // event は ExtendableMessageEvent オブジェクトです
+  console.log(`The client sent me a message: ${event.data}`);
+
+  event.source.postMessage("Hi client");
+};
+```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.message_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
 - [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [Web worker の使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

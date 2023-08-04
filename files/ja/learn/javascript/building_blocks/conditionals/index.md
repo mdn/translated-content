@@ -2,6 +2,7 @@
 title: コードでの意思決定 — 条件文
 slug: Learn/JavaScript/Building_blocks/conditionals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 どのプログラミング言語でも、コードは様々な入力に応じた決定を迫られ、その結果として動作を起こします。例えば、ゲームではプレイヤーの残機が 0 になった場合、ゲームオーバーとなります。天気アプリは朝に起動された場合は日の出の画像を表示し、夜に起動された場合は星や月の画像を表示します。この記事では、JavaScript において、条件文と呼ばれるものがどのように動作するかを説明します。
@@ -10,7 +11,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 | --------- | ----------------------------------------------------------------------------------------------------------------------- |
 | 目的:     | JavaScript における条件分岐構造をどのように使用するかを理解する。                                                       |
 
-## すべては条件次第..
+## すべては条件次第
 
 人類 (と他の動物たち)は 小さいもの (「クッキーを 1 つ食べるべきか、2 つ食べるべきか...。」) から大きいもの (「故郷に残って親父の農場を継ぐべきか、アメリカで宇宙物理学を学ぶべきか...。」) まで、生活に関わるすべての決定を下します。
 
@@ -20,7 +21,7 @@ JavaScript では、条件文を使ってそのような決定を下すことが
 
 ## if ... else ステートメント
 
-それでは、JavaScript で最もよく使われる条件文から始めましょう。それは [`if ... else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)[ ステートメント](/ja/docs/Web/JavaScript/Reference/Statements/if...else)です。
+それでは、JavaScript で最もよく使われる条件文から始めましょう。それは [`if ... else` ステートメント](/ja/docs/Web/JavaScript/Reference/Statements/if...else)です。
 
 ### if ... else の基本的な構文
 
@@ -36,11 +37,11 @@ if (条件式) {
 
 ここでは...
 
-1.  `if` キーワードの後ろに括弧が並んでいます。
-2.  判断に用いる条件式はその括弧の中にあります (たいていの場合は「この値はもう一方より大きい」や、「この値は存在する」などです)。この条件には、前回のモジュールで習った[比較演算子](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)を使用し、`true` または `false` を返します。
-3.  中にコードが書いてある (実際のコードはどんなものでも構いません) 中括弧のペアは、条件式が `true` の場合に実行されます。
-4.  続いて `else` キーワードがあります。
-5.  さらに他のコードが書いてある (こちらもどんなコードでも構いません) 中括弧のペアは条件式が `true` ではない場合に実行されます。
+1. `if` キーワードの後ろに括弧が並んでいます。
+2. 判断に用いる条件式はその括弧の中にあります (たいていの場合は「この値はもう一方より大きい」や、「この値は存在する」などです)。この条件には、前回のモジュールで習った[比較演算子](/ja/Learn/JavaScript/First_steps/Math#Comparison_operators)を使用し、`true` または `false` を返します。
+3. 中にコードが書いてある (実際のコードはどんなものでも構いません) 中括弧のペアは、条件式が `true` の場合に実行されます。
+4. 続いて `else` キーワードがあります。
+5. さらに他のコードが書いてある (こちらもどんなコードでも構いません) 中括弧のペアは条件式が `true` ではない場合に実行されます。
 
 このコードは (英語を使う人には) とても読みやすいものになっています。このコードは「もし ( **if** ) 条件式 ( **condition** ) が `true` を返したら A のコードを実行し、それ以外ならば ( **else** ) B のコードを実行する」と読めます。
 
@@ -81,7 +82,7 @@ if (shoppingDone === true) {
 
 このコードは常に `shoppingDone` 変数が `false` なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に `shoppingDone` 変数を `true` にセットしてあげるかどうかはプログラム次第です (つまり私たち次第です。)
 
-> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
+> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。)
 
 ### else if
 
@@ -103,36 +104,40 @@ if (shoppingDone === true) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
-  if (choice === 'sunny') {
-    para.textContent = '今日はとてもいい天気です。短いパンツをはいて、砂浜や公園に出かけ、アイスクリームを食べましょう！';
-  } else if (choice === 'rainy') {
-    para.textContent = '雨が降っています。レインコートと傘を忘れないようにして、できる限り室内で過ごしましょう。';
-  } else if (choice === 'snowing') {
-    para.textContent = '雪が降ってとても寒いです！室内でホットチョコレートを飲むか、雪だるまを作るのがよいでしょう。';
-  } else if (choice === 'overcast') {
-    para.textContent = '雨は降っていませんが、空はとても暗くなっています。万が一に備えレインコートを持ちましょう。';
+  if (choice === "sunny") {
+    para.textContent =
+      "今日はとてもいい天気です。短いパンツをはいて、砂浜や公園に出かけ、アイスクリームを食べましょう！";
+  } else if (choice === "rainy") {
+    para.textContent =
+      "雨が降っています。レインコートと傘を忘れないようにして、できる限り室内で過ごしましょう。";
+  } else if (choice === "snowing") {
+    para.textContent =
+      "雪が降ってとても寒いです！室内でホットチョコレートを飲むか、雪だるまを作るのがよいでしょう。";
+  } else if (choice === "overcast") {
+    para.textContent =
+      "雨は降っていませんが、空はとても暗くなっています。万が一に備えレインコートを持ちましょう。";
   } else {
-    para.textContent = '';
+    para.textContent = "";
   }
 }
 ```
 
 {{ EmbedLiveSample('else_if', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-1.  HTML に、天気を選ぶことが可能な {{htmlelement("select")}} 要素があり、1 つの段落がありますね。
-2.  JavaScript では、{{htmlelement("select")}} と {{htmlelement("p")}} の各要素について、参照を取得して保持し、`<select>` 要素にはイベントリスナーを設定しています。もし、要素の値が変わったら `setWeather()` 関数が動きます。
-3.  この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、`choice` の値に応じた文字列が段落に設定されます。最初の `if() {...}` のブロックを除いて、どのように `else if() {...}` のブロックで判定しているか注目してください。
-4.  一番下の `else {...}` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (`true` とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
+1. HTML に、天気を選ぶことが可能な {{htmlelement("select")}} 要素があり、1 つの段落がありますね。
+2. JavaScript では、{{htmlelement("select")}} と {{htmlelement("p")}} の各要素について、参照を取得して保持し、`<select>` 要素にはイベントリスナーを設定しています。もし、要素の値が変わったら `setWeather()` 関数が動きます。
+3. この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、`choice` の値に応じた文字列が段落に設定されます。最初の `if() {...}` のブロックを除いて、どのように `else if() {...}` のブロックで判定しているか注目してください。
+4. 一番下の `else {...}` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合 (`true` とならなかった場合) に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
 
-> **Note:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
+> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html)が公開されています ([ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。)
 
 ### 比較演算子に関するメモ
 
@@ -142,17 +147,17 @@ function setWeather() {
 - `<` と `>` は、ある値がもう一方の値より大きいか、より小さいかを判定します。
 - `<=` と `>=` は、ある値がもう一方の値以上か、以下かを判定します。
 
-> **Note:** もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
+> **メモ:** もし記憶があいまいならば、上記のリンク先を見て復習しましょう。
 
 真偽 (`true`/`false`) の値を判定する場合には少しの配慮が必要であることを付け加えさせてください。おそらく何度か躓くであろう、よくあるパターンです。`false`、`undefined`、`null`、`0`、`NaN`、空文字列 (`''`) 以外の値は条件文で使った場合に `true` となります。ですから、その値が `true` であるか判定したい場合や、その値が存在するか (例えば、`undefined` ではないこと) 判定したい場合は単に変数名を使用するだけです。
 
 ```js
-let cheese = 'チェダー';
+let cheese = "チェダー";
 
 if (cheese) {
-  console.log('やった！チーズトーストを作るチーズがあるよ。');
+  console.log("やった！チーズトーストを作るチーズがあるよ。");
 } else {
-  console.log('今日はチーズトーストのチーズがないよ。');
+  console.log("今日はチーズトーストのチーズがないよ。");
 }
 ```
 
@@ -161,7 +166,8 @@ if (cheese) {
 ```js
 let shoppingDone = false;
 
-if (shoppingDone) { // '=== true' を明示的に指定する必要はありません
+if (shoppingDone) {
+  // '=== true' を明示的に指定する必要はありません
   let childsAllowance = 10;
 } else {
   let childsAllowance = 5;
@@ -173,11 +179,17 @@ if (shoppingDone) { // '=== true' を明示的に指定する必要はありま�
 `if...else` ステートメントを入れ子にして、他の `if...else` ステートメントの中で使用することは全く問題ありません。例えば、天気予報アプリケーションで気温に応じて表示する内容を切り替えたい場合以下のように書くことができます。
 
 ```js
-if (choice === 'sunny') {
+if (choice === "sunny") {
   if (temperature < 86) {
-    para.textContent = '外の気温は ' + temperature + ' 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう';
+    para.textContent =
+      "外の気温は " +
+      temperature +
+      " 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう";
   } else if (temperature >= 86) {
-    para.textContent = '外の気温は ' + temperature + ' 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。';
+    para.textContent =
+      "外の気温は " +
+      temperature +
+      " 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。";
   }
 }
 ```
@@ -194,10 +206,16 @@ if (choice === 'sunny') {
 AND の例を示すため、先ほどのコードを書き直すと以下のようになります。
 
 ```js
-if (choice === 'sunny' && temperature < 86) {
-  para.textContent = '外の気温は ' + temperature + ' 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう';
-} else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = '外の気温は ' + temperature + ' 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。';
+if (choice === "sunny" && temperature < 86) {
+  para.textContent =
+    "外の気温は " +
+    temperature +
+    " 度です — とてもいい天気です。海水浴や、公園に出かけてアイスクリームを食べましょう";
+} else if (choice === "sunny" && temperature >= 86) {
+  para.textContent =
+    "外の気温は " +
+    temperature +
+    " 度です — かなり暑いです！外出する場合にはアイスクリームを持って出かけましょう。";
 }
 ```
 
@@ -206,20 +224,20 @@ if (choice === 'sunny' && temperature < 86) {
 今度は OR の例を見てみましょう。
 
 ```js
-if (iceCreamCarOutside || houseStatus === '火事') {
-  console.log('すぐに家から出ましょう。');
+if (iceCreamCarOutside || houseStatus === "火事") {
+  console.log("すぐに家から出ましょう。");
 } else {
-  console.log('それでは家にいましょう。');
+  console.log("それでは家にいましょう。");
 }
 ```
 
 論理演算子の最後は NOT です。`!` 演算子で表され、式を否定するのに使用します。それでは先ほどの OR と組み合わせてみましょう。
 
 ```js
-if (!(iceCreamVanOutside || houseStatus === '火事')) {
-  console.log('それでは家にいましょう。');
+if (!(iceCreamVanOutside || houseStatus === "火事")) {
+  console.log("それでは家にいましょう。");
 } else {
-  console.log('すぐに家から出ましょう。');
+  console.log("すぐに家から出ましょう。");
 }
 ```
 
@@ -228,7 +246,7 @@ if (!(iceCreamVanOutside || houseStatus === '火事')) {
 論理ステートメントは思うがままに、いくつでも繋げることが可能です。次の例では両方の OR ステートメントが真を返した場合に AND ステートメントが真となり、`if` の中のコードが実行されます。
 
 ```js
-if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'スティーブ')) {
+if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === "スティーブ")) {
   // コードを実行
 }
 ```
@@ -244,7 +262,7 @@ if (x === 5 || 7 || 10 || 20) {
 この場合、`if(...)` の条件式は常に真となります。なぜなら 7 (もしくはその他 0 以外の数値) が常に `true` と評価されるためです。この条件式は「もし x が 5 であるか 7 が真であるならば (7 は常に真です)」となります。これは求めているものではありませんよね！このコードの誤りを修正するためには、OR 演算子の隣に常に完全な条件を書かなければなりません。
 
 ```js
-if (x === 5 || x === 7 || x === 10 ||x === 20) {
+if (x === 5 || x === 7 || x === 10 || x === 20) {
   // コードを実行する
 }
 ```
@@ -274,15 +292,15 @@ switch ( 式 ) {
 
 上記のコードには...
 
-1.  `switch` キーワードに続き、一組の括弧があります。
-2.  括弧の中には、式または値があります。
-3.  `case` キーワードに続き、選択肢となる式または値、それにコロン (`:`) が並んでいます。
-4.  もしその選択肢にマッチすれば、コードが実行されます。
-5.  `break` ステートメントとセミコロン (`;`) があります。もし前の選択肢にマッチして入ればブラウザーはコードの実行をここでやめ、switch ステートメントの後ろにあるコードに移動します。
-6.  `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
-7.  上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
+1. `switch` キーワードに続き、一組の括弧があります。
+2. 括弧の中には、式または値があります。
+3. `case` キーワードに続き、選択肢となる式または値、それにコロン (`:`) が並んでいます。
+4. もしその選択肢にマッチすれば、コードが実行されます。
+5. `break` ステートメントとセミコロン (`;`) があります。もし前の選択肢にマッチして入ればブラウザーはコードの実行をここでやめ、switch ステートメントの後ろにあるコードに移動します。
+6. `case` 節 (上記 3. から 5. ) は好きなだけ書くことができます。
+7. 上記 3. から 5.の `case` 節と全く同じコードパターンで書かれている `default` キーワードがあります。違いは `default` の後ろに選択肢が書かれていないことです。また、後ろに続くコードがないので、ここには `break` ステートメントが必要ありません。もし、選択肢のどれにもマッチするものがない場合に既定のオプションとして実行されます。
 
-> **Note:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
+> **メモ:** 評価する式の値が不明な値にならないのであれば、`default` 節は書く必要はありません。しかし、式が不明な値となり、それに対処する必要があるのなら、`default` 節を書くことで対応が可能です。
 
 ### switch を使用する例
 
@@ -302,37 +320,40 @@ switch ( 式 ) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
-
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
   switch (choice) {
-    case 'sunny':
-      para.textContent = '今日はとてもいい天気です。短いパンツをはいて、砂浜や公園に出かけ、アイスクリームを食べましょう！';
+    case "sunny":
+      para.textContent =
+        "今日はとてもいい天気です。短いパンツをはいて、砂浜や公園に出かけ、アイスクリームを食べましょう！";
       break;
-    case 'rainy':
-      para.textContent = '雨が降っています。レインコートと傘を忘れないようにしましょう。';
+    case "rainy":
+      para.textContent =
+        "雨が降っています。レインコートと傘を忘れないようにしましょう。";
       break;
-    case 'snowing':
-      para.textContent = '雪が降ってとても寒いです！室内でホットチョコレートを飲むか、雪だるまを作るのがよいでしょう。';
+    case "snowing":
+      para.textContent =
+        "雪が降ってとても寒いです！室内でホットチョコレートを飲むか、雪だるまを作るのがよいでしょう。";
       break;
-    case 'overcast':
-      para.textContent = '雨は降っていませんが、空はとても暗くなっています。万が一に備えレインコートを持ちましょう。';
+    case "overcast":
+      para.textContent =
+        "雨は降っていませんが、空はとても暗くなっています。万が一に備えレインコートを持ちましょう。";
       break;
     default:
-      para.textContent = '';
+      para.textContent = "";
   }
 }
 ```
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
+> **メモ:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html)ことができます。([実行可能なデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。)
 
 ## 三項演算子
 
@@ -345,7 +366,9 @@ function setWeather() {
 それでは実際に例を見て見ましょう。
 
 ```js
-let greeting = ( isBirthday ) ? 'スミスさん、誕生日おめでとうございます！良い一日を。' : 'スミスさんおはようございます。';
+let greeting = isBirthday
+  ? "スミスさん、誕生日おめでとうございます！良い一日を。"
+  : "スミスさんおはようございます。";
 ```
 
 この例では `isBirthday` という変数があり、この変数が `true` の場合、お客に誕生日を祝福するメッセージを送ります。そうでなければ、通常の挨拶を送ります。
@@ -365,18 +388,20 @@ let greeting = ( isBirthday ) ? 'スミスさん、誕生日おめでとうご�
 ```
 
 ```js
-const select = document.querySelector('select');
-const html = document.querySelector('html');
-document.body.style.padding = '10px';
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+document.body.style.padding = "10px";
 
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
 }
 
-select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white') : update('white','black');
-}
+select.onchange = function () {
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black");
+};
 ```
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
@@ -385,7 +410,7 @@ select.onchange = function() {
 
 さらに、三項演算子を含む [onchange](/ja/docs/Web/API/GlobalEventHandlers/onchange) イベントリスナーがあります。`select.value === 'black'` という条件式で始まっています。この式が `true` であるならば、`update()` 関数を引数に `'black'`、`'white'` を指定して実行します (つまり、背景色を黒、文字色を白に設定します)。この式が `false` であるならば、`update()` 関数を引数に `'white'`、`'black'` を指定して実行します (つまり、背景色を逆にします)。
 
-> **Note:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
+> **メモ:** この例は [GitHub でも公開しています](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (または、[動くデモ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)もあります。)
 
 ## アクティブ学習: 単純なカレンダー
 
@@ -397,8 +422,8 @@ select.onchange = function() {
 
 あなたには、`onchange` ハンドラーの内部に条件式を書いてもらいます。`// 条件式をここに書く` というコメントのすぐ下に...
 
-1.  選択されている月を取得します (これは `choice` 変数に格納されています。この値は `<select>` 要素で選択された後の値で、例えば 1 月なら、"1" といった値です。)
-2.  `days` という変数に、選択された月の日数を設定します。そのためには、1 年の各月の日数を調べる必要があるでしょう。うるう年はこの例題の目的から外れるため、無視してください。
+1. 選択されている月を取得します (これは `choice` 変数に格納されています。この値は `<select>` 要素で選択された後の値で、例えば 1 月なら、"1" といった値です。)
+2. `days` という変数に、選択された月の日数を設定します。そのためには、1 年の各月の日数を調べる必要があるでしょう。うるう年はこの例題の目的から外れるため、無視してください。
 
 ヒント:
 
@@ -432,7 +457,10 @@ select.onchange = function() {
 </div>
 
 <h2>コードエディタ</h2>
-<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディタから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
@@ -461,8 +489,8 @@ createCalendar(31,'1 月');
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -482,7 +510,7 @@ createCalendar(31,'1 月');
   border: 2px solid white;
   padding: 5px;
   height: 40px;
-  background-color: #4A2DB6;
+  background-color: #4a2db6;
   color: white;
 }
 
@@ -508,9 +536,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -518,38 +546,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '答えを見る';
+  solution.value = "答えを見る";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nlet h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n let choice = select.value;\n let days = 31;\n if(choice === \'2\') {\n days = 28;\n } else if(choice === \'4\' || choice === \'6\' || choice === \'9\'|| choice === \'11\') {\n days = 30;\n }\n\n createCalendar(days, choice + \' 月\');\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n let listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'1 月\');';
+const jsSolution =
+  "const select = document.querySelector('select');\nconst list = document.querySelector('ul');\nlet h1 = document.querySelector('h1');\n\nselect.onchange = function() {\n let choice = select.value;\n let days = 31;\n if(choice === '2') {\n days = 28;\n } else if(choice === '4' || choice === '6' || choice === '9'|| choice === '11') {\n days = 30;\n }\n\n createCalendar(days, choice + ' 月');\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = '';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n let listItem = document.createElement('li');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,'1 月');";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -560,8 +589,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -572,10 +604,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -613,7 +645,10 @@ textarea.onkeyup = function(){
 </div>
 
 <h2>コードエディタ</h2>
-<p class="a11y-label">コードエディタから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディタから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 const select = document.querySelector('select');
@@ -628,11 +663,12 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea>
+}</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -659,9 +695,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -669,38 +705,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '答えを見る';
+  solution.value = "答えを見る";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+const jsSolution =
+  "const select = document.querySelector('select');\nconst html = document.querySelector('.output');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case 'black':\n update('black','white');\n break;\n case 'white':\n update('white','black');\n break;\n case 'purple':\n update('purple','white');\n break;\n case 'yellow':\n update('yellow','darkgray');\n break;\n case 'psychedelic':\n update('lime','purple');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -711,8 +748,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -723,10 +763,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -754,13 +794,3 @@ textarea.onkeyup = function(){
 - [条件 (三項) 演算子リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

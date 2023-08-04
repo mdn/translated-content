@@ -1,17 +1,8 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Unicode
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
+
 {{JSRef}}
 
 **`normalize()`** メソッドは、文字列の Unicode 正規化形式を返します。
@@ -198,9 +189,7 @@ str.normalize('NFKD'); // '\u0073\u0323\u0307'
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

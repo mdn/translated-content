@@ -1,16 +1,8 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - HTTP
-  - cookie
-  - クッキー
-  - ヘッダー
-  - リクエストヘッダー
-  - リファレンス
-  - 禁止ヘッダー名
-translation_of: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Cookie`** は HTTP のリクエストヘッダーで、以前サーバーが {{HTTPHeader("Set-Cookie")}} ヘッダーで送信し、保存された [HTTP クッキー](/ja/docs/Web/HTTP/Cookies)を含みます。

@@ -1,12 +1,8 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
+
 {{JSRef}}
 
 **`name`** プロパティは、エラーの種類の名称を表します。初期値は "Error" です。
@@ -29,9 +25,7 @@ throw e;
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

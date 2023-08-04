@@ -2,6 +2,7 @@
 title: Document.open()
 slug: Web/API/Document/open
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.open()`** メソッドは、{{domxref("Document.write", "書き込み", "", "1")}}のために文書を開きます。
@@ -56,7 +57,7 @@ Gecko 1.9.2 以降、 `document.open()` は[プリンシパル](/ja/docs/Securit
 この呼び出しは、例えば github.com を新しいウィンドウで開き、オープナーは `null` に設定してみます。
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## 引数 2 つの document.open()
@@ -64,7 +65,7 @@ document.open('https://www.github.com','', 'noopener=true')
 ブラウザーは以下の形で、引数 2 つの `document.open()` に対応してきました。
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
 `type` は書き込もうとしているデータの MIME タイプ (`text/html` など) を指定し、 replace が設定されていれば (すなわち "replace" の文字列)、新しい文書の履歴エントリが書き込まれている文書の現在の履歴エントリを置き換えることを指定していました。
@@ -73,10 +74,7 @@ document.open(type, replace)
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}} | {{Spec2("HTML WHATWG")}} |      |
-| {{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}} | {{Spec2("DOM2 HTML")}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

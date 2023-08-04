@@ -2,6 +2,7 @@
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
+
 {{JSRef}}
 
 **`Set[@@species]`** 访问器属性返回`Set`的构造函数。
@@ -27,7 +28,9 @@ Set[Symbol.species]; // function Set()
 ```js
 class MySet extends Set {
   // Overwrite MySet species to the parent Set constructor
-  static get [Symbol.species]() { return Set; }
+  static get [Symbol.species]() {
+    return Set;
+  }
 }
 ```
 

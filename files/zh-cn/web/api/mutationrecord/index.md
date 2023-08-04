@@ -2,6 +2,7 @@
 title: MutationRecord
 slug: Web/API/MutationRecord
 ---
+
 {{APIRef("DOM")}}
 
 每个 **`MutationRecord`** 都代表一个独立的 DOM 变化，在每次随 DOM 变化调用 {{domxref("MutationObserver")}} 的回调函数时，一个相应的 `MutationRecord` 会被作为参数，传递给回调函数。

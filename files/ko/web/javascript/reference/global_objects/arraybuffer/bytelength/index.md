@@ -1,14 +1,8 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** 접근자 속성은 {{jsxref("ArrayBuffer")}}의 길이를 바이트 단위로 반환합니다.

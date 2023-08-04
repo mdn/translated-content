@@ -2,6 +2,7 @@
 title: 位置指定
 slug: Learn/CSS/CSS_layout/Positioning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
 
 位置指定を使用すると、通常のドキュメントレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
@@ -25,7 +26,7 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 これを実演し、例をこれからのセクションのために準備するために、最初に HTML の 2 番目の {{htmlelement("p")}} に `positioned` の `class` を次のように追加します。
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned">...</p>
 ```
 
 それでは、CSS の最後に次の規則を追加してください。
@@ -39,7 +40,7 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 
 保存してリフレッシュしても、2 段落目の背景色が更新されていることを除けば、まったく違いはありません。 これは問題ありません。 前にも述べたように、静的位置指定はデフォルトのふるまいです！
 
-> **Note:** この時点でのライブの例は [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)）。
 
 ### 相対位置指定
 
@@ -60,20 +61,37 @@ top: 30px;
 left: 30px;
 ```
 
-> **Note:** これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
+> **メモ:** これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
 
 保存してリフレッシュすると、次のような結果になります。
 
 ```html hidden
 <h1>Relative positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -106,7 +124,7 @@ span {
 
 クールだよね？ Ok、おそらくこれはあなたが期待していたものではなかったでしょう — 上と左を指定したのに、なぜ下と右に移動したのでしょうか？ 最初は非論理的に聞こえるかもしれませんが、これは相対的位置指定が機能する方法です — 位置指定したボックスの指定した側を反対方向に押す見えない力を考える必要があります。 例えば、`top: 30px;` と指定した場合、力がボックスの上側を押して、箱の上側が 30px 下向きに移動します。
 
-> **Note:** この時点でのライブの例は [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`2_relative-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html)）。
 
 ### 絶対位置指定
 
@@ -121,13 +139,30 @@ position: absolute;
 ```html hidden
 <h1>Absolute positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -162,11 +197,11 @@ span {
 
 次に、要素の位置が変更されたことに注意してください。 これは、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の絶対位置指定でのふるまいが異なるためです。 通常のドキュメントレイアウトフロー内での相対的な位置に基づいて要素を配置するのではなく, 要素がそれぞれの包含要素の側からあるべき距離を指定します。 したがって、この場合は、絶対位置指定要素は「包含要素」の上側から 30 ピクセル、左側から 30 ピクセルとなるようにします。 (この場合、「包含要素」とは、**最初の包含ブロック**（initial containing block）のことです。詳細については、以下のセクションを参照してください。)
 
-> **Note:** 必要に応じて、要素のサイズを変更するために {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} を使用できます。 位置指定要素に `top: 0; bottom: 0; left: 0; right: 0; margin: 0;` を設定して、何が起こるか見てください！ 後で元に戻します。
+> **メモ:** 必要に応じて、要素のサイズを変更するために {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} を使用できます。 位置指定要素に `top: 0; bottom: 0; left: 0; right: 0; margin: 0;` を設定して、何が起こるか見てください！ 後で元に戻します。
 
-> **Note:** はい、マージンはまだ位置指定要素に影響します。 しかしながら、マージンの相殺はそうではありません。
+> **メモ:** はい、マージンはまだ位置指定要素に影響します。 しかしながら、マージンの相殺はそうではありません。
 
-> **Note:** この時点でのライブの例は [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`3_absolute-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html)）。
 
 ### 位置指定コンテキスト
 
@@ -185,13 +220,29 @@ position: relative;
 ```html hidden
 <h1>Positioning context</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -225,7 +276,7 @@ span {
 
 位置指定要素は、{{htmlelement("body")}} 要素を基準にして配置されます。
 
-> **Note:** この時点でのライブの例は [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)）。
+> **メモ:** この時点でのライブの例は [`4_positioning-context.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)）。
 
 ### z-index の紹介
 
@@ -259,13 +310,29 @@ z-index: 1;
 ```html hidden
 <h1>z-index</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -307,7 +374,7 @@ p:nth-of-type(1) {
 
 `z-index` は、無単位のインデックス値のみを受け入れることに注意してください。 1 つの要素を z 軸の 23 ピクセル上に配置するように指定することはできません — そのようには機能しません。 より大きい値はより小さい値より上になり、どんな値を使うかはあなた次第です。 2 と 3 を使用するのと、300 と 40000 では同じ効果が得られます。
 
-> **Note:** この時点でのライブの例は [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)）。
+> **メモ:** この時点でのライブの例は [`5_z-index.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)）。
 
 ### 固定位置指定
 
@@ -353,13 +420,26 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>Fixed positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
 <p class="positioned">I'm not positioned any more...</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -396,7 +476,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
 
-> **Note:** この時点でのライブの例は [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)）。
+> **メモ:** この時点でのライブの例は [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)）。
 
 ### position: sticky
 
@@ -405,13 +485,41 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>Sticky positioning</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Sticky</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -421,8 +529,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -445,31 +553,31 @@ body {
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
@@ -509,37 +617,37 @@ dt {
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
 {{ EmbedLiveSample('Sticky_2', '100%', 200) }}
 
-> **Note:** このライブの例は [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)）。
+> **メモ:** このライブの例は [`7_sticky-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html)）。
 
 ## スキルをテストしましょう!
 
@@ -555,18 +663,3 @@ dt {
 
 - {{cssxref("position")}} プロパティのリファレンス。
 - いくつかのより有用なアイデアのための[実用的な位置指定の例](/ja/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)。
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

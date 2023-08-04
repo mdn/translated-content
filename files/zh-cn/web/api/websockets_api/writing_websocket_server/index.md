@@ -2,6 +2,7 @@
 title: 用 C＃来编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
 ---
+
 ## 介绍
 
 如果你想学习如何使用 WebSocket API，那么有一台服务器将会是非常有用的。在本文中，我将向你展示如何使用 C#来写后端。你可以使用任何可用于后端开发的语言来做这个事，但是，要为了使例子简明易懂，我选择微软的 C#。
@@ -10,7 +11,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 ## 第一步
 
-WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。 它位于 _System.Net.Sockets_ 的命名空间。
+WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。它位于 _System.Net.Sockets_ 的命名空间。
 
 > **备注：** 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
 
@@ -30,12 +31,12 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 - `Start()`
 - `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  等一个 Tcp 连接， 并接受一个返回的 TcpClient 对象。
+  等一个 Tcp 连接，并接受一个返回的 TcpClient 对象。
 
 下面是基于服务端的实现：
 
-```cpp
-​using System.Net.Sockets;
+```cs
+using System.Net.Sockets;
 using System.Net;
 using System;
 
@@ -193,7 +194,7 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 
 _Di_ = _Ei_ XOR _M_(_i_ mod 4)
 
-D 是解密后的消息数组， _E_ 是被加密的消息数组， _M_ 是掩码字节数组， _i_ 是需要解密的消息字节的序号。
+D 是解密后的消息数组，_E_ 是被加密的消息数组，_M_ 是掩码字节数组，_i_ 是需要解密的消息字节的序号。
 
 C# 示例：
 

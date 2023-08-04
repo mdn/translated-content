@@ -1,15 +1,8 @@
 ---
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Hauteur
-  - Propriétés
-  - Rectangle
-translation_of: Web/API/DOMRectReadOnly/height
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`height`** de l'interface of the **`DOMRectReadOnly`** représente la hauteur du `DOMRect`.

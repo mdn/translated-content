@@ -1,18 +1,8 @@
 ---
-title: 'Django Tutorial Part 10: Testing a Django web application'
+title: "Django Tutorial Part 10: Testing a Django web application"
 slug: Learn/Server-side/Django/Testing
-tags:
-  - Beginner
-  - CodingScripting
-  - Django Testing
-  - Testing
-  - Tutorial
-  - django
-  - server-side
-  - tests
-  - unit tests
-translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des _tests unitaires_ sur votre site web en utilisant le framework de tests de Django.
@@ -200,7 +190,7 @@ python3 manage.py test
 
 Cette commande va lancer la recherche de tous les fichiers ayant la forme **test.py** sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul **/catalog/tests/test_models.py** contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.
 
-> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas *collectstatic* par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement *collectstatic* avant de lancer les tests :
+> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas _collectstatic_ par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement _collectstatic_ avant de lancer les tests :
 >
 > ```bash
 > python3 manage.py collectstatic
@@ -229,6 +219,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)
@@ -937,7 +928,7 @@ Dans ce tutoriel, nous vous avons montré comment écrire et lancer des tests po
 
 Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre merveilleux (et entièrement testé !) site web Django.
 
-## À voir également
+## Voir aussi
 
 - [Writing and running tests](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)
@@ -948,21 +939,3 @@ Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre mer
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/fr/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

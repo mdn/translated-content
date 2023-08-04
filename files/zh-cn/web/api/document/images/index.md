@@ -2,6 +2,7 @@
 title: document.images
 slug: Web/API/Document/images
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} 接口的只读属性 images 返回当前文档中所有 [image](/zh-CN/DOM/Image) 元素的集合。
@@ -14,7 +15,7 @@ var imageCollection = document.images;
 
 ### 值
 
-一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。 集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}
+一个 {{domxref("HTMLCollection")}}，提供了包含在该文档中的所有 images 元素实时的列表。集合中的每条代表了一个单 image 元素的{{domxref("HTMLImageElement")}}
 
 ## 备注
 
@@ -32,10 +33,10 @@ firstImage = imageCollection[0];
 
 ```js
 var ilist = document.images;
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-         // 发现了 banner 图片
-    }
+for (var i = 0; i < ilist.length; i++) {
+  if (ilist[i].src == "banner.gif") {
+    // 发现了 banner 图片
+  }
 }
 ```
 
@@ -45,4 +46,4 @@ for(var i = 0; i < ilist.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.images")}}
+{{Compat}}

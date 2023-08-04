@@ -1,14 +1,17 @@
 ---
-title: CloseEvent.code
+title: "CloseEvent: code プロパティ"
 slug: Web/API/CloseEvent/code
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
+
 {{APIRef("Websockets API")}}
 
 **`code`** は {{domxref("CloseEvent")}} インターフェイスの読み取り専用プロパティで、サーバーが接続を閉じた理由を示す [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)を返します。
 
 ## 値
 
-整数の [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)であり、 `1000`-`4999` の範囲でサーバーが接続を閉じた理由を示します。
+整数の [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)であり、 `1000` - `4999` の範囲でサーバーが接続を閉じた理由を示します。
 
 <table class="no-markdown">
   <thead>
@@ -154,7 +157,7 @@ slug: Web/API/CloseEvent/code
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
       <td>
-         私的利用向けのものであり、登録はできない。このコードは、 WebSocket アプリケーション間の事前の合意により使用することができる。これらのコードの解釈は、 WebSocket プロトコルでは未定義。
+         私的用途向けのものであり、登録はできない。このコードは、WebSocket アプリケーション間の事前の合意により使用することができる。これらのコードの解釈は、WebSocket プロトコルでは未定義。
       </td>
     </tr>
   </tbody>
@@ -165,7 +168,7 @@ slug: Web/API/CloseEvent/code
 次の例は、 `code` の値をコンソールに表示します。
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.code);
 };
 ```

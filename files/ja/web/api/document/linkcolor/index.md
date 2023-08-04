@@ -2,6 +2,7 @@
 title: Document.linkColor
 slug: Web/API/Document/linkColor
 ---
+
 {{APIRef("DOM")}} {{Deprecated_header}}
 
 **`Document.linkColor`** プロパティは、文書内のリンクの色を取得または設定します。
@@ -22,7 +23,7 @@ document.linkColor = color
 ## 例
 
 ```js
-document.linkColor = 'blue';
+document.linkColor = "blue";
 ```
 
 ## 仕様書

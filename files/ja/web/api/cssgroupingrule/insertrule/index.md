@@ -2,6 +2,7 @@
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`insertRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、新しい CSS ルールを CSS ルールのリストへ追加します。
@@ -9,8 +10,8 @@ slug: Web/API/CSSGroupingRule/insertRule
 ## 構文
 
 ```js
-insertRule(rule)
-insertRule(rule, index)
+insertRule(rule);
+insertRule(rule, index);
 ```
 
 ### 引数
@@ -37,7 +38,10 @@ insertRule(rule, index)
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-myRules[0].insertRule('html {background-color: blue;}',0); /* HTML 要素に対するルールを位置 0 に挿入します。 */
+myRules[0].insertRule(
+  "html {background-color: blue;}",
+  0,
+); /* HTML 要素に対するルールを位置 0 に挿入します。 */
 ```
 
 ## 仕様書

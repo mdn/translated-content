@@ -1,15 +1,8 @@
 ---
 title: Étiquette de base pour les projets open source
 slug: MDN/Community/Open_source_etiquette
-tags:
-  - Best practices
-  - Community
-  - Open source
-  - MDN
-  - Beginners
-translation_of: MDN/Contribute/Open_source_etiquette
-original_slug: MDN/Contribute/Open_source_etiquette
 ---
+
 {{MDNSidebar}}
 
 Si vous n'avez jamais travaillé sur un projet open source (OSP pour « _Open Source Project_ ») auparavant, il est bon de lire cet article avant de commencer à contribuer à MDN (ou à d'autres projets open source). Il y a quelques bonnes pratiques à adopter qui vous permettront, à vous et aux autres contributrices et contributeurs du projet, de vous sentir valorisés et en sécurité, et de rester productifs.
@@ -39,7 +32,7 @@ Voici quelques raisons pour lesquelles vous ne devriez pas commencer à contribu
 
 Votre présence sur le projet doit rester productive, et ne pas empêcher les autres d'être productifs.
 
-## Soyez polis, soyez aimables, évitez les propos incendiaires ou offensants.
+## Soyez polis, soyez aimables, évitez les propos incendiaires ou offensants
 
 On pourrait abréger cela en disant « soyez gentil ». C'est le conseil numéro un que nous donnons à toute personne qui se lance dans les contributions open source.
 

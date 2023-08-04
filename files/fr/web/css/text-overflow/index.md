@@ -1,8 +1,8 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-translation_of: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
@@ -67,9 +67,13 @@ Chacune des valeurs se compose :
 - `<string>` {{experimental_inline}}
   - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -80,25 +84,36 @@ Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 
 <div class="rtl">
   <h2>Right to left text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 ```
 
@@ -153,13 +168,21 @@ Cette exemple illustre la syntaxe à deux valeurs pour `text-overflow`, où on p
 
 ```html
 <pre>clip clip</pre>
-<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 #### CSS
@@ -209,18 +232,11 @@ for (let para of paras) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                       |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 UI', '#text-overflow', 'text-overflow')}}         | {{Spec2('CSS4 UI')}}         | Ajout des valeurs `<string>` et `fade` et de la fonction `fade()`. |
-| {{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}} | {{Spec2('CSS3 Overflow')}} | Définition initiale.                                               |
-
-Une version précédente de cette interface avait atteint le statut de _Candidate Recommendation_. Certaines fonctionnalités devaient être retirées et n'étaient pas listées parmi les fonctionnalités à risque, la spécification a donc été déchue au niveau _Working Draft_. Cela explique pourquoi les navigateurs ont implémenté cette propriété sans préfixe bien qu'elle ne soit pas une CR.
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-overflow")}}
+{{Compat}}
 
 ## Voir aussi
 

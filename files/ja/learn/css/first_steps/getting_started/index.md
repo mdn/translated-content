@@ -2,6 +2,7 @@
 title: CSS 入門
 slug: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 この記事では、かんたんな HTML コードに CSS を適用させ、その過程でこの言語についての実用的なことを学びます。
@@ -17,32 +18,33 @@ HTML 文書から始めましょう。あなたのコンピューターのフォ
 ```html
 <!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>CSS 入門</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>見出し１です</h1>
 
-    <p>これは第一段落の文です。この文には <span>span 要素</span>
-と<a href="http://example.com">リンク</a>が含まれます。</p>
+    <p>
+      これは第一段落の文です。この文には <span>span 要素</span> と<a
+        href="http://example.com"
+        >リンク</a
+      >が含まれます。
+    </p>
 
     <p>これは第二段落の文です。この文には <em>em 要素</em>が含まれます。</p>
 
     <ul>
-        <li>一つ目の項目</li>
-        <li>二つ目の項目</li>
-        <li><em>三つ目</em>の項目</li>
+      <li>一つ目の項目</li>
+      <li>二つ目の項目</li>
+      <li><em>三つ目</em>の項目</li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
-> **Note:** もし簡単にファイルの作れないデバイスや環境でこの記事を読んでいても心配しないでください。このページにあるコードを書くためにライブコードエディターが用意されています。
+> **メモ:** もし簡単にファイルの作れないデバイスや環境でこの記事を読んでいても心配しないでください。このページにあるコードを書くためにライブコードエディターが用意されています。
 
 ## CSS を加える
 
@@ -53,7 +55,7 @@ HTML ドキュメントとおなじフォルダーにファイルをつくり、
 `styles.css` を `index.html` にリンクさせるには、HTML 文書にある {{htmlelement("head")}} 要素の中につぎのコードを追記してください:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 {{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあること、`rel` 属性を使うこと、`href` 属性の値でスタイルシートのある場所を伝えます。`styles.css` に以下のルールを記述すれば、CSS が働くかテストできます。使っているコードエディターでつぎのコードを CSS ファイルに追記してください:
@@ -70,7 +72,7 @@ HTML ファイルと CSS ファイルを保存し、ブラウザーでこのペ�
 
 ## HTML 要素をスタイリングする
 
-見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。\_**要素セレクタ**（\_HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして `p` を使うことができます。すべての段落を緑色にするために次を使います:
+見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。**要素セレクタ**（HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして `p` を使うことができます。すべての段落を緑色にするために次を使います:
 
 ```css
 p {
@@ -81,8 +83,9 @@ p {
 セレクタをカンマで区切ることによって、同時に複数のセレクタへ焦点をあてることができます。もしすべての段落とリストすべてを緑にしたければ、CSS のルールセットは次のようになります:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -184,7 +187,7 @@ h1 + p {
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Note:** ごらんの通り、CSS には要素に焦点をあてるための方法がいくつかあります。ここに挙げたのと、もっとたくさんのセレクタをこのコースの後にある[セレクタ](/ja/docs/Learn/CSS/Building_blocks/Selectors)の記事で見ていきます。
+> **メモ:** ごらんの通り、CSS には要素に焦点をあてるための方法がいくつかあります。ここに挙げたのと、もっとたくさんのセレクタをこのコースの後にある[セレクタ](/ja/docs/Learn/CSS/Building_blocks/Selectors)の記事で見ていきます。
 
 ## 状態に基づいてスタイリングする
 
@@ -214,7 +217,7 @@ a:hover {
 
 リンクをホバーすると下線が消えるようにしていますが、どんな状態でも下線が消えているようにできます。ただし実際のサイトでは、ページを見ている人に、リンクはリンクであることを知らせるのを忘れないようにしてください。下線を残すのは、ユーザーが慣れているように、テキスト内にリンクがあることを伝える重要な手掛かりになります。CSS にふくまれるあらゆるものには、変更によって文章を使いづらくするおそれがあることを強調しておきます。
 
-> **Note:** MDN の記事で、[アクセシビリティ](/ja/docs/Learn/Accessibility) についての注意をたびたび目にするでしょう。これについて語る時は、ウェブページがどんな人にも理解でき、使えるものである必要性に言及しています。
+> **メモ:** MDN の記事で、[アクセシビリティ](/ja/docs/Learn/Accessibility) についての注意をたびたび目にするでしょう。これについて語る時は、ウェブページがどんな人にも理解でき、使えるものである必要性に言及しています。
 >
 > 訪問者はマウス付きコンピューター やタッチスクリーン付き電話で見ているかもしれません。あるいはスクリーンリーダーで文章を読んでいることや、大きな文字をつかう必要があることや、キーボードだけを使っていることもあるでしょう。
 >
@@ -255,11 +258,3 @@ HTML のうち、スタイルが適用されるのは `<span class="special">` �
 次のレッスンでは、CSS の構造を見ていきます。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## このモジュールの記事
-
-1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

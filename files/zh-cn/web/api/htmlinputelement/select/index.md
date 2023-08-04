@@ -2,6 +2,7 @@
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement.select()`** 方法选中一个 {{HTMLElement("textarea")}} 元素或者一个带有 text 字段的 {{HTMLElement("input")}} 元素里的所有内容。
@@ -19,7 +20,7 @@ element.select()
 HTML
 
 ```html
-<input type="text" id="text-box" size="20" value="Hello world!">
+<input type="text" id="text-box" size="20" value="Hello world!" />
 <button onclick="selectText()">Select text</button>
 ```
 
@@ -27,7 +28,7 @@ JavaScript
 
 ```js
 function selectText() {
-  const input = document.getElementById('text-box');
+  const input = document.getElementById("text-box");
   input.focus();
   input.select();
 }
@@ -47,7 +48,7 @@ function selectText() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement.select")}}
+{{Compat}}
 
 ## 相关链接
 

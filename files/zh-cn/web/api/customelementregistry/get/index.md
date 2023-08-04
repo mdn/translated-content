@@ -2,9 +2,10 @@
 title: CustomElementRegistry.get()
 slug: Web/API/CustomElementRegistry/get
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
-{{domxref("CustomElementRegistry")}} 的**`get()`**方法返回以前定义自定义元素的构造函数。
+{{domxref("CustomElementRegistry")}} 的 **`get()`** 方法返回以前定义自定义元素的构造函数。
 
 ## 语法
 
@@ -24,20 +25,23 @@ constructor = customElements.get(name);
 ## 例子
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
-  }
-})
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        templateContent.cloneNode(true),
+      );
+    }
+  },
+);
 
 // Return a reference to the my-paragraph constructor
-let ctor = customElements.get('my-paragraph');
+let ctor = customElements.get("my-paragraph");
 ```
 
 ## 规范
@@ -46,4 +50,4 @@ let ctor = customElements.get('my-paragraph');
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.get")}}
+{{Compat}}

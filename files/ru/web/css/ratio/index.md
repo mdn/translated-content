@@ -1,11 +1,6 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-tags:
-  - медиавыражение
-  - тип данных
-  - формат экрана
-translation_of: Web/CSS/ratio
 ---
 {{CSSRef}}
 
@@ -42,4 +37,4 @@ translation_of: Web/CSS/ratio
 
 ## Смотрите также
 
-- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) медиа-функция
+- [`aspect-ratio`](/ru/docs/Web/CSS/@media/aspect-ratio) медиа-функция

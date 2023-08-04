@@ -1,24 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints.autoGainControl
 slug: Web/API/MediaTrackSupportedConstraints/autoGainControl
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - Media Constraints
-  - Media Streams
-  - MediaTrackSupportedConstraints
-  - Property
-  - Volume
-  - Web
-  - autoGainControl
-browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
-translation_of: Web/API/MediaTrackSupportedConstraints/autoGainControl
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`autoGainControl`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が **`autoGainControl`** 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

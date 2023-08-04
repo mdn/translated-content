@@ -1,10 +1,8 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-page-type: web-api-instance-method
-browser-compat: api.FormData.delete
-translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.
@@ -37,14 +35,14 @@ var formData = new FormData(myForm);
 `delete()`를 사용하여 키와 값을 삭제할 수 있습니다:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

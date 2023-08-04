@@ -1,11 +1,8 @@
 ---
 title: window.scroll
 slug: Web/API/Window/scroll
-tags:
-  - CSSOM View
-  - DOM
-translation_of: Web/API/Window/scroll
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -29,7 +26,7 @@ window.scroll(options)
 - `options` : 三つのプロパティを持たせられるオブジェクト
 
   - `top` `y-coord` と同じです
-  - `left` `x-coord` と同じです``
+  - `left` `x-coord` と同じです
   - `behavior` `smooth`、 `instant`、 `auto` のうちどれか一つを含む文字列。初期値は `auto` です
 
 ## 例
@@ -59,6 +56,4 @@ window.scroll({
 
 ## 仕様
 
-| Specification                                                                                | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}

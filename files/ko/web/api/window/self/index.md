@@ -1,15 +1,8 @@
 ---
 title: Window.self
 slug: Web/API/Window/self
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-  - Window
-translation_of: Web/API/Window/self
 ---
+
 {{APIRef}}
 
 **`Window.self`** 읽기전용 속성은 자기 자신을 {{domxref("WindowProxy")}}로써 반환합니다. `window.self`로도 사용할 수 있고, `self`만 독립적으로 사용해 접근할 수 있습니다. 독립적으로 접근했을 때의 이점은 비 {{jsxref("Window")}} 환경인 {{domxref("Worker", "웹 워커", "", 0)}} 등도 비슷한 표기법을 사용한다는 것입니다. 이 때 `self`는 `Window` 문맥에서는 `window.self`, 워커 문맥에서는 {{domxref("WorkerGlobalScope.self")}}와 같습니다.
@@ -20,7 +13,7 @@ translation_of: Web/API/Window/self
 
 ```js
 if (window.parent.frames[0] != window.self) {
-    // this window is not the first frame in the list
+  // this window is not the first frame in the list
 }
 ```
 

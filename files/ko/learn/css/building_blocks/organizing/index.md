@@ -1,8 +1,8 @@
 ---
 title: CSS 구성
 slug: Learn/CSS/Building_blocks/Organizing
-translation_of: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 더 큰 스타일 시트와 큰 프로젝트에서 작업을 시작하면 큰 CSS 파일을 유지 관리하는 것이 어려울 수 있습니다. 이 기사에서는 CSS 를 쉽게 유지 관리할 수 있도록 작성하는 몇 가지 모범 사례와 유지 관리성을 개선하기 위해, 다른 사용자가 사용하는 해결책을 간략하게 살펴보겠습니다.
@@ -22,11 +22,11 @@ translation_of: Learn/CSS/Building_blocks/Organizing
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -64,8 +64,13 @@ translation_of: Learn/CSS/Building_blocks/Organizing
 CSS 형식을 볼 수 있는 몇 가지 방법이 있습니다. 일부 개발자는 다음과 같이 모든 규칙을 한 라인에 넣습니다:
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 다른 개발자는 모든 것을 새로운 라인으로 나누는 것을 선호합니다:
@@ -237,7 +242,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -247,7 +252,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -260,14 +265,14 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
 }
 ```
@@ -287,7 +292,7 @@ The list-item would have `media` and `list-item` applied:
 <ul>
   <li class="media list-item">
     <img />
-   <div class="content"></div>
+    <div class="content"></div>
   </li>
 </ul>
 ```
@@ -301,9 +306,7 @@ BEM stands for Block Element Modifier. In BEM a block is a standalone entity suc
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 
@@ -370,24 +373,3 @@ To learn more about layout in CSS, see the [Learn CSS Layout](/ko/docs/Learn/CSS
 You should also now have the skills to explore the rest of the [MDN CSS](/ko/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/ko/docs/Web/CSS/Layout_cookbook) for patterns to use, and read more in some of the specific guides such as our [Guide to CSS Grid Layout](/ko/docs/Web/CSS/CSS_Grid_Layout).
 
 {{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/ko/docs/Learn/CSS/Building_blocks/Organizing)

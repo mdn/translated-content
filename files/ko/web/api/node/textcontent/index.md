@@ -1,14 +1,8 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - DOM
-  - Node
-  - Property
-  - Reference
-translation_of: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Node")}} 인터페이스의 **`textContent`** 속성은 노드와 그 자손의 텍스트 콘텐츠를 표현합니다.
@@ -17,8 +11,10 @@ translation_of: Web/API/Node/textContent
 
 ## 구문
 
-    let text = someNode.textContent
-    someOtherNode.textContent = string
+```js
+let text = someNode.textContent;
+someOtherNode.textContent = string;
+```
 
 ### 값
 
@@ -65,14 +61,14 @@ translation_of: Web/API/Node/textContent
 `textContent`를 사용해 요소의 텍스트 콘텐츠를 가져오거나...
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // The text variable is now: 'This is some text!'
 ```
 
 텍스트 내용을 설정할 수 있습니다.
 
 ```js
-document.getElementById('divA').textContent = 'This text is different!';
+document.getElementById("divA").textContent = "This text is different!";
 // The HTML for divA is now:
 // <div id="divA">This text is different!</div>
 ```

@@ -2,6 +2,7 @@
 title: Element.matches()
 slug: Web/API/Element/matches
 ---
+
 {{APIRef("DOM")}}
 
 如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
@@ -27,11 +28,11 @@ let result = element.matches(selectorString);
 </ul>
 
 <script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+  var birds = document.getElementsByTagName("li");
 
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('The ' + birds[i].textContent + ' is endangered!');
+    if (birds[i].matches(".endangered")) {
+      console.log("The " + birds[i].textContent + " is endangered!");
     }
   }
 </script>
@@ -60,18 +61,18 @@ let result = element.matches(selectorString);
 
 ```js
 if (!Element.prototype.matches) {
-    Element.prototype.matches =
-        Element.prototype.matchesSelector ||
-        Element.prototype.mozMatchesSelector ||
-        Element.prototype.msMatchesSelector ||
-        Element.prototype.oMatchesSelector ||
-        Element.prototype.webkitMatchesSelector ||
-        function(s) {
-            var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-                i = matches.length;
-            while (--i >= 0 && matches.item(i) !== this) {}
-            return i > -1;
-        };
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function (s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
 }
 ```
 
@@ -86,4 +87,4 @@ if (!Element.prototype.matches) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.matches")}}
+{{Compat}}

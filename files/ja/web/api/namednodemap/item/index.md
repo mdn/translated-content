@@ -4,11 +4,12 @@ slug: Web/API/NamedNodeMap/item
 l10n:
   sourceCommit: 7a45a40ff9c0a0de348c497b325e103aa6d875f8
 ---
+
 {{APIRef("DOM")}}
 
 **`item()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、マップ内の指定された位置にある項目を返します。
 
-> **Note:** このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
+> **メモ:** このメソッドは、 `[]` 演算子の構文を使用した場合にも呼び出されます。
 > そのため `i` が数値の場合、 `myMap[i]` は `myMap.item(i)` と同じです。
 
 ## 構文

@@ -2,9 +2,10 @@
 title: 鍵值集合
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
-本章介紹用 “key” 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。
+本章介紹用 「key」 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。
 
 ## Maps
 
@@ -16,17 +17,17 @@ The following code shows some basic operations with a `Map`. See also the {{jsxr
 
 ```js
 var sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -70,7 +71,7 @@ function Public() {
   privates.set(this, me);
 }
 
-Public.prototype.method = function() {
+Public.prototype.method = function () {
   const me = privates.get(this);
   // Do stuff with private data in `me`...
 };
@@ -89,11 +90,11 @@ The following code shows some basic operations with a `Set`. See also the {{jsxr
 ```js
 var mySet = new Set();
 mySet.add(1);
-mySet.add('some text');
-mySet.add('foo');
+mySet.add("some text");
+mySet.add("foo");
 
 mySet.has(1); // true
-mySet.delete('foo');
+mySet.delete("foo");
 mySet.size; // 2
 
 for (let item of mySet) console.log(item);
@@ -103,7 +104,7 @@ for (let item of mySet) console.log(item);
 
 ### Array 和 Set 之間的相互轉換
 
-You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator). Also, the `Set` constructor accepts an `Array` to convert in the other direction. Note again that `Set` objects store unique values, so any duplicate elements from an Array are deleted when converting.
+You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the [spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator). Also, the `Set` constructor accepts an `Array` to convert in the other direction. Note again that `Set` objects store unique values, so any duplicate elements from an Array are deleted when converting.
 
 ```js
 Array.from(mySet);
@@ -112,7 +113,7 @@ Array.from(mySet);
 mySet2 = new Set([1, 2, 3, 4]);
 ```
 
-### `比較 Array` 和 `Set`
+### 比較 `Array` 和 `Set`
 
 Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
 

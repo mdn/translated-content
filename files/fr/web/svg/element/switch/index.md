@@ -1,12 +1,8 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - SVG
-  - SVG Conteneur
-translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 L'élément `switch` évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient `true`. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.
@@ -42,19 +38,19 @@ Cet exemple montre comment afficher un texte différent selon les paramètres de
 
 ```html
 <svg width="100%" viewBox="0 -20 100 50">
-   <switch>
-      <text systemLanguage="ar">مرحبا</text>
-      <text systemLanguage="de,nl">Hallo!</text>
-      <text systemLanguage="en">Hello!</text>
-      <text systemLanguage="en-us">Howdy!</text>
-      <text systemLanguage="en-gb">Wotcha!</text>
-      <text systemLanguage="en-au">G'day!</text>
-      <text systemLanguage="es">Hola!</text>
-      <text systemLanguage="fr">Bonjour!</text>
-      <text systemLanguage="ja">こんにちは</text>
-      <text systemLanguage="ru">Привет!</text>
-      <text>☺</text>
-   </switch>
+  <switch>
+    <text systemLanguage="ar">مرحبا</text>
+    <text systemLanguage="de,nl">Hallo!</text>
+    <text systemLanguage="en">Hello!</text>
+    <text systemLanguage="en-us">Howdy!</text>
+    <text systemLanguage="en-gb">Wotcha!</text>
+    <text systemLanguage="en-au">G'day!</text>
+    <text systemLanguage="es">Hola!</text>
+    <text systemLanguage="fr">Bonjour!</text>
+    <text systemLanguage="ja">こんにちは</text>
+    <text systemLanguage="ru">Привет!</text>
+    <text>☺</text>
+  </switch>
 </svg>
 ```
 
@@ -64,11 +60,8 @@ Cet exemple montre comment afficher un texte différent selon les paramètres de
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                   | Commentaire                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}     | {{Spec2('SVG2')}} | Clarifie l'évaluation de l'attribut {{SVGAttr("systemLanguage")}} |
-| {{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

@@ -1,12 +1,8 @@
 ---
 title: WebGLTexture
 slug: Web/API/WebGLTexture
-tags:
-  - API
-  - Reference
-  - WebGL
-translation_of: Web/API/WebGLTexture
 ---
+
 {{APIRef("WebGL")}}
 
 L'interface WebGLTexture fait partie de l'[API WebGL](/fr/docs/Web/API/WebGL_API) et représente un objet de texture opaque fournissant un stockage et un état pour les opérations de texturation.
@@ -25,8 +21,8 @@ L'objet WebGLTexture ne définit aucune méthode ou propriété propre, et son c
 ### Création d'une texture
 
 ```js
-var canevas = document.getElementById('canvas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canvas");
+var gl = canevas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 

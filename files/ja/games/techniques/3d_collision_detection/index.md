@@ -2,6 +2,7 @@
 title: 三次元の衝突検出
 slug: Games/Techniques/3D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 この記事では、三次元環境で衝突検出を実装するために使用されるさまざまなバウンディングボリューム手法の概要を説明します。後続の記事では、特定の 3D ライブラリーに搭載されたものを取り上げる予定です。
@@ -16,7 +17,7 @@ slug: Games/Techniques/3D_collision_detection
 
 ![Animated rotating knot showing the virtual rectangular box shrink and grow as the knots rotates within it. The box does not rotate.](rotating_knot.gif)
 
-> **Note:** この手法の実際の実装については、[Three.js を使用したバウンディングボリューム](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)の記事を確認してください。
+> **メモ:** この手法の実際の実装については、[Three.js を使用したバウンディングボリューム](/ja/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js)の記事を確認してください。
 
 ### 点 対 AABB
 
@@ -29,9 +30,14 @@ slug: Games/Techniques/3D_collision_detection
 
 ```js
 function isPointInsideAABB(point, box) {
-  return (point.x >= box.minX && point.x <= box.maxX) &&
-         (point.y >= box.minY && point.y <= box.maxY) &&
-         (point.z >= box.minZ && point.z <= box.maxZ);
+  return (
+    point.x >= box.minX &&
+    point.x <= box.maxX &&
+    point.y >= box.minY &&
+    point.y <= box.maxY &&
+    point.z >= box.minZ &&
+    point.z <= box.maxZ
+  );
 }
 ```
 
@@ -50,9 +56,14 @@ AABB が別の AABB と交差するかどうかのチェックは、点のテス
 
 ```js
 function intersect(a, b) {
-  return (a.minX <= b.maxX && a.maxX >= b.minX) &&
-         (a.minY <= b.maxY && a.maxY >= b.minY) &&
-         (a.minZ <= b.maxZ && a.maxZ >= b.minZ);
+  return (
+    a.minX <= b.maxX &&
+    a.maxX >= b.minX &&
+    a.minY <= b.maxY &&
+    a.maxY >= b.minY &&
+    a.minZ <= b.maxZ &&
+    a.maxZ >= b.minZ
+  );
 }
 ```
 
@@ -76,14 +87,16 @@ function intersect(a, b) {
 ```js
 function isPointInsideSphere(point, sphere) {
   // Math.pow を呼び出すよりも高速であるため、乗算を使用しています
-  const distance = Math.sqrt((point.x - sphere.x) * (point.x - sphere.x) +
-                           (point.y - sphere.y) * (point.y - sphere.y) +
-                           (point.z - sphere.z) * (point.z - sphere.z));
+  const distance = Math.sqrt(
+    (point.x - sphere.x) * (point.x - sphere.x) +
+      (point.y - sphere.y) * (point.y - sphere.y) +
+      (point.z - sphere.z) * (point.z - sphere.z),
+  );
   return distance < sphere.radius;
 }
 ```
 
-> **Note:** 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distanceSqr < sphere.radius * sphere.radius` が含まれます。
+> **メモ:** 上記のコードは平方根を特徴としており、計算にコストがかかる可能性があります。 これを回避する簡単な最適化は、距離の2乗と半径の2乗を比較することで構成されているため、最適化された方程式には、代わりに `distanceSqr < sphere.radius * sphere.radius` が含まれます。
 
 ### 球 対 球
 
@@ -101,16 +114,18 @@ function isPointInsideSphere(point, sphere) {
 ```js
 function intersect(sphere, other) {
   // Math.pow を呼び出すよりも高速であるため、乗算を使用しています
-  const distance = Math.sqrt((sphere.x - other.x) * (sphere.x - other.x) +
-                           (sphere.y - other.y) * (sphere.y - other.y) +
-                           (sphere.z - other.z) * (sphere.z - other.z));
-  return distance < (sphere.radius + other.radius);
+  const distance = Math.sqrt(
+    (sphere.x - other.x) * (sphere.x - other.x) +
+      (sphere.y - other.y) * (sphere.y - other.y) +
+      (sphere.z - other.z) * (sphere.z - other.z),
+  );
+  return distance < sphere.radius + other.radius;
 }
 ```
 
 ### 球 対 AABB
 
-球と AABB が衝突しているかどうかのテストは少し複雑ですが、それでも単純で高速です。 論理的なアプローチは、AABB のすべての頂点をチェックし、それぞれに対して点対球のテストを実行することです。 ただし、これはやり過ぎです。 AABB の_最も近い点_（必ずしも頂点である必要はありません）と球の中心との間の距離を計算して、球の半径以下であるかどうかを確認するだけで済むため、すべての頂点をテストする必要はありません。 この値は、球の中心を AABB の限界にクランプすることで取得できます。
+球と AABB が衝突しているかどうかのテストは少し複雑ですが、それでも単純で高速です。 論理的なアプローチは、AABB のすべての頂点をチェックし、それぞれに対して点対球のテストを実行することです。 ただし、これはやり過ぎです。 AABB の*最も近い点*（必ずしも頂点である必要はありません）と球の中心との間の距離を計算して、球の半径以下であるかどうかを確認するだけで済むため、すべての頂点をテストする必要はありません。 この値は、球の中心を AABB の限界にクランプすることで取得できます。
 
 ![Hand drawing of a square partially overlapping the top of a circle. The radius is denoted by a light line labeled R. The distance line goes from the circle's center to the closest point of the square.](sphere_vs_aabb.png)
 
@@ -124,9 +139,11 @@ function intersect(sphere, box) {
   const z = Math.max(box.minZ, Math.min(sphere.z, box.maxZ));
 
   // これは isPointInsideSphere と同じです
-  const distance = Math.sqrt((x - sphere.x) * (x - sphere.x) +
-                           (y - sphere.y) * (y - sphere.y) +
-                           (z - sphere.z) * (z - sphere.z));
+  const distance = Math.sqrt(
+    (x - sphere.x) * (x - sphere.x) +
+      (y - sphere.y) * (y - sphere.y) +
+      (z - sphere.z) * (z - sphere.z),
+  );
 
   return distance < sphere.radius;
 }

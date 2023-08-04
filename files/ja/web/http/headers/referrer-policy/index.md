@@ -1,18 +1,8 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Privacy
-  - Reference
-  - Referrer-Policy
-  - Response
-  - Response Header
-  - referrer
-browser-compat: http.headers.Referrer-Policy
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 **`Referrer-Policy`** は {{glossary("HTTP header", "HTTP ヘッダー")}}で、 ({{HTTPHeader("Referer")}} ヘッダーで送られる) [リファラー情報](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)をリクエストにどれだけ含めるかを制御します。 HTTP ヘッダーのほかに、 [HTML でこのポリシーを設定する](#html_との統合)こともできます。
@@ -43,7 +33,7 @@ Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
 ```
 
-> **Note:** 元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 `Referrer-Policy` ヘッダーはこのスペルミスをしていません。
+> **メモ:** 元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 `Referrer-Policy` ヘッダーはこのスペルミスをしていません。
 
 ## ディレクティブ
 
@@ -64,13 +54,13 @@ Referrer-Policy: unsafe-url
 
   - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 
-    > **Note:** これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
+    > **メモ:** これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
 
 - `unsafe-url`
 
   - : セキュリティに関係なく、どのリクエストを行った場合でも、オリジン、パス、クエリー文字列を送信します。
 
-    > **Warning:** このポリシーは、 HTTPS リソースの URL から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
+    > **警告:** このポリシーは、 HTTPS リソースの URL から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
 
 ## HTML との統合
 
@@ -92,7 +82,7 @@ HTML 内でリファラーポリシーを設定することもできます。例
 <a href="http://example.com" rel="noreferrer">
 ```
 
-> **Warning:** 上記のように、 `noreferrer` link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta name="referrer" content="no-referrer">` のように記述します。
+> **警告:** 上記のように、 `noreferrer` link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta name="referrer" content="no-referrer">` のように記述します。
 
 ## CSS との統合
 
@@ -107,58 +97,58 @@ CSS はスタイルシートから参照されるリソースにアクセスす�
 
 | 基点の文書            | 移動先 | 使用されるリファラー   |
 | ------------------------ | ------------- | --------------- |
-| https://example.com/page | _すべての場所_    | _（リファラーなし）_ |
+| `https://example.com/page` | _すべての場所_    | _（リファラーなし）_ |
 
 ### `no-referrer-when-downgrade`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/page |
-| https://example.com/page | **http**://example.com        | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
+| `https://example.com/page` | **http**://example.com        | _（リファラーなし）_          |
 
 ### `origin`
 
 | 基点の文書            | 移動先 | 使用されるリファラー        |
 | ------------------------ | ------------- | -------------------- |
-| https://example.com/page | _すべての場所_    | https://example.com/ |
+| `https://example.com/page` | _すべての場所_    | `https://example.com/` |
 
 ### `origin-when-cross-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/     |
-| https://example.com/page | **http**://example.com/page   | https://example.com/     |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com/page   | `https://example.com/`     |
 
 ### `same-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | _（リファラーなし）_          |
 
 ### `strict-origin`
 
 | 基点の文書               | 移動先          | 使用されるリファラー        |
 | --------------------------- | ---------------------- | -------------------- |
-| https://example.com/page    | https://mozilla.org    | https://example.com/ |
-| https://example.com/page    | **http**://example.com | _（リファラーなし）_      |
-| **http**://example.com/page | _すべての場所_             | http://example.com/  |
+| `https://example.com/page`    | `https://mozilla.org`    | `https://example.com/` |
+| `https://example.com/page`    | **http**://example.com | _（リファラーなし）_      |
+| **http**://example.com/page | _すべての場所_             | `http://example.com/`  |
 
 ### `strict-origin-when-cross-origin`
 
 | 基点の文書            | 移動先                 | 使用されるリファラー            |
 | ------------------------ | ----------------------------- | ------------------------ |
-| https://example.com/page | https://example.com/otherpage | https://example.com/page |
-| https://example.com/page | https://mozilla.org           | https://example.com/     |
-| https://example.com/page | **http**://example.com        | _（リファラーなし）_          |
+| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/`     |
+| `https://example.com/page` | **http**://example.com        | _（リファラーなし）_          |
 
 ### `unsafe-url`
 
 | 基点の文書                  | 移動先 | 使用されるリファラー                  |
 | ------------------------------ | ------------- | ------------------------------ |
-| https://example.com/page?q=123 | _すべての場所_    | https://example.com/page?q=123 |
+| `https://example.com/page?q=123` | _すべての場所_    | `https://example.com/page?q=123` |
 
 ### 代替ポリシーの指定
 
@@ -170,7 +160,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 上記のシナリオでは、 `no-referrer` はブラウザーが `strict-origin-when-cross-origin` に対応していない場合のみ使用されます。
 
-> **Note:** 複数の値を設定する方法は、 HTTP の `Referrer-Policy` ヘッダーのみが対応しており、 `referrerpolicy` 属性では対応していません。
+> **メモ:** 複数の値を設定する方法は、 HTTP の `Referrer-Policy` ヘッダーのみが対応しており、 `referrerpolicy` 属性では対応していません。
 
 ## ブラウザー固有の設定
 
@@ -194,7 +184,7 @@ Firefox のユーザー設定では*既定の*リファラーポリシーを構�
 ## 関連情報
 
 - [ウェブセキュリティ > Referer ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- {{interwiki("wikipedia", "HTTPリファラ", "Wikipedia の HTTP リファラ")}}
+- [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)
 - [Fetch](/ja/docs/Web/API/Fetch_API) の使用時: {{domxref("Request.referrerPolicy")}}
 - 廃止された {{HTTPHeader("Content-Security-Policy")}} の {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} ディレクティブ
 - [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)

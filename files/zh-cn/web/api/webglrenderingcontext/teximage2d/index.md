@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.texImage2D()
 slug: Web/API/WebGLRenderingContext/texImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage2D()`** 方法指定了二维纹理图像。
@@ -42,7 +43,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: 立方体映射纹理的负 Z 面。
 
 - `level`
-  - : {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。
+  - : {{domxref("GLint")}} 指定详细级别。0 级是基本图像等级，n 级是第 n 个金字塔简化级。
 - `internalformat`
 
   - : {{domxref("GLenum")}} 指定纹理中的颜色组件。在 WebGL1 和 WebGL2 中可能的值：
@@ -58,7 +59,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     | LUMINANCE       | UNSIGNED_BYTE          | 1        | 1               |
     | ALPHA           | UNSIGNED_BYTE          | 1        | 1               |
 
-    在 WebGL2 中，对带有 `ArrayBufferView` 或 `GLintptr offset`的 `texImage2D` 版本，其它可能的值
+    在 WebGL2 中，对带有 `ArrayBufferView` 或 `GLintptr offset`的 `texImage2D` 版本，其他可能的值
 
     | **Sized Format** | **Base Format** | **R bits** | **G bits** | **B bits** | **A bits** | **Shared bits** | **Color renderable** | **Texture filterable** |
     | ---------------- | --------------- | ---------- | ---------- | ---------- | ---------- | --------------- | -------------------- | ---------------------- |
@@ -221,7 +222,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
     - {{domxref("ImageBitmap")}}.
 
 - offset
-  - : {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从`WebGLBuffer` 范围到`PIXEL_UNPACK_BUFFER` 目标。(仅在 WebGL 2 中 )
+  - : {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从`WebGLBuffer` 范围到`PIXEL_UNPACK_BUFFER` 目标。(仅在 WebGL 2 中 )
 
 ### 返回值
 
@@ -239,7 +240,7 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.texImage2D")}}
+{{Compat}}
 
 ## 另见
 

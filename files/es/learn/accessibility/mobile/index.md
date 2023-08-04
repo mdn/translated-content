@@ -1,8 +1,8 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
-translation_of: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 Dado que el acceso a la web en dispositivos móviles es tan popular, y las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
@@ -57,16 +57,16 @@ Para activarlo, seleccione Configuración> Accesibilidad> TalkBack, y luego pres
 
 Cuando TalkBack esté activado, los controles básicos de su dispositivo Android serán un poco diferentes. Por ejemplo:
 
-1.  Pulsar una aplicación solo lo seleccionará, y el dispositivo leerá qué es la aplicación.
-2.  Al deslizar hacia la izquierda y hacia la derecha, se moverá entre las aplicaciones o los botones / controles si se encuentra en una barra de control. El dispositivo leerá cada opción.
-3.  Si toca dos veces en cualquier lugar, se abrirá la aplicación / seleccione la opción.
-4.  También puede "explorar con un toque": mantenga el dedo presionado sobre la pantalla y arrástrelo, y su dispositivo leerá las diferentes aplicaciones / elementos con los que se mueve.
+1. Pulsar una aplicación solo lo seleccionará, y el dispositivo leerá qué es la aplicación.
+2. Al deslizar hacia la izquierda y hacia la derecha, se moverá entre las aplicaciones o los botones / controles si se encuentra en una barra de control. El dispositivo leerá cada opción.
+3. Si toca dos veces en cualquier lugar, se abrirá la aplicación / seleccione la opción.
+4. También puede "explorar con un toque": mantenga el dedo presionado sobre la pantalla y arrástrelo, y su dispositivo leerá las diferentes aplicaciones / elementos con los que se mueve.
 
 Si desea desactivar TalkBack:
 
-1.  Navega a tu aplicación de configuración utilizando los gestos anteriores.
-2.  Vaya a Accesibilidad> TalkBack.
-3.  Navegue hasta el interruptor deslizante y actívelo para apagarlo.
+1. Navega a tu aplicación de configuración utilizando los gestos anteriores.
+2. Vaya a Accesibilidad> TalkBack.
+3. Navegue hasta el interruptor deslizante y actívelo para apagarlo.
 
 Nota: Puede acceder a la pantalla de inicio en cualquier momento deslizando hacia arriba y hacia la izquierda con un movimiento suave. Si tiene más de una pantalla de inicio, puede moverse entre ellos deslizando dos dedos hacia la izquierda y hacia la derecha.
 
@@ -86,10 +86,10 @@ TalkBack le permite acceder a los menús de contexto global y local, donde quier
 
 Para llegar a estos menús:
 
-1.  Acceda al menú global deslizando rápidamente hacia abajo y luego a la
-2.  Acceda al menú local deslizando rápidamente hacia arriba y luego a la
-3.  Desliza el dedo hacia la izquierda y hacia la derecha para alternar entre las diferentes opciones.
-4.  Una vez que haya seleccionado la opción que desea, haga doble clic para elegir esa opción.
+1. Acceda al menú global deslizando rápidamente hacia abajo y luego a la
+2. Acceda al menú local deslizando rápidamente hacia arriba y luego a la
+3. Desliza el dedo hacia la izquierda y hacia la derecha para alternar entre las diferentes opciones.
+4. Una vez que haya seleccionado la opción que desea, haga doble clic para elegir esa opción.
 
 Para obtener detalles sobre todas las opciones disponibles en los menús de contexto global y local, consulte [Uso global y local contextual de menús](https://support.google.com/accessibility/android/answer/6007066).
 
@@ -99,19 +99,19 @@ Puede usar el menú contextual local mientras está en un navegador web para enc
 
 Por ejemplo, con TalkBack activado:
 
-1.  Abra su navegador web.
-2.  Activar la barra de URL.
-3.  Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
+1. Abra su navegador web.
+2. Activar la barra de URL.
+3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
 
-    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-    - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
-    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
+   - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
+   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
 
-4.  Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.
-5.  Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.
-6.  Deslízate hacia la derecha hasta que encuentres la opción "Encabezados y puntos de referencia".
-7.  Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.
-8.  Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.
+4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.
+5. Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.
+6. Deslízate hacia la derecha hasta que encuentres la opción "Encabezados y puntos de referencia".
+7. Pulse dos veces para seleccionarlo. Ahora podrá desplazarse hacia la izquierda y hacia la derecha para moverse entre encabezados y puntos de referencia de ARIA.
+8. Para volver al modo predeterminado, ingrese nuevamente al menú de contexto local deslizando hacia arriba y a la derecha, seleccione "Predeterminado", y luego toque dos veces para activar.
 
 > **Nota:** consulte [Empezar en Android con TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) para obtener una documentación más completa.
 
@@ -123,11 +123,11 @@ Para activarlo, vaya a la aplicación de configuración y seleccione General> Ac
 
 Una vez que VoiceOver esté habilitado, los gestos de control básico de iOS serán un poco diferentes:
 
-1.  Un solo toque hará que se seleccione el elemento que tocas; su dispositivo dirá el elemento que ha tocado.
-2.  También puede navegar por los elementos en la pantalla deslizando hacia la izquierda y hacia la derecha para moverse entre ellos, o deslizando el dedo por la pantalla para moverse entre diferentes elementos (cuando encuentra el elemento que desea, puede quitar el dedo para seleccionarlo). ).
-3.  Para activar el elemento seleccionado (por ejemplo, abrir una aplicación seleccionada), toque dos veces en cualquier lugar de la pantalla.
-4.  Desliza tres dedos para desplazarte por una página.
-5.  Toque con dos dedos para realizar una acción relevante para el contexto, por ejemplo, tomar una foto mientras está en la aplicación de la cámara.
+1. Un solo toque hará que se seleccione el elemento que tocas; su dispositivo dirá el elemento que ha tocado.
+2. También puede navegar por los elementos en la pantalla deslizando hacia la izquierda y hacia la derecha para moverse entre ellos, o deslizando el dedo por la pantalla para moverse entre diferentes elementos (cuando encuentra el elemento que desea, puede quitar el dedo para seleccionarlo). ).
+3. Para activar el elemento seleccionado (por ejemplo, abrir una aplicación seleccionada), toque dos veces en cualquier lugar de la pantalla.
+4. Desliza tres dedos para desplazarte por una página.
+5. Toque con dos dedos para realizar una acción relevante para el contexto, por ejemplo, tomar una foto mientras está en la aplicación de la cámara.
 
 Para apagarlo nuevamente, navegue de nuevo a Configuración> General> Accesibilidad> VoiceOver usando los gestos anteriores, y active el control deslizante VoiceOver para desactivarlo.
 
@@ -139,11 +139,11 @@ Para desbloquear el teléfono, debe presionar el botón de inicio (o deslizar) d
 
 Cuando VoiceOver está activado, tiene una función de navegación llamada Rotor disponible para usted, que le permite elegir rápidamente entre una serie de opciones útiles comunes. Para usarlo:
 
-1.  Gira dos dedos alrededor de la pantalla como si estuvieras girando un dial. Cada opción se leerá en voz alta a medida que gire más. Puede ir hacia adelante y hacia atrás para recorrer las opciones.
-2.  Una vez que hayas encontrado la opción que
+1. Gira dos dedos alrededor de la pantalla como si estuvieras girando un dial. Cada opción se leerá en voz alta a medida que gire más. Puede ir hacia adelante y hacia atrás para recorrer las opciones.
+2. Una vez que hayas encontrado la opción que
 
-    - Suelte los dedos para seleccionarlo.
-    - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
+   - Suelte los dedos para seleccionarlo.
+   - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
 
 Las opciones disponibles en el Rotor son sensibles al contexto; serán diferentes según la aplicación o la vista en la que se encuentre (consulte a continuación un ejemplo).
 
@@ -151,26 +151,26 @@ Las opciones disponibles en el Rotor son sensibles al contexto; serán diferente
 
 Vamos a hacer una prueba a navegar con VoiceOver:
 
-1.  Abra su navegador web.
-2.  Activar la barra de URL.
-3.  Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
+1. Abra su navegador web.
+2. Activar la barra de URL.
+3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
 
-    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-    - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
-    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
+   - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
+   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
 
-4.  Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los elementos de la página. Puede tocar dos veces un elemento para seleccionarlo (por ejemplo, siga un enlace).
-5.  Por defecto, la opción de Rotor seleccionada será Speaking Rate; actualmente puede deslizar hacia arriba y hacia abajo para aumentar o disminuir la frecuencia de habla.
-6.  Ahora gire dos dedos alrededor de la pantalla como un cuadrante para mostrar el rotor y muévase entre sus opciones. Aquí hay algunos ejemplos de las opciones disponibles:
+4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los elementos de la página. Puede tocar dos veces un elemento para seleccionarlo (por ejemplo, siga un enlace).
+5. Por defecto, la opción de Rotor seleccionada será Speaking Rate; actualmente puede deslizar hacia arriba y hacia abajo para aumentar o disminuir la frecuencia de habla.
+6. Ahora gire dos dedos alrededor de la pantalla como un cuadrante para mostrar el rotor y muévase entre sus opciones. Aquí hay algunos ejemplos de las opciones disponibles:
 
-    - Tasa de habla: Cambia la tasa de habla.
-    - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
-    - Encabezados: muévete entre los encabezados de la página.
-    - Enlaces: Mover entre enlaces en la página.
-    - Controles de formulario: muévase entre los controles de formulario en la página.
-    - Idioma: Mover entre diferentes traducciones, si están disponibles.
+   - Tasa de habla: Cambia la tasa de habla.
+   - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
+   - Encabezados: muévete entre los encabezados de la página.
+   - Enlaces: Mover entre enlaces en la página.
+   - Controles de formulario: muévase entre los controles de formulario en la página.
+   - Idioma: Mover entre diferentes traducciones, si están disponibles.
 
-7.  Seleccionar encabezados. Ahora podrá desplazarse hacia arriba y hacia abajo para moverse entre los encabezados de la página.
+7. Seleccionar encabezados. Ahora podrá desplazarse hacia arriba y hacia abajo para moverse entre los encabezados de la página.
 
 > **Nota:** Para obtener una referencia más completa que cubra los gestos de VoiceOver disponibles y otros consejos sobre las pruebas de accesibilidad en iOS, consulte [Probar la accesibilidad en su dispositivo con VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
 
@@ -185,11 +185,11 @@ Alternativamente, los eventos específicos del mouse como [mousedown](/es/docs/W
 Si intenta controlar nuestro ejemplo de [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([ver ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) con el teclado o el toque, verá el problema. Esto ocurre porque estamos usando un código como el siguiente:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -197,12 +197,12 @@ document.onmouseup = stopMove;
 Para habilitar otras formas de control, debe usar eventos diferentes pero equivalentes; por ejemplo, los eventos táctiles funcionan en dispositivos con pantalla táctil:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -217,7 +217,7 @@ Hemos proporcionado un ejemplo sencillo que muestra cómo usar el mouse y los ev
 
 En particular, los problemas más comunes que deben abordarse para dispositivos móviles son:
 
-- Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [mconsultas de medios, ](/es/docs/Web/CSS/Media_Queries)[vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) and [flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox). .
+- Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [consultas de medios](/es/docs/Web/CSS/Media_Queries), [vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) y [flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox). .
 - Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte [Agregar gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) para obtener más detalles).
 
@@ -232,18 +232,18 @@ Hay otros aspectos importantes a tener en cuenta al hacer que los sitios sean m�
 Usando viewport, es posible deshabilitar el zoom, usando un código como este en su {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="user-scalable=no">
+<meta name="viewport" content="user-scalable=no" />
 ```
 
 Nunca debe hacer esto si es posible: muchas personas confían en el zoom para poder ver el contenido de su sitio web, por lo que eliminar esta funcionalidad es una muy mala idea. Hay ciertas situaciones en las que el zoom podría romper la interfaz de usuario; en tales casos, si cree que necesita deshabilitar el zoom, debe proporcionar algún otro tipo de equivalente, como un control para aumentar el tamaño del texto de una manera que no rompa su interfaz de usuario.
 
-#### Mantener los menús accesibles.
+#### Mantener los menús accesibles
 
 Debido a que la pantalla es mucho más estrecha en los dispositivos móviles, es muy común utilizar consultas de medios y otras tecnologías para hacer que el menú de navegación se reduzca a un pequeño icono en la parte superior de la pantalla, que se puede presionar para mostrar el menú solo si es necesario - cuando el sitio se ve en el móvil. Esto suele representarse mediante un icono de "tres líneas horizontales" y, por lo tanto, el patrón de diseño se conoce como "menú de hamburguesas".
 
 Al implementar un menú de este tipo, debe asegurarse de que el control para revelarlo sea accesible mediante los mecanismos de control apropiados (normalmente, toque para dispositivos móviles), como se explica en [mecanismos de control](#mecanismos_de_control), y que el resto La página se aleja o se oculta de alguna manera mientras se accede al menú, para evitar confusiones al navegar.
 
-Haga clic aquí para un buen[ ejemplo de menú de hamburguesa.](https://fritz-weisshart.de/meg_men/)
+Haga clic aquí para un buen [ejemplo de menú de hamburguesa.](https://fritz-weisshart.de/meg_men/)
 
 ## Entrada de usuario
 
@@ -268,13 +268,3 @@ En este artículo, le proporcionamos algunos detalles sobre problemas comunes co
 - [Haz funcionar tu web en dispositivos táctiles](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Artículo útil sobre el uso de eventos táctiles para que las interacciones funcionen en dispositivos móviles.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## En este módulo
-
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
-- [Mejores prácticas de accesibilidad en CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA básico](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
-- [Accessibilidad mobil](/es/docs/Learn/Accessibility/Mobile)
-- [Solucionador de problemas en ](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)[Accessibilidad](/es/docs/Learn/Accessibility/Mobile)

@@ -1,7 +1,8 @@
 ---
 title: CSS Basic User Interface
-slug: Web/CSS/CSS_Basic_User_Interface
+slug: Web/CSS/CSS_basic_user_interface
 ---
+
 {{CSSRef}}
 
 **CSS Basic User Interface** 是 CSS 的一个模块，用于定义与用户界面相关的特性的渲染和实现。
@@ -29,7 +30,7 @@ slug: Web/CSS/CSS_Basic_User_Interface
 
 ## 指南
 
-- [Using URL values for the `cursor` property](/zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [Using URL values for the `cursor` property](/zh-CN/docs/Web/CSS/CSS_basic_user_interface/Using_URL_values_for_the_cursor_property)
   - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
 
 ## 规范

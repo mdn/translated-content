@@ -1,13 +1,8 @@
 ---
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{JSSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。
@@ -18,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects
 
 グローバルスコープ内のその他のオブジェクトは、[ユーザースクリプトによって作られたり](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)、ホストアプリケーションによって提供されたりします。ブラウザー上で提供されている利用可能なオブジェクトについては、[API リファレンス](/ja/docs/Web/API)で文書化されています。
 
-[DOM](/en-US/docs/Web/API/Document_Object_Model) と中核の [JavaScript](/en-US/docs/Web/JavaScript) との違いについての詳しい情報は、[JavaScript 技術概説](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview)をご覧ください。
+[DOM](/ja/docs/Web/API/Document_Object_Model) と中核の [JavaScript](/ja/docs/Web/JavaScript) との違いについての詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)をご覧ください。
 
 ## 標準オブジェクト (カテゴリー別)
 

@@ -1,15 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.aspect-ratio
-translation_of: Web/CSS/@media/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}のアスペクト比を調べるために使用します。

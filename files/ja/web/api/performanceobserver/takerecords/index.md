@@ -2,6 +2,7 @@
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref('PerformanceObserver')}} インターフェイスの **`takeRecords()`** メソッドは、パフォーマンスオブザーバーに格納されている{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の現在のリストを空にして返します。
@@ -38,9 +39,7 @@ console.log(records[0].duration);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | ステータス                                               | コメント                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-takerecords', 'takeRecords()')}} | {{Spec2('Performance Timeline Level 2')}} | `takeRecords()` メソッドの初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

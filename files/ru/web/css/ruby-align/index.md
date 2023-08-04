@@ -1,8 +1,8 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
-translation_of: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary

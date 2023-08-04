@@ -1,25 +1,19 @@
 ---
 title: Fonction de rappel (callback)
 slug: Glossary/Callback_function
-tags:
-  - Callback
-  - Fonction de rappel
-  - Glossaire
-  - Rappel
-translation_of: Glossary/Callback_function
-original_slug: Glossaire/Fonction_de_rappel
 ---
+
 Une fonction de rappel (aussi appelée _callback_ en anglais) est une fonction passée dans une autre fonction en tant qu'argument, qui est ensuite invoquée à l'intérieur de la fonction externe pour accomplir une sorte de routine ou d'action.
 
 Voici un rapide exemple :
 
 ```js
 function salutation(name) {
-  alert('Bonjour ' + name);
+  alert("Bonjour " + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Entrez votre nom.');
+  var name = prompt("Entrez votre nom.");
   callback(name);
 }
 
@@ -32,9 +26,7 @@ Notez cependant que les rappels sont souvent utilisés pour continuer l'exécuti
 
 Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
 
-## **En apprendre plus**
-
-### **Culture générale**
+## Voir aussi
 
 - [Fonction de rappel](https://fr.wikipedia.org/wiki/Fonction_de_rappel) sur Wikipédia
 - [Comprendre les fonctions de rappel JavaScript et les utiliser](https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) (en anglais).

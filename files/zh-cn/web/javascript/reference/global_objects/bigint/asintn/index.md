@@ -2,6 +2,7 @@
 title: BigInt.asIntN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 ---
+
 {{JSRef}}
 
 **`BigInt.asIntN`** 静态方法将 `BigInt` 值转换为一个 -`2^(width-1)` 与 `2^(width-1)-1` 之间的有符号整数。
@@ -25,7 +26,7 @@ BigInt.asIntN(width, bigint);
 
 `bigint` 模 (modulo) `2^width` 作为有符号整数的值。
 
-## 例子
+## 示例
 
 ### 保持在 64 位范围内
 

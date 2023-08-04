@@ -2,6 +2,7 @@
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`OffscreenCanvas`** interface provides a canvas that can be rendered off screen. It is available in both the window and [worker](/ja/docs/Web/API/Web_Workers_API) contexts.

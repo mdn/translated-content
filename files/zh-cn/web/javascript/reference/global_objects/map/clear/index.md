@@ -1,8 +1,8 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
+
 {{JSRef}}
 
 `clear()` 方法会移除 `Map` 对象中的所有元素。
@@ -11,13 +11,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 
 ## 语法
 
-```js
+```js-nolint
 clear()
 ```
 
 ### 返回值
 
-{{jsxref("undefined")}}.
+{{jsxref("undefined")}}。
 
 ## 示例
 
@@ -25,16 +25,16 @@ clear()
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-console.log(myMap.size);       // 2
-console.log(myMap.has('bar')); // true
+console.log(myMap.size); // 2
+console.log(myMap.has("bar")); // true
 
 myMap.clear();
 
-console.log(myMap.size);       // 0
-console.log(myMap.has('bar')); // false
+console.log(myMap.size); // 0
+console.log(myMap.has("bar")); // false
 ```
 
 ## 规范
@@ -45,6 +45,6 @@ console.log(myMap.has('bar')); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Map")}}

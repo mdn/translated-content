@@ -1,26 +1,8 @@
 ---
 title: Multimedia and embedding
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Assessment
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Flash
-  - Guide
-  - HTML
-  - Images
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - SVG
-  - TopicStub
-  - Video
-  - iframes
-  - imagemaps
-  - responsive
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
+
 {{LearnSidebar}}
 
 우리는 이 과정에서 지금까지 많은 텍스트를 살펴 봤지만 텍스트만을 사용한 웹은 따분합니다. 보다 흥미로운 내용으로 웹을 생생하게 만드는 방법을 살펴 보도록 합시다! 여기에서는 HTML을 사용하여 이미지를 포함 할 수있는 다양한 방법과 비디오, 오디오 및 웹 페이지 전체를 포함하는 방법을 비롯하여 웹 페이지에 멀티미디어를 포함하는 방법을 살펴 보도록 하겠습니다.

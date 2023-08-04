@@ -2,6 +2,7 @@
 title: TransformStream.writable
 slug: Web/API/TransformStream/writable
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("TransformStream")}} 接口的只读属性 **`writable`** 返回由这个 `TransformStream` 控制的 {{domxref("WritableStream")}} 实例。
@@ -16,7 +17,7 @@ slug: Web/API/TransformStream/writable
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream
+console.log(textEncoderStream.writable); // a WritableStream
 ```
 
 ## 规范

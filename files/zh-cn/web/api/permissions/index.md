@@ -2,6 +2,7 @@
 title: Permissions
 slug: Web/API/Permissions
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 [Permissions API](Permissions_API)的 Permissions 接口提供核心 PermissionAPI 功能，例如查询和撤消权限的方法。
@@ -20,10 +21,10 @@ slug: Web/API/Permissions
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(result) {
-  if (result.state === 'granted') {
+navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+  if (result.state === "granted") {
     showLocalNewsWithGeolocation();
-  } else if (result.state === 'prompt') {
+  } else if (result.state === "prompt") {
     showButtonToEnableLocalNews();
   }
   // 如果没有此权限则不什么也做
@@ -36,4 +37,4 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## Browser Support
 
-{{Compat("api.Permissions")}}
+{{Compat}}

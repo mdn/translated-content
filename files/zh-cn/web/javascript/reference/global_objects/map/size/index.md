@@ -1,8 +1,8 @@
 ---
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
+
 {{JSRef}}
 
 **`size`** 是可访问属性，返回 {{jsxref("Map")}} 对象的成员数量。
@@ -15,11 +15,13 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 
 ## 示例
 
+### 使用 size
+
 ```js
 const myMap = new Map();
-myMap.set('a', 'alpha');
-myMap.set('b', 'beta');
-myMap.set('g', 'gamma');
+myMap.set("a", "alpha");
+myMap.set("b", "beta");
+myMap.set("g", "gamma");
 
 console.log(myMap.size); // 3
 ```
@@ -32,6 +34,6 @@ console.log(myMap.size); // 3
 
 {{Compat}}
 
-## 相关阅读
+## 参见
 
 - {{jsxref("Map")}}

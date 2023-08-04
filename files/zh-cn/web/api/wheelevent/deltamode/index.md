@@ -2,6 +2,7 @@
 title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
 ---
+
 {{APIRef("DOM Events")}}
 
 **`WheelEvent.deltaMode`** 只读属性返回一个 `unsigned long` 类型的值，声明 delta 的滚动值的单位。可能的值为：
@@ -21,7 +22,10 @@ var unit = event.deltaMode;
 ## 例子
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaMode);
 ```
@@ -36,5 +40,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## 另见
 
-- {{ event("wheel") }}
+- [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
 - {{domxref("WheelEvent")}}

@@ -2,6 +2,7 @@
 title: document.URL
 slug: Web/API/Document/URL
 ---
+
 {{ ApiRef() }}
 
 ### 概述

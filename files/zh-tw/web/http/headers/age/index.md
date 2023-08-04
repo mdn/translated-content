@@ -2,6 +2,7 @@
 title: Age
 slug: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** 標頭代表資源進到代理快取後，經過了幾秒。
@@ -9,9 +10,9 @@ slug: Web/HTTP/Headers/Age
 `Age` 標頭通常接近 0。如果你拿到 `Age: 0` 代表資源剛剛才從後端伺服器抓進來；
 不然通常會是快取當下與回應中 {{HTTPHeader("Date")}} 標頭的時間差。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 語法
 
@@ -36,7 +37,7 @@ Age: 24
 
 ## Browser compatibility
 
-{{Compat("http.headers.Age")}}
+{{Compat}}
 
 ## See also
 

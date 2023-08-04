@@ -2,6 +2,7 @@
 title: font-style
 slug: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -42,7 +43,7 @@ As an example, consider the garamond font family, in its normal form, we get the
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond.ttf');
+  src: url("garamond.ttf");
 }
 ```
 
@@ -57,7 +58,7 @@ On the other hand, if a true italicized version of the font family exists, we ca
 ```css
 @font-face {
   font-family: garamond;
-  src: url('garamond-italic.ttf');
+  src: url("garamond-italic.ttf");
   font-style: italic;
 }
 ```
@@ -70,4 +71,4 @@ On the other hand, if a true italicized version of the font family exists, we ca
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face.font-style")}}
+{{Compat}}

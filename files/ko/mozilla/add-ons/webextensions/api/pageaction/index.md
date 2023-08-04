@@ -1,13 +1,13 @@
 ---
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
+
 {{AddonSidebar}}
 
 [페이지 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/Page_actions)은 브라우저의 주소창에 있는 아이콘이다.
 
-![](https://mdn.mozillademos.org/files/12960/page-action.png)
+![](page-action.png)
 
 아이콘 클릭에 대한 대응은 리스너를 등록하고 클릭 이벤트를 기다리는 것이나, [팝업창](/ko/docs/Mozilla/Add-ons/WebExtensions/Popups)이 열리게 하는 것일 수 있다.
 
@@ -50,13 +50,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.pageAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** **Acknowledgements** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-```
+<!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -84,3 +84,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

@@ -1,14 +1,6 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - CSS Pseudo-class
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:empty
 ---
 {{ CSSRef() }}
 
@@ -18,7 +10,9 @@ translation_of: Web/CSS/:empty
 
 ## Синтаксис
 
-    <element>:empty { /* стили */ }
+```
+<element>:empty { /* стили */ }
+```
 
 ## Примеры
 

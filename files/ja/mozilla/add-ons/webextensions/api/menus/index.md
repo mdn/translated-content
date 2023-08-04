@@ -2,6 +2,7 @@
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 ---
+
 {{AddonSidebar}}
 
 ブラウザーのメニューシステムに項目を追加します。
@@ -48,57 +49,75 @@ Here's a context menu containing 4 items: a normal item, two radio items with se
 ![](menus-4.png)You could create a submenu like this using code like:
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## 型
@@ -141,9 +160,10 @@ browser.menus.create({
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **メモ:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -170,4 +190,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

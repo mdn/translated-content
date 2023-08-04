@@ -2,6 +2,7 @@
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 代表书签树中的一个节点（书签或文件夹），子节点在它们的父文件夹中按顺序排列。
@@ -31,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks.BookmarkTreeNode", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

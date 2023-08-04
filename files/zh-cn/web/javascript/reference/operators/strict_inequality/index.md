@@ -1,32 +1,33 @@
 ---
-title: 严格不相等 (!==)
+title: 严格不相等（!==）
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
+
 {{jsSidebar("Operators")}}
 
-严格不等式操作符 (!==) 检查它的两个对象是否不相等，返回一个布尔结果。与不等式运算符不同，严格不等式运算符总是认为不同类型的对象是不同的。
+严格不相等运算符（`!==`）检查它的两个对象是否不相等，返回一个布尔结果。与[不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)运算符不同，严格不相等运算符总是认为不同类型的对象是不同的。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 x !== y
 ```
 
 ## 描述
 
-严格不等式运算符检查其对象是否不相等。它是严格相等运算符的否定，因此下面两行总是会给出相同的结果：
+严格不相等运算符检查其对象是否不相等。它是[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符的否定，因此下面两行总是会给出相同的结果：
 
 ```js
-x !== y
+x !== y;
 
-!(x === y)
+!(x === y);
 ```
 
-有关比较算法的详细信息，请参阅严格相等运算符的页面。
+有关比较算法的详细信息，请参阅[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符的页面。
 
-与严格相等运算符一样，严格不等运算符始终认为不同类型的对象是不同的：
+与严格相等运算符一样，严格不相等算符始终认为不同类型的对象是不同的：
 
 ```js
 3 !== "3"; // true
@@ -37,41 +38,39 @@ x !== y
 ### 比较相同类型的对象
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+"hello" !== "hello"; // false
+"hello" !== "hola"; // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+3 !== 3; // false
+3 !== 4; // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+true !== true; // false
+true !== false; // true
 
-console.log(null !== null);         // false
+null !== null; // false
 ```
 
-### 比较不同类型的对象
+### 比较不同类型的操作数
 
 ```js
-console.log("3" !== 3);           // true
-
-console.log(true !== 1);          // true
-
-console.log(null !== undefined);  // true
+"3" !== 3; // true
+true !== 1; // true
+null !== undefined; // true
 ```
 
-### 比较 Object 对象
+### 比较对象
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  key: "value",
+};
 
 const object2 = {
-  name: "hello"
-}
+  key: "value",
+};
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## 规范
@@ -82,8 +81,8 @@ console.log(object1 !== object1);  // false
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)
+- [不相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [严格相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)

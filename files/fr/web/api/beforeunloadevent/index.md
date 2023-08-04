@@ -1,11 +1,8 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - API
-  - Reference
-translation_of: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 L'évènement **`beforeunload`** est déclenché quand la fenêtre, le document et ses ressources sont sur le point d'être déchargées.
@@ -38,12 +35,12 @@ Si une chaine non vide est assignée à la propriété `returnValue` de l'évèn
 ## Exemples
 
 ```js
-window.addEventListener("beforeunload", function(event) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 // est équivalent à
-window.addEventListener("beforeunload", function(event) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -52,11 +49,11 @@ Les navigateurs basés sur WebKit ne suivent pas la spécification concernant la
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
-  return confirmationMessage;                                /* Safari, Chrome, and other
-                                                              * WebKit-derived browsers */
+  (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+  return confirmationMessage; /* Safari, Chrome, and other
+   * WebKit-derived browsers */
 });
 ```
 
@@ -70,9 +67,9 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Voir aussi
 
-- {{Event("DOMContentLoaded")}}
-- {{Event("readystatechange")}}
-- {{Event("load")}}
-- {{Event("beforeunload")}}
-- {{Event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr/docs/Web/API/Window/load_event)
+- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)
 - [Unloading Documents — Prompt to unload a document](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)

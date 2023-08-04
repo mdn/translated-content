@@ -2,6 +2,7 @@
 title: 使用 server-sent 事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 開發一個使用 server-sent 事件的網頁應用程式很簡單。在伺服器端只需要一些的程式碼與網頁串流事件，而客戶端這邊的處理進入事件的部分幾乎跟 [websockets](/zh-TW/docs/Web/API/WebSockets_API) 一樣。這是一種單向的連線，所以你無法從客戶端向伺服器傳送事件。
@@ -17,19 +18,21 @@ const evtSource = new EventSource("ssedemo.php");
 如果事件產生的 script 在不同源的伺服器上，在建立 {{domxref("EventSource")}} 物件時需要同時提供 URL 和第二個參數作為選項設定。假設客戶端的 script 伺服於 `example.com` ：
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
-當你完成初始化事件來源後，你就可以透過新增 {{event("message")}} 事件的處理器來開始監聽來自伺服器的訊息：
+當你完成初始化事件來源後，你就可以透過新增 {{domxref("EventSource.message_event", "message")}} 事件的處理器來開始監聽來自伺服器的訊息：
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = function (event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
   newElement.innerHTML = "message: " + event.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 上述的程式碼會監聽進入的訊息（這裡來自伺服器的通知沒有指明 `event` 欄位，所以統一用 `onmessage` 處理即可）並且把訊息的文字附加到 document 的清單。
@@ -37,7 +40,7 @@ evtSource.onmessage = function(event) {
 你也可以利用 `addEventListener()` 監聽事件：
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", function (event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
   newElement.innerHTML = "ping at " + time;
@@ -99,7 +102,7 @@ while (true) {
 當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
 
 ```js
-evtSource.onerror = function(err) {
+evtSource.onerror = function (err) {
   console.error("EventSource failed:", err);
 };
 ```
@@ -189,4 +192,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ### `EventSource`
 
-{{Compat("api.EventSource")}}
+{{Compat}}

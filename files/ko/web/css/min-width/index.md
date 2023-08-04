@@ -1,19 +1,15 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/min-width
 ---
+
 {{CSSRef}}
 
 **`min-width`** [CSS](/ko/docs/CSS) 속성은 요소의 최소 너비를 설정합니다. `min-width`는 {{cssxref("width")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 작아지는걸 방지합니다.
 
 {{EmbedInteractiveExample("pages/css/min-width.html")}}
 
-`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 높이는 `min-width`의 값을 사용합니다.
+`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 너비는 `min-width`의 값을 사용합니다.
 
 ## 구문
 

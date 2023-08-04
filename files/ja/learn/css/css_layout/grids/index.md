@@ -2,6 +2,7 @@
 title: グリッド
 slug: Learn/CSS/CSS_layout/Grids
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
 CSS グリッドレイアウト（Grid Layout）は、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できるようにする多くの機能があります。 この記事では、ページレイアウトを始めるために知っておくべきことをすべて説明します。
@@ -34,7 +35,7 @@ The following video provides a nice visual explanation of using CSS Grid:
 
 ```css
 .container {
-    display: grid;
+  display: grid;
 }
 ```
 
@@ -44,8 +45,8 @@ The following video provides a nice visual explanation of using CSS Grid:
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
 }
 ```
 
@@ -56,26 +57,29 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
 ```html hidden
 <div class="container">
- <div>One</div>
- <div>Two</div>
- <div>Three</div>
- <div>Four</div>
- <div>Five</div>
- <div>Six</div>
- <div>Seven</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
 </div>
 ```
 
@@ -96,8 +100,8 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -105,8 +109,8 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 ```
 
@@ -117,7 +121,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -128,10 +135,9 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -148,7 +154,7 @@ body {
 
 {{ EmbedLiveSample('Grid_2', '100%', 400) }}
 
-> **Note:** `fr` 単位は、*すべて*のスペースではなく、*使用可能*なスペースを分配します。 あなたのトラックの 1 つがその中に大きな何かを持っているならば、共有する空きスペースは少なくなります。
+> **メモ:** `fr` 単位は、*すべて*のスペースではなく、*使用可能*なスペースを分配します。 あなたのトラックの 1 つがその中に大きな何かを持っているならば、共有する空きスペースは少なくなります。
 
 ### トラック間のギャップ
 
@@ -156,9 +162,9 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 20px;
 }
 ```
 
@@ -169,7 +175,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -181,10 +190,9 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -201,7 +209,7 @@ body {
 
 {{ EmbedLiveSample('Grid_3', '100%', 400) }}
 
-> **Note:** `*gap` プロパティは以前は `grid-` という接頭辞を付けていましたが、これは仕様変更されています。 その意図はそれらを複数のレイアウト方法で使えるようにすることです。 接頭辞の付いたバージョンはエイリアスとして保持されるため、しばらくの間は安全に使用できます。 安全のために、コードをより万全にするために、両方のプロパティを倍増して追加することができます。
+> **メモ:** `*gap` プロパティは以前は `grid-` という接頭辞を付けていましたが、これは仕様変更されています。 その意図はそれらを複数のレイアウト方法で使えるようにすることです。 接頭辞の付いたバージョンはエイリアスとして保持されるため、しばらくの間は安全に使用できます。 安全のために、コードをより万全にするために、両方のプロパティを倍増して追加することができます。
 
 ```css
 .container {
@@ -218,9 +226,9 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 ```
 
@@ -237,14 +245,17 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -258,7 +269,6 @@ body {
   <div>Six</div>
   <div>Seven</div>
 </div>
-
 ```
 
 ```css
@@ -280,10 +290,10 @@ body {
 
 ```css
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
 }
 ```
 
@@ -300,16 +310,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
-
 ```
 
 ```html hidden
@@ -382,44 +394,47 @@ footer {
 ```
 
 ```css hidden
-                body {
-                    width: 90%;
-                    max-width: 900px;
-                    margin: 2em auto;
-                    font: .9em/1.2 Arial, Helvetica, sans-serif;
-                }
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
 
-                .container {
-                    display: grid;
-                    grid-template-columns: 1fr 3fr;
-                    grid-gap: 20px;
-                }
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
 header {
-    grid-column: 1 / 3;
-    grid-row: 1;
+  grid-column: 1 / 3;
+  grid-row: 1;
 }
 
 article {
-    grid-column: 2;
-    grid-row: 2;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 aside {
-    grid-column: 1;
-    grid-row: 2;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 footer {
-    grid-column: 1 / 3;
-    grid-row: 3;
+  grid-column: 1 / 3;
+  grid-row: 3;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -432,13 +447,34 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
   <aside>
     <h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
@@ -446,7 +482,7 @@ aside {
 
 {{ EmbedLiveSample('Grid_6', '100%', 400) }}
 
-> **Note:** 終点の列または行のラインをターゲットとして値 `-1` を使用し、負の値を使用して終点から内側に向かって数えることもできます。 しかしこれは明示的グリッドに対してのみ有効です。 値 `-1` は、[暗黙的グリッド](/ja/docs/Glossary/Grid)の終点のラインをターゲットにしません。
+> **メモ:** 終点の列または行のラインをターゲットとして値 `-1` を使用し、負の値を使用して終点から内側に向かって数えることもできます。 しかしこれは明示的グリッドに対してのみ有効です。 値 `-1` は、[暗黙的グリッド](/ja/docs/Glossary/Grid)の終点のラインをターゲットにしません。
 
 ## grid-template-areas での配置
 
@@ -458,9 +494,9 @@ aside {
 .container {
   display: grid;
   grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
 }
@@ -489,15 +525,18 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
@@ -507,9 +546,9 @@ aside {
 .container {
   display: grid;
   grid-template-areas:
-  "header header"
-  "sidebar content"
-  "footer footer";
+    "header header"
+    "sidebar content"
+    "footer footer";
   grid-template-columns: 1fr 3fr;
   grid-gap: 20px;
 }
@@ -529,7 +568,6 @@ aside {
 footer {
   grid-area: footer;
 }
-
 ```
 
 ```html hidden
@@ -537,12 +575,34 @@ footer {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
@@ -593,12 +653,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 20px;
 }
 
@@ -626,14 +689,13 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 
 aside {
   border-right: 1px solid #999;
 }
-
 ```
 
 ```html hidden
@@ -641,16 +703,37 @@ aside {
   <header>This is my lovely blog</header>
   <article>
     <h1>My article</h1>
-    <p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+    <p>
+      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
+      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
+      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
+      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
+      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+    </p>
 
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
+      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
+      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    </p>
   </article>
-  <aside><h2>Other things</h2>
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est.</p>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
   </aside>
   <footer>Contact me@mysite.com</footer>
 </div>
-
 ```
 
 {{ EmbedLiveSample('Grid_8', '100%', 400) }}
@@ -673,18 +756,3 @@ aside {
 - [CSS グリッドインスペクター: グリッドレイアウトを調査する](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

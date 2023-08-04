@@ -2,6 +2,7 @@
 title: OscillatorNode.frequency
 slug: Web/API/OscillatorNode/frequency
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("OscillatorNode") }} 的 `frequency 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，表示振荡的频率，单位 HZ（hertz）
@@ -30,7 +31,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 var oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.value = 440; // value in hertz
 oscillator.start();
 ```
@@ -41,7 +42,7 @@ oscillator.start();
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.frequency")}}
+{{Compat}}
 
 ## See also
 

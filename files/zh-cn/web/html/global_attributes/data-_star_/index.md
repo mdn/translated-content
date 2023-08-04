@@ -2,6 +2,7 @@
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **data-\*** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 是一类被称为**自定义数据属性**的属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本在 [HTML](/zh-CN/docs/Web/HTML) 与 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 表现之间进行专有数据的交换。
@@ -14,7 +15,7 @@ slug: Web/HTML/Global_attributes/data-*
 - 该名称不能包含任何分号 (`U+003A`)；
 - 该名称不能包含 A 至 Z 的大写字母。
 
-注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 _data-test-value_ 可以通过 `HTMLElement.dataset.testValue` ( 或者是` HTMLElement.dataset["testValue"] `) 来访问，任何破折号 (`U+002D`) 都会被下个字母的大写替代 (驼峰拼写)。
+注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 _data-test-value_ 可以通过 `HTMLElement.dataset.testValue` ( 或者是 `HTMLElement.dataset["testValue"]`) 来访问，任何破折号 (`U+002D`) 都会被下个字母的大写替代 (驼峰拼写)。
 
 ### 用法
 
@@ -28,7 +29,7 @@ slug: Web/HTML/Global_attributes/data-*
 </img>
 ```
 
-有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)。
+有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)。
 
 ## 规范
 
@@ -42,4 +43,4 @@ slug: Web/HTML/Global_attributes/data-*
 
 - 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.dataset")}} 属性允许访问和修改这些值
-- [使用数据属性](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)

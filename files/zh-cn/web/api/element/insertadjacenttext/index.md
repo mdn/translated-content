@@ -2,6 +2,7 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 **`insertAdjacentText()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
@@ -41,9 +42,9 @@ Void.
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
@@ -53,12 +54,12 @@ foo
 ## 范例
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", function () {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", function () {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
@@ -70,9 +71,9 @@ Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

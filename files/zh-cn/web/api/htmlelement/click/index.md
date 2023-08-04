@@ -2,20 +2,21 @@
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`**方法可以用来模拟鼠标左键单击一个元素。
+**`HTMLElement.click()`** 方法可以用来模拟鼠标左键单击一个元素。
 
 当在支持 `click()` 方法的元素上使用该方法（例如
 {{HTMLElement("input")}}) ，将会产生该元素的一个点击事件。这个事件会冒泡上升到文档树（或事件链）中更高的元素，并触发它们的点击事件。
 
 ## 语法
 
-```js
-element.click()
+```js-nolint
+click()
 ```
 
-## 用例
+## 示例
 
 当鼠标移动过复选框时模拟一个点击事件：
 
@@ -23,7 +24,11 @@ element.click()
 
 ```html
 <form>
-  <input type="checkbox" id="myCheck" onmouseover="myFunction()" onclick="alert('click event occurred')">
+  <input
+    type="checkbox"
+    id="myCheck"
+    onmouseover="myFunction()"
+    onclick="alert('click event occurred')" />
 </form>
 ```
 

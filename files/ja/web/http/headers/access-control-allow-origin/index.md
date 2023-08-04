@@ -1,21 +1,8 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-tags:
-  - Access Control
-  - Access-Control-Allow-Origin
-  - CORS
-  - Dealing with CORS
-  - HTTP
-  - HTTP Header
-  - How to Fix CORS
-  - Reference
-  - Security
-  - cross-origin issue
-  - header
-  - origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Origin`** レスポンスヘッダーは、指定された{{glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。
@@ -55,7 +42,7 @@ Access-Control-Allow-Origin: null
 
   - : オリジンを "null" に指定します。
 
-    > **Note:** **注:** `null` は[使用しないでください](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null)。「`Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて "null" となるように定義されています。多くのユーザーエージェントはそのような文書に `Access-Control-Allow-Origin: "null"` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが "null" を持つ悪意のある文書を生成することができます。したがって、 ACAO ヘッダーで "null" 値を使用することは避けるべきです。」
+    > **メモ:** `null` は[使用しないでください](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null)。「`Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて "null" となるように定義されています。多くのユーザーエージェントはそのような文書に `Access-Control-Allow-Origin: "null"` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが "null" を持つ悪意のある文書を生成することができます。したがって、 ACAO ヘッダーで "null" 値を使用することは避けるべきです。」
 
 ## 例
 
@@ -84,9 +71,7 @@ Vary: Origin
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

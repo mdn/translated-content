@@ -1,18 +1,8 @@
 ---
 title: rotate
 slug: Web/CSS/rotate
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 回転
-  - 座標変換
-  - angle
-  - recipe:css-property
-  - rotation
-browser-compat: css.properties.rotate
-translation_of: Web/CSS/rotate
 ---
+
 {{CSSRef}}
 
 **`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で変形関数を指定する実際の順序を覚えておく手間を軽減します。

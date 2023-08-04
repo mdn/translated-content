@@ -2,6 +2,7 @@
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.networkState`** 属性表示在网络上获取媒体的当前状态。
@@ -29,19 +30,17 @@ var networkState = audioOrVideo.networkState;
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+var obj = document.getElementById("example");
 
-obj.addEventListener('playing', function() {
-
+obj.addEventListener("playing", function () {
   if (obj.networkState === 2) {
     // Still loading...
   }
-
 });
 ```
 
@@ -51,7 +50,7 @@ obj.addEventListener('playing', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.networkState")}}
+{{Compat}}
 
 ## 另见
 

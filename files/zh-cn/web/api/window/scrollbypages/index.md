@@ -2,6 +2,7 @@
 title: window.scrollByPages
 slug: Web/API/Window/scrollByPages
 ---
+
 {{ ApiRef() }}
 
 ### 概述

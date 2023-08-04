@@ -1,13 +1,8 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-tags:
-  - HTTP
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/407
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`407 Proxy Authentication Required` **クライアントエラーというステータスのレスポンスコードは、リクエストが適用されていないことを示しています。なぜなら、ブラウザーと要求されたリソースにアクセスできるサーバーの間にあるプロキシサーバーに有効な認証情報が不足しているためです。

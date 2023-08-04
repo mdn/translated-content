@@ -2,6 +2,7 @@
 title: NDEFReader.write()
 slug: Web/API/NDEFReader/write
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 `write()` は {{DOMxRef("NDEFReader")}} インターフェイスのプロパティで、タグに NDEF メッセージを書き込むことを試みます。 {{jsxref("Promise")}} を返し、これはタグにメッセージが書き込まれると解決し、ハードウェアや権限のエラーが発生すると拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
@@ -53,8 +54,8 @@ NDEFReader.write(message);
 
   - : 以下のプロパティを持つオブジェクトです。
 
-    - `overwrite` -- 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
-    - `signal` -- オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
+    - `overwrite` — 既存のレコードが存在した場合、上書きするかどうかを指定する論理値です。
+    - `signal` — オプションの {{DOMxRef("AbortSignal")}} で、現在の書き込み操作をキャンセルすることができます。
 
 ### 返値
 

@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** 方法回傳含有圖像和參數設置特定格式的 [data URIs](/zh-TW/docs/Web/HTTP/data_URIs) (預設 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). 回傳的圖像解析度為 96 dpi.
@@ -82,10 +83,14 @@ function showGrayImg() {
 
 function removeColors() {
   var aImages = document.getElementsByClassName("grayscale"),
-      nImgsLen = aImages.length,
-      oCanvas = document.createElement("canvas"),
-      oCtx = oCanvas.getContext("2d");
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
+    nImgsLen = aImages.length,
+    oCanvas = document.createElement("canvas"),
+    oCtx = oCanvas.getContext("2d");
+  for (
+    var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0;
+    nImgId < nImgsLen;
+    nImgId++
+  ) {
     oColorImg = aImages[nImgId];
     nWidth = oColorImg.offsetWidth;
     nHeight = oColorImg.offsetHeight;
@@ -96,7 +101,10 @@ function removeColors() {
     aPix = oImgData.data;
     nPixLen = aPix.length;
     for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+      aPix[nPixel + 2] =
+        aPix[nPixel + 1] =
+        aPix[nPixel] =
+          (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
     }
     oCtx.putImageData(oImgData, 0, 0);
     oGrayImg = new Image();
@@ -116,7 +124,7 @@ function removeColors() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 參見
 

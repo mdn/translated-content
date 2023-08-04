@@ -2,6 +2,7 @@
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 **`setBaseAndExtent()`** 方法是 {{domxref("Selection")}} 接口用来选中并设置在两个特定的 DOM 节点中文本选中的范围，并且选中的任何内容都位于两个节点之间。
@@ -44,19 +45,23 @@ Void.
 ```html
 <h1>setBaseAndExtent example</h1>
 <div>
-  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p class="one">
+    <span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span>
+  </p>
   <p>MIDDLE</p>
-  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
+  <p class="two">
+    <span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span>
+  </p>
 </div>
 
 <div>
   <p>
     <label for="aOffset">Anchor offset</label>
-    <input id="aOffset" name="aOffset" type="number" value="0">
+    <input id="aOffset" name="aOffset" type="number" value="0" />
   </p>
   <p>
     <label for="fOffset">Focus offset</label>
-    <input id="fOffset" name="fOffset" type="number" value="0">
+    <input id="fOffset" name="fOffset" type="number" value="0" />
   </p>
   <p><button>Capture selection</button></p>
 </div>
@@ -67,33 +72,33 @@ Void.
 JavaScript 像这样：
 
 ```js
-var one = document.querySelector('.one');
-var two = document.querySelector('.two');
+var one = document.querySelector(".one");
+var two = document.querySelector(".two");
 
-var aOffset = document.getElementById('aOffset');
-var fOffset = document.getElementById('fOffset');
+var aOffset = document.getElementById("aOffset");
+var fOffset = document.getElementById("fOffset");
 
-var button = document.querySelector('button');
+var button = document.querySelector("button");
 
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 
 var selection;
 
-button.onclick = function() {
+button.onclick = function () {
   try {
     selection = document.getSelection();
     selection.setBaseAndExtent(one, aOffset.value, two, fOffset.value);
     var text = selection.toString();
     output.textContent = text;
-  } catch(e) {
+  } catch (e) {
     output.textContent = e.message;
   }
-}
+};
 ```
 
 在下面在线运行实例，设置不同的偏移值去观察它怎么去影响选中内容的。
 
-{{ EmbedLiveSample('Examples', '100%', 370) }}
+{{ EmbedLiveSample('示例', '100%', 370) }}
 
 > **备注：** 实例在这里 [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
@@ -103,7 +108,7 @@ button.onclick = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.setBaseAndExtent")}}
+{{Compat}}
 
 ## 相关链接
 

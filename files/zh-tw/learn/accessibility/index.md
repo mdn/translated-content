@@ -2,9 +2,10 @@
 title: 無障礙網頁
 slug: Learn/Accessibility
 ---
+
 {{LearnSidebar}}
 
-如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/en-US/docs/Learn/JavaScript) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)、還有其他啟動的要點。
+如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)、還有其他啟動的要點。
 
 ## 概觀
 
@@ -20,7 +21,7 @@ When someone describes a site as "accessible," they mean that any user can use a
 
 要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 是個好主意。如果在學習相關技術時學習會更好。
 
-> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 這種程式撰寫網站，執行大多數範例。
+> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
 
 ## 教學
 

@@ -2,6 +2,7 @@
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的只读属性 **`locked`** 返回可读流是否锁定到 reader。
@@ -30,3 +31,8 @@ stream.locked
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

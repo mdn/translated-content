@@ -2,6 +2,7 @@
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range.cloneContents()`** は、 {{ domxref("Range") }} に含まれる {{ domxref("Node") }} 型のオブジェクトをコピーした {{ domxref("DocumentFragment") }} を返します。

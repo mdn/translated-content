@@ -2,6 +2,7 @@
 title: CSS
 slug: Learn/CSS
 ---
+
 {{LearnSidebar}}
 
 层叠样式表 — 也就是{{glossary("CSS")}} — 是你在{{glossary("HTML")}}之后应该学习的第二门技术。HTML 用于定义内容的结构和语义，CSS 用于设计风格和布局。比如，您可以使用 CSS 来更改内容的字体、颜色、大小、间距，将内容分为多列，或者添加动画及其他的装饰效果。
@@ -12,11 +13,11 @@ slug: Learn/CSS
 
 - CSS，从 CSS 模块简介开始
 - 更高级的[HTML 模块](/zh-CN/Learn/HTML#Modules)
-- [JavaScript](/en-US/docs/Learn/JavaScript)，如何使用 Javascript 给网页加上动态功能
+- [JavaScript](/zh-CN/docs/Learn/JavaScript)，如何使用 Javascript 给网页加上动态功能
 
 我们建议你同时学习 HTML 和 CSS，在这两个主题之间来回切换。因为有着 CSS 的 HTML 更加有趣，并且不了解 HTML 就不能真正掌握 CSS。
 
-在学习本章节之前，你应该会使用计算机，熟练的使用网页操作（哪怕只是盯着屏幕看）。你应该配置好一个基本的操作环境（见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），知道如何创建和管理文件（见[处理文件](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）—这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 的初学者模块的一部分。
+在学习本章节之前，你应该会使用计算机，熟练的使用网页操作（哪怕只是盯着屏幕看）。你应该配置好一个基本的操作环境（见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），知道如何创建和管理文件（见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）—这两个都是 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 的初学者模块的一部分。
 
 我们建议你在学习本章内容前，先完成 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)，尽管这不是必须的；CSS 基础文章中涵盖的大部分内容在 CSS 模块简介中也有，而且 CSS 模块涵盖了更多的细节。
 
@@ -35,11 +36,11 @@ slug: Learn/CSS
 
 ## 解决常见的 CSS 问题
 
-[使用 CSS 解决常见问题](/en-US/docs/Learn/CSS/Howto)解释了怎样使用 CSS 解决创建一个网页时常遇到的问题。
+[使用 CSS 解决常见问题](/zh-CN/docs/Learn/CSS/Howto)解释了怎样使用 CSS 解决创建一个网页时常遇到的问题。
 
 从这里开始，你大致就能在 HTML 元素和它们的背景上应用颜色、改变形状尺寸和元素的位置、向元素上添加并定义边框。不过一旦你牢固掌握了即便是 CSS 最基础的部分，也没有很多做不到的事情。学习 CSS 最棒的一件事情就是，一旦你知道了基本的原理，即使你实际上不知道怎么做，你通常还是会很清楚什么能做到而什么不能做到！
 
 ## 参阅
 
-- [CSS on MDN](/en-US/docs/Web/CSS)
+- [CSS on MDN](/zh-CN/docs/Web/CSS)
   - : MDN 上 css 文档的主要入口，包括详细的参考到高级的教程一系列内容。

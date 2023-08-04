@@ -1,22 +1,8 @@
 ---
 title: MediaTrackSupportedConstraints.latency
 slug: Web/API/MediaTrackSupportedConstraints/latency
-page-type: web-api-instance-property
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - latency
-browser-compat: api.MediaTrackSupportedConstraints.latency
-translation_of: Web/API/MediaTrackSupportedConstraints/latency
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`latency`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `latency` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

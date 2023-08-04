@@ -1,12 +1,8 @@
 ---
-title: 'ARIA: search ロール'
-slug: Web/Accessibility/ARIA/Roles/Search_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Search_role
+title: "ARIA: search ロール"
+slug: Web/Accessibility/ARIA/Roles/search_role
 ---
+
 検索 (`search`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、ページ、サイト、またはサイトのコレクションの検索に使用されるページのセクションを識別するために使用します。
 
 ```html
@@ -24,8 +20,8 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 ```html
 <form id="search" role="search">
   <label for="search-input">このサイトを検索</label>
-  <input type="search" id="search-input" name="search" spellcheck="false">
-  <input value="検索する" type="submit">
+  <input type="search" id="search-input" name="search" spellcheck="false" />
+  <input value="検索する" type="submit" />
 </form>
 ```
 
@@ -89,10 +85,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#search","ARIA search role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_search","ARIA search role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -107,4 +100,4 @@ TBD
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

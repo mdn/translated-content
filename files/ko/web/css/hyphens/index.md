@@ -1,13 +1,6 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/hyphens
 ---
 {{CSSRef}}
 

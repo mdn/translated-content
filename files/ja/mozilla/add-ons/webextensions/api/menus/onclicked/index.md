@@ -2,6 +2,7 @@
 title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
+
 {{AddonSidebar()}}
 
 メニューアイテムがクリックされたときに発火します。
@@ -11,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ## 書式
 
 ```js
-browser.menus.onClicked.addListener(listener)
-browser.menus.onClicked.removeListener(listener)
-browser.menus.onClicked.hasListener(listener)
+browser.menus.onClicked.addListener(listener);
+browser.menus.onClicked.removeListener(listener);
+browser.menus.onClicked.hasListener(listener);
 ```
 
 イベントは 3 つの関数を持ちます:
@@ -53,20 +54,20 @@ browser.menus.onClicked.hasListener(listener)
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " +
-              "in tab " + tab.id);
+  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
 });
 ```
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **メモ:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +94,4 @@ browser.menus.onClicked.addListener((info, tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

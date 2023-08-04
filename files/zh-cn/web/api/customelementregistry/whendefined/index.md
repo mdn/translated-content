@@ -2,6 +2,7 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 当一个元素被定义时{{domxref("CustomElementRegistry")}} 中的方法**`whenDefined()`** 接口返回 {{jsxref("Promise")}}.
@@ -29,7 +30,7 @@ Promise<> customElements.whenDefined(name);
 
 ## 例子
 
-`这个例子使用whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
+这个例子使用 `whenDefined()` 来检测生成菜单的自定义元素何时被定义。这个菜单显示占位符内容一直到菜单内容已经准备好显示。
 
 ```html
 <nav id="menu-container">
@@ -37,20 +38,20 @@ Promise<> customElements.whenDefined(name);
   <nav-menu>
     <menu-item>Item 1</menu-item>
     <menu-item>Item 2</menu-item>
-     ...
+    ...
     <menu-item>Item N</menu-item>
   </nav-menu>
 </nav>
 ```
 
 ```js
-const container = document.getElementById('menu-container');
-const placeholder = container.querySelector('.menu-placeholder');
+const container = document.getElementById("menu-container");
+const placeholder = container.querySelector(".menu-placeholder");
 // Fetch all the children of menu that are not yet defined.
-const undefinedElements = container.querySelectorAll(':not(:defined)');
+const undefinedElements = container.querySelectorAll(":not(:defined)");
 
-const promises = [...undefinedElements].map(
-  button => customElements.whenDefined(button.localName)
+const promises = [...undefinedElements].map((button) =>
+  customElements.whenDefined(button.localName),
 );
 
 // Wait for all the children to be upgraded,
@@ -65,4 +66,4 @@ container.removeChild(placeholder);
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.whenDefined")}}
+{{Compat}}

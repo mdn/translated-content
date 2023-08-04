@@ -2,6 +2,7 @@
 title: CSSNumericValue.max()
 slug: Web/API/CSSNumericValue/max
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`max()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、渡された値の中から最も大きい値を返します。渡された値は同じ型でなければなりません。
@@ -9,7 +10,7 @@ slug: Web/API/CSSNumericValue/max
 ## 構文
 
 ```js
-max(number1, /* ..., */ numberN)
+max(number1, /* ..., */ numberN);
 ```
 
 ### 引数

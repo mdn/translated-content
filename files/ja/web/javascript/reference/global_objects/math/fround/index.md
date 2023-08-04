@@ -1,18 +1,11 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - ES6
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - fround
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
+
 {{JSRef}}
 
-**`Math.fround()`** 関数は、ある {{jsxref("Number")}} を表す最も近い{{interwiki("wikipedia", "単精度浮動小数点数", "32ビット単精度")}}浮動小数点数を返します。
+**`Math.fround()`** 関数は、ある {{jsxref("Number")}} を表す最も近い[32ビット単精度](https://ja.wikipedia.org/wiki/単精度浮動小数点数)浮動小数点数を返します。
 
 {{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
@@ -29,7 +22,7 @@ var singleFloat = Math.fround(doubleFloat);
 
 ### 返値
 
-与えられた値を表す最も近い {{interwiki("wikipedia", "単精度浮動小数点数", "32 ビット単精度")}}浮動小数点数です。
+与えられた値を表す最も近い [32 ビット単精度](https://ja.wikipedia.org/wiki/単精度浮動小数点数)浮動小数点数です。
 
 ## 解説
 
@@ -64,10 +57,10 @@ Math.fround(1.337) === 1.337; // false
 Math.fround(2 ** 150); // Infinity
 ```
 
-引数が数値に変換できない場合、または{{interwiki("wikipedia", "NaN", "非数")}} (`NaN`) であった場合、 `Math.fround()` は `NaN` を返します。
+引数が数値に変換できない場合、または[非数](https://ja.wikipedia.org/wiki/NaN) (`NaN`) であった場合、 `Math.fround()` は `NaN` を返します。
 
 ```js
-Math.fround('abc'); // NaN
+Math.fround("abc"); // NaN
 Math.fround(NaN); // NaN
 ```
 
@@ -76,39 +69,40 @@ Math.fround(NaN); // NaN
 これは {{jsxref("Float32Array")}} に対応している場合、次の関数でエミュレートできます。
 
 ```js
-Math.fround = Math.fround || (function (array) {
-  return function(x) {
-    return array[0] = x, array[0];
-  };
-})(new Float32Array(1));
+Math.fround =
+  Math.fround ||
+  (function (array) {
+    return function (x) {
+      return (array[0] = x), array[0];
+    };
+  })(new Float32Array(1));
 ```
 
 古いブラウザーに対応するには、より遅いですが、次のものも利用できます。
 
 ```js
-if (!Math.fround) Math.fround = function(arg) {
-  arg = Number(arg);
-  // Return early for ±0 and NaN.
-  if (!arg) return arg;
-  var sign = arg < 0 ? -1 : 1;
-  if (sign < 0) arg = -arg;
-  // Compute the exponent (8 bits, signed).
-  var exp = Math.floor(Math.log(arg) / Math.LN2);
-  var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
-  // Handle subnormals: leading digit is zero if exponent bits are all zero.
-  var leading = exp < -127 ? 0 : 1;
-  // Compute 23 bits of mantissa, inverted to round toward zero.
-  var mantissa = Math.round((leading - arg / powexp) * 0x800000);
-  if (mantissa <= -0x800000) return sign * Infinity;
-  return sign * powexp * (leading - mantissa / 0x800000);
-};
+if (!Math.fround)
+  Math.fround = function (arg) {
+    arg = Number(arg);
+    // Return early for ±0 and NaN.
+    if (!arg) return arg;
+    var sign = arg < 0 ? -1 : 1;
+    if (sign < 0) arg = -arg;
+    // Compute the exponent (8 bits, signed).
+    var exp = Math.floor(Math.log(arg) / Math.LN2);
+    var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
+    // Handle subnormals: leading digit is zero if exponent bits are all zero.
+    var leading = exp < -127 ? 0 : 1;
+    // Compute 23 bits of mantissa, inverted to round toward zero.
+    var mantissa = Math.round((leading - arg / powexp) * 0x800000);
+    if (mantissa <= -0x800000) return sign * Infinity;
+    return sign * powexp * (leading - mantissa / 0x800000);
+  };
 ```
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

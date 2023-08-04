@@ -1,18 +1,8 @@
 ---
-title: >-
-  Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de
-  Orientación a Dispositivos
+title: Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Orientación a Dispositivos
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - API Vibración
-  - API orientacion de dispositivos
-  - Canvas
-  - Desarrollo de videojuegos
-  - HTML5
-  - Phaser
-translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
+
 {{GamesSidebar}}
 
 ## Introducción
@@ -23,7 +13,7 @@ En este tutorial iremos a través del proceso de construcción de un juego en HT
 
 Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cyber Orb](http://orb.enclavegames.com/). Se verá más o menos así:
 
-![](https://mdn.mozillademos.org/files/10297/cyber-orb.png)
+![](cyber-orb.png)
 
 ## Phaser framework
 
@@ -33,7 +23,7 @@ Al finalizar este tutorial tendrás un juego _demo_ completamente funcional: [Cy
 
 Puedes ver [el código fuente de Cyber Orb](https://github.com/EnclaveGames/Cyber-Orb) en GitHub. La estructura de carpetas no es nada complicada: el punto de partida es el archivo `index.html` donde inicializaremos el _framework_ y configuraremos el canvas donde correrá el juego.
 
-![](https://mdn.mozillademos.org/files/10357/cyber-orb-github.png)
+![](cyber-orb-github.png)
 
 Puedes hacer clic en el archivo index desde tu navegador favorito para iniciar el juego y probarlo. También hay tres carpetas en el directorio:
 
@@ -54,43 +44,48 @@ Puedes hacer clic en el archivo index desde tu navegador favorito para iniciar e
 Vamos a renderizar nuestro juego sobre el elemento `<canvas>`, pero no lo haremos manualmente — de esto se ocupará el _framework._ Vamos a configurarlo: nuestro punto de partida es el archivo `index.html` con el siguiente contenido. Puedes crearlo tú mismo si quieres hacer un seguimiento más detallado:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Cyber Orb</title>
-    <style> body { margin: 0; background: #333; } </style>
+    <style>
+      body {
+        margin: 0;
+        background: #333;
+      }
+    </style>
     <script src="src/phaser.min.js"></script>
     <script src="src/Boot.js"></script>
     <script src="src/Preloader.js"></script>
     <script src="src/MainMenu.js"></script>
     <script src="src/Game.js"></script>
-</head>
-<body>
-<script>
-(function() {
-    var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-    game.state.add('Boot', Ball.Boot);
-    game.state.add('Preloader', Ball.Preloader);
-    game.state.add('MainMenu', Ball.MainMenu);
-    game.state.add('Game', Ball.Game);
-    game.state.start('Boot');
-})();
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
+        game.state.add("Boot", Ball.Boot);
+        game.state.add("Preloader", Ball.Preloader);
+        game.state.add("MainMenu", Ball.MainMenu);
+        game.state.add("Game", Ball.Game);
+        game.state.start("Boot");
+      })();
+    </script>
+  </body>
 </html>
 ```
 
 Hasta ahora tenemos una simple página web `HTML` con el contenido básico en la sección `<head>`: configuración de caracteres, título, estilo y las inclusión de los archivos JavaScripts. El `<body>` contiene la inicialización del framework Phaser y las definiciones del estado del juego.
 
 ```js
-var game = new Phaser.Game(320, 480, Phaser.CANVAS, 'game');
-````
+var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
+```
 
 La linea de arriba inicializará la intancia de Phaser — los argumentos son el ancho del `<canvas>`, su altura, el método de renderizado (estamos utilizando `CANVAS` pero también existen disponibles las opciones `WEBGL` y `AUTO`) y el ID opcional del contenedor DOM en el que queremos poner el `<canvas>`. Si no hay nada especificado en el último argumento o el elemento no es encontrado, el `<canvas>` será añadido a la etiqueta `<body>`. Sin el _framework_ para añadir el elemento canvas hubieses tenido que escribir algo como esto dentro de la etiqueta `<body>`:
 
 ```html
-<canvas id='game' width='320' height='480'></canvas>
+<canvas id="game" width="320" height="480"></canvas>
 ```
 
 Es importante recordar que el _framework_ está montando métodos útiles para acelerar un montón de cosas como la manipulación de imagenes o la administración de elementos, que serían más difíciles si tuvieramos que hacerlo manualmente.
@@ -100,7 +95,7 @@ Es importante recordar que el _framework_ está montando métodos útiles para a
 Volviendo a los estados del juego: La linea de abajo añade un nuevo estado al juego llamado `Boot`:
 
 ```js
-game.state.add('Boot', Ball.Boot);
+game.state.add("Boot", Ball.Boot);
 ```
 
 El primer valor es el nombre del estado, el segundo es el objeto al que queremos asignárselo. El metodo `start` está iniciando el estado dado y haciendolo activo. Veamos qué es lo que son los estados realmente.
@@ -115,23 +110,23 @@ El estado `Boot` es el primero en el juego.
 
 ```js
 var Ball = {
-    _WIDTH: 320,
-    _HEIGHT: 480
+  _WIDTH: 320,
+  _HEIGHT: 480,
 };
-Ball.Boot = function(game) {};
+Ball.Boot = function (game) {};
 Ball.Boot.prototype = {
-    preload: function() {
-        this.load.image('preloaderBg', 'img/loading-bg.png');
-        this.load.image('preloaderBar', 'img/loading-bar.png');
-    },
-    create: function() {
-        this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        this.game.scale.pageAlignHorizontally = true;
-        this.game.scale.pageAlignVertically = true;
-        this.game.state.start('Preloader');
-    }
+  preload: function () {
+    this.load.image("preloaderBg", "img/loading-bg.png");
+    this.load.image("preloaderBar", "img/loading-bar.png");
+  },
+  create: function () {
+    this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    this.game.scale.pageAlignHorizontally = true;
+    this.game.scale.pageAlignVertically = true;
+    this.game.state.start("Preloader");
+  },
 };
-````
+```
 
 El objeto principal `Ball` es definido y estamos añadiendo dos variables llamadas `_WIDTH` y `_HEIGHT` esos seran el ancho y la altura del canvas de nuestro juego, respectivamente — nos ayudarán a posicionar los elementos en la pantalla. Estamos cargando dos imagenes primero que serán usadas después en el estado `Preload` para mostrar el progreso de la carga de los demás elementos. La función `create` contiene algunas de las configuraciones básicas: estamos configurando la escala y la alineación del canvas, y avanzando al estado `Preload` cuando todo este listo.
 
@@ -140,22 +135,34 @@ El objeto principal `Ball` es definido y estamos añadiendo dos variables llamad
 El estado `Preloader` se ocupa de cargar todos los elementos:
 
 ```js
-Ball.Preloader = function(game) {};
+Ball.Preloader = function (game) {};
 Ball.Preloader.prototype = {
-    preload: function() {
-        this.preloadBg = this.add.sprite((Ball._WIDTH-297)*0.5, (Ball._HEIGHT-145)*0.5, 'preloaderBg');
-        this.preloadBar = this.add.sprite((Ball._WIDTH-158)*0.5, (Ball._HEIGHT-50)*0.5, 'preloaderBar');
-        this.load.setPreloadSprite(this.preloadBar);
+  preload: function () {
+    this.preloadBg = this.add.sprite(
+      (Ball._WIDTH - 297) * 0.5,
+      (Ball._HEIGHT - 145) * 0.5,
+      "preloaderBg",
+    );
+    this.preloadBar = this.add.sprite(
+      (Ball._WIDTH - 158) * 0.5,
+      (Ball._HEIGHT - 50) * 0.5,
+      "preloaderBar",
+    );
+    this.load.setPreloadSprite(this.preloadBar);
 
-        this.load.image('ball', 'img/ball.png');
-        // ...
-        this.load.spritesheet('button-start', 'img/button-start.png', 146, 51);
-        // ...
-        this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
-    },
-    create: function() {
-        this.game.state.start('MainMenu');
-    }
+    this.load.image("ball", "img/ball.png");
+    // ...
+    this.load.spritesheet("button-start", "img/button-start.png", 146, 51);
+    // ...
+    this.load.audio("audio-bounce", [
+      "audio/bounce.ogg",
+      "audio/bounce.mp3",
+      "audio/bounce.m4a",
+    ]);
+  },
+  create: function () {
+    this.game.state.start("MainMenu");
+  },
 };
 ```
 
@@ -177,17 +184,22 @@ Cuando el boton de inicio es presionado, en lugar de saltar directamente a la ac
 ### Howto.js
 
 ```js
-Ball.Howto = function(game) {
-};
+Ball.Howto = function (game) {};
 Ball.Howto.prototype = {
-    create: function() {
-        this.buttonContinue = this.add.button(0, 0, 'screen-howtoplay', this.startGame, this);
-    },
-    startGame: function() {
-        this.game.state.start('Game');
-    }
+  create: function () {
+    this.buttonContinue = this.add.button(
+      0,
+      0,
+      "screen-howtoplay",
+      this.startGame,
+      this,
+    );
+  },
+  startGame: function () {
+    this.game.state.start("Game");
+  },
 };
-````
+```
 
 El estado `Howto` muesta las intrucciones de juego en la pantalla antes de comenzar el juego. Luego de clickear la pantalla el juego es lanzado.
 
@@ -196,18 +208,18 @@ El estado `Howto` muesta las intrucciones de juego en la pantalla antes de comen
 El estado `Game` del archivo `Game.js` es donde ocurre toda la magia. Todas las inicializaciones estan en la función `create()` (que se lanza una vez al comienzo del juego). Luego de eso, algunas funcionalidades requeriran más código para controlar — escribiremos nuestras propias funciones para manejar tareas más complicadas. En particular, toma nota de la función `update()` que es ejecutada en cada _frame_ y actualiza cosas como la posición de la pelota.
 
 ```js
-Ball.Game = function(game) {};
+Ball.Game = function (game) {};
 Ball.Game.prototype = {
-    create: function() {},
-    initLevels: function() {},
-    showLevel: function(level) {},
-    updateCounter: function() {},
-    managePause: function() {},
-    manageAudio: function() {},
-    update: function() {},
-    wallCollision: function() {},
-    handleOrientation: function(e) {},
-    finishLevel: function() {}
+  create: function () {},
+  initLevels: function () {},
+  showLevel: function (level) {},
+  updateCounter: function () {},
+  managePause: function () {},
+  manageAudio: function () {},
+  update: function () {},
+  wallCollision: function () {},
+  handleOrientation: function (e) {},
+  finishLevel: function () {},
 };
 ```
 
@@ -227,7 +239,7 @@ Las funciones `create` y `update` son específicas del _framework_, mientras que
 Primero vamos a ir a la función `create()`, inicializamos el objeto `ball` y le asignamos unas cuantas propiedades:
 
 ```js
-this.ball = this.add.sprite(this.ballStartPos.x, this.ballStartPos.y, 'ball');
+this.ball = this.add.sprite(this.ballStartPos.x, this.ballStartPos.y, "ball");
 this.ball.anchor.set(0.5);
 this.physics.enable(this.ball, Phaser.Physics.ARCADE);
 this.ball.body.setSize(18, 18);
@@ -249,17 +261,15 @@ Como puedes ver, hay una función especial de Phaser llamada `createCursorKeys()
 A continuación añadiremos el siguiente código a la función `update()`, para que sea ejecutado en cada _frame_. El objeto `this.keys` será chequeado con el input del jugador (las teclas que presione por ejemplo) así la pelota podrá reaccionar acorde, con una fuerza predefinida:
 
 ```js
-if(this.keys.left.isDown) {
-    this.ball.body.velocity.x -= this.movementForce;
+if (this.keys.left.isDown) {
+  this.ball.body.velocity.x -= this.movementForce;
+} else if (this.keys.right.isDown) {
+  this.ball.body.velocity.x += this.movementForce;
 }
-else if(this.keys.right.isDown) {
-    this.ball.body.velocity.x += this.movementForce;
-}
-if(this.keys.up.isDown) {
-    this.ball.body.velocity.y -= this.movementForce;
-}
-else if(this.keys.down.isDown) {
-    this.ball.body.velocity.y += this.movementForce;
+if (this.keys.up.isDown) {
+  this.ball.body.velocity.y -= this.movementForce;
+} else if (this.keys.down.isDown) {
+  this.ball.body.velocity.y += this.movementForce;
 }
 ```
 
@@ -267,7 +277,7 @@ De esa manera podemos verificar qué tecla es presionada en determinado _frame_ 
 
 #### Implementando la API de Orientación del Dispositivo
 
-Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()`\* \*responsable por esto:
+Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()` responsable por esto:
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);
@@ -286,7 +296,7 @@ handleOrientation: function(e) {
 
 Mientras más inclines el dispositivo, más fuerza se aplica a la pelota y la velocidad en la que se mueve es mayor.
 
-![](https://mdn.mozillademos.org/files/10369/cyber-orb-flame-orientation.png)
+![](cyber-orb-flame-orientation.png)
 
 > **Nota:** Para encontrar más sobre implementar la orientación de los dispositivos y cómo se vé en código crudo, lee [Keep it level: responding to device orientation changes](/es/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
@@ -295,7 +305,7 @@ Mientras más inclines el dispositivo, más fuerza se aplica a la pelota y la ve
 El principal objetivo del juego es mover la pelota desde la posición inicial a la posición final: un agujero en el suelo. Esta implementación es muy similar a la parte anterior en donde creamos la pelota, y también es añadida en la función `create()` de nuestro estado `Game`:
 
 ```js
-this.hole = this.add.sprite(Ball._WIDTH*0.5, 90, 'hole');
+this.hole = this.add.sprite(Ball._WIDTH * 0.5, 90, "hole");
 this.physics.enable(this.hole, Phaser.Physics.ARCADE);
 this.hole.anchor.set(0.5);
 this.hole.body.setSize(2, 2);
@@ -303,7 +313,7 @@ this.hole.body.setSize(2, 2);
 
 La diferencia está en que el cuerpo del agujero se configura como inamovible por lo que no se moverá cuando acertamos con la pelota y tendrá calculada la detección de colisión (esto se tratará más adelante en este artículo).
 
-#### **Construyendo el laberinto de bloques**
+#### Construyendo el laberinto de bloques
 
 Para hacer más difícil el juego, y más interesante, añadiremos algunos obstaculos entre la pelota y la sálida. Podríamos usar un editor de niveles pero por motivo de este tutorial, vamos a crear algo nosotros mismos.
 
@@ -311,32 +321,30 @@ Para contener el bloque de información usaremos un _array_ con los datos de niv
 
 ```js
 this.levelData = [
-    [
-        { x: 96, y: 224, t: 'w' }
-    ],
-    [
-        { x: 72, y: 320, t: 'w' },
-        { x: 200, y: 320, t: 'h' },
-        { x: 72, y: 150, t: 'w' }
-    ],
-    // ...
+  [{ x: 96, y: 224, t: "w" }],
+  [
+    { x: 72, y: 320, t: "w" },
+    { x: 200, y: 320, t: "h" },
+    { x: 72, y: 150, t: "w" },
+  ],
+  // ...
 ];
 ```
 
 Todos los elementos del _array_ contienen una colección de bloques con una posición `x` e `y` y un valor `t` para cada uno. Luego de `levelData` pero dentro de la función `initLevels`, añadiremos los bloques dentro de un _array_ en el loop `for` usando algunos de los métodos específicos del _framework_:
 
 ```js
-for(var i=0; i<this.maxLevels; i++) {
-    var newLevel = this.add.group();
-    newLevel.enableBody = true;
-    newLevel.physicsBodyType = Phaser.Physics.ARCADE;
-    for(var e=0; e<this.levelData[i].length; e++) {
-        var item = this.levelData[i][e];
-        newLevel.create(item.x, item.y, 'element-'+item.t);
-    }
-    newLevel.setAll('body.immovable', true);
-    newLevel.visible = false;
-    this.levels.push(newLevel);
+for (var i = 0; i < this.maxLevels; i++) {
+  var newLevel = this.add.group();
+  newLevel.enableBody = true;
+  newLevel.physicsBodyType = Phaser.Physics.ARCADE;
+  for (var e = 0; e < this.levelData[i].length; e++) {
+    var item = this.levelData[i][e];
+    newLevel.create(item.x, item.y, "element-" + item.t);
+  }
+  newLevel.setAll("body.immovable", true);
+  newLevel.visible = false;
+  this.levels.push(newLevel);
 }
 ```
 
@@ -356,13 +364,25 @@ showLevel: function(level) {
 
 Gracias a eso el juego da al jugador un reto: ahora tiene que rodar la pelota a través del área de juego y guiarla por el laberinto construido por bloques. Es solo un ejemplo de cargar los niveles, y solo hay 5 puramente para mostrar la idea, pero podés trabajar en expandirlo por tu cuenta.
 
-#### **Detección de colisión**
+#### Detección de colisión
 
 Hasta este punto tenemos la pelota, que puede ser controlada por el jugador, el agujero que se tiene que alcanzar y los obstáculos que bloquean el camino. Sin embargo, hay un problema: nuestro juego todavía no tiene ninguna detección de colisiones, así que no sucede nada cuando la pelota golpea los bloques, sólo los atraviesa. Vamos a arreglarlo! La buena noticia es que el _framework_ se ocupará de calcular la detección de colisones, nosotros sólo debemos especificar los objetos con los que colisionará en la función `update()`:
 
 ```js
-this.physics.arcade.collide(this.ball, this.borderGroup, this.wallCollision, null, this);
-this.physics.arcade.collide(this.ball, this.levels[this.level-1], this.wallCollision, null, this);
+this.physics.arcade.collide(
+  this.ball,
+  this.borderGroup,
+  this.wallCollision,
+  null,
+  this,
+);
+this.physics.arcade.collide(
+  this.ball,
+  this.levels[this.level - 1],
+  this.wallCollision,
+  null,
+  this,
+);
 ```
 
 Esto le dirá al _framework_ que ejecute la función `wallCollision` cuando la pelota golpee cualquiera de las paredes. Podemos usar la función `wallCollision` para añadir cualquier funcionalidad que querramos, como por ejemplo agregar el sonido de rebote e implementar la **API de Vibración**.
@@ -380,14 +400,14 @@ Hace exactamente lo que necesitamos: ahora la pelota rebotará en los bordes de 
 Entre los elementos precargados hay una pista de audio (en varios formatos para asegurar la compatibilidad con el navegador), que podremos usar ahora. Debe primero ser definida en la función `create()`:
 
 ```js
-this.bounceSound = this.game.add.audio('audio-bounce');
+this.bounceSound = this.game.add.audio("audio-bounce");
 ```
 
 Si el estado del audio es `true` (es decir que el sonido del juego está activado) podremos reproducirlo en la función `wallCollision`:
 
 ```js
-if(this.audioStatus) {
-    this.bounceSound.play();
+if (this.audioStatus) {
+  this.bounceSound.play();
 }
 ```
 
@@ -395,13 +415,13 @@ Eso es todo: cargar y reproducir sonidos es sencillo con Phaser.
 
 #### Implementando la API de Vibración
 
-Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](https://mdn.mozillademos.org/files/10371/cyber-orb-flame-vibration.png)
+Cuando la detección de colisión funcione como es esperado, añadamos algunos efectos especiales con la ayuda de la API de Vibración.![](cyber-orb-flame-vibration.png)
 
 La mejor forma de usarla en nuestro caso es haciendo que el teléfono vibre cada vez que la pelota golpee las paredes: dentro de la función `wallCollision`:
 
 ```js
-if("vibrate" in window.navigator) {
-    window.navigator.vibrate(100);
+if ("vibrate" in window.navigator) {
+  window.navigator.vibrate(100);
 }
 ```
 
@@ -419,8 +439,18 @@ this.totalTimer = 0; // time elapsed in the whole game
 Luego, podemos inicializar los objetos de texto necesarios para mostrar la información al usuario:
 
 ```js
-this.timerText = this.game.add.text(15, 15, "Time: "+this.timer, this.fontBig);
-this.totalTimeText = this.game.add.text(120, 30, "Total time: "+this.totalTimer, this.fontSmall);
+this.timerText = this.game.add.text(
+  15,
+  15,
+  "Time: " + this.timer,
+  this.fontBig,
+);
+this.totalTimeText = this.game.add.text(
+  120,
+  30,
+  "Total time: " + this.totalTimer,
+  this.fontSmall,
+);
 ```
 
 Estamos definiendo la posición superior e izquierda del texto, el contenido que se muestra y el estilo aplicado al texto. Lo hemos impreso en pantalla, pero sería bueno actualizar los valores cada segundo:

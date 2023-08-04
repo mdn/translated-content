@@ -1,15 +1,17 @@
 ---
-title: HTMLAnchorElement.toString()
+title: "HTMLAnchorElement: toString() メソッド"
 slug: Web/API/HTMLAnchorElement/toString
-original_slug: Web/API/HTMLHyperlinkElementUtils/toString
+l10n:
+  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLAnchorElement.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、 URL 全体の入った文字列を返します。 これは、 {{domxref("HTMLAnchorElement.href")}} の読み取り専用バージョンです。
 
 ## 構文
 
-```js
+```js-nolint
 toString()
 ```
 
@@ -19,7 +21,7 @@ toString()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+この要素の完全な URL の入った文字列です。
 
 ## 例
 

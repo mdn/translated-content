@@ -1,19 +1,20 @@
 ---
-title: 漸進式網絡應用程式
+title: 漸進式網路應用程式
 slug: Web/Progressive_web_apps
 ---
-漸進式網絡應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。
+
+漸進式網路應用程式（Progressive web app）使用當代 web API，並以漸進增強策略，建立跨平台 web 應用程式。 這些程式提供了能讓用戶體驗，逼近於原生程式的功能。這套文件將講述你需要知道的一切。
 
 ## PWA 優勢
 
-PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進、可接合、響應式、以及安全（discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, safe）。需要有關這方面的理解，請參閱[漸進式網絡應用程式的優勢](/zh-TW/docs/Web/Apps/Progressive/Advantages)。如果需要實作細節，請參考以下章節表列的教學。
+PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進、可接合、響應式、以及安全（discoverable, installable, linkable, network independent, progressive, re-engageable, responsive, safe）。需要有關這方面的理解，請參閱[漸進式網路應用程式的優勢](/zh-TW/docs/Web/Apps/Progressive/Advantages)。如果需要實作細節，請參考以下章節表列的教學。
 
 ## PWA 核心教學
 
 以下教學將以簡單例子告訴你，在實作 PWA 時所需要的東西，並講述一切如何運行。
 
-1. [漸進式網絡應用程式簡介](/zh-TW/docs/Web/Apps/Progressive/Introduction)
-2. [漸進式網絡應用程式架構](/zh-TW/docs/Web/Apps/Progressive/App_structure)
+1. [漸進式網路應用程式簡介](/zh-TW/docs/Web/Apps/Progressive/Introduction)
+2. [漸進式網路應用程式架構](/zh-TW/docs/Web/Apps/Progressive/App_structure)
 3. [使用 Service worker 讓 PWA 能離線工作](/zh-TW/docs/Web/Apps/Progressive/Offline_Service_workers)
 4. [如何令 PWA 可安裝](/zh-TW/docs/Web/Apps/Progressive/Installable_PWAs)
 5. [如何使用 Notifications 與 Push 令 PWA 可重連線](/zh-TW/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
@@ -40,7 +41,7 @@ PWA 應該要可探索、可安裝、可連結、可獨立於網路、可漸進�
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — a node module to generate service worker code that will precache specific resources.
 - [workbox](https://github.com/GoogleChrome/workbox) — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.
 - [upup](https://www.talater.com/upup/) — a tiny script that makes sure your site is always there for your users.
-- [The service worker cookbook](https://serviceworke.rs/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
 
 ## 參見
 

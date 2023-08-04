@@ -1,11 +1,11 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-translation_of: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
-[Сокращённое свойство ](/ru/docs/Web/CSS/Shorthand_properties)[CSS](/ru/docs/Web/CSS) **`border-bottom `**описывает нижнюю границу элемента [border](/ru/docs/Web/CSS/border). Оно устанавливает значения {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} и {{cssxref("border-bottom-color")}}.
+[Сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`border-bottom`** описывает нижнюю границу элемента [border](/ru/docs/Web/CSS/border). Оно устанавливает значения {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} и {{cssxref("border-bottom-color")}}.
 
 {{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
@@ -103,6 +103,6 @@ div {
 
 ## See also
 
-- [`border`](/en-US/docs/Web/CSS/border)
-- [`border-block`](/en-US/docs/Web/CSS/border-block)
-- [`outline`](/en-US/docs/Web/CSS/outline)
+- [`border`](/ru/docs/Web/CSS/border)
+- [`border-block`](/ru/docs/Web/CSS/border-block)
+- [`outline`](/ru/docs/Web/CSS/outline)

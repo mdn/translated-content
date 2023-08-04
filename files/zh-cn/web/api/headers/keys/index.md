@@ -2,6 +2,7 @@
 title: Headers.keys()
 slug: Web/API/Headers/keys
 ---
+
 {{APIRef}}
 
 **`Headers.keys()`** 方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。
@@ -23,12 +24,12 @@ headers.keys();
 ```js
 // 创建一个 Headers 对象
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // 显示 Headers 中所有的 key
-for(var key of myHeaders.keys()) {
-   console.log(key);
+for (var key of myHeaders.keys()) {
+  console.log(key);
 }
 ```
 
@@ -39,9 +40,9 @@ content-type
 vary
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Headers.keys")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -2,9 +2,10 @@
 title: 类
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
-类是用于创建对象的模板。他们用代码封装数据以处理该数据。 JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。
+类是用于创建对象的模板。他们用代码封装数据以处理该数据。JS 中的类建立在原型上，但也具有某些语法和语义未与 ES5 类相似语义共享。
 
 ## 定义类
 
@@ -56,7 +57,7 @@ let Rectangle = class Rectangle2 {
   }
 };
 console.log(Rectangle.name);
-// 输出: "Rectangle2"
+// 输出："Rectangle2"
 ```
 
 > **备注：** 类**表达式**也同样受到[类声明](/zh-CN/docs/Web/JavaScript/Reference/Classes#Class_declarations)部分中提到的类型提升的限制。
@@ -71,7 +72,7 @@ console.log(Rectangle.name);
 
 ### 构造函数
 
-[constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为 “constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
+[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为“constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
 
 一个构造函数可以使用 `super` 关键字来调用一个父类的构造函数。
 
@@ -81,19 +82,19 @@ console.log(Rectangle.name);
 
 ```js
 class Rectangle {
-    // constructor
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
-    // Getter
-    get area() {
-        return this.calcArea()
-    }
-    // Method
-    calcArea() {
-        return this.height * this.width;
-    }
+  // constructor
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get area() {
+    return this.calcArea();
+  }
+  // Method
+  calcArea() {
+    return this.height * this.width;
+  }
 }
 const square = new Rectangle(10, 10);
 
@@ -103,26 +104,26 @@ console.log(square.area);
 
 ### 静态方法
 
-[`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 关键字用来定义一个类的一个静态方法。调用静态方法不需要[实例化](</zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)>)该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。
+[`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 关键字用来定义一个类的一个静态方法。调用静态方法不需要[实例化](</zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)>) 该类，但不能通过一个类实例调用静态方法。静态方法通常用于为一个应用程序创建工具函数。
 
 ```js
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    static displayName = "Point";
+  static displayName = "Point";
 
-    static distance(a, b) {
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        return Math.hypot(dx, dy);
-    }
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+    return Math.hypot(dx, dy);
+  }
 }
 
 const p1 = new Point(5, 5);
-const p2 = new Point(10,10);
+const p2 = new Point(10, 10);
 p1.displayName;
 // undefined
 p1.distance;
@@ -153,7 +154,7 @@ obj.speak(); // Animal {}
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -163,15 +164,15 @@ eat(); // undefined
 严格模式下不会发生自动装箱，_this_ 值将保留传入状态。
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -247,7 +248,7 @@ class Rectangle {
 
 私有字段不能通过在之后赋值来创建它们，这种方式只适用普通属性。
 
-更多信息，请看[class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields).
+更多信息，请看[class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Class_fields).
 
 ## 使用 `extends` 扩展子类
 
@@ -274,8 +275,8 @@ class Dog extends Animal {
   }
 }
 
-var d = new Dog('Mitzie');
-d.speak();// 'Mitzie barks.'
+var d = new Dog("Mitzie");
+d.speak(); // 'Mitzie barks.'
 ```
 
 如果子类中定义了构造函数，那么它必须先调用 `super()` 才能使用 `this` 。
@@ -283,22 +284,22 @@ d.speak();// 'Mitzie barks.'
 也可以继承传统的基于函数的“类”：
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
-  console.log(this.name + ' makes a noise.');
-}
+  console.log(this.name + " makes a noise.");
+};
 
 class Dog extends Animal {
   speak() {
     super.speak();
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
-d.speak();//Mitzie makes a noise.  Mitzie barks.
+var d = new Dog("Mitzie");
+d.speak(); //Mitzie makes a noise.  Mitzie barks.
 ```
 
 请注意，类不能继承常规对象（不可构造的）。如果要继承常规对象，可以改用{{jsxref("Object.setPrototypeOf()")}}：
@@ -306,8 +307,8 @@ d.speak();//Mitzie makes a noise.  Mitzie barks.
 ```js
 var Animal = {
   speak() {
-    console.log(this.name + ' makes a noise.');
-  }
+    console.log(this.name + " makes a noise.");
+  },
 };
 
 class Dog {
@@ -316,9 +317,9 @@ class Dog {
   }
 }
 
-Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用 speak 时会返回 TypeError
+Object.setPrototypeOf(Dog.prototype, Animal); // 如果不这样做，在调用 speak 时会返回 TypeError
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -331,10 +332,12 @@ d.speak(); // Mitzie makes a noise.
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray);
 // false
@@ -353,39 +356,41 @@ class Cat {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Lion extends Cat {
   speak() {
     super.speak();
-    console.log(this.name + ' roars.');
+    console.log(this.name + " roars.");
   }
 }
 ```
 
 ## Mix-ins / 混入
 
-抽象子类或者 mix-ins 是类的模板。 一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。
+抽象子类或者 mix-ins 是类的模板。一个 ECMAScript 类只能有一个单超类，所以想要从工具类来多重继承的行为是不可能的。子类继承的只能是父类提供的功能性。因此，例如，从工具类的多重继承是不可能的。该功能必须由超类提供。
 
 一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在 ECMAScript 中实现混合：
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 使用 mix-ins 的类可以像下面这样写：
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## 规范
@@ -400,7 +405,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 无法重新定义类。尝试这样做会产生一个 `SyntaxError`.
 
-如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 参见
 

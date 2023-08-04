@@ -2,6 +2,7 @@
 title: Web 遊戲開發介紹
 slug: Games/Introduction
 ---
+
 {{GamesSidebar}}現有 Web 環境已成為多元的平台，不只可建構令人驚艷的高品質遊戲，也是發佈這些遊戲的重要媒介。可供撰寫的遊種類......
 
 現有的 Web 技術再搭配最新版瀏覽器，就能打造出絕佳的 Web 遊戲，而且我們講的可不是用 Flash® 寫的簡單卡牌遊戲，或是多人的社交遊戲而已。卻是可打趴一堆平面遊戲的 3D 動作射擊或角色扮演遊戲。多虧 [JavaScript](/docs/JavaScript) 的即時 (Just-in-time，JIT) 技術與新 API 雙雙大幅提升其效能，你所撰寫的遊戲已可於瀏覽器 (或支援 [HTML5](/docs/HTML/HTML5) 的裝置，即如 [Firefox OS](/docs/Mozilla/Firefox_OS)) 中執行，卻又不致犧牲任何效能。
@@ -53,7 +54,7 @@ slug: Games/Introduction
   - : Pointer Lock API 可鎖定遊戲介面中的滑鼠或其他指向裝置。取代之前的絕對游標定位，現可接收座標差而得到更精確的使用者動作，並避免使用者突然在他處輸入，卻遺漏了重要動作。
 - [SVG](/docs/SVG) (Scalable Vector Graphics，[可縮放向量圖形](/docs/SVG))
   - : 可建構向量圖形，根據裝置畫面的解析度而順暢調整。
-- [Typed Array (具型別陣列)](/docs/JavaScript/Typed_arrays)
+- [Typed Array（具型別陣列）](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 的具型別陣列，可讓你在 JavaScript 中存取原始的二進位資料。如此可讓你設定 GL 紋理 (Texture)、遊戲資料，或其他物件。甚至非原生 JavaScript 格式的亦可處理。
 - [Web Audio API](/docs/Web_Audio_API)
   - : 此 API 可透過 JavaScript 程式碼控制音訊的回播、合成、操作等作業，讓你建構絕妙音效並即時播放音樂。

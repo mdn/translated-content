@@ -2,9 +2,10 @@
 title: Response
 slug: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
-[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 的 `Response` 接口呈现了对一次请求的响应数据。
+[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 `Response` 接口呈现了对一次请求的响应数据。
 
 你可以使用 {{domxref("Response.Response()")}} 构造函数来创建一个 `Response` 对象，但通常更可能遇到的情况是，其他的 API 操作返回了一个 Response 对象。例如一个 service worker 的 {{domxref("Fetchevent.respondWith")}}，或者一个简单的 {{domxref("GlobalFetch.fetch()")}}。
 
@@ -66,13 +67,15 @@ slug: Web/API/Response
 在我们的[基础实例](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([点击运行](https://mdn.github.io/fetch-examples/basic-fetch/)) 中，我们使用了一个简单的函数调用，调用了 `fetch()` 函数来获取一张图片并将其显示在 HTML 的 IMG 标签中，`fetch()` 函数返回了一个 Promise，它使用与资源获取操作相关联的 Response 对象进行解析。你会注意到，由于我们正在请求一张图片，我们需要运行 {{domxref("Body.blob")}}（{{domxref("Response")}} 实现了），以为响应提供正确的 MIME 类型。
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg').then(function(response) {
-  return response.blob();
-}).then(function(blob) {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (blob) {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 你也可以使用 {{domxref("Response.Response()")}} 这样的构造方法，来创建自定义的 `Response` 对象：
@@ -87,10 +90,10 @@ const response = new Response();
 
 ## 浏览器兼容性
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## 相关链接
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

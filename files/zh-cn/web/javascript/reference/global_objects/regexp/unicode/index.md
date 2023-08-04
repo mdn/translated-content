@@ -2,6 +2,7 @@
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
+
 {{JSRef}}
 
 **`unicode`** 属性表明正则表达式带有"`u`" 标志。 `unicode` 是正则表达式独立实例的只读属性。
@@ -19,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ### 使用 `unicode` 属性
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

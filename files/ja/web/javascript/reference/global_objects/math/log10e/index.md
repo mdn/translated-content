@@ -1,13 +1,8 @@
 ---
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
+
 {{JSRef}}
 
 **`Math.LOG10E`** プロパティは 10 を底とした e の対数、約 0.434 を表します。
@@ -36,9 +31,7 @@ getLog10e(); // 0.4342944819032518
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log10e', 'Math.LOG10E')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

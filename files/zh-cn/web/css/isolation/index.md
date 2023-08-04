@@ -2,7 +2,8 @@
 title: isolation
 slug: Web/CSS/isolation
 ---
-{{CSSRef()}}
+
+{{CSSRef}}
 
 ## 概述
 
@@ -49,7 +50,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;
@@ -70,7 +71,7 @@ isolation: unset;
 }
 ```
 
-{{ EmbedLiveSample('%E7%A4%BA%E4%BE%8B', "230", "230") }}
+{{ EmbedLiveSample('示例', "230", "230") }}
 
 ## 规范
 
@@ -78,7 +79,7 @@ isolation: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ## 参见
 

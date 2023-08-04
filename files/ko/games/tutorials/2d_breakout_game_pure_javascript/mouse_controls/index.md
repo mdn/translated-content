@@ -1,13 +1,8 @@
 ---
 title: 마우스로 패들 조종하기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Mouse_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
@@ -18,7 +13,7 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 
 ## 마우스 이동 감지하기
 
-마우스 움직임을 감지하는 것은 키 누름을 감지하는 것보다 더욱 쉽습니다. 우리에게 필요한 모든 것은 {{event("mousemove")}} 이벤트에 대한 리스너입니다. 이 `keyup event` 바로 아래에 이 행을 추가해보세요.
+마우스 움직임을 감지하는 것은 키 누름을 감지하는 것보다 더욱 쉽습니다. 우리에게 필요한 모든 것은 {{domxref("Element/mousemove_event", "mousemove")}} 이벤트에 대한 리스너입니다. 이 `keyup event` 바로 아래에 이 행을 추가해보세요.
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -30,10 +25,10 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 
 ```js
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
 }
 ```
 

@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableStreamDefaultController`** インターフェイスは、{{domxref("ReadableStream")}} の状態と内部キューを制御できるコントローラーを表します。 デフォルトのコントローラーは、バイトストリームではないストリーム用です。
@@ -66,9 +67,7 @@ const stream = new ReadableStream({
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#rs-default-controller-class','ReadableStreamDefaultController')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

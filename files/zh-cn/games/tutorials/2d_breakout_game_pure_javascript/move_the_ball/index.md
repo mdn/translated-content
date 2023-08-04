@@ -2,9 +2,10 @@
 title: 让球动起来
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
+
 {{GamesSidebar}}{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-本篇是 [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第二节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第二节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html) 看到源码。
 
 从上一节中你已经知道如何去绘制一个球。现在让我们使它动起来。从技术上讲，我们将在画布上绘制一个球，之后让它消失，然后在一个稍微不用的位置上再绘制一个一样的球。就想电影里的每一帧动起来的感觉。
 
@@ -14,7 +15,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -23,7 +24,7 @@ setInterval(draw, 10);
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -38,19 +39,19 @@ ctx.closePath();
 首先，在`draw()`函数上方添加以下两行，以定义`x`和`y`：
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 接下来更新 `draw()` 函数，在 `arc()` 方法中使用 `x` 和 `y` 变量，如下面高亮行所示：
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -65,13 +66,13 @@ var dy = -2;
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -81,20 +82,20 @@ function draw() {
 
 ## 在每一帧更新之前清空画布
 
-球移动时留下了轨迹，因为我们在每一帧上都画了一个新的圆，而没有去掉之前的一个圆。不要担心，因为有一个方法来清空画布的内容：[`clearRect()`](/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect)。该方法有四个参数：矩形左上角的 `x` 和 `y` 坐标，以及矩形的右下角的 `x` 和 `y` 坐标。这个矩形覆盖的整个区域里，之前所画的任何内容将被清除。
+球移动时留下了轨迹，因为我们在每一帧上都画了一个新的圆，而没有去掉之前的一个圆。不要担心，因为有一个方法来清空画布的内容：[`clearRect()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect)。该方法有四个参数：矩形左上角的 `x` 和 `y` 坐标，以及矩形的右下角的 `x` 和 `y` 坐标。这个矩形覆盖的整个区域里，之前所画的任何内容将被清除。
 
 将下列高亮显示行添加到 `draw()` 函数：
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -108,18 +109,18 @@ function draw() {
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -133,6 +134,6 @@ function draw() {
 
 ## 下一步
 
-我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 [从墙壁上反弹](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls).
+我们已经画了我们的球，并将其移动，但它仍然消失在画布的边缘。在第三章中，我们将探讨如何使其 [从墙壁上反弹](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

@@ -1,13 +1,8 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
+
 {{JSRef}}
 
 **`Symbol.replace`** ウェルノウンシンボルは、文字列の一致した部分を置き換えるメソッドを指定します。この関数は {{jsxref("String.prototype.replace()")}} メソッドから呼び出されます。
@@ -36,9 +31,7 @@ console.log('football'.replace(new CustomReplacer('foo')));
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.replace', 'Symbol.replace')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 调试 CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 你有时写 CSS 会碰到这样的问题：结果看起来和你想的不太一样。你可能会认为 selector（选择器）匹配到了元素但是什么都没发生，还可能会觉得盒子的大小与你想的有出入。这篇文章会教你着手调试 CSS，向你展示现代浏览器中的 DevTools 是怎样让你更方便地获悉发生了什么。
@@ -34,7 +35,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 如何使用浏览器开发者工具
 
-[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其它浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
+[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
 
 你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 [Grid Layouts](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)、[Flexbox](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)、[Shapes](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。
 
@@ -54,7 +55,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The example page for this tutorial with DevTools open.](inspecting1.png)
 
-如果查看 HTML 右边的 [Rules view](/en-US/docs/Tools/Page_Inspector/UI_Tour#Rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
+如果查看 HTML 右边的 [Rules view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
 
 另一个有用的功能是将简写属性展开的功能。在我们的示例里面使用了 `margin` 的简写。
 
@@ -80,13 +81,13 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
+> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
 
 ## 理解盒模型
 
 在之前的课程里我们已经讨论了[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)，介绍了替代盒模型，它改变了元素根据给定大小计算自身尺寸的方式，再在这个计算值上加上内边距和边框。开发者工具可以确实帮助你理解元素尺寸的计算方式。
 
-[Layout view](/en-US/docs/Tools/Page_Inspector/UI_Tour#Layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
+[Layout view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
 
 在这一面板上，被详细说明的属性之一为 `box-sizing` 属性，它控制了元素使用的盒模型种类。
 
@@ -96,7 +97,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **备注：** 在[仔细检查盒模型](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
+> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
 
 ## 解决优先级问题
 
@@ -127,7 +128,7 @@ em {
 
 ## 进一步了解火狐开发者工具
 
-在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](/zh-CN/docs/Tools)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](/en-US/docs/Tools/Page_Inspector#How_to)。
+在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](/zh-CN/docs/Tools)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](/zh-CN/docs/Tools/Page_Inspector#How_to)。
 
 ## 在 CSS 中调试问题
 
@@ -152,7 +153,7 @@ em {
 
 您还可以查看 MDN 每个属性页底部的浏览器兼容性表。这些向您显示浏览器对该属性的支持，如果支持该属性的某些用法，而不支持其他用法，则经常会 break down。 [这里](/zh-CN/docs/)显示了 {{cssxref("shape-outside")}} 属性的兼容性数据。
 
-### 是否有其它东西覆盖了你的 CSS?
+### 是否有其他东西覆盖了你的 CSS?
 
 在这里，您所学到的关于特定性（specificity）的信息将非常有用。如果您有一些更特定的内容要覆盖你打算做的，将会比较麻烦。但是，如上所述，DevTools 将向您显示 CSS 是如何应用的，您可以弄清楚如何使新选择器足够具体，以覆盖旧的 CSS 样式。
 
@@ -178,24 +179,3 @@ em {
 随着对 CSS 的使用经验越来越丰富，您会发现发现问题的速度越来越快。但是，即使我们中最有经验的人有时也会发现自己想知道到底发生了什么。采取有条不紊的方法，简化测试用例，并向他人解释问题，通常会找到解决方法。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

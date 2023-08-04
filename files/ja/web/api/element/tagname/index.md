@@ -2,6 +2,7 @@
 title: Element.tagName
 slug: Web/API/Element/tagName
 ---
+
 {{ApiRef("DOM")}}
 
 **`tagName`** は {{domxref("Element")}} インターフェイスのプロパティで、呼び出された要素のタグ名を返します。

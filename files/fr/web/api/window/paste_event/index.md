@@ -1,13 +1,8 @@
 ---
-title: 'Window: paste event'
+title: "Window: paste event"
 slug: Web/API/Window/paste_event
-tags:
-  - Evènement
-  - Reference
-  - Window
-  - paste
-translation_of: Web/API/Window/paste_event
 ---
+
 {{APIRef}}
 
 L'événement **`paste`** est déclenché lorsque l'utilisateur a lancé une action de "paste" via l'interface utilisateur du navigateur.
@@ -38,8 +33,8 @@ La cible d'origine de cet événement est le {{domxref ("Element")}} qui était 
 ## Exemples
 
 ```js
-window.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+window.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 

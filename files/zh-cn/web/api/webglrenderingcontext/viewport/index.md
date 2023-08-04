@@ -2,9 +2,10 @@
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
 ---
+
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.viewport()`** 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.viewport()`** 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。
 
 ## 语法
 
@@ -33,7 +34,7 @@ None.
 
 ## 样例
 
-当你第一次创建 WebGL 上下文的时候，视口的大小将和 canvas 的大小是匹配的。然而，如果你重新改变了 canvas 的大小，你需要告诉 WebGL 上下文设定新的视口。在这里，你可以使用`gl.viewport。`
+当你第一次创建 WebGL 上下文的时候，视口的大小将和 `canvas` 的大小是匹配的。然而，如果你重新改变了 `canvas` 的大小，你需要告诉 WebGL 上下文设定新的视口。在这里，你可以使用 `gl.viewport`。
 
 ```js
 gl.viewport(0, 0, canvas.width, canvas.height);
@@ -59,7 +60,7 @@ gl.getParameter(gl.VIEWPORT);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.viewport")}}
+{{Compat}}
 
 ## 另见
 

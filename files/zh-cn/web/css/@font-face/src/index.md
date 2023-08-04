@@ -2,6 +2,7 @@
 title: src
 slug: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 {{cssxref("@font-face")}} 中的 src 描述符指定了包含字体数据的资源。`@font-face` 规则中需要指定这个属性。
@@ -17,20 +18,22 @@ slug: Web/CSS/@font-face/src
 ```css
 /* <url> values */
 src: url(https://somewebsite.com/path/to/font.woff); /* Absolute URL */
-src: url(path/to/font.woff);                         /* Relative URL */
-src: url(path/to/font.woff) format("woff");          /* Explicit format */
-src: url('path/to/font.woff');                       /* Quoted URL */
-src: url(path/to/svgfont.svg#example);               /* Fragment identifying font */
+src: url(path/to/font.woff); /* Relative URL */
+src: url(path/to/font.woff) format("woff"); /* Explicit format */
+src: url("path/to/font.woff"); /* Quoted URL */
+src: url(path/to/svgfont.svg#example); /* Fragment identifying font */
 
 /* <font-face-name> values */
-src: local(font);      /* Unquoted name */
+src: local(font); /* Unquoted name */
 src: local(some font); /* Name containing space */
-src: local("font");    /* Quoted name */
+src: local("font"); /* Quoted name */
 
 /* Multiple items */
-src: local(font), url(path/to/font.svg) format("svg"),
-     url(path/to/font.woff) format("woff"),
-     url(path/to/font.otf) format("opentype");
+src:
+  local(font),
+  url(path/to/font.svg) format("svg"),
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.otf) format("opentype");
 ```
 
 ### Values
@@ -60,9 +63,10 @@ src: local(font), url(path/to/font.svg) format("svg"),
 ```css
 @font-face {
   font-family: examplefont;
-  src: local(Example Font),
-       url('examplefont.woff') format("woff"),
-       url('examplefont.otf') format("opentype");
+  src:
+    local(Example Font),
+    url("examplefont.woff") format("woff"),
+    url("examplefont.otf") format("opentype");
 }
 ```
 
@@ -72,4 +76,4 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 ## Browser compatibility
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

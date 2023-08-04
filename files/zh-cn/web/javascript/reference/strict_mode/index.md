@@ -2,9 +2,10 @@
 title: 严格模式
 slug: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
-> **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](https://developer.mozilla.org/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
+> **备注：** 有时你会看到非严格模式，被称为“**[sloppy mode](/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
 
 [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
 
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 2. 严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**。
 3. 严格模式**禁用了**在 ECMAScript 的未来版本中可能会定义的一些语法。
 
-如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
+如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
 
 ## 调用严格模式
 
@@ -39,7 +40,7 @@ var v = "Hi!  I'm a strict mode script!";
 ```js
 function strict() {
   // 函数级别严格模式语法
-  'use strict';
+  "use strict";
   function nested() {
     return "And so am I!";
   }
@@ -57,15 +58,15 @@ function notStrict() {
 
 ### 将过失错误转成异常
 
-在严格模式下，某些先前被接受的过失错误将会被认为是异常. JavaScript 被设计为能使新人开发者更易于上手，所以有时候会给本来错误操作赋予新的不报错误的语义 (non-error semantics). 有时候这可以解决当前的问题，但有时候却会给以后留下更大的问题。严格模式则把这些失误当成错误，以便可以发现并立即将其改正。
+在严格模式下，某些先前被接受的过失错误将会被认为是异常。JavaScript 被设计为能使新人开发者更易于上手，所以有时候会给本来错误操作赋予新的不报错误的语义 (non-error semantics). 有时候这可以解决当前的问题，但有时候却会给以后留下更大的问题。严格模式则把这些失误当成错误，以便可以发现并立即将其改正。
 
 第一，严格模式下无法再意外创建全局变量。在普通的 JavaScript 里面给一个错误命名的变量名赋值会使全局对象新增一个属性并继续“工作”（尽管将来可能会失败：在现代的 JavaScript 中有可能）。严格模式中意外创建全局变量被抛出错误替代：
 
 ```js
 "use strict";
-                       // 假如有一个全局变量叫做mistypedVariable
+// 假如有一个全局变量叫做 mistypedVariable
 mistypedVaraible = 17; // 因为变量名拼写错误
-                       // 这一行代码就会抛出 ReferenceError
+// 这一行代码就会抛出 ReferenceError
 ```
 
 第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 ([non-extensible](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) 的新属性赋值) 都会抛出异常：
@@ -79,7 +80,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // 抛出 TypeError 错误
 
 // 给只读属性赋值
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // 抛出 TypeError 错误
 
 // 给不可扩展对象的新属性赋值
@@ -97,7 +102,7 @@ delete Object.prototype; // 抛出 TypeError 错误
 
 第四，在 Gecko 版本 34 之前，严格模式要求一个对象内的所有属性名在对象内必须唯一。正常模式下重名属性是允许的，最后一个重名的属性决定其属性值。因为只有最后一个属性起作用，当代码要去改变属性值而不是修改最后一个重名属性的时候，复制这个对象就产生一连串的 bug。在严格模式下，重名属性被认为是语法错误：
 
-> **备注：** 这个问题在 ECMAScript6 中已经不复存在 ({{bug(1041128)}})。
+> **备注：** 这个问题在 ECMAScript6 中已经不复存在（[Firefox bug 1041128](https://bugzil.la/1041128)）。
 
 ```js
 "use strict";
@@ -107,13 +112,14 @@ var o = { p: 1, p: 2 }; // !!! 语法错误
 第五，严格模式要求函数的参数名唯一。在正常模式下，最后一个重名参数名会掩盖之前的重名参数。之前的参数仍然可以通过 `arguments[i] 来访问`, 还不是完全无法访问。然而，这种隐藏毫无意义而且可能是意料之外的 (比如它可能本来是打错了), 所以在严格模式下重名参数被认为是语法错误：
 
 ```js
-function sum(a, a, c) { // !!! 语法错误
+function sum(a, a, c) {
+  // !!! 语法错误
   "use strict";
   return a + a + c; // 代码运行到这里会出错
 }
 ```
 
-第六，严格模式禁止八进制数字语法. ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零 (`0`) 开头的八进制语法：`0644 === 420` 还有 `"\045" === "%"`.在 ECMAScript 6 中支持为一个数字加"`0`o"的前缀来表示八进制数。
+第六，严格模式禁止八进制数字语法。ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零 (`0`) 开头的八进制语法：`0644 === 420` 还有 `"\045" === "%"`.在 ECMAScript 6 中支持为一个数字加"`0`o"的前缀来表示八进制数。
 
 ```js
 var a = 0o10; // ES6: 八进制
@@ -123,33 +129,33 @@ var a = 0o10; // ES6: 八进制
 
 ```js
 "use strict";
-var sum = 015 + // !!! 语法错误
-          197 +
-          142;
+var sum =
+  015 + // !!! 语法错误
+  197 +
+  142;
 ```
 
 第七，ECMAScript 6 中的严格模式禁止设置{{Glossary("primitive")}}值的属性。不采用严格模式，设置属性将会简单忽略 (no-op),采用严格模式，将抛出{{jsxref("TypeError")}}错误
 
-```plain
-(function() {
-  "use strict";
+```js
+"use strict";
 
-  false.true = "";              //TypeError
-  (14).sailing = "home";        //TypeError
-  "with".you = "far away";      //TypeError
-})();
+false.true = ""; // TypeError
+(14).sailing = "home"; // TypeError
+"with".you = "far away"; // TypeError
 ```
 
 ### 简化变量的使用
 
-严格模式简化了代码中变量名字映射到变量定义的方式。很多编译器的优化是依赖存储变量 X 位置的能力：这对全面优化 JavaScript 代码至关重要. JavaScript 有些情况会使得代码中名字到变量定义的基本映射只在运行时才产生。严格模式移除了大多数这种情况的发生，所以编译器可以更好的优化严格模式的代码。
+严格模式简化了代码中变量名字映射到变量定义的方式。很多编译器的优化是依赖存储变量 X 位置的能力：这对全面优化 JavaScript 代码至关重要。JavaScript 有些情况会使得代码中名字到变量定义的基本映射只在运行时才产生。严格模式移除了大多数这种情况的发生，所以编译器可以更好的优化严格模式的代码。
 
-第一，严格模式禁用 `with`. `with`所引起的问题是块内的任何名称可以映射 (map) 到 with 传进来的对象的属性，也可以映射到包围这个块的作用域内的变量 (甚至是全局变量), 这一切都是在运行时决定的：在代码运行之前是无法得知的. 严格模式下，使用 `with` 会引起语法错误，所以就不会存在 with 块内的变量在运行时才决定引用到哪里的情况了：
+第一，严格模式禁用 `with`. `with`所引起的问题是块内的任何名称可以映射 (map) 到 with 传进来的对象的属性，也可以映射到包围这个块的作用域内的变量 (甚至是全局变量), 这一切都是在运行时决定的：在代码运行之前是无法得知的。严格模式下，使用 `with` 会引起语法错误，所以就不会存在 with 块内的变量在运行时才决定引用到哪里的情况了：
 
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! 语法错误
+with (obj) {
+  // !!! 语法错误
   // 如果没有开启严格模式，with 中的这个 x 会指向 with 上面的那个 x，还是 obj.x？
   // 如果不运行代码，我们无法知道，因此，这种代码让引擎无法进行优化，速度也就会变慢。
   x;
@@ -158,7 +164,7 @@ with (obj) { // !!! 语法错误
 
 一种取代 `with`的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。
 
-第二，[`严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量`](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). 在正常模式下， 代码 `eval("var x;")` 会给上层函数 (surrounding function) 或者全局引入一个新的变量 `x` . 这意味着，一般情况下， 在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 `eval` 可能引入的新变量会覆盖它的外层变量). 在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
+第二，[`严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量`](http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/). 在正常模式下，代码 `eval("var x;")` 会给上层函数 (surrounding function) 或者全局引入一个新的变量 `x` . 这意味着，一般情况下，在一个包含 `eval` 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 `eval` 可能引入的新变量会覆盖它的外层变量). 在严格模式下 `eval` 仅仅为被运行的代码创建变量，所以 `eval` 不会使得名称映射到外部变量或者其他局部变量：
 
 ```js
 var x = 17;
@@ -177,7 +183,7 @@ function strict1(str) {
 function strict2(f, str) {
   "use strict";
   return f(str); // 没有直接调用 eval(...): 当且仅当 str 中的代码开启了严格模式时
-                 // 才会在严格模式下运行
+  // 才会在严格模式下运行
 }
 function nonstrict(str) {
   return eval(str); // 当且仅当 str 中的代码开启了"use strict"，str 中的代码才会在严格模式下运行
@@ -215,12 +221,13 @@ eval("var y; delete y;"); // !!! 语法错误
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
@@ -241,7 +248,9 @@ console.assert(pair[1] === 17);
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // 抛出类型错误
 ```
 
@@ -253,7 +262,9 @@ f(); // 抛出类型错误
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -266,7 +277,7 @@ console.assert(fun.bind(true)() === true);
 ```js
 function restricted() {
   "use strict";
-  restricted.caller;    // 抛出类型错误
+  restricted.caller; // 抛出类型错误
   restricted.arguments; // 抛出类型错误
 }
 
@@ -295,7 +306,7 @@ fun(1, 2); // 不会暴露 v（或者 a，或者 b）
 
 第一，在严格模式中一部分字符变成了保留的关键字。这些字符包括`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`和`yield`。在严格模式下，你不能再用这些名字作为变量名或者形参名。
 
-```js
+```js-nolint
 function package(protected) { // !!!
   "use strict";
   var implements; // !!!
@@ -317,17 +328,18 @@ function fun(static) { 'use strict'; } // !!!
 ```js
 "use strict";
 if (true) {
-  function f() { } // !!! 语法错误
+  function f() {} // !!! 语法错误
   f();
 }
 
 for (var i = 0; i < 5; i++) {
-  function f2() { } // !!! 语法错误
+  function f2() {} // !!! 语法错误
   f2();
 }
 
-function baz() { // 合法
-  function eit() { } // 同样合法
+function baz() {
+  // 合法
+  function eit() {} // 同样合法
 }
 ```
 
@@ -346,4 +358,4 @@ function baz() { // 合法
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](http://kangax.github.com/es5-compat-table/strict-mode/)
-- [Transitioning to strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

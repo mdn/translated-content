@@ -1,12 +1,8 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-translation_of: Web/HTTP/Status/406
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`406 Not Acceptable`** クライアントエラーレスポンスコードは、サーバーがリクエストの用意した[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)ヘッダーで定義された受付可能な値に一致するレスポンスを生成できず、サーバーが既定の表現方法で提供することを望まないことを表します。

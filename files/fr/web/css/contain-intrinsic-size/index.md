@@ -1,11 +1,10 @@
 ---
 title: contain-intrinsic-size
 slug: Web/CSS/contain-intrinsic-size
-translation_of: Web/CSS/contain-intrinsic-size
-browser-compat: css.properties.contain-intrinsic-size
 l10n:
   sourceCommit: b56167c31ad29c8a24c2912e25a0b77bc65f0874
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`contain-intrinsic-size`** contrôle la taille naturelle d'un élément spécifié par [`content-visibility`](/fr/docs/Web/CSS/content-visibility).

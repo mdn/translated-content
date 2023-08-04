@@ -2,6 +2,7 @@
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 **`Selection.collapse()`** 方法可以收起当前选区到一个点。文档不会发生改变。如果选区的内容是可编辑的并且焦点落在上面，则光标会在该处闪烁。
@@ -24,7 +25,7 @@ sel.collapse(parentNode, offset);
 ```js
 /* 将光标收起到文档 body 的开头 */
 var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body,0);
+window.getSelection().collapse(body, 0);
 ```
 
 ## 规范

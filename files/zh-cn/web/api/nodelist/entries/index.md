@@ -2,6 +2,7 @@
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
 ---
+
 {{APIRef("DOM")}}
 
 该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxref("Node")}} 对象。
@@ -30,7 +31,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // 使用 for..of 循环
-for(var entry of list.entries()) {
+for (var entry of list.entries()) {
   console.log(entry);
 }
 ```

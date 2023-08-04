@@ -2,6 +2,7 @@
 title: 二次元の衝突検出
 slug: Games/Techniques/2D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 二次元ゲームでの衝突を判定するアルゴリズムは、衝突する図形の種類に依存します（例：矩形と矩形、矩形と円、円と円など）。一般的には、「ヒットボックス」として知られる実体に応じたシンプルな汎用図形を保有することになるので、たとえ衝突がピクセル単位で完璧でなくても、十分に見栄えが良く、複数の実体にわたってパフォーマンスを発揮することができるのです。この記事では、二次元ゲームで衝突判定を提供するために使用される最も一般的なテクニックのレビューを提供します。
@@ -19,104 +20,114 @@ slug: Games/Techniques/2D_collision_detection
 ```js
 Crafty.init(200, 200);
 
-const dim1 = {x: 5, y: 5, w: 50, h: 50}
-const dim2 = {x: 20, y: 10, w: 60, h: 40}
+const dim1 = { x: 5, y: 5, w: 50, h: 50 };
+const dim2 = { x: 20, y: 10, w: 60, h: 40 };
 
 const rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
 
-const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+const rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .color("blue");
 
 rect2.bind("EnterFrame", function () {
-    if (rect1.x < rect2.x + rect2.w &&
-        rect1.x + rect1.w > rect2.x &&
-        rect1.y < rect2.y + rect2.h &&
-        rect1.h + rect1.y > rect2.y) {
-        // collision detected!
-        this.color("green");
-    } else {
-        // no collision
-        this.color("blue");
-    }
+  if (
+    rect1.x < rect2.x + rect2.w &&
+    rect1.x + rect1.w > rect2.x &&
+    rect1.y < rect2.y + rect2.h &&
+    rect1.h + rect1.y > rect2.y
+  ) {
+    // collision detected!
+    this.color("green");
+  } else {
+    // no collision
+    this.color("blue");
+  }
 });
 ```
 
 {{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
-> **Note:** [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> **メモ:** [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## 円形衝突
 
-衝突検出のためのもう一つの単純な図形は、  2 つの円の間です。このアルゴリズムは、 2 つの円の中心点を取り、その中心点間の距離が 2 つの半径を足したものより小さいことを確認することで動作します。
+衝突検出のためのもう一つの単純な図形は、 2 つの円の間です。このアルゴリズムは、 2 つの円の中心点を取り、その中心点間の距離が 2 つの半径を足したものより小さいことを確認することで動作します。
 
 ```html hidden
 <div id="cr-stage"></div>
-<p>矢印キーで円を移動させてください。緑は衝突あり、青は衝突なしを意味します。</p>
+<p>
+  矢印キーで円を移動させてください。緑は衝突あり、青は衝突なしを意味します。
+</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 ```
 
 ```css hidden
 #cr-stage {
-    position: static !important;
-    height: 200px !important;
+  position: static !important;
+  height: 200px !important;
 }
 ```
 
 ```js
 Crafty.init(200, 200);
 
-const dim1 = {x: 5, y: 5}
-const dim2 = {x: 20, y: 20}
+const dim1 = { x: 5, y: 5 };
+const dim2 = { x: 20, y: 20 };
 
 Crafty.c("Circle", {
-   circle(radius, color) {
-        this.radius = radius;
-        this.w = this.h = radius * 2;
-        this.color = color || "#000000";
+  circle(radius, color) {
+    this.radius = radius;
+    this.w = this.h = radius * 2;
+    this.color = color || "#000000";
 
-        this.bind("Move", Crafty.DrawManager.drawAll)
-        return this;
-   },
+    this.bind("Move", Crafty.DrawManager.drawAll);
+    return this;
+  },
 
-   draw() {
-       const ctx = Crafty.canvas.context;
-       ctx.save();
-       ctx.fillStyle = this.color;
-       ctx.beginPath();
-       ctx.arc(
-           this.x + this.radius,
-           this.y + this.radius,
-           this.radius,
-           0,
-           Math.PI * 2
-       );
-       ctx.closePath();
-       ctx.fill();
-       ctx.restore();
-    }
+  draw() {
+    const ctx = Crafty.canvas.context;
+    ctx.save();
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(
+      this.x + this.radius,
+      this.y + this.radius,
+      this.radius,
+      0,
+      Math.PI * 2,
+    );
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  },
 });
 
 const circle1 = Crafty.e("2D, Canvas, Circle").attr(dim1).circle(15, "red");
 
-const circle2 = Crafty.e("2D, Canvas, Circle, Fourway").fourway(2).attr(dim2).circle(20, "blue");
+const circle2 = Crafty.e("2D, Canvas, Circle, Fourway")
+  .fourway(2)
+  .attr(dim2)
+  .circle(20, "blue");
 
 circle2.bind("EnterFrame", () => {
-    const dx = (circle1.x + circle1.radius) - (circle2.x + circle2.radius);
-    const dy = (circle1.y + circle1.radius) - (circle2.y + circle2.radius);
-    const distance = Math.sqrt(dx * dx + dy * dy);
+  const dx = circle1.x + circle1.radius - (circle2.x + circle2.radius);
+  const dy = circle1.y + circle1.radius - (circle2.y + circle2.radius);
+  const distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance < circle1.radius + circle2.radius) {
-        // collision detected!
-        this.color = "green";
-    } else {
-        // no collision
-        this.color = "blue";
-    }
+  if (distance < circle1.radius + circle2.radius) {
+    // collision detected!
+    this.color = "green";
+  } else {
+    // no collision
+    this.color = "blue";
+  }
 });
 ```
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
-> **Note:** [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> **メモ:** [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## 分割軸定理
 

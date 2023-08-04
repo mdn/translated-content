@@ -1,15 +1,8 @@
 ---
 title: TransformStream
 slug: Web/API/TransformStream
-tags:
-  - API
-  - Interface
-  - Streams API
-  - TransformStream
-  - Web
-  - インターフェイス
-translation_of: Web/API/TransformStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 `TransformStream` は [Streams API](/ja/docs/Web/API/Streams_API) のインターフェイスで一連の変換可能なデータを表します。
@@ -138,9 +131,7 @@ responses.reduce(
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#dom-mediastream', 'MediaStream')}} | {{Spec2('Media Capture')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

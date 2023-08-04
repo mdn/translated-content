@@ -2,6 +2,7 @@
 title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
 ---
+
 {{ ApiRef() }}
 
 ### 概述

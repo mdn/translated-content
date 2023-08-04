@@ -1,9 +1,8 @@
 ---
 title: console.log()
 slug: Web/API/console/log
-l10n:
-  sourceCommit: 
 ---
+
 {{APIRef("Console API")}}
 
 **`console.log()`** メソッドは、メッセージをウェブコンソールに出力します。
@@ -14,10 +13,10 @@ l10n:
 ## 構文
 
 ```js
-log(obj1)
-log(obj1, /* …, */ objN)
-log(msg)
-log(msg, subst1, /* …, */ substN)
+log(obj1);
+log(obj1, /* …, */ objN);
+log(msg);
+log(msg, subst1, /* …, */ substN);
 ```
 
 ### 引数
@@ -51,5 +50,5 @@ log(msg, subst1, /* …, */ substN)
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85))
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
 - [NodeJS: Console API](https://nodejs.org/docs/latest/api/console.html#console_console_log_data)

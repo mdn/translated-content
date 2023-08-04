@@ -2,6 +2,7 @@
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`getUTCMonth()`** 方法以世界时为标准，返回一个指定的日期对象的月份，它是从 0 开始计数的（0 代表一年的第一个月）。
@@ -22,9 +23,9 @@ dateObj.getUTCMonth()
 
 `getUTCMonth()` 返回一个 0 到 11 的整数，分别对应以下月份：0 代表一月，1 代表二月，2 代表三月，依次类推。
 
-## 例子
+## 示例
 
-### 例子：使用 `getUTCMonth()` 方法
+### 示例：使用 `getUTCMonth()` 方法
 
 下例将当前时间的月份赋值给变量 `month`。
 

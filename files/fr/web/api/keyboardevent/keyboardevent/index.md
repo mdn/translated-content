@@ -1,14 +1,8 @@
 ---
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
-tags:
-  - API
-  - Clavier
-  - Constructeur
-  - DOM
-  - évènements
-translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.

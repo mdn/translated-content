@@ -1,32 +1,27 @@
 ---
 title: <xsl:decimal-format>
 slug: Web/XSLT/Element/decimal-format
-tags:
-  - XSLT
-  - decimal-format
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/decimal-format
 ---
+
 {{ XsltRef() }}
 
-`<xsl:decimal-format>` 要素は、_`format-number( )`_ 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
+`<xsl:decimal-format>` 要素は、`format-number( )` 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
 
 ### 構文
 
 ```
 <xsl:decimal-format
-	name=NAME
-	decimal-separator=CHARACTER
-	grouping-separator=CHARACTER
-	infinity=STRING
-	minus-sign=CHARACTER
-	NaN=STRING
-	percent=CHARACTER
-	per-mille=CHARATER
-	zero-digit=CHARACTER
-	digit=CHARACTER
-	pattern-separator=CHARACTER />
+  name=NAME
+  decimal-separator=CHARACTER
+  grouping-separator=CHARACTER
+  infinity=STRING
+  minus-sign=CHARACTER
+  NaN=STRING
+  percent=CHARACTER
+  per-mille=CHARATER
+  zero-digit=CHARACTER
+  digit=CHARACTER
+  pattern-separator=CHARACTER />
 ```
 
 ### 必須属性

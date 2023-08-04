@@ -2,11 +2,12 @@
 title: Initialize the framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser)系列的第一课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser)系列的第一课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。
 
 在我们开始写游戏的功能之前，我们需要创建一个用来内部渲染游戏的基础架构。使用 HTML 就能做到 — Parser 框架将生成所需的 {{htmlelement("canvas")}} 元素。
 
@@ -15,24 +16,31 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成的{{htmlelement("canvas")}} 元素上。拿起你最爱的编辑器，挑一个好目录，创建一个 HTML 文档，存成 index.html，然后写下下面的代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+        preload: preload,
+        create: create,
+        update: update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 
@@ -47,12 +55,12 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 捋一捋我们干了些啥
 
-这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
+这个时候我们在 {{htmlelement("header")}} 里定义了 `charset`、{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding。我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
 
 {{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game` 创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
 
 - width 和 height 设置了 {{htmlelement("canvas")}} 宽高。
-- 渲染方式。有三个选项分别是 ` AUTO，``CANVAS ` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
+- 渲染方式。有三个选项分别是 `AUTO`，`CANVAS` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
 - {{htmlelement("canvas")}} 的 id。如果该参数有值，则使用该值作为 canvas 标签的 id，我们传入 null，则 phaser 会决定 canvas 的 id 值。
 - 第四个参数指定了 phaser 的三个生命周期所对应的函数。我们使用相同的名字来让程序更清晰
 
@@ -68,6 +76,6 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 下一步
 
-现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser， 让我们继续学习第二章： [scaling](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser，让我们继续学习第二章： [scaling](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}

@@ -1,13 +1,8 @@
 ---
 title: 指定値
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
-translation_of: Web/CSS/specified_value
 ---
+
 {{CSSRef}}
 
 **指定値** (specified value) は、 [CSS](/ja/docs/Web/CSS) プロパティにおいて文書のスタイルシートから受け取る値です。指定されたプロパティの指定値は、以下の規則に従って決定されます。

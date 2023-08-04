@@ -2,6 +2,7 @@
 title: Expect
 slug: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 **`Expect`** 是一个请求消息头，包含一个期望条件，表示服务器只有在满足此期望条件的情况下才能妥善地处理请求。
@@ -15,9 +16,9 @@ slug: Web/HTTP/Headers/Expect
 
 常见的浏览器不会发送 `Expect` 消息头，但是其他类型的客户端如 cURL 默认会这么做。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

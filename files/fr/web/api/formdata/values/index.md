@@ -1,17 +1,8 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-tags:
-  - API
-  - FormData
-  - Iteration
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequestAPI
-  - values
-translation_of: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("USVString")}} ou {{domxref("Blob")}}.
@@ -33,12 +24,12 @@ Retourne une {{jsxref("Les_protocoles_iteration", "itération")}} .
 ```js
 // Créer un objet FormData test
 var formData = new FormData();
-formData.append('cle1', 'valeur1');
-formData.append('cle2', 'valeur2');
+formData.append("cle1", "valeur1");
+formData.append("cle2", "valeur2");
 
 // Affiche les valeurs
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

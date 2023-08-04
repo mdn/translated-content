@@ -2,9 +2,10 @@
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-**`bold()`** 方法会创建 HTML 元素 “b”，并将字符串加粗展示。
+**`bold()`** 方法会创建 HTML 元素“b”，并将字符串加粗展示。
 
 ## 语法
 
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/bold
 str.bold()
 ```
 
-### **返回值**
+### 返回值
 
 包含 HTML 元素 {{HTMLElement("b")}} 的字符串。
 
@@ -27,12 +28,12 @@ str.bold()
 下面的例子使用字符串方法来改变字符串的格式。
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 规范
@@ -43,7 +44,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
 - {{jsxref("String.prototype.blink()")}}
 - {{jsxref("String.prototype.italics()")}}

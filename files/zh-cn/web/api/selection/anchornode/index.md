@@ -2,6 +2,7 @@
 title: Selection.anchorNode
 slug: Web/API/Selection/anchorNode
 ---
+
 {{ApiRef}}
 
 ## 概述
@@ -24,7 +25,7 @@ sel.anchorNode
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.anchorNode")}}
+{{Compat}}
 
 ## 相关链接
 

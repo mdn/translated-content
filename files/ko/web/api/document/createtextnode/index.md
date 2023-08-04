@@ -1,11 +1,8 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
-tags:
-  - DOM
-  - Gecko
-translation_of: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 ### 요약
@@ -27,29 +24,26 @@ translation_of: Web/API/Document/createTextNode
 
 ```html
 <html>
-<head>
-<title>createTextNode 예제</title>
+  <head>
+    <title>createTextNode 예제</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function addTextNode() {
+        var newtext = document.createTextNode(" 동적으로 추가되는 텍스트. ");
+        var para = document.getElementById("p1");
+        para.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-function addTextNode()
-{
-    var newtext = document.createTextNode(" 동적으로 추가되는 텍스트. ");
-    var para = document.getElementById("p1");
-    para.appendChild(newtext);
-}
+  <body>
+    <div style="border: 1px solid red">
+      <p id="p1">단락의 첫번째 줄.<br /></p>
+    </div>
+    <br />
 
-</script>
-</head>
-
-<body>
-<div style="border: 1px solid red">
-<p id="p1">단락의 첫번째 줄.<br /></p>
-</div><br />
-
-<button onclick="addTextNode();">TextNode 추가하기.</button>
-
-</body>
+    <button onclick="addTextNode();">TextNode 추가하기.</button>
+  </body>
 </html>
 ```
 

@@ -1,12 +1,8 @@
 ---
-title: ':not'
+title: ":not"
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:not
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) de négation, **`:not()`**, est une notation fonctionnelle qui prend un sélecteur comme argument. Elle permet de cibler les éléments qui ne sont pas représentés par cet argument. Le sélecteur passé en argument ne doit pas contenir d'autre sélecteur de négation et ne doit pas cibler de pseudo-élément.
@@ -65,15 +61,9 @@ body :not(.classy, p) {
 ### HTML
 
 ```html
-<p>
-  Un peu de texte.
-</p>
-<p class="classy">
-  Encore du texte.
-</p>
-<span>
-  Et toujours du texte.
-<span>
+<p>Un peu de texte.</p>
+<p class="classy">Encore du texte.</p>
+<span> Et toujours du texte. </span>
 ```
 
 ### Résultat
@@ -82,11 +72,8 @@ body :not(.classy, p) {
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires                                                                       |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | La définition de l'argument est étendue afin d'autoriser les sélecteurs complexes. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

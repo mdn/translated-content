@@ -2,6 +2,7 @@
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
 ---
+
 {{SeeCompatTable}}{{APIRef("Client")}}
 
 {{domxref("Client")}} 接口的 **`Client.postMessage()`** 方法允许一个 service worker 客户端向一个 {{domxref("ServiceWorker")}}发送一个消息，会触发 service worker 的 message 事件，通过监听这个事件，可以获取这个消息。
@@ -28,32 +29,33 @@ Void.
 从 service worker 向 client 发送消息：
 
 ```js
-addEventListener('fetch', event => {
-  event.waitUntil(async function() {
-    // Exit early if we don't have access to the client.
-    // Eg, if it's cross-origin.
-    if (!event.clientId) return;
+addEventListener("fetch", (event) => {
+  event.waitUntil(
+    (async function () {
+      // Exit early if we don't have access to the client.
+      // Eg, if it's cross-origin.
+      if (!event.clientId) return;
 
-    // Get the client.
-    const client = await clients.get(event.clientId);
-    // Exit early if we don't get the client.
-    // Eg, if it closed.
-    if (!client) return;
+      // Get the client.
+      const client = await clients.get(event.clientId);
+      // Exit early if we don't get the client.
+      // Eg, if it closed.
+      if (!client) return;
 
-    // Send a message to the client.
-    client.postMessage({
-      msg: "Hey I just got a fetch from you!",
-      url: event.request.url
-    });
-
-  }());
+      // Send a message to the client.
+      client.postMessage({
+        msg: "Hey I just got a fetch from you!",
+        url: event.request.url,
+      });
+    })(),
+  );
 });
 ```
 
 接收 message:
 
 ```js
-navigator.serviceWorker.addEventListener('message', event => {
+navigator.serviceWorker.addEventListener("message", (event) => {
   console.log(event.data.msg, event.data.url);
 });
 ```
@@ -64,4 +66,4 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ## Browser compatibility
 
-{{Compat("api.Client.postMessage")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: リストの装飾
 slug: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
@@ -19,8 +20,10 @@ slug: Learn/CSS/Styling_text/Styling_lists
 ```html
 <h2>Shopping (unordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ul>
   <li>Hummus</li>
@@ -31,28 +34,40 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 
 <h2>Recipe (ordered) list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <ol>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
 
 <h2>Ingredient description list</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>
+  Paragraph for reference, paragraph for reference, paragraph for reference,
+  paragraph for reference, paragraph for reference, paragraph for reference.
+</p>
 
 <dl>
   <dt>Hummus</dt>
-  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
+  <dd>
+    A thick dip/sauce generally made from chick peas blended with tahini, lemon
+    juice, salt, garlic, and other ingredients.
+  </dd>
   <dt>Pita</dt>
   <dd>A soft, slightly leavened flatbread.</dd>
   <dt>Halloumi</dt>
-  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
+  <dd>
+    A semi-hard, unripened, brined cheese with a higher-than-usual melting
+    point, usually made from goat/sheep milk.
+  </dd>
   <dt>Green salad</dt>
   <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
 </dl>
@@ -84,17 +99,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Description list styles */
 
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 
@@ -219,12 +239,14 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
+[`start`](/ja/docs/Web/HTML/Element/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
 
 ```html
 <ol start="4">
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -236,12 +258,14 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
+[`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
 
 ```html
 <ol start="4" reversed>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li>Wash and chop the salad.</li>
   <li>Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -251,16 +275,18 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Note:** 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
+> **メモ:** 逆方向のリストに `start` 属性の値より多くのリスト項目がある場合、カウントは引き続きゼロになり、その後負の値になります。
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
+[`value`](/ja/docs/Web/HTML/Element/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
 
 ```html
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
-  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="4">
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
   <li value="6">Wash and chop the salad.</li>
   <li value="8">Fill pita with salad, hummus, and fried halloumi.</li>
 </ol>
@@ -270,7 +296,7 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Note:** 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
+> **メモ:** 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
 
 ## アクティブラーニング: ネストしたリストの装飾
 
@@ -284,9 +310,15 @@ ul {
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生したら、答えを見るために _Show solution_ ボタンを押してください。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>First, light the candle.</li>
   <li>Next, open the box.</li>
   <li>Finally, place the three magic items in the box, in this exact order, to complete the spell:
@@ -296,16 +328,30 @@ ul {
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea>
+</ul></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -319,8 +365,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -328,15 +374,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value =
+    "ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}";
   drawOutput();
 });
 
@@ -366,11 +413,3 @@ CSS カウンターは、リストの数え方と装飾をカスタマイズす�
 関連するいくつかの基本的な原則と特定のプロパティを知っていれば、リストの装飾のこつは比較的簡単です。 次の記事では、リンクの装飾テクニックについて説明します。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
-- [コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

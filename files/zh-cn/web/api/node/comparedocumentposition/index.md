@@ -2,6 +2,7 @@
 title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Node.compareDocumentPosition()`** 可以比较当前节点与任意文档中的另一个节点的位置关系。
@@ -35,8 +36,10 @@ compareMask = node.compareDocumentPosition( otherNode )
 ## 例子
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+var head = document.getElementsByTagName("head").item(0);
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");

@@ -1,13 +1,8 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef}}
 
 **`Math.atan()`** 関数は、引数として与えた数値のアークタンジェントをラジアン単位で返します。
@@ -42,12 +37,12 @@ Math.atan(x)
 ### Math.atan() の使用
 
 ```js
-Math.atan(1);   // 0.7853981633974483
-Math.atan(0);   // 0
-Math.atan(-0);  // -0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
+Math.atan(-0); // -0
 
-Math.atan(Infinity);   //  1.5707963267948966
-Math.atan(-Infinity);  // -1.5707963267948966
+Math.atan(Infinity); //  1.5707963267948966
+Math.atan(-Infinity); // -1.5707963267948966
 
 // The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
 Math.atan(y / x);
@@ -57,9 +52,7 @@ Math.atan(y / x);
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.atan', 'Math.atan')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

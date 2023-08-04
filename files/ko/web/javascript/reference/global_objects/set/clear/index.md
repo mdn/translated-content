@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** 메서드는 `Set` 객체를 비웁니다.

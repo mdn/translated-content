@@ -1,23 +1,15 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - HTTP リクエストヘッダー
-  - Reference
-  - referer
-  - ヘッダー
-  - リクエストヘッダー
-  - リファラー
-translation_of: Web/HTTP/Headers/Referer
 ---
+
 {{HTTPSidebar}}
 
 **`Referer`** リクエストヘッダーには、現在リクエストされているページへのリンク先を持った直前のウェブページのアドレスが含まれています。 `Referer` ヘッダーにより、サーバーは人々がどこから訪問しに来たかを識別し、分析、ログ、キャッシュの最適化などに利用することができます。
 
-> **Warning:** **重要**: このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
+> **警告:** このヘッダーには無害な用途が多数ありますが、ユーザーのセキュリティとプライバシーに望ましくない結果をもたらす可能性もあります。 詳細情報と緩和策については [Referer header: privacy and security concerns](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns) を参照してください。
 
-なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは {{interwiki("wikipedia", "HTTPリファラ", "Wikipedia の HTTP リファラ")}}を参照してください。
+なお、 referer は実際には "referrer" という単語のスペルミスです。詳しくは [Wikipedia の HTTP リファラ](https://ja.wikipedia.org/wiki/HTTPリファラ)を参照してください。
 
 次のような場合は、ブラウザーは `Referer` ヘッダーを送信しません。
 
@@ -72,5 +64,5 @@ Referer: https://example.com/
 
 ## 関連情報
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [HTTP リファラ - Wikipedia](https://ja.wikipedia.org/wiki/HTTPリファラ)
 - {{HTTPHeader("Referrer-Policy")}}

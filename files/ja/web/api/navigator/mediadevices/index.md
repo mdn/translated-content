@@ -2,6 +2,7 @@
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`Navigator.mediaDevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。
@@ -18,9 +19,7 @@ var mediaDevices = navigator.mediaDevices;
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#mediadevices', 'NavigatorUserMedia.mediaDevices')}} | {{Spec2('Media Capture')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

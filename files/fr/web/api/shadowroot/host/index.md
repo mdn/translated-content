@@ -1,14 +1,8 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - shadow dom
-translation_of: Web/API/ShadowRoot/host
 ---
+
 {{APIRef("Shadow DOM")}}
 
 La propriété **`host`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui représente une référence à l'élément du DOM auquel la racine `ShadowRoot` est attachée.
@@ -16,7 +10,7 @@ La propriété **`host`** est une propriété en lecture seule, rattachée à l'
 ## Syntaxe
 
 ```js
-var element = shadowRoot.host
+var element = shadowRoot.host;
 ```
 
 ### Valeur

@@ -1,14 +1,10 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
+
 {{JSRef}}
 
 **`getUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日時の「年」を返します。
@@ -17,13 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 
 ## 構文
 
-```
-dateObj.getUTCFullYear()
+```js-nolint
+getUTCFullYear()
 ```
 
 ### 返値
 
-協定世界時に基づき、与えられた日付の「年」を表す数値。
+数値です。
+`Date` オブジェクトが有効な日時を表している場合、指定された日時の西暦を世界時で表した整数を返します。
+それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
 
 ## 解説
 
@@ -36,19 +34,17 @@ dateObj.getUTCFullYear()
 次の例は、現在の年を表す 4 桁の値を変数 `year` に代入します。
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+const today = new Date();
+const year = today.getUTCFullYear();
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getutcfullyear', 'Date.prototype.getUTCFullYear')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.getUTCFullYear")}}
+{{Compat}}
 
 ## 関連情報
 

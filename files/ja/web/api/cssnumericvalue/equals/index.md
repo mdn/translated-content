@@ -2,6 +2,7 @@
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`equals()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、渡された値が厳密に等しいかどうかを示す論理値を返します。 `true` の値を返すのは、渡されたすべての値が同じ型と値であり、かつ同じ順序である場合です。これにより、構造的な等価性を素早く検査することができます。
@@ -9,7 +10,7 @@ slug: Web/API/CSSNumericValue/equals
 ## 構文
 
 ```js
-equals(number)
+equals(number);
 ```
 
 ### 引数

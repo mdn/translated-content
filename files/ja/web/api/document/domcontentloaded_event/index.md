@@ -1,7 +1,8 @@
 ---
-title: 'Document: DOMContentLoaded イベント'
+title: "Document: DOMContentLoaded イベント"
 slug: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 **`DOMContentLoaded`** イベントは、 HTML の初期文書が完全に読み込まれ解釈された時点で発生し、スタイルシート、画像、サブフレームの読み込みが完了するのを待ちません。
@@ -38,8 +39,8 @@ slug: Web/API/Document/DOMContentLoaded_event
 ### 基本的な使用
 
 ```js
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
 });
 ```
 
@@ -47,13 +48,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM fully loaded and parsed");
   });
 
-for( let i = 0; i < 1000000000; i++)
-{} // This synchronous script is going to delay parsing of the DOM,
-   // so the DOMContentLoaded event is going to launch later.
+  for (let i = 0; i < 1000000000; i++) {} // This synchronous script is going to delay parsing of the DOM,
+  // so the DOMContentLoaded event is going to launch later.
 </script>
 ```
 
@@ -63,12 +63,14 @@ for( let i = 0; i < 1000000000; i++)
 
 ```js
 function doSomething() {
-  console.info('DOM loaded');
+  console.info("DOM loaded");
 }
 
-if (document.readyState === 'loading') {  // Loading hasn't finished yet
-  document.addEventListener('DOMContentLoaded', doSomething);
-} else {  // `DOMContentLoaded` has already fired
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", doSomething);
+} else {
+  // `DOMContentLoaded` has already fired
   doSomething();
 }
 ```
@@ -109,7 +111,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -121,26 +124,26 @@ label, button {
 #### JS
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   window.setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-    log.textContent = log.textContent + 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent = log.textContent + "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
-    log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addEventListener("readystatechange", (event) => {
+  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addEventListener("DOMContentLoaded", (event) => {
+  log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
 ```
 
@@ -150,10 +153,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#stop-parsing', 'DOMContentLoaded')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'syntax.html#the-end', 'DOMContentLoaded')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

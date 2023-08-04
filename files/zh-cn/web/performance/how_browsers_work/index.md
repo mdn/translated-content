@@ -1,8 +1,8 @@
 ---
 title: 渲染页面：浏览器的工作原理
 slug: Web/Performance/How_browsers_work
-original_slug: Web/Performance/浏览器渲染页面的工作原理
 ---
+
 页面内容快速加载和流畅的交互是用户希望得到的 Web 体验，因此，开发者应力争实现这两个目标。
 
 了解如何提升性能和感知性能，有助于了解浏览器的工作原理。
@@ -37,7 +37,7 @@ DNS 查询可能存在性能问题，特别是对于移动网络。当一个用�
 
 ### TCP 握手
 
-一旦获取到服务器 IP 地址，浏览器就会通过 {{glossary('TCP handshake','TCP “三次握手”')}}与服务器建立连接。这个机制的是用来让两端尝试进行通信——在浏览器和服务器通过上层协议 {{glossary('HTTPS')}} 发送数据之前，可以协商网络 TCP 套接字连接的一些参数。
+一旦获取到服务器 IP 地址，浏览器就会通过 {{glossary('TCP handshake','TCP“三次握手”')}}与服务器建立连接。这个机制的是用来让两端尝试进行通信——在浏览器和服务器通过上层协议 {{glossary('HTTPS')}} 发送数据之前，可以协商网络 TCP 套接字连接的一些参数。
 
 TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切的说是 SYN、SYN-ACK、ACK——因为通过 TCP 首先发送了三个消息进行协商，然后在两台电脑之间开始一个 TCP 会话。是的，这意味着终端与每台服务器之间还要来回发送三条消息，而请求尚未发出。
 
@@ -56,22 +56,22 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 一旦我们建立了到 web 服务器的连接，浏览器就代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
 
 ```html
-<!doctype HTML>
+<!doctype html>
 <html>
- <head>
-  <meta charset="UTF-8"/>
-  <title>My simple page</title>
-  <link rel="stylesheet" src="styles.css"/>
-  <script src="myscript.js"></script>
-</head>
-<body>
-  <h1 class="heading">My Page</h1>
-  <p>A paragraph with a <a href="https://example.com/about">link</a></p>
-  <div>
-    <img src="myimage.jpg" alt="image description"/>
-  </div>
-  <script src="anotherscript.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My simple page</title>
+    <link rel="stylesheet" src="styles.css" />
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">My Page</h1>
+    <p>A paragraph with a <a href="https://example.com/about">link</a></p>
+    <div>
+      <img src="myimage.jpg" alt="image description" />
+    </div>
+    <script src="anotherscript.js"></script>
+  </body>
 </html>
 ```
 
@@ -99,13 +99,13 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 
 DOM 是浏览器标记的内部表示。DOM 也是被暴露的，可以通过 JavaScript 中的各种 API 进行 DOM 操作。
 
-即使请求页面的 HTML 大于初始的 14KB 数据包，浏览器也将开始解析并尝试根据其拥有的数据进行渲染。这就是为什么在前 14KB 中包含浏览器开始渲染页面所需的所有内容，或者至少包含页面模板（第一次渲染所需的 CSS 和 HTML ）对于 web 性能优化来说是重要的。但是在渲染到屏幕上面之前，HTML、CSS、JavaScript 必须被解析完成。
+即使请求页面的 HTML 大于初始的 14KB 数据包，浏览器也将开始解析并尝试根据其拥有的数据进行渲染。这就是为什么在前 14KB 中包含浏览器开始渲染页面所需的所有内容，或者至少包含页面模板（第一次渲染所需的 CSS 和 HTML）对于 web 性能优化来说是重要的。但是在渲染到屏幕上面之前，HTML、CSS、JavaScript 必须被解析完成。
 
 ### 构建 DOM 树
 
 我们描述五个步骤在[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)这篇文章中。
 
-第一步是处理 HTML 标记并构造 DOM 树。HTML 解析涉及到 [tokenization](/zh-CN/docs/Web/API/DOMTokenList) 和树的构造。HTML 标记包括开始和结束标记，以及属性名和值。 如果文档格式良好，则解析它会简单而快速。解析器将标记化的输入解析到文档中，构建文档树。
+第一步是处理 HTML 标记并构造 DOM 树。HTML 解析涉及到 [tokenization](/zh-CN/docs/Web/API/DOMTokenList) 和树的构造。HTML 标记包括开始和结束标记，以及属性名和值。如果文档格式良好，则解析它会简单而快速。解析器将标记化的输入解析到文档中，构建文档树。
 
 DOM 树描述了文档的内容。[`<html>`](/zh-CN/docs/Web/HTML/Element/html) 元素是第一个标签也是文档树的根节点。树反映了不同标记之间的关系和层次结构。嵌套在其他标记中的标记是子节点。DOM 节点的数量越多，构建 DOM 树所需的时间就越长。
 
@@ -118,9 +118,9 @@ DOM 树描述了文档的内容。[`<html>`](/zh-CN/docs/Web/HTML/Element/html) 
 浏览器构建 DOM 树时，这个过程占用了主线程。当这种情况发生时，预加载扫描仪将解析可用的内容并请求高优先级资源，如 CSS、JavaScript 和 web 字体。多亏了预加载扫描器，我们不必等到解析器找到对外部资源的引用来请求它。它将在后台检索资源，以便在主 HTML 解析器到达请求的资源时，它们可能已经在运行，或者已经被下载。预加载扫描仪提供的优化减少了阻塞。
 
 ```html
-<link rel="stylesheet" src="styles.css"/>
+<link rel="stylesheet" src="styles.css" />
 <script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description"/>
+<img src="myimage.jpg" alt="image description" />
 <script src="anotherscript.js" async></script>
 ```
 
@@ -160,7 +160,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 像 [`<head>`](/zh-CN/docs/Web/HTML/Element/head) 和它的子节点以及任何具有 `display: none` 样式的结点，例如 `script { display: none; }`（在 user agent stylesheets 可以看到这个样式）这些标签将不会显示，也就是它们不会出现在 Render 树上。具有 `visibility: hidden` 的节点会出现在 Render 树上，因为它们会占用空间。由于我们没有给出任何指令来覆盖用户代理的默认值，因此上面代码示例中的 `script` 节点将不会包含在 Render 树中。
 
-每个可见节点都应用了其 CSSOM 规则。Render 树保存所有具有内容和计算样式的可见节点——将所有相关样式匹配到 DOM 树中的每个可见节点，并根据 [CSS 级联](/en-US/docs/Web/CSS/Cascade)确定每个节点的计算样式。
+每个可见节点都应用了其 CSSOM 规则。Render 树保存所有具有内容和计算样式的可见节点——将所有相关样式匹配到 DOM 树中的每个可见节点，并根据 [CSS 级联](/zh-CN/docs/Web/CSS/Cascade)确定每个节点的计算样式。
 
 ### Layout
 
@@ -186,7 +186,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 当文档的各个部分以不同的层绘制，相互重叠时，必须进行合成，以确保它们以正确的顺序绘制到屏幕上，并正确显示内容。
 
-当页面继续加载资产时，可能会发生回流（回想一下我们迟到的示例图像），回流会触发重新绘制和重新组合。如果我们定义了图像的大小，就不需要重新绘制，只需要重新绘制需要重新绘制的层，并在必要时进行合成。但我们没有包括图像大小！从服务器获取图像后，渲染过程将返回到布局步骤并从那里重新开始。
+当页面继续加载资源时，可能会发生回流（回想一下我们迟到的示例图像），回流会触发重新绘制和重新组合。如果我们定义了图像的大小，就不需要重新绘制，只需要重新绘制需要重新绘制的层，并在必要时进行合成。但我们没有包括图像大小！从服务器获取图像后，渲染过程将返回到布局步骤并从那里重新开始。
 
 ## 交互
 

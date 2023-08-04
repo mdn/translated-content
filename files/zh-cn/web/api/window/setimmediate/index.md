@@ -2,6 +2,7 @@
 title: window.setImmediate
 slug: Web/API/Window/setImmediate
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 该方法用来把一些需要长时间运行的操作放在一个回调函数里，在浏览器完成后面的其他语句后，就立刻执行这个回调函数。
@@ -28,7 +29,7 @@ var immediateID = setImmediate(func);
 
 可以通过以下几种方式来模仿该功能：
 
-- {{ domxref("window.postMessage") }} 可以被用来触发一个 immediate 但会产生回调。请注意， Internet Explorer 8 包含 postMessage 的同步版本，这意味着它不能被用来作为代替品。
+- {{ domxref("window.postMessage") }} 可以被用来触发一个 immediate 但会产生回调。请注意，Internet Explorer 8 包含 postMessage 的同步版本，这意味着它不能被用来作为代替品。
 - [MessageChannel](/zh-CN/docs/Web/API/MessageChannel) 可以在 Web Workers 内部很好的被使用，而 postMessage 的语义意味着它不能在那使用。
 - `setTimeout(fn, 0)`_可以使用_, 然而按照[HTML 规范](https://html.spec.whatwg.org/multipage/webappapis.html#timers), 嵌套深度超过 5 级的定时器，会被限制在 4ms , 他没有为 setImmediate 的天然及时性提供合适的 polyfill.
 
@@ -36,7 +37,7 @@ var immediateID = setImmediate(func);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.setImmediate")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -1,15 +1,8 @@
 ---
-title: 'CSS : Feuilles de style en cascade'
+title: "CSS : Feuilles de style en cascade"
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Landing
-  - Reference
-  - Structure
-  - Styles
-translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
 CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [par le W3C](https://w3.org/Style/CSS/#specs). Ce standard évolue sous forme de niveaux (_levels_), CSS1 est désormais considéré comme obsolète, CSS2.1 correspond à la recommandation et [CSS3](/fr/docs/Web/CSS/CSS3), qui est découpé en modules plus petits, est en voie de standardisation.
@@ -46,7 +39,7 @@ La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qu
 
     - [la syntaxe et les formes du langage](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
     - [la spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) et [l'héritage](/fr/docs/Web/CSS/inheritance)
-    - [les unités et valeurs CSS](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
+    - [les unités et valeurs CSS](/fr/docs/Web/CSS/Valeurs_et_unités_CSS)
     - [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
     - [le bloc conteneur](/fr/docs/Web/CSS/All_About_The_Containing_Block)
     - [l'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) et [le contexte de formatage de blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)

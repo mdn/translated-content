@@ -2,11 +2,12 @@
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
-这是[Gamedev Phaser 教程](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 5 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 5 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码
 
 为了在我们的游戏中的对象之间进行正确的碰撞检测，我们将需要物理学; 本文将向您介绍 Phaser 中的可用内容，以及演示典型的简单设置。
 
@@ -38,8 +39,8 @@ ball.body.velocity.set(150, 150);
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 
@@ -53,22 +54,21 @@ function update() {
 var ball;
 
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = '#eee';
-    game.load.image('ball', 'img/ball.png');
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-    ball = game.add.sprite(50, 50, 'ball');
-    game.physics.enable(ball, Phaser.Physics.ARCADE);
-    ball.body.velocity.set(150, 150);
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  ball = game.add.sprite(50, 50, "ball");
+  game.physics.enable(ball, Phaser.Physics.ARCADE);
+  ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 尝试重新加载`index.html`- 球应该在给定的方向上不断移动。目前，物理引擎的重力和摩擦力设定为零。增加重力将导致球落下，同时摩擦力最终会停止球。
@@ -87,6 +87,6 @@ function update() {
 
 ## 下一步
 
-现在我们可以转到下一课，看看如何让球[从墙上弹起](/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls)。
+现在我们可以转到下一课，看看如何让球[从墙上弹起](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}

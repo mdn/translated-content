@@ -2,6 +2,7 @@
 title: 操控瀏覽器歷史紀錄
 slug: Web/API/History_API
 ---
+
 DOM {{ domxref("window") }} 物件透過 {{ domxref("window.history", "history") }} 物件，提供了進入瀏覽歷史的方式。他透過一些方便的屬性與方法，讓你可以在歷史紀錄中往上一步或往下一步移動，並且讓你——從 HTML5 開始——能操作歷史紀錄堆疊（history stack）的內容。
 
 ## 在歷史紀錄中移動
@@ -58,18 +59,18 @@ HTML5 加入了 [`history.pushState()`](/zh-TW/docs/Web/API/History/pushState) �
 
 ### pushState() 方法範例
 
-假設 http\://mozilla.org/foo.html 執行了下面的 JavaScript：
+假設 `http://mozilla.org/foo.html` 執行了下面的 JavaScript：
 
 ```js
 var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-這會讓網址列顯示 http\://mozilla.org/bar.html，但不會讓瀏覽器去載入 `bar.html`，甚或去檢查 `bar.html` 存在與否。
+這會讓網址列顯示 `http://mozilla.org/bar.html`，但不會讓瀏覽器去載入 `bar.html`，甚或去檢查 `bar.html` 存在與否。
 
-假設現在使用者瀏覽到 http\://google.com，然後點擊上一頁鈕。這時網址列會顯示 http\://mozilla.org/bar.html，頁面會獲得 `popstate` 的事件（_state object_ 會包含一份 `stateObj` 的副件）。頁面長得跟 `foo.html` 很像，但是可能在 `popstate` 事件執行中被修改。
+假設現在使用者瀏覽到 `http://google.com`，然後點擊上一頁鈕。這時網址列會顯示 `http://mozilla.org/bar.html`，頁面會獲得 `popstate` 的事件（_state object_ 會包含一份 `stateObj` 的副件）。頁面長得跟 `foo.html` 很像，但是可能在 `popstate` 事件執行中被修改。
 
-如果我再點一次上一頁鈕， 網址會改變成為 http\://mozilla.org/foo.html，且文件會得到另外一個 `popstate` 事件，此次會包含一個 null state object。同樣的，回上頁鈕不會改變文件的內容，只是文件可能會在 `popstate` 事件中被手動更新。
+如果我再點一次上一頁鈕， 網址會改變成為 `http://mozilla.org/foo.html`，且文件會得到另外一個 `popstate` 事件，此次會包含一個 null state object。同樣的，回上頁鈕不會改變文件的內容，只是文件可能會在 `popstate` 事件中被手動更新。
 
 ### pushState() 方法
 
@@ -82,7 +83,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 - **title**——Firefox 目前忽略了這個參數，雖然他以後有可能會採用。如果以後改變了這個作法，傳送空白的字串應該還會是安全的。另外，你可以傳送一個短的標題來敘述你想要到的 state。
 - **URL**——這個新歷史紀錄的 URL 從這個參數做設定。值得注意的是，在 `pushState()` 被呼叫之後，瀏覽器並不會馬上嘗試載入這個 URL ，但是它可能在以後嘗試載入這個 URL ，例如使用者重新開啟瀏覽器之後。新的 URL 不一定需要為一個絕對的路徑；如果是相對路徑，會依據目前的 URL 來解析。新的 URL 需要與目前 URL 的 origin 是一樣的；否則，pushState() 會丟出一個錯誤的例外。這個參數是選擇性的；如果沒有被指定的話，他會設定為目前文件的 URL。
 
-> **備註：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 {{ geckoRelease("6.0") }} 開始,這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
+> **備註：** 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始,這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
 
 從某種意義上，呼叫 `pushState()` 與設定 `window.location = "#foo"` 是類似的，兩個都會去建立和啟用另一個和目前文件有關的歷史紀錄。但是 `pushState()` 有一些優勢：
 
@@ -103,26 +104,26 @@ In other documents, it creates an element with a `null` namespace URI.
 
 `replaceState()` 很實用的時機是當你要更新目前歷史紀錄的 state object 或是 URL 來反應一些使用者的動作時。
 
-> **備註：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 {{ geckoRelease("6.0") }} 開始, 這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
+> **備註：** 在 Gecko 2.0 到 Gecko 5.0，是採用 JSON 來序列化這個傳送的物件。從 Gecko 6.0 開始, 這個物件是以 [the structured clone algorithm](/zh-TW/DOM/The_structured_clone_algorithm) 序列化。這會允許更多種不同的物件可以被安全的傳送。
 
 ### replaceState() 方法範例
 
-Suppose http\://mozilla.org/foo.html executes the following JavaScript:
+Suppose `http://mozilla.org/foo.html` executes the following JavaScript:
 
 ```js
 var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-The explanation of these two lines above can be found at "Example of pushState() method" section. Then suppose http\://mozilla.org/bar.html executes the following JavaScript:
+The explanation of these two lines above can be found at "Example of pushState() method" section. Then suppose `http://mozilla.org/bar.html` executes the following JavaScript:
 
 ```js
 history.replaceState(stateObj, "page 3", "bar2.html");
 ```
 
-This will cause the URL bar to display http\://mozilla.org/bar2.html, but won't cause the browser to load `bar2.html` or even check that `bar2.html` exists.
+This will cause the URL bar to display `http://mozilla.org/bar2.html`, but won't cause the browser to load `bar2.html` or even check that `bar2.html` exists.
 
-Suppose now that the user now navigates to http\://www\.microsoft.com, then clicks back. At this point, the URL bar will display http\://mozilla.org/bar2.html. If the user now clicks back again, the URL bar will display http\://mozilla.org/foo.html, and totaly bypass bar.html.
+Suppose now that the user now navigates to `http://www.microsoft.com`, then clicks back. At this point, the URL bar will display `http://mozilla.org/bar2.html`. If the user now clicks back again, the URL bar will display `http://mozilla.org/foo.html`, and totaly bypass bar.html.
 
 ### popstate 事件
 
@@ -150,4 +151,4 @@ var currentState = history.state;
 
 ## 瀏覽器相容性
 
-{{Compat("api.History")}}
+{{Compat}}

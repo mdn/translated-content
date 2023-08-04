@@ -1,17 +1,13 @@
 ---
-title: 'ARIA: banner ロール'
-slug: Web/Accessibility/ARIA/Roles/Banner_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Banner_role
+title: "ARIA: banner ロール"
+slug: Web/Accessibility/ARIA/Roles/banner_role
 ---
+
 バナー (`banner`) ロールは、ページの先頭に頻繁に配置される一般的で有益なコンテンツを表します。 これには、通常、ロゴ、会社名、検索アイコン、ページに関連する写真、またはスローガンが含まれます。
 
 ```html
 <div role="banner">
-  <img src="companylogo.svg" alt="会社名"/>
+  <img src="companylogo.svg" alt="会社名" />
   <h1>タイトル</h1>
   <p>サブタイトル</p>
 </div>
@@ -47,8 +43,10 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ```html
 <div role="banner">
-  <a href="#nav" id="skipToMenu" class="skiptocontent">キーボードナビゲーションへ飛ぶ</a>
-  <img src="images/w3c.png" alt="W3C ロゴ">
+  <a href="#nav" id="skipToMenu" class="skiptocontent"
+    >キーボードナビゲーションへ飛ぶ</a
+  >
+  <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
 </div>
@@ -58,8 +56,10 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ```html
 <header>
-  <a href="#nav" id="skipToMenu" class="skiptocontent">キーボードナビゲーションへ飛ぶ</a>
-  <img src="images/w3c.png" alt="W3C ロゴ">
+  <a href="#nav" id="skipToMenu" class="skiptocontent"
+    >キーボードナビゲーションへ飛ぶ</a
+  >
+  <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
 </header>
@@ -71,10 +71,7 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 
@@ -85,4 +82,4 @@ TBD
 - HTML {{htmlelement("header")}} 要素
 - [WC3 Landmarks Example](https://w3c.github.io/aria-practices/examples/landmarks/banner.html)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

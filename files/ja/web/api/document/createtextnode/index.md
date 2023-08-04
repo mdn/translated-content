@@ -2,6 +2,7 @@
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 新しい {{domxref("Text")}} ノードを生成します。このメソッドは HTML 文字をエスケープするのに利用できます。
@@ -18,29 +19,29 @@ var text = document.createTextNode(data);
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  <head>
+    <title>createTextNode example</title>
+    <script>
+      function addTextNode(text) {
+        var newtext = document.createTextNode(text),
+          p1 = document.getElementById("p1");
 
-  p1.appendChild(newtext);
-}
-</script>
-</head>
+        p1.appendChild(newtext);
+      }
+    </script>
+  </head>
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <body>
+    <button onclick="addTextNode('YES! ');">YES!</button>
+    <button onclick="addTextNode('NO! ');">NO!</button>
+    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  <hr />
+    <hr />
 
-  <p id="p1">First line of paragraph.</p>
-</body>
+    <p id="p1">First line of paragraph.</p>
+  </body>
 </html>
 ```
 
@@ -48,9 +49,7 @@ function addTextNode(text) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createtextnode', 'Document: createTextNode')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

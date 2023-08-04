@@ -2,6 +2,7 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 **`PictureInPictureWindow`**接口是一个对象，它可以通过编程的方式获得浮动视频窗口的宽度和高度，并调整浮动视频窗口的大小。
@@ -38,13 +39,15 @@ const video = document.querySelector("video");
 
 function printPipWindowDimensions(evt) {
   const pipWindow = evt.target;
-  console.log(`The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`);
+  console.log(
+    `The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`,
+  );
   // will print:
   // The floating window dimensions are: 640x360px
 }
 
-button.onclick = function() {
-  video.requestPictureInPicture().then(pictureInPictureWindow => {
+button.onclick = function () {
+  video.requestPictureInPicture().then((pictureInPictureWindow) => {
     pictureInPictureWindow.onresize = printPipWindowDimensions;
   });
 };
@@ -56,7 +59,7 @@ button.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.PictureInPictureWindow")}}
+{{Compat}}
 
 ## See also
 

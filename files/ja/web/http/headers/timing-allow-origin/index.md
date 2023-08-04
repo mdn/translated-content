@@ -1,14 +1,8 @@
 ---
 title: Timing-Allow-Origin
 slug: Web/HTTP/Headers/Timing-Allow-Origin
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - Timing-Allow-Origin
-  - header
-translation_of: Web/HTTP/Headers/Timing-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 **`Timing-Allow-Origin`** レスポンスヘッダーは、 [Resource Timing API](/ja/docs/Web/API/Resource_Timing_API) の機能を介して取得された属性の値の表示を許可されているオリジンを指定します。そうでない場合、クロスオリジンの制限によりゼロとして報告されます。
@@ -60,9 +54,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     | 備考                |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Resource Timing 3', '#sec-timing-allow-origin', 'Timing-Allow-Origin')}} | {{Spec2("Resource Timing 3")}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

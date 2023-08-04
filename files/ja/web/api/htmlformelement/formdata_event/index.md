@@ -1,49 +1,61 @@
 ---
-title: 'HTMLFormElement: formdata イベント'
+title: "HTMLFormElement: formdata イベント"
+short-title: formdata
 slug: Web/API/HTMLFormElement/formdata_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef}}
 
-**`formdata`** イベントは、フォームのデータを表すエントリーリストが構築された後に発行されます。このイベントは、フォームが送信されたときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターが呼び出されたときにも発行されます。
+**`formdata`** イベントは、フォームのデータを表す項目リストが構築された後に発行されます。このイベントは、フォームが送信されたときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターが呼び出されたときにも発行されます。
 
-## 一般情報
+このイベントはキャンセル不可で、バブリングしません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th>キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{DOMxRef("FormDataEvent")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onformdata")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+
+```js
+addEventListener("formdata", (event) => {});
+
+onformdata = (event) => {};
+```
+
+## イベント型
+
+{{domxref("FormDataEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("FormDataEvent")}}
+
+## イベントプロパティ
+
+_親インターフェイスである {{domxref("Event")}} から継承したプロパティがあります。_
+
+- {{domxref("FormDataEvent.formData")}}
+  - : イベントが発行されたときにフォームに含まれていたデータを表す {{domxref("FormData")}} オブジェクトが格納されています。
 
 ## 例
 
 ```js
 // フォームの参照を得る
 
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 
 // submit ハンドラー
 
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // フォームの送信時、既定の動作を抑止
   e.preventDefault();
 
+  console.log(formElem.querySelector('input[name="field1"]')); // FOO
+  console.log(formElem.querySelector('input[name="field2"]')); // BAR
+
   // FormData オブジェクトを構築し、 formdata イベントが発行される
-  new FormData(formElem);
+  const formData = new FormData(formElem);
+  // formdata は formdata イベントで変更されます。
+  console.log(formData.get("field1")); // foo
+  console.log(formData.get("field2")); // bar
 });
 
 // データを受け取るための formdata ハンドラー
@@ -52,15 +64,10 @@ formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // イベントオブジェクトからフォームデータを取得する
-  let data = e.formData;
-  for (var value of data.values()) {
-    console.log(value);
-  }
-
-  // XHR でデータを送信
-  var request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  const formData = e.formData;
+  //  formdata イベントでフォームデータを変更する
+  formData.set("field1", formData.get("field1").toLowerCase());
+  formData.set("field2", formData.get("field2").toLowerCase());
 });
 ```
 
@@ -68,18 +75,12 @@ formElem.addEventListener('formdata', (e) => {
 
 ```js
 formElem.onformdata = (e) => {
-  console.log('formdata fired');
+  console.log("formdata fired");
 
-  // イベントオブジェクトからフォームデータを取得する
-  let data = e.formData;
-  for (var value of data.values()) {
-    console.log(value);
-  }
-
-  // XHR でデータを送信
-  var request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // フォームデータを変更
+  const formData = e.formData;
+  formData.set("field1", formData.get("field1").toLowerCase());
+  formData.set("field2", formData.get("field2").toLowerCase());
 };
 ```
 

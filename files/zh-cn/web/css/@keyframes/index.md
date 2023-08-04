@@ -1,10 +1,11 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 ---
+
 {{CSSRef}}
 
-关键帧 **`@keyframes`** [at-rule](/zh-CN/docs/Web/CSS/At-rule) 规则通过在动画序列中定义关键帧（或 waypoints）的样式来控制 CSS 动画序列中的中间步骤。和 [转换 transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 相比，关键帧 keyframes 可以控制动画序列的中间步骤。
+关键帧 **`@keyframes`** [at-rule](/zh-CN/docs/Web/CSS/At-rule) 规则通过在动画序列中定义关键帧（或 waypoints）的样式来控制 CSS 动画序列中的中间步骤。和 [转换 transition](/zh-CN/docs/Web/CSS/CSS_transitions) 相比，关键帧 keyframes 可以控制动画序列的中间步骤。
 
 ```css
 @keyframes slidein {
@@ -42,10 +43,21 @@ JavaScript 可以通过 CSS 对象模型的 {{domxref("CSSKeyframesRule")}} 接�
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -57,10 +69,19 @@ JavaScript 可以通过 CSS 对象模型的 {{domxref("CSSKeyframesRule")}} 接�
 
 ```css
 @keyframes identifier {
-  0% { top: 0; }
-  50% { top: 30px; left: 20px; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
 }
 ```
 
@@ -74,16 +95,26 @@ Firefox 14 开始支持层叠 keyframes。
 
 ```css
 @keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* 忽略 */
-  to   { margin-top: 100px; }
+  from {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 150px !important;
+  } /* 忽略 */
+  to {
+    margin-top: 100px;
+  }
 }
 
 @keyframes important2 {
-  from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* 忽略 */
-         margin-bottom: 50px; }
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* 忽略 */
+    margin-bottom: 50px;
+  }
 }
 ```
 
@@ -106,7 +137,7 @@ Firefox 14 开始支持层叠 keyframes。
 
 ## 示例
 
-参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)。
+参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
 ## 规范
 
@@ -114,9 +145,9 @@ Firefox 14 开始支持层叠 keyframes。
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent") }}

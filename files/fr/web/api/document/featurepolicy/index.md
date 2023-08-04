@@ -1,14 +1,8 @@
 ---
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
-tags:
-  - API
-  - Document
-  - Feature Policy
-  - Feature-Policy
-  - Reference
-translation_of: Web/API/Document/featurePolicy
 ---
+
 {{APIRef("Feature Policy")}}
 
 La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Document")}} retourne l'interface {{domxref("FeaturePolicy")}}, qui fournit une API permettant de consulter facilement les règles de fonctionnalités appliquées sur un document spécifique.
@@ -16,7 +10,7 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Do
 ## Syntaxe
 
 ```js
-var policy = iframeElement.featurePolicy
+var policy = iframeElement.featurePolicy;
 ```
 
 ### Valeur

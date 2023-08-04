@@ -1,7 +1,11 @@
 ---
-title: HTMLTableRowElement.rowIndex
+title: "HTMLTableRowElement: rowIndex プロパティ"
+short-title: rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableRowElement.rowIndex`** は読み取り専用プロパティで、表 ({{HtmlElement("table")}}) 全体に対する行の相対的な位置を表します。
@@ -21,15 +25,30 @@ slug: Web/API/HTMLTableRowElement/rowIndex
 ```html
 <table>
   <thead>
-    <tr><th>品目</th>        <th>価格</th></tr>
+    <tr>
+      <th>品目</th>
+      <th>価格</th>
+    </tr>
   </thead>
   <tbody>
-    <tr><td>バナナ</td>     <td>$2</td></tr>
-    <tr><td>オレンジ</td>     <td>$8</td></tr>
-    <tr><td>トップサーロイン</td> <td>$20</td></tr>
+    <tr>
+      <td>バナナ</td>
+      <td>$2</td>
+    </tr>
+    <tr>
+      <td>オレンジ</td>
+      <td>$8</td>
+    </tr>
+    <tr>
+      <td>トップサーロイン</td>
+      <td>$20</td>
+    </tr>
   </tbody>
   <tfoot>
-    <tr><td>合計</td>       <td>$30</td></tr>
+    <tr>
+      <td>合計</td>
+      <td>$30</td>
+    </tr>
   </tfoot>
 </table>
 ```
@@ -37,7 +56,7 @@ slug: Web/API/HTMLTableRowElement/rowIndex
 ### JavaScript
 
 ```js
-let rows = document.querySelectorAll('tr');
+let rows = document.querySelectorAll("tr");
 
 rows.forEach((row) => {
   let z = document.createElement("td");
@@ -48,7 +67,7 @@ rows.forEach((row) => {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## ブラウザーの互換性
 

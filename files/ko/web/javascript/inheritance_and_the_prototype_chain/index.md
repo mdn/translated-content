@@ -1,13 +1,6 @@
 ---
 title: 상속과 프로토타입
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - JavaScript
-  - 객체지향
-  - 상속
-  - 중급
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
 {{jsSidebar("Advanced")}}
 
@@ -99,7 +92,7 @@ console.log(p.m()); // 13
 
 위에서 언급했듯이, 자바스크립트에서 함수는 속성을 가질 수 있다. 모든 함수에는 `prototype`이라는 특수한 속성이 있다. 아래의 예제 코드는 독립적이라는 것에 유의하자. (아래의 코드 이외에는 웹페이지에 다른 자바스크립트가 없다고 가정하는 것이 좋다.)
 
-최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](https://developer.mozilla.org/ko-KR/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
+최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](/ko/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
 
 ```
     function doSomething(){}
@@ -300,7 +293,7 @@ console.log(d.hasOwnProperty); // undefined이다. 왜냐하면 d는 Object.prot
 
 ### `class` 키워드 이용
 
-ECMAScript2015에는 몇 가지 키워드가 도입되어 [class](/en-US/docs/Web/JavaScript/Reference/Classes)를 구현하였다. 이런 생성 방식은 클래서 기반 언어의 개발자들에게 친숙하게 다가오나 동작 방식이 같지는 않다. 자바스크립트는 여전히 프로토타입 기반으로 남아있다. 새로 도입된 키워드는 {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, 그리고 {{jsxref("Operators/super", "super")}}가 있다.
+ECMAScript2015에는 몇 가지 키워드가 도입되어 [class](/ko/docs/Web/JavaScript/Reference/Classes)를 구현하였다. 이런 생성 방식은 클래서 기반 언어의 개발자들에게 친숙하게 다가오나 동작 방식이 같지는 않다. 자바스크립트는 여전히 프로토타입 기반으로 남아있다. 새로 도입된 키워드는 {{jsxref("Statements/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}}, 그리고 {{jsxref("Operators/super", "super")}}가 있다.
 
 ```js
 'use strict';
@@ -332,7 +325,7 @@ var square = new Square(2);
 
 프로토타입 체인에 걸친 속성 검색으로 성능에 나쁜 영향을 줄 수 있으며, 때때로 치명적일 수 있다. 또한 존재하지도 않는 속성에 접근하려는 시도는 항상 모든 프로토타입 체인인 전체를 탐색해서 확인하게 만든다.
 
-객체의 속성에 걸쳐 루프를 수행 하는 경우 프로토타입 체인 전체의 **모든** 열거자 속성에 대하여 적용된다. 객체 개인 속성인지 프로토타입 체인상 어딘가에 있는지 확인하기 위해서는 Object.prototype에서 모든 오브젝트로 상속된 [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 메소드를 이용할 필요가 있다. 다음 코드를 통하여 구체적인 예를 확인하여 보자.
+객체의 속성에 걸쳐 루프를 수행 하는 경우 프로토타입 체인 전체의 **모든** 열거자 속성에 대하여 적용된다. 객체 개인 속성인지 프로토타입 체인상 어딘가에 있는지 확인하기 위해서는 Object.prototype에서 모든 오브젝트로 상속된 [`hasOwnProperty`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 메소드를 이용할 필요가 있다. 다음 코드를 통하여 구체적인 예를 확인하여 보자.
 
 ```js
 console.log(g.hasOwnProperty('vertices'));
@@ -348,9 +341,9 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 // true
 ```
 
-[`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 메소드만이 속성을 확인하고 프로토타입 체인 전체를 훑지 않게 할 수 있다.
+[`hasOwnProperty`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 메소드만이 속성을 확인하고 프로토타입 체인 전체를 훑지 않게 할 수 있다.
 
-참고: [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)인지 여부만 확인하는 것으로는 충분하지 않다. 여전히 속성이 존재할 수도 있는데 단지 그 값에 `undefined`가 할당되어 있을 수도 있기 때문이다.
+참고: [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)인지 여부만 확인하는 것으로는 충분하지 않다. 여전히 속성이 존재할 수도 있는데 단지 그 값에 `undefined`가 할당되어 있을 수도 있기 때문이다.
 
 ### 좋지 않은 사례: 기본 프로타입의 확장 변형
 
@@ -504,7 +497,7 @@ console.log(msg); // Hello, my name is George
 
 ### 함수형 상속(Functional inheritance)
 
-함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 “JavaScript: The Good Parts”에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.
+함수형 상속(Functional inheritance)이라는 단어는 Douglas Crockford가 자신의 저서 "JavaScript: The Good Parts"에서 창조한 단어이다. 이 방법은 새 속성들을 연결형 상속으로 쌓되 상속 기능을 Factory 함수로 만들어 사용하는 방식이다.
 
 기존의 객체를 확장하는데 쓰이는 함수를 일반적으로 믹스인 함수라 칭한다. 객체 확장에 함수를 사용하는 가장 큰 이점은 Private Data를 클로져를 통해 캡슐화 시킬 수 있다는 점이다.
 

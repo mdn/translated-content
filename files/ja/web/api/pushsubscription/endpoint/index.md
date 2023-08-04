@@ -2,15 +2,16 @@
 title: PushSubscription.endpoint
 slug: Web/API/PushSubscription/endpoint
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェースの **`endpoint`** 読み取り専用プロパティは、プッシュサブスクリプションに関連するエンドポイントを含む {{domxref("USVString")}} を返します。
+{{domxref("PushSubscription")}} インターフェイスの **`endpoint`** 読み取り専用プロパティは、プッシュサブスクリプションに関連するエンドポイントを含む {{domxref("USVString")}} を返します。
 
-エンドポイントは、 プッシュサービスに加入している特定の Service Worker にプッシュメッセージを送信するために使用するプッシュサーバーへのカスタム URL エンドポイントの形式をとります。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントを秘匿する方が良いです。
+エンドポイントは、プッシュサービスに加入している特定のサービスワーカーにプッシュメッセージを送信するために使用するプッシュサーバーへのカスタム URL エンドポイントの形式をとります。このため、他者がこれをハイジャックしてプッシュ機能を乱用しないように、エンドポイントを秘匿する方が良いです。
 
 ## 構文
 
-```
+```js-nolint
 var myEnd = pushSubscription.endpoint;
 ```
 
@@ -26,18 +27,16 @@ navigator.serviceWorker.ready.then(function(reg) {
     console.log(subscription.endpoint);
 
       // この時点で、サブスクリプションエンドポイントをサーバーに送信し、
-      // 保存した後、 後でプッシュメッセージを送信するために使用します。
+      // 保存した後、後でプッシュメッセージを送信するために使用します。
   })
 })
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#widl-PushSubscription-endpoint','endPoint')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushSubscription.endpoint")}}
 

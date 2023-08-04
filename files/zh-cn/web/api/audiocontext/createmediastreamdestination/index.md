@@ -2,11 +2,12 @@
 title: AudioContext.createMediaStreamDestination()
 slug: Web/API/AudioContext/createMediaStreamDestination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的 `createMediaStreamDestination()` 方法用于创建一个新的对象，该对象关联着表示音频流的一个 [WebRTC](/zh-CN/docs/WebRTC) {{domxref("MediaStream")}}，音频流可以存储在本地文件或者被发送到另外一台计算机。
 
-The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection` `addStream()` method.
+The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection.addStream()` method.
 
 For more details about media stream destination nodes, check out the {{domxref("MediaStreamAudioDestinationNode")}} reference page.
 
@@ -30,7 +31,7 @@ When the button is clicked, the oscillator starts, and the `MediaRecorder` is st
 From here, you can play and save the opus file.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>createMediaStreamDestination() demo</title>
@@ -38,42 +39,42 @@ From here, you can play and save the opus file.
   <body>
     <h1>createMediaStreamDestination() demo</h1>
 
-    <p>Encoding a pure sine wave to an Opus file </p>
+    <p>Encoding a pure sine wave to an Opus file</p>
     <button>Make sine wave</button>
     <audio controls></audio>
     <script>
-     var b = document.querySelector("button");
-     var clicked = false;
-     var chunks = [];
-     var ac = new AudioContext();
-     var osc = ac.createOscillator();
-     var dest = ac.createMediaStreamDestination();
-     var mediaRecorder = new MediaRecorder(dest.stream);
-     osc.connect(dest);
+      var b = document.querySelector("button");
+      var clicked = false;
+      var chunks = [];
+      var ac = new AudioContext();
+      var osc = ac.createOscillator();
+      var dest = ac.createMediaStreamDestination();
+      var mediaRecorder = new MediaRecorder(dest.stream);
+      osc.connect(dest);
 
-     b.addEventListener("click", function(e) {
-       if (!clicked) {
-           mediaRecorder.start();
-           osc.start(0);
-           e.target.innerHTML = "Stop recording";
-           clicked = true;
-         } else {
-           mediaRecorder.stop();
-           osc.stop(0);
-           e.target.disabled = true;
-         }
-     });
+      b.addEventListener("click", function (e) {
+        if (!clicked) {
+          mediaRecorder.start();
+          osc.start(0);
+          e.target.innerHTML = "Stop recording";
+          clicked = true;
+        } else {
+          mediaRecorder.stop();
+          osc.stop(0);
+          e.target.disabled = true;
+        }
+      });
 
-     mediaRecorder.ondataavailable = function(evt) {
-       // push each chunk (blobs) in an array
-       chunks.push(evt.data);
-     };
+      mediaRecorder.ondataavailable = function (evt) {
+        // push each chunk (blobs) in an array
+        chunks.push(evt.data);
+      };
 
-     mediaRecorder.onstop = function(evt) {
-       // Make blob out of our blobs, and open it.
-       var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-       document.querySelector("audio").src = URL.createObjectURL(blob);
-     };
+      mediaRecorder.onstop = function (evt) {
+        // Make blob out of our blobs, and open it.
+        var blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+        document.querySelector("audio").src = URL.createObjectURL(blob);
+      };
     </script>
   </body>
 </html>
@@ -87,7 +88,7 @@ From here, you can play and save the opus file.
 
 ## Browser compatibility
 
-{{Compat("api.AudioContext.createMediaStreamDestination")}}
+{{Compat}}
 
 ## See also
 

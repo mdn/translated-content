@@ -1,17 +1,8 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
-tags:
-  - API
-  - FormData
-  - Iteration
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequestAPI
-  - keys
-translation_of: Web/API/FormData/keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.
@@ -33,12 +24,12 @@ Retourne une {{jsxref("Les_protocoles_iteration", "itération")}}.
 ```js
 // Créer un object FormData test
 var formData = new FormData();
-formData.append('cle1', 'valeur1');
-formData.append('cle2', 'valeur2');
+formData.append("cle1", "valeur1");
+formData.append("cle2", "valeur2");
 
 // Affiche les clés
 for (var key of formData.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

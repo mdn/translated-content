@@ -1,15 +1,8 @@
 ---
 title: 빼기 할당 (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Subtraction_assignment
-browser-compat: javascript.operators.subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 빼기 할당 연산자(`-=`)는 오른쪽 피연산자의 값을 변수에서 뺀 결과를 다시 변수에 할당합니다.

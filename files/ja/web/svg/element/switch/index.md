@@ -1,20 +1,13 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
-  - SVG コンテナー
-  - 要素
-translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 **`<switch>`** は [SVG](/ja/docs/Web/SVG) の要素で、その直接の子要素の {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} 属性を順に評価し、これらの属性が true と評価された最初の子要素を描画します。他の直接の子要素はバイパスされ、描画されません。子要素が {{SVGElement("g")}} のようなコンテナー要素であった場合、そのサブツリーも処理されたり描画されたりするか、バイパスされたり描画されなかったりします。
 
-> **Note:** `display` および `visibility` プロパティは、 `<switch>` 要素の処理には何の影響もありません。特に、子に `display:none` を設定しても、 `<switch>` 処理の真偽テストには影響しません。
+> **メモ:** `display` および `visibility` プロパティは、 `<switch>` 要素の処理には何の影響もありません。特に、子に `display:none` を設定しても、 `<switch>` 処理の真偽テストには影響しません。
 
 ## 使用コンテキスト
 
@@ -67,10 +60,7 @@ translation_of: Web/SVG/Element/switch
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                     | 備考                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}     | {{Spec2('SVG2')}} | {{SVGAttr("systemLanguage")}} 属性の評価を明確にしました。 |
-| {{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義                                                              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,9 +1,8 @@
 ---
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
-translation_of: Web/JavaScript/Reference/Global_Objects/String/at
-browser-compat: javascript.builtins.String.at
 ---
+
 {{JSRef}}
 
 La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant le codet UTF-16 présent dans la chaîne courante à l'emplacement indiqué en argument. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
@@ -13,7 +12,7 @@ La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaî
 ## Syntaxe
 
 ```js
-at(indice)
+at(indice);
 ```
 
 ### Paramètres
@@ -37,12 +36,12 @@ function dernierCar(str) {
   return str.at(-1);
 }
 
-let refFacture = 'maFacture01';
+let refFacture = "maFacture01";
 
 console.log(dernierCar(refFacture));
 // Affiche '1' dans la console
 
-refFacture = 'maFacture02';
+refFacture = "maFacture02";
 
 console.log(dernierCar(refFacture));
 // Affiche '2' dans la console
@@ -56,7 +55,7 @@ On compare ici différentes méthodes pour sélectionner l'avant-dernier caract�
 const maChaine = "Vers l'infini et au-delà !";
 
 // En utilisant la propriété length et la méthode charAt()
-const avecLength = maChaine.charAt(maChaine.length-2);
+const avecLength = maChaine.charAt(maChaine.length - 2);
 console.log(avecLength); // Affiche 'à' dans la console
 
 // En utilisant la méthode slice()

@@ -2,6 +2,7 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.scrollLeft`** 属性可以读取或设置元素滚动条到元素左边的距离。
@@ -61,10 +62,10 @@ element.scrollLeft = 10;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 
@@ -76,9 +77,9 @@ button.onclick = function () {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Element.scrollLeft")}}
+{{Compat}}
 
 ## 参见
 

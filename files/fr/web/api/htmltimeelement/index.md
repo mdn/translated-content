@@ -1,8 +1,8 @@
 ---
 title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
-translation_of: Web/API/HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLTimeElement`** fournit des propriétés spéciales (en plus de celles fournies en héritage par l'interface {{domxref("HTMLElement")}}) pour manipuler les éléments {{HTMLElement("time")}}.
@@ -14,7 +14,7 @@ L'interface **`HTMLTimeElement`** fournit des propriétés spéciales (en plus d
 _Hérite des propriétés de {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : C'est une {{domxref("DOMString")}} qui reflète l'attribut {{htmlattrxref("datetime", "time")}} de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.
+  - : C'est une {{domxref("DOMString")}} qui reflète l'attribut [`datetime`](/fr/docs/Web/HTML/Element/time#datetime) de l'élément HTML correspondant, dans une forme interprétable par un ordinateur de la date et de l'heure.
 
 ## Méthodes
 

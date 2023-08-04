@@ -1,20 +1,15 @@
 ---
-title: isSecureContext
+title: isSecureContext 全局属性
 slug: Web/API/isSecureContext
 ---
-{{APIRef()}}{{SeeCompatTable}}
 
-**`isSecureContext`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，返回一个布尔值，标识当前上下文是否安全，安全（true）或不安全（false）。
+{{APIRef()}}
 
-## 语法
+全局只读属性 **`isSecureContext`** 返回一个布尔值，指示当前[上下文是安全的](/zh-CN/docs/Web/Security/Secure_Contexts)（`true`）还是不安全的（`false`）。
 
-```plain
-var isItSecure = self.isSecureContext; // 或者直接使用 isSecureContext
-```
+## 值
 
-### 类型
-
-{{domxref("Boolean")}}.
+一个布尔值，`true` 或 `false`。
 
 ## 规范
 
@@ -22,8 +17,8 @@ var isItSecure = self.isSecureContext; // 或者直接使用 isSecureContext
 
 ## 浏览器兼容性
 
-{{Compat("api.isSecureContext")}}
+{{Compat}}
 
-## 参考
+## 参见
 
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
+- [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)

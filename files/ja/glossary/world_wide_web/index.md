@@ -2,6 +2,7 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 ---
+
 _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と呼ばれ、{{Glossary("Internet", "インターネット")}} を通じて公開されたウェブページが相互に接続されたシステムのことです。ウェブはインターネットと同義ではありません。ウェブは、インターネット上に構築された多くのアプリケーションの中の一つなのです。
 
 ティム・バーナーズ=リー卿は、World Wide Web として知られることとなったアーキテクチャを提唱しました。彼は、1990 年に世界初のウェブ {{Glossary("Server","サーバー")}} とウェブ {{Glossary("Browser","ブラウザー")}}、そしてウェブページを CERN 物理学研究所の自身のコンピューター上に構築しました。1991 年に、彼は alt.hypertext ニュースグループで自身の成果を公表しました。ウェブが世界で初めて公になった瞬間でした。
@@ -25,5 +26,5 @@ _World Wide Web_ は、一般に **WWW**, **W3**, もしくは **ウェブ** と
 
 ### 基礎知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "World Wide Web")}}
+- Wikipedia 上の [World Wide Web](https://ja.wikipedia.org/wiki/World_Wide_Web)
 - [W3C のウェブサイト](http://w3.org)

@@ -1,14 +1,8 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/frameElement
 ---
+
 {{ApiRef}}
 
 La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElement("iframe")}} ou {{HTMLElement("object")}}) dans lequel la fenêtre est intégrée.
@@ -18,7 +12,7 @@ La propriété **`Window.frameElement`** renvoie l'élément (tel que {{HTMLElem
 ## Syntaxe
 
 ```js
-const frameEl = window.frameElement
+const frameEl = window.frameElement;
 ```
 
 ### Valeur
@@ -31,7 +25,7 @@ L'élément dans lequel la fenêtre est intégrée. Si la fenêtre n'est pas int
 const frameEl = window.frameElement;
 // Si nous sommes incorporés, modifiez l'URL de l'élément contenant en 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 

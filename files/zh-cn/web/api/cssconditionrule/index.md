@@ -2,6 +2,7 @@
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSConditionRule** 对象表示单个条件 CSS 规则，由条件和语句块组成。继承至 {{domxref("CSSGroupingRule")}}.
@@ -35,8 +36,8 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## Browser compatibility
 
-{{Compat("api.CSSConditionRule")}}
+{{Compat}}
 
 ## See also
 
-- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/DOM/Using_dynamic_styling_information)

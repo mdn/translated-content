@@ -2,6 +2,7 @@
 title: Express 教程 2：创建站点框架
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -28,7 +29,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## 概览
 
-本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其它代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
+本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
@@ -47,12 +48,12 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 你应该已经安装好了生成器，它是 [设置 Node 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：
 
 ```bash
-$ sudo npm install express-generator -g
+sudo npm install express-generator -g
 ```
 
 生成器有许多选项，可以使用 `--help`（或 `-h`）命令进行查看：
 
-![express 生成器的帮助信息](https://mdn.mozillademos.org/files/16407/express-help.png)
+![express 生成器的帮助信息](express-help.png)
 
 大意如下：
 
@@ -68,7 +69,7 @@ $ express --help
         --pug            添加 pug 引擎支持
         --hbs            添加 handlebars 引擎支持
     -H, --hogan          添加 hogan.js 引擎支持
-    -v, --view <engine>  添加 <engine> 试图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
+    -v, --view <engine>  添加 <engine> 视图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
     -c, --css <engine>   添加 <engine> 样式表引擎支持 (less|stylus|compass|sass) (默认为纯 css)
         --git            添加 .gitignore
     -f, --force          对非空文件夹强制执行
@@ -78,7 +79,7 @@ $ express --help
 可以直接运行 express 命令，将使用 Jade 视图引擎和纯 CSS 在当前目录中创建项目。（如果指定目录名，则在子目录中创建项目）。
 
 ```bash
-$ express
+express
 ```
 
 还可以使用 `--view` 选择视图（模板）引擎，并且/或者使用 `--css` 选择 CSS 生成引擎。
@@ -131,7 +132,7 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 首先，进入准备放置项目的目录，然后在命令提示符运行 Express 应用生成器，生成器将创建（并列出）项目的文件：
 
-![用 express 生成器生成一个应用](https://mdn.mozillademos.org/files/16408/express.png)
+![用 express 生成器生成一个应用](express.png)
 
 生成器在最后还告诉你如何安装（**package.json** 中所列的）依赖，以及如何运行该应用。
 
@@ -141,21 +142,21 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 1. 首先，安装依赖项（`install` 命令将获取项目的 **package.json** 文件中列出的所有依赖项包）。
 
-    ```bash
-    $ npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 2. 然后运行该应用。
 
-    ```bash
-    $ DEBUG=express-locallibrary-tutorial:* npm start
-    ```
+   ```bash
+   DEBUG=express-locallibrary-tutorial:* npm start
+   ```
 
-3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
+3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](success.png)
 
 一个 Express 应用就配置成功了，它托管于 localhost:3000。
 
-> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](https://mdn.mozillademos.org/files/16409/npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
+> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
 
 ## 文件改动时重启服务器
 
@@ -164,13 +165,13 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 [nodemon](https://github.com/remy/nodemon) 是最简便的自动化工具之一。通常将其全局安装（因为它是一个“工具”）：
 
 ```bash
-$ sudo npm install -g nodemon
+sudo npm install -g nodemon
 ```
 
 这里还可以把它作为开发依赖将安装在本地，于是使用这个项目的开发人员只要安装这个应用就能自动获得。通过以下命令将其安装在骨架项目的根目录：
 
 ```bash
-$ npm install --save-dev nodemon
+npm install --save-dev nodemon
 ```
 
 项目的 **package.json** 文件将自动添加一个新的属性：
@@ -193,7 +194,7 @@ $ npm install --save-dev nodemon
 现在可以用新建的 `devstart` 命令启动服务器：
 
 ```bash
-$ DEBUG=express-locallibrary-tutorial:* npm run devstart
+DEBUG=express-locallibrary-tutorial:* npm run devstart
 ```
 
 现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。
@@ -289,12 +290,12 @@ $ DEBUG=express-locallibrary-tutorial:* npm run devstart
  * 模块依赖项。
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **备注：** `require()` 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定 **app.js** 模块，并省略了 .**js** 扩展名（可选）。
 
-文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其它内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
+文件的其余部分先为 `app` 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其他内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。
 
 ### app.js
 
@@ -309,21 +310,21 @@ module.exports = app;
 
 上文的 **www** 入口文件中 `require()` 的 `app` 就是这里导出的。
 
-我们来详细了解一下 **app.js** 文件。首先，它使用 `require()` 导入了一些实用 node 库，其中包括之前用 NPM 下载的 `express`，`http-errors`，`morgan` 和 _`cookie-parser`，还有一个_ *`path` *库，它是用于解析文件和目录的核心 node 库。
+我们来详细了解一下 **app.js** 文件。首先，它使用 `require()` 导入了一些实用 node 库，其中包括之前用 NPM 下载的 _`express`_、_`http-errors`_、_`morgan`_ 和 _`cookie-parser`_，还有一个 _`path`_ 库，它是用于解析文件和目录的核心 node 库。
 
 ```js
-var express = require('express');
-var createError = require('http-errors');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var path = require('path');
+var express = require("express");
+var createError = require("http-errors");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var path = require("path");
 ```
 
 然后 `require()` 的是用户路由目录中的模块。这些模块/文件用于处理特定的“路由”（URL 路径）。可以通过添加新文件来扩展骨架应用，比如添加图书相关的路由来列出所有馆藏书目。
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **备注：** 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。
@@ -335,50 +336,50 @@ var app = express();
 
 // view engine setup
 // 视图引擎设定
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 下一组 `app.use()` 调用将中间件库添加进请求处理链。除了之前导入的第三方库之外，我们还使用 `express.static` 中间件将项目 **/public** 目录下所有静态文件托管至根目录。
 
 ```js
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 所有中间件都已设置完毕，现在把（之前导入的）路由处理器添加到请求处理链中。从而为网站的不同部分定义具体的路由：
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
-> **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 ` users在``/profile ` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
+> **备注：** 这些路径（`'/'` 和 '`/users'`）将作为导入路由的前缀。如果导入的模块 `users` 在 `/profile` 定义了路由，则可以在 `/users/profile` 访问该路由。我们将在后面的文章中，详细讨论路由。
 
 最后一个中间件为错误和 HTTP 404 响应添加处理方法。
 
 ```js
 // catch 404 and forward to error handler
 // 捕获 404 并抛给错误处理器
-app.use(function(req, res, next) {
-   next(createError(404));
+app.use(function (req, res, next) {
+  next(createError(404));
 });
 
 // error handler
 // 错误处理器
-app.use(function(err, req, res, next) {
-   // set locals, only providing error in development
-   // 设置 locals，只在开发环境提供错误信息
-   res.locals.message = err.message;
-   res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+  // set locals, only providing error in development
+  // 设置 locals，只在开发环境提供错误信息
+  res.locals.message = err.message;
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
-   // render the error page
-   // 渲染出错页面
-   res.status(err.status || 500);
-   res.render('error');
+  // render the error page
+  // 渲染出错页面
+  res.status(err.status || 500);
+  res.render("error");
 });
 ```
 
@@ -390,15 +391,15 @@ module.exports = app;
 
 ### 路由
 
-路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 ​​ 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
+路由文档 **/routes/users.js** 如下所示（由于路由文件均使用类似结构，所以 **index.js** 略过不讲）。首先加载 `express` 模块 并获取 `express.Router` 对象（命名为 `router`）。然后为 `router` 指定路由，最后导出 `router`（就可以导入 **app.js** 了）。
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -416,8 +417,8 @@ module.exports = router;
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 
@@ -441,21 +442,9 @@ block content
 
 下一节我们开始修改骨架，让它具备一些图书馆网站的功能。
 
-## 另请参阅
+## 参见
 
 - [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) （Express 中文镜像文档）
 - [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## 本章目录
-
-- [Express/Node 入门](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [设置 Node（Express）开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2：创建站点框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3：使用数据库（Mongoose）](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5：显示图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6：使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7：部署至生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

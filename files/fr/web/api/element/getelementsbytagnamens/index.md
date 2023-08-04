@@ -1,14 +1,8 @@
 ---
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("HTMLCollection")}} avec le nom de balise donné appartenant à l'espace de noms donné. Elle est semblable à la méthode {{Domxref("Document.getElementsByTagNameNS")}} mais cette dernière recherche sur l'ensemble du document tandis que `getElementsByTagNameNS()` recherche parmi les descendants de l'élément courant.
@@ -16,7 +10,7 @@ La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("H
 ## Syntaxe
 
 ```js
-elements = element.getElementsByTagNameNS(namespaceURI,localName);
+elements = element.getElementsByTagNameNS(namespaceURI, localName);
 ```
 
 ### Paramètres

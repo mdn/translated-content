@@ -1,13 +1,8 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - CSS Cascade
-  - Layout
-  - Reference
-translation_of: Web/CSS/unset
 ---
+
 {{CSSRef}}
 
 CSS **`unset`** 키워드를 적용한 속성은, 부모로부터 상속할 값이 존재하면 상속값을, 그렇지 않다면 [초깃값](/ko/docs/Web/CSS/initial_value)을 사용합니다. 다르게 표현하자면, 전자일 땐 {{cssxref("inherit")}} 키워드처럼, 후자일 땐 {{cssxref("initial")}} 키워드처럼 동작합니다. {{cssxref("all")}} 단축 속성을 포함한 모든 속성에 사용할 수 있습니다.

@@ -2,6 +2,7 @@
 title: 附加元件
 slug: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 附加元件允許開發者擴充並訂製 Firefox 的功能。它們使用標準的 Web 技術－－JavaScript、HTML、CSS、還有一些專門的 JavaScript API－－寫成。另外，附加元件還能：
@@ -55,18 +56,6 @@ WebExtensions 是被設計為跨瀏覽器通用的：為 Firefox 撰寫的 WebEx
 ### 附加元件論壇
 
 使用[附加元件討論論壇](https://discourse.mozilla-community.org/c/add-ons)討論附加元件方面的開發並取得協助。
-
-### 電郵群組
-
-請使用 **dev-addons** 群組討論附加元件開發生態圈，包含 WebExtension 系統開發與 AMO：
-
-- [dev-addons list info](https://mail.mozilla.org/listinfo/dev-addons)
-- [dev-addons archives](https://mail.mozilla.org/pipermail/dev-addons/)
-
-請使用 **webextensions-support** list 以取得移植到 WebExtension 的協助：
-
-- [webextensions-support list info](https://mail.mozilla.org/listinfo/webextensions-support)
-- [webextensions-support archives](https://mail.mozilla.org/private/webextensions-support/)
 
 ### IRC
 

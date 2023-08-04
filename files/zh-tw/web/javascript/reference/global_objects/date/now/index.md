@@ -2,6 +2,7 @@
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
+
 {{JSRef}}
 
 **`Date.now()`** 方法回傳自 1970/01/01 00:00:00 UTC 起經過的毫秒數。

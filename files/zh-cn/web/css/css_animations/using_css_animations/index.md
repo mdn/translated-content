@@ -1,7 +1,8 @@
 ---
 title: 使用 CSS 动画
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 **CSS animations** 使得可以将从一个 CSS 样式配置转换到另一个 CSS 样式配置。动画包括两个部分：描述动画的样式规则和用于指定动画开始、结束以及中间点样式的关键帧。
@@ -79,9 +80,11 @@ p {
 第二帧出现在 100%（此例中使用了别名 `to`）。元素的左边距设为 0%，宽设为 100%，使得动画结束时元素与窗口左边界对齐。
 
 ```html
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("文本滑过浏览器窗口","100%","250")}}
@@ -118,9 +121,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 在动画序列执行到 75% 的时候，标题元素的左边距为 25%，宽度为 150%。
@@ -154,9 +159,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("重复动画","100%","250")}}
@@ -189,9 +196,11 @@ p {
 ```
 
 ```html hidden
-<p>The Caterpillar and Alice looked at each other for some time in silence:
-at last the Caterpillar took the hookah out of its mouth, and addressed
-her in a languid, sleepy voice.</p>
+<p>
+  The Caterpillar and Alice looked at each other for some time in silence: at
+  last the Caterpillar took the hookah out of its mouth, and addressed her in a
+  languid, sleepy voice.
+</p>
 ```
 
 {{EmbedLiveSample("来回运动","100%","250")}}
@@ -218,38 +227,38 @@ her in a languid, sleepy voice.</p>
 
 @-moz-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-    margin-left:0%;
-    width:100%;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 
 @-webkit-keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 @keyframes slidein {
   from {
-    margin-left:100%;
-    width:300%
+    margin-left: 100%;
+    width: 300%;
   }
 
   to {
-   margin-left:0%;
-   width:100%;
- }
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 ```
 
@@ -275,7 +284,7 @@ e.className = "slidein";
 ```js
 function listener(e) {
   var l = document.createElement("li");
-  switch(e.type) {
+  switch (e.type) {
     case "animationstart":
       l.innerHTML = "Started: elapsed time is " + e.elapsedTime;
       break;
@@ -308,11 +317,15 @@ function listener(e) {
 ```html
 <body>
   <h1 id="watchme">Watch me move</h1>
-  <p>This example shows how to use CSS animations to make <code>h1</code> elements
-  move across the page.</p>
-  <p>In addition, we output some text each time an animation event fires, so you can see them in action.</p>
-  <ul id="output">
-  </ul>
+  <p>
+    This example shows how to use CSS animations to make
+    <code>h1</code> elements move across the page.
+  </p>
+  <p>
+    In addition, we output some text each time an animation event fires, so you
+    can see them in action.
+  </p>
+  <ul id="output"></ul>
 </body>
 ```
 

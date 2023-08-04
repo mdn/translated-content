@@ -2,7 +2,8 @@
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
+
+{{SVGRef}}
 
 This attribute specifies the interpolation mode for the animation. The default mode is **linear**, however if the attribute does not support linear interpolation (e.g. for strings), the `calcMode` attribute is ignored and discrete interpolation is used.
 

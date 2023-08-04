@@ -1,11 +1,8 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-tags:
-  - API
-  - DOM
-translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 L'interface abstraite **`CharacterData`** représente un objet {{domxref("Node")}} (_noeud_) qui contient des caractères. C'est une interface abstraite, ce qui signifie qu'il n'existe aucun objet de type `CharacterData` : elle est implémentée par d'autres interfaces comme {{domxref("Text")}}, {{domxref("Comment")}} ou {{domxref("ProcessingInstruction")}} qui ne sont pas abstraites.
@@ -27,7 +24,7 @@ _Hérite des propriétés de son parent {{domxref("Node")}} et implémente les i
 
 ## Méthodes
 
-*Hérite des méthodes de ses parents, [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget).*
+_Hérite des méthodes de ses parents, [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget)._
 
 - {{domxref("CharacterData.appendData()")}}
   - : Ajoute la {{domxref("DOMString")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{domxref("DOMString")}} concaténée .

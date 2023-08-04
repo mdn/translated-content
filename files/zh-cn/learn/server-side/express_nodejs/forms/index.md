@@ -1,7 +1,8 @@
 ---
-title: 'Express 教程 6: 使用表单'
+title: "Express 教程 6: 使用表单"
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 在此教程中我们会教你如何使用 Express 并且结合 Pug 来实现 HTML 表单，并且如何从数据库中创建，更新和删除文档。
@@ -13,7 +14,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
       <td>
         <p>
           完成前面所有的教程，包括
-          <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
+          <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
             >Express 教程第 5 章：展示图书馆数据</a
           >
         </p>
@@ -30,7 +31,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ## 概览
 
-[HTML 表单](/en-US/docs/Web/Guide/HTML/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
+[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
 
 但是表单同样也很复杂！开发者需要为表单编写 HTML，在服务器上验证，并且正确去除有害的数据（浏览器上也可能需要），对于任何不合法的字段，需要传给用户相应的错误信息，当数据成功提交后，处理数据，并设法通知用户提交成功。
 
@@ -50,9 +51,13 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -80,7 +85,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 1. 在用户第一次请求时显示默认表单。
 
-    - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
+   - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
 
 2. 接收用户提交的数据，通常是在 HTTP `POST`请求中。
 3. 验证并清理数据。
@@ -114,8 +119,8 @@ npm install express-validator --save
 要在我们的控制器中使用验证器，我们必须从'**express-validator/check**'和'**express-validator/filter**'模块中，导入我们想要使用的函数，如下所示：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 有许多可用的功能，允许您一次检查和清理请求参数，正文，标头，cookie 等数据，或所有数据。对于本教程，我们主要使用`body`， `sanitizeBody`，和 `validationResult`（如上面“导入”的）。
@@ -131,7 +136,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
   您还可以用菊花链式连接不同的验证器，并添加前面验证器为真时显示的消息。
 
-- ```js
+  ```js
   body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
@@ -149,17 +154,16 @@ const { sanitizeBody } = require('express-validator/filter');
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   我们使用验证结果的`isEmpty()`方法，来检查是否存在错误，并使用其`array()`方法，来获取错误消息集合。有关更多信息，请参[阅验证结果 API](https://github.com/ctavan/express-validator#validation-result-api)。
@@ -205,10 +209,10 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express 表单子文件
@@ -254,15 +258,3 @@ Express, node, 与 NPM 上面的第三方套件，提供你需要的每样东西
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm 文档).
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程
-
-- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由与控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

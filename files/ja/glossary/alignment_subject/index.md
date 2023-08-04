@@ -2,6 +2,7 @@
 title: Alignment subject (配置対象物)
 slug: Glossary/Alignment_Subject
 ---
+
 [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)では、**配置対象物**はそのプロパティによって配置されるものを指します。
 
 {{cssxref("justify-self")}} や {{cssxref("align-self")}} が設定されている場合、配置対象物はこれらのプロパティが設定されているボックスのマージンボックスです。そのボックスの書字方向を使用します。

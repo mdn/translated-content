@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Credentials`** 响应头用于在请求要求包含 credentials（{{domxref("Request.credentials")}} 的值为 `include`）时，告知浏览器是否可以将对请求的响应暴露给前端 JavaScript 代码。
@@ -14,9 +15,9 @@ Credentials 可以是 cookies、authorization headers 或 TLS client certificate
 
 `Access-Control-Allow-Credentials` 标头需要与 {{domxref("XMLHttpRequest.withCredentials")}} 或 Fetch API 的 {{domxref("Request.Request()", "Request()")}} 构造函数中的 `credentials` 选项结合使用。Credentials 必须在前后端都被配置（即 `Access-Control-Allow-Credentials` header 和 XHR 或 Fetch request 中都要配置）才能使带 credentials 的 CORS 请求成功。
 
-| 头部类型                                         | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 头部类型                              | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -41,7 +42,7 @@ Access-Control-Allow-Credentials: true
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -50,8 +51,8 @@ xhr.send(null);
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## 规范

@@ -1,7 +1,11 @@
 ---
-title: 'Element: copy イベント'
+title: "Element: copy イベント"
+short-title: copy
 slug: Web/API/Element/copy_event
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
+
 {{APIRef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
@@ -12,16 +16,16 @@ slug: Web/API/Element/copy_event
 
 ただし、ハンドラーがクリップボードのデータを*読み取る*ことはできません。
 
-[合成で](/ja/docs/Web/Events/Creating_and_triggering_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
+[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `copy` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('copy', (event) => { });
+addEventListener("copy", (event) => {});
 
-oncopy = (event) => { };
+oncopy = (event) => {};
 ```
 
 ## イベント型
@@ -42,24 +46,25 @@ oncopy = (event) => { };
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const source = document.querySelector('div.source');
+const source = document.querySelector("div.source");
 
-source.addEventListener('copy', (event) => {
-    const selection = document.getSelection();
-    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
-    event.preventDefault();
+source.addEventListener("copy", (event) => {
+  const selection = document.getSelection();
+  event.clipboardData.setData("text/plain", selection.toString().toUpperCase());
+  event.preventDefault();
 });
 ```
 

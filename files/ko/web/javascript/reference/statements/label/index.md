@@ -1,9 +1,8 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-translation_of: Web/JavaScript/Reference/Statements/label
-browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 **레이블 구문**은 {{jsxref("Statements/break", "break")}}나 {{jsxref("Statements/continue", "continue")}} 구문과 함께 사용할 수 있다. 원하는 식별자로 구문 앞에 레이블을 추가할 수 있다.
@@ -28,7 +27,7 @@ browser-compat: javascript.statements.label
 
 자바스크립트에는 goto 구문이 없다는 것에 주의. break나 continue에서만 레이블을 사용할 수 있다.
 
-[strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
+[strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 코드에서 "let"을 레이블 이름으로 사용할 수 없다. {{jsxref("SyntaxError")}}를 발생시킨다. (let은 허용되지 않는 식별자이다.)
 
 ## 예제
 
@@ -146,7 +145,7 @@ ECMAScript 2015에서, 레이블 붙인 함수 선언문은 [web compatibility a
 L: function F() {}
 ```
 
-[strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 에서는 {{jsxref("SyntaxError")}}를 발생시킨다.
+[strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 에서는 {{jsxref("SyntaxError")}}를 발생시킨다.
 
 ```js
 'use strict';
@@ -154,7 +153,7 @@ L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```
 
-[Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*)는 strict code도 non-strict code에서도 레이블 붙일 수 없다.
+[Generator functions](/ko/docs/Web/JavaScript/Reference/Statements/function*)는 strict code도 non-strict code에서도 레이블 붙일 수 없다.
 
 ```js
 L: function* F() {}

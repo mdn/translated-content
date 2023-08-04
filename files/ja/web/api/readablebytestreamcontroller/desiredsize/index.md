@@ -2,6 +2,7 @@
 title: ReadableByteStreamController.desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`desiredSize`** 読み取り専用プロパティは、ストリームの内部キューを満たすために必要な希望サイズを返します。
@@ -22,9 +23,7 @@ var desiredSize = readableByteStreamController.desiredSize;
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rbs-controller-desired-size","desiredSize")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

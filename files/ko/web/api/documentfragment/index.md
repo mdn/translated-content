@@ -1,17 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Documents
-  - Interface
-  - Reference
-  - Web Components
-browser-compat: api.DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 **`DocumentFragment`** 인터페이스는 아주 작고 부모를 갖지 않는 문서 객체를 나타냅니다.
@@ -74,18 +65,18 @@ translation_of: Web/API/DocumentFragment
 ### JavaScript
 
 ```js
-const list = document.querySelector('#list')
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const list = document.querySelector("#list");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
-const fragment = new DocumentFragment()
+const fragment = new DocumentFragment();
 
 fruits.forEach((fruit) => {
-  const li = document.createElement('li')
-  li.textContent = fruit
-  fragment.appendChild(li)
-})
+  const li = document.createElement("li");
+  li.textContent = fruit;
+  fragment.appendChild(li);
+});
 
-list.appendChild(fragment)
+list.appendChild(fragment);
 ```
 
 ### 결과

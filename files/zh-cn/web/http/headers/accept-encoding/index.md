@@ -2,6 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 HTTP 请求头 **Accept-Encoding** 会将客户端能够理解的内容编码方式——通常是某种压缩算法——进行通知（给服务端）。通过内容协商的方式，服务端会选择一个客户端提议的方式，使用并在响应头 {{HTTPHeader("Content-Encoding")}} 中通知客户端该选择。
@@ -17,9 +18,9 @@ HTTP 请求头 **Accept-Encoding** 会将客户端能够理解的内容编码方
 >
 > - 另外两种编码方式—— bzip 和 bzip2 ——有时候也会用到，尽管并未在标准中出现。这两种方式实现了 UNIX 系统上的同名程序所采用的算法。注意第一种由于专利许可问题已经停止维护。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 

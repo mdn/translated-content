@@ -1,14 +1,8 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
+
 {{JSRef}}
 
 **`Object.preventExtensions()`** メソッドはすでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。
@@ -62,16 +56,16 @@ Object.isExtensible(empty); // === false
 // 新しいプロパティを追加する際、エラーが発生します
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // TypeError が発生
 
 // 厳格モードでは、拡張不可能なオブジェクトに
 // 新たなプロパティを追加しようとすると TypeError が発生します
 function fail() {
-  'use strict';
+  "use strict";
   // TypeError が発生
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -81,7 +75,7 @@ fail();
 ```js
 var fixed = Object.preventExtensions({});
 // TypeError が発生
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
 ### オブジェクト以外の型強制
@@ -98,9 +92,7 @@ Object.preventExtensions(1);
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

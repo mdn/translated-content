@@ -2,6 +2,7 @@
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 该 **`ArrayBuffer[@@species]`** 访问器属性会返回 `ArrayBuffer` 构造器。
@@ -29,7 +30,9 @@ ArrayBuffer[Symbol.species]; // function ArrayBuffer()
 ```js
 class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 

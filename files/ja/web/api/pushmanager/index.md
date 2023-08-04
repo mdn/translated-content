@@ -2,25 +2,26 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-[Push API](/ja/docs/Web/API/Push_API) の `PushManager` インターフェースは、3rd パーティーのサーバーからの通知だけではなく、プッシュ通知へのリクエスト URL を取得するための方法を提供します。
+[Push API](/ja/docs/Web/API/Push_API) の `PushManager` インターフェイスは、サードパーティのサーバーからの通知だけではなく、プッシュ通知へのリクエスト URL を取得するための方法を提供します。
 
-このインターフェースは、{{domxref("ServiceWorkerRegistration.pushManager")}} プロパティを経由してアクセスできます。
+このインターフェイスは、{{domxref("ServiceWorkerRegistration.pushManager")}} プロパティを経由してアクセスできます。
 
-> **Note:** **ノート**：このインターフェースは、廃止された {{domxref("PushRegistrationManager")}}で以前に提案されていた機能をリプレースしています。
+> **メモ:** このインターフェイスは、廃止された {{domxref("PushRegistrationManager")}} で以前に提案されていた機能をリプレースしています。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("PushManager.supportedContentEncodings")}}
   - : プッシュメッセージのペイロードの暗号化でサポートされているコンテンツエンコーディングの配列を返します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("PushManager.getSubscription()")}}
   - : 既存のプッシュサブスクリプションを受け取ります。これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} を解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合、`null` 値で解決されます。
 - {{domxref("PushManager.permissionState()")}}
-  - : 現在の {{domxref("PushSubscription")}} の許可状況で解決される {{jsxref("Promise")}} を返します。許可状況は `'granted'`、`'denied'`、`'prompt' `のいずれかです。
+  - : 現在の {{domxref("PushSubscription")}} の許可状況で解決される {{jsxref("Promise")}} を返します。許可状況は `'granted'`、`'denied'`、`'prompt'` のいずれかです。
 - {{domxref("PushManager.subscribe()")}}
   - : プッシュサービスを提供します。プッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。現在の service worker に既存のサブスクリプションがない場合、新しいプッシュサブスクリプションが生成されます。
 
@@ -62,13 +63,11 @@ navigator.serviceWorker.register('serviceworker.js').then(
   });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                 | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushManager")}}
 

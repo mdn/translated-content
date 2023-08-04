@@ -1,13 +1,8 @@
 ---
 title: Object() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - Reference
-browser-compat: javascript.builtins.Object.Object
 ---
+
 {{JSRef}}
 
 **`Object`의 생성자**는 주어진 값를 객체 래퍼로 만들어 줍니다.

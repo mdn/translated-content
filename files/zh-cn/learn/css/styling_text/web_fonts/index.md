@@ -1,8 +1,8 @@
 ---
 title: Web 字体
 slug: Learn/CSS/Styling_text/Web_fonts
-original_slug: Learn/CSS/为文本添加样式/Web_字体
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许您下载自定义字体和您的 web 页面，以允许更多不同的、自定义的文本样式。
@@ -13,12 +13,12 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
       <th scope="row">预备知识：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS 文本和字体基础 </a
         >。
       </td>
@@ -34,7 +34,7 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
 
 ## 字体种类回顾
 
-正如我们在[基本文本和字体样式](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到您的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
+正如我们在[基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到您的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。您需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
 
 ```css
 p {
@@ -42,7 +42,7 @@ p {
 }
 ```
 
-这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/en-US/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)。您可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。
+这个系统运行良好，但是对于传统的 web 开发人员来说，字体选择是有限的。只有少数几种字体可以保证兼容所有流行的操作系统——这就是所谓的 [Web-safe 字体](/zh-CN/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts)。您可以使用字体堆栈来指定可选择的字体，后面是 Web-safe 的替代选项，然后是默认的系统字体，但是为了确保您的设计在每种字体中都显示正常，这样增加了测试的开销。
 
 ## Web 字体
 
@@ -78,7 +78,7 @@ html {
 
 记住这一点，让我们从最初的原则构建一个基本的 web 字体示例。使用嵌入的 live 示例很难演示这一点，因此，我们希望您按照下面几节中详细介绍的步骤来了解这个过程。
 
-你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，您将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
+你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，您将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
 
 ### 查找字体
 
@@ -121,17 +121,17 @@ html {
 2. 打开 `stylesheet.css` 文件，把包含在你的网页中的 `@font-face`块复制到你的 `web-font-start.css` 文件—— 你需要把它们放在最上面，在你的 CSS 之前，因为字体需要导入才能在你的网站上使用。
 3. 每个`url()`函数指向一个我们想要导入到我们的 CSS 中的字体文件——我们需要确保文件的路径是正确的，因此，在每个路径的开头添加`fonts/` （必要时进行调整）。
 4. 现在，您可以在字体栈中使用这些字体，就像任何 web 安全或默认的系统字体一样。
-    例如：
+   例如：
 
-    ```css
-    font-family: 'zantrokeregular', serif;
-    ```
+   ```css
+   font-family: "zantrokeregular", serif;
+   ```
 
 你应该得到一个演示页面，上面有一些漂亮的字体。因为不同字体的字体大小不同，你可能需要调整大小、间距等，以区分外观和感觉。
 
 ![](web-font-example.png)
 
-> **备注：** 如果对于要让它正常工作您有任何问题，可以自由地将您的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
+> **备注：** 如果对于要让它正常工作您有任何问题，可以自由地将您的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
 
 ## 使用在线字体服务
 
@@ -146,7 +146,7 @@ html {
 5. 在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
 6. 然后，您需要将 CSS 声明复制到您的 CSS 中，以便将自定义字体应用到您的 HTML。
 
-> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
+> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 
 ## 关于 @font-face 的更多细节
 
@@ -154,13 +154,14 @@ html {
 
 ```css
 @font-face {
-  font-family: 'ciclefina';
-  src: url('fonts/cicle_fina-webfont.eot');
-  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
-         url('fonts/cicle_fina-webfont.woff') format('woff'),
-         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
-         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-family: "ciclefina";
+  src: url("fonts/cicle_fina-webfont.eot");
+  src:
+    url("fonts/cicle_fina-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/cicle_fina-webfont.woff2") format("woff2"),
+    url("fonts/cicle_fina-webfont.woff") format("woff"),
+    url("fonts/cicle_fina-webfont.ttf") format("truetype"),
+    url("fonts/cicle_fina-webfont.svg#ciclefina") format("svg");
   font-weight: normal;
   font-style: normal;
 }

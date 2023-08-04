@@ -1,17 +1,8 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
-tags:
-  - CSS
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - grid
-  - justify-tracks
-  - masonry
-browser-compat: css.properties.justify-tracks
-translation_of: Web/CSS/justify-tracks
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

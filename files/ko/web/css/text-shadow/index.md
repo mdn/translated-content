@@ -1,11 +1,8 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
 **`text-shadow`** [CSS](/ko/docs/Web/CSS) 속성은 텍스트에 그림자(shadow)를 추가합니다. 텍스트와 그 장식에 적용 할 쉼표로 구분 된 그림자 목록을 허용합니다. 각 그림자는 요소, 흐림 반경 및 색상의 X 및 Y 오프셋 조합으로 설명됩니다.
@@ -45,7 +42,7 @@ Each shadow is specified as two or three `<length>` values, followed optionally 
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/ko/docs/Web/CSS/Pseudo-elements).
 
 ### Values
 
@@ -100,11 +97,11 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 {{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
@@ -112,4 +109,4 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/ko/docs/Web/CSS/CSS_Colors/Applying_color)

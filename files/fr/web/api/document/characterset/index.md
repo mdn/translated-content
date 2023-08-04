@@ -1,15 +1,8 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/Document/characterSet
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.characterSet`** propriété en lecture seule, renvoie l'encodage du document en cours. Un encodage décrit l'ensemble des caractères possibles et la façon de décoder les octets en ces caractères.
@@ -21,7 +14,7 @@ Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transm
 ## Syntaxe
 
 ```js
-var string = document.characterSet
+var string = document.characterSet;
 ```
 
 ## Exemples

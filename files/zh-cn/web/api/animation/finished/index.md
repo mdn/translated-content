@@ -2,6 +2,7 @@
 title: Animation.finished
 slug: Web/API/Animation/finished
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 Animation.finished 只读属性允许您返回动画的完成状态。
@@ -24,27 +25,23 @@ var animationsPromise = animation.finished;
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map(function (animation) {
+    return animation.finished;
+  }),
+).then(function () {
+  return elem.remove();
+});
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Animation.finished")}}
+{{Compat}}
 
-## 相关内容
+## 参见
 
 - [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)

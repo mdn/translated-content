@@ -2,6 +2,7 @@
 title: ImageBitmap
 slug: Web/API/ImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 **`ImageBitmap`** 接口表示能够被绘制到 {{HTMLElement("canvas")}} 上的位图图像，具有低延迟的特性。运用 {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}} 工厂方法模式，它可以从多种源中生成。 `ImageBitmap`提供了一种异步且高资源利用率的方式来为 WebGL 的渲染准备基础结构。
@@ -11,7 +12,7 @@ slug: Web/API/ImageBitmap
 - {{domxref("ImageBitmap.height")}} {{readonlyInline}}
   - : 无符号长整型数值，表示 ImageData 的 CSS 像素单位的高度。
 - {{domxref("ImageBitmap.width")}} {{readonlyInline}}
-  - : 无符号长整型数值， 表示 ImageData 的 CSS 像素单位的宽度。
+  - : 无符号长整型数值，表示 ImageData 的 CSS 像素单位的宽度。
 
 ## 方法
 
@@ -24,7 +25,7 @@ slug: Web/API/ImageBitmap
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageBitmap")}}
+{{Compat}}
 
 ## 另见
 

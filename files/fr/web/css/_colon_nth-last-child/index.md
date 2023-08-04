@@ -1,12 +1,8 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
@@ -45,7 +41,7 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 
 ### Exemples
 
-- `tr:`nth-last-child`(-n+4)`
+- `tr:nth-last-child(-n+4)`
   - : Permettra de cibler les quatre dernières lignes d'un tableau.
 - `span:nth-last-child(even)` ou `span:nth-last-child(2n)`
   - : Permettra de cibler tous les éléments {{HTMLElement("span")}} pairs en partant de la fin.
@@ -56,9 +52,10 @@ La pseudo-classe `nth-last-child` prend un seul argument qui représente le moti
 
 ```css
 table {
-  border:1px solid blue;
+  border: 1px solid blue;
 }
-tr:nth-last-child(-n+3) { /* les trois derniers enfants */
+tr:nth-last-child(-n + 3) {
+  /* les trois derniers enfants */
   background-color: lime;
 }
 ```
@@ -72,16 +69,16 @@ tr:nth-last-child(-n+3) { /* les trois derniers enfants */
       <td>Première ligne</td>
     </tr>
     <tr>
-       <td>Deuxième ligne</td>
+      <td>Deuxième ligne</td>
     </tr>
     <tr>
-       <td>Troisième ligne</td>
+      <td>Troisième ligne</td>
     </tr>
     <tr>
-       <td>Quatrième ligne</td>
+      <td>Quatrième ligne</td>
     </tr>
     <tr>
-       <td>Sixième ligne</td>
+      <td>Sixième ligne</td>
     </tr>
   </tbody>
 </table>
@@ -120,7 +117,7 @@ tr:nth-last-child(n) {
   background-color: lightgray;
 }
 
-tr:nth-last-child(n+1){
+tr:nth-last-child(n + 1) {
   font-weight: 600;
 }
 ```
@@ -129,7 +126,7 @@ tr:nth-last-child(n+1){
 
 {{EmbedLiveSample('Cas_aux_limites')}}
 
-### Mise en forme selon le nombre d’éléments
+### Mise en forme selon le nombre d'éléments
 
 Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le nombre d'éléments qu'elle contient. Dans l'exemple qui suit, on met les éléments de la liste en rouge si celle-ci contient au moins trois éléments. Pour cela, on combine la pseudo-classe `nth-last-child` et [le sélecteur de voisins généraux (_general sibling combinator_)](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux).
 
@@ -154,26 +151,23 @@ Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le
 #### CSS
 
 ```css
-li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(n + 3),
+li:nth-last-child(n + 3) ~ li {
   color: red;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d’éléments", '100%', 270)}}
+{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d'éléments", '100%', 270)}}
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires                                               |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS4 Selectors')}} | Les éléments ciblés peuvent ne pas avoir d'élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-last-child-pseudo', ':nth-last-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-last-child")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: ウェブページを変更する
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 拡張機能の一般的な事例の１つはウェブページを変更することです。例えば、ページのスタイルを変更、特定の DOM ノードを隠す、別の DOM ノードをページに挿入する、といいでしょう。
@@ -25,7 +26,6 @@ WebExtensions API での実現方法は２つあります：
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -36,22 +36,21 @@ WebExtensions API での実現方法は２つあります：
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
-[`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は[ https://developer.mozilla.org/](/) 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
+[`content_scripts`](/ja/Add-ons/WebExtensions/manifest.json/content_scripts) キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、`content_scripts` は <https://developer.mozilla.org/> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。
 
-> **Note:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
+> **メモ:** `content_scripts` の `"js"` プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。
 
-> **Note:** `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
+> **メモ:** `content_scripts` キーでは `"css"` プロパティで CSS スタイルシートを挿入することもできます。
 
 次に、"page-eater.js" というファイルを "modify-page" ディレクトリー内に作り、以下のように記述します。
 
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
@@ -60,7 +59,7 @@ document.body.appendChild(header);
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
-> **Note:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> **メモ:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## 自動でページを変更する
 
@@ -70,20 +69,15 @@ document.body.appendChild(header);
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -97,13 +91,13 @@ document.body.appendChild(header);
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -113,7 +107,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 この時点で拡張機能は以下のようになっています。
 
-```html
+```plain
 modify-page/
     background.js
     manifest.json
@@ -124,7 +118,7 @@ modify-page/
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **Note:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
+> **メモ:** このビデオでは [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) で動作するコンテンツスクリプトを示していますが、現在このサイトではコンテンツスクリプトはブロックされています。
 
 ## メッセージ
 
@@ -135,7 +129,7 @@ modify-page/
 | メッセージ送信 | [`browser.runtime.sendMessage()`](</ja/Add-ons/WebExtensions/API/runtime#sendMessage()>) | [`browser.tabs.sendMessage()`](/ja/Add-ons/WebExtensions/API/Tabs/sendMessage) |
 | メッセージ受信 | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime/onMessage)           | [`browser.runtime.onMessage`](/ja/Add-ons/WebExtensions/API/runtime#onMessage) |
 
-> **Note:** このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
+> **メモ:** このワンオフメッセージを送る通信メソッドに加えて、[メッセージ交換するコネクションベースの方法](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging)も使えます。これらのオプションを選択するアドバイスは、[ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging)を見てください。
 
 例を更新して、バックグラウンドスクリプトからメッセージを送信する方法を示します。
 
@@ -144,27 +138,27 @@ modify-page/
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!"
+    replacement: "Message from the extension!",
   });
 }
 
 function onExecuted(result) {
-    var querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+  var querying = browser.tabs.query({
+    active: true,
+    currentWindow: true,
+  });
+  querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     let executing = browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
     executing.then(onExecuted);
   }
@@ -178,7 +172,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 ```js
 function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -189,7 +183,7 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 [`tabs.executeScript()`](/ja/Add-ons/WebExtensions/API/tabs/executeScript) は非同期関数であり、リスナーが "page-eater.js" に追加された後にのみメッセージを送信するために、"page-eater.js" を実行した後に呼び出される `onExecuted` を使用します。
 
-> **Note:** Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](/ja/docs/Tools/Browser_Console) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
+> **メモ:** Ctrl+Shift+J (Mac では Cmd+Shift+J) を押します。もしくは `web-ext run --bc` で [Browser Console](/ja/docs/Tools/Browser_Console) を開きバックグラウンドスクリプトの `console.log` を見ます。または、 [Add-on Debugger](/ja/Add-ons/Add-on_Debugger) を使用して、ブレークポイントを設定することもできます。 現在、[web-ext から 直接 Add-on Debugger を起動する](https://github.com/mozilla/web-ext/issues/759) 方法はありません。
 
 コンテンツスクリプトからバックグラウンドページにメッセージを戻したい場合は、 [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) の代わりに [`tabs.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) を使用します。
 
@@ -197,11 +191,11 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 ```js
 browser.runtime.sendMessage({
-    title: "from page-eater.js"
+  title: "from page-eater.js",
 });
 ```
 
-> **Note:** これらの例はすべて JavaScript を注入します。 [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 関数を使用してプログラムで CSS を挿入することもできます。
+> **メモ:** これらの例はすべて JavaScript を注入します。 [`tabs.insertCSS()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 関数を使用してプログラムで CSS を挿入することもできます。
 
 ## 関連項目
 

@@ -1,13 +1,8 @@
 ---
 title: Map() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 ---
+
 {{JSRef}}
 
 **`Map()` コンストラクター**は、 {{jsxref("Map")}} オブジェクトを生成します。
@@ -29,17 +24,15 @@ new Map([iterable])
 
 ```js
 let myMap = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
-])
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map-constructor', 'Map constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

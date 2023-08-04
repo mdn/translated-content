@@ -1,16 +1,11 @@
 ---
 title: ID セレクター
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.id
-translation_of: Web/CSS/ID_selectors
 ---
+
 {{CSSRef}}
 
-CSS の **ID セレクター** (ID selector) は、 {{htmlattrxref("id")}} 属性の値に基づいて要素と一致します。選択される要素の `id` 属性は、セレクターで指定した値と完全一致していなければなりません。
+CSS の **ID セレクター** (ID selector) は、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の値に基づいて要素と一致します。選択される要素の `id` 属性は、セレクターで指定した値と完全一致していなければなりません。
 
 ```css
 /* id="demo" のついた要素 */

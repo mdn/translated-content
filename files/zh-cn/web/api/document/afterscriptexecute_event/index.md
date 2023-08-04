@@ -2,6 +2,7 @@
 title: element.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
 ---
+
 {{ApiRef}}
 
 ## 概述

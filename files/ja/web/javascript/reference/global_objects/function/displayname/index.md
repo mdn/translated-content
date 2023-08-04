@@ -1,13 +1,8 @@
 ---
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`function.displayName`** プロパティは、関数の表示名を返します。

@@ -2,27 +2,28 @@
 title: 编写 WebSocket 服务器
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
+
 **WebSocket 服务器是一个**TCP 应用程序，监听服务器上任何遵循特定协议的端口，就这么简单。创建自定义服务器的任务往往听起来很吓人，然而，在您选择的平台上实现一个简单的 WebSocket 服务器是很容易的。
 
-WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。 这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
+WebSocket 服务器可以用任何实现了[Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets)的服务器端编程语言编写，如 C(++) 或 Python 甚至[PHP](/zh-CN/docs/PHP)和[服务器端 JavaScript](/zh-CN/docs/Web/JavaScript/Server-Side_JavaScript)。这不是任何特定语言的教程，而是作为指导，以方便编写自己的服务器。
 
-您需要知道 HTTP 的工作原理，并具有中级编程经验。 根据语言帮助（Depending on language support），可能需要 TCP 套接字的知识。 本指南的范围是介绍编写 WebSocket 服务器所需的最低知识。
+您需要知道 HTTP 的工作原理，并具有中级编程经验。根据语言帮助（Depending on language support），可能需要 TCP 套接字的知识。本指南的范围是介绍编写 WebSocket 服务器所需的最低知识。
 
 > **备注：** 阅读最新的官方 WebSockets 规范， [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1). 第 1 节和第 4-7 节对服务器实现者特别有意思。第 10 节讨论安全性，你应该在暴露你的服务器之前仔细阅读它。
 
-WebSocket 服务器在这里被解释得非常底层。 WebSocket 服务器通常是独立的专用服务器（出于负载平衡或其他实际原因），因此您通常会使用[反向代理](https://en.wikipedia.org/wiki/Reverse_proxy)（例如常规 HTTP 服务器）来检测 WebSocket 握手，预处理这些握手，并将这些客户端发送给 一个真正的 WebSocket 服务器。（例如）这意味着您不必使用 cookie 和身份验证处理程序来扩充服务器代码。
+WebSocket 服务器在这里被解释得非常底层。WebSocket 服务器通常是独立的专用服务器（出于负载平衡或其他实际原因），因此您通常会使用[反向代理](https://en.wikipedia.org/wiki/Reverse_proxy)（例如常规 HTTP 服务器）来检测 WebSocket 握手，预处理这些握手，并将这些客户端发送给 一个真正的 WebSocket 服务器。（例如）这意味着您不必使用 cookie 和身份验证处理程序来扩充服务器代码。
 
 ## WebSocket 握手
 
-首先，服务器必须使用标准的 TCP 套接字来监听传入的套接字连接。 根据您的平台，这可能已经为您处理。 例如，假设您的服务器正在监听 example.com，端口 8000，并且您的套接字服务器响应`/chat`上的 GET 请求。 .
+首先，服务器必须使用标准的 TCP 套接字来监听传入的套接字连接。根据您的平台，这可能已经为您处理。例如，假设您的服务器正在监听 example.com，端口 8000，并且您的套接字服务器响应`/chat`上的 GET 请求。 .
 
-> **警告：** 服务器可以监听它选择的任何端口，但是如果它选择了 80 或 443 以外的端口，防火墙和/或代理服务器可能会有问题。 端口 443 上的连接往往会更容易成功，但是当然，这需要一个安全的连接（TLS / SSL）。 另外请注意，大多数浏览器（特别是 Firefox 8+）不允许从安全页面连接到不安全的 WebSocket 服务器。
+> **警告：** 服务器可以监听它选择的任何端口，但是如果它选择了 80 或 443 以外的端口，防火墙和/或代理服务器可能会有问题。端口 443 上的连接往往会更容易成功，但是当然，这需要一个安全的连接（TLS / SSL）。另外请注意，大多数浏览器（特别是 Firefox 8+）不允许从安全页面连接到不安全的 WebSocket 服务器。
 
-握手是 WebSockets 中的“Web”。 这是从 HTTP 到 WS 的桥梁。 在握手过程中，有关连接的详细信息正在初始化中，如果条件不利，任何一方可以在完成之前退出。 服务器必须小心了解客户要求的一切，否则会产生安全问题。
+握手是 WebSockets 中的“Web”。这是从 HTTP 到 WS 的桥梁。在握手过程中，有关连接的详细信息正在初始化中，如果条件不利，任何一方可以在完成之前退出。服务器必须小心了解客户要求的一切，否则会产生安全问题。
 
 ### 客户端握手请求
 
-即使您正在构建服务器，客户端仍然必须启动 WebSocket 握手过程。 所以你必须知道如何解释客户的请求。 客户端将发送一个相当标准的 HTTP 请求，看起来像这样（HTTP 版本必须是 1.1 或更高，方法必须是`GET`）：
+即使您正在构建服务器，客户端仍然必须启动 WebSocket 握手过程。所以你必须知道如何解释客户的请求。客户端将发送一个相当标准的 HTTP 请求，看起来像这样（HTTP 版本必须是 1.1 或更高，方法必须是`GET`）：
 
 ```
 GET /chat HTTP/1.1
@@ -35,13 +36,13 @@ Sec-WebSocket-Version: 13
 
 客户可以在这里请求扩展和/或子协议；详情请见[杂项](#Miscellaneous)。当然，你也可以在这里加上你所需要的一般请求头如`User-Agent`， `Referer`， `Cookie`或者认证头。WebSocket 没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。
 
-如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/HTTP/Response_codes#400)”并立即关闭套接字。 像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。 如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。 下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
+如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/HTTP/Response_codes#400)”并立即关闭套接字。像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
 
-> **备注：** 所有浏览器将会发送一个 [`Origin`](https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS#Origin)请求头。 你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/HTTP/Response_codes#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
+> **备注：** 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/HTTP/Access_control_CORS#Origin)请求头。你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/HTTP/Response_codes#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
 
 > **备注：** 请求 URI（这里的是`/chat`）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如`example.com/chat`会请求一个多方会话应用，而在相同服务器上`example.com/game`则会请求一个多玩家游戏应用。
 
-> **备注：** [常规 HTTP 状态码](/zh-CN/docs/HTTP/Response_codes)只能在握手之前使用。 握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
+> **备注：** [常规 HTTP 状态码](/zh-CN/docs/HTTP/Response_codes)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
 
 ### 服务器握手响应
 
@@ -54,17 +55,17 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。 怎样计算呢， 把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用[SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用[base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
+另外，服务器可以在这时候决定插件或子协议，详情参见[杂项](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous)。 `Sec-WebSocket-Accept` 参数很有趣，它需要服务器通过客户端发送的`Sec-WebSocket-Key` 计算出来。怎样计算呢，把客户发送的 `Sec-WebSocket-Key` 和 "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (这个叫做 "[魔法值](https://en.wikipedia.org/wiki/Magic_string)") 连接起来，把结果用[SHA-1](https://zh.wikipedia.org/wiki/SHA-1)编码，再用[base64](https://zh.wikipedia.org/wiki/Base64)编码一次，就可以了。
 
 > **备注：** 这看起来繁复的处理使得客户端明确服务端是否支持 WebSocket。这是十分重要的，如果服务端接收到一个 WebSocket 连接但是把数据作为 HTTP 请求理解可能会导致安全问题。
 
-所以如果 Sec-WebSocket-Key 是“`dGhlIHNhbXBsZSBub25jZQ==`”，Sec-WebSocket-Accept 将是“`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`”。 一旦服务器发送这个请求头，握手就完成了，你可以开始交换数据！
+所以如果 Sec-WebSocket-Key 是“`dGhlIHNhbXBsZSBub25jZQ==`”，Sec-WebSocket-Accept 将是“`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`”。一旦服务器发送这个请求头，握手就完成了，你可以开始交换数据！
 
 > **备注：** 服务端可以在发送握手回复前发送其他请求头，诸如 Set-Cookie，请求认证或通过状态码重定向。
 
 ### 跟踪客户端
 
-这并不直接与 WebSocket 协议相关，但是在这里值得一提的是：你的服务器将不得不跟踪客户的套接字，所以你不会再和已经完成握手的客户握手。 同一个客户端 IP 地址可以尝试连接多次（但是如果客户端尝试过多的连接，服务器可以拒绝它们以免遭[拒绝服务攻击](https://en.wikipedia.org/wiki/Denial_of_service)）。
+这并不直接与 WebSocket 协议相关，但是在这里值得一提的是：你的服务器将不得不跟踪客户的套接字，所以你不会再和已经完成握手的客户握手。同一个客户端 IP 地址可以尝试连接多次（但是如果客户端尝试过多的连接，服务器可以拒绝它们以免遭[拒绝服务攻击](https://en.wikipedia.org/wiki/Denial_of_service)）。
 
 ## 交换数据帧
 
@@ -76,7 +77,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 ```
 Frame format:
-​​
+
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+
@@ -147,9 +148,9 @@ Server: (process complete message) Happy new year to you too!
 
 ## Pings 和 Pongs：WebSockets 的心跳
 
-在经过握手之后的任意时刻里，无论客户端还是服务端都可以选择发送一个 ping 给另一方。 当 ping 消息收到的时候，接受的一方必须尽快回复一个 pong 消息。 例如，可以使用这种方式来确保客户端还是连接状态。
+在经过握手之后的任意时刻里，无论客户端还是服务端都可以选择发送一个 ping 给另一方。当 ping 消息收到的时候，接受的一方必须尽快回复一个 pong 消息。例如，可以使用这种方式来确保客户端还是连接状态。
 
-一个 ping 或者 pong 都只是一个常规的帧， 只是这个帧是一个**控制帧**。Ping 消息的 opcode 字段值为 `0x9`，pong 消息的 opcode 值为 `0xA` 。当你获取到一个 ping 消息的时候，回复一个跟 ping 消息有相同载荷数据的 pong 消息 (对于 ping 和 pong，最大载荷长度位 125)。 你也有可能在没有发送 ping 消息的情况下，获取一个 pong 消息，当这种情况发生的时候忽略它。
+一个 ping 或者 pong 都只是一个常规的帧，只是这个帧是一个**控制帧**。Ping 消息的 opcode 字段值为 `0x9`，pong 消息的 opcode 值为 `0xA` 。当你获取到一个 ping 消息的时候，回复一个跟 ping 消息有相同载荷数据的 pong 消息 (对于 ping 和 pong，最大载荷长度位 125)。你也有可能在没有发送 ping 消息的情况下，获取一个 pong 消息，当这种情况发生的时候忽略它。
 
 > **备注：** 如果在你有机会发送一个 pong 消息之前，你已经获取了超过一个的 ping 消息，那么你只发送一个 pong 消息。
 

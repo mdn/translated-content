@@ -1,14 +1,8 @@
 ---
 title: Faire un retour à propos de MDN Web Docs
 slug: MDN/Community
-tags:
-  - Documentation
-  - Guide
-  - MDN
-  - MDN Meta
-translation_of: MDN/Contribute/Feedback
-original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 Bienvenue sur MDN Web Docs ! Si vous avez des suggestions ou avez des problèmes avec MDN, vous êtes au bon endroit. Nous vous remercions par avance de l'intérêt que vous nous portez.

@@ -2,6 +2,7 @@
 title: File.name
 slug: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 返回由 {{domxref("File")}} 对象表示的文件的名称。由于安全原因，该属性并不包含文件路径。
@@ -15,7 +16,7 @@ slug: Web/API/File/name
 ### HTML
 
 ```html
-<input type="file" id="filepicker" multiple>
+<input type="file" id="filepicker" multiple />
 <div>
   <p>选定文件列表：</p>
   <ul id="output"></ul>
@@ -25,19 +26,19 @@ slug: Web/API/File/name
 ### JavaScript
 
 ```js
-const output = document.getElementById('output');
-const filepicker = document.getElementById('filepicker');
+const output = document.getElementById("output");
+const filepicker = document.getElementById("filepicker");
 
-filepicker.addEventListener('change', (event) => {
+filepicker.addEventListener("change", (event) => {
   const files = event.target.files;
-  output.textContent = '';
+  output.textContent = "";
 
   for (const file of files) {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = file.name;
     output.appendChild(li);
   }
-})
+});
 ```
 
 ### 结果

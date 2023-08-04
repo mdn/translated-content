@@ -2,6 +2,7 @@
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
 ---
+
 {{ApiRef}}
 
 ## 概述
@@ -27,9 +28,9 @@ sel.addRange(range)
 var strongs = document.getElementsByTagName("strong");
 var s = window.getSelection();
 
-if(s.rangeCount > 0) s.removeAllRanges();
+if (s.rangeCount > 0) s.removeAllRanges();
 
-for(var i = 0; i < strongs.length; i++) {
+for (var i = 0; i < strongs.length; i++) {
   var range = document.createRange();
   range.selectNode(strongs[i]);
   s.addRange(range);
@@ -42,7 +43,7 @@ for(var i = 0; i < strongs.length; i++) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.addRange")}}
+{{Compat}}
 
 ## 相关链接
 

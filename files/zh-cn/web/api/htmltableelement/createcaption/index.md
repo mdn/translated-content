@@ -2,9 +2,10 @@
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
 ---
+
 {{APIRef("HTML DOM")}}
 
-这个 **`HTMLTableElement.createCaption()`** 方法返回这个 table 元素的 caption(HTMLTableCaptionElement). 如果这个 table 没有 caption,这个方法创建并返回 caption.
+这个 **`HTMLTableElement.createCaption()`** 方法返回这个 table 元素的 caption(HTMLTableCaptionElement). 如果这个 table 没有 caption，这个方法创建并返回 caption.
 
 ## 语法
 

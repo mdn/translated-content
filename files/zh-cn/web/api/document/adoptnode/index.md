@@ -2,9 +2,10 @@
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
-从其他的 document 文档中获取一个节点。 该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。 之后你可以把这个节点插入到当前文档中。
+从其他的 document 文档中获取一个节点。该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/zh-CN/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。之后你可以把这个节点插入到当前文档中。
 
 **从 Gecko 1.9 (Firefox 3) 开始支持**
 
@@ -15,7 +16,7 @@ node = document.adoptNode(externalNode);
 ```
 
 - `node`
-  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态.
+  - : 导入当前文档的新节点。新节点的 [`parentNode`](/zh-CN/DOM/Node.parentNode) 是 `null`, 因为它还没有插入当前文档的文档树中，属于游离状态。
 - `externalNode`
   - : 将要从外部文档导入的节点。
 
@@ -24,16 +25,16 @@ node = document.adoptNode(externalNode);
 ```js
 // 该函数用来从本文档的第一个 iframe 中获取第一个 element 元素，
 // 并插入到当前文档树中
-function getEle(){
-    var iframe = document.getElementsByTagName("iframe")[0],
-        ele = iframe.contentWindow.document.body.firstElementChild
-        if(ele){
-            document.body.appendChild(document.adoptNode(ele))
-        }else{
-            alert("没有更多元素了")
-        }
+function getEle() {
+  var iframe = document.getElementsByTagName("iframe")[0],
+    ele = iframe.contentWindow.document.body.firstElementChild;
+  if (ele) {
+    document.body.appendChild(document.adoptNode(ele));
+  } else {
+    alert("没有更多元素了");
+  }
 }
-document.getElementById("move").onclick = getEle
+document.getElementById("move").onclick = getEle;
 ```
 
 HTML 文档
@@ -41,27 +42,28 @@ HTML 文档
 ```html
 // index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>index.html</title>
-</head>
-<body>
+  </head>
+  <body>
     <iframe src="iframe.html"></iframe>
     <button id="move">移动元素</button>
-</body>
+  </body>
 </html>
 
 // iframe.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>iframe.html</title>
-</head>
-<body>
-    <h1>Hello</h1><h3>My world!</h3>
-</body>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h3>My world!</h3>
+  </body>
 </html>
 ```
 
@@ -87,4 +89,4 @@ In general the `adoptNode` call may fail due to the source node coming from a di
 
 ## 参见
 
-- [document.importNode](/en-US/docs/DOM/document.importNode)
+- [document.importNode](/zh-CN/docs/DOM/document.importNode)

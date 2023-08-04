@@ -1,14 +1,8 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-translation_of: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 L'objet **`TreeWalker`** représente les noeuds d'un sous-arbre de document et une position à l'intérieur.

@@ -2,6 +2,7 @@
 title: Plugin
 slug: Web/API/Plugin
 ---
+
 > **警告：** **已废弃**
 > 该特性已经从 HTML5.2 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
 
@@ -13,11 +14,11 @@ slug: Web/API/Plugin
 
 ## 属性
 
-| 名称                                         | 描述                                | 返回值类型                       | 兼容性                           |
-| -------------------------------------------- | ----------------------------------- | -------------------------------- | -------------------------------- |
+| 名称                              | 描述                                | 返回值类型               | 兼容性                           |
+| --------------------------------- | ----------------------------------- | ------------------------ | -------------------------------- |
 | {{domxref("Plugin.description")}} | 一个人类可读的插件描述。 **只读。** | {{domxref("DOMString")}} | DOM 0                            |
-| {{domxref("Plugin.filename")}}     | 插件文件名。**只读。**              | {{domxref("DOMString")}} | DOM 0                            |
-| {{domxref("Plugin.name")}}         | 插件名。**只读。**                  | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.filename")}}    | 插件文件名。**只读。**              | {{domxref("DOMString")}} | DOM 0                            |
+| {{domxref("Plugin.name")}}        | 插件名。**只读。**                  | {{domxref("DOMString")}} | DOM 0                            |
 | {{domxref("Plugin.version")}}     | 插件版本号字符串。**只读。**        | {{domxref("DOMString")}} | Gecko browsers only (Firefox 4+) |
 
 ## 方法

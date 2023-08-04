@@ -2,15 +2,16 @@
 title: <label>
 slug: Web/HTML/Element/label
 ---
-{{HTMLRef}}
 
-**HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
+{{HTMLSidebar}}
+
+**HTML `<label>` 元素**（标签）表示用户界面中某个元素的说明。
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
 将一个 `<label>` 和一个 {{htmlelement("input")}} 元素相关联主要有这些优点：
 
-- 标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。 这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。
+- 标签文本不仅与其相应的文本输入元素在视觉上相关联，程序中也是如此。这意味着，当用户聚焦到这个表单输入元素时，屏幕阅读器可以读出标签，让使用辅助技术的用户更容易理解应输入什么数据。
 - 你可以点击关联的标签来聚焦或者激活这个输入元素，就像直接点击输入元素一样。这扩大了元素的可点击区域，让包括使用触屏设备在内的用户更容易激活这个元素。
 
 将一个 `<label>` 和一个 `<input>` 元素匹配在一起，你需要给 `<input>` 一个 `id` 属性。而 `<label>` 需要一个 `for` 属性，其值和 `<input>` 的 `id` 一样。
@@ -18,8 +19,9 @@ slug: Web/HTML/Element/label
 另外，你也可以将 `<input>` 直接放在 `<label>` 里，此时则不需要 `for` 和 `id` 属性，因为关联已隐含存在：
 
 ```html
-<label>Do you like peas?
-  <input type="checkbox" name="peas">
+<label
+  >Do you like peas?
+  <input type="checkbox" name="peas" />
 </label>
 ```
 
@@ -32,11 +34,13 @@ slug: Web/HTML/Element/label
 
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("for")}}
-  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](zh-CN/docs/Web/Guide/HTML/Content_categories#Form_labelable) 的 {{htmlattrxref("id")}}。 文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
+- `for`
+
+  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
 
     > **备注：** `<label>` 元素可同时有一个 `for` 属性和一个子代控件元素，只是 `for` 属性需要指向这个控件元素。
-- {{htmlattrdef("form")}}
+
+- `form`
   - : 表示与 label 元素关联的 {{htmlelement("form")}} 元素（即它的表单拥有者）。如果声明了该属性，其值应是同一文档中 {{HTMLElement("form")}} 元素的 `id`。因此你可以将 label 元素放在文档的任何位置，而不仅作为 {{HTMLElement("form")}} 元素的后代。
 
 ## 使用 CSS 样式
@@ -48,7 +52,7 @@ slug: Web/HTML/Element/label
 ### 简单的 label
 
 ```html
-<label>Click me <input type="text"></label>
+<label>Click me <input type="text" /></label>
 ```
 
 {{EmbedLiveSample('简单的 label', '200', '50', '')}}
@@ -56,8 +60,7 @@ slug: Web/HTML/Element/label
 ### 使用 for 属性
 
 ```html
-<label for="username">Click me</label>
-<input type="text" id="username">
+<label for="username">Click me</label> <input type="text" id="username" />
 ```
 
 {{EmbedLiveSample('使用_for_属性', '200', '50', '')}}
@@ -72,7 +75,7 @@ slug: Web/HTML/Element/label
 
 ```html example-bad
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
 </label>
 ```
@@ -81,7 +84,7 @@ slug: Web/HTML/Element/label
 
 ```html example-good
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   I agree to the Terms and Conditions
 </label>
 <p>
@@ -100,7 +103,7 @@ slug: Web/HTML/Element/label
 ```html example-bad
 <label for="your-name">
   <h3>Your name</h3>
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
@@ -109,7 +112,7 @@ slug: Web/HTML/Element/label
 ```html example-good
 <label class="large-label" for="your-name">
   Your name
-  <input id="your-name" name="your-name" type="text">
+  <input id="your-name" name="your-name" type="text" />
 </label>
 ```
 
@@ -158,7 +161,7 @@ slug: Web/HTML/Element/label
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## 参见
 
@@ -173,7 +176,6 @@ slug: Web/HTML/Element/label
 - {{HTMLElement("optgroup")}}
 - {{HTMLElement("option")}}
 - {{HTMLElement("textarea")}}
-- {{HTMLElement("keygen")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("progress")}}

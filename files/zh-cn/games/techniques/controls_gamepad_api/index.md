@@ -2,13 +2,14 @@
 title: 使用 Gamepad API 实现控制
 slug: Games/Techniques/Controls_Gamepad_API
 ---
+
 {{GamesSidebar}}
 
 这篇文章着眼于使用 Gamepad API 为网页游戏实现一个有效的跨浏览器控制系统，可以让你使用端游控制器来控制你的网页游戏。Hungry Fridge，就是 [Enclave Games](http://enclavegames.com/) 以此制作的游戏。
 
 ## 网页游戏的控制
 
-在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。 到现在的 HTML5 时代，我们终于有了 [Gamepad API](/en-US/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
+在历史上，在连接主机 (console) 的电视上玩游戏和在电脑 (PC) 上玩游戏是两种完全不一样的体验，最大的区别就是它们的控制方式。后来，额外的驱动程序和插件让我们能够使用主机控制器来游玩电脑端的游戏--不论是本地游戏，还是运行在浏览器中的游戏。到现在的 HTML5 时代，我们终于有了 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) ，让我们能够在不安装任何插件的情况下，可以使用控制器来游玩基于浏览器的游戏。Gamepad API 通过提供一个接口公开按钮的按下和坐标的变化来实现这一点，在 JavaScript 中我们可以用这些变化来处理输入。这对于网页游戏来说是非常棒的特性。
 
 ## API 状态与浏览器支持
 
@@ -44,14 +45,14 @@ Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hung
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect: function () {},
+  disconnect: function () {},
+  update: function () {},
+  buttonPressed: function () {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -184,11 +185,11 @@ buttonPressed: function(button, hold) {
 在一个按钮中有两种动作：单次按下和按住。变量 `newPress` 布尔变量将会指出这个是不是一个按钮新的按下操作。下次我们再轮询已按下按钮的数组——如果有按钮是我们正在找的，那么设 `newPress` 变量为 `true` 。通过检查本次按下是不是新按下的，就能得出玩家是不是按住按钮了。我们从游戏循环中的上一帧轮询按钮的缓存状态，如果我们找到了，就说明按钮被按住了，所以就不是新的按下。最后 `newPress` 变量被返回。函数 `buttonPressed` 通常这样来更新游戏循环：
 
 ```js
-if(gamepadAPI.turbo) {
-  if(gamepadAPI.buttonPressed('A','hold')) {
+if (gamepadAPI.turbo) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if(gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -203,7 +204,7 @@ if(gamepadAPI.turbo) {
 控制器放在一边不活动时轴值也可能有一定波动 (get dusty) ，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
 ```js
-if(gamepadAPI.axesStatus[0].x > 0.5) {
+if (gamepadAPI.axesStatus[0].x > 0.5) {
   this.player.angle += 3;
   this.turret.angle += 3;
 }
@@ -234,7 +235,7 @@ enum GamepadMappingType {
 
 ### 事件
 
-除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其它事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
+除了当前可用的 `gamepadconnected` 和 `gamepaddisconnected` 事件，其实还有其他事件也曾在规范中，但它们因为不是非常的有用所以被移出了规范。相关讨论仍在进行中，关于它们是否应该恢复规范，以及以什么形式恢复。
 
 ## 总结
 

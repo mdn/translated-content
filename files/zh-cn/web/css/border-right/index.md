@@ -2,6 +2,7 @@
 title: border-right
 slug: Web/CSS/border-right
 ---
+
 {{CSSRef}}
 
 CSS 属性 **border-`right`** 是属性{{ Cssxref("border-right-color") }}, {{ Cssxref("border-right-style") }}, 和{{ Cssxref("border-right-width") }}的三者的缩写。这些属性都是在描述一个元素的右边的边框[`border`](/zh-CN/docs/Web/CSS/border)。
@@ -22,8 +23,8 @@ border-right: medium dashed green;
 > ......实际上应该是下面这个样子......
 >
 > ```css
->   border-right-style: dotted;
->   border-right: none thick green;
+> border-right-style: dotted;
+> border-right: none thick green;
 > ```
 >
 > ......并且在 border-`right` 之前定义的 {{ Cssxref("border-right-style") }} 的值也会被覆盖。由于{{ Cssxref("border-right-style") }} 的默认值是 none, border-style 的最终结果就是没有边框。
@@ -50,9 +51,7 @@ border-right: medium dashed green;
 ## Example
 
 ```html
-<div>
-  This box has a border on the right side.
-</div>
+<div>This box has a border on the right side.</div>
 ```
 
 ```css
@@ -74,4 +73,4 @@ div {
 
 ## Browser compatibility
 
-{{Compat("css.properties.border-right")}}
+{{Compat}}

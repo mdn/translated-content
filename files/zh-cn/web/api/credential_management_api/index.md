@@ -2,6 +2,7 @@
 title: Credential Management API
 slug: Web/API/Credential_Management_API
 ---
+
 {{APIRef("Credential Management API")}}{{ SeeCompatTable() }}
 
 Credential Management API 允许网站存储和检索用户，联合账户和公钥证书。这些功能允许用户在不输入密码的情况下登录，查看他们曾经登录到一个站点的联合帐户，并且在会话过期且没有显式的登录流程的情况下恢复会话。
@@ -35,4 +36,4 @@ Credential Management API 允许网站存储和检索用户，联合账户和公
 
 ## 浏览器兼容性
 
-{{Compat("api.Credential")}}
+{{Compat}}

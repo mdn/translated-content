@@ -2,6 +2,7 @@
 title: fonts
 slug: Web/API/Document/fonts
 ---
+
 {{domxref("Document")}}的 **`fonts`** 属性接口返回文档的 {{domxref("FontFaceSet")}} 接口。
 
 ## 语法
@@ -19,7 +20,7 @@ let fontFaceSet = document.fonts;
 ### 在所有字体加载完成后进行操作
 
 ```js
-document.fonts.ready.then(function() {
+document.fonts.ready.then(function () {
   // 字体加载完成后的逻辑
 });
 ```
@@ -30,7 +31,7 @@ document.fonts.ready.then(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.fonts")}}
+{{Compat}}
 
 ## 参考资料
 

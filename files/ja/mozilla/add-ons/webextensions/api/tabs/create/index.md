@@ -2,6 +2,7 @@
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
+
 {{AddonSidebar()}}
 
 新しいタブを作ります。
@@ -12,8 +13,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 ```js
 var creating = browser.tabs.create(
-  createProperties   // object
-)
+  createProperties, // object
+);
 ```
 
 ### パラメータ
@@ -38,7 +39,7 @@ var creating = browser.tabs.create(
 
       - : `真理値`。ウィンドウ内で選択されるかどうかを指定します。デフォルトは`true`。
 
-        > **Warning:** このプロパティは非推奨です。Firefox ではサポートされません。代わりに`active`を使用してください。
+        > **警告:** このプロパティは非推奨です。Firefox ではサポートされません。代わりに`active`を使用してください。
 
     - `url`{{optional_inline}}
 
@@ -72,16 +73,16 @@ var creating = browser.tabs.create(
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`Created new tab: ${tab.id}`);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var creating = browser.tabs.create({
-    url:"https://example.org"
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });
@@ -89,9 +90,10 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-create) API に基づいています。 このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> **メモ:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-create) API に基づいています。 このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +120,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

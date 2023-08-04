@@ -2,6 +2,7 @@
 title: Genre detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
+
 種類*細節*頁面，需要利用`_id` 字段值 (自動生成) ，以呈現特定種類實例的信息。此頁面應該呈現種類名稱，各個種類的所有書本列表(每本書都連結到書本的細節頁面)。
 
 ## Controller 控制器
@@ -9,38 +10,43 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 打開 **/controllers/genreController.js** ，並在檔案最上方引用 _async_ 和 _Book_ 模組。
 
 ```js
-var Book = require('../models/book');
-var async = require('async');
+var Book = require("../models/book");
+var async = require("async");
 ```
 
-Find the exported ` genre_detail``() ` controller method and replace it with the following code.
+Find the exported `genre_detail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res, next) {
+exports.genre_detail = function (req, res, next) {
+  async.parallel(
+    {
+      genre: function (callback) {
+        Genre.findById(req.params.id).exec(callback);
+      },
 
-    async.parallel({
-        genre: function(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
-
-        genre_books: function(callback) {
-          Book.find({ 'genre': req.params.id })
-          .exec(callback);
-        },
-
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });
-
+      genre_books: function (callback) {
+        Book.find({ genre: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.genre == null) {
+        // No results.
+        var err = new Error("Genre not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render
+      res.render("genre_detail", {
+        title: "Genre Detail",
+        genre: results.genre,
+        genre_books: results.genre_books,
+      });
+    },
+  );
 };
 ```
 
@@ -51,14 +57,15 @@ The ID of the required genre record is encoded at the end of the URL and extract
 > **備註：** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 >
 > ```js
-> if (results.genre==null) { // No results.
->     var err = new Error('Genre not found');
->     err.status = 404;
->     return next(err);
+> if (results.genre == null) {
+>   // No results.
+>   var err = new Error("Genre not found");
+>   err.status = 404;
+>   return next(err);
 > }
 > ```
 >
-> The message will then propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling) - for more information see [Handling Errors](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Handling_errors)).
+> The message will then propagate through to our error handling code (this was set up when we [generated the app skeleton](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling) - for more information see [Handling Errors](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction#Handling_errors)).
 
 The rendered view is **genre_detail** and it is passed variables for the `title`, `genre` and the list of books in this genre (`genre_books`).
 
@@ -104,7 +111,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 > This is a mongoose error coming from the **req.params.id**. To solve this problem, first you need to require mongoose on the **genreController.js** page like this:
 >
 > ```js
->  var mongoose = require('mongoose');
+> var mongoose = require("mongoose");
 > ```
 >
 > Then use **mongoose.Types.ObjectId()** to convert the id to a that can be used. For example:
@@ -117,5 +124,5 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Book detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page).
+- Return to [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [Book detail page](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page).

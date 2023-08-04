@@ -1,20 +1,15 @@
 ---
 title: link ロールの使用
 slug: Web/Accessibility/ARIA/Roles/link_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 ---
+
 ### 説明
 
 このテクニックは、[`link`](https://www.w3.org/WAI/PF/aria-1.1/roles#link) ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。
 
 `link` ロールは、アプリケーションまたは外部にあるリソースへのハイパーリンクを作成する要素を識別するために使用されます。 このロールが要素に追加されると、タブを使用してリンクへのフォーカスを変更したり、リンクの実行にスペースやエンターを使用することができます。
 
-> **Note:** 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、`link` ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。
+> **メモ:** 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、`link` ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。
 
 [`tabindex`](https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex) 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。
 
@@ -46,23 +41,28 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 
 ```html
 <script type="text/javascript">
-sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
-//リンク上のクリックとキーダウンを処理する
-function navigateLink(evt) {
-    if (evt.type=="click" ||
-        evt.keyCode == sap.ui.keycodes.ENTER) {
-        var ref = evt.target != null ? evt.target : evt.srcElement;
-        if (ref) window.open(ref.getAttribute("href"),"_blank");
+  sap = { ui: { keycodes: { SPACE: 32, ENTER: 13 } } };
+  //リンク上のクリックとキーダウンを処理する
+  function navigateLink(evt) {
+    if (evt.type == "click" || evt.keyCode == sap.ui.keycodes.ENTER) {
+      var ref = evt.target != null ? evt.target : evt.srcElement;
+      if (ref) window.open(ref.getAttribute("href"), "_blank");
     }
-}
+  }
 </script>
 
 <body role="application">
-
-    <h3>span を使った単純なリンクの構築</h3>
-    <span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link">
-      スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
-    </span>
+  <h3>span を使った単純なリンクの構築</h3>
+  <span
+    href="http://www.w3c.org"
+    onkeydown="navigateLink(event)"
+    onclick="navigateLink(event)"
+    tabindex="0"
+    id="link1"
+    role="link"
+    class="link">
+    スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
+  </span>
 </body>
 ```
 

@@ -2,6 +2,7 @@
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`clearResourceTimings()`** メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "`resource`" のすべての {{domxref("PerformanceEntry","パフォーマンスエントリー")}}をブラウザーのパフォーマンスデータバッファーから削除し、パフォーマンスデータバッファーのサイズをゼロに設定します。ブラウザーのパフォーマンスデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用してください。
@@ -29,7 +30,7 @@ performance.clearResourceTimings();
 ```js
 function load_resource() {
   var image = new Image();
-  image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
+  image.src = "https://developer.mozilla.org/mdn-social-share.png";
 }
 function clear_performance_timings() {
   if (performance === undefined) {

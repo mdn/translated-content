@@ -2,6 +2,7 @@
 title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`type()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、 `CSSNumericValue` の型をf `angle`, `flex`,
@@ -11,7 +12,7 @@ slug: Web/API/CSSNumericValue/type
 ## 構文
 
 ```js
-type()
+type();
 ```
 
 ### 引数
@@ -29,7 +30,10 @@ type()
 ## 例
 
 ```js
-let mathSum = CSS.px("23").sub(CSS.percent("4")).sub(CSS.cm("3")).sub(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .sub(CSS.percent("4"))
+  .sub(CSS.cm("3"))
+  .sub(CSS.in("9"));
 // Returns an object with the structure: {length: 1, percentHint: "length"}
 let cssNumericType = mathSum.type();
 ```

@@ -2,6 +2,7 @@
 title: ByteLengthQueuingStrategy.ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`ByteLengthQueuingStrategy()`** コンストラクターは、`ByteLengthQueuingStrategy` オブジェクトのインスタンスを作成して返します。
@@ -47,9 +48,7 @@ var size = queuingStrategy.size(chunk);
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                         | コメント |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#blqs-constructor","ByteLengthQueuingStrategy()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

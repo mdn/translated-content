@@ -1,14 +1,8 @@
 ---
-title: 'Window: vrdisplayconnect event'
+title: "Window: vrdisplayconnect event"
 slug: Web/API/Window/vrdisplayconnect_event
-tags:
-  - Evènement
-  - Reference
-  - WebVR
-  - onvrdisplayconnect
-  - vrdisplayconnect
-translation_of: Web/API/Window/vrdisplayconnect_event
 ---
+
 {{APIRef("Window")}}
 
 L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API) est déclenché lorsqu'un écran VR compatible est connecté à l'ordinateur.
@@ -31,7 +25,7 @@ L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API
       <th scope="row">Propriété de gestionnaire d'événements</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Window/onvrdisplayconnect"
+          ><a href="/fr/docs/Web/API/Window/onvrdisplayconnect"
             >onvrdisplayconnect</a
           ></code
         >
@@ -45,8 +39,8 @@ L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API
 Vous pouvez utiliser l'événement `vrdisplayconnect` dans une méthode [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) :
 
 ```js
-window.addEventListener('vrdisplayconnect', function() {
-  info.textContent = 'Affichage connecté.';
+window.addEventListener("vrdisplayconnect", function () {
+  info.textContent = "Affichage connecté.";
   reportDisplays();
 });
 ```
@@ -54,8 +48,8 @@ window.addEventListener('vrdisplayconnect', function() {
 Ou utilisez la propriété du gestionnaire d'événements [`onvrdisplayconnect`](/fr/docs/Web/API/Window/onvrdisplayconnect) :
 
 ```js
-window.onvrdisplayconnect = function() {
-  info.textContent = 'Affichage connecté.';
+window.onvrdisplayconnect = function () {
+  info.textContent = "Affichage connecté.";
   reportDisplays();
 };
 ```

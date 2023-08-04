@@ -2,6 +2,7 @@
 title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`ChannelMergerNode()`** 构造函数生成新的 {{domxref("ChannelMergerNode")}} 对象实例。
@@ -34,8 +35,8 @@ _从字典_ _{{domxref("AudioNodeOptions")}} 继承。_
 var ac = new AudioContext();
 
 var options = {
-  numberOfInputs : 2
-}
+  numberOfInputs: 2,
+};
 
 var myMerger = new ChannelMergerNode(ac, options);
 ```
@@ -46,4 +47,4 @@ var myMerger = new ChannelMergerNode(ac, options);
 
 ## 浏览器兼容性
 
-{{Compat("api.ChannelMergerNode.ChannelMergerNode")}}
+{{Compat}}

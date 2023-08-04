@@ -1,8 +1,8 @@
 ---
 title: Proxy-Authorization
 slug: Web/HTTP/Headers/Proxy-Authorization
-translation_of: Web/HTTP/Headers/Proxy-Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。
@@ -41,7 +41,7 @@ Proxy-Authorization: <type> <credentials>
     - コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
     - 結果の文字列は [Base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-    > **Note:** **メモ**: Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
+    > **メモ:** Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
 
 ## 例
 

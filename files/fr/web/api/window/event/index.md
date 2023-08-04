@@ -1,16 +1,8 @@
 ---
 title: Window.event
 slug: Web/API/Window/event
-tags:
-  - API
-  - Evènement
-  - Gestionnaire d'évènements
-  - HTML DOM
-  - Lecture seulement
-  - Propriété
-  - Window
-translation_of: Web/API/Window/event
 ---
+
 {{APIRef("DOM")}}
 
 L'événement de propriété {{domxref("Window")}} en lecture seule renvoie le {{domxref("Event")}} qui est actuellement géré par le code du site. En dehors du contexte d'un gestionnaire d'événements, la valeur est toujours `undefined`.

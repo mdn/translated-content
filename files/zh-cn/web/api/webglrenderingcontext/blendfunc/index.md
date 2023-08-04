@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.blendFunc()
 slug: Web/API/WebGLRenderingContext/blendFunc
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.blendFunc()`** 方法定义了一个用于混合像素算法的函数。
@@ -32,7 +33,7 @@ None.
 
 下列常数可用于 `sfactor` 和`dfactor`.
 
-混合颜色的公式可以这样描述: color(RGBA) = (sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). RBGA 值在 0 到 1 之间。
+混合颜色的公式可以这样描述：color(RGBA) = (sourceColor \* _sfactor_) + (destinationColor \* _dfactor_). RBGA 值在 0 到 1 之间。
 
 | Constant                      | Factor                                               | Description                                                                 |
 | ----------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------- |

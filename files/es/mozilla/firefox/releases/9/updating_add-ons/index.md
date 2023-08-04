@@ -1,7 +1,6 @@
 ---
 title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-translation_of: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
 
 {{FirefoxSidebar}}
@@ -24,7 +23,7 @@ Empezando en Firefox 9, tu debes llamar al nuevo método `nsIChromeFrameMessageM
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js"
+  "chrome://myextension/content/somescript.js",
 );
 ```
 

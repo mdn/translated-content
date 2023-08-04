@@ -1,10 +1,11 @@
 ---
-title: 'Django Tutorial Part 6: Generic list and detail views'
+title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn/Server-side/Django/Generic_views
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
-本教程擴充了 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。
+本教程擴充了 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為書本與作者增加列表與細節頁面。此處我們將學到通用類別視圖，並演示如何降低你必須為一般使用案例撰寫的程式碼數量。我們也會更加深入 URL 處理細節，演示如何實施基本模式匹配。
 
 <table>
   <tbody>
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Django/Generic_views
       <th scope="row">前提:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >.
       </td>
@@ -29,7 +30,7 @@ slug: Learn/Server-side/Django/Generic_views
 
 ## Overview
 
-本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）
+本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）
 
 該過程在創建索引頁面，我們在上一個教程中展示了該頁面。我們仍然需要創建 URL 地圖，視圖和模板。主要區別在於，對於詳細信息頁面，我們還有一個額外的挑戰，即從 URL 對於這些頁面，我們將演示一種完全不同的視圖類型：基於類別的通用列表和詳細視圖。這些可以顯著減少所需的視圖代碼量，有助於更容易編寫和維護。
 
@@ -56,7 +57,7 @@ urlpatterns = [
 
 ### View (class-based)
 
-我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 ​​ 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
+我們可以很容易地，將書本列表列表編寫為常規函數（就像我們之前的索引視圖一樣），進入查詢數據庫中的所有書本，然後調用 render（），將列表傳遞給指定的模板。然而，我們用另一種方 法取代，我們將使用基於類的通用列表視圖（ListView）-一個繼承自現有視圖的類。因為通用視圖，已經實現了我們需要的大部分功能，並且遵循 Django 最佳實踐，我們將能夠創建更強大的列表視圖，代碼更多，重複次數最多，最終維護所需。
 
 開啟 catalog / views.py，將以下代碼複製到文件的底部：
 
@@ -67,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為“ the_model_name_list”），以訪問書本列表。
+就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
 
 > **備註：** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
@@ -123,19 +124,20 @@ class BookListView(generic.ListView):
 
 通用的 views 模板跟其他的模板沒有不同 (儘管傳遞給模板的內文/訊息當然可以不同). 與 index 模板一樣，我們在第一行中擴展了基本模板，然後更替名為 `content`的區塊。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Book List</h1>
   {% if book_list %}
-  <ul>
-    {% for book in book_list %}
+    <ul>
+      {% for book in book_list %}
       <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+        (\{{book.author}})
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
@@ -148,7 +150,7 @@ class BookListView(generic.ListView):
 
 我們使用 [`if`](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if), `else` 和 `endif` 模組標籤，以檢查`book_list` 是否已定義並且不為空。 如果 `book_list` 為空值, 則 `else` 子句回傳 text 說明沒有書可以列出. 如果`book_list`不是空值, 然後我們遍曆書籍清單。
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -162,9 +164,9 @@ The condition above only checks for one case, but you can test on additional con
 
 The template uses the [for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below. Each iteration populates the `book` template variable with information for the current list item.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -368,27 +370,33 @@ The view first tries to get the specific book record from the model. If this fai
 
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Title: \{{ book.title }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+  <!-- author detail link not yet defined -->
   <p><strong>Summary:</strong> \{{ book.summary }}</p>
   <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
   <p><strong>Language:</strong> \{{ book.language }}</p>
-  <p><strong>Genre:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
   <div style="margin-left:20px;margin-top:20px">
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}
-    <hr>
-    <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">\{{ copy.get_status_display }}</p>
-    {% if copy.status != 'a' %}<p><strong>Due to be returned:</strong> \{{copy.due_back}}</p>{% endif %}
-    <p><strong>Imprint:</strong> \{{copy.imprint}}</p>
-    <p class="text-muted"><strong>Id:</strong> \{{copy.id}}</p>
+      <hr />
+      <p
+        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        \{{ copy.get_status_display }}
+      </p>
+      {% if copy.status != 'a' %}
+        <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
+      {% endif %}
+      <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
+      <p class="text-muted"><strong>Id:</strong> \{{ copy.id }}</p>
     {% endfor %}
   </div>
 {% endblock %}
@@ -415,7 +423,7 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 {% endfor %}
 ```
 
-需要這方法是因為我們僅在“一”那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在“多”那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為“reverse lookup”供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
+需要這方法是因為我們僅在「一」那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在「多」那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為「reverse lookup」供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
 
 > **備註：** 在這我們使用 `all()` 取得所有紀錄 (預設)，你無法直接在 template 做是因為你無法指定引數到 function，但你可用 `filter()` 方法取得一個紀錄的子集 。
 >
@@ -546,8 +554,11 @@ The code required for the URL mappers and the views should be virtually identica
 > - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.
@@ -573,21 +584,3 @@ In our next articles we'll extend this library to support user accounts, and the
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

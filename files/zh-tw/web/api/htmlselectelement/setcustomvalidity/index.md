@@ -2,6 +2,7 @@
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.setCustomValidity()`** 方法可為指定的元素設定自定義檢核訊息。使用空字串表示元素*沒有*發生違反自定檢核條件的錯誤。
@@ -22,7 +23,7 @@ selectElt.setCustomValidity(string);
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## 參見
 

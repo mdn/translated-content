@@ -1,45 +1,53 @@
 ---
-title: 'BroadcastChannel: message イベント'
+title: "BroadcastChannel: message イベント"
 slug: Web/API/BroadcastChannel/message_event
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
+
 {{APIRef}}
 
-`message` イベントは、メッセージがそのチャネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクトに対して発生します。
+`message` イベントは、メッセージがそのチャンネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクト上で発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td>バブリング</td>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラプロパティ</th>
-      <td>
-        {{domxref("BroadcastChannel.onmessage","onmessage")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js-nolint
+addEventListener("message", (event) => { })
+onmessage = (event) => { }
+```
+
+## イベント型
+
+{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : メッセージ送信元によって送信されたデータです。
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : 文字列で、メッセージ送信元のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : 文字列で、このイベントの一意の ID を表します。
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : メッセージイベントソース、すなわち {{glossary("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクトで、メッセージの送信元を表します。
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-### 実例
+この例では "Sender" の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) があり、ユーザーがボタンをクリックしたときに [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) の内容を配信します。 "Receiver" の iframe は 2 つあり、ブロードキャストメッセージを受信し、その結果を [`<div>`](/ja/docs/Web/HTML/Element/div) 要素に書き込みます。
 
-この例では、ユーザーがボタンをクリックしたときに {{htmlelement("textarea")}} の内容を放送する "Sender" の {{htmlelement("iframe")}} と、放送メッセージを受信し、その結果を {{htmlelement("div")}} 要素に書き込む 2 つの "Receiver" の `<iframe>` があります。
-
-#### Sender
+### Sender
 
 ```html hidden
 <h1>Sender</h1>
-<label for="message">Type a message to broadcast:</label><br/>
+<label for="message">Type a message to broadcast:</label><br />
 <textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
 <button id="broadcast-message" type="button">Broadcast message</button>
 ```
@@ -72,16 +80,16 @@ button {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-const messageControl = document.querySelector('#message');
-const broadcastMessageButton = document.querySelector('#broadcast-message');
+const channel = new BroadcastChannel("example-channel");
+const messageControl = document.querySelector("#message");
+const broadcastMessageButton = document.querySelector("#broadcast-message");
 
-broadcastMessageButton.addEventListener('click', () => {
-    channel.postMessage(messageControl.value);
-})
+broadcastMessageButton.addEventListener("click", () => {
+  channel.postMessage(messageControl.value);
+});
 ```
 
-#### Receiver 1
+### Receiver 1
 
 ```html hidden
 <h1>Receiver 1</h1>
@@ -103,13 +111,13 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
 
-#### Receiver 2
+### Receiver 2
 
 ```html hidden
 <h1>Receiver 2</h1>
@@ -131,30 +139,28 @@ h1 {
 ```
 
 ```js
-const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) => {
+const channel = new BroadcastChannel("example-channel");
+channel.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Sender', '100%', '170px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Sender', '100%', 220) }}
 
-{{ EmbedLiveSample('Receiver_1', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_1', '100%', 160) }}
 
-{{ EmbedLiveSample('Receiver_2', '100%', '150px','' ,'' , 'dummy') }}
+{{ EmbedLiveSample('Receiver_2', '100%', 160) }}
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                             |
-| ---------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-message')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.BroadcastChannel.message_event")}}
+{{Compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("BroadcastChannel.messageerror_event","messageerror")}}。
+- 関連イベント: [`messageerror`](/ja/docs/Web/API/BroadcastChannel/messageerror_event)

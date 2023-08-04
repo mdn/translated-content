@@ -2,6 +2,7 @@
 title: 类私有域
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 类属性在默认情况下是{{jsxref('Classes/Public_class_fields','公有')}}的，但可以使用增加哈希前缀 `#` 的方法来定义私有类字段，这一隐秘封装的类特性由 JavaScript 自身强制执行。
@@ -15,7 +16,7 @@ class ClassWithPrivateField {
 
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 
@@ -25,7 +26,7 @@ class ClassWithPrivateStaticField {
 
 class ClassWithPrivateStaticMethod {
   static #privateStaticMethod() {
-    return 'hello world';
+    return "hello world";
   }
 }
 ```
@@ -113,13 +114,15 @@ class BaseClassWithPrivateStaticField {
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { };
+class SubClass extends BaseClassWithPrivateStaticField {}
 
 let error = null;
 
 try {
-  SubClass.basePublicStaticMethod()
-} catch(e) { error = e};
+  SubClass.basePublicStaticMethod();
+} catch (e) {
+  error = e;
+}
 
 console.log(error instanceof TypeError);
 // true
@@ -137,7 +140,7 @@ console.log(error);
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world';
+    return "hello world";
   }
 
   getPrivateMessage() {
@@ -164,7 +167,7 @@ class ClassWithPrivateAccessor {
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world';
+    this.#decoratedMessage = "hello world";
     console.log(this.#decoratedMessage);
   }
 }
@@ -226,15 +229,15 @@ console.log(Derived.publicStaticMethod2());
 
 ## 规范
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 参见
 
-- [Working with private class features](/en-US/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
+- [Working with private class features](/zh-CN/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features)
 - [Public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [The
   Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

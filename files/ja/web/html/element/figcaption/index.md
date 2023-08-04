@@ -1,25 +1,31 @@
 ---
-title: '<figcaption>: 図キャプション要素'
+title: "<figcaption>: 図キャプション要素"
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figcaption
-browser-compat: html.elements.figcaption
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
-{{HTMLRef}}
 
-**HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
+{{HTMLSidebar}}
+
+**`<figcaption>`** は [HTML](/ja/docs/Web/HTML) の要素で、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -28,7 +34,7 @@ browser-compat: html.elements.figcaption
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -56,8 +62,8 @@ browser-compat: html.elements.figcaption
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -67,20 +73,9 @@ browser-compat: html.elements.figcaption
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-`<figcaption>` の例については、 {{HTMLElement("figure")}} のページを参照して下さい。
-
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

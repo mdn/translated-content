@@ -1,16 +1,8 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
-  - 위치정보
-translation_of: Web/API/Geolocation
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Geolocation`** 인터페이스는 장치의 위치를 가져오는 방법을 나타냅니다. `Geolocation`을 사용하면 웹 사이트나 웹 앱이 위치 정보를 활용해, 현재 위치에 대해 맞춤 콘텐츠를 제공할 수 있습니다.

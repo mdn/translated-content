@@ -1,17 +1,8 @@
 ---
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - メソッド
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 **`[@@matchAll]`** メソッドは、文字列に対する正規表現で一致するすべてのものを返します。
@@ -87,9 +78,7 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

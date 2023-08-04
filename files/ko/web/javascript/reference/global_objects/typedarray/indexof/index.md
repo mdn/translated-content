@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 ---
 {{JSRef}}
 

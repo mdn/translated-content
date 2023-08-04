@@ -2,6 +2,7 @@
 title: <gradient>
 slug: Web/CSS/gradient
 ---
+
 {{CSSRef}}
 
 **`<gradient>`** 是一种{{cssxref("&lt;image&gt;")}}CSS 数据类型的子类型，用于表现两种或多种颜色的过渡转变。**`<gradient>`** [没有内在尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，不具备固有或首选的尺寸，也不具备首选的比率。其实际的大小取决于其填充元素的大小。
@@ -29,12 +30,20 @@ div {
 
 ```css
 .linear-gradient {
-  background: linear-gradient(to right,
-      red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
-{{EmbedLiveSample('linear-gradient', 240, 80)}}
+{{EmbedLiveSample('线形渐变', 240, 80)}}
 
 #### 径向渐变
 
@@ -57,7 +66,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('radial-gradient', 240, 80)}}
+{{EmbedLiveSample('径向渐变', 240, 80)}}
 
 #### 重复渐变
 
@@ -65,7 +74,7 @@ div {
 
 ```html hidden
 <div class="linear-repeat">Repeating linear gradient</div>
-<br>
+<br />
 <div class="radial-repeat">Repeating radial gradient</div>
 ```
 
@@ -78,16 +87,26 @@ div {
 
 ```css
 .linear-repeat {
-  background: repeating-linear-gradient(to top left,
-      lightpink, lightpink 5px, white 5px, white 10px);
+  background: repeating-linear-gradient(
+    to top left,
+    lightpink,
+    lightpink 5px,
+    white 5px,
+    white 10px
+  );
 }
 
 .radial-repeat {
-  background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);
+  background: repeating-radial-gradient(
+    powderblue,
+    powderblue 8px,
+    white 8px,
+    white 16px
+  );
 }
 ```
 
-{{EmbedLiveSample('repeating-gradient', 220, 180)}}
+{{EmbedLiveSample('重复渐变', 220, 180)}}
 
 ## 插值
 
@@ -101,7 +120,7 @@ div {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients),
 - 渐变方程：{{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};

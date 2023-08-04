@@ -2,6 +2,7 @@
 title: Node.appendChild
 slug: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.appendChild()`** 方法将一个节点附加到指定父节点的子节点列表的末尾处。如果将被插入的节点已经存在于当前文档的文档树中，那么 `appendChild()` 只会将它从原先的位置移动到新的位置（不需要事先移除要移动的节点）。
@@ -25,7 +26,7 @@ element.appendChild(aChild)
 
 ### 返回值
 
-返回追加后的子节点 （`aChild`），除非 `aChild` 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。
+返回追加后的子节点（`aChild`），除非 `aChild` 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。
 
 ## 附注
 
@@ -38,7 +39,9 @@ element.appendChild(aChild)
 由于 `appendChild()` 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+let aBlock = document
+  .createElement("block")
+  .appendChild(document.createElement("b"));
 ```
 
 （上述代码）只会将 `aBlock` 设置为 `<b></b>` ，这可能不是你所想要的。
@@ -57,7 +60,7 @@ document.body.appendChild(p);
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.appendChild")}}
+{{Compat}}
 
 ## 参见
 

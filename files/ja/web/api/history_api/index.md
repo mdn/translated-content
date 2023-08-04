@@ -1,7 +1,10 @@
 ---
-title: History API
+title: 履歴 API
 slug: Web/API/History_API
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 DOM の {{DOMxRef("Window")}} オブジェクトは、ブラウザーのセッション履歴 ([WebExtensions history](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history) と混同しないように) へのアクセスを {{DOMxRef("Window.history","history")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。
@@ -18,9 +21,9 @@ DOM の {{DOMxRef("Window")}} オブジェクトは、ブラウザーのセッ�
 window.history.back()
 ```
 
-これは、ちょうどユーザーがブラウザーのツールバーの<kbd><strong>前のページへ戻る</strong></kbd>ボタンをクリックしたときのような動作です。
+これは、ちょうどユーザーがブラウザーのツールバーの<kbd><strong>戻る</strong></kbd>ボタンをクリックしたときのような動作です。
 
-同様に、次のようにして (ユーザーが<kbd><strong>次のページへ進む</strong></kbd>ボタンをクリックしたときのように) 次のページへ進むこともできます。
+同様に、次のようにして (ユーザーが<kbd><strong>次へ</strong></kbd>ボタンをクリックしたときのように) 次のページへ進むこともできます。
 
 ```js
 window.history.forward()
@@ -70,7 +73,7 @@ let numberOfEntries = window.history.length
 以下の例では `onpopstate` プロパティにリスナーを割り当てています。そして、 history オブジェクトのメソッドで現在のタブのブラウザー履歴の追加、置換、移動など、いくつかの操作を説明しています。
 
 ```js
-window.onpopstate = function(event) {
+window.onpopstate = (event) => {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
 }
 
@@ -84,22 +87,19 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#history", "History")}} | {{Spec2("HTML WHATWG")}} | {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}     | {{Spec2("HTML5 W3C")}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## 関連情報
 
 ### リファレンス
 
 - {{ domxref("window.history") }}
-- {{ domxref("window.onpopstate") }}
+- {{domxref("Window/popstate_event", "popstate")}} イベント
 
 ### ガイド
 
-- [History API の操作](/ja/docs/Web/API/History_API/Working_with_the_History_API)
+- [履歴 API の操作](/ja/docs/Web/API/History_API/Working_with_the_History_API)

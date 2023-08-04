@@ -1,13 +1,8 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Deprecated
-  - Function
-  - JavaScript
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`function.caller`** プロパティは、指定した関数の呼び出し元の関数を返します。厳格モード、非同期関数、ジェネレーター関数の呼び出し元については `null` を返します。

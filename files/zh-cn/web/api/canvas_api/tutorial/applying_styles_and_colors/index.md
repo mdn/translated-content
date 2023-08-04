@@ -2,11 +2,12 @@
 title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩 Colors
 
-到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle。`
+到目前为止，我们只看到过绘制内容的方法。如果我们想要给图形上色，有两个重要的属性可以做到：`fillStyle` 和 `strokeStyle`。
 
 - {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle = color")}}
   - : 设置图形的填充颜色。
@@ -33,12 +34,16 @@ ctx.fillStyle = "rgba(255,165,0,1)";
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i=0;i<6;i++){
-    for (var j=0;j<6;j++){
-      ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' +
-                       Math.floor(255-42.5*j) + ',0)';
-      ctx.fillRect(j*25,i*25,25,25);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ",0)";
+      ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
 }
@@ -54,25 +59,29 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle 示例", 160, 160, "canvas_fillstyle.png")}}
 
 ### `strokeStyle` 示例
 
 这个示例与上面的有点类似，但这次用到的是 `strokeStyle` 属性，画的不是方格，而是用 `arc` 方法来画圆。
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i=0;i<6;i++){
-      for (var j=0;j<6;j++){
-        ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' +
-                         Math.floor(255-42.5*j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
-        ctx.stroke();
-      }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0," +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -85,7 +94,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("strokeStyle 示例", "180", "180", "canvas_strokestyle.png")}}
 
 ## 透明度 Transparency
 
@@ -112,26 +121,26 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // 画背景
-  ctx.fillStyle = '#FD0';
-  ctx.fillRect(0,0,75,75);
-  ctx.fillStyle = '#6C0';
-  ctx.fillRect(75,0,75,75);
-  ctx.fillStyle = '#09F';
-  ctx.fillRect(0,75,75,75);
-  ctx.fillStyle = '#F30';
-  ctx.fillRect(75,75,75,75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FD0";
+  ctx.fillRect(0, 0, 75, 75);
+  ctx.fillStyle = "#6C0";
+  ctx.fillRect(75, 0, 75, 75);
+  ctx.fillStyle = "#09F";
+  ctx.fillRect(0, 75, 75, 75);
+  ctx.fillStyle = "#F30";
+  ctx.fillRect(75, 75, 75, 75);
+  ctx.fillStyle = "#FFF";
 
   // 设置透明度值
   ctx.globalAlpha = 0.2;
 
   // 画半透明圆
-  for (var i=0;i<7;i++){
-      ctx.beginPath();
-      ctx.arc(75,75,10+10*i,0,Math.PI*2,true);
-      ctx.fill();
+  for (var i = 0; i < 7; i++) {
+    ctx.beginPath();
+    ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+    ctx.fill();
   }
 }
 ```
@@ -144,7 +153,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("globalAlpha 示例", "180", "180", "canvas_globalalpha.png")}}
 
 ### `rgba()` 示例
 
@@ -152,23 +161,23 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 画背景
-  ctx.fillStyle = 'rgb(255,221,0)';
-  ctx.fillRect(0,0,150,37.5);
-  ctx.fillStyle = 'rgb(102,204,0)';
-  ctx.fillRect(0,37.5,150,37.5);
-  ctx.fillStyle = 'rgb(0,153,255)';
-  ctx.fillRect(0,75,150,37.5);
-  ctx.fillStyle = 'rgb(255,51,0)';
-  ctx.fillRect(0,112.5,150,37.5);
+  ctx.fillStyle = "rgb(255,221,0)";
+  ctx.fillRect(0, 0, 150, 37.5);
+  ctx.fillStyle = "rgb(102,204,0)";
+  ctx.fillRect(0, 37.5, 150, 37.5);
+  ctx.fillStyle = "rgb(0,153,255)";
+  ctx.fillRect(0, 75, 150, 37.5);
+  ctx.fillStyle = "rgb(255,51,0)";
+  ctx.fillRect(0, 112.5, 150, 37.5);
 
   // 画半透明矩形
-  for (var i=0;i<10;i++){
-    ctx.fillStyle = 'rgba(255,255,255,'+(i+1)/10+')';
-    for (var j=0;j<4;j++){
-      ctx.fillRect(5+i*14,5+j*37.5,14,27.5)
+  for (var i = 0; i < 10; i++) {
+    ctx.fillStyle = "rgba(255,255,255," + (i + 1) / 10 + ")";
+    for (var j = 0; j < 4; j++) {
+      ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
   }
 }
@@ -182,7 +191,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("rgba() 示例", "180", "180", "canvas_rgba.png")}}
 
 ## 线型 Line styles
 
@@ -215,12 +224,12 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i < 10; i++){
-    ctx.lineWidth = 1+i;
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 10; i++) {
+    ctx.lineWidth = 1 + i;
     ctx.beginPath();
-    ctx.moveTo(5+i*14,5);
-    ctx.lineTo(5+i*14,140);
+    ctx.moveTo(5 + i * 14, 5);
+    ctx.lineTo(5 + i * 14, 140);
     ctx.stroke();
   }
 }
@@ -234,11 +243,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("lineWidth 属性的例子", "180", "180", "canvas_linewidth.png")}}
 
 想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。
 
-![](/@api/deki/files/601/=Canvas-grid.png)
+![](canvas-grid.png)
 
 如果你想要绘制一条从 (3,1) 到 (3,5)，宽度是 1.0 的线条，你会得到像第二幅图一样的结果。实际填充区域（深蓝色部分）仅仅延伸至路径两旁各一半像素。而这半个像素又会以近似的方式进行渲染，这意味着那些像素只是部分着色，结果就是以实际笔触颜色一半色调的颜色来填充整个区域（浅蓝和深蓝的部分）。这就是上例中为何宽度为 1.0 的线并不准确的原因。
 
@@ -250,11 +259,11 @@ draw();
 
 对于那些宽度为偶数的线条，每一边的像素数都是整数，那么你想要其路径是落在像素点之间 (如那从 (3,1) 到 (3,5)) 而不是在像素点的中间。同样，注意到那个例子的垂直线条，其 Y 坐标刚好落在网格线上，如果不是的话，端点上同样会出现半渲染的像素点。
 
-虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其它任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
+虽然开始处理可缩放的 2D 图形时会有点小痛苦，但是及早注意到像素网格与路径位置之间的关系，可以确保图形在经过缩放或者其他任何变形后都可以保持看上去蛮好：线宽为 1.0 的垂线在放大 2 倍后，会变成清晰的线宽为 2.0，并且出现在它应该出现的位置上。
 
 #### `lineCap` 属性的例子
 
-![](/@api/deki/files/88/=Canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt。`
+![](canvas_linecap.png)属性 `lineCap` 的值决定了线段端点显示的样子。它可以为下面的三种的其中之一：`butt`，`round` 和 `square`。默认是 `butt`。
 
 在这个例子里面，我绘制了三条直线，分别赋予不同的 `lineCap` 值。还有两条辅助线，为了可以看得更清楚它们之间的区别，三条线的起点终点都落在辅助线上。
 
@@ -262,26 +271,26 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt','round','square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // 创建路径
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
-  ctx.moveTo(10,10);
-  ctx.lineTo(140,10);
-  ctx.moveTo(10,140);
-  ctx.lineTo(140,140);
+  ctx.moveTo(10, 10);
+  ctx.lineTo(140, 10);
+  ctx.moveTo(10, 140);
+  ctx.lineTo(140, 140);
   ctx.stroke();
 
   // 画线条
-  ctx.strokeStyle = 'black';
-  for (var i=0;i<lineCap.length;i++){
+  ctx.strokeStyle = "black";
+  for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
     ctx.beginPath();
-    ctx.moveTo(25+i*50,10);
-    ctx.lineTo(25+i*50,140);
+    ctx.moveTo(25 + i * 50, 10);
+    ctx.lineTo(25 + i * 50, 140);
     ctx.stroke();
   }
 }
@@ -295,18 +304,18 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("lineCap 属性的例子", "180", "180", "canvas_linecap.png")}}
 
 #### `lineJoin` 属性的例子
 
-![](/@api/deki/files/89/=Canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter。`默认是 ` miter``。 `
+![](canvas_linejoin.png)`lineJoin` 的属性值决定了图形中两线段连接处所显示的样子。它可以是这三种之一：`round`, `bevel` 和 `miter`。默认是 `miter`。
 
 这里我同样用三条折线来做例子，分别设置不同的 `lineJoin` 值。最上面一条是 `round` 的效果，边角处被磨圆了，圆的半径等于线宽。中间和最下面一条分别是 bevel 和 miter 的效果。当值是 `miter` 的时候，线段会在连接处外侧延伸直至交于一点，延伸效果受到下面将要介绍的 `miterLimit` 属性的制约。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -329,7 +338,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("lineJoin 属性的例子", "180", "180", "canvas_linejoin.png")}}
 
 #### `miterLimit` 属性的演示例子
 
@@ -337,7 +346,7 @@ draw();
 
 `miterLimit` 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此`miterLimit`属性值（HTML {{HTMLElement("canvas")}}默认为 10.0）的乘积，所以`miterLimit`可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。
 
-更准确的说，斜接限定值（`miterLimit`）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（`miterLength`）与线宽（`lineWidth`）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（_θ_ ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：
+更准确的说，斜接限定值（`miterLimit`）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（`miterLength`）与线宽（`lineWidth`）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（_θ_）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：
 
 - `miterLimit` = **max** `miterLength` / `lineWidth` = 1 / **sin** ( **min** _θ_ / 2 )
 - 斜接限定值默认为 10.0，这将会去除所有小于大约 11 度的斜接。
@@ -351,31 +360,31 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 清空画布
   ctx.clearRect(0, 0, 150, 150);
 
   // 绘制参考线
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // 设置线条样式
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // 检查输入
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // 绘制线条
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++) {
+  for (i = 0; i < 24; i++) {
     var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
@@ -388,11 +397,12 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>在输入框中输入<code>miterLimit</code>的值，并点击重绘按钮查看效果。<br><br>
+    <td>
+      在输入框中输入<code>miterLimit</code>的值，并点击重绘按钮查看效果。<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="number" size="3" id="miterLimit"/>
-        <input type="submit" value="重绘"/>
+        <input type="number" size="3" id="miterLimit" />
+        <input type="submit" value="重绘" />
       </form>
     </td>
   </tr>
@@ -400,11 +410,13 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("miterLimit 属性的演示例子", "500", "240", "canvas_miterlimit.png")}}
 
 ### 使用虚线
 
@@ -417,14 +429,14 @@ draw();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {
@@ -439,7 +451,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("使用虚线", "120", "120", "marching-ants.png")}}
 
 ## 渐变 Gradients
 
@@ -451,8 +463,8 @@ march();
   - : createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。
 
 ```js
-var lineargradient = ctx.createLinearGradient(0,0,150,150);
-var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 ```
 
 创建出 `canvasGradient` 对象后，我们就可以用 `addColorStop` 方法给它上色了。
@@ -463,12 +475,14 @@ var radialgradient = ctx.createRadialGradient(75,75,0,75,75,100);
 你可以根据需要添加任意多个色标（color stops）。下面是最简单的线性黑白渐变的例子。
 
 ```js
-var lineargradient = ctx.createLinearGradient(0,0,150,150);
-lineargradient.addColorStop(0,'white');
-lineargradient.addColorStop(1,'black');
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
-#### `createLinearGradient` 的例子![](/@api/deki/files/87/=Canvas_lineargradient.png)
+#### `createLinearGradient` 的例子
+
+![](canvas_lineargradient.png)
 
 本例中，我弄了两种不同的渐变。第一种是背景色渐变，你会发现，我给同一位置设置了两种颜色，你也可以用这来实现突变的效果，就像这里从白色到绿色的突变。一般情况下，色标的定义是无所谓顺序的，但是色标位置重复时，顺序就变得非常重要了。所以，保持色标定义顺序和它理想的顺序一致，结果应该没什么大问题。
 
@@ -478,27 +492,26 @@ lineargradient.addColorStop(1,'black');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
-  var lingrad = ctx.createLinearGradient(0,0,0,150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
-  var lingrad2 = ctx.createLinearGradient(0,50,0,95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0,0,0,0)');
+  var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0,0,0,0)");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = lingrad;
   ctx.strokeStyle = lingrad2;
 
   // draw shapes
-  ctx.fillRect(10,10,130,130);
-  ctx.strokeRect(50,50,50,50);
-
+  ctx.fillRect(10, 10, 130, 130);
+  ctx.strokeRect(50, 50, 50, 50);
 }
 ```
 
@@ -510,7 +523,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("createLinearGradient 的例子", "180", "180", "canvas_lineargradient.png")}}
 
 ### `createRadialGradient` 的例子
 
@@ -518,38 +531,38 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 创建渐变
-  var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+  var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1,159,98,0)");
 
-  var radgrad2 = ctx.createRadialGradient(105,105,20,112,120,50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255,1,136,0)');
+  var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255,1,136,0)");
 
-  var radgrad3 = ctx.createRadialGradient(95,15,15,102,20,40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0,201,255,0)');
+  var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0,201,255,0)");
 
-  var radgrad4 = ctx.createRadialGradient(0,150,50,0,140,90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228,199,0,0)');
+  var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228,199,0,0)");
 
   // 画图形
   ctx.fillStyle = radgrad4;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad3;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad2;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
   ctx.fillStyle = radgrad;
-  ctx.fillRect(0,0,150,150);
+  ctx.fillRect(0, 0, 150, 150);
 }
 ```
 
@@ -563,13 +576,13 @@ draw();
 
 这里，我让起点稍微偏离终点，这样可以达到一种球状 3D 效果。但最好不要让里圆与外圆部分交叠，那样会产生什么效果就真是不得而知了。
 
-4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)。`
+4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)`。
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("createRadialGradient 的例子", "180", "180", "canvas_radialgradient.png")}}
 
 ## 图案样式 Patterns
 
-上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：`createPattern。`
+上一节的一个例子里面，我用了循环来实现图案的效果。其实，有一个更加简单的方法：`createPattern`。
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
   - : 该方法接受两个参数。Image 可以是一个 `Image` 对象的引用，或者另一个 canvas 对象。`Type` 必须是下面的字符串值之一：`repeat`，`repeat-x`，`repeat-y` 和 `no-repeat`。
@@ -580,8 +593,8 @@ draw();
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img,'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
 > **备注：** 与 drawImage 有点不同，你需要确认 image 对象已经装载完毕，否则图案可能效果不对的。
@@ -592,19 +605,17 @@ var ptrn = ctx.createPattern(img,'repeat');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 创建新 image 对象，用作图案
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // 创建图案
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -618,7 +629,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("createPattern_的例子", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 的例子", "180", "180", "canvas_createpattern.png")}}
 
 ## 阴影 Shadows
 
@@ -637,7 +648,7 @@ The result looks like this:
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
@@ -658,7 +669,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("文字阴影的例子", "180", "100", "shadowed-string.png")}}
 
 我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。
 
@@ -668,17 +679,19 @@ draw();
 
 两个可能的值：
 
-- **`"nonzero`**": [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), 默认值。
-- **`"evenodd"`**: [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), 默认值。
+- `evenodd`
+  - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 这个例子，我们用填充规则 `evenodd`
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
-  ctx.arc(50, 50, 30, 0, Math.PI*2, true);
-  ctx.arc(50, 50, 15, 0, Math.PI*2, true);
+  ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
+  ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
   ctx.fill("evenodd");
 }
 ```
@@ -691,6 +704,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas 填充规则", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

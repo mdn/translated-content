@@ -2,11 +2,12 @@
 title: MediaStreamTrack.getCapabilities()
 slug: Web/API/MediaStreamTrack/getCapabilities
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 接口的 **`getCapabilities()`** 方法返回一个 {{domxref('MediaTrackCapabilities')}} 对象，此对象表示每个可调节属性的值或者范围，该特性依赖于平台和{{Glossary("user agent")}}.
 
-一旦你知道了浏览器的功能，你的脚本可以通过调用 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 来请求配置为匹配理想或可接受的设置。参考{{SectionOnPage("/zh-CN/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}} 以了解受限制属性的具体细节。
+一旦你知道了浏览器的功能，你的脚本可以通过调用 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 来请求配置为匹配理想或可接受的设置。参考[功能、约束和设置](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Constraints)以了解受限制属性的具体细节。
 
 ## 语法
 
@@ -28,4 +29,4 @@ A {{domxref('MediaTrackCapabilities')}} object which specifies the value or rang
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamTrack.getCapabilities")}}
+{{Compat}}

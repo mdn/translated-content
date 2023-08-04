@@ -1,23 +1,15 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-tags:
-  - CSS
-  - CSS カウンター
-  - CSS リスト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.counter-increment
-translation_of: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 **`counter-increment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された値によって [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)の値を増加または減少させるためのプロパティです。
 
 {{EmbedInteractiveExample("pages/css/counter-increment.html")}}
 
-> **Note:** カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
+> **メモ:** カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
 
 ## 構文
 

@@ -1,16 +1,8 @@
 ---
 title: Mi primer formulario HTML
 slug: Learn/Forms/Your_first_form
-tags:
-  - Ejemplo
-  - Guía
-  - HTML
-  - Principiante
-  - Web
-  - formulários
-translation_of: Learn/Forms/Your_first_form
-original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 El primer artículo de nuestra serie te proporciona una primera experiencia de creación de un formulario web, que incluye diseñar un formulario sencillo con controles de formulario adecuados y otros elementos HTML, añadir un poco de estilo muy simple con CSS y describir cómo se envían los datos a un servidor. Ampliaremos cada uno de estos subtemas más adelante.
@@ -69,9 +61,7 @@ Antes de continuar, haz una copia local de nuestra [plantilla HTML simple](https
 Todos los formularios comienzan con un elemento {{HTMLelement("form")}}, como este:
 
 ```html
-<form action="/my-handling-form-page" method="post">
-
-</form>
+<form action="/my-handling-form-page" method="post"></form>
 ```
 
 Este elemento define formalmente un formulario. Es un elemento contenedor, como un elemento {{HTMLelement("section")}} o {{HTMLelement("footer")}}, pero específico para contener formularios; también admite algunos atributos específicos para la configuración de la forma en que se comporta el formulario. Todos sus atributos son opcionales, pero es una práctica estándar establecer siempre al menos los atributos [`action`](/es/docs/Web/HTML/Attributes/action) y [`method`](/es/docs/Web/HTML/Attributes/method):
@@ -79,7 +69,7 @@ Este elemento define formalmente un formulario. Es un elemento contenedor, como 
 - El atributo `action` define la ubicación (URL) donde se envían los datos que el formulario ha recopilado cuando se validan.
 - El atributo `method` define con qué método HTTP se envían los datos (generalmente `get` o `post`).
 
-> **Nota:** Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data") que encontrarás más adelante.
+> **Nota:** Veremos cómo funcionan esos atributos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
 
 Por ahora, añade el elemento {{htmlelement("form")}} anterior a tu elemento HTML {{htmlelement("body")}}.
 
@@ -95,26 +85,26 @@ En términos de código HTML, para implementar estos controles de formulario nec
 
 ```html
 <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="user_name">
-  </li>
-  <li>
-    <label for="mail">Correo electrónico:</label>
-    <input type="email" id="mail" name="user_mail">
-  </li>
-  <li>
-    <label for="msg">Mensaje:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </li>
- </ul>
+  <ul>
+    <li>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+      <label for="mail">Correo electrónico:</label>
+      <input type="email" id="mail" name="user_mail" />
+    </li>
+    <li>
+      <label for="msg">Mensaje:</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </li>
+  </ul>
 </form>
 ```
 
 Actualiza el código de tu formulario para que se vea como el anterior.
 
-Los elementos {{HTMLelement("li")}} están ahí para estructurar nuestro código convenientemente y facilitar la aplicación de estilo (ver más adelante en el artículo). Por motivos de usabilidad y accesibilidad incluimos una etiqueta explícita para cada control de formulario. Ten en cuenta el uso del atributo [`for` ](/es/docs/Web/HTML/Attributes/for)en todos los elementos {{HTMLelement("label")}}, que toma como valor el [`id`](/es/docs/Web/HTML/Attributes/id) del control de formulario con el que está asociado; así es como asocias un formulario con su etiqueta.
+Los elementos {{HTMLelement("li")}} están ahí para estructurar nuestro código convenientemente y facilitar la aplicación de estilo (ver más adelante en el artículo). Por motivos de usabilidad y accesibilidad incluimos una etiqueta explícita para cada control de formulario. Ten en cuenta el uso del atributo [`for`](/es/docs/Web/HTML/Attributes/for) en todos los elementos {{HTMLelement("label")}}, que toma como valor el [`id`](/es/docs/Web/HTML/Attributes/id) del control de formulario con el que está asociado; así es como asocias un formulario con su etiqueta.
 
 Hacer esto presenta muchas ventajas porque la etiqueta está asociada al control del formulario y permite que los usuarios con ratón, panel táctil y dispositivos táctiles hagan clic en la etiqueta para activar el control correspondiente, y también proporciona accesibilidad con un nombre que los lectores de pantalla leen a sus usuarios. Encontrarás más detalles sobre las etiquetas de los formularios en [Cómo estructurar un formulario web](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form).
 
@@ -126,7 +116,7 @@ En el elemento {{HTMLelement("input")}}, el atributo más importante es `type`. 
 Por último, pero no por ello menos importante, ten en cuenta la sintaxis de `<input>` en contraposición con la de `<textarea></textarea>`. Esta es una de las rarezas del HTML. La etiqueta `<input>` es un elemento vacío, lo que significa que no necesita una etiqueta de cierre. El elemento {{HTMLElement("textarea")}} no es un elemento vacío, lo que significa que debe cerrarse con la etiqueta de cierre adecuada. Esto tiene un impacto en una característica específica de los formularios: el modo en que defines el valor predeterminado. Para definir el valor predeterminado de un elemento {{HTMLElement("input")}}, debes usar el atributo [`value`](/es/docs/Web/HTML/Attributes/value) de esta manera:
 
 ```html
-<input type="text" value="por defecto este elemento se llena con este texto">
+<input type="text" value="por defecto este elemento se llena con este texto" />
 ```
 
 Por otro lado, si deseas definir un valor predeterminado para un elemento {{HTMLElement("textarea")}}, lo colocas entre las etiquetas de apertura y cierre del elemento {{HTMLElement("textarea")}}, así:
@@ -166,9 +156,7 @@ Resulta notablemente difícil aplicar estilo a los formularios. Está más allá
 En primer lugar, añade un elemento {{htmlelement("style")}} a tu página, dentro de la cabecera del HTML. Debe quedar así:
 
 ```html
-<style>
-
-</style>
+<style></style>
 ```
 
 Dentro de las etiquetas `style`, añade el código CSS siguiente:
@@ -180,7 +168,7 @@ form {
   width: 400px;
   /* Esquema del formulario */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -237,7 +225,7 @@ textarea {
 button {
   /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
      entre las etiquetas y sus campos de texto */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -255,49 +243,114 @@ Para poner nombre a los diversos datos que se introducen en un formulario, debes
 
 ```html
 <form action="/my-handling-form-page" method="post">
- <ul>
-  <li>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="user_name" />
-  </li>
-  <li>
-    <label for="mail">Correo electrónico:</label>
-    <input type="email" id="mail" name="user_email" />
-  </li>
-  <li>
-    <label for="msg">Mensaje:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </li>
+  <ul>
+    <li>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="user_name" />
+    </li>
+    <li>
+      <label for="mail">Correo electrónico:</label>
+      <input type="email" id="mail" name="user_email" />
+    </li>
+    <li>
+      <label for="msg">Mensaje:</label>
+      <textarea id="msg" name="user_message"></textarea>
+    </li>
 
-  ...
+    ...
+  </ul>
+</form>
 ```
 
 En nuestro ejemplo, el formulario envía tres datos denominados «`user_name`», «`user_email`» y «`user_message`». Esos datos se envían a la URL «`/my-handling-form-page`» utilizando el método [`post` de HTTP](/es/docs/Web/HTTP/Methods/POST).
 
-En el lado del servidor, la secuencia de comandos de la URL «`/my-handling-form-page`» recibe los datos como una lista de tres elementos clave/valor contenidos en la solicitud HTTP. La forma en que este script maneja esos datos depende de ti. Cada lenguaje de servidor (PHP, Python, Ruby, Java, C#, etc.) tiene su propio mecanismo de manipulación de datos de formulario. No profundizaremos sobre el tema en esta guía, pero si deseas obtener más información, proporcionamos algunos ejemplos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data") que encontrarás más adelante.
+En el lado del servidor, la secuencia de comandos de la URL «`/my-handling-form-page`» recibe los datos como una lista de tres elementos clave/valor contenidos en la solicitud HTTP. La forma en que este script maneja esos datos depende de ti. Cada lenguaje de servidor (PHP, Python, Ruby, Java, C#, etc.) tiene su propio mecanismo de manipulación de datos de formulario. No profundizaremos sobre el tema en esta guía, pero si deseas obtener más información, proporcionamos algunos ejemplos en nuestro artículo [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) que encontrarás más adelante.
 
 ## Resumen
 
 ¡Enhorabuena!, has creado tu primer formulario web. Debería verse así:
 
-{{ EmbedLiveSample('A_simple_form', '100%', '240', '', 'Learn/Forms/Your_first_form/Example') }}
+```html hidden
+<form action="/my-handling-form-page" method="post">
+  <div>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="user_name" />
+  </div>
+  <div>
+    <label for="mail">Correo electrónico:</label>
+    <input type="email" id="mail" name="user_email" />
+  </div>
+  <div>
+    <label for="msg">Mensaje:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
+  <div class="button">
+    <button type="submit">Envia tu mensaje</button>
+  </div>
+</form>
+```
+
+```css hidden
+form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 400px;
+  /* To see the limits of the form */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+div + div {
+  margin-top: 1em;
+}
+label {
+  /* To make sure that all label have the same size and are properly align */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+input,
+textarea {
+  /* To make sure that all text field have the same font settings
+     By default, textarea are set with a monospace font */
+  font: 1em sans-serif;
+  /* To give the same size to all text field */
+  width: 300px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+input:focus,
+textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+textarea {
+  /* To properly align multiline text field with their label */
+  vertical-align: top;
+  /* To give enough room to type some text */
+  height: 5em;
+  /* To allow users to resize any textarea vertically
+     It works only on Chrome, Firefox and Safari */
+  resize: vertical;
+}
+.button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+button {
+  /* This extra margin represent the same space as the space between
+     the labels and their text fields */
+  margin-left: 0.5em;
+}
+```
+
+{{EmbedLiveSample('', '100%', '240')}}
 
 Pero esto es solo el comienzo: ahora ha llegado el momento de profundizar en el tema. Los formularios tienen mucho más potencial de lo que hemos visto aquí y los artículos siguientes de este módulo te ayudarán a dominarlo.
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Los controles de formulario básicos originales](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Aplicación de estilo a formularios web](/es/docs/Learn/Forms/Styling_web_forms)
-- [Aplicación de estilo a formularios avanzada](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases UI](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación del formulario del lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

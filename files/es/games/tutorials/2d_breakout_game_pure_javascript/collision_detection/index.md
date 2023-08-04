@@ -1,10 +1,9 @@
 ---
 title: Detección de colisiones
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}
 
@@ -20,12 +19,12 @@ Para lograr nuestro objetivo vamos a definir una función que, con un bucle, rec
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            // calculations
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      // calculations
     }
+  }
 }
 ```
 
@@ -40,14 +39,14 @@ Traducimos esto a JavaScript:
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                dy = -dy;
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        dy = -dy;
+      }
     }
+  }
 }
 ```
 
@@ -59,11 +58,11 @@ El código anterior funcionará correctamente y la bola cambiará de dirección.
 
 ```js
 var bricks = [];
-for(c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
-    }
+for (c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
 }
 ```
 
@@ -71,21 +70,21 @@ A continuación consultaremos el "status" de cada ladrillo para saber si lo tene
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            if(bricks[c][r].status == 1) {
-                var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-                var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-                bricks[c][r].x = brickX;
-                bricks[c][r].y = brickY;
-                ctx.beginPath();
-                ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "#0095DD";
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status == 1) {
+        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
     }
+  }
 }
 ```
 
@@ -95,17 +94,22 @@ Ahora tenemos que ocuparnos del valor de "status" en la función `collisionDetec
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
         }
+      }
     }
+  }
 }
 ```
 
@@ -127,6 +131,6 @@ Ahora se comprueban las colisiones cada vez que se dibuja un fotograma. Concreta
 
 ## Pasos siguientes
 
-Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win).
+Definitivamente, lo estamos consiguiendo. ¡Adelanteeee! En el capítulo octavo nos ocuparemos de la [Puntuación y fin del juego ganando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}

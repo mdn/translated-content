@@ -1,11 +1,10 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-translation_of: Web/Accessibility/ARIA
-original_slug: Accessibilité/ARIA
 l10n:
   sourceCommit: 06ddb12df72026593451c479e98c39e5dff8f313
 ---
+
 <i lang="en">Accessible Rich Internet Applications</i> **(<abbr>ARIA</abbr>)** (qu'on pourrait traduire par «&nbsp;applications internet riches et accessibles&nbsp;») est un ensemble de [rôles](/fr/docs/Web/Accessibility/ARIA/Roles) et d'[attributs](/fr/docs/Web/Accessibility/ARIA/Attributes) d'attributs qui définissent comment rendre le contenu et les applications web accessibles (notamment ceux développés avec JavaScript) pour les personnes avec des handicaps.
 
 ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les widgets JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.
@@ -19,8 +18,12 @@ ARIA complète HTML afin que les éléments interactifs et les widgets puissent 
 Voici un widget utilisé pour une barre de progression&nbsp;:
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100" />
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100" />
 ```
 
 Cette barre de progression utilise un élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui n'a pas de sémantique forte. On inclut donc un rôle ARIA et des propriétés pour ajouter une signification. Ainsi, l'attribut [`role="progressbar"`](/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role) informe le navigateur que cet élément est un widget pour une barre de progression, implémenté en JavaScript. Les attributs [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) indiquent les valeurs minimales et maximales de la barre de progression tandis que [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) décrit l'état courant (et doit donc être maintenu à jour avec JavaScript).

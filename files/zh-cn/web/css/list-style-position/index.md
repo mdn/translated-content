@@ -2,6 +2,7 @@
 title: list-style-position
 slug: Web/CSS/list-style-position
 ---
+
 {{CSSRef}}
 
 **`list-style-position`** 属性指定标记框在主体块框中的位置。
@@ -39,19 +40,22 @@ list-style-position: unset;
 ### HTML
 
 ```html
-<ul class="one"> List 1
+<ul class="one">
+  List 1
   <li>List Item 1-1</li>
   <li>List Item 1-2</li>
   <li>List Item 1-3</li>
   <li>List Item 1-4</li>
 </ul>
-<ul class="two"> List 2
+<ul class="two">
+  List 2
   <li>List Item 2-1</li>
   <li>List Item 2-2</li>
   <li>List Item 2-3</li>
   <li>List Item 2-4</li>
 </ul>
-<ul class="three"> List 3
+<ul class="three">
+  List 3
   <li>List Item 3-1</li>
   <li>List Item 3-2</li>
   <li>List Item 3-3</li>
@@ -63,7 +67,7 @@ list-style-position: unset;
 
 ```css
 .one {
-  list-style:square inside;
+  list-style: square inside;
 }
 
 .two {
@@ -72,7 +76,7 @@ list-style-position: unset;
 }
 
 .three {
-  list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
+  list-style-image: url("starsolid.gif");
   list-style-position: inherit;
 }
 ```
@@ -87,7 +91,7 @@ list-style-position: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.list-style-position")}}
+{{Compat}}
 
 ## See also
 

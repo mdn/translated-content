@@ -2,6 +2,7 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
+
 {{JSRef}}
 
 **`entries()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（**`Array Iterator`**）物件。
@@ -10,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 ## 語法
 
-```plain
-a.entries()
+```js-nolint
+entries()
 ```
 
 ### 回傳值
@@ -20,10 +21,10 @@ a.entries()
 
 ## 範例
 
-### 使用 [for…of](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 進行迭代
+### 使用 for...of 進行迭代
 
 ```js
-var a = ['a', 'b', 'c'];
+var a = ["a", "b", "c"];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -40,7 +41,7 @@ for (let e of iterator) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## 參見
 

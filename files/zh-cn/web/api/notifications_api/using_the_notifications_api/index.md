@@ -2,6 +2,7 @@
 title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。
@@ -12,7 +13,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 ![](android-notification.png)
 
-![](https://mdn.mozillademos.org/files/10961/mac-notification.png)
+![](mac-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。
 
@@ -21,9 +22,9 @@ Web Notifications API 使页面可以发出通知，通知将被显示在页面�
 要显示一条通知，你需要先请求适当的权限，然后你可以实例化一个 {{domxref("Notification")}} 实例：
 
 ```js
-Notification.requestPermission( function(status) {
+Notification.requestPermission(function (status) {
   console.log(status); // 仅当值为 "granted" 时显示通知
-  var n = new Notification("title", {body: "notification body"}); // 显示通知
+  var n = new Notification("title", { body: "notification body" }); // 显示通知
 });
 ```
 
@@ -51,7 +52,7 @@ Notification.requestPermission( function(status) {
 通常你应在你的应用首次初始化的时候请求显示通知的权限：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   Notification.requestPermission(function (status) {
     // 这将使我们能在 Chrome/Safari 中使用 Notification.permission
     if (Notification.permission !== status) {
@@ -83,13 +84,13 @@ window.addEventListener('load', function () {
 
 一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：
 
-- {{event("show")}}
+- {{domxref("Notification.show_event","show")}}
   - : 当通知被显示给用户时触发。
-- {{event("click")}}
+- {{domxref("Notification.click_event","click")}}
   - : 当用户点击通知时触发。
-- {{event("close")}}
+- {{domxref("Notification.close_event","close")}}
   - : 当通知被关闭时触发。
-- {{event("error")}}
+- {{domxref("Notification.error_event","error")}}
   - : 当通知发生错误的时候触发。这通常是因为通知由于某些原因而无法显示。
 
 这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
@@ -102,12 +103,12 @@ window.addEventListener('load', function () {
 > var n = new Notification("Hi!");
 > n.onshow = function () {
 >   setTimeout(n.close.bind(n), 5000);
-> }
+> };
 > ```
 >
 > 当你接收到一个“close”事件时，并不能保证这个通知是被用户关闭的。这是符合规范的，其中指出：“当一个通知被关闭时，通知的关闭动作都必须执行，不论是底层通知平台导致，还是用户导致。”
 
-### 简单的例子
+### 简单的示例
 
 假定有如下的 HTML:
 
@@ -118,7 +119,7 @@ window.addEventListener('load', function () {
 它可能通过这样的方式处理通知：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // 首先，让我们检查我们是否有权限发出通知
   // 如果没有，我们就请求获得权限
   if (window.Notification && Notification.permission !== "granted") {
@@ -129,9 +130,9 @@ window.addEventListener('load', function () {
     });
   }
 
-  var button = document.getElementsByTagName('button')[0];
+  var button = document.getElementsByTagName("button")[0];
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // 如果用户同意就创建一个通知
     if (window.Notification && Notification.permission === "granted") {
       var n = new Notification("Hi!");
@@ -169,7 +170,7 @@ window.addEventListener('load', function () {
 
 这是实际的结果：
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('简单的示例', '100%', 30) }}
 
 ## 处理重复的通知
 
@@ -188,7 +189,7 @@ window.addEventListener('load', function () {
 它有可能通过这种方式处理的多个通知：
 
 ```js
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   // 首先，我们检查是否具有权限显示通知
   // 如果没有，我们就申请权限
   if (window.Notification && Notification.permission !== "granted") {
@@ -199,14 +200,14 @@ window.addEventListener('load', function () {
     });
   }
 
-  var button = document.getElementsByTagName('button')[0];
+  var button = document.getElementsByTagName("button")[0];
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // 如果用户同意接收通知，我们就尝试发送 10 条通知
     if (window.Notification && Notification.permission === "granted") {
       for (var i = 0; i < 10; i++) {
         // 感谢标记，我们应该只看到内容为 "Hi! 9" 的通知
-        var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
       }
     }
 
@@ -223,7 +224,7 @@ window.addEventListener('load', function () {
         if (status === "granted") {
           for (var i = 0; i < 10; i++) {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            var n = new Notification("Hi! " + i, { tag: "soManyNotification" });
           }
         }
 
@@ -245,7 +246,7 @@ window.addEventListener('load', function () {
 
 实际效果如下：
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('使用标记的例子', '100%', 30) }}
 
 ## 接收点击应用通知的通知
 
@@ -262,7 +263,7 @@ window.addEventListener('load', function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 参考
 

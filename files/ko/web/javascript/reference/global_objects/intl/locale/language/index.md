@@ -1,8 +1,8 @@
 ---
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.language`** 속성은 locale과 관련된 언어를 반환하는 접근자 속성입니다.
@@ -33,11 +33,11 @@ let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
 console.log(langObj.language); // Prints "es"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

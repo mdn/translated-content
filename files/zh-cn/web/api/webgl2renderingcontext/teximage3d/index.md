@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.texImage3D()`**方法指定一个 3d（three-dimensional）纹理贴图。
@@ -30,7 +31,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.TEXTURE_2D_ARRAY`: 一个 2D 数组贴图
 
 - `level`
-  - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级， n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
+  - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级，n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
 - `internalformat`
 
   - : {{domxref("GLint")}}指定贴图的颜色组成，可能值为：
@@ -116,16 +117,18 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
 ## 例子
 
 ```js
-gl.texImage3D(gl.TEXTURE_3D,
-              0,                                          // level
-              gl.RGBA,                                    // internalFormat
-              1,                                          // width
-              1,                                          // height
-              1,                                          // depth
-              0,                                          // border
-              gl.RGBA,                                    // format
-              gl.UNSIGNED_BYTE,                           // type
-              new Uint8Array([0xff, 0x00, 0x00, 0x00]));  // data
+gl.texImage3D(
+  gl.TEXTURE_3D,
+  0, // level
+  gl.RGBA, // internalFormat
+  1, // width
+  1, // height
+  1, // depth
+  0, // border
+  gl.RGBA, // format
+  gl.UNSIGNED_BYTE, // type
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+); // data
 ```
 
 ## 规范
@@ -134,7 +137,7 @@ gl.texImage3D(gl.TEXTURE_3D,
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.texImage3D")}}
+{{Compat}}
 
 ## 另见
 

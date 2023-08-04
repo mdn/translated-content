@@ -2,9 +2,10 @@
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 ---
-{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-{{domxref("URLSearchParams")}} 接口的 toString() 方法 返回适用在 URL 中的查询字符串。
+{{ApiRef("URL API")}}
+
+{{domxref("URLSearchParams")}} 接口的 **`toString()`** 方法返回适用在 URL 中的查询字符串。
 
 ## 语法
 
@@ -19,11 +20,11 @@ URLSearchParams.toString()
 ## 实例
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
-params.append('foo', 4);
+params.append("foo", 4);
 console.log(params.toString());
 //Prints 'foo=1&bar=2&foo=4'.
 ```
@@ -32,9 +33,9 @@ console.log(params.toString());
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.toString")}}
+{{Compat}}
 
 ## 参考
 

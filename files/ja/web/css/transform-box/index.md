@@ -1,17 +1,8 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS Transforms
-  - Experimental
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.transform-box
-translation_of: Web/CSS/transform-box
 ---
+
 {{CSSRef}}
 
 CSS の **`transform-box`** プロパティは、 {{cssxref("transform")}} と {{cssxref("transform-origin")}} プロパティに関連したレイアウトボックスを定義します。
@@ -67,7 +58,16 @@ transform-box: unset;
   <g>
     <circle id="center" fill="red" r="1" transform="translate(25 25)" />
     <circle id="boxcenter" fill="blue" r=".5" transform="translate(15 15)" />
-    <rect id="box" x="10" y="10" width="10" height="10" rx="1" ry="1" stroke="black" fill="none" />
+    <rect
+      id="box"
+      x="10"
+      y="10"
+      width="10"
+      height="10"
+      rx="1"
+      ry="1"
+      stroke="black"
+      fill="none" />
   </g>
 </svg>
 ```

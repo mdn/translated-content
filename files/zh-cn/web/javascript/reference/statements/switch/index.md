@@ -2,9 +2,10 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
-**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
+**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
@@ -37,7 +38,7 @@ switch (expression) {
 
 ## 描述
 
-一个 switch 语句首先会计算其 expression 。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
+一个 switch 语句首先会计算其 expression。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
 
 如果没有 `case` 子句相匹配，程序则会寻找那个可选的 `default` 子句，如果找到了，将控制权交给它，执行相关语句。若没有 `default` 子句，程序将继续执行直到 `switch` 结束。按照惯例，`default` 子句是最后一个子句，不过也不需要这样做。
 
@@ -51,24 +52,24 @@ switch (expression) {
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log("Sorry, we are out of " + expr + ".");
 }
 
 console.log("Is there anything else you'd like?");
@@ -82,11 +83,11 @@ console.log("Is there anything else you'd like?");
 var foo = 0;
 switch (foo) {
   case -1:
-    console.log('negative 1');
+    console.log("negative 1");
     break;
   case 0: // foo 的值为 0 所以匹配这里所以这一块会运行
     console.log(0);
-    // 注意：那个没写的 break 原本在这儿
+  // 注意：那个没写的 break 原本在这儿
   case 1: // 'case 0:' 里没有 break 语句所以这个 case 也会运行
     console.log(1);
     break; // 遇到了 break，所以不会再继续进入 'case 2:' 了
@@ -94,13 +95,13 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log('default');
+    console.log("default");
 }
 ```
 
 ### 我能把 default 放到 case 之间吗？
 
-可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default ：
+可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default：
 
 ```js
 var foo = 5;
@@ -109,14 +110,14 @@ switch (foo) {
     console.log(2);
     break; // 遇到 break，所以不会继续进入 'default:'
   default:
-    console.log('default')
-    // 掉到下面
+    console.log("default");
+  // 掉到下面
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
-即使你把 default 放到其它 case 之上，它仍有效。
+即使你把 default 放到其他 case 之上，它仍有效。
 
 ### 使用多准则 case 的方法
 
@@ -126,22 +127,22 @@ switch (foo) {
 
 #### 多 case - 单一操作
 
-这种方法利用这样一个事实：如果 case 语句之下没有 break ，它将继续执行下一个 case 语句，而不管 case 是否符合条件。 请看“如果忘记 break 会怎么样？”部分。
+这种方法利用这样一个事实：如果 case 语句之下没有 break，它将继续执行下一个 case 语句，而不管 case 是否符合条件。请看“如果忘记 break 会怎么样？”部分。
 
 这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。
 
 ```js
-var Animal = 'Giraffe';
+var Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal will go on Noah\'s Ark.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal will go on Noah's Ark.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal will not.');
+    console.log("This animal will not.");
 }
 ```
 
@@ -151,27 +152,27 @@ switch (Animal) {
 
 ```js
 var foo = 1;
-var output = 'Output: ';
+var output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
@@ -189,23 +190,24 @@ switch (foo) {
 
 ### `switch` 语句内的块级作用域
 
-随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
+随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
 
 以这段代码为例：
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello':
-    let message = 'hello';
-           console.log('0 ~5');
-           break;
-  case 'say_hi':
-    let message = 'hi';
-    case 6: console.log('6');
+  case "say_hello":
+    let message = "hello";
+    console.log("0 ~5");
+    break;
+  case "say_hi":
+    let message = "hi";
+  case 6:
+    console.log("6");
     break;
   default:
-    console.log('Empty action received.');
+    console.log("Empty action received.");
     break;
 }
 ```
@@ -217,20 +219,23 @@ switch (action) {
 通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello': { // added brackets
-    let message = 'hello';
+  case "say_hello": {
+    // added brackets
+    let message = "hello";
     console.log(message);
     break;
   } // added brackets
-  case 'say_hi': { // added brackets
-    let message = 'hi';
+  case "say_hi": {
+    // added brackets
+    let message = "hi";
     console.log(message);
     break;
   } // added brackets
-  default: { // added brackets
-    console.log('Empty action received.');
+  default: {
+    // added brackets
+    console.log("Empty action received.");
     break;
   } // added brackets
 }

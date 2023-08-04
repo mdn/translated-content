@@ -2,6 +2,7 @@
 title: 性能监测对象
 slug: Web/API/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserver`** 用于*监测*性能度量事件，在浏览器的性能时间轴记录新的 {{domxref("PerformanceEntry","performance entry", '', 'true')}} 的时候将会被通知。
@@ -26,11 +27,11 @@ slug: Web/API/PerformanceObserver
 
 ```js
 function perf_observer(list, observer) {
-   // Process the "measure" event
-   // 处理 "measure" 事件
+  // Process the "measure" event
+  // 处理 "measure" 事件
 }
 var observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## 规范

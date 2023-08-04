@@ -2,11 +2,12 @@
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。
 
-> **Note:** **注**: リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。
+> **メモ:** リーダーは、以前にキューに入れられたチャンクをストリームから読み取ることができますが、それらを読み取とってしまうとストリームは閉じられます。
 
 ## 構文
 
@@ -33,9 +34,7 @@ readableByteStreamController.close();
 
 ## 仕様
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rbs-controller-close","close()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

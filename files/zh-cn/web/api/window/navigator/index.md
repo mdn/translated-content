@@ -2,6 +2,7 @@
 title: window.navigator
 slug: Web/API/Window/navigator
 ---
+
 {{ApiRef}}
 
 只读属性 **`Window.navigator`** 会返回一个 {{domxref("Navigator")}} 对象的引用，可以用于请求运行当前代码的应用程序的相关信息。
@@ -17,7 +18,8 @@ navigatorObject = window.navigator
 ### 例子 #1：检测浏览器并返回浏览器名称字符串
 
 ```js
-var sBrowser, sUsrAg = navigator.userAgent;
+var sBrowser,
+  sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 
@@ -43,16 +45,16 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-alert("当前浏览器为: " + sBrowser);
+alert("当前浏览器为：" + sBrowser);
 ```
 
 ### 例子 #2：检测浏览器并返回代表当前浏览器的索引数字
 
 ```js
-function getBrowserId () {
+function getBrowserId() {
   var aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
-      sUsrAg = navigator.userAgent,
-      nIdx = aKeys.length - 1;
+    sUsrAg = navigator.userAgent,
+    nIdx = aKeys.length - 1;
 
   for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
 
@@ -68,7 +70,7 @@ console.log(getBrowserId());
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.navigator")}}
+{{Compat}}
 
 ## 参见
 

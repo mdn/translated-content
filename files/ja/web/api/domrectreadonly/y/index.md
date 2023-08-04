@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.y
 slug: Web/API/DOMRectReadOnly/y
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`y`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の原点の Y 座標を表します。

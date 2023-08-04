@@ -1,13 +1,8 @@
 ---
 title: element.getAttributeNS
 slug: Web/API/Element/getAttributeNS
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/getAttributeNS
 ---
+
 {{APIRef("DOM")}}
 
 **`getAttributeNS()`** est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide)&nbsp;; voir la section [Notes](#notes) pour plus de détails.
@@ -15,7 +10,7 @@ translation_of: Web/API/Element/getAttributeNS
 ## Syntaxe
 
 ```js
-attrVal =element.getAttributeNS(namespace,name)
+attrVal = element.getAttributeNS(namespace, name);
 ```
 
 ### Paramètres
@@ -54,23 +49,31 @@ Le document SVG suivant utilise une valeur d'attribut `foo` d'un espace de nom s
 Dans un document HTML5, il faut utiliser `test:foo` pour accéder à l'attribut car les espaces de noms ne sont pas pris en charge.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:test="http://www.example.com/2014/test"
+      width="40"
+      height="40">
+      <circle
+        id="target"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="#444"
+        stroke-width="2"
+        fill="none"
+        test:foo="Foo value" />
+    </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg"
-    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
-  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
-      fill="none" test:foo="Foo value"/>
-</svg>
-
-<script type="text/javascript">
-  var ns = 'http://www.example.com/2014/test';
-  var circle = document.getElementById( 'target' );
-  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
-</script>
-
-</body>
+    <script type="text/javascript">
+      var ns = "http://www.example.com/2014/test";
+      var circle = document.getElementById("target");
+      console.log("Attribute value: " + circle.getAttribute("test:foo"));
+    </script>
+  </body>
 </html>
 ```
 

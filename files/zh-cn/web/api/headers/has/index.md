@@ -2,6 +2,7 @@
 title: Headers.has()
 slug: Web/API/Headers/has
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
@@ -34,9 +35,9 @@ var myHeaders = new Headers(); // Currently empty
 你可以使用 {{domxref("Headers.append")}} 来向 myHeaders 添加一个头信息，然后使用 `has()` 方法来测试是否添加成功：
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## Specifications
@@ -45,10 +46,10 @@ myHeaders.has('Accept-Encoding'); // Returns false
 
 ## Browser compatibility
 
-{{Compat("api.Headers.has")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

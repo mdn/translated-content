@@ -1,14 +1,8 @@
 ---
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
-tags:
-  - API
-  - Canevas
-  - Propriété
-  - Référence(2)
-  - TextMetrics
-translation_of: Web/API/TextMetrics/width
 ---
+
 {{APIRef("Canvas API")}}
 
 La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la largeur d'avance du texte (la largeur de la boîte de ligne).

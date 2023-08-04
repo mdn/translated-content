@@ -1,14 +1,8 @@
 ---
 title: PasswordCredential.password
 slug: Web/API/PasswordCredential/password
-tags:
-  - API
-  - Credential Management API
-  - PasswordCredential
-  - Propriété
-  - Reference
-translation_of: Web/API/PasswordCredential/password
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 La propriété **`password`** est une propriété accessible en lecture seule rattachée à l'interface {{domxref("PasswordCredential")}} et fournit une chaîne de caractères {{domxref("USVString")}} contenant le mot de passe lié aux informations d'authentification.
@@ -16,7 +10,7 @@ La propriété **`password`** est une propriété accessible en lecture seule ra
 ## Syntaxe
 
 ```js
-password = passwordCredential.password
+password = passwordCredential.password;
 ```
 
 ### Valeur

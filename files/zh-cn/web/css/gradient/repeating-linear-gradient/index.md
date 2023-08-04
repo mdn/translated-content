@@ -1,11 +1,11 @@
 ---
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
-original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
+
 {{CSSRef}}
 
-CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}， 这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。
+CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}，这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。
 
 ```css
 /* 一个倾斜 45 度的重复线性渐变，
@@ -26,7 +26,7 @@ repeating-linear-gradient(0deg, blue, green 40%, red);
 
 与其他渐变一样，线形重复渐变没有提供 [固定的尺寸](/zh-CN/docs/CSS/image#no_intrinsic)；即，它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。
 
-> **备注：**  因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
+> **备注：** 因为 `<gradient>` 属于`<image>` 数据类型，所以只能在可以使用 `<image>`的地方使用它们。因此`repeating-linear-gradient()` 不适用于{{Cssxref("background-color")}}以及使用 {{cssxref("&lt;color&gt;")}} 数据类型的地方。
 
 ## 语法
 
@@ -58,27 +58,33 @@ where <side-or-corner> = [left | right] || [top | bottom]
 
 ```css
 #grad1 {
-  background-image: repeating-linear-gradient(180deg,
-      rgb(26,198,204),
-      rgb(26,198,204) 7%,
-      rgb(100,100,100) 10%);
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 
 #grad2 {
-  background-image: repeating-linear-gradient(-45deg,
-      transparent,
-      transparent 25px,
-      rgba(255,255,255,1) 25px,
-      rgba(255,255,255,1) 50px);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
 }
 ```
 
 ```html
 <ol>
-  <li>Repeating horizontal bars
+  <li>
+    Repeating horizontal bars
     <div id="grad1"></div>
   </li>
-  <li>Zebra stripes
+  <li>
+    Zebra stripes
     <div id="grad2"></div>
   </li>
 </ol>
@@ -94,34 +100,86 @@ div {
 }
 
 #grad1 {
-  background-image: -moz-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: -webkit-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: -o-repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
-  background-image: repeating-linear-gradient(180deg,rgb(26,198,204),rgb(26,198,204) 7%, rgb(100,100,100) 10%);
+  background-image: -moz-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: -webkit-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: -o-repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgb(26, 198, 204),
+    rgb(26, 198, 204) 7%,
+    rgb(100, 100, 100) 10%
+  );
 }
 
 #grad2 {
   background-color: black;
-  background-image: -moz-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -o-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: -ms-repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
-  background-image: repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(255,255,255,1) 25px, rgba(255,255,255,1) 50px);
+  background-image: -moz-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -webkit-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -o-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: -ms-repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 25px,
+    rgba(255, 255, 255, 1) 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
 }
 ```
 
 ```html hidden
 <ol>
-  <li>repeating gradient
+  <li>
+    repeating gradient
     <div id="grad1"></div>
   </li>
-  <li>Zebra pattern
+  <li>
+    Zebra pattern
     <div id="grad2"></div>
   </li>
 </ol>
 ```
 
-{{EmbedLiveSample('Example_hidden', '300px', '300px', '')}}
+{{EmbedLiveSample('示例', '300px', '300px', '')}}
 
 ## 规范
 
@@ -131,7 +189,12 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [使用 CSS 渐变](/en/CSS/Using_CSS_gradients)
-- 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- 其他渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image/image","image()")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("image/image-set","image-set()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

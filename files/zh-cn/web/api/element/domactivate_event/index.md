@@ -1,7 +1,8 @@
 ---
-title: 'Element: DOMActivate event'
+title: "Element: DOMActivate event"
 slug: Web/API/Element/DOMActivate_event
 ---
+
 {{APIRef}}
 
 {{Deprecated_Header}}
@@ -65,7 +66,7 @@ slug: Web/API/Element/DOMActivate_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.DOMActivate_event")}}
+{{Compat}}
 
 ## 参见
 

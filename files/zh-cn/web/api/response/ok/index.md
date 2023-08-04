@@ -2,6 +2,7 @@
 title: Response.ok
 slug: Web/API/Response/ok
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Response")}} 接口的只读属性 **`ok`** 包含一个布尔值，表明响应是否成功（状态码在 200-299 范围内）.
@@ -23,13 +24,13 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pa
 Note that at the top of the `fetch()` block we log the response `ok` value to the console.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   console.log(response.ok); // returns true if the response returned successfully
-  response.blob().then(function(myBlob) {
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
@@ -42,10 +43,10 @@ fetch(myRequest).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.ok")}}
+{{Compat}}
 
 ## 相关链接
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

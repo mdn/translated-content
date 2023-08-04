@@ -2,6 +2,7 @@
 title: feMergeNode
 slug: Web/SVG/Element/feMergeNode
 ---
+
 {{SVGRef}}
 
 `feMergeNode 元素拿另一个滤镜的结果，让它的父`{{ SVGElement("feMerge") }}元素处理。
@@ -16,7 +17,7 @@ slug: Web/SVG/Element/feMergeNode
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -24,7 +25,7 @@ slug: Web/SVG/Element/feMergeNode
 
 ## DOM 接口
 
-该元素实现了[`SVGFEMergeNodeElement`](/en/DOM/SVGFEMergeNodeElement)接口。
+该元素实现了[`SVGFEMergeNodeElement`](/zh-CN/DOM/SVGFEMergeNodeElement)接口。
 
 ## 参见
 
@@ -32,4 +33,4 @@ slug: Web/SVG/Element/feMergeNode
 - {{ SVGElement("animate") }}
 - {{ SVGElement("set") }}
 - {{ SVGElement("feMerge") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

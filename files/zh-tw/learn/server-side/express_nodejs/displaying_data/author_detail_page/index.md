@@ -2,6 +2,7 @@
 title: 作者詳情頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
+
 作者細節頁面，需要呈現指定作者 `Author` 的信息，使用 `_id` 欄位的值（自動產生）識別，接著是這個作者 `Author`的所有書本物件 `Book`的列表。
 
 ## Controller 控制器
@@ -11,36 +12,42 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 在檔案最上方，加入底下幾行，引入 _async_ 和 _Book_ 模組(作者細節頁面需要它們)。
 
 ```js
-var async = require('async');
-var Book = require('../models/book');
+var async = require("async");
+var Book = require("../models/book");
 ```
 
 找到 exported `author_detail()` 控制器方法，並用底下代碼置換。
 
 ```js
 // Display detail page for a specific Author.
-exports.author_detail = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id)
-              .exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id },'title summary')
-          .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.author==null) { // No results.
-            var err = new Error('Author not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_detail = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }, "title summary").exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      } // Error in API usage.
+      if (results.author == null) {
+        // No results.
+        var err = new Error("Author not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render.
+      res.render("author_detail", {
+        title: "Author Detail",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    },
+  );
 };
 ```
 
@@ -84,5 +91,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 的最後一個部分: [書本實例詳情頁面與自我挑戰](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 的最後一個部分: [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)

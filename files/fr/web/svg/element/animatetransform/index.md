@@ -1,12 +1,8 @@
 ---
 title: animateTransform
 slug: Web/SVG/Element/animateTransform
-tags:
-  - Element
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/animateTransform
 ---
+
 {{SVGRef}}
 
 L'élément **`<animateTransform>`** permet d'animer un élement en appliquant une transformation: translation, mise à l'échelle, rotation et/ou inclinaison.
@@ -19,19 +15,23 @@ L'élément **`<animateTransform>`** permet d'animer un élement en appliquant u
 
 ```html
 <?xml version="1.0"?>
-<svg width="120" height="120"  viewBox="0 0 120 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-    <polygon points="60,30 90,90 30,90">
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="0 60 70"
-                          to="360 60 70"
-                          dur="10s"
-                          repeatCount="indefinite"/>
-    </polygon>
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon points="60,30 90,90 30,90">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 70"
+      dur="10s"
+      repeatCount="indefinite" />
+  </polygon>
 </svg>
 ```
 
@@ -64,11 +64,8 @@ Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DO
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                   | Commentaire         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName("SVG Animations 2", "#AnimateTransformElement", "&lt;animateTransform&gt;")}}     | {{Spec2("SVG Animations 2")}} | Aucun changement    |
-| {{SpecName('SVG1.1', 'animate.html#AnimateTransformElement', '&lt;animateTransform&gt;')}} | {{Spec2('SVG1.1')}}                 | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.animateTransform")}}
+{{Compat}}

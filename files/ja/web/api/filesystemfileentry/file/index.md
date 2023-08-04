@@ -2,6 +2,7 @@
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`file()`** メソッドは、子のディレクトリー項目が表現しているファイルからデータを読むために使用できる {{domxref("File")}} オブジェクトを返します。

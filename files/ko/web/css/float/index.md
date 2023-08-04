@@ -1,13 +1,8 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 CSS 속성(property) **`float`** 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다.
@@ -101,7 +96,7 @@ h4  { float: left;  margin: 0; }
 
 아래 이미지에는, 빨간 사각형이 세 개 있습니다. 둘은 좌에 부동되고 하나는 우에 부동됩니다. "왼쪽" 두 번째 빨간 사각형은 첫 번째 사각형 오른쪽에 놓임을 주의하세요. 추가 사각형은 그들이 포함 박스를 채울 때까지 계속해서 오른쪽으로 쌓입니다. 그 후엔 다음 줄로 넘어갑니다(wrap).
 
-![](/@api/deki/files/4927/=floats.png)
+![](floats.png)
 
 ### float 지우기
 

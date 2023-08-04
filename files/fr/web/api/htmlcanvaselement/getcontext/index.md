@@ -1,14 +1,8 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canevas
-  - HTMLCanvasElement
-  - Méthode
-  - Reference
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 La méthode **`HTMLCanvasElement.getContext()`** retourne un contexte de dessin sur le canevas, ou {{jsxref("null")}} si l'identificateur de contexte n'est pas supporté.
@@ -37,9 +31,7 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
   - : Vous pouvez utiliser plusieurs attributs de contexte quand vous créez votre contexte de représentation, par exemple :
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     attributs de contexte 2d :
@@ -58,7 +50,7 @@ canvas.getContext(typeDeContexte, attributsDeContexte);
     - **`preserveDrawingBuffer`**&nbsp;: si la valeur est `true`, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
     - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
 
-### Valeur retournée :
+### Valeur retournée
 
 Un {{domxref("RenderingContext")}}, qui est soit un
 
@@ -67,7 +59,7 @@ Un {{domxref("RenderingContext")}}, qui est soit un
 - {{domxref("WebGL2RenderingContext")}} pour `"webgl2"` ou
 - {{domxref("ImageBitmapRenderingContext")}} pour `"bitmaprenderer"`.
 
-Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `null` est retourné.
+Si le _typeDeContexte_ ne correspond pas à un contexte de dessin possible, `null` est retourné.
 
 ## Exemples
 
@@ -80,8 +72,8 @@ Si le *typeDeContexte* ne correspond pas à un contexte de dessin possible, `nul
 vous pouvez obtenir un contexte 2d du canevas grâce au code suivant :
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

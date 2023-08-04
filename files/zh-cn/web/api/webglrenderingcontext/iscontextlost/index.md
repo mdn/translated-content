@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.isContextLost()`** 方法返回一个{{jsxref("Boolean")}} 标记 WebGL 的上下文是否已经丢失。
@@ -25,7 +26,7 @@ gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
   var info = gl.getProgramInfoLog(program);
-  console.log('Error linking program:\n' + info);
+  console.log("Error linking program:\n" + info);
 }
 ```
 
@@ -35,7 +36,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.isContextLost")}}
+{{Compat}}
 
 ## 另见
 

@@ -2,6 +2,7 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLCollection`** 介面表示了一種成員為 {{domxref("Element")}} 物件的通用集合（如 [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments) 一般的類陣列，成員順序同元素在文件中的順序），並提供了可用來選取集合成員的方法與屬性。

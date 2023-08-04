@@ -1,18 +1,8 @@
 ---
-title: 'CSP: frame-ancestors'
+title: "CSP: frame-ancestors"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Frame
-  - HTTP
-  - Security
-  - Sécurité
-  - frame-ancestors
-  - source
-translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
@@ -55,7 +45,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 
 La \<source> peut être une des suivantes :
 
-> **Note :** The `frame-ancestors` directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
+> **Note :** The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
 
 - \<host-source>
 
@@ -92,14 +82,11 @@ Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.frame-ancestors")}}
+{{Compat}}
 
 ## Voir aussi
 

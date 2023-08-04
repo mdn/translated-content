@@ -2,9 +2,10 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-> **Warning:** このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> **警告:** このインターフェイスは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 **`PerformanceTiming`** インターフェイスは、下位互換性のために維持されている古いインターフェイスであり、現在のページの読み込み中および使用中に発生するさまざまなイベントに関するパフォーマンスタイミング情報を提供するプロパティを含みます。ページを記述する `PerformanceTiming` オブジェクトは {{domxref("Performance.timing", "window.performance.timing")}} プロパティを使用して取得します。
 

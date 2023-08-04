@@ -1,12 +1,8 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - Mot-clé
-  - Reference
-translation_of: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 Le mot-clé **`inherit`** est une valeur qui peut être utilisée pour qu'une propriété prenne [la valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.
@@ -34,12 +30,14 @@ p {
 ### HTML
 
 ```html
-<p>Alice remarqua, avec quelque surprise, qu’en
-   tombant sur le plancher les cailloux se changeaient
-   en petits gâteaux, et une brillante idée lui
-   traversa l’esprit.</p>
-<p class="exemple">Elle avala un des gâteaux, et s’aperçut avec
-   joie qu’elle diminuait rapidement</p>
+<p>
+  Alice remarqua, avec quelque surprise, qu’en tombant sur le plancher les
+  cailloux se changeaient en petits gâteaux, et une brillante idée lui traversa
+  l’esprit.
+</p>
+<p class="exemple">
+  Elle avala un des gâteaux, et s’aperçut avec joie qu’elle diminuait rapidement
+</p>
 ```
 
 ### Résultat
@@ -48,15 +46,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                  |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('CSS4 Cascade', '#inherit', 'inherit')}}                     | {{Spec2('CSS4 Cascade')}} | Aucun changement.                             |
-| {{SpecName('CSS3 Values', "#common-keywords", "inherit")}}             | {{Spec2('CSS3 Values')}} | Aucun changement {{SpecName('CSS2.1')}} |
-| {{SpecName('CSS2.1', "cascade.html#value-def-inherit", "inherit")}} | {{Spec2('CSS2.1')}}         | Définition initiale.                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.inherit")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,13 +1,8 @@
 ---
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/NamedNodeMap
 ---
+
 {{APIRef("DOM")}}
 
 L'interface **`NamedNodeMap`** représente une collection d'objets {{domxref("Attr")}}. Les objets de cette collection n'ont pas d'ordre particulier (contrairement à {{domxref("NodeList")}}) mais on peut y accéder grâce à un index (comme pour un tableau).

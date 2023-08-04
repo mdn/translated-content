@@ -2,6 +2,7 @@
 title: Intrinsic size (内在サイズ)
 slug: Glossary/Intrinsic_Size
 ---
+
 CSS における要素の*内在サイズ* とは、外部要因が働いていない場合に、その内容に基づく大きさです。例えば、インライン要素は内在的にサイズ変更されます。 `width`、`height`、および垂直方向の余白とパディングは影響を与えませんが、水平方向の余白とパディングには影響を与えます。
 
 内在サイズの計算方法は、 [CSS Intrinsic and Extrinsic Sizing Specification](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes) で定義されています。

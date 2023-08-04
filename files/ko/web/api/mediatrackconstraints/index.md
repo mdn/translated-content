@@ -1,8 +1,8 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
-translation_of: Web/API/MediaTrackConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaTrackConstraints`** 연관 배열은 트랙의 기능 및 기능이 받는 값 또는 값의 범위를 설명합니다. {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}에 전달해서, 스크립트가 일련의 필수(일치) 조건과 선호 조건의 값과 범위를 트랙에 설정할 수 있으며, 가장 최근에 설정한 사용자 지정 제약은 {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}를 호출해 가져올 수 있습니다.

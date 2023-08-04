@@ -1,19 +1,8 @@
 ---
 title: PerformanceTiming.domainLookupEnd
 slug: Web/API/PerformanceTiming/domainLookupEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domainLookupEnd
-translation_of: Web/API/PerformanceTiming/domainLookupEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.

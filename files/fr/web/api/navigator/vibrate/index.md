@@ -1,8 +1,8 @@
 ---
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
-translation_of: Web/API/Navigator/vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 La méthode **`Navigator.vibrate()`** active le module matériel de vibration de l'appareil, si ce dernier est présent. Si l'appareil ne supporte pas les vibrations, cette méthode n'a aucun effet. Si une série de vibration est déjà en cours, la précédente série est stopée et la nouvelle série est lancée.
@@ -24,7 +24,9 @@ Passer la valeur 0, un tableau vide, ou un tableau de zéro arrêtera toutes les
 
 ```js
 window.navigator.vibrate(200); // vibre pendant 200ms
-window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibre 'SOS' en Morse.
+window.navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibre 'SOS' en Morse.
 ```
 
 ## Spécifications

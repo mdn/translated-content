@@ -2,6 +2,7 @@
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述
@@ -27,17 +28,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 - `NEGATIVE_INFINITY` 除以 `NEGATIVE_INFINITY` 或 `POSITIVE_INFINITY` 是 `NaN`。
 - 任何数除以 `NEGATIVE_INFINITY` 为 0。
 
-为了成功返回一个有限值，你可能会使用 `Number.NEGATIVE_INFINITY` 属性来判断是否显示一个条件错误 。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。
+为了成功返回一个有限值，你可能会使用 `Number.NEGATIVE_INFINITY` 属性来判断是否显示一个条件错误。然而 {{jsxref("Global_Objects/isFinite", "isFinite")}} 方法更适合这种情况。
 
 ## 示例
 
 下例中，赋值给变量 `smallNumber` 一个明显小于 JavaScript 中的最小值的值。当 `if` 语句执行时，`smallNumber` 值为 "`-Infinity`"，因此在继续执行代码前，`smallNumber` 被设为一个更容易管理的值。
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber == Number.NEGATIVE_INFINITY) {
- smallNumber = returnFinite();
+  smallNumber = returnFinite();
 }
 ```
 

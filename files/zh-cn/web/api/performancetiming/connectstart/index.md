@@ -2,6 +2,7 @@
 title: PerformanceTiming.connectStart
 slug: Web/API/PerformanceTiming/connectStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

@@ -2,6 +2,7 @@
 title: リンクの装飾
 slug: Learn/CSS/Styling_text/Styling_links
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 [リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を装飾するときは、擬似クラスを使用してリンク状態を効果的に装飾する方法と、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクの装飾方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
@@ -46,7 +47,7 @@ p {
 
 {{ EmbedLiveSample('Default_styles', '100%', 120) }}
 
-> **Note:** このページの例にあるリンクはすべて偽のリンクです — `#`（ハッシュまたはポンド記号）が実際の URL の代わりに配置されています。 これは、実際のリンクが含まれている場合、それらをクリックすると例が壊れる可能性があるためです（エラーが発生したり、ロードしたページから埋め込まれた例に戻ることができません）。 `#` は現在のページにリンクしているだけです。
+> **メモ:** このページの例にあるリンクはすべて偽のリンクです — `#`（ハッシュまたはポンド記号）が実際の URL の代わりに配置されています。 これは、実際のリンクが含まれている場合、それらをクリックすると例が壊れる可能性があるためです（エラーが発生したり、ロードしたページから埋め込まれた例に戻ることができません）。 `#` は現在のページにリンクしているだけです。
 
 デフォルトの装飾を調べていくうちに、次のようないくつかのことに気付くでしょう。
 
@@ -81,7 +82,7 @@ p {
 - マウスポインタのスタイルは {{cssxref("cursor")}} です — 非常に良い理由がない限り、これをオフにしないでください。
 - テキストのアウトラインは {{cssxref("outline")}} です（アウトラインは境界線に似ていますが、唯一の違いは、境界線はボックス内のスペースを占めますが、アウトラインは占めずに背景の上にあるだけだということです）。 このアウトラインは、アクセシビリティを向上させるのに役立つので、オフにする前に慎重に検討してください。 フォーカス状態でリンクホバー状態に与えられた装飾を少なくとも 2 倍にするべきです。
 
-> **Note:** リンクの装飾は上記のプロパティに制限されているわけではありません — 好きなプロパティを自由に使用できます。 夢中になりすぎないようにしてください！
+> **メモ:** リンクの装飾は上記のプロパティに制限されているわけではありません — 好きなプロパティを自由に使用できます。 夢中になりすぎないようにしてください！
 
 ### いくつかのリンクを装飾する
 
@@ -91,28 +92,21 @@ p {
 
 ```css
 a {
-
 }
 
-
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -143,31 +137,32 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
 CSS を適用するためのサンプル HTML も提供します。
 
 ```html
-<p>There are several browsers available, such as <a href="#">Mozilla
-Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p>
+<p>
+  There are several browsers available, such as <a href="#">Mozilla Firefox</a>,
+  <a href="#">Google Chrome</a>, and <a href="#">Microsoft Edge</a>.
+</p>
 ```
 
 2 つをまとめると、この結果が得られます。
@@ -193,14 +188,25 @@ Firefox</a>, <a href="#">Google Chrome</a>, and
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために _Show solution_ ボタンを押してください。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><p>There are several browsers available, such as <a href="#">Mozilla
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">a {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+a {
 
 }
 
@@ -222,13 +228,24 @@ a:hover {
 
 a:active {
 
-}</textarea>
+}</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -242,8 +259,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -251,15 +268,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}';
+  cssInput.value =
+    "p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}";
   drawOutput();
 });
 
@@ -277,9 +295,11 @@ window.addEventListener("load", drawOutput);
 欲しい効果が得られる HTML と CSS を見てみましょう。 まず、装飾する簡単な HTML です。
 
 ```html
-<p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="http://#">weather on Wikipedia</a>, or check
-out <a href="http://#">weather on Extreme Science</a>.</p>
+<p>
+  For more information on the weather, visit our <a href="#">weather page</a>,
+  look at <a href="http://#">weather on Wikipedia</a>, or check out
+  <a href="http://#">weather on Extreme Science</a>.
+</p>
 ```
 
 次に、CSS です。
@@ -309,7 +329,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -318,7 +339,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -332,11 +353,11 @@ a[href*="http"] {
 
 最後に、背景画像を表示するスペースを確保するためにリンクに {{cssxref("padding-right")}} を設定しているので、テキストと重なっていません。
 
-最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが[HTML リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト "http" は（2 番目と 3 番目のリンクのように）外部リンクにのみ現れ、これを[属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)で選択できます。 `a[href*="http"]` は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ {{htmlattrxref("href","a")}} 属性がある場合に限ります。
+最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが[HTML リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト "http" は（2 番目と 3 番目のリンクのように）外部リンクにのみ現れ、これを[属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)で選択できます。 `a[href*="http"]` は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ [`href`](/ja/docs/Web/HTML/Element/a#href) 属性がある場合に限ります。
 
 それでは、これで全部です — 上の能動的学習セクションを再検討して、この新しいテクニックを試してみてください！
 
-> **Note:** [背景](/ja/docs/Learn/CSS/Styling_boxes)や[レスポンシブウェブデザイン](/ja/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明されています。
+> **メモ:** [背景](/ja/docs/Learn/CSS/Styling_boxes)や[レスポンシブウェブデザイン](/ja/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明されています。
 
 ## ボタンとしてのリンクの装飾
 
@@ -348,14 +369,19 @@ a[href*="http"] {
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Music</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 
 そして CSS です。
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -384,7 +410,9 @@ li:last-child a {
   margin-right: 0;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 
@@ -413,7 +441,7 @@ a:active {
   - これからサイズを設定します！ {{htmlelement("ul")}} の全幅を埋め、各ボタンの間には少しマージンを残して（ただし、右端には隙間はありません）、5 つのボタンを配置します。 それらはすべて同じサイズでなければなりません。 これを行うには、{{cssxref("width")}} を 19.5% に設定し、{{cssxref("margin-right")}} を 0.625% に設定します。この幅の合計が 100.625% になることに気付くでしょう。 これは最後のボタンが `<ul>` をオーバーフローさせ、次のラインに落ちることになります。 ただし、次の規則を使用してリストの最後の `<a>` のみを選択し、そこからマージンを削除して、100% に戻します。 これで完了です！
   - 最後の 3 つの宣言は非常に単純で、主に見た目を目的としています。 各リンク内のテキストを中央揃えにし、ボタンの高さ設定するために {{cssxref("line-height")}} を 3 に設定し（テキストを垂直方向に中央揃えする利点もあります）、テキストの色を黒に設定します。
 
-> **Note:** HTML 内のリスト項目がすべて一行に記述されていることに気付いたかもしれません。インラインブロック要素間のスペースや改行は、単語間のスペースと同様にページにスペースを作成します。 そして、そのようなスペースは水平ナビゲーションメニューのレイアウトを壊すでしょう。だからスペースを取り除きました。この問題（と、その解決方法）についての詳細は、[インラインブロック要素間のスペースの戦い](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)（英語）で見つけることができます。
+> **メモ:** HTML 内のリスト項目がすべて一行に記述されていることに気付いたかもしれません。インラインブロック要素間のスペースや改行は、単語間のスペースと同様にページにスペースを作成します。 そして、そのようなスペースは水平ナビゲーションメニューのレイアウトを壊すでしょう。だからスペースを取り除きました。この問題（と、その解決方法）についての詳細は、[インラインブロック要素間のスペースの戦い](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)（英語）で見つけることができます。
 
 ## あなたのスキルをテストしてみてください!
 
@@ -426,11 +454,3 @@ a:active {
 この記事が、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています — 今のところは！ テキストの装飾モジュールの最後の記事では、ウェブサイトでのカスタムフォントの使用方法や、ウェブフォントの使用方法について詳しく説明しています。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
-- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

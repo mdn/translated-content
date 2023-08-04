@@ -1,15 +1,8 @@
 ---
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/generateMipmap
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.generateMipmap()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) génère un ensemble de mipmaps pour un objet {{domxref("WebGLTexture")}}.

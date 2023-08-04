@@ -1,14 +1,8 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/scripts
 ---
+
 {{ApiRef}}
 
 Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.

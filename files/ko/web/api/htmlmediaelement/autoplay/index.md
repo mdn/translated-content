@@ -1,8 +1,8 @@
 ---
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
-translation_of: Web/API/HTMLMediaElement/autoplay
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.autoplay`** 프로퍼티는 {{htmlattrxref("autoplay", "video")}} HTML 어트리뷰트의 값을 반환합니다. 이 프로퍼티는 미디어가 문제 없이 재생 가능한 상황이 되면 자동 재생 여부를 결정합니다.
@@ -15,9 +15,11 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 
 ## 문법
 
-    HTMLMediaElement.autoplay = true | false;
+```js
+HTMLMediaElement.autoplay = true | false;
 
-    var autoplay = HTMLMediaElement.autoplay;
+var autoplay = HTMLMediaElement.autoplay;
+```
 
 ### 값
 
@@ -31,15 +33,18 @@ translation_of: Web/API/HTMLMediaElement/autoplay
 
 ```html
 <video id="video" controls>
-  <source src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165">
+  <source
+    src="https://player.vimeo.com/external/250688977.sd.mp4?s=d14b1f1a971dde13c79d6e436b88a6a928dfe26b&profile_id=165" />
 </video>
 ```
 
-    *** Disable autoplay (recommended) ***
-          false is the default value
-            document.querySelector('#video').autoplay = false;
+```js
+// Disable autoplay (recommended)
+// false is the default value
+document.querySelector("#video").autoplay = false;
+```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -1,21 +1,8 @@
 ---
-title: 'Document: dragend 이벤트'
+title: "Document: dragend 이벤트"
 slug: Web/API/HTMLElement/dragend_event
-page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragend
-translation_of: Web/API/Document/dragend_event
-original_slug: Web/API/Document/dragend_event
-browser-compat: api.Document.dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` 이벤트는 마우스 버튼을 놓거나 이스케이프 키를 눌러 드래그 작업이 끝나게 되면 발생합니다.
@@ -61,9 +48,7 @@ browser-compat: api.Document.dragend_event
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    드래그 가능
-  </div>
+  <div id="draggable" draggable="true">드래그 가능</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -89,19 +74,19 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
 #### JavaScript
 
 ```js
-document.addEventListener("dragstart", event => {
+document.addEventListener("dragstart", (event) => {
   // 반투명하게 만들기
   event.target.classList.add("dragging");
 });
 
-document.addEventListener("dragend", event => {
+document.addEventListener("dragend", (event) => {
   // 불투명하게 초기화
   event.target.classList.remove("dragging");
 });

@@ -2,11 +2,12 @@
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.innerHTML`** 属性设置或获取 HTML 语法表示的元素的后代。
 
-> **备注：** 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&),` `(<),` 或`(>)`, `innerHTML` 将这些字符分别返回为\&amp;, \&lt; 和 \&gt; 。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
+> **备注：** 如果一个 {{HTMLElement("div")}}, {{HTMLElement("span")}}, 或 {{HTMLElement("noembed")}} 节点有一个文本子节点，该节点包含字符 `(&)`, `(<)`, 或 `(>)`, `innerHTML` 将这些字符分别返回为 \&amp;, \&lt; 和 \&gt;。使用{{domxref("Node.textContent")}} 可获取一个这些文本节点内容的正确副本。
 
 如果要向一个元素中插入一段 HTML，而不是替换它的内容，那么请使用 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} 方法。
 
@@ -37,7 +38,7 @@ element.innerHTML = htmlString;
 
 ### 获取元素的 HTML
 
-获取 `innerHTML` 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML 。返回结果字符串。
+获取 `innerHTML` 会导致用户代理序列化 由元素后代组成的 HTML 或者 XML。返回结果字符串。
 
 ```js
 let contents = myElement.innerHTML;
@@ -60,9 +61,8 @@ document.body.innerHTML = "";
 下面这个例子，首先获取文档当前的 HTML 标记并替换 `"<"` 字符为 HTML 实体 `"&lt;"`，从本质上来看，它是将 HTML 转换成原始文本，将其包裹在 {{HTMLElement("pre")}} 元素中。然后 `innerHTML` 的值被替换成新的字符串。最后，文档的内容被替换为页面显示源码。
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### 其他：
@@ -119,14 +119,20 @@ function log(msg) {
 log("Logging mouse events inside this container...");
 ```
 
-log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有 “log” 类的框上。
+log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有“log”类的框上。
 
-现在添加第二个方法：记录基于事件 (比如 {{event("mousedown")}}, {{event("click")}}, 和 {{event("mouseenter")}}) 的 {{domxref("MouseEvent")}} 的信息。
+现在添加第二个方法：记录基于事件 (比如 [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event), [`click`](/zh-CN/docs/Web/API/Element/click_event), 和 [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)) 的 {{domxref("MouseEvent")}} 的信息。
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```
@@ -154,7 +160,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 </div>
 ```
 
-具有 “box” 类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有 “log” 类的 \<div> 元素是作为消息本身的内容框。
+具有“box”类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有“log”类的 \<div> 元素是作为消息本身的内容框。
 
 ### CSS
 
@@ -188,7 +194,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.innerHTML")}}
+{{Compat}}
 
 ## 相关链接
 

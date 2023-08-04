@@ -1,14 +1,8 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
-tags:
-  - API
-  - Interface
-  - Reference
-  - Web
-  - WebSocket
-translation_of: Web/API/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 Un évènement `CloseEvent` est envoyé au client utilisant une [WebSocket](/fr/docs/Glossary/WebSockets) lorsque la connexion est fermée. Cet évènement est envoyé au `listener` indiqué par l'attribut `onclose` de la `WebSocket`.

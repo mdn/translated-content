@@ -2,7 +2,8 @@
 title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 {{jsxref("Promise")}} 是一个对象，它代表了一个异步操作的最终完成或者失败。因为大多数人仅仅是使用已创建的 Promise 实例对象，所以本教程将首先说明怎样使用 Promise，再说明如何创建 Promise。
 
@@ -15,15 +16,15 @@ slug: Web/JavaScript/Guide/Using_promises
 ```js
 // 成功的回调函数
 function successCallback(result) {
-  console.log("音频文件创建成功: " + result);
+  console.log("音频文件创建成功：" + result);
 }
 
 // 失败的回调函数
 function failureCallback(error) {
-  console.log("音频文件创建失败: " + error);
+  console.log("音频文件创建失败：" + error);
 }
 
-createAudioFileAsync(audioSettings, successCallback, failureCallback)
+createAudioFileAsync(audioSettings, successCallback, failureCallback);
 ```
 
 更现代的函数会返回一个 Promise 对象，使得你可以将你的回调函数绑定在该 Promise 上。
@@ -47,9 +48,9 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 不同于“老式”的传入回调，在使用 Promise 时，会有以下约定：
 
-- 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/EventLoop#执行至完成) 运行完成之前，回调函数是不会被调用的。
+- 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/Event_loop#执行至完成) 运行完成之前，回调函数是不会被调用的。
 - 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。
-- 通过多次调用 [`then()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 可以添加多个回调函数，它们会按照插入顺序进行执行。
+- 通过多次调用 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 可以添加多个回调函数，它们会按照插入顺序进行执行。
 
 Promise 很棒的一点就是**链式调用**（**chaining**）。
 
@@ -77,40 +78,49 @@ const promise2 = doSomething().then(successCallback, failureCallback);
 在过去，要想做多重的异步操作，会导致经典的回调地狱：
 
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Got the final result: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Got the final result: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
 现在，我们可以把回调绑定到返回的 Promise 上，形成一个 Promise 链：
 
 ```js
-doSomething().then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+doSomething()
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Got the final result: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 then 里的参数是可选的，`catch(failureCallback)` 是 `then(null, failureCallback)` 的缩略形式。如下所示，我们也可以用[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)来表示：
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Got the final result: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Got the final result: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
 **注意：**一定要有返回值，否则，callback 将无法获取上一个 Promise 的结果。(如果使用箭头函数，`() => x` 比 `() => { return x; }` 更简洁一些，但后一种保留 `return` 的写法才支持使用多个语句。）。
@@ -121,29 +131,29 @@ doSomething()
 
 ```js
 new Promise((resolve, reject) => {
-    console.log('初始化');
+  console.log("初始化");
 
-    resolve();
+  resolve();
 })
-.then(() => {
-    throw new Error('有哪里不对了');
+  .then(() => {
+    throw new Error("有哪里不对了");
 
-    console.log('执行「这个」”');
-})
-.catch(() => {
-    console.log('执行「那个」');
-})
-.then(() => {
-    console.log('执行「这个」，无论前面发生了什么');
-});
+    console.log("执行「这个」");
+  })
+  .catch(() => {
+    console.log("执行「那个」");
+  })
+  .then(() => {
+    console.log("执行「这个」，无论前面发生了什么");
+  });
 ```
 
 输出结果如下：
 
 ```plain
 初始化
-执行“那个”
-执行“这个”，无论前面发生了什么
+执行「那个」
+执行「这个」，无论前面发生了什么
 ```
 
 **注意：**因为抛出了错误 **有哪里不对了**，所以前一个 **执行「这个」** 没有被输出。
@@ -154,10 +164,10 @@ new Promise((resolve, reject) => {
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => console.log(`Got the final result: ${finalResult}`))
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => console.log(`Got the final result: ${finalResult}`))
+  .catch(failureCallback);
 ```
 
 通常，一遇到异常抛出，浏览器就会顺着 Promise 链寻找下一个 `onRejected` 失败回调函数或者由 `.catch()` 指定的回调函数。这和以下同步代码的工作原理（执行过程）非常相似。
@@ -168,7 +178,7 @@ try {
   let newResult = syncDoSomethingElse(result);
   let finalResult = syncDoThirdThing(newResult);
   console.log(`Got the final result: ${finalResult}`);
-} catch(error) {
+} catch (error) {
   failureCallback(error);
 }
 ```
@@ -182,7 +192,7 @@ async function foo() {
     const newResult = await doSomethingElse(result);
     const finalResult = await doThirdThing(newResult);
     console.log(`Got the final result: ${finalResult}`);
-  } catch(error) {
+  } catch (error) {
     failureCallback(error);
   }
 }
@@ -208,13 +218,17 @@ async function foo() {
 一个特别有用的例子：当你使用 {{Glossary("Node.js")}} 时，有些依赖模块可能会有未被处理的 rejected promises，这些都会在运行时打印到控制台。你可以在自己的代码中捕捉这些信息，然后添加与 {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} 相应的处理函数来做分析和处理，或只是为了让你的输出更整洁。举例如下：
 
 ```js
-window.addEventListener("unhandledrejection", event => {
-  /* 你可以在这里添加一些代码，以便检查
+window.addEventListener(
+  "unhandledrejection",
+  (event) => {
+    /* 你可以在这里添加一些代码，以便检查
      event.promise 中的 promise 和
      event.reason 中的 rejection 原因 */
 
-  event.preventDefault();
-}, false);
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 调用 event 的 {{domxref("Event.preventDefault", "preventDefault()")}} 方法是为了告诉 JavaScript 引擎当 Promise 被拒绝时不要执行默认操作，默认操作一般会包含把错误打印到控制台，Node 就是如此的。
@@ -223,7 +237,7 @@ window.addEventListener("unhandledrejection", event => {
 
 ## 在旧式回调 API 中创建 Promise
 
-可以通过 Promise 的构造器从零开始创建 {{jsxref("Promise")}}。 这种方式（通过构造器的方式）应当只在封装旧 API 的时候用到。
+可以通过 Promise 的构造器从零开始创建 {{jsxref("Promise")}}。这种方式（通过构造器的方式）应当只在封装旧 API 的时候用到。
 
 理想状态下，所有的异步函数都已经返回 Promise 了。但有一些 API 仍然使用旧方式来传入的成功（或者失败）的回调。典型的例子就是 {{domxref("WindowTimers.setTimeout", "setTimeout()")}} 函数：
 
@@ -236,9 +250,11 @@ setTimeout(() => saySomething("10 seconds passed"), 10000);
 幸运地是，我们可以用 Promise 来封装它。最好的做法是，将这些有问题的函数封装起来，留在底层，并且永远不要再直接调用它们：
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-wait(10000).then(() => saySomething("10 seconds")).catch(failureCallback);
+wait(10000)
+  .then(() => saySomething("10 seconds"))
+  .catch(failureCallback);
 ```
 
 通常，Promise 的构造器接收一个执行函数 (executor)，我们可以在这个执行函数里手动地 resolve 和 reject 一个 Promise。既然 `setTimeout` 并不会真的执行失败，那么我们可以在这种情况下忽略 reject。
@@ -252,15 +268,19 @@ wait(10000).then(() => saySomething("10 seconds")).catch(failureCallback);
 我们可以发起并行操作，然后等多个操作全部结束后进行下一步操作，如下：
 
 ```js
-Promise.all([func1(), func2(), func3()])
-.then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
+Promise.all([func1(), func2(), func3()]).then(([result1, result2, result3]) => {
+  /* use result1, result2 and result3 */
+});
 ```
 
 可以使用一些聪明的 JavaScript 写法实现时序组合：
 
 ```js
-[func1, func2, func3].reduce((p, f) => p.then(f), Promise.resolve())
-.then(result3 => { /* use result3 */ });
+[func1, func2, func3]
+  .reduce((p, f) => p.then(f), Promise.resolve())
+  .then((result3) => {
+    /* use result3 */
+  });
 ```
 
 通常，我们递归调用一个由异步函数组成的数组时，相当于一个 Promise 链：
@@ -272,8 +292,11 @@ Promise.resolve().then(func1).then(func2).then(func3);
 我们也可以写成可复用的函数形式，这在函数式编程中极为普遍：
 
 ```js
-const applyAsync = (acc,val) => acc.then(val);
-const composeAsync = (...funcs) => x => funcs.reduce(applyAsync, Promise.resolve(x));
+const applyAsync = (acc, val) => acc.then(val);
+const composeAsync =
+  (...funcs) =>
+  (x) =>
+    funcs.reduce(applyAsync, Promise.resolve(x));
 ```
 
 `composeAsync()` 函数将会接受任意数量的函数作为其参数，并返回一个新的函数，该函数接受一个通过 composition pipeline 传入的初始值。这对我们来说非常有益，因为任一函数可以是异步或同步的，它们能被保证按顺序执行：
@@ -305,10 +328,12 @@ console.log(1); // 1, 2
 传递到 `then()` 中的函数被置入到一个微任务队列中，而不是立即执行，这意味着它是在 JavaScript 事件队列的所有运行时结束了，且事件队列被清空之后，才开始执行：
 
 ```js
-const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 wait().then(() => console.log(4));
-Promise.resolve().then(() => console.log(2)).then(() => console.log(3));
+Promise.resolve()
+  .then(() => console.log(2))
+  .then(() => console.log(3));
 console.log(1); // 1, 2, 3, 4
 ```
 
@@ -316,15 +341,19 @@ console.log(1); // 1, 2, 3, 4
 
 简便的 Promise 链式编程最好保持扁平化，不要嵌套 Promise，因为嵌套经常会是粗心导致的。可查阅下一节的[常见错误](#常见错误)中的例子。
 
-嵌套 Promise 是一种可以限制 `catch` 语句的作用域的控制结构写法。明确来说，嵌套的 `catch` 仅捕捉在其之前同时还必须是其作用域的 failureres，而捕捉不到在其链式以外或者其嵌套域以外的 error。如果使用正确，那么可以实现高精度的错误修复。
+嵌套 Promise 是一种可以限制 `catch` 语句的作用域的控制结构写法。明确来说，嵌套的 `catch` 仅捕捉在其之前同时还必须是其作用域的错误，而捕捉不到在其链以外或者其嵌套域以外的错误。如果使用正确，那么可以实现高精度的错误修复。
 
 ```js
 doSomethingCritical()
-.then(result => doSomethingOptional()
-  .then(optionalResult => doSomethingExtraNice(optionalResult))
-  .catch(e => {console.log(e.message)})) // 即使有异常也会忽略，继续运行;(最后会输出)
-.then(() => moreCriticalStuff())
-.catch(e => console.log("Critical failure: " + e.message));// 没有输出
+  .then((result) =>
+    doSomethingOptional()
+      .then((optionalResult) => doSomethingExtraNice(optionalResult))
+      .catch((e) => {
+        console.log(e.message);
+      }),
+  ) // 即使有异常也会忽略，继续运行;(最后会输出)
+  .then(() => moreCriticalStuff())
+  .catch((e) => console.log("Critical failure: " + e.message)); // 没有输出
 ```
 
 注意，有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 `()` 包裹着。
@@ -338,10 +367,12 @@ doSomethingCritical()
 ```js example-bad
 // 错误示例，包含 3 个问题！
 
-doSomething().then(function(result) {
-  doSomethingElse(result) // 没有返回 Promise 以及没有必要的嵌套 Promise
-  .then(newResult => doThirdThing(newResult));
-}).then(() => doFourthThing());
+doSomething()
+  .then(function (result) {
+    doSomethingElse(result) // 没有返回 Promise 以及没有必要的嵌套 Promise
+      .then((newResult) => doThirdThing(newResult));
+  })
+  .then(() => doFourthThing());
 // 最后，是没有使用 catch 终止 Promise 调用链，可能导致没有捕获的异常
 ```
 
@@ -355,12 +386,12 @@ doSomething().then(function(result) {
 
 ```js example-good
 doSomething()
-.then(function(result) {
-  return doSomethingElse(result);
-})
-.then(newResult => doThirdThing(newResult))
-.then(() => doFourthThing())
-.catch(error => console.log(error));
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then((newResult) => doThirdThing(newResult))
+  .then(() => doFourthThing())
+  .catch((error) => console.log(error));
 ```
 
 注意：`() => x` 是 `() => { return x; }` 的简写。
@@ -379,4 +410,4 @@ doSomething()
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_generators")}}

@@ -1,9 +1,8 @@
 ---
 title: Diseño receptivo
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Diseño_receptivo
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de _diseño web responsivo_ (RWD, _responsive web design_), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo, y en este artículo te ayudaremos a comprender las principales técnicas que necesitas saber para dominarlo.
@@ -42,13 +41,13 @@ En un momento de la historia, solo tenías dos opciones al diseñar un sitio web
 
 Estos dos enfoques tendían a dar como resultado un sitio web que se veía mejor ¡en la pantalla de la persona que diseñaba el sitio! El sitio líquido dio como resultado un diseño encogido en las pantallas que eran más pequeñas (como se ve a continuación) o longitudes de línea interminables en las pantallas que eran más grandes.
 
-![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](mdn-rwd-liquid.png)
 
 > **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
 
 El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en pantallas que eran más pequeñas que el ancho del sitio (como se ve a continuación), y a un gran espacio en blanco en los bordes del diseño en las pantallas que eran más grandes.
 
-![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](mdn-rwd-fixed.png)
 
 > **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
 
@@ -68,9 +67,9 @@ Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/
 
 El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), y describía el uso combinado de tres técnicas.
 
-1.  La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
-2.  La segunda técnica era la idea de las [imágenes fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3.  El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Media_Queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
+2. La segunda técnica era la idea de las [imágenes fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
+3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Media_Queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
 
 Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
 
@@ -104,7 +103,9 @@ Al usar una cuadrícula flexible, solo necesitas añadir un punto de interrupci�
 
 En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn/CSS/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
 
-    target / context = result
+```
+target / context = result
+```
 
 Por ejemplo, si el tamaño de nuestra columna de destino es de 60 píxeles y el contexto (o contenedor) en el que se encuentra es de 960 píxeles, dividimos 60 por 960 para obtener un valor que podemos usar en nuestro CSS, después de mover el separador de cifras decimales dos posiciones a la derecha.
 
@@ -118,11 +119,11 @@ Este enfoque se encuentra hoy en muchos lugares de la web, y aquí está documen
 
 El ejemplo siguiente muestra un diseño responsivo sencillo que utiliza consultas a los medios y una cuadrícula flexible. En pantallas estrechas, el diseño de página muestra las cajas en columna una encima de la otra:
 
-![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](mdn-rwd-mobile.png)
 
 En pantallas más anchas se pasa a dos columnas:
 
-![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](mdn-rwd-desktop.png)
 
 > **Nota:** Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
 
@@ -223,11 +224,11 @@ Hemos editado nuestro ejemplo anterior de cuadrícula responsiva para incluir ta
 
 En la versión para dispositivo móvil, el encabezado es más pequeño:
 
-![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](mdn-rwd-font-mobile.png)
 
 Sin embargo, en las versiones de escritorio vemos un tamaño de título de encabezado más grande:
 
-![Un diseño en dos columnas con un título grande.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![Un diseño en dos columnas con un título grande.](mdn-rwd-font-desktop.png)
 
 > **Nota:** Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
@@ -262,7 +263,7 @@ Esto significa que necesitamos especificar el tamaño de letra para el título d
 Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.
@@ -285,8 +286,6 @@ Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en gen
 
 Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
 
-> **Nota:** Hay una @regla CSS establecida para reemplazar la metaetiqueta `viewport`: [@viewport](/es/docs/Web/CSS/@viewport). Sin embargo, tiene poca compatibilidad con los navegadores. Se implementó en Internet Explorer y Edge, pero una vez que se lance el navegador Edge basado en Chromium, dejará de formar parte del navegador Edge.
-
 ## Resumen
 
 El diseño responsivo se refiere a un diseño página de un sitio web o una aplicación que responde al entorno en el que se visualiza. Abarca una serie de características y técnicas de CSS y HTML, y ahora es esencialmente el modo como construimos los sitios web de forma predeterminada. Piensa en los sitios web que visitas con tu dispositivo móvil; probablemente sea inusual encontrar un sitio web que tenga la versión de escritorio reducida o en que necesites desplazarse hacia los lados para encontrar las cosas. Esto se debe a que la web se ha movido a este enfoque de diseño responsivo.
@@ -294,18 +293,3 @@ El diseño responsivo se refiere a un diseño página de un sitio web o una apli
 Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## En este módulo
-
-- [Introducción al diseño CSS](/es/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flujo normal](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Cuadrícula](/es/docs/Learn/CSS/CSS_layout/Grids)
-- [Elementos flotantes](/es/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
-- [Diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guía para principiantes sobre consultas a medios](/es/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Compatibilidad de navegadores antiguos](/es/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Evaluación del conjunto de elementos básicos de compaginación](/es/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

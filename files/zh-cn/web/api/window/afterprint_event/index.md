@@ -2,6 +2,7 @@
 title: afterprint
 slug: Web/API/Window/afterprint_event
 ---
+
 在相关联的文档已开始打印或打印预览已关闭之后，触发 `afterprint`事件。
 
 ## 基本信息
@@ -21,20 +22,20 @@ slug: Web/API/Window/afterprint_event
 
 ## 属性
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## 例子
 
 使用 `addEventListener()`:
 
 ```js
-window.addEventListener('afterprint', (event) => {
-  console.log('After print');
+window.addEventListener("afterprint", (event) => {
+  console.log("After print");
 });
 ```
 
@@ -42,7 +43,7 @@ window.addEventListener('afterprint', (event) => {
 
 ```js
 window.onafterprint = (event) => {
-  console.log('After print');
+  console.log("After print");
 };
 ```
 

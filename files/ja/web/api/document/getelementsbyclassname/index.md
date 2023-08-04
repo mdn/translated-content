@@ -2,6 +2,7 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`getElementsByClassName`** メソッドは、指定されたクラス名をすべて持つすべての子要素の配列風オブジェクトを返します。 {{domxref("document")}} オブジェクトに対して呼び出したときは、ルートノードを含む文書全体が検索されます。任意の要素に対して {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} を呼び出すこともできます。その場合は、指定されたルート要素下の指定されたクラス名を持つ要素だけを返します。
@@ -22,34 +23,37 @@ var elements = rootElement.getElementsByClassName(names);
 'test' クラスを持つすべての要素を取得します。
 
 ```js
-document.getElementsByClassName('test')
+document.getElementsByClassName("test");
 ```
 
 'red' および 'test' クラスを両方持つすべての要素を取得します。
 
 ```js
-document.getElementsByClassName('red test')
+document.getElementsByClassName("red test");
 ```
 
 'main' という ID を持った要素の中にある、 'text' クラスを持つすべての要素を取得します。
 
 ```js
-document.getElementById('main').getElementsByClassName('test')
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 'test' クラスを持つ最初の要素を取得し、一致する要素がなければ `undefined` になります。
 
 ```js
-document.getElementsByClassName('test')[0]
+document.getElementsByClassName("test")[0];
 ```
 
 メソッドの _this_ 値として {{domxref("HTMLCollection")}} を渡すことで、 Array プロトタイプのメソッドを `HTMLCollection` で使用することができます。ここでは、 'test' クラスを持つすべての div 要素を検索します。
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-  return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 ### クラスが 'test' である最初の要素を取得する
@@ -97,18 +101,25 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ```js
 // getElementsByClassName は指定された両方のクラスを持つ要素のみを選択する
-var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
+var allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceByClass[i].textContent;
+for (
+  var i = 0, len = allOrangeJuiceByClass.length | 0;
+  i < len;
+  i = (i + 1) | 0
+) {
+  result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
-
 // querySelector は完全一致で選択する
-var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
+var allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+for (
+  var i = 0, len = allOrangeJuiceQuery.length | 0;
+  i < len;
+  i = (i + 1) | 0
+) {
+  result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;
@@ -120,9 +131,7 @@ document.getElementById("resultArea").value = result;
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-getelementsbyclassname', 'document.getElementsByClassName')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,8 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -24,8 +25,10 @@ InternalError: too much recursion
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 是递归终止条件
+  if (x >= 10) {
+    // "x >= 10" 是递归终止条件
     return;
+  }
   // 进行一些操作...
   loop(x + 1); // 递归调用
 }
@@ -36,8 +39,9 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
+  if (x >= 1000000000000) {
     return;
+  }
   // 进行一些操作...
   loop(x + 1);
 }
@@ -49,4 +53,4 @@ loop(0);
 ## 相关页面
 
 - {{Glossary("Recursion","递归")}}
-- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/zh-CN/docs/Web/JavaScript/Guide/Functions#Recursion)

@@ -4,6 +4,7 @@ slug: Web/API/console
 l10n:
   sourceCommit: 7d44ce9ab391c7f52bd6b7fbc39576abbe52c2d5
 ---
+
 {{APIRef("Console API")}}
 
 **`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。
@@ -12,7 +13,7 @@ l10n:
 `console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用例](#使用例)を提供します。
@@ -120,13 +121,13 @@ My first car was a Dodge Charger . The object is: ({str:"Some text", id:5})
 - `%f`
   - : 浮動小数点数値を出力します。数値の書式設定に対応しています。例えば `console.log("Foo %.2f", 1.1)` は、小数部分が 2 桁の数値として出力し、 `Foo 1.10` となります。
 
-> **Note:** 精度の書式は Chrome では動作しません。
+> **メモ:** 精度の書式は Chrome では動作しません。
 
 これらは引数リストの書式化文字列の後にある引数を引用します。例えば次のようになります。
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
 }
 ```
 
@@ -145,7 +146,10 @@ Hello, Bob. You've called me 5 times.
 `%c` ディレクティブを使用すると、コンソールの出力に CSS スタイルを適用することができます。
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 ディレクティブの前のテキストは影響を受けませんが、ディレクティブの後ろのテキストは引数の CSS 宣言を使用して装飾されます。
@@ -155,7 +159,12 @@ console.log("This is %cMy stylish message", "color: yellow; font-style: italic; 
 `%c` は複数回使用することができます。
 
 ```js
-console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "Additional unformatted message");
+console.log(
+  "Multiple styles: %cred %corange",
+  "color: red",
+  "color: orange",
+  "Additional unformatted message",
+);
 ```
 
 `%c` で利用できるプロパティは次の通りです。 (少なくとも、 Firefox では — 他のブラウザーでは異なる可能性があります)。
@@ -179,7 +188,7 @@ console.log("Multiple styles: %cred %corange", "color: red", "color: orange", "A
 - {{cssxref("word-spacing")}} および {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **Note:** コンソールメッセージは、既定ではインライン要素と同様に動作します。 `padding`, `margin` などの効果を得たい場合は、例えば `display: inline-block` のように設定してください。
+> **メモ:** コンソールメッセージは、既定ではインライン要素と同様に動作します。 `padding`, `margin` などの効果を得たい場合は、例えば `display: inline-block` のように設定してください。
 
 ### コンソールでのグループの使用
 
@@ -224,7 +233,7 @@ console.timeEnd("answer time");
 
 タイマーの名前は、タイマーの開始時と停止時の両方で表示されることに注意してください。
 
-> **Note:** タイマーをネットワーク通信の時間の計測に用いる場合、タイマーはトランザクション全体の所要時間を報告しますが、ネットワークパネルに表示される時間はヘッダーの処理にかかった時間だけを表すことに注意してください。
+> **メモ:** タイマーをネットワーク通信の時間の計測に用いる場合、タイマーはトランザクション全体の所要時間を報告しますが、ネットワークパネルに表示される時間はヘッダーの処理にかかった時間だけを表すことに注意してください。
 > レスポンス本文の記録を有効にしている場合は、レスポンスヘッダーとレスポンス本文それぞれに表示される所要時間の合計が、コンソールに出力されている時間に一致します。
 
 ### スタックトレース

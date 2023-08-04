@@ -1,13 +1,8 @@
 ---
 title: CSSMediaRule
 slug: Web/API/CSSMediaRule
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - Reference
-translation_of: Web/API/CSSMediaRule
 ---
+
 {{APIRef("CSSOM")}}
 
 L'interface **`CSSMediaRule`** représente une seule règle CSS {{cssxref("@media")}}. Elle met en œuvre l'interface {{domxref("CSSConditionRule")}}, et donc l'interface {{domxref("CSSGroupingRule")}} et l'interface {{domxref("CSSRule")}} avec une valeur de type `4` (`CSSRule.MEDIA_RULE`).

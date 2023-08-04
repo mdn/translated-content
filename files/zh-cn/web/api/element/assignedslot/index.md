@@ -2,6 +2,7 @@
 title: Element.assignedSlot
 slug: Web/API/Element/assignedSlot
 ---
+
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
 The **`assignedSlot`** property of the {{domxref("Element")}} interface returns the {{domxref("HTMLSlotElement")}} interface associated with the element.
@@ -22,4 +23,4 @@ An instance of {{domxref("HTMLSlotElement")}}.
 
 ## Browser Compatibility
 
-{{Compat("api.Element.assignedSlot")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.negative
-translation_of: Web/CSS/@counter-style/negative
 ---
+
 {{CSSRef}}
 
 カスタムカウンターのスタイルを定義する際、 **`negative`** 記述子により、値が負のときにカウンターの表現に付加または前置する記号を指定する方法を提供することで、負のカウンターの表現を変更することができます。

@@ -1,13 +1,8 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef}}
 
 **`Math.sin()`** 関数は、引数として与えた数の正弦 (サイン) を返します。
@@ -40,17 +35,15 @@ Math.sin(x)
 ### Math.sin() の使用
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.sin', 'Math.sin')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

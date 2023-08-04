@@ -1,12 +1,8 @@
 ---
 title: end
 slug: Web/SVG/Attribute/end
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/end
 ---
+
 {{SVGRef}}
 
 **`end`** 属性は、アクティブな期間を制限できるアニメーションの終了値を定義します。
@@ -182,7 +178,4 @@ _この例は iFrame に埋め込まれています。キーイベントを有�
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName("SVG Animations 2", "#EndAttribute", "end")}} | {{Spec2("SVG Animations 2")}} | 変更なし |
-| {{SpecName("SVG1.1", "animate.html#EndAttribute", "end")}} | {{Spec2("SVG1.1")}}                 | 初回定義 |
+{{Specifications}}

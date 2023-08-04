@@ -2,6 +2,7 @@
 title: browserSettings.newTabPageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトを使用すると「新規タブ」ページ、つまりユーザーが新しい空のタブを開いたときのページを表す URL を取得することができます。
@@ -17,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 現在の新規タブ URL を取得する：
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then(result => {
+browser.browserSettings.newTabPageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

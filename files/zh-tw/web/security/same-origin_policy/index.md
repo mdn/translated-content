@@ -2,11 +2,12 @@
 title: 同源政策 (Same-origin policy)
 slug: Web/Security/Same-origin_policy
 ---
+
 同源政策限制了程式碼和不同網域資源間的互動。
 
 ## 同源定義
 
-所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 http\://store.company.com/dir/page.html 屬於同源:
+所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
 
 | URL                                               | Outcome | Reason       |
 | ------------------------------------------------- | ------- | ------------ |
@@ -22,13 +23,13 @@ Cookie 的來源定義和上述不一樣。
 
 ## 變更來源
 
-網頁能夠有限地變更來源，我們可以將 {{domxref("document.domain")}} 存為目前網域後半部，然後較短的網域就會作為之後來源檢查，譬如我們在 http\://store.company.com/dir/other.html 的文件裡執行以下程式碼:
+網頁能夠有限地變更來源，我們可以將 {{domxref("document.domain")}} 存為目前網域後半部，然後較短的網域就會作為之後來源檢查，譬如我們在 `http://store.company.com/dir/other.html` 的文件裡執行以下程式碼:
 
 ```plain
 document.domain = "company.com";
 ```
 
-執行完後，網頁能以 http\://company.com/dir/page.html 通過同源檢查。然而基於同源檢查，company.com 無法將 document.domain 存為 othercompany.com。
+執行完後，網頁能以 `http://company.com/dir/page.html` 通過同源檢查。然而基於同源檢查，company.com 無法將 document.domain 存為 othercompany.com。
 
 任何變更 document.domain 行為，包括 document.domain = document.domain 都會導致埠號重置為 null，因此無法只藉由執行 document.domain = "company.com" 讓 company.com:8080 和 company.com 互動，必須兩邊都重新設定好讓埠號都一致重置為 null。
 
@@ -44,13 +45,13 @@ document.domain = "company.com";
 
 下面是一些能跨來源嵌入的資源:
 
-- \<script src=”…”>\</script>內的 Javascript，但語法錯誤訊息只限於同源程式碼腳本。
-- CSS 的\<link rel="stylesheet" href="...">，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (請至 CVE-2010-0051)以及[Opera](http://www.opera.com/support/kb/view/943/).
+- `<script src="…"></script>` 內的 JavaScript，但語法錯誤訊息只限於同源程式碼腳本。
+- CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (請至 CVE-2010-0051)以及[Opera](http://www.opera.com/support/kb/view/943/).
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
 - [`<object>`](/zh-TW/docs/HTML/Element/object), [`<embed>`](/zh-TW/docs/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛
 - [`@font-face`](/zh-TW/docs/CSS/@font-face) 的字型；有些瀏覽器允許跨來源字型，有些則不。
-- [`<frame>`](/zh-TW/docs/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options)標頭避免。
+- [`<frame>`](/zh-TW/docs/HTML/Element/frame)以及[`<iframe>`](/zh-TW/docs/HTML/Element/iframe)中的內容；如果一個網站想要避免跨來源載入互動，可以藉由[`X-Frame-Options`](/zh-TW/docs/HTTP/X-Frame-Options)標頭避免。
 
 ### 如何允許跨來源存取
 

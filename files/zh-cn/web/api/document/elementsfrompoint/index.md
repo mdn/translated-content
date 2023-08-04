@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 ---
+
 {{APIRef("Shadow DOM")}}{{SeeCompatTable}}
 
 **`elementsFromPoint()`** 是 {{domxref("DocumentOrShadowRoot")}} 下的一个函数，该函数返还在特定坐标点下的 HTML 元素数组。

@@ -1,13 +1,8 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Méthode
-translation_of: Web/API/Window/blur
 ---
+
 {{APIRef}}
 
 Éloigne la mise au point de la fenêtre.
@@ -15,7 +10,7 @@ translation_of: Web/API/Window/blur
 ## Syntaxe
 
 ```js
-window.blur()
+window.blur();
 ```
 
 ## Exemple

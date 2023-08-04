@@ -2,6 +2,7 @@
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 ---
+
 {{JSRef}}
 
 **`BigUint64Array`** 类型数组表示一个平台字节顺序的 64 位无符号整型数组。如果想要控制字符顺序，请使用 {{jsxref("DataView")}} 替代。内容初始化为 `0n`. 创建之后可以使用对象中的方法或使用标准数组索引语法 (括号表示法) 来获取数组中的元素。
@@ -16,7 +17,7 @@ new BigUint64Array(object);
 new BigUint64Array(buffer [, byteOffset [, length]]);
 ```
 
-更多有关构造方法和参数的信息，参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+更多有关构造方法和参数的信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -24,8 +25,6 @@ new BigUint64Array(buffer [, byteOffset [, length]]);
   - : 返回一个元素容量的数字值。`8` in the case of a `BigUint64Array`.
 - BigUint64Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "BigUint64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `BigUint64Array` type: "BigUint64Array".
 - {{jsxref("TypedArray.prototype", "BigUint64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -121,7 +120,7 @@ console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigUint64Array([21n,31n]);
+var arr = new BigUint64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
@@ -134,7 +133,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var biguint64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```
@@ -145,10 +146,10 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.BigUint64Array")}}
+{{Compat}}
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

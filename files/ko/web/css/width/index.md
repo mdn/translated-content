@@ -1,12 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 CSS **`width`** 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 너비를 설정합니다.
@@ -75,7 +71,9 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">모질라 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="goldie">
+  모질라 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('기본_너비', '500px', '64px')}}
@@ -126,15 +124,17 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="maxgreen">
+  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('max-content_2', '500px', '64px')}}
@@ -144,14 +144,16 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.</p>
+<p class="minblue">
+  Mozilla 커뮤니티는 많은 수의 대단한 소프트웨어를 제작합니다.
+</p>
 ```
 
 {{EmbedLiveSample('min-content_2', '500px', '155px')}}

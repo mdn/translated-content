@@ -2,6 +2,7 @@
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` は新しい[処理命令](/ja/docs/Web/API/ProcessingInstruction)ノードを生成して返します。
@@ -11,7 +12,7 @@ slug: Web/API/Document/createProcessingInstruction
 ## 構文
 
 ```js
-piNode = document.createProcessingInstruction(target, data)
+piNode = document.createProcessingInstruction(target, data);
 ```
 
 ### 引数
@@ -32,8 +33,11 @@ piNode = document.createProcessingInstruction(target, data)
 ## 例
 
 ```js
-var doc = new DOMParser().parseFromString('<foo />', 'application/xml');
-var pi = doc.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+var doc = new DOMParser().parseFromString("<foo />", "application/xml");
+var pi = doc.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css" type="text/css"',
+);
 
 doc.insertBefore(pi, doc.firstChild);
 
@@ -43,13 +47,7 @@ console.log(new XMLSerializer().serializeToString(doc));
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       | 状態                             | 備考                                                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-createprocessinginstruction', 'createProcessingInstruction()')}} | {{Spec2('DOM WHATWG')}} | 変更なし                                                                                                                                                                                             |
-| {{SpecName('DOM4', '#dom-document-createprocessinginstruction', 'createProcessingInstruction()')}}         | {{Spec2('DOM4')}}         | `data` 引数の検証方法のもっと詳細な定義を追加した。                                                                                                                                                  |
-| {{SpecName('DOM3 Core', 'core.html#ID-135944439', 'createProcessingInstruction()')}}                             | {{Spec2('DOM3 Core')}}     | 対象名の名前空間が正しい形式かどうかチェックされないこと、どの文字が対象名に違反するかの定義、返された {{domxref("ProcessingInstruction")}} オブジェクトのより詳細についてのメモを追加。 |
-| {{SpecName('DOM2 Core', 'core.html#ID-135944439', 'createProcessingInstruction()')}}                             | {{Spec2('DOM2 Core')}}     | 変更なし                                                                                                                                                                                             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-135944439', 'createProcessingInstruction()')}}                     | {{Spec2('DOM1')}}         | 初回定義                                                                                                                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

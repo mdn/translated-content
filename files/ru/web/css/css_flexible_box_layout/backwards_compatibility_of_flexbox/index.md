@@ -1,15 +1,15 @@
 ---
 title: Обратная совместимость Flexbox
-slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 ---
+
 {{CSSRef}}
 
 Flexbox очень хорошо поддерживается современными браузерами, однако есть несколько проблем, с которыми вы могли столкнуться. В этом руководстве мы рассмотрим, насколько хорошо flexbox поддерживается браузерами, а так же некоторые потенциальные проблемы, ресурсы и методы для создания обходных путей и запасных вариантов.
 
 ## История flexbox
 
-Как и все спецификации CSS, flexbox претерпела огромное количество изменений, прежде чем стать Кандидатом в рекомендации W3C. У спецификации в этом статусе не должно быть значительных изменений, однако с предыдущими итерациями все было иначе.
+Как и все спецификации CSS, flexbox претерпела огромное количество изменений, прежде чем стать Кандидатом в рекомендации W3C. У спецификации в этом статусе не должно быть значительных изменений, однако с предыдущими итерациями все было иначе.
 
 Flexbox был реализован экспериментальным путём в нескольких браузерах. В то время метод создания экспериментальных реализаций подразумевал использование вендорных префиксов. Идея этих префиксов была в том, чтобы позволить инженерам браузеров и веб-разработчикам исследовать и протестировать новшества спецификации без конфликтов с другими реализациями. Идея заключалась в том, чтобы не использовать экспериментальные реализации на продакшене. Однако, в конечном счёте префиксы всё равно попали в продакшн, и изменения в экспериментальной спецификации вынудили людей обновлять сайты, чтобы этой самой спецификации соответствовать.
 
@@ -19,7 +19,7 @@ Flexbox был реализован экспериментальным путё�
 
 В конечном счёте спецификация была обновлена, чтобы определить `display: flex` как способ создания flex-контейнера. Начиная с этого момента поддержка браузерами обновлённой версии спецификации отличная.
 
-Существует несколько старых статей, которые описывают более ранние версии flexbox, их довольно легко вычислить по тому, как они описывают создание flex-контейнера. Если вы нашли что-то вроде `display: box` или `display: flexbox`, то это уже устаревшая информация.
+Существует несколько старых статей, которые описывают более ранние версии flexbox, их довольно легко вычислить по тому, как они описывают создание flex-контейнера. Если вы нашли что-то вроде `display: box` или `display: flexbox`, то это уже устаревшая информация.
 
 ## Поддержка браузерами
 
@@ -53,7 +53,7 @@ Given that flexbox usage is initiated with value of the {{cssxref("display")}} p
 
 ### Floated items
 
-> “float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.” - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
+> "float and clear do not create floating or clearance of flex item, and do not take it out-of-flow." - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
 
 In the following live example, I have floated two blocks and then set `display: flex` on the container. The items are now flex items, which means they stretch to equal height. Any float behaviour does not apply.
 
@@ -69,15 +69,15 @@ Remove `display: flex` to see the fallback behavior. You'll see white space adde
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/inline-block.html", '100%', 550)}}
 
-### display: table-\_\_
+### display: table-
 
 The CSS table display properties are potentially very useful as a fallback, due to the fact that they allow design patterns such as full height columns and vertical centering and work back as far as Internet Explorer 8.
 
-If you use `display: table-cell` on an item in your HTML it takes on the styling of an HTML table cell. CSS creates anonymous boxes to represent these items so that you do not need to wrap each item in a wrapper to represent the HTML table row, and a second one to represent the table element itself, You can’t see or style these anonymous boxes; they are there purely to fix up the tree.
+If you use `display: table-cell` on an item in your HTML it takes on the styling of an HTML table cell. CSS creates anonymous boxes to represent these items so that you do not need to wrap each item in a wrapper to represent the HTML table row, and a second one to represent the table element itself, You can't see or style these anonymous boxes; they are there purely to fix up the tree.
 
 If you then declare `display: flex` on the parent item, these anonymous boxes do not get created and so your item remains a direct child and can become a flex item — losing any of the table display features.
 
-> “Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table.” - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+> "Note: Some values of display normally trigger the creation of anonymous boxes around the original box. If such a box is a flex item, it is blockified first, and so anonymous box creation will not happen. For example, two contiguous flex items with display: table-cell will become two separate display: block flex items, instead of being wrapped into a single anonymous table." - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
 
@@ -109,4 +109,4 @@ For more information about using Feature Queries see [Using Feature Queries in C
 
 ## Conclusion
 
-While I’ve spent some time in this guide going through potential issues and fallbacks, flexbox is very much ready for you to be using in production work. This guide will help you in those cases where you do come across an issue or have the requirement to support older browsers.
+While I've spent some time in this guide going through potential issues and fallbacks, flexbox is very much ready for you to be using in production work. This guide will help you in those cases where you do come across an issue or have the requirement to support older browsers.

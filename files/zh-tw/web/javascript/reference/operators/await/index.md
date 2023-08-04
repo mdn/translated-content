@@ -2,6 +2,7 @@
 title: await
 slug: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}await 運算子可被用來等待 {{jsxref("Promise")}}，只能在 {{jsxref("Statements/async_function", "async function")}}內使用。
 
 ## 語法
@@ -27,7 +28,7 @@ slug: Web/JavaScript/Reference/Operators/await
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -57,7 +58,7 @@ f2();
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }

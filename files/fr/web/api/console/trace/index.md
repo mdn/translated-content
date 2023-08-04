@@ -1,16 +1,8 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
-  - trace
-translation_of: Web/API/Console/trace
+slug: Web/API/console/trace
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche la _stack trace_ dans la [Web Console](/fr/docs/Outils/Console_Web).
@@ -40,7 +32,7 @@ foo();
 
 Dans la console, la trace suivante sera affichée :
 
-```html
+```plain
 bar
 foo
 <anonymous>

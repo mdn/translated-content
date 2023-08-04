@@ -1,8 +1,8 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 비표준 **$1, $2, $3, $4, $5, $6, $7, $8, $9** 속성들은 정적이며, 괄호로 묶인 하위 문자열 match들을 포함하는 정규 표현식의 읽기 전용 속성들입니다.
@@ -49,7 +49,7 @@ RegExp.$2; // "Smith"
 
 Non-standard. Not part of any current specification.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

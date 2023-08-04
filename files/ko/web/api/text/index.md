@@ -1,13 +1,8 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/Text
 ---
+
 {{ApiRef("DOM")}}
 
 **`Text`** 인터페이스는 {{domxref("Element")}} 또는 {{domxref("Attr")}}의 문자형 콘텐츠를 표현합니다.
@@ -60,4 +55,4 @@ translation_of: Web/API/Text
 
 ## 같이 보기
 
-- [DOM 인터페이스 목차](/ko/docs/Web/API/Document_Object_Model "/en-US/docs/DOM/DOM_Reference").
+- [DOM 인터페이스 목차](/ko/docs/Web/API/Document_Object_Model).

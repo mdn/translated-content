@@ -1,16 +1,8 @@
 ---
 title: MessageChannel.port1
 slug: Web/API/MessageChannel/port1
-tags:
-  - API
-  - Channel messaging
-  - HTML5
-  - Message Channel API
-  - MessageChannel
-  - Property
-  - Reference
-translation_of: Web/API/MessageChannel/port1
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`port1`** は {{domxref("MessageChannel")}} インターフェースの読み取り専用プロパティで、メッセージチャンネルの最初のポートを返します。このポートは、チャンネルの元となるコンテキストに付属します。
@@ -52,9 +44,7 @@ function handleMessage(e) {
 
 ## 仕様書
 
-| 仕様                                                                                                             | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#dom-messagechannel-port1', 'port1')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

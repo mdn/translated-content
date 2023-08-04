@@ -1,9 +1,9 @@
 ---
 title: 坐标系
-slug: Web/CSS/CSSOM_View/Coordinate_systems
-original_slug: Web/CSS/CSSOM_View/坐标系
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 ---
-{{cssref}}
+
+{{CSSRef}}
 
 当我们需要在图形上指定一点的坐标[algebra](https://zh.wikipedia.org/wiki/algebra))，这个坐标需要先对于某一个固定点。这个固定点我们称为原点[origin](<https://zh.wikipedia.org/wiki/Origin_(mathematics)>). 这个指定点的坐标即为包含在各个维度上相对于远点的距离值。
 
@@ -49,7 +49,7 @@ The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} prop
 
 ## Example
 
-Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available [coordinate systems](/zh-CN/docs/Web/CSS/CSSOM_View/Coordinate_systems).
+Let's take a look at an example. This simple example creates a set of nested boxes. Whenever the mouse enters, moves around inside, or exits the inner box, the corresponding event is handled by updating a set of informational messages within the box, listing out the current mouse coordinates in each of the four available [coordinate systems](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems).
 
 ### JavaScript
 
@@ -95,7 +95,7 @@ inner.addEventListener("mouseleave", update, false);
 
 The event handler is in the `update()` method. It simply calls `setCoords()` once for each coordinate system, passing in the event that occurred.
 
-Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types {{event("mouseenter")}}, {{event("mousemove")}}, and {{event("mouseleave")}}.
+Our main code sets up the event handlers on the inner box by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} for each of the types [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event), [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event), and [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event).
 
 ### HTML
 
@@ -167,7 +167,7 @@ Here you can see the results in action. As you mouse in and around the blue box,
 
 ## See also
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms): how to alter a coordinate system
+- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
 - Coordinates of a mouse event:
 
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}

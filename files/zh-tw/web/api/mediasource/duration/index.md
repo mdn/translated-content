@@ -2,6 +2,7 @@
 title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} 介面的 **`duration`** 屬性用來取得以及設置正被表示的媒體時間長度。
@@ -22,9 +23,9 @@ var myDuration = mediaSource.duration;
 
 當設置此屬性一個新的值時以下錯誤可能發生。
 
-| 錯誤                 | 解釋                                                                                                                                                                                                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidAccessError` | 嘗試設置的時間長度是負值，或者 `NaN`。                                                                                                                                                                                                                                          |
+| 錯誤                 | 解釋                                                                                                                                                                                                                                |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidAccessError` | 嘗試設置的時間長度是負值，或者 `NaN`。                                                                                                                                                                                              |
 | `InvalidStateError`  | {{domxref("MediaSource.readyState")}} 不是 `open`，或者 {{domxref("MediaSource.sourceBuffers")}} 中一個或多個以上的 {{domxref("SourceBuffer")}} 物件正在被更新（例如：他們的 {{domxref("SourceBuffer.updating")}} 屬性為 `true`。） |
 
 ## 範例
@@ -56,7 +57,7 @@ function sourceOpen (_) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource.duration")}}
+{{Compat}}
 
 ## 相關資料
 

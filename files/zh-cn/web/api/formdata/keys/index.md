@@ -2,6 +2,7 @@
 title: FormData.keys()
 slug: Web/API/FormData/keys
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.keys()`** 该方法返回一个迭代器（{{jsxref("Iteration_protocols",'iterator')}}），遍历了该 formData 包含的所有 key，这些 key 是 {{domxref("USVString")}} 对象。
@@ -23,12 +24,12 @@ formData.keys();
 ```js
 // 先创建一个 FormData 对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // 输出所有的 key
 for (var key of formData.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 
@@ -45,7 +46,7 @@ key2
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.keys")}}
+{{Compat}}
 
 ## 相关链接
 

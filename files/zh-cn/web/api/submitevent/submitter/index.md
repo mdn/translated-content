@@ -2,6 +2,7 @@
 title: SubmitEvent.submitter
 slug: Web/API/SubmitEvent/submitter
 ---
+
 {{APIRef("HTML DOM")}}
 
 在 {{domxref("SubmitEvent")}} 接口的只读属性 **`submitter`** 用于指定提交按钮或者被用来提交表单的其他元素。
@@ -14,7 +15,7 @@ slug: Web/API/SubmitEvent/submitter
 
 ## 示例
 
-完整示例代码参见 [`SubmitEvent`](/en-US/docs/Web/API/SubmitEvent#examples)。
+完整示例代码参见 [`SubmitEvent`](/zh-CN/docs/Web/API/SubmitEvent#examples)。
 
 ## 规范
 

@@ -2,12 +2,13 @@
 title: 一般的な HTML と CSS の問題への対処
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
 
 | 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 目標:     | 一般的な HTML と CSS のクロスブラウザーの問題を診断し、それらを修正するための適切なツールとテクニックを使うことができるようにする。                                                                                                                           |
 
 ## HTML と CSS の問題
@@ -25,7 +26,7 @@ HTML/CSS に起因するクロスブラウザーエラーを減らす方法を�
 
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
-> **Note:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間" CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
+> **メモ:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間" CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
 
 ### 検証
 
@@ -65,7 +66,7 @@ Other popular editors have similar linting packages available. For example, see:
 
 The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
 
-> **Note:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
+> **メモ:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
@@ -95,10 +96,16 @@ For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
   <!-- Offer download -->
-  <p>Your browser does not support WebM video; here is a link to
-  <a href="video/tears-of-steel-battle-clip-medium.mp4">view the video directly</a></p>
+  <p>
+    Your browser does not support WebM video; here is a link to
+    <a href="video/tears-of-steel-battle-clip-medium.mp4"
+      >view the video directly</a
+    >
+  </p>
 </video>
 ```
 
@@ -112,11 +119,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -125,7 +132,7 @@ The output of this code is as follows:
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
+> **メモ:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
 If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
@@ -137,7 +144,7 @@ Let's look at an example — a simple box styled with CSS, which has some stylin
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 
-> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **メモ:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
 The button has a number of declarations that style, but the two we are most interested in are as follows:
 
@@ -147,8 +154,9 @@ button {
 
   background-color: #ff0000;
   background-color: rgba(255 0 0 / 1);
-  box-shadow: inset 1px 1px 3px rgba(255 255 255 / 0.4),
-              inset -1px -1px 3px rgba(0 0 0 / 0.4);
+  box-shadow:
+    inset 1px 1px 3px rgba(255 255 255 / 0.4),
+    inset -1px -1px 3px rgba(0 0 0 / 0.4);
 }
 
 button:hover {
@@ -156,8 +164,9 @@ button:hover {
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0 0 0 / 0.4),
-              inset -1px -1px 3px rgba(255 255 255 / 0.4);
+  box-shadow:
+    inset 1px 1px 3px rgba(0 0 0 / 0.4),
+    inset -1px -1px 3px rgba(255 255 255 / 0.4);
 }
 ```
 
@@ -167,7 +176,7 @@ Here we are providing an [RGBA](/ja/docs/Web/CSS/color_value/rgba) {{cssxref("ba
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Note:** The same is true for other CSS features like [media queries](/ja/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ja/docs/Web/CSS/@font-face) and [`@supports`](/ja/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **メモ:** The same is true for other CSS features like [media queries](/ja/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ja/docs/Web/CSS/@font-face) and [`@supports`](/ja/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### Selector support
 
@@ -202,8 +211,14 @@ Here's some examples:
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left ,green, yellow);
-background-image: -webkit-gradient(linear, left center, right center, from(green), to(yellow));
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
 background-image: linear-gradient(to right, green, yellow);
 ```
 
@@ -224,16 +239,16 @@ Try this simple example:
 3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    const test = document.getElementById('hplogo');
-    ```
+   ```js
+   const test = document.getElementById("hplogo");
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ja/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
 
@@ -252,7 +267,7 @@ Generally, you will rarely need to include a prefix; and you may want to delete 
 
 Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/ja/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/ja/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [The building blocks of responsive design](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks).
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes).
+Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#解像度の切り替え_様々な寸法).
 
 Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/), or [Respond.js](https://github.com/scottjehl/Respond).
 
@@ -279,14 +294,3 @@ Aside from that, try searching your favorite search engine for an answer to your
 Now you should be familiar with the main types of cross browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## このモジュール
-
-- [Introduction to cross browser testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

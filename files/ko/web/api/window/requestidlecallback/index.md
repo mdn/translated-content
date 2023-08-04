@@ -1,17 +1,8 @@
 ---
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`window.requestIdleCallback()`** 메서드는 브라우저의 idle 상태에 호출될 함수를 대기열에 넣습니다. 이를 통해 개발자는 애니메이션 및 입력 응답과 같은 대기 시간이 중요한 이벤트에 영향을 미치지 않고 메인 이벤트 루프에서 백그라운드 및 우선 순위가 낮은 작업을 수행 할 수 있습니다. 함수는 일반적으로 first-in-first-out(FIFO) 순서로 호출됩니다. 하지만, `timeout` 옵션이 지정된 callback은 제한 시간이 지나기 전에 이들을 실행하기 위해 순서에 맞지 않게 호출될 수 있습니다.
@@ -22,7 +13,9 @@ idle callback 안에서 `requestIdleCallback()` 을 호출하여 다음 패스�
 
 ## Syntax
 
-    var handle = window.requestIdleCallback(callback[, options])
+```js
+var handle = window.requestIdleCallback(callback[, options])
+```
 
 ### Return value
 
@@ -39,11 +32,11 @@ idle callback 안에서 `requestIdleCallback()` 을 호출하여 다음 패스�
 
 [Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API) 포스트의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 예제를 참조해 주십시오.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

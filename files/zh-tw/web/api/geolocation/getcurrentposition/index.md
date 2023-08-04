@@ -2,6 +2,7 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** 方法用來獲取設備當前的位置。
@@ -27,21 +28,21 @@ navigator.geolocation.getCurrentPosition(success[, error[, options]])
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Your current position is:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  console.log('More or less ' + crd.accuracy + ' meters.');
-};
+  console.log("Your current position is:");
+  console.log("Latitude : " + crd.latitude);
+  console.log("Longitude: " + crd.longitude);
+  console.log("More or less " + crd.accuracy + " meters.");
+}
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
+  console.warn("ERROR(" + err.code + "): " + err.message);
+}
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 ```
@@ -52,9 +53,9 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 
 ## 瀏覽器的相容性
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## 請參考
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
 - {{domxref("Navigator.geolocation")}}

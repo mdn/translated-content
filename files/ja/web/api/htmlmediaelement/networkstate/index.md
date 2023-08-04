@@ -1,7 +1,10 @@
 ---
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.networkState`** プロパティは、ネットワークを介したメディアの現在の取得状況を示します。
@@ -23,14 +26,14 @@ slug: Web/API/HTMLMediaElement/networkState
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
-obj.addEventListener('playing', function() {
+obj.addEventListener('playing', () => {
 
   if (obj.networkState === 2) {
     // 読み込み中...

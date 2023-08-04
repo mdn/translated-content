@@ -1,16 +1,8 @@
 ---
 title: ConstantSourceNode로 다수의 파라미터 제어하기
 slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode
-tags:
-  - Audio
-  - Example
-  - Guide
-  - Intermediate
-  - Media
-  - Tutorial
-  - Web Audio
-  - Web Audio API
 ---
+
 {{APIRef("Web Audio API")}}
 
 이 글은 다수의 파라미터가 같은 값을 공유하도록 파라미터들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 파라미터의 값을 설정함으로써 변경될 수 있습니다.
@@ -40,19 +32,25 @@ tags:
 ```html
 <div class="controls">
   <div class="left">
-    <div id="playButton" class="button">
-      ▶️
-    </div>
+    <div id="playButton" class="button">▶️</div>
   </div>
   <div class="right">
     <span>Volume: </span>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.8" name="volume" id="volumeControl">
+    <input
+      type="range"
+      min="0.0"
+      max="1.0"
+      step="0.01"
+      value="0.8"
+      name="volume"
+      id="volumeControl" />
   </div>
 </div>
 
-<p>음을 재생하고 정지하기 위해 위의 버튼을,
-그리고 화음 E와 G의 볼륨을 변경하기 위해 볼륨 슬라이더를 사용하세요.</p>
+<p>
+  음을 재생하고 정지하기 위해 위의 버튼을, 그리고 화음 E와 G의 볼륨을 변경하기
+  위해 볼륨 슬라이더를 사용하세요.
+</p>
 ```
 
 ```css hidden
@@ -75,7 +73,11 @@ tags:
 
 .right {
   width: 50%;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   position: absolute;
   right: 0;
   display: table-cell;
@@ -98,7 +100,8 @@ tags:
   vertical-align: middle;
 }
 
-.left span, .left input {
+.left span,
+.left input {
   vertical-align: middle;
 }
 ```
@@ -179,7 +182,7 @@ window.addEventListener("load", setup, false);
 
 먼저, window의 {{domxref("AudioContext")}}에 대한 접근을 얻고, 이 참조를 `context` 변수에 저장합니다. 그리고 나서 `playButton`에 재생 버튼에 대한 참조와 `volumeControl`에 사용자가 연결된 오실레이터 쌍의 gain을 조정하기 위해 사용할 슬라이더에 대한 참조를 설정하며 제어 위젯에 대한 참조를 얻습니다.
 
-그리고 나서 재생 버튼의 {{event("click")}} 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
+그리고 나서 재생 버튼의 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트와 볼륨 슬라이더의 {{event("input")}} 이벤트에 이벤트 처리기를 부착합니다 (`togglePlay()` 메서드에 대해 알아보려면 [오실레이터 켜고 끄기](#오실레이터_켜고_끄기)를, 아주 짧은 `changeVolume()` 메서드를 살펴보려면 [연결된 오실레이터 제어하기](#연결된_오실레이터_제어하기)를 참고하세요).
 
 다음으로, {{domxref("GainNode")}} `gainNode1`은 연결되지 않은 오실레이터의 볼륨을 다루기 위해 생성됩니다 (`oscNode1`). 이 gain은 0.5로 설정합니다. 또한 `gainNode2`와 `gainNode3`를 생성하고 이들의 값을 `gainNode1`의 값과 동일하게 설정합니다. 그 후, 볼륨 슬라이더의 값을 같은 값으로 설정해 이 값이 슬라이더가 제어하는 gain 레벨과 동기화되도록 합니다.
 
@@ -241,7 +244,7 @@ function startOscillators() {
 
   oscNode3 = context.createOscillator();
   oscNode3.type = "sine";
-  oscNode3.frequency.value = 391.995435981749294 // G
+  oscNode3.frequency.value = 391.995435981749294; // G
   oscNode3.connect(gainNode3);
 
   oscNode1.start();
@@ -254,10 +257,10 @@ function startOscillators() {
 
 세 개의 각 오실레이터는 같은 방식으로 설정됩니다.
 
-1.  {{domxref("BaseAudioContext.createOscillator")}}를 호출함으로써 {{domxref("OscillatorNode")}}를 생성합니다.
-2.  오디오 파형으로써 사인파를 사용하기 위해 오실레이터의 type을 `"sine"`으로 설정합니다.
-3.  오실레이터의 주파수를 원하는 값으로 설정합니다. 이 경우, `oscNode1`는 중앙 C로, `oscNode2`와 `oscNode3`는 E와 G음을 재생함으로써 화음을 완성합니다.
-4.  새로운 오실레이터를 해당하는 gain 노드에 연결합니다.
+1. {{domxref("BaseAudioContext.createOscillator")}}를 호출함으로써 {{domxref("OscillatorNode")}}를 생성합니다.
+2. 오디오 파형으로써 사인파를 사용하기 위해 오실레이터의 type을 `"sine"`으로 설정합니다.
+3. 오실레이터의 주파수를 원하는 값으로 설정합니다. 이 경우, `oscNode1`는 중앙 C로, `oscNode2`와 `oscNode3`는 E와 G음을 재생함으로써 화음을 완성합니다.
+4. 새로운 오실레이터를 해당하는 gain 노드에 연결합니다.
 
 세 개의 모든 오실레이터가 완성되고 나면, 이것들은 각각의 {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} 메서드를 차례로 호출함으로써 시작되고, `playing`은 음이 재생되는 것을 추적하기 위해 `true`로 설정됩니다.
 

@@ -2,6 +2,7 @@
 title: XMLDocument
 slug: Web/API/XMLDocument
 ---
+
 {{APIRef("DOM")}}
 
 **XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
@@ -24,10 +25,7 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
 ## 仕様
 
-| 仕様                                                                         | ステータス                       | 備考       |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName("DOM WHATWG", "#xmldocument", "XMLDocument")}} | {{Spec2("DOM WHATWG")}} | 変更なし。 |
-| {{SpecName("DOM4", "#xmldocument", "XMLDocument")}}         | {{Spec2("DOM4")}}         | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
@@ -35,4 +33,4 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します_
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference "/en-US/docs/DOM/DOM_Reference")
+- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)

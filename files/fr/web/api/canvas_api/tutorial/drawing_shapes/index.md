@@ -1,24 +1,15 @@
 ---
 title: Dessiner des formes avec le canevas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - Graphisme
-  - Guide
-  - HTML
-  - HTML5
-  - Intermédiaire
-  - Tutoriel
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
 
 ## La grille
 
-Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou **système de coordonnées**. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin *supérieur gauche* de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à `x` pixels à partir de la gauche et à `y` pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.
+Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou **système de coordonnées**. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin _supérieur gauche_ de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à `x` pixels à partir de la gauche et à `y` pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.
 
 ![](canvas_default_grid.png)
 
@@ -43,17 +34,17 @@ Ci-dessous la fonction `draw()` de la page précédente, mais utilisant maintena
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -110,17 +101,17 @@ Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit&nb
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -148,26 +139,26 @@ Pour essayer par vous-même, vous pouvez utiliser le fragment de code ci-dessous
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
-    ctx.arc(75, 75, 50, 0, Math.PI * 2, true);  // Cercle extérieur
-    ctx.moveTo(110,75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Bouche (sens horaire)
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Cercle extérieur
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Bouche (sens horaire)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Oeil gauche
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Oeil gauche
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Oeil droite
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Oeil droite
     ctx.stroke();
   }
 }
@@ -194,28 +185,28 @@ L'exemple ci-dessous dessine deux triangles, un rempli et un filaire.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
-    
+    const ctx = canvas.getContext("2d");
+
     // Triangle plein
     ctx.beginPath();
     ctx.moveTo(25, 25);
     ctx.lineTo(105, 25);
     ctx.lineTo(25, 105);
     ctx.fill();
-    
+
     // Triangle filaire
     ctx.beginPath();
-    ctx.moveTo(125, 125)
+    ctx.moveTo(125, 125);
     ctx.lineTo(125, 45);
     ctx.lineTo(45, 125);
     ctx.closePath();
@@ -235,7 +226,7 @@ Vous remarquerez la différence entre le triangle plein et le filaire. Cela, com
 Pour dessiner des arcs ou des cercles, on utilise les méthodes `arc() ou arcTo()`.
 
 - {{domxref("CanvasRenderingContext2D.arc", "arc(x, y, rayon, angleInitial, angleFinal, antihoraire)")}}
-  - : Dessine un arc de cercle qui est centré à la position _(x, y),_ de rayon _r_, commençant à _angleInitial_ et finissant à *angleFinal* en allant dans le sens indiqué par _antihoraire_ (par défaut, horaire).
+  - : Dessine un arc de cercle qui est centré à la position _(x, y),_ de rayon _r_, commençant à _angleInitial_ et finissant à _angleFinal_ en allant dans le sens indiqué par _antihoraire_ (par défaut, horaire).
 - **{{domxref("CanvasRenderingContext2D.arcTo", "arcTo(x1, y1, x2, y2, rayon)")}}**
   - : Dessine un arc avec les points de contrôle et l'angle donnés, relié au point précédent par une ligne droite.
 
@@ -255,17 +246,17 @@ L'instruction pour le paramètre `antihoraire` a pour résultat que la première
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
@@ -294,7 +285,7 @@ function draw() {
 
 ### Les courbes quadratiques et de Bézier
 
-Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
+Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Dessine une courbe de Bézier quadratique depuis la position courante du stylo jusqu'au point final spécifié par `x` et `y`, en utilisant le point de contrôle spécifié par `cp1x` et `cp1y`.
@@ -305,7 +296,7 @@ La différence entre ces deux méthodes est mieux décrite par l'image à droite
 
 ![](canvas_curves.png)
 
-Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et  `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
+Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
 
 Utiliser des courbes quadratiques et cubiques de Bézier peut constituer un certain défi, car à la différence d'un logiciel de tracé des vecteurs comme _Adobe Illustrator_, nous n'avons pas de retour visuel direct concernant ce que nous faisons. Cela rend passablement difficile le dessin de formes complexes. Dans l'exemple suivant, nous allons dessiner quelques formes naturelles simples, mais si vous avez du temps et - surtout - de la patience, des formes bien plus complexes peuvent être créées.
 
@@ -317,18 +308,18 @@ Cet exemple utilise plusieurs courbes quadratiques de Bézier pour rendre une bu
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canevas = document.getElementById('canvas');
+  const canevas = document.getElementById("canvas");
   if (canevas.getContext) {
-    const ctx = canevas.getContext('2d');
-    
+    const ctx = canevas.getContext("2d");
+
     // Exemples de courbes quadratiques
     ctx.beginPath();
     ctx.moveTo(75, 25);
@@ -351,9 +342,9 @@ Cet exemple dessine un cœur en utilisant les courbes de Bézier cubiques.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
@@ -362,7 +353,7 @@ function draw() {
   const canevas = document.getElementById('canvas');
   if (canevas.getContext) {
     const ctx = canevas.getContext('2d');
-    
+
     // Exemple de courbes cubiques
     ctx.beginPath();
     ctx.moveTo(75, 40);
@@ -394,42 +385,42 @@ Jusqu'à présent, chaque exemple de cette page a utilisé un seul type de fonct
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canevas = document.getElementById('canvas');
+  const canevas = document.getElementById("canvas");
   if (canevas.getContext) {
-    const ctx = canevas.getContext('2d');
-    
+    const ctx = canevas.getContext("2d");
+
     rectArrondi(ctx, 12, 12, 150, 150, 15);
     rectArrondi(ctx, 19, 19, 150, 150, 9);
     rectArrondi(ctx, 53, 53, 49, 33, 10);
     rectArrondi(ctx, 53, 119, 49, 16, 6);
     rectArrondi(ctx, 135, 53, 49, 33, 10);
     rectArrondi(ctx, 135, 119, 25, 49, 10);
-    
+
     ctx.beginPath();
-    ctx.arc(37, 37, 13, Math.PI/7, -Math.PI/7, false);
+    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
     ctx.lineTo(31, 37);
     ctx.fill();
-    
-    for(let i = 0; i < 8; i++) {
+
+    for (let i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
-    
-    for(i = 0; i < 6; i++) {
-        ctx.fillRect(115, 51 + i * 16, 4, 4);
+
+    for (i = 0; i < 6; i++) {
+      ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
-    
-    for(i = 0; i < 8; i++) {
-    ctx.fillRect(51 + i * 16, 99, 4, 4);
+
+    for (i = 0; i < 8; i++) {
+      ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
-    
+
     ctx.beginPath();
     ctx.moveTo(83, 116);
     ctx.lineTo(83, 102);
@@ -443,8 +434,8 @@ function draw() {
     ctx.lineTo(87.666, 111.333);
     ctx.lineTo(83, 116);
     ctx.fill();
-    
-    ctx.fillStyle = 'white';
+
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -457,12 +448,12 @@ function draw() {
     ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
-       
+
     ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
-       
+
     ctx.beginPath();
     ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -477,7 +468,12 @@ function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
   ctx.lineTo(x, y + hauteur - rayon);
   ctx.quadraticCurveTo(x, y + hauteur, x + rayon, y + hauteur);
   ctx.lineTo(x + largeur - rayon, y + hauteur);
-  ctx.quadraticCurveTo(x + largeur, y + hauteur, x + largeur, y + hauteur - rayon);
+  ctx.quadraticCurveTo(
+    x + largeur,
+    y + hauteur,
+    x + largeur,
+    y + hauteur - rayon,
+  );
   ctx.lineTo(x + largeur, y + rayon);
   ctx.quadraticCurveTo(x + largeur, y, x + largeur - rayon, y);
   ctx.lineTo(x + rayon, y);
@@ -490,7 +486,7 @@ L'image résultante ressemble à ce qui suit&nbsp;:
 
 {{EmbedLiveSample("Combiner_les_possibilités", 160, 160)}}
 
-Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, rectArrondi`())`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
+Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, `rectArrondi()`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
 
 Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pour l'instant, tout ce que nous faisons est de l'utiliser pour changer en blanc la couleur pour les trajets depuis la couleur noire par défaut, et inversement ensuite.
 
@@ -502,9 +498,9 @@ Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de tra
   - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths).
 
 ```js
-new Path2D();     // objet trajet vide
+new Path2D(); // objet trajet vide
 new Path2D(trajet); // copie depuis un autre objet Path2D
-new Path2D(d);    // trajet depuis des données de trajet SVG
+new Path2D(d); // trajet depuis des données de trajet SVG
 ```
 
 Toutes les [méthodes de trajet](/fr/docs/Web/API/CanvasRenderingContext2D#Paths) telles que `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets `Path2D`.
@@ -520,17 +516,17 @@ Dans cet exemple, on crée un rectangle et un cercle. Tous deux sont stockés co
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    const ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
 
     const rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -551,7 +547,7 @@ function draw() {
 
 Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
-Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur P`ath2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

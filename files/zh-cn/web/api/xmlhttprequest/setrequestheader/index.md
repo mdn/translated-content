@@ -2,6 +2,7 @@
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.setRequestHeader()** 是设置 HTTP 请求头部的方法。此方法必须在 {{domxref("XMLHttpRequest.open", "open()")}} 方法和 {{domxref("XMLHttpRequest.send", "send()")}} 之间调用。如果多次对同一个请求头赋值，只会生成一个合并了多个值的请求头。

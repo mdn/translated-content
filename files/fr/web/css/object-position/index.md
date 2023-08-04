@@ -1,9 +1,8 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
-browser-compat: css.properties.object-position
 ---
+
 {{CSSRef}}
 
 La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
@@ -47,8 +46,8 @@ object-position: unset;
 Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), chacun affichant le logo de MDN.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="Logo MDN"/>
-<img id="object-position-2" src="mdn.svg" alt="Logo MDN"/>
+<img id="object-position-1" src="mdn.svg" alt="Logo MDN" />
+<img id="object-position-2" src="mdn.svg" alt="Logo MDN" />
 ```
 
 ### CSS

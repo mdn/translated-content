@@ -1,15 +1,8 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
-tags:
-  - API
-  - Capture
-  - DOM
-  - Document
-  - Méthodes
-  - Souris
-translation_of: Web/API/Document/releaseCapture
 ---
+
 {{ ApiRef("DOM") }}
 
 Libère la capture de la souris si elle est actuellement activée (_bouton gauche enfoncé_) sur un élément de ce document. L'activation de la capture de la souris sur un élément se fait en appelant {{domxref("element.setCapture()")}}.
@@ -17,7 +10,7 @@ Libère la capture de la souris si elle est actuellement activée (_bouton gauch
 ## Syntaxe
 
 ```js
-document.releaseCapture()
+document.releaseCapture();
 ```
 
 Une fois la capture de la souris relâchée, les événements de souris ne seront plus dirigés vers l'élément sur lequel la capture est activée.

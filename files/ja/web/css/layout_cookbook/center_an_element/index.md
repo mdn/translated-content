@@ -1,17 +1,8 @@
 ---
 title: 要素を中央に配置
 slug: Web/CSS/Layout_cookbook/Center_an_element
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - レシピ
-  - ボックス配置
-  - センタリング
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
+
 {{CSSRef}}
 
 このレシピでは、あるボックスを別のボックスの中央に配置する方法がわかります。 フレックスボックスを使用する前は、水平方向と垂直方向の両方の中央に配置することは困難でしたが、ボックス配置プロパティを使用できるようになり簡単になりました。
@@ -26,7 +17,7 @@ translation_of: Web/CSS/Layout_cookbook/Center_an_element
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 

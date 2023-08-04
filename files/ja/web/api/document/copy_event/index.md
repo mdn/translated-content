@@ -1,7 +1,8 @@
 ---
-title: 'Document: copy イベント'
+title: "Document: copy イベント"
 slug: Web/API/Document/copy_event
 ---
+
 {{APIRef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
@@ -32,16 +33,14 @@ slug: Web/API/Document/copy_event
 ## 例
 
 ```js
-document.addEventListener('copy', (event) => {
-    console.log('copy action initiated')
+document.addEventListener("copy", (event) => {
+  console.log("copy action initiated");
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

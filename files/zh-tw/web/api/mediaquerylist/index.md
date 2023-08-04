@@ -2,6 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 `MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/CSS/Media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
@@ -16,10 +17,10 @@ MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀�
 
 ## Properties
 
-| Property  | Type        | Description                                                                                                    |
-| --------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| Property  | Type        | Description                                                                                             |
+| --------- | ----------- | ------------------------------------------------------------------------------------------------------- |
 | `matches` | `boolean`   | `true` 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨**。** |
-| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                       |
+| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                |
 
 ## Methods
 
@@ -55,7 +56,7 @@ void removeListener(
 
 ## 瀏覽器相容性
 
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## 規範標準
 

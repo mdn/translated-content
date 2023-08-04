@@ -1,17 +1,8 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - Property
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset
-translation_of: Web/CSS/inset
 ---
+
 {{CSSRef}}
 
 **`inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} に対応する一括指定です。これは {{cssxref("margin")}} の一括指定における複数値の場合と同じ構文です。

@@ -2,6 +2,7 @@
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
+
 {{JSRef}}
 
 内置的**`Symbol.isConcatSpreadable`**`符号用于配置某对象作为`{{jsxref("Array.prototype.concat()")}}方法的参数时是否展开其数组元素。
@@ -24,24 +25,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 默认情况下，{{jsxref("Array.prototype.concat()")}} 展开其元素连接到结果中：
 
 ```js
-var alpha = ['a', 'b', 'c'],
-    numeric = [1, 2, 3];
+var alpha = ["a", "b", "c"],
+  numeric = [1, 2, 3];
 
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', 1, 2, 3]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', 1, 2, 3]
 ```
 
 设置`Symbol.isConcatSpreadable`为`false`：
 
 ```js
-var alpha = ['a', 'b', 'c'],
-    numeric = [1, 2, 3];
+var alpha = ["a", "b", "c"],
+  numeric = [1, 2, 3];
 
 numeric[Symbol.isConcatSpreadable] = false;
 var alphaNumeric = alpha.concat(numeric);
 
-console.log(alphaNumeric); // 结果: ['a', 'b', 'c', [1, 2, 3] ]
+console.log(alphaNumeric); // 结果：['a', 'b', 'c', [1, 2, 3] ]
 ```
 
 ### Array-like 对象
@@ -55,8 +56,8 @@ var fakeArray = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
   0: "hello",
-  1: "world"
-}
+  1: "world",
+};
 
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```

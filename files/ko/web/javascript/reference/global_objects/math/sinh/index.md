@@ -1,8 +1,8 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
+
 {{JSRef}}
 
 **`Math.sinh()`** 함수(쌍곡선 함수)는 사인값을 반환합니다 이 값은 아래와같은 식을통해서 표현할 수 있습니다.{{jsxref("Math.E", "constant e", "", 1)}}:
@@ -58,11 +58,11 @@ Math.sinh = Math.sinh || function(x) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

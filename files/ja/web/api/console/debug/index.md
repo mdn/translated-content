@@ -4,6 +4,7 @@ slug: Web/API/console/debug
 l10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
+
 {{APIRef("Console API")}}
 
 **`console.debug()`** メソッドは、メッセージを "debug" ログレベルでウェブコンソールに出力します。このメッセージは、デバッグ出力を表示するようにコンソールが構成されている場合にのみユーザーに表示されます。多くの場合、ログレベルはコンソールの UI の中で構成します。このログレベルは \`Debug\` または \`Verbose\` ログレベルに相当します。
@@ -13,10 +14,10 @@ l10n:
 ## 構文
 
 ```js
-debug(obj1)
-debug(obj1, /* …, */ objN)
-debug(msg)
-debug(msg, subst1, /* …, */ substN)
+debug(obj1);
+debug(obj1, /* …, */ objN);
+debug(msg);
+debug(msg, subst1, /* …, */ substN);
 ```
 
 ### 引数

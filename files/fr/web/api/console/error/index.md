@@ -1,16 +1,8 @@
 ---
 title: console.error()
-slug: Web/API/Console/error
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
-translation_of: Web/API/Console/error
+slug: Web/API/console/error
 ---
+
 {{APIRef("Console API")}}
 
 Affiche un message d'erreur dans la console du navigateur.
@@ -37,7 +29,7 @@ console.exception(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Une liste d'objets JavaScript qui remplace les chaînes de caractéres de `msg`. Cela vous donne plus de contrôle sur le format de sortie.
 
-Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de  {{domxref("console")}} pour plus de détails.
+Voir [Afficher du texte dans la console](/fr/docs/Web/API/console#Outputting_text_to_the_console) dans la documentation de {{domxref("console")}} pour plus de détails.
 
 ## Spécifications
 

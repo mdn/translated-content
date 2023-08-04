@@ -1,12 +1,10 @@
 ---
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
-page-type: web-api-instance-method
-translation_of: Web/API/BroadcastChannel/close
-browser-compat: api.BroadcastChannel.close
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 La méthode **`BroadcastChannel.close()`** ferme la connexion au canal sous-jacent, permettant à l'objet d'être libéré par le ramasse-miettes. Cette tâche est obligatoire puisqu'il n'y a aucun autre moyen pour le navigateur de savoir si ce canal est encore nécessaire.
@@ -23,7 +21,7 @@ canal.close();
 
 ```js
 // Connexion au canal
-const bc = new BroadcastChannel('canal_test');
+const bc = new BroadcastChannel("canal_test");
 
 // Autres opérations (tel que postMessage, …)
 

@@ -1,8 +1,8 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
@@ -266,13 +266,15 @@ Los elementos flexbox permiten crear algunos diseños de página bastante comple
 
 El HTML para ello es bastante simple. Hay un elemento {{htmlelement ("section")}} que contiene tres elementos {{htmlelement ("article")}}. El tercer elemento {{htmlelement ("article")}} contiene tres elementos {{htmlelement ("div")}}:
 
-    section - article
-              article
-              article - div - button
-                        div   button
-                        div   button
-                              button
-                              button
+```
+section - article
+          article
+          article - div - button
+                    div   button
+                    div   button
+                          button
+                          button
+```
 
 Veamos el código que hemos usado para esta compaginación.
 
@@ -302,7 +304,7 @@ A continuación, seleccionamos el primer elemento {{htmlelement ("div")}}. Prime
 
 ```css
 article:nth-of-type(3) div:first-child {
-  flex:1 100px;
+  flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -340,18 +342,3 @@ Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más
 Con esto concluye nuestro recorrido por los conceptos básicos de las propiedades flexbox. Esperamos que te hayas divertido y que juegues con ello mientras avanzas en tu aprendizaje. A continuación, veremos otro aspecto importante de los diseños CSS: las rejillas CSS.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## En este módulo
-
-- [Introducción al diseño CSS](/es/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flujo normal](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Cuadrícula](/es/docs/Learn/CSS/CSS_layout/Grids)
-- [Flotadores](/es/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
-- [Diseño en varias columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Diseño adaptativo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guía para principiantes sobre consultas a medios](/es/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Compatibilidad en navegadores antiguos](/es/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Evaluación del conjunto de elementos básicos de compaginación](/es/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

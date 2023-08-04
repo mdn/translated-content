@@ -1,15 +1,8 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - JavaScript
-  - Location
-  - Méthode
-  - Reference
-  - WebAPI
-translation_of: Web/API/Location/assign
 ---
+
 {{ APIRef("Location") }}
 
 La méthode **`Location.assign()`** charge et affiche dans la fenêtre le document situé à l'URL spécifiée.
@@ -33,7 +26,9 @@ object.assign(url);
 
 ```js
 // Navigue vers l'article Location.reload
-document.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.assign(
+  "https://developer.mozilla.org/fr/docs/Web/API/Location.reload",
+);
 ```
 
 ## Spécifications

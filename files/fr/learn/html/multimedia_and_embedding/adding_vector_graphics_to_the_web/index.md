@@ -1,16 +1,8 @@
 ---
 title: Ajouter des images vectorielles à une page web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Learn
-  - SVG
-translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-original_slug: Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_à_une_page_web
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
@@ -58,10 +50,10 @@ Vous pouvez simplement faire référence à un fichier SVG au sein de l'élémen
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="un triangle aux trois côtés égaux"
-    height="87px"
-    width="100px" />
+  src="equilateral.svg"
+  alt="un triangle aux trois côtés égaux"
+  height="87px"
+  width="100px" />
 ```
 
 ### Avantages
@@ -71,10 +63,13 @@ Vous pouvez simplement faire référence à un fichier SVG au sein de l'élémen
 
 ### Inconvénients
 
-- Pour les navigateurs historiques qui existaient avant la démocratisation de SVG (Internet Explorer 8, Android 2.3 et autres), on pourra utiliser une image PNG ou JPG dans l'attribut `src` en combinaison avec l'attribut {{htmlattrxref("srcset","img")}} :
+- Pour les navigateurs historiques qui existaient avant la démocratisation de SVG (Internet Explorer 8, Android 2.3 et autres), on pourra utiliser une image PNG ou JPG dans l'attribut `src` en combinaison avec l'attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) :
 
   ```html
-  <img src="equilateral.png" alt="un triangle dont tous les côtés sont égaux" srcset="equilateral.svg"/>
+  <img
+    src="equilateral.png"
+    alt="un triangle dont tous les côtés sont égaux"
+    srcset="equilateral.svg" />
   ```
 
 - Il est impossible de manipuler l'image avec JavaScript.
@@ -99,7 +94,7 @@ Il suffit d'ouvrir le fichier SVG avec un éditeur de texte, de copier le tout p
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -126,14 +121,14 @@ La balise `<svg>` n'a pas besoin des attributs `version`, `baseProfile` ou `xmln
 Cette syntaxe est assez simple et permet également de définir un contenu à utiliser quand SVG n'est pas supporté :
 
 ```html
-<object data="parallelogramme.svg"
-    width="300"
-    height="250"
-    type="image/svg+xml">
-
-<img src="parallelogramme.png"
+<object
+  data="parallelogramme.svg"
+  width="300"
+  height="250"
+  type="image/svg+xml">
+  <img
+    src="parallelogramme.png"
     alt="un quadrilatère dont les côtés sont parallèles deux à deux" />
-
 </object>
 ```
 
@@ -160,7 +155,7 @@ Voici un rapide exemple :
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Un triangle avec trois côtés inégaux" />
+  <img src="triangle.png" alt="Un triangle avec trois côtés inégaux" />
 </iframe>
 ```
 
@@ -168,7 +163,7 @@ Voici un rapide exemple :
 
 De plus, sauf si le SVG et la page web actuelle ont la même {{glossary('origine')}}, il n'est pas possible d'utiliser JavaScript pour manipuler le SVG depuis la page web.
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("iframe")}}
 - {{htmlelement("object")}}

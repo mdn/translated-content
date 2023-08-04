@@ -1,13 +1,8 @@
 ---
 title: WeakSet() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** コンストラクターで、 `WeakSet` オブジェクトを生成し、これに弱い参照で*オブジェクト*をコレクションで保持することができます。
@@ -47,9 +42,7 @@ ws.has(bar);    // true, bar は残っている
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset-constructor', 'WeakSet constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

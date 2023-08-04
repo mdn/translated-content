@@ -1,12 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-image
 ---
 {{CSSRef}}
 
@@ -33,7 +27,7 @@ translation_of: Web/CSS/background-image
 ```css
 background-image:
   linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('https://mdn.mozillademos.org/files/7693/catfront.png');
+  url('catfront.png');
 ```
 
 ### 값
@@ -91,13 +85,13 @@ p {
 
 div {
   background-image:
-      url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+      url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
   background-image:
-      url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-      url("https://mdn.mozillademos.org/files/7693/catfront.png");
+      url("startransparent.gif"),
+      url("catfront.png");
   background-color: transparent;
 }
 ```

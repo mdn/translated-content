@@ -2,6 +2,7 @@
 title: Selection.isCollapsed
 slug: Web/API/Selection/isCollapsed
 ---
+
 {{ ApiRef() }}
 
 ### 概述

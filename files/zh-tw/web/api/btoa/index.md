@@ -1,11 +1,11 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`btoa()`** method creates a {{glossary("Base64")}}-encoded ASCII string from a [binary string](/en-US/docs/Web/API/DOMString/Binary) (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).
+The **`btoa()`** method creates a {{glossary("Base64")}}-encoded ASCII string from a [binary string](/zh-TW/docs/Web/API/DOMString/Binary) (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).
 
 You can use this method to encode data which may otherwise cause communication problems, transmit it, then use the {{domxref("atob()")}} method to decode the data again. For example, you can encode control characters such as ASCII values 0 through 31.
 
@@ -18,7 +18,7 @@ var encodedData = scope.btoa(stringToEncode);
 ### Parameters
 
 - `stringToEncode`
-  - : The [binary string](/en-US/docs/Web/API/DOMString/Binary) to encode.
+  - : The [binary string](/zh-TW/docs/Web/API/DOMString/Binary) to encode.
 
 ### Return value
 
@@ -32,7 +32,7 @@ An ASCII string containing the Base64 representation of `stringToEncode`.
 ## Example
 
 ```js
-const encodedData = window.btoa('Hello, world'); // encode a string
+const encodedData = window.btoa("Hello, world"); // encode a string
 const decodedData = window.atob(encodedData); // decode the string
 ```
 
@@ -46,10 +46,10 @@ Base64, by design, expects binary data as its input. In terms of JavaScript stri
 const ok = "a";
 console.log(ok.codePointAt(0).toString(16)); //   61: occupies < 1 byte
 
-const notOK = "✓"
+const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713: occupies > 1 byte
 
-console.log(btoa(ok));    // YQ==
+console.log(btoa(ok)); // YQ==
 console.log(btoa(notOK)); // error
 ```
 
@@ -71,7 +71,7 @@ const myString = "☸☹☺☻☼☾☿";
 
 const converted = toBinary(myString);
 const encoded = btoa(converted);
-console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
+console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
 ```
 
 If you do this, of course you'll have to reverse the conversion on the decoded string:
@@ -87,7 +87,7 @@ function fromBinary(binary) {
 
 const decoded = atob(encoded);
 const original = fromBinary(decoded);
-console.log(original);                // ☸☹☺☻☼☾☿
+console.log(original); // ☸☹☺☻☼☾☿
 ```
 
 ## Polyfill
@@ -104,5 +104,5 @@ You can use a polyfill from <https://github.com/MaxArt2501/base64-js/blob/master
 
 ## See also
 
-- [`data` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [`data` URIs](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - {{domxref("atob()")}}

@@ -2,6 +2,7 @@
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
 ---
+
 {{ APIRef() }}
 
 **`scrollBy()`** 方法是使得元素滚动一段特定距离的 {{domxref("Element")}} 接口。
@@ -35,7 +36,7 @@ element.scrollBy(300, 300);
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 
@@ -45,4 +46,4 @@ element.scrollBy({
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.scrollBy")}}
+{{Compat}}

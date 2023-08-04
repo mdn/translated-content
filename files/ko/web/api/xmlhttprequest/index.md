@@ -1,18 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest")}}
@@ -32,7 +20,7 @@ translation_of: Web/API/XMLHttpRequest
 ## 생성자
 
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
-  - : `XMLHttpRequst`를 초기화합니다. 다른 메서드가 호출되기 전에 호출되어야 합니다.
+  - : `XMLHttpRequest`를 초기화합니다. 다른 메서드가 호출되기 전에 호출되어야 합니다.
 
 ## 속성
 
@@ -53,6 +41,7 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)를 반환합니다.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
+
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다
 
     > **참고:** HTTP/1.1의 상태 텍스트와 같이 프로토콜 버전과 응답의 이유를 알릴 방법이 HTTP/2 명세에는 없습니다. ({{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}})

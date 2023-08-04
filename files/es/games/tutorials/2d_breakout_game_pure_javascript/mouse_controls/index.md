@@ -1,10 +1,9 @@
 ---
 title: Controles del ratón
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}
 
@@ -14,7 +13,7 @@ El juego en sí está terminado, así que ahora vamos a pulirlo. Ya le hemos pue
 
 ## Detectar el movimiento del ratón
 
-Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento {{event("mousemove")}}.Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
+Detectar el movimiento del ratón es más fácil que detectar las pulsaciones de las teclas. Todo lo que necesitamos es un añadir "escuchador" al evento [`mousemove`](/es/docs/Web/Reference/Events/mousemove).Añade esta línea destrás de los otros "listeners", justo debajo del evento `keyup`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -26,10 +25,10 @@ Podemos cambiar la posición de la pala basándonos en las coordenadas del punte
 
 ```js
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
 }
 ```
 
@@ -49,6 +48,6 @@ Aquí tienes el código para comparar:
 
 ## Pasos siguientes
 
-Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](https://developer.mozilla.org/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando).
+Ya tenemos el juego terminado, pero aún lo podemos mejorar con algunos trucos [Finalizando](/es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando).
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}

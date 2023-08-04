@@ -1,15 +1,8 @@
 ---
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Property
-  - Reference
-translation_of: Web/API/MessagePort/onmessage
-original_slug: Web/API/MessagePort/onmessage
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`onmessage`** イベントハンドラは、{{domxref("EventListener")}} であり、ポート上で `message` 型の {{domxref("MessageEvent")}} が発動した時に呼び出されます。つまり、ポートがメッセージを受信した時に呼び出されます。
@@ -49,14 +42,11 @@ function handleMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                                       | 策定状況                                     | 備考                                                            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#handler-messageport-onmessage','onmessage')}}             | {{Spec2('HTML WHATWG')}}             | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
-| {{SpecName('HTML5 Web Messaging', '#handler-messageport-onmessage','onmessage')}} | {{Spec2('HTML5 Web Messaging')}} | 仕様の W3C バージョン。                                         |
+{{Specifications}}
 
 ## ブラウザの実装状況
 
-{{Compat("api.MessagePort.onmessage")}}
+{{Compat}}
 
 ## 関連情報
 

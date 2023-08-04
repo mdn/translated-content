@@ -1,18 +1,17 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/defineProperty
 ---
+
 {{JSRef}}
 
-**`handler.defineProperty()`** 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。
+**`handler.defineProperty()`** 用于拦截对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
 ## 语法
 
 ```js
 var p = new Proxy(target, {
-  defineProperty: function(target, property, descriptor) {
-  }
+  defineProperty: function (target, property, descriptor) {},
 });
 ```
 
@@ -47,7 +46,7 @@ var p = new Proxy(target, {
 
 如果违背了以下的不变量，proxy 会抛出 {{jsxref("TypeError")}}:
 
-- 如果目标对象不可扩展， 将不能添加属性。
+- 如果目标对象不可扩展，将不能添加属性。
 - 不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。
 - 如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。
 - 如果一个属性在目标对象中存在对应的属性，那么 `Object.defineProperty(target, prop, descriptor)` 将不会抛出异常。
@@ -58,15 +57,18 @@ var p = new Proxy(target, {
 以下代码演示如何拦截对目标对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
 ```js
-var p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log('called: ' + prop);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty: function (target, prop, descriptor) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
 
 var desc = { configurable: true, enumerable: true, value: 10 };
-Object.defineProperty(p, 'a', desc); // "called: a"
+Object.defineProperty(p, "a", desc); // "called: a"
 ```
 
 当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 `defineProperty` 的 `descriptor` 有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：
@@ -79,17 +81,20 @@ Object.defineProperty(p, 'a', desc); // "called: a"
 - `set`
 
 ```js
-var p = new Proxy({}, {
-  defineProperty(target, prop, descriptor) {
-    console.log(descriptor);
-    return Reflect.defineProperty(target, prop, descriptor);
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty(target, prop, descriptor) {
+      console.log(descriptor);
+      return Reflect.defineProperty(target, prop, descriptor);
+    },
+  },
+);
 
-Object.defineProperty(p, 'name', {
-  value: 'proxy',
-  type: 'custom'
-});  // { value: 'proxy' }
+Object.defineProperty(p, "name", {
+  value: "proxy",
+  type: "custom",
+}); // { value: 'proxy' }
 ```
 
 ## 规范

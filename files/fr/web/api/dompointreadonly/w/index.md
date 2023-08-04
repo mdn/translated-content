@@ -1,16 +1,8 @@
 ---
 title: DOMPoint.w
 slug: Web/API/DOMPointReadOnly/w
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Quadrilatère
-  - W
-translation_of: Web/API/DOMPointReadOnly/w
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`w`** de l'interface **`DOMPointReadOnly`** représente la perspective d'un point.

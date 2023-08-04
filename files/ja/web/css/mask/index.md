@@ -1,23 +1,13 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask
-translation_of: Web/CSS/mask
 ---
+
 {{CSSRef}}
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、指定された位置での画像のマスクまたは切り取りによって要素を (部分的または全体的に) 隠します。
 
-> **Note:** 以下のプロパティに加えて、`mask` 一括指定は {{cssxref("mask-border")}} を初期値にリセットします。そのため、カスケード内の初期のマスク設定を上書きするには、他の一括指定や個々のプロパティではなく、`mask` 一括指定を使用することをお勧めします。これにより、`mask-border` もリセットされ、新しいスタイルが適用されるようになります。
+> **メモ:** 以下のプロパティに加えて、`mask` 一括指定は {{cssxref("mask-border")}} を初期値にリセットします。そのため、カスケード内の初期のマスク設定を上書きするには、他の一括指定や個々のプロパティではなく、`mask` 一括指定を使用することをお勧めします。これにより、`mask-border` もリセットされ、新しいスタイルが適用されるようになります。
 
 ## 構成要素のプロパティ
 

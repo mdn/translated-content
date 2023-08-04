@@ -2,13 +2,14 @@
 title: 流程控制与错误处理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Grammar_and_Types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以用它在你的应用程序中实现大量的交互性功能。本章节我们将带来关于 JavaScript 语句的一些概览。
 
-这一章中的语句，在 [JavaScript 参考](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
+这一章中的语句，在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
 
-在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)这一章节。
+在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)这一章节。
 
 ## 语句块
 
@@ -26,7 +27,7 @@ JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以
 }
 ```
 
-### **示例**
+### 示例
 
 语句块通常用于流程控制，如`if`，`for`，`while`等等。
 
@@ -50,11 +51,11 @@ alert(x); // 输出的结果为 2
 
 这段代码的输出是**2**，这是因为块级作用域中的 var x 变量声明与之前的声明在同一个作用域内。在 C 语言或是 Java 语言中，同样的代码输出的结果是 1。
 
-从 ECMAScript 2015 开始，使用 `let` 和`const`变量是块作用域的。 更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。
+从 ECMAScript 2015 开始，使用 `let` 和`const`变量是块作用域的。更多信息请参考 {{jsxref("Statements/let", "let")}} 和 {{jsxref("Statements/const", "const")}}。
 
 ## 条件判断语句
 
-条件判断语句指的是根据指定的条件所返回的结果（真或假或其它预定义的），来执行特定的语句。JavaScript 支持两种条件判断语句：`if...else`和`switch`。
+条件判断语句指的是根据指定的条件所返回的结果（真或假或其他预定义的），来执行特定的语句。JavaScript 支持两种条件判断语句：`if...else`和`switch`。
 
 ### `if...else` 语句
 
@@ -63,7 +64,7 @@ alert(x); // 输出的结果为 2
 ```js
 if (condition) {
   statement_1;
-}else {
+} else {
   statement_2;
 } //推荐使用严格的语句块模式，语句 else 可选
 ```
@@ -75,11 +76,11 @@ if (condition) {
 ```js
 if (condition_1) {
   statement_1;
-}else if (condition_2) {
+} else if (condition_2) {
   statement_2;
-}else if (condition_n_1) {
+} else if (condition_n_1) {
   statement_n;
-}else {
+} else {
   statement_last;
 }
 ```
@@ -100,15 +101,15 @@ if (条件) {
 
 > **警告：**
 >
-> ```js
->   if(x = y){
->     /*  语句  */
->   }
+> ```js-nolint
+> if (x = y) {
+>   /*  语句  */
+> }
 > ```
 
 如果你需要在条件表达式中使用赋值，通常在赋值语句前后额外添加一对括号。例如：
 
-```plain
+```js-nolint
 if ((x = y)) {
   /* statements here */
 }
@@ -125,7 +126,7 @@ if ((x = y)) {
 - `NaN`
 - 空字符串（`""`）
 
-当传递给条件语句所有其他的值，包括所有对象会被计算为真 。
+当传递给条件语句所有其他的值，包括所有对象会被计算为真。
 
 请不要混淆原始的布尔值`true`和`false` 与 {{jsxref("Boolean")}}对象的真和假。例如：
 
@@ -135,7 +136,7 @@ if (b) //结果视为真
 if (b == true) // 结果视为假
 ```
 
-#### **示例**
+#### 示例
 
 在以下示例中，如果`Text`对象中的字符数为 3，函数`checkData`将返回`true`；否则，显示警报并返回`false`。
 
@@ -144,8 +145,11 @@ function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
-    alert("Enter exactly three characters. " +
-      document.form1.threeChar.value + " is not valid.");
+    alert(
+      "Enter exactly three characters. " +
+        document.form1.threeChar.value +
+        " is not valid.",
+    );
     return false;
   }
 }
@@ -170,33 +174,33 @@ switch (expression) {
 }
 ```
 
-程序首先查找一个与 `expression` 匹配的 `case` 语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 `default` 语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch` 语句后面的语句。`default` 语句通常出现在 switch 语句里的最后面，当然这不是必须的。
+程序首先查找一个与 `expression` 匹配的 `case` 语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值，程序会去找 `default` 语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch` 语句后面的语句。`default` 语句通常出现在 switch 语句里的最后面，当然这不是必须的。
 
-`可选的 break` 语句与每个 `case` 语句相关联， 保证在匹配的语句被执行后程序可以跳出 `switch` 并且继续执行 `switch` 后面的语句。如果 break 被忽略，则程序将继续执行 switch 语句中的下一条语句。
+`可选的 break` 语句与每个 `case` 语句相关联，保证在匹配的语句被执行后程序可以跳出 `switch` 并且继续执行 `switch` 后面的语句。如果 break 被忽略，则程序将继续执行 switch 语句中的下一条语句。
 
 **示例**
-在如下示例中，如果 `fruittype` 等于 "Bananas", 程序匹配到对应 "Bananas" 的`case` 语句，并执行相关语句。 当执行到 `break` 时，程序结束了 `switch` 并执行 `switch` 后面的语句。 如果不写 `break` ，那么程序将会执行 `case "Cherries"` 下的语句。
+在如下示例中，如果 `fruittype` 等于 "Bananas", 程序匹配到对应 "Bananas" 的`case` 语句，并执行相关语句。当执行到 `break` 时，程序结束了 `switch` 并执行 `switch` 后面的语句。如果不写 `break` ，那么程序将会执行 `case "Cherries"` 下的语句。
 
 ```js
 switch (fruittype) {
-   case "Oranges":
-      document.write("Oranges are $0.59 a pound.<br>");
-      break;
-   case "Apples":
-      document.write("Apples are $0.32 a pound.<br>");
-      break;
-   case "Bananas":
-      document.write("Bananas are $0.48 a pound.<br>");
-      break;
-   case "Cherries":
-      document.write("Cherries are $3.00 a pound.<br>");
-      break;
-   case "Mangoes":
-   case "Papayas":
-      document.write("Mangoes and papayas are $2.79 a pound.<br>");
-      break;
-   default:
-      document.write("Sorry, we are out of " + fruittype + ".<br>");
+  case "Oranges":
+    document.write("Oranges are $0.59 a pound.<br>");
+    break;
+  case "Apples":
+    document.write("Apples are $0.32 a pound.<br>");
+    break;
+  case "Bananas":
+    document.write("Bananas are $0.48 a pound.<br>");
+    break;
+  case "Cherries":
+    document.write("Cherries are $3.00 a pound.<br>");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    document.write("Mangoes and papayas are $2.79 a pound.<br>");
+    break;
+  default:
+    document.write("Sorry, we are out of " + fruittype + ".<br>");
 }
 document.write("Is there anything else you'd like?<br>");
 ```
@@ -212,7 +216,7 @@ document.write("Is there anything else you'd like?<br>");
 
 JavaScript 可以抛出任意对象。然而，不是所有对象能产生相同的结果。尽管抛出数值或者字母串作为错误信息十分常见，但是通常用下列其中一种异常类型来创建目标更为高效：
 
-- [ECMAScript exceptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
+- [ECMAScript exceptions](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
 - {{domxref("DOMException")}} and {{domxref("DOMError")}}
 
 ### `throw` 语句
@@ -226,26 +230,30 @@ throw expression;
 你可以抛出任意表达式而不是特定一种类型的表达式。下面的代码抛出了几个不同类型的表达式：
 
 ```js
-throw "Error2";   // String type
-throw 42;         // Number type
-throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
+throw "Error2"; // String type
+throw 42; // Number type
+throw true; // Boolean type
+throw {
+  toString: function () {
+    return "I'm an object!";
+  },
+};
 ```
 
 > **备注：** 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
 
 ```js
 // Create an object type UserException
-function UserException (message){
-  this.message=message;
-  this.name="UserException";
+function UserException(message) {
+  this.message = message;
+  this.name = "UserException";
 }
 
 // Make the exception convert to a pretty string when used as
 // a string (e.g. by the error console)
-UserException.prototype.toString = function (){
+UserException.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // Create an instance of the object type and throw it
 throw new UserException("Value too high");
@@ -255,15 +263,27 @@ throw new UserException("Value too high");
 
 `try...catch` 语句标记一块待尝试的语句，并规定一个以上的响应应该有一个异常被抛出。如果我们抛出一个异常，`try...catch`语句就捕获它。
 
-`try...catch` 语句有一个包含一条或者多条语句的 try 代码块，0 个或 1 个的`catch`代码块，catch 代码块中的语句会在 try 代码块中抛出异常时执行。 换句话说，如果你在 try 代码块中的代码如果没有执行成功，那么你希望将执行流程转入 catch 代码块。如果 try 代码块中的语句（或者`try` 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入`catch` 代码块。如果 try 代码块没有抛出异常，catch 代码块就会被跳过。`finally` 代码块总会紧跟在 try 和 catch 代码块之后执行，但会在 try 和 catch 代码块之后的其他代码之前执行。
+`try...catch` 语句有一个包含一条或者多条语句的 try 代码块，0 个或 1 个的`catch`代码块，catch 代码块中的语句会在 try 代码块中抛出异常时执行。换句话说，如果你在 try 代码块中的代码如果没有执行成功，那么你希望将执行流程转入 catch 代码块。如果 try 代码块中的语句（或者`try` 代码块中调用的方法）一旦抛出了异常，那么执行流程会立即进入`catch` 代码块。如果 try 代码块没有抛出异常，catch 代码块就会被跳过。`finally` 代码块总会紧跟在 try 和 catch 代码块之后执行，但会在 try 和 catch 代码块之后的其他代码之前执行。
 
 下面的例子使用了`try...catch`语句。示例调用了一个函数用于从一个数组中根据传递值来获取一个月份名称。如果该值与月份数值不相符，会抛出一个带有`"InvalidMonthNo"`值的异常，然后在捕捉块语句中设`monthName`变量为`unknown`。
 
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
@@ -271,10 +291,10 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
+} catch (e) {
   monthName = "unknown";
   logMyErrors(e); // pass exception object to error handler -> your own function
 }
@@ -296,11 +316,10 @@ catch (catchID) {
 
 ```js
 try {
-   throw "myException" // generates an exception
-}
-catch (e) {
-// statements to handle any exceptions
-   logMyErrors(e) // pass exception object to error handler
+  throw "myException"; // generates an exception
+} catch (e) {
+  // statements to handle any exceptions
+  logMyErrors(e); // pass exception object to error handler
 }
 ```
 
@@ -313,11 +332,11 @@ catch (e) {
 ```js
 openMyFile();
 try {
-    writeMyFile(theData); //This may throw a error
-}catch(e){
-    handleError(e); // If we got a error we handle it
-}finally {
-    closeMyFile(); // always close the resource
+  writeMyFile(theData); //This may throw a error
+} catch (e) {
+  handleError(e); // If we got a error we handle it
+} finally {
+  closeMyFile(); // always close the resource
 }
 ```
 
@@ -328,10 +347,10 @@ function f() {
   try {
     console.log(0);
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // this return statement is suspended
-                 // until finally block has completed
+    // until finally block has completed
     console.log(2); // not reachable
   } finally {
     console.log(3);
@@ -349,11 +368,11 @@ f(); // console 0, 1, 3; returns false
 ```js
 function f() {
   try {
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // this throw statement is suspended until
-             // finally block has completed
+    // finally block has completed
   } finally {
     return false; // overwrites the previous "throw"
   }
@@ -362,7 +381,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // this is never reached because the throw inside
   // the catch is overwritten
   // by the return in finally
@@ -375,7 +394,7 @@ try {
 
 #### 嵌套 try...catch 语句
 
-你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
+你可以嵌套一个或多个`try ... catch`语句。如果一个内部`try ... catch`语句没有`catch`块，它需要有一个`finally`块，并且封闭的`try ... catch`语句的`catch`块被检查匹配。有关更多信息，请参阅[try... catch](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)参考页上的[嵌套 try-blocks](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)。
 
 ### 使用`Error`对象
 

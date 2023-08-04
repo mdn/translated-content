@@ -2,6 +2,7 @@
 title: foreignObject
 slug: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 [SVG](/zh-CN/docs/Web/SVG)中的 **`<foreignObject>`** 元素允许包含来自不同的 XML 命名空间的元素。在浏览器的上下文中，很可能是 XHTML / HTML。
@@ -9,17 +10,23 @@ slug: Web/SVG/Element/foreignObject
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <style>
-    polygon { fill: black }
+    polygon {
+      fill: black;
+    }
 
     div {
       color: white;
-      font:18px serif;
+      font: 18px serif;
       height: 100%;
       overflow: auto;
     }
@@ -34,10 +41,9 @@ html,body,svg { height:100% }
       be avoided, but it is mandatory in the context of an SVG document
     -->
     <div xmlns="http://www.w3.org/1999/xhtml">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed mollis mollis mi ut ultricies. Nullam magna ipsum,
-      porta vel dui convallis, rutrum imperdiet eros. Aliquam
-      erat volutpat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis mollis
+      mi ut ultricies. Nullam magna ipsum, porta vel dui convallis, rutrum
+      imperdiet eros. Aliquam erat volutpat.
     </div>
   </foreignObject>
 </svg>

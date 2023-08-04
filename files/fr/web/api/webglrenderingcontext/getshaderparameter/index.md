@@ -1,14 +1,8 @@
 ---
 title: WebGLRenderingContext.getShaderParameter()
 slug: Web/API/WebGLRenderingContext/getShaderParameter
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/getShaderParameter
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode `WebGLRenderingContext.getShaderParameter()` de l'API WebGL retourne des informations sur le shader donné.

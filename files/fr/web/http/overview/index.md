@@ -1,14 +1,8 @@
 ---
 title: Un aperçu de HTTP
 slug: Web/HTTP/Overview
-tags:
-  - Aperçu
-  - HTML
-  - HTTP
-  - WebMechanics
-translation_of: Web/HTTP/Overview
-original_slug: Web/HTTP/Aperçu
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** est un {{glossary("protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.
@@ -103,26 +97,26 @@ Lorsqu'un client veut communiquer avec un serveur, que ce soit avec un serveur f
 1. Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.
 2. Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
 
-    ```
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: fr
-    ```
+   ```http
+   GET / HTTP/1.1
+   Host: developer.mozilla.org
+   Accept-Language: fr
+   ```
 
 3. Il lit la réponse envoyée par le serveur :
 
-    ```
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```http
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
-    ```
+   <!DOCTYPE html... (suivi des 29769 octets de la page web demandée)
+   ```
 
 4. Il ferme ou réutilise la connexion pour les requêtes suivantes.
 

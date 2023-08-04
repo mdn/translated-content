@@ -2,6 +2,7 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 針對所有給定的 class 子元素，回傳類似陣列的物件。當呼叫 document 物件時，它會搜尋整個文件，包括根節點在內。你也可以在所有元素呼叫 {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}}，那它就只會回傳含有給定 class 的特定根元素的後代元素。
@@ -19,31 +20,34 @@ var elements = rootElement.getElementsByClassName(names);
 
 ## 範例
 
-取得所有 class 為 “test” 的元素：
+取得所有 class 為 「test」 的元素：
 
 ```js
-document.getElementsByClassName('test');
+document.getElementsByClassName("test");
 ```
 
-取得所有 class 為 “test” 和 “red” 的元素：
+取得所有 class 為 「test」 和 「red」 的元素：
 
 ```js
-document.getElementsByClassName('red test');
+document.getElementsByClassName("red test");
 ```
 
-取得所有在 id 為 '“main” 的元素裡 class 為 “test” 的元素：
+取得所有在 id 為 '「main」 的元素裡 class 為 「test」 的元素：
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
-我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 *this *來使用 `Array.prototype` 的方法。下面的例子將會找到所有 class 為 “test” 的 div 元素：
+我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 *this *來使用 `Array.prototype` 的方法。下面的例子將會找到所有 class 為 「test」 的 div 元素：
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 ## 取得 class 是 test 的元素
@@ -79,7 +83,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}
 
 ## 規範
 

@@ -1,12 +1,8 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
-page-type: web-api-instance-method
-translation_of: Web/API/window/requestAnimationFrame
-browser-compat: api.Window.requestAnimationFrame
-l10n:
-  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
+slug: Web/API/window/requestAnimationFrame
 ---
+
 {{APIRef}}
 
 La méthode **`window.requestAnimationFrame()`** indique au navigateur qu'on souhaite exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement à l'écran du navigateur. Cette méthode prend comme argument une fonction de rappel qui sera appelée avant le rafraîchissement du navigateur.
@@ -22,7 +18,7 @@ La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp
 ## Syntaxe
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### Paramètres
@@ -39,14 +35,14 @@ Une valeur entière de type `long` qui est un identifiant unique pour la requêt
 Dans cet exemple, un élément est animé pour 2 secondes (2000 millisecondes). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
 
 ```js
-const element = document.getElementById('un-élément-à-animer');
+const element = document.getElementById("un-élément-à-animer");
 let debut, tempsPrecedent;
 let fini = false;
 
 function iteration(chrono) {
   if (debut === undefined) {
     debut = chrono;
-    }
+  }
   const ecoule = chrono - debut;
 
   if (tempsPrecedent !== chrono) {
@@ -87,5 +83,5 @@ Internet Explorer et Edge, dans les versions antérieures à la version 17, ne d
 - [Utiliser `requestAnimationFrame()` pour des animations intelligentes, un billet en anglais de Paul Irish](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/)
 - [Les animations en JavaScript&nbsp;: de `setInterval()` à `requestAnimationFrame()`](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
 - [TestUFO&nbsp;: testez les déviations temporelles de votre navigateur sur `requestAnimationFrame()`](https://www.testufo.com/#test=animation-time-graph)
-- [Une précision inférieure à la milliseconde pour l'API  `requestAnimationFrame()`, un billet en anglais](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
+- [Une précision inférieure à la milliseconde pour l'API `requestAnimationFrame()`, un billet en anglais](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [Une prothèse d'émulation (<i lang="en">polyfill</i>)](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

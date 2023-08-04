@@ -1,19 +1,8 @@
 ---
-title: 'CSP: plugin-types'
+title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Flash
-  - Greffon
-  - HTTP
-  - Java
-  - Plugin
-  - Security
-  - Sécurité
-translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
@@ -60,7 +49,7 @@ Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 Pour intedire tous les greffons, la directive {{CSP("object-src")}} doit être définie à `'none'`. La directive `plugin-types` n'est utilisée que si vous autorisez au préalable les greffons avec `object-src`.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Autoriser le contenu Flash
@@ -74,7 +63,9 @@ Content-Security-Policy: plugin-types application/x-shockwave-flash
 Cet objet Flash sera autorisé et se chargera (dans la mesure où le navigateur gère Flash) :
 
 ```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+<object
+  data="https://example.com/flash"
+  type="application/x-shockwave-flash"></object>
 ```
 
 ### Autoriser les applets Java
@@ -87,14 +78,11 @@ Content-Security-Policy: plugin-types application/x-java-applet
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.plugin-types")}}
+{{Compat}}
 
 ## Voir aussi
 

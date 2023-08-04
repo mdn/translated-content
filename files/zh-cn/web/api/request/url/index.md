@@ -2,6 +2,7 @@
 title: Request.url
 slug: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Request")}} interface contains the URL of the request.
@@ -21,7 +22,7 @@ A {{domxref("USVString")}} indicating the url of the request.
 In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the url of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
 ```
 
@@ -31,10 +32,10 @@ var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.url")}}
+{{Compat}}
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

@@ -2,11 +2,14 @@
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
 ---
+
+{{HTTPSidebar}}
+
 **`Referrer-Policy`** 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}} 中发送——应该被包含在生成的请求当中。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -30,7 +33,7 @@ Referrer-Policy: unsafe-url
 - no-referrer-when-downgrade（默认值）
   - : 在没有指定任何策略的情况下用户代理的默认行为。在同等安全级别的情况下，引用页面的地址会被发送 (HTTPS->HTTPS)，但是在降级的情况下不会被发送 (HTTPS->HTTP)。
 - origin
-  - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址。`
+  - : 在任何情况下，仅发送文件的源作为引用地址。例如 `https://example.com/page.html` 会将 `https://example.com/ 作为引用地址`。
 - origin-when-cross-origin
   - : 对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。
 - same-origin
@@ -40,6 +43,7 @@ Referrer-Policy: unsafe-url
 - strict-origin-when-cross-origin
   - : 对于同源的请求，会发送完整的 URL 作为引用地址；在同等安全级别的情况下，发送文件的源作为引用地址 (HTTPS->HTTPS)；在降级的情况下不发送此首部 (HTTPS->HTTP)。
 - unsafe-url
+
   - : 无论是同源请求还是非同源请求，都发送完整的 URL（移除参数信息之后）作为引用地址。
 
     > **备注：** 这项设置会将受 TLS 安全协议保护的资源的源和路径信息泄露给非安全的源服务器。进行此项设置的时候要慎重考虑。
@@ -73,25 +77,25 @@ CSS 可以从样式表获取引用的资源，这些资源也可以遵从 referr
 
 ## 示例
 
-| Policy                                | Document                         | Navigation to                      | Referrer                      |
-| ------------------------------------- | -------------------------------- | ---------------------------------- | ----------------------------- |
-| **`no-referrer`**                     | https://example.com/page.html    | any domain or path                 | no referrer                   |
-| **`no-referrer-when-downgrade`**      | https://example.com/page.html    | https://example.com/otherpage.html | https://example.com/page.html |
-| **`no-referrer-when-downgrade`**      | https://example.com/page.html    | https://mozilla.org                | https://example.com/page.html |
-| **`no-referrer-when-downgrade`**      | https://example.com/page.html    | **http**://example.org             | no referrer                   |
-| **`origin`**                          | https://example.com/page.html    | any domain or path                 | https://example.com/          |
-| **`origin-when-cross-origin`**        | https://example.com/page.html    | https://example.com/otherpage.html | https://example.com/page.html |
-| **`origin-when-cross-origin`**        | https://example.com/page.html    | https://mozilla.org                | https://example.com/          |
-| **`origin-when-cross-origin`**        | https://example.com/page.html    | **http**://example.com/page.html   | https://example.com/          |
-| **`same-origin`**                     | https://example.com/page.html    | https://example.com/otherpage.html | https://example.com/page.html |
-| **`same-origin`**                     | https://example.com/page.html    | https://mozilla.org                | no referrer                   |
-| **`strict-origin`**                   | https://example.com/page.html    | https://mozilla.org                | https://example.com/          |
-| **`strict-origin`**                   | https://example.com/page.html    | **http**://example.org             | no referrer                   |
-| **`strict-origin`**                   | **http**://example.com/page.html | any domain or path                 | http://example.com/           |
-| **`strict-origin-when-cross-origin`** | https://example.com/page.html    | https://example.com/otherpage.html | https://example.com/page.html |
-| **`strict-origin-when-cross-origin`** | https://example.com/page.html    | https://mozilla.org                | https://example.com/          |
-| **`strict-origin-when-cross-origin`** | https://example.com/page.html    | **http**://example.org             | no referrer                   |
-| **`unsafe-url`**                      | https://example.com/page.html    | any domain or path                 | https://example.com/page.html |
+| Policy                                | Document                         | Navigation to                        | Referrer                        |
+| ------------------------------------- | -------------------------------- | ------------------------------------ | ------------------------------- |
+| **`no-referrer`**                     | `https://example.com/page.html`  | any domain or path                   | no referrer                     |
+| **`no-referrer-when-downgrade`**      | `https://example.com/page.html`  | `https://example.com/otherpage.html` | `https://example.com/page.html` |
+| **`no-referrer-when-downgrade`**      | `https://example.com/page.html`  | `https://mozilla.org`                | `https://example.com/page.html` |
+| **`no-referrer-when-downgrade`**      | `https://example.com/page.html`  | **http**://example.org               | no referrer                     |
+| **`origin`**                          | `https://example.com/page.html`  | any domain or path                   | `https://example.com/`          |
+| **`origin-when-cross-origin`**        | `https://example.com/page.html`  | `https://example.com/otherpage.html` | `https://example.com/page.html` |
+| **`origin-when-cross-origin`**        | `https://example.com/page.html`  | `https://mozilla.org`                | `https://example.com/`          |
+| **`origin-when-cross-origin`**        | `https://example.com/page.html`  | **http**://example.com/page.html     | `https://example.com/`          |
+| **`same-origin`**                     | `https://example.com/page.html`  | `https://example.com/otherpage.html` | `https://example.com/page.html` |
+| **`same-origin`**                     | `https://example.com/page.html`  | `https://mozilla.org`                | no referrer                     |
+| **`strict-origin`**                   | `https://example.com/page.html`  | `https://mozilla.org`                | `https://example.com/`          |
+| **`strict-origin`**                   | `https://example.com/page.html`  | **http**://example.org               | no referrer                     |
+| **`strict-origin`**                   | **http**://example.com/page.html | any domain or path                   | `http://example.com/`           |
+| **`strict-origin-when-cross-origin`** | `https://example.com/page.html`  | `https://example.com/otherpage.html` | `https://example.com/page.html` |
+| **`strict-origin-when-cross-origin`** | `https://example.com/page.html`  | `https://mozilla.org`                | `https://example.com/`          |
+| **`strict-origin-when-cross-origin`** | `https://example.com/page.html`  | **http**://example.org               | no referrer                     |
+| **`unsafe-url`**                      | `https://example.com/page.html`  | any domain or path                   | `https://example.com/page.html` |
 
 ### 指定后备策略
 
@@ -111,7 +115,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 {{Compat}}
 
-**注意：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy 。可选的值包括：
+**注意：** 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy。可选的值包括：
 
 - 0 — `no-referrer`
 - 1 — `same-origin`

@@ -1,19 +1,24 @@
 ---
 title: 繼承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
+{{CSSRef}}
+
 ## 摘要
 
-每個 [CSS property definition](/en-US/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
+每個 [CSS property definition](/zh-TW/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
 
 ## 繼承屬性
 
-When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/en-US/docs/CSS/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/en-US/docs/CSS/initial_value) given in the property's summary.
+When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/zh-TW/docs/CSS/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/zh-TW/docs/CSS/initial_value) given in the property's summary.
 
 A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:
 
 ```css
-p { color: green }
+p {
+  color: green;
+}
 ```
 
 HTML:
@@ -26,18 +31,20 @@ the words "emphasized text" will appear green, since the `em` element has inheri
 
 ## 非繼承屬性
 
-When no value for an **non-inherited property** (sometimes called a **reset property** in Mozilla code) has been specified on an element, the element gets the [initial value](/en-US/docs/CSS/initial_value) of that property (as specified in the property's summary).
+When no value for an **non-inherited property** (sometimes called a **reset property** in Mozilla code) has been specified on an element, the element gets the [initial value](/zh-TW/docs/CSS/initial_value) of that property (as specified in the property's summary).
 
 A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:
 
 ```css
- p { border: medium solid }
+p {
+  border: medium solid;
+}
 ```
 
 HTML:
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
@@ -48,7 +55,7 @@ the words "emphasized text" will not have a border (since the initial value of {
 
 ## 參見
 
-- [CSS Reference](/en-US/docs/CSS/CSS_Reference)
+- [CSS Reference](/zh-TW/docs/CSS/CSS_Reference)
 - CSS 重要概念：
 
   - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
@@ -56,10 +63,10 @@ the words "emphasized text" will not have a border (since the initial value of {
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-TW/docs/Web/CSS/initial_value)

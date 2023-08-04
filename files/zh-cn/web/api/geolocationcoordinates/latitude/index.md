@@ -2,6 +2,7 @@
 title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`Coordinates.latitude`** 只读属性，十进制双精度浮点数来表示纬度坐标
@@ -22,5 +23,5 @@ lat = coordinates.latitude
 
 ## 参见
 
-- [Using geolocation](/en-US/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
 - The {{domxref("Coordinates")}} interface it belongs to.

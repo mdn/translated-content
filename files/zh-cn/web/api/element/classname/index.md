@@ -2,6 +2,7 @@
 title: Element.className
 slug: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 ## 概述

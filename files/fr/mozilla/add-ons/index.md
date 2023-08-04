@@ -1,14 +1,8 @@
 ---
 title: Modules
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Landing
-  - Modules
-  - Mozilla
-translation_of: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}
 
 Les modules complémentaires (_add-ons_) permettent aux développeurs d'ajouter et de modifier les fonctionnalités de Firefox. Les modules sont écrits à l'aide de technologies web standard : JavaScript, HTML, et CSS - et d'API JavaScript spécifiques à ces modules. Un module complémentaire peut, par exemple, être utilisé pour :

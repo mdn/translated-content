@@ -2,7 +2,8 @@
 title: 使用 canvas 来绘制图形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 既然我们已经设置了 [canvas 环境](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)，我们可以深入了解如何在 canvas 上绘制。到本文的最后，你将学会如何绘制矩形，三角形，直线，圆弧和曲线，变得熟悉这些基本的形状。绘制物体到 Canvas 前，需掌握路径，我们看看到底怎么做。
 
@@ -33,17 +34,17 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -54,7 +55,7 @@ function draw() {
 
 该例子的输出如下图所示。
 
-{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}
+{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "canvas_rect.png")}}
 
 `fillRect()`函数绘制了一个边长为 100px 的黑色正方形。`clearRect()`函数从正方形的中心开始擦除了一个 60\*60px 的正方形，接着`strokeRect()`在清除区域内生成一个 50\*50 的正方形边框。
 
@@ -98,17 +99,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="100" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="100" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -121,7 +122,7 @@ function draw() {
 
 输出看上去如下：
 
-{{EmbedLiveSample("绘制一个三角形", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}
+{{EmbedLiveSample("绘制一个三角形", 110, 110, "triangle.png")}}
 
 ### 移动笔触
 
@@ -136,26 +137,26 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);   // 口 (顺时针)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (顺时针)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左眼
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左眼
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右眼
     ctx.stroke();
   }
 }
@@ -163,7 +164,7 @@ function draw() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("%E7%A7%BB%E5%8A%A8%E7%AC%94%E8%A7%A6", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
+{{EmbedLiveSample("移动笔触", 160, 160, "canvas_smiley.png")}}
 
 如果你想看到连续的线，你可以移除调用的 moveTo()。
 
@@ -182,39 +183,39 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-  // 填充三角形
-  ctx.beginPath();
-  ctx.moveTo(25, 25);
-  ctx.lineTo(105, 25);
-  ctx.lineTo(25, 105);
-  ctx.fill();
+    // 填充三角形
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(105, 25);
+    ctx.lineTo(25, 105);
+    ctx.fill();
 
-  // 描边三角形
-  ctx.beginPath();
-  ctx.moveTo(125, 125);
-  ctx.lineTo(125, 45);
-  ctx.lineTo(45, 125);
-  ctx.closePath();
-  ctx.stroke();
+    // 描边三角形
+    ctx.beginPath();
+    ctx.moveTo(125, 125);
+    ctx.lineTo(125, 45);
+    ctx.lineTo(45, 125);
+    ctx.closePath();
+    ctx.stroke();
   }
 }
 ```
 
 这里从调用`beginPath()`函数准备绘制一个新的形状路径开始。然后使用`moveTo()`函数移动到目标位置上。然后下面，两条线段绘制后构成三角形的两条边。
 
-{{EmbedLiveSample("%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}
+{{EmbedLiveSample("线", 160, 160, "canvas_lineto.png")}}
 
 你会注意到填充与描边三角形步骤有所不同。正如上面所提到的，因为路径使用填充（fill）时，路径自动闭合，使用描边（stroke）则不会闭合路径。如果没有添加闭合路径`closePath()`到描边三角形函数中，则只绘制了两条线段，并不是一个完整的三角形。
 
@@ -245,20 +246,20 @@ x,y 坐标是可变的。半径（radius）和开始角度（startAngle）都是
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="200"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="200"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-    for(var i = 0; i < 4; i++){
-      for(var j = 0; j < 3; j++){
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
         ctx.beginPath();
         var x = 25 + j * 50; // x 坐标值
         var y = 25 + i * 50; // y 坐标值
@@ -269,7 +270,7 @@ function draw() {
 
         ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-        if (i>1){
+        if (i > 1) {
           ctx.fill();
         } else {
           ctx.stroke();
@@ -280,14 +281,14 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("%E5%9C%86%E5%BC%A7", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
+{{EmbedLiveSample("圆弧", 160, 210, "canvas_arc.png")}}
 
 ### 二次贝塞尔曲线及三次贝塞尔曲线
 
 下一个十分有用的路径类型就是[贝塞尔曲线](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。
 
 - `quadraticCurveTo(cp1x, cp1y, x, y)`
-  - : 绘制二次贝塞尔曲线，`cp1x,cp1y`为一个控制点，`x,y为`结束点。
+  - : 绘制二次贝塞尔曲线，`cp1x,cp1y` 为一个控制点，`x,y` 为结束点。
 - `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
   - : 绘制三次贝塞尔曲线，`cp1x,cp1y`为控制点一，`cp2x,cp2y`为控制点二，`x,y`为结束点。
 
@@ -305,17 +306,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 二次贝塞尔曲线
     ctx.beginPath();
@@ -327,11 +328,11 @@ function draw() {
     ctx.quadraticCurveTo(125, 100, 125, 62.5);
     ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
-   }
+  }
 }
 ```
 
-{{EmbedLiveSample("%E4%BA%8C%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}
+{{EmbedLiveSample("二次贝塞尔曲线", 160, 160, "canvas_quadratic.png")}}
 
 #### 三次贝塞尔曲线
 
@@ -339,19 +340,19 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
-     //三次贝塞尔曲线
+    //三次贝塞尔曲线
     ctx.beginPath();
     ctx.moveTo(75, 40);
     ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
@@ -365,7 +366,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("%E4%B8%89%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}
+{{EmbedLiveSample("三次贝塞尔曲线", 160, 160, "canvas_bezier.png")}}
 
 ### 矩形
 
@@ -382,17 +383,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -406,15 +407,15 @@ function draw() {
     ctx.lineTo(31, 37);
     ctx.fill();
 
-    for(var i = 0; i < 8; i++){
+    for (var i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
 
-    for(i = 0; i < 6; i++){
+    for (i = 0; i < 6; i++) {
       ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
 
-    for(i = 0; i < 8; i++){
+    for (i = 0; i < 8; i++) {
       ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
 
@@ -459,7 +460,7 @@ function draw() {
 
 // 封装的一个用于绘制圆角矩形的函数。
 
-function roundedRect(ctx, x, y, width, height, radius){
+function roundedRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
   ctx.moveTo(x, y + radius);
   ctx.lineTo(x, y + height - radius);
@@ -476,7 +477,7 @@ function roundedRect(ctx, x, y, width, height, radius){
 
 结果画面如下：
 
-{{EmbedLiveSample("%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8", 160, 160, "https://mdn.mozillademos.org/files/9849/combinations.png")}}
+{{EmbedLiveSample("组合使用", 160, 160, "combinations.png")}}
 
 我们不会很详细地讲解上面的代码，因为事实上这很容易理解。重点是绘制上下文中使用到了 fillStyle 属性，以及封装函数（例子中的`roundedRect()`）。使用封装函数对于减少代码量以及复杂度十分有用。
 
@@ -492,16 +493,16 @@ function roundedRect(ctx, x, y, width, height, radius){
   - : `Path2D()`会返回一个新初始化的 Path2D 对象（可能将某一个路径作为变量——创建一个它的副本，或者将一个包含 SVG path 数据的字符串作为变量）。
 
 ```js
-new Path2D();     // 空的 Path 对象
+new Path2D(); // 空的 Path 对象
 new Path2D(path); // 克隆 Path 对象
-new Path2D(d);    // 从 SVG 建立 Path 对象
+new Path2D(d); // 从 SVG 建立 Path 对象
 ```
 
 所有的路径方法比如`moveTo`, `rect`, `arc`或`quadraticCurveTo`等，如我们前面见过的，都可以在 Path2D 中使用。
 
 Path2D API 添加了 `addPath`作为将`path`结合起来的方法。当你想要从几个元素中来创建对象时，这将会很实用。比如：
 
-- **{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}​**
+- **{{domxref("Path2D.addPath", "Path2D.addPath(path [, transform])")}}**
   - : 添加了一条路径到当前路径（可能添加了一个变换矩阵）。
 
 ### Path2D 示例
@@ -510,17 +511,17 @@ Path2D API 添加了 `addPath`作为将`path`结合起来的方法。当你想�
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext){
-    var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -535,7 +536,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_%E7%A4%BA%E4%BE%8B", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}
+{{EmbedLiveSample("Path2D 示例", 130, 110, "path2d.png")}}
 
 ### 使用 SVG paths
 

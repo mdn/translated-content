@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyValue()** 接口返回一个 {{domxref('DOMString')}} ，其中包含请求的 CSS 属性的值。
@@ -26,7 +27,7 @@ var value = style.getPropertyValue(property);
 
 ```js
 var declaration = document.styleSheets[0].cssRules[0].style;
-var value = declaration.getPropertyValue('margin'); // "1px 2px"
+var value = declaration.getPropertyValue("margin"); // "1px 2px"
 ```
 
 ## 规范

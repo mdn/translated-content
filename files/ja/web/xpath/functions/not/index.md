@@ -1,11 +1,8 @@
 ---
 title: not
 slug: Web/XPath/Functions/not
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/not
 ---
+
 {{ XsltRef() }}
 
 `not` 関数は式を論理値として評価し、その逆の値を返します。

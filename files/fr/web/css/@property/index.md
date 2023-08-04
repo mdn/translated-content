@@ -1,9 +1,8 @@
 ---
-title: '@property'
+title: "@property"
 slug: Web/CSS/@property
-translation_of: Web/CSS/@property
-browser-compat: css.at-rules.property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/Houdini), qui permet de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.
@@ -14,7 +13,7 @@ La règle `@property` permet l'enregistrement d'une propriété personnalisée d
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -43,7 +42,7 @@ Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-r
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -53,10 +52,10 @@ Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-r
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

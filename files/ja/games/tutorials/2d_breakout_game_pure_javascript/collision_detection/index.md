@@ -1,8 +1,8 @@
 ---
 title: 衝突検出
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
@@ -20,7 +20,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detect
 ```js
 function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
-    for(let r = 0; r < brickRowCount; r++) {
+    for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       // 計算
     }
@@ -42,7 +42,7 @@ function collisionDetection() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
-      if (x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
         dy = -dy;
       }
     }
@@ -98,7 +98,12 @@ function collisionDetection() {
     for (let r = 0; r < brickRowCount; r++) {
       const b = bricks[c][r];
       if (b.status === 1) {
-        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
           dy = -dy;
           b.status = 0;
         }
@@ -122,7 +127,7 @@ collisionDetection();
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
-> **Note:** ボールの色をブロックに当たったときに変えましょう。
+> **メモ:** ボールの色をブロックに当たったときに変えましょう。
 
 ## 次のステップ
 

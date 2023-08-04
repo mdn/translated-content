@@ -2,6 +2,7 @@
 title: Window.focus()
 slug: Web/API/Window/focus
 ---
+
 {{APIRef}}
 
 ## 概述
@@ -10,16 +11,22 @@ slug: Web/API/Window/focus
 
 ## 语法
 
-```js
-window.focus()
+```js-nolint
+focus()
 ```
 
 ## 示例
 
 ```js
-if (clicked) { window.focus(); }
+if (clicked) {
+  window.focus();
+}
 ```
 
 ## 规范
 
 {{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

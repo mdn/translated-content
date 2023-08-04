@@ -1,8 +1,8 @@
 ---
-title: 'Django Tutorial Part 5: Creating our home page'
+title: "Django Tutorial Part 5: Creating our home page"
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 우리는 이제 첫 전체 페이지를 보여주는 코드를 추가할 때가 되었습니다 — [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website를 위한 홈페이지를요. 이 홈페이지는 각각의 모델 타입마다 갖고 있는 레코드들의 숫자를 보여주고, 우리의 다른 페이지들로 이동할 수 있는 사이드바 내비게이션 링크들을 제공합니다. 이 섹션에서 우리는 기본 URL 맵과 뷰들을 작성하고, 데이터베이스에서 레코드들을 가져오고 그리고 탬플릿을 사용하는 것에 대한 연습 경험을 가질 수 있습니다.
@@ -12,10 +12,10 @@ translation_of: Learn/Server-side/Django/Home_page
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/ko/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
-          href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+          href="/ko/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >
         포함).
@@ -41,7 +41,7 @@ translation_of: Learn/Server-side/Django/Home_page
 - View 함수들: 요청된 데이터를 모델들에게서 가져오고, 데이터를 표시하는 HTML 페이지를 생성하고 그리고 브라우저 안의 view로 페이지들을 사용자에게 반환하기 위해.
 - 탬플릿들: 데이터를 뷰들 안에 렌더링할 때 사용하기 위해.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 우리가 표시해야 할 페이지는 총 다섯 페이지입니다. 하나의 글에 담기에는 너무 많은 정보죠. 따라서, 이 글의 대부분은 홈 페이지를 어떻게 구현하는 지에 대해 집중하고, 다음 글에서 다른 페이지들에 대해 다루겠습니다. 이렇게 하면 URL 매퍼들, view들, 그리고 모델이 실제로 작동하는 방식에 대해 완벽하고 철저하게 이해할 수 있을 것입니다.
 
@@ -55,7 +55,7 @@ translation_of: Learn/Server-side/Django/Home_page
 - `catalog/books/` — 모든 책들의 목록.
 - `catalog/authors/` — 모든 저자들의 목록.
 - `catalog/book/<id>` — `<id>` 라는 이름의(기본값) 프라이머리 키(primary key) 필드를 가지는 특정한 책을 위한 세부 사항 뷰(detail view). 예를 들어, 목록에 추가된 세 번째 책은 `/catalog/book/3`이 될 것입니다.
-- `catalog/author/<id>`\_ \_— `<id>` 라는 이름의 프라이머리 키(primary key) 필드를 가지는 특정한 저자를 위한 세부 사항 뷰(detail view). 예를 들어, 목록에 추가된 11번째 저자는 `/catalog/author/11`이 될 것입니다.
+- `catalog/author/<id>` — `<id>` 라는 이름의 프라이머리 키(primary key) 필드를 가지는 특정한 저자를 위한 세부 사항 뷰(detail view). 예를 들어, 목록에 추가된 11번째 저자는 `/catalog/author/11`이 될 것입니다.
 
 처음 세 개의 URL들은 인덱스 페이지, 책 목록, 그리고 저자 목록을 반환합니다. 이것들은 아무런 추가적인 정보도 인코드하지 않고, 데이터베이스에서 데이터를 가져오는 쿼리들도 항상 똑같습니다. 그러나, 쿼리들이 반환할 결과들은 데이터베이스의 내용물에 따라 다를 것입니다.
 
@@ -74,7 +74,7 @@ translation_of: Learn/Server-side/Django/Home_page
 
 ### URL 매핑
 
-[skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)를 만들었을 때, 우리는 **locallibrary/urls.py** 파일을 업데이트했습니다. `catalog/`로 시작하는 URL을 받았을 때, URLConf 모듈인\_ \_`catalog.urls` 가 나머지 문자열을 처리하도록 하기 위해서죠.
+[skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)를 만들었을 때, 우리는 **locallibrary/urls.py** 파일을 업데이트했습니다. `catalog/`로 시작하는 URL을 받았을 때, URLConf 모듈인 `catalog.urls` 가 나머지 문자열을 처리하도록 하기 위해서죠.
 
 **locallibrary/urls.py** 의 아래 코드 조각은 `catalog.urls` 모듈을 포함합니다:
 
@@ -174,7 +174,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 > **참고:** **주의:** 탬플릿 태그들은 목록을 반복하거나, 변수 값을 기반으로 조건부 연산을 수행하거나, 여타 다른 일들을 할 수 있는 함수입니다. 탬플릿 태그 외에도 탬플릿 구문(syntax)을 사용하면 view에서 탬플릿으로 전달된 변수들을 참조할 수 있고, 탬플릿 필터(filters)를 사용해서 변수의 형식을 지정할 수 있습니다(예를 들어, 문자열을 소문자로 변환).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,7 +191,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 예를 들어, 아래 코드 조각은 extends 탬플릿 태그의 사용 및 content 블럭(block)을 재정의하는 방법을 보여줍니다. 생성된 HTML은 기본 탬플릿에서 정의된 코드와 구조를 포함할 것입니다(`title` 블럭에서 정의한 기본 내용은 포함하지만, 기본 `contents` 블럭 대신 새로운 `contents` 블럭 포함).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -208,8 +208,8 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 새로운 파일 **base_generic.html** 을 **/locallibrary/catalog/templates/_base_generic.html_** 경로 안에 생성해서 아래 코드를 파일에 복사 붙여넣기 하세요:
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
 <head>
   {% block title %}<title>Local Library</title>{% endblock %}
@@ -245,9 +245,9 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -255,7 +255,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 새로운 HTML 파일 **index.html** 을 **/locallibrary/catalog/templates/** 경로 안에 생성해서 아래 코드를 파일 안에 복사 붙여넣기 하세요. 보시는 바와 같이 첫째 행에서 우리의 기본 탬플릿을 확장하고, 탬플릿의 기본 `content` 블럭을 새로운 블럭으로 대체합니다.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -295,17 +295,20 @@ return render(request, 'index.html', context=context)
 
 아래 코드 샘플처럼, 탬플릿 안에서 당신은 먼저 탬플릿 라이브러리를 추가하기 위해 "static"을 지정하는 `load` 탬플릿 태그를 호출합니다. 그러고 나서 `static` 탬플릿 태그를 사용할 수 있고 관련 URL을 요구되는 파일에 지정할 수 있습니다.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 비슷한 방법으로 이미지를 페이지에 추가할 수 있습니다. 예를 들어:
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
 > **참고:** **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
@@ -350,7 +353,7 @@ TEMPLATES = [
 
 이 시점에서 우리는 색인(index) 페이지를 나타내기 위해 필요한 모든 요소들을 생성했습니다. 서버를 실행하고 (`python3 manage.py runserver`) 브라우저에서 <http://127.0.0.1:8000/>으로 이동하세요. 모든 것이 알맞게 설정되었다면, 당신의 사이트는 아래 스크린샷과 같이 보여야 합니다.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
 > **참고:** **주의:** All books와 All authors 링크들에 대한 경로, 뷰 그리고 탬플릿들이 정의되지 않았기 때문에 그 링크들은 작동하지 않을 것입니다. 우리는 단지 `base_generic.html` 탬플릿 안에 그 링크들을 위한 플레이스홀더(placeholder)들을 삽입했을 뿐입니다.
 
@@ -360,7 +363,7 @@ TEMPLATES = [
 
 1. LocalLibrary 기본 탬플릿([base template](#The_LocalLibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#The_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
 
-    > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
+   > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
 
 2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#The_index_template) 를 업데이트 하세요.
 
@@ -380,21 +383,3 @@ TEMPLATES = [
 - [Django shortcut functions](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.username
 slug: Web/API/HTMLAnchorElement/username
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.username`** 属性是一个 {{domxref("USVString")}}包含域名前面指定的用户名。
@@ -16,7 +17,7 @@ object.username = string;
 ## Examples
 
 ```js
-// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.username"> be in the document
+// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils.username"> be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.username; // Returns:'anonymous'
 ```
@@ -27,7 +28,7 @@ var result = anchor.username; // Returns:'anonymous'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.username")}}
+{{Compat}}
 
 ## See also
 

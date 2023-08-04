@@ -1,14 +1,8 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
+
 {{JSRef}}
 
 **`Math.sinh()`** 関数は、引数として与えた数の双曲線正弦 (ハイパーボリックサイン) を返します。これは{{jsxref("Math.E", "定数 e", "", 1)}} を使用して次のように表すことができます。
@@ -41,18 +35,22 @@ Math.sinh(x)
 これは {{jsxref("Math.exp()")}} 関数を使用して次のようにエミュレートできます。
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  return (Math.exp(x) - Math.exp(-x)) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  };
 ```
 
 または {{jsxref("Math.exp()")}} 関数を一度だけ呼び出すようにすると、次のようになります。
 
 ```js
-Math.sinh = Math.sinh || function(x) {
-  var y = Math.exp(x);
-  return (y - 1 / y) / 2;
-}
+Math.sinh =
+  Math.sinh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y - 1 / y) / 2;
+  };
 ```
 
 ## 例
@@ -66,9 +64,7 @@ Math.sinh(1); // 1.1752011936438014
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

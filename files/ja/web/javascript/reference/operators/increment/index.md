@@ -1,14 +1,8 @@
 ---
 title: インクリメント (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.increment
-translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
+
 {{jsSidebar("Operators")}}
 
 インクリメント演算子 (`++`) は、オペランドをインクリメント (1 を加算) して値を返します。
@@ -18,8 +12,8 @@ translation_of: Web/JavaScript/Reference/Operators/Increment
 ## 構文
 
 ```js
-x++
-++x
+x++;
+++x;
 ```
 
 ## 解説

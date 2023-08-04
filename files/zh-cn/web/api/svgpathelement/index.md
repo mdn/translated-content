@@ -2,6 +2,7 @@
 title: SVGPathElement
 slug: Web/API/SVGPathElement
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG path interface
@@ -190,8 +191,8 @@ slug: Web/API/SVGPathElement
 
 ## 属性
 
-| 名称         | 类型                                         | 描述                                                                                       |
-| ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 名称         | 类型                               | 描述                                                                      |
+| ------------ | ---------------------------------- | ------------------------------------------------------------------------- |
 | `pathLength` | {{ domxref("SVGAnimatedNumber") }} | 对应于给定{{ SVGElement("path") }}元素的{{ SVGAttr("pathLength") }}属性。 |
 
 ## 方法
@@ -834,7 +835,7 @@ slug: Web/API/SVGPathElement
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGPathElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,13 +2,14 @@
 title: columns
 slug: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`columns`** 用来设置元素的列宽和列数。
 
 {{EmbedInteractiveExample("pages/css/columns.html")}}
 
-它是一个[简写属性](/en-US/docs/Web/CSS/Shorthand_properties)，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其[初始值](/en-US/docs/Web/CSS/initial_value)。
+它是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其[初始值](/zh-CN/docs/Web/CSS/initial_value)。
 
 ## 语法
 
@@ -50,9 +51,8 @@ columns: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `columns` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `columns`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 
@@ -76,4 +76,4 @@ columns: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.columns")}}
+{{Compat}}

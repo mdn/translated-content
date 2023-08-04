@@ -1,21 +1,21 @@
 ---
-title: 'ARIA: switch ロール'
-slug: Web/Accessibility/ARIA/Roles/Switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/Roles/Switch_role
+title: "ARIA: switch ロール"
+slug: Web/Accessibility/ARIA/Roles/switch_role
 ---
+
 ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
 
 この例では、ウィジェットを作成し、それに ARIA のスイッチ (`switch`) ロールを割り当てています。
 
 ```html
-<button type="button" role="switch" aria-checked="true"
-    id="speakerPower" class="switch">
-    <span>オフ</span>
-    <span>オン</span>
+<button
+  type="button"
+  role="switch"
+  aria-checked="true"
+  id="speakerPower"
+  class="switch">
+  <span>オフ</span>
+  <span>オン</span>
 </button>
 <label for="speakerPower" class="switch">スピーカー出力</label>
 ```
@@ -54,7 +54,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 
 - スクリーンリーダーは、要素をスイッチとしてアナウンスし、任意でスイッチをアクティブ化する方法についての指示を提供するべきです。
 
-> **Note:** 支援技術がこのロールをどのように扱うべきかについては、さまざまな意見があります。 上記は推奨される実践方法の 1 つであり、他の情報源とは異なる場合があります。
+> **メモ:** 支援技術がこのロールをどのように扱うべきかについては、さまざまな意見があります。 上記は推奨される実践方法の 1 つであり、他の情報源とは異なる場合があります。
 
 ## 例
 
@@ -69,8 +69,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 ここでの HTML はかなり単純です。 スイッチは {{HTMLElement("button")}} 要素として実装され、`aria-checked` 属性が `"true"` に設定されているため、最初はチェックされています。 スイッチには、「off」と「on」のラベルを含む 2 つの子要素があり、その後にスイッチを識別する {{HTMLElement("label")}} が続きます。
 
 ```html
-<button role="switch" aria-checked="true"
-      id="speakerPower" class="switch">
+<button role="switch" aria-checked="true" id="speakerPower" class="switch">
   <span>off</span>
   <span>on</span>
 </button>
@@ -82,7 +81,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 この JavaScript コードは、スイッチウィジェットの `click` イベントを処理する関数を定義して適用します。 この関数は、`aria-checked` 属性を `true` から `false` やその逆に変更します。
 
 ```js
-document.querySelectorAll(".switch").forEach(function(theSwitch) {
+document.querySelectorAll(".switch").forEach(function (theSwitch) {
   theSwitch.addEventListener("click", handleClickEvent, false);
 });
 
@@ -90,9 +89,9 @@ function handleClickEvent(evt) {
   let el = evt.target;
 
   if (el.getAttribute("aria-checked") == "true") {
-      el.setAttribute("aria-checked", "false");
+    el.setAttribute("aria-checked", "false");
   } else {
-      el.setAttribute("aria-checked", "true");
+    el.setAttribute("aria-checked", "true");
   }
 }
 ```
@@ -113,7 +112,10 @@ button.switch {
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  font: 12px "Open Sans", "Arial", serif;
+  font:
+    12px "Open Sans",
+    "Arial",
+    serif;
 }
 
 button.switch span {
@@ -133,7 +135,10 @@ button.switch span {
 }
 
 label.switch {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
   line-height: 20px;
   user-select: none;
   vertical-align: middle;
@@ -154,14 +159,11 @@ label.switch {
 
 ## 仕様
 
-| 仕様                                                                 | 状態                             | コメント                                                      |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- |
-| {{SpecName('ARIA', '#switch')}}                             | {{Spec2('ARIA')}}         | ARIA 全般を全てのロール、プロパティなどとともに定義します。   |
-| {{SpecName('ARIA in HTML', '#index-aria-switch')}} | {{Spec2('ARIA in HTML')}} | ARIA の機能がどのように HTML に統合されているかを説明します。 |
+{{Specifications}}
 
 ## 関連情報
 
 - [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
 
-1.  [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

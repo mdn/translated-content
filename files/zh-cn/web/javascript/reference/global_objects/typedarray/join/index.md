@@ -2,14 +2,16 @@
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 ---
+
 {{JSRef}}
 
-**`join()`**方法将数组中所有元素连接为一个字符串。这个方法的算法和{{jsxref("Array.prototype.join()")}}_相同。_ _TypedArray_ 是这里的 [类型化数组](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`join()`** 方法将数组中所有元素连接为一个字符串。这个方法的算法和 {{jsxref("Array.prototype.join()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法
 
-```plain
-typedarray.join([separator = ',']);
+```js-nolint
+join()
+join(separator)
 ```
 
 ### 参数
@@ -24,10 +26,10 @@ typedarray.join([separator = ',']);
 ## 示例
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.join();      // '1,2,3'
-uint8.join(' / '); // '1 / 2 / 3'
-uint8.join('');    // '123'
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.join(); // '1,2,3'
+uint8.join(" / "); // '1 / 2 / 3'
+uint8.join(""); // '123'
 ```
 
 ## Polyfill
@@ -37,13 +39,13 @@ uint8.join('');    // '123'
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
-  Object.defineProperty(Uint8Array.prototype, 'join', {
-    value: Array.prototype.join
+  Object.defineProperty(Uint8Array.prototype, "join", {
+    value: Array.prototype.join,
   });
 }
 ```
 
-如果你需要支持过时的 JavaScript 引擎，它们不支持[`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
+如果你需要支持过时的 JavaScript 引擎，它们不支持[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)，最好不要 polyfill `Array.prototype` 方法，因为你不能使它们不可枚举。
 
 ## 规范
 
