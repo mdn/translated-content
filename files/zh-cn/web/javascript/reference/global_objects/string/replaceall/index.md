@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 {{JSRef}}
 
-**`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement`可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
+**`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
 {{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
 
@@ -19,7 +19,7 @@ replaceAll(pattern, replacement)
 
 - `pattern`
 
-  - : 可以是一个字符串或一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。任何没有 `Symbol.replace` 方法的值都将被强制转换为字符串。
+  - : 可以是一个字符串或一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。任何没有 `Symbol.replace` 方法的值都将被强制转换为字符串。
 
     如果 `pattern` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)，则必须设置全局（`g`）标志，否则会抛出 {{jsxref("TypeError")}}。
 
@@ -33,7 +33,7 @@ replaceAll(pattern, replacement)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `pattern` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，并且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该错误。
+  - : 如果 `pattern` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，并且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
 
 ## 描述
 
@@ -58,7 +58,7 @@ console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] us
 
 如果 `pattern` 是一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，并以目标字符串和 `replacement` 作为参数。它的返回值成为 `replaceAll()` 的返回值。在这种情况下，`replaceAll()` 的行为完全取决于 `@@replace` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `replace()` 相同的结果。
 
-如果 `pattern` 是一个空字符串，则替换将插入到每个 UTF-16 码元之间，类似于 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的行为。
+如果 `pattern` 是一个空字符串，则替换内容将插入到每个 UTF-16 码元之间，类似于 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的行为。
 
 ```js
 "xxx".replaceAll("", "_"); // "_x_x_x_"
