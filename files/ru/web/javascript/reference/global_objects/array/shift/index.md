@@ -2,6 +2,7 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -27,17 +28,17 @@ arr.shift()
 Следующий код показывает массив `myFish` до и после удаления его первого элемента. Также он показывает удалённый элемент:
 
 ```js
-var myFish = ['ангел', 'клоун', 'мандарин', 'хирург'];
+var myFish = ["ангел", "клоун", "мандарин", "хирург"];
 
-console.log('myFish до: ' + myFish);
+console.log("myFish до: " + myFish);
 //myFish до: ангел,клоун,мандарин,хирург
 
 var shifted = myFish.shift();
 
-console.log('myFish после: ' + myFish);
+console.log("myFish после: " + myFish);
 //myFish после: клоун,мандарин,хирург
 
-console.log('Удалён этот элемент: ' + shifted);
+console.log("Удалён этот элемент: " + shifted);
 //Удалён этот элемент: ангел
 ```
 

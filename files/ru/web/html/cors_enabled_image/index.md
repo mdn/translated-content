@@ -2,6 +2,7 @@
 title: Разрешение использования изображений из разных источников и canvas
 slug: Web/HTML/CORS_enabled_image
 ---
+
 HTML предоставляет атрибут [`crossorigin`](/ru/docs/Web/HTML/Element/img#crossorigin) для изображений, которые в сочетании с соответствующим заголовком {{Glossary("CORS")}} позволяют использовать изображения, определённые элементом {{ HTMLElement("img") }}, загруженные из внешних источников, в {{HTMLElement("canvas")}} , как если бы они были загружены из текущего источника.
 
 Дополнительные сведения об использовании атрибута `crossorigin` смотрите в разделе [атрибуты параметров CORS](/ru/docs/Web/HTML/CORS_settings_attributes).
@@ -59,9 +60,10 @@ HTML предоставляет атрибут [`crossorigin`](/ru/docs/Web/HTML
 
 ```js
 function startDownload() {
-  let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageURL =
+    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
@@ -89,8 +91,7 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
+  } catch (err) {
     console.log("Error: " + err);
   }
 }
