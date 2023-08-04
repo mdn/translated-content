@@ -1,14 +1,13 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
-original_slug: Web/API/Window/DOMContentLoaded_event
 ---
 
 {{APIRef}}
 
-`DOMContentLoaded事件是當document被完整的讀取跟解析後就會被觸發`,不會等待 stylesheets, 圖片和 subframes 完成讀取 (`load事件可以用來作為判斷頁面已經完整讀取的方法`).
+**`DOMContentLoaded`** 事件是當 document 被完整的讀取跟解析後就會被觸發，不會等待 stylesheet、圖片和 subframe 完成讀取（`load` 事件可以用來作為判斷頁面已經完整讀取的方法）。
 
-> **備註：** [Stylesheet loads block script execution](http://molily.de/weblog/domcontentloaded), 如果 `<script>` 被放在 `<link rel="stylesheet" ...>後面的話`, 須等到前面的 stylesheet 載入並完成解析，此時 `DOMContentLoaded才會被觸發。`
+> **備註：** [Stylesheet loads block script execution](http://molily.de/weblog/domcontentloaded), 如果 `<script>` 被放在 `<link rel="stylesheet" ...>` 後面的話, 須等到前面的 stylesheet 載入並完成解析，此時 `DOMContentLoaded` 才會被觸發。
 
 ## Speeding up
 
@@ -46,10 +45,6 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 {{Compat}}
 
-## Related Events
+## 參見
 
-- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
-- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
-- [`load`](/zh-TW/docs/Web/API/Window/load_event)
-- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)
+- 相關事件：{{domxref("Window/load_event", "load")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/beforeunload_event", "beforeunload")}}、{{domxref("Window/unload_event", "unload")}}
