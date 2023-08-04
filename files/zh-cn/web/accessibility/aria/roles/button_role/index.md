@@ -33,7 +33,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 有些类型的用户界面元件，当呈现为平台无障碍 API 时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
 
-例如，请看这个 `button` 按钮，有如下内容：
+例如，考虑以下包含标题的 `button` 元素。
 
 ```html
 <div role="button"><h3>按钮的标题</h3></div>
