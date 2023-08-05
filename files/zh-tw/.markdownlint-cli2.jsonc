@@ -36,7 +36,7 @@
         // {
         //   "name": "relative-link",
         //   "message": "Internal links should start with '/'",
-        //   "searchPattern": "/([\\(\"])(en-US|zh-tw)\\/docs/gi",
+        //   "searchPattern": "/([\\(\"])(en-US|zh-TW)\\/docs/gi",
         //   "replace": "$1/$2/docs",
         //   "searchScope": "text"
         //},
