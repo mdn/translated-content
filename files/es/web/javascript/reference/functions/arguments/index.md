@@ -1,7 +1,6 @@
 ---
 title: El objeto arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-original_slug: Web/JavaScript/Referencia/Funciones/arguments
 ---
 
 {{jsSidebar("Functions", "Funciones")}}

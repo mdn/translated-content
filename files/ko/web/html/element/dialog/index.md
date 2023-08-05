@@ -69,7 +69,7 @@ slug: Web/HTML/Element/dialog
 
 ## 사용 일람
 
-- `method="dialog"` 특성을 사용한 {{htmlelement("form")}} 요소는 제출 시 대화 상자를 닫습니다. 이 때, 대화 상자의 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 속성은 양식을 제출할 때 사용한 버튼의 {{htmlattrxref("value", "button")}}으로 설정됩니다.
+- `method="dialog"` 특성을 사용한 {{htmlelement("form")}} 요소는 제출 시 대화 상자를 닫습니다. 이 때, 대화 상자의 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} 속성은 양식을 제출할 때 사용한 버튼의 [`value`](/ko/docs/Web/HTML/Element/button#value)으로 설정됩니다.
 - CSS {{cssxref('::backdrop')}} [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 사용하면, {{domxref("HTMLDialogElement.showModal()")}} 메서드를 사용해 활성화한 `<dialog>` 요소의 뒤에 스타일을 적용할 수 있습니다. 예를 들면, 모달 대화 상자가 활성화되어 있는 동안 접근할 수 없는 뒤쪽 요소를 어둡게 만들 때 사용합니다.
 
 ## 예제

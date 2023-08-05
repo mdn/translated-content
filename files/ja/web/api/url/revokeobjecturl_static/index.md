@@ -1,8 +1,7 @@
 ---
 title: "URL: revokeObjectURL() 静的メソッド"
-slug: Web/API/URL/revokeObjectURL_static
-original_slug: Web/API/URL/revokeObjectURL
 short-title: revokeObjectURL()
+slug: Web/API/URL/revokeObjectURL_static
 l10n:
   sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---

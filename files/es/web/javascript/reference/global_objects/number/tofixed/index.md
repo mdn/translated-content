@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toFixed
 ---
 
 {{JSRef}}

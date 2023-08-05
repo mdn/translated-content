@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.onerror
 slug: Web/API/IDBRequest/error_event
-translation_of: Web/API/IDBRequest/onerror
 ---
 
 {{ APIRef("IndexedDB") }}

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
-original_slug: Web/API/AudioContext/createGain
 ---
 
 {{ APIRef("Web Audio API") }}

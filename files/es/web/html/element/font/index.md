@@ -1,7 +1,6 @@
 ---
 title: font
 slug: Web/HTML/Element/font
-original_slug: Web/HTML/Elemento/font
 ---
 
 ### Definición

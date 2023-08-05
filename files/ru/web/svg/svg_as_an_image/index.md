@@ -1,7 +1,6 @@
 ---
 title: SVG как изображение
 slug: Web/SVG/SVG_as_an_Image
-translation_of: Web/SVG/SVG_as_an_Image
 ---
 
 Изображения SVG могут использоваться как формат изображения в ряде контекстов. Многие браузеры поддерживают изображения SVG:

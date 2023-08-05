@@ -39,7 +39,8 @@ _{{domxref('CSSStyleValue')}} からメソッドを継承しています。_
 
 ```html hidden
 <div id="myElement">
-  開発者ツールでコンソールのログを確認し、この div の style 属性を調べてみてください。
+  開発者ツールでコンソールのログを確認し、この div の style
+  属性を調べてみてください。
 </div>
 ```
 

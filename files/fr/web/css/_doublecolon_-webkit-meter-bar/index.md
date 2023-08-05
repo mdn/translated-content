@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
-translation_of: Web/CSS/::-webkit-meter-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}

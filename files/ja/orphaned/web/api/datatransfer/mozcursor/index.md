@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.mozCursor
 slug: orphaned/Web/API/DataTransfer/mozCursor
-original_slug: Web/API/DataTransfer/mozCursor
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

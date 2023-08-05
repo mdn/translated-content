@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/Element/dblclick_event
-original_slug: Web/API/GlobalEventHandlers/ondblclick
 ---
 
 {{ApiRef("HTML DOM")}}

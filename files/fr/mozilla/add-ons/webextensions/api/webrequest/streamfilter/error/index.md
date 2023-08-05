@@ -1,7 +1,6 @@
 ---
 title: webRequest.Streamfilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 ---
 
 {{AddonSidebar()}}

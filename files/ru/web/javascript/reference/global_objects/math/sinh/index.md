@@ -1,16 +1,6 @@
 ---
 title: Math.sinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sinh
 ---
 
 {{JSRef("Global_Objects", "Math")}}

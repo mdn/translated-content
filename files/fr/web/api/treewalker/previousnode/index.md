@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
-translation_of: Web/API/TreeWalker/previousNode
 ---
 
 {{ APIRef("DOM") }}

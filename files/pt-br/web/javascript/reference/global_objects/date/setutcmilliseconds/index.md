@@ -39,8 +39,8 @@ theBigDay.setUTCMilliseconds(500);
 
 ## Especificações
 
-| Especificação                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                                          |
+| ------------------------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} |
 
 ## Compatibilidade com navegadores

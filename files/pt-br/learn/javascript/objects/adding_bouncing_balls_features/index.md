@@ -1,7 +1,6 @@
 ---
 title: Adicionando recursos à nossa demonstração de bolas pulantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: Aprender/JavaScript/Objetos/Adding_bouncing_balls_features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

@@ -1,7 +1,6 @@
 ---
 title: Utiliser les attributs de données
 slug: Learn/HTML/Howto/Use_data_attributes
-translation_of: Learn/HTML/Howto/Use_data_attributes
 ---
 
 {{LearnSidebar}}

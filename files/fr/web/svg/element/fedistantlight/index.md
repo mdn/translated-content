@@ -1,7 +1,6 @@
 ---
 title: <feDistantLight>
 slug: Web/SVG/Element/feDistantLight
-translation_of: Web/SVG/Element/feDistantLight
 ---
 
 {{SVGRef}}

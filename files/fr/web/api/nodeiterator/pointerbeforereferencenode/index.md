@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
-translation_of: Web/API/NodeIterator/pointerBeforeReferenceNode
 ---
 
 {{APIRef("DOM")}} {{SeeCompatTable}}

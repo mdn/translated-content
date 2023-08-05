@@ -1,7 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-translation_of: Web/CSS/break-after
 ---
 
 {{CSSRef}}

@@ -39,7 +39,7 @@ _継承している静的メソッドはありません。_
   - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) を返すために使用できます。
 
     ```js
-    CSS.em(3) // CSSUnitValue {value: 3, unit: "em"}
+    CSS.em(3); // CSSUnitValue {value: 3, unit: "em"}
     ```
 
 ## 仕様書

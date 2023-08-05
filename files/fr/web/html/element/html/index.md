@@ -1,7 +1,6 @@
 ---
 title: "<html> : l'élément de racine du document HTML"
 slug: Web/HTML/Element/html
-translation_of: Web/HTML/Element/html
 ---
 
 {{HTMLSidebar}}

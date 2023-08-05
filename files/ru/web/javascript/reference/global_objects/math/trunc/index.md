@@ -1,16 +1,6 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Функция
-  - целая часть
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Strict Mode
-  - Строгий режим
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 
 {{JsSidebar("More")}}

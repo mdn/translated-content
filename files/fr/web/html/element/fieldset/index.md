@@ -1,7 +1,6 @@
 ---
 title: "<fieldset> : l'élément pour les ensembles de champs"
 slug: Web/HTML/Element/fieldset
-translation_of: Web/HTML/Element/fieldset
 ---
 
 {{HTMLSidebar}}

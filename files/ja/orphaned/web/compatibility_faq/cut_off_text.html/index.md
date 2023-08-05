@@ -1,7 +1,6 @@
 ---
 title: 文字列の一部が表示されずに見切れる
 slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
-original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 ---
 
 ## 概要

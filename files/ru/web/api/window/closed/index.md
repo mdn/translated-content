@@ -1,8 +1,8 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-translation_of: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 ## Общая информация
@@ -50,7 +50,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // открывает новое всплывающее окно
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```

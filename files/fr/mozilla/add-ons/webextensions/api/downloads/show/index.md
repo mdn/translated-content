@@ -1,7 +1,6 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 
 {{AddonSidebar()}}

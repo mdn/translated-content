@@ -1,7 +1,6 @@
 ---
 title: math:highest()
 slug: Web/EXSLT/math/highest
-translation_of: Web/EXSLT/math/highest
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}

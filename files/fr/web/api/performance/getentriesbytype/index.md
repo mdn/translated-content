@@ -1,7 +1,6 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
-translation_of: Web/API/Performance/getEntriesByType
 ---
 
 {{APIRef("Performance Timeline API")}}

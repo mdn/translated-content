@@ -1,7 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 ---
 {{JSRef}}
 

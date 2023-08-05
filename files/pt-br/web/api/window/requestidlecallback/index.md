@@ -35,15 +35,13 @@ An ID which can be used to cancel the callback by passing it into the {{domxref(
 
 See our [complete example](/pt-BR/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/pt-BR/docs/Web/API/Background_Tasks_API).
 
-## Specifications
+## Especificações
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## See also
 

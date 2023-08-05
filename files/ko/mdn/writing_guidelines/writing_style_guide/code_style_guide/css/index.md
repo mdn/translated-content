@@ -1,7 +1,6 @@
 ---
 title: CSS 가이드라인
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
 
 {{MDNSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-original_slug: Web/JavaScript/Referencia/Operadores/Division
 ---
 
 {{jsSidebar("Operators")}}

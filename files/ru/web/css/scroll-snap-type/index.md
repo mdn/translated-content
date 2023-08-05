@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-translation_of: Web/CSS/scroll-snap-type
 ---
 {{CSSRef}}
 

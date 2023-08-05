@@ -1,7 +1,6 @@
 ---
 title: Descripción de las tecnologías JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
-original_slug: Web/JavaScript/Descripción_de_las_tecnologías_JavaScript
 ---
 
 {{JsSidebar("Introductory")}}

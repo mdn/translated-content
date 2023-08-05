@@ -1,7 +1,6 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 
 {{JSRef}}

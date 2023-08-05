@@ -1,7 +1,6 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
 
 {{JSRef}}

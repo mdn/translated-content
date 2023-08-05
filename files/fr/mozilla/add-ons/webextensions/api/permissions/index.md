@@ -1,7 +1,6 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
 
 {{AddonSidebar}}Permet aux extensions de demander des permissions supplémentaires lors de l'exécution, après leur installation.

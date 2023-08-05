@@ -1,7 +1,6 @@
 ---
 title: Gradients SVG
 slug: Web/SVG/Tutorial/Gradients
-translation_of: Web/SVG/Tutorial/Gradients
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}

@@ -1,11 +1,6 @@
 ---
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
-tags:
-  - Web-расширение
-  - Безопасность
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
-original_slug: Web/API/Node/innerText
 ---
 
 {{APIRef("HTML DOM")}}

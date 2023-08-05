@@ -1,7 +1,6 @@
 ---
 title: Элементы изображений, медиа и форм
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}

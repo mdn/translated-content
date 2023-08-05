@@ -1,7 +1,6 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-original_slug: Web_Audio_API
 ---
 
 {{apiref("Web Audio API")}}

@@ -1,7 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-translation_of: Web/CSS/align-content
 ---
 
 {{CSSRef}}

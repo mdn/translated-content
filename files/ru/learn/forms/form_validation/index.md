@@ -1,16 +1,6 @@
 ---
 title: Валидация форм на стороне клиента
 slug: Learn/Forms/Form_validation
-tags:
-  - Новичку
-  - Пример
-  - Формы
-  - Гайд
-  - HTML
-  - JavaScript
-  - Изучение
-  - Web
-  - regex
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

@@ -1,7 +1,6 @@
 ---
-title: 'Escrevendo um servidor WebSocket em C #'
+title: "Escrevendo um servidor WebSocket em C #"
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-original_slug: WebSockets/Writing_WebSocket_server
 ---
 
 ## Introdução

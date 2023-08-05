@@ -2,7 +2,6 @@
 title: "Element: transitionstart イベント"
 short-title: transitionstart
 slug: Web/API/Element/transitionstart_event
-original_slug: Web/API/Document/transitionstart_event
 l10n:
   sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---

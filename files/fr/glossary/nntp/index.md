@@ -1,7 +1,6 @@
 ---
 title: NNTP
 slug: Glossary/NNTP
-translation_of: Glossary/NNTP
 ---
 
 **NNTP** (Network News Transfer Protocol) est un {{Glossary("Protocol","protocole")}} utilisé pour transférer des messages {{Glossary("Usenet")}} d'un client vers un serveur ou entre serveurs.

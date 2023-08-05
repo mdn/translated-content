@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
 
 {{JSRef}}

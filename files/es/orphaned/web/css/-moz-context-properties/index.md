@@ -1,7 +1,6 @@
 ---
-title: '-moz-context-properties'
+title: "-moz-context-properties"
 slug: orphaned/Web/CSS/-moz-context-properties
-original_slug: Web/CSS/-moz-context-properties
 ---
 
 {{CSSRef}}{{Non-standard_header}}

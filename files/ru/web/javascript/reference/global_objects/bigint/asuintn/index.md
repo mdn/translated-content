@@ -1,7 +1,6 @@
 ---
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
 
 {{JSRef}}
@@ -46,8 +45,8 @@ BigInt.asUintN(64, max + 1n);
 
 ## Specifications
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
+| Specification                                                      |
+| ------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}} |
 
 ## Browser compatibility

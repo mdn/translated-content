@@ -1,7 +1,6 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ---
 
 {{JSRef}}

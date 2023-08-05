@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
-original_slug: Web/API/VRDevice/isPresenting
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

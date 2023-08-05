@@ -1,7 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-translation_of: Web/CSS/column-count
 ---
 
 {{CSSRef}}

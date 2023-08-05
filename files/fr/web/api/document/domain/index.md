@@ -1,7 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}

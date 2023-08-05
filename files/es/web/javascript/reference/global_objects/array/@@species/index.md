@@ -1,7 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@species
 ---
 
 {{JSRef}}

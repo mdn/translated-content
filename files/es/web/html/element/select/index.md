@@ -1,7 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-original_slug: Web/HTML/Elemento/select
 ---
 
 ## Resumen

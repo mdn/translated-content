@@ -1,7 +1,6 @@
 ---
 title: XSLT
 slug: Glossary/XSLT
-translation_of: Glossary/XSLT
 ---
 
 _eXtensible Stylesheet Language Transformations_ (**XSLT**) est un langage déclaratif utilisé pour convertir des documents {{Glossary("XML")}} en d'autres documents XML, {{Glossary("HTML")}}, {{Glossary("PDF")}}, text brut etc.

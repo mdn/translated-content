@@ -1,13 +1,6 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-tags:
-  - Functions
-  - JavaScript
-  - Method
-  - NeedsUpdate
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
 {{jsSidebar("Objects")}}
 

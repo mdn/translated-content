@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-file-upload-button"
 slug: Web/CSS/::file-selector-button
-translation_of: Web/CSS/::file-selector-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}

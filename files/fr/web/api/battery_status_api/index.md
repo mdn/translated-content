@@ -1,7 +1,6 @@
 ---
 title: API Battery Status
 slug: Web/API/Battery_Status_API
-translation_of: Web/API/Battery_Status_API
 ---
 
 {{DefaultAPISidebar("Battery API")}}
