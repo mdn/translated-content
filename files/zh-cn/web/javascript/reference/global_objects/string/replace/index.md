@@ -18,7 +18,7 @@ replace(pattern, replacement)
 ### 参数
 
 - `pattern`
-  - : 可以是字符串或者一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子就是[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。任何没有 `Symbol.replace` 方法的值都会被强制转换为字符串。
+  - : 可以是字符串或者一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子就是[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。任何没有 `Symbol.replace` 方法的值都会被强制转换为字符串。
 - `replacement`
   - : 可以是字符串或函数。
     - 如果是字符串，它将替换由 `pattern` 匹配的子字符串。支持一些特殊的替换模式，请参阅下面的[指定字符串作为替换项](#指定字符串作为替换项)部分。
@@ -126,7 +126,7 @@ console.log(newstr); // Twas the night before Christmas...
 
 这将打印 `'Twas the night before Christmas...'`。
 
-> **备注：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+> **备注：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ### 在 replace() 中使用 global 和 ignoreCase 标志
 
