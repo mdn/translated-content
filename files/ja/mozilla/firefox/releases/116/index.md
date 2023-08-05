@@ -29,7 +29,7 @@ l10n:
 
 - [`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) で新しい [コンストラクターのオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) をサポートしました。数値の丸め方を制御するオプション (`roundingIncrement`、`roundingMode`、`roundingPriority`)、整数で末尾のゼロを表示する方法を制御するオプション (`trailingZeroDisplay`)、千や百万などを示す区切り文字を使用するかを制御するオプション (`useGrouping`) を使用できます。
   また、数値の範囲を整形する [`formatRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange) および [`formatRangeToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts) メソッドも新たにサポートしました ([Firefox bug 1795756](https://bugzil.la/1795756))。
-- [`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) で、(`Intl.NumberFormat` の一連の変更の一部として) `roundingIncrement`、`roundingMode`、`roundingPriority`、`trailingZeroDisplay` の [コンストラクターオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) および [`selectRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) メソッドをサポートしました ([Firefox bug 1795756](https://bugzil.la/1795756))。
+- [`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) で、(`Intl.NumberFormat` の一連の変更の一部として) `roundingIncrement`、`roundingMode`、`roundingPriority`、`trailingZeroDisplay` の [コンストラクターのオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) および [`selectRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) メソッドをサポートしました ([Firefox bug 1795756](https://bugzil.la/1795756))。
 
 ### SVG
 
@@ -70,7 +70,7 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("runtime.setUninstallURL")}} で提供される、拡張機能がアンインストールされたときに訪れていたページのURL の最大文字数が 255 から 1023 に増加しました ([Firefox bug 1835723](https://bugzil.la/1835723))。
+- {{WebExtAPIRef("runtime.setUninstallURL")}} で提供される、拡張機能がアンインストールされたときに訪れていたページの URL の最大文字数が 255 から 1023 に増加しました ([Firefox bug 1835723](https://bugzil.la/1835723))。
 - 拡張機能のブラウザーアクションのユーザー指定設定を提供する、{{WebExtAPIRef("action.getUserSettings")}} を追加しました ([Firefox bug 1814905](https://bugzil.la/1814905))。
 - {{WebExtAPIRef("tabs.Tab")}}、{{WebExtAPIRef("tabs.onUpdated")}}、{{WebExtAPIRef("tabs.update")}}、{{WebExtAPIRef("tabs.query")}} で `autoDiscardable` をサポートしました ([Firefox bug 1809094](https://bugzil.la/1809094))。
 
