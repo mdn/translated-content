@@ -1,5 +1,5 @@
 ---
-title: '<strong>: 높은 중요도 요소'
+title: "<strong>: 높은 중요도 요소"
 slug: Web/HTML/Element/strong
 ---
 
@@ -92,7 +92,9 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 ### 기본 예제
 
 ```html
-<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>
+<p>
+  Before proceeding, <strong>make sure you put on your safety goggles</strong>.
+</p>
 ```
 
 {{EmbedLiveSample("기본_예제", 650, 80)}}
@@ -100,7 +102,10 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 ### 경고 표시
 
 ```html
-<p><strong>Important:</strong> Before proceeding, make sure you add plenty of butter.</p>
+<p>
+  <strong>Important:</strong> Before proceeding, make sure you add plenty of
+  butter.
+</p>
 ```
 
 {{EmbedLiveSample("경고_표시", 650, 80)}}

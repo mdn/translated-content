@@ -7,12 +7,12 @@ slug: Glossary/HTTPS
 
 1. 一般知識
 
-    1. Wikipedia 上の [HTTPS](https://ja.wikipedia.org/wiki/HTTPS)
-    2. [Moving to HTTPS community guide](https://movingtohttps.com/)
-    3. [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+   1. Wikipedia 上の [HTTPS](https://ja.wikipedia.org/wiki/HTTPS)
+   2. [Moving to HTTPS community guide](https://movingtohttps.com/)
+   3. [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{glossary("HTTP")}}
-    2. {{glossary("SSL")}}
-    3. {{glossary("TLS")}}
+   1. {{glossary("HTTP")}}
+   2. {{glossary("SSL")}}
+   3. {{glossary("TLS")}}

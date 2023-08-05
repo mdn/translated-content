@@ -1,7 +1,6 @@
 ---
 title: Endianness
 slug: Glossary/Endianness
-translation_of: Glossary/Endianness
 ---
 
 "Endian" et "endianness" (ou "ordre des octets") désigne la manière dont les ordinateurs organisent les octets pour constituer des nombres.
@@ -12,9 +11,9 @@ Naturellement, **big-endian** est l'ordre opposé, similaire à une date au form
 
 Exemples avec le nombre `0x12345678` (i.e. 305 419 896 en décimal) :
 
-- *little-endian :* `0x78 0x56 0x34 0x12`
+- _little-endian :_ `0x78 0x56 0x34 0x12`
 - _big-endian :_ 0x12 0x34 0x56 0x78
-- *mixed-endian* (dans le passé et très rare) : 0x34 0x12 0x78 0x56
+- _mixed-endian_ (dans le passé et très rare) : 0x34 0x12 0x78 0x56
 
 ## Voir aussi
 

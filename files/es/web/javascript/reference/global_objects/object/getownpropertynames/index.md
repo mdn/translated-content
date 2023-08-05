@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyNames
 ---
 
 {{JSRef("Global_Objects", "Object")}}

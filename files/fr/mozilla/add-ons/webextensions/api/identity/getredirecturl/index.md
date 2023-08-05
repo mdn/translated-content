@@ -1,7 +1,6 @@
 ---
 title: identity.getRedirectURL()
 slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
 ---
 
 {{AddonSidebar()}}
@@ -15,7 +14,7 @@ Voir [Obtenir une URL de redirection](/fr/Add-ons/WebExtensions/API/identity#Get
 ## Syntaxe
 
 ```js
-var redirectURL = browser.identity.getRedirectURL()
+var redirectURL = browser.identity.getRedirectURL();
 ```
 
 ### Paramètres

@@ -59,8 +59,8 @@ Esta propriedade é útil em páginas que contêm um monte de widgets que são t
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
+| Especificação                   | Status                       | Comentário         |
+| ------------------------------- | ---------------------------- | ------------------ |
 | {{SpecName('CSS Containment')}} | {{Spec2('CSS Containment')}} | Initial definition |
 
 ## Compatibilidade com navegadores

@@ -9,9 +9,9 @@ La cabezera de la respuesta HTTP **`WWW-Authenticate`** define el método de aut
 
 La cabezera `WWW-Authenticate` es enviada junto al estado {{HTTPStatus("401")}} `Unauthorized` en la respuesta.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Syntax
 

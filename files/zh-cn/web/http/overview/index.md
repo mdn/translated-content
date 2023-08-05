@@ -83,7 +83,7 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 
 - _[缓存](/zh-CN/docs/Web/HTTP/Caching)_：文档如何被缓存可以通过 HTTP 来控制。服务端能指示代理和客户端缓存哪些内容以及缓存多长时间，客户端能够指示中间的缓存代理来忽略已存储的文档。
 - _开放同源限制_：为了阻止网络窥听和其它侵犯隐私的问题，浏览器强制在不同网站之间做了严格分割。只有来自于**相同来源**（same origin）的网页才能够获取一个网页的全部信息。这种限制有时对服务器是一种负担，服务器的 HTTP 标头可以减弱此类严格分离，使得一个网页可以是由源自不同地址的信息拼接而成。某些情况下，放开这些限制还有安全相关的考虑。
-- _认证_：一些页面可能会被保护起来，仅让特定的用户进行访问。基本的认证功能可以直接由 HTTP 提供，既可以使用 {{HTTPHeader("WWW-Authenticate")}} 或其他类似的标头，也可以用 [HTTP cookie](/en-US/docs/Web/HTTP/Cookies) 来设置一个特定的会话。
+- _认证_：一些页面可能会被保护起来，仅让特定的用户进行访问。基本的认证功能可以直接由 HTTP 提供，既可以使用 {{HTTPHeader("WWW-Authenticate")}} 或其他类似的标头，也可以用 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 来设置一个特定的会话。
 - _[代理服务器和隧道](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling)_：
   服务器或客户端常常是处于内网的，对其他计算机隐藏真实 IP 地址。因此 HTTP 请求就要通过代理服务器越过这个网络屏障。并非所有的代理都是 HTTP 代理，例如，SOCKS 协议就运作在更底层。其他的协议，比如 ftp，也能够被这些代理处理。
 - _会话_：使用 HTTP Cookie 可以利用服务端的状态将不同请求联系在一起。这就创建了会话，尽管 HTTP 本身是无状态协议。这不仅仅对电商平台购物车很有用，也让任何网站都能够允许用户自由定制内容了。
@@ -95,26 +95,26 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 1. 打开一个 TCP 连接：TCP 连接被用来发送一条或多条请求，以及接受响应消息。客户端可能打开一条新的连接，或重用一个已经存在的连接，或者也可能开几个新的 TCP 连接连向服务端。
 2. 发送一个 HTTP 报文：HTTP 报文（在 HTTP/2 之前）是语义可读的。在 HTTP/2 中，这些简单的消息被封装在了帧中，这使得报文不能被直接读取，但是原理仍是相同的。
 
-    ```http
-    GET / HTTP/1.1
-    Host: developer.mozilla.org
-    Accept-Language: zh
-    ```
+   ```http
+   GET / HTTP/1.1
+   Host: developer.mozilla.org
+   Accept-Language: zh
+   ```
 
 3. 读取服务端返回的报文信息：
 
-    ```http
-    HTTP/1.1 200 OK
-    Date: Sat, 09 Oct 2010 14:28:02 GMT
-    Server: Apache
-    Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-    ETag: "51142bc1-7449-479b075b2891b"
-    Accept-Ranges: bytes
-    Content-Length: 29769
-    Content-Type: text/html
+   ```http
+   HTTP/1.1 200 OK
+   Date: Sat, 09 Oct 2010 14:28:02 GMT
+   Server: Apache
+   Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+   ETag: "51142bc1-7449-479b075b2891b"
+   Accept-Ranges: bytes
+   Content-Length: 29769
+   Content-Type: text/html
 
-    <!DOCTYPE html>…（此处是所请求网页的 29769 字节）
-    ```
+   <!DOCTYPE html>…（此处是所请求网页的 29769 字节）
+   ```
 
 4. 关闭连接或者为后续请求重用连接。
 

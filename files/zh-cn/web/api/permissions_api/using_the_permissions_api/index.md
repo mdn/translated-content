@@ -7,7 +7,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 本文提供了使用 W3C Permission API 的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
 
-## 申请权限面临的困境...
+## 申请权限面临的困境
 
 惨淡的事实是，权限在 Web 开发中是令人厌恶却不得不面对的问题，对于开发者而言，处理它毫无乐趣。
 
@@ -48,26 +48,30 @@ You can [在线运行](https://chrisdavidmills.github.io/location-finder-permiss
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({name:'geolocation'}).then(function(result) {
-    if (result.state == 'granted') {
+  navigator.permissions.query({ name: "geolocation" }).then(function (result) {
+    if (result.state == "granted") {
       report(result.state);
-      geoBtn.style.display = 'none';
-    } else if (result.state == 'prompt') {
+      geoBtn.style.display = "none";
+    } else if (result.state == "prompt") {
       report(result.state);
-      geoBtn.style.display = 'none';
-      navigator.geolocation.getCurrentPosition(revealPosition,positionDenied,geoSettings);
-    } else if (result.state == 'denied') {
+      geoBtn.style.display = "none";
+      navigator.geolocation.getCurrentPosition(
+        revealPosition,
+        positionDenied,
+        geoSettings,
+      );
+    } else if (result.state == "denied") {
       report(result.state);
-      geoBtn.style.display = 'inline';
+      geoBtn.style.display = "inline";
     }
-    result.onchange = function() {
+    result.onchange = function () {
       report(result.state);
-    }
+    };
   });
 }
 
 function report(state) {
-  console.log('Permission ' + state);
+  console.log("Permission " + state);
 }
 
 handlePermission();

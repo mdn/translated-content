@@ -1,7 +1,6 @@
 ---
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
 
 {{AddonSidebar()}}
@@ -20,9 +19,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var creating = browser.notifications.create(
-  id,                   // optional string
-  options               // NotificationOptions
-)
+  id, // optional string
+  options, // NotificationOptions
+);
 ```
 
 ### Paramètres
@@ -47,7 +46,7 @@ Créez et affichez périodiquement une notification de base à l'aide d'un {{Web
 Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -60,18 +59,18 @@ than a minute.
 */
 var CAKE_INTERVAL = 0.1;
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake"
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");
@@ -82,7 +81,7 @@ browser.browserAction.onClicked.addListener(()=> {
 Affichez une notification similaire, mais ajoutez des boutons nommant des gâteaux et consignez le gâteau sélectionné lorsque vous cliquez sur un bouton :
 
 ```js
-var cakeNotification = "cake-notification"
+var cakeNotification = "cake-notification";
 
 /*
 
@@ -97,25 +96,26 @@ var CAKE_INTERVAL = 0.1;
 
 var buttons = [
   {
-    "title": "Chocolate"
-  }, {
-    "title": "Battenberg"
-  }
+    title: "Chocolate",
+  },
+  {
+    title: "Battenberg",
+  },
 ];
 
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
+browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake",
-    "buttons": buttons
+    type: "basic",
+    iconUrl: browser.extension.getURL("icons/cake-96.png"),
+    title: "Time for cake!",
+    message: "Something something cake",
+    buttons: buttons,
   });
 });
 
-browser.browserAction.onClicked.addListener(()=> {
+browser.browserAction.onClicked.addListener(() => {
   var clearing = browser.notifications.clear(cakeNotification);
   clearing.then(() => {
     console.log("cleared");

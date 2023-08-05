@@ -1,14 +1,6 @@
 ---
 title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Guide
-  - django
-translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
@@ -66,7 +58,7 @@ Cet exemple a été soigneusement choisi car il permet de progresser en montrant
 - Une première étape consistera à définir un catalogue simple qui permet aux utilisateurs de consulter les ouvrages disponibles. Cela combine les schémas classiques et les opérations communes à la plupart de ce type de sites : lire et afficher le contenu d'une base de données...
 - La progression des différents articles permettra d'étudier des fonctions plus avancées du quadriciel. Par exemple, utiliser des formulaires et permettre aux utilisateurs de réserver leurs ouvrages, ceci conduit à mettre en place et utiliser la gestion des utilisateurs et de l'authentification.
 
-Même s'il s'agit d'un sujet extensible, son sujet de *Bibliothèque **locale*** est volontaire. Il s'agit d'aborder rapidement de nombreux sujets de Django en manipulant un minimum d'information. Il s'agit d'enregistrer localement les informations fictives sur les livres, copies, auteurs, etc. Il ne s'agit en aucun cas d'élaborer un produit qui gère, comme pourrait le faire une bibliothèque classique d'autres informations, ni gérer un réseau de bibliothèques comme cela pourrait être le cas avec une _**grande** biblothèque_.
+Même s'il s'agit d'un sujet extensible, son sujet de _Bibliothèque **locale**_ est volontaire. Il s'agit d'aborder rapidement de nombreux sujets de Django en manipulant un minimum d'information. Il s'agit d'enregistrer localement les informations fictives sur les livres, copies, auteurs, etc. Il ne s'agit en aucun cas d'élaborer un produit qui gère, comme pourrait le faire une bibliothèque classique d'autres informations, ni gérer un réseau de bibliothèques comme cela pourrait être le cas avec une _**grande** biblothèque_.
 
 ## Je suis coincé, où puis-je trouver les sources ?
 

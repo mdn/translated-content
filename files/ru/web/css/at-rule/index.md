@@ -1,7 +1,6 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
 {{cssref}}
 
@@ -28,7 +27,6 @@ translation_of: Web/CSS/At-rule
   - {{cssxref("@page")}} — Описывает аспект изменений макета, который будет применён при печати документа.
   - {{cssxref("@font-face")}} — Описывает аспект внешнего шрифта для загрузки.
   - {{cssxref("@keyframes")}} — Описывает аспект промежуточных шагов в последовательности анимации CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — Описывает аспекты области просмотра для устройств с маленьким экраном. (в настоящее время на стадии разработки проекта)
   - {{cssxref("@counter-style")}} — Определяет конкретные counter-styles, которые не являются частью предопределённого набора стилей.
   - {{cssxref("@font-feature-values")}} (плюс `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` и `@character-variant`)
     — Определите общие имена в {{cssxref("font-option-alternates")}} для функции, которая по-разному активируется в OpenType _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_

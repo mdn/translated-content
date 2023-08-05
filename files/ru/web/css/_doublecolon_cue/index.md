@@ -1,7 +1,6 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
-translation_of: Web/CSS/::cue
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: Mesure des performances
 slug: Learn/Performance/Measuring_performance
-translation_of: Learn/Performance/Measuring_performance
 ---
 
 {{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
@@ -47,7 +46,7 @@ Si vous êtes en capacité d'écrire du code pour le web, sachez qu'il existe un
 
 Vous pouvez utiliser [l'API d'horodatage de navigation](/fr/docs/Web/API/Navigation_timing_API) pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.
 
-![Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais)&nbsp;: Prompt for unload&nbsp;; redirect&nbsp;; unload&nbsp;; App cache&nbsp;; DNS&nbsp;; TCP&nbsp;; Request&nbsp;; Response&nbsp;; Processing&nbsp;; onLoad&nbsp;; navigationStart&nbsp;; redirectStart&nbsp;; redirectEnd&nbsp;; fetchStart&nbsp;; domainLookupEnd&nbsp;; domainLookupStart&nbsp;; connectStart (secureConnectionStart)&nbsp;; connectEnd&nbsp;; requestStart&nbsp;; responseStart&nbsp;; responseEnd&nbsp;; unloadStart&nbsp;; unloadEnd&nbsp;; domLoading&nbsp;; domInteractive&nbsp;; domContentLoaded&nbsp;; domComplete&nbsp;; loadEventStart&nbsp;; loadEventEnd.](navigationtimingapi.jpg)
+![Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais) : Prompt for unload ; redirect ; unload ; App cache ; DNS ; TCP ; Request ; Response ; Processing ; onLoad ; navigationStart ; redirectStart ; redirectEnd ; fetchStart ; domainLookupEnd ; domainLookupStart ; connectStart (secureConnectionStart) ; connectEnd ; requestStart ; responseStart ; responseEnd ; unloadStart ; unloadEnd ; domLoading ; domInteractive ; domContentLoaded ; domComplete ; loadEventStart ; loadEventEnd.](navigationtimingapi.jpg)
 
 [L'API de performances](/fr/docs/Web/API/Performance_API/Using_the_Performance_API) propose un accès aux informations liées aux performances, ce qui comprend [l'API de chronologie des performances](/fr/docs/Web/API/Performance_Timeline), [l'API d'horodatage de la navigation](/fr/docs/Web/API/Navigation_timing_API), [l'API d'horodatage du visiteur](/fr/docs/Web/API/User_Timing_API) ainsi que [l'API d'horodatage des ressources](/fr/docs/Web/API/Resource_Timing_API). Ces interfaces permettent de mesurer précisément le temps que prennent les tâches JavaScript pour se dérouler.
 

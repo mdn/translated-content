@@ -1,7 +1,6 @@
 ---
 title: Firefox 17 pour les développeurs
 slug: Mozilla/Firefox/Releases/17
-translation_of: Mozilla/Firefox/Releases/17
 ---
 
 {{FirefoxSidebar}}
@@ -31,9 +30,9 @@ Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page rés
 
 ### JavaScript
 
-- L'objet [`String`](/fr/docs/JavaScript/R%C3%A9f%C3%A9rence_JavaScript/Objets_globaux/String) offre à présent les méthodes d'Harmony `startsWith`, `endsWith` et `contains`. ([bug Firefox 772733](https://bugzil.la/772733))
+- L'objet [`String`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/String) offre à présent les méthodes d'Harmony `startsWith`, `endsWith` et `contains`. ([bug Firefox 772733](https://bugzil.la/772733))
 - Les méthodes de `String` [`link`](/fr/docs/JavaScript/Reference/Global_Objects/String/link) et [`anchor`](/fr/docs/JavaScript/Reference/Global_Objects/String/anchor) échappent désormais à **"** (guillemet). ([bug Firefox 352437](https://bugzil.la/352437))
-- Le support expérimental pour l'objet [`ParallelArray`](/fr/docs/JavaScript/R%C3%A9f%C3%A9rence_JavaScript/Objets_globaux/ParallelArray) a été implémenté. ([bug Firefox 778559](https://bugzil.la/778559))
+- Le support expérimental pour l'objet [`ParallelArray`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/ParallelArray) a été implémenté. ([bug Firefox 778559](https://bugzil.la/778559))
 - Support des itérateurs [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map)/[`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set). ([bug Firefox 725909](https://bugzil.la/725909))
 - [E4X](/fr/docs/E4X) est désactivé par défaut pour le contenu Web. ([bug Firefox 778851](https://bugzil.la/778851))
 - `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__` échoueront ensembles silencieusement. ([bug Firefox 553102](https://bugzil.la/553102))
@@ -48,7 +47,7 @@ Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page rés
 
 ### Agent Utilisateur
 
-La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de compilation (qui n’avait pas été mise à jour depuis 2010) a été retirée, et c'est le numéro de version de Gecko qui a été mis en place. Donc `Gecko/20100101` -> `Gecko/17.0`. Cela peut vous affecter si vous faites du reniflement.
+La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de compilation (qui n'avait pas été mise à jour depuis 2010) a été retirée, et c'est le numéro de version de Gecko qui a été mis en place. Donc `Gecko/20100101` -> `Gecko/17.0`. Cela peut vous affecter si vous faites du reniflement.
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 

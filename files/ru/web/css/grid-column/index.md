@@ -1,13 +1,6 @@
 ---
 title: grid-column
 slug: Web/CSS/grid-column
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-column
 ---
 {{CSSRef}}
 
@@ -19,8 +12,8 @@ browser-compat: css.properties.grid-column
 
 Это свойство является сокращением для следующих свойств CSS:
 
-- [`grid-column-end`](/en-US/docs/Web/CSS/grid-column-end)
-- [`grid-column-start`](/en-US/docs/Web/CSS/grid-column-start)
+- [`grid-column-end`](/ru/docs/Web/CSS/grid-column-end)
+- [`grid-column-start`](/ru/docs/Web/CSS/grid-column-start)
 
 ## Syntax
 

@@ -1,11 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Класс
-  - Function
-  - JavaScript
-browser-compat: javascript.builtins.Function
 ---
 
 {{JSRef}}

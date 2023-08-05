@@ -1,7 +1,6 @@
 ---
 title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ S'il y a des mises à jour en attente pour l'extension, qu'elles ont été diff�
 ## Syntaxe
 
 ```js
-browser.runtime.reload()
+browser.runtime.reload();
 ```
 
 ### Paramètres

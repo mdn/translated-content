@@ -1,7 +1,6 @@
 ---
 title: Firefox 5 pour les développeurs
 slug: Mozilla/Firefox/Releases/5
-translation_of: Mozilla/Firefox/Releases/5
 ---
 
 {{FirefoxSidebar}}
@@ -66,7 +65,7 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 ### HTTP
 
 - Firefox n'envoi plus l'en-tête HTTP `Keep-Alive`, nous n'avons pas pu le formater correctement et il était redondant car on retrouve la valeur "keep-alive" dans l'en-tête {{httpheader("Connection")}} ou {{httpheader("Proxy-Connection")}}.
-- Le modèle de transaction HTTP a été mis à jour pour être plus intelligent sur la réutilisation des connexions dans le pool de connexions persistantes, au lieu de traiter le pool pool comme une [file d'attente](https://fr.wikipedia.org/wiki/File_(structure_de_donn%C3%A9es)), Necko tente maintenant de trier le pool avec des connexions avec la fenêtre qui a le plus de [fenêtre de congestion (CWND)](https://fr.wikipedia.org/wiki/Algorithme_TCP#D%C3%A9finitions) en premier. Cela peut réduire le temps d'aller-retour (RTT) des transactions HTTP en évitant la nécessité de développer des connexions fenêtres dans de nombreux cas.
+- Le modèle de transaction HTTP a été mis à jour pour être plus intelligent sur la réutilisation des connexions dans le pool de connexions persistantes, au lieu de traiter le pool pool comme une [file d'attente](<https://fr.wikipedia.org/wiki/File_(structure_de_données)>), Necko tente maintenant de trier le pool avec des connexions avec la fenêtre qui a le plus de [fenêtre de congestion (CWND)](https://fr.wikipedia.org/wiki/Algorithme_TCP#Définitions) en premier. Cela peut réduire le temps d'aller-retour (RTT) des transactions HTTP en évitant la nécessité de développer des connexions fenêtres dans de nombreux cas.
 - Firefox gère désormais l'en-tête de réponse HTTP `Content-Disposition` plus efficacement si les deux paramètres `filename` et `filename*` sont fournis, il regarde à travers tous les noms fournis, en utilisant le paramètre `filename*` si il est disponible, même si un paramètre `filename` est inclus en premier. Auparavant, le premier paramètre correspondant était utilisé, ce qui empêchait l'utilisation d'un nom plus approprié. Voir [bug Firefox 588781](https://bugzil.la/588781).
 
 ### MathML

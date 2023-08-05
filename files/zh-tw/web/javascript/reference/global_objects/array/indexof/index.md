@@ -97,7 +97,7 @@ if (!Array.prototype.indexOf) {
     */
     if (this == null) {
       throw new TypeError(
-        "Array.prototype.indexOf() - can't convert `" + this + "` to object"
+        "Array.prototype.indexOf() - can't convert `" + this + "` to object",
       );
     }
 

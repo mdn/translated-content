@@ -17,7 +17,7 @@ Es un archivo con formato [JSON](/es/docs/Glossary/JSON), con una excepción: pe
 
 Las claves de manifest.json son:
 
-{{ListSubpages("/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
+{{ListSubpages("/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
 
 ### Notas acerca de las claves de manifest.json
 

@@ -1,16 +1,6 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/trim
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`trim()`** permet de retirer les blancs en début et fin de chaîn
 ## Syntaxe
 
 ```js
-str.trim()
+str.trim();
 ```
 
 ### Valeur de retour
@@ -38,12 +28,12 @@ La méthode `trim()` renvoie la chaîne sans blanc au début et à la fin. La m�
 L'exemple qui suit affiche la chaîne `'toto'` :
 
 ```js
-var chaîneOriginale = '   toto  ';
+var chaîneOriginale = "   toto  ";
 console.log(chaîneOriginale.trim()); // 'toto'
 
 // Un autre exemple de .trim() qui enlève les espaces juste d'un côté
 
-var chaîneOriginale = 'toto    ';
+var chaîneOriginale = "toto    ";
 console.log(chaîneOriginale.trim()); // 'toto'
 ```
 
@@ -54,7 +44,7 @@ Si l'environnement utilisé ne possède pas cette méthode, il est possible de l
 ```js
 if (!String.prototype.trim) {
   String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
   };
 }
 ```

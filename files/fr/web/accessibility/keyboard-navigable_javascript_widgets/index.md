@@ -1,12 +1,6 @@
 ---
 title: Contrôles DHTML personnalisés navigables au clavier
 slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-tags:
-  - AJAX
-  - Accessibilité
-  - DHTML
-translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
-original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
 
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
@@ -59,7 +53,7 @@ Ceci peut être utile à réaliser si un contrôle personnalisé devient actif o
 N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci&nbsp;:
 
 ```js
-setTimeout("gFocusItem.focus();",0);  // gFocusItem doit être une variable globale
+setTimeout("gFocusItem.focus();", 0); // gFocusItem doit être une variable globale
 ```
 
 #### Ne pas utiliser `:focus` ou des sélecteurs d'attribut pour styler le focus
@@ -79,7 +73,7 @@ IE ne déclenchera pas les évènements `keypress` pour les touches non alphanum
 Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit&nbsp;:
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
 ```
 
 Si `handleKeyDown()` renvoie `false`, l'évènement sera consommé, empêchant le navigateur d'effectuer quelque action que ce soit, basée sur la touche pressée.

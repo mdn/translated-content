@@ -7,13 +7,13 @@ slug: Glossary/Microsoft_Edge
 
 1. 関連情報
 
-    1. [公式ウェブサイト](https://www.microsoft.com/edge)
+   1. [公式ウェブサイト](https://www.microsoft.com/edge)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Google Chrome")}}
-    2. {{Glossary("Microsoft Edge")}}
-    3. {{Glossary("Microsoft Internet Explorer")}}
-    4. {{Glossary("Mozilla Firefox")}}
-    5. {{Glossary("Netscape Navigator")}}
-    6. {{Glossary("Opera Browser")}}
+   1. {{Glossary("Google Chrome")}}
+   2. {{Glossary("Microsoft Edge")}}
+   3. {{Glossary("Microsoft Internet Explorer")}}
+   4. {{Glossary("Mozilla Firefox")}}
+   5. {{Glossary("Netscape Navigator")}}
+   6. {{Glossary("Opera Browser")}}

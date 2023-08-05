@@ -1,13 +1,6 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - ':blank'
-  - CSS
-  - Псевдо-класс
-  - Экспериментальное
-  - селектор
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

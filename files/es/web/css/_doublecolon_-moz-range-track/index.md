@@ -1,5 +1,5 @@
 ---
-title: '::-moz-range-track'
+title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
 ---
 
@@ -20,7 +20,7 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-track
 ### Contenido CSS
 
 ```css
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background-color: green;
 }
 ```
@@ -28,7 +28,7 @@ input[type=range]::-moz-range-track {
 ### Contenido HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### Salida

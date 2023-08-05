@@ -1,10 +1,6 @@
 ---
-title: >-
-  SyntaxError: for-in loop head declarations may not have
-  initializers(SyntaxError: объявления for-in loop head могут не иметь
-  инициализаторов)
+title: "SyntaxError: for-in loop head declarations may not have initializers(SyntaxError: объявления for-in loop head могут не иметь инициализаторов)"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 {{jsSidebar("Errors")}}
 
@@ -70,6 +66,6 @@ for (var i = 2; i < arr.length; i++) {
 
 ## Смотрите также
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) – также запрещает инициализатор как в строгом, так и в нестрогом режиме.
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – предпочтительно для итерации массива, позволяет определить инициализатор.
+- [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) – также запрещает инициализатор как в строгом, так и в нестрогом режиме.
+- [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) – предпочтительно для итерации массива, позволяет определить инициализатор.

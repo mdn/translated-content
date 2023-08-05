@@ -1,10 +1,6 @@
 ---
 title: Используемое значение
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
 {{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
 
@@ -100,7 +96,7 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 | {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} | No change.          |
 | {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Initial definition. |
 
-## Смотреть так же:
+## Смотреть так же
 
 - {{domxref("window.getComputedStyle")}}
 - Ключевые концепции CSS

@@ -1,12 +1,6 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript6
-  - JavaScript
-  - const
-  - Константы
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
 
 {{jsSidebar("Statements")}}

@@ -1,7 +1,6 @@
 ---
 title: どうすればすべての種類のユーザーのためにデザインすることができるか？
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
 ---
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
@@ -57,7 +56,9 @@ Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast
 絶対単位とは、比率計算ではなく、いわば設定された大きさを参照するもので、ほとんどの場合、ピクセル (`px`) で表現されます。例えば、 CSS でこのように宣言した場合、
 
 ```css
-body { font-size:16px; }
+body {
+  font-size: 16px;
+}
 ```
 
 … これは、何が起ころうともフォントサイズは 16 ピクセルでなければならない、とブラウザーに指示していることになります。最近のブラウザーは、「ユーザーが拡大率を 100% に設定したときの 16 ピクセル」を依頼しているように装うことで、このルールを回避しています。
@@ -82,36 +83,47 @@ body { font-size:16px; }
 以下は、使用している HTML の例です。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-    <h1>This is our main heading
-        <span class="subheading">This is our subheading</span>
+  </head>
+  <body>
+    <h1>
+      This is our main heading
+      <span class="subheading">This is our subheading</span>
     </h1>
-
-</body>
+  </body>
 </html>
 ```
 
 パーセントベースの CSS は、次のようになります。
 
 ```css
-body { font-size:100%; } /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:200%; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:50%; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+body {
+  font-size: 100%;
+} /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 {
+  font-size: 200%;
+} /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading {
+  font-size: 50%;
+} /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
 ```
 
 em でも同じ問題が発生します。
 
 ```css
-body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:2em; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:0.5em; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+body {
+  font-size: 1em;
+} /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 {
+  font-size: 2em;
+} /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading {
+  font-size: 0.5em;
+} /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
 ```
 
 ご覧のように、親、親の親、親の親の親などを保有しなければならない場合、計算はすぐに大変なことになります。(ほとんどのデザインはピクセルベースのソフトウェアで行われるため、計算は CSS をコーディングする人が行わなければなりません)。
@@ -119,9 +131,15 @@ span.subheading { font-size:0.5em; } /* h1 の半分の大きさ、つまり 16 
 そこで登場するのが `rem` です。この単位はルート要素のサイズに対する相対的なもので、他の親要素に対するものではありません。 CSS はこのように書き換えることができます。
 
 ```css
-body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:2rem; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:1rem; } /* 元のサイズ */
+body {
+  font-size: 1em;
+} /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+h1 {
+  font-size: 2rem;
+} /* 本文の 2 倍の大きさなので 32 ピクセル */
+span.subheading {
+  font-size: 1rem;
+} /* 元のサイズ */
 ```
 
 もっと簡単でしょう？これは、 [Internet Explorer 9 と他のすべての現行ブラウザーで](https://caniuse.com/#search=rem)の時点で動作するので、この単位は気軽に使用してください。
@@ -148,30 +166,31 @@ span.subheading { font-size:1rem; } /* 元のサイズ */
 そのためには、テキストのコンテナーの大きさを指定します。この HTML を考えてみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-<div class="container">
-    <h1>This is our main heading
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        This is our main heading
         <span class="subheading">This is our subheading</span>
-    </h1>
+      </h1>
 
-    <p>[lengthy text that spans many lines]</p>
-</div>
-
-</body>
+      <p>[lengthy text that spans many lines]</p>
+    </div>
+  </body>
 </html>
 ```
 
 ここに、`container` クラスを持つ `div` があります。この `div` には、幅を設定する（`width` プロパティを使用する）か、大きすぎないように最大幅を設定する（`max-width` プロパティを使用する）かのどちらかのスタイルを設定することができます。もし、伸縮性のあるレスポンシブなウェブサイトを作りたいが、ブラウザーの既定の幅が分からない場合は、 `max-width` プロパティを使用して、 1 行に 70 文字まで許容し、それ以上は許容しないようにすることができます。
 
 ```css
-div.container { max-width:70em; }
+div.container {
+  max-width: 70em;
+}
 ```
 
 ### 画像、音声、動画の代替コンテンツ

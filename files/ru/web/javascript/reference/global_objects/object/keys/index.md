@@ -1,16 +1,6 @@
 ---
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -74,7 +64,7 @@ TypeError: 'foo' is not an object // код ES5
 Для добавления поддержки совместимого метода `Object.keys` в старых окружениях, которые его ещё не реализуют, скопируйте следующий кусок кода:
 
 ```js
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+// From https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';

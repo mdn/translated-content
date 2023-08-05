@@ -26,8 +26,8 @@ myArrayBuffer.copyFromChannel(destination,channelNumber,startInChannel);
 
 ```js
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array;
-myArrayBuffer.copyFromChannel(anotherArray,1,0);
+var anotherArray = new Float32Array();
+myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 ```
 
 ## 规范

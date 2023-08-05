@@ -1,13 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/option
 ---
 
 {{HTMLSidebar}}

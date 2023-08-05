@@ -17,7 +17,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -28,11 +28,11 @@ slug: Learn/HTML/Howto/Use_data_attributes
 `dataset` オブジェクトを通して `data` 属性を取得するには、属性名の `data-` より後の部分を使用して取得します (なお、ダッシュは camelCase に変換されます)。
 
 ```js
-const article = document.getElementById('electric-cars');
+const article = document.getElementById("electric-cars");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 それぞれのプロパティは文字列であり、読み書きができます。上記の場合、 `article.dataset.columns = 5` を設定すると、その属性が `"5"` に変わります。
@@ -50,10 +50,10 @@ article::before {
 CSS の[属性セレクタ](/ja/docs/Web/CSS/Attribute_selectors)を使用して、次のようにデータに応じてスタイルを変更することもできます。
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```

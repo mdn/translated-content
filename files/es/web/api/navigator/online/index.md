@@ -1,7 +1,6 @@
 ---
 title: Navigator.onLine
 slug: Web/API/Navigator/onLine
-original_slug: Web/API/NavigatorOnLine/onLine
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -34,9 +33,9 @@ Para comprobar que estas es linea, consulte `window.navigator.onLine`, como en e
 
 ```js
 if (navigator.onLine) {
-  console.log('online');
+  console.log("online");
 } else {
-  console.log('offline');
+  console.log("offline");
 }
 ```
 
@@ -45,9 +44,13 @@ Si el navegador no soporta `navigator.onLine` el ejemplo anterior siempre devolv
 Para ver los cambios en el estado de la red, use [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) para escuchar los eventos `window.ononline` y `window.onoffline`, como en el siguiente ejemplo:
 
 ```js
-window.addEventListener('offline', function(e) { console.log('offline'); });
+window.addEventListener("offline", function (e) {
+  console.log("offline");
+});
 
-window.addEventListener('online', function(e) { console.log('online'); });
+window.addEventListener("online", function (e) {
+  console.log("online");
+});
 ```
 
 ## Especificaciones

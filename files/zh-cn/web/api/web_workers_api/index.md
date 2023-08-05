@@ -42,8 +42,12 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("queueMicrotask()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("structuredClone()")}}
+- {{domxref("window.requestAnimationFrame")}}（仅专用 worker）
+- {{domxref("window.cancelAnimationFrame")}}（仅专用 worker）
 
 以下函数**仅**对 worker 可用：
 
@@ -69,10 +73,13 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}}（仅在 worker 中有效！）
 - {{domxref("FormData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}}（仅限专用 worker）
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("OffscreenCanvas")}}（和所有的 canvas context API）
 - {{domxref("Performance_API","Performance API")}}，包括：
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
@@ -80,11 +87,10 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}}（例如 {{domxref("URL")}}）
-- [WebGL](/zh-CN/docs/Web/API/WebGL_API) 与 {{domxref("OffscreenCanvas")}}
+- {{domxref('WebCodecs_API','','','true')}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 

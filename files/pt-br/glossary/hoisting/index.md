@@ -1,7 +1,6 @@
 ---
 title: Hoisting
 slug: Glossary/Hoisting
-original_slug: Glossario/Hoisting
 ---
 
 Hoisting (içamento, em português) é um termo que você _não_ encontrará usado em nenhuma prosa de especificação normativa antes da [especificação de idioma do ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html). Hoisting foi pensado como uma maneira geral de pensar sobre como os contextos de execução (especificamente as fases de criação e execução) funcionam em JavaScript. No entanto, o conceito pode ser um pouco confuso a princípio.
@@ -79,8 +78,8 @@ console.log(num1 + " " + num2); //'3 4'
 var num2; //Declara num2 para hoisting
 
 //Example 3 - Hoists
-a = 'Cran'; //Inicializa a
-b = 'berry'; //Inicializa b
+a = "Cran"; //Inicializa a
+b = "berry"; //Inicializa b
 console.log(a + "" + b); // 'Cranberry'
 var a, b; //Declara ambos a & b para hoisting
 ```

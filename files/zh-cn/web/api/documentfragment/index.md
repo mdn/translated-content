@@ -63,18 +63,18 @@ _该接口继承 {{domxref("Node")}} 的全部方法。_
 ### JavaScript
 
 ```js
-const list = document.querySelector('#list')
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+const list = document.querySelector("#list");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
-const fragment = new DocumentFragment()
+const fragment = new DocumentFragment();
 
 fruits.forEach((fruit) => {
-  const li = document.createElement('li')
-  li.textContent = fruit
-  fragment.appendChild(li)
-})
+  const li = document.createElement("li");
+  li.textContent = fruit;
+  fragment.appendChild(li);
+});
 
-list.appendChild(fragment)
+list.appendChild(fragment);
 ```
 
 ### 结果

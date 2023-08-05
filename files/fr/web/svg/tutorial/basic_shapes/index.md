@@ -1,8 +1,6 @@
 ---
 title: Formes de base
 slug: Web/SVG/Tutorial/Basic_Shapes
-translation_of: Web/SVG/Tutorial/Basic_Shapes
-original_slug: Web/SVG/Tutoriel/Formes_de_base
 ---
 
 {{PreviousNext("Web/SVG/Tutorial/Positions","Web/SVG/Tutorial/Paths")}}

@@ -1,7 +1,6 @@
 ---
 title: 웹 상 그래픽
 slug: Web/Guide/Graphics
-original_slug: Web/Guide/그래픽
 ---
 
 웹 사이트 및 응용 프로그램은 종종 그래픽을 보일 필요가 있습니다. 정지 이미지는 {{HTMLElement("img")}} 요소 사용이나 {{cssxref("background-image")}} 속성을 사용한 HTML 요소의 배경 설정으로 쉽게 표시할 수 있습니다. 또한 그래픽을 그때그때 생성하거나 사후에 이미지를 조작할 수도 있습니다. 여기서는 이를 수행할 수 있는 법을 주의 깊게 살펴봅니다.

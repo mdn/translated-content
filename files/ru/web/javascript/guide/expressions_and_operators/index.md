@@ -1,13 +1,6 @@
 ---
 title: Выражения и операторы
 slug: Web/JavaScript/Guide/Expressions_and_operators
-tags:
-  - Beginner
-  - Expressions
-  - Guide
-  - Operators
-  - Начинающий
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
@@ -301,7 +294,7 @@ delete property; // допустимо только внутри with
 
 где `objectName` представляет собой имя объекта, `property` - свойство объекта, а `index` - целое число, указывающее на положение (номер позиции) элемента в массиве.
 
-Четвёртый вариант использования позволяет удалить свойство объекта, но допускается только внутри [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with).
+Четвёртый вариант использования позволяет удалить свойство объекта, но допускается только внутри [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 Вы можете использовать оператор `delete` для удаления переменных, объявленных неявно, но вы не можете с его помощью удалять переменные, объявленные с помощью `var`.
 

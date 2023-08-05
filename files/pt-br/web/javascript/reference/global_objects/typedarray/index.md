@@ -41,7 +41,7 @@ Float64Array();
 
 ## Description
 
-ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All _TypedArray_s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (`TypedArray.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
+ECMAScript 2015 defines a _TypedArray_ constructor that serves as the `[[Prototype]]` of all _TypedArray_ constructors. This constructor is not directly exposed: there is no global `%TypedArray%` or `TypedArray` property. It is only directly accessible through `Object.getPrototypeOf(Int8Array)` and similar. All `TypedArray`s constructors inherit common properties from the `%TypedArray%` constructor function. Additionally, all typed array prototypes (`TypedArray.prototype`) have `%TypedArray%.prototype` as their `[[Prototype]]`.
 
 The `%TypedArray%` constructor on its own is not particularly useful. Calling it or using it in a `new` expression will throw a `TypeError`, except when used during object creation in JS engines that support subclassing. There are at present no such engines, so `%TypedArray%` is only useful to polyfill functions or properties onto all _TypedArray_ constructors.
 
@@ -58,33 +58,33 @@ int16[0] = 42;
 console.log(int16[0]); // 42
 
 // Indexed properties on prototypes are not consulted (Fx 25)
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(32))[20]; // 0
+Int8Array.prototype[20] = "foo";
+new Int8Array(32)[20]; // 0
 // even when out of bound
-Int8Array.prototype[20] = 'foo';
-(new Int8Array(8))[20]; // undefined
+Int8Array.prototype[20] = "foo";
+new Int8Array(8)[20]; // undefined
 // or with negative integers
-Int8Array.prototype[-1] = 'foo';
-(new Int8Array(8))[-1]; // undefined
+Int8Array.prototype[-1] = "foo";
+new Int8Array(8)[-1]; // undefined
 
 // Named properties are allowed, though (Fx 30)
-Int8Array.prototype.foo = 'bar';
-(new Int8Array(32)).foo; // "bar"
+Int8Array.prototype.foo = "bar";
+new Int8Array(32).foo; // "bar"
 ```
 
 ## TypedArray objects
 
-| Type                                     | Size in bytes | Description                            | Web IDL type          | Equivalent C type |
-| ---------------------------------------- | ------------- | -------------------------------------- | --------------------- | ----------------- |
+| Type                            | Size in bytes | Description                            | Web IDL type          | Equivalent C type |
+| ------------------------------- | ------------- | -------------------------------------- | --------------------- | ----------------- |
 | {{jsxref("Int8Array")}}         | 1             | 8-bit two's complement signed integer  | `byte`                | `int8_t`          |
-| {{jsxref("Uint8Array")}}         | 1             | 8-bit unsigned integer                 | `octet`               | `uint8_t`         |
+| {{jsxref("Uint8Array")}}        | 1             | 8-bit unsigned integer                 | `octet`               | `uint8_t`         |
 | {{jsxref("Uint8ClampedArray")}} | 1             | 8-bit unsigned integer (clamped)       | `octet`               | `uint8_t`         |
-| {{jsxref("Int16Array")}}         | 2             | 16-bit two's complement signed integer | `short`               | `int16_t`         |
-| {{jsxref("Uint16Array")}}         | 2             | 16-bit unsigned integer                | `unsigned short`      | `uint16_t`        |
-| {{jsxref("Int32Array")}}         | 4             | 32-bit two's complement signed integer | `long`                | `int32_t`         |
-| {{jsxref("Uint32Array")}}         | 4             | 32-bit unsigned integer                | `unsigned long`       | `uint32_t`        |
-| {{jsxref("Float32Array")}}     | 4             | 32-bit IEEE floating point number      | `unrestricted float`  | `float`           |
-| {{jsxref("Float64Array")}}     | 8             | 64-bit IEEE floating point number      | `unrestricted double` | `double`          |
+| {{jsxref("Int16Array")}}        | 2             | 16-bit two's complement signed integer | `short`               | `int16_t`         |
+| {{jsxref("Uint16Array")}}       | 2             | 16-bit unsigned integer                | `unsigned short`      | `uint16_t`        |
+| {{jsxref("Int32Array")}}        | 4             | 32-bit two's complement signed integer | `long`                | `int32_t`         |
+| {{jsxref("Uint32Array")}}       | 4             | 32-bit unsigned integer                | `unsigned long`       | `uint32_t`        |
+| {{jsxref("Float32Array")}}      | 4             | 32-bit IEEE floating point number      | `unrestricted float`  | `float`           |
+| {{jsxref("Float64Array")}}      | 8             | 64-bit IEEE floating point number      | `unrestricted double` | `double`          |
 
 ## Properties
 
@@ -120,10 +120,10 @@ All _TypedArrays_ inherit from {{jsxref("TypedArray.prototype")}}.
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment                                                                                                                         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                             | {{Spec2('Typed Array')}} | Defined as `TypedArray` and `ArrayBufferView` interface with typed array view types. Superseded by ECMAScript 2015.             |
-| {{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}     | {{Spec2('ES6')}}             | Initial definition in an ECMA standard. Specified behaviour for indexed and named properties. Specified that `new` is required. |
+| Specification                                                            | Status                   | Comment                                                                                                                         |
+| ------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                              | {{Spec2('Typed Array')}} | Defined as `TypedArray` and `ArrayBufferView` interface with typed array view types. Superseded by ECMAScript 2015.             |
+| {{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}     | {{Spec2('ES6')}}         | Initial definition in an ECMA standard. Specified behaviour for indexed and named properties. Specified that `new` is required. |
 | {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} | {{Spec2('ESDraft')}}     |                                                                                                                                 |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 
 {{jsSidebar("Operators")}}

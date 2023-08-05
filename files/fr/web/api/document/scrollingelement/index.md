@@ -1,8 +1,6 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
-browser-compat: api.Document.scrollingElement
-translation_of: 'Web/API/Document/scrollingElement'
 ---
 
 {{APIRef("DOM")}}

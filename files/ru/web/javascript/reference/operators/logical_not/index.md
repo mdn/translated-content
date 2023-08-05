@@ -1,13 +1,6 @@
 ---
 title: Логическое НЕ (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_not
 ---
 {{jsSidebar("Operators")}}
 
@@ -52,7 +45,7 @@ n4 = !'Cat'              // !t вернёт false
 
 ### Двойное НЕ (`!!`)
 
-Можно один за другим использовать пару операторов НЕ, чтобы явным образом принудительно преобразовать любое значение в соответствующий [булевый примитив](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type).
+Можно один за другим использовать пару операторов НЕ, чтобы явным образом принудительно преобразовать любое значение в соответствующий [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
 Преобразование основано на "истинноподобности" или "ложноподобности" значения (см. {{Glossary("truthy")}} и {{Glossary("falsy")}})).
 
 Точно такое же преобразование может быть выполнено с помощью функции {{jsxref("Global_Objects/Boolean/Boolean",

@@ -1,7 +1,6 @@
 ---
 title: browserSettings.openBookmarksInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
 ---
 
 {{AddonSidebar()}}
@@ -19,8 +18,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openBookmarksInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openBookmarksInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 ## Compatibilité des navigateurs

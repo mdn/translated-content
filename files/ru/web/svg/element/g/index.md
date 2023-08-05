@@ -1,11 +1,6 @@
 ---
 title: <g>
 slug: Web/SVG/Element/g
-tags:
-  - NeedsUpdate
-  - SVG
-translation_of: Web/SVG/Element/g
-original_slug: Web/SVG/Элемент/g
 ---
 {{SVGRef}}
 
@@ -50,7 +45,7 @@ _Нет специфичных атрибутов._
 
 ## Интерфейс DOM
 
-Этот элемент реализует [`SVGGElement`](/en-US/docs/DOM/SVGGElement) интерес.
+Этот элемент реализует [`SVGGElement`](/ru/docs/DOM/SVGGElement) интерес.
 
 ## Спецификации
 
@@ -60,7 +55,7 @@ _Нет специфичных атрибутов._
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{SVGElement("use")}}
 - {{SVGElement("defs")}}

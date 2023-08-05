@@ -1,7 +1,6 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 ---
 
 {{AddonSidebar()}}
@@ -13,9 +12,9 @@ Lancé lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre c
 ## Syntaxe
 
 ```js
-browser.tabs.onHighlightChanged.addListener(listener)
-browser.tabs.onHighlightChanged.removeListener(listener)
-browser.tabs.onHighlightChanged.hasListener(listener)
+browser.tabs.onHighlightChanged.addListener(listener);
+browser.tabs.onHighlightChanged.removeListener(listener);
+browser.tabs.onHighlightChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

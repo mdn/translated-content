@@ -15,11 +15,11 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
       <th scope="row">사전 요구 사항:</th>
       <td>
         <p>
-          코어 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>과
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>에 익숙함,
+          코어 <a href="/ko/docs/Learn/HTML">HTML</a>,
+          <a href="/ko/docs/Learn/CSS">CSS</a>과
+          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>에 익숙함,
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >에 대한 지식
         </p>
@@ -52,26 +52,26 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 여기까지 잘 따라하셨다면 `ToDoItem.vue` 파일이 아래와 같은 형태가 됩니다.
 
-```html
-<template> </template>
+```vue
+<template></template>
 <script>
-  export default {};
+export default {};
 </script>
 ```
 
-이제 `ToDoItem`에 내용을 추가해보겠습니다. Vue 2의 템플릿은 단일 루트 엘리멘트만을 허용합니다. 즉, 템플릿 섹션 안의 모든 것을 포함하는 하나의 엘리멘트가 존재해야 합니다. (Vue 3에서는 다중 루트 엘리멘트를 지원합니다!) 여기서는 [`<div>`](/en-US/docs/Web/HTML/Element/div) 를 루트 엘리멘트로 지정하겠습니다.
+이제 `ToDoItem`에 내용을 추가해보겠습니다. Vue 2의 템플릿은 단일 루트 엘리멘트만을 허용합니다. 즉, 템플릿 섹션 안의 모든 것을 포함하는 하나의 엘리멘트가 존재해야 합니다. (Vue 3에서는 다중 루트 엘리멘트를 지원합니다!) 여기서는 [`<div>`](/ko/docs/Web/HTML/Element/div) 를 루트 엘리멘트로 지정하겠습니다.
 
 1. 우선 템플릿 섹션에 빈 `<div>` 를 추가하세요.
 2. `<div>` 안에 체크박스와 레이블을 추가해보겠습니다. 아래와 같이 체크박스에 `id` 를 추가하고, 체크박스 id를 레이블에 매핑하는 `for` 속성을 추가합니다.
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" checked="false" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```vue
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" checked="false" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### 앱 안에서 TodoItem 컴포넌트 사용하기
 
@@ -80,22 +80,22 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. `App.vue` 파일을 다시 열어주세요.
 2. `<script>` 태그 상단에 다음을 추가해 `ToDoItem` 컴포넌트를 임포트하세요:
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. 컴포넌트 오브젝트 내부에 `components` 속성을 추가하고, 여기에 `ToDoItem` 컴포넌트를 등록하세요.
 
 이제 `<script>` 내부가 이런 모양이 되었을 것입니다.
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
@@ -103,12 +103,12 @@ export default {
 
 `ToDoItem` 컴포넌트를 앱에 실제로 렌더링하려면 `<template>` 태그 안에서 `<to-do-item></to-do-item>` 요소를 사용해야 합니다. JavaScript에서 컴포넌트 파일의 이름과 그 표현은 항상 어퍼카멜케이스(e.g. `ToDoList`)를 사용하며, 해당 커스텀 엘리멘트는 하이픈으로 연결된 소문자(e.g. `<to-do-list>`)로 표현합니다.
 
-1. [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/en-US/docs/Web/HTML/Element/ul))를 생성합니다.
+1. [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/ko/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/ko/docs/Web/HTML/Element/ul))를 생성합니다.
 2. 리스트 아이템 안에 `<to-do-item></to-do-item>`을 추가합니다.
 
 `App.vue` `<template>` 은 아래와 같은 모양이 될 것입니다.
 
-```html
+```vue
 <div id="app">
   <h1>To-Do List</h1>
   <ul>
@@ -145,13 +145,13 @@ Vue에서는 props를 등록하는 방법이 두 가지 있습니다.
 3. 이 오브젝트 안에 `label` 과 `done` 을 키로 사용하는 속성을 추가하세요.
 4. `label` 키의 값은 두 개의 속성을 갖는 오브젝트입니다.
 
-    1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
-    2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
+   1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
+   2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
 
 5. 이제 `done` prop으로 넘어가겠습니다.
 
-    1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
-    2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
+   1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
+   2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
 
 이제 컴포넌트 오브젝트는 아래와 같은 모양이 될 것입니다.
 
@@ -172,20 +172,20 @@ With these props defined inside the component object, we can now use these varia
 
 In your `<template>`, replace the contents of the `<label>` element with `\{{label}}`.
 
-`\{{}}` is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It’s important to know that content inside `\{{}}` is displayed as text and not HTML. In this case, we’re printing the value of the `label` prop.
+`\{{}}` is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It's important to know that content inside `\{{}}` is displayed as text and not HTML. In this case, we're printing the value of the `label` prop.
 
-Your component’s template section should now look like this:
+Your component's template section should now look like this:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" id="todo-item" checked="false" />
-    <label for="todo-item">\{{label}}</label>
+    <label for="todo-item">\{{ label }}</label>
   </div>
 </template>
 ```
 
-Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:
+Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you'll see a warning along these lines in the console:
 
 ```
 [Vue warn]: Missing required prop: "label"
@@ -197,11 +197,11 @@ found in
          <Root>
 ```
 
-This is because we marked the `label` as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.
+This is because we marked the `label` as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let's fix that.
 
 Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
-```html
+```vue
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
@@ -213,9 +213,9 @@ So that's props in a nutshell. Next we'll move on to how Vue persists data state
 
 If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
 
-To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/en-US/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
+To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/ko/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
-To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
+To work around this, we can manage the `done` state using Vue's `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 
 ```js
 data() {
@@ -229,7 +229,7 @@ You'll note that the `data` property is a function. This is to keep the data val
 
 You use `this` to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.
 
-> **참고:** Because of the way that `this` works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don’t use an arrow function for the `data` property.
+> **참고:** Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
 
 So let's add a `data` property to our `ToDoItem` component. This will return an object containing a single property that we'll call `isDone`, whose value is `this.done`.
 
@@ -239,17 +239,17 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
-Vue does a little magic here — it binds all of your props directly to the component instance, so we don’t have to call `this.props.done`. It also binds other attributes (`data`, which you’ve already seen, and others like `methods`, `computed`, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our `data` attribute `isDone` instead of `done`.
+Vue does a little magic here — it binds all of your props directly to the component instance, so we don't have to call `this.props.done`. It also binds other attributes (`data`, which you've already seen, and others like `methods`, `computed`, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our `data` attribute `isDone` instead of `done`.
 
 So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
@@ -261,7 +261,7 @@ In other words, you prefix whatever attribute/prop you want to bind to with `v-b
 
 So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` to map the `isDone` property to the `checked` attribute on the `<input>` element. Both of the following are equivalent:
 
-```html
+```vue
 <input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
 <input type="checkbox" id="todo-item" :checked="isDone" />
@@ -294,7 +294,7 @@ Great! We now have a working checkbox where we can set the state programmaticall
 
 We can use the [lodash](https://www.npmjs.com/package/lodash) package's `uniqueid()` method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component `id`s unique.
 
-Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:
+Let's add the package to our project with npm; stop your server and enter the following command into your terminal:
 
 ```bash
 npm install --save lodash.uniqueid
@@ -302,32 +302,32 @@ npm install --save lodash.uniqueid
 
 > **참고:** If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
 
-We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`’s `<script>` element:
+We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 
-Next, bind the `id` to both our checkbox’s `id` attribute and the label’s `for` attribute, updating the existing `id` and `for` attributes as shown:
+Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
 ```js
 <template>

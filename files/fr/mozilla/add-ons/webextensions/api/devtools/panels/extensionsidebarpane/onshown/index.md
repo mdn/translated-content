@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé lorsque le volet latéral devient visible suite à un changement d'utilis
 ## Syntaxe
 
 ```js
-browser.devtools.panels.onShown.addListener(listener)
-browser.devtools.panels.onShown.removeListener(listener)
-browser.devtools.panels.onShown.hasListener(listener)
+browser.devtools.panels.onShown.addListener(listener);
+browser.devtools.panels.onShown.removeListener(listener);
+browser.devtools.panels.onShown.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -42,7 +41,6 @@ Créez un volet de barre latérale et journal afficher et masquer les événemen
 
 ```js
 function onCreated(sidebarPane) {
-
   sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
@@ -50,7 +48,6 @@ function onCreated(sidebarPane) {
   sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

@@ -1,7 +1,6 @@
 ---
 title: CSS 선택자
 slug: Learn/CSS/Building_blocks/Selectors
-original_slug: Learn/CSS/Building_blocks/선택자
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -23,11 +22,11 @@ original_slug: Learn/CSS/Building_blocks/선택자
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 CSS 작동 방식에 대한 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 단계</a
         >
         학습)
@@ -52,7 +51,7 @@ CSS 에서, 선택자는 CSS 선택자 사양에 정의되어 있습니다. CSS 
 
 ## 선택자 목록
 
-동일한 CSS 를 사용하는 항목이 두 개 이상인 경우 규칙이 모든 개별 선택자에 적용되도록 개별 선택자를 ***선택자 목록** *으로 결합할 수 있습니다. 예를 들어, `h1` 에 대해 동일한 CSS 와 `special` class 를 사용하면 이것을 두 개의 별도 규칙으로 작성할 수 있습니다.
+동일한 CSS 를 사용하는 항목이 두 개 이상인 경우 규칙이 모든 개별 선택자에 적용되도록 개별 선택자를 _선택자 목록_ 으로 결합할 수 있습니다. 예를 들어, `h1` 에 대해 동일한 CSS 와 `special` class 를 사용하면 이것을 두 개의 별도 규칙으로 작성할 수 있습니다.
 
 ```css
 h1 {
@@ -66,7 +65,7 @@ h1 {
 
 또한 이들 사이에 쉼표를 추가하여 선택자 목록으로 결합할 수도 있습니다.
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -102,7 +101,8 @@ h1 {
 그러나 결합하면, 전체 규칙이 유효하지 않은 것으로 간주되어 `h1` 또는 class 가 스타일 지정되지 않습니다.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -116,19 +116,22 @@ h1, ..special {
 이 그룹에는 `<h1>` 과 같은 HTML 요소를 대상으로 하는 선택자가 포함됩니다.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 또한 class 를 대상으로 하는 선택자가 포함됩니다.
 
 ```css
-.box { }
+.box {
+}
 ```
 
 또는 ID
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### 속성 선택자
@@ -136,13 +139,16 @@ h1 { }
 이 선택자 그룹은 요소에 특정 속성이 있는지에 따라 요소를 선택하는 다른 방법을 제공합니다.
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 또는 특정 값을 가진 속성의 존재 여부를 기반으로 선택하십시오:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Pseudo-classes 및 pseudo-elements
@@ -150,13 +156,15 @@ a[href="https://example.com"] { }
 이 선택자 그룹에는 요소의 특정 상태를 스타일링하는 pseudo-classes 가 포함됩니다. 예를 들어 `:hover` pseudo-class 는 마우스 포인터에 의해 요소를 가리킬 때만 요소를 선택합니다:
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 또한 요소 자체가 아닌 요소의 특정 부분을 선택하는 pseudo-elements 도 포함됩니다. 예를 들어, `::first-line` 은 항상 `<span>` 이 첫 번째 형식의 라인을 감싸는 것처럼 작동하여, 요소 내부의 첫 번째 텍스트 라인 (아래의 경우 `<p>`) 을 선택합니다.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### 결합자 (Combinators)
@@ -164,7 +172,8 @@ p::first-line { }
 최종 선택자 그룹은 문서 내의 요소를 대상으로 하기 위해 다른 선택자를 결합합니다. 예를 들어 다음은 자식 결합자 (`>`) 를 사용하여 `<article>` 요소의 자식인 단락을 선택합니다:
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## 다음 단계

@@ -7,7 +7,7 @@ slug: Web/API/Element/innerHTML
 
 [Element](/zh-TW/docs/Glossary/Element) 的「innerHTML」屬性獲取或設置元素中包含的 HTML 或 XML 標記。
 
-> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的 `“&”`，`“<”` 和 `“>”`。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
+> **備註：** 如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（<）或（>），innerHTML 分別地回傳這些字符成為 HTML 的 `「&」`，`「<」` 和 `「>」`。 使用 `Node.textContent` 得到的這些文本節點的內容的原始拷貝件。
 
 To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 

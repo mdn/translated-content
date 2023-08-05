@@ -29,12 +29,12 @@ let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) statement;
 
 ### Parâmetros
 
-| Parameter                       | Description                                                                                                                                               |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                                                                                 |
-| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                                                                            |
+| Parameter                       | Description                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `var1`, `var2`, …, `varN`       | Nome da variável. Pode ser qualquer identificador válido.                                        |
+| `value1`, `value2`, …, `valueN` | Valor inicial da variável. Pode ser qualquer expressão válida.                                   |
 | `expression`                    | Qualquer [expressão](/pt-BR/docs/JavaScript/Guide/Expressions_and_Operators#Expressions) válida. |
-| `statement`                     | Qualquer [instrução](/pt-BR/docs/JavaScript/Reference/Statements) válida.                                               |
+| `statement`                     | Qualquer [instrução](/pt-BR/docs/JavaScript/Reference/Statements) válida.                        |
 
 ## Descrição
 
@@ -100,8 +100,8 @@ if (a === 5) {
   let a = 4; // O escopo é dentro do bloco if
   var b = 1; // O escopo é dentro da função
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
@@ -111,7 +111,7 @@ console.log(b); // 1
 É possível usar a keyword _let_ para vincular variáveis localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   alert(i); // 1, 2, 3, 4 ... 9
 }
 

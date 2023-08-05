@@ -1,5 +1,5 @@
 ---
-title: '<figcaption>: O elemento de legenda da figura'
+title: "<figcaption>: O elemento de legenda da figura"
 slug: Web/HTML/Element/figcaption
 ---
 
@@ -55,6 +55,6 @@ Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exempl
 
 {{Compat("html.elements.figcaption")}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("figure")}}.

@@ -1,13 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect
 ---
 
 {{JSRef}}

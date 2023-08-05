@@ -1,16 +1,6 @@
 ---
 title: Gérer les fichiers
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Création site
-  - Débutant
-  - Fichiers
-  - Guide
-  - HTML
-  - Site Web
-  - Theorie
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
 
 {{LearnSidebar}}
@@ -43,7 +33,7 @@ Cela dit, regardons la structure que le site de test devrait avoir. Les élémen
 3. **un dossier `styles`**&nbsp;: ce dossier contiendra le code des CSS utilisé pour la mise en forme du contenu (par exemple pour définir les couleurs à utiliser pour le texte et l'arrière-plan). Créez un dossier nommé `styles` dans votre dossier `site-test`.
 4. **un dossier `scripts`** : ce dossier contiendra le code JavaScript utilisé pour ajouter des fonctionnalités interactives sur votre site (par exemple, des boutons qui permettent de charger des données lorsqu'on clique dessus). Créez un dossier nommé `scripts` dans votre dossier `site-test`.
 
-> **Note :** Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant   **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
+> **Note :** Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
 
 ## Les chemins de fichiers
 
@@ -52,18 +42,18 @@ Pour que les fichiers puissent converser entre eux, il faut préciser le chemin 
 1. Copiez l'image précédemment choisie dans votre dossier `images`.
 2. Ouvrez le fichier `index.html` et insérez le code suivant exactement comme indiqué. Ne vous préoccupez pas de sa signification pour le moment — nous verrons les structures plus en détail par la suite.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Ma page de test</title>
-      </head>
-      <body>
-        <img src="" alt="Mon image de test">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Ma page de test</title>
+     </head>
+     <body>
+       <img src="" alt="Mon image de test" />
+     </body>
+   </html>
+   ```
 
 3. La ligne qui contient `<img src="" alt="Mon image de test">` correspond au code HTML qui insère une image dans la page. Il faut indiquer au HTML là où l'image se trouve. Cette image est à l'intérieur du dossier `images` et ce dossier se situe dans le même dossier qu'`index.html`. Pour parcourir l'arborescence des fichiers depuis `index.html` jusqu'à l'image, le chemin à utiliser est `images/votre‑fichier‑image`. Par exemple, si l'image est nommée `firefox‑icon.png`, le chemin sera `images/firefox-icon.png`.
 4. Insérez le chemin vers le fichier image dans le code HTML, entre les guillemets dans `src=""`.

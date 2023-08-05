@@ -1,7 +1,6 @@
 ---
 title: panneaux devtools
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
 
 {{AddonSidebar}}
@@ -41,14 +40,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 L'extension peut maintenant exécuter un code dans la fenêtre inspectée à l'aide de [`devtools`.inspectedWindow.eval()](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) ou en injectant un script de contenu via le script en arrière en passant un message. Vous pouvez trouver plus de détails sur la façon de procéder dans l'[Extension des outils de développement.](/fr/Add-ons/WebExtensions/Extending_the_developer_tools)

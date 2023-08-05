@@ -1,7 +1,6 @@
 ---
 title: Ajouter une page de paramètres
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 
 {{AddonSidebar}}
@@ -24,7 +23,6 @@ Créez un nouveau dossier nommé "settings", dans lequel vous créez un fichier 
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -35,7 +33,6 @@ Créez un nouveau dossier nommé "settings", dans lequel vous créez un fichier 
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -61,7 +58,6 @@ D'abord, mettez à jour le contenu de "manifest.json" avec ceci :
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -81,10 +77,9 @@ D'abord, mettez à jour le contenu de "manifest.json" avec ceci :
 
   "applications": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "addon@example.com"
     }
   }
-
 }
 ```
 
@@ -97,24 +92,21 @@ Vous avez ajoutez trois nouvelles clés :
 Ensuite, puisque vous avez promis de fournir "options.html", créons-le. Créez un fichier avec ce nom dans le répertoire "settings", et donnez-lui le contenu suivant :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -126,12 +118,11 @@ Créez "options.js", lui-aussi dans le dossier "settings", et remplissez le comm
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -162,7 +153,7 @@ Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure dep
 > **Attention :** A cause d'un bug dans [browser.storage.local.get()](/fr/Add-ons/WebExtensions/API/storage/StorageArea/get) dans Firefox pour les versions précédant la 52, le code qui suit ne fonctionnera pas. Pour le faire fonctionner pour les versions de Firefox avant la 52, les deux occurrences d'`item.color` dans `onGot()` doivent être changer pour `item[0].color`.
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 

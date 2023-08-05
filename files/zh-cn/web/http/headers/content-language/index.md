@@ -11,11 +11,11 @@ slug: Web/HTTP/Headers/Content-Language
 
 如果没有指明 `Content-Language`，那么默认地，文件内容是提供给所有语言的访问者使用的。多个语言标签也是合法的，同样的，这个首部还可以用来描述不同媒体类型的文件，而不单单局限于文本型文档。
 
-| Header type                                                                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                                      |
-| {{Glossary("Simple header", "CORS-safelisted request-header")}}             | yes                                      |
+| Header type                                                               | {{Glossary("Entity header")}} |
+| ------------------------------------------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                           |
+| {{Glossary("Simple header", "CORS-safelisted request-header")}}           | yes                           |
 
 ## 语法
 
@@ -39,14 +39,14 @@ Content-Language: de-DE, en-CA
 全局的 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达全部的 [HTML](/zh-CN/docs/Web/HTML)文档或者部分的语言。
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 不要使用这个 meta 元素去声明文档语言：
 
 ```html example-bad
 <!-- /!\ This is bad practice -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### 为资源指定目标访问者

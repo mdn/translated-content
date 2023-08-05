@@ -116,7 +116,7 @@ form.addEventListener(
     oReq.send(oData);
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 

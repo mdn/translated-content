@@ -1,7 +1,6 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
-translation_of: Glossary/Null
 ---
 
 En informatique, une valeur **`null`** représente une référence qui pointe, en général de manière volontaire, vers un {{glossary("objet")}} ou une adresse invalide ou inexistant. La signification d'une référence nulle varie selon les implémentations des langages.

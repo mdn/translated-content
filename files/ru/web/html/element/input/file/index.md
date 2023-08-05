@@ -1,7 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
-translation_of: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}
@@ -9,17 +8,17 @@ translation_of: Web/HTML/Element/input/file
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).
 
 ```html
-<input name="myFile" type="file">
+<input name="myFile" type="file" />
 ```
 
 {{EmbedLiveSample('file-example', 650, 40)}}
 
-| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                        |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Действия**                | {{event("change")}} и{{event("input")}}                                                                                                   |
+| **[Value](#value)**         | {{domxref("DOMString")}} представляет собой путь до выбранного файла.                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Действия**                | {{event("change")}} и{{event("input")}}                                                                                                                            |
 | **Поддерживаемые атрибуты** | [`accept`](/ru/docs/Web/HTML/Element/input#accept), [`multiple`](/ru/docs/Web/HTML/Element/input#multiple), [`required`](/ru/docs/Web/HTML/Element/input#required) |
-| **IDL атрибуты**            | `files` and `value`                                                                                                                                  |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                 |
+| **IDL атрибуты**            | `files` and `value`                                                                                                                                                |
+| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}                                                                                                                 |
 
 ## Value
 
@@ -40,13 +39,13 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Submit</button>
- </div>
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
 </form>
 ```
 
@@ -106,8 +105,11 @@ Let's look like a more complete example:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Choose file to upload</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Submit</button>
@@ -147,7 +149,12 @@ First of all, let's look at the HTML:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <input
+      type="file"
+      id="image_uploads"
+      name="image_uploads"
+      accept=".jpg, .jpeg, .png"
+      multiple />
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>
@@ -175,7 +182,8 @@ form ol {
   padding-left: 0;
 }
 
-form li, div > p {
+form li,
+div > p {
   background: #eee;
   display: flex;
   justify-content: space-between;
@@ -194,8 +202,9 @@ form p {
   padding-left: 10px;
 }
 
-form label, form button {
-  background-color: #7F9CCB;
+form label,
+form button {
+  background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px ridge black;
@@ -203,13 +212,15 @@ form label, form button {
   height: auto;
 }
 
-form label:hover, form button:hover {
-  background-color: #2D5BA3;
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
   color: white;
 }
 
-form label:active, form button:active {
-  background-color: #0D3F8F;
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
   color: white;
 }
 ```
@@ -221,8 +232,8 @@ Next, let's walk through the JavaScript.
 In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the input element by clicking its {{htmlelement("label")}}, so it is better to visually hide the input and style the label like a button, so the user will know to interact with it if they want to upload files.
 
 ```js
-var input = document.querySelector('input');
-var preview = document.querySelector('.preview');
+var input = document.querySelector("input");
+var preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -232,12 +243,12 @@ input.style.opacity = 0;
 Next, we add an [event listener](/ru/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 Whenever the `updateImageDisplay()` function is invoked, we:
 
-- Use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
+- Use a [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
 - Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
 - Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
@@ -251,31 +262,38 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   var curFiles = input.files;
-  if(curFiles.length === 0) {
-    var para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+  if (curFiles.length === 0) {
+    var para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    var list = document.createElement('ol');
+    var list = document.createElement("ol");
     preview.appendChild(list);
-    for(var i = 0; i < curFiles.length; i++) {
-      var listItem = document.createElement('li');
-      var para = document.createElement('p');
-      if(validFileType(curFiles[i])) {
-        para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
-        var image = document.createElement('img');
+    for (var i = 0; i < curFiles.length; i++) {
+      var listItem = document.createElement("li");
+      var para = document.createElement("p");
+      if (validFileType(curFiles[i])) {
+        para.textContent =
+          "File name " +
+          curFiles[i].name +
+          ", file size " +
+          returnFileSize(curFiles[i].size) +
+          ".";
+        var image = document.createElement("img");
         image.src = window.URL.createObjectURL(curFiles[i]);
 
         listItem.appendChild(image);
         listItem.appendChild(para);
-
       } else {
-        para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+        para.textContent =
+          "File name " +
+          curFiles[i].name +
+          ": Not a valid file type. Update your selection.";
         listItem.appendChild(para);
       }
 
@@ -288,15 +306,11 @@ function updateImageDisplay() {
 The custom `validFileType()` function takes a {{domxref("File")}} object as a parameter, then loops through the list of allowed file types, checking if any matches the file's `type` property. If a match is found, the function returns `true`. If no match is found, it returns `false`.
 
 ```js
-var fileTypes = [
-  'image/jpeg',
-  'image/pjpeg',
-  'image/png'
-]
+var fileTypes = ["image/jpeg", "image/pjpeg", "image/png"];
 
 function validFileType(file) {
-  for(var i = 0; i < fileTypes.length; i++) {
-    if(file.type === fileTypes[i]) {
+  for (var i = 0; i < fileTypes.length; i++) {
+    if (file.type === fileTypes[i]) {
       return true;
     }
   }
@@ -309,12 +323,12 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 
 ```js
 function returnFileSize(number) {
-  if(number < 1024) {
-    return number + 'bytes';
-  } else if(number > 1024 && number < 1048576) {
-    return (number/1024).toFixed(1) + 'KB';
-  } else if(number > 1048576) {
-    return (number/1048576).toFixed(1) + 'MB';
+  if (number < 1024) {
+    return number + "bytes";
+  } else if (number > 1024 && number < 1048576) {
+    return (number / 1024).toFixed(1) + "KB";
+  } else if (number > 1048576) {
+    return (number / 1048576).toFixed(1) + "MB";
   }
 }
 ```
@@ -325,10 +339,10 @@ The example looks like this; have a play:
 
 ## Specifications
 
-| Specification                                                                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                                                                        | Status                   | Comment            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'input.html#file-upload-state-(type=file)', '&lt;input type="file"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#file-upload-state-typefile', '&lt;input type="file"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Browser compatibility
 

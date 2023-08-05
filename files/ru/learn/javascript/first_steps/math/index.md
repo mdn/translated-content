@@ -1,19 +1,8 @@
 ---
 title: Базовая математика в JavaScript — числа и операторы
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - JavaScript
-  - Гайд
-  - Математика
-  - Начинающий
-  - Операторы
-  - Руководство
-  - Скриптинг
-  - Статья
-  - кодинг
-translation_of: Learn/JavaScript/First_steps/Math
-original_slug: Learn/JavaScript/Первые_шаги/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги")}}
 
 В этой части курса мы обсуждаем математику в JavaScript — как мы можем использовать {{Glossary("Operator","operators")}} и другие функции, чтобы успешно манипулировать числами для выполнения наших задач.
@@ -55,22 +44,22 @@ original_slug: Learn/JavaScript/Первые_шаги/Math
 
 1. Прежде всего, давайте объявим пару переменных и инициализируем их целым числом и числом с плавающей точкой, соответственно, затем введите имена переменных обратно, чтобы проверить, что все в порядке:
 
-    ```js
-    var myInt = 5;
-    var myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   var myInt = 5;
+   var myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. Числовые значения набираются без кавычек. Попробуйте объявить и инициализировать ещё пару переменных, содержащих числа, прежде чем двигаться дальше.
 3. Теперь давайте убедимся, что обе переменные содержат одинаковый тип данных. Для этого есть оператор {{jsxref("Operators/typeof", "typeof")}}, который позволяет проверить какой тип данных содержит в себе переменная. Введите две приведённые ниже строки:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    В обоих случаях вы должны получить `"number"` — это все упрощает, чем если бы разные числа имели разные типы данных, и нам приходилось иметь дело с ними по-разному.
+   В обоих случаях вы должны получить `"number"` — это все упрощает, чем если бы разные числа имели разные типы данных, и нам приходилось иметь дело с ними по-разному.
 
 ## Арифметические операторы
 
@@ -91,28 +80,28 @@ original_slug: Learn/JavaScript/Первые_шаги/Math
 
 1. Для начала попробуйте ввести простые примеры, такие как:
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. Вы также можете попробовать объявить переменные и присвоить им различные числа. Попробуйте вместо чисел использовать ранее объявленные переменные — переменные будут вести себя точно так же, как значения, которые они хранят. Например:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. И напоследок, попробуйте ввести более сложные выражения, например:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Некоторые примеры выше могут дать вам не тот результат, которого вы ожидали; приведённый ниже раздел может дать ответ на вопрос о том, почему.
 
@@ -259,18 +248,18 @@ x *= y; // x содержит значение 12
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine id stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine id stopped.";
   }
 }
 ```

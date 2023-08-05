@@ -5,9 +5,7 @@ slug: Web/API/Document/readyState
 
 {{APIRef("DOM")}}
 
-## 總覽
-
-{{ domxref("document") }} 的 **Document.readyState** 屬性描述文件的讀取狀態。
+{{ domxref("document") }} 的 **`Document.readyState`** 屬性描述文件的讀取狀態。
 
 ### 數值
 
@@ -16,7 +14,7 @@ slug: Web/API/Document/readyState
 - loading
   - : {{ domxref("document") }} 正在讀取中。
 - interactive
-  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) 事件已經被觸發。
+  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 事件已經被觸發。
 - complete
   - : 文件及子資源都完成讀取。這個狀態表示 [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件即將被觸發。
 
@@ -46,7 +44,7 @@ switch (document.readyState) {
   case "complete":
     // 頁面已經完成讀取。
     console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
     );
     break;
 }
@@ -80,6 +78,7 @@ document.onreadystatechange = function () {
 
 ## 參見
 
-- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event
-- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) event
-- [`load`](/zh-TW/docs/Web/API/Window/load_event) event
+- 相關事件：
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Window/load_event", "load")}}

@@ -1,7 +1,6 @@
 ---
 title: Estructura web y documentación
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Learn/HTML/Introduccion_a_HTML/estructura
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -74,7 +73,7 @@ HTML dispone de etiquetas adecuadas que puedes usar para establecer estas seccio
 El ejemplo de página web que se muestra arriba se consigue a partir del siguiente código (disponible en el [repositorio Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Observa el ejemplo anterior, y a continuación échale un vistazo al código de abajo para identificar las secciones marcadas en el ejemplo.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -83,8 +82,7 @@ El ejemplo de página web que se muestra arriba se consigue a partir del siguien
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- las tres siguientes líneas son un truco para obtener elementos semánticos de HTML5 que funcionan en versiones de Internet Explorer antiguas -->

@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.focus()
 slug: orphaned/Web/API/HTMLOrForeignElement/focus
-original_slug: Web/API/HTMLOrForeignElement/focus
-browser-compat: api.HTMLElement.focus
 ---
 
 {{ APIRef("HTML DOM") }}

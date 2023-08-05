@@ -1,7 +1,6 @@
 ---
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
@@ -58,8 +57,8 @@ NPM также можно использовать для (глобальной)
 
 1. Загрузите необходимый установщик:
 
-    1. Перейдите по ссылке <https://nodejs.org/en/>
-    2. Нажмите кнопку, чтобы загрузить сборку LTS, которая «Рекомендуется для большинства пользователей».
+   1. Перейдите по ссылке <https://nodejs.org/en/>
+   2. Нажмите кнопку, чтобы загрузить сборку LTS, которая «Рекомендуется для большинства пользователей».
 
 2. Установите Node, дважды щёлкнув по загруженному файлу и следуя инструкциям по установке.
 
@@ -94,37 +93,36 @@ v8.11.3
 
 1. Скопируйте следующий текст в файл с именем hellonode.js. Здесь используются чистые функции Node (ничего из Express) и некоторый синтаксис ES6:
 
-    ```js
-    //Загрузка модуля HTTP
-    const http = require("http");
-    const hostname = '127.0.0.1';
-    const port = 3000;
+   ```js
+   //Загрузка модуля HTTP
+   const http = require("http");
+   const hostname = "127.0.0.1";
+   const port = 3000;
 
-    //Создание HTTP-сервера
-    const server = http.createServer((req, res) => {
+   //Создание HTTP-сервера
+   const server = http.createServer((req, res) => {
+     //Установка HTTP-заголовков ответа с HTTP-статусом и Content type
+     res.statusCode = 200;
+     res.setHeader("Content-Type", "text/plain");
+     res.end("Hello World\n");
+   });
 
-      //Установка HTTP-заголовков ответа с HTTP-статусом и Content type
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end('Hello World\n');
-    });
+   //Слушание запросов на порту 3000, и в качестве каллбака функция, которая пишет в лог
+   server.listen(port, hostname, () => {
+     console.log("Server running at http://${hostname}:${port}/");
+   });
+   ```
 
-    //Слушание запросов на порту 3000, и в качестве каллбака функция, которая пишет в лог
-    server.listen(port, hostname, () => {
-      console.log('Server running at http://${hostname}:${port}/');
-    });
-    ```
+   Код импортирует модуль «http» и использует его для создания сервера (createServer ()), который обрабатывает HTTP-запросы на порту 3000. Затем сценарий выводит на консоль сообщение о том, какой URL-адрес браузера можно использовать для тестирования сервера. Функция createServer () принимает в качестве аргумента колбэк-функцию, которая будет вызываться при получении HTTP-запроса - она просто возвращает ответ с кодом состояния HTTP 200 («ОК») и простым текстом «Hello World».
 
-    Код импортирует модуль «http» и использует его для создания сервера (createServer ()), который обрабатывает HTTP-запросы на порту 3000. Затем сценарий выводит на консоль сообщение о том, какой URL-адрес браузера можно использовать для тестирования сервера. Функция createServer () принимает в качестве аргумента колбэк-функцию, которая будет вызываться при получении HTTP-запроса - она просто возвращает ответ с кодом состояния HTTP 200 («ОК») и простым текстом «Hello World».
-
-    > **Примечание:** Замечание: не беспокойтесь, если вы ещё не совсем понимаете, что делает этот код! Мы объясним наш код более подробно, как только мы начнём использовать Express!
+   > **Примечание:** Замечание: не беспокойтесь, если вы ещё не совсем понимаете, что делает этот код! Мы объясним наш код более подробно, как только мы начнём использовать Express!
 
 2. Запустите сервер, перейдя в тот же каталог, что и ваш файл hellonode.js в командной строке, и вызвав узел вместе с именем скрипта, например так:
 
-    ```bash
-    >node hellonode.js
-    Server running at http://127.0.0.1:3000/
-    ```
+   ```bash
+   >node hellonode.js
+   Server running at http://127.0.0.1:3000/
+   ```
 
 3. Перейдите к URL-адресу `http://127.0.0.1:3000`. Если все работает, браузер должен просто отобразить строку «Hello World».
 
@@ -144,83 +142,83 @@ v8.11.3
 
 1. Сначала создайте каталог для вашего нового приложения и перейдите в него:
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. Используйте команду npm init для создания файла package.json для вашего приложения. Эта команда запрашивает у вас несколько вещей, включая имя и версию вашего приложения, а также имя исходного файла точки входа (по умолчанию это index.js). Сейчас просто примите значения по умолчанию:
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    Если вы отобразите файл package.json (cat package.json), вы увидите принятые по умолчанию значения, заканчивающиеся лицензией.
+   Если вы отобразите файл package.json (cat package.json), вы увидите принятые по умолчанию значения, заканчивающиеся лицензией.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. Теперь установите Express в каталог myapp и сохраните его в списке зависимостей вашего файла package.json
 
 4. ```bash
-    npm install express --save
-    ```
+   npm install express --save
+   ```
 
-    Раздел зависимостей вашего package.json теперь появится в конце файла package.json и будет содержать Express.
+   Раздел зависимостей вашего package.json теперь появится в конце файла package.json и будет содержать Express.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.16.3"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.16.3"
+     }
+   }
+   ```
 
 5. Для использования библиотеки вы вызываете функцию require (), как показано ниже в вашем файле index.js.
 
-    ```js
-    const express = require('express')
-    const app = express();
+   ```js
+   const express = require("express");
+   const app = express();
 
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    });
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
+   });
 
-    app.listen(8000, () => {
-      console.log('Example app listening on port 8000!')
-    });
-    ```
+   app.listen(8000, () => {
+     console.log("Example app listening on port 8000!");
+   });
+   ```
 
-    Этот код показывает минимальное веб-приложение Express «HelloWorld». Это импортирует модуль «экспресс» и использует его для создания сервера (приложения), который обрабатывает HTTP-запросы на порту 8000 и выводит на консоль сообщение, объясняющее, какой URL-адрес браузера можно использовать для тестирования сервера. Функция app.get () отвечает только на запросы HTTP GET с указанным URL-путём ('/'), в этом случае вызывая функцию для отправки нашего Hello World! сообщение.
+   Этот код показывает минимальное веб-приложение Express «HelloWorld». Это импортирует модуль «экспресс» и использует его для создания сервера (приложения), который обрабатывает HTTP-запросы на порту 8000 и выводит на консоль сообщение, объясняющее, какой URL-адрес браузера можно использовать для тестирования сервера. Функция app.get () отвечает только на запросы HTTP GET с указанным URL-путём ('/'), в этом случае вызывая функцию для отправки нашего Hello World! сообщение.
 
-    Создайте файл с именем index.js в корне каталога приложения «myapp» и передайте ему содержимое, показанное выше.
+   Создайте файл с именем index.js в корне каталога приложения «myapp» и передайте ему содержимое, показанное выше.
 
 6. Вы можете запустить сервер, вызвав узел с помощью скрипта в командной строке:
 
-    ```bash
-    >node index.js
-    Example app listening on port 8000
-    ```
+   ```bash
+   >node index.js
+   Example app listening on port 8000
+   ```
 
 7. Перейдите к URL (`http://127.0.0.1:8000/`) . Если все работает, браузер должен просто отобразить строку «Hello World!».
 

@@ -1,7 +1,6 @@
 ---
 title: Инициализация объектов
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 
 {{JsSidebar("Операторы")}}
@@ -284,6 +283,6 @@ assert(obj3.__proto__ === 17);
 ## See also
 
 - [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ru/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

@@ -1,12 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-  - requête
-translation_of: Web/HTTP/Headers/Authorization
 ---
 
 {{HTTPSidebar}}

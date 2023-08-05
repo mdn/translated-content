@@ -22,7 +22,7 @@ let fontFaceSet = document.fonts;
 ### すべてのフォントが読み込まれた後の操作の実行
 
 ```js
-document.fonts.ready.then(function() {
+document.fonts.ready.then(function () {
   // すべてのフォントが読み込まれた後にのみ実行する必要がある操作を
   // ここに記述します。
 });

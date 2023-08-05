@@ -1,7 +1,6 @@
 ---
-title: '<br>: El elemento de salto de línea'
+title: "<br>: El elemento de salto de línea"
 slug: Web/HTML/Element/br
-original_slug: Web/HTML/Elemento/br
 ---
 
 ## Resumen
@@ -11,11 +10,11 @@ El elemento HTML _line break_ `<br>` produce un salto de línea en el texto (ret
 No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello utiliza la propiedad {{cssxref('margin')}} de [CSS](/es/docs/CSS) o el elemento {{HTMLElement("p")}}.
 
 | [Content categories](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content). |
-| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                              | Ninguno, es {{Glossary("empty element")}}.                                                                                                                                                                   |
-| Omisión de etiqueta                                                              | Debe tener etiqueta de inicio y no debe tener etiqueta de cierre. En documentos XHTML este elemento se escribe como `<br />`.                                                                                           |
-| Elementos padre permitidos                                                       | Cualquier elemento que acepte [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                         |
-| Interfaz DOM                                                                     | {{domxref("HTMLBRElement")}}                                                                                                                                                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                    | Ninguno, es {{Glossary("empty element")}}.                                                                                            |
+| Omisión de etiqueta                                    | Debe tener etiqueta de inicio y no debe tener etiqueta de cierre. En documentos XHTML este elemento se escribe como `<br />`.         |
+| Elementos padre permitidos                             | Cualquier elemento que acepte [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                  |
+| Interfaz DOM                                           | {{domxref("HTMLBRElement")}}                                                                                                          |
 
 ## Atributos
 
@@ -29,10 +28,10 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 ## Ejemplo
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 

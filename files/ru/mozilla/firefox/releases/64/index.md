@@ -1,7 +1,6 @@
 ---
 title: Firefox 64 для разработчиков
 slug: Mozilla/Firefox/Releases/64
-translation_of: Mozilla/Firefox/Releases/64
 ---
 
 {{FirefoxSidebar}}
@@ -99,13 +98,13 @@ _Без изменений._
 #### Удалено
 
 - Свойство {{domxref("Window.event")}}, добавленное в Firefox 63 для разрешения проблем веб-совместимости, скрыто за отключённой в релизных версиях настройкой `dom.window.event.enabled`, поскольку вскрылись иные затруднения ({{bug(1493869)}}). На самом деле, это было сделано в одном из минорных обновлений Firefox 63, мы просто обращаем на это ваше внимание.
-- Удалён интерфейс {{domxref("LocalMediaStream")}} и его метод `stop()` ({{bug(1258143)}}). См. {{SectionOnPage("/en-US/docs/Web/API/MediaStreamTrack/stop", "Stopping a video stream")}}, чтобы узнать, как остановить поток целиком.
+- Удалён интерфейс {{domxref("LocalMediaStream")}} и его метод `stop()` ({{bug(1258143)}}). См. [Stopping a video stream](/ru/docs/Web/API/MediaStreamTrack/stop#stopping_a_video_stream), чтобы узнать, как остановить поток целиком.
 - Удалены интерфейсы `AudioStreamTrack` и `VideoStreamTrack`, поскольку они уже некоторое время объявлены устаревшими ({{bug(1377146)}}). Их функции перенесены в {{domxref("MediaStreamTrack")}}; дорожки отныне идентифицируются по значению свойств {{domxref("MediaStreamTrack.kind", "kind")}}, таких, как `audio` или `video`.
 
 ### Безопасность
 
-- Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion)).
-- Теперь можно использовать {{httpheader("Referrer-Policy")}} для управления ресурсами, полученными через таблицы стилей ({{bug(1330487)}}) — см. {{SectionOnPage("/en-US/docs/Web/HTTP/Headers/Referrer-Policy", "Integration with CSS")}} для получения подробных сведений.
+- Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion)).
+- Теперь можно использовать {{httpheader("Referrer-Policy")}} для управления ресурсами, полученными через таблицы стилей ({{bug(1330487)}}) — см. [Integration with CSS](/ru/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) для получения подробных сведений.
 
 ### Плагины
 

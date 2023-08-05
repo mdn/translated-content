@@ -17,7 +17,11 @@ path 元素是用来定义形状的通用元素。所有的基本形状都可以
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

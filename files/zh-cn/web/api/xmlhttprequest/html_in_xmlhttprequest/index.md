@@ -21,7 +21,7 @@ W3C {{domxref("XMLHttpRequest")}} 规范为 {{domxref("XMLHttpRequest")}} 添加
 const xhr = new XMLHttpRequest();
 xhr.onload = () => {
   console.log(xhr.responseXML.title);
-}
+};
 xhr.open("GET", "file.html");
 xhr.responseType = "document";
 xhr.send();
@@ -39,9 +39,9 @@ function HTMLinXHR() {
     return false;
   }
   const req = new window.XMLHttpRequest();
-  req.open('GET', window.location.href, false);
+  req.open("GET", window.location.href, false);
   try {
-    req.responseType = 'document';
+    req.responseType = "document";
   } catch (e) {
     return true;
   }
@@ -68,7 +68,9 @@ function HTMLinXHR() {
 ```js
 function detectHtmlInXhr(callback) {
   if (!window.XMLHttpRequest) {
-    setTimeout(function() { callback(false); }, 0);
+    setTimeout(function () {
+      callback(false);
+    }, 0);
 
     return;
   }
@@ -77,21 +79,27 @@ function detectHtmlInXhr(callback) {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && !done) {
       done = true;
-      callback(!!(xhr.responseXML && xhr.responseXML.title && xhr.responseXML.title === "&&<"));
+      callback(
+        !!(
+          xhr.responseXML &&
+          xhr.responseXML.title &&
+          xhr.responseXML.title === "&&<"
+        ),
+      );
     }
-  }
+  };
   xhr.onabort = xhr.onerror = () => {
     if (!done) {
       done = true;
       callback(false);
     }
-  }
+  };
   try {
     xhr.open("GET", "detect.html");
     xhr.responseType = "document";
     xhr.send();
   } catch (e) {
-    setTimeout(function() {
+    setTimeout(function () {
       if (!done) {
         done = true;
         callback(false);

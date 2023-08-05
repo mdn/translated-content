@@ -24,7 +24,9 @@ var successBool = window.navigator.vibrate(pattern);
 
 ```js
 window.navigator.vibrate(200); // vibrate for 200ms
-window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]); // Vibrate 'SOS' in Morse.
+window.navigator.vibrate([
+  100, 30, 100, 30, 100, 200, 200, 30, 200, 30, 200, 200, 100, 30, 100, 30, 100,
+]); // Vibrate 'SOS' in Morse.
 ```
 
 ## 规范

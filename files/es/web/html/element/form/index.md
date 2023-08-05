@@ -1,7 +1,6 @@
 ---
 title: form
 slug: Web/HTML/Element/form
-original_slug: Web/HTML/Elemento/form
 ---
 
 ## Resumen
@@ -90,22 +89,23 @@ Este elemento implementa la interfaz [`HTMLFormElement`](/es/DOM/HTMLFormElement
 <!-- Formulario simple que enviará una petición GET -->
 <form action="">
   <label for="GET-name">Nombre:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="GET-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Formulario simple que enviará una petición POST -->
 <form action="" method="post">
   <label for="POST-name">Nombre:</label>
-  <input id="POST-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="POST-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Formulario con conjunto de campos, leyenda y etiqueta -->
 <form action="" method="post">
   <fieldset>
     <legend>Título</legend>
-    <input type="radio" name="radio" id="radio"> <label for="radio">Clic aquí</label>
+    <input type="radio" name="radio" id="radio" />
+    <label for="radio">Clic aquí</label>
   </fieldset>
 </form>
 ```

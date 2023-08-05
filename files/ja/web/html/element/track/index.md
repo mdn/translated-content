@@ -1,5 +1,5 @@
 ---
-title: '<track>: 埋め込みテキストトラック要素'
+title: "<track>: 埋め込みテキストトラック要素"
 slug: Web/HTML/Element/track
 ---
 
@@ -13,7 +13,7 @@ slug: Web/HTML/Element/track
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -21,7 +21,7 @@ slug: Web/HTML/Element/track
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。この要素は{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -93,7 +93,7 @@ slug: Web/HTML/Element/track
 - `label`
   - : 使用可能なテキストトラックを一覧表示する際にブラウザーが使用する、ユーザーに見せるテキストトラックのタイトルです。
 - `src`
-  - : トラック (`.vtt` ファイル) のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
+  - : トラック（`.vtt` ファイル）のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
 - `srclang`
   - : テキストデータの言語です。有効な [BCP 47](https://r12a.github.io/app-subtags/) 言語タグであることが必要です。`kind` 属性に `subtitles` を設定した場合は、`srclang` 属性を定義しなければなりません。
 

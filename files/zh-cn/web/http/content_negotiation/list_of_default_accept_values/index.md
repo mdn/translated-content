@@ -1,7 +1,6 @@
 ---
 title: Accept 默认值
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 ---
 
 {{HTTPSidebar}}
@@ -14,7 +13,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 | User Agent          | Value                                                                                                                                                                   | Comment                                                                                                                                           |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | 这个值可以通过 `network.http.accept.default` 参数来修改。                                                                                          |
+| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | 这个值可以通过 `network.http.accept.default` 参数来修改。                                                                                         |
 | Safari, Chrome      | `application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5`                                                                           | [source](http://www.newmediacampaigns.com/page/browser-rest-http-accept-headers)                                                                  |
 | Safari 5            | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | 这是对早期 `Accept` 头的改进，不再把 `image/png` 排在 `text/html` 之前。                                                                          |
 | Internet Explorer 8 | `image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*` | 请参见 [IE and the Accept Header (IEInternals' MSDN blog)](http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx). |
@@ -39,10 +38,10 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 | User Agent                       | Value                                                                                              | Comment                                                                 |
 | -------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Firefox 3.6 之前的版本           | _不支持 {{HTMLElement("video")}}_                                                          |                                                                         |
+| Firefox 3.6 之前的版本           | _不支持 {{HTMLElement("video")}}_                                                                  |                                                                         |
 | Firefox 3.6 及以上版本           | `audio/webm, audio/ogg, audio/wav, audio/*;q=0.9, application/ogg;q=0.7, video/*;q=0.6; */*;q=0.5` | 请参见[bug 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071) |
 | Chrome                           | `*/*`                                                                                              |                                                                         |
-| Internet Explorer 8 或更早的版本 | _不支持 {{HTMLElement("video")}}_                                                          |                                                                         |
+| Internet Explorer 8 或更早的版本 | _不支持 {{HTMLElement("video")}}_                                                                  |                                                                         |
 
 ## audio 请求
 
@@ -52,7 +51,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 | ------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | Firefox 3.6 及以上版本         | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` | See [bug 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071) |
 | Safari, Chrome                 | ?                                                                                            |                                                                       |
-| Internet Explorer 8 及更早版本 | _不支持 {{HTMLElement("audio")}}_                                                    |                                                                       |
+| Internet Explorer 8 及更早版本 | _不支持 {{HTMLElement("audio")}}_                                                            |                                                                       |
 | Internet Explorer 9            | ?                                                                                            |                                                                       |
 
 ## scripts 请求

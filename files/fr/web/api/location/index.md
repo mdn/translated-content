@@ -1,7 +1,6 @@
 ---
 title: Location
 slug: Web/API/Location
-translation_of: Web/API/Location
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,44 +12,98 @@ L'interface **`Location`** représente l'emplacement de l'objet auquel elle est 
 ### HTML
 
 ```html
-<span id="href" title="href"><span id="protocol" title="protocol">http:</span>//<span id="host" title="host"><span id="hostname" title="hostname">example.org</span>:<span id="port" title="port">8888</span></span><span id="pathname" title="pathname">/foo/bar</span><span id="search" title="search">?q=baz</span><span id="hash" title="hash">#bang</span></span>
+<span id="href" title="href"
+  ><span id="protocol" title="protocol">http:</span>//<span
+    id="host"
+    title="host"
+    ><span id="hostname" title="hostname">example.org</span>:<span
+      id="port"
+      title="port"
+      >8888</span
+    ></span
+  ><span id="pathname" title="pathname">/foo/bar</span
+  ><span id="search" title="search">?q=baz</span
+  ><span id="hash" title="hash">#bang</span></span
+>
 ```
 
 ### CSS
 
 ```css
-html, body {height:100%;}
-html {display:table; width:100%;}
-body {display:table-cell; text-align:center; vertical-align:middle; font-family:georgia; font-size:230%; line-height:1em; white-space:nowrap;}
+html,
+body {
+  height: 100%;
+}
+html {
+  display: table;
+  width: 100%;
+}
+body {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: georgia;
+  font-size: 230%;
+  line-height: 1em;
+  white-space: nowrap;
+}
 
-[title] {position:relative; display:inline-block; box-sizing:border-box; /*border-bottom:.5em solid;*/ line-height:2em; cursor:pointer;}
+[title] {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box; /*border-bottom:.5em solid;*/
+  line-height: 2em;
+  cursor: pointer;
+}
 
-[title]:before {content:attr(title); font-family:monospace; position:absolute; top:100%; width:100%; left:50%; margin-left:-50%; font-size:40%; line-height:1.5; background:black;}
+[title]:before {
+  content: attr(title);
+  font-family: monospace;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  font-size: 40%;
+  line-height: 1.5;
+  background: black;
+}
 [title]:hover:before,
-:target:before {background:black; color:yellow;}
+:target:before {
+  background: black;
+  color: yellow;
+}
 
-[title] [title]:before {margin-top:1.5em;}
-[title] [title] [title]:before {margin-top:3em;}
+[title] [title]:before {
+  margin-top: 1.5em;
+}
+[title] [title] [title]:before {
+  margin-top: 3em;
+}
 
 [title]:hover,
-:target {position:relative; z-index:1; outline:50em solid rgba(255,255,255,.8);}
+:target {
+  position: relative;
+  z-index: 1;
+  outline: 50em solid rgba(255, 255, 255, 0.8);
+}
 ```
 
 ### JavaScript
 
 ```js
-[].forEach.call(document.querySelectorAll('[title][id]'), function (node) {
-  node.addEventListener("click", function(e) {
+[].forEach.call(document.querySelectorAll("[title][id]"), function (node) {
+  node.addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    window.location.hash = '#' + $(this).attr('id');
+    window.location.hash = "#" + $(this).attr("id");
   });
 });
-[].forEach.call(document.querySelectorAll('[title]'), function (node) {
-  node.addEventListener("click", function(e) {
+[].forEach.call(document.querySelectorAll("[title]"), function (node) {
+  node.addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    window.location.hash = '';
+    window.location.hash = "";
   });
 });
 ```
@@ -104,17 +157,18 @@ _L'interface `Location` n'hérite d'aucune méthode, mais implémente celles de 
 ```js
 // Crée un élèment ancre et utilise la propriété href dans le but de cet exemple
 // Une alternative plus correcte est de naviguer vers l'URL et d'utiliser document.location ou window.location
-var url = document.createElement('a');
-url.href = 'https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container';
-console.log(url.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol);  // https:
-console.log(url.host);      // developer.mozilla.org:8080
-console.log(url.hostname);  // developer.mozilla.org
-console.log(url.port);      // 8080
-console.log(url.pathname);  // /en-US/search
-console.log(url.search);    // ?q=URL
-console.log(url.hash);      // #search-results-close-container
-console.log(url.origin);    // https://developer.mozilla.org:8080
+var url = document.createElement("a");
+url.href =
+  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
+console.log(url.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
+console.log(url.protocol); // https:
+console.log(url.host); // developer.mozilla.org:8080
+console.log(url.hostname); // developer.mozilla.org
+console.log(url.port); // 8080
+console.log(url.pathname); // /en-US/search
+console.log(url.search); // ?q=URL
+console.log(url.hash); // #search-results-close-container
+console.log(url.origin); // https://developer.mozilla.org:8080
 ```
 
 ## Spécifications

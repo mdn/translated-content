@@ -1,7 +1,6 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-original_slug: Web/JavaScript/Referencia/Sentencias/block
 ---
 
 {{jsSidebar("Statements")}}

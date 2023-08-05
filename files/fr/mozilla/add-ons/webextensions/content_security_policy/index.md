@@ -1,7 +1,6 @@
 ---
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
-translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
 
 {{AddonSidebar}}
@@ -15,14 +14,13 @@ La [Politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) (ou _Content Secu
 Comme les sites web, les extensions peuvent charger du contenu provenant de différentes sources. Ainsi, une popup sera définie comme un document HTML et pourra inclure du code JavaScript et CSS provenant de différentes sources, comme une page web normale :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <body>
-
     <!--Du contenu HTML-->
 
     <!--
@@ -38,7 +36,6 @@ Comme les sites web, les extensions peuvent charger du contenu provenant de diff
     <!-- On ajoute le script pour la pop-up-->
     <script src="popup.js"></script>
   </body>
-
 </html>
 ```
 
@@ -66,7 +63,7 @@ Celle-ci sera appliquée à toute extension qui n'a pas explicitement défini sa
 Avec la CSP par défaut, les éléments {{HTMLElement("script")}} et {{HTMLElement("object")}} peuvent uniquement charger des ressources qui sont locales à l'extension. Aussi, si on considère cette ligne dans un document HTML d'une extension :
 
 ```html
- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 ```
 
 La ressource jQuery demandée ne sera pas récupérée et la récupération échouera silencieusement. Deux méthodes permettent de résoudre ce problème :
@@ -95,7 +92,9 @@ var f = new Function("console.log('toto');");
 Avec la CSP par défaut, le code JavaScript écrit au sein d'un document HTML n'est pas exécuté. Cela concerne le JavaScript écrit dans les balises `<script>` ainsi que les gestionnaires d'évènement intégrés dans les attributs. Autrement dit, les formes suivantes ne sont pas autorisées :
 
 ```html
-<script>console.log("toto");</script>
+<script>
+  console.log("toto");
+</script>
 ```
 
 ```html

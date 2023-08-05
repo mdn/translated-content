@@ -1,8 +1,6 @@
 ---
 title: Использование пользовательских элементов
 slug: Web/API/Web_components/Using_custom_elements
-translation_of: Web/Web_Components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -24,7 +22,7 @@ original_slug: Web/Web_Components/Using_custom_elements
 К примеру, мы можем определить пользовательский элемент [word-count element](https://mdn.github.io/web-components-examples/word-count-web-component/):
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 Этот элемент называется `word-count`, объект соответствующего класса называется `WordCount`, и он наследует элементу {{htmlelement("p")}}.
@@ -76,47 +74,48 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-В этом фрагменте кода содержится определение конструктора {{jsxref("Classes.constructor","constructor")}} класса, которое всегда начинается с вызова [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) чтобы отработала цепочка прототипного наследования.
+В этом фрагменте кода содержится определение конструктора {{jsxref("Classes.constructor","constructor")}} класса, которое всегда начинается с вызова [`super()`](/ru/docs/Web/JavaScript/Reference/Operators/super) чтобы отработала цепочка прототипного наследования.
 
 Внутри конструктора мы определяем всю функциональность, которую получит элемент при создании его объекта. В данном случае мы добавляем shadow root к пользовательскому элементу, производим манипуляции с DOM, чтобы создать определённую структуру shadow DOM внутри элемента — которая затем присоединяется к shadow root — и наконец добавляем CSS к shadow root, чтобы задать его стиль.
 
 ```js
 // Создание shadow root
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
 // Создание spans
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+var wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+var icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+var info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // Берём содержимое атрибута и добавляем его в span
-var text = this.getAttribute('text');
+var text = this.getAttribute("text");
 info.textContent = text;
 
 // Вставляем иконку
 var imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-var img = document.createElement('img');
+var img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 
 // Создаём CSS для shadow dom
-var style = document.createElement('style');
+var style = document.createElement("style");
 
-style.textContent = '.wrapper {' +
-// CSS truncated for brevity
+style.textContent =
+  ".wrapper {" +
+  // CSS truncated for brevity
 
-// добавляем созданные элементы к shadow dom
+  // добавляем созданные элементы к shadow dom
 
-shadow.appendChild(style);
+  shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);
@@ -125,15 +124,17 @@ wrapper.appendChild(info);
 Наконец, регистрируем пользовательский элемент в `CustomElementRegistry` с помощью метода `define()`, который упоминался ранее — в качестве параметров мы передаём ему имя элемента и имя класса, который содержит его функциональность:
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 Теперь он доступен для использования на нашей странице. В HTML мы используем его так:
 
 ```html
-<popup-info img="img/alt.png" text="Код валидации вашей карты (CVC)
+<popup-info
+  img="img/alt.png"
+  text="Код валидации вашей карты (CVC)
   это дополнительная мера безопасности — это последние 3 или 4 цифры
-  на обороте вашей карты.">
+  на обороте вашей карты."></popup-info>
 ```
 
 > **Примечание:** вы можете прочитать [полный исходный код на JavaScript](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) здесь.
@@ -162,16 +163,14 @@ class ExpandingList extends HTMLUListElement {
 Далее мы регистрируем этот элемент с помощью метода `define()` как в прошлом примере, только на сей раз мы добавляем объект options, который определяет, какому встроенному элементу наследует данный:
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 Встроенный элемент используется на веб-странице немного по-другому:
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -197,10 +196,10 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 Конструктор класса очень простой — мы просто добавляем shadow DOM к элементу, а затем добавляем пустые элементы {{htmlelement("div")}} и {{htmlelement("style")}} к shadow root:
 
 ```js
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
-var div = document.createElement('div');
-var style = document.createElement('style');
+var div = document.createElement("div");
+var style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```
@@ -211,12 +210,18 @@ shadow.appendChild(div);
 function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i < childNodes.length; i++) {
-    if(childNodes[i].nodeName === 'STYLE') {
-      childNodes[i].textContent = 'div {' +
-                          ' width: ' + elem.getAttribute('l') + 'px;' +
-                          ' height: ' + elem.getAttribute('l') + 'px;' +
-                          ' background-color: ' + elem.getAttribute('c');
+  for (var i = 0; i < childNodes.length; i++) {
+    if (childNodes[i].nodeName === "STYLE") {
+      childNodes[i].textContent =
+        "div {" +
+        " width: " +
+        elem.getAttribute("l") +
+        "px;" +
+        " height: " +
+        elem.getAttribute("l") +
+        "px;" +
+        " background-color: " +
+        elem.getAttribute("c");
     }
   }
 }

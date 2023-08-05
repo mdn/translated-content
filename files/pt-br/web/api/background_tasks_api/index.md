@@ -28,18 +28,20 @@ Because idle callbacks are intended to give your code a way to cooperate with th
 Because the Background Tasks API is fairly new, your code may need to be able to work on browsers that don't yet support it. You can do so with a simple shim that uses {{domxref("WindowTimers.setTimeout()", "setTimeout()")}} as a fallback option. This isn't a {{Glossary("polyfill")}}, since it's not functionally identical; `setTimeout()` doesn't let you make use of idle periods, but instead runs your code when possible, leaving us to do the best we can to avoid causing the user to experience performance lag.
 
 ```js
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining: function() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-}
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 ```
 
 If {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} is undefined, we create it here. The function begins by recording the time at which our implementation was called. We'll be using that to compute the value returned by our shim for {{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}.
@@ -51,9 +53,11 @@ As a result, while our shim doesn't constrain itself to the amount of idle time 
 The implementation of our shim for {{domxref("Window.cancelIdleCallback", "cancelIdleCallback()")}} is much simpler:
 
 ```js
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-}
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 If `cancelIdleCallback()` isn't defined, this creates one which simply passes the specified callback ID through to {{domxref("WindowTimers.clearTimeout", "clearTimeout()")}}.
@@ -81,28 +85,28 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 ```html
 <p>
-  Demonstration of using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
+  Demonstration of using
+  <a
+    href="https://developer.mozilla.org/pt-BR/docs/Web/API/Background_Tasks_API">
+    cooperatively scheduled background tasks</a
+  >
+  using the <code>requestIdleCallback()</code>
   method.
 </p>
 
 <div class="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
   <progress id="progress" value="0"></progress>
-  <div class="button" id="startButton">
-    Start
-  </div>
+  <div class="button" id="startButton">Start</div>
   <div class="label counter">
-    Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    Task <span id="currentTaskNumber">0</span> of
+    <span id="totalTaskCount">0</span>
   </div>
 </div>
 
 <div class="logBox">
-  <div class="logHeader">
-    Log
-  </div>
-  <div id="log">
-  </div>
+  <div class="logHeader">Log</div>
+  <div id="log"></div>
 </div>
 ```
 
@@ -117,7 +121,7 @@ body {
 .logBox {
   margin-top: 16px;
   width: 400px;
-  height:500px;
+  height: 500px;
   border-radius: 6px;
   border: 1px solid black;
   box-shadow: 4px 4px 2px black;
@@ -133,7 +137,9 @@ body {
 }
 
 #log {
-  font: 12px "Courier", monospace;
+  font:
+    12px "Courier",
+    monospace;
   padding: 6px;
   overflow: auto;
   overflow-y: scroll;
@@ -228,22 +234,26 @@ Finally, we set up a couple of variables for other items:
 - `statusRefreshScheduled` is used to track whether or not we've already scheduled an update of the status display box for the upcoming frame, so that we only do it once per frame
 
 ```js hidden
-window.requestIdleCallback = window.requestIdleCallback || function(handler) {
-  let startTime = Date.now();
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (handler) {
+    let startTime = Date.now();
 
-  return setTimeout(function() {
-    handler({
-      didTimeout: false,
-      timeRemaining: function() {
-        return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
-};
+    return setTimeout(function () {
+      handler({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Math.max(0, 50.0 - (Date.now() - startTime));
+        },
+      });
+    }, 1);
+  };
 
-window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
-  clearTimeout(id);
-};
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  };
 ```
 
 #### Gerenciando a lista de tarefas
@@ -258,7 +268,7 @@ First, we need a function that enqueues tasks for future execution. That functio
 function enqueueTask(taskHandler, taskData) {
   taskList.push({
     handler: taskHandler,
-    data: taskData
+    data: taskData,
   });
 
   totalTaskCount++;
@@ -286,7 +296,10 @@ Our idle callback handler, runTaskQueue(), gets called when the browser determin
 
 ```js
 function runTaskQueue(deadline) {
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && taskList.length) {
+  while (
+    (deadline.timeRemaining() > 0 || deadline.didTimeout) &&
+    taskList.length
+  ) {
     let task = taskList.shift();
     currentTaskNumber++;
 
@@ -295,7 +308,7 @@ function runTaskQueue(deadline) {
   }
 
   if (taskList.length) {
-    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000} );
+    taskHandle = requestIdleCallback(runTaskQueue, { timeout: 1000 });
   } else {
     taskHandle = 0;
   }
@@ -323,9 +336,9 @@ DOM changes are scheduled by calling the `scheduleStatusRefresh()` function.
 
 ```js
 function scheduleStatusRefresh() {
-    if (!statusRefreshScheduled) {
-      requestAnimationFrame(updateDisplay);
-      statusRefreshScheduled = true;
+  if (!statusRefreshScheduled) {
+    requestAnimationFrame(updateDisplay);
+    statusRefreshScheduled = true;
   }
 }
 ```
@@ -338,7 +351,8 @@ The `updateDisplay()` function is responsible for drawing the contents of the pr
 
 ```js
 function updateDisplay() {
-  let scrolledToEnd = logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
+  let scrolledToEnd =
+    logElem.scrollHeight - logElem.clientHeight <= logElem.scrollTop + 1;
 
   if (totalTaskCount) {
     if (progressBarElem.max != totalTaskCount) {
@@ -358,7 +372,7 @@ function updateDisplay() {
   }
 
   if (scrolledToEnd) {
-      logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
+    logElem.scrollTop = logElem.scrollHeight - logElem.clientHeight;
   }
 
   statusRefreshScheduled = false;
@@ -383,7 +397,7 @@ The `log()` function adds the specified text to the log. Since we don't know at 
 ```js
 function log(text) {
   if (!logFragment) {
-      logFragment = document.createDocumentFragment();
+    logFragment = document.createDocumentFragment();
   }
 
   let el = document.createElement("div");
@@ -408,8 +422,8 @@ The function we'll be using as our task handler—that is, the function that wil
 function logTaskHandler(data) {
   log("<strong>Running task #" + currentTaskNumber + "</strong>");
 
-  for (i=0; i<data.count; i+=1) {
-    log((i+1).toString() + ". " + data.text);
+  for (i = 0; i < data.count; i += 1) {
+    log((i + 1).toString() + ". " + data.text);
   }
 }
 ```
@@ -434,17 +448,19 @@ function decodeTechnoStuff() {
 
   let n = getRandomIntInclusive(100, 200);
 
-  for (i=0; i<n; i++) {
+  for (i = 0; i < n; i++) {
     let taskData = {
       count: getRandomIntInclusive(75, 150),
-      text: "This text is from task number " + (i+1).toString() + " of " + n
+      text: "This text is from task number " + (i + 1).toString() + " of " + n,
     };
 
     enqueueTask(logTaskHandler, taskData);
   }
 }
 
-document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
+document
+  .getElementById("startButton")
+  .addEventListener("click", decodeTechnoStuff, false);
 ```
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.
@@ -466,13 +482,11 @@ Below is the actual functioning result of the code above. Try it out, play with 
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment |
-| -------------------------------------------- | ---------------------------------------- | ------- |
-| {{SpecName("Background Tasks")}} | {{Spec2("Background Tasks")}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## See also
 

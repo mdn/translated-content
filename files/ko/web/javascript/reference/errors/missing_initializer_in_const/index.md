@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing = in const declaration'
+title: "SyntaxError: missing = in const declaration"
 slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 ---
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 
 ## 무엇이 잘못되었나요?
 
-상수는 일반적인 실행 중에 프로그램에 의해 변경될 수 없는 값입니다. 상수는 재할당되거나 재선언될 수 없습니다. 자바스크립트에서 상수는 [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) 키워드를 사용해 선언됩니다. 상수는 이니셜라이저가 필요합니다. 다시말해, 한 문장 안에 선언과 동시에 초기화가 이루어져야 합니다 (따라서 추후 수정 불가).
+상수는 일반적인 실행 중에 프로그램에 의해 변경될 수 없는 값입니다. 상수는 재할당되거나 재선언될 수 없습니다. 자바스크립트에서 상수는 [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const) 키워드를 사용해 선언됩니다. 상수는 이니셜라이저가 필요합니다. 다시말해, 한 문장 안에 선언과 동시에 초기화가 이루어져야 합니다 (따라서 추후 수정 불가).
 
 ## 예제
 
@@ -54,6 +54,6 @@ let columns;
 
 ## 같이 보기
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)

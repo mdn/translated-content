@@ -48,7 +48,7 @@ console.log(result);
 if (result) {
   span.textContent = classes;
 } else {
-  span.textContent = 'token not replaced successfully';
+  span.textContent = "token not replaced successfully";
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
-title: 'Django Tutorial Part 4: Django 管理员站点'
+title: "Django Tutorial Part 4: Django 管理员站点"
 slug: Learn/Server-side/Django/Admin_site
-original_slug: learn/Server-side/Django/管理站点
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

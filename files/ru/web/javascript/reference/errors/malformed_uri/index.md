@@ -1,7 +1,6 @@
 ---
-title: 'URIError: malformed URI sequence'
+title: "URIError: malformed URI sequence"
 slug: Web/JavaScript/Reference/Errors/Malformed_URI
-translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
 ---
 
 {{jsSidebar("Errors")}}

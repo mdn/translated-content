@@ -1,7 +1,6 @@
 ---
 title: X.prototype.y called on incompatible type
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 ---
 
 {{jsSidebar("Errors")}}

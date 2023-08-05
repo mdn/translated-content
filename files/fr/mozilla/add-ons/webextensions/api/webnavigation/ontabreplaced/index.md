@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 ---
 
 {{AddonSidebar()}}
@@ -12,11 +11,11 @@ Lancé lorsque le contenu de l'onglet est remplacé par un onglet différent (g�
 
 ```js
 browser.webNavigation.onTabReplaced.addListener(
-  listener,                   // function
-  filter                      // optional object
+  listener, // function
+  filter, // optional object
 );
-browser.webNavigation.onTabReplaced.removeListener(listener)
-browser.webNavigation.onTabReplaced.hasListener(listener)
+browser.webNavigation.onTabReplaced.removeListener(listener);
+browser.webNavigation.onTabReplaced.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

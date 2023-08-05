@@ -1,7 +1,6 @@
 ---
 title: Approvisionnement PKCS
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
 
 {{AddonSidebar}}
@@ -18,12 +17,12 @@ Effectuez les étapes suivantes :
 2. Sélectonnez **Outils > Options** ou sélectionnez le **menu Firefox** puis **Options**
 3. Une fois la page Options ouverte, sélectionnez **Vie privée & Sécurité**
 4. Faites défiler vers le bas de la page et sous **Certificats** ou tapez sur **Dispositifs de sécurité...
-    ![](device_manager.png)**
+   ![](device_manager.png)**
 5. Cliquez ou appuyez sur le bouton **Charger**
-    ![](load_device_driver.png)
+   ![](load_device_driver.png)
 6. Entrez un nom pour le module de sécurité, tel que "_Ma Base de données Client_"
 
-    > **Attention :** il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
+   > **Attention :** il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
 
 7. Choisir **Parcourir...** pour trouver l'emplacement du module PKCS #11 sur votre ordinateur local, puis cliquez ou appuyez sur **OK** pour confirmer.
 

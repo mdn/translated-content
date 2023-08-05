@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: JSON.parse: bad parsing'
+title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
 
@@ -51,7 +51,7 @@ slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 
 ## 예제
 
-### `JSON.parse()` 는 여분의 콤마를 허용하지 않는다.
+### `JSON.parse()` 는 여분의 콤마를 허용하지 않는다
 
 다음 두 줄은 SyntaxError를 발생시킨다:
 
@@ -69,7 +69,7 @@ JSON.parse('[1, 2, 3, 4]');
 JSON.parse('{"foo": 1}');
 ```
 
-### 프로퍼티 이름은 반드시 쌍따옴표로 표현해야 한다.
+### 프로퍼티 이름은 반드시 쌍따옴표로 표현해야 한다
 
 'foo'처럼 프로퍼티를 작은 따옴표로 감싸서는 안된다.
 

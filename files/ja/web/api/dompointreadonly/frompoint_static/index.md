@@ -1,7 +1,6 @@
 ---
 title: DOMPointReadOnly.fromPoint()
 slug: Web/API/DOMPointReadOnly/fromPoint_static
-original_slug: Web/API/DOMPointReadOnly/fromPoint
 ---
 
 {{APIRef("DOM")}}
@@ -13,7 +12,7 @@ original_slug: Web/API/DOMPointReadOnly/fromPoint
 ## 構文
 
 ```js
-fromPoint(sourcePoint)
+fromPoint(sourcePoint);
 ```
 
 ### 引数
@@ -42,7 +41,7 @@ fromPoint(sourcePoint)
 このサンプルでは、 {{domxref("DOMPointReadOnly.x", "x")}} と {{domxref("DOMPointReadOnly.y", "y")}} に使用する値を含むインラインオブジェクトを指定し、二次元点を作成しています。 `z` と `w` プロパティは既定値（それぞれ `0` と `1`）のままにしておくことが可能です。
 
 ```js
-const point2D = DOMPointReadOnly.fromPoint({x: 25, y: 25})
+const point2D = DOMPointReadOnly.fromPoint({ x: 25, y: 25 });
 ```
 
 ### 既存の点を使用して三次元の点を作成します。
@@ -50,9 +49,9 @@ const point2D = DOMPointReadOnly.fromPoint({x: 25, y: 25})
 この例では、 {{domxref("DOMPoint")}} を用いて、 {{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} 型の点 `origPoint` を作成しています。そして、その点は `fromPoint()` の入力として使用され、新しい点 `newPoint` を作成します。
 
 ```js
-const origPoint = new DOMPoint(25, 25, 100, 0.5)
+const origPoint = new DOMPoint(25, 25, 100, 0.5);
 
-const newPoint = DOMPointReadOnly.fromPoint(origPoint)
+const newPoint = DOMPointReadOnly.fromPoint(origPoint);
 ```
 
 ## 仕様書

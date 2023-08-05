@@ -104,7 +104,7 @@ if (!Element.prototype.addEventListener) {
   }
   Element.prototype.addEventListener = function (
     sEventType,
-    fListener /*, useCapture (will be ignored!) */
+    fListener /*, useCapture (will be ignored!) */,
   ) {
     if (oListeners.hasOwnProperty(sEventType)) {
       var oEvtListeners = oListeners[sEventType];
@@ -142,7 +142,7 @@ if (!Element.prototype.addEventListener) {
   };
   Element.prototype.removeEventListener = function (
     sEventType,
-    fListener /*, useCapture (will be ignored!) */
+    fListener /*, useCapture (will be ignored!) */,
   ) {
     if (!oListeners.hasOwnProperty(sEventType)) {
       return;

@@ -46,9 +46,10 @@ En este ejemplo, la cabecera se expande sobre todas las columnas del artículo.
 ```html
 <article>
   <h2>My Very Special Columns</h2>
-  <p>This is a bunch of text split into three columns
-     using the CSS `columns` property. The text
-     is equally distributed over the columns.</p>
+  <p>
+    This is a bunch of text split into three columns using the CSS `columns`
+    property. The text is equally distributed over the columns.
+  </p>
 </article>
 ```
 

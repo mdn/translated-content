@@ -75,12 +75,12 @@ slug: Web/HTML/Element/datalist
 <label for="myBrowser">아래 목록에서 브라우저를 선택하세요:</label>
 <input list="browsers" id="myBrowser" name="myBrowser" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -102,5 +102,5 @@ slug: Web/HTML/Element/datalist
 
 ## 같이 보기
 
-- {{HTMLElement("input")}} 요소와 {{htmlattrxref("list", "input")}} 특성
+- {{HTMLElement("input")}} 요소와 [`list`](/ko/docs/Web/HTML/Element/input#list) 특성
 - {{HTMLElement("option")}} 요소

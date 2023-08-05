@@ -152,11 +152,11 @@ myAudio.pause();
 <button data-start="14" data-stop="15">2</button>
 <button data-start="12" data-stop="13">3</button>
 <button data-start="10" data-stop="11">4</button>
-<button data-start="8"  data-stop="9">5</button>
-<button data-start="6"  data-stop="7">6</button>
-<button data-start="4"  data-stop="5">7</button>
-<button data-start="2"  data-stop="3">8</button>
-<button data-start="0"  data-stop="1">9</button>
+<button data-start="8" data-stop="9">5</button>
+<button data-start="6" data-stop="7">6</button>
+<button data-start="4" data-stop="5">7</button>
+<button data-start="2" data-stop="3">8</button>
+<button data-start="0" data-stop="1">9</button>
 ```
 
 今、開始・停止時間を秒単位で指定したボタンがあります。"countdown.mp3" という MP3 ファイルは 2 秒ごとに声に出された数字から成り、ここで意図していることは、対応するボタンが押された時にその数が再生されるということです。
@@ -164,23 +164,31 @@ myAudio.pause();
 このように動作する JavaScript を追加しましょう。
 
 ```js
-const myAudio = document.getElementById('myAudio');
-const buttons = document.getElementsByTagName('button');
+const myAudio = document.getElementById("myAudio");
+const buttons = document.getElementsByTagName("button");
 let stopTime = 0;
 
 for (const button of buttons) {
-  button.addEventListener('click', () => {
-    myAudio.currentTime = button.getAttribute("data-start");
-    stopTime = button.getAttribute("data-stop");
-    myAudio.play();
-  }, false);
+  button.addEventListener(
+    "click",
+    () => {
+      myAudio.currentTime = button.getAttribute("data-start");
+      stopTime = button.getAttribute("data-stop");
+      myAudio.play();
+    },
+    false,
+  );
 }
 
-myAudio.addEventListener('timeupdate', () => {
-  if (myAudio.currentTime > stopTime) {
-    myAudio.pause();
-  }
-}, false);
+myAudio.addEventListener(
+  "timeupdate",
+  () => {
+    if (myAudio.currentTime > stopTime) {
+      myAudio.pause();
+    }
+  },
+  false,
+);
 ```
 
 > **メモ:** JSFiddle　上で[私たちの音声スプライトプレイヤーライブ](https://jsfiddle.net/59vwaame/)を試すことができます。
@@ -262,7 +270,9 @@ myAudio.addEventListener('timeupdate', () => {
       </button>
     </li>
   </ul>
-  <p class="sourced">All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a></p>
+  <p class="sourced">
+    All tracks sourced from <a href="https://jplayer.org/">jplayer.org</a>
+  </p>
 </section>
 ```
 
@@ -279,7 +289,7 @@ const audioCtx = new AudioContext();
 ここで、{{htmlelement("li")}}要素をすべて選択してみましょう。後で、これらの要素を利用して、トラックのファイルパスや個々の再生ボタンにアクセスすることができます。
 
 ```js
-const trackEls = document.querySelectorAll('li');
+const trackEls = document.querySelectorAll("li");
 ```
 
 使用する前に、各ファイルが読み込まれてバッファーにデコードされたことを確認したいので、これを可能にする `async` 関数を作成しましょう。
@@ -314,7 +324,7 @@ let offset = 0;
 function playTrack(audioBuffer) {
   const trackSource = audioCtx.createBufferSource();
   trackSource.buffer = audioBuffer;
-  trackSource.connect(audioCtx.destination)
+  trackSource.connect(audioCtx.destination);
 
   if (offset === 0) {
     trackSource.start();
@@ -331,37 +341,34 @@ function playTrack(audioBuffer) {
 
 ```js
 trackEls.forEach((el, i) => {
-
   // Get children
-  const anchor = el.querySelector('a');
-  const loadText = el.querySelector('p');
-  const playButton = el.querySelector('button');
+  const anchor = el.querySelector("a");
+  const loadText = el.querySelector("p");
+  const playButton = el.querySelector("button");
 
   // Load file
   loadFile(anchor.href).then((track) => {
     // Set loading to false
-    el.dataset.loading = 'false';
+    el.dataset.loading = "false";
 
     // Hide loading text
-    loadText.style.display = 'none';
+    loadText.style.display = "none";
 
     // Show button
-    playButton.style.display = 'inline-block';
+    playButton.style.display = "inline-block";
 
     // Allow play on click
-    playButton.addEventListener('click', () => {
-
+    playButton.addEventListener("click", () => {
       // Check if context is in suspended state (autoplay policy)
-      if (audioCtx.state === 'suspended') {
+      if (audioCtx.state === "suspended") {
         audioCtx.resume();
       }
 
       playTrack(track);
       playButton.dataset.playing = true;
-    })
-  })
-
-})
+    });
+  });
+});
 ```
 
 > **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/master/multi-track)ことができます。

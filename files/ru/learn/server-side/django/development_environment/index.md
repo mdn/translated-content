@@ -1,7 +1,6 @@
 ---
 title: Setting up a Django development environment
 slug: Learn/Server-side/Django/development_environment
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}
@@ -117,8 +116,8 @@ python3 -V
 
 1. Скачайте нужный установочный файл:
 
-    1. Перейдите в <https://www.python.org/downloads/>
-    2. Нажмите на кнопку **Скачать Python 3.6.4** (точная основная версия может отличаться).
+   1. Перейдите в <https://www.python.org/downloads/>
+   2. Нажмите на кнопку **Скачать Python 3.6.4** (точная основная версия может отличаться).
 
 2. Найдите файл при помощи _Finder_, дважды кликните по нему и следуйте подсказкам по установке.
 
@@ -141,8 +140,8 @@ Windows не включает Python по умолчанию, но вы може
 
 1. Скачайте нужный установочный файл:
 
-    1. Перейдите в <https://www.python.org/downloads/>
-    2. Нажмите на кнопку **Скачать Python 3.6.4** (точная основная версия может отличаться).
+   1. Перейдите в <https://www.python.org/downloads/>
+   2. Нажмите на кнопку **Скачать Python 3.6.4** (точная основная версия может отличаться).
 
 2. Установите Python, дважды кликнув на скачанный файл и следуя инструкциям по установке.
 

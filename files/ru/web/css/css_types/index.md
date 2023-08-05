@@ -1,7 +1,6 @@
 ---
 title: CSS basic data types
 slug: Web/CSS/CSS_Types
-translation_of: Web/CSS/CSS_Types
 ---
 
 {{CssRef}}

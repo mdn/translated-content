@@ -78,7 +78,7 @@ var empCount = 43;
 
 // 在全局作用域创建 adminName 属性
 // 因为没有使用 var，它会标记为可配置
-adminName = 'xyz';
+adminName = "xyz";
 
 EmployeeDetails = {
   name: "xyz",
@@ -93,16 +93,16 @@ delete EmployeeDetails.name; // 返回 true
 delete EmployeeDetails.salary; // 返回 true
 
 // EmployeeDetails 是全局作用域的一个属性。
-delete EmployeeDetails;   // 返回 true
+delete EmployeeDetails; // 返回 true
 
 // 相反，empCount 是不可配置的，
 // 因为创建它时使用了 var。
-delete empCount;       // 返回 false
+delete empCount; // 返回 false
 
 // adminName 是全局作用域的一个属性。
 // 因为它不是用 var 创建的，所以可以删除。
 // 因此，它是可配置的。
-delete adminName;       // 返回 true
+delete adminName; // 返回 true
 
 // delete 对内建静态属性不起作用
 // 这些属性是不可配置的
@@ -112,7 +112,7 @@ function f() {
   var z = 44;
 
   // delete 对局部变量名不起作用
-  delete z;     // 返回 false
+  delete z; // 返回 false
 }
 ```
 
@@ -133,16 +133,16 @@ var foo = new Foo();
 console.log(foo.bar); // 10
 
 // 删除 foo 对象的自身属性
-delete foo.bar;  // 返回 true
+delete foo.bar; // 返回 true
 
 // foo.bar 仍然在原型链上可用。
-console.log(foo.bar);   //42
+console.log(foo.bar); //42
 
 // 从原型上删除属性
 delete Foo.prototype.bar; // 返回 true
 
 // 由于已删除“bar”属性，因此不能再从 Foo 继承它。
-console.log(foo.bar);    //undefined
+console.log(foo.bar); //undefined
 ```
 
 ### 删除数组元素

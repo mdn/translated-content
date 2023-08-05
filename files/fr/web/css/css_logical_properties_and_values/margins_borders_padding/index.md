@@ -1,12 +1,6 @@
 ---
 title: Propriétés logiques pour les marges, les bordures et les remplissages
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
-translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
-original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}
@@ -21,53 +15,53 @@ La spécification détaille les correspondances entre les valeurs logiques et le
 
 Si on avait utilisé un mode d'écriture `horizontal-tb` orienté de droite à gauche, {{cssxref("margin-inline-start")}} aurait correspondu à {{cssxref("margin-right")}}. Pour un mode d'écriture vertical, elle aurait correspondu à {{cssxref("margin-top")}}.
 
-| Propriété logique                                    | Propriété physique                                       |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| {{cssxref("border-block-end")}}             | {{cssxref("border-bottom")}}                     |
-| {{cssxref("border-block-end-color")}}     | {{cssxref("border-bottom-color")}}             |
-| {{cssxref("border-block-end-style")}}     | {{cssxref("border-bottom-style")}}             |
-| {{cssxref("border-block-end-width")}}     | {{cssxref("border-bottom-width")}}             |
-| {{cssxref("border-block-start")}}         | {{cssxref("border-top")}}                         |
-| {{cssxref("border-block-start-color")}} | {{cssxref("border-top-color")}}                 |
-| {{cssxref("border-block-start-style")}} | {{cssxref("border-top-style")}}                 |
-| {{cssxref("border-block-start-width")}} | {{cssxref("border-top-width")}}                 |
-| {{cssxref("border-inline-end")}}         | {{cssxref("border-right")}}                     |
-| {{cssxref("border-inline-end-color")}} | {{cssxref("border-right-color")}}             |
-| {{cssxref("border-inline-end-style")}} | {{cssxref("border-right-style")}}             |
-| {{cssxref("border-inline-end-width")}} | {{cssxref("border-right-width")}}             |
-| {{cssxref("border-inline-start")}}         | {{cssxref("border-left")}}                     |
-| {{cssxref("border-inline-start-color")}} | {{cssxref("border-left-color")}}             |
-| {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}             |
-| {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}             |
-| {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}         |
-| {{cssxref("border-start-end-radius")}} | {{cssxref("border-bottom-left-radius")}}     |
-| {{cssxref("border-end-start-radius")}} | {{cssxref("border-top-right-radius")}}     |
+| Propriété logique                        | Propriété physique                        |
+| ---------------------------------------- | ----------------------------------------- |
+| {{cssxref("border-block-end")}}          | {{cssxref("border-bottom")}}              |
+| {{cssxref("border-block-end-color")}}    | {{cssxref("border-bottom-color")}}        |
+| {{cssxref("border-block-end-style")}}    | {{cssxref("border-bottom-style")}}        |
+| {{cssxref("border-block-end-width")}}    | {{cssxref("border-bottom-width")}}        |
+| {{cssxref("border-block-start")}}        | {{cssxref("border-top")}}                 |
+| {{cssxref("border-block-start-color")}}  | {{cssxref("border-top-color")}}           |
+| {{cssxref("border-block-start-style")}}  | {{cssxref("border-top-style")}}           |
+| {{cssxref("border-block-start-width")}}  | {{cssxref("border-top-width")}}           |
+| {{cssxref("border-inline-end")}}         | {{cssxref("border-right")}}               |
+| {{cssxref("border-inline-end-color")}}   | {{cssxref("border-right-color")}}         |
+| {{cssxref("border-inline-end-style")}}   | {{cssxref("border-right-style")}}         |
+| {{cssxref("border-inline-end-width")}}   | {{cssxref("border-right-width")}}         |
+| {{cssxref("border-inline-start")}}       | {{cssxref("border-left")}}                |
+| {{cssxref("border-inline-start-color")}} | {{cssxref("border-left-color")}}          |
+| {{cssxref("border-inline-start-style")}} | {{cssxref("border-left-style")}}          |
+| {{cssxref("border-inline-start-width")}} | {{cssxref("border-left-width")}}          |
+| {{cssxref("border-start-start-radius")}} | {{cssxref("border-top-left-radius")}}     |
+| {{cssxref("border-start-end-radius")}}   | {{cssxref("border-bottom-left-radius")}}  |
+| {{cssxref("border-end-start-radius")}}   | {{cssxref("border-top-right-radius")}}    |
 | {{cssxref("border-end-end-radius")}}     | {{cssxref("border-bottom-right-radius")}} |
-| {{cssxref("margin-block-end")}}             | {{cssxref("margin-bottom")}}                     |
-| {{cssxref("margin-block-start")}}         | {{cssxref("margin-top")}}                         |
-| {{cssxref("margin-inline-end")}}         | {{cssxref("margin-right")}}                     |
-| {{cssxref("margin-inline-start")}}         | {{cssxref("margin-left")}}                     |
-| {{cssxref("padding-block-end")}}         | {{cssxref("padding-bottom")}}                 |
-| {{cssxref("padding-block-start")}}         | {{cssxref("padding-top")}}                     |
-| {{cssxref("padding-inline-end")}}         | {{cssxref("padding-right")}}                     |
-| {{cssxref("padding-inline-start")}}     | {{cssxref("padding-left")}}                     |
+| {{cssxref("margin-block-end")}}          | {{cssxref("margin-bottom")}}              |
+| {{cssxref("margin-block-start")}}        | {{cssxref("margin-top")}}                 |
+| {{cssxref("margin-inline-end")}}         | {{cssxref("margin-right")}}               |
+| {{cssxref("margin-inline-start")}}       | {{cssxref("margin-left")}}                |
+| {{cssxref("padding-block-end")}}         | {{cssxref("padding-bottom")}}             |
+| {{cssxref("padding-block-start")}}       | {{cssxref("padding-top")}}                |
+| {{cssxref("padding-inline-end")}}        | {{cssxref("padding-right")}}              |
+| {{cssxref("padding-inline-start")}}      | {{cssxref("padding-left")}}               |
 
 De nouvelles propriétés raccourcies sont également apparues et permettent de manipuler les deux extrêmités d'un même axe. Ces propriétés raccourcies n'ont pas de propriété physique équivalente.
 
-| Propriété                                    | Objectif                                                                                                                                                             |
-| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{cssxref("border-block")}}         | Définit {{cssxref("border-color")}}, {{cssxref("border-style")}} et {{cssxref("border-width")}} pour les deux bordures sur l'axe de bloc. |
-| {{cssxref("border-block-color")}} | Définit `border-color` pour les deux bordures sur l'axe de bloc.                                                                                                     |
-| {{cssxref("border-block-style")}} | Définit `border-style` pour les deux bordures sur l'axe de bloc.                                                                                                     |
-| {{cssxref("border-block-width")}} | Définit `border-width` pour les deux bordures sur l'axe de bloc.                                                                                                     |
-| {{cssxref("border-inline")}}         | Définit `border-color`, `-style` et `-width` pour les deux bordures sur l'axe en ligne.                                                                              |
-| {{cssxref("border-inline-color")}} | Définit `border-color` pour les deux bordures sur l'axe en ligne.                                                                                                    |
-| {{cssxref("border-inline-style")}} | Définit `border-style` pour les deux bordures sur l'axe en ligne.                                                                                                    |
-| {{cssxref("border-inline-width")}} | Définit `border-width` pour les deux bordures sur l'axe en ligne.                                                                                                    |
-| {{cssxref("margin-block")}}         | Défnit les deux marges sur l'axe de bloc.                                                                                                                            |
-| {{cssxref("margin-inline")}}         | Défnit les deux marges sur l'axe en ligne.                                                                                                                           |
-| {{cssxref("padding-block")}}         | Définit le remplissage (_padding_) sur l'axe de bloc.                                                                                                                |
-| {{cssxref("padding-inline")}}     | Définit le remplissage (_padding_) sur l'axe en ligne.                                                                                                               |
+| Propriété                          | Objectif                                                                                                                                  |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| {{cssxref("border-block")}}        | Définit {{cssxref("border-color")}}, {{cssxref("border-style")}} et {{cssxref("border-width")}} pour les deux bordures sur l'axe de bloc. |
+| {{cssxref("border-block-color")}}  | Définit `border-color` pour les deux bordures sur l'axe de bloc.                                                                          |
+| {{cssxref("border-block-style")}}  | Définit `border-style` pour les deux bordures sur l'axe de bloc.                                                                          |
+| {{cssxref("border-block-width")}}  | Définit `border-width` pour les deux bordures sur l'axe de bloc.                                                                          |
+| {{cssxref("border-inline")}}       | Définit `border-color`, `-style` et `-width` pour les deux bordures sur l'axe en ligne.                                                   |
+| {{cssxref("border-inline-color")}} | Définit `border-color` pour les deux bordures sur l'axe en ligne.                                                                         |
+| {{cssxref("border-inline-style")}} | Définit `border-style` pour les deux bordures sur l'axe en ligne.                                                                         |
+| {{cssxref("border-inline-width")}} | Définit `border-width` pour les deux bordures sur l'axe en ligne.                                                                         |
+| {{cssxref("margin-block")}}        | Défnit les deux marges sur l'axe de bloc.                                                                                                 |
+| {{cssxref("margin-inline")}}       | Défnit les deux marges sur l'axe en ligne.                                                                                                |
+| {{cssxref("padding-block")}}       | Définit le remplissage (_padding_) sur l'axe de bloc.                                                                                     |
+| {{cssxref("padding-inline")}}      | Définit le remplissage (_padding_) sur l'axe en ligne.                                                                                    |
 
 ## Exemples de marges
 

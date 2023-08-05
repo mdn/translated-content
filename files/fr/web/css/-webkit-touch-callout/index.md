@@ -1,12 +1,6 @@
 ---
-title: '-webkit-touch-callout'
+title: "-webkit-touch-callout"
 slug: Web/CSS/-webkit-touch-callout
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-touch-callout
 ---
 
 {{CSSRef}}{{Non-standard_header}}

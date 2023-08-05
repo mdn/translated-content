@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setSeconds
 ---
 
 {{JSRef}}
@@ -26,7 +18,7 @@ dateObj.setSeconds(valeurSecondes[, valeurMs])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setSeconds(valeurSecondes)
+dateObj.setSeconds(valeurSecondes);
 ```
 
 ### Paramètres
@@ -52,7 +44,7 @@ Si un paramètre utilisé est en dehors des limites attendues, `setSeconds()` te
 
 ```js
 var leGrandJour = new Date();
-leGrandJour.setSeconds(30)
+leGrandJour.setSeconds(30);
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: Méthode
 slug: Glossary/Method
-translation_of: Glossary/Method
 ---
 
 Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui est une {{glossary("property","propriété")}} d'un {{glossary("object","objet")}}. Il existe deux sortes de méthodes&nbsp;: Les _méthodes d'instance_ qui représentent les fonctions fournissant une interface pour effectuer des actions dans le contexte de l'objet qu'elles composent ou les _méthodes statiques_ qui représentent les fonctions pouvant être exécutées sans nécessiter d'instanciation.
@@ -12,8 +11,8 @@ Une **méthode** est une {{glossary("fonction", "fonction")}} (`function`) qui e
 
 ### Culture générale
 
-- [Méthode (informatique)](https://fr.wikipedia.org/wiki/M%C3%A9thode_(informatique)) sur Wikipédia
-- [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Fonctions/D%C3%A9finition_de_m%C3%A9thode) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
+- [Méthode (informatique)](<https://fr.wikipedia.org/wiki/Méthode_(informatique)>) sur Wikipédia
+- [Définir une méthode en JavaScript](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode) (comparaison entre la syntaxe traditionnelle et la version proposée pour ECMAScript 6)
 
 ### Référence technique
 

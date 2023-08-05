@@ -1,7 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
 
 {{jsSidebar("Statements")}}

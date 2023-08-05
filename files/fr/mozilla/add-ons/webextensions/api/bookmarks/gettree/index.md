@@ -1,7 +1,6 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
 
 {{AddonSidebar()}}
@@ -15,7 +14,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingTree = browser.bookmarks.getTree()
+var gettingTree = browser.bookmarks.getTree();
 ```
 
 ### Paramètres

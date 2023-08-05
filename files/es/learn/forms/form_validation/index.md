@@ -1,7 +1,6 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -97,7 +96,7 @@ Vamos a empezar con un ejemplo sencillo: una entrada que te permite elegir si pr
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Enviar</button>
 </form>
 ```
@@ -125,7 +124,7 @@ Añade un atributo `required` a tu entrada, como se muestra a continuación.
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza? (requerido) </label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Enviar</button>
 </form>
 ```
@@ -178,7 +177,7 @@ Implementemos un ejemplo. Actualiza tu HTML para añadir un atributo [`pattern`]
 ```html
 <form>
   <label for="choose">¿Prefieres un plátano o una cereza?</label>
-  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza ">
+  <input id="choose" name="i_like" required pattern="[Pp]látano|[Cc]ereza " />
   <button>Enviar</button>
 </form>
 ```
@@ -189,7 +188,7 @@ input:invalid {
 }
 
 input:valid {
-border: 2px solid black;
+  border: 2px solid black;
 }
 ```
 
@@ -227,11 +226,17 @@ Ahora elimina el contenido del elemento `<body>` y reemplázalo con lo siguiente
 <form>
   <div>
     <label for="choose">¿Prefieres un plátano o una cereza?</label>
-    <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input
+      type="text"
+      id="choose"
+      name="i_like"
+      required
+      minlength="6"
+      maxlength="6" />
   </div>
   <div>
     <label for="number">¿Cuántos te gustaría comer?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Enviar</button>
@@ -248,11 +253,11 @@ input:invalid {
 }
 
 input:valid {
-border: 2px solid black;
+  border: 2px solid black;
 }
 
 div {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 ```
 
@@ -334,7 +339,7 @@ input[type="email"],
 input[type="number"],
 textarea,
 fieldset {
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
 }
@@ -422,7 +427,9 @@ const email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
-    email.setCustomValidity("¡Se esperaba una dirección de correo electrónico!");
+    email.setCustomValidity(
+      "¡Se esperaba una dirección de correo electrónico!",
+    );
   } else {
     email.setCustomValidity("");
   }
@@ -452,7 +459,7 @@ En primer lugar, el código HTML. Una vez más, siéntete libre de construir est
   <p>
     <label for="mail">
       <span>Por favor, introduzca una dirección de correo electrónico: </span>
-      <input type="email" id="mail" name="mail" required minlength="8">
+      <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
   </p>
@@ -475,14 +482,14 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
   appearance: none;
 
@@ -497,9 +504,9 @@ input[type=email]{
 }
 
 /* Este es nuestro diseño para los campos no válidos */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -508,7 +515,7 @@ input:focus:invalid {
 
 /* Este es el diseño para nuestros mensajes de error */
 .error {
-  width : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -529,30 +536,30 @@ Vamos a ver el JavaScript que implementa la validación de error personalizada.
 ```js
 // Hay muchas formas de elegir un nodo DOM; aquí obtenemos el formulario y, a continuación, el campo de entrada
 // del correo electrónico, así como el elemento span en el que colocaremos el mensaje de error.
-const form  = document.getElementsByTagName('form')[0];
+const form = document.getElementsByTagName("form")[0];
 
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const email = document.getElementById("mail");
+const emailError = document.querySelector("#mail + span.error");
 
-email.addEventListener('input', function (event) {
+email.addEventListener("input", function (event) {
   // Cada vez que el usuario escribe algo, verificamos si
   // los campos del formulario son válidos.
 
   if (email.validity.valid) {
     // En caso de que haya un mensaje de error visible, si el campo
     // es válido, eliminamos el mensaje de error.
-    emailError.innerHTML = ''; // Restablece el contenido del mensaje
-    emailError.className = 'error'; // Restablece el estado visual del mensaje
+    emailError.innerHTML = ""; // Restablece el contenido del mensaje
+    emailError.className = "error"; // Restablece el estado visual del mensaje
   } else {
     // Si todavía hay un error, muestra el error exacto
     showError();
   }
 });
 
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   // si el campo de correo electrónico es válido, dejamos que el formulario se envíe
 
-  if(!email.validity.valid) {
+  if (!email.validity.valid) {
     // Si no es así, mostramos un mensaje de error apropiado
     showError();
     // Luego evitamos que se envíe el formulario cancelando el evento
@@ -561,22 +568,25 @@ form.addEventListener('submit', function (event) {
 });
 
 function showError() {
-  if(email.validity.valueMissing) {
+  if (email.validity.valueMissing) {
     // Si el campo está vacío
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'Debe introducir una dirección de correo electrónico.';
-  } else if(email.validity.typeMismatch) {
+    emailError.textContent =
+      "Debe introducir una dirección de correo electrónico.";
+  } else if (email.validity.typeMismatch) {
     // Si el campo no contiene una dirección de correo electrónico
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El valor introducido debe ser una dirección de correo electrónico.';
-  } else if(email.validity.tooShort) {
+    emailError.textContent =
+      "El valor introducido debe ser una dirección de correo electrónico.";
+  } else if (email.validity.tooShort) {
     // Si los datos son demasiado cortos
     // muestra el mensaje de error siguiente.
-    emailError.textContent = 'El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.';
+    emailError.textContent =
+      "El correo electrónico debe tener al menos ${ email.minLength } caracteres; ha introducido ${ email.value.length }.";
   }
 
   // Establece el estilo apropiado
-  emailError.className = 'error activo';
+  emailError.className = "error activo";
 }
 ```
 
@@ -625,9 +635,9 @@ El HTML es casi el mismo; solo hemos eliminado las funciones de validación de H
 <form>
   <p>
     <label for="mail">
-        <span>Por favor, introduzca una dirección de correo electrónico: </span>
-        <input type="text" class="mail" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Por favor, introduzca una dirección de correo electrónico: </span>
+      <input type="text" class="mail" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
   </p>
   <!-- Algunos navegadores con compatibilidad heredada deben tener el atributo «type»
@@ -643,7 +653,7 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 form {
@@ -668,9 +678,9 @@ input.mail {
 }
 
 /* Este es nuestro diseño para los campos no válidos */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -679,7 +689,7 @@ input:focus.invalid {
 
 /* Este es el diseño para nuestros mensajes de error */
 .error {
-  width : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -698,8 +708,8 @@ Los grandes cambios están en el código JavaScript, que necesita hacer mucho m�
 
 ```js
 // Hay menos formas de elegir un nodo DOM con navegadores antiguos
-const form  = document.getElementsByTagName('form')[0];
-const email = document.getElementById('mail');
+const form = document.getElementsByTagName("form")[0];
+const email = document.getElementById("mail");
 
 // Lo siguiente es un truco para llegar al siguiente nodo de elementos hermanos en el DOM
 // Esto es peligroso porque puedes construir fácilmente un bucle infinito.
@@ -708,25 +718,26 @@ let error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // según la especificación HTML5
-const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Muchos navegadores antiguos no son compatibles con el método addEventListener.
 // Aquí hay una manera simple de manejar esto; está lejos de ser la única.
 function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  let previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     const output = callback(e);
 
     // Una devolución de llamada que devuelve «false» detiene la cadena de devolución de llamada
     // e interrumpe la ejecución de la devolución de llamada del evento.
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
-  }
-};
+  };
+}
 
 // Ahora podemos reconstruir nuestra restricción de validación
 // Debido a que no confiamos en la pseudoclase de CSS, tenemos que

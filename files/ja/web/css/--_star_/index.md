@@ -1,5 +1,5 @@
 ---
-title: 'カスタムプロパティ (--*): CSS 変数'
+title: "カスタムプロパティ (--*): CSS 変数"
 slug: Web/CSS/--*
 l10n:
   sourceCommit: 8318078e0cf65cd4d56e80376c03019dcb292dc1

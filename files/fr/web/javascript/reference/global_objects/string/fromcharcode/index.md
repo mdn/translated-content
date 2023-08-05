@@ -1,15 +1,6 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-  - UTF-16
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCharCode
 ---
 
 {{JSRef}}
@@ -44,22 +35,22 @@ La méthode `fromCharCode()` étant une méthode statique de l'objet `String`, e
 Pour les caractères du plan multilingue de base, UTF-16 utilise une seule unité de code :
 
 ```js
-String.fromCharCode(65,66,67); // ABC
-String.fromCharCode(0x2014);   // "—"
-String.fromCharCode(0x12014);  // "—" également, le 1 a été tronqué
-String.fromCharCode(8212);     // renvoie également "—" car 8212
-                               // est la forme décimale
+String.fromCharCode(65, 66, 67); // ABC
+String.fromCharCode(0x2014); // "—"
+String.fromCharCode(0x12014); // "—" également, le 1 a été tronqué
+String.fromCharCode(8212); // renvoie également "—" car 8212
+// est la forme décimale
 ```
 
 Les caractères hors de ce plan utilisent deux unités de code (on parle de _surrogate pair_) :
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // Point de code U+1F303 pour l'émoji nuit étoilée
+String.fromCharCode(0xd83c, 0xdf03); // Point de code U+1F303 pour l'émoji nuit étoilée
 
 // Forme décimale équivalente :
 String.fromCharCode(55356, 57091);
 
-String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07);
+String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07);
 // "\uD834\uDF06a\uD834\uDF07"
 ```
 

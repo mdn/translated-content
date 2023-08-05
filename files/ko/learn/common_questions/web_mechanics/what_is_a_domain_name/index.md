@@ -1,7 +1,6 @@
 ---
 title: What is a domain name?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 이 글에서 domain name(도메인명)에 대해 다룹니다. : 도메인이 무엇인 지, 어떻게 구성되어있는지, 도메인을 어떻게 얻을 수 있는지.
@@ -12,7 +11,7 @@ original_slug: Learn/Common_questions/What_is_a_domain_name
       <th scope="row">선행사항:</th>
       <td>
         우선,
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/How_the_Internet_works"
           >인터넷이 작동하는 법</a
         >을 알 필요가 있고,
         <a href="/en-US/Learn/Understanding_URLs"
@@ -59,7 +58,7 @@ _아직 이용가능한 Active Learning이 없습니다. [Please, consider contr
 
 #### 누가 도메인 이름을 갖고 있나요?
 
-You cannot “buy a domain name”. You pay for the right to use a domain name for one or more years. You can renew your right, and your renewal has priority over other people's applications. But you never own the domain name.
+You cannot "buy a domain name". You pay for the right to use a domain name for one or more years. You can renew your right, and your renewal has priority over other people's applications. But you never own the domain name.
 
 Companies called registrars use domain name registries to keep track of technical and administrative information connecting you to your domain name.
 
@@ -69,7 +68,7 @@ Companies called registrars use domain name registries to keep track of technica
 
 To find out whether a given domain name is available,
 
-- Go to a domain name registrar's website. Most of them provide a “whois” service that tells you whether a domain name is available.
+- Go to a domain name registrar's website. Most of them provide a "whois" service that tells you whether a domain name is available.
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
 ```
@@ -113,7 +112,7 @@ NOT FOUND
 과정은 다음과 같습니다.
 
 1. 등록 웹사이트로 가세요.
-2. 일반적으로 눈에 띄게 “Get a domain name” 이라는 글자가 있을거에요. 클릭하세요.
+2. 일반적으로 눈에 띄게 "Get a domain name" 이라는 글자가 있을거에요. 클릭하세요.
 3. 요구하는 상세 정보를 채우세요. 그리고 특별히 원하는 도메인 네임의 스펠링을 정확하게 입력했는지 다시한번 확인해주세요. 한번 지불하면 돌이킬 수 없습니다.
 4. 등록이 잘 되었다면 등록 웹사이트에서 연락이 올 것입니다. 그리고 몇시간내로 모든 DNS 서버들이 당신의 DNS 정보를 받을거구요.
 
@@ -121,7 +120,7 @@ NOT FOUND
 
 #### DNS 갱신
 
-DNS databases are stored on every DNS server worldwide, and all these servers refer to a few ones called “authoritative name server” or “top-level DNS servers.” Whenever your registrar creates or updates any information for a given domain, the information must be refreshed in every DNS database. Each DNS server that knows about a given domain stores the information for some time before it is automatically invalidated and then refreshed (the DNS server queries an authoritative server again). Thus, it takes some time for DNS servers that know about this domain name to get the up-to-date information.
+DNS databases are stored on every DNS server worldwide, and all these servers refer to a few ones called "authoritative name server" or "top-level DNS servers." Whenever your registrar creates or updates any information for a given domain, the information must be refreshed in every DNS database. Each DNS server that knows about a given domain stores the information for some time before it is automatically invalidated and then refreshed (the DNS server queries an authoritative server again). Thus, it takes some time for DNS servers that know about this domain name to get the up-to-date information.
 
 > **참고:** **Note :** This time is often called **propagation time**. However this term is not precise since the update is not propagating itself (top → down). DNS servers queried by your computer (down) are the ones that fetch the information from the authoritative server (top) when they need it.
 

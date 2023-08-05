@@ -1,5 +1,5 @@
 ---
-title: 'Express チュートリアル Part 5: ライブラリデータの表示'
+title: "Express チュートリアル Part 5: ライブラリデータの表示"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 

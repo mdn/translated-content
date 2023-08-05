@@ -1,14 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Modules
-  - export
-translation_of: Web/JavaScript/Reference/Statements/export
-original_slug: Web/JavaScript/Reference/Instructions/export
 ---
 
 {{jsSidebar("Statements")}}
@@ -58,24 +50,24 @@ Il existe deux types d'export différents : les exports **nommés** et les expor
 - Les exports nommés :
 
   ```js
-    // exporte une fonction déclarée précédemment
-    export { maFonction };
+  // exporte une fonction déclarée précédemment
+  export { maFonction };
 
-    // exporte une constante
-    export const machin = Math.sqrt(2);
-    ```
+  // exporte une constante
+  export const machin = Math.sqrt(2);
+  ```
 
 - Les exports par défaut (fonction) :
 
   ```js
-    export default function() {} 
-    ```
+  export default function () {}
+  ```
 
 - Les exports par défaut (classe) :
 
   ```js
-    export default class {} 
-    ```
+  export default class {}
+  ```
 
 Les exports nommés sont utiles pour exporter plusieurs valeurs. Lors de l'importation, il est obligatoire d'utiliser le même nom de l'objet correspondant.
 
@@ -84,8 +76,8 @@ Mais un export par défaut peut être importé avec n'importe quel nom, par exem
 ```js
 let k;
 export default k = 12; // dans le fichier test.js
-import m from './test'; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
-console.log (m); // enregistrera 12
+import m from "./test"; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
+console.log(m); // enregistrera 12
 ```
 
 La syntaxe suivante n'exporte pas le défaut depuis le module importé :
@@ -97,7 +89,7 @@ export * from …;
 Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
 
 ```js
-export {default} from 'mod';
+export { default } from "mod";
 ```
 
 Il est possible de renommer un export afin d'éviter des conflits de nommage :
@@ -111,11 +103,11 @@ On peut également agréger les valeurs exportées à celles d'autres modules qu
 
 ```js
 // Dans moduleParent.js
-export { maFonction, maVariable } from 'moduleFils1.js';
-export { maClasse } from 'moduleFils2.js'
+export { maFonction, maVariable } from "moduleFils1.js";
+export { maClasse } from "moduleFils2.js";
 
 // Dans le module de plus haut niveau
-import { maFonction, maVariable, maClasse } from 'moduleParent.js';
+import { maFonction, maVariable, maClasse } from "moduleParent.js";
 ```
 
 ## Exemples
@@ -136,9 +128,9 @@ export { cube, machin };
 De cette façon, dans un autre script, on pourra avoir :
 
 ```js
-import { cube, machin } from 'mon-module';
+import { cube, machin } from "mon-module";
 console.log(cube(3)); // 27
-console.log(machin);    // 4.555806215962888
+console.log(machin); // 4.555806215962888
 ```
 
 > **Note :** Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
@@ -158,7 +150,7 @@ export default function cube(x) {
 Alors, dans un autre script, il sera facile d'importer l'export par défaut :
 
 ```js
-import cube from './mon-module.js';
+import cube from "./mon-module.js";
 console.log(cube(3)); // 27
 ```
 

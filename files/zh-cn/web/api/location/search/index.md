@@ -1,5 +1,5 @@
 ---
-title: 'Location: search'
+title: "Location: search"
 slug: Web/API/Location/search
 ---
 
@@ -19,7 +19,7 @@ object.search = string;
 ## Examples
 
 ```js
-// 声明了一个 <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.search?q=123"> 元素在文档流中
+// 声明了一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/Location.search?q=123"> 元素在文档流中
 var anchor = document.getElementById("myAnchor");
 var queryString = anchor.search; // Returns:'?q=123'
 

@@ -1,7 +1,6 @@
 ---
 title: getLastChecked
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 ---
 
 {{AddonSidebar()}}
@@ -11,7 +10,7 @@ Retourne le temps écoulé depuis que la dernière demande a été complétée.
 ## Syntaxe
 
 ```js
-var state = browser.captivePortal.getLastChecked()
+var state = browser.captivePortal.getLastChecked();
 ```
 
 ### Valeur retournée
