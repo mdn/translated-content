@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 {{jsxref("String")}} 的 **`charCodeAt()`** 方法返回一个整数，表示给定索引处的 UTF-16 码元，其值介于 `0` 和 `65535` 之间。
 
-`charCodeAt()` 方法总是将字符串当作 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能返回孤项代理。如果要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
+`charCodeAt()` 方法总是将字符串当作 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能返回单独代理项。如果要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
@@ -42,7 +42,7 @@ Unicode 码位的范围是 `0` 到 `1114111`（`0x10FFFF`）。`charCodeAt()` �
 "ABC".charCodeAt(0); // 返回 65
 ```
 
-`charCodeAt()` 可能会返回孤项代理，它们不是有效的 Unicode 字符。
+`charCodeAt()` 可能会返回单独代理项，它们不是有效的 Unicode 字符。
 
 ```js
 const str = "𠮷𠮾";
