@@ -1,7 +1,6 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-original_slug: Glossario/HTTP
 ---
 
 HTTP (HyperText Transfer Protocol) é o {{glossary("protocolo")}} básico que habilita a transferência de arquivos na {{glossary("World Wide Web","Web")}}, normalmente entre um navegador e um servidor para que os humanos possam lê-los. A versão atual da especificação HTTP é chamada HTTP / 2.

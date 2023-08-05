@@ -1,8 +1,8 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-translation_of: Web/API/HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTrackElement`**
@@ -38,20 +38,17 @@ _Наследует свойства своего родителя, {{domxref("H
   - : Возвращает {{Domxref("TextTrack")}} is the track element's text track data.
 
 | `track` {{ReadOnlyInline}} | {{Domxref("TextTrack")}} | The track element's text track data. |
-| -------------------------------- | -------------------------------- | ------------------------------------ |
+| -------------------------- | ------------------------ | ------------------------------------ |
 
 ## Методы
 
 _Нет специфичных методов; наследует методы из родительского элемента, {{domxref("HTMLElement")}}._
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                            | Status                           | Comment                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "the-video-element.html#the-track-element", "HTMLTrackElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-track-element", "HTMLTrackElement")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

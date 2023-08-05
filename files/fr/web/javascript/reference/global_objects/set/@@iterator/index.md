@@ -1,7 +1,6 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 ---
 
 {{JSRef}}

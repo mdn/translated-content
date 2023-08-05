@@ -1,7 +1,6 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 
 {{JSRef}}

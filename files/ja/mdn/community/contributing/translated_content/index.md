@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
-original_slug: MDN/Contribute/Localize
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---

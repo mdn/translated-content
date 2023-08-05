@@ -1,11 +1,8 @@
 ---
 title: Захват кадров с WebRTC
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Захват WebRTC
-translation_of: Web/API/WebRTC_API/Taking_still_photos
-original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
@@ -29,7 +26,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Все это просто, и мы увидим как они связаны между собой, когда обратимся к коду JavaScript .
 
-В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент` canvas `является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
+В разметке имеется элемент {{HTMLElement("canvas")}} , который сохраняет захваченный кадр, который может быть дополнительно обработан и конвертируется в выходной файл изображения. Элемент`canvas`является скрытым, в его стиле свойство {{cssxref("display")}}`:none`, во избежании поломки интерфейса, где пользователю совершенно не обязательно видеть служебные элементы.
 
 Для отображения пользователю результата захвата кадра, в интерфейсе расположен элемент {{HTMLElement("img")}}.
 
@@ -232,5 +229,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/ru/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- [Использование изображений](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

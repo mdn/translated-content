@@ -1,7 +1,6 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
-translation_of: Web/API/WebXR_Device_API
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}

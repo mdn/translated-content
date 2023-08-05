@@ -1,7 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
 {{JSRef}}

@@ -21,8 +21,11 @@ slug: Web/API/Clipboard_API
 `Clipboard` オブジェクトをインスタンス化して生成するのではなく、グローバル変数の {{domxref("Navigator.clipboard")}} を通してシステムクリップボードにアクセスすることができます。
 
 ```js
-navigator.clipboard.readText().then(
-  (clipText) => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 このスニペットはクリップボードからテキストを読み取り、最初に見つかった `editor` クラスを持つ要素に追加します。 {{domxref("Clipboard.readText", "readText()")}} (および場合によっては {{domxref("Clipboard.read", "read()")}}) はクリップボードにテキストがないときには空文字列を返すので、このコードは安全です。

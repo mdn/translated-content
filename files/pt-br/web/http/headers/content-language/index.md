@@ -58,14 +58,14 @@ Content-Language: de-DE, en-CA
 O atributo global [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang) é usado em elementos HTML para indicar a língua de um documento [HTML](/pt-BR/docs/Web/HTML) ou partes dele.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 Não use este elemento meta como o abaixo para definir a língua de um documento:
 
 ```html example-bad
 <!-- /!\ Esta prática é ruim -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Indicando uma audiência destinada para um documento
@@ -78,8 +78,8 @@ Content-Language: de, en
 
 ## Especificações
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                  | Title                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

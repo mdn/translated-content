@@ -1,8 +1,8 @@
 ---
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
-translation_of: Web/API/Element/clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Element.clientWidth`** равно 0 для инлайн элементов и элементов без CSS; для всех остальных равняется ширине элемента в пикселях, включая padding, но исключая ширину рамки (border), внешние отступы (margin), и вертикальную полосу прокрутки (если она есть).
@@ -21,15 +21,9 @@ var intElemClientWidth = element.clientWidth;
 
 ![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('CSSOM View', '#dom-element-clientwidth', 'clientWidth')}} | {{Spec2("CSSOM View")}} |             |
-
-### Примечание
-
-`clientWidth` был впервые представлен в объектной модели MS IE DHTML.
+{{Specifications}}
 
 ## Совместимость с браузерами
 

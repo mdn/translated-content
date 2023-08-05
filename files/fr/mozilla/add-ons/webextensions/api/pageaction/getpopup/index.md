@@ -1,7 +1,6 @@
 ---
 title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
 
 {{AddonSidebar()}}

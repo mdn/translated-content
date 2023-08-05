@@ -1,12 +1,6 @@
 ---
 title: Number.isSafeInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
 
 {{JSRef}}

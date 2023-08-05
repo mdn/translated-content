@@ -1,7 +1,6 @@
 ---
 title: Основы шаблонов
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 ---
 
 Шаблон - это текстовый файл, определяющий _структуру_, или внешний вид выходного файла, с предусмотренными позициями, в которые будут помещаться данные при отображении по шаблону (в _Express_ шаблоны также называют _представлениями_).

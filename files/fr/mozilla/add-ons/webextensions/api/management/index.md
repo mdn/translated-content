@@ -1,7 +1,6 @@
 ---
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management
 ---
 
 {{AddonSidebar}}

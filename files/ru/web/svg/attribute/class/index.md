@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
-translation_of: Web/SVG/Attribute/class
 ---
 
 « [Домашняя страница справочника по SVG атрибутам](/en/SVG/Attribute)

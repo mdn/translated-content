@@ -1,7 +1,6 @@
 ---
 title: "HTMLAreaElement: toString() メソッド"
 slug: Web/API/HTMLAreaElement/toString
-original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 l10n:
   sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---

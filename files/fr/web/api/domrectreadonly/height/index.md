@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
-translation_of: Web/API/DOMRectReadOnly/height
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

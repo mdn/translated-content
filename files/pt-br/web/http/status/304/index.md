@@ -19,8 +19,8 @@ A resposta equivalente {{HTTPStatus("200")}} `OK` teria incluso os cabeçalhos {
 
 ## Especificações
 
-| Specification                                            | Title                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Specification                               | Title                                                        |
+| ------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores

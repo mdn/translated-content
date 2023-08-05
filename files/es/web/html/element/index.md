@@ -1,7 +1,6 @@
 ---
 title: Referencia de Elementos HTML
 slug: Web/HTML/Element
-original_slug: Web/HTML/Elemento
 ---
 
 {{HTMLSidebar("Elements")}}

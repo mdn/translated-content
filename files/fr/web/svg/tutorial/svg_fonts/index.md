@@ -1,7 +1,6 @@
 ---
 title: Polices SVG
 slug: Web/SVG/Tutorial/SVG_fonts
-translation_of: Web/SVG/Tutorial/SVG_fonts
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}

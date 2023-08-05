@@ -1,7 +1,6 @@
 ---
 title: IDBFactory
 slug: Web/API/IDBFactory
-translation_of: Web/API/IDBFactory
 ---
 
 {{APIRef("IndexedDB")}}

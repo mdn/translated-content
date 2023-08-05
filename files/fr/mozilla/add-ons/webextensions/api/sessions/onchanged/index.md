@@ -1,7 +1,6 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
 
 {{AddonSidebar()}}

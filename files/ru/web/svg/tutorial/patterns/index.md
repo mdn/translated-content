@@ -1,7 +1,6 @@
 ---
 title: Шаблоны
 slug: Web/SVG/Tutorial/Patterns
-translation_of: Web/SVG/Tutorial/Patterns
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 

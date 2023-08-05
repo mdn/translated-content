@@ -1,7 +1,6 @@
 ---
 title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 ---
 
 {{AddonSidebar()}}

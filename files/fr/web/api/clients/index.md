@@ -1,7 +1,6 @@
 ---
 title: Clients
 slug: Web/API/Clients
-translation_of: Web/API/Clients
 ---
 
 {{APIRef("Service Workers API")}}

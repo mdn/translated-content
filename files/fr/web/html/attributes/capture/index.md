@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : capture"
 slug: Web/HTML/Attributes/capture
-translation_of: Web/HTML/Attributes/capture
 ---
 
 {{HTMLSidebar}}

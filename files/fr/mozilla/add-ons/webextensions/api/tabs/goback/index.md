@@ -1,7 +1,6 @@
 ---
 title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
 {{AddonSidebar()}}

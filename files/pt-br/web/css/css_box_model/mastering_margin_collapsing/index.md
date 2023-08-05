@@ -1,7 +1,6 @@
 ---
 title: Dominando margin collapsing
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
-original_slug: Web/CSS/CSS_Box_Model/margin_collapsing
 ---
 
 {{CSSRef}}As margens [superior](/pt-BR/docs/Web/CSS/margin-top) e [inferior](/pt-BR/docs/Web/CSS/margin-bottom) dos blocos às vezes são combinadas(colapsadas/reduzidas) para uma única margem cujo o tamanho é a maior das margens (se os elementos tiverem a mesma margem, uma delas não será somada), combinado a ele, um comportamento conhecido como **margin collapsing**. Note que as margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#Absolute_positioning) nunca colapsam.
@@ -13,8 +12,8 @@ Margin collapsing ocorre em três casos básicos:
   - : As margens de irmãos adjacentes são colapsadas (execeto quando o último irmão precisar ser [limpado](/pt-BR/docs/Web/CSS/clear) devido ao uso de floats em elementos anteriores ). Por exemplo:
 
     ```html
-     <p>A margem inferior deste parágrafo é colapsada...</p>
-     <p>... com margem superior deste parágrafo.</p>
+    <p>A margem inferior deste parágrafo é colapsada...</p>
+    <p>... com margem superior deste parágrafo.</p>
     ```
 
 - Pai e primeiro/último filho
@@ -33,8 +32,8 @@ Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de 
 
 ## Especificações
 
-| Espeficicações                                                                                       | Status                   | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| Espeficicações                                                             | Status              | Comentário        |
+| -------------------------------------------------------------------------- | ------------------- | ----------------- |
 | {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Definição inicial |
 
 ## Veja Também

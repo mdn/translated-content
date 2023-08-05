@@ -1,7 +1,6 @@
 ---
 title: Acerca de JavaScript
 slug: conflicting/Web/JavaScript
-original_slug: Web/JavaScript/About_JavaScript
 ---
 
 {{JsSidebar}}

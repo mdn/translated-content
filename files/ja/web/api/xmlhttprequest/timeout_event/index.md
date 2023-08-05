@@ -1,5 +1,5 @@
 ---
-title: 'XMLHttpRequest: timeout イベント'
+title: "XMLHttpRequest: timeout イベント"
 slug: Web/API/XMLHttpRequest/timeout_event
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2

@@ -1,7 +1,6 @@
 ---
 title: .htaccess ( hypertext access )
 slug: Learn/Server-side/Apache_Configuration_htaccess
-translation_of: Learn/Server-side/Apache_Configuration_htaccess
 ---
 
 Название .htaccess происходит от "hypertext access". Это файл с расширением HTACCESS, который содержит различные настройки сервера apache. Он позволяет настраивать для текущей директории защиту паролем, редиректы и многое другое.

@@ -1,15 +1,6 @@
 ---
 title: Разбираемся с обёртыванием Flex элементов
 slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
-tags:
-  - CSS
-  - Flex
-  - flexbox
-  - grid
-  - сворачивание элементов
-  - флекс
-  - флексбокс
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
 
 {{CSSRef}}

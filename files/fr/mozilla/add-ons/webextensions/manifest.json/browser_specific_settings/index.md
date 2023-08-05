@@ -1,7 +1,6 @@
 ---
 title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
 
 {{AddonSidebar}}

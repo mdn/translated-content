@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
-translation_of: Web/API/NodeIterator/root
 ---
 
 {{APIRef("DOM")}}

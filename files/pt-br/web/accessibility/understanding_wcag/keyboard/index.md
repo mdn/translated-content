@@ -1,7 +1,6 @@
 ---
 title: Keyboard
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-original_slug: Web/Acessibilidade/Entendendo_WCAG/Keyboard
 ---
 
 To be fully accessible, a web page must be operable by someone using only a keyboard to access and control it. This includes users of screen readers, but can also include users who have trouble operating a pointing device such as a mouse or trackball, or whose mouse is not working at the moment, or who simply prefer to use a keyboard for input whenever possible.

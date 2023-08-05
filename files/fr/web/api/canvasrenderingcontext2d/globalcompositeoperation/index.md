@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
 
 {{APIRef}}

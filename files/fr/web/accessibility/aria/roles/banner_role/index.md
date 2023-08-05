@@ -1,7 +1,6 @@
 ---
 title: Utilisation du rôle banner
 slug: Web/Accessibility/ARIA/Roles/banner_role
-translation_of: Web/Accessibility/ARIA/Roles/Banner_role
 ---
 
 ### Description

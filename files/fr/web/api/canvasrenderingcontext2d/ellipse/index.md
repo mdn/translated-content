@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
-translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
 
 {{APIRef}} {{SeeCompatTable}}

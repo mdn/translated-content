@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 ---
 
 {{JSRef}}

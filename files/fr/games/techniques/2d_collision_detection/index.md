@@ -1,7 +1,6 @@
 ---
 title: Détection de collisions en 2D
 slug: Games/Techniques/2D_collision_detection
-translation_of: Games/Techniques/2D_collision_detection
 ---
 
 {{GamesSidebar}}

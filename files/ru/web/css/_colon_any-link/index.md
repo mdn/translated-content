@@ -1,18 +1,6 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
-tags:
-  - ':any-link'
-  - CSS
-  - Web
-  - Вёрстка
-  - Гиперссылки
-  - Справка
-  - Ссылки
-  - Экспериментальное
-  - псевдокласс
-  - селектор
-translation_of: Web/CSS/:any-link
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

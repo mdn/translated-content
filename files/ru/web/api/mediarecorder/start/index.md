@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
-translation_of: Web/API/MediaRecorder/start
 ---
 
 {{APIRef("Media Recorder API")}}
@@ -50,9 +49,7 @@ An `InvalidState` error is raised if the `start()` method is called while the `M
 
 ## Specifications
 
-| Specification                                                                                                                                        | Status                                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-start-void-long-timeslice", "MediaRecorder.start()")}} | {{Spec2("MediaStream Recording")}} | Initial definition |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

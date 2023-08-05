@@ -1,12 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Справка
-  - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
 {{HTTPSidebar}}
 

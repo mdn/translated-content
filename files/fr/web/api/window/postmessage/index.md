@@ -1,7 +1,6 @@
 ---
 title: Window.postMessage
 slug: Web/API/Window/postMessage
-translation_of: Web/API/Window/postMessage
 ---
 
 {{ ApiRef() }}

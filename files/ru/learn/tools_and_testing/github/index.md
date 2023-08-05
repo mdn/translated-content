@@ -1,12 +1,6 @@
 ---
 title: Git и GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - Веб
-  - Начинающий
-  - гит
-translation_of: Learn/Tools_and_testing/GitHub
-original_slug: Learn/Tools_and_testing/GitHub
 ---
 
 {{LearnSidebar}}

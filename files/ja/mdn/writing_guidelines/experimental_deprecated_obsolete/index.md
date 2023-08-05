@@ -1,7 +1,6 @@
 ---
 title: 実験的、非推奨、廃止
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-original_slug: MDN/Guidelines/Conventions_definitions
 l10n:
   sourceCommit: 4ae3910612ddfe81b5acf95e58385275380fd87e
 ---

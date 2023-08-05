@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
 
 {{JSRef}}

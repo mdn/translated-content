@@ -1,7 +1,6 @@
 ---
 title: Commencer avec le HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}

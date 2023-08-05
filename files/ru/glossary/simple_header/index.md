@@ -1,13 +1,6 @@
 ---
 title: Простой заголовок
 slug: Glossary/Simple_header
-tags:
-  - CORS
-  - HTTP
-  - Определения
-  - инфраструктура
-translation_of: Glossary/Simple_header
-original_slug: Глоссарий/Простой_заголовок
 ---
 
 _Простой заголовок (или заголовок запроса с поддержкой безопасности CORS_) - это один из следующих [HTTP заголовков](/ru/docs/Web/HTTP/Заголовки):

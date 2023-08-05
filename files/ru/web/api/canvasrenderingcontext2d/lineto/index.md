@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
-tags:
-  - API
-  - Canvas
-  - Method
-translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 
 {{APIRef}}
@@ -48,13 +43,13 @@ ctx.lineTo(x, y);
 Линия начинается в точке (30, 50), а заканчивается в точке (150, 100).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.beginPath();       // Начинает новый путь
-ctx.moveTo(30, 50);    // Передвигает перо в точку (30, 50)
-ctx.lineTo(150, 100);  // Рисует линию до точки (150, 100)
-ctx.stroke();          // Отображает путь
+ctx.beginPath(); // Начинает новый путь
+ctx.moveTo(30, 50); // Передвигает перо в точку (30, 50)
+ctx.lineTo(150, 100); // Рисует линию до точки (150, 100)
+ctx.stroke(); // Отображает путь
 ```
 
 #### Результат
@@ -74,8 +69,8 @@ ctx.stroke();          // Отображает путь
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.moveTo(90, 130);
 ctx.lineTo(95, 25);

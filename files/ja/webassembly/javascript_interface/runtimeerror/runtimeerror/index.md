@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.RuntimeError() コンストラクター
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
 ---
 
 {{WebAssemblySidebar}}

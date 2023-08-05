@@ -1,7 +1,6 @@
 ---
 title: Window.mozAnimationStartTime
 slug: Web/API/Animation/startTime
-translation_of: Web/API/Window/mozAnimationStartTime
 ---
 
 {{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}

@@ -1,7 +1,6 @@
 ---
 title: "Feature-Policy: accelerometer"
 slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
-translation_of: Web/HTTP/Headers/Feature-Policy/accelerometer
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

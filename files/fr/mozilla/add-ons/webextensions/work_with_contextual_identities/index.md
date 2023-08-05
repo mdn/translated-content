@@ -1,7 +1,6 @@
 ---
 title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-translation_of: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 ---
 
 {{AddonSidebar}}

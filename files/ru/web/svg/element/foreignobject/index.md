@@ -1,8 +1,6 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
-translation_of: Web/SVG/Element/foreignObject
-original_slug: Web/SVG/Элемент/foreignObject
 ---
 {{SVGRef}}
 Элемент **`<foreignObject>`** [SVG](/ru/docs/Web/SVG) позволяет включать другое пространство имён XML.

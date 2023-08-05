@@ -1,11 +1,8 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
-tags:
-  - локация
-  - местонахождение
-translation_of: Web/API/GeolocationPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 Интерфейс **`GeolocationPosition`** представляет положение соответствующего устройства в данный момент времени. Положение, представленное объектом {{domxref("GeolocationCoordinates")}}, отражает двумерное положение устройства на сфероиде, представляющем землю, а также его высоту и скорость..
@@ -21,7 +18,7 @@ _Интерфейс `GeolocationPosition` не наследует свойств
 
 ## Методы
 
-**Интерфейс* `GeolocationPosition`* **не имеет и не наследует методы.
+**Интерфейс _`GeolocationPosition`_** не имеет и не наследует методы.
 
 ## Спецификации
 

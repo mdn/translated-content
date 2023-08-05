@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
 
 {{AddonSidebar()}}
