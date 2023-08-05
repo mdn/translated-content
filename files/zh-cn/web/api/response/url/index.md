@@ -41,6 +41,6 @@ fetch(myRequest).then((response) => {
 
 ## 参见
 
-- [ServiceWorker API](/zh=CM/docs/Web/API/Service_Worker_API)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
