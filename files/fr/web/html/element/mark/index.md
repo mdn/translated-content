@@ -1,7 +1,6 @@
 ---
 title: "<mark> : l'élément de marquage du texte"
 slug: Web/HTML/Element/mark
-translation_of: Web/HTML/Element/mark
 ---
 
 {{HTMLSidebar}}

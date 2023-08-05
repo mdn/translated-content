@@ -1,7 +1,6 @@
 ---
 title: border-block-start-width
 slug: Web/CSS/border-block-start-width
-translation_of: Web/CSS/border-block-start-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

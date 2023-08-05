@@ -1,7 +1,6 @@
 ---
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
 
 {{JSRef}}
@@ -41,7 +40,7 @@ new DataView(buffer [, byteOffset [, byteLength]])
 Многобайтовые числовые форматы представлены в памяти по разному в зависимости от архитектуры машины, см {{Glossary("Endianness")}} для объяснения. Аксессоры DataView предоставляют явный контроль над обращением к данным вне зависимости от порядка байтов архитектуры платформы.
 
 ```js
-var littleEndian = (function() {
+var littleEndian = (function () {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.

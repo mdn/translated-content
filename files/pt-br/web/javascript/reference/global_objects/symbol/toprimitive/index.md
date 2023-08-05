@@ -24,31 +24,31 @@ O exemplo a seguir descreve que a propriedade **`Symbol.toPrimitive`** pode ser 
 ```js
 // Um objeto sem propriedade Symbol.toPrimitive.
 var obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Um objeto com propriedade Symbol.toPrimitive
 var obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint == "number") {
       return 10;
     }
-    if (hint == 'string') {
-      return 'hello';
+    if (hint == "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        -- dica é "number"
+console.log(+obj2); // 10        -- dica é "number"
 console.log(`${obj2}`); // "hello"   -- dica é "string"
-console.log(obj2 + ''); // "true"    -- dica é "default"
+console.log(obj2 + ""); // "true"    -- dica é "default"
 ```
 
 ## Especificações
 
-| Especificação                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
+| Especificação                                                            |
+| ------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
 
 ## Compatibilidade com navegadores

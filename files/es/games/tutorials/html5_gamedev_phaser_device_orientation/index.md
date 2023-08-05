@@ -1,9 +1,6 @@
 ---
-title:
-  Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Orientación
-  a Dispositivos
+title: Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Orientación a Dispositivos
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
 
 {{GamesSidebar}}

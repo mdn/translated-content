@@ -15,13 +15,11 @@ var crypto = crypto.subtle;
 
 ## Especificações
 
-| Especificação                                                                        | Status                                   | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## Veja também
 

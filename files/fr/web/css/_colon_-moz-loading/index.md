@@ -1,7 +1,6 @@
 ---
 title: ":-moz-loading"
 slug: Web/CSS/:-moz-loading
-translation_of: Web/CSS/:-moz-loading
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -1,7 +1,6 @@
 ---
 title: IDBTransaction.abort()
 slug: Web/API/IDBTransaction/abort
-translation_of: Web/API/IDBTransaction/abort
 ---
 
 {{APIRef("IndexedDB")}}

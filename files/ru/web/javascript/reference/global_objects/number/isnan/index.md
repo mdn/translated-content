@@ -1,15 +1,6 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 {{JSRef("Global_Objects", "Number")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
-translation_of: Web/API/Clipboard/write
 ---
 
 {{APIRef("Clipboard API")}}

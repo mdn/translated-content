@@ -1,7 +1,6 @@
 ---
 title: Trucs et astuces pour les animations CSS
 slug: Web/CSS/CSS_animations/Tips
-translation_of: Web/CSS/CSS_Animations/Tips
 ---
 
 {{CSSRef}}

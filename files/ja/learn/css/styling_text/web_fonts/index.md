@@ -1,7 +1,6 @@
 ---
 title: ウェブフォント
 slug: Learn/CSS/Styling_text/Web_fonts
-original_slug: Learn/CSS/Styling_text/ウェブフォント
 l10n:
   sourceCommit: ffe4e4b49b540a18cc4c0e98d7cbd11795d8a360
 ---

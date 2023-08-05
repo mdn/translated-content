@@ -45,8 +45,8 @@ Host: developer.mozilla.org
 
 ## Specifications
 
-| Specification                            | Title                                                              |
-| ---------------------------------------- | ------------------------------------------------------------------ |
+| Specification                  | Title                                                              |
+| ------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Host", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Compatibilidade com navegadores

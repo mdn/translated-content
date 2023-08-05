@@ -1,16 +1,8 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - JavaScript
-  - Prototype
-  - Reference
-  - polyfill
-  - Массив
-  - inArray
-  - Метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
+
 {{JSRef}}
 
 Метод **`includes()`** определяет, содержит ли массив определённый элемент, возвращая в зависимости от этого `true` или `false`.
@@ -37,9 +29,9 @@ arr.includes(searchElement[fromIndex = 0])
 ## Примеры
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(2); // true
+[1, 2, 3].includes(4); // false
+[1, 2, 3].includes(3, 3); // false
 [1, 2, 3].includes(3, -1); // true
 [1, 2, NaN].includes(NaN); // true
 ```
@@ -49,10 +41,10 @@ arr.includes(searchElement[fromIndex = 0])
 Если `fromIndex` больше или равен длине массива, то возвращается `false`. При этом поиск не производится.
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('c', 3);   // false
-arr.includes('c', 100); // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### Вычисленный индекс меньше нуля 0
@@ -64,11 +56,11 @@ arr.includes('c', 100); // false
 // fromIndex равен -100
 // вычисленный индекс равен 3 + (-100) = -97
 
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 
-arr.includes('a', -100); // true
-arr.includes('b', -100); // true
-arr.includes('c', -100); // true
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
 ```
 
 ### Использование `includes()` в качестве общих метода
@@ -76,10 +68,10 @@ arr.includes('c', -100); // true
 `includes()` специально сделан общим. Он не требует, чтобы `this` являлся массивом, так что он может быть применён к другим типам объектов (например, к массивоподобным объектам). Пример ниже показывает использование метода `includes()` на объекте [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments).
 
 ```js
-(function() {
-  console.log([].includes.call(arguments, 'a')); // true
-  console.log([].includes.call(arguments, 'd')); // false
-})('a','b','c');
+(function () {
+  console.log([].includes.call(arguments, "a")); // true
+  console.log([].includes.call(arguments, "d")); // false
+})("a", "b", "c");
 ```
 
 ## Полифил
@@ -87,9 +79,8 @@ arr.includes('c', -100); // true
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
-  Object.defineProperty(Array.prototype, 'includes', {
-    value: function(searchElement, fromIndex) {
-
+  Object.defineProperty(Array.prototype, "includes", {
+    value: function (searchElement, fromIndex) {
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -117,7 +108,13 @@ if (!Array.prototype.includes) {
       var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
 
       function sameValueZero(x, y) {
-        return x === y || (typeof x === 'number' && typeof y === 'number' && isNaN(x) && isNaN(y));
+        return (
+          x === y ||
+          (typeof x === "number" &&
+            typeof y === "number" &&
+            isNaN(x) &&
+            isNaN(y))
+        );
       }
 
       // 7. Repeat, while k < len
@@ -133,7 +130,7 @@ if (!Array.prototype.includes) {
 
       // 8. Return false
       return false;
-    }
+    },
   });
 }
 ```

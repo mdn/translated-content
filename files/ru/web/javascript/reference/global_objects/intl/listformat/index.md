@@ -1,13 +1,6 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-tags:
-  - Experimental
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 {{JSRef}}
 

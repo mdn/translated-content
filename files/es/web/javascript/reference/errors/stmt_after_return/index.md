@@ -1,5 +1,5 @@
 ---
-title: 'Advertencia: codigo inaccesible despues de sentencia de retorno'
+title: "Advertencia: codigo inaccesible despues de sentencia de retorno"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 

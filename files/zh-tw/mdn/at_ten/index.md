@@ -1,7 +1,6 @@
 ---
 title: MDN 10 週年
 slug: MDN/At_ten
-original_slug: MDN_at_ten
 ---
 
 {{MDNSidebar}}

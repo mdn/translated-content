@@ -1,7 +1,6 @@
 ---
 title: Guide stylistique
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Guidelines/Writing_style_guide
 ---
 
 {{MDNSidebar}}

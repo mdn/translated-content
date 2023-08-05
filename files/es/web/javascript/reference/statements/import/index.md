@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
 
 {{jsSidebar("Sentencias")}}

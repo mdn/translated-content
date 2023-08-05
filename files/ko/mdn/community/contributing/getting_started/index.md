@@ -1,7 +1,6 @@
 ---
 title: MDN 시작하기
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 ---
 
 {{MDNSidebar}}

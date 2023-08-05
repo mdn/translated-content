@@ -1,7 +1,6 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-translation_of: Web/API/Window/scrollX
 ---
 
 {{ APIRef("CSSOM View") }}
@@ -28,7 +27,7 @@ var x = window.scrollX;
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 
@@ -43,20 +42,22 @@ window.pageXOffset == window.scrollX; // всегда верно
 Для кросс-браузерной совместимости используйте `window.pageXOffset` вместо `window.scrollX`. **Кроме того**, старые версии Internet Explorer (<9) не поддерживают оба свойства. Для работы в Internet Explorer необходимо использовать нестандарные свойства. Пример полностью совместимого со всеми браузерами кода:
 
 ```js
-var x = (window.pageXOffset !== undefined)
-  ? window.pageXOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+var x =
+  window.pageXOffset !== undefined
+    ? window.pageXOffset
+    : (document.documentElement || document.body.parentNode || document.body)
+        .scrollLeft;
 
-var y = (window.pageYOffset !== undefined)
-  ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+var y =
+  window.pageYOffset !== undefined
+    ? window.pageYOffset
+    : (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

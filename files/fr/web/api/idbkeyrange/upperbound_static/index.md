@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.upperBound()
 slug: Web/API/IDBKeyRange/upperBound_static
-translation_of: Web/API/IDBKeyRange/upperBound
 ---
 
 {{APIRef("IndexedDB")}}

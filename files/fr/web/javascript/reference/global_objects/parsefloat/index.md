@@ -1,7 +1,6 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
 
 {{jsSidebar("Objects")}}

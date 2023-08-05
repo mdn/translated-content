@@ -1,7 +1,6 @@
 ---
 title: Funções — blocos reutilizáveis de código
 slug: Learn/JavaScript/Building_blocks/Functions
-original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

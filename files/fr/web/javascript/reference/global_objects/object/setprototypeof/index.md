@@ -1,7 +1,6 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
 
 {{JSRef}}

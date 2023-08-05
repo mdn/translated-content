@@ -1,7 +1,6 @@
 ---
 title: API Selection
 slug: Web/API/Selection_API
-translation_of: Web/API/Selection_API
 ---
 
 {{DefaultAPISidebar("Selection API")}}

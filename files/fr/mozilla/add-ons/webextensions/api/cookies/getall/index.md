@@ -1,7 +1,6 @@
 ---
 title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 ---
 
 {{AddonSidebar()}}

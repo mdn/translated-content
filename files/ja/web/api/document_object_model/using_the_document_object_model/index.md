@@ -1,7 +1,6 @@
 ---
 title: W3C DOM Level 1 Core の使用
 slug: Web/API/Document_object_model/Using_the_Document_Object_Model
-original_slug: Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -14,13 +13,13 @@ W3C の [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.
 
 ```html
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>Paragraph</p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -44,9 +43,9 @@ W3C DOM Level 1 Core によって<em>何でも好きな方法で</em> DOM ツリ
 
 ```html
 <body>
-<input type="button" value="この文書を変更します。" onclick="change()">
-<h2>見出し</h2>
-<p>段落</p>
+  <input type="button" value="この文書を変更します。" onclick="change()" />
+  <h2>見出し</h2>
+  <p>段落</p>
 </body>
 ```
 
@@ -54,27 +53,27 @@ W3C DOM Level 1 Core によって<em>何でも好きな方法で</em> DOM ツリ
 
 ```js
 function change() {
-    // document.getElementsByTagName("H2") は、文書内の <h2> 要素の NodeList
-    // であり、最初のものは0番です。
+  // document.getElementsByTagName("H2") は、文書内の <h2> 要素の NodeList
+  // であり、最初のものは0番です。
 
-    var header = document.getElementsByTagName("H2").item(0);
-    // header の firstChild はテキストノードです。
-    header.firstChild.data = "動的文書";
-    // ヘッダーが "A dynamic document" になりました。
+  var header = document.getElementsByTagName("H2").item(0);
+  // header の firstChild はテキストノードです。
+  header.firstChild.data = "動的文書";
+  // ヘッダーが "A dynamic document" になりました。
 
-    var para = document.getElementsByTagName("P").item(0);
-    para.firstChild.data = "これが最初の段落です。";
+  var para = document.getElementsByTagName("P").item(0);
+  para.firstChild.data = "これが最初の段落です。";
 
-    // 2 番目の段落のために新しいテキストノードを生成します
-    var newText = document.createTextNode("これが 2 番目の段落です。");
-    // 2 番目の段落になる新しい Element を生成します
-    var newElement = document.createElement("P");
-    // 段落にテキストを置きます
-    newElement.appendChild(newText);
-    // また、 (段落の親に当たる) BODY に追加することで、文書の最後に
-    // 段落を置きます
-    para.parentNode.appendChild(newElement);
-  }
+  // 2 番目の段落のために新しいテキストノードを生成します
+  var newText = document.createTextNode("これが 2 番目の段落です。");
+  // 2 番目の段落になる新しい Element を生成します
+  var newElement = document.createElement("P");
+  // 段落にテキストを置きます
+  newElement.appendChild(newText);
+  // また、 (段落の親に当たる) BODY に追加することで、文書の最後に
+  // 段落を置きます
+  para.parentNode.appendChild(newElement);
+}
 ```
 
 ### 結果

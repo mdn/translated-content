@@ -1,7 +1,6 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
 
 {{AddonSidebar()}}

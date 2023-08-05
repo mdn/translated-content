@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
-original_slug: Web/API/AudioContext/createChannelMerger
 ---
 
 {{ APIRef("Web Audio API") }}

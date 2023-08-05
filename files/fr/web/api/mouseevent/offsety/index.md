@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.offsetY
 slug: Web/API/MouseEvent/offsetY
-translation_of: Web/API/MouseEvent/offsetY
 ---
 
 {{APIRef("DOM Events")}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: hifens
 slug: Web/CSS/hyphens
-original_slug: Web/CSS/hifens
 ---
 
 {{CSSRef}}A propriedade [CSS](/pt-BR/docs/) **`hyphens`** especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.

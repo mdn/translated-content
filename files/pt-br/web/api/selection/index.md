@@ -1,7 +1,6 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-original_slug: Web/API/Seleção
 ---
 
 {{ ApiRef("DOM") }}{{SeeCompatTable}}

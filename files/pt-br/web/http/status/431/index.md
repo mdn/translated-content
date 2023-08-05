@@ -22,8 +22,8 @@ Servidores vão produzir esse status frequentemente se:
 
 ## Especificações
 
-| Especificação                                                                    | Título                       |
-| -------------------------------------------------------------------------------- | ---------------------------- |
+| Especificação                                                | Título                       |
+| ------------------------------------------------------------ | ---------------------------- |
 | {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
 
 ## Veja também

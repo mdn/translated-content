@@ -1,7 +1,6 @@
 ---
 title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
 
 {{AddonSidebar()}}

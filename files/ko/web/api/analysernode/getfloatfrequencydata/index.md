@@ -47,7 +47,7 @@ analyser.getFloatFrequencyData(myDataArray);
 보다 완전한 응용 예제/정보를 보려면 [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) 데모를 확인하세요. ([app.js의 108-193번째 줄](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193)에서 관련 코드 확인)
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <body>
   <script>
     const audioCtx = new AudioContext();
@@ -103,7 +103,7 @@ analyser.getFloatFrequencyData(myDataArray);
           posX,
           canvas.height - barHeight / 2,
           barWidth,
-          barHeight / 2
+          barHeight / 2,
         );
         posX += barWidth + 1;
       }

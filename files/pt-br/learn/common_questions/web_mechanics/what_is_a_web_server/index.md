@@ -1,7 +1,6 @@
 ---
 title: O que é um servidor web (web server)?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 Neste artigo vamos revisar o que são web servers, como eles funcionam, e por que eles são importantes.

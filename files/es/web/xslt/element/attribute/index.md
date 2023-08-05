@@ -1,7 +1,6 @@
 ---
 title: attribute
 slug: Web/XSLT/Element/attribute
-original_slug: Web/XSLT/attribute
 ---
 
 {{XsltRef}}

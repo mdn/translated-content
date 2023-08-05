@@ -1,7 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
 
 {{JSRef}}

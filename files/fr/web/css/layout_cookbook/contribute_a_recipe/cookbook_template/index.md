@@ -1,7 +1,6 @@
 ---
 title: Cookbook template
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 ---
 
 {{CSSRef}}

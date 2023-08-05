@@ -1,7 +1,6 @@
 ---
 title: Web Storage API
 slug: Web/API/Web_Storage_API
-translation_of: Web/API/Web_Storage_API
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}

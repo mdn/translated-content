@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -56,11 +49,11 @@ theBigDay.setHours(7);
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}                 | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                   | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                        | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.34', 'Date.prototype.setHours')}}             | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

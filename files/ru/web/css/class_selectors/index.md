@@ -1,7 +1,6 @@
 ---
 title: Селекторы по классу
 slug: Web/CSS/Class_selectors
-translation_of: Web/CSS/Class_selectors
 ---
 {{CSSRef("Selectors")}}
 

@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-tags:
-  - Date
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -52,9 +45,9 @@ console.log(date.toLocaleString());
 ```js
 function toLocaleStringSupportsLocales() {
   try {
-    new Date().toLocaleString('i');
+    new Date().toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -72,31 +65,31 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // В американском английском используется порядок месяц-день-год
 // и 12-часовой формат времени
-console.log(date.toLocaleString('en-US'));
+console.log(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
 // В британском английском используется порядок день-месяц-год
 // и 24-часовой формат времени
-console.log(date.toLocaleString('en-GB'));
+console.log(date.toLocaleString("en-GB"));
 // → "20/12/2012 03:00:00"
 
 // В корейском используется порядок год-месяц-день
 // и 12-часовой формат времени
-console.log(date.toLocaleString('ko-KR'));
+console.log(date.toLocaleString("ko-KR"));
 // → "2012. 12. 20. 오후 12:00:00"
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(date.toLocaleString('ar-EG'));
+console.log(date.toLocaleString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // В Японии приложения могут захотеть использовать японский календарь,
 // в котором 2012 год является 24-м годом эры Хейсей
-console.log(date.toLocaleString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(date.toLocaleString(['ban', 'id']));
+console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 11.00.00"
 ```
 
@@ -108,18 +101,23 @@ console.log(date.toLocaleString(['ban', 'id']));
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Запрашиваем день недели вместе с длинным форматом даты
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(date.toLocaleString('de-DE', options));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // Приложение может захотеть использовать UTC и показать это
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(date.toLocaleString('en-US', options));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, GMT"
 
 // Иногда даже в США нужен 24-х часовой формат времени
-console.log(date.toLocaleString('en-US', { hour12: false }));
+console.log(date.toLocaleString("en-US", { hour12: false }));
 // → "12/19/2012, 19:00:00"
 ```
 

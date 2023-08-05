@@ -1,7 +1,6 @@
 ---
 title: tt
 slug: Web/HTML/Element/tt
-original_slug: Web/HTML/Elemento/tt
 ---
 
 ### Definición
