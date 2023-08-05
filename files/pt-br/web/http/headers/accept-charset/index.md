@@ -56,8 +56,8 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                              | Título                                                        |
+| ------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "Accept-Charset", "5.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
 
 ## Compatibilidade com navegadores

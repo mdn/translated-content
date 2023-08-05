@@ -1,7 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-translation_of: Web/CSS/box-sizing
 ---
 
 {{CSSRef}}

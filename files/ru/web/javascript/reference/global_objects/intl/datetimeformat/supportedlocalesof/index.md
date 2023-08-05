@@ -1,13 +1,6 @@
 ---
 title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}

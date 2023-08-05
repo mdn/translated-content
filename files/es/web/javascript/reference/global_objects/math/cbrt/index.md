@@ -1,7 +1,6 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cbrt
 ---
 
 {{JSRef}}

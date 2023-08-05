@@ -1,7 +1,6 @@
 ---
 title: Chiffrement
 slug: Glossary/Encryption
-translation_of: Glossary/Encryption
 ---
 
 En {{glossary("cryptography","cryptographie")}}, le **chiffrement** est la conversion d'un {{glossary("Texte_brut","texte brut")}} en un texte codé ou {{glossary("ciphertext","cryptogramme")}}. Ce dernier est destiné à ne pas pouvoir être lu par les lecteurs qui n'y sont pas autorisés.

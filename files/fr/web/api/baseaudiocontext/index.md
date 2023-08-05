@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-translation_of: Web/API/BaseAudioContext
 ---
 
 {{APIRef("Web Audio API")}}

@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
-original_slug: Web/API/AudioContext/createAnalyser
 ---
 
 {{APIRef("Web Audio API")}}

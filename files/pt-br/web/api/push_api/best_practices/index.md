@@ -1,7 +1,6 @@
 ---
 title: Melhores práticas
 slug: Web/API/Push_API/Best_Practices
-original_slug: Web/API/API_Push/Best_Practices
 ---
 
 Este artigo proporciona um compilado das melhores práticas a serem usadas enquanto estiver desenvolvendo websites e aplicações que usem Notificações push para engajamento de usuários.

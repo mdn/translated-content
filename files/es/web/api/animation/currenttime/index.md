@@ -1,7 +1,6 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
-original_slug: Web/API/Animation/tiempoActual
 ---
 
 {{APIRef("Web Animations")}}

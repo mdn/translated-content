@@ -48,8 +48,8 @@ Referer: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                       | Título                                                        |
+| ----------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

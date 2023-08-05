@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/values
 ---
 
 {{JSRef}}

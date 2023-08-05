@@ -1,7 +1,6 @@
 ---
 title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 ---
 
 {{AddonSidebar()}}

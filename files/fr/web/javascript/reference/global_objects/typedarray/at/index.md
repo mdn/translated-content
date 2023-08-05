@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 ---
 
 {{JSRef}}

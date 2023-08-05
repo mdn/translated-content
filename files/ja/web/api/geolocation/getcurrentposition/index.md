@@ -1,6 +1,9 @@
 ---
-title: Geolocation.getCurrentPosition()
+title: "Geolocation: getCurrentPosition() メソッド"
+short-title: getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
@@ -9,8 +12,10 @@ slug: Web/API/Geolocation/getCurrentPosition
 
 ## 構文
 
-```js
-navigator.geolocation.getCurrentPosition(success, error, [options])
+```js-nolint
+getCurrentPosition(success)
+getCurrentPosition(success, error)
+getCurrentPosition(success, error, options)
 ```
 
 ### 引数
@@ -28,19 +33,23 @@ navigator.geolocation.getCurrentPosition(success, error, [options])
     - `enableHighAccuracy`
       - : 論理値で、アプリケーションが可能な限り正確な結果を受け取ることを望んでいることを示します。もし `true` で、端末がより正確な位置を提供できる場合は、そのようにします。この場合、応答時間が遅くなったり、消費電力が増加したりすることに注意してください（たとえば、モバイル端末の GPS チップを使用する場合など）。一方、 `false` の場合、端末はより速く反応したり、より少ない電力を使用することで、リソースを節約することができます。既定値は `false` です。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 ```js
-var options = {
+const options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  const crd = pos.coords;
 
-  console.log('Your current position is:');
+  console.log("Your current position is:");
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);

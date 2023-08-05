@@ -1,7 +1,6 @@
 ---
 title: 위치잡기
 slug: Learn/CSS/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/위치잡기
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

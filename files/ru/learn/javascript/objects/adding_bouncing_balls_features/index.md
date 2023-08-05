@@ -1,8 +1,6 @@
 ---
 title: Добавление функций в нашу демонстрацию отбойных шаров
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

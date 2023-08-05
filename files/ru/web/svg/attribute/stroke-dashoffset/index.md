@@ -1,10 +1,6 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 
 > **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

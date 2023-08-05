@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: WebAssembly/JavaScript_interface/Module/customSections
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 
 {{WebAssemblySidebar}}

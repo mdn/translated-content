@@ -1,7 +1,6 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
 
 {{ APIRef("DOM") }}Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.
@@ -32,20 +31,10 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-element-clientleft', 'clientLeft')}} | {{Spec2("CSSOM View")}} |         |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Notes
-
-`clientLeft` был впервые введён MS IE DHTML object model.
-
-Расположение вертикального scrollbar для письма справа налево применённого для элемента будет назначаются следующим свойством [`layout.scrollbar.side` preference](http://kb.mozillazine.org/Layout.scrollbar.side)
-
-Когда установлены стили элемента `display: inline`, то `clientLeft` вернёт `0` несмотря на границы элемента.

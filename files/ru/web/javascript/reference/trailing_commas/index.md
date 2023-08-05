@@ -1,13 +1,6 @@
 ---
 title: Висящие запятые
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - ECMAScript2017
-  - ECMAScript5
-  - Висящая запятая
-  - Запятая
-  - Синтаксис
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
 
 {{JsSidebar("More")}}

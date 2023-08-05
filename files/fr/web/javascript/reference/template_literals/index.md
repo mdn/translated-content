@@ -1,7 +1,6 @@
 ---
 title: Littéraux de gabarits
 slug: Web/JavaScript/Reference/Template_literals
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 
 {{JsSidebar("More")}}

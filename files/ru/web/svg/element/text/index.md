@@ -1,12 +1,6 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG text
-translation_of: Web/SVG/Element/text
-original_slug: Web/SVG/Элемент/<text>
 ---
 {{SVGRef}}
 

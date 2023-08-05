@@ -1,7 +1,6 @@
 ---
 title: basefont
 slug: conflicting/Web/CSS/CSS_Fonts
-original_slug: Web/HTML/Element/basefont
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.onoffline
 slug: Web/API/WorkerGlobalScope/offline_event
-translation_of: Web/API/WorkerGlobalScope/onoffline
 ---
 
 {{APIRef("Web Workers API")}}

@@ -1,7 +1,6 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
-translation_of: Web/API/Element/getAttributeNames
 ---
 
 {{APIRef("DOM")}}

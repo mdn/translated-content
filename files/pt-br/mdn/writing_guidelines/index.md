@@ -1,7 +1,6 @@
 ---
 title: Sobre o MDN
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}

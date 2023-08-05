@@ -1,10 +1,6 @@
 ---
 title: Сложение (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Addition
 ---
 
 {{jsSidebar("Operators")}}

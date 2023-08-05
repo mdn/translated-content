@@ -1,7 +1,6 @@
 ---
 title: Appliquer une couleur à la souris
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
-translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée")}}

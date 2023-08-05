@@ -1,7 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-translation_of: Web/CSS/inherit
 ---
 
 {{CSSRef}}

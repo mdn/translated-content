@@ -1,7 +1,6 @@
 ---
 title: CSS Lists
 slug: Web/CSS/CSS_lists
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
 
 {{CSSRef}}

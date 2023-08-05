@@ -1,7 +1,6 @@
 ---
 title: HTMLDocument
 slug: Web/API/HTMLDocument
-translation_of: Web/API/HTMLDocument
 ---
 
 {{ APIRef("HTML DOM") }}

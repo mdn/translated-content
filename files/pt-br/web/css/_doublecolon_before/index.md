@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
 ---
 
@@ -58,12 +58,12 @@ Podemos estilizar textos e imagens na propriedade {{cssxref("content")}} pratica
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Olhe para esta caixa laranja.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -103,11 +103,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -124,12 +124,16 @@ li.done::before {
 #### Conteúdo JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 Aqui está rodando o código acima. Perceba que nenhum ícone é utilizado e o check-mark é o `::before` que foi estilizado no CSS.
@@ -146,32 +150,39 @@ Embora as correções posicionadas e fixadas no Firefox 3.5 não permitam que o 
 
 ```html
 <div class="example">
-<span id="floatme">"Floated Before" should be generated on the left of the
-viewport and not allow overflow in this line to flow under it. Likewise
-should "Floated After" appear on the right of the viewport and not allow this
-line to flow under it.</span>
+  <span id="floatme"
+    >"Floated Before" should be generated on the left of the viewport and not
+    allow overflow in this line to flow under it. Likewise should "Floated
+    After" appear on the right of the viewport and not allow this line to flow
+    under it.</span
+  >
 </div>
 ```
 
 #### CSS content
 
 ```css
-#floatme { float: left; width: 50%; }
+#floatme {
+  float: left;
+  width: 50%;
+}
 
 /* To get an empty column, just indicate a hex code for a non-breaking space: \a0 as the content (use \0000a0 when following such a space with other characters) */
 .example::before {
   content: "Floated Before";
   float: left;
-  width: 25%
+  width: 25%;
 }
 .example::after {
   content: "Floated After";
   float: right;
-  width:25%
+  width: 25%;
 }
 
 /* For styling */
-.example::before, .example::after, .first {
+.example::before,
+.example::after,
+.first {
   background: yellow;
   color: red;
 }
@@ -183,13 +194,13 @@ line to flow under it.</span>
 
 ## Specifications
 
-| Specification                                                                                    | Status                                       | Comment                                                      |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------ |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | No significant changes to the previous specification.        |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Allows transitions on properties defined on pseudo-elements. |
-| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Allows animations on properties defined on pseudo-elements.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduces the two-colon syntax.                             |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Initial definition, using the one-colon syntax               |
+| Specification                                                            | Status                            | Comment                                                      |
+| ------------------------------------------------------------------------ | --------------------------------- | ------------------------------------------------------------ |
+| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}}  | {{Spec2('CSS4 Pseudo-Elements')}} | No significant changes to the previous specification.        |
+| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}           | {{Spec2("CSS3 Transitions")}}     | Allows transitions on properties defined on pseudo-elements. |
+| {{Specname("CSS3 Animations", "", "")}}                                  | {{Spec2("CSS3 Animations")}}      | Allows animations on properties defined on pseudo-elements.  |
+| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}               | {{Spec2('CSS3 Selectors')}}       | Introduces the two-colon syntax.                             |
+| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}               | Initial definition, using the one-colon syntax               |
 
 ## Compatibilidade com navegadores
 

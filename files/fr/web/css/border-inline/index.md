@@ -1,7 +1,6 @@
 ---
 title: border-inline
 slug: Web/CSS/border-inline
-translation_of: Web/CSS/border-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

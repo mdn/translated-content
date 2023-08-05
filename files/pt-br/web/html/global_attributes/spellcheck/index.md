@@ -1,7 +1,6 @@
 ---
 title: Controlando a verificação ortográfica em formulários HTML
 slug: Web/HTML/Global_attributes/spellcheck
-original_slug: Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML
 ---
 
 Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.

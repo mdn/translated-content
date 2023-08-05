@@ -1,7 +1,6 @@
 ---
 title: tabs.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 ---
 
 {{AddonSidebar()}}

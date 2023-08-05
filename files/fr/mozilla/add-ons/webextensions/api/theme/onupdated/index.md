@@ -1,7 +1,6 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
 
 {{AddonSidebar()}}

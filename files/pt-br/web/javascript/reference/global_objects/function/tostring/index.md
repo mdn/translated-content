@@ -28,13 +28,13 @@ O JavaScript chama o método `toString` automaticamente quando uma {{jsxref("Fun
 O método `toString()` lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor `this` do objeto não é um objeto do tipo `Function.`
 
 ```js example-bad
-Function.prototype.toString.call('foo'); // TypeError
+Function.prototype.toString.call("foo"); // TypeError
 ```
 
 Se o método `toString()` é chamado por objetos de funções embutidas ou por uma função criada por `Function.prototype.bind`, `toString()` retorna uma string de uma função nativa que parece
 
 ```js
-"function () {\n    [native code]\n}"
+"function () {\n    [native code]\n}";
 ```
 
 Se o método `toString()` é chamado por uma função criada pelo contrutor de `Function`, `toString()` retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.
@@ -116,12 +116,12 @@ Object.getOwnPropertyDescriptor({
 
 ## Especificações
 
-| Especificação                                                                                                                     | Status                       | Comentário                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                          | {{Spec2('ES1')}}         | Definição inicial. Implementado no JavaScript 1.1.                        |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}              | {{Spec2('ES6')}}         | Mais requisitos específicos foram incluídos para representação de string. |
-| [`Function.prototype.toString` revisions proposal](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction) | Rascunho                     | Padroniza a função de string navida e fins de linha.                      |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}          | {{Spec2('ESDraft')}} |                                                                           |
+| Especificação                                                                                                                     | Status               | Comentário                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                               | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1.                        |
+| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}                                            | {{Spec2('ES6')}}     | Mais requisitos específicos foram incluídos para representação de string. |
+| [`Function.prototype.toString` revisions proposal](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction) | Rascunho             | Padroniza a função de string navida e fins de linha.                      |
+| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}                                        | {{Spec2('ESDraft')}} |                                                                           |
 
 ## Compatibilidade com navegadores
 

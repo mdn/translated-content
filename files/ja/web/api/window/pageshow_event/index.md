@@ -1,5 +1,5 @@
 ---
-title: 'Window: pageshow イベント'
+title: "Window: pageshow イベント"
 slug: Web/API/Window/pageshow_event
 ---
 

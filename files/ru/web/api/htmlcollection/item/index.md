@@ -1,13 +1,8 @@
 ---
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/HTMLCollection/item
 ---
+
 {{APIRef("HTML DOM")}}
 
 `HTMLCollection.item() получает элемент с заданым индексом`.
@@ -28,9 +23,9 @@ translation_of: Web/API/HTMLCollection/item
 ## Пример
 
 ```js
-var c = document.images;  // Это HTMLCollection
-var img0 = c.item(0);     // Вы можете использовать метод item( ) для доступа к элементу
-var img1 = c[1];          // Однако, использование квадратных скобок намного проще и более распространено
+var c = document.images; // Это HTMLCollection
+var img0 = c.item(0); // Вы можете использовать метод item( ) для доступа к элементу
+var img1 = c[1]; // Однако, использование квадратных скобок намного проще и более распространено
 ```
 
 ## Смотрите также

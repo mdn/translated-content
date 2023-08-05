@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
-original_slug: Web/API/VRDevice/requestPresent
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

@@ -27,8 +27,8 @@ Em chamadas normais de função (diferente de chamadas a funções do tipo const
 
 ```js
 function Foo() {
-  if (!new.target) throw 'Foo() must be called with new';
-  console.log('Foo instanciado com new');
+  if (!new.target) throw "Foo() must be called with new";
+  console.log("Foo instanciado com new");
 }
 
 Foo(); // throws "Foo() must be called with new"
@@ -46,13 +46,25 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // logs "A"
 var b = new B(); // logs "B"
 
-class C { constructor() { console.log(new.target); } }
-class D extends C { constructor() { super(); } }
+class C {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class D extends C {
+  constructor() {
+    super();
+  }
+}
 
 var c = new C(); // logs class C{constructor(){console.log(new.target);}}
 var d = new D(); // logs class D extends C{constructor(){super();}}
@@ -62,9 +74,9 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 ## Especificações
 
-| Specification                                                                                                        | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Specification                                                                          | Status               | Comment            |
+| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

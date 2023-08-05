@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : maxlength"
 slug: Web/HTML/Attributes/maxlength
-translation_of: Web/HTML/Attributes/maxlength
 ---
 
 {{HTMLSidebar}}

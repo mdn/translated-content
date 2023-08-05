@@ -1,7 +1,6 @@
 ---
 title: Virgules finales (trailing commas)
 slug: Web/JavaScript/Reference/Trailing_commas
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
 
 {{JsSidebar("More")}}

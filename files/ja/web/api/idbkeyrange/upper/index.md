@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.upper
 slug: Web/API/IDBKeyRange/upper
-page-type: web-api-instance-propert
 l10n:
   sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---

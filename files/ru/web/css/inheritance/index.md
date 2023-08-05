@@ -1,7 +1,6 @@
 ---
 title: Наследование
 slug: Web/CSS/Inheritance
-translation_of: Web/CSS/inheritance
 ---
 
 ## Описание

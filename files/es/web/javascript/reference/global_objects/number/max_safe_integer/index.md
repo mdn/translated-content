@@ -1,7 +1,6 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_SAFE_INTEGER
 ---
 
 {{JSRef}}

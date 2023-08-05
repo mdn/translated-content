@@ -1,7 +1,6 @@
 ---
 title: Appliquer des couleurs
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
-translation_of: Web/API/WebGL_API/By_example/Clearing_with_colors
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris")}}
