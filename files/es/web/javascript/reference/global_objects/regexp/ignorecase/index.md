@@ -20,7 +20,7 @@ No se puede cambiar esta propiedad directamente.
 ### Usando `ignoreCase`
 
 ```js
-var regex = new RegExp('foo', 'i');
+var regex = new RegExp("foo", "i");
 
 console.log(regex.ignoreCase); // true
 ```
