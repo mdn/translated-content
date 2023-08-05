@@ -79,7 +79,7 @@ The head of the document:
 - The author of the letter should be specified in an appropriate meta tag.
 - The provided CSS should be included inside an appropriate tag.
 
-## Hints and tips
+## 힌트 그리고 팁
 
 - Use the [W3C HTML validator](https://validator.w3.org/) to validate your HTML; you'll get bonus points if it validates.
 - You don't need to know any CSS to do this assessment; you just need to put the provided CSS inside an HTML element.
