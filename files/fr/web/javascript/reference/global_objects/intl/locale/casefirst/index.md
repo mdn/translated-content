@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 ---
 
 {{JSRef}}

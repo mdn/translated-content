@@ -1,7 +1,6 @@
 ---
 title: dragleave
 slug: Web/API/HTMLElement/dragleave_event
-translation_of: Web/API/Document/dragleave_event
 ---
 
 L'événement **dragleave** est déclenché lorsqu'un élément glissé ou une sélection de texte quitte une cible de dépôt valide.

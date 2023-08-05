@@ -1,7 +1,6 @@
 ---
 title: ブラウザーの開発者ツールとは？
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 近頃のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。

@@ -1,11 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Оператор
-  - Цикл
-translation_of: Web/JavaScript/Reference/Statements/while
 ---
 {{jsSidebar("Statements")}}
 

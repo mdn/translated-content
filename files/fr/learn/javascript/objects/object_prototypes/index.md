@@ -1,7 +1,6 @@
 ---
 title: Prototypes Objet
 slug: Learn/JavaScript/Objects/Object_prototypes
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}

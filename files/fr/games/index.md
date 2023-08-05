@@ -1,7 +1,6 @@
 ---
 title: Développement de jeux vidéo
 slug: Games
-translation_of: Games
 ---
 
 {{GamesSidebar}}

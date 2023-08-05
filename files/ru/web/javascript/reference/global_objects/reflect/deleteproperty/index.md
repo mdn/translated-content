@@ -1,7 +1,6 @@
 ---
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 {{JSRef}}
 

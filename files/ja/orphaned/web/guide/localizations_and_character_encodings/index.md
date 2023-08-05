@@ -1,7 +1,6 @@
 ---
 title: ローカライゼーションと文字エンコーディング
 slug: orphaned/Web/Guide/Localizations_and_character_encodings
-original_slug: Web/Guide/Localizations_and_character_encodings
 ---
 
 ブラウザは内部的にテキストを Unicode として処理します。ただし、ネットワークを介してブラウザにテキストを転送するには、文字をバイトで表現する方法 (文字エンコーディング) が使用されます。[HTML 仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)では、UTF-8 エンコーディング (これはすべての Unicode を表すことができます) の使用を推奨しています。使用されるエンコーディングにかかわらず、Web コンテンツがどのエンコーディングを使用するかを宣言する必要があります。

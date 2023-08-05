@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 ---
 
 {{AddonSidebar}}

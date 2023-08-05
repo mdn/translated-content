@@ -1,7 +1,6 @@
 ---
 title: document.hasFocus
 slug: Web/API/Document/hasFocus
-translation_of: Web/API/Document/hasFocus
 ---
 
 {{ ApiRef() }}

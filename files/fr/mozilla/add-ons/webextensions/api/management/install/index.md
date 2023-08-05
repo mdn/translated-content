@@ -1,7 +1,6 @@
 ---
 title: management.install()
 slug: Mozilla/Add-ons/WebExtensions/API/management/install
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/install
 ---
 
 {{AddonSidebar()}}Installe et active une extension de thème à partir de l'URL donnée.

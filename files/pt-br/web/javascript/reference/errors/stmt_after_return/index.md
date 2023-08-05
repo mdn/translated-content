@@ -1,5 +1,5 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 

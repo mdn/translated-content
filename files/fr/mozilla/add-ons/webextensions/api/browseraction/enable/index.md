@@ -1,7 +1,6 @@
 ---
 title: browserAction.enable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
 ---
 
 {{AddonSidebar()}}

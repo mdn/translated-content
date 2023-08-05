@@ -1,7 +1,6 @@
 ---
 title: Categorias de conteúdo
 slug: Web/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 Cada elemento HTML deve permanecer, por regras, definindo que tipo de conteúdo ele pode ter. Essas regras estão agrupadas em modelos de conteúdo para muitos elementos. Cada elemento HTML pertence a nenhum, um, ou múltiplos modelos de conteúdo, cada regra de definição que o conteúdo do elemento deve seguir em um documento HTML.

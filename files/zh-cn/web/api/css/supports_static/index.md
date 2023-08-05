@@ -1,7 +1,6 @@
 ---
 title: CSS.supports()
 slug: Web/API/CSS/supports_static
-original_slug: Web/API/CSS/supports
 ---
 
 {{APIRef("CSSOM")}}

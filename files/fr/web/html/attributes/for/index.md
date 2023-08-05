@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : for"
 slug: Web/HTML/Attributes/for
-translation_of: Web/HTML/Attributes/for
 ---
 
 {{HTMLSidebar}}

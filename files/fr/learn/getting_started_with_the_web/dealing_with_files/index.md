@@ -1,7 +1,6 @@
 ---
 title: Gérer les fichiers
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
 {{LearnSidebar}}

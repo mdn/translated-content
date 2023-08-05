@@ -1,7 +1,6 @@
 ---
 title: Symbol (シンボル)
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Glossary/Symbol
 ---
 
 {{Glossary("JavaScript")}} では、シンボルは{{Glossary("Primitive", "プリミティブ値")}}です。

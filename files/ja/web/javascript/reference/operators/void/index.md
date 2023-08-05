@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/void
 ## 構文
 
 ```js
-void expression
+void expression;
 ```
 
 ## 解説
@@ -24,8 +24,8 @@ void expression
 なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
 
 ```js
-void 2 == '2';   // (void 2) == '2', false を返す
-void (2 == '2'); // void (2 == '2'), undefined を返す
+void 2 == "2"; // (void 2) == '2', false を返す
+void (2 == "2"); // void (2 == '2'), undefined を返す
 ```
 
 ## 例
@@ -35,11 +35,9 @@ void (2 == '2'); // void (2 == '2'), undefined を返す
 [即時実行関数式](/ja/docs/Glossary/IIFE) を使用する場合、 `void` により `function` キーワードが宣言ではなく式として扱うよう強制することができます。
 
 ```js
-void function iife() {
-
+void (function iife() {
   console.log("Executed!");
-
-}();
+})();
 
 // Output: "Executed!"
 ```
@@ -51,9 +49,7 @@ void function iife() {
 `javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
 
 ```html
-<a href="javascript:void(0);">
-  Click here to do nothing
-</a>
+<a href="javascript:void(0);"> Click here to do nothing </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   Click here for green background

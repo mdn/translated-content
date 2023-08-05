@@ -1,7 +1,6 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
 
 {{JSRef}}

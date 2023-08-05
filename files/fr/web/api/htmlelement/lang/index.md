@@ -1,7 +1,6 @@
 ---
 title: element.lang
 slug: Web/API/HTMLElement/lang
-translation_of: Web/API/HTMLElement/lang
 ---
 
 {{ ApiRef() }}

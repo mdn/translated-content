@@ -1,7 +1,8 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
 ---
+
 {{ CSSRef() }}
 
 ## Resumo
@@ -23,8 +24,12 @@ A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) de **negação**, `:no
 ## Exemplos
 
 ```css
-p:not(.classico) { color: red; }
-body *:not(p) { color: green; }
+p:not(.classico) {
+  color: red;
+}
+body *:not(p) {
+  color: green;
+}
 ```
 
 Dado o CSS acima e o HTML abaixo...
@@ -32,7 +37,7 @@ Dado o CSS acima e o HTML abaixo...
 ```html
 <p>Um pouco de texto.</p>
 <p class="classico">Um pouco mais de texto.</p>
-<span>Mais um texto<span>
+<span>Mais um texto</span>
 ```
 
 Se obtém resultados como este:
@@ -41,8 +46,8 @@ Se obtém resultados como este:
 
 ## Especificações
 
-| Especificação                                                            | Status                                   | Comentário                                                   |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ |
+| Especificação                                           | Status                        | Comentário                                                   |
+| ------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
 | {{ SpecName('CSS4 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS4 Selectors') }} | Extende seus argumentos para permitir seletores não-simples. |
 | {{ SpecName('CSS3 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial.                                           |
 

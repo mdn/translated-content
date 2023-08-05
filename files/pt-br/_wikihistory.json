@@ -2688,6 +2688,10 @@
       "teoli"
     ]
   },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2019-03-18T20:53:06.319Z",
+    "contributors": ["helton-mori-dev", "fscholz", "greevin", "macalha"]
+  },
   "Web/API/Document/Document": {
     "modified": "2019-07-17T13:05:53.557Z",
     "contributors": ["onsistec", "pleshw"]
@@ -4119,10 +4123,6 @@
       "teoli",
       "panaggio"
     ]
-  },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2019-03-18T20:53:06.319Z",
-    "contributors": ["helton-mori-dev", "fscholz", "greevin", "macalha"]
   },
   "Web/API/Window/alert": {
     "modified": "2020-03-30T12:44:24.443Z",

@@ -1,7 +1,6 @@
 ---
 title: Procesos de documentación
 slug: MDN/Contribute/Processes
-original_slug: MDN/Contribute/Procesos
 ---
 
 {{MDNSidebar}}

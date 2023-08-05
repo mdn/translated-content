@@ -1,7 +1,6 @@
 ---
 title: url()
 slug: Web/CSS/url
-original_slug: Web/CSS/url()
 l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---

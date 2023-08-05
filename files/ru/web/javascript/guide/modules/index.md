@@ -1,7 +1,6 @@
 ---
 title: Модули JavaScript
 slug: Web/JavaScript/Guide/Modules
-translation_of: Web/JavaScript/Guide/Modules
 ---
 
 {{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}Это руководство содержит всю необходимую информацию для начала работы с модулями JavaScript.

@@ -1,7 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-translation_of: Web/API/Document/doctype
 ---
 
 {{ApiRef("DOM")}}

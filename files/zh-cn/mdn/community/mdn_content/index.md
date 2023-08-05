@@ -1,7 +1,6 @@
 ---
 title: 改正内容错误
 slug: MDN/Community/MDN_content
-original_slug: MDN/Contribute/Fixing_MDN_content_bugs
 ---
 
 {{MDNSidebar}}

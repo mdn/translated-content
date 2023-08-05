@@ -34,7 +34,7 @@ eventTarget.addEventListener("keydown", (event) => {
 ```js
 addEventListener("keydown", (event) => {});
 
-onkeydown = (event) => { };
+onkeydown = (event) => {};
 ```
 
 ## イベント型
@@ -90,7 +90,7 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
 この例では、 {{HtmlElement("input")}} 要素内でキーを押すたびに、 {{domxref("KeyboardEvent.code")}} 値を記録します。
 
 ```html
-<input placeholder="ここをクリックして、キーを押してください。" size="40">
+<input placeholder="ここをクリックして、キーを押してください。" size="40" />
 <p id="log"></p>
 ```
 

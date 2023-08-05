@@ -1,7 +1,6 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-translation_of: Web/CSS/shape-image-threshold
 ---
 
 {{CSSRef}}

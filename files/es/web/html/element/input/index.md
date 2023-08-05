@@ -1,7 +1,6 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-original_slug: Web/HTML/Elemento/input
 ---
 
 ## Resumen

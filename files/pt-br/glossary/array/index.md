@@ -1,7 +1,6 @@
 ---
 title: Array
 slug: Glossary/Array
-original_slug: Glossario/array
 ---
 
 Um _array (arranjo ou vetor)_ é um conjunto de dados (que pode assumir os mais diversos tipos, desde do tipo {{Glossary("primitivo")}}, a {{Glossary("objeto")}} dependendo da linguagem de programação). Arrays são utilizados para armazenar mais de um valor em uma única variável. Isso é comparável a uma variável que pode armazenar apenas um valor.

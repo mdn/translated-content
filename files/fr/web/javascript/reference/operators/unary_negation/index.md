@@ -1,7 +1,6 @@
 ---
 title: Négation unaire (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-translation_of: Web/JavaScript/Reference/Operators/Unary_negation
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-translation_of: Web/CSS/offset-distance
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

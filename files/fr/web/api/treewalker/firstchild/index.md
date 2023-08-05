@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
-translation_of: Web/API/TreeWalker/firstChild
 ---
 
 {{ APIRef("DOM") }}

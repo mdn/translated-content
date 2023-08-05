@@ -1,7 +1,6 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-translation_of: Web/CSS/@media/any-pointer
 ---
 
 {{CSSRef}}

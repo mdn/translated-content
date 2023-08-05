@@ -1,7 +1,6 @@
 ---
 title: hgroup
 slug: Web/HTML/Element/hgroup
-original_slug: Web/HTML/Elemento/hgroup
 ---
 
 ## Resumen

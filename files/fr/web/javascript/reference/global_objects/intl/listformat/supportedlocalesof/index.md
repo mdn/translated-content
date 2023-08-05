@@ -1,7 +1,6 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 ---
 
 {{JSRef}}

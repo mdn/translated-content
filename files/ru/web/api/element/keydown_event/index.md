@@ -1,7 +1,6 @@
 ---
 title: keydown
 slug: Web/API/Element/keydown_event
-translation_of: Web/API/Element/keydown_event
 ---
 
 {{APIRef}}
@@ -45,15 +44,15 @@ translation_of: Web/API/Element/keydown_event
 Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code) всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Element/input) элемента.
 
 ```html
-<input placeholder="Кликните здесь, затем нажмите клавишу." size="40">
+<input placeholder="Кликните здесь, затем нажмите клавишу." size="40" />
 <p id="log"></p>
 ```
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('keydown', logKey);
+input.addEventListener("keydown", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;

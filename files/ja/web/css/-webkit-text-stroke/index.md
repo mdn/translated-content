@@ -1,8 +1,6 @@
 ---
-title: '-webkit-text-stroke'
+title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
-page-type: css-shorthand-property
-browser-compat: css.properties.-webkit-text-stroke
 l10n:
   sourceCommit: c23237c82089ca6c56946ce1be95f11646823b53
 ---

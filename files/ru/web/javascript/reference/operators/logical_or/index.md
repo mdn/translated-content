@@ -1,13 +1,6 @@
 ---
 title: Логическое ИЛИ (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_or
 ---
 {{jsSidebar("Operators")}}
 

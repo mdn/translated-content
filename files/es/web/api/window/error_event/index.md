@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ ApiRef("HTML DOM") }}

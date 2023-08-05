@@ -1,7 +1,6 @@
 ---
 title: Encadenamiento opcional
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-original_slug: Web/JavaScript/Referencia/Operadores/Encadenamiento_opcional
 ---
 
 {{JSSidebar("Operators")}}

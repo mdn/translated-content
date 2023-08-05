@@ -1,7 +1,6 @@
 ---
 title: 캔버스 최적화
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-original_slug: Web/HTML/Canvas/Tutorial/Optimizing_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

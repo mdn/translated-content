@@ -1,7 +1,7 @@
 ---
 title: DOMContentLoaded
-slug: Web/API/Window/DOMContentLoaded_event
-original_slug: Web/Events/DOMContentLoaded
+slug: Web/API/Document/DOMContentLoaded_event
+original_slug: Web/API/Window/DOMContentLoaded_event
 ---
 
 O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Mozilla_event_reference/load) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Mozilla_event_reference/load) quando `DOMContentLoaded` seria muito mais apropriado.
@@ -29,12 +29,12 @@ Se você quer que o DOM seja analisado o mais rápido possível após uma requis
 
 ## Propriedades
 
-| Property                              | Type                                 | Description                           |
-| ------------------------------------- | ------------------------------------ | ------------------------------------- |
+| Property                        | Type                       | Description                           |
+| ------------------------------- | -------------------------- | ------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Alvo do evento (O topo do DOM).       |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Tipo de evento                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | O evento é por padrão bubbles ou não. |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | O evento pode ser cancelado ou não.   |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo de evento                        |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | O evento é por padrão bubbles ou não. |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | O evento pode ser cancelado ou não.   |
 
 ## Exemplo
 
@@ -42,7 +42,7 @@ Se você quer que o DOM seja analisado o mais rápido possível após uma requis
 
 ```html
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
+  document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM completamente carregado e analisado");
   });
 </script>
@@ -52,12 +52,11 @@ Se você quer que o DOM seja analisado o mais rápido possível após uma requis
 
 ```html
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
+  document.addEventListener("DOMContentLoaded", function (event) {
     console.log("DOM completamente carregado e analisado");
   });
 
-for(var i=0; i<1000000000; i++)
-{} // este script síncrono irá o atrasar carregamento do DOM. Então o evento DOMContentLoaded irá ser ativado mais tarde.
+  for (var i = 0; i < 1000000000; i++) {} // este script síncrono irá o atrasar carregamento do DOM. Então o evento DOMContentLoaded irá ser ativado mais tarde.
 </script>
 ```
 
@@ -77,9 +76,13 @@ if (document.readyState === "loading") {  // Ainda carregando
 }
 ```
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.DOMContentLoaded_event")}}
+{{Compat}}
 
 ## Eventos Relacionados
 
