@@ -28,10 +28,8 @@ l10n:
 ### JavaScript
 
 - [`Intl.NumberFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) で新しい [コンストラクターのオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) をサポートしました。数値の丸め方を制御するオプション (`roundingIncrement`、`roundingMode`、`roundingPriority`)、整数で末尾のゼロを表示する方法を制御するオプション (`trailingZeroDisplay`)、千や百万などを示す区切り文字を使用するかを制御するオプション (`useGrouping`) を使用できます。
-  また、数値の範囲を整形する [`formatRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange) および [`formatRangeToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts) メソッドも新たにサポートしました 
-  ([Firefox bug 1795756](https://bugzil.la/1795756))。
-- [`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) で、(`Intl.NumberFormat` の一連の変更の一部として) `roundingIncrement`、`roundingMode`、`roundingPriority`、`trailingZeroDisplay` の [コンストラクターオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) および [`selectRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) メソッドをサポートしました 
-  ([Firefox bug 1795756](https://bugzil.la/1795756))。
+  また、数値の範囲を整形する [`formatRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange) および [`formatRangeToParts()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts) メソッドも新たにサポートしました ([Firefox bug 1795756](https://bugzil.la/1795756))。
+- [`Intl.PluralRules`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules) で、(`Intl.NumberFormat` の一連の変更の一部として) `roundingIncrement`、`roundingMode`、`roundingPriority`、`trailingZeroDisplay` の [コンストラクターオプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules) および [`selectRange()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange) メソッドをサポートしました ([Firefox bug 1795756](https://bugzil.la/1795756))。
 
 ### SVG
 
