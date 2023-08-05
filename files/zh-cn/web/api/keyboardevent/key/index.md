@@ -107,7 +107,7 @@ textarea.addEventListener("input", (e) => {
 });
 
 textarea.addEventListener("keyup", (e) => {
-  logMessage(`释放 "${e.key}" 键 [事件： keyup]`);
+  logMessage(`释放 "${e.key}" 键 [事件：keyup]`);
 });
 
 btnReset.addEventListener("click", (e) => {
