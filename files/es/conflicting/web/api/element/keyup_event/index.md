@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: conflicting/Web/API/Element/keyup_event
-original_slug: Web/API/GlobalEventHandlers/onkeyup
-browser-compat: api.Element.keyup_event
 ---
 
 {{ApiRef("HTML DOM")}}

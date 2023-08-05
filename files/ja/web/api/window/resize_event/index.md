@@ -1,5 +1,5 @@
 ---
-title: 'Window: resize イベント'
+title: "Window: resize イベント"
 slug: Web/API/Window/resize_event
 ---
 

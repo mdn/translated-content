@@ -1,8 +1,8 @@
 ---
 title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
-translation_of: Web/API/MouseEvent/shiftKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.shiftKey`** атрибут только для чтения , который указывает была ли нажата клавиша <kbd>shift</kbd> . Возвращает (`true`) если нажата <kbd>shift</kbd>, (`false`) если нет.

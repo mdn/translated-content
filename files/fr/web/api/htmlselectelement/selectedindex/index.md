@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
-translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
 
 {{APIRef("HTML DOM")}}

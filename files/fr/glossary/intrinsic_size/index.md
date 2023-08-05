@@ -1,7 +1,6 @@
 ---
 title: Taille intrinsèque
 slug: Glossary/Intrinsic_Size
-translation_of: Glossary/Intrinsic_Size
 ---
 
 En CSS, la _taille intrinsèque_ d'un élément est la taille qu'il aurait en fonction de son contenu, si aucun facteur externe ne lui était appliqué. Par exemple, les éléments en ligne sont dimensionnés de manière intrinsèque : la `largeur`, la `hauteur`, la marge et le remplissage vertical n'ont aucun impact, contrairement à la marge et au remplissage horizontal.

@@ -1,7 +1,6 @@
 ---
 title: Envie sugestões sobre o MDN
 slug: MDN/Community
-original_slug: MDN/Contribute/Feedback
 ---
 
 {{MDNSidebar}}

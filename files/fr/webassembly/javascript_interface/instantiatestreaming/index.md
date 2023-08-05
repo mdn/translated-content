@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 
 {{WebAssemblySidebar}}

@@ -1,15 +1,6 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 {{JSRef("Global_Objects", "Number")}}
 

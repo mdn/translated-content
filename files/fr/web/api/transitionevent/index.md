@@ -1,7 +1,6 @@
 ---
 title: TransitionEvent
 slug: Web/API/TransitionEvent
-translation_of: Web/API/TransitionEvent
 ---
 
 {{APIRef("CSSOM")}} {{SeeCompatTable}}

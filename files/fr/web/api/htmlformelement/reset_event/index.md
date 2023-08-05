@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onreset
 slug: Web/API/HTMLFormElement/reset_event
-translation_of: Web/API/GlobalEventHandlers/onreset
 ---
 
 {{ ApiRef() }}

@@ -1,7 +1,6 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
 
 {{AddonSidebar()}}

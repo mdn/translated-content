@@ -1,7 +1,6 @@
 ---
 title: SVG в HTML. Введение
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 
 ## Описание

@@ -1,7 +1,6 @@
 ---
 title: Opérateur de groupement
 slug: Web/JavaScript/Reference/Operators/Grouping
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 ---
 
 {{jsSidebar("Operators")}}

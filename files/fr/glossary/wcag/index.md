@@ -1,7 +1,6 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
-translation_of: Glossary/WCAG
 ---
 
 Les _Web Content Accessibility Guidelines_ (**WCAG**) sont une recommandation publiée par le groupe {{Glossary("WAI","Web Accessibility Initiative")}} du {{Glossary("W3C")}}. Ils définissent un ensemble de lignes de conduite à suivre pour rendre le contenu accessible principalement aux personnes avec des handicaps, mais aussi aux appareils aux ressources limitées comme les téléphones portables.

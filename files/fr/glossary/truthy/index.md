@@ -1,7 +1,6 @@
 ---
 title: Truthy
 slug: Glossary/Truthy
-translation_of: Glossary/Truthy
 ---
 
 En [JavaScript](/fr/docs/Glossary/JavaScript), on dit en anglais qu'une valeur est **<i lang="en">truthy</i>** lorsqu'elle est considérée comme vraie (`true`) quand elle est évaluée dans un contexte [booléen](/fr/docs/Glossary/Boolean). Toutes les valeurs sont <i lang="en">truthy</i> sauf si elles sont définies comme [<i lang="en">falsy</i>](/fr/docs/Glossary/Falsy) (c'est-à-dire, sauf pour `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined` et `NaN`).

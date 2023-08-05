@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
 {{JSRef}}

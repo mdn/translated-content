@@ -1,11 +1,8 @@
 ---
 title: Window.pageYOffset
 slug: Web/API/Window/pageYOffset
-tags:
-  - прокрутка
-  - скролл
-translation_of: Web/API/Window/pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 **`pageYOffset`** - свойство окна {{domxref("Window")}} , доступное только для чтения. Это то же свойство, что и {{domxref("Window.scrollY", "scrollY")}} и, как таковое, оно тоже возвращает количество пикселей, на которое прокручен документ по вертикали (вниз или вверх). Значение свойства равное 0.0 говорит о том, что в данный момент верхний край документа {{domxref("Document")}} совпадает с верхним краем области содержимого окна.
@@ -73,8 +70,7 @@ condimentum sapien non felis cursus blandit. Integer
 euismod lectus a ipsum pellentesque lacinia.</p>
 `;
 
-document.getElementById("frame").contentDocument
-        .body.innerHTML = contentHTML;
+document.getElementById("frame").contentDocument.body.innerHTML = contentHTML;
 ```
 
 В данном примере создаётся элемент {{HTMLElement("iframe")}}, и задаётся его содержимое, затем определённый элемент этого документа прокручивается в область рамки. Как только это произошло, выясняется положение вертикальной прокрутки с помощью значения `pageYOffset` у элемента {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} в рамке.
@@ -84,11 +80,9 @@ document.getElementById("frame").contentDocument
 HTML предельно прост и состоит из двух элементов: {{HTMLElement("iframe")}}, содержащий документ, который мы будем прокручивать, и {{HTMLElement("div")}}, в который мы выведем значение свойства `pageYOffset` по окончании прокрутки.
 
 ```html
-<iframe id="frame">
-</iframe>
+<iframe id="frame"> </iframe>
 
-<div id="info">
-</div>
+<div id="info"></div>
 ```
 
 ### JavaScript
@@ -101,8 +95,8 @@ var info = document.getElementById("info");
 var target = frameDoc.getElementById("overview");
 frameDoc.scrollingElement.scrollTop = target.offsetTop;
 
-info.innerText = "Y offset after scrolling: " +
-                 frame.contentWindow.pageYOffset + " pixels";
+info.innerText =
+  "Y offset after scrolling: " + frame.contentWindow.pageYOffset + " pixels";
 ```
 
 Код JavaScript начинается с записи в переменные `frame` and `info` элементов `<iframe>`, содержащего наш документ, и элемента `<div>` , в который мы запишем результат проверки положения прокрутки. Затем мы получаем ссылку на элемент из нашего документа, который сразу должен быть прокручен до видимой области рамки, с помощью команды {{domxref("Document.getElementById", "getElementById()")}} у {{domxref("HTMLIFrameElement.contentDocument")}} рамки.
@@ -120,7 +114,10 @@ iframe {
 
 #info {
   margin-top: 20px;
-  font: 16px "Open Sans", "Helvetica", "Arial";
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial";
 }
 ```
 
@@ -130,11 +127,9 @@ iframe {
 
 {{EmbedLiveSample("Пример", 650, 500)}}
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                             | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM View', '#dom-window-pageyoffset', 'window.pageYOffset') }} | {{ Spec2('CSSOM View') }} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

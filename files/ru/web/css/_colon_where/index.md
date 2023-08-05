@@ -1,11 +1,6 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - псевдокласс
-translation_of: Web/CSS/:where
 ---
 {{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
 

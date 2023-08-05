@@ -1,11 +1,8 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - Буфер
-  - Типизированные массивы
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 Объект **`ArrayBuffer`** используется для работы с бинарными данными. Он представляет собой ссылку на поток "сырых" двоичных данных, однако работать с ними напрямую возможности не даёт. Вместо этого, вы можете создать [типизированный массив](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) или объект {{jsxref("DataView")}}, который можно использовать для чтения и записи данных в **`ArrayBuffer`**.
@@ -54,15 +51,15 @@ new ArrayBuffer(length)
 
 ```js
 var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+var view = new Int32Array(buffer);
 ```
 
 ## Спецификация
 
-| Specification                                                                            | Status                           | Comment                                 |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                                     | {{Spec2('Typed Array')}} | Заменён спецификацией ECMAScript 6.     |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ES6')}}             | Первичное определение в ECMA стандарте. |
+| Specification                                                      | Status                   | Comment                                 |
+| ------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
+| {{SpecName('Typed Array')}}                                        | {{Spec2('Typed Array')}} | Заменён спецификацией ECMAScript 6.     |
+| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ES6')}}         | Первичное определение в ECMA стандарте. |
 
 ## Таблица совместимости
 

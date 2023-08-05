@@ -1,14 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.username
 slug: Web/API/HTMLAnchorElement/username
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/username
-original_slug: Web/API/HTMLHyperlinkElementUtils/username
 ---
 
 {{ApiRef("URL API")}}

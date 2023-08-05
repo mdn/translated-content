@@ -1,7 +1,6 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
-translation_of: Web/CSS/grid-column-start
 ---
 
 {{CSSRef}}

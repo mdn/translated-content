@@ -1,11 +1,8 @@
 ---
 title: window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
-tags:
-  - Анимация
-translation_of: Web/API/window/requestAnimationFrame
-original_slug: DOM/window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame`** указывает браузеру на то, что вы хотите произвести анимацию, и просит его запланировать перерисовку на следующем кадре анимации. В качестве параметра метод получает функцию, которая будет вызвана перед перерисовкой.
@@ -37,12 +34,13 @@ window.requestAnimationFrame(callback);
 
 ```js
 var start = null;
-var element = document.getElementById('SomeElementYouWantToAnimate');
+var element = document.getElementById("SomeElementYouWantToAnimate");
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-  element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
+  element.style.transform =
+    "translateX(" + Math.min(progress / 10, 200) + "px)";
   if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
@@ -51,18 +49,11 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-## Примечание
+## Спецификации
 
-В Edge версиях младше 17 и в Internet Explorer не надёжно запускать `requestAnimationFrame` перед циклом рисования.
+{{Specifications}}
 
-## Спецификация
-
-| Спецификация                                                                                                                                             | Статус                                       | Комментарий                         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------- |
-| {{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}                                                         | {{Spec2('HTML WHATWG')}}             | Без изменений, заменяет предыдущую. |
-| {{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}} | {{Spec2('RequestAnimationFrame')}} | Первоначальное описание.            |
-
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,18 +1,6 @@
 ---
 title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -170,9 +158,7 @@ req.open();
 req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  console.log(
-    "Передача данных завершена (но мы не знаем, успешно ли)."
-  );
+  console.log("Передача данных завершена (но мы не знаем, успешно ли).");
 }
 ```
 
@@ -249,7 +235,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
 Всё это возможно благодаря браузеру и тегу {{HTMLElement("form")}}. Но если вам требуется выполнить все операции только с помощью JavaScript, вам придётся проинструктировать интерпретатор обо _всех_ выполняемых операциях. Отправка формы с помощью _чистого_ XHR слишком сложна, чтобы рассказать вам о ней во всех деталях. Поэтому мы решили опубликовать здесь **целый (пусть и учебный) фреймворк**, который поддерживает все четыре способа отправки и даже **загрузку файлов**:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -285,9 +271,9 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
               "get",
               data.receiver.replace(
                 /(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${data.segments.join("&")}` : ""
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : "",
               ),
-              true
+              true,
             );
             req.send(null);
           } else {
@@ -299,12 +285,12 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                 "---------------------------" + Date.now().toString(16);
               req.setRequestHeader(
                 "Content-Type",
-                `multipart\/form-data; boundary=${boundary}`
+                `multipart\/form-data; boundary=${boundary}`,
               );
               req.sendAsBinary(
                 `--${boundary}\r\n` +
                   data.segments.join(`--${boundary}\r\n`) +
-                  `--${boundary}--\r\n`
+                  `--${boundary}--\r\n`,
               );
             } else {
               // enctype is application/x-www-form-urlencoded or text/plain
@@ -382,7 +368,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                       file.name +
                       '"\r\nContent-Type: ' +
                       file.type +
-                      "\r\n\r\n"
+                      "\r\n\r\n",
                   );
                   this.status++;
                   segmReq.readAsBinaryString(file);
@@ -392,7 +378,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                 // method is GET: files will not be sent!
                 for (const file of field.files) {
                   this.segments.push(
-                    `${filter(field.name)}=${filter(file.name)}`
+                    `${filter(field.name)}=${filter(file.name)}`,
                   );
                 }
               }
@@ -405,12 +391,12 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
               if (this.technique === 3) {
                 // enctype is multipart/form-data
                 this.segments.push(
-                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`
+                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`,
                 );
               } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
                 this.segments.push(
-                  `${filter(field.name)}=${filter(field.value)}`
+                  `${filter(field.name)}=${filter(field.value)}`,
                 );
               }
             }
@@ -439,7 +425,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
@@ -458,10 +445,12 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name:
-            <input type="text" name="firstname" />
-          </label><br />
-          <label>Last name:
+          <label
+            >First name:
+            <input type="text" name="firstname" /> </label
+          ><br />
+          <label
+            >Last name:
             <input type="text" name="lastname" />
           </label>
         </p>
@@ -481,12 +470,14 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>Your name:
+          <label
+            >Your name:
             <input type="text" name="user" />
           </label>
         </p>
         <p>
-          <label>Your message:<br />
+          <label
+            >Your message:<br />
             <textarea name="message" cols="40" rows="8"></textarea>
           </label>
         </p>
@@ -506,7 +497,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
@@ -514,7 +506,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          <label>What do you prefer:
+          <label
+            >What do you prefer:
             <select name="image_type">
               <option>Books</option>
               <option>Cinema</option>
@@ -523,7 +516,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           </label>
         </p>
         <p>
-          <label>Post your photos:
+          <label
+            >Post your photos:
             <input type="file" multiple name="photos[]" />
           </label>
         </p>
@@ -542,7 +536,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          <label>Describe yourself:<br />
+          <label
+            >Describe yourself:<br />
             <textarea name="description" cols="50" rows="8"></textarea>
           </label>
         </p>
@@ -606,7 +601,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/ru/docs/Web/API
 `FormData` API**. Note the brevity of the code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -762,7 +757,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // используется HEAD только если сервер требует заголовки
-  "yourpage.html"
+  "yourpage.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -775,7 +770,7 @@ Let's create two functions:
 ```js
 function getHeaderTime() {
   const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`)
+    window.localStorage.getItem(`lm_${this.filepath}`),
   );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -802,8 +797,8 @@ And to test:
 ifHasChanged("yourpage.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified
-    ).toLocaleString()}!`
+      nModified,
+    ).toLocaleString()}!`,
   );
 });
 ```

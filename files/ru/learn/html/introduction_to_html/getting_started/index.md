@@ -1,19 +1,6 @@
 ---
 title: Начало работы с HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Guide
-  - HTML
-  - Атрибуты
-  - Для начинающих
-  - Комментарии
-  - Пробелы
-  - Программирование
-  - Руководство
-  - Урок
-  - элементы
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
-original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}

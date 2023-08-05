@@ -1,7 +1,6 @@
 ---
 title: 텍스트 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Drawing_text_using_a_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

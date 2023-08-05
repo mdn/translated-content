@@ -1,7 +1,6 @@
 ---
 title: L'opérateur this
 slug: Web/JavaScript/Reference/Operators/this
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
 
 {{jsSidebar("Operators")}}

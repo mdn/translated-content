@@ -1,5 +1,5 @@
 ---
-title: ':target'
+title: ":target"
 slug: Web/CSS/:target
 ---
 
@@ -41,17 +41,24 @@ A pseudo-classe `:target` pode ser usada para destacar uma parte da página que 
 ```html
 <h3>Índice</h3>
 <ol>
- <li><a href="#p1">Ir para o primeiro parágrafo!</a></li>
- <li><a href="#p2">Ir para o segundo parágrafo!</a></li>
- <li><a href="#vazio">Esse link não vai pra lugar nenhum,
-   pois, o alvo não existe</a></li>
+  <li><a href="#p1">Ir para o primeiro parágrafo!</a></li>
+  <li><a href="#p2">Ir para o segundo parágrafo!</a></li>
+  <li>
+    <a href="#vazio"
+      >Esse link não vai pra lugar nenhum, pois, o alvo não existe</a
+    >
+  </li>
 </ol>
 
 <h3>Meu artigo divertido</h3>
-<p id="p1">Você pode definir <i>este parágrafo</i> como alvo
-   usando um fragmento de URL. Clique no link acima para experimentar!</p>
-<p id="p2">Esse é <i>outro parágrafo</i>, também acessável
-   pelos links acima. Não é incrível?</p>
+<p id="p1">
+  Você pode definir <i>este parágrafo</i> como alvo usando um fragmento de URL.
+  Clique no link acima para experimentar!
+</p>
+<p id="p2">
+  Esse é <i>outro parágrafo</i>, também acessável pelos links acima. Não é
+  incrível?
+</p>
 ```
 
 #### CSS
@@ -66,7 +73,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /* Estilize nos elementos em itálico dentro do elemento alvo  */
@@ -96,17 +103,20 @@ Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaS
 <div class="lightbox" id="example1">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="example2">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et,
-      mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+    </figcaption>
   </figure>
 </div>
 ```
@@ -169,7 +179,7 @@ Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaS
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }
@@ -181,11 +191,11 @@ Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaS
 
 ## Especificações
 
-| Especificações                                                                                   | Status                               | Comentário                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------ |
-| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Define semântica específica do HTML. |
-| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Não há mudanças.                     |
-| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Definição inicial.                   |
+| Especificações                                                          | Status                      | Comentário                           |
+| ----------------------------------------------------------------------- | --------------------------- | ------------------------------------ |
+| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}    | Define semântica específica do HTML. |
+| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}         | {{Spec2("CSS4 Selectors")}} | Não há mudanças.                     |
+| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}             | {{Spec2("CSS3 Selectors")}} | Definição inicial.                   |
 
 ## Navegadores compatíveis
 

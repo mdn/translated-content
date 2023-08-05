@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.openCursor()
 slug: Web/API/IDBIndex/openCursor
-translation_of: Web/API/IDBIndex/openCursor
 ---
 
 {{APIRef("IndexedDB")}}

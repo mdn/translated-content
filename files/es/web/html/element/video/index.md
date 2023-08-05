@@ -1,7 +1,6 @@
 ---
 title: video
 slug: Web/HTML/Element/video
-original_slug: Web/HTML/Elemento/video
 ---
 
 El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.

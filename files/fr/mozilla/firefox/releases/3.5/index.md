@@ -1,7 +1,6 @@
 ---
 title: Firefox 3.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.5
-translation_of: Mozilla/Firefox/Releases/3.5
 ---
 
 {{FirefoxSidebar}}

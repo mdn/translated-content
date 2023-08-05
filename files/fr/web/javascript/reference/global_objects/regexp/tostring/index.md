@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
 {{JSRef}}

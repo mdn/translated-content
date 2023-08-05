@@ -1,7 +1,6 @@
 ---
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
-translation_of: Web/API/WebGLBuffer
 ---
 
 {{APIRef("WebGL")}}

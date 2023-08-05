@@ -1,7 +1,6 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
-translation_of: Web/CSS/text-decoration-skip-ink
 ---
 
 {{CSSRef}}

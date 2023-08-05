@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}

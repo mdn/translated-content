@@ -1,15 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
 
 {{JSRef("Global_Objects", "Math")}}

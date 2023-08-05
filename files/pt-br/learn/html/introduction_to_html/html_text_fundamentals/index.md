@@ -1,7 +1,6 @@
 ---
 title: Fundamentos do texto em HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

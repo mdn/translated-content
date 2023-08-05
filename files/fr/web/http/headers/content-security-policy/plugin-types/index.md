@@ -1,7 +1,6 @@
 ---
 title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
 
 {{HTTPSidebar}}

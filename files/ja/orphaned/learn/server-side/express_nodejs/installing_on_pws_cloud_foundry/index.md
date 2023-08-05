@@ -1,7 +1,6 @@
 ---
 title: PWS/Cloud Foundry に LocalLibrary をインストールする
 slug: orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
-original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 ---
 
 {{LearnSidebar}}

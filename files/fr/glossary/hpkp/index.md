@@ -1,7 +1,6 @@
 ---
 title: HPKP
 slug: Glossary/HPKP
-translation_of: Glossary/HPKP
 ---
 
 **HTTP Public Key Pinning** (**HPKP**) est une fonctionnalité de sécurité qui indique à un client Web d'associer une clé publique cryptographique spécifique à un certain serveur Web pour réduire le risque d'attaques {{Glossary("MitM")}} avec des certificats fabriqués .

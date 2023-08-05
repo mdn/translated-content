@@ -1,15 +1,6 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - Экспериментальный
-  - справочник
-translation_of: Web/CSS/margin-inline-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

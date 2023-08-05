@@ -1,7 +1,6 @@
 ---
 title: RTCIceServer
 slug: Web/API/RTCIceServer
-translation_of: Web/API/RTCIceServer
 ---
 
 {{APIRef("WebRTC")}}

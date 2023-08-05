@@ -1,11 +1,6 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - Прокси
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/deleteProperty
 ---
 
 {{JSRef}}

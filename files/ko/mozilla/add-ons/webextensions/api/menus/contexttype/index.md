@@ -1,7 +1,6 @@
 ---
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType
 ---
 
 {{AddonSidebar()}}

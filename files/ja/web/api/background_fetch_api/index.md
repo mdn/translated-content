@@ -1,7 +1,6 @@
 ---
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
-page-type: web-api-overview
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---

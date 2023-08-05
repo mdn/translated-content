@@ -1,7 +1,6 @@
 ---
 title: Selectores de hermanos adyacentes
 slug: Web/CSS/Adjacent_sibling_combinator
-original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
 
 {{CSSRef("Selectors")}}

@@ -1,7 +1,6 @@
 ---
 title: PeformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
-translation_of: Web/API/PerformanceObserver/disconnect
 ---
 
 {{APIRef("Performance Timeline API")}}

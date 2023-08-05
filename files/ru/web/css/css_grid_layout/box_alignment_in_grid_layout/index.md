@@ -1,8 +1,6 @@
 ---
 title: Выравнивание блоков в CSS разметке Grid
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 Если вы знакомы с [flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout), вы уже столкнулись с тем, как гибкие элементы могут быть правильно выровнены внутри контейнера flex. Эти свойства выравнивания, которые мы впервые встретили в спецификации flexbox, были перенесены в новую спецификацию под названием [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Эта спецификация содержит подробную информацию о том, как выравнивание должно работать во всех различных методах компоновки.

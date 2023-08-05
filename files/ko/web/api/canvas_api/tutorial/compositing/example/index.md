@@ -1,7 +1,6 @@
 ---
 title: 도형 합성 예제
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-original_slug: Web/HTML/Canvas/Tutorial/Compositing/Example
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

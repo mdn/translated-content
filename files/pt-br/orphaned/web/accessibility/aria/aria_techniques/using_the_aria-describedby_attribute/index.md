@@ -1,8 +1,6 @@
 ---
 title: Usando o atributo aria-describedby
-slug: >-
-  orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
+slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 ---
 
 ### Descrição

@@ -1,7 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 
 {{JSRef}}

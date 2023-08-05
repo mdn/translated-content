@@ -1,7 +1,6 @@
 ---
 title: webRequest.UploadData
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
 ---
 
 {{AddonSidebar()}}

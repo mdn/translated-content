@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}

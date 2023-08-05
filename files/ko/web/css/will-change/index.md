@@ -25,9 +25,9 @@ slug: Web/CSS/will-change
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Example of <custom-ident> */
-will-change: opacity;          /* Example of <custom-ident> */
-will-change: left, top;        /* Example of two <animateable-feature> */
+will-change: transform; /* Example of <custom-ident> */
+will-change: opacity; /* Example of <custom-ident> */
+will-change: left, top; /* Example of two <animateable-feature> */
 
 /* 전역 값 */
 will-change: inherit;
@@ -64,20 +64,20 @@ will-change: unset;
 상단 예시는 will-change 속성을 스타일시트에 직접 추가한다: 이것은 브라우저가 항상 메모리내에서 필요보다 더 오래동안 최적화를 유지하도록 하는데 바로 이렇게 스타일시트에 직접 삽입하는 것을 피해야 할 이유로서 살펴봤던 것이다. 아래는 스크립트를 통해 will-change 를 적용하는 법의 다른 예시를 보여주고 십중팔구 대부분의 경우에 이렇게 시행해야 한다.
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // 요소가 hover 상태일 때 will-change 설정
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // 애니메이션 키프레임 단락 내에서
   // 변경될 예정인 최적화 가능한 속성들
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

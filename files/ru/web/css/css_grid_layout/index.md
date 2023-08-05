@@ -1,7 +1,6 @@
 ---
 title: CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout
 ---
 
 **CSS Grid Layout** отлично подходит для того, чтобы разделить страницу на основные области или определить взаимосвязь размера, позиционирования и уровня между частями контента, состоящего из HTML примитивов.
