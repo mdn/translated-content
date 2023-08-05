@@ -84,7 +84,7 @@ The head of the document:
 - Use the [W3C HTML validator](https://validator.w3.org/) to validate your HTML; you'll get bonus points if it validates.
 - You don't need to know any CSS to do this assessment; you just need to put the provided CSS inside an HTML element.
 
-## Example
+## 예제
 
 The following screenshot shows an example of what the letter might look like after being marked up.
 
