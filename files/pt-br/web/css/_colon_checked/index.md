@@ -1,5 +1,5 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
 ---
 
@@ -56,49 +56,68 @@ option:checked {
 - `option:checked`
   - : Representa todos os selects na página que estão selecionados
 
-### Usando checkboxes escodindos para amarzenar algum valor booleano.
+### Usando checkboxes escodindos para amarzenar algum valor booleano
 
 A pseudo-classe `:checked` aplicada em checkboxes escondidos, adicionado ao início de sua página pode
 ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html)).
 
 ```css
 #expand-btn {
-    margin: 0 3px;
-    display: inline-block;
-    font: 12px / 13px "Lucida Grande", sans-serif;
-    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
-    padding: 3px 6px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    background-color: #969696;
-    cursor: default;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+  margin: 0 3px;
+  display: inline-block;
+  font:
+    12px / 13px "Lucida Grande",
+    sans-serif;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
+  padding: 3px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: #969696;
+  cursor: default;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow:
+    rgba(255, 255, 255, 0.4) 0 1px,
+    inset 0 20px 20px -10px white;
+  -webkit-box-shadow:
+    rgba(255, 255, 255, 0.4) 0 1px,
+    inset 0 20px 20px -10px white;
+  box-shadow:
+    rgba(255, 255, 255, 0.4) 0 1px,
+    inset 0 20px 20px -10px white;
 }
 
-#isexpanded:checked ~ #expand-btn, #isexpanded:checked ~ * #expand-btn {
-    background: #B5B5B5;
-    -moz-box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
-    -webkit-box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
-    box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+#isexpanded:checked ~ #expand-btn,
+#isexpanded:checked ~ * #expand-btn {
+  background: #b5b5b5;
+  -moz-box-shadow:
+    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
+    inset rgba(0, 0, 0, 1) 0 1px 3px,
+    rgba(255, 255, 255, 0.4) 0 1px;
+  -webkit-box-shadow:
+    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
+    inset rgba(0, 0, 0, 1) 0 1px 3px,
+    rgba(255, 255, 255, 0.4) 0 1px;
+  box-shadow:
+    inset rgba(0, 0, 0, 0.4) 0 -5px 12px,
+    inset rgba(0, 0, 0, 1) 0 1px 3px,
+    rgba(255, 255, 255, 0.4) 0 1px;
 }
 
-#isexpanded, .expandable {
-    display: none;
+#isexpanded,
+.expandable {
+  display: none;
 }
 
 #isexpanded:checked ~ * tr.expandable {
-    display: table-row;
-    background: #cccccc;
-
+  display: table-row;
+  background: #cccccc;
 }
 
-#isexpanded:checked ~ p.expandable, #isexpanded:checked ~ * p.expandable {
-    display: block;
-    background: #cccccc;
+#isexpanded:checked ~ p.expandable,
+#isexpanded:checked ~ * p.expandable {
+  display: block;
+  background: #cccccc;
 }
 ```
 
@@ -137,13 +156,13 @@ Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escond
 
 ## Especificações
 
-| Especificação                                                                        | Estatus                                  | Comentários                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}     | Sem mudanças.                                        |
-| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}     | {{ Spec2('HTML5 W3C') }}         | Define a semântica sobre o HTML.                     |
-| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS4 Selectors') }} | Sem mudanças.                                        |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }} | {{ Spec2('CSS3 Basic UI') }}     | Link para Seletores nível 3                          |
-| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}         | {{ Spec2('CSS3 Selectors') }} | Define a pseudo-classe, mas não associação semântica |
+| Especificação                                                  | Estatus                       | Comentários                                          |
+| -------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
+| {{ SpecName('HTML WHATWG', '#selector-checked', ':checked') }} | {{ Spec2('HTML WHATWG') }}    | Sem mudanças.                                        |
+| {{ SpecName('HTML5 W3C', '#selector-checked', ':checked') }}   | {{ Spec2('HTML5 W3C') }}      | Define a semântica sobre o HTML.                     |
+| {{ SpecName('CSS4 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS4 Selectors') }} | Sem mudanças.                                        |
+| {{ SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked') }} | {{ Spec2('CSS3 Basic UI') }}  | Link para Seletores nível 3                          |
+| {{ SpecName('CSS3 Selectors', '#checked', ':checked') }}       | {{ Spec2('CSS3 Selectors') }} | Define a pseudo-classe, mas não associação semântica |
 
 ## Compatibilidade de navegadores
 

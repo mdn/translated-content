@@ -48,11 +48,13 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 1. 当使用 `font-variation-settings` 时，请务必注意轴名称区分大小写。注册轴名称必须为小写，自定义轴必须为大写。例如：
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
+   `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
 
 2. 如果您使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。您可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
@@ -65,7 +67,7 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字重值。
@@ -81,7 +83,7 @@ font-variation-settings: 'wght' 375;
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字宽值。
@@ -97,7 +99,7 @@ Italic（`ital`）轴的工作方式不同，因为它仅可以打开或关闭; 
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 ```
 
 可以通过编辑下面实例的 CSS 来使用斜体值。
@@ -113,7 +115,7 @@ Slant（由 `slnt` 标签表示），或者它经常被称为“oblique” - 与
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 可以通过编辑下面实例的 CSS 来使用 slant/oblique 值。
@@ -133,7 +135,7 @@ font-variation-settings: 'slnt' 14;
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 可以通过编辑下面实例的 CSS 来使用视觉尺寸值。
@@ -149,7 +151,7 @@ font-variation-settings: 'opsz' 36;
 由于在字体设计方面有着众所周知的历史，等级可能会成为更常见的自定义轴之一。设计不同等级的字体通常是根据预期的用途和印刷技术来进行的。 “等级”一词指的是字体设计的相对重量或密度，但与传统的“重量”不同之处在于文本占据的物理空间不会改变，因此改变文本等级并不会改变文本或其周围元素的整体布局。这使得等级成为有用的变化轴，因为它可以变化或动画而不会引起文本本身的回流。
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 可以通过编辑下面实例的 CSS 来使用字体等级值。
@@ -164,10 +166,10 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
+  font-family: "MyVariableFontName";
+  src: "path/to/font/file/myvariablefont.woff2" format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
 }
 ```
 
@@ -181,13 +183,13 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

@@ -41,10 +41,10 @@ Isto é apenas um trecho de código simples usando a propriedade `fillStyle` par
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -58,15 +58,16 @@ Edite o código abaixo e veja as alterações atualizadas na tela:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'blue';
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -74,17 +75,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
@@ -98,11 +99,15 @@ Neste exemplo, nós usamos dois laços `for` para desenhar uma grade de retângu
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-for (var i = 0; i < 6; i++){
-  for (var j = 0; j < 6; j++){
-    ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
-                     Math.floor(255 - 42.5 * j) + ',0)';
+var ctx = document.getElementById("canvas").getContext("2d");
+for (var i = 0; i < 6; i++) {
+  for (var j = 0; j < 6; j++) {
+    ctx.fillStyle =
+      "rgb(" +
+      Math.floor(255 - 42.5 * i) +
+      "," +
+      Math.floor(255 - 42.5 * j) +
+      ",0)";
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
 }
@@ -114,24 +119,11 @@ O resultado fica assim:
 
 ## Especificações
 
-| Especificação                                                                                                                                    | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillstyle", "CanvasRenderingContext2D.fillStyle")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibibidade com o Navegador
 
-{{Compat("api.CanvasRenderingContext2D.fillStyle")}}
-
-## Notas específicas doWebKit/Blink
-
-- Nos navegadores baseados em WebKit e Blink, além da propriedade `fillStyle`, o método não padrão e obsoleto `ctx.setFillColor()` é implementado.
-
-  ```js
-  setFillColor(color, optional alpha);
-  setFillColor(grayLevel, optional alpha);
-  setFillColor(r, g, b, a);
-  setFillColor(c, m, y, k, a);
-  ```
+{{Compat}}
 
 ## Veja também
 

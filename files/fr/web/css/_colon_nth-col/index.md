@@ -1,8 +1,6 @@
 ---
-title: ':nth-col'
+title: ":nth-col"
 slug: Web/CSS/:nth-col
-translation_of: Web/CSS/:nth-col
-browser-compat: css.selectors.nth-col
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -41,7 +39,7 @@ Voir {{Cssxref(":nth-child")}} pour une explication plus détaillée de cette sy
     <td>quatre</td>
   </tr>
   <tr>
-  <td>un</td>
+    <td>un</td>
     <td>deux</td>
     <td>trois</td>
     <td>quatre</td>
@@ -54,11 +52,11 @@ Voir {{Cssxref(":nth-child")}} pour une explication plus détaillée de cette sy
 ```css
 td {
   border: 1px solid #ccc;
-  padding: .2em;
+  padding: 0.2em;
 }
 
 /* Colonnes impaires */
-:nth-col(2n+1) {
+:nth-col(2n + 1) {
   background-color: pink;
 }
 ```

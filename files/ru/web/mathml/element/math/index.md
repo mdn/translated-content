@@ -1,8 +1,8 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef()}}
 
 Элементом верхнего уровня в MathML является тэг `<math>`. Каждый допустимый экземпляр MathML должен быть внутри этого контейнера. Он не допускает вложений, но внутри может быть произвольное число других дочерних элементов.
@@ -44,34 +44,32 @@ translation_of: Web/MathML/Element/math
 ### Обозначения HTML5
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML in HTML5</title>
   </head>
   <body>
-
-  <math>
-    <mrow>
+    <math>
       <mrow>
+        <mrow>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mo>=</mo>
         <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
+          <mi>c</mi>
           <mn>2</mn>
         </msup>
       </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
+    </math>
   </body>
 </html>
 ```

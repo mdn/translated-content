@@ -1,7 +1,6 @@
 ---
 title: Modules
 slug: Mozilla/Add-ons
-translation_of: Mozilla/Add-ons
 ---
 
 {{AddonSidebar}}

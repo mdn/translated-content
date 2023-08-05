@@ -1,7 +1,6 @@
 ---
 title: Créer les briques
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
 {{GamesSidebar}}
@@ -33,11 +32,11 @@ Ajoutez le code suivant juste en-dessous des variables :
 
 ```js
 var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0 };
-    }
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
 }
 ```
 
@@ -49,25 +48,25 @@ Maintenant créons une fonction pour parcourir toutes les briques dans le tablea
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            bricks[c][r].x = 0;
-            bricks[c][r].y = 0;
-            ctx.beginPath();
-            ctx.rect(0, 0, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 
 Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y` à chaque brique, et nous dessinons les briques — de taille&nbsp;: `brickWidth` x `brickHeight` — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle&nbsp;:
 
 ```js
-var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 ```
 
 Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`, `brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.
@@ -76,19 +75,19 @@ La version finale de la fonction `drawBricks()`, après avoir assigné les valeu
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-            bricks[c][r].x = brickX;
-            bricks[c][r].y = brickY;
-            ctx.beginPath();
-            ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 

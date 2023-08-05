@@ -1,8 +1,6 @@
 ---
 title: HTMLMediaElement.crossOrigin
 slug: Web/API/HTMLMediaElement/crossOrigin
-browser-compat: api.HTMLMediaElement.crossOrigin
-translation_of: Web/API/HTMLMediaElement/crossOrigin
 ---
 
 {{APIRef("HTML DOM")}}

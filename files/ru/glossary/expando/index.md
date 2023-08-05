@@ -1,8 +1,6 @@
 ---
 title: Expando
 slug: Glossary/Expando
-translation_of: Glossary/Expando
-original_slug: Глоссарий/Expando
 ---
 
 Expando-свойства — это свойства, добавленные в узлы {{glossary("DOM")}} с помощью {{glossary("JavaScript")}}, когда эти свойства не являются частью DOM-спецификации {{glossary("object","объекта")}}:

@@ -25,17 +25,17 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 1. 買い物リストを配列に保持したいとき、次のようにします。下のコードをコンソールに入力してみましょう。
 
-    ```js
-    let shopping = ['パン', '牛乳', 'チーズ', 'ハム', '麺'];
-    shopping;
-    ```
+   ```js
+   let shopping = ["パン", "牛乳", "チーズ", "ハム", "麺"];
+   shopping;
+   ```
 
 2. この例では、配列の各項目は文字列ですが、配列には何でも格納することができることを頭に入れておきましょう。文字列、数値、オブジェクト、その他の変数、さらには別の配列ですら格納することができます。そして混ぜ合わせることも。すべて同じデータ型である必要はありません。
 
-    ```js
-    let sequence = [1, 1, 2, 3, 5, 8, 13];
-    let random = ['tree', 795, [0, 1, 2]];
-    ```
+   ```js
+   let sequence = [1, 1, 2, 3, 5, 8, 13];
+   let random = ["tree", 795, [0, 1, 2]];
+   ```
 
 3. いくつか配列を作ってみましょう。それから先に進みます。
 
@@ -45,26 +45,26 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 1. 次のコードをコンソールに入力してください。
 
-    ```js
-    shopping[0];
-    // "パン"という値が戻ります
-    ```
+   ```js
+   shopping[0];
+   // "パン"という値が戻ります
+   ```
 
 2. そして、配列中の項目は単に新しい値を代入することで変更することが出来ます。
 
-    ```js
-    shopping[0] = 'タヒーニ';
-    shopping;
-    // ショッピングリストは[ "タヒーニ", "牛乳", "チーズ", "ハム", "麺" ]に変更されています。
-    ```
+   ```js
+   shopping[0] = "タヒーニ";
+   shopping;
+   // ショッピングリストは[ "タヒーニ", "牛乳", "チーズ", "ハム", "麺" ]に変更されています。
+   ```
 
-    > **メモ:** 前にも言いましたが、重要なことなのでもう一度言います。コンピューターは 0 から数を数えます！
+   > **メモ:** 前にも言いましたが、重要なことなのでもう一度言います。コンピューターは 0 から数を数えます！
 
 3. 配列の中に配列があるとき、その配列は多次元配列と呼ばれます。配列中の配列に含まれる項目には角括弧を繋げて書くことでアクセスすることができます。例えば、先ほどの例で出てきた `random` 変数に格納された配列の 3 番目の項目のさらに 3 番目の項目を取得するには以下のようにします。
 
-    ```js
-    random[2][2];
-    ```
+   ```js
+   random[2][2];
+   ```
 
 4. 移動する前に、配列の例をいくつか変更してみてください。遊んでみて、何が動いて何がそうでないかを見てください
 
@@ -104,97 +104,97 @@ for (let i = 0; i < sequence.length; i++) {
 
 1. それではどのように動くか試してみましょう。まずは文字列をコンソールに作ります。
 
-    ```js
-    let myData = '札幌,仙台,東京,名古屋,大阪,博多';
-    ```
+   ```js
+   let myData = "札幌,仙台,東京,名古屋,大阪,博多";
+   ```
 
 2. この文字列をカンマで区切ります。
 
-    ```js
-    let myArray = myData.split(',');
-    myArray;
-    ```
+   ```js
+   let myArray = myData.split(",");
+   myArray;
+   ```
 
 3. そして、できた配列の長さを確認して、その中身を見てみましょう。
 
-    ```js
-    myArray.length;
-    myArray[0]; // 配列の最初の項目
-    myArray[1]; // 配列の二番目の項目
-    myArray[myArray.length-1]; // 配列の最後の項目
-    ```
+   ```js
+   myArray.length;
+   myArray[0]; // 配列の最初の項目
+   myArray[1]; // 配列の二番目の項目
+   myArray[myArray.length - 1]; // 配列の最後の項目
+   ```
 
 4. {{jsxref("Array.prototype.join()","join()")}} メソッドを使うことで、逆のことができます。
 
-    ```js
-    let myNewString = myArray.join(',');
-    myNewString;
-    ```
+   ```js
+   let myNewString = myArray.join(",");
+   myNewString;
+   ```
 
 5. 配列を文字列にするもう一つの方法は、{{jsxref("Array.prototype.toString()","toString()")}} メソッドを使うことです。引数を取らない `toString()` は `join()` と比べ簡単でしょうが、制限があります。`join()` を使えば、他の区切り文字を指定することもできます (4. の例をカンマ以外の他の文字を指定して試してください)。
 
-    ```js
-    let dogNames = ['ポチ','ハチ','タロウ','モコ'];
-    dogNames.toString(); //ポチ,ハチ,タロウ,モコ
-    ```
+   ```js
+   let dogNames = ["ポチ", "ハチ", "タロウ", "モコ"];
+   dogNames.toString(); //ポチ,ハチ,タロウ,モコ
+   ```
 
 ### 項目の追加と削除
 
 まだ配列への項目の追加と削除をやっていませんでしたね。次はこれをやりましょう。先ほどの例にあった `myArray` 配列を使用します。先ほどの例をまだ実行していなければ、以下のコードをコンソールに入力して配列を作ってください。
 
 ```js
-let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
+let myArray = ["札幌", "仙台", "東京", "名古屋", "大阪", "博多"];
 ```
 
 まず、配列の最後に項目を追加したり、最後の項目を削除するには、それぞれ {{jsxref("Array.prototype.push()","push()")}} と {{jsxref("Array.prototype.pop()","pop()")}} を使います。
 
 1. 先に `push()` を使ってみます。配列の最後に項目を追加するには 1 つ以上の項目を引数に指定します。
 
-    ```js
-    myArray.push('横浜');
-    myArray;
-    myArray.push('神戸', '広島');
-    myArray;
-    ```
+   ```js
+   myArray.push("横浜");
+   myArray;
+   myArray.push("神戸", "広島");
+   myArray;
+   ```
 
 2. メソッドの呼び出しが終わると、新しい配列の長さが返ります。もし新しい配列の長さを変数に格納したければ、次のようにできます。
 
-    ```js
-    let newLength = myArray.push('京都');
-    myArray;
-    newLength;
-    ```
+   ```js
+   let newLength = myArray.push("京都");
+   myArray;
+   newLength;
+   ```
 
 3. 配列の最後の要素を削除するには `pop()` を呼び出すだけです。
 
-    ```js
-    myArray.pop();
-    ```
+   ```js
+   myArray.pop();
+   ```
 
 4. メソッドの呼び出しが終わると、削除された項目それ自体が返ります。
 
-    ```js
-    let removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.pop();
+   myArray;
+   removedItem;
+   ```
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} と {{jsxref("Array.prototype.shift()","shift()")}} はそれぞれ `push()` や `pop()` と同様の動作ですが、配列の末尾ではなく先頭において動作します。
 
 1. まずは、`unshift()` を次のように実行します。
 
-    ```js
-    myArray.unshift('奈良');
-    myArray;
-    ```
+   ```js
+   myArray.unshift("奈良");
+   myArray;
+   ```
 
 2. 今度は `shift()` でやってみましょう！
 
-    ```js
-    let removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.shift();
+   myArray;
+   removedItem;
+   ```
 
 ## アクティブラーニング: 商品を印字しよう！
 
@@ -211,18 +211,17 @@ let myArray = ['札幌', '仙台', '東京', '名古屋', '大阪', '博多'];
 <h2>出力結果</h2>
 
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <h2>コードエディター</h2>
 
-<p class="a11y-label">コードエディターから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
+<p class="a11y-label">
+  コードエディターから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 const list = document.querySelector('.output ul');
@@ -254,15 +253,15 @@ totalBox.textContent = '合計: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -270,40 +269,40 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');\nconst totalBox = document.querySelector(\'.output p\');\nlet total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nlet products = [\'パンツ:6.99\',\n  \'靴下:5.99\',\n  \'T シャツ:14.99\',\n  \'ズボン:31.99\',\n  \'靴:23.99\'];\n\nfor(let i = 0; i < products.length; i++) {\n  let subArray = products[i].split(\':\');\n  let name = subArray[0];\n  let price = Number(subArray[1]);\n  total += price;\n  itemText = name + \' — $\' + price;\n\n  let listItem = document.createElement(\'li\');\n  listItem.textContent = itemText;\n  list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'合計: $\' + total.toFixed(2);';
+const jsSolution =
+  "const list = document.querySelector('.output ul');\nconst totalBox = document.querySelector('.output p');\nlet total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nlet products = ['パンツ:6.99',\n  '靴下:5.99',\n  'T シャツ:14.99',\n  'ズボン:31.99',\n  '靴:23.99'];\n\nfor(let i = 0; i < products.length; i++) {\n  let subArray = products[i].split(':');\n  let name = subArray[0];\n  let price = Number(subArray[1]);\n  total += price;\n  itemText = name + ' — $' + price;\n\n  let listItem = document.createElement('li');\n  listItem.textContent = itemText;\n  list.appendChild(listItem);\n}\n\ntotalBox.textContent = '合計: $' + total.toFixed(2);";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
-
 
   if (e.keyCode === 27) {
     textarea.blur();
@@ -313,8 +312,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -326,10 +328,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -379,19 +381,17 @@ body {
 ```html hidden
 <h2>出力結果</h2>
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>検索</button>
 
-<input type="text"><button>検索</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>コードエディター</h2>
 
-<p class="a11y-label">コードエディターから抜けるには Esc キーを押して下さい(タブキーではタブ文字を挿入します)。</p>
-
+<p class="a11y-label">
+  コードエディターから抜けるには Esc
+  キーを押して下さい(タブキーではタブ文字を挿入します)。
+</p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 const list = document.querySelector('.output ul');
@@ -433,8 +433,8 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを見る">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを見る" />
 </div>
 ```
 
@@ -461,9 +461,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -471,38 +471,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを見る') {
+solution.addEventListener("click", function () {
+  if (solution.value === "答えを見る") {
     textarea.value = solutionEntry;
-    solution.value = '答えを隠す';
+    solution.value = "答えを隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを見る';
+    solution.value = "答えを見る";
   }
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');\nconst searchInput = document.querySelector(\'.output input\');\nconst searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nlet myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(let i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n const listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+const jsSolution =
+  "const list = document.querySelector('.output ul');\nconst searchInput = document.querySelector('.output input');\nconst searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nlet myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = '';\n\n for(let i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n const listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = '';\n searchInput.focus();\n }\n}";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -513,8 +514,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -525,10 +529,10 @@ function insertAtCaret(text) {
 
 // ユーザーがテキストエリアのコードを書き換える度に userCode を毎回更新する
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // ユーザーのコードが表示されているときのみ状態を保存し、
   // 答えのコードでユーザーコードが上書きされないようにする
-  if(solution.value === '答えを見る') {
+  if (solution.value === "答えを見る") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

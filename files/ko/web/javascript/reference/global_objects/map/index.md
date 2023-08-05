@@ -25,7 +25,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 ### 키 동일성
 
 값 동일성은 [`SameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)을
-기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
+기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
 사용하였습니다. [브라우저 호환성](#browser_compatibility)을 확인해보세요). 즉, `NaN !== NaN`에도 불구하고
 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며, 다른 모든 값은 `===` 연산자의 의미론에 따라 동일하게 간주됩니다.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 8: User authentication and permissions'
+title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Authentication
       <th scope="row">선행학습:</th>
       <td>
         앞의 모든 튜토리얼을 모두 끝내세요. up to and including
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/ko/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -99,7 +99,7 @@ MIDDLEWARE = [
 3. 당신의 테스트 사용자(user)를 위해 적절한 사용자이름(**Username)** 과 비밀번호(**Password**/**Password confirmation)** 를 입력해주세요.
 4. 사용자(user)를 만들기 위해 **SAVE** 를 눌러줍시다.
 
-    관리자 사이트는 새로운 유저를 만들고, **username**을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   관리자 사이트는 새로운 유저를 만들고, **username** 을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 _Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직_ **Active** 표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
 5. 그룹 섹션에서, Available groups목록에서 **Library Member** 를 선택하고두 박스 사이에 있는 **오른쪽 화살표**를 누르면 Chosen groups box로 이동이 될 거에요![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 여기서는 아무것도 필요치 않습니다, 그저 **SAVE** 를 선택하고, 유저 목록으로 가십시오.
@@ -181,11 +181,11 @@ TEMPLATES = [
 
 ### Login template
 
-> **경고:** **Important**: The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customise them for your own use!
+> **경고:** The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customise them for your own use!
 
 Create a new HTML file called /**locallibrary/templates/registration/login.html**. give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -204,21 +204,21 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
 {% endif %}
 
 <form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  {% csrf_token %}
 
-<div>
-  <td>\{{ form.username.label_tag }}</td>
-  <td>\{{ form.username }}</td>
-</div>
-<div>
-  <td>\{{ form.password.label_tag }}</td>
-  <td>\{{ form.password }}</td>
-</div>
+  <div>
+    <td>\{{ form.username.label_tag }}</td>
+    <td>\{{ form.username }}</td>
+  </div>
+  <div>
+    <td>\{{ form.password.label_tag }}</td>
+    <td>\{{ form.password }}</td>
+  </div>
 
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="\{{ next }}" />
-</div>
+  <div>
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="\{{ next }}" />
+  </div>
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
@@ -248,7 +248,7 @@ If you navigate to the logout URL (<http://127.0.0.1:8000/accounts/logout/>) the
 
 Create and open /**locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -271,7 +271,7 @@ The following templates can be used as a starting point.
 
 This is the form used to get the user's email address (for sending the password reset email). Create **/locallibrary/templates/registration/password_reset_form.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -290,11 +290,14 @@ This is the form used to get the user's email address (for sending the password 
 
 This form is displayed after your email address has been collected. Create **/locallibrary/templates/registration/password_reset_done.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+<p>
+  We've emailed you instructions for setting your password. If they haven't
+  arrived in a few minutes, check your spam folder.
+</p>
 {% endblock %}
 ```
 
@@ -302,7 +305,7 @@ This form is displayed after your email address has been collected. Create **/lo
 
 This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -311,35 +314,35 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 This page is where you enter your new password after clicking the link in the password reset email. Create **/locallibrary/templates/registration/password_reset_confirm.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+    {% csrf_token %}
+      <table>
+        <tr>
+          <td>\{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label></td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>\{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label></td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -347,7 +350,7 @@ This page is where you enter your new password after clicking the link in the pa
 
 This is the last password-reset template, which is displayed to notify you when the password reset has succeeded. Create **/locallibrary/templates/registration/password_reset_complete.html**, and give it the following contents:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -387,18 +390,17 @@ This section looks at what we can do to selectively control content the user see
 
 Open the base template (**/locallibrary/catalog/templates/base_generic.html**) and copy the following text into the `sidebar` block, immediately before the `endblock` template tag.
 
-```html
-  <ul class="sidebar-nav">
+```django
+<ul class="sidebar-nav">
+  ...
 
-    ...
-
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
-   {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
-   {% endif %}
-  </ul>
+  {% if user.is_authenticated %}
+    <li>User: \{{ user.get_username }}</li>
+    <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+  {% else %}
+    <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+  {% endif %}
+</ul>
 ```
 
 As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call **\\{{ user.get_username }}** to display their name.

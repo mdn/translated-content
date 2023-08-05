@@ -11,7 +11,7 @@ slug: Web/CSS/accent-color
 
 Браузеры, которые поддерживают `accent-color`, в настоящее время применяют его к следующим HTML элементам:
 
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio)
 - [`<input type="range">`](/ru/docs/Web/HTML/Element/input/range)
 - [`<progress>`](/ru/docs/Web/HTML/Element/progress)

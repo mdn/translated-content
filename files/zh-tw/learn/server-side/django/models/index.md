@@ -36,7 +36,7 @@ Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理�
 
 我們知道，我們需要存放書籍的信息（標題，摘要，作者，語言，類別，ISBN），並且我們可能有多個副本（具有全域唯一的 ID，可用狀態等）。我們可以存放更多關於作者的信息，而不僅僅是他的名字，或多個作者的相同或相似的名稱。我們希望能根據書名，作者名，語言和類別對信息進行排序。
 
-在設計模型時，為每個“物件”分別設置模型（相關信息分組）是有意義的。在這種情況下，明顯的物件是書籍，書本實例和作者。
+在設計模型時，為每個「物件」分別設置模型（相關信息分組）是有意義的。在這種情況下，明顯的物件是書籍，書本實例和作者。
 
 你可能想要使用模型，來表示選擇列表選項（例如：選擇下拉列表），而不是硬編碼，將選項編寫進網站—這是當所有選項面臨未知、或改變時候的建議。在本網站，模型的明顯候選，包括書籍類型（例如：科幻小說，法國詩歌等）和語言（英語，法語，日語）。
 
@@ -126,10 +126,10 @@ my_field_name = models.CharField(max_length=20, help_text='Enter field documenta
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) 用於存儲和驗證電子郵件地址。
 - [FileField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield) 和[ImageField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield) 分別用於上傳文件和圖像（`ImageField` 只需添加上傳的文件是圖像的附加驗證）。這些參數用於定義上傳文件的存儲方式和位置。
 - [AutoField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield) 是一種 **IntegerField** 自動遞增的特殊類型。如果你沒有明確指定一個主鍵，則此類型的主鍵將自動添加到模型中。
-- [ForeignKey](https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey) 用於指定與另一個數據庫模型的一對多關係（例如，汽車有一個製造商，但製造商可以製作許多汽車）。關係的“一”側是包含密鑰的模型。
+- [ForeignKey](https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey) 用於指定與另一個數據庫模型的一對多關係（例如，汽車有一個製造商，但製造商可以製作許多汽車）。關係的「一」側是包含密鑰的模型。
 - [ManyToManyField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield) 用於指定[多對多](https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield)關係（例如，一本書可以有幾種類型，每種類型可以包含幾本書）。在我們的圖書館應用程序中，我們將非常類似地使用它們 ForeignKeys，但是可以用更複雜的方式來描述組之間的關係。這些具有參數 `on_delete` 來定義關聯記錄被刪除時會發生什麼（例如，值 `models.SET_NULL` 將簡單地設置為值 NULL ）。
 
-還有許多其他類型的字段，包括不同類型數字的字段（大整數，小整數，浮點數），布林值，URLs，唯一 ids 和其他 “時間相關” 的信息（持續時間，時間等）。你可以查閱[完整列表](https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types) .
+還有許多其他類型的字段，包括不同類型數字的字段（大整數，小整數，浮點數），布林值，URLs，唯一 ids 和其他 「時間相關」 的信息（持續時間，時間等）。你可以查閱[完整列表](https://docs.djangoproject.com/en/1.10/ref/models/fields/#field-types) .
 
 #### 元數據(Metadata)
 
@@ -156,7 +156,7 @@ ordering = ['title', '-pubdate']
 verbose_name = 'BetterName'
 ```
 
-其他有用的屬性允許你為模型創建和應用新的“訪問權限”（預設權限會被自動套用），允許基於其他的字段排序，或聲明該類是”抽象的“（你無法創建的記錄基類，並將由其他型號派生）。
+其他有用的屬性允許你為模型創建和應用新的「訪問權限」（預設權限會被自動套用），允許基於其他的字段排序，或聲明該類是」抽象的「（你無法創建的記錄基類，並將由其他型號派生）。
 
 許多其他元數據選項控制模型中必須使用哪些數據庫以及數據的存儲方式。（如果你需要模型映射一個現有數據庫，這會有用）。
 
@@ -173,7 +173,7 @@ def __str__(self):
     return self.field_name
 ```
 
-Django 方法中另一個常用方法是 `get_absolute_url()` ，這函數返回一個在網站上顯示個人模型記錄的 URL（如果你定義了該方法，那麼 Django 將自動在“管理站點”中添加“在站點中查看“按鈕在模型的記錄編輯欄）。`get_absolute_url()`的典型示例如下：
+Django 方法中另一個常用方法是 `get_absolute_url()` ，這函數返回一個在網站上顯示個人模型記錄的 URL（如果你定義了該方法，那麼 Django 將自動在「管理站點」中添加「在站點中查看「按鈕在模型的記錄編輯欄）。`get_absolute_url()`的典型示例如下：
 
 ```python
 def get_absolute_url(self):
@@ -181,7 +181,7 @@ def get_absolute_url(self):
     return reverse('model-detail-view', args=[str(self.id)])
 ```
 
-> **備註：** 假設你將使用 URL`/myapplication/mymodelname/2` 來顯示模型的單個記錄（其中“2”是 id 特定記錄），則需要創建一個 URL 映射器來將響應和 id 傳遞給“模型詳細視圖” （這將做出顯示記錄所需的工作）。以上示例中，`reverse()`函數可以“反轉”你的 url 映射器（在上訴命名為“model-detail-view”的案例中，以創建正確格式的 URL。
+> **備註：** 假設你將使用 URL`/myapplication/mymodelname/2` 來顯示模型的單個記錄（其中「2」是 id 特定記錄），則需要創建一個 URL 映射器來將響應和 id 傳遞給「模型詳細視圖」 （這將做出顯示記錄所需的工作）。以上示例中，`reverse()`函數可以「反轉」你的 url 映射器（在上訴命名為「model-detail-view」的案例中，以創建正確格式的 URL。
 >
 > 當然要做這個工作，你還是要寫 URL 映射，視圖和模版！
 

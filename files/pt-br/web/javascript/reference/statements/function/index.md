@@ -2,6 +2,7 @@
 title: Declaração de função
 slug: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração function** define uma função com os especificados parâmetros.
@@ -31,7 +32,7 @@ Uma função pode também ser criada usando uma expressão (veja {{jsxref("Opera
 
 Por padrão, funções retornam `undefined`. Para retornar qualquer outro valor, a função precisa ter uma instrução {{jsxref("Statements/return", "return")}} que especifica o valor para retorno.
 
-### Criando funções condicionalmente.
+### Criando funções condicionalmente
 
 Funções podem ser condicionalmente declaradas, isso é, uma instrução de função pode ser aninhada dentro de uma instrução `if`. A maioria dos navegadores que não sejam Mozilla ir tratar essas declarações condicionais como uma incondicional e criará a função se a condição for true ou não, veja [esse artigo](http://kangax.github.io/nfe/#function-statements) para uma visão geral. Portanto, ela não pode ser usada para criação de expressões de função condicional.
 
@@ -52,8 +53,8 @@ Note que {{jsxref("Operators/function", "function expressions")}} não são hois
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log("bar");
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -65,19 +66,19 @@ O seguinte código declara uma função que retorna a quantidade total das venda
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                        | Status                       | Comment                                            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Specification                                                                | Status               | Comment                                            |
+| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-13', 'Function definition')}}                             | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-13', 'Function definition')}}                             | {{Spec2('ES1')}}         | Definição inicial. Implementado em JavaScript 1.0. |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-13', 'Function definition')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3', '#sec-13', 'Function definition')}}                        | {{Spec2('ES3')}}     |                                                    |
+| {{SpecName('ES1', '#sec-13', 'Function definition')}}                        | {{Spec2('ES1')}}     | Definição inicial. Implementado em JavaScript 1.0. |
 
 ## Compatibilidade com navegadores
 

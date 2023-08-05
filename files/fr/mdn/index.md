@@ -1,7 +1,6 @@
 ---
 title: Le projet MDN
 slug: MDN
-translation_of: MDN
 ---
 
 {{MDNSidebar}}
@@ -18,7 +17,7 @@ Nous avons besoin de votre aide ! C'est facile. Ne vous souciez pas de demander 
 
 - [Je suis un utilisateur avancé](/fr/docs/MDN/Contribute)
 
-  Accédez à notre guide complet pour les contributeurs de MDN afin d’en apprendre plus une fois que vous êtes à l’aise.
+  Accédez à notre guide complet pour les contributeurs de MDN afin d'en apprendre plus une fois que vous êtes à l'aise.
 
 - [Faites passer le mot](/fr/docs/MDN/Promotion_de_MDN)
 

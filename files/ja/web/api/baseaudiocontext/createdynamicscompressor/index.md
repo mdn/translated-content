@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
-original_slug: Web/API/AudioContext/createDynamicsCompressor
 ---
 
 {{ APIRef("Web Audio API") }}

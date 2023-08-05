@@ -1,11 +1,6 @@
 ---
 title: Стилизация таблиц
 slug: Learn/CSS/Building_blocks/Styling_tables
-tags:
-  - CSS
-  - Стилизация
-  - таблицы
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Borders", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Styling_boxes")}}
@@ -22,7 +17,9 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -45,7 +42,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    ... some rows removed for brevity
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -77,9 +74,9 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 2. Следующее, это создать новый файл `style.css` и сохранить его в той же папке вместе с другими файлами.
 3. Подключить CSS в HTML для этого разместить следующую строку в HTML внутри {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### Отступы и разметка
 
@@ -111,7 +108,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -139,7 +137,10 @@ th, td {
 Добавьте элемент {{htmlelement("link")}} в блок head вашего HTML, на строчку выше существующего элемента `<link>`:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Затем добавьте следующий CSS в ваш `style.css` файл, ниже предыдущего кода:
@@ -148,11 +149,12 @@ th, td {
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -246,7 +248,7 @@ table {
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

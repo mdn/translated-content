@@ -1,7 +1,6 @@
 ---
-title: '@media'
+title: "@media"
 slug: Web/CSS/@media
-translation_of: Web/CSS/@media
 ---
 {{CSSRef}}
 
@@ -72,7 +71,7 @@ Each _media feature_ tests for one specific feature of the browser or device.
 | [`overflow-inline`](/ru/docs/Web/CSS/@media/overflow-inline)                                                        | Can content that overflows the viewport along the inline axis be scrolled?                                                   | Added in Media Queries Level 4                                                                                                     |
 | [`color`](/ru/docs/Web/CSS/@media/color)                                                                            | Number of bits per color component of the output device, or zero if the device isn't color.                                  |                                                                                                                                    |
 | [`color-index`](/ru/docs/Web/CSS/@media/color-index)                                                                | Number of entries in the output device's color lookup table, or zero if the device does not use such a table.                |                                                                                                                                    |
-| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                           | The display mode of the application, as specified in the web app manifest's [display member](/ru/docs/Web/Manifest#display). | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                             |
+| [`display-mode`](/ru/docs/Web/CSS/@media/display-mode)                                                           | The display mode of the application, as specified in the web app manifest's [display member](/ru/docs/Web/Manifest#display). | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                             |
 | [`monochrome`](/ru/docs/Web/CSS/@media/monochrome)                                                                  | Bits per pixel in the output device's monochrome frame buffer, or 0 if the device is not monochrome.                         |                                                                                                                                    |
 | [`inverted-colors`](/ru/docs/Web/CSS/@media/inverted-colors)                                                        | Is the user agent or underlying OS inverting colors?                                                                         | Added in Media Queries Level 4                                                                                                     |
 | [`pointer`](/ru/docs/Web/CSS/@media/pointer)                                                                        | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                             | Added in Media Queries Level 4                                                                                                     |

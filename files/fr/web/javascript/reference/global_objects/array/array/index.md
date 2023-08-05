@@ -1,13 +1,6 @@
 ---
 title: Constructeur Array()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - Array
-  - Constructeur
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/Array
 ---
 
 {{JSRef}}
@@ -34,13 +27,13 @@ new Array(longueurTableau)
 
 ### Utilisation de la notation littérale
 
-Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Litt%C3%A9raux_de_tableaux) :
+Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_de_tableaux) :
 
 ```js
-let fruits = ['Pomme', 'Banane'];
+let fruits = ["Pomme", "Banane"];
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Pomme"
+console.log(fruits[0]); // "Pomme"
 ```
 
 ### Utilisation du constructeur avec un seul paramètre
@@ -51,7 +44,7 @@ On peut créer des tableaux grâce au constructeur avec un seul paramètre numé
 let fruits = new Array(2);
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(fruits[0]); // undefined
 ```
 
 ### Utilisation du constructeur avec plusieurs paramètres
@@ -59,10 +52,10 @@ console.log(fruits[0]);     // undefined
 Si on utilise plus d'un argument, un nouveau tableau ({{jsxref("Array")}}) sera construit avec les éléments passés en arguments.
 
 ```js
-let fruits = new Array('Pomme', 'Banane');
+let fruits = new Array("Pomme", "Banane");
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Pomme"
+console.log(fruits[0]); // "Pomme"
 ```
 
 ## Spécifications

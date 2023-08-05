@@ -26,10 +26,10 @@ Console API 最初是一个专有的 API，不同的浏览器以自己的实现�
 ## 示例
 
 ```js
-let myString = 'Hello world';
+let myString = "Hello world";
 
 // Output "Hello world" to the console
-console.log(myString)
+console.log(myString);
 ```
 
 到[Console reference page](/zh-CN/docs/Web/API/Console#Usage)查看更多示例

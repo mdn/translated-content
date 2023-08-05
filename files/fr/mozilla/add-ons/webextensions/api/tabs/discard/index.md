@@ -1,7 +1,6 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 
 {{AddonSidebar()}}
@@ -20,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var discarding = browser.tabs.discard(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres

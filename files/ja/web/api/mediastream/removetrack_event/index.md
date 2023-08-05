@@ -1,5 +1,5 @@
 ---
-title: 'MediaStream: removetrack イベント'
+title: "MediaStream: removetrack イベント"
 slug: Web/API/MediaStream/removetrack_event
 ---
 

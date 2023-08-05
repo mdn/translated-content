@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé lorsque les propriétés d'une identité contextuelle, telles que son nom
 ## Syntaxe
 
 ```js
-browser.contextualIdentities.onUpdated.addListener(listener)
-browser.contextualIdentities.onUpdated.removeListener(listener)
-browser.contextualIdentities.onUpdated.hasListener(listener)
+browser.contextualIdentities.onUpdated.addListener(listener);
+browser.contextualIdentities.onUpdated.removeListener(listener);
+browser.contextualIdentities.onUpdated.hasListener(listener);
 ```
 
 Events have three functions:

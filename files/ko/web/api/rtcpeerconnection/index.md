@@ -2,6 +2,7 @@
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 **`RTCPeerConnection`** 인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.
@@ -28,11 +29,13 @@ slug: Web/API/RTCPeerConnection
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : ICE candidate를 수집하는 과정에서 에러가 발생하면 연결에 {{domxref("RTCPeerConnectionIceErrorEvent")}} 에러 타입을 보냅니다. 이는 또한, {{domxref("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+
   - : 연결이 끊기는 상황과 같이 ICE 연결의 상태가 변하게되면 `RTCPeerConnection`에 전달합니다. 이는 또한, {{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
   - : {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}에 의해 반영되는 ICE 계층의 수집 상태가 변하면, `RTCPeerConnection`에 전달합니다. 계층의 수집 상태는 ICE 네고시에이션이 아직 시작을 안했거나 (`new`), 시작하고 candidate를 수집하는 중이거나 (`gathering`), 혹은 수집이 완료 (`complete`)된 상태로 나눠집니다. 이는 또한, {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 - {{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}
+
   - : 연결과 관련이 있는 하나의 {{domxref("MediaStreamTrack")}} 객체가 있는 {{domxref("MediaStreamTrack.isolated", "isolated")}} 속성의 값이 변하면, `RTCPeerConnection`에 전달합니다. 만약 미디어 컨텐츠가 인증이 되어있지 않거나, 트랙이 cross-origin source (CORS)에서 오는 것이라면 트랙의 상태는 {{domxref("MediaStreamTrack.isolated", "isolated")}}이 됩니다. 이는 또한, {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -40,11 +43,13 @@ slug: Web/API/RTCPeerConnection
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : 연결의 ICE 신호 상태가 변경되면 `signalingstatechange`이벤트를 `RTCPeerConnection`에 전달합니다. 이는 또한, {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 - {{domxref("RTCPeerConnection.statsended_event", "statsended")}}
+
   - : 모니터링이 되던 statistics 객체가 삭제되면, `statsended`이벤트를 전달합니다. {{domxref("RTCStatsEvent")}}는 삭제된 객체의 마지막 리포트를 포함합니다. 마지막 리포트를 전달받고나서 여러개의 객체가 삭제되었다면, 여러 객체에 대한 마지막 리포트를 포함합니다. 예를 들어 연결이 종료되거나 삭제되면, statistics 객체는 삭제됩니다.
 
     The `statsended` event is sent when a statistics object being monitored is deleted. The {{domxref("RTCStatsEvent")}} includes the final report on the deleted object (or objects, if multiple objects have been deleted since the last report was delivered). A statistics object is deleted, for example, when the connection is closed and deleted.
 
     Available as the {{domxref("RTCPeerConnection.onstatsended", "onstatsended")}} event handler property.
+
 - {{domxref("RTCPeerConnection.track_event", "track")}}
   - : 연결을 구성하고 있는 {{domxref("RTCRtpReceiver")}} 인스턴스들 중 하나에 신규 트랙이 추가된 후에, `track`이벤트를 보냅니다. 이는 또한, {{domxref("RTCPeerConnection.ontrack", "ontrack")}} 이벤트 핸들러 속성을 통해 사용이 가능합니다.
 
@@ -86,13 +91,13 @@ The `RTCBundlePolicy` enum defines string constants which are used to request a 
 
 The `RTCIceConnectionState` enum defines the string constants used to describe the current state of the ICE agent and its connection to the ICE server (that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server).
 
-| 상수명           | 설명                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"new"`          | The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).                                                                                                                                                                                                                          |
-| `"checking"`     | The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.                                                                                    |
-| `"connected"`    | A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.                                                                           |
-| `"completed"`    | The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.                                                                                                                                                                                                                                                                 |
-| `"failed"`       | The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.                                                                                                                                                    |
+| 상수명           | 설명                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"new"`          | The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).                                                                                                                                                                                                                                |
+| `"checking"`     | The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.                                                                        |
+| `"connected"`    | A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.                                                               |
+| `"completed"`    | The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.                                                                                                                                                                                                                                                     |
+| `"failed"`       | The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.                                                                                                                                        |
 | `"disconnected"` | Checks to ensure that components are still connected failed for at least one component of the {{domxref("RTCPeerConnection")}}. This is a less stringent test than `"failed"` and may trigger intermittently and resolve just as spontaneously on less reliable networks, or during temporary disconnections. When the problem resolves, the connection may return to the `"connected"` state. |
 | `"closed"`       | The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down and is no longer handling requests.                                                                                                                                                                                                                                                                                      |
 
@@ -110,33 +115,33 @@ The `RTCIceConnectionState` enum defines the string constants used to describe t
 
 The `RTCIceTransportPolicy` enum defines string constants which can be used to limit the transport policies of the ICE candidates to be considered during the connection process.
 
-| 상수명                                  | 설명                                                                                                                            |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `"all"`                                 | All ICE candidates will be considered.                                                                                          |
+| 상수명                           | 설명                                                                                                                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `"all"`                          | All ICE candidates will be considered.                                                                                          |
 | `"public"` {{deprecated_inline}} | Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._ |
-| `"relay"`                               | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
+| `"relay"`                        | Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered. |
 
 ### RTCPeerConnectionState enum
 
 `RTCPeerConnectionState` enum은 `RTCPeerConnection`이 존재 할 수 도있는 상태에 대해 알려주는 문자열 상수를 정의합니다. 이 값들은 {domxref("RTCPeerConnection.connectionState", "connectionState")}} 속성에 의해 반홥됩니다. 근본적으로 이 상태는 연결에 의해 사용되는 모든 ICE 전송 ({{domxref("RTCIceTransport")}} 혹은 {{domxref("RTCDtlsTransport")}}의 타입)의 상태 집합을 나타냅니다.
 
-| 상수명           | 설명                                                                                                                                                                                                                                                                                                                       |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"new"`          | 연결의 ICE 전송 중 적어도 한 개가 새로 만들어진 `"new"` 상태이고, 그 외의 나머지는 다음의 상태 중 하나가 아니여야 합니다: `"connecting"`, `"checking"`, `"failed"`, 혹은 `"disconnected"`, 혹은 모든 연결의 전송이 끝났다는 `"closed"`상태.                                                                                |
-| `"connecting"`   | 하나 혹은 여러개의 ICE 전송이 현재 연결을 구성하는 중에 있음을 알려주는 값. 이는 `RTCIceConnectionState`가 `"checking"` 혹은 `"connected"`이며, 그 어떤 전송도 `"failed"`상태가 아니여야합니다. **<<< Make this a link once I know where that will be documented**                                                         |
-| `"connected"`    | 연결에 의해 사용되는 모든 ICE 전송이 사용 중 (`"connected"` 혹은 `"completed"`)이거나, 종료된 상태입니다. 추가적으로 최소 하나의 전송이 `"connected"` 혹은 `"completed"`입니다.                                                                                                                                            |
-| `"disconnected"` | 연결에 대한 최소 한 개의 ICE 전송이 `"disconnected"`상태이고, 그 외의 다른 전송 상태는 `"failed"`, `"connecting"`, 혹은 `"checking"`이 아님을 알려주는 값.                                                                                                                                                                 |
-| `"failed"`       | 연결에 대한 하나 혹은 여러개의 ICE 전송이 `"failed"`상태임을 알려주는 값.                                                                                                                                                                                                                                                  |
+| 상수명           | 설명                                                                                                                                                                                                                                                                                                |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"new"`          | 연결의 ICE 전송 중 적어도 한 개가 새로 만들어진 `"new"` 상태이고, 그 외의 나머지는 다음의 상태 중 하나가 아니여야 합니다: `"connecting"`, `"checking"`, `"failed"`, 혹은 `"disconnected"`, 혹은 모든 연결의 전송이 끝났다는 `"closed"`상태.                                                         |
+| `"connecting"`   | 하나 혹은 여러개의 ICE 전송이 현재 연결을 구성하는 중에 있음을 알려주는 값. 이는 `RTCIceConnectionState`가 `"checking"` 혹은 `"connected"`이며, 그 어떤 전송도 `"failed"`상태가 아니여야합니다. **<<< Make this a link once I know where that will be documented**                                  |
+| `"connected"`    | 연결에 의해 사용되는 모든 ICE 전송이 사용 중 (`"connected"` 혹은 `"completed"`)이거나, 종료된 상태입니다. 추가적으로 최소 하나의 전송이 `"connected"` 혹은 `"completed"`입니다.                                                                                                                     |
+| `"disconnected"` | 연결에 대한 최소 한 개의 ICE 전송이 `"disconnected"`상태이고, 그 외의 다른 전송 상태는 `"failed"`, `"connecting"`, 혹은 `"checking"`이 아님을 알려주는 값.                                                                                                                                          |
+| `"failed"`       | 연결에 대한 하나 혹은 여러개의 ICE 전송이 `"failed"`상태임을 알려주는 값.                                                                                                                                                                                                                           |
 | `"closed"`       | `RTCPeerConnection` 개통되지 않음을 알려주는 값.2016년 5월 13일에 작성된 명세서의 초안에 따르면, 이 값은 [`RTCPeerConnectionState` enum](#RTCPeerConnectionState_enum) 안에 존재했었습니다. 따라서, {{domxref("RTCPeerConnection.signalingState", "signalingState")}}의 값을 통해 찾을 수 있습니다. |
 
 ### RTCRtcpMuxPolicy enum
 
 The `RTCRtcpMuxPolicy` enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. **<<\<add a link to info about multiplexed RTCP.**
 
-| 상수명        | 설명                                                                                                                                                                                                                                                                                                  |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 상수명        | 설명                                                                                                                                                                                                                                                                                     |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"negotiate"` | Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates. If the remote peer can multiplex RTCP, then RTCP candidates are multiplexed atop the corresponding RTP candidates. Otherwise, both the RTP and RTCP candidates are returned, separately. |
-| `"require"`   | Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.                                                                                                                     |
+| `"require"`   | Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.                                                                                                        |
 
 ### RTCSignalingState enum
 

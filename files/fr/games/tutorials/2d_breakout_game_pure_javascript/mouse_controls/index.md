@@ -1,7 +1,6 @@
 ---
 title: Contrôle à la souris
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
 {{GamesSidebar}}
@@ -26,10 +25,10 @@ Nous pouvons mettre à jour la position de la raquette en fonction des coordonn�
 
 ```js
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Argument
 slug: Glossary/Argument
-translation_of: Glossary/Argument
 ---
 
 Un **argument** est une {{Glossary("Value","valeur")}} ({{Glossary("Primitive", "primitive")}} ou {{Glossary("Object", "objet")}}) passée en tant qu'entrée à une {{Glossary("Function", "fonction")}}.
@@ -10,7 +9,7 @@ Un **argument** est une {{Glossary("Value","valeur")}} ({{Glossary("Primitive", 
 
 ### Culture générale
 
-- [Argument](https://fr.wikipedia.org/wiki/Argument_(informatique)) sur Wikipédia
+- [Argument](<https://fr.wikipedia.org/wiki/Argument_(informatique)>) sur Wikipédia
 
 ### Informations techniques
 

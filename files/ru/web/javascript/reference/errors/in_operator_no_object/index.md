@@ -1,9 +1,6 @@
 ---
-title: >-
-  TypeError: cannot use 'in' operator to search for 'x' in 'y'(не удаётся
-  использовать 'in' оператор поиска для 'x' в 'y')
+title: "TypeError: cannot use 'in' operator to search for 'x' in 'y'(не удаётся использовать 'in' оператор поиска для 'x' в 'y')"
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
-translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
 
 {{jsSidebar("Errors")}}

@@ -64,7 +64,7 @@ async openCall(pc) {
 ```js
 let inboundStream = null;
 
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
@@ -74,7 +74,7 @@ pc.ontrack = ev => {
     }
     inboundStream.addTrack(ev.track);
   }
-}
+};
 ```
 
 在这里，如果指定了流，则 **`track`** 事件处理程序将跟踪添加到事件指定的第一个流。否则，在第一次调用 **`ontrack`** 时，将创建一个新流并附加到视频元素，然后将音轨添加到新流中。从那时起，新的堆**track**被添加到这个流中。
@@ -82,14 +82,14 @@ pc.ontrack = ev => {
 你也可以为每个接收到的**track**创建一个新的流：
 
 ```js
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
     let inboundStream = new MediaStream(ev.track);
     videoElem.srcObject = inboundStream;
   }
-}
+};
 ```
 
 #### 将**track**与特定的 stream 相关联
@@ -147,20 +147,21 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream);
 
 ```js
 var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true, // We want an audio track
+  video: true, // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);
 
-pc.setRemoteDescription(desc).then(function () {
-  return navigator.mediaDevices.getUserMedia(mediaConstraints);
-})
-.then(function(stream) {
-  previewElement.srcObject = stream;
+pc.setRemoteDescription(desc)
+  .then(function () {
+    return navigator.mediaDevices.getUserMedia(mediaConstraints);
+  })
+  .then(function (stream) {
+    previewElement.srcObject = stream;
 
-  stream.getTracks().forEach(track => pc.addTrack(track, stream));
-})
+    stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+  });
 ```
 
 这段代码获取从远程对等方接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用 {{domxref("MediaDevices.getUserMedia")}} 获得对本地摄像头和麦克风的访问。

@@ -1,14 +1,6 @@
 ---
-title: '<marquee> : l''élément de fronton (obsolète)'
+title: "<marquee> : l'élément de fronton (obsolète)"
 slug: Web/HTML/Element/marquee
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}{{non-standard_header}}{{deprecated_header}}
@@ -32,7 +24,7 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 - `scrollamount`
   - : Définit la quantité de défilement de chaque défilement en pixels. La valeur par défaut est `6`.
 - `scrolldelay`
-  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que` truespeed `ne soit spécifié.
+  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que`truespeed`ne soit spécifié.
 - `truespeed`
   - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
 - `vspace`
@@ -40,7 +32,7 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 - `width`
   - : Définit la largeur en pixel en ou pourcentage.
 
-## Gestionnaire d’évènements
+## Gestionnaire d'évènements
 
 - `onbounce`
   - : Se déclenche quand le `<marquee>` arrive à la fin de son défilement. Il peut seulement se déclencher quand `behavior` est mis à `alternate`.
@@ -65,10 +57,13 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 
 <marquee direction="up">Ce texte va défiler de bas en haut</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    Ce texte va rebondir
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate"> Ce texte va rebondir </marquee>
 </marquee>
 ```
 

@@ -25,7 +25,9 @@ A {{domxref("USVString")}}.
 ## Examples
 
 ```js
-var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
+var url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/Web/API/URL/password",
+);
 var result = url.password; // Returns:"flabada"
 ```
 

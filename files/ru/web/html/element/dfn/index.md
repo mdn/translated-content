@@ -1,7 +1,6 @@
 ---
-title: '<dfn>: Элемент определения'
+title: "<dfn>: Элемент определения"
 slug: Web/HTML/Element/dfn
-translation_of: Web/HTML/Element/dfn
 ---
 
 {{HTMLSidebar}}
@@ -12,11 +11,11 @@ translation_of: Web/HTML/Element/dfn
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.               |
-| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                          |
+| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но ни один {{HTMLElement("dfn")}} элемент не должен быть потомком.                     |
+| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                                               |
 | Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                       |
 | Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                              |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                        |
 
 ## Атрибуты
 
@@ -64,8 +63,12 @@ translation_of: Web/HTML/Element/dfn
 #### HTML
 
 ```html
-<p><strong>Элемент определения HTML</strong> (<strong><dfn>&lt;dfn&gt;</dfn></strong>)
-используется для обозначения термина, определяемого в контексте фразы или предложения.</p>
+<p>
+  <strong>Элемент определения HTML</strong> (<strong
+    ><dfn>&lt;dfn&gt;</dfn></strong
+  >) используется для обозначения термина, определяемого в контексте фразы или
+  предложения.
+</p>
 ```
 
 Поскольку `<dfn>` элемент не имеет `title`, текстовое содержимое самого `<dfn>` элемента используется в качестве определяемого термина.
@@ -83,21 +86,34 @@ translation_of: Web/HTML/Element/dfn
 #### HTML
 
 ```html
-<p><strong>Элемент определения HTML</strong> (<strong><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong>)
-используется для обозначения термина, определяемого в контексте фразы или предложения.</p>
+<p>
+  <strong>Элемент определения HTML</strong> (<strong
+    ><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong
+  >) используется для обозначения термина, определяемого в контексте фразы или
+  предложения.
+</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine voluptatem
-vocant. Confecta res esset. Duo Reges: constructio interrete. Scrupulum, inquam, abeunti; </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
+  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
+  Scrupulum, inquam, abeunti;
+</p>
 
-<p>Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn. Quid de
-Pythagora? In schola desinis.</p>
+<p>
+  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
+  Quid de Pythagora? In schola desinis.
+</p>
 
-<p>Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur, quid sit
-voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et nihil remittunt. Quid
-enim possumus hoc agere divinius?</p>
+<p>
+  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
+  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
+  nihil remittunt. Quid enim possumus hoc agere divinius?
+</p>
 
-<p>Из-за всего этого мы решили использовать
-элемент <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> для этого проекта.</p>
+<p>
+  Из-за всего этого мы решили использовать элемент
+  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> для этого проекта.
+</p>
 ```
 
 Здесь мы видим определение - теперь с атрибутом [`id`](/ru/docs/Web/HTML/Global_attributes#id) `«definition-dfn»`, который может использоваться в качестве цели для ссылки. Позднее создаётся ссылка с использованием `<a>` и с [`href`](/ru/docs/Web/HTML/Element/a#href)атрибутом, установленным на `«#definition-dfn»`, чтобы установить ссылку обратно на определение.
@@ -115,16 +131,21 @@ enim possumus hoc agere divinius?</p>
 #### HTML
 
 ```html
-<p><dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> является одним из самых
-производительных научных инструментов, когда-либо созданных.
-Он находится на орбите более 20 лет, просматривая небо и отправляя данные и фотографии
-беспрецедентного качества и детализации.</p>
+<p>
+  <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn> является одним из
+  самых производительных научных инструментов, когда-либо созданных. Он
+  находится на орбите более 20 лет, просматривая небо и отправляя данные и
+  фотографии беспрецедентного качества и детализации.
+</p>
 
-<p>Действительно, HST, возможно, <abbr title="Hubble Space Telescope"></abbr> сделал больше
-для развития науки, чем любое другое устройство, когда-либо созданное.</p>
+<p>
+  Действительно, HST, возможно,
+  <abbr title="Hubble Space Telescope"></abbr> сделал больше для развития науки,
+  чем любое другое устройство, когда-либо созданное.
+</p>
 ```
 
-Обратите внимание на `<abbr>` элемент, вложенный в `<dfn>`. Первый устанавливает, что термин является аббревиатурой («HST») и определяет полный термин («Hubble Space Telescope (Космический телескоп „Хаббл“)») в своём атрибуте `title`. Последнее указывает на то, что сокращённый термин представляет собой определяемый термин.
+Обратите внимание на `<abbr>` элемент, вложенный в `<dfn>`. Первый устанавливает, что термин является аббревиатурой («HST») и определяет полный термин («Hubble Space Telescope (Космический телескоп „Хаббл")») в своём атрибуте `title`. Последнее указывает на то, что сокращённый термин представляет собой определяемый термин.
 
 #### Результат
 

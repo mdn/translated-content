@@ -1,7 +1,6 @@
 ---
 title: ellipse()
 slug: Web/CSS/basic-shape/ellipse
-original_slug: Web/CSS/basic-shape/ellipse()
 ---
 
 {{CSSRef}}

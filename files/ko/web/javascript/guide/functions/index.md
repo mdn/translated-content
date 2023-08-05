@@ -1,7 +1,6 @@
 ---
 title: 함수
 slug: Web/JavaScript/Guide/Functions
-original_slug: Web/JavaScript/Guide/함수
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
@@ -170,7 +169,7 @@ square = function (n) {
 }
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다.
 
@@ -308,7 +307,7 @@ function loop(x) {
 loop(0);
 ```
 
-그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/en-US/docs/DOM)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
+그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/ko/docs/DOM)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
 
 ```js
 function walkTree(node) {
@@ -356,7 +355,7 @@ foo(3);
 
 그것은 또한 *클로저*를 형성합니다. 클로저는 (표현식을 "닫는")변수를 바인딩하는 환경과 함께 자유 변수를 가질 수 있는 표현(일반적으로는 함수)입니다.
 
-중첩 함수는 클로저이므로, 중첩된 함수는 그것을 포함하는 함수의 인수와 변수를 “상속”할 수 있음을 의미합니다. 즉, 내부 함수는 외부 함수의 스코프를 포함합니다.
+중첩 함수는 클로저이므로, 중첩된 함수는 그것을 포함하는 함수의 인수와 변수를 "상속"할 수 있음을 의미합니다. 즉, 내부 함수는 외부 함수의 스코프를 포함합니다.
 
 요약하자면,
 
@@ -408,7 +407,7 @@ result1 = outside(3)(5); // 8
 - 함수 `B`, `C`는 모두 클로저를 형성합니다. 그래서 `B`는 `A`에, `C`는 `B`를 접근 할 수 있습니다.
 - 또한 `C`는 `A`에 접근 할 수 있는 `B`에도 접근할 수 있기 때문에 `A`에도 접근 할 수 있습니다.
 
-따라서 클로저는 여러 스코프가 포함될 수 있으며, 이 스코프를 포함하는 함수의 스코프를 재귀적으로 포함합니다. 이것을 *스코프 체이닝*이라 합니다. (그것을 “체이닝”이라 하는 이유는 추후에 설명할 것입니다.)
+따라서 클로저는 여러 스코프가 포함될 수 있으며, 이 스코프를 포함하는 함수의 스코프를 재귀적으로 포함합니다. 이것을 *스코프 체이닝*이라 합니다. (그것을 "체이닝"이라 하는 이유는 추후에 설명할 것입니다.)
 
 다음 예를 살펴 보겠습니다.
 
@@ -619,11 +618,11 @@ function multiply(a, b = 1) {
 multiply(5); // 5
 ```
 
-더 자세한 내용을 보고 싶으시면, [기본 매개변수](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) 문서를 참조하세요.
+더 자세한 내용을 보고 싶으시면, [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters) 문서를 참조하세요.
 
 ### 나머지 매개변수
 
-[나머지 매개변수](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용하면 배열로 임의 개수의 인수를 나타낼 수 있습니다.
+[나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 사용하면 배열로 임의 개수의 인수를 나타낼 수 있습니다.
 
 이 예제에서, 우리는 나머지 매개변수를 2번째 인수부터 마지막 인수까지 얻기 위하여 사용하였습니다. 그리고 우리는 첫번째 값으로 나머지 매개변수에 곱하였습니다. 이 예제는 다음 섹션에서 소개할 화살표(arrow) 함수 입니다.
 
@@ -638,7 +637,7 @@ console.log(arr); // [2, 4, 6]
 
 ## 화살표 함수
 
-[화살표 함수 표현](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (**뚱뚱한 화살표(fat arrow) 함수라고 알려진**)은 함수 표현식에 비해 짧은 문법을 가지고 있고 사전적으로 this 값을 묶습니다. 화살표 함수는 언제나 익명입니다. hacks.mozilla.org 블로그 포스트 "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)" 를 참조하세요.
+[화살표 함수 표현](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (**뚱뚱한 화살표(fat arrow) 함수라고 알려진**)은 함수 표현식에 비해 짧은 문법을 가지고 있고 사전적으로 this 값을 묶습니다. 화살표 함수는 언제나 익명입니다. hacks.mozilla.org 블로그 포스트 "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)" 를 참조하세요.
 
 화살표 함수 도입에는 더 짧은 함수와 바인딩 되지않은 `this`라는 두 가지 요인이 영향을 미쳤습니다.
 
@@ -696,7 +695,7 @@ function Person() {
 }
 ```
 
-또는 적절한 `this` 값이 `growUp()` 함수에 전달되도록, [바인딩된 함수](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 만들 수도 있습니다.
+또는 적절한 `this` 값이 `growUp()` 함수에 전달되도록, [바인딩된 함수](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)를 만들 수도 있습니다.
 
 화살표 함수에는 `this`가 없습니다. 화살표 함수를 포함하는 객체 값이 사용됩니다. 따라서 다음 코드에서 `setInterval`에 전달 된 함수 내의 `this` 값은 화살표 함수를 둘러싼 함수의 `this`와 같은 값을 갖습니다.
 
@@ -728,11 +727,11 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
   - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다.
-  > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
+  > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
   >
   > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
   >
-  > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
+  > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.

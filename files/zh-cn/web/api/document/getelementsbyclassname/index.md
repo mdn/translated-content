@@ -23,28 +23,31 @@ var elements = rootElement.getElementsByClassName(names);
 获取所有 class 为 'test' 的元素：
 
 ```js
-document.getElementsByClassName('test');
+document.getElementsByClassName("test");
 ```
 
 获取所有 class 同时包括 'red' 和 'test' 的元素。
 
 ```js
-document.getElementsByClassName('red test');
+document.getElementsByClassName("red test");
 ```
 
 在 id 为'main'的元素的子节点中，获取所有 class 为'test'的元素
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 我们还可以对任意的 {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递 _HTMLCollection_ 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 ### 获取第一个类名为 test 的元素
@@ -53,25 +56,24 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ```html
 <html>
-<body>
-
+  <body>
     <div id="parent-id">
-        <p>hello world 1</p>
-        <p class="test">hello world 2</p>
-        <p>hello world 3</p>
-        <p>hello world 4</p>
+      <p>hello world 1</p>
+      <p class="test">hello world 2</p>
+      <p>hello world 3</p>
+      <p>hello world 4</p>
     </div>
 
     <script>
-        var parentDOM = document.getElementById("parent-id");
+      var parentDOM = document.getElementById("parent-id");
 
-        var test = parentDOM.getElementsByClassName("test"); // 匹配类名的元素集合，不是元素本身
-        console.log(test); //HTMLCollection[1]
+      var test = parentDOM.getElementsByClassName("test"); // 匹配类名的元素集合，不是元素本身
+      console.log(test); //HTMLCollection[1]
 
-        var testTarget = parentDOM.getElementsByClassName("test")[0]; // 我们想要取到的第一个元素
-        console.log(testTarget); //<p class="test">hello world 2</p>
+      var testTarget = parentDOM.getElementsByClassName("test")[0]; // 我们想要取到的第一个元素
+      console.log(testTarget); //<p class="test">hello world 2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -93,18 +95,25 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ```js
 // getElementsByClassName selects partial matches
-var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
+var allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceByClass[i].textContent;
+for (
+  var i = 0, len = allOrangeJuiceByClass.length | 0;
+  i < len;
+  i = (i + 1) | 0
+) {
+  result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
-
 // querySelector only selects full complete matches
-var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
+var allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+for (
+  var i = 0, len = allOrangeJuiceQuery.length | 0;
+  i < len;
+  i = (i + 1) | 0
+) {
+  result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;

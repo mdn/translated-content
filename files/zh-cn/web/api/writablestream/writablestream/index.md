@@ -9,7 +9,7 @@ slug: Web/API/WritableStream/WritableStream
 
 ## 语法
 
-```js
+```js-nolint
 new WritableStream(underlyingSink)
 new WritableStream(underlyingSink, queuingStrategy)
 ```
@@ -30,7 +30,9 @@ new WritableStream(underlyingSink, queuingStrategy)
       - : 如果应用程序发出希望立即关闭流并且将其移至错误状态的信号，将调用此方法，该方法也是由开发人员定义。它可以清理任何被占用的资源，就像 `close()` 一样，但是即使存在等待的写入操作，`abort()` 也将被调用——那些分块将被丢弃。如果这个过程是异步完成的，它可以返回一个 promise，以表明操作成功或失败。`reason` 参数包含一个字符串，用于指定流被中止的原因。
 
 - `queuingStrategy` {{optional_inline}}
+
   - : 一个可选的定义流的队列策略的对象。这需要两个参数：
+
     - `highWaterMark`
       - : 非负整数——这定义了在应用背压之前可以包含在内部队列中的分块的最大数量。
     - `size(chunk)`
@@ -47,7 +49,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
@@ -83,30 +85,33 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(1);
-      var view = new Uint8Array(buffer);
-      view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        var buffer = new ArrayBuffer(1);
+        var view = new Uint8Array(buffer);
+        view[0] = chunk;
+        var decoded = decoder.decode(view, { stream: true });
+        var listItem = document.createElement("li");
+        listItem.textContent = "Chunk decoded: " + decoded;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      var listItem = document.createElement("li");
+      listItem.textContent = "[MESSAGE RECEIVED] " + result;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 sendMessage("Hello, world.", writableStream);
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: 벽돌 만들기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field
 ---
 
 {{GamesSidebar}}
@@ -32,11 +31,11 @@ var brickOffsetLeft = 30;
 
 ```js
 var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0 };
-    }
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
 }
 ```
 
@@ -48,25 +47,25 @@ for(var c=0; c<brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            bricks[c][r].x = 0;
-            bricks[c][r].y = 0;
-            ctx.beginPath();
-            ctx.rect(0, 0, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 
 다시 행, 열 반복을 통해 각 벽돌의 `x`, `y` 값을 설정하고, 캔버스에 `brickWidth` \* `brickHeight` 크기의 벽돌들을 그립니다. 문제는 모든 벽돌들이 좌표 (0, 0) 위치해있다는 것입니다. 우리는 약간의 연산을 통해 각 벽돌의 `x`, `y` 값을 계산해야 합니다.
 
 ```js
-var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 ```
 
 `brickX`는 `brickWidth` + `brickPadding`에 `c`를 곱하고, `brickOffsetLeft`를 더한 값입니다. `brickY`는 변수 `r`, `brickHeight`, `brickOffsetTop` 변수를 사용한다는 것을 제외하곤 동일합니다. 이제 모든 벽돌들을 올바른 위치에, 알맞은 간격을 두고, 캔버스 모서리로부터 오프셋 값만큼의 거리를 둔 상태로 그릴수 있게되었습니다.
@@ -75,19 +74,19 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-            bricks[c][r].x = brickX;
-            bricks[c][r].y = brickY;
-            ctx.beginPath();
-            ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 

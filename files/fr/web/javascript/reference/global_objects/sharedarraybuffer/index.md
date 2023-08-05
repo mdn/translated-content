@@ -1,9 +1,6 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 
 {{JSRef}}
@@ -36,7 +33,7 @@ La mémoire partagée peut être créée et mise à jour de façon simultanée e
 
 ### Contraintes de sécurité
 
-La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](https://fr.wikipedia.org/wiki/Spectre_(vuln%C3%A9rabilit%C3%A9)). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
+La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](<https://fr.wikipedia.org/wiki/Spectre_(vulnérabilité)>). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
 
 Pour commencer, le document doit être mis à disposition dans [un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts).
 
@@ -102,17 +99,17 @@ let sab = new SharedArrayBuffer(1024);
 ### Découper un objet `SharedArrayBuffer`
 
 ```js
-sab.slice();     // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2);    // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2);   // SharedArrayBuffer { byteLength: 2 }
+sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
 sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
 ```
 
 ### Utiliser un tampon WebGL
 
 ```js
-const canvas = document.querySelector('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.querySelector("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);

@@ -1,7 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-original_slug: Web/JavaScript/Referencia/Sentencias/while
 ---
 
 {{jsSidebar("Statements")}}

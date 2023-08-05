@@ -1,7 +1,6 @@
 ---
 title: XInclude
 slug: Glossary/XInclude
-translation_of: Glossary/XInclude
 ---
 
 [XML Inclusions (XInclude)](http://www.w3.org/TR/xinclude/#text-included-items) est une recommandation du W3C pour permettre l'inclusion de différentes sources XML d'une manière plus pratique que les entités externes XML. Lorsqu'il est utilisé conjointement avec XPointer (Firefox prend en charge un sous-ensemble et est utilisé dans l'exemple de code ci-dessous), XInclude peut également cibler uniquement des portions spécifiques d'un document à inclure. Firefox ne le supporte pas nativement, mais la fonction suivante a pour but de permettre son utilisation avec les documents qui y sont passés.
@@ -15,7 +14,10 @@ Le code suivant vise à inclure les balises \<xi: include> et \<xi: fallback> (l
 Notez également que si vous souhaitez autoriser xml: base, vous aurez besoin de [xml:base function](/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function) et la ligne de démarrage `var href = ...` doit être :
 
 ```js
-var href = getXmlBaseLink (/* XLink sans xml:base */ xinclude.getAttribute('href'), /* Élément à interroger à partir de */ xinclude);
+var href = getXmlBaseLink(
+  /* XLink sans xml:base */ xinclude.getAttribute("href"),
+  /* Élément à interroger à partir de */ xinclude,
+);
 ```
 
 ```js

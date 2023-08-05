@@ -1,11 +1,6 @@
 ---
 title: Utilisation des textures en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -41,29 +36,43 @@ function loadTexture(gl, url) {
   const border = 0;
   const srcFormat = gl.RGBA;
   const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
-  gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                width, height, border, srcFormat, srcType,
-                pixel);
+  const pixel = new Uint8Array([0, 0, 255, 255]); // bleu opaque
+  gl.texImage2D(
+    gl.TEXTURE_2D,
+    level,
+    internalFormat,
+    width,
+    height,
+    border,
+    srcFormat,
+    srcType,
+    pixel,
+  );
 
   const image = new Image();
-  image.onload = function() {
+  image.onload = function () {
     gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.texImage2D(gl.TEXTURE_2D, level, internalFormat,
-                  srcFormat, srcType, image);
+    gl.texImage2D(
+      gl.TEXTURE_2D,
+      level,
+      internalFormat,
+      srcFormat,
+      srcType,
+      image,
+    );
 
     // WebGL1 a des spécifications différentes pour les images puissances de 2
     // par rapport aux images non puissances de 2 ; aussi vérifier si l'image est une
     // puissance de 2 sur chacune de ses dimensions.
     if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-        // Oui, c'est une puissance de 2. Générer les mips.
-        gl.generateMipmap(gl.TEXTURE_2D);
+      // Oui, c'est une puissance de 2. Générer les mips.
+      gl.generateMipmap(gl.TEXTURE_2D);
     } else {
-        // Non, ce n'est pas une puissance de 2. Désactiver les mips et définir l'habillage
-        // comme "accrocher au bord"
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      // Non, ce n'est pas une puissance de 2. Désactiver les mips et définir l'habillage
+      // comme "accrocher au bord"
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     }
   };
   image.src = url;
@@ -215,13 +224,13 @@ Du fait que nous avons changé un attribut et ajouté un uniforme, nous devons r
 const programInfo = {
   program: shaderProgram,
   attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-    textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
   },
   uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-    uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
   },
 };
 ```
@@ -241,7 +250,14 @@ Tout d'abord, le code pour spécifier le tampon de couleurs a disparu, remplacé
   const stride = 0; // combien d'octets à récupérer entre un jeu et le suivant
   const offset = 0; // à combien d'octets du début faut-il commencer
   gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
-  gl.vertexAttribPointer(programInfo.attributeLocations.textureCoord, num, type, normalize, stride, offset);
+  gl.vertexAttribPointer(
+    programInfo.attributeLocations.textureCoord,
+    num,
+    type,
+    normalize,
+    stride,
+    offset,
+  );
   gl.enableVertexAttribArray(programInfo.attributeLocations.textureCoord);
 }
 ```

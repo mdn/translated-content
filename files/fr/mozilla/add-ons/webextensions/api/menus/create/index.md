@@ -1,7 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
 
 {{AddonSidebar()}}
@@ -115,10 +114,10 @@ Cet exemple crée un élément de menu contextuel qui s'affiche lorsque l'utilis
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
@@ -136,33 +135,39 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 var makeItBlue = 'document.body.style.border = "5px solid blue"';
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId == "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });

@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ---
 {{JSRef}}
 
@@ -33,7 +32,7 @@ gen.throw(exception)
 
 ### Использование `throw()`
 
-В этом примере показан простой генератор и исключение, которое выбрасывается используя метод `throw`. Исключение может быть поймано, используя, как обычно, блок [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
+В этом примере показан простой генератор и исключение, которое выбрасывается используя метод `throw`. Исключение может быть поймано, используя, как обычно, блок [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch).
 
 ```js
 function* gen() {
@@ -64,4 +63,4 @@ g.throw(new Error('Something went wrong'));
 
 ## Смотрите также
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)

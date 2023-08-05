@@ -7,6 +7,6 @@ slug: Glossary/WebAssembly
 
 1. 詳細
 
-    1. [WebAssembly](https://ja.wikipedia.org/wiki/WebAssembly) on Wikipedia
-    2. [Official website](https://webassembly.org/)
-    3. [WebAssembly](/ja/docs/WebAssembly) on MDN
+   1. [WebAssembly](https://ja.wikipedia.org/wiki/WebAssembly) on Wikipedia
+   2. [Official website](https://webassembly.org/)
+   3. [WebAssembly](/ja/docs/WebAssembly) on MDN

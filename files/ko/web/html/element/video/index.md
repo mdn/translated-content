@@ -1,5 +1,5 @@
 ---
-title: '<video>: 비디오 삽입 요소'
+title: "<video>: 비디오 삽입 요소"
 slug: Web/HTML/Element/video
 ---
 
@@ -76,15 +76,15 @@ slug: Web/HTML/Element/video
 ```html
 <!-- Simple video example -->
 <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  Sorry, your browser doesn't support embedded videos,
-  but don't worry, you can <a href="videofile.ogg">download it</a>
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="videofile.ogg">download it</a>
   and watch it with your favorite video player!
 </video>
 
 <!-- Video with subtitles -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 
@@ -114,7 +114,7 @@ AddType video/webm .webm
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
+이 요소는 [`HTMLVideoElement`](/ko/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
 
 ## 브라우저 호환성
 

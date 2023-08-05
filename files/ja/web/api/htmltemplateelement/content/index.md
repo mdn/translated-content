@@ -1,23 +1,24 @@
 ---
-title: HTMLTemplateElement.content
+title: "HTMLTemplateElement: content プロパティ"
+short-title: content
 slug: Web/API/HTMLTemplateElement/content
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("Web Components")}}
 
-**`HTMLTemplateElement.content`** プロパティは、 `<template>` 要素のテンプレートの内容 ({{domxref("DocumentFragment")}}) を返します。
+**`HTMLTemplateElement.content`** プロパティは、`<template>` 要素のテンプレートの内容 ({{domxref("DocumentFragment")}}) を返します。
 
-## 構文
+## 値
 
-```js
-var documentFragment = templateElement.content
-```
+{{domxref("DocumentFragment")}} です。
 
 ## 例
 
 ```js
-var templateElement = document.querySelector("#foo");
-var documentFragment = templateElement.content.cloneNode(true);
+const templateElement = document.querySelector("#foo");
+const documentFragment = templateElement.content.cloneNode(true);
 ```
 
 ## 仕様書

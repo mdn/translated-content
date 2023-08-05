@@ -32,6 +32,7 @@ user-select: unset;
 ### 取值
 
 - `none`
+
   - : 元素及其子元素的文本不可选中。请注意，{{domxref("Selection")}} 对象可以包含这些元素。
 
 - `auto`
@@ -49,6 +50,7 @@ user-select: unset;
 - `all`
   - : 在一个 HTML 编辑器中，当双击子元素或者上下文时，那么包含该子元素的最顶层元素也会被选中。
 - `contain`
+
   - : 允许在元素内选择；但是，选区将被限制在该元素的边界之内。
 
     > **备注：** CSS UI 4 将 `element` 值[重命名](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)为 `contain`。

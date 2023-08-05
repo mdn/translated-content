@@ -1,7 +1,6 @@
 ---
 title: 建立或觸發事件
 slug: Web/Events/Creating_and_triggering_events
-original_slug: Web/Guide/Events/Creating_and_triggering_events
 ---
 
 本文介紹如何建立和觸發事件。
@@ -48,7 +47,7 @@ function eventHandler(e) {
 // 建立事件
 var event = document.createEvent("Event");
 
-// 設定事件名稱為 “build” 。
+// 設定事件名稱為 「build」 。
 event.initEvent("build", true, true);
 
 // 監聽事件

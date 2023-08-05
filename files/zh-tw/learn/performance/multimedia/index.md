@@ -1,7 +1,6 @@
 ---
 title: 多媒體：圖像跟影片
 slug: Learn/Performance/Multimedia
-original_slug: Learn/Performance/多媒體
 ---
 
 媒體，換句話說就是圖像跟影片，平均占了網站超過 70%的下載流量。以下載的效能來考慮的話，減少媒體數量和檔案大小是一個簡單可以實現的目標。 這篇文章聚焦在優化圖像跟影片來改善網站的效能。

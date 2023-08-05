@@ -11,8 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 ```js
 browser.bookmarks.getTree(
-  callback // 関数
-)
+  callback, // 関数
+);
 ```
 
 ### 引数

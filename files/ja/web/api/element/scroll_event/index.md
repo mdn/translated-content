@@ -1,8 +1,9 @@
 ---
-title: 'Element: scroll イベント'
+title: "Element: scroll イベント"
+short-title: scroll
 slug: Web/API/Element/scroll_event
 l10n:
-  sourceCommit: 974a1b988d5e1d84b7e031a651434ae35d3d4128
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}

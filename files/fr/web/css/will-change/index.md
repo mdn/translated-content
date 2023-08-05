@@ -1,11 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/will-change
 ---
 
 {{CSSRef}}
@@ -19,9 +14,9 @@ La propriété **`will-change`** fournit une indication au navigateur sur la pro
 will-change: auto;
 will-change: scroll-position;
 will-change: contents;
-will-change: transform;        /* Exemple de <custom-ident> */
-will-change: opacity;          /* Exemple de <custom-ident> */
-will-change: left, top;        /* Exemple de deux <animateable-feature> */
+will-change: transform; /* Exemple de <custom-ident> */
+will-change: opacity; /* Exemple de <custom-ident> */
+will-change: left, top; /* Exemple de deux <animateable-feature> */
 
 /* Valeurs globales */
 will-change: inherit;
@@ -72,21 +67,21 @@ Un valeur de type `<animateable-feature>` peut être :
 Dans l'exemple précédent, on applique la propriété `will-change` à même la feuille de style. Dans ce cas, le navigateur conservera l'optimisation en mémoire beaucoup plus longtemps que nécessaire. Nous avons vu précédemment que cela devait être évité et voici donc un deuxième exemple qui illustre comment appliquer la propriété `will-change` grâce à JavaScript (et qui correspond donc à la méthode qui devrait être utilisée la plupart du temps) :
 
 ```js
-var el = document.getElementById('element');
+var el = document.getElementById("element");
 
 // On applique will-change quand la souris/curseur
 // pointeur/stylet passe au-dessus de l'élément
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // On liste les propriétés sujettes au changement
   // lors de l'animation
-  this.style.willChange = 'transform, opacity';
+  this.style.willChange = "transform, opacity";
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

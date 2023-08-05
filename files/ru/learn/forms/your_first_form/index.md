@@ -1,19 +1,9 @@
 ---
 title: Example
 slug: Learn/Forms/Your_first_form
-tags:
-  - Beginner
-  - CodingScripting
-  - Example
-  - Forms
-  - Guide
-  - HTML
-  - Learn
-  - Web
-original_slug: Learn/Forms/Your_first_form/Example
 ---
 
-This is the example code for the article [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form).
+This is the example code for the article [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form).
 
 ## A simple form
 
@@ -23,12 +13,12 @@ This is the example code for the article [Your first HTML form](/en-US/docs/Lear
 <form action="/my-handling-form-page" method="post">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div>
     <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div>
@@ -52,7 +42,7 @@ form {
 
   /* To see the limits of the form */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -67,7 +57,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* To make sure that all text field have the same font settings
      By default, textarea are set with a monospace font */
   font: 1em sans-serif;
@@ -76,13 +67,14 @@ input, textarea {
   width: 300px;
 
   -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* To give a little highligh on active elements */
   border-color: #000;
 }
@@ -107,7 +99,7 @@ textarea {
 button {
   /* This extra margin represent the same space as the space between
      the labels and their text fields */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
-translation_of: Mozilla/Firefox/Releases/32
 ---
 
 {{FirefoxSidebar}}
@@ -63,15 +62,15 @@ Highlights:
 
   ```json
   {
-    mandatory: {
-      width: { min: 640 },
-      height: { min: 480 }
+    "mandatory": {
+      "width": { "min": 640 },
+      "height": { "min": 480 }
     },
-    optional: [
-      { width: 650 },
-      { width: { min: 650 }},
-      { frameRate: 60 },
-      { width: { max: 800 }},
+    "optional": [
+      { "width": 650 },
+      { "width": { "min": 650 } },
+      { "frameRate": 60 },
+      { "width": { "max": 800 } }
     ]
   }
   ```

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.CompileError()
 slug: WebAssembly/JavaScript_interface/CompileError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ Le constructeur **`WebAssembly.CompileError()`** permet de créer une nouvelle i
 ## Syntaxe
 
 ```js
-new WebAssembly.CompileError(message, nomFichier, numeroLigne)
+new WebAssembly.CompileError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -57,15 +56,15 @@ Le fragment de code qui suit crée une instance de `CompileError` puis imprime s
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Coucou', 'unFichier', 10);
+  throw new WebAssembly.CompileError("Coucou", "unFichier", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Coucou"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "unFichier"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // la pile d'appel pour le code
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "unFichier"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // la pile d'appel pour le code
 }
 ```
 

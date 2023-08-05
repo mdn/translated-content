@@ -73,8 +73,8 @@ Instalar _Node_ y _NPM_ en Windows y macOS es sencillo, porque simplemente debe 
 
 1. Descargue el instalador requerido:
 
-    1. Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
-    2. Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
+   1. Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
+   2. Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
 
 2. Instale Node al dar doble-click en el archivo de descarga y en seguida la instalación inicia.
 
@@ -109,37 +109,36 @@ Como una prueba un poco más emocionante creemos un muy básico "básico servido
 
 1. Copie el siguiente texto en un archivo llamado **holanode.js**. Este utiliza características básicas de Node (nada desde Express) y algo de sintáxis ES6:
 
-    ```js
-    //Load HTTP module
-    const http = require("http");
-    const hostname = '127.0.0.1';
-    const port = 3000;
+   ```js
+   //Load HTTP module
+   const http = require("http");
+   const hostname = "127.0.0.1";
+   const port = 3000;
 
-    //Create HTTP server and listen on port 3000 for requests
-    const server = http.createServer((req, res) => {
+   //Create HTTP server and listen on port 3000 for requests
+   const server = http.createServer((req, res) => {
+     //Set the response HTTP header with HTTP status and Content type
+     res.statusCode = 200;
+     res.setHeader("Content-Type", "text/plain");
+     res.end("Hello World\n");
+   });
 
-      //Set the response HTTP header with HTTP status and Content type
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end('Hello World\n');
-    });
+   //listen for request on port 3000, and as a callback function have the port listened on logged
+   server.listen(port, hostname, () => {
+     console.log(`Server running at http://${hostname}:${port}/`);
+   });
+   ```
 
-    //listen for request on port 3000, and as a callback function have the port listened on logged
-    server.listen(port, hostname, () => {
-      console.log(`Server running at http://${hostname}:${port}/`);
-    });
-    ```
+   El código importa el módulo "http" y lo usa para crear un servidor (`createServer()`) que escucha las solicitudes HTTP en el puerto 3000. Luego, el script imprime un mensaje en la consola con la URL del navegador puede usar para probar el servidor. La función `createServer()` toma como argumento una función callback que se invocará cuando se reciba una solicitud HTTP — esto simplemente devuelve una respuesta con un código de estado HTTP de 200 ("OK") y el texto sin formato "Hello World".
 
-    El código importa el módulo "http" y lo usa para crear un servidor (`createServer()`) que escucha las solicitudes HTTP en el puerto 3000. Luego, el script imprime un mensaje en la consola con la URL del navegador puede usar para probar el servidor. La función `createServer()` toma como argumento una función callback que se invocará cuando se reciba una solicitud HTTP — esto simplemente devuelve una respuesta con un código de estado HTTP de 200 ("OK") y el texto sin formato "Hello World".
-
-    > **Nota:** ¡No se preocupe si aún no comprende exactamente lo que está haciendo este código! ¡Explicaremos nuestro código con mayor detalle una vez que comencemos a usar Express!
+   > **Nota:** ¡No se preocupe si aún no comprende exactamente lo que está haciendo este código! ¡Explicaremos nuestro código con mayor detalle una vez que comencemos a usar Express!
 
 2. Inicie el servidor navegando en el mismo directorio que su archivo `hellonode.js` en su símbolo del sistema, y llamando a `node` junto con el nombre del script, así:
 
-    ```bash
-    >node hellonode.js
-    Server running at http://127.0.0.1:3000/
-    ```
+   ```bash
+   >node hellonode.js
+   Server running at http://127.0.0.1:3000/
+   ```
 
 3. Navega a la URL `http://127.0.0.1:3000`. Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
 
@@ -159,82 +158,82 @@ Los siguientes pasos muestran cómo puede usar NPM para descargar un paquete, gu
 
 1. Primero cree un directorio para su nueva aplicación y acceda a él:
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. Use el comando `npm init` para crear un archivo **package.json** para su aplicación. Este comando le solicita varias cosas, incluido el nombre y la versión de su aplicación y el nombre del archivo de punto de entrada inicial (de forma predeterminada, esto es **index.js**). Por ahora, solo acepte los valores predeterminados:
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    Si muestra el archivo **package.json** (`cat package.json`), verá los valores predeterminados que aceptó, que finalizarán con la licencia.
+   Si muestra el archivo **package.json** (`cat package.json`), verá los valores predeterminados que aceptó, que finalizarán con la licencia.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. Ahora instale Express en el directorio `myapp` y guárdelo en la lista de dependencias de su archivo package.json
 
-    ```bash
-    npm install express --save
-    ```
+   ```bash
+   npm install express --save
+   ```
 
-    La sección de dependencias de su **package.json** ahora aparecerá al final del archivo **package.json** e incluirá _Express_.
+   La sección de dependencias de su **package.json** ahora aparecerá al final del archivo **package.json** e incluirá _Express_.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.16.3"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.16.3"
+     }
+   }
+   ```
 
 4. Para usar la biblioteca, llame a la función `require ()` como se muestra a continuación en su archivo **index.js**.
-    Cree un archivo llamado **index.js** en la raíz del directorio de la aplicación "myapp" y dele el contenido que se muestra arriba.
+   Cree un archivo llamado **index.js** en la raíz del directorio de la aplicación "myapp" y dele el contenido que se muestra arriba.
 
-    ```js
-    const express = require('express')
-    const app = express();
+   ```js
+   const express = require("express");
+   const app = express();
 
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    });
+   app.get("/", (req, res) => {
+     res.send("Hello World!");
+   });
 
-    app.listen(8000, () => {
-      console.log('Example app listening on port 8000!')
-    });
-    ```
+   app.listen(8000, () => {
+     console.log("Example app listening on port 8000!");
+   });
+   ```
 
-    Este código muestra una aplicación web mínima "HelloWorld" Express. Esto importa el módulo "express" y lo usa para crear un servidor (`app`) que escucha las solicitudes HTTP en el puerto 8000 e imprime un mensaje en la consola que indica qué URL del navegador puede usar para probar el servidor. La función `app.get ()` solo responde a las solicitudes HTTP `GET` con la ruta URL especificada (`'/'`), en este caso llamando a una función para enviar nuestro mensaje Hello World! .
+   Este código muestra una aplicación web mínima "HelloWorld" Express. Esto importa el módulo "express" y lo usa para crear un servidor (`app`) que escucha las solicitudes HTTP en el puerto 8000 e imprime un mensaje en la consola que indica qué URL del navegador puede usar para probar el servidor. La función `app.get ()` solo responde a las solicitudes HTTP `GET` con la ruta URL especificada (`'/'`), en este caso llamando a una función para enviar nuestro mensaje Hello World! .
 
 5. Puede iniciar el servidor llamando a node con el script en su símbolo del sistema:
 
-    ```bash
-    >node index.js
-    Example app listening on port 8000
-    ```
+   ```bash
+   >node index.js
+   Example app listening on port 8000
+   ```
 
 6. Navega a la URL (`http://127.0.0.1:8000/`). Sí todo esta funciona, el navegador simplemente debe mostrar la cadena de texto "Hello World".
 

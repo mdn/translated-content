@@ -1,14 +1,6 @@
 ---
 title: Le placement automatique sur une grille CSS
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -20,7 +12,9 @@ En plus de pouvoir placer des objets de façon précise sur une grille, la spéc
 ## Placement automatique
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -68,7 +62,9 @@ Par défaut, les lignes implicites créées automatiquement ont une taille autom
 Il est toutefois possible de contrôler la taille de ces lignes grâce à la propriété `grid-auto-rows`. Ainsi, si on veut que les lignes créées automatiquement mesurent 100 pixels de haut, on utilisera :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -111,7 +107,9 @@ Il est toutefois possible de contrôler la taille de ces lignes grâce à la pro
 On peut utiliser la fonction {{cssxref("minmax","minmax()")}} pour la valeur de {{cssxref("grid-auto-rows")}} afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -133,13 +131,9 @@ On peut utiliser la fonction {{cssxref("minmax","minmax()")}} pour la valeur de 
   <div>Un</div>
   <div>Deux</div>
   <div>Trois</div>
-  <div>Quatre
-    <br>Cette cellule
-    <br>a du contenu
-    <br>supplémentaire
-    <br>et max vaut auto
-    <br>afin que la ligne
-    <br>se développe.
+  <div>
+    Quatre <br />Cette cellule <br />a du contenu <br />supplémentaire <br />et
+    max vaut auto <br />afin que la ligne <br />se développe.
   </div>
   <div>Five</div>
 </div>
@@ -161,33 +155,35 @@ On peut utiliser la fonction {{cssxref("minmax","minmax()")}} pour la valeur de 
 On peut aussi passer en argument une liste de pistes qui se répèteront. Dans l'exemple ci-après, on crée une piste implicite pour une ligne de 100 pixels et une seconde de `200px`. Ce motif sera utilisé tant que du contenu sera ajouté à la grille implicite.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-   border: 2px solid #f76707;
-   border-radius: 5px;
-   background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-   border: 2px solid #ffa94d;
-   border-radius: 5px;
-   background-color: #ffd8a8;
-   padding: 1em;
-   color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>Un</div>
-   <div>Deux</div>
-   <div>Trois</div>
-   <div>Quatre</div>
-   <div>Cinq</div>
-   <div>Six</div>
-   <div>Sept</div>
-   <div>Huit</div>
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+  <div>Sept</div>
+  <div>Huit</div>
 </div>
 ```
 
@@ -219,7 +215,9 @@ Dans le prochain exemple, on crée une grille avec trois lignes qui mesurent cha
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -257,14 +255,16 @@ Une grille peut contenir un mélange d'éléments. Certains éléments peuvent a
 
 ### Modification de l'ordre du document
 
-Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _“order modified document order”_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
+Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _"order modified document order"_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
 
 ### Les éléments avec des propriétés de placement
 
 La grille commencera par placer les éléments pour lesquels on a défini une position. Dans l'exemple qui suit, on a une grille avec 12 éléments, l'élément 2 et l'élément 5 sont placés en utilisant les lignes. On put voir comment ces deux éléments sont placés et comment les autres sont placés automatiquement dans les espaces restants. Les objets placés automatiquement seront placés avant les éléments qui sont placés, dans l'ordre du DOM.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -324,7 +324,9 @@ On peut utiliser les propriétés de placement tout en tirant parti du placement
 On peut voir coment cela laisse des espaces dans la grille car lorsqu'un élément placé automatiquement n'a pas suffisamment de place sur une piste, une nouvelle ligne sera créée jusqu'à ce que l'élément ait la place.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
@@ -364,7 +366,7 @@ On peut voir coment cela laisse des espaces dans la grille car lorsqu'un éléme
   grid-auto-rows: 100px;
   grid-gap: 10px;
 }
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
@@ -387,10 +389,12 @@ En dehors des éléments placés explicitement, la grille place les éléments a
 
 Pour cela, sur le conteneur, on ajoute la propriété {{cssxref("grid-auto-flow")}} avec la valeur `dense`. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec `column`. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété : `grid-auto-flow: column dense`.
 
-Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés quitte à ne pas respecter l'ordre du DOM. En revanche, l'ordre de la navigation au clavier (_tab order_) suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilit%C3%A9).
+Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés quitte à ne pas respecter l'ordre du DOM. En revanche, l'ordre de la navigation au clavier (_tab order_) suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité).
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
@@ -424,7 +428,7 @@ Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a lai
 ```
 
 ```css
-.wrapper div:nth-child(4n+1) {
+.wrapper div:nth-child(4n + 1) {
   grid-column-end: span 2;
   grid-row-end: span 2;
   background-color: #ffa94d;
@@ -494,16 +498,24 @@ Le placement automatique peut être utile lorsqu'on a un ensemble d'objets qui s
 
 ```html
 <ul class="wrapper">
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-  <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-  <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-  <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-  <li class="landscape"><img src="http://placehold.it/350x200" alt="placeholder"></li>
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
-  <li><img src="http://placehold.it/200x300" alt="placeholder"></li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
+  <li class="landscape">
+    <img src="http://placehold.it/350x200" alt="placeholder" />
+  </li>
+  <li class="landscape">
+    <img src="http://placehold.it/350x200" alt="placeholder" />
+  </li>
+  <li class="landscape">
+    <img src="http://placehold.it/350x200" alt="placeholder" />
+  </li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
+  <li class="landscape">
+    <img src="http://placehold.it/350x200" alt="placeholder" />
+  </li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
+  <li><img src="http://placehold.it/200x300" alt="placeholder" /></li>
 </ul>
 ```
 
@@ -514,7 +526,9 @@ Le placement automatique peut également aider à disposer des éléments d'inte
 ### Autre exemple
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

@@ -1,7 +1,6 @@
 ---
 title: 화살표 함수
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
 
 {{jsSidebar("Functions")}}
@@ -412,7 +411,7 @@ var func = (a, b, c)
 
 ### 파싱순서
 
-화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
+화살표 함수 내의 화살표는 연산자가 아닙니다. 그러나 화살표 함수는 평범한 함수와 비교했을 때 [operator precedence](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)와 다르게 반응하는 특별한 파싱룰을 가지고 있습니다.
 
 ```js
 let callback;

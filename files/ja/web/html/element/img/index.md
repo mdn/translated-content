@@ -39,7 +39,7 @@ HTML 標準では、対応する画像形式を指定していないので、{{g
 - [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
 - [WebP (Web Picture format)](/ja/docs/Web/Media/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
 
-[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。 WebP は広く対応されていますが、 AVIF は Safari での対応が不足しています。
+[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。 WebP は広く対応されていますが、 AVIF は Edge での対応が不足しています。
 
 SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
 

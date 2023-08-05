@@ -2,7 +2,7 @@
 title: 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit:93d2d79c1c68af93f2730d27cdea9d527eee0d7a
+  sourceCommit: 93d2d79c1c68af93f2730d27cdea9d527eee0d7a
 ---
 
 {{jsSidebar("Operators")}}

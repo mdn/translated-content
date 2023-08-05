@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
-translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -21,27 +20,29 @@ myPushManager = ServiceWorker.pushManager
 ## Примеры
 
 ```js
-this.onpush = function(event) {
+this.onpush = function (event) {
   console.log(event.data);
   // Отсюда можно записывать данные в IndexedDB, отправлять их в любое
   // открытое окно, отображать уведомление и т. д.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      function (pushSubscription) {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // Детали push-подписки, требуемые сервером приложения,
         // теперь доступны, и могут быть отправлены, к примеру,
         // при помощи XMLHttpRequest.
-      }, function(error) {
+      },
+      function (error) {
         // При разработке это часто помогает отлавливать ошибки в консоли.
         // В продакшен-среде это также может быть полезно для отправки отчёта
         // об ошибках на сервер приложения.
         console.log(error);
-      }
+      },
     );
   });
 ```

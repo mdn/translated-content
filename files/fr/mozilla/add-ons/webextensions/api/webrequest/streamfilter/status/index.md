@@ -1,7 +1,6 @@
 ---
 title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 ---
 
 {{AddonSidebar()}}
@@ -32,29 +31,29 @@ Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'u
 ```js
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
-  console.log(filter.status);          // uninitialized
+  console.log(filter.status); // uninitialized
 
-  filter.onstart = event => {
-    console.log(filter.status);        // transferringdata
-  }
+  filter.onstart = (event) => {
+    console.log(filter.status); // transferringdata
+  };
 
-  filter.ondata = event => {
-    console.log(filter.status);        // transferringdata
+  filter.ondata = (event) => {
+    console.log(filter.status); // transferringdata
     // pass through the response data
     filter.write(event.data);
-  }
+  };
 
-  filter.onstop = event => {
-    console.log(filter.status);        // finishedtransferringdata
+  filter.onstop = (event) => {
+    console.log(filter.status); // finishedtransferringdata
     filter.disconnect();
-    console.log(filter.status);        // disconnected
-  }
+    console.log(filter.status); // disconnected
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

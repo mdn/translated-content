@@ -15,6 +15,6 @@ Wikipedia の [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function)
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("API")}}
-    2. {{Glossary("Class")}}
-    3. {{Glossary("Function")}}
+   1. {{Glossary("API")}}
+   2. {{Glossary("Class")}}
+   3. {{Glossary("Function")}}

@@ -1,12 +1,11 @@
 ---
 title: Faire rebondir la balle sur les murs
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
 {{GamesSidebar}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier")}}
+{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier")}}
 
 C'est la **3<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
@@ -25,7 +24,7 @@ var ballRadius = 10;
 Mettez maintenant à jour la ligne qui dessine la balle à l'intérieur de la fonction `drawBall()` :
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ### Rebondir en haut et en bas
@@ -33,8 +32,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 Il y a 4 murs en tout mais nous allons d'abord nous pencher sur le mur du haut. Nous devons, à chaque rafraichissement du canvas, regarder si la balle touche le bord du haut. Si c'est le cas, alors nous devons inverser la direction de la balle pour créer un effet de limite de zone de jeu. Il ne faut surtout pas oublier que le point d'origine est en haut à gauche ! Nous pouvons donc écrire :
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -43,8 +42,8 @@ Si la valeur y de la position de la balle est inférieure à zéro, changez la d
 Le code ci-dessus traite du rebondissement de la balle sur le bord supérieur, alors traitons maintenant le bord inférieur :
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -53,8 +52,8 @@ Si la position en y de la balle est supérieure à la hauteur du canvas (soit 48
 On peut rassembler les deux conditions en une grâce au "ou" qui s'écrit || en JavaScript :
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -65,12 +64,12 @@ Si une des deux conditions est vérifiée, alors la vitesse est inversée. Essay
 Nous avons couvert les bords supérieur et inférieur, alors pensons à ceux de gauche et de droite. C'est très similaire en fait, il suffit de répéter les instructions pour `x` au lieu de `y` :
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -85,11 +84,11 @@ Testez votre code à ce stade, et vous serez impressionné — nous avons mainte
 C'est parce que nous calculons le point de collision entre le mur et le centre de la balle, alors que nous devrions le faire pour sa circonférence. La balle devrait rebondir juste après avoir touché le mur, et non pas lorsqu'elle est déjà à mi-chemin dans le mur, alors ajustons un peu nos déclarations pour inclure cela. Mettez à jour le dernier code que vous avez ajouté :
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 

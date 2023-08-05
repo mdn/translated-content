@@ -10,12 +10,12 @@ slug: Web/API/Cache/put
 通常，你只想 {{domxref("GloblFetch.fetch","fetch()")}} 一个或多个请求，然后直接添加结果到 cache 中。这种情况下，最好使用 {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}，因为它们是一个或者多个这些操作的便捷方法。
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('Bad response status');
+    throw new TypeError("Bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 > **备注：** `put()` 将覆盖先前存储在匹配请求的 cache 中的任何键/值对。
@@ -55,17 +55,21 @@ This example is from the MDN [sw-test example](https://github.com/mdn/sw-test/) 
 
 ```js
 var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
+var cachedResponse = caches
+  .match(event.request)
+  .catch(function () {
+    return fetch(event.request);
+  })
+  .then(function (r) {
+    response = r;
+    caches.open("v1").then(function (cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## 规范

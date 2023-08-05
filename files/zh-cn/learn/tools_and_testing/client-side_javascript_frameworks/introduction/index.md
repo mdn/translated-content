@@ -1,7 +1,6 @@
 ---
 title: 客户端框架介绍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -84,21 +83,21 @@ React 用类似 HTML 的语法的 [JSX](https://reactjs.org/docs/introducing-jsx
 ```js
 const state = [
   {
-    id: 'todo-0',
-    name: 'Learn some frameworks!'
-  }
-]
+    id: "todo-0",
+    name: "Learn some frameworks!",
+  },
+];
 ```
 
 如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)）中的一个 HTML [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素。我们该如何实现？可以像下面这样：
 
 ```js
 function buildTodoItemEl(id, name) {
-  const item = document.createElement('li');
-  const span = document.createElement('span');
+  const item = document.createElement("li");
+  const span = document.createElement("span");
   const textContent = document.createTextNode(name);
 
-  span.appendChild(textContent)
+  span.appendChild(textContent);
 
   item.id = id;
   item.appendChild(span);
@@ -114,10 +113,10 @@ function buildTodoItemEl(id, name) {
 
 ```js
 function buildDeleteButtonEl(id) {
-  const button = document.createElement('button');
-  const textContent = document.createTextNode('Delete');
+  const button = document.createElement("button");
+  const textContent = document.createTextNode("Delete");
 
-  button.setAttribute('type', 'button');
+  button.setAttribute("type", "button");
   button.appendChild(textContent);
 
   return button;
@@ -129,7 +128,7 @@ function buildDeleteButtonEl(id) {
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
-  state.tasks.forEach(task => {
+  state.tasks.forEach((task) => {
     const item = buildTodoItemEl(task.id, task.name);
     frag.appendChild(item);
   });
@@ -197,7 +196,7 @@ JavaScript 框架都提供了一种更具以*声明性*的方式地编写用户�
 
 Web 最重要的特点是它允许用户从一个页面导航到另一个页面——毕竟，它是一个相互链接的文档网络。当你点击网站上的链接时，你的浏览器会与目标服务器通信，获取新内容后将其显示给你。当浏览器这样做时，地址栏中的 URL 会发生变化。你可以记下来这个新 URL 并稍后返回该页面——或者把这个 URL 分享给其他人，以便他们轻松找到相同的页面。你的浏览器会记住你的导航历史记录，并允许你来回导航（译者注：其实就是浏览器的前进后退功能）。这被称作**服务端路由**。
 
-现代 Web 应用程序通常不会获取和渲染新的 HTML 文件——它们加载单个 HTML shell，并不断更新其中的 DOM 而无需将用户导航到 Web 上的新地址。(这被称为**单页应用程序（single page app）** 或 **SPA**)。每个新的伪网页通常称为一个 *view*，且在默认情况下，不会做任何路由。
+现代 Web 应用程序通常不会获取和渲染新的 HTML 文件——它们加载单个 HTML shell，并不断更新其中的 DOM 而无需将用户导航到 Web 上的新地址。(这被称为**单页应用程序（single page app）** 或 **SPA**)。每个新的伪网页通常称为一个 _view_，且在默认情况下，不会做任何路由。
 
 当 SPA 足够复杂并呈现足够多的独特视图时，将路由功能引入你的应用程序非常重要。人们习惯于能够链接到应用程序中的特定页面，在他们的浏览器中前进和后退等等，当这些标准的 Web 功能被破坏时，他们的体验会受到影响。当客户端应用程序以这种方式处理路由时，它被恰当地称为**客户端路由**。
 
@@ -250,12 +249,12 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 在为任何新项目做出选择时，你应该认真考虑框架的模型和 DSL。不匹配的浏览器支持可能会成为用户的障碍；不匹配的 DSL 支持可能会成为你和你的团队成员的障碍。
 
-| 框架 | 浏览器支持 | DSL 偏好 | 支持的 DSL         |
-| --------- | ----------------------------------- | ------------- | ---------------------- |
-| Angular   | IE9+                                | TypeScript    | 基于 HTML、TypeScript |
-| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、TypeScript        |
-| Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
-| Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
+| 框架    | 浏览器支持                                 | DSL 偏好   | 支持的 DSL             |
+| ------- | ------------------------------------------ | ---------- | ---------------------- |
+| Angular | IE9+                                       | TypeScript | 基于 HTML、TypeScript  |
+| React   | 现代的浏览器（IE9+ with Polyfills）        | JSX        | JSX、TypeScript        |
+| Vue     | IE9+                                       | 基于 HTML  | 基于 HTML、JSX、Pug    |
+| Ember   | 现代的浏览器（IE9+ in Ember version 2.18） | Handlebars | Handlebars、TypeScript |
 
 > **备注：** 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
 

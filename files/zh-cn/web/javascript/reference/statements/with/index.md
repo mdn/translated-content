@@ -39,8 +39,7 @@ JavaScript 查找某个未使用命名空间的变量时，会通过作用域链
 
 ```js
 function f(x, o) {
-  with (o)
-    print(x);
+  with (o) print(x);
 }
 ```
 
@@ -50,9 +49,9 @@ function f(x, o) {
 
 ```js
 function f(foo, values) {
-    with (foo) {
-        console.log(values)
-    }
+  with (foo) {
+    console.log(values);
+  }
 }
 ```
 

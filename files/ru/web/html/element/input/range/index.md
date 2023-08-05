@@ -1,10 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - контроллер
-  - слайдер
-translation_of: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -15,12 +11,12 @@ translation_of: Web/HTML/Element/input/range
 
 Если используемый браузер не поддерживает тип `range`, он будет отображаться как input`{{HTMLElement('input/text', 'text')}}.`
 
-| **[Value](#value)**               | {{domxref("DOMString")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}. |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                        |
-| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`max`](/ru/docs/Web/HTML/Element/input#max), [`min`](/ru/docs/Web/HTML/Element/input#min), and [`step`](/ru/docs/Web/HTML/Element/input#step)       |
-| **IDL атрибуты**                  | `list`, `value`, и `valueAsNumber`                                                                                                                                                                                                                         |
-| **Методы**                        | {{domxref("HTMLInputElement.stepDown", "stepDown()")}} и {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                                                                            |
+| **[Value](#value)**               | {{domxref("DOMString")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}.                                           |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                                       |
+| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`max`](/ru/docs/Web/HTML/Element/input#max), [`min`](/ru/docs/Web/HTML/Element/input#min), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
+| **IDL атрибуты**                  | `list`, `value`, и `valueAsNumber`                                                                                                                                                                                                                             |
+| **Методы**                        | {{domxref("HTMLInputElement.stepDown", "stepDown()")}} и {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                                                                                                                    |
 
 ### Валидация
 
@@ -34,8 +30,10 @@ translation_of: Web/HTML/Element/input/range
 Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 Если предпринята попытка установить значение меньше минимального, то оно примет значение атрибута min. Аналогично, попытка установить значение больше максимального, приведёт к установлению значения равного атрибуту max.
@@ -44,12 +42,12 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 В дополнение к атрибутам, общим для всех элементов {{HTMLElement("input")}}, range инпуты предлагают следующие атрибуты:
 
-| Attribute       | Description                                                                         |
-| --------------- | ----------------------------------------------------------------------------------- |
+| Attribute       | Description                                                                           |
+| --------------- | ------------------------------------------------------------------------------------- |
 | [`list`](#list) | id элемента `<datalist>`, который содержит предопределённые значение (не обязательно) |
-| [`max`](#max)   | Максимальное допустимое значение                                                    |
-| [`min`](#min)   | Минимальное допустимое значение                                                     |
-| [`step`](#step) | Шаговый, используемый для пользовательского интерфейса и для проверки               |
+| [`max`](#max)   | Максимальное допустимое значение                                                      |
+| [`min`](#min)   | Минимальное допустимое значение                                                       |
+| [`step`](#step) | Шаговый, используемый для пользовательского интерфейса и для проверки                 |
 
 {{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
 
@@ -102,7 +100,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 Например, указать диапазон значений между -10 и 10, вы можете, используя:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Указание_минимума_и_максимума", 600, 40)}}
@@ -112,7 +110,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 По умолчанию, степень детализации равна 1, тем самым показывая, что значение всегда является целым числом. Вы можете изменить атрибут [`step`](/ru/docs/Web/HTML/Global_attributes#step) контроля степени детализации. Например, если вам нужно значение между 5 и 10, с точностью до двух знаков после запятой, вы должны установить значение `step` на 0.01:
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
@@ -120,7 +118,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 Если вы хотите принять любое значение, независимо от разрядности, вы можете указать значение `any` для атрибута [`step`](/ru/docs/Web/HTML/Element/input#step):
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Granularity_sample2", 600, 40)}}
@@ -255,7 +253,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 Рассмотрим контроллер диапазона:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
@@ -278,7 +276,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 #### HTML
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 #### Результат
@@ -297,7 +295,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -339,7 +337,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 Используем тот же HTML что и в предыдущем примере:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 #### CSS
@@ -363,12 +361,12 @@ input[type="range"] {
 Используем тот же HTML что и в предыдущем примере и добавляем атрибут со значением `vertical`:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 {{EmbedLiveSample("orient_attribute", 200, 200)}}
 
-### writing-mode: bt-lr;
+### writing-mode: bt-lr
 
 Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов
 
@@ -377,7 +375,7 @@ input[type="range"] {
 Используем тот же HTML что и в предыдущем примере:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1">
+<input type="range" min="0" max="11" value="7" step="1" />
 ```
 
 #### CSS
@@ -401,7 +399,7 @@ input[type="range"] {
 Оставим `orient` атрибут со значением `vertical` для Firefox:
 
 ```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical">
+<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
 ```
 
 #### CSS
@@ -429,7 +427,7 @@ input[type="range"] {
 
 - [HTML Forms](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} и интерфейс {{domxref("HTMLInputElement")}}, на котором он основан
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} и{{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/ru/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)

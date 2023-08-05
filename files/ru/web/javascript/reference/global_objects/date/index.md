@@ -1,13 +1,8 @@
 ---
 title: Дата
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Date
-  - JavaScript
-  - Reference
-  - время
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -95,8 +90,8 @@ new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
 
 ```js
 var today = new Date();
-var birthday = new Date('December 17, 1995 03:24:00');
-var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date("December 17, 1995 03:24:00");
+var birthday = new Date("1995-12-17T03:24:00");
 var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
@@ -109,9 +104,9 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Устаревший метод, 98 отображается на 1998 год
-date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### Пример: вычисление затраченного времени
@@ -142,10 +137,12 @@ var elapsed = end.getTime() - start.getTime(); // затраченное вре�
 // Проверяет функцию и возвращает её возвращаемое значение
 function printElapsedTime(fTest) {
   var nStartTime = Date.now(),
-      vReturn = fTest(),
-      nEndTime = Date.now();
+    vReturn = fTest(),
+    nEndTime = Date.now();
 
-  console.log('Затраченное время: ' + String(nEndTime - nStartTime) + ' миллисекунд');
+  console.log(
+    "Затраченное время: " + String(nEndTime - nStartTime) + " миллисекунд",
+  );
   return vReturn;
 }
 

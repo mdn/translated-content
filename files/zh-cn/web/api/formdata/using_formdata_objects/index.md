@@ -20,7 +20,7 @@ formData.append("userfile", fileInputElement.files[0]);
 
 // JavaScript file-like 对象
 var content = '<a id="a"><b id="b">hey!</b></a>'; // 新文件的正文
-var blob = new Blob([content], { type: "text/xml"});
+var blob = new Blob([content], { type: "text/xml" });
 
 formData.append("webmasterfile", blob);
 
@@ -72,7 +72,15 @@ request.send(formData);
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <label>Your email address:</label>
-  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
+  <input
+    type="email"
+    autocomplete="on"
+    autofocus
+    name="userid"
+    placeholder="email"
+    required
+    size="32"
+    maxlength="64" /><br />
   <label>Custom file label:</label>
   <input type="text" name="filelabel" size="12" maxlength="32" /><br />
   <label>File to stash:</label>
@@ -86,26 +94,32 @@ request.send(formData);
 
 ```js
 var form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', function(ev) {
-
-  var oOutput = document.querySelector("div"),
+form.addEventListener(
+  "submit",
+  function (ev) {
+    var oOutput = document.querySelector("div"),
       oData = new FormData(form);
 
-  oData.append("CustomField", "This is some extra data");
+    oData.append("CustomField", "This is some extra data");
 
-  var oReq = new XMLHttpRequest();
-  oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-      oOutput.innerHTML = "Uploaded!";
-    } else {
-      oOutput.innerHTML = "Error " + oReq.status + " occurred when trying to upload your file.<br \/>";
-    }
-  };
+    var oReq = new XMLHttpRequest();
+    oReq.open("POST", "stash.php", true);
+    oReq.onload = function (oEvent) {
+      if (oReq.status == 200) {
+        oOutput.innerHTML = "Uploaded!";
+      } else {
+        oOutput.innerHTML =
+          "Error " +
+          oReq.status +
+          " occurred when trying to upload your file.<br />";
+      }
+    };
 
-  oReq.send(oData);
-  ev.preventDefault();
-}, false);
+    oReq.send(oData);
+    ev.preventDefault();
+  },
+  false,
+);
 ```
 
 > **备注：** 如果 FormData 对象是通过表单创建的，则表单中指定的请求方式会被应用到方法 open() 中。
@@ -127,8 +141,8 @@ $.ajax({
   url: "stash.php",
   type: "POST",
   data: fd,
-  processData: false,  // 不处理数据
-  contentType: false   // 不设置内容类型
+  processData: false, // 不处理数据
+  contentType: false, // 不设置内容类型
 });
 ```
 

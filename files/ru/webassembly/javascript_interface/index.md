@@ -1,8 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{WebAssemblySidebar}}{{SeeCompatTable}}
@@ -47,24 +45,21 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 ## Примеры
 
-После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (`result`), содержащий скомпилированные [`Module`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) и объекты [`Instance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance). Мы можем вызвать [Exported WebAssembly function](/ru/docs/WebAssembly/Exported_functions), которая была экспортирована через `Instance`.
+После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (`result`), содержащий скомпилированные [`Module`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) и объекты [`Instance`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance). Мы можем вызвать [Exported WebAssembly function](/ru/docs/WebAssembly/Exported_functions), которая была экспортирована через `Instance`.
 
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Примечание:** Смотрите пример [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) на GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)), который использует наши [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) библиотечные функции.

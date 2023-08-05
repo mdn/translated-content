@@ -1,11 +1,6 @@
 ---
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
-tags:
-  - JavaScript
-  - Оператор
-  - Оператор отношения
-translation_of: Web/JavaScript/Reference/Operators/in
 ---
 {{jsSidebar("Operators")}}
 
@@ -106,7 +101,7 @@ trees[3] = undefined;
 
 ## Смотрите также
 
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Enumerability and ownership of properties](/ru/docs/Enumerability_and_ownership_of_properties)

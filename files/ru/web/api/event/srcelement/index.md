@@ -1,7 +1,6 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
-translation_of: Web/API/Event/srcElement
 ---
 
 {{ApiRef("DOM")}}

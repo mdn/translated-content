@@ -1,7 +1,6 @@
 ---
 title: Partage d'objets avec des scripts de page
 slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
-translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 ---
 
 {{AddonSidebar}}
@@ -29,7 +28,7 @@ Le but de cette fonctionnalité est de rendre le script moins privilégié plus 
 
 Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](en-US/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](en-US/docs/Mozilla/Gecko/Script_security).
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](/fr/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
@@ -38,10 +37,10 @@ Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une proprié
 Prenons un exemple simple. Supposons qu'une page Web charge un script:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
   </head>
   <body>
     <script type="text/javascript" src="main.js"></script>
@@ -103,7 +102,7 @@ Execute content script in the active tab.
 */
 function loadContentScript() {
   browser.tabs.executeScript({
-    file: "/content_scripts/export.js"
+    file: "/content_scripts/export.js",
   });
 }
 
@@ -121,7 +120,7 @@ browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
-    message: message.content
+    message: message.content,
   });
 });
 ```
@@ -139,10 +138,10 @@ Define a function in the content script's scope, then export it
 into the page script's scope.
 */
 function notify(message) {
-  browser.runtime.sendMessage({content: "Function call: " + message});
+  browser.runtime.sendMessage({ content: "Function call: " + message });
 }
 
-exportFunction(notify, window, {defineAs:'notify'});
+exportFunction(notify, window, { defineAs: "notify" });
 ```
 
 Cela définit une fonction `notify()`, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:
@@ -170,17 +169,16 @@ the cloneInto call must include
 the `cloneFunctions` option.
 */
 var messenger = {
-  notify: function(message) {
+  notify: function (message) {
     browser.runtime.sendMessage({
-      content: "Object method call: " + message
+      content: "Object method call: " + message,
     });
-  }
+  },
 };
 
-window.wrappedJSObject.messenger = cloneInto(
-  messenger,
-  window,
-  {cloneFunctions: true});
+window.wrappedJSObject.messenger = cloneInto(messenger, window, {
+  cloneFunctions: true,
+});
 ```
 
 Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, `messenger`, qui a une fonction `notify()`:

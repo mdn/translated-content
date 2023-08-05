@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 ---
 
 {{JSRef}}

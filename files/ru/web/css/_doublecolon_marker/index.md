@@ -1,11 +1,10 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
-translation_of: Web/CSS/::marker
 ---
 {{CSSRef}}
 
-Псевдоэлемент **`::marker`** применяет стили к маркеру элемента списка, которые обычно содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого установлен [`display: list-item`](/en-US/docs/Web/CSS/display), например, у такого как {{HTMLElement("li")}} или {{HTMLElement("summary")}}.
+Псевдоэлемент **`::marker`** применяет стили к маркеру элемента списка, которые обычно содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого установлен [`display: list-item`](/ru/docs/Web/CSS/display), например, у такого как {{HTMLElement("li")}} или {{HTMLElement("summary")}}.
 
 ```css
 ::marker {

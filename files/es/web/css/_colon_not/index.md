@@ -1,7 +1,6 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
-original_slug: Web/CSS/:not()
 ---
 
 {{CSSRef}}

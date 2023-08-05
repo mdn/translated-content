@@ -1,7 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
 {{jsSidebar("Classes")}}
 

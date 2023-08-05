@@ -1,7 +1,6 @@
 ---
 title: Controles de formulario originales
 slug: Learn/Forms/Basic_native_form_controls
-original_slug: Learn/HTML/Forms/The_native_form_widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
@@ -59,7 +58,7 @@ Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElemen
 Aquí hay un ejemplo básico de campo de texto de una sola línea:
 
 ```html
-<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
 Los campos de texto de una sola línea solo tienen una restricción verdadera: si escribes el texto con saltos de línea, el navegador elimina esos saltos de línea antes de enviar los datos al servidor.
@@ -75,7 +74,7 @@ _La captura de pantalla siguiente muestra los tipos de entrada de texto predeter
 Uno de los tipos de entrada originales era el tipo de campo de texto `password`:
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 El valor de la contraseña no añade restricciones especiales al texto que se introduce, pero oculta el valor que se introduce en el campo (por ejemplo, con puntos o asteriscos) para impedir que otros puedan leerlo.
@@ -89,7 +88,7 @@ Los navegadores reconocen las implicaciones de seguridad de enviar datos de form
 Otro control de texto original es el tipo de entrada `hidden`. Se usa para crear un control de formulario que es invisible para el usuario, pero que aun así se envía al servidor junto con el resto de los datos del formulario una vez se transmiten; por ejemplo, es posible que desees enviar una marca de tiempo al servidor que indique cuándo se realizó un pedido. Al estar oculto, el usuario no puede ver ni editar su valor intencionadamente, el control nunca recibirá el foco y un lector de pantalla tampoco lo detectará.
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 Si creas un elemento así, es necesario establecer sus atributos `name` y `value`. Su valor puede establecerse dinámicamente a través de JavaScript. El tipo de entrada oculta no debe tener ninguna etiqueta asociada.
@@ -111,7 +110,7 @@ Para una usabilidad/accesibilidad óptima, te recomendamos delimitar cada lista 
 Las casillas de verificación se crean estableciendo el atributo [`type`](/es/docs/Web/HTML/Attributes/type) del elemento {{HTMLElement ("input")}} en el valor {{HTMLElement ("input / checkbox", "checkbox")}}.
 
 ```html
-<input type="checkbox" id="carrots" name="carrots" value="carrots" checked>
+<input type="checkbox" id="carrots" name="carrots" value="carrots" checked />
 ```
 
 Al incluir el atributo [`checked`](/es/docs/Web/HTML/Attributes/checked), la casilla de verificación se marca automáticamente cuando se carga la página. Al hacer clic en la casilla de verificación o en su etiqueta asociada, la casilla de verificación se activa o desactiva.
@@ -129,7 +128,7 @@ Debido a su naturaleza activa-inactiva, las casillas de verificación se conside
 Un botón de opción se crea estableciendo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento {{HTMLElement ("input")}} en el valor `radio`:
 
 ```html
-<input type="radio" id="soup" name="meal" checked>
+<input type="radio" id="soup" name="meal" checked />
 ```
 
 Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo [`name`](/es/docs/Web/HTML/Element/input#name), se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.
@@ -140,15 +139,15 @@ Es posible asociar diversos botones de opción. Si comparten el mismo valor de a
   <ul>
     <li>
       <label for="soup">Sopa</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
+      <input type="radio" id="soup" name="meal" value="soup" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
+      <input type="radio" id="curry" name="meal" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
+      <input type="radio" id="pizza" name="meal" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -180,31 +179,25 @@ A continuación puedes encontrar ejemplos de cada tipo de botón `<input>`, junt
 ### enviar
 
 ```html
-<button type="submit">
-    Este es un <strong>botón de envío</strong>
-</button>
+<button type="submit">Este es un <strong>botón de envío</strong></button>
 
-<input type="submit" value="Este es un botón de envío">
+<input type="submit" value="Este es un botón de envío" />
 ```
 
 ### reiniciar
 
 ```html
-<button type="reset">
-    Este es un <strong>botón de reinicio</strong>
-</button>
+<button type="reset">Este es un <strong>botón de reinicio</strong></button>
 
-<input type="reset" value="Este es un botón de reinicio">
+<input type="reset" value="Este es un botón de reinicio" />
 ```
 
 ### anónimo
 
 ```html
-<button type="button">
-    Este es un <strong>botón anónimo</strong>
-</button>
+<button type="button">Este es un <strong>botón anónimo</strong></button>
 
-<input type="button" value="Este es un botón anónimo">
+<input type="button" value="Este es un botón anónimo" />
 ```
 
 Los botones siempre se comportan igual, independientemente de su usas un elemento {{HTMLElement ("button")}} o un elemento {{HTMLElement ("input")}}. Sin embargo, como puedes ver en los ejemplos, los elementos {{HTMLElement ("button")}} te permiten usar HTML en tu contenido, que se inserta entre las etiquetas `<button>` de apertura y cierre. Los elementos {{HTMLElement ("input")}}, por otro lado, son elementos vacíos; el contenido que muestran está inserto en el atributo `value` y, por lo tanto, solo acepta contenido de texto sin formato.
@@ -220,7 +213,7 @@ El control **botón de imagen** se muestra exactamente como un elemento {{HTMLEl
 Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en el valor `image`. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.
 
 ```html
-<input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30">
+<input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30" />
 ```
 
 Si el botón de imagen se usa para enviar un formulario, este control no envía su valor; en lugar de ello se envían las coordenadas X e Y del clic que se ha hecho sobre la imagen (las coordenadas son relativas a la imagen, lo que significa que la esquina superior izquierda de la imagen representa la coordenada (0, 0)). Las coordenadas se envían como dos pares clave/valor:
@@ -247,28 +240,28 @@ Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/inpu
 En este ejemplo, se crea un control de selección de archivos que solicita archivos de imágenes gráficas. El usuario puede seleccionar múltiples archivos en este caso.
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 En algunos dispositivos móviles, el control de selección de archivos puede acceder a fotos, vídeos y audio capturados directamente por la cámara y el micrófono del dispositivo y añadir información de captura al atributo `accept` de la manera siguiente:
 
 ```html
-<input type="file" accept="image/*;capture=camera">
-<input type="file" accept="video/*;capture=camcorder">
-<input type="file" accept="audio/*;capture=microphone">
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
 ```
 
 ## Atributos comunes
 
 Muchos de los elementos que se utilizan para definir controles de formulario tienen sus atributos específicos propios. Sin embargo, hay un conjunto de atributos que son comunes para todos los elementos de formulario. Ya has conocido algunos, pero a continuación encontrarás una lista de esos atributos comunes para referencias futuras:
 
-| Nombre del atributo                                      | Valor por defecto | Descripción                                                                                                                                                                                                                                                                                                                                                                                           |
-| -------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`autofocus`](/es/docs/Web/HTML/Attributes/autofocus) | false             | Este atributo booleano te permite especificar que el elemento ha de tener el foco de entrada automáticamente cuando se carga la página. En un documento, solo un elemento asociado a un formulario puede tener este atributo especificado.                                                                                                                                                            |
+| Nombre del atributo                                   | Valor por defecto | Descripción                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`autofocus`](/es/docs/Web/HTML/Attributes/autofocus) | false             | Este atributo booleano te permite especificar que el elemento ha de tener el foco de entrada automáticamente cuando se carga la página. En un documento, solo un elemento asociado a un formulario puede tener este atributo especificado.                                                                                                                                                    |
 | [`disabled`](/es/docs/Web/HTML/Attributes/disabled)   | false             | Este atributo booleano indica que el usuario no puede interactuar con el elemento. Si no se especifica este atributo, el elemento hereda su configuración del elemento que lo contiene, por ejemplo, {{HTMLElement ("fieldset")}}. Si el elemento que lo contiene no tiene el atributo establecido en `disabled`, el elemento está habilitado.                                                |
 | [`form`](/es/docs/Web/HTML/Attributes/form)           |                   | El elemento `<form>` con el que está asociado el control, que se usa cuando no está anidado dentro de ese formulario. El valor del atributo debe ser el atributo `id` de un elemento {{HTMLElement ("form")}} del mismo documento. Esto te permite asociar un formulario con un control de formulario que esté fuera de aquel, incluso si está dentro de un elemento de formulario diferente. |
-| [`name`](/es/docs/Web/HTML/Attributes/name)           |                   | El nombre del elemento; se envía con los datos del formulario.                                                                                                                                                                                                                                                                                                                                        |
-| [`value`](/es/docs/Web/HTML/Attributes/value)         |                   | El valor inicial del elemento.                                                                                                                                                                                                                                                                                                                                                                        |
+| [`name`](/es/docs/Web/HTML/Attributes/name)           |                   | El nombre del elemento; se envía con los datos del formulario.                                                                                                                                                                                                                                                                                                                                |
+| [`value`](/es/docs/Web/HTML/Attributes/value)         |                   | El valor inicial del elemento.                                                                                                                                                                                                                                                                                                                                                                |
 
 ## Conclusión
 

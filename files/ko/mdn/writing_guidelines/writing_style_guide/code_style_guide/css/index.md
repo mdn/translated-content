@@ -1,8 +1,8 @@
 ---
 title: CSS 가이드라인
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
+
 {{MDNSidebar}}
 
 다음 가이드라인은 MDN code 예제를 위한 CSS 작성 방법을 설명합니다.
@@ -79,7 +79,11 @@ p {
 Not this:
 
 ```css example-bad
-p { color: white; background-color: black; padding: 1rem; }
+p {
+  color: white;
+  background-color: black;
+  padding: 1rem;
+}
 ```
 
 In addition, keep these specifics in mind:
@@ -258,7 +262,9 @@ h3 {
 Not this:
 
 ```css example-bad
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: sans-serif;
   text-align: center;
 }

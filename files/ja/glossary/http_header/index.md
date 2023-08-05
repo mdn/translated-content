@@ -46,20 +46,20 @@ X-Cache-Info: cached
 
 1. 仕様書
 
-    1. HTTP 仕様書における[ヘッダー](https://tools.ietf.org/html/rfc7230#section-3.2)の構文。
+   1. HTTP 仕様書における[ヘッダー](https://tools.ietf.org/html/rfc7230#section-3.2)の構文。
 
 2. 技術リファレンス
 
-    1. [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
+   1. [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
 
 3. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("HTTP header", "HTTP ヘッダー")}}
-    2. {{Glossary("General header", "一般ヘッダー")}}
-    3. {{Glossary("Request header", "リクエストヘッダー")}}
-    4. {{Glossary("Response header", "レスポンスヘッダー")}}
-    5. {{Glossary("Entity header", "エンティティヘッダー")}}
-    6. {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
-    7. {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
-    8. {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
-    9. {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
+   1. {{Glossary("HTTP header", "HTTP ヘッダー")}}
+   2. {{Glossary("General header", "一般ヘッダー")}}
+   3. {{Glossary("Request header", "リクエストヘッダー")}}
+   4. {{Glossary("Response header", "レスポンスヘッダー")}}
+   5. {{Glossary("Entity header", "エンティティヘッダー")}}
+   6. {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+   7. {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
+   8. {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
+   9. {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}

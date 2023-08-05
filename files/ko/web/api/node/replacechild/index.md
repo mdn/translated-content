@@ -2,6 +2,7 @@
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.replaceChild()`** 메소드는 특정 부모 노드의 한 자식 노드를 다른 노드로 교체합니다.

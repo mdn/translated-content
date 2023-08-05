@@ -1,11 +1,6 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variant-position
 ---
 
 {{CSSRef}}
@@ -64,10 +59,11 @@ La valeur de cette propriété est définie grâce à l'un des mots-clés défin
 ### HTML
 
 ```html
-<p> Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
-    Vite elle se remet sur ses pieds et regarde en l’air&nbsp;; mais tout
-    est noir là-haut. Elle voit devant elle un long passage et le Lapin
-    Blanc qui court à toutes jambes.
+<p>
+  Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
+  Vite elle se remet sur ses pieds et regarde en l’air&nbsp;; mais tout est noir
+  là-haut. Elle voit devant elle un long passage et le Lapin Blanc qui court à
+  toutes jambes.
 </p>
 ```
 

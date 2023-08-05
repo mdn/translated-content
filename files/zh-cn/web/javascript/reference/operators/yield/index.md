@@ -46,7 +46,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 以下代码是一个生成器函数的声明。
 
 ```js
-function* countAppleSales () {
+function* countAppleSales() {
   const saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
     yield saleList[i];

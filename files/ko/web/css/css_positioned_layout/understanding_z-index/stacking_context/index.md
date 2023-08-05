@@ -1,7 +1,6 @@
 ---
 title: 쌓임 맥락
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
 
 {{CSSRef}}

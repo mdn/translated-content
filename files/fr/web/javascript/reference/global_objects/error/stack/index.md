@@ -1,15 +1,6 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/Stack
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -31,34 +22,34 @@ Les différents navigateurs définissent cette valeur à différents instants. P
 Le code HTML suivant démontre l'utilisation de la propriété `stack`.
 
 ```html
-<!DOCTYPE HTML>
-<meta charset="UTF-8">
+<!doctype html>
+<meta charset="UTF-8" />
 <title>Exemple de Trace de Pile</title>
 <body>
-    <script>
-        function trace() {
-            try {
-                throw new Error('monError');
-            }
-            catch(e) {
-                alert(e.stack);
-            }
-        }
-        function b() {
-            trace();
-        }
-        function a() {
-            b(3, 4, "\n\n", undefined, {});
-        }
-        a("premier appel, premierarg");
-    </script>
+  <script>
+    function trace() {
+      try {
+        throw new Error("monError");
+      } catch (e) {
+        alert(e.stack);
+      }
+    }
+    function b() {
+      trace();
+    }
+    function a() {
+      b(3, 4, "\n\n", undefined, {});
+    }
+    a("premier appel, premierarg");
+  </script>
+</body>
 ```
 
 En supposant que ce code a été enregistré comme `C:\exemple.html` sur un système de fichier Windows, il produira un message d'alerte dans une nouvelle fenêtre avec le texte suivant :
 
 À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne ([bug Firefox 762556](https://bugzil.la/762556)) :
 
-```html
+```plain
 trace@file:///C:/exemple.html:9:17
 b@file:///C:/exemple.html:16:13
 a@file:///C:/exemple.html:19:13
@@ -67,7 +58,7 @@ a@file:///C:/exemple.html:19:13
 
 De Firefox 14 à Firefox 29 :
 
-```
+```plain
 trace@file:///C:/exemple.html:9
 b@file:///C:/exemple.html:16
 a@file:///C:/exemple.html:19
@@ -76,7 +67,7 @@ a@file:///C:/exemple.html:19
 
 Firefox 13 et antérieur aurait produit à la place le texte suivant :
 
-```
+```plain
 Error("monError")@:0
 trace()@file:///C:/exemple.html:9
 b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
@@ -90,7 +81,7 @@ a("premier appel, premierarg")@file:///C:/exemple.html:19
 
 ```js
 try {
-  new Function('throw new Error()')();
+  new Function("throw new Error()")();
 } catch (e) {
   console.log(e.stack);
 }

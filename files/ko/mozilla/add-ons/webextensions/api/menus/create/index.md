@@ -1,7 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/create
 ---
 
 {{AddonSidebar()}}
@@ -24,7 +23,9 @@ browser.menus.create(
 ### 매개변수
 
 - `createProperties`
+
   - : `object`. 새 메뉴 항목의 속성들
+
     - `checked` {{optional_inline}}
       - : `boolean`. checkbox나 radio 항목의 초기값: 선택은 `true`, 선택이 아니면 `false`. radio 항목이라면 그룹 중에서 하나만 선택된 것으로 할 수 있다.
     - `command` {{optional_inline}}</dt>
@@ -38,7 +39,7 @@ browser.menus.create(
         - 상위 항목에 콘텍스트가 설정되었으면 그걸 물려받는다.
         - 아니면, 항목은 ["page"]로 설정된다.
     - `documentUrlPatterns` {{optional_inline}}
-      - : `string`의 `배열`. 메뉴 항목의 표시를 URL이 주어진 [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)과 일치하는 문서로 제한한다. 프레임에도 적용된다.
+      - : `string`의 `배열`. 메뉴 항목의 표시를 URL이 주어진 [match patterns](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)과 일치하는 문서로 제한한다. 프레임에도 적용된다.
     - `enabled` {{optional_inline}}
       - : `boolean`. 메뉴 항목이 사용 가능한지 아닌지를 지정한다. 기본값은 `true`.
     - `icons` {{optional_inline}}
@@ -60,10 +61,10 @@ browser.menus.create(
               }
         ```
 
-        > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
+        > **Note:** The top-level menu item uses the [icons](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}1
-      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
+      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
       - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
@@ -112,10 +113,10 @@ browser.menus.create(
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
@@ -133,33 +134,39 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 var makeItBlue = 'document.body.style.border = "5px solid blue"';
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId == "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });

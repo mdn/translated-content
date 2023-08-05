@@ -1,7 +1,6 @@
 ---
 title: Modifier une page web
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 
 {{AddonSidebar}}
@@ -27,7 +26,6 @@ Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce ré
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -38,11 +36,10 @@ Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce ré
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
-La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé`  "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
+La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé` "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
 
 > **Note :** Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
 
@@ -53,7 +50,7 @@ Ensuite, créez un fichier appelé "page-eater.js" dans le dossier "modify-page"
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+var header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
@@ -72,20 +69,15 @@ Tout d'abord, mettez à jour "manifest.json" pour qu'il contienne les contenus s
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -99,13 +91,13 @@ Créons ce fichier, pour cela nous créons un fichier appelé "background.js" da
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -115,7 +107,7 @@ Dans ce script, nous créons un [élément de menu contextuel](/fr/Add-ons/WebEx
 
 A ce stade, l'extension devrait ressembler à ceci :
 
-```html
+```plain
 modify-page/
     background.js
     manifest.json
@@ -178,7 +170,7 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
   </thead>
 </table>
 
-> **Note :** En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darri%C3%A8re-plan).
+> **Note :** En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
 
 Mettons à jour notre exemple pour montrer comment envoyer un message à partir du script en arrière-plan.
 
@@ -187,24 +179,24 @@ D'abord, éditez "background.js" pour qu'il contienne ces contenus:
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!"
+    replacement: "Message from the add-on!",
   });
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
 
     var querying = browser.tabs.query({
       active: true,
-      currentWindow: true
+      currentWindow: true,
     });
     querying.then(messageTab);
   }
@@ -219,7 +211,7 @@ Ensuite, mettez à jour "page-eater.js" comme ceci :
 function eatPage(request, sender, sendResponse) {
   document.body.textContent = "";
 
-  var header = document.createElement('h1');
+  var header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }

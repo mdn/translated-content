@@ -49,9 +49,9 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById("canvas");
 canvas.width = 350;
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 const x = canvas.width / 2;
 
 ctx.beginPath();
@@ -59,16 +59,16 @@ ctx.moveTo(x, 0);
 ctx.lineTo(x, canvas.height);
 ctx.stroke();
 
-ctx.font = '30px serif';
+ctx.font = "30px serif";
 
-ctx.textAlign = 'left';
-ctx.fillText('left-aligned', x, 40);
+ctx.textAlign = "left";
+ctx.fillText("left-aligned", x, 40);
 
-ctx.textAlign = 'center';
-ctx.fillText('center-aligned', x, 85);
+ctx.textAlign = "center";
+ctx.fillText("center-aligned", x, 85);
 
-ctx.textAlign = 'right';
-ctx.fillText('right-aligned', x, 130);
+ctx.textAlign = "right";
+ctx.fillText("right-aligned", x, 130);
 ```
 
 #### 结果

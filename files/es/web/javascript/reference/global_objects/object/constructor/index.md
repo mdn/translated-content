@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 ---
 
 {{JSRef("Objetos_globales", "Object")}}
@@ -27,7 +26,7 @@ n.constructor === Number; // true
 
 ## Ejemplos
 
-### Ejemplo: Mostrando el constructor de un objeto.
+### Ejemplo: Mostrando el constructor de un objeto
 
 El siguiente ejemplo crea un prototipo, `Tree`, y un objeto de este tipo, `theTree`. El ejemplo muestra entonces la propiedad `constructor` para el objeto `theTree`.
 
@@ -48,7 +47,7 @@ theTree.constructor is function Tree (name) {
 }
 ```
 
-### Ejemplo: Cambiando el constructor de un objeto.
+### Ejemplo: Cambiando el constructor de un objeto
 
 El siguiente ejemplo demuestra como modificar el valor del constructor de objetos genéricos. Solo `true`, `1` y `"test"` no serán afectados ya que ellos tienen constructores nativos de solo lectura. Este ejemplo demuestra que no siempre es seguro confiar en la propiedad constructor de un objeto.
 

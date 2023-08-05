@@ -1,7 +1,6 @@
 ---
 title: Svelte をはじめる
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 l10n:
   sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
@@ -195,7 +194,10 @@ moz-todo-svelte
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 
 <style>
@@ -240,7 +242,10 @@ Svelte では変数の宣言をプロパティ (または prop) としてマー�
 ```html
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -310,18 +315,21 @@ Svelte では、コンポーネント内の任意のトップレベル変数に�
   export let name;
 
   function toggleName() {
-    if (name === 'world') {
-      name = 'Svelte'
+    if (name === "world") {
+      name = "Svelte";
     } else {
-      name = 'world'
+      name = "world";
     }
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <button on:click={toggleName}>Toggle name</button>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <button on:click="{toggleName}">Toggle name</button>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -336,13 +344,13 @@ Svelte では、コンポーネント内の任意のトップレベル変数に�
 `src/main.js` を開いてみましょう。このファイルは `App` コンポーネントがインポートされて使用される場所です。またアプリのエントリーポイントでもあり、最初は以下のようになっています。
 
 ```js
-import App from './App.svelte';
+import App from "./App.svelte";
 
 const app = new App({
   target: document.body,
   props: {
-    name: 'world'
-  }
+    name: "world",
+  },
 });
 
 export default app;
@@ -364,23 +372,22 @@ Svelte コンパイラーは各コンポーネントの `<style>` セクショ�
 そして最後に `public/index.html` ファイルには生成された `bundle.css` と `bundle.js` ファイルが組み込まれます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Svelte app</title>
+    <title>Svelte app</title>
 
-  <link rel='icon' type='image/png' href='/favicon.png'>
-  <link rel='stylesheet' href='/global.css'>
-  <link rel='stylesheet' href='/build/bundle.css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-  <script defer src='/build/bundle.js'></script>
-</head>
+    <script defer src="/build/bundle.js"></script>
+  </head>
 
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

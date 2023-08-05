@@ -1,7 +1,6 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-translation_of: Web/CSS/column-fill
 ---
 {{CSSRef("CSS Multi-columns")}}
 

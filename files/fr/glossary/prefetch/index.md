@@ -1,7 +1,6 @@
 ---
 title: Préchargement
 slug: Glossary/Prefetch
-translation_of: Glossary/Prefetch
 ---
 
 ### Qu'est ce que le préchargement de liens&nbsp;?
@@ -17,7 +16,7 @@ Le préchargement de liens est un mécanisme du navigateur qui utilise le temps 
 Le navigateur cherche soit une balise HTML `link`, soit un en-tête HTTP `Link:` avec un type de relation `next` ou `prefetch`. Ci-dessous, un exemple d'utilisation de la balise `link`&nbsp;:
 
 ```html
-<link rel="prefetch" href="/images/big.jpeg">
+<link rel="prefetch" href="/images/big.jpeg" />
 ```
 
 La même cible à précharger, cette fois avec un en-tête HTTP `Link:`&nbsp;:
@@ -29,7 +28,7 @@ Link: </images/big.jpeg>; rel=prefetch
 L'en-tête `Link:` peut également être spécifiée à l'intérieur d'un document HTML en utilisant une balise HTML `meta`&nbsp;:
 
 ```html
-<meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
+<meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch" />
 ```
 
 Le format pour l'en-tête `Link:` est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
@@ -41,8 +40,11 @@ Le navigateur surveille toutes ces cibles et met en attente chaque requête uniq
 Quelques exemples en plus, ci-dessous&nbsp;:
 
 ```html
-<link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
-<link rel="next" href="2.html">
+<link
+  rel="prefetch alternate stylesheet"
+  title="Designed for Mozilla"
+  href="mozspecific.css" />
+<link rel="next" href="2.html" />
 ```
 
 ### Les balises ancres (\<a>) sont-elles préchargées&nbsp;?

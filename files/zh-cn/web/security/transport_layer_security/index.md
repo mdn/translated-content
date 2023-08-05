@@ -1,7 +1,6 @@
 ---
 title: 传输层安全协议
 slug: Web/Security/Transport_Layer_Security
-original_slug: Web/Security/传输层安全协议
 ---
 
 使用传输层安全性协议（TLS）进行的任何连接的安全性在很大程度上取决于密码套件和所选的安全性参数。本文的目的是帮助您确保客户端和服务器之间的机密性和完整性通信。Mozilla 运营安全团队（OpSec）维护了 [服务器端 TLS 参考配置的 Wiki 条目](https://wiki.mozilla.org/Security/Server_Side_TLS)。

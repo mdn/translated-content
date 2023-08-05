@@ -1,12 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/translate
 ---
 
 {{CSSRef}}{{seecompattable}}

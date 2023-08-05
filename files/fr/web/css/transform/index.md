@@ -1,12 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transformations CSS
-translation_of: Web/CSS/transform
 ---
 
 {{CSSRef}}
@@ -17,7 +11,7 @@ La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la
 
 Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
-> **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
+> **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle#Les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
 
 ## Syntaxe
 
@@ -26,7 +20,7 @@ Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs
 transform: none;
 
 /* Valeurs fonctionnelles */
-transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix(1, 2, 3, 4, 5, 6);
 transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 
 transform: translate(12px, 50%);
@@ -49,7 +43,7 @@ transform: rotate(0.5turn);
 transform: rotateX(10deg);
 transform: rotateY(10deg);
 transform: rotateZ(10deg);
-transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotate3d(1, 2, 3, 10deg);
 
 transform: perspective(17px);
 
@@ -116,7 +110,7 @@ Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessi
 
 Pour en savoir plus :
 
-- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_—_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Comprendre les critères de succès 2.3.3 - W3C - Comprendre WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Spécifications

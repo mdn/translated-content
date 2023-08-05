@@ -22,7 +22,7 @@ slug: Web/HTML/Element/colgroup
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        {{htmlattrxref("span", "colgroup")}} 특성이 존재하는 경우
+        <a href="/ko/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 특성이 존재하는 경우
         없음. {{glossary("empty element", "빈 요소")}}입니다.<br />그렇지
         않은 경우 0개 이상의 {{htmlelement("col")}} 요소.
       </td>
@@ -83,24 +83,24 @@ The following attributes are deprecated and should not be used. They are documen
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "col")}} and {{htmlattrxref("charoff", "col")}} attributes.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/ko/docs/Web/HTML/Element/col#char) and [`charoff`](/ko/docs/Web/HTML/Element/col#charoff) attributes.
 
-    If this attribute is not set, the `left` value is assumed. The descendant {{HTMLElement("col")}} elements may override this value using their own {{htmlattrxref("align", "col")}} attribute.
+    If this attribute is not set, the `left` value is assumed. The descendant {{HTMLElement("col")}} elements may override this value using their own [`align`](/ko/docs/Web/HTML/Element/col#align) attribute.
 
     > **Note:** Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use one `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of this column in the table. Only after this selector the `text-align` property can be used.
+    > If the table doesn't use a [`colspan`](/ko/docs/Web/HTML/Element/td#colspan) attribute, use one `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of this column in the table. Only after this selector the `text-align` property can be used.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > If the table does use a [`colspan`](/ko/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "colgroup")}} is not set to `char`, this attribute is ignored, though it will still be used as the default value for the {{htmlattrxref("align", "col")}} of the {{HTMLElement("col")}} which are members of this column group.
+  - : This attribute specifies the alignment of the content in a column group to a character. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/ko/docs/Web/HTML/Element/colgroup#align) is not set to `char`, this attribute is ignored, though it will still be used as the default value for the [`align`](/ko/docs/Web/HTML/Element/col#align) of the {{HTMLElement("col")}} which are members of this column group.
 - {{htmlattrdef("charoff")}} {{deprecated_inline}}
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the `char` attribute.
 - {{htmlattrdef("valign")}} {{deprecated_inline}}
@@ -114,9 +114,9 @@ The following attributes are deprecated and should not be used. They are documen
 
     > **Note:** Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a `<colgroup>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<colgroup>` element, they won't inherit it.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
+    > If the table doesn't use a [`colspan`](/ko/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the `vertical-align` property can be used.
     >
-    > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > If the table does use a [`colspan`](/ko/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 ## 예제
 

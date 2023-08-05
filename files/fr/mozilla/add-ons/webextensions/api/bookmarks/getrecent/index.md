@@ -1,7 +1,6 @@
 ---
 title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingRecent = browser.bookmarks.getRecent(
-  numberOfItems          // integer
-)
+  numberOfItems, // integer
+);
 ```
 
 ### Paramètres

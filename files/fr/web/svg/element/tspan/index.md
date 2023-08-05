@@ -1,12 +1,6 @@
 ---
 title: <tspan>
 slug: Web/SVG/Element/tspan
-tags:
-  - Contenu texte SVG
-  - Elément(3)
-  - Référence(2)
-  - SVG
-translation_of: Web/SVG/Element/tspan
 ---
 
 {{SVGRef}}
@@ -20,14 +14,23 @@ A l'intérieur d'un élément {{SVGElement("text")}}, les propriétés du texte 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">

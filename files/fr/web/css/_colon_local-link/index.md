@@ -1,8 +1,6 @@
 ---
-title: ':local-link'
+title: ":local-link"
 slug: Web/CSS/:local-link
-translation_of: Web/CSS/:local-link
-browser-compat: css.selectors.local-link
 ---
 
 {{CSSRef}}
@@ -25,8 +23,8 @@ a:local-link {
 ### HTML
 
 ```html
-<a href="#target">Voici un lien vers la page courante.</a><br>
-<a href="https://example.com">Voici un lien externe</a><br>
+<a href="#target">Voici un lien vers la page courante.</a><br />
+<a href="https://example.com">Voici un lien externe</a><br />
 ```
 
 ### CSS

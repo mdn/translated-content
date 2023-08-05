@@ -1,7 +1,6 @@
 ---
 title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
-original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}

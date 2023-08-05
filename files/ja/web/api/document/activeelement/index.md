@@ -1,7 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -27,8 +26,12 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 <p>下のテキストエリアからテキストを選択してください。</p>
 
 <form>
-  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">これはテキストエリア 1 です。 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea>
-  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">これはテキストエリア 2 です。 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea>
+  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">
+これはテキストエリア 1 です。 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+  >
+  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">
+これはテキストエリア 2 です。 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  >
 </form>
 
 <p>アクティブな要素の ID: <b id="output-element"></b></p>
@@ -41,19 +44,20 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 function onMouseUp(e) {
   const activeTextarea = document.activeElement;
   const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart, activeTextarea.selectionEnd
+    activeTextarea.selectionStart,
+    activeTextarea.selectionEnd,
   );
 
-  const outputElement = document.getElementById('output-element');
-  const outputText = document.getElementById('output-text');
+  const outputElement = document.getElementById("output-element");
+  const outputText = document.getElementById("output-text");
   outputElement.innerHTML = activeTextarea.id;
   outputText.innerHTML = selection;
 }
 
-const textarea1 = document.getElementById('ta-example-one');
-const textarea2 = document.getElementById('ta-example-two');
-textarea1.addEventListener('mouseup', onMouseUp, false);
-textarea2.addEventListener('mouseup', onMouseUp, false);
+const textarea1 = document.getElementById("ta-example-one");
+const textarea2 = document.getElementById("ta-example-two");
+textarea1.addEventListener("mouseup", onMouseUp, false);
+textarea2.addEventListener("mouseup", onMouseUp, false);
 ```
 
 ### 結果

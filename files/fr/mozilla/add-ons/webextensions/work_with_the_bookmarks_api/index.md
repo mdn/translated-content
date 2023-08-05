@@ -1,7 +1,6 @@
 ---
 title: Travailler avec l'API Bookmarks
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
 
 {{AddonSidebar}}
@@ -115,8 +114,11 @@ Définit le script d'arrière-plan qui ajoutera et supprimera le signet de la pa
 Comme pour tout script d'arrière-plan, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js)est exécuté dès que l'extension est démarrée. Initialement, le script appelle `updateActiveTab()` qui commence par obtenir l'objet `Tabs` pour l'onglet en cours, en utilisant {{WebExtAPIRef("tabs.query")}}, et en passant l'objet à `updatetab()` avec ce code :
 
 ```js
-  var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-  gettingActiveTab.then(updateTab);
+var gettingActiveTab = browser.tabs.query({
+  active: true,
+  currentWindow: true,
+});
+gettingActiveTab.then(updateTab);
 ```
 
 `updatetab()` passe d'abord l'URL de l'onglet actif à `isSupportedProtocol()`:
@@ -128,15 +130,15 @@ Comme pour tout script d'arrière-plan, [background.js](https://github.com/mdn/w
       if (isSupportedProtocol(currentTab.url)) {
 ```
 
-`isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab’s URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab’s URL to an `<a>` element and then getting the protocol using the `protocol` property.
+`isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
-  function isSupportedProtocol(urlString) {
-    var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
-    var url = document.createElement('a');
-    url.href = urlString;
-    return supportedProtocols.indexOf(url.protocol) != -1;
-  }
+function isSupportedProtocol(urlString) {
+  var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
+  var url = document.createElement("a");
+  url.href = urlString;
+  return supportedProtocols.indexOf(url.protocol) != -1;
+}
 ```
 
 Si le protocole est pris en charge par les signets, l'extension détermine si l'URL de l'onglet est déjà référencée et si c'est le cas, appelle `updateIcon()`:

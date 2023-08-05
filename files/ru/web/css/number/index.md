@@ -1,7 +1,6 @@
 ---
 title: <number>
 slug: Web/CSS/number
-translation_of: Web/CSS/number
 ---
 {{CSSRef}}
 

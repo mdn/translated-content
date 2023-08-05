@@ -1,7 +1,6 @@
 ---
 title: UX
 slug: Glossary/UX
-original_slug: Glossario/UX
 ---
 
 **UX** é um acrônimo que significa experiência do usuário (User eXperience). É o estudo da interação entre usuários e um sistema. Seu objetivo é tornar um sistema fácil de interagir do ponto de vista do usuário.

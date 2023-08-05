@@ -1,8 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
-browser-compat: css.types.image.gradient.linear-gradient
 ---
 
 {{CSSRef}}
@@ -64,7 +62,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 
 Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
 
-Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient()).
+Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>).
 
 Étant donné que le type `<gradient>` est un sous-type du type `<image>`, on peut utiliser des dégradés à tout endroit où on peut utiliser une image. C'est également pour cette raison que `linear-gradient()` ne fonctionnera pas pour la propriété [`background-color`](/fr/docs/Web/CSS/background-color) et pour les autres propriétés qui utilisent le type de données [`<color>`](/fr/docs/Web/CSS/color).
 
@@ -160,8 +158,14 @@ body {
 
 ```css
 body {
-  background: linear-gradient(to right,
-     red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%);
+  background: linear-gradient(
+    to right,
+    red 20%,
+    orange 20% 40%,
+    yellow 40% 60%,
+    green 60% 80%,
+    blue 80%
+  );
 }
 ```
 
@@ -183,13 +187,13 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
-  - [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
-  - [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())
-  - [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
-  - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
-  - [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient())
+  - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
+  - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)
+  - [`repeating-radial-gradient()`](</fr/docs/Web/CSS/gradient/repeating-radial-gradient()>)
+  - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
+  - [`repeating-conic-gradient()`](</fr/docs/Web/CSS/gradient/repeating-conic-gradient()>)
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`element()`](/fr/docs/Web/CSS/element())
-- [`image()`](/fr/docs/Web/CSS/image/image())
-- [`image-set()`](/fr/docs/Web/CSS/image/image-set())
-- [`cross-fade()`](/fr/docs/Web/CSS/cross-fade())
+- [`element()`](</fr/docs/Web/CSS/element()>)
+- [`image()`](</fr/docs/Web/CSS/image/image()>)
+- [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
+- [`cross-fade()`](</fr/docs/Web/CSS/cross-fade()>)

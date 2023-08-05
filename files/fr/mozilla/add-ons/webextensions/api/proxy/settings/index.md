@@ -1,7 +1,6 @@
 ---
 title: browserSettings.proxyConfig
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 ---
 
 {{AddonSidebar()}}
@@ -44,10 +43,10 @@ let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,
-  passthrough: ".example.org"
+  passthrough: ".example.org",
 };
 
-browser.proxy.settings.set({value: proxySettings});
+browser.proxy.settings.set({ value: proxySettings });
 ```
 
 {{WebExtExamples}}

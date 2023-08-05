@@ -26,7 +26,7 @@ Les éléments `<input type="color">` sont simples à utiliser (notamment en rai
 Il est possible de créer un sélecteur de couleur qui emploie une valeur par défaut :
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Fournir_une_couleur_par_défaut", 700, 30)}}
@@ -42,7 +42,7 @@ colorPicker.addEventListener("input", updateFirst, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -69,16 +69,21 @@ Créons un exemple qui utilise un sélecteur de couleur et les évènements [`ch
 Le fragment de code HTML utilisé est relativement simple. On utilise quelques paragraphes descriptifs ainsi qu'un élément {{HTMLElement("input")}} de type `"color"` dont l'identifiant est `"colorWell"` (c'est la valeur de cette couleur qu'on utilisera pour changer la couleur du texte des paragraphes).
 
 ```html
-<p>Un exemple qui illustre l'utilisation de <code>&lt;input type="color"&gt;</code>.</p>
+<p>
+  Un exemple qui illustre l'utilisation de
+  <code>&lt;input type="color"&gt;</code>.
+</p>
 
 <label for="colorWell">Couleur :</label>
-<input type="color" value="#ff0000" id="colorWell">
+<input type="color" value="#ff0000" id="colorWell" />
 
-<p>Vous pouvez ici voir que la couleur du premier paragraphe changer
-   lorsqu'on ajuste la valeur dans le sélecteur. Pour cela, on
-   utilise l'évènement <code>input</code>. Lorsqu'on ferme le
-   sélecteur, l'évènement <code>change</code> est déclenché et on
-   applique la modification est appliquée à l'ensemble des paragraphes.</p>
+<p>
+  Vous pouvez ici voir que la couleur du premier paragraphe changer lorsqu'on
+  ajuste la valeur dans le sélecteur. Pour cela, on utilise l'évènement
+  <code>input</code>. Lorsqu'on ferme le sélecteur, l'évènement
+  <code>change</code> est déclenché et on applique la modification est appliquée
+  à l'ensemble des paragraphes.
+</p>
 ```
 
 ### JavaScript
@@ -86,7 +91,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
-var colorWell
+var colorWell;
 var defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
@@ -128,7 +133,7 @@ Lorsque le sélecteur est fermé, cela signifie que la valeur ne sera plus modif
 
 ```js
 function updateAll(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }

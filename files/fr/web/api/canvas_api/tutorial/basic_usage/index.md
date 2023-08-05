@@ -1,14 +1,6 @@
 ---
 title: Utilisation de base des canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - Canvas
-  - Graphismes
-  - HTML
-  - Tutoriel_canvas
-  - Tutoriels
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
@@ -21,7 +13,7 @@ Commençons par regarder l'élément {{HTMLElement("canvas")}} lui-même.
 <canvas id="tutoriel" width="150" height="150"></canvas>
 ```
 
-Ceci ressemble beaucoup à l'élément \<img>. La seule différence est qu'il n'y a pas les attributs `src` et `alt`. L'élément `<canvas>` a seulement deux attributs : [`width`](/fr/docs/Web/HTML/Element/canvas#width) et [`height`](/fr/docs/Web/HTML/Element/canvas#height) (« largeur » et « hauteur »). Ces deux attributs sont optionnels et peuvent aussi être fixés à travers le [DOM](/fr/docs/R%C3%A9f%C3%A9rence_du_DOM_Gecko). Quand les attributs **width** et **height** ne sont pas spécifiés, le canvas sera initialement large de **300 pixels** et haut de **150 pixels**. Les dimensions du canvas peuvent être modifiés par du [CSS](/fr/docs/Web/CSS), mais l'image sera dessinée selon les valeurs **width** et **height** du canvas et ensuite étirée pour afficher dans l'espace donné par le CSS.
+Ceci ressemble beaucoup à l'élément \<img>. La seule différence est qu'il n'y a pas les attributs `src` et `alt`. L'élément `<canvas>` a seulement deux attributs : [`width`](/fr/docs/Web/HTML/Element/canvas#width) et [`height`](/fr/docs/Web/HTML/Element/canvas#height) (« largeur » et « hauteur »). Ces deux attributs sont optionnels et peuvent aussi être fixés à travers le [DOM](/fr/docs/Référence_du_DOM_Gecko). Quand les attributs **width** et **height** ne sont pas spécifiés, le canvas sera initialement large de **300 pixels** et haut de **150 pixels**. Les dimensions du canvas peuvent être modifiés par du [CSS](/fr/docs/Web/CSS), mais l'image sera dessinée selon les valeurs **width** et **height** du canvas et ensuite étirée pour afficher dans l'espace donné par le CSS.
 
 > **Note :** Si l'image semble déformée, essayez de spécifier de manière explicite vos attributs `width` et `height` dans l'élément `<canvas>`, et de ne pas utiliser de CSS.
 
@@ -43,7 +35,7 @@ Le contenu de repli pourrait, par exemple, donner une description texte du canva
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt="une horloge"/>
+  <img src="images/clock.png" width="150" height="150" alt="une horloge" />
 </canvas>
 ```
 
@@ -62,8 +54,8 @@ L'élément {{HTMLElement("canvas")}} crée une surface pour dessiner à grandeu
 Initialement, le canvas est vide. Pour afficher quelque chose, un script doit commencer par accéder au contexte de rendu pour pouvoir dessiner dessus. L'élément {{HTMLElement("canvas")}} a une [méthode](/fr/docs/Web/API/HTMLCanvasElement#M.C3.A9thodes) nommée `getContext()`, qui peut être utilisée pour obtenir le contexte de rendu et ses fonctions de dessin. `getContext()` a comme seul paramètre le type de contexte. Pour des graphiques 2D, comme ceux utilisés dans ce tutoriel, il faut spécifier "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant {{domxref("document.getElementById()")}}. Lorsque nous avons l'élément canvas, nous pouvons accéder au contexte de rendu en utilisant sa méthode `getContext()`.
@@ -73,10 +65,10 @@ La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant 
 Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode `getContext()`. Notre extrait de code ci-dessus se transforme donc en ceci :
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
 if (canvas.getContext) {
-  var ctx = canvas.getContext('2d');
+  var ctx = canvas.getContext("2d");
   // code de dessin dans le canvas
 } else {
   // code pour le cas où canvas ne serait pas supporté
@@ -88,21 +80,23 @@ if (canvas.getContext) {
 Voici un modèle minimaliste, que nous allons utiliser comme point de départ dans des futurs exemples.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Canvas tutorial</title>
     <script type="text/javascript">
       function draw() {
-        var canvas = document.getElementById('tutorial');
+        var canvas = document.getElementById("tutorial");
         if (canvas.getContext) {
-          var ctx = canvas.getContext('2d');
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -122,28 +116,28 @@ Voici à quoi le modèle ressemble :
 Pour commencer, observons un exemple simple qui dessine deux rectangles qui s'intersectent, un d'entre eux ayant de la transparence alpha. Nous verrons plus en détail comment ça marche dans les exemples suivants.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
- <head>
-  <meta charset="utf-8"/>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <meta charset="utf-8" />
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+          ctx.fillStyle = "rgb(200, 0, 0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 50, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

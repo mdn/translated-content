@@ -33,7 +33,7 @@ With web access on mobile devices being so popular, and popular platforms such a
 
 The state of accessibility — and support for web standards in general — is good in modern mobile devices. Long gone are the days when mobile devices ran completely different web technologies to desktop browsers, forcing developers to use browser sniffing and serve them completely separate sites (although quite a few companies still detect usage of mobile devices and serve them a separate mobile domain).
 
-目前，行動裝置通常可以處理“全脂(full fat)”網站，主要平台甚至還內置了屏幕閱讀器，使視障人士能夠成功使用它們。 現代手機行動瀏覽器也傾向於對[WAI-ARIA](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)有很好的支持。
+目前，行動裝置通常可以處理「全脂(full fat)」網站，主要平台甚至還內置了屏幕閱讀器，使視障人士能夠成功使用它們。 現代手機行動瀏覽器也傾向於對[WAI-ARIA](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)有很好的支持。
 
 To make a website accessible and usable on mobile, you just need to follow general good web design and accessibility best practices.
 

@@ -1,7 +1,6 @@
 ---
 title: MVC
 slug: Glossary/MVC
-translation_of: Glossary/MVC
 ---
 
 **MVC** (Model-View-Controller ou _Modèle-Vue-Contrôleur_) est un modèle dans la conception de logiciels. Il met l'accent sur la séparation entre la logique métier et l'affichage du logiciel. Cette «séparation des préoccupations» permet une meilleure répartition du travail et une maintenance améliorée. Certains autres modèles de conception sont basés sur MVC, tels que MVVM (Model-View-Viewmodel), MTP (Model-View-Presenter) et MVW (Model-View-Whatever).
@@ -16,7 +15,7 @@ Les 3 parties du modèle de conception de logiciel MVC peuvent être décrites c
 
 ### Culture générale
 
-- [Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) sur Wikipédia
+- [Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur) sur Wikipédia
 
 ### Apprentissage de MVC
 

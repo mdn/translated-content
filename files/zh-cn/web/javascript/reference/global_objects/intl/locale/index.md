@@ -59,7 +59,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 很简单，就是需要给{{jsxref("Locale/Locale", "Intl.Locale")}} 构造函数传入一个 locale 标识字符串作为参数：
 
 ```js
-let us = new Intl.Locale('zh-Hans-CN');
+let us = new Intl.Locale("zh-Hans-CN");
 ```
 
 ### 使用配置实例化
@@ -67,7 +67,7 @@ let us = new Intl.Locale('zh-Hans-CN');
 构造函数支持传入 object 作为配置，object 中可包含多个配置属性。例如，设置 [`hourCycle`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) 属性，用于设置您所需要的小时周期类型：
 
 ```js
-let zh12hour = new Intl.Locale("zh-Hans-CN", {hourCycle: "h12"});
+let zh12hour = new Intl.Locale("zh-Hans-CN", { hourCycle: "h12" });
 console.log(zh12hour.hourCycle); // Prints "h12"
 ```
 

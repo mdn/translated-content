@@ -1,7 +1,6 @@
 ---
 title: Manejo de archivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/Manejando_los_archivos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -43,7 +42,7 @@ Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de ar
 2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html>
      <head>
        <meta charset="utf-8" />

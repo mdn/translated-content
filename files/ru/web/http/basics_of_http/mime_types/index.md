@@ -1,9 +1,6 @@
 ---
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 **Медиа тип** (так же известный как **Multipurpose Internet Mail Extensions** или **MIME тип)** является стандартом, который описывает природу и формат документа, файла или набора байтов. Он определён и стандартизирован в спецификации {{RFC(6838)}} .
 
@@ -91,7 +88,7 @@ CSS документы, используемые для стилизации web
 
 Все HTML данные должны пересылаться с данным типом. Альтернативные MIME типы для XHTML (например, `application/xhtml+xml`) почти не используются в настоящее время.
 
-> **Примечание:** Используйте `application/xml` или `application/xhtml+xml`, когда вам необходим строгий синтаксический анализ документов, разделы [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.
+> **Примечание:** Используйте `application/xml` или `application/xhtml+xml`, когда вам необходим строгий синтаксический анализ документов, разделы [`<![CDATA[…]]>`](/ru/docs/Web/API/CDATASection) или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.
 
 ### text/javascript
 
@@ -126,7 +123,7 @@ CSS документы, используемые для стилизации web
 
 Лишь несколько типов изображений достаточно распространены, чтобы безопасно использоваться на веб-страницах.
 
-{{page("ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+{{page("/ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
 
 ### Аудио и видео типы
 

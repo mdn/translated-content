@@ -422,7 +422,6 @@
 /zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
 /zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
 /zh-CN/docs/DOM/window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/DOM/window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
 /zh-CN/docs/DOM/window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/DOM/window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/DOM/window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
@@ -502,7 +501,6 @@
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/Window/beforeunload_event
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
-/zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
 /zh-CN/docs/Firefox_15_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/15
 /zh-CN/docs/Firefox_16_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/16
@@ -1201,13 +1199,12 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/主页地址	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/侧边栏	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/匹配模板	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
 /zh-CN/docs/Mozilla_event_reference	/zh-CN/docs/Web/Events
-/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
+/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Mozilla_event_reference/animationstart	/zh-CN/docs/Web/API/Element/animationstart_event
 /zh-CN/docs/Mozilla_event_reference/beforescriptexecute	/zh-CN/docs/Web/API/Element/beforescriptexecute_event
 /zh-CN/docs/Mozilla_event_reference/change	/zh-CN/docs/Web/API/HTMLElement/change_event
@@ -1505,6 +1502,7 @@
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/Web/API/FileReader/load_event
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/File_Handle_API	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
+/zh-CN/docs/Web/API/File_System_Access_API	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
@@ -1823,7 +1821,6 @@
 /zh-CN/docs/Web/API/Web_Audio_API/基于Web_Audio_API实现的音频可视化效果	/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 /zh-CN/docs/Web/API/Web_Audio_API/最佳实践	/zh-CN/docs/Web/API/Web_Audio_API/Best_practices
 /zh-CN/docs/Web/API/Window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/Web/API/Window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
 /zh-CN/docs/Web/API/Window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
@@ -1872,6 +1869,7 @@
 /zh-CN/docs/Web/API/Window.setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window.showModalDialog	/zh-CN/docs/Web/API/Window/showModalDialog
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
+/zh-CN/docs/Web/API/Window/DOMContentLoaded_event	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
 /zh-CN/docs/Web/API/Window/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
@@ -2195,8 +2193,8 @@
 /zh-CN/docs/Web/CSS/网格-模板-列	/zh-CN/docs/Web/CSS/grid-template-rows
 /zh-CN/docs/Web/Demos_of_open_web_technologies	/zh-CN/docs/Web/Demos
 /zh-CN/docs/Web/Events/Activate	/zh-CN/docs/Web/API/Element/DOMActivate_event
-/zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
-/zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
+/zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
+/zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMMouseScroll	/zh-CN/docs/Web/API/Element/DOMMouseScroll_event
 /zh-CN/docs/Web/Events/Detecting_device_orientation	/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /zh-CN/docs/Web/Events/Orientation_and_motion_data_explained	/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
@@ -2308,7 +2306,7 @@
 /zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms	/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions	/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /zh-CN/docs/Web/Guide/CSS/Using_multi-column_layouts	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-CN/docs/Web/Guide/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace

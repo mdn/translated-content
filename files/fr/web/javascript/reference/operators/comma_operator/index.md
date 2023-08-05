@@ -1,12 +1,6 @@
 ---
 title: L'opérateur virgule
 slug: Web/JavaScript/Reference/Operators/Comma_operator
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule
 ---
 
 {{jsSidebar("Operators")}}
@@ -37,7 +31,7 @@ L'opérateur virgule est à différencier de la virgule utilisée pour séparer 
 SI on a un tableau à 2 dimensions appelé `monTableau`, qui possède 10 éléments ayant chacun 10 éléments, on peut utiliser le code suivant avec l'opérateur virgule afin d'incrémenter deux variables (`i` et `j`) à la fois. Attention, la virgule utilisée au sein de l'instruction `var` **n'est pas** l'opérateur virgule (car il ne peut exister au sein d'une expression) ; ici c'est un caractère spécial de l'instruction {{jsxref("Instructions/var","var")}}. Le code qui suit affiche les éléments présents sur la diagonale de cette matrice :
 
 ```js
-for (var i = 0, j = 9; i <= 9; i++, j--){
+for (var i = 0, j = 9; i <= 9; i++, j--) {
   console.log("monTableau[" + i + "][" + j + "] = " + monTableau[i][j]);
 }
 ```
@@ -46,16 +40,16 @@ Dans le code suivant, `a` est défini avec la valeur de `b = 3` (qui est 3) et l
 
 ```js
 var a, b, c;
-a = b = 3, c = 4; // Renvoie 4 dans la console
-console.log(a);   // 3
+(a = b = 3), (c = 4); // Renvoie 4 dans la console
+console.log(a); // 3
 ```
 
 Pour isoler la précédence de l'opérateur, on peut utiliser des parenthèses :
 
 ```js
 var x, y, z;
-x = (y = 5, z = 6); // Renvoie 6 dans la console
-console.log(x);     // 6
+x = ((y = 5), (z = 6)); // Renvoie 6 dans la console
+console.log(x); // 6
 ```
 
 ### Effectuer un traitement puis renvoyer une valeur
@@ -63,10 +57,10 @@ console.log(x);     // 6
 Un autre exemple consiste à effectuer un certain traitement sur la variable puis à renvoyer le résultat. Par définition, seul le dernier élément sera renvoyé mais les instructions précédentes seront bien exécutées. AInsi, on pourrait avoir :
 
 ```js
-function maFonction () {
+function maFonction() {
   var x = 0;
 
-  return (x += 1, x); // ce qui revient à renvoyer ++x
+  return (x += 1), x; // ce qui revient à renvoyer ++x
 }
 ```
 

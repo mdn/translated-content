@@ -91,7 +91,7 @@ data URL 的好處之一是立即產生影像而不用再和伺服器連線，�
 
 ### Using frames from a video
 
-我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為”myvideo” 的{{HTMLElement("video")}}元素:
+我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為「myvideo」 的{{HTMLElement("video")}}元素:
 
 ```js
 function getMyVideo() {
@@ -105,7 +105,7 @@ function getMyVideo() {
 ```
 
 上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為 CanvasImageSource 類別的物件來使用。
-關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的“[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)”一文.
+關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)」一文.
 
 ## 影像繪圖
 

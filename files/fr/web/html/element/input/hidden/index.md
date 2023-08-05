@@ -12,7 +12,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 ## Exemple simple
 
 ```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
 ```
 
 {{EmbedLiveSample('Exemple_simple', 600, 40)}}
@@ -29,8 +29,8 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de l'élément conti
 
 En complément des attributs communs à l'ensemble des éléments `<input>`, les champs masqués peuvent utiliser les attributs suivants :
 
-| Attribut               | Description                                                                                                                                                                                                                                                       |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribut        | Description                                                                                                                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`name`](#name) | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
 
 ### `name`
@@ -77,7 +77,7 @@ Voici le fragment HTML pour le formulaire :
 <form>
   <div>
     <label for="title">Titre du billet :</label>
-    <input type="text" id="title" name="title" value="Mon meilleur billet">
+    <input type="text" id="title" name="title" value="Mon meilleur billet" />
   </div>
   <div>
     <label for="content">Contenu :</label>
@@ -88,7 +88,7 @@ Voici le contenu de mon meilleur billet, j'espère que ça vous plaît !
   <div>
     <button type="submit">Mettre à jour le billet</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657">
+  <input type="hidden" id="postId" name="postId" value="34657" />
 </form>
 ```
 
@@ -117,7 +117,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;

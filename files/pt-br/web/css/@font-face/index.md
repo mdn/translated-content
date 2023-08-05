@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
 
@@ -18,8 +18,9 @@ A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um 
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
 }
 ```
 
@@ -50,8 +51,9 @@ A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um 
     Para fornecer ao navegador uma dica sobre o formato de um recurso de fonte - para que ele possa selecionar um adequado - é possível incluir um tipo de formato dentro de uma função `format()`:
 
     ```css
-    src: url(ideal-sans-serif.woff) format("woff"),
-         url(basic-sans-serif.ttf) format("truetype");
+    src:
+      url(ideal-sans-serif.woff) format("woff"),
+      url(basic-sans-serif.ttf) format("truetype");
     ```
 
     Os tipos disponíveis são: `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"`, e `"svg"`.
@@ -75,7 +77,9 @@ Este exemplo simplesmente especifica uma fonte para download a ser usada, aplica
   src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
 }
 
-p { font-family: "Bitstream Vera Serif Bold", serif }
+p {
+  font-family: "Bitstream Vera Serif Bold", serif;
+}
 ```
 
 ```html
@@ -87,9 +91,8 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-       local("HelveticaNeue-Bold"),
-       url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -112,9 +115,8 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"),
-           local("HelveticaNeue-Bold"),
-           url(MgOpenModernaBold.ttf);
+      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }
   }
@@ -122,10 +124,10 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário                                                           |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('WOFF2.0', '', 'WOFF2 font format')}}                 | {{Spec2('WOFF2.0')}}     | Especificação de formato de fonte com novo algoritmo de compactação. |
-| {{SpecName('WOFF1.0', '', 'WOFF font format')}}                 | {{Spec2('WOFF1.0')}}     | Especificação de formato                                             |
+| Especificação                                               | Status                  | Comentário                                                           |
+| ----------------------------------------------------------- | ----------------------- | -------------------------------------------------------------------- |
+| {{SpecName('WOFF2.0', '', 'WOFF2 font format')}}            | {{Spec2('WOFF2.0')}}    | Especificação de formato de fonte com novo algoritmo de compactação. |
+| {{SpecName('WOFF1.0', '', 'WOFF font format')}}             | {{Spec2('WOFF1.0')}}    | Especificação de formato                                             |
 | {{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}} | {{Spec2('CSS3 Fonts')}} | Definição Inicial                                                    |
 
 ## Compatibilidade com navegadores

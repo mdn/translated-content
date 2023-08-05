@@ -1,8 +1,8 @@
 ---
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
-translation_of: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 Тип **`DOMHighResTimeStamp`** является `double` и используется для хранения значения времени в миллисекундах. Этот тип может быть использован для описания конкретной точки во времени или временного промежутка (разницы во времени между двумя конкретными временными точками).
@@ -17,12 +17,11 @@ translation_of: Web/API/DOMHighResTimeStamp
 
 ```js
 // уменьшенная точность времени (2ms) в Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // уменьшенная точность времени с включённым `privacy.resistFingerprinting`
 event.timeStamp;
@@ -63,7 +62,7 @@ _У этого типа нет методов._
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

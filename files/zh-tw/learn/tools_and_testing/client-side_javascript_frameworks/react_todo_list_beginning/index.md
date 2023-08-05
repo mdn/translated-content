@@ -1,7 +1,6 @@
 ---
 title: Beginning our React todo list
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與您一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
@@ -224,7 +223,7 @@ class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加
   aria-labelledby="list-heading"></ul>
 ```
 
-`role` 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設`<ul>` 為清單，但是由於樣式表會破壞這個功能，因此需要使用`role` 屬性保留 "list" 清單這個意思。如果您想了解更多`role` 屬性的重要性，請參照[Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)。
+`role` 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設`<ul>` 為清單，但是由於樣式表會破壞這個功能，因此需要使用`role` 屬性保留 "list" 清單這個意思。如果您想了解更多`role` 屬性的重要性，請參照[Scott O'Hara’s article, 「Fixing Lists」](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)。
 
 `aria-labelledby` 屬性告訴科技輔具，我們將清單標題 list heading 設為 label，以描述下方的程式碼片段；將這些關聯設定好會幫助使用科技輔具的朋友更好的理解前因後果。
 

@@ -1,8 +1,6 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-translation_of: Web/CSS/@media/prefers-contrast
-browser-compat: css.at-rules.media.prefers-contrast
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -62,7 +60,7 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ## Voir aussi
 
-- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](https://docs.microsoft.com/fr-fr/previous-versions/hh771830(v=vs.85))
+- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](<https://docs.microsoft.com/fr-fr/previous-versions/hh771830(v=vs.85)>)
 - La caractéristique média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

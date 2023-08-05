@@ -1,7 +1,6 @@
 ---
 title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
-translation_of: Web/CSS/Containing_block
 ---
 
 {{cssref}}
@@ -109,7 +108,7 @@ p {
 
 ### Example 2
 
-In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
+In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn't establish a formatting context.
 
 ```html hidden
 <body>

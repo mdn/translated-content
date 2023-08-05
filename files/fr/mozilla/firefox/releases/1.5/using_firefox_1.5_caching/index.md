@@ -1,7 +1,6 @@
 ---
 title: Utilisation du cache de Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 
 {{FirefoxSidebar}}
@@ -82,58 +81,73 @@ Dans cet exemple&nbsp;:
 - Le curseur est placé dans le champ Nom du formulaire au premier chargement de la page. Dans Firefox 1.5, lorsque l'utilisateur revient sur la page, le curseur reste dans le champ dans lequel il se trouvait lorsqu'il l'a quittée. Dans les autres navigateurs, le curseur retourne dans le champ Nom.
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-<head>
-<title>Commande&nbsp;: Exemple de Firefox 1.5</title>
-<style type="text/css">
-body, p {
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Commande&nbsp;: Exemple de Firefox 1.5</title>
+    <style type="text/css">
+      body,
+      p {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
       }
-</style>
-<script type="text/javascript">
-function onLoad() {
-  loadOnlyFirst();
-  onPageShow();
-}
+    </style>
+    <script type="text/javascript">
+      function onLoad() {
+        loadOnlyFirst();
+        onPageShow();
+      }
 
-function onPageShow() {
-// calcule la date et l'heure courantes
-  var currentTime = new Date();
-  var year = currentTime.getFullYear();
-  var month = currentTime.getMonth()+1;
-  var day = currentTime.getDate();
-  var hour = currentTime.getHours();
-  var min = currentTime.getMinutes();
-  var sec = currentTime.getSeconds();
-  var mil = currentTime.getMilliseconds();
-  var displayTime = (day + "/" + month + "/" + year + " " +
-    hour + ":" + min + ":" + sec + ":" + mil);
-  document.getElementById("timefield").value = displayTime;
-}
+      function onPageShow() {
+        // calcule la date et l'heure courantes
+        var currentTime = new Date();
+        var year = currentTime.getFullYear();
+        var month = currentTime.getMonth() + 1;
+        var day = currentTime.getDate();
+        var hour = currentTime.getHours();
+        var min = currentTime.getMinutes();
+        var sec = currentTime.getSeconds();
+        var mil = currentTime.getMilliseconds();
+        var displayTime =
+          day +
+          "/" +
+          month +
+          "/" +
+          year +
+          " " +
+          hour +
+          ":" +
+          min +
+          ":" +
+          sec +
+          ":" +
+          mil;
+        document.getElementById("timefield").value = displayTime;
+      }
 
-function loadOnlyFirst() {
-  document.zipForm.name.focus();
-}
-</script>
-</head>
-<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-<h2>Commande</h2>
+      function loadOnlyFirst() {
+        document.zipForm.name.focus();
+      }
+    </script>
+  </head>
+  <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+    <h2>Commande</h2>
 
-<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-<label for="timefield">Date et heure&nbsp;:</label>
-<input type="text" id="timefield"><br>
-<label for="name">Nom&nbsp;:</label>
-<input type="text" id="name"><br>
-<label for="address">Adresse e-mail&nbsp;:</label>
-<input type="text" id="address"><br>
-<label for="order">Numéro de commande&nbsp;:</label>
-<input type="text" id="order"><br>
-<input type="submit" name="submit" value="Soumettre la requête">
-</form>
-</body>
+    <form
+      name="zipForm"
+      action="http://www.example.com/formresult.html"
+      method="get">
+      <label for="timefield">Date et heure&nbsp;:</label>
+      <input type="text" id="timefield" /><br />
+      <label for="name">Nom&nbsp;:</label>
+      <input type="text" id="name" /><br />
+      <label for="address">Adresse e-mail&nbsp;:</label>
+      <input type="text" id="address" /><br />
+      <label for="order">Numéro de commande&nbsp;:</label>
+      <input type="text" id="order" /><br />
+      <input type="submit" name="submit" value="Soumettre la requête" />
+    </form>
+  </body>
 </html>
 ```
 

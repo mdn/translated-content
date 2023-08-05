@@ -8,8 +8,8 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 1 日に数回、複数のブラウザーやデバイスで手動でテストを実行すると、面倒で時間がかかる場合があります。これを効率的に処理するには、自動化ツールに慣れておく必要があります。この記事では、利用可能なもの、タスクランナーの使い方、そして Sauce Labs や Browser Stack などの市販のブラウザーテスト自動化アプリケーションの基本的な使い方を見ていきます。
 
 | 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | 自動テストにはどのようなものが含まれているのか、それがどのようにあなたの生活を楽にすることができるのか、そして物事を楽にするいくつかの商用製品をどのように利用するかの理解を提供する。                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | 自動テストにはどのようなものが含まれているのか、それがどのようにあなたの生活を楽にすることができるのか、そして物事を楽にするいくつかの商用製品をどのように利用するかの理解を提供する。                                                                        |
 
 ## Automation makes things easy
 
@@ -36,16 +36,16 @@ Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to in
 2. Install it like you would any other program. Note that Node comes with [Node Package Manager](https://www.npmjs.com/) (npm), which allows you to easily install packages, share your own packages with others, and run useful scripts on your projects.
 3. Once the install completes, test that node is installed by typing the following into the terminal, which returns the installed versions of Node and npm:
 
-    ```bash
-    node -v
-    npm -v
-    ```
+   ```bash
+   node -v
+   npm -v
+   ```
 
 4. If you've got Node/npm already installed, you should update them to their latest versions. To update Node, the most reliable way is to download and install an updated installer package from their website (see link above). To update npm, use the following command in your terminal:
 
-    ```bash
-    npm install npm@latest -g
-    ```
+   ```bash
+   npm install npm@latest -g
+   ```
 
 > **メモ:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) should sort you out.
 
@@ -55,16 +55,16 @@ For example, let's first create a test directory to allow us to play without fea
 
 1. Create a new directory somewhere sensible with using your file manager UI, or by navigating to the location you want and running the following command:
 
-    ```bash
-    mkdir node-test
-    ```
+   ```bash
+   mkdir node-test
+   ```
 
 2. To make this directory an npm project, you just need to go inside your test directory and initialize it, with the following:
 
-    ```bash
-    cd node-test
-    npm init
-    ```
+   ```bash
+   cd node-test
+   npm init
+   ```
 
 3. This second command will ask you many questions to find out the information required to set up the project; you can just select the defaults for now.
 4. Once all the questions have been asked, it will ask you if the information entered is OK. type `yes` and press Enter/Return and npm will generate a `package.json` file in your directory.
@@ -95,33 +95,33 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
 3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
 
-    ```bash
-    npm install --global gulp-cli
-    ```
+   ```bash
+   npm install --global gulp-cli
+   ```
 
 4. Next, run the following command inside your npm project directory root to set up gulp as a dependency of your project:
 
-    ```bash
-    npm install --save-dev gulp
-    ```
+   ```bash
+   npm install --save-dev gulp
+   ```
 
 5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
 
-    ```js
-    var gulp = require('gulp');
+   ```js
+   var gulp = require("gulp");
 
-    gulp.task('default', function() {
-      console.log('Gulp running');
-    });
-    ```
+   gulp.task("default", function () {
+     console.log("Gulp running");
+   });
+   ```
 
-    This requires the `gulp` module we installed earlier, and then runs a basic task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is written in the same basic format — `gulp`'s `task()` method is run, and given two parameters — the name of the task, and a callback function containing the actual code to run to complete the task.
+   This requires the `gulp` module we installed earlier, and then runs a basic task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is written in the same basic format — `gulp`'s `task()` method is run, and given two parameters — the name of the task, and a callback function containing the actual code to run to complete the task.
 
 6. You can run your gulp task with the following commands — try this now:
 
-    ```bash
-    gulp
-    ```
+   ```bash
+   gulp
+   ```
 
 ### Adding some real tasks to Gulp
 
@@ -138,7 +138,7 @@ To use each plugin, you need to first install it via npm, then require any depen
 Before you go any further, update the default task to this:
 
 ```js
-gulp.task('default', [ ]);
+gulp.task("default", []);
 ```
 
 Inside the array goes the names of all the tasks you want Gulp to run, once you run the `gulp` command on the command line.
@@ -147,27 +147,28 @@ Inside the array goes the names of all the tasks you want Gulp to run, once you 
 
 1. Install using the following line:
 
-    ```bash
-    npm install --save-dev gulp-htmltidy
-    ```
+   ```bash
+   npm install --save-dev gulp-htmltidy
+   ```
 
-    > **メモ:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it as, it has been added to the `devDependencies` property.
+   > **メモ:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it as, it has been added to the `devDependencies` property.
 
 2. Add the following dependencies to `gulpfile.js`:
 
-    ```js
-    var htmltidy = require('gulp-htmltidy');
-    ```
+   ```js
+   var htmltidy = require("gulp-htmltidy");
+   ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
-    ```js
-    gulp.task('html', function() {
-      return gulp.src('src/index.html')
-            .pipe(htmltidy())
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("html", function () {
+     return gulp
+       .src("src/index.html")
+       .pipe(htmltidy())
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. Add `'html'` as an item inside the array in the `default` task.
 
@@ -181,32 +182,35 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 
 1. Install using the following lines:
 
-    ```bash
-    npm install --save-dev gulp-autoprefixer
-    npm install --save-dev gulp-csslint
-    ```
+   ```bash
+   npm install --save-dev gulp-autoprefixer
+   npm install --save-dev gulp-csslint
+   ```
 
 2. Add the following dependencies to `gulpfile.js`:
 
-    ```js
-    var autoprefixer = require('gulp-autoprefixer');
-    var csslint = require('gulp-csslint');
-    ```
+   ```js
+   var autoprefixer = require("gulp-autoprefixer");
+   var csslint = require("gulp-csslint");
+   ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
-    ```js
-    gulp.task('css', function() {
-        return gulp.src('src/style.css')
-            .pipe(csslint())
-            .pipe(csslint.formatter('compact'))
-            .pipe(autoprefixer({
-                browsers: ['last 5 versions'],
-                cascade: false
-            }))
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("css", function () {
+     return gulp
+       .src("src/style.css")
+       .pipe(csslint())
+       .pipe(csslint.formatter("compact"))
+       .pipe(
+         autoprefixer({
+           browsers: ["last 5 versions"],
+           cascade: false,
+         }),
+       )
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. Add `'css'` as an item inside the array in the `default` task.
 
@@ -216,32 +220,35 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 
 1. Install using the following lines:
 
-    ```
-    npm install --save-dev gulp-babel @babel/preset-env
-    npm install --save-dev @babel/core
-    npm install jshint gulp-jshint --save-dev
-    ```
+   ```
+   npm install --save-dev gulp-babel @babel/preset-env
+   npm install --save-dev @babel/core
+   npm install jshint gulp-jshint --save-dev
+   ```
 
 2. Add the following dependencies to `gulpfile.js`:
 
-    ```
-    var babel = require('gulp-babel');
-    var jshint = require('gulp-jshint');
-    ```
+   ```
+   var babel = require('gulp-babel');
+   var jshint = require('gulp-jshint');
+   ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
-    ```js
-    gulp.task('js', function() {
-        return gulp.src('src/main.js')
-            .pipe(jshint())
-            .pipe(jshint.reporter('default'))
-            .pipe(babel({
-                presets: ['@babel/env']
-            }))
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("js", function () {
+     return gulp
+       .src("src/main.js")
+       .pipe(jshint())
+       .pipe(jshint.reporter("default"))
+       .pipe(
+         babel({
+           presets: ["@babel/env"],
+         }),
+       )
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. Add `'js'` as an item inside the array in the `default` task.
 
@@ -260,10 +267,10 @@ If you get errors, check that you've added all the dependencies and the tests as
 Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.js`:
 
 ```js
-gulp.task('watch', function(){
-  gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/*.css', ['css']);
-  gulp.watch('src/*.js', ['js']);
+gulp.task("watch", function () {
+  gulp.watch("src/*.html", ["html"]);
+  gulp.watch("src/*.css", ["css"]);
+  gulp.watch("src/*.js", ["js"]);
 });
 ```
 
@@ -311,11 +318,11 @@ The [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) has a lo
 4. When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
-    - Stop the session
-    - Give someone else a URL so they can observe the test remotely.
-    - Copy text/notes to a remote clipboard.
-    - Take a screenshot.
-    - Test in full screen mode.
+   - Stop the session
+   - Give someone else a URL so they can observe the test remotely.
+   - Copy text/notes to a remote clipboard.
+   - Take a screenshot.
+   - Test in full screen mode.
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took , watch a video of the session, and view data logs for the session for example.
 
@@ -332,49 +339,49 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
 2. Install the Node Sauce Labs wrapper using the following command:
 
-    ```
-    npm install saucelabs
-    ```
+   ```
+   npm install saucelabs
+   ```
 
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
-    ```js
-    var SauceLabs = require('saucelabs');
+   ```js
+   var SauceLabs = require("saucelabs");
 
-    var myAccount = new SauceLabs({
-      username: "your-sauce-username",
-      password: "your-sauce-api-key"
-    });
+   var myAccount = new SauceLabs({
+     username: "your-sauce-username",
+     password: "your-sauce-api-key",
+   });
 
-    myAccount.getAccountDetails(function (err, res) {
-      console.log(res);
-      myAccount.getServiceStatus(function (err, res) {
-        // Status of the Sauce Labs services
-        console.log(res);
-        myAccount.getJobs(function (err, jobs) {
-          // Get a list of all your jobs
-          for (var k in jobs) {
-            if ( jobs.hasOwnProperty( k )) {
-              myAccount.showJob(jobs[k].id, function (err, res) {
-                var str = res.id + ": Status: " + res.status;
-                if (res.error) {
-                  str += "\033[31m Error: " + res.error + " \033[0m";
-                }
-                console.log(str);
-              });
-            }
-          }
-        });
-      });
-    });
-    ```
+   myAccount.getAccountDetails(function (err, res) {
+     console.log(res);
+     myAccount.getServiceStatus(function (err, res) {
+       // Status of the Sauce Labs services
+       console.log(res);
+       myAccount.getJobs(function (err, jobs) {
+         // Get a list of all your jobs
+         for (var k in jobs) {
+           if (jobs.hasOwnProperty(k)) {
+             myAccount.showJob(jobs[k].id, function (err, res) {
+               var str = res.id + ": Status: " + res.status;
+               if (res.error) {
+                 str += "\033[31m Error: " + res.error + " \033[0m";
+               }
+               console.log(str);
+             });
+           }
+         }
+       });
+     });
+   });
+   ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://saucelabs.com/beta/user-settings) page. Fill these in now.
 5. Make sure everything is saved, and run your file like so:
 
-    ```bash
-    node call_sauce
-    ```
+   ```bash
+   node call_sauce
+   ```
 
 #### Advanced: Automated tests
 
@@ -443,44 +450,45 @@ Let's have a brief look at how we'd access the API using Node.js.
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `bstack-test` for example.
 2. Create a new file inside your project root called `call_bstack.js`. give it the following contents:
 
-    ```js
-    var request = require("request");
+   ```js
+   var request = require("request");
 
-    var bsUser = "BROWSERSTACK_USERNAME";
-    var bsKey = "BROWSERSTACK_ACCESS_KEY";
-    var baseUrl = "https://" + bsUser + ":" + bsKey + "@www.browserstack.com/automate/";
+   var bsUser = "BROWSERSTACK_USERNAME";
+   var bsKey = "BROWSERSTACK_ACCESS_KEY";
+   var baseUrl =
+     "https://" + bsUser + ":" + bsKey + "@www.browserstack.com/automate/";
 
-    function getPlanDetails(){
-        request({uri: baseUrl + "plan.json"}, function(err, res, body){
-            console.log(JSON.parse(body));
-        });
-        /* Response:
-        {
-            automate_plan: <string>,
-            parallel_sessions_running: <int>,
-            team_parallel_sessions_max_allowed: <int>,
-            parallel_sessions_max_allowed: <int>,
-            queued_sessions: <int>,
-            queued_sessions_max_allowed: <int>
-        }
-        */
-    }
+   function getPlanDetails() {
+     request({ uri: baseUrl + "plan.json" }, function (err, res, body) {
+       console.log(JSON.parse(body));
+     });
+     /* Response:
+       {
+           automate_plan: <string>,
+           parallel_sessions_running: <int>,
+           team_parallel_sessions_max_allowed: <int>,
+           parallel_sessions_max_allowed: <int>,
+           queued_sessions: <int>,
+           queued_sessions_max_allowed: <int>
+       }
+       */
+   }
 
-    getPlanDetails();
-    ```
+   getPlanDetails();
+   ```
 
 3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack automation dashboard](https://www.browserstack.com/automate). Fill these in now.
 4. Make sure everything is saved, and run your file like so:
 
-    ```bash
-    node call_bstack
-    ```
+   ```bash
+   node call_bstack
+   ```
 
 Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.
 
 ```js
-function getBuilds(){
-  request({uri: baseUrl + "builds.json"}, function(err, res, body){
+function getBuilds() {
+  request({ uri: baseUrl + "builds.json" }, function (err, res, body) {
     console.log(JSON.parse(body));
   });
   /* Response:
@@ -504,13 +512,16 @@ function getBuilds(){
     ...
   ]
   */
-};
+}
 
-function getSessionsInBuild(build){
+function getSessionsInBuild(build) {
   var buildId = build.automation_build.hashed_id;
-  request({uri: baseUrl + "builds/" + buildId + "/sessions.json"}, function(err, res, body){
-    console.log(JSON.parse(body));
-  });
+  request(
+    { uri: baseUrl + "builds/" + buildId + "/sessions.json" },
+    function (err, res, body) {
+      console.log(JSON.parse(body));
+    },
+  );
   /* Response:
   [
     {
@@ -562,11 +573,14 @@ function getSessionsInBuild(build){
   */
 }
 
-function getSessionDetails(session){
+function getSessionDetails(session) {
   var sessionId = session.automation_session.hashed_id;
-  request({uri: baseUrl + "sessions/" + sessionId + ".json"}, function(err, res, body){
-    console.log(JSON.parse(body));
-  });
+  request(
+    { uri: baseUrl + "sessions/" + sessionId + ".json" },
+    function (err, res, body) {
+      console.log(JSON.parse(body));
+    },
+  );
   /* Response:
   {
     automation_session: {

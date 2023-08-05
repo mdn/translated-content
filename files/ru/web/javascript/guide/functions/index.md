@@ -1,10 +1,6 @@
 ---
 title: Функции
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Основы
-  - Функции
-translation_of: Web/JavaScript/Guide/Functions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
@@ -58,7 +54,7 @@ return number * number;
 
 Примитивные параметры (например, число) передаются функции значением; **значение** передаётся в функцию, но если функция меняет значение параметра, **это изменение не отразится глобально или после вызова функции.**
 
-Если вы передадите объект как параметр (не примитив, например, [`массив`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:
+Если вы передадите объект как параметр (не примитив, например, [`массив`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array) или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:
 
 ```js
 function myFunc(theObject) {

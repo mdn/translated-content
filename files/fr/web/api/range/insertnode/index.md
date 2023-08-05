@@ -1,14 +1,13 @@
 ---
 title: Range.insertNode()
 slug: Web/API/Range/insertNode
-translation_of: Web/API/Range/insertNode
 ---
 
 {{ApiRef("DOM")}}
 
 La méthode **`Range.insertNode()`** insère un nœud au début du {{domxref("Range")}}.
 
-Le nouveau nœud est inséré au point de départ du `Range`. Si le nouveau nœud est sur le point d’être ajouté à un {{domxref("Node")}} texte, ce `Node` est coupé en deux au point d’insertion, et l’insertion se fait entre les deux nœuds texte.
+Le nouveau nœud est inséré au point de départ du `Range`. Si le nouveau nœud est sur le point d'être ajouté à un {{domxref("Node")}} texte, ce `Node` est coupé en deux au point d'insertion, et l'insertion se fait entre les deux nœuds texte.
 
 Si le nouveau nœud est un fragment de document, les enfants du fragment sont insérés à la place.
 
@@ -43,4 +42,4 @@ range.insertNode(newNode);
 
 ## Voir aussi
 
-- [L’index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)
+- [L'index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

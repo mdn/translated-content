@@ -1,5 +1,5 @@
 ---
-title: '<div>: 콘텐츠 분할 요소'
+title: "<div>: 콘텐츠 분할 요소"
 slug: Web/HTML/Element/div
 ---
 
@@ -11,7 +11,7 @@ slug: Web/HTML/Element/div
 
 The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
 
-`<div>` 요소는 "순수" 컨테이너로서 아무것도 표현하지 않습니다. 대신 다른 요소 여럿을 묶어 {{htmlattrxref("class")}}나 {{htmlattrxref("id")}} 속성으로 꾸미기 쉽도록 돕거나, 문서의 특정 구역이 다른 언어임을 표시({{htmlattrxref("lang")}} 속성 사용)하는 등의 용도로 사용할 수 있습니다.
+`<div>` 요소는 "순수" 컨테이너로서 아무것도 표현하지 않습니다. 대신 다른 요소 여럿을 묶어 [`class`](/ko/docs/Web/HTML/Global_attributes#class)나 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성으로 꾸미기 쉽도록 돕거나, 문서의 특정 구역이 다른 언어임을 표시([`lang`](/ko/docs/Web/HTML/Global_attributes#lang) 속성 사용)하는 등의 용도로 사용할 수 있습니다.
 
 <table class="properties">
   <tbody>
@@ -84,8 +84,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ```html
 <div>
-   <p>어떤 콘텐츠든 좋습니다.
-   &lt;p&gt;, &lt;table&gt;같이 말이죠. 써보세요!</p>
+  <p>어떤 콘텐츠든 좋습니다. &lt;p&gt;, &lt;table&gt;같이 말이죠. 써보세요!</p>
 </div>
 ```
 
@@ -95,14 +94,13 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ### 스타일 예제
 
-다음 예제는 CSS로 \<div>에 그림자를 입힙니다. `<div>`의 {{htmlattrxref("class")}} 속성을 통해 `"shadowbox"` 스타일을 적용한 점에 주목하세요.
+다음 예제는 CSS로 \<div>에 그림자를 입힙니다. `<div>`의 [`class`](/ko/docs/Web/HTML/Global_attributes#class) 속성을 통해 `"shadowbox"` 스타일을 적용한 점에 주목하세요.
 
 #### HTML
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

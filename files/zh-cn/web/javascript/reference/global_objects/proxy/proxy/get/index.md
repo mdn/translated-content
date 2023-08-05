@@ -1,7 +1,6 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 ---
 
 {{JSRef}}
@@ -12,8 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/get
 
 ```js
 var p = new Proxy(target, {
-  get: function(target, property, receiver) {
-  }
+  get: function (target, property, receiver) {},
 });
 ```
 
@@ -56,15 +54,17 @@ get 方法可以返回任何值。
 以下代码演示如何拦截属性值的读取操作。
 
 ```js
-var p = new Proxy({}, {
-  get: function(target, prop, receiver) {
-    console.log("called: " + prop);
-    return 10;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    get: function (target, prop, receiver) {
+      console.log("called: " + prop);
+      return 10;
+    },
+  },
+);
 
-console.log(p.a); // "called: a"
-                  // 10
+console.log(p.a); // "called: a"; ouptut 10
 ```
 
 以下代码演示违反约束的情况。
@@ -75,13 +75,13 @@ Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 var p = new Proxy(obj, {
-  get: function(target, prop) {
+  get: function (target, prop) {
     return 20;
-  }
+  },
 });
 
 p.a; //会抛出 TypeError

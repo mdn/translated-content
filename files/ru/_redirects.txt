@@ -232,7 +232,6 @@
 /ru/docs/Learn/HTML/Forms/Валидация_формы	/ru/docs/Learn/Forms/Form_validation
 /ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы	/ru/docs/Learn/Forms/Sending_and_retrieving_form_data
-/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм	/ru/docs/Learn/Forms/Basic_native_form_controls
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web	/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML/Проверьте_свои_знания:_Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
@@ -293,9 +292,6 @@
 /ru/docs/Learn/Доступность/Accessibility_troubleshooting	/ru/docs/Learn/Accessibility/Accessibility_troubleshooting
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
-/ru/docs/Learn/Доступность/Mobile	/ru/docs/Learn/Accessibility/Mobile
-/ru/docs/Learn/Доступность/Multimedia	/ru/docs/Learn/Accessibility/Multimedia
-/ru/docs/Learn/Доступность/WAI-ARIA_basics	/ru/docs/Learn/Accessibility/WAI-ARIA_basics
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
@@ -319,14 +315,15 @@
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Guidelines	/ru/docs/conflicting/MDN/Writing_guidelines
 /ru/docs/MDN/Kuma	/ru/docs/orphaned/MDN/Yari
-/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
 /ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
-/ru/docs/MDN/Tools/KumaScript/Troubleshooting	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
+/ru/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
@@ -572,6 +569,7 @@
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/CSS/:-moz-focusring	/ru/docs/conflicting/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
 /ru/docs/Web/CSS/@viewport	/ru/docs/Web/CSS
@@ -627,8 +625,8 @@
 /ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
-/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_Selectors
-/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
+/ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
 /ru/docs/Web/CSS/Common_CSS_Questions	/ru/docs/Learn/CSS/Howto/CSS_FAQ
 /ru/docs/Web/CSS/Descendant_selectors	/ru/docs/Web/CSS/Descendant_combinator

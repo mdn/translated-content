@@ -1,12 +1,6 @@
 ---
 title: Redimensionnement d'arrière-plans SVG
 slug: Web/CSS/Scaling_of_SVG_backgrounds
-tags:
-  - CSS
-  - Guide
-  - SVG
-translation_of: Web/CSS/Scaling_of_SVG_backgrounds
-original_slug: Web/CSS/Redimensionnement_arrière-plans_SVG
 ---
 
 Les images SVG sont très flexibles et lorsqu'on les utilise en CSS avec les propriétés {{cssxref("background-image")}} et {{cssxref("background-size")}}, il faut s'assurer de considérer les différents aspects qui leurs sont propres. Dans cet article, on décrit comment les images SVG sont redimensionnées grâce à ces propriétés.

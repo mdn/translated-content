@@ -1,10 +1,6 @@
 ---
 title: Live streaming web Audio et Vidéo
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - Guide
-  - Streaming adaptatif
-translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 
 La technologie de _live streaming_ (diffusion en direct) est souvent utilisée pour relayer des événements en direct, tels que le sport, les concerts, ou de manière plus générale les programmes TV et radio en direct. Souvent raccourci au simple terme de _streaming_, le live streaming est le processus de transmissions d'un média _live_ (c'est à dire dynamique et non statique) aux ordinateurs et aux périphériques. C'est un sujet assez complexe et nouveau avec beaucoup de variables à prendre en considération, dans cet article nous allons vous introduire le sujet et vous donner des clés pour démarrer.
@@ -63,7 +59,7 @@ Par exemple:
 
 ```html
 <video src="rtsp://myhost.com/mymedia.format">
- <!-- Fallback here -->
+  <!-- Fallback here -->
 </video>
 ```
 

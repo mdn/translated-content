@@ -1,11 +1,8 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
-tags:
-  - API
-  - SVG
-translation_of: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGGraphicsElement`** представляет элементы SVG, основной целью которых является прямое отображение графики в группу.

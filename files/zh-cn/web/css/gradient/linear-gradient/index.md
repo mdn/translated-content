@@ -1,7 +1,6 @@
 ---
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient()
 ---
 
 {{CSSRef}}
@@ -190,7 +189,16 @@ div {
 
 ```css
 div {
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -207,7 +215,16 @@ div {
 使用渐变制作彩虹
 
 ```css
-background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+background: linear-gradient(
+  to right,
+  red,
+  orange,
+  yellow,
+  green,
+  blue,
+  indigo,
+  violet
+);
 ```
 
 ### 线性重复渐变
@@ -222,7 +239,7 @@ background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, 
 
 ```css
 div {
-  background: linear-gradient(to bottom right, red, rgba(0,0,0,0));
+  background: linear-gradient(to bottom right, red, rgba(0, 0, 0, 0));
 }
 ```
 
@@ -238,11 +255,27 @@ div {
 
 ```css
 .grad {
-  background-color: #F07575; /* 不支持渐变的浏览器回退方案 */
-  background-image: -webkit-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-  background-image:    -moz-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持 Firefox (3.6 to 15) */
-  background-image:      -o-linear-gradient(top, hsl(0, 80%, 70%), #bada55); /* 支持旧 Opera (11.1 to 12.0) */
-  background-image:         linear-gradient(to bottom, hsl(0, 80%, 70%), #bada55); /* 标准语法; 需要最新版本 */
+  background-color: #f07575; /* 不支持渐变的浏览器回退方案 */
+  background-image: -webkit-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持 Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image: -moz-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持 Firefox (3.6 to 15) */
+  background-image: -o-linear-gradient(
+    top,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 支持旧 Opera (11.1 to 12.0) */
+  background-image: linear-gradient(
+    to bottom,
+    hsl(0, 80%, 70%),
+    #bada55
+  ); /* 标准语法; 需要最新版本 */
 }
 ```
 

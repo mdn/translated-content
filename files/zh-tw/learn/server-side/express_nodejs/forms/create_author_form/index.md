@@ -150,7 +150,7 @@ block content
 
 The structure and behaviour for this view is exactly the same as for the **genre_form.pug** template, so we won't describe it again.
 
-> **備註：** Some browsers don’t support the input `type=“date”`, so you won’t get the datepicker widget or the default _`dd/mm/yyyy`_ placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
+> **備註：** Some browsers don’t support the input `type="date"`, so you won’t get the datepicker widget or the default _`dd/mm/yyyy`_ placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
 
 ### Challenge: Adding the date of death
 

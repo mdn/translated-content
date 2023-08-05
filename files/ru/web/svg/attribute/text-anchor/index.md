@@ -1,7 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-translation_of: Web/SVG/Attribute/text-anchor
 ---
 
 « [Справочник SVG Атрибутов](/en/SVG/Attribute)

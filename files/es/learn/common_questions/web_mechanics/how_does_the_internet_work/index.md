@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo funciona Internet?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 En este artículo se describe qué es Internet y cómo funciona.
@@ -12,7 +11,7 @@ En este artículo se describe qué es Internet y cómo funciona.
       <th scope="row">Prerequisitos:</th>
       <td>
         Ninguno, pero te animamos a leer el
-        <a href="/en-US/docs/Learn/Thinking_before_coding"
+        <a href="/es/docs/Learn/Thinking_before_coding"
           >Artículo sobre el establecimiento de metas</a
         >
         primero.

@@ -1,7 +1,6 @@
 ---
 title: Using Feature Policy
 slug: orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
-original_slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
 ---
 
 {{HTTPSidebar}}

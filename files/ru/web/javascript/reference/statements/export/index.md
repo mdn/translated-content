@@ -1,14 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Statement
-  - export
-  - Инструкция
-  - Модули
-translation_of: Web/JavaScript/Reference/Statements/export
 ---
 
 {{jsSidebar("Statements")}}
@@ -75,7 +67,7 @@ const foo = Math.PI + Math.SQRT2;
 export { cube, foo };
 ```
 
-Таким образом в другом скрипте при помощи импорта (см. [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)) мы могли бы получить следующее:
+Таким образом в другом скрипте при помощи импорта (см. [`import`](/ru/docs/Web/JavaScript/Reference/Statements/import)) мы могли бы получить следующее:
 
 ```js
 import { cube, foo } from 'my-module';

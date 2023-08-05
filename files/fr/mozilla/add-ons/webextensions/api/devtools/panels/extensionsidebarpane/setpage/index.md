@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.setPage()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setPage
 ---
 
 Définit une page HTML à afficher dans le volet latéral.
@@ -12,8 +11,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 browser.devtools.panels.setPage(
-  path // string containing relative path to page
-)
+  path, // string containing relative path to page
+);
 ```
 
 ### Paramètres
@@ -33,7 +32,7 @@ Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter 
 
 ```js
 function onCreated(sidebarPane) {
-  sidebarPane.setPage('sidebar/sidebar.html');
+  sidebarPane.setPage("sidebar/sidebar.html");
 }
 ```
 

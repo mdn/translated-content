@@ -1,7 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-original_slug: Web/HTML/Elemento/input/email
 ---
 
 {{HTMLSidebar}}
@@ -313,8 +312,7 @@ label::after {
       required
       placeholder="username@beststartupever.com"
       pattern=".+@beststartupever\.com"
-      title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever"
-    />
+      title="Proporcione solo una dirección de correo electrónico corporativa de Best Startup Ever" />
   </div>
 
   <div class="messageBox">
@@ -324,8 +322,7 @@ label::after {
       cols="80"
       rows="8"
       required
-      placeholder="Mis zapatos están demasiado apretados y he olvidado cómo bailar."
-    ></textarea>
+      placeholder="Mis zapatos están demasiado apretados y he olvidado cómo bailar."></textarea>
   </div>
   <input type="submit" value="Enviar solicitud" />
 </form>
@@ -368,8 +365,7 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
   list="defaultEmails"
   size="64"
   maxlength="256"
-  multiple
-/>
+  multiple />
 
 <datalist id="defaultEmails">
   <option value="jbond007@mi6.defence.gov.uk"></option>

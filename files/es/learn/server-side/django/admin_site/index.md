@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 4: Sitio de Administración de Django'
+title: "Tutorial Django Parte 4: Sitio de Administración de Django"
 slug: Learn/Server-side/Django/Admin_site
 ---
 
@@ -107,9 +107,9 @@ Puedes editar un libro haciendo click en su nombre en la lista. La página de ed
 
 ![Admin Site - Book Edit](admin_book_modify.png)
 
-Ahora regresa a la página **Home** (usando el enlace _Home_ de la barra superior) y observa las listas **Author** y **Genre** -- ya deberías tener algunos registros creados de cuando añadiste los nuevos libros, pero puedes crear algunos más.
+Ahora regresa a la página **Home** (usando el enlace _Home_ de la barra superior) y observa las listas **Author** y **Genre** — ya deberías tener algunos registros creados de cuando añadiste los nuevos libros, pero puedes crear algunos más.
 
-Lo que no vas a tener es _BookInstances_, porque estas no se crean de los libros (si bien puedes crear un `Book` desde una `BookInstance` -- esta es la naturaleza de los campos `ForeignKey`). Regresa a la página _Home_ y presiona el botón **Add** relacionado para desplegar la pantalla _Add book instance_, como se muestra abajo. Nota el largo y globalmente único Id, que puede ser usado para identificar inequívocamente una única copia de un libro dentro de la biblioteca.
+Lo que no vas a tener es _BookInstances_, porque estas no se crean de los libros (si bien puedes crear un `Book` desde una `BookInstance` — esta es la naturaleza de los campos `ForeignKey`). Regresa a la página _Home_ y presiona el botón **Add** relacionado para desplegar la pantalla _Add book instance_, como se muestra abajo. Nota el largo y globalmente único Id, que puede ser usado para identificar inequívocamente una única copia de un libro dentro de la biblioteca.
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
@@ -211,7 +211,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Desafortunadamente, no podemos especificar directamente el campo `genre` en `list_display` porque es un campo `ManyToManyField` (Django previene esto porque habría un alto "costo" de acceso a base de datos si lo hiciera). En lugar de eso, definiremos una función `display_genre` para obtener la información como una cadena (esta es la función que hemos llamado arriba; la definiremos más abajo).
 
-> **Nota:** Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones -- por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
+> **Nota:** Obtener el `genre` podría no ser una buena idea aquí, debido al "costo" de la operación en la base de datos. Te mostramos cómo hacerlo porque llamar funciones desde tus modelos puede ser muy útil por otras razones — por ejemplo para añadir un enlace _**Delete**_ junto a cada ítem en la lista.
 
 Añade el siguiente código en tu modelo `Book` (**models.py**). Esto crea una cadena con los tres primeros valores del campo `genre` (si existen) y crea una `short_description` (descripción corta) que puede ser usada en el sitio de administración por este método.
 
@@ -263,7 +263,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 El atributo `fields` lista solo los campos que se van a desplegar en el formulario, en orden. Los campos se despliegan en vertical por defecto, pero se desplegarán en horizontal si los agrupas en una tupla (como se muestra en los campos "date" arriba).
 
-Reinicia tu aplicación y ve a la vista de detalle de autor -- ahora debería aparecer como se muestra abajo:
+Reinicia tu aplicación y ve a la vista de detalle de autor — ahora debería aparecer como se muestra abajo:
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
@@ -290,7 +290,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     )
 ```
 
-Cada sección tiene su propio título (o `None`, si no quieres un título) y una tupla de campos asociada en un diccionario -- el formato es complicado de describir pero bastante fácil de entender si observas el fragmento de código que se encuentra justo arriba.
+Cada sección tiene su propio título (o `None`, si no quieres un título) y una tupla de campos asociada en un diccionario — el formato es complicado de describir pero bastante fácil de entender si observas el fragmento de código que se encuentra justo arriba.
 
 Reinicia y navega a una vista de instancia de libro (book instance); el formulario debería aparecer como se muestra abajo:
 
@@ -312,7 +312,7 @@ class BookAdmin(admin.ModelAdmin):
     inlines = [BooksInstanceInline]
 ```
 
-Prueba recargando tu aplicación y observando la vista para un libro -- ahora deberías ver al final las instancias relacionadas a este libro (inmediatamente debajo de los campos de género del libro):
+Prueba recargando tu aplicación y observando la vista para un libro — ahora deberías ver al final las instancias relacionadas a este libro (inmediatamente debajo de los campos de género del libro):
 
 ![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 

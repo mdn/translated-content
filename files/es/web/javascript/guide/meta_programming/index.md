@@ -15,14 +15,14 @@ Por ejemplo, obtener una propiedad sobre un objeto:
 
 ```js
 let handler = {
-  get: function(target, name) {
-    return name in target? target[name] : 42
-  }
-}
+  get: function (target, name) {
+    return name in target ? target[name] : 42;
+  },
+};
 
-let p = new Proxy({}, handler)
-p.a = 1
-console.log(p.a, p.b) // 1, 42
+let p = new Proxy({}, handler);
+p.a = 1;
+console.log(p.a, p.b); // 1, 42
 ```
 
 El objeto `Proxy` define un `target` (un objeto vacío aquí) y un objeto `handler`, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
@@ -234,20 +234,23 @@ El método {{jsxref ("Proxy.revocable()")}} se usa para crear un objeto `Proxy` 
 Posteriormente, cualquier operación en el proxy conduce a un {{jsxref("TypeError")}}.
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]'
-  }
-})
-let proxy = revocable.proxy
-console.log(proxy.foo) // "[[foo]]"
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
+let proxy = revocable.proxy;
+console.log(proxy.foo); // "[[foo]]"
 
-revocable.revoke()
+revocable.revoke();
 
-console.log(proxy.foo)   // Lanza TypeError
-proxy.foo = 1            // TypeError nuevamente
-delete proxy.foo         // todavía TypeError
-typeof proxy             // "object", typeof no activa ninguna trampa
+console.log(proxy.foo); // Lanza TypeError
+proxy.foo = 1; // TypeError nuevamente
+delete proxy.foo; // todavía TypeError
+typeof proxy; // "object", typeof no activa ninguna trampa
 ```
 
 ## Reflexión
@@ -261,7 +264,7 @@ typeof proxy             // "object", typeof no activa ninguna trampa
 Con {{jsxref("Reflect.has()")}} por ejemplo, obtienes el operador [`in`](/es/docs/Web/JavaScript/Reference/Operators/in) como función:
 
 ```js
-Reflect.has(Object, 'assign') // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### Una mejor función `apply`
@@ -269,7 +272,7 @@ Reflect.has(Object, 'assign') // true
 En ES5, normalmente usas el método {{jsxref("Function.prototype.apply()")}} para llamar a una función con un valor `this` y `arguments` proporcionado como un arreglo (o un [objeto similar a un arreglo](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75])
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
 Con {{jsxref("Reflect.apply")}} esto se vuelve menos detallado y más fácil de entender:

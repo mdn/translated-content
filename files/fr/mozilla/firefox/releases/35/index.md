@@ -1,43 +1,42 @@
 ---
 title: Firefox 35 pour les développeurs
 slug: Mozilla/Firefox/Releases/35
-translation_of: Mozilla/Firefox/Releases/35
 ---
 
 1. Notes de versions pour développeurs
 
-    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
 
-    1. [WebExtensions](/fr/Add-ons/WebExtensions)
-    2. [Thèmes](/fr/Add-ons/Themes)
+   1. [WebExtensions](/fr/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
 
-    1. [Le projet Mozilla](/fr/docs/Mozilla/)
-    2. [Gecko](/fr/docs/Mozilla/Gecko)
-    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-    5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-    6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-    7. [MFBT](/fr/docs/Mozilla/MFBT)
-    8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-    9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-    10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-    11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. [Le projet Mozilla](/fr/docs/Mozilla/)
+   2. [Gecko](/fr/docs/Mozilla/Gecko)
+   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
+   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
+   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
+   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
+   7. [MFBT](/fr/docs/Mozilla/MFBT)
+   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
+   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
+   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
+   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
+   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
 4. Développer et contribuer
 
-    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-    2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
-    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-    5. [Localisation](/fr/docs/Mozilla/Localization)
-    6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-    7. [Assurance qualité](/fr/docs/Mozilla/QA)
-    8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
+   2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
+   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
+   5. [Localisation](/fr/docs/Mozilla/Localization)
+   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
+   7. [Assurance qualité](/fr/docs/Mozilla/QA)
+   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
 
 ## Changement concernant les développeurs
 
@@ -76,7 +75,7 @@ Liens:
 - ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Symbols) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
 
   - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
-  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%`  en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
+  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
 
 - Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
 

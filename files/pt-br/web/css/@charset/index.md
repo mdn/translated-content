@@ -1,5 +1,5 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
 
@@ -32,17 +32,17 @@ onde :
 
 ## Exemplos
 
-```css
-@charset "UTF-8";       /* Define a codificação da folha de estilo para Unicode UTF-8 */
+```css-nolint
+@charset "UTF-8"; /* Define a codificação da folha de estilo para Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Define a codificação da folha de estilo para Latin-9 (línguas da Europa Ocidental, com sinal de euro) */
- @charset "UTF-8";      /* Inválido, há um caracter (espaço) antes da regra */
-@charset UTF-8;         /*  Inválido, sem ‘ ou ", o conjunto de caracteres não é uma {{cssxref("&lt;string&gt;")}} CSS */
+ @charset "UTF-8"; /* Inválido, há um caracter (espaço) antes da regra */
+@charset UTF-8; /*  Inválido, sem ‘ ou ", o conjunto de caracteres não é uma {{cssxref("&lt;string&gt;")}} CSS */
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------- |
+| Especificação                                            | Status                | Comentário |
+| -------------------------------------------------------- | --------------------- | ---------- |
 | {{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }} | {{ Spec2('CSS2.1') }} |            |
 
 ## Compatibilidade de navegadores

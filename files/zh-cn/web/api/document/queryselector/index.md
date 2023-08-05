@@ -48,15 +48,15 @@ CSS 伪类不会返回任何元素，见 [Selectors API](https://www.w3.org/TR/s
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar')               // "#fooar"
-  document.querySelector('#foo\bar')    // 不匹配任何元素
+  console.log("#foo\bar"); // "#fooar"
+  document.querySelector("#foo\bar"); // 不匹配任何元素
 
-  console.log('#foo\\bar')              // "#foo\bar"
-  console.log('#foo\\\\bar')            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar') // 匹配第一个 div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // 匹配第一个 div
 
-  document.querySelector('#foo:bar')    // 不匹配任何元素
-  document.querySelector('#foo\\:bar')  // 匹配第二个 div
+  document.querySelector("#foo:bar"); // 不匹配任何元素
+  document.querySelector("#foo\\:bar"); // 匹配第二个 div
 </script>
 ```
 

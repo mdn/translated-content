@@ -1,7 +1,6 @@
 ---
 title: <altGlyph>
 slug: orphaned/Web/SVG/Element/altGlyph
-original_slug: Web/SVG/Element/altGlyph
 ---
 
 {{SVGRef}}{{deprecated_header}}
@@ -38,7 +37,7 @@ original_slug: Web/SVG/Element/altGlyph
 
 ## DOM 인터페이스
 
-이 엘리먼트는 [`SVGAltGlyphElement`](/en-US/docs/Web/API/SVGAltGlyphElement) 인터페이스를 구현한다..
+이 엘리먼트는 [`SVGAltGlyphElement`](/ko/docs/Web/API/SVGAltGlyphElement) 인터페이스를 구현한다..
 
 ## 명세서
 

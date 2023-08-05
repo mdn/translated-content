@@ -208,10 +208,6 @@
     "modified": "2019-07-04T12:16:45.863Z",
     "contributors": ["BVaflick"]
   },
-  "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {
-    "modified": "2019-03-18T21:45:23.068Z",
-    "contributors": ["wbamberg", "maxypayne"]
-  },
   "Glossary": {
     "modified": "2020-10-07T11:13:45.197Z",
     "contributors": [
@@ -1206,18 +1202,6 @@
     "modified": "2020-07-16T22:40:14.761Z",
     "contributors": ["TurtleOld", "baradusov", "niktariy", "boxa6"]
   },
-  "Learn/Accessibility/Mobile": {
-    "modified": "2020-07-16T22:40:32.502Z",
-    "contributors": ["boxa6"]
-  },
-  "Learn/Accessibility/Multimedia": {
-    "modified": "2020-07-16T22:40:27.927Z",
-    "contributors": ["boxa6"]
-  },
-  "Learn/Accessibility/WAI-ARIA_basics": {
-    "modified": "2020-07-16T22:40:23.911Z",
-    "contributors": ["streloc84", "boxa6"]
-  },
   "Learn/Accessibility/What_is_accessibility": {
     "modified": "2020-07-16T22:40:06.747Z",
     "contributors": ["niktariy", "Frisle", "Pristavka"]
@@ -1657,17 +1641,6 @@
       "GaidaiAndrii",
       "bracket",
       "Dmitrij"
-    ]
-  },
-  "Learn/Forms/Basic_native_form_controls": {
-    "modified": "2020-12-02T02:50:19.864Z",
-    "contributors": [
-      "kan0neego",
-      "lazyelf472",
-      "Галина",
-      "shade0602",
-      "outdever",
-      "Instantrec"
     ]
   },
   "Learn/Forms/Form_validation": {
@@ -3499,10 +3472,6 @@
   "Mozilla/Add-ons/WebExtensions/Modify_a_web_page": {
     "modified": "2020-08-27T17:26:46.914Z",
     "contributors": ["sergserg213", "Vorteri", "klavatron"]
-  },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
   },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2020-05-17T16:42:52.348Z",
@@ -8140,10 +8109,6 @@
     "modified": "2019-03-23T22:29:56.828Z",
     "contributors": ["BychekRU"]
   },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2019-03-23T22:37:34.919Z",
-    "contributors": ["teoli", "DVV", "andreww2012"]
-  },
   "Web/CSS/:-moz-only-whitespace": {
     "modified": "2020-10-15T22:11:44.237Z",
     "contributors": ["ExE-Boss", "ialexi-bl"]
@@ -8480,14 +8445,6 @@
     "modified": "2019-03-23T22:55:54.351Z",
     "contributors": ["surrsoft"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-09-26T17:15:05.505Z",
-    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-03-18T21:30:19.329Z",
-    "contributors": ["Hoopers_Hooch"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:45:05.678Z",
     "contributors": ["TViglesGoom"]
@@ -8805,6 +8762,14 @@
   "Web/CSS/CSS_scroll_snap/Basic_concepts": {
     "modified": "2020-04-24T16:34:16.121Z",
     "contributors": ["hisbvdis"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-09-26T17:15:05.505Z",
+    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-03-18T21:30:19.329Z",
+    "contributors": ["Hoopers_Hooch"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2019-03-23T22:31:01.222Z",
@@ -16735,6 +16700,10 @@
     "modified": "2020-05-13T06:10:35.795Z",
     "contributors": ["mandalorian7117", "cvrebert"]
   },
+  "conflicting/Web/CSS/:focus-visible": {
+    "modified": "2019-03-23T22:37:34.919Z",
+    "contributors": ["teoli", "DVV", "andreww2012"]
+  },
   "conflicting/Web/CSS/:is": {
     "modified": "2019-03-23T22:39:12.816Z",
     "contributors": ["BychekRU", "JhonyLe"]
@@ -17394,10 +17363,6 @@
     "modified": "2019-03-23T23:07:09.701Z",
     "contributors": ["wbamberg", "Mingun"]
   },
-  "orphaned/MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2019-07-08T19:30:04.842Z",
-    "contributors": ["fuggy", "wbamberg", "MariyaSka", "cpigat"]
-  },
   "orphaned/MDN/Tools/Page_deletion": {
     "modified": "2019-01-16T19:44:31.713Z",
     "contributors": ["wbamberg", "Mingun"]
@@ -17424,6 +17389,10 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-18T21:06:53.326Z",
+    "contributors": ["gladisihor"]
   },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",
