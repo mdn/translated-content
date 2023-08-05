@@ -17,6 +17,7 @@ while (condicion)
 ```
 
 - `condicion`
+
   - : Una expresión que se evalúa antes de cada paso del bucle. Si esta condición se evalúa como verdadera, se ejecuta `sentencia`. Cuando la condición se evalúa como false, la ejecución continúa con la `sentencia` posterior al bucle `while`.
 
 - `sentencia`
@@ -30,7 +31,7 @@ El siguiente bucle `while` itera mientras `n` es menor que tres.
 n = 0;
 x = 0;
 while (n < 3) {
-  n ++;
+  n++;
   x += n;
 }
 ```

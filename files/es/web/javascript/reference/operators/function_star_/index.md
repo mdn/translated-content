@@ -37,8 +37,8 @@ Una expresión `function*` es muy similar y tiene casi la misma sintaxis que una
 El siguiente ejemplo define una función generadora sin nombre y la asigna a `x`. La función produce el cuadrado de su argumento:
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
