@@ -1,7 +1,6 @@
 ---
 title: ":where()"
 slug: Web/CSS/:where
-translation_of: Web/CSS/:where
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

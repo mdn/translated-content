@@ -1,7 +1,6 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
 {{AddonSidebar()}}

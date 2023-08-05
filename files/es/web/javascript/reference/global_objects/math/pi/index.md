@@ -1,7 +1,6 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/PI
 ---
 
 {{JSRef}}La propiedad **`Math.PI`** representa la relacion entre la longitud de la circunferencia de un circulo y su diametro, la cual es aproximadamente 3.14159.

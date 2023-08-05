@@ -1,7 +1,6 @@
 ---
 title: Мультимедиа и встраивание
 slug: Learn/HTML/Multimedia_and_embedding
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
 
 {{LearnSidebar}}

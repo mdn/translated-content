@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
-translation_of: Web/API/PerformanceResourceTiming/responseStart
 ---
 
 {{APIRef("Resource Timing API")}}

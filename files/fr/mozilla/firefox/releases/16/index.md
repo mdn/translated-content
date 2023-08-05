@@ -1,7 +1,6 @@
 ---
 title: Firefox 16 pour les développeurs
 slug: Mozilla/Firefox/Releases/16
-translation_of: Mozilla/Firefox/Releases/16
 ---
 
 {{FirefoxSidebar}}

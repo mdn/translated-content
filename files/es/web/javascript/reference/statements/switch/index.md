@@ -1,7 +1,6 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-original_slug: Web/JavaScript/Referencia/Sentencias/switch
 ---
 
 {{jsSidebar("Statements")}}

@@ -1,13 +1,6 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
-translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
 
 [CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/Media_Queries/Using_media_queries) **`prefers-reduced-motion`** может использоваться для определения того, запросил ли пользователь, чтобы ОС минимизировала количество анимации или движения, которые она использует.

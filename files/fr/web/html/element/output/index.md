@@ -1,7 +1,6 @@
 ---
 title: "<output> : l'élément de sortie"
 slug: Web/HTML/Element/output
-translation_of: Web/HTML/Element/output
 ---
 
 {{HTMLSidebar}}

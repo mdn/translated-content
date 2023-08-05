@@ -1,7 +1,6 @@
 ---
 title: Utiliser l'API Gamepad
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}

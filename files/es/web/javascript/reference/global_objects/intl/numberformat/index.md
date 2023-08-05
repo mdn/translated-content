@@ -1,7 +1,6 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat
 ---
 
 {{JSRef}}

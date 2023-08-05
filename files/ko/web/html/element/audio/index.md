@@ -267,7 +267,7 @@ Also it's a good practice to provide some content (such as the direct download l
         >,
         <a href="/ko/docs/Web/Guide/HTML/Content_categories#내장_콘텐츠"
           >내장 콘텐츠</a
-        >. {{htmlattrxref("controls", "audio")}} 특성을 가진 경우,
+        >. <a href="/ko/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> 특성을 가진 경우,
         <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠"
           >대화형 콘텐츠</a
         >
@@ -278,7 +278,7 @@ Also it's a good practice to provide some content (such as the direct download l
       <th scope="row">가능한 콘텐츠</th>
       <td>
         <p>
-          {{htmlattrxref("src", "audio")}} 특성을 가진 경우 0개
+          <a href="/ko/docs/Web/HTML/Element/audio#src"><code>src</code></a> 특성을 가진 경우 0개
           이상의 {{htmlelement("track")}} 요소와 그 이후의 투명한
           콘텐츠. 단, 다른 {{htmlelement("audio")}}와
           {{htmlelement("video")}} 요소는 불가능.

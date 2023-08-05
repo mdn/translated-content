@@ -1,7 +1,6 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
 ---
 {{CSSRef}}
 

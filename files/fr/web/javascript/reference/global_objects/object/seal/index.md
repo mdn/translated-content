@@ -1,7 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 ---
 
 {{JSRef}}

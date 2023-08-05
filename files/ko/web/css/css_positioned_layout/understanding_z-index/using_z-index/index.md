@@ -1,7 +1,6 @@
 ---
 title: z-index 적용
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: table
 slug: Web/API/HTMLTableElement
-translation_of: Web/API/HTMLTableElement
 ---
 
 {{ ApiRef() }}

@@ -1,7 +1,6 @@
 ---
 title: <feMerge>
 slug: Web/SVG/Element/feMerge
-translation_of: Web/SVG/Element/feMerge
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/link
 ---
 
 {{JSRef("Objetos_globales", "String")}}

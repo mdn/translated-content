@@ -1,7 +1,6 @@
 ---
 title: Idempotente
 slug: Glossary/Idempotent
-original_slug: Glossario/Idempotente
 ---
 
 Um método HTTP é **idempotente** se uma requisição idêntica pode ser feita uma ou mais vezes em sequência com o mesmo efeito enquanto deixa o servidor no mesmo estado. Em outras palavras, um método idempotente não deveria possuir nenhum efeito colateral (exceto para manter estatísticas). Implementados corretamente, o {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, e {{HTTPMethod("DELETE")}} são métodos **idempotentes**, mas não o método {{HTTPMethod("POST")}}. Todos os métodos {{glossary("seguro")}}s também são idempotentes.

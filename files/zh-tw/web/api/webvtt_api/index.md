@@ -1,7 +1,6 @@
 ---
 title: WebVTT
 slug: Web/API/WebVTT_API
-original_slug: Web/API/Web_Video_Text_Tracks_Format
 ---
 
 WebVTT 是一種 UTF-8 編碼的文字檔案格式，可藉由 {{ HTMLElement("track") }} 元素顯示加註時間資訊之文字軌，其主要設計目的是為 {{ HTMLElement("video") }} 顯示字幕。

@@ -1,7 +1,6 @@
 ---
 title: Tu segunda extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
 ---
 
 {{AddonSidebar}}

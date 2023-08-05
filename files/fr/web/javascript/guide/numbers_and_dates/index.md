@@ -1,7 +1,6 @@
 ---
 title: Nombres et dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}

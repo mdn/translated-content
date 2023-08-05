@@ -1,13 +1,6 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоклассы
-translation_of: Web/CSS/:last-of-type
 ---
 {{CSSRef}}
 

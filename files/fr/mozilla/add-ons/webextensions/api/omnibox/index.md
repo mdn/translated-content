@@ -1,7 +1,6 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
 
 {{AddonSidebar}}

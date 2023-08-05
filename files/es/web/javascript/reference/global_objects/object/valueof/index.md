@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/valueOf
 ---
 
 {{JSRef("Global_Objects", "Object")}}

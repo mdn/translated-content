@@ -1,7 +1,6 @@
 ---
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
 
 {{AddonSidebar}}

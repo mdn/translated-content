@@ -1,7 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-translation_of: Web/API/Performance/now
 ---
 
 {{APIRef("High Resolution Timing")}}

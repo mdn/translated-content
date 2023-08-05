@@ -1,7 +1,6 @@
 ---
 title: "HTML: 접근성의 좋은 기반"
 slug: Learn/Accessibility/HTML
-original_slug: Learn/접근성/HTML
 l10n:
   sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---

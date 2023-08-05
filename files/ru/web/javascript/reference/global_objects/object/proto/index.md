@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 {{JSRef("Global_Objects", "Object")}}

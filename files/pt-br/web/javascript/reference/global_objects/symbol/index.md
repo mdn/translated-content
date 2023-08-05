@@ -52,9 +52,9 @@ Se você realmente quiser criar um objeto empacotador de `Symbol`, você pode us
 
 ```js
 var sym = Symbol("foo");
-typeof sym;     // "symbol"
+typeof sym; // "symbol"
 var symObj = Object(sym);
-typeof symObj;  // "object"
+typeof symObj; // "object"
 ```
 
 ### Símbolos compartilhados no registro global de símbolo
@@ -117,9 +117,9 @@ Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
 O operador {{jsxref("Operators/typeof", "typeof")}} pode ajudar a identificar os símbolos.
 
 ```js
-typeof Symbol() === 'symbol'
-typeof Symbol('foo') === 'symbol'
-typeof Symbol.iterator === 'symbol'
+typeof Symbol() === "symbol";
+typeof Symbol("foo") === "symbol";
+typeof Symbol.iterator === "symbol";
 ```
 
 ### Conversões de tipos de símbolos
@@ -145,7 +145,7 @@ obj["c"] = "c";
 obj.d = "d";
 
 for (var i in obj) {
-   console.log(i); // logs "c" and "d"
+  console.log(i); // logs "c" and "d"
 }
 ```
 
@@ -154,7 +154,7 @@ for (var i in obj) {
 Propriedade com chave de símbolo vão ser completamente ignoradas quando usando `JSON.stringify()`:
 
 ```js
-JSON.stringify({[Symbol("foo")]: "foo"});
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
 ```
 
@@ -166,15 +166,15 @@ Quando um objeto wrapper de um símbolo é usado como uma chave de propriedade, 
 
 ```js
 var sym = Symbol("foo");
-var obj = {[sym]: 1};
-obj[sym];            // 1
-obj[Object(sym)];    // still 1
+var obj = { [sym]: 1 };
+obj[sym]; // 1
+obj[Object(sym)]; // still 1
 ```
 
 ## Especificações
 
-| Specification                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
+| Specification                                           | Status              | Comment            |
+| ------------------------------------------------------- | ------------------- | ------------------ |
 | {{SpecName('ES2015', '#sec-symbol-objects', 'Symbol')}} | {{Spec2('ES2015')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: ":first-of-type"
 slug: Web/CSS/:first-of-type
-translation_of: Web/CSS/:first-of-type
 ---
 
 {{CSSRef}}

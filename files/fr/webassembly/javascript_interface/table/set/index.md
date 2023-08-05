@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set
 ---
 
 {{WebAssemblySidebar}}

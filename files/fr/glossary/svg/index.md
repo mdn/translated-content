@@ -1,7 +1,6 @@
 ---
 title: SVG
 slug: Glossary/SVG
-translation_of: Glossary/SVG
 ---
 
 _Scalable Vector Graphics_ (**SVG**) est un format d'image vectorielle 2D basé sur une syntaxe {{Glossary("XML")}}.

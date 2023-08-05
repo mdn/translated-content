@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ---
 
 {{JSRef}}

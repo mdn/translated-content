@@ -1,7 +1,6 @@
 ---
 title: CSS ルビレイアウト
 slug: Web/CSS/CSS_ruby_layout
-original_slug: Web/CSS/CSS_Ruby
 ---
 
 {{CSSRef}}

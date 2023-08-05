@@ -1,7 +1,6 @@
 ---
 title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getSelf
 ---
 
 {{AddonSidebar()}}

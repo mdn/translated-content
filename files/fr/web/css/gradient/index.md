@@ -1,7 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-translation_of: Web/CSS/gradient
 ---
 
 {{CSSRef}}

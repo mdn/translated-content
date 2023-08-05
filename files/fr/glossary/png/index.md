@@ -1,7 +1,6 @@
 ---
 title: PNG
 slug: Glossary/PNG
-translation_of: Glossary/PNG
 ---
 
 **PNG** (_Portable Network Graphics_) est un format de fichiers graphiques qui supporte la compression de données sans perte.

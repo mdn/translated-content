@@ -1,5 +1,5 @@
 ---
-title: '<big>: Elemento para deixar o texto maio'
+title: "<big>: Elemento para deixar o texto maio"
 slug: Web/HTML/Element/big
 ---
 

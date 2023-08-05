@@ -1,17 +1,6 @@
 ---
 title: Веб-производительность
 slug: Learn/Performance
-tags:
-  - CSS
-  - HTML
-  - HTTP
-  - JavaScript
-  - Learn
-  - NeedsTranslation
-  - Performance
-  - TopicStub
-  - Web Performance
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}

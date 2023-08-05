@@ -15,8 +15,8 @@ O código de resposta HTTP **`413 Payload Too Large`** indica que a carga da req
 
 ## Especificações
 
-| Specification                                                        | Title                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Specification                                       | Title                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1):Semânticas e Conteúdo |
 
 ## Veja também

@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
-translation_of: Web/API/PerformanceElementTiming/naturalHeight
 ---
 
 {{APIRef("Element Timing API")}}

@@ -1,7 +1,6 @@
 ---
-title: 'Window: offline イベント'
+title: "Window: offline イベント"
 slug: Web/API/Window/offline_event
-original_slug: Web/API/Document/onoffline
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---

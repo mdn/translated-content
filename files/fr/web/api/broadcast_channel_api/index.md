@@ -1,7 +1,6 @@
 ---
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
-translation_of: Web/API/Broadcast_Channel_API
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---

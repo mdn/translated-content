@@ -1,7 +1,6 @@
 ---
 title: Firefox 29 pour les développeurs
 slug: Mozilla/Firefox/Releases/29
-translation_of: Mozilla/Firefox/Releases/29
 ---
 
 {{FirefoxSidebar}}

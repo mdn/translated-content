@@ -1,7 +1,6 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-translation_of: Web/CSS/display-inside
 ---
 
 {{CSSRef}}

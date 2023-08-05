@@ -1,13 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
-tags:
-  - Element
-  - HTML
-  - Веб
-  - Пароль
-  - Формы
-translation_of: Web/HTML/Element/input/password
 ---
 
 {{HTMLSidebar}}
@@ -19,17 +12,17 @@ translation_of: Web/HTML/Element/input/password
 > **Примечание:** Любые формы, содержащие конфиденциальную информацию, такую как пароли (например, формы входа), должны обслуживаться через HTTPS; В Firefox теперь реализованы несколько механизмов для предупреждения от небезопасных форм входа в систему - см. [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords). Другие браузеры также реализуют аналогичные механизмы.
 
 ```html
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-| **[Value](#value)**               | {{domxref("DOMString")}} представляет пароль или пустую строку                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **[Value](#value)**               | {{domxref("DOMString")}} представляет пароль или пустую строку                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **Общие поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`inputmode`](/ru/docs/Web/HTML/Element/input#inputmode), [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), [`required`](/ru/docs/Web/HTML/Element/input#required), and [`size`](/ru/docs/Web/HTML/Element/input#size) |
-| **IDL атрибуты**                  | `selectionStart`, `selectionEnd`, `selectionDirection`, и `value`                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, и {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}                                                                                                                                                                                                                           |
+| **IDL атрибуты**                  | `selectionStart`, `selectionEnd`, `selectionDirection`, и `value`                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Методы**                        | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, и {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}                                                                                                                                                                                                                                                                                                                                       |
 
 ## Значения
 
@@ -49,7 +42,7 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">Пароль:</label>
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("Простое_поле_ввода_пароля", 600, 40)}}
@@ -69,7 +62,7 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">Пароль:</label>
-<input id="userPassword" type="password" autocomplete="current-password">
+<input id="userPassword" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}
@@ -80,7 +73,7 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">Пароль:</label>
-<input id="userPassword" type="password" required>
+<input id="userPassword" type="password" required />
 ```
 
 {{EmbedLiveSample("Обязательное_заполнение_пароля", 600, 40)}}
@@ -91,7 +84,7 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="pin">ПИН:</label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Указание_режима_ввода", 600, 40)}}
@@ -102,8 +95,13 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="pin">ПИН:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Настройка_длины_пароля", 600, 40)}}
@@ -116,16 +114,16 @@ translation_of: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">Пароль</label>
-<input id="userPassword" type="password" size="12">
+<input id="userPassword" type="password" size="12" />
 <button id="selectAll">Выделить все</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function(event) {
+document.getElementById("selectAll").onclick = function (event) {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### Результат
@@ -142,8 +140,11 @@ document.getElementById("selectAll").onclick = function(event) {
 
 ```html
 <label for="hexId">Hex ID:</label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="Enter an ID consisting of 4-8 hexadecimal digits">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Enter an ID consisting of 4-8 hexadecimal digits" />
 ```
 
 {{EmbedLiveSample("Валидация", 600, 40)}}
@@ -161,10 +162,16 @@ document.getElementById("selectAll").onclick = function(event) {
 
 ```html
 <label for="ssn">SSN:</label>
-<input type="password" id="ssn" inputmode="number" minlength="9" maxlength="12"
-    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="ssn"
+  inputmode="number"
+  minlength="9"
+  maxlength="12"
+  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+  required
+  autocomplete="off" />
+<br />
 <label for="ssn">Value:</label>
 <span id="current"></span>
 ```
@@ -179,9 +186,9 @@ document.getElementById("selectAll").onclick = function(event) {
 var ssn = document.getElementById("ssn");
 var current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = function (event) {
   current.innerHTML = ssn.value;
-}
+};
 ```
 
 #### Результат

@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
 
 {{JSRef}}
