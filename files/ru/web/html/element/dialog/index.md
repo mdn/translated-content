@@ -10,11 +10,11 @@ slug: Web/HTML/Element/dialog
 {{cssxref('::backdrop')}} CSS псевдо-элемент может быть использован для стилизации фона подложки элемента `<dialog>`, например для затемнения недоступного содержимого, пока диалог активен.
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный контент](/ru/docs/Web/Guide/HTML/Content_categories#Секционный_контент) |
-| - | - |
-| Разрешённый контент | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) |
-| Опускание тегов | {{no_tag_omission}} |
-| Разрешённые родительские элементы | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) |
-| DOM-интерфейс | {{domxref("HTMLDialogElement")}} |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённый контент                                              | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                                                      |
+| Опускание тегов                                                  | {{no_tag_omission}}                                                                                                                                              |
+| Разрешённые родительские элементы                                | Любой элемент, в котором разрешён [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток)                                                    |
+| DOM-интерфейс                                                    | {{domxref("HTMLDialogElement")}}                                                                                                                                 |
 
 ## Атрибуты
 
@@ -40,13 +40,15 @@ slug: Web/HTML/Element/dialog
 <dialog id="favDialog">
   <form method="dialog">
     <section>
-      <p><label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select></p>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </p>
     </section>
     <menu>
       <button id="cancel" type="reset">Cancel</button>
@@ -60,21 +62,20 @@ slug: Web/HTML/Element/dialog
 </menu>
 
 <script>
-  (function() {
-    var updateButton = document.getElementById('updateDetails');
-    var cancelButton = document.getElementById('cancel');
-    var favDialog = document.getElementById('favDialog');
+  (function () {
+    var updateButton = document.getElementById("updateDetails");
+    var cancelButton = document.getElementById("cancel");
+    var favDialog = document.getElementById("favDialog");
 
     // Update button opens a modal dialog
-    updateButton.addEventListener('click', function() {
+    updateButton.addEventListener("click", function () {
       favDialog.showModal();
     });
 
     // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function() {
+    cancelButton.addEventListener("click", function () {
       favDialog.close();
     });
-
   })();
 </script>
 ```
@@ -84,13 +85,15 @@ slug: Web/HTML/Element/dialog
 <dialog id="favDialog">
   <form method="dialog">
     <section>
-      <p><label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select></p>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </p>
     </section>
     <menu>
       <button id="cancel" type="reset">Cancel</button>
@@ -104,21 +107,20 @@ slug: Web/HTML/Element/dialog
 </menu>
 
 <script>
-  (function() {
-    var updateButton = document.getElementById('updateDetails');
-    var cancelButton = document.getElementById('cancel');
-    var favDialog = document.getElementById('favDialog');
+  (function () {
+    var updateButton = document.getElementById("updateDetails");
+    var cancelButton = document.getElementById("cancel");
+    var favDialog = document.getElementById("favDialog");
 
     // Update button opens a modal dialog
-    updateButton.addEventListener('click', function() {
+    updateButton.addEventListener("click", function () {
       favDialog.showModal();
     });
 
     // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function() {
+    cancelButton.addEventListener("click", function () {
       favDialog.close();
     });
-
   })();
 </script>
 ```

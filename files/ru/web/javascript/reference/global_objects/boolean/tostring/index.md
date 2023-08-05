@@ -2,6 +2,7 @@
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
+
 {{JSRef("Global_Objects", "Boolean")}}
 
 ## Сводка
@@ -39,11 +40,11 @@ var myVar = flag.toString();
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                         | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                              | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}                 | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 
