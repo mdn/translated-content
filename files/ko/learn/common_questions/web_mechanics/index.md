@@ -18,7 +18,7 @@ l10n:
 - [하이퍼링크란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
   - : 이 글에서는, 하이퍼링크의 정의와 하이퍼링크가 중요한 이유에 대해 살펴봅니다.
 - [URL이란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-  - : {{Glossary("Hypertext")}} 및 {{Glossary("HTTP")}}에서, URL은 인터넷에 관한 핵심 개념입니다. URL은 {{Glossary("Browser","browsers")}}가 웹에 게시된 리소스를 검색하는 데 사용하는 방식입니다.
+  - : {{Glossary("Hypertext")}} 및 {{Glossary("HTTP")}}에서, URL은 인터넷에 관한 핵심 개념입니다. URL은 {{Glossary("Browser","브라우저")}}가 웹에 게시된 리소스를 검색하는 데 사용하는 방식입니다.
 - [도메인 네임이란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
   - : 도메인 네임은 인터넷 인프라의 핵심 구성 요소입니다. 도메인 이름은 인터넷에서 사용할 수 있는 모든 웹 서버에 사람이 읽을 수 있는 주소를 제공합니다.
 - [웹 서버란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
