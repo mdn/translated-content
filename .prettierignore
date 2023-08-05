@@ -40,9 +40,6 @@ build/
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
-# es
-/files/es/web/javascript/reference/**/*.md
-
 # ja
 /files/ja/mdn/**/*.md
 /files/ja/web/api/**/*.md
