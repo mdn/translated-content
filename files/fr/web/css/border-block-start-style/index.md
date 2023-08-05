@@ -1,7 +1,6 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
-translation_of: Web/CSS/border-block-start-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

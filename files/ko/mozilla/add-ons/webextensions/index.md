@@ -2,6 +2,7 @@
 title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Extension(이하 확장기능)은 브라우저의 기능을 확장하고 수정할 수 있습니다. Firefox 를 위한 확장기능은 확장 기능 개발을 위한 크로스 브라우저 시스템인 WebExtension API를 이용하여 만들어졌습니다. 이 시스템은 Google Chrome, Opera 및 [W3C Draft Community Group](https://browserext.github.io/browserext/)에서 지원하는 [extension API](https://developer.chrome.com/extensions) 와 대부분 호환됩니다. 그러므로 Google Chrome과 Opera를 대상으로 만들어진 확장기능은 [조금만 수정](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome)하면 대부분 Firefox나 [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/extensions/)에서도 동작합니다. 또한 extension API는 [멀티프로세스 Firefox](/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.

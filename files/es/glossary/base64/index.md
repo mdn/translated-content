@@ -1,7 +1,6 @@
 ---
 title: Base64 codificando y decodificando
 slug: Glossary/Base64
-original_slug: Web/API/WindowBase64/Base64_codificando_y_decodificando
 ---
 
 **Base64** es un grupo de esquemas de [codificación de binario a texto](https://es.wikipedia.org/wiki/Codificaci%C3%B3n_de_binario_a_texto) que representa los datos binarios mediante una cadena ASCII, traduciéndolos en una representación radix-64. El término _Base64_ se origina de un [sistema de codificación de transmisión de contenido MIME](https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding) específico.

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-**`detune`** は {{domxref("AudioBufferSourceNode")}} インターフェイスのプロパティで、[k-rate](/ja/docs/Web/API/AudioParam#k-rate) の {{domxref("AudioParam")}} 再生時の離調を[セント](https://ja.wikipedia.org/wiki/セント_(音楽))単位で表します。
+**`detune`** は {{domxref("AudioBufferSourceNode")}} インターフェイスのプロパティで、[k-rate](/ja/docs/Web/API/AudioParam#k-rate) の {{domxref("AudioParam")}} 再生時の離調を[セント](<https://ja.wikipedia.org/wiki/セント_(音楽)>)単位で表します。
 
 例えば、 +100 と -100 の値は半音ずつ上下に離調し、 +1200 と -1200 の値は 1 オクターブずつ上下に離調します。
 
@@ -29,7 +29,7 @@ const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 const myArrayBuffer = audioCtx.createBuffer(
   channelCount,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 for (let channel = 0; channel < channelCount; channel++) {

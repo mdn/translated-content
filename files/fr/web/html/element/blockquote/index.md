@@ -1,7 +1,6 @@
 ---
 title: "<blockquote> : l'élément de bloc de citation"
 slug: Web/HTML/Element/blockquote
-translation_of: Web/HTML/Element/blockquote
 ---
 
 {{HTMLSidebar}}

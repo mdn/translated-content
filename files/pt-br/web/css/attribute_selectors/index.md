@@ -1,7 +1,6 @@
 ---
 title: Seletor de atributos
 slug: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Seletor_de_atributos
 ---
 
 {{CSSRef}}
@@ -15,7 +14,8 @@ a[title] {
 }
 
 /* <a> elementos combinando com um href "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -101,16 +101,26 @@ a[href$=".org"] {
 
 ```css
 /* Todas divs com um atributo `lang` em negrito. */
-div[lang] { font-weight: bold; }
+div[lang] {
+  font-weight: bold;
+}
 /* Todas divs com US English em azul (blue). */
-div[lang~="en-us"] { color: blue; }
+div[lang~="en-us"] {
+  color: blue;
+}
 /* Todas divs onde Portuguese esta em verde (green). */
-div[lang="pt"] { color: green; }
+div[lang="pt"] {
+  color: green;
+}
 /* Todas divs onde Chinese esta em vermelho (red), Simplificado para (zh-CN) ou tradicional (zh-TW). */
-div[lang|="zh"] { color: red; }
+div[lang|="zh"] {
+  color: red;
+}
 /* Todas divs com Traditional Chinese `data-lang` que é purple. */
 /* Nota: Você também poderia usar atributos separados por hífen com aspas duplas */
-div[data-lang="zh-TW"] { color: purple; }
+div[data-lang="zh-TW"] {
+  color: purple;
+}
 ```
 
 #### HTML
@@ -129,11 +139,11 @@ div[data-lang="zh-TW"] { color: purple; }
 
 ## Especificações
 
-| Specification                                                                                                | Status                               | Comment                                                           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Adiciona um modificador para a seleção do valor do atributo ASCII |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                   |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Definição Inicial                                                 |
+| Specification                                                                      | Status                      | Comment                                                           |
+| ---------------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}      | {{Spec2('CSS4 Selectors')}} | Adiciona um modificador para a seleção do valor do atributo ASCII |
+| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}      | {{Spec2('CSS3 Selectors')}} |                                                                   |
+| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}         | Definição Inicial                                                 |
 
 ## Browser compatibilidade
 

@@ -1,7 +1,6 @@
 ---
 title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
 
 {{AddonSidebar()}}

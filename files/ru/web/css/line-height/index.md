@@ -1,7 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-translation_of: Web/CSS/line-height
 ---
 {{CSSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -1,7 +1,6 @@
 ---
 title: Response.text()
 slug: Web/API/Response/text
-original_slug: Web/API/Body/text
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---

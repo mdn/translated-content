@@ -1,8 +1,6 @@
 ---
 title: loadstart
 slug: Web/API/XMLHttpRequest/loadstart_event
-translation_of: Web/API/XMLHttpRequest/loadstart_event
-original_slug: Web/Events/loadstart
 ---
 
 Событие `loadstart` происходит, когда начинается загрузка.
@@ -24,15 +22,15 @@ original_slug: Web/Events/loadstart
 
 ## Свойства
 
-| Property                                    | Type                                 | Description                                                                                                                                                    |
-| ------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property                              | Type                       | Description                                                                                                                                                    |
+| ------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}           | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                         |
-| `type` {{readonlyInline}}             | {{domxref("DOMString")}}     | The type of event.                                                                                                                                             |
-| `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                                                                                     |
-| `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                                                                                       |
-| `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
-| `loaded` {{readonlyInline}}           | unsigned long (long)                 | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
-| `total` {{readonlyInline}}            | unsigned long (long)                 | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
+| `type` {{readonlyInline}}             | {{domxref("DOMString")}}   | The type of event.                                                                                                                                             |
+| `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                     |
+| `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                       |
+| `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
+| `loaded` {{readonlyInline}}           | unsigned long (long)       | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
+| `total` {{readonlyInline}}            | unsigned long (long)       | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
 
 ## Связанные свойства
 

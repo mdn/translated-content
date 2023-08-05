@@ -1,7 +1,6 @@
 ---
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 ---
 
 {{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.

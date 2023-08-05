@@ -1,7 +1,6 @@
 ---
 title: L'opérateur conditionnel
 slug: Web/JavaScript/Reference/Operators/Conditional_operator
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 
 {{jsSidebar("Operators")}}

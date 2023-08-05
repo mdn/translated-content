@@ -1,7 +1,6 @@
 ---
 title: Localización de MDN Web Docs
 slug: MDN/Community/Contributing/Translated_content
-page-type: mdn-community-guide
 l10n:
   sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
 ---

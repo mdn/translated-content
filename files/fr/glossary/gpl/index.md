@@ -1,7 +1,6 @@
 ---
 title: GPL
 slug: Glossary/GPL
-translation_of: Glossary/GPL
 ---
 
 La (GNU) GPL (General Public License) est une licence de logiciel libre {{Glossary("copyleft")}} publiée par la Free Software Foundation. Les utilisateurs d'un programme sous licence GPL se voient attribuer les libertés de l'utiliser, de lire son code source, de le modifier et de redistribuer les modifications qu'ils ont réalisées, à condition de redistribuer le programme (modifié ou non) sous la même licence.

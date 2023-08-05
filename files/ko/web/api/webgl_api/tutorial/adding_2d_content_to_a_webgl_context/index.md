@@ -35,7 +35,10 @@ function initShaders() {
 
   gl.useProgram(shaderProgram);
 
-  vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  vertexPositionAttribute = gl.getAttribLocation(
+    shaderProgram,
+    "aVertexPosition",
+  );
   gl.enableVertexAttribArray(vertexPositionAttribute);
 }
 ```
@@ -73,14 +76,14 @@ function getShader(gl, id) {
 특정 ID를 가진 엘리먼트를 찾으면 텍스트 컨텐츠가 `theSource 변수에 저장됩니다.`
 
 ```js
-  if (shaderScript.type == "x-shader/x-fragment") {
-    shader = gl.createShader(gl.FRAGMENT_SHADER);
-  } else if (shaderScript.type == "x-shader/x-vertex") {
-    shader = gl.createShader(gl.VERTEX_SHADER);
-  } else {
-     // Unknown shader type
-     return null;
-  }
+if (shaderScript.type == "x-shader/x-fragment") {
+  shader = gl.createShader(gl.FRAGMENT_SHADER);
+} else if (shaderScript.type == "x-shader/x-vertex") {
+  shader = gl.createShader(gl.VERTEX_SHADER);
+} else {
+  // Unknown shader type
+  return null;
+}
 ```
 
 쉐이더를 위한 코드가 읽혀지면 쉐이더가 정점 쉐이더(MIME type "x-shader/x-vertex")인지 조각 쉐이더(MIME type "x-shader/x-fragment")인지 결정하기 위해 쉐이더 객체의 MIME 형식을 살펴봅니다. 그 다음 소스 코드에서 얻어진 것을 가지고 적절한 타입의 쉐이더를 생성합니다.
@@ -121,7 +124,6 @@ fragment의 색상에서 사용되는 gl_FragColor는 GL에서 만들어진 변�
     gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
 
   }
-
 </script>
 ```
 
@@ -147,17 +149,14 @@ fragment의 색상에서 사용되는 gl_FragColor는 GL에서 만들어진 변�
 사각형 렌더링을 하기 전에 사각형의 각 정점들을 저장할 버퍼를 만들어야 합니다. 이를 **initBuffers()** 라는 함수를 이용해 해보도록 하겠습니다. 앞으로 고급 WebGL 개념을 살펴보면서, 더욱 다양하고 복잡한 3D 오브젝트를 생성하고자 할 때 이 루틴을 많이 사용하게 될 것입니다.
 
 ```js
-var horizAspect = 480.0/640.0;
+var horizAspect = 480.0 / 640.0;
 
 function initBuffers() {
   squareVerticesBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesBuffer);
 
   var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+    1.0, 1.0, 0.0, -1.0, 1.0, 0.0, 1.0, -1.0, 0.0, -1.0, -1.0, 0.0,
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -176,7 +175,7 @@ function initBuffers() {
 function drawScene() {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 
   loadIdentity();
   mvTranslate([-0.0, 0.0, -6.0]);
@@ -217,7 +216,11 @@ function mvTranslate(v) {
 
 function setMatrixUniforms() {
   var pUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-  gl.uniformMatrix4fv(pUniform, false, new Float32Array(perspectiveMatrix.flatten()));
+  gl.uniformMatrix4fv(
+    pUniform,
+    false,
+    new Float32Array(perspectiveMatrix.flatten()),
+  );
 
   var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
   gl.uniformMatrix4fv(mvUniform, false, new Float32Array(mvMatrix.flatten()));

@@ -1,7 +1,6 @@
 ---
 title: Sending and retrieving form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
 
 많은 경우 HTML 폼은 서버에 데이터를 전송할 목적으로 사용된다. 서버는 데이터를 처리하고 사용자에게 응답을 보낼 것이다. 간단한 것 처럼 보이지만 데이터가 서버나 사용자에게 피해를 입히지 않기 위해서는 몇가지를 명심해야한다.
@@ -18,9 +17,9 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 ### 클라이언트측: 데이터 보내기
 
-{{HTMLElement("form")}} 요소는 데이터 전송 방법을 정의한다. 제공하는 모든 속성은 사용자가 submit 버튼을 누를때 보내질 요청을 구성할 수 있도록 설계되었다. 두가지 중요한 속성은 {{htmlattrxref("action","form")}} 와 {{htmlattrxref("method","form")}}이다.
+{{HTMLElement("form")}} 요소는 데이터 전송 방법을 정의한다. 제공하는 모든 속성은 사용자가 submit 버튼을 누를때 보내질 요청을 구성할 수 있도록 설계되었다. 두가지 중요한 속성은 [`action`](/ko/docs/Web/HTML/Element/form#action) 와 [`method`](/ko/docs/Web/HTML/Element/form#method)이다.
 
-#### {{htmlattrxref("action","form")}} 속성
+#### [`action`](/ko/docs/Web/HTML/Element/form#action) 속성
 
 이 속성은 데이터를 어디로 보낼 것인지 지정한다. 이 값은 반드시 유효한 URL이어야 한다.만약 이 속성을 지정하지 않으면 데이터는 폼이 있는 페이지의 URL로 보내질 것이다.
 
@@ -29,30 +28,30 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 첫번째 예제로 데이터는 `http://foo.com` 로 보낼 것이다.
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 <p class="brush: html">여기에서 데이터는 폼 페이지를 호스팅을 하는 같은 서버로 전송 되지만, 서버의 다른 URL로 전송된다.</p>
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 <p class="brush: html">아래와 같이 속성을 지정하지 않으면 {{HTMLElement("form")}} 속성은 데이터를 폼을 포함한 페이지 주소로 보낼 것이다.</p>
 
 ```html
-<form>
+<form></form>
 ```
 
 <p class="brush: html">이전에 많은 페이지들은 데이터를 반드시 폼을 포함하는 페이지와 같은 페이지에 보내는 것을 나타내는 표기법을 다음과 같이 사용했다. 그러나 HTML5 이후로 속성은 필수로 지정하지 않아도 되기 떄문에 이제 더이상 필요하지 않는다.</p>
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
-> **참고:**HTTPS(보안 HTTP) 프로토콜을 사용하는 URL을 지정하는 것도 가능하다. 이 것을 사용하면 폼 자체가 안전하지 않은 페이지에 HTTP를 이용해서 접근하는 곳에 호스트된 경우에 데이터는 나머지 요청들과 함께 암호화된다. 반면, 만약 폼이 보안 페이지에서 호스트 된 경우라도 {{htmlattrxref("action","form")}} 속성에서 안전하지 않은 HTTP URL을 지정하면 모든 브라우저는 데이터가 암호화되지 않았기 때문에 데이터를 보낼때마다 보안 경고를 출력할 것이다
+> **참고:**HTTPS(보안 HTTP) 프로토콜을 사용하는 URL을 지정하는 것도 가능하다. 이 것을 사용하면 폼 자체가 안전하지 않은 페이지에 HTTP를 이용해서 접근하는 곳에 호스트된 경우에 데이터는 나머지 요청들과 함께 암호화된다. 반면, 만약 폼이 보안 페이지에서 호스트 된 경우라도 [`action`](/ko/docs/Web/HTML/Element/form#action) 속성에서 안전하지 않은 HTTP URL을 지정하면 모든 브라우저는 데이터가 암호화되지 않았기 때문에 데이터를 보낼때마다 보안 경고를 출력할 것이다
 
-#### {{htmlattrxref("method","form")}} 속성
+#### [`method`](/ko/docs/Web/HTML/Element/form#method) 속성
 
 이 속성은 데이터를 어떻게 보낼 것인지 정의한다. [HTTP protocol](/ko/docs/HTTP) 은 요청 방법에 대해 다양한 방법들을 제공한다. HTML 폼 데이터는 오직 2가지 방법으로 만 전송 할 수 있는데 바로 GET 방식과 POST방식이 있다.
 
@@ -68,8 +67,8 @@ GET 방식은 브라우저에서 서버에 주어진 리소스를 전달해달�
 
 ```html
 <form action="http://foo.com" method="get">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -91,8 +90,8 @@ POST 방식은 조금 다르다. 이는 브라우저의 HTTP요청 바디안에 
 
 ```html
 <form action="http://foo.com" method="post">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -181,25 +180,25 @@ Hi Mom
 
 파일은 HTML 폼에서 특별한 경우이다. 파일은 2진 데이터 또는 다른 데이터는 텍스트 데이터로 간주된다.HTTP는 텍스트 프로토콜 이기 때문에 2진 데이터를 다루기 위해서는 특별한 요구 사항이있다.
 
-### {{htmlattrxref("enctype","form")}} 속성
+### [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 속성
 
 이 속성은 Content-Type HTTP 헤더의 값을 지정할 수 있게 해준다. 서버에 데이터가 무슨 종류인지 전달하기 떄문에 이 해더는 매우 중요하다. 기본 값으로는 application/x-www-form-urlencoded. 이다. 사람 말로는 "이 폼 데이터는 URL 폼 형태로 인코딩되어 있습니다" 이다
 
 만약 파일을 보내고 싶다면 두 가지를 해야한다.
 
-- {{htmlattrxref("method","form")}} 속성을 POST 속성으로 지정 해야한다. 왜냐하면 파일 콘텐츠는 폼을 이용하여 URL 매개변수로 보낼수 없기 때문이다.
-- {{htmlattrxref("enctype","form")}}의 값을 multipart/form-data 이라고 지정 해야한다. 왜냐하면 데이터는 여러 조각으로 나누워 지고 각 파일 조각에 같이 보내질 폼바디 텍스트가 추가 되기 때문이다.
+- [`method`](/ko/docs/Web/HTML/Element/form#method) 속성을 POST 속성으로 지정 해야한다. 왜냐하면 파일 콘텐츠는 폼을 이용하여 URL 매개변수로 보낼수 없기 때문이다.
+- [`enctype`](/ko/docs/Web/HTML/Element/form#enctype)의 값을 multipart/form-data 이라고 지정 해야한다. 왜냐하면 데이터는 여러 조각으로 나누워 지고 각 파일 조각에 같이 보내질 폼바디 텍스트가 추가 되기 때문이다.
 
 예제
 
 ```html
 <form method="post" enctype="multipart/form-data">
-  <input type="file" name="myFile">
+  <input type="file" name="myFile" />
   <button>Send the file</button>
 </form>
 ```
 
-> **참고:** 몇 브라우저는 {{htmlattrxref("multiple","input")}}속성을 {{HTMLElement("input")}}요소에 지원하여 한번에 여러 요소를 전달 할 수 있다. 이러한 파일을 서버측에서 다루는 방법은 서버에서 어떠한 기술을 사용하냐에 따라서 매우 달라진다. 앞에서 언급 한바와 같이 프레임워크를 사용하면 더 쉽게 이용할 수있다.
+> **참고:** 몇 브라우저는 [`multiple`](/ko/docs/Web/HTML/Element/input#multiple)속성을 {{HTMLElement("input")}}요소에 지원하여 한번에 여러 요소를 전달 할 수 있다. 이러한 파일을 서버측에서 다루는 방법은 서버에서 어떠한 기술을 사용하냐에 따라서 매우 달라진다. 앞에서 언급 한바와 같이 프레임워크를 사용하면 더 쉽게 이용할 수있다.
 
 > **경고:** 많은 서버들이 남용을 예방하기 위해 HTTP요청과 파일의 크기를 제한하도록 구성된다. 파일을 전송하기 전에 서버 관리자에게 제한 크기를 확인하는것이 중요하다.
 

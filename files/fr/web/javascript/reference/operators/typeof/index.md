@@ -1,7 +1,6 @@
 ---
 title: L'opérateur typeof
 slug: Web/JavaScript/Reference/Operators/typeof
-translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 
 {{jsSidebar("Operators")}}

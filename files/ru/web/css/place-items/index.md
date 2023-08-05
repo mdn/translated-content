@@ -1,14 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-items
 ---
 {{CSSRef}}
 

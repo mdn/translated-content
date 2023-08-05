@@ -1,7 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-translation_of: Web/API/Performance
 ---
 
 {{APIRef("High Resolution Time")}}

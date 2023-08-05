@@ -1,7 +1,6 @@
 ---
 title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
-translation_of: Web/API/SharedWorker/SharedWorker
 l10n:
   sourceCommit: abaa8b38ddf68a2b468e2b46e56b277db25f16cf
 ---

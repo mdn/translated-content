@@ -1,7 +1,6 @@
 ---
 title: 画像やメディアの追加方法
 slug: MDN/Writing_guidelines/Howto/Images_media
-original_slug: MDN/Guidelines/Video
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---

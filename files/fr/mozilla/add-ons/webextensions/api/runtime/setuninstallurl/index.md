@@ -1,7 +1,6 @@
 ---
 title: runtime.setUninstallURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 ---
 
 {{AddonSidebar()}}

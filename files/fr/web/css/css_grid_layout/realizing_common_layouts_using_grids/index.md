@@ -1,7 +1,6 @@
 ---
 title: Construire des dispositions courantes avec des grilles CSS
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: "-webkit-text-stroke-color"
 slug: Web/CSS/-webkit-text-stroke-color
-translation_of: Web/CSS/-webkit-text-stroke-color
 ---
 
 {{CSSRef}}{{Non-standard_header}}

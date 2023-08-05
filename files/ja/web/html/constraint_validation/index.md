@@ -1,7 +1,6 @@
 ---
 title: 制約検証
 slug: Web/HTML/Constraint_validation
-original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 {{HTMLSidebar}}

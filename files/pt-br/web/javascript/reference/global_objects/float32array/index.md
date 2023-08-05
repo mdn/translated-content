@@ -124,7 +124,7 @@ console.log(float32.length); // 2
 console.log(float32.BYTES_PER_ELEMENT); // 4
 
 // Por uma array
-var arr = new Float32Array([21,31]);
+var arr = new Float32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Por uma outra TypedArray
@@ -137,17 +137,19 @@ var buffer = new ArrayBuffer(16);
 var z = new Float32Array(buffer, 0, 4);
 
 // Por um iterável
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var float32 = new Float32Array(iterable);
 // Float32Array[1, 2, 3]
 ```
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comment                                                                                                                              |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Suplantada pelo ECMAScript 2015.                                                                                                     |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definição inicial no padrão ECMA. Especificado que o `new` é requerido.                                                              |
+| Especificação                                                   | Status                   | Comment                                                                                                                              |
+| --------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Suplantada pelo ECMAScript 2015.                                                                                                     |
+| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}         | Definição inicial no padrão ECMA. Especificado que o `new` é requerido.                                                              |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | O ECMAScript 7 mudou o construtor da Array `Array32Float` para o uso da operação `ToIndex` e ajudar nos construtores sem argumentos. |
 
 ## Compatibilidade com navegadores

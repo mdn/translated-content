@@ -1,7 +1,6 @@
 ---
 title: 定位
 slug: Learn/CSS/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/定位
 ---
 
 {{LearnSidebar}}

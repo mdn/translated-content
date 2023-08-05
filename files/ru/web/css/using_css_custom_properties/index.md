@@ -1,12 +1,6 @@
 ---
 title: Использование переменных в CSS
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - CSS переменные
-  - Web
-  - Руководства
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{SeeCompatTable}}

@@ -1,8 +1,6 @@
 ---
 title: Node.prefix
 slug: Web/API/Element/prefix
-translation_of: Web/API/Node/prefix
-original_slug: Web/API/Node/prefix
 ---
 
 {{APIRef("DOM")}}

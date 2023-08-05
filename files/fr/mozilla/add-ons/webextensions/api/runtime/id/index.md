@@ -1,7 +1,6 @@
 ---
 title: runtime.id
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/id
 ---
 
 {{AddonSidebar()}}

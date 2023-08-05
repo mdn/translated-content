@@ -1,7 +1,6 @@
 ---
 title: Canvas tutorial
 slug: Web/API/Canvas_API/Tutorial
-original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 
 {{DefaultAPISidebar("Canvas API")}} [![](canvas_tut_examples.jpg)](/pt-BR/docs/Web/HTML/Canvas)

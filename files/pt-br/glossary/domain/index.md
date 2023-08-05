@@ -1,7 +1,6 @@
 ---
 title: Domínio
 slug: Glossary/Domain
-original_slug: Glossario/Domínio
 ---
 
 Um domínio é uma autoridade na internet que controla seus próprios recursos. Seu "nome de domínio" é uma forma de endereçar essa autoridade como parte da hierarquia de uma {{Glossary("URL")}} — normalmente a parte mais memorável dela, por exemplo por ser uma marca.

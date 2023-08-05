@@ -1,13 +1,6 @@
 ---
 title: Лексический синтаксис
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - JavaScript
-  - Keyword
-  - Literal
-  - ключевые слова
-  - литералы
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 
 {{JsSidebar("More")}}

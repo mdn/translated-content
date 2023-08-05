@@ -1,7 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-translation_of: Web/HTML/Element/slot
 ---
 
 {{HTMLSidebar}}
@@ -11,11 +10,11 @@ HTML-элемент `<slot>` является частью набора техн
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
-| События                                                    | {{event("slotchange")}}                                                                                                                      |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                              |
-| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                               |
-| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
+| События                                                    | {{event("slotchange")}}                                                                                                                               |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                   |
+| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                      |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                                   |
+| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                                        |
 
 ## Атрибуты
 
@@ -29,8 +28,14 @@ HTML-элемент `<slot>` является частью набора техн
 ```html
 <template id="element-details-template">
   <style>
-    details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
-    .name {font-weight: bold; color: #217ac0; font-size: 120% }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
     h4 {
       margin: 10px 0 -8px 0;
       background: #217ac0;
@@ -39,12 +44,20 @@ HTML-элемент `<slot>` является частью набора техн
       border: 1px solid #cee9f9;
       border-radius: 4px;
     }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
-      <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+      <code class="name"
+        >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+      >
       <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
     </summary>
     <div class="attributes">
@@ -52,7 +65,7 @@ HTML-элемент `<slot>` является частью набора техн
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 

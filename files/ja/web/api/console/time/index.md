@@ -16,7 +16,7 @@ l10n:
 ## 構文
 
 ```js
-time(label)
+time(label);
 ```
 
 ### 引数

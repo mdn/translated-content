@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
 
 {{AddonSidebar()}}

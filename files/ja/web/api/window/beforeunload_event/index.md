@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload イベント'
+title: "Window: beforeunload イベント"
 slug: Web/API/Window/beforeunload_event
 ---
 

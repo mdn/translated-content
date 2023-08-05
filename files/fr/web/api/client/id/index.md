@@ -1,7 +1,6 @@
 ---
 title: Client.id
 slug: Web/API/Client/id
-translation_of: Web/API/Client/id
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

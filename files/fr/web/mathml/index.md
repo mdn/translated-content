@@ -1,7 +1,6 @@
 ---
 title: MathML
 slug: Web/MathML
-translation_of: Web/MathML
 ---
 
 {{MathMLRef}}

@@ -1,7 +1,6 @@
 ---
 title: <marker>
 slug: Web/SVG/Element/marker
-translation_of: Web/SVG/Element/marker
 ---
 
 {{SVGRef}}

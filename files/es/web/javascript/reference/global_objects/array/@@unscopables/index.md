@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables
 ---
 
 {{JSRef}}
@@ -30,7 +29,7 @@ El siguiente código funciona bien en ES5 y más abajo. Sin embargo, en ECMAScri
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);

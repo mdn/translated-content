@@ -1,7 +1,6 @@
 ---
 title: Liste des types MIME communs
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
 
 {{HTTPSidebar}}

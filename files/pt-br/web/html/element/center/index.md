@@ -1,5 +1,5 @@
 ---
-title: '<center>: O elemento de texto centralizado (obsoleto)'
+title: "<center>: O elemento de texto centralizado (obsoleto)"
 slug: Web/HTML/Element/center
 ---
 

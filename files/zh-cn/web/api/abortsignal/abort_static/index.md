@@ -1,7 +1,6 @@
 ---
 title: AbortSignal.abort()
 slug: Web/API/AbortSignal/abort_static
-original_slug: Web/API/AbortSignal/abort
 ---
 
 {{APIRef("DOM")}}

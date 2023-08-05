@@ -1,7 +1,6 @@
 ---
 title: Intl.Segments
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments
 ---
 
 {{JSRef}}

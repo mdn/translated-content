@@ -1,7 +1,6 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-translation_of: Web/CSS/grid-row-start
 ---
 
 {{CSSRef}}

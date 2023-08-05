@@ -1,13 +1,6 @@
 ---
 title: Console.timeEnd
 slug: Web/API/console/timeEnd
-tags:
-  - API
-  - Method
-  - Веб-разработка
-  - Отладка
-  - консоль
-translation_of: Web/API/Console/timeEnd
 ---
 
 {{APIRef("Console API")}}
@@ -45,11 +38,9 @@ console.timeEnd("answer time");
 
 Обратите внимание, что метка таймера отображается как при вызове `timeLog()`, так и завершении таймера. Кроме того, вызов timeEnd() выводит дополнительную информацию "timer ended", чтобы очевидно показать, что таймер больше не отслеживается.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                    | Status                           | Comment                    |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName("Console API", "#timeend", "console.timeEnd()")}} | {{Spec2("Console API")}} | Первоначальное определение |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -1,7 +1,6 @@
 ---
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
-translation_of: Glossary/Mozilla_Firefox
 ---
 
 Mozilla Firefox est un {{Glossary("navigateur")}} open source libre dont le développement est supervisé par Mozilla Corporation. Firefox fonctionne sur Windows, OS X, Linux, et Android.
