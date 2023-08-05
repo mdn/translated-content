@@ -14,7 +14,7 @@ l10n:
     기본적으로, 인터넷은 서로 통신하는 컴퓨터의 거대한 네트워크입니다. 이 문서에서는 인터넷이 어떻게 작동하는지에 대해 설명합니다.
 - [웹페이지, 웹사이트, 웹서버, 검색엔진의 차이점은 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
   - : 이 도움말에서는 웹페이지, 웹사이트, 웹서버, 검색엔진 등 다양한 웹 관련 개념에 대해 설명합니다.
-  이러한 용어는 웹을 처음 접하는 사람들에게 종종 혼란을 주거나, 잘못 사용되는 경우가 많습니다. 이 용어들이 실제로 무엇을 의미하는지 알아봅시다!
+    이러한 용어는 웹을 처음 접하는 사람들에게 종종 혼란을 주거나, 잘못 사용되는 경우가 많습니다. 이 용어들이 실제로 무엇을 의미하는지 알아봅시다!
 - [하이퍼링크란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
   - : 이 글에서는, 하이퍼링크의 정의와 하이퍼링크가 중요한 이유에 대해 살펴봅니다.
 - [URL이란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
