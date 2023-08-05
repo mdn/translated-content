@@ -21,7 +21,7 @@ replace(pattern, replacement)
   - : 可以是字符串或者一个带有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子就是[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。任何没有 `Symbol.replace` 方法的值都会被强制转换为字符串。
 - `replacement`
   - : 可以是字符串或函数。
-    - 如果是字符串，它将替换由 `pattern` 匹配的子字符串。支持一些特殊的替换模式，请参阅下面的[指定字符串作为替换项](#指定字符串作为替换项)章节。
+    - 如果是字符串，它将替换由 `pattern` 匹配的子字符串。支持一些特殊的替换模式，请参阅下面的[指定字符串作为替换项](#指定字符串作为替换项)部分。
     - 如果是函数，将为每个匹配调用该函数，并将其返回值用作替换文本。下面的[指定函数作为替换项](#指定函数作为替换项)部分描述了提供给此函数的参数。
 
 ### 返回值
@@ -50,29 +50,29 @@ replace(pattern, replacement)
 
 | 模式     | 插入值                                                              |
 | -------- | ------------------------------------------------------------------- |
-| `$$`     | 插入一个 `$`。                                                      |
+| `$$`     | 插入一个 `"$"`。                                                    |
 | `$&`     | 插入匹配的子字符串。                                                |
 | `` $` `` | 插入匹配子字符串之前的字符串片段。                                  |
 | `$'`     | 插入匹配子字符串之后的字符串片段。                                  |
-| `$n`     | 插入第 `n`（从 1 开始计数）个捕获组，其中 `n` 是小于 100 的正整数。 |
-| `$`      | 插入名称为 `Name` 的命名组。                                        |
+| `$n`     | 插入第 `n`（索引从 1 开始）个捕获组，其中 `n` 是小于 100 的正整数。 |
+| `$`      | 插入名称为 `Name` 的命名捕获组。                                    |
 
-只有当 `pattern` 参数是一个 {{jsxref("RegExp")}} 对象时，`$n` 和 `$<Name>` 才可用。如果 `pattern` 是字符串，或者相应的捕获组在正则表达式中不存在，则该模式将被替换为一个字面字符串。如果该组存在但未匹配（因为它是一个分支的一部分），则将用空字符串替换它。
+只有当 `pattern` 参数是一个 {{jsxref("RegExp")}} 对象时，`$n` 和 `$<Name>` 才可用。如果 `pattern` 是字符串，或者相应的捕获组在正则表达式中不存在，则该模式将被替换为一个字面量。如果该组存在但未匹配（因为它是一个分支的一部分），则将用空字符串替换它。
 
 ```js
 "foo".replace(/(f)/, "$2");
-// "$2oo"; 正则表达式没有第二个组
+// "$2oo"；正则表达式没有第二个组
 
 "foo".replace("f", "$1");
-// "$1oo"; pattern 是一个字符串，所以它没有任何组
+// "$1oo"；pattern 是一个字符串，所以它没有任何组
 
 "foo".replace(/(f)|(g)/, "$2");
-// "oo"; 第二个组存在但未匹配
+// "oo"；第二个组存在但未匹配
 ```
 
 ### 指定函数作为替换项
 
-你可以将函数指定为第二个参数。在这种情况下，匹配完成后将调用该函数。函数的结果（返回值）将用作替换字符串。
+你可以将第二个参数指定为函数。在这种情况下，匹配完成后将调用该函数。函数的结果（返回值）将用作替换字符串。
 
 > **备注：** 上述特殊替换模式*不*适用于替换器函数返回的字符串。
 
@@ -89,7 +89,7 @@ function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
 - `match`
   - : 匹配的子字符串。（对应于上面的 `$&`。）
 - `p1, p2, …, pN`
-  - : 如果 `replace()` 的第一个参数是 {{jsxref("RegExp")}} 对象，则为捕获组（包括命名捕获组）找到的第 `n` 个字符串。（对应于上面的 `$1`，`$2` 等。）例如，如果 `pattern` 是 `/(\d+)(\w+)/`，则 `p1` 是 `\a+` 的匹配项，`p2` 是 `\b+` 的匹配项。如果该组是析取的一部分（例如 `"abc".replace(/(a)|(b)/, Replacer)`），则不匹配的替代项将为 `undefined`。
+  - : 如果 `replace()` 的第一个参数是 {{jsxref("RegExp")}} 对象，则为捕获组（包括命名捕获组）找到的第 `n` 个字符串。（对应于上面的 `$1`、`$2` 等。）例如，如果 `pattern` 是 `/(\d+)(\w+)/`，则 `p1` 是 `\a+` 的匹配项，`p2` 是 `\b+` 的匹配项。如果该组是分支的一部分（例如 `"abc".replace(/(a)|(b)/, Replacer)`），则不匹配的替代项将为 `undefined`。
 - `offset`
   - : 原始字符串中匹配子字符串的偏移量。例如，如果整个字符串是 `'abcd'`，而匹配的子字符串是 `'bc'`，那么这个参数将是 `1`。
 - `string`
@@ -103,7 +103,7 @@ function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
 
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
-  // p1 是非数字，p2 是数字，且 p3 非字母数字字符
+  // p1 是非数字，p2 是数字，且 p3 非字母数字
   return [p1, p2, p3].join(" - ");
 }
 const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
@@ -126,11 +126,9 @@ console.log(newstr); // Twas the night before Christmas...
 
 这将打印 `'Twas the night before Christmas...'`。
 
-> **注意：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+> **备注：** 有关正则表达式的更多解释，请参阅[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
 
 ### 在 replace() 中使用 global 和 ignoreCase 标志
-
-下面的例子中，正则表达式包含有全局替换 (g) 和忽略大小写 (i) 的选项，这使得 replace 方法用'oranges'替换掉了所有出现的"apples".
 
 只能使用正则表达式进行全局替换。在以下示例中，正则表达式包括 [global 和 ignoreCase 标志](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)，允许 `replace()` 将字符串中每个出现的 `'apples'` 替换为 `'oranges'`。
 
@@ -145,7 +143,7 @@ console.log(newstr); // oranges are round, and oranges are juicy.
 
 ### 交换字符串中的两个单词
 
-以下脚本交换字符串中的单词。对于替换文本，脚本使用[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)和 `$1` 和 `$2` 替换模式。
+以下脚本交换字符串中的单词。对于替换文本，脚本使用[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)以及 `$1` 和 `$2` 替换模式。
 
 ```js
 const re = /(\w+)\s(\w+)/;
@@ -208,7 +206,7 @@ function f2c(x) {
 // "abc (1) d"
 ```
 
-然而，如果我们希望这个替换器能够适用于任何正则表达式模式，那么它将很难泛化。替换器是*可变*参数的，它接收的参数数量取决于存在的捕获组数量。我们可以使用 [rest 参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)，但它也会将 `offset`、`string` 等收集到数组中。根据正则表达式的特性，`groups` 可能会被传递或者不会被传递，这也使得很难泛化地知道哪个参数对应于 `offset`。
+然而，如果我们希望这个替换器能够适用于任何正则表达式模式，那么它将很难泛化。替换器是*可变*参数的，它接收的参数数量取决于存在的捕获组数量。我们可以使用[剩余参数参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)，但它也会将 `offset`、`string` 等收集到数组中。根据正则表达式的特性，`groups` 可能会被传递或者不会被传递，这也使得很难泛化地知道哪个参数对应于 `offset`。
 
 ```js example-bad
 function addOffset(match, ...args) {
@@ -245,7 +243,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 
 ## 参见
 
-- [在 `core-js` 中，`String.prototype.replace` 的 Polyfill 实现修复了一些问题，并支持现代行为，比如 `Symbol.replace` 的支持](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`core-js` 中 `String.prototype.replace` 的 Polyfill，修复了一些问题，并实现了现代行为，比如 `Symbol.replace` 的支持](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replaceAll", "String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}
