@@ -119,7 +119,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : É semelhante a `401 Unauthorized`, mas a autenticação precisa ser feita por um proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}
-  - : Esta resposta é enviada por alguns servidores em uma conexão ociosa, mesmo sem qualquer requisição prévia pelo cliente. 
+  - : Esta resposta é enviada por alguns servidores em uma conexão ociosa, mesmo sem qualquer requisição prévia pelo cliente.
     Isso significa que o servidor gostaria de desligar esta conexão não utilizada.
     Essa resposta é muito mais usada, pois alguns navegadores, como Chrome, Firefox 27+ ou IE9, usam mecanismos de pré-conexão HTTP para acelerar a navegação.
     Observe também que alguns servidores simplesmente encerram a conexão sem enviar esta mensagem.
@@ -149,7 +149,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 - {{HTTPStatus(418, "418 I'm a teapot")}}
   - : O servidor recusa a tentativa de coar café num bule de chá.
 - {{HTTPStatus(421, "421 Misdirected Request")}}
-  - : A requisição foi direcionada a um servidor inapto a produzir a resposta. 
+  - : A requisição foi direcionada a um servidor inapto a produzir a resposta.
     Pode ser enviado por um servidor que não está configurado para produzir respostas para a combinação de esquema e autoridade inclusas na URI da requisição.
 - {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
   - : A solicitação foi bem formada, mas não pôde ser atendida devido a erros semânticos.
