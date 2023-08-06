@@ -26,7 +26,7 @@ If you've found a typo on the Simplified Chinese [JavaScript landing page](/zh-C
 3. Find the source file `files/zh-cn/web/javascript/index.md`
 4. Click the edit (pencil) button
 
-From there, the GitHub UI will walk you through the rest by creating a [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and a branch to commit your changes to.
+From there, the GitHub UI will walk you through the rest by creating a [fork](https://docs.github.com/get-started/quickstart/fork-a-repo) and a branch to commit your changes to.
 After you have made changes to your branch, the goal is to open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for your changes to be incorporated.
 
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
@@ -46,7 +46,7 @@ Instead of using the GitHub UI, you need to use `git` or a client like [GitHub D
 First, you will need to set up the `mdn/content` repo locally. If you do not plan to contribute to upstream content, you will not need to fork it as described in its [Contributing guide](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#forking-and-cloning-the-repository); all you need to do is clone it by running the following command:
 
 ```bash
-git clone git@github.com:mdn/content.git
+git clone https://github.com/mdn/content.git
 ```
 
 After the repository has been cloned, follow the [steps to prepare the project](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#preparing-the-project).
@@ -95,8 +95,8 @@ To fix a typo, refer to the [Simple changes](#simple-changes) section.
 
 To create a new translation for a page that does not yet have one, perform the following steps. For this example, we'll assume you are trying to translate the MDN landing page into French.
 
-1. Find the source file in the upstream content repository. (ex. `files/en-us/mdn/index.md`)
-2. Copy the file to the appropriate locale's folder. (ex. `cp files/en-us/mdn/index.md files/fr/mdn/index.md`)
+1. Find the source file in the upstream content repository. (ex. `/path/to/content/files/en-us/mdn/index.md`)
+2. Copy the file to the appropriate locale's folder. (ex. `cp /path/to/content/files/en-us/mdn/index.md files/fr/mdn/index.md`)
 3. Update the front matter of the document.
 
    1. Remove excess front matter properties (see [Translation guidelines][] to see which ones should be kept).
