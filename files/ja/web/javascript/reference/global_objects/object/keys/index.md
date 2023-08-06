@@ -81,7 +81,7 @@ Object.keys("foo");
 `Object.keys` にネイティブに対応していない環境向けに互換性を確保するには、以下のコード部品をコピーしてください。
 
 ```js
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+// From https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function () {
     "use strict";

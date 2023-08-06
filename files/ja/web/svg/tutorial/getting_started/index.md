@@ -32,9 +32,9 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 1. {{SVGElement("svg")}} ルート要素から始めます:
 
-    - (X)HTML で知られる DOCTYPE 宣言はつけないようにしましょう。なぜなら DTD に基づく SVG のバリデーションは、解決することよりも多くの問題を引き起こします。
-    - 他のタイプのバリデーション向けに SVG のバージョンを指定するためには、代わりに `version` や `baseProfile` 属性を使用するべきです。 `version` と `baseProfile` の両方の属性を付けることは SVG 2 では非推奨です。
-    - XML の派生として、 SVG は (xmlns 属性で) 正しい名前空間に結び付けなければなりません。[名前空間の速修講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)に詳細が載っていますのでご覧ください。
+   - (X)HTML で知られる DOCTYPE 宣言はつけないようにしましょう。なぜなら DTD に基づく SVG のバリデーションは、解決することよりも多くの問題を引き起こします。
+   - 他のタイプのバリデーション向けに SVG のバージョンを指定するためには、代わりに `version` や `baseProfile` 属性を使用するべきです。 `version` と `baseProfile` の両方の属性を付けることは SVG 2 では非推奨です。
+   - XML の派生として、 SVG は (xmlns 属性で) 正しい名前空間に結び付けなければなりません。[名前空間の速修講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)に詳細が載っていますのでご覧ください。
 
 2. 画像領域全体を覆う長方形 {{SVGElement("rect")}} を描画することで、背景を赤色にします。
 3. 半径が 80px の緑色の円 {{SVGElement("circle")}} を赤色の長方形の中心に描画します (内側に 30+120px、上方に 50+50px のオフセット)。

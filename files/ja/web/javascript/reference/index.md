@@ -332,8 +332,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 - {{JSxRef("Lexical_grammar", "字句文法", "", 1)}}
 - [データ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
-- [反復処理プロトコル](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [末尾のカンマ](/en-US/docs/Web/JavaScript/Reference/Trailing_commas)
-- [エラー](/en-US/docs/Web/JavaScript/Reference/Errors)
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)
+- [エラー](/ja/docs/Web/JavaScript/Reference/Errors)
 - {{JSxRef("Strict_mode", "厳格モード", "", 1)}}
 - {{JSxRef("Deprecated_and_obsolete_features", "非推奨の機能", "", 1)}}

@@ -8,8 +8,6 @@ slug: Web/CSS/background-clip
 
 {{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 요소가 {{cssxref("background-image")}} 또는 {{cssxref("background-color")}}를 가지지 않으면, `background-clip`은 ({{cssxref("border-style")}} 또는 {{cssxref("border-image")}} 등으로 인해) 테두리에 투명하거나 반투명한 부분이 존재하는 경우에만 시각적 차이가 발생합니다. 그렇지 않은 경우 테두리가 차이점을 가립니다.
 
 ## 구문

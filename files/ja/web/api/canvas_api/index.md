@@ -26,10 +26,10 @@ slug: Web/API/Canvas_API
 実際の描画は {{domxref("CanvasRenderingContext2D")}} インターフェイスを用いて行われます。 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} プロパティは四角形を緑にします。 {{domxref("CanvasRenderingContext2D.fillRect()", "fillRect()")}} メソッドはこれを左上から (10, 10) の位置で、幅 150 単位、高さ 100 単位の寸法を与えます。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 150, 100);
 ```
 
