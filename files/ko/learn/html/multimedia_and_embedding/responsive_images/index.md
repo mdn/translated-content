@@ -58,104 +58,67 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 웹이 처음 등장한 90년대 초중반에는 이러한 문제가 존재하지 않았습니다. 당시에는 웹을 탐색할 수 있는 기기가 데스크톱과 노트북뿐이었기 때문에 브라우저 엔지니어와 사양 작성자는 해결책을 구현할 생각조차 하지 못했죠. 반응형 이미지 기술은 위에서 언급한 문제를 해결하기 위해 최근에 구현된 기술로, 동일한 내용을 표시하지만 픽셀 수가 다른 여러 이미지 파일을 브라우저에 제공하거나(해상도 전환), 공간 할당에 적합한 다른 이미지를 제공(아트 디렉션)할 수 있도록 합니다.
 
-> **참고:**
->
-> 이 글에서 다루는 새로운 기능들 — [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — 은 모두 출시된 최신 데스크톱과 모바일 브라우저(인터넷 익스플로러는 구현이 안 돼 있지만, 마이크로소프트 엣지를 포함해)에서 지원됩니다.
+> **참고:** 이 문서에서 설명하는 새로운 기능인 [srcset](/ko/docs/Web/HTML/Element/img#srcset)/[sizes](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} 은 최신 데스크톱 및 모바일 브라우저에서 모두 지원됩니다.
 
-## 반응형 이미지를 어떻게 만들까요?
+## 반응형 이미지를 어떻게 만드나요?
 
-이 섹션에서는 위에서 설명한 두 가지 문제를 살펴보고 HTML 반응형 이미지 기법을 이용해 문제를 해결하는 방법을 보여줍니다. 이 섹션에서는, 위 예제의 본문 영역에서 봤듯, HTML {{htmlelement("img")}}에 초점을 맞출 것이라는 점을 주목하기 바랍니다(헤더 이미지는 장식용이고, 따라서 CSS 배경 이미지로 구현됐습니다). [CSS에는 분명 HTML보다 더 나은 반응형 디자인 도구](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)가 있고, 그것은 향후 CSS 모듈에서 다룰 것입니다.
+이 섹션에서는 위에 예시된 두 가지 문제를 살펴보고 HTML의 반응형 이미지 기능을 사용하여 해결하는 방법을 보여드리겠습니다. 이 섹션에서는 위 예시의 콘텐츠 영역에서 볼 수 있듯이 사이트 헤더의 이미지는 장식용이므로 CSS 배경 이미지를 사용하여 구현된 {{htmlelement("img")}} 요소에 초점을 맞출 것입니다. [CSS에는 HTML보다 반응형 디자인을 위한 더 나은 도구](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)가 있으며, 이에 대해서는 향후 CSS 모듈에서 다룰 예정입니다.
 
-### 해상도 전환: 다양한 사이즈
+### 해상도 전환: 다양한 크기
 
-그렇다면 해상도 전환을 통해 해결하고자 하는 문제는 무엇일까요? 우리는 기기에 따라 단지 크기만 다른, 동일한 이미지 콘텐츠를 보여 주고 싶습니다. 우리 예제에서 본문 두 번째 이미지가 직면한 상황입니다. 표준 {{htmlelement("img")}} 요소는 전통적으로 브라우저에게 오직 하나의 소스 파일만 제시하도록 돼 있었습니다.
+그렇다면 해상도 전환을 통해 해결하고자 하는 문제는 무엇일까요? 동일한 이미지 콘텐츠를 기기에 따라 더 크게 또는 더 작게 표시하고 싶을 때, 예시의 두 번째 콘텐츠 이미지가 이러한 상황입니다. 표준 {{htmlelement("img")}} 요소는 일반적으로 브라우저에서 단일 소스 파일만 가리킬 수 있습니다.
 
 ```html
 <img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바" />
 ```
 
-그러나 [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)과 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes)라는 두 가지 새로운 속성(attribute)을 사용해 브라우저가 올바른 것을 선택하는 데 도움이 되는 몇 가지 추가 소스 이미지와 힌트를 제공 할 수 있습니다. 이 예제는 Github의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제 ([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조)에서 볼 수 있습니다.
+그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
 
 ```html
 <img
-  srcset="
-    elva-fairy-320w.jpg 320w,
-    elva-fairy-480w.jpg 480w,
-    elva-fairy-800w.jpg 800w
-  "
-  sizes="(max-width: 320px) 280px,
-            (max-width: 480px) 440px,
-            800px"
+  srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+  sizes="(max-width: 600px) 480px,
+         800px"
   src="elva-fairy-800w.jpg"
   alt="요정 옷을 입은 엘바" />
 ```
 
-`srcset`과 `sizes` 속성은 복잡해 보이지만 위에서 보여 준 것처럼 각 행에 속성 값을 나눠 적으면 이해하기 어렵지 않습니다. 각 값은 쉼표로 구분한 목록으로 적고, 목록의 각 부분은 세 부분으로 구성됩니다. 이제 각각의 내용을 살펴보겠습니다.
+`srcset` 및 `sizes` 속성은 복잡해 보이지만 위와 같이 각 줄에 속성 값의 다른 부분을 사용하여 형식을 지정하면 이해하기가 그리 어렵지 않습니다. 각 값은 쉼표로 구분된 목록을 포함하며, 각 목록의 각 부분은 세 개의 하위 부분으로 구성됩니다. 이제 각각의 내용을 살펴보겠습니다.
 
-**`srcset`** 은 브라우저에게 제시할 이미지 목록과 그 크기를 정의합니다. 각 쉼표 앞에 이렇게 적습니다.
+**`srcset`** 은 브라우저에서 선택할 수 있는 이미지 세트와 각 이미지의 크기를 정의합니다. 각 이미지 정보 세트는 쉼표로 이전 이미지와 구분됩니다. 각각에 대해 다음과 같이 작성합니다.
 
-1. **이미지 파일명** (`elva-fairy-480w.jpg`.)
+1. **이미지 파일 이름** (`elva-fairy-480w.jpg`.)
 2. 공백
-3. 이미지 **고유 픽셀 너비** (`480w`) — `px`이 아니라 `w` 단위를 사용한다는 데 주의하세요. 이것은 이미지의 실제 사이즈인데, 컴퓨터에서 이미지를 확인하면 찾을 수 있습니다. (예컨대, 맥에서는 파인더에서 이미지를 선택하고
+3. 이미지의 **고유 픽셀 너비** (`480w`) - 예상하는 것처럼 `px` 단위가 아닌 `w` 단위를 사용한다는 점에 유의하세요. 이미지의 [고유 크기](/en-US/docs/Glossary/Intrinsic_Size)는 컴퓨터에서 이미지 파일을 검사하여 확인할 수 있는 실제 크기입니다(예: Mac의 경우 Finder에서 이미지를 선택한 다음 <kbd>Cmd</kbd> \+ <kbd>I</kbd> 를 눌러 정보 화면을 불러올 수 있습니다).
 
-   <kbd>Cmd</kbd>
+**`sizes`** 는 일련의 미디어 조건(예: 화면 너비)을 정의하고 특정 미디어 조건에 해당할 때 어떤 이미지 크기를 선택하는 것이 가장 좋을지 알려주는데, 이는 앞서 설명한 힌트입니다. 이 경우 각 쉼표 앞에 다음과 같이 작성합니다.
 
-   \+
+1. **미디어 조건** (`(max-width:600px)`) - 이에 대한 자세한 내용은 [CSS 주제](/ko/docs/Learn/CSS)에서 배우겠지만, 지금은 미디어 조건이 화면이 될 수 있는 가능한 상태를 설명한다고 가정해 보겠습니다. 이 경우 "뷰포트 너비가 600픽셀 이하일 때"라고 말합니다.
+2. 공백
+3. 미디어 조건이 참(`480px`)일 때 이미지가 채울 **슬롯의 너비**입니다.
 
-   <kbd>I</kbd>
+> **참고:** 슬롯 너비의 경우 절대 너비(예: `480px`)를 제공하는 대신 뷰포트에 대한 상대 너비(예: `50vw`)를 제공할 수 있지만 백분율은 제공하지 않습니다. 마지막 슬롯 너비에 미디어 조건이 없는 것을 보셨을 것입니다(미디어 조건이 모두 참일 때 선택되는 기본값입니다). 브라우저는 첫 번째 일치하는 조건 이후의 모든 것을 무시하므로 미디어 조건 순서에 주의해야 합니다.
 
-   를 눌러 정보를 표시 할 수 있습니다).
-
-**`sizes`** 는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타냅니다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 씁니다.
-
-1. **미디어 조건문** (`(max-width:480px)`) — CSS 주제에서 이에 대해 더 많은 것을 배울 수 있을 테지만, 지금 간단히 말하면, 미디어 조건문은 가능한 화면 상태를 기술합니다. 이 경우, 이렇게 말하는 것입니다: "뷰포트 너비가 480픽셀 이하".
-2. 공백.
-3. 미디어 조건문이 참인 경우 이미지가 채울 **슬롯의 너비**(`440px`).
-
-> **참고:**
->
-> 슬롯 너비로 절대값(`px`, `em`)이나 뷰포트에 대한 상대값(`vw`)을 넣어야 합니다.
-> 상대값으로 퍼센트(`%`)를 넣을 수는 없습니다.
-> 마지막 슬롯 너비에는 미디어 조건문이 없다는 것을 확인했습니다. 이것은 미디어 조건문이 참인 경우가 하나도 없는 것우의 기본값입니다. 브라우저는 첫 번째 조건문이 맞으면 나머지 모든 조건문을 무시합니다.
-> 따라서 미디어 조건문의 순서에 유의하세요.
-
-따라서 이러한 속성을 설정하면 브라우저는 다음과 같이 작동합니다:
+따라서 이러한 속성을 설정하면 브라우저는 다음과 같이 작동합니다.
 
 1. 기기 너비를 확인합니다.
-2. `sizes` 목록에서 가장 먼저 참이 되는 미디어 조건문을 확인합니다.
-3. 해당 미디어 쿼리가 제공하는 슬롯 크기를 확인합니다.
-4. 해당 슬롯 크기에 가장 근접하게 맞는 `srcset`에 연결된 이미지를 불러옵니다.
+2. `sizes` 목록에서 어떤 미디어 조건이 가장 먼저 참인지 알아냅니다.
+3. 해당 미디어 쿼리에 지정된 슬롯 크기를 확인합니다.
+4. 슬롯과 크기가 같은 `srcset` 목록에 참조된 이미지 또는 이미지가 없는 경우 선택한 슬롯 크기보다 큰 첫 번째 이미지를 로드합니다.
 
-여기까지 입니다! 이 시점에서 뷰포트 너비가 480px인 지원 브라우저가 페이지를 로드하면 (최대 너비: 600px) 미디어 조건이 참이므로 브라우저는 480px 슬롯을 선택합니다. 그러면 `440px`에 가장 가까운 고유 너비(`480w`)가 선택됨에 따라 `elva-fairy-480w.jpg`가 로딩될 것입니다. 800픽셀 사진의 디스크 용량은 128KB인 반면 480픽셀 버전은 63KB에 불과하여 65KB를 절약할 수 있습니다. 이제 이 페이지에 사진이 많은 페이지가 있다고 상상해 보세요. 이 기술을 사용하면 모바일 사용자의 대역폭을 크게 절약할 수 있습니다.
+이제 끝입니다! 이 시점에서 뷰포트 너비가 480px인 지원 브라우저가 페이지를 로드하면 `(max-width: 600px)` 미디어 조건이 참이 되므로 브라우저는 `480px` 슬롯을 선택합니다. 고유의 너비(`480w`)가 슬롯 크기에 가장 가깝기 때문에 `elva-fairy-480w.jpg`가 로드됩니다. 800px 사진은 디스크에서 128KB인 반면 480px 버전은 63KB에 불과하므로 65KB를 절약할 수 있습니다. 이제 이 페이지에 많은 사진이 있다고 상상해 보세요. 이 기술을 사용하면 모바일 사용자의 대역폭을 크게 절약할 수 있습니다.
 
-이 기능을 지원하지 않는 낡은 브라우저들은 이 속성들을 무시할 것입니다. 그리고 [`src`](/ko/docs/Web/HTML/Element/img#src) 속성에 참조된 보통 이미지를 불러올 것입니다.
-
-> **참고:**
+> **참고:** 데스크톱 브라우저에서 테스트할 때 창 너비를 가장 좁게 설정했는데도 브라우저에서 더 좁은 이미지를 로드하지 못하면 뷰포트의 크기를 살펴보세요(브라우저의 JavaScript 콘솔로 이동하여 `document.querySelector('html').clientWidth`를 입력하면 대략적인 크기를 알 수 있습니다). 브라우저마다 창 너비를 줄일 수 있는 최소 크기가 있으며, 생각보다 더 넓을 수도 있습니다. 모바일 브라우저로 테스트할 때는 Firefox의 `about:debugging` 페이지와 같은 도구를 사용하여 데스크톱 개발자 도구를 사용하여 모바일에 로드된 페이지를 검사할 수 있습니다.
 >
-> 문서의 {{htmlelement("head")}}에서 `<meta name="viewport" content="width=device-width">` 줄을 찾을 수 있을 것입니다.
-> 이것은 모바일 브라우저가 실제 뷰포트 너비로 웹페이지를 보여주도록 강제합니다.
-> (몇몇 모바일 브라우저들은 뷰포트 너비를 속인다, 그리고 대신에 더 큰 뷰포트 너비에서 페이지를 불러오고, 불러온 페이지를 축소합니다. 이것은 반응형 이미지나 디자인에 별로 도움이 되지 않습니다. 이것에 대해서는 향후 더 자세히 다룰 것입니다.)
+> 어떤 이미지가 로드되었는지 확인하려면 Firefox 개발자 도구의 [네트워크 모니터](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 탭 또는 Chrome 개발자 도구의 [네트워크](https://developer.chrome.com/docs/devtools/network/) 패널을 사용하면 됩니다. Chrome의 경우 [캐시를 비활성화](https://stackoverflow.com/questions/5690269/disabling-chrome-cache-for-website-development/7000899#7000899)하여 이미 다운로드한 이미지를 선택하지 못하도록 할 수도 있습니다.
 
-### 유용한 개발 도구
+이러한 기능을 지원하지 않는 구형 브라우저는 이를 무시합니다. 대신 해당 브라우저는 [`src`](/ko/docs/Web/HTML/Element/img#src) 속성에 참조된 이미지를 정상적으로 로드합니다.
 
-브라우저에는 필요한 슬롯 너비, 기타, 필요한 것들을 찾을 수 있게 도와 주는 유용한 [개발 도구들](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)이 있습니다. 나는 우선 반응형이 아닌 일반 버전의 예제를 불러옵니다(`not-responsive.html`). 그리고 나서 [반응형 디자인 모드](/ko/docs/Tools/Responsive_Design_Mode)(도구 > 웹 개발 도구 > 반응형 디자인 모드)로 갑니다. 이 모드는 다양한 크기의 기기로 보는 것처럼 웹페이지 레이아웃을 보게 해 줍니다.
+> **참고:** 위에 링크된 예제의 {{htmlelement("head")}}에 `<meta name="viewport" content="width=device-width">`라는 줄이 있는데, 이는 모바일 브라우저가 웹 페이지를 로드할 때 실제 뷰포트 너비를 적용하도록 합니다(일부 모바일 브라우저는 뷰포트 너비를 속이고 더 큰 뷰포트 너비로 페이지를 로드한 다음 로드한 페이지를 축소하므로 반응형 이미지나 디자인에 도움이 되지 않습니다).
 
-나는 뷰포트 너비를 320px로 했다가 480px로 합니다. 각 너비에서 나는 [DOM 검사기](/ko/docs/%EB%8F%84%EA%B5%AC%EB%93%A4/Page_Inspector)로 가서, 확인하고 싶은 {{htmlelement("img")}} 요소를 클릭합니다. 그리고 화면의 오른쪽에 있는 박스 모델 뷰 탭에서 크기를 확인합니다. 이렇게 하면 필요한 고유 너비를 알 수 있습니다.
+### 해상도 전환: 동일한 크기, 다른 해상도
 
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
-
-다음으로 원하는 뷰포트 너비를 설정해서 어떤 `srcset`이 작동하는지 체크할 수 있습니다(예컨대, 좁게 설정할 수 있습니다). 네트워크 검사기(도구 > 웹 개발 도구 > 네트워크)를 열고, 페이지를 새로 고침 합니다. 웹페이지를 만들기 위해 다운로드한 항목들을 보여 주는데, 따라서 어떤 이미지가 사용됐는지 여기서 확인할 수 있습니다.
-
-> **참고:**
->
-> 크롬에서 테스트할 때 캐시를 비활성화하십시오.
-> 개발자 도구를 열고, **Network** 탭의 체크박스들 중 **Disable cache**에 체크하십시오. 이렇게 하지 않으면 크롬은 최적의 이미지보다 캐시된 이미지를 선호할 것입니다.
-
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
-
-### 해상도 전환: 같은 크기, 다른 해상도
-
-만약 다양한 디스플레이 해상도를 지원해야 하는데, 모두가 이미지를 실제 사이즈로 동일하게 봐야 한다면, `srcset`에 `sizes` 없이 x-서술자를 사용해 브라우저가 적절한 해상도의 이미지를 선택하게 할 수 있습니다. 꽤 쉽습니다. [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 예제를 찾아 볼 수 있습니다. ([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)도 볼 수 있습니다.)
+여러 디스플레이 해상도를 지원하지만 모든 사람이 화면에서 동일한 실제 크기로 이미지를 보는 경우, 다소 쉬운 구문인 X-서술자 `sizes` 없이 `srcset`을 사용하여 브라우저가 적절한 해상도 이미지를 선택하도록 할 수 있습니다! [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 그 예시를 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) 참조).
 
 ```html
 <img
@@ -164,7 +127,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
   alt="요정 옷을 입은 엘바" />
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 됩니다(CSS 픽셀이라고 부르기도 합니다).
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
+
+이 예제에서는 이미지에 다음 CSS를 적용하여 화면 너비가 320픽셀(CSS 픽셀이라고도 함)이 되도록 합니다.
 
 ```css
 img {
@@ -172,19 +137,19 @@ img {
 }
 ```
 
-이 경우 sizes는 필요 없습니다. 브라우저는 단순히 보이는 해상도가 얼마인지는 확인하고 `srcset`에 참조돼 있는 것들 중 가장 적합한 이미지를 제공합니다. 따라서 기기의 1픽셀이 CSS의 1필셀에 대응되는, 보통/낮은 해상도 디스플레이의 기기가 페이지에 접속하면, `elva-fairy-320w.jpg`가 로드될 것입니다(1x가 적용됐고, 그걸 명시해서 적을 필요는 없습니다). 만약 기기의 2픽셀이 CSS 1픽셀에 해당하는 고해상도 기기라면, `elva-fairy-640w.jpg`가 로드될 것입니다. 640px 이미지는 93KB입니다. 320px 이미지는 39KB밖에 안 됩니다.
+이 경우 `sizes`는 필요하지 않습니다. 브라우저는 표시되는 디스플레이의 해상도를 파악하여 `srcset`에 참조된 가장 적합한 이미지를 제공합니다. 따라서 페이지에 액세스하는 디바이스의 디스플레이 해상도가 표준/저해상도이고 각 CSS 픽셀당 디바이스 픽셀이 1개인 경우 `elva-fairy-320w.jpg` 이미지가 로드됩니다(1x는 암시적이므로 포함할 필요가 없습니다.) 디바이스의 해상도가 CSS 픽셀당 디바이스 픽셀이 2개 이상인 고해상도인 경우 `elva-fairy-640w.jpg` 이미지가 로드됩니다. 640픽셀 이미지는 93KB인 반면 320픽셀 이미지는 39KB에 불과합니다.
 
 ### 아트 디렉션
 
-다시 말하면, **아트 디렉션 문제**는 서로 다른 이미지 디스플레이 사이즈에 맞추기 위해 디스플레이된 이미지를 변경하고자 하는 것과 관련 있습니다. 예를 들면, 웹사이트에 데스크톱 브라우저로 들어오면 가운데 한 사람이 있는 커다란 가로 사진이 있습니다. 그런데 모바일 브라우저로 줄여서 보면 사람이 보기 힘들 정도로 정말 작습니다. 사람이 확대된 좀더 작은 세로 사진으로 보여 주는 게 더 나을 것입니다. {{htmlelement("picture")}} 요소가 이런 종류의 해결책을 구현하게 해 줍니다.
+요약하자면, **아트 디렉션 문제**는 다양한 이미지 디스플레이 크기에 맞게 표시되는 이미지를 변경하려는 경우입니다. 예를 들어, 데스크톱 브라우저에서 볼 때 웹 페이지에 사람이 가운데에 있는 큰 풍경 사진이 포함되어 있다고 가정해 보겠습니다. 모바일 브라우저에서 볼 때는 동일한 이미지가 축소되어 이미지 속 사람이 매우 작아지고 잘 보이지 않습니다. 모바일에서는 인물을 확대하여 더 작은 세로형 이미지를 표시하는 것이 더 좋을 것입니다. {{htmlelement("picture")}} 요소를 사용하면 이러한 종류의 솔루션을 구현할 수 있습니다.
 
-원래의 [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가 봅시다. 아트 디렉션이 절실히 필요한 사진이 있습니다.
+원래의 [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가서 아트 디렉션이 절실히 필요한 이미지가 있습니다.
 
 ```html
 <img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스" />
 ```
 
-{{htmlelement("picture")}}를 이용해 고쳐 봅시다! [`<video>`와 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 처럼, \<picture> 요소는 {{htmlelement("source")}} 요소들을 감쌉니다. `source` 요소는 브라우저가 고를 수 있는 여러 소스들을 제공합니다. `soucre` 요소들 뒤에는 가장 중요한 {{htmlelement("img")}} 요소가 뒤따릅니다. [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 코드는 이렇습니다.
+{{htmlelement("picture")}}으로 해결해 봅시다! [`<video>` 및 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)와 마찬가지로 `<picture>` 요소는 브라우저가 선택할 수 있는 다양한 소스를 제공하는 여러 {{htmlelement("source")}} 요소를 포함하는 래퍼이며, 그 뒤에 가장 중요한 {{htmlelement("img")}} 요소가 있습니다. [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)의 코드는 다음과 같습니다.
 
 ```html
 <picture>
@@ -194,19 +159,17 @@ img {
 </picture>
 ```
 
-- `<source>` 요소에는 미디어 조건문이 있는 `media` 속성이 있습니다 — 처음에 살펴 봤던 `srcset` 예제처럼, 이 조건들도 어떤 이미지를 보여 줄 지 결정하는 데 사용합니다 — 참을 리턴하는 첫 번째 것이 표시됩니다. 이 경우, 만약 뷰포트 너비가 799px 이하라면, 첫 번째 `<source>` 요소의 이미지가 표시될 것입니다. 만약 뷰포트 너비가 800px 이상이라면, 두 번째 것을 보여 줄 것입니다.
-- srcset 속성에는 보여 줄 이미지 경로가 있었습니다. 위의 `<img>`에서 살펴 봤듯이, `<source>`도 여러 참조 이미지와 `sizes` 속성을 `srcset` 속성에 넣을 수 있습니다. 따라서 우리는 이미지 여러 개를 `<picture>` 요소에서 제공할 수 있습니다. 하지만 그렇게 되면 각각 다양한 해상도도 제공해야 할 것입니다. 현실적으로, 이런 일을 자주 하고 싶지는 않을 것입니다.
-- 이 모든 경우, `src`와 `alt` 속성이 있는 `<img>` 요소를 `</picture>` 바로 앞에 반드시 제공해야 합니다. 그렇지 않으면 이미지가 표시되지 않을 것입니다. 이것은 참을 리턴하는 미디어 조건문이 없는 경우 기본 이미지를 제공하는 것입니다(실제 이 예제에서 두 번째 `<source>` 요소는 제거해도 됩니다). 그리고 \<picture> 요소를 지원하지 않는 브라우저에 대체제를 제공하는 것이기도 합니다.
+- `<source>` 요소에는 미디어 조건이 포함된 `media` 속성이 포함되어 있습니다. 첫 번째 `srcset` 예제와 마찬가지로 이러한 조건은 표시할 이미지를 결정하는 테스트이며, 참을 반환하는 첫 번째 이미지가 표시됩니다. 이 경우 뷰포트 너비가 799px 이하인 경우 첫 번째 `<source>` 요소의 이미지가 표시됩니다. 뷰포트 너비가 800px 이상이면 두 번째 이미지가 표시됩니다.
+- `srcset` 속성에는 표시할 이미지의 경로가 포함됩니다. 위의 `<img>`에서 살펴본 것처럼, `<source>`는 여러 이미지가 참조된 `srcset` 속성과 `sizes` 속성을 사용할 수 있습니다. 따라서 `<picture>` 요소를 통해 여러 이미지를 제공하면서 각 이미지의 해상도도 여러 개 제공할 수 있습니다. 현실적으로 이런 종류의 작업을 자주 수행하지는 않을 것입니다.
+- 모든 경우에 `</picture>` 바로 앞에 `src` 및 `alt`와 함께 `<img>` 요소를 제공해야 하며, 그렇지 않으면 이미지가 표시되지 않습니다. 이는 미디어 조건 중 어느 것도 참을 반환하지 않을 때 적용되는 기본 사례(이 예제에서는 실제로 두 번째 `<source>` 요소를 제거할 수 있습니다)와 `<picture>` 요소를 지원하지 않는 브라우저를 위한 폴백을 제공합니다.
 
-이 코드는 넓은 화면과 좁은 화면 둘 다에서 적절한 이미지를 표시하게 해 줍니다. 아래를 봅시다.
+이 코드를 사용하면 아래와 같이 와이드 스크린과 좁은 스크린 디스플레이 모두에 적합한 이미지를 표시할 수 있습니다.
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **참고:**
->
-> 미디어 속성은 아트 디렉션 시나리오에서만 사용하십시오. 만약 미디어를 사용한다면, 미디어 조건문을 사이즈 속성에 넣지 마십시오.
+> **참고:** `media` 속성은 아트 디렉션 시나리오에서만 사용해야 하며, `media`를 사용하는 경우 `sizes` 속성 내에 미디어 조건도 제공하지 마세요.
 
-### 왜 CSS나 자바스크립트를 이용해 이렇게 할 수 없는가요?
+### CSS나 자바스크립트를 사용하면 안 되는 이유는 무엇인가요?
 
 브라우저가 페이지를 불러오기 시작할 때, 메인 파서가 CSS와 자바스크립트를 로드하고 해석하기 전에 이미지들을 다운로드(미리 불러오기)하기 시작합니다. 이렇게 하는 것은 평균적으로 페이지 로딩 시간을 20%쯤 단축시켜주는 유용한 기법입니다. 그러나 반응형 이미지에는 도움이 안 됩니다. 따라서 `srcset` 같은 해결책을 구현해야 합니다. 예를 들면, {{htmlelement("img")}} 요소를 불러온 후, 자바스크립트로 뷰포트 너비를 감지하고, 필요하면 더 작은 소스 이미지로 동적으로 바꾸는 식으로 할 수 없습니다. 그 시점에, 원래의 이미지가 이미 로드된 상태고, 작은 이미지까지 불러와야 합니다. 반응형 이미지 관점에서 더 나쁩니다.
 
