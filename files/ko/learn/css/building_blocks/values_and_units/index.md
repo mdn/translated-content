@@ -68,10 +68,10 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 
 | 데이터 형식                                   | 설명                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55`와 같은 정수입니다.                                                                                                                                                                                                                                                                                                |
+| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55`와 같은 정수입니다.                                                                                                                                                                                                                                                                                                 |
 | [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다. 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                                |
 | [`<dimension>`](/ko/docs/Web/CSS/dimension)   | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
-| [`<percentage>`](/ko/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%`를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                         |
+| [`<percentage>`](/ko/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%`를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                          |
 
 ### 길이
 
@@ -81,15 +81,15 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 
 다음은 모두 **절대** 길이 단위이며 다른 것과 관련이 없으며 일반적으로 항상 동일한 크기로 간주됩니다.
 
-| 단위 | 이름             | 다음과 동일함            |
-| ---- | ---------------- | ------------------------ |
-| `cm` | 센티미터         | 1cm = 37.8px = 25.2/64in |
-| `mm` | 밀리미터         | 1mm = 1/10th of 1cm      |
+| 단위 | 이름            | 다음과 동일함            |
+| ---- | --------------- | ------------------------ |
+| `cm` | 센티미터        | 1cm = 37.8px = 25.2/64in |
+| `mm` | 밀리미터        | 1mm = 1/10th of 1cm      |
 | `Q`  | 4분의 1밀리미터 | 1Q = 1/40th of 1cm       |
-| `in` | 인치             | 1in = 2.54cm = 96px      |
-| `pc` | Picas            | 1pc = 1/6th of 1in       |
-| `pt` | 포인트           | 1pt = 1/72nd of 1in      |
-| `px` | 픽셀             | 1px = 1/96th of 1in      |
+| `in` | 인치            | 1in = 2.54cm = 96px      |
+| `pc` | Picas           | 1pc = 1/6th of 1in       |
+| `pt` | 포인트          | 1pt = 1/72nd of 1in      |
+| `px` | 픽셀            | 1px = 1/96th of 1in      |
 
 이러한 값의 대부분은 화면 출력이 아닌 인쇄에 사용될 때 더 유용합니다. 예를 들어 일반적으로 화면에 `cm` (센티미터)를 사용하지 않습니다. 보통 사용하는 유일한 값은 `px` (픽셀)입니다.
 
@@ -97,23 +97,23 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 
 상대 길이 단위는 다른 요소 (상위 요소의 글꼴 크기 또는 viewport 크기)와 관련이 있습니다. 상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여 조정되도록 신중하게 계획할 수 있다는 이점이 있습니다. 웹 개발에 가장 유용한 단위가 아래 표에 나열되어 있습니다.
 
-| 단위       | 관련 사항                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| `em`       | 요소의 글꼴 크기.                                                                                             |
-| `ex`       | 요소 글꼴의 x-height.                                                                                         |
-| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                             |
-| `rem`      | 루트 요소의 글꼴 크기.                                                                                        |
-| `lh`       | 요소의 라인 높이.                                                                                             |
+| 단위       | 관련 사항                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------- |
+| `em`       | 요소의 글꼴 크기.                                                                                              |
+| `ex`       | 요소 글꼴의 x-height.                                                                                          |
+| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                                |
+| `rem`      | 루트 요소의 글꼴 크기.                                                                                         |
+| `lh`       | 요소의 라인 높이.                                                                                              |
 | `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다. |
-| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.            |
-| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.            |
-| `vmin`     | viewport의 작은 치수의 1%.                                                                                   |
-| `vmax`     | viewport의 큰 치수의 1%.                                                                                     |
-| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.         |
-| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.     |
-| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.        |
-| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.          |
-| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.      |
+| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.             |
+| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.             |
+| `vmin`     | viewport의 작은 치수의 1%.                                                                                     |
+| `vmax`     | viewport의 큰 치수의 1%.                                                                                       |
+| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.          |
+| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.      |
+| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.         |
+| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.           |
+| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.       |
 
 #### 예제 살펴보기
 
