@@ -82,7 +82,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
     Ele informa ao cliente que a resposta não foi modificada, portanto, o cliente pode continuar a usar a mesma versão em cache da resposta.
 - `305 Use Proxy` {{deprecated_inline}}
   - : Definido em uma versão anterior da especificação HTTP para indicar que uma resposta solicitada deve ser acessada por um proxy.
-     Foi descontinuado devido a questões de segurança em relação à configuração em banda de um proxy.
+    Foi descontinuado devido a questões de segurança em relação à configuração em banda de um proxy.
 - `306 unused` {{deprecated_inline}}
   - : Esse código de resposta não é mais usado, é apenas reservado. Foi usado em uma versão anterior da especificação HTTP/1.1.
 - {{HTTPStatus(307, "307 Temporary Redirect")}}
