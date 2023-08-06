@@ -95,9 +95,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // g4() returned { value: "foo", done: true } at this point
+// g4() returned { value: "foo", done: true } at this point
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## Especificaciones

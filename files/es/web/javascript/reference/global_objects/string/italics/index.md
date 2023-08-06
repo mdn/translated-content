@@ -28,7 +28,7 @@ Usa el método `italics` para formatear y mostrar una cadena en un documento.
 El siguiente ejemplo usa métodos de `string` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola mundo!";
+var cadenaMundo = "¡Hola mundo!";
 
 console.log(cadenaMundo.blink());
 console.log(cadenaMundo.bold());

@@ -16,8 +16,11 @@ SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と�
 次のコードスニペットは、SVG の `script` タグの使用方法を示します。このコードでは、SVG {{SVGElement("circle")}} 要素の半径を変更するために JavaScript を使用します。
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <script type="text/javascript">
     // <![CDATA[
     function change(evt) {
@@ -30,13 +33,12 @@ SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と�
         radius = 15;
       }
 
-      target.setAttribute("r",radius);
-   }
-   // ]]>
+      target.setAttribute("r", radius);
+    }
+    // ]]>
   </script>
 
-  <circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" />
+  <circle cx="50" cy="50" r="45" fill="green" onclick="change(evt)" />
 </svg>
 ```
 

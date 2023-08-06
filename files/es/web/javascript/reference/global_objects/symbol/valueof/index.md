@@ -12,7 +12,7 @@ El método **`valueOf()`** devuelve el valor primitivo de un objeto Symbol.
 ## Sintaxis
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### Valor de retorno

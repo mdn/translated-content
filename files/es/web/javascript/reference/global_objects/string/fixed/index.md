@@ -28,8 +28,8 @@ Usa el método `fixed` para formatear y mostrar unacadena en un documento.
 El siguiente ejemplo usa el método `fixed` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola Mundo!"
-console.log(cadenaMundo.fixed())
+var cadenaMundo = "¡Hola Mundo!";
+console.log(cadenaMundo.fixed());
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

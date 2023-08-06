@@ -9,8 +9,6 @@ slug: Web/HTML/Element/video
 
 {{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 위 예제는 `<video>` 요소의 간단한 사용법을 보입니다. `<video>` 또한 {{htmlelement("img")}} 요소와 비슷하게, 표시하고자 하는 미디어로의 경로를 `src` 특성에 제공합니다. 또한 비디오의 너비와 높이, 자동재생과 반복 여부, 브라우저 기본 컨트롤 노출 여부 등 다른 정보도 특성을 통해 지정할 수 있습니다.
 
 `<video></video>` 태그 안의 콘텐츠는 브라우저가 `<video>` 요소를 지원하지 않을 때 보여집니다.

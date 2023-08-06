@@ -14,7 +14,7 @@ of filter.
 ## 構文
 
 ```js
-createIIRFilter(feedforward, feedback)
+createIIRFilter(feedforward, feedback);
 ```
 
 ### 引数
