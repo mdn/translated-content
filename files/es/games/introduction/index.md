@@ -1,7 +1,6 @@
 ---
 title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
-original_slug: Games/Introduccion
 ---
 
 {{GamesSidebar}}

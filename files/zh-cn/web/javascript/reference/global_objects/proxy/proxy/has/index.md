@@ -1,7 +1,6 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/has
 ---
 
 {{JSRef}}

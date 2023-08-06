@@ -1,7 +1,6 @@
 ---
 title: IPv4
 slug: Glossary/IPv4
-translation_of: Glossary/IPv4
 ---
 
 IPv4 est la 4<sup>e</sup> version du {{Glossary("Protocol","protocole")}} de communication d'{{glossary("Internet")}} et la première version vraiment déployée.

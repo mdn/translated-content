@@ -85,21 +85,25 @@ Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo
 
 ```html
 <h1>5</h1>
-<p>De acordo com o Sr. Tim Berners-Lee,
-  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
-    lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.</q>
-  Devemos entender que não há nada fundamentalmente errado em criar
-  algo com base nas contribuições de outras pessoas.
+<p>
+  De acordo com o Sr. Tim Berners-Lee,
+  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet"
+    >I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.</q
+  >
+  Devemos entender que não há nada fundamentalmente errado em criar algo com
+  base nas contribuições de outras pessoas.
 </p>
 
 <h1>6</h1>
-<p>De acordo com o Manifesto Mozilla,
-  <q cite="https://www.mozilla.org/about/manifesto/">As pessoas
-    precisam ter a capacidade de moldar a Internet e suas
-    experiências com ela.</q>
-  Portanto, podemos concluir que contribuir para a Web aberta pode
-  proteger nossas próprias experiências individuais nela.
+<p>
+  De acordo com o Manifesto Mozilla,
+  <q cite="https://www.mozilla.org/about/manifesto/"
+    >As pessoas precisam ter a capacidade de moldar a Internet e suas
+    experiências com ela.</q
+  >
+  Portanto, podemos concluir que contribuir para a Web aberta pode proteger
+  nossas próprias experiências individuais nela.
 </p>
 ```
 
@@ -118,8 +122,8 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
-  content: "Cap\00EDtulo ";  /* O espaço no final cria uma separação
+h1::before {
+  content: "Cap\00EDtulo "; /* O espaço no final cria uma separação
                                 entre o conteúdo adicionado e o
                                 resto do conteúdo */
 }
@@ -143,8 +147,11 @@ Este exemplo insere uma imagem antes do _link_. Se a imagem não for encontrada,
 
 ```css
 a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") " MOZILLA: ";
-  font: x-small Arial, sans-serif;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
+    " MOZILLA: ";
+  font:
+    x-small Arial,
+    sans-serif;
   color: gray;
 }
 ```
@@ -173,7 +180,7 @@ Este exemplo insere texto adicional no final de itens especiais em uma lista.
 
 ```css
 .new-entry::after {
-  content: " Novo!";  /* O espaço no final cria uma separação
+  content: " Novo!"; /* O espaço no final cria uma separação
                          entre o conteúdo adicionado e o
                          resto do conteúdo */
   color: red;
@@ -192,10 +199,12 @@ Este exemplo insere uma imagem antes de cada _link_ e adiciona o conteúdo do se
 
 ```html
 <ul>
-  <li><a id="moz" href="http://www.mozilla.org/">
-    Mozilla Home Page</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">
-    Mozilla Developer Network</a></li>
+  <li><a id="moz" href="http://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/">
+      Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -212,11 +221,11 @@ a::after {
 }
 
 #moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") ;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
 }
 
 #mdn::before {
-  content: url("mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png");
 }
 
 li {
@@ -230,10 +239,10 @@ li {
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário        |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
+| Especificação                                                | Status                    | Comentário        |
+| ------------------------------------------------------------ | ------------------------- | ----------------- |
 | {{SpecName("CSS3 Content", "#content-property", "content")}} | {{Spec2("CSS3 Content")}} |                   |
-| {{SpecName("CSS2.1", "generate.html#content", "content")}}     | {{Spec2("CSS2.1")}}         | Definição inicial |
+| {{SpecName("CSS2.1", "generate.html#content", "content")}}   | {{Spec2("CSS2.1")}}       | Definição inicial |
 
 ## Compatibilidade com navegadores
 

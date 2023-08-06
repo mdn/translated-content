@@ -1,7 +1,6 @@
 ---
 title: 异步 JavaScript 简介
 slug: Learn/JavaScript/Asynchronous/Introducing
-original_slug: learn/JavaScript/异步/简介
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}

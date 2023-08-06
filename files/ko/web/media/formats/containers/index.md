@@ -1,7 +1,6 @@
 ---
 title: 미디어 컨테이너 포맷 (파일 타입)
 slug: Web/Media/Formats/Containers
-original_slug: Web/Media/Formats/컨테이너
 ---
 
 오디오와 비디오 파일 포맷은 두 파트에서 정의할 수 있습니다.(오디오 비디오가 한 파일에 있으면 물론 3 파트지요): 오디오/비디오 코덱와 미디어 컨테이너 포맷(도는 파일 타입)입니다. 이 가이드 문서는 웹에서 널리 쓰이는 컨테이너 포맷에 대해 알아보고 기본적인 스펙와 장단점 그리고 적절한 사용법을 설명하고 있습니다.
@@ -1039,7 +1038,7 @@ WebM은 2010년 처음 소개되었습니다..
 
 호환성을 높이려면 한가지 버전 이상의 미디어 파일 제공을 고려해 볼 수 있습니다. {{HTMLElement("audio")}}, {{HTMLElement("video")}} 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 추가하여 구현할 수 있죠. 예를 들어 Ogg, WebM 비디오를 우선하되 호환성을 위해 MP4 포맷을 추가할 수 있습니다. 레트로하게 QuickTime이나 AVI 호환을 추가하는 것도 좋은 방법입니다.
 
-구현하려면 우선 {{htmlattrxref("src", "video")}} 어트리뷰트 없이 `<video>` (또는 `<audio>`) 엘리먼트를 생성합니다. 그 후 `<video>` 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 제공하려는 미디어 포맷별로 추가합니다. 이 방식은 대역폭 상황에 따라 소스를 선택하는 방식으로도 사용할 수 있지만 여기서는 포맷 옵션을 제공하기로 하죠.
+구현하려면 우선 [`src`](/ko/docs/Web/HTML/Element/video#src) 어트리뷰트 없이 `<video>` (또는 `<audio>`) 엘리먼트를 생성합니다. 그 후 `<video>` 엘리먼트 아래에 {{HTMLElement("source")}} 엘리먼트를 제공하려는 미디어 포맷별로 추가합니다. 이 방식은 대역폭 상황에 따라 소스를 선택하는 방식으로도 사용할 수 있지만 여기서는 포맷 옵션을 제공하기로 하죠.
 
 아래 예제에서는 두 포맷 타입의 비디오를 제공합니다: WebM and MP4.
 
@@ -1047,7 +1046,7 @@ WebM은 2010년 처음 소개되었습니다..
 
 <p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
-첫번째 비디오는 WebM 포맷입니다({{htmlattrxref("type", "video")}} 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
+첫번째 비디오는 WebM 포맷입니다([`type`](/ko/docs/Web/HTML/Element/video#type) 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
 
 ## 명세서
 

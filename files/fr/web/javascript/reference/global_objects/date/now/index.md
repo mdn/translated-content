@@ -1,7 +1,6 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
 
 {{JSRef}}

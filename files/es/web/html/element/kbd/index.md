@@ -1,7 +1,6 @@
 ---
 title: kbd
 slug: Web/HTML/Element/kbd
-original_slug: Web/HTML/Elemento/kbd
 ---
 
 ### Definición

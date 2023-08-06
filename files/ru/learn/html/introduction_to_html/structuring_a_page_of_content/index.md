@@ -1,10 +1,6 @@
 ---
 title: Структурируем страницу
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - HTML
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-original_slug: Learn/HTML/Введение_в_HTML/Structuring_a_page_of_content
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

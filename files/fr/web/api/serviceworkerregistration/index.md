@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-translation_of: Web/API/ServiceWorkerRegistration
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

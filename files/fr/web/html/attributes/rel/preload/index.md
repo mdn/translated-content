@@ -1,7 +1,6 @@
 ---
 title: "Types de liens : preload"
 slug: Web/HTML/Attributes/rel/preload
-translation_of: Web/HTML/Link_types/preload
 ---
 
 {{HTMLSidebar}}

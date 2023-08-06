@@ -1,11 +1,6 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-tags:
-  - DataView
-  - JavaScript
-  - byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 ---
 
 {{JSRef}}

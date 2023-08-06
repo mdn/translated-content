@@ -1,7 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-translation_of: Web/CSS/transform
 ---
 
 {{CSSRef}}

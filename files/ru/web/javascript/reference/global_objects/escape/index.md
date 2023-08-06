@@ -1,7 +1,6 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-translation_of: Web/JavaScript/Reference/Global_Objects/escape
 ---
 {{jsSidebar("Objects")}} {{deprecated_header}}
 

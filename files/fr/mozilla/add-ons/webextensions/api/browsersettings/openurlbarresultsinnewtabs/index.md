@@ -1,7 +1,6 @@
 ---
 title: browserSettings.openUrlbarResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
 ---
 
 {{AddonSidebar()}}

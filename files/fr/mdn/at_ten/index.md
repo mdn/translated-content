@@ -1,7 +1,6 @@
 ---
 title: MDN a 10 ans
 slug: MDN/At_ten
-translation_of: MDN_at_ten
 ---
 
 Fêtons 10 années passées à documenter votre Web.

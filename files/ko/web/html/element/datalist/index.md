@@ -102,5 +102,5 @@ slug: Web/HTML/Element/datalist
 
 ## 같이 보기
 
-- {{HTMLElement("input")}} 요소와 {{htmlattrxref("list", "input")}} 특성
+- {{HTMLElement("input")}} 요소와 [`list`](/ko/docs/Web/HTML/Element/input#list) 특성
 - {{HTMLElement("option")}} 요소

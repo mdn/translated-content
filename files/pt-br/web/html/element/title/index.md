@@ -1,5 +1,5 @@
 ---
-title: '<title>: O titulo do documento.'
+title: "<title>: O titulo do documento."
 slug: Web/HTML/Element/title
 ---
 

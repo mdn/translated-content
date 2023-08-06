@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}

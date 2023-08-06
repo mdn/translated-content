@@ -1,14 +1,6 @@
 ---
 title: Conditional (условное выражение)
 slug: Glossary/Conditional
-tags:
-  - Beginner
-  - Conditional
-  - Glossary
-  - Начинающим
-  - Глоссарий
-translation_of: Glossary/Conditional
-original_slug: Глоссарий/Conditional
 ---
 
 **Условие** - это набор правил, которые могут прерывать нормальное выполнение кода или изменять его в зависимости от того, удовлетворено ли условие или нет.

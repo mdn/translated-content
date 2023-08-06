@@ -58,16 +58,18 @@ respondWith(response)
 この fetch イベントはキャッシュ API からのレスポンスを返そうとし、ない場合にはネットワークにフォールバックします。
 
 ```js
-addEventListener('fetch', (event) => {
+addEventListener("fetch", (event) => {
   // 既定の動作を抑止し、リクエストを自分で処理します。
-  event.respondWith((async () => {
-    // キャッシュからレスポンスを取得しようとします。
-    const cachedResponse = await caches.match(event.request);
-    // 見つかったらそれを返します。
-    if (cachedResponse) return cachedResponse;
-    // キャッシュ内に一致するものが見つからなかった場合は、ネットワークを使用します。
-    return fetch(event.request);
-  })());
+  event.respondWith(
+    (async () => {
+      // キャッシュからレスポンスを取得しようとします。
+      const cachedResponse = await caches.match(event.request);
+      // 見つかったらそれを返します。
+      if (cachedResponse) return cachedResponse;
+      // キャッシュ内に一致するものが見つからなかった場合は、ネットワークを使用します。
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

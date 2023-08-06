@@ -1,7 +1,6 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
 
 {{AddonSidebar()}}

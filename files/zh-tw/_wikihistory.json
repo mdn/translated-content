@@ -1928,6 +1928,17 @@
     "modified": "2019-12-24T11:58:47.714Z",
     "contributors": ["ianchen0119", "jackblackevo", "Sheppy"]
   },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2019-04-30T13:56:21.954Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "NoctisHsu",
+      "jackblackevo",
+      "ethertank",
+      "CarterTsai"
+    ]
+  },
   "Web/API/Document/body": {
     "modified": "2019-03-23T22:12:47.911Z",
     "contributors": ["jackblackevo"]
@@ -2771,17 +2782,6 @@
   "Web/API/Window": {
     "modified": "2019-03-23T22:30:42.242Z",
     "contributors": ["jackblackevo"]
-  },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2019-04-30T13:56:21.954Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "NoctisHsu",
-      "jackblackevo",
-      "ethertank",
-      "CarterTsai"
-    ]
   },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-03-23T22:27:46.116Z",

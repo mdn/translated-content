@@ -37,12 +37,12 @@ Math.acos(x)
 ### Math.acos() の使用
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 値が -1 未満か 1 より大きい数値の場合、`Math.acos()` は {{jsxref("NaN")}} を返します。

@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
 
 {{JSRef}}

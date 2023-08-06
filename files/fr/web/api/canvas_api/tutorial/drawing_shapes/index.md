@@ -1,7 +1,6 @@
 ---
 title: Dessiner des formes avec le canevas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}

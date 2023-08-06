@@ -1,7 +1,6 @@
 ---
 title: 检测设备方向
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
-original_slug: Web/Events/Detecting_device_orientation
 ---
 
 {{SeeCompatTable}}

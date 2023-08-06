@@ -1,7 +1,6 @@
 ---
 title: Valor atual
 slug: Web/CSS/actual_value
-original_slug: Web/CSS/Valor_atual
 ---
 
 {{CSSRef}}
@@ -10,8 +9,8 @@ The **actual value** of a CSS property is the [used value](/pt-BR/docs/Web/CSS/u
 
 ## Especificações
 
-| Especificações                                                                           | Status                   | Comentario        |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| Especificações                                                      | Status              | Comentario        |
+| ------------------------------------------------------------------- | ------------------- | ----------------- |
 | {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Definição inicial |
 
 ## Veja também

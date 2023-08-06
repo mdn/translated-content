@@ -1,7 +1,6 @@
 ---
 title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
-original_slug: Web/Events/loadend
 ---
 
 El evento `loadend` es emitido cuando el progreso de la carga de un recurso se ha detenido (e.g. despues que "error", "abort", o "load" han sido emitidos). Por ejemplo, esto aplica a las llamadas de {{domxref("XMLHttpRequest")}}, y al contenido de un elemento {{htmlelement("img")}} o {{htmlelement("video")}}.

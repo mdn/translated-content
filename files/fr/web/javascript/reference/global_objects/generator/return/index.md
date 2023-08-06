@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 ---
 
 {{JSRef}}

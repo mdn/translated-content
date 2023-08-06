@@ -1,7 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-translation_of: Web/API/Request/credentials
 ---
 
 {{APIRef("Fetch")}}

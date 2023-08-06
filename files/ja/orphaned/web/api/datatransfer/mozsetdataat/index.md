@@ -1,7 +1,6 @@
 ---
 title: DataTransfer.mozSetDataAt()
 slug: orphaned/Web/API/DataTransfer/mozSetDataAt
-original_slug: Web/API/DataTransfer/mozSetDataAt
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

@@ -1,14 +1,6 @@
 ---
 title: Получение данных с сервера
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - AJAX
-  - API
-  - Fetch
-  - JavaScript
-  - XHR
-  - Новичку
-translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

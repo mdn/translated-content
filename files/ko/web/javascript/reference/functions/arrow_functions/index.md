@@ -1,7 +1,6 @@
 ---
 title: 화살표 함수
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Reference/Functions/애로우_펑션
 ---
 
 {{jsSidebar("Functions")}}

@@ -1,7 +1,6 @@
 ---
 title: pageAction.hide()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
 ---
 
 {{AddonSidebar()}}

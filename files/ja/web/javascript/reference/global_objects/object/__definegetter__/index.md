@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ## 構文
 
 ```js
-__defineGetter__(prop, func)
+__defineGetter__(prop, func);
 ```
 
 ### 引数
@@ -36,7 +36,9 @@ __defineGetter__(prop, func)
 
 ```js
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
 ```
 
@@ -44,15 +46,19 @@ console.log(o.gimmeFive); // 5
 
 ```js
 // get 演算子を使用
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // Object.defineProperty を使用
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

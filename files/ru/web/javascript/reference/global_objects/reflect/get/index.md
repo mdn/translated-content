@@ -1,12 +1,6 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reflect
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
 
 {{JSRef}}

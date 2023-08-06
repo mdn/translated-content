@@ -1,7 +1,6 @@
 ---
 title: Conceptos básicos de las tablas HTML
 slug: Learn/HTML/Tables/Basics
-original_slug: Learn/HTML/Tablas/Conceptos_básicos_de_las_tablas_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

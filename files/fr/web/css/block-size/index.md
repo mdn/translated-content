@@ -1,7 +1,6 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-translation_of: Web/CSS/block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

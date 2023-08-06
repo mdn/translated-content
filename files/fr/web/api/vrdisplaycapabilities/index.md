@@ -1,7 +1,6 @@
 ---
 title: VRDisplayCapabilities
 slug: Web/API/VRDisplayCapabilities
-translation_of: Web/API/VRDisplayCapabilities
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

@@ -1,16 +1,6 @@
 ---
 title: PaymentRequest
 slug: Web/API/PaymentRequest
-tags:
-  - API
-  - Payment Request API
-  - PaymentRequest
-  - Деньги
-  - Интерфейс
-  - Коммерция
-  - Оплата
-  - Платежи
-translation_of: Web/API/PaymentRequest
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}
@@ -62,11 +52,9 @@ The [Payment Request API's](/ru/docs/Web/API/Payment_Request_API) **`PaymentRequ
   - : Срабатывает каждый раз, когда пользователь меняет вариант доставки.
     Также доступно с использованием HTML атрибута {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}}.
 
-## Характеристики
+## Спецификации
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Payment','#paymentrequest-interface','PaymentRequest')}} | {{Spec2('Payment')}} | Initial definition. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

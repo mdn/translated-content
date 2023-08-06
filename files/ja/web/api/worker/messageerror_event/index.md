@@ -1,7 +1,6 @@
 ---
-title: 'Worker: messageerror イベント'
+title: "Worker: messageerror イベント"
 slug: Web/API/Worker/messageerror_event
-original_slug: Web/API/Worker/onmessageerror
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---

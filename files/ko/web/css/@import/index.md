@@ -1,5 +1,5 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
 ---
 

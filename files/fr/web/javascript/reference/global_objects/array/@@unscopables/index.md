@@ -1,7 +1,6 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ---
 
 {{JSRef}}

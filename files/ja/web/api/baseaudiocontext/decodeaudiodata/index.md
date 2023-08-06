@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
-original_slug: Web/API/AudioContext/decodeAudioData
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -14,11 +13,11 @@ original_slug: Web/API/AudioContext/decodeAudioData
 
 ```js
 // 古いコールバックの構文:
-decodeAudioData(arrayBuffer, successCallback)
-decodeAudioData(arrayBuffer, successCallback, errorCallback)
+decodeAudioData(arrayBuffer, successCallback);
+decodeAudioData(arrayBuffer, successCallback, errorCallback);
 
 // 新しいプロミスベースの構文:
-decodeAudioData(arrayBuffer)
+decodeAudioData(arrayBuffer);
 ```
 
 ### 引数
@@ -52,10 +51,10 @@ decodeAudioData(arrayBuffer)
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
 
 // 音声トラックの読み込みには XHR を使い、
 // decodeAudioData でデコードし、バッファーに格納する
@@ -65,39 +64,43 @@ function getData() {
   source = audioCtx.createBufferSource();
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){ console.log("Error with decoding audio data" + e.err); });
-
-  }
+      function (e) {
+        console.log("Error with decoding audio data" + e.err);
+      },
+    );
+  };
 
   request.send();
 }
 
 // 音声の停止と再生を行うボタン
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 
-stop.onclick = function() {
+stop.onclick = function () {
   source.stop(0);
-  play.removeAttribute('disabled');
-}
+  play.removeAttribute("disabled");
+};
 
 // pre要素にスクリプトを設定する
 
@@ -107,8 +110,8 @@ pre.innerHTML = myScript.innerHTML;
 ### 新しいプロミスベースの構文
 
 ```js
-ctx.decodeAudioData(audioData).then(function(decodedData) {
- // デコードしたデータをここで使う
+ctx.decodeAudioData(audioData).then(function (decodedData) {
+  // デコードしたデータをここで使う
 });
 ```
 

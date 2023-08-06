@@ -1,7 +1,6 @@
 ---
 title: Affecter par décomposition
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
-translation_of: Web/API/Plugin
 ---
 
 {{ApiRef("HTML DOM")}}

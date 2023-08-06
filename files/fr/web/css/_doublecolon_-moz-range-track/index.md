@@ -1,7 +1,6 @@
 ---
 title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
-translation_of: Web/CSS/::-moz-range-track
 ---
 
 {{CSSRef}}{{Non-standard_header}}

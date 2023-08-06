@@ -1,15 +1,8 @@
 ---
 title: HTMLHyperlinkElementUtils.hash
 slug: Web/API/HTMLAnchorElement/hash
-tags:
-  - API
-  - Experimental
-  - HTMLHyperlinkElementUtils
-  - Property
-  - URL API
-translation_of: Web/API/HTMLHyperlinkElementUtils/hash
-original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
+
 {{ APIRef("URLUtils") }}
 
 Свойство **`HTMLHyperlinkElementUtils.hash`** – это {{domxref("USVString")}}, содержащий `'#'` с последующим идентификатором. Идентификатор не декодирован.

@@ -1,7 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 ---
 {{JSRef}}
 

@@ -1,7 +1,6 @@
 ---
 title: browserSettings.homepageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
 ---
 
 {{AddonSidebar()}}
