@@ -210,4 +210,3 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
 
 - [Lista de códigos de status na Wikipedia](https://pt.wikipedia.org/wiki/Lista_de_c%C3%B3digos_de_estado_HTTP)
 - [Registro oficial IANA de códigos de status HTTP](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
-
