@@ -183,7 +183,7 @@ Example h-entry as a blog post:
     Replied to
     <a
       class="u-in-reply-to"
-      href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats"
+      href="https://developer.mozilla.org/ja/docs/Web/HTML/microformats"
       >a post on <strong>developer.mozilla.org</strong> </a
     >:
   </p>
@@ -212,7 +212,7 @@ Example h-entry as a blog post:
     {
       "type": [ "h-entry" ],
       "properties": {
-        "in-reply-to": [ "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats" ],
+        "in-reply-to": [ "https://developer.mozilla.org/ja/docs/Web/HTML/microformats" ],
         "name": [ "Hey thanks for making this microformats resource" ],
         "url": [ "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource" ],
         "published": [ "2019-05-31T14:19:09+0000" ],
