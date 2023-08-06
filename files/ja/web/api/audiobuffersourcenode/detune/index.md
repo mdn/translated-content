@@ -13,7 +13,7 @@ l10n:
 
 ## 値
 
-A [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
+A [k-rate](/ja/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}}
 whose value indicates the detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
 > **メモ:** `AudioParam` は読み取り専用の値を返しますが、値は読み取り専用ではありません。
