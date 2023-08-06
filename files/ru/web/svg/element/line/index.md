@@ -1,10 +1,6 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-tags:
-  - SVG
-translation_of: Web/SVG/Element/line
-original_slug: Web/SVG/Элемент/line
 ---
 {{SVGRef}}
 
@@ -66,7 +62,7 @@ html,body,svg { height:100% }
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{SVGElement("polygon")}}
 - {{SVGElement("path")}}

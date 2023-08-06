@@ -1,6 +1,8 @@
 ---
 title: HTMLOListElement
 slug: Web/API/HTMLOListElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,9 +11,9 @@ slug: Web/API/HTMLOListElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLOListElement.reversed")}}
   - : 論理値で [`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) を反映しており、番号が降順なるのであれば値が `true` を、昇順になるのであれば `false` を定義します。
@@ -30,9 +32,9 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLOListElement.compact")}} {{deprecated_inline}}
   - : 論理値で、リスト項目間の間隔を縮小すべきであることを示します。このプロパティは [`compact`](/ja/docs/Web/HTML/Element/ol#compact) 属性を反映するのみで、最近のページでは、その動作に使用される CSS の {{cssxref("line-height")}} プロパティは考慮されません。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

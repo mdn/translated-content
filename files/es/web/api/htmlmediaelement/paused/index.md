@@ -20,7 +20,7 @@ Es un {{domxref("Boolean")}}. Mostrara **true** si está pausado y **false** en 
 ## Ejemplo
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.paused); // true
 ```
 

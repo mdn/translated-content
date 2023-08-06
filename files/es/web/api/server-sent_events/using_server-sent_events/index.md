@@ -1,7 +1,6 @@
 ---
 title: Utilizando eventos enviados por el servidor (server-sent event)
 slug: Web/API/Server-sent_events/Using_server-sent_events
-original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
 
 Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
@@ -23,12 +22,12 @@ var evtSource = new EventSource("ssedemo.php");
 Una vez que ha instanciado el origen del evento, puede comenzar a escuchar los mensajes:
 
 ```js
-evtSource.onmessage = function(e) {
+evtSource.onmessage = function (e) {
   var newElement = document.createElement("li");
 
   newElement.innerHTML = "message: " + e.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del servidor, que no tienen un campo de eventos en ellos) y anexa texto del mensaje a la lista en el documento HTML.
@@ -36,13 +35,17 @@ Este codigo escucha todos los mensajes entrantes (Es decir, todos los avisos del
 También puedes escuchar eventos, usando `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", function(e) {
-  var newElement = document.createElement("li");
+evtSource.addEventListener(
+  "ping",
+  function (e) {
+    var newElement = document.createElement("li");
 
-  var obj = JSON.parse(e.data);
-  newElement.innerHTML = "ping at " + obj.time;
-  eventList.appendChild(newElement);
-}, false);
+    var obj = JSON.parse(e.data);
+    newElement.innerHTML = "ping at " + obj.time;
+    eventList.appendChild(newElement);
+  },
+  false,
+);
 ```
 
 Este código es similar, excepto que este se activa cada vez que el servidor envia un mensaje con el campo de evento "ping"; entonces se analiza el JSON en el campo de datos y retorna esa informacion.
@@ -88,7 +91,7 @@ Se genera un evento cada segundo, con el evento "ping". Los datos de cada evento
 Cuando se producen problemas (como un tiempo de espera o problemas relacionados con el control de acceso), se genera un evento de error. Puedes tomar acción sobre esto al implementar una devolución de llamada al objeto EventSource:
 
 ```js
-evtSource.onerror = function(e) {
+evtSource.onerror = function (e) {
   alert("EventSource failed.");
 };
 ```

@@ -90,7 +90,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }，目标对象本身发生了变化
+console.log(o1); // { a: 1, b: 2, c: 3 }，目标对象本身发生了变化
 ```
 
 ### 合并具有相同属性的对象
@@ -110,7 +110,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -141,10 +141,10 @@ console.log(copy); // { baz: 3 }
 ### 基本类型会被封装为对象
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // 基本类型将被封装，null 和 undefined 将被忽略。

@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Upgrade-Insecure-Requests
 
 **`Upgrade-Insecure-Requests`** 是一个请求首部，用来向服务器端发送信号，表示客户端优先选择加密及带有身份验证的响应，并且它可以成功处理 {{CSP("upgrade-insecure-requests")}} [CSP](/zh-CN/docs/Web/Security/CSP) 指令。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 

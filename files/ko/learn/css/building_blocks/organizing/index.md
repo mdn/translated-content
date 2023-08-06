@@ -2,6 +2,7 @@
 title: CSS 구성
 slug: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 더 큰 스타일 시트와 큰 프로젝트에서 작업을 시작하면 큰 CSS 파일을 유지 관리하는 것이 어려울 수 있습니다. 이 기사에서는 CSS 를 쉽게 유지 관리할 수 있도록 작성하는 몇 가지 모범 사례와 유지 관리성을 개선하기 위해, 다른 사용자가 사용하는 해결책을 간략하게 살펴보겠습니다.
@@ -21,11 +22,11 @@ slug: Learn/CSS/Building_blocks/Organizing
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -63,8 +64,13 @@ slug: Learn/CSS/Building_blocks/Organizing
 CSS 형식을 볼 수 있는 몇 가지 방법이 있습니다. 일부 개발자는 다음과 같이 모든 규칙을 한 라인에 넣습니다:
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 다른 개발자는 모든 것을 새로운 라인으로 나누는 것을 선호합니다:
@@ -236,7 +242,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -246,7 +252,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -259,14 +265,14 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
 }
 ```
@@ -286,7 +292,7 @@ The list-item would have `media` and `list-item` applied:
 <ul>
   <li class="media list-item">
     <img />
-   <div class="content"></div>
+    <div class="content"></div>
   </li>
 </ul>
 ```
@@ -300,9 +306,7 @@ BEM stands for Block Element Modifier. In BEM a block is a standalone entity suc
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 

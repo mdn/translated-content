@@ -37,4 +37,4 @@ obj.display();
 
 ## 参见
 
-- 维基百科上的[抽象化](https://zh.wikipedia.org/wiki/抽象化_(計算機科學))
+- 维基百科上的[抽象化](<https://zh.wikipedia.org/wiki/抽象化_(計算機科學)>)

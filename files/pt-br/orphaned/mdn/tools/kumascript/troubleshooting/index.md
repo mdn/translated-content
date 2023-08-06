@@ -1,7 +1,6 @@
 ---
 title: Solucionando problemas de erros de KumaScript
 slug: orphaned/MDN/Tools/KumaScript/Troubleshooting
-original_slug: MDN/Tools/KumaScript/Troubleshooting
 ---
 
 {{MDNSidebar}}

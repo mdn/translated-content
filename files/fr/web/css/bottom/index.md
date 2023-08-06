@@ -1,11 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/bottom
 ---
 
 {{CSSRef}}
@@ -79,26 +74,26 @@ Dans l'exemple qui suit, on illustre la différence de comportement de la propri
 
 ```css
 p {
-  font-size:30px;
-  line-height:3em;
+  font-size: 30px;
+  line-height: 3em;
 }
 
 div.pos {
-  width:49%;
-  text-align:center;
-  border:2px solid #00f;
+  width: 49%;
+  text-align: center;
+  border: 2px solid #00f;
 }
 
 div#abs {
-  position:absolute;
-  bottom:0;
-  left:0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 div#fix {
-  position:fixed;
-  bottom:0;
-  right:0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 ```
 
@@ -106,8 +101,8 @@ div#fix {
 
 ```html
 <p>
-  Voici <br>un<br>grand<br>grand,<br>grand,
-  <br>grand,<br>grand,<br>grand<br>contenu.
+  Voici <br />un<br />grand<br />grand,<br />grand,
+  <br />grand,<br />grand,<br />grand<br />contenu.
 </p>
 
 <div id="fix" class="pos">

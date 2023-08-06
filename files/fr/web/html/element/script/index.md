@@ -1,12 +1,6 @@
 ---
-title: '<script> : l''élément de script'
+title: "<script> : l'élément de script"
 slug: Web/HTML/Element/script
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/script
 ---
 
 {{HTMLSidebar}}
@@ -115,11 +109,11 @@ Les navigateurs qui prennent en charge le type `module` prennent également en c
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a
@@ -146,7 +140,7 @@ Les navigateurs qui prennent en charge le type `module` prennent également en c
         >
         ou tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

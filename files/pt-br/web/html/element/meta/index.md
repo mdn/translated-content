@@ -196,8 +196,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
       | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Non-normatively describes the Viewport META element |
 
-      See also: {{cssxref("@viewport")}}
-
       > **Note:** **Notes:**- Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
       >
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.

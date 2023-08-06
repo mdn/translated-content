@@ -1,12 +1,6 @@
 ---
 title: Propriétés logiques pour les flottements et le positionnement
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
-translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-original_slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
 
 {{CSSRef}}
@@ -17,26 +11,26 @@ original_slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 
 Le tableau ci-après définit les propriétés et les valeurs que nous verrons dans ce guide et la correspondance avec les propriétés et valeurs physiques si on utilisait un mode d'écriture horizontal allant de gauche à droite.
 
-| Propriété ou valeur logique                  | Propriété ou valeur physique              |
-| -------------------------------------------- | ----------------------------------------- |
-| {{cssxref("float")}}`: inline-start` | {{cssxref("float")}}`: left`      |
-| {{cssxref("float")}}`: inline-end`   | {{cssxref("float")}}`: right`     |
-| {{cssxref("clear")}}`: inline-start` | {{cssxref("clear")}}`: left`      |
-| {{cssxref("clear")}}`: inline-end`   | {{cssxref("clear")}}`: right`     |
-| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                  |
-| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}              |
-| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                  |
-| {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}              |
-| {{cssxref("text-align")}}`: start`    | {{cssxref("text-align")}}`: left`  |
-| {{cssxref("text-align")}}`: end`      | {{cssxref("text-align")}}`: right` |
+| Propriété ou valeur logique          | Propriété ou valeur physique       |
+| ------------------------------------ | ---------------------------------- |
+| {{cssxref("float")}}`: inline-start` | {{cssxref("float")}}`: left`       |
+| {{cssxref("float")}}`: inline-end`   | {{cssxref("float")}}`: right`      |
+| {{cssxref("clear")}}`: inline-start` | {{cssxref("clear")}}`: left`       |
+| {{cssxref("clear")}}`: inline-end`   | {{cssxref("clear")}}`: right`      |
+| {{cssxref("inset-inline-start")}}    | {{cssxref("left")}}                |
+| {{cssxref("inset-inline-end")}}      | {{cssxref("right")}}               |
+| {{cssxref("inset-block-start")}}     | {{cssxref("top")}}                 |
+| {{cssxref("inset-block-end")}}       | {{cssxref("bottom")}}              |
+| {{cssxref("text-align")}}`: start`   | {{cssxref("text-align")}}`: left`  |
+| {{cssxref("text-align")}}`: end`     | {{cssxref("text-align")}}`: right` |
 
 En plus de ces correspondances, certaines propriétés logiques raccourcies ont été ajoutées. Pour celles-ci, qui ciblent les extrêmités des axes en ligne ou de bloc, il n'y a pas de correspondance avec des propriétés physiques existantes à l'exception de {{cssxref("inset")}}.
 
-| Propriété logique                    | Objectif                                                                                           |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Propriété logique           | Objectif                                                                                           |
+| --------------------------- | -------------------------------------------------------------------------------------------------- |
 | {{cssxref("inset-inline")}} | Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe en ligne. |
-| {{cssxref("inset-block")}} | Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe de bloc.  |
-| {{cssxref("inset")}}         | Cette propriété définit les valeurs des quatre décalages.                                          |
+| {{cssxref("inset-block")}}  | Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe de bloc.  |
+| {{cssxref("inset")}}        | Cette propriété définit les valeurs des quatre décalages.                                          |
 
 ## Exemple d'un flottement et d'un dégagement
 

@@ -1,11 +1,11 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
 ---
 
 {{CSSRef}}
 
-O [pseudo-elemento](pt-BR/docs/Web/CSS/Pseudo-elementos) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elementos) CSS **`::selection`** aplica estilos para partes do documento que foram selecionadas pelo usuário (tal como clicar e arrastar o ponteiro do mouse através de um texto.
 
 ```css
 ::selection {
@@ -94,8 +94,8 @@ Facilite para os usuários ver e ouvir o conteúdo, incluindo a separação do p
 
 ## Especificações
 
-| Especificações                                                                                           | Status                                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
+| Especificações                                                                | Status                            | Comentário         |
+| ----------------------------------------------------------------------------- | --------------------------------- | ------------------ |
 | {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definição inicial. |
 
 > **Nota:** `::selection` estava nos rascunhos do Nível 3 dos Seletores de CSS, mas foi removido na fase Recomendação do Candidato porque estava subespecificado (especialmente com elementos aninhados) e a interoperabilidade não foi alcançada ([com base na lista de discussão de estilos W3C](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html)). Ele retornou no [Nível 4 dos Pseudo-Elementos](http://dev.w3.org/csswg/css-pseudo-4/).

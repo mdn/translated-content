@@ -1,7 +1,6 @@
 ---
 title: <video>
 slug: Web/HTML/Element/video
-translation_of: Web/HTML/Element/video
 ---
 
 {{HTMLSidebar}}
@@ -16,10 +15,10 @@ translation_of: Web/HTML/Element/video
   Иначе: 0 или более элементов {{HTMLElement("source")}}, за которыми следует 0 или более элементов {{HTMLElement("track")}}, затем прозрачным содержимым, которое не содержит элементы мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}.
 
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), содержание фраз, встроенный контент. Если имеет атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls): становится интерактивным элементом с осязаемым содержанием. |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission                                               | {{no_tag_omission}}                                                                                                                                                                                                                 |
-| Допустимые родительские элементы                           | Любой элемент, который принимает встроенный контент.                                                                                                                                                                                     |
-| DOM интерфейс                                              | {{domxref("HTMLVideoElement")}}                                                                                                                                                                                                 |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission                                               | {{no_tag_omission}}                                                                                                                                                                                                                            |
+| Допустимые родительские элементы                           | Любой элемент, который принимает встроенный контент.                                                                                                                                                                                           |
+| DOM интерфейс                                              | {{domxref("HTMLVideoElement")}}                                                                                                                                                                                                                |
 
 ## Атрибуты
 
@@ -49,12 +48,14 @@ translation_of: Web/HTML/Element/video
 - {{htmlattrdef("played")}}
   - : Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.
 - {{htmlattrdef("preload")}}
+
   - : Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
     - `none`: указывает, что видео не должно быть предварительно загружено.
     - `metadata`: указывает, что предварительно загружаются метаданные видео (например, длина).
     - `auto`: указывает, что весь видеофайл может быть загружен, даже если пользователь не должен его использовать.
     - _пустая строка_: синоним значения `auto`.Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать `metadata`.
       > **Примечание:**
+      >
       > **Usage notes:**
       >
       > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
@@ -76,15 +77,15 @@ The `<video>` element can fire many different [events](/ru/docs/Web/Guide/Events
 ```html
 <!-- Simple video example -->
 <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  Sorry, your browser doesn't support embedded videos,
-  but don't worry, you can <a href="videofile.ogg">download it</a>
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="videofile.ogg">download it</a>
   and watch it with your favorite video player!
 </video>
 
 <!-- Video with subtitles -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 
@@ -95,10 +96,19 @@ The second example allows the user to choose between different subtitles.
 ## Multiple Sources Example
 
 ```html
-<video width="480" controls poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif" >
-  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
-  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
-  <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+<video
+  width="480"
+  controls
+  poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif">
+  <source
+    src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"
+    type="video/mp4" />
+  <source
+    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv"
+    type="video/ogg" />
+  <source
+    src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm"
+    type="video/webm" />
   Your browser doesn't support HTML5 video tag.
 </video>
 ```
@@ -127,7 +137,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 ## Интерфейс DOM
 
-Этот элемент реализует интерфейс [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement).
+Этот элемент реализует интерфейс [`HTMLVideoElement`](/ru/docs/Web/API/HTMLVideoElement).
 
 ## Совместимость браузера
 

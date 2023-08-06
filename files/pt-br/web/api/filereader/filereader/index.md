@@ -19,12 +19,12 @@ Nenhum.
 
 ## Exemplo
 
-O seguinte trecho de código ilustra a criação de um objeto [`FileReader`](/en-US/docs/Web/API/FileReader) usando o construtor `FileReader()` e depois utilizando o objeto:
+O seguinte trecho de código ilustra a criação de um objeto [`FileReader`](/pt-BR/docs/Web/API/FileReader) usando o construtor `FileReader()` e depois utilizando o objeto:
 
 ```js
 function printFile(file) {
   var reader = new FileReader();
-  reader.onload = function(evt) {
+  reader.onload = function (evt) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
@@ -33,9 +33,11 @@ function printFile(file) {
 
 ## Especificações
 
-| Especificação                    | Status                       | Comentário         |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Initial definition |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

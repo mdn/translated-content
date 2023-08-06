@@ -1,5 +1,5 @@
 ---
-title: 'Django 튜토리얼 파트 11: Django 웹사이트 공개하기'
+title: "Django 튜토리얼 파트 11: Django 웹사이트 공개하기"
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Deployment
       <th scope="row">사전학습:</th>
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할 것.
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
+        <a href="/ko/docs/Learn/Server-side/Django/Testing"
           >Django 튜토리얼 파트 10: Django 웹 어플리케이션 테스트하기</a
         >
       </td>
@@ -199,10 +199,10 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 2. 로그인 해서 꼭대기 툴바의 **+** 링크를 클릭하여 **New repository**를 선택하라.
 3. 이 폼의 모든 필드에 기입하라. 그렇지 않으면 진행이 불가한 것은 아니지만, 모두 채울것을 강력 추천한다.
 
-    - 새로운 저장소 이름 (예시: _django_local_library_)과 설명 (예시: "Local Library website written in Django")을 입력하라.
-    - "_Add .gitignore" 선택 목록에서 "_**Python**_"을 선택하라_.
-    - "_Add a license" 선택 목록에서 선호하는 라이센스 유형을 선택하라_.
-    - "**Initialize this repository with a README**." 체크박스에 체크하라
+   - 새로운 저장소 이름 (예시: _django_local_library_)과 설명 (예시: "Local Library website written in Django")을 입력하라.
+   - "_Add .gitignore" 선택 목록에서 "_**Python**_"을 선택하라_.
+   - "_Add a license" 선택 목록에서 선호하는 라이센스 유형을 선택하라_.
+   - "**Initialize this repository with a README**." 체크박스에 체크하라
 
 4. " **Create repository"** 버튼을 누른다
 5. 신규 저장소 페이지에서 초록색의 "**Clone or download**" 버튼을 클릭한다.
@@ -213,65 +213,65 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 1. _git을 로컬 컴퓨터에 설치하라_ (플랫폼별 버전은 [이곳](https://git-scm.com/downloads) 에서 찾을 수 있다).
 2. 커맨드 프롬프트/터미널 을 열고 위에서 복사한 URL을 이용하여 저장소 내용을 복제(clone) 한다 :
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    이 명령은 현재 프롬프트의 위치에 저장소를 생성할 것이다.
+   이 명령은 현재 프롬프트의 위치에 저장소를 생성할 것이다.
 
 3. 새로운 저장소 위치로 이동한다.
 
-    ```bash
-    cd django_local_library.git
-    ```
+   ```bash
+   cd django_local_library.git
+   ```
 
 마지막 단계는 어플리케이션을 복사하여 git을 이용해 저장소에 파일을 추가하는 것이다 :
 
 1. 이 폴더에 Django 어플리케이션을 복사해 넣는다. (locallibrary 폴더를 포함한 위치가 아니라 **manage.py** 와 그 하위 폴더와 같은 위치의 모든 파일에 대해 작업한다).
 2. **.gitignore** 파일을 열어서, 아래 코드를 맨 밑에 복사하고, 저장하라 ( 이 파일은 기본 설정에 의해 git에 저장되지 말아야할 파일을 구분하는데 사용된다).
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. 커맨드 프로프트/터미널을 열고 `add`명령으로 모든 파일을 git에 등록한다.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. status 명령을 사용하여 등록하고자 하는 파일이 맞는지 확인한다 ( 당신은 소스파일만 등록 하길 원하고 바이너리나 임시 파일은 원치 않을 것이다). 명령을 실행하면 아래와 유사하게 나온다.
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. 위의 결과에 만족했다면, commit 명령으로 파일의 로컬 저장소 등록을 확정한다:
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. 다음 명령을 이용하여 Github 웹사이트와 로컬 저장소를 동기화 한다:
 
-    ```
-    git push origin master
-    ```
+   ```
+   git push origin master
+   ```
 
 이런 작업이 완료된 후, repo를 생성한 Github 페이지로 다시 가서, 페이지를 새로 로딩하여, 전체 어플리케이션이 모두 업로드된것인지 확인할 수 있어야 한다. 이후로 파일 변경 사항이 발생하면 add/commit/push 순서로 명령을 사용하여 저장소를 업데이트 할 수 있다.
 

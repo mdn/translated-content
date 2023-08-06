@@ -5,7 +5,7 @@ slug: Web/CSS/@media/width
 
 {{CSSRef}}
 
-可以使用 `width` [CSS](/zh-CN/docs/CSS) {{cssxref("@media")}} 基于{{glossary("viewport")}}宽度 (或页面框，用于 [paged media](/zh-CN/docs/Web/CSS/Paged_media)) 应用样式。
+可以使用 `width` [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 基于{{glossary("viewport", "视口")}}宽度（或页面框，用于[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)）应用样式。
 
 ## 语法
 

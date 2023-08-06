@@ -1,19 +1,6 @@
 ---
 title: Galerie d'images
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Apprendre
-  - Boucles
-  - Débutant
-  - Evaluation
-  - Gestionnaire d'événement
-  - JavaScript
-  - conditions
-  - l10n:priority
-  - Écriture de code
-  - évènements
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -55,14 +42,12 @@ Vous avez reçu des fichiers HTML, CSS, des images et quelques lignes de code Ja
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 L'exemple ressemble à ceci:
@@ -71,7 +56,7 @@ L'exemple ressemble à ceci:
 
 Les parties les plus intéressantes du fichier CSS de l'exemple:
 
-- Positionnez les trois éléments en absolu à l’intérieur du `full-img <div>`: le `<img>` dans lequel l’image est affichée grandeur nature, un `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>` qui est utilisé pour contrôler l'effet d'assombrissement.
+- Positionnez les trois éléments en absolu à l'intérieur du `full-img <div>`: le `<img>` dans lequel l'image est affichée grandeur nature, un `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>` qui est utilisé pour contrôler l'effet d'assombrissement.
 - Réglez la largeur des images à l'intérieur de `thumb-bar <div>` (appelées images miniatures) à 20% et faites un float à gauche pour qu'elles soient côte-à-côte sur une ligne.
 
 Votre JavaScript doit:
@@ -114,7 +99,7 @@ Il ne reste que notre `<button>` d'assombrissement — nous vous avons fourni un
 Les lignes suivantes fournissent une base pour réaliser les changements décrits aux points 2 et 3.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -130,10 +115,10 @@ Si vous souhaitez que votre travail soit évalué, ou si vous êtes bloqué et q
 1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
 2. Rédiger un sujet pour demander une évaluation et/ou une aide à le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn). Ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Votre message doit inclure :
 
-    - Un titre descriptif tel que "Évaluation demandée pour la galerie d'images".
-    - Des détails sur ce que vous souhaitez que nous fassions — par exemple ce que vous avez déjà essayé, si vous êtes bloqué et avez besoin d'aide.
-    - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-    - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+   - Un titre descriptif tel que "Évaluation demandée pour la galerie d'images".
+   - Des détails sur ce que vous souhaitez que nous fassions — par exemple ce que vous avez déjà essayé, si vous êtes bloqué et avez besoin d'aide.
+   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
+   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre professeur ou mentor pour la notation. Si vous apprenez en autodidacte, vous pouvez obtenir le guide de notation simplement en le demandant [sur le fil de discussion de cet exercice](https://discourse.mozilla.org/t/image-gallery-assessment/24687), ou sur [#mdn](irc://irc.mozilla.org/mdn) du canal IRC de [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites d'abord l'exercice, vous ne gagnerez rien à tricher!
 

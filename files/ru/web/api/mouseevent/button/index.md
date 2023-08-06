@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.button
 slug: Web/API/MouseEvent/button
-translation_of: Web/API/MouseEvent/button
 ---
 
 {{APIRef("DOM Events")}}

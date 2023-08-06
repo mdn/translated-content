@@ -1,14 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - SVG
-  - SVG фильтр
-  - filter
-  - Свойство CSS
-  - Ссылка
-translation_of: Web/CSS/filter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -98,7 +90,7 @@ filter: url(resources.svg#c1)
 
 ### `blur() [размытие]`
 
-Applies a Gaussian blur to the input image. The value of ‘radius’ defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. If no parameter is provided, then a value `0` is used. The parameter is specified as a CSS length, but does not accept percentage values.
+Applies a Gaussian blur to the input image. The value of 'radius' defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. If no parameter is provided, then a value `0` is used. The parameter is specified as a CSS length, but does not accept percentage values.
 
 ```css
 filter: blur(5px)
@@ -188,7 +180,7 @@ table.standard-table td {
 
 ### `brightness() [яркость]`
 
-Applies a linear multiplier to input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. If the ‘amount’ parameter is missing, a value of `1` is used.
+Applies a linear multiplier to input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. If the 'amount' parameter is missing, a value of `1` is used.
 
 ```css
 filter: brightness(0.5)
@@ -286,7 +278,7 @@ table.standard-table td {
 
 ### `contrast() [контраст]`
 
-Adjusts the contrast of the input. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Values of amount over `100%` are allowed, providing results with less contrast. If the ‘amount’ parameter is missing, a value of `1` is used.
+Adjusts the contrast of the input. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Values of amount over `100%` are allowed, providing results with less contrast. If the 'amount' parameter is missing, a value of `1` is used.
 
 ```css
 filter: contrast(200%)
@@ -384,7 +376,7 @@ table.standard-table td {
 
 ### `drop-shadow() [тень]`
 
-Applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type \<shadow> (defined in CSS3 Backgrounds), with the exception that the ‘inset’ keyword is not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows.
+Applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type \<shadow> (defined in CSS3 Backgrounds), with the exception that the 'inset' keyword is not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows.
 
 - `<offset-x>` `<offset-y>` (required)
   - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
@@ -530,7 +522,7 @@ table.standard-table td {
 
 ### `grayscale() [оттенки серого]`
 
-Converts the input image to grayscale. The value of ‘amount’ defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the ‘amount’ parameter is missing, a value of `0` is used.
+Converts the input image to grayscale. The value of 'amount' defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the 'amount' parameter is missing, a value of `0` is used.
 
 ```css
 filter: grayscale(100%)

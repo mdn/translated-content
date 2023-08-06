@@ -2,6 +2,7 @@
 title: Express/Node 소개
 slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 첫번째 Express 수업에서는 Node, Express를 알아보고, Express 웹 프레임워크 제작의 전반에 대해 배우게 됩니다.
@@ -13,10 +14,10 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
       <th scope="row">알아야 할 것들</th>
       <td>
         기본적인 컴퓨터의 이해. 서버 사이드 웹사이트 프로그래밍(<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps"
           >server-side website programming</a
         >), 그리고 특별히 웹사이트에서 클라이언트와 서버간의 상호작용(<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >client-server interactions in websites</a
         >)의 메커니즘에 대한 이해
       </td>
@@ -51,7 +52,7 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
 이렇게하면 웹 서버가 만들어지고 URL `http://127.0.0.1:8000/` 에 있는 모든 종류의 HTTP 요청에 수신하게 됩니다. 요청이 하나 들어왔을 때, "Hello World" 텍스트 응답을 보내도록 하겠습니다.
 
 1. 터미널을 연다. (윈도우에서는, 커맨드라인 유틸리티)
-    ※ 윈도우 키 + R => 'CMD'
+   ※ 윈도우 키 + R => 'CMD'
 2. 프로그램을 저장할 폴더를 생성하고(여기서는 `test-node`), 아래 명령을 입력하여 해당 폴더로 이동한다.
 
 ```
@@ -65,17 +66,18 @@ cd test-node
 var http = require("http");
 
 //Create HTTP server and listen on port 8000 for requests
-http.createServer(function (request, response) {
+http
+  .createServer(function (request, response) {
+    // Set the response HTTP header with HTTP status and Content type
+    response.writeHead(200, { "Content-Type": "text/plain" });
 
-   // Set the response HTTP header with HTTP status and Content type
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Send the response body "Hello World"
-   response.end('Hello World\n');
-}).listen(8000);
+    // Send the response body "Hello World"
+    response.end("Hello World\n");
+  })
+  .listen(8000);
 
 // Print URL for accessing server
-console.log('Server running at http://127.0.0.1:8000/')
+console.log("Server running at http://127.0.0.1:8000/");
 ```
 
 4\. 터미널로 돌아가 아래 명령을 입력한다.
@@ -138,15 +140,15 @@ First lets consider the standard Express [Hello World](https://expressjs.com/en/
 > **참고:** **Tip:** If you have Node and Express already installed (or if you install them as shown in the [next article](/ko/docs/Learn/Server-side/Express_Nodejs/development_environment)), you can save this code in a file called **app.js** and run it in a command prompt by calling `node app.js`.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log("Example app listening on port 3000!");
 });
 ```
 
@@ -163,7 +165,7 @@ A module is a JavaScript library/file that you can import into other code using 
 The code below shows how we import a module by name, using the _Express_ framework as an example. First we invoke the `require()` function, specifying the name of the module as a string (`'express'`), and calling the returned object to create an [Express application](https://expressjs.com/en/4x/api.html#app). We can then access the properties and functions of the application object.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 ```
 
@@ -174,15 +176,19 @@ You can also create your own modules that can be imported in the same way.
 To make objects available outside of a module you just need to assign them to the `exports` object. For example, the **square.js** module below is a file that exports `area()` and `perimeter()` methods:
 
 ```js
-exports.area = function (width) { return width * width; };
-exports.perimeter = function (width) { return 4 * width; };
+exports.area = function (width) {
+  return width * width;
+};
+exports.perimeter = function (width) {
+  return 4 * width;
+};
 ```
 
 We can import this module using `require()`, and then call the exported method(s) as shown:
 
 ```js
-var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square with a width of 4 is ' + square.area(4));
+var square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+console.log("The area of a square with a width of 4 is " + square.area(4));
 ```
 
 > **참고:** You can also specify an absolute path to the module (or a name, as we did initially).
@@ -191,13 +197,13 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area: function (width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter: function (width) {
     return 4 * width;
-  }
+  },
 };
 ```
 
@@ -208,17 +214,17 @@ For a lot more information about modules see [Modules](https://nodejs.org/api/mo
 JavaScript 코드는 완료까지 시간이 다소 소요될 수 있는 작업에 대해 동기보다 비동기 API를 자주 사용합니다. 동기 API는 다음 작업이 시작하기 전에 각 작업이 완료되어야만 합니다. 예를 들어, 다음의 로그함수들은 동기식이며 텍스트를 순서대로 콘솔에 나타낼 것입니다.(First, Second)
 
 ```js
-console.log('First');
-console.log('Second');
+console.log("First");
+console.log("Second");
 ```
 
 반면 비동기 API는 API가 작업을 시작하고, 즉시 반환(작업이 완료되기 전에)합니다. 작업이 완료되면 API는 추가적인 작업 수행을 위한 일부 매커니즘을 사용합니다. 예를 들어 아래의 코드는 "Second, First"를 출력합니다. 그 이유는 `setTimeout()` 메서드가 먼저 호출되고 즉시 반환되더라도, 작업이 몇 초 동안 완료되지 않기 때문입니다.
 
 ```js
-setTimeout(function() {
-   console.log('First');
-   }, 3000);
-console.log('Second');
+setTimeout(function () {
+  console.log("First");
+}, 3000);
+console.log("Second");
 ```
 
 Node는 싱글 스레드 이벤트 기반 환경이기 때문에 non-blocking 비동기 API는 브라우저보다 Node에서 훨씬 더 중요합니다.
@@ -236,8 +242,8 @@ Node는 싱글 스레드 이벤트 기반 환경이기 때문에 non-blocking �
 In our _Hello World_ Express example see above we defined a (callback) route handler function for HTTP `GET` requests to the site root (`'/'`).
 
 ```js
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 ```
 
@@ -250,10 +256,10 @@ The _Express application_ object also provides methods to define route handlers 
 There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
 
 ```js
-app.all('/secret', function (req, res, next) {
-  console.log('Accessing the secret section ...')
-  next() // pass control to the next handler
-})
+app.all("/secret", function (req, res, next) {
+  console.log("Accessing the secret section ...");
+  next(); // pass control to the next handler
+});
 ```
 
 Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).
@@ -263,20 +269,20 @@ Often it is useful to group route handlers for a particular part of a site toget
 ```js
 // wiki.js - Wiki route module
 
-var express = require('express')
-var router = express.Router()
+var express = require("express");
+var router = express.Router();
 
 // Home page route
-router.get('/', function (req, res) {
-  res.send('Wiki home page')
-})
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
+});
 
 // About page route
-router.get('/about', function (req, res) {
-  res.send('About this wiki')
-})
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
 
-module.exports = router
+module.exports = router;
 ```
 
 > **참고:** Adding routes to the `Router` object is just like adding routes to the `app` object (as shown previously).
@@ -284,9 +290,9 @@ module.exports = router
 To use the router in our main app file we would then `require()` the route module (**wiki.js**), then call `use()` on the _Express_ application to add the Router to the middleware handling path. The two routes will then be accessible from `/wiki/` and `/wiki/about/`.
 
 ```js
-var wiki = require('./wiki.js')
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki)
+app.use("/wiki", wiki);
 ```
 
 We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/ko/docs/Learn/Server-side/Express_Nodejs/routes).
@@ -324,25 +330,25 @@ app.use(logger('dev'));
 아래의 예제는 두 가지 방법을 사용하고, 경로를 사용하거나 사용하지 않고 미들웨어 기능을 추가하는 방법을 보여줍니다.
 
 ```js
-var express = require('express')
-var app = express()
+var express = require("express");
+var app = express();
 
 // An example middleware function
-var a_middleware_function = function(req, res, next) {
+var a_middleware_function = function (req, res, next) {
   //... perform some operations
   next(); //Call next() so Express will call the next middleware function in the chain.
-}
+};
 
 // Function added with use() for all routes and verbs
-app.use(a_middleware_function)
+app.use(a_middleware_function);
 
 //Function added with use() for a specific route
-app.use('/someroute', a_middleware_function)
+app.use("/someroute", a_middleware_function);
 
 // A middleware function added for a specific HTTP verb and route
-app.get('/', a_middleware_function )
+app.get("/", a_middleware_function);
 
-app.listen(3000)
+app.listen(3000);
 ```
 
 > **참고:** **JavaScript Tip:** 위에서 우리는 미들웨어 함수를 별도로 선언 한 다음 그것을 콜백으로 설정합니다. 이전 라우트 핸들러 함수에서는 우리는 콜백 함수가 사용될 때 선언했습니다. JavaScript에서는 두 방법 모두 유효합니다.
@@ -354,7 +360,7 @@ Express 공식 문서에는 Express 미들웨어 [사용](https://expressjs.com/
 You can use the [express.static](http://expressjs.com/en/4x/api.html#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
 
 ```js
-app.use(express.static('public'))
+app.use(express.static("public"));
 ```
 
 Any files in the public directory are served by adding their filename (_relative_ to the base "public" directory) to the base URL. So for example:
@@ -369,14 +375,14 @@ http://localhost:3000/about.html
 You can call `static()` multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).
 
 ```js
-app.use(express.static('public'))
-app.use(express.static('media'))
+app.use(express.static("public"));
+app.use(express.static("media"));
 ```
 
 You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](http://expressjs.com/en/4x/api.html#app.use) so that the files are loaded with the prefix "/media":
 
 ```js
-app.use('/media', express.static('public'))
+app.use("/media", express.static("public"));
 ```
 
 Now, you can load the files that are in the `public` directory from the `/media` path prefix.
@@ -395,9 +401,9 @@ Errors are handled by one or more special middleware functions that have four ar
 
 ```js
 app.use(function (err, req, res, next) {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
 ```
 
 These can return any content required, but must be called after all other `app.use()` and routes calls so that they are the last middleware in the request handling process!
@@ -423,17 +429,19 @@ npm install mongodb
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
 ```js
-var MongoClient = require('mongodb').MongoClient
+var MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function (err, db) {
-  if (err) throw err
+MongoClient.connect("mongodb://localhost:27017/animals", function (err, db) {
+  if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
-    if (err) throw err
+  db.collection("mammals")
+    .find()
+    .toArray(function (err, result) {
+      if (err) throw err;
 
-    console.log(result)
-  })
-})
+      console.log(result);
+    });
+});
 ```
 
 Another popular approach is to access your database indirectly, via an Object Relational Mapper ("ORM"). In this approach you define your data as "objects" or "models" and the ORM maps these through to the underlying database format. This approach has the benefit that as a developer you can continue to think in terms of JavaScript objects rather than database semantics, and that there is an obvious place to perform validation and checking of incoming data. We'll talk more about databases in a later article.
@@ -447,22 +455,22 @@ Template engines (referred to as "view engines" by _Express_) allow you to speci
 In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // Set directory to contain the templates ('views')
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 
 // Set view engine to use, in this case 'some_template_engine_name'
-app.set('view engine', 'some_template_engine_name');
+app.set("view engine", "some_template_engine_name");
 ```
 
 The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) in a route handler function to create and send the HTML response:
 
 ```js
-app.get('/', function (req, res) {
-  res.render('index', { title: 'About dogs', message: 'Dogs rock!' })
-})
+app.get("/", function (req, res) {
+  res.render("index", { title: "About dogs", message: "Dogs rock!" });
+});
 ```
 
 For more information see [Using template engines with Express](http://expressjs.com/en/guide/using-template-engines.html) (Express docs).

@@ -1,7 +1,6 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 {{JSRef}}
 

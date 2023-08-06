@@ -39,7 +39,7 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 ## 설명
 
-일반적으로 생각하고 있는것과는 다르게 `delete` 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 [memory management](/en-US/docs/Web/JavaScript/Memory_Management) 를 보세요.
+일반적으로 생각하고 있는것과는 다르게 `delete` 는 메모리 해제에 관하여 직접적으로 어떠한 작업도 하지 않습니다. 메모리 관리는 breaking references를 통하여 간접적으로 일어납니다. 자세한 걸 알고 싶다면 [memory management](/ko/docs/Web/JavaScript/Memory_Management) 를 보세요.
 
 **`delete`**연산자는 오브젝트로 부터 해당 프로퍼티를 삭제합니다. 삭제를 하면 true를 반환, 아니면 false를 반환합니다. 그렇지만 아래 경우를 고려해야만 합니다.
 

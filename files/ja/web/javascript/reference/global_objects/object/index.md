@@ -114,15 +114,15 @@ JavaScript のほぼすべてのオブジェクトが {{jsxref("Object")}} の�
 以下の例は、空の `Object` オブジェクトを `o` に格納します。
 
 ```js
-let o = new Object()
+let o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+let o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+let o = new Object(null);
 ```
 
 ### `Object` を使用して `Boolean` オブジェクトを生成
@@ -131,12 +131,12 @@ let o = new Object(null)
 
 ```js
 // o = new Boolean(true) と同じ
-let o = new Object(true)
+let o = new Object(true);
 ```
 
 ```js
 // o = new Boolean(false) と同じ
-let o = new Object(Boolean())
+let o = new Object(Boolean());
 ```
 
 ### オブジェクトのプロトタイプ
@@ -152,9 +152,9 @@ var current = Object.prototype.valueOf;
 
 // プロパティ "-prop-value" は横断的で、同じプロトタイプチェーン上に
 // あるとは限らないので、 Object.prototype を修正したいと思います。
-Object.prototype.valueOf = function() {
-  if (this.hasOwnProperty('-prop-value')) {
-    return this['-prop-value'];
+Object.prototype.valueOf = function () {
+  if (this.hasOwnProperty("-prop-value")) {
+    return this["-prop-value"];
   } else {
     // 私のオブジェクトのようには見えないので、現在の動作をできる限り再現して、
     // 既定の動作にフォールバックします。
@@ -162,63 +162,63 @@ Object.prototype.valueOf = function() {
     // valueOf() は引数を取りませんが、他のフックによっては取るかもしれません。
     return current.apply(this, arguments);
   }
-}
+};
 ```
 
 正確には JavaScript にはサブクラスのオブジェクトが存在しないので、プロトタイプは下記の例のように、オブジェクトとして動作する特定の関数の「基本クラス」オブジェクトを作るための有用な回避策となります。
 
 ```js
-var Person = function(name) {
+var Person = function (name) {
   this.name = name;
   this.canTalk = true;
 };
 
-Person.prototype.greet = function() {
+Person.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name);
+    console.log("Hi, I am " + this.name);
   }
 };
 
-var Employee = function(name, title) {
+var Employee = function (name, title) {
   Person.call(this, name);
   this.title = title;
 };
 
 Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee; // Object.prototype.constructor を Employee に設定しないと、
-                                            // Person (親) の prototype.constructor を取ってしまいます。
-                                            //それを避けるために prototype.constructor を Employee (子) に設定しています。
+// Person (親) の prototype.constructor を取ってしまいます。
+//それを避けるために prototype.constructor を Employee (子) に設定しています。
 
-Employee.prototype.greet = function() {
+Employee.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title);
+    console.log("Hi, I am " + this.name + ", the " + this.title);
   }
 };
 
-var Customer = function(name) {
+var Customer = function (name) {
   Person.call(this, name);
 };
 
 Customer.prototype = Object.create(Person.prototype);
 Customer.prototype.constructor = Customer; // Object.prototype.constructor を Customer に設定しないと、
-                                            // Person (親) の prototype.constructor を取ってしまいます。
-                                            //それを避けるために prototype.constructor を Employee (子) に設定しています。
+// Person (親) の prototype.constructor を取ってしまいます。
+//それを避けるために prototype.constructor を Employee (子) に設定しています。
 
-var Mime = function(name) {
+var Mime = function (name) {
   Person.call(this, name);
   this.canTalk = false;
 };
 
 Mime.prototype = Object.create(Person.prototype);
 Mime.prototype.constructor = Mime; // Object.prototype.constructor を Mime に設定しないと、
-                                   // Person (親) の prototype.constructor を取ってしまいます。
-                                   //それを避けるために prototype.constructor を Employee (子) に設定しています。
+// Person (親) の prototype.constructor を取ってしまいます。
+//それを避けるために prototype.constructor を Employee (子) に設定しています。
 
-var bob = new Employee('Bob', 'Builder');
-var joe = new Customer('Joe');
-var rg = new Employee('Red Green', 'Handyman');
-var mike = new Customer('Mike');
-var mime = new Mime('Mime');
+var bob = new Employee("Bob", "Builder");
+var joe = new Customer("Joe");
+var rg = new Employee("Red Green", "Handyman");
+var mike = new Customer("Mike");
+var mime = new Mime("Mime");
 
 bob.greet();
 // Hi, I am Bob, the Builder

@@ -1,7 +1,6 @@
 ---
 title: <input type ="button">
 slug: Web/HTML/Element/input/button
-original_slug: Web/HTML/Elemento/input/Botón
 ---
 
 {{HTMLSidebar}}
@@ -15,45 +14,45 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
     <tr>
       <th scope="row">
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories"
+          href="/es/docs/HTML/Content_categories"
           title="HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/HTML/Content_categories#Flow_content"
           title="HTML/Content categories#Flow content"
           >Contenido de flujo</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/HTML/Content_categories#Phrasing_content"
           title="HTML/Content categories#Phrasing content"
           >contenido de fraseo</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Interactive_content"
+          href="/es/docs/HTML/Content_categories#Interactive_content"
           title="HTML/Content categories#Interactive content"
           >contenido interactivo</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Form_listed"
+          href="/es/docs/HTML/Content_categories#Form_listed"
           title="HTML/Content categories#Form listed"
           >listado</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Form_labelable"
+          href="/es/docs/HTML/Content_categories#Form_labelable"
           title="HTML/Content categories#Form labelable"
           >etiquetable</a
         >, y elementos
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Form_submittable"
+          href="/es/docs/HTML/Content_categories#Form_submittable"
           title="HTML/Content categories#Form submittable"
           >entregables</a
         >
         con
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Form-associated_"
+          href="/es/docs/HTML/Content_categories#Form-associated_"
           title="HTML/Content categories#Form-associated "
           >contenido asociado a los formularios</a
         >, contenido evidente.
@@ -63,7 +62,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/HTML/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >Contenido de fraseo</a
         >.
@@ -78,7 +77,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <td>
         Cualquier elemento que acepte
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/HTML/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
@@ -88,7 +87,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <th scope="row">Interfaz DOM</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement"
+          href="/es/docs/Web/API/HTMLButtonElement"
           title="The HTMLButtonElement interface provides properties and methods (beyond the \<button> object interface it also has available to them by inheritance) for manipulating the layout and presentation of button elements."
           ><code>HTMLButtonElement</code></a
         >
@@ -167,7 +166,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 Se crea un nuevo input tipo botón con el valor 'Click me'.
 
 ```html
-<input type="button" value="Click me">
+<input type="button" value="Click me" />
 ```
 
 ## Especificaciones

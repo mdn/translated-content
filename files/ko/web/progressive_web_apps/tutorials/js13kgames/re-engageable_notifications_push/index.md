@@ -1,7 +1,6 @@
 ---
 title: 알림과 푸시를 사용해 PWA를 재참여(re-engageable)가능하게 만드는 방법
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenu("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
@@ -24,12 +23,12 @@ original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -47,16 +46,16 @@ button.addEventListener('click', function(e) {
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Created by " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -71,7 +70,7 @@ function randomNotification() {
 앞서 언급듯이, 푸시 알림을 수신하려면 service worker가 있어야 합니다. 이를 위한 기본적인 내용은 [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers) 문서에서 이미 설명했습니다. Service worker 안에서 푸시 서비스 구독 메커니즘이 생성됩니다.
 
 ```js
-registration.pushManager.getSubscription() .then( /* ... */ );
+registration.pushManager.getSubscription().then(/* ... */);
 ```
 
 사용자가 구독을 하기 시작하면, 서버로부터 푸시 알림을 받을 수 있습니다.
@@ -81,7 +80,9 @@ registration.pushManager.getSubscription() .then( /* ... */ );
 푸시 메시지를 수신하려면, Service Worker 파일에서 {{event("push")}}이벤트를 사용하면됩니다.
 
 ```js
-self.addEventListener('push', function(e) { /* ... */ });
+self.addEventListener("push", function (e) {
+  /* ... */
+});
 ```
 
 데이터는 반환되어 알림으로 사용자에게 즉시 보여집니다. 예를 들어, 이는 사용자에게 무언가를 다시 알려주거나, 앱에서 사용 가능한 새로운 컨텐츠에 대해 알려주는데 사용할 수 있습니다.
@@ -103,16 +104,18 @@ self.addEventListener('push', function(e) { /* ... */ });
 `index.js` 파일은 service worker를 등록하는 것으로 시작합니다.
 
 ```js
-navigator.serviceWorker.register('service-worker.js')
-.then(function(registration) {
-  return registration.pushManager.getSubscription()
-  .then(async function(subscription) {
-      // registration part
-  });
-})
-.then(function(subscription) {
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then(function (registration) {
+    return registration.pushManager
+      .getSubscription()
+      .then(async function (subscription) {
+        // registration part
+      });
+  })
+  .then(function (subscription) {
     // subscription part
-});
+  });
 ```
 
 [js13kPWA 데모](https://mdn.github.io/pwa-examples/js13kpwa/)에서 봤던 service worker보다 조금 더 복잡합니다. 이 특정 케이스에서는, 등록한 후에 등록 객체를 사용해 구독하며, 그 후 구독 객체를 사용해 전체 프로세스를 완료합니다.
@@ -120,64 +123,64 @@ navigator.serviceWorker.register('service-worker.js')
 등록 파트의 코드는 다음과 같습니다.
 
 ```js
-if(subscription) {
-    return subscription;
+if (subscription) {
+  return subscription;
 }
 ```
 
 사용자가 이미 구독했을경우, 구독 객체를 반환하며 구독 파트로 이동합니다. 그렇지 않을 경우 새로운 구독을 초기화합니다.
 
 ```js
-const response = await fetch('./vapidPublicKey');
+const response = await fetch("./vapidPublicKey");
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-앱은 서버의 공개 키를 패치하고 응답을 텍스트로 변환합니다. 그 후 Uint8Array(Chrome 지원을 위해)로 변환이 필요합니다. VAPID 키에 대한 자세한 내용은 [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 블로그 포스트를 읽어보시기 바랍니다.
+앱은 서버의 공개 키를 패치하고 응답을 텍스트로 변환합니다. 그 후 Uint8Array(Chrome 지원을 위해)로 변환이 필요합니다. VAPID 키에 대한 자세한 내용은 [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 블로그 포스트를 읽어보시기 바랍니다.
 
 앱은 이제 새로운 사용자를 구독하기 위해 {{domxref("PushManager")}}를 사용합니다. 두 옵션이 {{domxref("PushManager.subscribe()")}} 메소드로 전달됩니다. 첫 번째는 `userVisibleOnly: true`이며 사용자에게 전송되는 모든 알림이 보여진다는 것을 의미하며, 두 번째 것은 `applicationServerKey`이며 성공적으로 획득하고 변환된 VAPID 키를 포함합니다.
 
 ```js
 return registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: convertedVapidKey
+  userVisibleOnly: true,
+  applicationServerKey: convertedVapidKey,
 });
 ```
 
 이제 구독 파트로 이동해봅시다. 앱은 Fetch를 사용해 먼저 서버로 JSON으로 된 구독 상세 정보를 전송합니다.
 
 ```js
-fetch('./register', {
-    method: 'post',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        subscription: subscription
-    }),
+fetch("./register", {
+  method: "post",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify({
+    subscription: subscription,
+  }),
 });
 ```
 
 그 다음 _구독_ 버튼의 {{domxref("onclick","GlobalEventHandlers.onclick")}}이 정의됩니다.
 
 ```js
-document.getElementById('doIt').onclick = function() {
-    const payload = document.getElementById('notification-payload').value;
-    const delay = document.getElementById('notification-delay').value;
-    const ttl = document.getElementById('notification-ttl').value;
+document.getElementById("doIt").onclick = function () {
+  const payload = document.getElementById("notification-payload").value;
+  const delay = document.getElementById("notification-delay").value;
+  const ttl = document.getElementById("notification-ttl").value;
 
-    fetch('./sendNotification', {
-        method: 'post',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            subscription: subscription,
-            payload: payload,
-            delay: delay,
-            ttl: ttl,
-        }),
-    });
+  fetch("./sendNotification", {
+    method: "post",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      subscription: subscription,
+      payload: payload,
+      delay: delay,
+      ttl: ttl,
+    }),
+  });
 };
 ```
 
@@ -192,51 +195,53 @@ document.getElementById('doIt').onclick = function() {
 [web-push 모듈](https://www.npmjs.com/package/web-push)은 VAPID 키를 설정하기 위해 사용되며, 존재하지 않을 경우 선택적으로 생성합니다.
 
 ```js
-const webPush = require('web-push');
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
-    "environment variables. You can use the following ones:");
+  console.log(
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:",
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://github.com/mdn/serviceworker-cookbook/',
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
 그 다음, 모듈은 앱이 처리해야할 모든 라우트(VAPID 공개 키 얻기, 등록 후 알림 보내기)를 정의하고 내보냅니다. `index.js` 파일에서 사용중인 `payload`, `delay`, `ttl` 변수를 볼 수 있습니다.
 
 ```js
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+module.exports = function (app, route) {
+  app.get(route + "vapidPublicKey", function (req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(route + "register", function (req, res) {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(route + "sendNotification", function (req, res) {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
-    setTimeout(function() {
-      webPush.sendNotification(subscription, payload, options)
-      .then(function() {
-        res.sendStatus(201);
-      })
-      .catch(function(error) {
-        console.log(error);
-        res.sendStatus(500);
-      });
+    setTimeout(function () {
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(function () {
+          res.sendStatus(201);
+        })
+        .catch(function (error) {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -247,13 +252,13 @@ module.exports = function(app, route) {
 마지막으로 살펴볼 파일은 service worker입니다.
 
 ```js
-self.addEventListener('push', function(event) {
-    const payload = event.data ? event.data.text() : 'no payload';
-    event.waitUntil(
-        self.registration.showNotification('ServiceWorker Cookbook', {
-            body: payload,
-        })
-    );
+self.addEventListener("push", function (event) {
+  const payload = event.data ? event.data.text() : "no payload";
+  event.waitUntil(
+    self.registration.showNotification("ServiceWorker Cookbook", {
+      body: payload,
+    }),
+  );
 });
 ```
 

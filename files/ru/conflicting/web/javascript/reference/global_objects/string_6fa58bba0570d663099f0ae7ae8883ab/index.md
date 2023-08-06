@@ -9,7 +9,7 @@ original_slug: Web/API/DOMString
 
 **`DOMString`** - это UTF-16 String. Так как JavaScript уже использует такие строки, `DOMString` непосредственно соответствует {{jsxref("String")}}.
 
-Передача [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) в метод или параметр принимающему DOMString, как правило приводится к "null"`.`
+Передача [`null`](/ru/docs/Web/JavaScript/Reference/Global_Objects/null) в метод или параметр принимающему DOMString, как правило приводится к "null"`.`
 
 ## Спецификации
 
@@ -22,6 +22,6 @@ original_slug: Web/API/DOMString
 
 ## Смотрите также
 
-- [String](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- [String](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "/ru/docs/Web/API/DOMString")
 - [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/String_view)
 - [Binary strings](/ru/docs/Web/API/DOMString/Binary)

@@ -1,15 +1,6 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
-tags:
-  - API
-  - DOM
-  - Interface
-  - Noeuds
-  - Traitement
-  - XML
-  - instructions
-translation_of: Web/API/ProcessingInstruction
 ---
 
 {{APIRef("DOM")}}

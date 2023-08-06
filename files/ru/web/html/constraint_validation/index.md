@@ -1,13 +1,6 @@
 ---
 title: Валидация ограничений
 slug: Web/HTML/Constraint_validation
-tags:
-  - CSS
-  - Руководство
-  - HTML5
-  - NeedsContent
-  - Селекторы
-original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 Создание веб-форм всегда было сложной задачей. Хотя сверстать саму форму достаточно просто, проверить, имеет ли каждое поле валидное значение — сложнее, а информирование пользователя о проблеме может стать настоящей головной болью. [HTML5](/ru/docs/Web/Guide/HTML/HTML5) представил для форм новый механизм: он добавляет элементу {{ HTMLElement("input") }} новые семантические типы и _constraint validation_, чтобы облегчить проверку содержимого на стороне клиента. С помощью новых атрибутов основные ограничения могут быть проверены без использования JavaScript; более сложные ограничения могут быть проверены с помощью [Constraint validation API](/ru/docs/Web/API/Constraint_validation).
@@ -27,10 +20,10 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 Внутренние ограничения атрибута [`type`](/ru/docs/Web/HTML/Element/input#type):
 
-| Тип input                                                          | Описание ограничения                                                                                                                                  | Связанное нарушение                                                                   |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn/Common_questions/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                     | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
+| Тип input                                                       | Описание ограничения                                                                                                                                  | Связанное нарушение                                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/ru/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn/Common_questions/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
+| [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                     | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 
 Для обоих этих типов input, если установлен атрибут [`multiple`](/ru/docs/Web/HTML/Element/input#multiple) допускается ввод нескольких разделённых запятыми значений. Если какое-то из значений не удовлетворяет условию, описанному выше, срабатывает нарушение ограничения **Type mismatch**.
 
@@ -60,7 +53,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code>tel</code>, <code>email</code>, <code>password</code>
       </td>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions"
           >Регулярное выражение JavaScript</a
         >
         (без
@@ -76,7 +69,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         <code
           >Нарушение ограничения
           <strong
-            ><a href="/en-US/docs/Web/API/ValidityState/patternMismatch"
+            ><a href="/ru/docs/Web/API/ValidityState/patternMismatch"
               >patternMismatch</a
             ></strong
           ></code
@@ -85,7 +78,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/min">min</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>Валидное число</td>
@@ -96,7 +89,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/rangeUnderflow"
+            ><a href="/ru/docs/Web/API/ValidityState/rangeUnderflow"
               >rangeUnderflow</a
             ></code
           ></strong
@@ -115,7 +108,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/max">max</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>Валидное число</td>
@@ -126,7 +119,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow"
+            ><a href="/ru/docs/Web/API/ValidityState/rangeOverflow"
               >rangeOverflow</a
             ></code
           ></strong
@@ -146,7 +139,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/ru/docs/Web/HTML/Attributes/required">required</a></code
         >
       </td>
       <td>
@@ -166,7 +159,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
       <td>
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/valueMissing"
+            ><a href="/ru/docs/Web/API/ValidityState/valueMissing"
               >valueMissing</a
             ></code
           ></strong
@@ -176,7 +169,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="5">
-        <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/ru/docs/Web/HTML/Attributes/step">step</a></code>
       </td>
       <td><code>date</code></td>
       <td>Целое число дней</td>
@@ -188,7 +181,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/stepMismatch"
+            ><a href="/ru/docs/Web/API/ValidityState/stepMismatch"
               >stepMismatch</a
             ></code
           ></strong
@@ -216,7 +209,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/minlength"
+          ><a href="/ru/docs/Web/HTML/Attributes/minlength"
             >minlength</a
           ></code
         >
@@ -237,7 +230,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/tooShort"
+            ><a href="/ru/docs/Web/API/ValidityState/tooShort"
               >tooShort</a
             ></code
           ></strong
@@ -247,7 +240,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/maxlength"
+          ><a href="/ru/docs/Web/HTML/Attributes/maxlength"
             >maxlength</a
           ></code
         >
@@ -266,7 +259,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
         Нарушение ограничения
         <strong
           ><code
-            ><a href="/en-US/docs/Web/API/ValidityState/tooLong"
+            ><a href="/ru/docs/Web/API/ValidityState/tooLong"
               >tooLong</a
             ></code
           ></strong
@@ -280,7 +273,7 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 Валидация ограничений выполняется с помощью Constraint Validation API либо на отдельном элементе формы, либо на уровне формы, на самом элементе {{ HTMLElement("form") }}. Способы валидации:
 
-- Вызов метода `checkValidity()` или `reportValidity()` связанного с формой DOM-интерфейса, ([`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) или [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement)), который оценивает ограничения только на данном элементе, позволяя скрипту получить эту информацию. Метод `checkValidity()` возвращает логическое значение, указывающее, соотвествует ли значение элемента его ограничениям. (Обычно это делает браузер при определении того, какой CSS-псевдоклассов применяется: {{ Cssxref(":valid") }} или {{ Cssxref(":invalid") }}.) Напротив, метод `reportValidity()` сообщает пользователю о любых нарушениях ограничений.
+- Вызов метода `checkValidity()` или `reportValidity()` связанного с формой DOM-интерфейса, ([`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) или [`HTMLTextAreaElement`](/ru/docs/Web/API/HTMLTextAreaElement)), который оценивает ограничения только на данном элементе, позволяя скрипту получить эту информацию. Метод `checkValidity()` возвращает логическое значение, указывающее, соотвествует ли значение элемента его ограничениям. (Обычно это делает браузер при определении того, какой CSS-псевдоклассов применяется: {{ Cssxref(":valid") }} или {{ Cssxref(":invalid") }}.) Напротив, метод `reportValidity()` сообщает пользователю о любых нарушениях ограничений.
 - Вызов метода `checkValidity()` или `reportValidity()` интерфейса [`HTMLFormElement`](/ru/docs/Web/API/HTMLFormElement).
 - Отправка самой формы.
 
@@ -306,16 +299,16 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 ```html
 <form>
-    <label for="ZIP">ZIP : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">Country : </label>
-    <select id="Country">
-      <option value="ch">Switzerland</option>
-      <option value="fr">France</option>
-      <option value="de">Germany</option>
-      <option value="nl">The Netherlands</option>
-    </select>
-    <input type="submit" value="Validate">
+  <label for="ZIP">ZIP : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">Country : </label>
+  <select id="Country">
+    <option value="ch">Switzerland</option>
+    <option value="fr">France</option>
+    <option value="de">Germany</option>
+    <option value="nl">The Netherlands</option>
+  </select>
+  <input type="submit" value="Validate" />
 </form>
 ```
 
@@ -329,11 +322,22 @@ original_slug: Web/Guide/HTML/Constraint_validation
 function checkZIP() {
   // Для каждой страны определяем шаблон, которому должен следовать почтовый индекс
   var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
-    nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+    ch: [
+      "^(CH-)?\\d{4}$",
+      "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950",
+    ],
+    fr: [
+      "^(F-)?\\d{5}$",
+      "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012",
+    ],
+    de: [
+      "^(D-)?\\d{5}$",
+      "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345",
+    ],
+    nl: [
+      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
+      "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
+    ],
   };
 
   // Прочитать id страны
@@ -344,14 +348,13 @@ function checkZIP() {
 
   // Создать валидатор ограничения
   var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  console.log(constraint);
 
   // Валидировать индекс
   if (constraint.test(ZIPField.value)) {
     // Индекс соответствует ограничению, мы используем ConstraintAPI, чтобы сообщить об этом
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // Индекс не соответствует ограничению , мы используем ConstraintAPI, чтобы
     // показать сообщение, описывающее формат, требуемый для данной страны
     ZIPField.setCustomValidity(constraints[country][1]);
@@ -363,9 +366,9 @@ function checkZIP() {
 
 ```js
 window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
-}
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
+};
 ```
 
 Вы можете посмотреть [живой пример](/@api/deki/files/4744/=constraint.html) валидации индекса.
@@ -378,7 +381,7 @@ window.onload = function () {
 
 ```html
 <label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 Она отображает:
@@ -394,10 +397,11 @@ function checkFileSize() {
 
   // Если выбран хотя бы один файл
   if (files.length > 0) {
-     if (files[0].size > 75 * 1024) { // Проверить ограничение
-       FS.setCustomValidity("Размер файла не должен превышать 75 kB");
-       return;
-     }
+    if (files[0].size > 75 * 1024) {
+      // Проверить ограничение
+      FS.setCustomValidity("Размер файла не должен превышать 75 kB");
+      return;
+    }
   }
   // Если нарушения ограничений нет
   FS.setCustomValidity("");
@@ -409,7 +413,7 @@ function checkFileSize() {
 ```js
 window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
-}
+};
 ```
 
 [Живой пример](/@api/deki/files/4745/=fileconstraint.html) валидации ограничения размера файла.

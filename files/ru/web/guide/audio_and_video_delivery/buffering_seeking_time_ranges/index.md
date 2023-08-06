@@ -1,15 +1,6 @@
 ---
 title: Медиа-буферизация, поиск и временные диапазоны
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
-tags:
-  - Audio
-  - HTML5
-  - Video
-  - Буфер
-  - буферизация
-  - временные диапазоны
-  - поиск
-translation_of: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 
 Sometimes it's useful to know how much {{htmlelement("audio") }} or {{htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/ru/docs/Web/API/TimeRanges), and other features of the media API.
@@ -21,14 +12,13 @@ Sometimes it's useful to know how much {{htmlelement("audio") }} or {{htmlelemen
 Это будет работать с {{htmlelement("audio") }} или {{htmlelement("video") }}; теперь давайте рассмотрим простой пример для audio:
 
 ```html
-<audio id="my-audio" controls src="music.mp3">
-</audio>
+<audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
 Мы можем получить доступ к этому атрибутам, так:
 
 ```js
-var myAudio = document.getElementById('my-audio');
+var myAudio = document.getElementById("my-audio");
 
 var bufferedTimeRanges = myAudio.buffered;
 ```
@@ -55,11 +45,11 @@ TimeRanges содержит данные о частях буферизован�
 Для этого звукового файла {{ domxref("TimeRange") }} будет иметь следующие доступные свойства:
 
 ```js
-myAudio.buffered.length;   // returns 2
+myAudio.buffered.length; // returns 2
 myAudio.buffered.start(0); // returns 0
-myAudio.buffered.end(0);   // returns 5
+myAudio.buffered.end(0); // returns 5
 myAudio.buffered.start(1); // returns 15
-myAudio.buffered.end(1);   // returns 19
+myAudio.buffered.end(1); // returns 19
 ```
 
 Чтобы опробовать и визуализировать буферные диапазоны времени, мы можем написать немного HTML:
@@ -67,46 +57,43 @@ myAudio.buffered.end(1);   // returns 19
 ```html
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20">
-  </canvas>
+  <canvas id="my-canvas" width="300" height="20"> </canvas>
 </p>
 ```
 
 и немного JavaScript:
 
 ```js
-  window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
+  var myCanvas = document.getElementById("my-canvas");
+  var context = myCanvas.getContext("2d");
 
-    var myAudio = document.getElementById('my-audio');
-    var myCanvas = document.getElementById('my-canvas');
-    var context = myCanvas.getContext('2d');
+  context.fillStyle = "lightgray";
+  context.fillRect(0, 0, myCanvas.width, myCanvas.height);
+  context.fillStyle = "red";
+  context.strokeStyle = "white";
 
-    context.fillStyle = 'lightgray';
-    context.fillRect(0, 0, myCanvas.width, myCanvas.height);
-    context.fillStyle = 'red';
-    context.strokeStyle = 'white';
+  var inc = myCanvas.width / myAudio.duration;
 
-    var inc = myCanvas.width / myAudio.duration;
+  // отображение TimeRanges
 
-    // отображение TimeRanges
+  myAudio.addEventListener("seeked", function () {
+    for (i = 0; i < myAudio.buffered.length; i++) {
+      var startX = myAudio.buffered.start(i) * inc;
+      var endX = myAudio.buffered.end(i) * inc;
+      var width = endX - startX;
 
-    myAudio.addEventListener('seeked', function() {
-      for (i = 0; i < myAudio.buffered.length; i++) {
-
-        var startX = myAudio.buffered.start(i) * inc;
-        var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
-
-        context.fillRect(startX, 0, width, myCanvas.height);
-        context.rect(startX, 0, width, myCanvas.height);
-        context.stroke();
-      }
-    });
-  }
+      context.fillRect(startX, 0, width, myCanvas.height);
+      context.rect(startX, 0, width, myCanvas.height);
+      context.stroke();
+    }
+  });
+};
 ```
 
 Это наглядно работает с длинными фрагментами аудио или видео. Нажмите кнопку воспроизведения и нажмите на панели прогресса и вы должны получить что-то вроде того, что показано на картинке ниже. Each red filled white rectangle represents a time range.
@@ -184,29 +171,35 @@ It is better perhaps to give an indication of how much media has actually downlo
 И следующий JavaScript реализует нашу функциональность:
 
 ```js
-window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
 
-  var myAudio = document.getElementById('my-audio');
-
-  myAudio.addEventListener('progress', function() {
-    var duration =  myAudio.duration;
+  myAudio.addEventListener("progress", function () {
+    var duration = myAudio.duration;
     if (duration > 0) {
       for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
+        if (
+          myAudio.buffered.start(myAudio.buffered.length - 1 - i) <
+          myAudio.currentTime
+        ) {
+          document.getElementById("buffered-amount").style.width =
+            (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) *
+              100 +
+            "%";
+          break;
         }
+      }
     }
   });
 
-  myAudio.addEventListener('timeupdate', function() {
-    var duration =  myAudio.duration;
+  myAudio.addEventListener("timeupdate", function () {
+    var duration = myAudio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+      document.getElementById("progress-amount").style.width =
+        (myAudio.currentTime / duration) * 100 + "%";
     }
   });
-}
+};
 ```
 
 The progress event is fired as data is downloaded, this is a good event to react to if we want to display download or buffering progress.

@@ -1,8 +1,8 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-translation_of: Web/API/HTMLFormElement/reset
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`HTMLFormElement.reset()`** восстанавливает стандартные значения всем элементам формы. Данный метод выполняет действие идентичное нажатию кнопки имеющей тип reset.
@@ -11,16 +11,20 @@ translation_of: Web/API/HTMLFormElement/reset
 
 ## Синтаксис
 
-```
+```js
 HTMLFormElement.reset()
 ```
 
 ## Пример
 
-```
+```js
 document.getElementById('myform').reset();
 ```
 
-## Спецификация
+## Спецификации
 
-[HTML 5.1 Nightly: Resetting a form](http://www.w3.org/html/wg/drafts/html/master/semantics.html#resetting-a-form)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

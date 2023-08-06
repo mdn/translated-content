@@ -1,7 +1,6 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto
-original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}
@@ -182,37 +181,37 @@ Los filtros de búsqueda no funcionarán adecuadamente a menos que etiquetamos c
 
 > **Nota:** Si varias etiquetas se muestran bajo "Nombre de etiqueta", significa que una o más de las etiquetas deben estar presentes en el artículo.
 
-| Grupo          | Nombre filtro          | Nombre de etiqueta                                                                                                    |
-| -------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Tema           | Open Web Apps          | `Apps`                                                   |
-|                | HTML                   | `HTML`                                                   |
-|                | CSS                    | `CSS`                                                    |
-|                | JavaScript             | `JavaScript`                                             |
-|                | APIs and DOM           | `API`                                                    |
-|                | Canvas                 | `Canvas`                                                 |
-|                | SVG                    | `SVG`                                                    |
-|                | MathML                 | `MathML`                                                 |
-|                | WebGL                  | `WebGL`                                                  |
-|                | XUL                    | `XUL`                                                    |
-|                | Marketplace            | `Marketplace`                                            |
-|                | Firefox                | `Firefox`                                                |
-|                | Firefox para Android   | `Firefox Mobile`                                         |
-|                | Firefox para Desktop   | `Firefox Desktop`                                        |
-|                | Firefox OS             | `Firefox OS`                                             |
-|                | Movil                  | `Movil`                                                  |
-|                | Web Development        | `Web Development`                                        |
-|                | Add-ons & Extensions   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes` |
-|                | Juegos                 | `Juegos`                                                 |
-| Nivel          | Soy experto            | `Experto`                                                |
-|                | Intermedio             | `Intermedio`                                             |
-|                | Soy aprendiz           | `Aprendiz`                                               |
-| Tipo Documento | Docs                   | Restringirá la búsqueda al contenido de los docs, dejando fuera otros contenidos MDN.                                 |
-|                | Demostración           | Incluirá el contenido de demostración en los resultados de búsqueda.                                                  |
-|                | Herramientas           | `Herramientas`                                                                                      |
-|                | Ejemplo Código         | `Ejemplo`                                                                                              |
-|                | Como & Tutorial        | `Guia`                                                                                                  |
-|                | Perfiles Desarrollador | Incluirá perfiles de desarrolladores de MDN en los resultados de búsqueda.                                            |
-|                | Recurso externo        | Es algo que el equipo de desarrollo todavía está descifrando...                                                       |
+| Grupo          | Nombre filtro          | Nombre de etiqueta                                                                    |
+| -------------- | ---------------------- | ------------------------------------------------------------------------------------- |
+| Tema           | Open Web Apps          | `Apps`                                                                                |
+|                | HTML                   | `HTML`                                                                                |
+|                | CSS                    | `CSS`                                                                                 |
+|                | JavaScript             | `JavaScript`                                                                          |
+|                | APIs and DOM           | `API`                                                                                 |
+|                | Canvas                 | `Canvas`                                                                              |
+|                | SVG                    | `SVG`                                                                                 |
+|                | MathML                 | `MathML`                                                                              |
+|                | WebGL                  | `WebGL`                                                                               |
+|                | XUL                    | `XUL`                                                                                 |
+|                | Marketplace            | `Marketplace`                                                                         |
+|                | Firefox                | `Firefox`                                                                             |
+|                | Firefox para Android   | `Firefox Mobile`                                                                      |
+|                | Firefox para Desktop   | `Firefox Desktop`                                                                     |
+|                | Firefox OS             | `Firefox OS`                                                                          |
+|                | Movil                  | `Movil`                                                                               |
+|                | Web Development        | `Web Development`                                                                     |
+|                | Add-ons & Extensions   | `Add-ons` \|\| `Extensions` \|\| `Plugins` \|\| `Themes`                              |
+|                | Juegos                 | `Juegos`                                                                              |
+| Nivel          | Soy experto            | `Experto`                                                                             |
+|                | Intermedio             | `Intermedio`                                                                          |
+|                | Soy aprendiz           | `Aprendiz`                                                                            |
+| Tipo Documento | Docs                   | Restringirá la búsqueda al contenido de los docs, dejando fuera otros contenidos MDN. |
+|                | Demostración           | Incluirá el contenido de demostración en los resultados de búsqueda.                  |
+|                | Herramientas           | `Herramientas`                                                                        |
+|                | Ejemplo Código         | `Ejemplo`                                                                             |
+|                | Como & Tutorial        | `Guia`                                                                                |
+|                | Perfiles Desarrollador | Incluirá perfiles de desarrolladores de MDN en los resultados de búsqueda.            |
+|                | Recurso externo        | Es algo que el equipo de desarrollo todavía está descifrando...                       |
 
 ## Problemas de etiquetado que puedes solucionar
 

@@ -12,15 +12,15 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
     <tr>
       <th scope="row">선행 조건:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >의 HTML의 기본.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >의 HTML 텍스트 형식.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >의 하이퍼링크의 동작 방식.
       </td>
@@ -77,14 +77,17 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 위에서 본 예제는 다음 코드로 표시됩니다([Github 리포지토리에서 예제를 찾아보세요](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). 위의 예를 살펴본 다음 아래 목록을 살펴보고 어떤 부분이 시각적 개체의 어떤 섹션을 구성하는지 확인하시기 바랍니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
@@ -107,34 +110,57 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
         <li><a href="#">Contact</a></li>
       </ul>
 
-       <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+      <!-- A Search form is another commmon non-linear way to navigate through a website. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Here is our page's main content -->
     <main>
-
       <!-- It contains an article -->
       <article>
         <h2>Article heading</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>subsection</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Another subsection</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -149,7 +175,6 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
           <li><a href="#">Oh well...</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
@@ -157,7 +182,6 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -178,14 +202,19 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 
 ### 의미 없는 래퍼
 
-때로는 일부 항목을 함께 그룹화하거나 일부 콘텐츠를 래핑하는 데 이상적인 의미론적 요소를 찾을 수 없는 상황이 발생합니다. 때로는 요소 집합을 그룹화하여 일부 요소가 있는 단일 엔터티로 모든 요소에 영향을 미치기를 원할 수 있습니다.{{glossary("CSS")}} 또는 {{glossary("JavaScript")}}. 이와 같은 경우 HTML은 다음을 제공합니다. {{HTMLElement("div")}} 과 {{HTMLElement("span")}} 엘리먼트. 당신은 적합하게 이것들을 사용해야 합니다 {{htmlattrxref('class')}}속성은 쉽게 타겟팅할 수 있도록 일종의 레이블을 제공합니다.
+때로는 일부 항목을 함께 그룹화하거나 일부 콘텐츠를 래핑하는 데 이상적인 의미론적 요소를 찾을 수 없는 상황이 발생합니다. 때로는 요소 집합을 그룹화하여 일부 요소가 있는 단일 엔터티로 모든 요소에 영향을 미치기를 원할 수 있습니다.{{glossary("CSS")}} 또는 {{glossary("JavaScript")}}. 이와 같은 경우 HTML은 다음을 제공합니다. {{HTMLElement("div")}} 과 {{HTMLElement("span")}} 엘리먼트. 당신은 적합하게 이것들을 사용해야 합니다 [`class`](/ko/docs/Web/HTML/Global_attributes#class)속성은 쉽게 타겟팅할 수 있도록 일종의 레이블을 제공합니다.
 
 {{HTMLElement("span")}} 엘리먼트는 내용을 감싸는 더 나은 의미 체계 텍스트 요소가 생각나지 않거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 하는 인라인 비의미적 요소입니다. For example:
 
 ```html
-<p>The King walked drunkenly back to his room at 01:00, the beer doing nothing to aid
-him as he staggered through the door <span class="editor-note">[Editor's note: At this point in the
-play, the lights should be down low]</span>.</p>
+<p>
+  The King walked drunkenly back to his room at 01:00, the beer doing nothing to
+  aid him as he staggered through the door
+  <span class="editor-note"
+    >[Editor's note: At this point in the play, the lights should be down
+    low]</span
+  >.
+</p>
 ```
 
 In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
@@ -197,12 +226,13 @@ In this case, the editor's note is supposed to merely provide extra direction fo
   <h2>Shopping cart</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Silver earrings</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Silver earrings">
+      <p>
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Total cost: $237.89</p>
 </div>
@@ -221,10 +251,12 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 `<br>` 단락에 줄 바꿈을 만듭니다. 우편 주소나 시와 같이 일련의 고정된 짧은 줄을 원하는 상황에서 단단한 구조를 강제하는 유일한 방법입니다. For example:
 
 ```html
-<p>There once was a girl called Nell<br>
-Who loved to write HTML<br>
-But her structure was bad, her semantics were sad<br>
-and her markup didn't read very well.</p>
+<p>
+  There once was a girl called Nell<br />
+  Who loved to write HTML<br />
+  But her structure was bad, her semantics were sad<br />
+  and her markup didn't read very well.
+</p>
 ```
 
 `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with them in the code, the markup renders like this:

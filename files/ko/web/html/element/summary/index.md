@@ -16,11 +16,11 @@ slug: Web/HTML/Element/summary
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >
         or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Heading_content"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#Heading_content"
           >Heading content</a
         >
       </td>
@@ -94,7 +94,7 @@ You can use heading elements in `<summary>`, like this:
 ```html
 <details open>
   <summary><h4>Overview</h4></summary>
-    <ol>
+  <ol>
     <li>Cash on hand: $500.00</li>
     <li>Current invoice: $75.30</li>
     <li>Due date: 5/6/19</li>

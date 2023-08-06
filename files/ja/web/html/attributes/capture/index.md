@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: capture'
+title: "HTML 属性: capture"
 slug: Web/HTML/Attributes/capture
 ---
 

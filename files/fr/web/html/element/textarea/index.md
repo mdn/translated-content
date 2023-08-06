@@ -1,13 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/textarea
 ---
 
 {{HTMLSidebar}}
@@ -97,7 +90,7 @@ La spécification HTML ne définit pas l'emplacement de la ligne de base pour un
 
 Dans la plupart des navigateurs, il est possible de redimensionner les éléments `<textarea>` grâce au coin inférieur droit. Pour désactiver ce redimensionnement, on peut utiliser la propriété CSS {{cssxref("resize")}} avec la valeur `none` :
 
-```html
+```css
 textarea {
   resize: none;
 }
@@ -124,8 +117,7 @@ textarea:valid {
 L'exemple qui suit illustre une configuration simple avec un nombre donné de lignes et de colonnes et affiche un contenu par défaut.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Vous pouvez écrire ici.</textarea>
+<textarea name="textarea" rows="10" cols="50">Vous pouvez écrire ici.</textarea>
 ```
 
 #### Résultat
@@ -137,9 +129,9 @@ L'exemple qui suit illustre une configuration simple avec un nombre donné de li
 Cet exemple fixe un nombre de caractère minimal et maximal. Vous pouvez essayer de saisir un texte de moins de 10 caractères ou de plus de 30 caractères.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="30">Vous pouvez écrire ici.</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="30">
+Vous pouvez écrire ici.</textarea
+>
 ```
 
 #### Résultat
@@ -153,9 +145,11 @@ On notera que `minlength` n'empêche pas de retirer des caractères afin de réd
 Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indication qui disparaît dès qu'on saisit quelque chose dans la zone.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Voici une indication."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Voici une indication."></textarea>
 ```
 
 #### Résultat
@@ -169,12 +163,12 @@ Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indica
 Cet exemple affiche deux éléments `<textarea>` : le premier est désactivé avec `disabled` et le second est en lecture seule avec `readonly`. Vous pouvez les manipuler pour voir les différences : pour le premier, on ne peut pas sélectionné son contenu et la valeur n'est pas envoyée avec le formulaire ; pour le second, le contenu peut être sélectionné et la valeur est envoyée, il est uniquement impossible d'éditer le contenu.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>Je suis désactivé</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>Je suis en lecture seule</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+Je suis désactivé</textarea
+>
+<textarea name="textarea" rows="5" cols="30" readonly>
+Je suis en lecture seule</textarea
+>
 ```
 
 #### Résultat

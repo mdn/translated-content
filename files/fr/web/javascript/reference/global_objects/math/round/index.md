@@ -1,13 +1,6 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/round
 ---
 
 {{JSRef}}
@@ -19,7 +12,7 @@ La fonction **`Math.round()`** retourne la valeur d'un nombre arrondi à l'entie
 ## Syntaxe
 
 ```js
-Math.round(x)
+Math.round(x);
 ```
 
 ### Paramètres
@@ -41,10 +34,10 @@ Si la partie décimale du nombre est plus grande que 0.5, l'argument est arrondi
 
 ```js
 Math.round(20.49); //  20
-Math.round(20.5);  //  21
-Math.round(42);    //  42
+Math.round(20.5); //  21
+Math.round(42); //  42
 Math.round(-20.5); // -20
-Math.round(-20.51);// -21
+Math.round(-20.51); // -21
 ```
 
 ## Spécifications

@@ -1,12 +1,6 @@
 ---
 title: Django Web Framework (Python)
 slug: Learn/Server-side/Django
-tags:
-  - Apprendre
-  - Débutant
-  - Python
-  - django
-translation_of: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}

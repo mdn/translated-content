@@ -12,21 +12,21 @@ slug: Web/HTML/Element/select
 <p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples
 <https://github.com/mdn/interactive-examples>">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
-위의 예제는 일반적인 `<select>` 사용법을 시연합니다. {{htmlelement("label")}}과 연결해 접근성을 향상할 수 있도록 {{htmlattrxref("id")}} 특성을, 서버로 전송할 데이터의 이름을 위해 {{htmlattrxref("name", "select")}} 특성을 적용했습니다. 메뉴의 각 옵션은 `<select>` 안의 {{htmlelement("option")}}으로 정의합니다.
+위의 예제는 일반적인 `<select>` 사용법을 시연합니다. {{htmlelement("label")}}과 연결해 접근성을 향상할 수 있도록 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을, 서버로 전송할 데이터의 이름을 위해 [`name`](/ko/docs/Web/HTML/Element/select#name) 특성을 적용했습니다. 메뉴의 각 옵션은 `<select>` 안의 {{htmlelement("option")}}으로 정의합니다.
 
-모든 `<option>`은 자신이 선택됐을 때 값으로써 사용할 {{htmlattrxref("value", "option")}} 특성이 필요합니다. 그러나 `value` 특성을 지정하지 않은 경우, 대신 자기 안의 텍스트를 값으로 사용합니다. {{htmlattrxref("selected", "option")}} 특성을 지정하면 해당 옵션을 선택한 상태로 페이지를 불러옵니다.
+모든 `<option>`은 자신이 선택됐을 때 값으로써 사용할 [`value`](/ko/docs/Web/HTML/Element/option#value) 특성이 필요합니다. 그러나 `value` 특성을 지정하지 않은 경우, 대신 자기 안의 텍스트를 값으로 사용합니다. [`selected`](/ko/docs/Web/HTML/Element/option#selected) 특성을 지정하면 해당 옵션을 선택한 상태로 페이지를 불러옵니다.
 
-`<select>` 요소를 조작할 때 사용할 수 있는 여러가지 고유 특성이 존재합니다. {{htmlattrxref("multiple", "select")}} 특성을 사용하면 다수의 항목을 동시에 선택할 수 있고, {{htmlattrxref("size", "select")}} 특성은 한 번에 노출되는 항목의 수를 조절할 수 있습니다. `required`, `disabled`, `autofocus` 등 일반적인 양식 입력 요소의 특성도 사용할 수 있습니다.
+`<select>` 요소를 조작할 때 사용할 수 있는 여러가지 고유 특성이 존재합니다. [`multiple`](/ko/docs/Web/HTML/Element/select#multiple) 특성을 사용하면 다수의 항목을 동시에 선택할 수 있고, [`size`](/ko/docs/Web/HTML/Element/select#size) 특성은 한 번에 노출되는 항목의 수를 조절할 수 있습니다. `required`, `disabled`, `autofocus` 등 일반적인 양식 입력 요소의 특성도 사용할 수 있습니다.
 
 `<option>` 요소를 {{htmlelement("optgroup")}} 요소 안에 배치하면 드롭다운 내에서 옵션 그룹을 나눌 수 있습니다.
 
-<p class="hidden">For further examples, see <a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
+<p class="hidden">For further examples, see <a href="/ko/docs/Learn/HTML/Forms/The_native_form_widgets#Drop-down_content">The native form widgets: Drop-down content</a>.</p>
 
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-<dl><dt>{{htmlattrdef("autocomplete")}}</dt><dd>{{glossary("user agent", "사용자 에이전트")}}의 자동완성 기능을 지원하는 {{domxref("DOMString")}}. 가능한 값의 전체 목록과, 자동완성의 상세 사용법은 <a href="/ko/docs/Web/HTML/Attributes/autocomplete">HTML <code>autocomplete</code> 특성</a> 문서를 참고하세요.</dd><dt>{{htmlattrdef("autofocus")}}</dt><dd>지정한 경우, 페이지를 불러왔을 때 자동으로 포커스를 부여합니다. 문서 내에서 하나의 양식 요소만 <code>autofocus</code> 특성을 가질 수 있습니다.</dd><dt>{{htmlattrdef("disabled")}}</dt><dd>지정한 경우, 사용자와 <code>&#x3C;select></code> 요소의 모든 상호작용을 막습니다. 지정하지 않은 경우에도 {{htmlelement("fieldset")}} 등 부모 요소의 <code>disabled</code> 특성을 상속하므로 비활성 상태가 될 수 있습니다.</dd><dt>{{htmlattrdef("form")}}</dt><dd><code>&#x3C;select></code>와 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 <code>&#x3C;form></code> 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. <code>form</code> 특성을 지정하지 않았으나 조상 중 <code>&#x3C;form></code> 요소가 존재하면 해당 <code>&#x3C;form></code>과 연결됩니다.</dd><dd><code>form</code> 특성을 사용하면 <code>&#x3C;select></code>를 <code>&#x3C;form></code> 요소에 넣지 않고도 연결할 수 있고, 조상 중 <code>&#x3C;form></code>이 있더라도 소유자를 재정의할 수 있습니다.</dd><dt>{{htmlattrdef("multiple")}}</dt><dd>지정한 경우, 메뉴에서 다수의 옵션을 선택할 수 있습니다. 지정하지 않은 경우 하나만 선택 가능합니다. 대부분의 브라우저는 <code>multiple</code> 특성이 존재하면 드롭다운 메뉴 대신 스크롤 가능한 목록 상자를 보여줍니다.</dd><dt>{{htmlattrdef("name")}}</dt><dd>컨트롤의 이름.</dd><dt>{{htmlattrdef("required")}}</dt><dd>옵션 중 값으로 비어있지 않은 문자열을 값으로 하는 항목을 반드시 선택해야 함을 나타냅니다.</dd><dt>{{htmlattrdef("size")}}</dt><dd><code>&#x3C;select></code>를 (<code>multiple</code> 특성 사용 등의 이유로) 스크롤 가능한 목록 상자로 표현할 때 지정한 경우, 목록에서 한 번에 볼 수 있는 옵션 줄 수를 나타냅니다. 브라우저가 <code>&#x3C;select></code> 요소를 반드시 스크롤 가능한 목록 상자로 표현해야 하는 것은 아닙니다. 기본값은 0입니다.</dd></dl>
+<dl><dt>{{htmlattrdef("autocomplete")}}</dt><dd>{{glossary("user agent", "사용자 에이전트")}}의 자동완성 기능을 지원하는 {{domxref("DOMString")}}. 가능한 값의 전체 목록과, 자동완성의 상세 사용법은 <a href="/ko/docs/Web/HTML/Attributes/autocomplete">HTML <code>autocomplete</code> 특성</a> 문서를 참고하세요.</dd><dt>{{htmlattrdef("autofocus")}}</dt><dd>지정한 경우, 페이지를 불러왔을 때 자동으로 포커스를 부여합니다. 문서 내에서 하나의 양식 요소만 <code>autofocus</code> 특성을 가질 수 있습니다.</dd><dt>{{htmlattrdef("disabled")}}</dt><dd>지정한 경우, 사용자와 <code>&#x3C;select></code> 요소의 모든 상호작용을 막습니다. 지정하지 않은 경우에도 {{htmlelement("fieldset")}} 등 부모 요소의 <code>disabled</code> 특성을 상속하므로 비활성 상태가 될 수 있습니다.</dd><dt>{{htmlattrdef("form")}}</dt><dd><code>&#x3C;select></code>와 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 <code>&#x3C;form></code> 요소의 <a href="/ko/docs/Web/HTML/Global_attributes#id"><code>id</code></a> 특성 값을 사용해야 합니다. <code>form</code> 특성을 지정하지 않았으나 조상 중 <code>&#x3C;form></code> 요소가 존재하면 해당 <code>&#x3C;form></code>과 연결됩니다.</dd><dd><code>form</code> 특성을 사용하면 <code>&#x3C;select></code>를 <code>&#x3C;form></code> 요소에 넣지 않고도 연결할 수 있고, 조상 중 <code>&#x3C;form></code>이 있더라도 소유자를 재정의할 수 있습니다.</dd><dt>{{htmlattrdef("multiple")}}</dt><dd>지정한 경우, 메뉴에서 다수의 옵션을 선택할 수 있습니다. 지정하지 않은 경우 하나만 선택 가능합니다. 대부분의 브라우저는 <code>multiple</code> 특성이 존재하면 드롭다운 메뉴 대신 스크롤 가능한 목록 상자를 보여줍니다.</dd><dt>{{htmlattrdef("name")}}</dt><dd>컨트롤의 이름.</dd><dt>{{htmlattrdef("required")}}</dt><dd>옵션 중 값으로 비어있지 않은 문자열을 값으로 하는 항목을 반드시 선택해야 함을 나타냅니다.</dd><dt>{{htmlattrdef("size")}}</dt><dd><code>&#x3C;select></code>를 (<code>multiple</code> 특성 사용 등의 이유로) 스크롤 가능한 목록 상자로 표현할 때 지정한 경우, 목록에서 한 번에 볼 수 있는 옵션 줄 수를 나타냅니다. 브라우저가 <code>&#x3C;select></code> 요소를 반드시 스크롤 가능한 목록 상자로 표현해야 하는 것은 아닙니다. 기본값은 0입니다.</dd></dl>
 
 > **참고:** HTML5 명세에 따르면 `size`의 기본값은 1이어야 합니다. 그러나 실제로 기본값을 1로 적용하면 일부 웹 사이트가 망가지는 것으로 밝혀졌으며 어떠한 브라우저도 기본값으로 1을 사용하지 않습니다. Mozilla도 당분간 Firefox의 기본값을 0으로 유지하기로 결정했습니다.
 
@@ -58,7 +58,8 @@ slug: Web/HTML/Element/select
 ### 여러 기능을 갖춘 복잡한 메뉴
 
 ```html
-<label>Please choose one or more pets:
+<label
+  >Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>

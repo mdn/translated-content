@@ -1,16 +1,6 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - horodatage
-  - timeStamp
-translation_of: Web/API/Notification/timestamp
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -22,7 +12,7 @@ L'horodatage de la notification peut représenter le moment, en millisecondes de
 ## Syntaxe
 
 ```js
-Notification.timestamp
+Notification.timestamp;
 ```
 
 ### Valeur

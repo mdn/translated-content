@@ -69,7 +69,7 @@ Os elementos precisam ser abertos e fechados corretamente para que eles estejam 
 Alguns elementos não possuem conteúdo e são chamados de **elementos vazios**. Considere o elemento {{htmlelement("img")}} que temos na nossa página HTML:
 
 ```html
-<img src="imagens/firefox-icon.png" alt="Minha imagem de teste">
+<img src="imagens/firefox-icon.png" alt="Minha imagem de teste" />
 ```
 
 Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.
@@ -79,7 +79,7 @@ Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há 
 Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -87,7 +87,7 @@ Isso resume o básico dos elementos HTML individuais, mas eles não são úteis 
     <title>Minha página de teste</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="minha página de teste">
+    <img src="images/firefox-icon.png" alt="minha página de teste" />
   </body>
 </html>
 ```
@@ -106,7 +106,7 @@ Aqui nós temos:
 Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:
 
 ```html
-<img src="images/firefox-icon.png" alt="Minha imagem de teste">
+<img src="images/firefox-icon.png" alt="Minha imagem de teste" />
 ```
 
 Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo `src` (_source_), que contém o caminho para nosso arquivo de imagem.
@@ -170,8 +170,8 @@ Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista:
 
 ```html
 <p>
-  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores
-  trabalhando juntos ...
+  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e
+  construtores trabalhando juntos ...
 </p>
 ```
 
@@ -186,7 +186,7 @@ Nós podemos fazer assim:
   <li>construtores</li>
 </ul>
 
-<p>trabalhando juntos ... </p>
+<p>trabalhando juntos ...</p>
 ```
 
 Tente adicionar uma lista ordenada ou não ordenada à sua página de exemplo.
@@ -211,7 +211,9 @@ Links são muito importantes — eles são o que faz da web ser de fato uma REDE
 4. Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
 
    ```html
-   <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
+   <a href="https://www.mozilla.org/pt-BR/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
    ```
 
 Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.

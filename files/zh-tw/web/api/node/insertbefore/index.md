@@ -21,7 +21,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 If `referenceNode` is `null`, the `newNode` is inserted at the end of the list of child nodes.
 
-> **備註：** _`referenceNode`_ **並非**可選擇的參數 -- 一定要傳入一個`節點`或是 `null`。若是傳入失敗或不正確的參數，可能會依不同的瀏覽器版本而有[不同的](https://bugzilla.mozilla.org/show_bug.cgi?id=119489)[行為](https://code.google.com/p/chromium/issues/detail?id=419780)。
+> **備註：** _`referenceNode`_ **並非**可選擇的參數——一定要傳入一個`節點`或是 `null`。若是傳入失敗或不正確的參數，可能會依不同的瀏覽器版本而有[不同的](https://bugzilla.mozilla.org/show_bug.cgi?id=119489)[行為](https://code.google.com/p/chromium/issues/detail?id=419780)。
 
 ## Returns
 

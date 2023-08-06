@@ -29,9 +29,9 @@ regexp[Symbol.split](str[, limit])
 如果切割器是一个{{jsxref("RegExp")}}对象，这个方法就将在 {{jsxref("String.prototype.split()")}} 的内部调用。例如，下面的两个方法返回相同结果。
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 这个方法为自定义 `RegExp` 子类中的匹配行为而存在。
@@ -44,9 +44,9 @@ regexp[Symbol.split](str[, limit])
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### 在子类中使用 `@@split`
@@ -57,12 +57,12 @@ console.log(result);  // ["2016", "01", "02"]
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     var result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    return result.map((x) => "(" + x + ")");
   }
 }
 
-var re = new MyRegExp('-');
-var str = '2016-01-02';
+var re = new MyRegExp("-");
+var str = "2016-01-02";
 var result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```

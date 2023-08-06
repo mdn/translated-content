@@ -73,7 +73,7 @@ Los elementos deben abrirse y cerrarse ordenadamente, de forma tal que se encuen
 Algunos elementos no poseen contenido, y son llamados **elementos vacíos**. Toma, por ejemplo, el elemento {{htmlelement("img")}} de nuestro HTML:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
 ```
 
 Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerrado. Esto es porque un elemento de imagen no encierra contenido al cual afectar. Su propósito es desplegar una imagen en la página HTML, en el lugar en que aparece.
@@ -83,14 +83,14 @@ Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerr
 Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos)):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Mi pagina de prueba</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+    <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
   </body>
 </html>
 ```
@@ -109,7 +109,7 @@ Tienes:
 Presta atención nuevamente al elemento _imagen_ {{htmlelement("img")}}:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mi imagen de prueba">
+<img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
 ```
 
 Como ya se dijo antes, incrusta una imagen en la página, en la posición en que aparece. Lo logra a través del atributo `src` (source), el cual contiene el _path (ruta o ubicación)_ de tu archivo de imagen.
@@ -168,7 +168,10 @@ Cada elemento de la lista se coloca dentro de un elemento {{htmlelement("li")}} 
 Por ejemplo, si quieres transformar parte del siguiente párrafo en una lista:
 
 ```html
-<p>En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que trabajan juntos... </p>
+<p>
+  En Mozilla, somos una comunidad de tecnólogos, pensadores, y constructores que
+  trabajan juntos...
+</p>
 ```
 
 Podrías hacer lo siguiente:
@@ -182,7 +185,7 @@ Podrías hacer lo siguiente:
   <li>constructores</li>
 </ul>
 
-<p>trabajando juntos... </p>
+<p>trabajando juntos...</p>
 ```
 
 Intenta agregar una lista ordenada o desordenada en tu página de ejemplo.
@@ -194,21 +197,23 @@ Los vínculos o enlaces son muy importantes —son los que hacen de la web, la w
 1. Elige algún texto. Nosotros elegimos «Manifesto Mozilla».
 2. Encierra el texto en un elemento \<a>, así:
 
-    ```html
-    <a>Manifesto Mozilla</a>
-    ```
+   ```html
+   <a>Manifesto Mozilla</a>
+   ```
 
 3. Proporciónale al elemento \<a> un atributo href, así:
 
-    ```html
-    <a href="">Manifesto Mozilla</a>
-    ```
+   ```html
+   <a href="">Manifesto Mozilla</a>
+   ```
 
 4. Completa el valor de este atributo con la dirección web con la que quieras conectar al vínculo:
 
-    ```html
-    <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/es-AR/about/manifesto/"
+     >Manifesto Mozilla</a
+   >
+   ```
 
 Podrías obtener resultados inesperados si al comienzo de la dirección web omites la parte `https://` o `http://` llamada _protocolo_. Así que luego del marcado del vínculo, haz clic en él para asegurarte que te dirige a la dirección deseada.
 

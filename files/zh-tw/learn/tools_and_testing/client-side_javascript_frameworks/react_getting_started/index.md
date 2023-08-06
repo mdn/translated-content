@@ -1,7 +1,6 @@
 ---
 title: React 新手入門
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -93,7 +92,7 @@ const header = (
 const header = React.createElement(
   "header",
   null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -306,7 +305,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change

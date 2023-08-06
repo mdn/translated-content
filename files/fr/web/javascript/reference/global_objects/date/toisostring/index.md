@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toISOString
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`toISOString()`** renvoie une chaîne de caractères au format ISO
 ## Syntaxe
 
 ```js
-dateObj.toISOString()
+dateObj.toISOString();
 ```
 
 ### Valeur de retour
@@ -45,28 +36,34 @@ L'exemple ci-dessus analyse une chaîne de caractères non-standard, qui peut do
 Cette méthode fut standardisée avec la cinquième édition d'ECMAScript. Afin d'utiliser cette méthode avec les moteurs qui n'en disposent pas nativement, on pourra utiliser ce fragment de code :
 
 ```js
-if ( !Date.prototype.toISOString ) {
-  ( function() {
-
+if (!Date.prototype.toISOString) {
+  (function () {
     function pad(number) {
-      if ( number < 10 ) {
-        return '0' + number;
+      if (number < 10) {
+        return "0" + number;
       }
       return number;
     }
 
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad( this.getUTCMonth() + 1 ) +
-        '-' + pad( this.getUTCDate() ) +
-        'T' + pad( this.getUTCHours() ) +
-        ':' + pad( this.getUTCMinutes() ) +
-        ':' + pad( this.getUTCSeconds() ) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
+    Date.prototype.toISOString = function () {
+      return (
+        this.getUTCFullYear() +
+        "-" +
+        pad(this.getUTCMonth() + 1) +
+        "-" +
+        pad(this.getUTCDate()) +
+        "T" +
+        pad(this.getUTCHours()) +
+        ":" +
+        pad(this.getUTCMinutes()) +
+        ":" +
+        pad(this.getUTCSeconds()) +
+        "." +
+        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        "Z"
+      );
     };
-
-  }() );
+  })();
 }
 ```
 

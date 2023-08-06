@@ -5,7 +5,7 @@ slug: Web/HTML/Element/embed
 
 ## Sumário
 
-O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
+O **elemento HTML `<embed>`** incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
@@ -47,7 +47,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Compatibilidade com navegadores
 
-> **Nota:** Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o {{Bug("730768")}}). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
+> **Nota:** Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o [Erro do Firefox 730768](https://bugzil.la/730768)). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
 
 {{Compat("html.elements.embed")}}
 

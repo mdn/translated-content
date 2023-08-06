@@ -1,8 +1,8 @@
 ---
 title: gamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
-translation_of: Web/API/Window/gamepaddisconnected_event
 ---
+
 Событие `gampaddisconnected` вызывается, когда браузер обнаруживает, что геймпад был отключён.
 
 ## Основная информация
@@ -22,13 +22,13 @@ translation_of: Web/API/Window/gamepaddisconnected_event
 
 ## Свойства
 
-| Свойство                              | Тип                                  | Описание                                                                          |
-| ------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
+| Свойство                        | Тип                        | Описание                                                                          |
+| ------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (самый верхний элемент DOM дерева).                                  |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Тип события.                                                                      |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Является ли событие всплывающим.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Является ли событие отменяемым.                                                   |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                                                      |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Является ли событие всплывающим.                                                  |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Является ли событие отменяемым.                                                   |
+| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |
 
 ## Связанные события
 

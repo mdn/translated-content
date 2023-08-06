@@ -2,62 +2,18 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/Forms)を使用してサーバーにアップロードしたり、 JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
+{{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>
-        選択されたファイルのパスを表す文字列です。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応する共通属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>追加の属性</strong></td>
-      <td>
-        <a href="#accept" aria-current="page"><code>accept</code></a>,
-        <a href="#capture" aria-current="page"><code>capture</code></a>,
-        <a href="#multiple" aria-current="page"><code>multiple</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>files</code> および <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
+ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、`value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
 
 > **メモ:** 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
 
@@ -75,7 +31,7 @@ l10n:
 <input
   type="file"
   id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 ### capture
@@ -144,7 +100,7 @@ div {
 
 ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
-上記のように、 [`multiple`](/ja/docs/Web/HTML/Element/input/file#multiple) 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法 (例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック) によって、複数のファイルを選択できます。ユーザーに `<input>` あたり 1 つのファイルを選択させたい場合は、 `multiple` 属性を省略してください。
+上記のように、 [`multiple`](#multiple) 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法（例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック）によって、複数のファイルを選択できます。ユーザーに `<input>` あたり 1 つのファイルを選択させたい場合は、 `multiple` 属性を省略してください。
 
 ### 選択されたファイルの情報の取得
 
@@ -159,11 +115,11 @@ div {
 - `lastModifiedDate` {{deprecated_inline}}
   - : ファイルが最後に変更された日時を表す {{jsxref("Date")}} オブジェクトです。_これは非推奨であり使うべきではありません。代わりに `lastModified` を使用してください。_
 - `size`
-  - : バイト数によるファイルの長さです。
+  - : バイト数によるファイルサイズです。
 - `type`
   - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : ディレクトリ選択ダイアログ (つまり、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
+  - : ディレクトリ選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
 > **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
@@ -171,7 +127,7 @@ div {
 
 ふつう、ユーザーが自由な形式のファイルを選択できるようにはしたくないでしょう。代わりに、特定の形式のファイルを選択させたいでしょう。例えば、ファイル入力欄でユーザーにプロフィールファイルをアップロードさせるのであれば、おそらく {{Glossary("JPEG")}} または {{Glossary("PNG")}} のようなウェブに互換性がある画像形式を選択させたいでしょう。
 
-受付可能なファイル形式は [`accept`](/ja/docs/Web/HTML/Element/input/file#accept) 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
+受付可能なファイル形式は [`accept`](#accept) 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付けます。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付けます。
@@ -320,8 +276,8 @@ form button:active {
 スクリプトの最初の行で、フォームの入力欄自体と `.preview` クラスが設定された {{htmlelement("div")}} 要素の参照を取得します。次に {{htmlelement("input")}} 要素を非表示にします。 — これは、ファイル入力欄が概して醜く、スタイル付けをするのが難しく、ブラウザー間でデザインに一貫性がないからです。 {{htmlelement("label")}} をクリックすることで `input` 要素をアクティブ化することができるので、 `input` 要素を見かけは非表示にしてラベルをボタンらしくしたほうが、ユーザーがファイルをアップロードしたいときの操作が分かります。
 
 ```js
-const input = document.querySelector('input');
-const preview = document.querySelector('.preview');
+const input = document.querySelector("input");
+const preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -331,7 +287,7 @@ input.style.opacity = 0;
 次に、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の `updateImageDisplay()` 関数を呼び出します。
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 `updateImageDisplay()` 関数が呼び出されるたびに、以下のことを行います。
@@ -343,32 +299,34 @@ input.addEventListener('change', updateImageDisplay);
 - 独自の `validFileType()` 関数を使用して、ファイルが正しい形式 (つまり、 `accept` 属性で指定された画像形式) であるかどうかをチェックします。
 - そうであるなら、次のことを行います。
 
-  - ファイルの名前とファイルの長さを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルの長さを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
-  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
+  - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
+  - {{domxref("URL.createObjectURL_static", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 
 - ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
   if (curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'アップロードするファイルが選択されていません';
+    const para = document.createElement("p");
+    para.textContent = "アップロードするファイルが選択されていません";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
     for (const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `ファイル名: ${file.name}, ファイルの長さ: ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+        para.textContent = `ファイル名: ${file.name}, ファイルサイズ: ${returnFileSize(
+          file.size
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
 
         listItem.appendChild(image);
@@ -398,7 +356,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {
@@ -406,7 +364,7 @@ function validFileType(file) {
 }
 ```
 
-`returnFileSize()` 関数は数値 (現在のファイルの `size` プロパティから取得したバイト数) を取り、バイト/KB/MB のうち適切な形式で返します。
+`returnFileSize()` 関数は数値（現在のファイルの `size` プロパティから取得したバイト数）を取り、バイト/KB/MB のうち適切な形式で返します。
 
 ```js
 function returnFileSize(number) {
@@ -423,6 +381,56 @@ function returnFileSize(number) {
 この例は次のようにできます。使ってみましょう。
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>
+        選択されたファイルのパスを表す文字列です。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応する共通属性</strong></td>
+      <td><a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>追加の属性</strong></td>
+      <td>
+        <a href="#accept" aria-current="page"><code>accept</code></a>,
+        <a href="#capture" aria-current="page"><code>capture</code></a>,
+        <a href="#multiple" aria-current="page"><code>multiple</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>files</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

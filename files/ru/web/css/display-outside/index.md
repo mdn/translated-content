@@ -1,14 +1,6 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Display
-  - Reference
-  - display-outside
-  - Справка
-translation_of: Web/CSS/display-outside
 ---
 
 {{CSSRef}}
@@ -69,5 +61,5 @@ span {
 
 - `{{CSSxRef("display")}}`
 - `{{CSSxRef("&lt;display-inside&gt;")}}`
-- [`Block and Inline layout in Normal Flow`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [`Formatting Contexts explained`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [`Block and Inline layout in Normal Flow`](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [`Formatting Contexts explained`](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)

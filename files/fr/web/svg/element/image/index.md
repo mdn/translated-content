@@ -1,7 +1,6 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-translation_of: Web/SVG/Element/image
 ---
 
 {{SVGRef}}
@@ -17,10 +16,18 @@ L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un 
 Rendu basique d'une image PNG dans un objet SVG :
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image
+    xlink:href="/files/2917/fxlogo.png"
+    x="0"
+    y="0"
+    height="100"
+    width="100" />
 </svg>
 ```
 

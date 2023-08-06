@@ -3,7 +3,6 @@ title: ウェブフォームへのスタイル設定
 slug: Learn/Forms/Styling_web_forms
 l10n:
   sourceCommit: 4ca03cbbfe78d66e4e7efd7ceaf04acb08a18572
-original_slug: Learn/Forms/Styling_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
@@ -94,7 +93,10 @@ CSS での[スタイル設定が容易な要素](#良好)は、振る舞いが�
 CSS のフォントやテキストの機能は、任意のウィジェットで容易に使用できます（また、フォームウィジェットで {{cssxref("@font-face")}} も使用できます）。ただし、ブラウザーの動作にしばしば矛盾があります。デフォルトで、一部のブラウザーは親から {{cssxref("font-family")}} や {{cssxref("font-size")}} を継承しません。代わりに多くのブラウザーでは、システムのデフォルトの体裁を使用します。フォームの体裁を他のコンテンツと一致させるには、以下のルールをスタイルシートに追加するとよいでしょう。
 
 ```css
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -117,8 +119,11 @@ button, input, select, textarea {
 **これは各ウィジェットが境界、パディング、マージンについて独自のルールを持っているためです。**このためさまざまなウィジェットを同じサイズにしたい場合に、 {{cssxref("box-sizing")}} プロパティを使用しなければなりません。
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -175,12 +180,12 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -221,42 +226,44 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 1.3rem sans-serif;
-  padding : 0.5em;
-  margin  : 0;
-  background : #222;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
 }
 
 form {
-  position : relative;
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background : #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 
   /* we create our grid */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
@@ -264,16 +271,19 @@ form {
 
 ```css
 h1 {
-  font : 1em "typewriter", monospace;
-  align-self : end;
+  font:
+    1em "typewriter",
+    monospace;
+  align-self: end;
 }
 
 #message {
-   grid-row: 1 / 5;
+  grid-row: 1 / 5;
 }
 
-#from, #reply {
-   display: flex;
+#from,
+#reply {
+  display: flex;
 }
 ```
 
@@ -283,28 +293,35 @@ h1 {
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 テキストフィールドには、共通のルールがいくつか必要です。 {{cssxref("border")}} や {{cssxref("background")}} の削除と {{cssxref("padding")}} や {{cssxref("margin")}} の再定義を行います。
 
 ```css
-input, textarea {
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 80%;
-  background : none;
+input,
+textarea {
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 ```
 
 これらのフィールドのいずれかがフォーカスされると、ライトグレーの透明な背景でハイライトされます（ユーザビリティとキーボードアクセシビリティのために、フォーカススタイルを保有することは常に重要です）。
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 ```
@@ -317,12 +334,12 @@ input:focus, textarea:focus {
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 100%;
-  height  : 90%;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
 
   border-right: 1px solid;
 
@@ -337,24 +354,24 @@ textarea {
 
 ```css
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
 button:after {
-  content      : " >>>";
+  content: " >>>";
 }
 
 button:hover,
 button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
+  outline: none;
+  background: #000;
+  color: #fff;
 }
 ```
 

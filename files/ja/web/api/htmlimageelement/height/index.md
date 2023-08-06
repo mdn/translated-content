@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.height
+title: "HTMLImageElement: height プロパティ"
+short-title: height
 slug: Web/API/HTMLImageElement/height
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/HTMLImageElement/height
 
 ## 値
 
-画像の高さを表す整数値です。高さを定義する方法は、画像が視覚的媒体にレンダリングされるかどうかに依存します。
+画像の高さを表す整数値です。高さがどのように定義されるかは、画像が視覚的媒体にレンダリングされるかどうかに依存します。
 
 - 画像が画面やプリンターなどの視覚媒体にレンダリングされる場合、高さは {{Glossary("CSS pixels", "CSS ピクセル")}}で表現されます。
 - それ以外の場合、画像の高さは、 {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} で示される表示密度用に調整された自然の（固有の）高さで表わされます。
@@ -25,11 +28,14 @@ slug: Web/API/HTMLImageElement/height
 
 ```html
 <p>画像の高さ: <span class="size">?</span>px (リサイズで更新)</p>
-<img src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-          /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 200px, 300px">
+<img
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 200px, 300px" />
 ```
 
 ### JavaScript
@@ -37,10 +43,12 @@ slug: Web/API/HTMLImageElement/height
 JavaScript のコードでは `height` を見て、現在描画されている幅から画像の高さを決定しています。
 
 ```js
-var clockImage = document.querySelector("img");
+const clockImage = document.querySelector("img");
 let output = document.querySelector(".size");
 
-const updateHeight = event => { output.innerText = clockImage.height; };
+const updateHeight = (event) => {
+  output.innerText = clockImage.height;
+};
 
 window.addEventListener("load", updateHeight);
 window.addEventListener("resize", updateHeight);
@@ -48,7 +56,7 @@ window.addEventListener("resize", updateHeight);
 
 ### 結果
 
-{{EmbedLiveSample("Example", 640, 450)}}
+{{EmbedLiveSample("Examples", 640, 450)}}
 
 この例は{{LiveSampleLink('Example', '独自のウィンドウ')}}で試してみるとわかりやすいかもしれません。
 

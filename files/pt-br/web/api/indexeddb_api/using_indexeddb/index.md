@@ -1,7 +1,6 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
 
 IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline.
@@ -521,7 +520,7 @@ index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
 
 Veja "[IDBCursor Constants](/pt-BR/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)" para parâmetros válidos.
 
-## Mudança de versão quando a web app está aberta em outra aba.
+## Mudança de versão quando a web app está aberta em outra aba
 
 Quando sua web app muda a versão você precisa considerar o que vai acontecer se o usuário está na versão antiga em uma aba, e carrega a versão nova na outra. Quando você chamar o `open()` com a versão mais nova, um evento `onblocked` é chamado até que a aba da versão antiga seja fechada ou recarregada. Veja abaixo:
 

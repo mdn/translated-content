@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 
 {{JSRef}}
@@ -27,7 +26,7 @@ mySet.has(value);
 
   - : Returns `true` if an element with the specified value exists in the `Set` object; otherwise `false`.
 
-    > **Примечание:** Technically speaking, `has()` uses the [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) algorithm to determine whether the given element is found.
+    > **Примечание:** Technically speaking, `has()` uses the [`sameValueZero`](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) algorithm to determine whether the given element is found.
 
 ## Examples
 

@@ -1,8 +1,8 @@
 ---
-title: '<meta>: メタデータ要素'
+title: "<meta>: メタデータ要素"
 slug: Web/HTML/Element/meta
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -13,23 +13,23 @@ l10n:
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
-        >。 <a href="/ja/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> 属性がある場合は<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        >。 <a href="/ja/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> 属性がある場合は<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >。
       </td>
     </tr>
     <tr>
       <th>許可されている内容</th>
-      <td>なし。これは{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th>タグの省略</th>
@@ -42,19 +42,19 @@ l10n:
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。<a href="/ja/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
+            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。<a href="#http-equiv"><code>http-equiv</code></a> がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
           </li>
           <li>
             <code>&#x3C;meta name></code>: <a
-              href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+              href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
             >を受け入れるすべての要素。
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>: <a
-              href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+              href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
               >メタデータコンテンツ</a
-            >または<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+            >または<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
               >フローコンテンツ</a
             >を受け入れるすべての要素。
           </li>
@@ -82,21 +82,21 @@ l10n:
 
 `<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
 
-- [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
-- [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
-- [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
+- [`name`](#name) 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
+- [`http-equiv`](#http-equiv) 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
+- [`charset`](#charset) 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
 - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **メモ:** [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに [`name`](/ja/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv), [`charset`](/ja/docs/Web/HTML/Element/meta#charset) のいずれかがある場合は設定してはいけません。
+> **メモ:** [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
 
 - `charset`
-  - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
+  - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
 - `content`
-  - : この属性は状況に応じて、[`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性または [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性に関連付けられた値を持ちます。
+  - : この属性は状況に応じて、[`http-equiv`](#http-equiv) 属性または [`name`](#name) 属性に関連付けられた値を持ちます。
 - `http-equiv`
 
   - : プラグマディレクティブを定義します。属性名が `http-equiv(alent)` なのは、利用できる値のすべてが特定の HTTP ヘッダーの名前だからです。
@@ -107,7 +107,7 @@ l10n:
 
     - `content-type`
 
-      文書の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
+      文書の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
 
     - `default-style`
 
@@ -119,14 +119,14 @@ l10n:
 
     - `refresh` これは以下のことを指定する指示です。
 
-      - [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
-      - [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
+      - [`content`](#content) 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
+      - [`content`](#content) 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
       > **警告:**
       >
       > `refresh` の値で設定されたページは、時間間隔が短すぎになるという危険性があります。画面の内側から読み上げるような支援技術を利用している人は、自動的にリダイレクトされる前にページの内容を読み、理解することができないかもしれません。また、弱視の人にとっても、突然に予告なくページ内容が更新されると、混乱させる可能性があります。
       >
-      > - [MDN WCAG を理解する、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
+      > - [MDN WCAG を理解する、ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.2_—_十分な時間_コンテンツを読んで使用するのに十分な時間をユーザーに提供する)
       > - [MDN WCAG を理解する、ガイドライン 3.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
       > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)

@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.location
 slug: Web/API/WorkerGlobalScope/location
-translation_of: Web/API/WorkerGlobalScope/location
 ---
 
 {{APIRef("Web Workers API")}}

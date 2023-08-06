@@ -1,7 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -496,7 +495,7 @@ svg text.em {
 - `none`
   - : Обрезанная область не создается.
 
-### Формальный синтаксис.
+### Формальный синтаксис
 
 {{csssyntax}}
 

@@ -1,12 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-page-type: html-element
-tags:
-  - HTML формы
-  - Формы
-  - Элемент Input
-translation_of: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
@@ -17,19 +11,19 @@ translation_of: Web/HTML/Element/input/button
 
 > **Примечание:** Хотя элементы `<input>` с типом `button` по-прежнему являются абсолютно корректными в HTML, новый элемент {{HTMLElement("button")}} теперь является предпочтительным способом создания кнопок. Учитывая, что текст элемента {{HTMLElement("button")}} вставлен между открывающим и закрывающим тегами, вы можете включить в тег HTML, даже изображения.
 
-| **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                       |
-| --------------------------------- | ------------------------------------------------------------------------------------------- |
-| **Событие**                       | {{event("click")}}                                                                    |
+| **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Событие**                       | {{event("click")}}                                                                                |
 | **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Element/input#type) и [`value`](/ru/docs/Web/HTML/Element/input#value) |
-| **Атрибуты IDL**                  | `value`                                                                                     |
-| **Методы**                        | None                                                                                        |
+| **Атрибуты IDL**                  | `value`                                                                                           |
+| **Методы**                        | None                                                                                              |
 
 ## Значение
 
 Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Element/input#value) содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
 
 ```html
-<input type="button" value="Нажми на меня">
+<input type="button" value="Нажми на меня" />
 ```
 
 {{EmbedLiveSample("summary-example3", 650, 30)}}
@@ -37,14 +31,14 @@ translation_of: Web/HTML/Element/input/button
 Если вы не укажете `value`, вы получите пустую кнопку:
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("summary-example1", 650, 30)}}
 
 ## Использование кнопок
 
-Элементы `<input type="button">` не имеют поведения по умолчанию (их двоюродные братья, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) и [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) используются для отправки и сброса форм соответственно). Чтобы кнопки делали что-либо, вы должны написать код JavaScript для выполнения работы.
+Элементы `<input type="button">` не имеют поведения по умолчанию (их двоюродные братья, [`<input type="submit">`](/ru/docs/Web/HTML/Element/input/submit) и [`<input type="reset">`](/ru/docs/Web/HTML/Element/input/reset) используются для отправки и сброса форм соответственно). Чтобы кнопки делали что-либо, вы должны написать код JavaScript для выполнения работы.
 
 ### Простая кнопка
 
@@ -52,24 +46,24 @@ translation_of: Web/HTML/Element/input/button
 
 ```html
 <form>
-  <input type="button" value="Запустить ПК">
+  <input type="button" value="Запустить ПК" />
 </form>
 <p>ПК выключен.</p>
 ```
 
 ```js
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Запустить ПК') {
-    button.value = 'Выключить ПК';
-    paragraph.textContent = 'ПК запущен!';
+  if (button.value === "Запустить ПК") {
+    button.value = "Выключить ПК";
+    paragraph.textContent = "ПК запущен!";
   } else {
-    button.value = 'Запустить ПК';
-    paragraph.textContent = 'ПК выключен.';
+    button.value = "Запустить ПК";
+    paragraph.textContent = "ПК выключен.";
   }
 }
 ```
@@ -86,24 +80,24 @@ function updateButton() {
 
 ```html
 <form>
-  <input type="button" value="Включить ПК" accesskey="s">
+  <input type="button" value="Включить ПК" accesskey="s" />
 </form>
 <p>ПК выключен.</p>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
+const button = document.querySelector("input");
+const paragraph = document.querySelector("p");
 
-button.addEventListener('click', updateButton);
+button.addEventListener("click", updateButton);
 
 function updateButton() {
-  if (button.value === 'Включить ПК') {
-    button.value = 'Выключить пк';
-    paragraph.textContent = 'ПК включён!';
+  if (button.value === "Включить ПК") {
+    button.value = "Выключить пк";
+    paragraph.textContent = "ПК включён!";
   } else {
-    button.value = 'Включить ПК';
-    paragraph.textContent = 'ПК выключен.';
+    button.value = "Включить ПК";
+    paragraph.textContent = "ПК выключен.";
   }
 }
 ```
@@ -117,26 +111,26 @@ function updateButton() {
 Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут [`disabled`](/ru/docs/Web/HTML/Global_attributes#disabled), вот так:
 
 ```html
-<input type="button" value="Я выключена" disabled>
+<input type="button" value="Я выключена" disabled />
 ```
 
 Вы можете включать и отключать кнопки во время выполнения, просто установив `disabled` вместо `true` или `false`. В этом примере наша кнопка изначально включена, но если вы нажмете ее, она будет отключена с помощью `button.disabled = true`. А {{domxref("WindowTimers.setTimeout","setTimeout()")}} затем функция используется для возврата кнопки обратно в ее включённое состояние через две секунды.
 
 ```html hidden
-<input type="button" value="Enabled">
+<input type="button" value="Enabled" />
 ```
 
 ```js hidden
-const button = document.querySelector('input');
+const button = document.querySelector("input");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   button.disabled = true;
-  button.value = 'Выключена';
-  window.setTimeout(function() {
+  button.value = "Выключена";
+  window.setTimeout(function () {
     button.disabled = false;
-    button.value = 'Включена';
+    button.value = "Включена";
   }, 2000);
 }
 ```
@@ -150,21 +144,21 @@ function disableButton() {
 ```html hidden
 <fieldset>
   <legend>Button group</legend>
-  <input type="button" value="Button 1">
-  <input type="button" value="Button 2">
-  <input type="button" value="Button 3">
+  <input type="button" value="Button 1" />
+  <input type="button" value="Button 2" />
+  <input type="button" value="Button 3" />
 </fieldset>
 ```
 
 ```js hidden
-const button = document.querySelector('input');
-const fieldset = document.querySelector('fieldset');
+const button = document.querySelector("input");
+const fieldset = document.querySelector("fieldset");
 
-button.addEventListener('click', disableButton);
+button.addEventListener("click", disableButton);
 
 function disableButton() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -184,9 +178,14 @@ function disableButton() {
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="select pen color">
-  <input type="range" min="2" max="50" value="30" aria-label="select pen size"><span class="output">30</span>
-  <input type="button" value="Clear canvas">
+  <input type="color" aria-label="select pen color" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="select pen size" /><span class="output">30</span>
+  <input type="button" value="Clear canvas" />
 </div>
 
 <canvas class="myCanvas">
@@ -208,7 +207,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -225,29 +225,29 @@ span {
 ```
 
 ```js
-let canvas = document.querySelector('.myCanvas');
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight-85;
-let ctx = canvas.getContext('2d');
+let canvas = document.querySelector(".myCanvas");
+let width = (canvas.width = window.innerWidth);
+let height = (canvas.height = window.innerHeight - 85);
+let ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 let colorPicker = document.querySelector('input[type="color"]');
 let sizePicker = document.querySelector('input[type="range"]');
-let output = document.querySelector('.output');
+let output = document.querySelector(".output");
 let clearBtn = document.querySelector('input[type="button"]');
 
 // covert degrees to radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // update sizepicker output value
 
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // store mouse pointer coordinates, and whether the button is pressed
 let curX;
@@ -255,29 +255,46 @@ let curY;
 let pressed = false;
 
 // update mouse pointer coordinates
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 
@@ -291,10 +308,10 @@ draw();
 
 ## Спецификации
 
-| Specification                                                                                                                        | Status                           | Comments |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
+| Specification                                                                                       | Status                   | Comments |
+| --------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('HTML WHATWG', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML5 W3C', 'forms.html#button-state-(type=button)', '&lt;input type="button"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
 
 ## Browser compatibility
 

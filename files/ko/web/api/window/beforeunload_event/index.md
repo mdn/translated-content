@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload 이벤트'
+title: "Window: beforeunload 이벤트"
 slug: Web/API/Window/beforeunload_event
 l10n:
   sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97

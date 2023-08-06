@@ -1,7 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-translation_of: Web/API/HTMLInputElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -557,10 +556,10 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>void</code></td>
       <td>
         Sets the files selected on the input to the given array of
-        <code><a href="/en-US/docs/Web/API/File">File</a></code> objects. This
+        <code><a href="/ru/docs/Web/API/File">File</a></code> objects. This
         is an alternative to <code>mozSetFileNameArray</code> which can be used
         in frame scripts: a chrome script can
-        <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        <a href="/ru/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
           >open files as <code>File</code> objects</a
         >
         and send them via
@@ -722,12 +721,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 
 ## Specifications
 
-| Specification                                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "tthe-input-element.html#the-input-element", "HTMLInputElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}                     | {{Spec2('HTML5 W3C')}}     | Technically, the `tabindex` and `accesskey` properties, as well as the `blur()`, `click()`, and `focus()` methods, are now defined on {{domxref("HTMLElement")}}. The following properties are now obsolete: `align` and `useMap`. The following properties have been added: `autocomplete`, `autofocus`, `dirName`, `files`, `formAction`, `formEncType`, `formMethod`, `formNoValidate`, `formTarget`, `height`, `indeterminate`, `labels`, `list`, `max`, `min`, `multiple`, `pattern`, `placeholder`, `required`, `selectionDirection`, `selectionEnd`, `selectionStart`, `step`, `validationMessage`, `validity`, `valueAsDate`, `valueAsNumber`, `width`, and `willValidate`. The following methods have been added: `checkValidity()`, `setCustomValidity()`, `setSelectionRange()`, `stepUp()`, and `stepDown()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}                                 | {{Spec2('DOM2 HTML')}}     | The `size` property is now an `unsigned` `long`. The `type` property must be entirely given in lowercase characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName('DOM1', 'level-one-html.html#ID-6043025', 'HTMLInputElement')}}                         | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

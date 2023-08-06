@@ -36,25 +36,25 @@ The **`Math.pow()`** function returns the `base` to the `exponent` power, that i
 
 ```js
 // simple
-Math.pow(7, 2);    // 49
-Math.pow(7, 3);    // 343
-Math.pow(2, 10);   // 1024
+Math.pow(7, 2); // 49
+Math.pow(7, 3); // 343
+Math.pow(2, 10); // 1024
 // fractional exponents
-Math.pow(4, 0.5);  // 2 （4 的平方根）
-Math.pow(8, 1/3);  // 2 （8 的立方根）
-Math.pow(2, 0.5);  // 1.4142135623730951 （2 的平方根）
-Math.pow(2, 1/3);  // 1.2599210498948732 （2 的立方根）
+Math.pow(4, 0.5); // 2 （4 的平方根）
+Math.pow(8, 1 / 3); // 2 （8 的立方根）
+Math.pow(2, 0.5); // 1.4142135623730951 （2 的平方根）
+Math.pow(2, 1 / 3); // 1.2599210498948732 （2 的立方根）
 // signed exponents
-Math.pow(7, -2);   // 0.02040816326530612 (1/49)
-Math.pow(8, -1/3); // 0.5
+Math.pow(7, -2); // 0.02040816326530612 (1/49)
+Math.pow(8, -1 / 3); // 0.5
 // signed bases
-Math.pow(-7, 2);   // 49 (負負得正，2次方都是正數)
-Math.pow(-7, 3);   // -343 (3次方有可能為負數)
+Math.pow(-7, 2); // 49 (負負得正，2次方都是正數)
+Math.pow(-7, 3); // -343 (3次方有可能為負數)
 Math.pow(-7, 0.5); // NaN (負數沒辦法得出一個實數平方根)
 // due to "even" and "odd" roots laying close to each other,
 // and limits in the floating number precision,
 // negative bases with fractional exponents always return NaN
-Math.pow(-7, 1/3); // NaN
+Math.pow(-7, 1 / 3); // NaN
 ```
 
 ## 規範

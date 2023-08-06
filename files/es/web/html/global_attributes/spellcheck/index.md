@@ -1,7 +1,6 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-original_slug: Web/HTML/Atributos_Globales/spellcheck
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}

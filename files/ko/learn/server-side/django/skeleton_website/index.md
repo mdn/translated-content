@@ -1,5 +1,5 @@
 ---
-title: '장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기'
+title: "장고 튜토리얼 강좌 2 : 뼈대 사이트 만들기"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -12,12 +12,12 @@ slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/ko/docs/Learn/Server-side/Django/development_environment"
           >장고 개발 환경을 설치하세요. (Set up a Django development
           environment.)</a
         >
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >장고 튜토리얼</a
         >을 복습하세요.
       </td>
@@ -41,7 +41,7 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 프로젝트 폴더, 기본적인 파일 템플릿과 프로젝트 관리 스크립트(**manage.py**)를 만들기 위해서 `django-admin`을 사용합니다.
 2. 하나 또는 그 이상의 애플리케이션을 만들기 위해서 **manage.py**를 사용합니다.
 
-    > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
+   > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
 
 3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
 4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.

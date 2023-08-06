@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -52,11 +45,11 @@ theBigDay.setSeconds(30);
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}                 | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                       | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}               | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

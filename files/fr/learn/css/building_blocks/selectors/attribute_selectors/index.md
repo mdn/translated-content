@@ -1,8 +1,6 @@
 ---
 title: Sélecteurs d'attribut
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-original_slug: Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

@@ -1,11 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - NeedsUpdate
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/fill
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)

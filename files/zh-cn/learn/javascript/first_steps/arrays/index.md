@@ -31,10 +31,10 @@ slug: Learn/JavaScript/First_steps/Arrays
 像以前的文章一样，我们通过在 JavaScript 控制台中输入一些示例来了解数组的基础知识。我们在下面提供了一个（您也可以在单独的选项卡或窗口中打开此控制台，或者如果您愿意，请使用[浏览器的开发者工具控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)）。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -42,7 +42,7 @@ slug: Learn/JavaScript/First_steps/Arrays
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -76,64 +76,59 @@ slug: Learn/JavaScript/First_steps/Arrays
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -146,17 +141,17 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 1. 假设我们想在一个数组中存储一个购物清单 - 我们会做一些像下面这样的事情。在您的控制台中输入以下行：
 
-    ```js
-    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping;
-    ```
+   ```js
+   let shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+   shopping;
+   ```
 
 2. 在这种情况下，数组中的每个项目都是一个字符串，但请记住，您可以将任何类型的元素存储在数组中 - 字符串，数字，对象，另一个变量，甚至另一个数组。您也可以混合和匹配项目类型 - 它们并不都是数字，字符串等。尝试下面这些：
 
-    ```js
-    let sequence = [1, 1, 2, 3, 5, 8, 13];
-    let random = ['tree', 795, [0, 1, 2]];
-    ```
+   ```js
+   let sequence = [1, 1, 2, 3, 5, 8, 13];
+   let random = ["tree", 795, [0, 1, 2]];
+   ```
 
 3. 尝试创建您自己的几个数组，然后再继续往下看。
 
@@ -166,26 +161,26 @@ slug: Learn/JavaScript/First_steps/Arrays
 
 1. 在您的控制台中输入以下内容：
 
-    ```js
-    shopping[0];
-    // returns "bread"
-    ```
+   ```js
+   shopping[0];
+   // returns "bread"
+   ```
 
 2. 您还可以简单地为单个数组元素提供新值来修改数组中的元素。例如：
 
-    ```js
-    shopping[0] = 'tahini';
-    shopping;
-    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
-    ```
+   ```js
+   shopping[0] = "tahini";
+   shopping;
+   // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   ```
 
-    > **备注：** 我们以前说过，但还是提醒一下 —— 电脑从 0 开始计数！
+   > **备注：** 我们以前说过，但还是提醒一下 —— 电脑从 0 开始计数！
 
 3. 请注意，数组中包含数组的话称之为多维数组。您可以通过将两组方括号链接在一起来访问数组内的另一个数组。例如，要访问数组内部的一个项目，即 `random` 数组中的第三个项目（参见上一节），我们可以这样做：
 
-    ```js
-    random[2][2];
-    ```
+   ```js
+   random[2][2];
+   ```
 
 4. 在继续之前，尝试对您的数组示例进行一些修改。玩一玩，看看哪些有效，哪些无效。
 
@@ -225,97 +220,104 @@ for (let i = 0; i < sequence.length; i++) {
 
 1. 我们来玩一下这个方法，看看它是如何工作的。首先，在控制台中创建一个字符串：
 
-    ```js
-    let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    ```
+   ```js
+   let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+   ```
 
 2. 现在我们用每个逗号分隔它：
 
-    ```js
-    let myArray = myData.split(',');
-    myArray;
-    ```
+   ```js
+   let myArray = myData.split(",");
+   myArray;
+   ```
 
 3. 最后，尝试找到新数组的长度，并从中检索一些项目：
 
-    ```js
-    myArray.length;
-    myArray[0]; // the first item in the array
-    myArray[1]; // the second item in the array
-    myArray[myArray.length-1]; // the last item in the array
-    ```
+   ```js
+   myArray.length;
+   myArray[0]; // the first item in the array
+   myArray[1]; // the second item in the array
+   myArray[myArray.length - 1]; // the last item in the array
+   ```
 
 4. 您也可以使用 {{jsxref("Array.prototype.join()","join()")}} 方法进行相反的操作。尝试以下：
 
-    ```js
-    let myNewString = myArray.join(',');
-    myNewString;
-    ```
+   ```js
+   let myNewString = myArray.join(",");
+   myNewString;
+   ```
 
 5. 将数组转换为字符串的另一种方法是使用 {{jsxref("Array.prototype.toString()","toString()")}} 方法。 `toString()` 可以比 `join()` 更简单，因为它不需要一个参数，但更有限制。使用 `join()` 可以指定不同的分隔符（尝试使用与逗号不同的字符运行步骤 4）。
 
-    ```js
-    let dogNames = ["Rocket","Flash","Bella","Slugger"];
-    dogNames.toString(); //Rocket,Flash,Bella,Slugger
-    ```
+   ```js
+   let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   ```
 
 ### 添加和删除数组项
 
 我们还没有涵盖添加和删除数组元素，现在让我们来看看。我们将使用在上一节中最后提到的 `myArray` 数组。如果您尚未遵循该部分，请先在控制台中创建数组：
 
 ```js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
+let myArray = [
+  "Manchester",
+  "London",
+  "Liverpool",
+  "Birmingham",
+  "Leeds",
+  "Carlisle",
+];
 ```
 
 首先，要在数组末尾添加或删除一个项目，我们可以使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}}。
 
 1. 让我们先使用 `push()` —— 注意，你需要添加一个或多个要添加到数组末尾的元素。尝试下面的代码：
 
-    ```js
-    myArray.push('Cardiff');
-    myArray;
-    myArray.push('Bradford', 'Brighton');
-    myArray;
-    ```
+   ```js
+   myArray.push("Cardiff");
+   myArray;
+   myArray.push("Bradford", "Brighton");
+   myArray;
+   ```
 
 2. 当方法调用完成时，将返回数组的新长度。如果要将新数组长度存储在变量中。例如：
 
-    ```js
-    var newLength = myArray.push('Bristol');
-    myArray;
-    newLength;
-    ```
+   ```js
+   var newLength = myArray.push("Bristol");
+   myArray;
+   newLength;
+   ```
 
 3. 从数组中删除最后一个元素的话直接使用 `pop()` 就可以。例如：
 
-    ```js
-    myArray.pop();
-    ```
+   ```js
+   myArray.pop();
+   ```
 
 4. 当方法调用完成时，将返回已删除的项目。你也可以这样做：
 
-    ```js
-    let removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.pop();
+   myArray;
+   removedItem;
+   ```
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} 和 {{jsxref("Array.prototype.shift()","shift()")}} 从功能上与 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 完全相同，只是它们分别作用于数组的开始，而不是结尾。
 
 1. 首先 `unshift()` ——尝试一下这个命令：
 
-    ```js
-    myArray.unshift('Edinburgh');
-    myArray;
-    ```
+   ```js
+   myArray.unshift("Edinburgh");
+   myArray;
+   ```
 
 2. 现在 `shift()` —— 尝试一下！
 
-    ```js
-    let removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.shift();
+   myArray;
+   removedItem;
+   ```
 
 ## 积极学习：打印这些产品
 
@@ -330,13 +332,9 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 370px;">
@@ -369,35 +367,36 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n                \'Socks:5.99\',\n                \'T-shirt:14.99\',\n                \'Trousers:31.99\',\n                \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n  var subArray = products[i].split(\':\');\n  var name = subArray[0];\n  var price = Number(subArray[1]);\n  total += price;\n  itemText = name + \' — $\' + price;\n\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = itemText;\n  list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n                'Socks:5.99',\n                'T-shirt:14.99',\n                'Trousers:31.99',\n                'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n  var subArray = products[i].split(':');\n  var name = subArray[0];\n  var price = Number(subArray[1]);\n  total += price;\n  itemText = name + ' — $' + price;\n\n  var listItem = document.createElement('li');\n  listItem.textContent = itemText;\n  list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('积极学习：打印这些产品', '100%', 600) }}
@@ -417,13 +416,9 @@ window.addEventListener('load', updateCode);
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 370px;">
@@ -466,35 +461,36 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n  if(searchInput.value !== \'\') {\n    myHistory.unshift(searchInput.value);\n\n    list.innerHTML = \'\';\n\n    for(var i = 0; i < myHistory.length; i++) {\n     var itemText = myHistory[i];\n      var listItem = document.createElement(\'li\');\n      listItem.textContent = itemText;\n      list.appendChild(listItem);\n    }\n\n    if(myHistory.length >= 5) {\n      myHistory.pop();\n    }\n\n    searchInput.value = \'\';\n    searchInput.focus();\n  }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n  if(searchInput.value !== '') {\n    myHistory.unshift(searchInput.value);\n\n    list.innerHTML = '';\n\n    for(var i = 0; i < myHistory.length; i++) {\n     var itemText = myHistory[i];\n      var listItem = document.createElement('li');\n      listItem.textContent = itemText;\n      list.appendChild(listItem);\n    }\n\n    if(myHistory.length >= 5) {\n      myHistory.pop();\n    }\n\n    searchInput.value = '';\n    searchInput.focus();\n  }\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('积极学习：前 5 个搜索', '100%', 600) }}

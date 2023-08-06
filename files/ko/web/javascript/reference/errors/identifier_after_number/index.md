@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 
@@ -50,4 +50,4 @@ var foo = life1;
 ## 같이 보기
 
 - [문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [변수](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98)([JavaScript Guide](/en-US/docs/Web/JavaScript/Guide))
+- [변수](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#%EB%B3%80%EC%88%98)([JavaScript Guide](/ko/docs/Web/JavaScript/Guide))

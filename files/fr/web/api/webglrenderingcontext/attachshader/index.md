@@ -1,10 +1,6 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
-tags:
-  - Méthode
-  - WebGL
-translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
 
 {{APIRef("WebGL")}}
@@ -37,9 +33,9 @@ gl.attachShader(programme, shaderDeFragment);
 
 gl.linkProgram(programme);
 
-if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(programme);
-  throw 'Impossible de compiler le program WebGL. \n\n' + info;
+  throw "Impossible de compiler le program WebGL. \n\n" + info;
 }
 ```
 

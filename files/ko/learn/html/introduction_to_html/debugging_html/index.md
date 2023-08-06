@@ -13,15 +13,15 @@ HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가
       <th scope="row">선행사항:</th>
       <td>
         HTML이 익숙해야 합니다. 다음문서를 이해하는 정도면 충분합니다.
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML로 시작하기</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 텍스트 기본사항</a
         >, and
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >하이파링크 만들기</a
         >.
       </td>
@@ -35,9 +35,9 @@ HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가
   </tbody>
 </table>
 
-## 디버깅은 무섭지 않아요.
+## 디버깅은 무섭지 않아요
 
-여러분이 원하든 원하지않든 무언가 잘못되면 코드가 동작하지 않거나 검파일 애러가 나는 무시무시한 순간이 다가옵니다. 다음과 같이 말이죠
+여러분이 원하든 원하지않든 무언가 잘못되면 코드가 동작하지 않거나 컴파일 오류가 나는 무시무시한 순간이 다가옵니다. 다음과 같이 말이죠
 
 아래는 [Rust](https://www.rust-lang.org/) 언어로 작성된 간단한 프로그램을 {{glossary ( "compile")}}할 때 발생한 오류를 보여줍니다.
 
@@ -62,7 +62,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 
 > **참고:** 웹이 처음 만들어지면 사람들이 자신의 콘텐트를 게시 할 수 있도록 허용하는 것이 문법이 정확한지 확인하는 것보다 중요하기 때문에 HTML은 허용 된 방식으로 구문 분석됩니다. 처음부터 웹 사이트가 문법오류에 엄격했다면 웹은 오늘날처럼 인기가 있지 않았을 것입니다.
 
-### 자발적 학습 : Permissive한 코드를 배웁니다.
+### 자발적 학습 : Permissive한 코드를 배웁니다
 
 유연한 성질의 HTML 코드를 배울 시간입니다.
 
@@ -70,55 +70,58 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly,
-          then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly,
+         then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
-          what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important
+         for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
+         what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's
-          look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-          homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
+         homepage</a>
+   </ul>
+   ```
 
 4. Let's review the problems:
 
-    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
-    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasised.
-    - This section is badly nested: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
-    - The {{htmlattrxref("href","a")}} attribute value has a missing closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
+   - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
+   - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasised.
+   - This section is badly nested: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
+   - The [`href`](/ko/docs/Web/HTML/Element/a#href) attribute value has a missing closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
 5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/ko/docs/Learn/Discover_browser_developer_tools).
 6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
 
-    - The paragraphs and list items have been given closing tags.
-    - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
-    - The incorrect nesting has been fixed by the browser like this:
+   - The paragraphs and list items have been given closing tags.
+   - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
+   - The incorrect nesting has been fixed by the browser like this:
 
-      ```html
-      <strong>strong
-        <em>strong emphasised?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong
+       >strong
+       <em>strong emphasised?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - The link with the missing double quote has been deleted altogether. The last list item looks like this:
+   - The link with the missing double quote has been deleted altogether. The last list item looks like this:
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong
+         >Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example:
+       </strong>
+     </li>
+     ```
 
 ### HTML validation
 

@@ -14,9 +14,9 @@ The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTM
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
+  - : A {{jsxref("Boolean")}} reflecting the [`autofocus`](/ko/docs/Web/HTML/Element/select#autofocus) HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
+  - : A {{jsxref("Boolean")}} reflecting the [`disabled`](/ko/docs/Web/HTML/Element/select#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLFormElement")}} referencing the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns `null`.
 - {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
@@ -24,19 +24,19 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.length")}}
   - : An `unsigned long` The number of {{HTMLElement("option")}} elements in this `select` element.
 - {{domxref("HTMLSelectElement.multiple")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
+  - : A {{jsxref("Boolean")}} reflecting the [`multiple`](/ko/docs/Web/HTML/Element/select#multiple) HTML attribute, which indicates whether multiple items can be selected.
 - {{domxref("HTMLSelectElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
+  - : A {{domxref("DOMString")}} reflecting the [`name`](/ko/docs/Web/HTML/Element/select#name) HTML attribute, containing the name of this control used by servers and DOM search functions.
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
+  - : A {{jsxref("Boolean")}} reflecting the [`required`](/ko/docs/Web/HTML/Element/select#required) HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : A `long` reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
 - {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLCollection")}} representing the set of {{HTMLElement("option")}} elements that are selected.
 - {{domxref("HTMLSelectElement.size")}}
-  - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
+  - : A `long` reflecting the [`size`](/ko/docs/Web/HTML/Element/select#size) HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} represeting the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
@@ -91,13 +91,13 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 </select>
 */
 
-var select = document.getElementById('s');
+var select = document.getElementById("s");
 
 // return the index of the selected option
 console.log(select.selectedIndex); // 1
 
 // return the value of the selected option
-console.log(select.options[select.selectedIndex].value) // Second
+console.log(select.options[select.selectedIndex].value); // Second
 ```
 
 A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/ko/docs/Web/API/HTMLElement/change_event#select_element) in the documentation for the `change` event for details.

@@ -100,15 +100,15 @@ function deriveSecretKey(privateKey, publicKey) {
   return window.crypto.subtle.deriveKey(
     {
       name: "ECDH",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     {
       name: "AES-GCM",
-      length: 256
+      length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -118,26 +118,32 @@ async function agreeSharedSecretKey() {
   let alicesKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // 然后 Alice 使用她的私钥和 Bob 的公钥生成密钥（secret key）。
-  let alicesSecretKey = await deriveSecretKey(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  let alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
 
   // Bob 使用他的私钥和 Alice 的公钥来生成相同的密钥。
-  let bobsSecretKey = await deriveSecretKey(bobsKeyPair.privateKey, alicesKeyPair.publicKey);
+  let bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
 
   // Alice 可以使用她的密钥拷贝来加密发送给 Bob 的消息。
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
@@ -185,16 +191,12 @@ async function encrypt(plaintext, salt, iv) {
       hash: "SHA-256",
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: "AES-GCM", length: 256 },
     true,
     ["encrypt", "decrypt"],
   );
 
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
-    key,
-    plaintext,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '<samp>: 출력 예시 요소'
+title: "<samp>: 출력 예시 요소"
 slug: Web/HTML/Element/samp
 ---
 
@@ -85,8 +85,11 @@ samp {
 다음 간단한 예제는 문단이 프로그램 출력 예시를 포함하고 있습니다.
 
 ```html
-<p>프로세스가 완료되면 유틸리티가 <samp>Scan complete. Found <em>N</em> results.</samp>
-를 출력합니다. 출력을 확인한 후 다음 단계로 진행하세요.</p>
+<p>
+  프로세스가 완료되면 유틸리티가
+  <samp>Scan complete. Found <em>N</em> results.</samp> 를 출력합니다. 출력을
+  확인한 후 다음 단계로 진행하세요.
+</p>
 ```
 
 결과는 다음과 같습니다.

@@ -1,14 +1,6 @@
 ---
 title: Échappement des propriétés Unicode
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
-tags:
-  - Expressions rationnelles
-  - Expressions régulières
-  - Guide
-  - JavaScript
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
-original_slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -33,44 +25,44 @@ Les séquences d'échappement pour les propriétés Unicode permettent de distin
 
 ### Non-binaires
 
-| Échappements                                                                 | Signification                                                                                                    |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `\p{LC} \p{Cased_Letter} \p{UnicodePropertyName=Cased_Letter}`               | N'importe quelle lettre avec la version minuscule et la version majuscule. Équivalent à `\p{Lu}\|\p{Ll}\|p{Lt}`. |
-| `\p{Close_Punctuation} \p{UnicodePropertyName=Close_Punctuation}`            |                                                                                                                  |
-| `\p{Connector_Punctuation} \p{UnicodePropertyName=Connector_Punctuation}`    |                                                                                                                  |
-| `\p{Control} \p{UnicodePropertyName=Control}`                                |                                                                                                                  |
-| `\p{Currency_Symbol} \p{UnicodePropertyName=Currency_Symbol}`                |                                                                                                                  |
-| `\p{Dash_Punctuation} \p{UnicodePropertyName=Dash_Punctuation}`              |                                                                                                                  |
-| `\p{Decimal_Number} \p{UnicodePropertyName=Decimal_Number}`                  |                                                                                                                  |
-| `\p{Enclosing_Mark} \p{UnicodePropertyName=Enclosing_Mark}`                  |                                                                                                                  |
-| `\p{Final_Punctuation} \p{UnicodePropertyName=Final_Punctuation}`     |                                                                                                                  |
-| `\p{Format} \p{UnicodePropertyName=Format}`                           |                                                                                                                  |
-| `\p{Initial_Punctuation} \p{UnicodePropertyName=Initial_Punctuation}` |                                                                                                                  |
-| `\p{Letter} \p{UnicodePropertyName=Letter}`                           |                                                                                                                  |
-| `\p{Letter_Number} \p{UnicodePropertyName=Line_Separator}`            |                                                                                                                  |
-| `\p{Lowercase_Letter} \p{UnicodePropertyName=Lowercase_Letter}`       |                                                                                                                  |
-| `\p{Mark} \p{UnicodePropertyName=Mark}`                               |                                                                                                                  |
-| `\p{Math_Symbol;} \p{UnicodePropertyName=Math_Symbol}`                |                                                                                                                  |
-| `\p{Modifier_Letter} \p{UnicodePropertyName=Modifier_Letter}`         |                                                                                                                  |
-| `\p{Modifier_Symbol} \p{UnicodePropertyName=Modifier_Symbol}`         |                                                                                                                  |
-| `\p{Nonspacing_Mark} \p{UnicodePropertyName=Nonspacing_Mark}`         |                                                                                                                  |
-| `\p{Number} \p{UnicodePropertyName=Number}`                           |                                                                                                                  |
-| `\p{Open_Punctuation} \p{UnicodePropertyName=Open_Punctuation}`       |                                                                                                                  |
-| `\p{Other} \p{UnicodePropertyName=Other_Letter}`                      |                                                                                                                  |
-| `\p{Other_Letter} \p{UnicodePropertyName=Other_Letter}`               |                                                                                                                  |
-| `\p{Other_Number} \p{UnicodePropertyName=Other_Number}`               |                                                                                                                  |
-| `\p{Other_Punctuation} \p{UnicodePropertyName=Other_Punctuation}`     |                                                                                                                  |
-| `\p{Paragraph_Separator} \p{UnicodePropertyName=Paragraph_Separator}` |                                                                                                                  |
-| `\p{Private_Use} \p{UnicodePropertyName=Private_Use}`        |                                                                                                                  |
-| `\p{Punctuation} \p{UnicodePropertyName=Punctuation}`                 |                                                                                                                  |
-| `\p{Separator} \p{UnicodePropertyName=Separator}`                     |                                                                                                                  |
-| `\p{Space_Separator} \p{UnicodePropertyName=Space_Separator}`         |                                                                                                                  |
-| `\p{Spaceing_Mark} \p{UnicodePropertyName=Spacing_Mark}`              |                                                                                                                  |
-| `\p{Surrogate} \p{UnicodePropertyName=Surrogate}`                     |                                                                                                                  |
-| `\p{Symbol} \p{UnicodePropertyName=Symbol}`                           |                                                                                                                  |
-| `\p{Titlecase_Letter} \p{UnicodePropertyName=Titlecase_Letter}`       |                                                                                                                  |
-| `\p{Unassigned} \p{UnicodePropertyName=Unassigned}`                   |                                                                                                                  |
-| `\p{Uppercase_Letter} \p{UnicodePropertyName=UppercaseLetter}`        |                                                                                                                  |
+| Échappements                                                              | Signification                                                                                                    |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `\p{LC} \p{Cased_Letter} \p{UnicodePropertyName=Cased_Letter}`            | N'importe quelle lettre avec la version minuscule et la version majuscule. Équivalent à `\p{Lu}\|\p{Ll}\|p{Lt}`. |
+| `\p{Close_Punctuation} \p{UnicodePropertyName=Close_Punctuation}`         |                                                                                                                  |
+| `\p{Connector_Punctuation} \p{UnicodePropertyName=Connector_Punctuation}` |                                                                                                                  |
+| `\p{Control} \p{UnicodePropertyName=Control}`                             |                                                                                                                  |
+| `\p{Currency_Symbol} \p{UnicodePropertyName=Currency_Symbol}`             |                                                                                                                  |
+| `\p{Dash_Punctuation} \p{UnicodePropertyName=Dash_Punctuation}`           |                                                                                                                  |
+| `\p{Decimal_Number} \p{UnicodePropertyName=Decimal_Number}`               |                                                                                                                  |
+| `\p{Enclosing_Mark} \p{UnicodePropertyName=Enclosing_Mark}`               |                                                                                                                  |
+| `\p{Final_Punctuation} \p{UnicodePropertyName=Final_Punctuation}`         |                                                                                                                  |
+| `\p{Format} \p{UnicodePropertyName=Format}`                               |                                                                                                                  |
+| `\p{Initial_Punctuation} \p{UnicodePropertyName=Initial_Punctuation}`     |                                                                                                                  |
+| `\p{Letter} \p{UnicodePropertyName=Letter}`                               |                                                                                                                  |
+| `\p{Letter_Number} \p{UnicodePropertyName=Line_Separator}`                |                                                                                                                  |
+| `\p{Lowercase_Letter} \p{UnicodePropertyName=Lowercase_Letter}`           |                                                                                                                  |
+| `\p{Mark} \p{UnicodePropertyName=Mark}`                                   |                                                                                                                  |
+| `\p{Math_Symbol;} \p{UnicodePropertyName=Math_Symbol}`                    |                                                                                                                  |
+| `\p{Modifier_Letter} \p{UnicodePropertyName=Modifier_Letter}`             |                                                                                                                  |
+| `\p{Modifier_Symbol} \p{UnicodePropertyName=Modifier_Symbol}`             |                                                                                                                  |
+| `\p{Nonspacing_Mark} \p{UnicodePropertyName=Nonspacing_Mark}`             |                                                                                                                  |
+| `\p{Number} \p{UnicodePropertyName=Number}`                               |                                                                                                                  |
+| `\p{Open_Punctuation} \p{UnicodePropertyName=Open_Punctuation}`           |                                                                                                                  |
+| `\p{Other} \p{UnicodePropertyName=Other_Letter}`                          |                                                                                                                  |
+| `\p{Other_Letter} \p{UnicodePropertyName=Other_Letter}`                   |                                                                                                                  |
+| `\p{Other_Number} \p{UnicodePropertyName=Other_Number}`                   |                                                                                                                  |
+| `\p{Other_Punctuation} \p{UnicodePropertyName=Other_Punctuation}`         |                                                                                                                  |
+| `\p{Paragraph_Separator} \p{UnicodePropertyName=Paragraph_Separator}`     |                                                                                                                  |
+| `\p{Private_Use} \p{UnicodePropertyName=Private_Use}`                     |                                                                                                                  |
+| `\p{Punctuation} \p{UnicodePropertyName=Punctuation}`                     |                                                                                                                  |
+| `\p{Separator} \p{UnicodePropertyName=Separator}`                         |                                                                                                                  |
+| `\p{Space_Separator} \p{UnicodePropertyName=Space_Separator}`             |                                                                                                                  |
+| `\p{Spaceing_Mark} \p{UnicodePropertyName=Spacing_Mark}`                  |                                                                                                                  |
+| `\p{Surrogate} \p{UnicodePropertyName=Surrogate}`                         |                                                                                                                  |
+| `\p{Symbol} \p{UnicodePropertyName=Symbol}`                               |                                                                                                                  |
+| `\p{Titlecase_Letter} \p{UnicodePropertyName=Titlecase_Letter}`           |                                                                                                                  |
+| `\p{Unassigned} \p{UnicodePropertyName=Unassigned}`                       |                                                                                                                  |
+| `\p{Uppercase_Letter} \p{UnicodePropertyName=UppercaseLetter}`            |                                                                                                                  |
 
 ### Binaires
 

@@ -1,8 +1,6 @@
 ---
 title: url()
 slug: Web/CSS/url
-translation_of: Web/CSS/url()
-original_slug: Web/CSS/url()
 ---
 
 {{CSSRef}}
@@ -73,7 +71,7 @@ In CSS Level 1, the `url()` functional notation described only true URLs. In CSS
         If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
 
     - path
-      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
+      - : References the ID of an [SVG shape](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 
 - `<url-modifier>` {{Experimental_Inline}}
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.

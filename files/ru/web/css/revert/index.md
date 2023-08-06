@@ -1,7 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-translation_of: Web/CSS/revert
 ---
 {{CSSRef}}
 

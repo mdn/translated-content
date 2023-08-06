@@ -1,13 +1,6 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-tags:
-  - HTTP
-  - Код статуса
-  - Код статуса HTTP
-  - Ошибка клиента
-  - Справка
-translation_of: Web/HTTP/Status/417
 ---
 
 {{HTTPSidebar}}

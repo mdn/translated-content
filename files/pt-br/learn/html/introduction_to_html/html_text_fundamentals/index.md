@@ -1,7 +1,6 @@
 ---
 title: Fundamentos do texto em HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-original_slug: Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -62,15 +61,23 @@ Como exemplo, em uma história, `<h1>` representaria o título da história, `<h
 
 <h2>Capítulo 1: A noite escura</h2>
 
-<p>Era uma noite escura. Em algum lugar, uma coruja piou. A chuva caiu no chão ...</p>
+<p>
+  Era uma noite escura. Em algum lugar, uma coruja piou. A chuva caiu no chão
+  ...
+</p>
 
 <h2>Capítulo 2: O eterno silêncio</h2>
 
-<p>Nosso protagonista não podia ver mais que um relance da figura sombria ...</p>
+<p>
+  Nosso protagonista não podia ver mais que um relance da figura sombria ...
+</p>
 
 <h3>O espectro fala</h3>
 
-<p>Várias horas se passaram, quando, de repente, o espectro ficou em pé e exclamou: "Por favor, tenha piedade da minha alma!"</p>
+<p>
+  Várias horas se passaram, quando, de repente, o espectro ficou em pé e
+  exclamou: "Por favor, tenha piedade da minha alma!"
+</p>
 ```
 
 Depende realmente de você, o quê, exatamente, representam os elementos envolvidos, desde que a hierarquia faça sentido. Você só precisa ter em mente algumas das melhores práticas ao criar tais estruturas:
@@ -105,19 +112,23 @@ Se você cometer um erro, você sempre pode reiniciar usando o botão _Resetar_.
 ```html hidden
 <h2>Saída ao vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editável</h2>
-<p class="a11y-label">Pressione Esc para afastar o foco da área de código (Tab insere um caractere de tabulação).</p>
+<p class="a11y-label">
+  Pressione Esc para afastar o foco da área de código (Tab insere um caractere
+  de tabulação).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">Minha pequena história: sou policial e meu nome é Trish.
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+Minha pequena história: sou policial e meu nome é Trish.
 
-Minhas pernas são feitas de papelão e sou casada com um peixe.</textarea>
+Minhas pernas são feitas de papelão e sou casada com um peixe.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Resetar">
-  <input id="solution" type="button" value="Mostrar solução">
+  <input id="reset" type="button" value="Resetar" />
+  <input id="solution" type="button" value="Mostrar solução" />
 </div>
 ```
 
@@ -144,10 +155,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -155,38 +166,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Mostrar solução';
+  solution.value = "Mostrar solução";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Mostrar solução') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solução") {
     textarea.value = solutionEntry;
-    solution.value = 'Ocultar solução';
+    solution.value = "Ocultar solução";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Mostrar solução';
+    solution.value = "Mostrar solução";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Minha pequena história</h1>\n<p>Sou policial e meu nome é Trish.</p>\n<p>Minhas pernas são feitas de papelão e sou casada com um peixe.</p>';
+var htmlSolution =
+  "<h1>Minha pequena história</h1>\n<p>Sou policial e meu nome é Trish.</p>\n<p>Minhas pernas são feitas de papelão e sou casada com um peixe.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -198,8 +210,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -210,10 +225,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Mostrar solução') {
+  if (solution.value === "Mostrar solução") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -240,7 +255,9 @@ Por padrão, o navegador fornecerá um tamanho de fonte grande para torná-lo um
 Por outro lado, você pode fazer com que qualquer elemento se pareça um título de nível superior. Considere o seguinte:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Este é um título de nível superior?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Este é um título de nível superior?</span
+>
 ```
 
 Este é um elemento {{htmlelement("span")}}. Não tem semântica. Você usa-o para agrupar conteúdo quando deseja aplicar o CSS (ou fazer algo com JavaScript) sem dar-lhe nenhum significado extra (você saberá mais sobre isto mais tarde, no curso). Nós aplicamos alguns CSS para fazê-lo parecer um título de nível superior, mas como não tem valor semântico, ele não receberá nenhum dos benefícios extras descritos acima. É uma boa idéia usar o elemento HTML relevante para o trabalho.
@@ -262,12 +279,12 @@ homus
 
 Toda lista desordenada começa com um {{htmlelement("ul")}} — isso envolve todos os itens da lista:
 
-```html
+```html-nolint
 <ul>
-leite
-ovos
-pão
-homus
+  leite
+  ovos
+  pão
+  homus
 </ul>
 ```
 
@@ -289,20 +306,24 @@ Tente editar a amostra, ao vivo, abaixo para criar sua própria lista não orden
 ```html hidden
 <h2>Saída ao vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editável</h2>
-<p class="a11y-label">Pressione Esc para afastar o foco da área de código (Tab insere um caractere de tabulação).</p>
+<p class="a11y-label">
+  Pressione Esc para afastar o foco da área de código (Tab insere um caractere
+  de tabulação).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">leite
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+leite
 ovos
 pão
-hummus</textarea>
+hummus</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Resetar">
-  <input id="solution" type="button" value="Mostrar solução">
+  <input id="reset" type="button" value="Resetar" />
+  <input id="solution" type="button" value="Mostrar solução" />
 </div>
 ```
 
@@ -329,10 +350,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -340,38 +361,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Mostrar solução';
+  solution.value = "Mostrar solução";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Mostrar solução') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solução") {
     textarea.value = solutionEntry;
-    solution.value = 'Ocultar solução';
+    solution.value = "Ocultar solução";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Mostrar solução';
+    solution.value = "Mostrar solução";
   }
   updateCode();
 });
 
-var htmlSolution = '<ul>\n<li>leite</li>\n<li>ovos</li>\n<li>pão</li>\n<li>hummus</li>\n</ul>';
+var htmlSolution =
+  "<ul>\n<li>leite</li>\n<li>ovos</li>\n<li>pão</li>\n<li>hummus</li>\n</ul>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -383,8 +405,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -395,10 +420,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Mostrar solução') {
+  if (solution.value === "Mostrar solução") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -441,21 +466,25 @@ Tente editar a amostra ao vivo abaixo, para criar sua própria lista ordenada po
 ```html hidden
 <h2>Saída ao vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editável</h2>
-<p class="a11y-label">Pressione Esc para afastar o foco da área de código (Tab insere um caractere de tabulação).</p>
+<p class="a11y-label">
+  Pressione Esc para afastar o foco da área de código (Tab insere um caractere
+  de tabulação).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Dirija até o final da estrada
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Dirija até o final da estrada
 Vire à direita
 Vá em frente nas duas primeiras rotatórias
 Vire à esquerda na terceira rotatória
-A escola fica à sua direita, a 300 metros da estrada</textarea>
+A escola fica à sua direita, a 300 metros da estrada</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Resetar">
-  <input id="solution" type="button" value="Mostrar solução">
+  <input id="reset" type="button" value="Resetar" />
+  <input id="solution" type="button" value="Mostrar solução" />
 </div>
 ```
 
@@ -482,10 +511,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -493,38 +522,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Mostrar solução';
+  solution.value = "Mostrar solução";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Mostrar solução') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solução") {
     textarea.value = solutionEntry;
-    solution.value = 'Ocultar solução';
+    solution.value = "Ocultar solução";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Mostrar solução';
+    solution.value = "Mostrar solução";
   }
   updateCode();
 });
 
-var htmlSolution = '<ol>\n<li>Dirija até o final da estrada</li>\n<li>Vire à direita</li>\n<li>Vá em frente nas duas primeiras rotatórias</li>\n<li>Vire à esquerda na terceira rotatória</li>\n<li>A escola fica à sua direita, a 300 metros da estrada</li>\n</ol>';
+var htmlSolution =
+  "<ol>\n<li>Dirija até o final da estrada</li>\n<li>Vire à direita</li>\n<li>Vá em frente nas duas primeiras rotatórias</li>\n<li>Vire à esquerda na terceira rotatória</li>\n<li>A escola fica à sua direita, a 300 metros da estrada</li>\n</ol>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -536,8 +566,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -548,10 +581,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Mostrar solução') {
+  if (solution.value === "Mostrar solução") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -570,13 +603,16 @@ Então, neste ponto do artigo, você tem todas as informações necessárias par
 ```html hidden
 <h2>Saída ao vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editável</h2>
-<p class="a11y-label">Pressione Esc para afastar o foco da área de código (Tab insere um caractere de tabulação).</p>
+<p class="a11y-label">
+  Pressione Esc para afastar o foco da área de código (Tab insere um caractere
+  de tabulação).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Receita rápida de hummus
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Receita rápida de hummus
 
   Esta receita faz hummus rápido e saboroso, sem mexer. Foi adaptado de várias receitas diferentes que li ao longo dos anos.
 
@@ -607,11 +643,12 @@ Então, neste ponto do artigo, você tem todas as informações necessárias par
 
   Leve à geladeira o hummus processado em um recipiente fechado. Você poderá usá-lo por cerca de uma semana depois de fazer isso. Se começar a ficar borbulhante, você definitivamente deve descartá-lo.
 
-  Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</textarea>
+  Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Resetar">
-  <input id="solution" type="button" value="Mostrar solução">
+  <input id="reset" type="button" value="Resetar" />
+  <input id="solution" type="button" value="Mostrar solução" />
 </div>
 ```
 
@@ -638,10 +675,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -649,38 +686,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Mostrar solução';
+  solution.value = "Mostrar solução";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Mostrar solução') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solução") {
     textarea.value = solutionEntry;
-    solution.value = 'Ocultar solução';
+    solution.value = "Ocultar solução";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Mostrar solução';
+    solution.value = "Mostrar solução";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Receita rápida de hummus</h1>\n\n<p>Esta receita faz hummus rápido e saboroso, sem mexer. Foi adaptado de várias receitas diferentes que li ao longo dos anos.</p>\n\n<p>Hummus é uma deliciosa pasta grossa usada fortemente em pratos gregos e do Oriente Médio. É muito saboroso com salada, carnes grelhadas e pães pitta.</p>\n\n<h2>Ingredientes</h2>\n\n<ul>\n<li>1 lata (400g) de grão de bico</li>\n<li>175g de tahine</li>\n<li>6 tomates secos</li>\n<li>Metade de pimenta vermelha</li>\n<li>Uma pitada de pimenta caiena</li>\n<li>1 dente de alho</li>\n<li>Uma pitada de azeite</li>\n</ul>\n\n<h2>Instruções</h2>\n\n<ol>\n<li>Retire a pele do alho e pique</li>\n<li>Retire todas as sementes e caule da pimenta e pique</li>\n<li>Adicione todos os ingredientes em um processador de alimentos</li>\n<li>Processar todos os ingredientes em uma pasta</li>\n<li>Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo</li>\n<li>Se você deseja um hummus suave, processe-o por mais tempo</li>\n</ol>\n\n<p>Para um sabor diferente, você pode tentar misturar uma pequena quantidade de limão e coentro, pimenta, limão e chipotle, harissa e hortelã ou espinafre e queijo feta. Experimente e veja o que funciona para você.</p>\n\n<h2>Armazenamento</h2>\n\n<p>Leve à geladeira o hummus processado em um recipiente fechado. Você poderá usá-lo por cerca de uma semana depois de fazer isso. Se começar a ficar borbulhante, você definitivamente deve descartá-lo.</p>\n\n<p>Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</p>';
+var htmlSolution =
+  '<h1>Receita rápida de hummus</h1>\n\n<p>Esta receita faz hummus rápido e saboroso, sem mexer. Foi adaptado de várias receitas diferentes que li ao longo dos anos.</p>\n\n<p>Hummus é uma deliciosa pasta grossa usada fortemente em pratos gregos e do Oriente Médio. É muito saboroso com salada, carnes grelhadas e pães pitta.</p>\n\n<h2>Ingredientes</h2>\n\n<ul>\n<li>1 lata (400g) de grão de bico</li>\n<li>175g de tahine</li>\n<li>6 tomates secos</li>\n<li>Metade de pimenta vermelha</li>\n<li>Uma pitada de pimenta caiena</li>\n<li>1 dente de alho</li>\n<li>Uma pitada de azeite</li>\n</ul>\n\n<h2>Instruções</h2>\n\n<ol>\n<li>Retire a pele do alho e pique</li>\n<li>Retire todas as sementes e caule da pimenta e pique</li>\n<li>Adicione todos os ingredientes em um processador de alimentos</li>\n<li>Processar todos os ingredientes em uma pasta</li>\n<li>Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo</li>\n<li>Se você deseja um hummus suave, processe-o por mais tempo</li>\n</ol>\n\n<p>Para um sabor diferente, você pode tentar misturar uma pequena quantidade de limão e coentro, pimenta, limão e chipotle, harissa e hortelã ou espinafre e queijo feta. Experimente e veja o que funciona para você.</p>\n\n<h2>Armazenamento</h2>\n\n<p>Leve à geladeira o hummus processado em um recipiente fechado. Você poderá usá-lo por cerca de uma semana depois de fazer isso. Se começar a ficar borbulhante, você definitivamente deve descartá-lo.</p>\n\n<p>Hummus é adequado para congelamento; você pode descongelá-lo e usá-lo dentro de alguns meses.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -692,8 +730,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -704,10 +745,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Mostrar solução') {
+  if (solution.value === "Mostrar solução") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -731,7 +772,10 @@ Não há problema em aninhar uma lista dentro de outra. Você pode ter algumas s
   <li>Retire todas as sementes e caule da pimenta e pique</li>
   <li>Adicione todos os ingredientes em um processador de alimentos</li>
   <li>Processar todos os ingredientes em uma pasta</li>
-  <li>Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo</li>
+  <li>
+    Se você quiser um hummus grosso "pesado", processe-o por um curto período de
+    tempo
+  </li>
   <li>Se você deseja um hummus suave, processe-o por mais tempo</li>
 </ol>
 ```
@@ -743,12 +787,16 @@ Como os dois últimos itens da lista estão intimamente relacionadas (eles são 
 ```html
 <ol>
   <li>Retire a pele do alho e pique</li>
-   <li>Retire todas as sementes e caule da pimenta e pique</li>
-   <li>Adicione todos os ingredientes em um processador de alimentos</li>
-   <li>Processar todos os ingredientes em uma pasta
-     <ul>
-       <li>Se você quiser um hummus grosso "pesado", processe-o por um curto período de tempo</li>
-       <li>Se você deseja um hummus suave, processe-o por mais tempo</li>
+  <li>Retire todas as sementes e caule da pimenta e pique</li>
+  <li>Adicione todos os ingredientes em um processador de alimentos</li>
+  <li>
+    Processar todos os ingredientes em uma pasta
+    <ul>
+      <li>
+        Se você quiser um hummus grosso "pesado", processe-o por um curto
+        período de tempo
+      </li>
+      <li>Se você deseja um hummus suave, processe-o por mais tempo</li>
     </ul>
   </li>
 </ol>
@@ -795,8 +843,11 @@ Em HTML usamos o elemento {{htmlelement("strong")}} (importância) para marcar t
 Você pode aninhar importância e ênfase entre si, se desejar:
 
 ```html
-<p>Este líquido é <strong>altamente tóxico</strong> -
-Se você beber, <strong>você pode <em>morrer</em></strong>.</p>
+<p>
+  Este líquido é <strong>altamente tóxico</strong> - Se você beber,
+  <strong>você pode <em>morrer</em></strong
+  >.
+</p>
 ```
 
 ### Aprendizagem ativa: Vamos ser importantes!
@@ -806,24 +857,28 @@ Nesta seção de aprendizado ativo, fornecemos um exemplo editável. Nele, gosta
 ```html hidden
 <h2>Saída ao vivo</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Código editável</h2>
-<p class="a11y-label">Pressione Esc para afastar o foco da área de código (Tab insere um caractere de tabulação).</p>
+<p class="a11y-label">
+  Pressione Esc para afastar o foco da área de código (Tab insere um caractere
+  de tabulação).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Notícia importante</h1>
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>Notícia importante</h1>
 <p>No domingo, 9 de janeiro de 2010, uma gangue de góticos foi
    vista roubando vários gnomos de jardim de um
    centro comercial no centro de Milwaukee. Eles estavam
    todos vestindo macacões verdes e chapéus bobos, que
    pareciam ter a forma de uma baleia. Se alguém
    tiver alguma informação sobre este incidente, por favor
-   entre em contato com a polícia.</p></textarea>
+   entre em contato com a polícia.</p></textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Resetar">
-  <input id="solution" type="button" value="Mostrar solução">
+  <input id="reset" type="button" value="Resetar" />
+  <input id="solution" type="button" value="Mostrar solução" />
 </div>
 ```
 
@@ -850,10 +905,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -861,38 +916,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Mostrar solução';
+  solution.value = "Mostrar solução";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Mostrar solução') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Mostrar solução") {
     textarea.value = solutionEntry;
-    solution.value = 'Ocultar solução';
+    solution.value = "Ocultar solução";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Mostrar solução';
+    solution.value = "Mostrar solução";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Notícia importante</h1>\n<p>No <strong>domingo, 9 de janeiro de 2010</strong>, uma gangue de <em>góticos</em> foi vista roubando <strong><em>vários</em> gnomos de jardim</strong> de um centro comercial no centro de <strong>Milwaukee</strong>. Eles estavam todos <em>vestindo macacões verdes e chapéus bobos</em>, que pareciam ter a forma de uma baleia. Se alguém tiver <strong>alguma informação</strong> sobre este incidente, por favor entre em contato com a <strong>polícia</strong>.</p>';
+var htmlSolution =
+  "<h1>Notícia importante</h1>\n<p>No <strong>domingo, 9 de janeiro de 2010</strong>, uma gangue de <em>góticos</em> foi vista roubando <strong><em>vários</em> gnomos de jardim</strong> de um centro comercial no centro de <strong>Milwaukee</strong>. Eles estavam todos <em>vestindo macacões verdes e chapéus bobos</em>, que pareciam ter a forma de uma baleia. Se alguém tiver <strong>alguma informação</strong> sobre este incidente, por favor entre em contato com a <strong>polícia</strong>.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -904,8 +960,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -916,10 +975,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Mostrar solução') {
+  if (solution.value === "Mostrar solução") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -931,7 +990,7 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Playable_code_5', 700, 500, "", "", "hide-codepen-jsfiddle") }}
 
-### Itálico, negrito, sublinhado...
+### Itálico, negrito, sublinhado
 
 Os elementos que discutimos até agora têm clara semântica associada. A situação com {{htmlelement("b")}}, {{htmlelement("i")}}, e com {{htmlelement("u")}} é um pouco mais complicada. Eles surgiram para que as pessoas pudessem escrever negrito, itálico ou texto sublinhado em uma época em que o CSS ainda era pouco suportado. Elementos como este, que apenas afetam a apresentação e não a semântica, são conhecidos como **elementos de apresentação** e não devem mais ser usados, porque, como já vimos, a semântica é importante para a acessibilidade, SEO, etc.
 
@@ -948,8 +1007,8 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 ```html
 <!-- nomes científicos -->
 <p>
-  O Colibri Ruby-throated (<i>Archilochus colubris</i>)
-  é o colibri mais comum do Leste da América do Norte.
+  O Colibri Ruby-throated (<i>Archilochus colubris</i>) é o colibri mais comum
+  do Leste da América do Norte.
 </p>
 
 <!-- palavras estrangeiras -->
@@ -960,17 +1019,19 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 
 <!-- um erro de ortografia conhecido -->
 <p>
-  Algum dia eu vou aprender como <u style="text-decoration-line: underline; text-decoration-style: wavy;">jogar</u> melhor.
+  Algum dia eu vou aprender como
+  <u style="text-decoration-line: underline; text-decoration-style: wavy;"
+    >jogar</u
+  >
+  melhor.
 </p>
 
 <!-- Destaque as palavras-chave em um conjunto de instruções -->
 <ol>
+  <li><b>Fatie</b>dois pedaços de pão do pão.</li>
   <li>
-    <b>Fatie</b>dois pedaços de pão do pão.
-  </li>
-  <li>
-    <b>Colocar</b> uma fatia de tomate e uma folha de
-     alface entre as fatias de pão.
+    <b>Colocar</b> uma fatia de tomate e uma folha de alface entre as fatias de
+    pão.
   </li>
 </ol>
 ```

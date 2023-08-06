@@ -44,26 +44,26 @@ str.substring(indexStart[, indexEnd])
 var anyString = "Mozilla";
 
 // 输出 "Moz"
-console.log(anyString.substring(0,3));
-console.log(anyString.substring(3,0));
-console.log(anyString.substring(3,-3));
-console.log(anyString.substring(3,NaN));
-console.log(anyString.substring(-2,3));
-console.log(anyString.substring(NaN,3));
+console.log(anyString.substring(0, 3));
+console.log(anyString.substring(3, 0));
+console.log(anyString.substring(3, -3));
+console.log(anyString.substring(3, NaN));
+console.log(anyString.substring(-2, 3));
+console.log(anyString.substring(NaN, 3));
 
 // 输出 "lla"
-console.log(anyString.substring(4,7));
-console.log(anyString.substring(7,4));
+console.log(anyString.substring(4, 7));
+console.log(anyString.substring(7, 4));
 
 // 输出 ""
-console.log(anyString.substring(4,4));
+console.log(anyString.substring(4, 4));
 
 // 输出 "Mozill"
-console.log(anyString.substring(0,6));
+console.log(anyString.substring(0, 6));
 
 // 输出 "Mozilla"
-console.log(anyString.substring(0,7));
-console.log(anyString.substring(0,10));
+console.log(anyString.substring(0, 7));
+console.log(anyString.substring(0, 10));
 ```
 
 ### 运用 length 属性来使用 substring()
@@ -72,12 +72,12 @@ console.log(anyString.substring(0,10));
 
 ```js
 // Displays 'illa' the last 4 characters
-var anyString = 'Mozilla';
+var anyString = "Mozilla";
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);
 
 // Displays 'zilla' the last 5 characters
-var anyString = 'Mozilla';
+var anyString = "Mozilla";
 var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 ```
@@ -88,10 +88,13 @@ console.log(anyString5);
 
 ```js
 function replaceString(oldS, newS, fullS) {
-// Replaces oldS with newS in the string fullS
+  // Replaces oldS with newS in the string fullS
   for (var i = 0; i < fullS.length; i++) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-     fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
   return fullS;
@@ -103,7 +106,7 @@ replaceString("World", "Web", "Brave New World");
 需要注意的是，如果 `oldS` 是 `newS` 的子字符串将会导致死循环。例如，尝试把 "Web" 替换成 "OtherWorld"。一个更好的方法如下：
 
 ```js
-function replaceString(oldS, newS,fullS){
+function replaceString(oldS, newS, fullS) {
   return fullS.split(oldS).join(newS);
 }
 ```

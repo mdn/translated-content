@@ -1,13 +1,6 @@
 ---
-title: ':is() (:matches(), :any())'
+title: ":is() (:matches(), :any())"
 slug: Web/CSS/:is
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-  - Web
-translation_of: Web/CSS/:is
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -35,13 +28,12 @@ footer p:hover {
   cursor: pointer;
 }
 
-
 /* La version rétro-compatible avec :-*-any()  */
 :-moz-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
-:-webkit-any(header, main, footer) p:hover{
+:-webkit-any(header, main, footer) p:hover {
   color: red;
   cursor: pointer;
 }
@@ -68,8 +60,14 @@ footer p:hover {
 
 <main>
   <ul>
-    <li><p>Mon premier élément de</p><p>liste</p></li>
-    <li><p>Mon deuxième élément de</p><p>liste</p></li>
+    <li>
+      <p>Mon premier élément de</p>
+      <p>liste</p>
+    </li>
+    <li>
+      <p>Mon deuxième élément de</p>
+      <p>liste</p>
+    </li>
   </ul>
 </main>
 
@@ -102,30 +100,41 @@ footer p:hover {
 let matchedItems;
 
 try {
-  matchedItems = document.querySelectorAll(':is(header, main, footer) p');
-} catch(e) {
+  matchedItems = document.querySelectorAll(":is(header, main, footer) p");
+} catch (e) {
   try {
-    matchedItems = document.querySelectorAll(':matches(header, main, footer) p');
-  } catch(e) {
+    matchedItems = document.querySelectorAll(
+      ":matches(header, main, footer) p",
+    );
+  } catch (e) {
     try {
-      matchedItems = document.querySelectorAll(':-webkit-any(header, main, footer) p');
-    } catch(e) {
+      matchedItems = document.querySelectorAll(
+        ":-webkit-any(header, main, footer) p",
+      );
+    } catch (e) {
       try {
-        matchedItems = document.querySelectorAll(':-moz-any(header, main, footer) p');
-      } catch(e) {
-        console.log('Votre navigateur ne prend pas en charge :is(), :matches() ou :any()');
+        matchedItems = document.querySelectorAll(
+          ":-moz-any(header, main, footer) p",
+        );
+      } catch (e) {
+        console.log(
+          "Votre navigateur ne prend pas en charge :is(), :matches() ou :any()",
+        );
       }
     }
   }
 }
 
-for(let i = 0; i < matchedItems.length; i++) {
+for (let i = 0; i < matchedItems.length; i++) {
   applyHandler(matchedItems[i]);
 }
 
 function applyHandler(elem) {
-  elem.addEventListener('click', function(e) {
-    alert('Ce paragraphe est à l\'intérieur d\'un élément ' + e.target.parentNode.nodeName);
+  elem.addEventListener("click", function (e) {
+    alert(
+      "Ce paragraphe est à l'intérieur d'un élément " +
+        e.target.parentNode.nodeName,
+    );
   });
 }
 ```
@@ -139,18 +148,54 @@ La pseudo-classe `:matches()` permet de simplifier largement les sélecteurs CSS
 ```css
 /* les listes non ordonnées sur 3 niveaux ou plus */
 /* utilisent un carré comme puce */
-ol ol ul,     ol ul ul,     ol menu ul,     ol dir ul,
-ol ol menu,   ol ul menu,   ol menu menu,   ol dir menu,
-ol ol dir,    ol ul dir,    ol menu dir,    ol dir dir,
-ul ol ul,     ul ul ul,     ul menu ul,     ul dir ul,
-ul ol menu,   ul ul menu,   ul menu menu,   ul dir menu,
-ul ol dir,    ul ul dir,    ul menu dir,    ul dir dir,
-menu ol ul,   menu ul ul,   menu menu ul,   menu dir ul,
-menu ol menu, menu ul menu, menu menu menu, menu dir menu,
-menu ol dir,  menu ul dir,  menu menu dir,  menu dir dir,
-dir ol ul,    dir ul ul,    dir menu ul,    dir dir ul,
-dir ol menu,  dir ul menu,  dir menu menu,  dir dir menu,
-dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
+ol ol ul,
+ol ul ul,
+ol menu ul,
+ol dir ul,
+ol ol menu,
+ol ul menu,
+ol menu menu,
+ol dir menu,
+ol ol dir,
+ol ul dir,
+ol menu dir,
+ol dir dir,
+ul ol ul,
+ul ul ul,
+ul menu ul,
+ul dir ul,
+ul ol menu,
+ul ul menu,
+ul menu menu,
+ul dir menu,
+ul ol dir,
+ul ul dir,
+ul menu dir,
+ul dir dir,
+menu ol ul,
+menu ul ul,
+menu menu ul,
+menu dir ul,
+menu ol menu,
+menu ul menu,
+menu menu menu,
+menu dir menu,
+menu ol dir,
+menu ul dir,
+menu menu dir,
+menu dir dir,
+dir ol ul,
+dir ul ul,
+dir menu ul,
+dir dir ul,
+dir ol menu,
+dir ul menu,
+dir menu menu,
+dir dir menu,
+dir ol dir,
+dir ul dir,
+dir menu dir,
+dir dir dir {
   list-style-type: square;
 }
 ```
@@ -170,7 +215,9 @@ pourra être remplacée par :
 En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section qui suit sur les performances](#issues_with_performance_and_specificity)) :
 
 ```css
-:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) :matches(ul, menu, dir) {
+:matches(ol, ul, menu, dir)
+  :matches(ol, ul, menu, dir)
+  :matches(ul, menu, dir) {
   list-style-type: square;
 }
 ```
@@ -187,14 +234,29 @@ h1 {
   font-size: 30px;
 }
 /* Niveau 1 */
-section h1, article h1, aside h1, nav h1 {
+section h1,
+article h1,
+aside h1,
+nav h1 {
   font-size: 25px;
 }
 /* Niveau 2 */
-section section h1, section article h1, section aside h1, section nav h1,
-article section h1, article article h1, article aside h1, article nav h1,
-aside section h1, aside article h1, aside aside h1, aside nav h1,
-nav section h1, nav article h1, nav aside h1, nav nav h1 {
+section section h1,
+section article h1,
+section aside h1,
+section nav h1,
+article section h1,
+article article h1,
+article aside h1,
+article nav h1,
+aside section h1,
+aside article h1,
+aside aside h1,
+aside nav h1,
+nav section h1,
+nav article h1,
+nav aside h1,
+nav nav h1 {
   font-size: 20px;
 }
 /* Niveau 3 */
@@ -213,14 +275,14 @@ h1 {
   font-size: 25px;
 }
 /* Niveau 2 */
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+:is(section, article, aside, nav) :is(section, article, aside, nav) h1 {
   font-size: 20px;
 }
 /* Niveau 3 */
 :is(section, article, aside, nav)
-:is(section, article, aside, nav)
-:is(section, article, aside, nav) h1 {
+  :is(section, article, aside, nav)
+  :is(section, article, aside, nav)
+  h1 {
   font-size: 15px;
 }
 ```
@@ -254,7 +316,8 @@ L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pa
 Ainsi :
 
 ```css
-.a > :-moz-any(.b, .c)
+.a > :-moz-any(.b, .c) {
+}
 ```
 
 sera plus lent que

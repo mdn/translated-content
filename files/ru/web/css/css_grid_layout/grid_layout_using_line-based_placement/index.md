@@ -1,14 +1,6 @@
 ---
 title: Расположение элементов по грид-линиям с помощью CSS Grid
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-tags:
-  - CSS
-  - CSS Grid
-  - Грид
-  - Руководство
-  - Сетка
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
-original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 В статье, касавшейся [основных понятий позиционирования элементов с помощью гридов](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout), мы кратенько рассмотрели, как располагать элементы в гриде, используя номера линий. Теперь давайте детально исследуем то, как работает эта фундаментальная часть спецификации.

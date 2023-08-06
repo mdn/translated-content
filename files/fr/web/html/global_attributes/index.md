@@ -1,14 +1,6 @@
 ---
 title: Les attributs universels
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Global_attributes
-original_slug: Web/HTML/Attributs_universels
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -99,6 +91,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `slot`
   - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
 - `spellcheck` {{experimental_inline}}
+
   - : Un attribut à valeur contrainte qui définit s'il faut détecter les fautes d'orthographe/grammaire dans le texte de l'élément. Les valeurs autorisées pour cet attribut sont :
 
     - `true` qui indique que, si possible, il faut vérifier les erreurs d'orthographe

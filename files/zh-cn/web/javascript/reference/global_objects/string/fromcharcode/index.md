@@ -45,20 +45,20 @@ While there is a mathematical relationship between the supplementary code point 
 在 UTF-16 中，BMP 字符使用一个代码单元：
 
 ```js
-String.fromCharCode(65, 66, 67);   // 返回 "ABC"
-String.fromCharCode(0x2014);       // 返回 "—"
-String.fromCharCode(0x12014);      // 也是返回 "—"; 数字 1 被剔除并忽略
-String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十进制表示
+String.fromCharCode(65, 66, 67); // 返回 "ABC"
+String.fromCharCode(0x2014); // 返回 "—"
+String.fromCharCode(0x12014); // 也是返回 "—"; 数字 1 被剔除并忽略
+String.fromCharCode(8212); // 也是返回 "—"; 8212 是 0x2014 的十进制表示
 ```
 
 [完整的 UTF 16 表格](https://asecuritysite.com/coding/asc2).
 在 UTF-16 中，补充字符需要两个代码单元（即一个代理对）：
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
+String.fromCharCode(55356, 57091); // Stars" == "\uD83C\uDF03"
 
-String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
+String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07); // "\uD834\uDF06a\uD834\uDF07"
 ```
 
 ## 规范

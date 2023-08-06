@@ -1,9 +1,6 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-tags:
-  - Rectangle
-translation_of: Web/API/SVGRect
 ---
 
 ## Interface SVG rect

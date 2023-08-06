@@ -1,7 +1,6 @@
 ---
 title: Style de listes
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
@@ -45,8 +44,10 @@ Le code HTML pour nos exemples de liste ressemble à ceci&nbsp;:
 ```html
 <h2>Liste de courses (non ordonnée)</h2>
 
-<p>Paragraphe de référence, paragraphe de référence, paragraphe de référence,
-paragraphe de référence, paragraphe de référence, paragraphe de référence.</p>
+<p>
+  Paragraphe de référence, paragraphe de référence, paragraphe de référence,
+  paragraphe de référence, paragraphe de référence, paragraphe de référence.
+</p>
 
 <ul>
   <li>Houmous</li>
@@ -57,30 +58,52 @@ paragraphe de référence, paragraphe de référence, paragraphe de référence.
 
 <h2>Liste de recette (ordonnée)</h2>
 
-<p>Paragraphe de référence, paragraphe de référence, paragraphe de référence,
-paragraphe de référence, paragraphe de référence, paragraphe de référence.</p>
+<p>
+  Paragraphe de référence, paragraphe de référence, paragraphe de référence,
+  paragraphe de référence, paragraphe de référence, paragraphe de référence.
+</p>
 
 <ol>
-  <li>Faire griller le pain pitta, laisser refroidir, puis le trancher sur le côté.</li>
-  <li>Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit doré des deux côtés.</li>
+  <li>
+    Faire griller le pain pitta, laisser refroidir, puis le trancher sur le
+    côté.
+  </li>
+  <li>
+    Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit
+    doré des deux côtés.
+  </li>
   <li>Laver et hacher la salade.</li>
-  <li>Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.</li>
+  <li>
+    Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.
+  </li>
 </ol>
 
 <h2>Liste descriptive des ingrédients</h2>
 
-<p>Paragraphe de référence, paragraphe de référence, paragraphe de référence,
-paragraphe de référence, paragraphe de référence, paragraphe de référence.</p>
+<p>
+  Paragraphe de référence, paragraphe de référence, paragraphe de référence,
+  paragraphe de référence, paragraphe de référence, paragraphe de référence.
+</p>
 
 <dl>
   <dt>Houmous</dt>
-  <dd>Une purée ou sauce épaisse généralement faite de pois chiches mélangés avec du tahini, du jus de citron, du sel, de l'ail et d'autres aromates.</dd>
+  <dd>
+    Une purée ou sauce épaisse généralement faite de pois chiches mélangés avec
+    du tahini, du jus de citron, du sel, de l'ail et d'autres aromates.
+  </dd>
   <dt>Pain pitta</dt>
   <dd>Un pain plat moelleux, légèrement levé.</dd>
   <dt>Halloumi</dt>
-  <dd>Fromage à pâte mi-dure, non affiné, saumuré, à point de fusion plus élevé que d'habitude, généralement fabriqué à partir de lait de chèvre et de brebis.</dd>
+  <dd>
+    Fromage à pâte mi-dure, non affiné, saumuré, à point de fusion plus élevé
+    que d'habitude, généralement fabriqué à partir de lait de chèvre et de
+    brebis.
+  </dd>
   <dt>Salade verte</dt>
-  <dd>Ces feuilles vertes et saines que beaucoup d'entre nous n'utilisent que pour garnir les kebabs.</dd>
+  <dd>
+    Ces feuilles vertes et saines que beaucoup d'entre nous n'utilisent que pour
+    garnir les kebabs.
+  </dd>
 </dl>
 ```
 
@@ -114,17 +137,22 @@ h2 {
   font-size: 2rem;
 }
 
-ul,ol,dl,p {
+ul,
+ol,
+dl,
+p {
   font-size: 1.5rem;
 }
 
-li, p {
+li,
+p {
   line-height: 1.5;
 }
 
 /* Styles des listes descriptives */
 
-dd, dt {
+dd,
+dt {
   line-height: 1.5;
 }
 dt {
@@ -252,10 +280,18 @@ L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de com
 
 ```html
 <ol start="4">
-  <li>Faire griller le pain pitta, laisser refroidir, puis le trancher sur le côté.</li>
-  <li>Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit doré des deux côtés.</li>
+  <li>
+    Faire griller le pain pitta, laisser refroidir, puis le trancher sur le
+    côté.
+  </li>
+  <li>
+    Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit
+    doré des deux côtés.
+  </li>
   <li>Laver et hacher la salade.</li>
-  <li>Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.</li>
+  <li>
+    Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.
+  </li>
 </ol>
 ```
 
@@ -269,10 +305,18 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 
 ```html
 <ol start="4" reversed>
-  <li>Faire griller le pain pitta, le laisser refroidir, puis le trancher sur le côté.</li>
-  <li>Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit doré des deux côtés.</li>
+  <li>
+    Faire griller le pain pitta, le laisser refroidir, puis le trancher sur le
+    côté.
+  </li>
+  <li>
+    Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit
+    doré des deux côtés.
+  </li>
   <li>Laver et hacher la salade.</li>
-  <li>Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.</li>
+  <li>
+    Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.
+  </li>
 </ol>
 ```
 
@@ -288,10 +332,18 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de num
 
 ```html
 <ol>
-  <li value="2">Faire griller le pain pitta, laisser refroidir, puis le trancher sur le côté.</li>
-  <li value="4">Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit doré des deux côtés.</li>
+  <li value="2">
+    Faire griller le pain pitta, laisser refroidir, puis le trancher sur le
+    côté.
+  </li>
+  <li value="4">
+    Frire l'halloumi dans une poêle plate antiadhésive, jusqu'à ce qu'il soit
+    doré des deux côtés.
+  </li>
   <li value="6">Laver et hacher la salade.</li>
-  <li value="8">Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.</li>
+  <li value="8">
+    Mettre la salade, l'houmous et l'halloumi frit entre les tranches de pain.
+  </li>
 </ol>
 ```
 
@@ -313,9 +365,15 @@ Dans cette session d'apprentissage actif, vous devez utiliser ce que vous avez a
 Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le bouton _Réinitialiser_. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour voir une réponse possible.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie du HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><ul>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<ul>
   <li>D'abord, allumez la chandelle.</li>
   <li>Ensuite, ouvrez la boîte.</li>
   <li>Puis, mettez les trois objets magiques dans la
@@ -327,16 +385,30 @@ Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le 
       <li>la statue du lutin.</li>
     </ol>
   </li>
-</ul></textarea>
+</ul></textarea
+  >
 
   <h2>Zone de saisie de la CSS</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
   <h2>Zone de rendu</h2>
-  <div class="output" style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Voir la solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Réinitialiser"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Voir la solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -350,8 +422,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -359,15 +431,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n list-style-type: square;\n}\n\nul li, ol li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}';
+  cssInput.value =
+    "ul {\n list-style-type: square;\n}\n\nul li, ol li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}";
   drawOutput();
 });
 

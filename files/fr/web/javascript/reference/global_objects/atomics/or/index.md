@@ -1,14 +1,6 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/or
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire ent
 ## Syntaxe
 
 ```js
-Atomics.or(typedArray, index, value)
+Atomics.or(typedArray, index, value);
 ```
 
 ### Paramètres
@@ -71,7 +63,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // renvoie 2, l'ancienne valeur
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## Spécifications

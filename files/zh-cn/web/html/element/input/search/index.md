@@ -186,11 +186,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 ```html
 <form>
   <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="站内搜索..." />
+    <input type="search" id="mySearch" name="q" placeholder="站内搜索..." />
     <button>搜索</button>
   </div>
 </form>
@@ -425,7 +421,7 @@ input:valid ~ span::after {
 
 ## 例子
 
-可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
+可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
 ## 规范
 

@@ -45,15 +45,15 @@ Vary: Upgrade-Insecure-Requests
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                                               | Comentário          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------- |
+| Especificação                                                                         | Status                                 | Comentário          |
+| ------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- |
 | {{specName("Upgrade Insecure Requests", "#preference", "upgrade-insecure-requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Initial definition. |
 
 ## Compatibilidade com navegadores
 
 {{Compat("http.headers.Upgrade-Insecure-Requests")}}
 
-## Veja também:
+## Veja também
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("upgrade-insecure-requests")}} directive

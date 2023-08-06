@@ -1,7 +1,6 @@
 ---
 title: 构建一个跨浏览器的扩展程序
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件
 ---
 
 {{AddonSidebar()}}
@@ -63,13 +62,10 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 
 ```json
 {
- // ...
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // ...
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 

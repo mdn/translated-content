@@ -1,8 +1,6 @@
 ---
 title: Formulaires HTML dans les navigateurs historiques
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
-translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
-original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 ---
 
 {{LearnSidebar}}
@@ -48,8 +46,8 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 ```html
 <label for="myColor">
- Choisir une couleur
-  <input type="color" id="myColor" name="color">
+  Choisir une couleur
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -83,11 +81,11 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
-<input type="number" class="number">
+<input type="number" class="number" />
 ```
 
 ```css
-input[type=number] {
+input[type="number"] {
   /* Ceci peut échouer avec certains navigateurs */
 }
 
@@ -99,7 +97,7 @@ input.number {
 Notez que ce qui suit n'est pas utile (car redondant) et peut échouer dans certains navigateurs&nbsp;:
 
 ```css
-input[type=number],
+input[type="number"],
 input.number {
   /* Ceci peut échouer dans certains navigateurs ; s'il ne comprennent pas
      l'un des sélecteurs, il sautent la totalité de la règle */
@@ -116,13 +114,13 @@ Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
 
 ```html
-<input type="button" class="button" value="Cliquez‑moi">
+<input type="button" class="button" value="Cliquez‑moi" />
 ```
 
 ```css
 input {
   /* Cette règle annule le rendu par défaut défini avec un élément input */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 
 input.button {
@@ -180,20 +178,20 @@ Voici un exemple&nbsp;:
 Modernizr.load({
   // Cette ligne teste si le navigateur prend en charge l'API
   // de validation de formulaires HTML5
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // Si ce n'est pas le cas, le polyfill suivant sera chargé
-  nope : form-validation-API-polyfill.js,
+  nope: form_validation_API_polyfill.js,
 
   // En tout cas, le fichier au cœur de l'application, et dont elle dépend,
   // est chargé
-  both : app.js,
+  both: app.js,
 
   // Une fois les deux fichiers chargés, cette fonction est appelée
   // dans le but d'initialiser l'application
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 

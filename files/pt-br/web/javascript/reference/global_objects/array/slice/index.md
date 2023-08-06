@@ -56,7 +56,7 @@ Se um novo elemento é adicionado a qualquer array, o outro não é afetado.
 
 ```js
 // Exemplo para extrair 'Laranja' e 'Limao' do array frutas
-var frutas = ['Banana', 'Laranja', 'Limao', 'Maçã', 'Manga'];
+var frutas = ["Banana", "Laranja", "Limao", "Maçã", "Manga"];
 var citricos = frutas.slice(1, 3);
 
 // citricos contem ['Laranja','Limao']
@@ -68,24 +68,28 @@ No exemplo seguinte, `slice` cria um novo array, `novoCarro`, do original `meuCa
 
 ```js
 // Usando slice para criar novoCarro a partir de meuCarro.
-var meuHonda = { cor: 'vermelho', rodas: 4, motor: { cilindros: 4, tamanho: 2.2 } };
-var meuCarro = [meuHonda, 2, 'perfeitas condições', 'comprado em 1997'];
+var meuHonda = {
+  cor: "vermelho",
+  rodas: 4,
+  motor: { cilindros: 4, tamanho: 2.2 },
+};
+var meuCarro = [meuHonda, 2, "perfeitas condições", "comprado em 1997"];
 var novoCarro = meuCarro.slice(0, 2);
 
 // Exibe os valores de meuCarro, novoCarro, e a cor de meuHonda
 //  referenciado de ambos arrays.
-console.log('meuCarro = ' + meuCarro.toSource());
-console.log('novoCarro = ' + novoCarro.toSource());
-console.log('meuCarro[0].cor = ' + meuCarro[0].cor);
-console.log('novoCarro[0].cor = ' + novoCarro[0].cor);
+console.log("meuCarro = " + meuCarro.toSource());
+console.log("novoCarro = " + novoCarro.toSource());
+console.log("meuCarro[0].cor = " + meuCarro[0].cor);
+console.log("novoCarro[0].cor = " + novoCarro[0].cor);
 
 // Altera a cor de meuHonda.
-meuHonda.cor= 'roxo';
-console.log('A nova cor do meu Honda é ' + meuHonda.cor);
+meuHonda.cor = "roxo";
+console.log("A nova cor do meu Honda é " + meuHonda.cor);
 
 // Exibe a cor de meuHonda referenciado de ambos arrays.
-console.log('meuCarro[0].cor = ' + meuCarro[0].cor);
-console.log('novoCarro[0].cor = ' + novoCarro[0].cor);
+console.log("meuCarro[0].cor = " + meuCarro[0].cor);
+console.log("novoCarro[0].cor = " + novoCarro[0].cor);
 ```
 
 Esse script escreve:
@@ -127,11 +131,11 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Simplificando o comportamento entre navegadores
 
-Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE <9 não o fazem, versões do IE começando pela versão 9 permitem isso. “Shimming” pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE < 9 onde o segundo argumento do `slice` era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})
+Embora os objetos de host (como objetos DOM) não sejam obrigados pela especificação a seguir o comportamento do Mozilla quando convertidos por Array.prototype.slice e IE <9 não o fazem, versões do IE começando pela versão 9 permitem isso. "Shimming" pode permitir um comportamento confiável entre navegadores. Enquanto outros navegadores modernos continuem suportando essa habilidade, como atualmente IE, Mozilla, Chrome, Safari, e Opera fazem, desenvolvedores lendo (DOM-supporting) o código slice confiando neste shim não serão desencaminhados pela semântica; eles podem confiar seguramente na semântica para fornecer o agora aparentemente comportamento padrão de fato. (Isso também corrige o problema com IE < 9 onde o segundo argumento do `slice` era explicitamente {{jsxref("null")}}/{{jsxref("undefined")}})
 
 ```js
 (function () {
-  'use strict';
+  "use strict";
   var _slice = Array.prototype.slice;
 
   try {
@@ -142,24 +146,26 @@ Embora os objetos de host (como objetos DOM) não sejam obrigados pela especific
     // NamedNodeMap (atributos, entidades, notações),
     // NodeList (por exemplo, getElementsByTagName), HTMLCollection (por exemplo, childNodes),
     // e não vai falhar em outros objetos do DOM (como falham no IE < 9)
-    Array.prototype.slice = function(begin, end) {
-      end = (typeof end !== 'undefined') ? end : this.length;
+    Array.prototype.slice = function (begin, end) {
+      end = typeof end !== "undefined" ? end : this.length;
 
       // Para arrays, chamamos o método nativo
-      if (Object.prototype.toString.call(this) === '[object Array]'){
+      if (Object.prototype.toString.call(this) === "[object Array]") {
         return _slice.call(this, begin, end);
       }
 
       // Para array-like, o processo é manual.
-      var i, cloned = [],
-        size, len = this.length;
+      var i,
+        cloned = [],
+        size,
+        len = this.length;
 
       // Lidando com valor negativo para "begin"
       var start = begin || 0;
-      start = (start >= 0) ? start : Math.max(0, len + start);
+      start = start >= 0 ? start : Math.max(0, len + start);
 
       // Lidando com valor negativo para "end"
-      var upTo = (typeof end == 'number') ? Math.min(end, len) : len;
+      var upTo = typeof end == "number" ? Math.min(end, len) : len;
       if (end < 0) {
         upTo = len + end;
       }
@@ -183,17 +189,17 @@ Embora os objetos de host (como objetos DOM) não sejam obrigados pela especific
       return cloned;
     };
   }
-}());
+})();
 ```
 
 ## Especificações
 
-| Especificação                                                                                            | Status                       | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
+| Especificação                                                                  | Status               | Comentário                                         |
+| ------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}         | Definição inicial. Implementada no JavaScript 1.2. |
+| {{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}               | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3')}}                                                            | {{Spec2('ES3')}}     | Definição inicial. Implementada no JavaScript 1.2. |
 
 ## Compatibilidade com navegadores
 

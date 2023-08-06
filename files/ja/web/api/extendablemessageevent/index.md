@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Service Workers API")}}
 
- **`ExtendableMessageEvent`** は[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
+**`ExtendableMessageEvent`** は[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
 
 このインターフェイスは、{{domxref("ExtendableEvent")}} インターフェイスを継承しています。
 
@@ -44,10 +44,9 @@ _親の {{domxref("ExtendableEvent")}} からメソッドを継承していま�
 ```js
 // 制御されているページ内
 if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("service-worker.js");
 
-  navigator.serviceWorker.register('service-worker.js');
-
-  navigator.serviceWorker.addEventListener('message', (event) => {
+  navigator.serviceWorker.addEventListener("message", (event) => {
     // event は MessageEvent オブジェクトです
     console.log(`The service worker sent me a message: ${event.data}`);
   });
@@ -55,7 +54,6 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.ready.then((registration) => {
     registration.active.postMessage("Hi service worker");
   });
-
 }
 ```
 
@@ -63,7 +61,7 @@ if (navigator.serviceWorker) {
 
 ```js
 // サービスワーカー内
-addEventListener('message', (event) => {
+addEventListener("message", (event) => {
   // event は ExtendableMessageEvent オブジェクトです
   console.log(`The client sent me a message: ${event.data}`);
 

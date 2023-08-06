@@ -19,11 +19,11 @@ Note: the third empty parameter is required!
 
 The sidebar object returned has the following methods:
 
-| Method                                                                             | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Method                                                                      | Description                                                                                                                                                |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `addPanel(title, contentURL, customizeURL)` {{Deprecated_Inline}}           | Adds a sidebar panel. See [Creating a Firefox sidebar](/zh-CN/docs/Creating_a_Firefox_sidebar) for details on sidebars in Firefox 2 and later.             |
 | `addPersistentPanel(title, contentURL, customizeURL)` {{Deprecated_Inline}} | Adds a sidebar panel, which is able to work in the background. This only works in SeaMonkey or Firefox 1.x; Firefox 2 and later will just do `addPanel()`. |
-| `addSearchEngine(engineURL, iconURL, suggestedTitle, suggestedCategory)`           | Installs a search engine. See [Adding search engines from web pages](/zh-CN/docs/Adding_search_engines_from_web_pages) for details.                        |
+| `addSearchEngine(engineURL, iconURL, suggestedTitle, suggestedCategory)`    | Installs a search engine. See [Adding search engines from web pages](/zh-CN/docs/Adding_search_engines_from_web_pages) for details.                        |
 | `addMicrosummaryGenerator(generatorURL)` {{Deprecated_Inline}}              | Installs a microsummary generator.                                                                                                                         |
 
 ## Specification

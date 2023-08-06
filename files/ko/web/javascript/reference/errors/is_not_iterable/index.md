@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
@@ -18,7 +18,7 @@ slug: Web/JavaScript/Reference/Errors/is_not_iterable
 
 ## 무엇이 문제인가요?
 
-{{jsxref("Promise.all")}} 또는 {{jsxref("TypedArray.from")}} 과 같은 함수의 아규먼트 또는 [for…of](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 의 right hand-side 로 주어진 값이 [iterable 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)가 아닙니다. iterable 은 {{jsxref("Array")}}, {{jsxref("String")}} 또는 {{jsxref("Map")}}, 생성자 결과, 또는 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 구현 객체와 같은 내장 iterable 타입이 될 수 있습니다.
+{{jsxref("Promise.all")}} 또는 {{jsxref("TypedArray.from")}} 과 같은 함수의 아규먼트 또는 [for…of](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 의 right hand-side 로 주어진 값이 [iterable 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)가 아닙니다. iterable 은 {{jsxref("Array")}}, {{jsxref("String")}} 또는 {{jsxref("Map")}}, 생성자 결과, 또는 [iterable protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 구현 객체와 같은 내장 iterable 타입이 될 수 있습니다.
 
 ## 예제
 

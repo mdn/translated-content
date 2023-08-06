@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 {{AddonSidebar}}
 
-> **참고:** 만약 브라우저 확장 기능의 기본적인 개념은 이미 익숙하다면, 이 섹션을 스킵하고 [확장 기능 파일이 어떻게 구성되는지 읽어보세요](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). 그 다음, [참고 문서](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference)와 함께 확장 기능을 개발해 보세요. [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)을 방문하여 Firefox용 테스트, 게시 및 확장 기능에 대한 작업 흐름에 대해 자세히 알아보세요.
+> **참고:** 만약 브라우저 확장 기능의 기본적인 개념은 이미 익숙하다면, 이 섹션을 스킵하고 [확장 기능 파일이 어떻게 구성되는지 읽어보세요](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). 그 다음, [참고 문서](/ko/docs/Mozilla/Add-ons/WebExtensions#reference)와 함께 확장 기능을 개발해 보세요. [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)을 방문하여 Firefox용 테스트, 게시 및 확장 기능에 대한 작업 흐름에 대해 자세히 알아보세요.
 
 확장 기능은 브라우저에 기능을 추가합니다. 확장 기능은 표준 웹 기술(HTML, CSS, JavaScript)을 이용해 만들어집니다. 확장 기능은 JavaScript에서 사용되는 웹 API 뿐만이 아니라 전용 JavaScript API에도 접근할 수 있어 웹페이지의 코드가 할 수 있는 것보다 더 많은 일을 할 수 있습니다. 다음은 수행할 수 있는 작업의 몇 가지 예시입니다.
 
@@ -27,7 +27,7 @@ Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-ta
 
 Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/).
 
-**도구 및 새로운 브라우징 기능 추가**: 작업 보드에 새로운 기능을 추가하거나, URL, 하이퍼링크, 화면의 글자로부터 QR코드 이미지를 생성합니다. [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions)가 제공하는 유연한 UI 옵션들과 강력한 기능을 통해 브라우저에 새로운 기능을 쉽게 추가할 수 있습니다. 그리고 당신의 웹사이트가 아니더라도, 거의 모든 웹사이트의 기능을 향상시킬 수 있습니다.
+**도구 및 새로운 브라우징 기능 추가**: 작업 보드에 새로운 기능을 추가하거나, URL, 하이퍼링크, 화면의 글자로부터 QR코드 이미지를 생성합니다. [WebExtensions APIs](/ko/docs/Mozilla/Add-ons/WebExtensions)가 제공하는 유연한 UI 옵션들과 강력한 기능을 통해 브라우저에 새로운 기능을 쉽게 추가할 수 있습니다. 그리고 당신의 웹사이트가 아니더라도, 거의 모든 웹사이트의 기능을 향상시킬 수 있습니다.
 
 ![QR코드 생성기 애드온 예제](qr_code_image_generator_add_on.png)
 
@@ -43,7 +43,7 @@ Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/s
 
 Examples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-Firefox 용 확장 프로그램은 확장 기능 개발을 위한 크로스 브라우저 시스템인 [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions)를 사용하여 만들어집니다. 대부분의 경우 API는 Google 크롬 및 Opera에서 지원하는 [extension API](https://developer.chrome.com/extensions)와 호환됩니다. 대부분의 경우 이러한 브라우저 용으로 작성된 확장 프로그램은 Firefox 또는 Microsoft Edge에서 몇 가지 [변경 사항](/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)만으로 실행됩니다. API는 [멀티프로세스 Firefox](/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
+Firefox 용 확장 프로그램은 확장 기능 개발을 위한 크로스 브라우저 시스템인 [WebExtensions APIs](/ko/docs/Mozilla/Add-ons/WebExtensions)를 사용하여 만들어집니다. 대부분의 경우 API는 Google 크롬 및 Opera에서 지원하는 [extension API](https://developer.chrome.com/extensions)와 호환됩니다. 대부분의 경우 이러한 브라우저 용으로 작성된 확장 프로그램은 Firefox 또는 Microsoft Edge에서 몇 가지 [변경 사항](/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)만으로 실행됩니다. API는 [멀티프로세스 Firefox](/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
 
 질문 혹은 아이디어가 있거나, [기존 Extension을 WebExtensions API로 마이그레이션 할 때](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/) 도움이 필요하다면 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)나 [Matrix](https://wiki.mozilla.org/Matrix)의 [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org)로 요청해주세요.
 

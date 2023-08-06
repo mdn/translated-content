@@ -1,14 +1,13 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-translation_of: Web/HTML/Element/input/date
 ---
 
 {{HTMLSidebar}}
 
 Элементы {{htmlelement("input")}} типа **`date`** создают поля ввода и позволяют пользователю ввести дату, либо использовать _text box_ для автоматической проверки контента или использовать специальный интерфейс _date picker_. Возвращаемое значение включает год, месяц, день, но _не_ время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.
 
-Отображение **`date`** различается в зависимости от браузера, кроме того не все браузеры поддерживают **`date`**. Подробнее см. [Browser compatibility](#browser_compatibility). В неподдерживаемых браузерах элемент будет отображаться как обычный [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+Отображение **`date`** различается в зависимости от браузера, кроме того не все браузеры поддерживают **`date`**. Подробнее см. [Browser compatibility](#browser_compatibility). В неподдерживаемых браузерах элемент будет отображаться как обычный [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text).
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-standard")}}
 
@@ -24,19 +23,19 @@ translation_of: Web/HTML/Element/input/date
 
 ![Datepicker UI in firefox](firefox_datepicker.png)
 
-| [Value](#value)         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку**                                                                                                         |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                 | {{event("change")}} и {{event("input")}}                                                                                                                                                                  |
-| **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step)           |
-| **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                     |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}} |
+| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                           |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **События**                 | {{event("change")}} и {{event("input")}}                                                                                                                                                                                   |
+| **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
+| **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                           |
+| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                             |
 
 ## Значение
 
 Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Element/input#value), например:
 
 ```html
-<input id="date" type="date" value="2017-06-01">
+<input id="date" type="date" value="2017-06-01" />
 ```
 
 {{EmbedLiveSample('Значение', 600, 40)}}
@@ -47,7 +46,7 @@ translation_of: Web/HTML/Element/input/date
 
 ```js
 var dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 console.log(dateControl.value); // prints "2017-06-01"
 console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
 ```
@@ -100,7 +99,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 <form>
   <div>
     <label for="bday">Введите дату вашего рождения:</label>
-    <input type="date" id="bday" name="bday">
+    <input type="date" id="bday" name="bday" />
   </div>
 </form>
 ```
@@ -115,7 +114,12 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 <form>
   <div>
     <label for="party">Укажите предпочтительную дату события:</label>
-    <input type="date" id="party" name="party" min="2017-04-01" max="2017-04-30">
+    <input
+      type="date"
+      id="party"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-30" />
   </div>
 </form>
 ```
@@ -143,12 +147,20 @@ Let's look at an example — here we've set minimum and maximum dates, and also 
 ```html
 <form>
   <div>
-    <label for="party">Choose your preferred party date (required, April 1st to 20th):</label>
-    <input type="date" id="party" name="party" min="2017-04-01" max="2017-04-20" required>
+    <label for="party"
+      >Choose your preferred party date (required, April 1st to 20th):</label
+    >
+    <input
+      type="date"
+      id="party"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -165,9 +177,9 @@ Here's the CSS used in the above example. Here we make use of the {{cssxref(":va
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -175,14 +187,14 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span:after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span:after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
@@ -211,11 +223,16 @@ One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Element/input#patt
 <form>
   <div>
     <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+    <input
+      type="date"
+      id="bday"
+      name="bday"
+      required
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit">
+    <input type="submit" />
   </div>
 </form>
 ```
@@ -234,7 +251,7 @@ input:invalid + span {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -244,7 +261,7 @@ input:valid + span {
 }
 
 input:valid + span:after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -264,54 +281,52 @@ The HTML looks like so:
 
 ```html
 <form>
-    <div class="nativeDatePicker">
-      <label for="bday">Enter your birthday:</label>
-      <input type="date" id="bday" name="bday">
-      <span class="validity"></span>
-    </div>
-    <p class="fallbackLabel">Enter your birthday:</p>
-    <div class="fallbackDatePicker">
-      <span>
-        <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
-      </span>
-      <span>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
-      </span>
-    </div>
+  <div class="nativeDatePicker">
+    <label for="bday">Enter your birthday:</label>
+    <input type="date" id="bday" name="bday" />
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">Enter your birthday:</p>
+  <div class="fallbackDatePicker">
+    <span>
+      <label for="day">Day:</label>
+      <select id="day" name="day"></select>
+    </span>
+    <span>
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <option selected>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </span>
+    <span>
+      <label for="year">Year:</label>
+      <select id="year" name="year"></select>
+    </span>
+  </div>
 </form>
 ```
 
 The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)
 
 ```css hidden
-input:invalid+span:after {
-  content: '✖';
+input:invalid + span:after {
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span:after {
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -322,28 +337,28 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+var nativePicker = document.querySelector(".nativeDatePicker");
+var fallbackPicker = document.querySelector(".fallbackDatePicker");
+var fallbackLabel = document.querySelector(".fallbackLabel");
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
+var yearSelect = document.querySelector("#year");
+var monthSelect = document.querySelector("#month");
+var daySelect = document.querySelector("#day");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
-test.type = 'date';
+var test = document.createElement("input");
+test.type = "date";
 
 // if it does, run the code inside the if() {} block
-if(test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the days and years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -354,7 +369,7 @@ if(test.type === 'text') {
 function populateDays(month) {
   // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
@@ -362,20 +377,33 @@ function populateDays(month) {
   var dayNum;
 
   // 31 or 30 days?
-  if(month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
+  if (
+    month === "January" ||
+    month === "March" ||
+    month === "May" ||
+    month === "July" ||
+    month === "August" ||
+    month === "October" ||
+    month === "December"
+  ) {
     dayNum = 31;
-  } else if(month === 'April' || month === 'June' || month === 'September' || month === 'November') {
+  } else if (
+    month === "April" ||
+    month === "June" ||
+    month === "September" ||
+    month === "November"
+  ) {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
+    // If month is February, calculate whether it is a leap year or not
     var year = yearSelect.value;
     var leap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
     dayNum = leap ? 29 : 28;
   }
 
   // inject the right number of new <option> elements into the day <select>
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
+  for (i = 1; i <= dayNum; i++) {
+    var option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -383,22 +411,22 @@ function populateDays(month) {
   // if previous day has already been set, set daySelect's value
   // to that day, to avoid the day jumping back to 1 when you
   // change the year
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // If the previous day was set to a high number, say 31, and then
     // you chose a month with less total days in it (e.g. February),
     // this part of the code ensures that the highest day available
     // is selected, rather than showing a blank daySelect
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -410,41 +438,41 @@ function populateYears() {
   var year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (var i = 0; i <= 100; i++) {
+    var option = document.createElement("option");
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 // when the month or year <select> values are changed, rerun populateDays()
 // in case the change affected the number of available days
-yearSelect.onchange = function() {
+yearSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
-monthSelect.onchange = function() {
+monthSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
 //preserve day selection
 var previousDay;
 
 // update what day has been set to previously
 // see end of populateDays() for usage
-daySelect.onchange = function() {
+daySelect.onchange = function () {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **Примечание:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
 ## Specifications
 
-| Specification                                                                                                                | Status                           | Comments |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| Specification                                                                                 | Status                   | Comments |
+| --------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('HTML WHATWG', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML5 W3C', 'forms.html#date-state-(type=date)', '&lt;input type="date"&gt;')}}   | {{Spec2('HTML5 W3C')}}   |          |
 
 ## Browser compatibility
 

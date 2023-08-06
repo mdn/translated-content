@@ -1,7 +1,6 @@
 ---
 title: Formatação avançada de texto
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
@@ -51,11 +50,22 @@ As listas de descrição usam um invólucro diferente dos outros tipos de lista 
 ```html
 <dl>
   <dt>solilóquio</dt>
-  <dd>No drama, onde um personagem fala a si mesmo, representando seus pensamentos ou sentimentos internos e no processo, transmitindo-os ao público (mas não a outros personagens).</dd>
+  <dd>
+    No drama, onde um personagem fala a si mesmo, representando seus pensamentos
+    ou sentimentos internos e no processo, transmitindo-os ao público (mas não a
+    outros personagens).
+  </dd>
   <dt>monólogo</dt>
-  <dd>No drama, onde um personagem fala seus pensamentos em voz alta para compartilhá-los com o público e com outros personagens presentes.</dd>
+  <dd>
+    No drama, onde um personagem fala seus pensamentos em voz alta para
+    compartilhá-los com o público e com outros personagens presentes.
+  </dd>
   <dt>aparte</dt>
-  <dd>No drama, onde um personagem compartilha um comentário apenas com o público para efeito humorístico ou dramático. Isso geralmente é um sentimento, pensamento ou parte de informação de fundo adicional.</dd>
+  <dd>
+    No drama, onde um personagem compartilha um comentário apenas com o público
+    para efeito humorístico ou dramático. Isso geralmente é um sentimento,
+    pensamento ou parte de informação de fundo adicional.
+  </dd>
 </dl>
 ```
 
@@ -84,13 +94,15 @@ Se você cometer um erro, sempre pode reiniciá-lo usando o botão 'Limpar'. Se 
 
 ```html hidden
 <h2>Entrada</h2>
-<textarea id="code" class="input">Bacon
+<textarea id="code" class="input">
+Bacon
 A cola que liga o mundo em conjunto.
 Ovos
 A cola que une o bolo juntos.
 Café
 A bebida que faz correr o mundo pela manhã.
-Uma cor castanho claro.</textarea>
+Uma cor castanho claro.</textarea
+>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">
@@ -101,10 +113,11 @@ Uma cor castanho claro.</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -128,13 +141,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>";
   drawOutput();
 });
 
@@ -153,16 +167,22 @@ HTML também possui recursos disponíveis para marcação de citações. Qual el
 Se uma seção de conteúdo em nível de bloco (seja um parágrafo, vários parágrafos, uma lista, etc.) for citada em algum outro lugar, você deverá envolvê-la em um elemento \<blockquote> para indicar isso e incluir um URL apontando para a fonte da citação dentro de um atributo cite. Por exemplo, a marcação a seguir é obtida da página do elemento `<blockquote>` do MDN:
 
 ```html
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<p>
+  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+  extended quotation.
+</p>
 ```
 
 Para transformar isso em uma citação em bloco, faríamos assim:
 
 ```html
-<blockquote cite="/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 ```
 
@@ -175,8 +195,12 @@ O estilo padrão do navegador renderiza isso como um parágrafo recuado, como um
 As citações embutidas funcionam exatamente da mesma maneira, exceto pelo uso do elemento {{htmlelement("q")}}. Por exemplo, o bit de marcação abaixo contém uma citação da página MDN \<q>:
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q></p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="/pt-BR/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+</p>
 ```
 
 O estilo padrão do navegador renderiza isso como texto normal entre aspas para indicar uma citação, assim:
@@ -188,18 +212,29 @@ O elemento de citação — `<q>` — é "destinado a citações curtas que não
 O conteúdo do atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
 
 ```html
-<p>According to the <a href="/en-US/docs/Web/HTML/Element/blockquote">
-<cite>MDN blockquote page</cite></a>:
+<p>
+  According to the
+  <a href="/pt-BR/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a
+  >:
 </p>
 
-<blockquote cite="/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="/en-US/docs/Web/HTML/Element/q">
-<cite>MDN q page</cite></a>.</p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="/pt-BR/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+  -- <a href="/pt-BR/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
+  >.
+</p>
 ```
 
 As citações são estilizadas em fonte itálica por padrão. Você pode ver esse código funcionando em nosso exemplo [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html).
@@ -218,12 +253,14 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão 'Limpar'. S
 
 ```html hidden
 <h2>Entrada</h2>
-<textarea id="code" class="input"><p>Hello and welcome to my motivation page. As Confucius once said:</p>
+<textarea id="code" class="input">
+<p>Hello and welcome to my motivation page. As Confucius once said:</p>
 
 <p>It does not matter how slowly you go as long as you do not stop.</p>
 
 <p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea>
+(as mentioned in Affirmations for Positive Thinking.)</p></textarea
+>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">
@@ -234,10 +271,11 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão 'Limpar'. S
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -261,13 +299,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
   drawOutput();
 });
 
@@ -301,7 +340,9 @@ Para esta tarefa simples de aprendizado ativo, gostaríamos que você simplesmen
 
 ```html hidden
 <h2>Entrada</h2>
-<textarea id="code" class="input"><p>NASA sure does some exciting work.</p></textarea>
+<textarea id="code" class="input">
+<p>NASA sure does some exciting work.</p></textarea
+>
 <h2>Saída</h2>
 <div class="output"></div>
 <div class="controls">
@@ -312,10 +353,11 @@ Para esta tarefa simples de aprendizado ativo, gostaríamos que você simplesmen
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 5em;
   padding: 10px;
@@ -339,13 +381,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
   drawOutput();
 });
 
@@ -379,7 +422,10 @@ Ocasionalmente, você precisará usar sobrescrito e subscrito ao marcar itens co
 
 ```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  Caffeine's chemical formula is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 ```
 
@@ -410,10 +456,15 @@ para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+<p>
+  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
-
+<p>
+  In the above JavaScript example, <var>para</var> represents a paragraph
+  element.
+</p>
 
 <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
@@ -464,7 +515,9 @@ O exemplo básico acima fornece apenas uma data legível por máquina simples, m
 <!-- Data e hora -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- Data e hora com compensação de fuso horário -->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<time datetime="2016-01-20T19:30+01:00"
+  >7.30pm, 20 January 2016 is 8.30pm in France</time
+>
 <!-- Chamando um número de semana específico -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```

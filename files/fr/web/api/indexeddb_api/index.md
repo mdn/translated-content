@@ -1,14 +1,6 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Avancé
-  - Bases de données
-  - IndexedDB
-  - Stockage
-translation_of: Web/API/IndexedDB_API
-original_slug: Web/API/API_IndexedDB
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

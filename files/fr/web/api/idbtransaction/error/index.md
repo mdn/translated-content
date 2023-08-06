@@ -1,14 +1,6 @@
 ---
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
-tags:
-  - API
-  - Erreur
-  - IDBTransaction
-  - IndexedDB
-  - Propriété
-  - Reference
-translation_of: Web/API/IDBTransaction/error
 ---
 
 {{APIRef("IndexedDB")}}
@@ -41,8 +33,8 @@ La propriété **`error`** sert dans le bloc `transaction.onerror = function(eve
 //Connexion à la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Connexion établie.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Connexion établie.</li>";
 
   //Affecter la connexion à la variable db.
   db = DBOpenRequest.result;
@@ -54,19 +46,33 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Créer un nouvel objet prêt à être emmagasiné
-  newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // Ouvrir une transaction de lecture / écriture
   // pour permettre le traitement des données sur la connexion
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // En cas de succès de l'ouverture de la transaction
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification de la base de données terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction terminée : modification de la base de données terminée.</li>";
   };
   // En cas d'échec de l'ouverture de la transaction
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>L'erreur: \"" +
+      transaction.error +
+      "\" s'est produite, échec de la transaction.</li>";
   };
 
   // Ouvrir l'accès au un magasin "toDoList" de la transaction
@@ -74,12 +80,11 @@ function addData() {
 
   // Ajouter un enregistrement
   var objectStoreRequest = objectStore.add(newItem[0]);
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // Signaler l'ajout de l'enregistrement
-    note.innerHTML += '<li>Enregistrement ajouté.</li>';
+    note.innerHTML += "<li>Enregistrement ajouté.</li>";
   };
- };
-
+}
 ```
 
 > **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,8 +1,6 @@
 ---
 title: NavigatorOnLine.onLine
 slug: orphaned/Web/API/NavigatorOnLine/onLine
-translation_of: Web/API/NavigatorOnLine/onLine
-original_slug: Web/API/NavigatorOnLine/onLine
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -43,7 +41,7 @@ if (navigator.onLine) {
 
 Если браузер не поддерживает `navigator.onLine` в примере выше, то всегда будет `false`/`undefined`.
 
-Чтобы увидеть изменения в состоянии сети, используйте [`addEventListener`](/en-US/docs/DOM/element.addEventListener "DOM/element.addEventListener") для обработки событий `window.ononline` и `window.onoffline`, как показано в примере:
+Чтобы увидеть изменения в состоянии сети, используйте [`addEventListener`](/ru/docs/DOM/element.addEventListener "DOM/element.addEventListener") для обработки событий `window.ononline` и `window.onoffline`, как показано в примере:
 
 ```js
 window.addEventListener("offline", function(e) {alert("offline");})

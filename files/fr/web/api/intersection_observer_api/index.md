@@ -1,7 +1,6 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-translation_of: Web/API/Intersection_Observer_API
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Intersection Observer API")}}
@@ -25,7 +24,7 @@ Il y a une chose sur laquelle l'API _Intersection Observer_ ne peut pas vous ren
 
 ## Concepts et utilisation de l'observateur d'intersections
 
-L'API _Intersection Observer_ permet de mettre en place une fonction _callback_ qui est appelée quand un élément, appelé la **cible**, intersecte ou bien le _viewport_ (la zone d'affichage) ou bien un élément prédéfini ; dans le cadre de cette API, nous l’appellerons **l'élément racine** ou **la racine**. Typiquement, on voudra observer les variations de l'intersection par rapport à la zone d'affichage du document (ce qui est fait en passant l'argument `null` au moment de désigner l'élément racine). Que vous utilisiez la zone d'affichage ou un autre élément comme racine, l'API fonctionne de la même façon, en exécutant une fonction _callback_, fournie au préalable, lorsque la visibilité de l'élément cible change de telle sorte qu'il atteint la quantité voulue d'intersection avec l'élément racine.
+L'API _Intersection Observer_ permet de mettre en place une fonction _callback_ qui est appelée quand un élément, appelé la **cible**, intersecte ou bien le _viewport_ (la zone d'affichage) ou bien un élément prédéfini ; dans le cadre de cette API, nous l'appellerons **l'élément racine** ou **la racine**. Typiquement, on voudra observer les variations de l'intersection par rapport à la zone d'affichage du document (ce qui est fait en passant l'argument `null` au moment de désigner l'élément racine). Que vous utilisiez la zone d'affichage ou un autre élément comme racine, l'API fonctionne de la même façon, en exécutant une fonction _callback_, fournie au préalable, lorsque la visibilité de l'élément cible change de telle sorte qu'il atteint la quantité voulue d'intersection avec l'élément racine.
 
 Le degré d'intersection entre l'élément cible et sa racine est le **ratio d'intersection**. C'est une représentation du pourcentage de l'élément cible qui est visible, exprimée sous la forme d'un nombre compris entre 0.0 et 1.0.
 
@@ -35,10 +34,10 @@ Créez l'observateur d'intersection en appelant son constructeur et en lui passa
 
 ```js
 var options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
 var observer = new IntersectionObserver(callback, options);
 ```
@@ -61,15 +60,15 @@ L'objet `options` qui est passé dans le constructeur {{domxref("IntersectionObs
 Une fois l'observateur créé, il faut lui donner un élément cible à observer :
 
 ```js
-var target = document.querySelector('#listItem');
+var target = document.querySelector("#listItem");
 observer.observe(target);
 ```
 
 Lorsque la cible franchit un palier spécifié indiqué dans l'objet `IntersectionObserver`, la fonction _callback_ est appelée. Le _callback_ reçoit une liste d'objets {{domxref("IntersectionObserverEntry")}} ainsi que l'observateur :
 
 ```js
-var callback = function(entries, observer) {
-  entries.forEach(entry => {
+var callback = function (entries, observer) {
+  entries.forEach((entry) => {
     // chaque élément de entries correspond à une variation
     // d'intersection pour un des éléments cible:
     //   entry.boundingClientRect
@@ -126,8 +125,7 @@ Pour mieux comprendre comment fonctionnent les paliers, faites défiler la boît
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -171,7 +169,10 @@ Pour mieux comprendre comment fonctionnent les paliers, faites défiler la boît
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -216,7 +217,7 @@ function startup() {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -228,25 +229,30 @@ function startup() {
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.1) {
+  for (let i = 0; i <= 1.0; i += 0.1) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+  for (let i = 0; i < 4; i++) {
+    let template = document
+      .querySelector("#boxTemplate")
+      .content.cloneNode(true);
+    let boxID = "box" + (i + 1);
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions,
+    );
     observers[i].observe(document.querySelector("#" + boxID));
   }
 
@@ -255,14 +261,15 @@ function startup() {
   //wrapper.scrollIntoView({
   //  block: "start",
   //});
-  document.scrollingElement.scrollTop = wrapper.firstChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
 }
 
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach(function (entry) {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = Math.floor(entry.intersectionRatio * 100) + "%";
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
@@ -291,9 +298,7 @@ Le code HTML de cet exemple est très court. L'élément principal est la boîte
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Bienvenue dans <strong>La Boîte !</strong>
-  </div>
+  <div class="vertical">Bienvenue dans <strong>La Boîte !</strong></div>
 </div>
 ```
 
@@ -305,7 +310,9 @@ Le CSS n'est pas extrêmement important dans le cadre de cet exemple ; il met en
 #box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -347,11 +354,15 @@ var decreasingColor = "rgba(190, 40, 40, ratio)";
 
 // On met l'ensemble en place.
 
-window.addEventListener("load", function(event) {
-  boxElement = document.querySelector("#box");
+window.addEventListener(
+  "load",
+  function (event) {
+    boxElement = document.querySelector("#box");
 
-  createObserver();
-}, false);
+    createObserver();
+  },
+  false,
+);
 ```
 
 Les constantes et variables que nous préparons sont :
@@ -378,7 +389,7 @@ function createObserver() {
   var options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
@@ -402,8 +413,8 @@ La fonction `buildThresholdList()`, qui construit la liste de paliers, ressemble
 function buildThresholdList() {
   var thresholds = [];
 
-  for (var i=1.0; i<=numSteps; i++) {
-    var ratio = i/numSteps;
+  for (var i = 1.0; i <= numSteps; i++) {
+    var ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -493,11 +504,17 @@ Quand le navigateur détecte que l'élément cible (dans notre cas, celui avec l
 
 ```js
 function handleIntersect(entries, observer) {
-  entries.forEach(function(entry) {
+  entries.forEach(function (entry) {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     }
 
     prevRatio = entry.intersectionRatio;

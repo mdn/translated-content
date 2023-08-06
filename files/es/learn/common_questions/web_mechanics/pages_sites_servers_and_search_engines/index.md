@@ -1,9 +1,6 @@
 ---
-title: >-
-  ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el
-  motor de búsqueda?
+title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el motor de búsqueda?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
@@ -87,7 +84,7 @@ _Página web_ y _sitio web_ son especialmente fáciles de confundir cuando un _s
 
 ### Servidor web
 
-Un _servidor web_ es una computadora que aloja uno o mas _sitios web_. “Alojar” (_hosting_) significa que todas las _páginas web_ y sus archivos soportes están disponibles en esa computadora. El _servidor web_ enviará cualquier _página web_ del _sitio web_ que aloja, al navegador de cualquier usuario, por cada solicitud del usuario.
+Un _servidor web_ es una computadora que aloja uno o mas _sitios web_. "Alojar" (_hosting_) significa que todas las _páginas web_ y sus archivos soportes están disponibles en esa computadora. El _servidor web_ enviará cualquier _página web_ del _sitio web_ que aloja, al navegador de cualquier usuario, por cada solicitud del usuario.
 
 No confundir _sito web_ y _servidor web_. Por ejemplo, la expresión "Mi sitio web no responde", en realidad significa que el _servidor web_ no responde y, por lo tanto, el _sitio web_ no está disponible. Más importante aún, dado que un servidor web puede alojar varios sitios web, la expresión _servidor web_ nunca se utiliza para designar un sitio web, pues podría causar una gran confusión. En nuestro ejemplo anterior, si dijéramos: "Mi servidor web no responde", significaría que múltiples sitios web alojados en ese servidor web no están disponibles.
 

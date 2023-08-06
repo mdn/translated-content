@@ -1,6 +1,9 @@
 ---
-title: CustomEvent.detail
+title: "CustomEvent: detail プロパティ"
+short-title: detail
 slug: Web/API/CustomEvent/detail
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{APIRef("DOM")}}
@@ -15,19 +18,19 @@ slug: Web/API/CustomEvent/detail
 
 ```js
 // カスタムイベントを作成
-const catFound = new CustomEvent('animalfound', {
+const catFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'cat'
-  }
+    name: "cat",
+  },
 });
-const dogFound = new CustomEvent('animalfound', {
+const dogFound = new CustomEvent("animalfound", {
   detail: {
-    name: 'dog'
-  }
+    name: "dog",
+  },
 });
 
 // 適切なイベントリスナーを追加
-obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // イベントの配信
 obj.dispatchEvent(catFound);

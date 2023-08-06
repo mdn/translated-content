@@ -31,7 +31,7 @@ Numerical indexing is useful for going through all of an element's attributes.
 The following example runs through the attribute nodes for the element in the document with id "paragraph", and prints each attribute's value.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
