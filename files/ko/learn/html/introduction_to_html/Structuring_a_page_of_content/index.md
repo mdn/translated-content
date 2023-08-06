@@ -13,7 +13,7 @@ CSS를 사용하여 콘텐츠 페이지를 레이아웃할 수 있도록 구조�
 <table>
   <tbody>
     <tr>
-      <th scope="row">선행 조건:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         이 장에 참여하기 전에 
         <a
@@ -43,7 +43,7 @@ zip 파일에는 다음이 포함되어 있습니다:
 
 로컬 컴퓨터에서 예제를 만들거나, 또는 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 도구를 사용하여 작업을 수행합니다.
 
-> **Note:** 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
+> **참고:** 만약 막히면, 도움을 요청하세요 — 이 페이지 아래의 [Assessment or further help](#assessment_or_further_help) 섹션을 보세요.
 
 ## 프로젝트 개요
 
@@ -73,9 +73,9 @@ zip 파일에는 다음이 포함되어 있습니다:
 - 제공된 CSS는 올바른 구조적인 요소들이 마크업에 추가되면 렌더링된 페이지에서 녹색으로 표시되도록 설계되었습니다.
 - 만약 어떤 요소를 어디에 넣어야 할지 막히신다면 페이지 레이아웃의 간단한 블록 다이어그램을 그려서 각 블록을 감싸고 있어야 한다고 생각하는 요소를 적어보시기를 바랍니다. 이 방법은 매우 유용합니다.
 
-## 예시
+## 예제
 
-다음 스크린샷은 마크업이 적용된 후 홈페이지가 어떻게 보일 수 있는지 보여주는 예시입니다.
+다음 스크린샷은 마크업이 적용된 후 홈페이지가 어떻게 보일 수 있는지 보여주는 예제입니다.
 
 ![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
 
