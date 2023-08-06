@@ -156,21 +156,21 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 可以使用转义序列对特殊字符进行编码：
 
-| 转义序列                                                                                                                                   | Unicode 代码流                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                                                       | null 字符（U+0000 NULL）                                                                             |
-| `\'`                                                                                                                                       | 单引号（U+0027 APOSTROPHE）                                                                          |
-| `\"`                                                                                                                                       | 双引号（U+0022 QUOTATION MARK）                                                                      |
-| `\\`                                                                                                                                       | 反斜杠（U+005C REVERSE SOLIDUS）                                                                     |
-| `\n`                                                                                                                                       | 换行符（U+000A LINE FEED; LF）                                                                       |
-| `\r`                                                                                                                                       | 回车符（U+000D CARRIAGE RETURN; CR）                                                                 |
-| `\v`                                                                                                                                       | 垂直制表符（U+000B LINE TABULATION）                                                                 |
-| `\t`                                                                                                                                       | 制表符（U+0009 CHARACTER TABULATION）                                                                |
-| `\b`                                                                                                                                       | 退格键（U+0008 BACKSPACE）                                                                           |
-| `\f`                                                                                                                                       | 换页符（U+000C FORM FEED）                                                                           |
-| `\uXXXX` …其中 `XXXX` 恰好是 `0000`–`FFFF` 范围内的 4 个十六进制；例如，`\u000A` 与 `\n`（换行）相同；`\u0021` 是 `!`                      | `U+0000` 和 `U+FFFF` 之间的 Unicode 码位（Unicode 基于多平台语言）                                   |
-| `\u{X}`…`\u{XXXXXX}` …其中 `X`…`XXXXXX` 是 `0`–`10FFFF` 范围内的 1-6 个十六进制数字；例如，`\u{A}` 与 `\n`（换行符）相同； `\u{21}` 是 `!` | `U+0000` 和 `U+10FFFF` 之间的 Unicode 码位（整个 Unicode）                                           |
-| `\xXX` …其中 `XX` 恰好是 `00`–`FF` 范围内的 2 个十六进制数字；例如，`\x0A` 与 `\n`（换行符）相同；`\x21` 是 `!`                            | `U+0000` 和 `U+00FF` 之间的 Unicode 码位 （Basic Latin 和 Latin-1 Supplement 块；相当于 ISO-8859-1） |
+| 转义序列                                                                                                                                   | Unicode 代码流                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| `\0`                                                                                                                                       | null 字符（U+0000 NULL）                                                                            |
+| `\'`                                                                                                                                       | 单引号（U+0027 APOSTROPHE）                                                                         |
+| `\"`                                                                                                                                       | 双引号（U+0022 QUOTATION MARK）                                                                     |
+| `\\`                                                                                                                                       | 反斜杠（U+005C REVERSE SOLIDUS）                                                                    |
+| `\n`                                                                                                                                       | 换行符（U+000A LINE FEED; LF）                                                                      |
+| `\r`                                                                                                                                       | 回车符（U+000D CARRIAGE RETURN; CR）                                                                |
+| `\v`                                                                                                                                       | 垂直制表符（U+000B LINE TABULATION）                                                                |
+| `\t`                                                                                                                                       | 制表符（U+0009 CHARACTER TABULATION）                                                               |
+| `\b`                                                                                                                                       | 退格键（U+0008 BACKSPACE）                                                                          |
+| `\f`                                                                                                                                       | 换页符（U+000C FORM FEED）                                                                          |
+| `\uXXXX` …其中 `XXXX` 恰好是 `0000`–`FFFF` 范围内的 4 个十六进制；例如，`\u000A` 与 `\n`（换行）相同；`\u0021` 是 `!`                      | `U+0000` 和 `U+FFFF` 之间的 Unicode 码位（Unicode 基于多平台语言）                                  |
+| `\u{X}`…`\u{XXXXXX}` …其中 `X`…`XXXXXX` 是 `0`–`10FFFF` 范围内的 1-6 个十六进制数字；例如，`\u{A}` 与 `\n`（换行符）相同； `\u{21}` 是 `!` | `U+0000` 和 `U+10FFFF` 之间的 Unicode 码位（整个 Unicode）                                          |
+| `\xXX` …其中 `XX` 恰好是 `00`–`FF` 范围内的 2 个十六进制数字；例如，`\x0A` 与 `\n`（换行符）相同；`\x21` 是 `!`                            | `U+0000` 和 `U+00FF` 之间的 Unicode 码位（Basic Latin 和 Latin-1 Supplement 块；相当于 ISO-8859-1） |
 
 ### 长字符串文字
 
@@ -202,7 +202,7 @@ otherwise my code is unreadable.";
 
 然而，整个 Unicode 字符集比 65536 大得多。额外的字符作为*代理对*（surrogate pairs）存储在 UTF-16 中，代理对是表示单个字符的 16 位码元对。为了避免起义，该对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于对单码元（single-code-unit）进行编码。因此，“单独的代理项”通常不是操作字符串的有效值——例如 [`encodeURI()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) 将为单独的代理项抛出 {{jsxref("URIError")}}。每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（codepoint）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
 
-在 Unicode 字符之上，有一些 Unicode 字符序列应该被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
+在 Unicode 字符之上，有一些 Unicode 字符序列应该被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji 组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
 你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并强代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。在另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
