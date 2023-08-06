@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
-다음으로 살펴볼 선택자의 종류는 **의사 클래스** 및 ***의사 요소**라고 합니다. 여러 개가 있으며, 종종 매우 특정한 목적을 위해 사용됩니다. 사용 방법을 알게 되면 목록을 보고 달성하려는 작업에 적합한 것이 있는지 확인할 수 있습니다. 다시 한 번 각 선택자에 대한 관련 MDN 페이지는 브라우저 지원을 설명하는 데 도움이 됩니다.
+다음으로 살펴볼 선택자의 종류는 **의사 클래스** 및 **의사 요소**라고 합니다. 여러 개가 있으며, 종종 매우 특정한 목적을 위해 사용됩니다. 사용 방법을 알게 되면 목록을 보고 달성하려는 작업에 적합한 것이 있는지 확인할 수 있습니다. 다시 한 번 각 선택자에 대한 관련 MDN 페이지는 브라우저 지원을 설명하는 데 도움이 됩니다.
 
 <table>
   <tbody>
