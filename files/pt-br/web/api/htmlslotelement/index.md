@@ -20,15 +20,13 @@ var nodeList = object.getDistributedNodes()
 var nodes = myContentObject.getDistributedNodes();
 ```
 
-## Specificações
+## Especificações
 
-| Specificações                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLContentElement.getDistributedNodes")}}
+{{Compat}}
 
 ## Veja também
 
