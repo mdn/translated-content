@@ -12,7 +12,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">전제조건:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         <p>
           <a href="/ko/docs/Learn/HTML">HTML</a>,
@@ -26,7 +26,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">목적:</th>
+      <th scope="row">목표:</th>
       <td>
         할 일 목록 앱을 컴포넌트로 나누는 현명한 방법을 보여주고자 합니다.
       </td>
@@ -52,7 +52,6 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-Our new `Todo.js` file is currently empty! Open it up and give it its first line:
 우리의 새로운 `Todo.js` 파일은 현재 비어 있습니다! 그 파일을 열고, 첫 번째 줄에 아래 코드를 작성해주세요.
 
 ```jsx
@@ -173,7 +172,6 @@ function Todo(props) {
 export default Todo;
 ```
 
-_Now_ your browser should show three unique tasks. Another problem remains though: they're all still checked by default.
 이제 브라우저에 세 가지 고유한 작업이 표시됩니다. 하지만 또 다른 문제가 남아 있습니다. 모두 기본적으로 여전히 선택되어 있습니다.
 
 ![다른 할일 레이블이 있는 할일 목록이 이제 컴포넌트에 소품으로 전달됨](todo-list-unique-todos.png)
