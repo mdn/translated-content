@@ -1,9 +1,6 @@
 ---
 title: VRDisplayEvent.display
 slug: Web/API/VRDisplayEvent/display
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRDisplayEvent/display
 ---
 
 {{APIRef("WebVR API")}} {{SeeCompatTable}}

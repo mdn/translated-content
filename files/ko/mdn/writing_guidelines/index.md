@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs에 대해
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}

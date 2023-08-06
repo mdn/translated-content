@@ -1,13 +1,6 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 

@@ -1,7 +1,6 @@
 ---
 title: Publier des jeux
 slug: Games/Publishing_games
-translation_of: Games/Publishing_games
 ---
 
 {{GamesSidebar}}

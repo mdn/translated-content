@@ -1,7 +1,6 @@
 ---
 title: Désérialisation
 slug: Glossary/Deserialization
-translation_of: Glossary/Deserialization
 ---
 
 Le processus par lequel un format de niveau inférieur (par exemple, qui a été transféré sur un réseau ou stocké dans un magasin de données) est traduit en un objet lisible ou une autre structure de données.

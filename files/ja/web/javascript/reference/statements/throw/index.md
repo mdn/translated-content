@@ -48,8 +48,18 @@ function UserException(message) {
 function getMonthName(mo) {
   mo--; // 配列の添字のために月の数を調整する (1 = Jan, 12 = Dec)
   const months = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   if (months[mo] !== undefined) {
     return months[mo];

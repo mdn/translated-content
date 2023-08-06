@@ -1,20 +1,6 @@
 ---
 title: Селекторы CSS
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - Attribute
-  - Beginner
-  - CSS
-  - Learn
-  - Pseudo-class
-  - Pseudo-element
-  - id
-  - Обучение
-  - Псевдоэлемент
-  - псевдокласс
-  - селектор
-translation_of: Learn/CSS/Building_blocks/Selectors
-original_slug: Learn/CSS/Building_blocks/Селекторы
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

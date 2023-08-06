@@ -1,7 +1,6 @@
 ---
 title: HTMLImageElement.srcset
 slug: Web/API/HTMLImageElement/srcset
-translation_of: Web/API/HTMLImageElement/srcset
 ---
 
 {{APIRef("HTML DOM")}}
@@ -58,9 +57,13 @@ The HTML below indicates that the default image is the 200 pixel wide version of
 
 ```html
 <div class="box">
-  <img src="/files/16797/clock-demo-200px.png"
-       alt="Clock"
-       srcset="/files/16864/clock-demo-200px.png 1x, /files/16797/clock-demo-400px.png 2x">
+  <img
+    src="/files/16797/clock-demo-200px.png"
+    alt="Clock"
+    srcset="
+      /files/16864/clock-demo-200px.png 1x,
+      /files/16797/clock-demo-400px.png 2x
+    " />
 </div>
 ```
 

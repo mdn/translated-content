@@ -14,45 +14,70 @@ slug: Web/SVG/Tutorial/Filter_effects
 フィルターは {{SVGElement('filter')}} 要素で定義され、 SVG ファイルの `<defs>` セクションに置かなければなりません。フィルタータグの間には*プリミティブ*のリストがあり、前の操作（ぼかし、照明効果の追加など）の上に構築される基本的な操作です。作成したフィルターをグラフィック要素に適用するには、 {{SVGAttr('filter')}} 属性を設定します。
 
 ```html
-<svg width="250" viewBox="0 0 200 85"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg
+  width="250"
+  viewBox="0 0 200 85"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1">
   <defs>
     <!-- Filter declaration -->
-    <filter id="MyFilter" filterUnits="userSpaceOnUse"
-            x="0" y="0"
-            width="200" height="120">
-
+    <filter
+      id="MyFilter"
+      filterUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="200"
+      height="120">
       <!-- offsetBlur -->
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
-      <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 
       <!-- litPaint -->
-      <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75"
-                          specularExponent="20" lighting-color="#bbbbbb"
-                          result="specOut">
-        <fePointLight x="-5000" y="-10000" z="20000"/>
+      <feSpecularLighting
+        in="blur"
+        surfaceScale="5"
+        specularConstant=".75"
+        specularExponent="20"
+        lighting-color="#bbbbbb"
+        result="specOut">
+        <fePointLight x="-5000" y="-10000" z="20000" />
       </feSpecularLighting>
-      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
-                   k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+      <feComposite
+        in="specOut"
+        in2="SourceAlpha"
+        operator="in"
+        result="specOut" />
+      <feComposite
+        in="SourceGraphic"
+        in2="specOut"
+        operator="arithmetic"
+        k1="0"
+        k2="1"
+        k3="1"
+        k4="0"
+        result="litPaint" />
 
       <!-- merge offsetBlur + litPaint -->
       <feMerge>
-        <feMergeNode in="offsetBlur"/>
-        <feMergeNode in="litPaint"/>
+        <feMergeNode in="offsetBlur" />
+        <feMergeNode in="litPaint" />
       </feMerge>
     </filter>
   </defs>
 
   <!-- Graphic elements -->
   <g filter="url(#MyFilter)">
-      <path fill="none" stroke="#D90000" stroke-width="10"
-            d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
-      <path fill="#D90000"
-            d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
-      <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana" >
-        <text x="52" y="52">SVG</text>
-      </g>
+    <path
+      fill="none"
+      stroke="#D90000"
+      stroke-width="10"
+      d="M50,66 c-50,0 -50,-60 0,-60 h100 c50,0 50,60 0,60z" />
+    <path
+      fill="#D90000"
+      d="M60,56 c-30,0 -30,-40 0,-40 h80 c30,0 30,40 0,40z" />
+    <g fill="#FFFFFF" stroke="black" font-size="45" font-family="Verdana">
+      <text x="52" y="52">SVG</text>
+    </g>
   </g>
 </svg>
 ```
@@ -62,9 +87,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### ステップ 1
 
 ```html
-<feGaussianBlur in="SourceAlpha"
-                stdDeviation="4"
-                result="blur"/>
+<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
 ```
 
 {{SVGElement('feGaussianBlur')}} は `in` "SourceAlpha" を受け取ります。これは元のグラフィックのアルファチャンネルで、 4 のぼかしを適用し，その結果を "blur" という名前の一時的なバッファーに格納します．
@@ -72,9 +95,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### ステップ 2
 
 ```html
-<feOffset in="blur"
-          dx="4" dy="4"
-          result="offsetBlur"/>
+<feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
 ```
 
 {{SVGElement('feOffset')}} は、先ほど作成した `in` "blur" を取り込み、結果を右に 4、下に 4 シフトして、バッファー "offsetBlur" に格納するものです。最初の 2 つのプリミティブは、ドロップシャドウを作成するだけです。
@@ -82,11 +103,14 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### ステップ 3
 
 ```html
-<feSpecularLighting in="offsetBlur"
-                    surfaceScale="5" specularConstant=".75"
-                    specularExponent="20" lighting-color="#bbbbbb"
-                    result="specOut">
-  <fePointLight x="-5000" y="-10000" z="20000"/>
+<feSpecularLighting
+  in="offsetBlur"
+  surfaceScale="5"
+  specularConstant=".75"
+  specularExponent="20"
+  lighting-color="#bbbbbb"
+  result="specOut">
+  <fePointLight x="-5000" y="-10000" z="20000" />
 </feSpecularLighting>
 ```
 
@@ -95,9 +119,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### ステップ 4
 
 ```html
-<feComposite in="specOut" in2="SourceAlpha"
-             operator="in"
-             result="specOut"/>
+<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
 ```
 
 最初の {{SVGElement('feComposite')}} は、`in` "specOut" と "SourceAlpha" を受け取り、"specOut" の結果が "SourceAlpha" （元のソースグラフィック）より大きくならないようにマスクし、`result` "specOut" を上書きするものです。
@@ -105,10 +127,15 @@ slug: Web/SVG/Tutorial/Filter_effects
 ### ステップ 5
 
 ```html
-<feComposite in="SourceGraphic" in2="specOut"
-             operator="arithmetic"
-             k1="0" k2="1" k3="1" k4="0"
-             result="litPaint"/>
+<feComposite
+  in="SourceGraphic"
+  in2="specOut"
+  operator="arithmetic"
+  k1="0"
+  k2="1"
+  k3="1"
+  k4="0"
+  result="litPaint" />
 ```
 
 2 番目の {{SVGElement('feComposite')}} は `in` "SourceGraphic" と "specOut" を取り込み、 "SourceGraphic" の上に "specOut" の結果を重ね、その `result` を "litPaint" に格納します。
@@ -117,8 +144,8 @@ slug: Web/SVG/Tutorial/Filter_effects
 
 ```html
 <feMerge>
-  <feMergeNode in="offsetBlur"/>
-  <feMergeNode in="litPaint"/>
+  <feMergeNode in="offsetBlur" />
+  <feMergeNode in="litPaint" />
 </feMerge>
 ```
 

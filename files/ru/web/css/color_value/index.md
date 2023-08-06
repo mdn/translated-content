@@ -1,7 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-translation_of: Web/CSS/color_value
 ---
 
 {{CSSRef}}

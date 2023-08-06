@@ -1,7 +1,6 @@
 ---
 title: Home page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 ---
 
 Первой создаваемой страницей будет домашняя страница веб-сайта, доступная из корня сайта (`'/'`) или из каталога (`catalog/`). На странице будет виден статический текст, описывающий сайт, и динамически вычисляемые "количества" записей разных типов имеющихся в БД.

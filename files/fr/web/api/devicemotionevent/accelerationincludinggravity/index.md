@@ -1,7 +1,6 @@
 ---
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
-translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
 
 {{ ApiRef("Device Orientation Events") }}

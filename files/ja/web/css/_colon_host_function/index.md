@@ -1,7 +1,6 @@
 ---
-title: ':host()'
+title: ":host()"
 slug: Web/CSS/:host_function
-original_slug: Web/CSS/:host()
 ---
 
 {{CSSRef}}
@@ -35,26 +34,29 @@ original_slug: Web/CSS/:host()
 この例では、テキストを囲むことができるシンプルなカスタム要素 `<context-span>` を用意しています。
 
 ```html
-<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+<h1>
+  Host selectors <a href="#"><context-span>example</context-span></a>
+</h1>
 ```
 
 要素のコンストラクター内で `style` と `span` の各要素を作成し、 `span` にカスタム要素の内容を入れ、 `style` 要素にいくつかの CSS ルールを入れています。
 
 ```js
-let style = document.createElement('style');
-let span = document.createElement('span');
+let style = document.createElement("style");
+let span = document.createElement("span");
 span.textContent = this.textContent;
 
-const shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({ mode: "open" });
 shadowRoot.appendChild(style);
 shadowRoot.appendChild(span);
 
-style.textContent = 'span:hover { text-decoration: underline; }' +
-                    ':host-context(h1) { font-style: italic; }' +
-                    ':host-context(h1):after { content: " - no links in headers!" }' +
-                    ':host-context(article, aside) { color: gray; }' +
-                    ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+style.textContent =
+  "span:hover { text-decoration: underline; }" +
+  ":host-context(h1) { font-style: italic; }" +
+  ':host-context(h1):after { content: " - no links in headers!" }' +
+  ":host-context(article, aside) { color: gray; }" +
+  ":host(.footer) { color : red; }" +
+  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
 ルール `:host(.footer) { color : red; }` は、文書内の `<context-span>` 要素（この例ではシャドウホスト）のインスタンスで `footer` クラスがあるものにスタイルを設定します。このルールを使って {{htmlelement("footer")}} 内の要素のインスタンスに特殊な色を設定しています。

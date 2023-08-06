@@ -1,7 +1,6 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
 ---
 
 {{CSSRef}}

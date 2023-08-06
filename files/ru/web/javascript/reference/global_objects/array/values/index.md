@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 
 {{JSRef("Global_Objects", "Array")}}
@@ -29,7 +20,7 @@ arr.values()
 ### Пример: итерация через цикл `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 // ваш браузер должен поддерживать цикл for...of и переменные,
 // объявленные через let в циклах for
@@ -41,7 +32,7 @@ for (let letter of eArr) {
 ### Пример: альтернативный способ итерации
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr.values();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

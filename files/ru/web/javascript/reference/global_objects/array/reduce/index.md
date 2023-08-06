@@ -1,17 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 
 {{JSRef}}
@@ -55,7 +44,7 @@ array.reduce(callback[, initialValue])
 Предположим, что `reduce()` используется следующим образом:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduce(function (previousValue, currentValue, index, array) {
   return previousValue + currentValue;
 });
 ```
@@ -74,7 +63,7 @@ array.reduce(callback[, initialValue])
 Если же вы зададите начальное значение `initialValue`, результат будет выглядеть так:
 
 ```js
-[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduce(function (accumulator, currentValue, index, array) {
   return accumulator + currentValue;
 }, 10);
 ```
@@ -94,7 +83,7 @@ array.reduce(callback[, initialValue])
 ### Суммирование всех значений в массиве
 
 ```js
-var total = [0, 1, 2, 3].reduce(function(a, b) {
+var total = [0, 1, 2, 3].reduce(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -106,9 +95,12 @@ var total = [0, 1, 2, 3].reduce(function(a, b) {
 
 ```js
 var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue.x;
-}, initialValue)
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
+  accumulator,
+  currentValue,
+) {
+  return accumulator + currentValue.x;
+}, initialValue);
 // sum == 6
 ```
 
@@ -116,9 +108,9 @@ var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
 
 ```js
 var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) => accumulator + currentValue.x,
-    initialValue
+var sum = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  initialValue,
 );
 // sum == 6
 ```
@@ -126,7 +118,11 @@ var sum = [{x: 1}, {x:2}, {x:3}].reduce(
 ### Разворачивание массива массивов
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(function (a, b) {
   return a.concat(b);
 });
 // flattened равен [0, 1, 2, 3, 4, 5]
@@ -138,16 +134,19 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
 // friends - список из объектов(друзей)
 // где поле "books" - список любимых книг друга
 var friends = [
-{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
-{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
-{ name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 }
-]
+  { name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+  { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+  { name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 },
+];
 
 // allbooks - список, который будет содержать все книги друзей +
 // дополнительный список указанный в initialValue
-var allbooks = friends.reduce(function(prev, curr) {
-  return [...prev, ...curr.books];
-}, ["Alphabet"]);
+var allbooks = friends.reduce(
+  function (prev, curr) {
+    return [...prev, ...curr.books];
+  },
+  ["Alphabet"],
+);
 
 // allbooks = ["Alphabet", "Bible", "Harry Potter", "War and peace",
 // "Romeo and Juliet", "The Lord of the Rings", "The Shining"]
@@ -162,23 +161,26 @@ var allbooks = friends.reduce(function(prev, curr) {
 // Ссылка (en): http://es5.github.io/#x15.4.4.21
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.21
 if (!Array.prototype.reduce) {
-  Array.prototype.reduce = function(callback/*, initialValue*/) {
-    'use strict';
+  Array.prototype.reduce = function (callback /*, initialValue*/) {
+    "use strict";
     if (this == null) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
+      throw new TypeError("Array.prototype.reduce called on null or undefined");
     }
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
-    var t = Object(this), len = t.length >>> 0, k = 0, value;
+    var t = Object(this),
+      len = t.length >>> 0,
+      k = 0,
+      value;
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
-      while (k < len && ! (k in t)) {
+      while (k < len && !(k in t)) {
         k++;
       }
       if (k >= len) {
-        throw new TypeError('Reduce of empty array with no initial value');
+        throw new TypeError("Reduce of empty array with no initial value");
       }
       value = t[k++];
     }

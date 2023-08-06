@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.createIndex()
 slug: Web/API/IDBObjectStore/createIndex
-translation_of: Web/API/IDBObjectStore/createIndex
 ---
 
 {{ APIRef("IndexedDB") }}

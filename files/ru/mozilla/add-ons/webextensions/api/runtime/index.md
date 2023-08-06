@@ -1,17 +1,6 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
 
 {{AddonSidebar}}

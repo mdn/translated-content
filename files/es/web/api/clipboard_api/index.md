@@ -1,7 +1,6 @@
 ---
 title: API del portapapeles
 slug: Web/API/Clipboard_API
-original_slug: Web/API/API_del_portapapeles
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}

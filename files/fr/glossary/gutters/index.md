@@ -1,7 +1,6 @@
 ---
 title: Gouttières
 slug: Glossary/Gutters
-translation_of: Glossary/Gutters
 ---
 
 **Les gouttières** (ou _ruelles_) sont l'espace entre les pistes de contenu. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) en utilisant les propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap), [`row-gap`](/fr/docs/Web/CSS/row-gap) ou [`gap`](/fr/docs/Web/CSS/gap).

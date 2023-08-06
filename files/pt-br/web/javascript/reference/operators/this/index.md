@@ -38,7 +38,7 @@ Dentro de uma função, o valor de `this` depende de como a função é chamada.
 Como o código a seguir não está no modo estrito, o valor de `this` não é definido pela chamada. Por padrão, `this` será o objeto global que no navegador é o `window`.
 
 ```js
-function f1(){
+function f1() {
   return this;
 }
 
@@ -49,7 +49,7 @@ f1() === window; // true
 Em modo estrito, o valor de `this` permanece seja qual for o definido ao entrar no contexto de execução, assim, no caso a seguir, `this` por padrão será indefinido (`undefined`):
 
 ```js
-function f2(){
+function f2() {
   "use strict"; // assume modo estrito
   return this;
 }
@@ -67,7 +67,7 @@ Nas [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_funct
 
 ```js
 var globalObject = this;
-var foo = (() => this);
+var foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
@@ -75,7 +75,7 @@ Não importa como `foo` é chamado, o `this` continuará como o objeto global. I
 
 ```js
 // Chama como um método de um objeto
-var obj = {foo: foo};
+var obj = { foo: foo };
 console.log(obj.foo() === globalObject); // true
 
 // Tentativa de definir this usando call
@@ -94,11 +94,12 @@ Não importa como for, o this do foo mantém o valor que recebeu quando foi cria
 // uma função arrow, para que seu this esteja permanentemente
 // ligado ao this da função que a envolve. O valor de bar pode ser // definido na chamada, que por sua vez define o valor da função
 // retornada.
-var obj = { bar : function() {
-                    var x = (() => this);
-                    return x;
-                  }
-          };
+var obj = {
+  bar: function () {
+    var x = () => this;
+    return x;
+  },
+};
 
 // Chama bar como método de obj, configurando seu this como obj
 // Assina à variável fn uma referência para a função retornada
@@ -120,9 +121,9 @@ No exemplo a seguir, quando `o.f()` é invocado, o this dentro da função é vi
 ```js
 var o = {
   prop: 37,
-  f: function() {
+  f: function () {
     return this.prop;
-  }
+  },
 };
 
 console.log(o.f()); // logs 37
@@ -131,7 +132,7 @@ console.log(o.f()); // logs 37
 Observe que esse comportamento não é afetado mesmo pela forma como (ou onde) a função foi definida. No exemplo anterior, nós definimos a função in-line (em linha) como o membro f durante a definição de o. No entanto, poderíamos ter apenas facilmente definido a função primeiro e depois anexado a o.f. Fazendo isso resulta no mesmo comportamento:
 
 ```js
-var o = {prop: 37};
+var o = { prop: 37 };
 
 function independent() {
   return this.prop;
@@ -147,7 +148,7 @@ Isto demonstra que é importante apenas que a função foi chamada a partir do m
 Da mesma forma, a vinculação de this só é afetada pela referência do membro mais imediato. No exemplo a seguir, quando invocamos a função, podemos chamá-la como um método g do objeto o.b. Desta vez, durante a execução, o this dentro da função irá se referir a o.b. O fato do objeto ser um membro de o não tem qualquer consequência; a referência mais imediata é tudo que importa.
 
 ```js
-o.b = {g: independent, prop: 42};
+o.b = { g: independent, prop: 42 };
 console.log(o.b.g()); // registra 42
 ```
 
@@ -156,7 +157,11 @@ console.log(o.b.g()); // registra 42
 A mesma noção vale para métodos definidos em algum lugar da cadeia de protótipos do objeto. Se o método está na cadeia de protótipo de um objeto, this refere-se ao objeto que é proprietário do método chamado, como se o método estivesse no objeto.
 
 ```js
-var o = {f:function(){ return this.a + this.b; }};
+var o = {
+  f: function () {
+    return this.a + this.b;
+  },
+};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;
@@ -171,20 +176,23 @@ Neste exemplo, o objeto atribuído à variável p não tem sua própria propried
 Mais uma vez, a mesma noção se aplica quando uma função é chamada a partir de um getter ou setter. A função usada como getter ou setter tem seu this ligado ao objeto do qual a propriedade está sendo modificada ou selecionada.
 
 ```js
-function modulus(){
+function modulus() {
   return Math.sqrt(this.re * this.re + this.im * this.im);
 }
 
 var o = {
   re: 1,
   im: -1,
-  get phase(){
+  get phase() {
     return Math.atan2(this.im, this.re);
-  }
+  },
 };
 
-Object.defineProperty(o, 'modulus', {
-    get: modulus, enumerable:true, configurable:true});
+Object.defineProperty(o, "modulus", {
+  get: modulus,
+  enumerable: true,
+  configurable: true,
+});
 
 console.log(o.phase, o.modulus); // logs -0.78 1.4142
 ```
@@ -215,17 +223,16 @@ Nota: enquanto o padrão para um construtor é retornar o objeto referenciado po
  * }
  */
 
-function C(){
+function C() {
   this.a = 37;
 }
 
 var o = new C();
 console.log(o.a); // logs 37
 
-
-function C2(){
+function C2() {
   this.a = 37;
-  return {a:38};
+  return { a: 38 };
 }
 
 o = new C2();
@@ -239,11 +246,11 @@ No último exemplo (C2), porque um objeto foi retornado durante a construção, 
 Quando uma função usa a palavra-chave this em seu corpo, o seu valor pode ser vinculado a um determinado objeto na chamada utilizando os métodos [`call`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call) or [`apply`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) que todas as funções herdam de Function.prototype.
 
 ```js
-function add(c, d){
+function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a:1, b:3};
+var o = { a: 1, b: 3 };
 
 // O primeiro parâmetro é o objeto a usar como
 // 'this'; subsequentes parâmetros são passados como
@@ -292,21 +299,21 @@ Quando uma função é usada como um manipulador de eventos, seu this está defi
 ```js
 // Quando chamado como listener, transforma o elemento blue
 // relacionado
-function bluify(e){
+function bluify(e) {
   // sempre true
   console.log(this === e.currentTarget);
   // true quando currentTarget e target são o mesmo objeto
   console.log(this === e.target);
-  this.style.backgroundColor = '#A5D9F3';
+  this.style.backgroundColor = "#A5D9F3";
 }
 
 // Obtém uma lista de todo elemento no documento
-var elements = document.getElementsByTagName('*');
+var elements = document.getElementsByTagName("*");
 
 // Adiciona bluify com um click listener (escutador de click)
 // para que quando o elemento seja clicado se torne azul
-for(var i=0 ; i<elements.length ; i++){
-  elements[i].addEventListener('click', bluify, false);
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", bluify, false);
 }
 ```
 
@@ -315,30 +322,26 @@ for(var i=0 ; i<elements.length ; i++){
 Quando o código é chamado de um manipulador de evento in-line, seu this está definido para o elemento DOM em que o listener é colocado:
 
 ```js
-<button onclick="alert(this.tagName.toLowerCase());">
-  Show this
-</button>
+<button onclick="alert(this.tagName.toLowerCase());">Show this</button>
 ```
 
 O alerta acima mostra button. Note, porém, que apenas o código exterior tem um this definido desta maneira:
 
 ```js
-<button onclick="alert((function(){return this}()));">
-  Show inner this
-</button>
+<button onclick="alert((function(){return this}()));">Show inner this</button>
 ```
 
 Neste caso, o this da função interior não está definido, portanto ele retorna o objeto global/objeto window (ou seja, o objeto padrão no modo não-estrito onde this não está definido pela chamada).
 
 ## Especificações
 
-| Especificação                                                                        | Estado                       | Comentário                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| Especificação                                                    | Estado               | Comentário                                         |
+| ---------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-this-keyword', 'The this keyword')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}         | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}             | {{Spec2('ES3')}}         |                                                    |
-| {{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}             | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES6', '#sec-this-keyword', 'The this keyword')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-11.1.1', 'The this keyword')}}         | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES3', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES3')}}     |                                                    |
+| {{SpecName('ES1', '#sec-11.1.1', 'The this keyword')}}           | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
 
 ## Compatibilidade com navegadores
 

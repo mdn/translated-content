@@ -1,7 +1,6 @@
 ---
 title: "-webkit-transition"
 slug: Web/CSS/@media/-webkit-transition
-translation_of: Web/CSS/@media/-webkit-transition
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{deprecated_header}}

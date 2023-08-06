@@ -1,5 +1,5 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
 ---
 
@@ -33,7 +33,7 @@ Esse exemplo apresenta um simples formulário onde a cor verde realça um input 
   <br />
   <br />
   <label for="email_input">Adicione um endereço de email:</label>
-  <input type="email" id="email_input" required/>
+  <input type="email" id="email_input" required />
 </form>
 ```
 
@@ -62,7 +62,7 @@ input:required {
 }
 
 input:required:invalid {
-  border-color: #C00000;
+  border-color: #c00000;
 }
 ```
 
@@ -98,10 +98,10 @@ Você pode desabilitar o "brilho" usando o CSS a seguir, ou substituir completam
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário                                            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}     | {{Spec2('HTML WHATWG')}}     | Nenhuma alteração.                                    |
-| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}         | {{Spec2('HTML5 W3C')}}         | Define a semântica do HTML e validação de restrições. |
+| Especificação                                                   | Status                      | Comentário                                            |
+| --------------------------------------------------------------- | --------------------------- | ----------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}    | {{Spec2('HTML WHATWG')}}    | Nenhuma alteração.                                    |
+| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}      | {{Spec2('HTML5 W3C')}}      | Define a semântica do HTML e validação de restrições. |
 | {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Definição inicial.                                    |
 
 ## Compatibilidade com navegadores

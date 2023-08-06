@@ -1,11 +1,8 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
-tags:
-  - события
-translation_of: Web/API/Window/DOMContentLoaded_event
-original_slug: Web/Events/DOMContentLoaded
 ---
+
 `Событие DOMContentLoaded` происходит когда весь HTML был полностью загружен и пройден парсером, не дожидаясь окончания загрузки таблиц стилей, изображений и фреймов. Значительно отличающееся от него событие [`load`](/ru/docs/Mozilla_event_reference/load) используется для отслеживания только полностью загруженной страницы. Широко распространённой ошибкой является использование [`load`](/ru/docs/Mozilla_event_reference/load) в ситуации когда `DOMContentLoaded` является более подходящим, будьте внимательны.
 
 > **Примечание:** Синхронный JavaScript останавливает парсинг DOM.
@@ -33,12 +30,12 @@ original_slug: Web/Events/DOMContentLoaded
 
 ## Свойства
 
-| Свойство                              | Тип                                  | Описание                                               |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Свойство                        | Тип                        | Описание                                               |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Тип события.                                           |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Возможно ли отменить событие.                          |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                           |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Возможно ли отменить событие.                          |
 
 ## Пример
 

@@ -1,8 +1,8 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-translation_of: Web/API/Node/firstChild
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.firstChild`** только для чтения, возвращающее первый потомок узла в древе или `null`, если узел является бездетным. Если узел это `документ`, он возвращает первый узел в списке своих прямых детей.
@@ -27,8 +27,8 @@ var childNode = node.firstChild;
 </p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
+  var p01 = document.getElementById("para-01");
+  alert(p01.firstChild.nodeName);
 </script>
 ```
 
@@ -42,8 +42,8 @@ var childNode = node.firstChild;
 <p id="para-01"><span>First span</span></p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
+  var p01 = document.getElementById("para-01");
+  alert(p01.firstChild.nodeName);
 </script>
 ```
 
@@ -51,5 +51,8 @@ var childNode = node.firstChild;
 
 ## Спецификации
 
-- [DOM Level 1 Core: firstChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
-- [DOM Level 2 Core: firstChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

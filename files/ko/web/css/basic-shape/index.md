@@ -33,9 +33,7 @@ slug: Web/CSS/basic-shape
 
     선택적 {{cssxref("border-radius", "&lt;border-radius&gt;")}} 매개변수를 `border-radius` 단축 속성 구문을 사용해 지정하면 인셋 사각형의 모서리를 둥글게 만들 수 있습니다.
 
-    좌우 인셋 각각 75%처럼, 한 축의 인셋 쌍 값의 합이 요소가 차지하는 크기보다 큰 경우 면적 없는 형태를 정의합니다.
-
-    <div class="hidden"><p>For this specification, this results in an empty float area.</p></div>
+    좌우 인셋 각각 75%처럼, 한 축의 인셋 쌍 값의 합이 요소가 차지하는 크기보다 큰 경우 면적 없는 형태를 정의합니다. For this specification, this results in an empty float area.
 
 - `circle()`
 

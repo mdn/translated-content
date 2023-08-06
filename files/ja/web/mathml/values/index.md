@@ -1,7 +1,6 @@
 ---
 title: MathML の属性値
 slug: Web/MathML/Values
-original_slug: Web/MathML/Attribute/Values
 ---
 
 <section id="Quick_links">

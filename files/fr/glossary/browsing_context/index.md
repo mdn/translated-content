@@ -1,7 +1,6 @@
 ---
 title: Contexte de navigation
 slug: Glossary/Browsing_context
-translation_of: Glossary/Browsing_context
 ---
 
 Un **contexte de navigation** est l'environnement dans lequel un {{glossary("Browser","navigateur")}} affiche un {{domxref("Document","document")}}. Dans les navigateurs modernes, il s'agit généralement d'un onglet, mais il peut s'agir d'une fenêtre ou encore seulement des parties d'une page, comme une {{HTMLElement("frame")}} ou une {{HTMLElement("iframe")}}.

@@ -1,7 +1,6 @@
 ---
 title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 ---
 
 {{AddonSidebar()}}

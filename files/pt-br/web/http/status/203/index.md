@@ -17,8 +17,8 @@ A resposta `203` é similar a resposta com cabeçalho de {{HTTPHeader("Warning")
 
 ## Specifications
 
-| Specification                                                                        | Title                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                                  | Title                                                         |
+| -------------------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "203 Non-Authoritative Information" , "6.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## See also

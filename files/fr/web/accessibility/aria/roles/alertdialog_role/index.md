@@ -1,7 +1,6 @@
 ---
 title: Utilisation du rôle alertdialog
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
 
 ### Description

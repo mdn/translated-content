@@ -1,7 +1,6 @@
 ---
 title: NodeIterator.previousNode()
 slug: Web/API/NodeIterator/previousNode
-translation_of: Web/API/NodeIterator/previousNode
 ---
 
 {{APIRef("DOM")}}

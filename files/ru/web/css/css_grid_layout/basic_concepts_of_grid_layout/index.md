@@ -1,7 +1,6 @@
 ---
 title: Основные понятия Grid Layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
 
 [Грид-раскладка (CSS Grid Layout)](/ru/docs/Web/CSS/CSS_Grid_Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы, и небольших элементов пользовательского интерфейса. Эта статья даёт общее представление о грид-раскладке и новой терминологии, которая является частью спецификации CSS Grid Layout Level 1. Более подробно показанные возможности будут описаны описаны далее в руководстве.

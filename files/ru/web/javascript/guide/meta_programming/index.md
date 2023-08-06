@@ -1,15 +1,6 @@
 ---
 title: Мета-программирование
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Meta
-  - Meta programming
-  - Proxy
-  - Reflect
-  - Метапрограммирование
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
