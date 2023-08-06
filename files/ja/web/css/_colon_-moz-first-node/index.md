@@ -12,7 +12,7 @@ slug: Web/CSS/:-moz-first-node
 ## 構文
 
 ```css
-:-moz-first-node
+:-moz-first-node;
 ```
 
 ## 例

@@ -10,7 +10,11 @@ slug: Web/SVG/Attribute/x1
 二つの要素がこの属性を使っています。つまり、{{ SVGElement("line") }} と {{ SVGElement("linearGradient") }} です。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -35,14 +39,18 @@ html,body,svg { height:100% }
 ### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="1" x2="5" y1="1" y2="9" stroke="red"   />
+  <line x1="1" x2="5" y1="1" y2="9" stroke="red" />
   <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="9" x2="5" y1="1" y2="9" stroke="blue"  />
+  <line x1="9" x2="5" y1="1" y2="9" stroke="blue" />
 </svg>
 ```
 
@@ -60,7 +68,11 @@ html,body,svg { height:100% }
 ### 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -70,18 +82,18 @@ html,body,svg { height:100% }
   左端から始まります。
   -->
   <linearGradient x1="0%" id="g0">
-    <stop offset="0"    stop-color="black"  />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 
-  <rect x="1"  y="1" width="8" height="8" fill="url(#g0)" />
+  <rect x="1" y="1" width="8" height="8" fill="url(#g0)" />
 
   <!--
   ここでは、グラデーション・ベクトルは、適用先の形状を囲う境界の
   左端から 80% のところから始まります。
   -->
   <linearGradient x1="80%" id="g1">
-    <stop offset="0"    stop-color="black"  />
+    <stop offset="0" stop-color="black" />
     <stop offset="100%" stop-color="red" />
   </linearGradient>
 
