@@ -39,12 +39,12 @@ Dado que `atan()` es un método estático de `Math`, siempre debes usarlo como `
 ### Usando `Math.atan()`
 
 ```js
-Math.atan(1);   // 0.7853981633974483
-Math.atan(0);   // 0
-Math.atan(-0);  // -0
+Math.atan(1); // 0.7853981633974483
+Math.atan(0); // 0
+Math.atan(-0); // -0
 
-Math.atan(Infinity);   //  1.5707963267948966
-Math.atan(-Infinity);  // -1.5707963267948966
+Math.atan(Infinity); //  1.5707963267948966
+Math.atan(-Infinity); // -1.5707963267948966
 
 // El ángulo que la línea [(0,0);(x,y)] forma con el eje-x en un sistema de coordenadas Cartesianas.
 Math.atan(y / x);

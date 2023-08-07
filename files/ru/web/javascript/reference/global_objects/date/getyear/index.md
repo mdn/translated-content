@@ -45,7 +45,7 @@ dateObj.getYear()
 Вторая инструкция присваивает значение 95 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 1995 23:15:00');
+var Xmas = new Date("December 25, 1995 23:15:00");
 var year = Xmas.getYear(); // вернёт 95
 ```
 
@@ -54,7 +54,7 @@ var year = Xmas.getYear(); // вернёт 95
 Вторая инструкция присваивает значение 100 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 2000 23:15:00');
+var Xmas = new Date("December 25, 2000 23:15:00");
 var year = Xmas.getYear(); // вернёт 100
 ```
 
@@ -63,7 +63,7 @@ var year = Xmas.getYear(); // вернёт 100
 Вторая инструкция присваивает значение -100 переменной `year`.
 
 ```js
-var Xmas = new Date('December 25, 1800 23:15:00');
+var Xmas = new Date("December 25, 1800 23:15:00");
 var year = Xmas.getYear(); // вернёт -100
 ```
 

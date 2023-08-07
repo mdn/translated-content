@@ -25,24 +25,24 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 ## Example
 
 ```js
-var doc = document.implementation.createDocument ('https://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('https://www.w3.org/1999/xhtml', 'body');
-body.setAttribute('id', 'abc');
+var doc = document.implementation.createDocument(
+  "https://www.w3.org/1999/xhtml",
+  "html",
+  null,
+);
+var body = document.createElementNS("https://www.w3.org/1999/xhtml", "body");
+body.setAttribute("id", "abc");
 doc.documentElement.appendChild(body);
-alert(doc.getElementById('abc')); // [object HTMLBodyElement]
+alert(doc.getElementById("abc")); // [object HTMLBodyElement]
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                                | Status                           | Comment                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-createdocument', 'DOMImplementation.createDocument')}}     | {{Spec2('DOM WHATWG')}} | Modified the return type of `createDocument()` from {{domxref("Document")}} to {{domxref("XMLDocument")}}. The third argument of `createDocument()`, _doctype_, is now optional and default to `null`. |
-| {{SpecName('DOM3 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}} | {{Spec2('DOM3 Core')}}     | No change from {{SpecName("DOM2 Core")}}                                                                                                                                                                           |
-| {{SpecName('DOM2 Core', 'core.html#Level-2-Core-DOM-createDocument', 'DOMImplementation.createDocument')}} | {{Spec2('DOM2 Core')}}     | Initial definition.                                                                                                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.DOMImplementation.createDocument")}}
+{{Compat}}
 
 ## See also
 

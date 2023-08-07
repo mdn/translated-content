@@ -71,8 +71,8 @@ inline-size: unset;
 
 ## Specifications
 
-| Specification                                                                                            | Status                                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| Specification                                                                 | Status                              | Comment            |
+| ----------------------------------------------------------------------------- | ----------------------------------- | ------------------ |
 | {{SpecName("CSS Logical Properties", "#propdef-inline-size", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
 
 ## Browser compatibility

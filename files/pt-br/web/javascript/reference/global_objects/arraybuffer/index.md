@@ -79,10 +79,10 @@ var view   = new Int32Array(buffer);
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário                                                            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                         | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6                                         |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}             | Definição inicial no ECMA standard. Specified that `new` is required. |
+| Especificação                                                          | Status                   | Comentário                                                            |
+| ---------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                            | {{Spec2('Typed Array')}} | Substituído pelo ECMAScript 6                                         |
+| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}         | Definição inicial no ECMA standard. Specified that `new` is required. |
 | {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ESDraft')}}     |                                                                       |
 
 ## Compatibilidade com navegadores

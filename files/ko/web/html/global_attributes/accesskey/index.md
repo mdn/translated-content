@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/accesskey
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 > **참고:** WHATWG 명세는 `accesskey`의 값에 공백으로 구분한 여러 개의 문자를 사용할 수 있고, 브라우저는 그 중 지원하는 첫 번째 문자를 사용한다고 되어 있습니다. 하지만 대부분의 브라우저는 이렇게 동작하지 않습니다. 단, 다른 명령과 충돌하지 않는 경우, IE/Edge에서는 지원되는 첫 번째 문자를 문제 없이 사용합니다.
 
 단축키를 활성화하는 방법은 브라우저와 플랫폼에 따라 다를 수 있습니다.

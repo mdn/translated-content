@@ -32,12 +32,12 @@ Este fragmento de código se toma del [ejemplo de clases](https://github.com/Goo
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log("Hi, I am a ", this.name + ".");
   }
   get area() {
     return this.height * this.width;
@@ -57,7 +57,7 @@ class Square extends Rectangle {
 
     // Nota: En las clases derivadas, se debe llamar a super() antes de
     // poder usar 'this'. Salir de esto provocará un error de referencia.
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -70,14 +70,14 @@ También puede llamar a super en métodos estáticos.
 class Rectangle {
   constructor() {}
   static logNbSides() {
-    return 'Tengo 4 lados';
+    return "Tengo 4 lados";
   }
 }
 
 class Square extends Rectangle {
   constructor() {}
   static logDescription() {
-    return super.logNbSides() + ' que son todos iguales';
+    return super.logNbSides() + " que son todos iguales";
   }
 }
 Square.logDescription(); // 'Tengo 4 lados que son todos iguales'
@@ -109,10 +109,10 @@ Al definir propiedades que no se pueden escribir, p. Ej. {{jsxref("Object.define
 ```js
 class X {
   constructor() {
-    Object.defineProperty(this, 'prop', {
+    Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
-      value: 1
+      value: 1,
     });
   }
   f() {
@@ -132,15 +132,15 @@ Super también se puede usar en el [inicializador de objetos / notación literal
 ```js
 var obj1 = {
   method1() {
-    console.log('method 1');
-  }
-}
+    console.log("method 1");
+  },
+};
 
 var obj2 = {
   method2() {
-   super.method1();
-  }
-}
+    super.method1();
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"

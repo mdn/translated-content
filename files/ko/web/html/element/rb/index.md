@@ -7,8 +7,6 @@ slug: Web/HTML/Element/rb
 
 **HTML `<rb>` 요소**는 {{HTMLElement("ruby")}} 표기의 기반 텍스트 구성요소(루비 주석을 적용하려는 글자)를 나눌 때 사용합니다. 하나의 `<rb>` 요소는 기반 텍스트에서의 최소 단위를 하나 감싸야 합니다.
 
-<div class="hidden">\{{EmbedInteractiveExample("pages/tabbed/rb.html", "tabbed-standard")}}</div>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -76,11 +74,6 @@ slug: Web/HTML/Element/rb
   <rp>(</rp><rt>궁</rt><rp>)</rp>
 </ruby>
 ```
-
-<div class="hidden"><div id="with-ruby"><pre class="brush: html">&#x3C;ruby> &#x3C;rb>景&#x3C;rb>福&#x3C;rb>宮 &#x3C;rp>(&#x3C;/rp>&#x3C;rt>경&#x3C;rt>복&#x3C;rt>궁&#x3C;rp>)&#x3C;/rp> &#x3C;/ruby>
-</pre><pre class="brush: css">body {
-  font-size: 22px;
-}</pre></div></div>
 
 결과는 다음과 같습니다.
 

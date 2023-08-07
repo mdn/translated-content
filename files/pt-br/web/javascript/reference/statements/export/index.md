@@ -82,20 +82,20 @@ Mas a exportação padrão pode ser importada com qualquer nome, por exemplo:
 
 ```js
 // arquivo test.js
-let k; export default k = 12;
+let k;
+export default k = 12;
 ```
 
 ```js
 // algum outro arquivo
-import m from './test'; // note que temos a liberdade de usar import m ao invés de import k, porque k era uma exportaçào padrão
-console.log(m);        // vai retornar log 12
+import m from "./test"; // note que temos a liberdade de usar import m ao invés de import k, porque k era uma exportaçào padrão
+console.log(m); // vai retornar log 12
 ```
 
 Você também pode renomear exportações explícitas para evitar conflitos e nome:
 
 ```js
-export { myFunction as function1,
-         myVariable as variable };
+export { myFunction as function1, myVariable as variable };
 ```
 
 ### Re-exportando / Agregando
@@ -105,15 +105,13 @@ export { myFunction as function1,
 Isto pode ser feito com a sintaxe "export from":
 
 ```js
-export { default as function1,
-         function2 } from 'bar.js';
+export { default as function1, function2 } from "bar.js";
 ```
 
 O que é comparável com um combinação de import e export:
 
 ```js
-import { default as function1,
-         function2 } from 'bar.js';
+import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
@@ -122,17 +120,17 @@ Mas onde `function1` e `function2` não ficam disponíveis dentro do módulo atu
 > **Nota:** Os exemplos a seguir são sintaticamente inválidos apesar de sua equivalência com o import:
 
 ```js
-import DefaultExport from 'bar.js'; // Válido
+import DefaultExport from "bar.js"; // Válido
 ```
 
 ```js
-export DefaultExport from 'bar.js'; // Inválido
+export DefaultExport from "bar.js"; // Inválido
 ```
 
 O modo correto de fazer isso e renomeando o export:
 
 ```js
-export { default as DefaultExport } from 'bar.js';
+export { default as DefaultExport } from "bar.js";
 ```
 
 ## Exemplos
@@ -151,13 +149,13 @@ const foo = Math.PI + Math.SQRT2;
 
 var graph = {
   options: {
-      color:'white',
-      thickness:'2px'
+    color: "white",
+    thickness: "2px",
   },
-  draw: function() {
-      console.log('Da função draw de graph');
-  }
-}
+  draw: function () {
+    console.log("Da função draw de graph");
+  },
+};
 
 export { cube, foo, graph };
 ```
@@ -165,16 +163,16 @@ export { cube, foo, graph };
 Então, no módulo principal incluído sem sua página HTML, poderíamos ter:
 
 ```js
-import { cube, foo, graph } from './my-module.js';
+import { cube, foo, graph } from "./my-module.js";
 
 graph.options = {
-    color:'blue',
-    thickness:'3px'
+  color: "blue",
+  thickness: "3px",
 };
 
 graph.draw();
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 É importante notar o seguinte:
@@ -196,15 +194,15 @@ export default function cube(x) {
 Daí em outro script podemos usar:
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 
 ## Especificações
 
-| Especificação                                                        | Estado                       | Comentário          |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-exports', 'Exports')}}         | {{Spec2('ES6')}}         | Initial definition. |
+| Especificação                                      | Estado               | Comentário          |
+| -------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-exports', 'Exports')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade

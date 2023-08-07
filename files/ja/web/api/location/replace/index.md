@@ -33,7 +33,7 @@ replace(url)
 ```js
 // このページを置き換えて、 Location.reload の記事に移動します。
 window.location.replace(
-  "https://developer.mozilla.org/en-US/docs/Web/API/Location.reload"
+  "https://developer.mozilla.org/ja/docs/Web/API/Location.reload"
 );
 ```
 

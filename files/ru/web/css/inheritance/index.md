@@ -14,7 +14,9 @@ slug: Web/CSS/Inheritance
 Типичный пример наследуемого свойства {{ Cssxref("color") }}. Стили:
 
 ```css
-p { color: green }
+p {
+  color: green;
+}
 ```
 
 и разметка:
@@ -32,13 +34,15 @@ p { color: green }
 Пример ненаследуемого свойства {{ Cssxref("border") }}. Стили:
 
 ```css
- p { border: medium solid }
+p {
+  border: medium solid;
+}
 ```
 
 и разметка:
 
 ```html
-  <p>В этом параграфе <em>подчёркнутый текст</em>.</p>
+<p>В этом параграфе <em>подчёркнутый текст</em>.</p>
 ```
 
 у слов "подчёркнутый текст" не будет рамки (т.к. начальное значение {{ Cssxref("border-style") }}: `none`).
@@ -51,6 +55,7 @@ p { color: green }
 
 - [CSS документация](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
+
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)

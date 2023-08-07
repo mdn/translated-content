@@ -65,14 +65,14 @@ Content-Language: de-DE, en-CA
 グローバル [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性は、HTML 要素全体またはその一部の言語を示すために HTML 要素で使用されます。
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 文書の言語を記述するために、このような meta 要素を以下のように使用**しないで**ください。
 
 ```html example-bad
 <!-- /!\ This is bad practice -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### リソースのターゲットオーディエンスを示す
@@ -85,8 +85,8 @@ Content-Language: de, en
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                                          |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                                         | 題名                                                          |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Content-Language", "3.1.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## ブラウザーの互換性

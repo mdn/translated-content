@@ -43,7 +43,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### multiple
 
-一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性: multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
+一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性：multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
 
 > **备注：** 一般地，如果你指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
 

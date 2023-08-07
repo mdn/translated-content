@@ -2,6 +2,7 @@
 title: SVG
 slug: Web/SVG
 ---
+
 **[С чего начать](/ru/docs/Web/SVG/Tutorial)**
 Этот урок поможет вам начать использовать SVG.
 
