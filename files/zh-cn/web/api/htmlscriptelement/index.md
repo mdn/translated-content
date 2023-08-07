@@ -76,9 +76,17 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
           使用该属性有三种模式可供选择，如果 async 属性存在，脚本将异步执行，只要它是可用的，如果 async 属性不存在，而 defer 属性存在，脚本将会在页面完成解析后执行，如果都不存在，那么脚本会在 useragent 解析页面之前被取出并立刻执行。
         </p>
         <div class="note">
-          <strong>备注：</strong>这些属性的处理细节，主要是历史原因，有些重要的，涉及很多方面的
-          HTML。因此实现需求的必要性分散在规范。这些描述这个处理的核心算法，但这些算法参考和引用的解析规则 {{HTMLElement("script")}}
-          开始和结束标记在 HTML 中，在国外内容，并在 XML 中，规则的 <code>document.write()</code> 方法，处理脚本等。
+          <strong>备注：</strong>这些属性的具体处理细节非常复杂，涉及 HTML
+          的许多不同方面，因此分散在整个规范中。<a
+            href="https://html.spec.whatwg.org/multipage/scripting.html">这些算法</a
+          >描述了核心思想，但它们依赖于 HTML、<a
+            href="https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements">外部内容</a
+          >和 <a href="https://html.spec.whatwg.org/multipage/xhtml.html">XML 中</a>
+          {{HTMLElement("script")} <a href="https://html.spec.whatwg.org/multipage/syntax.html#start-tags">开始</a>和<a
+            href="https://html.spec.whatwg.org/multipage/syntax.html#end-tags">结束</a
+          >标记的解析规则；<a href="/zh-CN/docs/Web/API/Document/write"
+          ><code>document.write()</code></a> 方法的规则；<a
+            href="https://html.spec.whatwg.org/multipage/webappapis.html">脚本处理</a>等等。
         </div>
         <p>
           延迟属性可以指定即使指定异步属性，导致遗留 Web 浏览器只支持推迟（而不是异步）回落推迟行为而不是同步阻塞是默认的行为。
@@ -104,8 +112,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         <p>
-          IDL 属性内容的文本必须返回一个连接的所有文本节点的孩子{{HTMLElement("script")}}元素（忽略任何其他节点如评论或元素），在树的顺序。设置，它必须采取行动一样 textContent
-          IDL 属性。
+          一个字符串，用于按树形顺序连接并返回 {{HTMLElement("script")}} 元素（忽略注释等其他节点）内所有<a href="/zh-CN/docs/Web/API/Text">文本节点</a>的内容。在设置时，它的作用与 <a href="/zh-CN/docs/Web/API/Node/textContent"><code>textContent</code></a> IDL 属性相同。
         </p>
         <div class="note">
           <strong>备注：</strong>当插入使用
@@ -119,13 +126,13 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
 
 ## 方法
 
-_没有具体的方法；属性从其父类继承，{{domxref("HTMLElement")}}。_
+_没有具体的方法；属性从其父类 {{domxref("HTMLElement")}} 继承。_
 
 ## 示例
 
 ### 动态导入脚本
 
-让我们创建一个名为 importScript 的函数，它能够在一个文档中导入新的脚本，创建一个 {{HTMLElement("script")}} 节点，并立即插入到宿主 {{HTMLElement("script")}} 之前 (通过 {{domxref("document.currentScript")}} 可以获取宿主 script 标签）。这些脚本将**异步**执行。更多细节，请参见 defer 和 async 属性。
+让我们创建一个名为 importScript 的函数，它能够在一个文档中导入新的脚本，创建一个 {{HTMLElement("script")}} 节点，并立即插入到宿主 {{HTMLElement("script")}} 之前（通过 {{domxref("document.currentScript")}} 可以获取宿主 script 标签）。这些脚本将**异步**执行。更多细节，请参见 defer 和 async 属性。
 
 ```js
 function loadError(oError) {
@@ -147,7 +154,7 @@ function importScript(sSrc, fOnload) {
 }
 ```
 
-与上面大致相同，但有一点不同的是 新创建的 script 标签插入到了 {{HTMLElement("head")}} 标签的的最后，而不是插入到了 {{domxref("document.currentScript")}} 元素之前：
+以下函数不是将新脚本直接插入在 {{domxref("document.currentScript")}} 元素之前，而是将它们作为 {{HTMLElement("head")}} 标签的子节点追加。
 
 ```js
 var importScript = (function (oHead) {
@@ -197,5 +204,4 @@ importScript(
 - HTML {{ HTMLElement("script") }} 元素
 - HTML {{ HTMLElement("noscript") }} 元素
 - {{domxref("document.currentScript")}}
-- [Web Workers](/zh-CN/docs/DOM/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/zh-CN/docs/JavaScript/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
+- [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)（代码片段与脚本类似，但在[另外一个全局上下文中](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)执行）

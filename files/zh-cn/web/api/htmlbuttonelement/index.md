@@ -141,7 +141,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td><code>validationMessage</code> {{readonlyInline}}</td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        报告该控件不满足验证要求的，提示给用户的看的信息。如果这个控件没有验证约束（<code>willValidate</code>值为<code>false</code>），或者满足验证的要求，那么这个属性为空字符串。
+        报告该控件不满足验证要求的，提示给用户的看的信息。如果这个控件没有验证约束（<code>willValidate</code> 值为 <code>false</code>），或者满足验证的要求，那么这个属性为空字符串。
       </td>
     </tr>
     <tr>
