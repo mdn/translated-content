@@ -67,13 +67,11 @@ navigator.serviceWorker.register('serviceworker.js').then(
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Comentário         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Definição inicial. |
+{{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.PushManager")}}
+{{Compat}}
 
 ## Veja também
 

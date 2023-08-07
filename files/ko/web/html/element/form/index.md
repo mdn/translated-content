@@ -9,8 +9,6 @@ slug: Web/HTML/Element/form
 
 {{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 `<form>` 요소를 꾸밀 땐, 모든 {{domxref("HTMLFormElement.elements", "elements")}}의 유효성을 나타내는 CSS {{cssxref(":valid")}}와 {{cssxref(":invalid")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용할 수 있습니다.
 
 <table class="properties">

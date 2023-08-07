@@ -16,9 +16,9 @@ l10n:
 ## 例
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.pathname; // '/en-US/docs/HTMLAnchorElement' を返す
+anchor.pathname; // '/ja/docs/HTMLAnchorElement' を返す
 ```
 
 ## 仕様書

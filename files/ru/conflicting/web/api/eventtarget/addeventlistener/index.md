@@ -74,6 +74,10 @@ buttonElement.addEventListener('click', {
 
 {{EmbedLiveSample('Пример')}}
 
-## Смотрите также
+## Спецификации
 
-- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

@@ -28,9 +28,9 @@ Tenga presente que no puede usar la abreviatura (`RegExp.$'`), porque el analiza
 
 ```js
 var re = /hola/g;
-re.test('hola mundo!');
+re.test("hola mundo!");
 RegExp.rightContext; // " mundo!"
-RegExp["$'"];       // " mundo!"
+RegExp["$'"]; // " mundo!"
 ```
 
 ## Especificaciones

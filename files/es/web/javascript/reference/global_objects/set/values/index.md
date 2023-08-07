@@ -27,9 +27,9 @@ Un nuevo objeto **`Iterator`** que contiene los valores para cada elemento en el
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 

@@ -5,7 +5,7 @@ slug: Web/API/TransformStream
 
 {{APIRef("Streams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStream`** 接口表示[链式管道传输（pipe chain）](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)_转换流_（transform stream）概念的具体实现.
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStream`** 接口表示[链式管道传输（pipe chain）](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)_转换流_（transform stream）概念的具体实现。
 
 它可以传递给 {{domxref("ReadableStream.pipeThrough()")}} 方法，以便将流数据从一种格式转换成另一种。例如，它可以用于解码（或者编码）视频帧，解压缩数据或者将流从 XML 转换到 JSON。
 
