@@ -1,5 +1,5 @@
 ---
-title: "ARIA：list 角色"
+title: ARIA：list 角色
 slug: Web/Accessibility/ARIA/Roles/list_role
 ---
 
@@ -66,10 +66,10 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 - {{HTMLElement("ul")}} 元素
 - {{HTMLElement("ol")}} 元素
-- The {{HTMLElement("li")}} 元素
+- {{HTMLElement("li")}} 元素
 - [ARIA：listitem 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [ARIA：group 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
+- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html)——由 Scott O'Hara 撰写
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 
