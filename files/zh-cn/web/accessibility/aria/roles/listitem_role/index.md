@@ -54,7 +54,7 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 > **备注：** ARIA `list` / `listitem` 角色不区分有序列表和无序列表。
 
-> **备注：** 给列表添加 CSS 样式 `list-style: none;` 移除列表语义。添加 `role="listitem"` 返回列表语义。
+> **备注：** 给列表添加 CSS 样式 `list-style: none;` 移除列表语义。添加 `role="listitem"` 获得列表语义。
 
 > **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用 `tab`、`tabpanel` 和 `tablist` 角色。
 
