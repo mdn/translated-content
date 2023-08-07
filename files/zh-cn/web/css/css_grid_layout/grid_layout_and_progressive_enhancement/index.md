@@ -9,21 +9,21 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 
 ## 浏览器支持
 
-CSS Grid Layout 在在所有现代浏览器中都没有前缀。对这些指南中详述的所有属性和值的支持可跨浏览器进行互操作。这意味着如果你在 Firefox 中编写一些网格布局代码，它应该在 Chrome 中以相同的方式工作。这不再是实验规范，你可以安全地在生产环境中使用它。
+CSS 网格布局在所有现代浏览器中都没有前缀。对这些指南中详述的所有属性和值的支持可跨浏览器进行互操作。这意味着如果你在 Firefox 中编写一些网格布局代码，它应该在 Chrome 中以相同的方式工作。这不再是实验规范，你可以安全地在生产环境中使用它。
 
 ## 我的布局使用 CSS 网格布局安全吗？
 
 是的。无论使用任何前端技术，是否使用 CSS 网格布局都取决于网站访问者通常使用的浏览器。
 
-## 开始在生产中使用网格布局
+## 开始在生产环境中使用网格布局
 
-值得注意的是，你不必以全有或全无的方式使用网格。首先使用网格增强设计中的元素，否则这些元素可能会以旧的方式显示。由于网格与这些其他方法交互的方式，使用网格布局覆盖遗留方法的效果出奇地好。
+值得注意的是，你不必以要么全有要么全无的方式使用网格。在你的设计中，你可以开始通过网格来简单地增强你的元素，从而取代它们的旧显示方式。由于网格与其他方法的交互方式，使用网格布局覆盖遗留方法的效果出奇地好。
 
 ### 浮动
 
 [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 曾经用于创建多列布局。如果你在旧代码库使用了浮动布局，则不会发生冲突。网格项目会忽略浮动属性；事实上，网格项目优先级更高。在下面的示例中，我们有一个简单的 media 对象。如果 float 没有从旧版 CSS 中删除，且容器是网格容器，也不会有问题。我们可以使用 CSS 网格中实现的对齐属性。
 
-Float 不再适用，我们可以使用 CSS 盒子对齐属性 {{cssxref("align-self")}} 来使内容对齐到容器末尾：
+{{cssxref("float")}} 不再适用，我们可以使用 CSS 盒子对齐属性 {{cssxref("align-self")}} 来使内容对齐到容器末尾：
 
 ```css
 * {
@@ -71,7 +71,7 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('Floats', '500', '180') }}
+{{ EmbedLiveSample('浮动', '500', '180') }}
 
 下图左侧显示了不支持的浏览器中的媒体对象，右侧显示了支持的浏览器中的媒体对象：
 
@@ -151,7 +151,7 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('Using feature queries', '550', '400') }}
+{{ EmbedLiveSample('使用特性查询', '550', '400') }}
 
 该示例演示了浮动布局的典型问题：如果将附加内容添加到任何一张卡片，布局就会出现问题。
 
@@ -163,7 +163,7 @@ img {
 
 ![After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width.](10-float-width-problem.png)
 
-如果将宽度设置为`auto`，则将阻止旧浏览器发生浮动行为。我们需要能够定义旧浏览器的宽度，并删除支持网格的浏览器的宽度。多亏了 [CSS 特性查询](/zh-CN/docs/Web/CSS/@supports) ，我们才能做到这一点。
+如果将宽度设置为 `auto`，则将阻止旧浏览器发生浮动行为。我们需要能够定义旧浏览器的宽度，并删除支持网格的浏览器的宽度。多亏了 [CSS 特性查询](/zh-CN/docs/Web/CSS/@supports) ，我们才能做到这一点。
 
 ### 使用特性查询的解决方案
 
@@ -179,7 +179,7 @@ img {
 
 特性查询具有出色的浏览器支持，并且所有支持更新的网格规范的浏览器也都支持特性查询。你可以使用它们来处理在增强型浮动布局中遇到的问题。
 
-`@supports` 规则用来检查浏览器对 `display: grid` 的支持，然后，在这段使用 {{HTMLElement("ul")}} 的网格布局代码中，将 {{HTMLElement("li")}} 的宽度和最小宽度都设置为`auto`。我们还删除了边距和负边距，并用 {{cssxref("grid-gap")}} 属性来设置间隔，这意味着最后一排盒子上无需最终的边距。现在，即使其中一张卡片的内容比其他卡片多，布局也可以正常工作：
+`@supports` 规则用来检查浏览器对 `display: grid` 的支持，然后，在这段使用 {{HTMLElement("ul")}} 的网格布局代码中，将 {{HTMLElement("li")}} 的宽度和最小宽度都设置为 `auto`。我们还删除了边距和负边距，并用 {{cssxref("grid-gap")}} 属性来设置间隔，这意味着最后一排盒子上无需最终的边距。现在，即使其中一张卡片的内容比其他卡片多，布局也可以正常工作：
 
 ```css hidden
 * {
@@ -261,13 +261,13 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('A solution using feature queries', '550', '480') }}
+{{ EmbedLiveSample('使用特性查询的解决方案', '550', '480') }}
 
 ## 覆盖 `display` 其他的值
 
 由于使用浮动创建项目网格的问题，许多人会使用与上面所示的浮动方法不同的方法来布局一组卡片，`display: inline-block` 是其中之一。
 
-我们可以再次使用特性查询来覆盖使用 `display: inline-block` 的布局，并且也不用覆盖所有内容。设置为 `inline-block` 的项目将成为网格项目，所以 `inline-block` 的行为不再生效。当处于`display: inline-block` 显示模式时，我们项目上使用了 {{cssxref("vertical-align")}} 属性，但该属性不适用于网格项目，因此一旦它成为网格项目，该属性就会被忽略：
+我们可以再次使用特性查询来覆盖使用 `display: inline-block` 的布局，并且也不用覆盖所有内容。设置为 `inline-block` 的项目将成为网格项目，所以 `inline-block` 的行为不再生效。当处于 `display: inline-block` 显示模式时，我们项目上使用了 {{cssxref("vertical-align")}} 属性，但该属性不适用于网格项目，因此一旦它成为网格项目，该属性就会被忽略：
 
 ```css hidden
 * {
@@ -350,7 +350,7 @@ img {
 </div>
 ```
 
-{{ EmbedLiveSample('Overwriting other values of display', '500', '480') }}
+{{ EmbedLiveSample('覆盖 display 其他的值', '500', '480') }}
 
 我们需要再次解决的是项目的宽度，然后是想要增强的任何其他属性。在这个例子中，我们再次使用了 `grid-gap`，而不是边距和负边距来创建间隙。
 
@@ -366,13 +366,13 @@ CSS 网格布局规范详细说明了为什么当某物成为网格项时我们�
 
 ### `display` 的其他值
 
-如 [CSS display specification](https://drafts.csswg.org/css-display-3/#blockify) 中所定义，当一个元素的父元素设置为 `display: grid` 时，它会被块化。这就是为什么当我们的项目被设置为 `inline-block` 时，`display: inline-block` 不再生效的原因。
+如 [CSS display 规范](https://drafts.csswg.org/css-display-3/#blockify) 中所定义，当一个元素的父元素设置为 `display: grid` 时，它会被块化。这就是为什么当我们的项目被设置为 `inline-block` 时，`display: inline-block` 不再生效的原因。
 
 如果你使用 `display: table` 作为旧版布局，则设置为 `display: table-cell` 的项目会生成匿名盒子。因此，如果你在没有任何父元素设置为 `display-table` 的情况下使用 `display: table-cell`，则会在任何相邻单元格周围创建匿名表格包装器，就像将它们包裹在 div 或其他设置为 `display: table` 的元素中一样。如果你将一个项目设置为 `display: table-cell` ，然后在特性查询中将父级更改为 `display: grid` ，则不会创建匿名盒子。这意味着你可以覆盖基于 `display: table` 的布局，且无需额外的匿名盒子。
 
 ### 浮动元素
 
-正如我们已经看到的，{{cssxref("float")}} 和 {{cssxref("clear")}} 对网格项目没有影响。因此，无需显式地将项目设置为 `float: none`.
+正如我们已经看到的，{{cssxref("float")}} 和 {{cssxref("clear")}} 对网格项目没有影响。因此，无需显式地将项目设置为 `float: none`。
 
 ### 垂直对齐
 
