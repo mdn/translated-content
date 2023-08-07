@@ -10,10 +10,10 @@ O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTM
 ## Contexto de uso
 
 | Conteúdo permitido        | [Phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                                                                             |
-| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content)                                                         |
-| Documento normativo       | [HTML5, section 4.10.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                                                                  |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                         |
+| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content)                                                |
+| Documento normativo       | [HTML5, section 4.10.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)              |
 
 ## Atributos
 
@@ -28,11 +28,11 @@ Esse elemento implementa a interface [`HTMLDataListElement`](/pt-BR/DOM/HTMLData
 ```html
 <input list="browsers" />
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
 </datalist>
 ```
 
