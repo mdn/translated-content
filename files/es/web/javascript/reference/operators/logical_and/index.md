@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-El **operador lógico AND (`&&`)** (conjunción lógica) será `true` para un conjunto de operandos _booleanos_ si y solo si todos los operandos son `true`. En caso contrario, será `false`.
+El **operador lógico AND (`&&`)** (conjunción lógica) será `true` para un conjunto de operandos booleanos si y solo si todos los operandos son `true`. En caso contrario, será `false`.
 
 Generalmente, el operador retorna el valor del primer operando _{{Glossary("falsy")}}_ encontrado cuando evalúa de izquierda a derecha, o el valor del último operando si todos ellos son _{{Glossary("truthy")}}_.
 
@@ -34,27 +34,29 @@ Ejemplos de expresiones que pueden ser convertidas a `false` son:
 - cadena vacía (`""` o `''` o ` `` `);
 - `undefined`.
 
-El operador AND preserva valores no _booleanos_ y los retorna como estén:
+El operador AND preserva valores no booleanos y los retorna como estén:
 
 ```js
-result = "" && "foo"; // "" (cadena vacía) es asignada a `result`
-result = 2 && 0; // 0 es asignado a `result`
-result = "foo" && 4; // 4 es asignado a `result`
+result = "" && "foo"; // "" (cadena vacía) es asignada a result
+result = 2 && 0; // 0 es asignado a result
+result = "foo" && 4; // 4 es asignado a result
 ```
 
-Aunque el operador `&&` puede ser usado con operandos que no son valores _booleanos_, aún puede ser considerado un operador _booleano_ ya que su valor de retorno siempre puede ser convertido a un [booleano primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type).
-Para explícitamente convertir su valor de retorno (o cualquier expresión en general) al correspondiente valor _booleano_, se debe usar un doble ({{JSxRef("Operators/Logical_NOT", "operador lógico NOT", "", 1)}}) o el contructor del objeto {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
+Aunque el operador `&&` puede ser usado con operandos que no son valores booleanos, aún puede ser considerado un operador booleano ya que su valor de retorno siempre puede ser convertido a un [booleano primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type).
+Para explícitamente convertir su valor de retorno (o cualquier expresión en general) al correspondiente valor booleano, se debe usar un doble ({{JSxRef("Operators/Logical_NOT", "operador lógico NOT", "", 1)}}) o el contructor del objeto {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
-### Cortocircuito (Short-circuit)
+### Evaluación de cortocircuito (Short-circuit)
 
 La expresión lógica AND es un operador de cortocircuito (_short-circuit_).
-Como cada operando es convertido a un _booleano_, si el resultado de una conversión es `false`, el operador AND se detiene y retorna el valor original del operando _falsy_; **no** evalúa ninguno de los operandos restantes.
+Como cada operando es convertido a un booleano, si el resultado de una conversión es `false`, el operador AND se detiene y retorna el valor original del operando _falsy_; **no** evalúa ninguno de los operandos restantes.
 
 Considere el siguiente pseudocódigo.
 
-<code>(alguna expresión _falsy_) && expresión</code>
+```plain
+(alguna expresión _falsy_) && expresión
+```
 
-La parte de la `expresión` **nunca es evaluada** porque el primer operando <code>(alguna expresión _falsy_)</code> es evaluado como {{Glossary("falsy")}}.
+La parte de la `expresión` **nunca es evaluada** porque el primer operando <code>(alguna expresión _falsy_)</code> es evaluado como _{{Glossary("falsy")}}_.
 Si la `expresión` es una función, la función nunca es llamada.
 Veamos el siguiente ejemplo:
 
@@ -102,11 +104,11 @@ a8 = "" && false; // f && f retorna ""
 a9 = false && ""; // f && f retorna `false`
 ```
 
-### Reglas de conversión para _booleanos_
+### Reglas de conversión para booleanos
 
 #### Convirtiendo el operador lógico AND al operador lógico OR
 
-La siguiente operación involucra _booleanos_:
+La siguiente operación involucra booleanos:
 
 ```js-nolint
 bCondition1 && bCondition2
@@ -120,7 +122,7 @@ es siempre igual a:
 
 #### Convirtiendo el operador lógico OR al operador lógico AND
 
-La siguiente operación involucra _booleanos_:
+La siguiente operación involucra booleanos:
 
 ```js-nolint
 bCondition1 || bCondition2
@@ -136,7 +138,7 @@ es siempre igual a:
 
 Ya que las expresiones lógicas son evaluadas de izquierda a derecha, siempre es posible remover los paréntesis de una expresión compleja siguiendo las siguientes reglas.
 
-La siguiente operación compuesta involucra _booleanos_:
+La siguiente operación compuesta involucra booleanos:
 
 ```js-nolint
 bCondition1 && (bCondition2 || bCondition3)
