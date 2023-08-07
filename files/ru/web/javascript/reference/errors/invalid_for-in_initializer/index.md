@@ -2,6 +2,7 @@
 title: "SyntaxError: for-in loop head declarations may not have initializers(SyntaxError: объявления for-in loop head могут не иметь инициализаторов)"
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -43,7 +44,7 @@ for (var i = 0 in obj) {
 ```js example-good
 "use strict";
 
-var obj = {a: 1, b: 2, c: 3 };
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var i in obj) {
   console.log(obj[i]);
@@ -55,7 +56,7 @@ for (var i in obj) {
 Цикл for...in не должен использоваться для итерации массива. Вы намеревались использовать цикл for вместо цикла for-in для итерации {{jsxref("Array")}}? Цикл for позволяет также установить инициализатор:
 
 ```js example-good
-var arr = [ "a", "b", "c" ]
+var arr = ["a", "b", "c"];
 
 for (var i = 2; i < arr.length; i++) {
   console.log(arr[i]);
