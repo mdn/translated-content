@@ -30,7 +30,7 @@ toFixed(digits)
 ## 例外
 
 - {{jsxref("RangeError")}}
-  - : `digits` が `1` 以上 `100` 以下ではない場合に発生します。
+  - : `digits` が `0` 以上 `100` 以下ではない場合に発生します。
 - {{jsxref("TypeError")}}
   - : このメソッドが {{jsxref("Number")}} ではないオブジェクト上で実行された場合に発生します。
 

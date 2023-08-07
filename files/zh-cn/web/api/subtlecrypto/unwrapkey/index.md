@@ -11,7 +11,7 @@ slug: Web/API/SubtleCrypto/unwrapKey
 
 但因为 `unwrapKey()` 还需要解密导入的密钥，所以还需要传入解密时必须使用的密钥。这有时也被称为“解包密钥”（unwrapping key）。
 
-`unwrapKey()` 的逆函数是 {{domxref("SubtleCrypto.wrapKey()")}}：`unwrapKey` 由解密+导入组成，而 `wrapKey` 由加密+导出组成。
+`unwrapKey()` 的逆函数是 {{domxref("SubtleCrypto.wrapKey()")}}：`unwrapKey` 由解密 + 导入组成，而 `wrapKey` 由加密 + 导出组成。
 
 ## 语法
 

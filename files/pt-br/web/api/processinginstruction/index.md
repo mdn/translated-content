@@ -2,6 +2,7 @@
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 Uma **ProcessingInstruction (Instrução de Processamento)** incorpora instruções específicas de aplicações em [XML](/pt-BR/docs/XML_introduction) que pode ser ignorada por outras aplicações que não as reconhece. Mesmo se um processador XML ignora as instruções de processamento, irá dá-los um lugar no DOM.
@@ -19,9 +20,13 @@ Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/
 - alvo (DOMString) - depois do `<?` e antes do _[whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)_ separando-o de `data`.
 - dado (DOMString) - primeiro caractere _whitespace_ brancodepois de `target` e antes de `?>`
 
-### Especificações
+## Especificações
 
-- [DOM Level 1 Core: ProcessingInstruction interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ### Veja também
 

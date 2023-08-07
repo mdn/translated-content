@@ -2,6 +2,7 @@
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
+
 {{JSRef}}
 
 Функция **`Math.trunc()`** возвращает целую часть числа путём удаления всех дробных знаков.
@@ -37,25 +38,25 @@ Math.trunc(x)
 ### Использование `Math.trunc()`
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Полифил
 
 ```js
 if (!Math.trunc) {
-  Math.trunc = function(v) {
+  Math.trunc = function (v) {
     v = +v;
     if (!isFinite(v)) return v;
 
-    return (v - v % 1)   ||   (v < 0 ? -0 : v === 0 ? v : 0);
+    return v - (v % 1) || (v < 0 ? -0 : v === 0 ? v : 0);
 
     // returns:
     //  0        ->  0
@@ -76,9 +77,9 @@ if (!Math.trunc) {
 
 ```js
 if (!Math.trunc) {
-  Math.trunc = function(v) {
+  Math.trunc = function (v) {
     v = +v;
-    return (v - v % 1)   ||   (!isFinite(v) || v === 0 ? v : v < 0 ? -0 : 0);
+    return v - (v % 1) || (!isFinite(v) || v === 0 ? v : v < 0 ? -0 : 0);
   };
 }
 ```

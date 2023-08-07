@@ -69,28 +69,28 @@ In this example the target has two properties, `notProxied` and `proxied`. We de
 ```js
 const target = {
   notProxied: "original value",
-  proxied: "original value"
+  proxied: "original value",
 };
 
 const handler = {
-  get: function(target, prop, receiver) {
+  get: function (target, prop, receiver) {
     if (prop === "proxied") {
       return "replaced value";
     }
     return Reflect.get(...arguments);
-  }
+  },
 };
 
 const proxy = new Proxy(target, handler);
 
 console.log(proxy.notProxied); // "original value"
-console.log(proxy.proxied);    // "replaced value"
+console.log(proxy.proxied); // "replaced value"
 ```
 
 ## Specifications
 
-| Specification                                                                                |
-| -------------------------------------------------------------------------------------------- |
+| Specification                                                          |
+| ---------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-proxy-constructor', 'Proxy constructor')}} |
 
 ## Browser compatibility

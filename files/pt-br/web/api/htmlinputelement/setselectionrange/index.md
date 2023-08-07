@@ -31,23 +31,23 @@ inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectio
 The following code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset=utf-8>
-<title>JS Bin</title>
-<script>
-function SelectText () {
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Bin</title>
+    <script>
+      function SelectText() {
         var input = document.getElementById("mytextbox");
-            input.focus();
-            input.setSelectionRange(2,5);
-}
-</script>
-</head>
-<body>
-  <p><input type="text" id="mytextbox" size="20" value="Mozilla"/></p>
-  <p><button onclick="SelectText()">Select text</button></p>
-</body>
+        input.focus();
+        input.setSelectionRange(2, 5);
+      }
+    </script>
+  </head>
+  <body>
+    <p><input type="text" id="mytextbox" size="20" value="Mozilla" /></p>
+    <p><button onclick="SelectText()">Select text</button></p>
+  </body>
 </html>
 ```
 
@@ -55,17 +55,13 @@ will produce the following:
 
 ![example.png](/@api/deki/files/6104/=example.png)
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                                                | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}} | {{Spec2("HTML WHATWG")}} | No change          |
-| {{SpecName("HTML5.1", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}}     | {{Spec2("HTML5.1")}}     | No change          |
-| {{SpecName("HTML5 W3C", "forms.html#dom-textarea/input-setselectionrange", "HTMLInputElement.setSelectionRange()")}} | {{Spec2("HTML5 W3C")}}     | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
-{{Compat("api.HTMLInputElement.setSelectionRange")}}
+{{Compat}}
 
 ## See also
 
