@@ -35,7 +35,7 @@ String.fromCharCode(num1[, ...[, numN]])
 Следующий пример вернёт строку "ABC".
 
 ```js
-String.fromCharCode(65, 66, 67);  // "ABC"
+String.fromCharCode(65, 66, 67); // "ABC"
 ```
 
 [Полная таблица UTF-16](https://asecuritysite.com/coding/asc2)
