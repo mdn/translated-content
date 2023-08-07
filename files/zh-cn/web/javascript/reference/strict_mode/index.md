@@ -40,7 +40,7 @@ var v = "Hi!  I'm a strict mode script!";
 ```js
 function strict() {
   // 函数级别严格模式语法
-  'use strict';
+  "use strict";
   function nested() {
     return "And so am I!";
   }
@@ -64,9 +64,9 @@ function notStrict() {
 
 ```js
 "use strict";
-                       // 假如有一个全局变量叫做 mistypedVariable
+// 假如有一个全局变量叫做 mistypedVariable
 mistypedVaraible = 17; // 因为变量名拼写错误
-                       // 这一行代码就会抛出 ReferenceError
+// 这一行代码就会抛出 ReferenceError
 ```
 
 第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 ([non-extensible](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions) object) 的新属性赋值) 都会抛出异常：
@@ -80,7 +80,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // 抛出 TypeError 错误
 
 // 给只读属性赋值
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // 抛出 TypeError 错误
 
 // 给不可扩展对象的新属性赋值
@@ -108,7 +112,8 @@ var o = { p: 1, p: 2 }; // !!! 语法错误
 第五，严格模式要求函数的参数名唯一。在正常模式下，最后一个重名参数名会掩盖之前的重名参数。之前的参数仍然可以通过 `arguments[i] 来访问`, 还不是完全无法访问。然而，这种隐藏毫无意义而且可能是意料之外的 (比如它可能本来是打错了), 所以在严格模式下重名参数被认为是语法错误：
 
 ```js
-function sum(a, a, c) { // !!! 语法错误
+function sum(a, a, c) {
+  // !!! 语法错误
   "use strict";
   return a + a + c; // 代码运行到这里会出错
 }
@@ -124,9 +129,10 @@ var a = 0o10; // ES6: 八进制
 
 ```js
 "use strict";
-var sum = 015 + // !!! 语法错误
-          197 +
-          142;
+var sum =
+  015 + // !!! 语法错误
+  197 +
+  142;
 ```
 
 第七，ECMAScript 6 中的严格模式禁止设置{{Glossary("primitive")}}值的属性。不采用严格模式，设置属性将会简单忽略 (no-op),采用严格模式，将抛出{{jsxref("TypeError")}}错误
@@ -148,7 +154,8 @@ false.true = ""; // TypeError
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! 语法错误
+with (obj) {
+  // !!! 语法错误
   // 如果没有开启严格模式，with 中的这个 x 会指向 with 上面的那个 x，还是 obj.x？
   // 如果不运行代码，我们无法知道，因此，这种代码让引擎无法进行优化，速度也就会变慢。
   x;
@@ -176,7 +183,7 @@ function strict1(str) {
 function strict2(f, str) {
   "use strict";
   return f(str); // 没有直接调用 eval(...): 当且仅当 str 中的代码开启了严格模式时
-                 // 才会在严格模式下运行
+  // 才会在严格模式下运行
 }
 function nonstrict(str) {
   return eval(str); // 当且仅当 str 中的代码开启了"use strict"，str 中的代码才会在严格模式下运行
@@ -214,12 +221,13 @@ eval("var y; delete y;"); // !!! 语法错误
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
@@ -240,7 +248,9 @@ console.assert(pair[1] === 17);
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // 抛出类型错误
 ```
 
@@ -252,7 +262,9 @@ f(); // 抛出类型错误
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -265,7 +277,7 @@ console.assert(fun.bind(true)() === true);
 ```js
 function restricted() {
   "use strict";
-  restricted.caller;    // 抛出类型错误
+  restricted.caller; // 抛出类型错误
   restricted.arguments; // 抛出类型错误
 }
 
@@ -294,7 +306,7 @@ fun(1, 2); // 不会暴露 v（或者 a，或者 b）
 
 第一，在严格模式中一部分字符变成了保留的关键字。这些字符包括`implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`和`yield`。在严格模式下，你不能再用这些名字作为变量名或者形参名。
 
-```js
+```js-nolint
 function package(protected) { // !!!
   "use strict";
   var implements; // !!!
@@ -316,17 +328,18 @@ function fun(static) { 'use strict'; } // !!!
 ```js
 "use strict";
 if (true) {
-  function f() { } // !!! 语法错误
+  function f() {} // !!! 语法错误
   f();
 }
 
 for (var i = 0; i < 5; i++) {
-  function f2() { } // !!! 语法错误
+  function f2() {} // !!! 语法错误
   f2();
 }
 
-function baz() { // 合法
-  function eit() { } // 同样合法
+function baz() {
+  // 合法
+  function eit() {} // 同样合法
 }
 ```
 

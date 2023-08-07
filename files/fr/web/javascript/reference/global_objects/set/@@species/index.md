@@ -1,7 +1,6 @@
 ---
 title: get Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 ## Syntaxe
 
 ```js
-Set[Symbol.species]
+Set[Symbol.species];
 ```
 
 ## Description

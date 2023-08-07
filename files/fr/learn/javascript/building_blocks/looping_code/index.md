@@ -1,7 +1,6 @@
 ---
 title: Les boucles dans le code
 slug: Learn/JavaScript/Building_blocks/Looping_code
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -835,7 +834,7 @@ do {
 
 Nous recommandons `for`, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer&nbsp;: l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.
 
-> **Note :** Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration).
+> **Note :** Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération).
 
 ## Conclusion
 
@@ -845,7 +844,7 @@ S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'a
 
 ## Voir aussi
 
-- [Boucles et itération](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration)
+- [Boucles et itération](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération)
 - [L'instruction `for`](/fr/docs/Web/JavaScript/Reference/Instructions/for)
 - [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while) et [`do…while`](/fr/docs/Web/JavaScript/Reference/Instructions/do...while)
 - [`break`](/fr/docs/Web/JavaScript/Reference/Instructions/break) et [`continue`](/fr/docs/Web/JavaScript/Reference/Instructions/continue)

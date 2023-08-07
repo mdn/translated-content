@@ -1,7 +1,6 @@
 ---
 title: Window.dump()
 slug: Web/API/Window/dump
-translation_of: Web/API/Window/dump
 ---
 
 {{ApiRef}} {{Non-standard_header}}
@@ -13,7 +12,7 @@ La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils 
 ## Syntaxe
 
 ```js
-dump(message)
+dump(message);
 ```
 
 ### Paramètres

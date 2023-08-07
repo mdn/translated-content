@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
 
 {{JSRef}}
@@ -43,8 +42,8 @@ On notera également que la conversion ne repose pas sur une correspondance un �
 ## Exemples
 
 ```js
-"alphabet".toLocaleUpperCase();       // "ALPHABET"
-'Gesäß'.toLocaleUpperCase();          // 'GESÄSS'
+"alphabet".toLocaleUpperCase(); // "ALPHABET"
+"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
 "i\u0307".toLocaleUpperCase("lt-LT"); // "I"
 ```
 

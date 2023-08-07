@@ -45,8 +45,10 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其他对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
 
 ```js
-const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 ```
 
 ### 创建一个指向类型化数组的 URL
@@ -56,10 +58,11 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 #### HTML
 
 ```html
-<p>此示例创建一个类型化数组，其中包含空格以及 A 到
-  Z 的 ASCII 字符。然后将其转换为一个对象
-  URL。并创建一个打开该对象 URL 的链接。点击这个链接以查看对象
-  URL 解码后的内容。</p>
+<p>
+  此示例创建一个类型化数组，其中包含空格以及 A 到 Z 的 ASCII
+  字符。然后将其转换为一个对象 URL。并创建一个打开该对象 URL
+  的链接。点击这个链接以查看对象 URL 解码后的内容。
+</p>
 ```
 
 #### JavaScript
@@ -77,7 +80,7 @@ function showViewLiveResultButton() {
     const button = document.createElement("button");
     button.textContent = "查看上面示例代码的渲染结果";
     p.append(button);
-    button.addEventListener('click', () => window.open(location.href));
+    button.addEventListener("click", () => window.open(location.href));
     return true;
   }
   return false;
@@ -85,8 +88,9 @@ function showViewLiveResultButton() {
 
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
-    return URL.createObjectURL(new Blob([typedArray.buffer],
-        {type: mimeType}))
+    return URL.createObjectURL(
+      new Blob([typedArray.buffer], { type: mimeType }),
+    );
   }
   const bytes = new Uint8Array(59);
 
@@ -94,11 +98,11 @@ if (!showViewLiveResultButton()) {
     bytes[i] = 32 + i;
   }
 
-  const url = typedArrayToURL(bytes, 'text/plain');
+  const url = typedArrayToURL(bytes, "text/plain");
 
-  const link = document.createElement('a');
+  const link = document.createElement("a");
   link.href = url;
-  link.innerText = '打开这个数组的 URL';
+  link.innerText = "打开这个数组的 URL";
 
   document.body.appendChild(link);
 }
@@ -114,8 +118,8 @@ if (!showViewLiveResultButton()) {
 
 ```js
 const reader = new FileReader();
-reader.addEventListener('loadend', () => {
-   // reader.result 包含被转化为类型化数组的 blob 中的内容
+reader.addEventListener("loadend", () => {
+  // reader.result 包含被转化为类型化数组的 blob 中的内容
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -123,7 +127,7 @@ reader.readAsArrayBuffer(blob);
 另一种读取 `Blob` 中内容的方式是使用 {{domxref("Response")}} 对象。下述代码将 `Blob` 中的内容读取为文本：
 
 ```js
-const text = await (new Response(blob)).text();
+const text = await new Response(blob).text();
 ```
 
 或者，也可以使用 {{DOMxRef("Blob.prototype.text()")}}：

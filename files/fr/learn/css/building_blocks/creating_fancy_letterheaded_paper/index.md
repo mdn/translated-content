@@ -1,7 +1,6 @@
 ---
 title: Création d'un en-tête de papier à lettre élégant
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}

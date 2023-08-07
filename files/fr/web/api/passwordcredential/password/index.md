@@ -1,7 +1,6 @@
 ---
 title: PasswordCredential.password
 slug: Web/API/PasswordCredential/password
-translation_of: Web/API/PasswordCredential/password
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}
@@ -11,7 +10,7 @@ La propriété **`password`** est une propriété accessible en lecture seule ra
 ## Syntaxe
 
 ```js
-password = passwordCredential.password
+password = passwordCredential.password;
 ```
 
 ### Valeur

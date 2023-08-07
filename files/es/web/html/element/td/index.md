@@ -1,7 +1,6 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-original_slug: Web/HTML/Elemento/td
 ---
 
 {{HTMLSidebar}}
@@ -12,12 +11,12 @@ El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la ce
 
 ## Contexto de uso
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                             |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Contenido permitido                                                        | Contenido dinámico.                                                                                                                                                                                                                  |
+| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                               |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                        | Contenido dinámico.                                                                                                                                                                                                    |
 | Omision de Etiquetas                                                       | La etiqueta de inicio es obligatoria. La etiqueta final puede ser omitida, si esta inmediatamente seguida por un elemento {{HTMLElement("th")}} o un {{HTMLElement("td")}} o si no hay más datos en el elemento padre. |
-| Elementos padre permitidos                                                 | Un elemento {{HTMLElement("tr")}}.                                                                                                                                                                                            |
-| Documento normativo                                                        | [HTML5, section 4.9.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element) ([HTML4.01, section 11.2.6](http://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.6))                       |
+| Elementos padre permitidos                                                 | Un elemento {{HTMLElement("tr")}}.                                                                                                                                                                                     |
+| Documento normativo                                                        | [HTML5, section 4.9.9](http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element) ([HTML4.01, section 11.2.6](http://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.6))         |
 
 ## Atributos
 

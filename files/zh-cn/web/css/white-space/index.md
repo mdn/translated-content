@@ -9,7 +9,7 @@ slug: Web/CSS/white-space
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-这个属性表明了两件事:
+这个属性表明了两件事：
 
 - 空白字符是否以及如何它们该如何[合并](#合并空白字符)。
 - 行是否采用软换行。
@@ -80,8 +80,8 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* current browsers */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* current browsers */
 }
 ```
 

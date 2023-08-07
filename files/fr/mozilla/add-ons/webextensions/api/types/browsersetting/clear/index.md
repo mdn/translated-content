@@ -1,7 +1,6 @@
 ---
 title: clear()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 ---
 
 {{AddonSidebar}}
@@ -16,8 +15,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var clearing = setting.clear(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -35,7 +34,7 @@ Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Exemple
 
-Effacer le paramètre `webRTCIPHandlingPolicy`  :
+Effacer le paramètre `webRTCIPHandlingPolicy` :
 
 ```js
 function onCleared(result) {

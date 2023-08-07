@@ -1,5 +1,5 @@
 ---
-title: 'Window: pagehide イベント'
+title: "Window: pagehide イベント"
 slug: Web/API/Window/pagehide_event
 ---
 

@@ -7,7 +7,7 @@ slug: Web/API/HTMLScriptElement
 
 HTML 脚本元素暴露 HTMLScriptElement 接口，它提供了特殊的属性和方法 (超出了常规 HTMLElement 对象接口，他们也可以通过继承操纵<脚本>元素的布局和演示。）
 
-## Properties
+## 属性
 
 _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
 
@@ -22,15 +22,18 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td><code id="type_property">type</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        代表了脚本的 MIME 类型。它反映了[`type`](/zh-CN/docs/Web/HTML/Element/script#type)
-        属性。如何解析奇异的编程语言，请阅读这篇文章。
+        代表了脚本的 MIME 类型。它反映了 <a
+          href="/zh-CN/docs/Web/HTML/Element/script#type"><code>type</code></a
+        > 属性。如何解析奇异的编程语言，请阅读这篇文章。
       </td>
     </tr>
     <tr>
       <td><code id="src_property">src</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        代表了使用外部脚本资源的地址。它反映了[`src`](/zh-CN/docs/Web/HTML/Element/script#src)属性。
+        代表了使用外部脚本资源的地址。它反映了 <a
+          href="/zh-CN/docs/Web/HTML/Element/script#src"><code>src</code></a
+        > 属性。
       </td>
     </tr>
     <tr>
@@ -55,8 +58,9 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td><code id="charset_property">charset</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        代表外部脚本资源的字符编码。它反映了[`charset`](/zh-CN/docs/Web/HTML/Element/script#charset)
-        属性。
+        代表外部脚本资源的字符编码。它反映了 <a
+          href="/zh-CN/docs/Web/HTML/Element/script#charset"><code>charset</code></a
+        > 属性。
       </td>
     </tr>
     <tr>
@@ -72,15 +76,20 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
           使用该属性有三种模式可供选择，如果 async 属性存在，脚本将异步执行，只要它是可用的，如果 async 属性不存在，而 defer 属性存在，脚本将会在页面完成解析后执行，如果都不存在，那么脚本会在 useragent 解析页面之前被取出并立刻执行。
         </p>
         <div class="note">
-          <strong
-            >注意：这些属性的处理细节，主要是历史原因，有些重要的，涉及很多方面的 HTML。因此实现需求的必要性分散在规范。这些描述这个处理的核心算法，但这些算法参考和引用的解析规则{
-            HTMLElement("脚本")} {
-            }开始和结束标记在 HTML 中，在国外内容，并在 XML 中，规则的 document .
-            write() 方法，处理脚本等。</strong
-          >
+          <strong>备注：</strong>这些属性的具体处理细节非常复杂，涉及 HTML
+          的许多不同方面，因此分散在整个规范中。<a
+            href="https://html.spec.whatwg.org/multipage/scripting.html">这些算法</a
+          >描述了核心思想，但它们依赖于 HTML、<a
+            href="https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements">外部内容</a
+          >和 <a href="https://html.spec.whatwg.org/multipage/xhtml.html">XML 中</a>
+          {{HTMLElement("script")}} <a href="https://html.spec.whatwg.org/multipage/syntax.html#start-tags">开始</a>和<a
+            href="https://html.spec.whatwg.org/multipage/syntax.html#end-tags">结束</a
+          >标记的解析规则；<a href="/zh-CN/docs/Web/API/Document/write"
+          ><code>document.write()</code></a> 方法的规则；<a
+            href="https://html.spec.whatwg.org/multipage/webappapis.html">脚本处理</a>等等。
         </div>
         <p>
-          延迟属性可以指定即使指定异步属性，导致遗留 Web 浏览器只支持推迟 (而不是异步) 回落推迟行为而不是同步阻塞是默认的行为。
+          延迟属性可以指定即使指定异步属性，导致遗留 Web 浏览器只支持推迟（而不是异步）回落推迟行为而不是同步阻塞是默认的行为。
         </p>
       </td>
     </tr>
@@ -95,7 +104,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       </td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        是一个{{domxref("DOMString")}},对应于歌珥设置这个脚本元素。有关详细信息，请参阅歌珥设置属性。这对脚本控制，从其他来源，获得错误信息是否会被暴露出来。
+        反馈该脚本元素 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 设置</a>的字符串。对其他<a href="/zh-CN/docs/Glossary/Origin">源</a>的脚本，此属性控制错误信息的暴露情况。
       </td>
     </tr>
     <tr>
@@ -103,65 +112,68 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         <p>
-          IDL 属性内容的文本必须返回一个连接的所有文本节点的孩子{{HTMLElement("script")}}元素 (忽略任何其他节点如评论或元素),在树的顺序。设置，它必须采取行动一样 textContent
-          IDL 属性。
+          一个字符串，用于按树形顺序连接并返回 {{HTMLElement("script")}} 元素（忽略注释等其他节点）内所有<a href="/zh-CN/docs/Web/API/Text">文本节点</a>的内容。在设置时，它的作用与 <a href="/zh-CN/docs/Web/API/Node/textContent"><code>textContent</code></a> IDL 属性相同。
         </p>
         <div class="note">
-          <strong
-            >注意：当插入使用 document . write() 方法，{ { HTMLElement("脚本")}
-            }元素执行 (通常是同步),但当插入使用 innerHTML 和 outerHTML 属性，他们不执行。</strong
-          >
+          <strong>备注：</strong>当插入使用
+          <code>document.write()</code> 方法，{{HTMLElement("script")}}
+          元素执行（通常是同步），但当插入使用 innerHTML 和 outerHTML 属性，它们不执行。
         </div>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Methods
+## 方法
 
-_没有具体的方法;属性从其父类继承，{{domxref("HTMLElement")}}。_
+_没有具体的方法；属性从其父类 {{domxref("HTMLElement")}} 继承。_
 
-## 例子
+## 示例
 
 ### 动态导入脚本
 
-让我们创建一个名为 importScript 的函数，它能够在一个文档中导入新的脚本，创建一个{{HTMLElement("script")}} 节点，并立即插入到宿主{{HTMLElement("script")}} 之前 (通过 {{domxref("document.currentScript")}} 可以获取宿主 script 标签）。这些脚本将**异步**执行。更多细节，请参见 defer 和 async 属性。
+让我们创建一个名为 importScript 的函数，它能够在一个文档中导入新的脚本，创建一个 {{HTMLElement("script")}} 节点，并立即插入到宿主 {{HTMLElement("script")}} 之前（通过 {{domxref("document.currentScript")}} 可以获取宿主 script 标签）。这些脚本将**异步**执行。更多细节，请参见 defer 和 async 属性。
 
 ```js
-function loadError (oError) {
+function loadError(oError) {
   throw new URIError("The script " + oError.target.src + " is not accessible.");
 }
 
-function importScript (sSrc, fOnload) {
+function importScript(sSrc, fOnload) {
   var oScript = document.createElement("script");
-  oScript.type = "text\/javascript";
+  oScript.type = "text/javascript";
   oScript.onerror = loadError;
-  if (fOnload) { oScript.onload = fOnload; }
-  document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
+  if (fOnload) {
+    oScript.onload = fOnload;
+  }
+  document.currentScript.parentNode.insertBefore(
+    oScript,
+    document.currentScript,
+  );
   oScript.src = sSrc;
 }
 ```
 
-…the same thing, but appending the new scripts as last childs of the {{ HTMLElement("head") }} tag, instead of appending them immediately before the {{domxref("document.currentScript")}} element:
-
-与上面大致相同，但有一点不同的是 新创建的 script 标签插入到了{{HTMLElement("head")}}标签的的最后，而不是插入到了{{domxref("document.currentScript")}}元素之前：
+以下函数不是将新脚本直接插入在 {{domxref("document.currentScript")}} 元素之前，而是将它们作为 {{HTMLElement("head")}} 标签的子节点追加。
 
 ```js
 var importScript = (function (oHead) {
-
-  function loadError (oError) {
-    throw new URIError("The script " + oError.target.src + " is not accessible.");
+  function loadError(oError) {
+    throw new URIError(
+      "The script " + oError.target.src + " is not accessible.",
+    );
   }
 
   return function (sSrc, fOnload) {
     var oScript = document.createElement("script");
-    oScript.type = "text\/javascript";
+    oScript.type = "text/javascript";
     oScript.onerror = loadError;
-    if (fOnload) { oScript.onload = fOnload; }
+    if (fOnload) {
+      oScript.onload = fOnload;
+    }
     oHead.appendChild(oScript);
     oScript.src = sSrc;
-  }
-
+  };
 })(document.head || document.getElementsByTagName("head")[0]);
 ```
 
@@ -169,7 +181,14 @@ var importScript = (function (oHead) {
 
 ```js
 importScript("myScript1.js");
-importScript("myScript2.js", /* onload function: */ function () { alert("You read this alert because the script \"myScript2.js\" has been correctly loaded."); });
+importScript(
+  "myScript2.js",
+  /* onload function: */ function () {
+    alert(
+      'You read this alert because the script "myScript2.js" has been correctly loaded.',
+    );
+  },
+);
 ```
 
 ## 规范
@@ -180,10 +199,9 @@ importScript("myScript2.js", /* onload function: */ function () { alert("You rea
 
 {{Compat}}
 
-## See also
+## 参见
 
-- HTML {{ HTMLElement("script") }} element
-- HTML {{ HTMLElement("noscript") }} element
+- HTML {{ HTMLElement("script") }} 元素
+- HTML {{ HTMLElement("noscript") }} 元素
 - {{domxref("document.currentScript")}}
-- [Web Workers](/zh-CN/docs/DOM/Using_web_workers) (code snippets similar to scripts but executed in [another global context](/zh-CN/docs/JavaScript/DedicatedWorkerGlobalScope))
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
+- [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)（代码片段与脚本类似，但在[另外一个全局上下文中](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)执行）

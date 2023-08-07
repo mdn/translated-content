@@ -1,7 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-translation_of: Web/HTTP/Methods/PUT
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
-title: '-webkit-text-stroke'
+title: "-webkit-text-stroke"
 slug: Web/CSS/-webkit-text-stroke
-translation_of: Web/CSS/-webkit-text-stroke
 ---
 
 {{CSSRef}}{{Non-standard_header}}

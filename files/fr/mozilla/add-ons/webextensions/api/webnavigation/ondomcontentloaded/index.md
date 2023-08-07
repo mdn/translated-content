@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
 
 {{AddonSidebar()}}
@@ -12,11 +11,11 @@ Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLo
 
 ```js
 browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onDOMContentLoaded.removeListener(listener)
-browser.webNavigation.onDOMContentLoaded.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onDOMContentLoaded.removeListener(listener);
+browser.webNavigation.onDOMContentLoaded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -67,18 +66,17 @@ Logs les URL cibles pour `onDOMContentLoaded`,si le nom d'hôte de l'URL cible c
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

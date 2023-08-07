@@ -14025,19 +14025,6 @@
       "Hfjapancom"
     ]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2020-10-15T21:43:18.027Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "forl-developer",
-      "silverskyvicto",
-      "fscholz",
-      "toris-birds",
-      "hamasaki",
-      "gurezo"
-    ]
-  },
   "Web/API/Window/afterprint_event": {
     "modified": "2020-10-15T22:26:51.266Z",
     "contributors": ["mfuji09"]

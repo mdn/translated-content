@@ -1,7 +1,6 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-translation_of: Web/API/Document/queryCommandSupported
 ---
 
 {{ApiRef("DOM")}}
@@ -32,7 +31,7 @@ La commande `'paste'` (_coller_) renvoie `false` (_faux_), pas seulement si la f
 ```js
 var flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
+if (flg) {
   // ...Faire quelque chose
 }
 ```

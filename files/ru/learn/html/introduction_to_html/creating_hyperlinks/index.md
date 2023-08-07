@@ -1,19 +1,6 @@
 ---
 title: Создание гиперссылок
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Абсолютные
-  - Гиперссылки
-  - Единый указатель ресурса
-  - Заголовок
-  - Начинающий
-  - Обучение
-  - Относительные
-  - Руководство
-  - Ссылки
-  - Язык гипертекстовой разметки
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперссылок
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -39,7 +26,8 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 Простая ссылка создаётся путём обёртывания текста (или другого содержимого, смотрите [Ссылки-блоки](#ссылки-блоки)), который вы хотите превратить в ссылку, в элемент {{htmlelement ("a")}}, и придания этому элементу атрибута [`href`](/ru/docs/Web/HTML/Element/a#href) (который также известен как **гипертекстовая ссылка,** или **цель**), который будет содержать веб-адрес, на который вы хотите указать ссылку.
 
 ```html
-<p>Я создал ссылку на
+<p>
+  Я создал ссылку на
   <a href="https://www.mozilla.org/ru/">домашнюю страницу Mozilla</a>.
 </p>
 ```
@@ -53,11 +41,14 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 Другим атрибутом, который вы можете добавить к своим ссылкам, является — `title`. Он предназначен для хранения полезной информации о ссылке. Например, какую информацию содержит страница или другие вещи, о которых вам нужно знать. Например:
 
 ```html
-<p>Я создал ссылку на
-  <a href="https://www.mozilla.org/ru/"
-     title="Лучшее место для поиска дополнительной информации
-     о миссии Mozilla и о том, как внести свой вклад">домашнюю страницу Mozilla
-  </a>.
+<p>
+  Я создал ссылку на
+  <a
+    href="https://www.mozilla.org/ru/"
+    title="Лучшее место для поиска дополнительной информации
+     о миссии Mozilla и о том, как внести свой вклад"
+    >домашнюю страницу Mozilla </a
+  >.
 </p>
 ```
 
@@ -81,7 +72,9 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 ```html
 <a href="https://www.mozilla.org/ru/">
-  <img src="mozilla-image.png" alt="логотип mozilla со ссылкой на их домашнюю страницу">
+  <img
+    src="mozilla-image.png"
+    alt="логотип mozilla со ссылкой на их домашнюю страницу" />
 </a>
 ```
 
@@ -104,24 +97,25 @@ URL-адреса используют пути для поиска файлов.
 - **Тот же каталог**: Если вы хотите подключить ссылку внутри `index.html` (верхний уровень `index.html`), указывающую на `contacts.html`, вам просто нужно указать имя файла, на который вы хотите установить ссылку, так как он находится в том же каталоге, что и текущий файл. Таким образом, URL-адрес, который вы используете — `contacts.html`:
 
   ```html
-  <p>Хотите связаться с конкретным сотрудником?
-     Найдите подробную информацию на нашей
-    <a href="contacts.html">странице контактов</a>.
+  <p>
+    Хотите связаться с конкретным сотрудником? Найдите подробную информацию на
+    нашей <a href="contacts.html">странице контактов</a>.
   </p>
   ```
 
 - **Перемещение вниз в подкаталоги**: Если вы хотите подключить ссылку внутри `index.html` (верхний уровень `index.html`), указывающую на `projects/index.html`, вам нужно спуститься ниже в директории `projects` перед тем, как указать файл, который вы хотите. Это делается путём указания имени каталога, после которого идёт слеш и затем имя файла. Итак, URL-адрес, который вы используете - `projects/index.html`:
 
   ```html
-  <p>Посетите мою
-    <a href="projects/index.html">домашнюю страницу проекта</a>.
+  <p>
+    Посетите мою <a href="projects/index.html">домашнюю страницу проекта</a>.
   </p>
   ```
 
 - **Перемещение обратно в родительские каталоги**: Если вы хотите подключить ссылку внутри `projects/index.html`, указывающую на `pdfs/project-brief.pdf`, вам нужно будет подняться на уровень каталога, затем спустится в каталог `pdf`. "Подняться вверх на уровень каталога" обозначается двумя точками — `..` — так, URL-адрес, который вы используете `../pdfs/project-brief.pdf`:
 
   ```html
-  <p>Ссылка на
+  <p>
+    Ссылка на
     <a href="../pdfs/project-brief.pdf">краткое описание моего проекта</a>.
   </p>
   ```
@@ -140,7 +134,8 @@ URL-адреса используют пути для поиска файлов.
 Затем, чтобы связаться с этим конкретным `id`, вы должны включить его в конец URL-адреса, которому предшествует знак решётки, например:
 
 ```html
-<p>Хотите написать мне письмо? Используйте наш
+<p>
+  Хотите написать мне письмо? Используйте наш
   <a href="contacts.html#Почтовый_адрес">почтовый адрес</a>.
 </p>
 ```
@@ -187,18 +182,13 @@ _Относительный URL_ будет указывать на различ
 _**Хороший** текст ссылки:_ [Скачать Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  Скачать Firefox
-</a></p>
+<p><a href="https://firefox.com/"> Скачать Firefox </a></p>
 ```
 
 _**Плохой** текст ссылки:_ [Нажми сюда](https://firefox.com/), чтобы скачать Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  Нажми сюда
-</a>
-чтобы скачать Firefox</p>
+<p><a href="https://firefox.com/"> Нажми сюда </a> чтобы скачать Firefox</p>
 ```
 
 Советы:
@@ -225,17 +215,23 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 Посмотрите на примеры, чтобы увидеть, как добавить описание:
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  Скачать отчёт о продажах (PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    Скачать отчёт о продажах (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/">
-  Посмотреть видео (видео откроется в отдельном окне, HD качество)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/">
+    Посмотреть видео (видео откроется в отдельном окне, HD качество)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  Играть в гонки (необходим Flash)
-</a></p>
+<p>
+  <a href="http://www.example.com/car-game">
+    Играть в гонки (необходим Flash)
+  </a>
+</p>
 ```
 
 ### Используйте атрибут download, когда создаёте ссылку
@@ -243,8 +239,9 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 Когда создаёте ссылку на файл, который должен быть загружен, а не открыт в браузере, можете использовать атрибут `download`, чтобы создать имя файла по умолчанию для сохранения . Приведём пример ссылки для загрузки браузера Firefox 39:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-   download="firefox-39-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
+  download="firefox-39-installer.exe">
   Скачать Firefox 39 для Windows
 </a>
 ```
@@ -294,7 +291,8 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 Вот пример который включает cc(кому отправить копию сообщения, все получатели письма видят список тех кто это письмо получит), bcc(скрытый адрес получателя, никто из получателей не будет видеть полный список получателей письма), subject(тема письма) и body(текст сообщения):
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

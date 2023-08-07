@@ -32,7 +32,7 @@ socket.binaryType = "arraybuffer";
 
 // On écoute les différents messages
 socket.addEventListener("message", function (event) {
-  if(event.data instanceof ArrayBuffer) {
+  if (event.data instanceof ArrayBuffer) {
     // Frame de données binaires
     const view = new DataView(event.data);
     console.log(view.getInt32(0));

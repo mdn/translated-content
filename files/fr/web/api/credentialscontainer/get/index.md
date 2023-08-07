@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-translation_of: Web/API/CredentialsContainer/get
 ---
 
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
@@ -17,7 +16,7 @@ Cette méthode récupère les informations d'authentification en appelant la mé
 ## Syntaxe
 
 ```js
-var promise = CredentialsContainer.get([options])
+var promise = CredentialsContainer.get([options]);
 ```
 
 ### Paramètres

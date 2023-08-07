@@ -1,7 +1,6 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
-translation_of: Web/API/HTMLBRElement
 ---
 
 {{ApiRef}}
@@ -12,8 +11,8 @@ L'interface **`HTMLBRElement`** représente un retour à la ligne. Il hérite de
 
 _Hérite les propriétés de son parent : {{domxref("HTMLElement")}}._
 
-| Nom                              | Type                             | Description                                            |
-| -------------------------------- | -------------------------------- | ------------------------------------------------------ |
+| Nom                           | Type                     | Description                                            |
+| ----------------------------- | ------------------------ | ------------------------------------------------------ |
 | `clear` {{deprecated_inline}} | {{domxref("DOMString")}} | Indique le flux du texte autours des objets flottants. |
 
 ## Méthodes

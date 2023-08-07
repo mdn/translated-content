@@ -1,7 +1,6 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
-translation_of: Web/API/Document/createProcessingInstruction
 ---
 
 {{APIRef("DOM")}}
@@ -30,9 +29,12 @@ Processing instruction node = document.createProcessingInstruction(target, data)
 ## Exemple
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
 
-var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+var pi = docu.createProcessingInstruction(
+  "xml-stylesheet",
+  'href="mycss.css" type="text/css"',
+);
 
 docu.insertBefore(pi, docu.firstChild);
 

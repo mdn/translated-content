@@ -1,13 +1,16 @@
 ---
-title: Event.bubbles
+title: "Event: bubbles プロパティ"
+short-title: bubbles
 slug: Web/API/Event/bubbles
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{ ApiRef("DOM") }}
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
 
-> **メモ:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)を参照してください。
+> **メモ:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
 
 ## 値
 
@@ -17,13 +20,12 @@ slug: Web/API/Event/bubbles
 
 ```js
 function handleInput(e) {
-  // Checks whether the event bubbles and ...
+  // バブリングするイベントを渡すかどうかをチェック
   if (!e.bubbles) {
-    // ... passes the event along if does not
     passItOn(e);
   }
 
-  // Already bubbling
+  // 既にバブリングした
   doOutput(e);
 }
 ```

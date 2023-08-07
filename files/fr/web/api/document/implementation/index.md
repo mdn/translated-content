@@ -1,7 +1,6 @@
 ---
 title: document.implementation
 slug: Web/API/Document/implementation
-translation_of: Web/API/Document/implementation
 ---
 
 ## Résumé
@@ -19,9 +18,9 @@ DOMImpObj = document.implementation;
 ```js
 var modName = "HTML";
 var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+var conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
+alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 
 // alerte avec : "DOM HTML 2.0 pris en charge ?: true" si le module DOM niveau 2 HTML est pris en charge.
 ```

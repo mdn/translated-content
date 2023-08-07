@@ -1,7 +1,6 @@
 ---
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
-translation_of: Web/API/WheelEvent/deltaY
 ---
 
 {{APIRef("DOM Events")}}
@@ -17,7 +16,10 @@ var dY = event.deltaY;
 ## Exemple
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```

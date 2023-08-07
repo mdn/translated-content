@@ -1,8 +1,6 @@
 ---
 title: DeviceRotationRate
 slug: Web/API/DeviceMotionEventRotationRate
-translation_of: Web/API/DeviceMotionEventRotationRate
-translation_of_original: Web/API/DeviceRotationRate
 ---
 
 {{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}

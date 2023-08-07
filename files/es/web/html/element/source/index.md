@@ -1,7 +1,6 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-original_slug: Web/HTML/Elemento/source
 ---
 
 El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
@@ -93,9 +92,9 @@ Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos n
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   Lo lamento; su navegador no soporta video HTML5.
 </video>
 ```

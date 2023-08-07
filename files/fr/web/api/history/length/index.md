@@ -1,7 +1,6 @@
 ---
 title: History.length
 slug: Web/API/History/length
-translation_of: Web/API/History/length
 ---
 
 {{APIRef("History API")}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`History.length`** retourne un entier indiquan
 ## Syntaxe
 
 ```js
-const length = history.length
+const length = history.length;
 ```
 
 ## Spécifications

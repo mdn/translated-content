@@ -46,7 +46,7 @@ Ver {{Cssxref(":nth-child")}} para una explicación más detallada de su sintaxi
 
 ```css
 /* Párrafos impares */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 

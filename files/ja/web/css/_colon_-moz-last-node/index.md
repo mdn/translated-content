@@ -1,5 +1,5 @@
 ---
-title: ':-moz-last-node'
+title: ":-moz-last-node"
 slug: Web/CSS/:-moz-last-node
 ---
 
@@ -12,7 +12,7 @@ slug: Web/CSS/:-moz-last-node
 ## 構文
 
 ```css
-:-moz-last-node
+:-moz-last-node {}
 ```
 
 ## 例

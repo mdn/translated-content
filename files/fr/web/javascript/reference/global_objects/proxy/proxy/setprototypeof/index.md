@@ -1,7 +1,6 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsx
 
 ```js
 var p = new Proxy(cible, {
-  setPrototypeOf: function(cible, prototype) {
-  }
+  setPrototypeOf: function (cible, prototype) {},
 });
 ```
 
@@ -57,12 +55,13 @@ Avec cette première approche, toute opération qui voudra modifier le prototype
 
 ```js
 var handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto);
@@ -75,12 +74,13 @@ Avec cette seconde approche, toute tentative de modification génèrera une exce
 
 ```js
 var handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error("erreur custom");
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("erreur custom");
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto);

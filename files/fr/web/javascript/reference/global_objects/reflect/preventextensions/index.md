@@ -1,7 +1,6 @@
 ---
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajou
 ## Syntaxe
 
 ```js
-Reflect.preventExtensions(cible)
+Reflect.preventExtensions(cible);
 ```
 
 ### Paramètres

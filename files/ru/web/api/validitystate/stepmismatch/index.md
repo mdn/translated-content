@@ -1,13 +1,6 @@
 ---
 title: ValidityState.stepMismatch
 slug: Web/API/ValidityState/stepMismatch
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Свойство
-  - Справочник
-browser-compat: api.ValidityState.stepMismatch
 ---
 
 Доступное только для чтения свойство **`stepMismatch`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом `step`.
@@ -17,7 +10,7 @@ browser-compat: api.ValidityState.stepMismatch
 Учитывая следующее:
 
 ```html
-<input type="number" min="20" max="40" step="2"/>
+<input type="number" min="20" max="40" step="2" />
 ```
 
 если `(value - min) % 2 != 0`, `stepMismatch` будет true.

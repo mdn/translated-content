@@ -1,7 +1,6 @@
 ---
 title: 網路性能
 slug: Web/Performance
-original_slug: Web/性能
 ---
 
 {{QuickLinksWithSubPages}}

@@ -1,7 +1,6 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-translation_of: Web/API/Element/setPointerCapture
 ---
 
 {{APIRef("DOM")}}
@@ -33,20 +32,20 @@ Cette méthode renvoie `void` et lance une {{domxref("DOMException")}} nommée `
 
 ```html
 <html>
-<script>
-function downHandler(ev) {
- var el=document.getElementById("target");
- //L'élément cible  ('target') recevra/capturera d'autres évènements
- el.setPointerCapture(ev.pointerId);
-}
-function init() {
- var el=document.getElementById("target");
- el.onpointerdown = downHandler;
-}
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
-</body>
+  <script>
+    function downHandler(ev) {
+      var el = document.getElementById("target");
+      //L'élément cible  ('target') recevra/capturera d'autres évènements
+      el.setPointerCapture(ev.pointerId);
+    }
+    function init() {
+      var el = document.getElementById("target");
+      el.onpointerdown = downHandler;
+    }
+  </script>
+  <body onload="init();">
+    <div id="target">Touch me ...</div>
+  </body>
 </html>
 ```
 

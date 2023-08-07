@@ -1,7 +1,6 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un obje
 ## Syntaxe
 
 ```js
-bigIntObj.valueOf()
+bigIntObj.valueOf();
 ```
 
 ### Valeur de retour

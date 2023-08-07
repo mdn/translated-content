@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-translation_of: Web/API/BatteryManager/dischargingTime
 ---
 
 {{APIRef("Battery API")}}
@@ -21,10 +20,11 @@ La propriété **`BatteryManager.dischargingTime`** indique le temps, en seconde
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   const time = battery.dischargingTime;
 
-  document.querySelector('#dischargingTime').textContent = battery.dischargingTime;
+  document.querySelector("#dischargingTime").textContent =
+    battery.dischargingTime;
 });
 ```
 

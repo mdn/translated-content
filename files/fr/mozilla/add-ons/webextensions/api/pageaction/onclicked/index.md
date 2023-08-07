@@ -1,7 +1,6 @@
 ---
 title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
 {{AddonSidebar}}
@@ -13,9 +12,9 @@ Pour définir une action de clic droit, utilisez l'API {{WebExtAPIRef('contextMe
 ## Syntaxe
 
 ```js
-browser.pageAction.onClicked.addListener(listener)
-browser.pageAction.onClicked.removeListener(listener)
-browser.pageAction.onClicked.hasListener(listener)
+browser.pageAction.onClicked.addListener(listener);
+browser.pageAction.onClicked.removeListener(listener);
+browser.pageAction.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -51,11 +50,10 @@ var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(function () {
-});
+browser.pageAction.onClicked.addListener(function () {});
 ```
 
 {{WebExtExamples}}

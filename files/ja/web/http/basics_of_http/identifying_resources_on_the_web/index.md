@@ -17,8 +17,8 @@ HTTP 要求の対象は「リソース」と呼ばれ、その本質は細かく
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/ja/docs/Learn/
+https://developer.mozilla.org/ja/search?q=URL
 ```
 
 ブラウザーのアドレスバーに URL を入力して、URL に関連付けられているページ (リソース) を読み込むように指示できます。
@@ -98,7 +98,7 @@ FTP は最上位では利用できますが (ブラウザーの URL バーに直
 ## 例
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/ja/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
@@ -108,8 +108,8 @@ mailto:help@supercyberhelpdesk.info
 
 ## 仕様書
 
-| 仕様書                                                                   | 題名                                                               |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| 仕様書                                                 | 題名                                                               |
+| ------------------------------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## 関連情報

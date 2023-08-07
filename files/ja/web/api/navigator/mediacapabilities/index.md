@@ -1,5 +1,5 @@
 ---
-title: 'Navigator: mediaCapabilities プロパティ'
+title: "Navigator: mediaCapabilities プロパティ"
 slug: Web/API/Navigator/mediaCapabilities
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48

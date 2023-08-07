@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.length
 slug: WebAssembly/JavaScript_interface/Table/length
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 ---
 
 {{WebAssemblySidebar}}

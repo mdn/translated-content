@@ -1,7 +1,6 @@
 ---
 title: CredentialsContainer.create()
 slug: Web/API/CredentialsContainer/create
-translation_of: Web/API/CredentialsContainer/create
 ---
 
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
@@ -16,7 +15,7 @@ La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsCont
 ## Syntaxe
 
 ```js
-var promise = CredentialsContainer.create([options])
+var promise = CredentialsContainer.create([options]);
 ```
 
 ### Paramètres

@@ -1,16 +1,6 @@
 ---
 title: Структура документа и веб-сайта
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Guide
-  - HTML
-  - Базовая разметка
-  - Гайд
-  - Для новичков
-  - С чего начать
-  - Структура сайта
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
@@ -63,14 +53,17 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 Наш пример, представленный выше, содержит следующий код (Вы также можете [найти пример в нашем репозитории Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Мы хотели бы, чтобы вы взглянули на приведённый выше пример, а затем просмотрели код ниже, чтобы узнать, из каких частей он состоит.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>Заголовок моей страницы</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- следующие 3 строки нужны для корректного отображения семантических элементов HTML5 в старых версиях Internet Explorer-->
     <!--[if lt IE 9]>
@@ -93,34 +86,57 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
         <li><a href="#">Контакты</a></li>
       </ul>
 
-       <!-- Форма поиска — это ещё один распространённый нелинейный способ навигации по веб-сайту. -->
+      <!-- Форма поиска — это ещё один распространённый нелинейный способ навигации по веб-сайту. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Здесь основное содержимое нашей страницы -->
     <main>
-
       <!-- Она содержит статью -->
       <article>
         <h2>Заголовок статьи</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>Подраздел</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Ещё один подраздел</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- Дополнительный контент также может быть вложен в основной контент -->
@@ -135,7 +151,6 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
           <li><a href="#">Лаааадно...</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- И вот наш главный нижний колонтитул, который используется на всех страницах нашего веб-сайта -->
@@ -143,7 +158,6 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
     <footer>
       <p>©Авторские права никому не принадлежат, 2050. Все права защищены.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -169,9 +183,14 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 {{HTMLElement("span")}} — это строчный несемантический элемент, который стоит использовать только если вы не можете подобрать более подходящий семантический текстовый элемент для обёртывания контента или если не хотите добавлять какие-либо конкретные значения. Например:
 
 ```html
-<p>Пьяный Король возвратился в свою комнату в 01:00
-и всё никак не мог войти в дверь: хмель мешал <span class="editor-note">[Примечание редактора: В этот момент
-свет на сцене должен быть приглушён]</span>.</p>
+<p>
+  Пьяный Король возвратился в свою комнату в 01:00 и всё никак не мог войти в
+  дверь: хмель мешал
+  <span class="editor-note"
+    >[Примечание редактора: В этот момент свет на сцене должен быть
+    приглушён]</span
+  >.
+</p>
 ```
 
 В этом примере примечание редактора просто сообщает дополнительные пожелания режиссёру пьесы. В нем нет особого семантического значения. Для слабовидящих пользователей, возможно, примечание будет отделено от основного содержимого с помощью CSS.
@@ -183,12 +202,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
   <h2>Корзина</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Silver earrings</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Серебряные серьги">
+      <p>
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Серебряные серьги" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Итого: $237.89</p>
 </div>
@@ -205,10 +225,12 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 `<br>` создаёт разрыв строки в абзаце, и это единственный способ изменить жёсткую структуру в ситуации, когда вам нужна серия фиксированных коротких строк, например, в почтовом адресе или стихотворении. Пример:
 
 ```html
-<p>Жила-была девчушка Нелл,<br>
-Любившая писать HTML:<br>
-Её семантика ужасна была — <br>
-Она и сама прочитать ничего не могла.</p>
+<p>
+  Жила-была девчушка Нелл,<br />
+  Любившая писать HTML:<br />
+  Её семантика ужасна была — <br />
+  Она и сама прочитать ничего не могла.
+</p>
 ```
 
 Без элемента `<br>` абзац разместится в одну длинную линию (как было сказано ранее, [HTML игнорирует переносы строк](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)), а с ним в коде — разметка будет выглядеть следующим образом:

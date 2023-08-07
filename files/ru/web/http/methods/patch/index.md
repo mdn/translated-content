@@ -1,12 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - HTTP метод
-  - Методы запроса
-  - Справка
-translation_of: Web/HTTP/Methods/PATCH
 ---
 
 {{HTTPSidebar}}

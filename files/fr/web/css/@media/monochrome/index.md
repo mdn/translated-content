@@ -1,7 +1,6 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
-translation_of: Web/CSS/@media/monochrome
 ---
 
 {{CSSRef}}
@@ -17,13 +16,9 @@ La caractéristique `monochrome` est un entier (type {{cssxref("&lt;integer&gt;"
 ### HTML
 
 ```html
-<p class="mono">
-  Votre appareil prend en charge les
-  pixels monochrome !
-</p>
+<p class="mono">Votre appareil prend en charge les pixels monochrome !</p>
 <p class="no-mono">
-  Votre appareil ne prend pas en charge
-  les pixels monochromes.
+  Votre appareil ne prend pas en charge les pixels monochromes.
 </p>
 ```
 

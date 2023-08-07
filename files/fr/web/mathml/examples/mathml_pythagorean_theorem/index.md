@@ -1,7 +1,6 @@
 ---
 title: Preuve du théorème de Pythagore
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
 Nous allons prouver le théorème de Pythagore :

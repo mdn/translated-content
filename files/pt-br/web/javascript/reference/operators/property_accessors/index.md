@@ -32,7 +32,7 @@ object.property = set;
 Neste código, a propriedade deve ser um identificador válido, i.e. uma sequência de carácteres alfanuméricos, incluíndo também o underline ("`_`") e o cifrão ("`$`"), não pode começar com um número. Por exemplo, `object.$1` é valido, enquanto `object.1` não é.
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
@@ -40,16 +40,15 @@ Aqui, o método chamado "createElement" é recuperado do documento e é chamado.
 Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.
 
 ```js
-77 .toExponential();
-// ou
-77
-.toExponential();
+(77).toExponential();
 // ou
 (77).toExponential();
 // ou
-77..toExponential();
+(77).toExponential();
 // ou
-77.0.toExponential();
+(77).toExponential();
+// ou
+(77.0).toExponential();
 // porque 77. === 77.0, sem ambiguidade :p
 ```
 
@@ -63,7 +62,7 @@ object[property_name] = set;
 `property_name` é uma string. A string não precisa ser um identificador válido; pode ser qualquer valor, e.g. "1foo", "!bar!", ou até " " (um espaço).
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Isto faz exatamente a mesma coisa que o exemplo anterior.
@@ -71,7 +70,7 @@ Isto faz exatamente a mesma coisa que o exemplo anterior.
 Um espaço antes da notação de colchete é permitido.
 
 ```js
-document ['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 ### Nomes de propriedades
@@ -80,15 +79,17 @@ Nomes de propriedades devem ser strings. Isto significa que objetos não-string 
 
 ```js
 var object = {};
-object['1'] = 'value';
+object["1"] = "value";
 console.log(object[1]);
 ```
 
 A saída é "value", desde 1 é estereotipado como '1'.
 
 ```js
-var foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value';
+var foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
 console.log(object[bar]);
 ```
 
@@ -103,7 +104,7 @@ Um método não é limitado ao objeto de quem é metodo. Especificamente, `this`
 Novatos em JavaScript comentem muitas vezes o erro de usar [eval](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) onde a notação de colchete pode ser usada no lugar. Por exemplo, a sintaxe a seguir é muitas vezes vista em muitos scripts.
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value');
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 `eval` é lento e deve ser evitado sempre que possível. Também, `strFormControl` would have to hold an identifier, which is not required for names and IDs of form controls. It is better to use bracket notation instead:
@@ -114,12 +115,12 @@ x = document.forms["form_name"].elements[strFormControl].value;
 
 ## Especificações
 
-| Specification                                                                                    | Status                       | Comment                                            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
+| Specification                                                            | Status               | Comment                                            |
+| ------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                     | {{Spec2('ES1')}}         | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ES6')}}     |                                                    |
+| {{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}               | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}                 | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
 
 ## Compatibilidade com navegadores
 

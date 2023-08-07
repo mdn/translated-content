@@ -1,7 +1,6 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-translation_of: Web/API/Document/adoptNode
 ---
 
 {{ ApiRef("DOM") }}
@@ -24,13 +23,13 @@ node = document.adoptNode(externalNode);
 ## Exemple
 
 ```js
-var iframe = document.getElementById('my-iframe');
-var iframeImages = iframe.contentDocument.getElementsByTagName('img');
+var iframe = document.getElementById("my-iframe");
+var iframeImages = iframe.contentDocument.getElementsByTagName("img");
 
-var newParent = document.getElementByTagName('images');
+var newParent = document.getElementByTagName("images");
 
 for (var i = 0; i < iframeImages.length; i++) {
-    newParent.appendChild(document.adoptNode(iframeImages[i]));
+  newParent.appendChild(document.adoptNode(iframeImages[i]));
 }
 ```
 

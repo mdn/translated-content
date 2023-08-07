@@ -1,7 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-translation_of: Web/CSS/box-pack
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -73,8 +72,8 @@ div.exemple {
   -webkit-box-align: center; /* WebKit */
 
   /* On groupe les éléments fils en bas de la boîte */
-  -moz-box-pack: end;      /* Mozilla */
-  -webkit-box-pack: end;   /* WebKit */
+  -moz-box-pack: end; /* Mozilla */
+  -webkit-box-pack: end; /* WebKit */
 }
 
 div.exemple p {

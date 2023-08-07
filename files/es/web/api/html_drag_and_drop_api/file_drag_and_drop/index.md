@@ -1,7 +1,6 @@
 ---
 title: Drag & Drop archivo
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

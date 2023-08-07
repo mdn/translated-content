@@ -15,11 +15,11 @@ HTTP를 통한 로그인 양식은 특히 사용자의 비밀번호를 추출하
 
 1. Firefox 51버전부터는 로그인 페이지에 보안 연결이 없는 경우, 아래와 보이는 것과 같은 주소 표시줄에 빨간색으로 취소 표시가 있는 잠금 아이콘을 표시합니다.
 
-    ![Lock Icon](https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png)
+   ![Lock Icon](https://support.cdn.mozilla.net/media/uploads/gallery/images/2015-11-17-12-13-18-2faa61.png)
 
 2. Firefox 52버전부터는 URL 표시줄과 안전하지 않은 양식의 선택된 비밀번호 필드 아래에 명확한 경고를 표시합니다.
 
-    ![Warning](https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png)
+   ![Warning](https://support.cdn.mozilla.net/media/uploads/gallery/images/2017-04-21-23-52-53-ba340d.png)
 
 3. Firefox 52버전부터는 안전하지 않은 로그인 양식에 대한 자동 채우기도 비활성화했습니다. 사용자는 저장된 로그인 정보를 드롭다운 목록에서 수동으로 완료할 수 있습니다.
 4. 안전하지 않은 로그인 양식에 대한 경고는 다음 섹션에서 설명하는 것처럼 모든 Firefox 릴리스의 개발자 콘솔 보안창에서 찾을 수 있습니다.
@@ -52,4 +52,4 @@ Form action이 HTTPS URL 인 경우에도 공격자는 사용자가 받을 페�
 
 - [HTTP를 통한 비밀번호는 더 이상 안됩니다, 제발!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — 더 자세한 정보와 FAQ를 가진 블로그.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Security")}}

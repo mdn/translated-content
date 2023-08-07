@@ -3,7 +3,6 @@ title: フォームへの高度なスタイル設定
 slug: Learn/Forms/Advanced_form_styling
 l10n:
   sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
-original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}

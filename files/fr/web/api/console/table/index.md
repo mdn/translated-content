@@ -1,7 +1,6 @@
 ---
 title: Console.table
 slug: Web/API/console/table
-translation_of: Web/API/Console/table
 ---
 
 {{APIRef("Console API")}}
@@ -50,7 +49,11 @@ Si les éléments d'un tableau, ou les propriétés d'un objet, sont eux-mêmes 
 ```js
 // un tableau de tableaux
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+var people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 

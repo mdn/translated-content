@@ -1,7 +1,6 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
-translation_of: Web/API/Notification/renotify
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`renotify`** de l'interface {{domxref ("Notifi
 ## Syntaxe
 
 ```js
-Notification.renotify
+Notification.renotify;
 ```
 
 ### Valeur

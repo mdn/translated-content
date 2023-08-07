@@ -21,6 +21,7 @@ includes(searchString, position)
 - `searchString`
   - : 要在 `str` 中搜索的字符串。不能是正则表达式。
 - `position` {{optional_inline}}
+
   - : 在字符串中开始搜索 `searchString` 的位置。（默认为 `0`。）
 
 - `searchString`

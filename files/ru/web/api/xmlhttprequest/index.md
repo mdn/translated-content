@@ -1,19 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - JavaScript
-  - MakeBrowserAgnostic
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -32,19 +19,19 @@ var myRequest = new XMLHttpRequest();
 
 ## Список методов объекта
 
-| `XMLHttpRequest(JSObject objParameters);`                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `void abort();`                                                                                                                                                                                    |
-| `DOMString getAllResponseHeaders();`                                                                                                                                                               |
-| `DOMString? getResponseHeader(DOMString header);`                                                                                                                                                  |
-| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                                                      |
-| `void overrideMimeType(DOMString mime);`                                                                                                                                                           |
+| `XMLHttpRequest(JSObject objParameters);`                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `void abort();`                                                                                                                                                 |
+| `DOMString getAllResponseHeaders();`                                                                                                                            |
+| `DOMString? getResponseHeader(DOMString header);`                                                                                                               |
+| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                   |
+| `void overrideMimeType(DOMString mime);`                                                                                                                        |
 | `void send();` `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
-| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                                                        |
-| Нестандартные методы                                                                                                                                                                               |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                                                                |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                                                                  |
-| `void sendAsBinary(in DOMString body);` {{ deprecated_inline(31) }}                                                                                                                       |
+| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                     |
+| Нестандартные методы                                                                                                                                            |
+| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                             |
+| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                               |
+| `void sendAsBinary(in DOMString body);` {{ deprecated_inline(31) }}                                                                                             |
 
 ## Поля объекта
 
@@ -686,7 +673,8 @@ Since `sendAsBinary()` is an experimental feature, here is **a polyfill** for br
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    var nBytes = sData.length,
+      ui8Data = new Uint8Array(nBytes);
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }

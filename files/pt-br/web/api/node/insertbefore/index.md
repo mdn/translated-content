@@ -40,16 +40,16 @@ O valor retornado é o filho incluído, exceto quando `newNode` é um {{domxref(
 </div>
 
 <script>
-// Cria um novo elemento <span> vazio
-var sp1 = document.createElement("span");
+  // Cria um novo elemento <span> vazio
+  var sp1 = document.createElement("span");
 
-// Guarda a referência do elemento atraś do qual nos queremos inserir o novo elemento
-var sp2 = document.getElementById("elementoFilho");
-// Guarda a referência do elemento pai
-var divPai = sp2.parentNode;
+  // Guarda a referência do elemento atraś do qual nos queremos inserir o novo elemento
+  var sp2 = document.getElementById("elementoFilho");
+  // Guarda a referência do elemento pai
+  var divPai = sp2.parentNode;
 
-// Insere o novo elemento no DOM antes de sp2
-divPai.insertBefore(sp1, sp2);
+  // Insere o novo elemento no DOM antes de sp2
+  divPai.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -69,7 +69,7 @@ Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChil
 
 ```js
 // Guarda a referêncis do elemento no quela nóe queremos inserir o novo nó
-var elementoPai = document.getElementById('elementoPai');
+var elementoPai = document.getElementById("elementoPai");
 // Guarda a referência do primeiro filho
 var primeiroFilho = elementoPai.firstChild;
 
@@ -82,10 +82,10 @@ elementoPai.insertBefore(novoElemento, primeiroFilho);
 
 Quando o elemento não possui o primeiro filho, então `firstChild` é `null`. O elemento ainda será inserido no pai, mas após o último filho. Pois se o elemento pai não possui primeiro filho, ele também não possui o último filho. Conseqüentemente, o novo elemento será o único elemento após a inserção.
 
-## Compatibilidade de navegadores
+## Especificações
 
-{{Compat("api.Node.insertBefore")}}
+{{Specifications}}
 
-## Especificação
+## Compatibilidade com navegadores
 
-- [insertBefore](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: <url>
 slug: Web/CSS/url
-original_slug: Web/CSS/url()
 ---
 
 {{ CssRef() }}
@@ -28,7 +27,7 @@ original_slug: Web/CSS/url()
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 

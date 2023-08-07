@@ -1,7 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-original_slug: Web/HTML/Elemento/object
 ---
 
 {{HTMLSidebar}}
@@ -125,12 +124,11 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ```html
 <!-- Incrustar una película flash -->
-<object data="movie.swf"
-  type="application/x-shockwave-flash"></object>
+<object data="movie.swf" type="application/x-shockwave-flash"></object>
 
 <!-- Incrustar una película flash con parámetros -->
 <object data="movie.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+  <param name="foo" value="bar" />
 </object>
 ```
 

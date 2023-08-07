@@ -1,7 +1,6 @@
 ---
 title: i18n.getAcceptLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 ```
 
 ### Paramètres

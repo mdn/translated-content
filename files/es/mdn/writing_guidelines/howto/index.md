@@ -1,7 +1,6 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto
-original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}

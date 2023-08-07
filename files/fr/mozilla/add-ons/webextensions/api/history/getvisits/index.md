@@ -1,7 +1,6 @@
 ---
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.history.getVisits(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -51,7 +50,7 @@ function listVisits(historyItems) {
   if (historyItems.length) {
     console.log("URL " + historyItems[0].url);
     var gettingVisits = browser.history.getVisits({
-      url: historyItems[0].url
+      url: historyItems[0].url,
     });
     gettingVisits.then(gotVisits);
   }
@@ -60,7 +59,7 @@ function listVisits(historyItems) {
 var searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(listVisits);

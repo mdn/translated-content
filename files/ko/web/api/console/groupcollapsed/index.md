@@ -16,8 +16,8 @@ slug: Web/API/console/groupCollapsed
 ## 구문
 
 ```js
-groupCollapsed()
-groupCollapsed(label)
+groupCollapsed();
+groupCollapsed(label);
 ```
 
 ### 매개변수

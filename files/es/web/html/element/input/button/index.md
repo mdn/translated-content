@@ -1,7 +1,6 @@
 ---
 title: <input type ="button">
 slug: Web/HTML/Element/input/button
-original_slug: Web/HTML/Elemento/input/Botón
 ---
 
 {{HTMLSidebar}}
@@ -167,7 +166,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 Se crea un nuevo input tipo botón con el valor 'Click me'.
 
 ```html
-<input type="button" value="Click me">
+<input type="button" value="Click me" />
 ```
 
 ## Especificaciones

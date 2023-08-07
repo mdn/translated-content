@@ -1,7 +1,6 @@
 ---
-title: '::-moz-scrolled-page-sequence'
+title: "::-moz-scrolled-page-sequence"
 slug: Web/CSS/::-moz-scrolled-page-sequence
-translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
 
 {{CSSRef}}{{non-standard_header}}

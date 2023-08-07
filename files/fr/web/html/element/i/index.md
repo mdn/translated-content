@@ -1,7 +1,6 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-translation_of: Web/HTML/Element/i
 ---
 
 {{HTMLSidebar}}
@@ -21,9 +20,7 @@ Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/A
 ```html
 <p>
   La phrase latine
-  <i class="latin">
-    Veni, vidi, vici
-  </i>
+  <i class="latin"> Veni, vidi, vici </i>
   est souvent employée en littérature.
 </p>
 ```

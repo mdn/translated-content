@@ -1,7 +1,6 @@
 ---
 title: element.hasAttribute
 slug: Web/API/Element/hasAttribute
-translation_of: Web/API/Element/hasAttribute
 ---
 
 {{APIRef("DOM")}}
@@ -24,18 +23,19 @@ var result = element.hasAttribute(name);
 ```js
 var foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
-    // faire quelque chose
+  // faire quelque chose
 }
 ```
 
 ## Polyfill
 
 ```js
-;(function(prototype) {
-    prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &&
-                  this.attributes[name].specified);
-    }
+(function (prototype) {
+  prototype.hasAttribute =
+    prototype.hasAttribute ||
+    function (name) {
+      return !!(this.attributes[name] && this.attributes[name].specified);
+    };
 })(Element.prototype);
 ```
 

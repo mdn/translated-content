@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Operators/class
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 
 {{JSSidebar("Operators")}}
@@ -54,12 +53,12 @@ var Toto = class TotoNommé {
   quiEstLa() {
     return TotoNommé.name;
   }
-}
+};
 
-var truc = new Toto;
+var truc = new Toto();
 truc.quiEstLa(); // "TotoNommmé"
-TotoNommé.name;  // ReferenceError
-Toto.name;       // "TotoNommé"
+TotoNommé.name; // ReferenceError
+Toto.name; // "TotoNommé"
 ```
 
 ## Spécifications

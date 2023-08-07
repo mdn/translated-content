@@ -1,7 +1,6 @@
 ---
 title: APIs web do lado cliente
 slug: Learn/JavaScript/Client-side_web_APIs
-original_slug: Aprender/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

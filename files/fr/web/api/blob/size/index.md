@@ -1,7 +1,6 @@
 ---
 title: File.fileSize
 slug: Web/API/Blob/size
-translation_of: Web/API/File/fileSize
 ---
 
 {{APIRef("File API") }}{{non-standard_header}}
@@ -15,7 +14,7 @@ Renvoie la taille du fichier en octets.
 ## Syntaxe
 
 ```js
-var size = instanceOfFile.fileSize
+var size = instanceOfFile.fileSize;
 ```
 
 ## Valeur

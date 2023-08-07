@@ -1,7 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-translation_of: Web/CSS/inherit
 ---
 
 {{CSSRef}}
@@ -31,12 +30,14 @@ p {
 ### HTML
 
 ```html
-<p>Alice remarqua, avec quelque surprise, qu’en
-   tombant sur le plancher les cailloux se changeaient
-   en petits gâteaux, et une brillante idée lui
-   traversa l’esprit.</p>
-<p class="exemple">Elle avala un des gâteaux, et s’aperçut avec
-   joie qu’elle diminuait rapidement</p>
+<p>
+  Alice remarqua, avec quelque surprise, qu’en tombant sur le plancher les
+  cailloux se changeaient en petits gâteaux, et une brillante idée lui traversa
+  l’esprit.
+</p>
+<p class="exemple">
+  Elle avala un des gâteaux, et s’aperçut avec joie qu’elle diminuait rapidement
+</p>
 ```
 
 ### Résultat

@@ -54,8 +54,8 @@ This example shows a variety of different uses of ObjectStores, from updating th
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
@@ -64,11 +64,11 @@ DBOpenRequest.onsuccess = function(event) {
 // This event handles the event whereby a new version of the database needs to be created
 // Either one has not been created before, or a new version number has been submitted via the
 // window.indexedDB.open line above
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
@@ -85,24 +85,33 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += "<li>Object store created.</li>";
 };
 
 // Create a new item to add in to the object store
 var newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // open a read/write db transaction, ready for adding the data
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transaction opened for task addition.</li>';
+transaction.oncomplete = function (event) {
+  note.innerHTML += "<li>Transaction opened for task addition.</li>";
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+transaction.onerror = function (event) {
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // create an object store on the transaction
@@ -110,9 +119,9 @@ var objectStore = transaction.objectStore("toDoList");
 // add our newItem object to the object store
 var objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>New item added to database.</li>';
-}
+objectStoreRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>New item added to database.</li>";
+};
 ```
 
 ## Especificaciones

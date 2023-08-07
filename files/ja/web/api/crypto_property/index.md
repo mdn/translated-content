@@ -1,7 +1,6 @@
 ---
 title: self.crypto
 slug: Web/API/crypto_property
-original_slug: Web/API/Window/crypto
 ---
 
 {{APIRef}}
@@ -28,18 +27,18 @@ genRandomNumbers = function getRandomNumbers() {
   crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
-  randText.textContent = "乱数: "
+  randText.textContent = "乱数: ";
   for (let i = 0; i < array.length; i++) {
     randText.textContent += array[i] + " ";
   }
-}
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">乱数: </p>
-<button type="button" onClick='genRandomNumbers()'>10 個の乱数を生成</button>
+<p id="myRandText">乱数:</p>
+<button type="button" onClick="genRandomNumbers()">10 個の乱数を生成</button>
 ```
 
 ### 結果

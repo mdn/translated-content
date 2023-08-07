@@ -1,15 +1,6 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 

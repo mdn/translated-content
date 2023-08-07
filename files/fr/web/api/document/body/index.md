@@ -1,7 +1,6 @@
 ---
 title: document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
 
 {{ApiRef}}
@@ -23,8 +22,8 @@ alert(document.body.id); // "ancienElementBody"
 
 var unNouvelElementBody = document.createElement("body");
 
-unNouvelElementBody .id = "nouvelElementBody";
-document.body = unNouvelElementBody ;
+unNouvelElementBody.id = "nouvelElementBody";
+document.body = unNouvelElementBody;
 alert(document.body.id); // "nouvelElementBody"
 ```
 

@@ -55,7 +55,7 @@ forEach(callbackFn, thisArg)
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log("a[" + index + "] = " + element);
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);

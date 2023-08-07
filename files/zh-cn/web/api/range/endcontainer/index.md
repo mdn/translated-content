@@ -18,8 +18,8 @@ endRangeNode = range.endContainer;
 ```js
 var range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 endRangeNode = range.endContainer;
 ```
 

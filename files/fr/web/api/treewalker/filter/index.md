@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.filter
 slug: Web/API/TreeWalker/filter
-translation_of: Web/API/TreeWalker/filter
 ---
 
 {{ APIRef("DOM") }}
@@ -20,10 +19,14 @@ nodeFilter = treeWalker.filter;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 nodeFilter = treeWalker.filter; // document.body dans ce cas
 ```

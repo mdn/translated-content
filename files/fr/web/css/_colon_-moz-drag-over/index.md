@@ -1,7 +1,6 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
-translation_of: Web/CSS/:-moz-drag-over
 ---
 
 {{Non-standard_header}}{{CSSRef}}

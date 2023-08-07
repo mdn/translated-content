@@ -1,7 +1,6 @@
 ---
 title: Qu'est ce que l'accessibilité?
 slug: Learn/Accessibility/What_is_accessibility
-translation_of: Learn/Accessibility/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

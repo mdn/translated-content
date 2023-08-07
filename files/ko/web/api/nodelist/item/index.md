@@ -10,7 +10,7 @@ slug: Web/API/NodeList/item
 ## Syntax
 
 ```js
-nodeItem = nodeList.item(index)
+nodeItem = nodeList.item(index);
 ```
 
 - `nodeList` 는 `NodeList` 입니다. 일반적으로 [childNodes](/ko/docs/Web/API/Node/childNodes) 와 같은 다른 DOM 속성(property) 또는 메서드에서 가져옵니다.
@@ -22,7 +22,7 @@ nodeItem = nodeList.item(index)
 자바스크립트는 NodeList 에서 index를 얻기 위한, 배열과 같은 브라켓 문법(\[])을 제공합니다 :
 
 ```js
-nodeItem = nodeList[index]
+nodeItem = nodeList[index];
 ```
 
 ## Example

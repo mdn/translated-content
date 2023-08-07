@@ -1,7 +1,6 @@
 ---
 title: resize
 slug: Web/CSS/resize
-translation_of: Web/CSS/resize
 ---
 
 {{CSSRef}}
@@ -107,8 +106,8 @@ p {
 ```html
 <div class="redimensionnable">
   <p class="redimensionnable">
-    Ce paragraphe peut être redimensionné car la propriété
-    CSS resize vaut 'both' sur cet élément.
+    Ce paragraphe peut être redimensionné car la propriété CSS resize vaut
+    'both' sur cet élément.
   </p>
 </div>
 ```

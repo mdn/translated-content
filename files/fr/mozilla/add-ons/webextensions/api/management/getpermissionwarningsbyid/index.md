@@ -1,7 +1,6 @@
 ---
 title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 ---
 
 {{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
@@ -16,8 +15,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingWarnings = browser.management.getPermissionWarningsById(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

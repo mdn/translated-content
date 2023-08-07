@@ -1,7 +1,6 @@
 ---
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
 
 {{AddonSidebar}}
@@ -13,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getAlarms = browser.alarms.getAll()
+var getAlarms = browser.alarms.getAll();
 ```
 
 ### Paramètres

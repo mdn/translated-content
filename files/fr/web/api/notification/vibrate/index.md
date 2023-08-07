@@ -1,7 +1,6 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
-translation_of: Web/API/Notification/vibrate
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`vibrate`** de l'interface {{domxref ("Notific
 ## Syntaxe
 
 ```js
-Notification.vibrate
+Notification.vibrate;
 ```
 
 ### Valeur

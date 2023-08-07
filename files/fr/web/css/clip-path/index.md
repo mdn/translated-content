@@ -56,6 +56,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
+
   - : Une [`url()`](/fr/docs/Web/CSS/url) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
@@ -468,7 +469,9 @@ body {
 }
 
 .view-box {
-  box-shadow: 1rem 1rem 0 #efefef inset, -1rem -1rem 0 #efefef inset;
+  box-shadow:
+    1rem 1rem 0 #efefef inset,
+    -1rem -1rem 0 #efefef inset;
 }
 
 .container.view-box::after {

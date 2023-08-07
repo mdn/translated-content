@@ -1,7 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 ---
 
 {{JSRef}}
@@ -45,7 +44,7 @@ registry.register(cible, "une valeur", cible);
 La ligne suivante enregistre l'objet `cible` et passe un autre objet comme valeur tenue. L'absence de jeton de désenregistrement indique que `cible` ne peut pas être retiré du registre)&nbsp;:
 
 ```js
-registry.register(cible, {"utile": "info à propos de la cible"});
+registry.register(cible, { utile: "info à propos de la cible" });
 ```
 
 ## Spécifications

@@ -1,5 +1,5 @@
 ---
-title: "Element.append()"
+title: Element.append()
 slug: Web/API/Element/append
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf

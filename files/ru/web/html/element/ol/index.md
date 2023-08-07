@@ -1,11 +1,6 @@
 ---
 title: "<ol>: The Ordered List element"
 slug: Web/HTML/Element/ol
-tags:
-  - HTML
-  - Основной поток
-  - элементы
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}

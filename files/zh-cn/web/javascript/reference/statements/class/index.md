@@ -34,7 +34,7 @@ class name [extends] {
 ```js
 class Polygon {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = "Polygon";
     this.height = height;
     this.width = width;
   }
@@ -43,7 +43,7 @@ class Polygon {
 class Square extends Polygon {
   constructor(length) {
     super(length, length);
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -55,8 +55,8 @@ class Square extends Polygon {
 > 重复声明一个类会引起类型错误。
 >
 > ```js
-> class Foo {};
-> class Foo {};
+> class Foo {}
+> class Foo {}
 > // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 >
@@ -64,7 +64,7 @@ class Square extends Polygon {
 >
 > ```js
 > let Foo = class {};
-> class Foo {};
+> class Foo {}
 > // Uncaught TypeError: Identifier 'Foo' has already been declared
 > ```
 

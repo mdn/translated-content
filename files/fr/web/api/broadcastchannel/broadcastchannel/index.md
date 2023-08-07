@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
-translation_of: Web/API/BroadcastChannel/BroadcastChannel
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
@@ -15,7 +14,7 @@ Le constructeur **`BroadcastChannel()`** crée un nouvel objet [`BroadcastChanne
 ## Syntaxe
 
 ```js
-new BroadcastChannel(channelName)
+new BroadcastChannel(channelName);
 ```
 
 ### Paramètres
@@ -28,8 +27,8 @@ new BroadcastChannel(channelName)
 ```js
 // crée un nouveau canal écoutant sur le canal "notification_interne".
 
-const bc = new BroadcastChannel('notification_interne');
-bc.postMessage('Nouvelle écoute connectée !');
+const bc = new BroadcastChannel("notification_interne");
+bc.postMessage("Nouvelle écoute connectée !");
 ```
 
 ## Spécifications

@@ -37,8 +37,8 @@ mode 的初始值是在使用 `mediasource.addsourcebuffer()` 创建 `SourceBuff
 
 ```js
 const curMode = sourceBuffer.mode;
-if (curMode === 'segments') {
-  sourceBuffer.mode = 'sequence';
+if (curMode === "segments") {
+  sourceBuffer.mode = "sequence";
 }
 ```
 

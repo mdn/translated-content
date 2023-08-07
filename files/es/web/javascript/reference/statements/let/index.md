@@ -1,7 +1,6 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-original_slug: Web/JavaScript/Referencia/Sentencias/let
 ---
 
 {{jsSidebar("Statements")}}
@@ -43,7 +42,8 @@ if (x > y) {
 Es posible usar definiciones `let` para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver [Mejores prácticas de seguridad en extensiones](/es/docs/Security_best_practices_in_extensions).)
 
 ```js
-let Cc = Components.classes, Ci = Components.interfaces;
+let Cc = Components.classes,
+  Ci = Components.interfaces;
 ```
 
 `let` puede ser útil para escribir código más limpio cuando usamos funciones internas.
@@ -73,19 +73,19 @@ Variables declaradas por `let` tienen por alcance el bloque en el que se han def
 function varTest() {
   var x = 31;
   if (true) {
-    var x = 71;  // ¡misma variable!
-    console.log(x);  // 71
+    var x = 71; // ¡misma variable!
+    console.log(x); // 71
   }
-  console.log(x);  // 71
+  console.log(x); // 71
 }
 
 function letTest() {
   let x = 31;
   if (true) {
-    let x = 71;  // variable diferente
-    console.log(x);  // 71
+    let x = 71; // variable diferente
+    console.log(x); // 71
   }
-  console.log(x);  // 31
+  console.log(x); // 31
 }
 // llamamos a las funciones
 varTest();
@@ -95,8 +95,8 @@ letTest();
 En el nivel superior de un programa y funciones, `let` , a diferencia de `var`, **no crea** una propiedad en el objeto global, por ejemplo:
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -139,7 +139,7 @@ switch (x) {
 
   case 1:
     let foo; // Terminamos con un error de tipo SyntaxError.
-             // esto debido a la redeclaracion
+    // esto debido a la redeclaracion
     break;
 }
 ```
@@ -151,11 +151,11 @@ Debido al [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec
 En esa misma línea, el `num` del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
 
 ```js
-function prueba(){
-   var num = 33;
-   if (true) {
-      let num = (num + 55);//ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
-   }
+function prueba() {
+  var num = 33;
+  if (true) {
+    let num = num + 55; //ReferenceError: no se puede acceder a la declaración léxica `num'antes de la inicialización
+  }
 }
 prueba();
 ```
@@ -174,8 +174,8 @@ if (a === 5) {
   let a = 4; // El alcance es dentro del bloque if
   var b = 1; // El alcance es global
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
@@ -187,7 +187,7 @@ console.log(b); // 1
 Es posible usar la palabra reservada `let` para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando `var`) para dicho propósito.
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 

@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
 {{JSRef}}
@@ -32,10 +31,10 @@ L'exemple qui suit affiche la chaîne correspondant à la valeur de l'objet {{js
 
 ```js
 var maRegExp = new RegExp("a+b+c");
-console.log(maRegExp.toString());  // affiche "/a+b+c/"
+console.log(maRegExp.toString()); // affiche "/a+b+c/"
 
 var toto = new RegExp("truc", "g");
-console.log(toto.toString());      // affiche "/truc/g"
+console.log(toto.toString()); // affiche "/truc/g"
 ```
 
 ### Les expressions ratonnelles vides et l'échappement
@@ -45,8 +44,8 @@ console.log(toto.toString());      // affiche "/truc/g"
 ```js
 new RegExp().toString(); // "(?:)"
 
-new RegExp('\n').toString() === "/\n/";  // true avant ES5
-new RegExp('\n').toString() === "/\\n/"; // true à partir d'ES5
+new RegExp("\n").toString() === "/\n/"; // true avant ES5
+new RegExp("\n").toString() === "/\\n/"; // true à partir d'ES5
 ```
 
 ## Spécifications

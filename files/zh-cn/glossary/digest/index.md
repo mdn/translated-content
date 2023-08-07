@@ -5,7 +5,7 @@ slug: Glossary/Digest
 
 {{GlossarySidebar}}
 
-**摘要**是一个由 {{glossary("cryptographic hash function", "散列函数")}} 从完整的消息生成的小的值。理想情况下，摘要是可快速计算、不可逆且不可预测的，因此可用于表明是否有人篡改了给定的消息。
+**摘要**是由{{glossary("cryptographic hash function", "散列函数")}}从完整消息生成的更小值。理想情况下，摘要是可快速计算、不可逆且不可预测的，因此可用于表明是否有人篡改了给定的消息。
 
 摘要可用于执行多种任务：
 

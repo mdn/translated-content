@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
 
 {{JSRef}}
@@ -45,15 +44,18 @@ Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée p
 
 ## Exemples
 
-Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet` Map `:
+Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet`Map`:
 
 ```js
 function logMapElements(valeur, clé, map) {
-    console.log(`map.get('${clé}') = ${value}`);
+  console.log(`map.get('${clé}') = ${value}`);
 }
 
-
-new Map([["toto", 3], ["truc", {}], ["bidule", undefined]]).forEach(logMapElements);
+new Map([
+  ["toto", 3],
+  ["truc", {}],
+  ["bidule", undefined],
+]).forEach(logMapElements);
 // affichera dans la console :
 // "map.get('toto') = 3"
 // "map.get('truc') = [object Object]"

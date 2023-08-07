@@ -1,7 +1,6 @@
 ---
-title: '<sup> : l''élément de mise en exposant'
+title: "<sup> : l'élément de mise en exposant"
 slug: Web/HTML/Element/sup
-translation_of: Web/HTML/Element/sup
 ---
 
 {{HTMLSidebar}}
@@ -49,10 +48,7 @@ Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
 #### HTML
 
 ```html
-<p>
-  Voici la fonction exponentielle :
-  e<sup>x</sup>.
-</p>
+<p>Voici la fonction exponentielle : e<sup>x</sup>.</p>
 ```
 
 #### Résultat
@@ -66,9 +62,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 #### HTML
 
 ```html
-<p>
-  Robert a présenté son rapport à M<sup>lle</sup> Bernard.
-</p>
+<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
 ```
 
 #### Résultat
@@ -81,8 +75,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 ```html
 <p>
-  Voici comment le nombre ordinal cinquième est écrit dans
-  différentes langues
+  Voici comment le nombre ordinal cinquième est écrit dans différentes langues
 </p>
 <ul>
   <li>en français : 5<sup>e</sup></li>
@@ -111,7 +104,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>
@@ -120,7 +113,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -134,7 +127,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

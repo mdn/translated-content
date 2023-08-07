@@ -1,7 +1,6 @@
 ---
 title: Sélecteurs descendant
 slug: Web/CSS/Descendant_combinator
-translation_of: Web/CSS/Descendant_combinator
 ---
 
 {{CSSRef("Selectors")}}
@@ -21,7 +20,9 @@ Techniquement, le combinateur de descendance est représenté par un ou plusieur
 ## Syntaxe
 
 ```css
-selecteur1 selecteur2 { /* déclarations CSS */ }
+selecteur1 selecteur2 {
+  /* déclarations CSS */
+}
 ```
 
 ## Exemples

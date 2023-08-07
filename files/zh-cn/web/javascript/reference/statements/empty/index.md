@@ -25,22 +25,22 @@ slug: Web/JavaScript/Reference/Statements/Empty
 var arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
+for (let i = 0; i < arr.length; arr[i++] = 0 /* empty statement */);
 
-console.log(arr)
+console.log(arr);
 // [0, 0, 0]
 ```
 
 **提示：**在使用空语句的情况下专门写上注释是个不错的主意，因为不是很容易区分空语句和普通的分号。下面的示例可能不是故意加上分号的：
 
-```js
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this gets always executed!!!
+```js-nolint
+if (condition); // Caution, this "if" does nothing!
+  killTheUniverse() // So this gets always executed!!!
 ```
 
 另一个例子：[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句不带花括号（`{}`）。如果`three`为`true`, 不会发生任何事，`four`不会执行，同时`else`从句中的`launchRocket()`函数也不会执行。
 
-```js
+```js-nolint
 if (one)
   doOne();
 else if (two)
