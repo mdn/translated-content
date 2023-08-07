@@ -384,5 +384,5 @@ CSS 网格布局规范详细说明了为什么当某物成为网格项时我们�
 
 ## 参见
 
-- 有关特性查询以及如何恰当地使用它们，请参阅 [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
+- 有关特性查询以及如何恰当地使用它们，请参阅[在 CSS 中使用特性查询（2016）](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)。
 - [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)
