@@ -178,10 +178,7 @@ Para entender cómo funciona el concepto de umbral (threshold), pruebe a hacer s
 }
 
 .label {
-  font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+  font: 14px "Open Sans", "Arial", sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -258,7 +255,7 @@ function startup() {
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(
       intersectionCallback,
-      observerOptions,
+      observerOptions
     );
     observers[i].observe(document.querySelector("#" + boxID));
   }
@@ -321,6 +318,7 @@ intersectionCallback(entries) => {
 ## Interfaces
 
 - {{domxref("IntersectionObserver")}}
+
   - : La interfaz principal para la API Intersection Observer. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar asincrónicamente los cambios en la intersección entre uno o más elementos de destino (target) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el viewport se denomina **root**.
 
 - {{domxref("IntersectionObserverEntry")}}
@@ -348,9 +346,7 @@ El CSS del ejemplo no es muy importante para el propósito de este ejemplo: pint
 #box {
   background-color: rgba(40, 40, 190, 255);
   border: 4px solid rgb(20, 20, 120);
-  transition:
-    background-color 1s,
-    border 1s;
+  transition: background-color 1s, border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -399,7 +395,7 @@ window.addEventListener(
 
     createObserver();
   },
-  false,
+  false
 );
 ```
 
@@ -488,12 +484,12 @@ function handleIntersect(entries, observer) {
     if (entry.intersectionRatio > prevRatio) {
       entry.target.style.backgroundColor = increasingColor.replace(
         "ratio",
-        entry.intersectionRatio,
+        entry.intersectionRatio
       );
     } else {
       entry.target.style.backgroundColor = decreasingColor.replace(
         "ratio",
-        entry.intersectionRatio,
+        entry.intersectionRatio
       );
     }
 
