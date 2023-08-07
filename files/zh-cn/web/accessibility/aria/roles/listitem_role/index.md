@@ -1,5 +1,5 @@
 ---
-title: "ARIA: listitem 角色"
+title: ARIA：listitem 角色
 slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
 
@@ -17,9 +17,9 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 任何由外部容器和内部元素列表组成的内容都可以分别使用 `list` 和 `listitem` 容器识别为辅助技术。
 
-关于应该使用哪些元素来标记 `list` 和 `listitem` 没有硬性规定，但是您应该确保 `listitem` 在列表的上下文中有意义，例如购物清单、食谱步骤、行车路线。
+关于应该使用哪些元素来标记列表和列表项没有硬性规定，但是你应该确保列表项在列表的上下文中有意义，例如购物清单、食谱步骤、行车路线。
 
-> **警告：** 如果可能，您应该使用适当的语义化 HTML 元素来标记 `list` 及其 `listitem`，如 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 和 {{HTMLElement("li")}}。有关完整示例，请参阅 [最佳实践](#best_practices)。
+> **备注：** 如果可能，你应该使用适当的语义化 HTML 元素来标记列表及列表项，如 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 和 {{HTMLElement("li")}}。有关完整示例，请参阅[最佳实践](#最佳实践)。
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
