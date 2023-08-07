@@ -147,8 +147,7 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 我们的[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)提供了 web 浏览器通常支持的文件类型列表，包括其特殊用途、缺点、兼容性信息以及其他详细信息。
 
-[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。  
-在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。
+[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。
 
 音频和视频文件的 MIME 类型，通常指的是其容器格式（或者说文件类型）。添加可选的 [codec 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)到 MIME 类型中，能进一步指出要使用的编解码器和编码媒体时曾用到的选项，如编解码器配置文件、级别或其他此类信息。
 
