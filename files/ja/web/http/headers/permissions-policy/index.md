@@ -86,6 +86,7 @@ Permissions-Policy: <directive> <allowlist>
 - {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
   - : 表示されないフレーム内 (例えば iframe が [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) または `display: none` の場合) でタスクを実行するかどうかを制御します。
 - {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
+
   - : ビューポートの見える範囲外にあるフレーム内のタスクを実行するかどうかを制御します。
 
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
