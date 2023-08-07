@@ -1,66 +1,66 @@
 ---
-title: Headers.delete()
+title: Headers：delete() 方法
 slug: Web/API/Headers/delete
 ---
 
-{{APIRef("Fetch")}}{{ SeeCompatTable() }}
+{{APIRef("Fetch API")}}
 
-**`delete()`** 方法可以从 Headers 对象中删除指定 header.
+{{domxref("Headers")}} 接口的 **`delete()`** 方法可以从当前 `Headers` 对象中删除指定标头。
 
-下列原因将会导致该方法抛出一个{{jsxref("TypeError")}}:
+下列原因将会导致该方法抛出 {{jsxref("TypeError")}}：
 
-- header 名在 HTTP header 中是不存在的。
-- header 被锁定了.
+- name 参数的值不是 HTTP 标头的名称。
+- {{Glossary("Guard")}} 的值为 `immutable`。
 
-> **备注：** 出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+出于安全原因，部分标头信息只能由用户代理控制。这些标头信息包括{{Glossary("Forbidden_header_name", "禁止修改的标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
 ## 语法
 
-```js
-myHeaders.delete(name);
+```js-nolint
+delete(name)
 ```
 
-### Parameters
+### 参数
 
-- _name_
-  - : 需删除的 HTTP header 名称。
+- `name`
+  - : 你想要从 `Headers` 对象中删除的 HTTP 标头的名称。
 
-### Returns
+### 返回值
 
-Void.
+无（{{jsxref("undefined")}}）。
 
-## Example
+## 示例
 
-创建一个空的 Headers 对象：
-
-```js
-var myHeaders = new Headers(); // Currently empty
-```
-
-可以通过 append() 方法添加 header:
+创建一个空的 `Headers` 对象很简单：
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+const myHeaders = new Headers(); // 目前为空
 ```
 
-可以通过 delete() 方法删除已有 header:
+你可以通过 {{domxref("Headers.append")}} 方法添加标头：
 
 ```js
-myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // 返回 'image/jpeg'
 ```
 
-## Specifications
+然后你可以删除它。
+
+```js
+myHeaders.delete("Content-Type");
+myHeaders.get("Content-Type"); // 返回 null，因为它已被删除
+```
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

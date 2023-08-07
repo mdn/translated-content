@@ -1,7 +1,6 @@
 ---
 title: Primeros pasos en MDN
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 ---
 
 {{MDNSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxre
 ## Syntaxe
 
 ```js
-sab.byteLength
+sab.byteLength;
 ```
 
 ## Description

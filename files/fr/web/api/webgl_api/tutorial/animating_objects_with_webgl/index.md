@@ -1,7 +1,6 @@
 ---
 title: Animer des objets avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
@@ -19,10 +18,12 @@ var squareRotation = 0.0;
 Maintenant, nous devons modifier la fonction `drawScene()` pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit&nbsp;:
 
 ```js
-mat4.rotate(modelViewMatrix,  // matrice de destination
-            modelViewMatrix,  // matrice de rotation
-            squareRotation,   // rotation en radians
-            [0, 0, 1]);       // axe autour duquel tourner
+mat4.rotate(
+  modelViewMatrix, // matrice de destination
+  modelViewMatrix, // matrice de rotation
+  squareRotation, // rotation en radians
+  [0, 0, 1],
+); // axe autour duquel tourner
 ```
 
 Ceci fait tourner la modelViewMatrix de la valeur courante de `squareRotation`, autour de l'axe Z.
@@ -34,7 +35,7 @@ var then = 0;
 
 // Dessiner la scène répétitivement
 function render(now) {
-  now *= 0.001;  // conversion en secondes
+  now *= 0.001; // conversion en secondes
   const deltaTime = now - then;
   then = now;
 

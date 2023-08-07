@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
 
 {{JSRef}}
@@ -32,7 +31,7 @@ var maMap = new Map();
 maMap.set("truc", "toto");
 
 maMap.delete("truc"); // Renvoie true. La suppression est OK.
-maMap.has("truc");    // Renvoie false. "truc" n'est plus présent.
+maMap.has("truc"); // Renvoie false. "truc" n'est plus présent.
 ```
 
 ## Spécifications

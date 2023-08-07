@@ -1,7 +1,6 @@
 ---
 title: document.querySelector
 slug: Web/API/Document/querySelector
-translation_of: Web/API/Document/querySelector
 ---
 
 {{ ApiRef("DOM") }}
@@ -49,15 +48,15 @@ Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte p
 <div id="machin:bidule"></div>
 
 <script>
-  console.log('#machin\bidule')               // "#machinidule" (\b est le caractère de contrôle retour arrière)
-  document.querySelector('#machin\bidule')    // ne correspond à rien
+  console.log("#machin\bidule"); // "#machinidule" (\b est le caractère de contrôle retour arrière)
+  document.querySelector("#machin\bidule"); // ne correspond à rien
 
-  console.log('#machin\\bidule')              // "#machin\bidule"
-  console.log('#machin\\\\bidule')            // "#machin\\bidule"
-  document.querySelector('#machin\\\\bidule') // correspond au premier div
+  console.log("#machin\\bidule"); // "#machin\bidule"
+  console.log("#machin\\\\bidule"); // "#machin\\bidule"
+  document.querySelector("#machin\\\\bidule"); // correspond au premier div
 
-  document.querySelector('#machin:bidule')    // ne correspond à rien
-  document.querySelector('#machin\\:bidule')  // correspond au second div
+  document.querySelector("#machin:bidule"); // ne correspond à rien
+  document.querySelector("#machin\\:bidule"); // correspond au second div
 </script>
 ```
 
@@ -76,7 +75,9 @@ var el = document.querySelector(".maclasse");
 Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
 
 ```js
-var el = document.querySelector("div.panneau-utilisateur.principal input[name='identifiant']");
+var el = document.querySelector(
+  "div.panneau-utilisateur.principal input[name='identifiant']",
+);
 ```
 
 ## Spécifications

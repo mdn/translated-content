@@ -1,7 +1,6 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isSealed
 ---
 
 {{JSRef}}
@@ -43,14 +42,14 @@ Object.isSealed(empty); // === true
 
 // Lo mismo no es vedad sobre un objeto no vacío,
 // a menos que sus propiedades son todas no configurables.
-var hasProp = { fee: 'fie foe fum' };
+var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
 // Pero hazlas todas no configurables
 // y el objeto se vuelve sellado.
-Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+Object.defineProperty(hasProp, "fee", {
+  configurable: false,
 });
 Object.isSealed(hasProp); // === true
 
@@ -72,7 +71,11 @@ var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // === false
 // ('p' todavía es modificable)
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 Object.isFrozen(s3); // === true
 // (solo la configurabilidad es importante para las propiedades de acceso)
 ```

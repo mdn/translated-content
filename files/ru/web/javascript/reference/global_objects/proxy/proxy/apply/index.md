@@ -1,11 +1,6 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - Прокси
-  - вызов функции
-  - ловушка
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
 
 {{JSRef}}
@@ -63,15 +58,15 @@ const p = new Proxy(target, {
 Следующий код ловит вызов функции.
 
 ```js
-const p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
-    console.log('called: ' + argumentsList.join(', '));
+const p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
+    console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+// 6
 ```
 
 ## Спецификации

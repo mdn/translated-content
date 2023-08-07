@@ -1,7 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-translation_of: Web/CSS/isolation
 ---
 
 {{CSSRef}}
@@ -48,7 +47,7 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

@@ -1,7 +1,6 @@
 ---
 title: "Testez vos compétences : Grilles"
 slug: Learn/CSS/CSS_layout/Grid_skills
-translation_of: Learn/CSS/CSS_layout/Grid_skills
 ---
 
 {{LearnSidebar}}

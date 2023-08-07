@@ -27,7 +27,7 @@ canvas.height = pxl;
 可以通过以下代码获得这个 canvas 元素的高度：
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.height); // 300
 ```
 

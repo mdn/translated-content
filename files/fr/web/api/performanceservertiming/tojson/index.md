@@ -1,7 +1,6 @@
 ---
 title: PerformanceServerTiming.toJSON()
 slug: Web/API/PerformanceServerTiming/toJSON
-translation_of: Web/API/PerformanceServerTiming/toJSON
 ---
 
 {{APIRef("Resource Timing API")}}
@@ -11,7 +10,7 @@ La méthode **`toJSON()`** de l'interface [`PerformanceServerTiming`](/fr/docs/W
 ## Syntaxe
 
 ```js
-let json = PerformanceServerTiming.toJSON()
+let json = PerformanceServerTiming.toJSON();
 ```
 
 ### Paramètres

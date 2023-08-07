@@ -1,7 +1,6 @@
 ---
 title: "<a>: El elemento ancla"
 slug: Web/HTML/Element/a
-original_slug: Web/HTML/Elemento/a
 ---
 
 {{HTMLSidebar}}

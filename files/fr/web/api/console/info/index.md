@@ -1,7 +1,6 @@
 ---
 title: Console.info()
 slug: Web/API/console/info
-translation_of: Web/API/Console/info
 ---
 
 {{ APIRef("Console API") }}{{Non-standard_header}}

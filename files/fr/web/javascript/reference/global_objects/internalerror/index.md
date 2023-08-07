@@ -1,7 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -45,7 +44,7 @@ function boucle(x) {
   if (x >= 10) {
     // "x >= 10" représente la condition d'arrêt
     return;
-  } 
+  }
   // faire des trucs
   boucle(x + 1); // l'appel récursif
 }

@@ -1,7 +1,6 @@
 ---
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
-translation_of: Web/API/Canvas_API/Tutorial/Finale
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

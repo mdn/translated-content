@@ -1,7 +1,6 @@
 ---
 title: PerformanceElementTiming.renderTime
 slug: Web/API/PerformanceElementTiming/renderTime
-translation_of: Web/API/PerformanceElementTiming/renderTime
 ---
 
 {{APIRef("Element Timing API")}}
@@ -27,7 +26,11 @@ Pour les nœuds de texte, il s'agira de l'**horodatage du rendu du texte**. Ceci
 Dans cet exemple, appeler `entry.renderTime` renvoie le temps de rendu de l'élément image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

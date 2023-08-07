@@ -1,7 +1,6 @@
 ---
 title: Valeurs
 slug: Web/MathML/Values
-translation_of: Web/MathML/Attribute/Values
 ---
 
 ## Longueurs

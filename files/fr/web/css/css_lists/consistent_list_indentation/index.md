@@ -1,7 +1,6 @@
 ---
 title: Indentation homogène des listes
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}
@@ -39,7 +38,8 @@ C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les ma
 Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
 
 ```css
-ul, li {
+ul,
+li {
   margin-left: 0;
   padding-left: 0;
 }

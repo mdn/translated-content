@@ -2,13 +2,12 @@
 title: <progress>
 slug: Web/HTML/Element/progress
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<progress>` 요소**는 어느 작업의 완료 정도를 나타내며, 주로 진행 표시줄의 형태를 띕니다.
 
 {{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>

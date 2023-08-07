@@ -1,7 +1,6 @@
 ---
 title: Valeur spécifiée
 slug: Web/CSS/specified_value
-translation_of: Web/CSS/specified_value
 ---
 
 {{CSSRef}}
@@ -19,14 +18,17 @@ La **valeur définie** d'une propriété CSS est celle explicitement définie da
 ```html
 <p>Ma couleur provient explicitement de la feuille de style CSS.</p>
 
-<div>Les valeurs définies de mes propriétés utilisent
-    les valeurs initiales (par défaut) car aucune n'est fournie
-    dans la feuille de style CSS.</div>
+<div>
+  Les valeurs définies de mes propriétés utilisent les valeurs initiales (par
+  défaut) car aucune n'est fournie dans la feuille de style CSS.
+</div>
 
 <div class="fun">
-  <p>La valeur définie pour ma police n'est pas fournie explicitement
-     dans la feuille de style et est donc héritée de mon parent.
-     Toutefois, la bordure n'est pas une propriété héritée.</p>
+  <p>
+    La valeur définie pour ma police n'est pas fournie explicitement dans la
+    feuille de style et est donc héritée de mon parent. Toutefois, la bordure
+    n'est pas une propriété héritée.
+  </p>
 </div>
 ```
 

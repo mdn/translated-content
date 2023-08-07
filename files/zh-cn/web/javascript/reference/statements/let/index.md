@@ -74,8 +74,8 @@ function letTest() {
 在全局作用域中，**`let`** 和 **`var`** 不一样，它不会在全局对象上创建属性。例如：
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -96,7 +96,7 @@ if (x) {
 ```js example-bad
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0:
     let foo;
     break;
@@ -111,7 +111,7 @@ switch(x) {
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -132,7 +132,8 @@ switch(x) {
 与 {{jsxref("Statements/var", "var")}} 声明的变量不同，如果在声明前访问了变量，变量将会返回 `undefined`。以下代码演示了在使用 `let` 和 `var` 声明变量的行之前访问变量的不同结果。
 
 ```js example-bad
-{ // TDZ starts at beginning of scope
+{
+  // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -178,8 +179,8 @@ console.log(typeof undeclaredVariable);
 ```js example-bad
 function test() {
   var foo = 33;
-  if(foo) {
-    let foo = (foo + 55); // ReferenceError
+  if (foo) {
+    let foo = foo + 55; // ReferenceError
   }
 }
 test();
@@ -196,12 +197,13 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    // ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ### 其他情况
@@ -216,8 +218,8 @@ if (a === 1) {
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

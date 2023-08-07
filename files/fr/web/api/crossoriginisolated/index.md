@@ -1,7 +1,6 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
-translation_of: Web/API/crossOriginIsolated
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
@@ -18,7 +17,7 @@ Une valeur booléenne.
 ## Exemples
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // On peut envoyer un SharedArrayBuffer
 } else {
   // Sinon on fait autre chose

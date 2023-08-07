@@ -1,7 +1,6 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
-translation_of: Web/API/Notification/silent
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`silent`** de l'interface {{domxref ("Notifica
 ## Syntaxe
 
 ```js
-Notification.silent
+Notification.silent;
 ```
 
 ### Valeur

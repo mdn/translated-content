@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.setLineDash()
 slug: Web/API/CanvasRenderingContext2D/setLineDash
-translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 ---
 
 {{APIRef}}
@@ -38,8 +37,8 @@ C'est simplement un fragment de code qui utilise la méthode `setLineDash()` pou
 ### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.setLineDash([5, 15]);
@@ -77,7 +76,8 @@ ctx.beginPath();
 ctx.setLineDash([]);
 ctx.moveTo(0, 150);
 ctx.lineTo(400, 150);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -93,14 +93,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

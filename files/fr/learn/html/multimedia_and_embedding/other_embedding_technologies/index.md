@@ -1,7 +1,6 @@
 ---
 title: Des objets aux iframes — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -196,7 +195,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_utilisations_classiques_de_l'intégration", 700, 600, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample("Apprentissage_actif_utilisations_classiques_de_l'intégration", 700, 600) }}
 
 ## Iframes en détail
 

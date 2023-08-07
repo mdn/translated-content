@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Object.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.preventExtensions()`** permet d'empêcher l'ajout de nouve
 ## Syntaxe
 
 ```js
-Object.preventExtensions(obj)
+Object.preventExtensions(obj);
 ```
 
 ### Paramètres

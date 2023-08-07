@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointerdown イベント'
+title: "Element: pointerdown イベント"
+short-title: pointerdown
 slug: Web/API/Element/pointerdown_event
-original_slug: Web/API/Document/pointerdown_event
 l10n:
-  sourceCommit: 1732201134d732af9bfd49ee9e10f7e2086cc783
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef}}
@@ -17,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerdown', (event) => {});
+addEventListener("pointerdown", (event) => {});
 
-onpointerdown = (event) => { };
+onpointerdown = (event) => {};
 ```
 
 ## イベント型
@@ -58,20 +58,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerdown', (event) => {
-  console.log('Pointer down event');
+para.addEventListener("pointerdown", (event) => {
+  console.log("Pointer down event");
 });
 ```
 
 `onpointerdown` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerdown = (event) => {
-  console.log('Pointer down event');
+  console.log("Pointer down event");
 };
 ```
 

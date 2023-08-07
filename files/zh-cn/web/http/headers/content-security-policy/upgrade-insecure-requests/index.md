@@ -1,5 +1,5 @@
 ---
-title: 'CSP: upgrade-insecure-requests'
+title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 
@@ -30,15 +30,15 @@ Content-Security-Policy: upgrade-insecure-requests;
 一旦将上述头部设置在计划从 HTTP 迁移到 HTTPS 的 example.com 域名上，非跳转 (non-navigational) 的不安全资源请求会自动升级到 HTTPS（包括第当前域名以及第三方请求）。
 
 ```html
-<img src="http://example.com/image.png">
-<img src="http://not-example.com/image.png">
+<img src="http://example.com/image.png" />
+<img src="http://not-example.com/image.png" />
 ```
 
 这些 URL 在请求发送之前都会被改写成 HTTPS，也就意味着不安全的请求都不会发送出去。注意，如果请求的资源在 HTTPS 情况下不可用，则该请求将失败，其也不能回退到 HTTP。
 
 ```html
-<img src="https://example.com/image.png">
-<img src="https://not-example.com/image.png">
+<img src="https://example.com/image.png" />
+<img src="https://not-example.com/image.png" />
 ```
 
 Navigational upgrades to third-party resources brings a significantly higher potential for breakage, these are not upgraded:

@@ -271,7 +271,7 @@ ls | wc -l
 curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-ページが ([/Web/API/fetch](/en-US/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
+ページが ([/Web/API/fetch](/ja/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
 `-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
 また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーションリダイレクトを出力します。(「 location」という単語を含むすべての行を返すように `grep` に依頼します)。

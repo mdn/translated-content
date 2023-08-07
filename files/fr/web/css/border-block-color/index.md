@@ -1,7 +1,6 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-translation_of: Web/CSS/border-block-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -10,7 +9,7 @@ La propriété **`border-block-color`** définit la couleur de la bordure d'un �
 
 ```css
 border-block-color: yellow;
-border-block-color: #F5F6F7;
+border-block-color: #f5f6f7;
 ```
 
 Pour définir la couleur de la bordure sur l'autre dimension, on pourra utiliser la propriété logique {{cssxref("border-inline-color")}} qui définit {{cssxref("border-inline-start-color")}} et {{cssxref("border-inline-end-color")}}.

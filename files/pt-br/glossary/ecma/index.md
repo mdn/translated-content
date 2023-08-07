@@ -1,7 +1,6 @@
 ---
 title: ECMA
 slug: Glossary/ECMA
-original_slug: Glossario/ECMA
 ---
 
 **Ecma International** (oficialmente _Associação Européia dos Fabricantes de Computadores_) é uma organização sem fins lucrativos que desenvolve os padrões para hardware de computadores, comunicações e linguagens de programação.

@@ -1,5 +1,5 @@
 ---
-title: 'HTML: Hypertext Markup Language'
+title: "HTML: Hypertext Markup Language"
 slug: Web/HTML
 ---
 
@@ -65,7 +65,7 @@ MDN [HTML 학습지](/ko/docs/Learn/HTML)는 HTML을 처음부터 알려주는 �
 ## 고급 주제
 
 - [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_enabled_image)
-  - : {{htmlattrxref("crossorigin", "img")}} 속성을 적절한 {{glossary("CORS")}} 헤더와 조합하면 {{htmlelement("img")}}
+  - : [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 적절한 {{glossary("CORS")}} 헤더와 조합하면 {{htmlelement("img")}}
     요소의 이미지를 외부 {{glossary("origin", "출처")}}에서 가져올 수 있으며, 마치 현재 출처의 이미지인 것처럼
     {{htmlelement("canvas")}}에서도 사용할 수 있습니다.
 - [CORS 설정 특성](/ko/docs/Web/HTML/Attributes/crossorigin)
@@ -73,7 +73,7 @@ MDN [HTML 학습지](/ko/docs/Learn/HTML)는 HTML을 처음부터 알려주는 �
     `crossorigin` 특성(`crossOrigin` 속성)을 보유하며, 해당 요소가 데이터를 가져올 때의 CORS
     요청을 통제할 수 있습니다.
 - [rel="preload"로 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Link_types/preload)
-  - : {{htmlelement("link")}} 요소, {{htmlattrxref("rel", "link")}} 특성의 `preload` 값을 사용하면 페이지를
+  - : {{htmlelement("link")}} 요소, [`rel`](/ko/docs/Web/HTML/Element/link#rel) 특성의 `preload` 값을 사용하면 페이지를
     불러온 직후 빠르게 사용해야 하는 리소스에 대해 선언적인 가져오기 요청을 {{htmlelement("head")}} 안에 추가할 수
     있습니다. 이렇게 지정한 리소스는 페이지 불러오기 라이프사이클의 초기, 브라우저의 주 렌더링이 시작하기도 전에
     시작하고, 페이지의 첫 렌더링이 덜 막혀 성능이 개선됩니다. 이 글에서는 `preload` 작동 방식에 대한 기본적인

@@ -41,7 +41,7 @@ item(index)
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

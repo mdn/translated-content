@@ -1,7 +1,6 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
-translation_of: Web/API/HTMLImageElement/Image
 ---
 
 {{ APIRef("HTML DOM") }}Конструктор **Image()** создаёт новый экземпляр HTMLImageElement. Эквивалентно document.createElement ('img').
@@ -20,14 +19,14 @@ Image([unsigned long width, unsigned long height])
 
 ```js
 var img = new Image(100, 200);
-img.src = 'picture.jpg';
+img.src = "picture.jpg";
 console.log(img);
 ```
 
 ##### Результат
 
 ```html
-<img width="100" height="200" src="picture.jpg">
+<img width="100" height="200" src="picture.jpg" />
 ```
 
 > **Примечание:** Примечание: этот конструктор существует только для истории, и возвращает экземпляр [HTMLImageElement](/ru/docs/Web/API/HTMLImageElement) точно также, как и `document.createElement('img')`.

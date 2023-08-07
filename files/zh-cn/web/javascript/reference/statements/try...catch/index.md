@@ -60,11 +60,10 @@ try {
 
 ```js
 try {
-   throw "myException"; // generates an exception
-}
-catch (e) {
-   // statements to handle any exceptions
-   logMyErrors(e); // pass exception object to error handler
+  throw "myException"; // generates an exception
+} catch (e) {
+  // statements to handle any exceptions
+  logMyErrors(e); // pass exception object to error handler
 }
 ```
 
@@ -104,7 +103,7 @@ try {
   if (e instanceof RangeError) {
     // statements to handle this very common expected error
   } else {
-    throw e;  // re-throw the error unchanged
+    throw e; // re-throw the error unchanged
   }
 }
 ```
@@ -133,13 +132,12 @@ function isValidJSON(text) {
 以下示例打开一个文件，然后执行使用该文件的语句（服务器端 JavaScript 允许您访问文件）。如果文件打开时抛出异常，则`finally`子句会在脚本失败之前关闭该文件。finally 中的代码最终也会在`try`或`catch block`显式返回时执行。
 
 ```js
-openMyFile()
+openMyFile();
 try {
-   // tie up a resource
-   writeMyFile(theData);
-}
-finally {
-   closeMyFile(); // always close the resource
+  // tie up a resource
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // always close the resource
 }
 ```
 
@@ -153,12 +151,10 @@ finally {
 try {
   try {
     throw new Error("oops");
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("outer", ex.message);
 }
 
@@ -173,15 +169,12 @@ catch (ex) {
 try {
   try {
     throw new Error("oops");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("inner", ex.message);
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("outer", ex.message);
 }
 
@@ -196,16 +189,13 @@ catch (ex) {
 try {
   try {
     throw new Error("oops");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("inner", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("outer", ex.message);
 }
 
@@ -225,17 +215,14 @@ catch (ex) {
 try {
   try {
     throw new Error("oops");
-  }
-  catch (ex) {
+  } catch (ex) {
     console.error("inner", ex.message);
     throw ex;
-  }
-  finally {
+  } finally {
     console.log("finally");
     return;
   }
-}
-catch (ex) {
+} catch (ex) {
   console.error("outer", ex.message);
 }
 

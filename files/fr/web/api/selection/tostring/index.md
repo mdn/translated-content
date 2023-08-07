@@ -1,7 +1,6 @@
 ---
 title: toString
 slug: Web/API/Selection/toString
-translation_of: Web/API/Selection/toString
 ---
 
 {{ ApiRef() }}
@@ -13,7 +12,7 @@ Renvoie une chaîne de caractères représentant l'actuel objet `selection`, i.e
 ### Syntaxe
 
 ```js
-string =sel.toString()
+string = sel.toString();
 ```
 
 - `string` est la représentation sous la forme d'une chaîne de caractères de la sélection.
@@ -29,8 +28,8 @@ Cette méthode renvoie le texte sélectionné.
 En [JavaScript](/fr/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
 
 ```js
-alert(window.getSelection()) // Appel automatique
-alert(window.getSelection().toString())  // Appel explicite
+alert(window.getSelection()); // Appel automatique
+alert(window.getSelection().toString()); // Appel explicite
 ```
 
 ### Voir aussi

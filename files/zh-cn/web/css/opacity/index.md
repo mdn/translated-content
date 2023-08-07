@@ -20,13 +20,13 @@ opacity 属性指定了一个元素的**不透明度**。换言之，opacity 属
 ```css
 /* 完全不透明 */
 opacity: 1;
-opacity: 1.0;
+opacity: 1;
 
 /* 半透明 */
 opacity: 0.6;
 
 /* 完全透明 */
-opacity: 0.0;
+opacity: 0;
 opacity: 0;
 
 opacity: inherit;
@@ -38,11 +38,11 @@ opacity: inherit;
 
   - : {{cssxref("&lt;number&gt;")}} 是一个 0.0 到 1.0 范围内的数字值，这个数值既包含也代表通道的透明度，也就是 alpha 通道的值。任何一个溢出这个取值区间的值，尽管有效，但会被解析为在取值范围内最靠近它的值。
 
-    | 值                                                                   | 释义                                     |
-    | -------------------------------------------------------------------- | ---------------------------------------- |
-    | `0`                                                                  | 元素完全透明 (即元素不可见).             |
+    | 值                                                        | 释义                                     |
+    | --------------------------------------------------------- | ---------------------------------------- |
+    | `0`                                                       | 元素完全透明 (即元素不可见).             |
     | 任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}} | 元素半透明 (即元素后面的背景可见).       |
-    | `1`                                                                  | 元素完全不透明 (即元素后面的背景不可见). |
+    | `1`                                                       | 元素完全不透明 (即元素后面的背景不可见). |
 
 ### 形式语法
 
@@ -53,7 +53,9 @@ opacity: inherit;
 ### 基本示例
 
 ```css
-div { background-color: yellow; }
+div {
+  background-color: yellow;
+}
 .light {
   opacity: 0.2; /* Barely see the text over the background */
 }
@@ -90,9 +92,12 @@ img.opacity:hover {
 ```
 
 ```html
-<img src="//developer.mozilla.org/media/img/mdn-logo.png"
-     alt="MDN logo" width="128" height="146"
-     class="opacity">
+<img
+  src="//developer.mozilla.org/media/img/mdn-logo.png"
+  alt="MDN logo"
+  width="128"
+  height="146"
+  class="opacity" />
 ```
 
 {{EmbedLiveSample(':hover 时 opacity 的不同', '150', '175')}}

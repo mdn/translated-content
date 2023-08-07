@@ -1,7 +1,6 @@
 ---
 title: Formatage avancé du texte
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
@@ -240,7 +239,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350) }}
 
 ## Citations
 
@@ -459,7 +458,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450) }}
 
 ## Abréviations
 
@@ -618,7 +617,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300) }}
 
 ## Balisage des détails de contact
 

@@ -1,7 +1,6 @@
 ---
 title: Otimizando canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-original_slug: Web/Guide/HTML/Canvas_tutorial/Otimizando_Canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -17,10 +16,10 @@ O que segue é uma coleção de dicas para melhorar a performance.
 If you find yourself with complex drawing operations on each frame, consider creating an offscreen canvas, draw to it once (or whenever it changes) on the offscreen canvas, then on each frame draw the offscreen canvas.
 
 ```js
-myEntity.offscreenCanvas = document.createElement('canvas');
+myEntity.offscreenCanvas = document.createElement("canvas");
 myEntity.offscreenCanvas.width = myEntity.width;
 myEntity.offscreenCanvas.height = myEntity.height;
-myEntity.offscreenContext = myEntity.offscreenCanvas.getContext('2d');
+myEntity.offscreenContext = myEntity.offscreenCanvas.getContext("2d");
 
 myEntity.render(myEntity.offscreenContext);
 ```
@@ -57,12 +56,20 @@ For example you could create a UI layer that sits on top of everything and is on
     width: 480px;
     height: 320px;
     position: relative;
-    border: 2px solid black
+    border: 2px solid black;
   }
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3 }
-  #game-layer { z-index: 2 }
-  #background-layer { z-index: 1 }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -81,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### Turn off transparency
@@ -90,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 If your game uses canvas and doesn't need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### More tips

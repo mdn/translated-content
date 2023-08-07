@@ -1,7 +1,6 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 ```js
 var p = new Proxy(target, {
-  apply: function(target, thisArg, argumentsList) {
-  }
+  apply: function (target, thisArg, argumentsList) {},
 });
 ```
 
@@ -57,15 +55,14 @@ var p = new Proxy(target, {
 以下代码演示如何捕获函数的调用。
 
 ```js
-var p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
-    console.log('called: ' + argumentsList.join(', '));
+var p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
+    console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
-console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
 ```
 
 ## 规范

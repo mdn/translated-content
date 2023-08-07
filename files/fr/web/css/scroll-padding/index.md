@@ -1,7 +1,6 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
-translation_of: Web/CSS/scroll-padding
 ---
 
 {{CSSRef}}
@@ -21,7 +20,7 @@ scroll-padding: auto;
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-padding: 10px;
-scroll-padding: 1em .5em 1em 1em;
+scroll-padding: 1em 0.5em 1em 1em;
 scroll-padding: 10%;
 
 /* Valeurs globales */

@@ -1,7 +1,6 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-translation_of: Web/API/PerformanceEntry/toJSON
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -59,8 +58,7 @@ function check_PerformanceEntry(obj) {
     let supported = properties[i] in obj;
     if (supported)
       console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      console.log("..." + properties[i] + " = N'est pas pris en charge");
+    else console.log("..." + properties[i] + " = N'est pas pris en charge");
   }
   for (let i = 0; i < methods.length; i++) {
     // On vérifie chaque méthode

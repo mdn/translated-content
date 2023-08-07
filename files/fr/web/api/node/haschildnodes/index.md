@@ -1,7 +1,6 @@
 ---
 title: element.hasChildNodes
 slug: Web/API/Node/hasChildNodes
-translation_of: Web/API/Node/hasChildNodes
 ---
 
 {{APIRef("DOM")}}
@@ -21,7 +20,7 @@ Un {{jsxref("Boolean")}} qui est `true` si le nœud a des nœuds enfants, et `fa
 ## Exemple
 
 ```js
-let foo = document.getElementById('foo');
+let foo = document.getElementById("foo");
 
 if (foo.hasChildNodes()) {
   // Faire quelque chose avec 'foo.childNodes'
@@ -31,10 +30,12 @@ if (foo.hasChildNodes()) {
 ## Prothèse d'émulation
 
 ```js
-(function(prototype) {
-  prototype.hasChildNodes = prototype.hasChildNodes || function() {
-    return !!this.firstChild;
-  }
+(function (prototype) {
+  prototype.hasChildNodes =
+    prototype.hasChildNodes ||
+    function () {
+      return !!this.firstChild;
+    };
 })(Node.prototype);
 ```
 

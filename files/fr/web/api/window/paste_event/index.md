@@ -1,7 +1,6 @@
 ---
-title: 'Window: paste event'
+title: "Window: paste event"
 slug: Web/API/Window/paste_event
-translation_of: Web/API/Window/paste_event
 ---
 
 {{APIRef}}
@@ -34,8 +33,8 @@ La cible d'origine de cet événement est le {{domxref ("Element")}} qui était 
 ## Exemples
 
 ```js
-window.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+window.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
-translation_of: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
@@ -42,7 +41,7 @@ input::placeholder {
 ### HTML
 
 ```html
-<input type="email" placeholder="toto@exemple.com">
+<input type="email" placeholder="toto@exemple.com" />
 ```
 
 ### Résultat
@@ -80,8 +79,14 @@ Avec cette méthode, le contenu indicatif est disponible à tout moment (même l
 
 ```html
 <label for="user-email">Votre adresse mail</label>
-<span id="user-email-hint" class="input-hint">Exemple : johndoe@example.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<span id="user-email-hint" class="input-hint"
+  >Exemple : johndoe@example.com</span
+>
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)

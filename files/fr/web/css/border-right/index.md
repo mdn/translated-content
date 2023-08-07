@@ -1,7 +1,6 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-translation_of: Web/CSS/border-right
 ---
 
 {{CSSRef}}
@@ -23,15 +22,15 @@ Ces propriétés permettent de décrire la bordure du côté droit d'un élémen
 > Comme pour les autres propriétés raccourcies, `border-right` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
 >
 > ```css
->   border-right-style: dotted;
->   border-right: thick green;
+> border-right-style: dotted;
+> border-right: thick green;
 > ```
 >
 > est équivalent à :
 >
 > ```css
->   border-right-style: dotted;
->   border-right: none thick green;
+> border-right-style: dotted;
+> border-right: none thick green;
 > ```
 >
 > et la valeur {{cssxref("border-right-style")}} fournie avant `border-right` est ignorée.
@@ -77,8 +76,7 @@ border-right: medium dashed green;
 
 ```html
 <p class="exemple">
-  En passant elle prit sur un rayon un pot
-  de confiture portant cette étiquette,
+  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
 </p>
 ```

@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadend
 slug: Web/API/XMLHttpRequest/loadend_event
-translation_of: Web/API/GlobalEventHandlers/onloadend
 ---
 
 {{ApiRef}}
@@ -23,7 +22,7 @@ img.onloadend = funcRef;
 ### Contenu HTML
 
 ```html
-<img src="myImage.jpg">
+<img src="myImage.jpg" />
 ```
 
 ### Contenu JavaScript
@@ -31,16 +30,16 @@ img.onloadend = funcRef;
 ```js
 // 'loadstart' est le premier lancé, puis 'load', puis 'loadend'
 
-image.addEventListener('load', function(e) {
-  console.log('Image loaded');
+image.addEventListener("load", function (e) {
+  console.log("Image loaded");
 });
 
-image.addEventListener('loadstart', function(e) {
-  console.log('Image load started');
+image.addEventListener("loadstart", function (e) {
+  console.log("Image load started");
 });
 
-image.addEventListener('loadend', function(e) {
-  console.log('Image load finished');
+image.addEventListener("loadend", function (e) {
+  console.log("Image load finished");
 });
 ```
 

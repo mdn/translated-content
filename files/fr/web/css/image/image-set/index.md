@@ -1,7 +1,6 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-translation_of: Web/CSS/image/image-set
 ---
 
 {{CSSRef}}
@@ -56,7 +55,8 @@ Il n'y a pas de méthode de recours native en l'absence de prise en charge de `i
   background-image: url("large-balloons.jpg");
   background-image: image-set(
     "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg"));
+    "large-balloons.jpg" type("image/jpeg")
+  );
 }
 ```
 

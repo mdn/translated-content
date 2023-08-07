@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
-translation_of: Web/API/ServiceWorkerRegistration/active
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -15,7 +14,7 @@ Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l'URL du cl
 ## Syntaxe
 
 ```js
-sw = ServiceWorker.active
+sw = ServiceWorker.active;
 ```
 
 ### Valeur

@@ -1,7 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-translation_of: Web/HTML/Element/map
 ---
 
 {{HTMLSidebar}}
@@ -23,10 +22,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html">
-  <area shape="circle" coords="275,75,75" href="right.html">
+  <area shape="circle" coords="75,75,75" href="left.html" />
+  <area shape="circle" coords="275,75,75" href="right.html" />
 </map>
-<img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic">
+<img
+  usemap="#primary"
+  src="https://via.placeholder.com/350x150"
+  alt="350 x 150 pic" />
 ```
 
 ### Résultat

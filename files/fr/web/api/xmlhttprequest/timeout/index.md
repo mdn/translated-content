@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -16,7 +15,7 @@ La propriété **`XMLHttpRequest.timeout`** est un `unsigned long` (un entier lo
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // durée en millisecondes
 

@@ -1,7 +1,6 @@
 ---
 title: Herramientas y pruebas
 slug: Learn/Tools_and_testing
-original_slug: Learn/Herramientas_y_pruebas
 ---
 
 {{LearnSidebar}}

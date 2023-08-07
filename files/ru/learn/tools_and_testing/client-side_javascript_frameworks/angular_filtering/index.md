@@ -1,16 +1,6 @@
 ---
 title: Фильтрация списка дел
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
-tags:
-  - Новички
-  - Фреймворки
-  - JavaScript
-  - Изучение
-  - client-side
-  - Angular
-  - Фильтрация
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

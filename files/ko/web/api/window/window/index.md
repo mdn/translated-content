@@ -2,6 +2,7 @@
 title: Window.window
 slug: Web/API/Window/window
 ---
+
 {{APIRef}}
 
 ## 요약
@@ -19,17 +20,17 @@ window.window.window.window
 
 1. 스크립트의 전역 변수는 사실 window 객체의 프로퍼티이다.
 
-    ```js
-    var global = {data: 0};
-    alert(global === window.global); // true를 반환한다.
-    ```
+   ```js
+   var global = { data: 0 };
+   alert(global === window.global); // true를 반환한다.
+   ```
 
 2. window 객체의 내장된 프로퍼티들은 window. 접두사 없이도 참조가 가능하다.
 
-    ```js
-    setTimeout("alert('Hi!')", 50); // window.setTimeout. 을 사용한 것과 동일하다.
-    alert(window === window.window); // true를 반환한다.
-    ```
+   ```js
+   setTimeout("alert('Hi!')", 50); // window.setTimeout. 을 사용한 것과 동일하다.
+   alert(window === window.window); // true를 반환한다.
+   ```
 
 자기 자신을 참조하는 window 라는 프로퍼티가 있다는 것은 (아마도) 전역 객체를 쉽게 참조하기 위함으로 생각된다.(없다면 스크립트 첫 부분에 다음과 같이 직접 만들어주었어야 했다. var window = this;)
 

@@ -1,7 +1,6 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
-translation_of: Web/API/WindowClient/navigate
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -11,7 +10,7 @@ La méthode **`navigate()`** de l'interface {{domxref("WindowClient")}} charge u
 ## Syntaxe
 
 ```js
-WindowClient.navigate(url).then(function(WindowClient) {
+WindowClient.navigate(url).then(function (WindowClient) {
   // do something with your WindowClient after navigation
 });
 ```

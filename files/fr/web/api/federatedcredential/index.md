@@ -1,7 +1,6 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential
-translation_of: Web/API/FederatedCredential
 ---
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
@@ -36,13 +35,12 @@ Aucun.
 var cred = new FederatedCredential({
   id: id,
   name: name,
-  provider: 'https://account.google.com',
-  iconURL: iconUrl
+  provider: "https://account.google.com",
+  iconURL: iconUrl,
 });
 
 // Enregistrer les informations d'authentification
-navigator.credentials.store(cred)
-  .then(function() {
+navigator.credentials.store(cred).then(function () {
   // Faire quelque chose
 });
 ```

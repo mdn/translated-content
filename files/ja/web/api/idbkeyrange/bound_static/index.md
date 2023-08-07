@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound_static
-original_slug: Web/API/IDBKeyRange/bound
 ---
 
 {{ APIRef("IndexedDB") }}

@@ -1,7 +1,6 @@
 ---
 title: Cours express sur la ligne de commande
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

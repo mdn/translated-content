@@ -1,7 +1,6 @@
 ---
 title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{APIRef("DOM Events")}}
@@ -11,7 +10,7 @@ Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} 
 ## Syntaxe
 
 ```js
-cancelled = !target.dispatchEvent(event)
+cancelled = !target.dispatchEvent(event);
 ```
 
 ### Paramètres

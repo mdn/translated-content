@@ -1204,7 +1204,7 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
 /zh-CN/docs/Mozilla_event_reference	/zh-CN/docs/Web/Events
-/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
+/zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Mozilla_event_reference/animationstart	/zh-CN/docs/Web/API/Element/animationstart_event
 /zh-CN/docs/Mozilla_event_reference/beforescriptexecute	/zh-CN/docs/Web/API/Element/beforescriptexecute_event
 /zh-CN/docs/Mozilla_event_reference/change	/zh-CN/docs/Web/API/HTMLElement/change_event
@@ -1502,6 +1502,7 @@
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/Web/API/FileReader/load_event
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/File_Handle_API	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
+/zh-CN/docs/Web/API/File_System_Access_API	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
@@ -1868,6 +1869,7 @@
 /zh-CN/docs/Web/API/Window.setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window.showModalDialog	/zh-CN/docs/Web/API/Window/showModalDialog
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
+/zh-CN/docs/Web/API/Window/DOMContentLoaded_event	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
 /zh-CN/docs/Web/API/Window/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
@@ -2191,8 +2193,8 @@
 /zh-CN/docs/Web/CSS/网格-模板-列	/zh-CN/docs/Web/CSS/grid-template-rows
 /zh-CN/docs/Web/Demos_of_open_web_technologies	/zh-CN/docs/Web/Demos
 /zh-CN/docs/Web/Events/Activate	/zh-CN/docs/Web/API/Element/DOMActivate_event
-/zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
-/zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
+/zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
+/zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMMouseScroll	/zh-CN/docs/Web/API/Element/DOMMouseScroll_event
 /zh-CN/docs/Web/Events/Detecting_device_orientation	/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /zh-CN/docs/Web/Events/Orientation_and_motion_data_explained	/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained

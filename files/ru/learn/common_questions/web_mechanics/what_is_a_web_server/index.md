@@ -1,13 +1,6 @@
 ---
 title: Что такое веб-сервер
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-tags:
-  - Веб-сервер
-  - Динамический сайт
-  - Новичок
-  - Статический сайт
-translation_of: Learn/Common_questions/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 В этой статье мы узнаем, что из себя представляют веб-серверы, как они работают, и почему они так важны.

@@ -1,5 +1,5 @@
 ---
-title: 'IDBRequest: success イベント'
+title: "IDBRequest: success イベント"
 slug: Web/API/IDBRequest/success_event
 ---
 

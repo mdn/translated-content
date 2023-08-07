@@ -1,7 +1,6 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
-translation_of: Web/CSS/box-decoration-break
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -51,7 +50,10 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
 ```css
 .exemple {
   background: linear-gradient(to bottom right, yellow, green);
-  box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue, 5px 5px 15px 0px yellow;
+  box-shadow:
+    8px 8px 10px 0px deeppink,
+    -5px -5px 5px 0px blue,
+    5px 5px 15px 0px yellow;
   padding: 0em 1em;
   border-radius: 16px;
   border-style: solid;
@@ -64,7 +66,7 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
 ##### HTML
 
 ```html
-<span class="exemple">The<br>quick<br>orange fox</span>
+<span class="exemple">The<br />quick<br />orange fox</span>
 ```
 
 ##### Résultat _live_
@@ -82,7 +84,10 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
 ```css
 .exemple {
   background: linear-gradient(to bottom right, yellow, green);
-  box-shadow: 8px 8px 10px 0px deeppink, -5px -5px 5px 0px blue, 5px 5px 15px 0px yellow;
+  box-shadow:
+    8px 8px 10px 0px deeppink,
+    -5px -5px 5px 0px blue,
+    5px 5px 15px 0px yellow;
   padding: 0em 1em;
   border-radius: 16px;
   border-style: solid;
@@ -90,8 +95,8 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
   font: 24px sans-serif;
   line-height: 2;
 
- -webkit-box-decoration-break: clone;
- -o-box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 ```
@@ -99,7 +104,7 @@ La propriété `box-decoration-break` est définie avec l'un des mots-clés déf
 ##### HTML
 
 ```html
-<span class="exemple">The<br>quick<br>orange fox</span>
+<span class="exemple">The<br />quick<br />orange fox</span>
 ```
 
 ##### Résultat _live_

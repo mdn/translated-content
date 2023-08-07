@@ -1,7 +1,6 @@
 ---
 title: Navigator.product
 slug: Web/API/Navigator/product
-original_slug: Web/API/NavigatorID/product
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}

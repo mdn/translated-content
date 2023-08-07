@@ -1,7 +1,6 @@
 ---
 title: menus.ACTION_MENU_TOP_LEVEL_LIMIT
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ACTION_MENU_TOP_LEVEL_LIMIT
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ACTION_MENU_TOP_LEVEL_LIMIT
 ---
 
 {{AddonSidebar()}}

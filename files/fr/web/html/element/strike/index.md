@@ -1,7 +1,6 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-translation_of: Web/HTML/Element/strike
 ---
 
 {{deprecated_header}}{{HTMLSidebar}}
@@ -23,10 +22,7 @@ Cet élément implémente l'interface {{domxref("HTMLElement")}}.
 ## Exemples
 
 ```html
-<strike>
-  Plat du jour : Saumon
-</strike>
-ÉPUISÉ
+<strike> Plat du jour : Saumon </strike> ÉPUISÉ
 ```
 
 ### Résultat

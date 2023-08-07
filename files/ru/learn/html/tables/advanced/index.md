@@ -1,7 +1,6 @@
 ---
 title: HTML таблицы продвинутые возможности и доступность
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -18,7 +17,9 @@ translation_of: Learn/HTML/Tables/Advanced
 
 ```html
 <table>
-  <caption>Dinosaurs in the Jurassic period</caption>
+  <caption>
+    Dinosaurs in the Jurassic period
+  </caption>
 
   ...
 </table>
@@ -65,16 +66,16 @@ translation_of: Learn/HTML/Tables/Advanced
 5. Далее, добавьте атрибут [`colspan`](/ru/docs/Web/HTML/Element/td#colspan), чтобы ячейка "SUM" занимала первые четыре столбца, таким образом числовое значение "Cost" появится в последнем столбце.
 6. Давайте добавим несколько простых дополнительных стилей к таблице, чтобы дать вам представление насколько эти элементы полезны при использовании CSS. Внутри в `<head>` вашего HTML документа вы увидите пустой элемент {{htmlelement("style")}}. Внутри этого элемента добавьте следующие строки CSS кода:
 
-    ```css
-    tbody {
-      font-size: 90%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 90%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. Сохраните, обновите и вы увидите результат. Если `<tbody>` и `<tfoot>` элементы не были установлены, то вам придётся писать много сложных селекторов/правил для применения одного и того же стиля.
 
@@ -83,109 +84,110 @@ translation_of: Learn/HTML/Tables/Advanced
 Ваша готовая таблица должна выглядеть примерно так:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My spending record</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 2px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 1px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 1px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-      <table>
-        <caption>How I chose to spend my money</caption>
-        <thead>
-          <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="4">SUM</td>
-            <td>118</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Haircut</td>
-            <td>Hairdresser</td>
-            <td>12/09</td>
-            <td>Great idea</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Lasagna</td>
-            <td>Restaurant</td>
-            <td>12/09</td>
-            <td>Regrets</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Shoes</td>
-            <td>Shoeshop</td>
-            <td>13/09</td>
-            <td>Big regrets</td>
-            <td>65</td>
-          </tr>
-          <tr>
-            <td>Toothpaste</td>
-            <td>Supermarket</td>
-            <td>13/09</td>
-            <td>Good</td>
-            <td>5</td>
-          </tr>
-        </tbody>
+    <table>
+      <caption>
+        How I chose to spend my money
+      </caption>
+      <thead>
+        <tr>
+          <th>Purchase</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Evaluation</th>
+          <th>Cost (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Haircut</td>
+          <td>Hairdresser</td>
+          <td>12/09</td>
+          <td>Great idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasagna</td>
+          <td>Restaurant</td>
+          <td>12/09</td>
+          <td>Regrets</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Shoes</td>
+          <td>Shoeshop</td>
+          <td>13/09</td>
+          <td>Big regrets</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Toothpaste</td>
+          <td>Supermarket</td>
+          <td>13/09</td>
+          <td>Good</td>
+          <td>5</td>
+        </tr>
+      </tbody>
     </table>
-
   </body>
 </html>
 ```
@@ -361,16 +363,15 @@ translation_of: Learn/HTML/Tables/Advanced
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Haircut</th>
-  <td headers="location haircut">Hairdresser</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Great idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Haircut</th>
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```
 

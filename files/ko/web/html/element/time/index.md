@@ -99,7 +99,9 @@ slug: Web/HTML/Element/time
 #### HTML
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+</p>
 ```
 
 #### 결과

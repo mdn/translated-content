@@ -49,7 +49,7 @@ The `locales` and `options` arguments are not supported in all browsers yet. To 
 ```js
 function toLocaleStringSupportsLocales() {
   try {
-    new Date().toLocaleString('i');
+    new Date().toLocaleString("i");
   } catch (e) {
     return e instanceof RangeError;
   }
@@ -68,29 +68,29 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles for the US
 
 // US English uses month-day-year order and 12-hour time with AM/PM
-console.log(date.toLocaleString('en-US'));
+console.log(date.toLocaleString("en-US"));
 // → "12/19/2012, 7:00:00 PM"
 
 // British English uses day-month-year order and 24-hour time without AM/PM
-console.log(date.toLocaleString('en-GB'));
+console.log(date.toLocaleString("en-GB"));
 // → "20/12/2012 03:00:00"
 
 // Korean uses year-month-day order and 12-hour time with AM/PM
-console.log(date.toLocaleString('ko-KR'));
+console.log(date.toLocaleString("ko-KR"));
 // → "2012. 12. 20. 오후 12:00:00"
 
 // Arabic in most Arabic speaking countries uses real Arabic digits
-console.log(date.toLocaleString('ar-EG'));
+console.log(date.toLocaleString("ar-EG"));
 // → "٢٠‏/١٢‏/٢٠١٢ ٥:٠٠:٠٠ ص"
 
 // for Japanese, applications may want to use the Japanese calendar,
 // where 2012 was the year 24 of the Heisei era
-console.log(date.toLocaleString('ja-JP-u-ca-japanese'));
+console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
 // → "24/12/20 12:00:00"
 
 // when requesting a language that may not be supported, such as
 // Balinese, include a fallback language, in this case Indonesian
-console.log(date.toLocaleString(['ban', 'id']));
+console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 11.00.00"
 ```
 
@@ -102,18 +102,23 @@ The results provided by `toLocaleString()` can be customized using the `options`
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // request a weekday along with a long date
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(date.toLocaleString('de-DE', options));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // an application may want to use UTC and make that visible
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(date.toLocaleString('en-US', options));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(date.toLocaleString("en-US", options));
 // → "Thursday, December 20, 2012, GMT"
 
 // sometimes even the US needs 24-hour time
-console.log(date.toLocaleString('en-US', { hour12: false }));
+console.log(date.toLocaleString("en-US", { hour12: false }));
 // → "12/19/2012, 19:00:00"
 ```
 
@@ -124,7 +129,8 @@ Most of the time, the formatting returned by `toLocaleString()` is consistent. H
 For this reason you cannot expect to be able to compare the results of `toLocaleString()` to a static value:
 
 ```js example-bad
-"1.1.2019, 01:00:00" === new Date("2019-01-01T00:00:00.000000Z").toLocaleString();
+"1.1.2019, 01:00:00" ===
+  new Date("2019-01-01T00:00:00.000000Z").toLocaleString();
 // true in Firefox and others
 // false in IE and Edge
 ```
@@ -137,14 +143,14 @@ When formatting large numbers of dates, it is better to create an {{jsxref("Glob
 
 ## Specifications
 
-| Specification                                                                                                                        | Status                           | Comment                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                             | {{Spec2('ES1')}}             | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.5', 'Date.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}         |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     |                                                    |
-| {{SpecName('ES Int 1.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                                 | {{Spec2('ES Int 1.0')}} | Defines `locales` and `options` arguments.         |
-| {{SpecName('ES Int 2.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                                 | {{Spec2('ES Int 2.0')}} |                                                    |
+| Specification                                                                                       | Status                    | Comment                                            |
+| --------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}          | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.5', 'Date.prototype.toLocaleString')}}                             | {{Spec2('ES5.1')}}        |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}          | {{Spec2('ES6')}}          |                                                    |
+| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}      | {{Spec2('ESDraft')}}      |                                                    |
+| {{SpecName('ES Int 1.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                          | {{Spec2('ES Int 1.0')}}   | Defines `locales` and `options` arguments.         |
+| {{SpecName('ES Int 2.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                          | {{Spec2('ES Int 2.0')}}   |                                                    |
 | {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleString', 'Date.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                    |
 
 ## Compatibilidade com navegadores

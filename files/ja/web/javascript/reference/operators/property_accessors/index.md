@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Operators/Property_accessors
 ## 構文
 
 ```js
-object.property
-object['property']
+object.property;
+object["property"];
 ```
 
 ## 解説
@@ -47,22 +47,21 @@ console.log(object.1);   // SyntaxError
 ここで、 `createElement` というメソッドを `document` から取得し、呼び出します。
 
 ```js
-document.createElement('pre')
+document.createElement("pre");
 ```
 
 数値リテラルに対してメソッドを使用する場合で、その数値リテラルに指数や小数点がない場合、メソッド呼び出しをするドットの前に[ホワイトスペース](/ja/docs/Glossary/Whitespace)を入れることで、ドットが小数点とみなされることを防ぐことができます。
 
 ```js
-77 .toExponential();
+(77).toExponential();
 // or
-77
-.toExponential()
+(77).toExponential();
 // or
-;(77).toExponential()
+(77).toExponential();
 // or
-77..toExponential()
+(77).toExponential();
 // or
-77.0.toExponential()
+(77.0).toExponential();
 // because 77. === 77.0, no ambiguity
 ```
 
@@ -71,20 +70,20 @@ document.createElement('pre')
 `object[property_name]` の構文では、 `property_name` は文字列または[シンボル](/ja/docs/Glossary/Symbol)です。ですから、これは任意の文字列、例えば `'1foo'`、`'!bar!'`、または `' '` (空白) であっても構いません。
 
 ```js
-const variable = object[property_name]
+const variable = object[property_name];
 object[property_name] = value;
 ```
 
 これは前の例とまったく同じです。
 
 ```js
-document['createElement']('pre')
+document["createElement"]("pre");
 ```
 
 ブラケット表記法の前には空白を入れることができます。
 
 ```js
-document ['createElement']('pre')
+document["createElement"]("pre");
 ```
 
 ### プロパティ名
@@ -92,17 +91,19 @@ document ['createElement']('pre')
 プロパティ名は文字列または[シンボル](/ja/docs/Glossary/Symbol)です。それ以外の値は、数値を含めて、文字列へ強制変換されます。これは `'value'` を出力します。 `1` が `'1'` に強制変換されるからです。
 
 ```js
-let object = {}
-object['1'] = 'value'
-console.log(object[1])
+let object = {};
+object["1"] = "value";
+console.log(object[1]);
 ```
 
 こちらも `'value'` を出力します。`foo` と `bar` は同じ文字列に変換されるからです。
 
 ```js
-let foo = {unique_prop: 1}, bar = {unique_prop: 2}, object = {};
-object[foo] = 'value'
-console.log(object[bar])
+let foo = { unique_prop: 1 },
+  bar = { unique_prop: 2 },
+  object = {};
+object[foo] = "value";
+console.log(object[bar]);
 ```
 
 [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) JavaScript エンジンでは、この文字列は "`[object Object]`" となります。
@@ -120,13 +121,13 @@ JavaScript 初心者はしばしば、代わりにブラケット表記法を使
 例えば、以下のような構文がたくさんのスクリプトで見られます。
 
 ```js
-x = eval('document.forms.form_name.elements.' + strFormControl + '.value')
+x = eval("document.forms.form_name.elements." + strFormControl + ".value");
 ```
 
 `eval()` は低速であり、可能な限り避けるべきです。また、 `strFormControl` は ID を必要としますが、フォームコントロールの名前と `id` は必須ではありません。代わりにブラケット表記法を使った方が良いでしょう。
 
 ```js
-x = document.forms['form_name'].elements[strFormControl].value
+x = document.forms["form_name"].elements[strFormControl].value;
 ```
 
 ## 仕様書

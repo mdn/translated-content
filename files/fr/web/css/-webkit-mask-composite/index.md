@@ -1,7 +1,6 @@
 ---
-title: '-webkit-mask-composite'
+title: "-webkit-mask-composite"
 slug: Web/CSS/-webkit-mask-composite
-translation_of: Web/CSS/-webkit-mask-composite
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -65,7 +64,7 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 
 ```css
 .exemple {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

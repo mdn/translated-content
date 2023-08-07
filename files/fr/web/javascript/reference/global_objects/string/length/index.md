@@ -1,7 +1,6 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La propriété **`length`** représente la longueur d'une chaine de caractères,
 ## Syntaxe
 
 ```js
-str.length
+str.length;
 ```
 
 ## Description

@@ -1,7 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-original_slug: Web/HTML/Elemento/input/color
 ---
 
 {{HTMLSidebar}}

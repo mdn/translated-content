@@ -12,24 +12,24 @@ To cancel or redirect the request, first include `"blocking"` in the `extraInfoS
 - to cancel the request, include a property `cancel` with the value `true`.
 - to redirect the request, include a property `redirectUrl` with the value set to the URL to which you want to redirect.
 
-If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
+If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
 When multiple blocking handlers modify a request, only one set of modifications take effect. Redirects and cancellations have the same precedence. So if you canceled a request, you might see another request with the same `requestId` again if another blocking handler redirected the request.
 
-From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
+From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
-If you use `"blocking"`, you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your manifest.json.
+If you use `"blocking"`, you must have the ["webRequestBlocking" API permission](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your manifest.json.
 
 ## Syntax
 
 ```js
 browser.webRequest.onBeforeRequest.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onBeforeRequest.removeListener(listener)
-browser.webRequest.onBeforeRequest.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onBeforeRequest.removeListener(listener);
+browser.webRequest.onBeforeRequest.hasListener(listener);
 ```
 
 Events have three functions:
@@ -52,7 +52,7 @@ Events have three functions:
     - `details`
       - : [`object`](#details). Details about the request. See [`details`](#details_2) below.
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set either its `cancel` or its `redirectUrl` properties. From Firefox 52 onwards, instead of returning `BlockingResponse`, the listener can return a [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`. This enables the listener to process the request asynchronously.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
@@ -175,20 +175,19 @@ Regarding DNS resolution when BlockingResponse is used with OnBeforeRequest: In 
 
 ## Examples
 
-This code logs the URL for every resource requested which matches the [\<all_urls>](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) pattern:
+This code logs the URL for every resource requested which matches the [\<all_urls>](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) pattern:
 
 ```js
 function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
-This code cancels requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code cancels requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/ko/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
@@ -205,12 +204,12 @@ function cancel(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   cancel,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
-This code replaces, by redirection, all network requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
+This code replaces, by redirection, all network requests for images that are made to URLs under "https\://mdn.mozillademos.org/" (to see the effect, visit any page on MDN that contains images, such as [webRequest](/ko/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)):
 
 ```js
 // match pattern for the URLs to redirect
@@ -222,7 +221,8 @@ let pattern = "https://mdn.mozillademos.org/*";
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl:
+      "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
   };
 }
 
@@ -230,19 +230,20 @@ function redirect(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
-This code is exactly like the previous example, except that the listener handles the request asynchronously. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that sets a timer, and resolves with the redirect URL when the timer expires:
+This code is exactly like the previous example, except that the listener handles the request asynchronously. It returns a [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that sets a timer, and resolves with the redirect URL when the timer expires:
 
 ```js
 // match pattern for the URLs to redirect
 let pattern = "https://mdn.mozillademos.org/*";
 
 // URL we will redirect to
-let redirectUrl = "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
+let redirectUrl =
+  "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif";
 
 // redirect function returns a Promise
 // which is resolved with the redirect URL when a timer expires
@@ -259,8 +260,8 @@ function redirectAsync(requestDetails) {
 // passing the filter argument and "blocking"
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -283,8 +284,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -292,7 +293,7 @@ Here's another version:
 
 ```js
 function randomColor() {
-  return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 const pattern = "https://mdn.mozillademos.org/*";
@@ -310,8 +311,8 @@ function listener(details) {
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [pattern], types: ["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 

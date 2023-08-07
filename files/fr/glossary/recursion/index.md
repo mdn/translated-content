@@ -1,7 +1,6 @@
 ---
 title: Récursion
 slug: Glossary/Recursion
-translation_of: Glossary/Recursion
 ---
 
 Une fonction qui agit en s'appelant elle-même. Une récursion est utilisée pour résoudre des problèmes qui contiennent des sous-problèmes plus petits. Une fonction récursive peut prendre deux entrées : un cas de base (qui met fin à la récursion) ou un cas de propagation (qui poursuit la récursion).

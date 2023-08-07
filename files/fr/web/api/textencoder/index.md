@@ -1,7 +1,6 @@
 ---
 title: TextEncoder
 slug: Web/API/TextEncoder
-translation_of: Web/API/TextEncoder
 ---
 
 {{APIRef("Encoding API")}}{{SeeCompatTable}}

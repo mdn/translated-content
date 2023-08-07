@@ -1,7 +1,6 @@
 ---
 title: log ロールの使用
 slug: Web/Accessibility/ARIA/Roles/log_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 ---
 
 ### 説明

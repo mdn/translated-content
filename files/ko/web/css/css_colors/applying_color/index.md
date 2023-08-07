@@ -1,7 +1,6 @@
 ---
 title: CSS로 HTML 요소에 색 입히기
 slug: Web/CSS/CSS_colors/Applying_color
-original_slug: Web/HTML/Applying_color
 ---
 
 {{HTMLSidebar}}
@@ -32,14 +31,14 @@ original_slug: Web/HTML/Applying_color
 
   - : 글씨의 그림자 효과를 설정합니다. 여러 옵션 중에서 그림자 색을 정할 수 있습니다. (이후 다른 옵션에 따라 흐려지고 배경과 섞입니다)
 
-    See [Text drop shadows](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.
+    See [Text drop shadows](/ko/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
   - : 기본 설정에서 글씨 장식(밑줄, 윗줄, 취소선 등)은 `color` 속성의 값을 색으로 사용합니다. 그러나 `text-decoration-color` 속성을 지정하면 다른 색으로 바꿀 수 있습니다.
 - {{cssxref("text-emphasis-color")}}
   - : 글씨 위에 표시할 강조 표시의 색입니다.
 - {{cssxref("caret-color")}}
-  - : 요소의 {{Glossary("caret", "캐럿")}}(글씨 입력 커서) 색입니다. {{HTMLElement("input")}}이나 {{HTMLElement("textarea")}}, HTML {{htmlattrxref("contenteditable")}} 속성을 설정한 요소처럼 편집 가능한 경우에만 유용합니다.
+  - : 요소의 {{Glossary("caret", "캐럿")}}(글씨 입력 커서) 색입니다. {{HTMLElement("input")}}이나 {{HTMLElement("textarea")}}, HTML [`contenteditable`](/ko/docs/Web/HTML/Global_attributes#contenteditable) 속성을 설정한 요소처럼 편집 가능한 경우에만 유용합니다.
 
 ### 박스
 
@@ -56,7 +55,7 @@ original_slug: Web/HTML/Applying_color
 
 ### 테두리
 
-모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. See [Box properties](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
+모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. See [Box properties](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 {{cssxref("border")}} 단축 속성을 사용하면 색은 물론 [너비](/ko/docs/Web/CSS/border-width)와 [스타일](/ko/docs/Web/CSS/border-style)(실선, 점선 등)같은 속성을 한 번에 설정할 수 있습니다.
 
@@ -210,7 +209,7 @@ th {
 
 ### HWB functional notation
 
-Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+Much like the HSL functional notation above, the [hwb()](/ko/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
 
 Here are some examples of using HWB notation:
 
@@ -296,7 +295,7 @@ Our two colored boxes share a number of properties in common, so next we establi
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
+In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
 
 ```css
 .boxLeft {
@@ -335,7 +334,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## Letting the user pick a color
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ko/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -375,7 +374,7 @@ The CSS establishes a size for the box and some basic styling for appearances. T
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
+The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/ko/docs/Web/HTML/Element/input/color) element.
 
 ```js
 const colorPicker = document.getElementById("colorPicker");
@@ -423,7 +422,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool)
 - [Paletton](https://paletton.com/)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
@@ -502,6 +501,6 @@ With this set, the browser won't tamper with the appearance of the element, and 
 
 ## See also
 
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Drawing graphics](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Graphics on the web](/ko/docs/Web/Guide/Graphics)
+- [MDN's color picker tool](/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool)

@@ -1,7 +1,6 @@
 ---
-title: 'Element : évènement click'
+title: "Element : évènement click"
 slug: Web/API/Element/click_event
-translation_of: Web/API/Element/click_event
 ---
 
 {{APIRef}}
@@ -87,9 +86,9 @@ Dans cet exemple, on affiche le nombre de clics consécutifs sur un bouton HTML 
 ### JavaScript
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.addEventListener('click', event => {
+button.addEventListener("click", (event) => {
   button.innerHTML = `Nombre de clics : ${event.detail}`;
 });
 ```

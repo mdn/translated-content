@@ -20,8 +20,11 @@ namespace = attribute.namespaceURI
 在这个片段中，正在检查一个属性的 {{domxref("localName")}} 和 `namespaceURI`。如果 `namespaceURI` 返回 XUL 命名空间，并且 localName 返回 "browser"，则该节点被理解为 XUL `<browser/>`。
 
 ```js
-if (attribute.localName == "value" &&
-    attribute.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  attribute.localName == "value" &&
+  attribute.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL value
 }
 ```

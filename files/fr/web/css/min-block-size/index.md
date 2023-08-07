@@ -1,7 +1,6 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-translation_of: Web/CSS/min-block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

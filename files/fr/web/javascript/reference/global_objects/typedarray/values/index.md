@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient
 ## Syntaxe
 
 ```js
-typedArr.values()
+typedArr.values();
 ```
 
 ### Valeur de retour

@@ -1,7 +1,6 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-translation_of: Web/API/Window/find
 ---
 
 {{ApiRef}}{{Non-standard_Header}}
@@ -13,8 +12,15 @@ La méthode **`Window.find()`** trouve une chaîne dans une fenêtre.
 ## Syntaxe
 
 ```js
-window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-            aWholeWord, aSearchInFrames, aShowDialog);
+window.find(
+  aString,
+  aCaseSensitive,
+  aBackwards,
+  aWrapAround,
+  aWholeWord,
+  aSearchInFrames,
+  aShowDialog,
+);
 ```
 
 - `aString`
@@ -41,7 +47,7 @@ window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
 ```js
 findString = function findText(text) {
   alert("String \x22" + text + "\x22 found? " + window.find(text));
-}
+};
 ```
 
 ### HTML

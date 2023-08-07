@@ -1,7 +1,6 @@
 ---
-title: '<big> : l''élément d''agrandissement de texte'
+title: "<big> : l'élément d'agrandissement de texte"
 slug: Web/HTML/Element/big
-translation_of: Web/HTML/Element/big
 ---
 
 {{HTMLSidebar}}
@@ -28,8 +27,8 @@ Dans cet exemple, on utilise l'élément obsolète `<big>` afin d'augmenter la t
 
 ```html
 <p>
-  C'est la première phrase. <big>Cette phrase
-  entière phrase est en plus gros caractères.</big>
+  C'est la première phrase.
+  <big>Cette phrase entière phrase est en plus gros caractères.</big>
 </p>
 ```
 
@@ -53,8 +52,10 @@ Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size)
 
 ```html
 <p>
-  C'est la première phrase. <span class="bigger">Cette phrase
-  entière est écrite en plus grosses lettres.</span>
+  C'est la première phrase.
+  <span class="bigger"
+    >Cette phrase entière est écrite en plus grosses lettres.</span
+  >
 </p>
 ```
 

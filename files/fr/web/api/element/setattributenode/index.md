@@ -1,7 +1,6 @@
 ---
 title: element.setAttributeNode
 slug: Web/API/Element/setAttributeNode
-translation_of: Web/API/Element/setAttributeNode
 ---
 
 {{ APIRef("DOM") }}
@@ -26,7 +25,7 @@ var d1 = document.getElementById("one");
 var d2 = document.getElementById("two");
 var a = d1.getAttributeNode("align");
 d2.setAttributeNode(a);
-alert(d2.attributes[1].value)
+alert(d2.attributes[1].value);
 // retourne: `left'
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: XMLSerializer
 slug: Web/API/XMLSerializer
-translation_of: Web/API/XMLSerializer
 ---
 
 `XMLSerializer` sert à convertir des sous-arborescence DOM ou des documents DOM en texte. `XMLSerializer` est accessible aux scripts sans privilèges.
@@ -27,17 +26,13 @@ alert(str);
 ```js
 var s = new XMLSerializer();
 var stream = {
-  close: function()
-  {
+  close: function () {
     alert("Flux fermé");
   },
-  flush: function()
-  {
-  },
-  write: function(string, count)
-  {
+  flush: function () {},
+  write: function (string, count) {
     alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
-  }
+  },
 };
 s.serializeToStream(document, stream, "UTF-8");
 ```

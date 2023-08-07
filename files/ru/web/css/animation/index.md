@@ -1,7 +1,6 @@
 ---
 title: animation
 slug: Web/CSS/animation
-translation_of: Web/CSS/animation
 ---
 
 {{CSSRef}}
@@ -19,13 +18,13 @@ translation_of: Web/CSS/animation
 ```css
 /* @keyframes duration | timing-function | delay |
    iteration-count | direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+animation: 3s ease-in 1s 2 reverse both paused slidein;
 
 /* @keyframes duration | timing-function | delay | name */
-  animation: 3s linear 1s slidein;
+animation: 3s linear 1s slidein;
 
 /* @keyframes duration | name */
-  animation: 3s slidein;
+animation: 3s slidein;
 ```
 
 Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxref("&lt;time&gt;")}} присваивается {{cssxref("animation-duration")}}, и второй назначен {{cssxref("animation-delay")}}.
@@ -46,9 +45,7 @@ Note that order is also important within each animation definition for distingui
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
+  <div class="polling_message">Listening for dispatches</div>
   <div class="cylon_eye"></div>
 </div>
 ```
@@ -69,24 +66,72 @@ Note that order is also important within each animation definition for distingui
 
 .cylon_eye {
   background-color: red;
-  background-image: -webkit-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:    -moz-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:      -o-linear-gradient(    left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: -moz-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
 
   -webkit-animation: 4s linear 0s infinite alternate move_eye;
-     -moz-animation: 4s linear 0s infinite alternate move_eye;
-       -o-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  -moz-animation: 4s linear 0s infinite alternate move_eye;
+  -o-animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@-moz-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@-o-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
 ```
 
 {{EmbedLiveSample('Cylon_Eye')}}

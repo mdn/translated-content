@@ -1,7 +1,6 @@
 ---
 title: element.ownerDocument
 slug: Web/API/Node/ownerDocument
-translation_of: Web/API/Node/ownerDocument
 ---
 
 {{APIRef("DOM")}}
@@ -18,7 +17,7 @@ document = element.ownerDocument;
 
 ## Exemple
 
-```html
+```js
 // étant donné un nœud "p", obtient le premier enfant HTML
 // de l'objet document
 var d = p.ownerDocument;

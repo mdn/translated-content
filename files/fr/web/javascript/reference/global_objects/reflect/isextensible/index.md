@@ -1,7 +1,6 @@
 ---
 title: Reflect.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un ob
 ## Syntaxe
 
 ```js
-Reflect.isExtensible(cible)
+Reflect.isExtensible(cible);
 ```
 
 ### Paramètres

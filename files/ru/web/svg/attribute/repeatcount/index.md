@@ -1,7 +1,6 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
-translation_of: Web/SVG/Attribute/repeatCount
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
@@ -14,11 +13,11 @@ translation_of: Web/SVG/Attribute/repeatCount
 
 ## Контекст использования
 
-| Категория          | Атрибут времени анимации                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Значение           | [\<number>](/en/SVG/Content_type#Number) \| "indefinite" |
-| Анимируемый        | Нет                                                                                                                 |
-| Ссылка на стандарт | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute)                                 |
+| Категория          | Атрибут времени анимации                                                            |
+| ------------------ | ----------------------------------------------------------------------------------- |
+| Значение           | [\<number>](/en/SVG/Content_type#Number) \| "indefinite"                            |
+| Анимируемый        | Нет                                                                                 |
+| Ссылка на стандарт | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute) |
 
 {{ page("/en/SVG/Content_type","Number") }}
 

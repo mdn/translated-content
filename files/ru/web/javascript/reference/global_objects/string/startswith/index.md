@@ -1,15 +1,8 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -38,11 +31,11 @@ str.startsWith(searchString[, position])
 ### Пример: использование метода `startsWith()`
 
 ```js
-var str = 'Быть или не быть, вот в чём вопрос.';
+var str = "Быть или не быть, вот в чём вопрос.";
 
-console.log(str.startsWith('Быть'));        // true
-console.log(str.startsWith('не быть'));     // false
-console.log(str.startsWith('не быть', 9));  // true
+console.log(str.startsWith("Быть")); // true
+console.log(str.startsWith("не быть")); // false
+console.log(str.startsWith("не быть", 9)); // true
 ```
 
 ## Полифил
@@ -51,14 +44,14 @@ console.log(str.startsWith('не быть', 9));  // true
 
 ```js
 if (!String.prototype.startsWith) {
-  Object.defineProperty(String.prototype, 'startsWith', {
+  Object.defineProperty(String.prototype, "startsWith", {
     enumerable: false,
     configurable: false,
     writable: false,
-    value: function(searchString, position) {
+    value: function (searchString, position) {
       position = position || 0;
       return this.indexOf(searchString, position) === position;
-    }
+    },
   });
 }
 ```

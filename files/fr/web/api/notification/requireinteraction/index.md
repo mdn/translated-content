@@ -1,7 +1,6 @@
 ---
 title: Notification.requireInteraction
 slug: Web/API/Notification/requireInteraction
-translation_of: Web/API/Notification/requireInteraction
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`requireInteraction`** de l'interface {{domxre
 ## Syntaxe
 
 ```js
-Notification.requireInteraction
+Notification.requireInteraction;
 ```
 
 ### Valeur

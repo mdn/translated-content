@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/map
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 ---
 
 {{JSRef}}
@@ -67,7 +66,7 @@ Ici, on illustre comment une fonction utilisant un argument peut être utilisée
 
 ```js
 var nombres = new Uint8Array([1, 4, 9]);
-var doubles = nombres.map(function(num) {
+var doubles = nombres.map(function (num) {
   return num * 2;
 });
 // doubles vaut désormais Uint8Array [2, 8, 18]

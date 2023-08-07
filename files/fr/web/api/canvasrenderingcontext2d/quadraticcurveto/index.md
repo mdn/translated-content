@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
-translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 
 {{APIRef}}
@@ -11,7 +10,12 @@ La méthode **`CanvasRenderingContext2D.quadraticCurveTo()`** de l'API Canvas 2D
 ## Syntaxe
 
 ```js
-void contexte2D.quadraticCurveTo(pointContrôleX, pointContrôleY, pointArrivéeX, pointArrivéeY);
+void contexte2D.quadraticCurveTo(
+  pointContrôleX,
+  pointContrôleY,
+  pointArrivéeX,
+  pointArrivéeY,
+);
 ```
 
 ### Paramètress
@@ -41,7 +45,7 @@ Cet exemple montre comment un courbe quadratique de Bézier est dessinée.
 
 ```js
 const canevas = document.getElementById("canvas");
-const contexte2D= canevas.getContext("2d");
+const contexte2D = canevas.getContext("2d");
 
 // courbe quadratique de Bézier
 contexte2D.beginPath();
@@ -52,12 +56,12 @@ contexte2D.stroke();
 // Points de départ et d'arrivée
 contexte2D.fillStyle = "blue";
 contexte2D.beginPath();
-contexte2D.arc(50, 20, 5, 0, 2 * Math.PI);   // Point de départ
-contexte2D.arc(50, 100, 5, 0, 2 * Math.PI);  // Point d'arrivée
+contexte2D.arc(50, 20, 5, 0, 2 * Math.PI); // Point de départ
+contexte2D.arc(50, 100, 5, 0, 2 * Math.PI); // Point d'arrivée
 contexte2D.fill();
 
 // Point de contrôle
-contexte2D.fillStyle = 'red';
+contexte2D.fillStyle = "red";
 contexte2D.beginPath();
 contexte2D.arc(230, 30, 5, 0, 2 * Math.PI);
 contexte2D.fill();

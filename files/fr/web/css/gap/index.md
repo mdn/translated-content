@@ -1,7 +1,6 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
 ---
 
 {{CSSRef}}
@@ -99,7 +98,6 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
@@ -157,9 +155,9 @@ Cette propriété est définie avec une valeur `<'row-gap'>`, éventuellement su
 
 ```html
 <p class="content-box">
-  Voici un texte en multi-colonne sur des colonnes avec
-  une gouttière de 40px créée grâce à la propriété
-  CSS <code>gap</code>. Est-ce que c'est pas trop génial ?
+  Voici un texte en multi-colonne sur des colonnes avec une gouttière de 40px
+  créée grâce à la propriété CSS <code>gap</code>. Est-ce que c'est pas trop
+  génial ?
 </p>
 ```
 

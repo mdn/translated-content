@@ -1,12 +1,6 @@
 ---
 title: Метка
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Возможности языка
-  - Метка
-translation_of: Web/JavaScript/Reference/Statements/label
-browser-compat: javascript.statements.label
 ---
 
 {{jsSidebar("Statements")}}
@@ -17,9 +11,9 @@ browser-compat: javascript.statements.label
 
 ## Синтаксис
 
-```js
-label :
-  statement
+```js-nolint
+label:
+  statement;
 ```
 
 - `label`
@@ -42,15 +36,15 @@ label :
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //Первый цикл, обозначенный меткой "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //Второй цикл, обозначенный меткой "loop2"
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //Первый цикл, обозначенный меткой "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //Второй цикл, обозначенный меткой "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Вывод:
@@ -72,8 +66,7 @@ for (i = 0; i < 3; i++) {      //Первый цикл, обозначенный
 let itemsPassed = 0;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -89,15 +82,15 @@ for (i = 0; i < items.length; i++) {
 ```js
 let i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //Первый цикл, обозначенный меткой "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //Второй цикл, обозначенный меткой "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //Первый цикл, обозначенный меткой "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //Второй цикл, обозначенный меткой "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Вывод:
@@ -116,8 +109,7 @@ for (i = 0; i < 3; i++) {      //Первый цикл, обозначенный
 let allPass = true;
 let i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -133,11 +125,11 @@ for (i = 0; i < items.length; i++) {
 
 ```js
 foo: {
-  console.log('привет');
+  console.log("привет");
   break foo;
-  console.log('эта строка не будет исполнена');
+  console.log("эта строка не будет исполнена");
 }
-console.log('мир');
+console.log("мир");
 
 // Вывод:
 //   "привет"
@@ -155,7 +147,7 @@ L: function F() {}
 Однако в [строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode) такой код вызовет ошибку {{jsxref("SyntaxError")}}:
 
 ```js
-'use strict';
+"use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```

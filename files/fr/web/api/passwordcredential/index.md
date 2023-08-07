@@ -1,7 +1,6 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential
-translation_of: Web/API/PasswordCredential
 ---
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
@@ -45,12 +44,11 @@ var cred = new PasswordCredential({
   id: id,
   password: password,
   name: name,
-  iconURL: iconUrl
+  iconURL: iconUrl,
 });
 
-navigator.credentials.store(cred)
- .then(function() {
- // Faire quelque chose avec.
+navigator.credentials.store(cred).then(function () {
+  // Faire quelque chose avec.
 });
 ```
 

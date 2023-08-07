@@ -1,7 +1,6 @@
 ---
 title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
 
 {{AddonSidebar()}}

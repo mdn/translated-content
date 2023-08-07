@@ -11,7 +11,7 @@ While it is specified to accept any number, the only two valid choices are curre
 
 ```html
 <svg version="1.1" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="80" height="80"/>
+  <rect x="10" y="10" width="80" height="80" />
 </svg>
 ```
 
@@ -42,8 +42,8 @@ While it is specified to accept any number, the only two valid choices are curre
 
 ## Specifications
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| Specification                                                               | Status              | Comment            |
+| --------------------------------------------------------------------------- | ------------------- | ------------------ |
 | {{SpecName("SVG1.1", "struct.html#SVGElementVersionAttribute", "version")}} | {{Spec2("SVG1.1")}} | Initial definition |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-translation_of: Web/API/Storage/key
 ---
 
 {{APIRef()}}
@@ -43,7 +42,7 @@ La fonction suivante parcourt chaque clé présente dans le localStorage et affi
 
 ```js
 for (var i = 0; i < localStorage.length; i++) {
-   console.log(localStorage.getItem(localStorage.key(i)));
+  console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 

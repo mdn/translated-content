@@ -1,7 +1,6 @@
 ---
 title: Prise en charge des anciens navigateurs
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 
 {{LearnSidebar}}

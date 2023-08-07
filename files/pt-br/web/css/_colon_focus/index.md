@@ -1,5 +1,5 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
 ---
 
@@ -30,20 +30,22 @@ elemento:focus { ... }
 ```
 
 ```html
-<input class="nome" value="Esse elemento ficará vermelho quando focado">
-<input class="sobrenome" value="Esse elemento ficará verde-limão quando focado">
+<input class="nome" value="Esse elemento ficará vermelho quando focado" />
+<input
+  class="sobrenome"
+  value="Esse elemento ficará verde-limão quando focado" />
 ```
 
 {{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/:focus') }}
 
 ## Especificação
 
-| Especificação                                                                                                    | Estado                               | Comentário                  |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                     | {{Spec2('HTML WHATWG')}}     | Define a semântica no HTML. |
-| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                                     | {{Spec2('CSS4 Selectors')}} | Nenhuma modificação.        |
+| Especificação                                                                         | Estado                      | Comentário                  |
+| ------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                | {{Spec2('HTML WHATWG')}}    | Define a semântica no HTML. |
+| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                             | {{Spec2('CSS4 Selectors')}} | Nenhuma modificação.        |
 | {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Nenhuma modificação.        |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}                 | {{Spec2('CSS2.1')}}             | Definição inicial.          |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}              | {{Spec2('CSS2.1')}}         | Definição inicial.          |
 
 ## Compatibilidade com navegadores
 

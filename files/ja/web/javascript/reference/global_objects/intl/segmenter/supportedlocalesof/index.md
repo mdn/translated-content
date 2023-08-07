@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-supportedLocalesOf(locales)
-supportedLocalesOf(locales, options)
+supportedLocalesOf(locales);
+supportedLocalesOf(locales, options);
 ```
 
 ### 引数
@@ -38,9 +38,9 @@ supportedLocalesOf(locales, options)
 実行環境がリスト形式でインドネシア語とドイツ語をサポートし、バリ語をサポートしないと仮定すると、`supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返します。`pinyin` の照合順序はインドネシア語のセグメンテーションに関係なく、またインドネシア語に特化したドイツ語はないためサポートされません。ここで `"lookup"` アルゴリズムの仕様に注意してください。`"best fit"` マッチでは、バリ島のほとんどの住民がインドネシア語を理解するため、インドネシア語がバリ島の言語に適切に一致すると判断し、バリ島の言語タグも返すことがあります。
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

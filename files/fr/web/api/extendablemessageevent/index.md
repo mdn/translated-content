@@ -1,7 +1,6 @@
 ---
 title: ExtendableMessageEvent
 slug: Web/API/ExtendableMessageEvent
-translation_of: Web/API/ExtendableMessageEvent
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -41,20 +40,20 @@ Le code suivant est utilisé dans un service worker pour répondre à un message
 ```js
 var port;
 
-self.addEventListener('push', function(e) {
+self.addEventListener("push", function (e) {
   var obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = function (e) {
   console.log(e);
   port = e.ports[0];
-}
+};
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-translation_of: Web/HTML/Element/ruby
 ---
 
 {{HTMLSidebar}}
@@ -22,8 +21,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -36,9 +34,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
 #### HTML
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
 
 #### Résultat

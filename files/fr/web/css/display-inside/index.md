@@ -1,7 +1,6 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-translation_of: Web/CSS/display-inside
 ---
 
 {{CSSRef}}
@@ -55,7 +54,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
   width: 200px;
   height: 150px;
   background-color: white;
-  border:1px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 ```

@@ -30,12 +30,12 @@ str.blink()
 下面的示例使用了字符串方法来修改字符串格式：
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.blink());   // <blink>Hello, world</blink>
-console.log(worldString.bold());    // <b>Hello, world</b>
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 规范

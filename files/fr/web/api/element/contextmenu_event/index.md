@@ -1,7 +1,6 @@
 ---
-title: 'Element : évènement contextmenu'
+title: "Element : évènement contextmenu"
 slug: Web/API/Element/contextmenu_event
-translation_of: Web/API/Element/contextmenu_event
 ---
 
 {{APIRef}}
@@ -49,9 +48,9 @@ Dans cet exemple, on annule l'action par défaut de l'évènement `contextmenu` 
 ### JavaScript
 
 ```js
-noContext = document.getElementById('noContextMenu');
+noContext = document.getElementById("noContextMenu");
 
-noContext.addEventListener('contextmenu', e => {
+noContext.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 ```

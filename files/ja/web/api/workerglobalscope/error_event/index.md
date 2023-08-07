@@ -1,5 +1,5 @@
 ---
-title: 'WorkerGlobalScope: error イベント'
+title: "WorkerGlobalScope: error イベント"
 slug: Web/API/WorkerGlobalScope/error_event
 l10n:
   sourceCommit: e713a02caebc813b7b3c422d15baa9693c4bfd02

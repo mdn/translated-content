@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-translation_of: Web/API/XMLHttpRequest/send
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -15,7 +14,7 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 ## Syntaxe
 
 ```js
-XMLHttpRequest.send(body)
+XMLHttpRequest.send(body);
 ```
 
 ### Paramètres
@@ -47,7 +46,7 @@ La meilleure manière d'envoyer du contenu binaire (par exemple dans l'upload de
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.onload = function () {
   // Requête finie, traitement ici.
@@ -64,16 +63,17 @@ xhr.send(null);
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+xhr.open("POST", "/server", true);
 
 //Envoie les informations du header adaptées avec la requête
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-xhr.onreadystatechange = function() { //Appelle une fonction au changement d'état.
-    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-// Requête finie, traitement ici.
-    }
-}
+xhr.onreadystatechange = function () {
+  //Appelle une fonction au changement d'état.
+  if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+    // Requête finie, traitement ici.
+  }
+};
 xhr.send("foo=bar&lorem=ipsum");
 // xhr.send(new Int8Array());
 // xhr.send(document);

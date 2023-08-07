@@ -1,7 +1,6 @@
 ---
 title: history.onVisitRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisitRemoved
 ---
 
 {{AddonSidebar()}}

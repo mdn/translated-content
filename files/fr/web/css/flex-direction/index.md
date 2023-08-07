@@ -1,7 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-translation_of: Web/CSS/flex-direction
 ---
 
 {{CSSRef}}
@@ -64,15 +63,15 @@ flex-direction: unset;
 ```html
 <h4>Un exemple avec column-reverse</h4>
 <div id="content">
-    <div class="box" style="background-color:red;">A</div>
-    <div class="box" style="background-color:lightblue;">B</div>
-    <div class="box" style="background-color:yellow;">C</div>
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
 </div>
 <h4>Un exemple avec row-reverse</h4>
 <div id="content1">
-    <div class="box" style="background-color:red;">A</div>
-    <div class="box" style="background-color:lightblue;">B</div>
-    <div class="box" style="background-color:yellow;">C</div>
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
 </div>
 ```
 

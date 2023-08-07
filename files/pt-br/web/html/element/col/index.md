@@ -67,7 +67,6 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
     > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
     > - If the table doesn't use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b`to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
     > - If the table does use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
-    >
     > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/pt-BR/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
@@ -99,6 +98,7 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
     > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard.
 
 - {{htmlattrdef("span")}}
+
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
 - {{htmlattrdef("valign")}} {{Deprecated_inline}}
@@ -124,11 +124,11 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
 
 ## Especificação
 
-| Specification                                                                                            | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'tables.html#the-col-element', '&lt;col&gt;')}}         | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'tabular-data.html#the-col-element', '&lt;col&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.4.2', '&lt;col&gt;')}}         | {{Spec2('HTML4.01')}}     | Initial definition |
+| Specification                                                                 | Status                   | Comment            |
+| ----------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| {{SpecName('HTML WHATWG', 'tables.html#the-col-element', '&lt;col&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
+| {{SpecName('HTML5 W3C', 'tabular-data.html#the-col-element', '&lt;col&gt;')}} | {{Spec2('HTML5 W3C')}}   |                    |
+| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.4.2', '&lt;col&gt;')}}      | {{Spec2('HTML4.01')}}    | Initial definition |
 
 ## Compatibilidade com navegadores
 

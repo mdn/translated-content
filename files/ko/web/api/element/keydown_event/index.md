@@ -1,7 +1,6 @@
 ---
 title: keydown
 slug: Web/API/Element/keydown_event
-original_slug: Web/API/Document/keydown_event
 ---
 
 `keydown` 이벤트늘 키가 눌렸을 때 발생합니다.
@@ -57,7 +56,7 @@ original_slug: Web/API/Document/keydown_event
       <td>WindowProxy</td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/defaultView"
+          href="/ko/docs/Web/API/Document/defaultView"
           title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
           ><code>document.defaultView</code></a
         >
@@ -85,7 +84,7 @@ original_slug: Web/API/Document/keydown_event
         character, this value is a non-empty Unicode string containing that
         character. If the key doesn't have a printable representation, this is
         an empty string. See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/ko/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail.
@@ -105,7 +104,7 @@ original_slug: Web/API/Document/keydown_event
         <code>char</code> attribute. Otherwise, it's one of the key value
         strings specified in <a href="#key_values">Key values</a>. If the key
         can't be identified, this is the string "Unidentified". See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/ko/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail. Read Only.
@@ -117,7 +116,7 @@ original_slug: Web/API/Document/keydown_event
       <td>
         The Unicode reference number of the key; this attribute is used only by
         the
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/ko/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >
         event. For keys whose <code>char</code> attribute contains multiple

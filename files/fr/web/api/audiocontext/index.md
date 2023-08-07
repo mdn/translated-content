@@ -1,7 +1,6 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-translation_of: Web/API/AudioContext
 ---
 
 {{APIRef("Web Audio API")}}
@@ -116,7 +115,7 @@ _Met également en œuvre des méthodes de l'interface {{domxref("EventTarget")}
 Déclaration basique d'un audio context :
 
 ```js
-var contexteAudio = new AudioContext;
+var contexteAudio = new AudioContext();
 ```
 
 Variante avec gestion de la compatibilité navigateur:

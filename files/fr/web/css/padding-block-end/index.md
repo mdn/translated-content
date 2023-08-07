@@ -1,7 +1,6 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
-translation_of: Web/CSS/padding-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,7 +21,7 @@ padding-block-end: 1em;
 
 /* Valeurs de proportions */
 /* Type <percentage>      */
-padding-block-end: 5%;  /* Relatif à la largeur du bloc englobant */
+padding-block-end: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-block-end: inherit;
@@ -64,7 +63,7 @@ div {
 .exemple {
   writing-mode: vertical-lr;
   padding-block-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

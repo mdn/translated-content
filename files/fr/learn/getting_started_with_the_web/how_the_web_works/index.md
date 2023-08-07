@@ -1,7 +1,6 @@
 ---
 title: Le fonctionnement du Web
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 ---
 
 {{LearnSidebar}}

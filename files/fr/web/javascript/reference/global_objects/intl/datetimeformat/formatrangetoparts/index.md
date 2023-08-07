@@ -1,7 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La fonction **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** permet, sel
 ## Syntaxe
 
 ```js
-Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin)
+Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin);
 ```
 
 ## Exemples
@@ -27,8 +26,8 @@ let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
 // > 'Wed, 10 Jan 2007 11:00:00 GMT'
 
 let fmt = new Intl.DateTimeFormat("en", {
-    hour: 'numeric',
-    minute: 'numeric'
+  hour: "numeric",
+  minute: "numeric",
 });
 
 console.log(fmt.formatRange(date1, date2));

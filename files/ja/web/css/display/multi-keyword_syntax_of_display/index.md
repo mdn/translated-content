@@ -1,7 +1,6 @@
 ---
 title: display の新しい 2 値構文への対応
 slug: Web/CSS/display/multi-keyword_syntax_of_display
-original_slug: Web/CSS/display/two-value_syntax_of_display
 ---
 
 {{CSSRef}}

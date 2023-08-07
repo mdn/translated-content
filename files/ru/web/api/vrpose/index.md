@@ -1,18 +1,6 @@
 ---
 title: VRPose
 slug: Web/API/VRPose
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/VRPose
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -47,9 +35,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ## Specifications
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#interface-vrpose', 'VRPose')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

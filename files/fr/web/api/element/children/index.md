@@ -1,7 +1,6 @@
 ---
 title: Element.children
 slug: Web/API/Element/children
-translation_of: Web/API/Element/children
 ---
 
 {{APIRef("DOM")}}
@@ -19,7 +18,7 @@ Si l'élément n'a pas d'enfant, `children` sera une liste vide avec `length` qu
 ## Exemples
 
 ```js
-const monElement = document.getElementById('toto');
+const monElement = document.getElementById("toto");
 for (let i = 0; i < monElement.children.length; i++) {
   console.log(monElement.children[i].tagName);
 }

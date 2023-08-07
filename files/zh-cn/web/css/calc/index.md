@@ -1,7 +1,6 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
@@ -91,8 +90,8 @@ input {
 ```html
 <form>
   <div id="formbox">
-  <label>Type something:</label>
-  <input type="text">
+    <label>Type something:</label>
+    <input type="text" />
   </div>
 </form>
 ```

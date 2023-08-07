@@ -1,7 +1,6 @@
 ---
 title: browserSettings.newTabPosition
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
 ---
 
 {{AddonSidebar()}}

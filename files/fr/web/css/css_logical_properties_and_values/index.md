@@ -1,7 +1,6 @@
 ---
 title: CSS Logical Properties
 slug: Web/CSS/CSS_logical_properties_and_values
-translation_of: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}

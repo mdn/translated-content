@@ -1,7 +1,6 @@
 ---
 title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 ---
 
 {{AddonSidebar()}}

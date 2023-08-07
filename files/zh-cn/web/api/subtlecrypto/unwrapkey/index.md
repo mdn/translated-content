@@ -11,7 +11,7 @@ slug: Web/API/SubtleCrypto/unwrapKey
 
 但因为 `unwrapKey()` 还需要解密导入的密钥，所以还需要传入解密时必须使用的密钥。这有时也被称为“解包密钥”（unwrapping key）。
 
-`unwrapKey()` 的逆函数是 {{domxref("SubtleCrypto.wrapKey()")}}：`unwrapKey` 由解密+导入组成，而 `wrapKey` 由加密+导出组成。
+`unwrapKey()` 的逆函数是 {{domxref("SubtleCrypto.wrapKey()")}}：`unwrapKey` 由解密 + 导入组成，而 `wrapKey` 由加密 + 导出组成。
 
 ## 语法
 
@@ -131,7 +131,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -156,7 +156,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -178,7 +178,7 @@ async function unwrapSecretKey(wrappedKey) {
     "AES-KW", // 加密密钥时使用的算法
     "AES-GCM", // 解包密钥使用的算法
     true, // 解包后的密钥的可导出性
-    ["encrypt", "decrypt"] // 解包后的密钥的用途
+    ["encrypt", "decrypt"], // 解包后的密钥的用途
   );
 }
 ```
@@ -314,7 +314,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -339,7 +339,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -371,7 +371,7 @@ async function unwrapPrivateKey(wrappedKey) {
       hash: "SHA-256",
     },
     true, // 解包后的密钥的可导出性
-    ["sign"] // 解包后的密钥的用途
+    ["sign"], // 解包后的密钥的用途
   );
 }
 ```

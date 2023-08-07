@@ -39,7 +39,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 以下列文档为例：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -342,7 +342,6 @@ li {
  * 不使用 JavaScript 的“\s”，因为它包含不断行空白字符等其他字符。
  */
 
-
 /**
  * 测知某节点的文字内容是否全为空白。
  *
@@ -352,7 +351,6 @@ li {
 function is_all_ws(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * 测知是否应在遍历时略过某节点。
@@ -377,8 +375,7 @@ function is_ignorable(nod) {
  *               1) |sib| 的最近前一个“不可忽略节点”，由 |is_ignorable| 决定。或
  *               2) 若该节点前无任何此类节点，则返回 null。
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }

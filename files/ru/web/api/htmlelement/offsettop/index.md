@@ -1,15 +1,15 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
-translation_of: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetTop`** - свойство элемента доступно только для чтения,` возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
+**`HTMLElement.offsetTop`** - свойство элемента доступно только для чтения, возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
 
 ## Синтаксис
 
-```
+```js
 topPos = element.offsetTop;
 ```
 
@@ -29,11 +29,9 @@ if (topPos > 10) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                 | Статус                           | Комментарии |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

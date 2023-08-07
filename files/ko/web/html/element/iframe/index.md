@@ -1,5 +1,5 @@
 ---
-title: '<iframe>: 인라인 프레임 요소'
+title: "<iframe>: 인라인 프레임 요소"
 slug: Web/HTML/Element/iframe
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/iframe
 **HTML `<iframe>` 요소**는 중첩 {{glossary("browsing context", "브라우징 맥락")}}을 나타내는 요소로, 현재 문서 안에 다른 HTML 페이지를 삽입합니다.
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
-
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
 
 삽입된 브라우징 맥락은 각자 자신만의 [세션 기록](/ko/docs/Web/API/History)과 [문서](/ko/docs/Web/API/Document)를 가집니다. 다른 브라우징 맥락을 포함하고 있는 맥락은 "부모 브라우징 맥락"이라고 부릅니다. 부모를 가지지 않는, 즉 최상위 브라우징 맥락은 대개 브라우저 창으로서, {{domxref("Window")}} 객체로 나타냅니다.
 
