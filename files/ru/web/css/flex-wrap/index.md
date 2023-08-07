@@ -3,26 +3,30 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
-Свойство [CSS](/ru/docs/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
+Свойство [CSS](/ru/docs/Web/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
 
-```css
-flex-wrap: nowrap;
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
-
-/* Global values */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: unset;
-```
+{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
 {{cssinfo}}
 
-Подробнее по свойствам и общей информации смотрите [Using CSS flexible boxes](/en/CSS/Using_CSS_flexible_boxes).
+Подробнее о свойствах и дополнительную информацию смотрите [Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
 
-## Syntax
+## Синтаксис
+
+```css
+flex-wrap: nowrap; /* Default value */
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+
+/* Глобальные значения */
+flex-wrap: inherit;
+flex-wrap: initial;
+flex-wrap: revert;
+flex-wrap: revert-layer;
+flex-wrap: unset;
+```
 
 Свойство `flex-wrap` может содержать одно из следующих ниже значений.
 
@@ -35,13 +39,13 @@ flex-wrap: unset;
 - `wrap`
   - : Расположение в несколько линий. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения `flex-direction` и свойство **cross-end** противоположно **cross-start**.
 - `wrap-reverse`
-  - : Ведёт себя так же, как и `wrap` но **cross-start** и **cross-end** инвертированы.
+  - : Ведёт себя так же, как и `wrap`, но **cross-start** и **cross-end** инвертированы.
 
-### Formal syntax
+### Формальный синтаксис
 
 {{csssyntax}}
 
-## Examples
+## Примеры
 
 ### HTML
 
@@ -110,20 +114,18 @@ flex-wrap: unset;
 }
 ```
 
-### Results
+### Результат
 
-{{ EmbedLiveSample('Examples', '100%', '700') }}
+{{EmbedLiveSample('Examples', '100%', '700')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                      | Status                      | Comment |
-| ------------------------------------------------------------------ | --------------------------- | ------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)
