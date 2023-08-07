@@ -83,7 +83,7 @@ IE 和 Opera（Presto）仅支持 `wheelDelta` 属性，不支持水平滚动。
 
 在 Windows 上，该值与 `WM_MOUSEWHEEL` 或 `WM_MOUSEHWHEEL` 的 delta 值相同。并且，即使系统设置的滚动量为页面滚动，该值也不会改变，即该值与 Windows 上的 IE 相同。
 
-在 Linux上，本机滚轮事件每次的值为 `120` 或 `-120`。这使得行为与 Windows 上的 IE 和 Chrome 相同。
+在 Linux 上，本机滚轮事件每次的值为 `120` 或 `-120`。这使得行为与 Windows 上的 IE 和 Chrome 相同。
 
 如果**设备**支持连续滚动（例如，MacBook 的触摸板或可以平滑旋转的鼠标滚轮），则该值从加速滚动量计算而得。在这种情况下，该值与 Safari 一致。
 

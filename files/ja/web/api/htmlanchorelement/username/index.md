@@ -18,7 +18,7 @@ l10n:
 ### アンカーリンクからユーザー名を取得
 
 ```js
-// <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementByID("myAnchor");
 anchor.username; // 'anonymous' を返す
 ```

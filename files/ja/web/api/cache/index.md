@@ -108,7 +108,7 @@ self.addEventListener("fetch", (event) => {
           // リクエストで .clone() を呼び出します。
           // fetch() と cache.put() の両方がリクエストを「消費」するため、
           // コピーを作成する必要があります。
-          // （https://developer.mozilla.org/en-US/docs/Web/API/Request/clone を参照）
+          // （https://developer.mozilla.org/ja/docs/Web/API/Request/clone を参照）
           return fetch(event.request.clone()).then((response) => {
             console.log(
               "  ネットワークからの %s のレスポンス: %O",
