@@ -23,7 +23,7 @@ toWellFormed()
 
 JavaScript の文字列は UTF-16 でエンコードされています。UTF-16 エンコーディングにはサロゲートペアという概念があり、これは [UTF-16 文字、Unicode コードポイント、書記素クラスター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)で詳しく紹介されています。
 
-`toWellFormed()` はこの文字列のコード単位を走査し、すべての孤立サロゲートを[Unicode 置換文字](<https://ja.wikipedia.org/wiki/特殊用途文字_(Unicodeのブロック)>) U+FFFD `�` に置き換えます。これは、返す文字列が整形式であることを保証し、{{jsxref("encodeURI")}} のような整形式文字列を期待する関数で使用することができます。カスタム実装と比較して、`toWellFormed()` は、エンジンが文字列の内部表現に直接アクセスすることができるので、より効率的です。
+`toWellFormed()` はこの文字列のコード単位を走査し、すべての孤立サロゲートを[Unicode 置換文字](<https://ja.wikipedia.org/wiki/特殊用途文字_(Unicodeのブロック)>) U+FFFD <code>&#fffd;</code> に置き換えます。これは、返す文字列が整形式であることを保証し、{{jsxref("encodeURI")}} のような整形式文字列を期待する関数で使用することができます。カスタム実装と比較して、`toWellFormed()` は、エンジンが文字列の内部表現に直接アクセスすることができるので、より効率的です。
 
 整形式ではない文字列が {{domxref("TextEncoder")}} のような特定の文脈で使用された場合、自動的に同じ置換文字を使って整形された文字列に変換されます。孤立サロゲートがレンダリングされるとき、それらは置換文字（疑問符が内側にある菱形）としてもレンダリングされます。
 
