@@ -104,7 +104,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       </td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        是一个 {{domxref("DOMString")}}，对应于歌珥设置这个脚本元素。有关详细信息，请参阅歌珥设置属性。这对脚本控制，从其他来源，获得错误信息是否会被暴露出来。
+        反馈该脚本元素 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 设置</a>的字符串。对其他<a href="/zh-CN/docs/Glossary/Origin">源</a>的脚本，此属性控制错误信息的暴露情况。
       </td>
     </tr>
     <tr>
