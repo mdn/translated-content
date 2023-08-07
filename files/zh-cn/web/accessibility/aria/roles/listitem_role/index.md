@@ -75,7 +75,7 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
 
    {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
 
