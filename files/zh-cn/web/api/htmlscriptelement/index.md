@@ -82,7 +82,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
           >描述了核心思想，但它们依赖于 HTML、<a
             href="https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements">外部内容</a
           >和 <a href="https://html.spec.whatwg.org/multipage/xhtml.html">XML 中</a>
-          {{HTMLElement("script")} <a href="https://html.spec.whatwg.org/multipage/syntax.html#start-tags">开始</a>和<a
+          {{HTMLElement("script")}} <a href="https://html.spec.whatwg.org/multipage/syntax.html#start-tags">开始</a>和<a
             href="https://html.spec.whatwg.org/multipage/syntax.html#end-tags">结束</a
           >标记的解析规则；<a href="/zh-CN/docs/Web/API/Document/write"
           ><code>document.write()</code></a> 方法的规则；<a
