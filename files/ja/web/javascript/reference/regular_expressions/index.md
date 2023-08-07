@@ -80,7 +80,7 @@ const regex2 = new RegExp("ab+c", "g");
 - [キャプチャグループ: `(...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
   - : サブパターンに一致し、一致した情報を記憶します。
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
-  - : ある文字集合に含まれる、または含まれない文字と一致します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグを有効にすると、有限長の文字列にも一致するように使用することができます。
+  - : ある文字集合に含まれる、または含まれない文字と一致します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグを有効にすると、可変長の文字列にも一致するように使用することができます。
 - [文字クラスエスケープ: `\d`, `\D`, `\w`, `\W`, `\s`, `\S`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
   - : あらかじめ設定された文字集合に含まれる、または含まれない文字と一致します。
 - [文字エスケープ: `\n`, `\u{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
@@ -94,7 +94,7 @@ const regex2 = new RegExp("ab+c", "g");
 - [非キャプチャグループ: `(?:...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
   - : 一致した情報を記憶することなく、サブパターンに一致します。
 - [Unicode 文字クラスエスケープ: `\p{...}`, `\P{...}`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - : Unicode プロパティを指定します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグを有効にすると、有限長の文字列にも一致するように使用することができます。
+  - : Unicode プロパティを指定します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグを有効にすると、可変長の文字列にも一致するように使用することができます。
 - [ワイルドカード: `.`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard)
   - : `s` フラグが設定されていない限り、改行以外の文字と一致します。
 
