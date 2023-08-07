@@ -64,5 +64,4 @@ build/
 
 # ru
 /files/ru/web/css/**/*.md
-/files/ru/web/http/**/*.md
 /files/ru/web/javascript/**/*.md
