@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef("Objetos_globales", "String")}}
 
-El método **`replace()`** devuelve una nueva cadena con una, algunas, o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto de _{{jsxref("RegExp")}}_, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada. La cadena original permanecerá inalterada.
+El método **`replace()`** devuelve una nueva cadena con una, algunas, o todas las coincidencias de un `patrón`, siendo cada una de estas coincidencias reemplazadas por un `reemplazo`. El `patrón` puede ser una cadena o un objeto _{{jsxref("RegExp")}}_, y el `reemplazo` puede ser una cadena o una función que será llamada para cada coincidencia. Si el `patrón` es una cadena, sólo la primera coincidencia será reemplazada. La cadena original permanecerá inalterada.
 
 {{EmbedInteractiveExample("pages/js/string-replace.html")}}
 
@@ -38,7 +38,7 @@ Este método no cambia el valor de la cadena sobre la que se realiza la llamada.
 
 Un patrón de cadena solo será reemplazado una vez. Para realizar una búsqueda y reemplazo global, se debe usar una expresión regular con el parámetro `g`, o usar [`replaceAll()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) en su lugar.
 
-Si `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos de tipo `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como parámetros. Su valor de retorno se convierte en el valor de retorno de `replace()`. En este caso el comportamiento de `replace()`es completamente codificado por el método `@@replace` — por ejemplo, cualquier mención de "grupos de captura" en la descripción de abajo es funcionalidad proporcionada por [`RegExp.prototype[@@replace]`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+Si `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos de tipo `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como parámetros. Su valor de retorno se convierte en el valor de retorno de `replace()`. En este caso el comportamiento de `replace()` es completamente codificado por el método `@@replace` — por ejemplo, cualquier mención de "grupos de captura" en la descripción de abajo es funcionalidad proporcionada por [`RegExp.prototype[@@replace]`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 Si el `patrón` es una cadena vacía, el reemplazo será añadido al inicio de la cadena.
 
@@ -132,9 +132,9 @@ Esto imprime `'Twas the night before Christmas...'`.
 
 > **Nota:** Véase [la guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) para más información acerca de expresiones regulares.
 
-### Usando los parámetros _global_ y _ignoreCase_ con replace()
+### Usando los parámetros _global_ e _ignoreCase_ con replace()
 
-El reemplazo global solo puede ser hecho con una expresión regular. En el siguiente ejemplo, la expresión regular incluye [los parámetros _global_ y _ignoreCase_](/es/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) los cuales permiten a `replace()` reemplazar cada ocurrencia de `'apples'` en la cadena con `'oranges'`.
+El reemplazo global solo puede ser hecho con una expresión regular. En el siguiente ejemplo, la expresión regular incluye [los parámetros _global_ e _ignoreCase_](/es/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) los cuales permiten a `replace()` reemplazar cada ocurrencia de `'apples'` en la cadena con `'oranges'`.
 
 ```js
 const re = /apples/gi;
@@ -160,7 +160,7 @@ Esto imprime `'Cruz, Maria'`.
 
 ### Usando una función en línea que modifica los caracteres encontrados
 
-En este ejemplo, todas las ocurrencias de letras mayúsculas en la cadena son convertidas a minúsculas, y un guión es insertado justo antes de cada ubicación encontrada. La cosa importante aquí es que operaciones adicionales son necesarias en el item encontrado antes de que sea devuelto como un reemplazo.
+En este ejemplo, todas las ocurrencias de letras mayúsculas en la cadena son convertidas a minúsculas, y un guion es insertado justo antes de cada ubicación encontrada. La cosa importante aquí es que operaciones adicionales son necesarias en el elemento encontrado antes de que sea devuelto como un reemplazo.
 
 La función de reemplazo acepta la coincidencia encontrada como parámetro, y lo usa para transformar las mayúsculas a minúsculas y para concatenar el guión antes de retornar.
 
@@ -210,7 +210,7 @@ Supongamos que queremos crear un reemplazador que agregue el _offset_ para cada 
 // "abc (1) d"
 ```
 
-Sin embargo, este reemplazador debería ser más difícil de generalizar si queremos que trabaje con cualquier expresión regular. El reemplazador es _variadic_ - el número de parámetros que recibe depende del número de grupos de captura presentes. Podemos usar [parámetros rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), pero también recolectaría `offset`, `string`, etc. en el arreglo. El hecho de que `groups` pueda o no ser pasado dependiendo de la identidad de la _regex_ también haria difícil conocer genéricamente cuál argumento corresponde al `offset`.
+Sin embargo, este reemplazador debería ser más difícil de generalizar si queremos que trabaje con cualquier expresión regular. El reemplazador es _variadic_ — el número de parámetros que recibe depende del número de grupos de captura presentes. Podemos usar [parámetros rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), pero también recolectaría `offset`, `string`, etc. en el arreglo. El hecho de que `groups` pueda o no ser pasado dependiendo de la identidad de la _regex_ también haria difícil conocer genéricamente cuál argumento corresponde al `offset`.
 
 ```js example-bad
 function addOffset(match, ...args) {
@@ -222,7 +222,7 @@ console.log("abcd".replace(/(bc)/, addOffset)); // "abc (1) d"
 console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (abcd) d"
 ```
 
-El ejemplo `addOffset` de abajo no funciona cuando la _regex_ contiene un grupo nombrado, porque en este caso `args.at(-2)` sería el `string`en lugar del `offset`.
+El ejemplo `addOffset` de arriba no funciona cuando _regex_ contiene un grupo nombrado, porque en este caso `args.at(-2)` sería el `string` en lugar del `offset`.
 
 En su lugar, es necesario extraer los últimos parámetros con base en su tipo, porque `groups` es un objeto mientras `string` es una cadena.
 
