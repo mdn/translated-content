@@ -64,7 +64,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 
 ### ECDH
 
-ECDH（椭圆曲线迪菲-赫尔曼密钥交换，Elliptic Curve Diffie-Hellman）是一种*密钥协商算法*。它使每个人都能拥有用于生成共享密钥的 ECDH 公钥/私钥对：即，密钥仅在两人之间共享（而不包括其他人）。然后他们可以使用这个共享密钥作为对称密钥来保护他们的通信，或可以使用密钥来作为派生同类密钥（例如，使用 HKDF 算法）的输入。
+ECDH（椭圆曲线迪菲—赫尔曼密钥交换，Elliptic Curve Diffie-Hellman）是一种*密钥协商算法*。它使每个人都能拥有用于生成共享密钥的 ECDH 公钥/私钥对：即，密钥仅在两人之间共享（而不包括其他人）。然后他们可以使用这个共享密钥作为对称密钥来保护他们的通信，或可以使用密钥来作为派生同类密钥（例如，使用 HKDF 算法）的输入。
 
 ECDH 的规范定于 [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090)。
 

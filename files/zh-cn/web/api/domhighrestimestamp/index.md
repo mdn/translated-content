@@ -15,14 +15,13 @@ slug: Web/API/DOMHighResTimeStamp
 
 为了提供对抗时序攻击和记录指纹的保护措施，时间戳可能会四舍五入，这取决于浏览器设置。在火狐浏览器中，`privacy.reduceTimerPrecision` 首选项默认被启用，并且在火狐浏览器 59 版本中，它的默认值是 20 微秒。在火狐浏览器 60 版本中，这个默认值将是 2 毫秒。
 
-```plain
+```js
 // reduced time precision (2ms) in Firefox 60
-event.timeStamp
+event.timeStamp;
 // 1519211809934
 // 1519211810362
 // 1519211811670
 // ...
-
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 event.timeStamp;
@@ -32,7 +31,7 @@ event.timeStamp;
 // ...
 ```
 
-在火狐浏览器中，你也可以启用 `privacy.resistFingerprinting` ，这使得时间戳的精度变成 100 毫秒或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
+在火狐浏览器中，你也可以启用 `privacy.resistFingerprinting`，这使得时间戳的精度变成 100 毫秒或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
 
 ## 属性
 
@@ -46,13 +45,13 @@ _这个类型没有属性。它是一个双精度浮点数。_
 
 **时间源**是一个可以被认定为当前文档生命周期的开始节点的标准时间，计算方法如下：
 
-- 如果脚本的 {{Glossary("global object")}} 是 {{domxref("Window")}}, 则时间源的确定方式如下：
+- 如果脚本的 {{Glossary("global object")}} 是 {{domxref("Window")}}，则时间源的确定方式如下：
 
-  - 如果当前 {{domxref("Document")}} 是中加载的第一个 `Window`, 则**时间源**是创建浏览器上下文的时间。
-  - 如果处于卸载窗口中已加载的先前文档的过程中， 一个确认对话框会显示出来，让用户确认是否离开前一页，则**时间源**是用户确认导航到新页面的这个时间，这一点是被认同的。
-  - 如果以上方式都不能确定**时间源**, 那么**时间源**是创建窗口中当前 `Document` 的导航发生的时机。
+  - 如果当前 {{domxref("Document")}} 是中加载的第一个 `Window`，则**时间源**是创建浏览器上下文的时间。
+  - 如果处于卸载窗口中已加载的先前文档的过程中，一个确认对话框会显示出来，让用户确认是否离开前一页，则**时间源**是用户确认导航到新页面的这个时间，这一点是被认同的。
+  - 如果以上方式都不能确定**时间源**，那么**时间源**是创建窗口中当前 `Document` 的导航发生的时机。
 
-- 如果脚本中的全局对象是 {{domxref("WorkerGlobalScope")}} (意味着，该脚本以 web worker 的形式运行), 则**时间源**是这个 worker 被创建的时刻。
+- 如果脚本中的全局对象是 {{domxref("WorkerGlobalScope")}}（意味着，该脚本以 web worker 的形式运行），则**时间源**是这个 worker 被创建的时刻。
 - 在所有其他情况下，**时间源**的值是 undefined。
 
 ## 方法
@@ -67,15 +66,15 @@ _这个类型没有方法。_
 
 如果你需要确定从代码中某处开始经过了多少时间，可以执行以下操作：
 
-```plain
-let startTime = performance.now();
+```js
+const startTime = performance.now();
 
 /* ... do things for a while ... */
 
-let elapsedTime = performance.now() - startTime;
+const elapsedTime = performance.now() - startTime;
 ```
 
-执行完毕后， `elapsedTime` 的值是从你在第一行代码记录的时间点开始后经过的毫秒数。
+执行完毕后，`elapsedTime` 的值是从你在第一行代码记录的时间点开始后经过的毫秒数。
 
 ## 规范
 
@@ -85,7 +84,7 @@ let elapsedTime = performance.now() - startTime;
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [Navigation Timing API](/zh-CN/docs/Navigation_timing)
 - [Performance.now()](/zh-CN/docs/Web/API/Performance/now)
