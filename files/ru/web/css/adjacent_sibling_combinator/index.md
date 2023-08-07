@@ -42,8 +42,8 @@ img + span.caption {
 сработает только на тех тегах span, для которых задан класс caption:
 
 ```html
-<img src="photo1.jpg"><span class="caption">Первая фотка</span>
-<img src="photo2.jpg"><span class="caption">Вторая</span>
+<img src="photo1.jpg" /><span class="caption">Первая фотка</span>
+<img src="photo2.jpg" /><span class="caption">Вторая</span>
 ```
 
 ## Спецификации

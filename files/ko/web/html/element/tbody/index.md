@@ -9,8 +9,6 @@ slug: Web/HTML/Element/tbody
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 `<tbody>` 요소와 그 사촌인 {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} 요소는 화면과 프린터에 렌더링 할 때 뿐만 아니라 {{Glossary("accessibility", "접근성")}} 차원에서도 유용한 의미를 표의 행에 부여합니다.
 
 <table class="properties">
@@ -59,7 +57,44 @@ slug: Web/HTML/Element/tbody
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<div class="hidden"><h3 id="Deprecated_attributes">Deprecated attributes</h3><dl><dt>{{ htmlattrdef("align") }} {{deprecated_inline}}</dt><dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:<ul><li><code>left</code>, aligning the content to the left of the cell</li><li><code>center</code>, centering the content in the cell</li><li><code>right</code>, aligning the content to the right of the cell</li><li><code>justify</code>, inserting spaces into the textual content so that the content is justified in the cell</li><li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the <a href="/ko/docs/Web/HTML/Element/tbody#char"><code>char</code></a> and <a href="/ko/docs/Web/HTML/Element/tbody#charoff"><code>charoff</code></a> attributes.</li></ul><p>If this attribute is not set, the <code>left</code> value is assumed.</p><p>As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.</p><div class="note"><strong>Note: </strong>The equivalent <code>text-align</code> property for the <code>align="char"</code> is not implemented in any browsers yet. See the <a href="/ko/docs/Web/CSS/text-align#Browser_compatibility"><code>text-align</code>'s browser compatibility section</a> for the <code>&#x3C;string></code> value.</div></dd><dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt><dd><p>The background color of the table. It is a <a href="/ko/docs/Web/CSS/color_value#RGB_colors">6-digit hexadecimal RGB code</a>, prefixed by a '<code>#</code>'. One of the predefined <a href="/ko/docs/Web/CSS/color_value#Color_keywords">color kewords</a> can also be used.</p><p>As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.</p></dd><dt>{{ htmlattrdef("char") }} {{deprecated_inline}}</dt><dd><p>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (<code>.</code>) when attempting to align numbers or monetary values. If <a href="/ko/docs/Web/HTML/Element/tbody#align"><code>align</code></a> is not set to <code>char</code>, this attribute is ignored.</p></dd><dt>{{ htmlattrdef("charoff") }} {{deprecated_inline}}</dt><dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <code>char</code> attribute.</dd><dt>{{ htmlattrdef("valign") }} {{deprecated_inline}}</dt><dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:<ul><li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li><li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li><li><code>middle</code>, which will center the text in the cell;</li><li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li></ul><p>As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.</p></dd></dl></div>
+### Deprecated attributes
+
+- {{ htmlattrdef("align") }} {{deprecated_inline}}
+
+  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+
+    - `left`, aligning the content to the left of the cell
+    - `center`, centering the content in the cell
+    - `right`, aligning the content to the right of the cell
+    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/ko/docs/Web/HTML/Element/tbody#char) and [`charoff`](/ko/docs/Web/HTML/Element/tbody#charoff) attributes.
+
+    If this attribute is not set, the `left` value is assumed.
+
+    As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.
+
+    > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/ko/docs/Web/CSS/text-align#Browser_compatibility) for the `&#x3C;string>` value.
+
+- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#RGB_colors), prefixed by a '`#`'. One of the predefined [color kewords](/ko/docs/Web/CSS/color_value#Color_keywords) can also be used.
+
+    As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
+
+- {{ htmlattrdef("char") }} {{deprecated_inline}}
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](/ko/docs/Web/HTML/Element/tbody#align) is not set to `char`, this attribute is ignored.
+- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
+- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+
+  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+
+    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
+    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
+    - `middle`, which will center the text in the cell;
+    - and `top`, which will put the text as close to the top of the cell as it is possible.
+
+  As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.
 
 ## 사용 일람
 

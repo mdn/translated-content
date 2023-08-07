@@ -33,7 +33,7 @@ assign(url)
 ```js
 // Location.reload の記事へ移動
 window.location.assign(
-  "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload"
+  "https://developer.mozilla.org/ja/docs/Web/API/Location/reload"
 );
 ```
 

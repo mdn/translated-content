@@ -91,7 +91,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"AltGraph"</code> [5]</td>
       <td>
-        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。 启用 ISO
+        <kbd>AltGr</kbd>或<kbd>AltGraph</kbd>（Alternate Graphics）键。启用 ISO
         Level 3 移位修改器（其中<kbd>Shift</kbd>是 2 级修改器）。
       </td>
       <td></td>
@@ -115,7 +115,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     </tr>
     <tr>
       <td><code>"CapsLock"</code></td>
-      <td>大写锁定键。 打开和关闭大写字符锁以进行后续输入。</td>
+      <td>大写锁定键。打开和关闭大写字符锁以进行后续输入。</td>
       <td><code>VK_CAPITAL</code> (0x14)</td>
       <td><code>kVK_CapsLock</code> (0x39)</td>
       <td>
@@ -194,7 +194,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
     <tr>
       <td><code>"Meta"</code> [1]</td>
       <td>
-        <kbd>Meta</kbd>键。 允许发出特殊命令输入。
+        <kbd>Meta</kbd>键。允许发出特殊命令输入。
         这是<kbd>Windows</kbd>徽标键，或<kbd>Mac</kbd>键盘上的<kbd>Command</kbd>或⌘键。
       </td>
       <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
