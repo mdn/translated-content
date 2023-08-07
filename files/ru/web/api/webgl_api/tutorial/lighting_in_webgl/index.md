@@ -137,7 +137,7 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 Сначала обновим вершинный шейдер, чтобы он рассчитывал значение освещения для каждой вершины на основе окружающего и направленного света. Посмотрим на код:
 
 ```js
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec3 aVertexNormal;
     attribute vec2 aTextureCoord;
