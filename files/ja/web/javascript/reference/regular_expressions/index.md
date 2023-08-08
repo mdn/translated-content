@@ -64,9 +64,9 @@ const regex2 = new RegExp("ab+c", "g");
 
 - [入力境界アサーション: `^`, `$`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
   - : 現在の位置が入力の開始または終了であること、または `m` フラグが設定されている場合は、行の開始または終了であることを表します。
-- [前方参照アサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [先読みアサーション: `(?=...)`, `(?!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
   - : 現在の位置が特定のパターンの後に来ること、または来ないことを表します。
-- [後方参照アサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [後読みアサーション: `(?<=...)`, `(?<!...)`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
   - : 現在の位置が特定のパターンの前に来ること、または来ないことを表します。
 - [単語境界アサーション: `\b`, `\B`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
   - : 現在の位置が単語境界であることを表します。
