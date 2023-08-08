@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ## 구문
 
 ```js
-Object.isFrozen(obj)
+Object.isFrozen(obj);
 ```
 
 ### 매개변수
@@ -52,32 +52,36 @@ delete oneProp.p;
 Object.isFrozen(oneProp); // === true
 
 // 쓰기 불가지만 여전히 설정 가능한 속성이 있는 확장 불가 객체는 동결되지 않습니다.
-var nonWritable = { e: 'plep' };
+var nonWritable = { e: "plep" };
 Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, 'e', { writable: false }); // 쓰기 불가로 함
+Object.defineProperty(nonWritable, "e", { writable: false }); // 쓰기 불가로 함
 Object.isFrozen(nonWritable); // === false
 
 // 그 속성을 설정 불가로 바꾸면 객체를 동결되게 합니다.
-Object.defineProperty(nonWritable, 'e', { configurable: false }); // 설정 불가로 함
+Object.defineProperty(nonWritable, "e", { configurable: false }); // 설정 불가로 함
 Object.isFrozen(nonWritable); // === true
 
 // 설정 불가지만 여전히 쓰기 가능 속성이 있는 확장 불가 객체도 동결되지 않습니다.
-var nonConfigurable = { release: 'the kraken!' };
+var nonConfigurable = { release: "the kraken!" };
 Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, 'release', { configurable: false });
+Object.defineProperty(nonConfigurable, "release", { configurable: false });
 Object.isFrozen(nonConfigurable); // === false
 
 // 그 속성을 쓰기 불가로 바꾸면 객체를 동결되게 합니다.
-Object.defineProperty(nonConfigurable, 'release', { writable: false });
+Object.defineProperty(nonConfigurable, "release", { writable: false });
 Object.isFrozen(nonConfigurable); // === true
 
 // 설정 가능 접근자 속성이 있는 확장 불가 객체는 동결되지 않습니다.
-var accessor = { get food() { return 'yum'; } };
+var accessor = {
+  get food() {
+    return "yum";
+  },
+};
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
 // ...하지만 그 속성을 설정 불가로 하면 동결됩니다.
-Object.defineProperty(accessor, 'food', { configurable: false });
+Object.defineProperty(accessor, "food", { configurable: false });
 Object.isFrozen(accessor); // === true
 
 // 하지만 동결되는 객체를 위한 가장 쉬운 방법은 객체에 Object.freeze가 호출된 경우입니다.

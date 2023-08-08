@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ## 구문
 
 ```js
-    Number.isFinite(value)
+Number.isFinite(value);
 ```
 
 ### 매개변수
@@ -31,25 +31,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ## 예제
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false
-                            // 전역함수 isFinite('0')라면 true
-Number.isFinite(null);      // false
-                            // 전역함수 isFinite(null)라면 true
+Number.isFinite("0"); // false
+// 전역함수 isFinite('0')라면 true
+Number.isFinite(null); // false
+// 전역함수 isFinite(null)라면 true
 ```
 
 ## 폴리필
 
 ```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+if (Number.isFinite === undefined)
+  Number.isFinite = function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## 명세
