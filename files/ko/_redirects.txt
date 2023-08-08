@@ -351,7 +351,6 @@
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-/ko/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들	/ko/docs/Mozilla/Add-ons
 /ko/docs/Mozilla/애드온들/AMO/Policy/Featured	https://extensionworkshop.com/documentation/publish/recommended-extensions/
 /ko/docs/Mozilla/애드온들/Listing	https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/
@@ -372,7 +371,6 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/Examples	/ko/docs/Mozilla/Add-ons/WebExtensions/Examples
 /ko/docs/Mozilla/애드온들/WebExtensions/Package_your_extension_	https://extensionworkshop.com/documentation/publish/package-your-extension/
 /ko/docs/Mozilla/애드온들/WebExtensions/Porting_a_Google_Chrome_extension	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
-/ko/docs/Mozilla/애드온들/WebExtensions/Prerequisites	/ko/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ko/docs/Mozilla/애드온들/WebExtensions/Temporary_Installation_in_Firefox	https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/
 /ko/docs/Mozilla/애드온들/WebExtensions/What_are_WebExtensions	/ko/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 /ko/docs/Mozilla/애드온들/WebExtensions/Your_first_WebExtension	/ko/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
@@ -485,7 +483,6 @@
 /ko/docs/Web/API/PhotoCapabilities	/ko/docs/Web/API/ImageCapture/getPhotoCapabilities
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
 /ko/docs/Web/API/PositionOptions	/ko/docs/Web/API/Geolocation/getCurrentPosition
-/ko/docs/Web/API/Proximity_Events	/ko/docs/orphaned/Web/API/Proximity_Events
 /ko/docs/Web/API/RTCConfiguration	/ko/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ko/docs/Web/API/RTCPeerConnection/generateCertificate	/ko/docs/Web/API/RTCPeerConnection/generateCertificate_static
 /ko/docs/Web/API/RTCPeerConnection/onconnectionstatechange	/ko/docs/Web/API/RTCPeerConnection/connectionstatechange_event
@@ -681,7 +678,6 @@
 /ko/docs/Web/HTML/Canvas/Tutorial/변형	/ko/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ko/docs/Web/HTML/Element/Video/canplay_event	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/HTML/Element/Video/canplaythrough_event	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
-/ko/docs/Web/HTML/Element/applet	/ko/docs/orphaned/Web/HTML/Element/applet
 /ko/docs/Web/HTML/Element/content	/ko/docs/Web/HTML/Element/slot
 /ko/docs/Web/HTML/Element/h1	/ko/docs/Web/HTML/Element/Heading_Elements
 /ko/docs/Web/HTML/Element/h2	/ko/docs/Web/HTML/Element/Heading_Elements
@@ -804,7 +800,6 @@
 /ko/docs/Web/Reference/Events/resize	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/Reference/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/Reference/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
-/ko/docs/Web/SVG/Element/altGlyph	/ko/docs/orphaned/Web/SVG/Element/altGlyph
 /ko/docs/Web/SVG/Element/사각형	/ko/docs/Web/SVG/Element/rect
 /ko/docs/Web/SVG/Tutorial/기본_도형	/ko/docs/Web/SVG/Tutorial/Basic_Shapes
 /ko/docs/Web/SVG/Tutorial/시작하기	/ko/docs/Web/SVG/Tutorial/Getting_Started
@@ -878,7 +873,6 @@
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
 /ko/docs/WebAPI/Managing_screen_orientation	/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ko/docs/WebAPI/Network_Information	/ko/docs/Web/API/Network_Information_API
-/ko/docs/WebAPI/Proximity	/ko/docs/orphaned/Web/API/Proximity_Events
 /ko/docs/WebAPI/Using_Web_Notifications	/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ko/docs/WebAPI/Using_geolocation	/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ko/docs/WebAPI/Vibration	/ko/docs/Web/API/Vibration_API
