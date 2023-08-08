@@ -1,6 +1,8 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: conflicting/Web/API/Element/click_event
+original_slug: Web/API/GlobalEventHandlers/onclick
+browser-compat: api.Element.click_event
 ---
 
 {{ ApiRef("HTML DOM") }}

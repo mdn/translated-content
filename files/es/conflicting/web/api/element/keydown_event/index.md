@@ -1,6 +1,8 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: conflicting/Web/API/Element/keydown_event
+original_slug: Web/API/GlobalEventHandlers/onkeydown
+browser-compat: api.Element.keydown_event
 ---
 
 {{ApiRef("HTML DOM")}}
