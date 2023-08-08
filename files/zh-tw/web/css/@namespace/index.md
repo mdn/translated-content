@@ -32,7 +32,7 @@ slug: Web/CSS/@namespace
 
 > **備註：** 在 XML，屬性若沒有前綴（例如 `xlink:href`），該屬性就不會繼承元素的命名空間（亦即 `link`的命名空間可能是 `http://www.w3.org/1999/xhtml` 而不是 `http://www.w3.org/2000/svg`）。因此，CSS 的「默認的命名空間」並不適用於屬性
 
-## 語法
+## 形式語法
 
 {{csssyntax}}
 
