@@ -1,8 +1,8 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-translation_of: Web/API/Network_Information_API
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 API Network Information позволяет определить тип интернет-подключения системы (`'wifi'`, `'cellular'` и т.д.). Эту информацию можно использовать, к примеру, для того, чтобы предоставлять контент большего либо меньшего разрешения в зависимости от качества соединения. Весь API состоит из интерфейса {{domxref("NetworkInformation")}}, добавленного в глобальный объект {{domxref("Navigator")}} как свойство {{domxref("Navigator.connection")}}.
@@ -16,15 +16,18 @@ API Network Information позволяет определить тип инте�
 Данный пример отслеживает изменение подключения пользователя.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var type = connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + type + " to " + connection.effectiveType);
+  console.log(
+    "Connection type changed from " + type + " to " + connection.effectiveType,
+  );
   type = connection.effectiveType;
 }
 
-connection.addEventListener('change', updateConnectionStatus);
+connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### Предварительная загрузка крупных ресурсов
@@ -33,9 +36,10 @@ The connection object is useful for deciding whether to preload resources that t
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
-  if (connection.effectiveType === 'slow-2g') {
+  if (connection.effectiveType === "slow-2g") {
     preloadVideo = false;
   }
 }
@@ -48,22 +52,13 @@ if (connection) {
 
 ## Спецификации
 
-| Specification                                              |
-| ---------------------------------------------------------- |
-| [Network Information API](https://wicg.github.io/netinfo/) |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
-### `NetworkInformation`
-
-{{Compat("api.NetworkInformation")}}
-
-### `Navigator.connection`
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## See also
 
-- {{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
 - [Online and offline events](/ru/docs/Online_and_offline_events)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

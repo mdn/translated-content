@@ -41,13 +41,11 @@ Herdado de {{domxref("EventTarget")}}:
 
 ## Especificações
 
-| Especificação                        | Status                           | Comentário             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Battery API')}} | {{Spec2('Battery API')}} | Especificação Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.BatteryManager")}}
+{{Compat}}
 
 ## Veja também
 

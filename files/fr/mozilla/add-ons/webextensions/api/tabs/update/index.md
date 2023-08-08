@@ -1,7 +1,6 @@
 ---
 title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
 
 {{AddonSidebar()}}

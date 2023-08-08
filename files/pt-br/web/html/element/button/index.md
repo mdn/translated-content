@@ -92,11 +92,11 @@ Note que esse botão possui CSS aplicado.
 
 ## Especificações
 
-| Especificações                                                                                                           | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificações                                                                              | Status                   | Comentário |
+| ------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'the-button-element.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

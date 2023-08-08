@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
-translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 ---
 
 {{APIRef("Resource Timing API")}}

@@ -1,14 +1,6 @@
 ---
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Method
-  - Reference
-  - ServiceWorker
-translation_of: Web/API/CacheStorage/open
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -44,24 +36,26 @@ This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-te
 
 ```js
 var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
+var cachedResponse = caches
+  .match(event.request)
+  .catch(function () {
+    return fetch(event.request);
+  })
+  .then(function (r) {
+    response = r;
+    caches.open("v1").then(function (cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(function () {
+    return caches.match("/sw-test/gallery/myLittleVader.jpg");
   });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
 ```
 
 ## Specifications
 
-| Specification                                                                            | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#cache-storage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

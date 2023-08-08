@@ -1,7 +1,6 @@
 ---
 title: Exception
 slug: Glossary/Exception
-translation_of: Glossary/Exception
 ---
 
 Une **exception** est un état qui interrompt l'exécution normale du code. En JavaScript, les {{glossary("syntax error", "erreurs de syntaxe")}} sont une source commune d'exceptions.

@@ -35,18 +35,16 @@ var formData = new FormData(myForm);
 Podes deletar chave/valor pares usando `delete()`:
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
-## Specificasões
+## Especificações
 
-| Specificasões                                                                        | Status                               | Comment |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata-delete','delete()')}} | {{Spec2('XMLHttpRequest')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FormData.delete")}}
+{{Compat}}
 
 ## Veja Tambem
 

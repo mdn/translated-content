@@ -1,7 +1,6 @@
 ---
 title: div
 slug: Web/HTML/Element/div
-original_slug: Web/HTML/Elemento/div
 ---
 
 ### Definición

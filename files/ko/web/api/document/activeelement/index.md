@@ -1,7 +1,6 @@
 ---
 title: DocumentOrShadowRoot.activeElement
 slug: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -70,7 +69,7 @@ textarea2.addEventListener("mouseup", onMouseUp, false);
 
 {{ EmbedLiveSample('예제', '400', '400') }}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

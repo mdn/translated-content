@@ -2,6 +2,7 @@
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
+
 {{JSRef}}
 
 **`WeakSet`** 객체는 약하게 유지되는(held, 잡아두는) *객체*를 컬렉션에 저장할 수 있습니다.
@@ -42,10 +43,10 @@ ws.add(window);
 ws.add(obj);
 
 ws.has(window); // true
-ws.has(foo);    // false, foo가 집합에 추가되지 않았음
+ws.has(foo); // false, foo가 집합에 추가되지 않았음
 
 ws.delete(window); // 집합에서 window 제거함
-ws.has(window);    // false, window가 제거되었음
+ws.has(window); // false, window가 제거되었음
 ```
 
 ## 명세

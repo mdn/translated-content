@@ -1,12 +1,8 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Performance
-  - Web Performance API
-translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## Краткое описание
@@ -31,7 +27,7 @@ t = performance.now();
 var t0 = performance.now();
 doSomething();
 var t1 = performance.now();
-console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 ```
 
 В отличие от других временны́х типов данных, доступных в JavaScript (таких как [`Date.now`](/ru/docs/JavaScript/Reference/Global_Objects/Date/now)), метки времени, возвращённые из `performance.now(),` не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.

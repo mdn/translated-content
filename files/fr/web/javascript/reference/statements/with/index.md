@@ -1,7 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
 
 {{jsSidebar("Statements")}}

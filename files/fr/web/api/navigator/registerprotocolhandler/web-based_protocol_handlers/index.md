@@ -1,7 +1,6 @@
 ---
 title: Gestionnaires de protocoles web
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
 
 ### Contexte

@@ -2,7 +2,7 @@
 title: シグナリングとビデオ通話
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 l10n:
- 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -19,13 +19,13 @@ l10n:
 
 インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバ** が必要になります。シグナリングサーバの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
 
-まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/en-US/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
+まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
 
 サーバはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバにとってまったく関係ありません。
 
 ### Readying the chat server for signaling
 
-Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) uses the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
+Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) uses the [WebSocket API](/ja/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
 
 To allow the server to support signaling and ICE negotiation, we need to update the code. We'll have to allow directing messages to one specific user instead of broadcasting to all connected users, and ensure unrecognized message types are passed through and delivered, without the server needing to know what they are. This lets us send signaling messages using this same server, instead of needing a separate server.
 
@@ -82,7 +82,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
-At this point, the two participants know which [codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) and [codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
+At this point, the two participants know which [codecs](/ja/docs/Web/Media/Formats/WebRTC_codecs) and [codec parameters](/ja/docs/Web/Media/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
 
 ### Exchanging ICE candidates
 
@@ -138,7 +138,7 @@ When each peer's ICE layer begins to send candidates, it enters into an exchange
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 
-If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
+If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
 
 Optionally, see {{RFC(8445, "Interactive Connectivity Establishment")}}, [section 2.3 ("Negotiating Candidate Pairs and Concluding ICE")](https://datatracker.ietf.org/doc/html/rfc5245#section-2.3) if you want greater understanding of how this process is completed inside the ICE layer. You should note that candidates are exchanged and media starts to flow as soon as the ICE layer is satisfied. This is all taken care of behind the scenes. Our role is to send the candidates, back and forth, through the signaling server.
 
@@ -174,7 +174,7 @@ We'll divide this code into functional areas to more easily describe how it work
 
 #### Sending messages to the signaling server
 
-Throughout our code, we call `sendToServer()` in order to send messages to the signaling server. This function uses the [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to do its work:
+Throughout our code, we call `sendToServer()` in order to send messages to the signaling server. This function uses the [WebSocket](/ja/docs/Web/API/WebSockets_API) connection to do its work:
 
 ```js
 function sendToServer(msg) {
@@ -484,7 +484,7 @@ The format of this message (as is the case with everything you do when handling 
 
 ##### Receiving ICE candidates
 
-The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a `type` property containing the string `"new-ice-candidate"`. Our `handleNewICECandidateMsg()` function is called by our main [WebSocket](/en-US/docs/Web/API/WebSockets_API) incoming message code to handle these messages:
+The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a `type` property containing the string `"new-ice-candidate"`. Our `handleNewICECandidateMsg()` function is called by our main [WebSocket](/ja/docs/Web/API/WebSockets_API) incoming message code to handle these messages:
 
 ```js
 function handleNewICECandidateMsg(msg) {
@@ -669,10 +669,10 @@ Another obvious improvement would be to add a "ringing" feature, so that instead
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- The [Perfect Negotiation](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- [Web media technologies](/ja/docs/Web/Media)
+- [Guide to media types and formats on the web](/ja/docs/Web/Media/Formats)
+- [Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
+- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
+- The [Perfect Negotiation](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

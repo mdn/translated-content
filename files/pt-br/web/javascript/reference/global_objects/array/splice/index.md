@@ -79,11 +79,11 @@ removed = myFish.splice(3, Number.MAX_VALUE);
 
 ## Especificações
 
-| Especificação                                                                                        | Status                   | Comentário                                        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition                                                                               | Padrão                   | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}             | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                                | Status             | Comentário                                        |
+| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 3rd Edition                                                       | Padrão             | Definição inicial. Implementado no JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}            | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

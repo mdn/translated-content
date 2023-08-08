@@ -1,7 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-translation_of: Web/CSS/length
 ---
 
 {{CSSRef}}

@@ -1,8 +1,8 @@
 ---
 title: File
 slug: Web/API/File
-translation_of: Web/API/File
 ---
+
 {{APIRef}}
 
 Интерфейс **`File`** представляет информацию о файлах и предоставляет JavaScript в веб странице доступ к их контенту.

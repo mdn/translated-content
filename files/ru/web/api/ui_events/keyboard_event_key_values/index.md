@@ -1,9 +1,8 @@
 ---
 title: Значения клавиш
 slug: Web/API/UI_Events/Keyboard_event_key_values
-translation_of: Web/API/KeyboardEvent/key/Key_Values
-original_slug: Web/API/KeyboardEvent/key/Key_Values
 ---
+
 В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этот клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространённых платформ включены там, где они доступны.
 
 Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью [KeyboardEvent.key](/docs/Web/API/KeyboardEvent/key)

@@ -1,7 +1,6 @@
 ---
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
-translation_of: Web/API/FeaturePolicy/allowsFeature
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

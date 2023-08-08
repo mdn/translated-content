@@ -1,7 +1,6 @@
 ---
 title: "Window: cut event"
 slug: Web/API/Window/cut_event
-translation_of: Web/API/Window/cut_event
 ---
 
 {{APIRef}}

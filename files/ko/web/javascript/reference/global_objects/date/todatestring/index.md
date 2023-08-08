@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ## 구문
 
 ```js
-    dateObj.toDateString()
+dateObj.toDateString();
 ```
 
 ### 반환 값
@@ -32,7 +32,7 @@ toDateString () 메서드는 ECMA-262를 구현하는 호환 엔진이 {{jsxref 
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Wed Jul 28 1993
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: ":past"
 slug: Web/CSS/:past
-translation_of: Web/CSS/:past
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: REST
 slug: Glossary/REST
-original_slug: Glossario/REST
 ---
 
 **REST** (Representational State Transfer) refere-se a um grupo de restrições de design dentro da arquitetura de software que geram sistemas distribuídos eficientes, confiáveis e escaláveis. Um sistema é denominado RESTful quando adere a todas essas restrições.

@@ -1,5 +1,5 @@
 ---
-title: '<rp>: ルビのフォールバック用括弧要素'
+title: "<rp>: ルビのフォールバック用括弧要素"
 slug: Web/HTML/Element/rp
 ---
 

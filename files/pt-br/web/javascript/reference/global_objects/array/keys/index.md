@@ -36,13 +36,13 @@ var arr = ["a", , "c"];
 var sparseKeys = Object.keys(arr);
 var denseKeys = [...arr.keys()];
 console.log(sparseKeys); // [0, 2]
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## Especificações
 
-| Especificação                                                                                    | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| Especificação                                                            | Status           | Comentário         |
+| ------------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade de Browser

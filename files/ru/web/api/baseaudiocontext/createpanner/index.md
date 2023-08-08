@@ -1,8 +1,6 @@
 ---
 title: AudioContext.createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-translation_of: Web/API/BaseAudioContext/createPanner
-original_slug: Web/API/AudioContext/createPanner
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -36,8 +34,8 @@ Note how we have used some feature detection to either give the browser the newe
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
-var xPos = Math.floor(WIDTH/2);
-var yPos = Math.floor(HEIGHT/2);
+var xPos = Math.floor(WIDTH / 2);
+var yPos = Math.floor(HEIGHT / 2);
 var zPos = 295;
 
 // define other variables (определяем другие переменные)
@@ -46,8 +44,8 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var panner = audioCtx.createPanner();
-panner.panningModel = 'HRTF';
-panner.distanceModel = 'inverse';
+panner.panningModel = "HRTF";
+panner.distanceModel = "inverse";
 panner.refDistance = 1;
 panner.maxDistance = 10000;
 panner.rolloffFactor = 1;
@@ -55,17 +53,17 @@ panner.coneInnerAngle = 360;
 panner.coneOuterAngle = 0;
 panner.coneOuterGain = 0;
 
-if(panner.orientationX) {
+if (panner.orientationX) {
   panner.orientationX.value = 1;
   panner.orientationY.value = 0;
   panner.orientationZ.value = 0;
 } else {
-  panner.setOrientation(1,0,0);
+  panner.setOrientation(1, 0, 0);
 }
 
 var listener = audioCtx.listener;
 
-if(listener.forwardX) {
+if (listener.forwardX) {
   listener.forwardX.value = 0;
   listener.forwardY.value = 0;
   listener.forwardZ.value = -1;
@@ -73,48 +71,49 @@ if(listener.forwardX) {
   listener.upY.value = 1;
   listener.upZ.value = 0;
 } else {
-  listener.setOrientation(0,0,-1,0,1,0);
+  listener.setOrientation(0, 0, -1, 0, 1, 0);
 }
 
 var source;
 
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
 
-var boomBox = document.querySelector('.boom-box');
+var boomBox = document.querySelector(".boom-box");
 
-var listenerData = document.querySelector('.listener-data');
-var pannerData = document.querySelector('.panner-data');
+var listenerData = document.querySelector(".listener-data");
+var pannerData = document.querySelector(".panner-data");
 
-leftBound = (-xPos) + 50;
+leftBound = -xPos + 50;
 rightBound = xPos - 50;
 
-xIterator = WIDTH/150;
+xIterator = WIDTH / 150;
 
 // listener will always be in the same place for this demo
 // в этом демо обработчик всегда находится на одном и том же месте
 
-if(listener.positionX) {
+if (listener.positionX) {
   listener.positionX.value = xPos;
   listener.positionY.value = yPos;
   listener.positionZ.value = 300;
 } else {
-  listener.setPosition(xPos,yPos,300);
+  listener.setPosition(xPos, yPos, 300);
 }
 
-listenerData.innerHTML = 'Listener data: X ' + xPos + ' Y ' + yPos + ' Z ' + 300;
+listenerData.innerHTML =
+  "Listener data: X " + xPos + " Y " + yPos + " Z " + 300;
 
 // panner will move as the boombox graphic moves around on the screen
 // паннер будет перемещаться по экрану за перемещением бумбокса
 function positionPanner() {
-  if(panner.positionX) {
+  if (panner.positionX) {
     panner.positionX.value = xPos;
     panner.positionY.value = yPos;
     panner.positionZ.value = zPos;
   } else {
-    panner.setPosition(xPos,yPos,zPos);
+    panner.setPosition(xPos, yPos, zPos);
   }
-  pannerData.innerHTML = 'Panner data: X ' + xPos + ' Y ' + yPos + ' Z ' + zPos;
+  pannerData.innerHTML = "Panner data: X " + xPos + " Y " + yPos + " Z " + zPos;
 }
 ```
 
@@ -122,9 +121,7 @@ function positionPanner() {
 
 ## Specifications
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createPanner-PannerNode', 'createPanner()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

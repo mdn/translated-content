@@ -2,6 +2,7 @@
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
+
 {{JSRef}}
 
 **`Object.entries()`** 메서드는 {{jsxref("Statements/for...in", "for...in")}}와 같은 순서로 주어진 객체 자체의 enumerable 속성 `[key, value]` 쌍의 배열을 반환합니다. (`for-in` 루프가 다른점은 프로토 타입 체인의 속성도 열거한다는 점입니다).
@@ -13,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 ## Syntax
 
 ```js
-Object.entries(obj)
+Object.entries(obj);
 ```
 
 ### Parameters
@@ -35,12 +36,11 @@ Object.entries(obj)
 
 ```js
 if (!Object.entries)
-  Object.entries = function( obj ){
-    var ownProps = Object.keys( obj ),
-        i = ownProps.length,
-        resArray = new Array(i); // preallocate the Array
-    while (i--)
-      resArray[i] = [ownProps[i], obj[ownProps[i]]];
+  Object.entries = function (obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
     return resArray;
   };
@@ -53,24 +53,33 @@ For the above polyfill code snippet, if you need support for IE < 9, then you wi
 ## Examples
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 // array like object
-const obj = { 0: 'a', 1: 'b', 2: 'c' };
+const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
 
 // array like object with random key ordering
-const anObj = { 100: 'a', 2: 'b', 7: 'c' };
+const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.entries(anObj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
 
 // getFoo is property which isn't enumerable
-const myObj = Object.create({}, { getFoo: { value() { return this.foo; } } });
-myObj.foo = 'bar';
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  },
+);
+myObj.foo = "bar";
 console.log(Object.entries(myObj)); // [ ['foo', 'bar'] ]
 
 // non-object argument will be coerced to an object
-console.log(Object.entries('foo')); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
 
 // returns an empty array for any primitive type, since primitives have no own properties
 console.log(Object.entries(100)); // [ ]
@@ -83,7 +92,7 @@ for (const [key, value] of Object.entries(obj)) {
 
 // Or, using array extras
 Object.entries(obj).forEach(([key, value]) => {
-console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 });
 ```
 
@@ -92,7 +101,7 @@ console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 {{jsxref("Map", "new Map()")}} 생성자는 반복 가능한 항목을 허용합니다. `Object.entries`를 사용하면 {{jsxref("Object")}}에서 {{jsxref("Map")}}로 쉽게 변환 할 수 있습니다.
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 const map = new Map(Object.entries(obj));
 console.log(map); // Map { foo: "bar", baz: 42 }
 ```
@@ -102,7 +111,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 [Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
 ```
 

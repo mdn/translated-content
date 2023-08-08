@@ -1,7 +1,6 @@
 ---
 title: Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}

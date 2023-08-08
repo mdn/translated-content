@@ -1,7 +1,6 @@
 ---
 title: Animation.onfinish
 slug: Web/API/Animation/finish_event
-original_slug: Web/API/Animation/onfinish
 ---
 
 {{ APIRef("Web Animations") }}

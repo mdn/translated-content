@@ -1,8 +1,8 @@
 ---
-title: 'Element: mouseenter event'
+title: "Element: mouseenter event"
 slug: Web/API/Element/mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 Событие **`mouseenter`** вызывается в {{domxref("Element")}} когда указательное устройство (обычно мышь) изначально перемещается так, что его горячая точка находится в пределах элемента, в котором было запущено событие.
@@ -51,10 +51,10 @@ translation_of: Web/API/Element/mouseenter_event
 #### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>No events yet!</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>No events yet!</li>
+  </ul>
 </div>
 ```
 
@@ -65,8 +65,8 @@ translation_of: Web/API/Element/mouseenter_event
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 
@@ -75,19 +75,19 @@ translation_of: Web/API/Element/mouseenter_event
 ```js
 var enterEventCount = 0;
 var leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', e => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
-  addListItem('This is mouseenter event ' + enterEventCount + '.');
+  addListItem("This is mouseenter event " + enterEventCount + ".");
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
-  addListItem('This is mouseleave event ' + leaveEventCount + '.');
+  addListItem("This is mouseleave event " + leaveEventCount + ".");
 });
 
 function addListItem(text) {

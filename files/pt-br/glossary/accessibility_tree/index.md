@@ -1,7 +1,6 @@
 ---
 title: Árvore de Acessibilidade
 slug: Glossary/Accessibility_tree
-original_slug: Glossario/arvore_de_acessibilidade
 ---
 
 A **árvore de acessibilidade** contém informação relacionada à {{Glossary("accessibility", "acessibilidade")}} para a maioria dos elementos HTML.

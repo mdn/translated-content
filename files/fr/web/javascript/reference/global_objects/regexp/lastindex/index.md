@@ -1,7 +1,6 @@
 ---
 title: regExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
 {{JSRef}}

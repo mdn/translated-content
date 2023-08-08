@@ -1,7 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 
 {{JSRef}}

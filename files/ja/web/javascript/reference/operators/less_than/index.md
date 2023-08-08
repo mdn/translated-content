@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Less_than
 ## 構文
 
 ```js
-x < y
+x < y;
 ```
 
 ## 解説
@@ -36,57 +36,57 @@ x < y
 ### 文字列と文字列の比較
 
 ```js
-console.log("a" < "b");        // true
-console.log("a" < "a");        // false
-console.log("a" < "3");        // false
+console.log("a" < "b"); // true
+console.log("a" < "a"); // false
+console.log("a" < "3"); // false
 ```
 
 ### 文字列と数値の比較
 
 ```js
-console.log("5" < 3);          // false
-console.log("3" < 3);          // false
-console.log("3" < 5);          // true
+console.log("5" < 3); // false
+console.log("3" < 3); // false
+console.log("3" < 5); // true
 
-console.log("hello" < 5);      // false
-console.log(5 < "hello");      // false
+console.log("hello" < 5); // false
+console.log(5 < "hello"); // false
 
-console.log("5" < 3n);         // false
-console.log("3" < 5n);         // true
+console.log("5" < 3n); // false
+console.log("3" < 5n); // true
 ```
 
 ### 数値と数値の比較
 
 ```js
-console.log(5 < 3);            // false
-console.log(3 < 3);            // false
-console.log(3 < 5);            // true
+console.log(5 < 3); // false
+console.log(3 < 3); // false
+console.log(3 < 5); // true
 ```
 
 ### Number と BigInt の比較
 
 ```js
-console.log(5n < 3);           // false
-console.log(3 < 5n);           // true
+console.log(5n < 3); // false
+console.log(3 < 5n); // true
 ```
 
 ### 論理値、null、undefined、NaN の比較
 
 ```js
-console.log(true < false);     // false
-console.log(false < true);     // true
+console.log(true < false); // false
+console.log(false < true); // true
 
-console.log(0 < true);         // true
-console.log(true < 1);         // false
+console.log(0 < true); // true
+console.log(true < 1); // false
 
-console.log(null < 0);         // false
-console.log(null < 1);         // true
+console.log(null < 0); // false
+console.log(null < 1); // true
 
-console.log(undefined < 3);    // false
-console.log(3 < undefined);    // false
+console.log(undefined < 3); // false
+console.log(3 < undefined); // false
 
-console.log(3 < NaN);          // false
-console.log(NaN < 3);          // false
+console.log(3 < NaN); // false
+console.log(NaN < 3); // false
 ```
 
 ## 仕様書

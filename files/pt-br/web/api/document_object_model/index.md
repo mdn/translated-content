@@ -1,7 +1,6 @@
 ---
 title: Modelo de Objeto de Documento (DOM)
 slug: Web/API/Document_Object_Model
-original_slug: DOM/Referencia_do_DOM
 ---
 
 {{DefaultAPISidebar("DOM")}}

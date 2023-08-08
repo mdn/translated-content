@@ -1,5 +1,5 @@
 ---
-title: y
+title: "y"
 slug: Web/SVG/Attribute/y
 ---
 
@@ -52,12 +52,16 @@ slug: Web/SVG/Attribute/y
 ## 例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="20"  x="20" width="60" height="60" />
+  <rect y="20" x="20" width="60" height="60" />
   <rect y="120" x="20" width="60" height="60" />
   <rect y="220" x="20" width="60" height="60" />
 </svg>
@@ -1139,7 +1143,7 @@ html,body,svg { height:100% }
 
 ## text
 
-{{SVGElement('text')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('text')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1173,7 +1177,11 @@ html,body,svg { height:100% }
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1184,7 +1192,7 @@ html,body,svg { height:100% }
   <line x1="0" y1="80%" x2="100%" y2="80%" />
 
   <!-- vertical line to materialized the x positioning -->
-  <line x1="5%"  y1="0" x2="5%"  y2="100%" />
+  <line x1="5%" y1="0" x2="5%" y2="100%" />
   <line x1="55%" y1="0" x2="55%" y2="100%" />
 
   <!-- y with a single value -->
@@ -1203,7 +1211,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```
@@ -1214,7 +1222,7 @@ line {
 
 > **警告:** SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
 
-{{SVGElement('tref')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tref')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1249,7 +1257,7 @@ line {
 
 ## tspan
 
-{{SVGElement('tspan')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
+{{SVGElement('tspan')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
 
 複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
 
@@ -1283,7 +1291,11 @@ line {
 </table>
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -1294,7 +1306,7 @@ html,body,svg { height:100% }
   <line x1="0" y1="80%" x2="100%" y2="80%" />
 
   <!-- vertical line to materialized the x positioning -->
-  <line x1="5%"  y1="0" x2="5%"  y2="100%" />
+  <line x1="5%" y1="0" x2="5%" y2="100%" />
   <line x1="55%" y1="0" x2="55%" y2="100%" />
 
   <text>
@@ -1315,7 +1327,7 @@ text {
 line {
   fill: none;
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 2px;
 }
 ```

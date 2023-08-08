@@ -1,5 +1,5 @@
 ---
-title: ':nth-child()'
+title: ":nth-child()"
 slug: Web/CSS/:nth-child
 ---
 
@@ -64,8 +64,10 @@ A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa
 #### HTML
 
 ```html
-   <h3><code>span:nth-child(2n+1)</code>, SEM um
-<code>&lt;em&gt;</code> entre os elementos filhos.</h3>
+<h3>
+  <code>span:nth-child(2n+1)</code>, SEM um <code>&lt;em&gt;</code> entre os
+  elementos filhos.
+</h3>
 <p>Os filhos 1, 3, 5 e 7 são selecionados.</p>
 <div class="primeiro">
   <span>Span 1!</span>
@@ -77,13 +79,17 @@ A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa
   <span>Span 7!</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-child(2n+1)</code>, COM um
-   <code>&lt;em&gt;</code> entre os elementos filhos.</h3>
-<p>Os filhos 1, 5 e 7 são selecionados.<br>
-   O 3 está incluído na contagem por ser um filho, mas não é
-   selecionado porque ele não é um <code>&lt;span&gt;</code>.</p>
+<h3>
+  <code>span:nth-child(2n+1)</code>, COM um <code>&lt;em&gt;</code> entre os
+  elementos filhos.
+</h3>
+<p>
+  Os filhos 1, 5 e 7 são selecionados.<br />
+  O 3 está incluído na contagem por ser um filho, mas não é selecionado porque
+  ele não é um <code>&lt;span&gt;</code>.
+</p>
 <div class="segundo">
   <span>Span!</span>
   <span>Span</span>
@@ -95,15 +101,19 @@ A pseudo-classe **`nth-child`** é usada com apenas um argumento, que representa
   <span>Span</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-of-type(2n+1)</code>, COM um
-   <code>&lt;em&gt;</code> entre os elementos filhos.</h3>
-<p>Os filhos 1, 4, 6 e 8 são selecionados.<br>
-   O 3 não está incluso na contagem nem é selecionado porque ele é um <code>&lt;em&gt;</code>,
-   não um <code>&lt;span&gt;</code>, e <code>nth-of-type</code> seleciona apenas os
-   filhos desse último tipo. O <code>&lt;em&gt;</code> é completamente
-   pulado e ignorado.</p>
+<h3>
+  <code>span:nth-of-type(2n+1)</code>, COM um <code>&lt;em&gt;</code> entre os
+  elementos filhos.
+</h3>
+<p>
+  Os filhos 1, 4, 6 e 8 são selecionados.<br />
+  O 3 não está incluso na contagem nem é selecionado porque ele é um
+  <code>&lt;em&gt;</code>, não um <code>&lt;span&gt;</code>, e
+  <code>nth-of-type</code> seleciona apenas os filhos desse último tipo. O
+  <code>&lt;em&gt;</code> é completamente pulado e ignorado.
+</p>
 <div class="terceiro">
   <span>Span!</span>
   <span>Span</span>
@@ -131,9 +141,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.primeiro span:nth-child(2n+1),
-.segundo span:nth-child(2n+1),
-.terceiro span:nth-of-type(2n+1) {
+.primeiro span:nth-child(2n + 1),
+.segundo span:nth-child(2n + 1),
+.terceiro span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```
@@ -144,8 +154,8 @@ div em {
 
 ## Especificações
 
-| Especificação                                                                            | Status                               | Comentário                                                                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                     | Status                      | Comentário                                                                                                                    |
+| ----------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Adiciona a sintaxe `of <selector>` e especifica que os elementos correspondentes ao seletor não precisam ter um elemento pai. |
 | {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                                                                                            |
 

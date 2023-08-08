@@ -1,7 +1,6 @@
 ---
 title: "Raison : la requête CORS n'utilise pas HTTP"
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
 {{HTTPSidebar}}

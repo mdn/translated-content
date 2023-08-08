@@ -1,7 +1,6 @@
 ---
 title: CSSStyleValue.parse()
 slug: Web/API/CSSStyleValue/parse_static
-original_slug: Web/API/CSSStyleValue/parse
 l10n:
   sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
@@ -34,7 +33,9 @@ parse(property, cssText)
 
 ```js
 const css = CSSStyleValue.parse(
-    'transform', 'translate3d(10px,10px,0) scale(0.5)');
+  "transform",
+  "translate3d(10px,10px,0) scale(0.5)",
+);
 ```
 
 ```css

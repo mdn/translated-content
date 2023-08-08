@@ -49,9 +49,7 @@ border-left: medium dashed green;
 ## 예제
 
 ```html
-<div>
-  왼쪽 테두리를 가진 요소입니다.
-</div>
+<div>왼쪽 테두리를 가진 요소입니다.</div>
 ```
 
 ```css

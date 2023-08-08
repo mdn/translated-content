@@ -1,7 +1,6 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
 
 {{AddonSidebar()}}

@@ -1,5 +1,5 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
 ---
 
@@ -10,10 +10,10 @@ slug: Web/CSS/@import
 ```css
 @import url("fineprint.css") print;
 @import url("bluish.css") speech;
-@import 'custom.css';
+@import "custom.css";
 @import url("chrome://communicator/skin/");
 @import "common.css" screen;
-@import url('landscape.css') screen and (orientation:landscape);
+@import url("landscape.css") screen and (orientation: landscape);
 ```
 
 사용자 에이전트는 지원되지 않는 미디어 유형에 대한 자원 검색을 피할 수 있도록, 제작자는 미디어에 의존한 `@import` 규칙을 지정할 수 있습니다. 이러한 조건부 import는 URI 뒤에 쉼표로 구분된 [미디어 질의](/ko/docs/Web/CSS/Media_Queries/Using_media_queries)를 지정합니다. 미디어 질의가 없으면, import는 무조건(unconditional)입니다. 미디어에 `all`을 지정하면 같은 효과가 있습니다.

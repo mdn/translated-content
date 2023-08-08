@@ -109,22 +109,22 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Para configurar o Express para enviar o cabeçalho `X-Frame-Options`, você pode usar o [helmet](https://helmetjs.github.io/) que utiliza o [frameguard](https://helmetjs.github.io/docs/frameguard/) para colocar o cabeçalho. Adicione isto na configuração do seu servidor:
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 Alternativamente, você pode usar o _frameguard_ diretamente:
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## Especificações
 
-| Especificação        | Título                            |
-| -------------------- | --------------------------------- |
+| Especificação   | Título                            |
+| --------------- | --------------------------------- |
 | {{RFC("7034")}} | HTTP Header Field X-Frame-Options |
 
 ## Compatibilidade com navegadores

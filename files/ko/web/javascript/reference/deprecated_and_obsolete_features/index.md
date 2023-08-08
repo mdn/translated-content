@@ -82,13 +82,13 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 The following are now properties of `RegExp` instances, no longer of the `RegExp` object:
 
-| Property                                                     | Description                                                                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.global", "global")}}             | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
+| Property                                      | Description                                                                                                        |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.global", "global")}}         | Whether or not to test the regular expression against all possible matches in a string, or only against the first. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Whether or not to ignore case while attempting a match in a string.                                                |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | The index at which to start the next match.                                                                        |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Whether or not to search in strings across multiple lines.                                                         |
-| {{jsxref("RegExp.source", "source")}}             | 패턴의 텍스트.                                                                                                     |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | The index at which to start the next match.                                                                        |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Whether or not to search in strings across multiple lines.                                                         |
+| {{jsxref("RegExp.source", "source")}}         | 패턴의 텍스트.                                                                                                     |
 
 ### RegExp 메서드
 
@@ -157,8 +157,8 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Function
 
-| Property                                                             | Description                 |
-| -------------------------------------------------------------------- | --------------------------- |
+| Property                                             | Description                 |
+| ---------------------------------------------------- | --------------------------- |
 | {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
 
 ### Array

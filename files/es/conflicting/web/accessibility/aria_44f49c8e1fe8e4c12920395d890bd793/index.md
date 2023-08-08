@@ -1,7 +1,6 @@
 ---
 title: Formularios
 slug: conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793
-original_slug: Web/Accessibility/ARIA/forms
 ---
 
 Las siguientes páginas proporcionan diversas técnicas para mejorar la accesibilidad de los formularios web:

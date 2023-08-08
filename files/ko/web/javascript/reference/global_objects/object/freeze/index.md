@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ## 구문
 
 ```js
-Object.freeze(obj)
+Object.freeze(obj);
 ```
 
 ### 매개변수
@@ -38,14 +38,14 @@ Object.freeze(obj)
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // 동결 이전: 새 속성을 추가할 수 있고,
 // 기존 속성을 변경하거나 제거할 수 있음
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // 동결
@@ -58,25 +58,25 @@ o === obj; // true
 Object.isFrozen(obj); // === true
 
 // 이제 모든 변경 시도는 실패함
-obj.foo = 'quux'; // 조용하게 아무것도 하지 않음
+obj.foo = "quux"; // 조용하게 아무것도 하지 않음
 // 조용하게 속성을 추가하지 않음
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 
 // 엄격 모드에서는 이러한 시도에 대해 TypeError 발생
-function fail(){
-  'use strict';
-  obj.foo = 'sparky'; // TypeError 발생
-  delete obj.foo;     // TypeError 발생
+function fail() {
+  "use strict";
+  obj.foo = "sparky"; // TypeError 발생
+  delete obj.foo; // TypeError 발생
   delete obj.quaxxor; // 'quaxxor' 속성은 추가된 적이 없으므로 true 반환
-  obj.sparky = 'arf'; // TypeError 발생
+  obj.sparky = "arf"; // TypeError 발생
 }
 
 fail();
 
 // Object.defineProperty를 통한 변경 시도
 // 아래 두 구문 모두에서 TypeError 발생
-Object.defineProperty(obj, 'ohai', { value: 17 });
-Object.defineProperty(obj, 'foo', { value: 'eit' });
+Object.defineProperty(obj, "ohai", { value: 17 });
+Object.defineProperty(obj, "foo", { value: "eit" });
 
 // 프로토타입을 변경하는 것 또한 불가함
 // 아래 두 구문 모두에서 TypeError 발생
@@ -90,12 +90,12 @@ obj.__proto__ = { x: 20 };
 let a = [0];
 Object.freeze(a); // 이제 배열을 수정할 수 없음.
 
-a[0]=1; // 조용하게 실패
+a[0] = 1; // 조용하게 실패
 a.push(2); // 조용하게 실패
 
 // 엄격 모드에서는 이런 시도에 대해 TypeError 발생
 function fail() {
-  "use strict"
+  "use strict";
   a[0] = 1;
   a.push(2);
 }
@@ -107,13 +107,13 @@ fail();
 
 ```js
 obj = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj);
-obj.internal.a = 'aValue';
+obj.internal.a = "aValue";
 
-obj.internal.a // 'aValue'
+obj.internal.a; // 'aValue'
 ```
 
 변경될 수 없는 객체가 되려면, 모든 참조 그래프(다른 객체로의 직간접적 참조)가 오로지 불변의 동결 객체만을 참조해야 합니다. 동결된 객체는 객체 내의 모든 상태(다른 객체로의 값과 참조)가 고정되기 때문에 불변하다고 합니다. 문자열, 숫자, 불리언 값은 언제나 불변하고, 함수와 배열은 객체임을 유의하세요.
@@ -128,8 +128,8 @@ var employee = {
   designation: "Developer",
   address: {
     street: "Rohini",
-    city: "Delhi"
-  }
+    city: "Delhi",
+  },
 };
 
 Object.freeze(employee);
@@ -137,14 +137,13 @@ Object.freeze(employee);
 employee.name = "Dummy"; // 비엄격 모드에서 조용하게 실패
 employee.address.city = "Noida"; // 자식 객체의 속성은 수정 가능
 
-console.log(employee.address.city) // 출력: "Noida"
+console.log(employee.address.city); // 출력: "Noida"
 ```
 
 객체를 불변하게 만들려면, 각 객체 타입의 속성을 재귀적으로 동결해야합니다(깊은 동결). 객체가 그 참조 그래프에서 [순환](<https://en.wikipedia.org/wiki/Cycle_(graph_theory)>)을 포함하지 않는다는 것을 인지하고 있을 때, 디자인을 기반으로 상황에 따라 패턴을 적용해야하며, 그렇지 않을 경우 반복문이 무한히 실행될 수 있습니다. `deepFreeze()`에 대한 개선은 객체가 불변하게 되는 과정에 있을 때 `deepFreeze()`의 재귀적인 호출을 차단할 수 있도록 경로(예, 배열) 인자를 받는 내부 함수를 소유하는 것입니다. \[window]와 같은, 동결되면 안되는 객체를 동결하는 것에 대한 위험은 여전히 남아 있습니다.
 
 ```js
 function deepFreeze(object) {
-
   // 객체에 정의된 속성명을 추출
   var propNames = Object.getOwnPropertyNames(object);
 
@@ -153,8 +152,8 @@ function deepFreeze(object) {
   for (let name of propNames) {
     let value = object[name];
 
-    object[name] = value && typeof value === "object" ?
-      deepFreeze(value) : value;
+    object[name] =
+      value && typeof value === "object" ? deepFreeze(value) : value;
   }
 
   return Object.freeze(object);
@@ -162,13 +161,13 @@ function deepFreeze(object) {
 
 var obj2 = {
   internal: {
-    a: null
-  }
+    a: null,
+  },
 };
 
 deepFreeze(obj2);
 
-obj2.internal.a = 'anotherValue'; // 비엄격 모드에서 조용하게 실패
+obj2.internal.a = "anotherValue"; // 비엄격 모드에서 조용하게 실패
 obj2.internal.a; // null
 ```
 

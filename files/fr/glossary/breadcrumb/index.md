@@ -1,7 +1,6 @@
 ---
 title: Breadcrumb
 slug: Glossary/Breadcrumb
-translation_of: Glossary/Breadcrumb
 ---
 
 Un **breadcrumb**, ou fil d'Ariane, est une aide à la navigation qui est généralement placée entre l'en-tête d'un site et le contenu principal, affichant soit une hiérarchie de la page actuelle par rapport à la structure du site, du niveau supérieur à la page actuelle, soit une liste des liens suivis par l'utilisateur pour accéder à la page en cours, dans l'ordre visité.

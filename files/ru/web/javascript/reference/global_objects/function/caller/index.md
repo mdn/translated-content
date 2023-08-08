@@ -1,13 +1,8 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
 ## Сводка
@@ -27,8 +22,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 Обратите внимание, что в случае рекурсии, вы не сможете воссоздать стек вызовов, используя это свойство. Пусть у нас есть функции:
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -48,9 +51,9 @@ stop.caller === g && f.caller === g && g.caller === f
 
 ```js
 var f = stop;
-var stack = 'Трассировка стека:';
+var stack = "Трассировка стека:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -66,9 +69,9 @@ while (f) {
 ```js
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'Эта функция была вызвана из верхнего уровня!';
+    return "Эта функция была вызвана из верхнего уровня!";
   } else {
-    return 'Эта функция была вызвана из ' + myFunc.caller;
+    return "Эта функция была вызвана из " + myFunc.caller;
   }
 }
 ```

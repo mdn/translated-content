@@ -1,7 +1,6 @@
 ---
 title: Altura
 slug: Web/CSS/@media/height
-original_slug: Web/CSS/@media/altura
 ---
 
 {{cssref}}

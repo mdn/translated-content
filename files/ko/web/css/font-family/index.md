@@ -19,7 +19,9 @@ font-size를 설정하거나 다른 폰트 관련 속성들을 한꺼번에 지�
 
 ```css
 /* A font family name and a generic family name */
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
 /* A generic family name only */
@@ -47,26 +49,28 @@ font-family: Gill Sans Extrabold, sans-serif;
 ### 값
 
 - `<family-name>`
+
   - : The name of a font family. For example, "Times" and "Helvetica" are font families. Font family names containing whitespace should be quoted.
 
 - `<generic-name>`
+
   - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
 
     - `serif`
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
-            E.g. Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+        E.g. Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
     - `sans-serif`
       - : Glyphs have stroke endings that are plain.
-            E.g. "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+        E.g. "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
     - `monospace`
       - : All glyphs have the same fixed width.
-            E.g. "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.
+        E.g. "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace.
     - `cursive`
       - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
-            E.g. "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+        E.g. "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
     - `fantasy`
       - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
-            E.g. Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+        E.g. Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
     - `system-ui`
       - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
 
@@ -77,20 +81,30 @@ Font family names must either be given quoted as strings, or unquoted as a seque
 For example, the following declarations are valid:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 ```
 
 The following declarations are **invalid**:
 
 ```css example-bad
-font-family: Goudy Bookletter 1911, sans-serif;
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
 font-family: Red/Black, sans-serif;
-font-family: "Lucida" Grande, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
 font-family: Ahem!, sans-serif;
-font-family: test@foo, sans-serif;
+font-family:
+  test @foo,
+  sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
 ```
 
 ### 형식 구문
@@ -103,7 +117,11 @@ font-family: Hawaii 5-0, sans-serif;
 
 ```css
 .serif {
-  font-family: Times, Times New Roman, Georgia, serif;
+  font-family:
+    Times,
+    Times New Roman,
+    Georgia,
+    serif;
 }
 
 .sansserif {
@@ -111,7 +129,10 @@ font-family: Hawaii 5-0, sans-serif;
 }
 
 .monospace {
-  font-family: Lucida Console, Courier, monospace;
+  font-family:
+    Lucida Console,
+    Courier,
+    monospace;
 }
 
 .cursive {

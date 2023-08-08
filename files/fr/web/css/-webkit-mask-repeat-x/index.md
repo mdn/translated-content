@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
-translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
 
 {{CSSRef}}{{Non-standard_header}}

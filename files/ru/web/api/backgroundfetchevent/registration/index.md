@@ -1,16 +1,8 @@
 ---
 title: BackgroundFetchEvent.registration
 slug: Web/API/BackgroundFetchEvent/registration
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - registration
-  - BackgroundFetchEvent
-  - Experimental
-browser-compat: api.BackgroundFetchEvent.registration
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Доступное только для чтения свойство **`registration`** интерфейса {{domxref("BackgroundFetchEvent")}} возвращает объект {{domxref("BackgroundFetchRegistration")}}.
@@ -24,7 +16,7 @@ browser-compat: api.BackgroundFetchEvent.registration
 В этом примере, если пользователь кликнет по элементу, отображающем ход загрузки, то это действие вызовет событие `onbackgroundfetchclick`. Текущий {{domxref("BackgroundFetchRegistration")}} возвращается вызовом `event.registration`.
 
 ```js
-addEventListener('backgroundfetchclick', (event) => {
+addEventListener("backgroundfetchclick", (event) => {
   console.log(event.registration);
 });
 ```

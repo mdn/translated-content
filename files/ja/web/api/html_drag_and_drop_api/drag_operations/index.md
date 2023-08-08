@@ -1,7 +1,6 @@
 ---
 title: ドラッグ操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: DragDrop/Drag_Operations
 l10n:
   sourceCommit: 6718ec2ba92f3f29757ab0e71cb9ce279e1866ad
 ---

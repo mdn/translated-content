@@ -1,7 +1,6 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-translation_of: Web/CSS/border-top-left-radius
 ---
 
 {{CSSRef}}

@@ -64,15 +64,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ### 초기화하지 않은 값의 반복 생략
 
 ```js
-const arraySparse = [1,3,,7]
-let numCallbackRuns = 0
+const arraySparse = [1, 3, , 7];
+let numCallbackRuns = 0;
 
-arraySparse.forEach(function(element){
-  console.log(element)
-  numCallbackRuns++
-})
+arraySparse.forEach(function (element) {
+  console.log(element);
+  numCallbackRuns++;
+});
 
-console.log("numCallbackRuns: ", numCallbackRuns)
+console.log("numCallbackRuns: ", numCallbackRuns);
 
 // 1
 // 3
@@ -84,16 +84,16 @@ console.log("numCallbackRuns: ", numCallbackRuns)
 ### `for` 반복문을 `forEach()`로 바꾸기
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copy = [];
 
 // 이전
-for (let i=0; i<items.length; i++) {
+for (let i = 0; i < items.length; i++) {
   copy.push(items[i]);
 }
 
 // 이후
-items.forEach(function(item){
+items.forEach(function (item) {
   copy.push(item);
 });
 ```
@@ -106,7 +106,7 @@ items.forEach(function(item){
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log("a[" + index + "] = " + element);
 }
 
 // 인덱스 2는 배열의 그 위치에 항목이 없기에
@@ -124,22 +124,22 @@ function logArrayElements(element, index, array) {
 
 ```js
 function Counter() {
-  this.sum = 0
-  this.count = 0
+  this.sum = 0;
+  this.count = 0;
 }
-Counter.prototype.add = function(array) {
-  array.forEach(function(entry) {
-    this.sum += entry
-    ++this.count
-  }, this)
+Counter.prototype.add = function (array) {
+  array.forEach(function (entry) {
+    this.sum += entry;
+    ++this.count;
+  }, this);
   // ^---- 주의
-}
+};
 
-const obj = new Counter()
-obj.add([2, 5, 9])
-obj.count
+const obj = new Counter();
+obj.add([2, 5, 9]);
+obj.count;
 // 3
-obj.sum
+obj.sum;
 // 16
 ```
 
@@ -155,19 +155,19 @@ obj.sum
 
 ```js
 function copy(obj) {
-  const copy = Object.create(Object.getPrototypeOf(obj))
-  const propNames = Object.getOwnPropertyNames(obj)
+  const copy = Object.create(Object.getPrototypeOf(obj));
+  const propNames = Object.getOwnPropertyNames(obj);
 
-  propNames.forEach(function(name) {
-    const desc = Object.getOwnPropertyDescriptor(obj, name)
-    Object.defineProperty(copy, name, desc)
-  })
+  propNames.forEach(function (name) {
+    const desc = Object.getOwnPropertyDescriptor(obj, name);
+    Object.defineProperty(copy, name, desc);
+  });
 
-  return copy
+  return copy;
 }
 
-const obj1 = { a: 1, b: 2 }
-const obj2 = copy(obj1)      // obj2 looks like obj1 now
+const obj1 = { a: 1, b: 2 };
+const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
 ### 반복 중 배열이 변경으로 인한 반복 생략
@@ -179,13 +179,13 @@ const obj2 = copy(obj1)      // obj2 looks like obj1 now
 `forEach()`는 반복 전에 배열의 복사본을 만들지 않습니다.
 
 ```js
-let words = ['one', 'two', 'three', 'four']
-words.forEach(function(word) {
-  console.log(word)
-  if (word === 'two') {
-    words.shift()
+let words = ["one", "two", "three", "four"];
+words.forEach(function (word) {
+  console.log(word);
+  if (word === "two") {
+    words.shift();
   }
-})
+});
 // one
 // two
 // four
@@ -197,23 +197,23 @@ words.forEach(function(word) {
 
 ```js
 function flatten(arr) {
-  const result = []
+  const result = [];
 
   arr.forEach((i) => {
     if (Array.isArray(i)) {
-      result.push(...flatten(i))
+      result.push(...flatten(i));
     } else {
-      result.push(i)
+      result.push(i);
     }
-  })
+  });
 
-  return result
+  return result;
 }
 
 // Usage
-const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
+const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 
-flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+flatten(nested); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## 명세

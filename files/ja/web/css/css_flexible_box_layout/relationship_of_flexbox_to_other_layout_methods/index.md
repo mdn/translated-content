@@ -1,7 +1,6 @@
 ---
 title: フレックスボックスと他のレイアウト方法の関係
-slug: >-
-  Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
+slug: Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 ---
 
 {{CSSRef}}

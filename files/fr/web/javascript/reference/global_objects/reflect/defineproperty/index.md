@@ -1,7 +1,6 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 
 {{JSRef}}

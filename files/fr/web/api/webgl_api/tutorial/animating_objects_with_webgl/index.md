@@ -1,7 +1,6 @@
 ---
 title: Animer des objets avec WebGL
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
