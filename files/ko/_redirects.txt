@@ -544,6 +544,7 @@
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/Web/API/WebRTC_API#상호_운용성
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
+/ko/docs/Web/API/Window/DOMContentLoaded_event	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
@@ -657,7 +658,7 @@
 /ko/docs/Web/CSS/시작하기/설렉터	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Web/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Adjacent_sibling_combinator
-/ko/docs/Web/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
+/ko/docs/Web/Events/DOMContentLoaded	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/Events/abort	/ko/docs/Web/API/HTMLMediaElement/abort_event
 /ko/docs/Web/Events/blur	/ko/docs/Web/API/Element/blur_event
 /ko/docs/Web/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
@@ -823,7 +824,7 @@
 /ko/docs/Web/Progressive_web_apps/Responsive/Media_types	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
-/ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
+/ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/blur	/ko/docs/Web/API/Element/blur_event
 /ko/docs/Web/Reference/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Reference/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
