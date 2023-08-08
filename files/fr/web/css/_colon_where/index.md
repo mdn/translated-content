@@ -25,7 +25,7 @@ En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient inté
 }
 ```
 
-Le fragment qui précèdent sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
+Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
 
 ```css
 :valid,
@@ -123,7 +123,7 @@ footer a {
 
 Cela ne fonctionnera pas pour les liens rouges, car les sélecteurs à l'intérieur de `:is()` participent à la spécificité générale du sélecteur et car les sélecteurs de classe ont une spécificité supérieure à celle des sélecteurs d'élément.
 
-Cependant, les sélecteur à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
+Cependant, les sélecteurs à l'intérieur de `:where()` ont une spécificité à 0, et le lien orange du pied de page sera surchargé par le sélecteur simple.
 
 > **Note :** Vous pouvez également consulter [cet exemple sur GitHub](https://mdn.github.io/css-examples/is-where/).
 

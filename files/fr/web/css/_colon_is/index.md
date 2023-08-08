@@ -13,7 +13,7 @@ La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/W
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
 
-Les pseudo-éléments ne peuvent pas être utilisé dans la liste de sélecteurs passée à `:is()`.
+Les pseudo-éléments ne peuvent pas être utilisés dans la liste de sélecteurs passée à `:is()`.
 
 ### Différence entre `:is()` et `:where()`
 
@@ -31,7 +31,7 @@ En général, lorsqu'on utilise une liste de sélecteurs, celle-ci devient inté
 }
 ```
 
-Le fragment qui précèdent sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
+Le fragment qui précède sera interprété correctement et ciblera `:valid`, même pour les navigateurs qui ne prennent pas en charge `:non-pris-en-charge`, alors que&nbsp;:
 
 ```css
 :valid,

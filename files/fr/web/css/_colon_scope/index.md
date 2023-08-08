@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les élméents qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
 
 ```css
 /* Sélectionne un élément dans la portée */
