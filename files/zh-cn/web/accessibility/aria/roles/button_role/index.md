@@ -176,7 +176,7 @@ function handleCommand(event) {
 
 ### 切换按钮示例
 
-在这个片段中，使用 `button` 角色和 `aria-pressed` 属性，来将 `<span>` 元素转换为一个切换按钮，按钮被激活时，`aria-pressed` 的值在 `true` 和 `false` 之间切换。
+在这个片段中，使用 `button` 角色和 `aria-pressed` 属性，以将 {{HTMLElement("span")}} 元素转换为切换按钮，按钮被激活时，`aria-pressed` 的值在 `true` 和 `false` 之间切换。
 
 #### HTML
 
