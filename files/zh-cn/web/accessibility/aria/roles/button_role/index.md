@@ -269,7 +269,7 @@ function toggleButton(element) {
 
 ## 最佳实践
 
-如果链接执行的是按钮的操作，那么给元素 `role="button"` 可以帮助辅助技术用户理解这个元素的功能。然后，更好的设计是调整视觉设计从而匹配其功能和 ARIA 角色。在有可能时，建议使用原生的 HTML 按钮（`<button>`、`<input type="button">`、`<input type="submit">`、`<input type="reset">` 和 `<input type="image">`）而不是 `button` 角色，因为能够被所有的用户代理和辅助技术都支持，且默认会提供键盘和焦点需求而不需要额外的自定义。
+如果链接执行的是按钮的操作，那么为元素设置 `role="button"` 可以帮助辅助技术用户理解这个元素的功能。然而，更好的设计是调整视觉设计从而匹配其功能和 ARIA 角色。如果可能，建议使用原生的 HTML 按钮（`<button>`、`<input type="button">`、`<input type="submit">`、`<input type="reset">` 和 `<input type="image">`）而不是 `button` 角色，因为原生 HTML 按钮能够被所有的用户代理和辅助技术所支持，且默认会提供键盘和聚焦需求而不需要额外的自定义。
 
 ## 规范
 
