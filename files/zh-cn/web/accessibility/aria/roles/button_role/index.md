@@ -285,7 +285,7 @@ function toggleButton(element) {
 - [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
 - [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
-- [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
+- [HTML5 中强大的原生语义](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [在 HTML 中使用 ARIA 的注意事项](https://www.w3.org/TR/aria-in-html/)
 - [官方 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
 
