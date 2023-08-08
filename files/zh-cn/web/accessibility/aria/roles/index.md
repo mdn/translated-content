@@ -74,7 +74,7 @@ ARIA 角色共分为 6 类：
 
 - [scrollbar](/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [searchbox](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [separator](/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role) (when focusable)
+- [separator](/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role)（如果可以聚焦）
 - [slider](/zh-CN/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [spinbutton](/zh-CN/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [switch](/zh-CN/docs/Web/Accessibility/ARIA/Roles/switch_role)
