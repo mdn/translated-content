@@ -1,7 +1,6 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
 
 {{AddonSidebar()}}
@@ -17,9 +16,9 @@ Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
 ## Syntaxe
 
 ```js
-browser.theme.onUpdated.addListener(listener)
-browser.theme.onUpdated.removeListener(listener)
-browser.theme.onUpdated.hasListener(listener)
+browser.theme.onUpdated.addListener(listener);
+browser.theme.onUpdated.removeListener(listener);
+browser.theme.onUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

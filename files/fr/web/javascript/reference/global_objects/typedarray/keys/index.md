@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les 
 ## Syntaxe
 
 ```js
-arr.keys()
+arr.keys();
 ```
 
 ### Valeur de retour

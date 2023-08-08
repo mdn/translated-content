@@ -1,7 +1,6 @@
 ---
 title: element.setAttributeNodeNS
 slug: Web/API/Element/setAttributeNodeNS
-translation_of: Web/API/Element/setAttributeNodeNS
 ---
 
 {{ APIRef("DOM") }}
@@ -11,7 +10,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
 ## Syntaxe
 
 ```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+replacedAttr = element.setAttributeNodeNS(attributeNode);
 ```
 
 - `replacedAttr`
@@ -31,7 +30,7 @@ var d2 = document.getElementById("two");
 var a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a);
 
-alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
+alert(d2.attributes[1].value); // renvoie&nbsp;: "utterleft"
 ```
 
 ## Notes

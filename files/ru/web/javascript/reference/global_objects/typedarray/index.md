@@ -1,16 +1,11 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-  - Типизированные массивы
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
-Объект **_TypedArray_ **(типизированный массив) это массивоподобное представление нижележащего [буфера с бинарными данными (ArrayBuffer)](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Нет ни глобального свойства `TypedArray`, ни открытого конструктора _`TypedArray`_. Но существует ряд глобальных элементов, которые являются конструкторами типизированных массивов для конкретно заданных типов данных. Они приведены ниже. Далее вы найдёте общие свойства и функции, которые можно использовать с любыми типизированными массивами.
+Объект **_TypedArray_** (типизированный массив) это массивоподобное представление нижележащего [буфера с бинарными данными (ArrayBuffer)](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Нет ни глобального свойства `TypedArray`, ни открытого конструктора _`TypedArray`_. Но существует ряд глобальных элементов, которые являются конструкторами типизированных массивов для конкретно заданных типов данных. Они приведены ниже. Далее вы найдёте общие свойства и функции, которые можно использовать с любыми типизированными массивами.
 
 ## Синтаксис
 
@@ -39,7 +34,7 @@ Int8Array(), Uint8Array(), Uint8ClampedArray(), Int16Array(), Uint16Array(), Int
 
 ## Описание
 
-ECMAScript 2015 определяет конструктор объекта _TypedArray,_ который является прототипом всех _TypedArray_-конструкторов. Этот конструктор не открыт явным образом: какое-либо глобальное свойство _`%TypedArray%`_ или *`TypedArray` *отсутствует. Он доступен только через `Object.getPrototypeOf(...) (`например`, Int8Array.prototype)`. Все _TypedArray_s конструкторы наследуют общие свойства от конструктора `%TypedArray%`. Кроме того, все прототипы типизированных массивов (`TypedArray.prototype`) имеют своим прототипом `%TypedArray%.prototype`.
+ECMAScript 2015 определяет конструктор объекта _TypedArray,_ который является прототипом всех _TypedArray_-конструкторов. Этот конструктор не открыт явным образом: какое-либо глобальное свойство _`%TypedArray%`_ или _`TypedArray`_ отсутствует. Он доступен только через `Object.getPrototypeOf(...) (`например`, Int8Array.prototype)`. Все `TypedArray`s конструкторы наследуют общие свойства от конструктора `%TypedArray%`. Кроме того, все прототипы типизированных массивов (`TypedArray.prototype`) имеют своим прототипом `%TypedArray%.prototype`.
 
 Сам по себе конструктор `%TypedArray%` не имеет пользы. Его вызов напрямую или через оператор `new` выдаст ошибку `TypeError`, кроме случая, когда он используется во время создания объектов в JS-движке, поддерживающего подклассы. В настоящее время такие движки неизвестны, поэтому `%TypedArray%` используется только для дополнения функциональности (затычка) браузеров в конструкторах _TypedArray_.
 
@@ -57,32 +52,32 @@ console.log(int16[0]); // 42
 
 //Отсутствует обращение к свойству прототипа (элемент №20 должен бы иметь значение "foo")
 Int8Array.prototype[20] = "foo";
-(new Int8Array(32))[20]; // 0
+new Int8Array(32)[20]; // 0
 //Отсутствует даже в случае обращения к индексу извне текущего массива
 Int8Array.prototype[20] = "foo";
-(new Int8Array(8))[20]; // undefined
+new Int8Array(8)[20]; // undefined
 // также в случае отрицательных индексов
 Int8Array.prototype[-1] = "foo";
-(new Int8Array(8))[-1]; // undefined
+new Int8Array(8)[-1]; // undefined
 
 // Допустимы именованные свойства
 Int8Array.prototype.foo = "bar";
-(new Int8Array(32)).foo; // "bar"
+new Int8Array(32).foo; // "bar"
 ```
 
 ## Объекты TypedArray
 
-| Тип                                      | Диапазон значений         | Размер (байты) | Описание                                                                                   | Тип Web IDL           | Эквивалентный тип языка C |
-| ---------------------------------------- | ------------------------- | -------------- | ------------------------------------------------------------------------------------------ | --------------------- | ------------------------- |
+| Тип                             | Диапазон значений         | Размер (байты) | Описание                                                                                   | Тип Web IDL           | Эквивалентный тип языка C |
+| ------------------------------- | ------------------------- | -------------- | ------------------------------------------------------------------------------------------ | --------------------- | ------------------------- |
 | {{jsxref("Int8Array")}}         | -128 до 127               | 1              | 8-битное целое со знаком с дополнением до двух                                             | `byte`                | `int8_t`                  |
-| {{jsxref("Uint8Array")}}         | 0 до 255                  | 1              | 8-битное беззнаковое целое                                                                 | `octet`               | `uint8_t`                 |
+| {{jsxref("Uint8Array")}}        | 0 до 255                  | 1              | 8-битное беззнаковое целое                                                                 | `octet`               | `uint8_t`                 |
 | {{jsxref("Uint8ClampedArray")}} | 0 до 255                  | 1              | 8-битное беззнаковое целое (фиксированное от 0 до 255)                                     | `octet`               | `uint8_t`                 |
-| {{jsxref("Int16Array")}}         | -32768 до 32767           | 2              | 16-битное целое со знаком с дополнением до двух                                            | `short`               | `int16_t`                 |
-| {{jsxref("Uint16Array")}}         | 0 до 65535                | 2              | 16-битное беззнаковое целое                                                                | `unsigned short`      | `uint16_t`                |
-| {{jsxref("Int32Array")}}         | -2147483648 до 2147483647 | 4              | 32-битное целое со знаком с дополнением до двух                                            | `long`                | `int32_t`                 |
-| {{jsxref("Uint32Array")}}         | 0 до 4294967295           | 4              | 32-битное беззнаковое целое                                                                | `unsigned long`       | `uint32_t`                |
-| {{jsxref("Float32Array")}}     | 1.2x10-38 to 3.4x1038     | 4              | 32-битное число с плавающей точкой IEEE-стандарта (7 значащих цифр, например 1.123456)     | `unrestricted float`  | `float`                   |
-| {{jsxref("Float64Array")}}     | 5.0x10-324 to 1.8x10308   | 8              | 64-битное число с плавающей точкой IEEE-стандарта (16 значащих цифр, например, 1.123...15) | `unrestricted double` | `double`                  |
+| {{jsxref("Int16Array")}}        | -32768 до 32767           | 2              | 16-битное целое со знаком с дополнением до двух                                            | `short`               | `int16_t`                 |
+| {{jsxref("Uint16Array")}}       | 0 до 65535                | 2              | 16-битное беззнаковое целое                                                                | `unsigned short`      | `uint16_t`                |
+| {{jsxref("Int32Array")}}        | -2147483648 до 2147483647 | 4              | 32-битное целое со знаком с дополнением до двух                                            | `long`                | `int32_t`                 |
+| {{jsxref("Uint32Array")}}       | 0 до 4294967295           | 4              | 32-битное беззнаковое целое                                                                | `unsigned long`       | `uint32_t`                |
+| {{jsxref("Float32Array")}}      | 1.2x10-38 to 3.4x1038     | 4              | 32-битное число с плавающей точкой IEEE-стандарта (7 значащих цифр, например 1.123456)     | `unrestricted float`  | `float`                   |
+| {{jsxref("Float64Array")}}      | 5.0x10-324 to 1.8x10308   | 8              | 64-битное число с плавающей точкой IEEE-стандарта (16 значащих цифр, например, 1.123...15) | `unrestricted double` | `double`                  |
 
 ## Свойства
 
@@ -121,14 +116,25 @@ Int8Array.prototype.foo = "bar";
 Многие методы, используемые в TypedArray, могут быть подменены, используя методы, присутствующие среди стандартных в прототипе Arrays. Следующий кусок Javascript-кода демонстрирует, как вы можете дополнить недостающие методы Typed Array.
 
 ```js example-bad
-var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array,
-          Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array];
+var typedArrayTypes = [
+  Int8Array,
+  Uint8Array,
+  Uint8ClampedArray,
+  Int16Array,
+  Uint16Array,
+  Int32Array,
+  Uint32Array,
+  Float32Array,
+  Float64Array,
+];
 
 for (var k in typedArrayTypes)
-    for (var v in Array.prototype)
-        if (Array.prototype.hasOwnProperty(v) &&
-          !typedArrayTypes[k].prototype.hasOwnProperty(v))
-            typedArrayTypes[k].prototype[v] = Array.prototype[v];
+  for (var v in Array.prototype)
+    if (
+      Array.prototype.hasOwnProperty(v) &&
+      !typedArrayTypes[k].prototype.hasOwnProperty(v)
+    )
+      typedArrayTypes[k].prototype[v] = Array.prototype[v];
 ```
 
 ## Спецификации

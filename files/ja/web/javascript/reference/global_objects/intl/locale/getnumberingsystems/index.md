@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.numberingSystems
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems
 ---
 
 {{JSRef}}

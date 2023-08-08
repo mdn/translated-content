@@ -26,7 +26,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 ### 関数呼び出しか new による構築か
 
-`Error` が関数のように使用された場合 -- {{JSxRef("Operators/new", "new")}} がなかった場合、 `Error` オブジェクトを返します。したがって、 `Error` を呼び出すだけで `Error` オブジェクトを `new` キーワードから構築した場合と同じものを出力します。
+`Error` が関数のように使用された場合 — {{JSxRef("Operators/new", "new")}} がなかった場合、 `Error` オブジェクトを返します。したがって、 `Error` を呼び出すだけで `Error` オブジェクトを `new` キーワードから構築した場合と同じものを出力します。
 
 ```js
 // これは...

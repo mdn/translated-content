@@ -1,7 +1,6 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
-translation_of: Web/API/IDBDatabase/transaction
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -23,8 +22,8 @@ var transaction = db.transaction(storeNames, mode);
   - : un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l'on n'a besoin que d'un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
 
     ```js
-    var transaction = db.transaction(['my-store-name']);
-    var transaction = db.transaction('my-store-name');
+    var transaction = db.transaction(["my-store-name"]);
+    var transaction = db.transaction("my-store-name");
     ```
 
     Pour utiliser tous les magasins d'objets de la base de donnée, on peut appeler la methode {{domxref("IDBDatabase.objectStoreNames")}}:
@@ -115,7 +114,7 @@ var transaction = db.transaction(storeNames, mode);
     Pour éviter des pertes de performance, n'utilisez le mode `readwrite` que si vous avez effectivement besoin d'écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d'accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:
 
     ```js
-    var transaction = db.transaction('monMagasin','readwrite');
+    var transaction = db.transaction("monMagasin", "readwrite");
     ```
 
 ## Renvoie

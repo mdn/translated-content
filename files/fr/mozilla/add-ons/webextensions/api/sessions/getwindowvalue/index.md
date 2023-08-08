@@ -1,7 +1,6 @@
 ---
 title: sessions.getWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 ---
 
 {{AddonSidebar()}}
@@ -16,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var retrieving = browser.sessions.getWindowValue(
-  windowId,    // integer
-  key          // string
-)
+  windowId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -50,7 +49,9 @@ function onGetRejected(e) {
 }
 
 browser.windows.onCreated.addListener((window) => {
-  browser.sessions.getWindowValue(window.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getWindowValue(window.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 

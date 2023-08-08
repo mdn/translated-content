@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
 
 {{JSRef}}
@@ -24,7 +23,7 @@ maMap.set("a", "alpha");
 maMap.set("b", "beta");
 maMap.set("g", "gamma");
 
-maMap.size // 3
+maMap.size; // 3
 ```
 
 ## Spécifications

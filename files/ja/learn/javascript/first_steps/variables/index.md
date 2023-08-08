@@ -43,14 +43,14 @@ l10n:
 ```
 
 ```js
-const buttonA = document.querySelector('#button_A');
-const headingA = document.querySelector('#heading_A');
+const buttonA = document.querySelector("#button_A");
+const headingA = document.querySelector("#heading_A");
 
 buttonA.onclick = () => {
-  const name = prompt('あなたの名前は何ですか？');
+  const name = prompt("あなたの名前は何ですか？");
   alert(`こんにちは、${name}さん、はじめまして！`);
   headingA.textContent = `${name}さん、ようこそ`;
-}
+};
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
@@ -67,13 +67,15 @@ buttonA.onclick = () => {
 ```
 
 ```js example-bad
-const buttonB = document.querySelector('#button_B');
-const headingB = document.querySelector('#heading_B');
+const buttonB = document.querySelector("#button_B");
+const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-    alert(`こんにちは、${prompt('あなたの名前は何ですか？')}さん、はじめまして！`);
-    headingB.textContent = `${prompt('あなたの名前は何ですか？')}さん、ようこそ`;
-}
+  alert(
+    `こんにちは、${prompt("あなたの名前は何ですか？")}さん、はじめまして！`,
+  );
+  headingB.textContent = `${prompt("あなたの名前は何ですか？")}さん、ようこそ`;
+};
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
@@ -121,7 +123,7 @@ scoobyDoo;
 変数を宣言したら、値を入れて初期化できます。初期化するには、変数名に続けて等号記号 (`=`) を入力し、変数に入れたい値を渡します。例えば次のように。
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -135,7 +137,7 @@ myAge;
 変数の宣言と初期化を一度にすることもできます。
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 2 つの操作を別個の行で行うより早いので、おそらくほとんどの場合、この方法で書くでしょう。
@@ -156,7 +158,7 @@ JavaScript が最初に作成されたときには、これが変数を宣言す
 はじめに、変数を宣言して初期化する複数行の JavaScript プログラムを作成した場合、変数を初期化した後で実際に変数を `var` で宣言することができます。例えば次のようになります。
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -176,22 +178,22 @@ var myName;
 第二に、`var` を使用するとき、好きなだけ同じ変数を何度でも宣言することができます、しかし `let` ではできません。次の例は動作します。
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 しかし、次のようにすると 2 行目でエラーが発生します。
 
 ```js example-bad
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 代わりにこれをしなければならないでしょう。
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 繰り返しますが、これは言語の賢明な決定です。変数を再宣言する必要はありません。それは物事をより混乱させるだけです。
@@ -215,7 +217,7 @@ myName = 'Bob';
 変数を初期化して値が入ったら、もう一度値を入れなおすことで、変数の値を変更することができます。次の行を入力してみてください。
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -280,7 +282,7 @@ let myAge = 17;
 文字列とは文字が連なったもののことです。変数に文字列値を設定する場合、単一引用符 (`'`) または二重引用符 (`"`) で文字を囲みます。囲み忘れると、JavaScript はその文字を変数名として解釈しようとしてしまいます。
 
 ```js
-let dolphinGoodbye = 'So long and thanks for all the fish';
+let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### 論理値
@@ -304,7 +306,7 @@ let test = 6 < 3;
 配列とは角括弧 (`[]`) にカンマで区切った複数の値を格納できるオブジェクトです。コンソールに以下のように入力してみましょう。
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNameArray = ["Chris", "Bob", "Jim"];
 let myNumberArray = [10, 15, 40];
 ```
 
@@ -326,13 +328,13 @@ myNumberArray[2]; // 40 と表示されます
 次の行をコンソールに入力してみましょう。
 
 ```js
-let dog = { name : 'ポチ', breed : 'ダルメシアン' };
+let dog = { name: "ポチ", breed: "ダルメシアン" };
 ```
 
 オブジェクトに格納された情報を取得するには、以下のような書き方をします。
 
 ```js
-dog.name
+dog.name;
 ```
 
 とりあえずオブジェクトについて、今はここまでです。オブジェクトについてはもっと先のモジュールで紹介します。
@@ -344,13 +346,13 @@ JavaScript は他の言語と異なり、「動的型付け言語」という、
 たとえば、もし変数を宣言して、引用符で囲んだ値を渡すとします。すると、ブラウザーはこれを文字列として扱うでしょう。
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 それが数字を含んでいたとしても、文字列になってしまうので、気を付けてください。
 
 ```js
-let myNumber = '500'; // oops, this is still a string
+let myNumber = "500"; // oops, this is still a string
 typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber;
@@ -394,15 +396,15 @@ count = 2;
 JavaScript で定数は、常に同じ値に名前を付けなければなりませんが、名前を付けた値の内容は変更することができることに注意してください。これは、数値や論理値のような単純な型では有益な違いではありませんが、オブジェクトを考えてみてください。
 
 ```js
-const bird = { species : 'Kestrel'};
-console.log(bird.species);  // "Kestrel"
+const bird = { species: "Kestrel" };
+console.log(bird.species); // "Kestrel"
 ```
 
 オブジェクトの内容が変わっても、定数は同じオブジェクトを指しているので、`const` を使って宣言したオブジェクトのプロパティを更新したり、追加したり、削除したりすることができます。
 
 ```js
-bird.species = 'Striated Caracara';
-console.log(bird.species);  // "Striated Caracara"
+bird.species = "Striated Caracara";
+console.log(bird.species); // "Striated Caracara"
 ```
 
 ## いつ const を使い、いつ let を使うか

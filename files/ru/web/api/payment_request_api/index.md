@@ -1,8 +1,8 @@
 ---
 title: Payment Request API
 slug: Web/API/Payment_Request_API
-translation_of: Web/API/Payment_Request_API
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 Payment Request API предоставляет постоянный UX для продавцов и покупателей. Это не новый способ оплаты, а возможность пользователя выбрать предпочтительный способ оплаты и предоставить продавцу эту информацию.
@@ -66,17 +66,11 @@ You can find a complete guide in [Using the Payment Request API](/ru/docs/Web/AP
 
 ## Specifications
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                       |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Payment')}}                         | {{Spec2('Payment')}}                         | Initial definition.                                                                                                                                           |
-| {{SpecName('Basic Card Payment')}}             | {{Spec2('Basic Card Payment')}}             | Defines {{domxref("BasicCardRequest")}} and {{domxref("BasicCardResponse")}}, among other things needed for handling credit card payment |
-| {{SpecName('Payment Method Identifiers')}} | {{Spec2('Payment Method Identifiers')}} | Defines payment method identifiers and how they are validated, and, where applicable, minted and formally registered with the W3C.                            |
+{{Specifications}}
 
 ## Browser compatibility
 
-### PaymentRequest interface
-
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## See also
 

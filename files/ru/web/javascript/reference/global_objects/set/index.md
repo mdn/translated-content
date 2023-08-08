@@ -1,16 +1,6 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-tags:
-  - Class
-  - ECMAScript 2015
-  - Global Objects
-  - JavaScript
-  - Object
-  - Reference
-  - set
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
 {{JSRef}}
@@ -68,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
   - : Возвращает новый объект итератора, который содержит **массив `[value, value]`** для каждого элемента в объекте `Set` в порядке вставки.
 
-   Этот метод похож на соответствующий метод объекта {{jsxref("Map")}}, но в случае `Set` ключ (_key_) каждой записи совпадает с её значением (_value_).
+  Этот метод похож на соответствующий метод объекта {{jsxref("Map")}}, но в случае `Set` ключ (_key_) каждой записи совпадает с её значением (_value_).
 
 - {{jsxref("Set.prototype.forEach()")}}
   - : Вызывает `callbackFn` один раз для каждого значения, присутствующего в объекте `Set` в порядке вставки. Если указан параметр `thisArg`, он будет использоваться в качестве значения `this` для каждого вызова `callbackFn`.
@@ -78,34 +68,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ### Использование объекта Set
 
 ```js
-const mySet1 = new Set()
+const mySet1 = new Set();
 
-mySet1.add(1)           // Set(1) { 1 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add('текст') // Set(3) { 1, 5, 'текст' }
-const o = {a: 1, b: 2}
-mySet1.add(o)
+mySet1.add(1); // Set(1) { 1 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add(5); // Set(2) { 1, 5 }
+mySet1.add("текст"); // Set(3) { 1, 5, 'текст' }
+const o = { a: 1, b: 2 };
+mySet1.add(o);
 
-mySet1.add({a: 1, b: 2})   // o ссылается на другой объект, так что это нормально
+mySet1.add({ a: 1, b: 2 }); // o ссылается на другой объект, так что это нормально
 
-mySet1.has(1)              // true
-mySet1.has(3)              // false, поскольку 3 не был добавлен в набор
-mySet1.has(5)              // true
-mySet1.has(Math.sqrt(25))  // true
-mySet1.has('Текст'.toLowerCase()) // true
-mySet1.has(o)       // true
+mySet1.has(1); // true
+mySet1.has(3); // false, поскольку 3 не был добавлен в набор
+mySet1.has(5); // true
+mySet1.has(Math.sqrt(25)); // true
+mySet1.has("Текст".toLowerCase()); // true
+mySet1.has(o); // true
 
-mySet1.size         // 5
+mySet1.size; // 5
 
-mySet1.delete(5)    // удаляет элемент 5 из set
-mySet1.has(5)       // false, 5 был удалён
+mySet1.delete(5); // удаляет элемент 5 из set
+mySet1.has(5); // false, 5 был удалён
 
-mySet1.size         // 4, поскольку мы удалили одно значение
+mySet1.size; // 4, поскольку мы удалили одно значение
 
-mySet1.add(5)       // Set(5) { 1, "текст", {...}, {...}, 5 } - ранее удаленный элемент будет добавлен как новый элемент, он не сохранит свое первоначальное положение до удаления
+mySet1.add(5); // Set(5) { 1, "текст", {...}, {...}, 5 } - ранее удаленный элемент будет добавлен как новый элемент, он не сохранит свое первоначальное положение до удаления
 
-console.log(mySet1) // Set(5) { 1, "текст", {…}, {…}, 5 }
+console.log(mySet1); // Set(5) { 1, "текст", {…}, {…}, 5 }
 ```
 
 ### Итерация по объекту Set
@@ -135,11 +125,11 @@ for (const [key, value] of mySet1.entries()) {
 // 1, "текст", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 // Преобразуем объект Set в объект Array с помощью Array.from
-const myArr = Array.from(mySet1) // [1, "текст", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
+const myArr = Array.from(mySet1); // [1, "текст", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
 // следующее также будет работать, если запустить его в HTML-документе
-mySet1.add(document.body)
-mySet1.has(document.querySelector('body')) // true
+mySet1.add(document.body);
+mySet1.has(document.querySelector("body")); // true
 
 // преобразование между Set и Array
 const mySet2 = new Set([1, 2, 3, 4]);
@@ -213,26 +203,26 @@ function difference(setA, setB) {
 }
 
 // Примеры
-const setA = new Set([1, 2, 3, 4])
-const setB = new Set([2, 3])
-const setC = new Set([3, 4, 5, 6])
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([2, 3]);
+const setC = new Set([3, 4, 5, 6]);
 
-isSuperset(setA, setB)          // true
-union(setA, setC)               // Set {1, 2, 3, 4, 5, 6}
-intersection(setA, setC)        // Set {3, 4}
-symmetricDifference(setA, setC) // Set {1, 2, 5, 6}
-difference(setA, setC)          // Set {1, 2}
+isSuperset(setA, setB); // true
+union(setA, setC); // Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC); // Set {3, 4}
+symmetricDifference(setA, setC); // Set {1, 2, 5, 6}
+difference(setA, setC); // Set {1, 2}
 ```
 
 ### Связь с объектами массива
 
 ```js
-const myArray = ['value1', 'value2', 'value3'];
+const myArray = ["value1", "value2", "value3"];
 
 // Используйте обычный конструктор Set для преобразования массива в набор
 const mySet = new Set(myArray);
 
-mySet.has('value1')     // true
+mySet.has("value1"); // true
 
 // Используйте синтаксис spread для преобразования набора в массив.
 console.log([...mySet]); // Покажет вам точно такой же массив, как и myArray
@@ -241,9 +231,9 @@ console.log([...mySet]); // Покажет вам точно такой же м�
 ### Удаление повторяющиеся элементов из массива
 
 ```js
-const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
+const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
 
-console.log([...new Set(numbers)])
+console.log([...new Set(numbers)]);
 
 // [2, 3, 4, 5, 6, 7, 32]
 ```
@@ -251,22 +241,20 @@ console.log([...new Set(numbers)])
 ### Связь со строками
 
 ```js
-const text = 'Индия';
+const text = "Индия";
 
-const mySet = new Set(text);  // Set(5) {'И', 'н', 'д', 'и', 'я'}
-mySet.size  // 5
+const mySet = new Set(text); // Set(5) {'И', 'н', 'д', 'и', 'я'}
+mySet.size; // 5
 
 // чувствительный к регистру и пропускает дубликаты
-new Set("Слово")  // Set(5) { "С", "л", "о", "в", "о"}
-new Set("Слово")  // Set(4) { "С", "л", "о", "в"} // "о" встречается дважды в слове, но в объекте будет только одна
+new Set("Слово"); // Set(5) { "С", "л", "о", "в", "о"}
+new Set("Слово"); // Set(4) { "С", "л", "о", "в"} // "о" встречается дважды в слове, но в объекте будет только одна
 ```
 
 ### Используйте Set для обеспечения уникальности списка значений
 
 ```js
-const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map((e) => e.id);
+const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
 
 const set = new Set(array);
 console.assert(set.size === array.length);

@@ -1,7 +1,6 @@
 ---
 title: "Tableaux HTML : dispositions avancées et accessibilité"
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -210,7 +209,7 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
 </html>
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300) }}
 
 > **Note :** Vous pouvez aussi le trouver sur Github [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
 

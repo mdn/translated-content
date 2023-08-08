@@ -1,16 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - import
-  - Инструкция
-  - Модули
-  - динамический импорт
-  - импорт
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 
 {{jsSidebar("Statements")}}
@@ -66,7 +56,7 @@ import("/module-name.js").then(module => {…}) // Динамический им
 Этот код вставляет объект `myModule` в текущую область видимости, содержащую все экспортированные значения из модуля, находящегося в файле `/modules/my-module.js`.
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 В данном случае, доступ к импортируемым значениям можно осуществить с использованием имени модуля (в данном случае "myModule") в качестве пространства имён. Например, если импортируемый выше модуль включает в себя экспорт метода `doAllTheAmazingThings()`, вы можете вызвать его так:
@@ -80,7 +70,7 @@ myModule.doAllTheAmazingThings();
 Определённое ранее значение, названное `myExport,` которое было экспортировано из модуля `my-module` либо неявно (если модуль был экспортирован целиком), либо явно (с использованием инструкции {{jsxref("Statements/export", "export")}}), позволяет вставить `myExport` в текущую область видимости.
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
 ### Импорт нескольких единичных значений
@@ -88,7 +78,7 @@ import {myExport} from '/modules/my-module.js';
 Этот код вставляет оба значения `foo` и `bar` в текущую область видимости.
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
 ### Импорт значений с использованием более удобных имён
@@ -96,8 +86,7 @@ import {foo, bar} from '/modules/my-module.js';
 Вы можете переименовать значения, когда импортируете их. Например, этот код вставляет `shortName` в текущую область видимости.
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 ### Переименование нескольких значений в одном импорте
@@ -107,8 +96,8 @@ import {reallyReallyLongModuleExportName as shortName}
 ```js
 import {
   reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+  anotherLongModuleName as short,
+} from "/modules/my-module.js";
 ```
 
 ### Импорт модуля для использования его побочного эффекта
@@ -116,7 +105,7 @@ import {
 Импорт всего модуля только для использования побочного эффекта от его вызова, не импортируя что-либо. Это запускает глобальный код модуля, но в действительности не импортирует никаких значений.
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 ### Импорт значения по умолчанию
@@ -126,20 +115,20 @@ import '/modules/my-module.js';
 Простейшая версия прямого импорта значения по умолчанию:
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 Возможно также использование такого синтаксиса с другими вариантами из перечисленных выше (импорт пространства имён или именованный импорт). В таком случае, импорт значения по умолчанию должен быть определён первым. Для примера:
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule использовано как пространство имён
 ```
 
 или
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 // именованный импорт конкретных значений
 ```
 
@@ -159,7 +148,7 @@ export let b = 3;
 ##### main.js
 
 ```js
-import {a, b} from '/modules/my-module.js';
+import { a, b } from "/modules/my-module.js";
 a = 5;
 b = 6;
 // Uncaught TypeError: Assignment to constant variable.
@@ -172,13 +161,13 @@ b = 6;
 ##### my-module.js
 
 ```js
-export let obj = {a:2, b:4};
+export let obj = { a: 2, b: 4 };
 ```
 
 ##### main.js
 
 ```js
-import {obj} from '/modules/my-module.js';
+import { obj } from "/modules/my-module.js";
 
 obj.a = 1;
 obj.b = 4;
@@ -191,16 +180,15 @@ obj.b = 4;
 Ключевое слово `import` можно использовать как функцию для динамического импорта модулей. Вызов `import()` возвращает Promise.
 
 ```js
-import('/modules/my-module.js')
-  .then(module => {
-    // Делаем что-нибудь с модулем
-  })
+import("/modules/my-module.js").then((module) => {
+  // Делаем что-нибудь с модулем
+});
 ```
 
 Как следствие возврата Promise, с динамическим импортом можно использовать ключевое слово `await`
 
 ```js
-let module = await import('/modules/my-module.js');
+let module = await import("/modules/my-module.js");
 ```
 
 Обратите внимание, что несмотря на то, что динамический импорт выглядит как вызов функции, он им по сути не является, т.е. не наследует от `Function.prototype` и, как следствие, его невозможно использовать вместе с методами `.call`, `.apply` и `.bind`
@@ -215,24 +203,25 @@ let module = await import('/modules/my-module.js');
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-     callback(this.responseText)
+    callback(this.responseText);
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 ```
 
 ### Основной код: main.js
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ### Динамический импорт
@@ -242,14 +231,14 @@ getUsefulContents('http://www.example.com',
 ```js
 const main = document.querySelector("main");
 for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    import('/modules/my-module.js')
-      .then(module => {
+    import("/modules/my-module.js")
+      .then((module) => {
         module.loadPageInto(main);
       })
-      .catch(err => {
+      .catch((err) => {
         main.textContent = err.message;
       });
   });

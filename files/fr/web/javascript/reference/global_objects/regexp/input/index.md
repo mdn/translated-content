@@ -1,7 +1,6 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/input
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -11,8 +10,8 @@ La propriété non-standard **`input`** est une propriété statique de l'expres
 ## Syntaxe
 
 ```js
-RegExp.input
-RegExp.$_
+RegExp.input;
+RegExp.$_;
 ```
 
 ## Description
@@ -28,11 +27,11 @@ La valeur de la propriété **`input`** est modifiée à chaque fois que la cha�
 ```js
 var re = /coucou/g;
 re.test("coucou toi !");
-RegExp.input;         // "coucou toi !"
-re.test("toto");      // nouveau test, pas de correspondance
-RegExp.$_;            // "coucou toi !"
+RegExp.input; // "coucou toi !"
+re.test("toto"); // nouveau test, pas de correspondance
+RegExp.$_; // "coucou toi !"
 re.test("coucou monde !"); // nouveau test avec correspondance
-RegExp.$_;            // "coucou monde !"
+RegExp.$_; // "coucou monde !"
 ```
 
 ## Spécifications

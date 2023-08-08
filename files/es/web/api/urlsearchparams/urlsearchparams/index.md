@@ -30,7 +30,7 @@ El siguiente ejemplo muestra cómo crear un objeto {{domxref("URLSearchParams")}
 
 ```js
 // Pasar un literal string
-var url = new URL('https://example.com?foo=1&bar=2');
+var url = new URL("https://example.com?foo=1&bar=2");
 // Obtener la URL actual desde window.location
 var url2 = new URL(window.location);
 
@@ -39,10 +39,13 @@ var params = new URLSearchParams(url.search);
 var params2 = new URLSearchParams(url2.search);
 
 // Pasar una secuencia
-var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
+var params3 = new URLSearchParams([
+  ["foo", 1],
+  ["bar", 2],
+]);
 
 // Pasar un registro
-var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
+var params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
 ## Especificaciones

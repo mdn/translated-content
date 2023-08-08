@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la 
 ## Syntaxe
 
 ```js
-dateObj.setMilliseconds(valeurMs)
+dateObj.setMilliseconds(valeurMs);
 ```
 
 ### Paramètres

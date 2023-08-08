@@ -1,7 +1,6 @@
 ---
 title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 ---
 
 {{AddonSidebar()}}
@@ -29,15 +28,15 @@ Ce code permet de basculer un script de contenu enregistré sur un clic d'action
 var registered = null;
 
 async function register() {
-
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
-    js: [{
-      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
-    }],
-    runAt: "document_idle"
+    js: [
+      {
+        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+      },
+    ],
+    runAt: "document_idle",
   });
-
 }
 
 function toggle() {

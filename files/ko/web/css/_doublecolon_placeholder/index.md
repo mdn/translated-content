@@ -1,5 +1,5 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
@@ -42,14 +42,18 @@ Color contrast ratio is determined by comparing the luminosity of the placeholde
 
 Placeholder text with sufficient color contrast may be interpreted as entered input. Placeholder text will also disappear when a person enters content into an {{htmlelement("input")}} element. Both of these circumstances can interfere with successful form completion, especially for people with cognitive concerns.
 
-An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) to programmatically associate the {{HTMLElement("input")}} with its hint.
+An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) to programmatically associate the {{HTMLElement("input")}} with its hint.
 
 With this implementation, the hint content is available even if information is entered into the input field, and the input appears free of preexisting input when the page is loaded. Most screen reading technology will use `aria-describedby` to read the hint after the input's label text is announced, and the person using the screen reader can mute it if they find the extra information unnecessary.
 
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -62,7 +66,7 @@ Placeholder text will appear with the same styling as user-entered text content 
 
 ### Labels
 
-Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the {{htmlattrxref("for", "label")}} and {{htmlattrxref("id")}} attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
+Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/ko/docs/Web/HTML/Element/label#for) and [`id`](/ko/docs/Web/HTML/Global_attributes#id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
 
 - [MDN Basic form hints](/ko/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -74,7 +78,7 @@ Placeholders are not a replacement for the {{htmlelement("label")}} element. Wit
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -96,7 +100,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Type something here...">
+<input placeholder="Type something here..." />
 ```
 
 #### CSS

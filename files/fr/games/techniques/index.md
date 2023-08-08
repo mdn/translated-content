@@ -1,7 +1,6 @@
 ---
 title: Techniques pour le développement de jeux vidéo
 slug: Games/Techniques
-translation_of: Games/Techniques
 ---
 
 {{GamesSidebar}}

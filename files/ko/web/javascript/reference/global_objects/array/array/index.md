@@ -30,10 +30,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 배열은 [리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#배열_리터럴)으로 생성할 수도 있습니다.
 
 ```js
-let fruits = ['사과', '바나나']
+let fruits = ["사과", "바나나"];
 
-console.log(fruits.length) // 2
-console.log(fruits[0])     // "사과"
+console.log(fruits.length); // 2
+console.log(fruits[0]); // "사과"
 ```
 
 ### 단일 매개변수 배열 생성자
@@ -41,10 +41,10 @@ console.log(fruits[0])     // "사과"
 배열을 생성자와 하나의 숫자 매개변수로 생성할 수 있습니다. 그 결과는 `length`가 매개변수고, 길이만큼의 빈 슬롯을 가진 배열입니다.
 
 ```js
-let fruits = new Array(2)
+let fruits = new Array(2);
 
-console.log(fruits.length) // 2
-console.log(fruits[0])     // undefined
+console.log(fruits.length); // 2
+console.log(fruits[0]); // undefined
 ```
 
 ### 복수 매개변수 배열 생성자
@@ -52,10 +52,10 @@ console.log(fruits[0])     // undefined
 생성자에 두 개 이상의 매개변수를 제공할 경우, 매개변수를 원소로 하는 새로운 배열을 생성합니다.
 
 ```js
-let fruits = new Array('사과', '바나나')
+let fruits = new Array("사과", "바나나");
 
-console.log(fruits.length) // 2
-console.log(fruits[0])     // "사과"
+console.log(fruits.length); // 2
+console.log(fruits[0]); // "사과"
 ```
 
 ## 명세

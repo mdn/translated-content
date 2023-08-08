@@ -1,7 +1,6 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-translation_of: Web/API/Document/characterSet
 ---
 
 {{ApiRef("DOM")}}
@@ -15,7 +14,7 @@ Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transm
 ## Syntaxe
 
 ```js
-var string = document.characterSet
+var string = document.characterSet;
 ```
 
 ## Exemples

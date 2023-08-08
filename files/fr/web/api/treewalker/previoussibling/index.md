@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.previousSibling()
 slug: Web/API/TreeWalker/previousSibling
-translation_of: Web/API/TreeWalker/previousSibling
 ---
 
 {{ APIRef("DOM") }}
@@ -18,10 +17,14 @@ node = treeWalker.previousSibling();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.previousSibling(); // renvoie null car il n'y a pas de frère précédent
 ```

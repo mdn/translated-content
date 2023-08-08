@@ -23,11 +23,11 @@ Para exemplo veja [definição de lista](/pt-BR/docs/HTML/Element/dl#Examples).
 
 ## Especificações
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                                     | Status                   | Comment |
+| --------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}                | {{Spec2('HTML4.01')}}    |         |
 
 ## Navegadores compatíveis
 

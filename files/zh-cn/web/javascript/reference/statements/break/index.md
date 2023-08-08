@@ -68,15 +68,14 @@ switch (food) {
 下面的代码中一起使用 `break` 语句和被标记的块语句。一个 `break` 语句必须内嵌在它引用的标记中。注意，`inner_block` 内嵌在 `outer_block` 中。
 
 ```js
-outer_block:{
-
-  inner_block:{
-    console.log ('1');
-    break outer_block;      // breaks out of both inner_block and outer_block
-    console.log (':-(');    // skipped
+outer_block: {
+  inner_block: {
+    console.log("1");
+    break outer_block; // breaks out of both inner_block and outer_block
+    console.log(":-("); // skipped
   }
 
-  console.log ('2');        // skipped
+  console.log("2"); // skipped
 }
 ```
 

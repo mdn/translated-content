@@ -1,7 +1,6 @@
 ---
 title: "Tableaux HTML : notions de base"
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -14,7 +13,7 @@ Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les r
       <th scope="row">Prérequis :</th>
       <td>
         Les bases de HTML (voir
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >).
       </td>

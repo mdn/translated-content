@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: accept'
+title: "HTML 属性: accept"
 slug: Web/HTML/Attributes/accept
 ---
 

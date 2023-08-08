@@ -71,7 +71,7 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 En el siguiente fragmento de código, creamos una nueva solicitud utilizando el constructor `Request()` (para un archivo de imagen en el mismo directorio que el script), luego devolvemos algunos valores de propiedad de la solicitud:
 
 ```js
-const myRequest = new Request('http://localhost/flowers.jpg');
+const myRequest = new Request("http://localhost/flowers.jpg");
 
 const myURL = myRequest.url; // http://localhost/flowers.jpg
 const myMethod = myRequest.method; // GET
@@ -82,8 +82,8 @@ Puede obtener esta solicitud pasando el objeto `Request` como parámetro a una l
 
 ```js
 fetch(myRequest)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     myImage.src = URL.createObjectURL(blob);
   });
 ```
@@ -91,7 +91,10 @@ fetch(myRequest)
 En el siguiente fragmento de código, creamos una nueva solicitud utilizando el constructor `Request()` con algunos datos iniciales y contenido del cuerpo para una solicitud de API que necesita una carga útil del cuerpo:
 
 ```js
-const myRequest = new Request('http://localhost/api', {method: 'POST', body: '{"foo":"bar"}'});
+const myRequest = new Request("http://localhost/api", {
+  method: "POST",
+  body: '{"foo":"bar"}',
+});
 
 const myURL = myRequest.url; // http://localhost/api
 const myMethod = myRequest.method; // POST
@@ -105,17 +108,18 @@ Puede obtener esta solicitud de API pasando el objeto `Request` como parámetro 
 
 ```js
 fetch(myRequest)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Something went wrong on api server!');
+      throw new Error("Something went wrong on api server!");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```

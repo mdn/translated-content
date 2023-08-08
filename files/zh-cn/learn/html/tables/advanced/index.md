@@ -97,7 +97,7 @@ slug: Learn/HTML/Tables/Advanced
 你完成的表格应该如下所示：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -106,7 +106,7 @@ slug: Learn/HTML/Tables/Advanced
       html {
         font-family: sans-serif;
       }
- 
+
       table {
         border-collapse: collapse;
         border: 4px solid rgb(200, 200, 200);
@@ -218,27 +218,27 @@ slug: Learn/HTML/Tables/Advanced
 ```html
 <table id="table1">
   <tr>
-    <th>标题1</th>
-    <th>标题2</th>
-    <th>标题3</th>
+    <th>标题 1</th>
+    <th>标题 2</th>
+    <th>标题 3</th>
   </tr>
   <tr>
     <td id="nested">
       <table id="table2">
         <tr>
-          <td>单元格1</td>
-          <td>单元格2</td>
-          <td>单元格3</td>
+          <td>单元格 1</td>
+          <td>单元格 2</td>
+          <td>单元格 3</td>
         </tr>
       </table>
     </td>
-    <td>单元格2</td>
-    <td>单元格3</td>
+    <td>单元格 2</td>
+    <td>单元格 3</td>
   </tr>
   <tr>
-    <td>单元格4</td>
-    <td>单元格5</td>
-    <td>单元格6</td>
+    <td>单元格 4</td>
+    <td>单元格 5</td>
+    <td>单元格 6</td>
   </tr>
 </table>
 ```

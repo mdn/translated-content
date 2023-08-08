@@ -1,7 +1,6 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-translation_of: Web/CSS/perspective-origin
 ---
 
 {{CSSRef}}
@@ -337,7 +336,7 @@ perspective-origin: unset;
 
 /* On améliore la disposition */
 section {
-  background-color: #EEE;
+  background-color: #eee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

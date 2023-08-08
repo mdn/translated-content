@@ -1,9 +1,6 @@
 ---
 title: onSelectionChanged
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
-translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
 ---
 
 {{AddonSidebar()}}
@@ -13,9 +10,9 @@ Appelles lorsque l'utilisateur sélectionne un élément de page différent pour
 ## Syntaxe
 
 ```js
-browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
-browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
-browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
+browser.devtools.panels.elements.onSelectionChanged.addListener(listener);
+browser.devtools.panels.elements.onSelectionChanged.removeListener(listener);
+browser.devtools.panels.elements.onSelectionChanged.hasListener(listener);
 ```
 
 L'événement a trois fonctions :
@@ -44,13 +41,14 @@ Ecoutez la sélection des événements modifiés, et enregistrez le contenu du t
 
 ```js
 function handleSelectedElement() {
-  browser.devtools.inspectedWindow.eval("$0.textContent")
-    .then((result) => {
-      console.log(result[0]);
-    });
+  browser.devtools.inspectedWindow.eval("$0.textContent").then((result) => {
+    console.log(result[0]);
+  });
 }
 
-browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);
+browser.devtools.panels.elements.onSelectionChanged.addListener(
+  handleSelectedElement,
+);
 ```
 
 {{WebExtExamples}}

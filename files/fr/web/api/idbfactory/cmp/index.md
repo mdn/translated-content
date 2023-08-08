@@ -1,7 +1,6 @@
 ---
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
-translation_of: Web/API/IDBFactory/cmp
 ---
 
 {{APIRef("IndexedDB")}}
@@ -49,7 +48,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} de type :
 var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Résultat de la comparaison : " + result );
+console.log("Résultat de la comparaison : " + result);
 ```
 
 ## Spécifications

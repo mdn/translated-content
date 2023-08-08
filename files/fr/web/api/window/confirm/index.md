@@ -1,7 +1,6 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
 ---
 
 {{ApiRef("Window")}}
@@ -13,7 +12,7 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-confirm(message)
+confirm(message);
 ```
 
 ### Paramètres

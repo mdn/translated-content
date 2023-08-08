@@ -1,7 +1,6 @@
 ---
-title: '<embed> : l''élément de contenu externe embarqué'
+title: "<embed> : l'élément de contenu externe embarqué"
 slug: Web/HTML/Element/embed
-translation_of: Web/HTML/Element/embed
 ---
 
 {{HTMLSidebar}}
@@ -112,7 +111,12 @@ Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/C
 ## Exemples
 
 ```html
-<embed type="video/quicktime" src="film.mov" width="640" height="480" title="Titre de ma vidéo">
+<embed
+  type="video/quicktime"
+  src="film.mov"
+  width="640"
+  height="480"
+  title="Titre de ma vidéo" />
 ```
 
 ## Accessibilité

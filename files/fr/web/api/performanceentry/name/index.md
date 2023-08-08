@@ -1,7 +1,6 @@
 ---
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
-translation_of: Web/API/PerformanceEntry/name
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -62,8 +61,7 @@ function check_PerformanceEntry(obj) {
     let supported = properties[i] in obj;
     if (supported)
       console.log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      console.log("..." + properties[i] + " = Not supported");
+    else console.log("..." + properties[i] + " = Not supported");
   }
   for (let i = 0; i < methods.length; i++) {
     // Vérifie chaque méthode

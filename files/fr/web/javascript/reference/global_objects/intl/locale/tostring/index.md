@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de loc
 ## Syntaxe
 
 ```js
-locale.toString()
+locale.toString();
 ```
 
 ### Valeur de retour
@@ -27,7 +26,10 @@ Une instance de `Locale` est une représentation JavaScript d'une locale au sens
 ## Exemples
 
 ```js
-let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+let maLocale = new Intl.Locale("fr-Latn-FR", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 ```

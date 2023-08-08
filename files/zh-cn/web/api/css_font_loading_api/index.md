@@ -21,7 +21,7 @@ CSS 字体加载 API 提供了控制和跟踪字体加载过程的能力，并�
 
 ### 定义字体
 
-你可以使用 [`FontFace` 构造函数](/zh-CN/docs/Web/API/FontFace/FontFace)创建字体，该函数有3个参数：字体家族、字体源和可选的描述符。这些参数与 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 的参数一致。
+你可以使用 [`FontFace` 构造函数](/zh-CN/docs/Web/API/FontFace/FontFace)创建字体，该函数有 3 个参数：字体家族、字体源和可选的描述符。这些参数与 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 的参数一致。
 
 其中，字体源可以是字体文件的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，也可以是 URL 指向的字体文件。请注意，URL 字体源需要使用 `url()` 函数包裹 URL。
 
@@ -120,7 +120,7 @@ canvas.height = 75;
 ```js
 const bitterFontFace = new FontFace(
   "FontFamily Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
 );
 document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
@@ -139,7 +139,7 @@ bitterFontFace.load().then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 
@@ -176,7 +176,7 @@ const ctx = canvas.getContext("2d");
 
 const oxygenFontFace = new FontFace(
   "FontFamily Oxygen",
-  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)"
+  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)",
 );
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
@@ -194,7 +194,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 

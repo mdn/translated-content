@@ -1,7 +1,6 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-translation_of: Web/CSS/caption-side
 ---
 
 {{CSSRef}}
@@ -83,17 +82,21 @@ td {
 
 ```html
 <table class="top">
-  <caption>Une légende au-dessus du tableau</caption>
+  <caption>
+    Une légende au-dessus du tableau
+  </caption>
   <tr>
     <td>Des données d'un tableau</td>
     <td>Pfiou encore des données</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Une légende en dessous du tableau</caption>
+  <caption>
+    Une légende en dessous du tableau
+  </caption>
   <tr>
     <td>Des données d'un tableau</td>
     <td>Pfiou encore des données</td>

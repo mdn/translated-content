@@ -1,7 +1,6 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
 
 {{AddonSidebar}}
@@ -39,7 +38,16 @@ L'exemple suivant utilise la méthode `getTargetElement` pour obtenir l'élémen
 browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
-  contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
+  contexts: [
+    "audio",
+    "editable",
+    "frame",
+    "image",
+    "link",
+    "page",
+    "password",
+    "video",
+  ],
   onclick(info, tab) {
     browser.tabs.executeScript(tab.id, {
       frameId: info.frameId,

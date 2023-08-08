@@ -1,7 +1,6 @@
 ---
 title: 關於 MDN
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}

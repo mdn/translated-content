@@ -1,7 +1,6 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
-translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -13,7 +12,7 @@ translation_of: Web/API/ShadowRoot/delegatesFocus
 ## Syntaxe
 
 ```js
-var df = shadowRoot.delegatesFocus
+var df = shadowRoot.delegatesFocus;
 ```
 
 ### Valeur

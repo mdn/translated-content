@@ -1,7 +1,6 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
-translation_of: Web/API/NodeList/values
 ---
 
 {{APIRef("DOM")}}
@@ -33,7 +32,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Utilisation de for..of
-for(var value of list.values()) {
+for (var value of list.values()) {
   console.log(value);
 }
 ```

@@ -45,12 +45,10 @@ Below is a list of interfaces based on the Sensor interface.
 - {{domxref('Sensor.stop()')}}
   - : Deactivates one of the sensors based on `Sensor`.
 
-## Specifications
+## Especificações
 
-| Specification                                                                        | Status                               | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Generic Sensor','#the-sensor-interface','Sensor')}} | {{Spec2('Generic Sensor')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Sensor")}}
+{{Compat}}

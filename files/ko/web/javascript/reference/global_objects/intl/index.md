@@ -2,6 +2,7 @@
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 ---
+
 {{JSRef}}
 
 **`Intl`** 객체는 각 언어에 맞는 문자비교, 숫자, 시간, 날짜비교를 제공하는, ECMAScript 국제화 API를 위한 이름공간입니다. {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, {{jsxref("DateTimeFormat")}}는 `Intl` 객체의 속성을 위한 생성자입니다. 이 페이지는 일반적인 국제화의 기능을 수행하는 객체의 생성자들과 언어를 구분하는 함수들 뿐만 아니라 이러한 속성들에 대해서도 다루고 있습니다.

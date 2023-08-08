@@ -1,7 +1,6 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 
 {{jsSidebar("Objects")}}
@@ -18,7 +17,7 @@ La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caract
 ## Syntaxe
 
 ```js
-unescape(str)
+unescape(str);
 ```
 
 ### Paramètres
@@ -37,9 +36,9 @@ La fonction `unescape` est une propriété de l'_objet global_.
 ## Exemples
 
 ```js
-unescape("abc123");     // "abc123"
-unescape("%E4%F6%FC");  // "äöü"
-unescape("%u0107");     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## Spécifications

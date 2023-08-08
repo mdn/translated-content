@@ -1,7 +1,6 @@
 ---
 title: Properly Configuring Server MIME Types
 slug: Learn/Server-side/Configuring_server_MIME_types
-original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 ---
 
 ## Background

@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/Vary
 
 在响应状态码为 {{HTTPStatus("304")}} `Not Modified` 的响应中，也要设置 Vary 首部，而且要与相应的 {{HTTPStatus("200")}} `OK` 响应设置得一模一样。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

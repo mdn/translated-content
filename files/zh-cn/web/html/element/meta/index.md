@@ -119,7 +119,7 @@ slug: Web/HTML/Element/meta
       这个属性指定：
 
       - 页面重新加载的秒数——仅当 [`content`](#content) 属性包含非负整数时。
-      - 页面重定向到指定链接的秒数——仅当 content 属性包含非负整数后跟字符串“`;url=`”和有效的URL时。
+      - 页面重定向到指定链接的秒数——仅当 content 属性包含非负整数后跟字符串“`;url=`”和有效的 URL 时。
 
       > **警告：**
       >
@@ -138,10 +138,10 @@ slug: Web/HTML/Element/meta
 ## 示例
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- Redirect page after 3 seconds -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## 规范

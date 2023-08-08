@@ -39,23 +39,23 @@ Symbol.for(key)
 ### Symbol.for() 사용하기
 
 ```js
-Symbol.for('foo'); // 새로운 전역 심볼을 생성
-Symbol.for('foo'); // 이미 생성된 심볼을 반환
+Symbol.for("foo"); // 새로운 전역 심볼을 생성
+Symbol.for("foo"); // 이미 생성된 심볼을 반환
 
 // 동일한 전역 심볼이지만 지역적으로는 그렇지 않음
-Symbol.for('bar') === Symbol.for('bar'); // true
-Symbol('bar') === Symbol('bar'); // false
+Symbol.for("bar") === Symbol.for("bar"); // true
+Symbol("bar") === Symbol("bar"); // false
 
 // 키는 설명으로 사용되기도 함
-var sym = Symbol.for('mario');
+var sym = Symbol.for("mario");
 sym.toString(); // "Symbol(mario)"
 ```
 
 전역 심볼 키와 다른 (라이브러리 코드) 전역 심볼의 이름 충돌을 피하려면, 심볼에 접두어를 붙이는 것이 좋습니다.
 
 ```js
-Symbol.for('mdn.foo');
-Symbol.for('mdn.bar');
+Symbol.for("mdn.foo");
+Symbol.for("mdn.bar");
 ```
 
 ## 명세

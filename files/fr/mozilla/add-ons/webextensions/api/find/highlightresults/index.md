@@ -1,7 +1,6 @@
 ---
 title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
-translation_of: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
 
 {{AddonSidebar()}}
@@ -15,7 +14,7 @@ Notez que les résultats stockés sont globaux pour toutes les extensions, par e
 ## Syntaxe
 
 ```js
-browser.find.highlightResults()
+browser.find.highlightResults();
 ```
 
 ### Paramètres

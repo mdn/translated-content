@@ -1,7 +1,6 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
-translation_of: Web/CSS/user-modify
 ---
 
 {{Non-standard_header}}{{CSSRef}}{{deprecated_header}}

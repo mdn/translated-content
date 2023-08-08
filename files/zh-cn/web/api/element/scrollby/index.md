@@ -36,7 +36,7 @@ element.scrollBy(300, 300);
 element.scrollBy({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

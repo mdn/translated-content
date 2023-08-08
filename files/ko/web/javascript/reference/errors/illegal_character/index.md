@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Errors/Illegal_character
 
 ## 무엇이 잘못되었을까?
 
-코드에 해당 구문에 맞지 않거나 예기치 않은 토큰이 있습니다. 마이너스 기호(` - `)와 대시(` – `) 또는 따옴표(` " `)와 비표준 따옴표(` “ `) 등이 잘못 사용된 경우에 대해 문법 체크를 해주는 편집기를 사용하여 코드를 주의 깊게 확인해야 합니다.
+코드에 해당 구문에 맞지 않거나 예기치 않은 토큰이 있습니다. 마이너스 기호(`-`)와 대시(`–`) 또는 따옴표(`"`)와 비표준 따옴표(`“`) 등이 잘못 사용된 경우에 대해 문법 체크를 해주는 편집기를 사용하여 코드를 주의 깊게 확인해야 합니다.
 
 ## 예제
 
@@ -43,7 +43,7 @@ var foo = 'bar';             // SyntaxError: illegal character
 ```js example-good
 "This is actually a string";
 42 - 13;
-var foo = 'bar';
+var foo = "bar";
 ```
 
 일부 편집기와 IDE는 문제가 있는 부분을 알려주거나 적어도 강조 표시를 해주지만 전부는 아닙니다. 이런 에러가 발생했을 때 무엇이 문제인지 찾을 수 없는 경우, 문제가 있는 줄을 지우고 다시 작성하는 것 가장 좋습니다.
@@ -60,7 +60,7 @@ var colors = ['#000', #333', '#666'];
 `'#333'`에 빠진 작은따옴표를 추가합니다.
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### 숨겨진 문자

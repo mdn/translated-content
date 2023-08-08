@@ -1,7 +1,6 @@
 ---
-title: '-webkit-border-before'
+title: "-webkit-border-before"
 slug: Web/CSS/-webkit-border-before
-translation_of: Web/CSS/-webkit-border-before
 ---
 
 {{CSSRef}}{{Non-standard_header}}

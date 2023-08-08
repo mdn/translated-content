@@ -9,9 +9,9 @@ The HTTP **`Proxy-Authenticate`** 是一个响应首部，指定了获取 {{Glos
 
 `Proxy-Authenticate` 首部需要与 {{HTTPStatus("407")}} `Proxy Authentication Required` 响应一起发送。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

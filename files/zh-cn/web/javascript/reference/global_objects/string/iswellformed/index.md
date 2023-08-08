@@ -43,7 +43,7 @@ const strings = [
 for (const str of strings) {
   console.log(str.isWellFormed());
 }
-// 输出:
+// 输出：
 // false
 // false
 // false

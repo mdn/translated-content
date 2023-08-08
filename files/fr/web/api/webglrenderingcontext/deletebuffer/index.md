@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext.deleteBuffer()
 slug: Web/API/WebGLRenderingContext/deleteBuffer
-translation_of: Web/API/WebGLRenderingContext/deleteBuffer
 ---
 
 {{APIRef("WebGL")}}
@@ -28,8 +27,8 @@ Aucune.
 ### Suppression d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 
 // ...

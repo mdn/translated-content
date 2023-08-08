@@ -1,7 +1,6 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
-translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -11,7 +10,7 @@ La méthode **`allowedFeatures()`** de l'interface {{DOMxRef("FeaturePolicy")}} 
 ## Syntaxe
 
 ```js
-const permissions = FeaturePolicy.allowedFeatures()
+const permissions = FeaturePolicy.allowedFeatures();
 ```
 
 ### Paramètres
@@ -28,13 +27,12 @@ L'exemple suivant affiche toutes les directives permises pour le présent docume
 
 ```js
 // D'abord, récupère l'objet Feature Policy
-const featurePolicy = document.featurePolicy
+const featurePolicy = document.featurePolicy;
 
 // Puis demande la liste des foncitonnalités permises
-const permissions = featurePolicy.allowedFeatures()
+const permissions = featurePolicy.allowedFeatures();
 
-for (const directive of permissions)
-  console.log(directive)
+for (const directive of permissions) console.log(directive);
 ```
 
 ## Spécifications

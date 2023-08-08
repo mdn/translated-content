@@ -1,7 +1,6 @@
 ---
-title: '::-webkit-progress-bar'
+title: "::-webkit-progress-bar"
 slug: Web/CSS/::-webkit-progress-bar
-translation_of: Web/CSS/::-webkit-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -20,14 +19,14 @@ progress {
 }
 
 ::-webkit-progress-bar {
-   background-color: orange;
+  background-color: orange;
 }
 ```
 
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Résultat

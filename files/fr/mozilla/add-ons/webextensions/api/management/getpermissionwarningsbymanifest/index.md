@@ -1,7 +1,6 @@
 ---
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 ---
 
 {{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
@@ -16,8 +15,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingWarnings = browser.management.getPermissionWarningsByManifest(
-  manifestString      // string
-)
+  manifestString, // string
+);
 ```
 
 ### Paramètres
@@ -39,11 +38,11 @@ Enregistrez les avertissements de permissions dans le fichier manifest donné :
 
 ```js
 var manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 var manifestString = JSON.stringify(manifest);
 
@@ -55,7 +54,8 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-var gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+var gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 

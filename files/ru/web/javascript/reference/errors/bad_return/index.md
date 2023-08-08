@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}
@@ -45,12 +39,12 @@ var cheer = function(score) {
 На первый взгляд кажется, что фигурные скобки расставлены правильно, но в данном примере пропущена `{` после первого оператора `if`. Правильный вариант:
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
-    return 'Максимум!';
+    return "Максимум!";
   }
   if (score > 100) {
-    return 'Столетие!';
+    return "Столетие!";
   }
 };
 ```

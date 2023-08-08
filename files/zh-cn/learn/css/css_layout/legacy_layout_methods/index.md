@@ -1,7 +1,6 @@
 ---
 title: 传统的布局方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-original_slug: Learn/CSS/CSS_layout/传统的布局方法
 ---
 
 {{LearnSidebar}}
@@ -52,12 +51,31 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -202,19 +220,41 @@ body {
 
 ```css
 /* Two column widths (120px) plus one gutter width (20px) */
-.col.span2 { width: 140px; }
+.col.span2 {
+  width: 140px;
+}
 /* Three column widths (180px) plus two gutter widths (40px) */
-.col.span3 { width: 220px; }
+.col.span3 {
+  width: 220px;
+}
 /* And so on... */
-.col.span4 { width: 300px; }
-.col.span5 { width: 380px; }
-.col.span6 { width: 460px; }
-.col.span7 { width: 540px; }
-.col.span8 { width: 620px; }
-.col.span9 { width: 700px; }
-.col.span10 { width: 780px; }
-.col.span11 { width: 860px; }
-.col.span12 { width: 940px; }
+.col.span4 {
+  width: 300px;
+}
+.col.span5 {
+  width: 380px;
+}
+.col.span6 {
+  width: 460px;
+}
+.col.span7 {
+  width: 540px;
+}
+.col.span8 {
+  width: 620px;
+}
+.col.span9 {
+  width: 700px;
+}
+.col.span10 {
+  width: 780px;
+}
+.col.span11 {
+  width: 860px;
+}
+.col.span12 {
+  width: 940px;
+}
 ```
 
 创建了这些类以后，我们可以在网格上布局不同宽度的列。试试保存并在你的浏览器上加载这个页面，来查看效果。
@@ -295,19 +335,41 @@ body {
 
 ```css
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
-.col.span2 { width: 14.58333333%; }
+.col.span2 {
+  width: 14.58333333%;
+}
 /* Three column widths (18.75%) plus two gutter widths (4.1666666) */
-.col.span3 { width: 22.91666666%; }
+.col.span3 {
+  width: 22.91666666%;
+}
 /* And so on... */
-.col.span4 { width: 31.24999999%; }
-.col.span5 { width: 39.58333332%; }
-.col.span6 { width: 47.91666665%; }
-.col.span7 { width: 56.24999998%; }
-.col.span8 { width: 64.58333331%; }
-.col.span9 { width: 72.91666664%; }
-.col.span10 { width: 81.24999997%; }
-.col.span11 { width: 89.5833333%; }
-.col.span12 { width: 97.91666663%; }
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
 ```
 
 现在保存你的代码，从浏览器里加载它，尝试改变视口长度——你应该可以看到网格完美地适配了。
@@ -322,24 +384,46 @@ body {
 
 ```css
 .col.span4 {
-  width: calc((6.25%*4) + (2.08333333%*3));
+  width: calc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
 试着用下面的内容替换你底部的规则块，然后在浏览器中重载，看看你是否能得到相同的结果：
 
 ```css
-.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
-.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
-.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
-.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
-.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
-.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
-.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
-.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
-.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
-.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
-.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
 ```
 
 > **备注：**你能在[fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html)里看到我们的完成版（另[见实时版](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
@@ -354,7 +438,7 @@ body {
 
 ```css
 .content {
-  width: calc((6.25%*8) + (2.08333333%*7));
+  width: calc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
@@ -372,7 +456,7 @@ body {
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333%*2));
+  margin-left: calc(6.25% + (2.08333333% * 2));
 }
 ```
 
@@ -429,7 +513,6 @@ body {
   padding-right: 2.08333333%;
 }
 
-
 .row {
   display: flex;
 }
@@ -439,7 +522,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255,150,150);
+  background: rgb(255, 150, 150);
 }
 ```
 
@@ -474,8 +557,8 @@ body {
 在 HTML 页面包含 skeleton 和 normalize CSS，通过把以下内容加到文件头部的方式：
 
 ```html
-<link href="normalize.css" rel="stylesheet">
-<link href="skeleton.css" rel="stylesheet">
+<link href="normalize.css" rel="stylesheet" />
+<link href="skeleton.css" rel="stylesheet" />
 ```
 
 Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能作为起始点的页面元素上的 CSS。我们现在把这些部分留作默认值，我们在这里真正感兴趣的是网格。
@@ -559,7 +642,9 @@ Skeleton 不仅包含了网格系统，它还包含了用于排版和其他能�
 如果你看下 skeleton.css 文件的内容，你能理解这是如何实现的。例如，Skeleton 有下面的定义内容，用于样式化加入了“three colomns”类的元素。
 
 ```css
-.three.columns { width: 22%; }
+.three.columns {
+  width: 22%;
+}
 ```
 
 Skeleton（或者其他任何网格框架）正在做的所有事情是，设定一个预定义的类，你可以通过把它们加到你的标记文件里面的方式使用这些框架，和你自己做计算这些百分数的工作完全是一样的。

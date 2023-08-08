@@ -27,11 +27,11 @@ URLSearchParams.append(name, value)
 ## 例子
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search.slice(1));
 
 //添加第二个 foo 搜索参数。
-params.append('foo', 4);
+params.append("foo", 4);
 //查询字符串变成：'foo=1&bar=2&foo=4'
 ```
 

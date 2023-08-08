@@ -1,7 +1,6 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
 {{AddonSidebar()}}
@@ -16,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

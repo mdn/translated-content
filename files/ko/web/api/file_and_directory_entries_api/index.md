@@ -2,6 +2,7 @@
 title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
 ---
+
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
 
 The File and Directory Entries API는 탐색 및 파일 접근이 가능한 로컬 파일 시스템을 웹상에 시뮬레이션합니다. 이 API를 통해 당신은 읽고, 쓰고, 파일과 디렉토리를 생성할 수 있는 가상의 파일 시스템을 가진 앱을 개발할 수 있을 것입니다.

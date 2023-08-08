@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
-translation_of: Web/API/TreeWalker/previousNode
 ---
 
 {{ APIRef("DOM") }}
@@ -18,10 +17,14 @@ node = treeWalker.previousNode();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.previousNode(); // renvoie null car il n'y a pas de parent
 ```

@@ -1,7 +1,6 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
-translation_of: Web/API/Navigator/connection
 ---
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
@@ -11,7 +10,7 @@ translation_of: Web/API/Navigator/connection
 ## Syntaxe
 
 ```js
-connexionInfo = navigator.connection
+connexionInfo = navigator.connection;
 ```
 
 ## Spécifications

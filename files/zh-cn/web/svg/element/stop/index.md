@@ -14,9 +14,11 @@ slug: Web/SVG/Element/stop
 ## 示例
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 80 40"
+  xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="MyGradient">
       <stop offset="5%" stop-color="#F60" />
@@ -25,12 +27,17 @@ slug: Web/SVG/Element/stop
   </defs>
 
   <!-- Outline the drawing area in black -->
-  <rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/>
+  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
 
   <!-- The rectangle is filled using a linear gradient -->
-  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/>
+  <rect
+    fill="url(#MyGradient)"
+    stroke="black"
+    stroke-width="1"
+    x="10"
+    y="10"
+    width="60"
+    height="20" />
 </svg>
 ```
 

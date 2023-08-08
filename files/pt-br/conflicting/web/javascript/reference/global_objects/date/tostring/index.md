@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
-original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
 ---
 
 {{JSRef}}

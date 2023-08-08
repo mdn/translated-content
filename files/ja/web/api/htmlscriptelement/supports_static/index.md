@@ -2,7 +2,6 @@
 title: "HTMLScriptElement: supports() 静的メソッド"
 short-title: supports()
 slug: Web/API/HTMLScriptElement/supports_static
-original_slug: Web/API/HTMLScriptElement/supports
 l10n:
   sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---

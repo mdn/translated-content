@@ -1,7 +1,6 @@
 ---
 title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 ---
 
 {{AddonSidebar}}
@@ -17,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.tabs.getAllInWindow(
-  windowId            // optional integer
-)
+  windowId, // optional integer
+);
 ```
 
 ### Paramètres

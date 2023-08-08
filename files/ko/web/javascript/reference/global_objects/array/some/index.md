@@ -31,6 +31,7 @@ some(function (element, index, array) { /* … */ }, thisArg)
 ### 매개변수
 
 - `callbackFn`
+
   - : 배열의 각 요소에 대해 실행할 함수. 이 함수는 요소가 시험을 통과하면 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환하며, 그렇지 않으면 거짓인 값을 반환합니다.
 
   다음의 인자와 함께 함수를 호출합니다.

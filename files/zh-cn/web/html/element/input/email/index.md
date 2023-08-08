@@ -43,7 +43,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### multiple
 
-一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性: multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
+一个布尔属性，如果存在，代表用户可以输入多个由逗号和可选空白字符分开的电子邮件地址。参见示例[允许多个邮件地址](#允许多个邮件地址)，或 [HTML 属性：multiple](/zh-CN/docs/Web/HTML/Attributes/multiple) 一文以获取更多信息。
 
 > **备注：** 一般地，如果你指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，那么用户将必须输入一个合法的邮件地址。然而，如果你添加了 `multiple` 属性，一系列零地址（一个空字符串，或完全为空白字符的字符串）也是合法的。也就是说，当指定了 `multiple` 时，用户甚至不需要输入一个邮件地址，无论是否指定了 `required`。
 
@@ -207,7 +207,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 浏览器自动提供验证，以确保只有符合互联网电子邮件地址标准格式的文本被输入到输入框。浏览器使用一种相当于以下正则表达式的算法：
 
 ```js
-/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 ```
 
 要了解更多关于表单验证的工作原理，以及如何利用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来设计输入的样式，请参阅[表单数据验证](/zh-CN/docs/Learn/HTML/Forms/Form_validation)一文。

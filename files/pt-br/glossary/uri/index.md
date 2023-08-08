@@ -1,7 +1,6 @@
 ---
 title: URI
 slug: Glossary/URI
-original_slug: Glossario/URI
 ---
 
 A **URI** (_Uniform Resource Identifier_, ou _Identificador Uniforme de Recursos_) é uma string (sequência de caracteres) que se refere a um recurso. A mais comum é a {{Glossary("URL")}}, que identifica o recurso localizando-o na Web. {{Glossary("URN","URNs")}}, em contraste, refere-se a um recurso pelo nome, em dado namespace. Ex: o ISBN de um livro.

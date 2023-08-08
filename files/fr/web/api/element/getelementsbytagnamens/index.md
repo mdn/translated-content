@@ -1,7 +1,6 @@
 ---
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-translation_of: Web/API/Element/getElementsByTagNameNS
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("H
 ## Syntaxe
 
 ```js
-elements = element.getElementsByTagNameNS(namespaceURI,localName);
+elements = element.getElementsByTagNameNS(namespaceURI, localName);
 ```
 
 ### Paramètres

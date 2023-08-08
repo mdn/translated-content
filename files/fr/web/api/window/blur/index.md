@@ -1,7 +1,6 @@
 ---
 title: Window.blur()
 slug: Web/API/Window/blur
-translation_of: Web/API/Window/blur
 ---
 
 {{APIRef}}
@@ -11,7 +10,7 @@ translation_of: Web/API/Window/blur
 ## Syntaxe
 
 ```js
-window.blur()
+window.blur();
 ```
 
 ## Exemple

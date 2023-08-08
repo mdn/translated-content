@@ -1,7 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-translation_of: Web/API/FileReader/readAsText
 ---
 
 {{APIRef("File API")}}
@@ -24,10 +23,12 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 ## Exemples
 
 ```js
-var selectedFile = document.getElementById('input').files[0];
-var content = document.getElementById('content');
+var selectedFile = document.getElementById("input").files[0];
+var content = document.getElementById("content");
 var reader = new FileReader();
-reader.onload = function(event) { content.innerHTML = reader.result; };
+reader.onload = function (event) {
+  content.innerHTML = reader.result;
+};
 reader.readAsText(selectedFile);
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Mise à jour des extensions pour Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
-translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
 ---
 
 {{FirefoxSidebar}}
@@ -30,7 +29,7 @@ Réinstallez ensuite votre extension.
 
 Firefox 2 apporte des changements au thème par défaut, et certains éléments de l'interface utilisateur ont été modifiés ou déplacés. Cela peut affecter votre extension, selon les actions de vos calques XUL.
 
-Référez-vous à l'article [Changements dans les thèmes graphiques pour Firefox 2](/fr/Changements_dans_les_th%c3%a8mes_graphiques_pour_Firefox_2) pour déterminer les modifications qui pourraient avoir un effet sur votre extension.
+Référez-vous à l'article [Changements dans les thèmes graphiques pour Firefox 2](/fr/Changements_dans_les_thèmes_graphiques_pour_Firefox_2) pour déterminer les modifications qui pourraient avoir un effet sur votre extension.
 
 ## Étape 3&nbsp;: Test
 

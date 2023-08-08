@@ -1,7 +1,6 @@
 ---
 title: "Évaluation: dépannage d'accessibilité"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-translation_of: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}

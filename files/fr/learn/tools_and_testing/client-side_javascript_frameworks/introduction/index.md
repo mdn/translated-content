@@ -1,7 +1,6 @@
 ---
 title: Introduction aux frameworks côté client
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

@@ -1,7 +1,6 @@
 ---
 title: Dibujando formas con canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutorial/Dibujando_formas
 l10n:
   sourceCommit: 411e3bb536f858a9d58600b4017979c79b2a4408
 ---
@@ -48,9 +47,9 @@ A continuación se muestra la función `draw()` de la página anterior, pero aho
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -114,9 +113,9 @@ Por ejemplo, el código para dibujar un triángulo sería algo así:
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -144,26 +143,26 @@ Para probarlo por ti mismo, puedes utilizar el siguiente fragmento de código. S
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Círculo externo
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Boca (en el sentido de las agujas del reloj)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // Boca (en el sentido de las agujas del reloj)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Ojo izquierdo
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Ojo izquierdo
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Ojo derecho
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
     ctx.stroke();
   }
 }
@@ -198,9 +197,9 @@ El ejemplo siguiente dibuja dos triángulos, uno relleno y otro contorneado.
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Triángulo relleno
     ctx.beginPath();
@@ -259,9 +258,9 @@ La sentencia para el parámetro `clockwise` hace que la primera y tercera fila s
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 3; j++) {
@@ -312,17 +311,17 @@ Este ejemplo utiliza múltiples curvas cuadráticas de Bézier para representar 
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Ejemplo de curvas cuadráticas
     ctx.beginPath();
@@ -346,17 +345,17 @@ Este ejemplo dibuja un corazón utilizando curvas cúbicas de Bézier.
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     // Ejemplo de curvas cúbicas
     ctx.beginPath();
@@ -397,9 +396,9 @@ Hasta ahora, cada ejemplo de esta página ha utilizado sólo un tipo de función
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -439,7 +438,7 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -453,7 +452,7 @@ function draw() {
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -494,9 +493,9 @@ Veamos cómo podemos construir un objeto `Path2D`:
   - : El constructor **`Path2D()`** devuelve un objeto `Path2D` recién instanciado, opcionalmente con otra ruta como argumento (crea una copia), u opcionalmente con una cadena de caracteres formada por datos de un trazado [SVG path](/es/docs/Web/SVG/Tutorial/Paths).
 
 ```js
-new Path2D();     // Objeto Path2D vacío
+new Path2D(); // Objeto Path2D vacío
 new Path2D(path); // Copia de otro objecto Path2D
-new Path2D(d);    // Path2D a partir de datos de un trazado (SVG path)
+new Path2D(d); // Path2D a partir de datos de un trazado (SVG path)
 ```
 
 Todos los [Métodos de trazado](/es/docs/Web/API/CanvasRenderingContext2D#paths) como `moveTo`, `rect`, `arc` o `quadraticCurveTo`, etc., que hemos conocido anteriormente, están disponibles en los objetos `Path2D`.
@@ -512,17 +511,17 @@ En este ejemplo, estamos creando un rectángulo y un círculo. Ambos se almacena
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
 
     const rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -545,7 +544,7 @@ Otra poderosa característica de la nueva API `Path2D` del canvas es el uso de d
 El trazado se moverá al punto (`M10 10`) y luego se moverá horizontalmente 80 puntos a la derecha (`h 80`), luego 80 puntos hacia abajo (`v 80`), luego 80 puntos a la izquierda (`h -80`), y luego de vuelta al inicio (`z`). Puedes ver este ejemplo en el [`constructor Path2D`](/es/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
-const p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+const p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

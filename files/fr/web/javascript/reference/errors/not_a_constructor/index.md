@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
 
 {{jsSidebar("Errors")}}
@@ -48,8 +47,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -84,7 +83,9 @@ return new Promise.resolve(true);
 ```js
 // Cette formulation fonctionne mais
 // est inutilement longue
-return new Promise((resolve, reject) => { resolve(true); });
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // On pourra autrement utiliser les
 // méthodes statiques

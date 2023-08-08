@@ -1,9 +1,8 @@
 ---
-title: 'HTMLElement: pointerover event'
+title: "HTMLElement: pointerover event"
 slug: Web/API/Element/pointerover_event
-translation_of: Web/API/HTMLElement/pointerover_event
-original_slug: Web/API/HTMLElement/pointerover_event
 ---
+
 {{APIRef}}
 
 Событие `pointerover` когда указатель входит в границы элемента обрабатываемого события.
@@ -40,20 +39,20 @@ original_slug: Web/API/HTMLElement/pointerover_event
 С использованием `addEventListener()`:
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerover', (event) => {
-  console.log('Pointer moved in');
+para.addEventListener("pointerover", (event) => {
+  console.log("Pointer moved in");
 });
 ```
 
 С использованием свойство элемента `onpointerover` :
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerover = (event) => {
-  console.log('Pointer moved in');
+  console.log("Pointer moved in");
 };
 ```
 

@@ -1,12 +1,8 @@
 ---
 title: Краткая форма записи свойств
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/Shorthand_properties
 ---
+
 {{cssref}}
 
 **_Сокращённые свойства_** - это такие CSS-свойства, которые позволяют одновременно устанавливать значения нескольких других свойств. Используя сокращённое свойство, вы можете писать более сжатые (и часто более читаемые) таблицы стилей, экономя время и энергию.
@@ -19,31 +15,31 @@ Even if they are very convenient to use, there are a few edge cases to keep in m
 
 1. A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it **overrides** previously set values. Therefore:
 
-    ```css
-    background-color: red;
-    background: url(images/bg.gif) no-repeat left top;
-    ```
+   ```css
+   background-color: red;
+   background: url(images/bg.gif) no-repeat left top;
+   ```
 
-    will not set the color of the background to `red` but to {{cssxref("background-color")}}'s default, `transparent`, as the second rule has precedence.
+   will not set the color of the background to `red` but to {{cssxref("background-color")}}'s default, `transparent`, as the second rule has precedence.
 
 2. Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
 3. Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
 
-    1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+   1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
 
-        | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |
-        | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![border2.png](/files/3647/border2.png) | _The 2-value syntax_: `border-width: 1em 2em` — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones.                                                                                                                        |
-        | ![border3.png](/files/3648/border3.png) | _The 3-value syntax_: `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge                                                                                                                      |
-        | ![border4.png](/files/3649/border4.png) | _The 4-value syntax_: `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top (The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL) |
+      | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |
+      | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![border2.png](/files/3647/border2.png) | _The 2-value syntax_: `border-width: 1em 2em` — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones.                                                                                                                        |
+      | ![border3.png](/files/3648/border3.png) | _The 3-value syntax_: `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge                                                                                                                      |
+      | ![border4.png](/files/3649/border4.png) | _The 4-value syntax_: `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top (The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL) |
 
-    2. Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+   2. Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
 
-        | ![corner1.png](/files/3650/corner1.png) | _The 1-value syntax_: `border-radius: 1em` — The unique value represents all corners                                                                                                                                              |
-        | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![corner2.png](/files/3651/corner2.png) | _The 2-value syntax_: `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones.                                                                  |
-        | ![corner3.png](/files/3652/corner3.png) | _The 3-value syntax_: `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner                                   |
-        | ![corner4.png](/files/3653/corner4.png) | _The 4-value syntax_: `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left. |
+      | ![corner1.png](/files/3650/corner1.png) | _The 1-value syntax_: `border-radius: 1em` — The unique value represents all corners                                                                                                                                              |
+      | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![corner2.png](/files/3651/corner2.png) | _The 2-value syntax_: `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones.                                                                  |
+      | ![corner3.png](/files/3652/corner3.png) | _The 3-value syntax_: `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner                                   |
+      | ![corner4.png](/files/3653/corner4.png) | _The 4-value syntax_: `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left. |
 
 ## Background properties
 
@@ -71,7 +67,7 @@ The following declarations ...
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -79,7 +75,9 @@ font-family: Arial, sans-serif;
 ... can be shortened to the following:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).

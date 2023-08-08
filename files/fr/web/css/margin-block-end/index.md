@@ -1,7 +1,6 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
-translation_of: Web/CSS/margin-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -15,9 +14,9 @@ La propriété **`margin-block-end`** définit la marge logique appliquée à la
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-block-end: 10px;      /* Une longueur absolue */
-margin-block-end: 1em;       /* Une longueur relative à la taille du texte */
-margin-block-end: 5%;        /* Une largeur relative à la
+margin-block-end: 10px; /* Une longueur absolue */
+margin-block-end: 1em; /* Une longueur relative à la taille du texte */
+margin-block-end: 5%; /* Une largeur relative à la
                                    largeur du bloc englobant */
 
 /* Valeurs avec un mot-clé */

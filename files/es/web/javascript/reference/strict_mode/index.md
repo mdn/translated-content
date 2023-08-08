@@ -1,7 +1,6 @@
 ---
 title: Modo Estricto
 slug: Web/JavaScript/Reference/Strict_mode
-original_slug: Web/JavaScript/Referencia/Modo_estricto
 ---
 
 {{JsSidebar("More", "Más")}}A veces, verás que llaman {{Glossary("Sloppy_mode", "sloppy mode — modo poco riguroso")}} al modo no estricto predeterminado. Este no es un término oficial, pero tenlo en cuenta, por si acaso.
@@ -26,7 +25,7 @@ Para invocar el modo estricto en todo un script, escribe _exactamente_ `"use str
 
 ```js
 // Sintaxis del modo estricto para todo el script
-'use strict';
+"use strict";
 var v = "¡Hola! ¡Estoy en modo estricto para script!";
 ```
 
@@ -41,11 +40,15 @@ De igual forma, para invocar el modo estricto para una función, escribe _exacta
 ```js
 function strict() {
   // Sintaxis del modo estricto a nivel de función
-  'use strict';
-  function nested() { return "¡Y yo también!"; }
+  "use strict";
+  function nested() {
+    return "¡Y yo también!";
+  }
   return "¡Hola!  ¡Soy una función en modo estricto!  " + nested();
 }
-function notStrict() { return "Yo no soy estricto."; }
+function notStrict() {
+  return "Yo no soy estricto.";
+}
 ```
 
 ### Modo estricto para módulos
@@ -54,7 +57,7 @@ ECMAScript 2015 introdujo módulos y por tanto una tercera manera de entrar en e
 
 ```js
 function strict() {
-    // debido a que este es un módulo, soy estricto por omisión
+  // debido a que este es un módulo, soy estricto por omisión
 }
 export default strict;
 ```
@@ -70,16 +73,16 @@ El modo estricto cambia algunos errores de sintaxis tolerados en modo no estrict
 En primer lugar, el modo estricto hace imposible crear variables globales por accidente. En JavaScript no estricto, si se escribe mal una variable en una asignación, se creará una nueva propiedad en el objeto global y el código continuará "trabajando" como si nada (aunque es posible que el código así escrito falle en el futuro, en concreto, en JavaScript moderno). En modo estricto, cualquier asignación que produzca variables globales por accidente lanzará un error:
 
 ```js
-'use strict';
-                       // Asumiendo que exista una variable global llamada mistypedVariable
-mistypeVariable = 17;  // esta línea lanza un ReferenceError debido a
-                       // una errata en el nombre de la variable
+"use strict";
+// Asumiendo que exista una variable global llamada mistypedVariable
+mistypeVariable = 17; // esta línea lanza un ReferenceError debido a
+// una errata en el nombre de la variable
 ```
 
 En segundo lugar, el modo estricto lanza una excepción en asignaciones que de otro modo fallarían silenciosamente. Por ejemplo, `NaN` es una variable global que no puede ser asignada. En un código normal, asignar a `NaN` no tiene efecto; el programador no recibe ningún mensaje de error. En cambio, en modo estricto, si se intenta asignar un valor a `NaN`, el programador recibirá una excepción. Cualquier asignación que falle silenciosamente en código normal (asignaciones a una propiedad de no escritura, asignaciones a una propiedad captadora, asignaciones a una nueva propiedad o a un objecto {{jsxref("Global_Objects/Object/preventExtensions", "no extensible")}}) lanzará una excepción en modo estricto:
 
 ```js
-'use strict';
+"use strict";
 
 // Asignación a una no-escritura global
 var undefined = 5; // lanza un TypeError
@@ -91,7 +94,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // lanza un TypeError
 
 // Asignación a una propiedad de tipo getter
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // lanza un TypeError
 
 // Asignación a una nueva propiedad en un objeto no extensible
@@ -103,7 +110,7 @@ fixed.newProp = "ohai"; // lanza un TypeError
 En tercer lugar, el modo estricto lanza una excepción al intentar eliminar propiedades no eliminables (mientra que en código normal el intento no tendría ningún efecto):
 
 ```js
-'use strict';
+"use strict";
 delete Object.prototype; // lanza un TypeError
 ```
 
@@ -112,15 +119,16 @@ En cuarto lugar, la versión de modo estricto anterior a Gecko 34 requiere que t
 > **Nota:** Este ya no es el caso en ECMAScript 2015 ([error 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
 
 ```js
-'use strict';
+"use strict";
 var o = { p: 1, p: 2 }; // !!! error de sintaxis
 ```
 
 En quinto lugar, el modo estricto requiere que los nombres de los parámetros de una función sean únicos. En código normal, el último argumento repetido oculta argumentos anteriores con el mismo nombre. Estos argumentos permanecen disponibles a través de `arguments[i]`, de modo que no son completamente inaccesibles. Aun así, esta ocultación tiene poco sentido y es probablemente indeseable (pues puede ocultar, por ejemplo, un error al teclear una letra). Por lo tanto, en modo estricto, duplicar nombres de argumentos es un error de sintaxis:
 
 ```js
-function sum(a, a, c) { // !!! error de sintaxis
-  'use strict';
+function sum(a, a, c) {
+  // !!! error de sintaxis
+  "use strict";
   return a + a + c; // incorrecto si este código se ejecutó
 }
 ```
@@ -134,10 +142,11 @@ var a = 0o10; // ES2015: Octal
 Los programadores novatos a veces creen que un prefijo cero inicial no tiene un significado semántico, por lo que lo usan como dispositivo de alineación, ¡pero esto cambia el significado del número! Una sintaxis de cero a la izquierda para los octales rara vez es útil y se puede usar por error, por lo que el modo estricto lo convierte en un error de sintaxis:
 
 ```js
-'use strict';
-var sum = 015 + // !!! error de sintaxis
-          197 +
-          142;
+"use strict";
+var sum =
+  015 + // !!! error de sintaxis
+  197 +
+  142;
 
 var sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
@@ -146,13 +155,12 @@ console.log(sumWithOctal); // 16
 Séptimo, el modo estricto en ECMAScript 2015 prohíbe establecer propiedades en valores {{Glossary("Primitive", "primitivos")}}. La sintaxis octal rara vez es útil y se puede usar equivocadamente, de modo que en modo estricto, utilizar notación octal lanza un {{jsxref("TypeError")}}:
 
 ```js
-(function() {
-'use strict';
+(function () {
+  "use strict";
 
-false.true = '';         // TypeError
-(14).sailing = 'home';   // TypeError
-'with'.you = 'far away'; // TypeError
-
+  false.true = ""; // TypeError
+  (14).sailing = "home"; // TypeError
+  "with".you = "far away"; // TypeError
 })();
 ```
 
@@ -163,9 +171,10 @@ El modo estricto simplifica el modo en que el nombre de una variable es asignado
 Primero, el modo estricto prohíbe el uso de `with`. El problema con `with` es que cualquier nombre dentro del bloque pude ser asignado a una propiedad del objecto pasado como argumento, o a una variable en su ámbito circundante (o incluso global), en tiempo de ejecución: es imposible saber de antemano cuál será. El modo estricto hace que el uso de `with` sea un error de sintaxis, de modo que no hay oportunidad de que una variable dentro de un `with` se refiera a una dirección desconocida en tiempo de ejecución:
 
 ```js
-'use strict';
+"use strict";
 var x = 17;
-with (obj) { // !!! error de sintaxis
+with (obj) {
+  // !!! error de sintaxis
   // Si este no estuviera un modo estricto, ¿sería var x?, o
   // ¿sería obj.x en su lugar?  Es imposible en general
   // decirlo sin ejecutar el código, por lo que el nombre no
@@ -189,17 +198,17 @@ En el ejemplo anterior, si la función `eval` es invocada por una expresión de 
 
 ```js
 function strict1(str) {
-  'use strict';
+  "use strict";
   return eval(str); // str será tratado como código de modo estricto
 }
 function strict2(f, str) {
-  'use strict';
+  "use strict";
   return f(str); // no eval(...): str es estricto si y solo
-                 // si invoca el modo estricto
+  // si invoca el modo estricto
 }
 function nonstrict(str) {
   return eval(str); // str es estricto si y solo
-                    // si invoca el modo estricto
+  // si invoca el modo estricto
 }
 
 strict1("'¡Código en modo estricto!'");
@@ -215,7 +224,7 @@ Así los nombres en modo estricto usando `eval` se comportan idénticamente a lo
 Tercero, el modo estricto prohíbe eliminar nombres planos. De este modo, `delete name` produce un error de sintaxis.
 
 ```js
-'use strict';
+"use strict";
 
 var x;
 delete x; // !!! error de sintaxis
@@ -230,16 +239,17 @@ El modo estricto hace que el uso de `arguments` y `eval` sea más intuitivo. Amb
 Primero, las palabras `eval` y `arguments` no se pueden ligar o asignar en la sintaxis del lenguaje. Cualquier intento producirá un error de sintaxis:
 
 ```js
-'use strict';
+"use strict";
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
@@ -247,7 +257,7 @@ Segundo, el modo estricto no permite usar alias en elementos del objecto `argume
 
 ```js
 function f(a) {
-  'use strict';
+  "use strict";
   a = 42;
   return [a, arguments[0]];
 }
@@ -259,8 +269,10 @@ console.assert(pair[1] === 17);
 Tercero, `arguments.callee` no está soportado. En código normal, `arguments.callee` se refiere a la función envolvente. Este caso de uso es débil: ¡simplemente nombra la función envolvente!. Además `arguments.callee` merma el desempeño de funciones en línea pues debe ser posible proveer la referencia de la función que llamó a la función original cada vez que se usa `arguments.callee`. `arguments.callee` en modo estricto es una propiedad no eliminable y lanza una excepción cuando se le asigna un valor o se intenta regresar su valor.
 
 ```js
-'use strict';
-var f = function() { return arguments.callee; };
+"use strict";
+var f = function () {
+  return arguments.callee;
+};
 f(); // lanza un TypeError
 ```
 
@@ -271,8 +283,10 @@ El modo estricto hace más fácil el escribir código "seguro" en JavaScript. Al
 Primero, el valor `this` pasado a una función en modo estricto no forzosamente debe ser un objeto (es decir, "empaquetado"). Para una función normal, `this` siempre es un objeto: o el objeto proporcionado si se llama con un `this` con valor de objeto; el valor, empaquetado, si se llama con un booleano, una cadena o un número `this`; o el objeto global si se llama con un `undefined` o `null` `this`. (Usar {{jsxref("Global_Objects/Function/call", "call")}}, {{jsxref("Global_Objects/Function/apply", "apply")}}, o {{jsxref("Global_Objects/Function/bind", "bind")}} para especificar un valor del `this` particular). Este empaquetado automático al pasar valores a una función tiene un costo en el rendimiento; no solo eso, si no que al exponer el objeto global en los navegadores es un riesgo de seguridad, debido a que el objeto global provee acceso a una funcionalidad que el código de JavaScript "seguro" debe restringir. Así, en una función en modo estricto , el valor de `this` no está empaquetado dentro de un objecto, y si no se especifica, `this` toma el valor de `undefined`.
 
 ```js
-'use strict';
-function fun() { return this; }
+"use strict";
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -286,8 +300,8 @@ Segundo, en modo estricto ya no es posible "recorrer" la pila de JavaScript a tr
 
 ```js
 function restricted() {
-  'use strict';
-  restricted.caller;    // lanza un TypeError
+  "use strict";
+  restricted.caller; // lanza un TypeError
   restricted.arguments; // lanza un TypeError
 }
 function privilegedInvoker() {
@@ -299,9 +313,9 @@ privilegedInvoker();
 Tercero, en funciones de modo estricto, el objeto `arguments` no provee acceso a las variables usadas al llamar a la función. En algunas implementaciones antiguas de ECMAScript, `arguments.caller` era un objeto cuyas propiedades apuntaban a las variables en la función. Esto es una [amenaza de seguridad](http://stuff.mit.edu/iap/2008/facebook/) por que rompe la habilidad de ocultar valores privilegiados a través de la abstracción de la función; además, frena algunas optimizaciones. Por estas razones los navegadores modernos no la implementan. Por su funcionalidad a lo largo de los años, `arguments.caller` en una función de modo estricto es una propiedad que lanza una excepción cuando se usa.
 
 ```js
-'use strict';
+"use strict";
 function fun(a, b) {
-  'use strict';
+  "use strict";
   var v = 12;
   return arguments.caller; // lanza un TypeError
 }
@@ -315,18 +329,21 @@ Las futuras versiones de ECMAScript introducirán nuevos cambios, y el modo estr
 Primero, en modo estricto una lista de identificadores se convierte en palabras reservadas. Estas palabras son `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, y `yield`. De modo que en modo estricto, no se pueden usar estas palabras para nombrar variables o argumentos.
 
 ```js
-function package(protected) { // !!!
-  'use strict';
+function package(protected) {
+  // !!!
+  "use strict";
   var implements; // !!!
 
-  interface: // !!!
-  while (true) {
+  // !!!
+  interface: while (true) {
     break interface; // !!!
   }
 
-  function private() { } // !!!
+  function private() {} // !!!
 }
-function fun(static) { 'use strict'; } // !!!
+function fun(static) {
+  "use strict";
+} // !!!
 ```
 
 _Dos advertencias específicas de Mozilla_: Primero, si tu código esta escrito en JavaScript 1.7 o mayor (por ejemplo en código chrome o cuando se usa bien `<script type="">`) y el código esta en modo estricto, `let` y `yield` tienen la funcionalidad que han tenido desde que esas palabras clave se introdujeron por primera vez. Pero el código en modo estricto en la web, cargado con `<script src="">` o `<script>...</script>`, no podrá usar `let`/`yield` como identificadores. _Segundo, mientras que ES5 incondicionalmente reserva las palabras `class`, `enum`, `export`, `extends`, `import` y `super`, Mozilla Firefox 5 solo las reserva en modo estricto_.
@@ -334,19 +351,20 @@ _Dos advertencias específicas de Mozilla_: Primero, si tu código esta escrito 
 En segundo lugar, [el modo estricto prohíbe las declaraciones de función, no en el nivel superior de un script o función](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En el modo normal de los navegadores, las declaraciones de función se permiten "en todas partes". _¡Esto no es parte de ES5 (ni siquiera de ES3)!_ Es una extensión con semántica incompatible en diferentes navegadores. Ten en cuenta que en ES2015 se permiten declaraciones de función fuera del nivel superior.
 
 ```js
-'use strict';
+"use strict";
 if (true) {
-  function f() { } // !!! error de sintaxis
+  function f() {} // !!! error de sintaxis
   f();
 }
 
 for (var i = 0; i < 5; i++) {
-  function f2() { } // !!! error de sintaxis
+  function f2() {} // !!! error de sintaxis
   f2();
 }
 
-function baz() {   // legal
-  function eit() { } // también legal
+function baz() {
+  // legal
+  function eit() {} // también legal
 }
 ```
 

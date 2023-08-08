@@ -1,8 +1,8 @@
 ---
 title: MDN 시작하기
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 우리는 어떤 브랜드의 플랫폼이나 브라우저에 상관 없이 더 나은 웹을 위한 리소스를 만드는 오픈 커뮤니티입니다. 누구나 참여할 수 있고, 여러분의 참여는 우리에게 더욱 큰 힘이 됩니다. 우리는 가장 멋진 것들을 제공하기 위해 계속해서 웹의 혁신을 이끌어 낼 것입니다. 여러분들과 함께 말이죠.

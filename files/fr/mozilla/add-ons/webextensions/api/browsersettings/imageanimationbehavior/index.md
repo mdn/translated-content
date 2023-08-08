@@ -1,7 +1,6 @@
 ---
 title: browserSettings.imageAnimationBehavior
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
 ---
 
 {{AddonSidebar()}}
@@ -23,7 +22,7 @@ La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs 
 Désactiver les images animées :
 
 ```js
-  browser.browserSettings.imageAnimationBehavior.set({value: "none"});
+browser.browserSettings.imageAnimationBehavior.set({ value: "none" });
 ```
 
 {{WebExtExamples}}

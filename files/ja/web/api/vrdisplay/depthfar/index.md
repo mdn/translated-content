@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
-original_slug: Web/API/VRDevice/depthFar
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

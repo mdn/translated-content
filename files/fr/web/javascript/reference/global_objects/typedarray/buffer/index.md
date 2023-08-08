@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuff
 ## Syntaxe
 
 ```js
-typedArray.buffer
+typedArray.buffer;
 ```
 
 ## Description

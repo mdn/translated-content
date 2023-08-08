@@ -1,7 +1,6 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
-translation_of: Web/API/TreeWalker/nextNode
 ---
 
 {{ APIRef("DOM") }}
@@ -18,10 +17,14 @@ node = treeWalker.nextNode();
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 var node = treeWalker.nextNode(); // renvoie le premier enfant de la racine, car il s'agit du noeud suivant dans l'ordre du document
 ```

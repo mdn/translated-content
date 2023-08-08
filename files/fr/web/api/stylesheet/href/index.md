@@ -1,17 +1,16 @@
 ---
-title: Stylesheet.href
+title: StyleSheet.href
 slug: Web/API/StyleSheet/href
-translation_of: Web/API/StyleSheet/href
 ---
 
-{{APIRef ("CSSOM")}}
+{{APIRef("CSSOM")}}
 
 Renvoie l'emplacement de la feuille de style.
 
 ## Syntaxe
 
 ```js
-Uri = stylesheet.href
+uri = stylesheet.href;
 ```
 
 ### Paramètres
@@ -21,21 +20,21 @@ Uri = stylesheet.href
 ## Exemple
 
 ```html
- // sur une machine locale:
- <Html>
-  <Head>
-   <Link rel = "StyleSheet" href = "example.css" type = "text / css" />
-   <Script>
-    Function sref () {
-     Alerte (document.styleSheets [0] .href);
-    }
-   </ Script>
-  </ Head>
-  <Body>
-   <Div class = "tonnerre"> Thunder </ div>
-   <Button onclick = "sref ()"> ss </ button>
-  </ Body>
- </ Html>
+// sur une machine locale:
+<html>
+  <head>
+    <link rel="stylesheet" href="example.css" type="text/css" />
+    <script>
+      function sref() {
+        alert(document.styleSheets[0].href);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="tonnerre">Thunder</div>
+    <button onclick="sref()">ss</button>
+  </body>
+</html>
 // retourne "fichier: //// C: /Windows/Desktop/example.css
 ```
 

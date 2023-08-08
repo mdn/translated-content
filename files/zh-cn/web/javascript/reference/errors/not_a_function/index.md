@@ -56,7 +56,7 @@ var x = document.getElementById("foo");
 ```js example-bad
 var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -68,7 +68,7 @@ obj.map(function(num) {
 ```js example-good
 var numbers = [1, 4, 9];
 
-numbers.map(function(num) {
+numbers.map(function (num) {
   return num * 2;
 });
 
@@ -81,17 +81,16 @@ numbers.map(function(num) {
 
 ```js example-bad
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.name = "Ralph";
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.name = "Ralph";
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.name = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.name = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
@@ -101,17 +100,16 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 
 ```js example-good
 var Dog = function () {
- this.age = 11;
- this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
- return this;
-}
+  this.age = 11;
+  this.color = "black";
+  this.dogName = "Ralph"; //Using this.dogName instead of .name
+  return this;
+};
 
-Dog.prototype.name = function(name) {
- this.dogName = name;
- return this;
-}
-
+Dog.prototype.name = function (name) {
+  this.dogName = name;
+  return this;
+};
 
 var myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
@@ -125,7 +123,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 
 ```js example-bad
 const sixteen = 2(3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //Uncaught TypeError: 2 is not a function
 ```
 
@@ -133,7 +131,7 @@ alert('2 x (3 + 5) is ' + String(sixteen));
 
 ```js example-good
 const sixteen = 2 * (3 + 5);
-alert('2 x (3 + 5) is ' + String(sixteen));
+alert("2 x (3 + 5) is " + String(sixteen));
 //2 x (3 + 5) is 16
 ```
 

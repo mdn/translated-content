@@ -1,7 +1,6 @@
 ---
 title: GitHub Pages を使うには？
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
-original_slug: Learn/Common_questions/Using_Github_pages
 ---
 
 [GitHub](https://github.com/) は「ソーシャルコーディング」のサイトです。 [Git](https://git-scm.com/) **バージョン管理システム**のストレージに対して、ソースコードリポジトリーのアップロードを許可します。その後、コードプロジェクトで共同作業を行うことができます。また、システムはオープンソースに自動設定されています。つまり、世界中の誰もが GitHub コードを検索・使用また、そこから学習しコードを改善することができます。他の人のコードでもそれが可能です！この記事は GitHub の gh-pages 機能を使って、公開コンテンツに関する基本的なガイドを提供します。
@@ -24,15 +23,15 @@ GitHub リポジトリーに好きなコードを保存できますが、GitHub 
 
 1. コマンドラインで `test-site` のディレクトリー (またはウェブサイトを含むディレクトリーと呼んだもの) を指定します。これには、`cd` コマンドを使用します (つまり、「ディレクトリーの変更」)。ウェブサイトをデスクトップの `test-site` というディレクトリーに配置した場合は、次のように入力します。
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. コマンドラインがウェブサイトのディレクトリー内を指しているときに、次のコマンドを入力します。これは `git` ツールに、そのディレクトリーを git リポジトリーにするように指示するものです。
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 #### コマンドラインインターフェイスの余談
 
@@ -55,32 +54,32 @@ GitHub にコードをアップロードする最良の方法は、コマンド�
 1. 次に、ファイルを保存するための新しいリポジトリーを作成する必要があります。GitHub ホームページの右上にあるプラス (+) をクリックしてから、**新しいリポジトリー** を選択します。
 2. このページの**リポジトリー名ボックス** に、ソースコードのリポジトリー名 (例:**my-repository**) を入力します。
 3. また、説明を入力することで、リポジトリーに何を格納しようとしているのかを記述します。画面は次のようなものです。
-    ![](create-new-repo.png)
+   ![](create-new-repo.png)
 4. **Create repository** をクリックします。これにより、次のページに移動します。
-    ![](github-repo.png)
+   ![](github-repo.png)
 
 ### GitHub へのファイルのアップロード
 
 1. 現在のページのこの節、*既存のリポジトリーをコマンドラインからプッシュする*ことに興味があるわけですね。この節に 2 行のコードが並んでいるはずです。最初の行全体をコピーしてコマンドラインに貼り付け、 Enter キーを押してください。コマンドは次のようなものです。
 
-    ```bash
-    git remote add origin https://github.com/chrisdavidmills/my-repository.git
-    ```
+   ```bash
+   git remote add origin https://github.com/chrisdavidmills/my-repository.git
+   ```
 
 2. 次に、次の 2 つのコマンドを入力して、それぞれの後に Enter キーを押します。これらは、コードを GitHub にアップロードする準備をし、これらのファイルを管理するように Git に依頼するものです。
 
-    ```bash
-    git add --all
-    git commit -m 'adding my files to my repository'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'adding my files to my repository'
+   ```
 
 3. 最後に、表示されている 2 つのコマンドの内、2 番目のコマンドを端末に入力する、または、コマンドラインセクションから既存のリポジトリーをプッシュして」、コードを GitHub にプッシュします。
 
-    ```bash
-    git push -u origin main
-    ```
+   ```bash
+   git push -u origin main
+   ```
 
-4. ここで、リポジトリーの GitHub Pages を有効にする必要があります。これを行うには、リポジトリーのトップページから _Settings_ を選び、左のサイドバーから _Pages_ を選択します。 *Source* の下にある "main" ブランチを選びます。ページが更新されるはずです。
+4. ここで、リポジトリーの GitHub Pages を有効にする必要があります。これを行うには、リポジトリーのトップページから _Settings_ を選び、左のサイドバーから _Pages_ を選択します。 _Source_ の下にある "main" ブランチを選びます。ページが更新されるはずです。
 5. GitHub Pages セクションに再度アクセスすると、`Your site is ready to be published at https://xxxxxx.` という行が表示されるはずです。
 6. この URL をクリックすると、ホームページが `index.html` という名前であれば、例のライブバージョンに移動するはずです - このエントリーポイントに既定値で移動します。もし、あなたのサイトのエントリーポイントが何か別のもの、例えば `myPage.html` と呼ばれている場合は、 `https://xxxxxx/myPage.html` にアクセスする必要があります。
 

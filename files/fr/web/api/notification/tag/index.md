@@ -1,7 +1,6 @@
 ---
 title: Notification.tag
 slug: Web/API/Notification/tag
-translation_of: Web/API/Notification/tag
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -13,7 +12,7 @@ L'idée des balises de notification est que plusieurs notifications peuvent part
 ## Syntaxe
 
 ```js
-Notification.tag
+Notification.tag;
 ```
 
 ### Valeur

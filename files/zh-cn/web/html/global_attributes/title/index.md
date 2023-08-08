@@ -28,8 +28,11 @@ slug: Web/HTML/Global_attributes/title
 ```html
 <p>
   需要考虑 <code>title</code> 中的换行，像
-  <span title="这是
-多行标题" >这个示例</span>。
+  <span
+    title="这是
+多行标题"
+    >这个示例</span
+  >。
 </p>
 ```
 

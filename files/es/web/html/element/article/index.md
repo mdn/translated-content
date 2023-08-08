@@ -1,5 +1,5 @@
 ---
-title: '<article>: El elemento con contendio del artículo'
+title: "<article>: El elemento con contendio del artículo"
 slug: Web/HTML/Element/article
 l10n:
   sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78

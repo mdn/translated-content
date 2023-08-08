@@ -1,7 +1,6 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-translation_of: Web/API/Document/exitFullscreen
 ---
 
 {{ApiRef("Fullscreen API")}}
@@ -22,9 +21,9 @@ document.exitFullscreen();
 // Click bascule en mode plein écran
 document.onclick = function (event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document.exitFullscreen();
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```

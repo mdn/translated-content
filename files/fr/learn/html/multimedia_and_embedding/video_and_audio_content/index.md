@@ -1,7 +1,6 @@
 ---
 title: Contenu audio et vidéo
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -18,10 +17,10 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
           href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >installation des outils de base</a
         >, bases de la
-        <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >manipulation des fichiers</a
         >, connaissance des fondamentaux du HTML (comme expliqué dans
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML)</a
         >
         et
@@ -68,7 +67,7 @@ Les fonctionnalités de ce code sont :
 - [`src`](/fr/docs/Web/HTML/Element/video#src)
   - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer. Cela fonctionne de la même manière.
 - [`controls`](/fr/docs/Web/HTML/Element/video#controls)
-  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
+  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/Épilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
 

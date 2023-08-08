@@ -1,13 +1,11 @@
 ---
 title: DeviceRotationRate.alpha
 slug: Web/API/DeviceMotionEventRotationRate/alpha
-translation_of: Web/API/DeviceMotionEventRotationRate/alpha
-translation_of_original: Web/API/DeviceRotationRate/alpha
 ---
 
 {{ ApiRef("Device Orientation Events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
+Cette propriété indique la vitesse de rotation autour de l'axe Z — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
 
 ## Syntaxe
 

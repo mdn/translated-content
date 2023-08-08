@@ -1,7 +1,6 @@
 ---
 title: 메타 프로그래밍
 slug: Web/JavaScript/Guide/Meta_programming
-original_slug: Web/JavaScript/Guide/메타_프로그래밍
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -14,9 +13,9 @@ ECMAScript 6에서 소개되었습니다, {{jsxref("Proxy")}} 객체는 특정 �
 
 ```js
 var handler = {
-  get: function(target, name){
+  get: function (target, name) {
     return name in target ? target[name] : 42;
-  }
+  },
 };
 var p = new Proxy({}, handler);
 p.a = 1;
@@ -346,20 +345,23 @@ The following table summarizes the available traps available to `Proxy` objects.
 The {{jsxref("Proxy.revocable()")}} method is used to create a revocable `Proxy` object. This means that the proxy can be revoked via the function `revoke` and switches the proxy off. Afterwards, any operation on the proxy leads to a {{jsxref("TypeError")}}
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]';
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
-console.log(proxy.foo);  // TypeError is thrown
-proxy.foo = 1;           // TypeError again
-delete proxy.foo;        // still TypeError
-typeof proxy;            // "object", typeof doesn't trigger any trap
+console.log(proxy.foo); // TypeError is thrown
+proxy.foo = 1; // TypeError again
+delete proxy.foo; // still TypeError
+typeof proxy; // "object", typeof doesn't trigger any trap
 ```
 
 ## Reflection
@@ -371,7 +373,7 @@ typeof proxy;            // "object", typeof doesn't trigger any trap
 With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/ko/docs/Web/JavaScript/Reference/Operators/in) as a function:
 
 ```js
-    Reflect.has(Object, 'assign'); // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### A better `apply` function
@@ -379,23 +381,23 @@ With {{jsxref("Reflect.has()")}} for example, you get the [`in` operator](/ko/do
 In ES5, you typically use the {{jsxref("Function.prototype.apply()")}} method to call a function with a given `this` value and `arguments` provided as an array (or an [array-like object](/ko/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 
 ```js
-    Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
 With {{jsxref("Reflect.apply")}} this becomes less verbose and easier to understand:
 
 ```js
-    Reflect.apply(Math.floor, undefined, [1.75]);
-    // 1;
+Reflect.apply(Math.floor, undefined, [1.75]);
+// 1;
 
-    Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-    // "hello"
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
+// "hello"
 
-    Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index;
-    // 4
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
+// 4
 
-    Reflect.apply(''.charAt, 'ponies', [3]);
-    // "i"
+Reflect.apply("".charAt, "ponies", [3]);
+// "i"
 ```
 
 ### Checking if property definition has been successful
@@ -403,11 +405,11 @@ With {{jsxref("Reflect.apply")}} this becomes less verbose and easier to underst
 With {{jsxref("Object.defineProperty")}}, which returns an object if successful, or throws a {{jsxref("TypeError")}} otherwise, you would use a {{jsxref("Statements/try...catch","try...catch")}} block to catch any error that occurred while defining a property. Because {{jsxref("Reflect.defineProperty")}} returns a Boolean success status, you can just use an {{jsxref("Statements/if...else","if...else")}} block here:
 
 ```js
-    if (Reflect.defineProperty(target, property, attributes)) {
-      // success
-    } else {
-      // failure
-    }
+if (Reflect.defineProperty(target, property, attributes)) {
+  // success
+} else {
+  // failure
+}
 ```
 
 {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}

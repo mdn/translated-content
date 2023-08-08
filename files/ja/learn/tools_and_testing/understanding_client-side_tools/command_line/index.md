@@ -271,7 +271,7 @@ ls | wc -l
 curl https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-ページが ([/Web/API/fetch](/en-US/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
+ページが ([/Web/API/fetch](/ja/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
 `-L` フラグを使用してリダイレクトに従うように `curl` に明示的に指示する必要があります。
 
 また `curl` の `-I` フラグを使用して `developer.mozilla.org` が返すヘッダーを見て、 `curl` の出力を `grep` にパイプすることにより、ターミナルに送信されるすべてのロケーションリダイレクトを出力します。(「 location」という単語を含むすべての行を返すように `grep` に依頼します)。
@@ -390,7 +390,7 @@ Stdin is read if it is piped to Prettier and no files are given.
 たとえそれが長くても、少なくとも使用法情報に目を通すことは常に価値があります。
 ツールがどのように使用されることを意図しているかをよりよく理解するのに役立ちます。
 
-> **メモ:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、_そのコマンドだけ_で、Prettier の最新バージョンがダウンロードされて実行されます。
+> **メモ:** 最初に Prettier をローカルにインストールしていない場合、`npx prettier` を実行すると、*そのコマンドだけ*で、Prettier の最新バージョンがダウンロードされて実行されます。
 > 素晴らしいと思われるかもしれませんが、Prettier の新しいバージョンでは出力がわずかに変更される場合があります。
 > ローカルにインストールして、フォーマットに使用している Prettier のバージョンを変更する準備が整うまで修正します。
 

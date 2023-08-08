@@ -1,7 +1,6 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 ---
 
 {{AddonSidebar()}}
@@ -12,15 +11,15 @@ Vous passez à cette fonction la `requestId` pour la requête en question, et qu
 
 Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
 
-Vous devez également passer l'option "blocking" à `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest`  (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
+Vous devez également passer l'option "blocking" à `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest` (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
 
 ## Syntaxe
 
 ```js
 var gettingInfo = browser.webRequest.getSecurityInfo(
-  requestId,       // string
-  options          // object
-)
+  requestId, // string
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -52,20 +51,23 @@ Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-doma
 ```js
 async function logSubject(details) {
   try {
-    let securityInfo = await browser.webRequest.getSecurityInfo(details.requestId, {});
+    let securityInfo = await browser.webRequest.getSecurityInfo(
+      details.requestId,
+      {},
+    );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
       console.log(securityInfo.certificates[0].subject);
     }
-  }
-  catch(error) {
+  } catch (error) {
     console.error(error);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logSubject,
-  {urls: ["https://*.mozilla.org/*"]},
-  ["blocking"]
+browser.webRequest.onHeadersReceived.addListener(
+  logSubject,
+  { urls: ["https://*.mozilla.org/*"] },
+  ["blocking"],
 );
 ```
 
@@ -76,21 +78,23 @@ async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,
-      {"certificateChain": true}
+      { certificateChain: true },
     );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
-      console.log(securityInfo.certificates[securityInfo.certificates.length - 1].issuer);
+      console.log(
+        securityInfo.certificates[securityInfo.certificates.length - 1].issuer,
+      );
     }
-  }
-  catch(error) {
+  } catch (error) {
     console.error(error);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logRoot,
-  {urls: ["https://*.mozilla.org/*"]},
-  ["blocking"]
+browser.webRequest.onHeadersReceived.addListener(
+  logRoot,
+  { urls: ["https://*.mozilla.org/*"] },
+  ["blocking"],
 );
 ```
 

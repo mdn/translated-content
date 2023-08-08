@@ -1,7 +1,6 @@
 ---
 title: Hypertexte
 slug: Glossary/Hypertext
-translation_of: Glossary/Hypertext
 ---
 
 L'hypertexte est un texte contenant des liens vers d'autres textes, par opposition à un unique flux linéaire comme dans un roman.

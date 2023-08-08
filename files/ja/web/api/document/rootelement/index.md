@@ -11,7 +11,7 @@ slug: Web/API/Document/rootElement
 ## 構文
 
 ```js
-const element = document.rootElement
+const element = document.rootElement;
 ```
 
 ## メモ

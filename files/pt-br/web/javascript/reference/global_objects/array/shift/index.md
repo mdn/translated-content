@@ -34,15 +34,15 @@ O método shift remove o elemento de índice zero, diminui em 1 os indices dos d
 O código a seguir mostra o array `minhaLista` antes e depois de remover seu primeiro elemento. Ele também mostra o elemento removido.
 
 ```js
-var minhaLista = ['anjo', 'casa', 'mandarim', 'medico'];
+var minhaLista = ["anjo", "casa", "mandarim", "medico"];
 
-console.log('minhaLista antes: ' + minhaLista);
+console.log("minhaLista antes: " + minhaLista);
 // minhaList antes: ['anjo', 'casa', 'mandarim', 'medico']
 var shifted = minhaLista.shift();
 
-console.log('minhaLista depois: ' + minhaLista);
+console.log("minhaLista depois: " + minhaLista);
 // minhaList depois: ['casa', 'mandarim', 'medico']
-console.log('Elemento removido: ' + shifted);
+console.log("Elemento removido: " + shifted);
 // Elemento removido: anjo
 ```
 
@@ -52,19 +52,19 @@ O médodo `shift()` é frequentemente usado como condição dentro de um loop de
 
 ```js
 var nomes = ["André", "Eduardo", "Paulo", "Cris", "João"];
-while( (i = nomes.shift()) !== undefined ) {
-    console.log(i);
+while ((i = nomes.shift()) !== undefined) {
+  console.log(i);
 }
 // André Eduardo Paulo Cris João
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Estado                   | Comentário                                             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 3rd Edition                                                                               | Standard                 | Implementação inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}                 | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}     |                                                        |
+| Especificação                                                              | Estado             | Comentário                                             |
+| -------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 3rd Edition                                                     | Standard           | Implementação inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.9', 'Array.prototype.shift')}}            | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-array.prototype.shift', 'Array.prototype.shift')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Compatibilidade de Browser
 

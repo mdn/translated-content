@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
 
 {{JSRef}}
@@ -29,13 +28,13 @@ var maMap = new Map();
 maMap.set("truc", "bidule");
 maMap.set(1, "toto");
 
-maMap.size;        // 2
+maMap.size; // 2
 maMap.has("truc"); // true
 
 maMap.clear();
 
-maMap.size;        // 0
-maMap.has("truc")  // false
+maMap.size; // 0
+maMap.has("truc"); // false
 ```
 
 ## Spécifications

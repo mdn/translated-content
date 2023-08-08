@@ -1,7 +1,6 @@
 ---
-title: '-moz-force-broken-image-icon'
+title: "-moz-force-broken-image-icon"
 slug: Web/CSS/-moz-force-broken-image-icon
-translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
 
 {{Non-standard_header}}{{ CSSRef}}
@@ -37,7 +36,7 @@ img {
 ### HTML
 
 ```html
-<img src='/lien/vers/image/cassée.png' alt='Un lien vers une image cassée'>
+<img src="/lien/vers/image/cassée.png" alt="Un lien vers une image cassée" />
 ```
 
 ### Résultat

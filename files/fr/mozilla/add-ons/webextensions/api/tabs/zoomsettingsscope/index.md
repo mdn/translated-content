@@ -1,12 +1,11 @@
 ---
 title: tabs.ZoomSettingsScope
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsScope
 ---
 
 {{AddonSidebar()}}
 
-Définit si les changements de zoom persisteront pour l'origine de la page ou ne prendront effet que dans cet onglet. La valeur par défaut est à `per-origin` lorsque   {{WebExtAPIRef("tabs.zoomSettingsMode")}} est "automatique", et est toujours `per-tab`.
+Définit si les changements de zoom persisteront pour l'origine de la page ou ne prendront effet que dans cet onglet. La valeur par défaut est à `per-origin` lorsque {{WebExtAPIRef("tabs.zoomSettingsMode")}} est "automatique", et est toujours `per-tab`.
 
 ## Type
 

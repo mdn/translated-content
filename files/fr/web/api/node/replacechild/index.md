@@ -1,7 +1,6 @@
 ---
 title: element.replaceChild
 slug: Web/API/Node/replaceChild
-translation_of: Web/API/Node/replaceChild
 ---
 
 {{APIRef("DOM")}}
@@ -34,7 +33,9 @@ var sp1 = document.createElement("span");
 sp1.id = "newSpan";
 
 // Crée du contenu pour le nouvel élément
-var sp1_content = document.createTextNode("nouvel élément span de remplacement.");
+var sp1_content = document.createTextNode(
+  "nouvel élément span de remplacement.",
+);
 
 // Applique ce contenu au nouvel élément
 sp1.appendChild(sp1_content);

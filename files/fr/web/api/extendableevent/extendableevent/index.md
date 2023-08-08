@@ -1,7 +1,6 @@
 ---
 title: ExtendableEvent.ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
-translation_of: Web/API/ExtendableEvent/ExtendableEvent
 ---
 
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}

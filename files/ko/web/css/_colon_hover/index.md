@@ -1,5 +1,5 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
 ---
 
@@ -35,7 +35,7 @@ a:hover {
 ```css
 a {
   background-color: powderblue;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
 a:hover {

@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
 
 {{AddonSidebar()}}
@@ -18,7 +17,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
 
-Si vous ne spécifiez pas d'icône dans la clé sidebar_action, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
+Si vous ne spécifiez pas d'icône dans la clé `sidebar_action`, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
 
 Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `tabId` , l'icône est définie uniquement pour l'onglet donné. C'est ce qu'on appelle _"tab-specific icon"_.
 
@@ -30,8 +29,8 @@ Si vous définissez une nouvelle icône en utilisant `setIcon()`, et omettez l'o
 
 ```js
 var settingIcon = browser.sidebarAction.setIcon(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -63,8 +62,8 @@ var settingIcon = browser.sidebarAction.setIcon(
 
         ```json
         {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
+          "16": "path/to/image16.jpg",
+          "32": "path/to/image32.jpg"
         }
         ```
 
@@ -103,13 +102,13 @@ function toggle(tab) {
   if (on) {
     browser.sidebarAction.setIcon({
       path: "off.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = false;
   } else {
     browser.sidebarAction.setIcon({
       path: "on.svg",
-      tabId: tab.id
+      tabId: tab.id,
     });
     on = true;
   }

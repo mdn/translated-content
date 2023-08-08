@@ -24,7 +24,7 @@ CSS の仕様や MDN のプロパティページでは、`<color>` や `<length>
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -131,15 +131,15 @@ Relative length units (相対的な長さの単位) は、何かとの比較に�
     </tr>
     <tr>
       <td><code>svw, svh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>lvw, lvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>dvw, dvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
     </tr>
   </tbody>
 </table>

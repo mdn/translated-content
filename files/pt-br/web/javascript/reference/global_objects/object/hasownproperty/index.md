@@ -61,10 +61,10 @@ O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas d
 
 ```js
 o = new Object();
-o.prop = 'existe';
-o.hasOwnProperty('prop');             // Retorna true
-o.hasOwnProperty('toString');         // Retorna false
-o.hasOwnProperty('hasOwnProperty');   // Retorna false
+o.prop = "existe";
+o.hasOwnProperty("prop"); // Retorna true
+o.hasOwnProperty("toString"); // Retorna false
+o.hasOwnProperty("hasOwnProperty"); // Retorna false
 ```
 
 ### Percorrer através das propriedades de um objeto
@@ -75,16 +75,15 @@ Vale observar que o loop {{jsxref("Statements/for...in", "for...in")}} percorre 
 
 ```js
 var buz = {
-    fog: 'stack'
+  fog: "stack",
 };
 
 for (var nome in buz) {
-    if (buz.hasOwnProperty(nome)) {
-        alert("this is fog (" + nome + ") for sure. Value: " + buz[nome]);
-    }
-    else {
-        alert(nome); // toString ou qualquer outra coisa
-    }
+  if (buz.hasOwnProperty(nome)) {
+    alert("this is fog (" + nome + ") for sure. Value: " + buz[nome]);
+  } else {
+    alert(nome); // toString ou qualquer outra coisa
+  }
 }
 ```
 
@@ -94,30 +93,30 @@ JavaScript não protege o nome `hasOwnProperty`, assim, se existir a possibilida
 
 ```js
 var foo = {
-    hasOwnProperty: function() {
-        return false;
-    },
-    bar: 'Here be dragons'
+  hasOwnProperty: function () {
+    return false;
+  },
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // Sempre retorna false
+foo.hasOwnProperty("bar"); // Sempre retorna false
 
 // Usando a propriedade hasOwnProperty de outro objeto e definindo 'this' como foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // Também é possível usar hasOwnProperty do objeto
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                   | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                                                        | Standard                 | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                             | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}     |                    |
+| Especificação                                                                                  | Status             | Comentário         |
+| ---------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                          | Standard           | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                      | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
-translation_of: Web/API/HTMLElement/title
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -27,7 +26,7 @@ element.title = chn;
 ## Exemple
 
 ```js
- bouton1.title = "cliquer pour rafraîchir";
+bouton1.title = "cliquer pour rafraîchir";
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
-translation_of: Web/API/HTMLIFrameElement/featurePolicy
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HT
 ## Syntaxe
 
 ```js
-var policy = HTMLIFrameElement.featurePolicy
+var policy = HTMLIFrameElement.featurePolicy;
 ```
 
 ### Valeur

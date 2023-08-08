@@ -1,16 +1,8 @@
 ---
 title: XMLHttpRequest.statusText
 slug: Web/API/XMLHttpRequest/statusText
-tags:
-  - AJAX
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-translation_of: Web/API/XMLHttpRequest/statusText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Свойство **`XMLHttpRequest.statusText`**, доступное только для чтения, возвращает строку `DOMString`, содержащую сообщение о состоянии ответа, возвращаемое HTTP-сервером. В отличие от `XMLHTTPRequest.status`, который указывает числовой код состояния, это свойство содержит текст состояния ответа, например «OK» или «Not Found». Если запрос `readyState` находится в состоянии `UNSENT` или `OPENED`, значением `statusText` будет пустая строка.
@@ -21,17 +13,17 @@ translation_of: Web/API/XMLHttpRequest/statusText
 
 ```js
 var xhr = new XMLHttpRequest();
-console.log('0 UNSENT', xhr.statusText);
+console.log("0 UNSENT", xhr.statusText);
 
-xhr.open('GET', '/server', true);
-console.log('1 OPENED', xhr.statusText);
+xhr.open("GET", "/server", true);
+console.log("1 OPENED", xhr.statusText);
 
 xhr.onprogress = function () {
-  console.log('3 LOADING', xhr.statusText);
+  console.log("3 LOADING", xhr.statusText);
 };
 
 xhr.onload = function () {
-  console.log('4 DONE', xhr.statusText);
+  console.log("4 DONE", xhr.statusText);
 };
 
 xhr.send(null);

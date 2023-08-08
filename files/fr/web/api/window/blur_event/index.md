@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-translation_of: Web/API/GlobalEventHandlers/onblur
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -29,23 +28,23 @@ Cet exemple utilise `onblur` et [`onfocus`](/fr/docs/Web/API/GlobalEventHandlers
 ### HTML
 
 ```html
-<input type="text" value="Cliquez ici">
+<input type="text" value="Cliquez ici" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Le focus a été perdu';
+  input.value = "Le focus a été perdu";
 }
 
 function inputFocus() {
-  input.value = 'Le focus est là';
+  input.value = "Le focus est là";
 }
 ```
 

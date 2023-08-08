@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 
 假如你在竖排书写模式里，那么 {{CSSXref("inline-size")}} 会对应到 {{CSSXref("height")}}。
 
-| 逻辑属性                        | 实体属性                    |
+| 逻辑属性                       | 实体属性                  |
 | ------------------------------ | ------------------------- |
 | {{CSSXref("inline-size")}}     | {{CSSXref("width")}}      |
 | {{CSSXref("block-size")}}      | {{CSSXref("height")}}     |

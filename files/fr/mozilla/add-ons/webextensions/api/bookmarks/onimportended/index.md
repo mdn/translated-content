@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
 
 {{AddonSidebar()}}
@@ -13,9 +12,9 @@ Voir {{WebExtAPIRef("bookmarks.onImportBegan")}}.
 ## Syntaxe
 
 ```js
-browser.bookmarks.onImportEnded.addListener(listener)
-browser.bookmarks.onImportEnded.removeListener(listener)
-browser.bookmarks.onImportEnded.hasListener(listener)
+browser.bookmarks.onImportEnded.addListener(listener);
+browser.bookmarks.onImportEnded.removeListener(listener);
+browser.bookmarks.onImportEnded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

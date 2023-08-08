@@ -1,7 +1,6 @@
 ---
 title: runtime.PlatformArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
 
 {{AddonSidebar()}}

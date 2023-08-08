@@ -10,16 +10,27 @@ SVG の **`<animateMotion>`** 要素は、ある要素がモーションパス�
 > **メモ:** 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
 
 ```css hidden
-html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
+html,
+body,
+svg {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 ```
 
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="lightgrey"
+  <path
+    fill="none"
+    stroke="lightgrey"
     d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
 
   <circle r="5" fill="red">
-    <animateMotion dur="10s" repeatCount="indefinite"
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
       path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
   </circle>
 </svg>

@@ -5,13 +5,14 @@ slug: Web/JavaScript/Reference/Statements/while
 
 {{jsSidebar("Statements")}}
 
-**while문**은 조건문이 참일 때 실행되는 반복문이다. 조건은 문장안이 실행되기 전에 참, 거짓을 판단한다.
+**`while` 문**은 조건문이 참일 때 실행되는 반복문이다. 조건은 문장안이 실행되기 전에 참, 거짓을 판단한다.
 
 ## 문법
 
-```js
-    while (condition)
-      statement
+```js-nolint
+while (condition) {
+  statement
+}
 ```
 
 - `조건`
@@ -51,5 +52,5 @@ while (n < 3) {
 
 ## See also
 
-- [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+- [`do...while`](/ko/docs/Web/JavaScript/Reference/Statements/do...while)
 - {{jsxref("Statements/for", "for")}}

@@ -1,17 +1,6 @@
 ---
 title: Media queries
 slug: Web/CSS/CSS_media_queries
-tags:
-  - CSS
-  - CSS3 Media Queries
-  - Media Queries
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - Responsive Design
-  - TopicStub
-translation_of: Web/CSS/Media_Queries
-original_slug: Web/CSS/Media_Queries
 ---
 
 {{CSSRef("CSS3 Media Queries")}}
@@ -40,9 +29,9 @@ You can learn more about programmatically using media queries in [Testing media 
 
 ## Specifications
 
-| Specification                                    | Status                                   | Comment            |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |
+| Specification                        | Status                          | Comment            |
+| ------------------------------------ | ------------------------------- | ------------------ |
+| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}}   |                    |
+| {{SpecName('CSS4 Media Queries')}}   | {{Spec2('CSS4 Media Queries')}} |                    |
+| {{SpecName('CSS3 Media Queries')}}   | {{Spec2('CSS3 Media Queries')}} |                    |
+| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}             | Initial definition |

@@ -1,7 +1,6 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
-translation_of: Web/HTTP/Status/205
 ---
 
 {{HTTPSidebar}}

@@ -397,7 +397,7 @@
 /zh-TW/docs/Learn/CSS/Testing_media_queries	/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-TW/docs/Learn/CSS/Understanding_z_index	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /zh-TW/docs/Learn/CSS/Understanding_z_index/Stacking_context_example_1	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-/zh-TW/docs/Learn/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/zh-TW/docs/Learn/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Learn/CSS/文字樣式	/zh-TW/docs/Learn/CSS/Styling_text
 /zh-TW/docs/Learn/CSS/樣式化容器	/en-US/docs/Learn/CSS/Building_blocks
 /zh-TW/docs/Learn/Common_questions/What_is_a_web_server	/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
@@ -480,7 +480,7 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
-/zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
+/zh-TW/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Document/DOMContentLoaded_event
 /zh-TW/docs/Python	/zh-TW/docs/Learn/Server-side/Django
 /zh-TW/docs/Quirks_Mode_and_Standards_Mode	/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /zh-TW/docs/SVG	/zh-TW/docs/Web/SVG
@@ -598,6 +598,7 @@
 /zh-TW/docs/Web/API/Window.history	/zh-TW/docs/Web/API/Window/history
 /zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
+/zh-TW/docs/Web/API/Window/DOMContentLoaded_event	/zh-TW/docs/Web/API/Document/DOMContentLoaded_event
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowEventHandlers/onbeforeunload	/zh-TW/docs/Web/API/Window/beforeunload_event
 /zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
@@ -640,7 +641,7 @@
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/Inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
 /zh-TW/docs/Web/Demos_of_open_web_technologies	/zh-TW/docs/Web/Demos
-/zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
+/zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Document/DOMContentLoaded_event
 /zh-TW/docs/Web/Events/abort	/zh-TW/docs/Web/API/HTMLMediaElement/abort_event
 /zh-TW/docs/Web/Events/click	/zh-TW/docs/Web/API/Element/click_event
 /zh-TW/docs/Web/Events/keyup	/zh-TW/docs/Web/API/Element/keyup_event
@@ -664,7 +665,7 @@
 /zh-TW/docs/Web/Guide/CSS/Testing_media_queries	/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-TW/docs/Web/Guide/CSS/Understanding_z_index	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /zh-TW/docs/Web/Guide/CSS/Understanding_z_index/Stacking_context_example_1	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-/zh-TW/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/zh-TW/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Web/Guide/CSS/使用_多重_背景	/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
@@ -855,8 +856,8 @@
 /zh-TW/docs/Web/Reference	/zh-TW/docs/Web
 /zh-TW/docs/Web/Reference/API	/zh-TW/docs/Web/API
 /zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/Events
-/zh-TW/docs/Web/Reference/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
-/zh-TW/docs/Web/Reference/Events/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
+/zh-TW/docs/Web/Reference/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Document/DOMContentLoaded_event
+/zh-TW/docs/Web/Reference/Events/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Document/DOMContentLoaded_event
 /zh-TW/docs/Web/Reference/Events/click	/zh-TW/docs/Web/API/Element/click_event
 /zh-TW/docs/Web/Reference/Events/submit	/zh-TW/docs/Web/API/HTMLFormElement/submit_event
 /zh-TW/docs/Web/Reference/Events/touchcancel	/zh-TW/docs/Web/API/Element/touchcancel_event

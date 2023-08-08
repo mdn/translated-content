@@ -1,7 +1,6 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.
 
 ```js
 var p = new Proxy(cible, {
-  defineProperty: function(cible, propriété, descripteur) {
-  }
+  defineProperty: function (cible, propriété, descripteur) {},
 });
 ```
 
@@ -60,11 +58,14 @@ Si les contraintes d'invariances suivantes ne sont pas respectées, le proxy ren
 Dans le code suivant, on piège l'appel à {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var p = new Proxy({}, {
-  defineProperty: function(target, prop, descriptor) {
-    console.log("appelé avec : " + prop);
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    defineProperty: function (target, prop, descriptor) {
+      console.log("appelé avec : " + prop);
+    },
+  },
+);
 
 var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, "a", desc); // "appelé avec : a"
