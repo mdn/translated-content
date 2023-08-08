@@ -48,7 +48,7 @@ IANA 目前注册的独立类型如下：
 - `audio`
   - : 音频或音乐数据。常见的示例如 `audio/mpeg`、`audio/vorbis`。（[查看 IANA 上 audio 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)）
 - `example`
-  - :  在演示如何使用 MIME 类型的示例中用作占位符的保留类型。这一类型永远不应在示例代码或文档外使用。`example` 也可以作为子类型。例如，在一个处理音频有关的示例中，MIME 类型 `audio/example` 表示该类型是一个占位符，且在实际使用这段代码时，此处应当被替换成适当的类型。
+  - : 在演示如何使用 MIME 类型的示例中用作占位符的保留类型。这一类型永远不应在示例代码或文档外使用。`example` 也可以作为子类型。例如，在一个处理音频有关的示例中，MIME 类型 `audio/example` 表示该类型是一个占位符，且在实际使用这段代码时，此处应当被替换成适当的类型。
 - `font`
   - : 字体/字型数据。常见的示例如 `font/woff`、`font/ttf` 和 `font/otf`。（[查看 IANA 上 font 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#font)）
 - `image`
