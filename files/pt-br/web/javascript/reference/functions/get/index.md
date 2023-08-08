@@ -38,14 +38,14 @@ Um getter pode ser removido usando o operador `delete.`
 O exemplo abaixo irá criar a pseudo-propriedade `latest` para o objeto `obj`, que irá retornar o último item do array em `log`.
 
 ```js
-var log = ['test'];
+var log = ["test"];
 var obj = {
-  get latest () {
+  get latest() {
     if (log.length == 0) return undefined;
-    return log[log.length - 1]
-  }
-}
-console.log (obj.latest); // Retornará "test".
+    return log[log.length - 1];
+  },
+};
+console.log(obj.latest); // Retornará "test".
 ```
 
 Note que a tentativa de atribuir um valor a `latest não irá alterá-la.`
@@ -63,11 +63,15 @@ delete obj.latest;
 Para adicionar um getter a um objeto existente a qualquer momento, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Executa o getter, que retornará a + 1 (que é 1)
+console.log(o.b); // Executa o getter, que retornará a + 1 (que é 1)
 ```
 
 ### Usando uma propriedade com nome computado
@@ -78,7 +82,9 @@ console.log(o.b) // Executa o getter, que retornará a + 1 (que é 1)
 var expr = "foo";
 
 var obj = {
-  get [expr]() { return "bar"; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -109,10 +115,10 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 
 ## Especificações
 
-| Especificação                                                                                    | Status                       | Comentário                                   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Definição inicial.                           |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Adicionado nomes de propriedades computadas. |
+| Especificação                                                            | Status               | Comentário                                   |
+| ------------------------------------------------------------------------ | -------------------- | -------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}               | {{Spec2('ES5.1')}}   | Definição inicial.                           |
+| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}     | Adicionado nomes de propriedades computadas. |
 | {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                              |
 
 ## Compatibilidade com navegadores

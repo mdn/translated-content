@@ -19,20 +19,26 @@ Semânticas adicionais são anexadas aos atributos **title** dos elementos {{ HT
 O atributo **title** pode conter várias linhas. Cada `U+000A LINE FEED` (`LF`) inserida representa uma nova linha. Alguns cuidados devem ser tomados, como a seguir:
 
 ```html
-<p>Novas linhas em título devem ser levadas em conta, como este <abbr title="Este é um
-título de multiplas linhas">exemplo</abbr>.</p>
+<p>
+  Novas linhas em título devem ser levadas em conta, como este
+  <abbr
+    title="Este é um
+título de multiplas linhas"
+    >exemplo</abbr
+  >.
+</p>
 ```
 
 Este exemplo define um título de duas linhas.
 
 ## Especificações
 
-| Specification                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                                                                                      |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}             | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                                     |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, it is now a true global attribute.                                                                                                                                                                                           |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}         | {{Spec2('HTML4.01')}}     | Supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}. |
+| Specification                                                             | Status                   | Comment                                                                                                                                                                                                                                           |
+| ------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "elements.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | No change from latest snapshot, {{SpecName('HTML5.1')}}                                                                                                                                                                                           |
+| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}          | {{Spec2('HTML5.1')}}     | Snapshot of {{SpecName('HTML WHATWG')}}, no change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                 |
+| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}        | {{Spec2('HTML5 W3C')}}   | Snapshot of {{SpecName('HTML WHATWG')}}. From {{SpecName("HTML4.01")}}, it is now a true global attribute.                                                                                                                                        |
+| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}        | {{Spec2('HTML4.01')}}    | Supported on all elements but {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, and {{HTMLElement("title")}}. |
 
 ## Compatibilidade com navegadores
 

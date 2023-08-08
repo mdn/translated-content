@@ -51,16 +51,16 @@ Object.isExtensible(empty); // === falso
 // uma nova propriedade a um objeto não-extensível.
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', {
-  value: 8675309
+Object.defineProperty(nonExtensible, "new", {
+  value: 8675309,
 }); // lança um TypeError
 
 // No modo restrito, tentar adicionar novas propriedades a
 // um objeto não-extensível lança um TypeError.
 function fail() {
-  'use strict';
+  "use strict";
   // lança um TypeError
-  nonExtensible.newProperty = 'FAIL';
+  nonExtensible.newProperty = "FAIL";
 }
 fail();
 ```
@@ -70,7 +70,7 @@ O protótipo não-extensível de um objeto é imutável:
 ```js
 var fixed = Object.preventExtensions({});
 // lança um 'TypeError'.
-fixed.__proto__ = { oh: 'hai' };
+fixed.__proto__ = { oh: "hai" };
 ```
 
 ## Notas
@@ -87,10 +87,10 @@ Object.preventExtensions(1);
 
 ## Especificações
 
-| Specification                                                                                                    | Status                       | Comment                                              |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                         | {{Spec2('ES5.1')}}     | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}     | {{Spec2('ES6')}}         |                                                      |
+| Specification                                                                        | Status               | Comment                                              |
+| ------------------------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.10', 'Object.preventExtensions')}}                  | {{Spec2('ES5.1')}}   | Definição inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.preventextensions', 'Object.preventExtensions')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.preventextensions', 'Object.preventExtensions')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

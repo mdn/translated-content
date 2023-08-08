@@ -2,6 +2,7 @@
 title: Expires
 slug: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 Заголовок **`Expires`** содержит дату/время, по истечении которой ответ сервера считается устаревшим.

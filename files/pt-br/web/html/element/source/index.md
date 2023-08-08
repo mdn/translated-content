@@ -11,11 +11,11 @@ O elemento `source` é utilizado para especificar múltiplos recursos de mídia 
 
 ## Contexto de uso
 
-| Conteúdo permitido        | Nenhum; isso é um elemento vazio.                                                                                |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag            | Deve ter uma tag de início, mas não deve ter uma tag de fim.                                                     |
+| Conteúdo permitido        | Nenhum; isso é um elemento vazio.                                                  |
+| ------------------------- | ---------------------------------------------------------------------------------- |
+| Omissão de tag            | Deve ter uma tag de início, mas não deve ter uma tag de fim.                       |
 | Elementos pais permitidos | {{HTMLElement("picture")}}, {{ HTMLElement("audio") }}, {{ HTMLElement("video") }} |
-| Documento normativo       | [HTML5, section 4.8.8](https://www.w3.org/TR/html5/video.html#the-source-element)                                 |
+| Documento normativo       | [HTML5, section 4.8.8](https://www.w3.org/TR/html5/video.html#the-source-element)  |
 
 ## Atributos
 
@@ -40,8 +40,10 @@ Esse exemplo demonstra como oferecer um vídeo no formato Ogg para usuários em 
 
 ```html
 <video controls>
-  <source src="foo.ogg" type="video/ogg"> <!-- Escolhido pelo Firefox -->
-  <source src="foo.mov" type="video/quicktime"> <!-- Escolhido pelo Safari -->
+  <source src="foo.ogg" type="video/ogg" />
+  <!-- Escolhido pelo Firefox -->
+  <source src="foo.mov" type="video/quicktime" />
+  <!-- Escolhido pelo Safari -->
   Desculpa; seu navegador não é compatível com vídeo em HTML5.
 </video>
 ```

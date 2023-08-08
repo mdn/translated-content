@@ -2,6 +2,7 @@
 title: Руководство JavaScript
 slug: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 "Руководство по JavaScript" покажет вам как использовать [JavaScript](/ru/docs/Web/JavaScript) и даст общее представление о языке. Если вам нужна исчерпывающая информация о возможностях языка, посмотрите [руководство JavaScript](/ru/docs/Web/JavaScript/Reference).

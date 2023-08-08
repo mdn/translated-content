@@ -32,6 +32,6 @@ slug: Web/CSS/CSS_multicol_layout
 
 ## Specifications
 
-| Specification                            | Status                               | Comment            |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
+| Specification                 | Status                     | Comment            |
+| ----------------------------- | -------------------------- | ------------------ |
 | {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Initial definition |

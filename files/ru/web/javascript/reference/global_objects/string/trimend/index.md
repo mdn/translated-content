@@ -26,13 +26,13 @@ str.trimRight()
 Следующий пример покажет строку `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimRight();
 console.log(str.length); // 5
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## Спецификации

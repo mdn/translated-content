@@ -78,17 +78,18 @@ Veja também [definições de métodos (method definitions)](/pt-BR/docs/Web/Jav
 
 ```js
 class Retangulo {
-    constructor(altura, largura) {
-      this.altura = altura; this.largura = largura;
-    }
+  constructor(altura, largura) {
+    this.altura = altura;
+    this.largura = largura;
+  }
   //Getter
-    get area() {
-        return this.calculaArea()
-    }
+  get area() {
+    return this.calculaArea();
+  }
 
-    calculaArea() {
-        return this.altura * this.largura;
-    }
+  calculaArea() {
+    return this.altura * this.largura;
+  }
 }
 
 const quadrado = new Retangulo(10, 10);
@@ -102,17 +103,17 @@ A palavra-chave [`static`](/pt-BR/docs/Web/JavaScript/Reference/Classes/static) 
 
 ```js
 class Ponto {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    static distancia(a, b) {
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
+  static distancia(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
 
-        return Math.hypot(dx, dy);
-    }
+    return Math.hypot(dx, dy);
+  }
 }
 
 const p1 = new Ponto(5, 5);
@@ -151,15 +152,15 @@ comer(); // undefined
 Se escrevemos o código acima usando classes baseadas em função tradicional, então o autoboxing acontecerá com base no valor de "this" para o qual a função foi chamada.
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.falar = function() {
+Animal.prototype.falar = function () {
   return this;
-}
+};
 
-Animal.comer = function() {
+Animal.comer = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let falar = obj.falar;
@@ -200,17 +201,17 @@ class Animal {
   }
 
   falar() {
-    console.log(this.nome + ' emite um barulho.');
+    console.log(this.nome + " emite um barulho.");
   }
 }
 
 class Cachorro extends Animal {
   falar() {
-    console.log(this.nome + ' latidos.');
+    console.log(this.nome + " latidos.");
   }
 }
 
-let cachorro = new Cachorro('Mat');
+let cachorro = new Cachorro("Mat");
 cachorro.falar();
 ```
 
@@ -219,21 +220,21 @@ Se existir um contrutor nas subclasses, é necessário primeiro chamar super() a
 Também é possivel ampliar (extends) "classes" baseadas em funções tradicionais.
 
 ```js
-function Animal (nome) {
+function Animal(nome) {
   this.nome = nome;
 }
 
-Animal.prototype.falar = function() {
-   console.log(this.nome + ' faça barulho.');
-}
+Animal.prototype.falar = function () {
+  console.log(this.nome + " faça barulho.");
+};
 
 class Cachorro extends Animal {
   falar() {
-    console.log(this.nome + ' lati.');
+    console.log(this.nome + " lati.");
   }
 }
 
-let cachorro = new Cachorro('Mitzie');
+let cachorro = new Cachorro("Mitzie");
 cachorro.falar(); // Mitzie lati.
 ```
 
@@ -241,20 +242,20 @@ Note que classes não extendem objetos normais (não construíveis). Se você qu
 
 ```js
 let Animal = {
-   falar() {
-      console.log(this.nome + ' faça barulho.');
-   }
+  falar() {
+    console.log(this.nome + " faça barulho.");
+  },
 };
 
 class Cachorro {
-   constructor(nome) {
-      this.nome = nome;
-   }
+  constructor(nome) {
+    this.nome = nome;
+  }
 }
 
 Object.setPrototypeOf(Cachorro.prototype, Animal);
 
-let cachorro = new Cachorro('Mitzie');
+let cachorro = new Cachorro("Mitzie");
 cachorro.falar(); //Mitzie faça barulho.
 ```
 
@@ -266,12 +267,14 @@ Por exemplo, quando utilizando um método como {{jsxref("Array.map", "map()")}} 
 
 ```js
 class MinhaArray extends Array {
-   // Sobrescreve species para o construtor da classe pai Array
-   static get [Symbol.species]() { return Array; }
+  // Sobrescreve species para o construtor da classe pai Array
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-let a = new MinhaArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MinhaArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array); // true
@@ -283,23 +286,23 @@ A palavra-chave (keyword) `super` é utilizada para chamar funções que pertenc
 
 ```js
 class Gato {
-   constructor(nome) {
-      this.nome = nome;
-   }
+  constructor(nome) {
+    this.nome = nome;
+  }
 
-   falar() {
-      console.log(this.nome + ' faça barulho.');
-   }
+  falar() {
+    console.log(this.nome + " faça barulho.");
+  }
 }
 
 class Leao extends Gato {
-   falar() {
-      super.falar();
-      console.log(this.nome + ' roars.');
-   }
+  falar() {
+    super.falar();
+    console.log(this.nome + " roars.");
+  }
 }
 
-let leao = new Leao('Fuzzy');
+let leao = new Leao("Fuzzy");
 leao.falar();
 
 // Fuzzy faça barulho.
@@ -318,30 +321,31 @@ class Humano {
     this.nome = nome;
   }
   andar() {
-    return this.nome+' andou um passo'
+    return this.nome + " andou um passo";
   }
 }
 
-const HumanoFalante = Base => class extends Base {
-  falar() {
-    return this.nome+' diz: olá mundo!'
-  }
-}
+const HumanoFalante = (Base) =>
+  class extends Base {
+    falar() {
+      return this.nome + " diz: olá mundo!";
+    }
+  };
 
-const HumanoFalanteMixado = Base => class extends Base {}
+const HumanoFalanteMixado = (Base) => class extends Base {};
 
-const HumanoFinal = HumanoFalanteMixado(HumanoFalante(Humano))
+const HumanoFinal = HumanoFalanteMixado(HumanoFalante(Humano));
 
-const humano = new HumanoFinal('Bill Gates')
+const humano = new HumanoFinal("Bill Gates");
 
-console.log(humano.andar())
-console.log(humano.falar())
+console.log(humano.andar());
+console.log(humano.falar());
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Status               | Comentário         |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| Especificação                                                      | Status           | Comentário         |
+| ------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

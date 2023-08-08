@@ -24,31 +24,31 @@ Os parâmetros de uma função são chamados de argumentos da função. Argument
 ```js
 /* Declare a função 'minhaFunção' */
 function minhaFuncao(objeto) {
-   objeto.marca = "Toyota";
- }
+  objeto.marca = "Toyota";
+}
 
- /*
-  * Declare a variável 'meucarro';
-  * crie e inicialize um novo Objeto;
-  * atribua referência para 'meucarro'
-  */
- var meucarro = {
-   marca: "Honda",
-   modelo: "Accord",
-   ano: 1998
- };
+/*
+ * Declare a variável 'meucarro';
+ * crie e inicialize um novo Objeto;
+ * atribua referência para 'meucarro'
+ */
+var meucarro = {
+  marca: "Honda",
+  modelo: "Accord",
+  ano: 1998,
+};
 
- /* Exibe 'Honda' */
- console.log(meucarro.marca);
+/* Exibe 'Honda' */
+console.log(meucarro.marca);
 
- /* Passe a referência do objeto para a função */
- minhaFuncao(meucarro);
+/* Passe a referência do objeto para a função */
+minhaFuncao(meucarro);
 
- /*
-  * Exibe 'Toyota' como valor para a propriedade 'marca'
-  * do objeto, mudado pela função.
-  */
- console.log(meucarro.marca);
+/*
+ * Exibe 'Toyota' como valor para a propriedade 'marca'
+ * do objeto, mudado pela função.
+ */
+console.log(meucarro.marca);
 ```
 
 A palavra reservada [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) não se refere a função sendo executada no momento, então você deve referenciar um objeto `Function` pelo nome, mesmo dentro do corpo da função.
@@ -168,7 +168,7 @@ Começando com ECMAScript 6, você é capaz de definir métodos próprios em uma
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -179,14 +179,14 @@ Compare o seguinte:
 Uma função definida com `Function` _constructor_ atribuída à variável `multiply`
 
 ```js
-var multiply = new Function('x', 'y', 'return x * y');
+var multiply = new Function("x", "y", "return x * y");
 ```
 
 Uma _function expression_ de uma função anônima atribuída à variável `multiply`
 
 ```js
-var multiply = function(x, y) {
-   return x * y;
+var multiply = function (x, y) {
+  return x * y;
 };
 ```
 
@@ -194,7 +194,7 @@ Uma _function expression_ de uma função chamada `func_name` atribuída à vari
 
 ```js
 var multiply = function func_name(x, y) {
-   return x * y;
+  return x * y;
 };
 ```
 
@@ -218,8 +218,7 @@ Como o quarto exemplo mostra, o nome da função pode ser diferente da variável
 Uma função definida por '`new Function'` não possui um nome. Entretanto, na máquina de JavaScript [SpiderMonkey](/pt-BR/docs/Mozilla/Projects/SpiderMonkey), a forma serializada da função aparece como se ela tivesse o nome "anonymous". Por exemplo, `alert(new Function())` gera como saída:
 
 ```js
-function anonymous() {
-}
+function anonymous() {}
 ```
 
 Já que a função na realidade não possui um nome, `anonymous` não é uma variável que possa ser acessada dentro da função. Por exemplo, o código seguinte iria resultar em um erro:
@@ -234,7 +233,7 @@ Ao contrário das funções definidas por expressões de função ou pelo constr
 ```js
 foo(); // alerts FOO!
 function foo() {
-   alert('FOO!');
+  alert("FOO!");
 }
 ```
 
@@ -245,7 +244,9 @@ Funções definidas por expressões de função e declarações de função são
 Deve ser notado, entretanto, que expressões de função e declarações de função aninhadas dentro de uma função gerada pela análise da string de um construtor `Function` não são analisadas repetidamente. Por exemplo:
 
 ```js
-var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+var foo = new Function(
+  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
+)();
 foo(); // O segmento "function() {\n\talert(bar);\n}" do corpo da função não é reanalisado.
 ```
 
@@ -255,18 +256,21 @@ Uma declaração de função é muito facilmente (e às vezes de forma não inte
 - não é mais um "elemento fonte" de uma função ou do script em si. Um "elemento fonte" é uma instrução não aninhada no script ou no corpo de uma função:
 
 ```js
-var x = 0;               // elemento fonte
-if (x == 0) {            // elemento fonte
-   x = 10;               // não é um elemento fonte
-   function boo() {}     // não é um elemento fonte
+var x = 0; // elemento fonte
+if (x == 0) {
+  // elemento fonte
+  x = 10; // não é um elemento fonte
+  function boo() {} // não é um elemento fonte
 }
-function foo() {         // elemento fonte
-   var y = 20;           // elemento fonte
-   function bar() {}     // elemento fonte
-   while (y == 10) {     // elemento fonte
-      function blah() {} // não é um elemento fonte
-      y++;               // não é um elemento fonte
-   }
+function foo() {
+  // elemento fonte
+  var y = 20; // elemento fonte
+  function bar() {} // elemento fonte
+  while (y == 10) {
+    // elemento fonte
+    function blah() {} // não é um elemento fonte
+    y++; // não é um elemento fonte
+  }
 }
 ```
 
@@ -277,26 +281,24 @@ function foo() {         // elemento fonte
 function foo() {}
 
 // expressão de função
-(function bar() {})
+(function bar() {});
 
 // expressão de função
-x = function hello() {}
-
+x = function hello() {};
 
 if (x) {
-   // expressão de função
-   function world() {}
+  // expressão de função
+  function world() {}
 }
-
 
 // declaração de função
 function a() {
-   // declaração de função
-   function b() {}
-   if (0) {
-      // expressão de função
-      function c() {}
-   }
+  // declaração de função
+  function b() {}
+  if (0) {
+    // expressão de função
+    function c() {}
+  }
 }
 ```
 
@@ -308,9 +310,9 @@ No script a seguir, a função 'zero' nunca é definida e não pode ser chamada,
 
 ```js
 if (0) {
-   function zero() {
-      document.writeln("Isso é zero.");
-   }
+  function zero() {
+    document.writeln("Isso é zero.");
+  }
 }
 ```
 
@@ -322,9 +324,9 @@ Nota: Some JavaScript engines, not including [SpiderMonkey](/pt-BR/docs/SpiderMo
 
 ```js
 if (0) {
-   var zero = function() {
-      document.writeln("Aqui tem zero.");
-   }
+  var zero = function () {
+    document.writeln("Aqui tem zero.");
+  };
 }
 ```
 
@@ -337,12 +339,13 @@ A função a seguir retorna uma sequência contendo a representação formatada 
 ```js
 // Esta função retorna uma string preenchida com zeros à esquerda
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // Inicializar valor de retorno como string
-   var numZeros = totalLen - numStr.length; // Calcular números de zeros
-   for (var i = 1; i <= numZeros; i++) {    // Preencher a quantidade de zeros
-      numStr = "0" + numStr;
-   }
-   return numStr; // Retorna a string já preenchida
+  var numStr = num.toString(); // Inicializar valor de retorno como string
+  var numZeros = totalLen - numStr.length; // Calcular números de zeros
+  for (var i = 1; i <= numZeros; i++) {
+    // Preencher a quantidade de zeros
+    numStr = "0" + numStr;
+  }
+  return numStr; // Retorna a string já preenchida
 }
 ```
 
@@ -350,9 +353,9 @@ The following statements call the padZeros function.
 
 ```js
 var resultado;
-resultado = padZeros(42,4); // retorno "0042"
-resultado = padZeros(42,2); // retorno "42"
-resultado = padZeros(5,4);  // retorno "0005"
+resultado = padZeros(42, 4); // retorno "0042"
+resultado = padZeros(42, 2); // retorno "42"
+resultado = padZeros(5, 4); // retorno "0005"
 ```
 
 ### Example: Determining whether a function exists
@@ -360,22 +363,22 @@ resultado = padZeros(5,4);  // retorno "0005"
 You can determine whether a function exists by using the `typeof` operator. In the following example, a test is peformed to determine if the `window` object has a property called `noFunc` that is a function. If so, it is used; otherwise some other action is taken.
 
 ```js
- if ('function' == typeof window.noFunc) {
-   // use noFunc()
- } else {
-   // do something else
- }
+if ("function" == typeof window.noFunc) {
+  // use noFunc()
+} else {
+  // do something else
+}
 ```
 
 Note that in the `if` test, a reference to `noFunc` is used—there are no brackets "()" after the function name so the actual function is not called.
 
 ## Especificações
 
-| Specification                                                                                    | Status                   | Comment                                                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------ |
-| ECMAScript 1st Edition.                                                                          | Standard                 | Initial definition. Implemented in JavaScript 1.0                              |
-| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                         | {{Spec2('ES5.1')}} |                                                                                |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ES6')}}     | New: Arrow functions, Generator functions, default parameters, rest parameters |
+| Specification                                                            | Status             | Comment                                                                        |
+| ------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------------------------------ |
+| ECMAScript 1st Edition.                                                  | Standard           | Initial definition. Implemented in JavaScript 1.0                              |
+| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                  | {{Spec2('ES5.1')}} |                                                                                |
+| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ES6')}}   | New: Arrow functions, Generator functions, default parameters, rest parameters |
 
 ## Compatibilidade com navegadores
 

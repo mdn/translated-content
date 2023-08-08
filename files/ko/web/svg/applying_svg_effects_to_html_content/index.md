@@ -224,8 +224,6 @@ pre.target:hover {
 
 {{EmbedLiveSample('Example_Filtering', 650, 200)}}
 
-<p class="hidden"><a class="button liveSample" href="/files/3329/filterdemo.xhtml">View this example live</a></p>
-
 ### Example: Blurred Text
 
 In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also [CSS filter](/ko/docs/Web/CSS/filter#blur%28%29_2)). You can achieve the same effect using SVG filters.
