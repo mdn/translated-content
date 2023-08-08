@@ -158,7 +158,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 然而，整个 Unicode 字符集比 65536 大得多。额外的字符以*代理对*（surrogate pair）的形式存储在 UTF-16 中，代理对是一对 16 位码元，表示一个单个字符。为了避免起义，配对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于编码单码元字符。（更准确地说，前导代理的值在 `0xD800` 和 `0xDBFF` 之间（含），而后尾代理的值在 `0xDC00` 和 `0xDFFF` 之间（含）。）每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（code point）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
 
-“单独代理项”是指满足以下描述之一的 16 位码元：
+“单独代理项（lone surrogate）”是指满足以下描述之一的 16 位码元：
 
 - 它在范围 `0xD800` 到 `0xDBFF` 内（含）（即为前导代理），但它是字符串中的最后一个码元，或者下一个码元不是后尾代理。
 - 它在范围 `0xDC00` 到 `0xDFFF` 内（含）（即为后尾代理），但它是字符串中的第一个码元，或者前一个码元不是前导代理。
@@ -283,7 +283,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : 返回转换为大写的调用字符串值。
 - {{jsxref("String.prototype.toWellFormed()")}}
-  - : 返回一个字符串，其中包含的所有[单独代理项](#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)都替换为 Unicode 替换字符 U+FFFD。
+  - : 返回一个字符串，其中包含的所有[单独代理项](##utf-16_字符、unicode_码位和字素簇)都替换为 Unicode 替换字符 U+FFFD。
 - {{jsxref("String.prototype.trim()")}}
   - : 修剪字符串开头和结尾的空格。
 - {{jsxref("String.prototype.trimEnd()")}}
