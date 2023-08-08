@@ -95,7 +95,7 @@ Los parámetros para la función son los siguientes:
 - `p1, p2, …, pN`
   - : La `n`-sima cadena encontrada por un grupo de captura (incluyendo grupos de captura nombrados), siempre y cuando el primer parámetro para `replace()` sea un objeto _{{jsxref("RegExp")}}_. (Corresponde a `$1`, `$2`, etc. de la tabla de arriba). Por ejemplo, si el `patrón` es `/(\a+)(\b+)/`, entonces `p1` es la coincidencia para `\a+`, y `p2` es la coincidencia para `\b+`. Si el grupo es parte de una disyunción (por ejemplo, `"abc".replace(/(a)|(b)/, replacer)`), la alternativa que no tenga coincidencia será `undefined`.
 - `offset`
-  - : El _offset_ de la subcadena encontrada en toda la cadena siendo examinada. Por ejemplo, si toda la cadena fuera `'abcd'`, y la subcadena encontrada fuera `'bc'`, entonces este parámetro sería `1`.
+  - : La posición de la subcadena encontrada en toda la cadena siendo examinada. Por ejemplo, si toda la cadena fuera `'abcd'`, y la subcadena encontrada fuera `'bc'`, entonces este parámetro sería `1`.
 - `string`
   - : Toda la cadena siendo examinada.
 - `groups`
@@ -147,7 +147,7 @@ Esto imprime `'oranges are round, and oranges are juicy'`.
 
 ### Intercambiando palabras en una cadena
 
-El siguiente _script_ intercambia las palabras en la cadena. Para el texto de reemplazo, el _script_ usa [grupos de captura](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) y los patrones de reemplazo `$1` y `$2`.
+El siguiente código intercambia las palabras en la cadena. Para el texto de reemplazo, el código usa [grupos de captura](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) y los patrones de reemplazo `$1` y `$2`.
 
 ```js
 const re = /(\w+)\s(\w+)/;
@@ -203,7 +203,7 @@ function f2c(x) {
 
 ### Creando un reemplazador genérico
 
-Supongamos que queremos crear un reemplazador que agregue el _offset_ para cada coincidencia encontrada. Ya que la función de reemplazo ya recibe el parámetro `offset`, será trivial si la _regex_ es estáticamente conocida.
+Supongamos que queremos crear un reemplazador que agregue la posición para cada coincidencia encontrada. Ya que la función de reemplazo ya recibe el parámetro `offset`, será trivial si la _regex_ es estáticamente conocida.
 
 ```js
 "abcd".replace(/(bc)/, (match, p1, offset) => `${match} (${offset}) `);
