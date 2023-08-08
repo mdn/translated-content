@@ -31,7 +31,7 @@ Neste caso, a variável "foo" é redeclarada usando `let`.
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -44,11 +44,11 @@ test();
 Para mudar "foo" dentro do bloco if você precisa remover o `let` que causa a redeclaração.
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```

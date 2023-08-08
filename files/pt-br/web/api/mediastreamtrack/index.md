@@ -61,15 +61,13 @@ A interface **`MediaStream`** **r**epresenta uma stream de conteúdo de mídia. 
 - {{domxref("MediaStreamTrack.stop()")}}
   - : Stops playing the source associated to the track, both the source and the track are deassociated. The track state is set to `ended`.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
 ## See also
 

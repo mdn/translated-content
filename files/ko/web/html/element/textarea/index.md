@@ -9,8 +9,6 @@ slug: Web/HTML/Element/textarea
 
 {{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 ## 사용 문맥
 
 - [`컨텐츠 범주`](/ko/docs/HTML/Content_categories) [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content), [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content), [대화형 컨텐츠](/ko/docs/HTML/Content_categories#Interactive_content), [listed](/ko/docs/HTML/Content_categories#Form_listed), [labelable](/ko/docs/HTML/Content_categories#Form_labelable), [resettable](/ko/HTML/Content_categories#form_resettable), and [submittable](/ko/docs/HTML/Content_categories#Form_submittable) [form-associated](/ko/docs/HTML/Content_categories#Form-associated) element.

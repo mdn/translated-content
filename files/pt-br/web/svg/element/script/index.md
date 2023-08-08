@@ -16,8 +16,11 @@ Quaisquer funções definidas dentro de qualquer elemento `script` tem um escopo
 O seguinte trecho de código demonstra o uso da tag `script` do SVG. Neste código, nós usamos o JavaScript para alterar o raio do elemento SVG {{SVGElement("circle")}}.
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="https://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="https://www.w3.org/2000/svg">
   <script type="text/javascript">
     // <![CDATA[
     function change(evt) {
@@ -30,13 +33,12 @@ O seguinte trecho de código demonstra o uso da tag `script` do SVG. Neste códi
         radius = 15;
       }
 
-      target.setAttribute("r",radius);
-   }
-   // ]]>
+      target.setAttribute("r", radius);
+    }
+    // ]]>
   </script>
 
-  <circle cx="50" cy="50" r="45" fill="green"
-          onclick="change(evt)" />
+  <circle cx="50" cy="50" r="45" fill="green" onclick="change(evt)" />
 </svg>
 ```
 

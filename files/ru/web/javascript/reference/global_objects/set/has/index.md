@@ -34,25 +34,25 @@ mySet.has(value);
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
+mySet.add("foo");
 
-mySet.has('foo');  // returns true
-mySet.has('bar');  // returns false
+mySet.has("foo"); // returns true
+mySet.has("bar"); // returns false
 
 var set1 = new Set();
-var obj1 = {'key1': 1};
+var obj1 = { key1: 1 };
 set1.add(obj1);
 
-set1.has(obj1);        // returns true
-set1.has({'key1': 1}); // returns false because they are different object references
-set1.add({'key1': 1}); // now set1 contains 2 entries
+set1.has(obj1); // returns true
+set1.has({ key1: 1 }); // returns false because they are different object references
+set1.add({ key1: 1 }); // now set1 contains 2 entries
 ```
 
 ## Specifications
 
-| Specification                                                                                | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Specification                                                          | Status               | Comment             |
+| ---------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.has', 'Set.prototype.has')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-set.prototype.has', 'Set.prototype.has')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Browser compatibility

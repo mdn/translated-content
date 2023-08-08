@@ -20,18 +20,15 @@ This element only includes the [global attributes](/pt-BR/docs/Web/HTML/Global_a
 ## Example
 
 ```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
+<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
 ```
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                         | Status                   | Comment |
+| ------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rt-element', '&lt;rt&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'the-rt-element.html#the-rt-element', '&lt;rt&gt;')}}         | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML5 W3C', 'the-rt-element.html#the-rt-element', '&lt;rt&gt;')}}         | {{Spec2('HTML5 W3C')}}   |         |
 
 ## Compatibilidade com navegadores
 

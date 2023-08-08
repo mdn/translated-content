@@ -2,6 +2,7 @@
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Sumário
@@ -56,13 +57,13 @@ Strings são úteis para guardar dados que podem ser representados em forma de t
 Há duas maneiras de acessar um caractere individual em uma string. A primeira é o método {{jsxref("String.charAt", "charAt")}}:
 
 ```js
-return 'cat'.charAt(1); // returns "a"
+return "cat".charAt(1); // returns "a"
 ```
 
 A outra maneira (introduzido no ECMAScript 5) consiste em tratar a string como um objeto Array-like, onde os caráteres individuais correspondem a um índice numérico:
 
 ```js
-return 'cat'[1]; // returns "a"
+return "cat"[1]; // returns "a"
 ```
 
 Para acesso de caracteres usando uma notação de colchetes, tentando deletar ou designar um valor a estas propriedades não haverá sucesso. As propriedades envolvidas não são nem escritas ou configuráveis. (Veja {{jsxref("Object.defineProperty")}} para mais informações.)
@@ -74,12 +75,11 @@ Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScri
 ```js
 var a = "a";
 var b = "b";
-if (a < b) // verdadeiro
+if (a < b)
+  // verdadeiro
   print(a + " é menor que " + b);
-else if (a > b)
-  print(a + " é maior que " + b);
-else
-  print(a + " e " + b + " são iguais.");
+else if (a > b) print(a + " é maior que " + b);
+else print(a + " e " + b + " são iguais.");
 ```
 
 Um resultado similar pode ser alcançado usando o método {{jsxref("String.localeCompare", "localeCompare")}} herdado pelas instâncias de `String`.
@@ -95,16 +95,16 @@ var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // Loga "string"
-console.log(typeof s_obj);  // Loga "object"
+console.log(typeof s_obj); // Loga "object"
 ```
 
 String primitivas e objetos `String` também dão resultados diferentes quando usado {{jsxref("Global_Objects/eval", "eval")}}. Primitivas passadas para `eval` são tratadas como código fonte; Objetos `String` são tratados como todos os outros objetos são, retornando o objeto. Por exemplo:
 
 ```js
-s1 = "2 + 2";               // cria uma string primitiva
-s2 = new String("2 + 2");   // cria um objeto de String
-console.log(eval(s1));      // retorna o número 4
-console.log(eval(s2));      // retorna a string "2 + 2"
+s1 = "2 + 2"; // cria uma string primitiva
+s2 = new String("2 + 2"); // cria um objeto de String
+console.log(eval(s1)); // retorna o número 4
+console.log(eval(s2)); // retorna a string "2 + 2"
 ```
 
 Por estas razões, o código pode quebrar quando encontra objetos `String` quando espera na verdade uma string primitiva, apesar de que geralmente autores não precisam se preocupar com a distinção.
@@ -135,7 +135,7 @@ Métodos de instância `String` também estão disponíveis no Firefox a partir 
 
 ```js
 var num = 15;
-alert(String.replace(num, /5/, '2'));
+alert(String.replace(num, /5/, "2"));
 ```
 
 [Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
@@ -147,32 +147,50 @@ O seguinte é uma implementação para fornecer suporte a navegadores sem suport
 // Assume que todos os métodos de instância String fornecidos
 // já presentes (podem ser usadas implementações para este se não disponível)
 (function () {
-    'use strict';
+  "use strict";
 
-    var i,
-        // Nós também poderíamos construir o array de métodos com os seguintes,
-        // mas o método getOwnPropertyNames() não é implementável:
-        // Object.getOwnPropertyNames(String).filter(function (methodName)
-        //  {return typeof String[methodName] === 'function'});
-        methods = [
-            'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-            'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-            'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
-            'toLocaleUpperCase', 'localeCompare', 'match', 'search',
-            'replace', 'split', 'substr', 'concat', 'slice'
-        ],
-        methodCount = methods.length,
-        assignStringGeneric = function (methodName) {
-            var method = String.prototype[methodName];
-            String[methodName] = function (arg1) {
-                return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
-            };
-        };
+  var i,
+    // Nós também poderíamos construir o array de métodos com os seguintes,
+    // mas o método getOwnPropertyNames() não é implementável:
+    // Object.getOwnPropertyNames(String).filter(function (methodName)
+    //  {return typeof String[methodName] === 'function'});
+    methods = [
+      "quote",
+      "substring",
+      "toLowerCase",
+      "toUpperCase",
+      "charAt",
+      "charCodeAt",
+      "indexOf",
+      "lastIndexOf",
+      "startsWith",
+      "endsWith",
+      "trim",
+      "trimLeft",
+      "trimRight",
+      "toLocaleLowerCase",
+      "toLocaleUpperCase",
+      "localeCompare",
+      "match",
+      "search",
+      "replace",
+      "split",
+      "substr",
+      "concat",
+      "slice",
+    ],
+    methodCount = methods.length,
+    assignStringGeneric = function (methodName) {
+      var method = String.prototype[methodName];
+      String[methodName] = function (arg1) {
+        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+      };
+    };
 
-    for (i = 0; i < methodCount; i++) {
-        assignStringGeneric(methods[i]);
-    }
-}());
+  for (i = 0; i < methodCount; i++) {
+    assignStringGeneric(methods[i]);
+  }
+})();
 ```
 
 ## Instâncias de `String`
@@ -206,11 +224,11 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificações
 
-| Specification                                                        | Status                   | Comment              |
-| -------------------------------------------------------------------- | ------------------------ | -------------------- |
-| ECMAScript 1st Edition.                                              | Standard                 | Definições iniciais. |
+| Specification                                        | Status             | Comment              |
+| ---------------------------------------------------- | ------------------ | -------------------- |
+| ECMAScript 1st Edition.                              | Standard           | Definições iniciais. |
 | {{SpecName('ES5.1', '#sec-15.5', 'String')}}         | {{Spec2('ES5.1')}} |                      |
-| {{SpecName('ES6', '#sec-string-objects', 'String')}} | {{Spec2('ES6')}}     |                      |
+| {{SpecName('ES6', '#sec-string-objects', 'String')}} | {{Spec2('ES6')}}   |                      |
 
 ## Compatibilidade com navegadores
 

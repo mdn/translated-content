@@ -30,7 +30,9 @@ En un objeto de colección derivado (por ejemplo, su búfer de array personaliza
 ```js
 class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
-  static get [Symbol.species]() { return ArrayBuffer; }
+  static get [Symbol.species]() {
+    return ArrayBuffer;
+  }
 }
 ```
 

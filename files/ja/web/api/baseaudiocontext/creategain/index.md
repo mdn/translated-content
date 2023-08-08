@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createGain
 ## 構文
 
 ```js
-createGain()
+createGain();
 ```
 
 ### 引数

@@ -12,7 +12,11 @@ slug: Web/SVG/Attribute/fill
 アニメーションとしては次の 5 つの要素で使われています: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -20,27 +24,28 @@ html,body,svg { height:100% }
   <!-- Simple color fill -->
   <circle cx="50" cy="50" r="40" fill="pink" />
 
-
   <!-- Fill circle with a gradient -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%" stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>
 
   <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
-
   <!--
   Keeping the final state of an animated circle
   which is a circle with a radius of 40.
   -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate
+      attributeType="XML"
+      attributeName="r"
+      from="0"
+      to="40"
+      dur="5s"
+      fill="freeze" />
   </circle>
 </svg>
 ```

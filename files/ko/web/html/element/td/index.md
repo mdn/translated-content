@@ -9,8 +9,6 @@ _Table cell_ [HTML](/ko/docs/Web/HTML) 요소 (**`<td>`**) 는 데이터를 포�
 
 {{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 | [컨텐츠 범주](/ko/docs/Web/HTML/Content_categories) | 없음.                                                                                                                                                                                                          |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 허용된 컨텐츠                                       | 플로우 컨텐츠                                                                                                                                                                                                  |

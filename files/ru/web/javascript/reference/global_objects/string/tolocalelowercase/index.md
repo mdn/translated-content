@@ -24,7 +24,7 @@ str.toLocaleLowerCase()
 ### Пример: использование метода `toLocaleLowerCase()`
 
 ```js
-console.log('АЛФАВИТ'.toLocaleLowerCase()); // 'алфавит'
+console.log("АЛФАВИТ".toLocaleLowerCase()); // 'алфавит'
 ```
 
 ## Спецификации
