@@ -177,7 +177,7 @@ Stanzas
 
 この例は、短いという点を除けば `/(?:\r|\n|\u2028|\u2029|\r\n)/gu` or `/(?:[\r\n\u2028\u2029]|\r\n)/gu` とまったく同じです。
 
-`\q{}` の最も有益な用途は、差分と交差を行う場合です。前回までは[複数の前方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection)で使用可能でした。以下の関数はアメリカ、中国、ロシア、イギリス、フランスのどれでもない国旗に一致します。
+`\q{}` の最も有益な用途は、差分と交差を行う場合です。前回までは[複数の先読み](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion#pattern_subtraction_and_intersection)で使用可能でした。以下の関数はアメリカ、中国、ロシア、イギリス、フランスのどれでもない国旗に一致します。
 
 ```js
 function notUNSCPermanentMember(flag) {
