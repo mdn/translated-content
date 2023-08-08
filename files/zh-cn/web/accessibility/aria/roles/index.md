@@ -70,7 +70,7 @@ ARIA 角色共分为 6 类：
 
 ### 2. 小部件角色
 
-各种小部件角色用于定义常见的交互模式。类似于文档结构角色，有些这些角色与同样受支持的语义原生 HTML 是重复的，因此不应该使用。这两个列表的区别在于，通常来说，小部件角色需要 JavaScript 交互，而文档结构角色通常不需要。
+各种小部件角色用于定义常见的交互模式。类似于文档结构角色，有些这些角色与同样受支持的原生 HTML 的语义是重复的，因此不应该使用。这两个列表的区别在于，通常来说，小部件角色需要 JavaScript 交互，而文档结构角色不需要。
 
 - [scrollbar](/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [searchbox](/zh-CN/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
