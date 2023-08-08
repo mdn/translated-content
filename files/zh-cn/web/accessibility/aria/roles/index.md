@@ -99,7 +99,7 @@ ARIA 角色共分为 6 类：
 
 ### 3. 地标角色
 
-地标角色提供了一种识别网页的组织和结构的方法。对页面的各个部分进行分类并加标，可以以编程方式呈现出通过布局直观传达的结构信息。屏幕阅读器使用地标角色为页面的重要部分提供键盘导航。谨慎使用这些。太多的地标角色会在屏幕阅读器中产生“噪音”，导致难以理解页面的整体布局。
+地标（landmark）角色提供了一种识别网页的组织和结构的方法。对页面的各个部分进行分类并添加标签，可以用编程方式呈现出通过布局直观传达的结构信息。屏幕阅读器使用地标角色为页面的重要部分提供键盘导航。谨慎使用这些。太多的地标角色会在屏幕阅读器中产生“噪音”，导致难以理解页面的整体布局。
 
 - [banner](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) （文档 {{HTMLElement('header')}}）
 - [complementary](/zh-CN/docs/Web/Accessibility/ARIA/Roles/complementary_role)（{{HTMLElement('aside')}}）
