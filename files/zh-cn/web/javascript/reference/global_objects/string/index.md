@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ## 描述
 
-字符串对于保存可以以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度", "", 1)}}，使用 [+ 和 += 字符串运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)来构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
+字符串对于保存可以以文本形式表示的数据很有用。一些最常用的字符串操作是检查它们的{{jsxref("String/length","长度", "", 1)}}，使用 [+ 和 += 字符串运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)来构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
 
 ### 创建字符串
 
@@ -112,7 +112,7 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告：** 你应该发现你自己很少使用 `String` 作为构造函数。
+> **警告：** 你应该基本不会将 `String` 作为构造函数使用。
 
 使用 {{jsxref("Global_Objects/eval", "eval()")}} 时，字符串原始值和 `String` 对象也会给出不同的结果。传递给 `eval` 的原始值被当作源代码处理；而 `String` 对象则被当作对象处理，返回对象。例如：
 
