@@ -265,7 +265,7 @@ function toggleButton(element) {
 
 > **警告：** 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果使用了链接以表现得像是个按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 添加一个键事件处理器，以与原生的按钮行为保持一致。
 
-使用了 `button` 角色时，屏幕阅读器会将其说成是一个按钮，通常是说“单击（click）”然后是其可访问的名称。可访问名称是元素的内容，或者 `aria-label` 的会是，或者由 `aria-labelledby` 属性引用的值，或者描述（如果已包括）。
+使用了 `button` 角色时，屏幕阅读器会声明其说成是一个按钮，通常是说“单击（click）”然后是其无障碍名称。无障碍名称是元素的内容，或是 `aria-label` 的值，或是由 `aria-labelledby` 属性引用的元素的值，或是描述（如果已包括）。
 
 ## 最佳实践
 
