@@ -1,7 +1,6 @@
 ---
 title: Como adicionar etiquetas às páginas corretamente
 slug: MDN/Writing_guidelines/Howto
-original_slug: MDN/Writing_guidelines/Howto/Tag
 ---
 
 {{MDNSidebar}}

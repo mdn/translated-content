@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -11,7 +10,7 @@ La méthode **`HTMLSelectElement.checkValidity()`** vérifie si l'élément a de
 ## Syntaxe
 
 ```js
-checkValidity()
+checkValidity();
 ```
 
 ### Paramètres

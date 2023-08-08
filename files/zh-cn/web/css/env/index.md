@@ -1,7 +1,6 @@
 ---
 title: env()
 slug: Web/CSS/env
-original_slug: Web/CSS/env()
 ---
 
 {{CSSRef}}
@@ -9,16 +8,15 @@ original_slug: Web/CSS/env()
 **`env()`** [CSS](/zh-CN/docs/Web/CSS) 函数以类似于 {{cssxref("var")}} 函数和 [custom properties](/zh-CN/docs/Web/CSS/--*) 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。为了告诉浏览器使用屏幕上所有的可用空间，并以此使用`env()`变量，我们需要添加一个新的视口元值：
 
 ```html
-<meta name="viewport" content="... viewport-fit=cover">
+<meta name="viewport" content="... viewport-fit=cover" />
 ```
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
+      safe-area-inset-bottom,
+      20px
+    ) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -59,11 +57,10 @@ env(safe-area-inset-left, 1.4rem);
 
 ```html
 <p>
-  If the <code>env()</code> function is supported in your browser,
-  this paragraph's text will have 50px of padding between it and
-  the left border — but not the top, right and bottom.
-  This is because the accompanying CSS is the equivalent of
-  <code>padding: 0 0 0 50px</code>, because, unlike other CSS
+  If the <code>env()</code> function is supported in your browser, this
+  paragraph's text will have 50px of padding between it and the left border —
+  but not the top, right and bottom. This is because the accompanying CSS is the
+  equivalent of <code>padding: 0 0 0 50px</code>, because, unlike other CSS
   properties, user agent property names are case-sensitive.
 </p>
 ```
@@ -72,11 +69,10 @@ env(safe-area-inset-left, 1.4rem);
 p {
   width: 300px;
   border: 2px solid red;
-  padding:
-    env(safe-area-inset-top, 50px)
-    env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px)
-    env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
+      safe-area-inset-bottom,
+      50px
+    ) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -85,10 +81,23 @@ p {
 ### Example values
 
 ```css
-padding: env(safe-area-inset-bottom, 50px); /* zero for all rectangular user agents */
-padding: env(Safe-area-inset-bottom, 50px); /* 50px because UA properties are case sensitive */
-padding: env(x, 50px 20px); /* as if padding: '50px 20px' were set because x is not a valid environment variable */
-padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
+padding: env(
+  safe-area-inset-bottom,
+  50px
+); /* zero for all rectangular user agents */
+padding: env(
+  Safe-area-inset-bottom,
+  50px
+); /* 50px because UA properties are case sensitive */
+padding: env(
+  x,
+  50px 20px
+); /* as if padding: '50px 20px' were set because x is not a valid environment variable */
+padding: env(
+  x,
+  50px,
+  20px
+); /* ignored because '50px, 20px' is not a valid padding value and x is not a valid environment variable */
 ```
 
 向下兼容的语法和自定义属性一样，允许使用逗号。但是如果属性值不支持逗号，则该值无效。

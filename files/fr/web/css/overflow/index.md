@@ -1,12 +1,11 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-translation_of: Web/CSS/overflow
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
+La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés {{cssxref("overflow-x")}} et {{cssxref("overflow-y")}}.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
@@ -79,33 +78,37 @@ La propriété `overflow` peut être définie grâce à un ou deux des mots-clé
 #### HTML
 
 ```html
-  <div>
-    <code>visible</code>
-    <p class="visible">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>visible</code>
+  <p class="visible">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>hidden</code>
-    <p class="hidden">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>hidden</code>
+  <p class="hidden">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>scroll</code>
-    <p class="scroll">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>scroll</code>
+  <p class="scroll">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>auto</code>
-    <p class="auto">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>auto</code>
+  <p class="auto">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 ```
 
 #### CSS

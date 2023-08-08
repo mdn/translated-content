@@ -1,7 +1,6 @@
 ---
 title: document.compatMode
 slug: Web/API/Document/compatMode
-translation_of: Web/API/Document/compatMode
 ---
 
 {{ ApiRef("DOM") }}
@@ -11,7 +10,7 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 ## Syntaxe
 
 ```js
-mode = document.compatMode
+mode = document.compatMode;
 ```
 
 ## Valeurs

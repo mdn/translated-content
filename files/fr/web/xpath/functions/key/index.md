@@ -1,7 +1,6 @@
 ---
 title: key
 slug: Web/XPath/Functions/key
-translation_of: Web/XPath/Functions/key
 ---
 
 {{ XsltRef() }}

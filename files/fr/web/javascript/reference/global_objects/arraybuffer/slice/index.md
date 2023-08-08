@@ -1,7 +1,6 @@
 ---
 title: ArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 ---
 
 {{JSRef}}
@@ -37,7 +36,7 @@ La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) param�
 
 ```js
 var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0)
+var buf2 = buf1.slice(0);
 ```
 
 ## Spécifications

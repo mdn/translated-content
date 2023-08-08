@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
 
 {{JSRef}}
@@ -13,9 +12,9 @@ La méthode **`slice()`** renvoie un objet tableau, contenant une copie superfic
 ## Syntaxe
 
 ```js
-arr.slice()
-arr.slice(début)
-arr.slice(début, fin)
+arr.slice();
+arr.slice(début);
+arr.slice(début, fin);
 ```
 
 ### Paramètres

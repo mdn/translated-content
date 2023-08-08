@@ -62,10 +62,10 @@ loop(food = 0; foodNeeded = 10) {
 왜 반복문이 그렇게 좋은 것인지를 완벽히 보여주는 예제를 봅시다. 우리가 {{htmlelement("canvas")}} 요소 위에 무작위의 원 100개를 그리고 싶다고 칩시다 (예제를 다시 실행하고, 다시 다른 무작위 집합들을 보기 위해 *Update*버튼을 누르세요):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -90,41 +90,37 @@ loop(food = 0; foodNeeded = 10) {
     </style>
   </head>
   <body>
+    <button>Update</button>
 
-  <button>Update</button>
-
-  <canvas></canvas>
-
+    <canvas></canvas>
 
     <script>
-    const btn = document.querySelector('button');
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
+      const btn = document.querySelector("button");
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
 
-    let WIDTH = document.documentElement.clientWidth;
-    let HEIGHT = document.documentElement.clientHeight;
+      let WIDTH = document.documentElement.clientWidth;
+      let HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (let i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    btn.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (let i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      btn.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -136,7 +132,7 @@ loop(food = 0; foodNeeded = 10) {
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -151,7 +147,7 @@ for (let i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
+ctx.fillStyle = "rgba(255,0,0,0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -173,21 +169,21 @@ for (초기화식; 종료 조건; 증감식) {
 1. 괄호가 뒤따라오는 키워드 `for`.
 2. 괄호 안에는, 세미콜론으로 구분되는, 세개의 항목이 있습니다:
 
-    1. **초기화식**(initializer) — 이것은 보통 숫자로 설정된 변수인데, 반복문이 실행될 횟수(count)까지 증가됩니다. 이것은 또한 때때로 **카운터 변수**(counter variable)라고도 불립니다.
-    2. **조건식**(condition) — 전에 언급했듯이, 이것은 언제 반복문이 반복을 멈춰야만 하는지를 정의합니다. 이것은 일반적으로 비교 연산자(comparison operator)를 특징으로 하는 표현식(expression)인데, 이는 종료 조건이 충족되었는지를 확인하는 테스트입니다.
-    3. **증감식**(final-expression) — 이것은 반복문이 전체 반복을 거쳤을 때마다 항상 평가(혹은 실행)됩니다. 이것은 보통 카운터 변수를 증가 (혹은 몇몇 경우에는 감소)시키기 위해, 조건이 더 이상 `true`가 아닌 지점에 가까워지게 하기 위해 제공됩니다.
+   1. **초기화식**(initializer) — 이것은 보통 숫자로 설정된 변수인데, 반복문이 실행될 횟수(count)까지 증가됩니다. 이것은 또한 때때로 **카운터 변수**(counter variable)라고도 불립니다.
+   2. **조건식**(condition) — 전에 언급했듯이, 이것은 언제 반복문이 반복을 멈춰야만 하는지를 정의합니다. 이것은 일반적으로 비교 연산자(comparison operator)를 특징으로 하는 표현식(expression)인데, 이는 종료 조건이 충족되었는지를 확인하는 테스트입니다.
+   3. **증감식**(final-expression) — 이것은 반복문이 전체 반복을 거쳤을 때마다 항상 평가(혹은 실행)됩니다. 이것은 보통 카운터 변수를 증가 (혹은 몇몇 경우에는 감소)시키기 위해, 조건이 더 이상 `true`가 아닌 지점에 가까워지게 하기 위해 제공됩니다.
 
 3. 코드 블럭을 감싸는 중괄호 — 이 코드는 반복문이 반복될 때마다 실행될 것입니다.
 
 이것들이 무엇을 하는지를 더욱 확실하게 시각화할 수 있도록 실제 예제를 봅시다.
 
 ```js
-const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-let info = 'My cats are called ';
-const para = document.querySelector('p');
+const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+let info = "My cats are called ";
+const para = document.querySelector("p");
 
 for (let i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+  info += cats[i] + ", ";
 }
 
 para.textContent = info;
@@ -196,33 +192,27 @@ para.textContent = info;
 이것은 우리에게 다음의 결과를 보여줍니다:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Basic for loop example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    let info = 'My cats are called ';
-    const para = document.querySelector('p');
+      const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+      let info = "My cats are called ";
+      const para = document.querySelector("p");
 
-    for (let i = 0; i < cats.length; i++) {
-      info += cats[i] + ', ';
-    }
+      for (let i = 0; i < cats.length; i++) {
+        info += cats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
@@ -237,9 +227,9 @@ para.textContent = info;
 2. 반복문은 `i`가 더 이상 `cats` 배열의 길이(length)보다 작지 않을 때까지 실행되라는 명령을 받았습니다. 이것은 중요합니다 — 조건은 반복문이 여전히 실행되는 것 아래의 조건입니다. 그래서 이 경우, `i < cats.length`가 여전히 true인 동안, 반복문은 계속 실행될 것입니다.
 3. 반복문 안에서, 우리는 콤마와 공백(space)과 같이 있는 현재 반복 요소(item) (`cats[이 때 i가 무엇이든]`인, `cats[i]`)를 `info` 변수의 끝에 연결시킵니다. 그래서:
 
-    1. 첫번째 실행 동안에, `i = 0`이므로, `cats[0] + ', '` (이는 `Bill,`과 같습니다)는 `info`에 연결될 것입니다.
-    2. 두번째 실행 동안에, `i = 1`이므로, `cats[1] + ', '` (이는 `Jeff,`와 같습니다)는 `info`에 연결될 것입니다.
-    3. 계속 이와 같습니다. 반복문이 실행 된 후마다, `i`에 1이 더해질 것이고 (`i++`), 이 과정(process)은 다시 실행될 것입니다.
+   1. 첫번째 실행 동안에, `i = 0`이므로, `cats[0] + ', '` (이는 `Bill,`과 같습니다)는 `info`에 연결될 것입니다.
+   2. 두번째 실행 동안에, `i = 1`이므로, `cats[1] + ', '` (이는 `Jeff,`와 같습니다)는 `info`에 연결될 것입니다.
+   3. 계속 이와 같습니다. 반복문이 실행 된 후마다, `i`에 1이 더해질 것이고 (`i++`), 이 과정(process)은 다시 실행될 것입니다.
 
 4. `i`가 `cats.length`와 같아질 때 (이 경우, 5), 반복문은 멈출 것이고, 브라우저는 반복문 아래에 있는 다음 코드로 이동할 것입니다.
 
@@ -256,9 +246,9 @@ para.textContent = info;
 ```js
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
@@ -277,7 +267,7 @@ for (let i = 0; i < cats.length; i++) {
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -286,67 +276,76 @@ for (let i = 0; i < cats.length; i++) {
 이제 JavaScript를 봅시다:
 
 ```js
-const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   let searchName = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(':');
+    let splitContact = contacts[i].split(":");
     if (splitContact[0] === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent =
+        splitContact[0] + "'s number is " + splitContact[1] + ".";
       break;
     } else {
-      para.textContent = 'Contact not found.';
+      para.textContent = "Contact not found.";
     }
   }
 });
 ```
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple contact search example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
 
-  <label for="search">Search by contact name: </label>
-  <input id="search" type="text">
-  <button>Search</button>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
+      const contacts = [
+        "Chris:2232322",
+        "Sarah:3453456",
+        "Bill:7654322",
+        "Mary:9998769",
+        "Dianne:9384975",
+      ];
+      const para = document.querySelector("p");
+      const input = document.querySelector("input");
+      const btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      let searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 0; i < contacts.length; i++) {
-        let splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
+      btn.addEventListener("click", function () {
+        let searchName = input.value;
+        input.value = "";
+        input.focus();
+        for (let i = 0; i < contacts.length; i++) {
+          let splitContact = contacts[i].split(":");
+          if (splitContact[0] === searchName) {
+            para.textContent =
+              splitContact[0] + "'s number is " + splitContact[1] + ".";
+            break;
+          } else if (i === contacts.length - 1)
+            para.textContent = "Contact not found.";
         }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -358,9 +357,9 @@ btn.addEventListener('click', function() {
 3. 다음 검색의 준비를 위해, 텍스트 인풋을 비우고 그것을 다시 포커싱하기 전에, 우리는 `searchName` 변수에 텍스트 인풋에 입력된 값을 저장합니다. 검색이 대소문자 구분이 없도록(case-insensitive) 우리가 또한 [`toLowerCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)메서드를 문자열에 실행했다는 것에 주목하세요.
 4. 이제 for 반복문의 흥미로운 점을 봅시다:
 
-    1. 우리는 `0`에서 카운터를 시작하고, 카운터가 `contacts.length`보다 더 이상 작지 않을 때까지 반복문을 실행시키고, 그리고 `i`를 반복문의 각 반복 후마다 1씩 증가시킵니다.
-    2. 반복문 내부에서, 우리는 첫째로 현재 연락처 (`contacts[i]`)를 콜론 문자에서 나누고(split), 결과인 두 값을 `splitContact` 배열에 저장했습니다.
-    3. 그리고서 우리는 `splitContact[0]` (연락처의 이름, 다시 얘기하자면 [`toLowerCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)로 소문자화(lower-cased)된)이, 입력된 `searchName`과 같은지를 검사하는 조건문을 사용했습니다. 만약 그렇다면, 우리는 연락처의 번호가 무엇인지를 알리는 문자열을 문단에 입력하고, 반복문을 끝내기 위해 `break`을 사용합니다.
+   1. 우리는 `0`에서 카운터를 시작하고, 카운터가 `contacts.length`보다 더 이상 작지 않을 때까지 반복문을 실행시키고, 그리고 `i`를 반복문의 각 반복 후마다 1씩 증가시킵니다.
+   2. 반복문 내부에서, 우리는 첫째로 현재 연락처 (`contacts[i]`)를 콜론 문자에서 나누고(split), 결과인 두 값을 `splitContact` 배열에 저장했습니다.
+   3. 그리고서 우리는 `splitContact[0]` (연락처의 이름, 다시 얘기하자면 [`toLowerCase()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)로 소문자화(lower-cased)된)이, 입력된 `searchName`과 같은지를 검사하는 조건문을 사용했습니다. 만약 그렇다면, 우리는 연락처의 번호가 무엇인지를 알리는 문자열을 문단에 입력하고, 반복문을 끝내기 위해 `break`을 사용합니다.
 
 5. `(contacts.length-1)` 반복 후에, 만약 연락처 이름이 입력된 검색과 일치하지 않으면 문단 텍스트는 "Contact not found."로 설정되고, 반복문은 조건이 더 이상 true가 아닐 때까지 반복을 계속합니다.
 
@@ -381,52 +380,47 @@ for (let i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
 여기 출력이 있습니다:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Integer squares generator</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="text" />
+    <button>Generate integer squares</button>
 
-  <label for="number">Enter number: </label>
-  <input id="number" type="text">
-  <button>Generate integer squares</button>
-
-  <p>Output: </p>
-
+    <p>Output:</p>
 
     <script>
-    const para = document.querySelector('p');
-    const input = document.querySelector('input');
-    const btn = document.querySelector('button');
+      const para = document.querySelector("p");
+      const input = document.querySelector("input");
+      const btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      let num = input.value;
-      input.value = '';
-      input.focus();
-      for (let i = 1; i <= num; i++) {
-        let sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      btn.addEventListener("click", function () {
+        para.textContent = "Output: ";
+        let num = input.value;
+        input.value = "";
+        input.focus();
+        for (let i = 1; i <= num; i++) {
+          let sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -466,9 +460,9 @@ let i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -499,9 +493,9 @@ let i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -535,123 +529,137 @@ do {
 
 만약 실수했다면, 언제나 예제를 "Reset" 버튼으로 리셋할 수 있습니다. 만약 정말로 막혔다면, 답을 보기 위해 "Show solution"을 누르세요.
 
-<div class="hidden"><h6 id="Active_learning">Active learning</h6><pre class="brush: html notranslate">&#x3C;h2>Live output&#x3C;/h2>
-&#x3C;div class="output" style="height: 410px;overflow: auto;">
+###### Active learning
 
-&#x3C;/div>
+```html hidden
+<h2>Live output</h2>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
-&#x3C;h2>Editable code&#x3C;/h2>
-&#x3C;p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).&#x3C;/p>
-&#x3C;textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
+<h2>Editable code</h2>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
+<textarea id="code" class="playable-code" style="height: 300px;width: 95%">
+var output = document.querySelector('.output');
 output.innerHTML = '';
 
-// let i = 10;
+// var i = 10;
 
-// const para = document.createElement('p');
+// var para = document.createElement('p');
 // para.textContent = ;
 // output.appendChild(para);
-&#x3C;/textarea>
+</textarea>
 
-&#x3C;div class="playable-buttons">
-&#x3C;input id="reset" type="button" value="Reset">
-&#x3C;input id="solution" type="button" value="Show solution">
-&#x3C;/div>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
 
-</pre><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><pre class="brush: css notranslate">html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
-}</pre><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><p class="brush: js"></p><pre class="brush: js notranslate">const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-let code = textarea.value;
-let userEntry = textarea.value;
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+var userEntry = textarea.value;
 
 function updateCode() {
-eval(textarea.value);
+  eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = jsSolution;
-solution.value = 'Show solution';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = jsSolution;
+  solution.value = "Show solution";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Show solution') {
-textarea.value = solutionEntry;
-solution.value = 'Hide solution';
-} else {
-textarea.value = userEntry;
-solution.value = 'Show solution';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
 });
 
-let jsSolution = 'let output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
-let solutionEntry = jsSolution;
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n  para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
+var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-let scrollPos = textarea.scrollTop;
-let caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-let front = (textarea.value).substring(0, caretPos);
-let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
-// We only want to save the state when the user code is being shown,
-// not the solution, so that solution is not saved over the user code
-if(solution.value === 'Show solution') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
-};</pre><p class="brush: js"></p></div>
+  updateCode();
+};
+```
 
 {{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}
 
@@ -680,12 +688,14 @@ updateCode();
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -702,8 +712,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -730,9 +740,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -740,38 +750,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-let jsSolution = 'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+let jsSolution =
+  "const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nconst admitted = document.querySelector('.admitted');\nconst refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Admit: ';\nrefused.textContent = 'Refuse: '\nlet i = 0;\n\ndo {\n if(people[i] === 'Phil' || people[i] === 'Lola') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -783,8 +794,11 @@ function insertAtCaret(text) {
   let scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
 
-  let front = (textarea.value).substring(0, caretPos);
-  let back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  let front = textarea.value.substring(0, caretPos);
+  let back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -795,10 +809,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

@@ -26,7 +26,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -43,7 +42,6 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

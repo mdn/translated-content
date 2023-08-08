@@ -346,13 +346,13 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - Core attributes
 
-  - : [Core attributes](/en-US/docs/Web/SVG/Attribute/Core)
+  - : [Core attributes](/ko/docs/Web/SVG/Attribute/Core)
 
     {{SVGAttr("id")}}, {{SVGAttr("lang")}}, {{SVGAttr("tabindex")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}}, {{SVGAttr("xml:space")}}
 
 - Style attributes
 
-  - : [Style attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+  - : [Style attributes](/ko/docs/Web/SVG/Attribute/Styling)
 
     {{SVGAttr("class")}}, {{SVGAttr("style")}}
 
@@ -365,7 +365,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Presentation attributes
 
-> **Note:** All [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
+> **Note:** All [SVG presentation attributes](/ko/docs/Web/SVG/Attribute/Presentation) can be used as CSS properties.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -454,30 +454,30 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - Animation event attributes
 
-  - : [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
+  - : [Animation event attributes](/ko/docs/Web/SVG/Attribute/Events#animation_event_attributes)
 
     **`onbegin`**, **`onend`**, **`onrepeat`**
 
 - Document event attributes
 
-  - : [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes)
+  - : [Document event attributes](/ko/docs/Web/SVG/Attribute/Events#document_event_attributes)
 
     **`onabort`**, **`onerror`**, **`onresize`**, **`onscroll`**, **`onunload`**
 
 - Global event attributes
 
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes)
+  - : [Global event attributes](/ko/docs/Web/SVG/Attribute/Events#global_event_attributes)
 
     **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**
 
 - Graphical event attributes
 
-  - : [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+  - : [Graphical event attributes](/ko/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
 
     **`onactivate`**, **`onfocusin`**, **`onfocusout`**
 
 ## 같이 보기
 
-- [SVG element reference](/en-US/docs/Web/SVG/Element)
-- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG element reference](/ko/docs/Web/SVG/Element)
+- [SVG Tutorial](/ko/docs/Web/SVG/Tutorial)
+- [SVG interface reference](/ko/docs/Web/API/Document_Object_Model#svg_interfaces)

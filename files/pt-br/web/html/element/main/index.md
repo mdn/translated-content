@@ -32,18 +32,22 @@ Este elemento admite apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
   <article>
     <h2>Vermelho delicioso</h2>
-    <p>Estas maçãs vermelhas brilhantes são as mais comumente encontradas em muitos supermercados.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      Estas maçãs vermelhas brilhantes são as mais comumente encontradas em
+      muitos supermercados.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
 
   <article>
     <h2>Granny Smith</h2>
-    <p>Essas suculentas maçãs verdes, são um ótimo recheio para torta de maçã.</p>
-    <p>... </p>
-    <p>... </p>
+    <p>
+      Essas suculentas maçãs verdes, são um ótimo recheio para torta de maçã.
+    </p>
+    <p>...</p>
+    <p>...</p>
   </article>
-
 </main>
 
 <!-- outro conteúdo -->
@@ -51,20 +55,18 @@ Este elemento admite apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ## Especificações
 
-| Especificação                                                                                                    | Estado                           | Comentário                                                                                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} | Removida a restrição sobre não usar \<main> como um filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}. |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | Não há mudança na {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                   |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                                                                                                                                                                                                                   |
+| Especificação                                                                       | Estado                   | Comentário                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                    | {{Spec2('HTML WHATWG')}} | Removida a restrição sobre não usar \<main> como um filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}. |
+| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}   | {{Spec2('HTML5.1')}}     | Não há mudança na {{SpecName('HTML5 W3C')}}                                                                                                                                                                    |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}   | Definição inicial.                                                                                                                                                                                             |
 
 ## Navegadores compatíveis
 
 O elemento \<main> é amplamente suportado (exceto pelo Internet Explorer). Sugere-se que, até que o elemento \<main> seja suportado pelo Internet Explorer, adicione a ele o atributo role com o valor "main":
 
 ```html
-<main role="main">
-  ...
-</main>
+<main role="main">...</main>
 ```
 
 {{Compat("html.elements.main")}}

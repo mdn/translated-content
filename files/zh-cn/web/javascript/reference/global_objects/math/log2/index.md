@@ -27,13 +27,13 @@ Math.log2(x)
 ## 示例
 
 ```js
-Math.log2(2)     // 1
-Math.log2(1024)  // 10
-Math.log2(1)     // 0
-Math.log2(0)     // -Infinity
-Math.log2(-2)    // NaN
-Math.log2("1024")// 10
-Math.log2("foo") // NaN
+Math.log2(2); // 1
+Math.log2(1024); // 10
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
+Math.log2("1024"); // 10
+Math.log2("foo"); // NaN
 ```
 
 ## 规范

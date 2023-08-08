@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
 
 {{JSRef}} {{deprecated_header}}
@@ -11,7 +10,7 @@ La méthode **`setYear()`** définit l'année pour pour la date, selon l'heure l
 ## Syntaxe
 
 ```js
-dateObj.setYear(valeurAnnée)
+dateObj.setYear(valeurAnnée);
 ```
 
 ### Paramètres

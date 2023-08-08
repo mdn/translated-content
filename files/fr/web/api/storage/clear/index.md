@@ -1,7 +1,6 @@
 ---
 title: Storage.clear()
 slug: Web/API/Storage/clear
-translation_of: Web/API/Storage/clear
 ---
 
 {{APIRef("Web Storage API")}}
@@ -24,9 +23,9 @@ La fonction suivante crée trois entrées de données dans le stockage local, pu
 
 ```js
 function peuplerLeStockage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'monChat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "monChat.png");
 
   localStorage.clear();
 }

@@ -49,36 +49,37 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
 1. 打开终端（Windows 中打开命令行工具）
 2. 创建一个空文件夹用来存放项目，比如 `"test-node"`，然后在终端输入以下命令进入这个文件夹：
 
-    ```bash
-    cd test-node
-    ```
+   ```bash
+   cd test-node
+   ```
 
 3. 用你最喜欢的文本编辑器创建一个名为 `"hello.js"` 的文件，把以下代码粘贴进来。
 
-    ```js
-    // 调用 HTTP 模块
-    const http = require("http");
+   ```js
+   // 调用 HTTP 模块
+   const http = require("http");
 
-    // 创建 HTTP 服务器并监听 8000 端口的所有请求
-    http.createServer((request, response) => {
+   // 创建 HTTP 服务器并监听 8000 端口的所有请求
+   http
+     .createServer((request, response) => {
+       // 用 HTTP 状态码和内容类型来设定 HTTP 响应头
+       response.writeHead(200, { "Content-Type": "text/plain" });
 
-        // 用 HTTP 状态码和内容类型来设定 HTTP 响应头
-        response.writeHead(200, {'Content-Type': 'text/plain'});
+       // 发送响应体 "Hello World"
+       response.end("Hello World\n");
+     })
+     .listen(8000);
 
-        // 发送响应体 "Hello World"
-        response.end('Hello World\n');
-    }).listen(8000);
-
-    // 在控制台打印访问服务器的 URL
-    console.log('服务器运行于 http://127.0.0.1:8000/');
-    ```
+   // 在控制台打印访问服务器的 URL
+   console.log("服务器运行于 http://127.0.0.1:8000/");
+   ```
 
 4. 将其保存在刚才创建的文件夹。
 5. 返回终端并输入以下命令：
 
-    ```bash
-    node "hello.js"
-    ```
+   ```bash
+   node "hello.js"
+   ```
 
 最后，在浏览器地址栏中输入 `"http://localhost:8000"` 并按回车，可以看到一个大面积空白的网页，左上角有“Hello World" 字样。
 
@@ -142,15 +143,15 @@ Express 是高度包容的。几乎可以将任何兼容的中间件以任意顺
 > ```
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
 app.listen(3000, () => {
-  console.log('示例应用正在监听 3000 端口 !');
+  console.log("示例应用正在监听 3000 端口 !");
 });
 ```
 
@@ -167,7 +168,7 @@ app.listen(3000, () => {
 下面的代码以 Express 框架为例展示了如何通过名字来导入模块。首先，调用 `require()` 函数，用字符串（`'express'`）指定模块的名字，然后调用返回的对象来创建 Express 应用。然后就可以访问应用对象的属性和函数了。
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 ```
 
@@ -178,16 +179,20 @@ const app = express();
 为了让对象暴露于模块之外，只需把它们设置为 `exports` 对象的附加属性即可。例如，下面的 **square.js** 模块就是一个导出了 `area()` 和 `perimeter()` 方法的文件：
 
 ```js
-exports.area = width => { return width * width; };
-exports.perimeter = width => { return 4 * width; };
+exports.area = (width) => {
+  return width * width;
+};
+exports.perimeter = (width) => {
+  return 4 * width;
+};
 ```
 
 可以用 `require()` 导入这个模块，然后调用导出的方法，用法如下：
 
 ```js
-const square = require('./square');
+const square = require("./square");
 // 这里 require() 了文件名，省略了 .js 扩展名（可选）
-console.log('边长为 4 的正方形面积为 ' + square.area(4));
+console.log("边长为 4 的正方形面积为 " + square.area(4));
 ```
 
 > **备注：** 为模块指定绝对路径（或模块的名字，见最初的示例）也是可行的。
@@ -196,8 +201,12 @@ console.log('边长为 4 的正方形面积为 ' + square.area(4));
 
 ```js
 module.exports = {
-  area: width => { return width * width; },
-  perimeter: width => { return 4 * width; }
+  area: (width) => {
+    return width * width;
+  },
+  perimeter: (width) => {
+    return 4 * width;
+  },
 };
 ```
 
@@ -210,17 +219,17 @@ module.exports = {
 JavaScript 代码在完成那些需要一段时间才能完成的操作时，经常会用异步 API 来取代同步 API。同步 API 下，每个操作完成后才可以进行下一个操作。例如，下列日志函数是同步的，将按顺序将文本打印到控制台（第一、第二）。
 
 ```js
-console.log('第一');
-console.log('第二');
+console.log("第一");
+console.log("第二");
 ```
 
 而异步 API 下，一个操作开始后（在其完成之前）会立即返回。一旦操作完成，API 将使用某种机制来执行附加操作。例如，下面的代码将打印“第二、第一”。这是因为虽然先调用了 `setTimeout()` 方法并立即返回，但它的操作到 3 秒后才完成。
 
 ```js
 setTimeout(() => {
-  console.log('第一');
+  console.log("第一");
 }, 3000);
-console.log('第二');
+console.log("第二");
 ```
 
 在 Node 中使用无阻塞异步 API 甚至比在浏览器中更为重要，这是因为 Node 是一个单线程事件驱动的执行环境。“单线程”意味着对服务器的所有请求运行在同一个线程上，而不是分布在不同的进程上。这个模式在速度和管理服务器资源方面效率很高，但也意味着如果以同步方式调用的函数占用了很长时间，不仅会阻塞当前请求，还会阻塞当前 web 应用其他所有请求。
@@ -236,8 +245,8 @@ console.log('第二');
 上文的 Hello World 示例中定义了一个（回调）路由处理函数来处理对站点根目录（`'/'`）的 HTTP `GET` 请求。
 
 ```js
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 ```
 
@@ -252,8 +261,8 @@ app.get('/', (req, res) => {
 有一个特殊的路由方法 `app.all()`，它可以在响应任意 HTTP 方法时调用。用于在特定路径上为所有请求方法加载中间件函数。以下示例（来自 Express 文档）中的处理程序将在监听到针对 `/secret` 的任意 HTTP 动词（只要 [HTTP 模块](https://nodejs.cn/api/http.html#http_http_methods) 支持）的请求后执行。
 
 ```js
-app.all('/secret', (req, res, next) => {
-  console.log('访问私有文件 ...');
+app.all("/secret", (req, res, next) => {
+  console.log("访问私有文件 ...");
   next(); // 控制权传递给下一个处理器
 });
 ```
@@ -265,17 +274,17 @@ app.all('/secret', (req, res, next) => {
 ```js
 // wiki.js - 维基路由模块
 
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // 首页路由
-router.get('/', (req, res) => {
-  res.send('维基首页');
+router.get("/", (req, res) => {
+  res.send("维基首页");
 });
 
 // “关于”页面路由
-router.get('/about', (req, res) => {
-  res.send('关于此维基');
+router.get("/about", (req, res) => {
+  res.send("关于此维基");
 });
 
 module.exports = router;
@@ -286,9 +295,9 @@ module.exports = router;
 首先 `require()` 路由模块（**wiki.js**），然后在 Express 应用中调用 `use()` 把 `Router` 添加到中间件处理路径中，就可以在主应用中使用这个模块中的路由处理器了。路由路径有两条：`/wiki` 和 `/wiki/about/`。
 
 ```js
-const wiki = require('./wiki.js');
+const wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 今后将介绍更多关于路由的信息，特别是关于 `Router` 的用法，请参见 [路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 一节。
@@ -326,7 +335,7 @@ app.use(logger('dev'));
 下面的示例显示了如何使用这两种方法添加中间件功能，以及是否使用路由。
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 
 // 示例中间件函数
@@ -339,10 +348,10 @@ const a_middleware_function = (req, res, next) => {
 app.use(a_middleware_function);
 
 // 用 use() 为一个特定的路由添加该函数
-app.use('/someroute', a_middleware_function);
+app.use("/someroute", a_middleware_function);
 
 // 为一个特定的 HTTP 动词和路由添加该函数
-app.get('/', a_middleware_function);
+app.get("/", a_middleware_function);
 
 app.listen(3000);
 ```
@@ -356,7 +365,7 @@ app.listen(3000);
 可以使用 [express.static](https://www.expressjs.com.cn/4x/api.html#express.static) 中间件来托管静态文件，包括图片、CSS 以及 JavaScript 文件（其实 `static()` 是 Express 提供的**原生**中间件函数之一）。例如，可以通过下面一行来托管 'public' 文件夹（应位于 Node 调用的同一级）中的文件：
 
 ```js
-app.use(express.static('public'));
+app.use(express.static("public"));
 ```
 
 现在 'public' 文件夹下的所有文件均可通过在根 URL 后直接添加文件名来访问了，比如：
@@ -371,14 +380,14 @@ http://localhost:3000/about.html
 可以通过多次调用 `static()` 来托管多个文件夹。如果一个中间件函数找不到某个文件，将直接传递给下一个中间件（中间件的调用顺序取决于声明顺序）。
 
 ```js
-app.use(express.static('public'));
-app.use(express.static('media'));
+app.use(express.static("public"));
+app.use(express.static("media"));
 ```
 
 还可以为静态 URL 创建一个虚拟的前缀，而不是直接把文件添加到根 URL 里。比如，这里 [指定了一个装载路径](https://www.expressjs.com.cn/4x/api.html#app.use)，于是这些文件将通过 '/media' 前缀调用：
 
 ```js
-app.use('/media', express.static('public'));
+app.use("/media", express.static("public"));
 ```
 
 现在可以通过 '/media' 路径前缀来访问 'public' 文件夹中的文件。
@@ -398,7 +407,7 @@ http://localhost:3000/media/cry.mp3
 ```js
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('出错了！');
+  res.status(500).send("出错了！");
 });
 ```
 
@@ -426,19 +435,21 @@ npm install mongodb
 
 ```js
 // MongoDB 3.0 以上版本适用，老版本不适用。
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', (err, client) => {
-  if(err) {
+MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
+  if (err) {
     throw err;
   }
 
-  let db = client.db('动物');
-  db.collection('哺乳动物').find().toArray((err, result) => {
-    if(err) throw err;
-    console.log(result);
-    client.close();
-  });
+  let db = client.db("动物");
+  db.collection("哺乳动物")
+    .find()
+    .toArray((err, result) => {
+      if (err) throw err;
+      console.log(result);
+      client.close();
+    });
 });
 ```
 
@@ -453,21 +464,21 @@ MongoClient.connect('mongodb://localhost:27017/animals', (err, client) => {
 在应用设置代码中声明了模板引擎的名称和位置后，Express 可以使用 `'views'` 和 `'view engines'` 设置来寻找模板，如下所示（必须事先安装包含模板库的包！）：
 
 ```js
-const express = require('express');
+const express = require("express");
 const app = express();
 
 // 设置包含模板的文件夹（'views'）
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 
 // 设置视图引擎，比如'some_template_engine_name'
-app.set('view engine', 'some_template_engine_name');
+app.set("view engine", "some_template_engine_name");
 ```
 
 模板的外观取决于所使用的引擎。假设一个模板文件名为 "index.\<template_extension>"，其中包括数据变量 `'title'` 和 `'message'` 的两个占位符，可以在路由处理器函数中调用 [`Response.render()`](https://www.expressjs.com.cn/4x/api.html#res.render) 来创建并发送 HTML 响应：
 
 ```js
-app.get('/', (req, res) => {
-  res.render('index', { title: '关于狗狗', message: '狗狗很牛！' });
+app.get("/", (req, res) => {
+  res.render("index", { title: "关于狗狗", message: "狗狗很牛！" });
 });
 ```
 

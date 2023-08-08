@@ -2,6 +2,7 @@
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 **Page Visibility API**는 웹페이지가 visible 또는 focus 상태인지 당신이 알도록 한다. 탭 브라우징 사용시에, background 에 어떤 웹페이지가 존재하면서 유저에게 보이지 않을 가능성이 있다. 사용자가 웹페이지를 최소화하거나 다른 탭으로 이동했을 때, 이 API 는 페이지의 visibility 를 관찰하는 {{event("visibilitychange")}} 이벤트를 전달한다. 당신은 이벤트를 감지할 수 있고, 어떠한 action 을 수행하거나 다르게 반응할 수 있다. 예를 들어, 당신의 웹 앱이 video 를 재생한다면, 사용자가 다른 브라우저를 보고 있을 때 video 를 pause 하고, 탭으로 돌아왔을 때 다시 재생할 수 있다. 사용자는 video 에서 자신의 위치를 잃지 않고 계속 시청할 수 있다.
@@ -28,7 +29,8 @@ Visibility states of an {{HTMLElement("iframe")}} 의 visibility 상태는 부�
 ```js
 // Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -52,23 +54,35 @@ function handleVisibilityChange() {
 }
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
-if (typeof document.addEventListener === "undefined" || typeof document[hidden] === "undefined") {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document[hidden] === "undefined"
+) {
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
@@ -92,7 +106,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }

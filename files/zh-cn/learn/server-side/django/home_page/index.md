@@ -1,7 +1,6 @@
 ---
-title: 'Django Tutorial Part 5: 主页构建'
+title: "Django Tutorial Part 5: 主页构建"
 slug: Learn/Server-side/Django/Home_page
-original_slug: learn/Server-side/Django/主页构建
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -164,17 +163,17 @@ def index(request):
 
 > **备注：** 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+  </head>
 
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  </body>
 </html>
 ```
 
@@ -184,12 +183,12 @@ def index(request):
 
 `base_generic.html` 详细会在下文中，请耐心往下看。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
-<p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
+  <h1>Local Library Home</h1>
+  <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
 {% endblock %}
 ```
 
@@ -201,44 +200,40 @@ def index(request):
 
 创建一个新的文件 — **/locallibrary/catalog/templates/_base_generic.html_** — 写入如下代码
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
 
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-
-<body>
-
-  <div class="container-fluid">
-
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-      </ul>
-     {% endblock %}
-      </div>
-      <div class="col-sm-10 ">
-      {% block content %}{% endblock %}
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="">All books</a></li>
+              <li><a href="">All authors</a></li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %}{% endblock %}</div>
       </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -248,9 +243,9 @@ def index(request):
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -258,15 +253,15 @@ def index(request):
 
 新建 HTML 文件 **/locallibrary/catalog/templates/_index.html_** 写入下面代码。第一行我们扩展了我们的基本模版，使用 `content`替换默认块。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Local Library Home</h1>
+  <h1>Local Library Home</h1>
 
   <p>Welcome to <em>LocalLibrary</em>, a very basic Django website developed as a tutorial example on the Mozilla Developer Network.</p>
 
-<h2>Dynamic content</h2>
+  <h2>Dynamic content</h2>
 
   <p>The library has the following record counts:</p>
   <ul>
@@ -275,7 +270,6 @@ def index(request):
     <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
     <li><strong>Authors:</strong> \{{ num_authors }}</li>
   </ul>
-
 {% endblock %}
 ```
 
@@ -299,17 +293,20 @@ return render(
 
 在模版中，你首先调用 `load` 指定“ `static`”去添加此模版库（如下）。静态加载后，你可以使用 `static` 模版标签，指定感兴趣的文件相对`URL`
 
-```html
- <!-- Add additional CSS in static file -->
+```django
+<!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 你可以用同样的方式将图像添加到页面中：
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="My image"
+  style="width:555px;height:540px;" />
 ```
 
 > **备注：** 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看

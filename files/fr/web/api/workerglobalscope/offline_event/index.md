@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.onoffline
 slug: Web/API/WorkerGlobalScope/offline_event
-translation_of: Web/API/WorkerGlobalScope/onoffline
 ---
 
 {{APIRef("Web Workers API")}}
@@ -19,9 +18,9 @@ self.onoffline = function() { ... };
 L'extrait de code suivant montre un gestionnaire `onoffline` placé dans un worker :
 
 ```js
-self.onoffline = function() {
-  console.log('Your worker is now offline');
-}
+self.onoffline = function () {
+  console.log("Your worker is now offline");
+};
 ```
 
 ## Spécifications

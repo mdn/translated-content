@@ -1,7 +1,6 @@
 ---
 title: video
 slug: Web/HTML/Element/video
-original_slug: Web/HTML/Elemento/video
 ---
 
 El elemento `video` se utiliza para incrustar vídeos en un documento HTML o XHTML.
@@ -11,10 +10,10 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 ## Contexto de uso
 
 | Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content) , que contiene un atributo **src** o uno o más elementos {{ HTMLElement ("source") }}, seguidos por [contenido dinámico](/en/HTML/Content_categories#flow_content) o [el contenido estático](/en/HTML/Content_categories#phrasing_content) , sin elementos `<video>` ni {{ HTMLElement ("audio") }}. |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content) .                                                                                                                                                                                                                                           |
-| Documento normativo            | [HTML 5, sección 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                                                                                                                                                |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier otro elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content) .                                                                                                                                                                         |
+| Documento normativo            | [HTML 5, sección 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                           |
 
 ## Atributos
 

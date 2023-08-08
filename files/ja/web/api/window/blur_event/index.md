@@ -1,5 +1,5 @@
 ---
-title: 'Window: blur イベント'
+title: "Window: blur イベント"
 slug: Web/API/Window/blur_event
 ---
 

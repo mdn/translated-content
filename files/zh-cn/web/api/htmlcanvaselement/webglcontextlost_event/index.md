@@ -1,5 +1,5 @@
 ---
-title: 'HTMLCanvasElement: webglcontextlost event'
+title: "HTMLCanvasElement: webglcontextlost event"
 slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 ---
 
@@ -33,15 +33,15 @@ slug: Web/API/HTMLCanvasElement/webglcontextlost_event
 在 {{domxref("WEBGL_lose_context")}} 扩展的帮助下，您可以模拟 `webglcontextlost` 事件：
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 
-canvas.addEventListener('webglcontextlost', (event) => {
+canvas.addEventListener("webglcontextlost", (event) => {
   console.log(event);
 });
 
 //WEBGL_lose_context 是 webgl 是属于 WebGLAPI 的一个扩展 API，它提供一组方法用来模拟一个 WebGLRenderingContext 上下文的丢失和恢复。
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 
 // "webglcontextlost" event is logged.
 ```

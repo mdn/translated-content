@@ -1,7 +1,6 @@
 ---
-title: '<cite> : l''élément de citation'
+title: "<cite> : l'élément de citation"
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}
@@ -123,9 +122,7 @@ En général, les navigateurs donnent un style au contenu d'un élément `<cite>
 ## Exemples
 
 ```html
-<p>
-  Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite>
-</p>
+<p>Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite></p>
 ```
 
 ### Résultat

@@ -58,22 +58,25 @@ slug: Learn/JavaScript/Building_blocks/Events
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 JavaScript는 다음과 같습니다:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 이 코드에서, {{domxref("Document.querySelector()")}} 함수를 사용하여, 우리는 `btn` 상수 내부에 버튼에 대한 참조를 저장했습니다. 우리는 또한 무작위의 숫자를 반환하는 함수를 정의했습니다. 코드의 세번째 부분은 이벤트 핸들러입니다. `btn` 상수는 [`<button>`](/ko/docs/Web/HTML/Element/button) 요소를 가리키고, 이 타입의 객체는 발생시킬 수 있는 얼마간의 이벤트를 가지고 있으므로, 이벤트 핸들러를 사용 가능합니다. [`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 이벤트 핸들러 프로퍼티를 무작위의 RGB 색상을 생성하고 그것과 같은 [`<body>`](/ko/docs/Web/HTML/Element/body) [`background-color`](/ko/docs/Web/CSS/background-color)를 설정하는 코드를 포함하는 익명함수에 설정함으로써, 우리는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 발생에 귀를 기울이고 있습니다.
@@ -103,12 +106,13 @@ btn.onclick = function() {
 이것들은 이 코스 동안에 우리가 가장 자주 봤던 이벤트 핸들러 코드를 포함하기 위해 존재하는 프로퍼티입니다. 위의 예제로 돌아가 봅시다.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 [`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 프로퍼티는 이 상황에서 쓰이고 있는 이벤트 핸들러 프로퍼티입니다. 이것은 본질적으로 버튼에서 사용 가능한 다른 것들과 같은 프로퍼티지만 (예: [`btn.textContent`](/ko/docs/Web/API/Node/textContent), 또는 [`btn.style`](/ko/docs/Web/API/HTMLElement/style)), 이것은 특별한 타입입니다 — 어떤 코드와 동일한 것을 설정했을 때, 그 코드는 버튼에서 이벤트가 발생되었을 때 실행됩니다.
@@ -116,10 +120,11 @@ btn.onclick = function() {
 여러분은 또한 기명 함수 이름과 같은 핸들러 프로퍼티를 설정할 수 있습니다 ([자신만의 함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)에서 본 것처럼요). 다음은 아주 똑같이 동작합니다:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -147,7 +152,8 @@ btn.onclick = bgChange;
 
 ```js
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -157,7 +163,9 @@ function bgChange() {
 웹에서 찾아지는 가장 이른 이벤트 핸들러의 등록 방법은 위에서 보이는 것처럼 **이벤트 핸들러 HTML 어트리뷰트** (또는 **인라인 이벤트 핸들러**)을 포함합니다. — 어트리뷰트 값은 말 그대로 이벤트가 발생되었을 때 여러분이 실행하기를 원하는 JavaScript 코드입니다. 위의 예시는 같은 페이지의 {{htmlelement("script")}} 요소 안에서 정의된 함수를 호출하지만, 여러분은 또한 어트리뷰트 안에 직접적으로 JavaScript을 삽입할 수 있습니다. 예를 들자면:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 여러분은 HTML 어트리뷰트를 많은 이벤트 핸들러 프로퍼티와 동등한 것이라고 생각할 수도 있습니다; 그러나, 여러분은 이 방법을 사용해서는 안 됩니다 — 이 방법은 나쁜 습관이라고 여겨집니다. 만약 여러분이 뭔가를 정말 빨리 한다면 이벤트 핸들러 어트리뷰트를 사용하는 것이 쉬워 보일지도 모르나, 이것은 빠르게 다루기 힘들어지고 비효율적이 됩니다.
@@ -167,7 +175,7 @@ function bgChange() {
 하나의 파일이더라도, 인라인 이벤트 핸들러는 좋은 생각이 아닙니다. 하나의 버튼은 괜찮지만, 100개의 버튼이라면 어떡할 건가요? 여러분은 파일에 100개의 어트리뷰트를 더해야만 합니다; 이것은 빠르게 유지보수의 악몽으로 변할 것입니다. JavaScript와 함께, 다음과 같은 것을 통해서, 여러분은 버튼이 얼마나 있든 간에 페이지에 있는 모든 버튼에 쉽게 이벤트 핸들러를 추가할 수 있습니다.
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = bgChange;
@@ -177,7 +185,7 @@ for (let i = 0; i < buttons.length; i++) {
 여기서의 또 다른 옵션은 [`NodeList`](/ko/docs/Web/API/NodeList) 객체에서 사용 가능한 [`forEach()`](/ko/docs/Web/API/NodeList/forEach) 내장 메서드를 사용하는 것이라는 데 주목해 주세요.
 
 ```js
-buttons.forEach(function(button) {
+buttons.forEach(function (button) {
   button.onclick = bgChange;
 });
 ```
@@ -189,14 +197,15 @@ buttons.forEach(function(button) {
 이벤트 핸들러를 더하는 현대적인 메커니즘은 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) 메서드입니다. 이것을 사용해서, 우리는 무작위 색상 예제를 다음과 같이 재작성할 수 있습니다.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **참고:** 여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)도 보세요).
@@ -204,8 +213,9 @@ btn.addEventListener('click', bgChange);
 `addEventListener()` 함수 안에, 우리는 두 매개변수(parameter)를 명시합니다: 우리가 이 핸들러에 등록하고자 하는 이벤트의 이름과, 그것에 응답하여 우리가 실행하기를 원하는 핸들러 함수를 구성하는 코드입니다. 알림: `addEventListener()` 내부에, 다음과 같이, 익명 함수 안에 모든 코드를 넣는 것은 완벽히 괜찮습니다:
 
 ```js
-btn.addEventListener('click', function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.addEventListener("click", function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -213,17 +223,22 @@ btn.addEventListener('click', function() {
 이 메커니즘은 앞에서 논한 낡은 메커니즘들에 비해 몇몇 이점을 가지고 있습니다. 첫째로, 이전에 추가한 이벤트 핸들러를 제거하는, [`removeEventListener()`](/ko/docs/Web/API/EventTarget/removeEventListener)라는 대응 관계에 있는 함수가 있습니다. 예를 들어, 이것은 이 섹션의 첫번째 코드 블록 안에 있는 이벤트 핸들러를 제거할 것입니다.
 
 ```js
-btn.removeEventListener('click', bgChange);
+btn.removeEventListener("click", bgChange);
 ```
 
 이벤트 핸들러는 또한 {{domxref("AbortSignal")}}을 {{domxref("EventTarget/addEventListener()", "addEventListener()")}}에 전달하고, 그리고서 나중에, `AbortSignal`을 소유하고 있는 컨트롤러에서 {{domxref("AbortController/abort()", "abort()")}}를 호출함으로써 제거할 수도 있습니다. 예를 들자면, 우리가 `AbortSignal`로 제거할 수 있는 이벤트 핸들러를 추가하기 위해서는:
 
 ```js
 const controller = new AbortController();
-btn.addEventListener('click', function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-  document.body.style.backgroundColor = rndCol;
-}, { signal: controller.signal }); // 이 핸들러에 AbortSignal을 전달
+btn.addEventListener(
+  "click",
+  function () {
+    var rndCol =
+      "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+    document.body.style.backgroundColor = rndCol;
+  },
+  { signal: controller.signal },
+); // 이 핸들러에 AbortSignal을 전달
 ```
 
 그리고서 위의 코드로 생성된 이벤트 핸들러는 다음과 같이 제거될 수 있습니다:
@@ -244,8 +259,8 @@ myElement.onclick = functionB;
 두 번째 줄이 첫 번째 줄에 의해 설정된 `onclick`의 값을 덮어씁니다. 그러나, 다음은 작동할 것입니다.
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 두 함수 모두는 이제 요소가 선택되었을 때 실행될 것입니다.
@@ -281,12 +296,13 @@ element.onclick = function2;
 
 ```js
 function bgChange(e) {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **참고:** #### 참고여러분은 이 예제에 대한 [전체 소스 코드를](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) Github에서 찾을 수 있습니다 (또한 [실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)도 보세요).
@@ -298,22 +314,22 @@ btn.addEventListener('click', bgChange);
 여러분이 같은 이벤트 핸들러를 다수의 요소에 설정하고 그것들에 이벤트가 발생되었을 때 그것들 모두에 뭔가를 하기를 원할 때 `e.target`은 엄청나게 유용합니다. 예를 들자면, 여러분에게 선택되었을 때 사라지는 16개의 타일 세트가 있다고 합시다. 타일을 몇몇 더욱 어려운 방법으로 선택해야만 하는 것 대신에, `e.target`으로서 단지 타일을 사라지게 항상 설정할 수 있는 것은 유용합니다. 다음의 예제에서 (전체 소스 코드는 [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html)에서 찾을 수 있습니다; [또한 실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)도 보세요), 우리는 16개의 {{htmlelement("div")}} 요소를 JavaScript를 통해 생성했습니다. 우리는 그리고서 {{domxref("document.querySelectorAll()")}}을 사용해 그것들 모두를 선택했고, 그리고서 선택되었을 때 무작위 색상이 적용되도록 만드는 `onclick` 핸들러를 각각에 추가하며 요소들을 순회했습니다:
 
 ```js
-const divs = document.querySelectorAll('div');
+const divs = document.querySelectorAll("div");
 
 for (let i = 0; i < divs.length; i++) {
-  divs[i].onclick = function(e) {
+  divs[i].onclick = function (e) {
     e.target.style.backgroundColor = bgChange();
-  }
+  };
 }
 ```
 
 출력은 다음과 같습니다 (타일들을 클릭해 보세요 — 즐겨 보세요):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Useful event target example</title>
     <style>
       div {
@@ -326,26 +342,27 @@ for (let i = 0; i < divs.length; i++) {
   <body>
     <script>
       for (let i = 1; i <= 16; i++) {
-        const myDiv = document.createElement('div');
+        const myDiv = document.createElement("div");
         myDiv.style.backgroundColor = "red";
         document.body.appendChild(myDiv);
       }
 
       function random(number) {
-        return Math.floor(Math.random()*number);
+        return Math.floor(Math.random() * number);
       }
 
       function bgChange() {
-        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        var rndCol =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
         return rndCol;
       }
 
-      const divs = document.querySelectorAll('div');
+      const divs = document.querySelectorAll("div");
 
       for (let i = 0; i < divs.length; i++) {
-        divs[i].onclick = function(e) {
+        divs[i].onclick = function (e) {
           e.target.style.backgroundColor = bgChange();
-        }
+        };
       }
     </script>
   </body>
@@ -368,14 +385,14 @@ for (let i = 0; i < divs.length; i++) {
 <form>
   <div>
     <label for="fname">First name: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Last name: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -390,17 +407,17 @@ div {
 이제 JavaScript입니다 — 여기 우리는 텍스트 필드가 비었는지를 검사하는 [`onsubmit`](/ko/docs/Web/API/GlobalEventHandlers/onsubmit) 이벤트 핸들러 (제출 이벤트는 양식이 제출되었을 때 발생됩니다) 내부에 아주 간단한 점검을 구현했습니다. 만약 텍스트 필드가 비었다면, 우리는 이벤트 객체에 있는 — 양식 제출을 멈추는 — [`preventDefault()`](/ko/docs/Web/API/Event/preventDefault) 함수를 호출하고 그리고서 유저에게 무엇이 잘못되었는지를 말하기 위해 양식 아래에 있는 단락에 에러 메시지를 표시합니다.
 
 ```js
-const form = document.querySelector('form');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
-const para = document.querySelector('p');
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
 
-form.onsubmit = function(e) {
-  if (fname.value === '' || lname.value === '') {
+form.onsubmit = function (e) {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'You need to fill in both names!';
+    para.textContent = "You need to fill in both names!";
   }
-}
+};
 ```
 
 명백히, 이것은 아주 약한 양식 확인입니다 — 예를 들자면, 필드에 공백이나 숫자가 입력된 채의 양식을 확인하는 유저를 멈추지 못할 것입니다 — 하지만 예제의 목적으로라면 괜찮습니다. 결과는 다음과 같습니다.
@@ -414,21 +431,25 @@ form.onsubmit = function(e) {
 여기서 다룰 마지막 주제는 여러분이 종종 마주치지 못할 무언가이지만, 만약 여러분이 이것을 이해하지 못한다면 진짜 고통일 것입니다. 이벤트 버블링과 캡처는 같은 이벤트 타입의 두 이벤트 핸들러가 한 요소에서 작동되었을 때 무슨 일이 일어나는지를 기술하는 두 메커니즘입니다. 이것을 쉽게 만드는 예시를 봅시다. [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) 예시와 ([소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html)를 다른 탭에서) 여세요. 이것은 또한 아래에서 바로 이용 가능합니다.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Show video box example</title>
     <style>
       div {
         position: absolute;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 480px;
         height: 380px;
         border-radius: 10px;
         background-color: #eee;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1)
+        );
       }
 
       .hidden {
@@ -444,7 +465,6 @@ form.onsubmit = function(e) {
         width: 400px;
         margin: 40px auto;
       }
-
     </style>
   </head>
   <body>
@@ -452,36 +472,41 @@ form.onsubmit = function(e) {
 
     <div class="hidden">
       <video>
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+          type="video/mp4" />
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+          type="video/webm" />
+        <p>
+          Your browser doesn't support HTML5 video. Here is a
+          <a href="rabbit320.mp4">link to the video</a> instead.
+        </p>
       </video>
     </div>
 
     <script>
+      const btn = document.querySelector("button");
+      const videoBox = document.querySelector("div");
+      const video = document.querySelector("video");
 
-      const btn = document.querySelector('button');
-      const videoBox = document.querySelector('div');
-      const video = document.querySelector('video');
-
-      btn.onclick = function() {
+      btn.onclick = function () {
         displayVideo();
-      }
+      };
 
       function displayVideo() {
-        if(videoBox.getAttribute('class') === 'hidden') {
-          videoBox.setAttribute('class','showing');
+        if (videoBox.getAttribute("class") === "hidden") {
+          videoBox.setAttribute("class", "showing");
         }
       }
 
-      videoBox.addEventListener('click',function() {
-        videoBox.setAttribute('class','hidden');
+      videoBox.addEventListener("click", function () {
+        videoBox.setAttribute("class", "hidden");
       });
 
-      video.addEventListener('click',function() {
+      video.addEventListener("click", function () {
         video.play();
       });
-
     </script>
   </body>
 </html>
@@ -496,9 +521,12 @@ form.onsubmit = function(e) {
 
 <div class="hidden">
   <video>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -506,19 +534,19 @@ form.onsubmit = function(e) {
 {{htmlelement("button")}}이 선택되었을 때, `<div>`의 클래스 어트리뷰트를 `hidden`에서 `showing`으로 바꿈으로써, 비디오는 표시됩니다. (예제의 CSS는 이 두 클래스를 포함하고 있는데, 각각 박스를 화면에서 벗어나게 만들고 들어오게 위치시킵니다):
 
 ```js
-btn.onclick = function() {
-  videoBox.setAttribute('class', 'showing');
-}
+btn.onclick = function () {
+  videoBox.setAttribute("class", "showing");
+};
 ```
 
 우리는 그리고서 두 개의 `onclick` 이벤트 핸들러를 추가합니다 — 첫번째는 `<div>`에 대한 것이고 두번째는 `<video>`에 대한 것입니다. 이제, 비디오 외부의 `<div>` 영역이 선택되었을 때, 박스는 다시 숨겨져야만 하고 비디오 그 자체가 선택되었을 때, 비디오는 재생을 시작해야만 합니다.
 
 ```js
-videoBox.onclick = function() {
-  videoBox.setAttribute('class', 'hidden');
+videoBox.onclick = function () {
+  videoBox.setAttribute("class", "hidden");
 };
 
-video.onclick = function() {
+video.onclick = function () {
   video.play();
 };
 ```
@@ -557,7 +585,7 @@ video.onclick = function() {
 그러므로, 이전 코드 블럭에 있는 두 번째 핸들러 함수를 다음으로 변경함으로써 우리는 현재의 문제를 고칠 수 있습니다:
 
 ```js
-video.onclick = function(e) {
+video.onclick = function (e) {
   e.stopPropagation();
   video.play();
 };

@@ -1,7 +1,6 @@
 ---
 title: Fréquence d'images (FPS)
 slug: Glossary/FPS
-translation_of: Glossary/FPS
 ---
 
 Une **fréquence d'images** est la vitesse à laquelle le navigateur est capable de recalculer, de mettre en page et de peindre le contenu à l'écran. Les **images par seconde**, ou **fps** (« _frames per second_ » en anglais), correspondent au nombre d'images pouvant être affichées en une seconde. La fréquence d'images de l'objectif pour l'infographie du site web est de 60fps.

@@ -1,7 +1,6 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-translation_of: Web/API/HTMLTableCellElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -53,4 +52,4 @@ _Aucune méthode spécifique ; hérite des méthodes de son parent, {{domxref("H
 
 ## Voir aussi
 
-- Éléments HTML implémentant cette interface   : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.
+- Éléments HTML implémentant cette interface : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.

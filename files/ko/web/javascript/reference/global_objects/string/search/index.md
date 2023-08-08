@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/search
 ## 구문
 
 ```js
-str.search(regexp)
+str.search(regexp);
 ```
 
 ### 매개변수

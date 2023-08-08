@@ -1,7 +1,6 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
 
 {{JSRef}}
@@ -32,7 +31,7 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.has(window); // renvoie true
-wm.has("machin");  // renvoie false
+wm.has("machin"); // renvoie false
 ```
 
 ## Spécifications

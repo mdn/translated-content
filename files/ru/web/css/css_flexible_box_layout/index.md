@@ -1,14 +1,6 @@
 ---
 title: CSS Flexible Box Layout
 slug: Web/CSS/CSS_flexible_box_layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 
 {{CSSRef}}
@@ -47,6 +39,6 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout
 
 ## Спецификации
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                  | Status                      | Comment             |
+| ------------------------------ | --------------------------- | ------------------- |
 | {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Initial definition. |

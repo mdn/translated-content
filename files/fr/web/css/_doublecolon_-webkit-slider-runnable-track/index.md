@@ -1,7 +1,6 @@
 ---
-title: '::-webkit-slider-runnable-track'
+title: "::-webkit-slider-runnable-track"
 slug: Web/CSS/::-webkit-slider-runnable-track
-translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -26,7 +26,7 @@ let domparser = new DOMParser();
 ### 语法
 
 ```js
-let doc = domparser.parseFromString(string, mimeType)
+let doc = domparser.parseFromString(string, mimeType);
 ```
 
 ### 返回值
@@ -43,9 +43,9 @@ let doc = domparser.parseFromString(string, mimeType)
 
   - : 一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:
 
-| `mimeType`              | doc.constructor                        |
-| ----------------------- | -------------------------------------- |
-| `text/html`             | {{domxref("Document")}}     |
+| `mimeType`              | doc.constructor            |
+| ----------------------- | -------------------------- |
+| `text/html`             | {{domxref("Document")}}    |
 | `text/xml`              | {{domxref("XMLDocument")}} |
 | `application/xml`       | {{domxref("XMLDocument")}} |
 | `application/xhtml+xml` | {{domxref("XMLDocument")}} |
@@ -57,7 +57,7 @@ let doc = domparser.parseFromString(string, mimeType)
 
 ```js
 let parser = new DOMParser(),
-    doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
+  doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 ```
 
 #### 错误处理
@@ -87,7 +87,7 @@ doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
 // 返回一个 SVGDocument 对象，同时也是一个 Document 对象。
 
 parser = new DOMParser();
-doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
+doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 // 返回一个 HTMLDocument 对象，同时也是一个 Document 对象。
 ```
 
@@ -106,38 +106,35 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html")
 /*! @source https://gist.github.com/1129031 */
 /*global document, DOMParser*/
 
-(function(DOMParser) {
-    "use strict";
+(function (DOMParser) {
+  "use strict";
 
-    var proto = DOMParser.prototype,
-        nativeParse = proto.parseFromString;
+  var proto = DOMParser.prototype,
+    nativeParse = proto.parseFromString;
 
-    // Firefox/Opera/IE throw errors on unsupported types
-    try {
-        // WebKit returns null on unsupported types
-        if ((new DOMParser()).parseFromString("", "text/html")) {
-            // text/html parsing is natively supported
-            return;
-        }
-    } catch (ex) {}
+  // Firefox/Opera/IE throw errors on unsupported types
+  try {
+    // WebKit returns null on unsupported types
+    if (new DOMParser().parseFromString("", "text/html")) {
+      // text/html parsing is natively supported
+      return;
+    }
+  } catch (ex) {}
 
-    proto.parseFromString = function(markup, type) {
-        if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-            var
-              doc = document.implementation.createHTMLDocument("")
-            ;
-                  if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-                    doc.documentElement.innerHTML = markup;
-                  }
-                  else {
-                    doc.body.innerHTML = markup;
-                  }
-            return doc;
-        } else {
-            return nativeParse.apply(this, arguments);
-        }
-    };
-}(DOMParser));
+  proto.parseFromString = function (markup, type) {
+    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
+      var doc = document.implementation.createHTMLDocument("");
+      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
+        doc.documentElement.innerHTML = markup;
+      } else {
+        doc.body.innerHTML = markup;
+      }
+      return doc;
+    } else {
+      return nativeParse.apply(this, arguments);
+    }
+  };
+})(DOMParser);
 ```
 
 ## 规范

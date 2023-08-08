@@ -1,7 +1,6 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-translation_of: Web/API/Performance/mark
 ---
 
 {{APIRef("User Timing API")}}
@@ -17,7 +16,7 @@ La méthode `mark()` stocke ses données en interne sous la forme d'objets {{dom
 ## Syntaxe
 
 ```js
-  performance.mark(name);
+performance.mark(name);
 ```
 
 ### Arguments

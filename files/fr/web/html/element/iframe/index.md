@@ -1,7 +1,6 @@
 ---
-title: '<iframe> : l''élément de cadre intégré'
+title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Element/iframe
-translation_of: Web/HTML/Element/iframe
 ---
 
 {{HTMLSidebar}}
@@ -213,8 +212,11 @@ L'exemple qui suit utilise la page située à <https://example.org> pour l'inté
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-        title="Exemple d'iframe" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="Exemple d'iframe"
+  width="400"
+  height="300">
 </iframe>
 ```
 

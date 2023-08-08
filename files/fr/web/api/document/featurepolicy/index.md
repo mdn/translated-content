@@ -1,7 +1,6 @@
 ---
 title: Document.featurePolicy
 slug: Web/API/Document/featurePolicy
-translation_of: Web/API/Document/featurePolicy
 ---
 
 {{APIRef("Feature Policy")}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{domxref("Do
 ## Syntaxe
 
 ```js
-var policy = iframeElement.featurePolicy
+var policy = iframeElement.featurePolicy;
 ```
 
 ### Valeur

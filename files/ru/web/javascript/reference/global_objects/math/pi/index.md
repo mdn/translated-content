@@ -1,12 +1,6 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -34,16 +28,16 @@ function calculateCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
-calculateCircumference(1);  // 6.283185307179586
+calculateCircumference(1); // 6.283185307179586
 ```
 
 ## Спецификации
 
-| Спецификация                                                     | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                          | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                      | Статус             | Комментарии                                            |
+| ------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                           | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.1.6', 'Math.PI')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}     | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.pi', 'Math.PI')}}    | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

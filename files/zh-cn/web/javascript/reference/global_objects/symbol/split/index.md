@@ -16,20 +16,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 \[Symbol.split] 指向‘aba’.split(/a/)
 
 ```js
-/a/[Symbol.split]('aba',3)
+/a/[Symbol.split]("aba", 3);
 ```
 
 "dayinlove".split(exp) 调用 \[Symbol.split]\(str) 处理，并把实参"dayinlove"传给形参 str
 
 ```js
-var exp =  {
-        pat:'in',
-        [Symbol.split](str) {
-          return str.split(this.pat);
-          }
-    }
+var exp = {
+  pat: "in",
+  [Symbol.split](str) {
+    return str.split(this.pat);
+  },
+};
 
-    "dayinlove".split(exp);
+"dayinlove".split(exp);
 //["day", "love"]
 ```
 

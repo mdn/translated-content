@@ -1,7 +1,6 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-translation_of: Web/API/CDATASection
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ L'interface **`CDATASection`** représente une section CDATA qui peut être util
 En termes de balisage, une section CDATA a la forme suivante :
 
 ```html
-<![CDATA[  ... ]]>
+<![CDATA[ ... ]]>
 ```
 
 Par exemple :

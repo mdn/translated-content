@@ -31,8 +31,8 @@ ctx.lineDashOffset = value;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([4, 16]);
 
@@ -44,7 +44,7 @@ ctx.stroke();
 
 // Dashed line with offset of 4
 ctx.beginPath();
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
@@ -71,10 +71,10 @@ var ctx = canvas.getContext("2d");
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.strokeRect(10, 10, 100, 100);
 }
 
 function march() {

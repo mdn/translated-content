@@ -1,10 +1,6 @@
 ---
-title: >-
-  TypeError: can't access dead object (Тип ошибки:не удаётся получить доступ к
-  мёртвому объекту)
+title: "TypeError: can't access dead object (Тип ошибки:не удаётся получить доступ к мёртвому объекту)"
 slug: orphaned/Web/JavaScript/Reference/Errors/Dead_object
-translation_of: Web/JavaScript/Reference/Errors/Dead_object
-original_slug: Web/JavaScript/Reference/Errors/Dead_object
 ---
 
 {{JSSidebar("Errors")}}

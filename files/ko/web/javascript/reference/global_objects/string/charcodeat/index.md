@@ -2,6 +2,7 @@
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
+
 {{JSRef}}
 
 **`charCodeAt()`** 메서드는 주어진 인덱스에 대한 UTF-16 코드를 나타내는 0부터 65535 사이의 정수를 반환합니다.
@@ -13,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ## 구문
 
 ```js
-str.charCodeAt(index)
+str.charCodeAt(index);
 ```
 
 ### 매개변수
@@ -43,7 +44,7 @@ Backward compatibilty: In historic versions (like JavaScript 1.2) the `charCodeA
 The following example returns 65, the Unicode value for A.
 
 ```js
-'ABC'.charCodeAt(0); // returns 65
+"ABC".charCodeAt(0); // returns 65
 ```
 
 ### Fixing `charCodeAt()` to handle non-Basic-Multilingual-Plane characters if their presence earlier in the string is unknown
@@ -60,15 +61,16 @@ function fixedCharCodeAt(str, idx) {
 
   // High surrogate (could change last hex to 0xDB7F to treat high
   // private surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     if (isNaN(low)) {
-      throw 'High surrogate not followed by low surrogate in fixedCharCodeAt()';
+      throw "High surrogate not followed by low surrogate in fixedCharCodeAt()";
     }
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
-  if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
+  if (0xdc00 <= code && code <= 0xdfff) {
+    // Low surrogate
     // We return false to allow loops to skip this iteration since should have
     // already handled high surrogate above in the previous iteration
     return false;
@@ -84,17 +86,16 @@ function fixedCharCodeAt(str, idx) {
 
 ```js
 function knownCharCodeAt(str, idx) {
-  str += '';
+  str += "";
   var code,
-      end = str.length;
+    end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
-    }
-    else {
+    } else {
       break;
     }
   }
@@ -106,11 +107,11 @@ function knownCharCodeAt(str, idx) {
   code = str.charCodeAt(idx);
 
   var hi, low;
-  if (0xD800 <= code && code <= 0xDBFF) {
+  if (0xd800 <= code && code <= 0xdbff) {
     hi = code;
     low = str.charCodeAt(idx + 1);
     // Go one further, since one of the "characters" is part of a surrogate pair
-    return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
+    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
   }
   return code;
 }

@@ -1,11 +1,8 @@
 ---
 title: Замыкания
 slug: Web/JavaScript/Closures
-tags:
-  - ES5
-  - Замыкание
-translation_of: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 Замыкание — это комбинация функции и лексического окружения, в котором эта функция была определена. Другими словами, замыкание даёт вам доступ к [Scope](/ru/docs/Glossary/Scope) внешней функции из внутренней функции. В JavaScript замыкания создаются каждый раз при создании функции, во время её создания.
@@ -16,11 +13,12 @@ translation_of: Web/JavaScript/Closures
 
 ```js
 function init() {
-    var name = "Mozilla"; // name - локальная переменная, созданная в init
-    function displayName() { // displayName() - внутренняя функция, замыкание
-        alert (name); // displayName() использует переменную, объявленную в родительской функции
-    }
-    displayName();
+  var name = "Mozilla"; // name - локальная переменная, созданная в init
+  function displayName() {
+    // displayName() - внутренняя функция, замыкание
+    alert(name); // displayName() использует переменную, объявленную в родительской функции
+  }
+  displayName();
 }
 init();
 ```
@@ -44,7 +42,7 @@ function makeFunc() {
   }
 
   return displayName;
-};
+}
 
 var myFunc = makeFunc();
 myFunc();
@@ -60,15 +58,15 @@ myFunc();
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
-};
+}
 
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-console.log(add5(2));  // 7
+console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 ```
 
@@ -109,10 +107,10 @@ h2 {
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
-};
+}
 
 var size12 = makeSizer(12);
 var size14 = makeSizer(14);
@@ -122,9 +120,9 @@ var size16 = makeSizer(16);
 Теперь `size12`, `size14`, и `size16` - это функции, которые меняют размер текста в элементе body на значения 12, 14, и 16 пикселов, соответственно. После чего мы цепляем эти функции на кнопки примерно так:
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -144,7 +142,7 @@ JavaScript не имеет встроенной возможности сдел�
 Код ниже иллюстрирует, как можно использовать замыкания для определения публичных функций, которые имеют доступ к закрытым от пользователя (private) функциям и переменным. Такая манера программирования называется [модульное программирование](http://www.google.com/search?q=javascript+module+pattern):
 
 ```js
-var Counter = (function() {
+var Counter = (function () {
   var privateCounter = 0;
 
   function changeBy(val) {
@@ -152,15 +150,15 @@ var Counter = (function() {
   }
 
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
+    },
   };
 })();
 
@@ -185,7 +183,7 @@ alert(Counter.value()); /* Alerts 1 */
 Заметьте, мы описываем анонимную функцию, создающую счётчик, и тут же запускаем её, присваивая результат исполнения переменной `Counter`. Но мы также можем не запускать эту функцию сразу, а сохранить её в отдельной переменной, чтобы использовать для дальнейшего создания нескольких счётчиков вот так:
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
 
   function changeBy(val) {
@@ -193,16 +191,16 @@ var makeCounter = function() {
   }
 
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var Counter1 = makeCounter();
@@ -231,28 +229,28 @@ alert(Counter2.value()); /* Alerts 0 */
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Ваш адрес e-mail'},
-      {'id': 'name', 'help': 'Ваше полное имя'},
-      {'id': 'age', 'help': 'Ваш возраст (Вам должно быть больше 16)'}
-    ];
+    { id: "email", help: "Ваш адрес e-mail" },
+    { id: "name", help: "Ваше полное имя" },
+    { id: "age", help: "Ваш возраст (Вам должно быть больше 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -271,21 +269,21 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Ваш адрес e-mail'},
-      {'id': 'name', 'help': 'Ваше полное имя'},
-      {'id': 'age', 'help': 'Ваш возраст (Вам должно быть больше 16)'}
-    ];
+    { id: "email", help: "Ваш адрес e-mail" },
+    { id: "name", help: "Ваше полное имя" },
+    { id: "age", help: "Ваш возраст (Вам должно быть больше 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
@@ -313,11 +311,11 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -332,12 +330,12 @@ function MyObject(name, message) {
 }
 
 MyObject.prototype = {
-  getName: function() {
+  getName: function () {
     return this.name;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -349,11 +347,11 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
 
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```
@@ -366,12 +364,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 
-(function() {
-  this.getName = function() {
+(function () {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }).call(MyObject.prototype);

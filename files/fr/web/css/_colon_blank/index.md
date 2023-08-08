@@ -1,7 +1,6 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
-translation_of: Web/CSS/:blank
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

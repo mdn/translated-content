@@ -1,7 +1,6 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-translation_of: Web/CSS/initial-letter-align
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -65,12 +64,11 @@ La valeur de cette propriété peut être l'un des mots-clés parmi ceux défini
 
 ```html
 <p class="exemple">
-  Tombe, tombe, tombe&nbsp;! «&nbsp;Cette chute n’en finira
-  donc pas&nbsp;! Je suis curieuse de savoir combien de
-  milles j’ai déjà faits,&nbsp;» dit-elle tout haut. «&nbsp;Je
-  dois être bien près du centre de la terre. Voyons
-  donc, cela serait à quatre mille milles de profondeur,
-  il me semble.&nbsp;» </p>
+  Tombe, tombe, tombe&nbsp;! «&nbsp;Cette chute n’en finira donc pas&nbsp;! Je
+  suis curieuse de savoir combien de milles j’ai déjà faits,&nbsp;» dit-elle
+  tout haut. «&nbsp;Je dois être bien près du centre de la terre. Voyons donc,
+  cela serait à quatre mille milles de profondeur, il me semble.&nbsp;»
+</p>
 ```
 
 ### Résultat

@@ -1,18 +1,6 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Référence(2)
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -36,15 +24,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 Этот пример демонстрирует, как можно использовать флаг «липучести» регулярных выражений для сопоставления с отдельными строками многострочного ввода.
 
 ```js
-var text = 'Первая строка\nВторая строка';
+var text = "Первая строка\nВторая строка";
 var regex = /(\S+) строка\n?/y;
 
 var match = regex.exec(text);
-console.log(match[1]);        // напечатает 'Первая'
+console.log(match[1]); // напечатает 'Первая'
 console.log(regex.lastIndex); // напечатает '14'
 
 var match2 = regex.exec(text);
-console.log(match2[1]);       // напечатает 'Вторая'
+console.log(match2[1]); // напечатает 'Вторая'
 console.log(regex.lastIndex); // напечатает '27'
 
 var match3 = regex.exec(text);
@@ -57,8 +45,12 @@ console.log(match3 === null); // напечатает 'true'
 
 ```js
 var supports_sticky;
-try { RegExp('', 'y'); supports_sticky = true; }
-catch(e) { supports_sticky = false; }
+try {
+  RegExp("", "y");
+  supports_sticky = true;
+} catch (e) {
+  supports_sticky = false;
+}
 console.log(supports_sticky); // напечатает 'false' в Firefox 2 и 'true' в Firefox 3+
 ```
 

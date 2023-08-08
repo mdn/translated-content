@@ -1,7 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-translation_of: Web/API/Storage/getItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -28,17 +27,17 @@ La fonction suivante récupère trois élément du stockage local, puis réutili
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '<dd>: elemento Detalhes da Descrição'
+title: "<dd>: elemento Detalhes da Descrição"
 slug: Web/HTML/Element/dd
 ---
 
@@ -75,11 +75,11 @@ Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#Exemp
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                   | Status                   | Comentário |
+| ------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}      | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}              | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

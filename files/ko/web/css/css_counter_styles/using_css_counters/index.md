@@ -1,7 +1,6 @@
 ---
 title: CSS 카운터 사용하기
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -30,13 +29,13 @@ Counter의 값은 {{cssxref("content")}} 속성에서 {{cssxref("counter()")}}�
 
 ```css
 body {
-  counter-reset: section;                       /* counter 이름을 'section'으로 지정합니다.
+  counter-reset: section; /* counter 이름을 'section'으로 지정합니다.
                                                    초깃값은 0입니다. */
 }
 
 h3::before {
-  counter-increment: section;                   /* section의 카운터 값을 1씩 증가시킵니다. */
-  content: "Section " counter(section) ": ";    /* section의 카운터 값을 표시합니다. */
+  counter-increment: section; /* section의 카운터 값을 1씩 증가시킵니다. */
+  content: "Section " counter(section) ": "; /* section의 카운터 값을 표시합니다. */
 }
 ```
 
@@ -44,8 +43,8 @@ h3::before {
 
 ```html
 <h3>Introduction</h3>
-  <h3>Body</h3>
-  <h3>Conclusion</h3>
+<h3>Body</h3>
+<h3>Conclusion</h3>
 ```
 
 #### 결과
@@ -94,16 +93,16 @@ CSS 카운터는 자식 요소 안에서 새 인스턴스를 자동으로 만들
 
 ```css
 ol {
-  counter-reset: section;                /* ol 요소마다
+  counter-reset: section; /* ol 요소마다
                                             이름이 section인
                                             새 인스턴스를 생성합니다. */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* 해당 인스턴스 안에서
+  counter-increment: section; /* 해당 인스턴스 안에서
                                             section 카운터 값 증가 */
-  content: counters(section, ".") " ";   /* section 카운터 값을
+  content: counters(section, ".") " "; /* section 카운터 값을
                                             마침표(.)로 구분해 결합하여
                                             표시합니다. */
 }
@@ -111,7 +110,7 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

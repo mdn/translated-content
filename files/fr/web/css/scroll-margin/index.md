@@ -1,7 +1,6 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-translation_of: Web/CSS/scroll-margin
 ---
 
 {{CSSRef}}
@@ -18,7 +17,7 @@ Les valeurs de `scroll-margin` correspondent aux décalages entre la zone qui es
 /* Valeur de longueur */
 /* Type <length> */
 scroll-margin: 10px;
-scroll-margin: 1em .5em 1em 1em;
+scroll-margin: 1em 0.5em 1em 1em;
 
 /* Valeurs globales */
 scroll-margin: inherit;

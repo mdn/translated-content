@@ -2,6 +2,7 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef}}
 
 **`replace()`** 메서드는 어떤 패턴에 일치하는 일부 또는 모든 부분이 교체된 새로운 문자열을 반환합니다. 그 패턴은 문자열이나 정규식({{jsxref("RegExp")}})이 될 수 있으며, 교체 문자열은 문자열이나 모든 매치에 대해서 호출된 함수일 수 있습니다.
@@ -41,12 +42,12 @@ var newStr = str.replace(regexp|substr, newSubstr|function)
 
 `replacement` 문자열은 다음과 같은 특수 교체 패턴을 포함할 수 있습니다.
 
-| Pattern  | Inserts                                                                                                                                                              |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | "`$`" 기호를 삽입합니다.                                                                                                                                             |
-| `$&`     | 매치된 문자열을 삽입합니다.                                                                                                                                          |
-| `` $` `` | 매치된 문자열 앞쪽까지의 문자열을 삽입합니다.                                                                                                                        |
-| `$'`     | 매치된 문자열 이후의 문자열을 삽입합니다.                                                                                                                                 |
+| Pattern  | Inserts                                                                                                                                                      |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `$$`     | "`$`" 기호를 삽입합니다.                                                                                                                                     |
+| `$&`     | 매치된 문자열을 삽입합니다.                                                                                                                                  |
+| `` $` `` | 매치된 문자열 앞쪽까지의 문자열을 삽입합니다.                                                                                                                |
+| `$'`     | 매치된 문자열 이후의 문자열을 삽입합니다.                                                                                                                    |
 | `$n`     | *`n`*이 1이상 99이하의 정수라면, 첫번째 매개변수로 넘겨진 {{jsxref("RegExp")}}객체에서 소괄호로 묶인 *`n`*번째의 부분 표현식으로 매치된 문자열을 삽입합니다. |
 
 ### 매개변수가 `function`으로 지정되었을 때
@@ -69,10 +70,10 @@ var newStr = str.replace(regexp|substr, newSubstr|function)
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-console.log(newString);  // abc - 12345 - #$*%
+var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString); // abc - 12345 - #$*%
 ```
 
 ## 예제
@@ -82,9 +83,9 @@ console.log(newString);  // abc - 12345 - #$*%
 다음 예제에서, 대소문자를 구분하지 않는 정규표현식을 `replace()`에 정의했습니다.
 
 ```js
-var str = 'Twas the night before Xmas...';
-var newstr = str.replace(/xmas/i, 'Christmas');
-console.log(newstr);  // Twas the night before Christmas...
+var str = "Twas the night before Xmas...";
+var newstr = str.replace(/xmas/i, "Christmas");
+console.log(newstr); // Twas the night before Christmas...
 ```
 
 'Twas the night before Christmas...'로 출력됩니다.
@@ -95,9 +96,9 @@ Global replace는 정규식으로만 수행 할 수 있습니다. 다음 예제�
 
 ```js
 var re = /apples/gi;
-var str = 'Apples are round, and apples are juicy.';
-var newstr = str.replace(re, 'oranges');
-console.log(newstr);  // oranges are round, and oranges are juicy.
+var str = "Apples are round, and apples are juicy.";
+var newstr = str.replace(re, "oranges");
+console.log(newstr); // oranges are round, and oranges are juicy.
 ```
 
 '오렌지는 둥글고 오렌지는 맛있습니다.' 가 출력됩니다.
@@ -108,9 +109,9 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
+console.log(newstr); // Smith, John
 ```
 
 'Smith, John.'이 출력됩니다.
@@ -124,7 +125,7 @@ console.log(newstr);  // Smith, John
 ```js
 function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match) {
-    return '-' + match.toLowerCase();
+    return "-" + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
@@ -135,7 +136,7 @@ Given `styleHyphenFormat('borderTop')`, this returns 'border-top'.
 Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
 ```js
-var newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // won't work
+var newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // won't work
 ```
 
 This is because `'$&'.toLowerCase()` would be evaluated first as a string literal (resulting in the same `'$&'`) before using the characters as a pattern.
@@ -149,7 +150,7 @@ The regular expression `test` checks for any number that ends with F. The number
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
@@ -188,11 +189,15 @@ An array of objects. An `'x'` denotes an `'on'` state, a `'-'` (hyphen) denotes 
 **Snippet:**
 
 ```js
-var str = 'x-x_';
+var str = "x-x_";
 var retArr = [];
-str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
-  if (p1) { retArr.push({ on: true, length: p1.length }); }
-  if (p2) { retArr.push({ on: false, length: 1 }); }
+str.replace(/(x_*)|(-)/g, function (match, p1, p2) {
+  if (p1) {
+    retArr.push({ on: true, length: p1.length });
+  }
+  if (p2) {
+    retArr.push({ on: false, length: 1 });
+  }
 });
 
 console.log(retArr);

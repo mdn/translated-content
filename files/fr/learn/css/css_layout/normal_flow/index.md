@@ -1,7 +1,6 @@
 ---
 title: Cours normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 ---
 
 {{LearnSidebar}}
@@ -16,7 +15,7 @@ Cet article décrit le déroulement normal, c'est-à-dire la façon dont les él
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >) et avoir une idée de la manière dont les CSS fonctionnent (étudiez
         <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a

@@ -1,7 +1,6 @@
 ---
-title: 'HTML el atributo: multiple'
+title: "HTML el atributo: multiple"
 slug: Web/HTML/Attributes/multiple
-original_slug: Web/HTML/Atributos/multiple
 ---
 
 El atributo booleano [`multiple`](/es/docs/Web/HTML/Element/input#multiple), si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.
@@ -53,8 +52,7 @@ Cuando se especifica [`multiple`](/es/docs/Web/HTML/Element/input#multiple), la 
   id="emails"
   list="drawfemails"
   required
-  size="64"
-/>
+  size="64" />
 
 <datalist id="drawfemails">
   <option value="gruñón@woodworkers.com">Gruñón</option>
@@ -92,8 +90,7 @@ Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el
       id="uploads"
       name="uploads"
       accept=".jpg, .jpeg, .png, .svg, .gif"
-      multiple
-    />
+      multiple />
   </p>
   <p>
     <label for="text">Elige un archivo de texto para cargar: </label>

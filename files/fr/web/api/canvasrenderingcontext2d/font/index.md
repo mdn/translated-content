@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
-translation_of: Web/API/CanvasRenderingContext2D/font
 ---
 
 {{APIRef}}
@@ -34,11 +33,11 @@ Ceci est seulement un fragment de code simple utilisant la propriéte font pour 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.strokeText('Hello world', 50, 100);
+ctx.font = "48px serif";
+ctx.strokeText("Hello world", 50, 100);
 ```
 
 Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
@@ -53,15 +52,16 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
-ctx.strokeText('Hello world', 50, 100);</textarea>
+ctx.strokeText('Hello world', 50, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -69,17 +69,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
@@ -89,9 +89,9 @@ window.addEventListener('load', drawCanvas);
 A l'aide de l'API {{domxref("FontFace")}}, vous pouvez explicitement charger des polices avant de les utiliser dans un canevas.
 
 ```js
-var f = new FontFace('test', 'url(x)');
+var f = new FontFace("test", "url(x)");
 
-f.load().then(function() {
+f.load().then(function () {
   // Prêt à utiliser la police dans un contexte de canevas
 });
 ```

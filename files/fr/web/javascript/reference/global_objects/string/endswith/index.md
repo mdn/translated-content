@@ -1,7 +1,6 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 
 {{JSRef}}
@@ -36,9 +35,9 @@ Cette méthode permet de savoir si une chaine de caractères se termine avec une
 ```js
 var str = "Être, ou ne pas être : telle est la question.";
 
-console.log(str.endsWith("question."));     // true
-console.log(str.endsWith("pas être"));      // false
-console.log(str.endsWith("pas être", 20));  // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("pas être")); // false
+console.log(str.endsWith("pas être", 20)); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -47,9 +46,14 @@ Cette méthode a été ajoutée dans la spécification ECMAScript 6 et peut ne p
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
+  String.prototype.endsWith = function (searchString, position) {
     var subjectString = this.toString();
-    if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+    if (
+      typeof position !== "number" ||
+      !isFinite(position) ||
+      Math.floor(position) !== position ||
+      position > subjectString.length
+    ) {
       position = subjectString.length;
     }
     position -= searchString.length;

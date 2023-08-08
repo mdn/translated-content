@@ -1,12 +1,6 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - HTTP
-  - Заголовки
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Methods
 ---
 
 {{HTTPSidebar}}
@@ -45,8 +39,8 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарий           |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
+| Спецификация                                                                               | Статус             | Комментарий           |
+| ------------------------------------------------------------------------------------------ | ------------------ | --------------------- |
 | {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | Начальное определение |
 
 ## Совместимость с браузерами

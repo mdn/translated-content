@@ -1,7 +1,6 @@
 ---
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
 
 {{ApiRef("DOM")}}{{seeCompatTable}}
@@ -11,7 +10,7 @@ Le constructeur **`DocumentFragment()`** renvoie un nouvel objet {{domxref("Docu
 ## Syntaxe
 
 ```js
-fragment = new DocumentFragment()
+fragment = new DocumentFragment();
 ```
 
 ## Exemple

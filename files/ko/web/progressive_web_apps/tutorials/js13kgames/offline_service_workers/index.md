@@ -1,7 +1,6 @@
 ---
 title: Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
@@ -37,9 +36,9 @@ Service Worker는 매우 강력하기때문에 안전한 컨텍스트(HTTPS를 �
 app.js 파일에서 새로운 Service Worker를 등록하는 코드를 살펴보는 것으로 시작할 것입니다.
 
 ```js
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/pwa-examples/js13kpwa/sw.js");
+}
 ```
 
 브라우저에서 Service worker API를 지원한다면, {{domxref("ServiceWorkerContainer.register()")}} 메소드를 사용해 사이트에대해 등록됩니다. 컨텐츠는 sw\.js 파일안에 있으며 등록이 성공한 후에 실행됩니다. 이것이 app.js 파일안에 있는 Service Worker 코드의 유일한 부분입니다. Service Worker에 대한 다른 모든 것들은 sw\.js 파일에 작성되어 있습니다.
@@ -53,8 +52,8 @@ if('serviceWorker' in navigator) {
 API는 우리가 관심있는 주요 이벤트에 대한 이벤트 리스너를 추가할 수 있게 해줍니다. 첫 번째 것은 `install` 이벤트 입니다.
 
 ```js
-self.addEventListener('install', function(e) {
-    console.log('[Service Worker] Install');
+self.addEventListener("install", function (e) {
+  console.log("[Service Worker] Install");
 });
 ```
 
@@ -63,26 +62,26 @@ self.addEventListener('install', function(e) {
 먼저, 캐시 이름을 저장할 변수를 생성하고, app shell 파일들을 하나의 배열에 나열합니다.
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 var appShellFiles = [
-  '/pwa-examples/js13kpwa/',
-  '/pwa-examples/js13kpwa/index.html',
-  '/pwa-examples/js13kpwa/app.js',
-  '/pwa-examples/js13kpwa/style.css',
-  '/pwa-examples/js13kpwa/fonts/graduate.eot',
-  '/pwa-examples/js13kpwa/fonts/graduate.ttf',
-  '/pwa-examples/js13kpwa/fonts/graduate.woff',
-  '/pwa-examples/js13kpwa/favicon.ico',
-  '/pwa-examples/js13kpwa/img/js13kgames.png',
-  '/pwa-examples/js13kpwa/img/bg.png',
-  '/pwa-examples/js13kpwa/icons/icon-32.png',
-  '/pwa-examples/js13kpwa/icons/icon-64.png',
-  '/pwa-examples/js13kpwa/icons/icon-96.png',
-  '/pwa-examples/js13kpwa/icons/icon-128.png',
-  '/pwa-examples/js13kpwa/icons/icon-168.png',
-  '/pwa-examples/js13kpwa/icons/icon-192.png',
-  '/pwa-examples/js13kpwa/icons/icon-256.png',
-  '/pwa-examples/js13kpwa/icons/icon-512.png'
+  "/pwa-examples/js13kpwa/",
+  "/pwa-examples/js13kpwa/index.html",
+  "/pwa-examples/js13kpwa/app.js",
+  "/pwa-examples/js13kpwa/style.css",
+  "/pwa-examples/js13kpwa/fonts/graduate.eot",
+  "/pwa-examples/js13kpwa/fonts/graduate.ttf",
+  "/pwa-examples/js13kpwa/fonts/graduate.woff",
+  "/pwa-examples/js13kpwa/favicon.ico",
+  "/pwa-examples/js13kpwa/img/js13kgames.png",
+  "/pwa-examples/js13kpwa/img/bg.png",
+  "/pwa-examples/js13kpwa/icons/icon-32.png",
+  "/pwa-examples/js13kpwa/icons/icon-64.png",
+  "/pwa-examples/js13kpwa/icons/icon-96.png",
+  "/pwa-examples/js13kpwa/icons/icon-128.png",
+  "/pwa-examples/js13kpwa/icons/icon-168.png",
+  "/pwa-examples/js13kpwa/icons/icon-192.png",
+  "/pwa-examples/js13kpwa/icons/icon-256.png",
+  "/pwa-examples/js13kpwa/icons/icon-512.png",
 ];
 ```
 
@@ -90,8 +89,8 @@ var appShellFiles = [
 
 ```js
 var gamesImages = [];
-for(var i=0; i<games.length; i++) {
-  gamesImages.push('data/img/'+games[i].slug+'.jpg');
+for (var i = 0; i < games.length; i++) {
+  gamesImages.push("data/img/" + games[i].slug + ".jpg");
 }
 var contentToCache = appShellFiles.concat(gamesImages);
 ```
@@ -99,13 +98,13 @@ var contentToCache = appShellFiles.concat(gamesImages);
 그러면 `install` 이벤트 자체를 관리할 수 있게 됩니다.
 
 ```js
-self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+self.addEventListener("install", function (e) {
+  console.log("[Service Worker] Install");
   e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-          console.log('[Service Worker] Caching all: app shell and content');
+    caches.open(cacheName).then(function (cache) {
+      console.log("[Service Worker] Caching all: app shell and content");
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -128,8 +127,8 @@ Service worker는 `waitUntil` 안의 코드가 실행되기전까지 설치되�
 다음은 간단한 사용 예시입니다.
 
 ```js
-self.addEventListener('fetch', function(e) {
-    console.log('[Service Worker] Fetched resource '+e.request.url);
+self.addEventListener("fetch", function (e) {
+  console.log("[Service Worker] Fetched resource " + e.request.url);
 });
 ```
 
@@ -138,18 +137,23 @@ self.addEventListener('fetch', function(e) {
 예제 앱에서 우리는 리소스가 실제로 캐시에 있는한 네트워크 대신 캐시로부터 컨텐츠를 제공합니다. 앱이 온라인이든 오프라인이든간에 이렇게 수행합니다. 파일이 캐시에 없을 경우, 이를 제공하기 전에 먼저 캐시에 추가합니다.
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener("fetch", function (e) {
   e.respondWith(
-    caches.match(e.request).then(function(r) {
-          console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then(function(response) {
-                return caches.open(cacheName).then(function(cache) {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
+    caches.match(e.request).then(function (r) {
+      console.log("[Service Worker] Fetching resource: " + e.request.url);
+      return (
+        r ||
+        fetch(e.request).then(function (response) {
+          return caches.open(cacheName).then(function (cache) {
+            console.log(
+              "[Service Worker] Caching new resource: " + e.request.url,
+            );
+            cache.put(e.request, response.clone());
+            return response;
+          });
+        })
+      );
+    }),
   );
 });
 ```
@@ -165,21 +169,21 @@ self.addEventListener('fetch', function(e) {
 다뤄야 할 하나가 더 남았습니다. 새 자원을 포함하는 앱의 새 버전이 사용가능할 때 어떻게 Service Worker를 업그레이드하나요? 캐시 이름안의 버전 넘버가 핵심입니다.
 
 ```js
-var cacheName = 'js13kPWA-v1';
+var cacheName = "js13kPWA-v1";
 ```
 
 v2로 업데이트했을 때, 새 캐시에 모든 파일(새 파일들을 포함)을 추가할 수 있습니다.
 
 ```js
-contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
+contentToCache.push("/pwa-examples/js13kpwa/icons/icon-32.png");
 
 // ...
 
-self.addEventListener('install', function(e) {
+self.addEventListener("install", function (e) {
   e.waitUntil(
-    caches.open('js13kPWA-v2').then(function(cache) {
+    caches.open("js13kPWA-v2").then(function (cache) {
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -191,15 +195,17 @@ self.addEventListener('install', function(e) {
 생략했던 `activate` 이벤트를 기억하시나요? 더 이상 필요하지 않은 오래된 캐시를 지우는데 사용할 수 있습니다.
 
 ```js
-self.addEventListener('activate', function(e) {
+self.addEventListener("activate", function (e) {
   e.waitUntil(
-    caches.keys().then(function(keyList) {
-          return Promise.all(keyList.map(function(key) {
-        if(cacheName.indexOf(key) === -1) {
-          return caches.delete(key);
-        }
-      }));
-    })
+    caches.keys().then(function (keyList) {
+      return Promise.all(
+        keyList.map(function (key) {
+          if (cacheName.indexOf(key) === -1) {
+            return caches.delete(key);
+          }
+        }),
+      );
+    }),
   );
 });
 ```

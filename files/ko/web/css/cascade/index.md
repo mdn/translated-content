@@ -9,7 +9,7 @@ slug: Web/CSS/Cascade
 
 ## Which CSS entities participate in the cascade
 
-Only CSS declarations, that is property/value pairs, participate in the cascade. This means that [at-rules](/ko/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. In these cases, only the at-rule as a whole participates in the cascade: here, the `@font-face` identified by its [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptor. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
+Only CSS declarations, that is property/value pairs, participate in the cascade. This means that [at-rules](/ko/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade. In these cases, only the at-rule as a whole participates in the cascade: here, the `@font-face` identified by its [`font-family`](/ko/docs/Web/CSS/@font-face/font-family) descriptor. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered.
 
 While the declarations contained in most at-rules — such as those in {{cssxref("@media")}}, {{cssxref("@document")}}, or {{cssxref("@supports")}} — participate in the cascade, declarations contained in {{cssxref("@keyframes")}} don't. As with `@font-face`, only the at-rule as a whole is selected via the cascade algorithm.
 
@@ -46,18 +46,18 @@ The cascading algorithm determines how to find the value to apply for each prope
 1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
 2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
-    |     | Origin                                | Importance   |
-    | --- | ------------------------------------- | ------------ |
-    | 1   | CSS Transitions                       | _see below_  |
-    | 2   | user agent                            | normal       |
-    | 3   | user                                  | normal       |
-    |     | override {{deprecated_inline}} | normal       |
-    | 4   | author                                | normal       |
-    | 5   | CSS Animations                        | _see below_  |
-    |     | override {{deprecated_inline}} | `!important` |
-    | 6   | author                                | `!important` |
-    | 7   | user                                  | `!important` |
-    | 8   | user agent                            | `!important` |
+   |     | Origin                         | Importance   |
+   | --- | ------------------------------ | ------------ |
+   | 1   | CSS Transitions                | _see below_  |
+   | 2   | user agent                     | normal       |
+   | 3   | user                           | normal       |
+   |     | override {{deprecated_inline}} | normal       |
+   | 4   | author                         | normal       |
+   | 5   | CSS Animations                 | _see below_  |
+   |     | override {{deprecated_inline}} | `!important` |
+   | 6   | author                         | `!important` |
+   | 7   | user                           | `!important` |
+   | 8   | user agent                     | `!important` |
 
 3. In case of equality, the [specificity](/ko/docs/Web/CSSSpecificity) of a value is considered to choose one or the other.
 
@@ -82,31 +82,41 @@ Let's look at an example involving multiple sources of CSS across the various or
 **User-agent CSS:**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 <strong class="brush:css;">Author CSS 1:</strong>
 
 ```css
-li { margin-left: 0 } /* This is a reset */
+li {
+  margin-left: 0;
+} /* This is a reset */
 ```
 
 <strong class="brush:css;">Author CSS 2:</strong>
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-  li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 ```
 
 <strong class="brush:css;">User CSS:</strong>
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML:**
@@ -123,21 +133,21 @@ In this case, declarations inside `li` and `.specific` rules should apply. No de
 So three declarations are in competition:
 
 ```css
-margin-left: 0
+margin-left: 0;
 ```
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 ```css
-margin-left: 1px
+margin-left: 1px;
 ```
 
 The last one is ignored (on a screen), and the first two have the same selector, hence the same specificity. Therefore, it is the last one that is then selected:
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.

@@ -1,9 +1,8 @@
 ---
 title: ゲームパッド API の使用
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-original_slug: Web/Guide/API/Gamepad
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}
@@ -16,15 +15,19 @@ HTML はリッチでインタラクティブなゲームを開発するために
 
 新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。
 
-Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定するフィンガープリンティングに利用されることを防止しています。いったん一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。
+> **メモ:** Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する[フィンガープリンティング](/ja/docs/Glossary/Fingerprinting)に利用されることを防止しています。いったん一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。
 
 以下のようにして {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} を使用します。
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 
@@ -36,8 +39,11 @@ window.addEventListener("gamepadconnected", (e) => {
 
 ```js
 window.addEventListener("gamepaddisconnected", (e) => {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log(
+    "Gamepad disconnected from index %d: %s",
+    e.gamepad.index,
+    e.gamepad.id,
+  );
 });
 ```
 
@@ -46,20 +52,32 @@ window.addEventListener("gamepaddisconnected", (e) => {
 ```js
 const gamepads = {};
 
-function gamepadHandler(event, connecting) {
+function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
+  if (connected) {
     gamepads[gamepad.index] = gamepad;
   } else {
     delete gamepads[gamepad.index];
   }
 }
 
-window.addEventListener("gamepadconnected", (e) => { gamepadHandler(e, true); }, false);
-window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false); }, false);
+window.addEventListener(
+  "gamepadconnected",
+  (e) => {
+    gamepadHandler(e, true);
+  },
+  false,
+);
+window.addEventListener(
+  "gamepaddisconnected",
+  (e) => {
+    gamepadHandler(e, false);
+  },
+  false,
+);
 ```
 
 この前の例ではイベントが完了した後に `gamepad` プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。
@@ -75,9 +93,13 @@ window.addEventListener("gamepaddisconnected", (e) => { gamepadHandler(e, false)
 ```js
 window.addEventListener("gamepadconnected", (e) => {
   const gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id,
-    gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 
@@ -128,7 +150,7 @@ window.addEventListener("gamepadconnected", (e) => {
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
 ```
 
@@ -137,7 +159,7 @@ Chrome では異なる挙動になります。変数にゲームパッドの最�
 ```js
 let interval;
 
-if (!('ongamepadconnected' in window)) {
+if (!("ongamepadconnected" in window)) {
   // No gamepad events available, poll instead.
   interval = setInterval(pollGamepads, 500);
 }
@@ -189,12 +211,12 @@ function gameLoop() {
 }
 ```
 
-## 完全な例: ゲームパッドの状態を表示する
+## 完全な例: ゲームパッドの状態の表示
 
-この例では、 {{ domxref("Gamepad") }} オブジェクト、 {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベント、 {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。[デモを見て](https://luser.github.io/gamepadtest/)、Github の[完全なソースコード](https://github.com/luser/gamepadtest)を見ることができます。
+この例では、 {{ domxref("Gamepad") }} オブジェクト、{{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベント、 {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} イベントを使用してシステムに接続されているすべてのゲームパッドの状態を表示します。[デモを見て](https://luser.github.io/gamepadtest/)、Github の[完全なソースコード](https://github.com/luser/gamepadtest)を見ることができます。
 
 ```js
-const haveEvents = 'ongamepadconnected' in window;
+const haveEvents = "ongamepadconnected" in window;
 const controllers = {};
 
 function connecthandler(e) {
@@ -211,12 +233,12 @@ function addgamepad(gamepad) {
   t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
-  const b = document.createElement("div");
+  const b = document.createElement("ul");
   b.className = "buttons";
   gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("span");
+    const e = document.createElement("li");
     e.className = "button";
-    e.textContent = i;
+    e.textContent = `Button ${i}`;
     b.appendChild(e);
   });
 
@@ -261,7 +283,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  controllers.forEach((controller, i) => {
+  Object.entries(controllers).forEach(([i, controller]) => {
     const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
@@ -277,14 +299,16 @@ function updateStatus() {
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
+      b.textContent = pressed ? `Button ${i} [PRESSED]` : `Button ${i}`;
+      b.style.color = pressed ? "#42f593" : "#2e2d33";
       b.className = pressed ? "button pressed" : "button";
     });
 
     const axes = d.getElementsByClassName("axis");
     controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
-      a.setAttribute("value", controller.axis + 1);
+      a.textContent = `${i}: ${axis.toFixed(4)}`;
+      a.setAttribute("value", axis + 1);
     });
   });
 
@@ -293,8 +317,13 @@ function updateStatus() {
 
 function scangamepads() {
   const gamepads = navigator.getGamepads();
+  document.querySelector("#noDevices").style.display = gamepads.filter(Boolean)
+    .length
+    ? "none"
+    : "block";
   for (const gamepad of gamepads) {
-    if (gamepad) { // Can be null if disconnected during the session
+    if (gamepad) {
+      // Can be null if disconnected during the session
       if (gamepad.index in controllers) {
         controllers[gamepad.index] = gamepad;
       } else {
@@ -308,7 +337,7 @@ window.addEventListener("gamepadconnected", connecthandler);
 window.addEventListener("gamepaddisconnected", disconnecthandler);
 
 if (!haveEvents) {
- setInterval(scangamepads, 500);
+  setInterval(scangamepads, 500);
 }
 ```
 

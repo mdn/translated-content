@@ -1,9 +1,6 @@
 ---
 title: overscroll-behavior
 slug: Web/CSS/overscroll-behavior
-tags:
-  - CSS
-translation_of: Web/CSS/overscroll-behavior
 ---
 
 {{CSSRef}}
@@ -79,8 +76,8 @@ body {
 
 Пока CSSWG не опубликует свой собственный вариант, спецификация может быть найдена только[на Github в репозитории WICG](https://wicg.github.io/overscroll-behavior/).
 
-| Specification                                                                                                            | Status                                       | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------- |
+| Specification                                                                              | Status                           | Comment |
+| ------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
 | {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior', 'overscroll-behavior')}} | {{Spec2('Overscroll Behavior')}} |         |
 
 ## Browser compatibility

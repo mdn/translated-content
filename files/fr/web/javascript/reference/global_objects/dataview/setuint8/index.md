@@ -1,7 +1,6 @@
 ---
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`setUint8()`** permet d'enregister un entier non-signé sur 8 bits
 ## Syntaxe
 
 ```js
-dataview.setUint8(positionOctet, valeur)
+dataview.setUint8(positionOctet, valeur);
 ```
 
 ### Paramètres

@@ -1,7 +1,6 @@
 ---
 title: history
 slug: Mozilla/Add-ons/WebExtensions/API/history
-translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
 
 {{AddonSidebar}}

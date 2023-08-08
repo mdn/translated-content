@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -11,7 +10,7 @@ La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")
 ## Syntaxe
 
 ```js
-str.fixed()
+str.fixed();
 ```
 
 ### Valeur de retour

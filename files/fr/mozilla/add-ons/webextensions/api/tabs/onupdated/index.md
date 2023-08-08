@@ -1,7 +1,6 @@
 ---
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
 
 C'est déclenché lorsqu'un onglet est mis à jour.

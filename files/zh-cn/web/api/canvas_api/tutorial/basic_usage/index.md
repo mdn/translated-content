@@ -35,7 +35,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -52,8 +52,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 canvas 起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。{{HTMLElement("canvas")}} 元素有一个叫做 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 的方法，这个方法是用来获得渲染上下文和它的绘画功能。`getContext()`接受一个参数，即上下文的类型。对于 2D 图像而言，如本教程，你可以使用 {{domxref("CanvasRenderingContext2D")}}。
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 代码的第一行通过使用 {{domxref("document.getElementById()")}} 方法来为 {{HTMLElement("canvas")}} 元素得到 DOM 对象。一旦有了元素对象，你可以通过使用它的 getContext() 方法来访问绘画上下文。
@@ -63,10 +63,10 @@ var ctx = canvas.getContext('2d');
 替换内容是用于在不支持 {{HTMLElement("canvas")}} 标签的浏览器中展示的。通过简单的测试 `getContext()` 方法的存在，脚本可以检查编程支持性。上面的代码片段现在变成了这个样子：
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -84,15 +84,17 @@ if (canvas.getContext){
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -113,25 +115,25 @@ if (canvas.getContext){
 
 ```html
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

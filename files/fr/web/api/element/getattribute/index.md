@@ -1,7 +1,6 @@
 ---
 title: element.getAttribute
 slug: Web/API/Element/getAttribute
-translation_of: Web/API/Element/getAttribute
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ translation_of: Web/API/Element/getAttribute
 ## Syntaxe
 
 ```js
-let attribut = element.getAttribute(nom_attribut)
+let attribut = element.getAttribute(nom_attribut);
 ```
 
 où

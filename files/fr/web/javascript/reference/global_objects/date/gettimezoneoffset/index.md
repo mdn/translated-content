@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getTimezoneOffset()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getTimezoneOffset()`** retourne la différence en minutes entre l
 ## Syntaxe
 
 ```js
-dateObj.getTimezoneOffset()
+dateObj.getTimezoneOffset();
 ```
 
 ### Valeur de retour

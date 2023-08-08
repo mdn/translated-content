@@ -1,7 +1,6 @@
 ---
 title: Unicode プロパティエスケープ
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
-original_slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 ---
 
 {{jsSidebar("JavaScript Guide")}}

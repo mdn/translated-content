@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -35,18 +29,18 @@ dateObj.setTime(timeValue)
 ### Пример: использование метода `setTime()`
 
 ```js
-var theBigDay = new Date('July 1, 1999');
+var theBigDay = new Date("July 1, 1999");
 var sameAsBigDay = new Date();
 sameAsBigDay.setTime(theBigDay.getTime());
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                         | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}             | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                 | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                      | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}            | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

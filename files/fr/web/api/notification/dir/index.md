@@ -1,7 +1,6 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
-translation_of: Web/API/Notification/dir
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 ## Syntaxe
 
 ```js
-Notification.dir
+Notification.dir;
 ```
 
 ### Valeur

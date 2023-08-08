@@ -54,8 +54,11 @@ font-size-adjust: inherit;
 
 ```css
 p {
-   font: 12px Verdana, "DejaVu Sans", sans-serif;
-   font-size-adjust: 0.58;
+  font:
+    12px Verdana,
+    "DejaVu Sans",
+    sans-serif;
+  font-size-adjust: 0.58;
 }
 ```
 

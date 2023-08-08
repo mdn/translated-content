@@ -26,8 +26,8 @@ Si se ha especificado una {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-at
 
 ```css
 body {
-    -webkit-mask-image: url('images/mask.png');
-    -webkit-mask-attachment: fixed;
+  -webkit-mask-image: url("images/mask.png");
+  -webkit-mask-attachment: fixed;
 }
 ```
 

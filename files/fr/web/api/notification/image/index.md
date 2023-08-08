@@ -1,7 +1,6 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
-translation_of: Web/API/Notification/image
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`image`** de l'interface {{domxref ("Notificat
 ## Syntaxe
 
 ```js
-Notification.image
+Notification.image;
 ```
 
 ### Valeur

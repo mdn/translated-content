@@ -1,7 +1,6 @@
 ---
 title: 解决常见的无障碍问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}

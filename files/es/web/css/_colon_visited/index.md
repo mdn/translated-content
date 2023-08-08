@@ -38,7 +38,7 @@ Las propiedades que de otro modo no tendrían ningún color o serían transparen
 ### HTML
 
 ```html
-<a href="#test-visited-link">¿Ya has visitado este enlace?</a><br>
+<a href="#test-visited-link">¿Ya has visitado este enlace?</a><br />
 <a href="">Ya has visitado este enlace.</a>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme/Theme
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 ---
 
 {{AddonSidebar()}}

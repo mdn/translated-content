@@ -1,7 +1,6 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
-translation_of: Web/CSS/padding-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,7 +21,7 @@ padding-inline-end: 1em;
 
 /* Valeurs de proportions */
 /* Type <percentage>      */
-padding-inline-end: 5%;  /* Relatif à la largeur du bloc englobant */
+padding-inline-end: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-inline-end: inherit;
@@ -64,7 +63,7 @@ div {
 .exemple {
   writing-mode: vertical-lr;
   padding-inline-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

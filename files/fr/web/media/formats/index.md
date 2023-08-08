@@ -1,7 +1,6 @@
 ---
 title: "Guide des types et formats de médias : contenu image, audio et vidéo"
 slug: Web/Media/Formats
-translation_of: Web/Media/Formats
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}

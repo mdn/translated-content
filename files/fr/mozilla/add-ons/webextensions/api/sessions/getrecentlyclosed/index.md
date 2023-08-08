@@ -1,7 +1,6 @@
 ---
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
 
 {{AddonSidebar()}}

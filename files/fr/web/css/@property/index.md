@@ -1,7 +1,6 @@
 ---
-title: '@property'
+title: "@property"
 slug: Web/CSS/@property
-translation_of: Web/CSS/@property
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -14,7 +13,7 @@ La règle `@property` permet l'enregistrement d'une propriété personnalisée d
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -43,7 +42,7 @@ Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-r
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -53,10 +52,10 @@ Utilisation de la règle [CSS](/fr/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-r
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

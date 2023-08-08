@@ -2,6 +2,7 @@
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
 ---
+
 {{apiref("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`preventDefault()`** 메서드는 어떤 이벤트를 명시적으로 처리하지 않은 경우, 해당 이벤트에 대한 {{Glossary("user agent", "사용자 에이전트")}}의 기본 동작을 실행하지 않도록 지정합니다.
@@ -25,10 +26,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "죄송합니다! <code>preventDefault()</code> 때문에 체크할 수 없어요!<br>";
-         event.preventDefault();
-}, false);
+document.querySelector("#id-checkbox").addEventListener(
+  "click",
+  function (event) {
+    document.getElementById("output-box").innerHTML +=
+      "죄송합니다! <code>preventDefault()</code> 때문에 체크할 수 없어요!<br>";
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 #### HTML
@@ -38,7 +44,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">체크박스:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -59,7 +65,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
   <p>이름을 입력하세요. 영문 소문자만 사용할 수 있습니다.</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" />
   </form>
 </div>
 ```
@@ -84,8 +90,8 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 이제 실제 작업을 수행할 JavaScript 코드입니다. 우선 {{domxref("Element/keypress_event", "keypress")}} 이벤트를 수신합니다.
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+var myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keypress", checkName, false);
 ```
 
 `checkName()` 함수는 사용자가 누른 키를 관찰해서 허용할지, 허용하지 않을지 결정합니다.
@@ -97,8 +103,7 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "영문 소문자만 입력하세요."
-        + "\n" + "charCode: " + charCode + "\n"
+        "영문 소문자만 입력하세요." + "\n" + "charCode: " + charCode + "\n",
       );
     }
   }
@@ -122,10 +127,10 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = window.setTimeout(function () {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

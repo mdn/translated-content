@@ -1,7 +1,6 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ## Syntaxe
 
 ```js
-Map[Symbol.species]
+Map[Symbol.species];
 ```
 
 ## Description
@@ -32,7 +31,9 @@ Pour des objets dérivés (par exemple un dictionnaire `MaMap` que vous auriez c
 class MaMap extends Map {
   // On surcharge le symbole species de MaMap
   // avec le constructeur Map parent
-  static get [Symbol.species]() { return Map; }
+  static get [Symbol.species]() {
+    return Map;
+  }
 }
 ```
 

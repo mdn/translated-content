@@ -1,7 +1,6 @@
 ---
 title: Firefox 13 pour les développeurs
 slug: Mozilla/Firefox/Releases/13
-translation_of: Mozilla/Firefox/Releases/13
 ---
 
 {{FirefoxSidebar}}
@@ -74,7 +73,7 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 #### Améliorations du panneau de style
 
-- En cliquant sur l'en-tête d'une règle dans le [panneau de style](/fr/docs/Tools/Page_Inspector/Style_panel) ouvre à présent [l'Editeur de style](/fr/docs/Outils/%C3%89diteur_de_Style) correspondant au CSS.
+- En cliquant sur l'en-tête d'une règle dans le [panneau de style](/fr/docs/Tools/Page_Inspector/Style_panel) ouvre à présent [l'Editeur de style](/fr/docs/Outils/Éditeur_de_Style) correspondant au CSS.
 - Un clique droit sur une règle dans le [panneau de style](/fr/docs/Tools/Page_Inspector/Style_panel) offre à présent une option pour copier la règle dans le presse-papiers.
 - La saisie d'un nom de propriété inconnue, ou d'une valeur de propriété illégale, affiche une icône d'avertissement près de cette propriété.
 

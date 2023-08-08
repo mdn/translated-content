@@ -1,7 +1,6 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-translation_of: Web/API/Document/Document
 ---
 
 {{APIRef}}
@@ -11,7 +10,7 @@ Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}},
 ## Syntaxe
 
 ```js
-var document = new Document()
+var document = new Document();
 ```
 
 ### Paramètres

@@ -25,11 +25,15 @@ Este elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes)
 ### HTML
 
 ```html
-<p>Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
-  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.</p>
+<p>
+  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+  Este é o primeiro parágrafo do texto. Este é o primeiro parágrafo do texto.
+</p>
 
-<p>Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
-   Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.</p>
+<p>
+  Este é o segundo parágrafo do texto. Este é o segundo parágrafo do texto. Este
+  é o segundo parágrafo do texto. Este é o segundo parágrafo do texto.
+</p>
 ```
 
 ### Resultado
@@ -41,22 +45,30 @@ Este elemento inclui [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes)
 ### HTML
 
 ```html
-<p>Parágrafos separados por linhas em branco são mais legíveis. Porém,
-também podemos distinguir parágrafos indentando suas primeiras linhas.
-Uma abordagem que ocupa menos espaço e é usada para economizar
-papel quando impresso.</p>
+<p>
+  Parágrafos separados por linhas em branco são mais legíveis. Porém, também
+  podemos distinguir parágrafos indentando suas primeiras linhas. Uma abordagem
+  que ocupa menos espaço e é usada para economizar papel quando impresso.
+</p>
 
-<p>Em textos que serão editados, como trabalhos escolares e rascunhos,
-usamos tanto as linhas em branco quanto a indentação para
-distinguirmos cada parágrafo. Já em publicações, usar ambas
-é considerado redundante e amadoresco.</p>
+<p>
+  Em textos que serão editados, como trabalhos escolares e rascunhos, usamos
+  tanto as linhas em branco quanto a indentação para distinguirmos cada
+  parágrafo. Já em publicações, usar ambas é considerado redundante e
+  amadoresco.
+</p>
 
-<p>Em textos arcaicos usava-se o caractere especial: ¶,
-o <i>caldeirão</i>, para separar parágrafos. Atualmente, esta abordagem
-é considerada claustrofóbica e ilegível.</p>
+<p>
+  Em textos arcaicos usava-se o caractere especial: ¶, o <i>caldeirão</i>, para
+  separar parágrafos. Atualmente, esta abordagem é considerada claustrofóbica e
+  ilegível.
+</p>
 
-<p>Será mesmo que é ilegível? Clique para visualizar:
-  <button data-toggle-text="Que horrível! Mudar de volta!">Usar caldeirão nos parágrafos</button>
+<p>
+  Será mesmo que é ilegível? Clique para visualizar:
+  <button data-toggle-text="Que horrível! Mudar de volta!">
+    Usar caldeirão nos parágrafos
+  </button>
 </p>
 ```
 
@@ -69,8 +81,8 @@ p {
 }
 
 p.caldeirao {
-   text-indent: 0;
-   display: inline;
+  text-indent: 0;
+  display: inline;
 }
 p.caldeirao + p.caldeirao::before {
   content: " ¶ ";
@@ -80,9 +92,9 @@ p.caldeirao + p.caldeirao::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', function (event) {
-  document.querySelectorAll('p').forEach(function (paragraph) {
-    paragraph.classList.toggle('caldeirao');
+document.querySelector("button").addEventListener("click", function (event) {
+  document.querySelectorAll("p").forEach(function (paragraph) {
+    paragraph.classList.toggle("caldeirao");
   });
   var newButtonText = event.target.dataset.toggleText;
   var oldText = event.target.innerText;
@@ -111,11 +123,11 @@ p {
 
 ## Especificações
 
-| Specification                                                                                            | Status                           | Comment                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | Nenhuma alteração desde a última w3c {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | Atributo `align` está obsoleto                                        |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definição inicial                                                     |
+| Specification                                                                 | Status                   | Comment                                                        |
+| ----------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}      | {{Spec2('HTML WHATWG')}} | Nenhuma alteração desde a última w3c {{SpecName("HTML5 W3C")}} |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}   | Atributo `align` está obsoleto                                 |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}             | {{Spec2('HTML4.01')}}    | Definição inicial                                              |
 
 ## Compatibilidade com navegadores
 

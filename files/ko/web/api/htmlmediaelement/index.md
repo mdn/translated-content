@@ -16,13 +16,13 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{domxref("AudioTrackList")}}는 엘레먼트의 {{domxref("AudioTrack")}} 객체의 목록입니다.
 - {{domxref("HTMLMediaElement.autoplay")}}
-  - : 미디어가 준비된 즉시 재생할 것인지 결정하는 {{htmlattrxref("autoplay", "video")}} 속성에 연결된 {{jsxref("Boolean")}}값입니다..> **참고:** 오디오(또는 오디오가 있는 비디오)를 자동으로 재생하는 사이트는 사용자에게 그리 탐탁치 않은 경험일 수 있습니다, 그러므로 가능한 한 지양해야합니다. 자동 재생 기능을 제공하려면, 사전 동의(사용자에게 기능을 켜도록 함)를 받아야 합니다. 의외로 이 점은 사용자의 조작에 의해 미디어 엘레먼츠를 늦게 생성하는 경우 유용할 수 있습니다.
+  - : 미디어가 준비된 즉시 재생할 것인지 결정하는 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성에 연결된 {{jsxref("Boolean")}}값입니다..> **참고:** 오디오(또는 오디오가 있는 비디오)를 자동으로 재생하는 사이트는 사용자에게 그리 탐탁치 않은 경험일 수 있습니다, 그러므로 가능한 한 지양해야합니다. 자동 재생 기능을 제공하려면, 사전 동의(사용자에게 기능을 켜도록 함)를 받아야 합니다. 의외로 이 점은 사용자의 조작에 의해 미디어 엘레먼츠를 늦게 생성하는 경우 유용할 수 있습니다.
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : `buffered` 프로퍼티에 접근한 시점에 브라우저가 버퍼에 담고 있는 미디어 소스의 구간 데이터를 나타내는 {{domxref("TimeRanges")}} 객체를 반환합니다.
 - {{domxref("HTMLMediaElement.controller")}}
   - : 미디어 엘레먼트에 할당된 {{domxref("MediaController")}} 객체를 반환하거나 없다면 null을 반환합니다.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : 미디어 엘레먼트에 컨트롤를 표시할지 결정하는 {{htmlattrxref("controls", "video")}} HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
+  - : 미디어 엘레먼트에 컨트롤를 표시할지 결정하는 [`controls`](/ko/docs/Web/HTML/Element/video#controls) HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : 브라우저가 미디어 엘레먼트에 자체 컨트롤을 표시할 때 어떤 컨트롤을 보여주거나 숨길 지 결정하는 {{domxref("DOMTokenList")}}를 반환합니다. `DOMTokenList` 는 `nodownload`, `nofullscreen`, `noremoteplayback` 값을 가질 수 있습니다.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -32,7 +32,7 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : 현재 재생 시점을 초 단위로 표현한 `double`값입니다. 이 값을 세팅하여 재생 시점을 변경할 수 있습니다.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : {{jsxref('Boolean')}} 기본적으로 음소거 상태인지 표시하는 {{htmlattrxref("muted", "video")}} HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
+  - : {{jsxref('Boolean')}} 기본적으로 음소거 상태인지 표시하는 [`muted`](/ko/docs/Web/HTML/Element/video#muted) HTML 속성 값을 {{jsxref('Boolean')}}으로 반환합니다.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : 미디어 기본 재생 배속을 `double` 값으로 반환합니다.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -44,9 +44,9 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
   - : 마지막으로 발생한 {{domxref("MediaError")}} 객체를 반환합니다. 발생한 에러가 없을 경우 `null`을 반환합니다.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : 미디어의 반복 재생을 결정하는 HTML 속성 {{htmlattrxref("loop", "video")}} 값을{{jsxref('Boolean')}}으로 반환합니다.
+  - : 미디어의 반복 재생을 결정하는 HTML 속성 [`loop`](/ko/docs/Web/HTML/Element/video#loop) 값을{{jsxref('Boolean')}}으로 반환합니다.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : 미디어가 속한 그룹을 나타내는 {{ htmlattrxref("mediagroup", "video")}} 속성을 {{domxref("DOMString")}} 값으로 반환합니다. 같은 그룹에 속한 미디어들은 동일한 {{domxref('MediaController')}}에 의해 제어됩니다.
+  - : 미디어가 속한 그룹을 나타내는 [`mediagroup`](/ko/docs/Web/HTML/Element/video#mediagroup) 속성을 {{domxref("DOMString")}} 값으로 반환합니다. 같은 그룹에 속한 미디어들은 동일한 {{domxref('MediaController')}}에 의해 제어됩니다.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
   - : {{domxref("MediaKeys")}} 객체 또는 `null`을 반환합니다. MediaKeys는 재생할 미디어 데이터를 복호화 하는데 사용합니다.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}
@@ -68,7 +68,7 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
   - : 브라우저에서 재생된 미디어 소스 범위를 포함한 {{domxref('TimeRanges')}} 객체를 반환합니다.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : 프리로드 할 데이터 타입을 명시하는 {{htmlattrxref("preload", "video")}} attribute를 {{domxref("DOMString")}} 값으로 반환한다. 가능한 값들 : `none`, `metadata`, `auto`.
+  - : 프리로드 할 데이터 타입을 명시하는 [`preload`](/ko/docs/Web/HTML/Element/video#preload) attribute를 {{domxref("DOMString")}} 값으로 반환한다. 가능한 값들 : `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : 사운드 피치 유지 여부를 {{jsxref('Boolean')}} 값으로 반환합니다. `false` 일 경우, 오디오 재생 속도에 따라 변하게 됩니다. Firefox의 (`mozPreservesPitch`)와 WebKit의 (`webkitPreservesPitch`)로 구현되어 있습니다.
 - {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
@@ -80,7 +80,7 @@ _이 인터페이스는 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{do
 - {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
   - : 별도의 오디오 재생 장치로 출력중이라면 장치의 unique ID를 {{domxref("DOMString")}} 으로 반환합니다. 브라우저로 재생 중이라면 빈 문자열입니다. 이 ID는 {{domxref("MediaDevices.enumerateDevices()")}}에서 반환된 `MediaDeviceInfo.deviceid`, `id-multimedia`, `id-communications` 중 하나입니다.
 - {{domxref("HTMLMediaElement.src")}}
-  - : 미디어 리소스 URL이 포함된 {{htmlattrxref("src", "video")}} attribute를 {{domxref("DOMString")}} 값으로 반환합니다.
+  - : 미디어 리소스 URL이 포함된 [`src`](/ko/docs/Web/HTML/Element/video#src) attribute를 {{domxref("DOMString")}} 값으로 반환합니다.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : 현재 `HTMLMediaElement` 객체에서 재생 중이거나 재생 되었던 미디어를 표현하는 {{domxref('MediaStream')}} 객체를 반환합니다. 없는 경우, `null` 을 반환합니다.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
@@ -128,7 +128,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : 입력된 시간으로 바로 이동합니다.
 - {{domxref("HTMLMediaElement.load()")}}
-  - : 미디어를 처음으로 리셋하고 {{htmlattrxref("src", "video")}} 어트리뷰트 또는 {{HTMLElement("source")}} 엘리먼트로 전달된 소스 중 최적의 소스를 선택합니다.
+  - : 미디어를 처음으로 리셋하고 [`src`](/ko/docs/Web/HTML/Element/video#src) 어트리뷰트 또는 {{HTMLElement("source")}} 엘리먼트로 전달된 소스 중 최적의 소스를 선택합니다.
 - {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
@@ -155,7 +155,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 
 ## 이벤트
 
-_부모 엘리먼트 {{domxref("HTMLElement")}}에서 상속받은 이벤트와_ {{domxref('GlobalEventHandlers')}}에 정의된 이벤트를 믹스인합니다. [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener)를 통해 이벤트를 수신하거나 `oneventname` 프로퍼티에 리스터를 할당하여 수신합니다.
+_부모 엘리먼트 {{domxref("HTMLElement")}}에서 상속받은 이벤트와_ {{domxref('GlobalEventHandlers')}}에 정의된 이벤트를 믹스인합니다. [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 통해 이벤트를 수신하거나 `oneventname` 프로퍼티에 리스터를 할당하여 수신합니다.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : 에러 외의 원인으로 전체 리소스가 로드 되지 못했을 때 발생합니다.

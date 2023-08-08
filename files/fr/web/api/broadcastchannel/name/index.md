@@ -1,7 +1,6 @@
 ---
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
-translation_of: Web/API/BroadcastChannel/name
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
@@ -20,7 +19,7 @@ Une chaîne
 
 ```js
 // Connexion à un canal
-const canal = new BroadcastChannel('canal_test');
+const canal = new BroadcastChannel("canal_test");
 
 // D'autres traitements (tel que postMessage, …)
 

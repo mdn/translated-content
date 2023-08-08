@@ -5,92 +5,90 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 {{JSRef}}
 
-**`replaceAll()`** 方法返回一个新字符串，新字符串所有满足 `pattern` 的部分都已被`replacement` 替换。`pattern`可以是一个字符串或一个 {{jsxref("RegExp")}}， `replacement`可以是一个字符串或一个在每次匹配被调用的函数。
-
-原始字符串保持不变。
+**`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
 {{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
 
 ## 语法
 
-```plain
-const newStr = str.replaceAll(regexp|substr, newSubstr|function)
+```js-nolint
+replaceAll(pattern, replacement)
 ```
-
-> **备注：** 当使用一个 `regex` 时，您必须设置全局（“g”）标志，
-> 否则，它将引发 `TypeError`：“必须使用全局 RegExp 调用 replaceAll”。
 
 ### 参数
 
-- `regexp` (pattern)
-  - : A {{jsxref("RegExp")}} object or literal with the global flag. The matches are replaced with `newSubstr` or the value returned by the specified `function`. A RegExp without the global ("g") flag will throw a `TypeError`: "replaceAll must be called with a global RegExp".
-- `substr`
-  - : A {{jsxref("String")}} that is to be replaced by `newSubstr`. It is treated as a literal string and is _not_ interpreted as a regular expression.
-- `newSubstr` (replacement)
-  - : The {{jsxref("String")}} that replaces the substring specified by the specified `regexp` or `substr` parameter. A number of special replacement patterns are supported; see the "[Specifying a string as a parameter](#Specifying_a_string_as_a_parameter)" section below.
-- `function` (replacement)
-  - : A function to be invoked to create the new substring to be used to replace the matches to the given `regexp` or `substr`. The arguments supplied to this function are described in the "[Specifying a function as a parameter](#Specifying_a_function_as_a_parameter)" section below.
+- `pattern`
+
+  - : 可以是一个字符串或一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象，典型的例子是[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。任何没有 `Symbol.replace` 方法的值都将被强制转换为字符串。
+
+    如果 `pattern` [是一个正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)，则必须设置全局（`g`）标志，否则会抛出 {{jsxref("TypeError")}}。
+
+- `replacement`
+  - : 可以是一个字符串或一个函数。替换字符串的语义与 [`String.prototype.replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 相同。
 
 ### 返回值
 
-A new string, with all matches of a pattern replaced by a replacement.
+返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。
+
+### 异常
+
+- {{jsxref("TypeError")}}
+  - : 如果 `pattern` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，并且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
 
 ## 描述
 
-此方法不会更改调用 {{jsxref("String")}} 对象。它只是返回一个新字符串。
+该方法不会修改调用它的字符串。它返回一个新字符串。
 
-### 将一个字符串作为一个参数
+与 [`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 不同，该方法将替换所有匹配的字符串，而不仅仅是第一个。如果字符串不是静态已知的，那么这特别有用，因为调用 [`RegExp()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) 构造函数而不转义特殊字符可能会意外地改变它的语义。
 
-The replacement string can include the following special replacement patterns:
+```js
+function unsafeRedactName(text, name) {
+  return text.replace(new RegExp(name, "g"), "[REDACTED]");
+}
+function safeRedactName(text, name) {
+  return text.replaceAll(name, "[REDACTED]");
+}
 
-| Pattern  | Inserts                                                                                                                                                                                               |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Inserts a `"$"`.                                                                                                                                                                                      |
-| `$&`     | Inserts the matched substring.                                                                                                                                                                        |
-| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                                                                |
-| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                                                                 |
-| `$n`     | Where `n` is a positive integer less than 100, inserts the `n`th parenthesized submatch string, provided the first argument was a {{jsxref("RegExp")}} object. Note that this is `1`-indexed. |
+const report =
+  "A hacker called ha.*er used special characters in their name to breach the system.";
 
-### 将一个函数指定为一个参数
+console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
+console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
+```
 
-你可以指定一个函数作为第二个参数，在这种情况下，函数只有在匹配发生之后才会被调用。The function's result (return value) will be used as the replacement string. (**Note:** The above-mentioned special replacement patterns do _not_ apply in this case.)
+如果 `pattern` 是一个具有 [`Symbol.replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 方法的对象（包括 `RegExp` 对象），则该方法将被调用，并以目标字符串和 `replacement` 作为参数。它的返回值成为 `replaceAll()` 的返回值。在这种情况下，`replaceAll()` 的行为完全取决于 `@@replace` 方法，因此除了额外的输入验证（即正则表达式必须是全局的）之外，它将具有与 `replace()` 相同的结果。
 
-Note that the function will be invoked multiple times for each full match to be replaced if the regular expression in the first parameter is global.
+如果 `pattern` 是一个空字符串，则替换内容将插入到每个 UTF-16 码元之间，类似于 [`split()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 的行为。
 
-The arguments to the function are as follows:
+```js
+"xxx".replaceAll("", "_"); // "_x_x_x_"
+```
 
-| Possible name | Supplied value                                                                                                                                                                                                                                                                      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                                 |
-| `p1, p2, ...` | The *n*th string found by a parenthesized capture group, provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
-| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.)                                                                                  |
-| `string`      | The whole string being examined.                                                                                                                                                                                                                                                    |
-
-(The exact number of arguments depends on whether the first argument is a {{jsxref("RegExp")}} object—and, if so, how many parenthesized submatches it specifies.)
+有关正则表达式属性（尤其是 [sticky](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 标志）如何与 `replaceAll()` 交互的更多信息，请参阅 [`RegExp.prototype[@@replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)。
 
 ## 示例
 
-### 使用 replaceAll
+### 使用 replaceAll()
 
 ```js
-'aabbcc'.replaceAll('b', '.');
+"aabbcc".replaceAll("b", ".");
 // 'aa..cc'
 ```
 
-### 非全局 regex 抛出
+### 非全局正则表达式抛出错误
 
-使用正则表达式搜索值时，它必须是全局的。这将行不通：
+使用正则表达式搜索值时，它必须是全局的。下面的代码是不可行的：
 
 ```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+"aabbcc".replaceAll(/b/, ".");
+// TypeError: replaceAll must be called with a global RegExp
 ```
 
-这将可以正常运行：
+下面的代码可以正常运行：
 
 ```js example-good
-'aabbcc'.replaceAll(/b/g, '.');
-"aa..cc"
+"aabbcc".replaceAll(/b/g, ".");
+("aa..cc");
 ```
 
 ## 规范
@@ -101,8 +99,9 @@ TypeError: replaceAll must be called with a global RegExp
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
+- [`core-js` 中 `String.prototype.replaceAll` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace", "String.prototype.replace()")}}
 - {{jsxref("String.prototype.match", "String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec", "RegExp.prototype.exec()")}}

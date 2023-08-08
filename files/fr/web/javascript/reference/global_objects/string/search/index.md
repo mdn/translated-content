@@ -1,7 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`search()`** éxecute une recherche dans une chaine de caractères
 ## Syntaxe
 
 ```js
-str.search(regexp)
+str.search(regexp);
 ```
 
 ### Paramètres

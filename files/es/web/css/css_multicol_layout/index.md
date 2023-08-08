@@ -1,7 +1,6 @@
 ---
 title: Columnas CSS
 slug: Web/CSS/CSS_multicol_layout
-original_slug: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef}}

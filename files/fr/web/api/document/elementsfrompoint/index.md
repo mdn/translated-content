@@ -1,7 +1,6 @@
 ---
 title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
-translation_of: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -43,16 +42,17 @@ Un tableau (_array_) d'objets {{domxref('element')}} représentants les élémen
 var output = document.getElementById("output");
 if (document.elementsFromPoint) {
   var elements = document.elementsFromPoint(30, 20);
-  for(var i = 0; i < elements.length; i++) {
+  for (var i = 0; i < elements.length; i++) {
     output.textContent += elements[i].localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }
   }
 } else {
-  output.innerHTML = "<span style=\"color: red;\">" +
-     "Votre navigateur ne prend pas en charge <code>document.elementsFromPoint()</code>" +
-     "</span>";
+  output.innerHTML =
+    '<span style="color: red;">' +
+    "Votre navigateur ne prend pas en charge <code>document.elementsFromPoint()</code>" +
+    "</span>";
 }
 ```
 

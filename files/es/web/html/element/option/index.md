@@ -1,19 +1,18 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-original_slug: Web/HTML/Elemento/option
 ---
 
 {{HTMLSidebar}}
 
 En un formulario Web , el **elemento** **HTML `<option>`** se usa para representar un item dentro de un {{HTMLElement("select")}}, un {{HTMLElement("optgroup")}} o un elemento HTML5 {{HTMLElement("datalist")}} .
 
-| [Contenido de las categorías](/es/docs/Web/HTML/Content_categories) | Ninguna                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                 | Texto con, eventualmente, caracteres especiales (como `&eacute;`).                                                                                                                                                                                          |
+| [Contenido de las categorías](/es/docs/Web/HTML/Content_categories) | Ninguna                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                 | Texto con, eventualmente, caracteres especiales (como `&eacute;`).                                                                                                                                                                                 |
 | Omisión de etiqueta                                                 | La etiqueta de inicio es obligatoria. La etiqueta de finalización es opcional siempre que el elemento esté inmediatamente seguido por otro elemento `<option>` , por un {{HTMLElement("optgroup")}}, o si el elemento padre no tiene más contenido |
-| Elementos padre permitidos                                          | {{HTMLElement("select")}}, o {{HTMLElement("optgroup")}} o un elemento {{HTMLElement("datalist")}} element.                                                                                                                        |
-| Interfaz DOM                                                        | {{domxref("HTMLOptionElement")}}                                                                                                                                                                                                                |
+| Elementos padre permitidos                                          | {{HTMLElement("select")}}, o {{HTMLElement("optgroup")}} o un elemento {{HTMLElement("datalist")}} element.                                                                                                                                        |
+| Interfaz DOM                                                        | {{domxref("HTMLOptionElement")}}                                                                                                                                                                                                                   |
 
 ## Atributos
 

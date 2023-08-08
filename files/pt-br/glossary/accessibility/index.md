@@ -1,7 +1,6 @@
 ---
 title: Acessibilidade
 slug: Glossary/Accessibility
-original_slug: Glossario/Acessibilidade
 ---
 
 _Acessibilidade na Web (Web Accessibility)_ (**A11Y**) refere-se às melhores práticas para manter um site útil, apesar das restrições físicas e técnicas. A acessibilidade da Web é formalmente definida e discutida no {{Glossary("W3C")}} através de {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).

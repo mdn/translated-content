@@ -1,7 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-translation_of: Web/API/Window/navigator
 ---
 
 {{APIRef}}
@@ -11,7 +10,7 @@ La propriété en lecture-seule **`Window.navigator`** renvoie une référence �
 ## Syntaxe
 
 ```js
-navigatorObject = window.navigator
+navigatorObject = window.navigator;
 ```
 
 ## Exemple

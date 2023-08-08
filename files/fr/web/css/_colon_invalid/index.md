@@ -1,7 +1,6 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
-translation_of: Web/CSS/:invalid
 ---
 
 {{CSSRef}}
@@ -71,12 +70,12 @@ input:required:invalid {
 <form>
   <div class="field">
     <label for="url_input">Veuillez saisir une URL :</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Veuillez saisir une adresse électronique :</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```

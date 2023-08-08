@@ -1,7 +1,6 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-translation_of: Web/API/Document/clear
 ---
 
 {{APIRef("DOM")}}{{ Deprecated_header() }}
@@ -13,7 +12,7 @@ Dans les versions récentes des applications basées sur Mozilla ainsi que sur I
 ## Syntaxe
 
 ```js
-document.clear()
+document.clear();
 ```
 
 ## Spécifications

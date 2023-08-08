@@ -22,26 +22,26 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 例如，下边这个语法就是行的通的：
 
 ```js
-function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n - 1) * n;
+function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 }
 
-[1,2,3,4,5].map(factorial);
+[1, 2, 3, 4, 5].map(factorial);
 ```
 
 但是：
 
 ```js
-[1,2,3,4,5].map(function (n) {
-    return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
 });
 ```
 
 这个不行。为了解决这个问题， `arguments.callee` 添加进来了。然后你可以这么做
 
 ```js
-[1,2,3,4,5].map(function (n) {
-    return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
 });
 ```
 
@@ -51,13 +51,15 @@ function factorial (n) {
 var global = this;
 
 var sillyFunction = function (recursed) {
-    if (!recursed) { return arguments.callee(true); }
-    if (this !== global) {
-        alert("This is: " + this);
-    } else {
-        alert("This is the global");
-    }
-}
+  if (!recursed) {
+    return arguments.callee(true);
+  }
+  if (this !== global) {
+    alert("This is: " + this);
+  } else {
+    alert("This is the global");
+  }
+};
 
 sillyFunction();
 ```
@@ -65,8 +67,8 @@ sillyFunction();
 ECMAScript 3 通过允许命名函数表达式解决这些问题。例如：
 
 ```js
-[1,2,3,4,5].map(function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n-1)*n;
+[1, 2, 3, 4, 5].map(function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 });
 ```
 
@@ -79,7 +81,9 @@ ECMAScript 3 通过允许命名函数表达式解决这些问题。例如：
 另外一个被废弃的特性是 `arguments.callee.caller`，具体点说则是 `Function.caller。为什么`? 额，在任何一个时间点，你能在堆栈中找到任何函数的最深层的调用者，也正如我在上面提到的，在调用堆栈有一个单一重大影响：不可能做大量的优化，或者有更多更多的困难。比如，如果你不能保证一个函数 f 不会调用一个未知函数，它就绝不可能是内联函数 f。基本上这意味着内联代码中积累了大量防卫代码：
 
 ```js
-function f (a, b, c, d, e) { return a ? b * c : d * e; }
+function f(a, b, c, d, e) {
+  return a ? b * c : d * e;
+}
 ```
 
 如果 JavaScript 解释器不能保证所有提供的参数数量在被调用的时候都存在，那么它需要在行内代码插入检查，或者不能内联这个函数。现在在这个特殊例子里一个智能的解释器应该能重排检查而更优，并检查任何将不用到的值。然而在许多的情况里那是不可能的，也因此它不能够内联。
@@ -94,11 +98,10 @@ function f (a, b, c, d, e) { return a ? b * c : d * e; }
 
 ```js
 function create() {
-   return function(n) {
-      if (n <= 1)
-         return 1;
-      return n * arguments.callee(n - 1);
-   };
+  return function (n) {
+    if (n <= 1) return 1;
+    return n * arguments.callee(n - 1);
+  };
 }
 
 var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
@@ -109,10 +112,10 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 当你必须要使用 Function 构造函数时，下面的例子是没有可以替代 `arguments.callee` 的方案的，因此弃用它时会产生一个 BUG (参看 [Firefox bug 725398](https://bugzil.la/725398)):
 
 ```js
-function createPerson (sIdentity) {
-    var oPerson = new Function("alert(arguments.callee.identity);");
-    oPerson.identity = sIdentity;
-    return oPerson;
+function createPerson(sIdentity) {
+  var oPerson = new Function("alert(arguments.callee.identity);");
+  oPerson.identity = sIdentity;
+  return oPerson;
 }
 
 var john = createPerson("John Smith");
@@ -123,12 +126,12 @@ john();
 译者注：利用命名函数表达式也可以实现上述例子的同样效果
 
 ```js
-function createPerson (identity) {
-    function Person() {
-        console.log(Person.identity);
-    }
-    Person.identity = identity;
-    return Person;
+function createPerson(identity) {
+  function Person() {
+    console.log(Person.identity);
+  }
+  Person.identity = identity;
+  return Person;
 }
 var john = createPerson("John Smith");
 

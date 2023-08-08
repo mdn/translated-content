@@ -2,6 +2,7 @@
 title: MediaStreamTrack.applyConstraints()
 slug: Web/API/MediaStreamTrack/applyConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`applyConstraints()`** 메서드는 트랙에 제약을 적용합니다. 제약을 통해 웹 사이트와 앱은 프레임 레이트, 해상도, 플래시 여부 등, 제약 가능한 속성을 자신이 바라는 이상적인 값과 허용 가능한 범위로 제한할 수 있습니다.
@@ -11,7 +12,7 @@ slug: Web/API/MediaStreamTrack/applyConstraints
 ## 구문
 
 ```js
-const appliedPromise = track.applyConstraints([constraints])
+const appliedPromise = track.applyConstraints([constraints]);
 ```
 
 ### 매개변수
@@ -29,24 +30,21 @@ const appliedPromise = track.applyConstraints([constraints])
 
 ```js
 const constraints = {
-  width: {min: 640, ideal: 1280},
-  height: {min: 480, ideal: 720},
-  advanced: [
-    {width: 1920, height: 1280},
-    {aspectRatio: 1.333}
-  ]
+  width: { min: 640, ideal: 1280 },
+  height: { min: 480, ideal: 720 },
+  advanced: [{ width: 1920, height: 1280 }, { aspectRatio: 1.333 }],
 };
 
-navigator.mediaDevices.getUserMedia({ video: true })
-.then(mediaStream => {
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
   const track = mediaStream.getVideoTracks()[0];
-  track.applyConstraints(constraints)
-  .then(() => {
-    // Do something with the track such as using the Image Capture API.
-  })
-  .catch(e => {
-    // The constraints could not be satisfied by the available devices.
-  });
+  track
+    .applyConstraints(constraints)
+    .then(() => {
+      // Do something with the track such as using the Image Capture API.
+    })
+    .catch((e) => {
+      // The constraints could not be satisfied by the available devices.
+    });
 });
 ```
 

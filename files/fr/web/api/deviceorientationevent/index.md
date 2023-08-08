@@ -1,7 +1,6 @@
 ---
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
-translation_of: Web/API/DeviceOrientationEvent
 ---
 
 {{ApiRef}}{{SeeCompatTable}}
@@ -26,8 +25,10 @@ L'évènement `DeviceOrientationEvent` met à la disposition du développeur des
 ## Exemple
 
 ```js
-window.addEventListener('deviceorientation', function(event) {
-  console.log("z : " + event.alpha + "\n x : " + event.beta + "\n y : " + event.gamma);
+window.addEventListener("deviceorientation", function (event) {
+  console.log(
+    "z : " + event.alpha + "\n x : " + event.beta + "\n y : " + event.gamma,
+  );
 });
 ```
 

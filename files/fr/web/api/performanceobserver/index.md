@@ -1,7 +1,6 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
-translation_of: Web/API/PerformanceObserver
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -31,7 +30,7 @@ function perf_observer(list, observer) {
   // Traiter l'événement "measure".
 }
 const observer2 = new PerformanceObserver(perf_observer);
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## Spécifications

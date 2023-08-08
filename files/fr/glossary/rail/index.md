@@ -1,7 +1,6 @@
 ---
 title: RAIL
 slug: Glossary/RAIL
-translation_of: Glossary/RAIL
 ---
 
 **RAIL**, acronyme de **Response, Animation, Idle, et Load**, est un modèle de performance créé par l'équipe Google Chrome en 2015, axé sur l'expérience utilisateur et les performances dans le navigateur. Le mantra de performance de RAIL est "Concentrez-vous sur l'utilisateur; l'objectif final n'est pas de rendre votre site performant sur un appareil spécifique, c'est de rendre les utilisateurs heureux." Il y a 4 étapes d'interaction: chargement de la page, inactivité, réponse à l'entrée, et défilement et animation. Dans l'ordre des acronymes, les principaux principes sont:

@@ -39,11 +39,11 @@ Veja os exemplos do elemento {{HTMLElement("select")}}.
 
 ## Especificações
 
-| Especificação                                                                                                            | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                               | Estado                   | Comentário |
+| ------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'the-button-element.html#the-option-element', '&lt;option&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-option-element', '&lt;option&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;option&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-option-element', '&lt;option&gt;')}}                | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;option&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

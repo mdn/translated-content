@@ -14,19 +14,19 @@ O símbolo **`Symbol.toStringTag`** é uma propriedade com valor string que é u
 ### Tags padrões
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... e mais
 ```
 
 ### Símbolos built-in toStringTag
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... e mais
@@ -49,7 +49,7 @@ Agora, com a ajuda do `toStringTag`, você é capaz de costumizar sua própria t
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
@@ -61,15 +61,15 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 Devido a uma mudança nas especificações [WebIDL spec change](https://github.com/heycam/webidl/pull/357) em meados de 2020, navegadores estão adicionando uma propriedade `Symbol.toStringTag` para todos os objetos protótipos da DOM . Por exemplo, para acessar a propriedade `Symbol.toStringTag` no {{domxref("HTMLButtonElement")}}:
 
 ```js
-let test = document.createElement('button');
+let test = document.createElement("button");
 test.toString(); // Retorna [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Retona HTMLButtonElement
+test[Symbol.toStringTag]; // Retona HTMLButtonElement
 ```
 
 ## Especificações
 
-| Especificação                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
+| Especificação                                                            |
+| ------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-symbol.tostringtag', 'Symbol.toStringTag')}} |
 
 ## Compatibilidade com navegadores

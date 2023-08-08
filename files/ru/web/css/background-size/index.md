@@ -1,7 +1,6 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-translation_of: Web/CSS/background-size
 ---
 
 {{CSSRef}}
@@ -95,18 +94,19 @@ background-size: unset;
 
 ```css
 .bar {
-       width: 50px; height: 100px;
-       background-image: gradient(...);
+  width: 50px;
+  height: 100px;
+  background-image: gradient(...);
 
-       /* Лучше не использовать */
-       background-size: 25px;
-       background-size: 50%;
-       background-size: auto 50px;
-       background-size: auto 50%;
+  /* Лучше не использовать */
+  background-size: 25px;
+  background-size: 50%;
+  background-size: auto 50px;
+  background-size: auto 50%;
 
-       /* Допускается */
-       background-size: 25px 50px;
-       background-size: 50% 50%;
+  /* Допускается */
+  background-size: 25px 50px;
+  background-size: 50% 50%;
 }
 ```
 

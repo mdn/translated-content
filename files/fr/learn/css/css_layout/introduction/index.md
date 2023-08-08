@@ -1,7 +1,6 @@
 ---
 title: Introduction à la mise en page en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-translation_of: Learn/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
@@ -14,7 +13,7 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >) et avoir une idée de la manière dont la CSS fonctionne (étudiez
         <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a
@@ -74,7 +73,7 @@ Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les é
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
-- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.

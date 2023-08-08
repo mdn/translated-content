@@ -15,8 +15,8 @@ The HyperText Transfer Protocol (HTTP) **`505 HTTP Version Not Supported`** resp
 
 ## Specifications
 
-| Specification                                                                    | Title                                                         |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                                               | Title                                                         |
+| ----------------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "505 HTTP Version Not Supported" , "6.6.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## See also

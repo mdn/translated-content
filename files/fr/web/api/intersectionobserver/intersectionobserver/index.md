@@ -1,7 +1,6 @@
 ---
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -53,7 +52,7 @@ Cet exemple crée un nouvel observateur d'intersection qui appelle la fonction `
 
 ```js
 let observer = new IntersectionObserver(myObserverCallback, {
-  threshold: 0.1
+  threshold: 0.1,
 });
 ```
 
