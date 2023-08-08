@@ -44,7 +44,7 @@ alternative1|alternative2|alternative3|…
 
 選択肢は空文字列であることもあり、その場合は空文字列に一致します（言い換えれば、常に一致します）。
 
-選択肢は常に左から右に向けて試され、照合の方向には関係ありません（これは[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)で予約されています）。
+選択肢は常に左から右に向けて試され、照合の方向には関係ありません（これは[後読み](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)で予約されています）。
 
 ## 例
 
