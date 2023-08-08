@@ -2,6 +2,7 @@
 title: display
 slug: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 **`display`** [CSS](/ko/docs/Web/CSS) 속성은 요소를
@@ -43,10 +44,12 @@ slug: Web/CSS/display
 ### 안쪽
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
+
   - : 요소의 내부 디스플레이 유형을 설정하는 키워드입니다. 내부 디스플레이 유형은 대체 요소가 아닌 요소의 콘텐츠 서식과
     배치 방법을 나타냅니다.
 
     - `flow` {{Experimental_Inline}}
+
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
         If its outer display type is `inline` or `run-in`, and it is participating in a block or
@@ -57,6 +60,7 @@ slug: Web/CSS/display
         either establishes a new
         [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents
         or integrates its contents into its parent formatting context.
+
     - `flow-root`
       - : The element generates a block element box that establishes a new
         [block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context), defining where the
@@ -97,7 +101,7 @@ with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
 
 - {{cssxref("&lt;display-internal&gt;")}}
   - : `table`, `ruby` 등 일부 레이아웃 모델은 복잡한 내부 구조를 가지며, 자식과 자손이 채워넣을
-      여러가지 역할을 지닙니다. 이 항목은 그런 특정 레이아웃 모드에서만 의미를 갖는 "내부적"인 값을 정의합니다.
+    여러가지 역할을 지닙니다. 이 항목은 그런 특정 레이아웃 모드에서만 의미를 갖는 "내부적"인 값을 정의합니다.
     - `table-row-group`
       - : These elements behave like {{HTMLElement("tbody")}} HTML elements.
     - `table-header-group`
@@ -126,9 +130,11 @@ with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
 ### 박스
 
 - {{CSSxRef("&lt;display-box&gt;")}}
+
   - : 요소의 디스플레이 박스를 생성해야 하는지 지정합니다.
 
     - `contents`
+
       - : These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their
         child boxes. Please note that the CSS Display Level 3 spec defines how the `contents` value should
         affect "unusual elements" — elements that aren't rendered purely by CSS box concepts such as replaced
@@ -139,31 +145,40 @@ with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
         _Due to a bug in browsers, this will currently remove the element from the accessibility tree — screen
         readers will not look at what's inside. See the
         [Accessibility concerns](#accessibility_concerns) section below for more details._
+
     - `none`
       - : 레이아웃에 영향을 주지 않도록 요소의 display를 끄게 합니다(웹문서는 마치 해당 요소가 존재하지 않는 것처럼 렌더링되어집니다). 모든 하위 요소들 또한 display를 끄게 합니다. 요소가 정상적으로 본연의 공간을 가지고 있게 하면서 해당 공간에 아무것도 렌더링되지 않게 하려면, {{CSSxRef("visibility")}} 속성으로 대체하여 사용하시기 바랍니다.
 
 ### 레거시
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
+
   - : CSS 2는 `display` 속성에 단일 키워드만 사용했으므로, 같은 레이아웃 모드를 위해 블록 레벨과 인라인 레벨
     키워드를 각각 필요로 했습니다.
 
     - `inline-block`
+
       - : The element generates a block element box that will be flowed with surrounding content as if it were a single
         inline box (behaving much like a replaced element would).
 
         It is equivalent to `inline flow-root`.
+
     - `inline-table`
+
       - : The `inline-table` value does not have a direct mapping in HTML. It behaves like an HTML
         {{HTMLElement("table")}} element, but as an inline box, rather than a block-level box. Inside the table box is
         a block-level context.
 
         It is equivalent to `inline table`.
+
     - `inline-flex`
+
       - : The element behaves like an inline element and lays out its content according to the flexbox model.
 
         It is equivalent to `inline flex`.
+
     - `inline-grid`
+
       - : The element behaves like an inline element and lays out its content according to the grid model.
 
         It is equivalent to `inline grid`.
