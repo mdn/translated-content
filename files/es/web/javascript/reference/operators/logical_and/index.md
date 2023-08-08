@@ -141,13 +141,13 @@ Ya que las expresiones lógicas son evaluadas de izquierda a derecha, siempre es
 La siguiente operación compuesta involucra booleanos:
 
 ```js-nolint
-bCondition1 && (bCondition2 || bCondition3)
+bCondition1 || (bCondition2 && bCondition3)
 ```
 
 es siempre igual a:
 
 ```js-nolint
-!(!bCondition1 || !bCondition2 && !bCondition3)
+bCondition1 || bCondition2 && bCondition3
 ```
 
 ## Especificaciones
