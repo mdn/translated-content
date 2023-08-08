@@ -1,9 +1,7 @@
 ---
 title: "Window: DOMContentLoaded 이벤트"
-short-title: DOMContentLoaded
-slug: Web/API/Window/DOMContentLoaded_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+slug: Web/API/Document/DOMContentLoaded_event
+original_slug: Web/API/Window/DOMContentLoaded_event
 ---
 
 {{APIRef}}
