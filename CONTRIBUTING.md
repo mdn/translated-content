@@ -39,7 +39,7 @@ If you're not certain of the changes that you want to make, [get in touch with u
 ### Forking and cloning the repository
 
 If you want to make changes to more than one file, the GitHub UI is not very efficient because you have to make separate pull requests for each file you want to change.
-Instead of using the GitHub UI, you need to use `git` or a client like [GitHub Desktop](https://docs.github.com/en/get-started/using-github/github-desktop) or [GitHub CLI](https://docs.github.com/en/github-cli/github-cli/about-github-cli).
+Instead of using the GitHub UI, you need to use `git` or a client like [GitHub Desktop](https://docs.github.com/get-started/using-github/github-desktop) or [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli).
 
 #### Set up `mdn/content` repo
 
