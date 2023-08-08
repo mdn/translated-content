@@ -19,7 +19,7 @@ ARIA 角色共分为 6 类：
 
 ### 1. 文档结构角色
 
-文档结构角色用于给内容的段落添加一个结构的描述。这些角色大多数都不应该再使用，因为浏览器现在支持带有相同的含义的语义的 HTML 元素。没有相应 HTML 等价的角色，例如 presentation、toolbar 和 tooltip 角色，为辅助技术（例如屏幕阅读器）提供了文档结构信息，而这些信息是没有可用的原生 HTML 的。
+文档结构角色用于给内容的段落添加一个结构的描述。这些角色大多数都不应该再使用，因为浏览器现在支持带有相同的含义的语义化 HTML 元素。没有相应 HTML 等价的角色，例如 presentation、toolbar 和 tooltip 角色，为辅助技术（例如屏幕阅读器）提供了文档结构信息，而这些信息没有可用的原生 HTML。
 
 - [toolbar](/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
 - [tooltip](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
