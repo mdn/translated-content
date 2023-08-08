@@ -149,6 +149,8 @@ Array Iterator {}
 - {{jsxref("Promise.race()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}
 
 ```js
 const myObj = {};
