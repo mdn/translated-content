@@ -1,8 +1,7 @@
 ---
 title: Array.prototype.groupToMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
-l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 ---
 
 {{JSRef}} {{SeeCompatTable}}
