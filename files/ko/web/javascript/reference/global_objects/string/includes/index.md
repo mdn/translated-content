@@ -41,7 +41,7 @@ includes(searchString, position)
 `includes()` 메서드는 대소문자를 구별합니다. 예를 들어 아래 코드는 `false`를 반환합니다.
 
 ```js
-'Blue Whale'.includes('blue'); // returns false
+"Blue Whale".includes("blue"); // returns false
 ```
 
 아래와 같이 원본 문자열과 검색 문자열을 모두 소문자로 변환하여 이 제약 조건을 해결할 수 있습니다.
@@ -55,7 +55,7 @@ includes(searchString, position)
 ### `includes()` 사용하기
 
 ```js
-const str = 'To be, or not to be, that is the question.';
+const str = "To be, or not to be, that is the question.";
 
 console.log(str.includes("To be")); // true
 console.log(str.includes("question")); // true
