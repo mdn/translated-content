@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Classes
 定义类的一种方法是使用**类声明**。要声明一个类，你可以使用带有`class`关键字的类名（这里是“Rectangle”）。
 
 ```js
-class Rectangle {
+class Rectangle {  
   constructor(height, width) {
     this.height = height;
     this.width = width;
