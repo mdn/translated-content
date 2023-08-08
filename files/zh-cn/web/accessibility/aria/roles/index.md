@@ -150,7 +150,7 @@ ARIA 角色共分为 6 类：
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
 
    {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
 
