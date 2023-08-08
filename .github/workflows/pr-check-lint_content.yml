@@ -1,9 +1,3 @@
-# This is more or less a copy of
-# https://github.com/mdn/content/blob/main/.github/workflows/pr-check-lint_content.yml
-# but done in a way that it first checks out mdn/translated-content (or
-# fork of) and _then_ checks out mdn/content which has the relevant
-# CI related tooling.
-
 name: Lint and review content files
 
 on:
