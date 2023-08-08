@@ -46,7 +46,7 @@ l10n:
 /([ab])+/.exec("abc"); // ['ab', 'b']; because "b" comes after "a", this result overwrites the previous one
 ```
 
-キャプチャグループは、[前方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)および[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)アサーションで使用できます。後方参照アサーションはアトムを逆方向に一致させるので、 このグループに対応する最終的な一致は文字列の左端に現れるものになります。ただし、一致するグループのインデックスは、正規表現ソース内の相対位置に対応します。
+キャプチャグループは、[先読み](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)および[後読み](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)アサーションで使用できます。後読みアサーションはアトムを逆方向に一致させるので、 このグループに対応する最終的な一致は文字列の左端に現れるものになります。ただし、一致するグループのインデックスは、正規表現ソース内の相対位置に対応します。
 
 ```js
 /c(?=(ab))/.exec("cab"); // ['c', 'ab']
@@ -72,7 +72,7 @@ l10n:
 
 オプションでキャプチャグループに名前を指定することができ、グループの位置やインデックス関連の落とし穴を避けるのに役立ちます。詳細は、[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)を参照してください。
 
-括弧は、異なる正規表現構文において他の目的もあります。例えば、前方参照アサーションや後方参照アサーションも括弧で囲みます。これらの構文はすべて `?` で始まり、`?` は `(` の直後には置くことができない[量化子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)なので、曖昧さにはつながりません。
+括弧は、異なる正規表現構文において他の目的もあります。例えば、先読みアサーションや後読みアサーションも括弧で囲みます。これらの構文はすべて `?` で始まり、`?` は `(` の直後には置くことができない[量化子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)なので、曖昧さにはつながりません。
 
 ## 例
 
