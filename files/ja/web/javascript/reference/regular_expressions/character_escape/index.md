@@ -40,7 +40,7 @@ l10n:
 - `\0`
   - : U+0000 NUL 文字を表します。数字を続けてはいけまません（[古い 8 進数エスケープ](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#エスケープシーケンス)シーケンスになります）。
 - `\^`, `\$`, `\\`, `\.` `\*`, `\+`, `\?`, `\(`, `\)`, `\[`, `\]`, `\{`, `\}`, `\|`, `\/`
-  - : 文字自体を表します。例えば、`\\` はバックスラッシュを表し、`\(` は左括弧を表します。これらは正規表現内（`/` は正規表現リテラルの区切り文字です）では[構文文字](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)であるため、[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)内出ない場合はエスケープする必要があります。
+  - : 文字自体を表します。例えば、`\\` はバックスラッシュを表し、`\(` は左括弧を表します。これらは正規表現内（`/` は正規表現リテラルの区切り文字です）では[構文文字](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)であるため、[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)内でない場合はエスケープする必要があります。
 - `\xHH`
   - : 指定された Unicode コードポイントを持つ文字を表します。16 進数は正確に 2 桁でなければなりません。
 - `\uHHHH`
