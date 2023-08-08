@@ -278,7 +278,6 @@
 /ko/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 /ko/docs/Learn/CSS/Introduction_to_CSS/Syntax	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
-/ko/docs/Learn/CSS/Introduction_to_CSS/기본적인_CSS_이해	/ko/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 /ko/docs/Learn/CSS/Introduction_to_CSS/선택자	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /ko/docs/Learn/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
 /ko/docs/Learn/CSS/Styling_boxes/Backgrounds	/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders
@@ -290,7 +289,6 @@
 /ko/docs/Learn/Common_questions/Upload_files_to_a_web_server	/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 /ko/docs/Learn/Common_questions/What_are_hyperlinks	/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /ko/docs/Learn/Common_questions/What_is_a_URL	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
-/ko/docs/Learn/Common_questions/What_is_a_domain_name	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 /ko/docs/Learn/Common_questions/What_is_a_web_server	/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ko/docs/Learn/Common_questions/What_software_do_I_need	/ko/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /ko/docs/Learn/Common_questions/set_up_a_local_testing_server	/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
@@ -306,7 +304,6 @@
 /ko/docs/Learn/HTML/Forms	/ko/docs/Learn/Forms
 /ko/docs/Learn/HTML/Forms/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
 /ko/docs/Learn/HTML/Forms/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
-/ko/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
 /ko/docs/Learn/HTML/Forms/Your_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
 /ko/docs/Learn/Index	/ko/docs/Learn
@@ -611,7 +608,6 @@
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
-/ko/docs/Web/CSS/Common_CSS_Questions	/ko/docs/Learn/CSS/Howto/CSS_FAQ
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Filter_Effects	/ko/docs/Web/CSS/CSS_filter_effects
 /ko/docs/Web/CSS/Getting_Started	/en-US/docs/Learn/CSS/First_steps
@@ -687,7 +683,6 @@
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
 /ko/docs/Web/Guide/HTML/폼/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
-/ko/docs/Web/Guide/HTML/폼/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
 /ko/docs/Web/Guide/Index	/ko/docs/Web/Guide
 /ko/docs/Web/Guide/Mobile/Separate_sites	/ko/docs/Web/Progressive_web_apps
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
