@@ -41,14 +41,17 @@ slug: Web/CSS/@namespace
 ### 指定默認及前缀的命名空間
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml); 
+@namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
+
 /* 在文檔裡面所有使用 XHTML 命名空間的 <a> 元素都會套用以下樣式 */
 a {
 }
+
 /* 以下則是會套用所有「命名空間為 http://www.w3.org/2000/svg 的 svg」底下的所有 <a> 元素 */
 svg|a {
 }
+
 /* 無論是 XHTML 還是 SVG 的 <a> 元素都會套用以下樣式 */
 *|a {
 }
