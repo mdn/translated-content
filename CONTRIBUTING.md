@@ -132,4 +132,4 @@ When contributing to the content you agree to license your contributions accordi
 [Contributing guide]: https://github.com/mdn/content/blob/main/CONTRIBUTING.md
 [Translation guidelines]: docs/README.md
 [JavaScript landing page]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
-[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[get in touch with us]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
