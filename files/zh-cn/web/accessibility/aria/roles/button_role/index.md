@@ -29,7 +29,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 菜单按钮是指控制一个菜单且 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性设置为 `menu` 或 `true` 的按钮。
 
-### 所有子元素都是 presentation
+### 所有子元素都是仅作展示的
 
 有些类型的用户界面元件，呈现在平台无障碍 API 中时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
 
@@ -39,7 +39,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 <div role="button"><h3>按钮的标题</h3></div>
 ```
 
-由于 `button` 的子元素都是 presentation，因此相当于以下的代码：
+由于 `button` 的子元素都是仅作展示的，因此相当于以下的代码：
 
 ```html
 <div role="button"><h3 role="presentation">按钮的标题</h3></div>
