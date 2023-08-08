@@ -1,7 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}

@@ -29,23 +29,28 @@ None.
 In our [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), we send JSON objects via push messages from our server by first converting them to strings via {{jsxref("JSON.stringify()")}} ([see server.js example](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js#L30-L34)):
 
 ```js
-webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
-  action: 'chatMsg',
-  name: obj.name,
-  msg: obj.msg
-}));
+webPush.sendNotification(
+  subscriber[2],
+  200,
+  obj.key,
+  JSON.stringify({
+    action: "chatMsg",
+    name: obj.name,
+    msg: obj.msg,
+  }),
+);
 ```
 
 When the message reaches the [service worker](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/sw.js), we [convert the data back to a JSON object](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/sw.js#L4) using {{domxref("PushMessageData.json()")}} before working out what to do with it next:
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var obj = event.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
     fireNotification(obj, event);
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === "init" || obj.action === "chatMsg") {
     port.postMessage(obj);
   }
 });

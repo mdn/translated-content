@@ -110,7 +110,10 @@ var {
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -118,7 +121,8 @@ var {
 
 ```html
 <p>
-  变量 <var>minSpeed</var> 和 <var>maxSpeed</var> 控制设备的最低和最高速度，以每分钟转数（RPM）计算。
+  变量 <var>minSpeed</var> 和
+  <var>maxSpeed</var> 控制设备的最低和最高速度，以每分钟转数（RPM）计算。
 </p>
 ```
 

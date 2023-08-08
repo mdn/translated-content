@@ -1,7 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
 {{AddonSidebar()}}

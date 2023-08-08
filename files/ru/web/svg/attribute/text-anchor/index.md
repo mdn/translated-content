@@ -1,7 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-translation_of: Web/SVG/Attribute/text-anchor
 ---
 
 « [Справочник SVG Атрибутов](/en/SVG/Attribute)
@@ -38,33 +37,41 @@ _(start-, middle- или end-выравнивание)_ текстовой ст�
 
 ```html
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>текст в якорях</title>
-</head>
-<body>
-<div style="background-color:burlywood; width:866px;height:444px;display:flex;">
-    <div style="background-color:greenyellow; width:333px;height:333px;margin:22px;overflow: visible;">
-        <svg viewBox="-50 0 100 100" style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" version="1.1">
-            <!-- Материализация якорей -->
-            <path d="M50, 5 L50,95
+  </head>
+  <body>
+    <div
+      style="background-color:burlywood; width:866px;height:444px;display:flex;">
+      <div
+        style="background-color:greenyellow; width:333px;height:333px;margin:22px;overflow: visible;">
+        <svg
+          viewBox="-50 0 100 100"
+          style="overflow: visible;"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1">
+          <!-- Материализация якорей -->
+          <path
+            d="M50, 5 L50,95
              M20,20 L80,20
              M20,50 L80,50
-             M20,80 L80,80" stroke="grey"/>
+             M20,80 L80,80"
+            stroke="grey" />
 
-            <!-- Якоря в действии -->
-            <text text-anchor="start"   x="50" y="20">some start</text>
-            <text text-anchor="start"   x="50" y="35">start</text>
+          <!-- Якоря в действии -->
+          <text text-anchor="start" x="50" y="20">some start</text>
+          <text text-anchor="start" x="50" y="35">start</text>
 
-            <text text-anchor="middle"  x="50" y="55">some middle</text>
-            <text text-anchor="middle"  x="50" y="70">middle</text>
+          <text text-anchor="middle" x="50" y="55">some middle</text>
+          <text text-anchor="middle" x="50" y="70">middle</text>
 
-            <text text-anchor="end"     x="50" y="85">some end</text>
-            <text text-anchor="end"     x="50" y="100">end</text>
+          <text text-anchor="end" x="50" y="85">some end</text>
+          <text text-anchor="end" x="50" y="100">end</text>
         </svg>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
 ```
 

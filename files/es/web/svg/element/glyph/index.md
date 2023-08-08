@@ -1,7 +1,6 @@
 ---
 title: glyph
 slug: Web/SVG/Element/glyph
-original_slug: Web/SVG/Element/glifo
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-translation_of: Web/HTML/Element/header
 ---
 
 {{HTMLSidebar}}

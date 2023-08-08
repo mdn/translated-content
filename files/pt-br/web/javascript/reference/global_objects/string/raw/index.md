@@ -46,7 +46,7 @@ Na maioria dos casos, `String.raw()` é usado com modelos de strings. A primeira
 ### Usando `String.raw()`
 
 ```js
-String.raw`Hi\n${2+3}!`;
+String.raw`Hi\n${2 + 3}!`;
 // 'Hi\n5!', o caractere após 'Hi'
 // não é um caractere de quebra de linha,
 // '\' e 'n' são dois caracteres.
@@ -59,26 +59,30 @@ String.raw`Hi\u000A!`;
 // Você pode confirmar isso verificando a propriedade .length
 // da string.
 
-let name = 'Bob';
+let name = "Bob";
 String.raw`Hi\n${name}!`;
 // 'Hi\nBob!', substituições são processadas.
 
 // Normalmente você não chamaria String.raw() como uma função,
 // mas para simular `t${0}e${1}s${2}t` você pode fazer:
-String.raw({ raw: 'test' }, 0, 1, 2); // 't0e1s2t'
+String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 // Note que 'test', uma string, é um objeto array-like
 // O código abaixo é equivalente a:
 // `foo${2 + 3}bar${'Java' + 'Script'}baz`
-String.raw({
-  raw: ['foo', 'bar', 'baz']
-}, 2 + 3, 'Java' + 'Script'); // 'foo5barJavaScriptbaz'
+String.raw(
+  {
+    raw: ["foo", "bar", "baz"],
+  },
+  2 + 3,
+  "Java" + "Script",
+); // 'foo5barJavaScriptbaz'
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                            | Status               | Comentário         |
+| -------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: event.pageX
 slug: Web/API/MouseEvent/pageX
-original_slug: Web/API/UIEvent/pageX
 ---
 
 {{ ApiRef() }}

@@ -23,7 +23,11 @@ slug: Web/HTML/Element/noframes
 <frameset cols="50%,50%">
   <frame src="https://developer.mozilla.org/en/HTML/Element/frameset" />
   <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
-  <noframes><p>It seems your browser does not support frames or is not configured do so.</p></noframes>
+  <noframes>
+    <p>
+      It seems your browser does not support frames or is not configured do so.
+    </p>
+  </noframes>
 </frameset>
 ```
 

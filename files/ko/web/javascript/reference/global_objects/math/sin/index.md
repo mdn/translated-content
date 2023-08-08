@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ## Syntax
 
 ```js
-    Math.sin(x)
+Math.sin(x);
 ```
 
 ### 파라미터
@@ -35,8 +35,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ### Using `Math.sin()`
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```

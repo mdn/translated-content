@@ -1,7 +1,6 @@
 ---
 title: windows.WINDOW_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 ---
 
 {{AddonSidebar()}}

@@ -1,8 +1,8 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 ---
+
 {{JSRef}}
 
 Метод **`Promise.reject(reason)`** возвращает объект `Promise, который был отклонён по указанной причине`.
@@ -31,12 +31,15 @@ Promise.reject(reason);
 ### Использование статического метода Promise.reject()
 
 ```js
-Promise.reject(new Error("провал")).then(function(success) {
-  // не вызывается
-}, function(error) {
-  console.log(error); // печатает "провал" + Stacktrace
-  throw error; // повторно выбрасываем ошибку, вызывая новый reject
-});
+Promise.reject(new Error("провал")).then(
+  function (success) {
+    // не вызывается
+  },
+  function (error) {
+    console.log(error); // печатает "провал" + Stacktrace
+    throw error; // повторно выбрасываем ошибку, вызывая новый reject
+  },
+);
 ```
 
 ## Спецификации

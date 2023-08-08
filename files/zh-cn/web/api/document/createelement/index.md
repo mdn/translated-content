@@ -33,14 +33,14 @@ var element = document.createElement(tagName[, options]);
 创建一个新的 `<div>` 并且插入到 ID 为“`div1`”的元素前。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -49,7 +49,7 @@ var element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // 创建一个新的 div 元素
   let newDiv = document.createElement("div");
   // 给它一些内容
@@ -88,7 +88,7 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 如果我们想以函数的方式创建此元素的实例，则可以使用以下方式调用：
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 新元素将被赋予`is`属性，其值为自定义元素的标签名称。

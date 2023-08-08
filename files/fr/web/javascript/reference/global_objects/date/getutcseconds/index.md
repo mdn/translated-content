@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d
 ## Syntaxe
 
 ```js
-dateObj.getUTCSeconds()
+dateObj.getUTCSeconds();
 ```
 
 ### Valeur de retour

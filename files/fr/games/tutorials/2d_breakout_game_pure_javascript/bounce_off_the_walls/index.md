@@ -1,7 +1,6 @@
 ---
 title: Faire rebondir la balle sur les murs
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
 {{GamesSidebar}}

@@ -1,7 +1,6 @@
 ---
-title: 'Screen: orientationchange イベント'
+title: "Screen: orientationchange イベント"
 slug: Web/API/Screen/orientationchange_event
-original_slug: Web/API/Screen/onorientationchange
 ---
 
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}

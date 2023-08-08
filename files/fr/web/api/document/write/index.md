@@ -1,7 +1,6 @@
 ---
 title: document.write
 slug: Web/API/Document/write
-translation_of: Web/API/Document/write
 ---
 
 {{ ApiRef("DOM") }}

@@ -2,6 +2,7 @@
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 **`Date.UTC()`** 메서드는 {{jsxref("Date")}} 생성자와 비슷한 매개변수를 받지만, 모두 UTC로 취급합니다. 반환 값은 1970년 1월 1일 00:00:00 UTC부터 매개변수가 나타내는 시간의 차이를 밀리초로 나타낸 수입니다.

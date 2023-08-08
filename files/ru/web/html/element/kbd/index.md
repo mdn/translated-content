@@ -1,8 +1,8 @@
 ---
-title: '<kbd>: Элемент ввода с клавиатуры'
+title: "<kbd>: Элемент ввода с клавиатуры"
 slug: Web/HTML/Element/kbd
-translation_of: Web/HTML/Element/kbd
 ---
+
 **HTML-элемент ввода с клавиатуры** (**`<kbd>`**) указывает на то, что текст внутри элемента описывает пользовательский ввод с клавиатуры, голосовой ввод или ввод с использованием любого другого типа устройств ввода текста. По общему соглашению, {{Glossary("user agent")}} использует моноширинный шрифт для отображения содержимого элемента `<kbd>` по умолчанию, хотя это и не указывается HTML стандартом явно.
 
 `<kbd>` можно использовать в различных комбинациях с {{HTMLElement("samp")}} (Sample Output) элементом для отображения различных форм ввода с клавиатуры или ввода, базирующегося на визуальных сигналах.
@@ -10,10 +10,10 @@ translation_of: Web/HTML/Element/kbd
 | [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), palpable content. |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                      | [Phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                  |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                |
+| Tag omission                                           | {{no_tag_omission}}                                                                                                                                     |
 | Permitted parents                                      | Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                         |
 | Permitted ARIA roles                                   | Any                                                                                                                                                     |
-| DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                    |
+| DOM interface                                          | {{domxref("HTMLElement")}}                                                                                                                              |
 
 ## Атрибуты
 
@@ -34,8 +34,10 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 ### Basic example
 
 ```html
-<p>Use the command <kbd>help mycommand</kbd> to view documentation
-for the command "mycommand".</p>
+<p>
+  Use the command <kbd>help mycommand</kbd> to view documentation for the
+  command "mycommand".
+</p>
 ```
 
 #### Result
@@ -53,8 +55,11 @@ First, let's look at what this looks like as just plain HTML.
 ##### HTML
 
 ```html
-<p>You can also create a new document using the keyboard shortcut
-<kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.</p>
+<p>
+  You can also create a new document using the keyboard shortcut
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
+  >.
+</p>
 ```
 
 This wraps the entire key sequence in an outer `<kbd>` element, then each individual key within its own, in order to denote the components of the sequence.
@@ -86,8 +91,11 @@ kbd.key {
 Then we update the HTML to use this class on the keys in the output to be presented:
 
 ```html
-<p>You can also create a new document by pressing
-<kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.</p>
+<p>
+  You can also create a new document by pressing
+  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
+  >.
+</p>
 ```
 
 ##### Result
@@ -101,8 +109,10 @@ The result is just what we want!
 Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system.
 
 ```html
-<p>If a syntax error occurs, the tool will output the initial
-command you typed for your review:</p>
+<p>
+  If a syntax error occurs, the tool will output the initial command you typed
+  for your review:
+</p>
 <blockquote>
   <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
 </blockquote>
@@ -119,12 +129,18 @@ Nesting a `<samp>` element inside a `<kbd>` element represents input which is ba
 For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:
 
 ```html
-<p>To create a new file, choose the menu option
-<kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New
-Document</samp></kbd></kbd>.</p>
+<p>
+  To create a new file, choose the menu option
+  <kbd
+    ><kbd><samp>File</samp></kbd
+    >⇒<kbd><samp>New Document</samp></kbd></kbd
+  >.
+</p>
 
-<p>Don't forget to click the <kbd><samp>OK</samp></kbd> button
-to confirm once you've entered the name of the new file.</p>
+<p>
+  Don't forget to click the <kbd><samp>OK</samp></kbd> button to confirm once
+  you've entered the name of the new file.
+</p>
 ```
 
 This does some interesting nesting. For the menu option description, the entire input is enclosed in a `<kbd>` element. Then, inside that, both the menu and menu item names are contained within both `<kbd>` and `<samp>`, indicating an input which is selected from a screen widget.
@@ -141,11 +157,11 @@ The output from this HTML looks like this:
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment                                                                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                                 |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}     | Expanded to include any user input, like voice input and individual keystrokes. |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                         | {{Spec2('HTML4.01')}}     |                                                                                 |
+| Specification                                                                         | Status                   | Comment                                                                         |
+| ------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-kbd-element', '&lt;kbd&gt;')}}          | {{Spec2('HTML WHATWG')}} |                                                                                 |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-kbd-element', '&lt;kbd&gt;')}} | {{Spec2('HTML5 W3C')}}   | Expanded to include any user input, like voice input and individual keystrokes. |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;kbd&gt;')}}                   | {{Spec2('HTML4.01')}}    |                                                                                 |
 
 ## Browser compatibility
 

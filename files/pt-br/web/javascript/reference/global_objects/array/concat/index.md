@@ -81,7 +81,7 @@ const letras = ["a", "b", "c"];
 const alfaNumerico = letras.concat(1, [2, 3]);
 
 console.log(alfaNumerico);
-// resulta em ['a', 'b', 'c' , 1, 2, 3] 
+// resulta em ['a', 'b', 'c' , 1, 2, 3]
 ```
 
 ### Concatenando arrays aninhados

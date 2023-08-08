@@ -32,6 +32,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{Htmlattrdef ("name")}}
   - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 - {{Htmlattrdef ("media")}}
+
   - : Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo `impressão e tela` . Se omitido, o padrão é `tudo` . Utilize este atributo somente se a **href** atributo está presente.
 
 - {{Htmlattrdef ("nohref")}}
@@ -71,11 +72,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificação                                                                                                            | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName ('HTML WHATWG', 'a-map-element.html # da-area-elemento', '&lt;area&gt;')}}         | {{Spec2 ('HTML WHATWG')}} |            |
-| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # da-area-elemento', '&lt;area&gt;')}} | {{Spec2 ('HTML5 W3C')}} |            |
-| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;area&gt;')}}                 | {{Spec2 ('HTML4.01')}}     |            |
+| Especificação                                                                               | Estado                    | Comentário |
+| ------------------------------------------------------------------------------------------- | ------------------------- | ---------- |
+| {{SpecName ('HTML WHATWG', 'a-map-element.html # da-area-elemento', '&lt;area&gt;')}}       | {{Spec2 ('HTML WHATWG')}} |            |
+| {{SpecName ('HTML5 W3C', 'incorporado-content-0.html # da-area-elemento', '&lt;area&gt;')}} | {{Spec2 ('HTML5 W3C')}}   |            |
+| {{SpecName ('HTML4.01', 'struct / objects.html # h-13.6.1', '&lt;area&gt;')}}               | {{Spec2 ('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

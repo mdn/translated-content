@@ -2,6 +2,7 @@
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 Object.setPrototypeOf() 메소드는 지정된 객체의 프로토타입 (즉, 내부 \[\[Prototype]] 프로퍼티)을 다른 객체 또는 {{jsxref("null")}} 로 설정합니다.
@@ -43,10 +44,12 @@ var dict = Object.setPrototypeOf({}, null);
 
 ```js
 // Only works in Chrome and FireFox, does not work in IE:
-Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
-  obj.__proto__ = proto;
-  return obj;
-}
+Object.setPrototypeOf =
+  Object.setPrototypeOf ||
+  function (obj, proto) {
+    obj.__proto__ = proto;
+    return obj;
+  };
 ```
 
 ## Appending Prototype Chains
@@ -55,32 +58,38 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 ```js
 /**
-*** Object.appendChain(@object, @prototype)
-*
-* Appends the first non-native prototype of a chain to a new prototype.
-* Returns @object (if it was a primitive value it will transformed into an object).
-*
-*** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
-*** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
-*
-* Appends the first non-native prototype of a chain to the native Function.prototype object, then appends a
-* new Function(["@arg"(s)], "@function_body") to that chain.
-* Returns the function.
-*
-**/
+ *** Object.appendChain(@object, @prototype)
+ *
+ * Appends the first non-native prototype of a chain to a new prototype.
+ * Returns @object (if it was a primitive value it will transformed into an object).
+ *
+ *** Object.appendChain(@object [, "@arg_name_1", "@arg_name_2", "@arg_name_3", "..."], "@function_body")
+ *** Object.appendChain(@object [, "@arg_name_1, @arg_name_2, @arg_name_3, ..."], "@function_body")
+ *
+ * Appends the first non-native prototype of a chain to the native Function.prototype object, then appends a
+ * new Function(["@arg"(s)], "@function_body") to that chain.
+ * Returns the function.
+ *
+ **/
 
-Object.appendChain = function(oChain, oProto) {
+Object.appendChain = function (oChain, oProto) {
   if (arguments.length < 2) {
-    throw new TypeError('Object.appendChain - Not enough arguments');
+    throw new TypeError("Object.appendChain - Not enough arguments");
   }
-  if (typeof oProto !== 'object' && typeof oProto !== 'string') {
-    throw new TypeError('second argument to Object.appendChain must be an object or a string');
+  if (typeof oProto !== "object" && typeof oProto !== "string") {
+    throw new TypeError(
+      "second argument to Object.appendChain must be an object or a string",
+    );
   }
 
   var oNewProto = oProto,
-      oReturn = o2nd = oLast = oChain instanceof this ? oChain : new oChain.constructor(oChain);
+    oReturn =
+      (o2nd =
+      oLast =
+        oChain instanceof this ? oChain : new oChain.constructor(oChain));
 
-  for (var o1st = this.getPrototypeOf(o2nd);
+  for (
+    var o1st = this.getPrototypeOf(o2nd);
     o1st !== Object.prototype && o1st !== Function.prototype;
     o1st = this.getPrototypeOf(o2nd)
   ) {
@@ -95,7 +104,7 @@ Object.appendChain = function(oChain, oProto) {
 
   this.setPrototypeOf(o2nd, oNewProto);
   return oReturn;
-}
+};
 ```
 
 ### Usage
@@ -104,7 +113,7 @@ Object.appendChain = function(oChain, oProto) {
 
 ```js
 function Mammal() {
-  this.isMammal = 'yes';
+  this.isMammal = "yes";
 }
 
 function MammalSpecies(sMammalSpecies) {
@@ -114,12 +123,12 @@ function MammalSpecies(sMammalSpecies) {
 MammalSpecies.prototype = new Mammal();
 MammalSpecies.prototype.constructor = MammalSpecies;
 
-var oCat = new MammalSpecies('Felis');
+var oCat = new MammalSpecies("Felis");
 
 console.log(oCat.isMammal); // 'yes'
 
 function Animal() {
-  this.breathing = 'yes';
+  this.breathing = "yes";
 }
 
 Object.appendChain(oCat, new Animal());
@@ -131,7 +140,7 @@ console.log(oCat.breathing); // 'yes'
 
 ```js
 function MySymbol() {
-  this.isSymbol = 'yes';
+  this.isSymbol = "yes";
 }
 
 var nPrime = 17;
@@ -152,8 +161,10 @@ function Person(sName) {
   this.identity = sName;
 }
 
-var george = Object.appendChain(new Person('George'),
-                                'console.log("Hello guys!!");');
+var george = Object.appendChain(
+  new Person("George"),
+  'console.log("Hello guys!!");',
+);
 
 console.log(george.identity); // 'George'
 george(); // 'Hello guys!!'

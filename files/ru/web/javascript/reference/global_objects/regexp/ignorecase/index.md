@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - регулярные выражения
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ---
 
 {{JSRef("Global_Objects", "RegExp")}}
@@ -30,18 +22,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ### Пример: использование свойства `ignoreCase`
 
 ```js
-var regex = new RegExp('foo', 'i');
+var regex = new RegExp("foo", "i");
 
 console.log(regex.ignoreCase); // true
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарии                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `ignoreCase` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
-| {{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}                             | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                                                            |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} | {{Spec2('ES6')}}     | Свойство `ignoreCase` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                                                 |
+| Спецификация                                                                               | Статус             | Комментарии                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ECMAScript 3-е издание.                                                                    | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. JavaScript 1.5: свойство `ignoreCase` является свойством экземпляра {{jsxref("Global_Objects/RegExp", "RegExp")}}, а не самого объекта {{jsxref("Global_Objects/RegExp", "RegExp")}}. |
+| {{SpecName('ES5.1', '#sec-15.10.7.3', 'RegExp.prototype.ignoreCase')}}                     | {{Spec2('ES5.1')}} |                                                                                                                                                                                                                                              |
+| {{SpecName('ES6', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} | {{Spec2('ES6')}}   | Свойство `ignoreCase` теперь является свойством доступа в прототипе объекта, а не собственным свойством данных экземпляра.                                                                                                                   |
 
 ## Совместимость с браузерами
 

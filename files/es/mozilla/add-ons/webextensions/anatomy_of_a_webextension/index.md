@@ -1,7 +1,6 @@
 ---
 title: Anatomía de una extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 ---
 
 {{AddonSidebar}}

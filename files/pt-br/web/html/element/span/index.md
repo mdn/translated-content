@@ -9,12 +9,12 @@ O elemento **HTML `<span>` é um conteiner generico em linha para conteúdo fras
 
 ## Contexto de Uso
 
-| Categorias de conteúdo   | [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)                                                                                                                    |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)                                                                                                                                                                                                                             |
-| Omissão de Tag           | Nenhum, deve ter tanto tag de início quanto tag final.                                                                                                                                                                                                                                                                                          |
-| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), ou [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content). |
-| Padrões de documento     | [HTML5, section 4.6.24](https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element); [HTML 4.01, section 7.5.4](https://www.w3.org/TR/html401/struct/global.html#edef-SPAN)                                                                                  |
+| Categorias de conteúdo   | [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)                                              |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Conteúdo permitido       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)                                                                                                                |
+| Omissão de Tag           | Nenhum, deve ter tanto tag de início quanto tag final.                                                                                                                                  |
+| Elementos pai permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), ou [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).             |
+| Padrões de documento     | [HTML5, section 4.6.24](https://www.w3.org/TR/html5/text-level-semantics.html#the-span-element); [HTML 4.01, section 7.5.4](https://www.w3.org/TR/html401/struct/global.html#edef-SPAN) |
 
 ## Atributos
 
@@ -36,11 +36,11 @@ Some text
 
 ## Especificações
 
-| Specification                                                                                                        | Status                           | Comment                                                                 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-span-element', '&lt;span&gt;')}}             | {{Spec2('HTML WHATWG')}} |                                                                         |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML5 W3C')}}     | A interface com o DOM agora é {{domxref("HTMLSpanElement")}}. |
-| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                                                         |
+| Specification                                                                           | Status                   | Comment                                                       |
+| --------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-span-element', '&lt;span&gt;')}}          | {{Spec2('HTML WHATWG')}} |                                                               |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-span-element', '&lt;span&gt;')}} | {{Spec2('HTML5 W3C')}}   | A interface com o DOM agora é {{domxref("HTMLSpanElement")}}. |
+| {{SpecName('HTML4.01', 'struct/global.html#edef-SPAN', '&lt;span&gt;')}}                | {{Spec2('HTML4.01')}}    |                                                               |
 
 ## Compatibilidade com navegadores
 

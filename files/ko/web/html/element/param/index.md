@@ -1,5 +1,5 @@
 ---
-title: '<param>: 객체 매개변수 요소'
+title: "<param>: 객체 매개변수 요소"
 slug: Web/HTML/Element/param
 ---
 
@@ -55,7 +55,17 @@ slug: Web/HTML/Element/param
 - {{ htmlattrdef("value") }}
   - : 매개변수의 값.
 
-<div class="hidden"><h3 id="Deprecated_attributes">Deprecated attributes</h3><dl><dt>{{htmlattrdef("type")}} {{deprecated_inline}}</dt><dd>Only used if the <code>valuetype</code> is set to <code>ref</code>. Specifies the MIME type of values found at the URI specified by value.</dd><dt>{{htmlattrdef("valuetype")}} {{deprecated_inline}}</dt><dd>Specifies the type of the <code>value</code> attribute. Possible values are:<ul><li><code>data</code>: Default value. The value is passed to the object's implementation as a string.</li><li><code>ref</code>: The value is a URI to a resource where run-time values are stored.</li><li><code>object</code>: An ID of another {{HTMLElement("object")}} in the same document.</li></ul></dd></dl></div>
+### Deprecated attributes
+
+- {{htmlattrdef("type")}} {{deprecated_inline}}
+  - : Only used if the `valuetype` is set to `ref`. Specifies the MIME type of values found at the URI specified by value.
+- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+
+  - : Specifies the type of the `value` attribute. Possible values are:
+
+    - `data`: Default value. The value is passed to the object's implementation as a string.
+    - `ref`: The value is a URI to a resource where run-time values are stored.
+    - `object`: An ID of another {{HTMLElement("object")}} in the same document.
 
 ## 예제
 

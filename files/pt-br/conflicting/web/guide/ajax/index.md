@@ -1,7 +1,6 @@
 ---
 title: Primeiros passos
 slug: conflicting/Web/Guide/AJAX
-original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 Esse artigo guia você através dos princípios do AJAX e oferece dois exemplos práticos simples para poder começar.

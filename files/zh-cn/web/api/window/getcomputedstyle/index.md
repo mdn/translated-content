@@ -58,20 +58,17 @@ let style = window.getComputedStyle(elem1, null);
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  let cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  let cs = window.getComputedStyle(elem, null);
   if (prop) {
-    dump("    "+prop+" : "+cs.getPropertyValue(prop)+"\n");
+    dump("    " + prop + " : " + cs.getPropertyValue(prop) + "\n");
     return;
   }
   let len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     let style = cs[i];
-    dump("    "+style+" : "+cs.getPropertyValue(style)+"\n");
+    dump("    " + style + " : " + cs.getPropertyValue(style) + "\n");
   }
-
 }
 ```
 
@@ -91,19 +88,19 @@ getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `
 
 ```html
 <style>
-    h3::after {
-        content: "rocks!";
-    }
+  h3::after {
+    content: "rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-    let h3 = document.querySelector('h3'),
-    result = getComputedStyle(h3, '::after').content;
-    alert(`the generated content is: ${result}`);
-    console.log(`the generated content is: ${result}`);
-    // the generated content is: "rocks!"
+  let h3 = document.querySelector("h3"),
+    result = getComputedStyle(h3, "::after").content;
+  alert(`the generated content is: ${result}`);
+  console.log(`the generated content is: ${result}`);
+  // the generated content is: "rocks!"
 </script>
 ```
 

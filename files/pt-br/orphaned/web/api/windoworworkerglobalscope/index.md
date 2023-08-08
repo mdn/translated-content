@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope
 slug: orphaned/Web/API/WindowOrWorkerGlobalScope
-original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
 
 {{ApiRef()}}

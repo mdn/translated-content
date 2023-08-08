@@ -5,7 +5,6 @@ l10n:
   sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
-
 {{JSRef}}
 
 El método estático **`Object.keys()`** devuelve un arreglo de propiedades enumerables propias de un objeto dado.

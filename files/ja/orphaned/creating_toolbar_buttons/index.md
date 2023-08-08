@@ -1,7 +1,6 @@
 ---
 title: Creating toolbar buttons
 slug: orphaned/Creating_toolbar_buttons
-original_slug: Creating_toolbar_buttons
 ---
 
 この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](/ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](/ja/XUL) と [CSS](/ja/CSS) の基礎知識を備えた [拡張機能](/ja/Extension) の開発者が対象です。

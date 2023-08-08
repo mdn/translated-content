@@ -1,7 +1,6 @@
 ---
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
-translation_of: Web/CSS/scroll-margin-bottom
 ---
 
 {{CSSRef}}

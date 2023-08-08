@@ -36,7 +36,7 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
 - {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우..
 - {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우.
-- {{HTMLElement("style")}}이 {{htmlattrxref("scoped","style")}} 특성을 가지고 있는 경우.
+- {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠
 
@@ -86,12 +86,12 @@ slug: Web/HTML/Content_categories
 
 특정 조건을 만족하는 경우 대화형 콘텐츠에 속하는 요소도 있습니다.
 
-- {{HTMLElement("audio")}}, {{htmlattrxref("controls", "audio")}} 속성을 가진 경우.
-- {{HTMLElement("img")}}, {{htmlattrxref("usemap", "img")}} 속성을 가진 경우.
-- {{HTMLElement("input")}}, {{htmlattrxref("type", "input")}} 속성이 `hidden`이 아닌경우.
-- {{HTMLElement("menu")}}, {{htmlattrxref("type", "menu")}} 속성이 `toolbar`인 경우.
-- {{HTMLElement("object")}}, {{htmlattrxref("usemap", "object")}} 속성을 가진 경우.
-- {{HTMLElement("video")}}, {{htmlattrxref("controls", "video")}} 속성을 가진 경우.
+- {{HTMLElement("audio")}}, [`controls`](/ko/docs/Web/HTML/Element/audio#controls) 속성을 가진 경우.
+- {{HTMLElement("img")}}, [`usemap`](/ko/docs/Web/HTML/Element/img#usemap) 속성을 가진 경우.
+- {{HTMLElement("input")}}, [`type`](/ko/docs/Web/HTML/Element/input#type) 속성이 `hidden`이 아닌경우.
+- {{HTMLElement("menu")}}, [`type`](/ko/docs/Web/HTML/Element/menu#type) 속성이 `toolbar`인 경우.
+- {{HTMLElement("object")}}, [`usemap`](/ko/docs/Web/HTML/Element/object#usemap) 속성을 가진 경우.
+- {{HTMLElement("video")}}, [`controls`](/ko/docs/Web/HTML/Element/video#controls) 속성을 가진 경우.
 
 ### 뚜렷한 콘텐츠
 
@@ -144,7 +144,10 @@ slug: Web/HTML/Content_categories
 예를 들어, {{HTMLElement("del")}} 과 {{HTMLELement("ins")}} 요소는 투명합니다:
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 올바른 영어는 아니지만, 두 요소를 제거하더라도 HTML은 유효합니다.

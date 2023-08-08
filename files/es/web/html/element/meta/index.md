@@ -1,7 +1,6 @@
 ---
 title: meta
 slug: Web/HTML/Element/meta
-original_slug: Web/HTML/Elemento/meta
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-translation_of: Web/API/EventSource/onopen
 ---
 
 {{APIRef('Server Sent Events')}}

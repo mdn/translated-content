@@ -17,13 +17,13 @@ slug: Web/CSS/justify-content
 
 ```css
 /* Positional alignment */
-justify-content: center;     /* 居中排列 */
-justify-content: start;      /* Pack items from the start */
-justify-content: end;        /* Pack items from the end */
+justify-content: center; /* 居中排列 */
+justify-content: start; /* Pack items from the start */
+justify-content: end; /* Pack items from the end */
 justify-content: flex-start; /* 从行首起始位置开始排列 */
-justify-content: flex-end;   /* 从行尾位置开始排列 */
-justify-content: left;       /* Pack items from the left */
-justify-content: right;      /* Pack items from the right */
+justify-content: flex-end; /* 从行尾位置开始排列 */
+justify-content: left; /* Pack items from the left */
+justify-content: right; /* Pack items from the right */
 
 /* Baseline alignment */
 justify-content: baseline;
@@ -31,13 +31,13 @@ justify-content: first baseline;
 justify-content: last baseline;
 
 /* Distributed alignment */
-justify-content: space-between;  /* 均匀排列每个元素
+justify-content: space-between; /* 均匀排列每个元素
                                    首个元素放置于起点，末尾元素放置于终点 */
-justify-content: space-around;  /* 均匀排列每个元素
+justify-content: space-around; /* 均匀排列每个元素
                                    每个元素周围分配相同的空间 */
-justify-content: space-evenly;  /* 均匀排列每个元素
+justify-content: space-evenly; /* 均匀排列每个元素
                                    每个元素之间的间隔相等 */
-justify-content: stretch;       /* 均匀排列每个元素
+justify-content: stretch; /* 均匀排列每个元素
                                    'auto'-sized 的元素会被拉伸以适应容器的大小 */
 
 /* Overflow alignment */
@@ -74,7 +74,7 @@ justify-content: unset;
   - : flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
 - `stretch`
 
-  - : 如果元素沿主轴的组合尺寸小于对齐容器的尺寸，任何尺寸设置为 `auto` 的元素都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束, 以便沿主轴完全填充对齐容器的组合尺寸。
+  - : 如果元素沿主轴的组合尺寸小于对齐容器的尺寸，任何尺寸设置为 `auto` 的元素都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束，以便沿主轴完全填充对齐容器的组合尺寸。
 
     > **备注：** 虽然弹性盒子支持 `stretch` 属性，但将其应用于弹性盒子时，由于拉伸是由 {{CSSXref("flex")}} 属性控制的，所以 `stretch` 的行为与 `start` 相同。
 
@@ -135,8 +135,7 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 

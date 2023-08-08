@@ -12,7 +12,7 @@ O objeto `Array` do JavaScript é um objeto global usado na construção de 'arr
 **Criando um Array**
 
 ```js
-var frutas = ['Maçã', 'Banana'];
+var frutas = ["Maçã", "Banana"];
 
 console.log(frutas.length);
 // 2
@@ -41,7 +41,7 @@ frutas.forEach(function (item, indice, array) {
 **Adicionar um item ao final do Array**
 
 ```js
-var adicionar = frutas.push('Laranja');
+var adicionar = frutas.push("Laranja");
 // ['Maçã', 'Banana', 'Laranja']
 ```
 
@@ -62,17 +62,17 @@ var primeiro = frutas.shift(); // remove Maçã do início
 **Adicionar ao início do Array**
 
 ```js
-var adicionar = frutas.unshift('Morango') // adiciona ao início
+var adicionar = frutas.unshift("Morango"); // adiciona ao início
 // ['Morango', 'Banana'];
 ```
 
 **Procurar o índice de um item na Array**
 
 ```js
-frutas.push('Manga');
+frutas.push("Manga");
 // ['Morango', 'Banana', 'Manga']
 
-var pos = frutas.indexOf('Banana');
+var pos = frutas.indexOf("Banana");
 // 1
 ```
 
@@ -86,11 +86,12 @@ var removedItem = frutas.splice(pos, 1); // é assim que se remove um item
 **Remover itens de uma posição de índice**
 
 ```js
-var vegetais = ['Repolho', 'Nabo', 'Rabanete', 'Cenoura'];
+var vegetais = ["Repolho", "Nabo", "Rabanete", "Cenoura"];
 console.log(vegetais);
 // ['Repolho', 'Nabo', 'Rabanete', 'Cenoura']
 
-var pos = 1, n = 2;
+var pos = 1,
+  n = 2;
 
 var itensRemovidos = vegetais.splice(pos, n);
 // Isso é como se faz para remover itens, n define o número de itens a se remover,
@@ -134,9 +135,9 @@ Arrays não podem usar strings como índices (como em um [array associativo](htt
 Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição `0` e o último elemento está na posição equivalente ao valor da propriedade [`length`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/length) (tamanho) menos 1.
 
 ```js
-var arr = ['este é o primeiro elemento', 'este é o segundo elemento'];
-console.log(arr[0]);              // exibe 'este é o primeiro elemento'
-console.log(arr[1]);              // exibe 'este é o segundo elemento'
+var arr = ["este é o primeiro elemento", "este é o segundo elemento"];
+console.log(arr[0]); // exibe 'este é o primeiro elemento'
+console.log(arr[1]); // exibe 'este é o segundo elemento'
 console.log(arr[arr.length - 1]); // exibe 'este é o segundo elemento'
 ```
 
@@ -162,18 +163,18 @@ renderer['3d'].setTexture(model, 'personagem.png'); //funciona corretamente
 Note que no exemplo `3d`, `'3d'` teve de ser colocado entre aspas. É possivel também colocar entre aspas os índices de arrays JavaScript (ou seja, `years['2']` ao invés de `years[2]`), contudo isto não é necessário. O valor 2 em `years[2]` eventualmente será convertido a uma string pela engine do JavaScript através de uma conversão explicita com o método `toString`. E é por esta razão que `'2'` e `'02'` irão referenciar dois slots diferentes no objeto `anos` e o seguinte exemplo pode ser _`true`_:
 
 ```js
-console.log(anos['2'] != anos['02']);
+console.log(anos["2"] != anos["02"]);
 ```
 
 De forma similar, propriedades de objeto que sejam palavras reservadas(!) só podem ser acessadas como strings em notação de colchetes:
 
 ```js
 var promessa = {
-  'var': 'texto',
-  'array': [1, 2, 3, 4]
+  var: "texto",
+  array: [1, 2, 3, 4],
 };
 
-console.log(promessa['var']);
+console.log(promessa["var"]);
 ```
 
 ### Relação entre _`length`_ e propriedades numéricas
@@ -182,7 +183,7 @@ As propriedades [`length`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array
 
 ```js
 var frutas = [];
-frutas.push('banana', 'maça', 'pêssego');
+frutas.push("banana", "maça", "pêssego");
 
 console.log(frutas.length); // 3
 ```
@@ -190,7 +191,7 @@ console.log(frutas.length); // 3
 Quando configurar uma propriedade num array Javascript em que a propriedade é um índice valido do array e este índice está fora do atual limite do array, o array irá crescer para um tamanho grande o suficiente para acomodar o elemento neste índice, e a engine irá atualizar a propriedade _length_ do array de acordo com isto:
 
 ```js
-frutas[5] = 'manga';
+frutas[5] = "manga";
 console.log(frutas[5]); // 'manga'
 console.log(Object.keys(frutas)); // ['0', '1', '2', '5']
 console.log(frutas.length); // 6
@@ -222,7 +223,7 @@ O resultado de uma comparação entre uma _expressão regular_ e uma string pode
 // Ignora caixa (maiúscula/minúscula)
 
 var minhaRegex = /d(b+)(d)/i;
-var meuArray = minhaRegex.exec('cdbBdbsbz');
+var meuArray = minhaRegex.exec("cdbBdbsbz");
 ```
 
 As propriedades e elementos retornados desta comparação são os seguintes:
@@ -282,7 +283,7 @@ Algumas vezes você poderá querer aplicar métodos de arrays para strings ou ou
 
 ```js
 function isLetter(character) {
-  return (character >= "a" && character <= "z");
+  return character >= "a" && character <= "z";
 }
 
 if (Array.prototype.every.call(str, isLetter))
@@ -304,30 +305,46 @@ Estes não são atualmente parte dos padrões ECMAScript (através do ES2015 [`A
 /*globals define*/
 // Assumes Array extras already present (one may use shims for these as well)
 (function () {
-    'use strict';
+  "use strict";
 
-    var i,
-        // We could also build the array of methods with the following, but the
-        //   getOwnPropertyNames() method is non-shimable:
-        // Object.getOwnPropertyNames(Array).filter(function (methodName) {return typeof Array[methodName] === 'function'});
-        methods = [
-            'join', 'reverse', 'sort', 'push', 'pop', 'shift', 'unshift',
-            'splice', 'concat', 'slice', 'indexOf', 'lastIndexOf',
-            'forEach', 'map', 'reduce', 'reduceRight', 'filter',
-            'some', 'every', 'isArray'
-        ],
-        methodCount = methods.length,
-        assignArrayGeneric = function (methodName) {
-            var method = Array.prototype[methodName];
-            Array[methodName] = function (arg1) {
-                return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
-            };
-        };
+  var i,
+    // We could also build the array of methods with the following, but the
+    //   getOwnPropertyNames() method is non-shimable:
+    // Object.getOwnPropertyNames(Array).filter(function (methodName) {return typeof Array[methodName] === 'function'});
+    methods = [
+      "join",
+      "reverse",
+      "sort",
+      "push",
+      "pop",
+      "shift",
+      "unshift",
+      "splice",
+      "concat",
+      "slice",
+      "indexOf",
+      "lastIndexOf",
+      "forEach",
+      "map",
+      "reduce",
+      "reduceRight",
+      "filter",
+      "some",
+      "every",
+      "isArray",
+    ],
+    methodCount = methods.length,
+    assignArrayGeneric = function (methodName) {
+      var method = Array.prototype[methodName];
+      Array[methodName] = function (arg1) {
+        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+      };
+    };
 
-    for (i = 0; i < methodCount; i++) {
-        assignArrayGeneric(methods[i]);
-    }
-}());
+  for (i = 0; i < methodCount; i++) {
+    assignArrayGeneric(methods[i]);
+  }
+})();
 ```
 
 ## Exemplos
@@ -341,8 +358,7 @@ var msgArray = new Array();
 msgArray[0] = "Hello";
 msgArray[99] = "world";
 
-if (msgArray.length == 100)
-   console.log("O length é 100.");
+if (msgArray.length == 100) console.log("O length é 100.");
 ```
 
 ### Exemplo: Criando um array bi-dimensional
@@ -350,21 +366,22 @@ if (msgArray.length == 100)
 O exemplo a seguir cria um tabuleiro de xadrez usando dois arrays bi-dimensionais de string. A primeira jogada é feita copiando o 'p' em 6,4 para 4,4. A posição antiga de 6,4 é colocada em branco.
 
 ```js
-var board =
-[ ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r']];
-console.log(board.join('\n') + '\n\n');
+var board = [
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
+console.log(board.join("\n") + "\n\n");
 
 // Fazendo o King's Pawn avançar 2
 board[4][4] = board[6][4];
-board[6][4] = ' ';
-console.log(board.join('\n'));
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 Saída:
@@ -393,13 +410,10 @@ r,n,b,q,k,b,n,r
 
 ```js
 values = [];
-for (var x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
-};
-console.table(values)
+for (var x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
+}
+console.table(values);
 ```
 
 Saída:
@@ -419,12 +433,12 @@ Saída:
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definição inicial                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| {{SpecName('ES5.1', '#sec-15.4', 'Array')}}                 | {{Spec2('ES5.1')}}     | Novos metodos adicionados: {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}} |
-| {{SpecName('ES2015', '#sec-array-objects', 'Array')}} | {{Spec2('ES2015')}}     | Novos metodos adicionados: {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | {{Spec2('ESDraft')}} | Novo metodo adicionado: {{jsxref("Array.prototype.includes()")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Especificação                                          | Status               | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}     | Definição inicial                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| {{SpecName('ES5.1', '#sec-15.4', 'Array')}}            | {{Spec2('ES5.1')}}   | Novos metodos adicionados: {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}} |
+| {{SpecName('ES2015', '#sec-array-objects', 'Array')}}  | {{Spec2('ES2015')}}  | Novos metodos adicionados: {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}                                                                                                                                                                                                                                  |
+| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | {{Spec2('ESDraft')}} | Novo metodo adicionado: {{jsxref("Array.prototype.includes()")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Compatibilidade com os navegadores
 

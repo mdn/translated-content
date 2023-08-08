@@ -26,7 +26,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
       <th scope="row">학습목표:</th>
       <td>
         웹사이트에서 반응형 이미지를 구현하기 위해 사용하는
-        {{htmlattrxref("srcset", "img")}}이나
+        <a href="/ko/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>이나
         {{htmlelement("picture")}} 요소 같은 기능의 사용법을 배운다.
       </td>
     </tr>
@@ -49,7 +49,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
-개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)** 라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
+개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)** 라고 한다. \[아트 디렉션은 '연출 방향' 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
 
 게다가, 작은 모바일 화면에서는 페이지에 그렇게 큰 이미지를 포함할 필요가 없다. 이것을 **해상도 전환 문제(resolution switching problem)** 라고 부른다. [벡터 그래픽 단원](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 배웠듯이, 래스터 이미지\[비트맵 이미지 - 역자 주]는 가로 픽셀들과 세로 픽셀들의 세트로 구성된다. 작은 래스터 이미지를 실제 사이즈보다 확대해서 보면 도트가 깨져 보인다(벡터 그래픽은 그렇지 않은데 반해).
 
@@ -63,8 +63,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 > **참고:**
 >
->이 글에서 다루는 새로운 기능들 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — 은 모두 출시된 최신 데스크톱과 모바일 브라우저(인터넷 익스플로러는 구현이 안 돼 있지만, 마이크로소프트 엣지를 포함해)에서 지원된다.
->
+> 이 글에서 다루는 새로운 기능들 — [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — 은 모두 출시된 최신 데스크톱과 모바일 브라우저(인터넷 익스플로러는 구현이 안 돼 있지만, 마이크로소프트 엣지를 포함해)에서 지원된다.
 
 ## 반응형 이미지를 어떻게 만들까?
 
@@ -75,19 +74,23 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 자, 해상도 전환으로 해결하려고 하는 문제는 뭘까? 우리는 기기에 따라 단지 크기만 다른, 동일한 이미지 콘텐츠를 보여 주고 싶다. 우리 예제에서 본문 두 번째 이미지가 직면한 상황이다. 표준 {{htmlelement("img")}} 요소는 전통적으로 브라우저에게 오직 하나의 소스 파일만 제시하도록 돼 있었다.
 
 ```html
-<img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바">
+<img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바" />
 ```
 
-그러나 {{htmlattrxref("srcset", "img")}}과 {{htmlattrxref("sizes", "img")}}라는 두 가지 새로운 속성(attribute)을 사용해 브라우저가 올바른 것을 선택하는 데 도움이 되는 몇 가지 추가 소스 이미지와 힌트를 제공 할 수 있다. 이 예제는 Github의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제 ([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조)에서 볼 수 있다.
+그러나 [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)과 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes)라는 두 가지 새로운 속성(attribute)을 사용해 브라우저가 올바른 것을 선택하는 데 도움이 되는 몇 가지 추가 소스 이미지와 힌트를 제공 할 수 있다. 이 예제는 Github의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제 ([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조)에서 볼 수 있다.
 
 ```html
-<img srcset="elva-fairy-320w.jpg 320w,
-             elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 320px) 280px,
+<img
+  srcset="
+    elva-fairy-320w.jpg 320w,
+    elva-fairy-480w.jpg 480w,
+    elva-fairy-800w.jpg 800w
+  "
+  sizes="(max-width: 320px) 280px,
             (max-width: 480px) 440px,
             800px"
-     src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바">
+  src="elva-fairy-800w.jpg"
+  alt="요정 옷을 입은 엘바" />
 ```
 
 `srcset`과 `sizes` 속성은 복잡해 보이지만 위에서 보여 준 것처럼 각 행에 속성 값을 나눠 적으면 이해하기 어렵지 않다. 각 값은 쉼표로 구분한 목록으로 적고, 목록의 각 부분은 세 부분으로 구성된다. 이제 각 내용을 살펴 보자.
@@ -98,17 +101,17 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. 공백
 3. 이미지 **고유 픽셀 너비** (`480w`) — `px`이 아니라 `w` 단위를 사용한다는 데 주의하라. 이것은 이미지의 실제 사이즈인데, 컴퓨터에서 이미지를 확인하면 찾을 수 있다. (예컨대, 맥에서는 파인더에서 이미지를 선택하고
 
-    <kbd>Cmd</kbd>
+   <kbd>Cmd</kbd>
 
-    \+
+   \+
 
-    <kbd>I</kbd>
+   <kbd>I</kbd>
 
-    를 눌러 정보를 표시 할 수 있다).
+   를 눌러 정보를 표시 할 수 있다).
 
 **`sizes`** 는 미디어 조건문들을 정의하고(예를 들면, 화면 크기) 특정 미디어 조건문이 참일 때 어떤 이미지 크기가 최적인지 나타낸다(앞서 언급한 힌트). 이 경우, 각 쉼표 전에 이렇게 쓴다.
 
-1. **미디어 조건문** (`(max-width:480px)`) — CSS 주제에서 이에 대해 더 많은 것을 배울 수 있을 테지만, 지금 간단히 말하면, 미디어 조건문은 가능한 화면 상태를 기술한다. 이 경우, 이렇게 말하는 것이다: “뷰포트 너비가 480픽셀 이하”.
+1. **미디어 조건문** (`(max-width:480px)`) — CSS 주제에서 이에 대해 더 많은 것을 배울 수 있을 테지만, 지금 간단히 말하면, 미디어 조건문은 가능한 화면 상태를 기술한다. 이 경우, 이렇게 말하는 것이다: "뷰포트 너비가 480픽셀 이하".
 2. 공백.
 3. 미디어 조건문이 참인 경우 이미지가 채울 **슬롯의 너비**(`440px`).
 
@@ -128,7 +131,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 이게 전부다! 그래서 지금, 이 속성을 지원하는 뷰포트 너비가 480px인 브라우저가 페이지를 불러온다고 하자, `(max-width: 480px)` 미디어 조건문이 참이 될 것이고, 따라서 `440px` 슬롯이 선택될 것이다. 그러면 `440px`에 가장 가까운 고유 너비(`480w`)가 선택됨에 따라 `elva-fairy-480w.jpg`가 로딩될 것이다. 800px 사진은 128KB다. 480px 버전은 고작 63KB인데 말이다. 65KB를 절약했다. 사진이 엄청 많은 페이지였다면 어땠을까. 이 기법은 모바일 사용자가 수많은 대역폭을 절약하게 해 준다.
 
-이 기능을 지원하지 않는 낡은 브라우저들은 이 속성들을 무시할 것이다. 그리고 {{htmlattrxref("src", "img")}} 속성에 참조된 보통 이미지를 불러올 것이다.
+이 기능을 지원하지 않는 낡은 브라우저들은 이 속성들을 무시할 것이다. 그리고 [`src`](/ko/docs/Web/HTML/Element/img#src) 속성에 참조된 보통 이미지를 불러올 것이다.
 
 > **참고:**
 >
@@ -158,10 +161,10 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 만약 다양한 디스플레이 해상도를 지원해야 하는데, 모두가 이미지를 실제 사이즈로 동일하게 봐야 한다면, `srcset`에 `sizes` 없이 x-서술자를 사용해 브라우저가 적절한 해상도의 이미지를 선택하게 할 수 있다. 꽤 쉽다. [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 예제를 찾아 볼 수 있다. ([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)도 볼 수 있다.)
 
 ```html
-<img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg" alt="요정 옷을 입은 엘바">
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="요정 옷을 입은 엘바" />
 ```
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 된다(CSS 픽셀이라고 부르기도 한다).
@@ -181,16 +184,16 @@ img {
 원래의 [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가 보자. 아트 디렉션이 절실히 필요한 사진이 있다.
 
 ```html
-<img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스">
+<img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스" />
 ```
 
 {{htmlelement("picture")}}를 이용해 고쳐 보자! [`<video>`와 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 처럼, \<picture> 요소는 {{htmlelement("source")}} 요소들을 감싼다. `source` 요소는 브라우저가 고를 수 있는 여러 소스들을 제공한다. `soucre` 요소들 뒤에는 가장 중요한 {{htmlelement("img")}} 요소가 뒤따른다. [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 코드는 이렇다.
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-  <img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스">
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+  <img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스" />
 </picture>
 ```
 
@@ -218,9 +221,9 @@ img {
 
 ```html
 <picture>
-  <source type="image/svg+xml" srcset="pyramid.svg">
-  <source type="image/webp" srcset="pyramid.webp">
-  <img src="pyramid.png" alt="정삼각형 4개로 만든 일반적인 피라미드">
+  <source type="image/svg+xml" srcset="pyramid.svg" />
+  <source type="image/webp" srcset="pyramid.webp" />
+  <img src="pyramid.png" alt="정삼각형 4개로 만든 일반적인 피라미드" />
 </picture>
 ```
 
@@ -245,7 +248,7 @@ img {
 이것이 반응형 이미지의 비밀이다. 이 새로운 기법을 즐기길 바란다. 핵심을 되짚다면, 우리가 다룬 두 가지 구분된 문제가 있다.
 
 - **아트 디렉션**: 다양한 레이아웃에 자른 이미지를 제공하고자 하는 문제. 예를 들면, 데스크톱 레이아웃에서 전체 풍경을 보여 주는 가로 이미지와 모바일 레이아웃에서 주요 대상을 좀더 가깝게 확대해서 보여 주는 세로 이미지. {{htmlelement("picture")}} 요소를 이용해 해결할 수 있다.
-- **해상도 전환**: 데스크톱 디스플레이와 달리 커다란 이미지가 필요치 않은 좁은 화면 기기에 더 작은 이미지 파일을 제공하고자 하는 문제. 그리고 또한 선택적으로 다양한 해상도 이미지를 고밀도/저밀도 화면에 제공하고자 하는 문제. 이것은 [벡터 그래픽](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)(SVG 이미지), {{htmlattrxref("srcset", "img")}}와 {{htmlattrxref("sizes", "img")}} 속성을 이용해 해결할 수 있다.
+- **해상도 전환**: 데스크톱 디스플레이와 달리 커다란 이미지가 필요치 않은 좁은 화면 기기에 더 작은 이미지 파일을 제공하고자 하는 문제. 그리고 또한 선택적으로 다양한 해상도 이미지를 고밀도/저밀도 화면에 제공하고자 하는 문제. 이것은 [벡터 그래픽](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)(SVG 이미지), [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)와 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes) 속성을 이용해 해결할 수 있다.
 
 이것으로 전체 [멀티미디어와 엠베딩](/ko/docs/Learn/HTML/Multimedia_and_embedding) 모듈을 끝냈다! 남은 것은 멀티미디어 평가를 치르는 것뿐이다. 얼마나 배웠는지 확인해 보자. 즐겁게 진행하기를!
 

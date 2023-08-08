@@ -1,7 +1,6 @@
 ---
 title: Le modèle de boîte
 slug: Learn/CSS/Building_blocks/The_box_model
-translation_of: Learn/CSS/Building_blocks/The_box_model
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

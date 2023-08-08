@@ -1,5 +1,5 @@
 ---
-title: 'Window: rejectionhandled イベント'
+title: "Window: rejectionhandled イベント"
 slug: Web/API/Window/rejectionhandled_event
 ---
 

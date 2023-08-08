@@ -1,7 +1,6 @@
 ---
 title: big
 slug: Web/HTML/Element/big
-original_slug: Web/HTML/Elemento/big
 ---
 
 ### Definición

@@ -1,7 +1,6 @@
 ---
 title: Criando e editando páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
 
 {{MDNSidebar}}

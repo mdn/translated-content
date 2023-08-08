@@ -26,16 +26,16 @@ O método `toLowerCase()` retorna o valor da string original convertido para min
 ### Usando `toLowerCase()`
 
 ```js
-console.log('ALFABETO'.toLowerCase()); // 'alfabeto'
+console.log("ALFABETO".toLowerCase()); // 'alfabeto'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                | Estado                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Definição inicial. Implementada no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.16', 'String.prototype.toLowerCase')}}                             | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                                                | Estado               | Comentário                                         |
+| -------------------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                          | {{Spec2('ES1')}}     | Definição inicial. Implementada no JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.5.4.16', 'String.prototype.toLowerCase')}}                      | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

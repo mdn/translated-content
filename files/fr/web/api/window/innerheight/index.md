@@ -1,7 +1,6 @@
 ---
 title: window.innerHeight
 slug: Web/API/Window/innerHeight
-translation_of: Web/API/Window/innerHeight
 ---
 
 {{ ApiRef() }}

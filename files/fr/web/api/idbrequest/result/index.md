@@ -1,7 +1,6 @@
 ---
 title: IDBRequest.result
 slug: Web/API/IDBRequest/result
-translation_of: Web/API/IDBRequest/result
 ---
 
 {{APIRef("IndexedDB")}}

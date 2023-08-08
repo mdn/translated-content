@@ -1,7 +1,6 @@
 ---
 title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
 ---
 
 {{AddonSidebar()}}

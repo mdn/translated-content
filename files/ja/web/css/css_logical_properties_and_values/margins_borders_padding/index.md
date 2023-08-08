@@ -1,7 +1,6 @@
 ---
 title: マージン、境界、パディングの論理的プロパティ
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}

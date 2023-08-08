@@ -1,7 +1,6 @@
 ---
 title: tabs.onHighlightChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
 ---
 
 {{AddonSidebar()}}

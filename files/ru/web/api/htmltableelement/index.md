@@ -1,13 +1,6 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
-tags:
-  - API
-  - HTML DOM
-  - Reference
-  - Référence(2)
-  - Интерфейсы
-translation_of: Web/API/HTMLTableElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -73,12 +66,7 @@ _Наследует методы от своего родителя, {{domxref("
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                           | Комментарий                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "tabular-data.html#the-table-element", "HTMLTableElement")}} | {{Spec2('HTML WHATWG')}} | Добавляет свойство `sortable` и метод `stopSorting()`.                                       |
-| {{SpecName('HTML5 W3C', "tabular-data.html#the-table-element", "HTMLTableElement")}}     | {{Spec2('HTML5 W3C')}}     | Добавляет метод `createTBody()`. Obsoleted xaz                                               |
-| {{SpecName('DOM2 HTML', 'html.html#ID-64060425', 'HTMLTableElement')}}                         | {{Spec2('DOM2 HTML')}}     | Defined when `caption`, `tHead`, `tFoot`, `insertRow()`, and `deleteRow()` raise exceptions. |
-| {{SpecName('DOM1', 'level-one-html.html#ID-64060425', 'HTMLTableElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                          |
+{{Specifications}}
 
 ## Browser compatibility
 

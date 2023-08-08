@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
 
 {{jsSidebar("Errors")}}
@@ -31,15 +30,15 @@ var re = /motif/marqueurs;
 ou encore :
 
 ```js
-var re = new RegExp('motif', 'marqueurs');
+var re = new RegExp("motif", "marqueurs");
 ```
 
-| Marqueur | Description                                                                                                                                                                  |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`      | Recherche globale.                                                                                                                                                           |
-| i        | Recherche non-sensible à la casse.                                                                                                                                           |
-| m        | Recherche sur plusieurs lignes.                                                                                                                                              |
-| u        | Unicode : le motif est interprété comme une suite de codets Unicode.                                                                                                         |
+| Marqueur | Description                                                                                                                                                       |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`      | Recherche globale.                                                                                                                                                |
+| i        | Recherche non-sensible à la casse.                                                                                                                                |
+| m        | Recherche sur plusieurs lignes.                                                                                                                                   |
+| u        | Unicode : le motif est interprété comme une suite de codets Unicode.                                                                                              |
 | y        | La recherche effectuée est « adhérente » et recherche une correspondance à la position indiquée dans la chaîne cible (cf. {{jsxref("RegExp.sticky", "sticky")}}). |
 
 ## Exemples
@@ -66,7 +65,7 @@ Peut-être souhaitiez-vous créer une chaîne de caractères ? Dans ce cas, il f
 
 ```js example-good
 let obj = {
-  url: '/docs/Web'
+  url: "/docs/Web",
 };
 ```
 

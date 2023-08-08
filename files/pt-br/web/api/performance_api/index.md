@@ -1,7 +1,6 @@
 ---
 title: API de Desempenho
 slug: Web/API/Performance_API
-original_slug: Web/API/API_de_Desempenho
 ---
 
 {{DefaultAPISidebar("High Resolution Time")}}

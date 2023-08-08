@@ -1,7 +1,6 @@
 ---
 title: かっこいいボックス
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}

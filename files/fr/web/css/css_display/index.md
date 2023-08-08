@@ -1,7 +1,6 @@
 ---
 title: CSS Display
 slug: Web/CSS/CSS_display
-translation_of: Web/CSS/CSS_Display
 ---
 
 {{CSSRef}}

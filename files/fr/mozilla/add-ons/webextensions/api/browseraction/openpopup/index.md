@@ -1,7 +1,6 @@
 ---
 title: browserAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
 ---
 
 {{AddonSidebar()}}Ouvrez le popup de l'action du navigateur.

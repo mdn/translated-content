@@ -1,7 +1,6 @@
 ---
 title: document.getElementById
 slug: Web/API/Document/getElementById
-translation_of: Web/API/Document/getElementById
 ---
 
 {{ ApiRef("DOM") }}

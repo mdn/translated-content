@@ -1,7 +1,6 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-translation_of: Web/CSS/justify-self
 ---
 
 {{CSSRef}}

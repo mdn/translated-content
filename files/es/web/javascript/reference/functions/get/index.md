@@ -1,7 +1,6 @@
 ---
 title: get
 slug: Web/JavaScript/Reference/Functions/get
-original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
 
 {{jsSidebar("Funciones")}}
@@ -37,16 +36,15 @@ Esto creará una pseudo-propiedad `latest` (ver ejemplo) del objecto `o` que pod
 
 ```js
 var o = {
-  get latest () {
+  get latest() {
     if (this.log.length > 0) {
       return this.log[this.log.length - 1];
-    }
-    else {
+    } else {
       return null;
     }
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 Note que intentar asignar un valor a `latest` no lo cambiará.

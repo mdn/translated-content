@@ -1,7 +1,6 @@
 ---
 title: Console.table
 slug: Web/API/console/table
-translation_of: Web/API/Console/table
 ---
 
 {{APIRef("Console API")}}

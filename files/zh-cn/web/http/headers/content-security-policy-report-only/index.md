@@ -81,11 +81,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 `signup.html`的 html 如下：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

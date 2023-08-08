@@ -1,7 +1,6 @@
 ---
 title: "<colgroup> : l'élément regroupant des colonnes"
 slug: Web/HTML/Element/colgroup
-translation_of: Web/HTML/Element/colgroup
 ---
 
 {{HTMLSidebar}}

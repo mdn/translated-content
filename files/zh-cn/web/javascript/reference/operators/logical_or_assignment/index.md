@@ -17,7 +17,7 @@ expr1 ||= expr2
 
 ## 描述
 
-逻辑或的[*短路运算*](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短路运算)意味着 `x ||= y` 与下式等价：
+逻辑或的[_短路运算_](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短路运算)意味着 `x ||= y` 与下式等价：
 
 ```js
 x || (x = y);

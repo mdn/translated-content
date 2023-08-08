@@ -27,9 +27,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 
 ```js
 if (num1 / num2 >= Number.MIN_VALUE) {
-    func1();
+  func1();
 } else {
-    func2();
+  func2();
 }
 ```
 

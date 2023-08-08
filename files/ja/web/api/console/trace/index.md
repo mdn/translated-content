@@ -1,7 +1,7 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
-i10n:
+l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
 
@@ -16,8 +16,8 @@ i10n:
 ## 構文
 
 ```js
-trace()
-trace(object1, /* …, */ objectN)
+trace();
+trace(object1, /* …, */ objectN);
 ```
 
 ### 引数

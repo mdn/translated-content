@@ -1,7 +1,6 @@
 ---
 title: drop
 slug: Web/API/HTMLElement/drop_event
-translation_of: Web/API/Document/drop_event
 ---
 
 {{APIRef}}

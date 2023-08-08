@@ -1,7 +1,6 @@
 ---
 title: CRLF
 slug: Glossary/CRLF
-translation_of: Glossary/CRLF
 ---
 
 CR et LF sont des [caractères de contrôle](https://fr.wikipedia.org/wiki/Caractère_de_contrôle) ou [bytecode](https://fr.wikipedia.org/wiki/Bytecode) qui peuvent être utilisés pour indiquer une fin de ligne dans un fichier texte.

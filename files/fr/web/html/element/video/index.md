@@ -1,7 +1,6 @@
 ---
 title: <video>
 slug: Web/HTML/Element/video
-translation_of: Web/HTML/Element/video
 ---
 
 {{HTMLSidebar}}

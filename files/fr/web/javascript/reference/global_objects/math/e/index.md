@@ -1,7 +1,6 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
 
 {{JSRef}}
@@ -24,7 +23,7 @@ La fonction suivante renvoie la valeur de e :
 
 ```js
 function getNapier() {
-   return Math.E;
+  return Math.E;
 }
 
 getNapier(); // 2.718281828459045

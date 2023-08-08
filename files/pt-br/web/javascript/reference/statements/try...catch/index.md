@@ -58,11 +58,10 @@ Quando uma única, incondicional cláusula `catch` é utilizada, o bloco `catch`
 
 ```js
 try {
-   throw "myException"; // gera uma exceção
-}
-catch (e) {
-   // declarações para manipular quaisquer exceções
-   logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
+  throw "myException"; // gera uma exceção
+} catch (e) {
+  // declarações para manipular quaisquer exceções
+  logMyErrors(e); // passa o objeto de exceção para o manipulador de erro
 }
 ```
 
@@ -125,13 +124,12 @@ A cláusula `finally` contém declarações para executarem após a execução d
 Você pode utilizar a cláusula `finally` para fazer seu script falhar graciosamente quando uma exceção ocorrer; por exemplo, você pode precisar liberar um recurso que seu script possui vinculado. O exemplo seguinte abre um aquivo e então executa declarações que utilizam o arquivo (server-side JavaScript permite que você acesse arquivos). Se uma exceção for lançada enquanto o arquivo estiver aberto, a cláusula `finally` fecha o arquivo antes que o script falhe.
 
 ```js
-openMyFile()
+openMyFile();
 try {
-   // vincula o recurso
-   writeMyFile(theData);
-}
-finally {
-   closeMyFile(); // sempre fecha o recurso
+  // vincula o recurso
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // sempre fecha o recurso
 }
 ```
 

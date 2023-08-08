@@ -2,6 +2,7 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef}}
 
 [CSS](/ko/docs/CSS) **`flex-wrap`** property는 `flex-item` 요소들이 강제로 한줄에 배치되게 할 것인지, 또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다. 만약 영역 내에서 벗어나지 못하게 설정한다면, 동시에 요소의 방향 축을 결정할 수 있습니다.
@@ -45,19 +46,19 @@ flex-wrap: unset;
 ### HTML
 
 ```html
-<h4>This is an example for flex-wrap:wrap </h4>
+<h4>This is an example for flex-wrap:wrap</h4>
 <div class="content">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap </h4>
+<h4>This is an example for flex-wrap:nowrap</h4>
 <div class="content1">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<h4>This is an example for flex-wrap:wrap-reverse</h4>
 <div class="content2">
   <div class="red">1</div>
   <div class="green">2</div>
@@ -72,40 +73,40 @@ flex-wrap: unset;
 .content,
 .content1,
 .content2 {
-    color: #fff;
-    font: 100 24px/100px sans-serif;
-    height: 150px;
-    text-align: center;
+  color: #fff;
+  font: 100 24px/100px sans-serif;
+  height: 150px;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
 }
 .red {
-    background: orangered;
+  background: orangered;
 }
 .green {
-    background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-    background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
 .content {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content1 {
-    display: flex;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-    display: flex;
-    flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 ```
 

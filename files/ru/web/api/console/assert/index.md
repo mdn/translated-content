@@ -1,13 +1,6 @@
 ---
 title: console.assert()
 slug: Web/API/console/assert
-tags:
-  - API
-  - Debugging
-  - console
-  - web console
-  - Отладка
-translation_of: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}{{Non-standard_Header}}
@@ -43,12 +36,12 @@ console.assert(assertion, msg [, subst1, ..., substN]); // си-подобное
 В следующем примере кода демонстрируется использование объекта JavaScript после утверждения:
 
 ```js
-const errorMsg = '# не чётное число';
+const errorMsg = "# не чётное число";
 for (let number = 2; number <= 5; number += 1) {
-    console.log('# равно ' + number);
-    console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // или, при использовании {{jsxref("Operators/Object_initializer", "сокращения имён свойств в ECMAScript 2015", "Новая_нотация_в_ECMAScript_2015")}}:
-    // console.assert(number % 2 === 0, {number, errorMsg});
+  console.log("# равно " + number);
+  console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
+  // или, при использовании {{jsxref("Operators/Object_initializer", "сокращения имён свойств в ECMAScript 2015", "Новая_нотация_в_ECMAScript_2015")}}:
+  // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // output:
 // # равно 2
@@ -69,7 +62,7 @@ console.log('слово %s', 'foo');
 ...использование такой строки в настоящее время не работает в качестве параметра для `console.assert` во всех браузерах:
 
 ```js
-console.assert(false, 'слово %s', 'foo');
+console.assert(false, "слово %s", "foo");
 // корректный вывод в Node.js и некоторых браузерах
 //     (например Firefox v60.0.2):
 // Assertion failed: слово foo
@@ -84,7 +77,7 @@ console.assert(false, 'слово %s', 'foo');
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

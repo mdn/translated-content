@@ -1,8 +1,6 @@
 ---
 title: try...catch 語法
 slug: Web/JavaScript/Reference/Statements/try...catch
-original_slug: >-
-  Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法/try...catch_語法
 ---
 
 `try...catch` 語法標記出一整塊需要測試的語句，並指定一個以上的回應方法，萬一有例外拋出時，`try...catch` 語句就會捕捉。

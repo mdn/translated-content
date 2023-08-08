@@ -1,7 +1,6 @@
 ---
 title: Latence
 slug: Glossary/Latency
-translation_of: Glossary/Latency
 ---
 
 **La latence** est le temps réseau nécessaire pour qu'une ressource demandée atteigne sa destination. Une latence faible est bonne, ce qui signifie qu'il y a peu ou pas de délai. Une latence forte est mauvaise, ce qui signifie que la ressource demandée prend beaucoup de temps à atteindre sa destination.

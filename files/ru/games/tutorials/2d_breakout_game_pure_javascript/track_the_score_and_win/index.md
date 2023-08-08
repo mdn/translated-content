@@ -1,13 +1,6 @@
 ---
 title: Счёт и выигрыш
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-tags:
-  - JavaScript
-  - Игры
-  - Начинающий
-  - Учебник
-  - счёт
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}

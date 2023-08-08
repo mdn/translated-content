@@ -77,10 +77,10 @@ if (b) //表达式的值为 true
 
 ```js
 if (cipher_char === from_char) {
-   result = result + to_char;
-   x++;
+  result = result + to_char;
+  x++;
 } else {
-   result = result + clear_char;
+  result = result + clear_char;
 }
 ```
 
@@ -90,11 +90,11 @@ if (cipher_char === from_char) {
 
 ```js
 if (x > 5) {
- /* do the right thing */
+  /* do the right thing */
 } else if (x > 50) {
- /* do the right thing */
+  /* do the right thing */
 } else {
- /* do the right thing */
+  /* do the right thing */
 }
 ```
 
@@ -102,9 +102,9 @@ if (x > 5) {
 
 建议不要在条件表达式中单纯的使用赋值运算，因为粗看下赋值运算的代码很容易让人误认为是等性比较。比如，不要使用下面示例的代码：
 
-```js example-bad
+```js-nolint example-bad
 if (x = y) {
-   /* do the right thing */
+  /* do the right thing */
 }
 ```
 
@@ -112,7 +112,7 @@ if (x = y) {
 
 ```js example-good
 if ((x = y)) {
-   /* do the right thing */
+  /* do the right thing */
 }
 ```
 

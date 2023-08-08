@@ -28,7 +28,7 @@ str.fixed()
 下面的示例代码使用这个 fixed 方法来改变字符串的格式：
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 console.log(worldString.fixed()); // "<tt>Hello, world</tt>"
 ```
 

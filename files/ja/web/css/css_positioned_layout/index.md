@@ -1,7 +1,6 @@
 ---
 title: CSS 位置指定レイアウト
 slug: Web/CSS/CSS_positioned_layout
-original_slug: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}

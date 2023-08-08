@@ -1,7 +1,6 @@
 ---
 title: Agent utilisateur
 slug: Glossary/User_agent
-translation_of: Glossary/User_agent
 ---
 
 Un agent utilisateur est un programme informatique qui représente une personne, par exemple, un {{Glossary("Navigateur","navigateur")}} dans le cadre d'une utilisation sur le {{Glossary("World Wide Web", "Web")}}.

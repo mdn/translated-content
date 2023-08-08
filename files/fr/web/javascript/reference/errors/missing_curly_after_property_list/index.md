@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -41,7 +40,7 @@ La version correcte correspondante est :
 var obj = {
   a: 1,
   b: { maProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

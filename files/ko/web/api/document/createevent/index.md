@@ -1,8 +1,8 @@
 ---
 title: Event.createEvent()
 slug: Web/API/Document/createEvent
-original_slug: Web/API/Event/createEvent
 ---
+
 {{APIRef("DOM")}}
 
 새로운 event를 생성합니다, 새로 만들어진 event는 반드시 자신의 init() method를 호출함으로써 초기화되어야만 합니다.
@@ -10,7 +10,7 @@ original_slug: Web/API/Event/createEvent
 ### Syntax
 
 ```js
-document.createEvent(type)
+document.createEvent(type);
 ```
 
 - `type`

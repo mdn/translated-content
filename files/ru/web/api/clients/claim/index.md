@@ -1,7 +1,6 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-translation_of: Web/API/Clients/claim
 ---
 
 {{APIRef("Service Worker Clients")}}
@@ -29,7 +28,7 @@ await clients.claim();
 В примере ниже внутри обработчика события "`activate`" сервис-воркера используется метод `claim()`, что позволяет клиентской странице, загруженной в той же области видимости, обходиться без перезагрузки для использования сервис-воркером.
 
 ```js
-self.addEventListener('activate', event => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 ```
@@ -38,7 +37,7 @@ self.addEventListener('activate', event => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

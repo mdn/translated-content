@@ -30,7 +30,7 @@ Se você chamar `pop()` em um array vazio, ele retorna o valor {{jsxref("Global_
 O código seguinte cria o array `meuPeixe` contendo quatro elementos e então remove seu último elemento.
 
 ```js
-var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];
+var meuPeixe = ["acara-bandeira", "palhaco", "mandarim", "esturjao"];
 
 console.log(meuPeixe); // ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao']
 
@@ -43,11 +43,11 @@ console.log(meuPeixePop); // 'esturjao'
 
 ## Especificações
 
-| Especificação                                                                                | Estado                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3ª Edição                                                                         | Padrão                   | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                          | Estado             | Comentário                                         |
+| ---------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 3ª Edição                                                   | Padrão             | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}          | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade nos Navegadores
 

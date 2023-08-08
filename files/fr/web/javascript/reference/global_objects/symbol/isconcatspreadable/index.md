@@ -1,7 +1,6 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
 
 {{JSRef}}
@@ -26,8 +25,8 @@ Le symbole `@@isConcatSpreadable` (`Symbol.isConcatSpreadable`) peut être défi
 Par défaut, {{jsxref("Array.prototype.concat()")}} aplatit les tableaux pour le résultat de la concaténation :
 
 ```js
-var alpha = ['a', 'b', 'c'],
-    numérique = [1, 2, 3];
+var alpha = ["a", "b", "c"],
+  numérique = [1, 2, 3];
 
 var alphaNumérique = alpha.concat(numérique);
 
@@ -38,8 +37,8 @@ console.log(alphaNumérique);
 En définissant `Symbol.isConcatSpreadable` avec `false`, on peut désactiver le comportement par défaut :
 
 ```js
-var alpha = ['a', 'b', 'c'],
-    numérique = [1, 2, 3];
+var alpha = ["a", "b", "c"],
+  numérique = [1, 2, 3];
 
 numérique[Symbol.isConcatSpreadable] = false;
 var alphaNumérique = alpha.concat(numérique);
@@ -59,8 +58,8 @@ var fauxTableau = {
   [Symbol.isConcatSpreadable]: true,
   length: 2,
   0: "coucou",
-  1: "monde"
-}
+  1: "monde",
+};
 
 x.concat(fauxTableau); // [1, 2, 3, "coucou", "monde"]
 ```

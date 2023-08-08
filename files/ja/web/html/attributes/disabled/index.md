@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: disabled'
+title: "HTML 属性: disabled"
 slug: Web/HTML/Attributes/disabled
 ---
 

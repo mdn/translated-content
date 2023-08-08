@@ -1,8 +1,8 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-translation_of: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`background-position`** устанавливает начальную позицию для каждого фонового изображения. Положение относительно уровня положения, установленного {{cssxref("background-origin")}}.
@@ -28,7 +28,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Несколько изображений */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Значения смещения края */
 background-position: bottom 10px right 20px;
@@ -77,7 +79,7 @@ background-position: unset;
 ```css
 /* Общий среди всех <div>-ов */
 div {
-  background-color: #FFEE99;
+  background-color: #ffee99;
   background-repeat: no-repeat;
   width: 300px;
   height: 80px;
@@ -86,19 +88,19 @@ div {
 
 /* В этих примерах используется сокращённое свойство 'background' */
 .exampleone {
-  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
+  background: url("startransparent.gif") #ffee99 3em 50% no-repeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
    с соответствующей позицией, от первого указанного до последнего. */
 .examplethree {
-  background-image:    url("startransparent.gif"),
-                       url("catfront.png");
-  background-position: 0px 0px,
-                       center;
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position:
+    0px 0px,
+    center;
 }
 ```
 

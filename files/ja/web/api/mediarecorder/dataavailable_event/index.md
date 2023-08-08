@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: dataavailable イベント"
 slug: Web/API/MediaRecorder/dataavailable_event
-original_slug: Web/API/MediaRecorder/ondataavailable
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---

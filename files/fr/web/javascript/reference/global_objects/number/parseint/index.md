@@ -1,7 +1,6 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 
 {{JSRef}}
@@ -40,7 +39,7 @@ Number.parseInt === parseInt; // true
 Si on souhaite bénéficier de cette fonction dans un environnement qui n'en dispose pas, on pourra donc l'émuler de la façon suivante :
 
 ```js
-if(Number.parseInt === undefined) {
+if (Number.parseInt === undefined) {
   Number.parseInt = parseInt;
 }
 ```

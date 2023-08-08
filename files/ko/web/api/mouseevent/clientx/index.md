@@ -2,6 +2,7 @@
 title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
 ---
+
 {{{APIRef("DOM 이벤트")}}
 {{domxref("MouseEvent")}}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}}}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).
 
@@ -10,7 +11,7 @@ slug: Web/API/MouseEvent/clientX
 ## Syntax
 
 ```js
-var x = instanceOfMouseEvent.clientX
+var x = instanceOfMouseEvent.clientX;
 ```
 
 ### Return value
@@ -31,8 +32,8 @@ CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

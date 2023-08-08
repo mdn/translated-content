@@ -19,7 +19,7 @@ Firefox 的 User Agent（用户代理）值可被拆分为以下四个部分：
 - **_Gecko/geckotrail_** 标明浏览器基于 Gecko。
 - 在桌面端，_**geckotrail**_ 的值恒为"20100101"。
 - _**Firefox/firefoxversion**_ 标明浏览器是 Firefox，并提供了版本号（如"_17.0"_）。
-- 自从移动版 Firefox 10 开始，***geckotrail***与**_firefoxversion_**保持一致。
+- 自从移动版 Firefox 10 开始，**_geckotrail_**与**_firefoxversion_**保持一致。
 
 > **备注：** （如果你必须检测浏览器引擎，而不是去做特征检测的话）推荐使用"_Gecko_"与"_rv:_"字符串来检测基于 Gecko 的浏览器。因为一些浏览器的 UA 中也包含有"_like Gecko_"字段。
 

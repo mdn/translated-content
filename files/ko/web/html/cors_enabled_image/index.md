@@ -3,7 +3,7 @@ title: 교차 출처 이미지와 캔버스 허용하기
 slug: Web/HTML/CORS_enabled_image
 ---
 
-HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 {{ htmlattrxref("crossorigin", "img") }} 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
+HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
 `crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes) 를 참고하세요.
 
@@ -52,7 +52,7 @@ In short, this configures the server to allow graphic files (those with the exte
 
 Now that the server has been configured to allow retrieval of the images cross-origin, we can write the code that allows the user to save them to local [local storage](/ko/docs/Web/API/Web_Storage_API), just as if they were being served from the same domain the code is running on.
 
-The key is to use the {{htmlattrxref("crossorigin")}} attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
+The key is to use the [`crossorigin`](/ko/docs/Web/HTML/Global_attributes#crossorigin) attribute by setting {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} on the {{domxref("HTMLImageElement")}} into which the image will be loaded. This tells the browser to request cross-origin access when trying to download the image data.
 
 #### Starting the download
 
@@ -60,9 +60,10 @@ The code that starts the download (say, when the user clicks a "Download" button
 
 ```js
 function startDownload() {
-  let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageURL =
+    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
@@ -90,8 +91,7 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
+  } catch (err) {
     console.log("Error: " + err);
   }
 }
@@ -111,4 +111,4 @@ You can [try out](https://cors-image-example.glitch.me/) or [remix](https://glit
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Web Storage API](/ko/docs/Web/API/Web_Storage_API)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

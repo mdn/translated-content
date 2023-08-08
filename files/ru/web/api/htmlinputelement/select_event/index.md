@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onselect
 slug: Web/API/HTMLInputElement/select_event
-translation_of: Web/API/GlobalEventHandlers/onselect
-original_slug: Web/API/GlobalEventHandlers/onselect
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -21,32 +19,32 @@ window.onselect = funcRef;
 
 ```html
 <html>
-<head>
+  <head>
+    <title>onselect test</title>
 
-<title>onselect test</title>
+    <style type="text/css">
+      .text1 {
+        border: 2px solid red;
+      }
+    </style>
 
-<style type="text/css">
-.text1 { border: 2px solid red; }
-</style>
+    <script type="text/javascript">
+      window.onselect = selectText;
 
-<script type="text/javascript">
+      function selectText() {
+        alert("select event detected!");
+      }
+    </script>
+  </head>
 
-window.onselect = selectText;
-
-function selectText()
-{
- alert("select event detected!");
-}
-</script>
-</head>
-
-<body>
-<textarea class="text1" cols="30" rows="3">
+  <body>
+    <textarea class="text1" cols="30" rows="3">
 Highlight some of this text
 with the mouse pointer
 to fire the onselect event.
-</textarea>
-</body>
+</textarea
+    >
+  </body>
 </html>
 ```
 
@@ -54,8 +52,10 @@ to fire the onselect event.
 
 Событие select происходит только, когда текст выделяют в поле input с type='text' или в поле textarea. Событие происходит только после того, как текст будет выделен.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onselect','onselect')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
