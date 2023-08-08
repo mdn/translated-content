@@ -42,5 +42,5 @@ You can communicate with the MDN Web Docs team and community using the [communic
 
 Additionally, you can communicate with a specific localization tem using their own available [communication channels][localization communication].
 
-[main communication]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[localization communication]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Translated_content
+[main communication]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
+[localization communication]: https://developer.mozilla.org/docs/MDN/Community/Contributing/Translated_content
