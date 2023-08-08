@@ -93,7 +93,7 @@ ARIA 角色共分为 6 类：
 - [tree](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [treegrid](/zh-CN/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
-避免使用 [grid](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role)、[listbox](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 和 [radiogroup](/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role)，这些仅为完整性而包含。更多信息，请参见其各自的角色文档。
+避免使用 [grid](/zh-CN/docs/Web/Accessibility/ARIA/Roles/grid_role)、[listbox](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 和 [radiogroup](/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role)，这些仅为完整性而包含。更多信息，请参见其各个角色的文档。
 
 注意还有个 widget 角色（`role="widget"`），这是个抽象的角色，不在小部件角色类别中。
 
