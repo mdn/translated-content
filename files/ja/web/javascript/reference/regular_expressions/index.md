@@ -140,7 +140,7 @@ const regex2 = new RegExp("ab+c", "g");
 [CE]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape
 [NBR]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference
 [UCCE]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
-[VCC]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class
+[VCC]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_モード文字クラス
 [WBA]: /ja/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
 
 `\` \ に他の数字が続くと[古い 8 進数のエスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#エスケープシーケンス)になり、[Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では禁止されています。
@@ -149,7 +149,7 @@ const regex2 = new RegExp("ab+c", "g");
 
 - `\$`, `\(`, `\)`, `\*`, `\+`, `\.`, `\/`, `\?`, `\[`, `\\`, `\]`, `\^`, `\{`, `\|`, `\}`: valid everywhere
 - `\-`: [文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)の中でのみ有効
-- `\!`, `\#`, `\%`, `\&`, `\,`, `\:`, `\;`, `\<`, `\=`, `\>`, `\@`, `` \` ``, `\~`: [`v` モード文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)の中でのみ有効
+- `\!`, `\#`, `\%`, `\&`, `\,`, `\:`, `\;`, `\<`, `\=`, `\>`, `\@`, `` \` ``, `\~`: [`v` モード文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v_モード文字クラス)の中でのみ有効
 
 他にも ASCII 文字、すなわち空白文字、`"`、`'`、`_`、そして上記以外の文字は有効なエスケープシーケンスではありません。[Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、上記のいずれでもないエスケープシーケンスは識別エスケープとなり、バックスラッシュに続く文字を表します。例えば、`\a` は文字 `a` を表します。この動作は、後方互換性の課題を発生させることなく新しいエスケープシーケンスを導入する能力を制限するため、Unicode 対応モードでは禁止されています。
 
