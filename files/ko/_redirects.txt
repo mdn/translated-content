@@ -130,7 +130,6 @@
 /ko/docs/DOM/document.createTextNode	/ko/docs/Web/API/Document/createTextNode
 /ko/docs/DOM/document.getElementById	/ko/docs/Web/API/Document/getElementById
 /ko/docs/DOM/document.hasFocus	/ko/docs/Web/API/Document/hasFocus
-/ko/docs/DOM/element	/ko/docs/Web/API/Element
 /ko/docs/DOM/element.attributes	/ko/docs/Web/API/Element/attributes
 /ko/docs/DOM/element.childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/DOM/element.firstChild	/ko/docs/Web/API/Node/firstChild
@@ -140,7 +139,6 @@
 /ko/docs/DOM/event	/ko/docs/Web/API/Event
 /ko/docs/DOM/event.cancelable	/ko/docs/Web/API/Event/cancelable
 /ko/docs/DOM/event.preventDefault	/ko/docs/Web/API/Event/preventDefault
-/ko/docs/DOM/form	/ko/docs/Web/API/HTMLFormElement
 /ko/docs/DOM/range	/ko/docs/Web/API/Range
 /ko/docs/DOM/table	/ko/docs/Web/API/HTMLTableElement
 /ko/docs/DOM/table.width	/ko/docs/Web/API/HTMLTableElement/width
@@ -157,14 +155,12 @@
 /ko/docs/DOM:document.createTextNode	/ko/docs/Web/API/Document/createTextNode
 /ko/docs/DOM:document.getElementById	/ko/docs/Web/API/Document/getElementById
 /ko/docs/DOM:document.hasFocus	/ko/docs/Web/API/Document/hasFocus
-/ko/docs/DOM:element	/ko/docs/Web/API/Element
 /ko/docs/DOM:element.attributes	/ko/docs/Web/API/Element/attributes
 /ko/docs/DOM:element.childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/DOM:element.firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/DOM:element.lastChild	/ko/docs/Web/API/Node/lastChild
 /ko/docs/DOM:element.length	/ko/docs/Web/API/NodeList/length
 /ko/docs/DOM:event	/ko/docs/Web/API/Event
-/ko/docs/DOM:form	/ko/docs/Web/API/HTMLFormElement
 /ko/docs/DOM:range	/ko/docs/Web/API/Range
 /ko/docs/DOM:table	/ko/docs/Web/API/HTMLTableElement
 /ko/docs/DOM:table.width	/ko/docs/Web/API/HTMLTableElement/width
@@ -432,7 +428,6 @@
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/HTMLElement/drag_event
 /ko/docs/Web/API/Document/dragend_event	/ko/docs/Web/API/HTMLElement/dragend_event
 /ko/docs/Web/API/Document/dragstart_event	/ko/docs/Web/API/HTMLElement/dragstart_event
-/ko/docs/Web/API/Document/keydown_event	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
@@ -442,11 +437,9 @@
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
 /ko/docs/Web/API/Element.clientHeight	/ko/docs/Web/API/Element/clientHeight
-/ko/docs/Web/API/Element.getAttribute	/ko/docs/Web/API/Element/getAttribute
 /ko/docs/Web/API/Element/accessKey	/ko/docs/Web/API/HTMLElement/accessKey
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
-/ko/docs/Web/API/Element/select_event	/ko/docs/Web/API/HTMLInputElement/select_event
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/EventListener	/ko/docs/Web/API/EventTarget/addEventListener
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
@@ -459,7 +452,6 @@
 /ko/docs/Web/API/GlobalEventHandlers/onsubmit	/ko/docs/Web/API/HTMLFormElement/submit_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
-/ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ko/docs/Web/API/Media_Streams_API	/ko/docs/Web/API/Media_Capture_and_Streams_API
 /ko/docs/Web/API/Navigation_timing_API	/ko/docs/Web/API/Performance_API/Navigation_timing
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/getBattery
@@ -522,7 +514,6 @@
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/API/document.importNode	/ko/docs/Web/API/Document/importNode
-/ko/docs/Web/API/element-temp	/ko/docs/Web/API/Element
 /ko/docs/Web/API/window.navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/window.screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -632,7 +623,6 @@
 /ko/docs/Web/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event
 /ko/docs/Web/Events/dragstart	/ko/docs/Web/API/HTMLElement/dragstart_event
-/ko/docs/Web/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
 /ko/docs/Web/Events/popstate	/ko/docs/Web/API/Window/popstate_event
@@ -791,7 +781,6 @@
 /ko/docs/Web/Reference/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/Reference/Events/canplaythrough	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /ko/docs/Web/Reference/Events/click	/ko/docs/Web/API/Element/click_event
-/ko/docs/Web/Reference/Events/keydown	/ko/docs/Web/API/Element/keydown_event
 /ko/docs/Web/Reference/Events/load	/ko/docs/Web/API/Window/load_event
 /ko/docs/Web/Reference/Events/orientationchange	/ko/docs/Web/API/Window/orientationchange_event
 /ko/docs/Web/Reference/Events/popstate	/ko/docs/Web/API/Window/popstate_event

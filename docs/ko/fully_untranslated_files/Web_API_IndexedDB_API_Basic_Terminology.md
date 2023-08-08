@@ -1,8 +1,6 @@
 ---
 title: IndexedDB key characteristics and basic terminology
 slug: Web/API/IndexedDB_API/Basic_Terminology
-l10n:
-  sourceCommit: 4b9377a26bb7094a8f13551cf328865a6457f5ee
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
