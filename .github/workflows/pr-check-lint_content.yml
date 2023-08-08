@@ -69,6 +69,7 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Lint and format markdown files
+        if: ${{ env.DIFF_DOCUMENTS }}
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
