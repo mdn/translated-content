@@ -626,7 +626,6 @@
 /ko/docs/Web/CSS/Media_Queries	/ko/docs/Web/CSS/CSS_media_queries
 /ko/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 /ko/docs/Web/CSS/Media_Queries/Using_media_queries	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
-/ko/docs/Web/CSS/Paged_Media	/ko/docs/conflicting/Web/CSS/CSS_paged_media
 /ko/docs/Web/CSS/Scaling_background_images	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /ko/docs/Web/CSS/Understanding_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ko/docs/Web/CSS/Understanding_z-index/Adding_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
@@ -673,7 +672,6 @@
 /ko/docs/Web/Events/scroll	/ko/docs/Web/API/Document/scroll_event
 /ko/docs/Web/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
-/ko/docs/Web/Guide/AJAX/Community	/ko/docs/conflicting/Web/Guide/AJAX
 /ko/docs/Web/Guide/AJAX/Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ko/docs/Web/Guide/API/Vibration/Vibration	/ko/docs/Web/API/Vibration_API
 /ko/docs/Web/Guide/CSS	/ko/docs/Learn/CSS
@@ -760,7 +758,6 @@
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
-/ko/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ko/docs/conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /ko/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ko/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
