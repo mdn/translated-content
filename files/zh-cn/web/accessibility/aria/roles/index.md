@@ -122,7 +122,7 @@ ARIA 角色共分为 6 类：
 
 ### 5. 窗口角色
 
-窗口角色为同一文档内的主文档窗口定义了子窗口，例如弹出模式对话框：
+窗口角色为同一文档内的主文档窗口定义了子窗口，例如弹出模态框：
 
 - [alertdialog](/zh-CN/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [dialog](/zh-CN/docs/Web/Accessibility/ARIA/Roles/dialog_role)
