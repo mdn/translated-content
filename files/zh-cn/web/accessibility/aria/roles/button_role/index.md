@@ -64,7 +64,7 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 ## 切换按钮
 
-切换按钮通常有两种状态：按下、没有按下，第三个混合的状是指，切换按钮控制了其他的元素，例如其他的切换按钮或者复选框，而不共享同一个值。按钮是否被按下可以由 `button` 角色（如果元素还不是原生的 button 元素）加上 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 表示：
+切换按钮通常有两种状态：按下、没有按下，第三种混合状态可用于控制了其他的元素的切换按钮，例如其他的不共享同一个值的切换按钮或者复选框。还可以使用 `button` 角色（如果元素不是原生的 button 元素）加 [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性来表示元素是否为切换按钮：
 
 - 如果没有 `aria-pressed`，说明这不是一个切换按钮。
 - 如果 `aria-pressed="false"`，说明这个按钮当前没有被按下。
