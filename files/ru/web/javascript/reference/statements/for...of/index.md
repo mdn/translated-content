@@ -159,19 +159,19 @@ for (let o of foo()) {
 Вы можете выполнять обход [генераторов](/ru/docs/Web/JavaScript/Reference/Statements/function*), вот пример:
 
 ```js
-function* fibonacci() { // функция-генератор
-    let [prev, curr] = [0, 1];
-    for (;;) {
-        [prev, curr] = [curr, prev + curr];
-        yield curr;
-    }
+function* fibonacci() {
+  // функция-генератор
+  let [prev, curr] = [0, 1];
+  for (;;) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
 }
 
 for (let n of fibonacci()) {
-    // ограничивает последовательность на 1000
-    if (n > 1000)
-        break;
-    console.log(n);
+  // ограничивает последовательность на 1000
+  if (n > 1000) break;
+  console.log(n);
 }
 ```
 
@@ -180,14 +180,14 @@ for (let n of fibonacci()) {
 Генераторы нельзя использовать дважды, даже если цикл `for...of` завершится аварийно, например, через оператор {{jsxref("Statements/break", "break")}} . При выходе из цикла генератор завершается, и любые попытки получить из него значение обречены.
 
 ```js example-bad
-var gen = (function *(){
+var gen = (function* () {
   yield 1;
   yield 2;
   yield 3;
 })();
 for (let o of gen) {
   console.log(o);
-  break;  // Завешение обхода
+  break; // Завешение обхода
 }
 
 // Генератор нельзя повторно обойти, следующее не имеет смысла!

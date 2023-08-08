@@ -1,6 +1,7 @@
 ---
 title: DOMContentLoaded
-slug: Web/API/Window/DOMContentLoaded_event
+slug: conflicting/Web/API/Document/DOMContentLoaded_event
+original_slug: Web/API/Window/DOMContentLoaded_event
 ---
 
 `Событие DOMContentLoaded` происходит когда весь HTML был полностью загружен и пройден парсером, не дожидаясь окончания загрузки таблиц стилей, изображений и фреймов. Значительно отличающееся от него событие [`load`](/ru/docs/Mozilla_event_reference/load) используется для отслеживания только полностью загруженной страницы. Широко распространённой ошибкой является использование [`load`](/ru/docs/Mozilla_event_reference/load) в ситуации когда `DOMContentLoaded` является более подходящим, будьте внимательны.

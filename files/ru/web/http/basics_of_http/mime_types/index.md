@@ -2,6 +2,7 @@
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 **Медиа тип** (так же известный как **Multipurpose Internet Mail Extensions** или **MIME тип)** является стандартом, который описывает природу и формат документа, файла или набора байтов. Он определён и стандартизирован в спецификации {{RFC(6838)}} .
 
 Организация [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) является ответственной за все официально признанные MIME типы, и вы можете найти самый последний и полный лист MIME типов на их странице [Медиа Типов](https://www.iana.org/assignments/media-types/media-types.xhtml).
@@ -173,10 +174,15 @@ Content-Disposition: form-data; name="myField"
 Следующая форма `<form>`:
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label
+    >Upload file: <input type="file" name="myFile" value="test.txt"
+  /></label>
   <button>Send the file</button>
 </form>
 ```

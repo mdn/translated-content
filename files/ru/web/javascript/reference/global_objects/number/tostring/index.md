@@ -42,15 +42,15 @@ numObj.toString([radix])
 ```js
 var count = 10;
 
-console.log(count.toString());    // Выведет '10'
-console.log((17).toString());     // Выведет '17'
+console.log(count.toString()); // Выведет '10'
+console.log((17).toString()); // Выведет '17'
 
 var x = 6;
 
-console.log(x.toString(2));       // Выведет '110'
-console.log((254).toString(16));  // Выведет 'fe'
+console.log(x.toString(2)); // Выведет '110'
+console.log((254).toString(16)); // Выведет 'fe'
 
-console.log((-10).toString(2));   // Выведет '-1010'
+console.log((-10).toString(2)); // Выведет '-1010'
 console.log((-0xff).toString(2)); // Выведет '-11111111'
 ```
 

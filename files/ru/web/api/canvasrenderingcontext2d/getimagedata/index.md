@@ -52,8 +52,8 @@ This example draws a rectangle, and then uses `getImageData()` to grab a portion
 The object retrieved by `getImageData()` has a width of 200 and a height of 100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken from off the canvas; only 5,000 of them are opaque black (the color of the drawn rectangle).
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 

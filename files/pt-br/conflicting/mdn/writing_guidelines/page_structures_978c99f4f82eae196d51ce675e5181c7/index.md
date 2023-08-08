@@ -1,8 +1,6 @@
 ---
 title: Macros
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-original_slug: MDN/Structures/Macros
+slug: conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
 ---
 
 {{MDNSidebar}}
