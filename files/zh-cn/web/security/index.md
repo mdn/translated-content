@@ -80,7 +80,7 @@ slug: Web/Security
 
 - {{Glossary("Block cipher mode of operation")}}
 - {{Glossary("Certificate authority","认证机构")}}
-- {{Glossary("challenge", "挑战-响应认证")}}
+- {{Glossary("challenge", "挑战—响应认证")}}
 - {{Glossary("Cipher","密码")}}
 - {{Glossary("Cipher suite","密码套件")}}
 - {{Glossary("Ciphertext","密文")}}
