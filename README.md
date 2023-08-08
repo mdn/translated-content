@@ -38,6 +38,9 @@ By participating in and contributing to our projects and discussions, you acknow
 
 ## Get in touch
 
-You can communicate with the MDN Web Docs team and community using the [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+You can communicate with the MDN Web Docs team and community using the [communication channels][main communication].
 
-Additionally, you can communicate with a specific localization tem using their own available [communication channels](/en-US/docs/MDN/Community/Contributing/Translated_content).
+Additionally, you can communicate with a specific localization tem using their own available [communication channels][localization communication].
+
+[main communication]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
+[localization communication]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Translated_content

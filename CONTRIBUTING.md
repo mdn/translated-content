@@ -19,11 +19,11 @@ In addition to the requirements described in the upstream contributing guide, th
 ### Simple changes
 
 If you want to make a small change like fixing a typo, the GitHub UI is the easiest way to get started.
-If you've found a typo on the Simplified Chinese [JavaScript landing page](/zh-CN/docs/Web/JavaScript), for example, you can propose a fix as follows:
+If you've found a typo on the Simplified Chinese [JavaScript landing page][], for example, you can propose a fix as follows:
 
 1. Sign in to [GitHub](https://github.com/)
 2. Navigate to [https://github.com/mdn/translated-content](https://github.com/mdn/translated-content)
-3. Find the source file `files/zh-cn/web/javascript/index.md`
+3. Find the source file [`files/zh-cn/web/javascript/index.md`](files/zh-cn/web/javascript/index.md)
 4. Click the edit (pencil) button
 
 From there, the GitHub UI will walk you through the rest by creating a [fork](https://docs.github.com/get-started/quickstart/fork-a-repo) and a branch to commit your changes to.
@@ -32,7 +32,7 @@ After you have made changes to your branch, the goal is to open a [pull request]
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
 
-If you're not certain of the changes that you want to make, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels)!
+If you're not certain of the changes that you want to make, [get in touch with us][]!
 
 > **Note:** You can click the **View the source on GitHub** or **Edit the page on GitHub** link at the bottom of an MDN page to jump directly to the page source on GitHub.
 
@@ -131,3 +131,5 @@ When contributing to the content you agree to license your contributions accordi
 
 [Contributing guide]: https://github.com/mdn/content/blob/main/CONTRIBUTING.md
 [Translation guidelines]: docs/README.md
+[JavaScript landing page]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
