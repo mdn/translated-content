@@ -26,7 +26,7 @@ l10n:
 - `\d`
   - : いずれかの数字に一致します。`[0-9]` と同等です。
 - `\w`
-  - : 任意の単語文字に一致します。単語文字には文字 (A-Z, a-z)、数字 (0-9)、アンダースコア (_) が含まれます。正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)で [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグが設定されている場合、[大文字小文字の折りたたみ](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)によって上記の文字のいずれかに正規化される他の　Unicode　文字にも一致します。
+  - : 任意の単語文字に一致します。単語文字には文字 (A-Z, a-z)、数字 (0-9)、アンダースコア (_) が含まれます。正規表現が [Unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)で [`i`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) フラグが設定されている場合、[大文字小文字の折りたたみ](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)によって上記の文字のいずれかに正規化される他の Unicode 文字にも一致します。
 - `\s`
   - : 任意の[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)または[改行](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)文字に一致します。
 
