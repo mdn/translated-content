@@ -2,6 +2,7 @@
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라, protocols(표현법들)도 추가되었습니다. 이 protocol 은 일정 규칙만 충족한다면 어떠한 객체에 의해서도 구현될 수 있습니다.
@@ -14,8 +15,8 @@ ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라,
 
 **iterable** 하기 위해서 object는 **@@iterator** 메소드를 구현해야 합니다. 이것은 object (또는 [prototype chain](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 의 오브젝트 중 하나) 가 {{jsxref("Symbol.iterator")}} `key` 의 속성을 가져야 한다는 것을 의미합니다 :
 
-| Property            | Value                                                                                                                                                                      |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property            | Value                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `[Symbol.iterator]` | object를 반환하는, arguments 없는 function. [iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) 을 따른다. |
 
 어떠한 객체가 반복(Iterate)되어야 한다면 이 객체의 `@@iterator` 메소드가 인수없이 호출되고, 반환된 **iterator**는 반복을 통해서 획득할 값들을 얻을 때 사용됩니다.
@@ -74,8 +75,8 @@ ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라,
 var someArray = [1, 5, 7];
 var someArrayEntries = someArray.entries();
 
-someArrayEntries.toString();           // "[object Array Iterator]"
-someArrayEntries === someArrayEntries[Symbol.iterator]();    // true
+someArrayEntries.toString(); // "[object Array Iterator]"
+someArrayEntries === someArrayEntries[Symbol.iterator](); // true
 ```
 
 ## Iteration protocols 사용 예시
@@ -84,34 +85,35 @@ someArrayEntries === someArrayEntries[Symbol.iterator]();    // true
 
 ```js
 var someString = "hi";
-typeof someString[Symbol.iterator];          // "function"
+typeof someString[Symbol.iterator]; // "function"
 ```
 
 `String` 의 기본 iterator 는 string 의 문자를 하나씩 반환합니다.
 
 ```js
 var iterator = someString[Symbol.iterator]();
-iterator + "";                               // "[object String Iterator]"
+iterator + ""; // "[object String Iterator]"
 
-iterator.next();                             // { value: "h", done: false }
-iterator.next();                             // { value: "i", done: false }
-iterator.next();                             // { value: undefined, done: true }
+iterator.next(); // { value: "h", done: false }
+iterator.next(); // { value: "i", done: false }
+iterator.next(); // { value: undefined, done: true }
 ```
 
 [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)와 같은 특정 내장 구조(built-in constructs)들은 실제로는 동일한 iteration protocol을 사용한다:
 
 ```js
-[...someString]                              // ["h", "i"]
+[...someString]; // ["h", "i"]
 ```
 
 사용자만의 `@@iterator`를 특정함으로써 원하는 반복 행위(iteration behavior)를 설정할 수 있다:
 
 ```js
-var someString = new String("hi");          // need to construct a String object explicitly to avoid auto-boxing
+var someString = new String("hi"); // need to construct a String object explicitly to avoid auto-boxing
 
-someString[Symbol.iterator] = function() {
-  return { // this is the iterator object, returning a single element, the string "bye"
-    next: function() {
+someString[Symbol.iterator] = function () {
+  return {
+    // this is the iterator object, returning a single element, the string "bye"
+    next: function () {
       if (this._first) {
         this._first = false;
         return { value: "bye", done: false };
@@ -119,7 +121,7 @@ someString[Symbol.iterator] = function() {
         return { done: true };
       }
     },
-    _first: true
+    _first: true,
   };
 };
 ```
@@ -127,8 +129,8 @@ someString[Symbol.iterator] = function() {
 재설정된 `@@iterator`가 어떻게 내장 구조(built-in constructs)의 반복 행위에 영향을 주는지 참고:
 
 ```js
-[...someString];                              // ["bye"]
-someString + "";                              // "hi"
+[...someString]; // ["bye"]
+someString + ""; // "hi"
 ```
 
 ## Iterable 예시
@@ -144,9 +146,9 @@ someString + "";                              // "hi"
 ```js
 var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...myIterable]; // [1, 2, 3]
 ```
@@ -157,15 +159,30 @@ Iterable을 허용하는 많은 내장 API들이 있다. 예를 들어: {{jsxref
 
 ```js
 var myObj = {};
-new Map([[1,"a"],[2,"b"],[3,"c"]]).get(2);               // "b"
-new WeakMap([[{},"a"],[myObj,"b"],[{},"c"]]).get(myObj); // "b"
-new Set([1, 2, 3]).has(3);                               // true
-new Set("123").has("2");                                 // true
-new WeakSet(function*() {
+
+new Map([
+  [1, "a"],
+  [2, "b"],
+  [3, "c"],
+]).get(2); // "b"
+
+new WeakMap([
+  [{}, "a"],
+  [myObj, "b"],
+  [{}, "c"],
+]).get(myObj); // "b"
+
+new Set([1, 2, 3]).has(3); // true
+
+new Set("123").has("2"); // true
+
+new WeakSet(
+  (function* () {
     yield {};
     yield myObj;
     yield {};
-}()).has(myObj);                                         // true
+  })(),
+).has(myObj); // true
 ```
 
 뿐만 아니라 {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}와 {{jsxref("Array.from", "Array.from()")}} 또한 해당된다.
@@ -175,8 +192,8 @@ new WeakSet(function*() {
 [`for-of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator), `yield*와` [destructuring assignment](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)는 iterable과 함께 사용되는 구문(statements)과 표현(expressions)이다.
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
@@ -184,14 +201,14 @@ for(let value of ["a", "b", "c"]){
 
 [..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
+function* gen() {
   yield* ["a", "b", "c"];
 }
 
 gen().next(); // { value:"a", done:false }
 
 [a, b, c] = new Set(["a", "b", "c"]);
-a // "a"
+a; // "a"
 ```
 
 ### 잘 정의되지 못한 iterables
@@ -209,36 +226,36 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ### 간단한 iterator
 
 ```js
-function makeIterator(array){
-    var nextIndex = 0;
+function makeIterator(array) {
+  var nextIndex = 0;
 
-    return {
-       next: function(){
-           return nextIndex < array.length ?
-               {value: array[nextIndex++], done: false} :
-               {done: true};
-       }
-    };
+  return {
+    next: function () {
+      return nextIndex < array.length
+        ? { value: array[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 }
 
-var it = makeIterator(['yo', 'ya']);
+var it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ### 무한 iterator
 
 ```js
-function idMaker(){
-    var index = 0;
+function idMaker() {
+  var index = 0;
 
-    return {
-       next: function(){
-           return {value: index++, done: false};
-       }
-    };
+  return {
+    next: function () {
+      return { value: index++, done: false };
+    },
+  };
 }
 
 var it = idMaker();
@@ -252,26 +269,23 @@ console.log(it.next().value); // '2'
 ### Generator와 함께 사용된 iterator
 
 ```js
-function* makeSimpleGenerator(array){
-    var nextIndex = 0;
+function* makeSimpleGenerator(array) {
+  var nextIndex = 0;
 
-    while(nextIndex < array.length){
-        yield array[nextIndex++];
-    }
+  while (nextIndex < array.length) {
+    yield array[nextIndex++];
+  }
 }
 
-var gen = makeSimpleGenerator(['yo', 'ya']);
+var gen = makeSimpleGenerator(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
-console.log(gen.next().done);  // true
+console.log(gen.next().done); // true
 
-
-
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -287,11 +301,11 @@ console.log(gen.next().value); // '2'
 [generator object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Generator) 는 iterator 이면서 iterable 입니다.
 
 ```js
-var aGeneratorObject = function*(){
-    yield 1;
-    yield 2;
-    yield 3;
-}();
+var aGeneratorObject = (function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+})();
 typeof aGeneratorObject.next;
 // "function", 이것은 next 메서드를 가지고 있기 때문에 iterator입니다.
 typeof aGeneratorObject[Symbol.iterator];

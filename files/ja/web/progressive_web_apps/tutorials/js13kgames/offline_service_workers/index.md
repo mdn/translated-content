@@ -1,7 +1,6 @@
 ---
 title: サービスワーカーで PWA をオフラインで動作させる
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}

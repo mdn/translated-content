@@ -1,7 +1,6 @@
 ---
 title: InputEvent
 slug: Web/API/InputEvent
-translation_of: Web/API/InputEvent
 ---
 
 {{APIRef("DOM Events")}} {{SeeCompatTable}}
@@ -37,9 +36,7 @@ This interface inherits methods from its parents, {{domxref("UIEvent")}} and {{d
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('InputEvents2','#interface-InputEvent','InputEvent')}} | {{Spec2('InputEvents2')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

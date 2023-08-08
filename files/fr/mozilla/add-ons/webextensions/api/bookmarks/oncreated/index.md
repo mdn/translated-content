@@ -1,7 +1,6 @@
 ---
 title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 ---
 
 {{AddonSidebar()}}

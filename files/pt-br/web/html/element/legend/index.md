@@ -23,12 +23,12 @@ Veja {{HTMLElement("form")}} para exemplos sobre `<legend>`.
 
 ## Especificação
 
-| Specification                                                                                            | Status                           | Comment                                                            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-legend-element', '&lt;legend&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento **legend**                                   |
-| {{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}} | {{Spec2('HTML WHATWG')}} | Sugestão da exibição pradrão dos elementos `fieldset` e `legend`   |
-| {{SpecName('HTML5 W3C', 'forms.html#the-legend-element', '&lt;legend&gt;')}}     | {{Spec2('HTML5 W3C')}}     |                                                                    |
-| {{SpecName('HTML4.01', 'forms.html#h-17.10', '&lt;legend&gt;')}}                     | {{Spec2('HTML4.01')}}     | [(link)](https://www.w3.org/TR/html401/interact/forms.html#h-17.10) |
+| Specification                                                                  | Status                   | Comment                                                             |
+| ------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-legend-element', '&lt;legend&gt;')}} | {{Spec2('HTML WHATWG')}} | Definição do elemento **legend**                                    |
+| {{SpecName('HTML WHATWG', 'rendering.html#the-fieldset-and-legend-elements')}} | {{Spec2('HTML WHATWG')}} | Sugestão da exibição pradrão dos elementos `fieldset` e `legend`    |
+| {{SpecName('HTML5 W3C', 'forms.html#the-legend-element', '&lt;legend&gt;')}}   | {{Spec2('HTML5 W3C')}}   |                                                                     |
+| {{SpecName('HTML4.01', 'forms.html#h-17.10', '&lt;legend&gt;')}}               | {{Spec2('HTML4.01')}}    | [(link)](https://www.w3.org/TR/html401/interact/forms.html#h-17.10) |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: Element.onwheel
 slug: conflicting/Web/API/Element/wheel_event
-original_slug: Web/API/GlobalEventHandlers/onwheel
 ---
 
 {{ ApiRef("DOM") }}

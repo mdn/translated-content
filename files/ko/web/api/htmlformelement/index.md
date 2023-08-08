@@ -18,23 +18,23 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`name`](/ko/docs/Web/HTML/Element/form#name) HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`method`](/ko/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.target")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`target`](/ko/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 - {{domxref("HTMLFormElement.action")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`action`](/ko/docs/Web/HTML/Element/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`accept-charset`](/ko/docs/Web/HTML/Element/form#accept-charset) HTML attribute, representing the character encoding that the server accepts.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.
+  - : A {{jsxref("Boolean")}} reflecting the value of the form's [`novalidate`](/ko/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating whether the form should not be validated.
 
-Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (eg a form with an input named `action` will have its `action` property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).
+Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (eg a form with an input named `action` will have its `action` property return that input instead of the form's [`action`](/ko/docs/Web/HTML/Element/form#action) HTML attribute).
 
 ## Methods
 
@@ -97,7 +97,7 @@ The elements which are included by `HTMLFormElement.elements` and `HTMLFormEleme
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/ko/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}

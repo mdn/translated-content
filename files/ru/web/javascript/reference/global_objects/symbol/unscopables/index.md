@@ -1,13 +1,8 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Property
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 Широко известный символ **`Symbol.unscopables`** используется для указания значения объекта, чьи собственные и наследуемые имена свойств исключаются из привязок связанного объекта оператора [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
@@ -28,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('что-то');
+  keys.push("что-то");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -41,12 +36,12 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {

@@ -1,7 +1,6 @@
 ---
 title: Initiation à la mise en forme du texte
 slug: Learn/CSS/Styling_text/Fundamentals
-translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}

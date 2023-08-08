@@ -1,7 +1,6 @@
 ---
 title: BarcodeDetector.getSupportedFormats()
 slug: Web/API/BarcodeDetector/getSupportedFormats_static
-original_slug: Web/API/BarcodeDetector/getSupportedFormats
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
@@ -32,10 +31,9 @@ var supportedFormats = BarcodeDetector.getSupportedFormats();
 
 ```js
 // 対応している型をチェック
-BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ## 仕様書

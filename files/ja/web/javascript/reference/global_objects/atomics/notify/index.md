@@ -1,7 +1,6 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
 
 {{JSRef}}

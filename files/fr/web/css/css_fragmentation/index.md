@@ -1,7 +1,6 @@
 ---
 title: CSS Fragmentation
 slug: Web/CSS/CSS_fragmentation
-translation_of: Web/CSS/CSS_Fragmentation
 ---
 
 {{cssref}}

@@ -1,7 +1,6 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
-translation_of: Web/API/CSSConditionRule
 ---
 
 {{ APIRef("CSSOM") }}
@@ -33,9 +32,7 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## Specifications
 
-| Specification                                                                                                            | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Conditional', '#the-cssconditionrule-interface', 'CSSConditionRule') }} | {{ Spec2('CSS3 Conditional') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

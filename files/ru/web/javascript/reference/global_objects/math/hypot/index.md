@@ -1,15 +1,6 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -46,13 +37,13 @@ Math.hypot([value1[, value2[, ...]]])
 ### Пример: использование метода `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, то же самое, что и Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, то же самое, что и Math.abs(-3)
 ```
 
 ## Полифил
@@ -60,18 +51,20 @@ Math.hypot(-3);          // 3, то же самое, что и Math.abs(-3)
 Этот метод может эмулироваться следующим образом:
 
 ```js
-Math.hypot = Math.hypot || function() {
-  var y = 0;
-  var length = arguments.length;
+Math.hypot =
+  Math.hypot ||
+  function () {
+    var y = 0;
+    var length = arguments.length;
 
-  for (var i = 0; i < length; i++) {
-    if (arguments[i] === Infinity || arguments[i] === -Infinity) {
-      return Infinity;
+    for (var i = 0; i < length; i++) {
+      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
+        return Infinity;
+      }
+      y += arguments[i] * arguments[i];
     }
-    y += arguments[i] * arguments[i];
-  }
-  return Math.sqrt(y);
-};
+    return Math.sqrt(y);
+  };
 ```
 
 ## Спецификации

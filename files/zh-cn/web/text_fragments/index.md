@@ -81,7 +81,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ### 含有 prefix- 和/或 -suffix 的示例
 
 - [https://example.com#:~:text=asking-,for](https://example.com#:~:text=asking-,for) 滚动到文档中第二次出现“for”文本的地方并高亮它。
-- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=表示-,referrer](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E8%A1%A8%E7%A4%BA-,referrer) 滚动到文档中第一次在文本“表示” 后方出现“referrer”文本的地方并高亮它。这是该文档中“referrer”的第五次出现，如果没有前缀，会高亮第一次匹配。
+- [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=表示-,referrer](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E8%A1%A8%E7%A4%BA-,referrer) 滚动到文档中第一次在文本“表示”后方出现“referrer”文本的地方并高亮它。这是该文档中“referrer”的第五次出现，如果没有前缀，会高亮第一次匹配。
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器,-本身](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8,-%E6%9C%AC%E8%BA%AB) 滚动到文档中第一次在“浏览器”后方出现“本身”文本的地方并高亮它。这是该文档中“浏览器”的第七次出现，如果没有后缀，会高亮第一次匹配。
 - [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a#:~:text=浏览器-,对待下载,自动打开。,-自动打开](/zh-CN/docs/Web/HTML/Element/a#:~:text=%E6%B5%8F%E8%A7%88%E5%99%A8-,%E5%AF%B9%E5%BE%85%E4%B8%8B%E8%BD%BD,%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E3%80%82,-%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80) 滚动到文档中第一次出现“对待下载 ... 自动打开。”文本的地方，该文本以“浏览器”为前驱，“自动打开”为后续。这说明了一个更复杂的例子，前缀/后缀被用来锁定你想要链接的特定文本实例。尝试移除前缀，看看会匹配到什么。
 

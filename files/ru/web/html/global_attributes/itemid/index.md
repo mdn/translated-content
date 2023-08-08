@@ -1,9 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - микроданные
-translation_of: Web/HTML/Global_attributes/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -19,13 +16,17 @@ translation_of: Web/HTML/Global_attributes/itemid
 ### HTML
 
 ```html
-<dl itemscope
-    itemtype="http://vocab.example.net/book"
-    itemid="urn:isbn:0-330-34032-8">
-<dt>Title <dd itemprop="title">The Reality Dysfunction
-<dt>Author <dd itemprop="author">Peter F. Hamilton
-<dt>Publication date
-<dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time> </dl>
+<dl
+  itemscope
+  itemtype="http://vocab.example.net/book"
+  itemid="urn:isbn:0-330-34032-8">
+  <dt>Title</dt>
+  <dd itemprop="title">The Reality Dysfunction</dd>
+  <dt>Author</dt>
+  <dd itemprop="author">Peter F. Hamilton</dd>
+  <dt>Publication date</dt>
+  <dd><time itemprop="pubdate" datetime="1996-01-26">26 January 1996</time></dd>
+</dl>
 ```
 
 ### Структура данных

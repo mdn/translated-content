@@ -1,7 +1,6 @@
 ---
 title: 이벤트 루프
 slug: Web/JavaScript/Event_loop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}
@@ -22,16 +21,16 @@ JavaScript의 런타임 모델은 코드의 실행, 이벤트의 수집과 처�
 
 ```js
 function foo(b) {
-  let a = 10
-  return a + b + 11
+  let a = 10;
+  return a + b + 11;
 }
 
 function bar(x) {
-  let y = 3
-  return foo(x * y)
+  let y = 3;
+  return foo(x * y);
 }
 
-const baz = bar(7) // 42를 baz에 할당
+const baz = bar(7); // 42를 baz에 할당
 ```
 
 위 코드의 실행 순서는 다음과 같습니다.
@@ -60,7 +59,7 @@ JavaScript 런타임은 메시지 큐, 즉 처리할 메시지의 대기열을 �
 **이벤트 루프**는 이 기능을 구현할 때 보통 사용하는 방식에서 그 이름을 얻었으며, 대략 다음과 같은 형태입니다.
 
 ```js
-while(queue.waitForMessage()){
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```
@@ -86,14 +85,14 @@ while(queue.waitForMessage()){
 ```js
 const s = new Date().getSeconds();
 
-setTimeout(function() {
+setTimeout(function () {
   // "2"를 출력, 즉 500밀리초가 지난 후 즉시 실행된 것이 아니라는 것
-  console.log((new Date().getSeconds() - s) + "초 후 실행됨");
-}, 500)
+  console.log(new Date().getSeconds() - s + "초 후 실행됨");
+}, 500);
 
 while (true) {
   if (new Date().getSeconds() - s >= 2) {
-    console.log("좋아요, 2초간 반복했습니다.")
+    console.log("좋아요, 2초간 반복했습니다.");
     break;
   }
 }
@@ -108,22 +107,20 @@ while (true) {
 `setTimeout`에 특정 지연 시간을 지정하더라도, 큐에서 대기 중인 모든 메시지의 처리는 기다려야 합니다.
 
 ```js
-(function() {
-
-  console.log('시작');
+(function () {
+  console.log("시작");
 
   setTimeout(function cb() {
-    console.log('콜백 1: 콜백 메시지');
+    console.log("콜백 1: 콜백 메시지");
   }); // has a default time value of 0
 
-  console.log('평범한 메시지');
+  console.log("평범한 메시지");
 
   setTimeout(function cb1() {
-    console.log('콜백 2: 콜백 메시지');
+    console.log("콜백 2: 콜백 메시지");
   }, 0);
 
-  console.log('종료');
-
+  console.log("종료");
 })();
 
 // "시작"

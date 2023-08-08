@@ -1,7 +1,6 @@
 ---
 title: JavaScript 재입문하기 (JS 튜토리얼)
 slug: Web/JavaScript/Language_overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}
@@ -52,7 +51,7 @@ JavaScript는 유형 및 연산자, 표준 내장 객체 및 메서드가 있는
 설계 명세서에 의하면 JavaScript에서 수는 ["이중정밀도 64비트 형식 IEEE 754 값"](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1)으로 정의됩니다. 이것은 몇가지 흥미로운 결과를 가져옵니다. JavaScript에는 **정수와 같은 것이 존재하지 않으므로** ({{jsxref("BigInt")}} 제외), 조금 조심해야 합니다. 이 예시를 보세요.
 
 ```js
-console.log(3 / 2);             // 1.5, not 1
+console.log(3 / 2); // 1.5, not 1
 console.log(Math.floor(3 / 2)); // 1
 ```
 
@@ -76,15 +75,15 @@ var circumference = 2 * Math.PI * r;
 내장 [`parseInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt) 함수를 사용하여 문자열을 정수로 변환할 수 있습니다. 이는 다음과 같이 옵션으로 주어지는 두번째 매개변수를 밑으로 하여 수행할 수 있습니다.
 
 ```js
-parseInt('123', 10); // 123
-parseInt('010', 10); // 10
+parseInt("123", 10); // 123
+parseInt("010", 10); // 10
 ```
 
 구형 브라우저에서 "0"으로 시작하는 문자열은 8 진수 (기수 8)로 가정되지만, 2013 년 이후에는 그렇지 않습니다. 문자열 형식이 확실하지 않으면 이전 브라우저에서 놀라운 결과를 얻을 수 있습니다.
 
 ```js
-parseInt('010');  //  8
-parseInt('0x10'); // 16
+parseInt("010"); //  8
+parseInt("0x10"); // 16
 ```
 
 이 같은 결과는 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 함수가 0으로 시작되는 문자열을 8진수로, "0x"로 시작하는 문자열은 16진수로 취급하기 때문에 발생합니다. 16진수 표기법이 그대로 유지됩니다. 8진수는 제거되었습니다.
@@ -92,7 +91,7 @@ parseInt('0x10'); // 16
 만약 이진수를 정수로 변환하고 싶다면, 밑을 바꾸기만하면 됩니다.
 
 ```js
-parseInt('11', 2); // 3
+parseInt("11", 2); // 3
 ```
 
 이와 비슷하게, 내장 함수 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}를 사용하여 부동 소수점 숫자를 파싱 할 수 있습니다. {{jsxref("Global_Objects/parseInt", "parseInt()")}}과 달리 `parseFloat()`는 항상 10진수를 사용합니다.
@@ -100,15 +99,15 @@ parseInt('11', 2); // 3
 단항 연산자 `+` 를 사용하여 값을 숫자로 변환 할 수도 있습니다.
 
 ```js
-+ '42';   // 42
-+ '010';  // 10
-+ '0x10'; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 문자열이 수가 아닌 경우 [`NaN`](/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN) ("Not a Number" (수가 아님)을 줄인 약자)로 불리는 특별한 값을 돌려줍니다.
 
 ```js
-parseInt('hello', 10); // NaN
+parseInt("hello", 10); // NaN
 ```
 
 `NaN` 는 독성을 가지고 있습니다. 어떤 수학 연산의 입력값으로써 주어지면 그 결과는 역시 `NaN`가 되기 때문입니다.
@@ -121,38 +120,38 @@ NaN + 5; // NaN
 
 ```js
 Number.isNaN(NaN); // true
-Number.isNaN('hello'); // false
-Number.isNaN('1'); // false
+Number.isNaN("hello"); // false
+Number.isNaN("1"); // false
 Number.isNaN(undefined); // false
 Number.isNaN({}); // false
-Number.isNaN([1]) // false
-Number.isNaN([1,2]) // false
+Number.isNaN([1]); // false
+Number.isNaN([1, 2]); // false
 ```
 
 하지만 [직관적이지 않은 동작을 하는](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#혼란스러운_특별_케이스_행동) 전역 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 함수를 사용하여 `NaN` 인지 검사하지 마세요.
 
 ```js
-isNaN('hello'); // true
-isNaN('1'); // false
+isNaN("hello"); // true
+isNaN("1"); // false
 isNaN(undefined); // true
 isNaN({}); // true
-isNaN([1]) // false
-isNaN([1,2]) // true
+isNaN([1]); // false
+isNaN([1, 2]); // true
 ```
 
 JavaScript는 또 특별한 값 [`Infinity`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity)와 `-Infinity`를 가지고 있습니다.
 
 ```js
- 1 / 0; //  Infinity
+1 / 0; //  Infinity
 -1 / 0; // -Infinity
 ```
 
 내장 함수 {{jsxref("Global_Objects/isFinite", "isFinite()")}}를 사용하여 Infinity, -Infinity 및 NaN 값을 테스트 할 수 있습니다.
 
 ```js
-isFinite(1 / 0);     // false
+isFinite(1 / 0); // false
 isFinite(-Infinity); // false
-isFinite(NaN);       // false
+isFinite(NaN); // false
 ```
 
 > **참고:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 와 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 함수는 숫자가 아닌 문자가 나올때까지 문자열을 파싱하고, 그 지점까지 파싱된 숫자를 반환합니다. 그런데 "+"연산자는 중간에 유효하지 않은 문자가 있으면 그대로 문자열을 `NaN` 으로 그냥 변환해버립니다. console에서 "10.2abc"를 파싱해보면 어떤 점이 다른지 더 쉽게 이해할 수 있습니다.
@@ -166,15 +165,15 @@ JavaScript에서 문자열은 [유니코드 문자들](/ko/docs/Web/JavaScript/G
 문자열의 길이를 알고싶다면, 해당 문자열의 [`length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length) 속성(해당 객체가 소유하고 있는 성질을 나타내는 값)에 접근하면 됩니다.
 
 ```js
-'hello'.length; // 5
+"hello".length; // 5
 ```
 
 우리의 첫 JavaScript 객체입니다! 문자열도 역시 객체로 취급된다고 언급했던적이 있죠? 다음과 같이 [메서드](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_instances)까지 있는 확실한 녀석입니다.
 
 ```js
-'hello'.charAt(0); // "h"
-'hello, world'.replace('hello', 'goodbye'); // "goodbye, world"
-'hello'.toUpperCase(); // "HELLO"
+"hello".charAt(0); // "h"
+"hello, world".replace("hello", "goodbye"); // "goodbye, world"
+"hello".toUpperCase(); // "HELLO"
 ```
 
 ## 이외의 타입들
@@ -189,7 +188,7 @@ JavaScript는 `true` 와 `false` 값(둘은 모두 키워드로 예약되어있�
 이 변환은 `Boolean()` 함수를 써서 명시적으로 이 작업을 수행하실 수 있습니다.
 
 ```js
-Boolean('');  // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -205,7 +204,7 @@ JavaScript에서 새로운 변수는 [`let`](/ko/docs/Web/JavaScript/Reference/S
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 아래는 `let`으로 선언한 변수의 스코프(scope)의 예시입니다.
@@ -231,7 +230,7 @@ Pi = 1; // 상수 변수는 변경 할 수 없기 때문에 애러 발생.
 
 ```js
 var a;
-var name = 'Simon';
+var name = "Simon";
 ```
 
 `var`로 선언한 변수의 스코프 예시입니다.
@@ -264,14 +263,14 @@ x = x + 5;
 [`+` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Addition)는 문자열을 잇기도 합니다.
 
 ```js
-'hello' + ' world'; // "hello world"
+"hello" + " world"; // "hello world"
 ```
 
 문자열에 어떤 수 (또는 다른 값)를 더하면 일단 모두 문자열로 바뀌게 됩니다. 다음 예를 보시면 무슨 얘기인지 아실 수 있을겁니다.
 
 ```js
-'3' + 4 + 5;  // "345"
- 3 + 4 + '5'; // "75"
+"3" + 4 + 5; // "345"
+3 + 4 + "5"; // "75"
 ```
 
 빈 문자열에 어떤 값을 더하는 것은 해당 값을 문자열로 바꾸는 요령입니다.
@@ -279,15 +278,15 @@ x = x + 5;
 JavaScript에서 [비교](/ko/docs/Web/JavaScript/Reference/Operators)는 `<`, `>`, `<=` 와 `>=` 를 통해 가능합니다. 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 상동은 약간 직관성이 떨어지는데 이중 등호 (`==`) 연산자는 서로 다른 타입을 비교할 경우 타입 강제 변환을 수행하기 때문에 다음과 같이 기대하지 않은 결과를 만들어내기도 합니다.
 
 ```js
-123 == '123'; // true
-1 == true;    // true
+123 == "123"; // true
+1 == true; // true
 ```
 
 타입 강제 변환을 하지 않게 하려면, 삼중 등호 연산자 (`===`)를 사용해야 합니다.
 
 ```js
-123 === '123'; // false
-1 === true;    // false
+123 === "123"; // false
+1 === true; // false
 ```
 
 이와 비슷하게 `!=` 와 `!==` 연산자가 있습니다.
@@ -299,15 +298,15 @@ JavaScript는 값을 [이진 비트 연산자](/ko/docs/Web/JavaScript/Reference
 JavaScript는 C 계열의 다른 언어들과 비슷한 제어 구조를 가지고 있습니다. 조건문은 `if` 와 `else`를 지원하는데, 원하는대로 얼마든지 연결시켜서 사용할 수 있습니다.
 
 ```js
-var name = 'kittens';
-if (name === 'puppies') {
-  name += ' woof';
-} else if (name === 'kittens') {
-  name += ' meow';
+var name = "kittens";
+if (name === "puppies") {
+  name += " woof";
+} else if (name === "kittens") {
+  name += " meow";
 } else {
-  name += '!';
+  name += "!";
 }
-name === 'kittens meow';
+name === "kittens meow";
 ```
 
 JavaScript는 `while` 반복문과 `do-while` 반복문도 사용할 수 있습니다. 첫 번째 것은 기본 반복에 유용하게 사용할 수 있고, 두 번째 것은 반복문을 적어도 한번 이상은 실행하고 싶을 때 사용할 수 있습니다.
@@ -362,17 +361,17 @@ var name = cachedName || (cachedName = getName());
 JavaScript는 한줄로 조건문을 쓸 수 있게 해주는 삼항 연산자도 가지고 있습니다.
 
 ```js
-var allowed = (age > 18) ? "yes" : "no";
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 `switch` 문은 숫자나 문자열을 기반으로 다중 분기되는 문장을 작성하는데 사용될 수 있습니다.
 
 ```js
 switch (action) {
-  case 'draw':
+  case "draw":
     drawIt();
     break;
-  case 'eat':
+  case "eat":
     eatIt();
     break;
   default:
@@ -383,25 +382,25 @@ switch (action) {
 `break` 문을 추가하지 않았다면, 다음 단계로 "넘어가서" 실행합니다. 보통은 이런 동작을 원하지 않기에, 실제로 디버깅에 용이하도록 의도한 경우라면 분기에 주석을 붙이는 게 좋습니다.
 
 ```js
-switch(a) {
-    case 1: // fallthrough
-    case 2:
-        eatIt();
-        break;
-    default:
-        doNothing();
+switch (a) {
+  case 1: // fallthrough
+  case 2:
+    eatIt();
+    break;
+  default:
+    doNothing();
 }
 ```
 
 default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은 `===` 연산자로 비교합니다.
 
 ```js
-switch(1 + 3){
-    case 2 + 2:
-        yay();
-        break;
-    default:
-        neverhappens();
+switch (1 + 3) {
+  case 2 + 2:
+    yay();
+    break;
+  default:
+    neverhappens();
 }
 ```
 
@@ -437,12 +436,12 @@ var obj = {};
 
 ```js
 const obj = {
-  name: 'Carrot',
-  _for: 'Max', // 'for'는 예약어이므로, '_for'를 대신 사용합니다.
+  name: "Carrot",
+  _for: "Max", // 'for'는 예약어이므로, '_for'를 대신 사용합니다.
   details: {
-    color: 'orange',
-    size: 12
-  }
+    color: "orange",
+    size: 12,
+  },
 };
 ```
 
@@ -462,7 +461,7 @@ function Person(name, age) {
 }
 
 // 객체를 정의합니다.
-var you = new Person('You', 24);
+var you = new Person("You", 24);
 // "You"라는 이름의 24세인 새로운 사람을 생성 중입니다.
 ```
 
@@ -470,7 +469,7 @@ var you = new Person('You', 24);
 
 ```js
 // 점 표기법(dot notation)
-obj.name = "Simon"
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -481,8 +480,8 @@ var name = obj.name;
 obj["name"] = "Simon";
 var name = obj["name"];
 // key를 정의하기 위해 변수도 쓸수 있습니다.
-var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')
+var user = prompt("what is your key?");
+obj[user] = prompt("what is its value?");
 ```
 
 이들은 의미적으로 역시 같습니다. 두 번째 방법은 속성의 이름을 실행 시간(run-time)에 계산할 수 있는 문자열로 전달합니다. 하지만 이 방법을 사용하면 일부 JavaScript 엔진과 압축기 최적화(minifier optimizations)를 적용할수 없습니다. 하지만 [예약 키워드](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드)로 정의된 이름으로 속성을 설정하거나 얻어낼 수 있습니다.
@@ -509,21 +508,21 @@ var a = new Array();
 a[0] = "dog";
 a[1] = "cat";
 a[2] = "hen";
-a.length // 3
+a.length; // 3
 ```
 
 더 편리한 배열 표기법은 배열 리터럴을 사용하는 것입니다.
 
 ```js
-var a = ['dog', 'cat', 'hen'];
+var a = ["dog", "cat", "hen"];
 a.length; // 3
 ```
 
 `array.length` 는 배열에 들어있는 항목의 개수가 아니라는 점을 주의해주세요. 다음과 같은 경우를 고려해보세요.
 
 ```js
-var a = ['dog', 'cat', 'hen'];
-a[100] = 'fox';
+var a = ["dog", "cat", "hen"];
+a[100] = "fox";
 a.length; // 101
 ```
 
@@ -547,7 +546,7 @@ ES2015는 배열과 같은 이터러블 객체를 위해 좀더 간결한 [`for`
 
 ```js
 for (const currentValue of a) {
-    // currentValue로 무언가를 수행
+  // currentValue로 무언가를 수행
 }
 ```
 
@@ -590,8 +589,8 @@ a.push(item);
 
 ```js
 function add(x, y) {
-    const total = x + y;
-    return total;
+  const total = x + y;
+  return total;
 }
 ```
 
@@ -655,7 +654,7 @@ avg(2, 3, 4, 5); // 3.5
 
 위의 코드에서 매개변수 **args**는 함수로 전달된 모든 값을 가집니다.
 
-나머지 매개변수 연산자는 함수 매개변수 목록의 마지막에만 위치할 수 있으며, 선언 위치 이전을 제외한 이후의 인자만을 저장합니다. 즉, *function avg(**firstValue,** ...args)* 에서 함수에 전달한 첫 번째 값은 **firstValue** 변수에 저장되며, 남은 인자들이 **args**에 저장됩니다. 이건 또 다른 유용한 언어 특성이지만 새로운 문제도 발생합니다. `avg()` 함수는 콤마로 구분된 인자 목록을 받습니다. 하지만, 배열의 평균을 알고싶은 경우라면요? 함수를 다음과 같이 재작성할 수 있습니다.
+나머지 매개변수 연산자는 함수 매개변수 목록의 마지막에만 위치할 수 있으며, 선언 위치 이전을 제외한 이후의 인자만을 저장합니다. 즉, _function avg(**firstValue,** ...args)_ 에서 함수에 전달한 첫 번째 값은 **firstValue** 변수에 저장되며, 남은 인자들이 **args**에 저장됩니다. 이건 또 다른 유용한 언어 특성이지만 새로운 문제도 발생합니다. `avg()` 함수는 콤마로 구분된 인자 목록을 받습니다. 하지만, 배열의 평균을 알고싶은 경우라면요? 함수를 다음과 같이 재작성할 수 있습니다.
 
 ```js
 function avgArray(arr) {
@@ -685,7 +684,7 @@ JavaScript에서는 익명 함수를 만들 수 있습니다. 실제로, 이런 
 
 ```js
 // 괄호 앞에 함수명이 없음을 주목해주세요.
-let avg = function() {
+let avg = function () {
   let sum = 0;
   for (const item of arguments) {
     sum += item;
@@ -699,7 +698,7 @@ let avg = function() {
 JavaScript에서 익명 함수는 인자로 전달하거나 변수에 할당하는 것 외에도 단일 표현식으로 함수 선언과 동시에 호출하는 방법을 제공합니다. 이 방법을 [즉시 실행 함수 표현식(IIFE, Immediately Invoked Function Expressions)](/ko/docs/Glossary/IIFE)이라고 하며, 익명 함수를 포함한 다음과 같은 구문으로 사용할 수 있습니다.
 
 ```js
-(function() {
+(function () {
   // …
 })();
 ```
@@ -712,11 +711,12 @@ JavaScript는 재귀적으로 함수를 호출할 수 있습니다. 이는 브�
 
 ```js
 function countChars(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += countChars(child);
   }
   return count;
@@ -727,11 +727,12 @@ function countChars(elm) {
 
 ```js
 var charsInBody = (function counter(elm) {
-  if (elm.nodeType == 3) { // TEXT_NODE
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
     return elm.nodeValue.length;
   }
   var count = 0;
-  for (var i = 0, child; child = elm.childNodes[i]; i++) {
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
     count += counter(child);
   }
   return count;
@@ -752,14 +753,14 @@ JavaScript 함수는, JavaScript 내의 다른 모든 것들과 마찬가지로,
 function makePerson(first, last) {
   return {
     first: first,
-    last: last
-  }
+    last: last,
+  };
 }
 function personFullName(person) {
-  return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-  return person.last + ', ' + person.first
+  return person.last + ", " + person.first;
 }
 
 var s = makePerson("Simon", "Willison");
@@ -774,16 +775,16 @@ function makePerson(first, last) {
   return {
     first: first,
     last: last,
-    fullName: function() {
-      return this.first + ' ' + this.last;
+    fullName: function () {
+      return this.first + " " + this.last;
     },
-    fullNameReversed: function() {
-      return this.last + ', ' + this.first;
-    }
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
   };
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // "Willison, Simon"
 ```
@@ -793,7 +794,7 @@ s.fullNameReversed(); // "Willison, Simon"
 아래 예시와 같이 `this`가 실수의 잦은 원인이 된다는 것을 명심해주세요.
 
 ```js
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 var fullName = s.fullName;
 fullName(); // undefined undefined
 ```
@@ -806,14 +807,14 @@ fullName(); // undefined undefined
 function Person(first, last) {
   this.first = first;
   this.last = last;
-  this.fullName = function() {
-    return this.first + ' ' + this.last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
   };
-  this.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
   };
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 ```
 
 위의 예시는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new) 키워드를 소개합니다. `new`는 `this`와 깊게 연관된 키워드로, 새로운 빈 객체를 만든 다음 해당 객체가 `this`로 설정된 함수를 호출합니다. `this`가 설정된 이 함수는 값을 반환하지 않고 단지 `this` 객체를 수정한다는 점을 주의해주세요. `new`와 함께 함수를 호출한 곳으로 반환하는 것은 `this` 객체입니다. 이렇게 `new` 키워드와 함께 호출하도록 작성된 함수를 생성자 함수(constructor function)라고 하며, 보통 이런 함수는 첫 문자를 대문자로 작성하여 `new`와 함께 호출해야 한다는 것을 나타냅니다.
@@ -824,10 +825,10 @@ var s = new Person('Simon', 'Willison');
 
 ```js
 function personFullName() {
-  return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-  return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
   this.first = first;
@@ -844,11 +845,11 @@ function Person(first, last) {
   this.first = first;
   this.last = last;
 }
-Person.prototype.fullName = function() {
-  return this.first + ' ' + this.last;
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
 };
-Person.prototype.fullNameReversed = function() {
-  return this.last + ', ' + this.first;
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
 };
 ```
 
@@ -860,7 +861,7 @@ Person.prototype.fullNameReversed = function() {
 var s = new Person("Simon", "Willison");
 s.firstNameCaps(); //TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
+Person.prototype.firstNameCaps = function () {
   return this.first.toUpperCase();
 };
 s.firstNameCaps(); // "SIMON"
@@ -869,11 +870,11 @@ s.firstNameCaps(); // "SIMON"
 흥미롭게도, JavaScript의 내장 객체의 프로토타입에도 뭔가를 더 추가할 수 있습니다. `String` 객체에 문자열 순서를 역순으로 돌려주는 메서드를 추가해 보겠습니다.
 
 ```js
-var s = 'Simon';
+var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function() {
-  var r = '';
+String.prototype.reversed = function () {
+  var r = "";
   for (var i = this.length - 1; i >= 0; i--) {
     r += this[i];
   }
@@ -895,9 +896,9 @@ s.reversed(); // nomiS
 var s = new Person("Simon", "Willison");
 s.toString(); // [object Object]
 
-Person.prototype.toString = function() {
-  return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 
 s.toString(); // "<Person: Simon Willison>"
 ```
@@ -917,13 +918,13 @@ function trivialNew(constructor, ...args) {
 그러므로 이렇게 호출하는 것은
 
 ```js
-var bill = trivialNew(Person, 'William', 'Orange');
+var bill = trivialNew(Person, "William", "Orange");
 ```
 
 아래와 거의 동일합니다.
 
 ```js
-var bill = new Person('William', 'Orange');
+var bill = new Person("William", "Orange");
 ```
 
 `apply()` 와 비슷하게 `this`를 다시 설정할 수 있게 하는, [`call`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)이라는 자매 함수가 있는데, 인자로 단일 배열이 아니라 확장된 인자 목록을 입력받습니다.
@@ -932,7 +933,7 @@ var bill = new Person('William', 'Orange');
 function lastNameCaps() {
   return this.last.toUpperCase();
 }
-var s = new Person('Simon', 'Willison');
+var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
 // 위의 구문은 다음과 같습니다.
 s.lastNameCaps = lastNameCaps;
@@ -965,7 +966,7 @@ function parentFunc() {
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
   };
 }

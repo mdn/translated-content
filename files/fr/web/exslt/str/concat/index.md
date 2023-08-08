@@ -1,7 +1,6 @@
 ---
 title: concat
 slug: Web/EXSLT/str/concat
-translation_of: Web/EXSLT/str/concat
 ---
 
 {{ XsltRef() }}

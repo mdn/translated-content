@@ -35,6 +35,7 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 ### 引数
 
 - `callbackFn`
+
   - : マップのそれぞれの項目に対して実行される関数。以下の引数を取ります。
 
     - `value` {{Optional_Inline}}
@@ -75,7 +76,11 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
 // ログ出力:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"

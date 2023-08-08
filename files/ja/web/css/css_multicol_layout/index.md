@@ -1,7 +1,6 @@
 ---
 title: CSS 段組みレイアウト
 slug: Web/CSS/CSS_multicol_layout
-original_slug: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef("CSS3 Multicol")}}

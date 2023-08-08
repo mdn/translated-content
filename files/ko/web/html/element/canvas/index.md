@@ -36,7 +36,7 @@ slug: Web/HTML/Element/canvas
         >가 아닌 요소. 단, {{HTMLElement("a")}},
         {{HTMLElement("button")}}, 그리고
         {{HTMLElement("input")}} 중
-        {{htmlattrxref("type", "input")}} 특성이
+        <a href="/ko/docs/Web/HTML/Element/input#type"><code>type</code></a> 특성이
         <code>checkbox</code>, <code>radio</code>, <code>button</code>인 요소는
         가능
       </td>

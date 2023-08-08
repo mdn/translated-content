@@ -17,8 +17,8 @@ O código de resposta **`411 Length Required`** de erro de cliente do Protocolo 
 
 ## Specifications
 
-| Specification                                                    | Title                                                                     |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Specification                                     | Title                                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "411 Length Required" , "6.5.10")}} | Protocolo de transferência de Hipertexto (HTTP/1.1): Semântica e Conteúdo |
 
 ## See also

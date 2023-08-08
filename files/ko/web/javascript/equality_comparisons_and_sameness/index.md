@@ -106,8 +106,8 @@ The following example demonstrates loose equality comparisons involving the numb
 ```js
 const num = 0;
 const big = 0n;
-const str = '0';
-const obj = new String('0');
+const str = "0";
+const obj = new String("0");
 
 console.log(num == str); // true
 console.log(big == num); // true
@@ -126,11 +126,14 @@ console.log(str == obj); // true
 
 ```js
 // 불변(immutable) NEGATIVE_ZERO 속성을 Number 생성자에 추가.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
@@ -153,7 +156,7 @@ We can see that with double and triple equals, with the exception of doing a typ
 
 ES2015 이전에, 이중 등호 및 삼중 등호에 대해 하나가 다른 하나의 "확장"판이라고 (말)했을 지 모릅니다. 예를 들어, 누군가는 이중 등호는 삼중 등호의 확장판이라고 합니다, 전자는 후자가 하는 모든 것을 하지만 그 피연산자에 형 변환을 하기에. 가령, `6 == "6"`. (대신에, 이중 등호는 기준선이고 삼중 등호는 향상판이라고 하는 이도 있습니다, 두 피연산자가 같은 형이길 요구하고 그래서 별도 제약을 추가하기에. 어느 게 더 이해하기 좋은 모델인지는 당신이 상태(things)를 보기 위해 선택한 방법에 달렸습니다.)
 
-However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we *could* say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
+However, this way of thinking about the built-in sameness operators is not a model that can be stretched to allow a place for ES2015's {{jsxref("Object.is")}} on this "spectrum". {{jsxref("Object.is")}} isn't simply "looser" than double equals or "stricter" than triple equals, nor does it fit somewhere in between (i.e., being both stricter than double equals, but looser than triple equals). We can see from the sameness comparisons table below that this is due to the way that {{jsxref("Object.is")}} handles {{jsxref("NaN")}}. Notice that if `Object.is(NaN, NaN)`evaluated to `false`, we _could_ say that it fits on the loose/strict spectrum as an even stricter form of triple equals, one that distinguishes between `-0` and `+0`. The {{jsxref("NaN")}} handling means this is untrue, however. Unfortunately, {{jsxref("Object.is")}} simply has to be thought of in terms of its specific characteristics, rather than its looseness or strictness with regard to the equality operators.
 
 | x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
 | ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
@@ -191,13 +194,15 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
 여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
 
 - {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
+
   - : Consider the following example:
 
   ```js
-    let stoppingForce = obj.mass * -obj.velocity;
+  let stoppingForce = obj.mass * -obj.velocity;
   ```
 
   If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
@@ -212,8 +217,8 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
 
 ```js
-var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-var b2f = x => new Float64Array(x.buffer)[0];
+var f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
+var b2f = (x) => new Float64Array(x.buffer)[0];
 var n = f2b(NaN);
 n[0] = 1;
 var nan2 = b2f(n);

@@ -1,7 +1,6 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
 
 {{AddonSidebar}}

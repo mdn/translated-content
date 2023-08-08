@@ -1,7 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-translation_of: Web/HTML/Element/input/date
 ---
 
 {{HTMLSidebar}}

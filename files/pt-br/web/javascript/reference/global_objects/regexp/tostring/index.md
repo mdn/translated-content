@@ -12,7 +12,7 @@ O método **`toString()`** retorna uma string que representa uma expressão regu
 ## Sintaxe
 
 ```js
-toString()
+toString();
 ```
 
 ### Valor retornado
@@ -33,10 +33,10 @@ representação da expressão regular como string.
 O exemplo a seguir exibe o valor em string de um objeto {{jsxref("RegExp")}}
 
 ```js
-const myExp = new RegExp('a+b+c');
-console.log(myExp.toString());  // logs '/a+b+c/'
-const foo = new RegExp('bar', 'g');
-console.log(foo.toString());    // logs '/bar/g'
+const myExp = new RegExp("a+b+c");
+console.log(myExp.toString()); // logs '/a+b+c/'
+const foo = new RegExp("bar", "g");
+console.log(foo.toString()); // logs '/bar/g'
 ```
 
 ### Expressões regulares vazias e escape
@@ -46,8 +46,8 @@ terminadores de linha como "\n" são utilizados
 
 ```js
 new RegExp().toString(); // "/(?:)/"
-new RegExp('\n').toString() === '/\n/';  // verdadeiro, antes do ES5
-new RegExp('\n').toString() === '/\\n/'; // verdadeiro, introduzindo o ES5
+new RegExp("\n").toString() === "/\n/"; // verdadeiro, antes do ES5
+new RegExp("\n").toString() === "/\\n/"; // verdadeiro, introduzindo o ES5
 ```
 
 ## Especificações

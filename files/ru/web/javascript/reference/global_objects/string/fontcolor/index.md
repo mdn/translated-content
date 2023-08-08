@@ -1,16 +1,8 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Методы оборачивания в HTML
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
+
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
 ## Сводка
@@ -41,25 +33,28 @@ str.fontcolor(color)
 В следующем примере метод `fontcolor()` используется для изменения цвета строки путём генерирования строки с HTML-тегом `<font>`.
 
 ```js
-var worldString = 'Привет, мир';
+var worldString = "Привет, мир";
 
-console.log(worldString.fontcolor('red') +  ' на этой строке красный');
+console.log(worldString.fontcolor("red") + " на этой строке красный");
 // '<font color="red">Привет, мир</font> на этой строке красный'
 
-console.log(worldString.fontcolor('FF00') + ' на этой строке красный в шестнадцатеричной форме');
+console.log(
+  worldString.fontcolor("FF00") +
+    " на этой строке красный в шестнадцатеричной форме",
+);
 // '<font color="FF00">Привет, мир</font> на этой строке красный в шестнадцатеричной форме'
 ```
 
 При помощи объекта {{domxref("HTMLElement.style", "element.style")}} вы можете получить значение атрибута `style` элемента и управлять им более обобщённым способом, например:
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                     | Статус               | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Спецификация                                                                         | Статус           | Комментарии                                                                                                                                                 |
+| ------------------------------------------------------------------------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('ES6', '#sec-string.prototype.fontcolor', 'String.prototype.fontcolor')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
 
 ## Совместимость с браузерами

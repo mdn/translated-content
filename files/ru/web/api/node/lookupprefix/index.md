@@ -1,8 +1,8 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
-translation_of: Web/API/Node/lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.lookupPrefix()`** возвращает {{domxref("DOMString")}} содержащий префикс для данного пространства имён URI, если он присутствует, и `null` если нет. Когда возможно присутствие нескольких префиксов, результат зависит от реализации.

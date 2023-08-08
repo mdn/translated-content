@@ -1,7 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-original_slug: Web/HTML/Elemento/textarea
 ---
 
 ## Resumen

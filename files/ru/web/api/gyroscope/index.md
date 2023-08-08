@@ -1,8 +1,8 @@
 ---
 title: Gyroscope
 slug: Web/API/Gyroscope
-translation_of: Web/API/Gyroscope
 ---
+
 {{APIRef("Gyroscope")}}
 
 **`Gyroscope`** интерфейс [Sensor API](/docs/Web/API/Sensor_APIs) даёт возможность считать позицию устройства по всем трём осям.
@@ -30,9 +30,9 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 Гироскоп обычно использует {{domxref('Sensor.onreading')}} событие для вызова колбэк-функции. В примере ниже функция вызывается 6 раз в секунду.
 
 ```js
-let gyroscope = new Gyroscope({frequency: 60});
+let gyroscope = new Gyroscope({ frequency: 60 });
 
-gyroscope.addEventListener('reading', e => {
+gyroscope.addEventListener("reading", (e) => {
   console.log("Angular velocity along the X-axis " + gyroscope.x);
   console.log("Angular velocity along the Y-axis " + gyroscope.y);
   console.log("Angular velocity along the Z-axis " + gyroscope.z);

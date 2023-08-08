@@ -1,7 +1,6 @@
 ---
 title: CSS シェイプの概要
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
-original_slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 
 {{CSSRef}}

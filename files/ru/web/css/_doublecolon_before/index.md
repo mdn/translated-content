@@ -1,13 +1,6 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
-tags:
-  - CSS
-  - Layout
-  - Reference
-  - Web
-  - Псевдоэлементы
-translation_of: Web/CSS/::before
 ---
 
 {{CSSRef}}
@@ -73,12 +66,12 @@ q::after {
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::before {
   content: "Посмотрите на этот оранжевый прямоугольник.";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -118,11 +111,11 @@ li {
 }
 
 li.done {
-  background: #CCFF99;
+  background: #ccff99;
 }
 
 li.done::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #009933;
   border-style: solid;
@@ -139,12 +132,16 @@ li.done::before {
 #### JavaScript
 
 ```js
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if( ev.target.tagName === 'LI') {
-     ev.target.classList.toggle('done');
-  }
-}, false);
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("done");
+    }
+  },
+  false,
+);
 ```
 
 Вот живой пример приведённого выше кода. Заметим, что здесь не используются иконки, а зелёная галочка на самом деле является псевдоэлементом `::before`, стилизованном с помощью CSS. Попробуйте выполнить некоторые вещи списка.
@@ -161,32 +158,38 @@ list.addEventListener('click', function(ev) {
 
 ```html
 <div class="example">
-<span id="floatme">"Плавающий перед" будет добавлен слева от текста
-и не позволит переполнению этой строки обтекать его снизу.
-Аналогично, "Плавающий после" будет добавлен справа от текста
-и не позволит переполнению этой строки обтекать его снизу.</span>
+  <span id="floatme"
+    >"Плавающий перед" будет добавлен слева от текста и не позволит переполнению
+    этой строки обтекать его снизу. Аналогично, "Плавающий после" будет добавлен
+    справа от текста и не позволит переполнению этой строки обтекать его
+    снизу.</span
+  >
 </div>
 ```
 
 #### CSS
 
 ```css
-#floatme { float: left; width: 50%; }
+#floatme {
+  float: left;
+  width: 50%;
+}
 
 /* Чтобы получить пустой столбец достаточно указать шестнадцатеричный код неразрывного пробела \a0 в качестве содержимого (используйте \0000a0, если за этим пробелом следуют другие символы) */
 .example::before {
   content: "Плавающий перед";
   float: left;
-  width: 25%
+  width: 25%;
 }
 .example::after {
   content: "Плавающий после";
   float: right;
-  width:25%
+  width: 25%;
 }
 
 /* Для стилизации */
-.example::before, .example::after {
+.example::before,
+.example::after {
   background: yellow;
   color: red;
 }

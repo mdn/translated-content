@@ -1,7 +1,6 @@
 ---
 title: HTMLLinkElement.as
 slug: Web/API/HTMLLinkElement/as
-translation_of: Web/API/HTMLLinkElement/as
 ---
 
 {{APIRef("HTML DOM")}}

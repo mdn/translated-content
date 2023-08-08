@@ -27,11 +27,11 @@ Pela especificação ECMAScript 5, `Infinity` é somente leitura (implementado n
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário                                        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1ª Edição.                                                                                                | Padrão                   | Definição inicial. Implementado no JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                                 | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                                          | Status             | Comentário                                        |
+| -------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 1ª Edição.                                                                  | Padrão             | Definição inicial. Implementado no JavaScript 1.3 |
+| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                     | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade
 

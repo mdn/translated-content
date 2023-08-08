@@ -1,7 +1,6 @@
 ---
 title: Commencez votre projet Web
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-translation_of: Learn/Common_questions/Thinking_before_coding
 ---
 
 Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.

@@ -1,7 +1,6 @@
 ---
 title: 可选链运算符（?.）
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 
 {{JSSidebar("Operators")}}

@@ -1,7 +1,6 @@
 ---
 title: omnibox.onInputEntered
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
-translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 ---
 
 {{AddonSidebar()}}

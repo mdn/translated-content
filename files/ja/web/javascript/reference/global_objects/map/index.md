@@ -193,8 +193,8 @@ Map オブジェクトに対してオブジェクトプロパティを設定す�
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -202,23 +202,23 @@ console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 しかし、このようにプロパティを設定すると、 Map データ構造を使用しません。一般的なオブジェクトの機能を使用します。 'bla' の値はクエリーを行うための Map に格納されません。データにその他の操作を行うと失敗します。
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 Map にデータを格納する正しい方法は、 `set(key, value)` メソッドを使用する方法です。
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
 
 ## コンストラクター
@@ -295,12 +295,12 @@ console.log(myMap.get(function() {})); // undefined, keyFunc !== function () {} 
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -311,8 +311,8 @@ myMap.get(otherNaN);
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -354,12 +354,15 @@ myMap.forEach((value, key) => {
 ### Array オブジェクトとの関係
 
 ```js
-const kvArray = [['キー1', '値1'], ['キー2', '値2']];
+const kvArray = [
+  ["キー1", "値1"],
+  ["キー2", "値2"],
+];
 
 // 通常の Map コンストラクターを使って、キーと値の 2 次元配列をマップに変換する
 const myMap = new Map(kvArray);
 
-console.log(myMap.get('キー1')); // "値1" を返す
+console.log(myMap.get("キー1")); // "値1" を返す
 
 // 展開演算子を使って、マップをキー・値の 2 次元配列に変換する
 console.log(Array.from(myMap)); // kvArray とまったく同じ Array を表示する
@@ -376,9 +379,7 @@ console.log(Array.from(myMap.keys())); // ["key1", "key2"] が出力される
 `Array` と同様に、 `Map` は複製することができます。
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -392,14 +393,14 @@ console.log(original === clone); // false (useful for shallow comparison)
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // 2 つのマップを混合します。重複するキーは後勝ちになります。
@@ -415,18 +416,18 @@ Map は Array と混合することもできます。
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // マップと配列を混合します。重複するキーは後勝ちになります。
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

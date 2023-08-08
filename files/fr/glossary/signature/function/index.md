@@ -1,7 +1,6 @@
 ---
 title: Signature (fonctions)
 slug: Glossary/Signature/Function
-translation_of: Glossary/Signature/Function
 ---
 
 Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.

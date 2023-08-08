@@ -1,5 +1,5 @@
 ---
-title: 'Window: paste イベント'
+title: "Window: paste イベント"
 slug: Web/API/Window/paste_event
 ---
 

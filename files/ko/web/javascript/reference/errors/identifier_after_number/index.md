@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: identifier starts immediately after numeric literal'
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
 
@@ -43,7 +43,7 @@ alert(1.foo);
 숫자가 뒤에 오도록 변수 이름을 변경해야 합니다.
 
 ```js example-good
-var life1 = 'foo';
+var life1 = "foo";
 var foo = life1;
 ```
 

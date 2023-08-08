@@ -1,13 +1,6 @@
 ---
 title: 'TypeError: переменная "x" переопределяет аргумент'
 slug: orphaned/Web/JavaScript/Reference/Errors/Var_hides_argument
-tags:
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Var_hides_argument
-original_slug: Web/JavaScript/Reference/Errors/Var_hides_argument
 ---
 
 {{jsSidebar("Errors")}}

@@ -1,7 +1,6 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-original_slug: Aprender/JavaScript/Howto
 ---
 
 {{LearnSidebar}}

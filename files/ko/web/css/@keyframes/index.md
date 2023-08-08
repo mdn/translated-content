@@ -1,7 +1,8 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 ---
+
 {{CSSRef}}
 
 **`@keyframes`** [@규칙](/ko/docs/Web/CSS/At-rule)은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다. 이 룰은 브라우저가 자동으로 애니메이션을 처리하는 것 보다 더 세밀하게 중간 동작들을 제어할 수 있습니다.
@@ -42,10 +43,21 @@ slug: Web/CSS/@keyframes
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -59,10 +71,19 @@ slug: Web/CSS/@keyframes
 
 ```css
 @keyframes identifier {
-  0% { top: 0; }
-  50% { top: 30px; left: 20px; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
 }
 ```
 
@@ -76,16 +97,26 @@ slug: Web/CSS/@keyframes
 
 ```css
 @keyframes important1 {
-   from { margin-top: 50px; }
-   50%   { margin-top: 150px !important; } /* ignored */
-   to     { margin-top: 100px; }
+  from {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 150px !important;
+  } /* ignored */
+  to {
+    margin-top: 100px;
+  }
 }
 
 @keyframes important2 {
-  from { margin-top: 50px;
-                 margin-bottom: 100px; }
-   to     { margin-top: 150px !important; /* ignored */
-                 margin-bottom: 50px; }
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* ignored */
+    margin-bottom: 50px;
+  }
 }
 ```
 

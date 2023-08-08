@@ -1,7 +1,6 @@
 ---
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/floor
 ---
 
 {{JSRef("Objetos_globales", "Math")}}
@@ -33,7 +32,7 @@ La siguiente función devuelve el valor entero redondeado más bajo de la variab
 
 ```js
 function getFloor(x) {
-   return Math.floor(x);
+  return Math.floor(x);
 }
 ```
 
@@ -43,8 +42,7 @@ Si se pasa `45.95` a `getFloor`, éste devuelve `45`; si se le pasa `-45.95`, de
 
 ```js
 // Cierre
-(function(){
-
+(function () {
   /**
    * Ajuste decimal de un número.
    *
@@ -55,42 +53,41 @@ Si se pasa `45.95` a `getFloor`, éste devuelve `45`; si se le pasa `-45.95`, de
    */
   function decimalAdjust(type, value, exp) {
     // Si el exp es indefinido o cero...
-    if (typeof exp === 'undefined' || +exp === 0) {
+    if (typeof exp === "undefined" || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
     // Si el valor no es un número o el exp no es un entero...
-    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
       return NaN;
     }
     // Cambio
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    value = value.toString().split("e");
+    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
     // Volver a cambiar
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    value = value.toString().split("e");
+    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
   }
 
   // Redondeo decimal
   if (!Math.round10) {
-    Math.round10 = function(value, exp) {
-      return decimalAdjust('round', value, exp);
+    Math.round10 = function (value, exp) {
+      return decimalAdjust("round", value, exp);
     };
   }
   // Redondeo hacia abajo
   if (!Math.floor10) {
-    Math.floor10 = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
+    Math.floor10 = function (value, exp) {
+      return decimalAdjust("floor", value, exp);
     };
   }
   // Redondeo hacia arriba
   if (!Math.ceil10) {
-    Math.ceil10 = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
+    Math.ceil10 = function (value, exp) {
+      return decimalAdjust("ceil", value, exp);
     };
   }
-
 })();
 
 // Redondeo

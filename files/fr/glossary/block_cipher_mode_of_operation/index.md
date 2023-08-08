@@ -1,7 +1,6 @@
 ---
 title: Block cipher mode of operation
 slug: Glossary/Block_cipher_mode_of_operation
-translation_of: Glossary/Block_cipher_mode_of_operation
 ---
 
 Un mode de fonctionnement de chiffrement par bloc, généralement appelé simplement "mode" dans le contexte, spécifie comment un chiffrement par bloc doit être utilisé pour chiffrer ou déchiffrer les messages qui sont plus longs que la taille du bloc.

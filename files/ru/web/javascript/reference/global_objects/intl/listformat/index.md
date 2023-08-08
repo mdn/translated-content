@@ -1,14 +1,8 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-tags:
-  - Experimental
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
+
 {{JSRef}}
 
 Объект **`Intl.ListFormat`** представляет собой конструктор объектов, включающих языка-зависимое форматирование списков.
@@ -55,15 +49,25 @@ new Intl.ListFormat([locales[, options]])
 Пример ниже показывает как создать объект `ListFormat` с поддержкой форматирования на русском языке и получить отформатированную строку с помощью метода `format`.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
- console.log(new Intl.ListFormat('ru-RU', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("ru-RU", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus и Car
 
- console.log(new Intl.ListFormat('ru-RU', { style: 'short', type: 'disjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("ru-RU", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // > Motorcycle, Bus или Car
 
- console.log(new Intl.ListFormat('ru-RU', { style: 'narrow', type: 'unit' }).format(list));
+console.log(
+  new Intl.ListFormat("ru-RU", { style: "narrow", type: "unit" }).format(list),
+);
 // > Motorcycle Bus Car
 ```
 
@@ -72,8 +76,13 @@ const list = ['Motorcycle', 'Bus', 'Car'];
 Пример ниже показывает как получить отформатированные части объекта `ListFormat` с помощью метода `formatToParts`.
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Motorcycle", "Bus", "Car"];
+console.log(
+  new Intl.ListFormat("en-GB", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list),
+);
 
 // > [ { "type": "element", "value": "Motorcycle" }, { "type": "literal", "value": ", " }, { "type": "element", "value": "Bus" }, { "type": "literal", "value": ", and " }, { "type": "element", "value": "Car" } ];
 ```

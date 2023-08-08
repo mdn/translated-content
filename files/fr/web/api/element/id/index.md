@@ -1,7 +1,6 @@
 ---
 title: element.id
 slug: Web/API/Element/id
-translation_of: Web/API/Element/id
 ---
 
 {{ApiRef("DOM")}}

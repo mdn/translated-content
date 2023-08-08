@@ -1,7 +1,6 @@
 ---
 title: "Prueba tus habilidades: Texto básico HTML"
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics
-original_slug: Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Texto_básico_HTML
 ---
 
 {{learnsidebar}}

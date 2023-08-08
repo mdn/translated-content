@@ -1,7 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-translation_of: Web/CSS/background
 ---
 
 {{CSSRef("CSS Background")}}

@@ -1,7 +1,6 @@
 ---
 title: stylesheet
 slug: Web/XSLT/Element/stylesheet
-translation_of: Web/XSLT/Element/stylesheet
 ---
 
 {{ XsltRef() }}

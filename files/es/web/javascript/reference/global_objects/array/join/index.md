@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/join
 ---
 
 {{JSRef}}
@@ -38,11 +37,11 @@ Las conversiones de cadena de todos los elementos de la matriz se unen en una ca
 El siguiente ejemplo crea un arreglo `a` con tres elementos para luego unir el arreglo cuatro veces: usando el separador predeterminado, luego una coma y un espacio, luego un signo de suma, y finalmente una cadena vacío.
 
 ```js
-var a = ['Viento', 'Lluvia', 'Fuego'];
-var miVar1 = a.join();      // asigna 'Viento,Lluvia,Fuego' a miVar1
-var miVar2 = a.join(', ');  // asigna 'Viento, Lluvia, Fuego' a miVar2
-var miVar3 = a.join(' + '); // asigna 'Viento + Lluvia + Fuego' a miVar3
-var miVar4 = a.join('');    // asigna 'VientoLluviaFuego' a miVar4
+var a = ["Viento", "Lluvia", "Fuego"];
+var miVar1 = a.join(); // asigna 'Viento,Lluvia,Fuego' a miVar1
+var miVar2 = a.join(", "); // asigna 'Viento, Lluvia, Fuego' a miVar2
+var miVar3 = a.join(" + "); // asigna 'Viento + Lluvia + Fuego' a miVar3
+var miVar4 = a.join(""); // asigna 'VientoLluviaFuego' a miVar4
 ```
 
 ### Unirse a un objeto tipo matriz
@@ -54,7 +53,7 @@ function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s); // '1,a,true'
 }
-f(1, 'a', true);
+f(1, "a", true);
 //resultado esperado: "1,a,true"
 ```
 

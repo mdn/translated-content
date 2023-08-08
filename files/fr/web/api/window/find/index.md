@@ -1,7 +1,6 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-translation_of: Web/API/Window/find
 ---
 
 {{ApiRef}}{{Non-standard_Header}}

@@ -1,7 +1,6 @@
 ---
 title: dragenter
 slug: Web/API/HTMLElement/dragenter_event
-translation_of: Web/API/Document/dragenter_event
 ---
 
 {{APIRef}}
