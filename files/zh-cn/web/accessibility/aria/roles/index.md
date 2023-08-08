@@ -28,7 +28,7 @@ ARIA 角色共分为 6 类：
 - [presentation](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [none](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role)
 - [note](/zh-CN/docs/Web/Accessibility/ARIA/Roles/note_role)
 
-对于大多数结构角色，都有可用且受支持的等价的语义 HTML。请避免使用：
+对于大多数结构角色，都有可用、受支持且等价的语义化 HTML 元素。请避免使用：
 
 - [application](/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [article](/zh-CN/docs/Web/Accessibility/ARIA/Roles/article_role)（请使用 {{HTMLElement('article')}}）
