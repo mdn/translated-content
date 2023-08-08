@@ -11,7 +11,7 @@ ARIA 角色为内容提供了语义，允许屏幕阅读器和其他工具与对
 
 例如，`<ul role="tabpanel">` 会被屏幕阅读器读作“标签面板（tab panel）”。但是，如果标签页面没有嵌套的标签，带有标签页面角色的元素实际上并不是个标签面板，从而对无障碍造成负面影响。
 
-各角色的页面中都包含了相关的 [ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)，以及带有相应页面的各个属性。
+各角色的页面中都包含了相关的 [ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)，而每个属性都有一个专门的页面。
 
 ## ARIA 角色类型
 
