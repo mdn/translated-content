@@ -246,7 +246,7 @@ function toggleButton(element) {
   // 将 aria-pressed 设为相反的状态
   element.setAttribute("aria-pressed", !pressed);
 
-  // 切换 audio 文件的 play 状态
+  // 切换音频文件的播放状态
   if (pressed) {
     audio.pause();
   } else {
