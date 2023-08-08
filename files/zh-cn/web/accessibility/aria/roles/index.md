@@ -47,7 +47,7 @@ ARIA 角色共分为 6 类：
 - [row](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role)（请使用 {{HTMLElement('tr')}} 和 {{HTMLElement('table')}}）
 - [rowgroup](/zh-CN/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)（请使用 {{HTMLElement('thead')}}、{{HTMLElement('tfoot')}} 和 {{HTMLElement('tbody')}}）
 - [rowheader](/zh-CN/docs/Web/Accessibility/ARIA/Roles/rowheader_role)（请使用 `{{HTMLElement('th','&lt;th scope="row">')}}`）
-- [separator](/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role)（请使用 {{HTMLElement('hr')}} 如果它没有焦点）
+- [separator](/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role)（如果不可以聚焦，请使用 {{HTMLElement('hr')}}）
 - [table](/zh-CN/docs/Web/Accessibility/ARIA/Roles/table_role)（请使用 {{HTMLElement('table')}}）
 - [term](/zh-CN/docs/Web/Accessibility/ARIA/Roles/term_role)（请使用 {{HTMLElement('dfn')}}）
 
