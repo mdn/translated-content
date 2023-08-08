@@ -290,11 +290,11 @@ function intersectionCallback(entries) {
 El navegador computa el rectángulo de intersección final de la siguiente forma; la API hace todo esto por usted, pero puede ser útil entender estos pasos para comprender mejor cuando ocurrirán exactamente las intersecciones.
 
 1. El rectangulo delimitador del elemento target (el rectangulo mas pequeño, que encierra por completo los componentes que conforman el elemento) es obtenido llamando {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} en el target. Este es el rectangulo de intersección mas grande que puede ser. Los pasos restantes removeran las porciones que no intersectan.
-2. Comenzando desde el bloque padre inmediato del target y avanzando hacia afuera, se aplica el recorte (si lo hay) de cada bloque contenedor al rectángulo de intersección. El recorte de un bloque se determina en función de la intersección entre los dos bloques y el modo de recorte (si lo hay) es especificado por la propiedad {{cssxref("overflow")}}. Establecer `overflow` en cualquier valor que no sea `visible` provoca que ocurra el recorte.
-3. Si uno de los elementos contenedores es el root de un contexto de navegación anidado (como el documento contenido en un {{HTMLElement("iframe")}}), el rectángulo de intersección se recorta al área visible del contenedor de este contexto y la recursión hacia arriba continua a través de los contenedores con el bloque contenedor del contexto. Así que, si se alcanza el nivel superior de un `<iframe>`, el rectángulo de intersección se recorta al viewport del marco(`<iframe>`), y luego el elemento padre del marco es el siguiente bloque al que se hace recursión hacia la raíz de la intersección.
-4. Cuando la recursión hacia arriba alcanza al root de la intersección, el rectángulo resultante se mapea al espacio de coordenadas de la raíz de la intersección.
-5. A continuación, el rectángulo resultante se actualiza mediante su intersección con el [rectángulo de intersección del root](/es/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle).
-6. Finalmente, este rectángulo se mapea al espacio de coordenadas del {{domxref("document")}} del target.
+2. Comenzando desde el bloque padre inmediato del objetivo y avanzando hacia afuera, se aplica el recorte (si lo hay) de cada bloque contenedor al rectángulo de intersección. El recorte de un bloque se determina en función de la intersección entre los dos bloques y el modo de recorte (si lo hay) es especificado por la propiedad {{cssxref("overflow")}}. Establecer `overflow` en cualquier valor que no sea `visible` provoca que ocurra el recorte.
+3. Si uno de los elementos contenedores es la raíz de un contexto de navegación anidado (como el documento contenido en un {{HTMLElement("iframe")}}), el rectángulo de intersección se recorta al área visible del contenedor de este contexto y continua hacia arriba a través de los contenedores con el bloque contenedor del contexto. Así que, si se alcanza el nivel superior de un `<iframe>`, el rectángulo de intersección se recorta al `viewport` del marco (`<iframe>`), y luego el elemento padre del marco es el siguiente bloque que se recorre hacia la raíz de la intersección.
+4. Cuando el recorrido hacia arriba alcanza la raíz de la intersección, el rectángulo resultante se mapea al espacio de coordenadas de la raíz de la intersección.
+5. A continuación, el rectángulo resultante se actualiza mediante su intersección con el [rectángulo de intersección de la raíz](/es/docs/Web/API/Intersection_Observer_API#root-intersection-rectangle).
+6. Finalmente, este rectángulo se mapea al espacio de coordenadas del {{domxref("document")}} objetivo.
 
 ### Callbacks de cambio de intersección
 
@@ -302,7 +302,7 @@ Cuando la cantidad del elemento target que es visible dentro del elemento root c
 
 Cada entrada en la lista de umbrales es un objeto {{domxref("IntersectionObserverEntry")}} que describe un umbral que ha sido cruzado; esto es, cada entrada describe qué porción de un elemento dado se está intersectando con el elemento root, sea que el elemento se considere en intersección o no, y la dirección en la cual ocurrió la transición.
 
-El siguiente fragmento de código muestra un callback que mantiene un contador de cuántas veces los elementos hacen la transición desde no intersectar con la raíz hasta intersectar al menos en un 75%. Para un valor umbral de 0.0 (predeterminado), el callback es llamado [aproximadamente](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) cuando hay una transición en el valor booleano de `IntersectionObserverEntry.isIntersecting`. El fragmento de código primero verifica que la transición sea positiva y luego determina si `IntersectionObserverEntry.intersectionRatio` es superior al 75%; en ese caso, incrementa el contador.
+El siguiente fragmento de código muestra una devolución de llamada que mantiene un contador de cuántas veces los elementos hacen la transición desde no intersectar con la raíz hasta intersectar al menos en un 75%. Para un valor umbral de 0.0 (predeterminado), la devolución de llamada es lanzada [aproximadamente](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) cuando hay una transición en el valor booleano de `IntersectionObserverEntry.isIntersecting`. El fragmento de código primero verifica que la transición sea positiva y luego determina si `IntersectionObserverEntry.intersectionRatio` es superior al 75%; en ese caso, incrementa el contador.
 
 ```
 intersectionCallback(entries) => {
@@ -322,10 +322,10 @@ intersectionCallback(entries) => {
 
 - {{domxref("IntersectionObserver")}}
 
-  - : La interfaz principal para la API Intersection Observer. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar asincrónicamente los cambios en la intersección entre uno o más elementos de destino (target) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el viewport se denomina **root**.
+  - : La interfaz principal para la API de Observador de Intersecciones. Proporciona métodos para crear y gestionar un observador que puede vigilar cualquier número de elementos de destino para la misma configuración de intersección. Cada observador puede observar de manera asíncrona los cambios en la intersección entre uno o más elementos de destino (_target_) y un elemento ancestro compartido o con el {{Glossary('viewport')}} de su {{domxref("Document")}} de nivel superior. El ancestro o el _viewport_ se denomina **root**.
 
 - {{domxref("IntersectionObserverEntry")}}
-  - : Describe la intersección entre el elemento de destino y su contenedor raíz en un momento específico de transición. Los objetos de este tipo solo se pueden obtener de dos maneras: como entrada para el callback de tu `IntersectionObserver`, o llamando a {{domxref("IntersectionObserver.takeRecords()")}}.
+  - : Describe la intersección entre el elemento de destino y su contenedor raíz en un momento específico de transición. Los objetos de este tipo solo se pueden obtener de dos maneras: como entrada para al devolución de llamada de tu `IntersectionObserver`, o llamando a {{domxref("IntersectionObserver.takeRecords()")}}.
 
 ## Un ejemplo sencillo
 
@@ -411,9 +411,9 @@ Las constantes y variables que establecimos aquí son:
 - `prevRatio`
   - : Esta variable se utilizará para registrar cuál era la proporción de visibilidad la última vez que se cruzó un umbral; esto nos permitirá determinar si el elemento de destino se está volviendo más o menos visible.
 - `increasingColor`
-  - : Un `string` que define un color que aplicaremos al elemento de destino cuando la proporción de visibilidad esté aumentando. La palabra "ratio" en este `string` será reemplazada por la proporción de visibilidad actual del target, de modo que el elemento no solo cambie de color, sino que también se vuelva cada vez más opaco a medida que se oculta menos.
+  - : Una cadena que define un color que aplicaremos al elemento de destino cuando la proporción de visibilidad esté aumentando. La palabra "ratio" en esta cadena será reemplazada por la proporción de visibilidad actual del objetivo, de modo que el elemento no solo cambie de color, sino que también se vuelva cada vez más opaco a medida que se oculta menos.
 - `decreasingColor`
-  - : De manera similar, esta es un `string` que define un color que aplicaremos cuando la proporción de visibilidad esté disminuyendo.
+  - : De manera similar, esta es una cadena que define un color que aplicaremos cuando la proporción de visibilidad esté disminuyendo.
 
 Llamamos a {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} para comenzar a escuchar el evento [`load`](/es/docs/Web/Reference/Events/load); una vez que la página haya terminado de cargarse, obtenemos una referencia al elemento con el ID `"box"` utilizando {{domxref("Document.querySelector", "querySelector()")}}, luego llamamos al método `createObserver()` que crearemos en un momento para manejar la creación e instalación del observador de intersección.
 
@@ -436,15 +436,15 @@ function createObserver() {
 }
 ```
 
-Comenzamos configurando un objeto `options` que contiene los ajustes para el observador. Queremos observar los cambios en la visibilidad del elemento de destino en relación con la viewport del documento, por lo que `root` es `null`. No necesitamos ningún margen, así que el desplazamiento del margen, `rootMargin`, se especifica como "0px". Esto hace que el observador vigile los cambios en la intersección entre los límites del elemento de destino y los del viewport, sin espacio adicional (o sustracción) alguno.
+Comenzamos configurando un objeto `options` que contiene los ajustes para el observador. Queremos observar los cambios en la visibilidad del elemento de destino en relación con el _viewport_ del documento, por lo que `root` es `null`. No necesitamos ningún margen, así que el desplazamiento del margen, `rootMargin`, se especifica como "0px". Esto hace que el observador vigile los cambios en la intersección entre los límites del elemento de destino y los del _viewport_, sin espacio adicional (o sustracción) alguno.
 
 La lista de puntos de umbral de proporción de visibilidad, `threshold`, se construye mediante la función `buildThresholdList()`. En este ejemplo, la lista de umbrales se construye programáticamente, ya que hay varios de ellos y se pretende que el número sea ajustable.
 
 Una vez que `options` está listo, creamos el nuevo observador llamando al constructor {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}, especificando una función que se llamará cuando la intersección cruce uno de nuestros umbrales, `handleIntersect()`, y nuestro conjunto de opciones. Luego, llamamos a {{domxref("IntersectionObserver.observe", "observe()")}} en el observador devuelto, pasándole el elemento de destino deseado (target).
 
-Podríamos optar por vigilar los cambios de intersección de visibilidad con respecto al viewport en varios elementos llamando a `observer.observe()` para cada uno de esos elementos, si así lo deseamos.
+Podríamos optar por vigilar los cambios de intersección de visibilidad con respecto al _viewport_ en varios elementos llamando a `observer.observe()` para cada uno de esos elementos, si así lo deseamos.
 
-#### Construyendo el array de proporciones de umbral
+#### Construyendo el arreglo de proporciones de umbral
 
 La función `buildThresholdList()`, que construye la lista de umbrales, se ve así:
 
@@ -462,7 +462,7 @@ function buildThresholdList() {
 }
 ```
 
-Esto construye el array de umbrales, cada uno de los cuales es una proporción entre 0.0 y 1.0, al agregar el valor `i/numSteps` al array `thresholds` para cada entero `i` entre 1 y `numSteps`. También agrega el valor 0 para incluirlo. El resultado, dado el valor predeterminado de `numSteps` (20), es la siguiente lista de umbrales:
+Esto construye el arreglo de umbrales, cada uno de los cuales es una proporción entre 0.0 y 1.0, al agregar el valor `i/numSteps` al arreglo `thresholds` para cada entero `i` entre 1 y `numSteps`. También agrega el valor 0 para incluirlo. El resultado, dado el valor predeterminado de `numSteps` (20), es la siguiente lista de umbrales:
 
 | #   | Ratio | #   | Ratio |
 | --- | ----- | --- | ----- |
@@ -477,7 +477,7 @@ Esto construye el array de umbrales, cada uno de los cuales es una proporción e
 | 9   | 0.45  | 19  | 0.95  |
 | 10  | 0.5   | 20  | 1.0   |
 
-Podríamos, por supuesto, codificar manualmente el array de umbrales en nuestro código, y a menudo es lo que terminaremos haciendo. Pero este ejemplo deja espacio para agregar controles de configuración para ajustar la granularidad, por ejemplo.
+Podríamos, por supuesto, codificar manualmente el arreglo de umbrales en nuestro código, y a menudo es lo que terminaremos haciendo. Pero este ejemplo deja espacio para agregar controles de configuración para ajustar la granularidad, por ejemplo.
 
 #### Manejando los cambios de intersección
 
@@ -503,9 +503,9 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-Para cada {{domxref("IntersectionObserverEntry")}} en la lista `entries`, verificamos si la {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} del registro está aumentando; si es así, establecemos el {{cssxref("background-color")}} del elemento de destino con la `string` `increasingColor` (recuerda, es `"rgba(40, 40, 190, ratio)"`), reemplazando la palabra "ratio" con el valor de `intersectionRatio` del registro. El resultado: no solo cambia el color, sino que también cambia la transparencia del elemento de destino; a medida que la proporción de intersección disminuye, el valor alfa del color de fondo también disminuye, lo que resulta en un elemento más transparente.
+Para cada {{domxref("IntersectionObserverEntry")}} en la lista `entries`, verificamos si {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} del registro está aumentando; si es así, establecemos {{cssxref("background-color")}} del elemento de destino con la cadena `increasingColor` (recuerda, es `"rgba(40, 40, 190, ratio)"`), reemplazando la palabra "ratio" con el valor de `intersectionRatio` del registro. El resultado: no solo cambia el color, sino que también cambia la transparencia del elemento de destino; a medida que la proporción de intersección disminuye, el valor alfa del color de fondo también disminuye, lo que resulta en un elemento más transparente.
 
-De manera similar, si la `intersectionRatio` está aumentando, usamos la cadena `decreasingColor` y reemplazamos la palabra "ratio" en esa `string` con el valor de `intersectionRatio` antes de establecer el `background-color` del elemento de destino.
+De manera similar, si `intersectionRatio` está aumentando, usamos la cadena `decreasingColor` y reemplazamos la palabra "ratio" en esa cadena con el valor de `intersectionRatio` antes de establecer `background-color` del elemento de destino.
 
 Finalmente, para rastrear si la proporción de intersección está aumentando o disminuyendo, recordamos la proporción actual en la variable `prevRatio`.
 
