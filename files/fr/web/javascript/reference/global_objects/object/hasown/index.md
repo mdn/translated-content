@@ -1,7 +1,6 @@
 ---
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 ---
 
 {{JSRef}}{{SeeCompatTable}}

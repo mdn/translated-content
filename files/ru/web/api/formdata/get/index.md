@@ -1,7 +1,6 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
-translation_of: Web/API/FormData/get
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -36,14 +35,14 @@ var formData = new FormData();
 Если мы добавим два значения `username,` используя {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Борис');
-formData.append('username', 'Кирилл');
+formData.append("username", "Борис");
+formData.append("username", "Кирилл");
 ```
 
 То метод `get()` вернёт только первое добавленное значение `username`:
 
 ```js
-formData.get('username'); // Вернёт "Борис"
+formData.get("username"); // Вернёт "Борис"
 ```
 
 ## Спецификация

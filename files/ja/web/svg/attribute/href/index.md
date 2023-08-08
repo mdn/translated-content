@@ -12,14 +12,18 @@ The **`href`** attribute defines a link to a resource as a reference [URL](/ja/d
 Fifteen elements are using this attribute: {{SVGElement("a")}}, {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("feImage")}}, {{SVGElement("image")}}, {{SVGElement("linearGradient")}}, {{SVGElement("mpath")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("set")}}, {{SVGElement("textPath")}}, and {{SVGElement("use")}}
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+  <a href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
 </svg>
 ```
 
@@ -159,14 +163,16 @@ For {{SVGElement("image")}}, `href` defines a URL referring to the image to rend
 #### Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <image href="fxlogo.png" x="0" y="0" height="100" width="100"/>
+  <image href="fxlogo.png" x="0" y="0" height="100" width="100" />
 </svg>
 ```
 

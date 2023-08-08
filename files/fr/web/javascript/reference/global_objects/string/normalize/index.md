@@ -1,7 +1,6 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
 
 {{JSRef}}

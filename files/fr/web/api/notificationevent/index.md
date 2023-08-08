@@ -1,7 +1,6 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
-translation_of: Web/API/NotificationEvent
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}

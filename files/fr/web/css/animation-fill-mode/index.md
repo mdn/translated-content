@@ -1,7 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-translation_of: Web/CSS/animation-fill-mode
 ---
 
 {{CSSRef}}

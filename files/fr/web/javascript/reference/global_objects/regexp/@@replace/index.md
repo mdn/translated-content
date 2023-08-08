@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 ---
 
 {{JSRef}}

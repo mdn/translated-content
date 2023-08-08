@@ -35,23 +35,23 @@ Ao especificar o tamanho como um inteiro, você define o tamanho da fonte do tex
 O exemplo a seguir usa métodos do objeto global String para alterar o tamanho de uma string:
 
 ```js
-var worldString = 'Olá, mundo';
+var worldString = "Olá, mundo";
 
-console.log(worldString.small());     // <small>Olá, mundo</small>
-console.log(worldString.big());       // <big>Olá, mundo</big>
+console.log(worldString.small()); // <small>Olá, mundo</small>
+console.log(worldString.big()); // <big>Olá, mundo</big>
 console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
 ```
 
 Com o objeto [`element.style`](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode obter o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
-document.getElementById('#oIdDoElemento').style.fontSize = '0.7em';
+document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";
 ```
 
 ## Especificações
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Specification                                                                          |
+| -------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}} |
 
 ## Compatibilidade com navegadores

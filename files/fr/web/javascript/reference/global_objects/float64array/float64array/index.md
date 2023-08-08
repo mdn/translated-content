@@ -1,7 +1,6 @@
 ---
 title: Constructeur Float64Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 ---
 
 {{JSRef}}

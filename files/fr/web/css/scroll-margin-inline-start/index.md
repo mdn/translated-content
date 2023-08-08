@@ -1,7 +1,6 @@
 ---
 title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
-translation_of: Web/CSS/scroll-margin-inline-start
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Utilisation du rôle alert
 slug: Web/Accessibility/ARIA/Roles/alert_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 
 ### Description

@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-translation_of: Web/API/XMLHttpRequest/send
 ---
 
 {{APIRef('XMLHttpRequest')}}

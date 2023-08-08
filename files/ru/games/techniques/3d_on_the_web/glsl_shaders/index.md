@@ -1,13 +1,6 @@
 ---
 title: GLSL Шейдеры
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - GLSL
-  - OpenGL
-  - Shader
-  - three.js
-  - Шейдер
-translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 ---
 
 {{GamesSidebar}}

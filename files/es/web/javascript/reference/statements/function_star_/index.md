@@ -18,9 +18,11 @@ function* nombre([param[, param[, ... param]]]) {
 ```
 
 - `nombre`
+
   - : El nombre de la función.
 
 - `param`
+
   - : El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.
 
 - `instrucciones`
@@ -37,10 +39,9 @@ La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se dev
 ### Ejemplo simple
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(index < 3)
-    yield index++;
+  while (index < 3) yield index++;
 }
 
 var gen = idMaker();
@@ -61,7 +62,7 @@ function* anotherGenerator(i) {
   yield i + 3;
 }
 
-function* generator(i){
+function* generator(i) {
   yield i;
   yield* anotherGenerator(i);
   yield i + 10;

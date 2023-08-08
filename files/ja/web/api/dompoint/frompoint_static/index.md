@@ -1,7 +1,6 @@
 ---
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint_static
-original_slug: Web/API/DOMPoint/fromPoint
 ---
 
 {{APIRef("DOM")}}

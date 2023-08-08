@@ -1,7 +1,6 @@
 ---
 title: "<data> : l'élément de données"
 slug: Web/HTML/Element/data
-translation_of: Web/HTML/Element/data
 ---
 
 {{HTMLSidebar}}

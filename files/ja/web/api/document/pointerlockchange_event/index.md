@@ -1,7 +1,6 @@
 ---
 title: "Document: pointerlockchange イベント"
 slug: Web/API/Document/pointerlockchange_event
-original_slug: Web/API/Element/pointerlockchange_event
 l10n:
   sourceCommit: d4619276d67ca1ee02bd964d884ec52c2aa2ad4b
 ---

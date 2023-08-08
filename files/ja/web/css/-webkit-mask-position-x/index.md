@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
 ---
 
@@ -22,7 +22,10 @@ slug: Web/CSS/-webkit-mask-position-x
 -webkit-mask-position-x: -1cm;
 
 /* 複数の値 */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* グローバル値 */
 -webkit-mask-position-x: inherit;

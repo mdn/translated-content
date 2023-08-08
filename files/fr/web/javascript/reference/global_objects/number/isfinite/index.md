@@ -1,7 +1,6 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
 
 {{JSRef}}

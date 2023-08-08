@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json\"",
-    "fix:md": "markdownlint-cli2-fix \"**/*.md\" && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
@@ -36,7 +36,7 @@
     "markdownlint-cli2": "0.8.1",
     "markdownlint-rule-search-replace": "1.1.0",
     "ora": "^7.0.1",
-    "prettier": "3.0.0",
+    "prettier": "3.0.1",
     "yargs": "^17.7.2"
   }
 }

@@ -1,13 +1,6 @@
 ---
 title: Как начать разрабатывать свой сайт?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-tags:
-  - Включает активное обучение
-  - Для начинающих
-  - Необходимое Схематично
-  - Планирование
-translation_of: Learn/Common_questions/Thinking_before_coding
-original_slug: Learn/Common_questions/Thinking_before_coding
 ---
 
 Эта статья покрывает первый и крайне важный шаг в создании любого проекта: определить, что вы хотите получить.

@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.__lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ---
 
 {{JSRef}}{{deprecated_header}}

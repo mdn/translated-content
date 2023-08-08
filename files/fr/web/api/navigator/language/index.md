@@ -1,7 +1,6 @@
 ---
 title: Navigator.language
 slug: Web/API/Navigator/language
-translation_of: Web/API/Navigator/language
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,5 +1,5 @@
 ---
-title: 'Window: hashchange イベント'
+title: "Window: hashchange イベント"
 slug: Web/API/Window/hashchange_event
 ---
 

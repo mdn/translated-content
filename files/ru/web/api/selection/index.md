@@ -1,14 +1,6 @@
 ---
 title: Selection
 slug: Web/API/Selection
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - Selection
-browser-compat: api.Selection
-translation_of: Web/API/Selection
 ---
 
 {{ApiRef("Selection API")}}
@@ -86,7 +78,7 @@ A selection object represents the {{DOMxRef("Range")}}s that the user has select
 
 ```js
 const selObj = window.getSelection();
-const range  = selObj.getRangeAt(0);
+const range = selObj.getRangeAt(0);
 ```
 
 - `selObj` is a Selection object

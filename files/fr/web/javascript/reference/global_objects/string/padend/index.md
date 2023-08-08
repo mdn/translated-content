@@ -1,7 +1,6 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
 
 {{JSRef}}

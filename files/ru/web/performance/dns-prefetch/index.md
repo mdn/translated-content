@@ -1,11 +1,6 @@
 ---
 title: Использование dns-prefetch
 slug: Web/Performance/dns-prefetch
-tags:
-  - Web Performance
-  - dns-prefetch
-  - preconnect
-translation_of: Web/Performance/dns-prefetch
 ---
 
 **`DNS-prefetch`** (предзагрузка DNS) - это попытка определить IP адрес по имени домена до того, как ресурс с этого домена будет фактически запрошен. Это может быть загрузчик файлов, который используется позже или ссылка, по которой, вероятно, перейдёт пользователь.

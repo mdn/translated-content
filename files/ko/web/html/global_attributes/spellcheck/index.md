@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/spellcheck
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 가능한 값은 다음과 같습니다.
 
 - `true`는 가능한 경우 요소의 맞춤법을 검사해야 함을 나타냅니다.

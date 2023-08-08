@@ -1,9 +1,8 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: Web/API/HTMLElement/input_event
-translation_of: Web/API/GlobalEventHandlers/oninput
-original_slug: Web/API/GlobalEventHandlers/oninput
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Обработчик события [`input`](/ru/docs/Web/Events/input) в окне. Событие ввода возникает при изменении значения элемента {{HTMLElement ("input")}}.
@@ -14,23 +13,23 @@ original_slug: Web/API/GlobalEventHandlers/oninput
 
 ```html
 <script>
-
-window.addEventListener('input', function (e) {
- console.log("input event detected! coming from this element:", e.target);
-}, false);
-
+  window.addEventListener(
+    "input",
+    function (e) {
+      console.log("input event detected! coming from this element:", e.target);
+    },
+    false,
+  );
 </script>
 
-<input placeholder="type here and see console.">
+<input placeholder="type here and see console." />
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "forms.html#event-input-input", "oninput")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

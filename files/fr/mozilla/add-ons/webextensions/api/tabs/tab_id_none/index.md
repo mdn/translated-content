@@ -1,7 +1,6 @@
 ---
 title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 ---
 
 {{AddonSidebar()}}

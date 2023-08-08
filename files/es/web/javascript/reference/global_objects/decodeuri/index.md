@@ -1,7 +1,6 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-original_slug: Web/JavaScript/Referencia/Objetos_globales/decodeURI
 ---
 
 {{jsSidebar("Objects")}}

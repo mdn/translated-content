@@ -1,7 +1,6 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
-translation_of: Web/API/Document/createTextNode
 ---
 
 {{APIRef("DOM")}}

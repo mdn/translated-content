@@ -1,7 +1,6 @@
 ---
 title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}

@@ -1,7 +1,6 @@
 ---
 title: Les bases des CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
 {{LearnSidebar}}

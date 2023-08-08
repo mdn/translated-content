@@ -2,7 +2,6 @@
 title: "Element: gotpointercapture イベント"
 short-title: gotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-original_slug: Web/API/Document/gotpointercapture_event
 l10n:
   sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---

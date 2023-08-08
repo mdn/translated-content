@@ -1,7 +1,6 @@
 ---
 title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
 
 {{AddonSidebar()}}

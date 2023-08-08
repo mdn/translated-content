@@ -1,7 +1,6 @@
 ---
 title: Prática de construção de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
-original_slug: Aprender/JavaScript/Objetos/Object_building_practice
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}

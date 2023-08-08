@@ -1,7 +1,6 @@
 ---
 title: Document.getAnimations()
 slug: Web/API/Document/getAnimations
-original_slug: Web/API/DocumentOrShadowRoot/getAnimations
 ---
 
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}

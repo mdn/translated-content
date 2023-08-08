@@ -1,7 +1,6 @@
 ---
 title: Ajax 시작하기
 slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
-original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 > **경고:** **중요**: 해당 문서는 2018/07/31 (원문 : 2018/04/23) 에 마지막으로 번역되었습니다. 원문의 변경이 잦아 내용이 다를 수 있으니 참고하십시오.

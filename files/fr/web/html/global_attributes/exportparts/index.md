@@ -1,7 +1,6 @@
 ---
 title: exportparts
 slug: Web/HTML/Global_attributes/exportparts
-translation_of: Web/HTML/Global_attributes/exportparts
 ---
 
 {{HTMLSidebar("Global_attributes")}}

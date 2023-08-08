@@ -1,7 +1,6 @@
 ---
 title: Synchrone
 slug: Glossary/Synchronous
-translation_of: Glossary/Synchronous
 ---
 
 _Synchrone_ fait référence à une communication en temps réel pendant laquelle chaque partie reçoit les messages (et, si nécessaire, les traite et y répond) dès que possible après qu'ils aient été envoyés.

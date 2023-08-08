@@ -1,7 +1,6 @@
 ---
 title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
 
 {{AddonSidebar()}}

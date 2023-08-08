@@ -1,7 +1,6 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-translation_of: Web/API/HTMLTableCellElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -45,12 +44,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Specifications
 
-| Specification                                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "tabular-data.html#htmltablecellelement", "HTMLTableCellElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}.                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('HTML5 W3C', "tabular-data.html#htmltablecellelement", "HTMLTableCellElement")}}     | {{Spec2('HTML5 W3C')}}     | The following properties have been obsoleted: `align`, `axis`, `bgColor`, `height`, `width`, `ch`, `chOff`, `noWrap`, and `vAlign`. The `headers` property is now read-only and contains a {{domxref("DOMSettableTokenList")}} rather than a mere {{domxref("DOMString")}}. The `colspan` and `rowspan` properties are now `unsigned long`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-82915075', 'HTMLTableCellElement')}}                         | {{Spec2('DOM2 HTML')}}     | The `cellIndex` property is now read-only.                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-82915075', 'HTMLTableCellElement')}}                     | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                              |
+{{Specifications}}
 
 ## Browser compatibility
 

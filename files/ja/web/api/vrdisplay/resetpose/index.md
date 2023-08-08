@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.resetPose()
 slug: Web/API/VRDisplay/resetPose
-original_slug: Web/API/VRDevice/resetPose
 ---
 
 {{APIRef("WebVR API")}}{{deprecated_header}}

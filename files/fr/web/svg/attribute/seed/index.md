@@ -1,7 +1,6 @@
 ---
 title: seed
 slug: Web/SVG/Attribute/seed
-translation_of: Web/SVG/Attribute/seed
 ---
 
 « [Page de référence des attributs SVG](/fr/docs/Web/SVG/Attribute)

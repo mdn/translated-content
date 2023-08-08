@@ -1,7 +1,6 @@
 ---
 title: Boucles et itérations
 slug: Web/JavaScript/Guide/Loops_and_iteration
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}

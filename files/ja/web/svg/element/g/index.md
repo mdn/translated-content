@@ -10,7 +10,11 @@ slug: Web/SVG/Element/g
 `<g>` 要素に適用された変形はその全ての子要素に対して実行されます。適用された属性は子要素に継承されます。加えて、多数のオブジェクトを グループかしておくと後に {{SVGElement("use")}} 要素で参照することができます。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

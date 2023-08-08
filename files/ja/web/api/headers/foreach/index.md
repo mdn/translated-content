@@ -1,7 +1,6 @@
 ---
 title: Headers.forEach()
 slug: Web/API/Headers/forEach
-page-type: web-api-instance-method
 l10n:
   sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---

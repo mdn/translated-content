@@ -1,7 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-original_slug: Web/API/Window/Window.localStorage
 ---
 
 {{APIRef()}}

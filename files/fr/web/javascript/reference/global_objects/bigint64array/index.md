@@ -1,7 +1,6 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Requisição Preflight
 slug: Glossary/Preflight_request
-original_slug: Glossario/Preflight_request
 ---
 
 Uma requisição _preflight_ de [CORS](/pt-BR/docs/Glossary/CORS) é uma requisição de {{Glossary ("CORS")}} que verifica se o protocolo {{Glossary ("CORS")}} é entendido e se o servidor aguarda o método e cabeçalhos('headers') especificados.
