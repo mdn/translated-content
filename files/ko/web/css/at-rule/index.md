@@ -9,7 +9,7 @@ slug: Web/CSS/At-rule
 
 ```css
 /* General structure */
-@IDENTIFIER (RULE);
+@identifier (RULE);
 
 /* Example: tells browser to use UTF-8 character set */
 @charset "utf-8";
