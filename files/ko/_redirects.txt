@@ -865,7 +865,6 @@
 /ko/docs/WebSockets/Writing_WebSocket_client_applications	/ko/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ko/docs/XHTML	/ko/docs/Glossary/XHTML
 /ko/docs/XMLHttpRequest	/ko/docs/Web/API/XMLHttpRequest
-/ko/docs/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ko/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 /ko/docs/XMLHttpRequest/setRequestHeader	/ko/docs/Web/API/XMLHttpRequest/setRequestHeader
 /ko/docs/XML_Introduction	/ko/docs/Web/XML/XML_introduction
 /ko/docs/XPath	/ko/docs/Web/XPath
