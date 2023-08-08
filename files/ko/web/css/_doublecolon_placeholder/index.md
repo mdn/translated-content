@@ -49,7 +49,11 @@ With this implementation, the hint content is available even if information is e
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -74,7 +78,7 @@ Placeholders are not a replacement for the {{htmlelement("label")}} element. Wit
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -96,7 +100,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Type something here...">
+<input placeholder="Type something here..." />
 ```
 
 #### CSS

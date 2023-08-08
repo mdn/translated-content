@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c07e10915553888f8c33d4284e2ced107cd9c55c
 ---
 
-{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Mobile")}}
+{{QuickLinksWithSubPages("/ja/docs/Web/Guide/Mobile")}}
 
 ## モバイルフレンドリーとは？
 

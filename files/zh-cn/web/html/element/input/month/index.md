@@ -97,13 +97,13 @@ monthControl.value = "2001-06";
 
 使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
 
-该值必须晚于或等于 `min` 属性所指定的年份-月份对。
+该值必须晚于或等于 `min` 属性所指定的年份—月份对。
 
 ### min
 
 使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
 
-该值必须早于或等于 `max` 属性所指定的年份-月份对。
+该值必须早于或等于 `max` 属性所指定的年份—月份对。
 
 ### readonly
 

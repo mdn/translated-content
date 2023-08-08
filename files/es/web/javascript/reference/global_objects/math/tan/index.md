@@ -44,7 +44,7 @@ Ya que la función `Math.tan()` acepta radianes, pero es más fácil trabajar co
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  var rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```

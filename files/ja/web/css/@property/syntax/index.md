@@ -12,13 +12,13 @@ slug: Web/CSS/@property/syntax
 以下のものはすべて、有効な構文の文字列です。
 
 ```css
-syntax: '<color>'; /* 色を受け入れる */
+syntax: "<color>"; /* 色を受け入れる */
 
-syntax: '<length> | <percentage>'; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた calc 式は受け入れない */
+syntax: "<length> | <percentage>"; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた calc 式は受け入れない */
 
-syntax: 'small | medium | large'; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
+syntax: "small | medium | large"; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
 
-syntax: '*'; /* 常に有効なトークン */
+syntax: "*"; /* 常に有効なトークン */
 ```
 
 ## 値
@@ -70,7 +70,7 @@ syntax: '*'; /* 常に有効なトークン */
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
@@ -80,10 +80,10 @@ syntax: '*'; /* 常に有効なトークン */
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 

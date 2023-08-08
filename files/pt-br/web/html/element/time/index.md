@@ -2,6 +2,7 @@
 title: <time>
 slug: Web/HTML/Element/time
 ---
+
 ## Resumo
 
 O elemento HTML _time_ (`<time>`) representa o tempo tanto no formato de 24 horas ou como uma data precisa no calendário Gregoriano (com informações opcionais de tempo e fuso horário)
@@ -15,11 +16,11 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 ## Contexto de uso
 
 | [Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories) | [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                                                       | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), but no descendant `time` elements.                                                                      |
-| Tag omission                                                                            | None, both the start tag and the end tag are mandatory.                                                                                                                                                                      |
-| Permitted parent elements                                                               | Any element that accepts phrasing content.                                                                                                                                                                                   |
-| Normative document                                                                      | [HTML5, section 4.6.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                                                                                              |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Permitted content                                             | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), but no descendant `time` elements.                               |
+| Tag omission                                                  | None, both the start tag and the end tag are mandatory.                                                                                    |
+| Permitted parent elements                                     | Any element that accepts phrasing content.                                                                                                 |
+| Normative document                                            | [HTML5, section 4.6.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)            |
 
 ## Atributos
 
@@ -61,7 +62,9 @@ This article was created on 2011-01-28.
 ### `datetime` example
 
 ```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.
+</p>
 ```
 
 Above HTML will output:

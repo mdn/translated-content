@@ -32,10 +32,10 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // Вернёт false. Удаляемый объект не найден в WeakSet.
+ws.delete(obj); // Вернёт false. Удаляемый объект не найден в WeakSet.
 ws.delete(window); // Вернёт true.  Объект успешно удалён.
 
-ws.has(window);    // Вернёт false. Объект window был удалён из WeakSet.
+ws.has(window); // Вернёт false. Объект window был удалён из WeakSet.
 ```
 
 ## Спецификации

@@ -35,7 +35,7 @@ Debido a que `parse` es un método estático de `Date`, úselo siempre como `Dat
 Si `IPOfecha` es un objeto existente `Date`, entonces usted puede asignarlo a 9 de agosto de 1995 de la manera siguiente:
 
 ```js
-IPOfecha.setTime(Date.parse("Aug 9, 1995")) ;
+IPOfecha.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 ## Vea también

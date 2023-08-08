@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.groupToMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
+slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 ---
 
 {{JSRef}} {{SeeCompatTable}}

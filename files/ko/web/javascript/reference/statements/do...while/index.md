@@ -2,6 +2,7 @@
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 ---
+
 {{jsSidebar("Statements")}}
 
 **`do...while` 문은** 테스트 조건이 거짓으로 평가될 때까지 지정된 구문을 실행하는 루프를 만듭니다.
@@ -12,9 +13,9 @@ slug: Web/JavaScript/Reference/Statements/do...while
 ## 문법
 
 ```js
-do
-  statement
-while (condition);
+do {
+  statement;
+} while (condition);
 ```
 
 - `구문`
@@ -30,13 +31,12 @@ while (condition);
 예제에서 `do...while` 문은 적어도 한번 반복되고 i 변수가 5 보다 작을 때까지 실행됩니다.
 
 ```js
-var result = '';
+var result = "";
 var i = 0;
 do {
-   i += 1;
-   result += i + ' ';
-}
-while (i > 0 && i < 5);
+  i += 1;
+  result += i + " ";
+} while (i > 0 && i < 5);
 // Despite i == 0 this will still loop as it starts off without the test
 
 console.log(result);

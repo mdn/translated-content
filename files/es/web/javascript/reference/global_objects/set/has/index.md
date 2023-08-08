@@ -31,8 +31,8 @@ mySet.has(value);
 var mySet = new Set();
 mySet.add("foo");
 
-mySet.has("foo");  // retorna true
-mySet.has("bar");  // retorna false
+mySet.has("foo"); // retorna true
+mySet.has("bar"); // retorna false
 ```
 
 ## Especificaciones

@@ -14,7 +14,7 @@ slug: Web/API/BaseAudioContext/createAnalyser
 ## 構文
 
 ```js
-createAnalyser()
+createAnalyser();
 ```
 
 ### 引数

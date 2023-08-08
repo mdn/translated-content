@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.group()
-slug: Web/JavaScript/Reference/Global_Objects/Array/group
+slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
 ---
 
 {{JSRef}} {{SeeCompatTable}}

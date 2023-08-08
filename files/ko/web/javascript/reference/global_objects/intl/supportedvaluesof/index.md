@@ -44,7 +44,7 @@ Intl.supportedValuesOf(key)
 메서드가 지원되는지 여부를 `undefined`과 비교하여 확인할 수 있습니다.
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') {
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // 메서드가 지원됩니다.
 }
 ```

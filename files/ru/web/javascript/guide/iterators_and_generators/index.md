@@ -22,26 +22,26 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 После создания, объект-итератор может быть явно использован, с помощью вызовов метода next().
 
 ```js
-function makeIterator(array){
-    var nextIndex = 0;
+function makeIterator(array) {
+  var nextIndex = 0;
 
-    return {
-       next: function(){
-           return nextIndex < array.length ?
-               {value: array[nextIndex++], done: false} :
-               {done: true};
-       }
-    }
+  return {
+    next: function () {
+      return nextIndex < array.length
+        ? { value: array[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 }
 ```
 
 После инициализации, метод next() может быть вызван для поочерёдного доступа к парам ключ-значение в объекте:
 
 ```js
-var it = makeIterator(['yo', 'ya']);
+var it = makeIterator(["yo", "ya"]);
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ## Генераторы
@@ -51,10 +51,9 @@ console.log(it.next().done);  // true
 Генераторы - это специальный тип функции, который работает как фабрика итераторов. Функция становится генератором, если содержит один или более {{jsxref("Operators/yield","yield")}} операторов и использует {{jsxref("Statements/function*","function*")}} синтаксис.
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(true)
-    yield index++;
+  while (true) yield index++;
 }
 
 var it = idMaker();
@@ -76,13 +75,13 @@ console.log(it.next().value); // 2
 Мы можем создать свои собственные итерируемые объекты так:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 ### Встроенные итерируемые объекты
@@ -94,23 +93,22 @@ myIterable[Symbol.iterator] = function* () {
 Некоторые выражения работают с итерируемыми объектами, например, [`for-of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклы, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/ru/docs/Web/JavaScript/Reference/Operators/yield*), и [destructuring assignment](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value)
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"] // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
-  yield* ["a", "b", "c"]
+function* gen() {
+  yield* ["a", "b", "c"];
 }
 
-gen().next() // { value:"a", done:false }
-
-[a, b, c] = new Set(["a", "b", "c"])
-a // "a"
+gen().next()[(a, b, c)] = // { value:"a", done:false }
+  new Set(["a", "b", "c"]);
+a; // "a"
 ```
 
 ## Продвинутые генераторы
@@ -122,33 +120,33 @@ a // "a"
 Вот генератор чисел Фибоначчи, использующий `next(x)` для перезапуска последовательности:
 
 ```js
-function* fibonacci(){
+function* fibonacci() {
   var fn1 = 1;
   var fn2 = 1;
-  while (true){
+  while (true) {
     var current = fn2;
     fn2 = fn1;
     fn1 = fn1 + current;
     var reset = yield current;
-    if (reset){
-        fn1 = 1;
-        fn2 = 1;
+    if (reset) {
+      fn1 = 1;
+      fn2 = 1;
     }
   }
 }
 
 var sequence = fibonacci();
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
-console.log(sequence.next().value);     // 13
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
+console.log(sequence.next().value); // 13
 console.log(sequence.next(true).value); // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
 ```
 
 > **Примечание:** Интересно, что вызов `next(undefined)` равносилен вызову `next()`. При этом вызов next() для нового генератора с любым аргументом, кроме undefined, спровоцирует исключение `TypeError`.

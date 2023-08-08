@@ -45,8 +45,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -65,7 +65,7 @@ function Car(make, model, year) {
 이제 다음과 같이 `mycar` 라 불리는 객체를 생성할 수 있습니다:
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### 프라미스 이용
@@ -82,7 +82,9 @@ return new Promise.resolve(true);
 
 ```js
 // This is legal, but unnecessarily long:
-return new Promise((resolve, reject) => { resolve(true); })
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // Instead, return the static method:
 return Promise.resolve(true);

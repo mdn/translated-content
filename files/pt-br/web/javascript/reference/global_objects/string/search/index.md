@@ -35,20 +35,20 @@ Para obter mais informações (mas em compensação a execução se torna mais l
 O exemplo a seguir pesquisa uma string com dois objetos `regexp` diferentes para mostrar uma pesquisa bem-sucedida (valor positivo) vs. uma pesquisa mal-sucedida (-1).
 
 ```js
-let str = "hey JudE"
-let re = /[A-Z]/g
-let reDot = /[.]/g
-console.log(str.search(re))    // retorna 4, que é o índice da primeira letra maiúscula "J"
-console.log(str.search(reDot)) // retorna -1 pois não conseguiu encontrar o ponto "."
+let str = "hey JudE";
+let re = /[A-Z]/g;
+let reDot = /[.]/g;
+console.log(str.search(re)); // retorna 4, que é o índice da primeira letra maiúscula "J"
+console.log(str.search(reDot)); // retorna -1 pois não conseguiu encontrar o ponto "."
 ```
 
 ## Especificações
 
-| Specificação                                                                                                 | Status                       | Comentário(s)                                      |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definição inicial. Implementado no JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specificação                                                                       | Status               | Comentário(s)                                      |
+| ---------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                | {{Spec2('ES3')}}     | Definição inicial. Implementado no JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                 | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

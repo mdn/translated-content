@@ -102,7 +102,7 @@ A especificação HTML não define onde a linha de base de um `<textarea>` ou se
 
 Na maioria dos navegadores, `<textarea>`s são redimensionáveis - você notará a alça de arrasto no canto direito, que pode ser usada para alterar o tamanho do elemento na página. Isso é controlado pelo {{ cssxref("resize") }} Propriedade CSS - o redimensionamento está ativado por padrão, mas você pode desativá-lo explicitamente usando um`resize` valor de`none`:
 
-```html
+```css
 textarea {
   resize: none;
 }
@@ -118,7 +118,7 @@ textarea:invalid {
 }
 
 textarea:valid {
-   border: 2px solid lime;
+  border: 2px solid lime;
 }
 ```
 
@@ -129,8 +129,7 @@ textarea:valid {
 O exemplo a seguir mostra uma área de texto muito simples, com um número definido de linhas e colunas e algum conteúdo padrão.
 
 ```html
-<textarea name="textarea"
-   rows="10" cols="50">Write something here</textarea>
+<textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
 {{ EmbedLiveSample('Basic_example','600','150') }}
@@ -140,9 +139,9 @@ O exemplo a seguir mostra uma área de texto muito simples, com um número defin
 Este exemplo tem um número mínimo e máximo de caracteres - de 10 e 20, respectivamente. Experimente e veja.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   minlength="10" maxlength="20">Write something here</textarea>
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+Write something here</textarea
+>
 ```
 
 {{ EmbedLiveSample('Min_and_max_length','600','80') }}
@@ -154,9 +153,11 @@ Observe que `minlength` não impede o usuário de remover caracteres para que o 
 Este exemplo tem um espaço reservado definido. Observe como ele desaparece quando você começa a digitar na caixa.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   placeholder="Comment text."></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="Comment text."></textarea>
 ```
 
 {{ EmbedLiveSample('Placeholder','600','80') }}
@@ -168,12 +169,12 @@ Este exemplo tem um espaço reservado definido. Observe como ele desaparece quan
 Este exemplo mostra dois `<textarea>`s — um dos quais é `disabled`, e o outro é `readonly`.Brinque com os dois e verá a diferença de comportamento - O `disabled` elemento não é selecionável de forma alguma (e seu valor não é enviado), enquanto o elemento `readonly` é selecionável e seu conteúdo copiável (e seu valor é enviado); você simplesmente não pode editar o conteúdo.
 
 ```html
-<textarea name="textarea"
-   rows="5" cols="30"
-   disabled>I am a disabled textarea</textarea>
-<textarea name="textarea"
-   rows="5" cols="30"
-   readonly>I am a readonly textarea</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+I am a disabled textarea</textarea
+>
+<textarea name="textarea" rows="5" cols="30" readonly>
+I am a readonly textarea</textarea
+>
 ```
 
 {{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
@@ -225,11 +226,11 @@ Este exemplo mostra dois `<textarea>`s — um dos quais é `disabled`, e o outro
 
 ## Especificacões
 
-| Specificação                                                                                                 | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Specificação                                                                       | Status                   | Comentário |
+| ---------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}         | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}         | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 
