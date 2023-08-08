@@ -54,7 +54,7 @@ _Cette interface hérite également des méthodes de son parent [`Event`](/fr/do
 
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - Les propriétés CSS relatives aux transitions&nbsp;:
-  - [`tansition`](/fr/docs/Web/CSS/tansition)
+  - [`transition`](/fr/docs/Web/CSS/transition)
   - [`transition-delay`](/fr/docs/Web/CSS/transition-delay)
   - [`transition-duration`](/fr/docs/Web/CSS/transition-duration)
   - [`transition-property`](/fr/docs/Web/CSS/transition-property)
