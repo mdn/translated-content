@@ -379,7 +379,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) 标头字段标识要包含在签名中的响应标头字段的有序列表。
 - {{HTTPHeader("Server-Timing")}}
-  - : 传达给定请求 - 响应周期的一个或多个指标和描述。
+  - : 传达给定请求—响应周期的一个或多个指标和描述。
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : 用于通过[在 Service Worker 脚本的响应中](https://w3c.github.io/ServiceWorker/#service-worker-script-response)包含此标头来删除[路径限制](https://w3c.github.io/ServiceWorker/#path-restriction)。
 - {{HTTPHeader("SourceMap")}}
