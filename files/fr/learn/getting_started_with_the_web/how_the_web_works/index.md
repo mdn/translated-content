@@ -18,7 +18,7 @@ Les ordinateurs connectés à Internet sont appelés des **clients** et des **se
 ![Deux cercles, le premier représentant un client et le deuxième un serveur. Une flèche libellée « requêtes » va du client au serveur, et une flèche libellée « réponses » va du serveur jusqu'au client.](simple-client-server.png)
 
 - Les clients correspondent aux appareils connectés sur Internet par les personnes (par exemple, votre ordinateur connecté par Wi-Fi ou votre téléphone connecté sur le réseau mobile) et aux logiciels d'accès au Web (par exemple, les navigateurs comme Firefox ou Chrome).
-- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un appareil client souhaite accéder à une page web, une copie de la page est téléchargée depuis le serveur vers le client, la machine utilisée affiche alors le contenu dans le navigateur web de l'utilisateur.
+- Les serveurs sont des ordinateurs qui stockent des pages web, des sites ou des applications. Lorsqu'un appareil client souhaite accéder à une page web, une copie de la page est téléchargée depuis le serveur vers le client, la machine utilisée affiche alors le contenu dans le navigateur web de l'utilisatrice ou de l'utilisateur.
 
 ## Les autres composants du Web
 
@@ -33,7 +33,7 @@ En plus du client et du serveur, nous devons aussi mentionner&nbsp;:
 - La connexion Internet
   - : Elle permet l'envoi et la réception de données sur le Web. Dans notre métaphore, elle correspond à la rue entre la maison et le magasin.
 - TCP/IP
-  - : <i lang="en">**T**ransmission **C**ontrol **P**rotocol</i> / <i lang="en">**I**nternet **P**rotocol</i> (en français&nbsp;: protocole de contrôle de transmission d'une part et protocole Internet d'autre part) sont des protocoles définissant comment les données voyagent sur le web. On peut les comparer aux mécanismes de transport qui vous permettent de passer une commande, d'aller au magasin et d'acheter des marchandises. Dans notre métaphore, il pourrait par exemple s'agir d'un vélo ou d'une voiture.
+  - : <i lang="en">**T**ransmission **C**ontrol **P**rotocol</i> / <i lang="en">**I**nternet **P**rotocol</i> (en français&nbsp;: protocole de contrôle de transmission d'une part et protocole Internet d'autre part) sont des protocoles définissant comment les données voyagent sur le Web. On peut les comparer aux mécanismes de transport qui vous permettent de passer une commande, d'aller au magasin et d'acheter des marchandises. Dans notre métaphore, il pourrait par exemple s'agir d'un vélo ou d'une voiture.
 - DNS
   - : <i lang="en">**D**omain **N**ame **S**ystem</i> (système de nom de domaine) est une sorte d'annuaire pour sites web. Lorsque vous saisissez une adresse dans le navigateur, ce dernier consulte le DNS pour trouver l'adresse réelle du site web avant de récupérer son contenu. Le navigateur a besoin de connaître le serveur sur lequel le site web est situé afin de pouvoir envoyer des requêtes HTTP au bon endroit (voir ci-après). Cela correspond à la recherche de l'adresse du magasin pour s'y rendre.
 - HTTP
