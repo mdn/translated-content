@@ -61,7 +61,7 @@ color: unset;
 
 - {{cssxref("&lt;color&gt;")}}
   - : 设置元素的文本和装饰部分的颜色。
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字)
   - : 将颜色设置为元素的 `color` 属性值。然后，对于设置为 `color` 的值，那么 `currentcolor` 会视为 `inherit`。
 
 ## 无障碍考虑
