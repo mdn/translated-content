@@ -145,7 +145,7 @@ ul {
 function handleCommand(event) {
   // 处理鼠标单击以及 Enter 或 Space 的按键激活
 
-  // 除 Enter 或 Space 之外的按钮不应该触发命令
+  // 除 Enter 或 Space 之外的按键不应该触发命令
   if (
     event instanceof KeyboardEvent &&
     event.key !== "Enter" &&
