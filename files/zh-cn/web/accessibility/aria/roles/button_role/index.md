@@ -263,7 +263,7 @@ function toggleButton(element) {
 
 按钮本身是可交互的，因此可聚焦。如果给自身不可聚焦的元素（如 `<span>`、`<div>` 或 `<p>`）添加了 `button` 角色，那么就应该使用 `tabindex` 属性以使得按钮可聚焦。
 
-> **警告：** 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果使用了链接以表现得像是个按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 添加一个键事件处理器，以与原生的按钮行为保持一致。
+> **警告：** 谨慎将链接标记为按钮。按钮是预期使用 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键触发的，而链接是预期使用 <kbd>Enter</kbd> 触发的。也就是说，如果将链接用作按钮，仅添加 `role="button"` 是不够的。还有必要为 <kbd>Space</kbd> 键添加一个按键事件处理器，以与原生按钮的行为保持一致。
 
 使用了 `button` 角色时，屏幕阅读器会声明其说成是一个按钮，通常是说“单击（click）”然后是其无障碍名称。无障碍名称是元素的内容，或是 `aria-label` 的值，或是由 `aria-labelledby` 属性引用的元素的值，或是描述（如果已包括）。
 
