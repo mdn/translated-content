@@ -27,7 +27,7 @@ If you've found a typo on the Simplified Chinese [JavaScript landing page](/zh-C
 4. Click the edit (pencil) button
 
 From there, the GitHub UI will walk you through the rest by creating a [fork](https://docs.github.com/get-started/quickstart/fork-a-repo) and a branch to commit your changes to.
-After you have made changes to your branch, the goal is to open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for your changes to be incorporated.
+After you have made changes to your branch, the goal is to open a [pull request](https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) for your changes to be incorporated.
 
 A pull request represents the work you want to be reviewed, approved, and merged into the `main` branch of the MDN repository.
 See the [Creating a pull request](#creating-a-pull-request) for more details on creating and handling pull requests successfully.
