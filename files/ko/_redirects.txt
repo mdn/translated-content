@@ -476,7 +476,6 @@
 /ko/docs/Web/API/NetworkInformation.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
-/ko/docs/Web/API/NodeFilter	/ko/docs/Web/API/Document/createNodeIterator
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/Web/API/Notification/permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
@@ -674,7 +673,6 @@
 /ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes	/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ko/docs/Web/HTML/Canvas/Tutorial/Finale	/ko/docs/Web/API/Canvas_API/Tutorial/Finale
 /ko/docs/Web/HTML/Canvas/Tutorial/Optimizing_canvas	/ko/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
-/ko/docs/Web/HTML/Canvas/Tutorial/Using_images	/ko/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ko/docs/Web/HTML/Canvas/Tutorial/변형	/ko/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ko/docs/Web/HTML/Element/Video/canplay_event	/ko/docs/Web/API/HTMLMediaElement/canplay_event
 /ko/docs/Web/HTML/Element/Video/canplaythrough_event	/ko/docs/Web/API/HTMLMediaElement/canplaythrough_event
