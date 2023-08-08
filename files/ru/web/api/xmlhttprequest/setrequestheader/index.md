@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
 
 {{APIRef('XMLHttpRequest')}}

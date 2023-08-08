@@ -1,13 +1,6 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/spellcheck
-original_slug: Web/HTML/Attributs_universels/spellcheck
 ---
 
 {{HTMLSidebar("Global_attributes")}}

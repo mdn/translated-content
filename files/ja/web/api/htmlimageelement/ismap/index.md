@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.isMap
+title: "HTMLImageElement: isMap プロパティ"
+short-title: isMap
 slug: Web/API/HTMLImageElement/isMap
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -8,7 +11,7 @@ slug: Web/API/HTMLImageElement/isMap
 {{domxref("HTMLImageElement")}} の **`isMap`** プロパティは、論理値で、画像がサーバサイドイメージマップで使用されることを示します。
 これは {{HTMLElement("a")}} 要素内にある画像にのみ使用することができます。
 
-> **メモ:** アクセシビリティの観点から、サーバーサイドイメージマップはマウスを使う必要があるため、一般に使用しない方が良いでしょう。代わりに[クライアントサイド・イメージマップ](/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)を使ってください。
+> **メモ:** アクセシビリティの観点から、サーバーサイドイメージマップはマウスを使う必要があるため、一般に使用しない方が良いでしょう。代わりに[クライアントサイドイメージマップ](/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)を使ってください。
 
 ## 値
 
@@ -18,7 +21,7 @@ slug: Web/API/HTMLImageElement/isMap
 
 サーバーサイトイメージマップの一部としてマークされている画像がクリックされると、ブラウザーは "?x,y" という文字列を組み立てます。 x と y は、マウスでクリックされた位置を画像の左上隅からのオフセットの CSS ピクセル数でで示します。
 
-そして、ブラウザーはその URL をサーバーから取得し、 {{htmlattrxref("download", "a")}} 属性の値によって表示またはダウンロードを行います。
+そして、ブラウザーはその URL をサーバーから取得し、 [`download`](/ja/docs/Web/HTML/Element/a#download) 属性の値によって表示またはダウンロードを行います。
 
 サーバサイドイメージマップとは異なり、クライアントサイドイメージマップは {{HTMLElement("img")}} 要素を対話型コンテンツモードにしません。
 

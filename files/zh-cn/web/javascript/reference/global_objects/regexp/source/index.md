@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ## 示例
 
 ```js
-var regex = /fooBar/ig;
+var regex = /fooBar/gi;
 
 console.log(regex.source); // "fooBar"，不包含 /.../ 和 "ig"。
 ```

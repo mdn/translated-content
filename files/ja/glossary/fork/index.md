@@ -17,9 +17,9 @@ Fork (フォーク) とは、ある時点での既存のソフトウェアプロ
 
 1. General Knowledge
 
-    1. Wikipedia の [フォーク](https://ja.wikipedia.org/wiki/フォーク_(ソフトウェア開発))
-    2. [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
+   1. Wikipedia の [フォーク](<https://ja.wikipedia.org/wiki/フォーク_(ソフトウェア開発)>)
+   2. [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Fork", "フォーク")}}
+   1. {{Glossary("Fork", "フォーク")}}

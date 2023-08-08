@@ -83,7 +83,7 @@ element {
 <div>
   <div class="one">1:</div>
   <div class="two">2: Text <span class="five">5 - more text</span></div>
-  <input class="three">
+  <input class="three" />
   <textarea class="four">4: Lorem Ipsum</textarea>
 </div>
 ```
@@ -184,11 +184,18 @@ element {
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* pink if --my-var and --my-background are not defined */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* pink if --my-var and --my-background are not defined */
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* Invalid: "--my-background, pink" */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* Invalid: "--my-background, pink" */
 }
 ```
 
@@ -217,9 +224,15 @@ element {
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 毫不意外，浏览器将 `--text-color` 的值替换给了 `var(--text-color)`，但是 `16px` 并不是 {{cssxref("color")}} 的合法属性值。代换之后，该属性不会产生任何作用。浏览器会执行如下两个步骤：
@@ -249,12 +262,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 // 修改一个 Dom 节点上的 CSS 变量
 element.style.setProperty("--my-var", jsVar + 4);
 ```
-
-## 浏览器兼容性
-
-{{Compat}}
-
-> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。（[Firefox bug 985838](https://bugzil.la/985838)）
 
 ## 参见
 

@@ -1,11 +1,6 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-delay
 ---
 
 {{CSSRef}}
@@ -70,9 +65,9 @@ p {
 
 ```html
 <p>
-  La Chenille et Alice se considérèrent un instant en silence.
-  Enfin la Chenille sortit le houka de sa bouche, et lui adressa
-  la parole d’une voix endormie et traînante.
+  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
+  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
+  traînante.
 </p>
 ```
 

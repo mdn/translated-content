@@ -88,6 +88,7 @@ class MyArray extends Array {
 
 ## 参见
 
-- [Polyfill of `Array[Symbol.species]` and support of `Symbol.species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array[Symbol.species]` 的 Polyfill 和 `core-js` 中所有受影响的 `Array` 方法对 `Symbol.species` 的支持](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

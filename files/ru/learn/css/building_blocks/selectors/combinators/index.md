@@ -1,12 +1,6 @@
 ---
 title: Комбинаторы
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
-tags:
-  - CSS
-  - Селекторы
-  - комбинаторы
-translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
-original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
@@ -14,8 +8,8 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 Наконец мы рассмотрим селекторы, которые называются комбинаторами, поскольку они соединяют другие селекторы, создавая полезную связь селекторов друг с другом и расположением содержимого в документе.
 
 | Необходимые условия: | Базовая компьютерная грамотность, [установленное базовое программное обеспечение](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания о [работе с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)) и понимание работы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Цель:                | Узнать о различных комбинаторных селекторах, которые могут быть использованы в CSS.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Узнать о различных комбинаторных селекторах, которые могут быть использованы в CSS.                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Комбинатор потомка
 
@@ -74,7 +68,8 @@ p ~ img
 Вы можете соединять с помощью комбинаторов любые селекторы, которые мы изучали в предыдущих уроках, чтобы выбрать часть вашего документа. Например, если мы хотим выбрать пункты списка с классом "a", которые являются прямыми потомками `<ul>`, можно использовать следующую комбинацию:
 
 ```css
-ul > li[class="a"]  {  }
+ul > li[class="a"] {
+}
 ```
 
 Однако будьте осторожны при создании больших списков селекторов, которые выделяют очень конкретные части вашего документа. Будет трудно повторно использовать правила CSS, так как вы сделали селектор очень специфичным для определения местоположения этого элемента в разметке.
@@ -96,10 +91,10 @@ ul > li[class="a"]  {  }
 1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B)
 
-    - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
-    - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors)
-    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
-    - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators)
+   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
+   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors)
+   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
+   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Combinators)
 
 3. [Модель коробки](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

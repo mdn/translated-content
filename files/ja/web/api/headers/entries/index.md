@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
+**`Headers.entries()`** メソッドは、このオブジェクトに含まれるすべてのキーと値のペアを走査する{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。それぞれのペアのキーと値は両方とも {{jsxref("String")}} オブジェクトです。
 
 > **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
@@ -23,7 +23,7 @@ entries()
 
 ### 返値
 
-{{jsxref("Iteration_protocols", '反復子', '', 1)}}を返します。
+{{jsxref("Iteration_protocols", 'イテレーター', '', 1)}}を返します。
 
 ## 例
 

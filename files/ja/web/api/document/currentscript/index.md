@@ -27,7 +27,7 @@ if (document.currentScript.async) {
 }
 ```
 
-[実際の表示を確認](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[実際の表示を確認](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 

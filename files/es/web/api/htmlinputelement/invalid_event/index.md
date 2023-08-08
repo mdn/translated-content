@@ -43,19 +43,25 @@ Si un formulario es enviado con un valor inválido, los elementos pressentados s
 ```html
 <form action="#">
   <ul>
-    <li><label>Enter an integer between 1 and 10: <input type="number" min="0" max="10" required></label></li>
-    <li><input type="submit" value="submit"></li>
+    <li>
+      <label
+        >Enter an integer between 1 and 10:
+        <input type="number" min="0" max="10" required
+      /></label>
+    </li>
+    <li><input type="submit" value="submit" /></li>
   </ul>
-</form><p id="log"></p>
+</form>
+<p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('invalid', logValue);
+input.addEventListener("invalid", logValue);
 
 function logValue(e) {
   log.textContent += e.srcElement.value;

@@ -1,11 +1,6 @@
 ---
 title: Основы объектов в JavaScript
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - JavaScript
-  - ООП
-translation_of: Learn/JavaScript/Objects/Basics
-original_slug: Learn/JavaScript/Объекты/Основы
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -38,28 +33,39 @@ Object { }
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
+  name: ["Bob", "Smith"],
   age: 32,
-  gender: 'male',
-  interests: ['music', 'skiing'],
-  bio: function() {
-    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  gender: "male",
+  interests: ["music", "skiing"],
+  bio: function () {
+    alert(
+      this.name[0] +
+        " " +
+        this.name[1] +
+        " is " +
+        this.age +
+        " years old. He likes " +
+        this.interests[0] +
+        " and " +
+        this.interests[1] +
+        ".",
+    );
   },
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name[0] + '.');
-  }
+  greeting: function () {
+    alert("Hi! I'm " + this.name[0] + ".");
+  },
 };
 ```
 
 После сохранения и обновления, попробуйте ввести что-нибудь следующее в консоль JavaScript браузера:
 
 ```js
-person.name
-person.name[0]
-person.age
-person.interests[1]
-person.bio()
-person.greeting()
+person.name;
+person.name[0];
+person.age;
+person.interests[1];
+person.bio();
+person.greeting();
 ```
 
 Как видите, наш объект содержит некоторые данные, а также несколько методов. У нас же с помощью простого синтаксиса есть доступ к ним.
@@ -72,7 +78,7 @@ person.greeting()
 const objectName = {
   member1Name: member1Value,
   member2Name: member2Value,
-  member3Name: member3Value
+  member3Name: member3Value,
 };
 ```
 
@@ -87,9 +93,9 @@ const objectName = {
 Выше вы получили доступ к свойствам и методам используя **точечную запись (dot notation).** Имя объекта (person) действует как **пространство имён (namespace)** — оно должно быть введено первым, для того чтобы получить доступ ко всему что заключено (**encapsulated)** внутри объекта. Далее вы пишете точку, затем элемент, к которому хотите получить доступ — это может быть имя простого свойства, элемент массива, или вызов одного из методов объекта, например:
 
 ```js
-person.age
-person.interests[1]
-person.bio()
+person.age;
+person.interests[1];
+person.bio();
 ```
 
 ### Внутренние пространства имён (Sub-namespaces)
@@ -112,22 +118,22 @@ name : {
 Здесь мы фактически создаём **внутреннее пространство имён (sub-namespace).** Это звучит сложно, но на самом деле это не так — для доступа к этим элементам вам нужно сделать один дополнительный шаг с ещё одной точкой. Попробуйте в консоли браузера следующее:
 
 ```js
-person.name.first
-person.name.last
+person.name.first;
+person.name.last;
 ```
 
 **Важно**: На этом этапе вам также нужно будет пересмотреть код метода и изменить все экземпляры с
 
 ```js
-name[0]
-name[1]
+name[0];
+name[1];
 ```
 
 на
 
 ```js
-name.first
-name.last
+name.first;
+name.last;
 ```
 
 Иначе ваши методы больше не будут работать.
@@ -137,15 +143,15 @@ name.last
 Существует другой способ получить свойства объекта — использовать скобочную запись (bracket notation). Вместо написания этого кода:
 
 ```js
-person.age
-person.name.first
+person.age;
+person.name.first;
 ```
 
 Вы можете использовать следующий
 
 ```js
-person['age']
-person['name']['first']
+person["age"];
+person["name"]["first"];
 ```
 
 Это выглядит очень похоже на то, как вы получаете элементы массива, и в принципе это так и есть — вместо использования числовых индексов для выбора элемента, вы ассоциируете имя свойства для каждого значения. Ничего удивительного, что эти объекты иногда называют ассоциативными массивами — они сопоставляют строки со значениями так же, как массивы сопоставляют числовые индексы со значениями.
@@ -156,28 +162,30 @@ person['name']['first']
 
 ```js
 person.age = 45;
-person['name']['last'] = 'Cratchit';
+person["name"]["last"] = "Cratchit";
 ```
 
 Попробуйте ввести эти строки, а затем снова верните элементы, чтобы увидеть, как они изменились
 
 ```js
-person.age
-person['name']['last']
+person.age;
+person["name"]["last"];
 ```
 
 Вы можете не просто обновлять и устанавливать значения свойств и методов объекта, а так же устанавливать совершенно новые элементы. Попробуйте их в консоли JS:
 
 ```js
-person['eyes'] = 'hazel';
-person.farewell = function() { alert("Bye everybody!"); }
+person["eyes"] = "hazel";
+person.farewell = function () {
+  alert("Bye everybody!");
+};
 ```
 
 Теперь вы можете проверить ваши новые элементы:
 
 ```js
-person['eyes']
-person.farewell()
+person["eyes"];
+person.farewell();
 ```
 
 Одним из полезных аспектов скобочной записи является то, что с её помощью можно динамически задавать не только значения элементов, но и их имена. Предположим, что мы хотим, чтобы пользователи могли хранить пользовательские типы данных, введя имя и значение элемента в два следующих поля? Мы могли бы получить эти значения следующим образом:
@@ -196,15 +204,15 @@ person[myDataName] = myDataValue;
 Чтобы проверить это, попробуйте добавить следующие строки в свой код, после закрывающей скобки объекта `person` :
 
 ```js
-let myDataName = 'height';
-let myDataValue = '1.75m';
+let myDataName = "height";
+let myDataValue = "1.75m";
 person[myDataName] = myDataValue;
 ```
 
 Теперь попробуйте сохранить и обновить, затем введите следующее в консоль браузера:
 
 ```js
-person.height
+person.height;
 ```
 
 Добавление свойства объекта с использованием вышеописанного метода невозможно с использованием точечной записи, которая может принимать только литеральное имя элемента, а не значение переменной указывающее на имя.
@@ -225,18 +233,18 @@ greeting: function() {
 
 ```js
 const person1 = {
-  name: 'Chris',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Chris",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 
 const person2 = {
-  name: 'Brian',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Brian",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 ```
 
 В этом случае, `person1.greeting()` выведет "Hi! I'm Chris.". `person2.greeting()`, с другой стороны, выведет "Hi! I'm Brian.", хотя код метода одинаковый в обоих случаях. Как мы сказали ранее, `this` равен объекту, внутри которого находится код — это не очень полезно, когда вы пишите литералы объектов вручную, но оно действительно помогает, когда вы генерируете объекты динамически (например используя конструкторы). Это станет понятнее чуть позже.
@@ -248,26 +256,26 @@ const person2 = {
 Поэтому, когда вы использовали строковые методы, такие как:
 
 ```js
-myString.split(',');
+myString.split(",");
 ```
 
-Вы использовали метод доступный в экземпляре класса [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Каждый раз создавая строку в вашем коде, эта строка автоматически создаётся как экземпляр [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), и поэтому имеет несколько общих методов/свойств, доступных на нем.
+Вы использовали метод доступный в экземпляре класса [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String). Каждый раз создавая строку в вашем коде, эта строка автоматически создаётся как экземпляр [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String), и поэтому имеет несколько общих методов/свойств, доступных на нем.
 
 Когда вы обращались к объектной модели документа (DOM), используя следующие строки:
 
 ```js
-const myDiv = document.createElement('div');
-const myVideo = document.querySelector('video');
+const myDiv = document.createElement("div");
+const myVideo = document.querySelector("video");
 ```
 
-Вы использовали методы доступные в экземпляре класса [`Document`](/en-US/docs/Web/API/Document). Для каждой загруженной веб-страницы создаётся экземпляр [`Document`](/en-US/docs/Web/API/Document), называемый `document`, который представляет всю структуру страницы, её содержимое и другие функции, такие как URL-адрес. Опять же, это означает, что он имеет несколько общих методов/свойств, доступных на нем.
+Вы использовали методы доступные в экземпляре класса [`Document`](/ru/docs/Web/API/Document). Для каждой загруженной веб-страницы создаётся экземпляр [`Document`](/ru/docs/Web/API/Document), называемый `document`, который представляет всю структуру страницы, её содержимое и другие функции, такие как URL-адрес. Опять же, это означает, что он имеет несколько общих методов/свойств, доступных на нем.
 
-То же самое относится и к любому другому встроенному объекту/API, который вы использовали — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), и т. д.
+То же самое относится и к любому другому встроенному объекту/API, который вы использовали — [`Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math), и т. д.
 
 Обратите внимание, что встроенные объекты/API не всегда создают экземпляры объектов автоматически. Как пример, [Notifications API](/ru/docs/Web/API/Notifications_API) — который позволяет новым браузерам запускать системные уведомления, требует, чтобы вы создавали новый экземпляр объекта с помощью конструктора для каждого уведомления, которое вы хотите запустить. Попробуйте ввести следующее в консоль JavaScript:
 
 ```js
-const myNotification = new Notification('Hello!');
+const myNotification = new Notification("Hello!");
 ```
 
 Опять же, мы рассмотрим конструкторы в следующей статье.

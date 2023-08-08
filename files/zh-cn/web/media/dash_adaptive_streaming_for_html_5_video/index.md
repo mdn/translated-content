@@ -1,7 +1,6 @@
 ---
 title: 为 HTML 5 视频提供的 DASH 自适应串流
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video
 ---
 
 经由 HTTP 的动态自适应串流（DASH）是一种自适应串流协议。这意味着它使得视频串流能基于网络性能来调整比特率，以保证视频流畅播放。
@@ -85,8 +84,8 @@ ffmpeg \
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Your browser does not support the video tag.
 </video>
 ```

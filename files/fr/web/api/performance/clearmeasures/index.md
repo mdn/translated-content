@@ -1,13 +1,6 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-translation_of: Web/API/Performance/clearMeasures
 ---
 
 {{APIRef("User Timing API")}}
@@ -19,8 +12,8 @@ La méthode **`clearMeasures()`** supprime les _mesures nommées_ du tampon d'en
 ## Syntaxe
 
 ```js
-  performance.clearMeasures();
-  performance.clearMeasures(name);
+performance.clearMeasures();
+performance.clearMeasures(name);
 ```
 
 ### Arguments
@@ -40,7 +33,8 @@ L'exemple suivant montre les deux utilisations de la méthode `clearMeasures()`.
 // Crée une petite aide pour montrer combien d'entrées PerformanceMeasure il y a.
 function logMeasureCount() {
   console.log(
-    "J'ai trouvé ces nombreuses entrées : " + performance.getEntriesByType("measure").length
+    "J'ai trouvé ces nombreuses entrées : " +
+      performance.getEntriesByType("measure").length,
   );
 }
 
@@ -53,15 +47,15 @@ performance.measure("from mark a", "a");
 performance.mark("b");
 performance.measure("between a and b", "a", "b");
 
-logMeasureCount() // "J'ai trouvé ces nombreuses entrées : 5"
+logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 5"
 
 // Supprime uniquement les entrées PerformanceMeasure "from navigation".
 performance.clearMeasures("from navigation");
-logMeasureCount() // "J'ai trouvé ces nombreuses entrées : 3"
+logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 3"
 
 // Supprime toutes les entrées de PerformanceMeasure.
 performance.clearMeasures();
-logMeasureCount() // "J'ai trouvé ces nombreuses entrées : 0"
+logMeasureCount(); // "J'ai trouvé ces nombreuses entrées : 0"
 ```
 
 ## Spécifications

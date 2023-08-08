@@ -1,7 +1,6 @@
 ---
 title: MDN en 10
 slug: MDN/At_ten
-original_slug: MDN_en_diez
 ---
 
 ## La historia de MDN (Mozilla Developers Network)

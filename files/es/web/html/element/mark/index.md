@@ -1,7 +1,6 @@
 ---
-title: '<mark>: el elemento de resaltado de texto'
+title: "<mark>: el elemento de resaltado de texto"
 slug: Web/HTML/Element/mark
-original_slug: Web/HTML/Elemento/mark
 ---
 
 {{HTMLSidebar}}
@@ -83,11 +82,10 @@ En este ejemplo, \<mark> se utiliza para resaltar texto en una cita que es de pa
 
 ```html
 <blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a
-  hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, <mark>Rebel spies managed
-  to steal secret plans</mark> to the Empire’s ultimate weapon,
-  the DEATH STAR, an armored space station with enough power to
+  It is a period of civil war. Rebel spaceships, striking from a hidden base,
+  have won their first victory against the evil Galactic Empire. During the
+  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s
+  ultimate weapon, the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
 </blockquote>
 ```
@@ -101,15 +99,17 @@ El resultado sería:
 Este ejemplo demuestra el uso de `<mark>` para marcar resultados de búsqueda en el fragmento.
 
 ```html
-<p>It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, <mark class="match">Imperial</mark>
-troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.</p>
+<p>
+  It is a dark time for the Rebellion. Although the Death Star has been
+  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
+  forces from their hidden base and pursued them across the galaxy.
+</p>
 
-<p>Evading the dreaded <mark class="match">Imperial</mark>
-Starfleet, a group of freedom fighters led by Luke Skywalker
-has established a new secret base on the remote ice world of
-Hoth.</p>
+<p>
+  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
+  freedom fighters led by Luke Skywalker has established a new secret base on
+  the remote ice world of Hoth.
+</p>
 ```
 
 Para ayudar a distinguir el uso de `<mark>` en los resultados de búsqueda de otro uso potencial, este ejemplo aplica la clase "match" a cada coincidencia.

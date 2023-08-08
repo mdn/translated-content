@@ -1,12 +1,6 @@
 ---
 title: Сторонние API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-tags:
-  - 3rd party
-  - API
-  - Third party
-  - Новичку
-translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -29,7 +23,7 @@ API, которые мы рассмотрели до сих пор, встрое
 
 ### Они находятся на сторонних серверах
 
-API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/en-US/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/en-US/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/en-US/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
+API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/ru/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/ru/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/ru/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -38,19 +32,24 @@ navigator.geolocation.getCurrentPosition(function(position) { ... });
 Сторонние API, с другой стороны, расположены на сторонних серверах. Чтобы получить доступ к ним из JavaScript, вам сначала нужно подключиться к функциям API и сделать его доступным на вашей странице. Обычно это связано с первой ссылкой на библиотеку JavaScript, доступную на сервере через элемент {{htmlelement("script")}}, как показано в нашем примере:
 
 ```js
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<script
+  type="text/javascript"
+  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
 Затем вы можете начать использовать объекты, доступные в этой библиотеке. Например:
 
 ```js
-var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+var latlng = new google.maps.LatLng(
+  position.coords.latitude,
+  position.coords.longitude,
+);
 var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true
-}
+  disableDefaultUI: true,
+};
 
 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 ```
@@ -84,15 +83,15 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
 1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#Getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
 2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
 
-    1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
-    2. Создайте новый проект, если у вас его ещё нет.
-    3. Нажмите кнопку _Enable API_.
-    4. Выберите _Google Maps JavaScript API_.
-    5. Нажмите кнопку _Enable_.
-    6. Нажмите _Create credentials_, затем выберите _API key_.
-    7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
+   1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
+   2. Создайте новый проект, если у вас его ещё нет.
+   3. Нажмите кнопку _Enable API_.
+   4. Выберите _Google Maps JavaScript API_.
+   5. Нажмите кнопку _Enable_.
+   6. Нажмите _Create credentials_, затем выберите _API key_.
+   7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
 
-    > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
+   > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
 
 3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
 
@@ -102,34 +101,34 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
 1. Add the following just below the `var map ...` line:
 
-    ```js
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
-    });
-    ```
+   ```js
+   var marker = new google.maps.Marker({
+     position: latlng,
+     map: map,
+   });
+   ```
 
-    Now if you refresh your page, you'll see a nice little marker pop up in the centre of the map. This is cool, but it is not exactly a custom marker — it is using the default marker icon.
+   Now if you refresh your page, you'll see a nice little marker pop up in the centre of the map. This is cool, but it is not exactly a custom marker — it is using the default marker icon.
 
 2. To use a custom icon, we need to specify it when we create the marker, using its URL. First of all, add the following line above the previous block you added:
 
-    ```js
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    ```
+   ```js
+   var iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+   ```
 
-    This defines the base URL where all the official Google Maps icons are stored (you could also specify your own icon location if you wished).
+   This defines the base URL where all the official Google Maps icons are stored (you could also specify your own icon location if you wished).
 
 3. The icon location is specified in the `icon` property of the options object. Update the constructor like so:
 
-    ```js
-    var marker = new google.maps.Marker({
-      position: latlng,
-      icon: iconBase + 'flag_maps.png',
-      map: map
-    });
-    ```
+   ```js
+   var marker = new google.maps.Marker({
+     position: latlng,
+     icon: iconBase + "flag_maps.png",
+     map: map,
+   });
+   ```
 
-    Here we specify the icon property value as the `iconBase` plus the icon filename, to create the complete URL. Now try reloading your example and you'll see a custom marker displayed on your map!
+   Here we specify the icon property value as the `iconBase` plus the icon filename, to create the complete URL. Now try reloading your example and you'll see a custom marker displayed on your map!
 
 > **Примечание:** See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
 
@@ -141,29 +140,30 @@ Another common use case for Google Maps is displaying more information about a p
 
 1. First of all, you need to specify a JavaScript string containing HTML that will define the content of the popup. This will be injected into the popup by the API and can contain just about any content you want. Add the following line below the `google.maps.Marker()` constructor definition:
 
-    ```js
-    var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
-    ```
+   ```js
+   var contentString =
+     '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+   ```
 
 2. Next, you need to create a new info window object using the `google.maps.InfoWindow()` constructor. Add the following below your previous line:
 
-    ```js
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-    ```
+   ```js
+   var infowindow = new google.maps.InfoWindow({
+     content: contentString,
+   });
+   ```
 
-    There are other properties available (see [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), but here we are just specifying the `content` property in the options object, which points to the source of the content.
+   There are other properties available (see [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), but here we are just specifying the `content` property in the options object, which points to the source of the content.
 
 3. Finally, to get the popup to display when the marker is clicked, we use a simple click event handler. Add the following below the `google.maps.InfoWindow()` constructor:
 
-    ```js
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-    ```
+   ```js
+   marker.addListener("click", function () {
+     infowindow.open(map, marker);
+   });
+   ```
 
-    Inside the function, we simply invoke the infowindow's `open()` function, which takes as parameters the map you want to display it on, and the marker you want it to appear next to.
+   Inside the function, we simply invoke the infowindow's `open()` function, which takes as parameters the map you want to display it on, and the marker you want it to appear next to.
 
 4. Now try reloading the example, and clicking on the marker!
 
@@ -175,11 +175,11 @@ Inside the original `google.maps.Map()` constructor, you'll see the property `di
 2. Now undo your last change.
 3. You can show or hide the controls in a more granular fashion by using other properties that specify single UI features. Try adding the following underneath the `disableDefaultUI: true` (remember to put a comma after `disableDefaultUI: true`, otherwise you'll get an error):
 
-    ```js
-    zoomControl: true,
-    mapTypeControl: true,
-    scaleControl: true,
-    ```
+   ```js
+   zoomControl: true,
+   mapTypeControl: true,
+   scaleControl: true,
+   ```
 
 4. Now try reloading the example to see the effect these properties have. You can find more options to experiment with at the [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions).
 
@@ -217,45 +217,52 @@ In the case of this API, you need to include the API key as a [get](/ru/docs/Web
 
 1. Find the following line:
 
-    ```js
-    var key = 'INSERT-YOUR-API-KEY-HERE';
-    ```
+   ```js
+   var key = "INSERT-YOUR-API-KEY-HERE";
+   ```
 
-    Replace `INSERT-YOUR-API-KEY-HERE` with the actual API key you got in the previous section.
+   Replace `INSERT-YOUR-API-KEY-HERE` with the actual API key you got in the previous section.
 
 2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `fetchResults()` when the form is submitted (the button is pressed).
 
-    ```js
-    searchForm.addEventListener('submit', submitSearch);
-    ```
+   ```js
+   searchForm.addEventListener("submit", submitSearch);
+   ```
 
 3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
 
-    ```js
-    function submitSearch(e) {
-      pageNumber = 0;
-      fetchResults(e);
-    }
+   ```js
+   function submitSearch(e) {
+     pageNumber = 0;
+     fetchResults(e);
+   }
 
-    function fetchResults(e) {
-      // Use preventDefault() to stop the form submitting
-      e.preventDefault();
+   function fetchResults(e) {
+     // Use preventDefault() to stop the form submitting
+     e.preventDefault();
 
-      // Assemble the full URL
-      url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value + '&fq=document_type:("article")';
+     // Assemble the full URL
+     url =
+       baseURL +
+       "?api-key=" +
+       key +
+       "&page=" +
+       pageNumber +
+       "&q=" +
+       searchTerm.value +
+       '&fq=document_type:("article")';
 
-      if(startDate.value !== '') {
-        url += '&begin_date=' + startDate.value;
-      };
+     if (startDate.value !== "") {
+       url += "&begin_date=" + startDate.value;
+     }
 
-      if(endDate.value !== '') {
-        url += '&end_date=' + endDate.value;
-      };
+     if (endDate.value !== "") {
+       url += "&end_date=" + endDate.value;
+     }
+   }
+   ```
 
-    }
-    ```
-
-`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
+`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
 
 - The base URL (taken from the `baseURL` variable).
 - The API key, which has to be specified in the `api-key` URL parameter (the value is taken from the `key` variable).
@@ -263,7 +270,7 @@ In the case of this API, you need to include the API key as a [get](/ru/docs/Web
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we just want to return articles.
 
-Next, we use a couple of [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 
@@ -284,14 +291,16 @@ Add the following code block inside the `fetchResults()` function, just above th
 
 ```js
 // Use fetch() to make the request to the API
-fetch(url).then(function(result) {
-  return result.json();
-}).then(function(json) {
-  displayResults(json);
-});
+fetch(url)
+  .then(function (result) {
+    return result.json();
+  })
+  .then(function (json) {
+    displayResults(json);
+  });
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
+Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
 
 ### Displaying the data
 
@@ -300,30 +309,30 @@ OK, let's look at how we'll display the data. Add the following function below y
 ```js
 function displayResults(json) {
   while (section.firstChild) {
-      section.removeChild(section.firstChild);
+    section.removeChild(section.firstChild);
   }
 
   var articles = json.response.docs;
 
-  if(articles.length === 10) {
-    nav.style.display = 'block';
+  if (articles.length === 10) {
+    nav.style.display = "block";
   } else {
-    nav.style.display = 'none';
+    nav.style.display = "none";
   }
 
-  if(articles.length === 0) {
-    var para = document.createElement('p');
-    para.textContent = 'No results returned.'
+  if (articles.length === 0) {
+    var para = document.createElement("p");
+    para.textContent = "No results returned.";
     section.appendChild(para);
   } else {
-    for(var i = 0; i < articles.length; i++) {
-      var article = document.createElement('article');
-      var heading = document.createElement('h2');
-      var link = document.createElement('a');
-      var img = document.createElement('img');
-      var para1 = document.createElement('p');
-      var para2 = document.createElement('p');
-      var clearfix = document.createElement('div');
+    for (var i = 0; i < articles.length; i++) {
+      var article = document.createElement("article");
+      var heading = document.createElement("h2");
+      var link = document.createElement("a");
+      var img = document.createElement("img");
+      var para1 = document.createElement("p");
+      var para2 = document.createElement("p");
+      var clearfix = document.createElement("div");
 
       var current = articles[i];
       console.log(current);
@@ -331,19 +340,19 @@ function displayResults(json) {
       link.href = current.web_url;
       link.textContent = current.headline.main;
       para1.textContent = current.snippet;
-      para2.textContent = 'Keywords: ';
-      for(var j = 0; j < current.keywords.length; j++) {
-        var span = document.createElement('span');
-        span.textContent += current.keywords[j].value + ' ';
+      para2.textContent = "Keywords: ";
+      for (var j = 0; j < current.keywords.length; j++) {
+        var span = document.createElement("span");
+        span.textContent += current.keywords[j].value + " ";
         para2.appendChild(span);
       }
 
-      if(current.multimedia.length > 0) {
-        img.src = 'http://www.nytimes.com/' + current.multimedia[0].url;
+      if (current.multimedia.length > 0) {
+        img.src = "http://www.nytimes.com/" + current.multimedia[0].url;
         img.alt = current.headline.main;
       }
 
-      clearfix.setAttribute('class','clearfix');
+      clearfix.setAttribute("class", "clearfix");
 
       article.appendChild(heading);
       heading.appendChild(link);
@@ -354,14 +363,14 @@ function displayResults(json) {
       section.appendChild(article);
     }
   }
-};
+}
 ```
 
 There's a lot of code here; let's explain it step by step:
 
-- The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
+- The [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
 - Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
-- The first [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
+- The first [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
 - The next `if()` block checks to see if no articles are returned. If so, we don't try to display any — we just create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json). Most of these operations are fairly obvious, but a few are worth calling out:
 
@@ -377,34 +386,34 @@ To make the pagination buttons work, we will increment (or decrement) the value 
 
 This allows us to easily write a simplistic pagination function.
 
-1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+1. Below the existing [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
-    ```js
-    nextBtn.addEventListener('click', nextPage);
-    previousBtn.addEventListener('click', previousPage);
-    ```
+   ```js
+   nextBtn.addEventListener("click", nextPage);
+   previousBtn.addEventListener("click", previousPage);
+   ```
 
 2. Below your previous addition, let's define the two functions — add this code now:
 
-    ```js
-    function nextPage(e) {
-      pageNumber++;
-      fetchResults(e);
-    };
+   ```js
+   function nextPage(e) {
+     pageNumber++;
+     fetchResults(e);
+   }
 
-    function previousPage(e) {
-      if(pageNumber > 0) {
-        pageNumber--;
-      } else {
-        return;
-      }
-      fetchResults(e);
-    };
-    ```
+   function previousPage(e) {
+     if (pageNumber > 0) {
+       pageNumber--;
+     } else {
+       return;
+     }
+     fetchResults(e);
+   }
+   ```
 
-    The first function is simple — we increment the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
+   The first function is simple — we increment the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
 
-    The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we simply [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
+   The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we simply [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
 
 ## YouTube example
 

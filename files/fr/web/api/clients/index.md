@@ -1,17 +1,6 @@
 ---
 title: Clients
 slug: Web/API/Clients
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
-translation_of: Web/API/Clients
 ---
 
 {{APIRef("Service Workers API")}}
@@ -34,35 +23,37 @@ L'interface `Clients` permet d'accéder aux objets [`Client`](/fr/docs/Web/API/C
 L'exemple suivant montre une fenêtre de chat existante ou en crée une nouvelle lorsque l'utilisateur clique sur une notification.
 
 ```js
-addEventListener('notificationclick', event => {
-  event.waitUntil(async function() {
-    const allClients = await clients.matchAll({
-      includeUncontrolled: true
-    });
+addEventListener("notificationclick", (event) => {
+  event.waitUntil(
+    (async function () {
+      const allClients = await clients.matchAll({
+        includeUncontrolled: true,
+      });
 
-    let chatClient;
+      let chatClient;
 
-    // Voyons si nous avons déjà une fenêtre de discussion ouverte :
-    for (const client of allClients) {
-      const url = new URL(client.url);
+      // Voyons si nous avons déjà une fenêtre de discussion ouverte :
+      for (const client of allClients) {
+        const url = new URL(client.url);
 
-      if (url.pathname == '/chat/') {
-        // Excellent, utilisons-la !
-        client.focus();
-        chatClient = client;
-        break;
+        if (url.pathname == "/chat/") {
+          // Excellent, utilisons-la !
+          client.focus();
+          chatClient = client;
+          break;
+        }
       }
-    }
 
-    // Si nous n'avons pas trouvé de fenêtre de discussion existante,
-    // ouvrons-en une nouvelle :
-    if (!chatClient) {
-      chatClient = await clients.openWindow('/chat/');
-    }
+      // Si nous n'avons pas trouvé de fenêtre de discussion existante,
+      // ouvrons-en une nouvelle :
+      if (!chatClient) {
+        chatClient = await clients.openWindow("/chat/");
+      }
 
-    // Envoyez un message au client :
-    chatClient.postMessage("Nouveaux messages !");
-  }());
+      // Envoyez un message au client :
+      chatClient.postMessage("Nouveaux messages !");
+    })(),
+  );
 });
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: Window.opener
 slug: Web/API/Window/opener
-translation_of: Web/API/Window/opener
-browser-compat: api.Window.opener
 ---
 
 {{APIRef("HTML DOM")}}

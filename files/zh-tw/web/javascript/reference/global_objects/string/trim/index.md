@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trim
 
 ## 語法
 
-```js
+```js-nolint
 trim()
 ```
 
@@ -31,7 +31,7 @@ trim()
 ```js
 if (!String.prototype.trim) {
   String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
   };
 }
 ```
@@ -43,11 +43,11 @@ if (!String.prototype.trim) {
 以下例子會印出小寫的字串 `'foo'`：
 
 ```js
-var orig = '   foo  ';
+var orig = "   foo  ";
 console.log(orig.trim()); // 'foo'
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 

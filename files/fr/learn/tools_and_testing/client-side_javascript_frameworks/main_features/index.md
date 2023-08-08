@@ -1,12 +1,11 @@
 ---
 title: Fonctionnalités principales des framework
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of “the big 4” frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
 
 <table class="standard-table">
   <tbody>
@@ -54,8 +53,10 @@ When used with React, the JSX from the previous snippet would be compiled into t
 
 ```js
 var subject = "World";
-var header = React.createElement("header", null,
-  React.createElement("h1", null, "Hello, ", subject, "!")
+var header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Hello, ", subject, "!"),
 );
 ```
 
@@ -85,7 +86,7 @@ And this data:
 
 ```js
 {
-  subject: "World"
+  subject: "World";
 }
 ```
 
@@ -158,13 +159,8 @@ This will ultimately render the following [`<figure>`](/fr/docs/Web/HTML/Element
 
 ```html
 <figure>
-  <img
-    src="assets/zelda.png"
-    alt="Portrait of Zelda Schiff"
-  >
-  <figcaption>
-    Zelda Schiff is editor-in-chief of the Library Times.
-  </figcaption>
+  <img src="assets/zelda.png" alt="Portrait of Zelda Schiff" />
+  <figcaption>Zelda Schiff is editor-in-chief of the Library Times.</figcaption>
 </figure>
 ```
 
@@ -177,9 +173,7 @@ As an example, consider a button that counts how many times it has been clicked.
 ```js
 function CounterButton() {
   const [count] = useState(0);
-  return (
-    <button>Clicked {count} times</button>
-  );
+  return <button>Clicked {count} times</button>;
 }
 ```
 
@@ -195,7 +189,7 @@ The `useState()` call keeps track of the `count` value in a robust way across th
 
 In order to be interactive, components need ways to respond to browser events, so our applications can respond to our users. Frameworks each provide their own syntax for listening to browser events, which reference the names of the equivalent native browser events.
 
-In React, listening for the [`click`](/fr/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let’s update our `CounterButton` code from above to allow it to count clicks:
+In React, listening for the [`click`](/fr/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let's update our `CounterButton` code from above to allow it to count clicks:
 
 ```js
 function CounterButton() {
@@ -210,7 +204,7 @@ In this version we are using additional `useState()` functionality to create a s
 
 ## Styling components
 
-Each framework offers a way to define styles for your components — or for the application as a whole. Although each framework’s approach to defining the styles of a component is slightly different, all of them give you multiple ways to do so. With the addition of some helper modules, you can style your framework apps in [Sass](https://sass-lang.com/) or [Less](http://lesscss.org/), or transpile your CSS stylesheets with [PostCSS](https://postcss.org/).
+Each framework offers a way to define styles for your components — or for the application as a whole. Although each framework's approach to defining the styles of a component is slightly different, all of them give you multiple ways to do so. With the addition of some helper modules, you can style your framework apps in [Sass](https://sass-lang.com/) or [Less](http://lesscss.org/), or transpile your CSS stylesheets with [PostCSS](https://postcss.org/).
 
 ## Handling dependencies
 
@@ -226,7 +220,7 @@ For example, our `AuthorCredit` React component might be utilized inside an `Art
 import AuthorCredit from "./components/AuthorCredit";
 ```
 
-Once that’s done, `AuthorCredit` could be used inside the `Article` component like this:
+Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
 
 ```js
   ...
@@ -252,9 +246,9 @@ Let's say that the magazine site we're building is structured like this:
 </App>
 ```
 
-Our `App` component has data that our `AuthorCredit` component needs. We could rewrite `Home` and `Article` so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: `Home` and `Article` don’t actually make use of the author's portrait or byline, but if we want to get that information into the `AuthorCredit`, we will need to change `Home` and `Author` to accommodate it.
+Our `App` component has data that our `AuthorCredit` component needs. We could rewrite `Home` and `Article` so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: `Home` and `Article` don't actually make use of the author's portrait or byline, but if we want to get that information into the `AuthorCredit`, we will need to change `Home` and `Author` to accommodate it.
 
-The problem of passing data through many layers of components is called prop drilling, and it’s not ideal for large applications.
+The problem of passing data through many layers of components is called prop drilling, and it's not ideal for large applications.
 
 To circumvent prop drilling, frameworks provide functionality known as dependency injection, which is a way to get certain data directly to the components that need it, without passing it through intervening levels. Each framework implements dependency injection under a different name, and in a different way, but the effect is ultimately the same.
 
@@ -262,15 +256,15 @@ Angular calls this process [dependency injection](https://angular.io/guide/depen
 
 ### Lifecycle
 
-In the context of a framework, a component’s **lifecycle** is a collection of phases a component goes through from the time it is rendered by the browser (often called _mounting_) to the time that it is removed from the DOM (often called _unmounting_). Each framework names these lifecycle phases differently, and not all give developers access to the same phases. All of the frameworks follow the same general model: they allow developers to perform certain actions when the component _mounts_, when it _renders_, when it _unmounts_, and at many phases in between these.
+In the context of a framework, a component's **lifecycle** is a collection of phases a component goes through from the time it is rendered by the browser (often called _mounting_) to the time that it is removed from the DOM (often called _unmounting_). Each framework names these lifecycle phases differently, and not all give developers access to the same phases. All of the frameworks follow the same general model: they allow developers to perform certain actions when the component _mounts_, when it _renders_, when it _unmounts_, and at many phases in between these.
 
-The _render_ phase is the most crucial to understand, because it is repeated the most times as your user interacts with your application. It's run every time the browser needs to render something new, whether that new information is an addition to what's in the browser, a deletion, or an edit of what’s there.
+The _render_ phase is the most crucial to understand, because it is repeated the most times as your user interacts with your application. It's run every time the browser needs to render something new, whether that new information is an addition to what's in the browser, a deletion, or an edit of what's there.
 
 This [diagram of a React component's lifecycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) offers a general overview of the concept.
 
 ## Rendering elements
 
-Just as with lifecycles, frameworks take different-but-similar approaches to how they render your applications. All of them track the current rendered version of your browser's DOM, and each makes slightly different decisions about how the DOM should change as components in your application re-render. Because frameworks make these decisions for you, you typically don't interact with the DOM yourself. This abstraction away from the DOM is more complex and more memory-intensive than updating the DOM yourself, but without it, frameworks could not allow you to program in the declarative way they’re known for.
+Just as with lifecycles, frameworks take different-but-similar approaches to how they render your applications. All of them track the current rendered version of your browser's DOM, and each makes slightly different decisions about how the DOM should change as components in your application re-render. Because frameworks make these decisions for you, you typically don't interact with the DOM yourself. This abstraction away from the DOM is more complex and more memory-intensive than updating the DOM yourself, but without it, frameworks could not allow you to program in the declarative way they're known for.
 
 The **Virtual DOM** is an approach whereby information about your browser's DOM is stored in JavaScript memory. Your application updates this copy of the DOM, then compares it to the "real" DOM — the DOM that is actually rendered for your users — in order to decide what to render. The application builds a "diff" to compare the differences between the updated virtual DOM and the currently rendered DOM, and uses that diff to apply updates to the real DOM. Both React and Vue utilize a virtual DOM model, but they do not apply the exact same logic when diffing or rendering.
 
@@ -294,7 +288,7 @@ Each framework has extensive tools in its ecosystem, with capabilities for unit 
 
 [Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular. The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
 
-Here’s a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
+Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 
 ```js
 import React from "react";
@@ -325,7 +319,7 @@ it("Increments the count when clicked", () => {
 
 ## Summary
 
-At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you’re enthusiastic to get going and actually do some coding, and that's what you are going to do next! At this point you can choose which framework you'd like to start learning first:
+At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you're enthusiastic to get going and actually do some coding, and that's what you are going to do next! At this point you can choose which framework you'd like to start learning first:
 
 - [React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 - [Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)

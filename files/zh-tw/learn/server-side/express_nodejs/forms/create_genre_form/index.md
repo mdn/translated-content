@@ -12,8 +12,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 打開 **/controllers/genreController.js**，並在文件頂部添加以下幾行：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 ## Controller—get route
@@ -22,8 +22,8 @@ Find the exported `genre_create_get()` controller method and replace it with the
 
 ```js
 // Display Genre create form on GET.
-exports.genre_create_get = function(req, res, next) {
-    res.render('genre_form', { title: 'Create Genre' });
+exports.genre_create_get = function (req, res, next) {
+  res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
@@ -33,55 +33,52 @@ Find the exported `genre_create_post()` controller method and replace it with th
 
 ```js
 // Handle Genre create on POST.
-exports.genre_create_post =  [
+exports.genre_create_post = [
+  // Validate that the name field is not empty.
+  body("name", "Genre name required").isLength({ min: 1 }).trim(),
 
-    // Validate that the name field is not empty.
-    body('name', 'Genre name required').isLength({ min: 1 }).trim(),
+  // Sanitize (trim and escape) the name field.
+  sanitizeBody("name").trim().escape(),
 
-    // Sanitize (trim and escape) the name field.
-    sanitizeBody('name').trim().escape(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    // Process request after validation and sanitization.
-    (req, res, next) => {
+    // Create a genre object with escaped and trimmed data.
+    var genre = new Genre({ name: req.body.name });
 
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        // Create a genre object with escaped and trimmed data.
-        var genre = new Genre(
-          { name: req.body.name }
-        );
-
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render the form again with sanitized values/error messages.
-            res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
-        return;
+    if (!errors.isEmpty()) {
+      // There are errors. Render the form again with sanitized values/error messages.
+      res.render("genre_form", {
+        title: "Create Genre",
+        genre: genre,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      // Data from form is valid.
+      // Check if Genre with same name already exists.
+      Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+        if (err) {
+          return next(err);
         }
-        else {
-            // Data from form is valid.
-            // Check if Genre with same name already exists.
-            Genre.findOne({ 'name': req.body.name })
-                .exec( function(err, found_genre) {
-                     if (err) { return next(err); }
 
-                     if (found_genre) {
-                         // Genre exists, redirect to its detail page.
-                         res.redirect(found_genre.url);
-                     }
-                     else {
-
-                         genre.save(function (err) {
-                           if (err) { return next(err); }
-                           // Genre saved. Redirect to genre detail page.
-                           res.redirect(genre.url);
-                         });
-
-                     }
-
-                 });
+        if (found_genre) {
+          // Genre exists, redirect to its detail page.
+          res.redirect(found_genre.url);
+        } else {
+          genre.save(function (err) {
+            if (err) {
+              return next(err);
+            }
+            // Genre saved. Redirect to genre detail page.
+            res.redirect(genre.url);
+          });
         }
+      });
     }
+  },
 ];
 ```
 
@@ -131,20 +128,22 @@ If the genre name data is valid then we check if a `Genre` with the same name al
 
 ```js
 // Check if Genre with same name already exists.
-Genre.findOne({ 'name': req.body.name })
-    .exec( function(err, found_genre) {
-    if (err) { return next(err); }
-        if (found_genre) {
-            // Genre exists, redirect to its detail page.
-            res.redirect(found_genre.url);
-            }
-        else {
-            genre.save(function (err) {
-                if (err) { return next(err); }
-                    // Genre saved. Redirect to genre detail page.
-                    res.redirect(genre.url);
-                });
-        }
+Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+  if (err) {
+    return next(err);
+  }
+  if (found_genre) {
+    // Genre exists, redirect to its detail page.
+    res.redirect(found_genre.url);
+  } else {
+    genre.save(function (err) {
+      if (err) {
+        return next(err);
+      }
+      // Genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
+    });
+  }
 });
 ```
 
@@ -155,13 +154,17 @@ This same pattern is used in all our post controllers: we run validators, then s
 The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
 
 ```js
-res.render('genre_form', { title: 'Create Genre'});
-res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+res.render("genre_form", { title: "Create Genre" });
+res.render("genre_form", {
+  title: "Create Genre",
+  genre: genre,
+  errors: errors.array(),
+});
 ```
 
 Create **/views/genre_form.pug** and copy in the text below.
 
-```html
+```pug
 extends layout
 
 block content

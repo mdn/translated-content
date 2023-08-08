@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ## 構文
 
 ```js
-WebAssembly.validate(bufferSource)
+WebAssembly.validate(bufferSource);
 ```
 
 ### 引数
@@ -34,13 +33,14 @@ WebAssembly.validate(bufferSource)
 以下の例 (`validate.html` の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html) をご確認ください) は .wasm モジュールを読み取って型付き配列に変換します。次に、 `validate()` メソッドを使用してモジュールが有効かどうかをチェックします。</p>
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
-    + (valid ? "" : "not ") + "a valid wasm module");
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then(function (bytes) {
+    var valid = WebAssembly.validate(bytes);
+    console.log(
+      "The given bytes are " + (valid ? "" : "not ") + "a valid wasm module",
+    );
+  });
 ```
 
 ## 仕様書

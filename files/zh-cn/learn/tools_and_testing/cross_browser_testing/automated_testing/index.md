@@ -124,10 +124,10 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 5. 现在在你的项目目录下创建一个叫做 `gulpfile.js` 的新文件。这是一个将运行我们所有任务的文件。在这个文件中，放入以下内容：
 
    ```js
-   const gulp = require('gulp');
+   const gulp = require("gulp");
 
-   exports.default = function(cb) {
-     console.log('Gulp running');
+   exports.default = function (cb) {
+     console.log("Gulp running");
      cb();
    };
    ```
@@ -165,17 +165,18 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 2. 将以下依赖加入到 `gulpfile.js` 中：
 
    ```js
-   const htmltidy = require('gulp-htmltidy');
+   const htmltidy = require("gulp-htmltidy");
    ```
 
 3. 将以下测试加入到 `gulpfile.js` 的底部：
 
    ```js
    function html(cb) {
-     return gulp.src('src/index.html')
-           .pipe(htmltidy())
-           .pipe(gulp.dest('build'));
-       cb();
+     return gulp
+       .src("src/index.html")
+       .pipe(htmltidy())
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -209,22 +210,25 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 2. 将以下依赖加入到 `gulpfile.js` 中：
 
    ```js
-   const autoprefixer = require('gulp-autoprefixer');
-   const csslint = require('gulp-csslint');
+   const autoprefixer = require("gulp-autoprefixer");
+   const csslint = require("gulp-csslint");
    ```
 
 3. 将以下测试加入到 `gulpfile.js` 的底部：
 
    ```js
    function css(cb) {
-       return gulp.src('src/style.css')
-           .pipe(csslint())
-           .pipe(csslint.formatter('compact'))
-           .pipe(autoprefixer({
-               cascade: false
-           }))
-           .pipe(gulp.dest('build'));
-       cb();
+     return gulp
+       .src("src/style.css")
+       .pipe(csslint())
+       .pipe(csslint.formatter("compact"))
+       .pipe(
+         autoprefixer({
+           cascade: false,
+         }),
+       )
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -239,7 +243,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 5. 在 const 定义后加入这一行：
 
    ```js
-   const { series } = require('gulp');
+   const { series } = require("gulp");
    ```
 
 6. 使用以下代码导出 css 任务：
@@ -269,22 +273,25 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 2. 将以下依赖加入到 `gulpfile.js` 中：
 
    ```js
-   const babel = require('gulp-babel');
-   const jshint = require('gulp-jshint');
+   const babel = require("gulp-babel");
+   const jshint = require("gulp-jshint");
    ```
 
 3. 将以下测试加入到 `gulpfile.js` 的底部：
 
    ```js
    function js(cb) {
-       return gulp.src('src/main.js')
-           .pipe(jshint())
-           .pipe(jshint.reporter('default'))
-           .pipe(babel({
-               presets: ['@babel/env']
-           }))
-           .pipe(gulp.dest('build'));
-           cb();
+     return gulp
+       .src("src/main.js")
+       .pipe(jshint())
+       .pipe(jshint.reporter("default"))
+       .pipe(
+         babel({
+           presets: ["@babel/env"],
+         }),
+       )
+       .pipe(gulp.dest("build"));
+     cb();
    }
    ```
 
@@ -316,9 +323,9 @@ Gulp 有一个 `watch()` 函数，你可以用它来监视你的文件，并在�
 
 ```js
 function watch() {
-  gulp.watch('src/*.html', html)
-  gulp.watch('src/*.css', css)
-  gulp.watch('src/*.js', js)
+  gulp.watch("src/*.html", html);
+  gulp.watch("src/*.css", css);
+  gulp.watch("src/*.js", js);
 }
 
 exports.watch = watch;
@@ -368,7 +375,7 @@ exports.watch = watch;
    [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
    如果你注意到用户界面的问题，那么你可以用截图按钮捕捉虚拟机的截图，与你的同事分享。你还可以通过点击测试会话中的录音机按钮来录制你的测试会话的视频。
 4. 有了内置的图像编辑器，在推送给同事之前，可以以问题所在之处标记你的屏幕截图。![强调问题所在](mark-as-bug-3.png)
-5. 使用“标记为bug”的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
+5. 使用“标记为 bug”的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
 
 > **备注：** 所有在测试会话中捕获的视频和图像都被捕获在 LambdaTest 的图库、测试日志和问题跟踪器中。
 
@@ -391,11 +398,11 @@ exports.watch = watch;
 4. 当加载完成后，你就可以开始远程测试在所选浏览器中运行的网站。![Sauce 测试正在运行](sauce-test-running.png)
 5. 在这里，你可以看到你正在测试的浏览器中的布局，移动鼠标并尝试点击按钮，等等。顶部的菜单允许你：
 
-    - 停止会话
-    - 给其他人一个 URL，以远程观察测试。
-    - 复制文本/笔记到远程剪贴板。
-    - 进行屏幕截图。
-    - 以全屏模式测试。
+   - 停止会话
+   - 给其他人一个 URL，以远程观察测试。
+   - 复制文本/笔记到远程剪贴板。
+   - 进行屏幕截图。
+   - 以全屏模式测试。
 
 一旦你停止了会话，你就会回到 Manual Tests 标签，在那里你会看到你以前开始的每个手动会话的条目。点击其中一个条目，就可以看到该环节的更多数据。在这里，你可以下载你拍摄的任何屏幕截图，观看会话的视频，查看数据日志等等。
 
@@ -419,11 +426,11 @@ Sauce Labs 有一个 [restful API](https://docs.saucelabs.com/dev/api/)，允许
 3. 在你的项目根目录下创建一个新的文件，名为 `call_sauce.js`。填入以下内容：
 
    ```js
-   const SauceLabs = require('saucelabs');
+   const SauceLabs = require("saucelabs");
 
    let myAccount = new SauceLabs({
      username: "your-sauce-username",
-     password: "your-sauce-api-key"
+     password: "your-sauce-api-key",
    });
 
    myAccount.getAccountDetails((err, res) => {
@@ -556,7 +563,7 @@ BrowserStack 也有一个 [restful API](https://www.browserstack.com/docs/automa
 下面我们还提供了一些其他现成的函数，你可能会发现在使用 BrowserStack 的 restful API 时很有用。
 
 ```js
-function getBuilds(){
+function getBuilds() {
   request({ uri: `${baseUrl}builds.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
@@ -581,13 +588,16 @@ function getBuilds(){
     // …
   ]
   */
-};
+}
 
-function getSessionsInBuild(build){
+function getSessionsInBuild(build) {
   const buildId = build.automation_build.hashed_id;
-  request({ uri: `${baseUrl}builds/${buildId}/sessions.json` }, (err, res, body) => {
-    console.log(JSON.parse(body));
-  });
+  request(
+    { uri: `${baseUrl}builds/${buildId}/sessions.json` },
+    (err, res, body) => {
+      console.log(JSON.parse(body));
+    },
+  );
   /* Response:
   [
     {
@@ -639,9 +649,9 @@ function getSessionsInBuild(build){
   */
 }
 
-function getSessionDetails(session){
+function getSessionDetails(session) {
   const sessionId = session.automation_session.hashed_id;
-  request({uri: `${baseUrl}sessions/${sessionId}.json`}, (err, res, body) => {
+  request({ uri: `${baseUrl}sessions/${sessionId}.json` }, (err, res, body) => {
     console.log(JSON.parse(body));
   });
   /* Response:
@@ -721,11 +731,11 @@ TestingBot 有几个 API 客户端，你可以用来与 API 互动，包括 Node
 3. 在项目根目录中创建 `tb.js` 文件，填入如下内容：
 
    ```js
-   const TestingBot = require('testingbot-api');
+   const TestingBot = require("testingbot-api");
 
    let tb = new TestingBot({
      api_key: "your-tb-key",
-     api_secret: "your-tb-secret"
+     api_secret: "your-tb-secret",
    });
 
    tb.getTests(function (err, tests) {

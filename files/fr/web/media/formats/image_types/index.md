@@ -1,31 +1,6 @@
 ---
 title: Guide des types et formats de fichiers d'images
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - gif
-  - icon
-translation_of: Web/Media/Formats/Image_types
-original_slug: Web/Media/Formats/Types_des_images
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
@@ -198,7 +173,7 @@ Dans les tableaux ci-dessous, le terme **bits par composante** fait référence 
 
 L'APNG est un format de fichier introduit pour la première fois par Mozilla qui étend le [PNG](#png) pour ajouter le support des images animées. Conceptuellement similaire au format GIF animé qui est utilisé depuis des décennies, l'APNG est plus performant dans la mesure où il prend en charge une variété de [profondeur de couleur](<https://fr.wikipedia.org/wiki/Profondeur_de_couleur_(informatique)>), alors que le GIF animé ne supporte que des [couleurs indexées](https://en.wikipedia.org/wiki/Indexed_color) sur 8 bits.
 
-L'APNG est idéal pour les animations de base qui n'ont pas besoin d'être synchronisées avec d'autres activités ou avec une bande son, comme les indicateurs de progrès, [indicateur d'activité](https://fr.wikipedia.org/wiki/Indicateur_d%27activit%C3%A9), et autres séquences animées. Par exemple, l'APNG est [l'un des formats pris en charge lors de la création d'autocollants animés](https://developer.apple.com/stickers/) pour l'application iMessage d'Apple (et l'application Messages sur iOS). Ils sont également couramment utilisés pour les parties animées des interfaces utilisateur des navigateurs web.
+L'APNG est idéal pour les animations de base qui n'ont pas besoin d'être synchronisées avec d'autres activités ou avec une bande son, comme les indicateurs de progrès, [indicateur d'activité](https://fr.wikipedia.org/wiki/Indicateur_d%27activité), et autres séquences animées. Par exemple, l'APNG est [l'un des formats pris en charge lors de la création d'autocollants animés](https://developer.apple.com/stickers/) pour l'application iMessage d'Apple (et l'application Messages sur iOS). Ils sont également couramment utilisés pour les parties animées des interfaces utilisateur des navigateurs web.
 
 <table class="standard-table">
   <tbody>
@@ -652,11 +627,11 @@ Le format GIF est un bon choix pour les images et les animations simples, bien q
 
 ### ICO (Microsoft Windows icon)
 
-Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_ic%c3%b4nes_personnalis%c3%a9es_%c3%a0_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
+Le format de fichier ICO (Microsoft Windows icon) a été conçu par Microsoft pour les icônes de bureau des systèmes Windows. Cependant, les premières versions d'Internet Explorer ont introduit la possibilité pour un site web de fournir un fichier ICO nommé `favicon.ico` dans le répertoire racine d'un site web pour spécifier un **[favicon](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site)** — une icône à afficher dans le menu Favoris, et d'autres endroits où une représentation iconique du site serait utile.
 
 Un fichier ICO peut contenir plusieurs icônes, et commence par un répertoire contenant des détails sur chacune d'entre elles. Ce répertoire est suivi des données relatives aux icônes. Les données de chaque icône peuvent être soit une image [BMP](#bmp) sans l'en-tête du fichier, soit une image [PNG](#png) complète (y compris l'en-tête du fichier). Si vous utilisez des fichiers ICO, vous devez utiliser le format BMP, car la prise en charge du format PNG dans les fichiers ICO n'a été ajoutée qu'à partir de Windows Vista et pourrait ne pas être bien prise en charge.
 
-> **Attention :** Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_ic%C3%B4nes_personnalis%C3%A9es_%C3%A0_un_site).
+> **Attention :** Les fichiers ICO ne doivent pas être utilisés dans le contenu Web. En outre, leur utilisation pour les favicons a diminué au profit de l'utilisation d'un fichier PNG et de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), comme décrit dans [cette section](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site).
 
 <table class="standard-table">
   <tbody>
@@ -900,7 +875,7 @@ Le JPEG est en fait un format de données pour les photos compressées, plutôt 
       <td>
         Sans perte; sur la base de la
         <a
-          href="https://fr.wikipedia.org/wiki/Transform%C3%A9e_en_cosinus_discr%C3%A8te"
+          href="https://fr.wikipedia.org/wiki/Transformée_en_cosinus_discrète"
           >transformée en cosinus discrète</a
         >
       </td>
@@ -1619,10 +1594,13 @@ Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vou
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagramme montrant les canaux de données">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagramme montrant les canaux de données" />
 </picture>
 ```
 

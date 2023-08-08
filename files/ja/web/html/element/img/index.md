@@ -14,7 +14,7 @@ l10n:
 上記の例では、 `<img>` 要素の使い方を示しています。
 
 - `src` 属性は**必須**で、埋め込みたい画像へのパスを入れます。
-- `alt` 属性は画像のテキストによる説明で、必須ではありませんがアクセシビリティのために**非常に有用**です。 — 画面リーダーがこの説明を読み上げることで、画像が何を表すかをユーザーが知ることができます。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
+- `alt` 属性は画像のテキストによる説明で、必須ではありませんがアクセシビリティのために**非常に有用**です。 — スクリーンリーダーがこの説明を読み上げることで、画像が何を表すかをユーザーが知ることができます。また、ネットワークエラーやコンテンツのブロック、リンク切れ等の理由で画像が読み込めなかった場合にも代替テキストが表示されます。
 
 他にも、様々な目的で指定できる属性がたくさんあります。
 
@@ -39,7 +39,7 @@ HTML 標準では、対応する画像形式を指定していないので、{{g
 - [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
 - [WebP (Web Picture format)](/ja/docs/Web/Media/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
 
-[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。 WebP は広く対応されていますが、 AVIF は Safari での対応が不足しています。
+[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。 WebP は広く対応されていますが、 AVIF は Edge での対応が不足しています。
 
 SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
 

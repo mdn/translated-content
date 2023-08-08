@@ -27,18 +27,21 @@ slug: Web/API/CountQueuingStrategy
 ```js
 const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    // …
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    // …
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queueingStrategy);
+  queueingStrategy,
+);
 
 const size = queueingStrategy.size();
 ```
@@ -50,3 +53,9 @@ const size = queueingStrategy.size();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("Streams API", "Stream API", "", 1)}}
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} 构造函数
+- [内置队列和队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)

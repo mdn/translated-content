@@ -1,7 +1,6 @@
 ---
 title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 ---
 
 {{APIRef("DOM")}}
@@ -36,33 +35,31 @@ O objeto de nível mais alto {{domxref("Element")}} dentro das coordenadas decla
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>exemplo de elementFromPoint</title>
+  <head>
+    <title>exemplo de elementFromPoint</title>
 
-<script>
-function changeColor(newColor) {
-  elem = document.elementFromPoint(2, 2);
-  elem.style.color = newColor;
-}
-</script>
-</head>
+    <script>
+      function changeColor(newColor) {
+        elem = document.elementFromPoint(2, 2);
+        elem.style.color = newColor;
+      }
+    </script>
+  </head>
 
-<body>
-<p id="para1">Algum texto aqui</p>
-<button onclick="changeColor('blue');">azul</button>
-<button onclick="changeColor('red');">vermelho</button>
-</body>
+  <body>
+    <p id="para1">Algum texto aqui</p>
+    <button onclick="changeColor('blue');">azul</button>
+    <button onclick="changeColor('red');">vermelho</button>
+  </body>
 </html>
 ```
 
 ## Especificações
 
-| Especificação                                                                                                | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint')}} | {{Spec2('CSSOM View')}} | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.elementFromPoint")}}
+{{Compat}}

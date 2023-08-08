@@ -135,7 +135,7 @@ text-align: unset;
 
 #### Resultado
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample("Justificado","100%","100%")}}
 
 ### Notas
 

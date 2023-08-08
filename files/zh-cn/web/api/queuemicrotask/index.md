@@ -35,7 +35,7 @@ queueMicrotask(() => {/* ... */});
 ```js
 queueMicrotask(() => {
   // 函数的内容
-})
+});
 ```
 
 来自 [`queueMicrotask` 的规范文档：](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)

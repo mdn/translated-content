@@ -1,7 +1,6 @@
 ---
 title: Aplicando estilos e cores
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
@@ -26,10 +25,10 @@ As strings validas que você pode inserir devem, de acordo com a especificação
 ```js
 // these all set the fillStyle to 'orange'
 
-ctx.fillStyle = 'orange';
-ctx.fillStyle = '#FFA500';
-ctx.fillStyle = 'rgb(255, 165, 0)';
-ctx.fillStyle = 'rgba(255, 165, 0, 1)';
+ctx.fillStyle = "orange";
+ctx.fillStyle = "#FFA500";
+ctx.fillStyle = "rgb(255, 165, 0)";
+ctx.fillStyle = "rgba(255, 165, 0, 1)";
 ```
 
 ### Um `fillStyle` exemplo
@@ -38,11 +37,15 @@ Neste exemplo, nós vamos mais uma vez utilizar dois `for` loops para desenhar u
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
-                       Math.floor(255 - 42.5 * j) + ',0)';
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ",0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -66,18 +69,22 @@ O resultado se parece com isto:
 Este exemplo é similar com o anterior, porém utiliza a propriedade `strokeStyle` para alterar a cor de contorno das formas. Nós usamos o método `arc()` para desenhar círculos ao invés de quadrados.
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
-                         Math.floor(255 - 42.5 * j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-        ctx.stroke();
-      }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0," +
+        Math.floor(255 - 42.5 * i) +
+        "," +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -107,8 +114,8 @@ Como as propriedades strokeStyle e fillStyle aceitam os valores de cor CSS rgba,
 ```js
 // Assigning transparent colors to stroke and fill style
 
-ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ```
 
 A função rgba () é semelhante à função rgb (), mas possui um parâmetro extra. O último parâmetro define o valor da transparência dessa cor específica. O intervalo válido é novamente entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
@@ -119,17 +126,17 @@ Neste exemplo, desenharemos um plano de fundo de quatro quadrados coloridos dife
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // set transparency value
   ctx.globalAlpha = 0.2;
@@ -159,21 +166,21 @@ Neste segundo exemplo, fazemos algo semelhante ao anterior, mas em vez de desenh
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillStyle = "rgb(255, 221, 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillStyle = "rgb(102, 204, 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillStyle = "rgb(0, 153, 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillStyle = "rgb(255, 51, 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Draw semi transparent rectangles
   for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = "rgba(255, 255, 255, " + (i + 1) / 10 + ")";
     for (var j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -222,7 +229,7 @@ No exemplo abaixo, 10 linhas retas são desenhadas com larguras de linhas cresce
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
@@ -258,7 +265,7 @@ Para linhas de largura uniforme, cada metade acaba sendo uma quantidade inteira 
 
 Embora seja um pouco doloroso ao trabalhar inicialmente com gráficos 2D escalonáveis, prestar atenção à grade de pixels e à posição dos caminhos garante que seus desenhos pareçam corretos, independentemente da escala ou de qualquer outra transformação envolvida. Uma linha vertical de 1,0 largura desenhada na posição correta se tornará uma linha nítida de 2 pixels quando aumentada em 2 e aparecerá na posição correta.
 
-### Exemplo lineCap.
+### Exemplo lineCap
 
 A propriedade lineCap determina como os pontos finais de cada linha são desenhados. Existem três valores possíveis para essa propriedade e são: bunda, redondo e quadrado. Por padrão, essa propriedade está configurada para butt.![](canvas_linecap.png)
 
@@ -276,11 +283,11 @@ A linha à esquerda usa a opção de topo padrão. Você notará que está desen
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt', 'round', 'square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // Draw guides
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -289,7 +296,7 @@ function draw() {
   ctx.stroke();
 
   // Draw lines
-  ctx.strokeStyle = 'black';
+  ctx.strokeStyle = "black";
   for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
@@ -328,8 +335,8 @@ O exemplo abaixo desenha três caminhos diferentes, demonstrando cada uma dessas
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -374,32 +381,32 @@ Se você especificar um valor de miterLimite abaixo de 4.2 nesta demonstração,
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Clear canvas
   ctx.clearRect(0, 0, 150, 150);
 
   // Draw guides
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // Set line styles
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // check input
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // Draw lines
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++){
-    var dy = i % 2 == 0 ? 25 : -25 ;
+  for (i = 0; i < 24; i++) {
+    var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
   ctx.stroke();
@@ -411,11 +418,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td>Change the <code>miterLimit</code> by entering a new value below and clicking the redraw button.<br><br>
+    <td>
+      Change the <code>miterLimit</code> by entering a new value below and
+      clicking the redraw button.<br /><br />
       <form onsubmit="return draw();">
         <label>Miter limit</label>
-        <input type="text" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="text" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -423,7 +432,9 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
@@ -440,7 +451,7 @@ Neste exemplo, criaremos um efeito de formigas caminhando. É uma técnica de an
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -489,8 +500,8 @@ You can add as many color stops to a gradient as you need. Below is a very simpl
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### A `createLinearGradient` example
@@ -499,18 +510,18 @@ In this example, we'll create two different gradients. As you can see here, both
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // assign gradients to fill and stroke styles
   ctx.fillStyle = lingrad;
@@ -519,7 +530,6 @@ function draw() {
   // draw shapes
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -543,28 +553,28 @@ In this example, we'll define four different radial gradients. Because we have c
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Create gradients
   var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1, 159, 98, 0)');
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
 
   var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255, 1, 136, 0)');
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
 
   var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
 
   var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228, 199, 0, 0)');
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
 
   // draw shapes
   ctx.fillStyle = radgrad4;
@@ -614,8 +624,8 @@ We use this method to create a {{domxref("CanvasPattern")}} object which is very
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
 > **Nota:** Like with the `drawImage()` method, you must make sure the image you use is loaded before calling this method or the pattern may be drawn incorrectly.
@@ -626,19 +636,17 @@ In this last example, we'll create a pattern to assign to the `fillStyle` proper
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // create new image object to use as pattern
   var img = new Image();
-  img.src = 'canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // create pattern
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -679,16 +687,16 @@ This example draws a text string with a shadowing effect.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
 
-  ctx.font = '20px Times New Roman';
-  ctx.fillStyle = 'Black';
-  ctx.fillText('Sample String', 5, 30);
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
 }
 ```
 
@@ -719,11 +727,11 @@ In this example we are using the `evenodd` rule.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 

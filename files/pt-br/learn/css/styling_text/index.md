@@ -1,8 +1,8 @@
 ---
 title: Estilizando texto
 slug: Learn/CSS/Styling_text
-original_slug: Aprender/CSS/Estilizando_texto
 ---
+
 {{LearnSidebar}}
 
 Com o básico de CSS compreendido, o próximo passo para você se concentrar será a estilização de textos — uma das mais importantes coisas que você fará com CSS. Aqui nós olhamos para os fundamentos de estilização de texto, fontes, negritos, italicos, linha e espaço entre letras, sombreamente e outras características textuais. Completamos o módulo produrando aplicar fontes personalizadas para sua página, e estilizando listas e links.

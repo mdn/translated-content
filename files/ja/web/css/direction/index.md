@@ -85,4 +85,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- HTML の {{htmlattrxref("dir")}} グローバル属性
+- HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) グローバル属性

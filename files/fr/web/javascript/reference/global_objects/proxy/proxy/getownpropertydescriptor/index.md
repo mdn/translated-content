@@ -1,14 +1,6 @@
 ---
 title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
@@ -21,8 +13,7 @@ La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour interce
 
 ```js
 var p = new Proxy(cible, {
-  getOwnPropertyDescriptor: function(cible, prop) {
-  }
+  getOwnPropertyDescriptor: function (cible, prop) {},
 });
 ```
 
@@ -66,15 +57,18 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 Dans l'exemple qui suit, on intercepte {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ```js
-var p = new Proxy({ a: 20 }, {
-  getOwnPropertyDescriptor: function(cible, prop) {
-    console.log("appelée : " + prop);
-    return { configurable: true, enumerable: true, value: 10 };
-  }
-});
+var p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor: function (cible, prop) {
+      console.log("appelée : " + prop);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
+  },
+);
 
 console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "appelée : a"
-                                                            // 10
+// 10
 ```
 
 L'exemple suivant ne respecte pas un invariant :
@@ -83,9 +77,9 @@ L'exemple suivant ne respecte pas un invariant :
 var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
-  getOwnPropertyDescriptor: function(cible, prop) {
+  getOwnPropertyDescriptor: function (cible, prop) {
     return undefined;
-  }
+  },
 });
 
 Object.getOwnPropertyDescriptor(p, "a"); // Une exception TypeError est renvoyée

@@ -1,7 +1,6 @@
 ---
 title: Usando Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-original_slug: Web/Guide/Performance/Usando_web_workers
 ---
 
 Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador. Sin embargo, **los workers trabajan dentro de un [contexto global](/es/docs/JavaScript/DedicatedWorkerGlobalScope) diferente de la ventana actual** (usar el atajo {{ domxref("window") }} en lugar de {{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un {{ domxref("Worker") }} retornaría, de hecho, un error).
@@ -31,9 +30,13 @@ Alternativamente, puedes usar `addEventListener()` :
 ```js
 var myWorker = new Worker("my_task.js");
 
-myWorker.addEventListener("message", function (oEvent) {
-  console.log("Called back by the worker!\n");
-}, false);
+myWorker.addEventListener(
+  "message",
+  function (oEvent) {
+    console.log("Called back by the worker!\n");
+  },
+  false,
+);
 
 myWorker.postMessage(""); // start the worker.
 ```
@@ -49,8 +52,8 @@ Los datos pasan entre la página principal y los workers son **copiados**, no co
 Antes de continuar, vamos a crear con fines didácticos una función llamada `emulateMessage()` que simulará el comportamiento de un valor el cual es clonado y no compartido durante el paso desde un _worker_ a la página principal o viceversa:
 
 ```js
-function emulateMessage (vVal) {
-    return eval("(" + JSON.stringify(vVal) + ")");
+function emulateMessage(vVal) {
+  return eval("(" + JSON.stringify(vVal) + ")");
 }
 
 // Tests
@@ -72,16 +75,16 @@ alert(typeof emulateMessage(example3)); // string
 
 // test #4
 var example4 = {
-    "name": "John Smith",
-    "age": 43
+  name: "John Smith",
+  age: 43,
 };
 alert(typeof example4); // object
 alert(typeof emulateMessage(example4)); // object
 
 // test #5
-function Animal (sType, nAge) {
-    this.type = sType;
-    this.age = nAge;
+function Animal(sType, nAge) {
+  this.type = sType;
+  this.age = nAge;
 }
 var example5 = new Animal("Cat", 3);
 alert(example5.constructor); // Animal
@@ -105,7 +108,7 @@ myWorker.postMessage("ali");
 **my_task.js** (el worker):
 
 ```js
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
 onmessage = function (oEvent) {
   postMessage("Hi " + oEvent.data);
@@ -126,23 +129,25 @@ El siguiente ejemplo muestra como usar un worker para ejecutar **asíncronamente
 // Syntax: asyncEval(code[, listener])
 
 var asyncEval = (function () {
-
-  var aListeners = [], oParser = new Worker("data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D");
+  var aListeners = [],
+    oParser = new Worker(
+      "data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D",
+    );
 
   oParser.onmessage = function (oEvent) {
-    if (aListeners[oEvent.data.id]) { aListeners[oEvent.data.id](oEvent.data.evaluated); }
+    if (aListeners[oEvent.data.id]) {
+      aListeners[oEvent.data.id](oEvent.data.evaluated);
+    }
     delete aListeners[oEvent.data.id];
   };
-
 
   return function (sCode, fListener) {
     aListeners.push(fListener || null);
     oParser.postMessage({
-      "id": aListeners.length - 1,
-      "code": sCode
+      id: aListeners.length - 1,
+      code: sCode,
     });
   };
-
 })();
 ```
 
@@ -151,16 +156,18 @@ Ejemplo de uso:
 ```js
 // asynchronous alert message...
 asyncEval("3 + 2", function (sMessage) {
-    alert("3 + 2 = " + sMessage);
+  alert("3 + 2 = " + sMessage);
 });
 
 // asynchronous print message...
-asyncEval("\"Hello World!!!\"", function (sHTML) {
-    document.body.appendChild(document.createTextNode(sHTML));
+asyncEval('"Hello World!!!"', function (sHTML) {
+  document.body.appendChild(document.createTextNode(sHTML));
 });
 
 // asynchronous void...
-asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get\", \"http://www.mozilla.org/\", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()");
+asyncEval(
+  '(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open("get", "http://www.mozilla.org/", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()',
+);
 ```
 
 #### Ejemplo 2: Paso avanzado de JSON Data y creación de un sistema de conmutación
@@ -172,11 +179,11 @@ Si tiene que pasar datos complejos y tienes que llamar a muchas funciones difere
 ```html
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8"  />
-<title>MDN Example - Queryable worker</title>
-<script type="text/javascript">
-  /*
+  <head>
+    <meta charset="UTF-8" />
+    <title>MDN Example - Queryable worker</title>
+    <script type="text/javascript">
+      /*
     QueryableWorker instances methods:
      * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
      * postMessage(string or JSON Data): see Worker.prototype.postMessage()
@@ -186,60 +193,98 @@ Si tiene que pasar datos complejos y tienes que llamar a muchas funciones difere
     QueryableWorker instances properties:
      * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
   */
-  function QueryableWorker (sURL, fDefListener, fOnError) {
-    var oInstance = this, oWorker = new Worker(sURL), oListeners = {};
-    this.defaultListener = fDefListener || function () {};
-    oWorker.onmessage = function (oEvent) {
-      if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("vo42t30") && oEvent.data.hasOwnProperty("rnb93qh")) {
-        oListeners[oEvent.data.vo42t30].apply(oInstance, oEvent.data.rnb93qh);
-      } else {
-        this.defaultListener.call(oInstance, oEvent.data);
+      function QueryableWorker(sURL, fDefListener, fOnError) {
+        var oInstance = this,
+          oWorker = new Worker(sURL),
+          oListeners = {};
+        this.defaultListener = fDefListener || function () {};
+        oWorker.onmessage = function (oEvent) {
+          if (
+            oEvent.data instanceof Object &&
+            oEvent.data.hasOwnProperty("vo42t30") &&
+            oEvent.data.hasOwnProperty("rnb93qh")
+          ) {
+            oListeners[oEvent.data.vo42t30].apply(
+              oInstance,
+              oEvent.data.rnb93qh,
+            );
+          } else {
+            this.defaultListener.call(oInstance, oEvent.data);
+          }
+        };
+        if (fOnError) {
+          oWorker.onerror = fOnError;
+        }
+        this.sendQuery =
+          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
+            if (arguments.length < 1) {
+              throw new TypeError(
+                "QueryableWorker.sendQuery - not enough arguments",
+              );
+              return;
+            }
+            oWorker.postMessage({
+              bk4e1h0: arguments[0],
+              ktp3fm1: Array.prototype.slice.call(arguments, 1),
+            });
+          };
+        this.postMessage = function (vMsg) {
+          //I just think there is no need to use call() method
+          //how about just oWorker.postMessage(vMsg);
+          //the same situation with terminate
+          //well,just a little faster,no search up the prototye chain
+          Worker.prototype.postMessage.call(oWorker, vMsg);
+        };
+        this.terminate = function () {
+          Worker.prototype.terminate.call(oWorker);
+        };
+        this.addListener = function (sName, fListener) {
+          oListeners[sName] = fListener;
+        };
+        this.removeListener = function (sName) {
+          delete oListeners[sName];
+        };
       }
-    };
-    if (fOnError) { oWorker.onerror = fOnError; }
-    this.sendQuery = function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-      if (arguments.length < 1) { throw new TypeError("QueryableWorker.sendQuery - not enough arguments"); return; }
-      oWorker.postMessage({ "bk4e1h0": arguments[0], "ktp3fm1": Array.prototype.slice.call(arguments, 1) });
-    };
-    this.postMessage = function (vMsg) {
-      //I just think there is no need to use call() method
-      //how about just oWorker.postMessage(vMsg);
-      //the same situation with terminate
-      //well,just a little faster,no search up the prototye chain
-      Worker.prototype.postMessage.call(oWorker, vMsg);
-    };
-    this.terminate = function () {
-      Worker.prototype.terminate.call(oWorker);
-    };
-    this.addListener = function (sName, fListener) {
-      oListeners[sName] = fListener;
-    };
-    this.removeListener = function (sName) {
-      delete oListeners[sName];
-    };
-  };
 
-  // your custom "queryable" worker
-  var oMyTask = new QueryableWorker("my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */);
+      // your custom "queryable" worker
+      var oMyTask = new QueryableWorker(
+        "my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */,
+      );
 
-  // your custom "listeners"
+      // your custom "listeners"
 
-  oMyTask.addListener("printSomething", function (nResult) {
-    document.getElementById("firstLink").parentNode.appendChild(document.createTextNode(" The difference is " + nResult + "!"));
-  });
+      oMyTask.addListener("printSomething", function (nResult) {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(" The difference is " + nResult + "!"),
+          );
+      });
 
-  oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
-    alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
-  });
-</script>
-</head>
-<body>
-  <ul>
-    <li><a id="firstLink" href="javascript:oMyTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-    <li><a href="javascript:oMyTask.sendQuery('waitSomething');">Wait 3 seconds</a></li>
-    <li><a href="javascript:oMyTask.terminate();">terminate() the Worker</a></li>
-  </ul>
-</body>
+      oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
+        alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:oMyTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:oMyTask.sendQuery('waitSomething');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:oMyTask.terminate();">terminate() the Worker</a>
+      </li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -248,11 +293,11 @@ Si tiene que pasar datos complejos y tienes que llamar a muchas funciones difere
 ```js
 // your custom PRIVATE functions
 
-function myPrivateFunc1 () {
+function myPrivateFunc1() {
   // do something
 }
 
-function myPrivateFunc2 () {
+function myPrivateFunc2() {
   // do something
 }
 
@@ -263,28 +308,40 @@ function myPrivateFunc2 () {
 var queryableFunctions = {
   // example #1: get the difference between two numbers:
   getDifference: function (nMinuend, nSubtrahend) {
-      reply("printSomething", nMinuend - nSubtrahend);
+    reply("printSomething", nMinuend - nSubtrahend);
   },
   // example #2: wait three seconds
   waitSomething: function () {
-      setTimeout(function() { reply("alertSomething", 3, "seconds"); }, 3000);
-  }
+    setTimeout(function () {
+      reply("alertSomething", 3, "seconds");
+    }, 3000);
+  },
 };
 
 // system functions
 
-function defaultQuery (vMsg) {
+function defaultQuery(vMsg) {
   // your default PUBLIC function executed only when main page calls the queryableWorker.postMessage() method directly
   // do something
 }
 
-function reply (/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
-  if (arguments.length < 1) { throw new TypeError("reply - not enough arguments"); return; }
-  postMessage({ "vo42t30": arguments[0], "rnb93qh": Array.prototype.slice.call(arguments, 1) });
+function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+  if (arguments.length < 1) {
+    throw new TypeError("reply - not enough arguments");
+    return;
+  }
+  postMessage({
+    vo42t30: arguments[0],
+    rnb93qh: Array.prototype.slice.call(arguments, 1),
+  });
 }
 
 onmessage = function (oEvent) {
-  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("bk4e1h0") && oEvent.data.hasOwnProperty("ktp3fm1")) {
+  if (
+    oEvent.data instanceof Object &&
+    oEvent.data.hasOwnProperty("bk4e1h0") &&
+    oEvent.data.hasOwnProperty("ktp3fm1")
+  ) {
     queryableFunctions[oEvent.data.bk4e1h0].apply(self, oEvent.data.ktp3fm1);
   } else {
     defaultQuery(oEvent.data);
@@ -300,7 +357,7 @@ Google Chrome 17 y Firefox 18 implementan un método adicional para enviar ciert
 
 ```js
 // Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
+var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
 for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
@@ -321,53 +378,65 @@ Subworkers are currently not supported in Chrome. See [crbug.com/31666](http://c
 There is not an "official" way to embed the code of a worker within a web page as for the {{ HTMLElement("script") }} elements. But a {{ HTMLElement("script") }} element which does not have a `src` attribute and has a `type` attribute that does not identify an executable mime-type will be considered a data block element, that JavaScript could use. "Data blocks" is a more general feature of HTML5 that can carry almost any textual data. So, a worker could be embedded in this way:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>MDN Example - Embedded worker</title>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-  var myVar = "Hello World!";
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its mime-type is text/javascript.
-  function pageLog (sMsg) {
-    // Use a fragment: browser will only render/reflow once.
-    var oFragm = document.createDocumentFragment();
-    oFragm.appendChild(document.createTextNode(sMsg));
-    oFragm.appendChild(document.createElement("br"));
-    document.querySelector("#logDisplay").appendChild(oFragm);
-  }
-</script>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-  onmessage = function (oEvent) {
-    postMessage(myVar);
-  };
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+  <head>
+    <meta charset="UTF-8" />
+    <title>MDN Example - Embedded worker</title>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
+      var myVar = "Hello World!";
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+      function pageLog(sMsg) {
+        // Use a fragment: browser will only render/reflow once.
+        var oFragm = document.createDocumentFragment();
+        oFragm.appendChild(document.createTextNode(sMsg));
+        oFragm.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(oFragm);
+      }
+    </script>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
+      onmessage = function (oEvent) {
+        postMessage(myVar);
+      };
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
 
-  // In the past...:
-  // blob builder existed
-  // ...but now we use Blob...:
-  var blob = new Blob(Array.prototype.map.call(document.querySelectorAll("script[type=\"text\/js-worker\"]"), function (oScript) { return oScript.textContent; }),{type: "text/javascript"});
+      // In the past...:
+      // blob builder existed
+      // ...but now we use Blob...:
+      var blob = new Blob(
+        Array.prototype.map.call(
+          document.querySelectorAll('script[type="text\/js-worker"]'),
+          function (oScript) {
+            return oScript.textContent;
+          },
+        ),
+        { type: "text/javascript" },
+      );
 
-  // Creating a new document.worker property containing all our "text/js-worker" scripts.
-  document.worker = new Worker(window.URL.createObjectURL(blob));
+      // Creating a new document.worker property containing all our "text/js-worker" scripts.
+      document.worker = new Worker(window.URL.createObjectURL(blob));
 
-  document.worker.onmessage = function (oEvent) {
-    pageLog("Received: " + oEvent.data);
-  };
+      document.worker.onmessage = function (oEvent) {
+        pageLog("Received: " + oEvent.data);
+      };
 
-  // Start the worker.
-  window.onload = function() { document.worker.postMessage(""); };
-</script>
-</head>
-<body><div id="logDisplay"></div></body>
+      // Start the worker.
+      window.onload = function () {
+        document.worker.postMessage("");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="logDisplay"></div>
+  </body>
 </html>
 ```
 
@@ -422,9 +491,9 @@ Los workers pueden acceder al objeto `navigator`, el cuál está disponible dent
 Worker threads have access to a global function, `importScripts()` , which lets them import scripts or libraries into their scope. It accepts as parameters zero or more URIs to resources to import; all of the following examples are valid:
 
 ```js
-importScripts();                        /* imports nothing */
-importScripts('foo.js');                /* imports just "foo.js" */
-importScripts('foo.js', 'bar.js');      /* imports two scripts */
+importScripts(); /* imports nothing */
+importScripts("foo.js"); /* imports just "foo.js" */
+importScripts("foo.js", "bar.js"); /* imports two scripts */
 ```
 
 The browser loads each listed script and executes it. Any global objects from each script may then be used by the worker. If the script can't be loaded, `NETWORK_ERROR` is thrown, and subsequent code will not be executed. Previously executed code (including code deferred using {{ domxref("window.setTimeout()") }}) will still be functional though. Function declarations **after** the `importScripts()` method are also kept, since these are always evaluated before the rest of the code.
@@ -457,7 +526,7 @@ function errorReceiver(event) {
   throw event.data;
 }
 
-onmessage = function(event) {
+onmessage = function (event) {
   var n = parseInt(event.data);
 
   if (n == 0 || n == 1) {
@@ -471,7 +540,7 @@ onmessage = function(event) {
     worker.onerror = errorReceiver;
     worker.postMessage(n - i);
   }
- };
+};
 ```
 
 The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called. (Note that this differs from defining a global _variable_ of that name, or defining a _function_ with that name. `var onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker.) This starts the recursion, spawning new copies of itself to handle each iteration of the calculation.
@@ -479,33 +548,30 @@ The worker sets the property `onmessage` to a function which will receive messag
 #### The HTML code
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8" />
     <title>Test threads fibonacci</title>
   </head>
   <body>
+    <div id="result"></div>
 
-  <div id="result"></div>
+    <script language="javascript">
+      var worker = new Worker("fibonacci.js");
 
-  <script language="javascript">
+      worker.onmessage = function (event) {
+        document.getElementById("result").textContent = event.data;
+        dump("Got: " + event.data + "\n");
+      };
 
-    var worker = new Worker("fibonacci.js");
+      worker.onerror = function (error) {
+        dump("Worker error: " + error.message + "\n");
+        throw error;
+      };
 
-    worker.onmessage = function(event) {
-      document.getElementById("result").textContent = event.data;
-      dump("Got: " + event.data + "\n");
-    };
-
-    worker.onerror = function(error) {
-      dump("Worker error: " + error.message + "\n");
-      throw error;
-    };
-
-    worker.postMessage("5");
-
-  </script>
+      worker.postMessage("5");
+    </script>
   </body>
 </html>
 ```

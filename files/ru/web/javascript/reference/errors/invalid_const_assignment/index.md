@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: invalid assignment to const "x"(недопустимое назначение const "x")'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
-translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
 
 {{jsSidebar("Errors")}}
@@ -79,19 +78,19 @@ function setupBigScreenEnvironment() {
 Объявление const создаёт ссылку только для чтения на значение. Это не означает, что значение, которое он содержит, является неизменяемым, просто идентификатор переменной не может быть переназначен. Например, если содержимое является объектом, это означает, что сам объект все ещё может быть изменён. Это означает, что нельзя изменить значение, хранящееся в переменной:
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 Но можно изменить свойства в переменной:
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 
 ## Смотрите также
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)

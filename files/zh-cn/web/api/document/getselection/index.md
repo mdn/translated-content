@@ -25,10 +25,10 @@ A {{DOMxRef("Selection")}} object.
 
 ```js
 function foo() {
-    var selObj = document.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // do stuff with the range
+  var selObj = document.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // do stuff with the range
 }
 ```
 

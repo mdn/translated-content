@@ -1,7 +1,6 @@
 ---
 title: ウェブコンポーネント
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -56,7 +55,7 @@ original_slug: Web/Web_Components
 
   - : 以下の拡張機能が定義されています。
 
-    - {{htmlattrxref("is")}} グローバル HTML 属性: 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
+    - [`is`](/ja/docs/Web/HTML/Global_attributes#is) グローバル HTML 属性: 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション: カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
 
 - CSS の擬似クラス
@@ -72,7 +71,7 @@ original_slug: Web/Web_Components
 
   - : カスタム要素に関連する擬似要素です。
 
-    - {{cssxref("::part")}}: [シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内にある要素で、一致する {{HTMLAttrxRef("part")}} 属性を持つものを表します。
+    - {{cssxref("::part")}}: [シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つものを表します。
 
 ### シャドウ DOM
 
@@ -152,7 +151,7 @@ original_slug: Web/Web_Components
 ## 関連情報
 
 - [Open Web Components](https://open-wc.org/) — Guides, tools and libraries for developing web components.
-- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API’s and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
+- [DataFormsJS](https://www.dataformsjs.com/) — Open source web components library — Set of Web Components that can be used to build Single Page Apps (SPA), Display JSON data from API's and Web Services, and bind data to different elements on screen. All Web Components are plain JavaScript and require no build process.
 - [FAST](https://fast.design/) is a web component library built by Microsoft which offers several packages to leverage depending on your project needs. [Fast Element](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-element) is a lightweight means to easily build performant, memory-efficient, standards-compliant Web Components. [Fast Foundation](https://github.com/microsoft/fast/tree/master/packages/web-components/fast-foundation) is a library of Web Component classes, templates, and other utilities built on fast-element intended to be composed into registered Web Components.
 - [Hybrids](https://github.com/hybridsjs/hybrids) — Open source web components library, which favors plain objects and pure functions over `class` and `this` syntax. It provides a simple and functional API for creating custom elements.
 - [Lit](https://lit.dev/) — Google's web components library, the core of which is a component base class designed to reduce boilerplate while providing reactive state, scoped styles, and a declarative template system.

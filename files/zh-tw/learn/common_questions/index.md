@@ -9,7 +9,7 @@ slug: Learn/Common_questions
 
 ## Web 的運作方式
 
-這個區塊包含網路運作機制──有關網路環境及其如何運作的一般知識。
+這個區塊包含網路運作機制——有關網路環境及其如何運作的一般知識。
 
 - [網際網路如何運作？](/zh-TW/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : **網際網路**是網路的骨幹，讓網路成為現實的技術基礎架構。簡單來說，網際網路是讓所有電腦互相溝通的超大型網絡。這篇文章用最淺顯的文字探討它是如何運作的。
@@ -20,7 +20,7 @@ slug: Learn/Common_questions
 - [網域名稱是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_domain_name)
   - : 網域名稱是網際網路基礎架構中關鍵的一部份，它提供指向網際網路上可被找到的網路伺服器一個可被人讀懂的地址。
 - [網路伺服器是什麼？](/zh-TW/docs/Learn/Common_questions/What_is_a_web_server)
-  - : 「網路伺服器」指能橫跨網路將網站提供給用戶端的硬體或軟體──或是軟硬體結合。這篇文章探討網路伺服器怎麼運作，以及為何它很重要。
+  - : 「網路伺服器」指能橫跨網路將網站提供給用戶端的硬體或軟體——或是軟硬體結合。這篇文章探討網路伺服器怎麼運作，以及為何它很重要。
 - [超連結是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_hyperlinks)
   - : 這篇文章中，我們會學到超連結是什麼，以及為何它很重要。
 
@@ -37,11 +37,11 @@ slug: Learn/Common_questions
 - [瀏覽器開發者工具是什麼？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
   - : 每個瀏覽器皆有一系列對 HTML、CSS 及其它網路程式碼除錯的開發工具。這篇文章將解釋如何使用你的瀏覽器開發工具的基本功能。
 - [如何確保我的網站會正常運作？](/zh-TW/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly)
-  - : 你將你的網站發佈到網路上了──非常好！但是你確定它能正確運行嗎？這篇文章提供一些基本的問題解決步驟。
+  - : 你將你的網站發佈到網路上了——非常好！但是你確定它能正確運行嗎？這篇文章提供一些基本的問題解決步驟。
 - [如何架設本地端測試伺服器](/zh-TW/docs/Learn/Common_questions/set_up_a_local_testing_server)
   - : 這篇文章將解釋如何在你的電腦上設置一個簡單的本地端測試伺服器，以及基本使用方式。
 - [如何上傳檔案到網路伺服器？](/zh-TW/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-  - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上──這是將網站放到線上，讓別人可從他們的電腦存取的常見方式之一。
+  - : 這篇文章示範如何透過 [FTP](/zh-TW/docs/Glossary/FTP) 工具將你的網站發佈到網路上——這是將網站放到線上，讓別人可從他們的電腦存取的常見方式之一。
 - [如何使用 GitHub 頁面？](/zh-TW/docs/Learn/Common_questions/Using_GitHub_Pages)
   - : 這篇文章提供如何透過 Github 頁面發佈內容的基礎指南。
 - [如何在 Google App Engine 上架設網站？](/zh-TW/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)

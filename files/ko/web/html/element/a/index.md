@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**HTML `<a>` 요소**(앵커 요소)는 {{htmlattrxref("href", "a")}} 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
+**HTML `<a>` 요소**(앵커 요소)는 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -62,8 +62,6 @@ slug: Web/HTML/Element/a
 
 - {{htmlattrdef("type")}}
   - : 링크 URL의 {{Glossary("MIME type")}}에 대한 힌트. 특별한 내장 기능은 없습니다.
-
-<div class="hidden"><h3 id="Obsolete_attributes">Obsolete attributes</h3><dl><dt id="charset">{{HTMLAttrDef("charset")}}{{deprecated_inline}}</dt><dd>Hinted at the <a href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the linked URL.<div class="note"><p><strong>Note:</strong> This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type:</code></a> header on the linked URL.</p></div></dd><dt id="coords">{{HTMLAttrDef("coords")}}{{deprecated_inline}}</dt><dd>Used with <a href="#shape">the <code>shape</code> attribute</a>. A comma-separated list of coordinates.</dd><dt id="name">{{HTMLAttrDef("name")}}{{deprecated_inline}}</dt><dd>Was required to define a possible target location in a page. In HTML 4.01, <code>id</code> and <code>name</code> could both be used on <code>&#x3C;a></code>, as long as they had identical values.<div class="note"><p><strong>Note:</strong> Use the global attribute {{HTMLAttrxRef("id")}} instead.</p></div></dd><dt id="rev">{{HTMLAttrDef("rev")}}{{deprecated_inline}}</dt><dd>Specified a reverse link; the opposite of <a href="#rel">the <code>rel</code> attribute</a>. Deprecated for being very confusing.</dd><dt id="shape">{{HTMLAttrDef("shape")}}{{deprecated_inline}}</dt><dd>The shape of the hyperlink’s region in an image map.<div class="note"><strong>Note:</strong> Use the {{HTMLElement("area")}} element for image maps instead.</div></dd></dl></div>
 
 ## 속성
 
@@ -166,9 +164,7 @@ slug: Web/HTML/Element/a
 #### HTML
 
 ```html
-<a href="https://www.mozilla.com">
-  Mozilla
-</a>
+<a href="https://www.mozilla.com">Mozilla</a>
 ```
 
 #### 결과
@@ -181,12 +177,15 @@ slug: Web/HTML/Element/a
 
 ```html
 <a href="//example.com">Scheme-relative URL</a>
-<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="/ko/docs/Web/HTML">Origin-relative URL</a>
 <a href="./p">Directory-relative URL</a>
 ```
 
 ```css hidden
-a { display: block; margin-bottom: 0.5em }
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
 ```
 
 #### 결과
@@ -197,9 +196,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ```html
 <!-- <a> 요소로 아래의 구획에 연결 -->
-<p><a href="#Section_further_down">
-  아래 제목으로 건너뛰기
-</a></p>
+<p><a href="#Section_further_down">아래 제목으로 건너뛰기</a></p>
 
 <!-- 링크가 향할 제목 -->
 <h2 id="Section_further_down">아래의 제목</h2>
@@ -235,14 +232,15 @@ a { display: block; margin-bottom: 0.5em }
 
 ### `download` 특성으로 `<canvas>`를 PNG로 저장하기
 
-{{htmlattrxref("download", "a")}} 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
+[`download`](/ko/docs/Web/HTML/Element/a#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
 
 #### 저장 링크를 가진 그림판 예제
 
 ##### HTML
 
 ```html
-<p>마우스 드래그로 그림을 그려보세요.
+<p>
+  마우스 드래그로 그림을 그려보세요.
   <a href="" download="my_painting.png">다운로드</a>
 </p>
 
@@ -270,28 +268,31 @@ a {
 ##### JavaScript
 
 ```js
-var canvas = document.querySelector('canvas'),
-    c = canvas.getContext('2d');
-c.fillStyle = 'hotpink';
+var canvas = document.querySelector("canvas"),
+  c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
 
 function draw(x, y) {
   if (isDrawing) {
     c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI*2);
+    c.arc(x, y, 10, 0, Math.PI * 2);
     c.closePath();
     c.fill();
   }
 }
 
-canvas.addEventListener('mousemove', event =>
-  draw(event.offsetX, event.offsetY)
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
 );
-canvas.addEventListener('mousedown', () => isDrawing = true);
-canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
 
-document.querySelector('a').addEventListener('click', event =>
-  event.target.href = canvas.toDataURL()
-);
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
 ```
 
 ##### 결과
@@ -315,9 +316,7 @@ document.querySelector('a').addEventListener('click', event =>
 심각하게 흔한 실수는 "여기를 클릭"이나 "여기"라는 단어에 링크를 한다는 것입니다.
 
 ```html example-bad
-<p>
-  저희의 제품을 더 알아보시려면 <a href="/products">여기</a>를 클릭하세요.
-</p>
+<p>저희의 제품을 더 알아보시려면 <a href="/products">여기</a>를 클릭하세요.</p>
 ```
 
 #### 강한 링크 텍스트
@@ -325,9 +324,7 @@ document.querySelector('a').addEventListener('click', event =>
 다행히도 쉽게 수정할 수 있는 데다가, 접근성이 떨어지는 버전보다 더 짧습니다!
 
 ```html example-good
-<p>
-  저희의 <a href="/products">제품을 더 알아보세요</a>.
-</p>
+<p>저희의 <a href="/products">제품을 더 알아보세요</a>.</p>
 ```
 
 접근성 보조 기술은 페이지 안의 모든 링크를 나열하는 단축키가 있습니다. 그러나 강한 링크 텍스트가 보조 기술 사용자에게만 도움을 주는 것은 아닙니다. 모든 링크 나열 단축키는 시각적 사용자가 페이지를 빠르게 훑는 것을 흉내 내는 것이기 때문입니다.
@@ -357,22 +354,20 @@ document.querySelector('a').addEventListener('click', event =>
 #### 비 HTML 리소스 링크
 
 ```html
-<a href="2017-annual-report.ppt">
-  2017 연간 보고서 (PowerPoint)
-</a>
+<a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 {{HTMLAttrxRef("alt", "img", "대체 텍스트", 1)}}를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">
   위키백과
-  <img alt="(새 탭에서 열림)" src="newtab.svg">
+  <img alt="(새 탭에서 열림)" src="newtab.svg" />
 </a>
 
 <a href="2017-annual-report.ppt">
   2017 연간 보고서
-  <img alt="(PowerPoint 파일)" src="ppt-icon.svg">
+  <img alt="(PowerPoint 파일)" src="ppt-icon.svg" />
 </a>
 ```
 
@@ -389,11 +384,10 @@ document.querySelector('a').addEventListener('click', event =>
 <body>
   <a href="#content">내용으로 건너뛰기</a>
 
-  <header>
-    …
-  </header>
+  <header>…</header>
 
-  <main id="content"> <!-- 여기로 건너뜀 -->
+  <main id="content"><!-- 여기로 건너뜀 --></main>
+</body>
 ```
 
 ```css

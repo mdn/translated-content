@@ -3,16 +3,16 @@ title: <optgroup>
 slug: Web/HTML/Element/optgroup
 ---
 
-## 總覽
+{{HTMLSidebar}}
 
 In a Web form, the **HTML `<optgroup>` element** creates a grouping of options within a {{HTMLElement("select")}} element.
 
-| [Content categories](/zh-TW/docs/HTML/Content_categories) | None.                                                                                                                                                                    |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Permitted content                                         | Zero or more {{HTMLElement("option")}} elements.                                                                                                                  |
+| [Content categories](/zh-TW/docs/HTML/Content_categories) | None.                                                                                                                                                                     |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                         | Zero or more {{HTMLElement("option")}} elements.                                                                                                                          |
 | Tag omission                                              | The start tag is mandatory. The end tag is optional if this element is immediately followed by another \<optgroup> element, or if the parent element has no more content. |
-| Permitted parent elements                                 | A {{HTMLElement("select")}} element.                                                                                                                              |
-| DOM interface                                             | {{domxref("HTMLOptGroupElement")}}                                                                                                                             |
+| Permitted parent elements                                 | A {{HTMLElement("select")}} element.                                                                                                                                      |
+| DOM interface                                             | {{domxref("HTMLOptGroupElement")}}                                                                                                                                        |
 
 > **備註：** Optgroup elements may not be nested.
 
@@ -58,6 +58,4 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 
 ## 參見
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
-
-{{HTMLSidebar}}
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

@@ -18,23 +18,23 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLFormElement.length")}}{{ReadOnlyInline}}
   - : A `long` reflecting the number of controls in the form.
 - {{domxref("HTMLFormElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`name`](/ko/docs/Web/HTML/Element/form#name) HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`method`](/ko/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.target")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`target`](/ko/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 - {{domxref("HTMLFormElement.action")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`action`](/ko/docs/Web/HTML/Element/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.encoding")}} or {{domxref("HTMLFormElement.enctype")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set. The two properties are synonyms.
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("accept-charset", "form") }} HTML attribute, representing the character encoding that the server accepts.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`accept-charset`](/ko/docs/Web/HTML/Element/form#accept-charset) HTML attribute, representing the character encoding that the server accepts.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : A {{domxref("DOMString")}} reflecting the value of the form's {{ htmlattrxref("autocomplete", "form") }} HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
+  - : A {{domxref("DOMString")}} reflecting the value of the form's [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) HTML attribute, indicating whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : A {{jsxref("Boolean")}} reflecting the value of the form's {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating whether the form should not be validated.
+  - : A {{jsxref("Boolean")}} reflecting the value of the form's [`novalidate`](/ko/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating whether the form should not be validated.
 
-Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (eg a form with an input named `action` will have its `action` property return that input instead of the form's {{ htmlattrxref("action", "form") }} HTML attribute).
+Named inputs are added to their owner form instance as properties, and can overwrite native properties if they share the same name (eg a form with an input named `action` will have its `action` property return that input instead of the form's [`action`](/ko/docs/Web/HTML/Element/form#action) HTML attribute).
 
 ## Methods
 
@@ -60,15 +60,15 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`formdata`](/en-US/docs/Web/API/HTMLFormElement/formdata_event)
+- [`formdata`](/ko/docs/Web/API/HTMLFormElement/formdata_event)
   - : The `formdata` event fires after the entry list representing the form's data is constructed.
-    Also available via the [`onformdata`](/en-US/docs/Web/API/GlobalEventHandlers/onformdata) property.
-- [`reset`](/en-US/docs/Web/API/HTMLFormElement/reset_event)
+    Also available via the [`onformdata`](/ko/docs/Web/API/GlobalEventHandlers/onformdata) property.
+- [`reset`](/ko/docs/Web/API/HTMLFormElement/reset_event)
   - : The `reset` event fires when a form is reset.
-    Also available via the [`onreset`](/en-US/docs/Web/API/GlobalEventHandlers/onreset) property.
-- [`submit`](/en-US/docs/Web/API/HTMLFormElement/submit_event)
+    Also available via the [`onreset`](/ko/docs/Web/API/GlobalEventHandlers/onreset) property.
+- [`submit`](/ko/docs/Web/API/HTMLFormElement/submit_event)
   - : The `submit` event fires when a form is submitted.
-    Also available via the [`onsubmit`](/en-US/docs/Web/API/GlobalEventHandlers/onsubmit) property.
+    Also available via the [`onsubmit`](/ko/docs/Web/API/GlobalEventHandlers/onsubmit) property.
 
 ## Usage notes
 
@@ -97,7 +97,7 @@ The elements which are included by `HTMLFormElement.elements` and `HTMLFormEleme
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/ko/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -110,43 +110,59 @@ No other elements are included in the list returned by `elements`, which makes i
 Creating a new form element, modifying its attributes, then submitting it:
 
 ```js
-var f = document.createElement("form");// Create a form
-document.body.appendChild(f);          // Add it to the document body
-f.action = "/cgi-bin/some.cgi";        // Add action and method attributes
+var f = document.createElement("form"); // Create a form
+document.body.appendChild(f); // Add it to the document body
+f.action = "/cgi-bin/some.cgi"; // Add action and method attributes
 f.method = "POST";
-f.submit();                            // Call the form's submit method
+f.submit(); // Call the form's submit method
 ```
 
 Extract information from a form element and set some of its attributes:
 
 ```html
 <form name="formA" action="/cgi-bin/test" method="post">
- <p>Press "Info" for form details, or "Set" to change those details.</p>
- <p>
-  <button type="button" onclick="getFormInfo();">Info</button>
-  <button type="button" onclick="setFormInfo(this.form);">Set</button>
-  <button type="reset">Reset</button>
- </p>
+  <p>Press "Info" for form details, or "Set" to change those details.</p>
+  <p>
+    <button type="button" onclick="getFormInfo();">Info</button>
+    <button type="button" onclick="setFormInfo(this.form);">Set</button>
+    <button type="reset">Reset</button>
+  </p>
 
- <textarea id="form-info" rows="15" cols="20"></textarea>
+  <textarea id="form-info" rows="15" cols="20"></textarea>
 </form>
 
 <script>
-  function getFormInfo(){
+  function getFormInfo() {
     // Get a reference to the form via its name
     var f = document.forms["formA"];
     // The form properties we're interested in
-    var properties = [ 'elements', 'length', 'name', 'charset', 'action', 'acceptCharset', 'action', 'enctype', 'method', 'target' ];
+    var properties = [
+      "elements",
+      "length",
+      "name",
+      "charset",
+      "action",
+      "acceptCharset",
+      "action",
+      "enctype",
+      "method",
+      "target",
+    ];
     // Iterate over the properties, turning them into a string that we can display to the user
-    var info = properties.map(function(property) { return property + ": " + f[property] }).join("\n");
+    var info = properties
+      .map(function (property) {
+        return property + ": " + f[property];
+      })
+      .join("\n");
 
     // Set the form's <textarea> to display the form's properties
-    document.forms["formA"].elements['form-info'].value = info; // document.forms["formA"]['form-info'].value would also work
+    document.forms["formA"].elements["form-info"].value = info; // document.forms["formA"]['form-info'].value would also work
   }
 
-  function setFormInfo(f){ // Argument should be a form element reference.
+  function setFormInfo(f) {
+    // Argument should be a form element reference.
     f.action = "a-different-url.cgi";
-    f.name   = "a-different-name";
+    f.name = "a-different-name";
   }
 </script>
 ```
@@ -156,34 +172,52 @@ Submit a form into a new window:
 ```html
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Example new-window form submission</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example new-window form submission</title>
+  </head>
+  <body>
+    <form action="test.php" target="_blank">
+      <p>
+        <label>First name: <input type="text" name="firstname" /></label>
+      </p>
+      <p>
+        <label>Last name: <input type="text" name="lastname" /></label>
+      </p>
+      <p>
+        <label><input type="password" name="pwd" /></label>
+      </p>
 
-<form action="test.php" target="_blank">
-  <p><label>First name: <input type="text" name="firstname"></label></p>
-  <p><label>Last name: <input type="text" name="lastname"></label></p>
-  <p><label><input type="password" name="pwd"></label></p>
+      <fieldset>
+        <legend>Pet preference</legend>
+        <p>
+          <label><input type="radio" name="pet" value="cat" /> Cat</label>
+        </p>
+        <p>
+          <label><input type="radio" name="pet" value="dog" /> Dog</label>
+        </p>
+      </fieldset>
 
-  <fieldset>
-   <legend>Pet preference</legend>
-    <p><label><input type="radio" name="pet" value="cat"> Cat</label></p>
-    <p><label><input type="radio" name="pet" value="dog"> Dog</label></p>
-  </fieldset>
+      <fieldset>
+        <legend>Owned vehicles</legend>
 
-  <fieldset>
-    <legend>Owned vehicles</legend>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Bike" />I have a
+            bike</label
+          >
+        </p>
+        <p>
+          <label
+            ><input type="checkbox" name="vehicle" value="Car" />I have a
+            car</label
+          >
+        </p>
+      </fieldset>
 
-    <p><label><input type="checkbox" name="vehicle" value="Bike">I have a bike</label></p>
-    <p><label><input type="checkbox" name="vehicle" value="Car">I have a car</label></p>
-  </fieldset>
-
-  <p><button>Submit</button></p>
-</form>
-
-</body>
+      <p><button>Submit</button></p>
+    </form>
+  </body>
 </html>
 ```
 

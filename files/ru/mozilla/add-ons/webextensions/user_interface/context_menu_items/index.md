@@ -1,8 +1,8 @@
 ---
 title: Контекстное меню
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
+
 {{AddonSidebar}}
 
 Эта возможность пользовательского интерфейса позволяет добавлять новые элементы в контекстное меню браузера, появляющееся при нажатии правой кнопки мыши. Вкладки браузера также имеют контекстное меню доступное через [browser.menus API](/en-US/Add-ons/WebExtensions/API/menus).
@@ -22,11 +22,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 Затем вы сможете добавлять, обновлять и удалять элементы контекстного меню в [фоновом сценарии](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) вашего расширения. Для создания элемента необходимо указать его id, заголовок и контекст, в котором элемент будет показан. В примере ниже элемент меню появляется, когда выделен текст или какая-либо другая часть страницы:
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated,
+);
 ```
 
 Затем вы можете добавить обработчик события нажатия на элемент. Передаваемая обработчику информация о контексте, в котором произошло нажатие, и о вкладке, где контекстное меню было вызвано, может быть использована вами для определения дальнейшего поведения расширения.

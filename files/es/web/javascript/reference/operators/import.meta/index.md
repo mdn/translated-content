@@ -1,7 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}
@@ -44,7 +43,7 @@ Por ejemplo, con el siguiente HTML:
 
 ```html
 <script type="module">
-import './index.mjs?someURLInfo=5';
+  import "./index.mjs?someURLInfo=5";
 </script>
 ```
 
@@ -52,17 +51,17 @@ import './index.mjs?someURLInfo=5';
 
 ```js
 // index.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Lo mismo aplica cuando un archivo importa otro:
 
 ```js
 // index.mjs
-import './index2.mjs?someURLInfo=5';
+import "./index2.mjs?someURLInfo=5";
 
 // index2.mjs
-new URL(import.meta.url).searchParams.get('someURLInfo'); // 5
+new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 Nota que mientras Node.js pasa en la consulta los parámetros (o el hash ) como en el último ejemplo, a partir de Node 14.1.0, una URL con parametros en la consulta fallará cuando se carguen en el formato `node --experimental-modules index.mjs?someURLInfo=5` (es tratado como un archivo en lugar de una URL en este contexto).

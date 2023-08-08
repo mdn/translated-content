@@ -25,13 +25,16 @@ grid-template-columns: repeat(3, 200px);
 
 /* <auto-track-list> values */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-columns:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-columns: inherit;
@@ -123,6 +126,6 @@ grid-template-columns: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-areas")}}、{{cssxref("grid-template")}}
-- 网格布局教程：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
+- 网格布局教程：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Grid_Tracks)_
 - 视频教程：_[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [子网格](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)

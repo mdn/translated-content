@@ -1,7 +1,6 @@
 ---
 title: Bugs importantes solucionados en Firefox 3
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-original_slug: Bugs_importantes_solucionados_en_Firefox_3
 ---
 
 {{FirefoxSidebar}}

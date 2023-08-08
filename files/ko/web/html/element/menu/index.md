@@ -11,10 +11,10 @@ slug: Web/HTML/Element/menu
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/ko/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >. Additionally, if in the <em>list menu</em> state, palpable content.
         (<em>list menu</em> is the default state, unless the parent element is a
@@ -25,7 +25,7 @@ slug: Web/HTML/Element/menu
       <th scope="row">Permitted content</th>
       <td>
         If the element is in the <em>list menu</em> state:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >, or alternatively, zero or more occurrences of
         {{HTMLElement("li")}}, {{HTMLElement("script")}}, and
@@ -45,7 +45,7 @@ slug: Web/HTML/Element/menu
       <th scope="row">Permitted parent elements</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>
@@ -67,7 +67,7 @@ slug: Web/HTML/Element/menu
 
   - : This attribute indicates the kind of menu being declared, and can be one of two values.
 
-    - `context`: The _context menu_ state, which represents a group of commands activated through another element. This might be through the {{htmlattrxref("menu", "button")}} attribute of a {{HTMLElement("button")}}, or an element with a [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) attribute. When nesting {{HTMLElement("menu")}} elements directly within one another, this is the missing value default if the parent is already in this state.
+    - `context`: The _context menu_ state, which represents a group of commands activated through another element. This might be through the [`menu`](/ko/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}}, or an element with a [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) attribute. When nesting {{HTMLElement("menu")}} elements directly within one another, this is the missing value default if the parent is already in this state.
     - `list`: The _list menu_ state, which represents a series of commands for user interaction. This is the missing value default, except where the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
 
 ## Examples
@@ -130,4 +130,4 @@ slug: Web/HTML/Element/menu
 ## 같이 보기
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}} and the obsolete {{HTMLElement("dir")}}.
-- The [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) [global attribute](/ko/docs/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with the `context` {{htmlattrxref("type","menu")}}.
+- The [`contextmenu`](/ko/docs/HTML/Global_attributes#attr-contextmenu) [global attribute](/ko/docs/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with the `context` [`type`](/ko/docs/Web/HTML/Element/menu#type).

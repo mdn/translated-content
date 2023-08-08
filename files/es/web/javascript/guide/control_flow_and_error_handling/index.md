@@ -1,7 +1,6 @@
 ---
 title: Control de flujo y manejo de errores
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
@@ -110,7 +109,7 @@ Por ejemplo, _no_ escribas un código como este:
 
 ```js example-bad
 // Propenso a ser mal interpretado como "x == y"
-if (x = y) {
+if ((x = y)) {
   /* expresiones aquí */
 }
 ```
@@ -156,7 +155,7 @@ function checkData() {
   } else {
     alert(
       "Introduce exactamente tres caracteres. " +
-        `${document.form1.threeChar.value} no es válido.`
+        `${document.form1.threeChar.value} no es válido.`,
     );
     return false;
   }

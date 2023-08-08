@@ -1,9 +1,8 @@
 ---
 title: SDP
 slug: Glossary/SDP
-translation_of: Glossary/SDP
-original_slug: Глоссарий/SDP
 ---
+
 **SDP** (Session Description {{glossary("Protocol")}} - протокол описания сессии) - это текстовый формат для описания {{Glossary("P2P","peer-to-peer")}}-соединения. SDP содержит описание {{Glossary("кодеков")}}, адрес источника и информацию для синхронизации аудио и видео.
 
 Here is a typical SDP message:

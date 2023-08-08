@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/JavaScript_interface/instantiateStreaming
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 l10n:
   sourceCommit: d606f8dc936dcf766e1540f687eba8dc9dd9ed13
 ---
@@ -48,7 +47,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 

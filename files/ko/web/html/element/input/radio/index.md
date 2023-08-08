@@ -53,11 +53,11 @@ The `value` attribute is a {{domxref("DOMString")}} containing the radio button'
 
 ### 라디오 그룹 정의하기
 
-A radio group is defined by giving each of radio buttons in the group the same {{htmlattrxref("name", "input")}}. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+A radio group is defined by giving each of radio buttons in the group the same [`name`](/ko/docs/Web/HTML/Element/input#name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
 You can have as many radio groups on a page as you like, as long as each has its own unique `name`.
 
-For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the `name` property set to `contact` but one with the {{htmlattrxref("value", "input")}} `email`, one with the value `phone`, and one with the value `mail`. The user never sees the `value` or the `name` (unless you expressly add code to display it).
+For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the `name` property set to `contact` but one with the [`value`](/ko/docs/Web/HTML/Element/input#value) `email`, one with the value `phone`, and one with the value `mail`. The user never sees the `value` or the `name` (unless you expressly add code to display it).
 
 The resulting HTML looks like this:
 
@@ -65,16 +65,13 @@ The resulting HTML looks like this:
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -83,7 +80,7 @@ The resulting HTML looks like this:
 </form>
 ```
 
-Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's {{htmlattrxref("for", "label")}} attribute to associate the labels with the radio buttons.
+Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's [`for`](/ko/docs/Web/HTML/Element/label#for) attribute to associate the labels with the radio buttons.
 
 You can try out this example here:
 
@@ -105,22 +102,18 @@ Let's add a little bit of code to our example so we can examine the data generat
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
+    <input type="radio" id="contactChoice1" name="contact" value="email" />
     <label for="contactChoice1">Email</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
     <button type="submit">Submit</button>
   </div>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listener on the {{domxref("HTMLFormElement/submit_event", "submit")}} event, which is sent when the user clicks the "Submit" button:
@@ -129,15 +122,19 @@ Then we add some [JavaScript](/ko/docs/Web/JavaScript) to set up an event listen
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  function (event) {
+    var data = new FormData(form);
+    var output = "";
+    for (const entry of data) {
+      output = output + entry[0] + "=" + entry[1] + "\r";
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false,
+);
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.
@@ -157,7 +154,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 A Boolean attribute which, if present, indicates that this radio button is the currently selected one in the group.
 
-Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 ### {{htmlattrdef("value")}}
 
@@ -175,16 +172,18 @@ To make a radio button selected by default, you simply include `checked` attribu
 <form>
   <p>Please select your preferred contact method:</p>
   <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
+    <input
+      type="radio"
+      id="contactChoice1"
+      name="contact"
+      value="email"
+      checked />
     <label for="contactChoice1">Email</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+    <input type="radio" id="contactChoice2" name="contact" value="phone" />
     <label for="contactChoice2">Phone</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+    <input type="radio" id="contactChoice3" name="contact" value="mail" />
     <label for="contactChoice3">Mail</label>
   </div>
   <div>
@@ -218,16 +217,18 @@ The following example shows a slightly more thorough version of the example we'v
   <fieldset>
     <legend>Please select your preferred contact method:</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
       <label for="contactChoice1">Email</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">Phone</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">Mail</label>
     </div>
     <div>

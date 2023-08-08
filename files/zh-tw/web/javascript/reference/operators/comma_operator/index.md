@@ -35,13 +35,15 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
 
 Note that the comma in assignments such as the `var` statement may appear not to have the normal effect of comma operators because they don't exist within an expression. In the following example, `a` is set to the value of `b = 3` (which is 3), but the `c = 4` expression still evaluates and its result returned to console (i.e., 4). This is due to [operator precedence and associativity](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence).
 
-```js
-// Note that the following creates globals and is disallowed in strict mode.
+```js-nolint
+let a, b, c;
 
-a = b = 3, c = 4; // Returns 4 in console
+a = b = 3, c = 4; // Returns 4
 console.log(a); // 3 (left-most)
 
-x = (y = 5, z = 6); // Returns 6 in console
+let x, y, z;
+
+x = (y = 5, z = 6); // Returns 6
 console.log(x); // 6 (right-most)
 ```
 
@@ -51,9 +53,9 @@ The comma operator is fully different from the comma within arrays, objects, and
 
 Another example that one could make with comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:
 
-```js
-function myFunc () {
-  var x = 0;
+```js-nolint
+function myFunc() {
+  let x = 0;
 
   return (x += 1, x); // the same as return ++x;
 }

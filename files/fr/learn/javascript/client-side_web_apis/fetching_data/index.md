@@ -1,18 +1,6 @@
 ---
 title: Récupérer des données du serveur
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Apprendre
-  - Article
-  - Codage
-  - Débutant
-  - Fetch
-  - JavaScript
-  - XHR
-  - data
-translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -91,75 +79,73 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 1. Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
 2. À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'évènement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction `updateDisplay()`.
 
-    ```js
-    var verseChoose = document.querySelector('select');
-    var poemDisplay = document.querySelector('pre');
+   ```js
+   var verseChoose = document.querySelector("select");
+   var poemDisplay = document.querySelector("pre");
 
-    verseChoose.onchange = function() {
-      var verse = verseChoose.value;
-      updateDisplay(verse);
-    };
-    ```
+   verseChoose.onchange = function () {
+     var verse = verseChoose.value;
+     updateDisplay(verse);
+   };
+   ```
 
 3. Définissons maintenant la fonction `updateDisplay()`. Tout d'abord, mettez ce qui suit au bas de votre JavaScript — c'est la structure vide de la fonction :
 
-    ```js
-    function updateDisplay(verse) {
-
-    };
-    ```
+   ```js
+   function updateDisplay(verse) {}
+   ```
 
 4. Nous allons commencer notre fonction en construisant une URL relative qui pointe vers le fichier texte que nous voulons charger, nous en aurons besoin plus tard. La valeur de l'élément {{htmlelement("select")}} à tout instant est la même que l'élément {{htmlelement("option")}} sélectionné (c'est à dire le texte de l'élément sélectionné, ou son attribut `value` s'il est spécifié) — par exemple "Verse 1". Le fichier correspondant est "verse1.txt" et il est situé dans le même répertoire que le fichier HTML, le nom du fichier seul suffira donc.
 
-    Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
+   Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
 
-    ```js
-    verse = verse.replace(" ", "");
-    verse = verse.toLowerCase();
-    var url = verse + '.txt';
-    ```
+   ```js
+   verse = verse.replace(" ", "");
+   verse = verse.toLowerCase();
+   var url = verse + ".txt";
+   ```
 
 5. Pour commencer à créer une requête XHR, vous allez devoir créer un nouvel objet avec le constructeur {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}. Vous pouvez appeler cet objet comme vous le voulez, mais nous l'appellerons `request` pour plus de clarté. Ajoutez ce qui suit à vos lignes précédentes :
 
-    ```js
-    var request = new XMLHttpRequest();
-    ```
+   ```js
+   var request = new XMLHttpRequest();
+   ```
 
 6. Ensuite, vous allez devoir utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} pour spécifier la [méthode HTTP](/fr/docs/Web/HTTP/Méthode) et l'URL à utiliser pour récupérer la ressource. Nous allons ici utiliser la méthode [`GET`](/fr/docs/Web/HTTP/Méthode/GET) et passer notre variable `url` pour URL. Ajoutez ceci à la suite de la ligne précédente :
 
-    ```js
-    request.open('GET', url);
-    ```
+   ```js
+   request.open("GET", url);
+   ```
 
 7. Nous allons définir le type de réponse que nous attendons — définit par la propriété {{domxref("XMLHttpRequest.responseType", "responseType")}} de la requête — comme `text`. Ce n'est pas strictement nécessaire ici — XHR retourne du texte par défaut — mais c'est une bonne idée d'en prendre l'habitude pour les cas où vous aurez besoin de définir un type différent. Ajoutez ceci à la suite :
 
-    ```js
-    request.responseType = 'text';
-    ```
+   ```js
+   request.responseType = "text";
+   ```
 
 8. Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement [`load`](/fr//docs/Web/API/Window/load_event) est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
-    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
+   Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 
-    ```js
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
-    ```
+   ```js
+   request.onload = function () {
+     poemDisplay.textContent = request.response;
+   };
+   ```
 
 9. Les étapes précédentes nous ont permis de configurer la requête XHR, mais celle-ci n'est exécutée que lorsqu'on le demande explicitement. Pour ce faire, il faut appeler la méthode {{domxref("XMLHttpRequest.send","send()")}}. Ajoutez la ligne suivante à la suite du code déjà écrit&nbsp;:
 
-    ```js
-    request.send();
-    ```
+   ```js
+   request.send();
+   ```
 
-    Voyez la section [Servir votre exemple depuis un serveur](#servir_votre_exemple_depuis_un_serveur) pour pouvoir tester.
+   Voyez la section [Servir votre exemple depuis un serveur](#servir_votre_exemple_depuis_un_serveur) pour pouvoir tester.
 
 10. Un dernier problème avec cet exemple est qu'il ne montre rien au chargement de la page (mais uniquement à la sélection d'un verset). Pour corriger cela, ajoutez ce qui suit au bas de votre code (juste au-dessus de la balise fermante `</script>`), pour charger le verset 1 par défaut, et s'assurer que l'élément {{htmlelement("select")}} montre toujours la bonne valeur :
 
     ```js
-    updateDisplay('Verse 1');
-    verseChoose.value = 'Verse 1';
+    updateDisplay("Verse 1");
+    verseChoose.value = "Verse 1";
     ```
 
 ### Servir votre exemple depuis un serveur
@@ -177,27 +163,27 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
 1. Faites une copie du répertoire de votre dernier exemple. (Ou si vous ne l'avez pas fait, créez un nouveau répertoire et copiez le fichier [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) et les quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — à l'intérieur).
 2. À l'intérieur de la fonction `updateDisplay()`, vous avez le code XHR suivant :
 
-    ```js
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'text';
+   ```js
+   var request = new XMLHttpRequest();
+   request.open("GET", url);
+   request.responseType = "text";
 
-    request.onload = function() {
-      poemDisplay.textContent = request.response;
-    };
+   request.onload = function () {
+     poemDisplay.textContent = request.response;
+   };
 
-    request.send();
-    ```
+   request.send();
+   ```
 
 3. Remplacez-le avec ce qui suit :
 
-    ```js
-    fetch(url).then(function(response) {
-      response.text().then(function(text) {
-        poemDisplay.textContent = text;
-      });
-    });
-    ```
+   ```js
+   fetch(url).then(function (response) {
+     response.text().then(function (text) {
+       poemDisplay.textContent = text;
+     });
+   });
+   ```
 
 4. Chargez l'exemple dans votre navigateur (en l'exécutant à travers un serveur web) et il devrait produire le même résultat que la version XHR — pourvu que vous utilisiez un navigateur moderne.
 
@@ -222,7 +208,7 @@ Regardons à nouveau la structure d'une promesse pour voir si nous pouvons en do
 #### Promesse 1
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then(function (response) {
   //...
 });
 ```
@@ -241,7 +227,7 @@ Notez que vous pouvez également choisir de stocker votre promesse dans une vari
 ```js
 var myFetch = fetch(url);
 
-myFetch.then(function(response) {
+myFetch.then(function (response) {
   //...
 });
 ```
@@ -249,7 +235,7 @@ myFetch.then(function(response) {
 Parce que la méthode `fetch()` retourne une promesse qui résout une réponse HTTP, la fonction définie à l'intérieur du `.then()` reçoit la réponse en tant que paramètre. Vous pouvez appeler le paramètre comme vous souhaitez — l'exemple ci-dessous fait toujours la même chose :
 
 ```js
-fetch(url).then(function(dogBiscuits) {
+fetch(url).then(function (dogBiscuits) {
   //...
 });
 ```
@@ -279,11 +265,13 @@ Notez que le résultat de la fonction appelée par le `.then()` est également r
 Ainsi, le bloc de code suivant fait la même chose que notre exemple original, mais écrit dans un style différent :
 
 ```js
-fetch(url).then(function(response) {
-  return response.text()
-}).then(function(text) {
-  poemDisplay.textContent = text;
-});
+fetch(url)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    poemDisplay.textContent = text;
+  });
 ```
 
 Beaucoup de développeurs préfèrent ce style, plus "plat" : il évite de définir des fonctions à l'intérieur de fonctions et est plus facile à lire lorsqu'il y a beaucoup de promesses qui s'enchaînent. La seule différence ici est que nous avons une instruction [`return`](/fr/Apprendre/JavaScript/Building_blocks/Return_values) pour retourner `response.text()`, et ce résultat est passé au prochain `.then()`.
@@ -311,14 +299,19 @@ Il y a du code plutôt complexe pour traiter le filtrage des produits par catég
 Le premier bloc qui utilise Fetch se trouve au début du JavaScript :
 
 ```js
-fetch('products.json').then(function(response) {
-  if(response.ok) {
-    response.json().then(function(json) {
+fetch("products.json").then(function (response) {
+  if (response.ok) {
+    response.json().then(function (json) {
       products = json;
       initialize();
     });
   } else {
-    console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
+    console.log(
+      "Network request for products.json failed with response " +
+        response.status +
+        ": " +
+        response.statusText,
+    );
   }
 });
 ```
@@ -341,14 +334,21 @@ Vous pouvez tester le cas d'échec vous-même :
 Le deuxième bloc Fetch se trouve dans la fonction `fetchBlob()`:
 
 ```js
-fetch(url).then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(blob) {
+fetch(url).then(function (response) {
+  if (response.ok) {
+    response.blob().then(function (blob) {
       objectURL = URL.createObjectURL(blob);
       showProduct(objectURL, product);
     });
   } else {
-    console.log('Network request for "' + product.name + '" image failed with response ' + response.status + ': ' + response.statusText);
+    console.log(
+      'Network request for "' +
+        product.name +
+        '" image failed with response ' +
+        response.status +
+        ": " +
+        response.statusText,
+    );
   }
 });
 ```

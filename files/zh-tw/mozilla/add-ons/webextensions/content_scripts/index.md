@@ -43,7 +43,7 @@ Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](
 舉例來說，有這樣一個網頁：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -233,7 +233,7 @@ function notify(message) {
 }
 ```
 
-這個範例來自 GitHub 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)，稍微經過修改。
+這個範例來自 GitHub 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)，稍微經過修改。
 
 ### 基於連線的訊息
 
@@ -406,7 +406,7 @@ window.postMessage(
   {
     message: "check",
   },
-  "*"
+  "*",
 );
 ```
 

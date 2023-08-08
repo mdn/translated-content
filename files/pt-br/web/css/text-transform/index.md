@@ -61,7 +61,7 @@ Support for these specific cases vary from one browser to the other, so check th
 
 ## Examples
 
-### `none`
+### Example using "none"
 
 ```html
 <p>Initial String
@@ -81,7 +81,7 @@ strong { float: right; }
 
 This demonstrates no text transformation.
 
-{{ EmbedLiveSample('none', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "none"', '100%', '100px') }}
 
 ### `capitalize` (General)
 

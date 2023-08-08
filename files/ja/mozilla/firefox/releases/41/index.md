@@ -41,7 +41,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 - `href` 属性を持たない {{HTMLElement("a")}} は、インタラクティブコンテンツとして分類しないようになりました。{{HTMLElement("label")}} 要素内でクリックすると、ラベル付けされたコンテンツがアクティブになります ([Firefox バグ 1167816](https://bugzil.la/1167816))。
 - サイトアイコン (favicon およびショートカットアイコン) で、SVG アイコンをサポートしました ([Firefox バグ 366324](https://bugzil.la/366324))。
-- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、{{htmlattrxref('crossorigin', 'link')}} 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
+- [\<link rel='preconnect'>](/ja/docs/Web/HTML/Element/link) で、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました ([Firefox バグ 1174152](https://bugzil.la/1174152))。
 - picture 要素がリサイズやビューポートの変化に反応しない問題を修正しました ([Firefox バグ 1135812](https://bugzil.la/1135812))。
 
 ### JavaScript

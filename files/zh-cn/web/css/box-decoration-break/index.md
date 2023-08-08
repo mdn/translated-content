@@ -89,13 +89,13 @@ box-decoration-break: clone;
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-你可以[尝试这两个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)。
+你可以[尝试这两个例子](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)。
 
 下面是一个使用大圆角值的内联元素示例。第二个“iM”在“i”和“M”之间有一个分界线，作为比较，第一个“iM”是没有换行符的。请注意，如果您将两个片段的呈现水平地排列在一起，就会导致非分段呈现。
 
 ![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 
-你可以[尝试这个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)。
+你可以[尝试这个例子](https://mdn.dev/archives/media/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)。
 
 ### 块状盒子片段
 
@@ -115,7 +115,7 @@ box-decoration-break: clone;
 
 请注意，每个片段都具有相同的 border、box-shadow 和 background。
 
-你可以[尝试这个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)。
+你可以[尝试这个例子](https://mdn.dev/archives/media/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)。
 
 ## 规范
 

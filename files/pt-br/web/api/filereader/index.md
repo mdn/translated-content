@@ -145,13 +145,11 @@ Veja [Using files from web applications](/pt-BR/Using_files_from_web_application
 
 ## Especificações
 
-| Especificação                                                                    | Status                       | Comentário         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('File API','#FileReader-interface','FileReader')}} | {{Spec2('File API')}} | Definição inicial. |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## Veja também
 

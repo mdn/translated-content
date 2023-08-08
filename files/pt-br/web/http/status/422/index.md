@@ -17,6 +17,6 @@ O codigo de resposta HTTP **`422 Unprocessable Entity`** indica que o servidor e
 
 ## Especificações
 
-| Especificação                                                        | Título                                                                |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Especificação                                        | Título                                                                |
+| ---------------------------------------------------- | --------------------------------------------------------------------- |
 | {{RFC("4918", "422 Unprocessable Entity" , "11.2")}} | HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) |

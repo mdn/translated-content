@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: return not in function'
+title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
-tags:
-  - JavaScript
-  - SyntaxError
-  - Ошибки
-translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}
@@ -25,7 +19,7 @@ SyntaxError: yield not in function (Firefox)
 
 ## Что пошло не так?
 
-Вызов оператора [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) или [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) был осуществлён вне [функции](/ru/docs/Web/JavaScript/Guide/Functions). Может, где-то пропущена фигурная скобка? Операторы `return` и `yield` не могут существовать вне функции, поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, откуда она была вызвана.
+Вызов оператора [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return) или [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield) был осуществлён вне [функции](/ru/docs/Web/JavaScript/Guide/Functions). Может, где-то пропущена фигурная скобка? Операторы `return` и `yield` не могут существовать вне функции, поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, откуда она была вызвана.
 
 ## Примеры
 
@@ -45,12 +39,12 @@ var cheer = function(score) {
 На первый взгляд кажется, что фигурные скобки расставлены правильно, но в данном примере пропущена `{` после первого оператора `if`. Правильный вариант:
 
 ```js example-good
-var cheer = function(score) {
+var cheer = function (score) {
   if (score === 147) {
-    return 'Максимум!';
+    return "Максимум!";
   }
   if (score > 100) {
-    return 'Столетие!';
+    return "Столетие!";
   }
 };
 ```

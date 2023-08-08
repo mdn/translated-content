@@ -2,6 +2,7 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack`** 인터페이스는 스트림 내의 단일 미디어 트랙을 나타냅니다. 보통 오디오와 비디오 트랙이지만, 다른 종류도 존재할 수 있습니다.

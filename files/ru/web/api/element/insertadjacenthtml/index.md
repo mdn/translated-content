@@ -1,8 +1,8 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
+
 {{ApiRef("DOM")}}
 
 **`insertAdjacentHTML()`** разбирает указанный текст как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево в указанную позицию. Данная функция не переписывает имеющиеся элементы, что предотвращает дополнительную сериализацию и поэтому работает быстрее, чем манипуляции с {{domxref("Element.innerHTML", "innerHTML")}}.
@@ -45,8 +45,8 @@ foo
 
 ```js
 // <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // At this point, the new structure is:
 // <div id="one">one</div><div id="two">two</div>

@@ -52,24 +52,24 @@ switch (expression) {
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log("Sorry, we are out of " + expr + ".");
 }
 
 console.log("Is there anything else you'd like?");
@@ -83,11 +83,11 @@ console.log("Is there anything else you'd like?");
 var foo = 0;
 switch (foo) {
   case -1:
-    console.log('negative 1');
+    console.log("negative 1");
     break;
   case 0: // foo 的值为 0 所以匹配这里所以这一块会运行
     console.log(0);
-    // 注意：那个没写的 break 原本在这儿
+  // 注意：那个没写的 break 原本在这儿
   case 1: // 'case 0:' 里没有 break 语句所以这个 case 也会运行
     console.log(1);
     break; // 遇到了 break，所以不会再继续进入 'case 2:' 了
@@ -95,7 +95,7 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log('default');
+    console.log("default");
 }
 ```
 
@@ -110,10 +110,10 @@ switch (foo) {
     console.log(2);
     break; // 遇到 break，所以不会继续进入 'default:'
   default:
-    console.log('default')
-    // 掉到下面
+    console.log("default");
+  // 掉到下面
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
@@ -132,17 +132,17 @@ switch (foo) {
 这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。
 
 ```js
-var Animal = 'Giraffe';
+var Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal will go on Noah\'s Ark.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal will go on Noah's Ark.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal will not.');
+    console.log("This animal will not.");
 }
 ```
 
@@ -152,27 +152,27 @@ switch (Animal) {
 
 ```js
 var foo = 1;
-var output = 'Output: ';
+var output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
@@ -195,18 +195,19 @@ switch (foo) {
 以这段代码为例：
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello':
-    let message = 'hello';
-           console.log('0 ~5');
-           break;
-  case 'say_hi':
-    let message = 'hi';
-    case 6: console.log('6');
+  case "say_hello":
+    let message = "hello";
+    console.log("0 ~5");
+    break;
+  case "say_hi":
+    let message = "hi";
+  case 6:
+    console.log("6");
     break;
   default:
-    console.log('Empty action received.');
+    console.log("Empty action received.");
     break;
 }
 ```
@@ -218,20 +219,23 @@ switch (action) {
 通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。
 
 ```js
-const action = 'say_hello';
+const action = "say_hello";
 switch (action) {
-  case 'say_hello': { // added brackets
-    let message = 'hello';
+  case "say_hello": {
+    // added brackets
+    let message = "hello";
     console.log(message);
     break;
   } // added brackets
-  case 'say_hi': { // added brackets
-    let message = 'hi';
+  case "say_hi": {
+    // added brackets
+    let message = "hi";
     console.log(message);
     break;
   } // added brackets
-  default: { // added brackets
-    console.log('Empty action received.');
+  default: {
+    // added brackets
+    console.log("Empty action received.");
     break;
   } // added brackets
 }

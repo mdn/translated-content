@@ -1,24 +1,23 @@
 ---
 title: Using the W3C DOM Level 1 Core
 slug: Web/API/Document_object_model/Using_the_Document_Object_Model
-original_slug: Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 ---
 
 The W3C's DOM Level 1 Core is a powerful object model for changing the content tree of documents. It is supported in all major browsers including Mozilla Firefox and Microsoft Internet Explorer. It is a powerful base for scripting on the web.
 
 ## What is a content tree?
 
-Many HTML authors may think of HTML as something flat -- a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical -- see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
+Many HTML authors may think of HTML as something flat — a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical — see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
 
 ```html
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>Paragraph</p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -40,37 +39,37 @@ Suppose the author wants to take the above document and change the contents of t
 
 ```html
 <body>
-<input type="button" value="Change this document." onclick="change()">
-<h2>Header</h2>
-<p>Paragraph</p>
+  <input type="button" value="Change this document." onclick="change()" />
+  <h2>Header</h2>
+  <p>Paragraph</p>
 </body>
 ```
 
 ### JavaScript Content
 
 ```js
-  function change() {
-    // document.getElementsByTagName("H2") returns a NodeList of the <h2>
-    // elements in the document, and the first is number 0:
+function change() {
+  // document.getElementsByTagName("H2") returns a NodeList of the <h2>
+  // elements in the document, and the first is number 0:
 
-    var header = document.getElementsByTagName("H2").item(0);
-    // the firstChild of the header is a Text node:
-    header.firstChild.data = "A dynamic document";
-    // now the header is "A dynamic document".
+  var header = document.getElementsByTagName("H2").item(0);
+  // the firstChild of the header is a Text node:
+  header.firstChild.data = "A dynamic document";
+  // now the header is "A dynamic document".
 
-    var para = document.getElementsByTagName("P").item(0);
-    para.firstChild.data = "This is the first paragraph.";
+  var para = document.getElementsByTagName("P").item(0);
+  para.firstChild.data = "This is the first paragraph.";
 
-    // create a new Text node for the second paragraph
-    var newText = document.createTextNode("This is the second paragraph.");
-    // create a new Element to be the second paragraph
-    var newElement = document.createElement("P");
-    // put the text in the paragraph
-    newElement.appendChild(newText);
-    // and put the paragraph on the end of the document by appending it to
-    // the BODY (which is the parent of para)
-    para.parentNode.appendChild(newElement);
-  }
+  // create a new Text node for the second paragraph
+  var newText = document.createTextNode("This is the second paragraph.");
+  // create a new Element to be the second paragraph
+  var newElement = document.createElement("P");
+  // put the text in the paragraph
+  newElement.appendChild(newText);
+  // and put the paragraph on the end of the document by appending it to
+  // the BODY (which is the parent of para)
+  para.parentNode.appendChild(newElement);
+}
 ```
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}

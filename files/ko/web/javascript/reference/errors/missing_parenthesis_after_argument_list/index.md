@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ) after argument list'
+title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 
@@ -37,4 +37,4 @@ console.log('PI: ' + Math.PI);
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

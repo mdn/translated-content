@@ -45,21 +45,21 @@ xhr.send(null);
 
 ```js
 function xhrSuccess() {
-    this.callback.apply(this, this.arguments);
+  this.callback.apply(this, this.arguments);
 }
 
 function xhrError() {
-    console.error(this.statusText);
+  console.error(this.statusText);
 }
 
 function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
-    var xhr = new XMLHttpRequest();
-    xhr.callback = callback;
-    xhr.arguments = Array.prototype.slice.call(arguments, 2);
-    xhr.onload = xhrSuccess;
-    xhr.onerror = xhrError;
-    xhr.open("GET", url, true);
-    xhr.send(null);
+  var xhr = new XMLHttpRequest();
+  xhr.callback = callback;
+  xhr.arguments = Array.prototype.slice.call(arguments, 2);
+  xhr.onload = xhrSuccess;
+  xhr.onerror = xhrError;
+  xhr.open("GET", url, true);
+  xhr.send(null);
 }
 ```
 
@@ -67,7 +67,7 @@ function loadFile(url, callback /*, opt_arg1, opt_arg2, ... */) {
 
 ```js
 function showMessage(message) {
-    console.log(message + this.responseText);
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", showMessage, "New message!\n\n");
@@ -93,23 +93,23 @@ loadFile("message.txt", showMessage, "New message!\n\n");
 
 ```js
 function loadFile(url, timeout, callback) {
-    var args = Array.prototype.slice.call(arguments, 3);
-    var xhr = new XMLHttpRequest();
-    xhr.ontimeout = function () {
-        console.error("The request for " + url + " timed out.");
-    };
-    xhr.onload = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                callback.apply(xhr, args);
-            } else {
-                console.error(xhr.statusText);
-            }
-        }
-    };
-    xhr.open("GET", url, true);
-    xhr.timeout = timeout;
-    xhr.send(null);
+  var args = Array.prototype.slice.call(arguments, 3);
+  var xhr = new XMLHttpRequest();
+  xhr.ontimeout = function () {
+    console.error("The request for " + url + " timed out.");
+  };
+  xhr.onload = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback.apply(xhr, args);
+      } else {
+        console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.timeout = timeout;
+  xhr.send(null);
 }
 ```
 
@@ -118,8 +118,8 @@ function loadFile(url, timeout, callback) {
 用法：
 
 ```js
-function showMessage (message) {
-    console.log(message + this.responseText);
+function showMessage(message) {
+  console.log(message + this.responseText);
 }
 
 loadFile("message.txt", 2000, showMessage, "New message!\n");
@@ -143,7 +143,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ```js
 var request = new XMLHttpRequest();
-request.open('GET', 'http://www.mozilla.org/', false);
+request.open("GET", "http://www.mozilla.org/", false);
 request.send(null);
 if (request.status === 200) {
   console.log(request.responseText);
@@ -165,19 +165,19 @@ if (request.status === 200) {
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var oMyWorker = new Worker("myTask.js");
-  oMyWorker.onmessage = function(oEvent) {
-    alert("Worker said: " + oEvent.data);
-  };
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDN Example</title>
+    <script type="text/javascript">
+      var oMyWorker = new Worker("myTask.js");
+      oMyWorker.onmessage = function (oEvent) {
+        alert("Worker said: " + oEvent.data);
+      };
 
-  oMyWorker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      oMyWorker.postMessage("Hello");
+    </script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -211,13 +211,13 @@ self.onmessage = function (oEvent) {
 以下示例（来自 [sendBeacon](/zh-CN/docs/Web/API/Navigator/sendBeacon) 文档）显示了一个理论分析代码，该代码尝试通过在卸载处理程序中使用同步 XMLHttpRequest 将数据提交给服务器。这导致页面的卸载被延迟。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    var client = new XMLHttpRequest();
-    client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
-    client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-    client.send(analyticsData);
+  var client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
 }
 ```
 
@@ -226,10 +226,10 @@ function logData() {
 以下示例显示了使用 **`sendBeacon()`** 方法将数据提交给服务器的理论分析代码模式。
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
-    navigator.sendBeacon("/log", analyticsData);
+  navigator.sendBeacon("/log", analyticsData);
 }
 ```
 

@@ -73,9 +73,7 @@ myNode.replaceChildren();
   <div>
     <label for="yes">是的，请！</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -91,7 +89,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -111,20 +110,23 @@ select {
 为此，我们为每个按钮提供一个 click 事件处理句柄，该事件句柄将所选选项赋值到第一个常量中，将要转移到的列表中的现有的选项赋值到第二个常量中。然后，它会调用列表的 `replaceChildren()` 方法，使用延展运算符传入两个常量，进而将两个常量中包含的所有选项转移到目标列表。
 
 ```js
-const noSelect = document.getElementById('no');
-const yesSelect = document.getElementById('yes');
-const noBtn = document.getElementById('to-no');
-const yesBtn = document.getElementById('to-yes');
+const noSelect = document.getElementById("no");
+const yesSelect = document.getElementById("yes");
+const noBtn = document.getElementById("to-no");
+const yesBtn = document.getElementById("to-yes");
 
-yesBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#no option:checked');
-  const existingYesOptions = document.querySelectorAll('#yes option');
+yesBtn.addEventListener("click", () => {
+  const selectedTransferOptions =
+    document.querySelectorAll("#no option:checked");
+  const existingYesOptions = document.querySelectorAll("#yes option");
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
-  const existingNoOptions = document.querySelectorAll('#no option');
+noBtn.addEventListener("click", () => {
+  const selectedTransferOptions = document.querySelectorAll(
+    "#yes option:checked",
+  );
+  const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
 });
 ```

@@ -1,16 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedOptions
 ---
 
 {{JSRef}}
@@ -20,7 +10,7 @@ La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel 
 ## Syntaxe
 
 ```js
-listFormat.resolvedOptions()
+listFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -45,8 +35,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (la valeur par défaut)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
 ```
 
 ## Spécifications

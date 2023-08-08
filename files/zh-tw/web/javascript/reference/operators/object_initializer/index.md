@@ -11,15 +11,17 @@ Objects can be initialized using [`new Object()`](/zh-TW/docs/Web/JavaScript/Ref
 
 ```js
 var o = {};
-var o = {a: 'foo', b: 42, c: {}};
+var o = { a: "foo", b: 42, c: {} };
 
-var a = 'foo', b = 42, c = {};
-var o = {a: a, b: b, c: c};
+var a = "foo",
+  b = 42,
+  c = {};
+var o = { a: a, b: b, c: c };
 
 var o = {
   property: function ([parameters]) {},
   get property() {},
-  set property(value) {}
+  set property(value) {},
 };
 ```
 
@@ -29,19 +31,21 @@ Please see the compatibility table for support for these notations. In non-suppo
 
 ```js
 // Shorthand property names (ES2015)
-var a = 'foo', b = 42, c = {};
-var o = {a, b, c};
+var a = "foo",
+  b = 42,
+  c = {};
+var o = { a, b, c };
 
 // Shorthand method names (ES2015)
 var o = {
-  property([parameters]) {}
+  property([parameters]) {},
 };
 
 // Computed property names (ES2015)
-var prop = 'foo';
+var prop = "foo";
 var o = {
-  [prop]: 'hey',
-  ['b' + 'ar']: 'there'
+  [prop]: "hey",
+  ["b" + "ar"]: "there",
 };
 ```
 
@@ -61,10 +65,10 @@ However, the advantage of the _literal_ or _initializer_ notation is, that you a
 
 ```js
 var object = {
-  foo: 'bar',
+  foo: "bar",
   age: 42,
-  baz: {myProp: 12}
-}
+  baz: { myProp: 12 },
+};
 ```
 
 ### 存取屬性
@@ -73,9 +77,9 @@ Once you have created an object, you might want to read or change them. Object p
 
 ```js
 object.foo; // "bar"
-object['age']; // 42
+object["age"]; // 42
 
-object.foo = 'baz';
+object.foo = "baz";
 ```
 
 ### 屬性定義
@@ -83,29 +87,29 @@ object.foo = 'baz';
 We have already learned how to notate properties using the initializer syntax. Oftentimes, there are variables in your code that you would like to put into an object. You will see code like this:
 
 ```js
-var a = 'foo',
-    b = 42,
-    c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 
 var o = {
   a: a,
   b: b,
-  c: c
+  c: c,
 };
 ```
 
 With ECMAScript 2015, there is a shorter notation available to achieve the same:
 
 ```js
-var a = 'foo',
-    b = 42,
-    c = {};
+var a = "foo",
+  b = 42,
+  c = {};
 
 // Shorthand property names (ES2015)
-var o = {a, b, c};
+var o = { a, b, c };
 
 // In other words,
-console.log((o.a === {a}.a)); // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### Duplicate property names
@@ -113,7 +117,7 @@ console.log((o.a === {a}.a)); // true
 When using the same name for your properties, the second property will overwrite the first.
 
 ```js
-var a = {x: 1, x: 2};
+var a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
@@ -121,13 +125,13 @@ In ECMAScript 5 strict mode code, duplicate property names were considered a {{j
 
 ```js
 function haveES2015DuplicatePropertySemantics() {
-  'use strict';
+  "use strict";
   try {
-    ({prop: 1, prop: 2});
+    ({ prop: 1, prop: 2 });
 
     // No error thrown, duplicate property names allowed in strict mode
     return true;
-  } catch(e) {
+  } catch (e) {
     // Error thrown, duplicates prohibited in strict mode
     return false;
   }
@@ -142,7 +146,7 @@ A property of an object can also refer to a [function](/zh-TW/docs/Web/JavaScrip
 var o = {
   property: function ([parameters]) {},
   get property() {},
-  set property(value) {}
+  set property(value) {},
 };
 ```
 
@@ -152,7 +156,7 @@ In ECMAScript 2015, a shorthand notation is available, so that the keyword "func
 // Shorthand method names (ES2015)
 var o = {
   property([parameters]) {},
-  *generator() {}
+  *generator() {},
 };
 ```
 
@@ -186,19 +190,19 @@ Starting with ECMAScript 2015, the object initializer syntax also supports compu
 // Computed property names (ES2015)
 var i = 0;
 var a = {
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i,
-  ['foo' + ++i]: i
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
+  ["foo" + ++i]: i,
 };
 
 console.log(a.foo1); // 1
 console.log(a.foo2); // 2
 console.log(a.foo3); // 3
 
-var param = 'size';
+var param = "size";
 var config = {
   [param]: 12,
-  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
 };
 
 console.log(config); // {size: 12, mobileSize: 4}
@@ -211,8 +215,8 @@ The [Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-obj
 Shallow-cloning (excluding prototype) or merging objects is now possible using a shorter syntax than {{jsxref("Object.assign()")}}.
 
 ```js
-var obj1 = { foo: 'bar', x: 42 };
-var obj2 = { foo: 'baz', y: 13 };
+var obj1 = { foo: "bar", x: 42 };
+var obj2 = { foo: "baz", y: 13 };
 
 var clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
@@ -231,16 +235,16 @@ A property definition of the form `__proto__: value` or `"__proto__": value` doe
 var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
 
-var obj2 = {__proto__: null};
+var obj2 = { __proto__: null };
 assert(Object.getPrototypeOf(obj2) === null);
 
 var protoObj = {};
-var obj3 = {'__proto__': protoObj};
+var obj3 = { __proto__: protoObj };
 assert(Object.getPrototypeOf(obj3) === protoObj);
 
-var obj4 = {__proto__: 'not an object or null'};
+var obj4 = { __proto__: "not an object or null" };
 assert(Object.getPrototypeOf(obj4) === Object.prototype);
-assert(!obj4.hasOwnProperty('__proto__'));
+assert(!obj4.hasOwnProperty("__proto__"));
 ```
 
 Only a single prototype mutation is permitted in an object literal: multiple prototype mutations are a syntax error.
@@ -248,17 +252,21 @@ Only a single prototype mutation is permitted in an object literal: multiple pro
 Property definitions that do not use "colon" notation are not prototype mutations: they are property definitions that behave identically to similar definitions using any other name.
 
 ```js
-var __proto__ = 'variable';
+var __proto__ = "variable";
 
-var obj1 = {__proto__};
+var obj1 = { __proto__ };
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
-assert(obj1.hasOwnProperty('__proto__'));
-assert(obj1.__proto__ === 'variable');
+assert(obj1.hasOwnProperty("__proto__"));
+assert(obj1.__proto__ === "variable");
 
-var obj2 = {__proto__() { return 'hello'; }};
-assert(obj2.__proto__() === 'hello');
+var obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
+assert(obj2.__proto__() === "hello");
 
-var obj3 = {['__prot' + 'o__']: 17};
+var obj3 = { ["__prot" + "o__"]: 17 };
 assert(obj3.__proto__ === 17);
 ```
 

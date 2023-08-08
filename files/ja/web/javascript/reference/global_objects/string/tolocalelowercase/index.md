@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 {{JSRef}}
 
-**`toLocaleLowerCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字にに変換して返します。
+**`toLocaleLowerCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字に変換して返します。
 
 {{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 

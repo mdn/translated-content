@@ -15,4 +15,4 @@ Java는 {{glossary("Compile", "컴파일")}}이 되고, {{glossary("OOP", "객�
 
 - Wikipedia 의 [Java](<https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)>)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/ko/docs/Glossary")}}

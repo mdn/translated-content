@@ -1,7 +1,6 @@
 ---
 title: Concevoir un site pour toutes les personnes
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
 ---
 
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
@@ -54,7 +53,9 @@ La taille de la police utilisée dans un site web peut être définie en unités
 Les unités absolues ne sont pas calculées proportionnellement entre elles mais font plutôt référence à une valeur « dure », la plupart du temps, elles sont exprimées en pixels (`px`). Par exemple, si, dans votre fichier CSS, vous déclarez la règle suivante&nbsp;:
 
 ```css
-body { font-size:16px; }
+body {
+  font-size: 16px;
+}
 ```
 
 … vous indiquez au navigateur que, quoi qu'il arrive, la taille de la police doit être 16 pixels. Les navigateurs récents interprèteront cette règle de la façon suivante&nbsp;: « utiliser une police sur 16 pixels quand l'utilisateur a un niveau de zoom de 100% ».
@@ -79,34 +80,39 @@ Imaginons que la taille de police de base soit 16px et qu'on ait un titre princi
 Voici le code HTML qu'on utilisera&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Tests sur les tailles de police</title>
-</head>
-<body>
-
-    <h1>Voici notre titre principal
-        <span class="subheading">Et voici notre sous-titre</span>
+  </head>
+  <body>
+    <h1>
+      Voici notre titre principal
+      <span class="subheading">Et voici notre sous-titre</span>
     </h1>
-
-</body>
+  </body>
 </html>
 ```
 
 Un fichier CSS utilisant des unités exprimées en pourcentages pourrait être&nbsp;:
 
 ```css
-body { font-size:100%; }
+body {
+  font-size: 100%;
+}
 /* 100% de la taille de base du navigateur, en
 général, le texte sera affiché sur 16 pixels */
 
-h1 { font-size:200%; }
+h1 {
+  font-size: 200%;
+}
 /* Deux fois la taille du corps de la page,
 soit 32 pixels */
 
-span.subheading { font-size:50%; }
+span.subheading {
+  font-size: 50%;
+}
 /* La moitié du h1,soit 16 pixels, ce qui revient
 à la taille de base originelle */
 ```
@@ -114,14 +120,20 @@ span.subheading { font-size:50%; }
 Voici le fichier CSS équivalent, avec des valeurs exprimées en ems&nbsp;:
 
 ```css
-body { font-size:1em; }
+body {
+  font-size: 1em;
+}
 /* 1em = 100% de la taille de base du navigateur
 dans la plupart des cas ça correspondra à 16 pixels */
 
-h1 { font-size:2em; }
+h1 {
+  font-size: 2em;
+}
 /* deux fois la taille du coros, soit 32 pixels */
 
-span.subheading { font-size:0.5em; }
+span.subheading {
+  font-size: 0.5em;
+}
 /* la moitié de la taille de h1, 16 pixels
 ce qui revient à taille originelle */
 ```
@@ -131,14 +143,20 @@ Comme vous pouvez l'observer, cela devient rapidement complexe lorsqu'il faut se
 C'est là qu'interviennent les `rem`. Cette unité est relative à la taille de l'élément racine de la page et non au parent de l'élément. Le fichier CSS correspond peut ainsi être réécrit de cette façon&nbsp;:
 
 ```css
-body { font-size:1em; }
+body {
+  font-size: 1em;
+}
 /* 1em = 100% de la taille de base du navigateur,
 soit 16 pixels dans la plupart des cas */
 
-h1 { font-size:2rem; }
+h1 {
+  font-size: 2rem;
+}
 /* deux fois la taille du corps soit 32 pixels */
 
-span.subheading { font-size:1rem; }
+span.subheading {
+  font-size: 1rem;
+}
 /* la taille originale */
 ```
 
@@ -166,30 +184,31 @@ Bien entendu, ce problème n'a pas disparu avec le Web. Les yeux d'un lecteur so
 Pour obtenir cet effet, il est possible de définir une taille spécifique pour le conteneur du texte. Voila ce que ça donne en HTML&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Tests sur les tailles de police</title>
-</head>
-<body>
-
-<div class="container">
-    <h1>Le titre principal
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Le titre principal
         <span class="subheading">Et le sous-titre</span>
-    </h1>
+      </h1>
 
-    <p>[Un grand texte qui s'étire sur plusieurs lignes]</p>
-</div>
-
-</body>
+      <p>[Un grand texte qui s'étire sur plusieurs lignes]</p>
+    </div>
+  </body>
 </html>
 ```
 
 Ici, nous avons un `div` avec une classe `container`. Il est possible de mettre en forme le `div` en réglant sa largeur avec la propriété `width` ou en réglant sa largeur maximale afin qu'il ne soit jamais trop grand, grâce à sa propriété `max-width`. Si vous souhaitez avoir un site adaptatif ou élastique et que vous ne connaissez pas la largeur par défaut du navigateur, vous pouvez utiliser la propriété `max-width` pour avoir au maximum 70 caractères par ligne&nbsp;:
 
 ```css
-div.container { max-width:70em; }
+div.container {
+  max-width: 70em;
+}
 ```
 
 ### Fournir un contenu alternative pour les images, les sons et les vidéos

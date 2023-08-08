@@ -1,15 +1,6 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Layout
-  - Reference
-translation_of: Web/CSS/transform-function
-browser-compat: css.types.transform-function
 ---
 
 {{CSSRef}}
@@ -22,62 +13,62 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### Matrix transformation
 
-- [`matrix()`](</en-US/docs/Web/CSS/transform-function/matrix()>)
+- [`matrix()`](</ru/docs/Web/CSS/transform-function/matrix()>)
   - : Describes a homogeneous 2D transformation matrix.
-- [`matrix3d()`](</en-US/docs/Web/CSS/transform-function/matrix3d()>)
+- [`matrix3d()`](</ru/docs/Web/CSS/transform-function/matrix3d()>)
   - : Describes a 3D transformation as a 4×4 homogeneous matrix.
 
 ### Perspective
 
-- [`perspective()`](</en-US/docs/Web/CSS/transform-function/perspective()>)
+- [`perspective()`](</ru/docs/Web/CSS/transform-function/perspective()>)
   - : Sets the distance between the user and the z=0 plane.
 
 ### Rotation
 
-- [`rotate()`](</en-US/docs/Web/CSS/transform-function/rotate()>)
+- [`rotate()`](</ru/docs/Web/CSS/transform-function/rotate()>)
   - : Rotates an element around a fixed point on the 2D plane.
-- [`rotate3d()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>)
+- [`rotate3d()`](</ru/docs/Web/CSS/transform-function/rotate3d()>)
   - : Rotates an element around a fixed axis in 3D space.
-- [`rotateX()`](</en-US/docs/Web/CSS/transform-function/rotateX()>)
+- [`rotateX()`](</ru/docs/Web/CSS/transform-function/rotateX()>)
   - : Rotates an element around the horizontal axis.
-- [`rotateY()`](</en-US/docs/Web/CSS/transform-function/rotateY()>)
+- [`rotateY()`](</ru/docs/Web/CSS/transform-function/rotateY()>)
   - : Rotates an element around the vertical axis.
-- [`rotateZ()`](</en-US/docs/Web/CSS/transform-function/rotateZ()>)
+- [`rotateZ()`](</ru/docs/Web/CSS/transform-function/rotateZ()>)
   - : Rotates an element around the z-axis.
 
 ### Scaling (resizing)
 
-- [`scale()`](</en-US/docs/Web/CSS/transform-function/scale()>)
+- [`scale()`](</ru/docs/Web/CSS/transform-function/scale()>)
   - : Scales an element up or down on the 2D plane.
-- [`scale3d()`](</en-US/docs/Web/CSS/transform-function/scale3d()>)
+- [`scale3d()`](</ru/docs/Web/CSS/transform-function/scale3d()>)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](</en-US/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleX()`](</ru/docs/Web/CSS/transform-function/scaleX()>)
   - : Scales an element up or down horizontally.
-- [`scaleY()`](</en-US/docs/Web/CSS/transform-function/scaleY()>)
+- [`scaleY()`](</ru/docs/Web/CSS/transform-function/scaleY()>)
   - : Scales an element up or down vertically.
-- [`scaleZ()`](</en-US/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleZ()`](</ru/docs/Web/CSS/transform-function/scaleZ()>)
   - : Scales an element up or down along the z-axis.
 
 ### Skewing (distortion)
 
-- [`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>)
+- [`skew()`](</ru/docs/Web/CSS/transform-function/skew()>)
   - : Skews an element on the 2D plane.
-- [`skewX()`](</en-US/docs/Web/CSS/transform-function/skewX()>)
+- [`skewX()`](</ru/docs/Web/CSS/transform-function/skewX()>)
   - : Skews an element in the horizontal direction.
-- [`skewY()`](</en-US/docs/Web/CSS/transform-function/skewY()>)
+- [`skewY()`](</ru/docs/Web/CSS/transform-function/skewY()>)
   - : Skews an element in the vertical direction.
 
 ### Translation (moving)
 
-- [`translate()`](</en-US/docs/Web/CSS/transform-function/translate()>)
+- [`translate()`](</ru/docs/Web/CSS/transform-function/translate()>)
   - : Translates an element on the 2D plane.
-- [`translate3d()`](</en-US/docs/Web/CSS/transform-function/translate3d()>)
+- [`translate3d()`](</ru/docs/Web/CSS/transform-function/translate3d()>)
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
+- [`translateX()`](/ru/docs/Web/CSS/transform-function/translateX)
   - : Translates an element horizontally.
-- [`translateY()`](</en-US/docs/Web/CSS/transform-function/translateY()>)
+- [`translateY()`](</ru/docs/Web/CSS/transform-function/translateY()>)
   - : Translates an element vertically.
-- [`translateZ()`](</en-US/docs/Web/CSS/transform-function/translateZ()>)
+- [`translateZ()`](</ru/docs/Web/CSS/transform-function/translateZ()>)
   - : Translates an element along the z-axis.
 
 ## Description
@@ -125,12 +116,12 @@ Choose one, and the transform is applied to the cube; after 2 seconds, the cube 
 ```html
 <main>
   <section id="example-element">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
   </section>
 
   <div class="select-form">
@@ -194,32 +185,32 @@ main {
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgba(210, 0, 0, 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgba(0, 0, 210, 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgba(210, 210, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgba(210, 0, 210, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -231,19 +222,19 @@ main {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const example = document.querySelector('#example-element');
+const selectElem = document.querySelector("select");
+const example = document.querySelector("#example-element");
 
-selectElem.addEventListener('change', () => {
-  if(selectElem.value === 'Choose a function') {
+selectElem.addEventListener("change", () => {
+  if (selectElem.value === "Choose a function") {
     return;
   } else {
     example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;
-    setTimeout(function() {
-      example.style.transform = 'rotate3d(1, 1, 1, 30deg)';
-    }, 2000)
+    setTimeout(function () {
+      example.style.transform = "rotate3d(1, 1, 1, 30deg)";
+    }, 2000);
   }
-})
+});
 ```
 
 #### Result

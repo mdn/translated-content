@@ -48,10 +48,10 @@ Highlights:
 - {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ([Firefox bug 1009388](https://bugzil.la/1009388))。
 - 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ([Firefox bug 865649](https://bugzil.la/865649))。
 - Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](http://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
-- The [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers) ({{bug("949325")}}). It still is only activated for certified applications.
-- The [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).
-- The [MSISDN Verification API](/zh-CN/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ({{ Bug("988469") }}).
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](http://dev.w3.org/fxtf/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
+- The [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
+- The [MSISDN Verification API](/zh-CN/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).
 - The [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ([Firefox bug 852935](https://bugzil.la/852935)).
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
 - To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
@@ -69,7 +69,7 @@ _No change._
 
 ### WebRTC
 
-- New constraints for [WebRTC](/zh-CN/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
+- New constraints for [WebRTC](/zh-CN/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ([Firefox bug 907352](https://bugzil.la/907352)):
 
   ```
   {

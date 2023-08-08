@@ -1,17 +1,6 @@
 ---
 title: Programmation de Sites Web côté serveur
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-translation_of: Learn/Server-side
 ---
 
 {{LearnSidebar}}
@@ -31,8 +20,8 @@ Des connaissances minimales en concepts de programmation pourront être utiles, 
 Vous allez avoir besoin de comprendre "comment le fonctionne le Web". Nous vous recommandons premièremement de lire les sujets suivants :
 
 - [Qu'est-ce qu'un serveur web](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web)
-- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/Apprendre/Quels_logiciels_sont_n%C3%A9cessaires_pour_construire_un_site_web)
-- [Comment transférer des fichiers à un serveur web ?](/fr/Apprendre/Transf%C3%A9rer_des_fichiers_vers_un_serveur_web)
+- [De quel logiciels ai-je besoin afin de faire des sites web ?](/fr/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web)
+- [Comment transférer des fichiers à un serveur web ?](/fr/Apprendre/Transférer_des_fichiers_vers_un_serveur_web)
 
 Ces articles vous donnerons les outils nécessaires afin de travailler avec les modules de cette section.
 

@@ -3,6 +3,8 @@ title: 密钥
 slug: Glossary/Key
 ---
 
+{{GlossarySidebar}}
+
 密钥是一段用于 {{Glossary("cipher", "密码算法")}}{{Glossary("encryption","加密")}}和/或{{Glossary("decryption","解密")}}的信息。
 
 经加密的消息需要保证即使{{Glossary("cryptosystem","密码体制")}}中除了密钥外的其他部分在公开可见的情况下，依然保持安全性。

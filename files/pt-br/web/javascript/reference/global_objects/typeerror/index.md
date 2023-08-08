@@ -54,12 +54,12 @@ try {
   null.f();
 } catch (e) {
   console.log(e instanceof TypeError); // true
-  console.log(e.message);              // "null has no properties"
-  console.log(e.name);                 // "TypeError"
-  console.log(e.fileName);             // "Scratchpad/1"
-  console.log(e.lineNumber);           // 2
-  console.log(e.columnNumber);         // 2
-  console.log(e.stack);                // "@Scratchpad/2:2:3\n"
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -67,25 +67,25 @@ try {
 
 ```js
 try {
-  throw new TypeError('Hello', "someFile.js", 10);
+  throw new TypeError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof TypeError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "TypeError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                                            | Status                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ES6')}}     |                    |
-| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                                     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                                     | {{Spec2('ES3')}}     | Initial definition |
+| Specification                                                                               | Status             | Comment            |
+| ------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ES6')}}   |                    |
+| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                        | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                          | {{Spec2('ES3')}}   | Initial definition |
 
 ## Compatibilidade com navegadores
 

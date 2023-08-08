@@ -1,18 +1,11 @@
 ---
 title: Les frameworks web côté serveur
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Débutant
-  - Guide
-  - Server
-  - Web
-translation_of: Learn/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/Premiers_pas/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
-L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu’une application web côté serveur doit faire pour répondre aux demandes d’un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche. En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.
+L'article précédent nous a montré à quoi ressemble la communication entre les clients et les serveurs web, la nature des demandes et des réponses HTTP et ce qu'une application web côté serveur doit faire pour répondre aux demandes d'un navigateur web. Avec ces connaissances en main, il est temps d'explorer comment les frameworks peuvent nous simplifier la tâche. En chemin, vous comprendrez comment choisir le framework le mieux adapté pour votre première application web côté serveur.
 
 <table class="standard-table">
   <tbody>
@@ -86,14 +79,14 @@ urlpatterns = [
 
 Les données peuvent être encodées dans une requête HTTP de différentes manières. Une demande HTTP GET pour obtenir des fichiers ou des données du serveur peut coder les données requises dans les paramètres d'URL ou dans la structure d'URL. Une demande HTTP POST de mise à jour une ressource sur le serveur inclura plutôt les informations de mise à jour en tant que "données POST" dans le corps de la demande. La requête HTTP peut également inclure des informations sur la session ou l'utilisateur en cours dans un cookie côté client. Les frameworks web fournissent des mécanismes appropriés au langage de programmation pour accéder à ces informations. Par exemple, l'objet HttpRequest que Django transmet à chaque fonction d'affichage contient des méthodes et des propriétés permettant d'accéder à l'URL cible, le type de demande (par exemple, un HTTP GET), les paramètres GET ou POST, les données de cookie et de session, etc. Django peut également transmettre informations codées dans la structure de l'URL en définissant des "modèles de capture" dans le mappeur d'URL (voir le dernier fragment de code dans la section ci-dessus).
 
-### Extraction et simplification de l’accès à la base de données
+### Extraction et simplification de l'accès à la base de données
 
 Les sites web utilisent des bases de données pour stocker des informations à partager avec les utilisateurs et sur les utilisateurs. Les infrastructures web fournissent souvent une couche de base de données qui extrait les opérations de lecture, d'écriture, de requête et de suppression de base de données. Cette couche d'extraction est appelée ORM (Object-Relational Mapper).
 
 L'utilisation d'un ORM présente deux avantages :
 
-1. Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d’optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
-2. La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu’elles ont le format correct (par exemple une adresse électronique) et qu’elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
+1. Vous pouvez remplacer la base de données sous-jacente sans avoir nécessairement besoin de changer le code qui l'utilise. Cela permet aux développeurs d'optimiser les caractéristiques des différentes bases de données en fonction de leur utilisation.
+2. La validation de base des données peut être mise en œuvre avec le framework. Il est ainsi plus facile et plus sûr de vérifier que les données sont stockées dans le type de champ de base de données approprié, qu'elles ont le format correct (par exemple une adresse électronique) et qu'elles ne sont en aucun cas malveillantes (les pirates peuvent utiliser certains modèles de code pour agir mal, telles que la suppression des enregistrements de la base de données).
 
 Par exemple, le framework web Django fournit un ORM et fait référence à l'objet utilisé pour définir la structure d'un enregistrement en tant que modèle. Le modèle spécifie les types de champs à stocker, ce qui peut fournir une validation au niveau du champ sur les informations pouvant être stockées (par exemple, un champ de courrier électronique autoriserait uniquement les adresses de courrier électronique valides). Les définitions de champ peuvent également spécifier leur taille maximale, leurs valeurs par défaut, leurs options de liste de sélection, leur aide pour la documentation, leur libellé pour les formulaires, etc. Le modèle ne spécifie aucune information sur la base de données sous-jacente, il s'agit d'un paramètre de configuration susceptible d'être modifié séparément de notre code.
 
@@ -144,24 +137,22 @@ Par exemple, le système de templates Django vous permet de spécifier des varia
 
 L'extrait de code ci-dessous montre comment cela fonctionne. En reprenant l'exemple "youngest_teams" de la section précédente, le modèle HTML se voit transmettre par la vue une variable de liste nommée youngest_teams. Dans le squelette HTML, nous avons une expression qui vérifie d'abord si la variable youngest_teams existe, puis itère dans une boucle for. À chaque itération, le modèle affiche la valeur team_name de l'équipe dans un élément de liste.
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<body>
-
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
-{% endif %}
-
-</body>
+  <body>
+    {% if youngest_teams %}
+      <ul>
+        {% for team in youngest_teams %}
+          <li>\{\{ team.team_name \}\}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No teams are available.</p>
+    {% endif %}
+  </body>
 </html>
 ```
 
@@ -171,17 +162,17 @@ Il existe de nombreux frameworks web pour presque tous les langages de programma
 
 Certains des facteurs qui peuvent affecter votre décision sont les suivants:
 
-- **Effort d'apprentissage**&nbsp;: L'effort d'apprentissage d'un framework web dépend de votre familiarité avec le langage de programmation sous-jacent, de la cohérence de son API, de la qualité de sa documentation ainsi que de la taille et de l'activité de sa communauté. Si vous avez peu d'eqperience en programmation, pensez à Django (l’un des plus faciles à apprendre en fonction des critères ci-dessus). Si vous faites partie d'une équipe de développement qui possède déjà une expérience significative avec un framework web ou un langage de programmation particulier, il est logique de s'en tenir à cela.
+- **Effort d'apprentissage**&nbsp;: L'effort d'apprentissage d'un framework web dépend de votre familiarité avec le langage de programmation sous-jacent, de la cohérence de son API, de la qualité de sa documentation ainsi que de la taille et de l'activité de sa communauté. Si vous avez peu d'eqperience en programmation, pensez à Django (l'un des plus faciles à apprendre en fonction des critères ci-dessus). Si vous faites partie d'une équipe de développement qui possède déjà une expérience significative avec un framework web ou un langage de programmation particulier, il est logique de s'en tenir à cela.
 - **Productivité**&nbsp;: la productivité mesure la rapidité avec laquelle vous pouvez créer de nouvelles fonctionnalités une fois que vous êtes familiarisé avec le framework. Elle inclut à la fois les efforts d'écriture et de maintenance du code (car vous ne pouvez pas écrire de nouvelles fonctionnalités alors que les anciennes sont endommagées). Un grand nombre des facteurs qui affectent la productivité sont similaires à ceux de "Effort d'apprentissage" - par ex. documentation, communauté, expérience en programmation, etc. - les autres facteurs incluent:
 
-  - *Objectif / origine du framework*&nbsp;: certains frameworks web ont été créés à l'origine pour résoudre certains types de problèmes, et restent meilleurs pour créer des applications web avec des contraintes similaires. Par exemple, Django a été créé pour soutenir le développement d'un site web de journal. Il est donc bon pour les blogs et les autres sites impliquant la publication d'éléments. En revanche, Flask est un cadre beaucoup plus léger et est idéal pour créer des applications web s'exécutant sur des périphériques intégrés.
+  - _Objectif / origine du framework_&nbsp;: certains frameworks web ont été créés à l'origine pour résoudre certains types de problèmes, et restent meilleurs pour créer des applications web avec des contraintes similaires. Par exemple, Django a été créé pour soutenir le développement d'un site web de journal. Il est donc bon pour les blogs et les autres sites impliquant la publication d'éléments. En revanche, Flask est un cadre beaucoup plus léger et est idéal pour créer des applications web s'exécutant sur des périphériques intégrés.
   - _Populaire vs Impopulaire_: Un framework populaire est un frameqork dans lequel il est recommandé de "meilleures" manières de résoudre un problème particulier. Les frameworks populaire ont tendance à être plus productifs lorsque vous essayez de résoudre des problèmes courants, car ils vous orientent dans la bonne direction, mais ils sont parfois moins flexibles.
-  - *Ressource incluses vs. l'obtenir vous-même*&nbsp;: certains frameworks web incluent des outils / bibliothèques qui traitent tous les problèmes que leurs développeurs peuvent penser "par défaut", tandis que des frameworks plus légers attendent des développeurs web qu'ils choisissent la solution aux problèmes de bibliothèques séparées (Django est un exemple inclue " tout " tandis que Flask est un exemple de framework très léger). Les frameworks qui incluent tout sont souvent plus faciles à démarrer car vous avez déjà tout ce dont vous avez besoin, et il est probable qu’il soit bien intégré et bien documenté. Cependant, si une structure plus petite contient tout ce dont vous avez besoin (le cas échéant), elle peut alors s'exécuter dans des environnements plus restreints et disposer d'un sous-ensemble de choses plus petites et plus faciles à apprendre.
-  - *Si le framework encourage ou non les bonnes pratiques de développement*&nbsp;: par exemple, un cadre qui encourage une architecture Model-View-Controller où on sépare le code en fonctions logiques engendrera un code plus facile à maintenir qu'un code qui n'a pas d'attente de la part des développeurs. De même, la conception de la structure peut avoir un impact important sur la facilité de test et de réutilisation du code.
+  - _Ressource incluses vs. l'obtenir vous-même_&nbsp;: certains frameworks web incluent des outils / bibliothèques qui traitent tous les problèmes que leurs développeurs peuvent penser "par défaut", tandis que des frameworks plus légers attendent des développeurs web qu'ils choisissent la solution aux problèmes de bibliothèques séparées (Django est un exemple inclue " tout " tandis que Flask est un exemple de framework très léger). Les frameworks qui incluent tout sont souvent plus faciles à démarrer car vous avez déjà tout ce dont vous avez besoin, et il est probable qu'il soit bien intégré et bien documenté. Cependant, si une structure plus petite contient tout ce dont vous avez besoin (le cas échéant), elle peut alors s'exécuter dans des environnements plus restreints et disposer d'un sous-ensemble de choses plus petites et plus faciles à apprendre.
+  - _Si le framework encourage ou non les bonnes pratiques de développement_&nbsp;: par exemple, un cadre qui encourage une architecture Model-View-Controller où on sépare le code en fonctions logiques engendrera un code plus facile à maintenir qu'un code qui n'a pas d'attente de la part des développeurs. De même, la conception de la structure peut avoir un impact important sur la facilité de test et de réutilisation du code.
 
-- **Performances du framework/langage de programmation**&nbsp;: généralement, la *vitesse* n’est pas le facteur le plus important dans la sélection car même des exécutions relativement lentes, comme Python, sont plus que *suffisantes* pour les sites de taille moyenne fonctionnant avec un matériel raisonnablement performant. Les avantages perçus en termes de vitesse par rapport à un autre langage comme C++ ou JavaScript peuvent être compensés par les coûts d’apprentissage et de maintenance.
-- **Mise en cache** : la popularité de votre site web grandit, vous constatez peut-être que le serveur ne peut plus gérer toutes les requêtes. À ce stade, vous pouvez envisager d’ajouter un support pour la mise en cache : une optimisation dans laquelle vous stockez tout ou partie de la réponse à une requête web afin qu'il ne soit pas nécessaire de la recalculer la prochaine fois. Retourner la réponse en cache à une requête est beaucoup plus rapide que d'en calculer une. La mise en cache peut être implémentée dans votre code ou sur le serveur (voir proxy inverse). Les infrastructures web auront différents niveaux de prise en charge pour définir le contenu pouvant être mis en cache.
-- **Adpatation**&nbsp;: votre site web connaît un succès fantastique, vous avez épuisé les avantages de la mise en cache, vous atteignez même les limites de la mise à l'échelle verticale (exécuter votre application Web sur un matériel plus puissant). À ce stade, il est temps de penser à une mise à l’échelle horizontale (partager la charge en répartissant votre site sur un certain nombre de serveurs web et de bases de données) ou «géographiquement», car certains de vos clients sont très éloignés de votre serveur. L'infrastructure web que vous choisissez peut faire toute la différence en termes de facilité d'adaptation de votre site.
+- **Performances du framework/langage de programmation**&nbsp;: généralement, la _vitesse_ n'est pas le facteur le plus important dans la sélection car même des exécutions relativement lentes, comme Python, sont plus que _suffisantes_ pour les sites de taille moyenne fonctionnant avec un matériel raisonnablement performant. Les avantages perçus en termes de vitesse par rapport à un autre langage comme C++ ou JavaScript peuvent être compensés par les coûts d'apprentissage et de maintenance.
+- **Mise en cache** : la popularité de votre site web grandit, vous constatez peut-être que le serveur ne peut plus gérer toutes les requêtes. À ce stade, vous pouvez envisager d'ajouter un support pour la mise en cache : une optimisation dans laquelle vous stockez tout ou partie de la réponse à une requête web afin qu'il ne soit pas nécessaire de la recalculer la prochaine fois. Retourner la réponse en cache à une requête est beaucoup plus rapide que d'en calculer une. La mise en cache peut être implémentée dans votre code ou sur le serveur (voir proxy inverse). Les infrastructures web auront différents niveaux de prise en charge pour définir le contenu pouvant être mis en cache.
+- **Adpatation**&nbsp;: votre site web connaît un succès fantastique, vous avez épuisé les avantages de la mise en cache, vous atteignez même les limites de la mise à l'échelle verticale (exécuter votre application Web sur un matériel plus puissant). À ce stade, il est temps de penser à une mise à l'échelle horizontale (partager la charge en répartissant votre site sur un certain nombre de serveurs web et de bases de données) ou «géographiquement», car certains de vos clients sont très éloignés de votre serveur. L'infrastructure web que vous choisissez peut faire toute la différence en termes de facilité d'adaptation de votre site.
 - **Sécurité web**&nbsp;: certains environnements web offrent une meilleure prise en charge de la gestion des attaques web courantes. Django, par exemple, supprime toutes les entrées utilisateur des modèles HTML afin que le code JavaScript saisi par l'utilisateur ne puisse pas être exécuté. D'autres frameworks offrent une protection similaire, mais celle-ci n'est pas toujours activée par défaut.
 
 Il existe de nombreux autres facteurs possibles, y compris les licences, que le cadre soit ou non en cours de développement actif, etc.
@@ -192,15 +183,15 @@ Si vous débutez en programmation, vous choisirez probablement un framework faci
 >
 > 1. Navigate to the main sites (linked above)
 >
->     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started".
->     - Can you see topics showing how to set up URL routing, templates, and databases/models?
->     - Are the documents clear?
+>    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started".
+>    - Can you see topics showing how to set up URL routing, templates, and databases/models?
+>    - Are the documents clear?
 >
 > 2. Navigate to mailing lists for each site (accessible from Community links).
 >
->     - How many questions have been posted in the last few days
->     - How many have responses?
->     - Do they have an active community?
+>    - How many questions have been posted in the last few days
+>    - How many have responses?
+>    - Do they have an active community?
 
 ## A few good web frameworks?
 
@@ -212,7 +203,7 @@ The server-side frameworks below represent _a few_ of the most popular available
 
 ### Django (Python)
 
-[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source.
 
 Django follows the "Batteries included" philosophy and provides almost everything most developers might want to do "out of the box". Because everything is included, it all works together, follows consistent design principles, and has extensive and up-to-date documentation. It is also fast, secure, and very scalable. Being based on Python, Django code is easy to read and to maintain.
 

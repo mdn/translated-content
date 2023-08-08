@@ -21,9 +21,9 @@ includes(searchElement, fromIndex)
 - `searchElement`
   - : 需要查找的值。
 - `fromIndex` {{optional_inline}}
-  - : 开始搜索的索引（从零开始），[会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#转换为整数)。
-    - 负索引从数组末尾开始计数——如果 `fromIndex < 0`，那么实际使用的是 `fromIndex + array.length`。然而在这种情况下，数组搜索仍然从前往后。
-    - 如果 `fromIndex < -array.length` 或者省略 `fromIndex`，则使用 `0`，导致整个数组被搜索。
+  - : 开始搜索的索引（从零开始），[会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 负索引从数组末尾开始计数——如果 `fromIndex < 0`，那么实际使用的是 `fromIndex + array.length`。然而在这种情况下，数组仍然从前往后进行搜索。
+    - 如果 `fromIndex < -array.length` 或者省略 `fromIndex`，则使用 `0`，这将导致整个数组被搜索。
     - 如果 `fromIndex >= array.length`，则不会搜索数组并返回 `false`。
 
 ### 返回值
@@ -32,11 +32,11 @@ includes(searchElement, fromIndex)
 
 ## 描述
 
-`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` 不被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
+`includes()` 方法使用[零值相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)算法将 `searchElement` 与数组中的元素进行比较。0 值都被认为是相等的，不管符号是什么。（即 `-0` 等于 `0`），但 `false` *不*被认为与 `0` 相同。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 可以被正确搜索到。
 
-当使用[稀疏数组](/zh-cn/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时， `includes()` 方法迭代空槽，就像它们的值是 `undefined` 一样。
+当在[稀疏数组](/zh-cn/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)上使用时， `includes()` 方法迭代空槽，就像它们的值是 `undefined` 一样。
 
-`includes()` 方法是[通用的](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/Array#通用的数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
+`includes()` 方法是[通用的](/zh-cn/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 

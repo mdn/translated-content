@@ -1,17 +1,6 @@
 ---
 title: Comment structurer un formulaire HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - Apprentissage
-  - Débutant
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Structure
-  - Web
-translation_of: Learn/Forms/How_to_structure_a_web_form
-original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -66,15 +55,15 @@ Voici un petit exemple :
   <fieldset>
     <legend>Taille du jus de fruits</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Petite</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Moyenne</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Grande</label>
     </p>
   </fieldset>
@@ -94,7 +83,8 @@ En raison de son influence sur les techniques d'assistance, l'élément {{HTMLEl
 Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent&nbsp;:
 
 ```html
-<label for="name">Nom&nbsp;:</label> <input type="text" id="name" name="user_name">
+<label for="name">Nom&nbsp;:</label>
+<input type="text" id="name" name="user_name" />
 ```
 
 Avec un élément `<label>` correctement associé à `<input>` par l'intermédiaire respectivement des attributs `for` et `id` (l'attribut `for` de \<label> référence l'attibut `id` du widget correspondant), un lecteur d'écran lira et dira quelque chose comme «&nbsp;Nom, texte indiqué&nbsp;».
@@ -105,7 +95,7 @@ Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label
 
 ```html
 <label for="name">
-  Nom&nbsp;: <input type="text" id="name" name="user_name">
+  Nom&nbsp;: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -121,11 +111,11 @@ Par exemple&nbsp;:
 <form>
   <p>
     <label for="taste_1">J'aime les cerises</label>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="1" />
   </p>
   <p>
     <label for="taste_2">J'aime les bananes</label>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="2">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="2" />
   </p>
 </form>
 ```
@@ -139,30 +129,34 @@ En fait, il est possible d'associer plusieurs étiquettes à un seul widget, mai
 Considérons cet exemple&nbsp;:
 
 ```html
-<p>Les champs obligatoires sont suivis de <abbr title="required">*</abbr>.</p>
+<p>
+  Les champs obligatoires sont suivis de <span aria-label="required">*</span>.
+</p>
 
 <!-- Donc ceci&nbsp;: -->
-<div>
+<!--div>
   <label for="username">Nom&nbsp;:</label>
-  <input type="text" name="username">
-  <label for="username"><abbr title="required">*</abbr></label>
-</div>
+  <input type="text" name="username" />
+  <label for="username"><span aria-label="required">*</span></label>
+</div-->
 
 <!-- sera mieux programmé ainsi&nbsp;: -->
-<div>
+<!--div>
   <label for="username">
     <span>Nom&nbsp;:</span>
-    <input id="username" type="text" name="username">
-    <abbr title="required">*</abbr>
+    <input id="username" type="text" name="username" />
+    <span aria-label="required">*</span>
   </label>
-</div>
+</div-->
 
 <!-- mais ceci est probablement encore meilleur&nbsp;: -->
 <div>
-  <label for="username">Nom&nbsp;:<abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+  <label for="username">Nom&nbsp;:<span aria-label="required">*</span></label>
+  <input id="username" type="text" name="username" required />
 </div>
 ```
+
+{{EmbedLiveSample("", 120, 120)}}
 
 Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
 
@@ -193,113 +187,129 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
 1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
 2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
 3. Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
 
-    ```html
-    <form>
-
-    </form>
-    ```
+   ```html-nolint
+   <form></form>
+   ```
 
 4. Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
 
-    ```html
-    <h1>Formulaire de paiement</h1>
-    <p>Les champs obligatoires sont suivis par un <strong><abbr title="required">*</abbr></strong>.</p>
-    ```
+   ```html-nolint
+   <h1>Formulaire de paiement</h1>
+   <p>
+     Les champs obligatoires sont suivis par un
+     <strong><span aria-label="required">*</span></strong
+     >.
+   </p>
+   ```
 
 5. Ensuite, nous ajoutons une grande section de code dans le formulaire, sous la précédente. Ici vous verrez que nous enveloppons les champs d'informations de contact dans des éléments {{htmlelement("section")}} distincts. De plus, nous avons un ensemble de deux boutons radio, que nous mettons chacun à l'intérieur de leur propre élément de liste ({{htmlelement("li")}}). Enfin, nous avons deux zones de texte standard {{htmlelement("input")}} et leurs éléments {{htmlelement("label")}} associés, chacun contenu dans un élément {{htmlelement("p")}}, plus une entrée pour le mot de passe. Ajoutez ce code à votre formulaire maintenant :
 
-    ```html
-    <section>
-        <h2>Informations de contact</h2>
-        <fieldset>
-          <legend>Qualité</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="M." >
-                  Monsieur
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Mme.">
-                  Madame
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Nom&nbsp;: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <span>e-mail&nbsp;:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Mot de passe&nbsp;:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Informations de contact</h2>
+     <fieldset>
+       <legend>Qualité</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="M." />
+             Monsieur
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Mme." />
+             Madame
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Nom&nbsp;: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="text" id="name" name="username" required />
+     </p>
+     <p>
+       <label for="mail">
+         <span>e-mail&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" required />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Mot de passe&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="password" id="pwd" name="password" required />
+     </p>
+   </section>
+   ```
 
 6. Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
 
-    ```html
-    <section>
-        <h2>Informations de paiement</h2>
-        <p>
-          <label for="card">
-            <span>Type de carte&nbsp;:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Numéro de carte&nbsp;:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Validité&nbsp;:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>format mm/aa</em>
-          </label>
-          <input type="text" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Informations de paiement</h2>
+     <p>
+       <label for="card">
+         <span>Type de carte&nbsp;:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Numéro de carte&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" required />
+     </p>
+     <p>
+       <label for="expiration">
+         <span>Date d'expiration&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+     </p>
+   </section>
+   ```
 
 7. La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
 
-    ```html
-    <p> <button type="submit">Valider le paiement</button> </p>
-    ```
+   ```html
+   <section>
+     <p>
+       <button type="submit">Valider le paiement</button>
+     </p>
+   </section>
+   ```
+
+8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+
+   ```html
+   </form>
+   ```
 
 Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("Un_formulaire_de_paiement","100%","620", "", "Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple")}}
+{{EmbedLiveSample("Exemple_en_direct", "100%", "620")}}
 
 ## Résumé
 

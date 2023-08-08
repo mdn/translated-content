@@ -1,19 +1,8 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -31,7 +20,7 @@ arr[Symbol.iterator]()
 ### Пример: итерация посредством цикла `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 // ваш браузер должен поддерживать цикл for..of
 // и переменные с областью видимости let в циклах for
 for (let letter of arr) {
@@ -42,7 +31,7 @@ for (let letter of arr) {
 ### Пример: альтернативный способ итерации
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

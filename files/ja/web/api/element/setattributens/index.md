@@ -1,35 +1,52 @@
 ---
-title: element.setAttributeNS
+title: "Element: setAttributeNS() メソッド"
+short-title: setAttributeNS()
 slug: Web/API/Element/setAttributeNS
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ ApiRef() }}
+{{ APIRef("DOM") }}
 
-### 概要
+`setAttributeNS` は、指定された名前空間と名前で、新しい属性を追加したり、属性の値を変更したりします。
 
-`setAttributeNS` は指定の名前空間と名前で新しい属性を追加したり、属性の値を変更します。
+## 構文
 
-### 構文
-
+```js-nolint
+setAttributeNS(namespace, name, value)
 ```
-element.setAttributeNS(namespace,name,value)
-```
+
+### 引数
 
 - `namespace` は属性の名前空間を指定する文字列です。
-- `name` はセットしたい属性を特定する文字列です。
+- `name` は修飾名で属性を識別する文字列です。すなわち、名前空間接頭辞に続いてコロン、続いてローカル名です。
 - `value` は新しい属性の希望する文字列値です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ### 例
 
-```
-var d = document.getElementById("d1");
-d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```js
+let d = document.getElementById("d1");
+d.setAttributeNS(
+  "http://www.mozilla.org/ns/specialspace",
+  "spec:align",
+  "center",
+);
 ```
 
-### Notes
+## メモ
 
 {{ DOMAttributeMethods() }}
 
-### 仕様
+`setAttributeNS` は名前空間属性のための唯一のメソッドで、完全修飾名、つまり `"namespace:localname"` を期待します。
 
-[DOM Level 2 Core: setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

@@ -2,6 +2,7 @@
 title: 시각적 서식 모델
 slug: Web/CSS/Visual_formatting_model
 ---
+
 {{CSSRef}}
 
 CSS **시각적 서식 모델** (visual formatting model)은 문서를 처리하여 그것을 시각적 매체에 표시하는 알고리즘입니다. 이 모델은 CSS의 기본 개념입니다.
@@ -105,12 +106,13 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 ```html
 <style>
   span {
-    display:inline; /* default value*/
+    display: inline; /* default value*/
   }
 </style>
 <div style="width:20em;">
-   스팬 요소에 포함된 택스트는 <span> 몇 개의 라인으로 분할 될 수
-   있습니다. 왜냐면 </span> 그것이 인라인 상자이기 때문입니다.
+  스팬 요소에 포함된 택스트는
+  <span> 몇 개의 라인으로 분할 될 수 있습니다. 왜냐면 </span> 그것이 인라인
+  상자이기 때문입니다.
 </div>
 ```
 
@@ -119,16 +121,17 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 ```html
 <style>
   span {
-    display:inline-block;
+    display: inline-block;
   }
 </style>
 <div style="width:20em;">
-   스팬 요소에 포함된 텍스트는 <span>몇 라인으로 분할 될 수
-   없 습니다. 왜냐면 </span> 그것이 인라인 블록이기 때문입니다.
+  스팬 요소에 포함된 텍스트는
+  <span>몇 라인으로 분할 될 수 없 습니다. 왜냐면 </span> 그것이 인라인 블록이기
+  때문입니다.
 </div>
 ```
 
- 이 것의 결과는:스팬 요소에 포함된 텍스트는 분할될 수 없습니다. 왜냐면 인라인 블록 상자이기 때문입니다.
+이 것의 결과는:스팬 요소에 포함된 텍스트는 분할될 수 없습니다. 왜냐면 인라인 블록 상자이기 때문입니다.
 
 #### 무명 인라인 상자
 

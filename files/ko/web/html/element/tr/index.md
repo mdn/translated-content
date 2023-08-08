@@ -9,12 +9,12 @@ The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those c
 
 ## 사용 문맥
 
-| [콘텐츠 범주](/ko/docs/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 허용되는 콘텐츠                                                           | Zero or more {{HTMLElement("td")}} or {{HTMLElement("th")}} elements, or a mix of them                                                                                                                                                                                                                                               |
-| 태그 생략                                                                 | The start tag is mandatory. The end tag may be omitted if the {{HTMLElement("tr")}} element is immediately followed by a {{HTMLElement("tr")}} element, or if the parent table group ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}) element doesn't have any more content. |
-| 허용되는 부모 요소                                                        | A {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element.                                                                                                                                                                                                |
-| Normative document                                                        | [HTML, "The `tr` element"](http://www.whatwg.org/html/#the-tr-element)                                                                                                                                                                                                                                                                             |
+| [콘텐츠 범주](/ko/docs/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 허용되는 콘텐츠                                 | Zero or more {{HTMLElement("td")}} or {{HTMLElement("th")}} elements, or a mix of them                                                                                                                                                                                                                       |
+| 태그 생략                                       | The start tag is mandatory. The end tag may be omitted if the {{HTMLElement("tr")}} element is immediately followed by a {{HTMLElement("tr")}} element, or if the parent table group ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}) element doesn't have any more content. |
+| 허용되는 부모 요소                              | A {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element.                                                                                                                                                                                          |
+| Normative document                              | [HTML, "The `tr` element"](http://www.whatwg.org/html/#the-tr-element)                                                                                                                                                                                                                                       |
 
 ## 속성
 
@@ -28,13 +28,13 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
     - `center`, centering the content in the cells
     - `right`, aligning the content to the right of the cells
     - `justify`, widening the spaces in the textual content so that the content is justified in the cells
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} attributes {{unimplemented_inline("2212")}}.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/ko/docs/Web/HTML/Element/tr#char) and [`charoff`](/ko/docs/Web/HTML/Element/tr#charoff) attributes {{unimplemented_inline("2212")}}.
 
     If this attribute is not set, the parent node's value is inherited.
 
     > **참고:**Do not use this attribute as it is obsolete (not supported) in the latest standard.- To achieve the same effect as the `left`, `center`, `right` or `justify` values, use the CSS {{cssxref("text-align")}} property on it.
     >
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "tr")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/ko/docs/Web/HTML/Element/tr#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 <!---->
 
@@ -48,9 +48,9 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("char")}} {{deprecated_inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/ko/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
 
-    > **참고:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "tr")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "tr")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **참고:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/ko/docs/Web/HTML/Element/tr#char), in CSS3, you can use the character set using the [`char`](/ko/docs/Web/HTML/Element/tr#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 <!---->
 

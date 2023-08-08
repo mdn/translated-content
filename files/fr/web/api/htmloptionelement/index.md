@@ -1,13 +1,6 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
-translation_of: Web/API/HTMLOptionElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -33,7 +26,7 @@ _hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
       <td>
         <p>
           Contient la valeur initiale de l'attribut HTML
-          {{htmlattrxref("selected", "option")}} ,indiquant si
+          <a href="/fr/docs/Web/HTML/Element/option#selected"><code>selected</code></a>, indiquant si
           l'option est sélectionnée par défaut ou non.
         </p>
       </td>
@@ -44,7 +37,7 @@ _hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
       <td>
         <p>
           Retourne la valeur de l'attribut HTML
-          {{htmlattrxref("disabled", "option")}} , cet attribut
+          <a href="/fr/docs/Web/HTML/Element/option#disabled"><code>disabled</code></a>, cet attribut
           indique que l'option ne peut pas être sélectionnée. Une option peut
           aussi être désactivée lorsqu'elle est fille d'un élément
           {{HTMLElement("optgroup")}} désactivé.
@@ -82,7 +75,7 @@ _hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
       <td>
         <p>
           Reflète la valeur de l'attribut
-          {{htmlattrxref("label", "option")}}, qui fourni un
+          <a href="/fr/docs/Web/HTML/Element/option#label"><code>label</code></a>, qui fourni un
           libellé à l'option. si cet attribut n'est pas spécifié, sa lecture
           retourne le text de l'élément en question.
         </p>
@@ -104,7 +97,7 @@ _hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
       <td>
         <p>
           Retourne la valeur de l'attribut HTML
-          {{htmlattrxref("value", "option")}}, s'il existe, sinon
+          <a href="/fr/docs/Web/HTML/Element/option#value"><code>value</code></a>, s'il existe, sinon
           la valeur de la propriété {{domxref("Node.textContent")}} est
           retournée.
         </p>

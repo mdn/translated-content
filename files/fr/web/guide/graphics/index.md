@@ -1,17 +1,6 @@
 ---
 title: Graphismes sur le Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphismes
-  - HTML
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
-translation_of: Web/Guide/Graphics
 ---
 
 Les applications et sites Web modernes ont souvent besoin de présenter des graphismes de qualité. Tandis qu'afficher de simples images statiques peut être aisément réalisé à l'aide de la balise [`<img>`](/fr/docs/Web/HTML/Element/img), ou en réglant l'arrière-plan des éléments HTML avec la propriété CSS : [background-image](/fr/docs/Web/CSS/background-image).

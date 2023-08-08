@@ -19,7 +19,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
     <tr>
       <th scope="row">学习目标：</th>
       <td>
-        学习使用 <a href="zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
+        学习使用 <a href="/zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
       </td>
     </tr>
   </tbody>
@@ -31,7 +31,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
-这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以[查看在线演示](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)并且在 GitHub 上查看[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)）。我们不会在这节课中详细讨论它的 CSS，只说以下几个要点：
+这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以[查看在线演示](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)并且在 GitHub 上查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/not-responsive.html)）。我们不会在这节课中详细讨论它的 CSS，只说以下几个要点：
 
 - 正文内容设置了 1200 像素的最大宽度——在大于该宽度的视口中，正文会保持 1200 像素，并将其本身置于可用空间的中间；在小于该宽度的视口中，正文的宽度是视口宽度的 100%。
 - 头部图片已经被设置为，无论头部宽度如何变化，它的中心始终处于头部的中间，这样如果网站显示在窄屏上，图片中心的重要细节（里面的人）仍然可以看到，而两边超出的部分就消失了。图片的高度是 200px。
@@ -67,7 +67,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-我们可以使用两个新的属性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)——来提供更多额外的资源图像和提示，帮助浏览器选择合适的一个资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)）：
+我们可以使用两个新的属性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)——来提供更多额外的资源图像和提示，帮助浏览器选择合适的一个资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)）：
 
 ```html
 <img
@@ -86,13 +86,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. 一个空格
 3. **图片的固有宽度**（以像素为单位）（480w）。注意，这里使用宽度描述符 `w`，而非你可能期望的 `px`。图片的[固有宽度](/zh-CN/docs/Glossary/Intrinsic_Size)是它的真实大小，可以通过检查你电脑上的图片文件找到（例如，在 Mac 上，你可以在 Finder 上选择这个图片，然后按
 
-    <kbd>Cmd</kbd>
+   <kbd>Cmd</kbd>
 
-    \+
+   \+
 
-    <kbd>I</kbd>
+   <kbd>I</kbd>
 
-    来显示信息）。
+   来显示信息）。
 
 **`sizes`** 定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择——这就是我们之前提到的提示。上面的示例中，在每个逗号之前，我们写：
 
@@ -100,7 +100,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. 一个空格
 3. 当媒体条件为真时，图像将填充的**槽的宽度**（`480px`）
 
-> **备注：** 对于槽的宽度，你也许会提供一个固定值（如 `480px`）， 或者是一个相对于视口的宽度 （如 `50vw`），但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。当浏览器成功匹配第一个媒体条件的时候，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
+> **备注：** 对于槽的宽度，你也许会提供一个固定值（如 `480px`），或者是一个相对于视口的宽度（如 `50vw`），但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。当浏览器成功匹配第一个媒体条件的时候，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
 
 有了这些属性后，浏览器会：
 
@@ -119,12 +119,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ### 分辨率切换：相同的尺寸，不同的分辨率
 
-如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 语法——一种更简单的语法——而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
+如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 语法——一种更简单的语法——而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
 
 ```html
-<img srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg"
-     alt="Elva dressed as a fairy" />
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
@@ -183,7 +184,9 @@ img {
 <picture>
   <source type="image/svg+xml" srcset="pyramid.svg" />
   <source type="image/webp" srcset="pyramid.webp" />
-  <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles" />
+  <img
+    src="pyramid.png"
+    alt="regular pyramid built from four equilateral triangles" />
 </picture>
 ```
 

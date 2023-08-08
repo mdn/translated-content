@@ -1,11 +1,6 @@
 ---
 title: desc
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Description
-translation_of: Web/SVG/Element/desc
 ---
 
 {{SVGRef}}

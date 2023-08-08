@@ -1,6 +1,6 @@
 ---
 title: CSS 过渡
-slug: Web/CSS/CSS_Transitions
+slug: Web/CSS/CSS_transitions
 ---
 
 {{CSSRef}}
@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_Transitions
 
 ## 指南
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : 关于如何使用 CSS 创建过渡的分步教程。此文描述了各相关 CSS 属性并解释了这些属性如何互相作用。
 
 ## 规范
@@ -28,4 +28,4 @@ slug: Web/CSS/CSS_Transitions
 
 ## 参见
 
-- 与 CSS 过渡相关的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)为动画性属性提供了更精细的控制
+- 与 CSS 过渡相关的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为动画性属性提供了更精细的控制

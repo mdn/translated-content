@@ -33,12 +33,12 @@ slug: Learn/JavaScript/First_steps/Variables
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('你叫什麼名字?');
-  alert('你好 ' + name + ', 很高興認識你!');
-}
+button.onclick = function () {
+  let name = prompt("你叫什麼名字?");
+  alert("你好 " + name + ", 很高興認識你!");
+};
 ```
 
 {{ EmbedLiveSample('什麼是變量／變數_variable_？','100%', 50, "", "", "hide-codepen-jsfiddle") }}
@@ -108,7 +108,7 @@ scoobyDoo;
 一旦你定義了一個變量，你就能夠初始化它來儲存數值。方法如下：在變量名之後跟上一個等號 (`=`)，然後是數值。例如：
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -122,7 +122,7 @@ myAge;
 你可以同時定義並初始化變量，像是：
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.
@@ -138,7 +138,7 @@ This is probably what you'll do most of the time, as it is quicker than doing th
 如下，假設你需要宣告、初始化一個變數`myName`，即使你是初始化之後才宣告也是可行的：
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -158,22 +158,22 @@ Hoisting no longer works with `let`. If we changed `var` to `let` in the above e
 Secondly, when you use `var`, you can declare the same variable as many times as you like, but with `let` you can't. The following would work:
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 But the following would throw an error on the second line:
 
 ```js
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 You'd have to do this instead:
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
@@ -187,7 +187,7 @@ For these reasons and more, we recommend that you use `let` as much as possible 
 Once a variable has been initialized with a value, you can change (or update) that value by simply giving it a different value. Try entering the following lines into your console:
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -259,7 +259,7 @@ let myAge = 17;
 Strings are pieces of text. When you give a variable a string value, you need to wrap it in single or double quote marks, otherwise, JavaScript will try to interpret it as another variable name.
 
 ```js
-let dolphinGoodbye = 'So long and thanks for all the fish';
+let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
 ### Booleans 布林值
@@ -283,7 +283,7 @@ This is using the "less than" operator (`<`) to test whether 6 is less than 3. A
 An array is a single object that 它包含多個用方括號括起來並用逗號分隔的值。Try entering the following lines into your console:
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNameArray = ["Chris", "Bob", "Jim"];
 let myNumberArray = [10, 15, 40];
 ```
 
@@ -305,13 +305,13 @@ You'll learn a lot more about arrays in [a future article](/zh-TW/docs/Learn/Jav
 請試著在你的 console 中輸入以下指令：
 
 ```js
-let dog = { name : 'Spot', breed : 'Dalmatian' };
+let dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 取得物件中儲存的資料可以使用以下語法：
 
 ```js
-dog.name
+dog.name;
 ```
 
 We won't be looking at objects any more for now — you can learn more about those in [a future module](/zh-TW/docs/Learn/JavaScript/Objects).
@@ -323,13 +323,13 @@ JavaScript 是一個"動態型別語言"，意思是不像其他強型別程式�
 For example, if you declare a variable and give it a value enclosed in quotes, the browser will treat the variable as a string:
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 It will still be a string, even if it contains numbers, so be careful:
 
 ```js
-let myNumber = '500'; // oops, this is still a string
+let myNumber = "500"; // oops, this is still a string
 typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber;

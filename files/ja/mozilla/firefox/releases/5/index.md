@@ -92,7 +92,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 ### インターフェースの変更点
 
 - `nsIHttpChannelInternal` インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
-- {{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
+- {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
 - `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
 - `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
 - `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。

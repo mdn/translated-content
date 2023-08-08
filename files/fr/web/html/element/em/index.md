@@ -1,8 +1,6 @@
 ---
-title: '<em> : l''élément d''emphase'
+title: "<em> : l'élément d'emphase"
 slug: Web/HTML/Element/em
-translation_of: Web/HTML/Element/em
-browser-compat: html.elements.em
 ---
 
 {{HTMLSidebar}}
@@ -110,8 +108,8 @@ L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou
 
 ```html
 <p>
-  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em>
-  est maintenant appelé contenu de <em>flux</em>.
+  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em> est maintenant
+  appelé contenu de <em>flux</em>.
 </p>
 ```
 

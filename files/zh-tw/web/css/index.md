@@ -42,12 +42,12 @@ slug: Web/CSS
   - [語法](/zh-TW/docs/CSS/Syntax)
   - [權重](/zh-TW/docs/CSS/Specificity)和[繼承](/zh-TW/docs/CSS/inheritance)
   - [盒子模型](/zh-TW/docs/CSS/box_model)和[邊框的崩潰](/zh-TW/docs/CSS/margin_collapsing)
-  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/The_stacking_context)和[格式化區塊](/zh-TW/docs/CSS/block_formatting_context)
+  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/CSS/block_formatting_context)
   - [初始值](/zh-TW/docs/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/CSS/used_value)和[運作值](/zh-TW/docs/CSS/actual_value)
   - [CSS 簡寫屬性](/zh-TW/docs/CSS/Shorthand_properties)
-  - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout)
-  - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout)
-  - [媒體查詢](/zh-TW/docs/Web/CSS/Media_Queries)
+  - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
+  - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout)
+  - [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)
 
 ## CSS 開發工具
 

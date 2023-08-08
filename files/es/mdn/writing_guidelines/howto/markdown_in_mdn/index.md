@@ -1,7 +1,6 @@
 ---
 title: Bloques de contenido
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-original_slug: MDN/Contribute/Markdown_in_MDN
 ---
 
 {{MDNSidebar}}

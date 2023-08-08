@@ -1,13 +1,14 @@
 ---
-title: HTMLScriptElement.referrerPolicy
+title: "HTMLScriptElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLScriptElement/referrerPolicy
 l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef}}
 
-**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、 {{HTMLElement("script")}} 要素の {{htmlattrxref("referrerpolicy","script")}} とそのスクリプトによって行われるフェッチを反映し、リソースをフェッチする際にどのリファラーを送信するか定義しています。
+**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、 {{HTMLElement("script")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) とそのスクリプトによって行われるフェッチを反映し、リソースをフェッチする際にどのリファラーを送信するか定義しています。
 
 ## 値
 

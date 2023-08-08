@@ -1,7 +1,6 @@
 ---
 title: React 入门
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -79,9 +78,11 @@ const header = (
 > **备注：** 上一个代码段中的括号并非 JSX 的一部分，它对您的应用程序没有任何影响，括号只是用来向您（和您的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > 这看起来多少有点不适感，因为表达式前面的 [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 标记没有缩进与其对应的结束标记相同的位置。
@@ -89,8 +90,10 @@ const header = (
 浏览器是无法读取直接解析 JSX 的。我们的 header 表达式经过（ [Babel](https://babeljs.io/) 或 [Parcel](https://parceljs.org/) 之类的工具）编译之后是这样的：
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -189,9 +192,9 @@ moz-todo-react
 打开 `src/App.js`，之前打开的页面也提示我们对这个文件进行编辑。这个文件包含了我们第一个组件 `App`，内容如下：
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -205,8 +208,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -223,9 +225,9 @@ export default App;
 脚本开头的 `import` 语句允许在此脚本中使用其他文件中的代码，让我们更进一步地了解这些语句。
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 第一句代码引入了 React 库，这是为了将代码中的 JSX 语句转为`React.createElement()`，所有的 React 模块都应该引入 React 模块，否则会抛错。
@@ -259,8 +261,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -283,9 +284,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -301,13 +300,13 @@ function App() {
 现在让我们打开 `src/index.js`, 因为这也是 `App` 组件被用到的地方。这个文件是我们 app 的入口点，在一开始它如下所示
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -331,12 +330,12 @@ serviceWorker.unregister();
 您最终的 `index.js` 文件应该如下所示：
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables and props
@@ -351,7 +350,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
-可以看到， `<img />` 标签的 `src` 属性值是在大括号中的 -- `{logo}`. 这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道您在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
+可以看到，`<img />` 标签的 `src` 属性值是在大括号中的——`{logo}`。这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道你在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
 
 让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。您的代码现在应该如下所示：
 
@@ -362,9 +361,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -380,9 +377,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -400,7 +395,7 @@ function App() {
 为 `<App/>` 组件添加一个叫 `subject` 并有着 `Clarice` 值的 prop。当完成之后，您的代码应如下所示：
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 回到 `App.js`，代码应该如下所示（return 中的内容省略了）
@@ -449,7 +444,7 @@ function App(props) {
 
 ## 总结
 
-以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app -- 一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
+以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app——一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
 
 在 React 中：
 

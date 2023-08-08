@@ -14,7 +14,8 @@ slug: Web/JavaScript/Closures
 ```js
 function init() {
   var name = "Mozilla"; // name 是個由 init 建立的局部變數
-  function displayName() { // displayName() 是內部函式，一個閉包
+  function displayName() {
+    // displayName() 是內部函式，一個閉包
     alert(name); // 使用了父函式宣告的變數
   }
   displayName();
@@ -55,7 +56,7 @@ myFunc();
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
@@ -63,7 +64,7 @@ function makeAdder(x) {
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-console.log(add5(2));  // 7
+console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 ```
 
@@ -104,8 +105,8 @@ h2 {
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -117,9 +118,9 @@ var size16 = makeSizer(16);
 `size12`、`size14`、`size16` 現在變成能調整字體大小到 12、14、與 16 像素的函式。而我們能如下例一般，把他們附加到按鈕上（本例為連結）：
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -139,21 +140,21 @@ JavaScript 並沒有的提供原生的方法完成這種事，不過它藉由閉
 以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式([module pattern](http://www.google.com/search?q=javascript+module+pattern))。
 
 ```js
-var counter = (function() {
+var counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
+    },
   };
 })();
 
@@ -174,22 +175,22 @@ console.log(counter.value()); // logs 1
 > **備註：** 你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給`counter` 變數指派了回傳值。我們也能在分離的變數 `makeCounter` 儲存函式並用其建立數個 counter。
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var counter1 = makeCounter();
@@ -213,28 +214,28 @@ alert(counter2.value()); /* Alerts 0 */
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -253,21 +254,21 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
@@ -286,22 +287,22 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
-    (function() {
-       var item = helpText[i];
-       document.getElementById(item.id).onfocus = function() {
-         showHelp(item.help);
-       }
+    (function () {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function () {
+        showHelp(item.help);
+      };
     })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
   }
 }
@@ -313,21 +314,21 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     let item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -348,11 +349,11 @@ setupHelp();
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -366,12 +367,12 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function() {
+  getName: function () {
     return this.name;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -382,10 +383,10 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```
@@ -394,16 +395,16 @@ MyObject.prototype.getMessage = function() {
 
 ```js
 function MyObject(name, message) {
-    this.name = name.toString();
-    this.message = message.toString();
+  this.name = name.toString();
+  this.message = message.toString();
 }
-(function() {
-    this.getName = function() {
-        return this.name;
-    };
-    this.getMessage = function() {
-        return this.message;
-    };
+(function () {
+  this.getName = function () {
+    return this.name;
+  };
+  this.getMessage = function () {
+    return this.message;
+  };
 }).call(MyObject.prototype);
 ```
 

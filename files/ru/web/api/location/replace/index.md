@@ -1,13 +1,6 @@
 ---
 title: Location.replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
-translation_of: Web/API/Location/replace
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -33,7 +26,9 @@ object.replace(url);
 
 ```js
 // Перейти на статью Location.reload, заменив текущую страницу
-document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.replace(
+  "https://developer.mozilla.org/ru/docs/Web/API/Location.reload",
+);
 ```
 
 ## Спецификации

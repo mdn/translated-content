@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 
 {{JSRef}}
 
-**`findLast()`** 方法以相反的顺序迭代数组，并返回满足提供的测试函数的第一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
+**`findLast()`** 方法反向迭代数组，并返回满足提供的测试函数的第一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
 
 如果你需要找到：
 
 - *第一个*匹配的元素，使用 {{jsxref("Array/find", "find()")}}。
 - 数组中最后一个匹配元素的*索引*，使用 {{jsxref("Array/findLastIndex", "findLastIndex()")}}。
-- *值的索引*，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
+- _某个值的索引_，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
 - 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
 
@@ -27,7 +27,7 @@ findLast(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 数组中测试元素的函数。回调必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示已找到匹配的元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。函数在被调用时会传递以下参数：
+  - : 数组中测试元素的函数。回调应该返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示已找到匹配的元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。函数在被调用时会传递以下参数：
     - `element`
       - : 当前遍历到的元素。
     - `index`
@@ -35,7 +35,7 @@ findLast(callbackFn, thisArg)
     - `array`
       - : 调用 `findLast()` 的数组本身。
 - `thisArg` {{optional_inline}}
-  - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的值。详见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
+  - : 执行 `callbackFn` 时，用作 `this` 的值。详见[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 返回值
 
@@ -53,7 +53,7 @@ findLast(callbackFn, thisArg)
 - 给已访问过的索引重新赋值将不会被 `callbackFn` 重新访问。
 - 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素会被当做 `undefined` 来访问。
 
->**警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
+> **警告：** 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
 
 `findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
@@ -65,13 +65,13 @@ findLast(callbackFn, thisArg)
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
-// 真实的库存低时返回 true
+// 库存低时返回 true
 function isNotEnough(item) {
   return item.quantity < 2;
 }
@@ -82,19 +82,19 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构对象)来编写：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构对象)重写如下：
 
 ```js
 const inventory = [
-  {name: 'apples', quantity: 2},
-  {name: 'bananas', quantity: 0},
-  {name: 'fish', quantity: 1},
-  {name: 'cherries', quantity: 5}
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
-const result = inventory.findLast( ({ quantity }) => quantity < 2 );
+const result = inventory.findLast(({ quantity }) => quantity < 2);
 
-console.log(result) 
+console.log(result);
 // { name: "fish", quantity: 1 }
 ```
 
@@ -149,7 +149,7 @@ array.findLast((value, index) => {
   // 元素 5 在被删除后，仍会被访问
   console.log(`访问索引 ${index}，值为 ${value}`);
 });
-// 删除值为 array[5]，其值为 6
+// 删除值为 array[5]，其值为 5
 // 访问索引 6，值为 6
 // 访问索引 5，值为 undefined
 // 访问索引 4，值为 undefined

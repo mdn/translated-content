@@ -1,12 +1,6 @@
 ---
 title: Работа с JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Beginner
-  - JSON
-  - JavaScript
-translation_of: Learn/JavaScript/Objects/JSON
-original_slug: Learn/JavaScript/Объекты/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
@@ -43,11 +37,7 @@ JSON существует как строка,что необходимо при
       "name": "Molecule Man",
       "age": 29,
       "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
       "name": "Madame Uppercut",
@@ -78,14 +68,14 @@ JSON существует как строка,что необходимо при
 Если бы мы загрузили этот объект в программу JavaScript, создали переменную с названием `superHeroes`, мы могли бы затем получить доступ к данным внутри неё, используя те же самые точечную и скобочную нотации, которые мы рассмотрели в статье [JavaScript object basics](/ru/docs/Learn/JavaScript/Objects/Basics). Например:
 
 ```js
-superHeroes.homeTown
-superHeroes['active']
+superHeroes.homeTown;
+superHeroes["active"];
 ```
 
 Чтобы получить доступ к последующим данным по иерархии, вам просто нужно объединить требуемые имена свойств и индексы массивов. Например, чтобы получить доступ к третьей сверхспособности второго героя, указанного в списке участников, вы должны сделать следующее:
 
 ```js
-superHeroes['members'][1]['powers'][2]
+superHeroes["members"][1]["powers"][2];
 ```
 
 1. Сначала у нас есть имя переменной - `superHeroes`.
@@ -106,11 +96,7 @@ superHeroes['members'][1]['powers'][2]
     "name": "Molecule Man",
     "age": 29,
     "secretIdentity": "Dan Jukes",
-    "powers": [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   },
   {
     "name": "Madame Uppercut",
@@ -144,18 +130,16 @@ superHeroes['members'][1]['powers'][2]
 Для начала создайте локальные копии наших файлов [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) и [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css). Последний содержит простой CSS для стилизации нашей страницы, в то время как первый содержит очень простой HTML-код сущности:
 
 ```html
-<header>
-</header>
+<header></header>
 
-<section>
-</section>
+<section></section>
 ```
 
 Плюс {{HTMLElement("script")}}, чтобы содержать код JavaScript, который мы будем писать в этом упражнении. На данный момент он содержит только две строки, которые захватывают ссылки на элементы {{HTMLElement("header")}} и {{HTMLElement("section")}} и сохраняют их в переменных:
 
 ```js
-var header = document.querySelector('header');
-var section = document.querySelector('section');
+var header = document.querySelector("header");
+var section = document.querySelector("section");
 ```
 
 Мы предоставили данные JSON на нашем GitHub, на <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json>.
@@ -170,47 +154,48 @@ var section = document.querySelector('section');
 
 1. Начнём с того, что мы собираемся сохранить URL-адрес JSON, который мы хотим получить в переменной. Добавьте нижеследующий код JavaScript:
 
-    ```js
-    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    ```
+   ```js
+   var requestURL =
+     "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+   ```
 
 2. Чтобы создать запрос, нам нужно создать новый экземпляр объекта запроса из конструктора `XMLHttpRequest`, используя ключевое слово `new`. Добавьте следующую ниже свою последнюю строку:
 
-    ```js
-    var request = new XMLHttpRequest();
-    ```
+   ```js
+   var request = new XMLHttpRequest();
+   ```
 
-3. Теперь нам нужно открыть новый запрос, используя метод [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open). Добавьте следующую строку:
+3. Теперь нам нужно открыть новый запрос, используя метод [`open()`](/ru/docs/Web/API/XMLHttpRequest/open). Добавьте следующую строку:
 
-    ```js
-    request.open('GET', requestURL);
-    ```
+   ```js
+   request.open("GET", requestURL);
+   ```
 
-    Это занимает не менее двух параметров - есть другие доступные параметры. Нам нужно только два обязательных для этого простого примера:
+   Это занимает не менее двух параметров - есть другие доступные параметры. Нам нужно только два обязательных для этого простого примера:
 
-    - Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае [`GET`](/en-US/docs/Web/HTTP/Methods/GET) самый подходящий, так как мы просто извлекаем некоторые простые данные.
-    - URL-адрес для запроса - это URL-адрес файла JSON, который мы сохранили ранее.
+   - Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае [`GET`](/ru/docs/Web/HTTP/Methods/GET) самый подходящий, так как мы просто извлекаем некоторые простые данные.
+   - URL-адрес для запроса - это URL-адрес файла JSON, который мы сохранили ранее.
 
-4. Затем добавьте следующие две строки: здесь мы устанавливаем [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) в JSON, так что XHR знает, что сервер будет возвращать JSON и, что это должно быть преобразовано за кулисами в объект JavaScript. Затем мы отправляем запрос методом [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send):
+4. Затем добавьте следующие две строки: здесь мы устанавливаем [`responseType`](/ru/docs/Web/API/XMLHttpRequest/responseType) в JSON, так что XHR знает, что сервер будет возвращать JSON и, что это должно быть преобразовано за кулисами в объект JavaScript. Затем мы отправляем запрос методом [`send()`](/ru/docs/Web/API/XMLHttpRequest/send):
 
-    ```js
-    request.responseType = 'json';
-    request.send();
-    ```
+   ```js
+   request.responseType = "json";
+   request.send();
+   ```
 
 5. Последний бит этого раздела предполагает ожидание ответа на возврат с сервера, а затем работы с ним. Добавьте следующий код ниже вашего предыдущего кода:
 
-    ```js
-    request.onload = function() {
-      var superHeroes = request.response;
-      populateHeader(superHeroes);
-      showHeroes(superHeroes);
-    }
-    ```
+   ```js
+   request.onload = function () {
+     var superHeroes = request.response;
+     populateHeader(superHeroes);
+     showHeroes(superHeroes);
+   };
+   ```
 
-Здесь мы сохраняем ответ на наш запрос (доступный в свойстве [`response`](/en-US/docs/Web/API/XMLHttpRequest/response)) в переменной `superHeroes`; эта переменная теперь будет содержать объект JavaScript, основанный на JSON! Затем мы передаём этот объект двум вызовам функций - первый из них заполнит `<header>` правильными данными, а второй создаст информационную карту для каждого героя в команде и вставляет её в `<section>`.
+Здесь мы сохраняем ответ на наш запрос (доступный в свойстве [`response`](/ru/docs/Web/API/XMLHttpRequest/response)) в переменной `superHeroes`; эта переменная теперь будет содержать объект JavaScript, основанный на JSON! Затем мы передаём этот объект двум вызовам функций - первый из них заполнит `<header>` правильными данными, а второй создаст информационную карту для каждого героя в команде и вставляет её в `<section>`.
 
-Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая таким образом,это гарантия того, что `request.response` определённо будет доступен, когда мы начнём работу с ним.
+Мы свернули код в обработчик событий, который запускается, когда событие загрузки запускается в объекте запроса (см. [`onload`](/ru/docs/Web/API/XMLHttpRequestEventTarget/onload)) - это связано с тем, что событие загрузки запускается, когда ответ успешно возвращается; поступая таким образом,это гарантия того, что `request.response` определённо будет доступен, когда мы начнём работу с ним.
 
 Заполнение заголовка
 
@@ -218,18 +203,19 @@ var section = document.querySelector('section');
 
 ```js
 function populateHeader(jsonObj) {
-  var header = document.querySelector('header');
-  var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj['squadName'];
+  var header = document.querySelector("header");
+  var myH1 = document.createElement("h1");
+  myH1.textContent = jsonObj["squadName"];
   header.appendChild(myH1);
 
-  var myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+  var myPara = document.createElement("p");
+  myPara.textContent =
+    "Hometown: " + jsonObj["homeTown"] + " // Formed: " + jsonObj["formed"];
   header.appendChild(myPara);
 }
 ```
 
-Мы назвали параметр `jsonObj`, чтобы напомнить себе, что этот объект JavaScript возник из JSON. Здесь мы сначала создаём элемент {{HTMLElement("h1")}} с [`createElement()`](/en-US/docs/Web/API/Document/createElement), устанавливаем его [`textContent`](/en-US/docs/Web/API/Node/textContent) равным свойству `squadName` объекта, а затем добавляем его в заголовок с помощью [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). Затем мы выполняем очень похожую операцию с абзацем: создаём его, устанавливаем его текстовое содержимое и добавляем его в заголовок. Единственное различие заключается в том, что его текст задан, как конкатенированная строка, содержащая как `homeTown`, так и `formed` свойства объекта.
+Мы назвали параметр `jsonObj`, чтобы напомнить себе, что этот объект JavaScript возник из JSON. Здесь мы сначала создаём элемент {{HTMLElement("h1")}} с [`createElement()`](/ru/docs/Web/API/Document/createElement), устанавливаем его [`textContent`](/ru/docs/Web/API/Node/textContent) равным свойству `squadName` объекта, а затем добавляем его в заголовок с помощью [`appendChild()`](/ru/docs/Web/API/Node/appendChild). Затем мы выполняем очень похожую операцию с абзацем: создаём его, устанавливаем его текстовое содержимое и добавляем его в заголовок. Единственное различие заключается в том, что его текст задан, как конкатенированная строка, содержащая как `homeTown`, так и `formed` свойства объекта.
 
 ### Создание информационных карт героя
 
@@ -237,25 +223,25 @@ function populateHeader(jsonObj) {
 
 ```js
 function showHeroes(jsonObj) {
-  var section = document.querySelector('section');
-  var heroes = jsonObj['members'];
+  var section = document.querySelector("section");
+  var heroes = jsonObj["members"];
 
   for (var i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement('article');
-    var myH2 = document.createElement('h2');
-    var myPara1 = document.createElement('p');
-    var myPara2 = document.createElement('p');
-    var myPara3 = document.createElement('p');
-    var myList = document.createElement('ul');
+    var myArticle = document.createElement("article");
+    var myH2 = document.createElement("h2");
+    var myPara1 = document.createElement("p");
+    var myPara2 = document.createElement("p");
+    var myPara3 = document.createElement("p");
+    var myList = document.createElement("ul");
 
     myH2.textContent = heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
-    myPara3.textContent = 'Superpowers:';
+    myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
+    myPara2.textContent = "Age: " + heroes[i].age;
+    myPara3.textContent = "Superpowers:";
 
     var superPowers = heroes[i].powers;
     for (var j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement('li');
+      var listItem = document.createElement("li");
       listItem.textContent = superPowers[j];
       myList.appendChild(listItem);
     }
@@ -291,36 +277,36 @@ function showHeroes(jsonObj) {
 Вышеприведённый пример был прост с точки зрения доступа к объекту JavaScript, потому что мы задали XHR-запрос для прямого преобразования ответа JSON в объект JavaScript, используя:
 
 ```js
-request.responseType = 'json';
+request.responseType = "json";
 ```
 
 Но иногда нам не так везёт - иногда мы получаем сырую строку JSON и нам нужно преобразовать её в объект самостоятельно. И когда мы хотим отправить объект JavaScript по сети, нам нужно преобразовать его в JSON (строку) перед отправкой. К счастью, эти две проблемы настолько распространены в веб-разработке, что встроенный объект [JSON](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON) доступен в браузерах, которые содержат следующие два метода:
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): принимает строку JSON в качестве параметра и возвращает соответствующий объект JavaScript.
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): принимает объект, как параметр и возвращает эквивалентную строковую JSON строку.
+- [`parse()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): принимает строку JSON в качестве параметра и возвращает соответствующий объект JavaScript.
+- [`stringify()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): принимает объект, как параметр и возвращает эквивалентную строковую JSON строку.
 
 Вы можете увидеть первый метод в действии в нашем примере [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) - это то же самое, что и в примере, который мы создали ранее, за исключением того, что мы установили XHR для возврата сырого JSON текста, затем используется `parse()`, чтобы преобразовать его в фактический объект JavaScript. Ключевой фрагмент кода находится здесь:
 
 ```js
-request.open('GET', requestURL);
-request.responseType = 'text'; // now we're getting a string!
+request.open("GET", requestURL);
+request.responseType = "text"; // now we're getting a string!
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var superHeroesText = request.response; // get the string from the response
   var superHeroes = JSON.parse(superHeroesText); // convert it to an object
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 Как вы могли догадаться, `stringify()` работает обратным образом. Попробуйте ввести следующие строки в консоль JavaScript браузера один за другим, чтобы увидеть его в действии:
 
 ```js
-var myJSON = { "name": "Chris", "age": "38" };
-myJSON
+var myJSON = { name: "Chris", age: "38" };
+myJSON;
 var myString = JSON.stringify(myJSON);
-myString
+myString;
 ```
 
 Здесь мы создаём объект JavaScript, затем проверяем, что он содержит, а затем преобразуем его в строку JSON, используя `stringify()` , сохраняя возвращаемое значение в новой переменной, а затем снова проверяем его.

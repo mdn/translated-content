@@ -1,7 +1,6 @@
 ---
 title: Assertions
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
-original_slug: Web/JavaScript/Guide/정규식/Assertions
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -36,7 +35,7 @@ Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (�
             This character has a different meaning when it appears at the start
             of a
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
+              href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
               >group</a
             >.
           </p>
@@ -84,7 +83,7 @@ Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (�
         <p>
           To match a backspace character (<code>[\b]</code>), see
           <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
+            href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes"
             >Character Classes</a
           >.
         </p>
@@ -203,7 +202,7 @@ console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 
 ### Matching the beginning of an input using a ^ control character
 
-입력 시작시 일치를 위해 `^`를 사용하십시오. 이 예에서는 `/^A/` regex로 'A'로 시작하는 결과를 얻습니다. 여기서 `^`는 한 가지 역할 만합니다. 적절한 결과를 보기위해 [화살표](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 함수가있는 [필터](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 메소드를 사용합니다.
+입력 시작시 일치를 위해 `^`를 사용하십시오. 이 예에서는 `/^A/` regex로 'A'로 시작하는 결과를 얻습니다. 여기서 `^`는 한 가지 역할 만합니다. 적절한 결과를 보기위해 [화살표](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 함수가있는 [필터](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 메소드를 사용합니다.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -215,7 +214,7 @@ let fruitsStartsWithA = fruits.filter(fruit => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-두 번째 예제에서 `^`는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, [그룹](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)에서 사용될 때 부정 또는 보완 문자 세트.
+두 번째 예제에서 `^`는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, [그룹](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)에서 사용될 때 부정 또는 보완 문자 세트.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -265,7 +264,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### Different meaning of '?!' combination usage in Assertions and Ranges
 
-Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+Different meaning of `?!` combination usage in [Assertions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
@@ -293,15 +292,15 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 
 ## Browser compatibility
 
-For browser compatibility information, check out the [main Regular Expressions compatibility table](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
+For browser compatibility information, check out the [main Regular Expressions compatibility table](/ko/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
 
 ## See also
 
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Character classes](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+  - [Quantifiers](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+  - [Unicode property escapes](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Groups and ranges](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [The `RegExp()` constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

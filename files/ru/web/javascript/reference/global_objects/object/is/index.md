@@ -1,14 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -53,21 +45,21 @@ var isSame = Object.is(value1, value2);
 ## Примеры
 
 ```js
-Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
+Object.is("foo", "foo"); // true
+Object.is(window, window); // true
 
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
+Object.is("foo", "bar"); // false
+Object.is([], []); // false
 
 var test = { a: 1 };
-Object.is(test, test);       // true
+Object.is(test, test); // true
 
-Object.is(null, null);       // true
+Object.is(null, null); // true
 
 // Специальные случаи
-Object.is(0, -0);            // false
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## Полифил

@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/return
 ---
 
 {{JSRef}}
@@ -38,9 +37,9 @@ function* gen() {
 
 var g = gen();
 
-g.next();        // { value: 1, done: false }
-g.return('foo'); // { value: "foo", done: true }
-g.next();        // { value: undefined, done: true }
+g.next(); // { value: 1, done: false }
+g.return("foo"); // { value: "foo", done: true }
+g.next(); // { value: undefined, done: true }
 ```
 
 Si `return(valor)` es invocado en un generador que ya está en su estado "completado", el generador permanecerá en estado "completado". Si no se da ningún argumento, el objeto regresado es el mismo a que si se invocara `.next()`. Si se da un argumento, éste se asignará como valor en la propiedad `value` del objeto regresado.

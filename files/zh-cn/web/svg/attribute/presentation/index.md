@@ -3,6 +3,8 @@ title: SVG Presentation Attributes
 slug: Web/SVG/Attribute/Presentation
 ---
 
+{{SVGRef}}
+
 SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
 
 - [alignment-baseline](#attr-alignment-baseline)

@@ -1,16 +1,6 @@
 ---
 title: Notification.title
 slug: Web/API/Notification/title
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - Title
-  - Titre
-translation_of: Web/API/Notification/title
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -20,7 +10,7 @@ La propriété en lecture seule **`title`** de l'interface {{domxref ("Notificat
 ## Syntaxe
 
 ```js
-Notification.title
+Notification.title;
 ```
 
 ### Valeur

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 {{JSRef}}
 
-**`reverse()`** 方法将[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转数组中的元素，并返回同一数组的引用。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将转向与之前固定方向相反的方向。
+**`reverse()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)反转数组中的元素，并返回同一数组的引用。数组的第一个元素会变成最后一个，数组的最后一个元素变成第一个。换句话说，数组中的元素顺序将被翻转，变为与之前相反的方向。
 
 要在不改变原始数组的情况下反转数组中的元素，使用 {{jsxref("Array/toReversed", "toReversed()")}}。
 
@@ -19,7 +19,7 @@ reverse()
 
 ### 返回值
 
-原始数组反转后的引用。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/In-place_algorithm)反转的，并且没有复制。
+原始数组反转后的引用。注意，数组是[_就地_](https://zh.wikipedia.org/wiki/原地算法)反转的，并且没有复制。
 
 ## 描述
 
@@ -33,7 +33,7 @@ reverse()
 
 ### 反转数组中的元素
 
-下面的示例创建一个数组 `items`，其中包含三个元素，然后反转数组。调用 `reverse()` 返回对数组 `items` 反转后的引用。
+下面的示例创建一个数组 `items`，其中包含三个元素，然后反转数组。调用 `reverse()` 会返回反转后的数组 `items` 的引用。
 
 ```js
 const items = [1, 2, 3];

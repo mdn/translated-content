@@ -81,40 +81,47 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js hidden
 var img = new Image();
-img.src = 'rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.src = "rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var color = document.getElementById('color');
+var color = document.getElementById("color");
 function pick(event) {
   var x = event.layerX;
   var y = event.layerY;
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
-  var rgba = 'rgba(' + data[0] + ',' + data[1] +
-             ',' + data[2] + ',' + (data[3] / 255) + ')';
-  color.style.background =  rgba;
+  var rgba =
+    "rgba(" +
+    data[0] +
+    "," +
+    data[1] +
+    "," +
+    data[2] +
+    "," +
+    data[3] / 255 +
+    ")";
+  color.style.background = rgba;
   color.textContent = rgba;
 }
-canvas.addEventListener('mousemove', pick);
+canvas.addEventListener("mousemove", pick);
 ```
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var hoveredColor = document.getElementById('hovered-color');
-var selectedColor = document.getElementById('selected-color');
-
+var hoveredColor = document.getElementById("hovered-color");
+var selectedColor = document.getElementById("selected-color");
 
 function pick(event, destination) {
   var x = event.layerX;
@@ -122,18 +129,18 @@ function pick(event, destination) {
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
 
-    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-    destination.style.background = rgba;
-    destination.textContent = rgba;
+  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+  destination.style.background = rgba;
+  destination.textContent = rgba;
 
-    return rgba;
+  return rgba;
 }
 
-canvas.addEventListener('mousemove', function(event) {
-    pick(event, hoveredColor);
+canvas.addEventListener("mousemove", function (event) {
+  pick(event, hoveredColor);
 });
-canvas.addEventListener('click', function(event) {
-    pick(event, selectedColor);
+canvas.addEventListener("click", function (event) {
+  pick(event, selectedColor);
 });
 ```
 
@@ -162,105 +169,105 @@ ctx.putImageData(myImageData, 0, 0);
 ```html hidden
 <canvas id="canvas" width="300" height="227"></canvas>
 <div>
-  <input id="grayscalebtn" value="Grayscale" type="button">
-  <input id="invertbtn" value="Invert" type="button">
+  <input id="grayscalebtn" value="Grayscale" type="button" />
+  <input id="invertbtn" value="Invert" type="button" />
 </div>
 ```
 
 ```js hidden
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var imageData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  img.style.display = "none";
+  var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   var data = imageData.data;
 
-  var invert = function() {
+  var invert = function () {
     for (var i = 0; i < data.length; i += 4) {
-      data[i]     = 255 - data[i];     // red
+      data[i] = 255 - data[i]; // red
       data[i + 1] = 255 - data[i + 1]; // green
       data[i + 2] = 255 - data[i + 2]; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var grayscale = function() {
+  var grayscale = function () {
     for (var i = 0; i < data.length; i += 4) {
-      var avg = (data[i] + data[i +1] + data[i +2]) / 3;
-      data[i]     = avg; // red
+      var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+      data[i] = avg; // red
       data[i + 1] = avg; // green
       data[i + 2] = avg; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var invertbtn = document.getElementById('invertbtn');
-  invertbtn.addEventListener('click', invert);
-  var grayscalebtn = document.getElementById('grayscalebtn');
-  grayscalebtn.addEventListener('click', grayscale);
+  var invertbtn = document.getElementById("invertbtn");
+  invertbtn.addEventListener("click", invert);
+  var grayscalebtn = document.getElementById("grayscalebtn");
+  grayscalebtn.addEventListener("click", grayscale);
 }
 ```
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-img.onload = function() {
-    ctx.drawImage(img, 0, 0);
+img.onload = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var original = function() {
-    ctx.drawImage(img, 0, 0);
+var original = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var invert = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        data[i]     = 255 - data[i];     // red
-        data[i + 1] = 255 - data[i + 1]; // green
-        data[i + 2] = 255 - data[i + 2]; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var invert = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    data[i] = 255 - data[i]; // red
+    data[i + 1] = 255 - data[i + 1]; // green
+    data[i + 2] = 255 - data[i + 2]; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-var grayscale = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-        data[i]     = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var grayscale = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = avg; // red
+    data[i + 1] = avg; // green
+    data[i + 2] = avg; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-const inputs = document.querySelectorAll('[name=color]');
+const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
-        switch (evt.target.value) {
-            case "inverted":
-                return invert();
-            case "grayscale":
-                return grayscale();
-            default:
-                return original();
-        }
-    });
+  input.addEventListener("change", function (evt) {
+    switch (evt.target.value) {
+      case "inverted":
+        return invert();
+      case "grayscale":
+        return grayscale();
+      default:
+        return original();
+    }
+  });
 }
 ```
 
@@ -273,9 +280,17 @@ for (const input of inputs) {
 我们得到鼠标的位置并裁剪出距左和上 5 像素，距右和下 5 像素的图片。然后我们将这幅图复制到另一个画布然后将图片调整到我们想要的大小。在缩放画布里，我们将 10×10 像素的对原画布的裁剪调整为 200×200。
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.abs(x - 5),
+  Math.abs(y - 5),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200,
+);
 ```
 
 因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 `imageSmoothingEnabled` 属性的效果（不同浏览器需要不同前缀）。
@@ -286,48 +301,53 @@ zoomctx.drawImage(canvas,
 <canvas id="canvas" width="300" height="227"></canvas>
 <canvas id="zoom" width="300" height="227"></canvas>
 <div>
-<label for="smoothbtn">
-  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
-  Enable image smoothing
-</label>
+  <label for="smoothbtn">
+    <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn" />
+    Enable image smoothing
+  </label>
 </div>
 ```
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var zoomctx = document.getElementById('zoom').getContext('2d');
+  img.style.display = "none";
+  var zoomctx = document.getElementById("zoom").getContext("2d");
 
-  var smoothbtn = document.getElementById('smoothbtn');
-  var toggleSmoothing = function(event) {
+  var smoothbtn = document.getElementById("smoothbtn");
+  var toggleSmoothing = function (event) {
     zoomctx.imageSmoothingEnabled = this.checked;
     zoomctx.mozImageSmoothingEnabled = this.checked;
     zoomctx.webkitImageSmoothingEnabled = this.checked;
     zoomctx.msImageSmoothingEnabled = this.checked;
   };
-  smoothbtn.addEventListener('change', toggleSmoothing);
+  smoothbtn.addEventListener("change", toggleSmoothing);
 
-  var zoom = function(event) {
+  var zoom = function (event) {
     var x = event.layerX;
     var y = event.layerY;
-    zoomctx.drawImage(canvas,
-                      Math.abs(x - 5),
-                      Math.abs(y - 5),
-                      10, 10,
-                      0, 0,
-                      200, 200);
+    zoomctx.drawImage(
+      canvas,
+      Math.abs(x - 5),
+      Math.abs(y - 5),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200,
+    );
   };
 
-  canvas.addEventListener('mousemove', zoom);
+  canvas.addEventListener("mousemove", zoom);
 }
 ```
 

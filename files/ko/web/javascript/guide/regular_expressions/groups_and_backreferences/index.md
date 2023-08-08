@@ -1,7 +1,6 @@
 ---
 title: Groups and Ranges
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -78,7 +77,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           <p>
             The ^ character may also indicate the
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+              href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
               >beginning of input</a
             >.
           </p>
@@ -112,7 +111,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         <p>
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match"
+              href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match"
               >String.match()</a
             ></code
           >
@@ -120,7 +119,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           you can still use
           <code
             ><a
-              href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
+              href="/ko/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
               >String.matchAll()</a
             ></code
           >
@@ -177,12 +176,12 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ## See also
 
 - A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-  - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
+  - [Character classes](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+  - [Assertions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+  - [Quantifiers](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
+  - [Unicode property escapes](/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 
-- [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [The `RegExp()` constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [ClassRanges in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-classranges)

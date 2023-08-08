@@ -1,17 +1,6 @@
 ---
 title: Gérer les problèmes courants en HTML et CSS
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - Apprentissage
-  - CSS
-  - Débutant
-  - HTML
-  - Sélecteurs
-  - linting
-  - navigateur croisé
-  - test
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -134,16 +123,31 @@ Par exemple :
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
+  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-      <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object
+    type="application/x-shockwave-flash"
+    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+    width="1024"
+    height="576">
+    <param
+      name="movie"
+      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param
+      name="flashvars"
+      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <img
+      alt="Tears of Steel poster image"
+      src="img/poster.jpg"
+      width="1024"
+      height="428"
+      title="No video playback possible, please download the video from the link below" />
   </object>
   <!-- Offer download -->
   <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
@@ -162,11 +166,11 @@ L'exemple suivant montre des inputs date et time :
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -177,42 +181,43 @@ Le résultat de ce code est le suivant :
 
 ```css hidden
 label {
-        float: left;
-        width: 30%;
-        text-align: right;
-      }
+  float: left;
+  width: 30%;
+  text-align: right;
+}
 
-      input {
-        float: right;
-        width: 65%;
-      }
+input {
+  float: right;
+  width: 65%;
+}
 
-      label, input {
-        margin-bottom: 20px;
-      }
+label,
+input {
+  margin-bottom: 20px;
+}
 
-      div {
-        clear: both;
-        margin: 10px;
-      }
+div {
+  clear: both;
+  margin: 10px;
+}
 
-      body {
-        width: 400px;
-        margin: 0 auto;
-      }
+body {
+  width: 400px;
+  margin: 0 auto;
+}
 ```
 
 ```html hidden
 <form>
-      <div>
-        <label for="date">Enter a date:</label>
-        <input id="date" type="date">
-      </div>
-      <div>
-        <label for="time">Enter a time:</label>
-        <input id="time" type="time">
-      </div>
-    </form>
+  <div>
+    <label for="date">Enter a date:</label>
+    <input id="date" type="date" />
+  </div>
+  <div>
+    <label for="time">Enter a time:</label>
+    <input id="time" type="time" />
+  </div>
+</form>
 ```
 
 {{ EmbedLiveSample('Résultat', '100%', 150) }}
@@ -270,7 +275,7 @@ Les commentaires conditionnels d'IE sont une propriété modifiée de la syntaxe
 ```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
@@ -281,7 +286,13 @@ Ce block appliquera les CSS et Javascript spécifiques à IE uniquement si le na
 Comme vous pouvez le voir, c'est particulièrement utile pour appliquer des fixes aux vieilles versions d'IE. Le cas d'usage que nous avons mentionné plus tôt (rendre les éléments sémantiques modernes stylables sur les vieilles versions d'IE) peut être atteint facilement en utilisant des commentaires conditionnels, par exemple vous pouvez mettre quelque chose comme ça dans votre feuille de style IE :
 
 ```css
-aside, main, article, section, nav, figure, figcaption {
+aside,
+main,
+article,
+section,
+nav,
+figure,
+figcaption {
   display: block;
 }
 ```
@@ -317,12 +328,12 @@ Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus an
 2. Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
 3. Placer le code suivant dans la têtière de votre document HTML, juste avant la balise ouvrante `<style>` :
 
-    ```html
-    <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="selectivizr-min.js"></script>
-        <![endif]-->
-    ```
+   ```html
+   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
+   <!--[if (gte IE 6)&(lte IE 8)]>
+     <script type="text/javascript" src="selectivizr-min.js"></script>
+   <![endif]-->
+   ```
 
 Si vous essayer d'exécuter cette page sur une vieille version d'IE, cela devrait bien fonctionner.
 
@@ -341,9 +352,15 @@ Voici quelques exemples :
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left,green,yellow);
-background-image: -webkit-gradient(linear,left center,right center,from(green),to(yellow));
-background-image: linear-gradient(to right,green,yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
+background-image: linear-gradient(to right, green, yellow);
 ```
 
 La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
@@ -365,16 +382,16 @@ Essayez cet exemple simple :
 3. Chercher une fonctionnalité que vous pouvez utiliser pour sélectionner cet élément. Par exemple, au moment de la rédaction, le logo principal de Google a un ID `hplogo`.
 4. Entreposer une référence à cet élément dans une variable, par exemple :
 
-    ```js
-    var test = document.getElementById('hplogo');
-    ```
+   ```js
+   var test = document.getElementById("hplogo");
+   ```
 
 5. Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 Quand vous commencez à taper la transcription du nom de la propriété après le deuxième point (notez qu'en Javascript, les noms des propriétés CSS sont écrites en lower camel case, sans trait d'union), la console Javascript devrait commencer à saisir automatiquement les noms des propriétés qui existent dans le navigateur et qui correspondent au mieux avec ce que vous écrivez. C'est utile pour trouver quelles versions de la propriété est implémentée dans ce navigateur.
 

@@ -1,7 +1,6 @@
 ---
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect_static
-original_slug: Web/API/DOMRectReadOnly/fromRect
 ---
 
 {{APIRef("Geometry Interfaces")}}
@@ -11,8 +10,8 @@ original_slug: Web/API/DOMRectReadOnly/fromRect
 ## 構文
 
 ```js
-fromRect()
-fromRect(rectangle)
+fromRect();
+fromRect(rectangle);
 ```
 
 ### 引数
