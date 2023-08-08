@@ -9,7 +9,7 @@ slug: Web/CSS/color
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
-对于在 HTML 中使用颜色的概述，请参考 [使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
+对于在 HTML 中使用颜色的概述，请参考[使用 CSS 对 HTML 元素实现颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
 
 ## 语法
 
