@@ -36,13 +36,13 @@ l10n:
   </tbody>
 </table>
 
-## 반응형 이미지를 사용하나요?
+## 왜 반응형 이미지를 사용해야 할까요?
 
 일반적인 시나리오를 살펴봅시다. 일반적인 웹사이트에는 헤더 이미지와 헤더 아래에 일부 콘텐츠 이미지가 포함될 수 있습니다. 헤더 이미지는 헤더 너비 전체에 걸쳐 있고 콘텐츠 이미지는 콘텐츠 열 안쪽 어딘가에 위치할 가능성이 높습니다. 다음은 간단한 예입니다.
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
+![와이드 스크린 화면에서 보았을 때 예제 사이트. 여기서는 첫번째 이미지는 화면이 크기 때문에 중앙의 얼굴을 볼 수 있을 정도로 크게 보여주기 때문에 잘 작동한다.](picture-element-wide.png)
 
-노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않겠습니다.
+노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않지만, 다음 내용들은 알아둡시다.
 
 - 본문 콘텐츠는 최대 너비가 1200픽셀로 설정되어 있으며, 이 너비를 초과하는 뷰포트에서는 본문이 1200픽셀로 유지되고 사용 가능한 공간의 중앙에 배치됩니다. 이 너비보다 작은 뷰포트에서는 본문이 뷰포트 너비의 100%로 유지됩니다.
 - 헤더 이미지가 설정된 너비에 관계없이 항상 헤더의 중앙에 위치하도록 설정되었습니다. 좁은 화면에서 사이트를 보는 경우 이미지 중앙의 중요한 세부 사항(사람)은 여전히 볼 수 있으며 초과분은 양쪽에서 손실됩니다. 높이는 200픽셀입니다.
@@ -50,11 +50,13 @@ l10n:
 
 하지만 화면이 좁은 기기에서 사이트를 보기 시작하면 문제가 발생합니다. 아래 헤더는 괜찮아 보이지만 모바일 기기에서 화면 높이를 많이 차지하기 시작합니다. 그리고 이 크기에서는 첫 번째 콘텐츠 이미지에서 두 사람의 얼굴을 보기가 어렵습니다.
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
+![좁은 화면에서 예제 사이트를 보았을 때. 여기서는 첫번째 이미지가 중앙의 얼굴을 보지 힘들 정도로 줄어들었다.](non-responsive-narrow.png)
 
 좁은 화면에서 사이트를 볼 때 이미지의 중요한 세부 정보를 표시하는 이미지의 잘린 버전을 표시하는 것도 개선할 수 있습니다. 태블릿과 같은 중간 너비의 화면 장치에는 두 번째 잘린 이미지를 표시할 수 있습니다. 다양한 레이아웃에 대해 이러한 방식으로 서로 다른 자른 이미지를 제공하려는 일반적인 문제를 일반적으로 **아트 디렉션 문제(art direction problem)** 라고 합니다.
 
-또한 모바일 화면에서 페이지를 보는 경우 페이지에 이렇게 큰 이미지를 삽입할 필요가 없습니다. 특히 모바일 사용자는 자신의 디바이스에 작은 이미지로 충분할 텐데 데스크톱 사용자용으로 큰 이미지를 다운로드하여 대역폭을 낭비하고 싶지 않을 것입니다. 반대로 작은 [래스터 이미지](/en-US/docs/Glossary/Raster_image)는 원래 크기보다 크게 표시되면 거칠게 보이기 시작합니다(래스터 이미지는 벡터 그래픽에서 보았듯이 가로와 세로가 정해진 픽셀 수로 이루어진 이미지입니다). 이상적으로는 사용자의 웹 브라우저에서 여러 해상도를 사용할 수 있어야 합니다. 그러면 브라우저는 사용자 디바이스의 화면 크기에 따라 로드할 최적의 해상도를 결정할 수 있습니다. 이를 **해상도 전환 문제(resolution wsitching problem)** 라고 합니다.
+또한 모바일 화면에서 페이지를 보는 경우 페이지에 이렇게 큰 이미지를 삽입할 필요가 없습니다. 특히 모바일 사용자는 자신의 디바이스에 작은 이미지로 충분할 텐데 데스크톱 사용자용으로 큰 이미지를 다운로드하여 대역폭을 낭비하고 싶지 않을 것입니다. 반대로 작은 [래스터 이미지](/en-US/docs/Glossary/Raster_image)는 원래 크기보다 크게 표시되면 거칠게 보이기 시작합니다 (래스터 이미지는 [벡터 그래픽](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)에서 보았듯이 가로와 세로가 정해진 픽셀 수로 이루어진 이미지입니다). 이상적으로는 사용자의 웹 브라우저에서 여러 해상도를 사용할 수 있어야 합니다. 그러면 브라우저는 사용자 디바이스의 화면 크기에 따라 로드할 최적의 해상도를 결정할 수 있습니다. 이를 **해상도 전환 문제(resolution wsitching problem)** 라고 합니다.
+
+상황을 더 복잡하게 생각하자면, 일부 기기에는 이미지를 제대로 보여주기 위해 예상보다 더 고해상도의 이미지가 필요한 고해상도 화면도 있습니다. 이것은 본질적으로 동일한 문제이지만 약간 다른 맥락에서 발생합니다.
 
 벡터 이미지가 이러한 문제를 해결해 줄 것이라고 생각할 수도 있고, 실제로 어느 정도는 파일 크기가 작고 크기가 잘 조정되므로 가능한 한 벡터 이미지를 사용하는 것이 좋습니다. 하지만 모든 이미지 유형에 적합한 것은 아닙니다. 벡터 이미지는 단순한 그래픽, 패턴, 인터페이스 요소 등에는 적합하지만 사진에서 볼 수 있는 디테일이 있는 벡터 기반 이미지를 만들려면 매우 복잡해집니다. JPEG와 같은 래스터 이미지 형식은 위의 예시에서 볼 수 있는 종류의 이미지에 더 적합합니다.
 
@@ -91,11 +93,11 @@ l10n:
 
 1. **이미지 파일 이름** (`elva-fairy-480w.jpg`.)
 2. 공백
-3. 이미지의 **고유 픽셀 너비** (`480w`) - 예상하는 것처럼 `px` 단위가 아닌 `w` 단위를 사용한다는 점에 유의하세요. 이미지의 [고유 크기](/en-US/docs/Glossary/Intrinsic_Size)는 컴퓨터에서 이미지 파일을 검사하여 확인할 수 있는 실제 크기입니다. 예를 들어 Mac의 경우 Finder에서 이미지를 선택한 다음 <kbd>Cmd</kbd> \+ <kbd>I</kbd> 를 눌러 정보 화면을 불러올 수 있습니다.
+3. 이미지의 **고유 픽셀 너비** (`480w`). 예상하는 것처럼 `px` 단위가 아닌 `w` 단위를 사용한다는 점에 유의하세요. 이미지의 [고유 크기](/ko/docs/Glossary/Intrinsic_Size)는 컴퓨터에서 이미지 파일을 검사하여 확인할 수 있는 실제 크기입니다. 예를 들어 Mac의 경우 Finder에서 이미지를 선택한 다음 <kbd>Cmd</kbd> \+ <kbd>I</kbd> 를 눌러 정보 화면을 불러올 수 있습니다.
 
 **`sizes`** 는 일련의 미디어 조건(예: 화면 너비)을 정의하고 특정 미디어 조건에 해당할 때 어떤 이미지 크기를 선택하는 것이 가장 좋을지 알려주는데, 이는 앞서 설명한 힌트입니다. 이 경우 각 쉼표 앞에 다음과 같이 작성합니다.
 
-1. **미디어 조건** (`(max-width:600px)`) - 이에 대한 자세한 내용은 [CSS 주제](/ko/docs/Learn/CSS)에서 배우겠지만, 지금은 미디어 조건이 화면이 될 수 있는 가능한 상태를 설명한다고 가정해 보겠습니다. 이 경우 "뷰포트 너비가 600픽셀 이하일 때"라고 말합니다.
+1. **미디어 조건** (`(max-width:600px)`). 이에 대한 자세한 내용은 [CSS 주제](/ko/docs/Learn/CSS)에서 배우겠지만, 지금은 미디어 조건이 화면이 될 수 있는 가능한 상태를 설명한다고 가정해 보겠습니다. 이 경우 "뷰포트 너비가 600픽셀 이하일 때"라고 말합니다.
 2. 공백
 3. 미디어 조건이 참(`480px`)일 때 이미지가 채울 **슬롯의 너비**입니다.
 
@@ -197,7 +199,7 @@ img {
 ## 같이 보기
 
 - [제이슨 그릭스비의 반응형 이미지에 대한 훌륭한 소개](https://cloudfour.com/thinks/responsive-images-101-definitions/)
-- [반응형 이미지: 해상도를 변경하는 경우에는, srcset을 사용하세요.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) 브라우저가 어떤 이미지를 사용할지 고르는 방법에 대한 더 상세한 설명 포함되어 있습니다.
+- [반응형 이미지: 해상도를 변경하는 경우에는, srcset을 사용하세요.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) 브라우저가 어떤 이미지를 사용할지 고르는 방법에 대한 더 상세한 설명이 포함되어 있습니다.
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
