@@ -57,29 +57,29 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // 아래 결과는 모두 Asia/Seoul 시간대를 사용한 결과 (UTC+0900, 한국 표준시)
 
 // 한국어에서 날짜 표기는 연월일 순서
-console.log(new Intl.DateTimeFormat('ko-KR').format(date));
+console.log(new Intl.DateTimeFormat("ko-KR").format(date));
 // → "2012. 12. 20."
 
 // 미국 영어에서 날짜 표기는 월일년 순서
-console.log(new Intl.DateTimeFormat('en-US').format(date));
+console.log(new Intl.DateTimeFormat("en-US").format(date));
 // → "12/20/2012"
 
 // 영국 영어에서 날짜 표기는 일월년 순서
-console.log(new Intl.DateTimeFormat('en-GB').format(date));
+console.log(new Intl.DateTimeFormat("en-GB").format(date));
 // → "20/12/2012"
 
 // 대부분의 아랍어 국가에서는 진짜 아라비아 숫자 사용
-console.log(new Intl.DateTimeFormat('ar-EG').format(date));
+console.log(new Intl.DateTimeFormat("ar-EG").format(date));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // 일본어의 경우 어플리케이션에 연호를 사용해야 할 수도 있음
 // 2012년은 헤이세이 24년
-console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
+console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
 // → "24/12/20"
 
 // 발리어와 같이 지원되지 않을 수도 있는 언어를 지정할 때는
 // 다음과 같이 대체 언어를 지정할 수 있음. 아래의 경우 대체 언어는 인도어
-console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
 // → "20/12/2012"
 ```
 
@@ -91,42 +91,53 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // 긴 날짜 서식에 더해 요일 요청
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
 // → "Donnerstag, 20. Dezember 2012"
 
 // 어플리케이션이 GMT를 사용해야 하고, 그 점을 명시해야 할 때
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // → "Thursday, December 20, 2012, GMT"
 
 // 좀 더 자세한 설정이 필요하면
 options = {
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
-  timeZone: 'Australia/Sydney',
-  timeZoneName: 'short'
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  timeZone: "Australia/Sydney",
+  timeZoneName: "short",
 };
-console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
+console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // → "2:00:00 pm AEDT"
 
 // 미국에서도 24시간제가 필요할 때
 options = {
-  year: 'numeric', month: 'numeric', day: 'numeric',
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   hour12: false,
-  timeZone: 'America/Los_Angeles'
+  timeZone: "America/Los_Angeles",
 };
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // → "12/19/2012, 19:00:00"
 
 // 옵션을 지정하면서 로케일은 브라우저 기본값을 사용하고 싶을 땐 'default' 지정
-console.log(new Intl.DateTimeFormat('default', options).format(date));
+console.log(new Intl.DateTimeFormat("default", options).format(date));
 // → "2012. 12. 19. 19시 0분 0초"
 
 // 오전/오후 시간 표시가 필요할 때
-options = {hour: "numeric", dayPeriod: "short"};
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+options = { hour: "numeric", dayPeriod: "short" };
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // → 10 at night
 ```
 

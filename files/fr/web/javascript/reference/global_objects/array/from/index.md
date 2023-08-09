@@ -1,7 +1,6 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Sintaxe e tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -81,7 +80,7 @@ Você pode usar `undefined` para determinar se uma variável tem um valor. No c�
 
 ```js
 var input;
-if(input === undefined){
+if (input === undefined) {
   facaIsto();
 } else {
   facaAquilo();
@@ -99,7 +98,7 @@ O valor `undefined` converte-se para `NaN` quando usado no contexto numérico.
 
 ```js
 var a;
-a + 2;  // Avaliado como NaN
+a + 2; // Avaliado como NaN
 ```
 
 Quando você avalia uma variável nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos. Por exemplo:
@@ -119,7 +118,7 @@ JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco]
 if (true) {
   var x = 5;
 }
-console.log(x);  // 5
+console.log(x); // 5
 ```
 
 Esse comportamento é alterado, quando usado a declaração `let` introduzida pelo ECMAScript 6.
@@ -128,7 +127,7 @@ Esse comportamento é alterado, quando usado a declaração `let` introduzida pe
 if (true) {
   let y = 5;
 }
-console.log(y);  // ReferenceError: y não está definido
+console.log(y); // ReferenceError: y não está definido
 ```
 
 ### Variável de elevação
@@ -148,7 +147,7 @@ var x = 3;
 // retornará um valor undefined
 var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
   var myvar = "local value";
 })();
@@ -169,7 +168,7 @@ x = 3;
  */
 var myvar = "um valor";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
   myvar = "valor local";
@@ -200,7 +199,7 @@ Você não pode declarar uma constante com o mesmo nome de uma função ou vari�
 
 ```js example-bad
 // Isto irá causar um  erro
-function f() {};
+function f() {}
 const f = 5;
 
 // Isto também irá causar um erro.
@@ -250,15 +249,15 @@ Devido JavaScript ser dinamicamente tipado, essa declaração não gera uma mens
 Em expressões envolvendo valores numérico e string com o operador +, JavaScript converte valores numérico para strings. Por exemplo, considere a seguinte declaração:
 
 ```js
-x = "A resposta é " + 42 // "A resposta é 42"
-y = 42 + " é a resposta" // "42 é a resposta"
+x = "A resposta é " + 42; // "A resposta é 42"
+y = 42 + " é a resposta"; // "42 é a resposta"
 ```
 
 Nas declarações envolvendo outros operadores, JavaScript não converte valores numérico para strings. Por exemplo:
 
 ```js
-"37" - 7 // 30
-"37" + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### Convertendo strings para números
@@ -319,20 +318,20 @@ Se você incluir uma vírgula à direita no final da lista dos elementos, a vír
 
 > **Nota:** **Nota :** Vírgulas à direita podem criar erros em algumas versões de navegadores web antigos, é recomendável removê-las.
 
-```js
-var myList = ['home', , 'school', ];
+```js-olint
+var myList = ["home", , "school", ];
 ```
 
 No exemplo a seguir, o comprimento do array é quatro, e `myList[0]` e `myList[2]` são `undefined`.
 
 ```js
-var myList = [ , 'home', , 'school'];
+var myList = [, "home", , "school"];
 ```
 
 No exemplo a seguir, o comprimento do array é quatro, e `myList[1]` e `myList[3]` são `undefined`. Apenas a última vírgula é ignorada.
 
 ```js
-var myList = ['home', , 'school', , ];
+var myList = ["home", , "school", ,];
 ```
 
 Entender o comportamento de vírgulas extras é importante para a compreensão da linguagem JavaScript, no entanto, quando você escrever seu próprio código: declarar explicitamente os elementos em falta como `undefined` vai aumentar a clareza do código, e consequentemente na sua manutenção.
@@ -406,17 +405,21 @@ function tipoCarro(nome) {
   }
 }
 
-var carro = { meuCarro: "Punto", getCarro: tipoCarro("Fiat"), especial: vendas };
+var carro = {
+  meuCarro: "Punto",
+  getCarro: tipoCarro("Fiat"),
+  especial: vendas,
+};
 
-console.log(carro.meuCarro);   // Punto
-console.log(carro.getCarro);  // Fiat
+console.log(carro.meuCarro); // Punto
+console.log(carro.getCarro); // Fiat
 console.log(carro.especial); // Toyota
 ```
 
 Além disso, você pode usar um literal numérico ou string para o nome de uma propriedade ou aninhar um objeto dentro do outro. O exemplo a seguir usar essas opções.
 
 ```js
-var carro = { carros: {a: "Saab", "b": "Jeep"}, 7: "Mazda" };
+var carro = { carros: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(carro.carros.b); // Jeep
 console.log(carro[7]); // Mazda
@@ -438,9 +441,9 @@ console.log(unusualPropertyNames["!"]); // Bang!
 Observe:
 
 ```js
-var foo = {a: "alpha", 2: "two"};
-console.log(foo.a);    // alpha
-console.log(foo[2]);   // two
+var foo = { a: "alpha", 2: "two" };
+console.log(foo.a); // alpha
+console.log(foo[2]); // two
 //console.log(foo.2);  // Error: missing ) after argument list
 //console.log(foo[a]); // Error: a não está definido
 console.log(foo["a"]); // alpha
@@ -470,7 +473,7 @@ Uma string literal são zero ou mais caracteres dispostos em aspas duplas (`"`) 
 Você pode chamar qualquer um dos métodos do objeto string em uma string literal - JavaScript automaticamente converte a string literal para um objeto string temporário, chama o método, em seguida, descarta o objeto string temporário. Você também pode usar a propriedade `String.length` com uma string literal:
 
 ```js
-console.log("John's cat".length)
+console.log("John's cat".length);
 // Irá exibir a quantidade de caracteres na string incluindo o espaço em branco.
 // Nesse caso, 10 caracteres.
 ```
@@ -482,7 +485,7 @@ Você deve usar string literal, a não ser que você precise usar um objeto stri
 Além dos caracteres comuns, você também pode incluir caracteres especiais em strings, como mostrado no exemplo a seguir.
 
 ```js
-"uma linha \n outra linha"
+"uma linha \n outra linha";
 ```
 
 A tabela a seguir lista os caracteres especiais que podem ser usados em strings no JavaScript.
@@ -511,7 +514,7 @@ Para caracteres não listados na tabela, se precedidos de barra invertida ela é
 
 Você pode inserir uma aspa dentro de uma string precendendo-a com uma barra invertida. Isso é conhecido como _escaping_ das aspas. Por exemplo:
 
-```js
+```js-nolint
 var quote = "Ele lê \"The Cremation of Sam McGee\" de R.W. Service.";
 console.log(quote);
 ```
@@ -531,21 +534,22 @@ var home = "c:\\temp";
 Você também pode escapar quebras de linhas, precedendo-as com barra invertida. A barra invertida e a quebra de linha são ambas removidas da string.
 
 ```js
-var str = "esta string \
+var str =
+  "esta string \
 está quebrada \
 em várias\
-linhas."
-console.log(str);   // esta string está quebrada em várias linhas.
+linhas.";
+console.log(str); // esta string está quebrada em várias linhas.
 ```
 
 Embora JavaScript não tenha sintaxe "heredoc", você pode adicionar uma quebra de linha e um escape de quebra de linha no final de cada linha:
 
 ```js
 var poema =
-"Rosas são vermelhas\n\
+  "Rosas são vermelhas\n\
 Violetas são azuis,\n\
 Esse seu sorriso\n\
-é o que me seduz. (Lucas Pedrosa)"
+é o que me seduz. (Lucas Pedrosa)";
 ```
 
 ## Mais informação

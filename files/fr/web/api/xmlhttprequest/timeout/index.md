@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 
 {{APIRef('XMLHttpRequest')}}

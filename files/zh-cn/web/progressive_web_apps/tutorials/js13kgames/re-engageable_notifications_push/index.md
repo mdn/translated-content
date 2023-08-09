@@ -1,7 +1,6 @@
 ---
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

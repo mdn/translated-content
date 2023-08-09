@@ -1,7 +1,6 @@
 ---
 title: "<br>: El elemento de salto de línea"
 slug: Web/HTML/Element/br
-original_slug: Web/HTML/Elemento/br
 ---
 
 ## Resumen

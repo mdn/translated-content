@@ -37,8 +37,8 @@ A declaração `for` começa declarando a variável `i` e inicializando-a como `
 
 ```js
 for (var i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
@@ -51,18 +51,18 @@ Por exemplo, no bloco de _inicialização_, não é necessário inicializar vari
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 ```
 
 Assim como ocorre no bloco de _inicialização_, a _condição_ também é opcional. Se você está omitindo essa expressão, você deve certificar-se de quebrar o loop no corpo para não criar um loop infinito.
 
 ```js
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 ```
 
@@ -83,15 +83,28 @@ for (;;) {
 O ciclo `for` a seguir calcula a posição de deslocamento de um nó na seção \[expressão final] e, portanto, não requer o uso de uma declaração ou de um bloco de declaração, e no seu lugar é usado um ponto-vírgula - `;`.
 
 ```js
-function showOffsetPos (sId) {
-  var nLeft = 0, nTop = 0;
+function showOffsetPos(sId) {
+  var nLeft = 0,
+    nTop = 0;
 
-  for (var oItNode = document.getElementById(sId); // inicialização
-       oItNode; // condition
-       nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent) // expressão final
-       /* empty statement */ ;
+  for (
+    var oItNode = document.getElementById(sId); // inicialização
+    oItNode; // condition
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent // expressão final
+    /* empty statement */
+  );
 
-  console.log("Offset position of \"" + sId + "\" element:\n left: " + nLeft + "px;\n top: " + nTop + "px;");
+  console.log(
+    'Offset position of "' +
+      sId +
+      '" element:\n left: ' +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;",
+  );
 }
 
 // Exemplo de call:
@@ -108,11 +121,11 @@ showOffsetPos("content");
 
 ## Especificações
 
-| Especificação                                                                | Status                   | Comentário         |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 1st Edition.                                                      | Padrão                   | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'for statement')}}     | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-for-statement', 'for statement')}} | {{Spec2('ES6')}}     |                    |
+| Especificação                                              | Status             | Comentário         |
+| ---------------------------------------------------------- | ------------------ | ------------------ |
+| ECMAScript 1st Edition.                                    | Padrão             | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-12.6.3', 'for statement')}}      | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-for-statement', 'for statement')}} | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

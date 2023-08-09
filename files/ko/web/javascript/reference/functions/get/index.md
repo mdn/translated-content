@@ -57,12 +57,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -81,20 +81,26 @@ delete obj.latest;
 이미 존재하는 객체에 접근자를 추가하려면 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // 접근자 실행, a + 1 반환 (0 + 1 = 1)
+console.log(o.b); // 접근자 실행, a + 1 반환 (0 + 1 = 1)
 ```
 
 ### 계산된 속성 이름 사용하기
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -105,12 +111,12 @@ console.log(obj.foo); // "bar"
 ```js
 class MyConstants {
   static get foo() {
-    return 'foo';
+    return "foo";
   }
 }
 
 console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = 'bar';
+MyConstants.foo = "bar";
 console.log(MyConstants.foo); // 'foo', 정적 접근자의 값 변경 불가
 ```
 
@@ -146,7 +152,7 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -154,13 +160,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```

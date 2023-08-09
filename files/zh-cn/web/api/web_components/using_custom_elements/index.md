@@ -1,7 +1,6 @@
 ---
 title: 使用 custom elements
 slug: Web/API/Web_components/Using_custom_elements
-original_slug: Web/Web_Components/Using_custom_elements
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -23,7 +22,7 @@ Web Components 标准非常重要的一个特性是，它使开发者能够将 H
 作为示例，我们可以像这样定义一个叫做 [word-count](https://mdn.github.io/web-components-examples/word-count-web-component/) 的 custom element：
 
 ```js
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 这个元素叫做 `word-count`，它的类对象是 `WordCount`, 继承自 {{htmlelement("p")}} 元素。
@@ -81,41 +80,42 @@ class PopUpInfo extends HTMLElement {
 
 ```js
 // 创建一个 shadow root
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
 // 创建一个 spans
-var wrapper = document.createElement('span');
-wrapper.setAttribute('class','wrapper');
-var icon = document.createElement('span');
-icon.setAttribute('class','icon');
-icon.setAttribute('tabindex', 0);
-var info = document.createElement('span');
-info.setAttribute('class','info');
+var wrapper = document.createElement("span");
+wrapper.setAttribute("class", "wrapper");
+var icon = document.createElement("span");
+icon.setAttribute("class", "icon");
+icon.setAttribute("tabindex", 0);
+var info = document.createElement("span");
+info.setAttribute("class", "info");
 
 // 获取 text 属性上的内容，并添加到一个 span 标签内
-var text = this.getAttribute('text');
+var text = this.getAttribute("text");
 info.textContent = text;
 
 // 插入 icon
 var imgUrl;
-if(this.hasAttribute('img')) {
-  imgUrl = this.getAttribute('img');
+if (this.hasAttribute("img")) {
+  imgUrl = this.getAttribute("img");
 } else {
-  imgUrl = 'img/default.png';
+  imgUrl = "img/default.png";
 }
-var img = document.createElement('img');
+var img = document.createElement("img");
 img.src = imgUrl;
 icon.appendChild(img);
 
 // 创建一些 CSS，并应用到 shadow dom 上
-var style = document.createElement('style');
+var style = document.createElement("style");
 
-style.textContent = '.wrapper {' +
-// 简洁起见，省略了具体的 CSS
+style.textContent =
+  ".wrapper {" +
+  // 简洁起见，省略了具体的 CSS
 
-// 将创建的元素附加到 shadow dom
+  // 将创建的元素附加到 shadow dom
 
-shadow.appendChild(style);
+  shadow.appendChild(style);
 shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);
@@ -124,15 +124,17 @@ wrapper.appendChild(info);
 最后，我们使用之前提到的`define()`方法将 custom element 注册到`CustomElementRegistry`上，在方法的参数里，我们指定了元素的名称，以及定义了元素功能的类。
 
 ```js
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 现在我们可以在页面上使用我们定义的 custom element 了，就像下面这样：
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC)
+<popup-info
+  img="img/alt.png"
+  text="Your card validation code (CVC)
   is an extra security feature — it is the last 3 or 4 numbers on the
-  back of your card.">
+  back of your card."></popup-info>
 ```
 
 > **备注：** 上方代码不是最新，你可以在这里找到[完整的源码](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js)。
@@ -163,16 +165,14 @@ class ExpandingList extends HTMLUListElement {
 接下来，和之前一样，我们使用`define()`方法注册一个元素，但不同的是，我们需要添加一个配置对象，用于指定我们需要继承的元素：
 
 ```js
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 在页面上使用 built-in element 看起来也会有所不同：
 
 ```html
 <ul is="expanding-list">
-
   ...
-
 </ul>
 ```
 
@@ -200,10 +200,10 @@ customElements.define('expanding-list', ExpandingList, { extends: "ul" });
 这里，类的构造函数很简单 — 我们将 shadow DOM 附加到元素上，然后将一个{{htmlelement("div")}}元素和{{htmlelement("style")}}元素附加到 shadow root 上：
 
 ```js
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
-var div = document.createElement('div');
-var style = document.createElement('style');
+var div = document.createElement("div");
+var style = document.createElement("style");
 shadow.appendChild(style);
 shadow.appendChild(div);
 ```

@@ -1,7 +1,6 @@
 ---
 title: devtools.network.onRequestFinished
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 ---
 
 {{AddonSidebar()}}

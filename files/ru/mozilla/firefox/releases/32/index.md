@@ -1,7 +1,6 @@
 ---
 title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
-translation_of: Mozilla/Firefox/Releases/32
 ---
 
 {{FirefoxSidebar}}

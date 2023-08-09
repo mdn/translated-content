@@ -10,10 +10,10 @@ slug: Web/API/Cache/add
 ```js
 fetch(url).then(function (response) {
   if (!response.ok) {
-    throw new TypeError('bad response status');
+    throw new TypeError("bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
 对于更复杂的操作，您可以直接使用{{domxref("Cache.put","Cache.put()")}}这个 API。
@@ -25,7 +25,7 @@ fetch(url).then(function (response) {
 ## 语法
 
 ```js
-cache.add(request).then(function() {
+cache.add(request).then(function () {
   //request has been added to the cache
 });
 ```
@@ -50,11 +50,11 @@ void 返回值的 {{jsxref("Promise")}}
 下面的代码块等待 {{domxref("InstallEvent")}} 事件触发，然后运行 {{domxref("ExtendableEvent.waitUntil","waitUntil")}} 来处理该应用程序的安装过程。包括调用 {{domxref("CacheStorage.open")}} 来创建一个新的缓存，然后使用 {{domxref("Cache.add")}} 来添加一个请求资源到该缓存。
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.add('/sw-test/index.html');
-    })
+    caches.open("v1").then(function (cache) {
+      return cache.add("/sw-test/index.html");
+    }),
   );
 });
 ```

@@ -1,7 +1,6 @@
 ---
 title: "-webkit-mask-repeat-y"
 slug: Web/CSS/-webkit-mask-repeat-y
-translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}

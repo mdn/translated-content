@@ -33,11 +33,11 @@ decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
-| {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}     | Definição inicial |
-| {{SpecName('ES5.1', '#sec-15.1.3.2', 'decodeURIComponent')}}                                     | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}} | {{Spec2('ES6')}}     |                   |
+| Especificação                                                                            | Status             | Comentário        |
+| ---------------------------------------------------------------------------------------- | ------------------ | ----------------- |
+| {{SpecName('ES3')}}                                                                      | {{Spec2('ES3')}}   | Definição inicial |
+| {{SpecName('ES5.1', '#sec-15.1.3.2', 'decodeURIComponent')}}                             | {{Spec2('ES5.1')}} |                   |
+| {{SpecName('ES6', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}} | {{Spec2('ES6')}}   |                   |
 
 ## Compatibilidade com navegadores
 

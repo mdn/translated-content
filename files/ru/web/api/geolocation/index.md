@@ -1,14 +1,6 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
-translation_of: Web/API/Geolocation
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: Cascade
 slug: Web/CSS/Cascade
-translation_of: Web/CSS/Cascade
 ---
 
 {{ CSSRef() }}
@@ -33,17 +32,17 @@ The cascading algorithm determines how to find the value to apply for each prope
 1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate media at-rule.
 2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
-    |     | Origin         | Importance   |
-    | --- | -------------- | ------------ |
-    | 1   | user agent     | normal       |
-    | 2   | user           | normal       |
-    | 3   | author         | normal       |
-    | 4   | CSS Animations | _see below_  |
-    | 5   | author         | `!important` |
-    | 6   | user           | `!important` |
-    | 7   | user agent\*   | `!important` |
+   |     | Origin         | Importance   |
+   | --- | -------------- | ------------ |
+   | 1   | user agent     | normal       |
+   | 2   | user           | normal       |
+   | 3   | author         | normal       |
+   | 4   | CSS Animations | _see below_  |
+   | 5   | author         | `!important` |
+   | 6   | user           | `!important` |
+   | 7   | user agent\*   | `!important` |
 
-    \* based on [w3.org CSS3 specs](https://www.w3.org/TR/css-cascade-3/#importance)
+   \* based on [w3.org CSS3 specs](https://www.w3.org/TR/css-cascade-3/#importance)
 
 3. In case of equality, the [specificity](/ru/docs/CSS/Specificity) of a value is considered to choose one or the other.
 
@@ -60,39 +59,49 @@ Also note that values within `@keyframes` at-rules overwrite all normal values b
 **User-agent CSS:**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 **Author CSS 1:**
 
 ```css
-li { margin-left: 0 } /* This is a reset */
+li {
+  margin-left: 0;
+} /* This is a reset */
 ```
 
 **Author CSS 2:**
 
 ```css
 @media screen {
-    li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-    li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 ```
 
 **User CSS:**
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML:**
 
 ```html
 <ul>
-    <li class="specific">1<sup>st</sup></li>
-    <li>2<sup>nd</sup></li>
+  <li class="specific">1<sup>st</sup></li>
+  <li>2<sup>nd</sup></li>
 </ul>
 ```
 
@@ -101,21 +110,21 @@ In this case, declarations inside `li` and `.specific` rules should apply. No de
 So three declarations are in competition:
 
 ```css
-margin-left: 0
+margin-left: 0;
 ```
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 ```css
-margin-left: 1px
+margin-left: 1px;
 ```
 
 The last one is ignored (on a screen), and the two first have the same selector, hence the same specificity: it is the last one that is then selected:
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.

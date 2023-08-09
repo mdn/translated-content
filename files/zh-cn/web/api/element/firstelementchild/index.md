@@ -19,15 +19,15 @@ var element = node.firstElementChild;
 
 ```html
 <ul id="foo">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-var foo = document.getElementById('foo');
-// yields: First  (1)
-console.log(foo.firstElementChild.textContent);
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // 输出 "First (1)"
 </script>
 ```
 

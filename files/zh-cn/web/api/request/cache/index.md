@@ -47,26 +47,30 @@ A `RequestCache` value. The available values are:
 ```js
 // Download a resource with cache busting, to bypass the cache
 // completely.
-fetch("some.json", {cache: "no-store"})
-  .then(function(response) { /* consume the response */ });
+fetch("some.json", { cache: "no-store" }).then(function (response) {
+  /* consume the response */
+});
 
 // Download a resource with cache busting, but update the HTTP
 // cache with the downloaded resource.
-fetch("some.json", {cache: "reload"})
-  .then(function(response) { /* consume the response */ });
+fetch("some.json", { cache: "reload" }).then(function (response) {
+  /* consume the response */
+});
 
 // Download a resource with cache busting when dealing with a
 // properly configured server that will send the correct ETag
 // and Date headers and properly handle If-Modified-Since and
 // If-None-Match request headers, therefore we can rely on the
 // validation to guarantee a fresh response.
-fetch("some.json", {cache: "no-cache"})
-  .then(function(response) { /* consume the response */ });
+fetch("some.json", { cache: "no-cache" }).then(function (response) {
+  /* consume the response */
+});
 
 // Download a resource with economics in mind!  Prefer a cached
 // albeit stale response to conserve as much bandwidth as possible.
-fetch("some.json", {cache: "force-cache"})
-  .then(function(response) { /* consume the response */ });
+fetch("some.json", { cache: "force-cache" }).then(function (response) {
+  /* consume the response */
+});
 ```
 
 ## Specifications

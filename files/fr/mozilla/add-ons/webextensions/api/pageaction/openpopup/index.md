@@ -1,7 +1,6 @@
 ---
 title: pageAction.openPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup
 ---
 
 {{AddonSidebar()}}Ouvrez le menu contextuel de l'action de la page.

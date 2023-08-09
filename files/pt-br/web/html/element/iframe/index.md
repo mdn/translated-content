@@ -1,5 +1,5 @@
 ---
-title: "<iframe>"
+title: <iframe>
 slug: Web/HTML/Element/iframe
 ---
 
@@ -89,10 +89,9 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ```html
 <script>
-  var iframe = window.getElementsByTagName( "iframe" )[ 0 ];
-  alert( "Frame title: " + iframe.contentWindow.title );
+  var iframe = window.getElementsByTagName("iframe")[0];
+  alert("Frame title: " + iframe.contentWindow.title);
 </script>
-
 
 <iframe src="page.html" width="300" height="300">
   <p>Your browser does not support iframes.</p>
@@ -103,14 +102,22 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ```html
 <base target="_blank" />
-<iframe width="400" height="215" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-   src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
-</iframe><br />
+<iframe
+  width="400"
+  height="215"
+  frameborder="0"
+  scrolling="no"
+  marginheight="0"
+  marginwidth="0"
+  src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed">
+</iframe
+><br />
 <small>
-    <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593"
-       style="color:#0000FF;text-align:left">
-        See bigger map
-    </a>
+  <a
+    href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593"
+    style="color:#0000FF;text-align:left">
+    See bigger map
+  </a>
 </small>
 ```
 
@@ -124,11 +131,11 @@ Scripts trying to access a frame's content are subject to the [same-origin polic
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Especificação                                                                               | Status                   | Comment |
+| ------------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                         | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                    | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade dos navegadores
 

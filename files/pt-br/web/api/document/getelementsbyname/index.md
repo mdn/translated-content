@@ -19,17 +19,17 @@ var elementos = document.getElementsByName(nome);
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>Exemplo: usando document.getElementsByName</title>
+  <title>Exemplo: usando document.getElementsByName</title>
 
-<input type="hidden" name="up">
-<input type="hidden" name="down">
+  <input type="hidden" name="up" />
+  <input type="hidden" name="down" />
 
-<script>
-  var up_nomes = document.getElementsByName("up");
-  console.log(up_nomes[0].tagName); // exibindo o campo "INPUT"
-</script>
+  <script>
+    var up_nomes = document.getElementsByName("up");
+    console.log(up_nomes[0].tagName); // exibindo o campo "INPUT"
+  </script>
 </html>
 ```
 
@@ -47,14 +47,11 @@ A coleção retornada {{domxref("NodeList")}} contém _todos_ os elementos com o
 
 ## Especificações
 
-| Epecificação                                                                                                                 | Status                               | Comentário        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                   |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Definição Inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.getElementsByName")}}
+{{Compat}}
 
 ## Veja também
 

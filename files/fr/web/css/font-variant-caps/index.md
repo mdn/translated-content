@@ -1,7 +1,6 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-translation_of: Web/CSS/font-variant-caps
 ---
 
 {{CSSRef}}

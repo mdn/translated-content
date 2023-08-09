@@ -1,7 +1,6 @@
 ---
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
 
 {{CSSRef}}

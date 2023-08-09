@@ -1,10 +1,6 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - Выражение
-  - Условие
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
 
 {{jsSidebar("Statements")}}
@@ -85,10 +81,10 @@ if (b) // это условие истинно
 
 ```js
 if (cipher_char === from_char) {
-   result = result + to_char;
-   x++;
+  result = result + to_char;
+  x++;
 } else {
-   result = result + clear_char;
+  result = result + clear_char;
 }
 ```
 
@@ -98,11 +94,8 @@ if (cipher_char === from_char) {
 
 ```js
 if (x > 5) {
-
 } else if (x > 50) {
-
 } else {
-
 }
 ```
 
@@ -110,9 +103,9 @@ if (x > 5) {
 
 Целесообразно не использовать простые присваивания в условном выражении, потому что при взгляде на код присваивание можно путать с равенством. Например, не используйте следующий код:
 
-```js
+```js-nolint example-bad
 if (x = y) {
-   /* сделать что-то */
+  /* сделать что-то */
 }
 ```
 
@@ -120,7 +113,7 @@ if (x = y) {
 
 ```js
 if ((x = y)) {
-   /* сделать что-то */
+  /* сделать что-то */
 }
 ```
 

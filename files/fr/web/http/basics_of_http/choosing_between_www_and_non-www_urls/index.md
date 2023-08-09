@@ -1,7 +1,6 @@
 ---
 title: Choisir entre les URLs avec ou sans www
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
 
 {{HTTPSidebar}}

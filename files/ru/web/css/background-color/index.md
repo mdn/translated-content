@@ -1,15 +1,8 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-tags:
-  - CSS
-  - CSS-свойства
-  - CSS фоны
-  - Графика
-  - Определение
-  - Раскладка
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS) устанавливает цвет фона элемента.
@@ -33,9 +26,9 @@ background-color: #11ffeeff; /* ff - непрозрачный */
 background-color: rgb(255, 255, 128);
 
 /* RGBA-значение или RGB с alpha-каналом */
-background-color: rgba(117, 190, 218, 0.0); /* 0.0 - полностью прозрачный */
+background-color: rgba(117, 190, 218, 0); /* 0.0 - полностью прозрачный */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - полупрозрачный */
-background-color: rgba(117, 190, 218, 1.0); /* 1.0 - непрозрачный */
+background-color: rgba(117, 190, 218, 1); /* 1.0 - непрозрачный */
 
 /* HSLA-значение */
 background-color: hsla(50, 33%, 25%, 0.75);
@@ -66,17 +59,11 @@ background-color: unset;
 ### HTML
 
 ```html
-<div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -94,7 +81,7 @@ background-color: unset;
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 

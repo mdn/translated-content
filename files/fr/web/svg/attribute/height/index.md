@@ -1,7 +1,6 @@
 ---
 title: height
 slug: Web/SVG/Attribute/height
-translation_of: Web/SVG/Attribute/height
 ---
 
 {{SVGRef}}

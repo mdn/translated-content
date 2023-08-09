@@ -17,8 +17,8 @@ O caso de uso comum é retornar `204` como resultado de uma solicitação {{HTTP
 
 ## Especificações
 
-| Especificação                                            | Título                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                               | Título                                                        |
+| ------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "204 No Content" , "6.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

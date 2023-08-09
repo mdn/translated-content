@@ -46,22 +46,18 @@ performance.measure(name, startMark, endMark);
 performance.mark("mySetTimeout-start");
 
 // 等待一些时间。
-setTimeout(function() {
+setTimeout(function () {
   // 标志时间的结束。
   performance.mark("mySetTimeout-end");
 
   // 测量两个不同的标志。
-  performance.measure(
-    "mySetTimeout",
-    "mySetTimeout-start",
-    "mySetTimeout-end"
-  );
+  performance.measure("mySetTimeout", "mySetTimeout-start", "mySetTimeout-end");
 
   // 获取所有的测量输出。
   // 在这个例子中只有一个。
   var measures = performance.getEntriesByName("mySetTimeout");
   var measure = measures[0];
-  console.log("setTimeout milliseconds:", measure.duration)
+  console.log("setTimeout milliseconds:", measure.duration);
 
   // 清除存储的标志位
   performance.clearMarks();

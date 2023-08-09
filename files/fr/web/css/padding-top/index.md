@@ -1,7 +1,6 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-translation_of: Web/CSS/padding-top
 ---
 
 {{CSSRef}}

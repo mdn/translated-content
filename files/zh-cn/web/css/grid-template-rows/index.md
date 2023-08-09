@@ -1,7 +1,6 @@
 ---
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
-original_slug: Web/CSS/网格-模板-列
 ---
 
 {{CSSRef}}

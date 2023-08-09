@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
 
 {{JSRef}}

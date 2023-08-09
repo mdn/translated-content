@@ -1,7 +1,6 @@
 ---
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
-translation_of: Web/API/Gamepad/axes
 ---
 
 {{APIRef("Gamepad API")}}
@@ -20,40 +19,38 @@ readonly    attribute double[]            axes;
 
 ```js
 function gameLoop() {
-  if(navigator.webkitGetGamepads) {
+  if (navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
   } else {
     var gp = navigator.getGamepads()[0];
   }
 
-  if(gp.axes[0] != 0) {
+  if (gp.axes[0] != 0) {
     b -= gp.axes[0];
-  } else if(gp.axes[1] != 0) {
+  } else if (gp.axes[1] != 0) {
     a += gp.axes[1];
-  } else if(gp.axes[2] != 0) {
+  } else if (gp.axes[2] != 0) {
     b += gp.axes[2];
-  } else if(gp.axes[3] != 0) {
+  } else if (gp.axes[3] != 0) {
     a -= gp.axes[3];
   }
 
-  ball.style.left = a*2 + "px";
-  ball.style.top = b*2 + "px";
+  ball.style.left = a * 2 + "px";
+  ball.style.top = b * 2 + "px";
 
   var start = rAF(gameLoop);
-};
+}
 ```
 
 ## Значение
 
 Массив значений {{domxref("double") }}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                    | Status                       | Comment            |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#dom-gamepad-axes", "Gamepad.axes")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

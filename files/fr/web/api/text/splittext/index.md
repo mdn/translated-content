@@ -1,7 +1,6 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
-translation_of: Web/API/Text/splitText
 ---
 
 {{apiref("DOM")}}

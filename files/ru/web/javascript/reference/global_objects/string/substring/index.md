@@ -1,15 +1,8 @@
 ---
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -47,7 +40,7 @@ str.substring(indexA[, indexB])
 В следующем примере метод `substring()` используется для отображения символов из строки `'Mozilla'`:
 
 ```js
-var anyString = 'Mozilla';
+var anyString = "Mozilla";
 
 // Отобразит 'Moz'
 console.log(anyString.substring(0, 3));
@@ -71,12 +64,12 @@ console.log(anyString.substring(0, 10));
 
 ```js
 // Отобразит 'illa' - последние 4 символа
-var anyString = 'Mozilla';
+var anyString = "Mozilla";
 var anyString4 = anyString.substring(anyString.length - 4);
 console.log(anyString4);
 
 // Отобразит 'zilla' - последние 5 символов
-var anyString = 'Mozilla';
+var anyString = "Mozilla";
 var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 ```
@@ -90,13 +83,16 @@ console.log(anyString5);
 function replaceString(oldS, newS, fullS) {
   for (var i = 0; i < fullS.length; ++i) {
     if (fullS.substring(i, i + oldS.length) == oldS) {
-      fullS = fullS.substring(0, i) + newS + fullS.substring(i + oldS.length, fullS.length);
+      fullS =
+        fullS.substring(0, i) +
+        newS +
+        fullS.substring(i + oldS.length, fullS.length);
     }
   }
   return fullS;
 }
 
-replaceString('мир', 'веб', 'Дивный новый мир');
+replaceString("мир", "веб", "Дивный новый мир");
 ```
 
 Обратите внимание, что функция может скатиться в бесконечный цикл, если строка `oldS` сама является подстрокой для `newS` — например, если вы попытаетесь заменить слово «мир» на слово «другоймир». Лучше использоваться следующий метод для замены строк:

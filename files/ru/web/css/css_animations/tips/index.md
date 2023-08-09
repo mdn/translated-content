@@ -1,7 +1,6 @@
 ---
 title: CSS Animations tips and tricks
 slug: Web/CSS/CSS_animations/Tips
-translation_of: Web/CSS/CSS_Animations/Tips
 ---
 
 {{cssref}}
@@ -19,8 +18,7 @@ CSS-анимация позволяет делать невероятные ве
 Во-первых, давайте определим HTML для {{HTMLElement("div")}} который мы хотим анимировать, и кнопку, которая будет запускать (или воспроизводить) анимацию.
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -41,14 +39,21 @@ CSS-анимация позволяет делать невероятные ве
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -73,8 +78,8 @@ CSS-анимация позволяет делать невероятные ве
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -137,15 +142,15 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+let watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false),
+);
 ```
 
 Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>

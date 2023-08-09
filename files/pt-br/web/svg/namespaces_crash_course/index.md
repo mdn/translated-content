@@ -1,7 +1,6 @@
 ---
 title: Intensivo de Namespaces
 slug: Web/SVG/Namespaces_Crash_Course
-original_slug: Web/SVG/Intensivo_de_Namespaces
 ---
 
 Como um dialeto [XML](/pt-BR/docs/Glossario/XML), o [SVG](/pt-BR/docs/Web/SVG) tem _namespace_. É importante entender o conceito de _[namespaces](/pt-BR/docs/Web/SVG/Intensivo_de_Namespaces)_ e como eles são usados se você planeja criar seu próprio conteúdo em SVG. Versões de visualizadores SVG prévias ao lançamento do Firefox 1.5 infelizmente deu pouca atenção aos _namespaces_ mas eles são essenciais para dialetos multi-XML suportando agentes de usuários como navegadores baseados em [Gecko](/pt-BR/docs/Mozilla/Gecko) que devem ser muito rigorosos. Tome um tempo para entender _namespaces_ agora e irá te privar de muita dor de cabeça no futuro.
@@ -89,54 +88,58 @@ _Namespaces_ não afetam somente a marcação, mas também o _scripting_. Se voc
 
 A recomendação [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) foi criado antes da recomendação _[original Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)_ ser lançada; assim sendo, DOM1 não está ciente de _namespaces_. Isto causa problemas para XML com namespaces, como SVG. Para resolver estes problemas, a recomendação [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) adicionou equivalentes cientes do _namespace_ de todos os métodos aplicáveis do DOM Nível 1. Quando estiver _scripting_ em SVG, é _[importante usar os métodos cientes de namespace](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)_. A tabela abaixo lista os métodos DOM1 que não devem ser usados em SVG, junto com seus equivalentes em DOM2 que devem ser usados ao invés.
 
-| DOM1 (não use)                                                                                               | DOM2 (use estes!)                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [createAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                              |
-| [createElement](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                  |
-| [getAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                           |
-| [getAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                                 |
+| DOM1 (não use)                                                                                                | DOM2 (use estes!)                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [createAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                               |
+| [createElement](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                   |
+| [getAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                            |
+| [getAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                                  |
 | [getElementsByTagName](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (também [added to Element](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
-| [getNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                              |
-| [hasAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                                 |
-| [removeAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                                |
-| [removeNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem)           | [removeNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS)                                                                                        |
-| [setAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute)                 | [setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)                                                                                                 |
-| [setAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                           |
-| [setNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                              |
+| [getNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                               |
+| [hasAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                                  |
+| [removeAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                                 |
+| [removeNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem)           | [removeNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS)                                                                                         |
+| [setAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute)                 | [setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)                                                                                                  |
+| [setAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                            |
+| [setNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                               |
 
 O primeiro argumento para todos os métodos cientes de _namespace_ em DOM2 devem ser nomes de _namespace_ (também conhecidos como _namespace_ URI) do elemento ou atributo em questão. Para **elementos** SVG isto é 'http\://www\.w3.org/2000/svg'. Contudo, note cuidadosamente: as recomendações _[Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting)_ declara que o nome de _namespace_ para atributos sem um prefixo não tem um valor. Em outras palavras, states that the _namespace_ name for attributes without a prefix does not have a value. In other words, embora os atributos pertencem ao namespace da tag, você não usa o nome de namespace da tag. Em vez disso, **você deve usar nulo como nome de _namespace_ para atributos não qualificados(sem prefixos)**. Então, para criar um _elemento_ SVG `rect` usando `document.createElementNS()`, você deve escrever:
 
 ```javascript
-document.createElementNS('https://www.w3.org/2000/svg', 'rect');
+document.createElementNS("https://www.w3.org/2000/svg", "rect");
 ```
 
 Mas para recuperar o valor de atributo `x` em um elemento SVG `rect`, você deve escrever:
 
 ```javascript
-rect.getAttributeNS(null, 'x');
+rect.getAttributeNS(null, "x");
 ```
 
 Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (`https://www.w3.org/1999/xlink` para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
 
 ```javascript
-elt.getAttributeNS('https://www.w3.org/1999/xlink', 'href');
+elt.getAttributeNS("https://www.w3.org/1999/xlink", "href");
 ```
 
 Para definir atributos que tem um _namespace_, é recomendado (mas não requerido) que você também inclua seus prefixos no segundo argumento para que o DOM possa, depois, ser facilmente convertido depois para XML (se, por exemplo você quer enviá-los de volta para o servidor). Por exemplo:
 
 ```javascript
-elt.setAttributeNS('https://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
+elt.setAttributeNS(
+  "https://www.w3.org/1999/xlink",
+  "xlink:href",
+  "otherdoc.svg",
+);
 ```
 
 Como um exemplo final, aqui está a demonstração de como você deveria criar um elemento `<image>` dinamicamente usando script:
 
 ```javascript
-var SVG_NS = 'https://www.w3.org/2000/svg';
-var XLink_NS = 'https://www.w3.org/1999/xlink';
-var image = document.createElementNS(SVG_NS, 'image');
-image.setAttributeNS(null, 'width', '100');
-image.setAttributeNS(null, 'height', '100');
-image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
+var SVG_NS = "https://www.w3.org/2000/svg";
+var XLink_NS = "https://www.w3.org/1999/xlink";
+var image = document.createElementNS(SVG_NS, "image");
+image.setAttributeNS(null, "width", "100");
+image.setAttributeNS(null, "height", "100");
+image.setAttributeNS(XLink_NS, "xlink:href", "flower.png");
 ```
 
 ### Conclusão

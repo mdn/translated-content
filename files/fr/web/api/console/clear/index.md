@@ -1,7 +1,6 @@
 ---
 title: clear()
 slug: Web/API/console/clear
-translation_of: Web/API/Console/clear
 ---
 
 {{APIRef("Console API")}}

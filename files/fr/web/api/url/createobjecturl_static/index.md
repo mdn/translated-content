@@ -1,7 +1,6 @@
 ---
 title: URL.createObjectURL
 slug: Web/API/URL/createObjectURL_static
-translation_of: Web/API/URL/createObjectURL
 ---
 
 {{APIRef("URL")}}

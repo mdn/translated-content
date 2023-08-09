@@ -1,7 +1,6 @@
 ---
 title: strike
 slug: Web/HTML/Element/strike
-original_slug: Web/HTML/Elemento/strike
 ---
 
 ### Definición

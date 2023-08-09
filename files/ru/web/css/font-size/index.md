@@ -1,11 +1,6 @@
 ---
 title: font-size
 slug: Web/CSS/font-size
-tags:
-  - CSS
-  - CSS-свойства
-  - css шрифты
-translation_of: Web/CSS/font-size
 ---
 
 {{CSSRef}}
@@ -112,7 +107,7 @@ One important fact to keep in mind: em values compound. Take the following HTML 
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -153,14 +148,20 @@ In this example, the words "outer inner outer" are all displayed at 16px (assumi
 
 ```css
 /* Set paragraph text to be very large. */
-p { font-size: xx-large }
+p {
+  font-size: xx-large;
+}
 
 /* Set h1 (level 1 heading) text to be 2.5 times the size
  * of the text around it. */
-h1 { font-size: 250% }
+h1 {
+  font-size: 250%;
+}
 
 /* Sets text enclosed within span tag to be 16px */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Пример 2

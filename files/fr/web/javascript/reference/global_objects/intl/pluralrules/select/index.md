@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules.select()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 ---
 
 {{JSRef}}

@@ -73,8 +73,8 @@ O servidor irá comparar a `ETag` do cliente (enviada com `If-None-Match`) com a
 
 ## Especificações
 
-| Especificação                            | Título                                                       |
-| ---------------------------------------- | ------------------------------------------------------------ |
+| Especificação                  | Título                                                       |
+| ------------------------------ | ------------------------------------------------------------ |
 | {{RFC("7232", "ETag", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object
 ---
 
 {{JSRef}}
@@ -163,7 +162,7 @@ Object.prototype.valueOf = function () {
     // A pesar de que valueOf() no tome ningún argumento, puede hacerlo.
     return current.apply(this, arguments);
   }
-}
+};
 ```
 
 Ya que JavaScript no tiene exactamente objetos sub-clase, el prototipo sirve para crear objetos que actúen como "clase base" para ciertas funciones que actúan como objetos y así mitigar esta limitación. Por ejemplo:

@@ -1,7 +1,6 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape_static
-original_slug: Web/API/CSS/escape
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}

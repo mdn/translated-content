@@ -53,7 +53,7 @@ Promise<Response> fetch(input[, init]);
 
 | 类型         | **描述**                                                                                                                                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `AbortError` | 请求被{{domxref("AbortController.abort()")}}终止。                                                                                                               |
+| `AbortError` | 请求被{{domxref("AbortController.abort()")}}终止。                                                                                                                             |
 | `TypeError`  | 从[Firefox 43](/zh-CN/docs/Mozilla/Firefox/Releases/43)开始，如果`fetch()`接收到含有用户名和密码的 URL（例如`http://user:password@example.com`），它将会抛出一个`TypeError` 。 |
 
 ## 示例
@@ -61,16 +61,18 @@ Promise<Response> fetch(input[, init]);
 在 [Fetch Request 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (参见 [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用对应的构造器创建了一个新的 {{domxref("Request")}} 对象，然后调用 fetch() 方法获取资源。因为我们是在请求一个图片，为了解析正常，我们对响应执行 {{domxref("Body.blob")}} 来设置相应的 MIME 类型。然后创建一个 Object URL，并在 {{htmlelement("img")}} 元素中把它显示出来。
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (response) {
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
 在 [Fetch with init then Request 示例](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) 中，我们做同样的操作，除了在调用 fetch() 时传入一个 init 对象：
@@ -96,20 +98,22 @@ fetch(myRequest,myInit).then(function(response) {
 你也可以传入同样的 init 对象到 Request 构造器，来实现同样的效果，如：
 
 ```js
-var myRequest = new Request('flowers.jpg',myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 `init` 对象中的 `headers` 也可以是一个对象字面量：
 
 ```js
-var myInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 ## 规范

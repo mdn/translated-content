@@ -32,19 +32,25 @@ slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceN
 ```html
 <div class="controls">
   <div class="left">
-    <div id="playButton" class="button">
-      ▶️
-    </div>
+    <div id="playButton" class="button">▶️</div>
   </div>
   <div class="right">
     <span>Volume: </span>
-    <input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.8" name="volume" id="volumeControl">
+    <input
+      type="range"
+      min="0.0"
+      max="1.0"
+      step="0.01"
+      value="0.8"
+      name="volume"
+      id="volumeControl" />
   </div>
 </div>
 
-<p>음을 재생하고 정지하기 위해 위의 버튼을,
-그리고 화음 E와 G의 볼륨을 변경하기 위해 볼륨 슬라이더를 사용하세요.</p>
+<p>
+  음을 재생하고 정지하기 위해 위의 버튼을, 그리고 화음 E와 G의 볼륨을 변경하기
+  위해 볼륨 슬라이더를 사용하세요.
+</p>
 ```
 
 ```css hidden
@@ -67,7 +73,11 @@ slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceN
 
 .right {
   width: 50%;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   position: absolute;
   right: 0;
   display: table-cell;
@@ -90,7 +100,8 @@ slug: Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceN
   vertical-align: middle;
 }
 
-.left span, .left input {
+.left span,
+.left input {
   vertical-align: middle;
 }
 ```
@@ -233,7 +244,7 @@ function startOscillators() {
 
   oscNode3 = context.createOscillator();
   oscNode3.type = "sine";
-  oscNode3.frequency.value = 391.995435981749294 // G
+  oscNode3.frequency.value = 391.995435981749294; // G
   oscNode3.connect(gainNode3);
 
   oscNode1.start();

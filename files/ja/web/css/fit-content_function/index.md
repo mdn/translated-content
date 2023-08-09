@@ -1,7 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content_function
-original_slug: Web/CSS/fit-content()
 ---
 
 {{CSSRef}}

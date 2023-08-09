@@ -24,7 +24,7 @@ var video = document.querySelector("video");
 var timeRangesObject = video.seekable;
 var timeRanges = [];
 //遍历所有时间区域并输出数组
-for (let count = 0; count < timeRangesObject.length; count ++) {
+for (let count = 0; count < timeRangesObject.length; count++) {
   timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
 }
 ```

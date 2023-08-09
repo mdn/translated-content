@@ -1,13 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -39,13 +32,13 @@ Object.freeze(obj)
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Можно добавлять новые свойства, существующие свойства можно изменять или удалять
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Оба объекта эквивалентны, а также возвращаемый объект будет заморожен.
@@ -56,50 +49,48 @@ o === obj; // true
 Object.isFrozen(obj); // === true;
 
 // Теперь все изменения будут заканчиваться с ошибкой
-obj.foo = 'quux'; // тихо ничего не делает
-obj.quaxxor = 'the friendly duck'; // тихо не добавляет свойство
+obj.foo = "quux"; // тихо ничего не делает
+obj.quaxxor = "the friendly duck"; // тихо не добавляет свойство
 
 // ...а в строгом режиме такие попытки вызовут выброс исключения TypeError
 function fail() {
-  'use strict';
-  obj.foo = 'sparky'; // выбросит TypeError
+  "use strict";
+  obj.foo = "sparky"; // выбросит TypeError
   delete obj.quaxxor; // выбросит TypeError
-  obj.sparky = 'arf'; // выбросит TypeError
+  obj.sparky = "arf"; // выбросит TypeError
 }
 
 fail();
 
 // Попытки внести изменения через метод Object.defineProperty также выбросят исключение
-Object.defineProperty(obj, 'ohai', { value: 17 }); // выбросит TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // выбросит TypeError
+Object.defineProperty(obj, "ohai", { value: 17 }); // выбросит TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // выбросит TypeError
 ```
 
 Следующий пример показывает, что значения-объекты в замороженном объекте могут быть изменены (заморозка неглубокая).
 
 ```js
 obj = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj);
-obj.internal.a = 'значениеA';
+obj.internal.a = "значениеA";
 
-obj.internal.a // 'значениеA'
+obj.internal.a; // 'значениеA'
 
 // Чтобы сделать объект obj полностью неизменяемым, замораживаем каждый объект в объекте obj.
 // Для этого воспользуемся этой функцией.
 function deepFreeze(obj) {
-
   // Получаем имена свойств из объекта obj
   var propNames = Object.getOwnPropertyNames(obj);
 
   // Замораживаем свойства для заморозки самого объекта
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     var prop = obj[name];
 
     // Заморозка свойства prop, если оно объект
-    if (typeof prop == 'object' && prop !== null)
-      deepFreeze(prop);
+    if (typeof prop == "object" && prop !== null) deepFreeze(prop);
   });
 
   // Заморозить сам объект obj (ничего не произойдёт, если он уже заморожен)
@@ -107,11 +98,11 @@ function deepFreeze(obj) {
 }
 
 obj2 = {
-  internal: {}
+  internal: {},
 };
 
 deepFreeze(obj2);
-obj2.internal.a = 'другоеЗначение';
+obj2.internal.a = "другоеЗначение";
 obj2.internal.a; // undefined
 ```
 

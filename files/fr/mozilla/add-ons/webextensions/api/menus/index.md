@@ -1,7 +1,6 @@
 ---
 title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 ---
 
 {{AddonSidebar}}

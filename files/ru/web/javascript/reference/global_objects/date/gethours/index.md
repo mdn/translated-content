@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -37,7 +30,7 @@ dateObj.getHours()
 Вторая инструкция в примере ниже присваивает значение 23 переменной `hours` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
 ```js
-let date = new Date('December 25, 1995 23:15:30');
+let date = new Date("December 25, 1995 23:15:30");
 let hours = date.getHours();
 
 console.log(hours); // 23

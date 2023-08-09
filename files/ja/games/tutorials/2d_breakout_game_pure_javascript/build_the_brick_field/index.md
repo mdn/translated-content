@@ -1,7 +1,6 @@
 ---
 title: ブロックのかたまりを作る
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
 {{GamesSidebar}}

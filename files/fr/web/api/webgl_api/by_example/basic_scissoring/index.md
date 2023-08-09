@@ -1,7 +1,6 @@
 ---
 title: Appliquer des découpes simples
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
-translation_of: Web/API/WebGL_API/By_example/Basic_scissoring
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}

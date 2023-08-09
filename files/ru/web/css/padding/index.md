@@ -1,12 +1,8 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - CSS Padding
-  - CSS-свойство
-translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 ## Обзор
@@ -61,29 +57,32 @@ padding: unset;
 ## Примеры
 
 ```css
- padding: 5%;                /*  со всех сторон отступ 5% */
+padding: 5%; /*  со всех сторон отступ 5% */
 ```
 
 ```css
- padding: 10px;              /*  со всех сторон отступ 10px */
+padding: 10px; /*  со всех сторон отступ 10px */
 ```
 
 ```css
- padding: 10px 20px;         /*  сверху и снизу отступ 10px */
-                             /*  слева и справа отступ 20px */
+padding: 10px 20px;
+/*  сверху и снизу отступ 10px */
+/*  слева и справа отступ 20px */
 ```
 
 ```css
- padding: 10px 3% 20px;      /*  сверху отступ 10px       */
-                             /*  слева и справа отступ 3% */
-                             /*  снизу отступ 20px        */
+padding: 10px 3% 20px;
+/*  сверху отступ 10px       */
+/*  слева и справа отступ 3% */
+/*  снизу отступ 20px        */
 ```
 
 ```css
- padding: 1em 3px 30px 5px;  /*  сверху отступ 1em   */
-                             /*  справа отступ 3px   */
-                             /*  снизу отступ 30px   */
-                             /*  слева отступ 5px    */
+padding: 1em 3px 30px 5px;
+/*  сверху отступ 1em   */
+/*  справа отступ 3px   */
+/*  снизу отступ 30px   */
+/*  слева отступ 5px    */
 ```
 
 border:outset; padding:5% 1em;
@@ -100,12 +99,12 @@ border:outset; padding:5% 1em;
 ### CSS
 
 ```css
-h4{
+h4 {
   background-color: green;
   padding: 50px 20px 20px 50px;
 }
 
-h3{
+h3 {
   background-color: blue;
   padding: 400px 50px 50px 400px;
 }

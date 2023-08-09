@@ -29,6 +29,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ### 值
 
 - `auto`
+
   - : 默认颜色，此时浏览器应该用 `currentcolor` 来作为插入光标的颜色，但浏览器可能还会根据当前的背景色、阴影色等来对该颜色进行适当的调整以确保该插入光标具有良好的可见性。
 
     > **备注：** **auto** 属性值在 CSS transitions/animations 中是不支持颜色插补（interpolated）的

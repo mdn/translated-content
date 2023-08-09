@@ -48,7 +48,7 @@ range2.setEnd(parentNode, 60);
 const highlight = new Highlight(range1, range2);
 ```
 
-但你也可以根据需要创建任意多的高亮。例如，如果你正在构建一个协作文本编辑器，其中每个用户获得不同的文本颜色，那么你可以为每个用户创建一个高亮显示，如下所示:
+但你也可以根据需要创建任意多的高亮。例如，如果你正在构建一个协作文本编辑器，其中每个用户获得不同的文本颜色，那么你可以为每个用户创建一个高亮显示，如下所示：
 
 ```js
 const user1Highlight = new Highlight(user1Range1, user1Range2);
@@ -134,7 +134,7 @@ CSS.highlights.clear();
 
 #### JavaScript
 
-使用 JavaScript 监听搜索框上的 `input` 事件，当事件触发，这段代码将在文章的文本中为输入文本查找匹配项。然后它创建匹配的范围，并使用 CSS 自定义高亮 API 创建并注册一个 `search-results` 高亮对象:
+使用 JavaScript 监听搜索框上的 `input` 事件，当事件触发，这段代码将在文章的文本中为输入文本查找匹配项。然后它创建匹配的范围，并使用 CSS 自定义高亮 API 创建并注册一个 `search-results` 高亮对象：
 
 ```js
 const query = document.getElementById("query");

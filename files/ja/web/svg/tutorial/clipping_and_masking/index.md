@@ -16,7 +16,10 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 `circle` 要素をもとにして、先に述べた半円を作成しましょう:
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -40,14 +43,19 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 マスキングの効果は、グラデーションと共に適用するともっとも印象的です。要素をフェードアウトしたい場合は、マスクを用いることですぐにその効果を得ることができます。
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="black" />
       <stop offset="1" stop-color="white" />
     </linearGradient>
     <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
     </mask>
   </defs>
 
@@ -71,9 +79,21 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 上記の長方形は、半透明で描画します。fill および stroke について分けられた 2 つの属性 `fill-opacity` と `stroke-opacity` があり、それぞれのプロパティの不透明度を分けて制御します。なお、ストロークは塗りつぶしの上層に描画することに注意してください。このために塗りつぶしもある要素でストロークの不透明度を設定した場合は、ストロークの半分で塗りつぶしが透けて見え、また同時に残り半分で背景が透けて見えます:
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
 </svg>
 ```
 

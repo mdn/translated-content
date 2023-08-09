@@ -1,7 +1,6 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclose イベント'
+title: "ServiceWorkerGlobalScope: notificationclose イベント"
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
-original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
