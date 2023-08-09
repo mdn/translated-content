@@ -8,14 +8,23 @@ slug: Web/SVG/Element/tspan
 O elemento SVG **`<tspan>`** define um subtexto dentro de um elemento {{SVGElement ('text')}} ou outro elemento `<tspan>`. Permite o ajuste do estilo e / ou posição desse subtexto, conforme necessário.
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 240 40" xmlns="https://www.w3.org/2000/svg">
   <style>
-    text  { font: italic 12px serif; }
-    tspan { font: bold 10px sans-serif; fill: red; }
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
   </style>
 
   <text x="10" y="30" class="small">
@@ -73,9 +82,9 @@ html,body,svg { height:100% }
 
 ## Specifications
 
-| Specification                                                                            | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| Specification                                                     | Status              | Comment            |
+| ----------------------------------------------------------------- | ------------------- | ------------------ |
+| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}    | {{Spec2('SVG2')}}   |                    |
 | {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Compatibilidade com navegadores

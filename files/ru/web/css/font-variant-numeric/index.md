@@ -63,8 +63,8 @@ p {
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                                       | Status                  | Comment            |
+| ----------------------------------------------------------------------------------- | ----------------------- | ------------------ |
 | {{SpecName('CSS3 Fonts', '#propdef-font-variant-numeric', 'font-variant-numeric')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
 ## Browser Compatibility

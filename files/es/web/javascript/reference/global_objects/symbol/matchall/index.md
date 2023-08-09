@@ -16,9 +16,9 @@ El símbolo conocido como **`Symbol.matchAll`** devuelve un iterador, que devuel
 Este Symbol se utiliza para {{jsxref("String.prototype.matchAll()")}} y específicamente en {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Los dos ejemplos siguientes devuelven el mismo resultado:
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 Este método existe para personalizar el comportamiento de las coincidencias dentro de las subclases {{jsxref("RegExp")}}.
@@ -30,13 +30,12 @@ Este método existe para personalizar el comportamiento de las coincidencias den
 ### Usando Symbol.matchAll
 
 ```js
-const str = '2016-01-02|2019-03-07';
+const str = "2016-01-02|2019-03-07";
 
 const numbers = {
   *[Symbol.matchAll](str) {
-    for (const n of str.matchAll(/[0-9]+/g))
-      yield n[0];
-  }
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
 };
 
 console.log(Array.from(str.matchAll(numbers)));

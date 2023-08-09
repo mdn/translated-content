@@ -38,13 +38,13 @@ El método `toLocaleLowerCase()` retorna la cadena de texto desde la que se llam
 ### Utilizando `toLocaleLowerCase()`
 
 ```js
-'ALPHABET'.toLocaleLowerCase(); // 'alphabet'
+"ALPHABET".toLocaleLowerCase(); // 'alphabet'
 
-'\u0130'.toLocaleLowerCase('tr') === 'i';    // true
-'\u0130'.toLocaleLowerCase('en-US') === 'i'; // false
+"\u0130".toLocaleLowerCase("tr") === "i"; // true
+"\u0130".toLocaleLowerCase("en-US") === "i"; // false
 
-let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
-'\u0130'.toLocaleLowerCase(locales) === 'i'; // true
+let locales = ["tr", "TR", "tr-TR", "tr-u-co-search", "tr-x-turkish"];
+"\u0130".toLocaleLowerCase(locales) === "i"; // true
 ```
 
 ## Especificaciones

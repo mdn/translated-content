@@ -7,7 +7,7 @@ slug: Web/HTTP/Status/406
 
 HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指代服务器端无法提供与 {{HTTPHeader("Accept-Charset")}} 以及 {{HTTPHeader("Accept-Language")}} 消息头指定的值相匹配的响应。
 
-主动内容协商标头包括:
+主动内容协商标头包括：
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}

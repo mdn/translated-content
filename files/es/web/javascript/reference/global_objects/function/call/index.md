@@ -56,24 +56,26 @@ function Producto(nombre, precio) {
   this.precio = precio;
 
   if (precio < 0)
-    throw RangeError('No se puede crear el producto "' + nombre + '" con un precio negativo');
+    throw RangeError(
+      'No se puede crear el producto "' + nombre + '" con un precio negativo',
+    );
   return this;
 }
 
 function Comida(nombre, precio) {
   Producto.call(this, nombre, precio);
-  this.categoria = 'comida';
+  this.categoria = "comida";
 }
 Comida.prototype = new Producto();
 
 function Juguete(nombre, precio) {
   Producto.call(this, nombre, precio);
-  this.categoria = 'juguete';
+  this.categoria = "juguete";
 }
 Juguete.prototype = new Producto();
 
-var queso = new Comida('feta', 5);
-var diversion = new Juguete('robot', 40);
+var queso = new Comida("feta", 5);
+var diversion = new Juguete("robot", 40);
 ```
 
 ### Usando `call` para invocar una función anónima
@@ -86,15 +88,15 @@ El propósito principal de la función anónima aquí es agregar una función `p
 
 ```js
 var animales = [
-  {especie: 'Leon', nombre: 'Rey'},
-  {especie: 'Whale', nombre: 'Fail'}
+  { especie: "Leon", nombre: "Rey" },
+  { especie: "Whale", nombre: "Fail" },
 ];
 
 for (var i = 0; i < animales.length; i++) {
   (function (i) {
     this.imprimir = function () {
-      console.log('#' + i  + ' ' + this.especie + ': ' + this.nombre);
-    }
+      console.log("#" + i + " " + this.especie + ": " + this.nombre);
+    };
     this.imprimir();
   }).call(animales[i], i);
 }

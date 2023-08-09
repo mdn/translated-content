@@ -28,10 +28,14 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 O DOCTYPE usado no exemplo seguinte indica HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -41,11 +45,11 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-html-element.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'global.html#h-7.3', '&lt;html&gt;')}}                                 | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                       | Status                   | Comentário |
+| ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-html-element', '&lt;html&gt;')}}      | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'the-html-element.html#the-html-element', '&lt;html&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'global.html#h-7.3', '&lt;html&gt;')}}                       | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade dos navegadores
 

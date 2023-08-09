@@ -42,7 +42,11 @@ slug: Web/API/AudioBuffer
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // AudioContextのサンプルレートで 3 秒間の空のステレオバッファーを生成する
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // バッファにホワイトノイズを書き込む
 // -1.0 から 1.0 の間の乱数の値で埋めるだけ
@@ -60,7 +64,7 @@ for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
 // これは AudioBuffer を再生するときに使う AudioNode である
 var source = audioCtx.createBufferSource();
 
-  // AudioBufferSourceNode にバッファーを設定する
+// AudioBufferSourceNode にバッファーを設定する
 source.buffer = myArrayBuffer;
 
 // AudioBufferSourceNode を出力先に接続すると音声が聞こえるようになる

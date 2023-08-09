@@ -2,6 +2,7 @@
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 ---
+
 {{JSRef}}
 
 **`at()`** 메서드는 정수 값을 받아, 배열에서 해당 값에 해당하는 인덱스의 요소를 반환합니다. 양수와 음수 모두 지정할 수 있고, 음수 값의 경우 배열의 뒤에서부터 인덱스를 셉니다.
@@ -13,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/at
 ## 구문
 
 ```js
-at(index)
+at(index);
 ```
 
 ### 매개변수
@@ -33,7 +34,7 @@ at(index)
 
 ```js
 // 대상 배열
-const cart = ['사과', '바나나', '배'];
+const cart = ["사과", "바나나", "배"];
 
 // 주어진 배열의 마지막 요소를 반환하는 함수
 function returnLast(arr) {
@@ -45,7 +46,7 @@ const item1 = returnLast(cart);
 console.log(item1); // '배' 기록
 
 // 위의 배열 'cart'에 요소를 추가함
-cart.push('오렌지');
+cart.push("오렌지");
 const item2 = returnLast(cart);
 console.log(item2); // '오렌지' 기록
 ```
@@ -56,10 +57,10 @@ console.log(item2); // '오렌지' 기록
 
 ```js
 // 대상 배열
-const colors = ['빨강', '초록', '파랑'];
+const colors = ["빨강", "초록", "파랑"];
 
 // length 속성 사용
-const lengthWay = colors[colors.length-2];
+const lengthWay = colors[colors.length - 2];
 console.log(lengthWay); // '초록' 기록
 
 // slice() 메서드 사용. 배열을 반환함에 주의

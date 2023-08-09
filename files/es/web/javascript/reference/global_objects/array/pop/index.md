@@ -34,7 +34,7 @@ Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
 El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 
