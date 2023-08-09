@@ -1,6 +1,7 @@
 ---
 title: Tips and Tricks
-slug: Mozilla/Add-ons/WebExtensions/Tips
+slug: conflicting/Mozilla/Add-ons/WebExtensions
+original_slug: Mozilla/Add-ons/WebExtensions/Tips
 ---
 
 {{AddonSidebar}}
