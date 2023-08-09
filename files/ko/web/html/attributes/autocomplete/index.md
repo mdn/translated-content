@@ -1,6 +1,8 @@
 ---
 title: HTML autocomplete 특성
 slug: Web/HTML/Attributes/autocomplete
+l10n:
+  sourceCommit: f09f04f9658cce9c57e97270f59b24b263826fd0
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -18,6 +20,8 @@ slug: Web/HTML/Attributes/autocomplete
 > 1. `name` 또는 `id` 특성 존재
 > 2. `<form>` 요소의 자손일 것
 > 3. 양식에 {{HTMLElement("input/submit", "제출")}} 버튼이 있을 것
+
+{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
 ## 값
 
@@ -103,7 +107,7 @@ slug: Web/HTML/Attributes/autocomplete
 - `transaction-amount`
   - : 결제 양식에 나타나는 거래량, 금액. 단위는 `transaction-currency`에 나타난 값을 사용합니다.
 - `language`
-  - : 선호 언어. [유효한 BCP 47 언어 태그](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8)여야 합니다.
+  - : 선호 언어. 유효한 [BCP 47 언어 태그](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8)여야 합니다.
 - `bday`
   - : 생년월일.
 - `bday-day`
@@ -135,8 +139,12 @@ slug: Web/HTML/Attributes/autocomplete
   - : URL. 홈페이지, 회사 웹 사이트 주소 등 양식의 맥락에 맞는 값입니다.
 - `photo`
   - : 이미지 URL. 사람, 회사, 연락처 정보 등 양식의 맥락에 맞는 값입니다.
+- `webauthn`
+  - : 요청에 따라 생성된 [웹 인증 API](/ko/docs/Web/API/Web_Authentication_API)에 의한 패스키(passkey)는 조건부 {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 호출(즉 `mediation: 'conditional'`을 포함하는 호출)에 의해 생성됩니다. 자세한 내용은 [양식 자동 채우기를 통해 패스키로 로그인하기](https://web.dev/passkey-form-autofill/)를 참조하세요.
 
 [WHATWG 표준](https://html.spec.whatwg.org/multipage/forms.html#autofill)을 방문해 더 많은 정보를 알아보세요.
+
+> **참고:** `autocomplete` 속성은 Firefox에서만 다른 브라우저와 달리 `<input>` 요소, `<textarea>` 요소, 또는 전체 `<form>`의 [동적으로 비활성화된 상태와 (적용 가능한 경우) 동적으로 선택된 상태를 페이지 로드간에 유지 하는 기능](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)을 제어합니다. 이 유지 기능은 기본적으로 활성화 상태입니다. `autocomplete` 속성을 `off` 로 설정하면 기능을 끌수 있습니다.이는 `autocomplete` 속성이 일반적으로 해당 `type`에 적용되지 않을 때에도 동작합니다. [Firefox bug 654072](https://bugzil.la/654072) 참고.
 
 ## 예제
 
