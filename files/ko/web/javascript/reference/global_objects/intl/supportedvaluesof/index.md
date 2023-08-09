@@ -14,8 +14,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## 구문
 
 ```js-nolint
@@ -96,7 +94,7 @@ try {
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
@@ -104,7 +102,7 @@ try {
 
 {{Compat}}
 
-## 같이 보기
+## 같이 보기
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
 - [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)

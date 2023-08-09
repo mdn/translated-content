@@ -50,7 +50,7 @@ isFinite("0"); // true, would've been false with the
 // more robust Number.isFinite("0")
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

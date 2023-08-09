@@ -89,7 +89,7 @@ eval(code); // 오래된 엔진에서 SyntaxError
 - {{jsxref("JSON.stringify()")}}
   - : 주어진 값에 해당하는 JSON 문자열을 반환합니다. 선택 사항으로 특정 속성만 포함하거나 사용자 정의 방식으로 속성을 대체합니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

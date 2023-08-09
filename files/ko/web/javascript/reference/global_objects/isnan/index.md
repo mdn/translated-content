@@ -146,7 +146,7 @@ isNaN(x) == isNaN(Number(x)); // x == undefined 포함 x의 어떤 값도 참,
 isNaN() == isNaN(Number()); // 거짓, isNaN() == true 및 Number() == 0 때문에
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

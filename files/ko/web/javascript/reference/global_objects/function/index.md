@@ -121,7 +121,7 @@ console.log(f2()); // 20
 
 위 코드는 브라우저에서는 정상 동작하지만, {{glossary("Node.js")}}에서는 `x`를 찾을 수 없어, `f1()`이 `ReferenceError`를 생성합니다. 이는 Node.js의 최상위 스크립트 범위가 전역이 아닌 모듈이므로, `x`도 모듈 범위에 종속되기 때문입니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

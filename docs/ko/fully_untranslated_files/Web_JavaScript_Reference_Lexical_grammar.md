@@ -510,7 +510,7 @@ See also [template strings](/ko/docs/Web/JavaScript/Reference/template_strings) 
 
 `string text ${expression} string text`;
 
-tag `string text ${expression} string text`;
+tag`string text ${expression} string text`;
 ```
 
 ## 자동 세미콜론 삽입
