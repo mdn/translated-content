@@ -214,7 +214,7 @@ const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // NaN의 바이트 표현을 가져옵니다.
 const n = f2b(NaN);
-// NaN에 중요하지 않은 부호 비트인 첫 번째 비트를 변경합니다. 
+// NaN에 중요하지 않은 부호 비트인 첫 번째 비트를 변경합니다.
 n[0] = 1;
 const nan2 = b2f(n);
 console.log(nan2); // NaN
