@@ -11,7 +11,7 @@ on:
 
 jobs:
   check_redirects:
-    # do not run on forks
+    # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 

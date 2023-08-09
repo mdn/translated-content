@@ -1,6 +1,7 @@
 ---
 title: Ejemplos ejecutables
 slug: conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
+original_slug: MDN/Structures/Live_samples
 ---
 
 {{MDNSidebar}}

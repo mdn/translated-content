@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ## 구문
 
 ```js
-str.toUpperCase()
+str.toUpperCase();
 ```
 
 ### 반환 값
@@ -33,7 +33,7 @@ str.toUpperCase()
 ### 기본 사용법
 
 ```js
-console.log('alphabet'.toUpperCase()); // 'ALPHABET'
+console.log("alphabet".toUpperCase()); // 'ALPHABET'
 ```
 
 ### 문자열이 아닌 `this`의 문자열 변환
@@ -43,8 +43,8 @@ console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 ```js
 const a = String.prototype.toUpperCase.call({
   toString: function toString() {
-    return 'abcdef';
-  }
+    return "abcdef";
+  },
 });
 
 const b = String.prototype.toUpperCase.call(true);

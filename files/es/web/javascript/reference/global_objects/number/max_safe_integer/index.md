@@ -24,8 +24,8 @@ Debido a que `MAX_SAFE_INTEGER` es una propiedad estática de {{jsxref("Number")
 ## Ejemplos
 
 ```js
-Number.MAX_SAFE_INTEGER // 9007199254740991
-Math.pow(2, 53) - 1     // 9007199254740991
+Number.MAX_SAFE_INTEGER; // 9007199254740991
+Math.pow(2, 53) - 1; // 9007199254740991
 ```
 
 ## Especificaciones

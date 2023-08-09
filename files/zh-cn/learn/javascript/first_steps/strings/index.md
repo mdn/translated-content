@@ -28,10 +28,10 @@ slug: Learn/JavaScript/First_steps/Strings
 
 到目前为止，我们在课程中展示的所有程序都涉及到一些字符串操作。
 
-## 字符串 — 基本知识
+## 字符串——基本知识
 
-字符串与数字的处理方式第一眼看上去十分相似，但是当您深入挖掘时，您将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
-我们在下面提供了一个 (您也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果您愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools))。
+字符串与数字的处理方式第一眼看上去十分相似，但是当你深入挖掘时，你将会看到一些显著的差异。让我们首先在一个控制台输入一些基本的行来熟悉一下。
+我们在下面提供了一个（你也可以在一个单独的选项卡或窗口中[打开这个控制台](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)，或者如果你愿意使用[浏览器开发人员控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!doctype html>
@@ -132,7 +132,7 @@ slug: Learn/JavaScript/First_steps/Strings
 </html>
 ```
 
-{{ EmbedLiveSample('字符串 — 基本知识', '100%', 300) }}
+{{ EmbedLiveSample('字符串——基本知识', '100%', 300) }}
 
 ### 创建一个字符串
 
@@ -154,7 +154,7 @@ slug: Learn/JavaScript/First_steps/Strings
    let badString = This is a test';
    ```
 
-   这些行不起作用，因为没有引号的任何文本字符串都被假定为变量名、属性名、保留字或类似。如果浏览器不能找到它，那么将会引发语法错误 (例如:"missing ; before statement")。
+   这些行不起作用，因为没有引号的任何文本字符串都被假定为变量名、属性名、保留字或类似。如果浏览器不能找到它，那么将会引发语法错误（例如：“missing ; before statement”）。
    如果浏览器能够识别字符串从哪里开始，但是不能找到字符串的结尾符，如第二行所示，那么它则会提示这样的错误 (“unterminated string literal”)。如果您写的程序目前也引发这样的错误，那么请你回过头来仔细检查你的代码，看是否漏写了引号。
 
 3. 如果您之前定义了变量字符串，下面的操作将会起作用 — 现在来试一试：

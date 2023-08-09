@@ -5,7 +5,7 @@ slug: Web/HTTP/Basics_of_HTTP/MIME_types
 
 {{HTTPSidebar}}
 
-**媒体类型**（也通常称为**多用途互联网邮件扩展**或 **MIME** 类型）是一种标准，用来表示文档、文件或字节流的性质和格式。它在 IETF 的 {{RFC(6838)}} 中进行了定义和标准化。
+**媒体类型**（也通常称为**多用途互联网邮件扩展**或 **MIME** 类型）是一种标准，用来表示文档、文件或一组数据的性质和格式。它在 IETF 的 {{RFC(6838)}} 中进行了定义和标准化。
 
 [互联网号码分配局（IANA）](https://www.iana.org/)负责跟踪所有官方 MIME 类型，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。
 
@@ -21,9 +21,11 @@ type/subtype
 
 **_类型_**代表数据类型所属的大致分类，例如 `video` 或 `text`。
 
-**_子类型_**标识了 MIME 类型所代表的指定类型的确切数据类型。
+**_子类型_**标识了 MIME 类型所代表的指定类型的确切数据类型。以 `text` 类型为例，它的子类型包括：`plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）、`calender`（iCalendar/`.ics` 文件）。
 
-例如，对于 `text` MIME 类型，子类型可能是 `plain`（纯文本）、`html`（{{Glossary("HTML")}} 源代码）或 `calendar`（iCalendar/`.ics` 文件）。每种类型都有自己的一组可能的子类型。MIME 类型总是既有类型又有子类型，绝不会只有一种或另一种。可以通过添加可选的**参数**来提供额外信息：
+每种类型都有自己的一组可能的子类型。一个 MIME 类型总是包含类型与子类型这两部分，且二者必需成对出现。
+
+有一个可选的**参数**，能够提供额外的信息：
 
 ```plain
 type/subtype;parameter=value
@@ -35,49 +37,43 @@ MIME 类型对大小写不敏感，但是传统写法都是小写。参数值可
 
 ### 类型
 
-有两种类型存在：**离散**（discrete）和**多部分**（multipart）。
+类型可分为两类：**独立的**（discrete）和**多部分的**（multipart）。独立类型代表单一文件或媒介，比如一段文字、一个音乐文件、一个视频文件等。而多部份类型，可以代表由多个部件组合成的文档，其中每个部分都可能有各自的 MIME 类型；此外，也可以代表多个文件被封装在单次事务中一同发送。多部分 MIME 类型的一个例子是，在电子邮件中附加多个文件。
 
-离散类型是代表单一文件或介质的类型，如单一文本、音乐文件或视频。
+#### 独立类型
 
-多部分类型表示由多个部分组成的文档，其中每个部分可能都有自己独立的 MIME 类型；或者，多部分类型可以封装多个文件，在一个事务中一起发送。
-
-例如，多部分 MIME 类型用于在电子邮件中附加多个文件。
-
-#### 离散类型
-
-IANA 目前注册的离散类型如下：
+IANA 目前注册的独立类型如下：
 
 - `application`
-  - : 不明确属于其他类型的任何二进制数据；要么是将以某种方式执行或解释的数据，要么是需要特定应用程序或应用程序类别才能使用的二进制数据。通用二进制数据（或真实类型未知的二进制数据）是 `application/octet-stream`。其他常用的示例包含 `application/pdf`、`application/pkcs8` 和 `application/zip`。（[查看 IANA 上 application 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#application)）
+  - : 不明确属于其他类型之一的任何二进制数据；要么是将以某种方式执行或解释的数据，要么是需要借助某个或某类特定应用程序来使用的二进制数据。通用二进制数据（或真实类型未知的二进制数据）是 `application/octet-stream`。其他常用的示例包含 `application/pdf`、`application/pkcs8` 和 `application/zip`。（[查看 IANA 上 application 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#application)）
 - `audio`
   - : 音频或音乐数据。常见的示例如 `audio/mpeg`、`audio/vorbis`。（[查看 IANA 上 audio 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)）
 - `example`
-  - : 保留在演示如何使用 MIME 类型的示例中作为占位符使用。不应用于除示例代码和文档以外的其他部分。`example` 也可以作为子类型。例如，在一个处理音频有关的示例中，MIME 类型 `audio/example` 可用来表示该类型是一个占位符，在现实世界中使用代码时应替换为适当的类型。
+  - : 在演示如何使用 MIME 类型的示例中用作占位符的保留类型。这一类型永远不应在示例代码或文档外使用。`example` 也可以作为子类型。例如，在一个处理音频有关的示例中，MIME 类型 `audio/example` 表示该类型是一个占位符，且在实际使用这段代码时，此处应当被替换成适当的类型。
 - `font`
-  - : 字体/字型数据。常见的示例如 `font/woff`、`font/ttf` 和 `font/otf`。[查看 IANA 上 font 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
+  - : 字体/字型数据。常见的示例如 `font/woff`、`font/ttf` 和 `font/otf`。（[查看 IANA 上 font 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#font)）
 - `image`
   - : 图像或图形数据，包括位图和矢量静态图像，以及静态图像格式的动画版本，如 {{Glossary("GIF")}} 动画或 APNG。常见的例子有 `image/jpeg`、`image/png` 和 `image/svg+xml`。（[查看 IANA 上 image 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#image)）
 - `model`
   - : 三维物体或场景的模型数据。示例包含 `model/3mf` 和 `model/vrml`。（[查看 IANA 上 model 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#model)）
 - `text`
-  - : 纯文本数据，包括任何人类可读内容、源代码或文本数据（如逗号分隔值（CSV）格式的数据）。示例包含：`text/plain`、`text/csv` 和 `text/html`。（[查看 IANA 上 text 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)）
+  - : 纯文本数据，包括任何人类可读内容、源代码或文本数据——如逗号分隔值（comma-separated value，即 CSV）格式的数据。示例包含：`text/plain`、`text/csv` 和 `text/html`。（[查看 IANA 上 text 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#text)）
 - `video`
   - : 视频数据或文件，例如 MP4 电影（`video/mp4`）。（[查看 IANA 上 video 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#video)）
 
-对于那些没有特定子类型的文本文档，应使用 `text/plain`。类似的，二进制文件没有特定或已知的子类型，应使用 `application/octet-stream`。
+对于那些没有明确子类型的文本文档，应使用 `text/plain`。类似的，没有明确子类型或子类型未知的二进制文件，应使用 `application/octet-stream`。
 
 ### 多部分类型
 
-**多部分**类型表示被分割成多个部分的文件类型。它们也可用于表示属于同一事务的多个独立文件（尤其是在电子邮件中）。它们代表一个**复合文档**。
+**多部分**类型指的是一类可分成不同部分的文件，其各部分通常是不同的 MIME 类型；也可用于——尤其在电子邮件中——表示属于同一事务的多个独立文件。它们代表一个**复合文档**。
 
-除了在 [HTML 表单](/zh-CN/docs/Learn/Forms)的 {{HTTPMethod("POST")}} 方法中使用的 `multipart/form-data`，以及与 {{HTTPStatus("206")}} `Partial Content` 状态码一起使用的 `multipart/byteranges` 来发送部分文档以外，HTTP 并不以特殊方式处理多部分文档：信息会被传输到浏览器（如果浏览器不知道如何显示文档，很可能会显示一个“另存为”窗口）。
+HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果浏览器不知道如何显示文档，很可能会显示一个“另存为”窗口）。除了几个例外，在 [HTML 表单](/zh-CN/docs/Learn/Forms)的 {{HTTPMethod("POST")}} 方法中使用的 `multipart/form-data`，以及用来发送部分文档，与 {{HTTPStatus("206")}} `Partial Content` 一同使用的 `multipart/byteranges`。
 
 有两种多部分类型：
 
 - `message`
   - : 封装其他信息的信息。例如，这可以用来表示将转发信息作为其数据一部分的电子邮件，或将超大信息分块发送，就像发送多条信息一样。例如，`message/rfc822`（用于转发或回复信息的引用）和 `message/partial`（允许将大段信息自动拆分成小段，由收件人重新组装）是两个常见的例子。（[查看 IANA 上 message 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#message)）
 - `multipart`
-  - : 由多个组件组成的数据，这些组件可能各自具有不同的 MIME 类型。例如，`multipart/form-data`（用于使用 {{domxref("FormData")}} API 生成的数据）和 `multipart/byteranges`（在 {{RFC(7233,"", "5.4.1")}} 中定义，并与 {{Glossary("HTTP")}} 的 {{HTTPStatus(206)}} 状态码一起使用）。当获取的数据仅为部分内容（如使用 {{HTTPHeader("Range")}} 标头传输的内容）时，将返回“部分内容（Partial Content）”响应。（[查看 IANA 上 multipart 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)）
+  - : 由多个组件组成的数据，这些组件可能各自具有不同的 MIME 类型。例如，`multipart/form-data`（用于使用 {{domxref("FormData")}} API 生成的数据）和 `multipart/byteranges`（定义于 {{RFC(7233,"", "5.4.1")}}，当获取到的数据仅为部分内容时——如使用 {{HTTPHeader("Range")}} 标头传输的内容——与返回的 {{Glossary("HTTP")}} 响应 {{HTTPStatus(206)}} “Partial Content”组合使用）。（[查看 IANA 上 multipart 类型的注册表](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)）
 
 ## 对 Web 开发者至关重要的 MIME 类型
 
@@ -151,9 +147,9 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 我们的[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)提供了 web 浏览器通常支持的文件类型列表，包括其特殊用途、缺点、兼容性信息以及其他详细信息。
 
-[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。
+[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。
 
-在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。可选的 [codec 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)可添加到 MIME 类型中，以进一步指定要使用的编解码器和用于媒体编码的选项，如编解码器配置文件、级别或其他此类信息。
+音频和视频文件的 MIME 类型，通常指的是其容器格式（或者说文件类型）。添加可选的 [codec 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)到 MIME 类型中，能进一步指出要使用的编解码器和编码媒体时曾用到的选项，如编解码器配置文件、级别或其他此类信息。
 
 下面列出了网络内容最常用的 MIME 类型。不过，这并不是一份包含所有可用类型的完整列表。请参阅[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)以查看完整的列表。
 
@@ -267,7 +263,7 @@ Content-Range: bytes 300-400/1270
 
 ## 设置正确的 MIME 类型的重要性
 
-很多 web 服务器使用默认的 `application/octet-stream` 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，导致用户必须存储到本地以使用。
+很多 web 服务器使用默认的 `application/octet-stream` 来发送未知类型。出于一些安全原因，对于这些资源浏览器不允许设置一些自定义默认操作，强制用户必须存储到本地以使用。
 
 常见的导致服务器配置错误的文件类型如下所示：
 

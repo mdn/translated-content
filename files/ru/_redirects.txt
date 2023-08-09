@@ -527,6 +527,7 @@
 /ru/docs/Web/API/WebRTC_API/adapter.js	/ru/docs/orphaned/Web/API/WebRTC_API/adapter.js
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
+/ru/docs/Web/API/Window/DOMContentLoaded_event	/ru/docs/conflicting/Web/API/Document/DOMContentLoaded_event
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
 /ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
@@ -658,7 +659,7 @@
 /ru/docs/Web/CSS/Тихий	/ru/docs/Web/CSS/Comments
 /ru/docs/Web/CSS/Указанное_значение	/ru/docs/Web/CSS/specified_value
 /ru/docs/Web/CSS/размер	/ru/docs/Web/CSS/length
-/ru/docs/Web/Events/DOMContentLoaded	/ru/docs/Web/API/Window/DOMContentLoaded_event
+/ru/docs/Web/Events/DOMContentLoaded	/ru/docs/conflicting/Web/API/Document/DOMContentLoaded_event
 /ru/docs/Web/Events/abort_(dom_abort_api)	/ru/docs/Web/API/AbortSignal/abort_event
 /ru/docs/Web/Events/blur	/ru/docs/Web/API/Element/blur_event
 /ru/docs/Web/Events/deviceorientation	/ru/docs/Web/API/Window/deviceorientation_event

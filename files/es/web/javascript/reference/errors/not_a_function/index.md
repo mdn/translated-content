@@ -55,7 +55,7 @@ Puede que el método que queramos usar no esté implementado en el tipo de objet
 ```js example-bad
 var obj = { a: 13, b: 37, c: 42 };
 
-obj.map(function(num) {
+obj.map(function (num) {
   return num * 2;
 });
 
@@ -67,7 +67,7 @@ Como obj es un diccionario (parejas clave/valor), no tiene método map y se prod
 ```js example-good
 var numeros = [1, 4, 9];
 
-numeros.map(function(num) {
+numeros.map(function (num) {
   return num * 2;
 });
 
@@ -80,17 +80,16 @@ A veces, al hacer una clase, puede tener una propiedad y una función con el mis
 
 ```js example-bad
 var Perro = function () {
- this.edad = 11;
- this.color = "negro";
- this.nombre = "Rafael";
- return this;
-}
+  this.edad = 11;
+  this.color = "negro";
+  this.nombre = "Rafael";
+  return this;
+};
 
-Perro.prototype.nombre = function(nombre) {
- this.nombre = nombre;
- return this;
-}
-
+Perro.prototype.nombre = function (nombre) {
+  this.nombre = nombre;
+  return this;
+};
 
 var miNuevoPerro = new Perro();
 miNuevoPerro.nombre("Lilly"); //Uncaught TypeError: myNewDog.name is not a function
@@ -100,17 +99,16 @@ Utilice un nombre de propiedad diferente en su lugar:
 
 ```js example-good
 var Perro = function () {
- this.edad = 11;
- this.color = "negro";
- this.nombrePerro = "Rafael"; //Usando this.nombrePerro en vez de .nombre
- return this;
-}
+  this.edad = 11;
+  this.color = "negro";
+  this.nombrePerro = "Rafael"; //Usando this.nombrePerro en vez de .nombre
+  return this;
+};
 
-Perro.prototype.nombre = function(nombre) {
- this.nombrePerro = nombre;
- return this;
-}
-
+Perro.prototype.nombre = function (nombre) {
+  this.nombrePerro = nombre;
+  return this;
+};
 
 var miNuevoPerro = new Perro();
 miNuevoPerro.nombre("Lilly"); //Perro { edad: 11, color: 'negro', nombrePerro: 'Lilly' }

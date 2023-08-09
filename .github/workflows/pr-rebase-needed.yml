@@ -7,7 +7,7 @@ on:
 
 jobs:
   label-rebase-needed:
-    # do not run on forks
+    # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     uses: mdn/workflows/.github/workflows/pr-rebase-needed.yml@main
     with:

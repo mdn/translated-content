@@ -23,25 +23,22 @@ Esse elemento somente inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
 ### Exemplo 2: Palavra
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                             | Status                   | Comentário |
+| ----------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-ruby-element', '&lt;ruby&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
 
 ## Compatibilidade com navegadores
 

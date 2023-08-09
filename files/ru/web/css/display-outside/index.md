@@ -32,7 +32,6 @@ slug: Web/CSS/display-outside
 ### `HTML`
 
 ```html
-
 <span>span 1</span>
 <span>span 2</span>
 ```
@@ -40,10 +39,9 @@ slug: Web/CSS/display-outside
 ### `CSS`
 
 ```css
-
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
