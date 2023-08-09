@@ -1,6 +1,8 @@
 ---
 title: HTML에서 오디오와 비디오 사용하기
 slug: Web/Media/HTML_media
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
