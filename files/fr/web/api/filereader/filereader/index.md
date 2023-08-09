@@ -1,7 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-translation_of: Web/API/FileReader/FileReader
 ---
 
 **`FileReader()`** est un constructeur qui permet de créer un nouvel objet FileReader.

@@ -1,14 +1,8 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -32,7 +26,7 @@ str.valueOf()
 ### Пример: использование метода `valueOf()`
 
 ```js
-var x = new String('Привет, мир');
+var x = new String("Привет, мир");
 console.log(x.valueOf()); // Отобразит 'Привет, мир'
 ```
 

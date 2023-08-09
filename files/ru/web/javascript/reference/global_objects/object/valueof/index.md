@@ -1,13 +1,8 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка
@@ -39,7 +34,9 @@ JavaScript вызывает метод `valueOf` для преобразован
 Предположим, у вас есть объект типа `myNumberType` и вы хотите создать для него метод `valueOf`. Следующий код присваивает определённую пользователем функцию методу `valueOf` объекта:
 
 ```js
-myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+myNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 Начиная с этого места в вашем коде, в любое время, когда объект типа `myNumberType` будет использоваться в контексте, где он должен быть представлен примитивным значением, JavaScript будет автоматически вызывать функцию, определённую в этом коде.
@@ -47,7 +44,7 @@ myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 Метод объекта `valueOf` обычно вызывается движком JavaScript, но вы можете вызвать его и самостоятельно, как показано ниже:
 
 ```js
-myNumber.valueOf()
+myNumber.valueOf();
 ```
 
 > **Примечание:** объекты в строковом контексте преобразуются с помощью метода {{jsxref("Object.toString", "toString()")}}, что отличается от объектов {{jsxref("Global_Objects/String", "String")}}, преобразующихся в строковые примитивы методом `valueOf`. Все объекты имеют преобразование в строку вида "`[object type]`". Но многие объекты не преобразуются в число, логическое значение или функцию.
@@ -58,7 +55,7 @@ myNumber.valueOf()
 
 ```js
 var o = new Object();
-myVar = o.valueOf();      // [object Object]
+myVar = o.valueOf(); // [object Object]
 ```
 
 ## Спецификации

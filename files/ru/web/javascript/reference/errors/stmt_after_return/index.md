@@ -1,12 +1,6 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-tags:
-  - JavaScript
-  - Return
-  - Warning
-  - Предупреждения
-translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
 
 {{jsSidebar("Errors")}}
@@ -51,13 +45,13 @@ Warning: unreachable code after return statement (Firefox)
 function f() {
   var x = 3;
   x += 4;
-  return x;   //return завершает функцию немедленно,
-  x -= 3;     //поэтому эта строка никогда не запустится; она недоступна
+  return x; //return завершает функцию немедленно,
+  x -= 3; //поэтому эта строка никогда не запустится; она недоступна
 }
 
 function f() {
-  return     //эта строка трактуется как завершение функции оператором `return;`,
-    3 + 4;   //поэтому происходит выход из функции, и эта строка не выполнится
+  return; //эта строка трактуется как завершение функции оператором `return;`,
+  3 + 4; //поэтому происходит выход из функции, и эта строка не выполнится
 }
 ```
 
@@ -68,11 +62,11 @@ function f() {
   var x = 3;
   x += 4;
   x -= 3;
-  return x;  //OK: return находится после всех остальных выражений
+  return x; //OK: return находится после всех остальных выражений
 }
 
 function f() {
-  return 3 + 4  //OK: return без точки с запятой и вычисляемое выражение находятся на одной строке
+  return 3 + 4; //OK: return без точки с запятой и вычисляемое выражение находятся на одной строке
 }
 ```
 

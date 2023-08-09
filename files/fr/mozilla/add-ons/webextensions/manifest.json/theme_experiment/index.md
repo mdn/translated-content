@@ -1,7 +1,6 @@
 ---
 title: theme expérimentation
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 ---
 
 {{AddonSidebar}}

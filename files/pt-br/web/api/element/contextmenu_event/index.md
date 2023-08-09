@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -20,17 +19,25 @@ window.oncontextmenu = funcRef;
 Os exemplos abaixo irão desabilitar o clique com botão direito na página:
 
 ```js
-document.oncontextmenu = function () { // Usa o document ao invés de window para compatibilidade com o IE8
-   return false;
+document.oncontextmenu = function () {
+  // Usa o document ao invés de window para compatibilidade com o IE8
+  return false;
 };
 
-window.addEventListener('contextmenu', function (e) { // Não compatível com IE < 9
+window.addEventListener(
+  "contextmenu",
+  function (e) {
+    // Não compatível com IE < 9
     e.preventDefault();
-}, false);
+  },
+  false,
+);
 ```
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

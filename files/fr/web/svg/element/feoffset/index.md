@@ -1,7 +1,6 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
-translation_of: Web/SVG/Element/feOffset
 ---
 
 {{SVGRef}}

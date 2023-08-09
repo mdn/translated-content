@@ -11,8 +11,12 @@ slug: Web/CSS/@counter-style/additive-symbols
 
 ```css
 additive-symbols: 3 "0";
-additive-symbols: 3 "0", 2 "\2E\20";
-additive-symbols: 3 "0", 2 url(symbol.png);
+additive-symbols:
+  3 "0",
+  2 "\2E\20";
+additive-symbols:
+  3 "0",
+  2 url(symbol.png);
 ```
 
 `system` 記述子が `cyclic`, `numeric`, `alphabetic`, `symbolic`, `fixed` の場合は、 {{cssxref('symbols')}} 記述子を `additive-symbols` の代わりに使用してください。
@@ -50,7 +54,10 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols:
+    V 5,
+    IV 4,
+    I 1;
 }
 .list {
   list-style: additive-symbols-example;

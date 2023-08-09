@@ -1,17 +1,6 @@
 ---
 title: "Руководство часть 5: Создание домашней страницы"
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - django
-  - Для начинающих
-  - Изучение
-  - Кодирование
-  - Отображения
-  - Руководство
-  - Серверная сторона
-  - Статья
-  - Шаблоны
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}

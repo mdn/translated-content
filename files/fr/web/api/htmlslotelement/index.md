@@ -1,7 +1,6 @@
 ---
 title: HTMLContentElement.getDistributedNodes()
 slug: Web/API/HTMLSlotElement
-translation_of: Web/API/HTMLContentElement/getDistributedNodes
 ---
 
 {{ APIRef("Web Components") }}

@@ -1,7 +1,6 @@
 ---
 title: Notification.onclose
 slug: Web/API/Notification/close_event
-translation_of: Web/API/Notification/onclose
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

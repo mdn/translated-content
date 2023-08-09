@@ -1,7 +1,6 @@
 ---
 title: Cours normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
-translation_of: Learn/CSS/CSS_layout/Normal_Flow
 ---
 
 {{LearnSidebar}}

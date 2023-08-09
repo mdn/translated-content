@@ -1,14 +1,6 @@
 ---
 title: Производительность CSS и JavaScript анимации
 slug: Web/Performance/CSS_JavaScript_animation_performance
-tags:
-  - CSS
-  - FPS
-  - Transitions
-  - requestAnimationFrame
-  - Анимация
-  - Производительность
-translation_of: Web/Performance/CSS_JavaScript_animation_performance
 ---
 
 Анимация является критичным инструментом для улучшения пользовательского опыта во многих приложениях. Существует много путей создания анимации в web, например, основанные на CSS-свойствах {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} или на JavaScript (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). В этой статье мы проанализируем производительность CSS и JavaScript анимаций и сравним их.

@@ -2,6 +2,7 @@
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AnalyserNode")}} 인터페이스의 **`fftSize`** 속성은 unsigned long 값이고 주파수 영역 데이터를 얻기 위해 [고속 푸리에 변환](https://en.wikipedia.org/wiki/Fast_Fourier_transform)(FFT)을 수행할 때 사용될 샘플에서의 window 사이즈를 나타냅니다.

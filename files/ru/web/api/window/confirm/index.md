@@ -1,8 +1,8 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 Метод **`Window.confirm()`** отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.
@@ -38,11 +38,9 @@ if (window.confirm("Do you really want to leave?")) {
 
 Аргумент является опциональным и необязательным согласно спецификации.
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-confirm', 'confirm()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -1,7 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
 
 {{JSRef}}

@@ -1,12 +1,6 @@
 ---
 title: CSS Basic User Interface
 slug: Web/CSS/CSS_basic_user_interface
-tags:
-  - CSS
-  - CSS Basic User Interface
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
 
 {{CSSRef}}
@@ -41,8 +35,8 @@ translation_of: Web/CSS/CSS_Basic_User_Interface
 
 ## Specifications
 
-| Specification                                | Status                               | Comment             |
-| -------------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                     | Status                     | Comment             |
+| --------------------------------- | -------------------------- | ------------------- |
 | {{SpecName("CSS4 Basic UI")}}     | {{Spec2("CSS4 Basic UI")}} |                     |
 | {{SpecName("CSS3 Basic UI")}}     | {{Spec2("CSS3 Basic UI")}} |                     |
-| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}             | Initial definition. |
+| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}        | Initial definition. |

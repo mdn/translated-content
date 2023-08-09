@@ -28,7 +28,7 @@ Los errores sobre referencias a propiedades no definidas ocurren únicamente en 
 En este caso, la propiedad `bar` no está definida, produciéndose un `ReferenceError`.
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
@@ -39,18 +39,18 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 Para evitar este error, es necesario ya sea definir la propiedad `bar` en el objeto o verificar su existencia antes de leerla; una manera de hacerlo es usar el método {{jsxref("Object.prototype.hasOwnProperty()")}}, como en el siguiente ejemplo:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = {};
 
 // Definir la propiedad bar
 
-foo.bar = 'luna';
+foo.bar = "luna";
 console.log(foo.bar); // "luna"
 
 // Prueba para asegurarse que bar existe antes de leerla
 
-if (foo.hasOwnProperty('bar')) {
+if (foo.hasOwnProperty("bar")) {
   console.log(foo.bar);
 }
 ```

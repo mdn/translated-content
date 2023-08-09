@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
-translation_of: Web/API/IDBObjectStore/getKey
 ---
 
 {{APIRef("IndexedDB")}}

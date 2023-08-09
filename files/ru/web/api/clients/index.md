@@ -1,20 +1,6 @@
 ---
 title: Clients
 slug: Web/API/Clients
-tags:
-  - API
-  - Clients
-  - Experimental
-  - Expérimental(2)
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-  - Workers
-translation_of: Web/API/Clients
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -35,9 +21,9 @@ translation_of: Web/API/Clients
 ## Примеры
 
 ```js
-clients.matchAll(options).then(function(clients) {
-  for (i = 0 ; i < clients.length ; i++) {
-    if (clients[i] === 'index.html') {
+clients.matchAll(options).then(function (clients) {
+  for (i = 0; i < clients.length; i++) {
+    if (clients[i] === "index.html") {
       clients.openWindow(clients[i]);
       // или сделать что-то другое, с учётом подошедшего клиента
     }

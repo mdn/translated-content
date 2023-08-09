@@ -1,7 +1,6 @@
 ---
 title: Modèle de mise en forme visuelle
 slug: Web/CSS/Visual_formatting_model
-translation_of: Web/CSS/Visual_formatting_model
 ---
 
 {{CSSRef}}

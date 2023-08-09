@@ -18,7 +18,7 @@ l10n:
 ## 構文
 
 ```js
-profile(profileName)
+profile(profileName);
 ```
 
 ### 引数

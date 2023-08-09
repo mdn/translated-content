@@ -1,13 +1,6 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Заголовки запроса
-  - Условные запросы
-translation_of: Web/HTTP/Headers/If-Modified-Since
-original_slug: Web/HTTP/Заголовки/If-Modified-Since
 ---
 
 {{HTTPSidebar}}
@@ -64,8 +57,8 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Спецификации
 
-| Спецификация                                             | Название                                                     |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
+| Спецификация                                | Название                                                     |
+| ------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Modified-Since", "3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Совместимость с браузером

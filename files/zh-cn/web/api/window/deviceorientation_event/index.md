@@ -1,5 +1,5 @@
 ---
-title: "Window：deviceorientation 事件"
+title: Window：deviceorientation 事件
 slug: Web/API/Window/deviceorientation_event
 ---
 

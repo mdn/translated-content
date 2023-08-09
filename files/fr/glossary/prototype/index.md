@@ -1,7 +1,6 @@
 ---
 title: Prototype
 slug: Glossary/Prototype
-translation_of: Glossary/Prototype
 ---
 
 Un prototype est un modèle en cours de développement qui montre l'apparence et le comportement d'une application ou d'un produit en cours de conception..

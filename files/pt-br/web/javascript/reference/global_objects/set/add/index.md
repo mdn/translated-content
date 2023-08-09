@@ -38,9 +38,9 @@ console.log(mySet);
 
 ## Especificações
 
-| Especificações                                                                               | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificações                                                         | Status               | Comentário         |
+| ---------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-set.prototype.add', 'Set.prototype.add')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatilidade de Navegadores (Browser)

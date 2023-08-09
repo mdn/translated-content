@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -28,7 +20,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 ## Синтаксис
 
 ```js
-var shape = {}, circle = new Circle();
+var shape = {},
+  circle = new Circle();
 
 // Установка прототипа объекта
 shape.__proto__ = circle;
@@ -60,8 +53,12 @@ console.log(noProto.__proto__); // 17
 console.log(Object.getPrototypeOf(noProto)); // null
 
 var protoHidden = {};
-Object.defineProperty(protoHidden, '__proto__',
-                      { value: 42, writable: true, configurable: true, enumerable: true });
+Object.defineProperty(protoHidden, "__proto__", {
+  value: 42,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 console.log(protoHidden.__proto__); // 42
 console.log(Object.getPrototypeOf(protoHidden) === Object.prototype); // true
@@ -111,9 +108,16 @@ obj.__proto__ = {}; // выкинет TypeError
 ```js
 var b = {};
 
-Object.prototype.__proto__ =
-  Object.create(null, // [[Prototype]]
-                { hi: { value: function() { alert('hi'); } } });
+Object.prototype.__proto__ = Object.create(
+  null, // [[Prototype]]
+  {
+    hi: {
+      value: function () {
+        alert("hi");
+      },
+    },
+  },
+);
 
 b.hi();
 ```

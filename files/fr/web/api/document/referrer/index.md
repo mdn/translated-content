@@ -1,7 +1,6 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-translation_of: Web/API/Document/referrer
 ---
 
 {{APIRef}}

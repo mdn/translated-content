@@ -1,7 +1,6 @@
 ---
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
-translation_of: Web/HTTP/Methods/DELETE
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer.copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
-translation_of: Web/API/AudioBuffer/copyToChannel
 ---
 
 {{ APIRef("Web Audio API") }}

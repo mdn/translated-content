@@ -1,7 +1,6 @@
 ---
 title: scroll-margin-top
 slug: Web/CSS/scroll-margin-top
-translation_of: Web/CSS/scroll-margin-top
 ---
 
 {{CSSRef}}

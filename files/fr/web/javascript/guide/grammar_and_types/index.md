@@ -1,7 +1,6 @@
 ---
 title: Types et grammaire
 slug: Web/JavaScript/Guide/Grammar_and_types
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs")}}

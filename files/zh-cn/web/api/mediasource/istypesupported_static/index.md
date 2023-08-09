@@ -1,7 +1,6 @@
 ---
 title: MediaSource.isTypeSupported()
 slug: Web/API/MediaSource/isTypeSupported_static
-original_slug: Web/API/MediaSource/isTypeSupported
 ---
 
 {{APIRef("Media Source Extensions")}}

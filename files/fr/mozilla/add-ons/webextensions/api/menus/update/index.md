@@ -1,7 +1,6 @@
 ---
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Mise à jour des applications Web pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 ---
 
 {{FirefoxSidebar}}

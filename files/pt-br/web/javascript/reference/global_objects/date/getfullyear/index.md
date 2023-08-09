@@ -38,11 +38,11 @@ var year = today.getFullYear();
 
 ## Especificações
 
-| **Especificação**                                                                                                | Status                   | **Comentário**                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                          | Standard                 | Definição inicial. Implementado em JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.10', 'Date.prototype.getFullYear')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}} | {{Spec2('ES6')}}     |                                                    |
+| **Especificação**                                                                    | Status             | **Comentário**                                     |
+| ------------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| ECMAScript 1st Edition.                                                              | Standard           | Definição inicial. Implementado em JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.10', 'Date.prototype.getFullYear')}}                | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

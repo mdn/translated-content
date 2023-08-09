@@ -1,7 +1,6 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
-translation_of: Web/API/Notification/renotify
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

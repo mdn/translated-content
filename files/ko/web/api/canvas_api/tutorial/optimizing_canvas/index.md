@@ -1,7 +1,6 @@
 ---
 title: 캔버스 최적화
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-original_slug: Web/HTML/Canvas/Tutorial/Optimizing_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
@@ -17,11 +16,11 @@ original_slug: Web/HTML/Canvas/Tutorial/Optimizing_canvas
 만약 당신이 캔버스에 애니메이션 프레임을 그리면서 반복적인 작업이 발견된다면, 눈에 보이지 않는 숨겨진 캔버스 요소를 새로 만들고 그 캔버스에 미리 그려 넣는 방법을 고려하세요. 그렇게 하면 필요한 순간에 숨긴 캔버스에 그려진 이미지를 다시 주 캔버스 이미지에 그려넣어, 불필요한 렌더링 반복 작업을 줄여 성능 향상을 꾀할 수 있습니다.
 
 ```js
-myCanvas.offscreenCanvas = document.createElement('canvas');
+myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext('2d').drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
 ```
 
 ### 부동 소수점 좌표를 피하고 대신 정수를 사용하라
@@ -59,10 +58,18 @@ ctx.drawImage(myImage, 0.3, 0.5);
     border: 2px solid black;
   }
 
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3; }
-  #game-layer { z-index: 2; }
-  #background-layer { z-index: 1; }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -81,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### 투명도를 사용하지 마라
@@ -90,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 응용 프로그램이 캔버스를 사용하고 투명 배경을 필요로하지 않는 경우 [`HTMLCanvasElement.getContext()`](/ko/docs/Web/API/HTMLCanvasElement/getContext)를 사용하여 드로잉 컨텍스트를 만들 때 alpha 옵션을 false로 설정합니다. 이 정보는 렌더링을 최적화하기 위해 브라우저에서 내부적으로 사용할 수 있습니다.
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### 추가 팁들

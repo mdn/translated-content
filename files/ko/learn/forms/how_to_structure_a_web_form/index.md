@@ -1,166 +1,54 @@
 ---
-title: HTML_폼_구성_방법
+title: HTML 폼 구성 방법
 slug: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/HTML_폼_구성_방법
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.
 
-HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고 있는 요소중 하나이다. 폼 요소와 속성을 잘 혼합하면 모든 형태의 기본적인 폼을 만들 수 있다. 즉 몇몇 사람들이 HTML폼이 단순하고 매우 거칠다는 것을 발견했다는 것에 주목할 가치가 있다. [XForms](/ko/docs/Archive/Web/XForms)같은 풍부한 기술이 있다는 것은 사실이지만 불행하게도 모든 브라우저에서 폼의 종류를 널리 구현되지 않았다. 왜냐하면 대부분 자바스크립트에 의존하여 HTML폼들을 다루기 떄문이다.이 문서에서는 HTML 폼 요소들을 어떻게 사용해야 하는지 자세하게 설명 할 것이다. 만약 사용자 폼 위젯 만들기에 대하여 자세한 내용을 알고 싶다면 다음 문서를 참조하시오. [How to build custom form widgets](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
-## 글로벌 구조
-
-### `<form>` 요소
-
-{{HTMLElement("form")}} 요소는 공식적으로 폼을 정의하는 요소로 이 요소의 속성으로 폼의 작동하는 방식을 정의 할 수있다. HTML폼을 생성할떄마다 반드시 이 요소로 시작을 해야한다. 많은 보조 기술이나 브라우저 플러그인이 {{HTMLElement("form")}} 요소를 발견하고 쉽게 사용 할 수 있게 특별한 후크를 구현 할 수 있다.
-
-우리는 저번 문서에서 이미 이 내용을 다루었다.
-
-> **참고:** **주의:**폼을 다른 폼으로 둘러싸는 것은 엄격하게 제한되어 있다. 만약 그렇게 하면 사용자가 사용하는 브라우저에 따라 예측할 수 없는 방식으로 작동하게 된다.
-
-언제든지 폼위젯을 {{HTMLElement("form")}} 요소 바깥에서 사용할 수 있다. 하지만 그렇게 사용한다면, 그 폼위젯은 어떠한 폼과도 관련이 없다. 폼 위젯들은 폼 바깥에서 사용될 수 있지만, 그 위젯들은 스스로 아무것도 하지 않을 것이기 때문에 당신이 그 위젯들 전용 프로세스를 만들어주어야 한다. 당신은 자바스크립트로 그 동작을 정의해주어야 한다.
-
-> **참고:** **주의:**HTML5에서 HTML 폼 요소안의 폼 속성이 지원된다. 폼 속성은 {{HTMLElement("form")}} 바깥에 있는 폼요소라도 폼과 명시적으로 연결한다. 불행하게도 지금 시점에 이 기능은 다양한 브라우저에서 안정적으로 구현되지 않아서 신뢰할 수 없다.
-
-{{HTMLElement("form")}} 요소는 다음과 같은 속성을 가지고 모든 속성이 필수가 아닌 선택적이다.
-
-**{{HTMLElement("form")}} 요소 속성**
+기본 사항을 다룬 후에는 이제 폼의 다른 부분에 구조와 의미를 부여하는 데 사용되는 요소들을 좀 더 자세히 살펴보겠습니다.
 
 <table>
-  <thead>
-    <tr>
-      <th scope="col">속성 이름</th>
-      <th scope="col">기본값</th>
-      <th scope="col">설명</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="white-space: nowrap">
-        {{htmlattrxref("accept-charset","form")}}
-      </td>
-      <td><code>UNKNOWN</code></td>
+      <th scope="row">전제 조건:</th>
       <td>
-        서버가 받아들일 문자 인코딩의 형식을 지정한다. 기본값은 특수 문자열
-        <span
-          style="font-family: &#x27;Courier New&#x27;,&#x27;Andale Mono&#x27;,monospace; line-height: normal;"
-          >UNKNOWN</span
-        ><span style="line-height: 1.5"
-          >이고 이경우에 폼 요소 안에 있는 문서의 인코딩에 맞는
-          인코딩이다.</span
-        >
+        기본적인 컴퓨터 사용능력과 <a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML에 대한 기본적인 이해</a>.
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("action","form")}}</td>
-      <td></td>
-      <td>폼을 통해서 전송한 정보를 처리하는 웹페이지의 URL</td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("autocomplete","form")}}</td>
-      <td><code>on</code></td>
+      <th scope="row">목표:</th>
       <td>
-        이 속성은 이 폼안에 있는 위젯들의 기본값이 브라우저에 의해 자동 완성
-        하게 하는지 여부를 나타낸다. 이속성은 두가지 값중 하나를 같는다.
-        <code>on</code> 또는 <code>off</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("enctype","form")}}</td>
-      <td><code>application/x-www-form-urlencoded</code></td>
-      <td>
-        \<code>method</code> 속성이 <code>post 값으로 지정되면</code>, 서버로
-        폼을 전송하는 콘텐츠
-        <a href="http://en.wikipedia.org/wiki/Mime_type">MIME</a>의 타입을
-        지정한다.:
-        <ul>
-          <li><code>application/x-www-form-urlencoded</code></li>
-          <li>
-            <code>multipart/form-data</code>:
-            {{HTMLElement("input")}}요소의
-            <span
-              style="font-family: &#x27;Courier New&#x27;,&#x27;Andale Mono&#x27;,monospace; line-height: normal;"
-              >type</span
-            >
-            속성을 <em>file</em>로 지정한 경우 이 속성의 값을 사용한다.
-          </li>
-          <li><code>text/plain</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("method","form")}}</td>
-      <td><code>get</code></td>
-      <td>
-        <span style="line-height: 1.5"
-          >브라우저가 폼을 전송하기위해 사용하는
-          <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a>의
-          방식을 지정한다.</span
-        ><br /><span style="line-height: 1.5"
-          >이 속성은 두개의 값중 한개를 가진다.</span
-        >
-        <code>get</code> 또는 <code>post</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("name","form")}}</td>
-      <td></td>
-      <td>
-        폼의 이름이다. 이 속성값은 반드시 문서의 폼 사이에서 고유해야하며 빈
-        문자열을 지정할 수없다. 일반적으로
-        <span
-          style="font-family: &#x27;Courier New&#x27;,&#x27;Andale Mono&#x27;,monospace; line-height: normal;"
-          >id</span
-        >
-        속성으로 대신 지정할 수 있다.
-      </td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("novalidate","form")}}</td>
-      <td>(<em>false</em>)</td>
-      <td>
-        이 불리언 속성은 폼이 전송 할떄 유효성 검사를 할수 없음을 나타낸다.
-      </td>
-    </tr>
-    <tr>
-      <td>{{htmlattrxref("target","form")}}</td>
-      <td><code>_self</code></td>
-      <td>
-        폼 요청을 전송한후 응답을 어떻게 받을것인지 지정한다. 예를들어
-        {{HTMLElement("iframe")}}, tab, window를 사용 할 수 있다. 이
-        속성의 키워드로 다음과 같은 값을 사용 할 수있다.
-        <ul>
-          <li>
-            <code>_self</code>: 응답을 현재 브라우징 컨텍스트
-            ({{HTMLElement("iframe")}}, tab, window 등)에서 불러온다.
-          </li>
-          <li>
-            <code>_blank</code>: 응답을 새로운 브라우징 컨텍스트로 불러온다.
-          </li>
-          <li>
-            <code>_parent</code>: 응답을 현재의 브라우징 컨텍스트의 부모
-            브라우징 컨텍스트에서 불러온다. 만약 부모가 없다면
-            <code>_self 키워드와 똑같이 작동한다</code>.
-          </li>
-          <li>
-            <code>_top</code>: 응답을 최상휘 레벨 브라우징 컨텍스트에서
-            불러온다. 만약 최상위 컨텍스트가 없다면
-            <code>_self 키워드와 똑같이 작동한다</code>.
-          </li>
-        </ul>
+        HTML 폼을 구조화하고 의미를 부여하여 사용가능하고 접근성있는 폼을 만드는 방법을 이해합니다.
       </td>
     </tr>
   </tbody>
 </table>
 
-요소 밖에 폼 위젯들을 사용 할 수 있지만, 폼 위젯이 어떠한 폼과도 상관이 없다는 것을 유의 해야 한다.폼의 밖에서 위젯을 사용하는 것은 편리할 수 있지만 위젯들이 작동하기 위해 다른 것들을 해야 한다는 것을 의미한다. 아마 자바스크립트를 이용해서 동작을 정의 해야 할것이다.
+폼의 유연성은 폼을 [HTML](/ko/docs/Learn/HTML)의 가장 복잡한 구조 중 하나로 만듭니다. 전용 요소들과 특성들로 모든 종류의 기본적인 폼을 만들 수 있습니다. HTML 폼을 만들때 올바른 구조를 사용하게되면 사용성과 [접근성](/ko/docs/Learn/Accessibility)을 확보 할 수 있습니다.
 
-기술적으로 HTML5는 HTML 폼 요소에서 폼 속성을 설명 했다. 이것은 요소들을 실제로 {{ HTMLElement("form") }} 안에 있지 않아도 form요소로 확실하게 바인딩 하도록 해야한다. 불행하게도 모든 브라우저가 아직 이것을 충분히 지원하지 않는다.
+## \<form> 요소
 
-### `<fieldset>` 와 `<legend>` 요소
+{{HTMLElement("form")}} 요소는 폼을 형식적으로 정의하는 폼의 동작 방식을 결정하는 속성들을 포함합니다. HTML폼을 생성할떄마다 반드시 이 요소로 시작하고 모든 내용을 내부에 중첩해야 합니다. 많은 보조 기술이나 브라우저 플러그인이 {{HTMLElement("form")}} 요소를 발견하고 사용하기 쉽게 만들기 위해 특별한 기능을 제공 할 수 있습니다.
 
-{{HTMLElement("fieldset")}}요소는 같은 목적을 가진 위젯들을 편리하게 그룹화 하는 방법이다. A {{HTMLElement("fieldset")}} 요소는 라벨인 {{HTMLElement("legend")}} 요소와 같이 사용된다. {{HTMLElement("legend")}} 요소는 공식적으로 {{HTMLElement("fieldset")}} 요소를 설명하는데 사용된다. 많은 보조 기술들이 {{HTMLElement("legend")}} 요소를 {{HTMLElement("fieldset")}} 요소의 라벨로 이용하는데 사용된다. 예를 들어 [Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp), [NVDA](http://www.nvda-project.org/)같은 스크린 리더들은 각각의 위젯의 라벨을 읽기전에 legend들을 읽을 것이다.
+우리는 저번 문서에서 이미 이 내용을 다루었습니다.
 
-아래 조그만 예제가 있다.
+> **경고:** 폼을 다른 폼으로 중첩하는 것은 엄격하게 제한되어 있습니다. 그렇게 하면 사용자가 사용하는 브라우저에 따라 예측할 수 없는 방식으로 작동하므로 좋은 방법이 아닙니다.
+
+언제든지 {{HTMLElement("form")}} 요소 바깥에서 폼 컨트롤을 사용할 수 있습니다. 이럴 경우 기본적으로 컨트롤은 [`form`](/ko/docs/Web/HTML/Element/input#form) 특성을 사용하여 연결해주지 않는한 어떤 폼과도 관련이 없습니다. 이것은 컨트롤이 폼 요소 내부에 중첩되어있지 않더라도 명시적으로 컨트롤을 명시적으로 바인딩할 수 있도록 하기위해 도입됐습니다.
+
+다음으로 폼 내부의 중첩되어있는 구조요소에 대해 다루겠습니다.
+
+## \<fieldset> 와 \<legend> 요소
+
+{{HTMLElement("fieldset")}} 요소는 같은 목적을 가진 위젯들을 편리하게 그룹화 하는 방법입니다. {{HTMLElement("fieldset")}}에 레이블을 붙이려면 {{HTMLElement("fieldset")}} 태그 바로 아래에 {{HTMLElement("legend")}} 요소를 포함하면 됩니다. {{HTMLElement("legend")}}의 텍스트 컨텐츠는 {{HTMLElement("fieldset")}} 요소의 목적을 형식적으로 설명합니다.
+
+많은 보조 기술들이 {{HTMLElement("legend")}} 요소를 해당 {{HTMLElement("fieldset")}} 요소내의 각 컨트롤의 레이블의 일부인것 처럼 사용합니다. 예를 들어 [Jaws](https://www.freedomscientific.com/products/software/jaws/) 와 [NVDA](https://www.nvaccess.org/) 같은 스크린 리더는 각 컨트롤의 라벨을 읽기전에 legend를 읽을 것입니다.
+
+아래 작은 예제가 있습니다.
 
 ```html
 <form>
@@ -182,759 +70,274 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 </form>
 ```
 
-이 예제를 스크림 리더가 Fruit juice size small을 먼저 읽고 Fruit juice size medium을 읽은 다음 마지막으로 Fruit juice size large을 읽을 것이다,
+> **참고:** 예제는 여기서 찾을수 있습니다. [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
-이것은 가장 중요한것 중 하나이다. 대부분 라디오 버튼을 설정할떄 마다{{HTMLElement("fieldset")}} 요소 안에 있는지 확인해야한다. 다르게 사용하는 사례가 있지만 일반적으로 {{HTMLElement("fieldset")}} 요소는 폼을 강력하게 사용할 수 있게 해준다. 보조기술의 영향으로 {{HTMLElement("fieldset")}} 요소는 폼 접근 할수 있는 키 요소 중 하나이다. 이것을 남용하지 않는 것은 개발자 책임이다. 가능한 폼을 만들떄마다 스크린리더로 들어보면서 하는 것이 좋다. 만약 말이 이상하게 들린다면 개선 해야 한다는 신호이다.
+위 예제를 스크린 리더가 읽을때 Fruit juice size small을 먼저 읽고 Fruit juice size medium을 읽은 다음 마지막으로 Fruit juice size large을 읽을 것입니다.
 
-{{HTMLElement("fieldset")}} 요소는 다음과 같은 속성을 지정한다.
+이 예제에서의 사용 사례는 가장 중요한것 중 하나입니다. 라디오 버튼의 셋트는 항상 {{HTMLElement("fieldset")}} 요소 내부에 중첩해야 합니다. 다르게 사용하는 사례도 있으며, 흔히 {{HTMLElement("fieldset")}} 요소는 폼의 구획을 나누는데도 사용 할 수 있습니다. 이상적으로는 긴 폼을 여러 페이지에 걸쳐 나누는 것이 좋지만, 폼이 길어지고 단일 페이지에 위치해야 하는 경우, 서로 다른 관련 섹션을 각각 fieldset 내에 넣는것은 사용성을 향상 시킵니다.
 
-| 속성 이름                                            | 기본값    | 설명                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("disabled","fieldset")}} | (_false_) | 만약 이 불리언 속성이 설정되면 폼은(첫번째 {{ HTMLElement("legend") }}요소에 있는 요소는 예외이다. ) 이것에 파생된 요소를 사용하거나 편집 할 수없게된다. 그리고 마우스 클릭같은 어떠한 브라우저 이벤트들도 받지 않을것이다. 일반적으로 브라우저는 회색으로 이를 표시할 것이다. |
+보조기술에 대한 영향력으로 인해, {{HTMLElement("fieldset")}} 요소는 접근성 있는 폼을 구축하기위한 주요 요소 중 하나입니다. 그러나 이를 남용하지 않는것은 여러분의 책임입니다. 가능하다면 폼을 작성할 때마다 [스크린리더가 어떻게 해석하는지 들어보는것](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers)이 좋습니다. 스크린리더가 읽는것이 이상하게 들린다면 폼 구조를 개선해보세요.
 
-### The \<label> element
+## \<label> 요소
 
-{{HTMLElement("label")}} 요소는 HTML 폼 위젯을 정의하는 공식적인 방법이다. 이것은 접근성 있는 폼을 만드는데 가장 중요한 요소이다.
+이전 글에서 볼 수 있듯이 {{HTMLElement("label")}} 요소는 HTML 폼 위젯에 대한 레이블을 정의하는 공식적인 방법입니다. 올바르게 구현되면 스크린 리더는 폼 요소의 레이블과 관련된 지시사항을 읽어주며 시각 장애인 사용자 뿐만 아니라 시각적으로 볼 수 있는 사용자에게도 유용합니다. 이전 글에서 본 것처럼, 다음과 같은 예시를 살펴보겠습니다.
 
-{{HTMLElement("label")}} 요소는 다음과 같은 속성을 지원한다.
+```html
+<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
+```
 
-**{{HTMLElement("label")}}** 요소의 속성
+`<label>` 요소가 `<input>`요소와 `for` 속성을 통해 (`<input>` 요소의 `id` 속성을 사용) 올바르게 연결되어 있을 때 스크린 리더는 "이름, 텍스트 수정"과 같은 내용을 읽어줍니다.
 
-| 속성 명                                  | 기본값 | 설명                                                                                                                                               |
-| ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("for","label")}} |        | {{HTMLElement("label")}} 요소와 같은 문서에 있는 위젯의 라벨의 ID . 문서안의 ID와 for속성 값이 같으면 그 라벨 요소는 그 위젯의 라벨이된다. |
+다른 방법으로도 폼 컨트롤과 레이블을 연결할 수 있습니다. 폼 컨트롤을 `<label>` 내부에 중첩하여 암묵적으로 연결할 수 있습니다.
 
-요소는 for속성으로 지정한 위젯과 묶여진다. for속성은 해당 위젯의 실제 id 속성을 참조한다. 위젯은 요소로 둘러싸게 할수 있지만 이 경우 몇가지 보조 기술이 라벨과 위젯의 암시적인 관계를 이해하지 못하기 떄문에 for 속성을 고려 해봐야한다.
+```html
+<label for="name">
+  Name: <input type="text" id="name" name="user_name" />
+</label>
+```
 
-심지어 보조 기술을 배제 한다고 하여도 모든 브라우저에서 공식적인 라벨 설정하면 사용자가 라벨을 누르면 해당하는 위젯이 활성화 할수 있다는 것을 알아 두어야한다. 이것은 라디오 버튼이나 체크박스를 사용하는데 특히 유용하다.
+심지어 이러한 경우에도, 레이블과 위젯간의 관계를 보조기술이 이해할 수 있도록 `for` 속성을 설정하는 것이 가장 좋은 방법으로 권장됩니다.
+
+레이블이 없거나 폼 컨트롤이 암묵적으로나 명시적으로 레이블과 연결되지 않은 경우, 스크린 리더는 "텍스트 수정 공백"과 같은 내용을 읽어주는데, 이는 전혀 도움이 되지 않습니다.
+
+### 레이블도 클릭할 수 있습니다!
+
+레이블을 올바르게 설정했을때의 또다른 장점은 해당 위젯을 활성화 하기위해 레이블을 클릭하거나 탭할 수 있다는 것입니다. 이는 텍스트입력과 같은 컨트롤에 유용합니다. 텍스트 입력의 경우 레이블 뿐만 아니라 입력란을 클릭하여 포커스를 활성화할 수 있지만, 라디오버튼과 체크박스 같은 경우애는 특히 유용합니다. 이러한 컨트롤의 클릭 영역은 매우 작을 수 있으므로 활성화하기 쉽도록 만드는 것이 유용합니다.
+
+예를 들어 아래 예시의 "I like cherry"레이블 텍스트를 클릭하면 _taste_cherry_ 체크박스의 선택 상태가 토글됩니다.
 
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
     <label for="taste_1">I like cherry</label>
   </p>
   <p>
-    <label for="taste_2">
-      <input type="checkbox" id="taste_2" name="taste_banana" value="1">
-      I like banana
-    </label>
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+    <label for="taste_2">I like banana</label>
   </p>
 </form>
 ```
 
-몇가지 보조 기술은 여러개의 라벨을 한개의 위젯을 다루면 문제를 가질수 있다. 이 떄문에 위젯을 그에 맞는 폼 요소안에 넣어서 사용해야한다.
+> **Note:** 예제는 여기서 찾을수 있습니다. [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
-다음 예제를 보아라
+### 여러개의 레이블
+
+엄밀히 말하자면, 하나의 위젯에 여러개의 레이블을 넣을 수도 있지만, 이는 일부 보조기술에서 처리하는데 문제가 발생할 수 있으므로 좋은 아이디어는 아닙니다. 여러 레이블을 사용하는 경우 위젯과 해당 레이블을 하나의 {{htmlelement("label")}} 요소안에 중첩시켜야 합니다.
+
+다음 예시를 살펴보겠습니다.
 
 ```html
-<form>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+<p>Required fields are followed by <span aria-label="required">*</span>.</p>
 
-  <p>
-    <label for="name">
-      <span>Name: </span>
-      <input type="text" id="name" name="username" required />
-      <strong><abbr title="required">*</abbr></strong>
-    </label>
-  </p>
+<!-- 따라서 이렇게 작성합니다. -->
+<!--div>
+  <label for="username">Name:</label>
+  <input id="username" type="text" name="username" required>
+  <label for="username"><span aria-label="required">*</label>
+</div-->
 
-  <p>
-    <label for="birth">
-      <span>Date of birth: </span>
-      <input type="text" id="birth" name="userbirth" maxlength="10" /> <em>formated as mm/dd/yyyy</em>
-    </label>
-  </p>
-</form>
+<!-- 이렇게 작성하는것이 더 좋습니다. -->
+<!--div>
+  <label for="username">
+    <span>Name:</span>
+    <input id="username" type="text" name="username" required>
+    <span aria-label="required">*</span>
+  </label>
+</div-->
+
+<!-- 하지만 이렇게 작성하는 것이 가장 좋을것입니다. -->
+<div>
+  <label for="username">Name: <span aria-label="required">*</span></label>
+  <input id="username" type="text" name="username" required />
+</div>
 ```
 
-이 예제에서 첫번째 단락은 필수적인 요소의 규칙들을 정의한다. 이 것은 스크린 리더와 같은 보조 기술이 필수 요소들을 찾기전에 출력하거나 읽기 위해서는 반드시 시작부분 나타내야 한다. 이런식으로 사용자는 항상 자신이 무엇을 하는지 알 수있다.
+{{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-첫번째 필드는 필수적이기 떄문에 라벨 요소는 name 과 \* 로 필수적인 필드를 나타낸다 이런 식으로 하면 스크린 리더는 "Name star" 또는 "Name required"이라고 읽을 것이다. ( 스크린 리더의 설정에 따라 다르지만 항상 첫번째 단락에서 읽어진 것을 읽는다). 만약 두가지 라벨을 사용한다면, 사용자가 이 요소가 필수 요소 인지 보여지는지 보장 할 수없다.
+위의 문단은 필수 요소에대한 규칙을 설명합니다. 이 규칙은 필수요소를 만나기 전에 시각적으로 확인하는 사용자와 스크린 리더와 같은 보조 기술을 사용하는 사용자가 해당 규칙을 알 수 있도록 '이전'에 포함되어야 합니다. 이 방법은 사용자에게 애스터리스크의 의미를 알려주는데 도움이 됩니다. 그러나 이것으로는 부족합니다. 스크린리더는 애스터리스크를 '별표'라고 읽어줍니다. 시각적인 마우스 사용자가 마우스 호버하면 '필수'가 표시되어야 하는데, 이는 `title` 속성을 사용하여 달성할 수 있습니다. `title` 속성이 스크린 리더에서 읽히는 것은 스크린 리더의 설정에 다라 달라지므로 항상 스크린 리더에서 읽히는 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성 또한 추가하는 것이 더 신뢰할 수 있습니다.
 
-두번째 폼 요소는 비슷하게 작동한다. 이 기술을 사용하면 사용자에게 어떻게 데이터를 작성하는지 알려주는데 확신 할 수 있다.
+위의 예시들은 효과적으로 사용하기 위해 순서대로 개선되었습니다.
 
-### `<output>` 요소
+- 첫 번째 예시에서는 입력필드와 함께 레이블이 읽히지 않고 "텍스트 수정 공백"만 읽힙니다. 또한 실제 레이블들이 따로 읽히기 때문에 여러개의 `<label>` 요소가 스크린 리더를 더 혼란스럽게 만듭니다.
+- 두 번째 예시에서는 조금 더 명확해집니다. 입력필드와 함께 읽히는 레이블은 "이름 별표 이름 텍스트수정 리콰이어드"로 읽히고, 레이블들은 여전히 따로 읽힙니다. 여전히 약간 혼동스럽지만, 이번에는 `<input>` 에 레이블이 연결되어있어서 조금 더 나아진 것입니다.
+- 세 번째 예시가 가장 좋습니다. 실제 레이블이 모두 함께 읽히고, 입력필드와 함께 읽히는 레이블은 "이름 리콰이어드 텍스트 수정"으로 읽힙니다.
 
-이 요소는 계산의 출력을 저장하는데 사용된다. It formally defines a relationship between the fields used to get the data required to perform the calculation and an element to be used to display the results. It is also understood as a live region by some assistive technologies (which means that when the content of the {{HTMLElement("output")}} element changes, the assistive technology is aware of that change and can react to it).
+> **참고:** 실제로 사용하는 스크린 리더에 따라 결과가 약간 다를 수 있습니다. 이 예시는 VoiceOver에서 테스트 되었으며, NVDA도 비슷하게 작동합니다. 여러분에 경험에 대해서도 듣고 싶습니다.
 
-{{HTMLElement("output")}} 요소는 다음 속성은 지원한다.
+> **참고:** 이 예시는 GitHub에서 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))로 찾을 수 있습니다. 다만, 주의해야 할 점은 두개이상의 버전을 주석 해제하여 테스트하지 않아야 한다는 점입니다. 동일한 ID를 가진 여러개의 레이블과 입력 필드가 있는 경우 스크린 리더가 혼란스러워질 수 있습니다!
 
-| Attribute name                               | Default value | Description                                                                                              |
-| -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("for","output")}} |               | 스페이스로 구분된 다른 요소의 ID로 설정하고 이 요소들에 값을 입력을 계산하는데 기여한다.(또는 다른 효과) |
+## 폼과 함께 사용되는 일반 HTML 구조
 
-### form이 사용되는 일반적인 form 구조
+웹 폼과 관련된 구조 이외에도, 폼 마크업은 단지 HTML일 뿐이라는 것을 기억하는것이 좋습니다. 이는 HTML의 모든 기능을 활용하여 웹 폼을 구조화할 수 있다는 것을 의미합니다.
 
-HTML 폼의 지정된 구조를 넘어서 하나의 HTML이라고 생각 하는게 좋다. T 이 의미는 HTML 폼을 구성하는데 HTML의 모든 능력을 사용할 수 있다는 것이다.
+예시에서 확인할 수 있듯이, 레이블과 해당 위젯을 {{HTMLElement("ul")}} 또는 {{HTMLElement("ol")}} 리스트 내에서 {{HTMLElement("li")}} 요소로 감싸는 것이 흔한 방법입니다. {{HTMLElement("p")}}와 {{HTMLElement("div")}} 요소도 흔히 사용됩니다. 여러 개의 체크박스 또는 라디오 버튼을 구조화하기 위해 리스트를 사용하는 것이 권장됩니다.
 
-예제에서 볼 수 있드니 라벨과 위젯을 둘러싸는데 최고의 방법은 {{HTMLElement("p")}}요소 나 {{HTMLElement("div")}}요소를 사용하는 것이다.
+{{HTMLElement("fieldset")}} 요소 외에도, 복잡한 폼을 구조화 하기 위해 HTML 제목 (예: {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) 과 섹션화 (e.g. {{htmlelement("section")}}) 을 사용하는 것이 흔한 방법입니다.
 
-게다가 {{HTMLElement("fieldset")}} 요소에 HTML 타이틀을 사용하고 복잡한 폼을 만드는데 구조에 섹션을 사용하는것도 일반적인 관행이다.
+무엇보다도, 접근 가능하고 사용하기 쉬운 폼을 만들기 위해 편안한 코딩 스타일을 찾는것은 여러분에게 달려있습니다. 각각의 기능 섹션은 별도의 {{htmlelement("section")}} 요소에 포함되어야 하며, 라디오 버튼을 포함하는 {{htmlelement("fieldset")}} 요소를 사용해야 합니다.
 
-HTML 목록은 체크박스나 라디오 버튼을 사용하는데 일반적으로 사용된다.
+## 학습 활동: 폼 구조 만들기
 
-간단한 지불 폼을 만들어 보자
+자 그럼 아이디어를 실제로 적용해보고 약간 더 복잡한 폼의 결제 폼을 만들어보겠습니다. 이 폼에는 아직 이해하지 못할 수도 있는 여러가지 컨트롤 유형이 포함됩니다. 현재는 걱정하지 마세요. 다음 글에서 이들이 어떻게 작동하는지 알게될 것입니다 ([기본 네이티브 폼 컨트롤](/ko/docs/Learn/Forms/Basic_native_form_controls)). 지금은 아래 지침을 주의 깊게 읽으며, 폼을 구조화 하는데 사용하는 래퍼 요소와 그 이유를 천천히 파악해보세요.
 
-```html
-<form>
-  <h1>Payment form</h1>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+1. 컴퓨터의 새로운 경로에 [빈 템플릿 파일](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) 과 [결제 폼을 위한 CSS](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) 의 로컬 복사본을 만드는것으로 시작해 봅시다.
+2. HTML에 CSS를 적용하기 위해 HTML {{htmlelement("head")}} 내부에 아래의 코드를 추가하세요
 
-  <section>
-    <h2>Contact information</h2>
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
-    <fieldset>
-      <legend>Title</legend>
-      <ul>
-        <li>
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="M." />
-            Mister
-          </label>
-        </li>
-        <li>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="Ms." />
-            Miss
-          </label>
-        </li>
-      </ul>
-    </fieldset>
+3. 다음으로, {{htmlelement("form")}} 요소를 추가해 폼을 생성하세요.
 
-    <p>
-      <label for="name">
-        <span>Name: </span>
-        <input type="text" id="name" name="username" required />
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-    </p>
+   ```html-nolint
+   <form>
+   ...
+   </form>
+   ```
 
+4. 유저에게 필수 입력 필드가 어떻게 표시될지 알려주기 위해 `<form>` 요소 안에 제목과 문단을 추가하세요
+
+   ```html-nolint
+   <h1>Payment form</h1>
+   <p>
+     Required fields are followed by
+     <strong><span aria-label="required">*</span></strong>.
+   </p>
+   ```
+
+5. 다음으로, 이전 항목 아래에 더 큰 코드 섹션을 폼에 추가하겠습니다. 여기에서는 연락처 정보를 필드를 별도의 {{htmlelement("section")}} 요소로 감싸고 있는것을 볼 수 있습니다. 또한, 세 개의 라디오 버튼을 각각 자체적인 목록({{htmlelement("li")}}) 요소 내에 넣고 있습니다. 또한, 두 개의 일반 텍스트가 {{htmlelement("input")}} 과 그에 해당하는 {{htmlelement("label")}} 요소가 각각 {{htmlelement("p")}} 안에 포함되어 있으며, 비밀번호를 입력을 위한 비밀번호 입력란도 있습니다. 아래 코드를 폼에 추가하세요.
+
+   ```html
+   <section>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="K" />
+             King
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Q" />
+             Queen
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="J" />
+             Joker
+           </label>
+         </li>
+       </ul>
+     </fieldset>
      <p>
-      <label for="mail">
-        <span>E-mail: </span>
-        <input type="email" id="mail" name="usermail" required />
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-    </p>
-  </section>
+       <label for="name">
+         <span>Name: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="text" id="name" name="username" required />
+     </p>
+     <p>
+       <label for="mail">
+         <span>Email: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" required />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="password" id="pwd" name="password" required />
+     </p>
+   </section>
+   ```
+
+6. 우리 폼의 두번째 `<section>` 은 결제정보 입니다.
+   여기에서는 각각의 라벨과 함께 세 가지 독립적인 컨트롤이 포함된 `<p>` 가 있습니다.
+   첫 번째는 신용카드 종류를 선택하기 위한 드롭다운 메뉴 ({{htmlelement("select")}}) 입니다.
+   두번째는 신용카드 번호를 입력하기 위한 `tel` 타입의 `<input>` 요소입니다. 우리는 `number` 타입을 사용할 수 도 있지만, 우리는 번호입력기 UI(number's spinner UI)를 사용하고 싶지 않습니다.
+   마지막으로 카드의 만료 날짜를 입력하기 위한 `text` 타입의 `<input>` 요소입니다. 이는 올바른 형식을 나타내는 _placeholder_ 속성과 입력된 날짜가 올바른 형식인지 검사하는 _pattern_ 속성이 포함되어 있습니다.
+   이런 최신 입력 타입은 [The HTML5 input types](/ko/docs/Learn/Forms/HTML5_input_types) 에서 다시 소개됩니다.
+
+   이전 섹션 아래에 다음 코드를 입력해주세요.
+
+   ```html
+   <section>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" required />
+     </p>
+     <p>
+       <label for="expiration">
+         <span>Expiration date:</span>
+         <strong><span aria-label="required">*</span></strong>
+       </label>
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+     </p>
+   </section>
+   ```
+
+7. 마지막 섹션에서 추가할 섹션은 훨씬 간단합니다, 이 섹션에서는 데이터를 제출하기 위한 `submit` 타입의 {{htmlelement("button")}} 이 포함되어 있습니다. 이를 폼 가장 아래에 추가해주세요.
+
+   ```html
+   <section>
+     <p>
+       <button type="submit">Validate the payment</button>
+     </p>
+   </section>
+   ```
+
+8. 마지막으로, 폼을 완성하기 위해 닫는 {{htmlelement("form")}} 태그를 추가해주세요.
+
+   ```html
+   </form>
+   ```
+
+아래에서 완성된 폼을 확인할 수 있습니다. (GitHub에서도 확인할 수 있습니다. — payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) 와 [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)를 확인 하세요):
+
+{{EmbedLiveSample("A_payment_form","100%",620)}}
+
+## 실력을 시험해 보세요!
+
+이 글을 끝까지 읽었지만 가장 중요한 내용을 기억할 수 있나요? 이동하기 전에 [Test your skills: Form structure](/en-US/docs/Learn/Forms/Test_your_skills:_Form_structure) 를 방문해 확인 해보세요!
+
+## 요약
+
+이제 웹 폼을 올바르게 구조화하는 데 필요한 모든 지식을 갖게 되었습니다. 다음 기사에서는 사용자로부터 정보를 수집하기 위해 사용할 다양한 종류의 폼 위젯에 대해 자세히 알아볼 것입니다. 앞으로 몇 가지 기사에서 소개된 기능들을 자세히 다룰것 입니다.
+
+## 함께 보기
+
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
+
+{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+
+### 고급 주제
 
-  <section>
-    <h2>Payment information</h2>
-
-    <p>
-      <label for="card">
-        <span>Card type:</span>
-        <select id="card" name="usercard">
-          <option value="visa">Visa</option>
-          <option value="mc">Mastercard</option>
-          <option value="amex">American Express</option>
-        </select>
-      </label>
-    </p>
-    <p>
-      <label for="number">
-        <span>Card number:</span>
-        <input type="text" id="number" name="cardnumber" required />
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-    </p>
-    <p>
-      <label for="date">
-        <span>Expiration date:</span>
-        <input type="text" id="date" name="expiration" required />
-        <strong><abbr title="required">*</abbr></strong>
-        <em>formated as mm/yy</em>
-      </label>
-    </p>
-  </section>
-
-  <section>
-    <p>
-      <button>Validate the payment</button>
-    </p>
-  </section>
-</form>
-```
-
-See this form in action (with a touch of CSS):
-
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/HTML/Forms/How_to_structure_an_HTML_form/Example")}}
-
-## HTML 위젯
-
-When you build a form, you need to use some widgets to collect data from the user. In this article we will see how to display those widgets; if you want to know more about the way those widgets work, it is detailed in the article: [The native form widgets](/ko/docs/HTML/Forms/The_native_form_widgets).
-
-### The \<input> element
-
-이 요소는 거의 모든 것을 할 있기 떄문에 특별 한 종류이다. 간단하게 type속성을 설정하여 완전히 바뀔수 있다. 간단하게 하기 위해서 type속성의 값을 4가지로 분류하였다. 단일 라인 텍스트 필드, 텍스트 입력 없는 컨트롤, 시간이나 날짜 컨트롤, 버튼. 이와 같은 다형성 떄문에 {{HTMLElement("input")}} 요소는 많은 속성을 지원하지만 type 속성값에 따라 달라지기 떄문에 어느 속성이 적절한지, 어느 것이 필요한지 선택하는 것은 어려울 수 있다.
-
-This is all summarized in the following table (for a full list of all attributes, visit the page for the {{HTMLElement("input")}} element):
-
-<table>
-  <thead>
-    <tr>
-      <th scope="col">type 속성 의 값</th>
-      <th scope="col">설명</th>
-      <th scope="col">필수 속성</th>
-      <th scope="col">관련된 속성</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th colspan="4" style="text-align: center">단일 선 텍스트 필드</th>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>
-        이것은 가장 기본적인 텍스트 필드이다. type속성을 위한 텍스트 값은 이
-        속성의 기본 값이다.(자동 유효성 검사를 하지않음)
-      </td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}},
-        {{htmlattrxref("spellcheck","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>email</code></td>
-      <td>하나 또는 여러개 이메일 주소를 작성하기 위해 사용되는 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("multiple","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>password</code></td>
-      <td>텍스트 필드의 값을 가리기 위해 사용되는 텍스트 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>search</code></td>
-      <td>검색 하기 위한 텍스트 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("autosave","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}},
-        {{htmlattrxref("spellcheck","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>tel</code></td>
-      <td>전화 번호를 입력할 수 있는 텍스트 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>url</code></td>
-      <td>절대 URL을 다루기 위한 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
-      </td>
-    </tr>
-    <tr>
-      <th colspan="4" style="text-align: center">텍스트 입력 없는 컨트롤</th>
-    </tr>
-    <tr>
-      <td><code>checkbox</code></td>
-      <td>체크박스</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("checked","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td>색상을 입력 받기위한 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>file</code></td>
-      <td>A control that lets the user select a file.</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("accept","input")}},
-        {{htmlattrxref("multiple","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>hidden</code></td>
-      <td>보여주지 않는 컨트롤 이지만 서버로 전송되는 필드</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>number</code></td>
-      <td>소숫점을 입력받는 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("step","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>radio</code></td>
-      <td>라디오 버튼. 그룹 중 한가지만 선택하기 위한 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("checked","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>range</code></td>
-      <td>정확하지 않는 숫자를 입력받기 위한 필드</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("step","input")}}
-      </td>
-    </tr>
-    <tr>
-      <th colspan="4" style="text-align: center">시간 과 날짜 컨트롤</th>
-    </tr>
-    <tr>
-      <td><code>date</code></td>
-      <td>(년, 원, 일)날짜를 입력 받을 수 잇는 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>datetime</code></td>
-      <td>
-        UTC 타임 존 기반으로 전체 날짜와 시간(시간, 분, 초 )을 입력 받기 위한
-        필드
-      </td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>datetime-local</code></td>
-      <td>타임존 기반이 아닌 날짜와 시간을 입력받기 위한 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>month</code></td>
-      <td>타임존 기반이 아닌 달과 년도를 입력 받기 위한 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>time</code></td>
-      <td>타임존 기반이 아닌 시간을 입력 받기 위한 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>week</code></td>
-      <td>
-        타임존 기반이 아닌 전체 날짜를 일주일-년도 숫자로 주 번호를 입력하는
-        컨트롤
-      </td>
-      <td></td>
-      <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
-      </td>
-    </tr>
-    <tr>
-      <th colspan="4" style="text-align: center">버튼</th>
-    </tr>
-    <tr>
-      <td><code>button</code></td>
-      <td>기본 행동이 없는 누르는 버튼</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>image</code></td>
-      <td>그래픽적인 전송버튼</td>
-      <td>
-        {{htmlattrxref("src","input")}},
-        {{htmlattrxref("alt","input")}}
-      </td>
-      <td>
-        {{htmlattrxref("width","input")}},
-        {{htmlattrxref("height","input")}},
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>reset</code></td>
-      <td>폼의 내용을 초기화 하는 컨트롤</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><code>submit</code></td>
-      <td>폼을 전송하는 버튼</td>
-      <td></td>
-      <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-몇가지 이유 때문에 브라우저에서 특정 type 속성의 값 설정을 지원하지 않으면 {{HTMLElement("input")}} 요소는 text 속성으로 렌더링 한다. 이것은 매력적이지 않아도 어쩔 수없이 폼이 작동하도록 한다.
-
-요소는 강력한 도구지만, 모든 것을 할수 없고 다른 것들을 다루기 위해 다른 요소들이 있다.
-
-### \<textarea> 요소
-
-이 요소는 다중 텍스트 필드로 설정된다. 이 요소는 사용자가 입력한 텍스트에 줄 바꿈을 할수 있다는 것을 제외하고 단일 라인 텍스트 필드와 정확하게 똑같이 작동한다. 또한 여러줄에 걸처 랜더링을 제어 하기위해 몇가지 추가 속성 설정을 허락한다.
-
-| Attribute name                                   | 기본값 | 설명                                                                    |
-| ------------------------------------------------ | ------ | ----------------------------------------------------------------------- |
-| {{htmlattrxref("cols","textarea")}} | `20`   | 보여지는 문자 너비의 평균을 기준으로 텍스트 컨트롤의 너비               |
-| {{htmlattrxref("rows","textarea")}} |        | 보여지는 텍스트 행의 수                                                 |
-| {{htmlattrxref("wrap","textarea")}} | `soft` | hard, soft 이 둘중 하나의 값으로 어떻게 텍스트를 둘러쌀것인지 나타낸다. |
-
-{{HTMLElement("textarea")}} 요소는 {{HTMLElement("input")}} 요소와 다르게 작동한다. {{HTMLElement("input")}} 요소는 자동으로 닫히는 요소이다. 이는 자식 요소를 가질 수 없다는 것을 의미한다. 이와 반대로 요소는 text 콘텐츠를 자식으로 가질 수 있는 일반적인 요소이다.
-
-이는 두가지 영향이 있다.
-
-- 만약 {{HTMLElement("input")}}요소에 기본값을 정의하기 원한다면, value 속성을 사용하여 지정해야 되나, {{HTMLElement("textarea")}}요소에서는 기본값을 {{HTMLElement("textarea")}} 태그 사이에 넣기만 하면된다.
-- 자연스러움 때문에 {{HTMLElement("textarea")}} 요소는 오직 텍스트 콘텐츠만 받아들인다. 이 의미는 어떠한 HTML콘텐츠도 {{HTMLElement("textarea")}} 요소에 넣으면 텍스트 콘텐츠로 렌더링 된다.
-
-예제를 따라가면 다음 두 요소는 똑같이 랜더링 되어 질것이다.
-
-```html
-<form>
-  <p>
-    <label for="text_1">With regular HTML</label><br>
-    <textarea id="text_1" name="regular"><p>I'm a paragraphe</p></textarea>
-  </p>
-  <p>
-    <label for="text_2">With escaped HTML</label><br>
-    <textarea id="text_2" name="escaped">&lt;p&gt;I'm a paragraphe&lt;/p&gt;</textarea>
-  </p>
-  <p>
-    <button>Send me</button>
-  </p>
-</form>
-```
-
-### \<select>, \<option>그리고 \<optgroup> 요소
-
-요소는 선택 박스를 만들 수 있게 해준다(떄로는 콤보 박스라고 한다). 선택 박스는 사용자가 하나 이상 미리 정의 된 값을 선택하는 위젯이다. 단일 값 선택 박스와 다중 값 선택 박스는 다르다. 이에 대한 자세한 내용은 다음 문서를 확인해라 [The native form widgets](/ko/docs/HTML/Forms/The_native_form_widgets).
-
-선택 박스 안의 값들은 {{HTMLElement("option")}} 요소에서 정의되고 {{HTMLElement("optgroup")}} 요소 안에서 그룹화 될 수 있다.
-
-Let's take an example:
-
-```html
-<form>
-  <p>
-    <label for="myFruit">Pick a fruit</label>
-    <select id="myFruit" name="fruit">
-      <!-- There is a trick here you think you'll pick
-         a banana but you'll eat an orange >:-) -->
-      <option value="orange">Banana</option>
-      <option>Cherry</option>
-      <optgroup label="berries">
-        <option>Blueberry</option>
-        <option>Raspberry</option>
-        <option>Strawberry</option>
-      </optgroup>
-    </select>
-  </p>
-</form>
-```
-
-{HTMLElement("option")}} 요소는 폼이 전송되면 전송될 value속성을 설정한다. 만약 value 속성을 바뜨리면 {{HTMLElement("option")}} 요소는 value 값을 선택 박스 값으로 사용된다.
-
-{{HTMLElement("optgroup")}} 요소의 라벨 속성은 값이 나오기전에 보여주고 옵션 같은 요소들은 선택할 수 없게 나온다..
-
-| 속성 이름                                        | 기본값    | 설명                                                                                                                   |
-| ------------------------------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("label","option")}}     |           | 이 속성은 옵션을 설명하는 라벨의 텍스트이다. 만약 라벨 속성이 정의되지 않으면 이 값은 요소의 텍스트 콘텐츠로 설정된다. |
-| {{htmlattrxref("selected","option")}} | (_false_) | 만약 이 속성이 불리언 값으로 설정되는 경우 처음에 선택된 상태로 시작하게된다.                                          |
-
-| Attribute name                                   | Default value | Description                                                        |
-| ------------------------------------------------ | ------------- | ------------------------------------------------------------------ |
-| {{htmlattrxref("label","optgroup")}} |               | The name of the group of options. **This attribute is mandatory.** |
-
-### \<datalist>요소
-
-이 요소는 기존에 있는 위젯들에 사전 설정 값을 제공 함으로써 위젯들을 확장시킨다. 가장 잘 알려진 사용 방법은 텍스트 필드의 자동 완성 목록이다. 값들은 {{HTMLElement("datalist")}} 요소 안에 있는 {{HTMLElement("option")}}요소의 값으로 사용할 수 있다.
-
-{{HTMLElement("datalist")}}요소와 바인드 하기위해서는 사용하는 요소의 list속성을 이용하여 설정해야한다. 이 속성은 {{HTMLElement("datalist")}} 요소의 id로 설정된다.
-
-요소는 최근에 HTML 폼으로 추가 되었다. 그러므로 아직 이를 지원하지 않는 브라우저들도 있다. 이 문제를 처리하기 위하여 아래에 약간 까다로운 예제가 있다.
-
-```html
-<form>
-  <p>
-    <label for="myFruit">What is your favorite fruit?</label>
-    <input type="text" id="myFruit" name="fruit" list="fruitList" />
-
-    <datalist id="fruitList">
-      <label for="suggestion">or pick a fruit</label>
-      <select id="suggestion" name="altFruit">
-        <option value="banana">Banana</option>
-        <option value="cherry">Cherry</option>
-        <option value="strawberry">Strawberry</option>
-      </select>
-    </datalist>
-  </p>
-</form>
-```
-
-한편 {{HTMLElement("datalist")}} 요소를 지원하는 브라우저는 {{HTMLElement("option")}} 요소를 무시하고 이를 사용하는 요소를 확장 할 것이다. 이와 반대로 {{HTMLElement("datalist")}} 요소를 지원하지 않는 브라우저는 라벨과 선택 박스를 표시 할 것이다. 물론 {{HTMLElement("datalist")}} 요소를 지원하지 않는 브라우저에 대해 자바스크립트로 하는 다른 방법이 있지만 항상 자바스크립트만 사용하는 것은 좋은 것이 아니다.
-
-| Safari 6   | ![Screenshot of the datalist element fallback with Safari on Mac OS](/files/4583/datalist-safari.png) |
-| ---------- | ----------------------------------------------------------------------------------------------------- |
-| Firefox 18 | ![Screenshot of the datalist element with Firefox on Mac OS](/files/4581/datalist-firefox-macos.png)  |
-
-### \<meter> 와 \<progress> 요소들
-
-이 두요소는 그래픽적으로 숫자 값을 표현 하는방법이다. 이 두 요소의 차이점은 두 요소의 의미가 다르다는 것이다.
-
-- {{HTMLElement("meter")}} 요소는 정적인 값을 최소와 최대 값사이에 상대적인 위치를 나타낸다
-- The {{HTMLElement("progress")}} 요소는 최소와 최대값을 시간에 따라 바뀌는 가변적인 값을 나타낸다. 값이 변하면 자바스크립트를 이용하여 다룰수 있다는것을 주목할 필요가 있다. 요소 자신은 값을 변화시키기 위한 어떠한 매커니즘도 가지고 있지 않다.
-
-속성으로 인해 이 요소들은 다음 속성을 지정 가능하다.
-
-**{{HTMLElement("meter")}} 요소는 다음과 같은 속성을 가진다**
-
-| Attribute name                                   | Default value   | Description                                                    |
-| ------------------------------------------------ | --------------- | -------------------------------------------------------------- |
-| {{htmlattrxref("min","meter")}}         | 0               | The lower numeric bound of the measured range.                 |
-| {{htmlattrxref("max","meter")}}         | 1               | The upper numeric bound of the measured range.                 |
-| {{htmlattrxref("low","meter")}}         | the `min` value | The upper numeric bound of the low end of the measured range.  |
-| {{htmlattrxref("high","meter")}}     | the `max` value | The lower numeric bound of the high end of the measured range. |
-| {{htmlattrxref("optimum","meter")}} |                 | The optimal numeric value.                                     |
-
-| Attribute name                               | Default value | Description                                                                                                                                  |
-| -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("max","progress")}} |               | This attribute describes how much work the task indicated by the {{HTMLElement("progress")}} element requires before it's complete. |
-
-### The \<button> element
-
-{{HTMLElement("button")}} 요소는 폼 버튼을 만드는 가장 쉬운 방법이다. 버튼은 type속성에 따라 3가지 타입을 가진다.
-
-- 전송 버튼은 폼 데이터들을 {{HTMLElement("form")}}요소에 action 속성에 정의 된 웹 페이지에 보낸다.
-- 리셋 버튼은 폼의 모든 위젯들을 기본 값으로 재설정한다. 폼 사용자 경험 관점에서 이 버튼을 사용하는것은 좋지 않은 사례로 간주되고 이를 피해야 한다. 이것은 사용자가 단순히 실수로 한것이 모든 작업을 잃게 할 수 있다.
-- 익명 버튼은 어떠한 의미도 없는 대신 자바스크립트를 이용하여 다룰 수 있다..
-
-**{HTMLElement("button")}} 요소의 속성**
-
-| 속성 이름                                                | 기본값   | 설명                                                                                                            |
-| -------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("type","button")}}             | `submit` | 버튼의 타입. `button`, `reset`, `submit 이 있다.`                                                               |
-| {{htmlattrxref("formaction","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 action 속성에 오버라이드 된다.     |
-| {{htmlattrxref("formenctype","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 enctype 속성에 오버라이드 된다.    |
-| {{htmlattrxref("formmethod","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 method 속성에 오버라이드 된다.     |
-| {{htmlattrxref("formnovalidate","button")}} |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 novalidate 속성에 오버라이드 된다. |
-| {{htmlattrxref("formtarget","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 target 속성에 오버라이드 된다.     |
-
-기술적으로 말하면 {{HTMLElement("button")}} 요소와 {{HTMLElement("input")}} 요소의 속성에 정의된 버튼 요소는 거의 차이가 없다. 단 한가지 차이점은 버튼 자체의 라벨 이다.요소 안에서는 라벨은 오직 문자 데이터로만 나타 낼 수 있지만 {{HTMLElement("button")}} 요소에서는 어떠한 HTML이 될 수있다. 그래서 이에 따른 스타일을 디자인 할 수있다.
-
-> **참고:** For historical reasons, the {{HTMLElement("button")}} element wasn't used very often and in many forms developers preferred to use buttons made with the {{HTMLElement("input")}} element. This is due to a bug in legacy versions of Internet Explorer (IE). In IE6 and IE7, if you add a `name` and a `value` attribute to a {{HTMLElement("button")}} element, they do not send the content of the `value` attribute but the raw content of the button instead. This has been fixed since IE8, so there is no longer any reason to avoid using the {{HTMLElement("button")}} element.
-
-### 공통 속성
-
-Many of the elements used to define form widgets have some their own attributes. However, there is a set of attributes common to all form elements that give you some control over those widgets. Here is a list of those common attributes:
-
-| Attribute name | Default value | Description                                                                                                                                                                                                                                                                                                                                           |
-| -------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autofocus`    | (_false_)     | This Boolean attribute lets you specify that the element should automatically have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.                                                                     |
-| `disabled`     | (_false_)     | This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example {{HTMLElement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the element is enabled.                |
-| `form`         |               | The form element that the widget is associated with. The value of the attribute must be the `id` attribute of a {{HTMLElement("form")}} element in the same document. In theory, it lets you set a form widget outside of a {{HTMLElement("form")}} element. In practice, however, there is no browser which supports that feature. |
-| `name`         |               | The name of the element; this is submitted with the form data.                                                                                                                                                                                                                                                                                        |
-| `value`        |               | The element's initial value.                                                                                                                                                                                                                                                                                                                          |
-
-## Using [ARIA](/ko/docs/Accessibility/ARIA) to structure HTML forms
-
-[ARIA](/ko/docs/Accessibility/ARIA) is [a W3C Candidate Recommendation](http://www.w3.org/TR/wai-aria/) which adds to HTML improved accessibility for rich Internet applications, including for forms. We will discuss its use in more detail in the "[How to build custom form widgets](/ko/docs/HTML/Forms/How_to_build_custom_form_widgets)" article, but there are some basics that are good to know.
-
-Before going further, it's worth noting that support for ARIA and assistive technologies among browsers is far from perfect, but it's improving. Just to understand the issue, when a browser encounters an ARIA attribute, it has to send information to the operating system's accessibility layer. Not all browsers are good at doing this cross platform. The assistive technologies, on their own, have to connect themselves to the OS accessibility layer to handle the information that comes from the browsers. Surprisingly, not all assistive technologies do it well. So using ARIA does not mean that your web application will be accessible, but it means that you do your best to achieve this. Unfortunately, for the time being, ARIA remains a best effort technology, but it's always better than nothing.
-
-If you want to dig into using ARIA with HTML forms, feel free to [read the related section in the ARIA documentation](/ko/docs/Accessibility/ARIA/forms).
-
-### The [`aria-labelledby`](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) attribute
-
-This attribute is a convenient way to define a label without using the {{HTMLElement("label")}} element. The attribute is set on the widget element and references the `id` attribute of the element to use as a label.
-
-```html
-<form>
-  <p id="fruitLabel">What's your favorite fruit</p>
-  <p>
-    <input type="text" name="fruit" aria-labelledby="fruitLabel">
-  </p>
-</form>
-```
-
-Conceptually, it's the opposite of the `for` attribute on the {{HTMLElement("label")}} element. With the `for` attribute, you reference the `id` of the widget but with the `aria-labbeldby` attribute, you reference the `id` of the label.
-
-### The [`aria-describedby`](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute
-
-This attribute works like the `aria-labelledby` attribute. The difference is mainly semantic. A label defines the essence of an object, while a description provides more information that the user might need. This attribute is not advised for form elements, you should rely on the `aria-labelledby` attribute, except if you want to provide extensive information on the current form element. It is to be used as a provider for a longer description.
-
-### The [`aria-label`](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute
-
-This attribute is used when there is no explicit label in the DOM for a given widget. It lets you provide a widget that will be passed to assitive technologies without actually creating a DOM node for it.
-
-```html
-<form>
-  <p>
-    <input type="search" name="q" aria-label="Search" />
-    <input type="submit" value="Go" />
-  </p>
-</form>
-```
-
-### The [`role`](/ko/docs/Accessibility/ARIA/ARIA_Techniques) attribute
-
-This is the most important ARIA attribute. It lets you give specific semantic information, understandable by assitive technologies, for a given HTML element. There are many roles available and some of them are dedicated to form widgets.
-
-ARIA tries to provide semantics for widgets that are not currently available in HTML as well as for elements that already exist. We will see in detail how to use those roles in the article: How to build custom form widgets.
-
-Those roles for form widgets are :
-
-- [Button](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role)
-- [Checkbox](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role)
-- [Progressbar](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-- Radio
-- [Slider](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role)
-- Spinbutton
-- [textbox](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
-
-It's also worth noting that there's something called a composite role:
-
-- [Listbox](/ko/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role)
-- Radiogroup
-
-If those roles are extremely useful, know that [there are more](/ko/docs/Accessibility/ARIA/ARIA_Techniques); ARIA is a very large specification. Digging into it can help you improve accessibility in areas far afield from HTML forms.
-
-## 결론
-
-You now have all the knowledge to properly structure your HTML forms; the next article will dig into implementation details and functional expectations: [The native form widgets](/ko/docs/HTML/Forms/The_native_form_widgets).
-
-## 볼거리
-
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [How to build custom form controls](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Property compatibility table for form widgets](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

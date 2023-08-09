@@ -1,7 +1,6 @@
 ---
 title: font-variant-east-asian
 slug: Web/CSS/font-variant-east-asian
-translation_of: Web/CSS/font-variant-east-asian
 ---
 
 {{CSSRef}}

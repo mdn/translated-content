@@ -19,7 +19,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* 전역 값 사용 */
 font-feature-settings: inherit;
@@ -36,6 +38,7 @@ font-feature-settings: unset;
 - `normal`
   - : 기본값을 이용하여 텍스트를 표시합니다.
 - `&#x3C;feature-tag-value>`
+
   - : 텍스트를 렌더링할 때, 오픈타입 피처를 활성화하거나 비활성화하기 위해 피처 태그 목록을 렌더링 엔진에 전달합니다. 피처 태그는 4개의 ASCII 문자로 이루어진 {{cssxref("&lt;string&gt;")}}이어야 합니다. 만약 태그가 네 글자보다 짧거나, 유니코드 `U+20` – `U+7E` 범위 바깥에 있는 문자를 포함한다면 속성 전체가 무효처리됩니다.
 
   값은 양의 정수 값을 가집니다. 각각 `1`, `0`과 같은 의미를 가지는 키워드 `on` 과 `off`도 사용할 수 있습니다. 아무런 값이 설정되지 않았다면 기본값은 `1`입니다. [stylistic alternates](http://www.microsoft.com/typography/otspec/features_pt.htm#salt)와 같이 Boolean 타입이 아닌 오픈타입 피처의 경우, 값은 선택되어야 하는 글리프(글자)를 의미합니다. Boolean 타입인 경우에는 스위치라고 생각하시면 됩니다.
@@ -54,28 +57,44 @@ font-feature-settings: unset;
 
 ```css
 /* 작은 대문자(small-caps) 대체 글리프를 사용합니다. */
-.smallcaps { font-feature-settings: "smcp" on; }
+.smallcaps {
+  font-feature-settings: "smcp" on;
+}
 
 /* 대문자와 소문자를 모두 작은 대문자로 변환합니다.(문장부호도 영향을 받습니다.)*/
-.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
+}
 
 /* 영문 대문자 "O"와 구분하기 위해 대각선이 그려진 숫자 0을 사용합니다. */
-.nicezero { font-feature-settings: "zero"; }
+.nicezero {
+  font-feature-settings: "zero";
+}
 
 /* '역사적인' 형태를 사용하기 위해 'hist' 피처를 활성화합니다. */
-.hist { font-feature-settings: "hist"; }
+.hist {
+  font-feature-settings: "hist";
+}
 
 /* 표준합자(common ligatures)를 비활성화 합니다. 기본값은 활성 상태입니다. */
-.noligs { font-feature-settings: "liga" 0; }
+.noligs {
+  font-feature-settings: "liga" 0;
+}
 
 /* 고정폭 숫자(tabular figures)를 사용합니다. */
-td.tabular { font-feature-settings: "tnum"; }
+td.tabular {
+  font-feature-settings: "tnum";
+}
 
 /* 자동 분수 입력을 활성화합니다. */
-.fractions { font-feature-settings: "frac"; }
+.fractions {
+  font-feature-settings: "frac";
+}
 
 /* 가능한 swash 문자 중 두번째를 사용합니다. */
-.swash { font-feature-settings: "swsh" 2; }
+.swash {
+  font-feature-settings: "swsh" 2;
+}
 
 /* 스타일 세트(stylistic set) 7번을 사용합니다. */
 .fancystyle {

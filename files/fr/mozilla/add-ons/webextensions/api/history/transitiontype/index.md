@@ -1,7 +1,6 @@
 ---
 title: history.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/TransitionType
 ---
 
 {{AddonSidebar()}}

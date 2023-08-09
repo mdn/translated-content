@@ -1,7 +1,6 @@
 ---
 title: IDBKeyRange.lowerBound()
 slug: Web/API/IDBKeyRange/lowerBound_static
-translation_of: Web/API/IDBKeyRange/lowerBound
 ---
 
 {{APIRef("IndexedDB")}}

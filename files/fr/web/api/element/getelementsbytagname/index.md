@@ -1,7 +1,6 @@
 ---
 title: element.getElementsByTagName
 slug: Web/API/Element/getElementsByTagName
-translation_of: Web/API/Element/getElementsByTagName
 ---
 
 {{APIRef("DOM")}}

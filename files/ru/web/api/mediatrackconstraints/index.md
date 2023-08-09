@@ -1,24 +1,6 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
-tags:
-  - API
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - NeedsTranslation
-  - Reference
-  - Screen Sharing
-  - Screen Sharing API
-  - Sharing
-  - TopicStub
-  - WebRTC
-  - screen
-translation_of: Web/API/MediaTrackConstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -138,10 +120,7 @@ These constraints apply to `MediaTrackConstraints` objects specified as part of 
 
 ## Specifications
 
-| Specification                                                                                | Status                                   | Comment                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-| {{SpecName('Media Capture', '#dom-mediatrackconstraints')}}             | {{Spec2('Media Capture')}}     | Initial definition.     |
-| {{SpecName('MediaStream Image', '#mediatrackconstraintset-section')}} | {{Spec2('MediaStream Image')}} | Adds image constraints. |
+{{Specifications}}
 
 ## Browser compatibility
 

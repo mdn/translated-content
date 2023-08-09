@@ -1,7 +1,6 @@
 ---
 title: HTML 드래그 앤 드롭 API
 slug: Web/API/HTML_Drag_and_Drop_API
-original_slug: Web/API/HTML_드래그_앤_드롭_API
 ---
 
 {{DefaultAPISidebar("HTML 드래그 앤 드롭 API")}}
@@ -57,7 +56,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 ### 어떤 것이 *draggable*인지 확인하기
 
-하나의 요소를 draggable로 만들기 위해서는 {{htmlattrxref("draggable")}}와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
+하나의 요소를 draggable로 만들기 위해서는 [`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)와 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 전역 이벤트 핸들러를 아래 예제 코드와 같이 추가해야합니다.
 
 ```js
 function dragstart_handler(ev) {

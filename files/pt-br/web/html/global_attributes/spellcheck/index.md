@@ -1,7 +1,6 @@
 ---
 title: Controlando a verificação ortográfica em formulários HTML
 slug: Web/HTML/Global_attributes/spellcheck
-original_slug: Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML
 ---
 
 Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.
@@ -34,12 +33,12 @@ Por exemplo:
 
 ```html
 <div spellcheck="true">
-  <label>Escreva algo: </label><input type="text" size="50">
-  <br>
-  <label>Escreva outra coisa: </label><input type="text" size="50">
+  <label>Escreva algo: </label><input type="text" size="50" />
+  <br />
+  <label>Escreva outra coisa: </label><input type="text" size="50" />
 </div>
-<br>
-<label>Mais alguma coisa: </label><input type="text" size="50">
+<br />
+<label>Mais alguma coisa: </label><input type="text" size="50" />
 ```
 
 Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.
@@ -52,13 +51,13 @@ Por exemplo:
 
 ```html
 <html lang="pt-BR">
-<body>
-  <textarea></textarea>
-  <textarea lang="en"></textarea>
-  <div lang="ru">
+  <body>
     <textarea></textarea>
-  </div>
-</body>
+    <textarea lang="en"></textarea>
+    <div lang="ru">
+      <textarea></textarea>
+    </div>
+  </body>
 </html>
 ```
 

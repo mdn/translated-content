@@ -27,18 +27,18 @@ The following example displays product names but also associates each name with 
 ```html
 <p>New Products</p>
 <ul>
- <li><data value="3967381398">Mini Ketchup</data></li>
- <li><data value="3967381399">Jumbo Ketchup</data></li>
- <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
+  <li><data value="3967381398">Mini Ketchup</data></li>
+  <li><data value="3967381399">Jumbo Ketchup</data></li>
+  <li><data value="3967381400">Mega Jumbo Ketchup</data></li>
 </ul>
 ```
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment                                     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------- |
+| Specification                                                                             | Status                   | Comment                               |
+| ----------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML WHATWG')}} | No change from {{Spec2('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                         |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}   | {{Spec2('HTML5 W3C')}}   | Initial definition.                   |
 
 ## Compatibilidade com navegadores
 

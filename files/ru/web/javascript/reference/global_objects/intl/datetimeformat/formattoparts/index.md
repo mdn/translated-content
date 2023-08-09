@@ -1,14 +1,6 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
-tags:
-  - DateTimeFormat
-  - Intl
-  - JavaScript
-  - Method
-  - Prototype
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 ---
 
 {{JSRef}}Метод **`Intl.DateTimeFormat.prototype.formatToParts()`** позволяет выполнять форматирование строк с учётом форматирования `DateTimeFormat`.
@@ -34,9 +26,9 @@ Intl.DateTimeFormat.prototype.formatToParts(date)
 
 ```js
 [
-  { type: 'day', value: '17' },
-  { type: 'weekday', value: 'Monday' }
-]
+  { type: "day", value: "17" },
+  { type: "weekday", value: "Monday" },
+];
 ```
 
 Возможные типы:
@@ -71,16 +63,16 @@ Intl.DateTimeFormat.prototype.formatToParts(date)
 ```js
 var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
-var formatter = new Intl.DateTimeFormat('ru', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
+var formatter = new Intl.DateTimeFormat("ru", {
+  weekday: "long",
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
   hour12: true,
-  timeZone: 'UTC'
+  timeZone: "UTC",
 });
 
 formatter.format(date);
@@ -94,33 +86,38 @@ formatter.formatToParts(date);
 
 // возвращаемое значение:
 [
-  { type: 'weekday',   value: 'понедельник'},
-  { type: 'literal',   value: ', '         },
-  { type: 'day',       value: '17'         },
-  { type: 'literal',   value: '.'          },
-  { type: 'month',     value: '12'         },
-  { type: 'literal',   value: '.'          },
-  { type: 'year',      value: '2012'       },
-  { type: 'literal',   value: 'г., '       },
-  { type: 'hour',      value: '3'          },
-  { type: 'literal',   value: ':'          },
-  { type: 'minute',    value: '00'         },
-  { type: 'literal',   value: ':'          },
-  { type: 'second',    value: '42'         },
-  { type: 'literal',   value: ' '          },
-  { type: 'dayPeriod', value: 'AM'         }
-]
+  { type: "weekday", value: "понедельник" },
+  { type: "literal", value: ", " },
+  { type: "day", value: "17" },
+  { type: "literal", value: "." },
+  { type: "month", value: "12" },
+  { type: "literal", value: "." },
+  { type: "year", value: "2012" },
+  { type: "literal", value: "г., " },
+  { type: "hour", value: "3" },
+  { type: "literal", value: ":" },
+  { type: "minute", value: "00" },
+  { type: "literal", value: ":" },
+  { type: "second", value: "42" },
+  { type: "literal", value: " " },
+  { type: "dayPeriod", value: "AM" },
+];
 ```
 
 Теперь информация доступна по отдельности и может быть отформатирована и объединена снова в пользовательском порядке. Например, используя {{jsxref("Array.prototype.map()")}}, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [инструкцию switch](/ru/docs/Web/JavaScript/Reference/Statements/switch), [шаблонные строки](/ru/docs/Web/JavaScript/Reference/template_strings) и {{jsxref("Array.prototype.reduce()")}}.
 
 ```js
-var dateString = formatter.formatToParts(date).map(({type, value}) => {
-  switch (type) {
-    case 'dayPeriod': return `<b>${value}</b>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var dateString = formatter
+  .formatToParts(date)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "dayPeriod":
+        return `<b>${value}</b>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 Здесь время суток будет выделено жирным с использованием метода `formatToParts()`.

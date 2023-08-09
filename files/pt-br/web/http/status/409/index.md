@@ -17,8 +17,8 @@ Conflitos são mais frequentes quando usado o método {{HTTPMethod("PUT")}}. Por
 
 ## Especificações
 
-| Especificação                                            | Título                                                                    |
-| -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Especificação                             | Título                                                                    |
+| ----------------------------------------- | ------------------------------------------------------------------------- |
 | {{RFC("7231", "409 Conflict" , "6.5.8")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Semântica e Conteúdo |
 
 ## Veja também

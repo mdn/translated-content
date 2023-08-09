@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ---
 
 {{JSRef}}

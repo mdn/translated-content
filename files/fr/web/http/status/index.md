@@ -1,7 +1,6 @@
 ---
 title: Codes de réponse HTTP
 slug: Web/HTTP/Status
-translation_of: Web/HTTP/Status
 ---
 
 {{HTTPSidebar}}

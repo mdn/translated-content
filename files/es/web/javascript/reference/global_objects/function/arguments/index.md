@@ -1,7 +1,6 @@
 ---
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/arguments
 ---
 
 {{JSRef("Objetos_globales", "Function")}} {{deprecated_header}}
@@ -21,14 +20,15 @@ En caso de recursividad, es decir, si la función `f` aparece varias veces en la
 ### Ejemplo
 
 ```js
-function f(n) { g(n-1) }
+function f(n) {
+  g(n - 1);
+}
 function g(n) {
   print("antes: " + g.arguments[0]);
-  if(n>0)
-    f(n);
+  if (n > 0) f(n);
   print("después: " + g.arguments[0]);
 }
-f(2)
+f(2);
 ```
 
 resultados:

@@ -1,7 +1,6 @@
 ---
 title: Filtres
 slug: Web/SVG/Tutorial/Filter_effects
-translation_of: Web/SVG/Tutorial/Filter_effects
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}

@@ -1,7 +1,6 @@
 ---
 title: "Location : reload()"
 slug: Web/API/Location/reload
-translation_of: Web/API/Location/reload
 ---
 
 {{ APIRef("HTML DOM") }}

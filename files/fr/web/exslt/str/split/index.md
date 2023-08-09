@@ -1,7 +1,6 @@
 ---
 title: split
 slug: Web/EXSLT/str/split
-translation_of: Web/EXSLT/str/split
 ---
 
 {{ XsltRef() }}

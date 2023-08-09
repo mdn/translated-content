@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 
 {{JSRef}}

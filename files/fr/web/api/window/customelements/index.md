@@ -1,7 +1,6 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
-translation_of: Web/API/Window/customElements
 ---
 
 {{APIRef}}

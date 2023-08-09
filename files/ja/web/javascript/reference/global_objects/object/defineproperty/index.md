@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ## 構文
 
 ```js
-Object.defineProperty(obj, prop, descriptor)
+Object.defineProperty(obj, prop, descriptor);
 ```
 
 ### 引数
@@ -69,29 +69,29 @@ Object.defineProperty(obj, prop, descriptor)
 // __proto__ を使うやり方
 var obj = {};
 var descriptor = Object.create(null); // 意図しないキーの継承を防止します。
-descriptor.value = 'static';
+descriptor.value = "static";
 
 // 既定で継承不可、変更不可、書換不可のプロパティとなります。
-Object.defineProperty(obj, 'key', descriptor);
+Object.defineProperty(obj, "key", descriptor);
 
 // 明示的な指定
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // 同じオブジェクトを再利用
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: value
-    }
-  );
+      value: value,
+    });
 
   // 値の代入で重複操作を防ぐ
   if (d.value !== value) d.value = value;
@@ -99,7 +99,7 @@ function withValue(value) {
   return d;
 }
 // このように使います。
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // freeze が利用できるなら、オブジェクトのプロトタイプのプロパティ
 // (value, get, set, enumerable, writable, configurable) を
@@ -118,26 +118,30 @@ var o = {}; // 新しいオブジェクトの生成
 
 // データ記述子により、defineProperty を用いて
 // オブジェクトプロパティを追加する例
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // o オブジェクトに 'a' プロパティが存在するようになり、その値は 37 となります
 
 // アクセサー記述子により、defineProperty を用いて
 // オブジェクトプロパティを追加する例
 var bValue = 38;
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   // メソッド名ショートハンドを利用しています(ES2015 の機能)。
   // 次のように書いているのと同じことです:
   // get: function() { return bValue; },
   // set: function(newValue) { bValue = newValue; },
-  get() { return bValue; },
-  set(newValue) { bValue = newValue; },
+  get() {
+    return bValue;
+  },
+  set(newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // o オブジェクトに 'b' プロパティが存在するようになり、
@@ -145,9 +149,11 @@ o.b; // 38
 // o.b は再定義されない限り、その値は常に bValue と同じです。
 
 // (訳注:データとアクセサーを)両方を混在させることはできません:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get() { return 0xdeadbeef; }
+  get() {
+    return 0xdeadbeef;
+  },
 });
 // TypeError が発生します。value はデータ記述子にのみ、
 // get はアクセサー記述子にのみ存在していなければなりません。
@@ -166,9 +172,9 @@ Object.defineProperty(o, 'conflict', {
 ```js
 var o = {}; // 新しいオブジェクトの生成
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
-  writable: false
+  writable: false,
 });
 
 console.log(o.a); // 37 がログ出力されます
@@ -177,16 +183,16 @@ o.a = 25; // エラーは発生しません
 console.log(o.a); // 37 がログ出力されます。代入文は動作しません。
 
 // strict mode
-(function() {
-  'use strict';
+(function () {
+  "use strict";
   var o = {};
-  Object.defineProperty(o, 'b', {
+  Object.defineProperty(o, "b", {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // TypeError がスローされます: "b" is read-only
   return o.b; // 上の行は動作せず 2 が返ります(訳注:正しくは「ここに制御は来ません」)
-}());
+})();
 ```
 
 例で見たように、書き込み不可のプロパティに書き込もうとしても変更されず、またエラーは発生しません。
@@ -197,26 +203,26 @@ console.log(o.a); // 37 がログ出力されます。代入文は動作しま�
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 2,
-  enumerable: false
+  enumerable: false,
 });
-Object.defineProperty(o, 'c', {
-  value: 3
+Object.defineProperty(o, "c", {
+  value: 3,
 }); // enumerable の既定値は false
 o.d = 4; // このようにプロパティを生成するとき、
-         // enumerable の既定値は true
-Object.defineProperty(o, Symbol.for('e'), {
+// enumerable の既定値は true
+Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, Symbol.for('f'), {
+Object.defineProperty(o, Symbol.for("f"), {
   value: 6,
-  enumerable: false
+  enumerable: false,
 });
 
 for (var i in o) {
@@ -226,20 +232,20 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
-o.propertyIsEnumerable('d'); // true
-o.propertyIsEnumerable(Symbol.for('e')); // true
-o.propertyIsEnumerable(Symbol.for('f')); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
+o.propertyIsEnumerable("d"); // true
+o.propertyIsEnumerable(Symbol.for("e")); // true
+o.propertyIsEnumerable(Symbol.for("f")); // false
 
-var p = { ...o }
-p.a // 1
-p.b // undefined
-p.c // undefined
-p.d // 4
-p[Symbol.for('e')] // 5
-p[Symbol.for('f')] // undefined
+var p = { ...o };
+p.a; // 1
+p.b; // undefined
+p.c; // undefined
+p.d; // 4
+p[Symbol.for("e")]; // 5
+p[Symbol.for("f")]; // undefined
 ```
 
 #### configurable 属性
@@ -248,25 +254,29 @@ p[Symbol.for('f')] // undefined
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
-  get() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get() {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', {
-  configurable: true
+Object.defineProperty(o, "a", {
+  configurable: true,
 }); // TypeError が発生
-Object.defineProperty(o, 'a', {
-  enumerable: true
+Object.defineProperty(o, "a", {
+  enumerable: true,
 }); // TypeError が発生
-Object.defineProperty(o, 'a', {
-  set() {}
+Object.defineProperty(o, "a", {
+  set() {},
 }); // TypeError が発生 (set は未定義であった)
-Object.defineProperty(o, 'a', {
-  get() { return 1; }
+Object.defineProperty(o, "a", {
+  get() {
+    return 1;
+  },
 }); // TypeError が発生 (新たな get は全く同じであるにもかかわらず)
-Object.defineProperty(o, 'a', {
-  value: 12
+Object.defineProperty(o, "a", {
+  value: 12,
 }); // TypeError が発生 ('configurable' が false でも 'value' は変更できますが、ここでは 'get' アクセサーがあるため変更できません)
 
 console.log(o.a); // logs 1
@@ -285,21 +295,21 @@ var o = {};
 
 o.a = 1;
 // これは以下と同じです。
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
 // その一方で、
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // これは以下と同じです。
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -312,18 +322,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
+  Object.defineProperty(this, "temperature", {
     get() {
-      console.log('get!');
+      console.log("get!");
       return temperature;
     },
     set(value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();
@@ -337,21 +349,20 @@ arc.getArchive(); // [{ val: 11 }, { val: 13 }]
 
 ```js
 var pattern = {
-    get() {
-        return 'I always return this string, ' +
-               'whatever you have assigned';
-    },
-    set() {
-        this.myname = 'this is my name string';
-    }
+  get() {
+    return "I always return this string, " + "whatever you have assigned";
+  },
+  set() {
+    this.myname = "this is my name string";
+  },
 };
 
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, "myproperty", pattern);
 }
 
 var instance = new TestDefineSetAndGet();
-instance.myproperty = 'test';
+instance.myproperty = "test";
 console.log(instance.myproperty);
 // I always return this string, whatever you have assigned
 
@@ -363,8 +374,7 @@ console.log(instance.myname); // this is my name string
 アクセサープロパティを継承されると、その派生クラスでもプロパティがアクセスされたり書き換えられるときに `get` と `set` が呼ばれます。これらのメソッドが値を保持するために変数を使っていると、すべてのオブジェクトがその値を共有することになります。
 
 ```js
-function myclass() {
-}
+function myclass() {}
 
 var value;
 Object.defineProperty(myclass.prototype, "x", {
@@ -373,7 +383,7 @@ Object.defineProperty(myclass.prototype, "x", {
   },
   set(x) {
     value = x;
-  }
+  },
 });
 
 var a = new myclass();
@@ -385,8 +395,7 @@ console.log(b.x); // 1
 この問題を回避する方法は値を別のプロパティで保持することです。`get` と `set` メソッド内で `this` はアクセス／変更されようとしているプロパティを納めるオブジェクトを指しています。
 
 ```js
-function myclass() {
-}
+function myclass() {}
 
 Object.defineProperty(myclass.prototype, "x", {
   get() {
@@ -394,7 +403,7 @@ Object.defineProperty(myclass.prototype, "x", {
   },
   set(x) {
     this.stored_x = x;
-  }
+  },
 });
 
 var a = new myclass();
@@ -406,13 +415,12 @@ console.log(b.x); // undefined
 アクセサープロパティとは違い、データプロパティは常にオブジェクト自身に格納されるのであって、prototype に格納されるわけではありません。しかし、書き込み不可能なデータプロパティを継承している場合、継承先オブジェクトでも書き換えは阻止されます。
 
 ```js
-function myclass() {
-}
+function myclass() {}
 
 myclass.prototype.x = 1;
 Object.defineProperty(myclass.prototype, "y", {
   writable: false,
-  value: 1
+  value: 1,
 });
 
 var a = new myclass();
