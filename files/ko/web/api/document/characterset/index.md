@@ -18,7 +18,7 @@ slug: Web/API/Document/characterSet
 <!-- "ISO-8859-1"이나 "UTF-8" 등, 문서의 캐릭터 셋 기록 -->
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

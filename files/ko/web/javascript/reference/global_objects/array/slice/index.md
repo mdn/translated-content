@@ -2,6 +2,7 @@
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 메서드는 어떤 배열의 `begin` 부터 `end` 까지(`end` 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환합니다. 원본 배열은 바뀌지 않습니다.
@@ -47,8 +48,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 ### 기존 배열의 일부 반환
 
 ```js
-let fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
-let citrus = fruits.slice(1, 3)
+let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+let citrus = fruits.slice(1, 3);
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
@@ -60,24 +61,24 @@ let citrus = fruits.slice(1, 3)
 
 ```js
 // Using slice, create newCar from myCar.
-let myHonda = { color: 'red', wheels: 4, engine: { cylinders: 4, size: 2.2 } }
-let myCar = [myHonda, 2, 'cherry condition', 'purchased 1997']
-let newCar = myCar.slice(0, 2)
+let myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
+let myCar = [myHonda, 2, "cherry condition", "purchased 1997"];
+let newCar = myCar.slice(0, 2);
 
 // Display the values of myCar, newCar, and the color of myHonda
 //  referenced from both arrays.
-console.log('myCar = ' + JSON.stringify(myCar))
-console.log('newCar = ' + JSON.stringify(newCar))
-console.log('myCar[0].color = ' + myCar[0].color)
-console.log('newCar[0].color = ' + newCar[0].color)
+console.log("myCar = " + JSON.stringify(myCar));
+console.log("newCar = " + JSON.stringify(newCar));
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 
 // Change the color of myHonda.
-myHonda.color = 'purple'
-console.log('The new color of my Honda is ' + myHonda.color)
+myHonda.color = "purple";
+console.log("The new color of my Honda is " + myHonda.color);
 
 // Display the color of myHonda referenced from both arrays.
-console.log('myCar[0].color = ' + myCar[0].color)
-console.log('newCar[0].color = ' + newCar[0].color)
+console.log("myCar[0].color = " + myCar[0].color);
+console.log("newCar[0].color = " + newCar[0].color);
 ```
 
 스크립트를 실행하면 다음과 같은 기록을 남깁니다.
@@ -110,14 +111,14 @@ let list1 = list(1, 2, 3); // [1, 2, 3]
 아무튼, 다음과 같이 {{jsxref("Function.prototype.bind", "bind()")}}를 사용해 줄일 수 있습니다.
 
 ```js
-let unboundSlice = Array.prototype.slice
-let slice = Function.prototype.call.bind(unboundSlice)
+let unboundSlice = Array.prototype.slice;
+let slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
-  return slice(arguments)
+  return slice(arguments);
 }
 
-let list1 = list(1, 2, 3) // [1, 2, 3]
+let list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
 ## 명세

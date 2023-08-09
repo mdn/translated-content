@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ## 구문
 
 ```js
-    condition ? exprIfTrue : exprIfFalse
+condition ? exprIfTrue : exprIfFalse;
 ```
 
 ### 매개변수
@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 
 ```js
 var age = 26;
-var beverage = (age >= 21) ? "Beer" : "Juice";
+var beverage = age >= 21 ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 ```
 
@@ -43,13 +43,13 @@ console.log(beverage); // "Beer"
 `null`일 수 있는 값을 처리할 때 흔히 사용됩니다:
 
 ```js
-let greeting = person => {
-  let name = person ? person.name : `stranger`
-  return `Howdy, ${name}`
-}
+let greeting = (person) => {
+  let name = person ? person.name : `stranger`;
+  return `Howdy, ${name}`;
+};
 
-console.log(greeting({name: `Alice`}));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: `Alice` })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### 연결된 조건문 처리하기

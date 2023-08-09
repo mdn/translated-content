@@ -21,9 +21,9 @@ Si `OP1` y `OP2` tienen diferente niveles de precedencia (véase la tabla debajo
 con la precedencia más alta va primero y la asociatividad no importa. Observe como la multiplicación
 tiene mayor precedencia que la suma y se ejecuta primero, a pesar de que la suma se escribe primero en el código.
 
-```js
+```js-nolint
 console.log(3 + 10 * 2); // muestra 23
-console.log(3 + 10 * 2); // muestra 23 porque los paréntesis son superfluos
+console.log(3 + (10 * 2)); // muestra 23 porque los paréntesis son superfluos
 console.log((3 + 10) * 2); // muestra 26 porque los paréntesis cambian el orden
 ```
 

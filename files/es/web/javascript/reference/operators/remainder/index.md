@@ -33,10 +33,10 @@ Operador: var1 % var2
 
 ### Resto con dividendo negativo
 
-```js
-(-12 % 5) - // -2
-  (1 % 2) - // -1
-  (4 % 2); // -0
+```js-nolint
+-12 % 5 // -2
+-1 % 2  // -1
+-4 % 2  // -0
 ```
 
 ### Resto con NaN

@@ -1,6 +1,7 @@
 ---
 title: EventListener
 slug: conflicting/Web/API/EventTarget/addEventListener
+original_slug: Web/API/EventListener
 ---
 
 {{APIRef("DOM Events")}}

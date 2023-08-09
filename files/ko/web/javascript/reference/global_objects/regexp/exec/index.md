@@ -18,7 +18,7 @@ JavaScript {{jsxref("RegExp")}} 객체는 {{jsxref("RegExp.global", "global")}} 
 ## 구문
 
 ```js
-regexObj.exec(str)
+regexObj.exec(str);
 ```
 
 ### 매개변수
@@ -40,8 +40,8 @@ regexObj.exec(str)
 // Match "quick brown" followed by "jumps", ignoring characters in between
 // Remember "brown" and "jumps"
 // Ignore case
-let re = /quick\s(brown).+?(jumps)/ig;
-let result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+let re = /quick\s(brown).+?(jumps)/gi;
+let result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 다음의 표는 이 스크립트의 결과에 대해 보여줍니다.
@@ -127,11 +127,11 @@ If your regular expression uses the "`g`" flag, you can use the `exec()` method 
 
 ```js
 var myRe = /ab*/g;
-var str = 'abbcdefabh';
+var str = "abbcdefabh";
 var myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  var msg = 'Found ' + myArray[0] + '. ';
-  msg += 'Next match starts at ' + myRe.lastIndex;
+  var msg = "Found " + myArray[0] + ". ";
+  msg += "Next match starts at " + myRe.lastIndex;
   console.log(msg);
 }
 ```
@@ -150,7 +150,7 @@ Note: Do not place the regular expression literal (or {{jsxref("RegExp")}} const
 You can also use `exec()` without creating a {{jsxref("RegExp")}} object:
 
 ```js
-var matches = /(hello \S+)/.exec('This is a hello world!');
+var matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 

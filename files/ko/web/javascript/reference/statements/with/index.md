@@ -12,8 +12,9 @@ slug: Web/JavaScript/Reference/Statements/with
 ## Syntax
 
 ```js
-    with (expression)
-      statement
+with (expression) {
+  statement
+}
 ```
 
 - `expression`

@@ -35,9 +35,9 @@ console.log("Esto es lo que un " + subText.sub() + " parece.");
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:
 
-```html
-Esto es lo que <sup>superscript</sup> parece. Esto es lo que
-<sub>subscript</sub> parece.
+```html-nolint
+Esto es lo que <sup>superscript</sup> parece.
+Esto es lo que <sub>subscript</sub> parece.
 ```
 
 ### Vea También
