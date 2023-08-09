@@ -58,7 +58,7 @@ if (typeof foo !== "undefined") {
 }
 ```
 
-## See also
+## 같이 보기
 
 - {{jsxref("undefined")}}
 - {{jsxref("null")}}

@@ -193,7 +193,7 @@ var restoredSession = JSON.parse(localStorage.getItem("session"));
 console.log(restoredSession);
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

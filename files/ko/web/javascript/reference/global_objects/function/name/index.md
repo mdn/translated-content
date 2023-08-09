@@ -82,7 +82,7 @@ var b = new a();
 console.log(b.constructor.name); // logs "a"
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
