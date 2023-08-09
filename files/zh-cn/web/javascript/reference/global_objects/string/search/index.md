@@ -48,7 +48,7 @@ search(regexp)
 const str = "hey JudE";
 const re = /[A-Z]/;
 const reDot = /[.]/;
-console.log(str.search(re)); // returns 4, which is the index of the first capital letter "J"
+console.log(str.search(re)); // 返回 4，这是第一个大写字母“J”的索引
 console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
 ```
 
