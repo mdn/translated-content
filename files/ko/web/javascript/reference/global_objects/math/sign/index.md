@@ -49,7 +49,7 @@ Math.sign("foo"); // NaN
 Math.sign(); // NaN
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
