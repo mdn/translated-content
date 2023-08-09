@@ -4,7 +4,6 @@
 #    yarn content add-redirect <fromURL> <toURL>
 #
 # FROM-URL	TO-URL
-/ko/docs/AJAX	/ko/docs/Web/Guide/AJAX
 /ko/docs/AJAX/Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ko/docs/AJAX:Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
@@ -888,7 +887,6 @@
 /ko/docs/XPath/Functions/concat	/ko/docs/Web/XPath/Functions/concat
 /ko/docs/XPath/Functions/contains	/ko/docs/Web/XPath/Functions/contains
 /ko/docs/XPath/Functions/count	/ko/docs/Web/XPath/Functions/count
-/ko/docs/XPath/Functions/current	/ko/docs/Web/XPath/Functions/current
 /ko/docs/XPath/Functions/document	/ko/docs/Web/XPath/Functions/document
 /ko/docs/XPath/Functions/element-available	/ko/docs/Web/XPath/Functions/element-available
 /ko/docs/XPath/Functions/false	/ko/docs/Web/XPath/Functions/false
@@ -939,7 +937,6 @@
 /ko/docs/XPath:Functions:concat	/ko/docs/Web/XPath/Functions/concat
 /ko/docs/XPath:Functions:contains	/ko/docs/Web/XPath/Functions/contains
 /ko/docs/XPath:Functions:count	/ko/docs/Web/XPath/Functions/count
-/ko/docs/XPath:Functions:current	/ko/docs/Web/XPath/Functions/current
 /ko/docs/XPath:Functions:document	/ko/docs/Web/XPath/Functions/document
 /ko/docs/XPath:Functions:element-available	/ko/docs/Web/XPath/Functions/element-available
 /ko/docs/XPath:Functions:false	/ko/docs/Web/XPath/Functions/false
