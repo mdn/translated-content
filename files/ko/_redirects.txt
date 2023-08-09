@@ -101,7 +101,6 @@
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/this	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Core_JavaScript_1.5_Reference/Operators/void	/ko/docs/Web/JavaScript/Reference/Operators/void
-/ko/docs/Core_JavaScript_1.5_Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Core_JavaScript_1.5_Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/Core_JavaScript_1.5_Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
 /ko/docs/Core_JavaScript_1.5_Reference:About	/ko/docs/Web/JavaScript/Reference
@@ -115,7 +114,6 @@
 /ko/docs/Core_JavaScript_1.5_Reference:Global_Properties	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference:Objects:Function	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ko/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:this_Operator	/ko/docs/Web/JavaScript/Reference/Operators/this
-/ko/docs/Core_JavaScript_1.5_Reference:Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/DOM	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/DOM/Notification.permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/DOM/document	/ko/docs/Web/API/Document
@@ -247,7 +245,6 @@
 /ko/docs/JavaScript/Reference/Operators/Special_Operators	/ko/docs/Web/JavaScript/Reference/Operators
 /ko/docs/JavaScript/Reference/Operators/this	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/JavaScript/Reference/Operators/void	/ko/docs/Web/JavaScript/Reference/Operators/void
-/ko/docs/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/JavaScript/Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/JavaScript/Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
 /ko/docs/JavaScript_modules	/ko/docs/Web/JavaScript/Guide/Modules
@@ -680,7 +677,6 @@
 /ko/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 /ko/docs/Web/HTTP/Index	/ko/docs/Web/HTTP
-/ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
 /ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript
@@ -692,17 +688,12 @@
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/ko/docs/Web/JavaScript/Guide
-/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ko/docs/Web/JavaScript/Guide/Grammar_and_types
-/ko/docs/Web/JavaScript/Guide/메타_프로그래밍	/ko/docs/Web/JavaScript/Guide/Meta_programming
 /ko/docs/Web/JavaScript/Guide/소개	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/정규식	/ko/docs/Web/JavaScript/Guide/Regular_expressions
-/ko/docs/Web/JavaScript/Guide/정규식/Assertions	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
-/ko/docs/Web/JavaScript/Guide/정규식/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /ko/docs/Web/JavaScript/Guide/함수	/ko/docs/Web/JavaScript/Guide/Functions
 /ko/docs/Web/JavaScript/Reference/About	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
-/ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
@@ -717,7 +708,6 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
-/ko/docs/Web/JavaScript/Reference/Global_Objects/Locale	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Locale/language	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 /ko/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
@@ -748,7 +738,6 @@
 /ko/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ko/docs/Web/JavaScript/Reference/Operators/연산자_우선순위	/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence
 /ko/docs/Web/JavaScript/Reference/Properties_Index	/ko/docs/Web/JavaScript/Reference
-/ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/Web/JavaScript/Reference/Strict_mode
 /ko/docs/Web/JavaScript/Shells	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript

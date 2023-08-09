@@ -197,7 +197,7 @@ if ("Promise" in window) {
 
 이미지를 로드하기 위해 `Promise` 및 {{domxref("XMLHttpRequest")}}를 사용하는 또 다른 간단한 예는 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 저장소에서 이용할 수 있습니다. [실제 예](https://mdn.github.io/js-examples/promises-test/)를 볼 수도 있습니다. 각 단계에 주석이 붙어있어, 프로미스 및 XHR 구조를 차근차근 따라갈 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

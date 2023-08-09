@@ -29,7 +29,7 @@ function calculateCircumference(radius) {
 calculateCircumference(1); // 6.283185307179586
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
