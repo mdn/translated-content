@@ -49,11 +49,9 @@
 /ko/docs/CSS/background-color	/ko/docs/Web/CSS/background-color
 /ko/docs/CSS/background-image	/ko/docs/Web/CSS/background-image
 /ko/docs/CSS/border-radius	/ko/docs/Web/CSS/border-radius
-/ko/docs/CSS/box-shadow	/ko/docs/Web/CSS/box-shadow
 /ko/docs/CSS/cursor	/ko/docs/Web/CSS/cursor
 /ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/CSS/initial_value	/ko/docs/Web/CSS/initial_value
-/ko/docs/CSS/text-shadow	/ko/docs/Web/CSS/text-shadow
 /ko/docs/CSS/transform	/ko/docs/Web/CSS/transform
 /ko/docs/CSS/z-index	/ko/docs/Web/CSS/z-index
 /ko/docs/CSS/시작하기	/en-US/docs/Learn/CSS/First_steps
@@ -523,7 +521,6 @@
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_backgrounds_and_borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
-/ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/Web/CSS/CSS_Color	/ko/docs/Web/CSS/CSS_colors
@@ -548,7 +545,6 @@
 /ko/docs/Web/CSS/CSS_Lists_and_Counters	/ko/docs/Web/CSS/CSS_lists
 /ko/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation	/ko/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
-/ko/docs/Web/CSS/CSS_Logical_Properties	/ko/docs/Web/CSS/CSS_logical_properties_and_values
 /ko/docs/Web/CSS/CSS_Masks	/ko/docs/Web/CSS/CSS_masking
 /ko/docs/Web/CSS/CSS_Pages	/ko/docs/Web/CSS/CSS_paged_media
 /ko/docs/Web/CSS/CSS_Positioning	/ko/docs/Web/CSS/CSS_positioned_layout
@@ -645,7 +641,6 @@
 /ko/docs/Web/Guide/Mobile/Separate_sites	/ko/docs/Web/Progressive_web_apps
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
-/ko/docs/Web/HTML/Applying_color	/ko/docs/Web/CSS/CSS_colors/Applying_color
 /ko/docs/Web/HTML/Block-level_elements	/ko/docs/Glossary/Block-level_content
 /ko/docs/Web/HTML/Canvas	/ko/docs/Web/API/Canvas_API
 /ko/docs/Web/HTML/Canvas/Manipulating_video_using_canvas	/ko/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
