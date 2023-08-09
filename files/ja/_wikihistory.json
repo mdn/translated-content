@@ -30534,10 +30534,6 @@
     "modified": "2020-09-30T15:30:24.568Z",
     "contributors": ["chrisdavidmills", "dvincent"]
   },
-  "conflicting/Mozilla/Add-ons/WebExtensions": {
-    "modified": "2019-03-18T21:06:58.086Z",
-    "contributors": ["lv7777"]
-  },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
