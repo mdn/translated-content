@@ -1,13 +1,17 @@
 ---
 title: JavaScript의 타입과 자료구조
 slug: Web/JavaScript/Data_structures
+l10n:
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{jsSidebar("More")}}
 
 모든 프로그래밍 언어에는 내장된 자료구조가 존재하지만 보통 그 내용은 언어마다 다릅니다. 이 글에서는 JavaScript에서 사용할 수 있는 내장 자료구조와 그 속성에 대해 알아보겠습니다. 그러면 이 자료구조들을 다른 자료구조 개발에 사용할 수 있을 것입니다. 가능하다면 다른 언어와도 비교해보겠습니다.
 
-## 동적 타입
+The [language overview](/en-US/docs/Web/JavaScript/Language_overview) offers a similar summary of the common data types, but with more comparisons to other languages.
+
+## Dynamic and weak typing
 
 JavaScript는 느슨한 타입(loosely typed)의 동적(dynamic) 언어입니다. JavaScript의 변수는 어떤 특정 타입과 연결되지 않으며, 모든 타입의 값으로 할당 (및 재할당) 가능합니다.
 
@@ -16,6 +20,16 @@ let foo = 42; // foo가 숫자
 foo = "bar"; // foo가 이제 문자열
 foo = true; // foo가 이제 불리언
 ```
+
+JavaScript is also a [weakly typed](https://en.wikipedia.org/wiki/Strong_and_weak_typing) language, which means it allows implicit type conversion when an operation involves mismatched types, instead of throwing type errors.
+
+```js
+const foo = 42; // foo is a number
+const result = foo + "1"; // JavaScript coerces foo to a string, so it can be concatenated with the other operand
+console.log(result); // 421
+```
+
+Implicit coercions is very convenient, but can be a potential footgun if developers didn't intend to do the conversion, or intend to convert in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
 
 ## JavaScript의 타입
 
@@ -35,17 +49,46 @@ JavaScript 언어의 타입은 [원시 값](#원시_값)과 [객체](#객체)로
 
 객체를 제외한 모든 타입은 불변 값(변경할 수 없는 값)을 정의합니다. 예를 들어 (C 언어와는 달리) 문자열은 불변합니다. 이런 일련의 타입을 "원시 값"이라고 합니다.
 
+All primitive types, except [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), can be tested by the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator. `typeof null` returns `"object"`, so one has to use `=== null` to test for `null`.
+
+All primitive types, except [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), have their corresponding object wrapper types, which provide useful methods for working with the primitive values. For example, the [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object provides methods like [`toExponential()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential). When a property is accessed on a primitive value, JavaScript automatically wraps the value into the corresponding wrapper object and accesses the property on the object instead. However, accessing a property on `null` or `undefined` throws a `TypeError` exception, which necessitates the introduction of the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator.
+
+| Type                         | `typeof` return value | Object wrapper        |
+| ---------------------------- | --------------------- | --------------------- |
+| [Null](#null_type)           | `"object"`            | N/A                   |
+| [Undefined](#undefined_type) | `"undefined"`         | N/A                   |
+| [Boolean](#boolean_type)     | `"boolean"`           | {{jsxref("Boolean")}} |
+| [Number](#number_type)       | `"number"`            | {{jsxref("Number")}}  |
+| [BigInt](#bigint_type)       | `"bigint"`            | {{jsxref("BigInt")}}  |
+| [String](#string_type)       | `"string"`            | {{jsxref("String")}}  |
+| [Symbol](#symbol_type)       | `"symbol"`            | {{jsxref("Symbol")}}  |
+
+The object wrapper classes' reference pages contain more information about the methods and properties available for each type, as well as detailed descriptions for the semantics of the primitive types themselves.
+
+### Null type
+
+The Null type is inhabited by exactly one value: [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+
+### Undefined type
+
+The Undefined type is inhabited by exactly one value: [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+
+Conceptually, `undefined` indicates the absence of a _value_, while `null` indicates the absence of an _object_ (which could also make up an excuse for [`typeof null === "object"`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)). The language usually defaults to `undefined` when something is devoid of a value:
+
+- A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement with no value (`return;`) implicitly returns `undefined`.
+- Accessing a nonexistent [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) property (`obj.iDontExist`) returns `undefined`.
+- A variable declaration without initialization (`let x;`) implicitly initializes the variable to `undefined`.
+- Many methods, such as {{jsxref("Array.prototype.find()")}} and {{jsxref("Map.prototype.get()")}}, return `undefined` when no element is found.
+
+`null` is used much less often in the core language. The most important place is the end of the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) — subsequently, methods that interact with prototypes, such as {{jsxref("Object.getPrototypeOf()")}}, {{jsxref("Object.create()")}}, etc., accept or return `null` instead of `undefined`.
+
+`null` is a [keyword](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords), but `undefined` is a normal [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) that happens to be a global property. In practice, the difference is minor, since `undefined` should not be redefined or shadowed.
+
 ### Boolean 타입
 
-Boolean 타입은 논리 요소를 나타내며 `true`와 `false` 두 가지의 값을 가질 수 있습니다. {{glossary("Boolean", "불리언")}}과 {{jsxref("Boolean")}}에서 더 자세히 알아보세요.
+{{jsxref("Boolean")}} 타입은 논리 요소를 나타내며 `true`와 `false` 두 가지의 값을 가질 수 있습니다. {{glossary("Boolean", "불리언")}}과 {{jsxref("Boolean")}}에서 더 자세히 알아보세요.
 
-### Null 타입
-
-Null 타입은 `null` 하나의 값만 가질 수 있습니다. {{glossary("Null")}}과 {{jsxref("null")}}에서 더 자세히 알아보세요.
-
-### Undefined 타입
-
-값을 할당하지 않은 변수는 `undefined` 값을 가집니다. {{glossary("Undefined")}}와 {{jsxref("undefined")}}에서 더 자세히 알아보세요.
+Boolean values are usually used for conditional operations, including [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator), [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
 ### Number 타입
 
@@ -315,24 +358,9 @@ JavaScript 객체는 키와 값 사이의 맵핑입니다. 키는 문자열 또�
 
 보통 DOM 노드에 데이터를 연결할 땐 해당 객체에 직접 속성을 추가하거나 `data-*` 특성을 사용하겠지만, 같은 맥락 아래에서라면 이렇게 추가한 데이터를 모든 스크립트에서 다 사용할 수 있다는 문제가 있습니다. `Map`과 `WeakMap`을 사용하면 비공개 데이터를 객체에 쉽게 바인딩 할 수 있습니다.
 
-### 구조화된 자료: JSON
+## See also
 
-JSON(**J**ava**S**cript **O**bject **N**otation)은 경량 데이터 교환 형식으로, JavaScript에서 파생됐지만 많은 프로그래밍 언어에서 사용하고 있습니다. JSON은 범용 데이터 구조를 구성합니다.
-
-{{glossary("JSON")}}과 {{jsxref("JSON")}}에서 더 자세히 알아보세요.
-
-### 표준 라이브러리의 더 많은 객체
-
-JavaScript는 내장 객체로 구성된 표준 라이브러리를 포함합니다.
-
-[참고서](/ko/docs/Web/JavaScript/Reference/Global_Objects)에서 내장 객체들에 대해 알아보세요.
-
-## `typeof` 연산자를 사용한 타입 판별
-
-`typeof` 연산자를 사용하면 변수의 타입을 알아낼 수 있습니다.
-
-[참고서](/ko/docs/Web/JavaScript/Reference/Operators/typeof)에서 사용법과 주의사항에 대해 알아보세요.
-
-## 같이 보기
-
-- [ECMAScript 명세의 데이터 타입과 값](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
+- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
+- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
+- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html)

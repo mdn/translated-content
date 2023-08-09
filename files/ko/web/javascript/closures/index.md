@@ -1,11 +1,13 @@
 ---
 title: 클로저
 slug: Web/JavaScript/Closures
+l10n:
+  sourceCommit: 60d5d8f18ee6bc48949c228bf236529f89a8cca7
 ---
 
 {{jsSidebar("Intermediate")}}
 
-**클로저**는 함수와 함수가 선언된 어휘적 환경의 조합입니다. 클로저를 이해하려면 자바스크립트가 어떻게 변수의 유효범위를 지정하는지(Lexical scoping)를 먼저 이해해야 한다.
+A **closure** is the combination of a function bundled together (enclosed) with references to its surrounding state (the **lexical environment**). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 
 ## 어휘적 범위 지정(Lexical scoping)
 
@@ -23,17 +25,15 @@ function init() {
 init();
 ```
 
-`init()`은 지역 변수 `name`과 함수 `displayName()`을 생성한다. `displayName()`은
-`init()` 안에 정의된 내부 함수이며 `init()` 함수 본문에서만 사용할 수 있다. 여기서 주의할 점은 `displayName()` 내부엔 자신만의 지역 변수가 없다는 점이다. 그런데 함수 내부에서 외부 함수의 변수에 접근할 수 있기 때문에 `displayName()` 역시 부모 함수 `init()`에서 선언된 변수 `name`에 접근할 수 있다. 만약 `displayName()`가 자신만의 `name`변수를 가지고 있었다면, `name`대신 `this.name`을 사용했을 것이다.
+`init()` creates a local variable called `name` and a function called `displayName()`. The `displayName()` function is an inner function that is defined inside `init()` and is available only within the body of the `init()` function. Note that the `displayName()` function has no local variables of its own. However, since inner functions have access to the variables of outer functions, `displayName()` can access the variable `name` declared in the parent function, `init()`.
 
-{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
+Run the code using [this JSFiddle link](https://jsfiddle.net/3dxck52m/) and notice that the `console.log()` statement within the `displayName()` function successfully displays the value of the `name` variable, which is declared in its parent function. This is an example of _lexical scoping_, which describes how a parser resolves variable names when functions are nested. The word _lexical_ refers to the fact that lexical scoping uses the location where a variable is declared within the source code to determine where that variable is available. Nested functions have access to variables declared in their outer scope.
 
-위 코드를 [실행](http://jsfiddle.net/xAFs9/3/)하면 `displayName()` 함수 내의
-`alert()`문이 부모 함수에서 정의한 변수 `name`의 값을 성공적으로 출력한다. 이 예시를 통해 함수가 중첩된 상황에서 파서가 어떻게 변수를 처리하는지 알 수 있다. 이는 어휘적 범위 지정(lexical scoping)의 한 예이다. 여기서 "lexical"이란, 어휘적 범위 지정(lexical scoping) 과정에서 변수가 어디에서 사용 가능한지 알기 위해 그 변수가 소스코드 내 어디에서 선언되었는지 고려한다는 것을 의미한다. 단어 "lexical"은 이런 사실을 나타낸다. 중첩된 함수는 외부 범위(scope)에서 선언한 변수에도 접근할 수 있다.
+In this particular example, the scope is called a _function scope_, because the variable is accessible and only accessible within the function body where it's declared.
 
 ### `let`과 `const`를 사용한 범위 지정
 
-ES6 이전 전통적인 JavaScript에는 함수 스코프와 전역 스코프 두 가지만 존재했다. `var`로 선언한 변수는 함수 내부 또는 외부에서 선언되었는지에 따라 함수 스코프 또는 전역 스코프를 가진다. 이때, 중괄호로 표시된 블록이 스코프를 생성하지 않는다는 점에서 혼란을 일으킬 수 있다.
+Traditionally (before ES6), JavaScript only had two kinds of scopes: _function scope_ and _global scope_. Variables declared with `var` are either function-scoped or global-scoped, depending on whether they are declared within a function or outside a function. This can be tricky, because blocks with curly braces do not create scopes:
 
 ```js
 if (Math.random() > 0.5) {
@@ -65,18 +65,15 @@ console.log(x); // ReferenceError: x is not defined
 
 ```js
 function makeFunc() {
-  var name = "Mozilla";
+  const name = "Mozilla";
   function displayName() {
-    alert(name);
+    console.log(name);
   }
   return displayName;
 }
 
-var myFunc = makeFunc();
-//myFunc변수에 displayName을 리턴함
-//유효범위의 어휘적 환경을 유지
+const myFunc = makeFunc();
 myFunc();
-//리턴된 displayName 함수를 실행(name 변수에 접근)
 ```
 
 이 코드는 바로 전의 예제와 완전히 동일한 결과가 실행된다. 하지만 흥미로운 차이는 `displayName()`함수가 실행되기 전에 외부함수인 `makeFunc()`로부터 리턴되어 `myFunc` 변수에 저장된다는 것이다.
@@ -90,20 +87,16 @@ myFunc();
 
 ```js
 function makeAdder(x) {
-  var y = 1;
-  return function (z) {
-    y = 100;
-    return x + y + z;
+  return function (y) {
+    return x + y;
   };
 }
 
-var add5 = makeAdder(5);
-var add10 = makeAdder(10);
-//클로저에 x와 y의 환경이 저장됨
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
 
-console.log(add5(2)); // 107 (x:5 + y:100 + z:2)
-console.log(add10(2)); // 112 (x:10 + y:100 + z:2)
-//함수 실행 시 클로저에 저장된 x, y값에 접근하여 값을 계산
+console.log(add5(2)); // 7
+console.log(add10(2)); // 12
 ```
 
 이 예제에서 단일 인자 `x`를 받아서 새 함수를 반환하는 함수 `makeAdder(x)`를 정의했다. 반환되는 함수는 단일인자 z를 받아서 x와 y와 z의 합을 반환한다.
@@ -144,13 +137,13 @@ h2 {
 ```js
 function makeSizer(size) {
   return function () {
-    document.body.style.fontSize = size + "px";
+    document.body.style.fontSize = `${size}px`;
   };
 }
 
-var size12 = makeSizer(12);
-var size14 = makeSizer(14);
-var size16 = makeSizer(16);
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
 ```
 
 `size12`, `size14`, `size16`은 body 요소의 글자 크기를 각각 12, 14, 16 픽셀로 바꾸는 함수이다. 이 함수들을 아래처럼 버튼들에(이 경우에는 링크) 연결할 수 있다.
@@ -162,14 +155,12 @@ document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/","","200")}}
-
-다음 링크로 실행해보자. [JSFiddle](https://jsfiddle.net/vnkuZ/7726/)
+Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
 
 ## 클로저를 이용해서 프라이빗 메소드 (private method) 흉내내기
 
@@ -180,68 +171,76 @@ document.getElementById("size-16").onclick = size16;
 아래 코드는 프라이빗 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를 사용하는 방법을 보여준다. 이렇게 클로저를 사용하는 것을 [모듈 패턴](https://www.google.com/search?q=javascript+module+pattern)이라 한다.
 
 ```js
-var counter = (function () {
-  var privateCounter = 0;
+const counter = (function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
+
   return {
-    increment: function () {
+    increment() {
       changeBy(1);
     },
-    decrement: function () {
+
+    decrement() {
       changeBy(-1);
     },
-    value: function () {
+
+    value() {
       return privateCounter;
     },
   };
 })();
 
-console.log(counter.value()); // logs 0
+console.log(counter.value()); // 0.
+
 counter.increment();
 counter.increment();
-console.log(counter.value()); // logs 2
+console.log(counter.value()); // 2.
+
 counter.decrement();
-console.log(counter.value()); // logs 1
+console.log(counter.value()); // 1.
 ```
 
 이전 예제에서 각 클로저들이 고유한 문법적 환경을 가졌지만 여기서 우리는 `counter.increment`, `counter.decrement`, `counter.value` 세 함수에 의해 공유되는 하나의 어휘적 환경을 만든다.
 
-공유되는 어휘적 환경은 실행되는 익명 함수 안에서 만들어진다. 이 익명 함수는 정의되는 즉시 실행된다. 이 어휘적 환경은 두 개의 프라이빗 아이템을 포함한다. 하나는 `privateCounter`라는 변수이고 나머지 하나는 `changeBy`라는 함수이다. 둘 다 익명 함수 외부에서 접근될 수 없다. 대신에 익명 래퍼에서 반환된 세 개의 퍼블릭 함수를 통해서만 접근되어야만 한다.
+The shared lexical environment is created in the body of an anonymous function, _which is executed as soon as it has been defined_ (also known as an [IIFE](/en-US/docs/Glossary/IIFE)). 이 어휘적 환경은 두 개의 프라이빗 아이템을 포함한다. 하나는 `privateCounter`라는 변수이고 나머지 하나는 `changeBy`라는 함수이다. 둘 다 익명 함수 외부에서 접근될 수 없다. 대신에 익명 래퍼에서 반환된 세 개의 퍼블릭 함수를 통해서만 접근되어야만 한다.
 
 위의 세 가지 퍼블릭 함수는 같은 환경을 공유하는 클로저다. 자바스크립트의 어휘적 유효 범위 덕분에 세 함수 각각 `privateCounter` 변수와 `changeBy` 함수에 접근할 수 있다.
 
-카운터를 생성하는 익명 함수를 정의하고 그 함수를 즉시 호출하고 결과를 `counter` 변수에 할당하는 것을 알아차렸을 것이다. 이 함수를 별도의 변수 `makeCounter` 저장하고 이 변수를 이용해 여러 개의 카운터를 만들 수 있다.
-
 ```js
-var makeCounter = function () {
-  var privateCounter = 0;
+const makeCounter = function () {
+  let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function () {
+    increment() {
       changeBy(1);
     },
-    decrement: function () {
+
+    decrement() {
       changeBy(-1);
     },
-    value: function () {
+
+    value() {
       return privateCounter;
     },
   };
 };
 
-var counter1 = makeCounter();
-var counter2 = makeCounter();
-alert(counter1.value()); /* 0 */
+const counter1 = makeCounter();
+const counter2 = makeCounter();
+
+console.log(counter1.value()); // 0.
+
 counter1.increment();
 counter1.increment();
-alert(counter1.value()); /* 2 */
+console.log(counter1.value()); // 2.
+
 counter1.decrement();
-alert(counter1.value()); /* 1 */
-alert(counter2.value()); /* 0 */
+console.log(counter1.value()); // 1.
+console.log(counter2.value()); // 0.
 ```
 
 두 개의 카운터가 어떻게 다른 카운터와 독립성을 유지하는지 주목해보자. 각 클로저는 그들 고유의 클로저를 통한 `privateCounter` 변수의 다른 버전을 참조한다. 각 카운터가 호출될 때마다; 하나의 클로저에서 변수 값을 변경해도 다른 클로저의 값에는 영향을 주지 않는다.
@@ -252,53 +251,118 @@ alert(counter2.value()); /* 0 */
 
 모든 클로저에는 세가지 스코프(범위)가 있다:
 
-- 지역 범위 (Local Scope, Own scope)
-- 외부 함수 범위 (Outer Functions Scope)
+- 지역 범위 (Own scope)
+- Enclosing scope (can be block, function, or module scope)
 - 전역 범위 (Global Scope)
 
-따라서, 우리는 클로저에 대해 세가지 범위 모두 접근할 수 있지만, 중첩된 내부 함수가 있는 경우 종종 실수를 저지른다. 아래 예제를 확인해보자:
+A common mistake is not realizing that in the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a chain of function scopes. To demonstrate, consider the following example code.
 
 ```js
-// 전역 범위 (global scope)
-var e = 10;
+// global scope
+const e = 10;
 function sum(a) {
   return function (b) {
     return function (c) {
-      // 외부 함수 범위 (outer functions scope)
+      // outer functions scope
       return function (d) {
-        // 지역 범위 (local scope)
+        // local scope
         return a + b + c + d + e;
       };
     };
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // log 20
+console.log(sum(1)(2)(3)(4)); // 20
+```
 
-// 익명 함수 없이 작성할 수도 있다.
+You can also write without anonymous functions:
 
-// 전역 범위 (global scope)
-var e = 10;
+```js
+// global scope
+const e = 10;
 function sum(a) {
   return function sum2(b) {
     return function sum3(c) {
-      // 외부 함수 범위 (outer functions scope)
+      // outer functions scope
       return function sum4(d) {
-        // 지역 범위 (local scope)
+        // local scope
         return a + b + c + d + e;
       };
     };
   };
 }
 
-var s = sum(1);
-var s1 = s(2);
-var s2 = s1(3);
-var s3 = s2(4);
-console.log(s3); //log 20
+const sum2 = sum(1);
+const sum3 = sum2(2);
+const sum4 = sum3(3);
+const result = sum4(4);
+console.log(result); // 20
 ```
 
-위의 예제를 보면 일련의 중첩된 함수들을 확인할 수 있다. 이 함수들은 전부 외부 함수의 스코프에 접근할 수 있다. 그런데 문제는 즉각적인 외부 함수의 스코프만을 추측 한다는 것이다. 이 문맥에서는 모든 클로저가 선언된 외부 함수의 스코프에 접근한다라고 말할 수 있다.
+In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
+
+Closures can capture variables in block scopes and module scopes as well. For example, the following creates a closure over the block-scoped variable `y`:
+
+```js
+function outer() {
+  let getY;
+  {
+    const y = 6;
+    getY = () => y;
+  }
+  console.log(typeof y); // undefined
+  console.log(getY()); // 6
+}
+
+outer();
+```
+
+Closures over modules can be more interesting.
+
+```js
+// myModule.js
+let x = 5;
+export const getX = () => x;
+export const setX = (val) => {
+  x = val;
+};
+```
+
+Here, the module exports a pair of getter-setter functions, which close over the module-scoped variable `x`. Even when `x` is not directly accessible from other modules, it can be read and written with the functions.
+
+```js
+import { getX, setX } from "./myModule.js";
+
+console.log(getX()); // 5
+setX(6);
+console.log(getX()); // 6
+```
+
+Closures can close over imported values as well, which are regarded as _live {{glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
+
+```js
+// myModule.js
+export let x = 1;
+export const setX = (val) => {
+  x = val;
+};
+```
+
+```js
+// closureCreator.js
+import { x } from "./myModule.js";
+
+export const getX = () => x; // Close over an imported live binding
+```
+
+```js
+import { getX } from "./closureCreator.js";
+import { setX } from "./myModule.js";
+
+console.log(getX()); // 1
+setX(2);
+console.log(getX()); // 2
+```
 
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
@@ -313,17 +377,18 @@ ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
+    // Culprit is the use of `var` on this line
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
@@ -334,7 +399,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/", "", 200)}}
+Try running the code in [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
 
 `helpText` 배열은 세 개의 도움말 힌트를 정의한다. 각 도움말은 문서의 입력 필드의 ID와 연관된다. 루프를 돌면서 각 입력 필드 ID에 해당하는 엘리먼트의 `onfocus` 이벤트에 관련된 도움말을 보여주는 메소드에 연결한다.
 
@@ -371,7 +436,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/1/", "", 300)}}
+Run the code using [this JSFiddle link](https://jsfiddle.net/v7gjv/9573/).
 
 이것은 예상대로 동작한다. 모두 단일 환경을 공유하는 콜백대신, `makeHelpCallback` 함수는 각각의 콜백에 새로운 어휘적 환경을 생성한다. 여기서 `help`는 `helpText` 배열의 해당 문자열을 나타낸다.
 
@@ -406,19 +471,19 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Your e-mail address" },
+  const helpText = [
+    { id: "email", help: "Your email address" },
     { id: "name", help: "Your full name" },
     { id: "age", help: "Your age (you must be over 16)" },
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
-    let item = helpText[i];
-    document.getElementById(item.id).onfocus = function () {
+  for (let i = 0; i < helpText.length; i++) {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = () => {
       showHelp(item.help);
     };
   }
@@ -427,7 +492,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
+위의 경우 `var` 대신 `const`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
 
 Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/ko/docs/Web/HTML/Element/input), as shown:
 
@@ -507,22 +572,5 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-위의 코드는 같은 결과를 가진 더 깨끗한 방법으로 작성할 수도 있다:
-
-```js
-function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
-}
-(function () {
-  this.getName = function () {
-    return this.name;
-  };
-  this.getMessage = function () {
-    return this.message;
-  };
-}).call(MyObject.prototype);
-```
-
-앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
+앞의 두 가지 예제에서, 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [상속과 프로토타입](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을
 참고하라.
