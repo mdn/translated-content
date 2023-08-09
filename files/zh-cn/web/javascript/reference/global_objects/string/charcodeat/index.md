@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 {{jsxref("String")}} 的 **`charCodeAt()`** 方法返回一个整数，表示给定索引处的 UTF-16 码元，其值介于 `0` 和 `65535` 之间。
 
-`charCodeAt()` 方法总是将字符串当作 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能返回单独代理项。如果要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
+`charCodeAt()` 方法总是将字符串当作 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能返回单独代理项（lone surrogate）。如果要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
@@ -57,7 +57,7 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **备注：** 避免使用 `charCodeAt()` 来重新实现 `codePointAt()`。从 UTF-16 代理到 Unicode 码位的转换是相当复杂，而 `codePointAt()` 可能更有效，因为它直接使用字符串的内部表示形式。如果需要，可以安装一个 `codePointAt()` 的 polyfill。
+> **备注：** 避免使用 `charCodeAt()` 来重新实现 `codePointAt()`。从 UTF-16 代理到 Unicode 码位的转换相当复杂，而且 `codePointAt()` 可能更加高效，因为它直接使用字符串的内部表示形式。如果需要，可以安装一个 `codePointAt()` 的 polyfill。
 
 以下是将一对 UTF-16 码元转换为 Unicode 码位的可能算法，改编自 [Unicode 常问问题](https://unicode.org/faq/utf_bom.html#utf16-3)：
 
