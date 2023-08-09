@@ -75,7 +75,7 @@ e5.message = undefined;
 console.log(e5.toString()); // 'hello'
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

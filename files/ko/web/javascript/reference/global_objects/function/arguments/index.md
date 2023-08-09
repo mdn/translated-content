@@ -45,15 +45,15 @@ console.log("returned: " + g.arguments);
 // returned: null
 ```
 
-## Specifications
+## 명세서
 
 `function.arguments`는 표준이 아니다. ECMAScript 3에서 {{jsxref("Functions/arguments", "arguments")}}를 참조하기 때문에 deprecated 되었다.
 
-## Browser 호환성
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Functions/arguments", "arguments")}} 객체
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}

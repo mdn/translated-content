@@ -61,7 +61,7 @@ Math.pow(-7, 0.5); // NaN (음수는 실제 제곱근을 가지지 않습니다.
 Math.pow(-7, 1 / 3); // NaN
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
