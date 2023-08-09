@@ -51,7 +51,7 @@ slug: Web/HTML/Attributes/autocomplete
 - `username`
   - : 사용자 또는 계정 이름.
 - `new-password`
-  - : 새로운 비밀번호. 계정을 생성할 때나 비밀번호를 변경할 때, new-password는 "새로운 비밀번호를 입력하세요" 또는 "비밀번호 확인"에 지정해야 합니다. 일반적인 비밀번호와 구분하는 이유는 브라우저가 기존 비밀번호를 자동완성으로 채우는 것을 피하기 위함이며, 안전한 무작위 비밀번호 생성을 제안할 곳을 결정할 때도 사용하기 때문입니다.
+  - : 새로운 비밀번호. 계정을 생성할 때나 비밀번호를 변경할 때, new-password는 "새로운 비밀번호를 입력하세요" 또는 "비밀번호 확인"에 지정해야 합니다. 일반적인 비밀번호와 구분하는 이유는 브라우저가 기존 비밀번호를 자동완성으로 채우는 것을 피하기 위함이며, 안전한 무작위 비밀번호 생성을 제안할 곳을 결정할 때도 사용하기 때문입니다.([autocomplete="new-password"를 사용한 자동 채우기 방지](/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#preventing_autofilling_with_autocompletenew-password) 참조).
 - `current-password`
   - : 사용자의 현재 비밀번호.
 - `one-time-code`
