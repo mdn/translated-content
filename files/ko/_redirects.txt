@@ -691,17 +691,12 @@
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/ko/docs/Web/JavaScript/Guide
-/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ko/docs/Web/JavaScript/Guide/Grammar_and_types
-/ko/docs/Web/JavaScript/Guide/메타_프로그래밍	/ko/docs/Web/JavaScript/Guide/Meta_programming
 /ko/docs/Web/JavaScript/Guide/소개	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/정규식	/ko/docs/Web/JavaScript/Guide/Regular_expressions
-/ko/docs/Web/JavaScript/Guide/정규식/Assertions	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
-/ko/docs/Web/JavaScript/Guide/정규식/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /ko/docs/Web/JavaScript/Guide/함수	/ko/docs/Web/JavaScript/Guide/Functions
 /ko/docs/Web/JavaScript/Reference/About	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
-/ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
@@ -716,7 +711,6 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
-/ko/docs/Web/JavaScript/Reference/Global_Objects/Locale	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Locale/language	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 /ko/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler	/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
