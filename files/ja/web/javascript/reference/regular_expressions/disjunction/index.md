@@ -50,7 +50,7 @@ alternative1|alternative2|alternative3|…
 
 ### ファイル拡張子の照合
 
-次の例は、[入力境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion#matching_file_extensions)の記事と同じコードを使用して、ファイル拡張子を照合します。
+次の例は、[入力境界アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion#ファイル拡張子の照合)の記事と同じコードを使用して、ファイル拡張子を照合します。
 
 ```js
 function isImage(filename) {
