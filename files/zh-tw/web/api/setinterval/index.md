@@ -1,7 +1,6 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 
 {{APIRef("HTML DOM")}}
@@ -47,7 +46,7 @@ var intervalID = window.setInterval(
   myCallback,
   500,
   "Parameter 1",
-  "Parameter 2"
+  "Parameter 2",
 );
 
 function myCallback(a, b) {
@@ -63,7 +62,7 @@ function myCallback(a, b) {
 The following example calls the `flashtext()` function once a second until the Stop button is pressed.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -103,7 +102,7 @@ The following example calls the `flashtext()` function once a second until the S
 The following example simulates typewriter by first clearing and then slowly typing content into the [`NodeList`](/zh-TW/docs/DOM/NodeList) that matches a specified group of selectors.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -235,7 +234,7 @@ The following example simulates typewriter by first clearing and then slowly typ
       /* usage: */
       var oTWExample1 = new Typewriter(
         /* elements: */ "#article, h1, #info, #copyleft",
-        /* frame rate (optional): */ 15
+        /* frame rate (optional): */ 15,
       );
 
       /* default frame rate is 100: */
@@ -359,7 +358,7 @@ As previously discussed, Internet Explorer versions 9 and below do not support t
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/zh-TW/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  Syntax:
@@ -374,7 +373,7 @@ if (document.all && !window.setTimeout.isPolyfill) {
   var __nativeST__ = window.setTimeout;
   window.setTimeout = function (
     vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */
+    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
   ) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
     return __nativeST__(
@@ -383,7 +382,7 @@ if (document.all && !window.setTimeout.isPolyfill) {
             vCallback.apply(null, aArgs);
           }
         : vCallback,
-      nDelay
+      nDelay,
     );
   };
   window.setTimeout.isPolyfill = true;
@@ -393,7 +392,7 @@ if (document.all && !window.setInterval.isPolyfill) {
   var __nativeSI__ = window.setInterval;
   window.setInterval = function (
     vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */
+    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
   ) {
     var aArgs = Array.prototype.slice.call(arguments, 2);
     return __nativeSI__(
@@ -402,7 +401,7 @@ if (document.all && !window.setInterval.isPolyfill) {
             vCallback.apply(null, aArgs);
           }
         : vCallback,
-      nDelay
+      nDelay,
     );
   };
   window.setInterval.isPolyfill = true;
@@ -468,7 +467,7 @@ var __nativeST__ = window.setTimeout,
 
 window.setTimeout = function (
   vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */
+  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
 ) {
   var oThis = this,
     aArgs = Array.prototype.slice.call(arguments, 2);
@@ -478,13 +477,13 @@ window.setTimeout = function (
           vCallback.apply(oThis, aArgs);
         }
       : vCallback,
-    nDelay
+    nDelay,
   );
 };
 
 window.setInterval = function (
   vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */
+  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
 ) {
   var oThis = this,
     aArgs = Array.prototype.slice.call(arguments, 2);
@@ -494,7 +493,7 @@ window.setInterval = function (
           vCallback.apply(oThis, aArgs);
         }
       : vCallback,
-    nDelay
+    nDelay,
   );
 };
 ```
@@ -534,7 +533,7 @@ In pages requiring many timers, it can often be difficult to keep track of all o
 |*|
 |*|  Revision #2 - September 26, 2014
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/zh-TW/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|  https://github.com/madmurphy/minidaemon.js
 |*|
@@ -675,7 +674,7 @@ Returns a JavaScript [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Obje
 Your HTML page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -712,7 +711,7 @@ Your HTML page:
         document.getElementById("sample_div"),
         opacity,
         300,
-        8
+        8,
       );
     </script>
   </body>

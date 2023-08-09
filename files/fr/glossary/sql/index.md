@@ -1,7 +1,6 @@
 ---
 title: SQL
 slug: Glossary/SQL
-translation_of: Glossary/SQL
 ---
 
 **SQL** (Structured Query Language) est un langage normalisé pour mettre à jour, récupérer et calculer des données dans les tables d'une base de données.

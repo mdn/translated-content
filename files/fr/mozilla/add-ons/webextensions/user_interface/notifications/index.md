@@ -1,7 +1,6 @@
 ---
 title: Notifications
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
 
 {{AddonSidebar}}
@@ -26,10 +25,10 @@ Vous utilisez ensuite {{WebExtAPIRef("notifications.create")}} pour créer vos n
 var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
-  "type": "basic",
-  "iconUrl": browser.extension.getURL("icons/link-48.png"),
-  "title": title,
-  "message": content
+  type: "basic",
+  iconUrl: browser.extension.getURL("icons/link-48.png"),
+  title: title,
+  message: content,
 });
 ```
 

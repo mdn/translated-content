@@ -1,7 +1,6 @@
 ---
 title: Caminho de renderização crítico
 slug: Web/Performance/Critical_rendering_path
-original_slug: Web/Performance/caminho_de_renderizacao_critico
 ---
 
 **O caminho de renderização crítico** é a sequência de passos que o navegador passa para converter HTML, CSS e JavaScript em pixels na tela. Otimizando o caminho de renderização crítico melhora a performance.The critical rendering path includes the [Document Object Model](/pt-BR/docs/Web/API/Document_Object_Model)(DOM), [CSS Object Model](/pt-BR/docs/Web/API/CSS_Object_Model) (CSSOM), render tree and layout.
@@ -46,7 +45,7 @@ What is the width of an element? Block level elements, by definition, have a def
 
 The viewport meta tag defines the width of the layout viewport, impacting the layout. Without it, the browser uses the default viewport width, which on by-default full screen browsers is generally 960px. On by-default full screen browsers, like your phone's browser, by setting `<meta name="viewport" content="width=device-width">`, the width will be the width of the device instead of the default viewport width. The device-width changes when a user rotates their phone between landscape and portrait mode. Layout happens every time a device is rotated or browser is otherwise resized.
 
-Layout performance is impacted by the DOM -- the greater the number of nodes, the longer layout takes. Layout can become a bottleneck, leading to jank if required during scrolling or other animations. While a 20ms layout on load or orientation change may be fine, it will lead to jank on animation or scroll. Any time the render tree is modified, such as by added nodes, altered content, or updated box model styles on a node, layout occurs.
+Layout performance is impacted by the DOM — the greater the number of nodes, the longer layout takes. Layout can become a bottleneck, leading to jank if required during scrolling or other animations. While a 20ms layout on load or orientation change may be fine, it will lead to jank on animation or scroll. Any time the render tree is modified, such as by added nodes, altered content, or updated box model styles on a node, layout occurs.
 
 To reduce the frequency and duration of layout events, batch updates and avoid animating box model properties.
 

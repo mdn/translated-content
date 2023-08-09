@@ -23,8 +23,8 @@ foo(); // 변수를 사용해 호출
 {{glossary("Variable", "변수")}}에 '익명함수'를 할당한 다음, 끝에 괄호 `()`를 추가하면서 함수를 호출할 해당 변수를 사용합니다.
 
 > **참고:** 함수가 이름을 가지고 있더라도, 변수 이름을 사용하여 함수를 호출할 수 있습니다.
-함수에 이름을 지정하는 것은 코드를 디버깅할 때 도움이 됩니다.
-하지만 함수를 호출하는 방식에는 영향을 미치지 않을 것입니다.
+> 함수에 이름을 지정하는 것은 코드를 디버깅할 때 도움이 됩니다.
+> _하지만 함수를 호출하는 방식에는 영향을 미치지 않을 것입니다._
 
 ### 함수에 전달인자로 전달
 
@@ -62,7 +62,7 @@ function sayHello() {
 ## 같이 보기
 
 - [일급 함수](https://en.wikipedia.org/wiki/First-class_function) 위키피디아
-- [MDN Web Docs 용어 사전](/en-US/docs/Glossary)
+- [MDN Web Docs 용어 사전](/ko/docs/Glossary)
 
   - {{glossary("Callback function", "콜백 함수")}}
   - {{glossary("Function", "함수")}}

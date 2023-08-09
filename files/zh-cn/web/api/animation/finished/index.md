@@ -25,16 +25,12 @@ var animationsPromise = animation.finished;
 
 ```js
 Promise.all(
-  elem.getAnimations().map(
-    function(animation) {
-      return animation.finished
-    }
-  )
-).then(
-  function() {
-    return elem.remove();
-  }
-);
+  elem.getAnimations().map(function (animation) {
+    return animation.finished;
+  }),
+).then(function () {
+  return elem.remove();
+});
 ```
 
 ## 规范

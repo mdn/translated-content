@@ -57,8 +57,8 @@ Range: bytes=0-499, -500
 
 ## Especificações
 
-| Especificação                            | Título                                                 |
-| ---------------------------------------- | ------------------------------------------------------ |
+| Especificação                   | Título                                                 |
+| ------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "Range", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores

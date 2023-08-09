@@ -1,7 +1,6 @@
 ---
 title: Terminando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando
 ---
 
 {{GamesSidebar}}
@@ -24,9 +23,9 @@ Mostrar por pantalla el número de vidas es prácticamente lo mismo que mostrar 
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 ```
 
@@ -41,16 +40,15 @@ document.location.reload();
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 

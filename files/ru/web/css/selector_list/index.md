@@ -1,10 +1,6 @@
 ---
 title: Список селекторов
 slug: Web/CSS/Selector_list
-tags:
-  - Вёрстка
-  - список селекторов
-translation_of: Web/CSS/Selector_list
 ---
 
 {{CSSRef}}
@@ -34,7 +30,14 @@ element, element, element { свойства стиля }
 Группирование селекторов списком, разделённым запятой, на одной строк.
 
 ```css
-h1, h2, h3, h4, h5, h6 { font-family: helvetica; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: helvetica;
+}
 ```
 
 ### Мультистрочное группирование
@@ -54,13 +57,23 @@ article {
 Недостатком использования списков селекторов является то, что они не являются эквивалентными:
 
 ```css
-h1 { font-family: sans-serif }
-h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
+h1,
+h2:maybe-unsupported,
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 Это происходит потому, что один неподдерживаемый селектор в списке селекторов делает недействительным все правило.
@@ -68,13 +81,21 @@ h1, h2:maybe-unsupported, h3 { font-family: sans-serif }
 Есть способ исправить это - нужно использовать селектор {{CSSxRef(":is", ":is()")}}, который просто игнорирует недопустимые селекторы в своих аргумента, но за счёт этого, все селекторы имеют одинаковую спецификацию, так как {{CSSxRef(":is", ":is()")}} вычисляет спецификацию.
 
 ```css
-h1 { font-family: sans-serif }
-h2:maybe-unsupported { font-family: sans-serif }
-h3 { font-family: sans-serif }
+h1 {
+  font-family: sans-serif;
+}
+h2:maybe-unsupported {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
 ```
 
 ```css
-:is(h1, h2:maybe-unsupported, h3) { font-family: sans-serif }
+:is(h1, h2:maybe-unsupported, h3) {
+  font-family: sans-serif;
+}
 ```
 
 ## Спецификации

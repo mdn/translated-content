@@ -1,7 +1,6 @@
 ---
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getting = browser.devtools.network.getHAR()
+var getting = browser.devtools.network.getHAR();
 ```
 
 ### Paramètres

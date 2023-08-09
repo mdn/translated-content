@@ -1,7 +1,6 @@
 ---
 title: Certifié
 slug: Glossary/Certified
-translation_of: Glossary/Certified
 ---
 
 **Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.
@@ -12,8 +11,8 @@ Pour les détails sur la certification en {{glossary("Cryptography","Cryptograph
 
 ### Culture générale
 
-- [Tutoriel sur la sécurité des informations](/fr/Apprendre/Tutoriels/Les_bases_de_la_s%C3%A9curit%C3%A9_informatique)
-- [Autorité de certification](https://fr.wikipedia.org/wiki/Autorit%C3%A9_de_certification) sur Wikipédia
+- [Tutoriel sur la sécurité des informations](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [Autorité de certification](https://fr.wikipedia.org/wiki/Autorité_de_certification) sur Wikipédia
 
 ### Firefox OS
 

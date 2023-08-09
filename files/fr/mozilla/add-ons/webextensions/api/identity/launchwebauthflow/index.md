@@ -1,7 +1,6 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 
 {{AddonSidebar()}}
@@ -32,8 +31,8 @@ S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les cond
 
 ```js
 var authorizing = browser.identity.launchWebAuthFlow(
-  details   // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -77,17 +76,18 @@ function validate(redirectURL) {
 
 function authorize() {
   const redirectURL = browser.identity.getRedirectURL();
-  const clientID = "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
+  const clientID =
+    "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 

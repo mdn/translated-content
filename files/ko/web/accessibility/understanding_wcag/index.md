@@ -16,9 +16,9 @@ WCAG는 크게 네 가지 원칙으로 분류할 수 있습니다. 이는 웹 �
 아래의 링크들을 클릭하면 해당 영역에 대해 더 자세히 설명하는 페이지로 이동하며, 각 원칙들을 더욱 세분화 한 WCAG 2.0과 2.1의 지침을 준수할 수 있는 실용적인 조언들을 통해 웹 컨텐츠를 작성할 수 있도록 합니다.
 
 - [인식의 용이성:](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) 사용자가 하나 또는 다수의 감각을 사용해 어떤 방식으로든 인지할 수 있어야 합니다.
-- [운용의 용이성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Operable): 사용자가 UI 요소들을 컨트롤 할 수 있어야 합니다(예를 들어, 버튼은 마우스, 키보드, 음성 명령 등등의 어떠한 방식을 통해서라도 클릭이 가능해야 합니다).
+- [운용의 용이성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Operable): 사용자가 UI 요소들을 컨트롤 할 수 있어야 합니다(예를 들어, 버튼은 마우스, 키보드, 음성 명령 등의 방식으로 클릭이 가능해야 합니다).
 - [이해의 용이성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Understandable): 컨텐츠를 사용자가 이해할 수 있어야 합니다.
-- [견고성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Robust): 컨텐츠는 각기 다른 브라우저에서, 현재와 미래에 모두 동작할 수 있도록 웹 표준을 준수하여 개발되어야 합니다.
+- [견고성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Robust): 컨텐츠는 각기 다른 브라우저에서, 현재와 미래에 모두 동작할 수 있도록 널리 알려진 웹 표준을 준수하여 개발되어야 합니다.
 
 ## WCAG 2.0과 2.1 중 어떤 것을 사용해야 하나요?
 
@@ -26,7 +26,7 @@ WCAG 2.1 은 가장 최신화된 접근성 표준입니다. WCAG 2.1 을 사용�
 
 ### WCAG 2.1이 뭔가요?
 
-WCAG 2.1 은 2018년 1월 5일에 공식 권장 사항으로 발표되었습니다. 유럽 연합 (EU) 는 디지털 접근성 표준으로 2018년 9월에 WCAG 2.1을 채택했습니다. W3C 는 [WCAG 2.1 Adoption in Europe](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/) 라는 게시글을 발행했습니다.
+WCAG 2.1 은 2018년 6월 5일에 공식 권장 사항으로 발표되었습니다. 유럽 연합 (EU)은 디지털 접근성 표준으로 2018년 9월에 WCAG 2.1을 채택했습니다. W3C 는 [WCAG 2.1 Adoption in Europe](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/) 라는 글을 발행했습니다.
 
 WCAG 2.1 은 다음을 포함합니다.
 

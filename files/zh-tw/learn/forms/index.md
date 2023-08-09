@@ -1,7 +1,6 @@
 ---
 title: 網站表單-與數據合作
 slug: Learn/Forms
-original_slug: Learn/HTML/Forms
 ---
 
 {{LearnSidebar}}

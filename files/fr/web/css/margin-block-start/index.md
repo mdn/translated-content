@@ -1,12 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,9 +16,9 @@ Cette propriété est à rapprocher de {{cssxref("margin-inline-start")}}, {{css
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-block-start: 10px;      /* Une longueur absolue */
-margin-block-start: 1em;       /* Une longueur relative à la taille du texte */
-margin-block-start: 5%;        /* Une largeur relative à la
+margin-block-start: 10px; /* Une longueur absolue */
+margin-block-start: 1em; /* Une longueur relative à la taille du texte */
+margin-block-start: 5%; /* Une largeur relative à la
                                    largeur du bloc englobant */
 
 /* Valeurs avec un mot-clé */

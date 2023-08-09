@@ -1,12 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/HEAD
-original_slug: Web/HTTP/Méthode/HEAD
 ---
 
 {{HTTPSidebar}}

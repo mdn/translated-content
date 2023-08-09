@@ -1,7 +1,6 @@
 ---
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
 
 {{AddonSidebar}}
@@ -36,7 +35,6 @@ Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
 
 ```json
 {
-
   "description": "Native messaging example extension",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -61,7 +59,6 @@ Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -81,7 +78,7 @@ Par exemple, voici un manifeste pour l'application native "ping_pong" :
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -95,7 +92,7 @@ Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se con
 >   "description": "Example host for native messaging",
 >   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
 >   "type": "stdio",
->   "allowed_extensions": [ "ping_pong@example.org" ]
+>   "allowed_extensions": ["ping_pong@example.org"]
 > }
 > ```
 >
@@ -135,7 +132,7 @@ L'aplication continue de fonctionner jusqu'à ce que l'extension invoque `Port.d
 
 Pour envoyer des messages en utilisant `Port`, utilisez sa fonction `postMessage()`, en passant le message JSON à envoyer. Pour écouter les messages en utilisant `Port`, ajouter un écouteur (_listener_) en utilisant sa fonction `onMessage.addListener()`.
 
-Voici un exemple de script « _background_ » qui établit une connection avec l'application «&nbsp;ping_pong », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping&nbsp;» à chaque fois que l'utilisateur clique sur l'action du navigateur (_browser action_) :
+Voici un exemple de script « _background_ » qui établit une connection avec l'application « `ping_pong` », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur _(browser action)_ :
 
 ```js
 /*
@@ -190,9 +187,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```

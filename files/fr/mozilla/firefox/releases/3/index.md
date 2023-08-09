@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 pour les développeurs
 slug: Mozilla/Firefox/Releases/3
-translation_of: Mozilla/Firefox/Releases/3
 ---
 
 {{FirefoxSidebar}}
@@ -12,12 +11,12 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 ### Pour les développeurs de sites et d'applications Web
 
-- [Mise à jour des applications Web pour Firefox 3](/fr/Mise_%C3%A0_jour_des_applications_Web_pour_Firefox_3)
+- [Mise à jour des applications Web pour Firefox 3](/fr/Mise_à_jour_des_applications_Web_pour_Firefox_3)
   - : Fournit des informations concernant les changements que vous devrez éventuellement prendre en compte pour permettre à votre site ou application Web de profiter des nouvelles fonctionnalités de Firefox 3.
 
 <!---->
 
-- [Évènements online et offline](/fr/%C3%89v%C3%A8nements_online_et_offline)
+- [Évènements online et offline](/fr/Évènements_online_et_offline)
   - : Firefox 3 gère les évènements online et offline définis par le WHATWG, qui permettent aux applications et extensions de détecter si une connexion Internet active est disponible, ainsi que de détecter l'activation et la désactivation de la connexion.
 
 <!---->
@@ -42,7 +41,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Évènements de glisser-déposer](/fr/%C3%89v%C3%A8nements_de_glisser-d%C3%A9poser)
+- [Évènements de glisser-déposer](/fr/Évènements_de_glisser-déposer)
   - : Firefox 3 gère de nouveaux évènements envoyés au nœud source d'une opération de glisser-déposer lorsque le glisser débute et se termine.
 
 <!---->
@@ -57,17 +56,17 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Améliorations CSS dans Firefox 3](/fr/Am%C3%A9liorations_CSS_dans_Firefox_3)
+- [Améliorations CSS dans Firefox 3](/fr/Améliorations_CSS_dans_Firefox_3)
   - : Firefox 3 propose un certain nombre d'améliorations dans son support CSS.
 
 <!---->
 
-- [Améliorations DOM dans Firefox 3](/fr/Am%C3%A9liorations_DOM_dans_Firefox_3)
+- [Améliorations DOM dans Firefox 3](/fr/Améliorations_DOM_dans_Firefox_3)
   - : Firefox 3 propose un certain nombre de nouvelles fonctionnalités dans son implémentation DOM, comme la gestion de plusieurs extensions d'Internet Explorer au DOM.
 
 <!---->
 
-- [Support de JavaScript 1.8](/fr/Nouveaut%C3%A9s_dans_JavaScript_1.8)
+- [Support de JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8)
   - : JavaScript 1.8 est fourni avec Firefox 3.
 
 <!---->
@@ -77,24 +76,24 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Améliorations SVG dans Firefox 3](/fr/Am%C3%A9liorations_SVG_dans_Firefox_3)
+- [Améliorations SVG dans Firefox 3](/fr/Améliorations_SVG_dans_Firefox_3)
   - : La gestion du SVG dans Firefox 3 a été mise à jour de manière substantielle, avec plus d'une vingtaine de nouveaux filtres, plusieurs nouveaux éléments et attributs, et quelques autres améliorations.
 
 <!---->
 
-- [Images PNG animées](/fr/Images_PNG_anim%C3%A9es)
+- [Images PNG animées](/fr/Images_PNG_animées)
   - : Firefox 3 gère le format d'images PNG animées (APNG).
 
 ### Pour les développeurs XUL et d'extensions
 
 #### Améliorations et modifications notables
 
-- [Mise à jour des extensions pour Firefox 3](/fr/Mise_%C3%A0_jour_des_extensions_pour_Firefox_3)
+- [Mise à jour des extensions pour Firefox 3](/fr/Mise_à_jour_des_extensions_pour_Firefox_3)
   - : Un guide fournissant tout ce qu'il faut savoir pour mettre à jour une extension afin de la faire fonctionner avec Firefox 3.
 
 <!---->
 
-- [Améliorations XUL dans Firefox 3](/fr/Am%C3%A9liorations_XUL_dans_Firefox_3)
+- [Améliorations XUL dans Firefox 3](/fr/Améliorations_XUL_dans_Firefox_3)
   - : Firefox 3 offre un certain nombre de nouveaux éléments XUL, dont de nouvelles échelles coulissantes, des sélecteurs de date et d'heure, et des boîtes d'incrément (spin buttons).
 
 <!---->
@@ -104,7 +103,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_%C3%A0_jour_et_compatibilit%C3%A9#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es)
+- [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es)
   - : Afin que le processus de mise à jour soit plus sûr pour les utilisateurs, les modules complémentaires doivent à présent fournir une méthode sécurisée de distribution des mises à jour avant de pouvoir être installés. Les modules hébergés sur [AMO](http://addons.mozilla.org) fournissent ceci automatiquement. Tout module installé ne fournissant pas une méthode de mise à jour sécurisée lorsque l'utilisateur migrera vers Firefox 3 sera désactivé automatiquement. Firefox continuera cependant à vérifier si des mises à jour sont disponibles au travers du chemin non sécurisé et essayera d'installer toute mise à jour proposée (l'installation échouera si la mise à jour ne propose pas non plus de méthode de mise à jour sécurisée).
 
 <!---->
@@ -114,7 +113,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Améliorations du gestionnaire de téléchargement dans Firefox 3](/fr/Am%C3%A9liorations_du_gestionnaire_de_t%C3%A9l%C3%A9chargement_dans_Firefox_3)
+- [Améliorations du gestionnaire de téléchargement dans Firefox 3](/fr/Améliorations_du_gestionnaire_de_téléchargement_dans_Firefox_3)
   - : Le gestionnaire de téléchargement de Firefox 3 comprend de nouvelles API et d'autres améliorations, comme la gestion de plusieurs écouteurs de progression.
 
 <!---->
@@ -124,7 +123,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Intégration de liaisons XBL](/fr/XBL/R%C3%A9f%C3%A9rence_XBL_1.0/%C3%89l%C3%A9ments#binding)
+- [Intégration de liaisons XBL](/fr/XBL/Référence_XBL_1.0/Éléments#binding)
   - : Il est à présent possible d'utiliser le schéma d'URL `data:` depuis du code chrome pour intégrer des liaisons XBL directement au lieu de devoir les placer dans des fichiers XML séparés.
 
 <!---->
@@ -139,7 +138,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Changements dans les thèmes pour Firefox 3](/fr/Changements_dans_les_th%C3%A8mes_pour_Firefox_3)
+- [Changements dans les thèmes pour Firefox 3](/fr/Changements_dans_les_thèmes_pour_Firefox_3)
   - : Notes et informations pour ceux qui voudraient créer des thèmes pour Firefox 3.
 
 #### Nouveaux composants et fonctionnalités
@@ -169,7 +168,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Interfaçage avec le collecteur de cycles XPCOM](/fr/Interfa%C3%A7age_avec_le_collecteur_de_cycles_XPCOM)
+- [Interfaçage avec le collecteur de cycles XPCOM](/fr/Interfaçage_avec_le_collecteur_de_cycles_XPCOM)
   - : XPCOM peut à présent bénéficier du collecteur de cycles, qui permet de s'assurer que la mémoire inutilisée est libérée et d'éviter les fuites mémoire.
 
 <!---->
@@ -194,7 +193,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 <!---->
 
-- [Utilisation des préférences de contenu](/fr/Utilisation_des_pr%C3%A9f%C3%A9rences_de_contenu)
+- [Utilisation des préférences de contenu](/fr/Utilisation_des_préférences_de_contenu)
   - : Firefox 3 fournit un nouveau service permettant de définir et de lire des préférences particulières à un site, que des extensions ou le programme peuvent utiliser pour conserver des informations sur les préférences de l'utilisateur concernant certains sites.
 
 <!---->
@@ -204,7 +203,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 #### Bugs corrigés
 
-- [Bugs importants corrigés dans Firefox 3](/fr/Bugs_importants_corrig%C3%A9s_dans_Firefox_3)
+- [Bugs importants corrigés dans Firefox 3](/fr/Bugs_importants_corrigés_dans_Firefox_3)
   - : Cet article fournit des informations concernant les bugs corrigés dans Firefox 3.
 
 ## Nouvelles fonctionnalités pour les utilisateurs

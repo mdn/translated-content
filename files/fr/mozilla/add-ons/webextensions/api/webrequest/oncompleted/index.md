@@ -1,7 +1,6 @@
 ---
 title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
 ---
 
 {{AddonSidebar()}}
@@ -14,12 +13,12 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onCompleted.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onCompleted.removeListener(listener)
-browser.webRequest.onCompleted.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onCompleted.removeListener(listener);
+browser.webRequest.onCompleted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -139,10 +138,7 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusCode);
 }
 
-browser.webRequest.onCompleted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(logResponse, { urls: [target] });
 ```
 
 {{WebExtExamples}}

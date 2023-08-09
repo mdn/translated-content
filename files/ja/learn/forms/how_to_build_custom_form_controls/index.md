@@ -3,7 +3,6 @@ title: カスタムフォームコントロールの作成方法
 slug: Learn/Forms/How_to_build_custom_form_controls
 l10n:
   sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
-original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
 
 {{LearnSidebar}}
@@ -86,7 +85,6 @@ HTML フォームで使用可能なコントロールだけでは十分でない
      tabindex 属性は、ユーザーがコントロールにフォーカスを当てられるようにするものです。
      これを JavaScript で設定する方がよいことは、後で見ていきます。-->
 <div class="select" tabindex="0">
-
   <!-- このコンテナは、コントロールの現在の値を表示するために使用します。-->
   <span class="value">Cherry</span>
 
@@ -101,7 +99,6 @@ HTML フォームで使用可能なコントロールだけでは十分でない
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -125,7 +122,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
   position: relative;
 
   /* コントロールをテキストフローの一部かつまとまった大きさにします */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -150,9 +147,9 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 .select .optList {
   /* 選択肢のリストが値の下部かつ HTML フローの外側に表示される
      ようにします。*/
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -177,32 +174,32 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 .select {
   /* 算出結果は、ほとんどのブラウザーで既定値である 1em が 16px を想定します。
      px から em への変換がわからない場合は http://riddle.pl/emcalc/ を試してください */
-  font-size   : 0.625em; /* この値 (10px) は、本コンテキストにおける新たなフォントサイズの em 単位値です。*/
-  font-family : Verdana, Arial, sans-serif;
+  font-size: 0.625em; /* この値 (10px) は、本コンテキストにおける新たなフォントサイズの em 単位値です。*/
+  font-family: Verdana, Arial, sans-serif;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
   /* 後で追加する下向き矢印のためのスペースが必要です */
-  padding : .1em 2.5em .2em .5em;
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em;
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000;
-  border-radius : .4em;
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 
   /* 最初の宣言は、線形グラデーションをサポートしないブラウザー向けのものです。*/
-  background : #F0F0F0;
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* 値がコントロールの幅より大きくなる可能性があるため、コントロールの幅を
      変更しないようにすることが必要です。内容物がオーバーフローした場合は、
      省略記号をつけるとよいでしょう。*/
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
-  white-space : nowrap;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   vertical-align: top;
 }
@@ -212,24 +209,24 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 ```css
 .select:after {
-  content : "▼"; /* Unicode 文字 U+25BC を使用します。 charset メタタグの設定を確認してください。 */
+  content: "▼"; /* Unicode 文字 U+25BC を使用します。 charset メタタグの設定を確認してください。 */
   position: absolute;
-  z-index : 1; /* これは、矢印が選択肢のリストに重ならないようにするために重要です */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* これは、矢印が選択肢のリストに重ならないようにするために重要です */
+  top: 0;
+  right: 0;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;
-  padding-top : .1em;
+  height: 100%;
+  width: 2em;
+  padding-top: 0.1em;
 
-  border-left  : .2em solid #000;
-  border-radius: 0 .1em .1em 0;
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -237,18 +234,18 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 ```css
 .select .optList {
-  z-index : 2; /* 選択肢のリストが下向き矢印より上になるよう、明示的に示します。*/
+  z-index: 2; /* 選択肢のリストが下向き矢印より上になるよう、明示的に示します。*/
 
   /* ul 要素のデフォルトスタイルを初期化します。*/
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  box-sizing : border-box;
+  box-sizing: border-box;
 
   /* 値の幅がコントロールの幅より小さい場合でも、選択肢のリストの幅が
      コントロール自体と同じになるようにします。*/
-  min-width : 100%;
+  min-width: 100%;
 
   /* リストが長すぎる場合に、内容物が垂直方向にはみ出します (自動的に
      垂直スクロールバーを表示します) が、水平方向にはみ出しません
@@ -258,11 +255,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000;
-  border-top-width : .1em;
-  border-radius: 0 0 .4em .4em;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
   background: #f0f0f0;
 }
 ```
@@ -271,12 +268,12 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -361,7 +358,6 @@ HTML フォームで使用可能なコントロールだけでは十分でない
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -374,10 +370,10 @@ HTML フォームで使用可能なコントロールだけでは十分でない
      - body のクラスを "widget" に設定して、本物の {{HTMLElement("select")}} 要素を隠す
      - または body のクラスを変更せずに "no-widget" のままにしておくことで、
        クラスが "select" である要素が隠される */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -439,18 +435,17 @@ window.addEventListener("load", () => {
 // 引数は 1 つあります。
 // select : 非アクティブにする `select` クラスの DOM ノード
 function deactivateSelect(select) {
-
   // コントロールがアクティブではないときは何もしません。
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // カスタムコントロールの選択肢のリストを取得することが必要です。
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
   // 選択肢のリストを閉じます。
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // そして、カスタムコントロール自身を非アクティブにします。
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // この関数は、ユーザーがコントロールをアクティブ/非アクティブにしたがっているときに使用します。
@@ -459,9 +454,8 @@ function deactivateSelect(select) {
 // select : アクティブにする `select` クラスの DOM ノード
 // selectList : `select` クラスであるすべての DOM ノードのリスト
 function activeSelect(select, selectList) {
-
   // コントロールがすでにアクティブであるときは何もしません。
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // すべてのカスタムコントロールを非アクティブにすることが必要です。
   // deactivateSelect 関数は forEach コールバック関数の要件を
@@ -470,7 +464,7 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // そして、指定されたコントロールをアクティブ状態にします。
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // この関数は、ユーザーが選択肢のリストを開く/閉じることを求めたときに使用します。
@@ -478,10 +472,10 @@ function activeSelect(select, selectList) {
 // select : 表示を切り替えるリストの DOM ノード
 function toggleOptList(select) {
   // リストはコントロールから確保します。
-  const optList = select.querySelector('.optList');
+  const optList = select.querySelector(".optList");
 
   // リストのクラスを表示/非表示に切り替えます。
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // この関数は、選択肢を強調したいときに使用します。
@@ -490,16 +484,16 @@ function toggleOptList(select) {
 // option : 強調する `option` クラスの DOM ノード
 function highlightOption(select, option) {
   // カスタムコントロールで使用可能なすべての選択肢のリストを取得します。
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   // すべての選択肢から強調効果を取り除きます。
   optionList.forEach((other) => {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // 適切な選択肢を強調します。
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
 以上が、カスタムコントロールのさまざまな状態を制御するために必要なもののすべてです。
@@ -508,18 +502,17 @@ function highlightOption(select, option) {
 
 ```js
 // ドキュメントが読み込まれたときのイベントの関連づけを制御します。
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   // 各々のコントロールは初期化が必要です。
   selectList.forEach((select) => {
-
     // すべての `option` も同様です。
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
 
     // ユーザーが選択肢にマウスポインタを乗せるたびに、その選択肢を強調します。
     optionList.forEach((option) => {
-      option.addEventListener('mouseover', () => {
+      option.addEventListener("mouseover", () => {
         // メモ: 変数 `select` および `option` は、関数呼び出しのスコープ内でのみ
         // 使用可能なクロージャです。
         highlightOption(select, option);
@@ -527,7 +520,7 @@ window.addEventListener('load', () => {
     });
 
     // ユーザーが独自の select 要素でクリックするたびに
-    select.addEventListener('click', (event) => {
+    select.addEventListener("click", (event) => {
       // メモ: 変数 `select` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
@@ -538,7 +531,7 @@ window.addEventListener('load', () => {
     // コントロールが再びフォーカスを得た場合
     // ユーザーがコントロールをクリックしたり、コントロールへアクセスするために
     // Tab キーを使用するたびに、コントロールはフォーカスを得ます。
-    select.addEventListener('focus', (event) => {
+    select.addEventListener("focus", (event) => {
       // メモ: 変数 `select` および `selectList` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
@@ -547,7 +540,7 @@ window.addEventListener('load', () => {
     });
 
     // コントロールがフォーカスを失った場合
-    select.addEventListener('blur', (event) => {
+    select.addEventListener("blur", (event) => {
       // メモ: 変数 `select` は、関数呼び出しのスコープ内でのみ
       // 使用可能なクロージャです。
 
@@ -556,23 +549,22 @@ window.addEventListener('load', () => {
     });
 
     // ユーザーが`esc`を押した場合にフォーカスを外す
-    select.addEventListener('keyup', (event) => {
-
+    select.addEventListener("keyup", (event) => {
       // deactivate on keyup of `esc`
       if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });
-});
+  });
 });
 ```
 
 この時点でコントロールは設計どおりに状態が変わりますが、コントロール値はまだ更新されません。次の章でこれを扱います。
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}     |
-| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3) |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                  |
 
 ### コントロールの値を制御する
 
@@ -593,10 +585,10 @@ function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
 
   // カスタムコントロールの値のプレースホルダーの取得も必要です。
-  const value = select.querySelector('.value');
+  const value = select.querySelector(".value");
 
   // そして、選択肢の全リストが必要です。
-  const optionList = select.querySelectorAll('.option');
+  const optionList = select.querySelectorAll(".option");
 
   // 選択した値のインデックスを、selectedIndex に設定します。
   nativeWidget.selectedIndex = index;
@@ -606,7 +598,7 @@ function updateValue(select, index) {
 
   // そして、カスタムコントロールで対応する選択肢を強調します。
   highlightOption(select, optionList[index]);
-};
+}
 
 // この関数は、ネイティブコントロールで現在選択されているインデックスを返します。
 // 引数は 1 つあります:
@@ -617,19 +609,19 @@ function getIndex(select) {
   const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 これら 2 つの関数で、ネイティブコントロールとカスタムコントロールを関連づけることができます:
 
 ```js
 // ドキュメントが読み込まれたときのイベントの関連づけを制御します。
-window.addEventListener('load', () => {
-  const selectList = document.querySelectorAll('.select');
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
   // 各々のコントロールは初期化が必要です。
   selectList.forEach((select) => {
-    const optionList = select.querySelectorAll('.option');
+    const optionList = select.querySelectorAll(".option");
     const selectedIndex = getIndex(select);
 
     // カスタムコントロールがフォーカスを得られるようにします。
@@ -643,13 +635,13 @@ window.addEventListener('load', () => {
 
     // ユーザーが選択肢をクリックするのに応じて値を更新します。
     optionList.forEach((option, index) => {
-      option.addEventListener('click', (event) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
     // フォーカスがあるコントロールでユーザーがキーボードを使用するのに応じて、値を更新します。
-    select.addEventListener('keyup', (event) => {
+    select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
       // ユーザーが下矢印キーを押すと、次の選択肢にジャンプします。
@@ -672,10 +664,10 @@ window.addEventListener('load', () => {
 
 これで完了です! 結果は以下のとおりです。
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4) |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                  |
 
 ちょっと待ってください、本当に終わったのでしょうか?
 
@@ -720,31 +712,31 @@ window.addEventListener('load', () => {
 ```js
 function updateValue(select, index) {
   const nativeWidget = select.previousElementSibling;
-  const value = select.querySelector('.value');
+  const value = select.querySelector(".value");
   const optionList = select.querySelectorAll('[role="option"]');
 
   // すべての選択肢が選択されていないようにします。
   optionList.forEach((other) => {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // 指定された選択肢が選択されているようにします。
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
 スクリーンリーダーにオフスクリーン select に焦点をあてて他のスタイルを無視するようにした法が簡単に見えますが、これはアクセシブルな解決策ではありません。スクリーンリーダーは盲目の人だけのものではありません。低視力や、完全な視力の人もこれを使います。このため、スクリーンリーダーをオフスクリーン要素だけに焦点をあてるようにはできません。
 
 以下がこれらの変更を施した最終結果です （[NVDA](https://www.nvaccess.org/) や [VoiceOver](https://www.apple.com/accessibility/vision/) などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう）。
 
-| Live example                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}     |
-| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
+| Live example                                                                                                |
+| ----------------------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
+| [ソースコードを確認する](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                  |
 
 もっと先に進むには、この例でのコードは汎用性や再利用性に改善が必要です。これは課題として挑戦できます。この 2 つのヒントを挙げると:すべての関数で最初の引数は同じで、つまりこれらの関数は同じコンテキストが必要です。そのコンテキストを共有するオブジェクトを作るのが賢明です。
 
@@ -781,7 +773,7 @@ function updateValue(select, index) {
   padding: 0;
   display: flex;
 }
-.styledSelect [type=radio] {
+.styledSelect [type="radio"] {
   position: absolute;
   left: -100vw;
   top: -100vh;
@@ -797,12 +789,12 @@ function updateValue(select, index) {
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
-  content : "▼";
+  content: "▼";
   background: black;
   float: right;
   color: white;
@@ -810,9 +802,9 @@ function updateValue(select, index) {
   margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;

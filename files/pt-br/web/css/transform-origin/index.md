@@ -9,7 +9,7 @@ A propriedade **`transform-origin`** define a origem das transformações de um 
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-A origem da transformação é o ponto em torno do qual uma transformação é aplicada. Por exemplo, a origem da transformação da função [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate) é o centro de rotação.
+A origem da transformação é o ponto em torno do qual uma transformação é aplicada. Por exemplo, a origem da transformação da função [`rotate()`](/pt-BR/docs/Web/CSS/transform-function/rotate) é o centro de rotação.
 
 Na prática, essa propriedade envolve um par de translações em torno das outras transformações do elemento. A primeira translação move a origem da transformação para a origem real em <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Em seguida, as outras transformações são aplicadas e, porque a origem da transformação está em <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, essas transformações atuam em relação à origem da transformação. Por fim, a translação oposta é aplicada, movendo a origem da transformação de volta à sua localização original. Consequentemente, essa definição
 
@@ -68,7 +68,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/en-US/docs/Web/CSS/initial_value).
+A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/initial_value).
 
 Se um único valor {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} for definido, ele representa o deslocamento horizontal.
 
@@ -117,7 +117,7 @@ As palavras-chave são atalhos convenientes e correspondem aos seguintes valores
 
 {{CSSInfo}}
 
-> **Nota:** O valor inicial de `transform-origin` é `0 0` para todos os elementos SVG, exceto para elementos `<svg>` raiz e elementos `<svg>` que são filhos diretos de um elemento [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), cujo `transform-origin` é `50% 50%`, assim como outros elementos CSS. Consulte o atributo [transform-origin](/en-US/docs/Web/SVG/Attribute/transform-origin) do SVG para obter mais informações.
+> **Nota:** O valor inicial de `transform-origin` é `0 0` para todos os elementos SVG, exceto para elementos `<svg>` raiz e elementos `<svg>` que são filhos diretos de um elemento [foreignObject](/pt-BR/docs/Web/SVG/Element/foreignObject), cujo `transform-origin` é `50% 50%`, assim como outros elementos CSS. Consulte o atributo [transform-origin](/pt-BR/docs/Web/SVG/Attribute/transform-origin) do SVG para obter mais informações.
 
 ## Sintaxe formal
 
@@ -316,5 +316,5 @@ transform-origin: 100% -30%;
 
 ## Veja também
 
-- [Usando transformações CSS](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

@@ -1,7 +1,6 @@
 ---
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 ---
 
 {{AddonSidebar()}}

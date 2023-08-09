@@ -1,11 +1,6 @@
 ---
 title: Apprendre à utiliser HTML pour résoudre des problèmes
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
-translation_of: Learn/HTML/Howto
-original_slug: Apprendre/HTML/Comment
 ---
 
 Une fois [les bases acquises](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML), il n'existe pas de voie idéale pour apprendre {{Glossary("HTML")}}. Vous pouvez ensuite progresser à votre rythme, en utilisant les balises qui vous sont utiles. HTML n'est qu'un ensemble de balises que vous pouvez utiliser pour structurer votre document et lui ajouter des fonctionnalités supplémentaires. Dans les articles suivants, nous travaillerons sur différents exemples illustrant comment utiliser HTML pour résoudre des problèmes fréquents qu'on rencontre lorsqu'on développe pour le Web. Si vous avez besoin d'explications détaillées sur une balise HTML donnée, n'hésitez pas à consulter [notre référence HTML](/fr/docs/Web/HTML/Reference).
@@ -18,9 +13,9 @@ HTML permet de résoudre de nombreux problèmes qui se posent lors de la concept
 
 En HTML, tout commence par la structure du document. Si vous débutez avec HTML, vous devriez démarrer avec :
 
-- [Comment créer un document HTML simple](/fr/docs/Apprendre/HTML/Comment/Cr%C3%A9er_un_document_HTML_simple)
-- [Comment diviser une page web en sections logiques](/fr/docs/Apprendre/HTML/Comment/D%C3%A9couper_une_page_web_en_sections_logiques)
-- [Comment organiser une hiérarchie de titres](/fr/docs/Apprendre/HTML/Comment/Mettre_en_place_une_hi%C3%A9rarchie_de_titres)
+- [Comment créer un document HTML simple](/fr/docs/Apprendre/HTML/Comment/Créer_un_document_HTML_simple)
+- [Comment diviser une page web en sections logiques](/fr/docs/Apprendre/HTML/Comment/Découper_une_page_web_en_sections_logiques)
+- [Comment organiser une hiérarchie de titres](/fr/docs/Apprendre/HTML/Comment/Mettre_en_place_une_hiérarchie_de_titres)
 
 ### Sémantique de base pour le texte
 

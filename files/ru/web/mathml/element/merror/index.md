@@ -1,12 +1,6 @@
 ---
 title: <merror>
 slug: Web/MathML/Element/merror
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
-translation_of: Web/MathML/Element/merror
 ---
 
 {{MathMLRef}}
@@ -28,17 +22,15 @@ translation_of: Web/MathML/Element/merror
 
 ```html
 <math>
-
-<merror>
-  <mrow>
-    <mtext> Деление на ноль: </mtext>
-    <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
-    </mfrac>
-  </mrow>
-</merror>
-
+  <merror>
+    <mrow>
+      <mtext> Деление на ноль: </mtext>
+      <mfrac>
+        <mn> 1 </mn>
+        <mn> 0 </mn>
+      </mfrac>
+    </mrow>
+  </merror>
 </math>
 ```
 

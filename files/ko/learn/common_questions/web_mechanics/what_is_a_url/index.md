@@ -1,7 +1,6 @@
 ---
 title: URL이란?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/What_is_a_URL
 l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
@@ -47,7 +46,7 @@ l10n:
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/ko/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -156,7 +155,7 @@ URL이 HTML 페이지와 같은 문서 내에서 사용되는 경우, 상황이 
 
 ### 상대 URL의 예
 
-다음 예제를 더 잘 이해하기 위해 다음 URL에 있는 문서 내에서 URL이 호출된다고 가정해 보겠습니다. `https://developer.mozilla.org/en-US/docs/Learn`
+다음 예제를 더 잘 이해하기 위해 다음 URL에 있는 문서 내에서 URL이 호출된다고 가정해 보겠습니다. `https://developer.mozilla.org/ko/docs/Learn`
 
 <table>
   <tbody>
@@ -165,7 +164,7 @@ URL이 HTML 페이지와 같은 문서 내에서 사용되는 경우, 상황이 
       <td>
         <pre>Skills/Infrastructure/Understanding_URLs</pre>
         <p>
-          URL이 <code>/</code>로 시작하지 않기 때문에 브라우저는 현재 리소스가 포함된 하위 디렉터리에서 문서를 찾으려고 시도합니다. 따라서 이 예시에서는 https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs URL에 도달하려고 합니다.
+          URL이 <code>/</code>로 시작하지 않기 때문에 브라우저는 현재 리소스가 포함된 하위 디렉터리에서 문서를 찾으려고 시도합니다. 따라서 이 예시에서는 https://developer.mozilla.org/ko/docs/Learn/Skills/Infrastructure/Understanding_URLs URL에 도달하려고 합니다.
         </p>
       </td>
     </tr>
@@ -174,7 +173,7 @@ URL이 HTML 페이지와 같은 문서 내에서 사용되는 경우, 상황이 
       <td>
         <pre>../CSS/display</pre>
         <p>
-          이 경우 UNIX 파일 시스템 세계에서 가져온 <code>../</code> 작성 규칙을 사용하여 브라우저에 한 디렉토리에서 위로 이동하고 싶다고 알립니다. 여기서는 https://developer.mozilla.org/en-US/docs/Learn/../CSS/display URL에 도달하려고 합고, https://developer.mozilla.org/en-US/docs/CSS/display으로 단순화될 수 있습니다.
+          이 경우 UNIX 파일 시스템 세계에서 가져온 <code>../</code> 작성 규칙을 사용하여 브라우저에 한 디렉토리에서 위로 이동하고 싶다고 알립니다. 여기서는 https://developer.mozilla.org/ko/docs/Learn/../CSS/display URL에 도달하려고 합고, https://developer.mozilla.org/ko/docs/CSS/display으로 단순화될 수 있습니다.
         </p>
       </td>
     </tr>

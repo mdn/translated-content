@@ -32,7 +32,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 ## 一个简单的列表示例
 
-首先，让我们看一个简单的列表示例。文章中我们将看到无序、有序和描述列表——它们都具有相似的样式特性，而某些特性却又各不相同。[Github](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 上有无额外样式的例子（也可以查看[源码](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)）。
+首先，让我们看一个简单的列表示例。文章中我们将看到无序、有序和描述列表——它们都具有相似的样式特性，而某些特性却又各不相同。[Github](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 上有无额外样式的例子（也可以查看[源码](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)）。
 
 示例列表的 HTML 代码如下：
 

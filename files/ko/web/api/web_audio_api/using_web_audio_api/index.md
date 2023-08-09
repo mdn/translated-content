@@ -2,6 +2,7 @@
 title: Web Audio API 사용하기
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API) 시작하기를 한번 봐 봅시다. 우리는 몇 가지 개념들을 간략하게 살펴보고, 그 다음에 오디오 트랙의 로드, 재생, 정지하고 볼륨 및 스테레오 패닝을 변경할 수 있는 간단한 카세트 플레이어 예제를 공부할 것입니다.
@@ -52,7 +53,7 @@ const audioContext = new AudioContext();
 이제, 생성된 오디오 컨텍스트는 재생할 사운드가 필요합니다. API를 사용해 사운드를 재생하는 몇 가지 방법이 있습니다. 간단한 방법으로 시작해 봅시다 — 우리는 카세트 플레이어를 가지고 있으므로, 노래의 전체 트랙을 재생하기를 원할 것입니다. 또한, 접근성을 위해서, 트랙을 DOM에 노출시키는 것은 좋습니다. 우리는 {{htmlelement("audio")}} 요소를 사용하여 페이지에 노래를 노출시킬 것입니다.
 
 ```html
-<audio src="myCoolTrack.mp3" ></audio>
+<audio src="myCoolTrack.mp3"></audio>
 ```
 
 > **참고:** 만약 로딩한 사운드 파일이 다른 도메인에 있다면 `crossorigin` 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 [Cross Origin Resource Sharing (CORS)](/ko/docs/Web/HTTP/CORS)를 참고해 보세요.
@@ -61,7 +62,7 @@ Web Audio API로 얻을 수 있는 모든 것을 사용하려면 이 요소에�
 
 ```js
 // 오디오 요소를 얻습니다
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // 오디오 요소를 오디오 컨텍스트에 전달합니다
 const track = audioContext.createMediaElementSource(audioElement);
@@ -85,7 +86,7 @@ JavaScript 코드에서 프로그래밍적으로 사운드를 제어하는 것�
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -105,33 +106,39 @@ track.connect(audioContext.destination);
 
 ```js
 // 재생 버튼을 선택합니다
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
+playButton.addEventListener(
+  "click",
+  function () {
     // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
     // 상태에 따라 트랙을 재생하거나 정지합니다
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 우리는 또한 트랙이 재생을 마쳤을 때 무엇을 할 지를 고려할 필요가 있습니다. `HTMLMediaElement`는 재생이 완료되었을 때 `ended` 이벤트를 한 번 발생시키므로, 우리는 그에 맞춰 코드를 실행시킬 수 있습니다.
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## 사운드 수정하기
@@ -159,7 +166,7 @@ gain의 기본값은 1입니다; 이것은 현재 볼륨을 같게 유지할 것
 사용자에게 이것을 하기 위한 제어 방법을 제공합시다 — 우리는 [범위 입력](/ko/docs/Web/HTML/Element/input/range)을 사용할 것입니다:
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **참고:**
@@ -169,11 +176,15 @@ gain의 기본값은 1입니다; 이것은 현재 볼륨을 같게 유지할 것
 그러므로 이 입력값을 취하고 입력 노드가 유저에 의해 바뀐 값을 가지고 있을 때 gain 값을 업데이트해 봅시다:
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
+volumeControl.addEventListener(
+  "input",
+  function () {
     gainNode.gain.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 > **참고:**
@@ -214,17 +225,21 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 여기서 우리의 값은 범위가 -1 (극좌)에서 1 (극우)까지입니다. 이 파라미터를 달라지게 하기 위해 다시 범위 유형 입력을 사용합시다:
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 패너의 값을 조정하기 위해 전에 했던 것과 같은 방법으로 우리는 이 입력으로부터의 값을 사용합니다:
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
+pannerControl.addEventListener(
+  "input",
+  function () {
     panner.pan.value = this.value;
-}, false);
+  },
+  false,
+);
 ```
 
 모든 노드를 같이 연결하기 위해, 우리의 오디오 그래프를 다시 조정해 봅시다:

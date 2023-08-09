@@ -1,7 +1,6 @@
 ---
 title: runtime.onStartup
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onStartup
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé quand un profil ayant cette extension installée démarre une session. Ce
 ## Syntaxe
 
 ```js
-browser.runtime.onStartup.addListener(listener)
-browser.runtime.onStartup.removeListener(listener)
-browser.runtime.onStartup.hasListener(listener)
+browser.runtime.onStartup.addListener(listener);
+browser.runtime.onStartup.removeListener(listener);
+browser.runtime.onStartup.hasListener(listener);
 ```
 
 ### Fonctions des événements
@@ -39,7 +38,7 @@ Ouvre <http://chilloutandwatchsomecatgifs.com/> quand le navigateur démarre :
 ```js
 function handleStartup() {
   browser.tabs.create({
-    url: "http://chilloutandwatchsomecatgifs.com/"
+    url: "http://chilloutandwatchsomecatgifs.com/",
   });
 }
 

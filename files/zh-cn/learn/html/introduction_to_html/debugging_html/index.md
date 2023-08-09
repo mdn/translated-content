@@ -65,49 +65,50 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 2. 下一步，在浏览器中打开，可以看到：![一个简单的 HTML 文档，但其中包含一些常见的 HTML 错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。](badly-formed-html.png)
 3. 看起来糟透了，我们到源代码中寻找原因（只列出 `body` 部分）：
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly, then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly, then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important for code behaving correctly. <strong>strong <em>strong emphasized?</strong> what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's look at an example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a>
+   </ul>
+   ```
 
 4. 以下是问题清单：
 
-    - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
-    - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
-    - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
-    - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
+   - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
+   - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
+   - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
+   - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
 6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了“什么使得 HTML 出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
 7. 通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
 
-    - 段落和列表元素加上了关闭标签。
-    - 第一个 `<strong>` 没有明确的关闭标签，因此浏览器为之后所有独立块都补全了 `<strong></strong>`。
-    - 浏览器是这样修补嵌套错误的：
+   - 段落和列表元素加上了关闭标签。
+   - 第一个 `<strong>` 没有明确的关闭标签，因此浏览器为之后所有独立块都补全了 `<strong></strong>`。
+   - 浏览器是这样修补嵌套错误的：
 
-      ```html
-      <strong>重点（strong）
-        <em>重点强调（strongly emphasised）？</em>
-      </strong>
-      <em>这又是什么鬼？</em>
-      ```
+     ```html
+     <strong
+       >重点（strong）
+       <em>重点强调（strongly emphasised）？</em>
+     </strong>
+     <em>这又是什么鬼？</em>
+     ```
 
-    - 删除整个缺少双引号的链接。最后一个列表项就成了：
+   - 删除整个缺少双引号的链接。最后一个列表项就成了：
 
-      ```html
-      <li>
-        <strong>未闭合的属性：另一种 HTML 常见错误。来看一个示例：</strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong>未闭合的属性：另一种 HTML 常见错误。来看一个示例：</strong>
+     </li>
+     ```
 
 ### HTML 验证
 

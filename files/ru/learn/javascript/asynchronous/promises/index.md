@@ -1,17 +1,11 @@
 ---
 title: Making asynchronous programming easier with async and await
 slug: Learn/JavaScript/Asynchronous/Promises
-tags:
-  - Асинхронность
-  - Гайд
-  - Для новичков
-translation_of: Learn/JavaScript/Asynchronous/Async_await
-original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
-В ECMAScript версии 2017 появились [async functions](/ru/docs/Web/JavaScript/Reference/Statements/async_function) и ключевое слово [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) ([ECMAScript Next support in Mozilla](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)). По существу, такие функции есть синтаксический сахар над Promises и Generator functions ([ts39](https://tc39.es/ecmascript-asyncawait/)). С их помощью легче писать/читать асинхронный код, ведь они позволяют использовать привычный синхронный стиль написания. В этой статье мы на базовом уровне разберёмся в их устройстве.
+В ECMAScript версии 2017 появились [async functions](/ru/docs/Web/JavaScript/Reference/Statements/async_function) и ключевое слово [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) ([ECMAScript Next support in Mozilla](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)). По существу, такие функции есть синтаксический сахар над Promises и Generator functions ([ts39](https://tc39.es/ecmascript-asyncawait/)). С их помощью легче писать/читать асинхронный код, ведь они позволяют использовать привычный синхронный стиль написания. В этой статье мы на базовом уровне разберёмся в их устройстве.
 
 | Примечания:     | Чтобы лучше понять материал, желательно перед чтением ознакомиться с основами JavaScript, асинхронными операциями вообще и объектами Promises. |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +22,9 @@ original_slug: Learn/JavaScript/Asynchronous/Async_await
 Попробуйте выполнить в консоли браузера следующий код:
 
 ```js
-function hello() { return "Hello" };
+function hello() {
+  return "Hello";
+}
 hello();
 ```
 
@@ -37,7 +33,9 @@ hello();
 Но что если мы сделаем её асинхронной ? Проверим:
 
 ```js
-async function hello() { return "Hello" };
+async function hello() {
+  return "Hello";
+}
 hello();
 ```
 
@@ -46,14 +44,18 @@ hello();
 Вот пример с [async function expression](/ru/docs/Web/JavaScript/Reference/Operators/async_function):
 
 ```js
-let hello = async function() { return "Hello" };
+let hello = async function () {
+  return "Hello";
+};
 hello();
 ```
 
 Также можно использовать стрелочные функции:
 
 ```js
-let hello = async () => { return "Hello" };
+let hello = async () => {
+  return "Hello";
+};
 ```
 
 Все они в общем случае делают одно и то же.
@@ -61,13 +63,13 @@ let hello = async () => { return "Hello" };
 Чтобы получить значение, которое возвращает Promise, мы как обычно можем использовать метод `.then()`:
 
 ```js
-hello().then((value) => console.log(value))
+hello().then((value) => console.log(value));
 ```
 
 или ещё короче
 
 ```js
-hello().then(console.log)
+hello().then(console.log);
 ```
 
 Итак, ключевое слово `async`, превращает обычную функцию в асинхронную и результат вызова функции оборачивает в Promise. Также асинхронная функция позволяет использовать в своём теле ключевое слово await, о котором далее.
@@ -82,8 +84,8 @@ hello().then(console.log)
 
 ```js
 async function hello() {
-  return greeting = await Promise.resolve("Hello");
-};
+  return (greeting = await Promise.resolve("Hello"));
+}
 
 hello().then(alert);
 ```
@@ -95,30 +97,32 @@ hello().then(alert);
 Давайте посмотрим на пример из предыдущей статьи:
 
 ```js
-fetch('coffee.jpg')
-.then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  } else {
-    return response.blob();
-  }
-})
-.then(myBlob => {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});
+fetch("coffee.jpg")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      return response.blob();
+    }
+  })
+  .then((myBlob) => {
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + e.message,
+    );
+  });
 ```
 
 К этому моменту вы должны понимать как работают Promises, чтобы понять все остальное. Давайте перепишем код используя async/await и оценим разницу.
 
 ```js
 async function myFetch() {
-  let response = await fetch('coffee.jpg');
+  let response = await fetch("coffee.jpg");
 
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -126,15 +130,16 @@ async function myFetch() {
     let myBlob = await response.blob();
 
     let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
+    let image = document.createElement("img");
     image.src = objectURL;
     document.body.appendChild(image);
   }
 }
 
-myFetch()
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
+myFetch().catch((e) => {
+  console.log(
+    "There has been a problem with your fetch operation: " + e.message,
+  );
 });
 ```
 
@@ -144,7 +149,7 @@ myFetch()
 
 ```js
 async function myFetch() {
-  let response = await fetch('coffee.jpg');
+  let response = await fetch("coffee.jpg");
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   } else {
@@ -152,12 +157,14 @@ async function myFetch() {
   }
 }
 
-myFetch().then((blob) => {
-  let objectURL = URL.createObjectURL(blob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch(e => console.log(e));
+myFetch()
+  .then((blob) => {
+    let objectURL = URL.createObjectURL(blob);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => console.log(e));
 ```
 
 Можете попрактиковаться самостоятельно, или запустить наш [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html) (а также [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html)).
@@ -171,10 +178,10 @@ myFetch().then((blob) => {
 Пример:
 
 ```js
-let response = await fetch('coffee.jpg');
+let response = await fetch("coffee.jpg");
 ```
 
-Значение Promise, которое вернёт `fetch()` будет присвоено переменной `response` только тогда, когда оно будет доступно - парсер делает паузу на данной строке дожидаясь этого момента. Как только значение доступно, парсер переходит к следующей строке, в которой создаётся объект [`Blob`](/en-US/docs/Web/API/Blob) из результата Promise. В этой строке, кстати, также используется `await`, потому что метод `.blob()` также возвращает Promise. Когда результат готов, мы возвращаем его наружу из `myFetch()`.
+Значение Promise, которое вернёт `fetch()` будет присвоено переменной `response` только тогда, когда оно будет доступно - парсер делает паузу на данной строке дожидаясь этого момента. Как только значение доступно, парсер переходит к следующей строке, в которой создаётся объект [`Blob`](/ru/docs/Web/API/Blob) из результата Promise. В этой строке, кстати, также используется `await`, потому что метод `.blob()` также возвращает Promise. Когда результат готов, мы возвращаем его наружу из `myFetch()`.
 
 Обратите внимание, когда мы вызываем `myFetch()`, она возвращает Promise, поэтому мы можем вызвать `.then()` на результате, чтобы отобразить его на экране.
 
@@ -184,23 +191,23 @@ let response = await fetch('coffee.jpg');
 
 Чтобы обработать ошибки у нас есть несколько вариантов
 
-Мы можем использовать синхронную [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) структуру с `async`/`await`. Вот изменённая версия первого примера выше:
+Мы можем использовать синхронную [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) структуру с `async`/`await`. Вот изменённая версия первого примера выше:
 
 ```js
 async function myFetch() {
   try {
-    let response = await fetch('coffee.jpg');
+    let response = await fetch("coffee.jpg");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     } else {
       let myBlob = await response.blob();
       let objectURL = URL.createObjectURL(myBlob);
-      let image = document.createElement('img');
+      let image = document.createElement("img");
       image.src = objectURL;
       document.body.appendChild(image);
     }
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 }
@@ -214,7 +221,7 @@ myFetch();
 
 ```js
 async function myFetch() {
-  let response = await fetch('coffee.jpg');
+  let response = await fetch("coffee.jpg");
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   } else {
@@ -222,15 +229,14 @@ async function myFetch() {
   }
 }
 
-myFetch().then((blob) => {
-  let objectURL = URL.createObjectURL(blob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch((e) =>
-  console.log(e)
-);
+myFetch()
+  .then((blob) => {
+    let objectURL = URL.createObjectURL(blob);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => console.log(e));
 ```
 
 Так лучше, потому что блок `.catch()` словит ошибки как из асинхронной функции, так и из Promise. Если бы мы использовали блок `try`/`catch`, мы бы не словили ошибку, которая произошла в самой `myFetch()` функции.
@@ -242,7 +248,7 @@ myFetch().then((blob) => {
 
 ## Await и Promise.all()
 
-Как вы помните, асинхронные функции построены поверх [promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), поэтому они совместимы со всеми возможностями последних. Мы легко можем подождать выполнение [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), присвоить результат в переменную и все это сделать используя синхронный стиль. Опять, вернёмся к [примеру, рассмотренному в предыдущей статье](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html). Откройте пример в соседней вкладке, чтобы лучше понять разницу.
+Как вы помните, асинхронные функции построены поверх [promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), поэтому они совместимы со всеми возможностями последних. Мы легко можем подождать выполнение [`Promise.all()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), присвоить результат в переменную и все это сделать используя синхронный стиль. Опять, вернёмся к [примеру, рассмотренному в предыдущей статье](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html). Откройте пример в соседней вкладке, чтобы лучше понять разницу.
 
 Версия с async/await (смотрите [live demo](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html) и [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html)), сейчас выглядит так:
 
@@ -255,21 +261,20 @@ async function fetchAndDecode(url, type) {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   } else {
-    if(type === 'blob') {
+    if (type === "blob") {
       content = await response.blob();
-    } else if(type === 'text') {
+    } else if (type === "text") {
       content = await response.text();
     }
 
     return content;
   }
-
 }
 
 async function displayContent() {
-  let coffee = fetchAndDecode('coffee.jpg', 'blob');
-  let tea = fetchAndDecode('tea.jpg', 'blob');
-  let description = fetchAndDecode('description.txt', 'text');
+  let coffee = fetchAndDecode("coffee.jpg", "blob");
+  let tea = fetchAndDecode("tea.jpg", "blob");
+  let description = fetchAndDecode("description.txt", "text");
 
   let values = await Promise.all([coffee, tea, description]);
 
@@ -277,22 +282,19 @@ async function displayContent() {
   let objectURL2 = URL.createObjectURL(values[1]);
   let descText = values[2];
 
-  let image1 = document.createElement('img');
-  let image2 = document.createElement('img');
+  let image1 = document.createElement("img");
+  let image2 = document.createElement("img");
   image1.src = objectURL1;
   image2.src = objectURL2;
   document.body.appendChild(image1);
   document.body.appendChild(image2);
 
-  let para = document.createElement('p');
+  let para = document.createElement("p");
   para.textContent = descText;
   document.body.appendChild(para);
 }
 
-displayContent()
-.catch((e) =>
-  console.log(e)
-);
+displayContent().catch((e) => console.log(e));
 ```
 
 Вы видите, что мы легко изменили `fetchAndDecode()` функцию в асинхронный вариант. Взгляните на строку с `Promise.all()`:
@@ -307,7 +309,7 @@ let values = await Promise.all([coffee, tea, description]);
 
 Для обработки ошибок мы добавили блок `.catch()` для функции `displayContent()`; Это позволило нам отловить ошибки в обоих функциях.
 
-> **Примечание:** Мы также можем использовать синхронный блок [`finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> **Примечание:** Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Недостатки async/await
 
@@ -319,16 +321,16 @@ Async/await позволяет вам писать код в синхронно�
 
 Есть подход, который позволяет обойти эту проблему - сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.
 
-Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
+Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout):
 
 ```js
 function timeoutPromise(interval) {
   return new Promise((resolve, reject) => {
-    setTimeout(function(){
+    setTimeout(function () {
       resolve("done");
     }, interval);
   });
-};
+}
 ```
 
 Далее в каждом примере есть асинхронная функция `timeTest()` ожидающая три вызова `timeoutPromise()`:
@@ -347,7 +349,7 @@ timeTest().then(() => {
   let finishTime = Date.now();
   let timeTaken = finishTime - startTime;
   alert("Time taken in milliseconds: " + timeTaken);
-})
+});
 ```
 
 Далее представлена асинхронная функция `timeTest()` различная для каждого из примеров.
@@ -393,7 +395,7 @@ class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
-      last
+      last,
     };
     this.age = age;
     this.gender = gender;
@@ -402,14 +404,14 @@ class Person {
 
   async greeting() {
     return await Promise.resolve(`Hi! I'm ${this.name.first}`);
-  };
+  }
 
   farewell() {
     console.log(`${this.name.first} has left the building. Bye for now!`);
-  };
+  }
 }
 
-let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+let han = new Person("Han", "Solo", 25, "male", ["Smuggling"]);
 ```
 
 Первый метод класса теперь можно использовать таким образом:
@@ -422,7 +424,7 @@ han.greeting().then(console.log);
 
 One consideration when deciding whether to use async/await is support for older browsers. They are available in modern versions of most browsers, the same as promises; the main support problems come with Internet Explorer and Opera Mini.
 
-If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes if any are needed for your user’s browsers. On encountering a browser that does not support async/await, Babel's polyfill can automatically provide fallbacks that work in older browsers.
+If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes if any are needed for your user's browsers. On encountering a browser that does not support async/await, Babel's polyfill can automatically provide fallbacks that work in older browsers.
 
 ## Заключение
 

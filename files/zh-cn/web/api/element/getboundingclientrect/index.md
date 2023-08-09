@@ -9,7 +9,7 @@ slug: Web/API/Element/getBoundingClientRect
 
 ## 语法
 
-```js
+```js-nolint
 getBoundingClientRect()
 ```
 
@@ -52,12 +52,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
 for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -87,8 +87,12 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js
@@ -97,17 +101,17 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
+  container.innerHTML = "";
   for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 
@@ -124,5 +128,5 @@ update();
 ## 参考资料
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](https://msdn.microsoft.com/library/ms536433(VS.85).aspx)
-- [MSDN: `ClientRect`](https://msdn.microsoft.com/library/hh826029(VS.85).aspx)，更早版本的 `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>)，更早版本的 `DOMRect`

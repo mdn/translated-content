@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: loadeddata event'
+title: "HTMLMediaElement: loadeddata event"
 slug: Web/API/HTMLMediaElement/loadeddata_event
 ---
 
@@ -55,22 +55,26 @@ Estos ejemplos agregan un escucha de eventos para el evento de `loadeddata` del 
 Utilizando `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadeddata', (event) => {
-  console.log('Hurra! El readyState solo aumentó a ' +
-      'HAVE_CURRENT_DATA or mayor por primera vez.');
+video.addEventListener("loadeddata", (event) => {
+  console.log(
+    "Hurra! El readyState solo aumentó a " +
+      "HAVE_CURRENT_DATA or mayor por primera vez.",
+  );
 });
 ```
 
 Utilizando el `onloadeddata` propiedad del controlador de eventos:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadeddata = (event) => {
-  console.log('Hurra! El readyState solo aumentó a ' +
-      'HAVE_CURRENT_DATA or mayor por primera vez.');
+  console.log(
+    "Hurra! El readyState solo aumentó a " +
+      "HAVE_CURRENT_DATA or mayor por primera vez.",
+  );
 };
 ```
 

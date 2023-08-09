@@ -1,6 +1,8 @@
 ---
-title: '<summary>: 概要明示要素'
+title: "<summary>: 概要明示要素"
 slug: Web/HTML/Element/summary
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -8,39 +10,6 @@ slug: Web/HTML/Element/summary
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/Guide/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>不可。開始タグと終了タグの両方が必要。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("details")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -85,6 +54,8 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 </details>
 ```
 
+#### 結果
+
 {{EmbedLiveSample("Basic_example", 650, 120)}}
 
 ## 見出しとしての概要
@@ -101,6 +72,8 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
   </ol>
 </details>
 ```
+
+#### 結果
 
 {{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
 
@@ -124,7 +97,44 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 </details>
 ```
 
+#### 結果
+
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>不可。開始タグと終了タグの両方が必要。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("details")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

@@ -2,6 +2,7 @@
 title: border-bottom
 slug: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
 **`border-bottom`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 아래쪽 테두리를 설정합니다. {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-bottom-color")}}의 값을 지정합니다.
@@ -48,9 +49,7 @@ border-bottom: medium dashed green;
 ## 예제
 
 ```html
-<div>
-  아래쪽 테두리를 가진 요소입니다.
-</div>
+<div>아래쪽 테두리를 가진 요소입니다.</div>
 ```
 
 ```css

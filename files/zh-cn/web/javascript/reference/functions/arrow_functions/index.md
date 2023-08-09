@@ -51,14 +51,9 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 ### 更短的函数
 
 ```js
-var elements = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+var elements = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-elements.map(function(element) {
+elements.map(function (element) {
   return element.length;
 }); // 返回数组：[8, 6, 7, 9]
 
@@ -68,17 +63,17 @@ elements.map((element) => {
 }); // [8, 6, 7, 9]
 
 // 当箭头函数只有一个参数时，可以省略参数的圆括号
-elements.map(element => {
- return element.length;
+elements.map((element) => {
+  return element.length;
 }); // [8, 6, 7, 9]
 
 // 当箭头函数的函数体只有一个 `return` 语句时，可以省略 `return` 关键字和方法体的花括号
-elements.map(element => element.length); // [8, 6, 7, 9]
+elements.map((element) => element.length); // [8, 6, 7, 9]
 
 // 在这个例子中，因为我们只需要 `length` 属性，所以可以使用参数解构
 // 需要注意的是字符串 `"length"` 是我们想要获得的属性的名称，而 `lengthFooBArX` 则只是个变量名，
 // 可以替换成任意合法的变量名
-elements.map(({ "length": lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+elements.map(({ length: lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
 ```
 
 ### 没有单独的`this`
@@ -126,7 +121,7 @@ function Person() {
 箭头函数不会创建自己的`this，它只会从自己的作用域链的上一层继承 this`。因此，在下面的代码中，传递给`setInterval`的函数内的`this`与封闭函数中的`this`值相同：
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -154,24 +149,24 @@ f() === window; // 或者 global
 
 ```js
 var adder = {
-  base : 1,
+  base: 1,
 
-  add : function(a) {
-    var f = v => v + this.base;
+  add: function (a) {
+    var f = (v) => v + this.base;
     return f(a);
   },
 
-  addThruCall: function(a) {
-    var f = v => v + this.base;
+  addThruCall: function (a) {
+    var f = (v) => v + this.base;
     var b = {
-      base : 2
+      base: 2,
     };
 
     return f.call(b, a);
-  }
+  },
 };
 
-console.log(adder.add(1));         // 输出 2
+console.log(adder.add(1)); // 输出 2
 console.log(adder.addThruCall(1)); // 仍然输出 2
 ```
 
@@ -193,7 +188,7 @@ function foo(n) {
 foo(1); // 2
 foo(2); // 4
 foo(3); // 6
-foo(3,2);//6
+foo(3, 2); //6
 ```
 
 在大多数情况下，使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)是相较使用`arguments`对象的更好选择。
@@ -205,11 +200,11 @@ function foo(arg) {
 }
 foo(1); // 1
 
-function foo(arg1,arg2) {
-    var f = (...args) => args[1];
-    return f(arg1,arg2);
+function foo(arg1, arg2) {
+  var f = (...args) => args[1];
+  return f(arg1, arg2);
 }
-foo(1,2);  //2
+foo(1, 2); //2
 ```
 
 ### 使用箭头函数作为方法
@@ -217,14 +212,14 @@ foo(1,2);  //2
 如上所述，箭头函数表达式对非方法函数是最合适的。让我们看看当我们试着把它们作为方法时发生了什么。
 
 ```js
-'use strict';
+"use strict";
 var obj = {
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
-    console.log( this.i, this)
-  }
-}
+  c: function () {
+    console.log(this.i, this);
+  },
+};
 obj.b();
 // undefined, Window{...}
 obj.c();
@@ -234,17 +229,17 @@ obj.c();
 箭头函数没有定义 this 绑定。另一个涉及{{jsxref("Object.defineProperty()")}}的示例：
 
 ```js
-'use strict';
+"use strict";
 var obj = {
-  a: 10
+  a: 10,
 };
 
 Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this);
-    return this.a+10;
-   // 代表全局对象 'Window', 因此 'this.a' 返回 'undefined'
-  }
+    return this.a + 10;
+    // 代表全局对象 'Window', 因此 'this.a' 返回 'undefined'
+  },
 });
 
 obj.b; // undefined   "undefined"   Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
@@ -279,10 +274,12 @@ console.log(Foo.prototype); // undefined
 在一个简写体中，只需要一个表达式，并附加一个隐式的返回值。在块体中，必须使用明确的`return`语句。
 
 ```js
-var func = x => x * x;
+var func = (x) => x * x;
 // 简写函数 省略 return
 
-var func = (x, y) => { return x + y; };
+var func = (x, y) => {
+  return x + y;
+};
 //常规编写 明确的返回值
 ```
 
@@ -303,7 +300,7 @@ var func = () => { foo: function() {} };
 所以，记得用圆括号把对象字面量包起来：
 
 ```js
-var func = () => ({foo: 1});
+var func = () => ({ foo: 1 });
 ```
 
 ## 换行
@@ -319,22 +316,15 @@ var func = ()
 但是，可以通过在‘=>’之后换行，或者用‘( )’、'{ }'来实现换行，如下：
 
 ```js
-var func = (a, b, c) =>
-  1;
+var func = (a, b, c) => 1;
 
-var func = (a, b, c) => (
-  1
-);
+var func = (a, b, c) => 1;
 
 var func = (a, b, c) => {
-  return 1
+  return 1;
 };
 
-var func = (
-  a,
-  b,
-  c
-) => 1;
+var func = (a, b, c) => 1;
 
 // 不会有语法错误
 ```
@@ -360,16 +350,15 @@ callback = callback || (() => {});    // ok
 // 空的箭头函数返回 undefined
 let empty = () => {};
 
-(() => 'foobar')();
+(() => "foobar")();
 // Returns "foobar"
 // (这是一个立即执行函数表达式，可参阅 'IIFE'术语表)
 
-
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 
 // Easy array filtering, mapping, ...
 
@@ -378,25 +367,27 @@ var arr = [5, 6, 13, 0, 1, 18, 23];
 var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
+var even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v => v * 2);
+var double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // 更简明的 promise 链
-promise.then(a => {
-  // ...
-}).then(b => {
-  // ...
-});
+promise
+  .then((a) => {
+    // ...
+  })
+  .then((b) => {
+    // ...
+  });
 
 // 无参数箭头函数在视觉上容易分析
-setTimeout( () => {
-  console.log('I happen sooner');
-  setTimeout( () => {
+setTimeout(() => {
+  console.log("I happen sooner");
+  setTimeout(() => {
     // deeper code
-    console.log('I happen later');
+    console.log("I happen later");
   }, 1);
 }, 1);
 ```
@@ -404,68 +395,82 @@ setTimeout( () => {
 #### 箭头函数也可以使用条件（三元）运算符：
 
 ```js
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 ```
 
 > 箭头函数内定义的变量及其作用域
 
 ```js
 // 常规写法
-var greeting = () => {let now = new Date(); return ("Good" + ((now.getHours() > 17) ? " evening." : " day."));}
-greeting();          //"Good day."
-console.log(now);    // ReferenceError: now is not defined 标准的 let 作用域
+var greeting = () => {
+  let now = new Date();
+  return "Good" + (now.getHours() > 17 ? " evening." : " day.");
+};
+greeting(); //"Good day."
+console.log(now); // ReferenceError: now is not defined 标准的 let 作用域
 
 // 参数括号内定义的变量是局部变量（默认参数）
-var greeting = (now=new Date()) => "Good" + (now.getHours() > 17 ? " evening." : " day.");
-greeting();          //"Good day."
-console.log(now);    // ReferenceError: now is not defined
+var greeting = (now = new Date()) =>
+  "Good" + (now.getHours() > 17 ? " evening." : " day.");
+greeting(); //"Good day."
+console.log(now); // ReferenceError: now is not defined
 
 // 对比：函数体内{}不使用 var 定义的变量是全局变量
-var greeting = () => {now = new Date(); return ("Good" + ((now.getHours() > 17) ? " evening." : " day."));}
-greeting();           //"Good day."
-console.log(now);     // Fri Dec 22 2017 10:01:00 GMT+0800 (中国标准时间)
+var greeting = () => {
+  now = new Date();
+  return "Good" + (now.getHours() > 17 ? " evening." : " day.");
+};
+greeting(); //"Good day."
+console.log(now); // Fri Dec 22 2017 10:01:00 GMT+0800 (中国标准时间)
 
 // 对比：函数体内{} 用 var 定义的变量是局部变量
-var greeting = () => {var now = new Date(); return ("Good" + ((now.getHours() > 17) ? " evening." : " day."));}
+var greeting = () => {
+  var now = new Date();
+  return "Good" + (now.getHours() > 17 ? " evening." : " day.");
+};
 greeting(); //"Good day."
-console.log(now);    // ReferenceError: now is not defined
+console.log(now); // ReferenceError: now is not defined
 ```
 
 > #### 箭头函数也可以使用闭包：
 
 ```js
 // 标准的闭包函数
-function A(){
-      var i=0;
-      return function b(){
-              return (++i);
-      };
-};
+function A() {
+  var i = 0;
+  return function b() {
+    return ++i;
+  };
+}
 
-var v=A();
-v();    //1
-v();    //2
-
+var v = A();
+v(); //1
+v(); //2
 
 //箭头函数体的闭包（i=0 是默认参数）
-var Add = (i=0) => {return (() => (++i) )};
+var Add = (i = 0) => {
+  return () => ++i;
+};
 var v = Add();
-v();           //1
-v();           //2
+v(); //1
+v(); //2
 
 //因为仅有一个返回，return 及括号（）也可以省略
-var Add = (i=0)=> ()=> (++i);
+var Add =
+  (i = 0) =>
+  () =>
+    ++i;
 ```
 
 > #### 箭头函数递归
 
 ```js
-var fact = (x) => ( x==0 ?  1 : x*fact(x-1) );
-fact(5);       // 120
+var fact = (x) => (x == 0 ? 1 : x * fact(x - 1));
+fact(5); // 120
 ```
 
 ## 规范

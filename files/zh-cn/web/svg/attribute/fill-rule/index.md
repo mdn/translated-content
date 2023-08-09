@@ -24,21 +24,29 @@ slug: Web/SVG/Attribute/fill-rule
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- fill-rule 的默认值 -->
-  <polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="nonzero"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   从这个形状的中心到无穷远处有两条路径段（红色部分），因此
   该区域被认为是形状外部，并且没有被填充。
   -->
-  <polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/>
+  <polygon
+    fill-rule="evenodd"
+    stroke="red"
+    points="150,0 121,90 198,35 102,35 179,90" />
 </svg>
 ```
 
@@ -62,30 +70,40 @@ html,body,svg { height:100% }
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
   <!-- nonzero 填充规则被用于路径段会相交的形状上的效果 -->
-  <polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="nonzero"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   nonzero 填充规则被用于一个形状在另一形状内部的效果
   这两个正方形的路径段方向相同（都是顺时针）
   -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <path
+    fill-rule="nonzero"
+    stroke="red"
+    d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z" />
 
   <!--
   这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
   外面的正方形是顺时针，里面的正方形则是逆时针
   -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <path
+    fill-rule="nonzero"
+    stroke="red"
+    d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z" />
 </svg>
 ```
 
@@ -98,30 +116,40 @@ html,body,svg { height:100% }
 #### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
   <!-- evenodd 填充规则被用于路径段会相交的形状上的效果 -->
-  <polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="evenodd"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   evenodd 填充规则被用于一个形状在另一形状内部的效果
   这两个正方形的路径段方向相同（都是顺时针）
   -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <path
+    fill-rule="evenodd"
+    stroke="red"
+    d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z" />
 
   <!--
   这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
   外面的正方形是顺时针，里面的正方形则是逆时针
   -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <path
+    fill-rule="evenodd"
+    stroke="red"
+    d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z" />
 </svg>
 ```
 

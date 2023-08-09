@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 l10n:
   sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
+
 {{JSRef}}
 
 **`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다.

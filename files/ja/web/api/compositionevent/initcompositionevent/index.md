@@ -1,8 +1,9 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() メソッド"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{deprecated_header}}{{APIRef("UI Events")}}
@@ -28,9 +29,9 @@ initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 - `view`
   - : イベント生成元の {{domxref("Window")}} オブジェクト。
 - `data`
-  - : 文字列で、 `data` 属性の値を表します。
+  - : 文字列で、`data` 属性の値を表します。
 - `localeArg`
-  - : 文字列で、 `locale` 属性の値を表します。
+  - : 文字列で、`locale` 属性の値を表します。
 
 ### 返値
 

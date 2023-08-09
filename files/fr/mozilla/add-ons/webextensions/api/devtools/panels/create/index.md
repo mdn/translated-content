@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
 ---
 
 {{AddonSidebar()}}
@@ -14,10 +13,10 @@ Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL ver
 
 ```js
 var creating = browser.devtools.panels.create(
-  title,       // string
-  iconPath,    // string
-  pagePath     // string
-)
+  title, // string
+  iconPath, // string
+  pagePath, // string
+);
 ```
 
 ### Parametères
@@ -50,14 +49,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",                 // title
-  "/icons/star.png",           // icon
-  "/devtools/panel/panel.html" // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "/icons/star.png", // icon
+    "/devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 {{WebExtExamples}}

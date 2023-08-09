@@ -1,7 +1,6 @@
 ---
 title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-original_slug: Web/API/DeviceAcceleration
 ---
 
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: browserAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 ---
 
 {{AddonSidebar()}}
@@ -12,8 +11,8 @@ Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateu
 
 ```js
 browser.browserAction.setPopup(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -60,27 +59,33 @@ function onCreated() {
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated,
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "popup-1") {
-    browser.browserAction.setPopup({popup: "/popup/popup1.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup1.html" });
   } else if (info.menuItemId == "popup-2") {
-    browser.browserAction.setPopup({popup: "/popup/popup2.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```

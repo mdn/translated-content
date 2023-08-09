@@ -53,14 +53,14 @@ _Hereda los métodos de su padre, {{domxref("EventTarget")}}._
 El siguiente fragmento de código crea un objeto {{domxref("Worker")}} usando el constructor {{domxref("Worker.Worker", "Worker()")}}, luego usa el objeto _worker_:
 
 ```js
-const myWorker = new Worker('/worker.js');
-const first = document.querySelector('input#number1');
-const second = document.querySelector('input#number2');
+const myWorker = new Worker("/worker.js");
+const first = document.querySelector("input#number1");
+const second = document.querySelector("input#number2");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Mensaje enviado al worker');
-}
+  console.log("Mensaje enviado al worker");
+};
 ```
 
 Para ver un ejemplo completo, consulte nuestro [Ejemplo básico de un _worker_ dedicado](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([ejecutar _worker_ dedicado](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).

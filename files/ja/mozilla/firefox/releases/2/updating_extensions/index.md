@@ -1,7 +1,6 @@
 ---
 title: Firefox 2 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
-original_slug: Updating_extensions_for_Firefox_2
 ---
 
 {{FirefoxSidebar}}
@@ -10,7 +9,7 @@ original_slug: Updating_extensions_for_Firefox_2
 
 ## ステップ 1: インストール定義ファイルの更新
 
-最初のステップ -- ほとんどの拡張機能で唯一必要なこと -- は、[インストール定義](/ja/Install_Manifests)ファイル install.rdf を更新し、Firefox 2 との互換性を持たせることです。
+最初のステップ — ほとんどの拡張機能で唯一必要なこと — は、[インストール定義](/ja/Install_Manifests)ファイル install.rdf を更新し、Firefox 2 との互換性を持たせることです。
 
 単純に、Firefox の最大互換バージョンを指示する行を探します (次のように Firefox 1.5 向けになっています)。
 

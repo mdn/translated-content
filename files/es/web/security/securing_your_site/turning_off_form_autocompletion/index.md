@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo desactivar el autocompletado del formulario?
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-original_slug: Web/Security/Securing_your_site/desactivar_autocompletado_formulario
 ---
 
 Este artículo explica como un sitio web puede inhabilitar el autocompletado para los campos del formulario.
@@ -21,9 +20,7 @@ autocomplete="off"
 Puede hacer esto para un formulario entero o para elementos específicos de tipo "input" dentro del formulario:
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-[…]
-</form>
+<form method="post" action="/form" autocomplete="off">[…]</form>
 ```
 
 ```html
@@ -31,7 +28,7 @@ Puede hacer esto para un formulario entero o para elementos específicos de tipo
   […]
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```
@@ -72,4 +69,4 @@ Este complemento aleatorizará por defecto el nombre del atributo. Se restaurar�
 
 URL: [https://terrylinooo.github.io/jquery.disableAutoFill/](https://github.com/terrylinooo/jquery.disableAutoFill)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/es/docs/Web/Security")}}

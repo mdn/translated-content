@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/Transfer-Encoding
 
 当这个消息首部出现在 {{HTTPMethod("HEAD")}} 请求的响应中，而这样的响应没有消息体，那么它其实指的是应用在相应的 {{HTTPMethod("GET")}} 请求的应答的值。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | yes                             |
 
 ## 语法
 

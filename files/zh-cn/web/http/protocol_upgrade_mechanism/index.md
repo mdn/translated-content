@@ -44,7 +44,7 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 {{domxref("WebSocket.WebSocket", "WebSocket()")}} 构造函数已经自动完成了发送初始 HTTP/1.1 连接的所有工作，然后为你处理握手及升级过程。
 
->**备注：** 你也可以用 `"wss://"` URL 方式来打开安全的 WebSocket 连接。
+> **备注：** 你也可以用 `"wss://"` URL 方式来打开安全的 WebSocket 连接。
 
 如果想要自己重头实现 WebSocket 连接，就必须要处理握手和升级过程。在创建初始 HTTP/1.1 会话之后，你需要发送另一个 HTTP 标准请求来请求升级，但在标头中要带上 {{HTTPHeader("Upgrade")}} 和 {{HTTPHeader("Connection")}}，也就是：
 

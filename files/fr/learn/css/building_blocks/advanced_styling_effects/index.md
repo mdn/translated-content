@@ -1,8 +1,6 @@
 ---
 title: Effets de boîte avancés
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
-original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}
@@ -44,7 +42,10 @@ Débutons avec un exemple simple. D'abord, un peu de HTML :
 
 ```html
 <article class="simple">
-  <p><strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.</p>
+  <p>
+    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
+    atteint un niveau critique.
+  </p>
 </article>
 ```
 
@@ -61,11 +62,15 @@ article {
   color: white;
   text-align: center;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -88,7 +93,10 @@ Vous pouvez également définir plusieurs ombres de boîtes dans une seule décl
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a atteint un niveau critique.</p>
+  <p>
+    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
+    atteint un niveau critique.
+  </p>
 </article>
 ```
 
@@ -103,14 +111,22 @@ article {
   color: white;
   text-align: center;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25)); }
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
+}
 
-.multiple { box-shadow: 1px 1px 1px black,
-                        2px 2px 1px black,
-                        3px 3px 1px red,
-                        4px 4px 1px red,
-                        5px 5px 1px black,
-                        6px 6px 1px black; }
+.multiple {
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
+}
 ```
 
 Nous obtenons le résultat suivant :
@@ -137,19 +153,22 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -189,12 +208,12 @@ p {
 }
 
 .filter {
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
 }
 
 .box-shadow {
-  box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -231,10 +250,8 @@ Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [ble
 Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("background-blend-mode")}} — nous montrons une couple de simples éléments {{htmlelement("div")}} avec lesquels vous pourrez comparer l'original et la version avec mélange de couleurs :
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Maintenant la CSS — nous ajoutons aux `<div>` une image d'arrière‑plan sur un fond vert :
@@ -266,20 +283,14 @@ Voyons maintenant {{cssxref("mix-blend-mode")}}. Nous présentons les deux même
 ```html
 <article>
   Mode sans mélange
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Mélange "multiply"
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -354,13 +365,24 @@ Si vous voulez utiliser de telles fonctionnalités dans votre travail de product
 Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec le bouton correspondant.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><div class="style-me">
-</div></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<div class="style-me">
+</div></textarea
+  >
 
   <h2>Zone de saisie de la CSS</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">.style-me {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+.style-me {
   width: 280px;
   height: 130px;
   padding: 10px;
@@ -369,12 +391,19 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec 
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea>
+} </textarea
+  >
 
   <h2>Zone de rendu</h2>
-  <div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Réinitialiser" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Réinitialiser"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -387,8 +416,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -396,7 +425,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

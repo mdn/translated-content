@@ -28,7 +28,10 @@ var score = 0;
 现在在`create()`函数末尾添加这一行：
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 该`text()`方法可以采用四个参数：
@@ -45,9 +48,9 @@ scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095D
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

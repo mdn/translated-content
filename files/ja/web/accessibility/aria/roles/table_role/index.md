@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: table ロール'
+title: "ARIA: table ロール"
 slug: Web/Accessibility/ARIA/Roles/table_role
 ---
 
@@ -8,18 +8,23 @@ slug: Web/Accessibility/ARIA/Roles/table_role
 ARIA の role 属性の table 値は、このロールを含む要素を、ネイティブの {{htmlelement("table")}} HTML 要素と同様に、行と列に配置されたデータを含む非インタラクティブな表構造を持つものとして識別します。
 
 ```html
-<div role="table" aria-label="意味論的な表の要素" aria-describedby="semantic_table_desc">
-  <div id="semantic_table_desc">ARIA の table ロールの代わりに使用する意味論的な要素</div>
+<div
+  role="table"
+  aria-label="意味論的な表の要素"
+  aria-describedby="semantic_table_desc">
+  <div id="semantic_table_desc">
+    ARIA の table ロールの代わりに使用する意味論的な要素
+  </div>
   <div role="rowgroup">
-     <div role="row">
-       <span role="columnheader">ARIA の table ロール</span>
-       <span role="columnheader">意味論的な要素</span>
-     </div>
-   </div>
-   <div role="rowgroup">
     <div role="row">
-       <span role="cell">table</span>
-       <span role="cell">table</span>
+      <span role="columnheader">ARIA の table ロール</span>
+      <span role="columnheader">意味論的な要素</span>
+    </div>
+  </div>
+  <div role="rowgroup">
+    <div role="row">
+      <span role="cell">table</span>
+      <span role="cell">table</span>
     </div>
     <div role="row">
       <span role="cell">rowgroup</span>
@@ -73,28 +78,34 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 ## 例
 
 ```html
-<div role="table" aria-label="意味論的な要素" aria-describedby="semantic_elements_table_desc" aria-rowcount="81">
-  <div id="semantic_elements_table_desc">ARIA のロールの代わりに使用する意味論的な要素</div>
+<div
+  role="table"
+  aria-label="意味論的な要素"
+  aria-describedby="semantic_elements_table_desc"
+  aria-rowcount="81">
+  <div id="semantic_elements_table_desc">
+    ARIA のロールの代わりに使用する意味論的な要素
+  </div>
   <div role="rowgroup">
-     <div role="row">
-       <span role="columnheader" aria-sort="none">ARIA のロール</span>
-       <span role="columnheader" aria-sort="none">意味論的な要素</span>
-     </div>
-   </div>
-   <div role="rowgroup">
-    <div role="row" aria-rowindex="11">
-       <span role="cell">header</span>
-       <span role="cell">h1</span>
+    <div role="row">
+      <span role="columnheader" aria-sort="none">ARIA のロール</span>
+      <span role="columnheader" aria-sort="none">意味論的な要素</span>
     </div>
-    <div role="row"  aria-rowindex="16">
+  </div>
+  <div role="rowgroup">
+    <div role="row" aria-rowindex="11">
+      <span role="cell">header</span>
+      <span role="cell">h1</span>
+    </div>
+    <div role="row" aria-rowindex="16">
       <span role="cell">header</span>
       <span role="cell">h6</span>
     </div>
-    <div role="row"  aria-rowindex="18">
+    <div role="row" aria-rowindex="18">
       <span role="cell">rowgroup</span>
       <span role="cell">thead</span>
     </div>
-    <div role="row"  aria-rowindex="24">
+    <div role="row" aria-rowindex="24">
       <span role="cell">term</span>
       <span role="cell">dt</span>
     </div>

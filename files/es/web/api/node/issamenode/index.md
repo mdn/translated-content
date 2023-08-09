@@ -10,11 +10,11 @@ slug: Web/API/Node/isSameNode
 >
 > ```js
 > // Instead of using
-> node1.isSameNode(node2)
+> node1.isSameNode(node2);
 >
 > // use
-> node1 === node2 // or
-> node1 == node2
+> node1 === node2; // or
+> node1 == node2;
 > ```
 
 ## Sintaxis

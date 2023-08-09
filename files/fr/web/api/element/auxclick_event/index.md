@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
-tags:
-  - API
-  - Expérimentale
-  - Propriété
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onauxclick
-original_slug: Web/API/GlobalEventHandlers/onauxclick
 ---
 
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
@@ -35,22 +28,24 @@ Un seul gestionnaire `onauxclick` peut être affecté à un objet à la fois. Vo
 Dans cet exemple, nous définissons des fonctions pour deux gestionnaires d'événements — {{domxref("GlobalEventHandlers.onclick", "onclick")}} et `onauxclick`. Le premier modifie la couleur de l'arrière-plan du bouton, tandis que le second modifie la couleur de premier plan (texte) du bouton. Vous pouvez voir les deux fonctions en action en essayant la démo avec une souris à plusieurs boutons ([voir en direct sur GitHub](https://mdn.github.io/dom-examples/auxclick/); également [voir le code source](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
 ```js
-var button = document.querySelector('button');
-var html = document.querySelector('html');
+var button = document.querySelector("button");
+var html = document.querySelector("html");
 
 function random(number) {
   return Math.floor(Math.random() * number);
 }
 
-button.onclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+button.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   button.style.backgroundColor = rndCol;
 };
 
-button.onauxclick = function() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+button.onauxclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   button.style.color = rndCol;
-}
+};
 ```
 
 > **Note :** Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.

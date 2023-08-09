@@ -1,7 +1,6 @@
 ---
 title: Iniciando com CSS
 slug: Learn/CSS/First_steps/Getting_started
-original_slug: Learn/CSS/First_steps/Iniciando
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
@@ -24,7 +23,7 @@ Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprend
             >como trabalhar com arquivos</a
           >, e conhecimento básico sobre HTML (estude
           <a
-            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
             >Introdução ao HTML</a
           >.)
         </p>
@@ -47,28 +46,30 @@ Nosso ponto de partida e um documento HTML. Você pode copiar o código abaixo s
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Getting started with CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>I am a level one heading</h1>
 
-    <p>This is a paragraph of text. In the text is a <span>span element</span>
-and also a <a href="http://example.com">link</a>.</p>
+    <p>
+      This is a paragraph of text. In the text is a
+      <span>span element</span> and also a
+      <a href="http://example.com">link</a>.
+    </p>
 
-    <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+    <p>
+      This is the second paragraph. It contains an <em>emphasized</em> element.
+    </p>
 
     <ul>
-        <li>Item one</li>
-        <li>Item two</li>
-        <li>Item <em>three</em></li>
+      <li>Item one</li>
+      <li>Item two</li>
+      <li>Item <em>three</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -83,7 +84,7 @@ Crie um arquivo na mesma pasta em que se encontra o seu documento HTML e salve-o
 Para ligar o `style.css` ao `index.html` adicione a seguinte linha em algum lugar dentro do {{htmlelement("head")}} do documento HTML:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Este {{htmlelement("link")}} elemento diz ao navegador que temos uma folha de estilo, usando o atributo `rel`, e a localização desse arquivo como o valor do atributo `href`. Você pode testar se esse CSS funciona adicionando regras ao `styles.css`. Usando o seu editor de código, adicione as linhas seguintes ao seu arquivo CSS:
@@ -111,8 +112,9 @@ p {
 Você pode especificar múltiplos seletores, separando-os com virgula. Se eu quero que todos os parágrafos e todos os itens da lista se tornem verdes, então minha regra se parecerá com isto:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -134,7 +136,7 @@ li {
 
 Experimente adicionar isto ao seu CSS agora.
 
-A propriedade `list-style-type` é uma boa propriedade para se ver no MDN para ver quais valores são suportados. Dê uma olhada na página para [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) e encontrará um exemplo interativo no topo da página para experimentar alguns valores diferentes nele, todos os valores permitidos são detalhados mais abaixo na página.
+A propriedade `list-style-type` é uma boa propriedade para se ver no MDN para ver quais valores são suportados. Dê uma olhada na página para [`list-style-type`](/pt-BR/docs/Web/CSS/list-style-type) e encontrará um exemplo interativo no topo da página para experimentar alguns valores diferentes nele, todos os valores permitidos são detalhados mais abaixo na página.
 
 Olhando para essa página você descobrirá que, além de remover a marcação da lista, que você também pode alterá-los — Teste mudá-los para marcação quadrada, usando valores de `square`.
 
@@ -218,7 +220,7 @@ O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma re
 
 ## Estilizando coisas baseadas no estado
 
-O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/en-US/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
+O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
 
 ```css
 a:link {

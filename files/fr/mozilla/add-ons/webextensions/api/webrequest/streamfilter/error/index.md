@@ -1,7 +1,6 @@
 ---
 title: webRequest.Streamfilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 ---
 
 {{AddonSidebar()}}
@@ -20,17 +19,17 @@ Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror"
 function listener(details) {
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event => {
+  filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["<all_urls>"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

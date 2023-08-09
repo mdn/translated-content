@@ -1,18 +1,6 @@
 ---
 title: Perceivable
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
-tags:
-  - Accessibility
-  - NeedsTranslation
-  - Principle 1
-  - TopicStub
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
-translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
@@ -39,7 +27,7 @@ The key here is that text can be converted to other forms that people with disab
         alternative text.
       </td>
       <td>
-        <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+        <a href="/ru/docs/Learn/Accessibility/HTML#text_alternatives"
           >Text alternatives.</a
         >
       </td>
@@ -53,11 +41,11 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         <p>
           A text description may work, or an accessible data table (see
-          <a href="/en-US/docs/Learn/HTML/Tables/Advanced"
+          <a href="/ru/docs/Learn/HTML/Tables/Advanced"
             >HTML table advanced features and accessibility</a
           >). See
           <a
-            href="/en-US/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
+            href="/ru/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
             >Other text alternative mechanisms</a
           >
           for the argument against <code>longdesc</code>.
@@ -72,18 +60,18 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         <p>
           See
-          <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          <a href="/ru/docs/Learn/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >
           for static caption options, and
-          <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts"
+          <a href="/ru/docs/Learn/Accessibility/Multimedia#audio_transcripts"
             >Audio transcripts</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks"
+          <a href="/ru/docs/Learn/Accessibility/Multimedia#video_text_tracks"
             >Video text tracks</a
           >, and
           <a
-            href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content"
+            href="/ru/docs/Learn/Accessibility/Multimedia#other_multimedia_content"
             >Other multimedia content</a
           >
           for other alternatives.
@@ -100,7 +88,7 @@ The key here is that text can be converted to other forms that people with disab
         function of the button (e.g.,
         <code>&#x3C;button>Upload image&#x3C;/button></code>). For more
         information on other UI controls, see
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/ru/docs/Learn/Accessibility/HTML#ui_controls"
           >UI controls</a
         >.
       </td>
@@ -115,7 +103,7 @@ The key here is that text can be converted to other forms that people with disab
           Decorative images should be implemented using CSS background images
           (see
           <a
-            href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
+            href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
             >Backgrounds</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
@@ -194,18 +182,18 @@ This guideline refers to the ability of content to be consumed by users in multi
       <td>
         The whole of
         <p>
-          <a href="/en-US/docs/Learn/Accessibility/HTML"
+          <a href="/ru/docs/Learn/Accessibility/HTML"
             >HTML: A good basis for accessibility</a
           >
           is packed with information about this, but you should particularly
           refer to
-          <a href="/en-US/docs/Learn/Accessibility/HTML#good_semantics"
+          <a href="/ru/docs/Learn/Accessibility/HTML#good_semantics"
             >Good semantics</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+          <a href="/ru/docs/Learn/Accessibility/HTML#ui_controls"
             >UI controls</a
           >, and
-          <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          <a href="/ru/docs/Learn/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >.
         </p>
@@ -222,7 +210,7 @@ This guideline refers to the ability of content to be consumed by users in multi
       </td>
       <td>
         Again, refer to
-        <a href="/en-US/docs/Learn/Accessibility/HTML"
+        <a href="/ru/docs/Learn/Accessibility/HTML"
           >HTML: A good basis for accessibility</a
         >.
       </td>
@@ -363,12 +351,12 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >
         and
         <a
-          href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
+          href="/ru/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
           >Multiple labels</a
         >.
       </td>
@@ -384,7 +372,7 @@ This guideline relates to making sure core content is easy to discern from backg
         Use native <code>&#x3C;button></code>s to provide accessible keyboard
         controls, as shown in
         <a
-          href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/ru/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
           >Video player styling basics</a
         >.
       </td>
@@ -410,7 +398,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >.
       </td>
@@ -451,7 +439,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
         >.
       </td>
@@ -625,7 +613,7 @@ This guideline relates to making sure core content is easy to discern from backg
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. Perceivable
   2. [Operable](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable)

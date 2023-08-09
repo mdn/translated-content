@@ -1,5 +1,5 @@
 ---
-title: '<video>: 비디오 삽입 요소'
+title: "<video>: 비디오 삽입 요소"
 slug: Web/HTML/Element/video
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/video
 **HTML `<video>` 요소**는 비디오 플레이백을 지원하는 미디어 플레이어를 문서에 삽입합니다. 오디오 콘텐츠에도 사용할 수 있으나, {{htmlelement("audio")}} 요소가 사용자 경험에 좀 더 적합합니다.
 
 {{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 위 예제는 `<video>` 요소의 간단한 사용법을 보입니다. `<video>` 또한 {{htmlelement("img")}} 요소와 비슷하게, 표시하고자 하는 미디어로의 경로를 `src` 특성에 제공합니다. 또한 비디오의 너비와 높이, 자동재생과 반복 여부, 브라우저 기본 컨트롤 노출 여부 등 다른 정보도 특성을 통해 지정할 수 있습니다.
 
@@ -76,15 +74,15 @@ slug: Web/HTML/Element/video
 ```html
 <!-- Simple video example -->
 <video src="videofile.ogg" autoplay poster="posterimage.jpg">
-  Sorry, your browser doesn't support embedded videos,
-  but don't worry, you can <a href="videofile.ogg">download it</a>
+  Sorry, your browser doesn't support embedded videos, but don't worry, you can
+  <a href="videofile.ogg">download it</a>
   and watch it with your favorite video player!
 </video>
 
 <!-- Video with subtitles -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 
@@ -114,7 +112,7 @@ AddType video/webm .webm
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
+이 요소는 [`HTMLVideoElement`](/ko/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
 
 ## 브라우저 호환성
 

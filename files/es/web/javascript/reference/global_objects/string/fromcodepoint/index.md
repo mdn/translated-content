@@ -1,7 +1,6 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCodePoint
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -35,19 +34,19 @@ Because `fromCodePoint()` is a static method of {{jsxref("Global_Objects/String"
 ### Ejemplos: Usando `fromCodePoint()`
 
 ```js
-String.fromCodePoint(42);       // "*"
-String.fromCodePoint(65, 90);   // "AZ"
-String.fromCodePoint(0x404);    // "\u0404"
-String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
-String.fromCodePoint(194564);   // "\uD87E\uDC04"
-String.fromCodePoint(0x1D306, 0x61, 0x1D307) // "\uD834\uDF06a\uD834\uDF07"
+String.fromCodePoint(42); // "*"
+String.fromCodePoint(65, 90); // "AZ"
+String.fromCodePoint(0x404); // "\u0404"
+String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
+String.fromCodePoint(194564); // "\uD87E\uDC04"
+String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
 
-String.fromCodePoint('_');      // RangeError
+String.fromCodePoint("_"); // RangeError
 String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1);       // RangeError
-String.fromCodePoint(3.14);     // RangeError
-String.fromCodePoint(3e-2);     // RangeError
-String.fromCodePoint(NaN);      // RangeError
+String.fromCodePoint(-1); // RangeError
+String.fromCodePoint(3.14); // RangeError
+String.fromCodePoint(3e-2); // RangeError
+String.fromCodePoint(NaN); // RangeError
 ```
 
 ```js
@@ -55,7 +54,7 @@ String.fromCodePoint(NaN);      // RangeError
 // The following, on the other hand, can return a 4-byte character as well as the
 // usual 2-byte ones (i.e., it can return a single character which actually has
 // a string length of 2 instead of 1!)
-console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
+console.log(String.fromCodePoint(0x2f804)); // or 194564 in decimal
 ```
 
 ## Polyfill
@@ -65,19 +64,19 @@ The `String.fromCodePoint` method has been added to the ECMAScript standard in v
 ```js
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
-  (function() {
-    var defineProperty = (function() {
+  (function () {
+    var defineProperty = (function () {
       // IE 8 only supports `Object.defineProperty` on DOM elements
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
         var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
+      } catch (error) {}
       return result;
-    }());
+    })();
     var stringFromCharCode = String.fromCharCode;
     var floor = Math.floor;
-    var fromCodePoint = function() {
+    var fromCodePoint = function () {
       var MAX_SIZE = 0x4000;
       var codeUnits = [];
       var highSurrogate;
@@ -85,26 +84,28 @@ if (!String.fromCodePoint) {
       var index = -1;
       var length = arguments.length;
       if (!length) {
-        return '';
+        return "";
       }
-      var result = '';
+      var result = "";
       while (++index < length) {
         var codePoint = Number(arguments[index]);
         if (
-          !isFinite(codePoint) ||       // `NaN`, `+Infinity`, or `-Infinity`
-          codePoint < 0 ||              // not a valid Unicode code point
-          codePoint > 0x10FFFF ||       // not a valid Unicode code point
+          !isFinite(codePoint) || // `NaN`, `+Infinity`, or `-Infinity`
+          codePoint < 0 || // not a valid Unicode code point
+          codePoint > 0x10ffff || // not a valid Unicode code point
           floor(codePoint) != codePoint // not an integer
         ) {
-          throw RangeError('Invalid code point: ' + codePoint);
+          throw RangeError("Invalid code point: " + codePoint);
         }
-        if (codePoint <= 0xFFFF) { // BMP code point
+        if (codePoint <= 0xffff) {
+          // BMP code point
           codeUnits.push(codePoint);
-        } else { // Astral code point; split in surrogate halves
+        } else {
+          // Astral code point; split in surrogate halves
           // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
           codePoint -= 0x10000;
-          highSurrogate = (codePoint >> 10) + 0xD800;
-          lowSurrogate = (codePoint % 0x400) + 0xDC00;
+          highSurrogate = (codePoint >> 10) + 0xd800;
+          lowSurrogate = (codePoint % 0x400) + 0xdc00;
           codeUnits.push(highSurrogate, lowSurrogate);
         }
         if (index + 1 == length || codeUnits.length > MAX_SIZE) {
@@ -115,15 +116,15 @@ if (!String.fromCodePoint) {
       return result;
     };
     if (defineProperty) {
-      defineProperty(String, 'fromCodePoint', {
-        'value': fromCodePoint,
-        'configurable': true,
-        'writable': true
+      defineProperty(String, "fromCodePoint", {
+        value: fromCodePoint,
+        configurable: true,
+        writable: true,
       });
     } else {
       String.fromCodePoint = fromCodePoint;
     }
-  }());
+  })();
 }
 ```
 

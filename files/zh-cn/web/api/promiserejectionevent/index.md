@@ -35,9 +35,9 @@ _没有特定的方法; 从它的父级 {{domxref("Event")}}继承方法。_
 ## 示例
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = function (e) {
   console.log(e.reason);
-}
+};
 ```
 
 ## 规范

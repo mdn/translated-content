@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.stageParameters
 slug: Web/API/VRDisplay/stageParameters
-original_slug: Web/API/VRDevice/stageParameters
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

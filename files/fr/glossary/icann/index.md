@@ -1,7 +1,6 @@
 ---
 title: ICANN
 slug: Glossary/ICANN
-translation_of: Glossary/ICANN
 ---
 
 **ICANN** (Internet Corporation of Assigned Names and Numbers) est une société à but non lucratif internationale qui maintient le {{glossary("DNS","système de noms de domaine")}} et l'enregistrement des {{glossary("IP address","adresses IP")}}.

@@ -45,13 +45,10 @@ body {
 ```css
 /* 回退值 */
 
-/* 在 component 的样式中: */
+/* 在 component 的样式中：*/
 .component .header {
-  /* header-color 没有被设置, 将使用回退值 blue */
-  color: var(
-    --header-color,
-    blue
-  );
+  /* header-color 没有被设置，将使用回退值 blue */
+  color: var(--header-color, blue);
 }
 
 .component .text {

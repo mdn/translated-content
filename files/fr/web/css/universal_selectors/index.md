@@ -1,12 +1,6 @@
 ---
 title: Sélecteurs universels
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Universal_selectors
-original_slug: Web/CSS/Sélecteurs_universels
 ---
 
 {{CSSRef("Selectors")}}
@@ -38,12 +32,12 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 ### CSS
 
 ```css
-* [lang^=fr] {
-  color:green;
+* [lang^="fr"] {
+  color: green;
 }
 
 *.warning {
-  color:red;
+  color: red;
 }
 
 *#maincontent {

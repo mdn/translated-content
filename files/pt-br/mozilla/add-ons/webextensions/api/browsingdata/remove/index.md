@@ -2,6 +2,7 @@
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
+
 {{AddonSidebar()}}
 
 Remove o dado de navegação especificado.
@@ -16,9 +17,9 @@ Isso é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Parâmetros
@@ -49,12 +50,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Remove todo o histórico de download e navegação:

@@ -96,7 +96,7 @@ callSomething(); //sth
 function singularAutoPlural(
   singular,
   plural = singular + "們",
-  rallyingCry = plural + "，進攻啊!!!"
+  rallyingCry = plural + "，進攻啊!!!",
 ) {
   return [singular, plural, rallyingCry];
 }
@@ -112,7 +112,7 @@ singularAutoPlural(
   "鹿兒",
   "鹿兒們",
   "鹿兒們平心靜氣的 \
-   向政府請願，希望事情有所好轉。"
+   向政府請願，希望事情有所好轉。",
 );
 ```
 
@@ -130,7 +130,7 @@ function withDefaults(
   d = go(),
   e = this,
   f = arguments,
-  g = this.value
+  g = this.value,
 ) {
   return [a, b, c, d, e, f, g];
 }

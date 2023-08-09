@@ -1,7 +1,6 @@
 ---
 title: Setting up extension development environment
 slug: orphaned/Setting_up_extension_development_environment
-original_slug: Setting_up_extension_development_environment
 ---
 
 この記事では、あなたの Mozilla アプリケーションにおいて拡張機能の開発を容易にするためのノウハウを提案します。

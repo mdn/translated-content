@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 5: Creating our home page'
+title: "Django Tutorial Part 5: Creating our home page"
 slug: Learn/Server-side/Django/Home_page
 ---
 
@@ -12,10 +12,10 @@ slug: Learn/Server-side/Django/Home_page
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/ko/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
-          href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+          href="/ko/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >
         포함).
@@ -174,7 +174,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 > **참고:** **주의:** 탬플릿 태그들은 목록을 반복하거나, 변수 값을 기반으로 조건부 연산을 수행하거나, 여타 다른 일들을 할 수 있는 함수입니다. 탬플릿 태그 외에도 탬플릿 구문(syntax)을 사용하면 view에서 탬플릿으로 전달된 변수들을 참조할 수 있고, 탬플릿 필터(filters)를 사용해서 변수의 형식을 지정할 수 있습니다(예를 들어, 문자열을 소문자로 변환).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,7 +191,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 예를 들어, 아래 코드 조각은 extends 탬플릿 태그의 사용 및 content 블럭(block)을 재정의하는 방법을 보여줍니다. 생성된 HTML은 기본 탬플릿에서 정의된 코드와 구조를 포함할 것입니다(`title` 블럭에서 정의한 기본 내용은 포함하지만, 기본 `contents` 블럭 대신 새로운 `contents` 블럭 포함).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -208,8 +208,8 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 새로운 파일 **base_generic.html** 을 **/locallibrary/catalog/templates/_base_generic.html_** 경로 안에 생성해서 아래 코드를 파일에 복사 붙여넣기 하세요:
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
 <head>
   {% block title %}<title>Local Library</title>{% endblock %}
@@ -245,9 +245,9 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -255,7 +255,7 @@ view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 �
 
 새로운 HTML 파일 **index.html** 을 **/locallibrary/catalog/templates/** 경로 안에 생성해서 아래 코드를 파일 안에 복사 붙여넣기 하세요. 보시는 바와 같이 첫째 행에서 우리의 기본 탬플릿을 확장하고, 탬플릿의 기본 `content` 블럭을 새로운 블럭으로 대체합니다.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -295,17 +295,20 @@ return render(request, 'index.html', context=context)
 
 아래 코드 샘플처럼, 탬플릿 안에서 당신은 먼저 탬플릿 라이브러리를 추가하기 위해 "static"을 지정하는 `load` 탬플릿 태그를 호출합니다. 그러고 나서 `static` 탬플릿 태그를 사용할 수 있고 관련 URL을 요구되는 파일에 지정할 수 있습니다.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 비슷한 방법으로 이미지를 페이지에 추가할 수 있습니다. 예를 들어:
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
 > **참고:** **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
@@ -360,7 +363,7 @@ TEMPLATES = [
 
 1. LocalLibrary 기본 탬플릿([base template](#The_LocalLibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#The_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
 
-    > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
+   > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
 
 2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#The_index_template) 를 업데이트 하세요.
 

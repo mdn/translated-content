@@ -1,12 +1,6 @@
 ---
-title: 'ReferenceError: deprecated caller or arguments usage'
+title: "ReferenceError: deprecated caller or arguments usage"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-tags:
-  - Erreur
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_caller_or_arguments_usage
 ---
 
 {{jsSidebar("Errors")}}
@@ -39,9 +33,9 @@ Un avertissement uniquement affiché en mode strict qui prend la forme d'une {{j
 
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'La fonction a été appelée depuis la portée globale !';
-     } else {
-    return 'L\'appelant est ' + myFunc.caller;
+    return "La fonction a été appelée depuis la portée globale !";
+  } else {
+    return "L'appelant est " + myFunc.caller;
   }
 }
 
@@ -57,17 +51,21 @@ myFunc();
 ```js example-bad
 "use strict";
 
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log("returned: " + g.arguments);
 // Warning: ReferenceError: deprecated arguments usage
 ```
 

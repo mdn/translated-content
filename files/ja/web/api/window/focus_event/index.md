@@ -1,5 +1,5 @@
 ---
-title: 'Window: focus イベント'
+title: "Window: focus イベント"
 slug: Web/API/Window/focus_event
 ---
 

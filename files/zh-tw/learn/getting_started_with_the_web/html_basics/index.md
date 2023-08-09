@@ -77,7 +77,7 @@ My cat is very grumpy
 讓我們來看看一個完整的 HTML 頁面它所包含的要素（以下範例的程式碼出自這篇文章：[Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)）：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

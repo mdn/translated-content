@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ## 구문
 
 ```js
-    dateObj.getFullYear()
+dateObj.getFullYear();
 ```
 
 ### 반환 값

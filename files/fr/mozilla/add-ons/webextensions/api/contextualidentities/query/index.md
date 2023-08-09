@@ -1,7 +1,6 @@
 ---
 title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getContext = browser.contextualIdentities.query(
-  details                  // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -66,9 +65,11 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.query({
-  name: "my-thing"
-}).then(onGot, onError);
+browser.contextualIdentities
+  .query({
+    name: "my-thing",
+  })
+  .then(onGot, onError);
 ```
 
 {{WebExtExamples}}

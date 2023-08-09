@@ -147,9 +147,9 @@ button {
 
 ## 无障碍考虑
 
-红色通常用于表示输入无效。某些色盲患者将无法确定输入的状态，除非有不依赖颜色传达意义的附加指示器。通常使用描述性文字和(或)图标。
+红色通常用于表示输入无效。某些色盲患者将无法确定输入的状态，除非有不依赖颜色传达意义的附加指示器。通常使用描述性文字和（或）图标。
 
-- [MDN 理解 WCAG，指南 1.4 的解释](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN 理解 WCAG，指南 1.4 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [理解成功标准 1.4.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 注意

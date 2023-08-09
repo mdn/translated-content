@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -32,7 +24,7 @@ str.toLocaleLowerCase()
 ### Пример: использование метода `toLocaleLowerCase()`
 
 ```js
-console.log('АЛФАВИТ'.toLocaleLowerCase()); // 'алфавит'
+console.log("АЛФАВИТ".toLocaleLowerCase()); // 'алфавит'
 ```
 
 ## Спецификации

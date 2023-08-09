@@ -1,7 +1,6 @@
 ---
 title: HSTS
 slug: Glossary/HSTS
-translation_of: Glossary/HSTS
 ---
 
 **HTTP Strict Transport Security** permet à un site web d'informer le navigateur que son accès ne devrait pas se faire en HTTP et qu'il devrait donc convertir toute tentative de connexion en HTTP en connexion HTTPS. HSTS est un en-tête HTTP, {{HTTPHeader("Strict-Transport-Security")}}, il est donc envoyé par le serveur au début de la réponse à une requête d'un client.

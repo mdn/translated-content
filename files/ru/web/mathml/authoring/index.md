@@ -1,13 +1,8 @@
 ---
 title: Средство разработки MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
-  - Начинающий
-translation_of: Web/MathML/Authoring
 ---
+
 Эта страница объясняет, как записать математические выражения при помощи языка MathML. Подобно HTML, основными элементами языка MathML являются теги и атрибуты. Документ HTML становится сложным, когда он содержит структуры, подобные спискам или таблицам, но, к счастью, существует много генераторов на основе простых систем обозначений, WYSIWYG редакторы и другие системы управления контентом, помогающие создавать Web страницы.
 
 Математические обозначения ещё более сложны со структурами такими, как дроби, квадратные корни или матрицы, которые, вероятно, потребуют собственных тегов. Поэтому инструменты разработки, связанные с MathML, очень важны. Некоторые из этих инструментов мы описываем ниже. В частности, команда Mozilla MathML разрабатывала [TeXZilla](https://github.com/fred-wang/TeXZilla/) (Javascript Unicode LaTeX-to-MathML конвертер), который предназначен для использования во многих сценариях, описанных здесь. Конечно, этот список ни в коем случае не является исчерпывающим и вам предлагается проверить [W3C MathML software list](https://www.w3.org/Math/Software/), где вы можете найти некоторые другие инструменты.
@@ -21,25 +16,23 @@ translation_of: Web/MathML/Authoring
 Вы можете использовать Presentation MathML внутри документов HTML5:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
- <title>MathML in HTML5</title>
-</head>
-<body>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-  <h1>MathML in HTML5</h1>
-
-  <p>
-    Square root of two:
-    <math>
-      <msqrt>
-        <mn>2</mn>
-      </msqrt>
-    </math>
-  </p>
-
-</body>
+    <p>
+      Square root of two:
+      <math>
+        <msqrt>
+          <mn>2</mn>
+        </msqrt>
+      </math>
+    </p>
+  </body>
 </html>
 ```
 
@@ -68,13 +61,14 @@ Content MathML не поддерживается браузерами. Реко�
 Если вы не хотите использовать эту ссылку на GitHub, но вместо этого хотите интегрировать эти полифилы или нечто другое в свой проект, тогда вам может понадобиться скрипт, проверяющий уровень поддержки MathML. Например, следующая функция проверяет поддержку MathML путём тестирования элемента mspace (вы можете заменить `mspace` на `mpadded`):
 
 ```js
- function hasMathMLSupport() {
-  var div = document.createElement("div"), box;
+function hasMathMLSupport() {
+  var div = document.createElement("div"),
+    box;
   div.innerHTML = "<math><mspace height='23px' width='77px'/></math>";
   document.body.appendChild(div);
   box = div.firstChild.firstChild.getBoundingClientRect();
   document.body.removeChild(div);
-  return Math.abs(box.height - 23) <= 1  && Math.abs(box.width - 77) <= 1;
+  return Math.abs(box.height - 23) <= 1 && Math.abs(box.width - 77) <= 1;
 }
 ```
 
@@ -82,8 +76,11 @@ Content MathML не поддерживается браузерами. Реко�
 
 ```js
 var ua = navigator.userAgent;
-var isGecko = ua.indexOf("Gecko") > -1 && ua.indexOf("KHTML") === -1 && ua.indexOf('Trident') === -1;
-var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
+var isGecko =
+  ua.indexOf("Gecko") > -1 &&
+  ua.indexOf("KHTML") === -1 &&
+  ua.indexOf("Trident") === -1;
+var isWebKit = ua.indexOf("AppleWebKit") > -1 && ua.indexOf("Chrome") === -1;
 ```
 
 #### Математические шрифты
@@ -93,14 +90,15 @@ var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
 До Gecko 31.0 было утомительно устанавливать математические шрифты (смотрите [инструкцию по установке шрифтов для Mozilla 2.0](/ru/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS)). Для Gecko 31.0 это намного проще и совместимо со всеми движками Web рендеринга с поддержкой MathML. Например, здесь представлена минимальная таблица стилей для использования шрифта Latin Modern для текста и шрифта Latin Modern Math для математических выражений:
 
 ```css
-@namespace url('http://www.w3.org/1999/xhtml');
-@namespace m url('http://www.w3.org/1998/Math/MathML');
+@namespace url("http://www.w3.org/1999/xhtml");
+@namespace m url("http://www.w3.org/1998/Math/MathML");
 
-body, m|mtext {
-    font-family: Latin Modern;
+body,
+m|mtext {
+  font-family: Latin Modern;
 }
 m|math {
-    font-family: Latin Modern Math;
+  font-family: Latin Modern Math;
 }
 ```
 
@@ -185,49 +183,42 @@ m|math {
 
 ```html
 <html>
-<head>
-...
-<script type="text/javascript" src="ASCIIMathML.js"></script>
-...
-</head>
-<body>
-...
-<p>blah blah `x^2 + y^2 = r^2` blah ...
-...
+  <head>
+    ...
+    <script type="text/javascript" src="ASCIIMathML.js"></script>
+    ...
+  </head>
+  <body>
+    ...
+    <p>blah blah `x^2 + y^2 = r^2` blah ... ...</p>
+  </body>
+</html>
 ```
 
 [LaTeXMathML](https://math.etsu.edu/LaTeXMathML/) - это похожий скрипт, который позволяет анализировать больше команд LaTeX. Установка похожа: скопируйте [LaTeXMathML.js](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js) и [LaTeXMathML.standardarticle.css](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css), добавьте ссылки в заголовок вашего документа, а содержимое LaTeX вашей веб-страницы, помеченное классом "LaTeX", будет автоматически проанализировано и преобразовано в HTML+MathML:
 
 ```html
 <head>
-...
-<script type="text/javascript" src="LaTeXMathML.js"></script>
-<link rel="stylesheet" type="text/css" href="LaTeXMathML.standardarticle.css" />
-...
+  ...
+  <script type="text/javascript" src="LaTeXMathML.js"></script>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="LaTeXMathML.standardarticle.css" />
+  ...
 </head>
 
 <body>
-...
+  ...
 
-<div class="LaTeX">
-\documentclass[12pt]{article}
-
-\begin{document}
-
-\title{LaTeXML Example}
-\maketitle
-
-\begin{abstract}
-This is a sample LaTeXML document.
-\end{abstract}
-
-\section{First Section}
-
-  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
-
-\end{document}
-</div>
-...
+  <div class="LaTeX">
+    \documentclass[12pt]{article} \begin{document} \title{LaTeXML Example}
+    \maketitle \begin{abstract} This is a sample LaTeXML document.
+    \end{abstract} \section{First Section} $$ \sum_{n=1}^{+\infty} \frac{1}{n^2}
+    = \frac{\pi^2}{6} $$ \end{document}
+  </div>
+  ...
+</body>
 ```
 
 [jqMath](https://mathscribe.com/author/jqmath.html) - это ещё один скрипт для парсинга простого LaTeX-подобного синтаксиса, который также принимает не-ASCII символы, такие как `√{∑↙{n=1}↖{+∞} 6/n^2} = π` , чтобы написать <math><mrow><msqrt><mrow class="ma-repel-adj"><munderover><mo>∑</mo> <mrow><mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow><mrow><mo>+</mo> <mi>∞</mi> </mrow></munderover><mfrac><mn>6</mn> <msup><mi>n</mi> <mn>2</mn> </msup></mfrac></mrow></msqrt><mo>=</mo> <mi>π</mi> </mrow></math>. Установка похожа: загрузите и скопируйте соответствующие файлы [Javascript и CSS files](https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip) на ваш Web сайт и сделайте ссылку на них в заголовке вашей страницы (смотрите файл `COPY-ME.html` из архива zip в качестве примера). Одним из преимуществ jqMath над предыдущими сценариями является то, что он автоматически добавит некоторые простые правила CSS для математической разметки и сделает формулы доступными для браузеров с ограниченной поддержкой MathML.
@@ -299,8 +290,11 @@ cat input.html | itex2MML > output.html
 В случаях с браузерами без поддержки MathML, вы можете использовать параметр `--javascript`, чтобы сообщить LaTeXML о включении одного из [дополнительных скриптов](#fallback_for_browsers_without_mathml_support):
 
 ```html
-  latexmlc --dest foo.html --javascript=http://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Вариант с добавлением CSS
-  latexmlc --dest foo.html --javascript=http://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Вариант с добавлением MathJax
+latexmlc --dest foo.html
+--javascript=http://fred-wang.github.io/mathml.css/mspace.js foo.tex # Вариант с
+добавлением CSS latexmlc --dest foo.html
+--javascript=http://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex #
+Вариант с добавлением MathJax
 ```
 
 Если ваш документ LaTeX - большой, вы можете разбить его на несколько небольших страниц, а не размещать все на одной большой странице. Например, это разделит страницы на уровне `\section`:

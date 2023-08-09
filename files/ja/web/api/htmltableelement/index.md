@@ -1,6 +1,8 @@
 ---
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
+l10n:
+  sourceCommit: 0387e3e9f49863cc1f8bba5164e1697778cba593
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +11,9 @@ slug: Web/API/HTMLTableElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+_親である {{DOMxRef("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{DOMxRef("HTMLTableElement.caption")}}
   - : {{DOMxRef("HTMLTableCaptionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("caption")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<caption>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の最初の子要素として挿入され、この要素の子要素に `<caption>` があれば、最初のものがツリーから取り除かれます。
@@ -19,9 +21,9 @@ _親である {{DOMxRef("HTMLElement")}} からプロパティを継承してい
   - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("thead")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<thead>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の {{HTMLElement("caption")}} や {{HTMLElement("colgroup")}} を除いた最初の子要素の前に、または該当する要素がなければ最後の子要素として挿入され、この要素の子要素に `<thead>` があれば、最初のものがツリーから取り除かれます。
 - {{DOMxRef("HTMLTableElement.tFoot")}}
   - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("tfoot")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<tfoot>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}} を除いた最初の子要素の前に、または該当する要素がなければ最後の子要素として挿入され、この要素の子要素に `<tfoot>` があれば、最初のものがツリーから取り除かれます。
-- {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.rows")}} {{ReadOnlyInline}}
   - : 生きた {{DOMxRef("HTMLCollection")}} で、この要素のすべての行を含みます。すなわち、この要素の子であるすべての {{HTMLElement("tr")}} 、またはこの要素の子要素である {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} の何れかの子要素です。 `<thead>` のメンバーの行が最初に、ツリー順に現れ、 `<tbody>` のメンバーがその後に、やはりツリー順に現れます。 `HTMLCollection` は生きており、 `HTMLTableElement` が変化するたびに自動的に更新されます。
-- {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLTableElement.tBodies")}} {{ReadOnlyInline}}
   - : 生きた {{DOMxRef("HTMLCollection")}} で、この要素のすべての {{HTMLElement("tbody")}} を含みます。 `HTMLCollection` は生きており、 `HTMLTableElement` が変化するたびに自動的に更新されます。
 
 ### 廃止されたプロパティ
@@ -31,7 +33,7 @@ _親である {{DOMxRef("HTMLElement")}} からプロパティを継承してい
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/table#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Element/table#bgColor) 属性を反映します。
+  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Element/table#bgcolor) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
   - : 文字列で、表の境界の幅がピクセル数で入ります。これは廃止された [`border`](/ja/docs/Web/HTML/Element/table#border) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
@@ -47,9 +49,9 @@ _親である {{DOMxRef("HTMLElement")}} からプロパティを継承してい
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
   - : 文字列で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された [`width`](/ja/docs/Web/HTML/Element/table#width) 属性を反映します。
 
-## メソッド
+## インスタンスメソッド
 
-_親である {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+_親である {{DOMxRef("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{DOMxRef("HTMLTableElement.createTHead()")}}
   - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("thead")}} を返します。見つからなかった場合は、新しいものを作成し、 {{HTMLElement("caption")}} や {{HTMLElement("colgroup")}} を除く最初の要素の直前、そのような要素がなければ最後の要素として挿入します。

@@ -1,5 +1,5 @@
 ---
-title: '<meta>: 문서 레벨 메타데이터 요소'
+title: "<meta>: 문서 레벨 메타데이터 요소"
 slug: Web/HTML/Element/meta
 ---
 
@@ -49,7 +49,7 @@ slug: Web/HTML/Element/meta
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>인
         경우 {{htmlelement("head")}} 요소.
-        {{htmlattrxref("http-equiv", "meta")}}가 인코딩 선언이
+        <a href="/ko/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a>가 인코딩 선언이
         아닌 경우 <code>&#x3C;head></code> 내의
         {{htmlelement("noscript")}} 요소도 가능합니다.
       </td>
@@ -75,21 +75,21 @@ slug: Web/HTML/Element/meta
 
 `meta` 요소가 제공하는 메타데이터는 다음 네 유형 중 하나입니다.
 
-- {{htmlattrxref("name", "meta")}} 특성을 지정하면 전체 페이지에 적용되는 "문서 레벨 메타데이터"를 제공합니다.
-- {{htmlattrxref("http-equiv", "meta")}} 특성을 지정하면 유사한 이름의 HTTP 헤더가 제공하는 정보와 동일한 "프래그마 지시문"이 됩니다.
-- {{htmlattrxref("charset", "meta")}} 특성을 지정하면 문서 인코딩에 사용한 문자 인코딩을 나타내는 "문자 집합 선언"이 됩니다.
-- {{htmlattrxref("itemprop")}} 특성을 지정하면 "사용자 정의 메타데이터"를 제공합니다.
+- [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성을 지정하면 전체 페이지에 적용되는 "문서 레벨 메타데이터"를 제공합니다.
+- [`http-equiv`](/ko/docs/Web/HTML/Element/meta#http-equiv) 특성을 지정하면 유사한 이름의 HTTP 헤더가 제공하는 정보와 동일한 "프래그마 지시문"이 됩니다.
+- [`charset`](/ko/docs/Web/HTML/Element/meta#charset) 특성을 지정하면 문서 인코딩에 사용한 문자 인코딩을 나타내는 "문자 집합 선언"이 됩니다.
+- [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 지정하면 "사용자 정의 메타데이터"를 제공합니다.
 
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-> **참고:** {{htmlattrxref("name", "meta")}} 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, {{htmlattrxref("itemprop", "meta")}} 특성을 {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 또는 {{htmlattrxref("charset", "meta")}} 특성과 함께 설정할 수 없습니다.
+> **참고:** [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](/ko/docs/Web/HTML/Element/meta#itemprop) 특성을 [`name`](/ko/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ko/docs/Web/HTML/Element/meta#http-equiv) 또는 [`charset`](/ko/docs/Web/HTML/Element/meta#charset) 특성과 함께 설정할 수 없습니다.
 
 - {{htmlattrdef("charset")}}
   - : 페이지의 문자 인코딩을 선언합니다. 이 특성이 존재할 경우, 그 값은 반드시 문자열 "`utf-8`"의 대소문자 구분 없는 {{glossary("ASCII")}} 표현이어야 합니다.
 - {{htmlattrdef("content")}}
-  - : {{htmlattrxref("http-equiv", "meta")}} 또는 {{htmlattrxref("name", "meta")}} 특성의 값을 담습니다.
+  - : [`http-equiv`](/ko/docs/Web/HTML/Element/meta#http-equiv) 또는 [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성의 값을 담습니다.
 - {{htmlattrdef("http-equiv")}}
 
   - : 프래그마 지시문을 정의합니다. 특성의 이름(`http-equiv(alent)`)에서 알 수 있듯이, 가능한 값은 특정 HTTP 헤더입니다.
@@ -112,8 +112,8 @@ slug: Web/HTML/Element/meta
 
     - `refresh` 다음을 지정합니다.
 
-      - {{htmlattrxref("content", "meta")}} 특성에 양의 정수 값을 설정한 경우, 페이지를 다시 불러오기 전까지의 초 단위 대기시간.
-      - {{htmlattrxref("content", "meta")}} 특성이 양의 정수 값을 가지고 그 뒤를 문자열 `;url=`과 유효한 URL이 뒤따른다면, 해당 URL로 이동하기 전까지의 초 단위 대기시간.
+      - [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성에 양의 정수 값을 설정한 경우, 페이지를 다시 불러오기 전까지의 초 단위 대기시간.
+      - [`content`](/ko/docs/Web/HTML/Element/meta#content) 특성이 양의 정수 값을 가지고 그 뒤를 문자열 `;url=`과 유효한 URL이 뒤따른다면, 해당 URL로 이동하기 전까지의 초 단위 대기시간.
 
       > > **경고:**
       >
@@ -134,10 +134,10 @@ slug: Web/HTML/Element/meta
 ## 예제
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- 3초 후 리다이렉트 -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## 명세

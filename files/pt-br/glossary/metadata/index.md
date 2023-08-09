@@ -1,7 +1,6 @@
 ---
 title: Metadata
 slug: Glossary/Metadata
-original_slug: Glossario/Metadata
 ---
 
 Os **metadados** são — em sua definição mais simples — dados que descrevem dados. Por exemplo, um documento {{glossary("HTML")}} é um dado, mas o HTML, também, pode conter metadados em seu elemento {{htmlelement("head")}} que descreve o documento — por exemplo, quem o escreveu e seu resumo.
@@ -10,7 +9,7 @@ Os **metadados** são — em sua definição mais simples — dados que descreve
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "metadata", "metadata")}} na Wikipedia
+- [metadata](https://pt.wikipedia.org/wiki/Metadata) na Wikipedia
 
 ### Metadados HTML
 

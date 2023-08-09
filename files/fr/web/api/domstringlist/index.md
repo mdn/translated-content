@@ -1,12 +1,6 @@
 ---
 title: DOMStringList
 slug: Web/API/DOMStringList
-tags:
-  - API
-  - Chaînes de caractères
-  - DOM
-  - Types
-translation_of: Web/API/DOMStringList
 ---
 
 {{ APIRef("DOM") }}

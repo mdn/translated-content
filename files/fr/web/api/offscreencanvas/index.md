@@ -1,14 +1,6 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
-tags:
-  - API
-  - Canevas
-  - Experimental
-  - Interface
-  - Reference
-browser-compat: api.OffscreenCanvas
-translation_of: Web/API/OffscreenCanvas
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
@@ -55,8 +47,7 @@ Pour afficher l'`ImageBitmap`, vous pouvez utiliser un contexte {{domxref("Image
 Étant donnés ces deux éléments {{HTMLElement("canvas")}} :
 
 ```html
-<canvas id="une"></canvas>
-<canvas id="deux"></canvas>
+<canvas id="une"></canvas> <canvas id="deux"></canvas>
 ```
 
 le code suivant fournira la restitution, en utilisant un `OffscreenCanvas` comme décrit ci-dessus.
@@ -66,7 +57,7 @@ var une = document.getElementById("une").getContext("bitmaprenderer");
 var deux = document.getElementById("deux").getContext("bitmaprenderer");
 
 var horsEcran = new OffscreenCanvas(256, 256);
-var gl = horsEcran.getContext('webgl');
+var gl = horsEcran.getContext("webgl");
 
 // ... un peu de dessin pour le premier canevas en utilisant le contexte gl ...
 
@@ -96,7 +87,7 @@ var canevasHtml = document.getElementById("canevas");
 var horsEcran = canevasHtml.transferControlToOffscreen();
 
 var worker = new Worker("offscreencanvas.js");
-worker.postMessage({canvas: offscreen}, [offscreen]);
+worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
 offscreencanvas.js (code worker) :

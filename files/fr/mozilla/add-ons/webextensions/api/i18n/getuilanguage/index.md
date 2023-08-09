@@ -1,7 +1,6 @@
 ---
 title: i18n.getUILanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
 
 {{AddonSidebar()}}
@@ -11,7 +10,7 @@ Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent 
 ## Syntaxe
 
 ```js
-browser.i18n.getUILanguage()
+browser.i18n.getUILanguage();
 ```
 
 ### Paramètres

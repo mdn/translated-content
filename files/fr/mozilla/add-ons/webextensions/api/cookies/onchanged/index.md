@@ -1,7 +1,6 @@
 ---
 title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 
 {{AddonSidebar()}}
@@ -16,9 +15,9 @@ Notez que la mise à jour des propriétés d'un cookie est implémentée en deux
 ## Syntaxe
 
 ```js
-browser.cookies.onChanged.addListener(listener)
-browser.cookies.onChanged.removeListener(listener)
-browser.cookies.onChanged.hasListener(listener)
+browser.cookies.onChanged.addListener(listener);
+browser.cookies.onChanged.removeListener(listener);
+browser.cookies.onChanged.hasListener(listener);
 ```
 
 Cet API est également disponible en tant que `browser.cookies.onChanged.*`.
@@ -60,11 +59,16 @@ Les événements ont trois fonctions :
 Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument `changeInfo` :
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener(function (changeInfo) {
+  console.log(
+    "Cookie changed: " +
+      "\n * Cookie: " +
+      JSON.stringify(changeInfo.cookie) +
+      "\n * Cause: " +
+      changeInfo.cause +
+      "\n * Removed: " +
+      changeInfo.removed,
+  );
 });
 ```
 

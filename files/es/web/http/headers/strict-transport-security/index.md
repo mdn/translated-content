@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Strict-Transport-Security
 
 **HTTP `Strict-Transport-Security`** (a menudo abreviado como {{Glossary("HSTS")}}) es una característica de seguridad que permite a un sitio web indicar a los navegadores que sólo se debe comunicar con HTTPS en lugar de usar HTTP.
 
-| Tipo de Encabezado                                           | {{Glossary("Encabezado de Respuesta")}} |
-| ------------------------------------------------------------ | ---------------------------------------------------- |
-| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                                   |
+| Tipo de Encabezado                             | {{Glossary("Encabezado de Respuesta")}} |
+| ---------------------------------------------- | --------------------------------------- |
+| {{Glossary("Nombre de Encabezado Prohibido")}} | no                                      |
 
 ## Sintaxis
 

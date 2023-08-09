@@ -1,7 +1,6 @@
 ---
 title: Promesse
 slug: Glossary/Promise
-translation_of: Glossary/Promise
 ---
 
 Une **{{jsxref("Promise")}}** est un {{Glossary("Objet")}} retourné par une {{Glossary("Fonction")}} n'ayant pas encore terminé son travail. La promesse représente littéralement une promesse faite par la fonction qui retournera éventuellement un résultat à travers l'objet promesse.
@@ -14,7 +13,7 @@ Pour en apprendre plus, suivez ces liens.
 
 ### Culture générale
 
-- [Promesses](https://fr.wikipedia.org/wiki/Futures_(informatique)) sur Wikipédia
+- [Promesses](<https://fr.wikipedia.org/wiki/Futures_(informatique)>) sur Wikipédia
 
 ### Référence technique
 

@@ -1,15 +1,6 @@
 ---
 title: Présentation du côté serveur
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Apprendre
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation côté serveur
-  - Serveur
-translation_of: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/Premiers_pas/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
@@ -47,7 +38,7 @@ Dans le monde moderne du développement web, apprendre le développement côté 
 
 Les navigateurs web communiquent avec les [serveurs web](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web) en utilisant le protocole {{glossary("HTTP")}} (**H**yper**T**ext **T**ransfer **P**rotocol). Quand vous cliquez sur un lien dans une page web, envoyez un formulaire, ou encore lancez une recherche, une **requête HTTP** est envoyée du navigateur au serveur cible.
 
-Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/M%C3%A9thode/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
+Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/Méthode/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
 
 Les serveurs web attendent des requêtes du client, les traitent quand elles arrivent, et répondent au navigateur web avec une **réponse HTTP**. La réponse contient _un statut_ qui indique si la requête a pu être traitée avec succès ou non (exemple "HTTP/1.1 200 OK" pour indiquer le succès).
 
@@ -57,7 +48,7 @@ Le corps de la réponse, si la requête réussit, contient alors la ressource de
 
 Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _site statique_ (un site statique est un site qui renvoie du contenu codé en dur, c'est à dire le contenu d'un fichier, quand une ressource donnée est demandée). Quand un utilisateur veut naviguer sur une page, le navigateur envoie une requête HTTP "GET" spécifiant son URL.
 
-Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_de_succ%C3%A8s) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_d'erreur_c%C3%B4t%C3%A9_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#R%C3%A9ponses_d'erreur_c%C3%B4t%C3%A9_serveur)).
+Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#Réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_serveur)).
 
 ![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
 
@@ -139,7 +130,7 @@ Une analyse plus approfondie des habitudes des utilisateurs peut être utilisée
 >
 > Les résultats de recherche Google sont optimisés en fonction des recherches précédentes.
 >
-> 1. Allez sur [Google](https:\\google.com).
+> 1. Allez sur [Google](https://www.google.com).
 > 2. Recherchez "football".
 > 3. Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
 >

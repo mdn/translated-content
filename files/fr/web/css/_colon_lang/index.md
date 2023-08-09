@@ -1,7 +1,6 @@
 ---
-title: ':lang'
+title: ":lang"
 slug: Web/CSS/:lang
-translation_of: Web/CSS/:lang
 ---
 
 {{CSSRef}}
@@ -12,7 +11,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:lang`** permet de défin
 /* Correspond aux paragraphes, uniquement si ceux-ci */
 /* sont indiqués comme étant en anglais (en) */
 p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 ```
 
@@ -39,15 +38,15 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 
 ```css
 :lang(fr) > Q {
-  quotes: '« ' ' »';
+  quotes: "« " " »";
 }
 
 :lang(de) > Q {
-  quotes: '»' '«' '\2039' '\203A';
+  quotes: "»" "«" "\2039" "\203A";
 }
 
 :lang(en) > Q {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 ```
 
@@ -57,7 +56,7 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 <div lang="fr">
   <q>
     Cette citation française a
-      <q>une citation</q>
+    <q>une citation</q>
     imbriquée.
   </q>
 </div>
@@ -65,7 +64,7 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 <div lang="de">
   <q>
     Cette citation allemande a
-      <q>une citation</q>
+    <q>une citation</q>
     imbriquée.
   </q>
 </div>
@@ -73,7 +72,7 @@ Dans cet exemple, la pseudo-classe `:lang` est utilisée pour faire correspondre
 <div lang="en">
   <q>
     Cette citation anglaise a
-      <q>une citation</q>
+    <q>une citation</q>
     imbriquée.
   </q>
 </div>

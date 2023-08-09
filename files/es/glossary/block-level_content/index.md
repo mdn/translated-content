@@ -1,7 +1,6 @@
 ---
 title: Elementos en bloque
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 ---
 
 Los elementos, en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en bloque" o [elementos "en línea"](/es/docs/Web/HTML/Elementos_en_línea). Un elemento en bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque". Este artículo ayuda a explicar lo que esto significa.
@@ -13,13 +12,18 @@ Los navegadores suelen mostrar el elemento a nivel de bloque con un salto de lí
 HTML
 
 ```html
-<p>Este párrafo es un elemento en bloque; este fondo se ha coloreado para mostrar elemento principal (o padre) del párrafo.</p>
+<p>
+  Este párrafo es un elemento en bloque; este fondo se ha coloreado para mostrar
+  elemento principal (o padre) del párrafo.
+</p>
 ```
 
 CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_Example') }}
@@ -62,6 +66,7 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("dl") }}
   - : Lista de definición.
 - {{ HTMLElement("fieldset") }}
+
   - : Etiqueta de conjunto de campos.
 
 - {{ HTMLElement("figcaption") }}
@@ -85,6 +90,7 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("main") }}
   - : Engloba el único contenido central del documento.
 - {{ HTMLElement("nav") }}
+
   - : Contiene enlaces de navegación.
 
 - {{ HTMLElement("noscript") }}

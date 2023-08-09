@@ -10,18 +10,24 @@ slug: Web/SVG/Attribute/points
 2 つの要素がこの属性を使用しています: {{SVGElement("polyline")}}、および{{SVGElement("polygon")}}
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polylineは開いた図形となる -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 
   <!-- polygonは閉じた図形となる -->
-  <polygon stroke="black" fill="none" transform="translate(100,0)"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    stroke="black"
+    fill="none"
+    transform="translate(100,0)"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   通常、XとYをカンマで、座標群をスペースで区切るのがベストプラクティスとされます。
@@ -58,14 +64,17 @@ html,body,svg { height:100% }
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polylineは開いた図形となる -->
-  <polyline stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 
@@ -97,14 +106,17 @@ html,body,svg { height:100% }
 ### Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
   <!-- polygonは閉じた図形となる -->
-  <polygon stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90" />
+  <polygon stroke="black" fill="none" points="50,0 21,90 98,35 2,35 79,90" />
 </svg>
 ```
 

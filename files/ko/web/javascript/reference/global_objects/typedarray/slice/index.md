@@ -2,6 +2,7 @@
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** 메서드는 형식화 배열의 일부를 얕게 복사(shallow copy)한 새로운 형식화 배열 객체를 반환합니다. 이 메서드는 {{jsxref("Array.prototype.slice()")}}와 같은 알고리즘입니다. *TypedArray*는 여기 [TypedArray 객체 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_객체) 중 하나입니다.
@@ -34,11 +35,11 @@ typedarray.slice([begin[, end]])
 ### 기존 형식화 배열의 일부를 반환
 
 ```js
-var uint8 = new Uint8Array([1,2,3]);
-uint8.slice(1);   // Uint8Array [ 2, 3 ]
-uint8.slice(2);   // Uint8Array [ 3 ]
-uint8.slice(-2);  // Uint8Array [ 2, 3 ]
-uint8.slice(0,1); // Uint8Array [ 1 ]
+var uint8 = new Uint8Array([1, 2, 3]);
+uint8.slice(1); // Uint8Array [ 2, 3 ]
+uint8.slice(2); // Uint8Array [ 3 ]
+uint8.slice(-2); // Uint8Array [ 2, 3 ]
+uint8.slice(0, 1); // Uint8Array [ 1 ]
 ```
 
 ## 명세

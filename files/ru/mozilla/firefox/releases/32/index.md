@@ -1,8 +1,8 @@
 ---
 title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
-translation_of: Mozilla/Firefox/Releases/32
 ---
+
 {{FirefoxSidebar}}
 
 Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!

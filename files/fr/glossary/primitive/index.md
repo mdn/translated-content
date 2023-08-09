@@ -1,7 +1,6 @@
 ---
 title: Primitive
 slug: Glossary/Primitive
-translation_of: Glossary/Primitive
 ---
 
 Une **primitive** (valeur primitive ou structure de donnée primitive) est une donnée qui n'est pas un {{Glossary("object","objet")}} et n'a pas de {{glossary("method","méthode")}}. En {{Glossary("JavaScript")}}, il y a 7 types de données primitives: {{Glossary("String")}}, {{Glossary("Number")}}, {{Glossary("Boolean")}}, {{Glossary("Null")}}, {{Glossary("undefined")}}, {{Glossary("Symbol")}}, {{Glossary("Bigint")}} (nouveauté d'{{Glossary("ECMAScript")}} 2020).
@@ -26,5 +25,5 @@ La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Objec
 
 ### Culture générale
 
-- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)
-- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia
+- [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)
+- [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia

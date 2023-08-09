@@ -26,7 +26,7 @@ new OffscreenCanvas(width, height);
 
 ```js
 let offscreen = new OffscreenCanvas(256, 256);
-let gl = offscreen.getContext('webgl');
+let gl = offscreen.getContext("webgl");
 ```
 
 ## 명세서

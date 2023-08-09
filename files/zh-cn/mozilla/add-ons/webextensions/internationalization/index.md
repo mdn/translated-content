@@ -55,7 +55,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 因此[在我们这个示例应用](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales)中，我们有如下几个目录："en"（英语）、"de"（德语）、"nl"（荷兰语）以及 "ja"（日语）。每个目录都包含一个 `messages.json` 文件。
 
-现在我们来看其中一个文件（[\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)）的结构：
+现在我们来看其中一个文件（[\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/_locales/en/messages.json)）的结构：
 
 ```json
 {
@@ -78,9 +78,9 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -97,7 +97,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 ### 在 manifests 中检索本地化的字符串
 
-你的 [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) 包含显示给用户的字符串，例如附加组件的名称和描述。如果你将这些字符串国际化，并将合适的翻译放到 messages.json 中，则用户将根据当前语言区域看到适当的字符串翻译。
+你的 [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/manifest.json) 包含显示给用户的字符串，例如附加组件的名称和描述。如果你将这些字符串国际化，并将合适的翻译放到 messages.json 中，则用户将根据当前语言区域看到适当的字符串翻译。
 
 要将这些字符串国际化，按如下格式指定：
 
@@ -116,7 +116,9 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 4. 你想调用的在 `messages.json` 中定义的消息名称，接着是
 5. 两个下划线
 
-    __MSG_ + messageName + __
+```
+ __MSG_ + messageName + __
+```
 
 ### 指定默认语言区域
 
@@ -148,7 +150,7 @@ header {
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}} 和 {{WebExtAPIRef("i18n.getUILanguage()")}} 这两个方法可以在你需要根据语言区域自定义用户界面时使用 — 或许你希望根据用户想要的语言在首选项列表更高层显示首选项，或只显示和特定语言有关的文化信息，又或是按浏览器语言显示格式化过的日期。
 - {{WebExtAPIRef("i18n.detectLanguage()")}} 这个方法可以用来检测用户提交内容的语言，并将其正确格式化。
 
-在我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例中，[后台脚本](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js)包含下列代码：
+在我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例中，[后台脚本](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/background-script.js)包含下列代码：
 
 ```js
 var title = browser.i18n.getMessage("notificationTitle");

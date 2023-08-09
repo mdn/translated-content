@@ -1,17 +1,6 @@
 ---
 title: Первые шаги в программировании веб-сайтов на стороне сервера
 slug: Learn/Server-side/First_steps
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server-side programming
-  - TopicStub
-translation_of: Learn/Server-side/First_steps
 ---
 
 {{LearnSidebar}}

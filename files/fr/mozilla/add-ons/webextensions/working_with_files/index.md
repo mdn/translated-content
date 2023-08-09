@@ -1,7 +1,6 @@
 ---
 title: Travailler avec des fichiers
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
 
 {{AddonSidebar()}}
@@ -57,7 +56,7 @@ API référence : [DOM File API](/fr/docs/Web/API/File)
 
 Si votre extension doit enregistrer des fichiers localement, [idb-file-storage library](https://www.npmjs.com/package/idb-file-storage) fournit une simple enveloppe de [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour faciliter le stockage et la récupération des fichiers et des blobs .
 
-Sur Firefox, cette bibliothèque fournit également un " Promise-based API wrapper"   pour l'API IDBMutableFile non standard. (L'API IDBMutableFile permet aux extensions de créer et de maintenir un fichier objet de base de données IndexedDB qui fournit une API pour lire et modifier le contenu du fichier sans charger tout le fichier dans la mémoire.)
+Sur Firefox, cette bibliothèque fournit également un " Promise-based API wrapper" pour l'API IDBMutableFile non standard. (L'API IDBMutableFile permet aux extensions de créer et de maintenir un fichier objet de base de données IndexedDB qui fournit une API pour lire et modifier le contenu du fichier sans charger tout le fichier dans la mémoire.)
 
 Les principales caractéristiques de la bibliothèque sont les suivantes :
 
@@ -79,11 +78,11 @@ Le fonctionnement de la bibliothèque peut être compris en regardant [image-sto
 
 ```js
 async function saveCollectedBlobs(collectionName, collectedBlobs) {
- const storedImages = await getFileStorage({name: "stored-images"});
+  const storedImages = await getFileStorage({ name: "stored-images" });
 
- for (const item of collectedBlobs) {
+  for (const item of collectedBlobs) {
     await storedImages.put(`${collectionName}/${item.uuid}`, item.blob);
- }
+  }
 }
 ```
 
@@ -93,15 +92,15 @@ async function saveCollectedBlobs(collectionName, collectedBlobs) {
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  let listOptions = filter ? { includes: filter } : undefined;
+  const imagesList = await imagesStore.list(listOptions);
+  let storedImages = [];
+  for (const storedName of imagesList) {
     const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+    storedImages.push({ storedName, blobUrl: URL.createObjectURL(blob) });
+  }
+  return storedImages;
 }
 ```
 
@@ -113,15 +112,15 @@ Notez l'utilisation de [URL.createObjectURL(blob)](/fr/docs/Web/API/URL/createOb
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
+  const imagesStore = await getFileStorage({ name: "stored-images" });
+  for (const storedImage of storedImages) {
     URL.revokeObjectURL(storedImage.blobUrl);
     await imagesStore.remove(storedImage.storedName);
- }
+  }
 }
 ```
 
-`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données “stored-images” et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
+`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données "stored-images" et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
 
 Notez l'utilisation de [URL.revokeObjectURL()](/fr/docs/Web/API/URL/revokeObjectURL) pour révoquer explicitement l'URL du blob. Cela permet de libérer la mémoire allouée à l'URL. Si cela n'est pas fait, la mémoire n'est pas libérée jusqu'à ce que la page sur laquelle l'URL a été créée soit fermée. Si l'URL a été créée dans la page d'arrière-plan d'une extension, celle-ci n'est pas déchargée jusqu'à ce que l'extension soit désactivée, désinstallée ou rechargée, ce qui risque d'affecter inutilement les performances du navigateur. Si l'URL est créée dans la page d'une extension (nouvel onglet, fenêtre contextuelle ou barre latérale), la mémoire est libérée lorsque la page est fermée, mais il demeure de bonne pratique de révoquer l'URL lorsqu'elle n'est plus nécessaire.
 

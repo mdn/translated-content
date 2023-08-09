@@ -37,25 +37,24 @@ O método **fill** é um método mutável, ele irá mudar o objeto em si, e reto
 ## Exemplos
 
 ```js
-[1, 2, 3].fill(4);               // [4, 4, 4]
-[1, 2, 3].fill(4, 1);            // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2);       // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN);     // [1, 2, 3]
-Array(3).fill(4);                // [4, 4, 4]
-[].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
+[1, 2, 3].fill(4); // [4, 4, 4]
+[1, 2, 3].fill(4, 1); // [1, 4, 4]
+[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
+[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
+[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
+[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
+Array(3).fill(4); // [4, 4, 4]
+[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
 ```
 
 ## Polyfill
 
 ```js
 if (!Array.prototype.fill) {
-  Array.prototype.fill = function(value) {
-
+  Array.prototype.fill = function (value) {
     // Passo 1-2.
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     var O = Object(this);
@@ -68,19 +67,20 @@ if (!Array.prototype.fill) {
     var relativeStart = start >> 0;
 
     // Passo 8.
-    var k = relativeStart < 0 ?
-      Math.max(len + relativeStart, 0) :
-      Math.min(relativeStart, len);
+    var k =
+      relativeStart < 0
+        ? Math.max(len + relativeStart, 0)
+        : Math.min(relativeStart, len);
 
     // Passo 9-10.
     var end = arguments[2];
-    var relativeEnd = end === undefined ?
-      len : end >> 0;
+    var relativeEnd = end === undefined ? len : end >> 0;
 
     // Passo 11.
-    var final = relativeEnd < 0 ?
-      Math.max(len + relativeEnd, 0) :
-      Math.min(relativeEnd, len);
+    var final =
+      relativeEnd < 0
+        ? Math.max(len + relativeEnd, 0)
+        : Math.min(relativeEnd, len);
 
     // Passo 12.
     while (k < final) {
@@ -96,15 +96,15 @@ if (!Array.prototype.fill) {
 
 ## Especificações
 
-| Especificação                                                                                    | Status               | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| Especificação                                                            | Status           | Comentário         |
+| ------------------------------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores
 
 {{Compat("javascript.builtins.Array.fill")}}
 
-\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada “Enable Experimental JavaScript”.
+\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada "Enable Experimental JavaScript".
 
 ## Ver também
 

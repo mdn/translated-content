@@ -1,5 +1,5 @@
 ---
-title: 'Razão: A requisição CORS não foi bem sucedida'
+title: "Razão: A requisição CORS não foi bem sucedida"
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 

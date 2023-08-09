@@ -1,8 +1,6 @@
 ---
-title: '::-moz-list-number'
+title: "::-moz-list-number"
 slug: Web/CSS/::-moz-list-number
-translation_of: Web/CSS/:-moz-list-number
-original_slug: Web/CSS/:-moz-list-number
 ---
 
 {{Non-standard_header}}{{CSSRef}}

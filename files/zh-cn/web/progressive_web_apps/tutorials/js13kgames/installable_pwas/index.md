@@ -1,7 +1,6 @@
 ---
 title: 让 PWA 易于安装
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -28,7 +27,7 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 的 `js13kpwa.webmanifest` 文件包含在 `index.html` 文件的 {{htmlelement("head")}} 段，如下行所示：
 
 ```html
-<link rel="manifest" href="js13kpwa.webmanifest">
+<link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
 > **备注：** 这类清单文件有一些曾经常被使用的扩展名：`manifest.webapp` 在 Firefox OS 应用清单中很流行，而许多人使用 `manifest.json` 作为网页清单（因为内容是 JSON 格式的）。但是，`.webmanifest` 扩展名是在[W3C 清单规范](https://w3c.github.io/manifest/)中显式指定的，所以这里我们使用这个扩展名。
@@ -37,26 +36,26 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 
 ```json
 {
-    "name": "js13kGames Progressive Web App",
-    "short_name": "js13kPWA",
-    "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
-    "icons": [
-        {
-            "src": "icons/icon-32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-        },
-        // ...
-        {
-            "src": "icons/icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "start_url": "/pwa-examples/js13kpwa/index.html",
-    "display": "fullscreen",
-    "theme_color": "#B12A34",
-    "background_color": "#B12A34"
+  "name": "js13kGames Progressive Web App",
+  "short_name": "js13kPWA",
+  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+  "icons": [
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    // ...
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/pwa-examples/js13kpwa/index.html",
+  "display": "fullscreen",
+  "theme_color": "#B12A34",
+  "background_color": "#B12A34"
 }
 ```
 

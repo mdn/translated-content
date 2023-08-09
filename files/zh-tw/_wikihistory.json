@@ -868,10 +868,6 @@
       "SecondSpirit"
     ]
   },
-  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
-    "modified": "2020-07-16T22:24:00.731Z",
-    "contributors": ["RichKe"]
-  },
   "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks": {
     "modified": "2020-07-16T22:23:49.670Z",
     "contributors": ["JamesGoler"]
@@ -1626,10 +1622,6 @@
     "modified": "2019-03-18T21:09:01.391Z",
     "contributors": ["fscholz", "wbamberg", "RJ_Hsiao"]
   },
-  "Mozilla/Firefox/Releases/11": {
-    "modified": "2019-03-23T23:07:01.282Z",
-    "contributors": ["wbamberg", "RJ_Hsiao"]
-  },
   "Mozilla/Firefox/Releases/2": {
     "modified": "2019-04-23T05:37:52.313Z",
     "contributors": ["jackblackevo", "wbamberg", "Josesun", "BobChao"]
@@ -1668,10 +1660,6 @@
   "Mozilla/Firefox/Releases/3/DOM_improvements": {
     "modified": "2019-04-23T05:36:36.182Z",
     "contributors": ["jackblackevo", "wbamberg", "teoli", "Coolcd"]
-  },
-  "Mozilla/Firefox/Releases/35": {
-    "modified": "2019-12-13T20:33:34.355Z",
-    "contributors": ["wbamberg", "RJ_Hsiao"]
   },
   "Mozilla/Firefox/Releases/4": {
     "modified": "2019-04-23T03:28:51.373Z",
@@ -1939,6 +1927,17 @@
   "Web/API/Document": {
     "modified": "2019-12-24T11:58:47.714Z",
     "contributors": ["ianchen0119", "jackblackevo", "Sheppy"]
+  },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2019-04-30T13:56:21.954Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "NoctisHsu",
+      "jackblackevo",
+      "ethertank",
+      "CarterTsai"
+    ]
   },
   "Web/API/Document/body": {
     "modified": "2019-03-23T22:12:47.911Z",
@@ -2784,17 +2783,6 @@
     "modified": "2019-03-23T22:30:42.242Z",
     "contributors": ["jackblackevo"]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2019-04-30T13:56:21.954Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "NoctisHsu",
-      "jackblackevo",
-      "ethertank",
-      "CarterTsai"
-    ]
-  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-03-23T22:27:46.116Z",
     "contributors": ["hstarorg"]
@@ -2985,21 +2973,6 @@
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2020-10-24T16:00:38.628Z",
-    "contributors": [
-      "NekoChan-2851",
-      "weichengcing",
-      "BobChao",
-      "noih",
-      "jsgao0",
-      "jackblackevo"
-    ]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-03-23T22:49:42.209Z",
-    "contributors": ["jackblackevo", "alk03073135"]
-  },
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:48.571Z",
     "contributors": ["teoli"]
@@ -3079,6 +3052,21 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
     "modified": "2019-03-23T22:55:03.379Z",
     "contributors": ["jackblackevo", "h140100"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2020-10-24T16:00:38.628Z",
+    "contributors": [
+      "NekoChan-2851",
+      "weichengcing",
+      "BobChao",
+      "noih",
+      "jsgao0",
+      "jackblackevo"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-03-23T22:49:42.209Z",
+    "contributors": ["jackblackevo", "alk03073135"]
   },
   "Web/CSS/CSS_transitions": {
     "modified": "2019-03-23T22:18:48.267Z",
@@ -4570,17 +4558,9 @@
     "modified": "2020-10-15T21:51:00.608Z",
     "contributors": ["nyngwang", "jackblackevo", "liuderchi"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Proxy": {
-    "modified": "2020-10-15T21:54:48.783Z",
-    "contributors": ["aChinKaiWu", "jackblackevo"]
-  },
   "Web/JavaScript/Reference/Global_Objects/RangeError": {
     "modified": "2020-10-15T22:17:59.783Z",
     "contributors": ["hmysjiang"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Reflect": {
-    "modified": "2019-03-23T22:11:01.546Z",
-    "contributors": ["jackblackevo"]
   },
   "Web/JavaScript/Reference/Global_Objects/RegExp": {
     "modified": "2020-10-15T22:28:47.846Z",
@@ -4905,10 +4885,6 @@
   "Web/Media/Formats": {
     "modified": "2020-02-18T06:39:28.429Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/Media/Formats/Containers": {
-    "modified": "2020-02-19T03:38:30.649Z",
-    "contributors": ["JamesGoler"]
   },
   "Web/OpenSearch": {
     "modified": "2019-03-23T22:00:23.747Z",

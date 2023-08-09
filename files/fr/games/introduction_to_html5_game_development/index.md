@@ -1,7 +1,6 @@
 ---
 title: Introduction au développement de jeux HTML5 (résumé)
 slug: Games/Introduction_to_HTML5_Game_Development
-translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 ---
 
 {{GamesSidebar}}
@@ -21,12 +20,12 @@ translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 | **Fonction**   | Technologie                                                                                                                                                                                                                                                                                                                        |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Audio**      | [Web Audio API](/fr/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                                                                    |
-| **Graphique**  | [WebGL](/fr/docs/Web/API/WebGL_API) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                         |
+| **Graphique**  | [WebGL](/fr/docs/Web/API/WebGL_API) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                            |
 | **Input**      | [Événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [Utiliser l'API Gamepad](/fr/docs/Web/Guide/API/Gamepad), capteurs de l'appareil , [L'API WebRTC](/fr/docs/Web/API/WebRTC_API), [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), [Pointer Lock API](/fr/docs/WebAPI/Pointer_Lock) |
-| **Language**   | [JavaScript](/fr/docs/JavaScript) (ou C/C++ utilisant [Emscripten](https://github.com/kripken/emscripten/wiki) pour compiler en JavaScript )                                                                                                                   |
-| **Networking** | [WebRTC](/fr/docs/WebRTC) et/ou [WebSockets](/fr/docs/Web/API/WebSockets_API)                                                                                                                                                                                                                                    |
-| **Stockage**   | [IndexedDB](/fr/docs/Web/API/API_IndexedDB) ou le "cloud"                                                                                                                                                                                                                                                                         |
-| **Web**        | [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [SVG](/fr/docs/Web/SVG), [Social API](/fr/docs/Social_API) ( et beaucoup plus! )                                                                                                                                                                         |
+| **Language**   | [JavaScript](/fr/docs/JavaScript) (ou C/C++ utilisant [Emscripten](https://github.com/kripken/emscripten/wiki) pour compiler en JavaScript )                                                                                                                                                                                       |
+| **Networking** | [WebRTC](/fr/docs/WebRTC) et/ou [WebSockets](/fr/docs/Web/API/WebSockets_API)                                                                                                                                                                                                                                                      |
+| **Stockage**   | [IndexedDB](/fr/docs/Web/API/API_IndexedDB) ou le "cloud"                                                                                                                                                                                                                                                                          |
+| **Web**        | [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [SVG](/fr/docs/Web/SVG), [Social API](/fr/docs/Social_API) ( et beaucoup plus! )                                                                                                                                                                                               |
 
 - [API plein écran](/fr/docs/DOM/Using_fullscreen_mode)
   - : Gameplay en plein écran.

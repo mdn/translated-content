@@ -51,7 +51,7 @@ type 属性是一个类属性，他在不同的使用语境下有不同的意思
 
 | Categories         | _None_                                                                                                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Value              | \<content-type>                                                                                                                                                                                         |
+| Value              | \<content-type>                                                                                                                                                                                        |
 | Animatable         | No                                                                                                                                                                                                     |
 | Normative document | [SVG 1.1 (2nd Edition) : script](http://www.w3.org/TR/SVG11/script.html#ScriptElementTypeAttribute) [SVG 1.1 (2nd Edition) : style](http://www.w3.org/TR/SVG11/styling.html#StyleElementTypeAttribute) |
 

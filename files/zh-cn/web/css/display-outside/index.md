@@ -25,16 +25,15 @@ slug: Web/CSS/display-outside
 ### HTML
 
 ```html
-<span>片段 1</span>
-<span>片段 2</span>
+<span>片段 1</span> <span>片段 2</span>
 ```
 
 ### CSS
 
 ```css
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 

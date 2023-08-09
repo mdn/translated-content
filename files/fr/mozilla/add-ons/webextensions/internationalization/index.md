@@ -1,7 +1,6 @@
 ---
 title: Internationalization
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
-translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
 
 {{AddonSidebar}}
@@ -79,9 +78,9 @@ Regardons maintenant la structure de l'un de ces fichiers ([\_locales/en/message
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -117,9 +116,9 @@ Pour appeler une chaîne de message comme celle-ci, vous devez le spécifier com
 4. Le nom du message que vous souhaitez appeler tel que défini dans `messages.json`, suivi de
 5. Deux underscores
 
-    ```
-    __MSG_ + messageName + __
-    ```
+   ```
+   __MSG_ + messageName + __
+   ```
 
 ### Spécification d'un paramètre régional par défaut
 
@@ -158,7 +157,7 @@ var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
-La première récupère juste le `message` du champ `notificationTitle` du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ `notificationContent` :
+La première récupère juste le `message` du champ `notificationTitle` du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$` que nous voyons dans le champ `message` du champ `notificationContent` :
 
 ```json
 "notificationContent": {

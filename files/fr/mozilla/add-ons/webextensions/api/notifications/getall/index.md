@@ -1,7 +1,6 @@
 ---
 title: notifications.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingAll = browser.notifications.getAll()
+var gettingAll = browser.notifications.getAll();
 ```
 
 ### Paramètres
@@ -42,18 +41,18 @@ function toggleAlarm(all) {
   if (ids.indexOf(myNotification) != -1) {
     browser.notifications.clear(myNotification);
   } else {
-    console.log("showing")
+    console.log("showing");
 
     browser.notifications.create(myNotification, {
-      "type": "basic",
-      "title": "Am imposing title",
-      "message": "Some interesting content"
+      type: "basic",
+      title: "Am imposing title",
+      message: "Some interesting content",
     });
   }
 }
 
 function handleClick() {
-  console.log("clicked")
+  console.log("clicked");
   browser.notifications.getAll().then(toggleAlarm);
 }
 

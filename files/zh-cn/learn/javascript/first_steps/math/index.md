@@ -54,22 +54,22 @@ slug: Learn/JavaScript/First_steps/Math
 
 1. 首先，我们先声明一对变量，并分别用一个整数和一个浮点数来初始化它们，然后再输入变量名来检查是否正确：
 
-    ```js
-    let myInt = 5;
-    let myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   let myInt = 5;
+   let myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. 数值键入不带引号 —— 在继续之前尝试声明和初始化更多包含数字的变量。
 3. 现在我们来看看我们的原始变量是否是相同的数据类型。在 JavaScript 中有一个称为{{jsxref("Operators / typeof", "typeof")}} 的运算符。输入如下所示的两行：
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    在这两种情况下，都应该返回 `"number"` —— 这使得事情变得更简单，因为若是不同的数字具有不同的数据类型，那么我们还须以不同的方式处理它们。呦！
+   在这两种情况下，都应该返回 `"number"` —— 这使得事情变得更简单，因为若是不同的数字具有不同的数据类型，那么我们还须以不同的方式处理它们。呦！
 
 ## 算术运算符
 
@@ -142,29 +142,29 @@ slug: Learn/JavaScript/First_steps/Math
 
 1. 首先尝试输入一些简单的例子，例如
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. 您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
 
-    ```js
-    let num1 = 10;
-    let num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   let num1 = 10;
+   let num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. 最后在本节中，尝试输入一些更复杂的表达式，如：
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 这最后的一组计算中可能没有给出你期望的结果; 下面的部分也许能告诉你为什么。
 
@@ -200,7 +200,7 @@ num2 + num1 / 8 + 2;
 guessCount++;
 ```
 
-> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
+> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
 
 我们来试试看你们的控制台。首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：
 
@@ -311,18 +311,18 @@ x *= y; // x 现在包含值 12
 ```
 
 ```js
-const btn = document.querySelector('button');
-const txt = document.querySelector('p');
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
   }
 }
 ```

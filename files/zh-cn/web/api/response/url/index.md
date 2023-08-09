@@ -24,13 +24,13 @@ In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pa
 Note that at the top of the `fetch()` block we log the response `URL` to the console.
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
-  response.blob().then(function(myBlob) {
+fetch(myRequest).then(function (response) {
+  console.log(response.url); // returns https://developer.mozilla.org/zh-CN/docs/Web/API/Response/flowers.jpg
+  response.blob().then(function (myBlob) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });

@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onReferenceFragmentUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 ---
 
 {{AddonSidebar()}}Lancé si [identificateur dee fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié. Par exemple, si une page implémente une table des matières à l'aide de fragments et que l'utilisateur clique sur une entrée dans la table des matières, cet événement se déclenche. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.
@@ -10,11 +9,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragm
 
 ```js
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onReferenceFragmentUpdated.removeListener(listener)
-browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onReferenceFragmentUpdated.removeListener(listener);
+browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -69,12 +68,8 @@ Consigne les URL cibles et les informations de transition supplémentaires pour 
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnReferenceFragmentUpdated(details) {
   console.log("onReferenceFragmentUpdated: " + details.url);
@@ -82,7 +77,10 @@ function logOnReferenceFragmentUpdated(details) {
   console.log("Transition qualifiers: " + details.transitionQualifiers);
 }
 
-browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragmentUpdated, filter);
+browser.webNavigation.onReferenceFragmentUpdated.addListener(
+  logOnReferenceFragmentUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

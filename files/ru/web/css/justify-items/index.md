@@ -1,12 +1,6 @@
 ---
 title: Атрибут justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - CSS атрибут
-  - CSS выравнивание блоков
-  - Ссылки
-translation_of: Web/CSS/justify-items
 ---
 
 {{CSSRef}}
@@ -32,15 +26,15 @@ justify-items: normal;
 justify-items: stretch;
 
 /* Выравнивание положения */
-justify-items: center;     /* Выровнять элементы по центру */
-justify-items: start;      /* Выровнять элементы в начале */
-justify-items: end;        /* Выровнять элементы в конце */
+justify-items: center; /* Выровнять элементы по центру */
+justify-items: start; /* Выровнять элементы в начале */
+justify-items: end; /* Выровнять элементы в конце */
 justify-items: flex-start; /* Эквивалентно 'start'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
-justify-items: flex-end;   /* Эквивалентно 'end'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
+justify-items: flex-end; /* Эквивалентно 'end'. Обратите внимание, что justify-items игнорируется в разметке Flexbox. */
 justify-items: self-start;
 justify-items: self-end;
-justify-items: left;       /* Выровнять элементы по левому краю */
-justify-items: right;      /* Выровнять элементы по правому краю */
+justify-items: left; /* Выровнять элементы по левому краю */
+justify-items: right; /* Выровнять элементы по правому краю */
 
 /* Исходное выравнивание */
 justify-items: baseline;
@@ -116,8 +110,8 @@ justify-items: unset;
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                                   | Комментарий                |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------- |
+| Спецификация                                                                  | Статус                          | Комментарий                |
+| ----------------------------------------------------------------------------- | ------------------------------- | -------------------------- |
 | {{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}} | {{Spec2("CSS3 Box Alignment")}} | Первоначальное определение |
 
 {{CSSInfo}}

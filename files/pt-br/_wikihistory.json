@@ -846,10 +846,6 @@
     "modified": "2020-07-16T22:27:22.550Z",
     "contributors": ["GiovanniHD201E"]
   },
-  "Learn/CSS/CSS_layout/Positioning": {
-    "modified": "2020-07-16T22:26:45.710Z",
-    "contributors": ["GiovanniHD201E"]
-  },
   "Learn/CSS/CSS_layout/Responsive_Design": {
     "modified": "2020-08-22T17:27:59.073Z",
     "contributors": ["manoelbjr", "crisleitaoguerra"]
@@ -936,10 +932,6 @@
     "modified": "2020-11-22T03:28:22.451Z",
     "contributors": ["kvojps"]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:51.948Z",
-    "contributors": ["Celio1234"]
-  },
   "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:47.861Z",
     "contributors": [
@@ -1019,10 +1011,6 @@
       "SilvEiRax",
       "sjmiles"
     ]
-  },
-  "Learn/Forms/Basic_native_form_controls": {
-    "modified": "2020-07-16T22:21:22.988Z",
-    "contributors": ["danncam", "VictorGom3s"]
   },
   "Learn/Forms/Form_validation": {
     "modified": "2020-07-16T22:21:52.226Z",
@@ -2157,15 +2145,11 @@
     "modified": "2019-03-18T21:01:56.380Z",
     "contributors": ["thiagopelizoni"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:48:17.751Z",
-    "contributors": ["IgorOFC", "jlamim"]
-  },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2019-03-18T21:05:24.593Z",
     "contributors": ["fthiagogv", "Mostard"]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2019-03-18T21:01:38.952Z",
     "contributors": ["jefersonnavarro"]
   },
@@ -2703,6 +2687,10 @@
       "lionbtt",
       "teoli"
     ]
+  },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2019-03-18T20:53:06.319Z",
+    "contributors": ["helton-mori-dev", "fscholz", "greevin", "macalha"]
   },
   "Web/API/Document/Document": {
     "modified": "2019-07-17T13:05:53.557Z",
@@ -4136,17 +4124,9 @@
       "panaggio"
     ]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2019-03-18T20:53:06.319Z",
-    "contributors": ["helton-mori-dev", "fscholz", "greevin", "macalha"]
-  },
   "Web/API/Window/alert": {
     "modified": "2020-03-30T12:44:24.443Z",
     "contributors": ["raulnunesodre", "teoli", "alexandrem"]
-  },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-03-23T22:51:36.521Z",
-    "contributors": ["haskellcamargo"]
   },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-04-30T13:57:03.306Z",
@@ -4504,10 +4484,6 @@
     "modified": "2019-03-23T22:50:52.511Z",
     "contributors": ["Aschlla", "iCynthia"]
   },
-  "Web/Accessibility/ARIA/Roles/slider_role": {
-    "modified": "2019-03-23T22:16:26.114Z",
-    "contributors": ["rener_bz"]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:27:46.873Z",
     "contributors": ["Aschlla"]
@@ -4771,10 +4747,6 @@
     "modified": "2020-10-15T22:02:16.544Z",
     "contributors": ["EvertonTomalok"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-03-22T08:21:56.189Z",
-    "contributors": ["Arlon", "Lukff", "kelvyncosta"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:41:31.457Z",
     "contributors": ["brunoeduardo"]
@@ -4960,6 +4932,10 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
     "modified": "2019-03-23T22:59:23.481Z",
     "contributors": ["songbird159", "teoli", "MaxWilliamJF"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-03-22T08:21:56.189Z",
+    "contributors": ["Arlon", "Lukff", "kelvyncosta"]
   },
   "Web/CSS/CSS_transforms": {
     "modified": "2019-03-23T22:44:44.279Z",
@@ -5722,18 +5698,6 @@
   "Web/Demos": {
     "modified": "2020-09-04T06:28:02.627Z",
     "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
-  },
-  "Web/Events": {
-    "modified": "2019-08-20T18:23:47.517Z",
-    "contributors": [
-      "helton-mori-dev",
-      "ayrtton",
-      "Marnei-Cardoso",
-      "wbamberg",
-      "LeandroMaxNatal",
-      "susanasilva",
-      "jpmedley"
-    ]
   },
   "Web/Guide": {
     "modified": "2020-10-30T13:31:43.101Z",
@@ -10422,10 +10386,6 @@
     "modified": "2019-03-23T23:15:05.305Z",
     "contributors": ["non", "splewako"]
   },
-  "Web/MathML/Element/math": {
-    "modified": "2019-03-23T23:15:04.481Z",
-    "contributors": ["Haroldohc"]
-  },
   "Web/MathML/Examples": {
     "modified": "2019-03-23T23:19:30.922Z",
     "contributors": ["raniere"]
@@ -11495,6 +11455,10 @@
     "modified": "2019-09-09T15:53:42.526Z",
     "contributors": ["SphinxKnight", "wbamberg", "richellyitalo"]
   },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-23T22:48:17.751Z",
+    "contributors": ["IgorOFC", "jlamim"]
+  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-18T21:15:50.836Z",
     "contributors": ["lubarino"]
@@ -11661,6 +11625,10 @@
   "orphaned/Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:23:27.840Z",
     "contributors": ["VictorhMalheiro"]
+  },
+  "orphaned/Web/API/Window/applicationCache": {
+    "modified": "2019-03-23T22:51:36.521Z",
+    "contributors": ["haskellcamargo"]
   },
   "orphaned/Web/API/Window/ondevicelight": {
     "modified": "2019-03-23T22:08:54.681Z",

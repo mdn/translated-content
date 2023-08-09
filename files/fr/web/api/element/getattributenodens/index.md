@@ -1,7 +1,6 @@
 ---
 title: element.getAttributeNodeNS
 slug: Web/API/Element/getAttributeNodeNS
-translation_of: Web/API/Element/getAttributeNodeNS
 ---
 
 {{ ApiRef() }}
@@ -13,7 +12,7 @@ Renvoie le nœud `Attr` pour l'attribut avec l'espace de noms et le nom donnés.
 ### Syntaxe
 
 ```js
-attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 ```
 
 ### Paramètres

@@ -26,7 +26,7 @@ var abs = Math.abs(x);
 
 O valor absoluto do número passado
 
-## Descrição.
+## Descrição
 
 Por `abs` ser um método estático de `Math`, você sempre o usará como `Math.abs()` ao ínves de usar como método de um objeto `Math` criado por você. (`Math` não é um construtor);
 

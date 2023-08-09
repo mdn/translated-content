@@ -1,11 +1,8 @@
 ---
-title: >-
-  SyntaxError: applying the 'delete' operator to an unqualified name is
-  deprecated (SyntaxError: применение оператора 'delete' к неполному имени не
-  рекомендуется)
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (SyntaxError: применение оператора 'delete' к неполному имени не рекомендуется)"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -35,7 +32,7 @@ SyntaxError: удаление неполного идентификатора в
 Попытка удалить простую переменную не работает в JavaScript и выдаёт ошибку в строгом режиме:
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -49,7 +46,7 @@ delete x;
 Чтобы освободить содержимое переменной, задайте для неё значение {{jsxref("null")}}:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 
@@ -62,6 +59,6 @@ x = null;
 
 ## Смотрите также
 
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - [Memory management](/ru/docs/Web/JavaScript/Memory_Management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/ru/docs/Web/JavaScript/Reference/Errors/Cant_delete)(TypeError: свойство "x" не настраивается и не может быть удалено)

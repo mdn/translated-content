@@ -1,13 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-tags:
-  - HTTP
-  - Заголовок HTTP
-  - Справка
-  - заголовок запроса
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
-original_slug: Web/HTTP/Заголовки/If-Unmodified-Since
 ---
 
 {{HTTPSidebar}}
@@ -72,8 +65,8 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Спецификации
 
-| Спецификация                                                 | Заголовок                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Спецификация                                  | Заголовок                                                    |
+| --------------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Unmodified-Since", "3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Совместимость с браузерами

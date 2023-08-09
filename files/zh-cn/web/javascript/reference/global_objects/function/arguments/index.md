@@ -18,17 +18,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ## 示例
 
 ```js
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('函数退出后的 arguments 属性值：' + g.arguments);
+console.log("函数退出后的 arguments 属性值：" + g.arguments);
 
 // 输出：
 

@@ -21,8 +21,8 @@ const firstTier = rootElement.childNodes;
 
 // firstTier 是由根元素的所有子节点组成的一个 NodeList
 for (let i = 0; i < firstTier.length; i++) {
-   // 使用根节点的每个子节点
-   // 如 firstTier[i]
+  // 使用根节点的每个子节点
+  // 如 firstTier[i]
 }
 ```
 

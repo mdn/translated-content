@@ -1,14 +1,6 @@
 ---
 title: CSS Text Decoration
 slug: Web/CSS/CSS_text_decoration
-page-type: css-module
-tags:
-  - CSS
-  - CSS Text Decoration
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Text_Decoration
 ---
 
 {{CSSRef}}
@@ -70,11 +62,13 @@ translation_of: Web/CSS/CSS_Text_Decoration
 <p class="over">Этот текст имеет линию сверху.</p>
 <p class="line">Этот текст перечёркнут.</p>
 <p>
-  Эта <a class="plain" href="#">ссылка не будет подчёркнута</a>,
-    как все ссылки по умолчанию. Будьте осторожны, когда удаляете
-    подчёркивание у ссылок, т.к. для пользователей нижнее подчеркивание
-    часто обозначает гиперссылку.</p>
-<p class="underover">В этом примере линии находятся над <em>и</em> под текстом.</p>
+  Эта <a class="plain" href="#">ссылка не будет подчёркнута</a>, как все ссылки
+  по умолчанию. Будьте осторожны, когда удаляете подчёркивание у ссылок, т.к.
+  для пользователей нижнее подчеркивание часто обозначает гиперссылку.
+</p>
+<p class="underover">
+  В этом примере линии находятся над <em>и</em> под текстом.
+</p>
 <p class="thick">
   Этот текст подчёркнут жирной линией, если ваш браузер это поддерживает.
 </p>

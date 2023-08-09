@@ -1,13 +1,6 @@
 ---
 title: URLs de type ressource
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-tags:
-  - Guide
-  - HTTP
-  - Intermédiaire
-  - Ressource
-translation_of: Web/HTTP/Basics_of_HTTP/Resource_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/URLs_de_type_ressource
 ---
 
 {{HTTPSidebar}}

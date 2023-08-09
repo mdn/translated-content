@@ -1,7 +1,6 @@
 ---
 title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
 
 {{AddonSidebar()}}
@@ -14,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.tabs.removeCSS(
-  tabId,           // optional integer
-  details          // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -57,11 +56,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, {code: css});
+var insertingCSS = browser.tabs.insertCSS(2, { code: css });
 insertingCSS.then(null, onError);
 
 browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, {code: css});
+  var removing = browser.tabs.removeCSS(2, { code: css });
   removing.then(null, onError);
 });
 ```
@@ -74,7 +73,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 > **Note :**
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

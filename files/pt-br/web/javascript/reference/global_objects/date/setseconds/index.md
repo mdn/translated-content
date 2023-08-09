@@ -49,8 +49,8 @@ theBigDay.setSeconds(30);
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                          |
+| -------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} |
 
 ## Compatibilidade com navegadores
