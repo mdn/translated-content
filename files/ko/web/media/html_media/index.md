@@ -11,6 +11,6 @@ slug: Web/Media/HTML_media
 
 현재는 이런 객체들을 화면을 벗어나서 사용할 수 있는 가이드가 없지만 [Audio and video manipulation](/ko/docs/Web/Guide/Audio_and_video_manipulation)를 참고하면 좋은 시작점이 될 수 있습니다.
 
-### 더보기
+### 더 보기
 
 - [웹 미디어 기술](/ko/docs/Web/Media)
