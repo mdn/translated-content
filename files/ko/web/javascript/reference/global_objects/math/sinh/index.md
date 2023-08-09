@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
 
 {{EmbedInteractiveExample("pages/js/math-sinh.html")}}
 
-## Syntax
+## 구문
 
 ```js
 Math.sinh(x);
@@ -22,15 +22,15 @@ Math.sinh(x);
 - `x`
   - : 숫자.
 
-### Return value
+### 반환 값
 
 사인값.
 
-## Description
+## 설명
 
 `sinh()` 는 `Math` 의 정적 함수이기 때문에, 자바스크립트 어디든 `Math.sinh()` 를 사용할 수 있습니다, 따라서 `Math` 오브젝트를 생성해서는 안됩니다. (`Math` 는 constructor(생성자) 가 아닙니다.).
 
-## Examples
+## 예제
 
 ### `Math.sinh()` 사용하기
 
@@ -39,7 +39,7 @@ Math.sinh(0); // 0
 Math.sinh(1); // 1.1752011936438014
 ```
 
-## Polyfill
+## 폴리필
 
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
@@ -70,7 +70,7 @@ Math.sinh =
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

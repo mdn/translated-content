@@ -26,7 +26,7 @@ Math.trunc(x);
 
 ## 설명
 
-`Math`의 다른 함수 3개 {{jsxref("Math.floor()")}},
+`Math`의 다른 함수 3개 {{jsxref("Math.floor()")}},
 {{jsxref("Math.ceil()")}} 그리고 {{jsxref("Math.round()")}} 와는 다르게,
 `Math.trunc()` 단순하게 동작합니다. 함수는 주어진 값이 양수이건 음수이건 상관없이
 소수점 이하 우측부분을 *제거*하는 매우 단순한 동작을 합니다.
