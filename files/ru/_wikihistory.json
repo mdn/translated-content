@@ -3563,10 +3563,6 @@
     "modified": "2019-03-18T21:05:03.573Z",
     "contributors": ["vladimir-nikotin", "Shychara"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:05:13.253Z",
-    "contributors": ["vladimir-nikotin", "Shychara"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-03-18T21:01:56.567Z",
     "contributors": ["shmel3"]
@@ -3590,6 +3586,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:05:02.475Z",
     "contributors": ["leksiq", "LumenGNU"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:05:13.253Z",
+    "contributors": ["vladimir-nikotin", "Shychara"]
   },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:11:55.644Z",
@@ -10097,17 +10097,6 @@
       "Dionys",
       "Woodroof",
       "Zhuravlik"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
     ]
   },
   "Web/Guide/API": {
@@ -16799,6 +16788,17 @@
   "conflicting/Web/Guide": {
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-24T00:01:49.926Z",
+    "contributors": [
+      "DanilaH",
+      "chrisdavidmills",
+      "Megapotz",
+      "Apparition",
+      "Square",
+      "Kwinto"
+    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",

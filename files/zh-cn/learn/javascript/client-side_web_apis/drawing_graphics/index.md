@@ -76,7 +76,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
 让我们开始吧：创建画布，准备尝试绘制图形。
 
-1. 首先下载 [0_canvas_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/0_canvas_start.html) 文件，用文本编辑器打开。
+1. 首先下载 [0_canvas_start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start.html) 文件，用文本编辑器打开。
 2. 在 {{htmlelement("body")}} 标签下面填加以下代码。
 
     ```html
@@ -151,7 +151,7 @@ ctx.fillRect(0, 0, width, height);
 
 让我们从简单矩形开始。
 
-1. 首先，复制一份刚才创建的画布模板 (如果你没有严格按上述步骤进行，请下载 [1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html))。
+1. 首先，复制一份刚才创建的画布模板 (如果你没有严格按上述步骤进行，请下载 [1_canvas_template.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html))。
 2. 然后在 JS 代码末尾添加下面两行：
 
     ```js
@@ -200,13 +200,13 @@ ctx.fillRect(0, 0, width, height);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html", '100%', 250)}}
 
-> **备注：** 完整代码请访问 GitHub： [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html)。
+> **备注：** 完整代码请访问 GitHub： [2_canvas_rectangles.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles.html)。
 
 ### 绘制路径
 
 可以通过绘制路径来绘制比矩形更复杂的图形。路径中至少要包含钢笔运行精确路径的代码以确定图形的形状。画布提供了许多函数用来绘制直线、圆、贝塞尔曲线，等等。
 
-重新复制一份（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)），然后在其中绘制新的示例。
+重新复制一份（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)），然后在其中绘制新的示例。
 
 一些通用的方法和属性将贯穿以下全部内容：
 
@@ -310,13 +310,13 @@ ctx.fill();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html", '100%', 200)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[3_canvas_paths.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html)。
+> **备注：** 完整代码可到 GitHub 下载：[3_canvas_paths.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths.html)。
 
 > **备注：** 请访问我们的 [用画布绘图](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 入门课程来学习更多高级的路径绘制功能，比如贝叶斯曲线。
 
 ### 文本
 
-画布可用于绘制文本。我们简要学习一下。首先再次下载一份新的画布模板（[1_canvas_template.htm](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)），我们用它来绘制新的示例。
+画布可用于绘制文本。我们简要学习一下。首先再次下载一份新的画布模板（[1_canvas_template.htm](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)），我们用它来绘制新的示例。
 
 以下两个函数用于绘制文本：
 
@@ -344,7 +344,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html", '100%', 180)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[4_canvas_text.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
+> **备注：** 完整代码可到 GitHub 下载：[4_canvas_text.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text.html).
 
 可以自己尝试一下。访问 [绘制文本](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text) 获得关于画布文本选项的更多信息。
 
@@ -352,7 +352,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 可在画布上渲染外部图片，简单图片文件、视频帧、其他画布内容都可以。这里我们只考虑简单图片文件的情况：
 
-1. 同上，下载画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）以绘制新的示例。这里还需要在同一目录下保存一个示例图片文件：[firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png)。
+1. 同上，下载画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）以绘制新的示例。这里还需要在同一目录下保存一个示例图片文件：[firefox.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/firefox.png)。
 
     {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
 
@@ -391,7 +391,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html", '100%', 260)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[5_canvas_images.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
+> **备注：** 完整代码可到 GitHub 下载：[5_canvas_images.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images.html).
 
 ## 循环和动画
 
@@ -403,7 +403,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 我们来创建一个简单的示例。
 
-1. 继续复制一份画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）在代码编辑器中打开。
+1. 继续复制一份画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）在代码编辑器中打开。
 2. 在 JS 代码末尾添加以下一行。这将创建一个新方法——{{domxref("CanvasRenderingContext2D.translate", "translate()")}}，可用于移动画布的原点。
 
     ```js
@@ -471,7 +471,7 @@ ctx.fillText('Canvas text', 50, 150);
 - 修改 `length` 和 `moveOffset` 的值。
 - 我们引入了 `rand()` 函数但是没有使用，你可以试着用它引入一些随机数。
 
-> **备注：** 完整代码可到 GitHub 下载：[6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
+> **备注：** 完整代码可到 GitHub 下载：[6_canvas_for_loop.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop.html).
 
 ### 动画
 
@@ -527,7 +527,7 @@ loop();
 
 现在我们来创建一个简单的动画，我们找来一个复古的电脑游戏的主角制作一个在屏幕上行走的动画。
 
-1. 继续复制一份画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）在代码编辑器中打开。下载 [walk-right.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/walk-right.png) 并放在同一文件夹。
+1. 继续复制一份画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）在代码编辑器中打开。下载 [walk-right.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/walk-right.png) 并放在同一文件夹。
 2. 在 JS 代码末尾添加下面一行，再次将画布的原点设置为中心点。
 
     ```js
@@ -625,13 +625,13 @@ loop();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
 
-> **备注：** 完整代码可到 GitHub 下载：[7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
+> **备注：** 完整代码可到 GitHub 下载：[7_canvas_walking_animation.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html).
 
 ### 简单的绘图应用
 
 下面来演示一个简单的绘图应用，作为最后一个绘画示例，它将向你展示动画循环如果与用户输入（本例中为鼠标移动）结合起来。我们不会带你一步一步来实现本示例，只对代码中最有趣的部分进行探究。
 
-示例代码可到 GitHub 下载：[8_canvas_drawing_app.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html)，也可在线试玩：
+示例代码可到 GitHub 下载：[8_canvas_drawing_app.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html)，也可在线试玩：
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app.html", '100%', 600)}}
 
@@ -700,7 +700,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 我们来看一个简单的示例，用一套 WebGL 库（这里我们选择 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)，最流行的 3D 绘图库之一）来创建我们在本文开头看到的旋转魔方。
 
-1. 首先，下载 [index.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/index.html)、[metal003.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/threejs-cube/metal003.png) 并保存在同一个文件夹。图片将用于魔方的表面纹理。
+1. 首先，下载 [index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html)、[metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) 并保存在同一个文件夹。图片将用于魔方的表面纹理。
 2. 然后，继续在同一个文件夹内创建 `main.js` 文件。
 3. 在编辑器中打开 `index.html` 可以看到其中有两个 {{htmlelement("script")}} 元素，第一个将 `three.min.js` 嵌入页面，第二个将我们的 `main.js` 嵌入页面。需要自行 [下载 three.min.js 库](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) 并保存到同一个文件夹中。
 4. 将 `three.js` 嵌入页面后，就可以在 `main.js` 中添加新的代码对其加以应用了。请添加下面一行：

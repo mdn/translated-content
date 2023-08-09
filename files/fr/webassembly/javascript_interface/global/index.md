@@ -2,8 +2,6 @@
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
-browser-compat: javascript.builtins.WebAssembly.Global
 ---
 
 {{WebAssemblySidebar}}

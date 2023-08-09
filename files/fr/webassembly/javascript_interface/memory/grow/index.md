@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
-  - memory
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow
 ---
 
 {{WebAssemblySidebar}}

@@ -2,8 +2,6 @@
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
 {{WebAssemblySidebar}}

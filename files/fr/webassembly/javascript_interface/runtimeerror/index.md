@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
-  - RuntimeError
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
 {{WebAssemblySidebar}}

@@ -63,7 +63,7 @@ To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are u
 
 ### manifest.json
 
-Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json):
+Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/manifest.json):
 
 ```json
 {
@@ -73,7 +73,7 @@ Here is the [manifest.json](https://github.com/mdn/webextensions-examples/blob/m
     "default_popup": "tabs.html"
   },
   "description": "A list of methods you can perform on a tab.",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs",
   "manifest_version": 2,
   "name": "Tabs, tabs, tabs",
   "permissions": [
@@ -141,7 +141,7 @@ Here is a summary of the above does:
 
 ### tabs.js
 
-In [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
+In [tabs.js](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
 
 #### Creating the popup
 
@@ -465,27 +465,20 @@ The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("
 {
   "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+  "manifest_version": 2,
+  "name": "apply-css",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/apply-css",
 
- "background": {
-
+  "background": {
     "scripts": ["background.js"]
- },
+  },
 
- "page_action": {
+  "page_action": {
+    "default_icon": "icons/off.svg"
+  },
 
-    "default_icon": "icons/off.svg",
-    "browser_style": true
- },
-
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
-
+  "permissions": ["activeTab", "tabs"]
 }
 ```
 

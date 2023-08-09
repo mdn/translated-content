@@ -64,9 +64,9 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 ### 入门
 
-想要使用这个示例的代码来入门，请下载[media-player-start.zip](https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip) 并解压到您的硬盘上的一个新建目录里。如果想要下载[examples repo](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
+想要使用这个示例的代码来入门，请下载 [media-player-start.zip](https://github.com/mdn/learning-area/raw/main/javascript/apis/video-audio/start/media-player-start.zip) 并解压到你的硬盘上的一个新建目录里。如果想要下载[示例仓库](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
 
-下载并解压之后，如果您加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
+下载并解压之后，如果你加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
 
 #### 探索 HTML
 

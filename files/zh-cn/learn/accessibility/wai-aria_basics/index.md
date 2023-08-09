@@ -190,7 +190,7 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 
 问题在于现代 Web 应用程序通常不仅仅是静态文本——它们往往有很多动态更新内容，即通过 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)，[Fetch](/zh-CN/docs/Web/API/Fetch_API) 或[DOM API](/zh-CN/docs/Web/API/Document_Object_Model) 等机制重新加载整个页面的内容。这些有时被称为**实时区域**。
 
-我们来看一个小例子—— [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
+我们来看一个小例子—— [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html))。在这个例子我们哟一个小的随机引用块：
 
 ```html
 <section>
@@ -218,7 +218,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 通常来说 `assertive` 设置足以让你的更新在显示时按时序读出，因此，如果改变多次，那么他只会念出最后一个改变。除非紧急程度高到需要覆盖其他的更新才选择使用 `rude` 。
 
-我们可以复制 [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) 和 [quotes.json](https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json) ，然后像下面一样更新你的 `<section>` tag ：
+我们可以复制 [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) 和 [quotes.json](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json) ，然后像下面一样更新你的 `<section>` tag ：
 
 ```html
 <section aria-live="assertive">
@@ -236,7 +236,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这个 `aria-atomic="true"` 属性告诉屏幕阅读器去读取整个元素的内容作为一个原子单位，而不是里头某个字符串更新了。
 
-> **备注：** 你可在此完成此例子 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> **备注：** 你可在此完成此例子 [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
 > **备注：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性对于控制更新实时区域时读取的内容也非常有用。例如，你读取内容添加或删除。
 
@@ -274,7 +274,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 我们可以在 ARIA 的应用上更进一步，并提供更多验证上的帮助。例如支出某个字段是否必填，或者是要填的年龄的区间该是多少？
 
-1. 首先，复制刚刚的 [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) 还有 [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) 文件，然后保存到本地。
+1. 首先，复制刚刚的 [form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) 还有 [validation.js](https://github.com/mdn/learning-area/blob/main/accessibility/css/validation.js) 文件，然后保存到本地。
 2. 把两个文件都用文本编辑器打开并且看看运作原理。
 3. 首先，在`<form>` 标签的正上方添加一个段落，如下，并用星号标记表单\<label>。这通常是我们为有视力的用户标记必填字段的一个常用手法。
 
@@ -335,7 +335,7 @@ function toggleMusician(bool) {
 
 但是屏幕阅读器呢？他们还是看着这个元素并不是一个 button，如果你用屏幕阅读器测试我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 例子，你会听到一段短语描述这个按钮，内容大概是 "Click me!, group"，显然这会让人疑惑。
 
-依旧，WAI-ARIA 的角色可以解决一切，复制文件 [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)，然后加上 [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) 到每一个 button `<div>`，如下所示
+依旧，WAI-ARIA 的角色可以解决一切，复制文件 [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)，然后加上 [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) 到每一个 button `<div>`，如下所示
 
 ```html
 <div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
@@ -349,11 +349,11 @@ function toggleMusician(bool) {
 
 还有许多其他 [roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 可以将非语义元素结构识别为常见的 UI 功能，这些功能超出了标准 HTML 中可用的功能，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree).。你可以在 [Deque university code library](https://dequeuniversity.com/library/) 中看到许多有用的示例，以便了解如何使这些控件做到无障碍的。
 
-让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）。
+让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) 段落），你可以在 [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。
 
 这个例子在键盘无障碍方面运行良好 —— 你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的 —— 你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显 —— 屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 
-为了优化它，我们创建了一个新的例子，名为： [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html) ([看在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). 我们更新了选项卡式界面的结构，如下所示：
+为了优化它，我们创建了一个新的例子，名为： [aria-tabbed-info-box.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([看在线 demo](http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). 我们更新了选项卡式界面的结构，如下所示：
 
 ```html
 <ul role="tablist">

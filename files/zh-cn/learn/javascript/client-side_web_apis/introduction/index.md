@@ -209,7 +209,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
+> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
 
 ### 它们使用事件来处理状态的变化
 
@@ -233,7 +233,7 @@ request.onload = function() {
 }
 ```
 
-> **备注：** 您可以在我们的[ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html)**示例中看到此代码** (或者 在线运行版本 [see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
+> **备注：** 您可以在我们的[ajax.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/ajax.html)**示例中看到此代码** (或者 在线运行版本 [see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
 前五行指定了我们要获取的资源的位置，使用`XMLHttpRequest()` 构造函数创建请求对象的新实例，打开 HTTP 的 `GET` 请求以取得指定资源，指定响应以 JSON 格式发送，然后发送请求。
 

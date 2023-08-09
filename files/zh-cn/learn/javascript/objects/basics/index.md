@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Objects/Basics
 
 对象是一个包含相关数据和方法的集合（通常由一些变量和函数组成，我们称之为对象里面的属性和方法），让我们通过一个例子来了解它们。
 
-首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 文件复制到本地。此文件包含非常少 — 一个供我们写源代码的 {{HTMLElement("script")}} 标签，一个供我们输入示例指令的 {{HTMLElement("input")}} 标签，当页面被渲染时，一些变量定义，一个输出任何输入到{{HTMLElement("input")}}的内容输出到{{HTMLElement("p")}}标签的函数。我们用这个文件做为基础探索对象的基础语法。
+首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地。此文件包含非常少 — 一个供我们写源代码的 {{HTMLElement("script")}} 标签，一个供我们输入示例指令的 {{HTMLElement("input")}} 标签，当页面被渲染时，一些变量定义，一个输出任何输入到{{HTMLElement("input")}}的内容输出到{{HTMLElement("p")}}标签的函数。我们用这个文件做为基础探索对象的基础语法。
 
 如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
 
@@ -80,7 +80,7 @@ person.greeting()
 
 现在在你的对象里得到了一些数据和功能（functionality），现在可以通过简单的语法访问他们了！
 
-> **备注：** 如果做上面的东西遇到了麻烦，尝试拿你的代码与我们的版本做对比——对比 [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (也可以 [看实际效果](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。一个对于初学者很常见的错误是在最后一个成员后面多了一个逗号，这会引发错误。
+> **备注：** 如果做上面的东西遇到了麻烦，尝试拿你的代码与我们的版本做对比——对比 [oojs-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs-finished.html) (也可以 [看实际效果](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html))。一个对于初学者很常见的错误是在最后一个成员后面多了一个逗号，这会引发错误。
 
 所以发生了什么？一个对象由许多的成员组成，每一个成员都拥有一个名字（像上面的 name、age），和一个值（如 \['Bob', 'Smith']、32）。每一个名字/值（name/value）对被逗号分隔开，并且名字和值之间由冒号（:）分隔，语法规则如下所示：
 

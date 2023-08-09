@@ -110,7 +110,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 某些 HTML 功能可以使用键盘来选择 — 这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如 links, {{htmlelement("button")}}s, 以及表单元素，比如{{htmlelement("input")}}.
 
-浏览[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (查看[源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。
+浏览[native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (查看[源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。
 
 ![](button-focused-unfocused.png)
 
@@ -142,7 +142,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 1. 使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见[Creating a cross-browser video player](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
 2. 通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅[Desktop mouse and keyboard controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
-3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
+3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
 
     ```js
     document.onkeydown = function(e) {
@@ -176,9 +176,9 @@ HTML 中有某些功能和最佳实践，旨在提供元素之间的上下文和
 
 > **备注：** 更多关于链接文本和表单标签，请阅读[有意义的文字标签](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E6%96%87%E5%AD%97%E6%A0%87%E7%AD%BE)
 
-最后，简要介绍一下数据表。基本数据表可以用非常简单的标记编写（请参阅[bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源码](https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html))），但这存在问题 — 屏幕阅读器用户无法将行或列作为数据分组关联在一起，但你需要知道标题行是什么，以及标题行行的标题还是列的标题等。这些只能从可视化的表格才能知道。
+最后，简要介绍一下数据表。基本数据表可以用非常简单的标记编写（请参阅[bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源码](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html))），但这存在问题 — 屏幕阅读器用户无法将行或列作为数据分组关联在一起，但你需要知道标题行是什么，以及标题行行的标题还是列的标题等。这些只能从可视化的表格才能知道。
 
-相反，如果你看一下我们的`punk-bands-complete.html`示例（[示例](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)，[源码](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html)），则可以在此处看到一些无障碍辅助，例如表头（{{htmlelement("th")}}和`作用域`属性），{{htmlelement("caption")}}元素等。
+相反，如果你看一下我们的`punk-bands-complete.html`示例（[示例](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)，[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)），则可以在此处看到一些无障碍辅助，例如表头（{{htmlelement("th")}}和`作用域`属性），{{htmlelement("caption")}}元素等。
 
 > **备注：** 更多信息，请阅读[可访问的表格](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A1%A8%E6%A0%BC)
 
@@ -202,7 +202,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 #### 隐藏的内容
 
-在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的[Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)“示例（查看[源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
+在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的[Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)“示例（查看[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
 
 ![](20191022144107.png)
 

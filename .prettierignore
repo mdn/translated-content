@@ -33,6 +33,3 @@ build/
 
 # zh-cn
 /files/zh-cn/**/*.md
-
-# zh-tw
-/files/zh-tw/web/javascript/reference/global_objects/[p-t]*/**/*.md

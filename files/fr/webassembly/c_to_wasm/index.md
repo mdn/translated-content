@@ -1,13 +1,6 @@
 ---
 title: Compiler un nouveau module C/C++ en WebAssembly
 slug: WebAssembly/C_to_Wasm
-tags:
-  - C
-  - C++
-  - Compilation
-  - Emscripten
-  - WebAssembly
-  - wasm
 translation_of: WebAssembly/C_to_wasm
 ---
 

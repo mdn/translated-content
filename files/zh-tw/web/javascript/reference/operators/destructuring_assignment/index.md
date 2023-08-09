@@ -157,8 +157,8 @@ console.log(b); // [2, 3]
 
 要注意的是，當左邊函式裡使用其餘解構，同時使用結尾逗號，這樣會拋出例外 {{jsxref("SyntaxError")}} :
 
-```js example-bad
-const [a, ...b] = [1, 2, 3];
+```js-nolint example-bad
+const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError 語法錯誤: 其餘元素不可以跟隨結尾逗號
 // 需要把其餘運算子放在最後的元素

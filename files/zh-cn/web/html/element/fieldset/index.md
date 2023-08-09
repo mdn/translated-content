@@ -3,7 +3,13 @@ title: <fieldset>
 slug: Web/HTML/Element/fieldset
 ---
 
-{{HTMLSidebar}}**HTML `<fieldset>` **元素用于对表单中的控制元素进行分组（也包括 label 元素）。{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
+{{HTMLSidebar}}
+
+[HTML](/zh-CN/docs/Web/HTML) **`<fieldset>`** 元素用于对表单中的控制元素进行分组（也包括 label 元素）。
+
+{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+
+如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
 
 ## 属性
 

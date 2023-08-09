@@ -256,7 +256,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
-UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
+UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
 
 ![](button-focused-unfocused.png)
 
@@ -318,7 +318,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 #### 重新建立键盘的无障碍
 
-重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
+重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
 
 ```html
 <div data-message="This is from the first button" tabindex="0">Click me!</div>
@@ -427,7 +427,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 但是这有问题 - 屏幕阅读器用户无法将行或列作为数据分组关联在一起。要做到这一点，你需要知道标题行是什么，以及它们是否在行，列等标题上。这只能在上面的表中以可视化方式完成（参见 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html) ，并自己尝试这个例子）。
 
-现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html) - 您可以在这里看到一些辅助工具（accessibility aids）：
+现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) - 您可以在这里看到一些辅助工具（accessibility aids）：
 
 - 表头使用 `{{htmlelement("th")}}` 元素定义 - 您还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。

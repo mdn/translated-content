@@ -2,8 +2,6 @@
 title: WebAssembly.Exception.prototype.is()
 slug: WebAssembly/JavaScript_interface/Exception/is
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is
-browser-compat: javascript.builtins.WebAssembly.Exception.is
 ---
 
 {{WebAssemblySidebar}}

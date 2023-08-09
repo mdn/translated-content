@@ -104,7 +104,7 @@ superHeroes["members"][1]["powers"][2]
 4. 在对象内，我们想访问 `powers` 属性，所以我们使用 `["powers"]`。
 5. `powers` 属性是一个包含英雄技能的数组。我们想要第三个，所以我们使用`[2]`。
 
-> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
+> **备注：** 我们已经在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 实例中让 JSON 对象进入变量中使其可访问（见[源代码](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/JSONTest.html)）。尝试加载它并且在您的浏览器上访问对象数据。
 
 ### JSON 数组
 
@@ -151,7 +151,7 @@ superHeroes["members"][1]["powers"][2]
 
 ### 开始吧
 
-首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body。
+首先，拷贝我们的 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) 和 [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) 文件。后者包含了用于页面的简单的 CSS，前者包含了简单的 HTML body。
 
 ```html
 <header>
@@ -290,7 +290,7 @@ function showHeroes(jsonObj) {
 5. 使用另一个循环来遍历当前的英雄的 `superpowers` ，对于每一个元素我们创建`<li>`元素，把`superpower`放进去，然后使用`appendChild()`把 `listItem` 放入`<ul>` 元素中。
 6. 最后一件事情是追加 `<h2>`, `<p>`, 还有 `<ul>` 进入 `<article>` (`myArticle`)。然后将 `<article>` 追加到 `<section>`。追加的顺序很重要，因为他们将被展示在 HTML 中。
 
-> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
+> **备注：** 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码 (也可见 [running live](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) )。
 
 > **备注：** 如果您对访问 JSON 对象的 点/括号标记 有困扰。获得文件 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 并在您的编辑器中打开参考我们的 JS 代码将会有帮助。您还应该参考我们的 [JavaScript object basics](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号符号的更多信息。
 
@@ -307,7 +307,7 @@ request.responseType = 'json';
 - [`parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): 以文本字符串形式接受 JSON 对象作为参数，并返回相应的对象。
 - [`stringify()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 接收一个对象作为参数，返回一个对应的 JSON 字符串。
 
-您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) ，除了返回的是 text，这做了一件与我们之前一模一样的事情，然后使用 `parse()` 来将他转换成为 JavaScript 对象。关键片段如下：
+您可以看看我们 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 示例的第一个操作 (见 [source code](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished-json-parse.html)) ，除了返回的是 text，这做了一件与我们之前一模一样的事情，然后使用 `parse()` 来将他转换成为 JavaScript 对象。关键片段如下：
 
 ```js
 request.open('GET', requestURL);

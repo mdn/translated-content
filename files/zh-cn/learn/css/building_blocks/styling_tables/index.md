@@ -85,7 +85,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 
 在这个自主学习部分中，我们将一起来样式化我们的表格。
 
-1. 首先，复制[实例标记](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html)到本地，下载这两个图像 ([noise](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png)和 [leopardskin](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg))，然后将三个结果文件放在本地计算机的某个工作目录中。
+1. 首先，复制[实例标记](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-unstyled.html)到本地，下载这两个图像 ([noise](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/noise.png)和 [leopardskin](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/leopardskin.jpg))，然后将三个结果文件放在本地计算机的某个工作目录中。
 2. 接下来，创建一个名为`style.css`的新文件并将其保存在与其他文件相同的目录中。
 3. 将 CSS 链接到 HTML 中，将下面的 HTML 代码放到 HTML 的{{htmlelement("head")}}中：
 

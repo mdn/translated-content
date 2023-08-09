@@ -2,8 +2,6 @@
 title: WebAssembly.Instance()
 slug: WebAssembly/JavaScript_interface/Instance
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-browser-compat: javascript.builtins.WebAssembly.Instance
 ---
 
 {{WebAssemblySidebar}}

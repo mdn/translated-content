@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Object
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
 {{WebAssemblySidebar}}

@@ -125,7 +125,7 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 ##### POST 方法
 
@@ -162,7 +162,7 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
 #### 查看 HTTP 请求
 
@@ -202,7 +202,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 ?>
 ```
 
-这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
+这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
 
 ![](php-result.png)
 
@@ -211,7 +211,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 #### 例子：Python
 
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
-这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py))。
+这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
 ```plain
 from flask import Flask, render_template, request
@@ -231,8 +231,8 @@ if __name__ == "__main__":
 
 以上代码中引用的两个模板如下：
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
+- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
 > **备注：** 同样，如果您只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，您需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，您应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。

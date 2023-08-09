@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table/Table
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
-browser-compat: javascript.builtins.WebAssembly.Table.Table
 ---
 
 {{WebAssemblySidebar}}

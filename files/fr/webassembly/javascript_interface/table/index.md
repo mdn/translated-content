@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - table
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
 {{WebAssemblySidebar}}

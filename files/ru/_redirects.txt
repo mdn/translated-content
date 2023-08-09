@@ -5,8 +5,8 @@
 #
 # FROM-URL	TO-URL
 /ru/docs/AJAX	/ru/docs/Web/Guide/AJAX
-/ru/docs/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
-/ru/docs/AJAX:С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/AJAX:С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Accessibility	/ru/docs/Web/Accessibility
 /ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /ru/docs/Apps/Progressive	/ru/docs/Web/Progressive_web_apps
@@ -327,6 +327,7 @@
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
+/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 /ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
@@ -671,7 +672,8 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
-/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/Web/Guide/AJAX/Getting_Started	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index

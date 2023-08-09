@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.Memory.prototype.buffer
 slug: WebAssembly/JavaScript_interface/Memory/buffer
-tags:
-  - API
-  - JavaScript
-  - Propriété
-  - Reference
-  - WebAssembly
-  - memory
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
 
 {{WebAssemblySidebar}}

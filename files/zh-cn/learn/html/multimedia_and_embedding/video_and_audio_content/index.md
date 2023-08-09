@@ -68,7 +68,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 ![A simple video player showing a video of a small white rabbit](simple-video.png)
 
-你可以点击[这里](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看网页，或者点击[这里](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看源代码。
+你可以点击[这里](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看网页，或者点击[这里](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)查看源代码。
 
 ### 使用多个播放源以提高兼容性
 

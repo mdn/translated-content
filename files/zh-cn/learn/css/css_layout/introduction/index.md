@@ -634,7 +634,7 @@ form p {
 
 {{ EmbedLiveSample('表格布局', '100%', '170') }}
 
-你可以在 [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) 看到预览版 (也可以见[源码](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html))
+你可以在 [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) 看到预览版 (也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html))
 
 ## 多列布局
 

@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.Global()
 slug: WebAssembly/JavaScript_interface/Global/Global
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
-browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
 
 {{WebAssemblySidebar}}

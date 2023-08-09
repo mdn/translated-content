@@ -47,7 +47,7 @@ alert('This is a message');
 
 > **备注：** 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
-1. 我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
+1. 我们希望您首先访问[function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。您将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
 2. 接下来，将下面的代码添加至 `<script>` 元素中：
 
     ```js
@@ -285,7 +285,7 @@ btn.onclick = displayMessage();
 
     你能看到我们现在的函数稍微有了点用 (不是非常有用) ，一个小的新功能被我们写出来了（当然，函数可以做很多你想的到的和想不到的事）！
 
-> **备注：** 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
+> **备注：** 如果你写这个例子遇到了困难，在这里查看免费的代码 [完整版本的代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) (或者[在线运行的完整代码](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html)), 也可以向我们寻求帮助。
 
 ## 测试你的技能！
 

@@ -1,14 +1,7 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-tags:
-  - API
-  - JavaScript
-  - Object
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{WebAssemblySidebar}}

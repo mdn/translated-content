@@ -68,7 +68,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 </form>
 ```
 
-> **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
+> **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
 
 当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
 
@@ -117,7 +117,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 </form>
 ```
 
-> **备注：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
+> **备注：** 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)) 看到该例。
 
 ### 多个标签
 
@@ -159,7 +159,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 > **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 
-> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
+> **备注：** 你可以在 GitHub 上看到 [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。不要运行 2 个或 3 个未注释版本的示例—— 如果您有多个标签和多个输入相同的 ID，那么屏幕阅读器肯定会感到困惑！
 
 ## 用于表单的通用 HTML 结构
 
@@ -177,7 +177,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多您可能还不了解的小部件类型—现在不要担心这个；在下一篇文章（[原生表单小部件](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)）中，您将了解它们是如何工作的。现在，当您遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
-1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)的本地副本。
+1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)和[我们的支付表单的 CSS 样式](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css)的本地副本。
 2. 首先，通过添加下面这行代码到你的 HTML{{htmlelement("head")}}使你的 HTML 应用 CSS。
 
     ```html
@@ -290,7 +290,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
     <p> <button type="submit">Validate the payment</button> </p>
     ```
 
-您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
+您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
 
 {{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
 

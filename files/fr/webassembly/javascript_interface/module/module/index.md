@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.Module()
 slug: WebAssembly/JavaScript_interface/Module/Module
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module
-browser-compat: javascript.builtins.WebAssembly.Module.Module
 ---
 
 {{WebAssemblySidebar}}

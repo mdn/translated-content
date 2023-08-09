@@ -7,7 +7,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
-> **备注：** 如果你需要根据我们的版本检查您的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/dist/>。
+> **备注：** 如果你需要根据我们的版本检查您的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -64,7 +64,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 现在我们可以开始为`ToDoItem`添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个[`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
 
 1. 现在在你的组件模板中添加一个空的`<div>`。
-2. 在那个`<div>`里面，让我们添加一个`checkbox`和一个对应的`label`。给复选框添加一个`id`，并添加一个`for`属性，将复选框映射到标签上，如下图所示。.
+2. 在那个 `<div>` 里面，让我们添加一个 `checkbox` 和一个对应的 `label`。给复选框添加一个 `id`，并添加一个 `for` 属性，将复选框映射到标签上，如下所示：
 
     ```html
     <template>
@@ -103,7 +103,7 @@ export default {
 
 这和之前 Vue CLI 注册`HelloWorld`组件的方式是一样的。
 
-要在应用程序中实际展示`ToDoItem`组件，你需要在`<template>`模板内添加一个`<to-do-item>/to-do-item>`元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如`ToDoList`），而等价的自定义元素总是用连字符小写（例如`<to-do-list>`）。
+要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如 `ToDoList`），而等价的自定义元素总是用连字符小写（例如 `<to-do-list>`）。
 
 1. 在`<h1>`下面，创建一个无序列表 (`<ul>`)，其中包含一个列表项 (`<li>`)。
 2. 在列表项 (\<li>) 里面添加`<to-do-item></to-do-item>`.
@@ -174,7 +174,7 @@ export default {
 
 在你的 `<template>` 中，将 `<label>` 标签的 contents 内容修改为 `\{{label}}`。
 
-`\{{}}` 是 Vue 中的一个特殊的模版语法，它能在 template 内打印 类中定义的 JavaScript 表达式的结果，包括值和方法。重要的是， `\{{}}` 里的内容是作为 text 文本显示，而非 HTML。在此例中，我们打印的是 `label` 的值。
+`\{{}}` 是 Vue 中的一个特殊的模版语法，它能在模版内打印类中定义的 JavaScript 表达式的结果，包括值和方法。重要的是，`\{{}}` 里的内容是作为文本显示，而非 HTML。在此例中，我们打印的是 `label` 的值。
 
 现在，你组件的 template 部分应该是像这样：
 

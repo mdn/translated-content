@@ -59,7 +59,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.</p>
 ```
 
-你可以在这找到完成版本 [finished example on Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+你可以在这找到完成版本 [finished example on Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (也可以看源码 [the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/fundamentals/index.html).)
 
 ### 颜色
 

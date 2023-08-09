@@ -142,13 +142,13 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 让我们通过编写一个简单的工作示例来应用这些新发现的知识，让你了解如何使用网络存储。我们的示例将允许你输入一个名称，然后该页面将刷新，以提供个性化问候。这种状态也会页面/浏览器重新加载期间保持，因为这个名称存储在 Web Storage 中。
 
-你可以在 [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 中找到示例文件 —— 这包含一个具有标题，内容和页脚，以及用于输入您的姓名的表单的简单网站。
+你可以在 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 中找到示例文件 —— 这包含一个具有标题，内容和页脚，以及用于输入您的姓名的表单的简单网站。
 
 ![](web-storage-demo.png)
 
 让我们来构建示例，以便了解它的工作原理。
 
-1. 首先，在您的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
+1. 首先，在您的计算机上的新目录中创建一个 [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) 文件的副本。
 2. 接下来，请注意我们的 HTML 如何引用一个名为`index.js`的 JavaScript 文件（请参见第 40 行）。我们需要创建它并将 JavaScript 代码写入其中。在与 HTML 文件相同的目录中创建一个`index.js`文件。
 3. 我们首先创建对所有需要在此示例中操作的 HTML 功能的引用 - 我们将它们全部创建为常量，因为这些引用在应用程序的生命周期中不需要更改。将以下几行添加到你的 JavaScript 文件中：
 
@@ -255,7 +255,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 ### 开始
 
-1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
+1、首先，将 [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css), 和 [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) 文件的本地副本放入本地计算机上的新目录中。
 
 2、浏览这些文件。您将看到 HTML 非常简单：具有页眉和页脚的网站，以及包含显示注释的位置的主内容区域，以及用于在数据库中输入新注释的表单。CSS 提供了一些简单的样式，使其更清晰。JavaScript 文件包含五个声明的常量，其中包含对将显示注释的 {{htmlelement("ul")}} 元素的引用，标题和正文 {{htmlelement("input")}} 元素，{{htmlelement("form")}}本身，以及{{htmlelement("button")}}。
 
@@ -532,7 +532,7 @@ function deleteItem(e) {
 
 就是这样了！你的例子现在应该有效。
 
-如果您遇到问题，请随时[查看我们的实例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/)（请参阅[源代码](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.js)）。
+如果您遇到问题，请随时[查看我们的实例](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/)（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.js)）。
 
 ### 通过 IndexedDB 存储复杂数据
 
@@ -672,7 +672,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 #### 注册服务工作者
 
-首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅[index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator)对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register)方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
+首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅[index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator)对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register)方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
 
 ```js
   // Register service worker to control making site work offline
@@ -690,7 +690,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 下次访问服务工作者控制下的任何页面时（例如，重新加载示例时），将针对该页面安装服务工作者，这意味着它将开始控制它。发生这种情况时，`install`会向服务工作人员发起一个事件; 您可以在服务工作者本身内编写代码来响应安装。
 
-让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。您将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
+让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。您将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
 
 在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
 

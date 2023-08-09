@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.RuntimeError()
 slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
-browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
 
 {{WebAssemblySidebar}}

@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 ## Syntax
 
-```plain
+```js-nolint
 str.padStart(targetLength [, padString])
 ```
 
@@ -27,9 +27,9 @@ str.padStart(targetLength [, padString])
 ## Examples
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
 ```
 
 ## 規範
@@ -40,6 +40,6 @@ str.padStart(targetLength [, padString])
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("String.padEnd()")}}
