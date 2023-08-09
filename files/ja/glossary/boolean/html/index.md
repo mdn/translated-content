@@ -1,7 +1,6 @@
 ---
 title: Boolean attribute (論理属性) (HTML)
 slug: Glossary/Boolean/HTML
-page-type: glossary-definition
 l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---

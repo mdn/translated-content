@@ -1,7 +1,6 @@
 ---
 title: 小贴士：如何制作快速加载的 HTML 页面
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
 
 以下技巧都是基于通用的知识和经验。
@@ -89,7 +88,7 @@ Further reading:
 <table>
   <table>
     <table>
-          ...
+      ...
     </table>
   </table>
 </table>
@@ -98,9 +97,15 @@ Further reading:
 用下图这样的非嵌套结构更好一些：
 
 ```html
-<table>...</table>
-<table>...</table>
-<table>...</table>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
 ```
 
 可参见 [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) 和 [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) 规范。
@@ -151,7 +156,6 @@ table-layout: fixed;
       JavaScript 文件用来实现页面加载时**需要**的函数，而避免在页面加载后才能运行的 JavaScript。在调试维护中把不相关的 JavaScript 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
   - `{{htmlelement('body')}}`
     用户能在完整页面下载完之前就可以看到的页面小分块（`{{htmlelement('header')}}`/`{{htmlelement('main')}}`/`{{htmlelement('table')}}`）。
-
     - `{{htmlelement('script')}}`
       DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
 

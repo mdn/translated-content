@@ -2,6 +2,7 @@
 title: id
 slug: Web/XPath/Functions/id
 ---
+
 {{ XsltRef() }}
 
 `id` 함수는 인수로 준 id와 일치하는 노드를 찾아 그 식별된 노드를 포함하는 노드 집합을 반환합니다.
@@ -15,6 +16,7 @@ id(expression )
 ### 인수
 
 - `expression`
+
   - : 만약 `expression`이 노드 집합이면, 노드 집합 안 각 노드의 문자열 값은 개별 id로 다룹니다. 반환하는 노드 집합은 그 id와 대응하는 노드입니다.
 
 - 만약 `expression`

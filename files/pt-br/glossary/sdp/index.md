@@ -1,7 +1,6 @@
 ---
 title: SDP
 slug: Glossary/SDP
-original_slug: Glossario/SDP
 ---
 
 **SDP** (Session Description {{glossary("Protocol")}}) é o padrão que descreve uma conexão {{Glossary("P2P","ponto a ponto")}}. SDP contém o {{Glossary("codec")}}, o endereço de origem e as informações de tempo de áudio e vídeo.
@@ -29,4 +28,4 @@ O SDP nunca é usado sozinho, mas por protocolos como {{Glossary("RTP")}} e {{Gl
 ### Conhecimentos gerais
 
 - [Protocolos WebRTC](/pt-BR/docs/Web/API/WebRTC_API/Architecture/Protocols)
-- {{Interwiki("wikipedia", "Session Description Protocol")}} no Wikipedia
+- [Session Description Protocol](https://pt.wikipedia.org/wiki/Session_description_protocol) no Wikipedia

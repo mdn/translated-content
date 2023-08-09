@@ -1,7 +1,6 @@
 ---
 title: Cómo convertir códigos de demostración para que estén "en vivo"
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
 
 {{MDNSidebar}}

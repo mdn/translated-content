@@ -1,7 +1,6 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-original_slug: Aprender/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
@@ -14,7 +13,7 @@ Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linha
       <th scope="row">Pré-requisitos:</th>
       <td>
         Noções básicas de HTML (consulte
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >
         ).
@@ -220,18 +219,18 @@ Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemp
 2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
 3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)** ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   ```
 
 4. Se quisermos uma linha da tabela com quatro células, precisamos copiar essas tags três vezes. Altere o conteúdo da sua tabela para ficar dessa maneira:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    <td>I'm your second cell.</td>
-    <td>I'm your third cell.</td>
-    <td>I'm your fourth cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   <td>I'm your second cell.</td>
+   <td>I'm your third cell.</td>
+   <td>I'm your fourth cell.</td>
+   ```
 
 Como podemos ver, as células não são posicionadas uma abaixo da outra, em vez disso elas são automaticamente alinhadas umas com as outras na mesma linha. Cada elemento `<td>` cria uma única célula que juntas formam a primeira linha. Cada célula adicionada faz a linha crescer e se tornar mais longa.
 
@@ -239,14 +238,14 @@ Para evitar que a linha cresça e começar a posicionar células em uma segunda 
 
 1. Coloque as quatro células recém criadas dentro das tags `<tr>` tags, dessa maneira:
 
-    ```html
-    <tr>
-      <td>Hi, I'm your first cell.</td>
-      <td>I'm your second cell.</td>
-      <td>I'm your third cell.</td>
-      <td>I'm your fourth cell.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hi, I'm your first cell.</td>
+     <td>I'm your second cell.</td>
+     <td>I'm your third cell.</td>
+     <td>I'm your fourth cell.</td>
+   </tr>
+   ```
 
 2. Agora que uma linha foi criada, vamos tentar criar mais uma ou duas linhas — cada linha precisa estar cercada por um elemento `<tr>`, com cada célula contida dentro de um elemento `<td>`.
 
@@ -424,8 +423,8 @@ Não é o ideal, uma vez que temos de repetir os dados de estilo em todas as tr�
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -448,7 +447,7 @@ Para aplicar as informações de estilo para as duas colunas, podemos incluir ap
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 

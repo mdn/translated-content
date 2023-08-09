@@ -21,11 +21,13 @@ postMessage(message, transfer)
 ### 参数
 
 - `message`
+
   - : 要传递给 worker 的对象；这将在传递给 {{domxref("DedicatedWorkerGlobalScope.message_event")}} 事件的 `data` 字段中。这可以是任何值或可以通过[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理的 JavaScript 对象（可以包含循环引用）。
 
-      如果*未*提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
+    如果*未*提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
 
 - `transfer` {{optional_inline}}
+
   - : 一个可选的、会被转移所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。如果一个对象的所有权被转移，它将在发送它的上下文中变为不可用（中止），而仅在接收方的 worker 中可用。
 
     像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 类的实例才是可转移对象，才能够被转移。不能将 `null` 作为 `transfer` 的值。
@@ -74,7 +76,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
-    bufTransferredBackFromWorker.byteLength
+    bufTransferredBackFromWorker.byteLength,
   );
 });
 
@@ -83,7 +85,7 @@ const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 
 // 发送 myBuf 给 myWorker 并转移底层 ArrayBuffer
@@ -91,7 +93,7 @@ myWorker.postMessage(myBuf, [myBuf]);
 
 console.log(
   "buf.byteLength in main AFTER transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 ```
 
@@ -106,7 +108,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 
   // 将 buf 发送回 main 并转移底层 ArrayBuffer
@@ -114,7 +116,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker AFTER transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 };
 ```
@@ -133,7 +135,7 @@ message from worker received in main:                    MessageEvent { ... }  m
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 
-`ArrayBuffer` 在传输后, 其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
+`ArrayBuffer` 在传输后，其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
 ## 规范
 

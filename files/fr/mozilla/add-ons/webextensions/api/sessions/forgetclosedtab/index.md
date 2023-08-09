@@ -1,7 +1,6 @@
 ---
 title: sessions.forgetClosedTab()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedTab
 ---
 
 {{AddonSidebar()}}Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.Notez que les sites visités par cet onglet ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} oo {{WebExtAPIRef("history")}} pour supprimer l'historique.
@@ -12,9 +11,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var forgettingTab = browser.sessions.forgetClosedTab(
-  windowId,            // integer
-  sessionId            // string
-)
+  windowId, // integer
+  sessionId, // string
+);
 ```
 
 ### Paramètres
@@ -41,12 +40,15 @@ Ce code oublie la dernière session fermée, qu'il s'agisse d'un onglet ou d'une
 ```js
 function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
   if (sessionInfo.tab) {
-    browser.sessions.forgetClosedTab(sessionInfo.tab.windowId, sessionInfo.tab.sessionId);
+    browser.sessions.forgetClosedTab(
+      sessionInfo.tab.windowId,
+      sessionInfo.tab.sessionId,
+    );
   } else {
     browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);
   }
@@ -56,8 +58,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);
+browser.sessions
+  .getRecentlyClosed({ maxResults: 1 })
+  .then(forgetMostRecent, onError);
 ```
 
 {{WebExtExamples}}

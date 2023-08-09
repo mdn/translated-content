@@ -1,8 +1,8 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 Оператор **`set`** связывает свойство объекта с функцией, которая будет вызвана при попытке установить это свойство.
@@ -47,18 +47,18 @@ translation_of: Web/JavaScript/Reference/Functions/set
 
 ```js
 var o = {
-  set current (str) {
+  set current(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 `обратите внимание, что current` не определён и любые попытки доступа к нему вернут `undefined`.
 
 ### Удаление сеттера оператором `delete`
 
-Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Если вы хотите удалить сеттер, вы можете просто его [`удалить`](/ru/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;
@@ -69,12 +69,16 @@ delete o.current;
 Чтобы добавить сеттер на существующий объект в любое время, используйте {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // Запускает сеттер, который присваивает 10 / 2 (5) свойству 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Использование вычисляемого имени свойства
@@ -84,11 +88,13 @@ var expr = "foo";
 
 var obj = {
   baz: "bar",
-  set [expr](v) { this.baz = v; }
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // запускает сеттер
+obj.foo = "baz"; // запускает сеттер
 console.log(obj.baz); // "baz"
 ```
 

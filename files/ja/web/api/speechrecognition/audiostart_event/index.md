@@ -1,5 +1,5 @@
 ---
-title: 'SpeechRecognition: audiostart イベント'
+title: "SpeechRecognition: audiostart イベント"
 slug: Web/API/SpeechRecognition/audiostart_event
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e

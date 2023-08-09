@@ -30,7 +30,9 @@ RegExp[Symbol.species]; // 函数 RegExp()
 ```js
 class MyRegExp extends RegExp {
   // 将 MyRegExp species 覆盖为 RegExp 父类构造器
-  static get [Symbol.species]() { return RegExp; }
+  static get [Symbol.species]() {
+    return RegExp;
+  }
 }
 ```
 

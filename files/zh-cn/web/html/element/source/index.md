@@ -64,9 +64,9 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   I'm sorry; your browser doesn't support HTML5 video.
 </video>
 ```

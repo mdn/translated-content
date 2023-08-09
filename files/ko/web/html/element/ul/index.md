@@ -9,8 +9,6 @@ slug: Web/HTML/Element/ul
 
 {{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -67,7 +65,25 @@ slug: Web/HTML/Element/ul
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<div class="hidden"><dl><dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt><dd>This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.</dd><dd><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated: use <a href="/en-US/docs/CSS">CSS</a> instead. To give a similar effect as the <code>compact</code> attribute, the CSS property {{cssxref("line-height")}} can be used with a value of <code>80%</code>.</div></dd></dl><dl><dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt><dd>This attribute sets the bullet style for the list. The values defined under <a href="/en-US/docs/HTML3.2">HTML3.2</a> and the transitional version of <a href="/en-US/docs/HTML4.01">HTML 4.0/4.01</a> are:<ul><li><code>circle</code></li><li><code>disc</code></li><li><code>square</code></li></ul><p>A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: <code>triangle</code>.</p><p>If not present and if no <a href="/en-US/docs/CSS">CSS</a> {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.</p><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated; use the <a href="/en-US/docs/Web/CSS">CSS</a> {{ cssxref("list-style-type") }} property instead.</div></dd></dl></div>
+- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+
+  - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
+
+    > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
+
+- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+
+  - : This attribute sets the bullet style for the list. The values defined under [HTML3.2](/ko/docs/HTML3.2) and the transitional version of [HTML 4.0/4.01](/ko/docs/HTML4.01) are:
+
+    `circle`
+    `disc`
+    `square`
+
+    A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: `<code>`triangle`.
+
+    If not present and if no [CSS](/ko/docs/CSS) {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.
+
+    > **Warning:** Do not use this attribute, as it has been deprecated; use the [CSS](/ko/docs/Web/CSS) {{ cssxref("list-style-type") }} property instead.
 
 ## 사용 일람
 
@@ -96,22 +112,25 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem
-      <!-- Same for the second nested unordered list! -->
+      <li>
+        second item second subitem
+        <!-- Same for the second nested unordered list! -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li> <!-- Closing </li> tag for the li that
+      </li>
+      <!-- Closing </li> tag for the li that
                   contains the third unordered list -->
       <li>second item third subitem</li>
     </ul>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>
@@ -124,14 +143,15 @@ slug: Web/HTML/Element/ul
 ```html
 <ul>
   <li>first item</li>
-  <li>second item
-  <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  <!-- Here is the closing </li> tag -->
+    <!-- Here is the closing </li> tag -->
   </li>
   <li>third item</li>
 </ul>

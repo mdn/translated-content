@@ -1,14 +1,8 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-translation_of: Web/API/Element/closest
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Element.closest()`** возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null, если таковых элементов вообще нет.
@@ -47,7 +41,7 @@ var div = document.querySelector("#too"); //Это элемент от кото�
 div.closest("#block"); //Результат - самый первый блок древа выше
 div.closest("div"); //Сам блок #too и будет результатом, так как он подходит под селектор "div"
 div.closest("a"); //null - В предках #too нет ни одного тега "a"!
-div.closest("div[title]") //#block - так как ближе нет блоков с атрибутом title.
+div.closest("div[title]"); //#block - так как ближе нет блоков с атрибутом title.
 ```
 
 ## Полифил #1 (рекурсивный метод)
@@ -55,15 +49,23 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
 Для браузеров не поддерживающих Element.closest(), но позволяющих использовать element.matches() (или префиксный эквивалент) есть полифил:
 
 ```js
-(function(ELEMENT) {
-    ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
-    ELEMENT.closest = ELEMENT.closest || function closest(selector) {
-        if (!this) return null;
-        if (this.matches(selector)) return this;
-        if (!this.parentElement) {return null}
-        else return this.parentElement.closest(selector)
-      };
-}(Element.prototype));
+(function (ELEMENT) {
+  ELEMENT.matches =
+    ELEMENT.matches ||
+    ELEMENT.mozMatchesSelector ||
+    ELEMENT.msMatchesSelector ||
+    ELEMENT.oMatchesSelector ||
+    ELEMENT.webkitMatchesSelector;
+  ELEMENT.closest =
+    ELEMENT.closest ||
+    function closest(selector) {
+      if (!this) return null;
+      if (this.matches(selector)) return this;
+      if (!this.parentElement) {
+        return null;
+      } else return this.parentElement.closest(selector);
+    };
+})(Element.prototype);
 ```
 
 ## Полифил #2 (через цикл)
@@ -71,31 +73,27 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
 Тем не менее, если вам требуется поддержка IE 8, вы можете использовать следующий полифил. Имейте ввиду - этот способ позволяет использовать CSS селекторы только уровня 2.1 и может жутко тормозить.
 
 ```js
-(function(e){
- e.closest = e.closest || function(css){
-   var node = this;
-   while (node) {
-      if (node.matches(css)) return node;
-      else node = node.parentElement;
-   }
-   return null;
- }
+(function (e) {
+  e.closest =
+    e.closest ||
+    function (css) {
+      var node = this;
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
 })(Element.prototype);
 ```
 
-## Спецификация
+## Спецификации
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-### Примечания совместимости
-
-- В Edge `document.createElement(tagName).closest(tagName)` возвращает `null`, если элемент ещё не привязан в DOM.
 
 ## Смотрите также
 

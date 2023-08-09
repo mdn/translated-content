@@ -1,7 +1,6 @@
 ---
 title: 在網頁應用程式中使用本地檔案
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 ---
 
 現在可以透過新增至 HTML5 DOM 的 File API 讓 web 內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用 HTML 的 [`input`](/zh-TW/DOM/HTMLInputElement) 元素，或是用拖曳檔案（drag and drop）的方式來完成。
@@ -134,7 +133,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 ```
 
@@ -217,7 +216,7 @@ function handleFiles(files) {
 
 這邊迴圈處理了使用者選取的每個檔案並檢查每個檔案的類型是不是圖檔(藉由使用正規表達式檢查是否符合字串 "image.\*")。每一個是圖片的檔案，我們創建一個 `img` 元素。CSS 被使用來美化外框、陰影、還有設定圖片的尺寸，所以那些並不需要在這邊寫入。
 
-為了使圖片可以在 DOM 裡面更容易被找到，所以每個圖片都有設定 CSS class “obj”。 我們也在每個圖檔標記 `file` 屬性以辨認 [`File`](/zh-TW/DOM/File)；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。
+為了使圖片可以在 DOM 裡面更容易被找到，所以每個圖片都有設定 CSS class 「obj」。 我們也在每個圖檔標記 `file` 屬性以辨認 [`File`](/zh-TW/DOM/File)；這使我們更容易取得真正要上傳的圖檔。最後我們使用{{ domxref("Node.appendChild()") }} 在文件中增加縮圖的元素。
 
 [`FileReader`](/zh-TW/DOM/FileReader) 處理要非同步讀取的圖檔並跟 `img` 元素連接。在創建 `FileReader` 物件後，我們設置了 `onload`並 呼叫 `readAsDataURL()` 在背景呼叫讀取的程序。當所有圖檔都被讀取時，他們被轉換為傳到 `onload callback` 的 `data` URL。 這個範例簡易的設置`img` 元素的 `src` 屬性來讀取圖檔並在螢幕上顯示。
 
@@ -276,7 +275,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 
 function handleFiles(files) {
@@ -326,7 +325,7 @@ If the {{ domxref("FileList") }} object passed to `handleFiles()` is `null`, we 
 
 ### 新增上傳的工作
 
-接續先前創建縮圖的範例，將每個縮圖都設置 CSS class “obj”， 這使得我們可以很容易地使用{{ domxref("Document.querySelectorAll()") }} 選擇使用者要上傳的圖檔，例如：
+接續先前創建縮圖的範例，將每個縮圖都設置 CSS class 「obj」， 這使得我們可以很容易地使用{{ domxref("Document.querySelectorAll()") }} 選擇使用者要上傳的圖檔，例如：
 
 ```js
 function sendFiles() {
@@ -338,7 +337,7 @@ function sendFiles() {
 }
 ```
 
-第二行創建了 `imgs` 陣列，存放著所有文件中 CSS class 為 “obj” 的 Node。在這個範例中，我們使用這個來創建縮圖。Once we have that list, it's trivial to go through the list, creating a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
+第二行創建了 `imgs` 陣列，存放著所有文件中 CSS class 為 「obj」 的 Node。在這個範例中，我們使用這個來創建縮圖。Once we have that list, it's trivial to go through the list, creating a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
 
 ### 處理上傳檔案的程序
 
@@ -360,7 +359,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -370,11 +369,11 @@ function FileUpload(img, file) {
       var canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = function (evt) {
@@ -413,7 +412,7 @@ function fileUpload(file) {
   xhr.open("POST", uri, true);
   xhr.setRequestHeader(
     "Content-Type",
-    "multipart/form-data, boundary=" + boundary
+    "multipart/form-data, boundary=" + boundary,
   ); // simulate a file MIME POST request.
   xhr.setRequestHeader("Content-Length", fileSize);
 

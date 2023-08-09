@@ -1,7 +1,6 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 
 {{APIRef("HTML DOM")}}

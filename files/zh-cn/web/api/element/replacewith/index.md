@@ -44,7 +44,7 @@ console.log(parent.outerHTML);
 `replaceWith()`的方法并没有作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined
@@ -57,10 +57,10 @@ with(node) {
 ```js
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('replaceWith')) {
+    if (item.hasOwnProperty("replaceWith")) {
       return;
     }
-    Object.defineProperty(item, 'replaceWith', {
+    Object.defineProperty(item, "replaceWith", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -70,11 +70,13 @@ with(node) {
 
         argArr.forEach(function (argItem) {
           var isNode = argItem instanceof Node;
-          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+          docFrag.appendChild(
+            isNode ? argItem : document.createTextNode(String(argItem)),
+          );
         });
 
         this.parentNode.replaceChild(docFrag, this);
-      }
+      },
     });
   });
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);

@@ -107,14 +107,14 @@ See {{domxref("HTMLAnchorElement.href")}}
 var linkRef = document.querySelector("a");
 linkRef.target = "_self";
 
-linkRef.onclick = function(){
+linkRef.onclick = function () {
   if (linkRef.target === "_blank") {
     console.log("BLANK!");
     linkRef.target = "_self";
   } else {
     console.log("SORRY! not _blank");
   }
-}
+};
 ```
 
 ## 规范

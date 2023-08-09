@@ -1,7 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
 
 {{jsSidebar("Statements")}}
@@ -19,9 +18,11 @@ function* nombre([param[, param[, ... param]]]) {
 ```
 
 - `nombre`
+
   - : El nombre de la función.
 
 - `param`
+
   - : El nombre de los argumentos que se le van a pasar a la función. Una función puede tener hasta 255 argumentos.
 
 - `instrucciones`
@@ -38,10 +39,9 @@ La llamada a una función generadora no ejecuta su cuerpo inmediatamente; se dev
 ### Ejemplo simple
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(index < 3)
-    yield index++;
+  while (index < 3) yield index++;
 }
 
 var gen = idMaker();
@@ -62,7 +62,7 @@ function* anotherGenerator(i) {
   yield i + 3;
 }
 
-function* generator(i){
+function* generator(i) {
   yield i;
   yield* anotherGenerator(i);
   yield i + 10;
@@ -99,6 +99,6 @@ console.log(gen.next().value); // 20
 - Other web resources:
 
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Hemanth.HM: The New gen of \*gen(){}](https://www.youtube.com/watch?v=ZrgEZykBHVo&list=PLuoyIZT5fPlG44bPq50Wgh0INxykdrYX7&index=1)
   - [Task.js](http://taskjs.org/)

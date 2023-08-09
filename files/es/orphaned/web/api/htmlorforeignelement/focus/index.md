@@ -2,7 +2,6 @@
 title: HTMLElement.focus()
 slug: orphaned/Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
-browser-compat: api.HTMLElement.focus
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -106,14 +105,6 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 ## Notas
 
 Si se llama a `HTMLElement.focus()` desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método `event.preventDefault()` para evitar que el foco abandone `HTMLElement`**.**
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
 
 ## Ver también
 

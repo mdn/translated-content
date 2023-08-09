@@ -1,12 +1,6 @@
 ---
 title: Qu'est-ce qu'un serveur web ?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-tags:
-  - Beginner
-  - Infrastructure
-  - Learn
-translation_of: Learn/Common_questions/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctionnent et pourquoi ils sont importants.
@@ -56,7 +50,7 @@ Par exemple, afin de produire la page web que vous voyez sur votre navigateur, l
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 
@@ -108,7 +102,7 @@ En résumé, un serveur peut « servir » du contenu statique ou dynamique. Un c
 
 Un site « dynamique » signifie que le serveur traite le contenu ou le génère à la volée depuis les informations contenues dans une base de données. Cette solution est plus flexible mais beaucoup plus complexe à mettre en œuvre.
 
-Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](/fr/docs/MDN/Kuma) et est construit en [Python](https://www.python.org/) (grâce au *framework* [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
+Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](/fr/docs/MDN/Kuma) et est construit en [Python](https://www.python.org/) (grâce au _framework_ [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
 
 Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer un en particulier. Certains serveurs d'applications sont consacrés à certaines catégories de site web comme les blogs, les wikis, les boutiques en ligne, etc. D'autres, appelés {{Glossary("CMS")}} (pour _Content Management Systems_ en anglais ou « Systèmes de gestion des contenus ») sont plus génériques. Si vous construisez un site web dynamique, prenez le temps d'étudier les outils disponibles pour choisir celui qui correspondra à votre projet. Sauf si vous souhaitez apprendre des éléments de programmation serveur (ce qui est très intéressant), vous n'avez pas besoin de créer votre serveur d'applications de toute pièce (cela reviendrait à réinventer la roue).
 

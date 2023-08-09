@@ -14,8 +14,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## 구문
 
 ```js-nolint
@@ -44,7 +42,7 @@ Intl.supportedValuesOf(key)
 메서드가 지원되는지 여부를 `undefined`과 비교하여 확인할 수 있습니다.
 
 ```js
-if (typeof Intl.supportedValuesOf !== 'undefined') {
+if (typeof Intl.supportedValuesOf !== "undefined") {
   // 메서드가 지원됩니다.
 }
 ```
@@ -104,7 +102,7 @@ try {
 
 {{Compat}}
 
-## 같이 보기
+## 같이 보기
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
 - [A polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)

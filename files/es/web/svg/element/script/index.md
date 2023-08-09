@@ -1,7 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-original_slug: Web/HTML/Elemento/script
 ---
 
 ## Resumen
@@ -15,24 +14,24 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/HTML/Content_categories"
+          href="/es/docs/Web/HTML/Content_categories"
           title="HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
           title="HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          href="/es/docs/Web/HTML/Content_categories#Flow_content"
           title="HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
@@ -51,11 +50,11 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
       <td>
         Cualquier elemento que acepte
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+          href="/es/docs/Web/HTML/Content_categories#Metadata_content"
           title="HTML/Content_categories#Metadata_content"
           >metadata content</a
         >, o cualquier elemento que acepte
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>

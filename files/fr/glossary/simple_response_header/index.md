@@ -1,7 +1,6 @@
 ---
 title: En-tête de réponse simple
 slug: Glossary/Simple_response_header
-translation_of: Glossary/Simple_response_header
 ---
 
 Un _en-tête de réponse simple_ (ou un en-tête de réponse sécurisé _CORS_) est un [en-tête HTTP](/fr/docs/HTTP/Headers) qui a été sécurisé pour ne pas être filtré lorsque les réponses sont traitées par CORS, car elles sont considérées comme sûres (comme les en-têtes listés dans {{HTTPHeader("Access-Control-Expose-Headers")}}). Par défaut, la liste des réponses sûres inclut les en-têtes de réponse suivants :

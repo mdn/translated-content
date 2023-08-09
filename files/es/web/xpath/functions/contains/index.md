@@ -1,7 +1,6 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-original_slug: Web/XPath/Funciones/contains
 ---
 
 {{ XsltRef() }}
@@ -17,6 +16,7 @@ contains( haystack , needle )
 ### Argumentos
 
 - `haystack`
+
   - : La cadena donde buscar
 
 - `needle`

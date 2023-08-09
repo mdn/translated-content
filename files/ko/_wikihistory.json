@@ -735,10 +735,6 @@
     "modified": "2020-07-16T22:40:12.947Z",
     "contributors": ["dev-dongwon"]
   },
-  "Learn/Accessibility/Mobile": {
-    "modified": "2020-07-16T22:40:31.872Z",
-    "contributors": ["seunghun"]
-  },
   "Learn/Accessibility/What_is_accessibility": {
     "modified": "2020-07-16T22:40:05.805Z",
     "contributors": ["seunghun"]
@@ -1924,10 +1920,6 @@
     "modified": "2020-02-05T05:41:58.537Z",
     "contributors": ["SphinxKnight", "gs.won"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2020-02-05T05:41:53.311Z",
-    "contributors": ["SphinxKnight", "jwhitlock", "JangmiJo"]
-  },
   "Mozilla/Add-ons/WebExtensions/User_actions": {
     "modified": "2020-02-05T05:41:59.190Z",
     "contributors": ["SphinxKnight", "sylee0424"]
@@ -2417,6 +2409,16 @@
       "fscholz",
       "khalid32",
       "pusanbear"
+    ]
+  },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2020-12-03T14:42:33.988Z",
+    "contributors": [
+      "dink95",
+      "alattalatta",
+      "wbamberg",
+      "ExE-Boss",
+      "project42da"
     ]
   },
   "Web/API/Document/Document": {
@@ -4402,16 +4404,6 @@
       "pusanbear"
     ]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2020-12-03T14:42:33.988Z",
-    "contributors": [
-      "dink95",
-      "alattalatta",
-      "wbamberg",
-      "ExE-Boss",
-      "project42da"
-    ]
-  },
   "Web/API/Window/alert": {
     "modified": "2020-10-15T21:39:24.854Z",
     "contributors": ["alattalatta", "Parcovia", ".", "pi1992"]
@@ -4692,25 +4684,9 @@
     "modified": "2020-01-12T10:16:30.044Z",
     "contributors": ["alattalatta", "young-gratia", "teoli", "Cho.Eun"]
   },
-  "Web/Accessibility/ARIA/ARIA_Live_Regions": {
-    "modified": "2020-12-05T03:30:43.763Z",
-    "contributors": ["movegun1027"]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
-    "modified": "2020-01-12T02:25:07.876Z",
-    "contributors": ["alattalatta", "dcondrey"]
-  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2019-03-18T21:24:18.888Z",
     "contributors": ["estelle"]
-  },
-  "Web/Accessibility/ARIA/Roles/dialog_role": {
-    "modified": "2019-03-18T21:24:31.941Z",
-    "contributors": ["seokju-na"]
-  },
-  "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
-    "modified": "2019-03-23T23:21:28.496Z",
-    "contributors": ["dotorify", "teoli", "Cho.Eun"]
   },
   "Web/Accessibility/Mobile_accessibility_checklist": {
     "modified": "2019-09-08T04:58:59.841Z",
@@ -4896,10 +4872,6 @@
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:50:30.795Z",
     "contributors": ["alattalatta", "young-gratia"]
-  },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2020-08-22T11:28:21.089Z",
-    "contributors": ["alattalatta"]
   },
   "Web/CSS/CSS_Types": {
     "modified": "2020-08-06T04:37:09.952Z",
@@ -5200,6 +5172,10 @@
   "Web/CSS/CSS_scroll_snap": {
     "modified": "2019-04-14T23:39:58.448Z",
     "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2020-08-22T11:28:21.089Z",
+    "contributors": ["alattalatta"]
   },
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-25T10:46:18.309Z",
@@ -6106,21 +6082,9 @@
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2019-04-17T05:03:01.108Z"
   },
-  "Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
-    "modified": "2019-05-13T05:46:53.607Z",
-    "contributors": ["hoony"]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2020-08-05T00:58:44.120Z",
-    "contributors": ["alattalatta", "moolow", "corps99"]
-  },
   "Web/Guide/Graphics": {
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2019-05-30T06:59:50.297Z",
-    "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:16:47.020Z",
@@ -10200,10 +10164,6 @@
     "modified": "2019-03-23T22:00:19.382Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Guides/Making_PWAs_installable": {
-    "modified": "2020-01-26T15:58:32.379Z",
-    "contributors": ["alattalatta", "chrisdavidmills", "cs09g"]
-  },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2019-03-18T20:52:13.104Z",
     "contributors": ["chrisdavidmills", "cs09g"]
@@ -10854,6 +10814,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2020-02-05T05:41:53.311Z",
+    "contributors": ["SphinxKnight", "jwhitlock", "JangmiJo"]
   },
   "orphaned/Web/API/Proximity_Events": {
     "modified": "2019-03-23T23:26:46.443Z",

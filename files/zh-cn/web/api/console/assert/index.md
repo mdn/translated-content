@@ -34,12 +34,12 @@ console.assert(assertion, msg [, subst1, ..., substN]); // c-like message format
 下面的代码示例演示了 JavaScript 对象的使用：
 
 ```js
-const errorMsg = 'the # is not even';
+const errorMsg = "the # is not even";
 for (let number = 2; number <= 5; number += 1) {
-    console.log('the # is ' + number);
-    console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
-    // 或者使用 ES2015 对象简写：
-    // console.assert(number % 2 === 0, {number, errorMsg});
+  console.log("the # is " + number);
+  console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
+  // 或者使用 ES2015 对象简写：
+  // console.assert(number % 2 === 0, {number, errorMsg});
 }
 // 输出：
 // the # is 2
@@ -53,14 +53,14 @@ for (let number = 2; number <= 5; number += 1) {
 请注意，你可以在大多数浏览器中使用 console.log 进行格式化输出
 
 ```js
-console.log('the word is %s try number %d', 'foo', 123);
+console.log("the word is %s try number %d", "foo", 123);
 // 输出：the word is foo try number 123
 ```
 
 `但是 console.assert` 在不同浏览器中可能获得不同的效果：
 
 ```js
-console.assert(false, 'the word is %s', 'foo');
+console.assert(false, "the word is %s", "foo");
 // correct output in Node (e.g. v8.10.0) and some browsers
 //     (e.g. Firefox v60.0.2):
 // Assertion failed: the word is foo

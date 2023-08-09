@@ -113,7 +113,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 1000);
   },
-  false
+  false,
 );
 
 // 当鼠标离开 <li> 元素时，短暂地将其变成橙色
@@ -128,7 +128,7 @@ test.addEventListener(
       event.target.style.color = "";
     }, 500);
   },
-  false
+  false,
 );
 ```
 

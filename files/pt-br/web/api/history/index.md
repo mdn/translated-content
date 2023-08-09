@@ -47,17 +47,13 @@ _The `History`_ _interface doesn't inherit any methods._
 - {{domxref("History.replaceState()")}}
   - : Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized. Note that Firefox currently ignores the title parameter; for more information, see [manipulating the browser history](/pt-BR/docs/Web/API/History_API).
 
-## Specifications
+## Especificações
 
-| Specification                                                                                            | Status                                               | Comment                                 |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', "browsers.html#the-history-interface", "History")}} | {{Spec2('HTML WHATWG')}}                     | Adds the `scrollRestoration` attribute. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}}     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                     |
-| {{SpecName('Custom Scroll Restoration', '#web-idl', "History")}}                     | {{Spec2('Custom Scroll Restoration')}} | Adds the `scrollRestoration` attribute. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 

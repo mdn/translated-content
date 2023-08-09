@@ -27,10 +27,10 @@ gl.getExtension(name);
 当一个 WebGL 扩展被启用后，就可以使用该扩展提供的方法、属性和常量。
 
 ```js
-var canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
-gl.getExtension('WEBGL_lose_context').loseContext();
+gl.getExtension("WEBGL_lose_context").loseContext();
 ```
 
 ## WebGL 扩展

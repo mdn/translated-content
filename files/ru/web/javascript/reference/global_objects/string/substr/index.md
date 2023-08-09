@@ -1,15 +1,8 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
+
 {{JSRef}}
 
 > **Предупреждение:** Внимание: так как `String.prototype.substr(…)` не полностью упразднена (а лишь "удалена из стандартов по вебу"), она считается **унаследованной функцией**, использование которой лучше избегать там, где это возможно. Она не является частью ядра языка JavaScript и может быть удалена в будущем. Если есть возможность, используйте метод [`substring()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
@@ -50,14 +43,14 @@ str.substr(start[, length])
 ### Использование метода `substr()`
 
 ```js
-var str = 'абвгдеёжзи';
+var str = "абвгдеёжзи";
 
-console.log('(1, 2): '   + str.substr(1, 2));   // '(1, 2): бв'
-console.log('(-3, 2): '  + str.substr(-3, 2));  // '(-3, 2): жз'
-console.log('(-3): '     + str.substr(-3));     // '(-3): жзи'
-console.log('(1): '      + str.substr(1));      // '(1): бвгдеёжзи'
-console.log('(-20, 2): ' + str.substr(-20, 2)); // '(-20, 2): аб'
-console.log('(20, 2): '  + str.substr(20, 2));  // '(20, 2): '
+console.log("(1, 2): " + str.substr(1, 2)); // '(1, 2): бв'
+console.log("(-3, 2): " + str.substr(-3, 2)); // '(-3, 2): жз'
+console.log("(-3): " + str.substr(-3)); // '(-3): жзи'
+console.log("(1): " + str.substr(1)); // '(1): бвгдеёжзи'
+console.log("(-20, 2): " + str.substr(-20, 2)); // '(-20, 2): аб'
+console.log("(20, 2): " + str.substr(20, 2)); // '(20, 2): '
 ```
 
 ## Полифил
@@ -66,23 +59,25 @@ JScript от Microsoft не поддерживает отрицательные 
 
 ```js
 // only run when the substr() function is broken
-if ('ab'.substr(-1) != 'b') {
+if ("ab".substr(-1) != "b") {
   /**
    *  Get the substring of a string
    *  @param  {integer}  start   where to start the substring
    *  @param  {integer}  length  how many characters to return
    *  @return {string}
    */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
+  String.prototype.substr = (function (substr) {
+    return function (start, length) {
       // call the original method
-      return substr.call(this,
+      return substr.call(
+        this,
         // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
-        length)
-    }
-  }(String.prototype.substr);
+        length,
+      );
+    };
+  })(String.prototype.substr);
 }
 ```
 

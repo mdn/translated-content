@@ -1,7 +1,6 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
 slug: Web/JavaScript/Language_overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}
@@ -83,7 +82,7 @@ parseInt("010", 10); // 10
 一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：
 
 ```js
-parseInt("010");  //  8
+parseInt("010"); //  8
 parseInt("0x10"); // 16
 ```
 
@@ -100,9 +99,9 @@ JavaScript 还有一个类似的内置函数 {{jsxref("Global_Objects/parseFloat
 一元运算符 + 也可以把数字字符串转换成数值：
 
 ```js
-+ "42";   // 42
-+ "010";  // 10
-+ "0x10"; // 16
++"42"; // 42
++"010"; // 10
++"0x10"; // 16
 ```
 
 如果给定的字符串不存在数值形式，函数会返回一个特殊的值 {{jsxref("NaN")}}（Not a Number 的缩写）：
@@ -133,7 +132,7 @@ JavaScript 还有两个特殊值：[`Infinity`](/zh-CN/docs/Web/JavaScript/Refer
 可以使用内置函数 [`isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite) 来判断一个变量是否是一个有穷数，如果类型为`Infinity`, `-Infinity` 或 `NaN 则返回 false`：
 
 ```js
-isFinite(1/0); // false
+isFinite(1 / 0); // false
 isFinite(Infinity); // false
 isFinite(-Infinity); // false
 isFinite(NaN); // false
@@ -180,7 +179,7 @@ JavaScript 包含布尔类型，这个类型的变量有两个可能的值，分
 也可以使用 `Boolean()` 函数进行显式转换：
 
 ```js
-Boolean(''); // false
+Boolean(""); // false
 Boolean(234); // true
 ```
 
@@ -196,7 +195,7 @@ JavaScript 支持包括 `&&`（逻辑与）、`||` （逻辑或）和`!`（逻�
 
 ```js
 let a;
-let name = 'Simon';
+let name = "Simon";
 ```
 
 下面是使用 **`let`** 声明变量作用域的例子：
@@ -269,7 +268,7 @@ x += 5; // 等价于 x = x + 5;
 JavaScript 中的[比较操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)使用 `<`、`>`、`<=` 和 `>=`，这些运算符对于数字和字符串都通用。相等的比较稍微复杂一些。由两个“`=`（等号）”组成的相等运算符有类型自适应的功能，具体例子如下：
 
 ```js
-123 == "123" // true
+123 == "123"; // true
 1 == true; // true
 ```
 
@@ -310,7 +309,7 @@ while (true) {
 var input;
 do {
   input = get_input();
-} while (inputIsNotValid(input))
+} while (inputIsNotValid(input));
 ```
 
 JavaScript 的 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for) 循环与 C 和 Java 中的相同：使用时可以在一行代码中提供控制信息。
@@ -352,46 +351,46 @@ var name = cachedName || (cachedName = getName());
 类似地，JavaScript 也有一个用于条件表达式的三元操作符：
 
 ```js
-var allowed = (age > 18) ? "yes" : "no";
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 在需要多重分支时可以使用基于一个数字或字符串的 `switch` 语句：
 
 ```js
-switch(action) {
-    case 'draw':
-        drawIt();
-        break;
-    case 'eat':
-        eatIt();
-        break;
-    default:
-        doNothing();
+switch (action) {
+  case "draw":
+    drawIt();
+    break;
+  case "eat":
+    eatIt();
+    break;
+  default:
+    doNothing();
 }
 ```
 
 如果你不使用 `break` 语句，JavaScript 解释器将会执行之后 `case` 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 `break`。
 
 ```js
-switch(a) {
-    case 1: // 继续向下
-    case 2:
-        eatIt();
-        break;
-    default:
-        doNothing();
+switch (a) {
+  case 1: // 继续向下
+  case 2:
+    eatIt();
+    break;
+  default:
+    doNothing();
 }
 ```
 
 `default` 语句是可选的。`switch` 和 `case` 都可以使用需要运算才能得到结果的表达式；在 `switch` 的表达式和 `case` 的表达式是使用 `===` 严格相等运算符进行比较的：
 
 ```js
-switch(1 + 3){
-    case 2 + 2:
-        yay();
-        break;
-    default:
-        neverhappens();
+switch (1 + 3) {
+  case 2 + 2:
+    yay();
+    break;
+  default:
+    neverhappens();
 }
 ```
 
@@ -427,13 +426,13 @@ var obj = {};
 
 ```js
 var obj = {
-    name: "Carrot",
-    _for: "Max",//'for' 是保留字之一，使用'_for'代替
-    details: {
-        color: "orange",
-        size: 12
-    }
-}
+  name: "Carrot",
+  _for: "Max", //'for' 是保留字之一，使用'_for'代替
+  details: {
+    color: "orange",
+    size: 12,
+  },
+};
 ```
 
 对象的属性可以通过链式（chain）表示方法进行访问：
@@ -452,7 +451,7 @@ function Person(name, age) {
 }
 
 // 定义一个对象
-var You = new Person('You', 24);
+var You = new Person("You", 24);
 // 我们创建了一个新的 Person，名称是 "You"
 // ("You" 是第一个参数，24 是第二个参数..)
 ```
@@ -461,7 +460,7 @@ var You = new Person('You', 24);
 
 ```js
 // 点表示法 (dot notation)
-obj.name = 'Simon';
+obj.name = "Simon";
 var name = obj.name;
 ```
 
@@ -469,18 +468,18 @@ var name = obj.name;
 
 ```js
 // 括号表示法 (bracket notation)
-obj['name'] = 'Simon';
-var name = obj['name'];
+obj["name"] = "Simon";
+var name = obj["name"];
 // can use a variable to define a key
-var user = prompt('what is your key?')
-obj[user] = prompt('what is its value?')
+var user = prompt("what is your key?");
+obj[user] = prompt("what is its value?");
 ```
 
 这两种方法在语义上也是相同的。第二种方法的优点在于属性的名称被看作一个字符串，这就意味着它可以在运行时被计算，缺点在于这样的代码有可能无法在后期被解释器优化。它也可以被用来访问某些以[预留关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)作为名称的属性的值：
 
 ```js
-obj.for = 'Simon'; // 语法错误，因为 for 是一个预留关键字
-obj["for"] = 'Simon'; // 工作正常
+obj.for = "Simon"; // 语法错误，因为 for 是一个预留关键字
+obj["for"] = "Simon"; // 工作正常
 ```
 
 > **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
@@ -523,14 +522,14 @@ a.length; // 101
 如果试图访问一个不存在的数组索引，会得到 `undefined`：
 
 ```js
-typeof(a[90]); // undefined
+typeof a[90]; // undefined
 ```
 
 可以通过如下方式遍历一个数组：
 
 ```js
 for (var i = 0; i < a.length; i++) {
-    // Do something with a[i]
+  // Do something with a[i]
 }
 ```
 
@@ -553,7 +552,7 @@ for (var i in a) {
 ECMAScript 5 增加了另一个遍历数组的方法，[`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)：
 
 ```js
-["dog", "cat", "hen"].forEach(function(currentValue, index, array) {
+["dog", "cat", "hen"].forEach(function (currentValue, index, array) {
   // 操作 currentValue 或者 array[index]
 });
 ```
@@ -587,8 +586,8 @@ a.push(item);
 
 ```js
 function add(x, y) {
-    var total = x + y;
-    return total;
+  var total = x + y;
+  return total;
 }
 ```
 
@@ -605,18 +604,18 @@ add(); // NaN
 
 ```js
 add(2, 3, 4); // 5
- // 将前两个值相加，4 被忽略了
+// 将前两个值相加，4 被忽略了
 ```
 
 这看上去有点蠢。函数实际上是访问了函数体中一个名为 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 的内部对象，这个对象就如同一个类似于数组的对象一样，包括了所有被传入的参数。让我们重写一下上面的函数，使它可以接收任意个数的参数：
 
 ```js
 function add() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum;
 }
 
 add(2, 3, 4, 5); // 14
@@ -626,11 +625,11 @@ add(2, 3, 4, 5); // 14
 
 ```js
 function avg() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
 }
 avg(2, 3, 4, 5); // 3.5
 ```
@@ -649,15 +648,15 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
+> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表——但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
 
 ```js
 function avgArray(arr) {
-    var sum = 0;
-    for (var i = 0, j = arr.length; i < j; i++) {
-        sum += arr[i];
-    }
-    return sum / arr.length;
+  var sum = 0;
+  for (var i = 0, j = arr.length; i < j; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
 }
 avgArray([2, 3, 4, 5]); // 3.5
 ```
@@ -675,12 +674,12 @@ avg.apply(null, [2, 3, 4, 5]); // 3.5
 JavaScript 允许你创建匿名函数：
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
+var avg = function () {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
 };
 ```
 
@@ -689,9 +688,9 @@ var avg = function() {
 ```js
 var a = 1;
 var b = 2;
-(function() {
-    var b = 3;
-    a += b;
+(function () {
+  var b = 3;
+  a += b;
 })();
 
 a; // 4
@@ -702,14 +701,15 @@ JavaScript 允许以递归方式调用函数。递归在处理树形结构（比
 
 ```js
 function countChars(elm) {
-    if (elm.nodeType == 3) { // 文本节点
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += countChars(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // 文本节点
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += countChars(child);
+  }
+  return count;
 }
 ```
 
@@ -717,14 +717,15 @@ function countChars(elm) {
 
 ```js
 var charsInBody = (function counter(elm) {
-    if (elm.nodeType == 3) { // 文本节点
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += counter(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // 文本节点
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += counter(child);
+  }
+  return count;
 })(document.body);
 ```
 
@@ -740,19 +741,19 @@ var charsInBody = (function counter(elm) {
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last
-    };
+  return {
+    first: first,
+    last: last,
+  };
 }
 function personFullName(person) {
-    return person.first + ' ' + person.last;
+  return person.first + " " + person.last;
 }
 function personFullNameReversed(person) {
-    return person.last + ', ' + person.first;
+  return person.last + ", " + person.first;
 }
 
-var s = makePerson('Simon', 'Willison');
+var s = makePerson("Simon", "Willison");
 personFullName(s); // "Simon Willison"
 personFullNameReversed(s); // "Willison, Simon"
 ```
@@ -761,16 +762,16 @@ personFullNameReversed(s); // "Willison, Simon"
 
 ```js
 function makePerson(first, last) {
-    return {
-        first: first,
-        last: last,
-        fullName: function() {
-            return this.first + ' ' + this.last;
-        },
-        fullNameReversed: function() {
-            return this.last + ', ' + this.first;
-        }
-    }
+  return {
+    first: first,
+    last: last,
+    fullName: function () {
+      return this.first + " " + this.last;
+    },
+    fullNameReversed: function () {
+      return this.last + ", " + this.first;
+    },
+  };
 }
 s = makePerson("Simon", "Willison");
 s.fullName(); // "Simon Willison"
@@ -791,14 +792,14 @@ fullName(); // undefined undefined
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = function() {
-        return this.first + ' ' + this.last;
-    }
-    this.fullNameReversed = function() {
-        return this.last + ', ' + this.first;
-    }
+  this.first = first;
+  this.last = last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
+  };
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
+  };
 }
 var s = new Person("Simon", "Willison");
 ```
@@ -811,16 +812,16 @@ var s = new Person("Simon", "Willison");
 
 ```js
 function personFullName() {
-    return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-    return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = personFullName;
-    this.fullNameReversed = personFullNameReversed;
+  this.first = first;
+  this.last = last;
+  this.fullName = personFullName;
+  this.fullNameReversed = personFullNameReversed;
 }
 ```
 
@@ -828,15 +829,15 @@ function Person(first, last) {
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
+  this.first = first;
+  this.last = last;
 }
-Person.prototype.fullName = function() {
-    return this.first + ' ' + this.last;
-}
-Person.prototype.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
-}
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
+};
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
+};
 ```
 
 `Person.prototype` 是一个可以被 `Person` 的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 `Person` 某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 `Person.prototype` 来判断是否存在这样一个属性。所以，任何分配给 `Person.prototype` 的东西对通过 `this` 对象构造的实例都是可用的。
@@ -845,11 +846,11 @@ Person.prototype.fullNameReversed = function() {
 
 ```js
 s = new Person("Simon", "Willison");
-s.firstNameCaps();  // TypeError on line 1: s.firstNameCaps is not a function
+s.firstNameCaps(); // TypeError on line 1: s.firstNameCaps is not a function
 
-Person.prototype.firstNameCaps = function() {
-    return this.first.toUpperCase()
-}
+Person.prototype.firstNameCaps = function () {
+  return this.first.toUpperCase();
+};
 s.firstNameCaps(); // SIMON
 ```
 
@@ -859,13 +860,13 @@ s.firstNameCaps(); // SIMON
 var s = "Simon";
 s.reversed(); // TypeError on line 1: s.reversed is not a function
 
-String.prototype.reversed = function() {
-    var r = "";
-    for (var i = this.length - 1; i >= 0; i--) {
-        r += this[i];
-    }
-    return r;
-}
+String.prototype.reversed = function () {
+  var r = "";
+  for (var i = this.length - 1; i >= 0; i--) {
+    r += this[i];
+  }
+  return r;
+};
 s.reversed(); // nomiS
 ```
 
@@ -881,9 +882,9 @@ s.reversed(); // nomiS
 var s = new Person("Simon", "Willison");
 s; // [object Object]
 
-Person.prototype.toString = function() {
-    return '<Person: ' + this.fullName() + '>';
-}
+Person.prototype.toString = function () {
+  return "<Person: " + this.fullName() + ">";
+};
 s.toString(); // <Person: Simon Willison>
 ```
 
@@ -891,9 +892,9 @@ s.toString(); // <Person: Simon Willison>
 
 ```js
 function trivialNew(constructor, ...args) {
-    var o = {}; // 创建一个对象
-    constructor.apply(o, args);
-    return o;
+  var o = {}; // 创建一个对象
+  constructor.apply(o, args);
+  return o;
 }
 ```
 
@@ -915,7 +916,7 @@ var bill = new Person("William", "Orange");
 
 ```js
 function lastNameCaps() {
-    return this.last.toUpperCase();
+  return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
@@ -950,9 +951,9 @@ function parentFunc() {
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
-  }
+  };
 }
 var add5 = makeAdder(5);
 var add20 = makeAdder(20);

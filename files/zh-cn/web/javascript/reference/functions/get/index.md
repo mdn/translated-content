@@ -44,12 +44,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length == 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test".
 ```
 
@@ -68,20 +68,26 @@ delete obj.latest;
 要随时将 getter 添加到现有对象，使用 {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // Runs the getter, which yields a + 1 (which is 1)
+console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
 ```
 
 ### 使用计算出的属性名
 
 ```js
-var expr = 'foo';
+var expr = "foo";
 
 var obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -108,7 +114,7 @@ get notifier() {
 },
 ```
 
-对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
+对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/zh-CN/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
 
 ### `get` vs. `defineProperty`
 
@@ -119,7 +125,7 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -127,13 +133,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```

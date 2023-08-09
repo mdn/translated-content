@@ -19,7 +19,7 @@ slug: Web/API/IntersectionObserver
 - {{domxref("IntersectionObserver.root")}} {{ReadOnlyInline}}
   - : 测试交叉时，用作边界盒的{{domxref("Element", "元素", "", 1)}}或{{domxref("Document", "文档", "", 1)}}。如果构造函数未传入 `root` 或其值为`null`，则默认使用顶级文档的视口。
 - {{domxref("IntersectionObserver.rootMargin")}} {{ReadOnlyInline}}
-  - : 计算交叉时添加到根{{Glossary("bounding box", "边界盒")}}的矩形偏移量，可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用**像素**（`px`）或**百分比**（`%`）来表达，默认值为 “0px 0px 0px 0px”。
+  - : 计算交叉时添加到根{{Glossary("bounding box", "边界盒")}}的矩形偏移量，可以有效的缩小或扩大根的判定范围从而满足计算需要。此属性返回的值可能与调用构造函数时指定的值不同，因此可能需要更改该值，以匹配内部要求。所有的偏移量均可用**像素**（`px`）或**百分比**（`%`）来表达，默认值为“0px 0px 0px 0px”。
 - {{domxref("IntersectionObserver.thresholds")}} {{ReadOnlyInline}}
   - : 一个包含阈值的列表，按升序排列，列表中的每个阈值都是监听对象的交叉区域与边界区域的比率。当监听对象的任何阈值被越过时，都会生成一个通知（Notification）。如果构造器未传入值，则默认值为 0。
 
@@ -43,10 +43,10 @@ const intersectionObserver = new IntersectionObserver((entries) => {
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Loaded new items');
+  console.log("Loaded new items");
 });
 // 开始监听
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## 规范
@@ -57,7 +57,7 @@ intersectionObserver.observe(document.querySelector('.scrollerFooter'));
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref('MutationObserver')}}
 - {{domxref('PerformanceObserver')}}

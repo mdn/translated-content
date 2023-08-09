@@ -1,5 +1,5 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
 ---
 
@@ -12,23 +12,27 @@ A [pseudo-class](/pt-BR/CSS/Pseudo-classes) CSS :link permite que você selecion
 ## Exemplos
 
 ```css
-a:link {color: slategray;}
-.external:link {background-color: lightblue;}
+a:link {
+  color: slategray;
+}
+.external:link {
+  background-color: lightblue;
+}
 ```
 
 ## Especificações
 
-| Especificação                                                                                | Status                                   | Comentário                                             |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
-| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS4 Selectors') }} | Nenhuma mudança.                                       |
-| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                         | {{ Spec2('CSS3 Selectors') }} | Nenhuma mudança.                                       |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}             | Uso estrito ao elemento {{ HTMLElement("a") }} . |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}                 | {{ Spec2('CSS1') }}                 | Definição Inicial.                                     |
+| Especificação                                                          | Status                        | Comentário                                       |
+| ---------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------ |
+| {{ SpecName('CSS4 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS4 Selectors') }} | Nenhuma mudança.                                 |
+| {{ SpecName('CSS3 Selectors', '#link', ':link') }}                     | {{ Spec2('CSS3 Selectors') }} | Nenhuma mudança.                                 |
+| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link') }} | {{ Spec2('CSS2.1') }}         | Uso estrito ao elemento {{ HTMLElement("a") }} . |
+| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':link') }}              | {{ Spec2('CSS1') }}           | Definição Inicial.                               |
 
 ## Compatibilidade do navegador
 
 {{Compat("css.selectors.link")}}
 
-## Veja também:
+## Veja também
 
 - {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}

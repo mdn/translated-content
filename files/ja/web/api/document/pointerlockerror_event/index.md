@@ -1,7 +1,6 @@
 ---
 title: "Document: pointerlockerror イベント"
 slug: Web/API/Document/pointerlockerror_event
-original_slug: Web/API/Element/pointerlockerror_event
 l10n:
   sourceCommit: 8f91a466f5a6d1e238ed209f36f9b506fc73ee0d
 ---

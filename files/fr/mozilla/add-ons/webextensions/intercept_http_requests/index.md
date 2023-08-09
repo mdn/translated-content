@@ -1,7 +1,6 @@
 ---
 title: Intercepter les requêtes HTTP
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 
 {{AddonSidebar}}
@@ -31,10 +30,7 @@ Pour voir comment utiliser `webRequest` afin de journaliser les requêtes, crée
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -49,10 +45,9 @@ function logURL(requestDetails) {
   console.log("Chargement de : " + requestDetails.url);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 On utilise ici [`onBeforeRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) pour appeler la fonction `logURL()` juste avant que la requête soit émise. La fonction `logURL()` récupère l'URL de la requête à partir de l'objet représentant l'évènement et l'affiche dans la console du navigateur.
@@ -62,9 +57,10 @@ Pour tester cette extension&nbsp;:
 
 - [Installez l'extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Ouvrez [la console du navigateur](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (vous pouvez utiliser le raccourci clavier <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd>)
-- Activez l'option *Afficher les messages de contenu* dans le menu&nbsp;:
+- Activez l'option _Afficher les messages de contenu_ dans le menu&nbsp;:
 
   ![Menu de la console du navigateur avec l'option Afficher les messages de contenu](browser_console_show_content_messages.png)
+
 - Ouvrez différentes pages web
 
 Dans la console, vous pourrez voir les URL des ressources pour lesquelles le navigateur émet des requêtes.
@@ -78,7 +74,6 @@ Nous allons ici utiliser `webRequest` pour rediriger des requêtes HTTP. Pour co
 
 ```json
 {
-
   "description": "Demo pour webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -93,7 +88,6 @@ Nous allons ici utiliser `webRequest` pour rediriger des requêtes HTTP. Pour co
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -106,7 +100,8 @@ Ensuite, remplacez le contenu de `background.js` avec&nbsp;:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+let targetUrl =
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log("Redirection : " + requestDetails.url);
@@ -114,14 +109,14 @@ function redirect(requestDetails) {
     return;
   }
   return {
-    redirectUrl: targetUrl
+    redirectUrl: targetUrl,
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -130,7 +125,7 @@ Là encore, on utilise le gestionnaire d'évènement [`onBeforeRequest`](/fr/doc
 Cette fois, toutes les requêtes ne sont pas interceptées. L'option `{urls:[pattern], types:["image"]}` indique qu'on intercepte uniquement les requêtes pour&nbsp;:
 
 - Les URL sous `https://developer.mozilla.org/`
-- *Et* qui sont des images.
+- _Et_ qui sont des images.
 
 Voir [`webRequest.RequestFilter`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) pour plus d'informations.
 
@@ -171,21 +166,22 @@ Remplacez le code de `background.js` avec ce qui suit&nbsp;:
 ```js
 let targetPage = "http://useragentstring.com/*";
 
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
-  e.requestHeaders.forEach(function(header){
+  e.requestHeaders.forEach(function (header) {
     if (header.name.toLowerCase() == "user-agent") {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

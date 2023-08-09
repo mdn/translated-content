@@ -17,8 +17,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/search/search
 
 ```js
 browser.search.search(
-  searchProperties       // object
-)
+  searchProperties, // object
+);
 ```
 
 ### 参数
@@ -49,7 +49,7 @@ browser.search.search(
 ```js
 function search() {
   browser.search.search({
-    query: "styracosaurus"
+    query: "styracosaurus",
   });
 }
 
@@ -62,7 +62,7 @@ browser.browserAction.onClicked.addListener(search);
 function search() {
   browser.search.search({
     query: "styracosaurus",
-    engine: "Wikipedia (en)"
+    engine: "Wikipedia (en)",
   });
 }
 
@@ -76,7 +76,7 @@ function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 

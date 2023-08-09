@@ -1,13 +1,6 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -42,7 +35,7 @@ String.fromCharCode(num1[, ...[, numN]])
 Следующий пример вернёт строку "ABC".
 
 ```js
-String.fromCharCode(65, 66, 67);  // "ABC"
+String.fromCharCode(65, 66, 67); // "ABC"
 ```
 
 [Полная таблица UTF-16](https://asecuritysite.com/coding/asc2)

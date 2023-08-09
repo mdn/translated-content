@@ -1,9 +1,6 @@
 ---
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/revocable
-browser-compat: javascript.builtins.Proxy.revocable
 ---
 
 {{JSRef}}
@@ -43,20 +40,23 @@ Si la fonction `revoke()` est appelée, le proxy devient inutilisable et toutes 
 ### Utiliser `Proxy.revocable()`
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(cible, nom) {
-    return "[[" + nom + "]]";
-  }
-});
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (cible, nom) {
+      return "[[" + nom + "]]";
+    },
+  },
+);
 let proxy = revocable.proxy;
 console.log(proxy.toto); // "[[toto]]"
 
 revocable.revoke();
 
 console.log(proxy.toto); // TypeError est levée
-proxy.toto = 1;          // TypeError à nouveau
-delete proxy.toto;       // TypeError toujours
-typeof proxy;            // "object", typeof ne déclenche aucune trappe
+proxy.toto = 1; // TypeError à nouveau
+delete proxy.toto; // TypeError toujours
+typeof proxy; // "object", typeof ne déclenche aucune trappe
 ```
 
 ## Spécifications

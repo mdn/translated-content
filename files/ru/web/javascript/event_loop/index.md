@@ -1,10 +1,6 @@
 ---
 title: Параллельная модель и цикл событий.
 slug: Web/JavaScript/Event_loop
-tags:
-  - Руководство
-translation_of: Web/JavaScript/EventLoop
-original_slug: Web/JavaScript/EventLoop
 ---
 
 {{JsSidebar("Advanced")}}
@@ -17,7 +13,7 @@ original_slug: Web/JavaScript/EventLoop
 
 ### Визуальное представление
 
-![Stack, heap, queue](/en-US/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg)
+![Stack, heap, queue](/ru/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg)
 
 Для лучшего **визуального** представления работы **Event loop**, Вы можете ознакомиться с данным видео: <https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=389s>
 
@@ -58,7 +54,7 @@ g(21);
 Модель событийного цикла (`event loop`) называется так потому, что отслеживает новые события в цикле:
 
 ```js
-while(queue.waitForMessage()){
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```
@@ -83,21 +79,19 @@ while(queue.waitForMessage()){
 
 ```js
 (function () {
-
-  console.log('this is the start');
+  console.log("this is the start");
 
   setTimeout(function cb() {
-    console.log('this is a msg from call back');
+    console.log("this is a msg from call back");
   });
 
-  console.log('this is just a message');
+  console.log("this is just a message");
 
   setTimeout(function cb1() {
-    console.log('this is a msg from call back1');
+    console.log("this is a msg from call back1");
   }, 0);
 
-  console.log('this is the end');
-
+  console.log("this is the end");
 })();
 
 // "this is the start"

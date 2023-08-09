@@ -41,6 +41,7 @@ jobs:
       - name: Lint markdown files
         run: |
           yarn markdownlint-cli2-fix "**/${{ matrix.lang }}/**/*.md"
+          yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
 
       - name: Create PR with only fixable issues
         if: success()

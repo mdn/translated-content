@@ -1,7 +1,6 @@
 ---
 title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
 
 {{AddonSidebar()}}
@@ -14,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var reloading = browser.tabs.reload(
-  tabId,            // optional integer
-  reloadProperties  // optional object
-)
+  tabId, // optional integer
+  reloadProperties, // optional object
+);
 ```
 
 ### Paramètres
@@ -45,7 +44,7 @@ browser.tabs.reload();
 Rechargez l'onglet actif de la fenêtre en cours, en ignorant le cache :
 
 ```js
-browser.tabs.reload({bypassCache: true});
+browser.tabs.reload({ bypassCache: true });
 ```
 
 Rechargez l'onglet dont l'ID est 2, en ignorant le cache et en appelant un rappel lorsque vous avez terminé :
@@ -59,7 +58,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var reloading = browser.tabs.reload(2, {bypassCache: true});
+var reloading = browser.tabs.reload(2, { bypassCache: true });
 reloading.then(onReloaded, onError);
 ```
 
@@ -71,7 +70,7 @@ reloading.then(onReloaded, onError);
 
 > **Note :**
 >
-> Cette API est basée sur l’API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

@@ -23,10 +23,10 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't suppport mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
   <a href="audiofile.mp3">download audio</a>
@@ -42,15 +42,25 @@ To deliver video and audio, the general workflow is usually something like this:
 ### HTML 视频
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't suppport mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
@@ -69,13 +79,19 @@ You can create a more comprehensive Fallback using Flash. [Using flashmediaeleme
 
 ```html
 <audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
   <!-- fallback for non supporting browsers goes here -->
   <a href="audiofile.mp3">download audio</a>
-  <object width="320" height="30" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+  <object
+    width="320"
+    height="30"
+    type="application/x-shockwave-flash"
+    data="flashmediaelement.swf">
     <param name="movie" value="flashmediaelement.swf" />
-    <param name="flashvars" value="controls=true&isvideo=false&file=audiofile.mp3" />
+    <param
+      name="flashvars"
+      value="controls=true&isvideo=false&file=audiofile.mp3" />
   </object>
 </audio>
 ```
@@ -87,12 +103,12 @@ You can create a more comprehensive Fallback using Flash. [Using flashmediaeleme
 ### JavaScript 音频
 
 ```js
-var myAudio = document.createElement('audio');
+var myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -114,12 +130,12 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 ### JavaScript Video
 
 ```js
-var myVideo = document.createElement('video');
+var myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -131,31 +147,34 @@ We set the source of the video depending on the type of video file the browser s
 ## Web Audio API
 
 ```js
-  var context;
-  var request;
-  var source;
+var context;
+var request;
+var source;
 
-  try {
-    context = new (window.AudioContext || window.webkitAudioContext)();
-    request = new XMLHttpRequest();
-    request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
-    request.responseType = "arraybuffer";
+try {
+  context = new (window.AudioContext || window.webkitAudioContext)();
+  request = new XMLHttpRequest();
+  request.open(
+    "GET",
+    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true,
+  );
+  request.responseType = "arraybuffer";
 
-    request.onload = function() {
-      context.decodeAudioData(request.response, function(buffer) {
-        source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        // auto play
-        source.start(0); // start was previously noteOn
-      });
-    };
+  request.onload = function () {
+    context.decodeAudioData(request.response, function (buffer) {
+      source = context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(context.destination);
+      // auto play
+      source.start(0); // start was previously noteOn
+    });
+  };
 
-    request.send();
-
-  } catch(e) {
-    alert('web audio api not supported');
-  }
+  request.send();
+} catch (e) {
+  alert("web audio api not supported");
+}
 ```
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it ([Try it for yourself](http://jsbin.com/facutone/1/edit?js)). Find more about Web Audio API basics in [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
@@ -174,28 +193,36 @@ Next, if supported connect the webcam source to the video element:
 
 ```js
 navigator.getUserMedia ||
-  (navigator.getUserMedia = navigator.mozGetUserMedia ||
-  navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+  (navigator.getUserMedia =
+    navigator.mozGetUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.msGetUserMedia);
 
 window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
 if (navigator.getUserMedia) {
-    navigator.getUserMedia({
-        video: true,
-        audio: false
-    }, onSuccess, onError);
+  navigator.getUserMedia(
+    {
+      video: true,
+      audio: false,
+    },
+    onSuccess,
+    onError,
+  );
 } else {
-    alert('getUserMedia is not supported in this browser.');
+  alert("getUserMedia is not supported in this browser.");
 }
 
 function onSuccess(stream) {
-    var video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.src = window.URL.createObjectURL(stream);
+  var video = document.getElementById("webcam");
+  video.autoplay = true;
+  video.src = window.URL.createObjectURL(stream);
 }
 
 function onError() {
-    alert('There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?');
+  alert(
+    "There has been a problem retreiving the streams - are you running on file:/// or did you disallow access?",
+  );
 }
 ```
 
@@ -208,17 +235,16 @@ New standards are being rolled out to allow your browser to grab media from your
 The main mechanism is outlined below:
 
 ```js
-var onSuccess = function(stream) {
-
+var onSuccess = function (stream) {
   var mediaRecorder = new MediaRecorder(stream);
 
-  mediaRecorder.ondataavailable = function(e) {
-    var audio = document.createElement('audio');
+  mediaRecorder.ondataavailable = function (e) {
+    var audio = document.createElement("audio");
     audio.src = window.URL.createObjectURL(e.data);
-  }
-}
+  };
+};
 
-navigator.getUserMedia({audio:true}, onSuccess);
+navigator.getUserMedia({ audio: true }, onSuccess);
 ```
 
 See [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API) for more details.
@@ -311,17 +337,18 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-  <audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
-  <button id="my-control">play</button>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<button id="my-control">play</button>
 ```
 
 add a bit of JavaScript to detect events to play and pause the audio:
 
 ```js
-window.onload = function() {
-
-  var myAudio = document.getElementById('my-audio');
-  var myControl = document.getElementById('my-control');
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
+  var myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused == true) {
@@ -334,17 +361,22 @@ window.onload = function() {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode == 32) {
+      //spacebar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    function () {
+      switchState();
+    },
+    false,
+  );
 
-  window.addEventListener( "keypress", checkKey, false );
-}
+  window.addEventListener("keypress", checkKey, false);
+};
 ```
 
 You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/zh-CN/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).

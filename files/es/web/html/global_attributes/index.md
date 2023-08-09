@@ -1,7 +1,6 @@
 ---
 title: Atributos globales
 slug: Web/HTML/Global_attributes
-original_slug: Web/HTML/Atributos_Globales
 ---
 
 {{HTMLSidebar("Atributos_globales")}}
@@ -73,7 +72,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`[itemtype](/es/docs/Web/HTML/Global_attributes/itemtype)`**
   - : Especifica la URL del vocabulario que se utilizará para definir `itemprop`s (propiedades del elemento) en la estructura de datos. [`itemscope`](/es/docs/Web/HTML/Global_attributes#itemscope) se utiliza para establecer el alcance de la estructura de datos en la que estará activo el vocabulario establecido por `itemtype`.
 - **`[lang](/es/docs/Web/HTML/Global_attributes/lang)`**
-  - : Ayuda a definir el idioma de un elemento: el idioma en el que se encuentran los elementos no editables o el idioma en el que el usuario debe escribir los elementos editables. El atributo contiene una “etiqueta de idioma” (compuesta de “subetiquetas de idioma” separadas por guiones) en el formato definido en [_Etiquetas para identificar idiomas (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). [xml:lang](#attr-xml:lang) tiene prioridad sobre él.
+  - : Ayuda a definir el idioma de un elemento: el idioma en el que se encuentran los elementos no editables o el idioma en el que el usuario debe escribir los elementos editables. El atributo contiene una "etiqueta de idioma" (compuesta de "subetiquetas de idioma" separadas por guiones) en el formato definido en [_Etiquetas para identificar idiomas (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). [xml:lang](#attr-xml:lang) tiene prioridad sobre él.
 - **`[part](/es/docs/Web/HTML/Global_attributes/part)`**
   - : Una lista separada por espacios de los nombres de las partes del elemento. Los nombres de las partes permiten que CSS seleccione y aplique estilo a elementos específicos en la sombra de un árbol mediante el pseudoelemento {{CSSxRef("::part")}}.
 - **`[slot](/es/docs/Web/HTML/Global_attributes/slot)`**

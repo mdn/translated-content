@@ -1,5 +1,5 @@
 ---
-title: '<body>: 문서 본문 요소'
+title: "<body>: 문서 본문 요소"
 slug: Web/HTML/Element/body
 ---
 

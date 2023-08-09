@@ -1,7 +1,6 @@
 ---
 title: WindowBase64.atob()
 slug: Web/API/atob
-original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 
 {{APIRef("HTML DOM")}}
@@ -25,19 +24,11 @@ var dadoDecodificado = window.atob(dadoCodificado); // decodifica a string
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário                                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança desde a última versão, {{SpecName("HTML5.1")}}.                                             |
-| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}     | {{Spec2('HTML5.1')}}     | Versão de {{SpecName("HTML WHATWG")}}. Nenhuma mudança.                                                     |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}} | {{Spec2('HTML5 W3C')}}     | Versão de {{SpecName("HTML WHATWG")}}. Criação do `WindowBase64` (antes as propriedades ficavam no target). |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
 {{Compat}}
-
-\[1] `atob()` também está disponível para os componentes do XPCOM implementado em JavaScript, porém o objeto [`window`](/pt-BR/docs/Web/API/Window) não é global nos componentes.
-
-\[2] A partir do [Firefox 27](/pt-BR/Firefox/Releases/27/Site_Compatibility), `atob()` ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})
 
 ## Veja também
 

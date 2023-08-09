@@ -39,12 +39,12 @@ lança um `TypeError`. No [modo sloppy](/pt-BR/docs/Glossary/Sloppy_mode), a adi
 silenciosamente ignorada.
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var obj = {};
 Object.preventExtensions(obj);
 
-obj.x = 'foo';
+obj.x = "foo";
 // TypeError: can't define property "x": "obj" is not extensible
 ```
 
@@ -53,12 +53,10 @@ Em ambos os casos, [modo strict](/pt-BR/docs/Web/JavaScript/Reference/Strict_mod
 lança uma exceção quando é adicionada uma nova propriedade em um objeto não extensível.
 
 ```js example-bad
-var obj = { };
+var obj = {};
 Object.preventExtensions(obj);
 
-Object.defineProperty(obj,
-  'x', { value: "foo" }
-);
+Object.defineProperty(obj, "x", { value: "foo" });
 // TypeError: can't define property "x": "obj" is not extensible
 ```
 
@@ -68,10 +66,10 @@ como não extensível. Naturalmente, você pode remover a tentativa de adicionar
 precisar dela.
 
 ```js example-good
-'use strict';
+"use strict";
 
 var obj = {};
-obj.x = 'foo'; // adiciona a propriedade antes e só então previne extensões
+obj.x = "foo"; // adiciona a propriedade antes e só então previne extensões
 
 Object.preventExtensions(obj);
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: for'
+title: "HTML 属性: for"
 slug: Web/HTML/Attributes/for
 l10n:
   sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a

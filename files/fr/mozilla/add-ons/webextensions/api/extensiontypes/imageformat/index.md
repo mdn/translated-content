@@ -1,7 +1,6 @@
 ---
 title: extensionTypes.ImageFormat
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
 ---
 
 {{AddonSidebar()}}

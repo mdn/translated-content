@@ -1,7 +1,6 @@
 ---
 title: Bouton de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 
 {{AddonSidebar}}
@@ -86,7 +85,7 @@ Vous pouvez modifier l'une des propriétés d'action de la page de manière prog
 
 ## Icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir   [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
+Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
 
 ## Exemples
 

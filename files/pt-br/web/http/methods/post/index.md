@@ -77,7 +77,7 @@ POST /index.html
 
 Um simples formulário utilizando o padrão _content type_ `application/x-www-form-urlencoded`:
 
-```html
+```http
 POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -88,7 +88,7 @@ say=Hi&to=Mom
 
 Um formulário utilizando o _content type_ `multipart/form-data`:
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
@@ -105,8 +105,8 @@ value2
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                    | Título                                                        |
+| -------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

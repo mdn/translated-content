@@ -31,9 +31,9 @@ GET /miPaginaWeb.html
 La respuesta también es muy sencilla: solamente consiste el archivo pedido.
 
 ```html
-<HTML>
-Una pagina web muy sencilla
-</HTML>
+<html>
+  Una pagina web muy sencilla
+</html>
 ```
 
 Al contrario que sus posteriores evoluciones, el protocolo HTTP/0.9 no usa cabeceras HTTP, con lo cual únicamente es posible transmitir archivos HTML, y ningún otro tipo de archivos. Tampoco había información del estado ni códigos de error: en el caso un problema, el archivo HTML pedido, era devuelto con una descripción del problema dentro de él, para que una persona pudiera analizarlo.
@@ -78,7 +78,7 @@ Content-Type: text/gif
 
 Estas innovaciones, no se desarrollaron de forma planeada, sino más bien con una aproximación de prueba y error, entre los años 1991 y 1995: un servidor y un navegador, añadían una nueva funcionalidad y se evaluaba su aceptación. Debido a esto, en ese periodo eran muy comunes los problemas de interoperatividad. En Noviembre de 1996, para poner fin a estos problemas se publicó un documento informativo que describía las prácticas adecuadas, {{RFC(1945)}}. Esté documento es la definición del protocolo HTTP/1.0. Resulta curioso, que realmente no es un estándar oficial.
 
-## HTTP/1.1 – El protocolo estándar.
+## HTTP/1.1 – El protocolo estándar
 
 En paralelo al uso, un poco desordenado, y las diversas implementaciones de HTTP/1.0, y desde el año 1995, un año antes de la publicación del documento del HTTP/1.0, un proceso de estandarización formal ya estaba en curso. La primera versión estandarizada de HTTP: el protocolo HTTP/1.1, se publicó en 1997, tan solo unos meses después del HTTP/1.0
 
@@ -94,13 +94,13 @@ HTTP/1.1 aclaró ambigüedades y añadió numerosas mejoras:
 El flujo normal de una serie de peticiones y respuestas, bajo una única conexión, se expone a continuación:
 
 ```
-GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+GET /es/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/es/docs/Glossary/Simple_header
 
 200 OK
 Connection: Keep-Alive
@@ -123,7 +123,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/es/docs/Glossary/Simple_header
 
 200 OK
 Age: 9578461

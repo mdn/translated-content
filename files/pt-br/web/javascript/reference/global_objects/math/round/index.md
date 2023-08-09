@@ -53,7 +53,7 @@ x = Math.round(-20.51);
 x = Math.round(1.005*100)/100;
 ```
 
-### Exemplo: Arredondamento decimal.
+### Exemplo: Arredondamento decimal
 
 ```js
 // Closure

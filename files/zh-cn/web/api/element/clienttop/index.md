@@ -27,7 +27,7 @@ Cat image and text coming from [www.best-cat-art.com](http://www.best-cat-art.co
 
 padding-bottom
 
-**Left**、**Top**、**Right**、**Bottom**、_margin-top_、*margin-bottom*、*border-top*、_border-bottom_
+**Left**、**Top**、**Right**、**Bottom**、_margin-top_、_margin-bottom_、_border-top_、_border-bottom_
 
 ## 备注
 

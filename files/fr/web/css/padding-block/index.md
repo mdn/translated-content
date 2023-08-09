@@ -1,13 +1,6 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/padding-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,10 +10,10 @@ La propriété **`padding-block`** définit l'espace de remplissage (_padding_) 
 ```css
 /* Valeurs de longueur */
 /* Type <length> */
-padding-block: 10px 20px;  /* Des longueurs absolues */
-padding-block: 1em 2em;    /* Des longueurs relatives à la taille du texte */
-padding-block: 5% 2%;      /* Des longueurs relatives à la taille du bloc englobant */
-padding-block: 10px;       /* Une seule valeur définit le remplissage des deux côtés */
+padding-block: 10px 20px; /* Des longueurs absolues */
+padding-block: 1em 2em; /* Des longueurs relatives à la taille du texte */
+padding-block: 5% 2%; /* Des longueurs relatives à la taille du bloc englobant */
+padding-block: 10px; /* Une seule valeur définit le remplissage des deux côtés */
 
 /* Valeurs avec un mot-clé */
 padding-block: auto;

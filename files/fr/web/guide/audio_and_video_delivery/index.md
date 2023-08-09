@@ -1,7 +1,6 @@
 ---
 title: Intégration audio et vidéo
 slug: Web/Guide/Audio_and_video_delivery
-translation_of: Web/Guide/Audio_and_video_delivery
 ---
 
 On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières, du fichier média statique au <i lang="en">live stream</i> (flux en direct) adaptatif. Cet article se veut être le point de départ pour explorer les différents mécanismes de diffusion de média sur le web et la compatiblité avec les navigateurs populaires.
@@ -24,10 +23,10 @@ Pour distribuer du contenu audio et vidéo, le processus général se déroule c
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback pour les navigateurs qui ne supportent pas mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback pour les navigateurs qui ne supportent pas la balise audio -->
   <a href="audiofile.mp3">Télécharger l'audio</a>
@@ -43,15 +42,25 @@ Pour plus d'informations voir [Les bases de l'audio multi-navigateur (Audio HTML
 ### Vidéo HTML
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback pour les navigateurs qui ne supportent pas mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- spécifie les fichiers de sous-titres -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback pour les navigateurs qui ne supportent pas la balise video -->
   <a href="videofile.mp4">Télécharger la vidéo</a>
@@ -67,12 +76,12 @@ Pour plus d'informations voir [l'article de référence sur l'élément `<video>
 ### Audio JavaScript
 
 ```js
-const myAudio = document.createElement('audio');
+const myAudio = document.createElement("audio");
 
-if (myAudio.canPlayType('audio/mpeg')) {
-  myAudio.setAttribute('src','audiofile.mp3');
-} else if (myAudio.canPlayType('audio/ogg')) {
-  myAudio.setAttribute('src','audiofile.ogg');
+if (myAudio.canPlayType("audio/mpeg")) {
+  myAudio.setAttribute("src", "audiofile.mp3");
+} else if (myAudio.canPlayType("audio/ogg")) {
+  myAudio.setAttribute("src", "audiofile.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -94,12 +103,12 @@ Il est également possible de donner un fichier WAV encodé en base64 à l'élé
 ### Vidéo JavaScript
 
 ```js
-const myVideo = document.createElement('video');
+const myVideo = document.createElement("video");
 
-if (myVideo.canPlayType('video/mp4')) {
-  myVideo.setAttribute('src','videofile.mp4');
-} else if (myVideo.canPlayType('video/webm')) {
-  myVideo.setAttribute('src','videofile.webm');
+if (myVideo.canPlayType("video/mp4")) {
+  myVideo.setAttribute("src", "videofile.mp4");
+} else if (myVideo.canPlayType("video/webm")) {
+  myVideo.setAttribute("src", "videofile.webm");
 }
 
 myVideo.width = 480;
@@ -118,11 +127,15 @@ let source;
 try {
   context = new AudioContext();
   request = new XMLHttpRequest();
-  request.open("GET","https://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.open(
+    "GET",
+    "https://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
+    true,
+  );
   request.responseType = "arraybuffer";
 
-  request.onload = function() {
-    context.decodeAudioData(request.response, function(buffer) {
+  request.onload = function () {
+    context.decodeAudioData(request.response, function (buffer) {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
@@ -132,8 +145,7 @@ try {
   };
 
   request.send();
-
-} catch(e) {
+} catch (e) {
   console.error(`L'API Web Audio n'est pas prise en charge`);
 }
 ```
@@ -154,15 +166,18 @@ Ensuite, si cette opération est prise en charge, nous connectons la webcam à l
 
 ```js
 if (navigator.mediaDevices) {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  .then(function onSuccess(stream) {
-    const video = document.getElementById('webcam');
-    video.autoplay = true;
-    video.srcObject = stream;
-  })
-  .catch(function onError() {
-    console.error(`Problème de récupération des flux : utilisez-vous une page avec file:/// ou avez-vous décliné la permission ?`);
-  });
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: false })
+    .then(function onSuccess(stream) {
+      const video = document.getElementById("webcam");
+      video.autoplay = true;
+      video.srcObject = stream;
+    })
+    .catch(function onError() {
+      console.error(
+        `Problème de récupération des flux : utilisez-vous une page avec file:/// ou avez-vous décliné la permission ?`,
+      );
+    });
 } else {
   console.error(`getUserMedia n'est pas pris en charge par ce navigateur.`);
 }
@@ -177,23 +192,24 @@ De nouveaux standards sont en cours de déploiement pour permettre au navigateur
 Le principe de base est décrit ci-après&nbsp;:
 
 ```js
-navigator.mediaDevices.getUserMedia({audio:true})
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
   .then(function onSuccess(stream) {
     const recorder = new MediaRecorder(stream);
 
     const data = [];
-    recorder.ondataavailable = function(e) {
+    recorder.ondataavailable = function (e) {
       data.push(e.data);
     };
     recorder.start();
-    recorder.onerror = function(e) {
+    recorder.onerror = function (e) {
       throw e.error || new Error(e.name); // e.name est utilisé pour Firefox
-    }
-    recorder.onstop = function(e) {
-      const audio = document.createElement('audio');
+    };
+    recorder.onstop = function (e) {
+      const audio = document.createElement("audio");
       audio.src = window.URL.createObjectURL(new Blob(data));
-    }
-    setTimeout(function() {
+    };
+    setTimeout(function () {
       rec.stop();
     }, 5000);
   })
@@ -212,7 +228,7 @@ Voir [l'API MediaRecorder](/fr/docs/Web/API/MediaRecorder_API) pour plus de dét
 
 [Encrypted Media Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html) (EME ou « extensions pour les médias chiffrés ») est une proposition du W3C d'étendre [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) en fournissant des API pour contrôler la lecture de contenu protégé.
 
-L'API prend en charge divers cas d'utilisation, allant du simple déchiffrement par clé aux vidéos protégées par DRM (pourvu que le navigateur implémente ce système). L'échange de licence/clé est contrôlé par l'application, facilitant ainsi le développement d'applications de lecture robustes et qui prennent en charge différentes technologies de déchiffrement et de protection de contenu. Un des principaux usages d'EME est de permettre au navigateur d'implémenter la gestion des DRM ([<i lang="en">Digital Rights Management</i>](https://fr.wikipedia.org/wiki/Gestion_des_droits_num%C3%A9riques)).
+L'API prend en charge divers cas d'utilisation, allant du simple déchiffrement par clé aux vidéos protégées par DRM (pourvu que le navigateur implémente ce système). L'échange de licence/clé est contrôlé par l'application, facilitant ainsi le développement d'applications de lecture robustes et qui prennent en charge différentes technologies de déchiffrement et de protection de contenu. Un des principaux usages d'EME est de permettre au navigateur d'implémenter la gestion des DRM ([<i lang="en">Digital Rights Management</i>](https://fr.wikipedia.org/wiki/Gestion_des_droits_numériques)).
 
 ### Diffusion adaptative
 
@@ -237,17 +253,18 @@ Vous pouvez détecter les événements de clic, de toucher et/ou de clavier pour
 Un exemple rapide — d'abord, configurez votre audio et vos contrôles personnalisés en HTML:
 
 ```html
-<audio id="my-audio" src="https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<audio
+  id="my-audio"
+  src="https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
 <button id="my-control">play</button>
 ```
 
 Ensuite, ajoutez un peu de JavaScript pour détecter les événements afin de lire et de mettre en pause l'audio:
 
 ```js
-window.onload = function() {
-
-  const myAudio = document.getElementById('my-audio');
-  const myControl = document.getElementById('my-control');
+window.onload = function () {
+  const myAudio = document.getElementById("my-audio");
+  const myControl = document.getElementById("my-control");
 
   function switchState() {
     if (myAudio.paused == true) {
@@ -260,17 +277,22 @@ window.onload = function() {
   }
 
   function checkKey(e) {
-    if (e.keycode == 32 ) { //spacebar
+    if (e.keycode == 32) {
+      //spacebar
       switchState();
     }
   }
 
-  myControl.addEventListener('click', function() {
-    switchState();
-  }, false);
+  myControl.addEventListener(
+    "click",
+    function () {
+      switchState();
+    },
+    false,
+  );
 
-  window.addEventListener( "keypress", checkKey, false );
-}
+  window.addEventListener("keypress", checkKey, false);
+};
 ```
 
 Vous pouvez [essayer cet exemple ici](https://jsbin.com/jujeladu/2/edit). Pour plus d'informations, voir [Créer votre propre lecteur audio](/fr/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player).
@@ -300,11 +322,11 @@ Les éléments média permettent de placer le curseur de lecture à des instants
 La propriété `seekable` de l'élément peut être utilisée afin de déterminer les intervalles disponibles pour de tels déplacements. Cette propriété renvoie un objet [`TimeRanges`](/fr/docs/Web/API/TimeRanges) contenant les intervalles temporels accessibles.
 
 ```js
-const mediaElement = document.querySelector('#mediaElementID');
-mediaElement.seekable.start(0);  // Renvoie l'instant de départ (en secondes)
-mediaElement.seekable.end(0);    // Renvoie l'instant de fin (en secondes)
-mediaElement.currentTime = 122;  // Déplace la lecture à 122 secondes
-mediaElement.played.end(0);      // Renvoie le nombre de secondes lues par le navigateur
+const mediaElement = document.querySelector("#mediaElementID");
+mediaElement.seekable.start(0); // Renvoie l'instant de départ (en secondes)
+mediaElement.seekable.end(0); // Renvoie l'instant de fin (en secondes)
+mediaElement.currentTime = 122; // Déplace la lecture à 122 secondes
+mediaElement.played.end(0); // Renvoie le nombre de secondes lues par le navigateur
 ```
 
 ### Définir des intervalles de lecture
@@ -396,14 +418,18 @@ Il existe une autre méthode pour présenter du contenu alternatif lorsqu'aucune
 ```
 
 ```js
-let v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
-lastsource.addEventListener('error', function(ev) {
-  const d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
-}, false);
+let v = document.querySelector("video"),
+  sources = v.querySelectorAll("source"),
+  lastsource = sources[sources.length - 1];
+lastsource.addEventListener(
+  "error",
+  function (ev) {
+    const d = document.createElement("div");
+    d.innerHTML = v.innerHTML;
+    v.parentNode.replaceChild(d, v);
+  },
+  false,
+);
 ```
 
 ## Bibliothèques JavaScript audio/vidéo

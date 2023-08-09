@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 
 HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 [CORP](</zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) 或者 [CORS](/zh-CN/docs/Web/HTTP/CORS)) 的任何跨域资源。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -53,7 +53,7 @@ if (crossOriginIsolated) {
 If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/zh-CN/docs/Web/HTTP/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) attribute for this image from a third-party site:
 
 ```html
-<img src="https://thirdparty.com/img.png" crossorigin>
+<img src="https://thirdparty.com/img.png" crossorigin />
 ```
 
 ## 规范

@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Asynchronous
 l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
+
 {{LearnSidebar}}
 
 이 과정에서 우리는 {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}와 이것이 중요한 이유, 서버에서 리소스를 가져오는 것과 같은 잠재적 블로킹 연산을 어떻게 효과적으로 다룰 수 있을지에 대해 살펴봅니다.

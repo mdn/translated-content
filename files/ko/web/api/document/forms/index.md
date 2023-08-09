@@ -16,28 +16,34 @@ collection = document.forms;
 ## Example: Getting form information
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>document.forms example</title>
+  </head>
 
-<head>
-<title>document.forms example</title>
-</head>
+  <body>
+    <form id="robby">
+      <input
+        type="button"
+        onclick="alert(document.forms[0].id);"
+        value="robby's form" />
+    </form>
 
-<body>
+    <form id="dave">
+      <input
+        type="button"
+        onclick="alert(document.forms[1].id);"
+        value="dave's form" />
+    </form>
 
-<form id="robby">
-  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
-</form>
-
-<form id="dave">
-  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
-</form>
-
-<form id="paul">
-  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
-</form>
-
-</body>
+    <form id="paul">
+      <input
+        type="button"
+        onclick="alert(document.forms[2].id);"
+        value="paul's form" />
+    </form>
+  </body>
 </html>
 ```
 

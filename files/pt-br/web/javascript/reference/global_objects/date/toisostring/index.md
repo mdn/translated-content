@@ -25,26 +25,32 @@ Este método foi padronizado na quinta edição da ECMA-262. Motores que não fo
 
 ```js
 if (!Date.prototype.toISOString) {
-  (function() {
-
+  (function () {
     function pad(number) {
       if (number < 10) {
-        return '0' + number;
+        return "0" + number;
       }
       return number;
     }
 
-    Date.prototype.toISOString = function() {
-      return this.getUTCFullYear() +
-        '-' + pad(this.getUTCMonth() + 1) +
-        '-' + pad(this.getUTCDate()) +
-        'T' + pad(this.getUTCHours()) +
-        ':' + pad(this.getUTCMinutes()) +
-        ':' + pad(this.getUTCSeconds()) +
-        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        'Z';
+    Date.prototype.toISOString = function () {
+      return (
+        this.getUTCFullYear() +
+        "-" +
+        pad(this.getUTCMonth() + 1) +
+        "-" +
+        pad(this.getUTCDate()) +
+        "T" +
+        pad(this.getUTCHours()) +
+        ":" +
+        pad(this.getUTCMinutes()) +
+        ":" +
+        pad(this.getUTCSeconds()) +
+        "." +
+        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
+        "Z"
+      );
     };
-
   })();
 }
 ```
@@ -54,17 +60,17 @@ if (!Date.prototype.toISOString) {
 ### Usando `toISOString()`
 
 ```js
-let today = new Date('05 October 2011 14:48 UTC')
+let today = new Date("05 October 2011 14:48 UTC");
 
-console.log(today.toISOString())  // Retorna 2011-10-05T14:48:00.000Z
+console.log(today.toISOString()); // Retorna 2011-10-05T14:48:00.000Z
 ```
 
 O exemplo acima usa uma conversão de uma _string_ não-padrão que pode não ser convertida corretamente em navegadores que não sejam da Mozilla..
 
 ## Especificações
 
-| Especificação                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                            |
+| ---------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} |
 
 ## Compatibilidade com navegadores

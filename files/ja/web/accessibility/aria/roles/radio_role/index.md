@@ -1,7 +1,6 @@
 ---
 title: radio ロールの使用
 slug: Web/Accessibility/ARIA/Roles/radio_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role
 ---
 
 ### 説明
@@ -14,7 +13,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role
 
 ### 例
 
-#### 例 1:
+#### 例 1
 
 MDN ページの[基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)からの例
 

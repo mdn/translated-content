@@ -1,7 +1,6 @@
 ---
 title: Видео и аудио контент
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -9,8 +8,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 Теперь, когда мы спокойно добавляем простые изображения на веб-страницу, сделаем следующий шаг — начнём добавлять видео и аудиоплееры в ваши HTML-документы! В этой статье вы увидите, как это делать с элементами {{htmlelement("video")}} и {{htmlelement("audio")}} ; а в завершение посмотрите, как добавить титры и субтитры к вашим видео.
 
 | Предпосылки: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F), базовые знания [работа с файлами](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), знакомство с основами HTML (как описано в [Начало работы с HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started)) и [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML). |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Узнать, как вставлять видео и аудиоконтент в веб-страницу, а также добавлять титры или субтитры к видео.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:      | Узнать, как вставлять видео и аудиоконтент в веб-страницу, а также добавлять титры или субтитры к видео.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Аудио и видео в Интернете
 
@@ -28,7 +27,10 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="rabbit320.webm">ссылку на видео</a> для доступа.</p>
+  <p>
+    Ваш браузер не поддерживает HTML5 видео. Используйте
+    <a href="rabbit320.webm">ссылку на видео</a> для доступа.
+  </p>
 </video>
 ```
 
@@ -83,9 +85,12 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Ваш браузер не поддерживает HTML5 видео. Вот <a href="rabbit320.mp4">ссылка на видео</a> взамен.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Ваш браузер не поддерживает HTML5 видео. Вот
+    <a href="rabbit320.mp4">ссылка на видео</a> взамен.
+  </p>
 </video>
 ```
 
@@ -100,12 +105,20 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 Есть ряд других параметры, которые вы можете включить в HTML5 элемент `video`. Взгляните на наш третий пример:
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML5 video. Here is a
+    <a href="rabbit320.mp4">link to the video</a> instead.
+  </p>
 </video>
 ```
 
@@ -139,9 +152,12 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is a <a href="viper.mp3">link to the audio</a> instead.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Your browser doesn't support HTML5 audio. Here is a
+    <a href="viper.mp3">link to the audio</a> instead.
+  </p>
 </audio>
 ```
 
@@ -204,9 +220,9 @@ WEBVTT
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

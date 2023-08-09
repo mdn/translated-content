@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: midi'
+title: "Feature-Policy: midi"
 slug: Web/HTTP/Headers/Permissions-Policy/midi
-original_slug: Web/HTTP/Headers/Feature-Policy/midi
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

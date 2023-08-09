@@ -1,19 +1,6 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
-translation_of: Web/HTML/Attributes
-original_slug: Web/HTML/Attributs
 ---
 
 {{HTMLSidebar}}
@@ -2171,9 +2158,13 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 ```html
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
-<div itemscope=itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML valide mais du XML invalide.
+</div>
 <div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
-<div itemscope="itemscope">Ce fragment est du HTML et du XML valide mais est plus verbeux.</div>
+<div itemscope="itemscope">
+  Ce fragment est du HTML et du XML valide mais est plus verbeux.
+</div>
 ```
 
 Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).

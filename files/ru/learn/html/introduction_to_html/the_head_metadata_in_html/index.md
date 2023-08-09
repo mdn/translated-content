@@ -1,21 +1,6 @@
 ---
 title: Что внутри "head"? Метаданные в HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - HTML
-  - Meta
-  - favicon
-  - head
-  - lang
-  - metadata
-  - Для начинающих
-  - Заголовок
-  - Руководство
-  - иконка
-  - метаданные
-  - язык
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -38,10 +23,10 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 Давайте снова посмотрим на [HTML-документ из прошлой статьи](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE_%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B#%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_HTML_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Моя тестовая страница</title>
   </head>
   <body>
@@ -54,7 +39,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Моя тестовая страница</title>
 </head>
 ```
@@ -72,18 +57,18 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 1. Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
 
-    1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
-    2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
+   1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
+   2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 
 2. Откройте файл в браузере. Вы увидите что-то вроде этого:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
+   ![A simple web page with the title set to 'title' element, and the 'h1' set to 'h1' element.](title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
 
 3. Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!
 
 Содержимое элемента `<title>` используется и в других местах. Например, при добавлении страницы в избранное (_Bookmarks > Bookmark This Page_ в Firefox), текст из `<title>` предлагается в качестве названия закладки.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the 'title' element ](bookmark-example.png)
 
 Текст из `<title>` также появляется в результатах поиска, как мы скоро увидим.
 
@@ -96,7 +81,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 В заголовке примера выше есть следующая строка:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . `utf-8` — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-страницах, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:
@@ -125,9 +110,11 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 Два полезных элемента метаданных — указание автора страницы и краткое описание её содержимого. Рассмотрим эти элементы на примере:
 
 ```html
-<meta name="author" content="Крис Миллс">
-<meta name="description" content="Задача MDN — в том, чтобы обучить
-новичков всему тому, что нужно им для разработки веб-сайтов и приложений.">
+<meta name="author" content="Крис Миллс" />
+<meta
+  name="description"
+  content="Задача MDN — в том, чтобы обучить
+новичков всему тому, что нужно им для разработки веб-сайтов и приложений." />
 ```
 
 По указанному имени автора (author) можно найти человека, который написал страницу, и связаться с ним. Некоторые системы управления содержимым (CMS) автоматически обрабатывают эту информацию и делают её доступной для таких целей.
@@ -142,13 +129,15 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 2. Откройте исходный код страницы (кликните правой кнопкой мыши и выберите _Просмотреть код_ в контекстном меню.)
 3. Найдите тег meta с описанием. Он выглядит так:
 
-    ```html
-    <meta name="description" content="Веб-документация на MDN
-    предоставляет собой информацию об открытых веб-технологиях,
-    включая HTML, CSS и различные API для веб-сайтов и
-    прогрессивных веб-приложений. Также на сайте содержатся материалы
-    для разработчиков о таких продуктах Mozilla, как Инструменты разработчика Firefox.">
-    ```
+   ```html
+   <meta
+     name="description"
+     content="Веб-документация на MDN
+   предоставляет собой информацию об открытых веб-технологиях,
+   включая HTML, CSS и различные API для веб-сайтов и
+   прогрессивных веб-приложений. Также на сайте содержатся материалы
+   для разработчиков о таких продуктах Mozilla, как Инструменты разработчика Firefox." />
+   ```
 
 4. Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из `<meta>` и `<title>` используется в результатах поиска, — мы не зря указали их!
 
@@ -165,20 +154,24 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 Например, [Протокол Open Graph](https://ruogp.me/) создан Facebook чтобы предоставить сайтам дополнительные возможности использования метаданных. В исходном коде MDN Web Docs вы можете найти строки:
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
-<meta property="og:description" content="Веб-документация на MDN предоставляет
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="Веб-документация на MDN предоставляет
 собой информацию об открытых веб-технологиях, включая HTML, CSS и различные API для веб-сайтов
 и прогрессивных веб-приложений. Также на сайте содержатся материалы для разработчиков о таких
-продуктах Mozilla, как Инструменты разработчика Firefox.">
-<meta property="og:title" content="MDN Web Docs">
+продуктах Mozilla, как Инструменты разработчика Firefox." />
+<meta property="og:title" content="MDN Web Docs" />
 ```
 
-Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))_.
+Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))\_.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
 
 ```html
-<meta name="twitter:title" content="MDN Web Docs">
+<meta name="twitter:title" content="MDN Web Docs" />
 ```
 
 ## Добавление иконок
@@ -192,23 +185,36 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 1. Сохраните изображение в формате `.ico` (многие браузеры поддерживают и в более привычных форматах, таких как `.gif` или `.png`) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат `.ico`
 2. Добавьте ссылку на иконку в `<head>` документа:
 
-    ```html
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    ```
+   ```html
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   ```
 
 Для разных устройств можно указывать разные иконки. Например, на главной странице MDN:
 
 ```html
 <!-- Для iPad 3 с Retina-экраном высокого разрешения: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- Для iPhone с Retina-экраном высокого разрешения: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- Для iPad первого и второго поколения: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
-<link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- Для других случаев - обычный favicon -->
-<link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+<link
+  rel="shortcut icon"
+  href="https://developer.mozilla.org/static/img/favicon32.png" />
 ```
 
 В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
@@ -222,7 +228,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 - Элемент {{htmlelement("link")}} помещают в заголовок документа. У него есть два атрибута: `rel="stylesheet"` показывает, что мы указываем _стиль_ документа, а в `href` указан путь к файлу:
 
   ```html
-  <link rel="stylesheet" href="my-css-file.css">
+  <link rel="stylesheet" href="my-css-file.css" />
   ```
 
 - Элемент {{htmlelement("script")}} не обязательно находится в заголовке — на самом деле лучше поместить его в самом конце страницы, прямо перед закрывающем тегом `</body>`. Так браузер сначала отобразит саму страницу, а уже затем загрузит и запустит скрипт — иначе скрипт может обратиться к ещё не созданному элементу страницы и сломаться.

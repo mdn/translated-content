@@ -48,19 +48,17 @@ A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:
 
 ## Especificações
 
-| Especificação                                                                                                                            | Status                                   | Commentário        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-generateKey', 'SubtleCrypto.generateKey()') }} | {{ Spec2('Web Crypto API') }} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SubtleCrypto.generateKey")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

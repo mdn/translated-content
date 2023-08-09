@@ -1,7 +1,6 @@
 ---
 title: Texel
 slug: Glossary/Texel
-translation_of: Glossary/Texel
 ---
 
 Un **Texel** est un pixel unique dans une carte de texture, qui est une image qui est utilisée (en tout ou en partie) comme image présentée sur la surface d'un polygone dans une image rendue en part) 3D. Il ne doit pas être confondu avec le pixel qui est l'unité d'espace de l'écran. C'est l'une des principales différences entre Texel et pixels, les pixels sont des données d'image. Les composants Texel sont constitués de données subjecives, ils peuvent donc être une image aussi bien qu'une carte de profondeur.
@@ -14,7 +13,7 @@ Les textures sont caractérisées par des collections de Texel, comme la façon 
 
 ### Culture générale
 
-- [Texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) sur Wikipédia
+- [Texel](<https://fr.wikipedia.org/wiki/Texel_(infographie)>) sur Wikipédia
 
 ### Voir aussi
 

@@ -1,15 +1,6 @@
 ---
-title: '<datalist> : l''élément de liste des données'
+title: "<datalist> : l'élément de liste des données"
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/datalist
-browser-compat: html.elements.datalist
 ---
 
 {{HTMLSidebar}}
@@ -95,15 +86,17 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 ### HTML
 
 ```html
-<label for="monNavigateur">Veuillez choisir un navigateur parmi ceux-ci :</label>
-<input list="navigateurs" id="monNavigateur" name="monNavigateur"/>
+<label for="monNavigateur"
+  >Veuillez choisir un navigateur parmi ceux-ci :</label
+>
+<input list="navigateurs" id="monNavigateur" name="monNavigateur" />
 <datalist id="navigateurs">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 

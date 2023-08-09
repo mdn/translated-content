@@ -53,55 +53,25 @@ Dado o seguinte fragmento HTML:
 ... Você pode usar `textContent` para obter o conteúdo de texto do elemento:
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // Agora a variável de texto é: 'Isto é algum texto!'
 ```
 
 ... Ou definir o conteúdo de texto do elemento:
 
 ```js
-document.getElementById('divA').textContent = 'Este texto é diferente!';
+document.getElementById("divA").textContent = "Este texto é diferente!";
 // O HTML de divA agora é:
 // <div id="divA">Este texto é diferente!</div>
 ```
 
-## Polyfill para o IE8
+## Especificações
 
-```js
-// Fonte: Eli Grey @ https://eligrey.com/blog/post/textcontent-in-ie8
-if (Object.defineProperty
-  && Object.getOwnPropertyDescriptor
-  && Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
-  && !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
-  (function() {
-    var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
-    Object.defineProperty(Element.prototype, "textContent",
-     // Passando innerText ou innerText.get diretamente não funciona,
-     // Função wrapper(que envolve) é necessária.
-     {
-       get: function() {
-         return innerText.get.call(this);
-       },
-       set: function(s) {
-         return innerText.set.call(this, s);
-       }
-     }
-   );
-  })();
-}
-```
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Node.textContent")}}
-
-## Especificações
-
-| Specification                                                                                        | Status                           | Comment                 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Sem alterações vs. DOM4 |
-| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                         |
-| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Introduzida             |
+{{Compat}}
 
 ## Veja também
 

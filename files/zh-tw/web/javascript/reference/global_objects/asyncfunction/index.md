@@ -61,7 +61,7 @@ var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 var a = new AsyncFunction(
   "a",
   "b",
-  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);"
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);",
 );
 
 a(10, 20).then((v) => {

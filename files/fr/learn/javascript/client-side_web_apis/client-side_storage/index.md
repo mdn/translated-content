@@ -1,17 +1,6 @@
 ---
 title: Stockage côté client
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Apprendre
-  - Codage
-  - Débutant
-  - Guide
-  - IndexedDB
-  - JavaScript
-  - Storage
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}
@@ -103,30 +92,30 @@ Nous allons vous guider pas à pas :
 2. Ouvrez la console JavaScript de votre navigateur.
 3. Toutes les données du web storage sont contenues dans deux structures de type objet : {{domxref("Window.sessionStorage", "sessionStorage")}} et {{domxref("Window.localStorage", "localStorage")}}. Le premier conserve les données aussi longtemps que le navigateur est ouvert (elles sont perdues lorsque le navigateur est fermé) et le second conserve les données même après que le navigateur ait été fermé puis ré-ouvert. Nous allons utiliser le second dans cet article car il est généralement plus utile.
 
-    La méthode {{domxref("Storage.setItem()")}} permet de sauvegarder des données dans le storage — elle prend deux paramètres : le nom de l'entrée à enregistrer et sa valeur. Essayez de taper ce qui suit dans votre console JavaScript (changez le nom et la valeur si vous le voulez !) :
+   La méthode {{domxref("Storage.setItem()")}} permet de sauvegarder des données dans le storage — elle prend deux paramètres : le nom de l'entrée à enregistrer et sa valeur. Essayez de taper ce qui suit dans votre console JavaScript (changez le nom et la valeur si vous le voulez !) :
 
-    ```js
-    localStorage.setItem('name','Chris');
-    ```
+   ```js
+   localStorage.setItem("name", "Chris");
+   ```
 
 4. La méthode {{domxref("Storage.getItem()")}} prend un paramètre — le nom de l'entrée que vous voulez récupérer — et retourne la valeur de l'entrée. Maintenant, tapez ces lignes dans votre console JavaScript :
 
-    ```js
-    var myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   var myName = localStorage.getItem("name");
+   myName;
+   ```
 
-    En tapant la deuxième ligne, vous devriez voir que la variable `myName` contient la valeur de l'entrée `name`.
+   En tapant la deuxième ligne, vous devriez voir que la variable `myName` contient la valeur de l'entrée `name`.
 
 5. La méthode {{domxref("Storage.removeItem()")}} prend un paramètre — le nom de l'entrée de vous voulez supprimer — et supprime l'entrée du web storage. Tapez les lignes suivantes dans votre console JavaScript :
 
-    ```js
-    localStorage.removeItem('name');
-    var myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   localStorage.removeItem("name");
+   var myName = localStorage.getItem("name");
+   myName;
+   ```
 
-    La troisième ligne devrait maintenant retourner `null` — l'entrée `name` n'existe plus dans le web storage.
+   La troisième ligne devrait maintenant retourner `null` — l'entrée `name` n'existe plus dans le web storage.
 
 ### Les données persistent !
 
@@ -135,23 +124,23 @@ Une caractéristique clé du web storage est que les données persistent entre l
 1. Ouvrez notre template vide une fois de plus, mais cette fois dans un navigateur différent de celui dans lequel vous avez ouvert ce tutoriel. Cela rendra la suite plus facile.
 2. Tapez ces lignes dans la console JavaScript du navigateur que vous venez d'ouvrir :
 
-    ```js
-    localStorage.setItem('name','Chris');
-    var myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   localStorage.setItem("name", "Chris");
+   var myName = localStorage.getItem("name");
+   myName;
+   ```
 
-    Vous devriez voir que l'entrée `name` est bien là.
+   Vous devriez voir que l'entrée `name` est bien là.
 
 3. Maintenant, fermez le navigateur et ouvrez-le de nouveau.
 4. Entrez les lignes suivantes :
 
-    ```js
-    var myName = localStorage.getItem('name');
-    myName
-    ```
+   ```js
+   var myName = localStorage.getItem("name");
+   myName;
+   ```
 
-    Vous devriez voir que la valeur est toujours accessible, quand bien même le navigateur a été redémarré.
+   Vous devriez voir que la valeur est toujours accessible, quand bien même le navigateur a été redémarré.
 
 ### Stockage séparé pour chaque domaine
 
@@ -173,84 +162,88 @@ Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre
 2. Ensuite, créez un fichier `index.js` dans le même répertoire que le fichier HTML — le fichier HTML inclut ce script (voir ligne 40).
 3. Nous allons commencer par récupérer les références de tous les éléments HTML qu'on manipulera dans cet exemple — nous les créons en tant que constantes car ces références n'ont pas besoin d'être modifiées au cours de l'exécution de l'application. Ajoutez les lignes suivantes à votre fichier JavaScript:
 
-    ```js
-    // créer les constantes nécessaires
-    const rememberDiv = document.querySelector('.remember');
-    const forgetDiv = document.querySelector('.forget');
-    const form = document.querySelector('form');
-    const nameInput = document.querySelector('#entername');
-    const submitBtn = document.querySelector('#submitname');
-    const forgetBtn = document.querySelector('#forgetname');
+   ```js
+   // créer les constantes nécessaires
+   const rememberDiv = document.querySelector(".remember");
+   const forgetDiv = document.querySelector(".forget");
+   const form = document.querySelector("form");
+   const nameInput = document.querySelector("#entername");
+   const submitBtn = document.querySelector("#submitname");
+   const forgetBtn = document.querySelector("#forgetname");
 
-    const h1 = document.querySelector('h1');
-    const personalGreeting = document.querySelector('.personal-greeting');
-    ```
+   const h1 = document.querySelector("h1");
+   const personalGreeting = document.querySelector(".personal-greeting");
+   ```
 
 4. Ensuite, on doit ajouter un gestionnaire d'événement pour empêcher le formulaire d'être véritablement soumis lorsque le bouton de soumission est cliqué, puisque ce n'est pas le comportement que l'on veut. Ajoutez le bout de code suivant à la suite de du code précédent :
 
-    ```js
-    // Empêcher le form d'être soumis
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-    });
-    ```
+   ```js
+   // Empêcher le form d'être soumis
+   form.addEventListener("submit", function (e) {
+     e.preventDefault();
+   });
+   ```
 
 5. Maintenant, on doit ajouter un gestionnaire d'événement pour gérer le clic sur le bouton "Say hello" (dire bonjour). Les commentaires expliquent ce que chaque instruction fait, mais, en substance, on prend le nom que l'utilisateur a entré dans le champs texte et on l'enregistre dans le web storage avec `setItem()`. Ensuite, on exécute une fonction appelée `nameDisplayCheck()` qui se charge de mettre à jour le contenu du site web. Ajoutez ceci au bas de votre code :
 
-    ```js
-    // exécuter la fonction quand le bouton 'Say hello' est cliqué
-    submitBtn.addEventListener('click', function() {
-      // stocker le nom entré dans le web storage
-      localStorage.setItem('name', nameInput.value);
-      // exécuter nameDisplayCheck() pour afficher la
-      // page personnalisée et changer le formulaire
-      nameDisplayCheck();
-    });
-    ```
+   ```js
+   // exécuter la fonction quand le bouton 'Say hello' est cliqué
+   submitBtn.addEventListener("click", function () {
+     // stocker le nom entré dans le web storage
+     localStorage.setItem("name", nameInput.value);
+     // exécuter nameDisplayCheck() pour afficher la
+     // page personnalisée et changer le formulaire
+     nameDisplayCheck();
+   });
+   ```
 
 6. On doit maintenant gérer l'événement lorsque le bouton "Forget" (oublier) est cliqué — il est affiché une fois que le bouton "Say hello" a été cliqué (les deux boutons permettent de basculer d'un état à l'autre). Dans cette fonction, on supprime l'élément `name` du web storage en utilisant `removeItem()`, puis on exécute `nameDisplayCheck()` pour mettre à jour l'affichage. Ajoutez ceci au bas de votre code :
 
-    ```js
-    // exécuter la fonction quand le bouton 'Forget' est cliqué
-    forgetBtn.addEventListener('click', function() {
-      // supprimer l'item name du web storage
-      localStorage.removeItem('name');
+   ```js
+   // exécuter la fonction quand le bouton 'Forget' est cliqué
+   forgetBtn.addEventListener("click", function () {
+     // supprimer l'item name du web storage
+     localStorage.removeItem("name");
      // exécuter nameDisplayCheck() pour afficher la
      // page personnalisée et changer le formulaire
-      nameDisplayCheck();
-    });
-    ```
+     nameDisplayCheck();
+   });
+   ```
 
 7. Il est maintenant temps de définir la fonction `nameDisplayCheck()` elle-même. Ici, on vérifie si l'élément `name` est stocké dans le web storage en utilisant `localStorage.getItem('name')` comme condition. S'il existe, la valeur retournée sera évaluée à `true`; sinon, comme `false`. S'il existe, on affiche un message d'accueil personnalisé et le bouton "Forget" du formulaire, tout en masquant le bouton "Say hello" du formulaire. Sinon, on affiche un message d'accueil générique et le bouton "Say hello". Encore une fois, mettez les lignes suivantes au bas de votre code :
 
-    ```js
-    // définit la fonction nameDisplayCheck()
-    function nameDisplayCheck() {
-      // vérifie si l'élément 'name' est stocké dans le web storage
-      if(localStorage.getItem('name')) {
-        // Si c'est le cas, affiche un accueil personnalisé
-        let name = localStorage.getItem('name');
-        h1.textContent = 'Welcome, ' + name;
-        personalGreeting.textContent = 'Welcome to our website, ' + name + '! We hope you have fun while you are here.';
-        // cache la partie 'remember' du formulaire et affiche la partie 'forget'
-        forgetDiv.style.display = 'block';
-        rememberDiv.style.display = 'none';
-      } else {
-        // Sinon, affiche un accueil générique
-        h1.textContent = 'Welcome to our website ';
-        personalGreeting.textContent = 'Welcome to our website. We hope you have fun while you are here.';
-        // cache la partie 'forget' du formulaire et affiche la partie 'remember'
-        forgetDiv.style.display = 'none';
-        rememberDiv.style.display = 'block';
-      }
-    }
-    ```
+   ```js
+   // définit la fonction nameDisplayCheck()
+   function nameDisplayCheck() {
+     // vérifie si l'élément 'name' est stocké dans le web storage
+     if (localStorage.getItem("name")) {
+       // Si c'est le cas, affiche un accueil personnalisé
+       let name = localStorage.getItem("name");
+       h1.textContent = "Welcome, " + name;
+       personalGreeting.textContent =
+         "Welcome to our website, " +
+         name +
+         "! We hope you have fun while you are here.";
+       // cache la partie 'remember' du formulaire et affiche la partie 'forget'
+       forgetDiv.style.display = "block";
+       rememberDiv.style.display = "none";
+     } else {
+       // Sinon, affiche un accueil générique
+       h1.textContent = "Welcome to our website ";
+       personalGreeting.textContent =
+         "Welcome to our website. We hope you have fun while you are here.";
+       // cache la partie 'forget' du formulaire et affiche la partie 'remember'
+       forgetDiv.style.display = "none";
+       rememberDiv.style.display = "block";
+     }
+   }
+   ```
 
 8. Dernier point, mais non des moindres, on exécute la fonction `nameDisplayCheck()` à chaque fois que la page est chargée. Si on ne le faisait pas, l'accueil personnalisé ne serait pas affiché après qu'on ait rafraichit la page. Ajoutez ce qui suit au bas de votre code :
 
-    ```js
-    document.body.onload = nameDisplayCheck;
-    ```
+   ```js
+   document.body.onload = nameDisplayCheck;
+   ```
 
 Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregistrer votre code et tester votre page HTML dans un navigateur. Vous pouvez voir notre [version terminée en direct ici](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html) (ou le [code JavaScript terminé](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/index.js)).
 
@@ -279,9 +272,9 @@ Chaque note a un titre et une description, chacun éditables individuellement. L
 1. Tout d'abord, copiez les fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), et [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) dans un nouveau répertoire sur votre ordinateur.
 2. Jetez un coup d'oeil aux fichiers.
 
-    - Vous verrez que le HTML est assez simple : un site web avec une entête et un pied de page, ainsi qu'une zone de contenu principal contenant un emplacement pour afficher les notes et un formulaire pour en ajouter.
-    - Le CSS fournit un style simple pour rendre plus clair ce qu'il se passe.
-    - Le fichier JavaScript contient cinq constantes déclarées — des références à l'élément {{htmlelement("ul")}} dans lequel seront affichées les notes, les {{htmlelement("input")}} title et body, le {{htmlelement("form")}} lui-même, et un {{htmlelement("button")}}.
+   - Vous verrez que le HTML est assez simple : un site web avec une entête et un pied de page, ainsi qu'une zone de contenu principal contenant un emplacement pour afficher les notes et un formulaire pour en ajouter.
+   - Le CSS fournit un style simple pour rendre plus clair ce qu'il se passe.
+   - Le fichier JavaScript contient cinq constantes déclarées — des références à l'élément {{htmlelement("ul")}} dans lequel seront affichées les notes, les {{htmlelement("input")}} title et body, le {{htmlelement("form")}} lui-même, et un {{htmlelement("button")}}.
 
 3. Renommez votre fichier JavaScript en `index.js`. Vous êtes maintenant prêt pour y ajouter du code.
 
@@ -291,88 +284,89 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
 1. À la suite des déclarations de constantes, ajoutez les lignes suivantes :
 
-    ```js
-    // Objet db pour stocker la BDD ouverte
-    let db;
-    ```
+   ```js
+   // Objet db pour stocker la BDD ouverte
+   let db;
+   ```
 
-    Ici, on déclare une variable appelée `db` — on l'utilisera plus tard pour stocker un objet permettant d'accéder à la base de données. On l'utilisera à plusieurs endroits, on l'a donc déclaré globablement ici pour faciliter les choses.
+   Ici, on déclare une variable appelée `db` — on l'utilisera plus tard pour stocker un objet permettant d'accéder à la base de données. On l'utilisera à plusieurs endroits, on l'a donc déclaré globablement ici pour faciliter les choses.
 
 2. Ensuite, ajoutez ce qui suit au bas de votre code :
 
-    ```js
-    window.onload = function() {
+   ```js
+   window.onload = function () {};
+   ```
 
-    };
-    ```
-
-    On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement [`load`](/fr//docs/Web/API/Window/load_event) de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
+   On écrira tout notre code dans le gestionnaire d'événement `window.onload`, appelé quand l'événement [`load`](/fr//docs/Web/API/Window/load_event) de la fenêtre est chargé, pour s'assurer qu'on n'essaiera pas d'utiliser IndexedDB avant que l'application ne soit complètement chargée (ça ne marcherait pas sinon).
 
 3. À l'intérieur de `window.onload`, ajoutez ce qui suit :
 
-    ```js
-    // Ouvrir la BDD; elle sera créée si elle n'existe pas déjà
-    // (voir onupgradeneeded)
-    let request = window.indexedDB.open('notes', 1);
-    ```
+   ```js
+   // Ouvrir la BDD; elle sera créée si elle n'existe pas déjà
+   // (voir onupgradeneeded)
+   let request = window.indexedDB.open("notes", 1);
+   ```
 
-    Cette ligne crée une requête `request` pour ouvrir la version `1` de la base de données appelée `notes`. Si elle n'existe pas déjà, on devra la créer via un gestionnaire d'événement.
+   Cette ligne crée une requête `request` pour ouvrir la version `1` de la base de données appelée `notes`. Si elle n'existe pas déjà, on devra la créer via un gestionnaire d'événement.
 
-    Vous verrez très souvent ce format dans IndexedDB. Les opérations de base de données prennent du temps et on ne veut pas suspendre le navigateur le temps de récupérer le résultat, les opérations sur la base de données sont donc {{Glossary("asynchronous", "asynchrones")}} — ce qui signifie qu'au lieu d'arriver immédiatement, elles se produiront à un moment ultérieur et un événement sera déclenché lorsque cela arrivera.
+   Vous verrez très souvent ce format dans IndexedDB. Les opérations de base de données prennent du temps et on ne veut pas suspendre le navigateur le temps de récupérer le résultat, les opérations sur la base de données sont donc {{Glossary("asynchronous", "asynchrones")}} — ce qui signifie qu'au lieu d'arriver immédiatement, elles se produiront à un moment ultérieur et un événement sera déclenché lorsque cela arrivera.
 
-    Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle `request` pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.
+   Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle `request` pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.
 
-    > **Note :** Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
+   > **Note :** Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
 
 4. Maintenant, ajoutez les gestionnaires d'événement suivants, juste en dessous des lignes précédentes — toujours à l'intérieur de `window.onload`&nbsp;:
 
-    ```js
-    // la base de données n'a pas pu être ouverte avec succès
-    request.onerror = function() {
-      console.log('Database failed to open');
-    };
+   ```js
+   // la base de données n'a pas pu être ouverte avec succès
+   request.onerror = function () {
+     console.log("Database failed to open");
+   };
 
-    // la base de données a été ouverte avec succès
-    request.onsuccess = function() {
-      console.log('Database opened successfully');
+   // la base de données a été ouverte avec succès
+   request.onsuccess = function () {
+     console.log("Database opened successfully");
 
-      // Stocke la base de données ouverte dans la variable db. On l'utilise par la suite
-      db = request.result;
+     // Stocke la base de données ouverte dans la variable db. On l'utilise par la suite
+     db = request.result;
 
-      // Exécute la fonction displayData() pour afficher les notes qui sont dans la BDD
-      displayData();
-    };
-    ```
+     // Exécute la fonction displayData() pour afficher les notes qui sont dans la BDD
+     displayData();
+   };
+   ```
 
-    Le gestionnaire d'événement {{domxref("IDBRequest.onerror", "request.onerror")}} s'exécutera si la requête échoue. Cela vous permet de gérer le problème si cela arrive. Dans notre exemple, on affiche simplement un message dans la console JavaScript.
+   Le gestionnaire d'événement {{domxref("IDBRequest.onerror", "request.onerror")}} s'exécutera si la requête échoue. Cela vous permet de gérer le problème si cela arrive. Dans notre exemple, on affiche simplement un message dans la console JavaScript.
 
-    Le gestionnare d'événement {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, d'autre part, s'exécutera si la requête aboutit, que la base de données a été ouverte avec succès. Lorsque cela arrive, la propriété {{domxref("IDBRequest.result", "request.result")}} contient alors un objet représentant la base de données ouverte, qui nous permet de la manipuler. On stocke cette valeur dans la variable `db` qu'on a crée plus tôt pour pouvoir l'utiliser ensuite. On exécute également une fonction appelée `displayData()`, qu'on définira plus tard — elle affiche les données de la base de données dans le {{HTMLElement("ul")}}. On l'exécute dès à présent pour que les notes en base de données soient affichées dès que la page est chargée.
+   Le gestionnare d'événement {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, d'autre part, s'exécutera si la requête aboutit, que la base de données a été ouverte avec succès. Lorsque cela arrive, la propriété {{domxref("IDBRequest.result", "request.result")}} contient alors un objet représentant la base de données ouverte, qui nous permet de la manipuler. On stocke cette valeur dans la variable `db` qu'on a crée plus tôt pour pouvoir l'utiliser ensuite. On exécute également une fonction appelée `displayData()`, qu'on définira plus tard — elle affiche les données de la base de données dans le {{HTMLElement("ul")}}. On l'exécute dès à présent pour que les notes en base de données soient affichées dès que la page est chargée.
 
 5. Pour en finir avec cette section, on ajoute le gestionnaire d'événement qui est probablement le plus important, {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. Il est exécuté si la base de données n'a pas déjà été créée ou si on veut ouvrir la base de données avec un numéro de version supérieur à celle qui existe (pour faire une mise à jour). Ajoutez le code suivant en dessous de votre gestionnaire précédent :
 
-    ```js
-    // Spécifie les tables de la BDD si ce n'est pas déjà pas fait
-    request.onupgradeneeded = function(e) {
-      // Récupère une référence à la BDD ouverte
-      let db = e.target.result;
+   ```js
+   // Spécifie les tables de la BDD si ce n'est pas déjà pas fait
+   request.onupgradeneeded = function (e) {
+     // Récupère une référence à la BDD ouverte
+     let db = e.target.result;
 
-      // Crée un objectStore pour stocker nos notes (une table)
-      // Avec un champ qui s'auto-incrémente comme clé
-      let objectStore = db.createObjectStore('notes', { keyPath: 'id', autoIncrement:true });
+     // Crée un objectStore pour stocker nos notes (une table)
+     // Avec un champ qui s'auto-incrémente comme clé
+     let objectStore = db.createObjectStore("notes", {
+       keyPath: "id",
+       autoIncrement: true,
+     });
 
-      // Définit les champs que l'objectStore contient
-      objectStore.createIndex('title', 'title', { unique: false });
-      objectStore.createIndex('body', 'body', { unique: false });
+     // Définit les champs que l'objectStore contient
+     objectStore.createIndex("title", "title", { unique: false });
+     objectStore.createIndex("body", "body", { unique: false });
 
-      console.log('Database setup complete');
-    };
-    ```
+     console.log("Database setup complete");
+   };
+   ```
 
-    C'est ici qu'on définit le schéma (la structure) de notre base de données; c'est à dire l'ensemble des champs (ou colonnes) qu'il contient.
+   C'est ici qu'on définit le schéma (la structure) de notre base de données; c'est à dire l'ensemble des champs (ou colonnes) qu'il contient.
 
-    1. On récupère une référence à la base de données existante depuis `e.target.result` (la propriété `result` de la cible de l'événement, c'est à dire l'objet `request`). C'est l'équivalent de la ligne `db = request.result;` du gestionnaire d'événement `onsuccess`, mais on doit le faire de cette manière ici puisque le gestionnaire d'événement `onupgradeneeded` est exécuté avant `onsuccess` — la valeur de `db` n'est pas encore disponible.
-    2. Ensuite, on utilise {{domxref("IDBDatabase.createObjectStore()")}} pour créer un object store (un container pour une collection d'objets) à l'intérieur de notre base de données. C'est l'équivalent d'une table dans un système de base de données traditionnel. On lui a donné le nom `notes`, et un champs `id` avec `autoIncrement` — pour chaque nouvelle entrée dans cette table, une valeur auto-incrementée sera attributée au champ `id` sans que le développeur n'ait à le définir. Le champ `id` est la clé de l'object store: il sera utilisé pour identifier de manière unique les entrées, permettant de les mettre à jour ou les supprimer.
-    3. On crée deux autres index (champs) en utilisant la méthode {{domxref("IDBObjectStore.createIndex()")}}: `title` (qui contiendra le titre de chaque note), et `body` (qui contiendra la description de chaque note).
+   1. On récupère une référence à la base de données existante depuis `e.target.result` (la propriété `result` de la cible de l'événement, c'est à dire l'objet `request`). C'est l'équivalent de la ligne `db = request.result;` du gestionnaire d'événement `onsuccess`, mais on doit le faire de cette manière ici puisque le gestionnaire d'événement `onupgradeneeded` est exécuté avant `onsuccess` — la valeur de `db` n'est pas encore disponible.
+   2. Ensuite, on utilise {{domxref("IDBDatabase.createObjectStore()")}} pour créer un object store (un container pour une collection d'objets) à l'intérieur de notre base de données. C'est l'équivalent d'une table dans un système de base de données traditionnel. On lui a donné le nom `notes`, et un champs `id` avec `autoIncrement` — pour chaque nouvelle entrée dans cette table, une valeur auto-incrementée sera attributée au champ `id` sans que le développeur n'ait à le définir. Le champ `id` est la clé de l'object store: il sera utilisé pour identifier de manière unique les entrées, permettant de les mettre à jour ou les supprimer.
+   3. On crée deux autres index (champs) en utilisant la méthode {{domxref("IDBObjectStore.createIndex()")}}: `title` (qui contiendra le titre de chaque note), et `body` (qui contiendra la description de chaque note).
 
 Avec ce simple schéma de base de données en place, on va pouvoir ajouter des entrées à la base de données, des objets qui ressembleront à ça :
 
@@ -390,62 +384,62 @@ Maintenant, voyons comment ajouter des entrées dans la base de données. On le 
 
 1. À la suite du gestionnaire d'événement précédent (mais toujours dans `window.onload`), ajoutez la ligne suivante — elle définit un gestionnaire d'événement `onsubmit` pour exécuter la fonction `addData()` quand le formulaire est soumis (que le {{htmlelement("button")}} envoyer est pressé et que les champs du formulaire sont valides) :
 
-    ```js
-    // Créer un gestionnaire onsubmit pour appeler la fonction addData() quand le formulaire est soumis
-    form.onsubmit = addData;
-    ```
+   ```js
+   // Créer un gestionnaire onsubmit pour appeler la fonction addData() quand le formulaire est soumis
+   form.onsubmit = addData;
+   ```
 
 2. Maintenant, définissons la fonction `addData()`. Ajoutez ce qui suit après la ligne précédente :
 
-    ```js
-    // Définit la fonction addData()
-    function addData(e) {
-      // empêcher le formulaire d'être soumis vers le serveur
-      e.preventDefault();
+   ```js
+   // Définit la fonction addData()
+   function addData(e) {
+     // empêcher le formulaire d'être soumis vers le serveur
+     e.preventDefault();
 
-      // récupérer les valeurs entrées dans les champs du formulaire
-      // et les stocker dans un objet qui sera inséré en BDD
-      let newItem = { title: titleInput.value, body: bodyInput.value };
+     // récupérer les valeurs entrées dans les champs du formulaire
+     // et les stocker dans un objet qui sera inséré en BDD
+     let newItem = { title: titleInput.value, body: bodyInput.value };
 
-      // ouvrir une transaction en lecture/écriture
-      let transaction = db.transaction(['notes'], 'readwrite');
+     // ouvrir une transaction en lecture/écriture
+     let transaction = db.transaction(["notes"], "readwrite");
 
-      // récupérer l'object store de la base de données qui a été ouvert avec la transaction
-      let objectStore = transaction.objectStore('notes');
+     // récupérer l'object store de la base de données qui a été ouvert avec la transaction
+     let objectStore = transaction.objectStore("notes");
 
-      // demander l'ajout de notre nouvel objet à l'object store
-      var request = objectStore.add(newItem);
-      request.onsuccess = function() {
-        // vider le formulaire, pour qu'il soit prêt pour un nouvel ajout
-        titleInput.value = '';
-        bodyInput.value = '';
-      };
+     // demander l'ajout de notre nouvel objet à l'object store
+     var request = objectStore.add(newItem);
+     request.onsuccess = function () {
+       // vider le formulaire, pour qu'il soit prêt pour un nouvel ajout
+       titleInput.value = "";
+       bodyInput.value = "";
+     };
 
-      // attendre la fin de la transaction, quand l'ajout a été effectué
-      transaction.oncomplete = function() {
-        console.log('Transaction completed: database modification finished.');
+     // attendre la fin de la transaction, quand l'ajout a été effectué
+     transaction.oncomplete = function () {
+       console.log("Transaction completed: database modification finished.");
 
-        // mettre à jour l'affichage pour montrer le nouvel item en exécutant displayData()
-        displayData();
-      };
+       // mettre à jour l'affichage pour montrer le nouvel item en exécutant displayData()
+       displayData();
+     };
 
-      transaction.onerror = function() {
-        console.log('Transaction not opened due to error');
-      };
-    }
-    ```
+     transaction.onerror = function () {
+       console.log("Transaction not opened due to error");
+     };
+   }
+   ```
 
-    C'est assez complexe, voyons ça pas à pas :
+   C'est assez complexe, voyons ça pas à pas :
 
-    1. On exécute {{domxref("Event.preventDefault()")}} sur l'objet événement pour empêcher le formulaire d'être véritablement soumis (cela provoquerait une actualisation de la page et gâcherait l'expérience utilisateur).
-    2. On crée un objet représentant une entrée à ajouter dans la base de données, en le remplissant avec les valeurs des champs du formulaire. Notez qu'on n'a pas besoin d'inclure explicitement une valeur `id` — comme nous l'avons précédemment expliqué, il est auto-rempli.
-    3. On ouvre une transaction en lecture/écritre (`readwrite`) sur l'object store `notes` en utilisant la méthode {{domxref("IDBDatabase.transaction()")}}. Cet object transaction va nous permettre d'accéder à l'object store, pour ajouter une nouvelle entrée par exemple.
-    4. On récupère l'object store de la transaction avec la méthode {{domxref("IDBTransaction.objectStore()")}} et on le stocke dans la variable `objectStore`.
-    5. On ajoute un nouvel enregistrement à la base de données en utilisant {{domxref("IDBObjectStore.add()")}}. Cela crée une requête, sur le même principe qu'on a déjà vu.
-    6. On ajoute des gestionnaires d'événement à `request` et `transaction` pour exécuter du code aux points importants de leur cycle de vie :
+   1. On exécute {{domxref("Event.preventDefault()")}} sur l'objet événement pour empêcher le formulaire d'être véritablement soumis (cela provoquerait une actualisation de la page et gâcherait l'expérience utilisateur).
+   2. On crée un objet représentant une entrée à ajouter dans la base de données, en le remplissant avec les valeurs des champs du formulaire. Notez qu'on n'a pas besoin d'inclure explicitement une valeur `id` — comme nous l'avons précédemment expliqué, il est auto-rempli.
+   3. On ouvre une transaction en lecture/écritre (`readwrite`) sur l'object store `notes` en utilisant la méthode {{domxref("IDBDatabase.transaction()")}}. Cet object transaction va nous permettre d'accéder à l'object store, pour ajouter une nouvelle entrée par exemple.
+   4. On récupère l'object store de la transaction avec la méthode {{domxref("IDBTransaction.objectStore()")}} et on le stocke dans la variable `objectStore`.
+   5. On ajoute un nouvel enregistrement à la base de données en utilisant {{domxref("IDBObjectStore.add()")}}. Cela crée une requête, sur le même principe qu'on a déjà vu.
+   6. On ajoute des gestionnaires d'événement à `request` et `transaction` pour exécuter du code aux points importants de leur cycle de vie :
 
-        - Quand la requête a réussit, on efface les champs du formulaire — pour pouvoir ajouter une nouvelle note
-        - Quand la transaction est terminé, on réexécute la fonction `displayData()` — pour mettre à jour l'affichage de notes sur la page.
+      - Quand la requête a réussit, on efface les champs du formulaire — pour pouvoir ajouter une nouvelle note
+      - Quand la transaction est terminé, on réexécute la fonction `displayData()` — pour mettre à jour l'affichage de notes sur la page.
 
 ### Afficher les données
 
@@ -462,17 +456,17 @@ function displayData() {
 
   // Ouvre l'object store puis récupère un curseur - qui va nous permettre d'itérer
   // sur les entrées de l'object store
-  let objectStore = db.transaction('notes').objectStore('notes');
-  objectStore.openCursor().onsuccess = function(e) {
+  let objectStore = db.transaction("notes").objectStore("notes");
+  objectStore.openCursor().onsuccess = function (e) {
     // Récupère une référence au curseur
     let cursor = e.target.result;
 
     // S'il reste des entrées sur lesquelles itérer, on exécute ce code
-    if(cursor) {
+    if (cursor) {
       // Crée un li, h3, et p pour mettre les données de l'entrée puis les ajouter à la liste
-      let listItem = document.createElement('li');
-      let h3 = document.createElement('h3');
-      let para = document.createElement('p');
+      let listItem = document.createElement("li");
+      let h3 = document.createElement("h3");
+      let para = document.createElement("p");
 
       listItem.appendChild(h3);
       listItem.appendChild(para);
@@ -484,12 +478,12 @@ function displayData() {
 
       // Met l'ID de l'entrée dans un attribut du li, pour savoir à quelle entrée il correspond
       // Ce sera utile plus tard pour pouvoir supprimer des entrées
-      listItem.setAttribute('data-note-id', cursor.value.id);
+      listItem.setAttribute("data-note-id", cursor.value.id);
 
       // Crée un bouton et le place dans le li
-      let deleteBtn = document.createElement('button');
+      let deleteBtn = document.createElement("button");
       listItem.appendChild(deleteBtn);
-      deleteBtn.textContent = 'Delete';
+      deleteBtn.textContent = "Delete";
 
       // Définit un gestionnaire d'événement pour appeler deleteItem() quand le bouton supprimer est cliqué
       deleteBtn.onclick = deleteItem;
@@ -498,13 +492,13 @@ function displayData() {
       cursor.continue();
     } else {
       // Si la liste est vide, affiche un message "Aucune note n'existe"
-      if(!list.firstChild) {
-        let listItem = document.createElement('li');
-        listItem.textContent = 'No notes stored.';
+      if (!list.firstChild) {
+        let listItem = document.createElement("li");
+        listItem.textContent = "No notes stored.";
         list.appendChild(listItem);
       }
       // Il n'y a plus d'entrées dans le curseur
-      console.log('Notes all displayed');
+      console.log("Notes all displayed");
     }
   };
 }
@@ -530,24 +524,24 @@ function deleteItem(e) {
   // Récupère l'id de l'entrée que l'on veut supprimer
   // On doit le convertir en nombre avant d'essayer de récupérer l'entrée correspondante dans IDB
   // les clés sont sensibles à la casse
-  let noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
+  let noteId = Number(e.target.parentNode.getAttribute("data-note-id"));
 
   // Ouvre une transaction et supprime la note ayant l'id récupéré ci-dessus
-  let transaction = db.transaction(['notes'], 'readwrite');
-  let objectStore = transaction.objectStore('notes');
+  let transaction = db.transaction(["notes"], "readwrite");
+  let objectStore = transaction.objectStore("notes");
   let request = objectStore.delete(noteId);
 
   // Indique à l'utilisateur que l'entrée a été supprimée
-  transaction.oncomplete = function() {
+  transaction.oncomplete = function () {
     // supprime l'élément parent du bouton, le li
     // pour qu'il ne soit plus affiché
     e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-    console.log('Note ' + noteId + ' deleted.');
+    console.log("Note " + noteId + " deleted.");
 
     // Si la liste est vide, affiche un message qui l'indique
-    if(!list.firstChild) {
-      let listItem = document.createElement('li');
-      listItem.textContent = 'No notes stored.';
+    if (!list.firstChild) {
+      let listItem = document.createElement("li");
+      listItem.textContent = "No notes stored.";
       list.appendChild(listItem);
     }
   };
@@ -572,111 +566,115 @@ Passons en revue les parties les plus intéressantes de l'exemple. Nous ne regar
 
 1. Pour cet exemple, nous avons stocké le nom des vidéos à récupérer dans un tableau d'objets :
 
-    ```js
-    const videos = [
-      { 'name' : 'crystal' },
-      { 'name' : 'elf' },
-      { 'name' : 'frog' },
-      { 'name' : 'monster' },
-      { 'name' : 'pig' },
-      { 'name' : 'rabbit' }
-    ];
-    ```
+   ```js
+   const videos = [
+     { name: "crystal" },
+     { name: "elf" },
+     { name: "frog" },
+     { name: "monster" },
+     { name: "pig" },
+     { name: "rabbit" },
+   ];
+   ```
 
 2. Pour commencer, une fois que la base de données a été ouverte, on exécute la fonction `init()`. Elle boucle sur les noms des vidéos et essaie de charger l'entrée correspondante dans la base de données `videos`.
 
-    On peut facilement vérifier si une entrée a été trouvée en vérifiant si `request.result` est évalué à `true` — si l'entrée n'est pas présente, la valeur retournée est `undefined`.
+   On peut facilement vérifier si une entrée a été trouvée en vérifiant si `request.result` est évalué à `true` — si l'entrée n'est pas présente, la valeur retournée est `undefined`.
 
-    Les vidéos présentes en base de données (stockées sous formes de blobs), sont directement passées à la fonction `displayVideo()` pour les afficher dans l'interface utilisateur. Pour les vidéos non présentes, on appelle la fonction `fetchVideoFromNetwork()`, qui récupère la vidéo à partir du réseau.
+   Les vidéos présentes en base de données (stockées sous formes de blobs), sont directement passées à la fonction `displayVideo()` pour les afficher dans l'interface utilisateur. Pour les vidéos non présentes, on appelle la fonction `fetchVideoFromNetwork()`, qui récupère la vidéo à partir du réseau.
 
-    ```js
-    function init() {
-      // Boucle sur les vidéos une par une
-      for(let i = 0; i < videos.length; i++) {
-        // Ouvre une transaction, récupère l'object store, et récupère chaque video par son nom
-        let objectStore = db.transaction('videos').objectStore('videos');
-        let request = objectStore.get(videos[i].name);
-        request.onsuccess = function() {
-          // Si l'entrée existe dans la BDD (le résultat n'est pas undefined)
-          if(request.result) {
-            // Affiche la vidéo en utilisant displayVideo()
-            console.log('taking videos from IDB');
-            displayVideo(request.result.mp4, request.result.webm, request.result.name);
-          } else {
-            // Récupère la vidéo à partir du réseau
-            fetchVideoFromNetwork(videos[i]);
-          }
-        };
-      }
-    }
-    ```
+   ```js
+   function init() {
+     // Boucle sur les vidéos une par une
+     for (let i = 0; i < videos.length; i++) {
+       // Ouvre une transaction, récupère l'object store, et récupère chaque video par son nom
+       let objectStore = db.transaction("videos").objectStore("videos");
+       let request = objectStore.get(videos[i].name);
+       request.onsuccess = function () {
+         // Si l'entrée existe dans la BDD (le résultat n'est pas undefined)
+         if (request.result) {
+           // Affiche la vidéo en utilisant displayVideo()
+           console.log("taking videos from IDB");
+           displayVideo(
+             request.result.mp4,
+             request.result.webm,
+             request.result.name,
+           );
+         } else {
+           // Récupère la vidéo à partir du réseau
+           fetchVideoFromNetwork(videos[i]);
+         }
+       };
+     }
+   }
+   ```
 
 3. Le bout de code qui suit est extrait de la fonction `fetchVideoFromNetwork()` — ici, on récupère les versions MP4 et WebM de la vidéos en utilisant deux requêtes {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} distinctes. On utilise ensuite la méthode {{domxref("blob()", "Body.blob()")}} pour extraire la réponse sous forme de blob, ce qui nous donne une représentation objet de la vidéo que l'on peut stocker et afficher plus tard.
 
-    Il reste cependant un problème — ces deux requêtes sont asynchrones et ont veut afficher/stocker la vidéo uniquement lorsque les deux promesses sont résolues. Heureusement, il existe une méthode native qui gère ce problème — {{jsxref("Promise.all()")}}. Elle prend un argument — la liste de toutes les promesses qui doivent être attendues — et retourne elle-même une promesse. Quand toutes les promesses sont résolues, alors la promesse de la méthode `all()` est résolue, avec pour valeur un tableau contenant toutes les valeurs individuelles retournées par les promesses.
+   Il reste cependant un problème — ces deux requêtes sont asynchrones et ont veut afficher/stocker la vidéo uniquement lorsque les deux promesses sont résolues. Heureusement, il existe une méthode native qui gère ce problème — {{jsxref("Promise.all()")}}. Elle prend un argument — la liste de toutes les promesses qui doivent être attendues — et retourne elle-même une promesse. Quand toutes les promesses sont résolues, alors la promesse de la méthode `all()` est résolue, avec pour valeur un tableau contenant toutes les valeurs individuelles retournées par les promesses.
 
-    À l'intérieur du bloc `all()`, vous pouvez voir qu'on appelle la fonction `displayVideo()`, comme on l'a fait précédemment, pour afficher les vidéos dans l'interface utilisateur, puis la fonction `storeVideo()` pour stocker ces vidéos dans la base de données.
+   À l'intérieur du bloc `all()`, vous pouvez voir qu'on appelle la fonction `displayVideo()`, comme on l'a fait précédemment, pour afficher les vidéos dans l'interface utilisateur, puis la fonction `storeVideo()` pour stocker ces vidéos dans la base de données.
 
-    ```js
-    let mp4Blob = fetch('videos/' + video.name + '.mp4').then(response =>
-      response.blob()
-    );
-    let webmBlob = fetch('videos/' + video.name + '.webm').then(response =>
-      response.blob()
-    );
+   ```js
+   let mp4Blob = fetch("videos/" + video.name + ".mp4").then((response) =>
+     response.blob(),
+   );
+   let webmBlob = fetch("videos/" + video.name + ".webm").then((response) =>
+     response.blob(),
+   );
 
-    // Exécuter le bloc de code suivant lorsque les deux promesses sont résolues
-    Promise.all([mp4Blob, webmBlob]).then(function(values) {
-      // Afficher la vidéo récupérée à partir du réseau avec displayVideo()
-      displayVideo(values[0], values[1], video.name);
-      // La stocker dans IDB avec storeVideo()
-      storeVideo(values[0], values[1], video.name);
-    });
-    ```
+   // Exécuter le bloc de code suivant lorsque les deux promesses sont résolues
+   Promise.all([mp4Blob, webmBlob]).then(function (values) {
+     // Afficher la vidéo récupérée à partir du réseau avec displayVideo()
+     displayVideo(values[0], values[1], video.name);
+     // La stocker dans IDB avec storeVideo()
+     storeVideo(values[0], values[1], video.name);
+   });
+   ```
 
 4. Regardons `storeVideo()` en premier. Cela ressemble beaucoup à ce qu'on a fait dans l'exemple précédent pour ajouter des données à la base de données — on ouvre une transaction en lecture/écriture et on récupère l'object store de `videos`, on crée un objet à ajouter à la base de données et on l'ajoute avec {{domxref("IDBObjectStore.add()")}}.
 
-    ```js
-    function storeVideo(mp4Blob, webmBlob, name) {
-      // Ouvre une transaction, récupère object store
-      let objectStore = db.transaction(['videos'], 'readwrite').objectStore('videos');
-      // Crée une entrée à ajouter à IDB
-      let record = {
-        mp4 : mp4Blob,
-        webm : webmBlob,
-        name : name
-      }
+   ```js
+   function storeVideo(mp4Blob, webmBlob, name) {
+     // Ouvre une transaction, récupère object store
+     let objectStore = db.transaction(['videos'], 'readwrite').objectStore('videos');
+     // Crée une entrée à ajouter à IDB
+     let record = {
+       mp4 : mp4Blob,
+       webm : webmBlob,
+       name : name
+     }
 
-      // Ajoute l'entrée à IDB avec add()
-      let request = objectStore.add(record);
+     // Ajoute l'entrée à IDB avec add()
+     let request = objectStore.add(record);
 
-      ...
+     ...
 
-    };
-    ```
+   };
+   ```
 
 5. Enfin, `displayVideo()` crée les éléments DOM nécessaires pour insérer la vidéo dans l'interface utilisateur, puis les ajoute à la page. Les parties les plus intéressantes sont copiées ci-dessous — pour afficher notre blob vidéo dans un élément `<video>`, on doit créer un objet URL (URL interne qui pointe vers un blob en mémoire) en utilisant la méthode {{domxref("URL.createObjectURL()")}}. Une fois que c'est fait, on peut assigner l'URL comme valeur d'attribut `src` de l'élément {{htmlelement("source")}}, et ça marche.
 
-    ```js
-    function displayVideo(mp4Blob, webmBlob, title) {
-      // Crée l'objet URL à partir du blob
-      let mp4URL = URL.createObjectURL(mp4Blob);
-      let webmURL = URL.createObjectURL(webmBlob);
+   ```js
+   function displayVideo(mp4Blob, webmBlob, title) {
+     // Crée l'objet URL à partir du blob
+     let mp4URL = URL.createObjectURL(mp4Blob);
+     let webmURL = URL.createObjectURL(webmBlob);
 
-      ...
+     ...
 
-      let video = document.createElement('video');
-      video.controls = true;
-      let source1 = document.createElement('source');
-      source1.src = mp4URL;
-      source1.type = 'video/mp4';
-      let source2 = document.createElement('source');
-      source2.src = webmURL;
-      source2.type = 'video/webm';
+     let video = document.createElement('video');
+     video.controls = true;
+     let source1 = document.createElement('source');
+     source1.src = mp4URL;
+     source1.type = 'video/mp4';
+     let source2 = document.createElement('source');
+     source2.src = webmURL;
+     source2.type = 'video/webm';
 
-      ...
-    }
-    ```
+     ...
+   }
+   ```
 
 ## Stockage hors-ligne de ressources
 
@@ -690,7 +688,7 @@ C'est là qu'interviennet les [Service workers](/fr/docs/Web/API/Service_Worker_
 
 Un service worker est un fichier JavaScript qui, pour faire simple, est associé à une origine (un site web à un domaine donné) lorsque le navigateur y accède. Une fois associé, il peut contrôler les pages disponibles pour cette origine. Il le fait en s'installant entre la page chargée et le réseau, interceptant les requêtes réseau visant cette origine.
 
-Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#Autres_id%C3%A9es_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
+Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#Autres_idées_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
 
 L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.
 
@@ -708,10 +706,14 @@ La première chose à noter est qu'il a un peu plus de code placé dans le fichi
 
 ```js
 // Enregistre un service worker pour contrôler le site hors-ligne
-if('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-           .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
-           .then(function() { console.log('Service Worker Registered'); });
+    .register(
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
+    )
+    .then(function () {
+      console.log("Service Worker Registered");
+    });
 }
 ```
 
@@ -730,17 +732,17 @@ Quand une page sous le contrôle du service worker est appelée (par exemple lor
 Prenons pour exemple le fichier [sw.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) (le service worker) :
 
 ```js
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('video-store').then(function(cache) {
-     return cache.addAll([
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-       '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css'
-     ]);
-   })
- );
+self.addEventListener("install", function (e) {
+  e.waitUntil(
+    caches.open("video-store").then(function (cache) {
+      return cache.addAll([
+        "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/",
+        "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
+        "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
+        "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
+      ]);
+    }),
+  );
 });
 ```
 
@@ -758,12 +760,12 @@ Avec le service worker enregistré et installé pour notre page HTML, et les res
 C'est ce que fait le second bloc de code dans `sw.js`&nbsp;:
 
 ```js
-self.addEventListener('fetch', function(e) {
+self.addEventListener("fetch", function (e) {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then(function(response) {
+    caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
-    })
+    }),
   );
 });
 ```

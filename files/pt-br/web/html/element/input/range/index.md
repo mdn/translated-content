@@ -8,7 +8,7 @@ slug: Web/HTML/Element/input/range
 {{HTMLElement("input")}} elementos do tipo **`"range"`** deixam o usuário especificar um valor numérico que não deve ser inferior a um determinado valor, e não mais do que um valor máximo especificado. O valor preciso, no entanto, não é considerado importante. Este geralmente é representado por um controle deslizante ou o mesmo tipo de controle de "number" input. Como este tipo de elemento é impreciso, não deve ser usado a menos que o valor exato do controle não seja importante.
 
 ```html
-<input type="range">
+<input type="range" />
 ```
 
 {{EmbedLiveSample("summary_sample1", 600, 40)}}
@@ -63,8 +63,10 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
 O atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) contém uma {{domxref("DOMString")}} que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (`""`). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 Se for feito uma tentativa para definir como máximo um valor inferior ao mínimo, então este é definido como mínimo. Da mesma forma, uma tentativa de definir um valor maior do que o máximo sendo configurado então para o máximo.
@@ -89,7 +91,7 @@ Por padrão, o mínimo é 0 e o máximo é 100. Se não é o que você precisa, 
 Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
@@ -99,7 +101,7 @@ Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:
 Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo [`step`](/pt-BR/docs/Web/HTML/Global_attributes#step) para controlar esta escala. Por exemplo, se você precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de `step` para 0.01:
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
@@ -107,7 +109,7 @@ Por padrão, a escala entre o mínimo e o máximo é 1, significando que este se
 Se você deseja aceitar um valor independente das casas decimais, voce pode especificar o valor `"any"` para o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step):
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Granularity_sample2", 600, 40)}}
@@ -238,7 +240,7 @@ Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-
 Considerando este controle:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
@@ -257,7 +259,7 @@ Esse controle é horizontal (pelo menos na maioria, senão em todos os principai
 #### HTML
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 #### Resultado
@@ -274,7 +276,7 @@ No HTML o elemento {{HTMLElement("input")}} precisa ser envolto em uma {{HTMLEle
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -326,10 +328,10 @@ Além dos exemplos variados acima, você encontrará as entradas de alcance demo
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                                                    | Status                   | Comment            |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}     | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}    | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Compatibilidade com navegadores
 

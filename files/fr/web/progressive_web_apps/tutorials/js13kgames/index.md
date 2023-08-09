@@ -1,7 +1,6 @@
 ---
 title: Introduction aux progressive web apps
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
-translation_of: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
@@ -84,4 +83,4 @@ Maintenant, allons à la deuxième partie de cette série, dans laquelle on s'in
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

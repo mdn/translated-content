@@ -1,18 +1,8 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript6
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
 Метод **`Object.assign()`** используется для копирования значений всех собственных перечисляемых свойств из одного или более исходных объектов в целевой объект. После копирования он возвращает целевой объект.
@@ -63,14 +53,14 @@ var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, изменился и сам целевой объект.
+console.log(o1); // { a: 1, b: 2, c: 3 }, изменился и сам целевой объект.
 ```
 
 ### Пример: копирование символьных свойств
 
 ```js
 var o1 = { a: 1 };
-var o2 = { [Symbol('foo')]: 2 };
+var o2 = { [Symbol("foo")]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
@@ -79,15 +69,19 @@ console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
 ### Пример: наследуемые и неперечисляемые свойства не копируются
 
 ```js
-var obj = Object.create({ foo: 1 }, { // foo является унаследованным свойством.
-  bar: {
-    value: 2  // bar является неперечисляемым свойством.
+var obj = Object.create(
+  { foo: 1 },
+  {
+    // foo является унаследованным свойством.
+    bar: {
+      value: 2, // bar является неперечисляемым свойством.
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz является собственным перечисляемым свойством.
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz является собственным перечисляемым свойством.
-  }
-});
+);
 
 var copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -96,10 +90,10 @@ console.log(copy); // { baz: 3 }
 ### Пример: примитивы оборачиваются в объекты
 
 ```js
-var v1 = '123';
+var v1 = "123";
 var v2 = true;
 var v3 = 10;
-var v4 = Symbol('foo')
+var v4 = Symbol("foo");
 
 var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Примитивы будут обёрнуты, а null и undefined - проигнорированы.
@@ -110,20 +104,20 @@ console.log(obj); // { "0": "1", "1": "2", "2": "3" }
 ### Пример: исключения прерывают текущую задачу копирования
 
 ```js
-var target = Object.defineProperty({}, 'foo', {
+var target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo является свойством только-для-чтения
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // При присваивании свойству target.foo выбрасывается исключение
 
-console.log(target.bar);  // 2, первый исходный объект успешно скопировался.
+console.log(target.bar); // 2, первый исходный объект успешно скопировался.
 console.log(target.foo2); // 3, первое свойство второго исходного объекта успешно скопировалось.
-console.log(target.foo);  // 1, здесь было выброшено исключение.
+console.log(target.foo); // 1, здесь было выброшено исключение.
 console.log(target.foo3); // undefined, метод assign завершился, свойство foo3 не скопировалось.
-console.log(target.baz);  // undefined, третий исходный объект так же не скопировался.
+console.log(target.baz); // undefined, третий исходный объект так же не скопировался.
 ```
 
 ### Пример: копирование методов доступа
@@ -133,7 +127,7 @@ var obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 var copy = Object.assign({}, obj);
@@ -142,11 +136,14 @@ console.log(copy);
 
 // Такой вариант функции присваивания позволяет копировать методы доступа.
 function myAssign(target, ...sources) {
-  sources.forEach(source => {
-    Object.defineProperties(target, Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {}));
+  sources.forEach((source) => {
+    Object.defineProperties(
+      target,
+      Object.keys(source).reduce((descriptors, key) => {
+        descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
+        return descriptors;
+      }, {}),
+    );
   });
   return target;
 }
@@ -162,14 +159,14 @@ console.log(copy);
 
 ```js
 if (!Object.assign) {
-  Object.defineProperty(Object, 'assign', {
+  Object.defineProperty(Object, "assign", {
     enumerable: false,
     configurable: true,
     writable: true,
-    value: function(target, firstSource) {
-      'use strict';
+    value: function (target, firstSource) {
+      "use strict";
       if (target === undefined || target === null) {
-        throw new TypeError('Cannot convert first argument to object');
+        throw new TypeError("Cannot convert first argument to object");
       }
 
       var to = Object(target);
@@ -180,7 +177,11 @@ if (!Object.assign) {
         }
 
         var keysArray = Object.keys(Object(nextSource));
-        for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+        for (
+          var nextIndex = 0, len = keysArray.length;
+          nextIndex < len;
+          nextIndex++
+        ) {
           var nextKey = keysArray[nextIndex];
           var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
           if (desc !== undefined && desc.enumerable) {
@@ -189,7 +190,7 @@ if (!Object.assign) {
         }
       }
       return to;
-    }
+    },
   });
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLVideoElement: leavepictureinpicture event'
+title: "HTMLVideoElement: leavepictureinpicture event"
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 ---
 
@@ -14,9 +14,9 @@ slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}等方法中使用事件方法名，或者设置事件处理器属性。
 
 ```js
-addEventListener('leavepictureinpicture', event => { });
+addEventListener("leavepictureinpicture", (event) => {});
 
-onleavepictureinpicture = event => { };
+onleavepictureinpicture = (event) => {};
 ```
 
 ## 事件类型

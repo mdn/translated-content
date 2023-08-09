@@ -3,7 +3,7 @@ title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Media")}}
 
 視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。
 

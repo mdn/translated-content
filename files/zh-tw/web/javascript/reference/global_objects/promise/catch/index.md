@@ -44,7 +44,7 @@ p.catch(function (reason) {
     console.log(
       "> > > > > > called .then on %o with arguments: %o",
       this,
-      arguments
+      arguments,
     );
     return originalThen.apply(this, arguments);
   };
@@ -52,7 +52,7 @@ p.catch(function (reason) {
     console.log(
       "> > > > > > called .catch on %o with arguments: %o",
       this,
-      arguments
+      arguments,
     );
     return originalCatch.apply(this, arguments);
   };
@@ -92,7 +92,7 @@ p1.then(function (value) {
     },
     function () {
       console.log("Not fired due to the catch");
-    }
+    },
   );
 
 // The following behaves the same as above
@@ -109,7 +109,7 @@ p1.then(function (value) {
     },
     function () {
       console.log("Not fired due to the catch");
-    }
+    },
   );
 ```
 
@@ -167,7 +167,7 @@ p2.then(
   function (reason) {
     console.log("next promise's onRejected");
     console.log(reason);
-  }
+  },
 );
 ```
 

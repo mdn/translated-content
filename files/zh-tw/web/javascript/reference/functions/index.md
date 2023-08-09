@@ -306,7 +306,7 @@ It should be noted, however, that function expressions and function declarations
 
 ```js
 var foo = new Function(
-  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});"
+  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
 )();
 foo(); // The segment "function() {\n\talert(bar);\n}" of the function body string is not re-parsed.
 ```

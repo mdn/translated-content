@@ -10,8 +10,14 @@ O atributo **`viewBox`** define a posição e a dimensão, no espaço do usuári
 The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/pt-BR/docs/Glossary/viewport)).
 
 ```css hidden
-html,body,svg { height:100% }
-svg:not(:root) { display: inline-block; }
+html,
+body,
+svg {
+  height: 100%;
+}
+svg:not(:root) {
+  display: inline-block;
+}
 ```
 
 ```xml
@@ -117,7 +123,7 @@ For {{SVGElement('view')}}, `viewBox` defines the position and dimension for the
 
 ## Specification
 
-| Specification                                                                            | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}     | {{Spec2("SVG2")}} |                    |
+| Specification                                                     | Status              | Comment            |
+| ----------------------------------------------------------------- | ------------------- | ------------------ |
+| {{SpecName("SVG2", "coords.html#ViewBoxAttribute", "viewBox")}}   | {{Spec2("SVG2")}}   |                    |
 | {{SpecName("SVG1.1", "coords.html#ViewBoxAttribute", "viewBox")}} | {{Spec2("SVG1.1")}} | Initial definition |

@@ -1,11 +1,6 @@
 ---
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/attributeName
 ---
 
 {{SVGRef}}
@@ -15,7 +10,9 @@ translation_of: Web/SVG/Attribute/attributeName
 Четыре элемента используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateTransform")}} и {{SVGElement("set")}}
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -23,8 +20,13 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="5s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -55,10 +57,10 @@ html, body, svg {
 
 ## Спецификации
 
-| Specification                                                                                            | Status                                   | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}     | {{Spec2("SVG Animations 2")}} | No change          |
-| {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}} | {{Spec2("SVG1.1")}}                 | Initial definition |
+| Specification                                                                  | Status                        | Comment            |
+| ------------------------------------------------------------------------------ | ----------------------------- | ------------------ |
+| {{SpecName("SVG Animations 2", "#AttributeNameAttribute", "attributeName")}}   | {{Spec2("SVG Animations 2")}} | No change          |
+| {{SpecName("SVG1.1", "animate.html#AttributeNameAttribute", "attributeName")}} | {{Spec2("SVG1.1")}}           | Initial definition |
 
 ## Смотрите также
 

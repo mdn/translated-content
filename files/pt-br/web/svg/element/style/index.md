@@ -14,8 +14,11 @@ O elemento de estilo possibilita que folhas de estilos sejam incorporadas direta
 ## Exemplo
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="https://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="https://www.w3.org/2000/svg">
   <style>
     /* <![CDATA[ */
     circle {

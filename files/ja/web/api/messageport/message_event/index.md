@@ -1,7 +1,6 @@
 ---
 title: MessagePort.onmessage
 slug: Web/API/MessagePort/message_event
-original_slug: Web/API/MessagePort/onmessage
 ---
 
 {{APIRef("HTML DOM")}}

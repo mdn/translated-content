@@ -1,8 +1,6 @@
 ---
 title: Типы ссылок
 slug: Web/HTML/Attributes/rel
-translation_of: Web/HTML/Link_types
-original_slug: Web/HTML/Link_types
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +28,7 @@ original_slug: Web/HTML/Link_types
             If the element is {{HTMLElement("link")}} and the
             <a href="/ru/docs/Web/HTML/Element/link#rel"><code>rel</code></a> attribute also contains the
             <code>stylesheet</code> type, the link defines an
-            <a href="/en-US/docs/Alternative_style_sheets"
+            <a href="/ru/docs/Alternative_style_sheets"
               >alternative style sheet</a
             >; in that case the <a href="/ru/docs/Web/HTML/Element/link#title"><code>title</code></a>
             attribute must be present and not be the empty string.
@@ -39,7 +37,7 @@ original_slug: Web/HTML/Link_types
             If the <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a> is set to
             <code>application/rss+xml</code> or
             <code>application/atom+xml</code>, the link defines a
-            <a href="/en-US/docs/RSS/Getting_Started/Syndicating"
+            <a href="/ru/docs/RSS/Getting_Started/Syndicating"
               >syndication feed</a
             >. The first one defined on the page is the default.
           </li>
@@ -110,10 +108,10 @@ original_slug: Web/HTML/Link_types
       <td><code>bookmark</code></td>
       <td>
         Indicates that the hyperlink is a
-        <a href="/en-US/docs/Permalink">permalink</a> for the nearest ancestor
+        <a href="/ru/docs/Permalink">permalink</a> for the nearest ancestor
         {{HTMLElement("article")}} element. If none, it is a permalink
         for the
-        <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document"
+        <a href="/ru/docs/Sections_and_Outlines_of_an_HTML5_document"
           >section</a
         >
         that the element is most closely associated to.<br /><br />This allows
@@ -271,7 +269,7 @@ original_slug: Web/HTML/Link_types
       <td><code>manifest</code></td>
       <td>
         Indicates that the linked file is a
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
+        <a href="https://developer.mozilla.org/ru/docs/Web/Manifest"
           >Web App Manifest</a
         >.
       </td>
@@ -367,7 +365,7 @@ original_slug: Web/HTML/Link_types
         of the <a href="/ru/docs/Web/HTML/Element/link#crossorigin"><code>crossorigin</code></a> attribute is
         taken into consideration, making it possible to make anonymous
         prefetches.<br /><br /><strong>Note:</strong> The
-        <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
+        <a href="/ru/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
         details on which links can be prefetched and on alternative methods.
       </td>
       <td>
@@ -420,7 +418,7 @@ original_slug: Web/HTML/Link_types
         resources.<br /><br />If the <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a>
         attribute is set to
         <code>application/opensearchdescription+xml </code>the resource is an
-        <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
+        <a href="/ru/docs/Creating_OpenSearch_plugins_for_Firefox"
           >OpenSearch plugin</a
         >
         that can be easily added to the interface of some browsers like Firefox
@@ -440,7 +438,7 @@ original_slug: Web/HTML/Link_types
         <code>text/css</code> stylesheet until further inspection.<br /><br />If
         used in combination with the <code>alternate</code> keyword, it defines
         an
-        <a href="/en-US/docs/Alternative_style_sheets"
+        <a href="/ru/docs/Alternative_style_sheets"
           >alternative style sheet</a
         >; in that case the <a href="/ru/docs/Web/HTML/Element/link#title"><code>title</code></a>
         attribute must be present and not be the empty string.

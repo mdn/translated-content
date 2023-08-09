@@ -37,16 +37,16 @@ Math.abs(x)
 空のオブジェクト、複数のメンバーを持つ配列、数値でない文字列、 {{jsxref("undefined")}}、 空の変数を渡すと、 {{jsxref("NaN")}} を返します。 {{jsxref("null")}} を渡すと空文字列を返し、空の配列は 0 を返します。
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## 仕様書

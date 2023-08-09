@@ -1,12 +1,8 @@
 ---
 title: Типы данных JavaScript и структуры данных
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - Типы данных
-  - Учебник
-translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 Все языки программирования содержат встроенные типы данных, но они часто отличаются друг от друга в разных языках. Эта статья — попытка описать встроенные структуры (типы) данных, доступные в JavaScript, и их свойства. На их основе строятся другие структуры данных. Когда это возможно, то мы будем сравнивать типы данных в разных языках.
@@ -18,7 +14,7 @@ JavaScript является _слабо типизированным_ или _д
 ```js
 var foo = 42; // сейчас foo типа Number
 foo = "bar"; // а теперь foo типа String
-foo = true;  // foo становится типа Boolean
+foo = true; // foo становится типа Boolean
 ```
 
 ## Типы данных
@@ -37,7 +33,7 @@ foo = true;  // foo становится типа Boolean
 - {{Glossary("Null")}} (Null тип ) : `typeof instance === "object"`. Специальный примитив, используемый не только для данных но и в качестве указателя на финальную точку в [Цепочке Прототипов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain);
 - {{Glossary("Object")}} (Объект) : `typeof instance === "object"`. Простая структура, используемая не только для хранения данных, но и для создания других структур, где любая структура создаётся с использованием ключевого слова [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new): new [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object), new [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array), new [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map), new [Set](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set), new [WeakMap](/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap), new [WeakSet](/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet), new [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и множество других структур;
 
-И здесь нам необходимо сделать предостережение относительно использования оператора `typeof` для определения типа структур, т.к. все структуры будут возвращать `"object"` при его использовании, так как назначение `typeof` -- проверка типа данных, но не структур. Если проверить тип структуры всё же необходимо, то в этом случае желательно использовать оператор [instanceof](/ru/docs/Web/JavaScript/Reference/Operators/instanceof), так как именно он отвечает на вопрос о том, какой конструктор был использован для создания структуры.
+И здесь нам необходимо сделать предостережение относительно использования оператора `typeof` для определения типа структур, т.к. все структуры будут возвращать `"object"` при его использовании, так как назначение `typeof` — проверка типа данных, но не структур. Если проверить тип структуры всё же необходимо, то в этом случае желательно использовать оператор [instanceof](/ru/docs/Web/JavaScript/Reference/Operators/instanceof), так как именно он отвечает на вопрос о том, какой конструктор был использован для создания структуры.
 
 Стоит отметить два особых случая работы оператора `typeof`: возврат `"object"` для значения `null` и `"function"` для функций: первое принято считать ошибкой языка, сохраненной ради обратной совместимости, второе является условностью, удобной для проверки на принадлежность значения категории функций, где функция - это особый, "вызываемый", объект.
 
@@ -101,7 +97,7 @@ Infinity
 
 ### Тип данных Большое целое (BigInt)
 
-`BigInt` является встроенным объектом, который предоставляет способ представления целых чисел, которые больше 2 53, что является наибольшим числом, которое JavaScript может надёжно представить с помощью [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) примитива.
+`BigInt` является встроенным объектом, который предоставляет способ представления целых чисел, которые больше 2 53, что является наибольшим числом, которое JavaScript может надёжно представить с помощью [`Number`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number) примитива.
 
 ```js
 > let bigInt = 19241924124n;

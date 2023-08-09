@@ -24,7 +24,7 @@ Array.isArray(obj)
 
 Se o objeto é um {{jsxref("Array")}}, retorna `true`(verdadeiro), caso contrário é retornado `false`(falso).
 
-Veja o artigo [“Determinando com absoluta precisão se um objeto em Javascript é ou não uma array”](http://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
+Veja o artigo ["Determinando com absoluta precisão se um objeto em Javascript é ou não uma array"](http://web.mit.edu/jwalden/www/isArray.html) para mais detalhes.
 
 ## Exemplos
 
@@ -42,7 +42,7 @@ Array.isArray({});
 Array.isArray(null);
 Array.isArray(undefined);
 Array.isArray(17);
-Array.isArray('Array');
+Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray({ __proto__: Array.prototype });
@@ -54,18 +54,18 @@ Executando o seguinte código antes de qualquer outro, o método `Array.isArray(
 
 ```js
 if (!Array.isArray) {
-  Array.isArray = function(arg) {
-    return Object.prototype.toString.call(arg) === '[object Array]';
+  Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) === "[object Array]";
   };
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                   | Comentário                                           |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}     | {{Spec2('ES5.1')}} | Definição Inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ES6')}}     |                                                      |
+| Especificação                                              | Status             | Comentário                                           |
+| ---------------------------------------------------------- | ------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.3.2', 'Array.isArray')}}    | {{Spec2('ES5.1')}} | Definição Inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-array.isarray', 'Array.isArray')}} | {{Spec2('ES6')}}   |                                                      |
 
 ## Compatibilidade com o Browser
 

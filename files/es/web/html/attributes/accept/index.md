@@ -1,7 +1,6 @@
 ---
-title: 'HTML el atributo: accept'
+title: "HTML el atributo: accept"
 slug: Web/HTML/Attributes/accept
-original_slug: Web/HTML/Atributos/accept
 ---
 
 El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
@@ -11,16 +10,18 @@ Debido a que un determinado tipo de archivo se puede identificar de más de una 
 Por ejemplo, hay varias formas de identificar los archivos de Microsoft Word, por lo que un sitio que acepta archivos de Word puede usar un `<input>` como este:
 
 ```html
-<input type="file" id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+<input
+  type="file"
+  id="docpicker"
+  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
 Mientras que si aceptas un archivo multimedia, es posible que desees incluir cualquier formato de ese tipo de medio:
 
 ```html
-<input type="file" id="soundFile" accept="audio/*">
-<input type="file" id="videoFile" accept="video/*">
-<input type="file" id="imageFile" accept="image/*">
+<input type="file" id="soundFile" accept="audio/*" />
+<input type="file" id="videoFile" accept="video/*" />
+<input type="file" id="imageFile" accept="image/*" />
 ```
 
 El atributo `accept` no valida los tipos de archivos seleccionados; simplemente proporciona sugerencias para los navegadores para guiar a los usuarios hacia la selección de los tipos de archivo correctos. Todavía es posible (en la mayoría de los casos) que los usuarios cambien una opción en el selector de archivos que hace posible anular esto y seleccionar cualquier archivo que deseen, y luego elegir tipos de archivo incorrectos.
@@ -34,15 +35,15 @@ Cuando se configura en un tipo de entrada de archivo, el selector de archivos na
 ```html
 <p>
   <label for="soundFile">Selecciona un archivo de audio:</label>
-  <input type="file" id="soundFile" accept="audio/*">
+  <input type="file" id="soundFile" accept="audio/*" />
 </p>
 <p>
   <label for="videoFile">Selecciona un archivo de video:</label>
-  <input type="file" id="videoFile" accept="video/*">
+  <input type="file" id="videoFile" accept="video/*" />
 </p>
 <p>
   <label for="imageFile">Selecciona algunas imágenes:</label>
-  <input type="file" id="imageFile" accept="image/*" multiple>
+  <input type="file" id="imageFile" accept="image/*" multiple />
 </p>
 ```
 
@@ -63,7 +64,7 @@ Un **especificador de tipo de archivo único** es una cadena que describe un tip
 El atributo `accept` toma como valor una cadena que contiene uno o más de estos especificadores de tipo de archivo únicos, separados por comas. Por ejemplo, un selector de archivos que necesita contenido que se puede presentar como una imagen, incluidos los formatos de imagen estándar y los archivos PDF, podría verse así:
 
 ```html
-<input type="file" accept="image/*,.pdf">
+<input type="file" accept="image/*,.pdf" />
 ```
 
 ## Usar inputs de archivo
@@ -72,13 +73,13 @@ El atributo `accept` toma como valor una cadena que contiene uno o más de estos
 
 ```html
 <form method="post" enctype="multipart/form-data">
- <div>
-   <label for="file">Elige el archivo a cargar</label>
-   <input type="file" id="file" name="file" multiple>
- </div>
- <div>
-   <button>Enviar</button>
- </div>
+  <div>
+    <label for="file">Elige el archivo a cargar</label>
+    <input type="file" id="file" name="file" multiple />
+  </div>
+  <div>
+    <button>Enviar</button>
+  </div>
 </form>
 ```
 
@@ -115,8 +116,11 @@ Veamos un ejemplo más completo:
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="profile_pic">Elige el archivo para cargar</label>
-    <input type="file" id="profile_pic" name="profile_pic"
-          accept=".jpg, .jpeg, .png">
+    <input
+      type="file"
+      id="profile_pic"
+      name="profile_pic"
+      accept=".jpg, .jpeg, .png" />
   </div>
   <div>
     <button>Enviar</button>

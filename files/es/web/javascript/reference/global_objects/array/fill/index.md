@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/fill
 ---
 
 {{JSRef}}
@@ -40,19 +39,19 @@ El arreglo modificado, rellenado con `valor`.
 ## Ejemplos
 
 ```js
-[1, 2, 3].fill(4);               // [4, 4, 4]
-[1, 2, 3].fill(4, 1);            // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 3);         // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2);       // [4, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN);     // [1, 2, 3]
-[1, 2, 3].fill(4, 3, 5);         // [1, 2, 3]
-Array(3).fill(4);                // [4, 4, 4]
-[].fill.call({ length: 3 }, 4);  // {0: 4, 1: 4, 2: 4, length: 3}
+[1, 2, 3].fill(4); // [4, 4, 4]
+[1, 2, 3].fill(4, 1); // [1, 4, 4]
+[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
+[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
+[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
+[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
+[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
+[1, 2, 3].fill(4, 3, 5); // [1, 2, 3]
+Array(3).fill(4); // [4, 4, 4]
+[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
 
 // Objects by reference.
-var arr = Array(3).fill({}) // [{}, {}, {}];
+var arr = Array(3).fill({}); // [{}, {}, {}];
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
@@ -60,12 +59,11 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 
 ```js
 if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, 'fill', {
-    value: function(value) {
-
+  Object.defineProperty(Array.prototype, "fill", {
+    value: function (value) {
       // Pasos 1-2.
       if (this == null) {
-        throw new TypeError('esto es nulo o no definido');
+        throw new TypeError("esto es nulo o no definido");
       }
 
       var O = Object(this);
@@ -78,19 +76,20 @@ if (!Array.prototype.fill) {
       var relativeStart = start >> 0;
 
       // Paso 8.
-      var k = relativeStart < 0 ?
-        Math.max(len + relativeStart, 0) :
-        Math.min(relativeStart, len);
+      var k =
+        relativeStart < 0
+          ? Math.max(len + relativeStart, 0)
+          : Math.min(relativeStart, len);
 
       // Pasos 9-10.
       var end = arguments[2];
-      var relativeEnd = end === undefined ?
-        len : end >> 0;
+      var relativeEnd = end === undefined ? len : end >> 0;
 
       // Paso 11.
-      var final = relativeEnd < 0 ?
-        Math.max(len + relativeEnd, 0) :
-        Math.min(relativeEnd, len);
+      var final =
+        relativeEnd < 0
+          ? Math.max(len + relativeEnd, 0)
+          : Math.min(relativeEnd, len);
 
       // Paso 12.
       while (k < final) {
@@ -100,7 +99,7 @@ if (!Array.prototype.fill) {
 
       // Paso 13.
       return O;
-    }
+    },
   });
 }
 ```

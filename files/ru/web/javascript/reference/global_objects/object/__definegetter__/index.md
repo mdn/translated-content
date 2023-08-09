@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
 
 {{JSRef("Global_Objects", "Object")}} {{non-standard_header}} {{deprecated_header}}
@@ -40,23 +32,27 @@ obj.__defineGetter__(prop, func)
 // Нестандартный и устаревший способ
 
 const o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Способы, совместимые со стандартом
 
 // Использование оператора get
-const o = { get gimmeFive() { return 5; } };
+const o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
-
 
 // Использование Object.defineProperty()
 const o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

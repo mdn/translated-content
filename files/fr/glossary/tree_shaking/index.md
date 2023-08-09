@@ -1,7 +1,6 @@
 ---
 title: Tree shaking
 slug: Glossary/Tree_shaking
-translation_of: Glossary/Tree_shaking
 ---
 
 **Tree shaking** est un terme couramment utilisé dans un contexte JavaScript pour décrire la suppression du code mort.
@@ -15,7 +14,7 @@ Dans les applications JavaScript modernes, nous utilisons des gestionnaires de r
 ### Culture générale
 
 - ["Benefits of dead code elimination during bundling"](http://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) in Axel Rauschmayer's book: "Exploring JS: Modules"
-- [Suppression du code mort](https://fr.wikipedia.org/wiki/R%C3%A9usinage_de_code#Suppression_du_code_mort) sur Wikipédia
+- [Suppression du code mort](https://fr.wikipedia.org/wiki/Réusinage_de_code#Suppression_du_code_mort) sur Wikipédia
 
 ### Références techniques
 

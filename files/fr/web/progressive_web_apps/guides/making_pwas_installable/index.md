@@ -1,20 +1,13 @@
 ---
 title: Ajouter à l'écran d'accueil
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
-tags:
-  - Ajouter à l'écran d'accueil
-  - HTML
-  - Manifest
-  - PWA
-translation_of: Web/Progressive_web_apps/Add_to_home_screen
-original_slug: Web/Progressive_web_apps/Add_to_home_screen
 ---
 
-Ajouter à l’écran d’accueil (A2HS en abrégé) est une fonctionnalité disponible dans les navigateurs pour smartphones modernes qui permet aux développeurs d’ajouter facilement et rapidement un raccourci à leur écran d’accueil, représentant leur application Web. Ce guide explique comment utiliser A2HS et ce que vous devez faire en tant que développeur pour permettre à vos utilisateurs d’en tirer parti.
+Ajouter à l'écran d'accueil (A2HS en abrégé) est une fonctionnalité disponible dans les navigateurs pour smartphones modernes qui permet aux développeurs d'ajouter facilement et rapidement un raccourci à leur écran d'accueil, représentant leur application Web. Ce guide explique comment utiliser A2HS et ce que vous devez faire en tant que développeur pour permettre à vos utilisateurs d'en tirer parti.
 
 ## Pourquoi A2HS?
 
-On pense que A2HS fait partie de la philosophie des applications Web progressives : offrir aux applications Web les mêmes avantages en matière d'expérience utilisateur que les applications natives. Cela fait partie du simple geste d’accéder à une application en appuyant sur son icône sur votre écran d’accueil, puis en l’affichant proprement dans sa propre fenêtre. A2HS rend cela possible.
+On pense que A2HS fait partie de la philosophie des applications Web progressives : offrir aux applications Web les mêmes avantages en matière d'expérience utilisateur que les applications natives. Cela fait partie du simple geste d'accéder à une application en appuyant sur son icône sur votre écran d'accueil, puis en l'affichant proprement dans sa propre fenêtre. A2HS rend cela possible.
 
 ## Quels navigateurs prennent en charge A2HS?
 
@@ -32,7 +25,7 @@ Appuyez sur cette icône pour afficher une bannière de confirmation. Une pressi
 
 ![](fx-a2hs-banner.png)
 
-Si vous avez Mobile Chrome disponible, l'expérience est légèrement différente. lors du chargement du site, une bannière d’installation apparaît vous demandant si vous souhaitez ajouter cette application à votre écran d’accueil.
+Si vous avez Mobile Chrome disponible, l'expérience est légèrement différente. lors du chargement du site, une bannière d'installation apparaît vous demandant si vous souhaitez ajouter cette application à votre écran d'accueil.
 
 ![](chrome-a2hs-banner.png)
 
@@ -95,7 +88,7 @@ Comme indiqué dans le "manifest" ci-dessus, nous incluons une icône de 192 x 1
 
 Notez que le membre de `type` dans l'objet de chaque icône spécifie le type MIME de l'icône, afin que le navigateur puisse rapidement identifier le type de l'icône, puis l'ignorer et passer à une autre icône s'il ne le prend pas en charge.
 
-Pour ce qui est de la conception de l’icône, vous devez suivre les mêmes pratiques que vous suivriez pour n’importe quelle icône Android (voir les directives de conception d’icône Android ).
+Pour ce qui est de la conception de l'icône, vous devez suivre les mêmes pratiques que vous suivriez pour n'importe quelle icône Android (voir les directives de conception d'icône Android ).
 
 ### Lier le code HTML au "manifest"
 
@@ -121,7 +114,7 @@ Bien que conçu à l'origine pour améliorer l'expérience utilisateur sur les s
 
 ### Ajout d'un bouton d'installation
 
-Pour rendre notre PWA installable sur le bureau, nous avons d’abord ajouté un bouton à notre document pour permettre aux utilisateurs de procéder à l’installation. Ce bouton n’est pas automatiquement disponible sur les applications de bureau et l’installation doit être déclenchée par un geste de l’utilisateur:
+Pour rendre notre PWA installable sur le bureau, nous avons d'abord ajouté un bouton à notre document pour permettre aux utilisateurs de procéder à l'installation. Ce bouton n'est pas automatiquement disponible sur les applications de bureau et l'installation doit être déclenchée par un geste de l'utilisateur:
 
 ```html
 <button class="add-button">Add to home screen</button>
@@ -143,35 +136,35 @@ Au bas de notre [fichier `index.js`](https://github.com/mdn/pwa-examples/blob/ma
 
 ```js
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const addBtn = document.querySelector(".add-button");
+addBtn.style.display = "none";
 ```
 
-Nous masquons le bouton initialement car le PWA ne sera pas disponible pour l’installation tant qu’il ne respectera pas les critères A2HS. Lorsque cela se produit, les navigateurs prenant en charge déclenchent un événement `beforeinstallprompt` . Nous pouvons ensuite utiliser un gestionnaire comme celui ci-dessous pour gérer l'installation:
+Nous masquons le bouton initialement car le PWA ne sera pas disponible pour l'installation tant qu'il ne respectera pas les critères A2HS. Lorsque cela se produit, les navigateurs prenant en charge déclenchent un événement `beforeinstallprompt` . Nous pouvons ensuite utiliser un gestionnaire comme celui ci-dessous pour gérer l'installation:
 
 ```js
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI to notify the user they can add to home screen
-  addBtn.style.display = 'block';
+  addBtn.style.display = "block";
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
+    addBtn.style.display = "none";
     // Show the prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === "accepted") {
+        console.log("User accepted the A2HS prompt");
+      } else {
+        console.log("User dismissed the A2HS prompt");
+      }
+      deferredPrompt = null;
+    });
   });
 });
 ```

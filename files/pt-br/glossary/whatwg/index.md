@@ -1,7 +1,6 @@
 ---
 title: WHATWG
 slug: Glossary/WHATWG
-original_slug: Glossario/WHATWG
 ---
 
 O [GRUTTAH](https://whatwg.org/) (WHATWG - sigla em inglês) (Grupo de Trabalho da Tecnologia de Aplicação Hipertexto da Web tradução livre de _Web Hypertext Application Working Group_) é uma organização que mantém e desenvolve o {{Glossary("HTML")}} e as {{Glossary("API", "APIs")}} para aplicações Web. Antigos funcionários da Apple, Mozilla e Opera, estabeleceram o GRUTTAH em 2004.
@@ -17,5 +16,5 @@ O GRUTTAH mantém especificações para {{Glossary("HTML")}}, {{Glossary("DOM")}
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "WHATWG")}} na Wikipedia
+- [WHATWG](https://pt.wikipedia.org/wiki/WHATWG) na Wikipedia
 - [Site Oficial da WHATWG.org](http://wiki.whatwg.org/)

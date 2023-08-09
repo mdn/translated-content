@@ -161,7 +161,7 @@ Promise.all([p1, p2, p3, p4, p5]).then(
   },
   (reason) => {
     console.log(reason);
-  }
+  },
 );
 
 //From console:

@@ -1,20 +1,19 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 ---
 
 ## Резюме
 
 _Элемент HTML form_ (`<form>`) представляет (собой) раздел документа, содержащий интерактивные элементы управления, которые позволяют пользователю отправлять информацию на веб-сервер.
 
-Можно использовать [`:valid`](/en-US/docs/CSS/%3Avalid) и [`:invalid`](/en-US/docs/CSS/%3Ainvalid) CSS псевдоклассы для стилизации `<form>` элемента, в зависимости от того, валиден или нет конкретный элемент {{domxref("HTMLFormElement.elements", "elements")}} внутри формы.
+Можно использовать [`:valid`](/ru/docs/CSS/%3Avalid) и [`:invalid`](/ru/docs/CSS/%3Ainvalid) CSS псевдоклассы для стилизации `<form>` элемента, в зависимости от того, валиден или нет конкретный элемент {{domxref("HTMLFormElement.elements", "elements")}} внутри формы.
 
 ## Контекст Использования
 
-| Категория содержимого  | [Flow content](/ru/docs/HTML/Content_categories#Flow_content)                                                                                  |
+| Категория содержимого  | [Flow content](/ru/docs/HTML/Content_categories#Flow_content)                                                                                                                         |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), но не содержащий `<form>` элементов                                             |
+| Разрешённое содержимое | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), но не содержащий `<form>` элементов                                                                                    |
 | Пропуск тега           | Нет. И открывающий и закрывающий тег должны быть.                                                                                                                                     |
 | Нормативный документ   | [HTML5, section 4.10.3](http://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
 
@@ -34,7 +33,7 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
   - : Указывает, могут ли элементы управления автоматически быть дописаны в форме браузером. Эта настройка может быть переписана с помощью атрибута `autocomplete` на элементе формы. Возможные значения:
     - `off`: Пользователь должен явно ввести значение в каждое поле или документ предоставит свой собственный метод автодополнения; браузер автоматически не дополняет записи.
     - `on`: Браузер может автоматически дополнить значения, основанные на значениях, которые пользователь уже вводил, в течение предыдущего использования формы.
-    > **Примечание:**Если вы установили значение `off` `для` `autocomplete` атрибута формы, из-за того, что документ предоставляет своё собственное автодополнение, то вам следует также установить значение `off` для `autocomplete` каждого {{HTMLElement("input")}} элемента формы, которые документ может автоматически дополнить. Подробнее, смотрите [Google Chrome notes](#google_chrome_notes).
+      > **Примечание:**Если вы установили значение `off` `для` `autocomplete` атрибута формы, из-за того, что документ предоставляет своё собственное автодополнение, то вам следует также установить значение `off` для `autocomplete` каждого {{HTMLElement("input")}} элемента формы, которые документ может автоматически дополнить. Подробнее, смотрите [Google Chrome notes](#google_chrome_notes).
 - {{htmlattrdef("enctype")}}
   - : Когда значение атрибута method равно `post`, атрибут - [MIME тип](http://en.wikipedia.org/wiki/Mime_type) содержимого, которое используется, чтобы передать форму на сервер. Возможные значения:
     - `application/x-www-form-urlencoded`: Значение по умолчанию, если атрибут не задан.
@@ -65,22 +64,23 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 <!-- Простая форма, которая пошлёт GET запрос -->
 <form action="">
   <label for="GET-name">Name:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="GET-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Простая форма, которая пошлёт POST запрос -->
 <form action="" method="post">
   <label for="POST-name">Name:</label>
-  <input id="POST-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="POST-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Форма с fieldset, legend, и label -->
 <form action="" method="post">
   <fieldset>
     <legend>Title</legend>
-    <input type="radio" name="radio" id="radio"> <label for="radio">Click me</label>
+    <input type="radio" name="radio" id="radio" />
+    <label for="radio">Click me</label>
   </fieldset>
 </form>
 ```

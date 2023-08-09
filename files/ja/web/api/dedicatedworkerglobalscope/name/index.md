@@ -18,13 +18,13 @@ l10n:
 もしワーカーが `name` オプションを持つコンストラクターで作成された場合、
 
 ```js
-const myWorker = new Worker("worker.js", { name : "myWorker" });
+const myWorker = new Worker("worker.js", { name: "myWorker" });
 ```
 
 これで {{domxref("DedicatedWorkerGlobalScope")}} は "myWorker" という名前を持ち、ワーカー内から、
 
 ```js
-self.name
+self.name;
 ```
 
 を実行すると返されます。

@@ -16,9 +16,9 @@ slug: Web/HTTP/Headers/Referer
 - 来源页面采用的协议为表示本地文件的 "file" 或者 "data" URI；
 - 当前请求页面采用的是非安全协议，而来源页面采用的是安全协议（HTTPS）。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 
@@ -34,7 +34,7 @@ Referer: <url>
 ## 示例
 
 ```plain
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ```
 
 ## 规范

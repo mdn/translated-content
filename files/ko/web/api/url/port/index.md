@@ -12,8 +12,8 @@ slug: Web/API/URL/port
 ## 구문
 
 ```js
-const portNumber = url.port
-url.port = newPortNumber
+const portNumber = url.port;
+url.port = newPortNumber;
 ```
 
 ### 값
@@ -23,7 +23,7 @@ A {{domxref("USVString")}}.
 ## 예제
 
 ```js
-const url = new URL('https://mydomain.com:80/svn/Repos/');
+const url = new URL("https://mydomain.com:80/svn/Repos/");
 console.log(url.port); // Logs '80'
 ```
 

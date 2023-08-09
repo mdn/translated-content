@@ -2,6 +2,7 @@
 title: Document.documentURI
 slug: Web/API/Document/documentURI
 ---
+
 {{ApiRef("DOM")}}
 
 {{domxref("Document")}} 인터페이스의 **`documentURI`** 속성은 document location 을 string 으로 반환합니다.

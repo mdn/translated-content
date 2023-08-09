@@ -1,7 +1,6 @@
 ---
 title: downloads.acceptDanger()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger
 ---
 
 {{AddonSidebar()}}
@@ -16,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var prompting = browser.downloads.acceptDanger(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Parameters

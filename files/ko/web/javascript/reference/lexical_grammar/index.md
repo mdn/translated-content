@@ -2,6 +2,7 @@
 title: 어휘 문법
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
+
 {{JsSidebar("More")}}
 
 이 페이지는 JavaScript의 어휘 문법(lexical grammar)을 설명합니다. ECMAScript 소스 본문은 왼쪽에서 오른쪽 방향으로 분석되고 토큰, 제어문자, 줄바꿈, 주석, 또는 공백으로 구성되는 입력 요소 시퀀스로 바뀝니다. 또한 ECMAScript는 특별한 키워드와 리터럴을 정의하고 있으며 명령문 끝에 자동으로 세미콜론을 추가하는 규칙이 있습니다.
@@ -68,8 +69,8 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 공백 문자는 소스 본문을 읽기 좋게 만들고 토큰을 구분합니다. 이 공백 문자들은 보통 코드의 기능에 필요한 것은 아닙니다. 최소화 도구([Minification tools](http://en.wikipedia.org/wiki/Minification_%28programming%29))는 종종 전송해야하는 데이터 크기를 줄이기 위해서 공백을 제거합니다.
 
-| 코드 포인트 | 이름                           | 축약형 | 설명                                                                                                     | 이스케이프 시퀀스 |
-| ----------- | ------------------------------ | ------ | -------------------------------------------------------------------------------------------------------- | ----------------- |
+| 코드 포인트 | 이름                           | 축약형  | 설명                                                                                                     | 이스케이프 시퀀스 |
+| ----------- | ------------------------------ | ------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
 | U+0009      | Character tabulation           | \<HT>   | Horizontal tabulation                                                                                    | \t                |
 | U+000B      | Line tabulation                | \<VT>   | Vertical tabulation                                                                                      | \v                |
 | U+000C      | Form feed                      | \<FF>   | Page breaking control character ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f                |
@@ -79,16 +80,16 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 개행 문자
 
-공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 자바스크립트 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
+공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 자바스크립트 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
 
 아래의 유니코드 문자만이 ECMAScript에서 라인 종결자로 다뤄지며, 라인을 바꾸는 다른 문자들은 공백으로 생각하시면 됩니다(예를 들어, Next Line, NEL, U+0085는 공백으로 간주).
 
 | 코드 포인트 | 이름                | 축약형 | 설명                                                   | 이스케이프 시퀀스 |
 | ----------- | ------------------- | ------ | ------------------------------------------------------ | ----------------- |
-| U+000A      | Line Feed           | \<LF>   | New line character in UNIX systems.                    | \n                |
-| U+000D      | Carriage Return     | \<CR>   | New line character in Commodore and early Mac systems. | \r                |
-| U+2028      | Line Separator      | \<LS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
-| U+2029      | Paragraph Separator | \<PS>   | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
+| U+000A      | Line Feed           | \<LF>  | New line character in UNIX systems.                    | \n                |
+| U+000D      | Carriage Return     | \<CR>  | New line character in Commodore and early Mac systems. | \r                |
+| U+2028      | Line Separator      | \<LS>  | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
+| U+2029      | Paragraph Separator | \<PS>  | [Wikipedia](http://en.wikipedia.org/wiki/Newline)      |                   |
 
 ## 주석
 
@@ -164,7 +165,7 @@ that you want to use to execute the script. An example is as follows:
 console.log("Hello world");
 ```
 
-> **Note:** Hashbang comments in JavaScript mimic [shebangs in Unix](https://en.wikipedia.org/wiki/Shebang_(Unix)) used to run files with proper interpreter.
+> **Note:** Hashbang comments in JavaScript mimic [shebangs in Unix](<https://en.wikipedia.org/wiki/Shebang_(Unix)>) used to run files with proper interpreter.
 
 > **Warning:** Although [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) before hashbang comment will work in a browser it is not advised to use BOM in a script with hasbang. BOM will not work when you try to run the script in Unix/Linux. So use UTF-8 without BOM if you want to run scripts directly from shell.
 
@@ -274,19 +275,19 @@ function import() {} // Illegal.
 
 ### Null 리터럴
 
-See also [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) for more information.
+See also [`null`](/ko/docs/Web/JavaScript/Reference/Global_Objects/null) for more information.
 
 ```js
-null
+null;
 ```
 
 ### 불리언 리터럴
 
-See also [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) for more information.
+See also [`Boolean`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean) for more information.
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### 숫자 리터럴
@@ -294,19 +295,19 @@ false
 #### 10진법
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Caution when using with a leading zero:
-0888 // 888 parsed as decimal
-0777 // parsed as octal, 511 in decimal
+0888; // 888 parsed as decimal
+0777; // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about [`parseInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
 
 ##### Exponential
 
-The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and\* *`N`, which is *exponent* or *power\* number – a signed integer (as per 2019 ECMA-262 specs):
+The decimal exponential literal is specified by the following format: `beN`; where `b` is a base number (integer or floating), followed by `e` char (which serves as separator or _exponent indicator_) and _`N`_, which is _exponent_ or _power_ number – a signed integer (as per 2019 ECMA-262 specs):
 
 ```
     0e-5   // => 0
@@ -319,35 +320,35 @@ The decimal exponential literal is specified by the following format: `beN`; whe
 
 #### 2진법
 
-Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing binary digits after 0b".
+Binary number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "B" (`0b` or `0B`). Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0b` are not 0 or 1, the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing binary digits after 0b".
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### 8진법
 
-Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing octal digits after 0o".
+Octal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "O" (`0o` or `0O)`. Because this syntax is new in ECMAScript 2015, see the browser compatibility table, below. If the digits after the `0o` are outside the range (01234567), the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Missing octal digits after 0o".
 
 ```js
-var n = 0O755; // 493
+var n = 0o755; // 493
 var m = 0o644; // 420
 
 // Also possible with just a leading zero (see note about decimals above)
-0755
-0644
+0755;
+0644;
 ```
 
 #### 16진법
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following [`SyntaxError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 #### BigInt literal
@@ -374,7 +375,7 @@ For octal `BigInt` numbers, always use zero followed by the letter "o" (uppercas
 0o755n
 ```
 
-For more information about `BigInt`, see also [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures#BigInt_type).
+For more information about `BigInt`, see also [JavaScript data structures](/ko/docs/Web/JavaScript/Data_structures#BigInt_type).
 
 #### Numeric separators
 
@@ -413,14 +414,16 @@ Note these limitations:
 
 ### 객체 리터럴
 
-See also {{jsxref("Object")}} and [Object initializer](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
+See also {{jsxref("Object")}} and [Object initializer](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer) for more information.
 
 ```js
-var o = { a: 'foo', b: 'bar', c: 42 };
+var o = { a: "foo", b: "bar", c: 42 };
 
 // shorthand notation. New in ES2015
-var a = 'foo', b = 'bar', c = 42;
-var o = {a, b, c};
+var a = "foo",
+  b = "bar",
+  c = 42;
+var o = { a, b, c };
 
 // instead of
 var o = { a: a, b: b, c: c };
@@ -431,7 +434,7 @@ var o = { a: a, b: b, c: c };
 See also {{jsxref("Array")}} for more information.
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### 문자열 리터럴
@@ -446,9 +449,9 @@ Prior to the [proposal to make all JSON text valid ECMA-262](https://github.com/
 
 Any code points may appear in the form of an escape sequence. String literals evaluate to ECMAScript String values. When generating these String values Unicode code points are UTF-16 encoded.
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 #### 16진수 이스케이프 시퀀스
@@ -456,7 +459,7 @@ Any code points may appear in the form of an escape sequence. String literals ev
 Hexadecimal escape sequences consist of `\x` followed by exactly two hexadecimal digits representing a code unit or code point in the range 0x0000 to 0x00FF.
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### 유니코드 이스케이프 시퀀스
@@ -466,7 +469,7 @@ A Unicode escape sequence consists of exactly four hexadecimal digits following 
 See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.
 
 ```js
-'\u00A9' // "©" (U+A9)
+"\u00A9"; // "©" (U+A9)
 ```
 
 #### 유니코드 코드 포인트 시퀀스
@@ -476,15 +479,15 @@ A Unicode code point escape consists of `\u{`, followed by a code point in hexad
 See also {{jsxref("String.fromCodePoint()")}} and {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+"\u{2F804}"; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
 
 // the same character represented as a surrogate pair
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### 정규 표현식 리터럴
 
-See also [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for more information.
+See also [`RegExp`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp) for more information.
 
 ```js
 /ab+c/g
@@ -497,22 +500,22 @@ See also [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) 
 
 ### 템플릿 리터럴
 
-See also [template strings](/en-US/docs/Web/JavaScript/Reference/template_strings) for more information.
+See also [template strings](/ko/docs/Web/JavaScript/Reference/template_strings) for more information.
 
 ```js
-`string text`
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag `string text ${expression} string text`
+tag `string text ${expression} string text`;
 ```
 
 ## 자동 세미콜론 삽입
 
-Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
+Some [JavaScript statements](/ko/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
 
 - Empty statement
 - `let`, `const`, variable statement
@@ -526,46 +529,46 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 1. A semicolon is inserted before, when a [Line terminator](#Line_terminators) or "}" is encountered that is not allowed by the grammar.
 
-    ```js
-    { 1 2 } 3
+   ```js-nolint
+   { 1 2 } 3
 
-    // is transformed by ASI into
+   // is transformed by ASI into
 
-    { 1 2 ;} 3;
-    ```
+   { 1 2 ;} 3;
+   ```
 
 2. A semicolon is inserted at the end, when the end of the input stream of tokens is detected and the parser is unable to parse the single input stream as a complete program.
 
-    Here `++` is not treated as a [postfix operator](/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
+   Here `++` is not treated as a [postfix operator](/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment) applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
-    ```js
-    a = b
-    ++c
+   ```js-nolint
+   a = b
+   ++c
 
-    // is transformend by ASI into
+   // is transformend by ASI into
 
-    a = b;
-    ++c;
-    ```
+   a = b;
+   ++c;
+   ```
 
 3. A semicolon is inserted at the end, when a statement with restricted productions in the grammar is followed by a line terminator. These statements with "no LineTerminator here" rules are:
 
-    - PostfixExpressions (`++` and `--`)
-    - `continue`
-    - `break`
-    - `return`
-    - `yield`, `yield*`
-    - `module`
+   - PostfixExpressions (`++` and `--`)
+   - `continue`
+   - `break`
+   - `return`
+   - `yield`, `yield*`
+   - `module`
 
-    ```js
-    return
-    a + b
+   ```js-nolint
+   return
+   a + b
 
-    // is transformed by ASI into
+   // is transformed by ASI into
 
-    return;
-    a + b;
-    ```
+   return;
+   a + b;
+   ```
 
 ## 명세
 

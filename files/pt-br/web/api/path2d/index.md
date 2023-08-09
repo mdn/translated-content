@@ -37,14 +37,12 @@ A **`Path2D`** interface da API Canvas 2D é usada para declarar caminhos que s�
 
 ## Especificações
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Path2D")}}
+{{Compat}}
 
-## Veja também:
+## Veja também
 
 - {{domxref("CanvasRenderingContext2D")}}

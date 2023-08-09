@@ -29,11 +29,17 @@ Los scripts que requieran una alta compatibilidad _cross-browser_ pueden usar {{
 
 ```js
 // Para scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// Para scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.scrollLeft == "number"
+  ? t
+  : document.body
+).scrollLeft(
+  // Para scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.scrollTop == "number"
+    ? t
+    : document.body,
+).scrollTop;
 ```
 
 ## Ejemplo

@@ -218,13 +218,13 @@ var colorSphere = function (element) {
       oleft + halfWidth,
       otop,
       oleft + halfWidth,
-      otop + halfWidth
+      otop + halfWidth,
     );
     var color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
     gradient.addColorStop(0, "rgba(0,0,0,0)");
     gradient.addColorStop(
       0.7,
-      "rgba(" + color.R + "," + color.G + "," + color.B + ",1)"
+      "rgba(" + color.R + "," + color.G + "," + color.B + ",1)",
     );
     gradient.addColorStop(1, "rgba(255,255,255,1)");
     ctx.beginPath();

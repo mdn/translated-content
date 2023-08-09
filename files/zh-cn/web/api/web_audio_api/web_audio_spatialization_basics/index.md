@@ -34,13 +34,13 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
-const posX = window.innerWidth/2;
-const posY = window.innerHeight/2;
+const posX = window.innerWidth / 2;
+const posY = window.innerHeight / 2;
 const posZ = 300;
 
 listener.positionX.value = posX;
 listener.positionY.value = posY;
-listener.positionZ.value = posZ-5;
+listener.positionZ.value = posZ - 5;
 ```
 
 我们可以使用 `positionX` 将收听者向左/右移动，使用 `positionY` 向上/下移动，或使用 `positionZ` 移出/入房间。在这里，我们将收听者设置在视口中间同时稍微位于音箱的前方。我们还可以设置收听者面对的方向。这些默认值工作良好：
@@ -69,7 +69,7 @@ listener.upZ.value = 0;
 非常聪明的东西，让我们使用 `HRTF` 模型！
 
 ```js
-const pannerModel = 'HRTF';
+const pannerModel = "HRTF";
 ```
 
 属性 [`coneInnerAngle`](/zh-CN/docs/Web/API/PannerNode/coneInnerAngle) 和 [`coneOuterAngle`](/zh-CN/docs/Web/API/PannerNode/coneOuterAngle) 指定音量发出的位置。默认情况下，两者都是 360 度。我们可以定义音箱扬声器拥有较小的锥体。内锥是总是模拟增益（音量）最大值的地方，外锥是增益开始下降的地方。
@@ -86,7 +86,7 @@ const outerGain = 0.3;
 我们将使用`linear`，因为它很简单：
 
 ```js
-const distanceModel = 'linear';
+const distanceModel = "linear";
 ```
 
 我们可以设置源和收听者之间的最大距离 ([`maxDistance`](/zh-CN/docs/Web/API/PannerNode/maxDistance)) — 如果源距离此点更远，则音量将不再减小。这可能很有用，因为你可能会发现你想要模拟距离，但是音量会下降，而实际上并不是你想要的。默认情况下，它是 10,000（无单位的相对值）。我们可以像这样保持它：
@@ -125,21 +125,21 @@ const orientationZ = -1.0;
 
 ```js
 const panner = new PannerNode(audioCtx, {
-    panningModel: pannerModel,
-    distanceModel: distanceModel,
-    positionX: positionX,
-    positionY: positionY,
-    positionZ: positionZ,
-    orientationX: orientationX,
-    orientationY: orientationY,
-    orientationZ: orientationZ,
-    refDistance: refDistance,
-    maxDistance: maxDistance,
-    rolloffFactor: rollOff,
-    coneInnerAngle: innerCone,
-    coneOuterAngle: outerCone,
-    coneOuterGain: outerGain
-})
+  panningModel: pannerModel,
+  distanceModel: distanceModel,
+  positionX: positionX,
+  positionY: positionY,
+  positionZ: positionZ,
+  orientationX: orientationX,
+  orientationY: orientationY,
+  orientationZ: orientationZ,
+  refDistance: refDistance,
+  maxDistance: maxDistance,
+  rolloffFactor: rollOff,
+  coneInnerAngle: innerCone,
+  coneOuterAngle: outerCone,
+  coneOuterGain: outerGain,
+});
 ```
 
 ## 移动 boombox
@@ -149,17 +149,19 @@ const panner = new PannerNode(audioCtx, {
 最后，我们将设置一些边界值，以便我们的 boombox 在任何方向上都不会走得太远：
 
 ```js
-const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
-const boombox = document.querySelector('.boombox-body');
+const moveControls = document
+  .querySelector("#move-controls")
+  .querySelectorAll("button");
+const boombox = document.querySelector(".boombox-body");
 
 // the values for our css transforms
 let transform = {
-    xAxis: 0,
-    yAxis: 0,
-    zAxis: 0.8,
-    rotateX: 0,
-    rotateY: 0
-}
+  xAxis: 0,
+  yAxis: 0,
+  zAxis: 0.8,
+  rotateX: 0,
+  rotateY: 0,
+};
 
 // set our bounds
 const topBound = -posY;
@@ -175,32 +177,32 @@ const outerBound = 1.5;
 
 ```js
 function moveBoombox(direction) {
-    switch (direction) {
-        case 'left':
-            if (transform.xAxis > leftBound) {
-                transform.xAxis -= 5;
-                panner.positionX.value -= 0.1;
-            }
-        break;
-        case 'up':
-            if (transform.yAxis > topBound) {
-                transform.yAxis -= 5;
-                panner.positionY.value -= 0.3;
-            }
-        break;
-        case 'right':
-            if (transform.xAxis < rightBound) {
-                transform.xAxis += 5;
-                panner.positionX.value += 0.1;
-            }
-        break;
-        case 'down':
-            if (transform.yAxis < bottomBound) {
-                transform.yAxis += 5;
-                panner.positionY.value += 0.3;
-            }
-        break;
-    }
+  switch (direction) {
+    case "left":
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case "up":
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case "right":
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case "down":
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+  }
 }
 ```
 
@@ -228,15 +230,15 @@ break;
 // set up rotation constants
 const rotationRate = 60; // bigger number equals slower sound rotation
 
-const q = Math.PI/rotationRate; //rotation increment in radians
+const q = Math.PI / rotationRate; //rotation increment in radians
 ```
 
 我们也可以使用它来计算旋转度，这将有助于我们即将必须创建的 CSS 变换（注意我们需要用于 CSS 变换的 x 和 y 轴）：
 
 ```js
 // get degrees for css
-const degreesX = (q * 180)/Math.PI;
-const degreesY = (q * 180)/Math.PI;
+const degreesX = (q * 180) / Math.PI;
+const degreesY = (q * 180) / Math.PI;
 ```
 
 我们以左旋转为例看一看。我们需要更改 panner x 方向和 z 方向的坐标，以围绕 y 轴移动进行左旋转：
@@ -297,92 +299,119 @@ break;
 
 ```js
 function moveBoombox(direction, prevMove) {
-    switch (direction) {
-        case 'left':
-            if (transform.xAxis > leftBound) {
-                transform.xAxis -= 5;
-                panner.positionX.value -= 0.1;
-            }
-        break;
-        case 'up':
-            if (transform.yAxis > topBound) {
-                transform.yAxis -= 5;
-                panner.positionY.value -= 0.3;
-            }
-        break;
-        case 'right':
-            if (transform.xAxis < rightBound) {
-                transform.xAxis += 5;
-                panner.positionX.value += 0.1;
-            }
-        break;
-        case 'down':
-            if (transform.yAxis < bottomBound) {
-                transform.yAxis += 5;
-                panner.positionY.value += 0.3;
-            }
-        break;
-        case 'back':
-            if (transform.zAxis > innerBound) {
-                transform.zAxis -= 0.01;
-                panner.positionZ.value += 40;
-            }
-        break;
-        case 'forward':
-            if (transform.zAxis < outerBound) {
-                transform.zAxis += 0.01;
-                panner.positionZ.value -= 40;
-            }
-        break;
-        case 'rotate-left':
-            transform.rotateY -= degreesY;
+  switch (direction) {
+    case "left":
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case "up":
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case "right":
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case "down":
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+    case "back":
+      if (transform.zAxis > innerBound) {
+        transform.zAxis -= 0.01;
+        panner.positionZ.value += 40;
+      }
+      break;
+    case "forward":
+      if (transform.zAxis < outerBound) {
+        transform.zAxis += 0.01;
+        panner.positionZ.value -= 40;
+      }
+      break;
+    case "rotate-left":
+      transform.rotateY -= degreesY;
 
-            // 'left' is rotation about y-axis with negative angle increment
-            z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
-            x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
-            y = panner.orientationY.value;
+      // 'left' is rotation about y-axis with negative angle increment
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationX.value * Math.sin(q);
+      x =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationX.value * Math.cos(q);
+      y = panner.orientationY.value;
 
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-right':
-            transform.rotateY += degreesY;
-            // 'right' is rotation about y-axis with positive angle increment
-            z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
-            x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
-            y = panner.orientationY.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-up':
-            transform.rotateX += degreesX;
-            // 'up' is rotation about x-axis with negative angle increment
-            z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
-            y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
-            x = panner.orientationX.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-down':
-            transform.rotateX -= degreesX;
-            // 'down' is rotation about x-axis with positive angle increment
-            z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
-            y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
-            x = panner.orientationX.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-    }
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-right":
+      transform.rotateY += degreesY;
+      // 'right' is rotation about y-axis with positive angle increment
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationX.value * Math.sin(-q);
+      x =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationX.value * Math.cos(-q);
+      y = panner.orientationY.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-up":
+      transform.rotateX += degreesX;
+      // 'up' is rotation about x-axis with negative angle increment
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationY.value * Math.sin(-q);
+      y =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationY.value * Math.cos(-q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-down":
+      transform.rotateX -= degreesX;
+      // 'down' is rotation about x-axis with positive angle increment
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationY.value * Math.sin(q);
+      y =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationY.value * Math.cos(q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+  }
 
-  boombox.style.transform = 'translateX('+transform.xAxis+'px) translateY('+transform.yAxis+'px) scale('+transform.zAxis+') rotateY('+transform.rotateY+'deg) rotateX('+transform.rotateX+'deg)';
+  boombox.style.transform =
+    "translateX(" +
+    transform.xAxis +
+    "px) translateY(" +
+    transform.yAxis +
+    "px) scale(" +
+    transform.zAxis +
+    ") rotateY(" +
+    transform.rotateY +
+    "deg) rotateX(" +
+    transform.rotateX +
+    "deg)";
 
   const move = prevMove || {};
   move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
-    return move;
+  return move;
 }
 ```
 
@@ -392,26 +421,30 @@ function moveBoombox(direction, prevMove) {
 
 ```js
 // for each of our controls, move the boombox and change the position values
-moveControls.forEach(function(el) {
+moveControls.forEach(function (el) {
+  let moving;
+  el.addEventListener(
+    "mousedown",
+    function () {
+      let direction = this.dataset.control;
+      if (moving && moving.frameId) {
+        window.cancelAnimationFrame(moving.frameId);
+      }
+      moving = moveBoombox(direction);
+    },
+    false,
+  );
 
-    let moving;
-    el.addEventListener('mousedown', function() {
-
-        let direction = this.dataset.control;
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
-
-    }, false);
-
-    window.addEventListener('mouseup', function() {
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
-
-})
+  window.addEventListener(
+    "mouseup",
+    function () {
+      if (moving && moving.frameId) {
+        window.cancelAnimationFrame(moving.frameId);
+      }
+    },
+    false,
+  );
+});
 ```
 
 ## 概述

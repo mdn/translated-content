@@ -23,11 +23,11 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
             >파일 작업</a
           >
           에 대한 기본 지식, HTML 기본 사항 (<a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="/ko/docs/Learn/HTML/Introduction_to_HTML"
             >HTML 소개</a
           >
           학습) 및 , CSS 작동 방식 이해 (<a
-            href="/en-US/docs/Learn/CSS/First_steps"
+            href="/ko/docs/Learn/CSS/First_steps"
             >CSS 첫 번째 단계</a
           >
           학습)
@@ -138,7 +138,7 @@ em {
 
 ## Firefox DevTools에 대해 자세히 알아보기
 
-여기 MDN에 Firefox DevTools에 대한 많은 정보가 있습니다. 주요 [DevTools 섹션](/ko/docs/Tools)을 살펴보고 이 강의에서 간략하게 다룬 내용에 대한 자세한 내용은 [방법 안내](/en-US/docs/Tools/Page_Inspector#How_to).
+여기 MDN에 Firefox DevTools에 대한 많은 정보가 있습니다. 주요 [DevTools 섹션](/ko/docs/Tools)을 살펴보고 이 강의에서 간략하게 다룬 내용에 대한 자세한 내용은 [방법 안내](/ko/docs/Tools/Page_Inspector#How_to).
 
 ## CSS의 디버깅 문제
 

@@ -376,7 +376,7 @@ Within non-capturing parentheses `(?:` , the regular expression looks for three 
 The `Change` event activated when the user presses Enter sets the value of `RegExp.input`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -387,7 +387,7 @@ The `Change` event activated when the user presses Enter sets the value of `RegE
         var OK = re.exec(phoneInput.value);
         if (!OK)
           window.alert(
-            phoneInput.value + " isn't a phone number with area code!"
+            phoneInput.value + " isn't a phone number with area code!",
           );
         else window.alert("Thanks, your phone number is " + OK[0]);
       }

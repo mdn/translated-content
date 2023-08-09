@@ -15,7 +15,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 **如何打开它？有三种方式：**
 
-- **_键盘快捷键_** *Ctrl + Shift + I*，除了以下的特例
+- **_键盘快捷键_** _Ctrl + Shift + I_，除了以下的特例
 
   - **Internet Explorer.** _F12_
   - **Mac OS X.** _⌘ + ⌥ + I_
@@ -147,22 +147,25 @@ JavaScript 控制台是一个非常有用的工具，用于调试没有按预期
 要查看会发生什么，请尝试逐个输入以下代码片段（然后按 Enter 键）:
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-var my_image = document.createElement('img');
+var my_image = document.createElement("img");
 
 //下面的 url 已经不再可用，这里注释掉，后面补上了一个可以 url
 //且 myImage 在文章开始给的“初学者示例网址”存在声明冲突，所以改为 my_image
 //myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
-my_image.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
+my_image.setAttribute(
+  "src",
+  "https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif",
+);
 
-document.querySelector('h1').appendChild(my_image);
+document.querySelector("h1").appendChild(my_image);
 ```
 
 现在尝试输入以下错误的代码版本，看看你得到什么。
@@ -172,13 +175,16 @@ alert('hello!);
 ```
 
 ```js
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-var my_Image = document.createElement('img');
-myBanana.setAttribute('src','https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif');
-document.querySelector('h1').appendChild(my_Image);
+var my_Image = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif",
+);
+document.querySelector("h1").appendChild(my_Image);
 ```
 
 您将开始看到浏览器返回的错误类型。通常这些错误是相当神秘的，但是应该很简单的把这些问题解决出来！

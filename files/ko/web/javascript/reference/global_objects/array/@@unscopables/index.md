@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 ## 구문
 
 ```js
-    arr[Symbol.unscopables]
+arr[Symbol.unscopables];
 ```
 
 ## 설명

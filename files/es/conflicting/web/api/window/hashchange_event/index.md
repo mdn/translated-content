@@ -2,7 +2,6 @@
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
 original_slug: Web/API/WindowEventHandlers/onhashchange
-browser-compat: api.Window.hashchange_event
 ---
 
 {{APIRef("HTML DOM")}}
@@ -56,11 +55,3 @@ El evento `hashchange` enviado, tiene los siguientes campos:
 | ----------------------------------------------------- | ----------- | ----------------------------------------------------- |
 | `newURL` | `DOMString` | La URL nueva hacia la cual la ventana está navegando. |
 | `oldURL` | `DOMString` | La URL anterior desde la cual la ventana navegó.      |
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}

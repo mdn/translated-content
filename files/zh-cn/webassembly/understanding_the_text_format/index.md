@@ -178,19 +178,16 @@ WebAssembly 验证规则确保栈准确匹配：如果你声明了 (result f32)�
 接下来，我们把二进制文件加载到叫做 addCode 的带类型数组（[获取 WebAssembly 字节码](/zh-CN/docs/WebAssembly/Fetching_WebAssembly_bytecode)），编译并实例化它，然后在 JavaScript 中执行我们的 add 函数（现在，我们可以在实例的[exports](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)属性中找到 add()）。
 
 ```js
-fetchAndInstantiate('add.wasm').then(function(instance) {
-   console.log(instance.exports.add(1, 2));  // "3"
+fetchAndInstantiate("add.wasm").then(function (instance) {
+  console.log(instance.exports.add(1, 2)); // "3"
 });
 
 // fetchAndInstantiate() found in wasm-utils.js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -227,8 +224,8 @@ function fetchAndInstantiate(url, importObject) {
 调用我们前面模块的 JavaScript 看起来像这样：
 
 ```js
-fetchAndInstantiate('call.wasm').then(function(instance) {
-  console.log(instance.exports.getAnswerPlus1());  // "43"
+fetchAndInstantiate("call.wasm").then(function (instance) {
+  console.log(instance.exports.getAnswerPlus1()); // "43"
 });
 ```
 
@@ -259,13 +256,13 @@ JavaScript 函数没有签名的概念，因此，无论导入的声明签名是
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
   instance.exports.logIt();
 });
 ```
@@ -334,11 +331,11 @@ consoleLogString(offset, length) {
 现在，我们可以从 JavaScript 中创建一个 1 页的内存（Memory）然后把它传递进去。这会在控制台输出"Hi"。
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObj = { console: { log: consoleLogString }, js: { mem: memory } };
 
-fetchAndInstantiate('logger2.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger2.wasm", importObject).then(function (instance) {
   instance.exports.writeHi();
 });
 ```
@@ -455,7 +452,7 @@ call_indirect $my_spicy_table $i32_to_void
 我们使用下面的 JavaScript 把它加载到一个网页中：
 
 ```js
-fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
+fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
   console.log(instance.exports.callByIndex(0)); // 返回 42
   console.log(instance.exports.callByIndex(1)); // 返回 13
   console.log(instance.exports.callByIndex(2));
@@ -526,16 +523,16 @@ fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  fetchAndInstantiate('shared0.wasm', importObj),
-  fetchAndInstantiate('shared1.wasm', importObj)
-]).then(function(results) {
-  console.log(results[1].exports.doIt());  // prints 42
+  fetchAndInstantiate("shared0.wasm", importObj),
+  fetchAndInstantiate("shared1.wasm", importObj),
+]).then(function (results) {
+  console.log(results[1].exports.doIt()); // prints 42
 });
 ```
 

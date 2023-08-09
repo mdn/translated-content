@@ -1,7 +1,6 @@
 ---
 title: Box alignment in CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-original_slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 Si estás familiarizado con [flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
@@ -39,20 +38,22 @@ En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo us
 - `last baseline`
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -101,20 +102,22 @@ La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-
 En el siguiente ejemplo, estoy usando la propiedad `align-self` para demostrar los diferentes valores de alineación. La primer área está mostrando la acción por defecto de `align-self`, el cual es extenderse. El segundo elemento tiene un valor en `align-self` de `start`, el tercero `end` y el cuarto `center`.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -183,20 +186,22 @@ You can see the same example as used for {{cssxref("align-items")}}, below. This
 Once again the default is `stretch`, other than for items with an intrinsic aspect ratio. This means that by default, grid items will cover their grid area, unless you change that by setting alignment. The first item in the example demonstrates this default alignment:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -249,20 +254,22 @@ The {{cssxref("justify-self")}} and {{cssxref("justify-items")}} properties are 
 By combining the align and justify properties we can easily center an item inside a grid area.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -285,7 +292,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ```html
 <div class="wrapper">
- <div class="item1">Item 1</div>
+  <div class="item1">Item 1</div>
 </div>
 ```
 
@@ -312,20 +319,22 @@ In the below example I have a grid container of 500 pixels by 500 pixels. I have
 The `align-content` property is applied to the grid container as it works on the entire grid. The default behavior in grid layout is `start`, which is why our grid tracks are in the top left corner of the grid, aligned against the start grid lines:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -333,7 +342,7 @@ The `align-content` property is applied to the grid container as it works on the
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -370,20 +379,22 @@ The `align-content` property is applied to the grid container as it works on the
 If I add `align-content` to my container, with a value of `end`, the tracks all move to the end line of the grid container in the block dimension:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -391,7 +402,7 @@ If I add `align-content` to my container, with a value of `end`, the tracks all 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -429,20 +440,22 @@ If I add `align-content` to my container, with a value of `end`, the tracks all 
 We can also use values for this property that you may be familiar with from flexbox; the space distribution values of `space-between`, `space-around` and `space-evenly`. If we update {{cssxref("align-content")}} to `space-between`, you can see how the elements on our grid space out:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -450,7 +463,7 @@ We can also use values for this property that you may be familiar with from flex
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -485,7 +498,7 @@ We can also use values for this property that you may be familiar with from flex
 
 {{ EmbedLiveSample('alignment_7', '500', '520') }}
 
-It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We’re always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.
+It is worth noting, that using these space distribution values may cause items on your grid to become larger. If an item spans more than one grid track, as further space is added between the tracks, that item needs to become large to absorb the space. We're always working in a strict grid. Therefore, if you decide to use these values, ensure that the content of your tracks can cope with the extra space, or that you have used alignment properties on the items, to cause them to move to the start rather than stretch.
 
 In the below image I have placed the grid with `align-content`, with a value of `start` alongside the grid when `align-content` has a value of `space-between`. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:
 
@@ -498,20 +511,22 @@ On the inline axis, we can use {{cssxref("justify-content")}} to perform the sam
 Using the same example, I am setting {{cssxref("justify-content")}} to `space-around`. This once again causes tracks which span more than one column track to gain extra space:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -519,7 +534,7 @@ Using the same example, I am setting {{cssxref("justify-content")}} to `space-ar
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -562,20 +577,22 @@ Another way to align items inside their area, is to use auto margins. If you hav
 In this next example, I have given item 1 a left margin of `auto`. You can see how the content is now pushed over to the right side of the area, as the auto margin takes up remaining space, after room for the content of that item has been assigned:
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -583,7 +600,7 @@ In this next example, I have given item 1 a left margin of `auto`. You can see h
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3,100px);
+  grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
   grid-gap: 10px;
@@ -635,47 +652,47 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
 3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout)
 4. **Guides**
 
-    1. [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+   2. [Relationship to other layout methods](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+   3. [Line-based placement](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+   4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+   5. [Layout using named grid lines](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+   6. [Auto-placement in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+   7. [Box alignment in grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+   8. [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+   9. [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+   11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 5. **Properties**
 
-    1. [grid](/es/docs/Web/CSS/grid)
-    2. [grid-area](/es/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/es/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/es/docs/Web/CSS/grid-gap)
-    11. [grid-row](/es/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/es/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+   1. [grid](/es/docs/Web/CSS/grid)
+   2. [grid-area](/es/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/es/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/es/docs/Web/CSS/grid-column-gap)
+   9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/es/docs/Web/CSS/grid-gap)
+   11. [grid-row](/es/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/es/docs/Web/CSS/grid-row-gap)
+   14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/es/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
 
-    1. [Grid](/es/docs/Glossary/Grid)
-    2. [Grid lines](/es/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/es/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/es/docs/Glossary/Grid_cell)
-    5. [Grid areas](/es/docs/Glossary/Grid_areas)
-    6. [Gutters](/es/docs/Glossary/Gutters)
-    7. [Grid Axis](/es/docs/Glossary/Grid_Axis)
-    8. [Grid row](/es/docs/Glossary/Grid_rows)
-    9. [Grid column](/es/docs/Glossary/Grid_column)
+   1. [Grid](/es/docs/Glossary/Grid)
+   2. [Grid lines](/es/docs/Glossary/Grid_lines)
+   3. [Grid tracks](/es/docs/Glossary/Grid_tracks)
+   4. [Grid cell](/es/docs/Glossary/Grid_cell)
+   5. [Grid areas](/es/docs/Glossary/Grid_areas)
+   6. [Gutters](/es/docs/Glossary/Gutters)
+   7. [Grid Axis](/es/docs/Glossary/Grid_Axis)
+   8. [Grid row](/es/docs/Glossary/Grid_rows)
+   9. [Grid column](/es/docs/Glossary/Grid_column)

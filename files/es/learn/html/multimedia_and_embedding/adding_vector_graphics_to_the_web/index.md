@@ -13,11 +13,11 @@ Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen ta
       <th scope="row">Prerequisitos:</th>
       <td>
         Debe conocer los
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >conceptos básicos de HTML</a
         >
         y cómo
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >insertar imágenes en su documento</a
         >
       </td>
@@ -57,10 +57,12 @@ Además, los archivos de imágenes vectoriales son mucho más ligeros que sus eq
 Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:
 
 ```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -97,10 +99,10 @@ Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo nec
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="triangle with all three sides equal"
-    height="87"
-    width="100" />
+  src="equilateral.svg"
+  alt="triangle with all three sides equal"
+  height="87"
+  width="100" />
 ```
 
 #### Pros
@@ -120,7 +122,10 @@ Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo nec
 Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo [`srcset`](/es/docs/Web/HTML/Element/img#srcset) ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
 
 ```html
-<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+<img
+  src="equilateral.png"
+  alt="triangle with equal sides"
+  srcset="equilateral.svg" />
 ```
 
 También puede usar SVG como imágenes de fondo CSS, como se muestra a continuación. En el siguiente código, los navegadores más antiguos se quedarán con el PNG que entienden, mientras que los navegadores más nuevos cargarán el SVG:
@@ -141,7 +146,7 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -167,7 +172,7 @@ Aquí hay una revisión rápida:
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="Triangle with three unequal sides" />
 </iframe>
 ```
 
@@ -187,11 +192,12 @@ Si se queda atascado y no puede hacer que su código funcione, siempre puede res
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
 <svg width="100%" height="100%">
@@ -206,110 +212,113 @@ Hello!
 </textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Reset">
-<input id="solution" type="button" value="Show solution" disabled>
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Show solution';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Show solution";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Show solution') {
-textarea.value = solutionEntry;
-solution.value = 'Hide solution';
-} else {
-textarea.value = userEntry;
-solution.value = 'Show solution';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
 });
 
-const htmlSolution = '';
+const htmlSolution = "";
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-const scrollPos = textarea.scrollTop;
-const caretPos = textarea.selectionStart;
-const front = (textarea.value).substring(0, caretPos);
-const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const scrollPos = textarea.scrollTop;
+  const caretPos = textarea.selectionStart;
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
-// We only want to save the state when the user code is being shown,
-// not the solution, so that solution is not saved over the user code
-if(solution.value === 'Show solution') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 

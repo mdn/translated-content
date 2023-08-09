@@ -1,7 +1,6 @@
 ---
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
 
 {{AddonSidebar()}}
@@ -28,8 +27,8 @@ la méthode [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/Brows
 
 ```js
 var setting = setting.set(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -63,12 +62,10 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-      value: false
-    });
-    setting.then(onSet);
-
+  var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    value: false,
+  });
+  setting.then(onSet);
 });
 ```
 

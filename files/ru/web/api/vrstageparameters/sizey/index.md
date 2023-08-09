@@ -1,9 +1,6 @@
 ---
 title: VRStageParameters.sizeY
 slug: Web/API/VRStageParameters/sizeY
-tags:
-  - Виртуальная реальность
-translation_of: Web/API/VRStageParameters/sizeY
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -28,9 +25,7 @@ var mySizeY = vrStageParametersInstance.sizeY;
 
 ## Specifications
 
-| Specification                                                                            | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrstageparameters-sizey', 'sizeY')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

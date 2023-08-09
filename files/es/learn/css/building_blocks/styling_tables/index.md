@@ -33,7 +33,9 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
 
 ```html
 <table summary="Los grupos de música punk más famosos del Reino Unido">
-  <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+  <caption>
+    Un resumen de los grupos de música punk más famosos del Reino Unido
+  </caption>
   <thead>
     <tr>
       <th scope="col">Grupo</th>
@@ -56,7 +58,7 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
       <td>London Calling</td>
     </tr>
 
-      ... se han eliminado algunas filas por abreviar
+    ... se han eliminado algunas filas por abreviar
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -88,9 +90,9 @@ En esta sección de aprendizaje activo vamos a aplica estilo a nuestra tabla jun
 2. Ahora crea un archivo nuevo llamado `style.css` y guárdalo con el resto de archivos, en la misma carpeta.
 3. Enlaza el CSS al HTML copiando la línea siguiente en {{htmlelement("head")}}:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### Espaciado y distribución
 
@@ -122,7 +124,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -150,7 +153,10 @@ En primer lugar, hemos ido a [Google Fonts](https://www.google.com/fonts) y hemo
 Primero, añade el elemento {{htmlelement ("link")}} siguiente a tu encabezado HTML, justo encima del elemento `<link>`:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea añadida anterior:
@@ -159,11 +165,12 @@ Ahora añade el CSS siguiente a tu archivo `style.css`, debajo de la línea aña
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -201,14 +208,21 @@ Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido
 Empieza añadiendo el CSS siguiente a tu archivo `style.css`, de nuevo al final:
 
 ```css
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -257,7 +271,7 @@ Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Par
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

@@ -1,7 +1,6 @@
 ---
 title: Travailler avec l'API Tabs
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
 
 {{AddonSidebar}}
@@ -41,7 +40,7 @@ Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs 
 - l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.
 - il accorde uniquement la permission dans l'onglet actif..
 
-L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut “Accéder à vos données pour tous les sites Web”. En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
+L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut "Accéder à vos données pour tous les sites Web". En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
 
 ## En savoir plus sur les onglets et leurs propriétés
 
@@ -53,7 +52,7 @@ Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours
 
 ### Par exemple
 
-Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de “passer aux onglets” à son popup bouton de barre d'outils.
+Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de "passer aux onglets" à son popup bouton de barre d'outils.
 
 ![](switch_to_tab.png)
 
@@ -72,9 +71,7 @@ Voici le [manifest.json](https://github.com/mdn/webextensions-examples/blob/mast
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
   "manifest_version": 2,
   "name": "Tabs, tabs, tabs",
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": ["tabs"],
   "version": "1.0"
 }
 ```
@@ -89,43 +86,35 @@ Voici le [manifest.json](https://github.com/mdn/webextensions-examples/blob/mast
 tabs.html définit le contenu du popup de l'extension :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tabs.css" />
+  </head>
 
- <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="tabs.css"/>
- </head>
+  <body>
+    <div class="panel">
+      <div class="panel-section panel-section-header">
+        <div class="text-section-header">Tabs-tabs-tabs</div>
+      </div>
 
-<body>
+      <a href="#" id="tabs-move-beginning"
+        >Move active tab to the beginning of the window</a
+      ><br />
 
- <div class="panel">
-    <div class="panel-section panel-section-header">
-     <div class="text-section-header">Tabs-tabs-tabs</div>
+      … Define the other menu items …
+
+      <div class="switch-tabs">
+        <p>Switch to tab</p>
+
+        <div id="tabs-list"></div>
+      </div>
     </div>
 
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-
-
-…
-
-Define the other menu items
-…
-
-    <div class="switch-tabs">
-
-     <p>Switch to tab</p>
-
-     <div id="tabs-list"></div>
-
-    </div>
- </div>
-
- <script src="tabs.js"></script>
-
-</body>
-
+    <script src="tabs.js"></script>
+  </body>
 </html>
 ```
 
@@ -155,7 +144,7 @@ La première chose que fait `listTabs()` est d'appeler `getCurrentWindowTabs()`,
 
 ```js
 function getCurrentWindowTabs() {
-  return browser.tabs.query({currentWindow: true});
+  return browser.tabs.query({ currentWindow: true });
 }
 ```
 
@@ -184,24 +173,23 @@ Ensuite, nous allons créer les liens pour chaque onglet :
 1. Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
 2. Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
 
-    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
-    - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
+   - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
+   - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
 
 ```js
-    for (let tab of tabs) {
-     if (!tab.active && counter <= limit) {
-        let tabLink = document.createElement('a');
+for (let tab of tabs) {
+  if (!tab.active && counter <= limit) {
+    let tabLink = document.createElement("a");
 
-        tabLink.textContent = tab.title || tab.id;
+    tabLink.textContent = tab.title || tab.id;
 
-       tabLink.setAttribute('href', tab.id);
-        tabLink.classList.add('switch-tabs');
-        currentTabs.appendChild(tabLink);
-     }
+    tabLink.setAttribute("href", tab.id);
+    tabLink.classList.add("switch-tabs");
+    currentTabs.appendChild(tabLink);
+  }
 
-     counter += 1;
-
-    }
+  counter += 1;
+}
 ```
 
 Enfin, le fragment du document est écrit dans la div `tabs-list` :
@@ -214,7 +202,7 @@ Enfin, le fragment du document est écrit dans la div `tabs-list` :
 
 #### Travailler avec l'onglet actif
 
-Un autre exemple connexe est l'option d'information “Alert active tab”qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :
+Un autre exemple connexe est l'option d'information "Alert active tab"qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :
 
 ```js
  else if (e.target.id === "tabs-alertinfo") {
@@ -270,7 +258,7 @@ Après avoir recueilli des informations sur les onglets, vous voudrez probableme
 
 ### Par exemple
 
-L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option “Deplacer l'onglet actif vers le début de la liste des fenêtres”. Mais d'abord, voici une démonstration de la fonctionnalité en action :
+L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option "Deplacer l'onglet actif vers le début de la liste des fenêtres". Mais d'abord, voici une démonstration de la fonctionnalité en action :
 
 {{EmbedYouTube("-lJRzTIvhxo")}}
 
@@ -280,19 +268,21 @@ Aucune de ces fonctions ne nécessite de permission pour fonctionner, donc il n'
 
 #### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
 
-tabs.html définit le “menu” affiché dans la fenêtre contextuelle, qui inclut l'option “Déplacer l'onglet actif au début de la liste des fenêtres”, wavec une série de balises `<a>` groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.
+tabs.html définit le "menu" affiché dans la fenêtre contextuelle, qui inclut l'option "Déplacer l'onglet actif au début de la liste des fenêtres", wavec une série de balises `<a>` groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.
 
 ```html
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a><br>
+<a href="#" id="tabs-move-beginning"
+  >Move active tab to the beginning of the window</a
+><br />
+<a href="#" id="tabs-move-end">Move active tab to the end of the window</a
+><br />
 
-    <div class="panel-section-separator"></div>
+<div class="panel-section-separator"></div>
 
+<a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
-
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+<a href="#" id="tabs-reload">Reload active tab</a><br />
+<a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
 ```
 
 #### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
@@ -314,19 +304,19 @@ document.addEventListener("click", function(e) {
 }
 ```
 
-Une série d'instructions `if` cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option “Déplacer l'onglet actif au début de la liste des fenêtres” :
+Une série d'instructions `if` cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option "Déplacer l'onglet actif au début de la liste des fenêtres" :
 
 ```js
- if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) => {
-     var index = 0;
-     if (!tab.pinned) {
-       index = firstUnpinnedTab(tabs);
-     }
-     console.log(`moving ${tab.id} to ${index}`)
-     browser.tabs.move([tab.id], {index});
-   });
- }
+if (e.target.id === "tabs-move-beginning") {
+  callOnActiveTab((tab, tabs) => {
+    var index = 0;
+    if (!tab.pinned) {
+      index = firstUnpinnedTab(tabs);
+    }
+    console.log(`moving ${tab.id} to ${index}`);
+    browser.tabs.move([tab.id], { index });
+  });
+}
 ```
 
 Il est intéressant de noter l'utilisation de console.log. Cela vous permet de générer des informations sur la console du [debugger](/fr/Add-ons/WebExtensions/Debugging), ce qui peut être utile lors de la résolution des problèmes rencontrés lors du développement.
@@ -336,15 +326,15 @@ Il est intéressant de noter l'utilisation de console.log. Cela vous permet de g
 Le code de déplacement appelle d'abord `callOnActiveTab()` qui à son tour appelle `getCurrentWindowTabs()` pour obtenir un objet {{WebExtAPIRef("tabs.Tab")}} contenant les onglets de la fenêtre active. Il parcourt ensuite l'objet pour rechercher et renvoyer l'objet onglet actif :
 
 ```js
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+function callOnActiveTab(callback) {
+  getCurrentWindowTabs().then((tabs) => {
+    for (var tab of tabs) {
+      if (tab.active) {
+        callback(tab, tabs);
+      }
+    }
+  });
+}
 ```
 
 ##### Onglets épinglés
@@ -353,18 +343,18 @@ Une caractéristique des onglets est que l'utilisateur peut épingler des onglet
 
 ```js
 function firstUnpinnedTab(tabs) {
- for (var tab of tabs) {
-   if (!tab.pinned) {
-     return tab.index;
-   }
- }
+  for (var tab of tabs) {
+    if (!tab.pinned) {
+      return tab.index;
+    }
+  }
 }
 ```
 
 Nous avons maintenant tout ce qu'il faut pour déplacer l'onglet : l'objet onglet actif à partir duquel nous pouvons obtenir l'ID de l'onglet et la position à laquelle l'onglet doit être déplacé. Ainsi, nous pouvons mettre en œuvre le mouvement :
 
 ```js
-     browser.tabs.move([tab.id], {index});
+browser.tabs.move([tab.id], { index });
 ```
 
 Les fonctions restantes à dupliquer, recharger, créer et supprimer des onglets sont implémentées de manière similaire.
@@ -452,7 +442,7 @@ Voyons comment cela se passe.
 
 Pour utiliser les fonctionnalités CSS dont vous avez besoin :
 
-- Permission `"tabs"`  et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
+- Permission `"tabs"` et [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) ou
 - Permission `"activeTab"`.
 
 Ce dernier est le plus utile, car il permet à une extension d'utiliser {{WebExtAPIRef("tabs.insertCSS")}} et {{WebExtAPIRef("tabs.removeCSS")}} dans l'onglet actif lorsqu'il est exécuté depuis le navigateur de l'extension ou action de la page, menu contextuel ou un raccourci.
@@ -461,27 +451,21 @@ Ce dernier est le plus utile, car il permet à une extension d'utiliser {{WebExt
 {
   "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+  "manifest_version": 2,
+  "name": "apply-css",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
 
- "background": {
-
+  "background": {
     "scripts": ["background.js"]
- },
+  },
 
- "page_action": {
-
+  "page_action": {
     "default_icon": "icons/off.svg",
     "browser_style": true
- },
+  },
 
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
-
+  "permissions": ["activeTab", "tabs"]
 }
 ```
 
@@ -490,11 +474,11 @@ Vous noterez que la permission `"tabs"` est ajoutée en plus de `"activeTab"`. C
 Les autres caractéristiques principales du fichier manifeste sont la définition de:
 
 - **un script d'arrière-plan**, qui commence à s'exécuter dès que l'extension est chargée.
-- **une “action de page”**, qui définit une icône à ajouter à la barre d'adresse du navigateur.
+- **une "action de page"**, qui définit une icône à ajouter à la barre d'adresse du navigateur.
 
 #### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
 
-Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les “actions de page”, et une liste de protocoles dans lesquels l'extension fonctionnera :
+Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les "actions de page", et une liste de protocoles dans lesquels l'extension fonctionnera :
 
 ```js
 const CSS = "body { border: 20px solid red; }";
@@ -509,9 +493,9 @@ Lors du premier chargement, l'extension utilise {{WebExtAPIRef("tabs.query")}} p
 var gettingAllTabs = browser.tabs.query({});
 
 gettingAllTabs.then((tabs) => {
- for (let tab of tabs) {
-   initializePageAction(tab);
- }
+  for (let tab of tabs) {
+    initializePageAction(tab);
+  }
 });
 ```
 
@@ -519,22 +503,21 @@ gettingAllTabs.then((tabs) => {
 
 ```js
 function protocolIsApplicable(url) {
- var anchor =  document.createElement('a');
- anchor.href = url;
- return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+  var anchor = document.createElement("a");
+  anchor.href = url;
+  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
 }
 ```
 
-Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la `pageAction` visible :
+Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions 'off' avant de rendre la `pageAction` visible :
 
 ```js
 function initializePageAction(tab) {
-
- if (protocolIsApplicable(tab.url)) {
-   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-   browser.pageAction.show(tab.id);
- }
+  if (protocolIsApplicable(tab.url)) {
+    browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+    browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+    browser.pageAction.show(tab.id);
+  }
 }
 ```
 
@@ -544,38 +527,35 @@ Maintenant, un écouteur sur `geAction.onClicked` attend que l'icône pageAction
 browser.pageAction.onClicked.addListener(toggleCSS);
 ```
 
-`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
+`toggleCSS()` obtient le titre de la `pageAction` puis prend l'action décrite :
 
-- **Pour "Appliquer CSS”:**
+- **Pour "Appliquer CSS":**
 
-  - Basculer l'icône `pageAction` et le titre dans les versions “supprimer”.
+  - Basculer l'icône `pageAction` et le titre dans les versions "supprimer".
   - Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.
 
-- **Pour “Supprimer CSS”:**
+- **Pour "Supprimer CSS":**
 
-  - Basculer l'icône `pageAction` et le titre dans les versions “apply”.
+  - Basculer l'icône `pageAction` et le titre dans les versions "apply".
   - Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.
 
 ```js
 function toggleCSS(tab) {
-
-
- function gotTitle(title) {
-
+  function gotTitle(title) {
     if (title === TITLE_APPLY) {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-     browser.tabs.insertCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/on.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_REMOVE });
+      browser.tabs.insertCSS({ code: CSS });
     } else {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-     browser.tabs.removeCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+      browser.tabs.removeCSS({ code: CSS });
     }
- }
+  }
 
- var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+  var gettingTitle = browser.pageAction.getTitle({ tabId: tab.id });
 
- gettingTitle.then(gotTitle);
+  gettingTitle.then(gotTitle);
 }
 ```
 
@@ -583,8 +563,7 @@ Enfin, pour s'assurer que `pageAction` est valide après chaque mise à jour de 
 
 ```js
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-
- initializePageAction(tab);
+  initializePageAction(tab);
 });
 ```
 

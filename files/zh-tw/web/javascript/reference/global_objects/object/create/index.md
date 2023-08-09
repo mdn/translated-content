@@ -152,7 +152,7 @@ o2 = Object.create(
       enumerable: true,
       configurable: true,
     },
-  }
+  },
 );
 ```
 

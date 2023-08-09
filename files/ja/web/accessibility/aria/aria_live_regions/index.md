@@ -48,7 +48,8 @@ JavaScript を使うと、検索結果のリストを瞬時に更新する、も
 
 <p>
   <small>
-    Information from <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
+    Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
   </small>
 </p>
 ```
@@ -58,44 +59,51 @@ JavaScript を使うと、検索結果のリストを瞬時に更新する、も
 ```js
 const PLANETS_INFO = {
   mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+    title: "Mercury",
+    description:
+      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
   },
 
   venus: {
     title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+    description:
+      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
   },
 
   earth: {
     title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+    description:
+      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
   },
 
   mars: {
     title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+    description:
+      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  },
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector("#planetTitle");
+  const planetDescription = document.querySelector("#planetDescription");
 
   if (planet in PLANETS_INFO) {
     planetTitle.textContent = PLANETS_INFO[planet].title;
     planetDescription.textContent = PLANETS_INFO[planet].description;
   } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
+    planetTitle.textContent = "No planet selected";
+    planetDescription.textContent = "Select a planet to view its description";
   }
 }
 
-const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
+const renderPlanetInfoButton = document.querySelector(
+  "#renderPlanetInfoButton",
+);
 
-renderPlanetInfoButton.addEventListener('click', event => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+renderPlanetInfoButton.addEventListener("click", (event) => {
+  const planetsSelect = document.querySelector("#planetsSelect");
+  const selectedPlanet =
+    planetsSelect.options[planetsSelect.selectedIndex].value;
 
   renderPlanetInfo(selectedPlanet);
 });
@@ -115,14 +123,14 @@ renderPlanetInfoButton.addEventListener('click', event => {
 
 次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Roles) 値を持つ要素は、デフォルトではライブリージョンのように振る舞います:
 
-| ロール      | 説明                                                                                                                                                                                   | 互換性に関する注意事項                                                                                                                                                                                                                        |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| log         | チャット、エラー、ゲームもしくは別種のログ                                                                                                                                             | 互換性を最大限にするために、このロールを使う際には冗長な `aria-live="polite"` を追加します。                                                                                                                                                  |
-| status      | ある種の更新された状態を表すステータスバーもしくはスクリーン領域。スクリーンリーダーのユーザーは現在のステータスを読みとるための特別なコマンドを持っています。                         | 互換性を最大限にするために、このロールを使う際には冗長な `aria-live="polite"` を追加します。                                                                                                                                                  |
+| ロール      | 説明                                                                                                                                                                                                                   | 互換性に関する注意事項                                                                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| log         | チャット、エラー、ゲームもしくは別種のログ                                                                                                                                                                             | 互換性を最大限にするために、このロールを使う際には冗長な `aria-live="polite"` を追加します。                                                                                                                                        |
+| status      | ある種の更新された状態を表すステータスバーもしくはスクリーン領域。スクリーンリーダーのユーザーは現在のステータスを読みとるための特別なコマンドを持っています。                                                         | 互換性を最大限にするために、このロールを使う際には冗長な `aria-live="polite"` を追加します。                                                                                                                                        |
 | alert       | スクリーン上で点滅するエラーもしくはアラートメッセージ。アラートは特に、クライアントサイドでユーザーの入力を検査する際の通知で重要です。[アラートの例](https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html) | 互換性を最大限にするために、このロールを使う際に `aria-live="assertive"` を追加するよう勧める人もいます。しかし、`aria-live` と `role=alert` の両方を追加すると iOS の VoiceOver で二重に読み上げられるという問題を引き起こします。 |
-| progressbar | ウィジェットとライブリージョンのハイブリッド。aria-valuemin や aria-valuenow、aria-valuemax と共に使います。 (TBD: 情報の追加を検討中)                                                                          |                                                                                                                                                                                                                                               |
-| marquee     | 株式相場表示機のようなスクロールするテキストのためのものです。                                                                                                                         |                                                                                                                                                                                                                                               |
-| timer       | カウントダウンタイマーやストップウォッチなどの、ある種のタイマーや時計の読み上げ。                                                                                                               |                                                                                                                                                                                                                                               |
+| progressbar | ウィジェットとライブリージョンのハイブリッド。aria-valuemin や aria-valuenow、aria-valuemax と共に使います。 (TBD: 情報の追加を検討中)                                                                                 |                                                                                                                                                                                                                                     |
+| marquee     | 株式相場表示機のようなスクロールするテキストのためのものです。                                                                                                                                                         |                                                                                                                                                                                                                                     |
+| timer       | カウントダウンタイマーやストップウォッチなどの、ある種のタイマーや時計の読み上げ。                                                                                                                                     |                                                                                                                                                                                                                                     |
 
 ## ライブリージョン属性についてのさらなる説明
 

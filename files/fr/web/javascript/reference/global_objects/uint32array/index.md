@@ -1,15 +1,6 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Uint32Array
 ---
 
 {{JSRef}}
@@ -133,7 +124,7 @@ console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // Construction à partir d'un tableau
-var arr = new Uint32Array([21,31]);
+var arr = new Uint32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Construction à partir d'un tableau typé
@@ -146,7 +137,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Uint32Array(buffer, 0, 4);
 
 // Construction à partir d'un itérable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```

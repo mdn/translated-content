@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
-translation_of: Web/API/HTMLFormElement/elements
 ---
 
 {{APIRef("HTML DOM")}}
@@ -36,9 +35,9 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <input type="text" name="username">
-  <input type="text" name="full-name">
-  <input type="password" name="password">
+  <input type="text" name="username" />
+  <input type="text" name="full-name" />
+  <input type="password" name="password" />
 </form>
 ```
 
@@ -50,7 +49,7 @@ var inputByName = inputs["username"];
 
 ### Accessing form controls
 
-This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/en-US/docs/Web/HTML/Element/input/text) so that some form of processing can be performed on them.
+This example gets the form's element list, then iterates over the list, looking for {{HTMLElement("input")}} elements of type [`"text"`](/ru/docs/Web/HTML/Element/input/text) so that some form of processing can be performed on them.
 
 ```js
 var inputs = document.getElementById("my-form").elements;
@@ -78,10 +77,7 @@ for (i = 0; i < inputs.length; i++) {
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-form-elements', 'HTMLFormElement.elements')}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-76728479", "HTMLFormElement.elements")}} | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

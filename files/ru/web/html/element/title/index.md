@@ -1,23 +1,6 @@
 ---
-title: '<title>: элемент заголовка документа'
+title: "<title>: элемент заголовка документа"
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Title
-  - Web
-  - Веб
-  - Заголовок вкладки
-  - Заголовок окна
-  - Заголовок страницы
-  - Имя вкладки
-  - Имя окна
-  - Имя страницы
-  - Справка
-  - Элемент
-  - метаданные
-  - метаданные документа HTML
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}
@@ -26,11 +9,11 @@ translation_of: Web/HTML/Element/title
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#Метаданные).                                                                               |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | Текст, который не является межэлементным {{glossary("Whitespace", "разделителем")}}.                                 |
+| Допустимое содержимое                                            | Текст, который не является межэлементным {{glossary("Whitespace", "разделителем")}}.                                                               |
 | Пропуск тегов                                                    | Открывающий и закрывающий теги обязательны. Обратите внимание, что отсутствие `</title>` заставляет браузер игнорировать остальную часть страницы. |
-| Допустимые родители                                              | Элемент {{ HTMLElement("head") }}, который не содержит других элементов {{ HTMLElement("title") }}.                               |
-| Допустимые ARIA-роли                                             | Нет                                                                                                                                       |
-| DOM-интерфейс                                                    | {{domxref("HTMLTitleElement")}}                                                                                                           |
+| Допустимые родители                                              | Элемент {{ HTMLElement("head") }}, который не содержит других элементов {{ HTMLElement("title") }}.                                                |
+| Допустимые ARIA-роли                                             | Нет                                                                                                                                                |
+| DOM-интерфейс                                                    | {{domxref("HTMLTitleElement")}}                                                                                                                    |
 
 ## Атрибуты
 
@@ -69,7 +52,9 @@ translation_of: Web/HTML/Element/title
 ### Пример
 
 ```html
-<title>Меню - Китайская еда Синий дом - FoodYum: онлайн на вынос сегодня!</title>
+<title>
+  Меню - Китайская еда Синий дом - FoodYum: онлайн на вынос сегодня!
+</title>
 ```
 
 Для того чтобы помочь пользователю, обновите значение `title`, чтобы отразить важные изменения состояния страницы (например, проблемы с проверкой формы).
@@ -77,7 +62,10 @@ translation_of: Web/HTML/Element/title
 ### Пример
 
 ```html
-<title>2 ошибки - ваш заказ - Китайская еда Синий дом - FoodYum: онлайн на вынос сегодня!</title>
+<title>
+  2 ошибки - ваш заказ - Китайская еда Синий дом - FoodYum: онлайн на вынос
+  сегодня!
+</title>
 ```
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)

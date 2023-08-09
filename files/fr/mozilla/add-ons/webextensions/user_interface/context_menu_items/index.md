@@ -1,7 +1,6 @@
 ---
 title: Elements du menu contextuel
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
 
 {{AddonSidebar}}
@@ -27,11 +26,14 @@ Vous gérez les éléments du menu contextuel par programmation, en utilisant l'
 Vous pouvez ensuite ajouter (mettre à jour ou supprimer) les éléments du menu contextuel dans votre script de fond de l'extension. Pour créer un élément de menu, vous spécifiez un ID, son titre et les menus contextuels sur lesquels il doit apparaître:
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated,
+);
 ```
 
 Votre extension attend les clics sur les éléments du menu. L'information passée sur l'élément a cliqué, le contexte où le clic s'est produit, et les détails de l'onglet où le clic a eu lieu, peuvent ensuite être utilisés pour appeler les fonctionnalités de l'extension appropriées.
