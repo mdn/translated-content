@@ -16,7 +16,7 @@ setMinutes () 메서드는 현지 시간에 따라 지정된 날짜의 분을 �
 ### Versions prior to JavaScript 1.3
 
 ```js
-    dateObj.setMinutes(minutesValue)
+dateObj.setMinutes(minutesValue);
 ```
 
 ### Parameters

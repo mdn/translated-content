@@ -31,62 +31,62 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 ```js
 function Circle() {}
-const shape = {}
-const circle = new Circle()
+const shape = {};
+const circle = new Circle();
 
 // Set the object prototype
 // DEPRECATED. 예시용일 뿐입니다. 실제 코드에서는 이렇게 하지 마세요.
-shape.__proto__ = circle
+shape.__proto__ = circle;
 
 // Get the object prototype
-console.log(shape.__proto__ === Circle) // false
+console.log(shape.__proto__ === Circle); // false
 
-const ShapeA = function () {}
+const ShapeA = function () {};
 const ShapeB = {
   a() {
-    console.log('aaa')
+    console.log("aaa");
   },
-}
-console.log((ShapeA.prototype.__proto__ = ShapeB))
+};
+console.log((ShapeA.prototype.__proto__ = ShapeB));
 
-const shapea = new ShapeA()
-shapea.a() // aaa
-console.log(ShapeA.prototype === shapea.__proto__) // true
+const shapea = new ShapeA();
+shapea.a(); // aaa
+console.log(ShapeA.prototype === shapea.__proto__); // true
 
 // 또는
-const ShapeC = function () {}
+const ShapeC = function () {};
 const ShapeD = {
   a() {
-    console.log('a')
+    console.log("a");
   },
-}
+};
 
-const shapeC = new ShapeC()
-shapeC.__proto__ = ShapeD
-shapeC.a() // a
-console.log(ShapeC.prototype === shapeC.__proto__) // false
+const shapeC = new ShapeC();
+shapeC.__proto__ = ShapeD;
+shapeC.a(); // a
+console.log(ShapeC.prototype === shapeC.__proto__); // false
 
 // 또는
 function Test() {}
 Test.prototype.myname = function () {
-  console.log('myname')
-}
+  console.log("myname");
+};
 
-const a = new Test()
-console.log(a.__proto__ === Test.prototype) // true
-a.myname() // myname
+const a = new Test();
+console.log(a.__proto__ === Test.prototype); // true
+a.myname(); // myname
 
 // 또는
-const fn = function () {}
+const fn = function () {};
 fn.prototype.myname = function () {
-  console.log('myname')
-}
+  console.log("myname");
+};
 
 var obj = {
   __proto__: fn.prototype,
-}
+};
 
-obj.myname() // myname
+obj.myname(); // myname
 ```
 
 ## 명세

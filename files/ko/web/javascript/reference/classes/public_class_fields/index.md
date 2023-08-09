@@ -19,10 +19,10 @@ Public static fields are declared using the `static` keyword. They are added to 
 
 ```js
 class ClassWithStaticField {
-  static staticField = 'static field'
+  static staticField = "static field";
 }
 
-console.log(ClassWithStaticField.staticField)
+console.log(ClassWithStaticField.staticField);
 // expected output: "static field"
 ```
 
@@ -30,11 +30,11 @@ Fields without initializers are initialized to `undefined`.
 
 ```js
 class ClassWithStaticField {
-  static staticField
+  static staticField;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
-console.log(ClassWithStaticField.staticField)
+console.assert(ClassWithStaticField.hasOwnProperty("staticField"));
+console.log(ClassWithStaticField.staticField);
 // expected output: "undefined"
 ```
 
@@ -42,17 +42,17 @@ Public static fields are not reinitialized on subclasses, but can be accessed vi
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base field'
+  static baseStaticField = "base field";
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
+  static subStaticField = "sub class field";
 }
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // expected output: "sub class field"
 
-console.log(SubClassWithStaticField.baseStaticField)
+console.log(SubClassWithStaticField.baseStaticField);
 // expected output: "base field"
 ```
 
@@ -60,20 +60,22 @@ When initializing fields, `this` refers to the class constructor. You can also r
 
 ```js
 class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
+  static baseStaticField = "base static field";
+  static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output' }
+  static baseStaticMethod() {
+    return "base static method output";
+  }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
+  static subStaticField = super.baseStaticMethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField)
+console.log(ClassWithStaticField.anotherBaseStaticField);
 // expected output: "base static field"
 
-console.log(SubClassWithStaticField.subStaticField)
+console.log(SubClassWithStaticField.subStaticField);
 // expected output: "base static method output"
 ```
 
@@ -85,11 +87,11 @@ Public instance fields are added with {{jsxref("Global_Objects/Object/defineProp
 
 ```js
 class ClassWithInstanceField {
-  instanceField = 'instance field'
+  instanceField = "instance field";
 }
 
-const instance = new ClassWithInstanceField()
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.log(instance.instanceField);
 // expected output: "instance field"
 ```
 
@@ -97,26 +99,26 @@ Fields without initializers are initialized to `undefined`.
 
 ```js
 class ClassWithInstanceField {
-  instanceField
+  instanceField;
 }
 
-const instance = new ClassWithInstanceField()
-console.assert(instance.hasOwnProperty('instanceField'))
-console.log(instance.instanceField)
+const instance = new ClassWithInstanceField();
+console.assert(instance.hasOwnProperty("instanceField"));
+console.log(instance.instanceField);
 // expected output: "undefined"
 ```
 
 Like properties, field names may be computed.
 
 ```js
-const PREFIX = 'prefix'
+const PREFIX = "prefix";
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field'
+  [`${PREFIX}Field`] = "prefixed field";
 }
 
-const instance = new ClassWithComputedFieldName()
-console.log(instance.prefixField)
+const instance = new ClassWithComputedFieldName();
+console.log(instance.prefixField);
 // expected output: "prefixed field"
 ```
 
@@ -124,22 +126,24 @@ When initializing fields `this` refers to the class instance under construction.
 
 ```js
 class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
+  baseInstanceField = "base field";
+  anotherBaseInstanceField = this.baseInstanceField;
+  baseInstanceMethod() {
+    return "base method output";
+  }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
+  subInstanceField = super.baseInstanceMethod();
 }
 
-const base = new ClassWithInstanceField()
-const sub = new SubClassWithInstanceField()
+const base = new ClassWithInstanceField();
+const sub = new SubClassWithInstanceField();
 
-console.log(base.anotherBaseInstanceField)
+console.log(base.anotherBaseInstanceField);
 // expected output: "base field"
 
-console.log(sub.subInstanceField)
+console.log(sub.subInstanceField);
 // expected output: "base method output"
 ```
 
@@ -160,12 +164,12 @@ As the name implies, public instance methods are methods available on class inst
 ```js
 class ClassWithPublicInstanceMethod {
   publicMethod() {
-    return 'hello world'
+    return "hello world";
   }
 }
 
-const instance = new ClassWithPublicInstanceMethod()
-console.log(instance.publicMethod())
+const instance = new ClassWithPublicInstanceMethod();
+console.log(instance.publicMethod());
 // expected output: "hello world"
 ```
 
@@ -175,9 +179,9 @@ You may make use of generator, async, and async generator functions.
 
 ```js
 class ClassWithFancyMethods {
-  *generatorMethod() { }
-  async asyncMethod() { }
-  async *asyncGeneratorMethod() { }
+  *generatorMethod() {}
+  async asyncMethod() {}
+  async *asyncGeneratorMethod() {}
 }
 ```
 
@@ -185,20 +189,20 @@ Inside instance methods, `this` refers to the instance itself. In subclasses, `s
 
 ```js
 class BaseClass {
-  msg = 'hello world'
+  msg = "hello world";
   basePublicMethod() {
-    return this.msg
+    return this.msg;
   }
 }
 
 class SubClass extends BaseClass {
   subPublicMethod() {
-    return super.basePublicMethod()
+    return super.basePublicMethod();
   }
 }
 
-const instance = new SubClass()
-console.log(instance.subPublicMethod())
+const instance = new SubClass();
+console.log(instance.subPublicMethod());
 // expected output: "hello world"
 ```
 
@@ -206,21 +210,21 @@ Getters and setters are special methods that bind to a class property and are ca
 
 ```js
 class ClassWithGetSet {
-  #msg = 'hello world'
+  #msg = "hello world";
   get msg() {
-    return this.#msg
+    return this.#msg;
   }
   set msg(x) {
-    this.#msg = `hello ${x}`
+    this.#msg = `hello ${x}`;
   }
 }
 
-const instance = new ClassWithGetSet()
-console.log(instance.msg)
+const instance = new ClassWithGetSet();
+console.log(instance.msg);
 // expected output: "hello world"
 
-instance.msg = 'cake'
-console.log(instance.msg)
+instance.msg = "cake";
+console.log(instance.msg);
 // expected output: "hello cake"
 ```
 
@@ -234,15 +238,15 @@ The limitation of static variables being called by only static methods still hol
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
   }
 }
 
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
+assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
 ```
 
 Private static fields are added to the class constructor at class evaluation time.
@@ -253,17 +257,17 @@ This can lead to unexpected behaviour when using **`this`**.
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD;
 
   static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField { }
+class SubClass extends BaseClassWithPrivateStaticField {}
 
-assertThrows(() => SubClass.basePublicStaticMethod(), TypeError)
+assertThrows(() => SubClass.basePublicStaticMethod(), TypeError);
 ```
 
 ### Private instance fields
@@ -274,16 +278,16 @@ The encapsulation is enforced by the language. It is a syntax error to refer to 
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField;
 
   constructor() {
-    this.#privateField = 42
-    this.#randomField = 666 // Syntax error
+    this.#privateField = 42;
+    this.#randomField = 666; // Syntax error
   }
 }
 
-const instance = new ClassWithPrivateField()
-instance.#privateField === 42 // Syntax error
+const instance = new ClassWithPrivateField();
+instance.#privateField === 42; // Syntax error
 ```
 
 ## Private Methods
@@ -296,17 +300,17 @@ Private static methods may be generator, async, and async generator functions.
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+  static publicStaticMethod1() {
+    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 assert(ClassWithPrivateStaticField.publicStaticMethod1() === 42);
@@ -317,15 +321,15 @@ This can lead to unexpected behaviour when using **`this`**(because `this` bindi
 
 ```js
 class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+  static #privateStaticMethod() {
+    return 42;
+  }
+  static publicStaticMethod1() {
+    return Base.#privateStaticMethod();
+  }
+  static publicStaticMethod2() {
+    return this.#privateStaticMethod();
+  }
 }
 
 class Derived extends Base {}
@@ -341,16 +345,16 @@ Private instance methods are methods available on class instances whose access i
 ```js
 class ClassWithPrivateMethod {
   #privateMethod() {
-    return 'hello world'
+    return "hello world";
   }
 
   getPrivateMessage() {
-      return this.#privateMethod()
+    return this.#privateMethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod()
-console.log(instance.getPrivateMessage())
+const instance = new ClassWithPrivateMethod();
+console.log(instance.getPrivateMessage());
 // expected output: "hello world"
 ```
 
@@ -358,18 +362,18 @@ Private instance methods may be generator, async, or async generator functions. 
 
 ```js
 class ClassWithPrivateAccessor {
-  #message
+  #message;
 
   get #decoratedMessage() {
-    return `✨${this.#message}✨`
+    return `✨${this.#message}✨`;
   }
   set #decoratedMessage(msg) {
-    this.#message = msg
+    this.#message = msg;
   }
 
   constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
+    this.#decoratedMessage = "hello world";
+    console.log(this.#decoratedMessage);
   }
 }
 

@@ -66,23 +66,15 @@ Usando {{JSxRef("Functions/Arrow_functions", "Expresiones de funciones de flecha
 
 ```js
 promise1
-  .then((value) => {
-    return value + " y barra";
-  })
-  .then((value) => {
-    return value + " y barra de nuevo";
-  })
-  .then((value) => {
-    return value + " y de nuevo";
-  })
-  .then((value) => {
-    return value + " y de nuevo";
-  })
+  .then((value) => `${value} y barra`)
+  .then((value) => `${value} y barra de nuevo`)
+  .then((value) => `${value} y de nuevo`)
+  .then((value) => `${value} y de nuevo)
   .then((value) => {
     console.log(value);
   })
   .catch((err) => {
-    console.log(err);
+    console.error(err);
   });
 ```
 

@@ -2,6 +2,7 @@
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 **`hasOwnProperty()`** 메소드는 객체가 특정 프로퍼티를 가지고 있는지를 나타내는 불리언 값을 반환한다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ## 구문
 
 ```js
-obj.hasOwnProperty(prop)
+obj.hasOwnProperty(prop);
 ```
 
 ### 매개변수
@@ -31,16 +32,16 @@ obj.hasOwnProperty(prop)
 
 ```js
 o = new Object();
-o.prop = 'exists';
+o.prop = "exists";
 
 function changeO() {
   o.newprop = o.prop;
   delete o.prop;
 }
 
-o.hasOwnProperty('prop');   // returns true
+o.hasOwnProperty("prop"); // returns true
 changeO();
-o.hasOwnProperty('prop');   // returns false
+o.hasOwnProperty("prop"); // returns false
 ```
 
 ### 직접 프로퍼티와 상속된 프로퍼티의 비교
@@ -49,10 +50,10 @@ o.hasOwnProperty('prop');   // returns false
 
 ```js
 o = new Object();
-o.prop = 'exists';
-o.hasOwnProperty('prop');             // returns true
-o.hasOwnProperty('toString');         // returns false
-o.hasOwnProperty('hasOwnProperty');   // returns false
+o.prop = "exists";
+o.hasOwnProperty("prop"); // returns true
+o.hasOwnProperty("toString"); // returns false
+o.hasOwnProperty("hasOwnProperty"); // returns false
 ```
 
 ### 객체의 프로퍼티들을 순환하기
@@ -61,14 +62,13 @@ The following example shows how to iterate over the properties of an object with
 
 ```js
 var buz = {
-  fog: 'stack'
+  fog: "stack",
 };
 
 for (var name in buz) {
   if (buz.hasOwnProperty(name)) {
-    console.log('this is fog (' + name + ') for sure. Value: ' + buz[name]);
-  }
-  else {
+    console.log("this is fog (" + name + ") for sure. Value: " + buz[name]);
+  } else {
     console.log(name); // toString or something else
   }
 }
@@ -80,19 +80,19 @@ for (var name in buz) {
 
 ```js
 var foo = {
-  hasOwnProperty: function() {
+  hasOwnProperty: function () {
     return false;
   },
-  bar: 'Here be dragons'
+  bar: "Here be dragons",
 };
 
-foo.hasOwnProperty('bar'); // always returns false
+foo.hasOwnProperty("bar"); // always returns false
 
 // Use another Object's hasOwnProperty and call it with 'this' set to foo
-({}).hasOwnProperty.call(foo, 'bar'); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 
 // It's also possible to use the hasOwnProperty property from the Object prototype for this purpose
-Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
+Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Note that in the last case there are no newly created objects.

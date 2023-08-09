@@ -1,6 +1,8 @@
 ---
 title: 충돌 감지
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -19,9 +21,9 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 
 ```js
 function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
       // calculations
     }
   }
@@ -39,9 +41,9 @@ function collisionDetection() {
 
 ```js
 function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
       if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
         dy = -dy;
       }
@@ -57,10 +59,10 @@ function collisionDetection() {
 위의 코드는 우리가 의도한대로 작동할 것이고 공은 방향을 바꿀 것입니다. 문제는 벽돌이 그대로 있다는 것입니다. 우린 이미 공이 부딪힌 벽돌을 제거하기 위한 방법을 고민해봐야 합니다. 우리는 화면에 있는 벽돌을 그릴지 결정하는 변수를 추가해서 이 문제를 해결할 수 있습니다, 벽돌을 초기화하는 코드에, `status` 속성을 각 벽돌 객체에 추가해봅시다. 아래와 같이 말입니다.
 
 ```js
-var bricks = [];
-for (var c = 0; c < brickColumnCount; c++) {
+const bricks = [];
+for (let c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
-  for (var r = 0; r < brickRowCount; r++) {
+  for (let r = 0; r < brickRowCount; r++) {
     bricks[c][r] = { x: 0, y: 0, status: 1 };
   }
 }
@@ -70,11 +72,11 @@ for (var c = 0; c < brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      if (bricks[c][r].status == 1) {
-        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      if (bricks[c][r].status === 1) {
+        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
         ctx.beginPath();
@@ -94,10 +96,10 @@ function drawBricks() {
 
 ```js
 function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
+  for (let c = 0; c < brickColumnCount; c++) {
+    for (let r = 0; r < brickRowCount; r++) {
+      const b = bricks[c][r];
+      if (b.status === 1) {
         if (
           x > b.x &&
           x < b.x + brickWidth &&
@@ -125,7 +127,7 @@ collisionDetection();
 
 이제 매 프레임마다 충돌 감지를 확인할 것입니다. 이제 우린 벽돌을 파괴할 수 있습니다!
 
-{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}
+{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/kaed3hbu/","","395")}}
 
 > **참고:** **연습하기: 벽돌이 부딪힐 때마다 색깔을 바꿔보세요.**
 
