@@ -49,7 +49,7 @@ const str = "hey JudE";
 const re = /[A-Z]/;
 const reDot = /[.]/;
 console.log(str.search(re)); // 返回 4，这是第一个大写字母“J”的索引
-console.log(str.search(reDot)); // returns -1 cannot find '.' dot punctuation
+console.log(str.search(reDot)); // 返回 -1，找不到“.”点符号
 ```
 
 ## 规范
