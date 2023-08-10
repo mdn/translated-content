@@ -1,5 +1,5 @@
 ---
-title: "量化子: *, +, ?, {n}, {n,}, {n,m}"
+title: "数量詞: *, +, ?, {n}, {n,}, {n,m}"
 slug: Web/JavaScript/Reference/Regular_expressions/Quantifier
 l10n:
   sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar}}
 
-**量化子**は、[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)を指定した回数繰り返します。量化子は適用するアトムの後に配置します。
+**数量詞**は、[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)を指定した回数繰り返します。数量詞は適用するアトムの後に配置します。
 
 ## 構文
 
@@ -42,9 +42,9 @@ atom{min,max}?
 
 ## 解説
 
-量化子は[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)の後に置かれ、そのアトムを一定回数繰り返します。単独で現れることはありません。それぞれの量化子は、パターンが繰り返されなければならない最小数と最大数を指定することができます。
+数量詞は[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)の後に置かれ、そのアトムを一定回数繰り返します。単独で現れることはありません。それぞれの数量詞は、パターンが繰り返されなければならない最小数と最大数を指定することができます。
 
-| 量化子  | 最小値 | 最大値  |
+| 数量詞  | 最小値 | 最大値  |
 | ----------- | ------- | -------- |
 | `?`         | 0       | 1        |
 | `*`         | 0       | 無限大 |
@@ -73,7 +73,7 @@ re.test("a{1, 3}"); // true
 /a{3,2}/; // SyntaxError: Invalid regular expression: numbers out of order in {} quantifier
 ```
 
-量化子によって、[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)を複数回照合させることができます。この場合の動作については、キャプチャグループのページを参照してください。
+数量詞によって、[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)を複数回照合させることができます。この場合の動作については、キャプチャグループのページを参照してください。
 
 一致するごとに文字列が同じである必要はありません。
 
@@ -81,7 +81,7 @@ re.test("a{1, 3}"); // true
 /[ab]*/.exec("aba"); // ['aba']
 ```
 
-量化子は既定では貪欲です。つまり、最大値に達するまで、あるいはそれ以上一致させることができなくなるまで、可能な限り何度でも照合しようとします。量化子の後に `?` を付けることで、貪欲でない量化子にすることができます。この場合、量化子はできる限り一致回数を少なくさせようとし、残りのパターンをこの回数で一致させることができなくなった場合のみ、それ以上の回数を照合しようとします。
+数量詞は既定では貪欲です。つまり、最大値に達するまで、あるいはそれ以上一致させることができなくなるまで、可能な限り何度でも照合しようとします。数量詞の後に `?` を付けることで、貪欲でない数量詞にすることができます。この場合、数量詞はできる限り一致回数を少なくさせようとし、残りのパターンをこの回数で一致させることができなくなった場合のみ、それ以上の回数を照合しようとします。
 
 ```js
 /a*/.exec("aaa"); // ['aaa']; 入力全体が消費される
@@ -95,19 +95,19 @@ re.test("a{1, 3}"); // true
 /a*?$/.exec("aaa"); // ['aaa']; 照合は最初の文字ですでに成功しているので、正規表現は 2 文字目で照合を開始しようとしません。
 ```
 
-貪欲な量化子は、それ以外のパターンに一致することが不可能な場合、反復回数を少なくしようとするかもしれません。
+貪欲な数量詞は、それ以外のパターンに一致することが不可能な場合、反復回数を少なくしようとするかもしれません。
 
 ```js
 /[ab]+[abc]c/.exec("abbc"); // ['abbc']
 ```
 
-この例では、最初の `[ab]+` は貪欲に "abb" に一致しますが、`[abc]c` は残りのパターン ("c") に一致することができないので、量化子は "ab" だけに一致するように縮小されます。
+この例では、最初の `[ab]+` は貪欲に "abb" に一致しますが、`[abc]c` は残りのパターン ("c") に一致することができないので、数量詞は "ab" だけに一致するように縮小されます。
 
-貪欲な量化子は、無限個の空文字列と一致することを避けます。 照合する文字数が最小値に達し、その位置のアトムで消費される文字がなくなると、 量化子は照合を停止します。 これが `/(a*)*/.exec("b")` が無限ループにならない理由です。
+貪欲な数量詞は、無限個の空文字列と一致することを避けます。 照合する文字数が最小値に達し、その位置のアトムで消費される文字がなくなると、 数量詞は照合を停止します。 これが `/(a*)*/.exec("b")` が無限ループにならない理由です。
 
-貪欲な量化子は可能な限り多くの回数の照合をしようとします。例えば、`/(aa|aabaac|ba)*/.exec("aabaac")` は `"aabaac"` の代わりに `"aa"` と `:ba"` に一致します。
+貪欲な数量詞は可能な限り多くの回数の照合をしようとします。例えば、`/(aa|aabaac|ba)*/.exec("aabaac")` は `"aabaac"` の代わりに `"aa"` と `:ba"` に一致します。
 
-量化子は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)する必要があります。 量化子は[アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アサーション)には適用できません。
+数量詞は単一のアトムに適用されます。長いパターンや論理和を量化したい場合は、[グループ化](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)する必要があります。 数量詞は[アサーション](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アサーション)には適用できません。
 
 ```js
 /^*/; // SyntaxError: Invalid regular expression: nothing to repeat
@@ -176,7 +176,7 @@ Another paragraph
 
 ## 関連情報
 
-- [量化子](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [数量詞](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 - [正規表現リファレンス](/ja/docs/Web/JavaScript/Reference/Regular_expressions)
 - [論理和: `|`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
 - [文字クラス: `[...]`, `[^...]`](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
