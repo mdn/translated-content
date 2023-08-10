@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar}}
 
-**非キャプチャグループ**はサブパターンをグループ化し、グループ全体に[量化子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。これは JavaScript で発生した[グループ化演算子](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)のように動作します。[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)とは異なり、一致したテキストを記憶しないため、パフォーマンスが向上し、パターンが有用なキャプチャグループを含む場合の混乱を避けることができます。
+**非キャプチャグループ**はサブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。これは JavaScript で発生した[グループ化演算子](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)のように動作します。[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)とは異なり、一致したテキストを記憶しないため、パフォーマンスが向上し、パターンが有用なキャプチャグループを含む場合の混乱を避けることができます。
 
 ## 構文
 
@@ -22,7 +22,7 @@ l10n:
 
 ## 例
 
-### サブパターンのグループ化と量化子の適用
+### サブパターンのグループ化と数量詞の適用
 
 以下の例では、ファイルパスの末尾が `styles.css` か `styles.[a hex hash].css` かを検査します。`\.[\da-f]+` の部分全体はオプションであるため、これに `?` 量子化子を適用するには、これを新しいアトムにグループ化する必要があります。 非キャプチャグループを使用すると、必要のない余分な一致情報を生成しないため、パフォーマンスが向上します。
 
@@ -53,7 +53,7 @@ isImage("image.pdf"); // false
 
 ### リファクタリング災害の防止
 
-キャプチャグループはパターン内の位置によってアクセスされます。照合結果や[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)からアクセスしている場合、キャプチャグループを追加または除去すると、他のキャプチャグループの位置も更新する必要があります。 特に、ほとんどのグループが純粋に構文上の目的（量化子を適用するため、または論理和をグループ化するため）である場合、これはバグの原因となる可能性があります。 非キャプチャグループを使用することで、この問題を避けることができ、実際のキャプチャグループのインデックスを簡単に追跡することができます。
+キャプチャグループはパターン内の位置によってアクセスされます。照合結果や[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)からアクセスしている場合、キャプチャグループを追加または除去すると、他のキャプチャグループの位置も更新する必要があります。 特に、ほとんどのグループが純粋に構文上の目的（数量詞を適用するため、または論理和をグループ化するため）である場合、これはバグの原因となる可能性があります。 非キャプチャグループを使用することで、この問題を避けることができ、実際のキャプチャグループのインデックスを簡単に追跡することができます。
 
 例えば、文字列中の `title='xxx'` というパターンと照合する関数があるとします（[キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group#引用符のペアリング)から引用した例）。 引用符が確実に一致するように、後方参照を使って最初の引用符を参照しています。
 
