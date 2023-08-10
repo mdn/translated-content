@@ -27,7 +27,9 @@ CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#spe
 
 ```css
 @media aural {
-  body { voice-family: Paul }
+  body {
+    voice-family: Paul;
+  }
 }
 ```
 

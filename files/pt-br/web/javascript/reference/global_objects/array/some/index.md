@@ -57,7 +57,7 @@ O exemplo a seguir testa se algum elemento de um array é maior que 10.
 function isBiggerThan10(element, index, array) {
   return element > 10;
 }
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -66,8 +66,8 @@ function isBiggerThan10(element, index, array) {
 [Arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) fornece uma sintaxe mais curta para o mesmo teste.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
+[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
 ## Polyfill
@@ -78,14 +78,14 @@ function isBiggerThan10(element, index, array) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.17
 // Reference: http://es5.github.io/#x15.4.4.17
 if (!Array.prototype.some) {
-  Array.prototype.some = function(fun/*, thisArg*/) {
-    'use strict';
+  Array.prototype.some = function (fun /*, thisArg*/) {
+    "use strict";
 
     if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
+      throw new TypeError("Array.prototype.some called on null or undefined");
     }
 
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 
@@ -106,10 +106,10 @@ if (!Array.prototype.some) {
 
 ## Especificações
 
-| Specification                                                                                    | Status                   | Comment                                            |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}             | {{Spec2('ES5.1')}} | Definição inicial. Implementada em JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ES6')}}     |                                                    |
+| Specification                                                            | Status             | Comment                                            |
+| ------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.4.4.17', 'Array.prototype.some')}}          | {{Spec2('ES5.1')}} | Definição inicial. Implementada em JavaScript 1.6. |
+| {{SpecName('ES6', '#sec-array.prototype.some', 'Array.prototype.some')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

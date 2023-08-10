@@ -134,4 +134,4 @@ l10n:
 ## 関連情報
 
 - {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
-- {{HTMLElement("q")}} 要素と [`cite`](/en-US/docs/Web/HTML/Element/q#cite) 属性はインラインの引用に使用します。
+- {{HTMLElement("q")}} 要素と [`cite`](/ja/docs/Web/HTML/Element/q#cite) 属性はインラインの引用に使用します。

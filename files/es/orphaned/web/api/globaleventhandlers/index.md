@@ -1,6 +1,7 @@
 ---
 title: GlobalEventHandlers
 slug: orphaned/Web/API/GlobalEventHandlers
+original_slug: Web/API/GlobalEventHandlers
 ---
 
 {{ApiRef("DOM HTML")}}

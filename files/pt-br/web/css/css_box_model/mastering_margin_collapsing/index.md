@@ -12,8 +12,8 @@ Margin collapsing ocorre em três casos básicos:
   - : As margens de irmãos adjacentes são colapsadas (execeto quando o último irmão precisar ser [limpado](/pt-BR/docs/Web/CSS/clear) devido ao uso de floats em elementos anteriores ). Por exemplo:
 
     ```html
-     <p>A margem inferior deste parágrafo é colapsada...</p>
-     <p>... com margem superior deste parágrafo.</p>
+    <p>A margem inferior deste parágrafo é colapsada...</p>
+    <p>... com margem superior deste parágrafo.</p>
     ```
 
 - Pai e primeiro/último filho
@@ -32,8 +32,8 @@ Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de 
 
 ## Especificações
 
-| Espeficicações                                                                                       | Status                   | Comentário        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| Espeficicações                                                             | Status              | Comentário        |
+| -------------------------------------------------------------------------- | ------------------- | ----------------- |
 | {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Definição inicial |
 
 ## Veja Também

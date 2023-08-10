@@ -21,9 +21,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## イベント型
@@ -52,7 +52,7 @@ onfullscreenchange = (event) => { };
 ### JavaScript
 
 ```js
-function fullscreenchanged (event) {
+function fullscreenchanged(event) {
   // document.fullscreenElement は、全画面モードにある要素があれば
   // それを指します。要素がなければ、このプロパティの値は null に
   // あります。

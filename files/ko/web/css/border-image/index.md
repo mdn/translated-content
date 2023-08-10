@@ -2,6 +2,7 @@
 title: border-image
 slug: Web/CSS/border-image
 ---
+
 {{CSSRef}}
 
 **`border-image`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 주위에 이미지를 그립니다. 일반 [테두리](/ko/docs/Web/CSS/border)를 대체합니다.
@@ -60,7 +61,9 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 #### HTML
 
 ```html
-<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+<div id="bitmap">
+  This element is surrounded by a bitmap-based border image!
+</div>
 ```
 
 #### CSS

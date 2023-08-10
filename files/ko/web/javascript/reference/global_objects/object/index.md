@@ -114,15 +114,15 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 다음 예제는 변수 `o`에 빈 `Object` 객체를 저장합니다.
 
 ```js
-let o = new Object()
+let o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+let o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+let o = new Object(null);
 ```
 
 ### `Object`로 `Boolean` 객체 생성하기
@@ -131,12 +131,12 @@ let o = new Object(null)
 
 ```js
 // o = new Boolean(true) 와 같음
-let o = new Object(true)
+let o = new Object(true);
 ```
 
 ```js
 // o = new Boolean(false) 와 같음
-let o = new Object(Boolean())
+let o = new Object(Boolean());
 ```
 
 ### 객체 프로토타입
@@ -153,8 +153,8 @@ var current = Object.prototype.valueOf;
 // 내가 지정한 속성 "-prop-value"은 범분야에 걸쳐 사용되고 있고
 // 항상 동일한 프로토타입 체인에 있지 않기 때문에, Object.prototype을 수정하고 싶습니다.
 Object.prototype.valueOf = function () {
-  if (this.hasOwnProperty('-prop-value')) {
-    return this['-prop-value'];
+  if (this.hasOwnProperty("-prop-value")) {
+    return this["-prop-value"];
   } else {
     // 내가 만든 객체가 아닌 것 같으므로,
     // 가능한 최선을 다해 원래의 동작을 재현하여 기본 동작으로 돌아가겠습니다.
@@ -162,7 +162,7 @@ Object.prototype.valueOf = function () {
     // valueOf()가 arguments를 취하지 않더라도, 다른 hook이 있으리라 생각합니다.
     return current.apply(this, arguments);
   }
-}
+};
 ```
 
 JavaScript에는 명확한 하위 클래스 객체가 없기 때문에, 프로토타입은 특정 기능의 "기본 클래스" 객체를 만드는 데 유용한 해결 방법입니다. 예를 들어:
@@ -171,10 +171,10 @@ JavaScript에는 명확한 하위 클래스 객체가 없기 때문에, 프로�
 var Person = function (name) {
   this.name = name;
   this.canTalk = true;
-}
+};
 Person.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name);
+    console.log("Hi, I am " + this.name);
   }
 };
 
@@ -185,11 +185,11 @@ var Employee = function (name, title) {
 
 Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee; // Object.prototype.constructor를 Employee로 설정하지 않으면
-                                           // Person (parent)의 prototype.constructor를 사용합니다.
-                                           // 이를 피하기 위해 prototype.constructor를 Employee (child)로 설정합니다.
+// Person (parent)의 prototype.constructor를 사용합니다.
+// 이를 피하기 위해 prototype.constructor를 Employee (child)로 설정합니다.
 Employee.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title);
+    console.log("Hi, I am " + this.name + ", the " + this.title);
   }
 };
 
@@ -199,8 +199,8 @@ var Customer = function (name) {
 
 Customer.prototype = Object.create(Person.prototype);
 Customer.prototype.constructor = Customer; // Object.prototype.constructor를 Customer로 설정하지 않으면
-                                           // Person (parent)의 prototype.constructor를 사용합니다.
-                                           // 이를 피하기 위해 prototype.constructor를 Customer (child)로 설정합니다.
+// Person (parent)의 prototype.constructor를 사용합니다.
+// 이를 피하기 위해 prototype.constructor를 Customer (child)로 설정합니다.
 
 var Mime = function (name) {
   Person.call(this, name);
@@ -209,14 +209,14 @@ var Mime = function (name) {
 
 Mime.prototype = Object.create(Person.prototype);
 Mime.prototype.constructor = Mime; // Object.prototype.constructor를 Mime로 설정하지 않으면
-                                   // Person (parent)의 prototype.constructor를 사용합니다.
-                                   // 이를 피하기 위해 prototype.constructor를 Mime (child)로 설정합니다.
+// Person (parent)의 prototype.constructor를 사용합니다.
+// 이를 피하기 위해 prototype.constructor를 Mime (child)로 설정합니다.
 
-var bob = new Employee('Bob', 'Builder');
-var joe = new Customer('Joe');
-var rg = new Employee('Red Green', 'Handyman');
-var mike = new Customer('Mike');
-var mime = new Mime('Mime');
+var bob = new Employee("Bob", "Builder");
+var joe = new Customer("Joe");
+var rg = new Employee("Red Green", "Handyman");
+var mike = new Customer("Mike");
+var mime = new Mime("Mime");
 
 bob.greet();
 // Hi, I am Bob, the Builder

@@ -59,8 +59,8 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Specifications
 
-| Specification                                        | Title                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
+| Specification                           | Title                                                        |
+| --------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores

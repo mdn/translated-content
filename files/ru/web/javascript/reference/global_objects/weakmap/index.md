@@ -2,6 +2,7 @@
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef("Global_Objects", "WeakMap")}}
 
 ## Сводка
@@ -58,18 +59,18 @@ WeakMaps имеют "weak" («слабые») обращения к ключам
 
 ```js
 const wm1 = new WeakMap(),
-    wm2 = new WeakMap(),
-    wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap();
 const o1 = {},
-    o2 = function(){},
-    o3 = window,
-    o4 = [1, 2, 3];
+  o2 = function () {},
+  o3 = window,
+  o4 = [1, 2, 3];
 
 wm1.set(o1, 37);
-wm1.set(o2, 'azerty');
-wm2.set(o1, o2);        // значением может быть что угодно, включая объект или функцию
+wm1.set(o2, "azerty");
+wm2.set(o1, o2); // значением может быть что угодно, включая объект или функцию
 wm2.set(o3, undefined);
-wm2.set(wm1, wm2);      // ключами и значениями могут быть объекты. Даже WeakMap-ами
+wm2.set(wm1, wm2); // ключами и значениями могут быть объекты. Даже WeakMap-ами
 
 wm1.get(o2); // 'azerty'
 wm2.get(o2); // undefined, нет значения для o2 в wm2
@@ -80,44 +81,44 @@ wm2.has(o2); // false
 wm2.has(o3); // true (даже если значение равно 'undefined')
 
 wm3.set(o1, 37);
-wm3.get(o1);     // 37
+wm3.get(o1); // 37
 
-wm1.has(o1);     // true
+wm1.has(o1); // true
 wm1.delete(o1);
-wm1.has(o1);     // false
+wm1.has(o1); // false
 ```
 
 ### Пример: Реализация класса WeakMap-like классов с методом .clear()
 
 ```js
 class ClearableWeakMap {
-    constructor(init) {
-        this._wm = new WeakMap(init)
-    }
-    clear() {
-        this._wm = new WeakMap()
-    }
-    delete(k) {
-        return this._wm.delete(k)
-    }
-    get(k) {
-        return this._wm.get(k)
-    }
-    has(k) {
-        return this._wm.has(k)
-    }
-    set(k, v) {
-        this._wm.set(k, v)
-        return this
-    }
+  constructor(init) {
+    this._wm = new WeakMap(init);
+  }
+  clear() {
+    this._wm = new WeakMap();
+  }
+  delete(k) {
+    return this._wm.delete(k);
+  }
+  get(k) {
+    return this._wm.get(k);
+  }
+  has(k) {
+    return this._wm.has(k);
+  }
+  set(k, v) {
+    this._wm.set(k, v);
+    return this;
+  }
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус                       | Комментарий              |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------ |
-| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ES2015')}}     | Изначальное определение. |
+| Спецификация                                               | Статус               | Комментарий              |
+| ---------------------------------------------------------- | -------------------- | ------------------------ |
+| {{SpecName('ES2015', '#sec-weakmap-objects', 'WeakMap')}}  | {{Spec2('ES2015')}}  | Изначальное определение. |
 | {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} | {{Spec2('ESDraft')}} |                          |
 
 ## Совместимость с браузерами

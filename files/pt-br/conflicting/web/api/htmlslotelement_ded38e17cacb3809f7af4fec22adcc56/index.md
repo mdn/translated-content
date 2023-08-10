@@ -1,7 +1,6 @@
 ---
 title: HTMLContentElement.select
 slug: conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
-original_slug: Web/API/HTMLContentElement/select
 ---
 
 {{ APIRef("Web Components") }}

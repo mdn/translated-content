@@ -37,7 +37,10 @@ O método `Object.fromEntries()` recebe uma lista de pares chave-valor e retorna
 Com o método `Object.fromEntries`, é possível fazer a conveeção de um {{jsxref("Map")}} em um {{jsxref("Object")}}:
 
 ```js
-const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const map = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 ```
@@ -47,7 +50,11 @@ console.log(obj); // { foo: "bar", baz: 42 }
 Com o método `Object.fromEntries`, é possível converter um {{jsxref("Array")}} em um {{jsxref("Object")}}:
 
 ```js
-const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
@@ -60,8 +67,7 @@ Com o método `Object.fromEntries`, seu inverso {{jsxref("Object.entries()")}}, 
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
-  Object.entries(object1)
-  .map(([ key, val ]) => [ key, val * 2 ])
+  Object.entries(object1).map(([key, val]) => [key, val * 2]),
 );
 
 console.log(object2);
@@ -70,8 +76,8 @@ console.log(object2);
 
 ## Especificações
 
-| Especificação                                                                                    | Status                       | Comentário                             |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
+| Especificação                                                            | Status               | Comentário                             |
+| ------------------------------------------------------------------------ | -------------------- | -------------------------------------- |
 | {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | {{Spec2('ESDraft')}} | Initial definition in ECMAScript 2019. |
 
 ## Compatibilidade com navegadores

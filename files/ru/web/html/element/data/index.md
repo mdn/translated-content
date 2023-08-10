@@ -12,9 +12,9 @@ slug: Web/HTML/Element/data
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), явный контент. |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённое содержимое                                           | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                                                   |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                           |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                |
 | Разрешённые родители                                             | Любой элемент который принимает [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
-| DOM-интерфейс                                                    | {{domxref("HTMLDataElement")}}                                                                                                                                           |
+| DOM-интерфейс                                                    | {{domxref("HTMLDataElement")}}                                                                                                                                                     |
 
 ## Атрибуты
 
@@ -30,9 +30,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>New Products</p>
 <ul>
- <li><data value="398">Mini Ketchup</data></li>
- <li><data value="399">Jumbo Ketchup</data></li>
- <li><data value="400">Mega Jumbo Ketchup</data></li>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
 </ul>
 ```
 

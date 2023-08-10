@@ -28,7 +28,7 @@ getElementsByTagName(tagName)
 
 ### 返値
 
-*生きた* {{domxref("HTMLCollection")}} で、タグ名が一致する要素が出現順で入ります。要素が見つからなかった場合は `HTMLCollection` は空になります。
+_生きた_ {{domxref("HTMLCollection")}} で、タグ名が一致する要素が出現順で入ります。要素が見つからなかった場合は `HTMLCollection` は空になります。
 
 ## 例
 

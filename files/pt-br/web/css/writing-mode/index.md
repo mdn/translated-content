@@ -62,42 +62,42 @@ O HTML é simplesmente um {{HTMLElement("table")}} com cada modo de escrita em u
 
 ```html
 <table>
-    <tr>
-        <th>value</th>
-        <th>Vertical script</th>
-        <th>Horizontal script</th>
-        <th>Mixed script</th>
-    </tr>
-    <tr>
-        <td>horizontal-tb</td>
-        <td class="example Text1"><span>我家没有电脑。</span></td>
-        <td class="example Text1"><span>Example text</span></td>
-        <td class="example Text1"><span>1994年に至っては</span></td>
-    </tr>
-    <tr>
-        <td>vertical-lr</td>
-        <td class="example Text2"><span>我家没有电脑。</span></td>
-        <td class="example Text2"><span>Example text</span></td>
-        <td class="example Text2"><span>1994年に至っては</span></td>
-    </tr>
-    <tr>
-        <td>vertical-rl</td>
-        <td class="example Text3"><span>我家没有电脑。</span></td>
-        <td class="example Text3"><span>Example text</span></td>
-        <td class="example Text3"><span>1994年に至っては</span></td>
-    </tr>
-    <tr>
-        <td>sideways-lr</td>
-        <td class="example Text4"><span>我家没有电脑。</span></td>
-        <td class="example Text4"><span>Example text</span></td>
-        <td class="example Text4"><span>1994年に至っては</span></td>
-    </tr>
-    <tr>
-        <td>sideways-rl</td>
-        <td class="example Text5"><span>我家没有电脑。</span></td>
-        <td class="example Text5"><span>Example text</span></td>
-        <td class="example Text5"><span>1994年に至っては</span></td>
-    </tr>
+  <tr>
+    <th>value</th>
+    <th>Vertical script</th>
+    <th>Horizontal script</th>
+    <th>Mixed script</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1"><span>我家没有电脑。</span></td>
+    <td class="example Text1"><span>Example text</span></td>
+    <td class="example Text1"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2"><span>我家没有电脑。</span></td>
+    <td class="example Text2"><span>Example text</span></td>
+    <td class="example Text2"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3"><span>我家没有电脑。</span></td>
+    <td class="example Text3"><span>Example text</span></td>
+    <td class="example Text3"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4"><span>我家没有电脑。</span></td>
+    <td class="example Text4"><span>Example text</span></td>
+    <td class="example Text4"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5"><span>我家没有电脑。</span></td>
+    <td class="example Text5"><span>Example text</span></td>
+    <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
 </table>
 ```
 
@@ -105,48 +105,55 @@ O HTML é simplesmente um {{HTMLElement("table")}} com cada modo de escrita em u
 
 ```css hidden
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
-td, th {
-  border: 1px black solid; padding: 3px;
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
 }
 th {
   background-color: lightgray;
 }
 .example {
-  height:75px;
-  width:75px;
+  height: 75px;
+  width: 75px;
 }
 ```
 
 O CSS que ajusta a direcionalidade do conteúdo é algo como esse:
 
 ```css
-.example.Text1 span, .example.Text1 {
+.example.Text1 span,
+.example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
 }
 
-.example.Text2 span, .example.Text2 {
+.example.Text2 span,
+.example.Text2 {
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
 }
 
-.example.Text3 span, .example.Text3 {
+.example.Text3 span,
+.example.Text3 {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
 }
 
-.example.Text4 span, .example.Text4 {
+.example.Text4 span,
+.example.Text4 {
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: sideways-lr;
 }
 
-.example.Text5 span, .example.Text5 {
+.example.Text5 span,
+.example.Text5 {
   writing-mode: sideways-rl;
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;
@@ -163,8 +170,8 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ## Especificação
 
-| Especificação                                                                            | Status                                   | Comentário                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
+| Especificação                                                     | Status                          | Comentário                              |
+| ----------------------------------------------------------------- | ------------------------------- | --------------------------------------- |
 | {{SpecName("CSS3 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS3 Writing Modes")}} | Definição inicial                       |
 | {{SpecName("CSS4 Writing Modes", "#block-flow", "writing-mode")}} | {{Spec2("CSS4 Writing Modes")}} | Adicionar `sideways-lr` e `sideways-rl` |
 

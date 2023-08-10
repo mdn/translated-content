@@ -1,18 +1,22 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-**`anchor()`** メソッドは、 `<a name="...">` 開始タグで始まり、いくらかのテキストが続き、 `</a>` 終了タグで終わる文字列を生成します。
+**`anchor()`** メソッドは、{{HTMLElement("a")}} 要素に name を付けたものに文字列を埋め込んだ文字列 (`<a name="...">str</a>`) を生成します。
 
-> **警告:** このメソッドを使用しないでください。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) を使用してください。また、 HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップにもなりません。
+> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+>
+> HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップになりません。
 
 ## 構文
 
-```
-str.anchor(name)
+```js-nolint
+anchor(name)
 ```
 
 ### 引数
@@ -22,20 +26,16 @@ str.anchor(name)
 
 ### 返値
 
-`<a name="name">` 開始タグで始まり、 _str_ のテキストが続き、 `</a>` 終了タグで終わる文字列です。
-
-## 解説
-
-このメソッドを使用しないでください。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) を使用してください。また、 HTML 仕様書では {{HTMLElement("a")}} 要素に `name` 属性を設定することを許容しなくなりましたので、このメソッドが生成するものは妥当なマークアップにもなりません。
+`<a name="name">` 開始タグで始まり（`name` の中の二重引用符は `&quot;` で置き換え）、`str` のテキストが続き、 `</a>` 終了タグで終わる文字列です。
 
 ## 例
 
 ### anchor() の使用
 
 ```js
-var myString = 'Table of Contents';
+const myString = "Table of Contents";
 
-document.body.innerHTML = myString.anchor('contents_anchor');
+document.body.innerHTML = myString.anchor("contents_anchor");
 ```
 
 以下の HTML が生成されます。
@@ -50,8 +50,9 @@ document.body.innerHTML = myString.anchor('contents_anchor');
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.anchor")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.anchor` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.link()")}}

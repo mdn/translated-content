@@ -1,6 +1,7 @@
 ---
 title: document.documentURIObject
 slug: orphaned/Web/API/Document/documentURIObject
+original_slug: Web/API/Document/documentURIObject
 ---
 
 {{ ApiRef("DOM") }}

@@ -2,6 +2,7 @@
 title: <strong>
 slug: Web/HTML/Element/strong
 ---
+
 ```
 O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente mostrado em negrito.
 ```
@@ -91,8 +92,9 @@ Enquanto no HTML4, Strong simplesmente indicava uma ênfase mais forte, em HTML5
 ### Exemplo básico
 
 ```html
-<p>Ao fazer x é <strong>imperativo</strong>
-   que se faça y antes de prosseguir.</p>
+<p>
+  Ao fazer x é <strong>imperativo</strong> que se faça y antes de prosseguir.
+</p>
 ```
 
 ### Resultado
@@ -101,11 +103,11 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                               | Status                   | Comentário |
+| ------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}          | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                  | {{Spec2('HTML4.01')}}    |            |
 
 ## Navegadores Compatíveis
 

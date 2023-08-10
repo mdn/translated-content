@@ -69,7 +69,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
- <div class="growsandstays">This grows and stays big.</div>
+  <div class="growsandstays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```
@@ -83,8 +83,12 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 
 @keyframes grow {
-  0% { font-size: 0; }
-  100% { font-size: 40px; }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 
 .demo:hover .grows {
@@ -105,8 +109,8 @@ See [CSS animations](/pt-BR/CSS/CSS_animations) for more examples.
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                                                                  | Status                       | Comment             |
+| ------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}} | {{Spec2('CSS3 Animations')}} | Initial definition. |
 
 {{cssinfo}}

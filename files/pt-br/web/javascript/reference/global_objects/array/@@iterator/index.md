@@ -18,7 +18,7 @@ arr[Symbol.iterator]()
 ### Iteração usando laço `for...of`
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 // seu navegador deve suportar laço for..of
 // e variáveis de escopo let em laços for
 for (let letter of arr) {
@@ -29,7 +29,7 @@ for (let letter of arr) {
 ### Iteração alternativa
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y
@@ -40,9 +40,9 @@ console.log(eArr.next().value); // p
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificação                                                                               | Status               | Comentário         |
+| ------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

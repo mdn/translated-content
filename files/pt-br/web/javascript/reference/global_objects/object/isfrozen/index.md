@@ -57,46 +57,50 @@ Object.isFrozen(oneProp); // === true
 
 // Um objeto não extensível e não modificável,
 // mas com uma propriedade configurável não será frozen.
-var nonWritable = { e: 'plep' };
+var nonWritable = { e: "plep" };
 Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, 'e', {
-  writable: false
+Object.defineProperty(nonWritable, "e", {
+  writable: false,
 }); // tornar não modificável
 Object.isFrozen(nonWritable); // === false
 
 // Alterando a propriedade para não configurável
 // tornará o objeto frozen.
-Object.defineProperty(nonWritable, 'e', {
-  configurable: false
+Object.defineProperty(nonWritable, "e", {
+  configurable: false,
 }); // make non-configurable
 Object.isFrozen(nonWritable); // === true
 
 // Um objeto não extensível com uma propriedade não configurável
 // mas modificável não será frozen.
-var nonConfigurable = { release: 'the kraken!' };
+var nonConfigurable = { release: "the kraken!" };
 Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, 'release', {
-  configurable: false
+Object.defineProperty(nonConfigurable, "release", {
+  configurable: false,
 });
 Object.isFrozen(nonConfigurable); // === false
 
 // Alterando a propriedade para não modificável
 // tornará o objeto frozen.
-Object.defineProperty(nonConfigurable, 'release', {
-  writable: false
+Object.defineProperty(nonConfigurable, "release", {
+  writable: false,
 });
 Object.isFrozen(nonConfigurable); // === true
 
 // Um objeto não extensível com um assessor de propriedade
 // configurável não será frozen.
-var accessor = { get food() { return 'yum'; } };
+var accessor = {
+  get food() {
+    return "yum";
+  },
+};
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
 // ...Mas alterando essa propriedade para não configurável
 // o objeto se tornará frozen.
-Object.defineProperty(accessor, 'food', {
-  configurable: false
+Object.defineProperty(accessor, "food", {
+  configurable: false,
 });
 Object.isFrozen(accessor); // === true
 
@@ -128,10 +132,10 @@ Object.isFrozen(1);
 
 ## Specifications
 
-| Specification                                                                            | Status                       | Comment                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}             | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}         |                                                      |
+| Specification                                                      | Status               | Comment                                              |
+| ------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}         | {{Spec2('ES5.1')}}   | Initial definition. Implemented in JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores
