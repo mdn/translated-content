@@ -32,7 +32,8 @@ slug: Web/CSS/::selection
 
 ```css
 /* синтаксис Firefox */
-::-moz-selection {}
+::-moz-selection {
+}
 ```
 
 {{csssyntax}}

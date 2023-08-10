@@ -43,7 +43,9 @@ console.log(+y);
 +true; // 1
 +false; // 0
 +null; // 0
-+function(val){ return val } ;// NaN
++function (val) {
+  return val;
+}; // NaN
 +1n; // TypeError 발생: BigInt 값을 숫자로 변경할 수 없습니다
 ```
 

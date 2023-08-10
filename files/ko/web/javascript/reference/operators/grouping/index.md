@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 다음 예제에서는 곱셈과 나눗셈 이후 덧셈과 뺄셈을 사용하는 일반적인 연산 순서를 그룹 연산자를 사용해 바꿉니다.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
