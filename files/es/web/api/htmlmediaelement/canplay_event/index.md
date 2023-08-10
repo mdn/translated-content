@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTMLMediaElement")}}
 
-El evento `canplay` es lanzado cuando el {{Glossary("user agent")}} puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
+El evento `canplay` es disparado cuando el _{{Glossary("user agent")}}_ puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
 
 Este evento no es cancelable y no se eleva (_bubble_).
 
@@ -27,7 +27,7 @@ Un objeto genérico de {{domxref("Event")}}.
 
 ## Ejemplos
 
-Estos ejemplos agregan un _event listener_ para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese manejador de eventos ha reaccionado al lanzamiento del evento.
+Estos ejemplos agregan un _event listener_ para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese manejador de eventos ha reaccionado al disparo del evento.
 
 Usando `addEventListener()`:
 
@@ -35,7 +35,9 @@ Usando `addEventListener()`:
 const video = document.querySelector("video");
 
 video.addEventListener("canplay", (event) => {
-  console.log("El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.");
+  console.log(
+    "El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.",
+  );
 });
 ```
 
@@ -45,7 +47,9 @@ Usando la propiedad manejadora de eventos `oncanplay`:
 const video = document.querySelector("video");
 
 video.oncanplay = (event) => {
-  console.log("El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.");
+  console.log(
+    "El video puede iniciar, pero sin la seguridad de que pueda ser reproducido.",
+  );
 };
 ```
 
