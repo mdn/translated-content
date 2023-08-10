@@ -35,8 +35,8 @@ Por `cosh()` ser um método estático de `Math`, sempre utilize como `Math.cosh(
 ### Usando `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -45,24 +45,28 @@ Math.cosh(-1); // 1.5430806348152437
 Isto pode ser emulado com a ajuda da função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    return (Math.exp(x) + Math.exp(-x)) / 2;
+  };
 ```
 
 ou usando apenas uma chamada da função {{jsxref("Math.exp()")}}:
 
 ```js
-Math.cosh = Math.cosh || function(x) {
-  var y = Math.exp(x);
-  return (y + 1 / y) / 2;
-};
+Math.cosh =
+  Math.cosh ||
+  function (x) {
+    var y = Math.exp(x);
+    return (y + 1 / y) / 2;
+  };
 ```
 
 ## Especificações
 
-| Especificações                                                           |
-| ------------------------------------------------------------------------ |
+| Especificações                                         |
+| ------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} |
 
 ## Compatibilidade com navegadores

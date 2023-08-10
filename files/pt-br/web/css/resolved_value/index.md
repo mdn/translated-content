@@ -9,8 +9,8 @@ The **resolved value** of a CSS property is the value returned by {{domxref("Win
 
 ## Especificações
 
-| Especificações                                                                   | Status                   | Comentário          |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| Especificações                                              | Status             | Comentário          |
+| ----------------------------------------------------------- | ------------------ | ------------------- |
 | {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Definicação inicial |
 
 ## Veja também
