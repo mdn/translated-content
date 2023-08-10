@@ -1,17 +1,8 @@
 ---
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Сводка
@@ -49,7 +40,7 @@ arr.reduceRight(callback[, initialValue])
 Вызов колбэк-функции `callback` будет выглядеть так:
 
 ```js
-array.reduceRight(function(previousValue, currentValue, index, array) {
+array.reduceRight(function (previousValue, currentValue, index, array) {
   // ...
 });
 ```
@@ -61,9 +52,11 @@ array.reduceRight(function(previousValue, currentValue, index, array) {
 Вот так будут выглядеть некоторый примеры прогона функции:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
-  return previousValue + currentValue;
-});
+[0, 1, 2, 3, 4].reduceRight(
+  function (previousValue, currentValue, index, array) {
+    return previousValue + currentValue;
+  },
+);
 ```
 
 Колбэк-функция будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:
@@ -80,7 +73,12 @@ array.reduceRight(function(previousValue, currentValue, index, array) {
 Если же вы зададите начальное значение `initialValue`, результат будет выглядеть так:
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
+[0, 1, 2, 3, 4].reduceRight(function (
+  previousValue,
+  currentValue,
+  index,
+  array,
+) {
   return previousValue + currentValue;
 }, 10);
 ```
@@ -100,7 +98,7 @@ array.reduceRight(function(previousValue, currentValue, index, array) {
 ### Пример: суммирование всех значений в массиве
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function(a, b) {
+var total = [0, 1, 2, 3].reduceRight(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -109,7 +107,11 @@ var total = [0, 1, 2, 3].reduceRight(function(a, b) {
 ### Пример: разворачивание массива массивов
 
 ```js
-var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
+var flattened = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduceRight(function (a, b) {
   return a.concat(b);
 }, []);
 // flattened равен [4, 5, 2, 3, 0, 1]
@@ -123,16 +125,19 @@ var flattened = [[0, 1], [2, 3], [4, 5]].reduceRight(function(a, b) {
 // Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.22
 // Ссылка (en): http://es5.github.io/#x15.4.4.22
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback/*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
+if ("function" !== typeof Array.prototype.reduceRight) {
+  Array.prototype.reduceRight = function (callback /*, initialValue*/) {
+    "use strict";
+    if (null === this || "undefined" === typeof this) {
+      throw new TypeError("Array.prototype.reduce called on null or undefined");
     }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
+    if ("function" !== typeof callback) {
+      throw new TypeError(callback + " is not a function");
     }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
+    var t = Object(this),
+      len = t.length >>> 0,
+      k = len - 1,
+      value;
     if (arguments.length >= 2) {
       value = arguments[1];
     } else {
@@ -140,7 +145,7 @@ if ('function' !== typeof Array.prototype.reduceRight) {
         k--;
       }
       if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
+        throw new TypeError("Reduce of empty array with no initial value");
       }
       value = t[k--];
     }
@@ -156,10 +161,10 @@ if ('function' !== typeof Array.prototype.reduceRight) {
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                         | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                           | Статус             | Комментарии                                            |
+| -------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                 | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8. |
+| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

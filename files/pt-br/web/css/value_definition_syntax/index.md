@@ -1,7 +1,6 @@
 ---
 title: Sintexe do valor
 slug: Web/CSS/Value_definition_syntax
-original_slug: Web/CSS/Sintexe_valor
 ---
 
 {{CSSRef}}

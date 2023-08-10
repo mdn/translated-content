@@ -1,16 +1,6 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Legacy Generator
-  - Legacy Iterator
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
 
 {{JSRef}}
@@ -50,9 +40,8 @@ console.log(generator().next().value); // 1
 
 ```js
 function* idMaker() {
-    var index = 0;
-    while(true)
-        yield index++;
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"

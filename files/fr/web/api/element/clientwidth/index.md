@@ -1,7 +1,6 @@
 ---
 title: element.clientWidth
 slug: Web/API/Element/clientWidth
-translation_of: Web/API/Element/clientWidth
 ---
 
 {{APIRef("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/image
-original_slug: Web/CSS/imagem
 ---
 
 {{CSSRef}}

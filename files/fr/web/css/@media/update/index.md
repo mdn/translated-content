@@ -1,7 +1,6 @@
 ---
 title: update
 slug: Web/CSS/@media/update
-translation_of: Web/CSS/@media/update
 ---
 
 {{CSSRef}}

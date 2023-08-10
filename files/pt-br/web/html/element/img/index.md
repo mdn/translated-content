@@ -114,8 +114,9 @@ Depending of its type, an _image_ may have an intrinsic dimension, but this is n
 O exemplo a seguir insere uma imagem na página e inclui o texto alternativo para acessibilidade, de forma que ele possa ser lido por programas leitores de tela ou exibido caso a imagem não carregue.
 
 ```html
-<img src="https://developer.mozilla.org/static/img/favicon144.png"
-     alt="MDN logo">
+<img
+  src="https://developer.mozilla.org/static/img/favicon144.png"
+  alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -126,8 +127,9 @@ Esse exemplo mostra como transformar uma imagem em um link. Para isso, insira a 
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="https://developer.mozilla.org/static/img/favicon144.png"
-       alt="Visit the MDN site">
+  <img
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="Visit the MDN site" />
 </a>
 ```
 
@@ -144,9 +146,10 @@ As imagens exibidas dependerão do tipo de tela.
 **`srcset`** define o conjunto de imagens que nós iremos permitir ao navegador escolher, e qual tamanho cada imagem tem.
 
 ```html
- <img src="mdn-logo-sm.png"
-      alt="MD Logo"
-      srcset="mdn-logo-HD.png 2x, mdn-logo-small.png 15w, mdn-banner-HD.png 100w 2x" />
+<img
+  src="mdn-logo-sm.png"
+  alt="MD Logo"
+  srcset="mdn-logo-HD.png 2x, mdn-logo-small.png 15w, mdn-banner-HD.png 100w 2x" />
 ```
 
 Antes de cada vírgula nós escrevemos:
@@ -164,13 +167,13 @@ O valor do atributo `alt` deve descrever de maneira clara e concisa o conteúdo 
 #### Evite
 
 ```html example-bad
-<img alt="imagem" src="penguin.jpg">
+<img alt="imagem" src="penguin.jpg" />
 ```
 
 #### Prefira
 
 ```html example-good
-<img alt="Um pinguim-saltador-da-rocha em pé numa praia." src="penguin.jpg">
+<img alt="Um pinguim-saltador-da-rocha em pé numa praia." src="penguin.jpg" />
 ```
 
 Quando o atributo `alt` não estiver presente em uma imagem, alguns programas leitores de tela vão narrar o nome do arquivo da imagem em seu lugar, o que pode ser confuso caso o nome do arquivo não seja representativo do conteúdo da imagem.
@@ -193,11 +196,11 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                         | Status                   | Comment |
+| ------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'embedded-content-1.html#the-img-element', '&lt;img&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}                 | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade dos navegadores
 

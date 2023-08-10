@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.lineDashOffset`** в Canvas 2D API устанавливает смещение штрихов, или «фаза».
@@ -40,8 +33,8 @@ ctx.lineDashOffset = value;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([4, 16]);
 
@@ -53,7 +46,7 @@ ctx.stroke();
 
 // Пунктирная линия со смещением 4
 ctx.beginPath();
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
@@ -75,8 +68,8 @@ ctx.stroke();
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let offset = 0;
 
 const draw = () => {
@@ -84,7 +77,7 @@ const draw = () => {
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
   ctx.strokeRect(10, 10, 100, 100);
-}
+};
 
 const march = () => {
   offset++;
@@ -93,7 +86,7 @@ const march = () => {
   }
   draw();
   setTimeout(march, 20);
-}
+};
 
 march();
 ```
@@ -107,14 +100,6 @@ march();
 ## Совместимость с браузерами
 
 {{Compat}}
-
-### Специфичные для Gecko заметки
-
-- `mozDashOffset` свойство будет объявлено устаревшим и будет удалено в будущем, смотрите {{bug(931643)}}. Вместо него используйте `lineDashOffset`.
-
-### Специфичные для WebKit заметки
-
-- В браузерах на основе WebKit (например, Safari) помимо этого метода реализовано нестандартное и устаревшее свойство `webkitLineDashOffset`. Вместо него используйте `lineDashOffset`.
 
 ## Смотрите также
 

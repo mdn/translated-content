@@ -1,5 +1,5 @@
 ---
-title: '-moz-device-pixel-ratio'
+title: "-moz-device-pixel-ratio"
 slug: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 
@@ -9,7 +9,7 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 
 > **警告:** この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
 
-> **メモ:** このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
+> **メモ:** このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](<https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx>) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
 
 ## 構文
 
@@ -31,7 +31,7 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 @media (-webkit-min-device-pixel-ratio: 2), /* Webkit ベースのブラウザー */
        (min--moz-device-pixel-ratio: 2),    /* 古い Firefox ブラウザー (Firefox 16 以前) */
        (min-resolution: 2dppx),             /* 標準の方法 */
-       (min-resolution: 192dpi)             /* dppx のフォールバック */ </pre>
+       (min-resolution: 192dpi)             /* dppx のフォールバック */
 ```
 
 > **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。

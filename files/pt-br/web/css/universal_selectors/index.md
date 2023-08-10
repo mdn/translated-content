@@ -1,7 +1,6 @@
 ---
 title: Seletor universal
 slug: Web/CSS/Universal_selectors
-original_slug: Web/CSS/Seletor_universal
 ---
 
 {{CSSRef}}

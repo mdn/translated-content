@@ -1,7 +1,6 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
-translation_of: Web/CSS/mask-border-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

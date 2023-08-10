@@ -1,7 +1,6 @@
 ---
 title: Console.profile()
 slug: Web/API/console/profile
-translation_of: Web/API/Console/profile
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

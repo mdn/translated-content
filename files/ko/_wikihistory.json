@@ -2411,6 +2411,16 @@
       "pusanbear"
     ]
   },
+  "Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2020-12-03T14:42:33.988Z",
+    "contributors": [
+      "dink95",
+      "alattalatta",
+      "wbamberg",
+      "ExE-Boss",
+      "project42da"
+    ]
+  },
   "Web/API/Document/Document": {
     "modified": "2020-10-15T22:14:18.230Z",
     "contributors": ["alattalatta", "cs09g"]
@@ -4392,16 +4402,6 @@
       "jsx",
       "teoli",
       "pusanbear"
-    ]
-  },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2020-12-03T14:42:33.988Z",
-    "contributors": [
-      "dink95",
-      "alattalatta",
-      "wbamberg",
-      "ExE-Boss",
-      "project42da"
     ]
   },
   "Web/API/Window/alert": {

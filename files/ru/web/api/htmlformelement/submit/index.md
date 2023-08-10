@@ -1,9 +1,6 @@
 ---
 title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
-tags:
-  - HTMLFormElement
-translation_of: Web/API/HTMLFormElement/submit
 ---
 
 {{APIRef("HTML DOM")}}
@@ -31,12 +28,10 @@ HTMLFormElement.submit()
 document.forms["myform"].submit();
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-form-submit', 'HTMLFormElement: submit')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

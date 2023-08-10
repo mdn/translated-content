@@ -42,7 +42,7 @@ slug: Web/Guide/Introduction_to_Web_development
 #### 中级
 
 - [再次介绍 JavaScript](/zh-CN/docs/Web/JavaScript/Language_overview)——针对中级开发人员的 JavaScript 编程语言回顾
-- [基本的 JavaScript 设计模式](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)——基本的JavaScript设计模式介绍
+- [基本的 JavaScript 设计模式](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)——基本的 JavaScript 设计模式介绍
 - [JavaScript 面向对象介绍](/zh-CN/docs/Learn/JavaScript/Objects)——学习 JavaScript 对象模型。
 - [你不知道的 JavaScript](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md)
 

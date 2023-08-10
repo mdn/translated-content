@@ -1,7 +1,6 @@
 ---
 title: 425 Too Early
 slug: Web/HTTP/Status/425
-translation_of: Web/HTTP/Status/425
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}

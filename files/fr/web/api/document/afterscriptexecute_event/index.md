@@ -1,7 +1,6 @@
 ---
 title: Document.onafterscriptexecute
 slug: Web/API/Document/afterscriptexecute_event
-translation_of: Web/API/Document/onafterscriptexecute
 ---
 
 {{ ApiRef("DOM") }} {{non-standard_header}}

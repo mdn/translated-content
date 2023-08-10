@@ -1,7 +1,6 @@
 ---
 title: Contrôle du flux d'instructions et gestion des erreurs
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

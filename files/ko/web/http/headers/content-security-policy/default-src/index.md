@@ -100,8 +100,6 @@ Content-Security-Policy: connect-src 'self';
 
 ## Browser compatibility
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
 {{Compat}}
 
 ## See also

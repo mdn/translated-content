@@ -37,9 +37,13 @@ h3 {
 ```
 
 ```html
-<h3 style="font-weight: unset; color: unset;">This will still have font-weight: normal, but color: black</h3>
+<h3 style="font-weight: unset; color: unset;">
+  This will still have font-weight: normal, but color: black
+</h3>
 <p>Just some text</p>
-<h3 style="font-weight: revert; color: revert;">This should have its original font-weight (bold) and color: black</h3>
+<h3 style="font-weight: revert; color: revert;">
+  This should have its original font-weight (bold) and color: black
+</h3>
 <p>Just some text</p>
 ```
 
@@ -71,9 +75,15 @@ h3 {
 효율적으로 revert 하는 것은 당신이 선택한 속성에 대해서만 해당 속성을 제거하는 것입니다. 우리는 paragraph에 한해서는 red 속성을 지정하고 section에는 darkgreen 을 따로 각각 지정할 수 있습니다.
 
 ```css
-section { color: darkgreen }
-p { color: red }
-section.with-revert { color: revert }
+section {
+  color: darkgreen;
+}
+p {
+  color: red;
+}
+section.with-revert {
+  color: revert;
+}
 ```
 
 ```html

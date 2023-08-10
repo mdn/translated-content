@@ -17,20 +17,20 @@ background-color: red;
 background-color: indigo;
 
 /* Valores em Hexadecimais */
-background-color: #bbff00;    /* Totalmente opaco */
-background-color: #bf0;       /* Forma abreviada totalmente opaco */
-background-color: #11ffee00;  /* Totalmente transparente */
-background-color: #1fe0;      /* Forma abreviada totalmente transparente */
-background-color: #11ffeeff;  /* Totalmente opaco */
-background-color: #1fef;      /* Forma abreviada totalmente opaco */
+background-color: #bbff00; /* Totalmente opaco */
+background-color: #bf0; /* Forma abreviada totalmente opaco */
+background-color: #11ffee00; /* Totalmente transparente */
+background-color: #1fe0; /* Forma abreviada totalmente transparente */
+background-color: #11ffeeff; /* Totalmente opaco */
+background-color: #1fef; /* Forma abreviada totalmente opaco */
 
 /* Valores em RGB */
-background-color: rgb(255, 255, 128);        /* Totalmente opaco */
-background-color: rgba(117, 190, 218, 0.5);  /* 50% transparente */
+background-color: rgb(255, 255, 128); /* Totalmente opaco */
+background-color: rgba(117, 190, 218, 0.5); /* 50% transparente */
 
 /* Valores em HSL */
-background-color: hsl(50, 33%, 25%);         /* Totalmente opaco */
-background-color: hsla(50, 33%, 25%, 0.75);  /* 75% transparente */
+background-color: hsl(50, 33%, 25%); /* Totalmente opaco */
+background-color: hsla(50, 33%, 25%, 0.75); /* 75% transparente */
 
 /* Valores em chaves especiais */
 background-color: currentcolor;
@@ -72,17 +72,11 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 ### HTML
 
 ```html
-<div class="exampleone">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exemplothree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exemplothree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -94,13 +88,13 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 }
 
 .exampletwo {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -110,11 +104,11 @@ A cor do contrast é determinada comparando a luminância da cor do texto e da c
 
 ## Especificações
 
-| Specification                                                                                                | Comment                                                                                                                                                        | Feedback                                                                                          |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}             | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} |                                                                                                                                                                |                                                                                                   |
-| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Initial definition                                                                                                                                             |                                                                                                   |
+| Specification                                                                      | Comment                                                                                                                                                | Feedback                                                                                          |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}          | Though technically removing the `transparent` keyword, this doesn't change anything as it has been incorporated as a true {{cssxref("&lt;color&gt;")}} | [Backgrounds Level 3 GitHub issues](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} |                                                                                                                                                        |                                                                                                   |
+| {{SpecName('CSS1', '#background-color', 'background-color')}}                      | Initial definition                                                                                                                                     |                                                                                                   |
 
 ## Compatibilidade com navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
 
 {{JSRef}}
@@ -81,17 +80,20 @@ Ya que los métodos `then` y {{jsxref("Promise.prototype.catch()")}} devuelven p
 ### Usando el metodo `then`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
-  resolve('Success!');
+var p1 = new Promise(function (resolve, reject) {
+  resolve("Success!");
   // or
   // reject ("Error!");
 });
 
-p1.then(function(value) {
-  console.log(value); // Success!
-}, function(reason) {
-  console.log(reason); // Error!
-});
+p1.then(
+  function (value) {
+    console.log(value); // Success!
+  },
+  function (reason) {
+    console.log(reason); // Error!
+  },
+);
 ```
 
 ### Encadenamiento
@@ -158,38 +160,46 @@ Una llamada a `then` devolverá una promesa rechazada si la función lanza un er
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // Hace que .then() devuelva una promera rechazada
-    throw new Error('Oh no!');
+    throw new Error("Oh no!");
   })
-  .then( () => {
-    console.log( 'No invocada.' );
-  }, error => {
-    console.error( 'Función de rechazo llamada: ', error );
-});
+  .then(
+    () => {
+      console.log("No invocada.");
+    },
+    (error) => {
+      console.error("Función de rechazo llamada: ", error);
+    },
+  );
 ```
 
 En cualquier otro caso, una Promise en resolución será devuelta. El el siguiente ejemplo, el primer `then()` devolverá un `42` dentro de una Promise en resolución, aunque la Promise de la cadena fue rechazada.
 
 ```js
 Promise.reject()
-  .then( () => 99, () => 42 ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
-  .then( respuesta => console.log( 'Resuelta con ' + respuesta ) ); // Resuelta con 42
+  .then(
+    () => 99,
+    () => 42,
+  ) // enRechazo devuelve 42, que está dentro de una Promise en resolución
+  .then((respuesta) => console.log("Resuelta con " + respuesta)); // Resuelta con 42
 ```
 
 En la práctica, suele ser preferible capturar promesas rechazadas en lugar de utilizar la sintaxis de dos casos de `then`, como demostramos abajo.
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // Hace que .then() devuelva una promesa rechazada
-    throw new Error('Oh no!');
+    throw new Error("Oh no!");
   })
-  .catch( error => {
-    console.error( 'función enRechazo invocada: ', error );
+  .catch((error) => {
+    console.error("función enRechazo invocada: ", error);
   })
-  .then( () => {
-    console.log( "Siempre soy invocada, incluso si la promesa del then previo es rechazada" );
+  .then(() => {
+    console.log(
+      "Siempre soy invocada, incluso si la promesa del then previo es rechazada",
+    );
   });
 ```
 
@@ -201,14 +211,14 @@ function traer_datos_actuales() {
   // expone una API similar, pero el valor de cumplimiento
   // de la Promesa de esta función tiene más tareas
   // implementadas sobre ella.
-  return fetch('datos_actuales.json').then((response) => {
-    if (response.headers.get('content-type') != 'application/json') {
+  return fetch("datos_actuales.json").then((response) => {
+    if (response.headers.get("content-type") != "application/json") {
       throw new TypeError();
     }
     var j = response.json();
     // podríamos hacer algo con j
     return j; // valor de cumplimiento asignado al usuario de
-              // fetch_datos_actuales().then()
+    // fetch_datos_actuales().then()
   });
 }
 ```
@@ -263,8 +273,8 @@ const nextTick = (() => {
   const rfab = Reflect.apply.bind; // (thisArg, fn, thisArg, [...args])
   const nextTick = (fn, ...args) => (
     fn !== undefined
-    ? Promise.resolve(args).then(rfab(null, fn, null))
-    : nextTickPromise(),
+      ? Promise.resolve(args).then(rfab(null, fn, null))
+      : nextTickPromise(),
     undefined
   );
   nextTick.ntp = nextTickPromise;

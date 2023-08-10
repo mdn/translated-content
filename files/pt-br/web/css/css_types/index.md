@@ -1,7 +1,6 @@
 ---
 title: Tipos básicos de dados CSS
 slug: Web/CSS/CSS_Types
-original_slug: Web/CSS/CSS_Tipos
 ---
 
 {{CssRef}}

@@ -32,11 +32,11 @@ var currentTimeZoneOffsetInHours = x.getTimezoneOffset() / 60;
 
 ## Especificações
 
-| Especificação                                                                                                                    | Situação                 | comentário                                         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}                             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                                    | Situação           | comentário                                         |
+| ------------------------------------------------------------------------------------------------ | ------------------ | -------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                              | {{Spec2('ES1')}}   | Initial definition. Implemented in JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.26', 'Date.prototype.getTimezoneOffset')}}                      | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-date.prototype.gettimezoneoffset', 'Date.prototype.getTimezoneOffset')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade com navegadores
 

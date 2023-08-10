@@ -1,7 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-translation_of: Web/CSS/letter-spacing
 ---
 
 {{CSSRef}}
@@ -19,7 +18,7 @@ letter-spacing: normal;
 /* Значения <length> */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Глобальные значения */
 letter-spacing: inherit;
@@ -53,11 +52,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### Результат

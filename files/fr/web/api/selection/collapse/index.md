@@ -1,7 +1,6 @@
 ---
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
-translation_of: Web/API/Selection/collapse
 ---
 
 {{ApiRef("DOM")}}{{SeeCompatTable}}

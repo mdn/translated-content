@@ -1,7 +1,6 @@
 ---
 title: Notification.onclick
 slug: Web/API/Notification/click_event
-translation_of: Web/API/Notification/onclick
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

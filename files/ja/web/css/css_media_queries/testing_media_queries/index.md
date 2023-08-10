@@ -1,7 +1,6 @@
 ---
 title: プログラムによるメディアクエリーの評価
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
-original_slug: Web/CSS/Media_Queries/Testing_media_queries
 ---
 
 {{CSSRef}}

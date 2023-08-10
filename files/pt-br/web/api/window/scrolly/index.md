@@ -22,7 +22,7 @@ var y = window.scrollY;
 ```js
 // verificar e ir para a segunda página
 if (window.scrollY) {
-  window.scroll(0, 0);  // reinicia a posição do scroll para a posição superior esquerda do documento.
+  window.scroll(0, 0); // reinicia a posição do scroll para a posição superior esquerda do documento.
 }
 
 window.scrollByPages(1);
@@ -44,21 +44,27 @@ Para compatibilidade cross-browser, utilize window\.pageYOffset em vez de window
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrolly', 'window.scrollY') }} | {{ Spec2('CSSOM View') }} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.scrollY")}}
+{{Compat}}
 
 ## Veja também
 

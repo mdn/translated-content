@@ -1,7 +1,6 @@
 ---
 title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 
 {{AddonSidebar()}}

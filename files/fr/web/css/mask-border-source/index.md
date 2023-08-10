@@ -1,7 +1,6 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
-translation_of: Web/CSS/mask-border-source
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
 title: Valor Especifícado
 slug: Web/CSS/specified_value
-original_slug: Web/CSS/valor_espeficifco
 ---
 
 {{CSSRef}}

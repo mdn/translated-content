@@ -1,7 +1,6 @@
 ---
 title: Définir une méthode
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 ---
 
 {{JsSidebar("Functions")}}

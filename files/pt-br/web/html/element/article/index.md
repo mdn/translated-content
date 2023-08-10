@@ -15,11 +15,11 @@ O _Elemento HTML Article_ (\<article>) representa uma composição independente 
 
 ## Contexto de uso
 
-| Conteúdo permitido       | [Flow content](</en/HTML/Content_categories#Flow content>)                                                                                                                                                                             |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag           | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                                                                                                      |
+| Conteúdo permitido       | [Flow content](</en/HTML/Content_categories#Flow content>)                                                                                                                                          |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag           | Nenhuma, tanto tag de início quanto de fim são obrigatórias                                                                                                                                         |
 | Elementos pai permitidos | Qualquer elemento que aceita [flow content](/pt-BR/HTML/Content_categories#flow_content). Note-se que um elemento `<article>` não pode ser descendente de um elemento {{ HTMLElement("address") }}. |
-| Documento normativo      | [HTML5, section 4.4.4](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element)                                                                                                                                                            |
+| Documento normativo      | [HTML5, section 4.4.4](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element)                                                                               |
 
 ## Atributos
 

@@ -1,7 +1,6 @@
 ---
 title: Unicode
 slug: Glossary/Unicode
-translation_of: Glossary/Unicode
 ---
 
 Unicode est une {{Glossary("Character set","police de caractères")}} standard qui énumère et définit les {{Glossary("Character","caractères")}} des différentes langues du monde, systèmes d'écriture et symboles. En attribuant un nombre à chaque caractère, les programmeurs peuvent {{Glossary("Character encoding", "encoder des caractères")}}, pour permettre aux ordinateurs de stocker, traiter et transmettre toute combinaison de langues dans le même fichier ou programme.

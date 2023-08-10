@@ -20,7 +20,7 @@ elem.addEventListener(
   (e) => {
     /* … */
   },
-  false
+  false,
 );
 
 // 이벤트를 전송합니다.
@@ -64,7 +64,7 @@ elem.addEventListener(
   (e) => {
     // e.target은 elem과 일치합니다.
   },
-  false
+  false,
 );
 
 // 대상은 임의의 요소 혹은 다른 EventTarget일 수 있습니다.
@@ -121,7 +121,7 @@ textarea.addEventListener("input", function () {
     new CustomEvent("awesome", {
       bubbles: true,
       detail: { text: () => textarea.value },
-    })
+    }),
   );
 });
 ```

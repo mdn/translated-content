@@ -1,7 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
 
 {{JSRef}}

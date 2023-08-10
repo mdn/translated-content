@@ -1,14 +1,6 @@
 ---
 title: CSS Scroll Snap
 slug: Web/CSS/CSS_scroll_snap
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/CSS_Scroll_Snap
 ---
 
 {{CSSRef}}
@@ -57,8 +49,8 @@ translation_of: Web/CSS/CSS_Scroll_Snap
 
 ## Specification
 
-| Specification                                        | Status                                           | Comment            |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------ |
+| Specification                          | Status                              | Comment            |
+| -------------------------------------- | ----------------------------------- | ------------------ |
 | {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
 
 ## Browser compatibility

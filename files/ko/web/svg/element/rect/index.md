@@ -1,7 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-original_slug: Web/SVG/Element/사각형
 l10n:
   sourceCommit: c0eef9c5828e919c8128c99e0f95cc7a0bcdbc4e
 ---

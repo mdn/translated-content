@@ -1,7 +1,6 @@
 ---
 title: mi
 slug: Web/MathML/Element/mi
-translation_of: Web/MathML/Element/mi
 ---
 
 L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **identifiant** (comme les noms de fonctions, de variables ou les constantes symboliques). Il est également possible de l'utiliser avec du texte en général pour annoter.

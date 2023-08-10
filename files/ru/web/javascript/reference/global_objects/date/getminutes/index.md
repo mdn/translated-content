@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
 {{JSRef("Global_Objects", "Date")}}
@@ -37,7 +30,7 @@ dateObj.getMinutes()
 Вторая инструкция в примере ниже присваивает значение 15 переменной `minutes` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
 
 ```js
-let date = new Date('December 25, 1995 23:15:30');
+let date = new Date("December 25, 1995 23:15:30");
 let minutes = date.getMinutes();
 
 console.log(minutes); // 15

@@ -1,7 +1,6 @@
 ---
 title: Referencia HTML
 slug: Web/HTML/Reference
-original_slug: Web/HTML/Referencia
 ---
 
 {{HTMLSidebar}}

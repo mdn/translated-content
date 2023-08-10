@@ -35,14 +35,14 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 1. _[HTTP メソッド](/ja/docs/Web/HTTP/Methods)_。実行するアクションを表わす動詞 ({{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("POST")}} など) または名詞 ({{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}})。例えば `GET` はリソースを取り込むこと、`POST` はデータをサーバーへ送信すること (リソースを作成または変更する、あるいは返送する一時的なドキュメントを生成する) ことを示します。
 2. _リクエスト対象_。通常は {{glossary("URL")}} ですが、プロトコル、ポート、ドメインの絶対パスは通常、リクエストの状況から明らかにされます。リクエスト対象の形式は、HTTP メソッドにより異なります。以下のような形式があります。
 
-    - 最後に `'?'` とクエリー文字列がある絶対パス。これは _origin form_ として知られているもっとも一般的な形式であり、`GET`、`POST`、`HEAD`、`OPTIONS` メソッドで使用します。
-      `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
-    - _absolute form_ として知られている完全な URL は、主にプロキシへ接続する際に `GET` で使用します。
-      `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-    - ドメイン名とポート (省略可能。`':'` を前につける) で構成される、URL の authority の部分は _authority form_ と呼ばれます。これは `CONNECT` で HTTP トンネルを設定するときに限り使用されます。
-      `CONNECT developer.mozilla.org:80 HTTP/1.1`
-    - 単なるアスタリスク (`'*'`) である _asterisk form_ は `OPTIONS` で使用されており、サーバー全体を表します。
-      `OPTIONS * HTTP/1.1`
+   - 最後に `'?'` とクエリー文字列がある絶対パス。これは _origin form_ として知られているもっとも一般的な形式であり、`GET`、`POST`、`HEAD`、`OPTIONS` メソッドで使用します。
+     `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
+   - _absolute form_ として知られている完全な URL は、主にプロキシへ接続する際に `GET` で使用します。
+     `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+   - ドメイン名とポート (省略可能。`':'` を前につける) で構成される、URL の authority の部分は _authority form_ と呼ばれます。これは `CONNECT` で HTTP トンネルを設定するときに限り使用されます。
+     `CONNECT developer.mozilla.org:80 HTTP/1.1`
+   - 単なるアスタリスク (`'*'`) である _asterisk form_ は `OPTIONS` で使用されており、サーバー全体を表します。
+     `OPTIONS * HTTP/1.1`
 
 3. _HTTP バージョン_。これはメッセージの残りの部分の構造を定義しており、レスポンスで使用することを想定しているバージョンを示す役割もあります。
 

@@ -1,7 +1,6 @@
 ---
 title: word-wrap
 slug: Web/CSS/overflow-wrap
-original_slug: Web/CSS/word-wrap
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

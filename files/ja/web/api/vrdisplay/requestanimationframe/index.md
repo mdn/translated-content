@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
-original_slug: Web/API/VRDevice/requestAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

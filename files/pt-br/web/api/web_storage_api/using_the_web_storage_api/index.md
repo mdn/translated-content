@@ -1,7 +1,6 @@
 ---
 title: Usando a API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-original_slug: Web/API/Web_Storage_API_pt_br/Using_the_Web_Storage_API
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -13,9 +12,9 @@ A API Web Storage fornece mecanismos pelos quais os navegadores podem armazenar 
 Objetos `Storage` são simples conjuntos contendo pares de chave/valor, de forma parecida com objetos, porém eles permanecem intactos mesmo após a página ser recarregada. As chaves e valores são sempre strings (note que chaves cujo nome seja um número inteiro serão automaticamente convertidas par strings, assim como acontece nos objetos). Você pode acessar esses valores como você faria com um objeto ou usando os métodos {{domxref("Storage.getItem()")}} e {{domxref("Storage.setItem()")}}. As três linhas seguintes definem o valor de `corDefinida` de maneiras diferentes, mas com o mesmo resultado:
 
 ```js
-localStorage.corDefinida = '#a4509b';
-localStorage['corDefinida'] = '#a4509b';
-localStorage.setItem('corDefinida', '#a4509b');
+localStorage.corDefinida = "#a4509b";
+localStorage["corDefinida"] = "#a4509b";
+localStorage.setItem("corDefinida", "#a4509b");
 ```
 
 > **Nota:** Recomendamos que você utilize a API Web Storage (`setItem`, `getItem`, `removeItem`, `key`, `length`) para evitar as [armadilhas](http://www.2ality.com/2012/01/objects-as-maps.html) associadas ao uso de objetos literais como mapas de chave-valor.
@@ -41,37 +40,37 @@ Here is a function that detects whether localStorage is both supported and avail
 
 ```js
 function storageAvailable(type) {
-    try {
-        var storage = window[type],
-            x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage.length !== 0;
-    }
+  try {
+    var storage = window[type],
+      x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 And here is how you would use it:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -97,7 +96,7 @@ We have also provided an [event output page](https://mdn.github.io/dom-examples/
 To start with on [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), we will test whether the storage object has already been populated (i.e., the page was previously accessed):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -114,17 +113,17 @@ As noted above, values can be retrieved from storage using {{domxref("Storage.ge
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -136,9 +135,9 @@ Here, the first three lines grab the values from local storage. Next, we set the
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -161,12 +160,12 @@ The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domx
 On the events page (see [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) the only JavaScript is as follows:
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = e.storageArea;
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = e.storageArea;
 });
 ```
 
@@ -179,11 +178,9 @@ Web Storage also provides a couple of simple methods to remove data. We don't us
 - {{domxref("Storage.removeItem()")}} takes a single argument — the key of the data item you want to remove — and removes it from the storage object for that domain.
 - {{domxref("Storage.clear()")}} takes no arguments, and simply empties the entire storage object for that domain.
 
-## Specifications
+## Especificações
 
-| Specification                                                                | Status                           | Comment |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

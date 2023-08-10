@@ -1,7 +1,6 @@
 ---
 title: proxy.RequestDetails
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails
 ---
 
 {{AddonSidebar()}}

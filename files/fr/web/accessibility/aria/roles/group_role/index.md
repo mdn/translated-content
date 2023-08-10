@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle group
 slug: Web/Accessibility/ARIA/Roles/group_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 ---
 
 ### Description

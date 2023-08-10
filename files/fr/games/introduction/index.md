@@ -1,7 +1,6 @@
 ---
 title: Introduction au développement de jeux vidéo
 slug: Games/Introduction
-translation_of: Games/Introduction
 ---
 
 {{GamesSidebar}}

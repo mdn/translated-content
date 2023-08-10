@@ -1,7 +1,6 @@
 ---
 title: Opérateur
 slug: Glossary/Operator
-translation_of: Glossary/Operator
 ---
 
 **Syntaxe** réservée constituée de caractères alphanumériques ou de ponctuation apportant des fonctionnalités intégrées. Par exemple, "+" représente l'opérateur d'addition de nombres et de concatenation de chaînes de caractères, alors que l'opération "non", "!", est la négation d'une expression — par exemple, une déclaration vraie returnera false.
