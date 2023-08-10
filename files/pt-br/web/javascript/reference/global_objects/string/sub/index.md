@@ -28,21 +28,21 @@ O método `sub()` cria uma string dentro de uma tag `<sub>`: `"<sub>str</sub>"`.
 Os exemplos seguintes usam o métodos `sub()` e {{jsxref("String.prototype.sup()", "sup()")}} para formatar uma string:
 
 ```js
-var superText = 'superscript';
-var subText = 'subscript';
+var superText = "superscript";
+var subText = "subscript";
 
-console.log('This is what a ' + superText.sup() + ' looks like.');
+console.log("This is what a " + superText.sup() + " looks like.");
 // This is what a <sup>superscript</sup> looks like
 
-console.log('This is what a ' + subText.sub() + ' looks like.');
+console.log("This is what a " + subText.sub() + " looks like.");
 // This is what a <sub>subscript</sub> looks like.
 ```
 
 ## Especificação
 
-| Especificação                                                                                        | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.sub', 'String.prototype.sub')}}     | {{Spec2('ES6')}}         | Definição inicial. Implementado no JavaScript 1.0. |
+| Especificação                                                                | Status               | Comentário                                         |
+| ---------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.sub', 'String.prototype.sub')}}     | {{Spec2('ES6')}}     | Definição inicial. Implementado no JavaScript 1.0. |
 | {{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Navegadores compatíveis

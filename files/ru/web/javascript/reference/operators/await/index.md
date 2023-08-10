@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Operators/await
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -60,7 +60,7 @@ f2();
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }
@@ -70,7 +70,9 @@ f3();
 Обработка отклонённого `Promise` без `try/catch` блока.
 
 ```js
-var response = await promisedFunction().catch((err) => { console.log(err); });
+var response = await promisedFunction().catch((err) => {
+  console.log(err);
+});
 // response получит значение undefined, если Promise будет отклонён
 ```
 

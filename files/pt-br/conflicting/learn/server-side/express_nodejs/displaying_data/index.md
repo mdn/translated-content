@@ -1,7 +1,6 @@
 ---
 title: Controle de fluxo assíncrono usando async
 slug: conflicting/Learn/Server-side/Express_Nodejs/Displaying_data
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
 
 O código da _Controller_, para algumas de nossas páginas dependerá dos resultados de várias solicitações assíncronas, que talvez possam ser necessárias para serem executadas em uma ordem específica ou em paralelo. Para gerenciar o controle do nosso fluxo e renderizar páginas quando tivermos todas as informações necessárias disponíveis, usaremos o popular módulo [async](https://www.npmjs.com/package/async).

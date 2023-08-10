@@ -46,7 +46,7 @@ async function name([param[, param[, ... param]]]) {
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -59,18 +59,18 @@ async function add1(x) {
   return x + a + b;
 }
 
-add1(10).then(v => {
-  console.log(v);  // prints 60 after 4 seconds.
+add1(10).then((v) => {
+  console.log(v); // prints 60 after 4 seconds.
 });
 
 async function add2(x) {
   const a = resolveAfter2Seconds(20);
   const b = resolveAfter2Seconds(30);
-  return x + await a + await b;
+  return x + (await a) + (await b);
 }
 
-add2(10).then(v => {
-  console.log(v);  // prints 60 after 2 seconds.
+add2(10).then((v) => {
+  console.log(v); // prints 60 after 2 seconds.
 });
 ```
 
@@ -80,24 +80,25 @@ add2(10).then(v => {
 
 ```js
 async function throwsValue() {
-    throw new Error('oops');
+  throw new Error("oops");
 }
-throwsValue()
-    .then((resolve) => {
-            console.log("resolve:" + resolve);
-        },
-        (reject) => {
-            console.log("reject:" + reject);
-        });
+throwsValue().then(
+  (resolve) => {
+    console.log("resolve:" + resolve);
+  },
+  (reject) => {
+    console.log("reject:" + reject);
+  },
+);
 //prints "reject:Error: oops"
 //or
 throwsValue()
-    .then((resolve) => {
-        console.log("resolve:" + resolve);
-    })
-    .catch((reject) => {
-        console.log("reject:" + reject);
-    });
+  .then((resolve) => {
+    console.log("resolve:" + resolve);
+  })
+  .catch((reject) => {
+    console.log("reject:" + reject);
+  });
 //prints "reject:Error: oops"
 ```
 
@@ -108,10 +109,10 @@ API, которое возвращает {{jsxref("Promise")}}, будет во�
 ```js
 function getProcessedData(url) {
   return downloadData(url) // returns a promise
-    .catch(e => {
-      return downloadFallbackData(url) // returns a promise
+    .catch((e) => {
+      return downloadFallbackData(url); // returns a promise
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // returns a promise
     });
 }
@@ -124,7 +125,7 @@ async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   return processDataInWorker(v);

@@ -2517,6 +2517,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/group	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/groupToMap	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce()用法	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce

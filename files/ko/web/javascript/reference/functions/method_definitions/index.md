@@ -2,6 +2,7 @@
 title: 메서드 정의
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 ECMAScript 2015 를 시작으로, 객체 초기자(initializer)에 메서드 정의를 위한 더 짧은 구문이 도입되었습니다. 이는 메서드 명에 할당된 함수를 위한 단축입니다.
@@ -29,8 +30,8 @@ ECMAScript 2015 를 시작으로, 객체 초기자(initializer)에 메서드 정
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -39,7 +40,7 @@ var obj = {
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -52,20 +53,18 @@ var obj = {
 ```js
 // 유명 속성 사용 (ES2015 이전)
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // 단축 구문을 쓰는 같은 객체
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -81,12 +80,12 @@ console.log(it.next().value); // 1
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method는 생성자가 아닙니다
+new obj.method(); // TypeError: obj.method는 생성자가 아닙니다
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g는 생성자가 아닙니다 (ES2016에서 바뀜)
+new obj.g(); // TypeError: obj.g는 생성자가 아닙니다 (ES2016에서 바뀜)
 ```
 
 ## 예
@@ -106,9 +105,15 @@ console.log(obj.b()); // "foo"
 
 ```js
 var bar = {
-  foo0 : function (){return 0;},
-  foo1(){return 1;},
-  ["foo" + 2](){return 2;},
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0

@@ -92,11 +92,11 @@ A especificação HTML 4 não especificam eventos para este elemento; eles foram
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                        | Status                   | Comentário |
+| ------------------------------------------------------------------------------------ | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-bdo-element', '&lt;bdo&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdo-element', '&lt;bdo&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'dirlang.html#h-8.2.4', '&lt;bdo&gt;')}}                      | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

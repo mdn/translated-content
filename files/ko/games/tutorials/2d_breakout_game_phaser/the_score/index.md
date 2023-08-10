@@ -1,6 +1,8 @@
 ---
 title: 득점
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -11,16 +13,16 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 
 점수를 얻는 방식의 게임은 좀더 재미있을 것 입니다.— 당신 또는, 친구의 최고 기록을 갈아치울수도 있습니다. 이 글에서는 우리의 게임에 득점 시스템을 추가해 보려고 합니다.
 
-우리는 점수를 저장해두기 위해 여러 변수를 사용하고, 점수를 화면에 출력하기 위해 내부의 `text()` 메소드를 사용합니다.
+우리는 점수를 저장해두기 위해 여러 변수를 사용하고, 점수를 화면에 출력하기 위해 내부의 `text()` 메서드를 사용합니다.
 
 ## 새로운 변수들
 
 이전 정의되었던 변수들 바로 다음에 다음과 같이 새로운 변수 두개를 추가해 주세요:
 
 ```js
-// ...
-var scoreText;
-var score = 0;
+// …
+let scoreText;
+let score = 0;
 ```
 
 ## 게임 화면에 점수가 표시 되도록 해보자
@@ -50,7 +52,7 @@ scoreText = game.add.text(5, 5, "Points: 0", {
 function ballHitBrick(ball, brick) {
   brick.kill();
   score += 10;
-  scoreText.setText("Points: " + score);
+  scoreText.setText(`Points: ${score}`);
 }
 ```
 

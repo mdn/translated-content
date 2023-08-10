@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ## 구문
 
 ```js
-    encodeURIComponent(str);
+encodeURIComponent(str);
 ```
 
 ### 매개변수
@@ -37,9 +37,9 @@ Not Escaped:
 `encodeURIComponent()`와 {{jsxref("encodeURI", "encodeURI()")}}의 차이는 다음과 같습니다.
 
 ```js
-var set1 = ";,/?:@&=+$";  // Reserved Characters
-var set2 = "-_.!~*'()";   // Unescaped Characters
-var set3 = "#";           // Number Sign
+var set1 = ";,/?:@&=+$"; // Reserved Characters
+var set2 = "-_.!~*'()"; // Unescaped Characters
+var set3 = "#"; // Number Sign
 var set4 = "ABC abc 123"; // Alphanumeric Characters + Space
 
 console.log(encodeURI(set1)); // ;,/?:@&=+$
@@ -57,13 +57,13 @@ console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encode
 
 ```js
 // high-low pair ok
-console.log(encodeURIComponent('\uD800\uDFFF'));
+console.log(encodeURIComponent("\uD800\uDFFF"));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uD800'));
+console.log(encodeURIComponent("\uD800"));
 
 // lone low surrogate throws "URIError: malformed URI sequence"
-console.log(encodeURIComponent('\uDFFF'));
+console.log(encodeURIComponent("\uDFFF"));
 ```
 
 `encodeURIComponent()`를 사용해, 서버에 {{HTTPMethod("POST")}}로 요청할 양식 필드를 인코딩 하세요. 입력 중 의도치 않게 생성될 수 있는 HTML 특수 개체 등의 `"&"` 문자를 처리할 수 있습니다.
@@ -76,8 +76,8 @@ console.log(encodeURIComponent('\uDFFF'));
 
 ```js
 function fixedEncodeURIComponent(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16);
+  return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
+    return "%" + c.charCodeAt(0).toString(16);
   });
 }
 ```
@@ -87,35 +87,41 @@ function fixedEncodeURIComponent(str) {
 다음 예제는 UTF-8 {{HTTPHeader("Content-Disposition")}} 과{{HTTPHeader("Link")}} 서버 응답 헤더에서 (UTF-8 파일 이름 등의 이유로) 필요한 문자 인코딩 방법을 보입니다.
 
 ```js
-var fileName = 'my file(2).txt';
-var header = "Content-Disposition: attachment; filename*=UTF-8''"
-             + encodeRFC5987ValueChars(fileName);
+var fileName = "my file(2).txt";
+var header =
+  "Content-Disposition: attachment; filename*=UTF-8''" +
+  encodeRFC5987ValueChars(fileName);
 
 console.log(header);
 // logs "Content-Disposition: attachment; filename*=UTF-8''my%20file%282%29.txt"
 
-
 function encodeRFC5987ValueChars(str) {
-    return encodeURIComponent(str).
-        // Note that although RFC3986 reserves "!", RFC5987 does not,
-        // so we do not need to escape it
-        replace(/['()]/g, escape). // i.e., %27 %28 %29
-        replace(/\*/g, '%2A').
-            // The following are not required for percent-encoding per RFC5987,
-            // so we can allow for a little better readability over the wire: |`^
-            replace(/%(?:7C|60|5E)/g, unescape);
+  return (
+    encodeURIComponent(str)
+      // Note that although RFC3986 reserves "!", RFC5987 does not,
+      // so we do not need to escape it
+      .replace(/['()]/g, escape) // i.e., %27 %28 %29
+      .replace(/\*/g, "%2A")
+      // The following are not required for percent-encoding per RFC5987,
+      // so we can allow for a little better readability over the wire: |`^
+      .replace(/%(?:7C|60|5E)/g, unescape)
+  );
 }
 
 // here is an alternative to the above function
 function encodeRFC5987ValueChars2(str) {
-  return encodeURIComponent(str).
-    // Note that although RFC3986 reserves "!", RFC5987 does not,
-    // so we do not need to escape it
-    replace(/['()*]/g, c => "%" + c.charCodeAt(0).toString(16)). // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
-                                                                 // which necessitates calling toUpperCase() to properly encode)
-    // The following are not required for percent-encoding per RFC5987,
-    // so we can allow for a little better readability over the wire: |`^
-    replace(/%(7C|60|5E)/g, (str, hex) => String.fromCharCode(parseInt(hex, 16)));
+  return (
+    encodeURIComponent(str)
+      // Note that although RFC3986 reserves "!", RFC5987 does not,
+      // so we do not need to escape it
+      .replace(/['()*]/g, (c) => "%" + c.charCodeAt(0).toString(16)) // i.e., %27 %28 %29 %2a (Note that valid encoding of "*" is %2A
+      // which necessitates calling toUpperCase() to properly encode)
+      // The following are not required for percent-encoding per RFC5987,
+      // so we can allow for a little better readability over the wire: |`^
+      .replace(/%(7C|60|5E)/g, (str, hex) =>
+        String.fromCharCode(parseInt(hex, 16)),
+      )
+  );
 }
 ```
 
