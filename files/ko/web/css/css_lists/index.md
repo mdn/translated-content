@@ -9,7 +9,6 @@ spec-urls: https://drafts.csswg.org/css-lists/
 
 **CSS Lists**는 리스트 배치 방법 및 스타일 지정 방법을 정의하는 CSS 모듈입니다.
 
-
 ## 참고서
 
 ### 속성
