@@ -52,8 +52,5 @@ build/
 /files/ja/web/html/**/*.md
 /files/ja/web/javascript/**/*.md
 
-# ko
-/files/ko/web/javascript/**/*.md
-
 # pt-br
 /files/pt-br/web/css/**/*.md
