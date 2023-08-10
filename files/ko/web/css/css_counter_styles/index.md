@@ -12,18 +12,18 @@ browser-compat:
 
 **CSS counter styles** 모듈을 사용하면 사용자 정의 카운터 스타일을 정의할 수 있습니다.
 
-## Reference
+## 참고서
 
-### Properties
+### 속성
 
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 
-### Functions
+### 함수
 
 - {{cssxref("symbols", "symbols()")}}
 
-### At-rules
+### 규칙 지시자
 
 - {{cssxref("@counter-style")}}
 
@@ -37,15 +37,15 @@ browser-compat:
   - {{cssxref("@counter-style/speak-as", "speak-as")}}
   - {{cssxref("@counter-style/fallback", "fallback")}}
 
-## Guides
+## 안내서
 
 - [CSS 카운터 사용하기](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : CSS 카운터 속성을 사용하여 목록 카운터를 제어하는 방법을 설명합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
