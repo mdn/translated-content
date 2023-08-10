@@ -54,7 +54,6 @@ build/
 
 # ko
 /files/ko/web/css/**/*.md
-/files/ko/web/javascript/**/*.md
 
 # pt-br
 /files/pt-br/web/api/**/*.md

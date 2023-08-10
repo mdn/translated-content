@@ -83,8 +83,7 @@ const add = async function (x) {
 add(10)
   .then((v) => {
     console.log(v); // 4초 뒤에 60 출력
-  })
-  (
+  })(
     // async function 표현식을 IIFE로 사용
     async function (x) {
       const p1 = resolveAfter2Seconds(20);
