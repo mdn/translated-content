@@ -7,7 +7,7 @@ l10n:
 
 {{JsSidebar}}
 
-**キャプチャグループ**は、サブパターンをグループ化し、グループ全体に[量化子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。サブパターンの一致に関する情報を記憶しているので、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)で参照したり、[照合結果](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#返値)からその情報にアクセスしたりすることができます。
+**キャプチャグループ**は、サブパターンをグループ化し、グループ全体に[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)を適用したり、グループ内で[論理和](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)を使用したりすることができます。サブパターンの一致に関する情報を記憶しているので、[後方参照](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)で参照したり、[照合結果](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec#返値)からその情報にアクセスしたりすることができます。
 
 サブパターンの照合結果が必要ない場合は、代わりに[非キャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)を使用することで、パフォーマンスが向上し、リファクタリングの危険を避けることができます。
 
@@ -54,7 +54,7 @@ l10n:
 /(?<=([ab])+)c/.exec("abc"); // ['c', 'a']; because "a" is seen by the lookbehind after the lookbehind has seen "b"
 ```
 
-キャプチャグループは入れ子にすることができ、その場合、開き括弧によって順序付けされるため、外側のグループが最初に番号付けされ、次に内側のグループが番号付けされます。入れ子になったグループが量化子によって繰り返される場合、そのグループが一致するたびにサブグループの結果はすべて上書きされ、場合によっては `undefined` になります。
+キャプチャグループは入れ子にすることができ、その場合、開き括弧によって順序付けされるため、外側のグループが最初に番号付けされ、次に内側のグループが番号付けされます。入れ子になったグループが数量詞によって繰り返される場合、そのグループが一致するたびにサブグループの結果はすべて上書きされ、場合によっては `undefined` になります。
 
 ```js
 /((a+)?(b+)?(c))*/.exec("aacbbbcac"); // ['aacbbbcac', 'ac', 'a', undefined, 'c']
@@ -72,7 +72,7 @@ l10n:
 
 オプションでキャプチャグループに名前を指定することができ、グループの位置やインデックス関連の落とし穴を避けるのに役立ちます。詳細は、[名前付きキャプチャグループ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)を参照してください。
 
-括弧は、異なる正規表現構文において他の目的もあります。例えば、先読みアサーションや後読みアサーションも括弧で囲みます。これらの構文はすべて `?` で始まり、`?` は `(` の直後には置くことができない[量化子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)なので、曖昧さにはつながりません。
+括弧は、異なる正規表現構文において他の目的もあります。例えば、先読みアサーションや後読みアサーションも括弧で囲みます。これらの構文はすべて `?` で始まり、`?` は `(` の直後には置くことができない[数量詞](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)なので、曖昧さにはつながりません。
 
 ## 例
 
