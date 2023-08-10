@@ -1,12 +1,6 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Propriété
-translation_of: Web/API/HTMLCanvasElement/height
 ---
 
 {{APIRef("Canvas API")}}
@@ -33,7 +27,7 @@ canvas.height = pxl;
 vous pouvez obtenir la hauteur du canevas avec le code suivant :
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 console.log(canvas.height); // 300
 ```
 

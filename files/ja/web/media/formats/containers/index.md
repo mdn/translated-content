@@ -106,7 +106,7 @@ WebRTC の呼び出しを行う際に一般的に使用されるコーデック�
 
 このメディアコンテナー形式は、 ISO Base Media File Format と MPEG-4 から派生したものですが、特に低帯域シナリオ向けに効率化されています。
 
-| 音声         | 映像         |
+| 音声          | 映像          |
 | ------------- | ------------- |
 | `audio/3gpp`  | `video/3gpp`  |
 | `audio/3gpp2` | `video/3gpp2` |
@@ -239,9 +239,9 @@ WebRTC の呼び出しを行う際に一般的に使用されるコーデック�
 ### ADTS
 
 **Audio Data Transport Stream** (**ADTS**) は、 MPEG-4 Part 3 で指定された音声データのコンテナー形式で、インターネットラジオなどのストリーミング音声に使用されることを目的としています。
- ADTS フレームと最小限のヘッダーで構成される、ほぼ素の AAC 音声データのストリームです。
+ADTS フレームと最小限のヘッダーで構成される、ほぼ素の AAC 音声データのストリームです。
 
-| 音声        |
+| 音声         |
 | ------------ |
 | `audio/aac`  |
 | `audio/mpeg` |
@@ -290,11 +290,11 @@ Firefox の AAC 対応は、OS のメディアインフラに依存している�
 
 ### FLAC
 
-Free Lossless Audio Codec** (**FLAC**) は可逆圧縮の音声コーデックです。この音声を格納できる、関連する単純なコンテナー形式もあり、これも FLAC と呼ばれます。
+**Free Lossless Audio Codec (FLAC)** は可逆圧縮の音声コーデックです。この音声を格納できる、関連する単純なコンテナー形式もあり、これも FLAC と呼ばれます。
 この形式は特許に邪魔されないので、安全に使用することができます。
 FLAC ファイルは、 FLAC 音声データのみを格納することができます。
 
-| 音声                         |
+| 音声                          |
 | ----------------------------- |
 | `audio/flac`                  |
 | `audio/x-flac` (non-standard) |
@@ -339,7 +339,7 @@ Moving Picture Experts Group (MPEG) によって作成されたこれらの書�
 MPEG-1 と MPEG-2 の主な違いは、コンテナー形式ではなく、メディアデータ形式にあります。
 MPEG-1 は 1992 年に登場し、 MPEG-2 は 1996 年に登場しました。
 
-| 音声        | 映像        |
+| 音声         | 映像         |
 | ------------ | ------------ |
 | `audio/mpeg` | `video/mpeg` |
 
@@ -433,7 +433,7 @@ MP4 ファイル形式は、 [ISO base media file format](https://en.wikipedia.o
 
 MPEG-4 メディア形式 (`audio/mp4` または `video/mp4`) を指定するとき、MIME 形式の文字列に `codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter#iso-bmff)を加えて、どのコーデックが音声と映像のトラックで使われているかを示すとともに、プロファイル、レベル、その他のコーデック構成の詳細を示すことができます。
 
-| 音声       | 映像       |
+| 音声        | 映像        |
 | ----------- | ----------- |
 | `audio/mp4` | `video/mp4` |
 
@@ -570,7 +570,7 @@ Ogg は長く存在してきていますが、メディアコンテナーの最�
 
 Ogg とそのコーデックについては、 [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) でより詳細な情報を取得することができます。
 
-| 音声       | 映像       |
+| 音声        | 映像        |
 | ----------- | ----------- |
 | `audio/ogg` | `video/ogg` |
 
@@ -685,7 +685,7 @@ QuickTime のサポートは、すべてにおいて、主に Apple 製の機器
 Apple 社自身も、これで一般的に動画に MP4 を使用するようになった。
 さらに、 QuickTime フレームワークは、しばらくの間、Macでは非推奨となっており、macOS 10.15 Catalina からは、まったく利用できなくなりました。
 
-| 映像             |
+| 映像              |
 | ----------------- |
 | `video/quicktime` |
 
@@ -873,7 +873,7 @@ WAV コーデックのレジストリーは {{RFC(2361)}} にあります。し�
 
 WAVE 形式は 1991 年に最初にリリースされました。
 
-| 音声            |
+| 音声             |
 | ---------------- |
 | `audio/wave`     |
 | `audio/wav`      |
@@ -949,7 +949,7 @@ WebM に準拠した実装を行うためには、 VP8 および VP9 動画コ�
 WebM コンテナー形式とそれに必要なコーデックは、すべてオープンライセンスで利用できます。
 他のコーデックを使用する場合は、ライセンスが必要になることがあります。
 
-| 音声        | 映像        |
+| 音声         | 映像         |
 | ------------ | ------------ |
 | `audio/webm` | `video/webm` |
 
@@ -1053,9 +1053,9 @@ WebM コンテナー形式とそれに必要なコーデックは、すべてオ
 - メディアを独占的でないオープンな形式にしたい場合は、 FLAC （音声）や WebM （動画）など、オープンコンテナー形式のいずれかを使用することを検討してください。
 - 何らかの理由でメディアを単一の形式でしか提供できない場合は、 MP3 （音声用）や MP4 （動画と音声用）など、最も幅広い機器やブラウザーで利用できる形式を選んでください。
 - メディアが音声のみの場合、音声のみのコンテナー形式を選ぶことは、おそらく理にかなっています。
-特許がすべて失効しているこれで、 MP3 は広く対応しており、良い選択です。
+  特許がすべて失効しているこれで、 MP3 は広く対応しており、良い選択です。
   WAVE は良いですが、非圧縮なので、大きな音声サンプルに使用する前に、その点に注意してください。
-対象となるブラウザーがすべて対応していれば、可逆圧縮のため、 FLAC はとても良い選択です。
+  対象となるブラウザーがすべて対応していれば、可逆圧縮のため、 FLAC はとても良い選択です。
 
 残念ながら、比較的メジャーな可逆圧縮形式（FLACとALAC）のどちらも、広く普及しているわけではありません。
 FLAC は 2 つのうちより広く対応されていますが、追加のソフトウェアをインストールしないと macOS では対応していませんし、 iOS ではまったく対応していません。
@@ -1069,23 +1069,23 @@ FLAC は 2 つのうちより広く対応されていますが、追加のソフ
 
 #### 音声のみのファイル
 
-| ニーズ                                  | このコンテナー形式の使用を検討してください |
-| --------------------------------------------- | ------------------------------------ |
-| 汎用的な再生に適した圧縮ファイル | MP3 (MPEG-1 Audio Layer III)         |
-| 可逆圧縮ファイル                   | FLAC に ALAC のフォールバック              |
-| 非圧縮ファイル                            | WAV                                  |
+| ニーズ                           | このコンテナー形式の使用を検討してください |
+| -------------------------------- | ------------------------------------------ |
+| 汎用的な再生に適した圧縮ファイル | MP3 (MPEG-1 Audio Layer III)               |
+| 可逆圧縮ファイル                 | FLAC に ALAC のフォールバック              |
+| 非圧縮ファイル                   | WAV                                        |
 
 MP3 の特許がすべて切れたことで、音声ファイルの形式を選択することが非常に容易になりました。
 MP3 の幅広い互換性と、使用する際に支払うべきロイヤリティのどちらかを選ぶ必要はなくなりました。
 
 #### 動画ファイル
 
-| ニーズ                                        | このコンテナー形式の使用を検討してください                |
-| --------------------------------------------------- | --------------------------------------------------- |
-| 汎用性ある動画、できればオープンな形式のもの | WebM (できれば MP4 のフォールバック)                    |
-| 汎用的な動画                               | MP4 (できれば WebM または Ogg のフォールバック)             |
-| 低速回線に最適化した高圧縮     | 3GP (できれば MP4 フォールバック)                     |
-| 古い端末/ブラウザーへの対応について           | QuickTime (できれば AVI や MPEG-2 のフォールバック) |
+| ニーズ                                       | このコンテナー形式の使用を検討してください          |
+| -------------------------------------------- | --------------------------------------------------- |
+| 汎用性ある動画、できればオープンな形式のもの | WebM (できれば MP4 のフォールバック)                |
+| 汎用的な動画                                 | MP4 (できれば WebM または Ogg のフォールバック)     |
+| 低速回線に最適化した高圧縮                   | 3GP (できれば MP4 フォールバック)                   |
+| 古い端末/ブラウザーへの対応について          | QuickTime (できれば AVI や MPEG-2 のフォールバック) |
 
 これらの提案には、いくつかの前提があります。
 特にエンコードが必要なメディアを多く保有している場合は、最終的な決断を下す前にオプションを慎重に検討する必要があります。
@@ -1110,23 +1110,23 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                | コメント                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | 3GP コンテナー形式を定義                                                                                |
-| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html) (MPEG-4 Part 3 Audio)                                                                             | ADTS を含む MP4 音声を定義                                                                                |
-| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | FLAC 形式の仕様書                                                                                   |
-| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html) (MPEG-1 Part 1 Systems)                                                                           | MPEG-1 コンテナー形式を定義                                                                             |
-| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | MPEG-2 コンテナー形式を定義                                                                             |
-| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | MPEG-4 (MP4) version 2 コンテナー形式を定義                                                             |
-| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | 元の MPEG-4 (MP4) コンテナー形式を定義                                                              |
-| {{RFC(3533)}}                                                                                                                                                | Ogg コンテナー形式を定義                                                                                |
-| {{RFC(5334)}}                                                                                                                                                | Ogg メディア型とファイル拡張子を定義                                                                 |
-| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | QuickTime movie (MOV) 形式を定義                                                                        |
-| [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | WAVE 公式仕様に最も近いもの                                                             |
-| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)                   | RIFF 形式を定義、 WAVE ファイルは RIFF 形式です                                                          |
-| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Matroska を WebM に適応させるためのガイド                                                                            |
-| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | WebM のベースとなる Matroska コンテナー形式の仕様書                                    |
-| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | [メディアソース拡張機能](/ja/docs/Web/API/Media_Source_Extensions_API)で使用するための WebM バイトストリーム形式  |
+| 仕様書                                                                                                                                                       | コメント                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | 3GP コンテナー形式を定義                                                                                         |
+| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html) (MPEG-4 Part 3 Audio)                                                                             | ADTS を含む MP4 音声を定義                                                                                       |
+| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | FLAC 形式の仕様書                                                                                                |
+| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html) (MPEG-1 Part 1 Systems)                                                                           | MPEG-1 コンテナー形式を定義                                                                                      |
+| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 Systems)                                                                           | MPEG-2 コンテナー形式を定義                                                                                      |
+| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 file format)                                                                | MPEG-4 (MP4) version 2 コンテナー形式を定義                                                                      |
+| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 Systems)                                                                           | 元の MPEG-4 (MP4) コンテナー形式を定義                                                                           |
+| {{RFC(3533)}}                                                                                                                                                | Ogg コンテナー形式を定義                                                                                         |
+| {{RFC(5334)}}                                                                                                                                                | Ogg メディア型とファイル拡張子を定義                                                                             |
+| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | QuickTime movie (MOV) 形式を定義                                                                                 |
+| [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | WAVE 公式仕様に最も近いもの                                                                                      |
+| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (used by WAV)                   | RIFF 形式を定義、 WAVE ファイルは RIFF 形式です                                                                  |
+| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | Matroska を WebM に適応させるためのガイド                                                                        |
+| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | WebM のベースとなる Matroska コンテナー形式の仕様書                                                              |
+| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | [メディアソース拡張機能](/ja/docs/Web/API/Media_Source_Extensions_API)で使用するための WebM バイトストリーム形式 |
 
 ## ブラウザーの互換性
 

@@ -1,8 +1,6 @@
 ---
 title: Le modèle de grille et les autres modèles de disposition
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -22,7 +20,9 @@ Dans le premier exemple, on utilise un boîte flexible pour organiser un ensembl
 On utilise aussi la propriété {{cssxref("flex-wrap")}} avec la valeur `wrap`, afin de créer une nouvelle ligne si le conteneur devient trop étroit pour conserver `flex-basis`.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -71,7 +71,9 @@ On se demande alors comment faire pour aligner ces éléments… C'est là qu'in
 Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici, on a trois pistes `1fr`. Il n'est pas nécessaire de paramétrer quoi que ce soit sur les objets, ils se disposeront eux-mêmes dans chaque cellule formée par la grille. On peut alors voir que les objets restent dans une grille stricte, avec les lignes et les colonnes qui sont alignées. Avec cinq éléments, on a donc un espace restant à la fin de la deuxième ligne.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -131,7 +133,9 @@ Dans un autre article de cette série, nous verrons comment utiliser l'alignemen
 Dans le premier exemple, on utilise les boîtes flexibles avec un conteneur qui dispose de trois objets. La propriété {{cssxref("min-height")}} est définie et paramètre la hauteur du conteneur flexible. {{cssxref("align-items")}} vaut `flex-end` pour le conteneur flexible et les objets s'empileront donc jusqu'à l'extrémité du conteneur flexible. On utilise également la propriété {{cssxref("align-self")}} sur `box1` afin de surcharger la valeur par défaut et d'étirer jusqu'à la hauteur du conteneur et jusqu'à `box2` afin que `box1` soit alignée avec le début du conteneur flexible.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -177,7 +181,9 @@ Dans le premier exemple, on utilise les boîtes flexibles avec un conteneur qui 
 Dans cet exemple, on utilise une grille pour créer la même disposition. Cette fois on utilise les propriétés d'alignement des boîtes. On aligne donc par rapport à `start` et `end` plutôt que par rapport à `flex-start` et `flex-end`. Dans le cas d'une disposition en grille, on aligne les éléments à l'intérieur de leur zone de grille. Dans ce cas, il s'agit d'une seule cellule mais on pourrait très bien construire une zone composée de plusieurs cellules.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -205,10 +211,11 @@ Dans cet exemple, on utilise une grille pour créer la même disposition. Cette 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
-}.box1 {
+}
+.box1 {
   align-self: stretch;
 }
 .box2 {
@@ -233,7 +240,9 @@ On peut créer un effet semblable aux boîtes flexibles tout en gardant l'arrang
 Dans l'exemple qui suit, on utilise le mot-clé `auto-fill` à la place d'un entier dans la fonction `repeat` et on définit la taille d'une piste à 200 pixels. Cela signifie que la grille créera autant de pistes de 200 pixels en colonnes qu'il est possible d'en placer dans le conteneur.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -274,7 +283,9 @@ L'exemple précédent ne se comporte pas comme celui avec les boîtes flexibles.
 Dans l'exemple qui suit, on crée des pistes qui sont remplies automatiquement avec `minmax`. On souhaite que les pistes mesurent au moins 200 pixels, avec un maximum de `1fr`. Lorsque le navigateur a calculé la quantité de colonnes qui tiendraient dans le conteneur (en tenant compte des espaces), il utilisera le maximum `1fr` afin de répartir l'espace restant entre les objets.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -321,7 +332,9 @@ Pour qu'une grille soit un bloc englobant, il faut utiliser la propriété `posi
 Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième élément est positionné en absolu et est placé sur la grille. La grille, le conteneur, a `position:` `relative` et devient donc le contexte de positionnement pour cet objet.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -343,10 +356,9 @@ Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième �
   <div class="box1">Un</div>
   <div class="box2">Deux</div>
   <div class="box3">
-    Ce bloc est positionné de façon absolue. Dans cet exemple
-    la grille est le bloc englobant et les valeurs de décalage
-    pour la position sont calculées depuis les bords extérieurs
-    de la zone dans laquelle a été placé l'élément.
+    Ce bloc est positionné de façon absolue. Dans cet exemple la grille est le
+    bloc englobant et les valeurs de décalage pour la position sont calculées
+    depuis les bords extérieurs de la zone dans laquelle a été placé l'élément.
   </div>
   <div class="box4">Quatre</div>
 </div>
@@ -355,7 +367,7 @@ Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième �
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
   position: relative;
@@ -392,7 +404,9 @@ Si l'élément positionné de façon absolu est imbriqué dans une zone de la gr
 On indique que `.box3` a une position relative puis on positionne l'élément avec des propriétés de décalage. Dans ce cas, le contexte de positionnement est la zone de la grille.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -413,11 +427,12 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
 <div class="wrapper">
   <div class="box1">Un</div>
   <div class="box2">Deux</div>
-  <div class="box3">Trois
+  <div class="box3">
+    Trois
     <div class="abspos">
-      Ce bloc est positionné de façon absolue. Dans cet exemple
-      la zone de la grille est le bloc englobant et le positionnement
-      est calculé à partir des bords de la zone de la grille.
+      Ce bloc est positionné de façon absolue. Dans cet exemple la zone de la
+      grille est le bloc englobant et le positionnement est calculé à partir des
+      bords de la zone de la grille.
     </div>
   </div>
   <div class="box4">Quatre</div>
@@ -427,7 +442,7 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
 }
@@ -442,8 +457,8 @@ On indique que `.box3` a une position relative puis on positionne l'élément av
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -462,7 +477,9 @@ Si on utilise `display:` `contents` sur un élément, la boîte qu'il aurait nor
 ### Utiliser display contents avant
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -518,7 +535,9 @@ Si on utilise `display:` `contents` sur un élément, la boîte qu'il aurait nor
 Si on ajoute `display:` `contents` aux règles qui ciblent `box1`, la boîte de cet élément disparaîtra et ses sous-éléments deviendront alors des éléments de la grille qui se placeront selon les règles de placement automatiques pour la grille.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

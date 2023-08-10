@@ -1,7 +1,6 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-original_slug: Web/API/document.createTreeWalker
 ---
 
 {{ApiRef("Document")}}

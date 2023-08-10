@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMilliseconds
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour l
 ## Syntaxe
 
 ```js
-dateObj.getUTCMilliseconds()
+dateObj.getUTCMilliseconds();
 ```
 
 ### Valeur de retour

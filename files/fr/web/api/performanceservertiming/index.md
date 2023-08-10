@@ -1,13 +1,6 @@
 ---
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
-tags:
-  - API
-  - Interface
-  - Reference
-  - Performance Web
-  - Resource Timing API
-translation_of: Web/API/PerformanceServerTiming
 ---
 
 {{APIRef("Resource Timing API")}} {{securecontext_header}}
@@ -37,30 +30,30 @@ Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en
 Étant donné un serveur qui envoie l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing), par exemple un serveur node.js comme celui-ci :
 
 ```js
-const http = require('http');
+const http = require("http");
 
 function requestHandler(request, response) {
   const headers = {
-    'Server-Timing': `
+    "Server-Timing": `
       cache;desc="Cache Read";dur=23.2,
       db;dur=53,
       app;dur=47.2
-    `.replace(/\n/g, '')
+    `.replace(/\n/g, ""),
   };
   response.writeHead(200, headers);
-  response.write('');
-  return setTimeout(_ => {
+  response.write("");
+  return setTimeout((_) => {
     response.end();
-  }, 1000)
-};
+  }, 1000);
+}
 
-http.createServer(requestHandler).listen(3000).on('error', console.error);
+http.createServer(requestHandler).listen(3000).on("error", console.error);
 ```
 
 Les entrées `PerformanceServerTiming` sont désormais observables depuis JavaScript via la propriété [`PerformanceResourceTiming.serverTiming`](/fr/docs/Web/API/PerformanceResourceTiming/serverTiming) :
 
 ```js
-let entries = performance.getEntriesByType('resource');
+let entries = performance.getEntriesByType("resource");
 console.log(entries[0].serverTiming);
 // 0: PerformanceServerTiming {name: "cache", duration: 23.2, description: "Cache Read"}
 // 1: PerformanceServerTiming {name: "db", duration: 53, description: ""}

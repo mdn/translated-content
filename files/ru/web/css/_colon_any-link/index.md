@@ -1,18 +1,6 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
-tags:
-  - ':any-link'
-  - CSS
-  - Web
-  - Вёрстка
-  - Гиперссылки
-  - Справка
-  - Ссылки
-  - Экспериментальное
-  - псевдокласс
-  - селектор
-translation_of: Web/CSS/:any-link
 ---
 
 {{CSSRef}} {{SeeCompatTable}}
@@ -35,8 +23,8 @@ translation_of: Web/CSS/:any-link
 ### HTML
 
 ```html
-<a href="https://example.com">External link</a><br>
-<a href="#">Internal target link</a><br>
+<a href="https://example.com">External link</a><br />
+<a href="#">Internal target link</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 

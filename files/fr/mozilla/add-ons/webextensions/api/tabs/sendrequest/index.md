@@ -1,7 +1,6 @@
 ---
 title: tabs.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
 
 {{AddonSidebar()}}
@@ -16,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var sending = browser.tabs.sendRequest(
-  tabId,                   // integer
-  request                  // any
-)
+  tabId, // integer
+  request, // any
+);
 ```
 
 ### Paramètres

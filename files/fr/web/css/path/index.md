@@ -1,8 +1,6 @@
 ---
 title: path()
 slug: Web/CSS/path
-translation_of: Web/CSS/path()
-original_slug: Web/CSS/path()
 ---
 
 {{CSSRef}}

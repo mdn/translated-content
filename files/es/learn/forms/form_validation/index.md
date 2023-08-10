@@ -1,7 +1,6 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

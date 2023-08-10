@@ -1,5 +1,5 @@
 ---
-title: '移動、向き、モーション: WebXR の例'
+title: "移動、向き、モーション: WebXR の例"
 slug: Web/API/WebXR_Device_API/Movement_and_motion
 ---
 

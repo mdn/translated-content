@@ -1,7 +1,6 @@
 ---
 title: Storage API
 slug: Web/API/Storage_API
-translation_of: Web/API/Storage_API
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
@@ -67,7 +66,7 @@ Les agents utilisateurs peuvent utiliser toute méthode de leur choix pour déte
 Pour déterminer les valeurs de quota et d'usage estimées pour une origine donnée, utilisez la méthode {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}}, qui retourne une promesse qui, une fois résolue, reçoit un {{domxref("StorageEstimate")}} qui contient ces nombres. Par exemple&nbsp;:
 
 ```js
-navigator.storage.estimate().then(estimate => {
+navigator.storage.estimate().then((estimate) => {
   // estimate.quota est le quota estimé
   // estimate.usage est le nombre estimé d’octets utilisés
 });

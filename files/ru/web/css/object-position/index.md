@@ -1,8 +1,8 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`object-position`** определяет выравнивание контента выбранного [замещаемого элемента](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутри блока элемента. На областях блока, не покрытых объектом замещаемого элемента, будет отображаться фон элемента.
@@ -48,8 +48,8 @@ object-position: unset;
 Здесь мы видим HTML, содержащий два {{HTMLElement("img")}}-элемента, отображающие логотипы MDN.
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### CSS

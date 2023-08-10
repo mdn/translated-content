@@ -1,5 +1,5 @@
 ---
-title: 'Window: cut イベント'
+title: "Window: cut イベント"
 slug: Web/API/Window/cut_event
 ---
 

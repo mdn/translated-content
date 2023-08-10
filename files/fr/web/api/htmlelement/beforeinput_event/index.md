@@ -1,7 +1,6 @@
 ---
-title: 'HTMLElement: beforeinput event'
+title: "HTMLElement: beforeinput event"
 slug: Web/API/HTMLElement/beforeinput_event
-translation_of: Web/API/HTMLElement/beforeinput_event
 ---
 
 {{APIRef}} {{SeeCompatTable}}
@@ -50,17 +49,17 @@ Cet exemple affiche la valeur de l'élément {{HtmlElement("input")}} juste avan
 ### HTML
 
 ```html
-<input placeholder="Saisissez du texte" name="name"/>
+<input placeholder="Saisissez du texte" name="name" />
 <p id="values"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('values');
+const input = document.querySelector("input");
+const log = document.getElementById("values");
 
-input.addEventListener('beforeinput', updateValue);
+input.addEventListener("beforeinput", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

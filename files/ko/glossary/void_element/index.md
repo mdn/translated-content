@@ -1,7 +1,6 @@
 ---
 title: 빈 요소
 slug: Glossary/Void_element
-original_slug: Glossary/Empty_element
 ---
 
 **빈 요소**는 HTML, SVG, MathML의 {{glossary("element", "요소")}} 중 자식 노드를 가질 수 **없는** 요소입니다.

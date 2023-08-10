@@ -1,13 +1,6 @@
 ---
 title: Extensions WebKit
 slug: Web/CSS/WebKit_Extensions
-tags:
-  - Aperçu
-  - CSS
-  - Non-standard
-  - Reference
-  - WebKit
-translation_of: Web/CSS/WebKit_Extensions
 ---
 
 {{CSSRef}}

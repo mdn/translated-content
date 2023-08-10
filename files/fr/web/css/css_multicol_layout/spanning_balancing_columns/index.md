@@ -1,11 +1,6 @@
 ---
 title: Répartir et équilibrer le contenu entre les colonnes
 slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
-tags:
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Columns/Spanning_Columns
-original_slug: Web/CSS/CSS_Columns/Spanning_Columns
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
 
 > **Предупреждение:** Использование оператора `with` не рекомендуемо, т.к. он может быть источником запутанных багов и проблем совместимости. Детальная информация в параграфе "Ambiguity Contra" раздела "Description".
@@ -46,7 +45,7 @@ function f(x, o) {
 }
 ```
 
-Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error -- just unexpected results.
+Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error — just unexpected results.
 
 **Contra:** Code using `with` may not be forward compatible, especially when used with something other than a plain object. Consider this example:
 

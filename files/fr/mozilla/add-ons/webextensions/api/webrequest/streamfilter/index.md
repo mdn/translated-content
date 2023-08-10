@@ -1,7 +1,6 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
 
 {{AddonSidebar()}}
@@ -22,9 +21,9 @@ Le filtre génère quatre événements différents :
 Vous pouvez écouter chaque événement en assignant une fonction d'écoute à son attribut :
 
 ```js
-filter.onstart = event => {
+filter.onstart = (event) => {
   console.log("started");
-}
+};
 ```
 
 Notez que la demande est bloquée pendant l'exécution de n'importe quel auditeur d'événement.
@@ -83,27 +82,27 @@ Ce code écoute pour `onstart`, `ondata` et `onstop`. Il enregistre simplement c
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
-  }
+  };
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
-  }
+  };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

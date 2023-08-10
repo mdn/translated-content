@@ -1,13 +1,6 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
-translation_of: Web/API/File/name
 ---
 
 {{APIRef("File API")}}
@@ -27,7 +20,7 @@ var name = file.name;
 ## Пример
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 ```
 
 ```js

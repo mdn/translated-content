@@ -15072,24 +15072,6 @@
     "modified": "2019-04-06T13:17:41.411Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-10-31T07:53:06.500Z",
-    "contributors": [
-      "bdrnglm",
-      "SphinxKnight",
-      "a-mt",
-      "cabscorp",
-      "edspeedy",
-      "TiWisti",
-      "daisyback",
-      "personnel",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-04-06T13:14:05.671Z",
-    "contributors": ["SphinxKnight", "ffoodd"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-07-12T07:45:36.764Z",
     "contributors": ["SphinxKnight"]
@@ -15640,6 +15622,24 @@
   "Web/CSS/CSS_scrollbars_styling": {
     "modified": "2020-10-15T22:10:56.124Z",
     "contributors": ["tristantheb", "SphinxKnight"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-10-31T07:53:06.500Z",
+    "contributors": [
+      "bdrnglm",
+      "SphinxKnight",
+      "a-mt",
+      "cabscorp",
+      "edspeedy",
+      "TiWisti",
+      "daisyback",
+      "personnel",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-04-06T13:14:05.671Z",
+    "contributors": ["SphinxKnight", "ffoodd"]
   },
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-26T04:23:36.000Z",

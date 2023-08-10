@@ -1,14 +1,6 @@
 ---
 title: Движение мяча
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - JavaScript
-  - Phaser
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics")}}

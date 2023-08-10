@@ -1,12 +1,6 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/zoom
 ---
 
 {{CSSRef}}{{Non-standard_header}}

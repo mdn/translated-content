@@ -1,7 +1,6 @@
 ---
 title: Exemple 3
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
-translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_3
 ---
 
 Ceci est le troisième exemple expliquant comment [construire des widgets de formulaire personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets).

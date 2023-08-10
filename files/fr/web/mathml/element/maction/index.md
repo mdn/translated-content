@@ -1,11 +1,6 @@
 ---
 title: maction
 slug: Web/MathML/Element/maction
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
-translation_of: Web/MathML/Element/maction
 ---
 
 L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.

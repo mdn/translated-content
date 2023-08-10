@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
-original_slug: Web/API/VRDevice/getEyeParameters
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

@@ -12,7 +12,9 @@ l10n:
 なお、`Iterator` はグローバルオブジェクトではありませんが、将来的には[イテレーターヘルパーの提案](https://github.com/tc39/proposal-iterator-helpers)でグローバルオブジェクトになる予定です。すべての組み込みイテレーターに共通する `Iterator.prototype` オブジェクトは、以下のコードで得ることができます。
 
 ```js
-const IteratorPrototype = Object.getPrototypeOf(Object.getPrototypeOf([].values()));
+const IteratorPrototype = Object.getPrototypeOf(
+  Object.getPrototypeOf([].values()),
+);
 ```
 
 ## 解説

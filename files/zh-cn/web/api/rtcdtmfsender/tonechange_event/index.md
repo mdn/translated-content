@@ -1,6 +1,6 @@
 ---
 title: RTCDTMFSender：tonechange 事件
-slug: Web/API/RTCDTMFSender/tonechange_event 
+slug: Web/API/RTCDTMFSender/tonechange_event
 ---
 
 {{APIRef("WebRTC")}}
@@ -51,7 +51,7 @@ dtmfSender.addEventListener(
 
     document.getElementById("playingTone").innerText = tone;
   },
-  false
+  false,
 );
 ```
 

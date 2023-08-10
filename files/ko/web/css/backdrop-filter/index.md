@@ -2,6 +2,7 @@
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`backdrop-filter`** 는 요소 뒤 영역에 흐림이나 색상 시프트 등 그래픽 효과를 적용할 수 있는 속성입니다. 요소 "뒤"에 적용하기 때문에, 효과를 확인하려면 요소나 요소의 배경을 적어도 반투명하게는 설정해야 합니다.
@@ -62,7 +63,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
@@ -76,7 +77,8 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-image: url(https://picsum.photos/id/1080/6858/4574),
+    linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

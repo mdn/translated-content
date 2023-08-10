@@ -1,7 +1,6 @@
 ---
 title: menus.onHidden
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 ---
 
 {{AddonSidebar()}}
@@ -17,9 +16,9 @@ Firefox rend cet événement disponible via l'espace de noms `contextMenus` ains
 ## Syntaxe
 
 ```js
-browser.menus.onHidden.addListener(listener)
-browser.menus.onHidden.removeListener(listener)
-browser.menus.onHidden.hasListener(listener)
+browser.menus.onHidden.addListener(listener);
+browser.menus.onHidden.removeListener(listener);
+browser.menus.onHidden.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -27,7 +26,7 @@ Les événements ont trois fonctions :
 - `addListener(listener)`
   - : Ajoute un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener`  est l'écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 

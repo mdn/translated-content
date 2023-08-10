@@ -19,9 +19,9 @@ color: white; /* Aqui será definida a cor atual*/
 
 /* Valores com Palavras-chave */
 /* color define a cor do texto no elemento*/
-color: red;    /* Define como 'vermelho'*/
-color: blue;   /* Define como 'laranja'*/
-color: cyan;   /* Define como 'verde-água'*/
+color: red; /* Define como 'vermelho'*/
+color: blue; /* Define como 'laranja'*/
+color: cyan; /* Define como 'verde-água'*/
 
 /* Obs: Utilizando "light" antes da cor, ela ficará clara.
    ex: lightblue;
@@ -48,7 +48,7 @@ color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
-color: rgb(34.0 12 64 / 60%);
+color: rgb(34 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
 
 /* Valores "hsl()", sendo
@@ -57,7 +57,7 @@ color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
 color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
+color: hsl(30 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
 /* Valores globais, pega algun valor já definido,
@@ -87,16 +87,32 @@ p { color: gray; }
 A seguir, você verá várias maneira de tornar a cor de um texto num parágrafo vermelha:
 
 ```css
-p { color: red; }
-p { color: #f00; }
-p { color: #ff0000; }
-p { color: rgb(255,0,0); }
-p { color: rgb(100%, 0%, 0%); }
-p { color: hsl(0, 100%, 50%); }
+p {
+  color: red;
+}
+p {
+  color: #f00;
+}
+p {
+  color: #ff0000;
+}
+p {
+  color: rgb(255, 0, 0);
+}
+p {
+  color: rgb(100%, 0%, 0%);
+}
+p {
+  color: hsl(0, 100%, 50%);
+}
 
 /* 50% translúcido(transparênte) */
-p { color: rgba(255, 0, 0, 0.5); }
-p { color: hsla(0, 100%, 50%, 0.5); }
+p {
+  color: rgba(255, 0, 0, 0.5);
+}
+p {
+  color: hsla(0, 100%, 50%, 0.5);
+}
 ```
 
 ## Preocupações com acessibilidade
@@ -105,13 +121,13 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 ## Specifications
 
-| Specification                                                                    | Status                                   | Comment                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}} | {{Spec2('CSS4 Colors')}}         | Adiciona syntaxes sem emendas para as funções `rgb()`, `rgba()`, `hsl()` e `hsla()` . Permite valores alpha em `rgb()` e `hsl()`, dirando `rgba()` e `hsla()` em (descontinuada). Adiciona a palavra-chave `rebeccapurple`. Adiciona valores de cores hexa-decimais de 4 à 8 dígitos, where the last digit(s) represents the alpha value. Adiona as funcões `hwb()`, `device-cmyk()` e `color()` . |
+| Specification                                                | Status                        | Comment                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}}  | {{Spec2('CSS4 Colors')}}      | Adiciona syntaxes sem emendas para as funções `rgb()`, `rgba()`, `hsl()` e `hsla()` . Permite valores alpha em `rgb()` e `hsl()`, dirando `rgba()` e `hsla()` em (descontinuada). Adiciona a palavra-chave `rebeccapurple`. Adiciona valores de cores hexa-decimais de 4 à 8 dígitos, where the last digit(s) represents the alpha value. Adiona as funcões `hwb()`, `device-cmyk()` e `color()` . |
 | {{SpecName('CSS3 Transitions', '#animatable-css', 'color')}} | {{Spec2('CSS3 Transitions')}} | Define `color` como animável.                                                                                                                                                                                                                                                                                                                                                                      |
-| {{SpecName('CSS3 Colors', '#color', 'color')}}                     | {{Spec2('CSS3 Colors')}}         | Deprecia as cores do Sistema. Adiciona cores [SVG](/pt-BR/docs/Web/SVG). Adicionando as funções `rgba()`, `hsl()`, and `hsla()`.                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}         | {{Spec2('CSS2.1')}}                 | Adiciona a cor laranja `orange` color e o Sistema de Cores.                                                                                                                                                                                                                                                                                                                                        |
-| {{SpecName('CSS1', '#color', 'color')}}                             | {{Spec2('CSS1')}}                 | Definição Inicial                                                                                                                                                                                                                                                                                                                                                                                  |
+| {{SpecName('CSS3 Colors', '#color', 'color')}}               | {{Spec2('CSS3 Colors')}}      | Deprecia as cores do Sistema. Adiciona cores [SVG](/pt-BR/docs/Web/SVG). Adicionando as funções `rgba()`, `hsl()`, and `hsla()`.                                                                                                                                                                                                                                                                   |
+| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}        | {{Spec2('CSS2.1')}}           | Adiciona a cor laranja `orange` color e o Sistema de Cores.                                                                                                                                                                                                                                                                                                                                        |
+| {{SpecName('CSS1', '#color', 'color')}}                      | {{Spec2('CSS1')}}             | Definição Inicial                                                                                                                                                                                                                                                                                                                                                                                  |
 
 {{cssinfo}}
 

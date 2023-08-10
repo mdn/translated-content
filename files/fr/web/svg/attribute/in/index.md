@@ -1,11 +1,6 @@
 ---
 title: in
 slug: Web/SVG/Attribute/in
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG Filter
-translation_of: Web/SVG/Attribute/in
 ---
 
 « [SVG Attribute reference home](/fr/SVG/Attribute)

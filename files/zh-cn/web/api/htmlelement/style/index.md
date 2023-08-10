@@ -34,7 +34,7 @@ slug: Web/API/HTMLElement/style
 以下代码片段演示了从元素的 `style` 属性获得的值如何与 HTML 属性上设置的样式相关。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <body style="font-weight:bold">
     <div style="border-top: 1px solid blue; color:red" id="elt">

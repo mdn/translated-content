@@ -78,14 +78,14 @@ function configurarAmbienteTelaGrande() {
 A declaração `const` cria uma referência somente leitura para um valor. Isso **não significa** que o valor que ela contém é imutável, apenas que o identificador da variável não pode ser reatribuído. Por exemplo, caso o conteúdo seja um objeto, isso significa que o objeto em si ainda pode ser alterado. Isso significa que você não pode alterar o valor armazenado em uma variável:
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 Mas você pode alterar as propriedades em uma variável:
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 

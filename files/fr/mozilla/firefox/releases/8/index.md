@@ -1,7 +1,6 @@
 ---
 title: Firefox 8 pour les développeurs
 slug: Mozilla/Firefox/Releases/8
-translation_of: Mozilla/Firefox/Releases/8
 ---
 
 1. Notes de versions pour développeurs

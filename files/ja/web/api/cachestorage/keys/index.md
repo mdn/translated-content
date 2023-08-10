@@ -41,9 +41,9 @@ this.addEventListener("activate", (event) => {
           if (!cacheAllowlist.includes(key)) {
             return caches.delete(key);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 ```

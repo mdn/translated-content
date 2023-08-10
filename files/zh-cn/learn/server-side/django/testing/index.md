@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 10: 测试 Django 网页应用'
+title: "Django 教程 10: 测试 Django 网页应用"
 slug: Learn/Server-side/Django/Testing
 ---
 
@@ -238,7 +238,7 @@ python3 manage.py test --verbosity 2
 
 ### 运行特定测试
 
-如果要运行测试的子集，可以通过指定包，模块，`TestCase`子类或方法的完整路径 （包含点）来执行此操作：
+如果要运行测试的子集，可以通过指定包、模块、`TestCase` 子类或方法的完整路径（包含点）来执行此操作：
 
 ```bash
 python3 manage.py test catalog.tests   # Run the specified module

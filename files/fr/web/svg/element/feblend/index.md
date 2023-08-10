@@ -1,11 +1,6 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Element/feBlend
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feBlend
 ---
 
 {{SVGRef}}

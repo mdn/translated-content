@@ -1,20 +1,15 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@document
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [règle @ CSS](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
+La [règle @ CSS](/fr/docs/Web/CSS/Règles_@) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
 
 ```css
-@document url("https://www.example.com/") {
+@document url("https://www.example.com/")
+{
   h1 {
     color: green;
   }
@@ -48,8 +43,7 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
                url-prefix("http://www.w3.org/Style/"),
                domain("mozilla.org"),
                media-document("video"),
-               regexp("https:.*")
-{
+               regexp("https:.*") {
   /* Ces règles CSS s'appliquent à :
      - la page "http://www.w3.org/"
      - toute page dont l'URL commence par "http://www.w3.org/Style/"

@@ -1,5 +1,5 @@
 ---
-title: '<button>: 버튼 요소'
+title: "<button>: 버튼 요소"
 slug: Web/HTML/Element/button
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/button
 **HTML `<button>` 요소**는 클릭 가능한 버튼을 나타냅니다. 버튼은 [양식](/ko/docs/Learn/HTML/Forms) 내부는 물론 간단한 표준 버튼 기능이 필요한 곳이라면 문서 어디에나 배치할 수 있습니다. 기본값의 HTML 버튼은 {{glossary("user agent", "사용자 에이전트")}}의 호스트 플랫폼과 비슷한 디자인을 따라가지만, 외형은 [CSS](/ko/docs/Web/CSS)로 변경할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -96,46 +94,55 @@ slug: Web/HTML/Element/button
 <dl>
 
 - {{htmlattrdef("autofocus")}}
+
   - : 페이지 로드 후, 이 버튼에 포커스가 위치해야 하는지 나타냅니다. 문서 내에서 **하나의 요소**만 `autofocus` 특성을 가질 수 있습니다.
 
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
+
   - : This attribute on a {{HTMLElement("button")}} is nonstandard and Firefox-specific. Unlike other browsers, [Firefox persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Setting `autocomplete="off"` disables this feature; see [Firefox bug 654072](https://bugzil.la/654072).
 
 - {{htmlattrdef("disabled")}}
+
   - : 버튼과 사용자의 상호작용, 즉 누르거나 클릭하는 것을 막습니다.
 
-  Firefox, unlike other browsers, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+  Firefox, unlike other browsers, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/ko/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 - {{htmlattrdef("form")}}
-  - : 버튼과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 {{htmlattrxref("id")}} 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
+
+  - : 버튼과 연결할 {{HTMLElement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다.
 
   `form` 특성을 사용하면 버튼을 `<form>` 요소에 넣지 않고도 연결할 수 있고, 조상 중 `<form>`이 있더라도 소유자를 재정의할 수 있습니다.
 
 - {{htmlattrdef("formaction")}}
-  - : `<button>`이 제출 버튼인 경우, 제출한 정보를 처리할 URL. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("action","form")}} 특성보다 우선합니다. 양식 소유자가 존재하지 않으면 영향을 주지 않습니다.
+
+  - : `<button>`이 제출 버튼인 경우, 제출한 정보를 처리할 URL. 지정한 경우, 버튼의 양식 소유자가 가진 [`action`](/ko/docs/Web/HTML/Element/form#action) 특성보다 우선합니다. 양식 소유자가 존재하지 않으면 영향을 주지 않습니다.
 
 - {{htmlattrdef("formenctype")}}
+
   - : `<button>`이 제출 버튼인 경우, `formenctype` 특성은 양식을 서버로 제출할 때 사용할 양식 데이터 인코딩을 지정합니다. 가능한 값은 다음과 같습니다.
 
   - `application/x-www-form-urlencoded`: 기본값.
-  - `multipart/form-data`: {{htmlattrxref("type","input")}} 특성이 `file`인 {{HTMLElement("input")}}이 존재하는 양식에서 사용하세요.
+  - `multipart/form-data`: [`type`](/ko/docs/Web/HTML/Element/input#type) 특성이 `file`인 {{HTMLElement("input")}}이 존재하는 양식에서 사용하세요.
   - `text/plain`: 디버깅 전용으로 명세에 추가된 값입니다. 실제 양식 제출 시 사용해선 안됩니다.
 
-  지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("enctype","form")}} 특성보다 우선합니다.
+  지정한 경우, 버튼의 양식 소유자가 가진 [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 특성보다 우선합니다.
 
 - {{htmlattrdef("formmethod")}}
+
   - : `<button>`이 제출 버튼인 경우, `formmethod` 특성은 양식을 서버로 제출할 때 사용할 [HTTP 메서드](/ko/docs/Web/HTTP/Methods)를 지정합니다. 가능한 값은 다음과 같습니다.
 
   - `post`: 양식의 데이터를 HTTP 요청 본문에 넣습니다. 비밀번호처럼, 양식 데이터 중 공개하지 않아야 하는 항목이 있으면 사용하세요.
   - `get`: 양식 `action` URL 뒤에 `?` 를 추가한 후 양식 데이터를 덧붙입니다. 검색 양식처럼, 양식이 사이드 이펙트를 갖지 않을 때 사용하세요.
 
-  지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("method","form")}} 특성보다 우선합니다.
+  지정한 경우, 버튼의 양식 소유자가 가진 [`method`](/ko/docs/Web/HTML/Element/form#method) 특성보다 우선합니다.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : `<button>`이 제출 버튼인 경우, `formnovalidate` 특성은 양식을 제출할 때 [유효성 검사](/ko/docs/Learn/Forms/Form_validation)를 하지 않겠다는 것을 지정합니다. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("novalidate","form")}} 특성보다 우선합니다.
+
+  - : `<button>`이 제출 버튼인 경우, `formnovalidate` 특성은 양식을 제출할 때 [유효성 검사](/ko/docs/Learn/Forms/Form_validation)를 하지 않겠다는 것을 지정합니다. 지정한 경우, 버튼의 양식 소유자가 가진 [`novalidate`](/ko/docs/Web/HTML/Element/form#novalidate) 특성보다 우선합니다.
 
 - {{htmlattrdef("formtarget")}}
-  - : `<button>`이 제출 버튼인 경우, `formtarget` 특성에는 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름을 사용할 수 있습니다. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("target","form")}} 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
+
+  - : `<button>`이 제출 버튼인 경우, `formtarget` 특성에는 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름을 사용할 수 있습니다. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 [`target`](/ko/docs/Web/HTML/Element/form#target) 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
   - `_self`: 응답을 현재 브라우징 맥락에 표시합니다. 기본값.
   - `_blank`: 응답을 새로운 브라우징 맥락에 표시합니다. 보통 새 탭이지만, 사용자가 브라우저 설정을 통해 새 창으로 바꿀 수 있습니다.
@@ -143,9 +150,11 @@ slug: Web/HTML/Element/button
   - `_top`: 응답을 최상단 브라우징 맥락(현재 맥락의 부모면서 자신의 부모가 존재하지 않는, 제일 높은 맥락)에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
 
 - {{htmlattrdef("name")}}
+
   - : 버튼의 이름. 제출할 때, 버튼의 `value` 특성과 함께 양식 데이터의 일부를 구성합니다.
 
 - {{htmlattrdef("type")}}
+
   - : 버튼의 행동 방식. 가능한 값은 다음과 같습니다.
 
   - `submit`: 버튼이 서버로 양식 데이터를 제출합니다. 지정하지 않은 경우 기본값이며, 유효하지 않은 값일 때도 사용합니다.
@@ -181,7 +190,9 @@ slug: Web/HTML/Element/button
 
 ```html
 <button name="favorite" type="button">
-  <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/></svg>
+  <svg aria-hidden="true" viewBox="0 0 10 10">
+    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  </svg>
   Add to favorites
 </button>
 ```
@@ -214,7 +225,7 @@ slug: Web/HTML/Element/button
 
 ### Firefox
 
-Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using `<a href="/en-US/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a>`.
+Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using `<a href="/ko/docs/Web/CSS/::-moz-focus-inner">button::-moz-focus-inner { }</a>`.
 
 If overridden, it is important to **ensure that the state change when focus is moved to the button is high enough** that people experiencing low vision conditions will be able to perceive it.
 

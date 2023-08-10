@@ -4370,7 +4370,7 @@
 /fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base	/fr/docs/Web/CSS/CSS_scroll_snap/Basic_concepts
 /fr/docs/Web/CSS/CSS_Scroll_Snap_Points	/fr/docs/Web/CSS/CSS_scroll_snap
 /fr/docs/Web/CSS/CSS_Scrollbars	/fr/docs/Web/CSS/CSS_scrollbars_styling
-/fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS	/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /fr/docs/Web/CSS/CSS_Shapes/Créer_formes_boîtes	/fr/docs/Web/CSS/CSS_shapes/From_box_values
 /fr/docs/Web/CSS/CSS_Shapes/Formes_simples	/fr/docs/Web/CSS/CSS_shapes/Basic_shapes
@@ -4501,9 +4501,9 @@
 /fr/docs/Web/CSS/Syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/Value_definition_syntax
 /fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
-/fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_Selectors
+/fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Comparison_with_XPath	/fr/docs/Web/XPath/Comparison_with_CSS_selectors
-/fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/Sélecteurs_d_ID	/fr/docs/Web/CSS/ID_selectors
 /fr/docs/Web/CSS/Sélecteurs_d_attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors

@@ -1,15 +1,6 @@
 ---
 title: Limites de stockage du navigateur et critères d'éviction
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-tags:
-  - Base de données
-  - IndexedDB
-  - LRU
-  - Limites
-  - Stockage
-  - eviction
-translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -34,11 +25,17 @@ Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes 
 Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
 
 ```js
-var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
+var request = indexedDB.open("myDatabase", {
+  version: 1,
+  storage: "persistent",
+});
 ```
 
 ```js
-var request = indexedDB.open("myDatabase", { version: 1, storage: "temporary" });
+var request = indexedDB.open("myDatabase", {
+  version: 1,
+  storage: "temporary",
+});
 ```
 
 Dans Firefox, quand le stockage persistant est choisi, l'utilisateur reçoit une fenêtre de dialogue d'interface utilisateur pour l'avertir que ces données persisteront et lui demander s'il en est satisfait.
@@ -47,7 +44,7 @@ Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue ve
 
 ### "Default storage" dans Firefox _(stockage par défaut)_
 
-C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_. C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage`  vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
+C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_. C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage` vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
 
 ## Où sont stockées les données ?
 

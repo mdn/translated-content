@@ -1,12 +1,6 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
-tags:
-  - Element
-  - Graphisme
-  - Reference
-  - SVG
-translation_of: Web/SVG/Element/polyline
 ---
 
 {{SVGRef}}
@@ -23,7 +17,7 @@ L'élément SVG **`<polyline>`** est une forme SVG basique qui crée des lignes 
 
 - [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
 - [Attributs principaux](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d%27%C3%A9v%C3%A9nement_graphique)
+- [Attributs relatifs aux évènements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d%27événement_graphique)
 - [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}

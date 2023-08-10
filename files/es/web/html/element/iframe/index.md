@@ -1,7 +1,6 @@
 ---
-title: '<iframe>: el elemento Inline Frame'
+title: "<iframe>: el elemento Inline Frame"
 slug: Web/HTML/Element/iframe
-original_slug: Web/HTML/Elemento/iframe
 ---
 
 {{HTMLSidebar}}
@@ -217,7 +216,11 @@ Un `<iframe>` en acción. Después de crear el marco, cuando el usuario hace cli
 #### HTML
 
 ```html
-<iframe src="https://example.org" title="iframe Example 1" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="iframe Example 1"
+  width="400"
+  height="300">
   <p>Your browser does not support iframes.</p>
 </iframe>
 ```
@@ -233,11 +236,13 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 #### HTML
 
 ```html
-<iframe id="Example2"
-    title="iframe Example 2"
-    width="400" height="300"
-    style="border:none"
-    src="https://maps.google.com/maps?f=q&source=s_q&q=buenos+aires&sll=37.0625,-95.677068&sspn=38.638819,80.859375&t=h&hnear=Buenos+Aires,+Argentina&z=11&ll=-34.603723,-58.381593&output=embed">
+<iframe
+  id="Example2"
+  title="iframe Example 2"
+  width="400"
+  height="300"
+  style="border:none"
+  src="https://maps.google.com/maps?f=q&source=s_q&q=buenos+aires&sll=37.0625,-95.677068&sspn=38.638819,80.859375&t=h&hnear=Buenos+Aires,+Argentina&z=11&ll=-34.603723,-58.381593&output=embed">
 </iframe>
 ```
 

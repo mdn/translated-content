@@ -1,7 +1,6 @@
 ---
 title: Trazado de una tabla HTML mediante JavaScript y la Interface DOM
 slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 ---
 
 ## Introducción
@@ -15,7 +14,7 @@ Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundame
 Contenido HTML
 
 ```html
-<input type="button" value="Genera una tabla" onclick="genera_tabla()">
+<input type="button" value="Genera una tabla" onclick="genera_tabla()" />
 ```
 
 JavaScript Content
@@ -26,7 +25,7 @@ function genera_tabla() {
   var body = document.getElementsByTagName("body")[0];
 
   // Crea un elemento <table> y un elemento <tbody>
-  var tabla   = document.createElement("table");
+  var tabla = document.createElement("table");
   var tblBody = document.createElement("tbody");
 
   // Crea las celdas
@@ -39,7 +38,9 @@ function genera_tabla() {
       // texto sea el contenido de <td>, ubica el elemento <td> al final
       // de la hilera de la tabla
       var celda = document.createElement("td");
-      var textoCelda = document.createTextNode("celda en la hilera "+i+", columna "+j);
+      var textoCelda = document.createTextNode(
+        "celda en la hilera " + i + ", columna " + j,
+      );
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
     }
@@ -71,33 +72,33 @@ Una vez creados los elementos \<table>, \<tbody>, \<tr>, y \<td> así como los n
 
 1. Primero, anexamos cada nodo de texto a su elemento padre \<td> :
 
-    ```
-    celda.appendChild(textoCelda);
-    ```
+   ```
+   celda.appendChild(textoCelda);
+   ```
 
 2. Posteriormente, anexamos cada elemento \<td> a su elemento padre \<tr> :
 
-    ```
-    hilera.appendChild(celda);
-    ```
+   ```
+   hilera.appendChild(celda);
+   ```
 
 3. Posteriomente, anexamos cada elemento \<tr> a su elemento padre \<tbody>:
 
-    ```
-    tblBody.appendChild(hilera);
-    ```
+   ```
+   tblBody.appendChild(hilera);
+   ```
 
 4. Después, anexamos el elemento \<tbody> a su elemento padre \<table>:
 
-    ```
-    tabla.appendChild(tblBody);
-    ```
+   ```
+   tabla.appendChild(tblBody);
+   ```
 
 5. Finalmente, anexamos el elemento \<table> a su elemento padre \<body>:
 
-    ```
-    body.appendChild(tabla);
-    ```
+   ```
+   body.appendChild(tabla);
+   ```
 
 Recuérda esta técnica. Te será muy útil en la programación bajo el estándar W3C DOM. Primero, creas los elementos de arriba a abajo; posteriormente adicionas los hijos a los padres de abajo a arriba.
 
@@ -130,7 +131,10 @@ HTML Content
 
 ```html
 <body>
-  <input type="button" value="Set paragraph background color" onclick="set_background()">
+  <input
+    type="button"
+    value="Set paragraph background color"
+    onclick="set_background()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -159,23 +163,23 @@ En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo
 
 1. Primero, obtendremos una lista de todos los elementos body mediante
 
-    ```js
-    myBody = document.getElementsByTagName("body")[0]
-    ```
+   ```js
+   myBody = document.getElementsByTagName("body")[0];
+   ```
 
-    Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `[0]`.
+   Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `[0]`.
 
 2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
 
-    ```
-    myBodyElements = myBody.getElementsByTagName("p");
-    ```
+   ```
+   myBodyElements = myBody.getElementsByTagName("p");
+   ```
 
 3. Finalmente, obtenemos el segundo item de la lista de elementos p mediante
 
-    ```
-    myP = myBodyElements[1];
-    ```
+   ```
+   myP = myBodyElements[1];
+   ```
 
 ![Image:sample2a2.jpg](sample2a2.jpg)
 
@@ -311,17 +315,17 @@ This example introduces two new DOM attributes. First it uses the `childNodes` a
 > **Nota:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 
 ```js
-mybody      = document.getElementsByTagName("body")[0];
-mytable     = mybody.getElementsByTagName("table")[0];
+mybody = document.getElementsByTagName("body")[0];
+mytable = mybody.getElementsByTagName("table")[0];
 mytablebody = mytable.getElementsByTagName("tbody")[0];
-myrow       = mytablebody.getElementsByTagName("tr")[1];
-mycel       = myrow.getElementsByTagName("td")[1];
+myrow = mytablebody.getElementsByTagName("tr")[1];
+mycel = myrow.getElementsByTagName("td")[1];
 
 // first item element of the childNodes list of mycel
-myceltext=mycel.childNodes[0];
+myceltext = mycel.childNodes[0];
 
 // content of currenttext is the data content of myceltext
-currenttext=document.createTextNode(myceltext.data);
+currenttext = document.createTextNode(myceltext.data);
 mybody.appendChild(currenttext);
 ```
 
@@ -339,34 +343,33 @@ Once you have the object in your JavaScript variable, you can set style properti
 
 ```html
 <html>
-<body onload="start()">
-</body>
-<script>
+  <body onload="start()"></body>
+  <script>
     function start() {
-       var mybody =document.getElementsByTagName("body")[0];
-       mytable     = document.createElement("table");
-       mytablebody = document.createElement("tbody");
+      var mybody = document.getElementsByTagName("body")[0];
+      mytable = document.createElement("table");
+      mytablebody = document.createElement("tbody");
 
-       for(var j = 0; j < 2; j++) {
-           mycurrent_row=document.createElement("tr");
-           for(var i = 0; i < 2; i++) {
-               mycurrent_cell = document.createElement("td");
-               currenttext = document.createTextNode("cell is:" + i + j);
-               mycurrent_cell.appendChild(currenttext);
-               mycurrent_row.appendChild(mycurrent_cell);
-               // set the cell background color
-               // if the column is 0. If the column is 1 hide the cel
-               if (i == 0) {
-                   mycurrent_cell.style.background = "rgb(255,0,0)";
-               } else {
-                   mycurrent_cell.style.display = "none";
-               }
-           }
-           mytablebody.appendChild(mycurrent_row);
-       }
-       mytable.appendChild(mytablebody);
-       mybody.appendChild(mytable);
+      for (var j = 0; j < 2; j++) {
+        mycurrent_row = document.createElement("tr");
+        for (var i = 0; i < 2; i++) {
+          mycurrent_cell = document.createElement("td");
+          currenttext = document.createTextNode("cell is:" + i + j);
+          mycurrent_cell.appendChild(currenttext);
+          mycurrent_row.appendChild(mycurrent_cell);
+          // set the cell background color
+          // if the column is 0. If the column is 1 hide the cel
+          if (i == 0) {
+            mycurrent_cell.style.background = "rgb(255,0,0)";
+          } else {
+            mycurrent_cell.style.display = "none";
+          }
+        }
+        mytablebody.appendChild(mycurrent_row);
+      }
+      mytable.appendChild(mytablebody);
+      mybody.appendChild(mytable);
     }
-</script>
+  </script>
 </html>
 ```

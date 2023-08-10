@@ -21,10 +21,8 @@ contentType = document.contentType;
 
 ## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-contenttype', 'Document.contentType')}} | {{Spec2('DOM WHATWG')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.contentType")}}
+{{Compat}}

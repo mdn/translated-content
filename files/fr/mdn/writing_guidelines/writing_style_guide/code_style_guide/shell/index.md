@@ -1,7 +1,6 @@
 ---
 title: Lignes directrices des exemples de lignes de commande
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
-translation_of: MDN/Guidelines/Code_guidelines/Shell
 ---
 
 {{MDNSidebar}}

@@ -23,28 +23,31 @@ var elementos = elementoRaiz.getElementsByClassName(nombres);
 Obtener todos los elementos de la clase 'prueba'
 
 ```js
-document.getElementsByClassName('prueba');
+document.getElementsByClassName("prueba");
 ```
 
 Obtener todos los elementos que tengan al mismo tiempo las clases 'rojo' y 'prueba'
 
 ```js
-document.getElementsByClassName('rojo prueba');
+document.getElementsByClassName("rojo prueba");
 ```
 
 Obtener todos los elementos que tengan la clase 'prueba' y que estén dentro de un elemento de ID 'principal'
 
 ```js
-document.getElementById('principal').getElementsByClassName('prueba');
+document.getElementById("principal").getElementsByClassName("prueba");
 ```
 
 También podemos usar los metodos de Array.prototype en cualquier {{ domxref("HTMLCollection") }} pasando el _HTMLCollection_ como el valor _this_ del método. Aquí buscaremos todos los elementos div de la clase 'test':
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 ## Especificaciones

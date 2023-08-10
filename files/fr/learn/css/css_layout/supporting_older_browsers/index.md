@@ -1,7 +1,6 @@
 ---
 title: Prise en charge des anciens navigateurs
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 
 {{LearnSidebar}}
@@ -74,7 +73,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -84,7 +83,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -132,7 +131,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -142,7 +141,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -178,7 +177,7 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -188,14 +187,14 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```

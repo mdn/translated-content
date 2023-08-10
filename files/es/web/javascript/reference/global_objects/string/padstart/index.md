@@ -1,7 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/padStart
 ---
 
 {{JSRef}}{{SeeCompatTable}}
@@ -28,9 +27,9 @@ Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno ap
 ## Ejemplos
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
 ```
 
 ## Especificaciones

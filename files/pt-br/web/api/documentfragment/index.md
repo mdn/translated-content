@@ -48,18 +48,11 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}_, and im
 
 ## Especificações
 
-| Specification                                                                                        | Status                                       | Comment                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#documentfragment', 'DocumentFragment')}}             | {{Spec2('DOM WHATWG')}}             | Added the constructor and the implementation of {{domxref("ParentNode")}}. |
-| {{SpecName('Selectors API Level 2', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 2')}} | Added the `find()` and `findAll()` methods.                                       |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}         | {{Spec2('Selectors API Level 1')}} | Added the `querySelector()` and `querySelectorAll()` methods.                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM3 Core')}}                 | No change from {{SpecName('DOM2 Core')}}                                   |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}         | {{Spec2('DOM2 Core')}}                 | No change from {{SpecName('DOM1')}}                                       |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}} | {{Spec2('DOM1')}}                     | Initial definition                                                                |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## Veja também
 

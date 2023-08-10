@@ -1,7 +1,6 @@
 ---
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/commands/update
 ---
 
 {{AddonSidebar()}}
@@ -14,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 browser.commands.update(
-  details // object
+  details, // object
 );
 ```
 
@@ -44,16 +43,16 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 Met à jour la commande "my-command" avec la valeur de raccourci donnée, lorsque l'utilisateur clique sur "update" :
 
 ```js
-const commandName = 'my-command';
+const commandName = "my-command";
 
 function updateShortcut() {
   browser.commands.update({
     name: commandName,
-    shortcut: document.querySelector('#shortcut').value
+    shortcut: document.querySelector("#shortcut").value,
   });
 }
 
-document.querySelector('#update').addEventListener('click', updateShortcut);
+document.querySelector("#update").addEventListener("click", updateShortcut);
 ```
 
 {{WebExtExamples}}

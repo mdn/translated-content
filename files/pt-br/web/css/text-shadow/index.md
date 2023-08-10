@@ -24,10 +24,10 @@ Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::fi
 text-shadow: 1px 1px 2px black;
 
 /* cor | deslocamento-x | deslocamento-y | raio-de-desfoque */
-text-shadow: #CCC 1px 0 10px;
+text-shadow: #ccc 1px 0 10px;
 
 /* deslocamento-x | deslogamento-y | cor */
-text-shadow: 5px 5px #558ABB;
+text-shadow: 5px 5px #558abb;
 
 /* cor | deslocamento-x | deslocamento-y */
 text-shadow: white 2px 5px;
@@ -45,6 +45,7 @@ text-shadow: unset;
 ### Valores
 
 - \<cor>
+
   - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.
 
     > **Nota:** Se voce quer garantir a consistência entre os navegadores, especifique explicitamente uma cor.
@@ -63,14 +64,15 @@ text-shadow: unset;
 
 ```css
 .red-text-shadow {
-   text-shadow: red 0 -2px;
+  text-shadow: red 0 -2px;
 }
 ```
 
 ```html
 <p class="red-text-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-   inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -78,16 +80,25 @@ text-shadow: unset;
 
 ```css
 .white-with-blue-shadow {
-   text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
-   color: white;
-   font: 1.5em Georgia, "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  color: white;
+  font:
+    1.5em Georgia,
+    "Bitstream Charter",
+    "URW Bookman L",
+    "Century Schoolbook L",
+    serif;
 }
 ```
 
 ```html
 <p class="white-with-blue-shadow">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -95,18 +106,23 @@ text-shadow: unset;
 
 ```css
 .gold-on-gold {
-   text-shadow: rgba(0,0,0,0.1) -1px 0, rgba(0,0,0,0.1) 0 -1px,
-   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
-   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
-   color: gold;
-   background: gold;
+  text-shadow:
+    rgba(0, 0, 0, 0.1) -1px 0,
+    rgba(0, 0, 0, 0.1) 0 -1px,
+    rgba(255, 255, 255, 0.1) 1px 0,
+    rgba(255, 255, 255, 0.1) 0 1px,
+    rgba(0, 0, 0, 0.1) -1px -1px,
+    rgba(255, 255, 255, 0.1) 1px 1px;
+  color: gold;
+  background: gold;
 }
 ```
 
 ```html
 <p class="gold-on-gold">
-   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-   veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
 ```
 
@@ -114,9 +130,9 @@ text-shadow: unset;
 
 **Especificações**
 
-| Especificação                                                                                | Status                                           | Comentário                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }} | {{ Spec2('CSS3 Transitions') }}         | Lists `text-shadow` as animatable.                                                                                                                                                                                                                                                                                                                                                    |
+| Especificação                                                         | Status                              | Comentário                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{ SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow') }}  | {{ Spec2('CSS3 Transitions') }}     | Lists `text-shadow` as animatable.                                                                                                                                                                                                                                                                                                                                                      |
 | {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow') }} | {{ Spec2('CSS3 Text Decoration') }} | The CSS property `text-shadow` was [improperly defined in CSS2](https://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) and dropped in CSS2 (Level 1). The _CSS Text Module Level 3_ spec improved and precised the syntax. Later it was moved to new working draft _[CSS Text Decoration Module Level 3](https://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/)_. |
 
 ## Compatibilidade do navegador

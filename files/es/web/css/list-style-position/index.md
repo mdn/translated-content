@@ -34,19 +34,22 @@ list-style-position: inside | outside | inherit
 ### HTML
 
 ```html
-<ul class="one"> List 1
+<ul class="one">
+  List 1
   <li>List Item 1-1</li>
   <li>List Item 1-2</li>
   <li>List Item 1-3</li>
   <li>List Item 1-4</li>
 </ul>
-<ul class="two"> List 2
+<ul class="two">
+  List 2
   <li>List Item 2-1</li>
   <li>List Item 2-2</li>
   <li>List Item 2-3</li>
   <li>List Item 2-4</li>
 </ul>
-<ul class="three"> List 3
+<ul class="three">
+  List 3
   <li>List Item 3-1</li>
   <li>List Item 3-2</li>
   <li>List Item 3-3</li>
@@ -58,7 +61,7 @@ list-style-position: inside | outside | inherit
 
 ```css
 .one {
-  list-style:square inside;
+  list-style: square inside;
 }
 
 .two {

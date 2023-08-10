@@ -82,19 +82,19 @@ console.log(Rectangle.name);
 
 ```js
 class Rectangle {
-    // constructor
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
-    }
-    // Getter
-    get area() {
-        return this.calcArea()
-    }
-    // Method
-    calcArea() {
-        return this.height * this.width;
-    }
+  // constructor
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get area() {
+    return this.calcArea();
+  }
+  // Method
+  calcArea() {
+    return this.height * this.width;
+  }
 }
 const square = new Rectangle(10, 10);
 
@@ -108,22 +108,22 @@ console.log(square.area);
 
 ```js
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    static displayName = "Point";
+  static displayName = "Point";
 
-    static distance(a, b) {
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        return Math.hypot(dx, dy);
-    }
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+    return Math.hypot(dx, dy);
+  }
 }
 
 const p1 = new Point(5, 5);
-const p2 = new Point(10,10);
+const p2 = new Point(10, 10);
 p1.displayName;
 // undefined
 p1.distance;
@@ -154,7 +154,7 @@ obj.speak(); // Animal {}
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -164,15 +164,15 @@ eat(); // undefined
 严格模式下不会发生自动装箱，_this_ 值将保留传入状态。
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -275,8 +275,8 @@ class Dog extends Animal {
   }
 }
 
-var d = new Dog('Mitzie');
-d.speak();// 'Mitzie barks.'
+var d = new Dog("Mitzie");
+d.speak(); // 'Mitzie barks.'
 ```
 
 如果子类中定义了构造函数，那么它必须先调用 `super()` 才能使用 `this` 。
@@ -284,22 +284,22 @@ d.speak();// 'Mitzie barks.'
 也可以继承传统的基于函数的“类”：
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 Animal.prototype.speak = function () {
-  console.log(this.name + ' makes a noise.');
-}
+  console.log(this.name + " makes a noise.");
+};
 
 class Dog extends Animal {
   speak() {
     super.speak();
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
-d.speak();//Mitzie makes a noise.  Mitzie barks.
+var d = new Dog("Mitzie");
+d.speak(); //Mitzie makes a noise.  Mitzie barks.
 ```
 
 请注意，类不能继承常规对象（不可构造的）。如果要继承常规对象，可以改用{{jsxref("Object.setPrototypeOf()")}}：
@@ -307,8 +307,8 @@ d.speak();//Mitzie makes a noise.  Mitzie barks.
 ```js
 var Animal = {
   speak() {
-    console.log(this.name + ' makes a noise.');
-  }
+    console.log(this.name + " makes a noise.");
+  },
 };
 
 class Dog {
@@ -317,9 +317,9 @@ class Dog {
   }
 }
 
-Object.setPrototypeOf(Dog.prototype, Animal);// 如果不这样做，在调用 speak 时会返回 TypeError
+Object.setPrototypeOf(Dog.prototype, Animal); // 如果不这样做，在调用 speak 时会返回 TypeError
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -332,10 +332,12 @@ d.speak(); // Mitzie makes a noise.
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray);
 // false
@@ -354,14 +356,14 @@ class Cat {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Lion extends Cat {
   speak() {
     super.speak();
-    console.log(this.name + ' roars.');
+    console.log(this.name + " roars.");
   }
 }
 ```
@@ -373,20 +375,22 @@ class Lion extends Cat {
 一个以超类作为输入的函数和一个继承该超类的子类作为输出可以用于在 ECMAScript 中实现混合：
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 使用 mix-ins 的类可以像下面这样写：
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## 规范

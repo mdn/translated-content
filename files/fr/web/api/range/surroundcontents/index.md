@@ -1,7 +1,6 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
-translation_of: Web/API/Range/surroundContents
 ---
 
 {{ApiRef("DOM")}}
@@ -12,7 +11,7 @@ Cette méthode est à peu près équivalente à&nbsp;:
 
 ```js
 newNode.appendChild(range.extractContents());
-range.insertNode(newNode)
+range.insertNode(newNode);
 ```
 
 Après déplacement, les bornes du `range` incluent `newNode`.

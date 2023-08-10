@@ -1,7 +1,6 @@
 ---
 title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
 
 {{AddonSidebar()}}
@@ -21,7 +20,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingPage = browser.runtime.getBackgroundPage()
+var gettingPage = browser.runtime.getBackgroundPage();
 ```
 
 ### Paramètres

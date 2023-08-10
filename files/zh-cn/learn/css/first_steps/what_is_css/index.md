@@ -57,8 +57,8 @@ CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特�
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -72,12 +72,12 @@ h1 {
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

@@ -2,6 +2,7 @@
 title: 명시도
 slug: Web/CSS/Specificity
 ---
+
 {{cssref}}
 
 **명시도**란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단으로, 이렇게 찾은 속성이 해당 요소에 적용됩니다. 명시도는 여러 종류의 [CSS 선택자](/ko/docs/Web/CSS/CSS_Reference#Selectors)로 구성된 일치 규칙에 기반합니다.
@@ -42,26 +43,36 @@ slug: Web/CSS/Specificity
 1. CSS 종속cascading을 더 잘 활용하세요.
 2. 더 명시된(명확한) 규칙을 쓰세요. 선택 중인 요소 앞에 하나 이상의 요소를 나타냄으로써 규칙은 더 명확해지고 더 높은 우선 순위를 얻습니다:
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    순서와 무관하게 첫 번째 규칙이 가장 명확하므로 텍스트는 녹색이 됩니다. (또한, 역시 순서와 무관하게 파란색 규칙이 빨간색 규칙보다 우선합니다.)
+   순서와 무관하게 첫 번째 규칙이 가장 명확하므로 텍스트는 녹색이 됩니다. (또한, 역시 순서와 무관하게 파란색 규칙이 빨간색 규칙보다 우선합니다.)
 
 3. (2)의 말도 안 되는 특별한 경우로, 더 이상 명시할 요소가 없는 경우 간단한 선택자를 여러 번 써서 명시도를 높일 수 있습니다.
 
-    ```css
-    #myId#myId span { color: yellow; }
-    .myClass.myClass span { color: orange; }
-    ```
+   ```css
+   #myId#myId span {
+     color: yellow;
+   }
+   .myClass.myClass span {
+     color: orange;
+   }
+   ```
 
 #### `!important`를 사용하는 때
 
@@ -102,15 +113,23 @@ p.awesome {
 A) 태그, ID나 클래스를 추가함으로써 명시도가 더 높은 !important한 CSS 규칙을 만듭니다.
 
 ```css
-table td    { height: 50px !important; }
-.myTable td { height: 50px !important; }
-#myTable td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.myTable td {
+  height: 50px !important;
+}
+#myTable td {
+  height: 50px !important;
+}
 ```
 
 B) 혹은 기존의 선택자 아래에 똑같은 선택자를 하나 더 만듭니다(명시도가 같으면 나중에 정의된 규칙이 우선하므로).
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) 아니면 기존 규칙을 수정해서 아예 `!important`를 사용하지 않게 만드는 것이 더 좋은 방법입니다.
@@ -127,7 +146,7 @@ p.awesome {
 
 ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같은 명시도가 됩니다. 두 선택자의 명시도가 같아졌으므로 나중에 오는 규칙이 우선합니다.
 
-#### 아래에서 자세한 정보를 확인하세요:
+#### 아래에서 자세한 정보를 확인하세요
 
 - <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 - <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
@@ -143,7 +162,7 @@ ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같
 
 ```css
 div.outer p {
-  color:orange;
+  color: orange;
 }
 div:not(.outer) p {
   color: lime;
@@ -194,7 +213,13 @@ div p {
 
 ```html hidden
 <div id="no-where-support">
-⚠️ Your browser doesn't support the <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top">:where()</a></code> pseudo-class.
+  ⚠️ Your browser doesn't support the
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where" target="_top"
+      >:where()</a
+    ></code
+  >
+  pseudo-class.
 </div>
 ```
 
@@ -253,9 +278,9 @@ html h1 {
 
 ```html
 <html>
-<body>
-  <h1>Here is a title!</h1>
-</body>
+  <body>
+    <h1>Here is a title!</h1>
+  </body>
 </html>
 ```
 
@@ -282,9 +307,9 @@ h1 {
 
 ```html
 <html>
-<body id="parent">
-  <h1>Here is a title!</h1>
-</body>
+  <body id="parent">
+    <h1>Here is a title!</h1>
+  </body>
 </html>
 ```
 

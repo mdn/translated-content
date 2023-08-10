@@ -34,7 +34,9 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 
 ```html
 <table>
-  <caption>A summary of the UK's most famous punk bands</caption>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
   <thead>
     <tr>
       <th scope="col">Band</th>
@@ -57,7 +59,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
       <td>London Calling</td>
     </tr>
 
-      ... some rows removed for brevity
+    ... some rows removed for brevity
 
     <tr>
       <th scope="row">The Stranglers</th>
@@ -90,7 +92,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 3. 将 CSS 链接到 HTML 中，将下面的 HTML 代码放到 HTML 的{{htmlelement("head")}}中：
 
 ```html
-<link href="style.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css" />
 ```
 
 ### 间距和布局
@@ -123,7 +125,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -151,7 +154,10 @@ th, td {
 首先，将下面的{{htmlelement("link")}}元素添加到您的 HTML 头部，就在您现有的 `<link>` 元素之上：
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 现在将下面的 CSS 添加到您的`style.css`文件，在之前内容后面添加：
@@ -160,11 +166,12 @@ th, td {
 /* typography */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -258,7 +265,7 @@ table {
 
 ```css
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

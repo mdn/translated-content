@@ -69,9 +69,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>새로운 상품들</p>
 <ul>
- <li><data value="398">미니 케찹</data></li>
- <li><data value="399">점보 케찹</data></li>
- <li><data value="400">메가 점보 케찹</data></li>
+  <li><data value="398">미니 케찹</data></li>
+  <li><data value="399">점보 케찹</data></li>
+  <li><data value="400">메가 점보 케찹</data></li>
 </ul>
 ```
 

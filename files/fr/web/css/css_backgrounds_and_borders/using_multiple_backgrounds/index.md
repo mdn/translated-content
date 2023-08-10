@@ -1,8 +1,6 @@
 ---
 title: Utiliser plusieurs arrière-plans
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans
 ---
 
 {{CSSRef}}
@@ -21,7 +19,7 @@ Cela fonctionne aussi bien avec la propriété raccourcie [`background`](/fr/doc
 
 ## Exemples
 
-Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient())).
+Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](</fr/docs/Web/CSS/gradient/linear-gradient()>)).
 
 ### HTML
 
@@ -35,10 +33,12 @@ Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une 
 .multi-bg-example {
   width: 100%;
   height: 400px;
-  background-image: url(firefox.png), url(bubbles.png),
-                    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
+  background-position:
+    bottom right,
+    left,
+    right;
 }
 ```
 

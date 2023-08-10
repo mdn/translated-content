@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyNames
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -32,11 +31,11 @@ var arr = ["a", "b", "c"];
 print(Object.getOwnPropertyNames(arr).sort()); // imprime "0,1,2,length"
 
 // Objeto similar a Array
-var obj = { 0: "a", 1: "b", 2: "c"};
+var obj = { 0: "a", 1: "b", 2: "c" };
 print(Object.getOwnPropertyNames(obj).sort()); // imprime "0,1,2"
 
 // Imprime nombres de variables y valores usando Array.forEach
-Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
+Object.getOwnPropertyNames(obj).forEach(function (val, idx, array) {
   print(val + " -> " + obj[val]);
 });
 // imprime
@@ -45,7 +44,17 @@ Object.getOwnPropertyNames(obj).forEach(function(val, idx, array) {
 // 2 -> c
 
 // propiedad no-numerable
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; }, enumerable: false } });
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+      enumerable: false,
+    },
+  },
+);
 my_obj.foo = 1;
 
 print(Object.getOwnPropertyNames(my_obj).sort()); // imprime "foo, getFoo"
@@ -56,24 +65,21 @@ Si se quiere solo las propiedades numerables, ver {{jsxref("Object.keys")}} o us
 Items de la cadena _prototype_ no se listan:
 
 ```js
-function ParentClass () {
-}
-ParentClass.prototype.inheritedMethod = function () {
-};
+function ParentClass() {}
+ParentClass.prototype.inheritedMethod = function () {};
 
-function ChildClass () {
+function ChildClass() {
   this.prop = 5;
   this.method = function () {};
 }
-ChildClass.prototype = new ParentClass;
-ChildClass.prototype.prototypeMethod = function () {
-};
+ChildClass.prototype = new ParentClass();
+ChildClass.prototype.prototypeMethod = function () {};
 
 alert(
   Object.getOwnPropertyNames(
-    new ChildClass() // ["prop", "method"]
-  )
-)
+    new ChildClass(), // ["prop", "method"]
+  ),
+);
 ```
 
 ### Get Non-Enumerable Only
@@ -84,8 +90,8 @@ Aquí se usa la función Array.prototype.filter para quitar las _keys_ numerable
 var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
-var nonenum_only = enum_and_nonenum.filter(function(key) {
-  var indexInEnum = enum_only.indexOf(key)
+var nonenum_only = enum_and_nonenum.filter(function (key) {
+  var indexInEnum = enum_only.indexOf(key);
   if (indexInEnum == -1) {
     //no encontrada en las keys de enum_only, por lo que se trata de una key numerable, se devuelve true para mantenerla en filter
     return true;

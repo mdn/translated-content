@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Référence(2)
-  - contenteditable
-translation_of: Web/API/HTMLElement/contentEditable
 ---
 
 {{APIRef("HTML DOM")}}
@@ -16,15 +9,15 @@ La propriété **`HTMLElement.contentEditable`** est utilisée pour indiquer si 
 
 - `"true"` _(vrai)_ indique que l'élément est éditable.
 - `"false"` _(faux)_ indique que l'élément ne sera pas éditable.
-- `"inherit"`  _(hérité)_ indique que l'élément héritera de l'état editable de son parent.
+- `"inherit"` _(hérité)_ indique que l'élément héritera de l'état editable de son parent.
 
 Vous pouvez utiliser la propriété {{domxref("HTMLElement.isContentEditable")}} pour tester la valeur de la propriété {{domxref("Boolean")}}.
 
 ## Syntaxe
 
 ```js
-editable = element.contentEditable
-element.contentEditable = "true"
+editable = element.contentEditable;
+element.contentEditable = "true";
 ```
 
 ## Spécifications

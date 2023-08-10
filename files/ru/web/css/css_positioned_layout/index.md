@@ -1,15 +1,6 @@
 ---
 title: CSS Positioning
 slug: Web/CSS/CSS_positioned_layout
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Positioning
-original_slug: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}
@@ -38,7 +29,7 @@ original_slug: Web/CSS/CSS_Positioning
 
 ## Specifications
 
-| Specification                                        | Status                                   | Comment |
-| ---------------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Positioning') }}         | {{ Spec2('CSS3 Positioning') }} |         |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}             |         |
+| Specification                            | Status                          | Comment |
+| ---------------------------------------- | ------------------------------- | ------- |
+| {{ SpecName('CSS3 Positioning') }}       | {{ Spec2('CSS3 Positioning') }} |         |
+| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}           |         |

@@ -1,8 +1,6 @@
 ---
 title: Intl.Segmenter
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
-browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
 {{JSRef}}
@@ -35,16 +33,15 @@ L'objet **`Intl.Segmenter`** permet de segmenter un texte en tenant compte de la
 En utilisant [`String.prototype.split(" ")`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split) pour segmenter un texte en mots, on n'obtient pas le bon résultat si la locale du texte n'utilise pas d'espace entre les mots (ce qui est le cas pour le japonais, le chinois, le thaïlandais, le laotien, le khmer, le birman, etc.).
 
 ```js example-bad
-const str = '吾輩は猫である。名前はたぬき。';
-console.table(str.split(' '));
+const str = "吾輩は猫である。名前はたぬき。";
+console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
 // Les deux phrases ne sont pas segmentées correctement.
-
 ```
 
 ```js example-good
-const str = '吾輩は猫である。名前はたぬき。';
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const str = "吾輩は猫である。名前はたぬき。";
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));

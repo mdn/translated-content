@@ -1,7 +1,6 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 
 {{AddonSidebar()}}
@@ -16,8 +15,8 @@ Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé
 
 ```js
 browser.pageAction.show(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### Paramètres
@@ -35,15 +34,15 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus`  dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
+  title: "Show page action",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "show") {
     browser.pageAction.show(tab.id);
   }

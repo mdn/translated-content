@@ -1,7 +1,6 @@
 ---
 title: Tampon
 slug: Glossary/Buffer
-translation_of: Glossary/buffer
 ---
 
 Un tampon est un stockage dans la mémoire physique utilisé pour stocker temporairement des données pendant leur transfert d'un endroit à un autre.

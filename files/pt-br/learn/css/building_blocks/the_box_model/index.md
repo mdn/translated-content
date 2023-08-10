@@ -1,7 +1,6 @@
 ---
 title: The box model
 slug: Learn/CSS/Building_blocks/The_box_model
-original_slug: Aprender/CSS/Construindo_blocos/The_box_model
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
@@ -159,7 +158,9 @@ If you want all of your elements to use the alternative box model, and this is a
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

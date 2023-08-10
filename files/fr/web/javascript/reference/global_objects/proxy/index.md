@@ -1,9 +1,6 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy
-browser-compat: javascript.builtins.Proxy
 ---
 
 {{JSRef}}
@@ -26,7 +23,7 @@ Dans l'exemple qui suit, on a une cible simple avec deux propriétés et un gest
 ```js
 const cible = {
   message1: "coucou",
-  message2: "tout le monde"
+  message2: "tout le monde",
 };
 
 const gestionnaire1 = {};
@@ -46,13 +43,13 @@ Pour adapter le proxy, on définit des fonctions sur le gestionnaire&nbsp;:
 ```js
 const cible = {
   message1: "coucou",
-  message2: "tout le monde"
+  message2: "tout le monde",
 };
 
 const gestionnaire2 = {
   get(cible, prop, recepteur) {
     return "le monde";
-  }
+  },
 };
 
 const proxy2 = new Proxy(cible, gestionnaire2);
@@ -72,7 +69,7 @@ Avec [`Reflect`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect), on p
 ```js
 const cible = {
   message1: "coucou",
-  message2: "tout le monde"
+  message2: "tout le monde",
 };
 
 const gestionnaire3 = {
@@ -109,10 +106,8 @@ Dans ce court exemple, on renvoie le nombre `37` comme valeur par défaut lorsqu
 ```js
 const handler = {
   get(obj, prop) {
-    return prop in obj ?
-      obj[prop] :
-      37;
-  }
+    return prop in obj ? obj[prop] : 37;
+  },
 };
 
 const p = new Proxy({}, handler);
@@ -122,7 +117,7 @@ p.b = undefined;
 console.log(p.a, p.b);
 // 1, undefined
 
-console.log('c' in p, p.c);
+console.log("c" in p, p.c);
 // false, 37
 ```
 
@@ -137,7 +132,6 @@ const p = new Proxy(target, {});
 p.a = 37;
 // L'opération est transmise à la cible par le proxy
 
-
 console.log(target.a);
 // 37
 // L'opération a bien été transmise
@@ -151,13 +145,13 @@ En utilisant un `Proxy`, on peut simplement valider les valeurs passées à un o
 
 ```js
 let validateur = {
-  set: function(obj, prop, valeur) {
-    if (prop === 'age') {
+  set: function (obj, prop, valeur) {
+    if (prop === "age") {
       if (!Number.isInteger(valeur)) {
         throw new TypeError("Cet a n'est pas un entier.");
       }
       if (valeur > 200) {
-        throw new RangeError('Cet âge semble invalide.');
+        throw new RangeError("Cet âge semble invalide.");
       }
     }
 
@@ -166,15 +160,15 @@ let validateur = {
 
     // On indique le succès de l'opération
     return true;
-  }
+  },
 };
 
 const personne = new Proxy({}, validateur);
 
 personne.age = 100;
 console.log(personne.age); // 100
-personne.age = 'jeune';    // lève une exception
-personne.age = 300;        // lève une exception
+personne.age = "jeune"; // lève une exception
+personne.age = 300; // lève une exception
 ```
 
 ### Étendre un constructeur
@@ -182,33 +176,34 @@ personne.age = 300;        // lève une exception
 En utilisant une fonction proxy, on peut étendre un constructeur avec un nouveau constructeur. Dans cet exemple, on utilise les gestionnaires correspondants à [`construct()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/construct) et [`apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply).
 
 ```js
-function etendre(sup,base) {
+function etendre(sup, base) {
   var descripteur = Object.getOwnPropertyDescriptor(
-    base.prototype, "constructor"
+    base.prototype,
+    "constructor",
   );
   base.prototype = Object.create(sup.prototype);
   var gestionnaire = {
-    construct: function(cible, args) {
+    construct: function (cible, args) {
       var obj = Object.create(base.prototype);
-      this.apply(cible,obj,args);
+      this.apply(cible, obj, args);
       return obj;
     },
-    apply: function(cible, that, args) {
-      sup.apply(that,args);
-      base.apply(that,args);
-    }
+    apply: function (cible, that, args) {
+      sup.apply(that, args);
+      base.apply(that, args);
+    },
   };
-  var proxy = new Proxy(base,gestionnaire);
+  var proxy = new Proxy(base, gestionnaire);
   descripteur.value = proxy;
   Object.defineProperty(base.prototype, "constructor", descripteur);
   return proxy;
 }
 
-var Personne = function(nom){
+var Personne = function (nom) {
   this.nom = nom;
 };
 
-var Garcon = etendre(Personne, function(nom, âge) {
+var Garcon = etendre(Personne, function (nom, âge) {
   this.âge = âge;
 });
 
@@ -216,8 +211,8 @@ Garcon.prototype.genre = "M";
 
 var Pierre = new Garcon("Pierre", 13);
 console.log(Pierre.genre); // "M"
-console.log(Pierre.nom);   // "Pierre"
-console.log(Pierre.âge);   // 13
+console.log(Pierre.nom); // "Pierre"
+console.log(Pierre.âge); // 13
 ```
 
 ### Manipuler les nœuds DOM
@@ -229,47 +224,49 @@ On crée un objet `vue` qui est un proxy pour l'objet avec une `selected`. Le ge
 Lorsqu'on affecte un élément HTML à `vue.selected`, l'attribut `'aria-selected'` de l'élément est placé à `true`. Si on affecte ensuite un autre élément à `vue.selected`, ce nouvel élément aura l'attribut `'aria-selected'` défini à `true` et l'élément précédent verra son attribut `'aria-selected'` automatiquement défini à `false`.
 
 ```js
-let vue = new Proxy({
-  selected: null
-},
-{
-  set(obj, prop, nouvelleValeur) {
-    let ancienneValeur = obj[prop];
+let vue = new Proxy(
+  {
+    selected: null,
+  },
+  {
+    set(obj, prop, nouvelleValeur) {
+      let ancienneValeur = obj[prop];
 
-    if (prop === 'selected') {
-      if (ancienneValeur) {
-        ancienneValeur.setAttribute('aria-selected', 'false');
+      if (prop === "selected") {
+        if (ancienneValeur) {
+          ancienneValeur.setAttribute("aria-selected", "false");
+        }
+        if (nouvelleValeur) {
+          nouvelleValeur.setAttribute("aria-selected", "true");
+        }
       }
-      if (nouvelleValeur) {
-        nouvelleValeur.setAttribute('aria-selected', 'true');
-      }
-    }
 
-    // Le comportement par défaut : enregistrer la valeur
-    obj[prop] = nouvelleValeur;
+      // Le comportement par défaut : enregistrer la valeur
+      obj[prop] = nouvelleValeur;
 
-    // On indique le succès de l'opération
-    return true;
-  }
-});
+      // On indique le succès de l'opération
+      return true;
+    },
+  },
+);
 
-const element1 = document.getElementById('elem-1');
-const element2 = document.getElementById('elem-2');
+const element1 = document.getElementById("elem-1");
+const element2 = document.getElementById("elem-2");
 
 // on sélectionne element1
 vue.selected = element1;
 
-console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
+console.log(`element1 : ${element1.getAttribute("aria-selected")}`);
 // element1 : true
 
 // on sélectionne element2 et cela entraîne
 // la déselection automatique de element1
 vue.selected = element2;
 
-console.log(`element1 : ${element1.getAttribute('aria-selected')}`);
+console.log(`element1 : ${element1.getAttribute("aria-selected")}`);
 // element1 : false
 
-console.log(`element2 : ${element2.getAttribute('aria-selected')}`);
+console.log(`element2 : ${element2.getAttribute("aria-selected")}`);
 // element2 : true
 ```
 
@@ -278,48 +275,50 @@ console.log(`element2 : ${element2.getAttribute('aria-selected')}`);
 Dans l'exemple qui suit, le proxy `produits` évalue la valeur passée et la convertit en tableau si besoin. L'objet prend également en charge la propriété supplémentaire `dernierNavigateur` à la fois comme accesseur et mutateur.
 
 ```js
-let produits = new Proxy({
-  navigateurs: ['Internet Explorer', 'Netscape']
-},
-{
-  get(obj, prop) {
-    // Une propriété supplémentaire
-    if (prop === 'dernierNavigateur') {
-      return obj.navigateurs[obj.navigateurs.length - 1];
-    }
-
-    // Le comportement par défaut : renvoyer la valeur
-    return obj[prop];
+let produits = new Proxy(
+  {
+    navigateurs: ["Internet Explorer", "Netscape"],
   },
-  set(obj, prop, valeur) {
-    // Une propriété supplémentaire
-    if (prop === 'dernierNavigateur') {
-      obj.navigateurs.push(valeur);
+  {
+    get(obj, prop) {
+      // Une propriété supplémentaire
+      if (prop === "dernierNavigateur") {
+        return obj.navigateurs[obj.navigateurs.length - 1];
+      }
+
+      // Le comportement par défaut : renvoyer la valeur
+      return obj[prop];
+    },
+    set(obj, prop, valeur) {
+      // Une propriété supplémentaire
+      if (prop === "dernierNavigateur") {
+        obj.navigateurs.push(valeur);
+        return true;
+      }
+
+      // on convertit la valeur si ce n'est pas un tableau
+      if (typeof valeur === "string") {
+        valeur = [valeur];
+      }
+
+      // Le comportement par défaut : enregistrer la valeur
+      obj[prop] = valeur;
+
+      // On indique le succès de l'opération
       return true;
-    }
-
-    // on convertit la valeur si ce n'est pas un tableau
-    if (typeof valeur === 'string') {
-      valeur = [valeur];
-    }
-
-    // Le comportement par défaut : enregistrer la valeur
-    obj[prop] = valeur;
-
-    // On indique le succès de l'opération
-    return true;
-  }
-});
+    },
+  },
+);
 
 console.log(produits.navigateurs);
 // ['Internet Explorer', 'Netscape']
 
-produits.navigateurs = 'Firefox';
+produits.navigateurs = "Firefox";
 // on passe une chaîne
 console.log(produits.navigateurs);
 // ['Firefox'] <- pas de problème, elle est convertie en tableau
 
-produits.dernierNavigateur = 'Chrome';
+produits.dernierNavigateur = "Chrome";
 
 console.log(produits.navigateurs);
 // ['Firefox', 'Chrome']
@@ -333,64 +332,67 @@ console.log(produits.dernierNavigateur);
 Dans cet exemple, ce proxy étend le tableau avec des fonctionnalités supplémentaires. Ici, on définit des propriétés sans utiliser [`Object.defineProperties()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties). Cet exemple pourrait être adapté pour trouver la ligne d'un tableau à partir d'une de ces cellules (la cible serait alors [`table.rows`](/fr/docs/Web/API/HTMLTableElement.rows)).
 
 ```js
-let produits = new Proxy([
-  { nom: 'Firefox', type: 'navigateur' },
-  { nom: 'SeaMonkey', type: 'navigateur' },
-  { nom: 'Thunderbird', type: 'client mail' }
-],
-{
-  get(obj, prop) {
-    // Le comportement par défaut : on renvoie la valeur
-    // prop est généralement un entier
-    if (prop in obj) {
-      return obj[prop];
-    }
-
-    // On obtient le nombre de produits
-    // un alias pour products.length
-    if (prop === 'nombre') {
-      return obj.length;
-    }
-
-    let resultat, types = {};
-
-    for (let produit of obj) {
-      if (produit.nom === prop) {
-        resultat = produit;
+let produits = new Proxy(
+  [
+    { nom: "Firefox", type: "navigateur" },
+    { nom: "SeaMonkey", type: "navigateur" },
+    { nom: "Thunderbird", type: "client mail" },
+  ],
+  {
+    get(obj, prop) {
+      // Le comportement par défaut : on renvoie la valeur
+      // prop est généralement un entier
+      if (prop in obj) {
+        return obj[prop];
       }
-      if (types[produit.type]) {
-        types[produit.type].push(produit);
-      } else {
-        types[produit.type] = [produit];
+
+      // On obtient le nombre de produits
+      // un alias pour products.length
+      if (prop === "nombre") {
+        return obj.length;
       }
-    }
 
-    // Obtenir un produit grâce à un nom
-    if (resultat) {
-      return resultat;
-    }
+      let resultat,
+        types = {};
 
-    // Obtenir un produit par type
-    if (prop in types) {
-      return types[prop];
-    }
+      for (let produit of obj) {
+        if (produit.nom === prop) {
+          resultat = produit;
+        }
+        if (types[produit.type]) {
+          types[produit.type].push(produit);
+        } else {
+          types[produit.type] = [produit];
+        }
+      }
 
-    // Obtenir les types de produits
-    if (prop === 'types') {
-      return Object.keys(types);
-    }
+      // Obtenir un produit grâce à un nom
+      if (resultat) {
+        return resultat;
+      }
 
-    return undefined;
-  }
-});
+      // Obtenir un produit par type
+      if (prop in types) {
+        return types[prop];
+      }
+
+      // Obtenir les types de produits
+      if (prop === "types") {
+        return Object.keys(types);
+      }
+
+      return undefined;
+    },
+  },
+);
 
 console.log(produits[0]);
 // { nom: 'Firefox', type: 'navigateur' }
 
-console.log(produits['Firefox']);
+console.log(produits["Firefox"]);
 // { nom: 'Firefox', type: 'navigateur' }
 
-console.log(produits['Chrome']);
+console.log(produits["Chrome"]);
 // undefined
 
 console.log(produits.navigateur);
@@ -414,15 +416,19 @@ Pour illustrer l'ensemble des trappes, on tente de «&nbsp;proxifier&nbsp;» un 
 */
 
 var docCookies = new Proxy(docCookies, {
-  get (oTarget, sKey) {
+  get(oTarget, sKey) {
     return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
   },
   set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) { return false; }
+    if (sKey in oTarget) {
+      return false;
+    }
     return oTarget.setItem(sKey, vValue);
   },
   deleteProperty: function (oTarget, sKey) {
-    if (!sKey in oTarget) { return false; }
+    if (!sKey in oTarget) {
+      return false;
+    }
     return oTarget.removeItem(sKey);
   },
   ownKeys: function (oTarget, sKey) {
@@ -432,26 +438,30 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) { oTarget.setItem(sKey, oDesc.value); }
+    if (oDesc && "value" in oDesc) {
+      oTarget.setItem(sKey, oDesc.value);
+    }
     return oTarget;
   },
   getOwnPropertyDescriptor: function (oTarget, sKey) {
     var vValue = oTarget.getItem(sKey);
-    return vValue ? {
-      value: vValue,
-      writable: true,
-      enumerable: true,
-      configurable: false
-    } : undefined;
+    return vValue
+      ? {
+          value: vValue,
+          writable: true,
+          enumerable: true,
+          configurable: false,
+        }
+      : undefined;
   },
 });
 
 /* Test */
 
-console.log(docCookies.monCookie1 = 'Première valeur');
-console.log(docCookies.getItem('monCookie1'));
+console.log((docCookies.monCookie1 = "Première valeur"));
+console.log(docCookies.getItem("monCookie1"));
 
-docCookies.setItem('monCookie1', 'Valeur modifiée');
+docCookies.setItem("monCookie1", "Valeur modifiée");
 console.log(docCookies.monCookie1);
 ```
 

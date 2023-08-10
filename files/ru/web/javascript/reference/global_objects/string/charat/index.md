@@ -1,13 +1,6 @@
 ---
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -38,14 +31,14 @@ str.charAt(index)
 Следующий пример показывает символы в различных позициях в строке `"Дивный новый мир"`:
 
 ```js
-var anyString = 'Дивный новый мир';
+var anyString = "Дивный новый мир";
 
-console.log("Символ по индексу 0   равен '" + anyString.charAt(0)   + "'");
-console.log("Символ по индексу 1   равен '" + anyString.charAt(1)   + "'");
-console.log("Символ по индексу 2   равен '" + anyString.charAt(2)   + "'");
-console.log("Символ по индексу 3   равен '" + anyString.charAt(3)   + "'");
-console.log("Символ по индексу 4   равен '" + anyString.charAt(4)   + "'");
-console.log("Символ по индексу 5   равен '" + anyString.charAt(5)   + "'");
+console.log("Символ по индексу 0   равен '" + anyString.charAt(0) + "'");
+console.log("Символ по индексу 1   равен '" + anyString.charAt(1) + "'");
+console.log("Символ по индексу 2   равен '" + anyString.charAt(2) + "'");
+console.log("Символ по индексу 3   равен '" + anyString.charAt(3) + "'");
+console.log("Символ по индексу 4   равен '" + anyString.charAt(4) + "'");
+console.log("Символ по индексу 5   равен '" + anyString.charAt(5) + "'");
 console.log("Символ по индексу 999 равен '" + anyString.charAt(999) + "'");
 ```
 
@@ -66,7 +59,7 @@ console.log("Символ по индексу 999 равен '" + anyString.char
 Следующий пример показывает, как обойти строку в цикле, каждый раз гарантированно получая целый символ, даже если строка содержит символы, не помещающиеся на Базовую многоязыковую плоскость (БМП).
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // Также можно использовать не-БМП символы напрямую
+var str = "A \uD87E\uDC04 Z"; // Также можно использовать не-БМП символы напрямую
 for (var i = 0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
@@ -82,35 +75,35 @@ function getWholeChar(str, i) {
   var code = str.charCodeAt(i);
 
   if (isNaN(code)) {
-    return ''; // Позиция не найдена
+    return ""; // Позиция не найдена
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return str.charAt(i);
   }
 
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'Старшая часть суррогатной пары без следующей младшей';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "Старшая часть суррогатной пары без следующей младшей";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'Старшая часть суррогатной пары без следующей младшей';
-      }
-      return str.charAt(i) + str.charAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "Старшая часть суррогатной пары без следующей младшей";
+    }
+    return str.charAt(i) + str.charAt(i + 1);
   }
   // Младшая часть суррогатной пары (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Младшая часть суррогатной пары без предшествующей старшей';
+    throw "Младшая часть суррогатной пары без предшествующей старшей";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (последнее число можно изменить на 0xDB7F, чтобы трактовать старшую
   // часть суррогатной пары в частной плоскости как одиночный символ)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Младшая часть суррогатной пары без предшествующей старшей';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Младшая часть суррогатной пары без предшествующей старшей";
   }
   // Теперь мы можем пропустить младшую часть суррогатной пары,
   // которую мы уже обработали
@@ -121,7 +114,7 @@ function getWholeChar(str, i) {
 В среде, поддерживающей JavaScript 1.7+ (например, в Firefox), который позволяет деструктурирующее присваивание, можно использовать более лаконичную и более гибкую альтернативу в том смысле, что она автоматически увеличивает счётчик (если символ гарантированно является суррогатной парой).
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // Также можно использовать не-БМП символы напрямую
+var str = "A\uD87E\uDC04Z"; // Также можно использовать не-БМП символы напрямую
 for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Поместите эту строку в самое начало каждого цикла, передавая в функцию строку
@@ -135,35 +128,35 @@ function getWholeCharAndI(str, i) {
   var code = str.charCodeAt(i);
 
   if (isNaN(code)) {
-    return ''; // Позиция не найдена
+    return ""; // Позиция не найдена
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return [str.charAt(i), i]; // Обычный символ, оставляем переменную 'i' неизменной
   }
 
   // Старшая часть суррогатной пары (последнее число можно изменить на 0xDB7F,
   // чтобы трактовать старшую часть суррогатной пары в частной плоскости как
   // одиночный символ)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i + 1)) {
-      throw 'Старшая часть суррогатной пары без следующей младшей';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "Старшая часть суррогатной пары без следующей младшей";
     }
     var next = str.charCodeAt(i + 1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'Старшая часть суррогатной пары без следующей младшей';
-      }
-      return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "Старшая часть суррогатной пары без следующей младшей";
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
   // Младшая часть суррогатной пары (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Младшая часть суррогатной пары без предшествующей старшей';
+    throw "Младшая часть суррогатной пары без предшествующей старшей";
   }
   var prev = str.charCodeAt(i - 1);
 
   // (последнее число можно изменить на 0xDB7F, чтобы трактовать старшую
   // часть суррогатной пары в частной плоскости как одиночный символ)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Младшая часть суррогатной пары без предшествующей старшей';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Младшая часть суррогатной пары без предшествующей старшей";
   }
   // Возвращаем следующий символ (и увеличиваем счётчик)
   return [str.charAt(i + 1), i + 1];
@@ -176,12 +169,12 @@ function getWholeCharAndI(str, i) {
 
 ```js
 function fixedCharAt(str, idx) {
-  var ret = '';
-  str += '';
+  var ret = "";
+  str += "";
   var end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
@@ -191,12 +184,15 @@ function fixedCharAt(str, idx) {
   }
 
   if (idx >= end || idx < 0) {
-    return '';
+    return "";
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // Перешагиваем через один, поскольку один «символ» является частью суррогатной пары
     ret += str.charAt(idx + 1);
   }
@@ -206,11 +202,11 @@ function fixedCharAt(str, idx) {
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарии              |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| ECMAScript 1-е издание.                                                                                  | Стандарт                 | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                 | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}     |                          |
+| Спецификация                                                                   | Статус             | Комментарии              |
+| ------------------------------------------------------------------------------ | ------------------ | ------------------------ |
+| ECMAScript 1-е издание.                                                        | Стандарт           | Изначальное определение. |
+| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}              | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ES6')}}   |                          |
 
 ## Совместимость с браузерами
 

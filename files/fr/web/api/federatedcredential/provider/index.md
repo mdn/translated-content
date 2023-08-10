@@ -1,13 +1,6 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Propriété
-  - Reference
-translation_of: Web/API/FederatedCredential/provider
 ---
 
 {{SeeCompatTable}}{{APIRef("")}}
@@ -17,7 +10,7 @@ La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCre
 ## Syntaxe
 
 ```js
-var provider = FederatedCredential.provider
+var provider = FederatedCredential.provider;
 ```
 
 ### Valeur

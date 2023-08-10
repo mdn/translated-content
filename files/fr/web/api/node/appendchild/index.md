@@ -1,14 +1,6 @@
 ---
 title: element.appendChild
 slug: Web/API/Node/appendChild
-tags:
-  - API
-  - Ajout
-  - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/Node/appendChild
 ---
 
 {{APIRef("DOM")}}
@@ -39,7 +31,7 @@ La valeur renvoyée est l'enfant ajouté sauf si l'enfant donné est un {{domxre
 Le chaînage peut ne pas fonctionner comme prévu en raison de `appendChild()` renvoyant l'élément enfant :
 
 ```js
-var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));
+var aBlock = doc.createElement("block").appendChild(doc.createElement("b"));
 ```
 
 Définit `aBlock` pour `<b></b>` uniquement, ce que vous ne voulez probablement pas.

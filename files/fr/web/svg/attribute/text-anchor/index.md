@@ -1,11 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/text-anchor
-browser-compat: svg.attributes.presentation.text-anchor
 ---
 
 {{SVGRef}}

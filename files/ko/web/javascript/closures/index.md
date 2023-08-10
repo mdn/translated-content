@@ -1,7 +1,6 @@
 ---
 title: 클로저
 slug: Web/JavaScript/Closures
-original_slug: Web/JavaScript/Guide/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -13,14 +12,15 @@ original_slug: Web/JavaScript/Guide/Closures
 다음을 보자:
 
 ```js
-    function init() {
-      var name = "Mozilla"; // name은 init에 의해 생성된 지역 변수이다.
-      function displayName() { // displayName() 은 내부 함수이며, 클로저다.
-        alert(name); // 부모 함수에서 선언된 변수를 사용한다.
-      }
-      displayName();
-    }
-    init();
+function init() {
+  var name = "Mozilla"; // name은 init에 의해 생성된 지역 변수이다.
+  function displayName() {
+    // displayName() 은 내부 함수이며, 클로저다.
+    alert(name); // 부모 함수에서 선언된 변수를 사용한다.
+  }
+  displayName();
+}
+init();
 ```
 
 `init()`은 지역 변수 `name`과 함수 `displayName()`을 생성한다. `displayName()`은
@@ -36,12 +36,12 @@ original_slug: Web/JavaScript/Guide/Closures
 ES6 이전 전통적인 JavaScript에는 함수 스코프와 전역 스코프 두 가지만 존재했다. `var`로 선언한 변수는 함수 내부 또는 외부에서 선언되었는지에 따라 함수 스코프 또는 전역 스코프를 가진다. 이때, 중괄호로 표시된 블록이 스코프를 생성하지 않는다는 점에서 혼란을 일으킬 수 있다.
 
 ```js
-    if (Math.random() > 0.5) {
-      var x = 1;
-    } else {
-      var x = 2;
-    }
-    console.log(x);
+if (Math.random() > 0.5) {
+  var x = 1;
+} else {
+  var x = 2;
+}
+console.log(x);
 ```
 
 C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 코드의 `console.log` 라인에서 `x`가 어떤 블록 스코프에도 포함되지 않기 때문에 에러가 발생해야 할 것이다. 그러나 블록은 `var`로 선언한 변수에 대해 스코프를 생성하지 않기 때문에 여기서 `var` 명령문은 전역 변수를 생성한다. 이것을 클로저와 함께 사용했을 때 어떤 버그가 발생할 수 있는지 [실제 예제](#루프에서_클로저_생성하기_일반적인_실수)가 아래 소개되어 있다.
@@ -49,12 +49,12 @@ C나 Java와 같이 블록이 스코프를 생성하는 언어의 경우, 위 �
 ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`과 `const` 선언과 함께 [시간상 사각지대](/ko/docs/Web/JavaScript/Reference/Statements/let#시간상_사각지대) 등을 도입했다.
 
 ```js
-    if (Math.random() > 0.5) {
-      const x = 1;
-    } else {
-      const x = 2;
-    }
-    console.log(x); // ReferenceError: x is not defined
+if (Math.random() > 0.5) {
+  const x = 1;
+} else {
+  const x = 2;
+}
+console.log(x); // ReferenceError: x is not defined
 ```
 
 요약하자면, ES6부터 블록은 스코프로 취급되기 시작했지만, 이는 `let`과 `const`로 변수를 선언했을 때만 유효하다. 또한, ES6에서 [모듈](/ko/docs/Web/JavaScript/Guide/Modules)을 도입하면서 또 다른 스코프를 제공하게 되었다. 추후 소개하겠지만, 클로저는 이 모든 스코프의 변수를 캡처할 수 있다.
@@ -64,19 +64,19 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 이제 다음 예제를 보자:
 
 ```js
-    function makeFunc() {
-      var name = "Mozilla";
-      function displayName() {
-        alert(name);
-      }
-      return displayName;
-    }
+function makeFunc() {
+  var name = "Mozilla";
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
 
-    var myFunc = makeFunc();
-    //myFunc변수에 displayName을 리턴함
-    //유효범위의 어휘적 환경을 유지
-    myFunc();
-    //리턴된 displayName 함수를 실행(name 변수에 접근)
+var myFunc = makeFunc();
+//myFunc변수에 displayName을 리턴함
+//유효범위의 어휘적 환경을 유지
+myFunc();
+//리턴된 displayName 함수를 실행(name 변수에 접근)
 ```
 
 이 코드는 바로 전의 예제와 완전히 동일한 결과가 실행된다. 하지만 흥미로운 차이는 `displayName()`함수가 실행되기 전에 외부함수인 `makeFunc()`로부터 리턴되어 `myFunc` 변수에 저장된다는 것이다.
@@ -89,21 +89,21 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 다음은 조금 더 흥미로운 예제인 makeAdder 함수이다:
 
 ```js
-    function makeAdder(x) {
-      var y = 1;
-      return function(z) {
-        y = 100;
-        return x + y + z;
-      };
-    }
+function makeAdder(x) {
+  var y = 1;
+  return function (z) {
+    y = 100;
+    return x + y + z;
+  };
+}
 
-    var add5 = makeAdder(5);
-    var add10 = makeAdder(10);
-    //클로저에 x와 y의 환경이 저장됨
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+//클로저에 x와 y의 환경이 저장됨
 
-    console.log(add5(2));  // 107 (x:5 + y:100 + z:2)
-    console.log(add10(2)); // 112 (x:10 + y:100 + z:2)
-    //함수 실행 시 클로저에 저장된 x, y값에 접근하여 값을 계산
+console.log(add5(2)); // 107 (x:5 + y:100 + z:2)
+console.log(add10(2)); // 112 (x:10 + y:100 + z:2)
+//함수 실행 시 클로저에 저장된 x, y값에 접근하여 값을 계산
 ```
 
 이 예제에서 단일 인자 `x`를 받아서 새 함수를 반환하는 함수 `makeAdder(x)`를 정의했다. 반환되는 함수는 단일인자 z를 받아서 x와 y와 z의 합을 반환한다.
@@ -123,18 +123,18 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 예를 들면 페이지의 글자 크기를 조정하는 몇 개의 버튼을 추가한다고 가정하자. 이 작업을 수행하는 한 가지 방법은 `body` 요소의 font-size를 픽셀 단위로 지정하고 상대적인 `em` 단위를 사용하여 페이지의 다른 요소들의 (예: 헤더) 크기를 설정하는 것이다.
 
 ```css
-    body {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 12px;
-    }
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
 
-    h1 {
-      font-size: 1.5em;
-    }
+h1 {
+  font-size: 1.5em;
+}
 
-    h2 {
-      font-size: 1.2em;
-    }
+h2 {
+  font-size: 1.2em;
+}
 ```
 
 우리의 대화식 글자 크기 버튼들은 `body` 요소의 `font-size` 속성을 변경할 수 있고 이런 조정은 상대적 단위들 덕분에 페이지의 다른 요소에 의해 선택된다.
@@ -142,29 +142,29 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 여기 자바스크립트 코드가 있다.
 
 ```js
-    function makeSizer(size) {
-      return function() {
-        document.body.style.fontSize = size + 'px';
-      };
-    }
+function makeSizer(size) {
+  return function () {
+    document.body.style.fontSize = size + "px";
+  };
+}
 
-    var size12 = makeSizer(12);
-    var size14 = makeSizer(14);
-    var size16 = makeSizer(16);
+var size12 = makeSizer(12);
+var size14 = makeSizer(14);
+var size16 = makeSizer(16);
 ```
 
 `size12`, `size14`, `size16`은 body 요소의 글자 크기를 각각 12, 14, 16 픽셀로 바꾸는 함수이다. 이 함수들을 아래처럼 버튼들에(이 경우에는 링크) 연결할 수 있다.
 
 ```js
-    document.getElementById('size-12').onclick = size12;
-    document.getElementById('size-14').onclick = size14;
-    document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
-    <a href="#" id="size-12">12</a>
-    <a href="#" id="size-14">14</a>
-    <a href="#" id="size-16">16</a>
+<a href="#" id="size-12">12</a>
+<a href="#" id="size-14">14</a>
+<a href="#" id="size-16">16</a>
 ```
 
 {{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/","","200")}}
@@ -180,30 +180,30 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 아래 코드는 프라이빗 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를 사용하는 방법을 보여준다. 이렇게 클로저를 사용하는 것을 [모듈 패턴](https://www.google.com/search?q=javascript+module+pattern)이라 한다.
 
 ```js
-    var counter = (function() {
-      var privateCounter = 0;
-      function changeBy(val) {
-        privateCounter += val;
-      }
-      return {
-        increment: function() {
-          changeBy(1);
-        },
-        decrement: function() {
-          changeBy(-1);
-        },
-        value: function() {
-          return privateCounter;
-        }
-      };
-    })();
+var counter = (function () {
+  var privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment: function () {
+      changeBy(1);
+    },
+    decrement: function () {
+      changeBy(-1);
+    },
+    value: function () {
+      return privateCounter;
+    },
+  };
+})();
 
-    console.log(counter.value()); // logs 0
-    counter.increment();
-    counter.increment();
-    console.log(counter.value()); // logs 2
-    counter.decrement();
-    console.log(counter.value()); // logs 1
+console.log(counter.value()); // logs 0
+counter.increment();
+counter.increment();
+console.log(counter.value()); // logs 2
+counter.decrement();
+console.log(counter.value()); // logs 1
 ```
 
 이전 예제에서 각 클로저들이 고유한 문법적 환경을 가졌지만 여기서 우리는 `counter.increment`, `counter.decrement`, `counter.value` 세 함수에 의해 공유되는 하나의 어휘적 환경을 만든다.
@@ -215,33 +215,33 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 카운터를 생성하는 익명 함수를 정의하고 그 함수를 즉시 호출하고 결과를 `counter` 변수에 할당하는 것을 알아차렸을 것이다. 이 함수를 별도의 변수 `makeCounter` 저장하고 이 변수를 이용해 여러 개의 카운터를 만들 수 있다.
 
 ```js
-    var makeCounter = function() {
-      var privateCounter = 0;
-      function changeBy(val) {
-        privateCounter += val;
-      }
-      return {
-        increment: function() {
-          changeBy(1);
-        },
-        decrement: function() {
-          changeBy(-1);
-        },
-        value: function() {
-          return privateCounter;
-        }
-      }
-    };
+var makeCounter = function () {
+  var privateCounter = 0;
+  function changeBy(val) {
+    privateCounter += val;
+  }
+  return {
+    increment: function () {
+      changeBy(1);
+    },
+    decrement: function () {
+      changeBy(-1);
+    },
+    value: function () {
+      return privateCounter;
+    },
+  };
+};
 
-    var counter1 = makeCounter();
-    var counter2 = makeCounter();
-    alert(counter1.value()); /* 0 */
-    counter1.increment();
-    counter1.increment();
-    alert(counter1.value()); /* 2 */
-    counter1.decrement();
-    alert(counter1.value()); /* 1 */
-    alert(counter2.value()); /* 0 */
+var counter1 = makeCounter();
+var counter2 = makeCounter();
+alert(counter1.value()); /* 0 */
+counter1.increment();
+counter1.increment();
+alert(counter1.value()); /* 2 */
+counter1.decrement();
+alert(counter1.value()); /* 1 */
+alert(counter2.value()); /* 0 */
 ```
 
 두 개의 카운터가 어떻게 다른 카운터와 독립성을 유지하는지 주목해보자. 각 클로저는 그들 고유의 클로저를 통한 `privateCounter` 변수의 다른 버전을 참조한다. 각 카운터가 호출될 때마다; 하나의 클로저에서 변수 값을 변경해도 다른 클로저의 값에는 영향을 주지 않는다.
@@ -259,43 +259,43 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 따라서, 우리는 클로저에 대해 세가지 범위 모두 접근할 수 있지만, 중첩된 내부 함수가 있는 경우 종종 실수를 저지른다. 아래 예제를 확인해보자:
 
 ```js
-    // 전역 범위 (global scope)
-    var e = 10;
-    function sum(a){
-      return function(b){
-        return function(c){
-          // 외부 함수 범위 (outer functions scope)
-          return function(d){
-            // 지역 범위 (local scope)
-            return a + b + c + d + e;
-          }
-        }
-      }
-    }
+// 전역 범위 (global scope)
+var e = 10;
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      // 외부 함수 범위 (outer functions scope)
+      return function (d) {
+        // 지역 범위 (local scope)
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
 
-    console.log(sum(1)(2)(3)(4)); // log 20
+console.log(sum(1)(2)(3)(4)); // log 20
 
-    // 익명 함수 없이 작성할 수도 있다.
+// 익명 함수 없이 작성할 수도 있다.
 
-    // 전역 범위 (global scope)
-    var e = 10;
-    function sum(a){
-      return function sum2(b){
-        return function sum3(c){
-          // 외부 함수 범위 (outer functions scope)
-          return function sum4(d){
-            // 지역 범위 (local scope)
-            return a + b + c + d + e;
-          }
-        }
-      }
-    }
+// 전역 범위 (global scope)
+var e = 10;
+function sum(a) {
+  return function sum2(b) {
+    return function sum3(c) {
+      // 외부 함수 범위 (outer functions scope)
+      return function sum4(d) {
+        // 지역 범위 (local scope)
+        return a + b + c + d + e;
+      };
+    };
+  };
+}
 
-    var s = sum(1);
-    var s1 = s(2);
-    var s2 = s1(3);
-    var s3 = s2(4);
-    console.log(s3) //log 20
+var s = sum(1);
+var s1 = s(2);
+var s2 = s1(3);
+var s3 = s2(4);
+console.log(s3); //log 20
 ```
 
 위의 예제를 보면 일련의 중첩된 함수들을 확인할 수 있다. 이 함수들은 전부 외부 함수의 스코프에 접근할 수 있다. 그런데 문제는 즉각적인 외부 함수의 스코프만을 추측 한다는 것이다. 이 문맥에서는 모든 클로저가 선언된 외부 함수의 스코프에 접근한다라고 말할 수 있다.
@@ -305,33 +305,33 @@ ES6에서 JavaScript는 블록 스코프 변수를 생성할 수 있도록 `let`
 ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때 발생한다.다음 예제를 보자.
 
 ```html
-    <p id="help">Helpful notes will appear here</p>
-    <p>E-mail: <input type="text" id="email" name="email"></p>
-    <p>Name: <input type="text" id="name" name="name"></p>
-    <p>Age: <input type="text" id="age" name="age"></p>
+<p id="help">Helpful notes will appear here</p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
-    function showHelp(help) {
-      document.getElementById('help').innerHTML = help;
-    }
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
 
-    function setupHelp() {
-      var helpText = [
-          {'id': 'email', 'help': 'Your e-mail address'},
-          {'id': 'name', 'help': 'Your full name'},
-          {'id': 'age', 'help': 'Your age (you must be over 16)'}
-        ];
+function setupHelp() {
+  var helpText = [
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-      for (var i = 0; i < helpText.length; i++) {
-        var item = helpText[i];
-        document.getElementById(item.id).onfocus = function() {
-          showHelp(item.help);
-        }
-      }
-    }
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+    document.getElementById(item.id).onfocus = function () {
+      showHelp(item.help);
+    };
+  }
+}
 
-    setupHelp();
+setupHelp();
 ```
 
 {{JSFiddleEmbed("https://jsfiddle.net/v7gjv/", "", 200)}}
@@ -345,30 +345,30 @@ ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키
 이 경우 한 가지 해결책은 더 많은 클로저를 사용하는 것이다: 특히 앞에서 설명한 함수 팩토리를 사용하는 것이다.
 
 ```js
-    function showHelp(help) {
-      document.getElementById('help').innerHTML = help;
-    }
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
 
-    function makeHelpCallback(help) {
-      return function() {
-        showHelp(help);
-      };
-    }
+function makeHelpCallback(help) {
+  return function () {
+    showHelp(help);
+  };
+}
 
-    function setupHelp() {
-      var helpText = [
-          {'id': 'email', 'help': 'Your e-mail address'},
-          {'id': 'name', 'help': 'Your full name'},
-          {'id': 'age', 'help': 'Your age (you must be over 16)'}
-        ];
+function setupHelp() {
+  var helpText = [
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-      for (var i = 0; i < helpText.length; i++) {
-        var item = helpText[i];
-        document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
-      }
-    }
+  for (var i = 0; i < helpText.length; i++) {
+    var item = helpText[i];
+    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+  }
+}
 
-    setupHelp();
+setupHelp();
 ```
 
 {{JSFiddleEmbed("https://jsfiddle.net/v7gjv/1/", "", 300)}}
@@ -378,53 +378,53 @@ ECMAScript 2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키
 익명 클로저를 사용하여 위 코드를 작성하는 또 다른 방법은 다음과 같다.
 
 ```js
-    function showHelp(help) {
-      document.getElementById('help').innerHTML = help;
-    }
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
 
-    function setupHelp() {
-      var helpText = [
-          {'id': 'email', 'help': 'Your e-mail address'},
-          {'id': 'name', 'help': 'Your full name'},
-          {'id': 'age', 'help': 'Your age (you must be over 16)'}
-        ];
+function setupHelp() {
+  var helpText = [
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-      for (var i = 0; i < helpText.length; i++) {
-        (function() {
-           var item = helpText[i];
-           document.getElementById(item.id).onfocus = function() {
-             showHelp(item.help);
-           }
-        })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
-      }
-    }
+  for (var i = 0; i < helpText.length; i++) {
+    (function () {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function () {
+        showHelp(item.help);
+      };
+    })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
+  }
+}
 
-    setupHelp();
+setupHelp();
 ```
 
 더 많은 클로저를 사용하는 것이 싫다면 ES2015의 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 키워드를 사용할 수 있다.
 
 ```js
-    function showHelp(help) {
-      document.getElementById('help').innerHTML = help;
-    }
+function showHelp(help) {
+  document.getElementById("help").innerHTML = help;
+}
 
-    function setupHelp() {
-      var helpText = [
-          {'id': 'email', 'help': 'Your e-mail address'},
-          {'id': 'name', 'help': 'Your full name'},
-          {'id': 'age', 'help': 'Your age (you must be over 16)'}
-        ];
+function setupHelp() {
+  var helpText = [
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-      for (var i = 0; i < helpText.length; i++) {
-        let item = helpText[i];
-        document.getElementById(item.id).onfocus = function() {
-          showHelp(item.help);
-        }
-      }
-    }
+  for (var i = 0; i < helpText.length; i++) {
+    let item = helpText[i];
+    document.getElementById(item.id).onfocus = function () {
+      showHelp(item.help);
+    };
+  }
+}
 
-    setupHelp();
+setupHelp();
 ```
 
 위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
@@ -433,20 +433,20 @@ Another alternative could be to use `forEach()` to iterate over the `helpText` a
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
-  helpText.forEach(function(text) {
-    document.getElementById(text.id).onfocus = function() {
+  helpText.forEach(function (text) {
+    document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
-    }
+    };
   });
 }
 
@@ -462,66 +462,66 @@ setupHelp();
 비실용적이지만 시범적인 다음 예를 고려하라:
 
 ```js
-    function MyObject(name, message) {
-      this.name = name.toString();
-      this.message = message.toString();
-      this.getName = function() {
-        return this.name;
-      };
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+  this.getName = function () {
+    return this.name;
+  };
 
-      this.getMessage = function() {
-        return this.message;
-      };
-    }
+  this.getMessage = function () {
+    return this.message;
+  };
+}
 ```
 
 앞의 코드는 클로저의 이점을 이용하지 않음으로 다음과 같이 다시 쓸 수 있다.
 
 ```js
-    function MyObject(name, message) {
-      this.name = name.toString();
-      this.message = message.toString();
-    }
-    MyObject.prototype = {
-      getName: function() {
-        return this.name;
-      },
-      getMessage: function() {
-        return this.message;
-      }
-    };
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+MyObject.prototype = {
+  getName: function () {
+    return this.name;
+  },
+  getMessage: function () {
+    return this.message;
+  },
+};
 ```
 
 그러나 프로토타입을 다시 정의하는 것은 권장되지 않음으로 기존 프로토타입에 추가하는 다음 예제가 더 좋다.
 
 ```js
-    function MyObject(name, message) {
-      this.name = name.toString();
-      this.message = message.toString();
-    }
-    MyObject.prototype.getName = function() {
-      return this.name;
-    };
-    MyObject.prototype.getMessage = function() {
-      return this.message;
-    };
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+MyObject.prototype.getName = function () {
+  return this.name;
+};
+MyObject.prototype.getMessage = function () {
+  return this.message;
+};
 ```
 
 위의 코드는 같은 결과를 가진 더 깨끗한 방법으로 작성할 수도 있다:
 
 ```js
-    function MyObject(name, message) {
-        this.name = name.toString();
-        this.message = message.toString();
-    }
-    (function() {
-        this.getName = function() {
-            return this.name;
-        };
-        this.getMessage = function() {
-            return this.message;
-        };
-    }).call(MyObject.prototype);
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+(function () {
+  this.getName = function () {
+    return this.name;
+  };
+  this.getMessage = function () {
+    return this.message;
+  };
+}).call(MyObject.prototype);
 ```
 
 앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드 정의는 모든 객체 생성시 발생할 필요가 없다. [객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을

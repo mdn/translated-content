@@ -1,13 +1,8 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - RangeError
-translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
 ## Сводка
@@ -57,16 +52,15 @@ new RangeError([message[, fileName[, lineNumber]]])
 ### Пример: использование `RangeError`
 
 ```js
-var check = function(num) {
+var check = function (num) {
   if (num < MIN || num > MAX) {
-    throw new RangeError('Параметр должен быть между ' + MIN + ' и ' + MAX);
+    throw new RangeError("Параметр должен быть между " + MIN + " и " + MAX);
   }
 };
 
 try {
   check(500);
-}
-catch (e) {
+} catch (e) {
   if (e instanceof RangeError) {
     // Обработка ошибки диапазона
   }
@@ -75,11 +69,11 @@ catch (e) {
 
 ## Спецификации
 
-| Спецификация                                                                                                                 | Статус                   | Комментарии              |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                                                      | Стандарт                 | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}                                                     | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} | {{Spec2('ES6')}}     |                          |
+| Спецификация                                                                                  | Статус             | Комментарии              |
+| --------------------------------------------------------------------------------------------- | ------------------ | ------------------------ |
+| ECMAScript 3-е издание.                                                                       | Стандарт           | Изначальное определение. |
+| {{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}                                         | {{Spec2('ES5.1')}} |                          |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} | {{Spec2('ES6')}}   |                          |
 
 ## Совместимость с браузерами
 

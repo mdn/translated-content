@@ -14,9 +14,9 @@ slug: Web/API/Element/mouseleave_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('mouseleave', (event) => {});
+addEventListener("mouseleave", (event) => {});
 
-onmouseleave = (event) => { };
+onmouseleave = (event) => {};
 ```
 
 ## 事件类型
@@ -123,17 +123,17 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
 ```js
 let enterEventCount = 0;
 let leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', (e) => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
   addListItem(`这是 mouseenter 事件 ${enterEventCount}.`);
 });
 
-mouseTarget.addEventListener('mouseleave', (e) => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
   addListItem(`这是 mouseleave 事件 ${leaveEventCount}.`);
 });

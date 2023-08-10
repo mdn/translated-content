@@ -1,13 +1,6 @@
 ---
 title: Contribuer à une recette
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - Guide
-  - MDN
-  - Meta
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
-original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette
 ---
 
 {{CSSRef}}
@@ -28,13 +21,13 @@ Une recette se décompose comme suit :
 2. Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
 3. Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
 
-    1. Les spécifications sommaires
-    2. La recette
-    3. Les choix effectués
-    4. Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
-    5. Les points relatifs à l'accessibilité
-    6. La compatibilité des navigateurs
-    7. D'éventuelles ressources additionnelles
+   1. Les spécifications sommaires
+   2. La recette
+   3. Les choix effectués
+   4. Les éventuelles méthodes alternatives (utiles pour l'amélioration progressive)
+   5. Les points relatifs à l'accessibilité
+   6. La compatibilité des navigateurs
+   7. D'éventuelles ressources additionnelles
 
 ### 1. Construire le motif
 

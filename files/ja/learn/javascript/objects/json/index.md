@@ -82,14 +82,14 @@ JSON 文字列はそれ自身をファイルとして格納することもでき
 この文字列を JavaScript プログラムへ読み込むと（例えば、変数 `superHeroes` へ代入すると）と、 [JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の記事で見たのと同様に、ドットや角括弧を使ってデータへアクセスすることができます。例えば次のようになります。
 
 ```js
-superHeroes.homeTown
-superHeroes['active']
+superHeroes.homeTown;
+superHeroes["active"];
 ```
 
 さらに深い階層のデータへアクセスする場合は、単純にプロパティ名や配列のインデックスを連結します。例えば、メンバーリスト中 2 番目のヒーローの 3 番目の能力を参照する場合は、以下のようにします。
 
 ```js
-superHeroes['members'][1]['powers'][2]
+superHeroes["members"][1]["powers"][2];
 ```
 
 1. まず、変数名 `superHeroes` を指定します。
@@ -144,17 +144,11 @@ superHeroes['members'][1]['powers'][2]
 まず、 [heroes.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes.html) と [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css) のコピーをローカルに作成してください。後者は例題ページをスタイリングするための CSS であり、前者は簡単な HTML です。加えて、{{HTMLElement("script")}} 要素で、この演習で書くJavaScriptコードを格納します。
 
 ```html
-<header>
+<header></header>
 
-</header>
+<section></section>
 
-<section>
-
-</section>
-
-<script>
-
-</script>
+<script></script>
 ```
 
 JSON データは GitHub の <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json> で利用できます。
@@ -169,8 +163,8 @@ JSON データは GitHub の <https://mdn.github.io/learning-area/javascript/ooj
 
 ```js
 async function populate() {
-
-  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const requestURL =
+    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
   const request = new Request(requestURL);
 
   const response = await fetch(request);
@@ -178,7 +172,6 @@ async function populate() {
 
   populateHeader(superHeroes);
   populateHeroes(superHeroes);
-
 }
 ```
 
@@ -202,12 +195,12 @@ JSON を取得するには、[フェッチ](/ja/docs/Web/API/Fetch_API)という
 
 ```js
 function populateHeader(obj) {
-  const header = document.querySelector('header');
-  const myH1 = document.createElement('h1');
+  const header = document.querySelector("header");
+  const myH1 = document.createElement("h1");
   myH1.textContent = obj.squadName;
   header.appendChild(myH1);
 
-  const myPara = document.createElement('p');
+  const myPara = document.createElement("p");
   myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
   header.appendChild(myPara);
 }
@@ -221,25 +214,25 @@ function populateHeader(obj) {
 
 ```js
 function populateHeroes(obj) {
-  const section = document.querySelector('section');
+  const section = document.querySelector("section");
   const heroes = obj.members;
 
   for (const hero of heroes) {
-    const myArticle = document.createElement('article');
-    const myH2 = document.createElement('h2');
-    const myPara1 = document.createElement('p');
-    const myPara2 = document.createElement('p');
-    const myPara3 = document.createElement('p');
-    const myList = document.createElement('ul');
+    const myArticle = document.createElement("article");
+    const myH2 = document.createElement("h2");
+    const myPara1 = document.createElement("p");
+    const myPara2 = document.createElement("p");
+    const myPara3 = document.createElement("p");
+    const myList = document.createElement("ul");
 
     myH2.textContent = hero.name;
     myPara1.textContent = `Secret identity: ${hero.secretIdentity}`;
     myPara2.textContent = `Age: ${hero.age}`;
-    myPara3.textContent = 'Superpowers:';
+    myPara3.textContent = "Superpowers:";
 
     const superPowers = hero.powers;
     for (const power of superPowers) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = power;
       myList.appendChild(listItem);
     }
@@ -296,8 +289,8 @@ populate();
 
 ```js
 async function populate() {
-
-  const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+  const requestURL =
+    "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
   const request = new Request(requestURL);
 
   const response = await fetch(request);
@@ -306,17 +299,16 @@ async function populate() {
   const superHeroes = JSON.parse(superHeroesText);
   populateHeader(superHeroes);
   populateHeroes(superHeroes);
-
 }
 ```
 
-ご想像の通り、 `stringify()`  はまったく反対の向きに動作します。次のコードをブラウザーの JavaScript コンソールに一つずつ打ち込んでいって、実際に動かしてみて下さい。
+ご想像の通り、 `stringify()` はまったく反対の向きに動作します。次のコードをブラウザーの JavaScript コンソールに一つずつ打ち込んでいって、実際に動かしてみて下さい。
 
 ```js
 let myObj = { name: "Chris", age: 38 };
-myObj
+myObj;
 let myString = JSON.stringify(myObj);
-myString
+myString;
 ```
 
 ここでは、 JavaScript オブジェクトを作成してその中身を確認しています。次に `stringify()` を使って JSON 文字列に変換し、返値を新しい変数に保存し、その値も確認しています。

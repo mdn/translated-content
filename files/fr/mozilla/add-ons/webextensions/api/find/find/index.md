@@ -1,7 +1,6 @@
 ---
 title: find.find()
 slug: Mozilla/Add-ons/WebExtensions/API/find/find
-translation_of: Mozilla/Add-ons/WebExtensions/API/find/find
 ---
 
 {{AddonSidebar()}}
@@ -22,9 +21,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 browser.find.find(
-  queryphrase,       // string
-  options            // optional object
-)
+  queryphrase, // string
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -122,8 +121,8 @@ Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permiss
 ```js
 async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
-    let results = await browser.find.find("banana", {tabId: tab.id});
-    console.log(`In page "${tab.url}": ${results.count} matches.`)
+    let results = await browser.find.find("banana", { tabId: tab.id });
+    console.log(`In page "${tab.url}": ${results.count} matches.`);
   }
 }
 
@@ -142,27 +141,26 @@ Le script d'arrière plan :
 // background.js
 
 async function getContexts(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "get-context.js"});
+  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
   // ask the content script to get the contexts for us
   let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData
+    ranges: matches.rangeData,
   });
   for (let context of contexts) {
     console.log(context);
   }
-
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", {includeRangeData: true}).then(getContexts);
+  browser.find.find("example", { includeRangeData: true }).then(getContexts);
 });
 ```
 
@@ -173,9 +171,14 @@ Le script de contenu :
  * Get all the text nodes into a single array
  */
 function getNodes() {
-  let walker = document.createTreeWalker(document, window.NodeFilter.SHOW_TEXT, null, false);
+  let walker = document.createTreeWalker(
+    document,
+    window.NodeFilter.SHOW_TEXT,
+    null,
+    false,
+  );
   let nodes = [];
-  while(node = walker.nextNode()) {
+  while ((node = walker.nextNode())) {
     nodes.push(node);
   }
 
@@ -189,7 +192,6 @@ function getNodes() {
  * of each node.
  */
 function getContexts(ranges) {
-
   let contexts = [];
   let nodes = getNodes();
 
@@ -222,21 +224,21 @@ Le script d'arrière-plan :
 // background.js
 
 async function redact(matches) {
-
   // get the active tab ID
   let activeTabArray = await browser.tabs.query({
-    active: true, currentWindow: true
+    active: true,
+    currentWindow: true,
   });
   let tabId = activeTabArray[0].id;
 
   // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, {file: "redact.js"});
+  await browser.tabs.executeScript(tabId, { file: "redact.js" });
   // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
+  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", {includeRectData: true}).then(redact);
+  browser.find.find("banana", { includeRectData: true }).then(redact);
 });
 ```
 
@@ -254,8 +256,8 @@ function redactRect(rect) {
   redaction.style.position = "absolute";
   redaction.style.top = `${rect.top}px`;
   redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right-rect.left}px`;
-  redaction.style.height = `${rect.bottom-rect.top}px`;
+  redaction.style.width = `${rect.right - rect.left}px`;
+  redaction.style.height = `${rect.bottom - rect.top}px`;
   document.body.appendChild(redaction);
 }
 

@@ -1,7 +1,6 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 l10n:
   sourceCommit: d4b12e290fce9ae43a9ae23b9b9c8a5812b82ebd
 ---
@@ -21,16 +20,18 @@ Podrías personalizar el comportamiento de `instanceof` de la siguiente manera, 
 ```js
 class MyArray {
   static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance)
+    return Array.isArray(instance);
   }
 }
 console.log([] instanceof MyArray); // true
 ```
 
 ```js
-function MyArray() { }
+function MyArray() {}
 Object.defineProperty(MyArray, Symbol.hasInstance, {
-  value: function(instance) { return Array.isArray(instance); }
+  value: function (instance) {
+    return Array.isArray(instance);
+  },
 });
 console.log([] instanceof MyArray); // true
 ```

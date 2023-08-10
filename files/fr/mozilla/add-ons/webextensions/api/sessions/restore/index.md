@@ -1,7 +1,6 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
 
 {{AddonSidebar()}}
@@ -14,14 +13,14 @@ Il s'agit d'une fonction asynchrone que retourne une [`Promise`](/fr/docs/Web/Ja
 
 ```js
 var restoringSession = browser.sessions.restore(
-  sessionId             // string
-)
+  sessionId, // string
+);
 ```
 
 ### Paramètres
 
 - `sessionId`
-  - : `string`. Une chaîne contenant l'ID de session pour la fenêtre ou l'onglet à restaurer. Cela se trouve dans la propriété `sessionId` de l'objet   {{WebExtAPIRef("tabs.Tab", "Tab")}} ou {{WebExtAPIRef("windows.Window", "Window")}} dans {{WebExtAPIRef("sessions.Session", "Session")}} retourné de {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
+  - : `string`. Une chaîne contenant l'ID de session pour la fenêtre ou l'onglet à restaurer. Cela se trouve dans la propriété `sessionId` de l'objet {{WebExtAPIRef("tabs.Tab", "Tab")}} ou {{WebExtAPIRef("windows.Window", "Window")}} dans {{WebExtAPIRef("sessions.Session", "Session")}} retourné de {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
 ### Valeur renvoyée
 
@@ -38,7 +37,7 @@ Cela restaure la session fermée la plus récente, qu'il s'agisse d'une fenêtre
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -53,9 +52,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });

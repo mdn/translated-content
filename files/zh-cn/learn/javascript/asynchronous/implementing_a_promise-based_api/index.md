@@ -43,21 +43,21 @@ slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 
 ```css hidden
 div {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const output = document.querySelector('#output');
-const button = document.querySelector('#set-alarm');
+const output = document.querySelector("#output");
+const button = document.querySelector("#set-alarm");
 
 function setAlarm() {
   window.setTimeout(() => {
-    output.textContent = 'Wake up!';
+    output.textContent = "Wake up!";
   }, 1000);
 }
 
-button.addEventListener('click', setAlarm);
+button.addEventListener("click", setAlarm);
 ```
 
 {{EmbedLiveSample("用 setTimeout() 包裹", 600, 100)}}
@@ -76,7 +76,7 @@ button.addEventListener('click', setAlarm);
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -97,11 +97,11 @@ function alarm(person, delay) {
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
@@ -112,21 +112,22 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -134,10 +135,10 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   alarm(name.value, delay.value)
-    .then(message => output.textContent = message)
-    .catch(error => output.textContent = `Couldn't set alarm: ${error}`);
+    .then((message) => (output.textContent = message))
+    .catch((error) => (output.textContent = `Couldn't set alarm: ${error}`));
 });
 ```
 
@@ -152,11 +153,11 @@ button.addEventListener('click', () => {
 ```html hidden
 <div>
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" size="4" value="Matilda">
+  <input type="text" id="name" name="name" size="4" value="Matilda" />
 </div>
 <div>
   <label for="delay">Delay:</label>
-  <input type="text" id="delay" name="delay" size="4" value="1000">
+  <input type="text" id="delay" name="delay" size="4" value="1000" />
 </div>
 <button id="set-alarm">Set alarm</button>
 <div id="output"></div>
@@ -167,21 +168,22 @@ button {
   display: block;
 }
 
-div, button {
-  margin: .5rem 0;
+div,
+button {
+  margin: 0.5rem 0;
 }
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('Alarm delay must not be negative');
+      throw new Error("Alarm delay must not be negative");
     }
     window.setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -189,12 +191,11 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', async () => {
+button.addEventListener("click", async () => {
   try {
     const message = await alarm(name.value, delay.value);
     output.textContent = message;
-  }
-  catch (error) {
+  } catch (error) {
     output.textContent = `Couldn't set alarm: ${error}`;
   }
 });

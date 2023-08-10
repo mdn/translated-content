@@ -1,16 +1,6 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - PluralRules
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/resolvedOptions
 ---
 
 {{JSRef}}
@@ -20,7 +10,7 @@ La méthode **`Intl.PluralRules.prototype.resolvedOptions()`** renvoie un nouvel
 ## Syntaxe
 
 ```js
-pluralRule.resolvedOptions()
+pluralRule.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -50,15 +40,15 @@ Seul l'un de ces deux groupes de propriétés est inclus :
 ### Utiliser `resolvedOptions()`
 
 ```js
-var de = new Intl.PluralRules('de-DE');
+var de = new Intl.PluralRules("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
+usedOptions.locale; // "de-DE"
 usedOptions.maximumFractionDigits; // 3
 usedOptions.minimumFractionDigits; // 0
-usedOptions.minimumIntegerDigits;  // 1
-usedOptions.pluralCategories;      // Array [ "one", "other" ]
-usedOptions.type;                  // "cardinal"
+usedOptions.minimumIntegerDigits; // 1
+usedOptions.pluralCategories; // Array [ "one", "other" ]
+usedOptions.type; // "cardinal"
 ```
 
 ## Spécifications
