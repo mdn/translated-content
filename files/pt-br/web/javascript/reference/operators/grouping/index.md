@@ -23,7 +23,7 @@ O operador de agrupamento consiste em um par de parênteses em volta de uma expr
 
 Ignorando multiplicação e divisão primeiro, então adição e substração para avarliar adição primeiramente.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
