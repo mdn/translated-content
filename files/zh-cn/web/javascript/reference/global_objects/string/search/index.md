@@ -29,7 +29,7 @@ search(regexp)
 
 ## 描述
 
-`String.prototype.search()` 方法的实现非常简单——它只是使用字符串作为第一个参数来调用传入的正则表达式的 `Symbol.search` 方法。实际的实现来自于 [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)。
+`String.prototype.search()` 方法的实现非常简单——它只是将该字符串作为调用实参拥有的 `Symbol.search` 方法的第一个参数。实际的实现来自于 [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)。
 
 `regexp` 的 `g` 标志对 `search()` 方法的结果没有影响，搜索总是以正则表达式的 `lastIndex` 为 0 进行。有关 `search()` 方法行为的更多信息，请参阅 [`RegExp.prototype[@@search]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)。
 
@@ -49,7 +49,7 @@ const str = "hey JudE";
 const re = /[A-Z]/;
 const reDot = /[.]/;
 console.log(str.search(re)); // 返回 4，这是第一个大写字母“J”的索引
-console.log(str.search(reDot)); // 返回 -1，找不到“.”点符号
+console.log(str.search(reDot)); // 返回 -1，找不到点符号“.”
 ```
 
 ## 规范
