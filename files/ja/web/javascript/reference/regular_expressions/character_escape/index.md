@@ -50,7 +50,7 @@ l10n:
 
 [Unicode 非対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_対応モード)では、上記のいずれでもないエスケープシーケンスは識別エスケープになります。これらはバックスラッシュに続く文字を表します。例えば、`\a` は文字 `a` を表します。この動作は後方互換性の問題を発生させることなく新しいエスケープシーケンスを導入す る能力を制限するため、Unicode 対応モードでは禁止されています。
 
-Unicode 非対応モードでは、`]`、`{`、`}` は文字クラスの末尾や量化子の区切り文字として解釈できない場合、[文字通り](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)に現れることがあります。これは[ウェブの互換性のために非推奨](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)です。
+Unicode 非対応モードでは、`]`、`{`、`}` は文字クラスの末尾や数量詞の区切り文字として解釈できない場合、[文字通り](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)に現れることがあります。これは[ウェブの互換性のために非推奨](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)です。
 
 Unicode 非対応モードでは、[文字クラス](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)内の `\cX` という形のエスケープシーケンスで、`X` が数字または `_` である場合、ASCII 文字と同じようにデコードされます。`\c0` は 32 で割った余りを取って `\cP` と同じになります。さらに、`\cX` に遭遇したとき `X` が認識された文字の一つでなかった場合、バックスラッシュはリテラル文字として扱われます。これらの構文も非推奨です。
 
