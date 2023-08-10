@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-_Dynamic Adaptive Streaming over HTTP (DASH)_ es un protocolo de _streaming_ adaptativo. Estosignifica que permite a un _stream_ de video cambiar la tasa de bits con base al rendimiento de la red, para mantener el video reproduciendo.
+La Transmisión Adaptativa Dinámica sobre HTTP _(DASH)_ es un protocolo de transmisión adaptativo. Esto significa que permite a una transmisión de video cambiar las tasas de bits con base al rendimiento de la red, para mantener un video reproduciendo.
 
 ## Soporte de navegadores
 
@@ -17,13 +17,13 @@ Firefox 23 removió el soporte para _DASH_ para videos HTML WebM. Será reemplaz
 
 ## Usando _DASH_ - Desde el servidor
 
-Primero tendrás que convertir tu video WebM a un manifiesto _DASH_ acompañándolo de los archivos de video en varias tasas de bits. Para empezar solo necesitarás el programa ffmpeg de [ffmpeg.org](https://www.ffmpeg.org/), con soporte para libvpx and libvorbis para video y audio WebM, al menos en versión 2.5 (probablemente; esto fue probado con 3.2.5).
+Primero tendrás que convertir tu video WebM a un manifiesto _DASH_ acompañado de los archivos de video en varias tasas de bits. Para empezar solo necesitarás el programa ffmpeg de [ffmpeg.org](https://www.ffmpeg.org/), con soporte para libvpx and libvorbis para video y audio WebM, al menos en versión 2.5 (probablemente; esto fue probado con 3.2.5).
 
 ### 1. Usa tu archivo WebM para crear un archivo de audio y múltiples archivos de video
 
 Por ejemplo:
 
-El archivo **_in.video_** puede ser cualquier contenedor con al menos un _stream_ de audio y uno de video que pueden ser decodificados por ffmpeg.
+El archivo **_in.video_** puede ser cualquier contenedor con al menos un flujo de datos de audio y uno de video que pueden ser decodificados por ffmpeg.
 
 Crea el audio usando:
 
@@ -86,13 +86,13 @@ ffmpeg \
   my_video_manifest.mpd
 ```
 
-El parámetro `-map` corresponde a los archivos de entrada en la secuencia que fueron dados; debes tener uno por cada archivo. El parámetro `-adaptation_sets` los asigna en conjuntos de adaptación; por ejemplo, esto crea un conjunto (0) que contiene los _streams_ 0, 1, 2 y 3 (los videos), y otro conjunto (1) que contiene solo el _stream_ 4, el _stream_ de audio.
+El parámetro `-map` corresponde a los archivos de entrada en la secuencia que fueron dados; debes tener uno por cada archivo. El parámetro `-adaptation_sets` los asigna en conjuntos de adaptación; por ejemplo, esto crea un conjunto (0) que contiene los flujos de datos 0, 1, 2 y 3 (los videos), y otro conjunto (1) que contiene solo el flujo de datos 4, el flujo de datos de audio.
 
 Pon el manifiesto y los archivos de video asociados en tu servidor web o CDN. _DASH_ trabaja via HTTP, siempre y cuando tu servidor HTTP soporte peticiones de rangos de bytes, y esté configurado para servir archivos `.mpd` con `mimetype="application/dash+xml"`, entonces tendrás todo listo.
 
 ## Usando _DASH_ - Desde el cliente
 
-Querrás modificar tu página web para apuntar al manifiesto _DASH_ primero, en lugar de un video en particular directamente:
+Querrás modificar tu página web para apuntar al manifiesto _DASH_ primero, en lugar de a un video en particular directamente:
 
 ```html
 <video>
@@ -102,7 +102,7 @@ Querrás modificar tu página web para apuntar al manifiesto _DASH_ primero, en 
 </video>
 ```
 
-¡Eso es todo! Si _DASH_ es soportado por tu navegador, tu video ahora será _stream_ adaptativo.
+¡Eso es todo! Si _DASH_ es soportado por tu navegador, tu video ahora tendrá una transmisión adaptativa.
 
 ## Enlaces
 
