@@ -9,7 +9,7 @@ l10n:
 
 El evento `canplay` es activado cuando el _{{Glossary("user agent")}}_ puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
 
-Este evento no es cancelable y no se eleva (_bubble_).
+Este evento no es cancelable y no escala a sus padres (_bubble_).
 
 ## Sintaxis
 
@@ -23,7 +23,7 @@ oncanplay = (event) => {};
 
 ## Tipo de evento
 
-Un objeto genérico de {{domxref("Event")}}.
+Un objeto {{domxref("Event")}} genérico.
 
 ## Ejemplos
 
