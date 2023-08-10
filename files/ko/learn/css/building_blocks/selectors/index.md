@@ -39,7 +39,7 @@ slug: Learn/CSS/Building_blocks/Selectors
   </tbody>
 </table>
 
-## 선택자란 무엇인가?
+## 선택자란 무엇인가요?
 
 우리는 이미 선택자 (selector) 를 만났습니다. CSS 선택자는 CSS 규칙의 첫 부분입니다. 규칙 내의 CSS 속성값을 적용하기 위해 어떤 HTML 요소를 선택해야 하는지 브라우저에 알려주는 요소 및 기타 용어의 패턴입니다. 선택자에 의해 선택된 요소들은 **선택자의 주제(subject)** 로 지칭됩니다.
 
