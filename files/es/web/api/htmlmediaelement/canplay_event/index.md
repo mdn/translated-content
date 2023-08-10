@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("HTMLMediaElement")}}
 
-El evento `canplay` es disparado cuando el _{{Glossary("user agent")}}_ puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
+El evento `canplay` es activado cuando el _{{Glossary("user agent")}}_ puede reproducir contenido multimedia, pero estima que no han sido cargados suficientes datos para reproducir el contenido multimedia hasta su final sin tener que parar para cargar más contenido.
 
 Este evento no es cancelable y no se eleva (_bubble_).
 
 ## Sintaxis
 
-Se puede usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecerlo como una propiedad controladora de eventos.
+Se puede usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecerlo como una propiedad manejadora de eventos.
 
 ```js
 addEventListener("canplay", (event) => {});
@@ -27,7 +27,7 @@ Un objeto genérico de {{domxref("Event")}}.
 
 ## Ejemplos
 
-Estos ejemplos agregan un _event listener_ para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese controlador de eventos ha reaccionado al disparo del evento.
+Estos ejemplos agregan un detector de eventos para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese manejador de eventos ha reaccionado a la activación del evento.
 
 Usando `addEventListener()`:
 
@@ -41,7 +41,7 @@ video.addEventListener("canplay", (event) => {
 });
 ```
 
-Usando la propiedad controladora de eventos `oncanplay`:
+Usando la propiedad manejadora de eventos `oncanplay`:
 
 ```js
 const video = document.querySelector("video");
