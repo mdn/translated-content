@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-La Transmisión Adaptativa Dinámica sobre HTTP _(DASH)_ es un protocolo de transmisión adaptativo. Esto significa que permite a una transmisión de video cambiar las tasas de bits con base al rendimiento de la red, para mantener un video reproduciendo.
+La Transmisión Adaptativa Dinámica sobre HTTP _(DASH)_ es un protocolo de transmisión adaptativa. Esto significa que permite a una transmisión de video cambiar las tasas de bits con base al rendimiento de la red, para mantener un video reproduciendo.
 
 ## Soporte de navegadores
 
