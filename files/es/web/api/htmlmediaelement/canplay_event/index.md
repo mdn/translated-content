@@ -13,7 +13,7 @@ Este evento no es cancelable y no se eleva (_bubble_).
 
 ## Sintaxis
 
-Se puede usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecerlo como un manejador de eventos en una propiedad.
+Se puede usar el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establecerlo como una propiedad controladora de eventos.
 
 ```js
 addEventListener("canplay", (event) => {});
@@ -27,7 +27,7 @@ Un objeto genérico de {{domxref("Event")}}.
 
 ## Ejemplos
 
-Estos ejemplos agregan un _event listener_ para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese manejador de eventos ha reaccionado al disparo del evento.
+Estos ejemplos agregan un _event listener_ para el evento `canplay` del objeto HTMLMediaElement, después envían un mensaje cuando ese controlador de eventos ha reaccionado al disparo del evento.
 
 Usando `addEventListener()`:
 
@@ -41,7 +41,7 @@ video.addEventListener("canplay", (event) => {
 });
 ```
 
-Usando la propiedad manejadora de eventos `oncanplay`:
+Usando la propiedad controladora de eventos `oncanplay`:
 
 ```js
 const video = document.querySelector("video");
