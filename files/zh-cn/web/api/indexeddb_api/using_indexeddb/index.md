@@ -328,7 +328,7 @@ request.onerror = (event) => {
 };
 request.onsuccess = (event) => {
   // 对 request.result 做些操作！
-  console.log(`SSN 444-44-4444 对应的名称是 ${request.result.name}`);
+  console.log(`SSN 444-44-4444 对应的名字是 ${request.result.name}`);
 };
 ```
 
@@ -339,7 +339,7 @@ db
   .transaction("customers")
   .objectStore("customers")
   .get("444-44-4444").onsuccess = (event) => {
-  console.log(`SSN 444-44-4444 对应的名称是 ${event.target.result.name}`);
+  console.log(`SSN 444-44-4444 对应的名字是 ${event.target.result.name}`);
 };
 ```
 
@@ -389,7 +389,7 @@ const objectStore = db.transaction("customers").objectStore("customers");
 objectStore.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
-    console.log(`SSN ${cursor.key} 对应的名称是 ${cursor.value.name}`);
+    console.log(`SSN ${cursor.key} 对应的名字是 ${cursor.value.name}`);
     cursor.continue();
   } else {
     console.log("没有更多记录了！");
@@ -450,9 +450,9 @@ index.get("Donna").onsuccess = (event) => {
 index.openCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
-    // cursor.key 是一个名称，就像“Bill”，而 cursor.value 是整个对象。
+    // cursor.key 是名字，如“Bill”，而 cursor.value 是整个对象。
     console.log(
-      `名称：${cursor.key}，SSN：${cursor.value.ssn}，电子邮件：${cursor.value.email}`,
+      `名字：${cursor.key}，SSN：${cursor.value.ssn}，电子邮件：${cursor.value.email}`,
     );
     cursor.continue();
   }
@@ -462,9 +462,9 @@ index.openCursor().onsuccess = (event) => {
 index.openKeyCursor().onsuccess = (event) => {
   const cursor = event.target.result;
   if (cursor) {
-    // cursor.key 是名称，如“Bill”，而 cursor.value 是 SSN。
+    // cursor.key 是名字，如“Bill”，而 cursor.value 是 SSN。
     // 无法直接获取存储对象的其余部分。
-    console.log(`名称：${cursor.key}，SSN：${cursor.primaryKey}`);
+    console.log(`Name: ${cursor.key}, SSN: ${cursor.primaryKey}`);
     cursor.continue();
   }
 };
@@ -475,7 +475,7 @@ index.openKeyCursor().onsuccess = (event) => {
 如果你想要限定你在游标中看到的值的范围，你可以使用 `IDBKeyRange` 对象然后把它作为第一个参数传给 `openCursor()` 或是 `openKeyCursor()`。你可以构造一个只允许一个键的键范围，或者一个具有下限或上限，或者一个既有上限也有下限的。边界可以是“闭合的”（也就是说键范围包含给定的值）或者是“开放的”（也就是说键范围不包括给定的值）。它的工作原理如下：
 
 ```js
-// 仅匹配 "Donna"
+// 仅匹配“Donna”
 const singleKeyRange = IDBKeyRange.only("Donna");
 
 // 匹配所有大于“Bill”的，包括“Bill”
