@@ -1,32 +1,33 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}}
 
-**`trimStart()`** メソッドは、文字列の先頭のホワイトスペースを削除します。 `trimLeft()` はこのメソッドのエイリアスです。
+**`trimStart()`** メソッドは、元の文字列を変更せずに、文字列の先頭のホワイトスペースを削除した新しい文字列を返します。`trimLeft()` はこのメソッドの別名です。
 
 {{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
 ## 構文
 
-```
-str.trimStart();
-str.trimLeft();
+```js-nolint
+trimStart()
+
+trimLeft()
 ```
 
 ### 返値
 
-呼び出した文字列から先頭 (左端) からホワイトスペースを削除した新しい文字列です。
+`str` の先頭のホワイトスペースを取り除いた新しい文字列です。ホワイトスペースは[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)文字と[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)で定義します。
 
-## 解説
+`str` の先頭にホワイトスペースがなかった場合でも、新しい文字列が返されます（基本的には `str` のコピー）。
 
-`trimStart()` と `trimLeft()` メソッドは、左端のホワイトスペースを取り除いた文字列を返します。 `trimLeft()` または `trimStart()` は元の文字列自身の値に影響を与えません。
+### 別名
 
-### エイリアス
-
-{{jsxref("String.prototype.padStart")}} のような関数との一貫性を持たせるため、標準メソッドの名前は `trimStart` となっています。しかし、ウェブの互換性の観点から、 `trimLeft` が `trimStart` のエイリアスとして残されます。エンジンによっては、以下のように解釈されます。
+{{jsxref("String/trim", "trim()")}} が標準化された後、エンジンは標準外の `trimLeft` メソッドも実装しました。しかし {{jsxref("String/padEnd", "padEnd()")}} との整合を取るため、このメソッドが標準化された際、`trimStart` という名前が選択されました。ウェブの互換性の理由から、`trimLeft` も `trimStart` の別名として残っており、全く同じ関数オブジェクトを示します。エンジンによっては次のような意味になります。
 
 ```js
 String.prototype.trimLeft.name === "trimStart";
@@ -36,54 +37,16 @@ String.prototype.trimLeft.name === "trimStart";
 
 ### trimStart() の使用
 
-以下の例では、小文字の文字列 `'foo '` を表示します。
+次の例は `str` の末尾から空白を取り除きますが、先頭からは取り除きません。
 
-```js
-var str = '   foo  ';
+```js-nolint
+let str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // 'foo  '
-```
-
-## ポリフィル
-
-```js
-//https://github.com/FabioVergani/js-Polyfill_String-trimStart
-
-(function(w){
-    var String=w.String, Proto=String.prototype;
-
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-
-
-/*
-ES6:
-(w=>{
-    const String=w.String, Proto=String.prototype;
-
-    ((o,p)=>{
-        if(p in o?o[p]?false:true:true){
-            const r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
-})(window);
-*/
+console.log(str); // 'foo  '
 ```
 
 ## 仕様書
@@ -92,9 +55,10 @@ ES6:
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.trimStart")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.trimStart` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimEnd()")}}
