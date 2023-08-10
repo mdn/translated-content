@@ -58,7 +58,6 @@ build/
 
 # pt-br
 /files/pt-br/web/api/**/*.md
-/files/pt-br/web/css/**/*.md
 /files/pt-br/web/javascript/**/*.md
 
 # ru

@@ -19,7 +19,7 @@ _Media queries_ consistem de um _[media type](/en-US/docs/Web/CSS/@media)_ e pod
 @media (max-width: 600px) {
   .facet_sidebar {
     display: none;
-   }
+  }
 }
 ```
 
