@@ -51,6 +51,3 @@ build/
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
 /files/ja/web/javascript/**/*.md
-
-# pt-br
-/files/pt-br/web/css/**/*.md

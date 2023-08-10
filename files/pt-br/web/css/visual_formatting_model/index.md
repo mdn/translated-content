@@ -122,7 +122,9 @@ Inline-level elements generate _inline-level boxes_ that are defined as boxes pa
 > is an inline box.
 >
 > ```css
-> span { display:inline-block; }
+> span {
+>   display: inline-block;
+> }
 > ```
 >
 > ```html
