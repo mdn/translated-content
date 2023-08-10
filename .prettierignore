@@ -46,7 +46,6 @@ build/
 # The following folders still need a full pass:
 
 # ja
-/files/ja/mdn/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
