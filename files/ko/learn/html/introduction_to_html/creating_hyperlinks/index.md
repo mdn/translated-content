@@ -50,7 +50,10 @@ l10n:
 기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 {{htmlattrxref("href", "a")}} 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
 
 ```html
-<p>나는 <a href="https://www.mozilla.org/en-US/">Mozilla 홈페이지</a>로 향하는 링크를 만들었습니다.</p>
+<p>
+  나는 <a href="https://www.mozilla.org/en-US/">Mozilla 홈페이지</a>로 향하는
+  링크를 만들었습니다.
+</p>
 ```
 
 위 코드의 결과는 다음과 같습니다.
