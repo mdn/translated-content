@@ -22,8 +22,8 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Specification
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                            | Status                   | Comment |
+| ------------------------------------------------------------------------ | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## See also
