@@ -340,7 +340,7 @@ if (3 in arvores) {
 
 O operador `typeof` é utilizado em qualquer uma das seguintes formas:
 
-```js
+```js-nolint
 typeof operando;
 typeof (operando);
 ```
@@ -573,7 +573,7 @@ Você poderia chamar `valide` em cada manipulador de evento `onChange` de um for
 
 O operador de agrupamento `( )` controla a precedência de avaliação de expressões. Por exemplo, você pode substituir a precedência da divisão e multiplicação para que a adição e subtração sejam avaliadas primeiro.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
