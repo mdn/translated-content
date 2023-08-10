@@ -22,7 +22,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 Следующая разметка HTML демонстрирует использование свойства `stack`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Пример трассировки стека</title>
 <body>
