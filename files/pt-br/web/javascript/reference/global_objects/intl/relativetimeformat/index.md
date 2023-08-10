@@ -74,9 +74,9 @@ O exemplo a seguir mostra como criar um formatador de tempo relativo usando a l�
 // Crie um formatador de tempo relativo no seu local
 // com os valores padrão sendo passados explicitamente.
 const rtf = new Intl.RelativeTimeFormat("pt", {
-    localeMatcher: "best fit", // outros valores: "lookup"
-    numeric: "always", // outros valores: "auto"
-    style: "long", // outros valores: "short" ou "narrow"
+  localeMatcher: "best fit", // outros valores: "lookup"
+  numeric: "always", // outros valores: "auto"
+  style: "long", // outros valores: "short" ou "narrow"
 });
 
 // Formatação de tempo relativa usando valor negativo (-1).

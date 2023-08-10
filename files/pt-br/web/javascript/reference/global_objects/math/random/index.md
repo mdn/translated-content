@@ -71,11 +71,11 @@ function getRandomIntInclusive(min, max) {
 
 ## Especificações
 
-| Especificação                                                            | Status                   | Comentário                                                                          |
-| ------------------------------------------------------------------------ | ------------------------ | ----------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definição inicial. JavaScript 1.0 (UNIX Only) / JavaScript 1.1 (Todas plataformas). |
+| Especificação                                          | Status             | Comentário                                                                          |
+| ------------------------------------------------------ | ------------------ | ----------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                    | {{Spec2('ES1')}}   | Definição inicial. JavaScript 1.0 (UNIX Only) / JavaScript 1.1 (Todas plataformas). |
 | {{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}} | {{Spec2('ES5.1')}} |                                                                                     |
-| {{SpecName('ES6', '#sec-math.random', 'Math.random')}} | {{Spec2('ES6')}}     |                                                                                     |
+| {{SpecName('ES6', '#sec-math.random', 'Math.random')}} | {{Spec2('ES6')}}   |                                                                                     |
 
 ## Compatibilidade com navegadores
 
