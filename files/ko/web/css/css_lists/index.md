@@ -23,7 +23,6 @@ spec-urls: https://drafts.csswg.org/css-lists/
 
 - [일관된 리스트 들여쓰기](/ko/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
   - : 서로 다른 브라우저 사이에 일관된 들여쓰기를 이루는 법을 설명합니다.
-
 - [CSS 카운터 사용하기](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : CSS 카운터 속성을 사용하여 목록 카운터를 제어하는 방법을 설명합니다.
 
