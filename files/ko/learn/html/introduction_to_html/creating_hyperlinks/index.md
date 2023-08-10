@@ -103,11 +103,15 @@ img {
 링크에 추가할 수 있는 또 다른 속성은 `title`입니다. Title은 페이지에 포함된 정보 또는 웹 사이트에서 주의해야 할 사항 등 링크에 대한 추가 정보를 포함하고 있습니다.
 
 ```html
-<p>저는
-<a href="https://www.mozilla.org/en-US/"
-   title="The best place to find more information about Mozilla's
-          mission and how to contribute">Mozilla 홈페이지</a>
-로 향하는 링크를 만들었습니다.
+<p>
+  저는
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="The best place to find more information about Mozilla's
+          mission and how to contribute"
+    >Mozilla 홈페이지</a
+  >
+  로 향하는 링크를 만들었습니다.
 </p>
 ```
 
