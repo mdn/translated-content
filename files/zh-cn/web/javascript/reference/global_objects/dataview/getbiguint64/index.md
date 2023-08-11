@@ -37,7 +37,7 @@ A {{jsxref("BigInt")}}.
 
 ## 示例
 
-### Using the `getBigUint64` method
+### 使用 `getBigUint64` 方法
 
 ```js
 var buffer = new ArrayBuffer(8);
