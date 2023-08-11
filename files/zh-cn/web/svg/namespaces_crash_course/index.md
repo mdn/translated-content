@@ -1,5 +1,5 @@
 ---
-title: Namespaces Crash Course
+title: SVG中的命名空间
 slug: Web/SVG/Namespaces_Crash_Course
 ---
 
@@ -51,9 +51,11 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 
 看到没，命名空间其实没有那么难以理解。
 
-#### Declaring namespace prefixes
+<!-- @note The Following Content Was Translated by Yes-Noob -->
 
-XML dialects not only define their own tags, but also their own attributes. By default, attributes don't have a namespace at all, and are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define attributes so that they can be reused on many different elements and still be considered to be the same attribute, independently of the element with which they are used. A very good example of this is the `href` attribute defined by the XLink specification. This attribute is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the attribute belongs to, in this case XLink? Consider the following example.
+#### 声明命名空间前缀
+
+XML的“方言”不仅仅是定义它们自己的标签，而且还要定义它们的属性。默认情况下，属性根本**没有命名空间**，只有当它们出现在本身具有唯一名称的元素上时，我们才知道它们是唯一的。然而，有时我们还需要定义属性，以便它们可以在许多不同的元素上重复使用，并且仍然被视为同一属性，而与使用它们的元素无关。XLink规范定义的“href”属性就是一个很好的例子。该属性通常被其他XML方言用作链接到外部资源的手段。但是如何告诉用户代理（如Firefox）属性属于哪种“方言”（如XLink）？请看以下示例：
 
 ```plain
 <svg xmlns="http://www.w3.org/2000/svg"
@@ -62,15 +64,15 @@ XML dialects not only define their own tags, but also their own attributes. By d
 </svg>
 ```
 
-This example has the rather unusual looking attribute `xmlns:xlink`. As you may guess from the first 'xmlns' part, this is another namespace declaration. However, instead of setting the default namespace, this namespace declaration sets the namespace for something called a "namespace prefix". In this case, we have chosen to use the prefix `xlink` (the second part) since the prefix will be used to tell the user agent about attributes that belong to XLink.
+这个例子有一个特殊的属性 `xmlns:xlink`。你或许可以从`xmlns`中推断出意思：这是另一种命名空间声明。除了作为设置默认命名空间的一个替代方案，这种命名空间声明使用了添加“前缀”的方式。这个例子里，我们选择了使用前缀`xlink`，这个前缀将告诉用户代理（浏览器）关于属于XLink的属性。
 
-As their name suggests, namespace prefixes are used to prefix attribute names and tag names. This is done by putting the namespace prefix and a colon before the attribute name as shown on the `<script>` tag in the example above. This tells the user agent that that particular attribute belongs to the namespace assigned to the namespace prefix (XLink), and is an attribute that can be used with the same meaning on other tags.
+顾名思义，命名空间前缀用于给属性名和标签名加前缀。我们给标签或者属性前面加上在代码上面展示前缀和冒号`:`来完成这件事，就像上面例子中的`<script>`标记所示。这告诉浏览器，一个属于这个命名空间的特殊属性分配在了这个命名空间前缀中（即XLink）中，而且与其他标签有相同的意义。
 
-Note that it is an XML error to use a prefix that hasn't been bound to a namespace name. The binding created by the `xmlns:xlink` attribute in the example above is absolutely essential if the `xlink:href` attribute isn't to cause an error. This XLink attribute is also frequently used in SVG on the `<a>`, `<use>` and `<image>` tags among others, so it's a good idea to always include the XLink declaration in your documents.
+值得注意的是，使用没有绑定命名空间的前缀在XML里是一个错误。如果`xlink:href`属性不会导致错误，那么上面示例中由`xmlns:xlink`属性创建的绑定是必需的。XLink属性也是经常在SVG中的`<a>`，`<use`，`<image>`等等标签里使用。因此，最好始终在文档中包含XLink声明。
 
-As an aside, it's useful to know that namespace prefixes can also be used for tag names. This tells the user agent that that particular tag (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like that in the following example:
+题外话，知道名称空间前缀可以用于标记名是非常有用的。这告诉用户代理该特定标记（**但这次不是它的子标记**）属于分配给前缀的名称空间。如果您在以下示例中遇到这样的标记，了解这一点将为你省去一些困惑：
 
-```plain
+```html
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:svg="http://www.w3.org/2000/svg">
   <body>
@@ -82,15 +84,17 @@ As an aside, it's useful to know that namespace prefixes can also be used for ta
 </html>
 ```
 
-Note that because a namespace prefix is used for the `<svg:svg>` tag and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general though it is better to redeclare the default namespace rather than prefix lots of tags in this way.
+因为有了名称空间前缀用于`<svg:svg>`标记及其子标记`<svg:circle>`，我们无需重新声明默认名称空间。不过，通常情况下，重新声明默认名称空间比以这种方式为许多标记加前缀要好一些。
 
-### Scripting in namespaced XML
+### 使用带有命名空间的XML
 
-Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.
+命名空间不仅对标记有影响，还可以影响代码。如果你编写诸如SVG这样的带有命名空间的代码，请看。
 
-The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, [it is important to use the namespace aware methods](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
+[一级DOM](http://www.w3.org/TR/REC-DOM-Level-1/) 正式提议被创建于[original Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) 提议被发布之前。因此，DOM1不是一个实际的命名空间。这导致了有SVG之类的有命名空间的XML。为了解决这些问题，[核心二级DOM](http://www.w3.org/TR/DOM-Level-2-Core/)增加了所有适用的DOM Level 1方法的命名空间等价物。当敲SVG代码的时候，[使用实际的命名空间方法是很重要的](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)。不说那么多，下表列出了不应在SVG中使用的DOM1方法，以及应使用的等效DOM2方法。
 
-| DOM1 (don't use)                                                                                             | DOM2 (use these instead!)                                                                                                                                                      |
+> 译者注：原文有点难翻，English: The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, [it is important to use the namespace aware methods](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
+
+| DOM1 (不要用这些)                                                                                             | DOM2 (用这些)                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [createAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                            |
 | [createElement](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                |
@@ -105,33 +109,33 @@ The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was crea
 | [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
 | [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+所有DOM2命名空间内方法第一个参数必须是这个元素的命名空间名称（又称命名空间URI）或者问题里的属性。对于SVG **元素**这始终是`http://www.w3.org/2000/svg`。然而请注意，[XML 1.1的命名空间](http://www.w3.org/TR/xml-names11/#defaulting)正式标准规定没有前缀的属性命名空间名就没有意义。换句话说，尽管属性属于标记的名称空间，但不使用标记的名称名称空间名称。相反，**必须使用null作为不合格（无前缀）属性的命名空间名称**。所以，为了使用 `document.createElementNS()`方法创建一个SVG `rect` 元素，你必须写：
 
-```plain
+```javascript
 document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 ```
 
-But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you must write:
+不过为了在SVG `rect`元素里得到 **属性** x的值，必须这样写：
 
-```plain
+```javascript
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
+请注意，对于带有名称空间前缀的属性（与标记不属于同一XML方言的属性），情况并非如此。诸如`xlink:href`属性之类的属性需要分配给该前缀的命名空间名称。因此，要获得SVG中`<a>`元素的`xlink:href`属性的值，你需要这样写：
 
-```plain
+```javascript
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
 ```
 
-For setting attributes that have a namespace, it is recommended (but not required) that you also include their prefix in the second argument so that the DOM can later be more easily converted back to XML (if for instance you want to send it back to the server). For example:
+为了设置一个带有命名空间的属性，推荐（但不是必须）你仍然在第二个参数中包含它们的前缀，DOM之后可以更轻松地转换回xml（如果你想把实例发回服务器），比如（注意第二个参数）：
 
-```plain
+```javascript
 elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
 ```
 
-As a final example, here's a demonstration of how you should dynamically create an `<image>` element using script:
+再提供一个例子，讲述一下应该如何用js动态创建一个`<image>`元素。
 
-```plain
+```javascript
 var SVG_NS = 'http://www.w3.org/2000/svg';
 var XLink_NS = 'http://www.w3.org/1999/xlink';
 var image = document.createElementNS(SVG_NS, 'image');
@@ -140,11 +144,11 @@ image.setAttributeNS(null, 'height', '100');
 image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 ```
 
-### Conclusion
+### 最后
 
-Make sure you always declare the namespaces you use in your XML files. If you don't, user agents such as Firefox won't recognize your content and will simply show the XML markup or inform the user that there's an error in the XML. It's a good idea to use a template that includes all the commonly used namespace declarations when creating new SVG files. If you don't already have one, make one up starting with the following code:
+请确保你总是在XML文件中声明一个命名空间，不然的话，像Firefox这类的用户代理无法辨认你的XML文件内容，然后直接展示纯XML文本或者提醒用户XML里有一个错误。当创建SVG时，使用一个包含所有普遍使用的的命名空间声明的模版字符串。如果你没有的话，就写一个像这样开头的XML代码吧：
 
-```plain
+```xml
 <svg version="1.1"
      baseProfile="full"
      xmlns="http://www.w3.org/2000/svg"
@@ -153,8 +157,8 @@ Make sure you always declare the namespaces you use in your XML files. If you do
 </svg>
 ```
 
-Even if you don't use all those namespaces in a particular document, there's no harm in including the namespace declarations. It may save you from some annoying errors if you end up adding content from one of the unused namespaces at a later date.
+即使你在某些特别的文档里不用全部的这些命名空间，包含命名空间声明也没什么坏处。如果你在以后添加未使用的名称空间中的内容，它甚至可能帮你避免令人讨厌的bug。
 
-### A full example
+### 参见
 
-For a full example see [SVG: Namespaces Crash Course: Example](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example).
+查看所有例子参见： [SVG: Namespaces Crash Course: Example](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example).
