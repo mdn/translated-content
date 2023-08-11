@@ -44,7 +44,7 @@ output.value = comment.data;
 const span = document.querySelector("span");
 const textnode = span.nextSibling;
 
-textnode.data = "このテキストは 'textnode.data' を使用して設定されました。"
+textnode.data = "このテキストは 'textnode.data' を使用して設定されました。";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

@@ -1,7 +1,6 @@
 ---
 title: map
 slug: Web/HTML/Element/map
-original_slug: Web/HTML/Elemento/map
 ---
 
 ### Definición

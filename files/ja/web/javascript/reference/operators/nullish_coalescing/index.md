@@ -1,7 +1,6 @@
 ---
 title: Null 合体演算子 (??)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}
@@ -17,7 +16,7 @@ Null 合体演算子は[演算子の優先順位](/ja/docs/Web/JavaScript/Refere
 ## 構文
 
 ```js
-leftExpr ?? rightExpr
+leftExpr ?? rightExpr;
 ```
 
 ## 例
@@ -48,7 +47,7 @@ console.log(valC); // 42
 let foo;
 
 //  foo には何も値が代入されていないので、 undefined のままです
-let someDummyText = foo || 'Hello!';
+let someDummyText = foo || "Hello!";
 ```
 
 しかし、`||` が論理演算子であるため、左辺の値は評価によって強制的に論理値になり、偽値（`0`, `''`, `NaN`, `null`, `undefined`）が返されることはありません。この動作は、 `0` や `''`, `NaN` を有効な値と考えている場合、予期せぬ結果を引き起こす可能性があります。
@@ -59,19 +58,19 @@ let text = "";
 
 let qty = count || 42;
 let message = text || "hi!";
-console.log(qty);     // 42 であり 0 ではない
+console.log(qty); // 42 であり 0 ではない
 console.log(message); // "hi!" であり "" ではない
 ```
 
 Null 合体演算子は、左辺の値が `null` もしくは `undefined` のどちらか（その他の falsy な値は含みません）に評価された場合にのみ右辺の値を返すことで、この潜在的な危険を回避します。
 
 ```js
-let myText = ''; // 空文字列（偽値）
+let myText = ""; // 空文字列（偽値）
 
-let notFalsyText = myText || 'Hello world';
+let notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? 'Hi neighborhood';
+let preservingFalsy = myText ?? "Hi neighborhood";
 console.log(preservingFalsy); // '' (myText は undefined でも null でもない)
 ```
 
@@ -80,15 +79,24 @@ console.log(preservingFalsy); // '' (myText は undefined でも null でもな�
 OR 演算子や AND 演算子と同様に、左辺が `null` でも `undefined` でもないことが判明した場合、右辺の式は評価されません。
 
 ```js
-function A() { console.log('A was called'); return undefined;}
-function B() { console.log('B was called'); return false;}
-function C() { console.log('C was called'); return "foo";}
+function A() {
+  console.log("A was called");
+  return undefined;
+}
+function B() {
+  console.log("B was called");
+  return false;
+}
+function C() {
+  console.log("C was called");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // "A was called"、 "C was called" のあと "foo" と出力
 // A() は undefined を返すため、両方の式が評価されるため
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // "B was called" のあと "false" と出力
 // B() は false を返すため（そして null も undefined も返さない）、
 // 右辺の式は評価されない

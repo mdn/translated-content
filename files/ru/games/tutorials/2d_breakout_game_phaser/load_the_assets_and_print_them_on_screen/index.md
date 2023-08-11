@@ -1,16 +1,6 @@
 ---
 title: Загрузка ресурсов и их вывод
-slug: >-
-  Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-translation_of: >-
-  Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
-original_slug: >-
-  Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen
+slug: Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball")}}

@@ -1,7 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-original_slug: Web/HTML/Elemento/script
 ---
 
 ## Resumen

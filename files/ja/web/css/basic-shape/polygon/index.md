@@ -1,7 +1,6 @@
 ---
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
-original_slug: Web/CSS/basic-shape/polygon()
 ---
 
 {{CSSRef}}

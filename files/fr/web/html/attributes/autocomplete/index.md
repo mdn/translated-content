@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : autocomplete"
 slug: Web/HTML/Attributes/autocomplete
-translation_of: Web/HTML/Attributes/autocomplete
 ---
 
 {{HTMLSidebar}}

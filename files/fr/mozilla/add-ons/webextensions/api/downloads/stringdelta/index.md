@@ -1,7 +1,6 @@
 ---
 title: downloads.StringDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
 ---
 
 {{AddonSidebar()}}

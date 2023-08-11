@@ -1,7 +1,6 @@
 ---
 title: DoubleRange
 slug: Web/API/MediaTrackConstraints
-translation_of: Web/API/DoubleRange
 ---
 
 {{APIRef("Media Capture and Streams")}}

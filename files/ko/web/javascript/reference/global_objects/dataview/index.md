@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView
 다중 바이트 숫자 자료형은 장치의 아키텍처에 따라 메모리에 다르게 표현됩니다. {{glossary("endianness", "엔디언")}} 용어 사전을 참고하세요. `DataView` 접근자는 코드를 실행하는 컴퓨터의 엔디언에 관계 없이 데이터의 접근법을 명시적으로 통제할 수 있습니다.
 
 ```js
-var littleEndian = (function() {
+var littleEndian = (function () {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.
@@ -30,14 +30,16 @@ JavaScript는 64비트 정수형 값에 대한 표준 지원을 아직 제공하
 ```js
 function getUint64(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
-  const left =  dataview.getUint32(byteOffset, littleEndian);
-  const right = dataview.getUint32(byteOffset+4, littleEndian);
+  const left = dataview.getUint32(byteOffset, littleEndian);
+  const right = dataview.getUint32(byteOffset + 4, littleEndian);
 
   // combine the two 32-bit values
-  const combined = littleEndian? left + 2**32*right : 2**32*left + right;
+  const combined = littleEndian
+    ? left + 2 ** 32 * right
+    : 2 ** 32 * left + right;
 
   if (!Number.isSafeInteger(combined))
-    console.warn(combined, 'exceeds MAX_SAFE_INTEGER. Precision may be lost');
+    console.warn(combined, "exceeds MAX_SAFE_INTEGER. Precision may be lost");
 
   return combined;
 }
@@ -46,14 +48,20 @@ function getUint64(dataview, byteOffset, littleEndian) {
 완전한 범위의 64비트를 지원해야 할 경우 {{jsxref("BigInt")}}를 사용하세요. 단, `BigInt`는 사용자 계층 라이브러리 구현체보다는 훨씬 빠르지만, 가변 크기라는 성질로 인해 JavaScript 32비트 정수보다는 항상 느릴 수밖에 없습니다.
 
 ```js
-const BigInt = window.BigInt, bigThirtyTwo = BigInt(32), bigZero = BigInt(0);
+const BigInt = window.BigInt,
+  bigThirtyTwo = BigInt(32),
+  bigZero = BigInt(0);
 function getUint64BigInt(dataview, byteOffset, littleEndian) {
   // split 64-bit number into two 32-bit (4-byte) parts
-  const left = BigInt(dataview.getUint32(byteOffset|0, !!littleEndian)>>>0);
-  const right = BigInt(dataview.getUint32((byteOffset|0) + 4|0, !!littleEndian)>>>0);
+  const left = BigInt(dataview.getUint32(byteOffset | 0, !!littleEndian) >>> 0);
+  const right = BigInt(
+    dataview.getUint32(((byteOffset | 0) + 4) | 0, !!littleEndian) >>> 0,
+  );
 
   // combine the two 32-bit values and return
-  return littleEndian ? (right<<bigThirtyTwo)|left : (left<<bigThirtyTwo)|right;
+  return littleEndian
+    ? (right << bigThirtyTwo) | left
+    : (left << bigThirtyTwo) | right;
 }
 ```
 

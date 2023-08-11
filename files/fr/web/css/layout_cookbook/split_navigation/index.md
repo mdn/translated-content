@@ -1,7 +1,6 @@
 ---
 title: Navigation segmentée
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-translation_of: Web/CSS/Layout_cookbook/Split_Navigation
 ---
 
 {{CSSRef}}

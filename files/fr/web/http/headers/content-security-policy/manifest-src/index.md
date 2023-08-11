@@ -1,7 +1,6 @@
 ---
 title: "CSP : manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 ---
 
 {{HTTPSidebar}}

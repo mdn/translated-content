@@ -29,38 +29,33 @@ A instrução vazia às vezes é usada com instruções de loop. Veja o exemplo 
 var arr = [1, 2, 3];
 
 // Assign all array values to 0
-for (i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
+for (i = 0; i < arr.length; arr[i++] = 0 /* empty statement */);
 
-console.log(arr)
+console.log(arr);
 // [0, 0, 0]
 ```
 
 **Nota:** É uma boa ideia comentar o uso intencional da declaração vazia, pois não é realmente óbvio distinguir entre um ponto e vírgula normal. No exemplo a seguir, o uso provavelmente não é intencional:
 
-```js
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this gets always executed!!!
+```js-nolint
+if (condition) // Caution, this "if" does nothing!
+  killTheUniverse(); // So this gets always executed!!!
 ```
 
 Outro Exemplo: Uma declaração [`if...else`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else) declaração sem chaves ({ }). Se três for verdadeiro, nada acontecerá, quatro não importa e também a função launchRocket ( ) no caso contrário não será executada.
 
 ```js
-if (one)
-  doOne();
-else if (two)
-  doTwo();
-else if (three)
-  ; // nothing here
-else if (four)
-  doFour();
-else
-  launchRocket();
+if (one) doOne();
+else if (two) doTwo();
+else if (three) // nothing here
+else if (four) doFour();
+else launchRocket();
 ```
 
 ## Especificações
 
-| Especificações                                                                           |
-| ---------------------------------------------------------------------------------------- |
+| Especificações                                                     |
+| ------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} |
 
 ## Browsers compatíveis

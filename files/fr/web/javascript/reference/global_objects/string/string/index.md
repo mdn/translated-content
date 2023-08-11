@@ -1,7 +1,6 @@
 ---
 title: Constructeur String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/String
 ---
 
 {{JSRef}}

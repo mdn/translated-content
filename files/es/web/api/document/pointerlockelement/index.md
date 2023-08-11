@@ -1,7 +1,6 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
-original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 ---
 
 {{APIRef("DOM")}}

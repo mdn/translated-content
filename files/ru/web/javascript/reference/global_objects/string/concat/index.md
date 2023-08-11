@@ -1,13 +1,6 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -38,8 +31,8 @@ str.concat(string2, string3[, ..., stringN])
 В следующем примере несколько строк объединяются в одну.
 
 ```js
-var hello = 'Привет, ';
-console.log(hello.concat('Кевин', ', удачного дня.'));
+var hello = "Привет, ";
+console.log(hello.concat("Кевин", ", удачного дня."));
 
 /* Привет, Кевин, удачного дня. */
 ```
@@ -50,11 +43,11 @@ console.log(hello.concat('Кевин', ', удачного дня.'));
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                                                  | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                 | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                   | Статус             | Комментарии                                            |
+| ------------------------------------------------------------------------------ | ------------------ | ------------------------------------------------------ |
+| ECMAScript 3-е издание.                                                        | Стандарт           | Изначальное определение. Реализована в JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}              | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

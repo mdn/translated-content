@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 ## 구문
 
 ```js
-entries()
+entries();
 ```
 
 ### 반환 값
@@ -64,7 +64,6 @@ for (const element of [, "a"].entries()) {
 }
 // [0, undefined]
 // [1, 'a']
-
 ```
 
 ## 명세서

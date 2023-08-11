@@ -1,7 +1,6 @@
 ---
 title: clear()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
 
 {{AddonSidebar()}}

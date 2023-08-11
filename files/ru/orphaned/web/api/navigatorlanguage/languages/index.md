@@ -1,8 +1,6 @@
 ---
 title: NavigatorLanguage.languages
 slug: orphaned/Web/API/NavigatorLanguage/languages
-translation_of: Web/API/NavigatorLanguage/languages
-original_slug: Web/API/NavigatorLanguage/languages
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

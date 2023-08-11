@@ -1,7 +1,6 @@
 ---
 title: Svelte 中的動態行為：變數及屬性
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
 ---
 
 {{LearnSidebar}}

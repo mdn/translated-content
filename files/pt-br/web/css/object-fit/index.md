@@ -43,30 +43,29 @@ object-fit: scale-down
 ```html
 <div>
   <h2>object-fit: fill</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow" />
 
   <h2>object-fit: contain</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow" />
 
   <h2>object-fit: cover</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow" />
 
   <h2>object-fit: none</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="none narrow" />
 
   <h2>object-fit: scale-down</h2>
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down" />
 
-  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
+  <img src="mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow" />
 </div>
 ```
 
@@ -74,7 +73,9 @@ object-fit: scale-down
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }
@@ -126,8 +127,8 @@ img {
 
 ## Specifications
 
-| Specification                                                                    | Status                           | Comment                                               |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| Specification                                                | Status                   | Comment                                               |
+| ------------------------------------------------------------ | ------------------------ | ----------------------------------------------------- |
 | {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | The `from-image` and `flip` keywords have been added. |
 | {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Initial specification                                 |
 

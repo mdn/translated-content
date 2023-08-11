@@ -1,7 +1,6 @@
 ---
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
-translation_of: Web/API/VideoTrack/id
 ---
 
 {{APIRef("HTML DOM")}}

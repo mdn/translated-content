@@ -17,7 +17,7 @@ No Internet Explorer, a propriedade timeout pode ser usada apenas depois de o m�
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+xhr.open("GET", "/server", true);
 
 xhr.timeout = 2000; // tempo em milisegundos
 
@@ -34,6 +34,8 @@ xhr.send(null);
 
 ## Especificações
 
-| Especificação                                                                | Status                               | Comentários            |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

@@ -132,7 +132,7 @@ CSS
 
 JavaScript
 
-- [DOMContentLoaded](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)
 - [垃圾回收（GC）](/zh-CN/docs/Glossary/Garbage_collection)
 - [requestAnimationFrame](/zh-CN/docs/Web/API/window/requestAnimationFrame)
 

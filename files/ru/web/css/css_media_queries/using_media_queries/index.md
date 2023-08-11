@@ -1,17 +1,6 @@
 ---
 title: Использование медиавыражений
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-tags:
-  - Веб
-  - Медиа
-  - Медиа вёрстка
-  - Медиавыражения
-  - Отзывчивый дизайн
-  - Продвинутый
-  - Резиновая вёрстка
-  - Руководство
-translation_of: Web/CSS/Media_Queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{cssref}}
@@ -131,7 +120,10 @@ As another example, the following media query:
 The `only` keyword prevents older browsers that do not support media queries with media features from applying the given styles. _It has no effect on modern browsers._
 
 ```html
-<link rel="stylesheet" media="only screen and (color)" href="modern-styles.css" />
+<link
+  rel="stylesheet"
+  media="only screen and (color)"
+  href="modern-styles.css" />
 ```
 
 ## Смотрите также

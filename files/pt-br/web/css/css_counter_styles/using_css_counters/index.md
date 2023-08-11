@@ -1,7 +1,6 @@
 ---
 title: Using CSS counters
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -16,10 +15,10 @@ Para usar um contador, tem quer definir um valor para ele (ele é 0 default). Pa
 
 ```css
 body {
-  counter-reset: section;                   /* Set the section counter to 0 */
+  counter-reset: section; /* Set the section counter to 0 */
 }
 h3::before {
-  counter-increment: section;               /* Increment the section counter*/
+  counter-increment: section; /* Increment the section counter*/
   content: "Section" counter(section) ": "; /* Display the counter */
 }
 ```
@@ -40,18 +39,18 @@ Um contador CSS pode ser especialmente útil para fazer listas descritas porque 
 
 ```css
 ol {
-  counter-reset: section;                /* Creates a new instance of the
+  counter-reset: section; /* Creates a new instance of the
                                             section counter with each ol
                                             element */
   list-style-type: none;
 }
 li::before {
-  counter-increment: section;            /* Increments only this instance
+  counter-increment: section; /* Increments only this instance
                                             of the section counter */
-  content: counters(section,".") " ";    /* Adds the value of all instances
+  content: counters(section, ".") " "; /* Adds the value of all instances
                                             of the section counter separated
                                             by a ".". */
-                                         /* if you need to support < IE8 then
+  /* if you need to support < IE8 then
                                             make sure there is no space after
                                             the ',' */
 }
@@ -59,7 +58,7 @@ li::before {
 
 Combinado com o seguinte HTML:
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->
@@ -95,8 +94,8 @@ Produz este resultado:
 
 ## Especificações
 
-| Specification                                                                                            | Status                   | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
+| Specification                                                                   | Status              | Comment |
+| ------------------------------------------------------------------------------- | ------------------- | ------- |
 | {{SpecName('CSS2.1', 'generate.html#generate.html#counters', 'counter-reset')}} | {{Spec2('CSS2.1')}} |         |
 
 ## Veja mais

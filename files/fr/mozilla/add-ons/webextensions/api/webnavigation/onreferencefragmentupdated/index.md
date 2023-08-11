@@ -1,7 +1,6 @@
 ---
 title: webNavigation.onReferenceFragmentUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 ---
 
 {{AddonSidebar()}}Lancé si [identificateur dee fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié. Par exemple, si une page implémente une table des matières à l'aide de fragments et que l'utilisateur clique sur une entrée dans la table des matières, cet événement se déclenche. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.

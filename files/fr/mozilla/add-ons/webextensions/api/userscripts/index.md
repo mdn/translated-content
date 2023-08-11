@@ -1,7 +1,6 @@
 ---
 title: userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-original_slug: Web/CSS/porcentaje
 ---
 
 {{CSSRef}}

@@ -31,23 +31,23 @@ O método `big()` cria uma string dentro de uma tag `<big>`:
 Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar o tamanho de uma string:
 
 ```js
-var worldString = 'Olá, mundo';
+var worldString = "Olá, mundo";
 
-console.log(worldString.small());     // <small>Olá, mundo</small>
-console.log(worldString.big());       // <big>Olá, mundo</big>
+console.log(worldString.small()); // <small>Olá, mundo</small>
+console.log(worldString.big()); // <big>Olá, mundo</big>
 console.log(worldString.fontsize(7)); // <fontsize=7>Olá, Mundo</fontsize>
 ```
 
 Com o objeto `element.style` você pode selecionar o atributo `style` do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
-document.getElementById('#oIdDoElemento').style.fontSize = '2em';
+document.getElementById("#oIdDoElemento").style.fontSize = "2em";
 ```
 
 ## Especificações
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
+| Specification                                                                |
+| ---------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}} |
 
 ## Compatibilidade com navegadores

@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
 
 {{JSRef}}
@@ -42,10 +34,10 @@ array.reverse()
 В следующем примере создаётся массив `myArray`, содержащий три элемента, а затем массив переворачивается.
 
 ```js
-var myArray = ['один', 'два', 'три'];
+var myArray = ["один", "два", "три"];
 myArray.reverse();
 
-console.log(myArray) // ['три', 'два', 'один']
+console.log(myArray); // ['три', 'два', 'один']
 ```
 
 ## Спецификации

@@ -1,7 +1,6 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-original_slug: XHTML
 ---
 
 **XHTML** es a [XML](/es/XML) como [HTML](/es/HTML) es a [SGML](/es/SGML). Es decir, XHTML es un lenguaje de marcado que es similar al HTML, pero con un sintaxis más estricta. Dos versiones de XHTML han sido terminadas por el [W3C](http://www.w3.org/):

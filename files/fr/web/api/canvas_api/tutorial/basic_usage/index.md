@@ -1,7 +1,6 @@
 ---
 title: Utilisation de base des canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}

@@ -1,12 +1,8 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - DOM
-  - JavaScript
-translation_of: Web/API/Document/images
-original_slug: DOM/document.images
 ---
+
 {{ ApiRef() }}
 
 ### Кратко об объекте
@@ -15,20 +11,20 @@ original_slug: DOM/document.images
 
 ### Синтаксис
 
-```
+```js
 var htmlCollection = document.images;
 ```
 
 ### Пример
 
-```
+```js
 var images = document.images;
 
-for(var i = 0; i < images.length; i++) {
-    if(images[i].src == "banner.gif") {
-      alert('Баннер найден!');
-    };
-};
+for (var i = 0; i < images.length; i++) {
+  if (images[i].src == "banner.gif") {
+    alert("Баннер найден!");
+  }
+}
 ```
 
 ### Примечания
@@ -37,6 +33,10 @@ for(var i = 0; i < images.length; i++) {
 
 `document.images` является частью DOM HTML, и работает только в HTML документах.
 
-### Спецификация
+## Спецификации
 
-[DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

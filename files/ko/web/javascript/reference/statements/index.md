@@ -74,6 +74,7 @@ JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩
 - {{jsxref("Statements/import", "import")}}
   - : 외부 모듈, 다른 스크립트에서 내보낸 함수를 가져오는데 사용됩니다.
 - {{jsxref("Statements/label", "label")}}
+
   - : `break` 또는 `continue` 문을 사용하여 참조할 수 있는 식별자 있는 문을 제공합니다.
 
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}

@@ -41,22 +41,22 @@ O Unicode atribui um valor numérico exclusivo, denominado _ponto de código_, a
 - O ponto de código para `"n"` (U+006E) seguido pelo ponto de código para o til (U+0303).
 
 ```js
-let string1 = '\u00F1';
-let string2 = '\u006E\u0303';
+let string1 = "\u00F1";
+let string2 = "\u006E\u0303";
 
-console.log(string1);  //  retorna ñ
-console.log(string2);  //  retorna ñ
+console.log(string1); //  retorna ñ
+console.log(string2); //  retorna ñ
 ```
 
 No entanto, como os pontos de código são diferentes, a comparação de strings não os tratará como iguais. E como o número de pontos de código em cada versão é diferente, eles até mesmo possuem comprimentos diferentes.
 
 ```js
-let string1 = '\u00F1';            // ñ
-let string2 = '\u006E\u0303';      // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
 console.log(string1 === string2); // retorna false
-console.log(string1.length);      // retorna 1
-console.log(string2.length);      // retorna 2
+console.log(string1.length); // retorna 1
+console.log(string2.length); // retorna 2
 ```
 
 O método `normalize()` ajuda a resolver esse problema convertendo uma string em uma forma normalizada comum para todas as sequências de pontos de código que representam os mesmos caracteres. Existem duas principais formas de normalização, uma baseada na **equivalência canônica** e a outra baseada na **compatibilidade**.
@@ -68,15 +68,15 @@ Em Unicode, duas sequências de pontos de código têm equivalência canônica s
 Você pode usar o `normalize()` usando os argumentos `"NFD"` ou `"NFC"` para produzir uma forma de string que será a mesma para todas as strings canonicamente equivalentes. No exemplo abaixo, normalizamos duas representações do caractere `"ñ"`:
 
 ```js
-let string1 = '\u00F1';           // ñ
-let string2 = '\u006E\u0303';     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFD');
-string2 = string2.normalize('NFD');
+string1 = string1.normalize("NFD");
+string2 = string2.normalize("NFD");
 
 console.log(string1 === string2); // retorna true
-console.log(string1.length);      // retorna 2
-console.log(string2.length);      // retorna 2
+console.log(string1.length); // retorna 2
+console.log(string2.length); // retorna 2
 ```
 
 #### Formas compostas e decompostas
@@ -86,15 +86,15 @@ Observe que o comprimento da forma normalizada em `"NFD"` é `2`. Isso porque `"
 Você pode especificar `"NFC"` para obter a forma canônica **composta**, na qual vários pontos de código são substituídos por pontos de código únicos sempre que possível. A forma canônica composta para `"ñ"` é `"\u00F1"`:
 
 ```js
-let string1 = '\u00F1';                           // ñ
-let string2 = '\u006E\u0303';                     // ñ
+let string1 = "\u00F1"; // ñ
+let string2 = "\u006E\u0303"; // ñ
 
-string1 = string1.normalize('NFC');
-string2 = string2.normalize('NFC');
+string1 = string1.normalize("NFC");
+string2 = string2.normalize("NFC");
 
-console.log(string1 === string2);                 // true
-console.log(string1.length);                      // 1
-console.log(string2.length);                      // 1
+console.log(string1 === string2); // true
+console.log(string1.length); // 1
+console.log(string2.length); // 1
 console.log(string2.codePointAt(0).toString(16)); // f1
 ```
 
@@ -114,23 +114,23 @@ Em alguns aspectos (como classificação), eles devem ser tratados como equivale
 Você pode usar o `normalize()` usando os argumentos `"NFKD"` ou `"NFKC"` para produzir uma forma de string que será a mesma para todas as strings compatíveis:
 
 ```js
-let string1 = '\uFB00';
-let string2 = '\u0066\u0066';
+let string1 = "\uFB00";
+let string2 = "\u0066\u0066";
 
-console.log(string1);             // ﬀ
-console.log(string2);             // ff
+console.log(string1); // ﬀ
+console.log(string2); // ff
 console.log(string1 === string2); // false
-console.log(string1.length);      // 1
-console.log(string2.length);      // 2
+console.log(string1.length); // 1
+console.log(string2.length); // 2
 
-string1 = string1.normalize('NFKD');
-string2 = string2.normalize('NFKD');
+string1 = string1.normalize("NFKD");
+string2 = string2.normalize("NFKD");
 
-console.log(string1);             // ff <- aparência visual modificada
-console.log(string2);             // ff
+console.log(string1); // ff <- aparência visual modificada
+console.log(string2); // ff
 console.log(string1 === string2); // true
-console.log(string1.length);      // 2
-console.log(string2.length);      // 2
+console.log(string1.length); // 2
+console.log(string2.length); // 2
 ```
 
 Ao aplicar a normalização de compatibilidade, é importante considerar o que você pretende fazer com as strings, uma vez que a forma normalizada pode não ser apropriada para as aplicações. No exemplo acima, a normalização é apropriada para pesquisa, porque permite que um usuário encontre a string pesquisando por `"f"`. Mas pode não ser apropriado para exibição, porque a representação visual é diferente.
@@ -146,44 +146,40 @@ Como na normalização canônica, você pode solicitar formulários compatíveis
 
 // U+1E9B: CARACTERE LATINO - LETRA S COMPRIDA COM PONTO ACIMA
 // U+0323: COMBINANDO PONTO ABAIXO
-var str = '\u1E9B\u0323';
-
+var str = "\u1E9B\u0323";
 
 // Formato de Normalização Canônico de Composição (NFC)
 
 // U+1E9B: CARACTERE LATINO - LETRA S COMPRIDA COM PONTO ACIMA
 // U+0323: COMBINANDO PONTO ABAIXO
-str.normalize('NFC'); // '\u1E9B\u0323'
-str.normalize();      // igual à linha de cima
-
+str.normalize("NFC"); // '\u1E9B\u0323'
+str.normalize(); // igual à linha de cima
 
 // Formato de Normalização Canônico de Decomposição (NFD)
 
 // U+017F: CARACTERE LATINO - LETRA S COMPRIDA
 // U+0323: COMBINANDO PONTO ABAIXO
 // U+0307: COMBINANDO PONTO ACIMA
-str.normalize('NFD'); // '\u017F\u0323\u0307'
-
+str.normalize("NFD"); // '\u017F\u0323\u0307'
 
 // Formato de Normalização de Compatibilidade de Composição. (NFKC)
 
 // U+1E69: CARACTERE LATINO - LETRA S COMPRIDA COM PONTO ACIMA E ABAIXO
-str.normalize('NFKC'); // '\u1E69'
-
+str.normalize("NFKC"); // '\u1E69'
 
 // Formato de Normalização de Compatibilidade de Decomposição (NFKD)
 
 // U+0073: CARACTERE LATINO - LETRA S COMPRIDA
 // U+0323: COMBINANDO PONTO ABAIXO
 // U+0307: COMBINANDO PONTO ACIMA
-str.normalize('NFKD'); // '\u0073\u0323\u0307'
+str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                                                            | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

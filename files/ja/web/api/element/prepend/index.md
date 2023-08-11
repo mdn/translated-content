@@ -2,7 +2,6 @@
 title: "Element: prepend() メソッド"
 short-title: prepend()
 slug: Web/API/Element/prepend
-original_slug: Web/API/ParentNode/prepend
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
 ---

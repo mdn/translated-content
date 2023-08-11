@@ -1,7 +1,6 @@
 ---
 title: フルページズーム
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-original_slug: Full_page_zoom
 l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---

@@ -1,13 +1,6 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-tags:
-  - API
-  - DOM
-  - Event
-  - Событие
-  - Ссылка
-translation_of: Web/API/Event/type
 ---
 
 {{APIRef}}

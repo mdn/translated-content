@@ -47,15 +47,15 @@ Referer: <url>
 ## 例
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ja/docs/Web/JavaScript
 Referer: https://example.com/page?q=123
 Referer: https://example.com/
 ```
 
 ## 仕様書
 
-| 仕様書                                           | 題名                                                          |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                              | 題名                                                          |
+| ----------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Referer", "5.5.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## ブラウザーの互換性

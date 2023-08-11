@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
-translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
 
 {{APIRef("Web Workers API")}}

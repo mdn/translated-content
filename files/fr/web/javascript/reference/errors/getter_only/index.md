@@ -1,7 +1,6 @@
 ---
 title: "TypeError: setting a property that has only a getter"
 slug: Web/JavaScript/Reference/Errors/Getter_only
-translation_of: Web/JavaScript/Reference/Errors/Getter_only
 ---
 
 {{jsSidebar("Errors")}}

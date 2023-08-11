@@ -2,6 +2,7 @@
 title: AudioNode.connect()
 slug: Web/API/AudioNode/connect
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioNode") }} 인터페이스의 `connect()` 메서드는 노드의 출력 중 하나를 목표에 연결할 수 있게 하는데, 이 목표는 다른 `AudioNode` 일 수도 있고 (이렇게 함으로써 사운드 데이터를 명시된 노드로 향하게 합니다) {{domxref("AudioParam")}} 일 수도 있습니다 (이 경우 노드의 출력 데이터가 자동적으로 시간에 따라 그 파라미터의 값을 변화시키기 위해 사용됩니다).

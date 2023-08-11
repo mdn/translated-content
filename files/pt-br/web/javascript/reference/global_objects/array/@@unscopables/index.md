@@ -27,7 +27,7 @@ O código a seguir funciona bem no ES5 e abaixo. No entanto, no ECMAScript 2015 
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('alguma coisa');
+  keys.push("alguma coisa");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -37,9 +37,9 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                       | Comentário          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}     | {{Spec2('ES2015')}}     | Initial definition. |
+| Especificação                                                                                   | Status               | Comentário          |
+| ----------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

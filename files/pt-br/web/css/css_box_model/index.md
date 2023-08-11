@@ -62,8 +62,8 @@ slug: Web/CSS/CSS_box_model
 
 ## Especificações
 
-| Especificação                                | Situação                     | Comentário         |
-| -------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} |                    |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                    |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition |
+| Especificação                      | Situação              | Comentário         |
+| ---------------------------------- | --------------------- | ------------------ |
+| {{SpecName("CSS3 Box")}}           | {{Spec2("CSS3 Box")}} |                    |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}   |                    |
+| {{SpecName("CSS1")}}               | {{Spec2("CSS1")}}     | Initial definition |

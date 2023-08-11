@@ -1,7 +1,6 @@
 ---
 title: "<address> : l'élément d'adresse de contact"
 slug: Web/HTML/Element/address
-translation_of: Web/HTML/Element/address
 ---
 
 {{HTMLSidebar}}

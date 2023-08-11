@@ -21,11 +21,11 @@ transition-timing-function: step-end;
 
 /* Function values */
 transition-timing-function: steps(4, end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 transition-timing-function: frames(10);
 
 /* Multiple timing functions */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 transition-timing-function: inherit;
@@ -53,44 +53,48 @@ You may specify multiple timing functions; each one will be applied to the corre
 `transition-timing-function: ease`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease;
 }
 ```
 
@@ -116,44 +120,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: ease-in`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-in;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-in;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
 }
 ```
 
@@ -179,44 +187,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: ease-out`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
 }
 ```
 
@@ -242,44 +254,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: ease-in-out`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: ease-in-out;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
 }
 ```
 
@@ -305,44 +321,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: linear`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: linear;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: linear;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
 }
 ```
 
@@ -368,44 +388,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: step-start`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: step-start;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: step-start;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: step-start;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: step-start;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: step-start;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: step-start;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: step-start;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: step-start;
 }
 ```
 
@@ -431,44 +455,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: step-end`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: step-end;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: step-end;
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: step-end;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: step-end;
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: step-end;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: step-end;
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: step-end;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: step-end;
 }
 ```
 
@@ -494,44 +522,48 @@ var intervalID = window.setInterval(updateTransition, 7000);
 `transition-timing-function: steps(4, end)`
 
 ```html hidden
- <div class="parent">
+<div class="parent">
   <div class="box">Lorem</div>
 </div>
-
 ```
 
 ```css hidden
-.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: steps(4, end);
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: steps(4, end);
+.parent {
+  width: 250px;
+  height: 125px;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-timing-function: steps(4, end);
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-timing-function: steps(4, end);
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: steps(4, end);
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: steps(4, end);
+}
+.box1 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  color: yellow;
+  font-size: 18px;
+  left: 150px;
+  top: 25px;
+  position: absolute;
+  -webkit-transition-property: width height background-color font-size left top
+    color;
+  -webkit-transition-duration: 2s;
+  -webkit-transition-timing-function: steps(4, end);
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 2s;
+  transition-timing-function: steps(4, end);
 }
 ```
 
@@ -556,8 +588,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## Specifications
 
-| Specification                                                                                                                                | Status                                   | Comment            |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| Specification                                                                                            | Status                          | Comment            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------- | ------------------ |
 | {{ SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function') }} | {{ Spec2('CSS3 Transitions') }} | Initial definition |
 
 ## Compatibilidade com navegadores

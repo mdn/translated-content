@@ -2,6 +2,7 @@
 title: border-color
 slug: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 **`border-color`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 모든 면의 테두리 색상을 설정합니다.
@@ -22,7 +23,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* 위 | 가로방향 | 아래 */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* 위 | 오른쪽 | 아래 | 왼쪽 */
 border-color: red yellow green blue;
@@ -58,7 +59,8 @@ border-color: unset;
 ```html
 <div id="justone">
   <p><code>border-color: red;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -66,7 +68,8 @@ border-color: unset;
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -74,7 +77,8 @@ border-color: unset;
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -82,7 +86,8 @@ border-color: unset;
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code>는 아래와 같습니다.</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>

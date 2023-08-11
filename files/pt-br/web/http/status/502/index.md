@@ -17,8 +17,8 @@ O código de erro HTTP **`502 Bad Gateway`** retornado pelo servidor indica que 
 
 ## Especificações
 
-| Especificação                                                | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                                | Título                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "502 Bad Gateway" , "6.6.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

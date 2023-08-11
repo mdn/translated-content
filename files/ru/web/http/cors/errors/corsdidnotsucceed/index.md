@@ -1,15 +1,8 @@
 ---
-title: 'Причина: Не удалось выполнить запрос CORS'
+title: "Причина: Не удалось выполнить запрос CORS"
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-tags:
-  - CORS
-  - CORSDidNotSucceed
-  - HTTP
-  - HTTPS
-  - консоль
-  - причины
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 ## Причина
 
 ```

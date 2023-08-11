@@ -1,7 +1,6 @@
 ---
 title: Signature (sécurité)
 slug: Glossary/Signature/Security
-translation_of: Glossary/Signature/Security
 ---
 
 Une **signature**, ou _signature numérique_, est un {{glossary("protocol","protocole")}} montrant l'authenticité d'un message.

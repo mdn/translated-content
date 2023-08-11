@@ -1,7 +1,6 @@
 ---
 title: 为文本添加样式（样式化文本）
 slug: Learn/CSS/Styling_text
-original_slug: Learn/CSS/为文本添加样式
 ---
 
 {{LearnSidebar}}

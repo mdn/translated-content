@@ -1,7 +1,6 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-translation_of: Web/HTML/Element/input/week
 ---
 
 {{HTMLSidebar}}

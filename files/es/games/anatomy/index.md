@@ -1,7 +1,6 @@
 ---
 title: Anatomía de un videojuego
 slug: Games/Anatomy
-original_slug: Games/Anatomy
 l10n:
   sourceCommit: 4b9fefebc6d21e003c8f31b40d98136a7a4b5a95
 ---

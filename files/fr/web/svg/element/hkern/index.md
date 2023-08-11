@@ -1,7 +1,6 @@
 ---
 title: <hkern>
 slug: Web/SVG/Element/hkern
-translation_of: Web/SVG/Element/hkern
 ---
 
 {{SVGRef}}

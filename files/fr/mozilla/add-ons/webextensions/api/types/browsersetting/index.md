@@ -1,7 +1,6 @@
 ---
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
 
 {{AddonSidebar()}}

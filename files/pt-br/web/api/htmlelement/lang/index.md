@@ -32,8 +32,10 @@ if (document.documentElement.lang === "en") {
 }
 ```
 
-## Especificação
+## Especificações
 
-| Especificação                                                                | Status                       | Comentário |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'lang')}} | {{Spec2('DOM2 HTML')}} |            |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

@@ -1,5 +1,5 @@
 ---
-title: 'WakeLockSentinel: release イベント'
+title: "WakeLockSentinel: release イベント"
 slug: Web/API/WakeLockSentinel/release_event
 ---
 

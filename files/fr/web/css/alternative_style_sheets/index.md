@@ -1,7 +1,6 @@
 ---
 title: Feuilles de style alternatives
 slug: Web/CSS/Alternative_style_sheets
-translation_of: Web/CSS/Alternative_style_sheets
 ---
 
 {{CSSRef}}

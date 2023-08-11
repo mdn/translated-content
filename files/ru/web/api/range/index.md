@@ -1,10 +1,6 @@
 ---
 title: Range
 slug: Web/API/Range
-tags:
-  - API
-  - DOM
-translation_of: Web/API/Range
 ---
 
 {{ APIRef("DOM") }}
@@ -95,12 +91,7 @@ _Не имеют унаследованных свойств._
 
 ## Specifications
 
-| Specification                                                                                                        | Status                                       | Comment                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-range', 'Range')}}                                             | {{Spec2('DOM WHATWG')}}             | Do not use `RangeException` anymore, use `DOMException` instead. Made the second parameter of `collapse()` optional. Added the methods `isPointInRange()`, `comparePoint()`, and `intersectsNode()`. Added the constructor `Range()`. |
-| {{SpecName('DOM Parsing', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('DOM Parsing')}}             | Added the method `createContextualFragment()`.                                                                                                                                                                                        |
-| {{SpecName('CSSOM View', '#extensions-to-the-range-interface', 'Extensions to Range')}} | {{Spec2('CSSOM View')}}             | Added the methods `getClientRects()` and `getBoundingClientRect()`.                                                                                                                                                                   |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-Interface', 'Range')}}     | {{Spec2('DOM2 Traversal_Range')}} | Initial specification.                                                                                                                                                                                                                |
+{{Specifications}}
 
 ## Browser compatibility
 

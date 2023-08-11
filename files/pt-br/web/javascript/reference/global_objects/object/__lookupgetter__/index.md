@@ -33,15 +33,13 @@ Agora é possível fazer isso de um jeito uniforme usando:. {{jsxref("Object.get
 ```js
 var obj = {
   get foo() {
-    return Math.random() > 0.5 ? 'foo' : 'bar';
-  }
+    return Math.random() > 0.5 ? "foo" : "bar";
+  },
 };
 
-
 // Non-standard and deprecated way
-obj.__lookupGetter__('foo');
+obj.__lookupGetter__("foo");
 // (function() { return Math.random() > 0.5 ? 'foo' : 'bar'; })
-
 
 // Standard-compliant way
 Object.getOwnPropertyDescriptor(obj, "foo").get;

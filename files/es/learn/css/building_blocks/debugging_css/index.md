@@ -1,7 +1,6 @@
 ---
 title: Depurar el CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
-original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

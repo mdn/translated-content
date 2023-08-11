@@ -1,7 +1,6 @@
 ---
 title: menclose
 slug: Web/MathML/Element/menclose
-translation_of: Web/MathML/Element/menclose
 ---
 
 L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'une même notation, définie par l'attribut `notation`.

@@ -34,13 +34,11 @@ Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text
 
 **Especificações**
 
-| Especificações                                                                                               | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.console.assert")}}
+{{Compat}}
 
 ## Ver também
 

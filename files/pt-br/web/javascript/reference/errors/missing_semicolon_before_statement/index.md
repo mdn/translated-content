@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 ---
 
@@ -34,7 +34,7 @@ var foo = 'Tom's bar';
 
 You can use double quotes, or escape the apostrophe:
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -55,10 +55,10 @@ Instead, omit the `var` keyword:
 
 ```js example-good
 var obj = {};
-obj.foo = 'hi';
+obj.foo = "hi";
 
 var array = [];
-array[0] = 'there';
+array[0] = "there";
 ```
 
 ## Veja também

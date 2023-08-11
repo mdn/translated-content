@@ -1,7 +1,6 @@
 ---
 title: Mejoras SVG en Firefox 3
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
-original_slug: Mejoras_SVG_en_Firefox_3
 ---
 
 {{FirefoxSidebar}}

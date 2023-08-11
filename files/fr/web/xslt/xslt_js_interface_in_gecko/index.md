@@ -1,7 +1,6 @@
 ---
 title: L'interface XSLT/JavaScript dans Gecko
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko
 ---
 
 1. [Introduction](/fr/docs/XSLT/XSLT_JS_Interface_in_Gecko/Introduction)

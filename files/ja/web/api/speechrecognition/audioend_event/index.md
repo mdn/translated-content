@@ -1,7 +1,6 @@
 ---
-title: 'SpeechRecognition: audioend イベント'
+title: "SpeechRecognition: audioend イベント"
 slug: Web/API/SpeechRecognition/audioend_event
-original_slug: Web/API/SpeechRecognition/onaudioend
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
