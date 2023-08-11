@@ -22,13 +22,13 @@ parentNode.replaceChild(newChild, oldChild);
 
 ### 返回值
 
-The returned value is the replaced node. This is the same node as `oldChild`.
+返回值为被替换的原始节点。
 
 ## 例子
 
 ```js
 // <div>
-//  <span id="childSpan">foo bar</span>
+//   <span id="childSpan">foo bar</span>
 // </div>
 
 // 创建一个空的 span 元素节点
