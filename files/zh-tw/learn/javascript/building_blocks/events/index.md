@@ -1,7 +1,6 @@
 ---
 title: Event attributes
 slug: Learn/JavaScript/Building_blocks/Events
-original_slug: Web/Guide/HTML/Event_attributes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

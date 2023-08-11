@@ -1,9 +1,6 @@
 ---
 title: Explorer un tableau HTML avec des interfaces DOM et JavaScript
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-translation_of: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
 
 ## Introduction

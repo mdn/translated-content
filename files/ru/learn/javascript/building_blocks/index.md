@@ -1,26 +1,6 @@
 ---
 title: Структурные элементы JavaScript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - JavaScript
-  - Введение
-  - Гид
-  - Знакомство
-  - Модуль
-  - Написание кода
-  - Написание Кода
-  - Начинающий
-  - Новичок
-  - Оценивание
-  - Раздел
-  - Руководство
-  - Статья
-  - Условия
-  - Функции
-  - лендинг
-  - события
-  - циклы
-translation_of: Learn/JavaScript/Building_blocks
 ---
 
 {{LearnSidebar}}

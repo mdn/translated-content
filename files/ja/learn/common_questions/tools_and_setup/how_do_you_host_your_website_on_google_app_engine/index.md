@@ -1,8 +1,6 @@
 ---
 title: Google App Engine を使ってウェブサイトを公開するには？
-slug: >-
-  Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
-original_slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
+slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 ---
 
 [Google App Engine](https://cloud.google.com/appengine/) は、Google のインフラストラクチャ上でアプリケーションを構築して実行できる強力なプラットフォームです。ゼロから多階層のウェブ アプリケーションを構築する場合でも、静的なウェブサイトをホストする場合でも、必要なアプリケーションを構築することができます。ここでは、 Google App Engine でウェブサイトをホスティングするためのステップバイステップガイドを紹介します。

@@ -1,7 +1,6 @@
 ---
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
-translation_of: Web/API/TextMetrics/width
 ---
 
 {{APIRef("Canvas API")}}

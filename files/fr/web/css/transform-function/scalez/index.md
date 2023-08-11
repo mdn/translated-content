@@ -1,7 +1,6 @@
 ---
 title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
-translation_of: Web/CSS/transform-function/scaleZ()
 ---
 
 {{CSSRef}}

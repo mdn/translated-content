@@ -1,14 +1,6 @@
 ---
 title: URL (Единый указатель ресурса)
 slug: Glossary/URL
-tags:
-  - URL
-  - Глоссарий
-  - Ссылки
-  - веб-адреса
-  - урлы
-translation_of: Glossary/URL
-original_slug: Глоссарий/URL
 ---
 
 _Единый указатель ресурса (Uniform Resource Locator,_ **URL**) — строка, однозначно определяющая, где в интернете находится ресурс.

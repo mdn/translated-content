@@ -1,7 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-translation_of: Web/API/FileReader/readAsText
 ---
 
 {{APIRef("File API")}}
@@ -21,13 +20,11 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 - `encoding` {{optional_inline}}
   - : Строка, обозначающая кодировку используемую для возвращаемых данных. По умолчанию используется UTF-8, если параметр не указан.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                       | Comment            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

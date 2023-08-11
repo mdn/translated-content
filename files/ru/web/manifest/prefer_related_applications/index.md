@@ -1,11 +1,6 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
-tags:
-  - Manifest
-  - Web
-  - prefer_related_applications
-translation_of: Web/Manifest/prefer_related_applications
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

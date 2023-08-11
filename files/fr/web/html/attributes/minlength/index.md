@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : minlength"
 slug: Web/HTML/Attributes/minlength
-translation_of: Web/HTML/Attributes/minlength
 ---
 
 {{HTMLSidebar}}

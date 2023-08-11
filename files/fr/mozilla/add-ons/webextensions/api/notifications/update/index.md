@@ -1,7 +1,6 @@
 ---
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 
 {{AddonSidebar()}}

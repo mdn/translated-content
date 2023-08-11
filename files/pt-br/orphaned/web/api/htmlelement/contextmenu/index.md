@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.contextMenu
 slug: orphaned/Web/API/HTMLElement/contextMenu
-original_slug: Web/API/HTMLElement/contextMenu
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header()}}

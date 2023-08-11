@@ -1,11 +1,6 @@
 ---
 title: MDN tools
 slug: orphaned/MDN/Tools
-tags:
-  - Landing
-  - MDN Meta
-translation_of: MDN/Tools
-original_slug: MDN/Tools
 ---
 
 {{MDNSidebar}}

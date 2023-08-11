@@ -33,10 +33,9 @@ var g = gen(); // "Generator { }"
 ### An infinite iterator
 
 ```js
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"
@@ -71,18 +70,18 @@ function* fibonacci() {
 }
 
 var it = fibonacci();
-console.log(it);          // "Generator {  }"
-console.log(it.next());   // 1
+console.log(it); // "Generator {  }"
+console.log(it.next()); // 1
 console.log(it.send(10)); // 20
-console.log(it.close());  // undefined
-console.log(it.next());   // throws StopIteration (Como o generator está fechado)
+console.log(it.close()); // undefined
+console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 ```
 
 ## Especificações
 
-| Especificações                                                                               | Status                       | Comentário        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-generator-objects', 'Generator objects')}}     | {{Spec2('ES6')}}         | Definição Inicial |
+| Especificações                                                         | Status               | Comentário        |
+| ---------------------------------------------------------------------- | -------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-generator-objects', 'Generator objects')}}     | {{Spec2('ES6')}}     | Definição Inicial |
 | {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

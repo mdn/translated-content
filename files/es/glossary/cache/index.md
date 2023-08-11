@@ -1,7 +1,6 @@
 ---
 title: Caché
 slug: Glossary/Cache
-original_slug: Glossary/Caché
 ---
 
 La **caché** (o caché web) es un componente que almacena temporalmente respuestas HTTP para que puedan ser usadas por peticiones HTTP posteriores mientras cumplan ciertas condiciones.

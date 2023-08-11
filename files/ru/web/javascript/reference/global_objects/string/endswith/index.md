@@ -1,14 +1,8 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка
@@ -41,11 +35,11 @@ str.endsWith(searchString[, length])
 ### Пример: использование метода `endsWith()`
 
 ```js
-var str = 'Быть или не быть, вот в чём вопрос.';
+var str = "Быть или не быть, вот в чём вопрос.";
 
-console.log(str.endsWith('вопрос.'));   // true
-console.log(str.endsWith('быть'));      // false
-console.log(str.endsWith('быть', 16));  // true
+console.log(str.endsWith("вопрос.")); // true
+console.log(str.endsWith("быть")); // false
+console.log(str.endsWith("быть", 16)); // true
 ```
 
 ## Полифил
@@ -54,8 +48,8 @@ console.log(str.endsWith('быть', 16));  // true
 
 ```js
 if (!String.prototype.endsWith) {
-  Object.defineProperty(String.prototype, 'endsWith', {
-    value: function(searchString, position) {
+  Object.defineProperty(String.prototype, "endsWith", {
+    value: function (searchString, position) {
       var subjectString = this.toString();
       if (position === undefined || position > subjectString.length) {
         position = subjectString.length;
@@ -63,7 +57,7 @@ if (!String.prototype.endsWith) {
       position -= searchString.length;
       var lastIndex = subjectString.indexOf(searchString, position);
       return lastIndex !== -1 && lastIndex === position;
-    }
+    },
   });
 }
 ```

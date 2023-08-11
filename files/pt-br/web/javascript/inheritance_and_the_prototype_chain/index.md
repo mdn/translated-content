@@ -1,7 +1,6 @@
 ---
 title: Herança e cadeia de protótipos (prototype chain)
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
 
 {{jsSidebar("Advanced")}}
@@ -74,9 +73,9 @@ Quando uma herança de função é executada, o valor de [`this`](/pt-BR/JavaScr
 ```js
 var o = {
   a: 2,
-  m: function(b){
+  m: function (b) {
     return this.a + 1;
-  }
+  },
 };
 
 console.log(o.m()); // 3
@@ -96,7 +95,7 @@ console.log(p.m()); // 13
 ### Objetos criados com sintaxe de construtores
 
 ```js
-var o = {a: 1};
+var o = { a: 1 };
 
 // O recém-criado objeto 'o' tem Object.prototype como o seu [[Prototype]]
 // 'o' não tem uma propriedade chamada 'hasOwnProperty'
@@ -111,7 +110,7 @@ var a = ["yo", "whadup", "?"];
 // A cadeia de protótipos se parece com isso:
 // a ---> Array.prototype ---> Object.prototype ---> null
 
-function f(){
+function f() {
   return 2;
 }
 
@@ -130,9 +129,9 @@ function Graph() {
 }
 
 Graph.prototype = {
-  addVertex: function(v){
+  addVertex: function (v) {
     this.vertexes.push(v);
-  }
+  },
 };
 
 var g = new Graph();
@@ -145,7 +144,7 @@ var g = new Graph();
 ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 // a ---> Object.prototype ---> null
 
 var b = Object.create(a);

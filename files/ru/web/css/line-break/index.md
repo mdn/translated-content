@@ -1,9 +1,6 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - разрыв строки
-translation_of: Web/CSS/line-break
 ---
 
 {{CSSRef}}

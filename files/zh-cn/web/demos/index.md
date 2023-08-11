@@ -1,7 +1,6 @@
 ---
 title: 开源 Web 技术示例
 slug: Web/Demos
-original_slug: Web/Demos_of_open_web_technologies
 ---
 
 Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用它们。此页面提供了有关这些技术的一些有趣演示链接。

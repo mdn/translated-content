@@ -1,7 +1,6 @@
 ---
 title: Expression async function
 slug: Web/JavaScript/Reference/Operators/async_function
-translation_of: Web/JavaScript/Reference/Operators/async_function
 ---
 
 {{jsSidebar("Operators")}}

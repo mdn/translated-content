@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement mouseleave"
 slug: Web/API/Element/mouseleave_event
-translation_of: Web/API/Element/mouseleave_event
 ---
 
 {{APIRef}}

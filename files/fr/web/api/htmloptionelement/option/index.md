@@ -1,7 +1,6 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
-translation_of: Web/API/HTMLOptionElement/Option
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: QUIC
 slug: Glossary/QUIC
-translation_of: Glossary/QUIC
 ---
 
 **Quick UDP Internet Connection**, ou **QUIC**, est un protocole de transport multiplexé expérimental implémenté sur UDP. Il a été développé par Google comme un moyen d'expérimenter des moyens d'améliorer TCP et la livraison d'applications Web. Comme TCP est intégré au noyau de nombreux systèmes d'exploitation, être capable d'expérimenter des changements, de les tester et d'implémenter des modifications est un processus extrêmement lent. La création de QUIC permet aux développeurs de mener des expériences et d'essayer de nouvelles choses plus rapidement.

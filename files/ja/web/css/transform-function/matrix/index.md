@@ -1,7 +1,6 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-original_slug: Web/CSS/transform-function/matrix()
 ---
 
 {{CSSRef}}
@@ -156,5 +155,5 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d())
+- [`matrix3d()`](</ja/docs/Web/CSS/transform-function/matrix3d()>)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

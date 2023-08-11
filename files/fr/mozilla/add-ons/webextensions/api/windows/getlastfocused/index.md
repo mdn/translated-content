@@ -1,7 +1,6 @@
 ---
 title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
 
 {{AddonSidebar()}}

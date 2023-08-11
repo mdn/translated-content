@@ -47,8 +47,8 @@ p {
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
+| Specification                                                       | Status                  | Comment            |
+| ------------------------------------------------------------------- | ----------------------- | ------------------ |
 | {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
 
 ## Browser Compatibility
@@ -68,7 +68,8 @@ p {
 ### CSS Content
 
 ```css
-#nokern, #kern {
+#nokern,
+#kern {
   font-size: 2rem;
   font-family: serif;
 }
@@ -83,10 +84,10 @@ p {
 ### JS Content
 
 ```js
-var input  = document.getElementById('input'),
-    kern   = document.getElementById('kern'),
-    nokern = document.getElementById('nokern');
-input.addEventListener('keyup', function() {
+var input = document.getElementById("input"),
+  kern = document.getElementById("kern"),
+  nokern = document.getElementById("nokern");
+input.addEventListener("keyup", function () {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

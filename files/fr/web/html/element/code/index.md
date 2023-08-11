@@ -1,7 +1,6 @@
 ---
 title: "<code> : l'élément de code en ligne"
 slug: Web/HTML/Element/code
-translation_of: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

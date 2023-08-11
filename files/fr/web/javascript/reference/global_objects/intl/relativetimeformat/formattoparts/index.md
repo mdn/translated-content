@@ -1,7 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
 ---
 
 {{JSRef}}

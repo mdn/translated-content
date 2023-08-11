@@ -1,12 +1,6 @@
 ---
 title: Ваш первый WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Beginner
-  - Extensions
-  - Guide
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 
 {{AddonSidebar}}

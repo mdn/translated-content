@@ -1,7 +1,6 @@
 ---
 title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: 10 anos de MDN
 slug: MDN/At_ten
-original_slug: dez_anos_de_MDN
 ---
 
 Celebrando 10 anos documentando sua Web.

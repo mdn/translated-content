@@ -2,7 +2,7 @@
 title: Gamepad
 slug: Web/API/Gamepad
 l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Gamepad API")}}{{SecureContext_Header}}
@@ -25,7 +25,7 @@ Gamepad オブジェクトを取得する方法は 2 つあります。 {{domxre
   - : コントローラーがどの手で握られているか、または握られる可能性が高いかを定義する列挙型です。
 - {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : {{domxref("GamepadHapticActuator")}} オブジェクトを格納した配列で、各オブジェクトはコントローラーで利用できる触覚フィードバックのハードウェアを表します。
-- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : {{domxref("GamepadHapticActuator")}} オブジェクトで、コントローラーで利用できる触覚フィードバックのハードウェアを表します。
 - {{domxref("Gamepad.id")}} {{ReadOnlyInline}}
   - : 文字列で、コントローラーに関する識別情報を示します。
@@ -42,9 +42,13 @@ Gamepad オブジェクトを取得する方法は 2 つあります。 {{domxre
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 

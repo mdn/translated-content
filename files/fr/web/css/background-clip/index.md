@@ -1,7 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-translation_of: Web/CSS/background-clip
 ---
 
 {{CSSRef}}

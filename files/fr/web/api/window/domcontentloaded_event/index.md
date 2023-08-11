@@ -1,7 +1,6 @@
 ---
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
-translation_of: Web/API/Window/DOMContentLoaded_event
 ---
 
 {{APIRef}}

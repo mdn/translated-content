@@ -1,7 +1,6 @@
 ---
 title: element.onkeyup
 slug: Web/API/Element/keyup_event
-translation_of: Web/API/GlobalEventHandlers/onkeyup
 ---
 
 {{ ApiRef() }}

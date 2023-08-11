@@ -1,7 +1,6 @@
 ---
 title: WebGLShader
 slug: Web/API/WebGLShader
-translation_of: Web/API/WebGLShader
 ---
 
 {{APIRef("WebGL")}}

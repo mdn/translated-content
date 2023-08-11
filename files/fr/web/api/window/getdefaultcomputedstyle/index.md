@@ -1,7 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
 slug: Web/API/window/getDefaultComputedStyle
-translation_of: Web/API/window/getDefaultComputedStyle
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}

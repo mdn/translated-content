@@ -1,7 +1,6 @@
 ---
 title: Grids
 slug: Learn/CSS/CSS_layout/Grids
-translation_of: Learn/CSS/CSS_layout/Grids
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}Сетки (grids) являются установленным инструментом проектирования и многие современные макеты веб-сайта основаны на регулярной сетке. В этой статье мы рассмотрим дизайн на основе сетки и увидим как CSS можно использовать для создания сеток — как с помощью современных инструментов, так и с помощью новых технологий, которые только начинают становиться доступными в браузерах.

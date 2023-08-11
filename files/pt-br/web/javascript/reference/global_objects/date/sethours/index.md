@@ -53,8 +53,8 @@ theBigDay.setHours(7);
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                      |
+| ---------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-date.prototype.sethours', 'Date.prototype.setHours')}} |
 
 ## Compatibilidade com navegadores

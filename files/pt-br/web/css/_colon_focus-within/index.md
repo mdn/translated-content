@@ -1,5 +1,5 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 ---
 
@@ -31,10 +31,10 @@ Neste exemplo, o formulário receberá estilos de coloração especiais quando o
 
 <form>
   <label for="given_name">Given Name:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Family Name:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 
@@ -63,8 +63,8 @@ input {
 
 ## Especificações
 
-| Especificação                                                                                        | Status                               | Comentário          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Especificação                                                               | Status                      | Comentário          |
+| --------------------------------------------------------------------------- | --------------------------- | ------------------- |
 | {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
 
 ## Compatibilidade com navegadores

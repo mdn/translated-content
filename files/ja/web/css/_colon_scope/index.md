@@ -1,5 +1,5 @@
 ---
-title: ':scope'
+title: ":scope"
 slug: Web/CSS/:scope
 ---
 

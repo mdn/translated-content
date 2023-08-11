@@ -1,7 +1,6 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL_static
-translation_of: Web/API/URL/revokeObjectURL
 ---
 
 {{ApiRef("URL")}}

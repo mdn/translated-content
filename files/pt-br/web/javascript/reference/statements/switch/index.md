@@ -78,20 +78,20 @@ Se você esquecer um break então o script irá rodar a partir do caso onde o cr
 ```js
 var foo = 0;
 switch (foo) {
-    case -1:
-        console.log('1 negativo');
-        break;
-    case 0: // foo é 0 então aqui o critério foi correspondido, então esse bloco vai rodar
-        console.log(0)
-        // NOTA: o break esquecido deveria estar aqui
-    case 1: // nenhuma instrução break em 'case 0:' então essa instrução vai rodar também
-        console.log(1);
-        break; // o programa encontra esse break então não vai continuar para o 'case 2:'
-    case 2:
-        console.log(2);
-        break;
-    default:
-        console.log('default');
+  case -1:
+    console.log("1 negativo");
+    break;
+  case 0: // foo é 0 então aqui o critério foi correspondido, então esse bloco vai rodar
+    console.log(0);
+  // NOTA: o break esquecido deveria estar aqui
+  case 1: // nenhuma instrução break em 'case 0:' então essa instrução vai rodar também
+    console.log(1);
+    break; // o programa encontra esse break então não vai continuar para o 'case 2:'
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
 }
 ```
 
@@ -108,17 +108,17 @@ Esse método toma vantagem do fato de não existir um break após um case e irá
 Esse é um exemplo de uma operação sequencial simples com a instrução switch, onde quatro valores diferentes fazem a mesma coisa..
 
 ```js
-var Animal = 'Girafa';
+var Animal = "Girafa";
 switch (Animal) {
-    case 'Vaca':
-    case 'Girafa':
-    case 'Cachorro':
-    case 'Porco':
-        alert('Esse animal irá para Arca de Noé');
-        break;
-    case 'Dinossauro':
-    default:
-        alert('Esse animal não vai.');
+  case "Vaca":
+  case "Girafa":
+  case "Cachorro":
+  case "Porco":
+    alert("Esse animal irá para Arca de Noé");
+    break;
+  case "Dinossauro":
+  default:
+    alert("Esse animal não vai.");
 }
 ```
 
@@ -130,27 +130,27 @@ This is an example of a multiple-operation sequential switch statement, where, d
 
 ```js
 var foo = 1;
-var output = 'Output: ';
+var output = "Output: ";
 switch (foo) {
-    case 10:
-        output += 'Então ';
-    case 1:
-        output += 'Qual ';
-        output += 'É ';
-    case 2:
-        output += 'O Seu ';
-    case 3:
-        output += 'Nome';
-    case 4:
-        output += '?';
-        alert(output);
-        break;
-    case 5:
-        output += '!';
-        alert(output);
-        break;
-    default:
-        alert('Favor escolher um número de 0 à 6!');
+  case 10:
+    output += "Então ";
+  case 1:
+    output += "Qual ";
+    output += "É ";
+  case 2:
+    output += "O Seu ";
+  case 3:
+    output += "Nome";
+  case 4:
+    output += "?";
+    alert(output);
+    break;
+  case 5:
+    output += "!";
+    alert(output);
+    break;
+  default:
+    alert("Favor escolher um número de 0 à 6!");
 }
 ```
 
@@ -168,11 +168,11 @@ Output para esse exemplo:
 
 ## Especificações
 
-| Especificação                                                                        | Status                   | Comentário                                        |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3ª Edição                                                                 | Standard                 | Definição inicial. Implementado no JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}             | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ES6')}}     |                                                   |
+| Especificação                                                    | Status             | Comentário                                        |
+| ---------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
+| ECMAScript 3ª Edição                                             | Standard           | Definição inicial. Implementado no JavaScript 1.2 |
+| {{SpecName('ES5.1', '#sec-12.11', 'switch statement')}}          | {{Spec2('ES5.1')}} |                                                   |
+| {{SpecName('ES6', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com navegadores
 

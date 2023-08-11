@@ -1,13 +1,8 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
+
 {{JSRef}}
 
 ## Сводка
@@ -39,7 +34,7 @@ arr.pop()
 Следующий код создаёт массив `myFish`, содержащий четыре элемента, а затем удаляет последний элемент.
 
 ```js
-var myFish = ['ангел', 'клоун', 'мандарин', 'хирург'];
+var myFish = ["ангел", "клоун", "мандарин", "хирург"];
 
 console.log(myFish); // ['ангел', 'клоун', 'мандарин', 'хирург']
 

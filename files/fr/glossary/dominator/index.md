@@ -1,7 +1,6 @@
 ---
 title: Dominant
 slug: Glossary/Dominator
-translation_of: Glossary/Dominator
 ---
 
 En théorie des graphes, le nœud A domine le nœud B si tous les chemins du nœud racine vers B passent par A.

@@ -1,20 +1,6 @@
 ---
 title: Клиент-сервер
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Вступление
-  - Вступление
-  - Начинающий
-  - Начинающий
-  - Программирование на стороне сервера
-  - Программирование на стороне сервера
-  - Руководство
-  - Руководство
-  - Сервер
-  - Сервер
-  - Учить
-  - Учить
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

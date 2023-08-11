@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
-translation_of: Web/CSS/::-webkit-progress-value
 ---
 
 {{CSSRef}}{{Non-standard_header}}

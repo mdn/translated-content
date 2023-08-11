@@ -50,16 +50,16 @@ Alguns deste métodos são também os mesmos correspondentes aos métodos em {{j
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -73,16 +73,16 @@ Reflect.ownKeys(duck);
 ### Adicionando uma nova propriedade ao objeto
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"
 ```
 
 ## Especificações
 
-| Especificação                                                                | Situação                     | Comentário                      |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------- |
-| {{SpecName('ES6', '#sec-reflect-object', 'Reflect')}}     | {{Spec2('ES6')}}         | Definição Inicial               |
+| Especificação                                             | Situação             | Comentário                      |
+| --------------------------------------------------------- | -------------------- | ------------------------------- |
+| {{SpecName('ES6', '#sec-reflect-object', 'Reflect')}}     | {{Spec2('ES6')}}     | Definição Inicial               |
 | {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Reflect.enumerate foi removido. |
 
 ## Compatibilidade com navegadores

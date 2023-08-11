@@ -1,12 +1,6 @@
 ---
 title: Что такое WebExtensions?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - Extensions
-  - WebExtensions
-  - Дополнения
-  - Расширения
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
 
 {{AddonSidebar}}

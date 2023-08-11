@@ -100,7 +100,7 @@ try {
   if (e instanceof RangeError) {
     // 頻発する想定済みのエラーを処理する文
   } else {
-    throw e;  // エラーを変更しないまま送出し直す
+    throw e; // エラーを変更しないまま送出し直す
   }
 }
 ```

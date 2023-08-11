@@ -1,7 +1,6 @@
 ---
 title: externally_connectable
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable
 ---
 
 {{AddonSidebar}}{{SeeCompatTable}}

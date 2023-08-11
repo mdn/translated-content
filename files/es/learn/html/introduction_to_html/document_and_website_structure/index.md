@@ -1,7 +1,6 @@
 ---
 title: Estructura web y documentación
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Learn/HTML/Introduccion_a_HTML/estructura
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

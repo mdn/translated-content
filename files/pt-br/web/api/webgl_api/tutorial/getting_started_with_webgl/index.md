@@ -38,7 +38,9 @@ function main() {
 
   // Só continua se o WebGL estiver disponível e funcionando
   if (!gl) {
-    alert("Incapaz de inicializar o WebGL.Seu navegador ou sua máquina não suporta.");
+    alert(
+      "Incapaz de inicializar o WebGL.Seu navegador ou sua máquina não suporta.",
+    );
     return;
   }
 

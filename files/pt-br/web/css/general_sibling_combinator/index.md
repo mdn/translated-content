@@ -36,10 +36,10 @@ p ~ span {
 
 ## Especificações
 
-| Specification                                                                                                                    | Status                               | Comment                                         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------- |
+| Specification                                                                                    | Status                      | Comment                                         |
+| ------------------------------------------------------------------------------------------------ | --------------------------- | ----------------------------------------------- |
 | {{ SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator') }} | {{Spec2('CSS4 Selectors')}} | Renomeia o combinador como "irmão subsequente". |
-| {{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}     | {{Spec2('CSS3 Selectors')}} | Definição inicial.                              |
+| {{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}   | {{Spec2('CSS3 Selectors')}} | Definição inicial.                              |
 
 ## Navegadores compatíveis
 

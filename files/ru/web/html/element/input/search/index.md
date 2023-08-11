@@ -1,7 +1,6 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-translation_of: Web/HTML/Element/input/search
 ---
 
 {{HTMLSidebar}}
@@ -10,12 +9,12 @@ translation_of: Web/HTML/Element/input/search
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing the value contained in the search field.                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Events**                      | {{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}                                                                                                                                                                                                                                                                                       |
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing the value contained in the search field.                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Events**                      | {{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}                                                                                                                                                                                                                                                                                                                                                           |
 | **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`required`](/ru/docs/Web/HTML/Element/input#required), [`size`](/ru/docs/Web/HTML/Element/input#size). |
-| **IDL attributes**              | `value`                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.                                                                                                                                                               |
+| **IDL attributes**              | `value`                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.                                                                                                                                                                                                                                                                   |
 
 ## Value
 
@@ -33,7 +32,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 | Attribute                     | Description                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | The id of the `<datalist>` element that contains the optional pre-defined autocomplete options                                        |
+| [`list`](#list)               | The id of the `<datalist>` element that contains the optional pre-defined autocomplete options                                      |
 | [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
 | [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
 | [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
@@ -79,7 +78,7 @@ The following non-standard attributes are available to search input fields. As a
 | Attribute                         | Description                                                                                                                                                                                                                                                             |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`autocorrect`](#autocorrect)     | Whether or not to allow autocorrect while editing this input field. **Safari only.**                                                                                                                                                                                    |
-| [`incremental`](#incremental)     | Whether or not to send repeated {{event("search")}} events to allow updating live search results while the user is still editing the value of the field. **WebKit and Blink only (Safari, Chrome, Opera, etc.).**                                                  |
+| [`incremental`](#incremental)     | Whether or not to send repeated {{event("search")}} events to allow updating live search results while the user is still editing the value of the field. **WebKit and Blink only (Safari, Chrome, Opera, etc.).**                                                       |
 | [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
 | [`results`](#results)             | The maximum number of items that should be displayed in the drop-down list of previous search queries. **Safari only.**                                                                                                                                                 |
 
@@ -114,7 +113,7 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>Search</button>
   </div>
 </form>
@@ -145,8 +144,11 @@ You can provide a useful placeholder inside your search input that could give a 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site...">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site..." />
     <button>Search</button>
   </div>
 </form>
@@ -170,9 +172,12 @@ Let's have a look at an example:
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site..."
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site..."
+      aria-label="Search through site content" />
     <button>Search</button>
   </div>
 </form>
@@ -193,8 +198,12 @@ The physical size of the input box can be controlled using the [`size`](/ru/docs
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site..."
+      size="30" />
     <button>Search</button>
   </div>
 </form>
@@ -216,15 +225,15 @@ There are useful pseudo-classes available for styling valid/invalid form element
 
 ```css
 input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -237,8 +246,12 @@ You can use the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site..." required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site..."
+      required />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -251,15 +264,15 @@ input {
 }
 
 input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -283,9 +296,15 @@ The example below requires that the entered value be 4–8 characters in length.
 <form>
   <div>
     <label for="mySearch">Search for user</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="User IDs are 4–8 characters in length" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="User IDs are 4–8 characters in length"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -298,15 +317,15 @@ input {
 }
 
 input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -326,9 +345,14 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 <form>
   <div>
     <label for="mySearch">Search for product by ID:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="two letters followed by four numbers" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="two letters followed by four numbers"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -341,15 +365,15 @@ input {
 }
 
 input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -363,10 +387,10 @@ You can see a good example of a search form used in context at our [website-aria
 
 ## Specifications
 
-| Specification                                                                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                                                                                                  | Status                   | Comment            |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="search"&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
-| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="search"&gt;')}}         | {{Spec2('HTML5.1')}}     | Initial definition |
+| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="search"&gt;')}}       | {{Spec2('HTML5.1')}}     | Initial definition |
 
 ## Browser compatibility
 

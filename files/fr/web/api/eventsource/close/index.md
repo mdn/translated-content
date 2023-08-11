@@ -1,7 +1,6 @@
 ---
 title: EventSource.close()
 slug: Web/API/EventSource/close
-translation_of: Web/API/EventSource/close
 ---
 
 {{APIRef('WebSockets API')}}

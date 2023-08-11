@@ -1,7 +1,6 @@
 ---
 title: Ressources
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 ---
 
 1. [Introduction](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko)

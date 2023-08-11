@@ -1,10 +1,6 @@
 ---
 title: Увеличиваем совместимость с WebRTC adapter.js
 slug: orphaned/Web/API/WebRTC_API/adapter.js
-tags:
-  - adapter.js
-translation_of: Web/API/WebRTC_API/adapter.js
-original_slug: Web/API/WebRTC_API/adapter.js
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
