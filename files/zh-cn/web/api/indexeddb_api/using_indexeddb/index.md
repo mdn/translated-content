@@ -5,7 +5,7 @@ slug: Web/API/IndexedDB_API/Using_IndexedDB
 
 {{DefaultAPISidebar("IndexedDB")}}
 
-IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的方法。IndexedDB 为创建 Web 应用提供了丰富的查询能力，而无需考虑网络的可用性，使你的应用在在线和离线时都可以正常工作。
+IndexedDB 是一种在用户浏览器内持久化存储数据的方法。它可以让你创建具有丰富查询能力的 Web 应用，而无需考虑网络可用性，因此你的应用在在线和离线时都可以正常运行。
 
 ## 关于本文档
 
