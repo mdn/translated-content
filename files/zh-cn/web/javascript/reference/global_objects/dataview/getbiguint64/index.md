@@ -29,13 +29,13 @@ A {{jsxref("BigInt")}}.
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such that it would read beyond the end of the view.
+  - : 如果 `byteOffset` 设置导致读取时超出了视图的末尾位置，将会抛出错误。
 
-## Description
+## 描述
 
-There is no alignment constraint; multi-byte values may be fetched from any offset.
+没有对齐约束，可以从任意偏移量获取多字节值。
 
-## Examples
+## 示例
 
 ### Using the `getBigUint64` method
 
