@@ -43,14 +43,14 @@ Unicode 码位的范围是从 `0` 到 `1114111`（`0x10FFFF`）。`charCodeAt()`
 ```js
 String.fromCharCode(65, 66, 67); // 返回 "ABC"
 String.fromCharCode(0x2014); // 返回 "—"
-String.fromCharCode(0x12014); // 也是返回 "—"; 数字 1 被剔除并忽略
-String.fromCharCode(8212); // 也是返回 "—"; 8212 是 0x2014 的十进制表示
+String.fromCharCode(0x12014); // 也返回 "—"；数字 1 被截断并忽略
+String.fromCharCode(8212); // 也返回 "—"；8212 是 0x2014 的十进制表示
 ```
 
 在 UTF-16 中，补充字符需要两个码元（即一个代理对）：
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // Code Point U+1F303 "Night with
+String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303 "Night with
 String.fromCharCode(55356, 57091); // Stars" == "\uD83C\uDF03"
 
 String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07); // "\uD834\uDF06a\uD834\uDF07"
