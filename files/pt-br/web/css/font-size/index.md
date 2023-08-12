@@ -109,7 +109,7 @@ span {
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -150,14 +150,20 @@ In this example, the words "outer inner outer" are all displayed at 16px (assumi
 
 ```css
 /* Sets paragraph text to be very large */
-p { font-size: xx-large; }
+p {
+  font-size: xx-large;
+}
 
 /* Sets <h1> text to be 2.5 times the size
    of the text around it */
-h1 { font-size: 250%; }
+h1 {
+  font-size: 250%;
+}
 
 /* Sets text enclosed within span tag to be 16px */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Example 2
@@ -198,12 +204,12 @@ span { font-size: 16px; }
 
 ## Specifications
 
-| Specification                                                                            | Status                                   | Comment                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | No change.                         |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | No change.                         |
-| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                |
+| Specification                                                       | Status                        | Comment                            |
+| ------------------------------------------------------------------- | ----------------------------- | ---------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}          | {{Spec2('CSS3 Fonts')}}       | No change.                         |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}    | {{Spec2('CSS3 Transitions')}} | Defines `font-size` as animatable. |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}           | No change.                         |
+| {{SpecName('CSS1', '#font-size', 'font-size')}}                     | {{Spec2('CSS1')}}             | Initial definition.                |
 
 {{cssinfo}}
 
