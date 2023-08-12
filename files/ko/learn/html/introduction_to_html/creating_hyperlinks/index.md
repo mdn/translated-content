@@ -102,22 +102,20 @@ img {
 
 링크에 추가할 수 있는 또 다른 속성은 `title`입니다. Title은 페이지에 포함된 정보 또는 웹 사이트에서 주의해야 할 사항 등 링크에 대한 추가 정보를 포함하고 있습니다.
 
-```html
+```html-nolint
 <p>
-  저는
+  I'm creating a link to
   <a
     href="https://www.mozilla.org/en-US/"
     title="The best place to find more information about Mozilla's
-          mission and how to contribute"
-    >Mozilla 홈페이지</a
-  >
-  로 향하는 링크를 만들었습니다.
+          mission and how to contribute">
+    the Mozilla homepage</a>.
 </p>
 ```
 
 그러면 다음과 같은 결과가 나오고 링크 위를 마우스를 올리면 제목이 툴팁으로 표시됩니다.
 
-저는 [Mozilla 홈페이지](https://www.mozilla.org/en-US/)로 향하는 링크를 만들었습니다.
+{{EmbedLiveSample('Adding supporting information with the title attribute', '100%', 150)}}
 
 > **참고:** 링크 제목은 마우스 호버에만 표시되므로 키보드 컨트롤이나 터치스크린을 사용하여 웹 페이지를 탐색하는 사용자는 제목 정보에 액세스하는 데 어려움을 겪습니다. Title의 정보가 페이지의 사용에 있어서 정말로 중요하다면, 해당하는 정보를 일반 텍스트로 넣어줌으로써 모든 사용자가 접근할 수 있는 방식으로 표시해야 합니다.
 
@@ -350,7 +348,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## 실력을 시험해 보세요!
+## 실력을 시험해 보세요
 
 이 글의 끝에 도달한 여러분은 가장 중요했던 정보들을 기억하고 계신가요? 다음 단계로 넘어가기 전에 이 정보를 알고있는지 확인하기 위한 추가 테스트 해볼 수 있습니다. 자세한 내용은 [Test your skills: Links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) 링크를 참조하세요.
 
