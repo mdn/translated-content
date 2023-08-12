@@ -140,7 +140,7 @@ function* gen() {
 
 gen().next(); // { value:"a", done:false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
+[a, b, c] = new Set(["a", "b", "c"]);
 a; // "a"
 ```
 
