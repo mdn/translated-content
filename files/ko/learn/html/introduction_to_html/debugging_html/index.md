@@ -96,7 +96,6 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
    - 이 섹션은 잘못 중첩되어 있습니다.: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. 이전 문제 때문에 이것이 어떻게 해석되었는지 알기가 쉽지 않습니다.
    - [`href`](/en-US/docs/Web/HTML/Element/a#href) 속성 값에 닫는 큰따옴표가 누락되었습니다. 이로 인해 링크가 전혀 렌더링되지 않는 가장 큰 문제가 발생한 것으로 보입니다.
 
-
 5. 이제 소스 코드의 마크업이 아닌 브라우저에서 렌더링한 마크업을 살펴 보겠습니다. 이를 위해 브라우저 개발자 도구를 사용할 수 있습니다. 브라우저의 개발자 도구 사용법에 익숙하지 않은 경우 잠시 시간을 내어 다음을 검토하세요. [브라우저 개발자 도구 알아보기](/ko/docs/Learn/Discover_browser_developer_tools).
 6. DOM 검사기에서 렌더링된 마크업의 모양을 확인할 수 있습니다.: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. DOM 검사기를 사용하여 코드를 자세히 살펴보고 브라우저가 HTML 오류를 어떻게 수정하려고 시도했는지 확인해 보겠습니다(Firefox에서 검토했습니다. 다른 최신 브라우저에서도 동일한 결과를 얻을 수 _있을 것_입니다).:
