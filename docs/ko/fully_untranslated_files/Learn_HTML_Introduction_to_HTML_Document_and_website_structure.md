@@ -28,8 +28,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
     <tr>
       <th scope="row">목표:</th>
       <td>
-        시멘틱 태그를 사용하여 문서 구조를 만드는 방법과 간단한 웹사이트 구조
-        만드는 방법을 배운다.
+        시멘틱 태그를 사용하여 문서 구조를 만드는 방법과 간단한 웹사이트 구조를 만드는 방법을 배운다.
       </td>
     </tr>
   </tbody>
@@ -39,16 +38,16 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 웹페이지는 서로 많이 다르게 보일 수 있지만, 페이지가 전체화면 비디오 혹은 게임이거나 예술 프로젝트, 좋지 않은 구조를 가지고 있지 않은 이상에는 대부분 유사한 구성 요소를 가지고 있습니다.
 
-- header
-  - : 일반적으로 큰 제목과 로고 등이 있는 큰 띠. 한 웹페이지에서 주요 정보가 있는 곳입니다.
-- navigation bar
-  - : 홈 페이지의 메인 섹션으로 연결합니다; 대부분 메뉴 버튼이나 링크, 탭으로 표현됩니다. 헤더와 같이, 이 항목은 대부분 한 페이지로부터 다른 페이지로 넘어가도 구성으로 남아있습니다. — 웹 사이트에서 일관적이지 못한 네비게이션을 사용할 경우 방문자는 복잡함과 불만족스러움을 느낄 것입니다. 많은 웹 디자이너들은 네비게이션 바를 개별적인 구성 요소로 사용하기 보다 hearder bar의 일부로 다루지만 이는 필수 사항은 아닙니다; 사실 일부 사람들은 접근성을 위해서는 두 개로 나누는 것이 좋다고 주장하는데, 나뉜 경우 스크린 리더들이 두 특징들을 더 잘 읽을 수 있기 때문입니다.
-- main content
-  - : 웹 페이지에서 가장 독특한 컨텐츠를 포함하고 있는 중심의 큰 부분으로, 예를 들어, 당신이 보고 싶어하는 비디오, 당신이 읽고 있는 주요 이야기, 당신이 보고 싶어하는 지도, 또는 뉴스 헤드라인 등이 있습니다. 물론 이 부분은 각 페이지마다 다른 웹 사이트의 한 부분입니다.
-- sidebar
-  - : 주변의 정보, 링크, 인용 부호, 광고 등입니다. 일반적으로 이는 메인 컨텐츠에 무엇이 포함되어 있느냐에 따라 다릅니다. (예를 들어 기사 페이지에서, sidebar는 작성자의 소개, 또는 관련 기사 링크를 포함할 것입니다.) 그러나 보조 navigation system으로서 되풀이되는 요소를 사용하는 경우도 찾아볼 수 있습니다.
-- footer
-  - : 페이지 바닥의 줄로 일반적으로 작은 정보, 저작권 정보, 또는 연락처 등을 포함하고 있습니다. (header와 같이) 일반적인 정보를 담고 있는 부분이지만 보통 중요하지 않거나 웹 사이트 자체에 부차적인 정보입니다. Footer는 또 가끔 {{Glossary("SEO")}} 목적으로 사용되는데, 인기 컨텐츠 바로가기 링크를 제공합니다.
+- header:
+  - 일반적으로 큰 제목과 로고 등이 있는 큰 띠. 한 웹페이지에서 주요 정보가 있는 곳입니다.
+- navigation bar:
+  - 홈 페이지의 메인 섹션으로 연결합니다; 대부분 메뉴 버튼이나 링크, 탭으로 표현됩니다. 헤더와 같이, 이 항목은 대부분 한 페이지로부터 다른 페이지로 넘어가도 구성으로 남아있습니다. — 웹 사이트에서 일관적이지 못한 네비게이션을 사용할 경우 방문자는 복잡함과 불만족스러움을 느낄 것입니다. 많은 웹 디자이너들은 네비게이션 바를 개별적인 구성 요소로 사용하기 보다 hearder bar의 일부로 다루지만 이는 필수 사항은 아닙니다; 사실 일부 사람들은 접근성을 위해서는 두 개로 나누는 것이 좋다고 주장하는데, 나뉜 경우 스크린 리더들이 두 특징들을 더 잘 읽을 수 있기 때문입니다.
+- main content:
+  - 웹 페이지에서 가장 독특한 컨텐츠를 포함하고 있는 중심의 큰 부분으로, 예를 들어, 당신이 보고 싶어하는 비디오, 당신이 읽고 있는 주요 이야기, 당신이 보고 싶어하는 지도, 또는 뉴스 헤드라인 등이 있습니다. 물론 이 부분은 각 페이지마다 다른 웹 사이트의 한 부분입니다.
+- sidebar:
+  - 주변의 정보, 링크, 인용 부호, 광고 등입니다. 일반적으로 이는 메인 컨텐츠에 무엇이 포함되어 있느냐에 따라 다릅니다. (예를 들어 기사 페이지에서, sidebar는 작성자의 소개, 또는 관련 기사 링크를 포함할 것입니다.) 그러나 보조 navigation system으로서 되풀이되는 요소를 사용하는 경우도 찾아볼 수 있습니다.
+- footer:
+  - 페이지 바닥의 줄로 일반적으로 작은 정보, 저작권 정보, 또는 연락처 등을 포함하고 있습니다. (header와 같이) 일반적인 정보를 담고 있는 부분이지만 보통 중요하지 않거나 웹 사이트 자체에 부차적인 정보입니다. Footer는 또 가끔 {{Glossary("SEO")}} 목적으로 사용되는데, 인기 컨텐츠 바로가기 링크를 제공합니다.
 
 "전형적인 웹사이트"는 다음과 같이 구성될 수 있습니다:
 
@@ -89,14 +88,14 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
       type="text/css" />
     <link rel="stylesheet" href="style.css" />
 
-    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!-- 아래 세 줄은 이전 버전의 Internet Explorer에서 HTML5 시맨틱 요소가 작동하도록 하는 수정 사항입니다. -->
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
+    <!-- 다음은 웹사이트의 모든 페이지에 사용되는 기본 헤더입니다. -->
 
     <header>
       <h1>Header</h1>
@@ -110,7 +109,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+      <!-- 검색 양식은 웹사이트를 탐색하는 또 다른 일반적인 비선형 방식입니다. -->
 
       <form>
         <input type="search" name="q" placeholder="Search query" />
@@ -118,9 +117,9 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
       </form>
     </nav>
 
-    <!-- Here is our page's main content -->
+    <!-- 페이지의 주요 콘텐츠는 다음과 같습니다. -->
     <main>
-      <!-- It contains an article -->
+      <!-- 여기에는 다음 문서가 포함되어 있습니다. -->
       <article>
         <h2>Article heading</h2>
 
@@ -132,7 +131,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
           congue enim, ut porta lorem lacinia consectetur.
         </p>
 
-        <h3>subsection</h3>
+        <h3>Subsection</h3>
 
         <p>
           Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
@@ -163,7 +162,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
         </p>
       </article>
 
-      <!-- the aside content can also be nested within the main content -->
+      <!-- 사이드 콘텐츠는 메인 콘텐츠 안에 중첩될 수도 있습니다. -->
       <aside>
         <h2>Related</h2>
 
@@ -177,7 +176,7 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
       </aside>
     </main>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
+    <!-- 다음은 웹사이트의 모든 페이지에 사용되는 기본 바닥글입니다. -->
 
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
@@ -190,21 +189,21 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 
 ## HTML 레이아웃 요소의 세부 사항
 
-모든 HTML 섹션 요소의 전반적인 의미를 자세히 이해하는 것이 좋습니다. 이것은 웹 개발에 대한 더 많은 경험을 얻기 시작하면서 점차적으로 작업하게 될 것입니다. HTML 요소 참조를 읽으면 많은 세부 정보를 찾을 수 있습니다. 지금으로서는 다음과 같은 주요 정의를 이해하려고 노력해야 합니다:
+모든 HTML 섹션 요소의 전반적인 의미를 자세히 이해하는 것이 좋습니다. 이것은 웹 개발에 대한 더 많은 경험을 얻기 시작하면서 점차적으로 작업하게 될 것입니다. HTML 요소 참조를 읽으면 많은 세부 정보를 찾을 수 있습니다. 지금으로서는 다음과 같은 주요 정의를 이해하려고 노력해야 합니다.
 
-- {{HTMLElement('main')}} 는 그 _페이지에 독자적인_ 컨텐츠입니다*.* Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
-- {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g. a single blog post.)
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g. a mini map, or a set of article headlines and summaries.) It's considered best practice to begin each section with a [heading](/en-US/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
-- {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.)
-- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/en-US/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title).)
-- {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
-- {{HTMLElement('footer')}} represents a group of end content for a page.
+- {{HTMLElement('main')}}은 해당 페이지에 *독자적인 컨텐츠*입니다. `<main>`은 페이지당 한 번만 사용하고 {{HTMLElement('body')}} 안에 직접 넣어야 합니다. 이상적으로는 다른 요소 안에 중첩되지 않아야 합니다.
+- {{HTMLElement('article')}}는 페이지의 나머지 부분 없이 단독으로 의미가 있는 관련 콘텐츠 블록을 묶습니다(예: 단일 블로그 게시물).
+- {{HTMLElement('section')}}는 `<article>`과 비슷하지만, 하나의 기능을 구성하는 페이지의 단일 부분(예: 미니 맵 또는 기사 헤드라인 및 요약 세트)을 그룹화하는 데 더 적합합니다. 각 섹션의 시작은 [heading](/en-US/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy)으로 시작하는 것이 가장 좋으며, 문맥에 따라 `<article>`을 다른 `<section>`으로 나누거나 `<section>`을 다른 `<article>`로 나눌 수도 있다는 점에 유의하세요.
+- {{HTMLElement('aside')}}에는 기본 콘텐츠와 직접 관련이 없지만 간접적으로 관련된 추가 정보(용어집 항목, 저자 약력, 관련 링크 등)를 제공할 수 있는 콘텐츠가 포함됩니다.
+- {{HTMLElement('header')}} 는 소개 콘텐츠 그룹을 나타냅니다. {{HTMLElement('body')}}의 자식인 경우 웹페이지의 전역 헤더를 정의하지만, {{HTMLElement('article')}} 또는 {{HTMLElement('section')}}의 자식인 경우 해당 섹션의 특정 헤더를 정의합니다(이를 [titles and headings](/en-US/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_a_title)과 혼동하지 않도록 주의하세요.).
+- {{HTMLElement('nav')}}에는 페이지의 기본 탐색 기능이 포함되어 있습니다. 보조 링크 등은 탐색에 포함되지 않습니다.
+- {{HTMLElement('footer')}}는 페이지의 끝부분 콘텐츠 그룹을 나타냅니다.
 
 ### 의미 없는 래퍼
 
 때로는 일부 항목을 함께 그룹화하거나 일부 콘텐츠를 래핑하는 데 이상적인 의미론적 요소를 찾을 수 없는 상황이 발생합니다. 때로는 요소 집합을 그룹화하여 일부 요소가 있는 단일 엔터티로 모든 요소에 영향을 미치기를 원할 수 있습니다.{{glossary("CSS")}} 또는 {{glossary("JavaScript")}}. 이와 같은 경우 HTML은 다음을 제공합니다. {{HTMLElement("div")}} 과 {{HTMLElement("span")}} 엘리먼트. 당신은 적합하게 이것들을 사용해야 합니다 [`class`](/ko/docs/Web/HTML/Global_attributes#class)속성은 쉽게 타겟팅할 수 있도록 일종의 레이블을 제공합니다.
 
-{{HTMLElement("span")}} 엘리먼트는 내용을 감싸는 더 나은 의미 체계 텍스트 요소가 생각나지 않거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 하는 인라인 비의미적 요소입니다. For example:
+{{HTMLElement("span")}} 엘리먼트는 내용을 감싸는 더 나은 의미 체계 텍스트 요소가 생각나지 않거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 하는 인라인 비의미적 요소입니다. 예를 들면
 
 ```html
 <p>
@@ -217,9 +216,9 @@ HTML 코드에서 기능에 따라 콘텐츠 섹션을 마크업할 수 있습�
 </p>
 ```
 
-In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
+이 경우 편집자 노트는 극 연출자에게 추가적인 방향을 제시하는 역할만 할 뿐 의미론적 의미가 없어야 합니다. 시력이 있는 사용자의 경우 CSS를 사용하여 주 텍스트와 약간 거리를 두는 것이 좋습니다.
 
-{{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:
+{{HTMLElement("div")}}는 블록 수준의 비시맨틱 요소로, 더 나은 시맨틱 블록 요소를 사용할 수 없거나 특정 의미를 추가하고 싶지 않은 경우에만 사용해야 합니다. 예를 들어 이커머스 사이트에서 언제든지 불러올 수 있는 쇼핑 카트 위젯을 생각해 보세요.
 
 ```html
 <div class="shopping-cart">
@@ -248,7 +247,7 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 
 줄바꿈에 사용하는 두 가지 요소는 다음과 같습니다. {{htmlelement("br")}} and {{htmlelement("hr")}}:
 
-`<br>` 단락에 줄 바꿈을 만듭니다. 우편 주소나 시와 같이 일련의 고정된 짧은 줄을 원하는 상황에서 단단한 구조를 강제하는 유일한 방법입니다. For example:
+`<br>` 단락에 줄 바꿈을 만듭니다. 우편 주소나 시와 같이 일련의 고정된 짧은 줄을 원하는 상황에서 단단한 구조를 강제하는 유일한 방법입니다. 예를 들면
 
 ```html
 <p>
@@ -259,14 +258,14 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 </p>
 ```
 
-`<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)); with them in the code, the markup renders like this:
+`<br>` 요소가 없으면 단락이 한 줄로 길게 렌더링되지만(이 과정의 앞부분에서 설명했듯이 [HTML ignores most whitespace](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)) 코드에 `<br>` 요소가 있으면 마크업이 다음과 같이 렌더링됩니다.
 
 There once was a girl called Nell
 Who loved to write HTML
 But her structure was bad, her semantics were sad
 and her markup didn't read very well.
 
-`<hr>` 요소는 텍스트의 주제 변경(예: 주제 또는 장면의 변경)을 나타내는 문서에 수평선을 만듭니다. 시각적으로 수평선처럼 보입니다. As an example:
+`<hr>` 요소는 텍스트의 주제 변경(예: 주제 또는 장면의 변경)을 나타내는 문서에 수평선을 만듭니다. 시각적으로 수평선처럼 보입니다. 예를 들면
 
 ```
 <p>Ron was backed into a corner by the marauding netherbeasts. Scared, but determined to protect his friends, he raised his wand and prepared to do battle, hoping that his distress call had made it through.</p>
@@ -296,14 +295,14 @@ Meanwhile, Harry was sitting at home, staring at his royalty statement and ponde
 
 무엇에 대한 사이트를 만들고 싶습니까? 자신이 만든 웹사이트에 대해 위의 예를 수행해 보십시오.
 
-> **참고:** 작업물을 어딘가에 저장하세요; 나중에 필요할 수 도 있습니다.
+> **참고:** 작업물을 어딘가에 저장하세요. 나중에 필요할 수도 있습니다.
 
 ## 요약
 
 이 시점에서 웹 페이지/사이트를 구성하는 방법에 대해 더 잘 알고 있어야 합니다. 이 모듈의 마지막 기사에서는 HTML을 디버그하는 방법을 연구할 것입니다.
 
-## See also
+## 참조 항목
 
-- [Using HTML sections and outlines](/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [Using HTML sections and outlines](/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): HTML5 시맨틱 요소와 HTML5 개요 알고리즘에 대한 고급 가이드입니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
