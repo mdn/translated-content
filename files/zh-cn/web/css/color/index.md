@@ -5,7 +5,7 @@ slug: Web/CSS/color
 
 {{CSSRef}}
 
-**`color`** CSS 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/color_value) ，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_keyword) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
+CSS **`color`** 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/color_value)，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
