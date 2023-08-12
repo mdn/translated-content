@@ -443,7 +443,7 @@ slug: Web/CSS/WebKit_Extensions
 - `-webkit-region-break-inside`
 - `-webkit-region-fragment`
 - `-webkit-shape-inside`
-- [-webkit-touch-callout](/zh-CN/docs/Web/CSS/-webkit-touch-callout)（参见`touch-action`）
+- [-webkit-touch-callout](/zh-CN/docs/Web/CSS/-webkit-touch-callout)（参见 `touch-action`）
 - `background-origin-x`（无前缀！）
 - `background-origin-y`（无前缀！）
 
