@@ -47,7 +47,7 @@
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
-> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 ```
 
 ### 카드 번역
@@ -172,3 +172,17 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 ```
 
 [(참고 링크)]: https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors
+
+## 표현
+
+MDN 문서는 구어체의 격식체를 **권장**하고 있습니다. 하지만, 상황에 따른 적절한 표현이 다르기 떄문에 강제하고 있지 않습니다.
+
+아래는 구어체의 격식체와 비격식체의 차이입니다.
+
+### 구어체 - 격식체
+
+> 가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다. 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, style.css 파일에 다음 CSS 를 추가하십시오.
+
+### 구어체 - 비격식체
+
+> 가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것이에요. 기본 표 스타일은 너무 비좁아요! 이렇게 하려면, style.css 파일에 다음 CSS 를 추가하세요.
