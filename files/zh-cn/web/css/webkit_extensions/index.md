@@ -426,7 +426,7 @@ slug: Web/CSS/WebKit_Extensions
 - `-webkit-flow-from`
 - `-webkit-flow-into`
 - `-webkit-grid-columns`（参见 [`grid-column`](/zh-CN/docs/Web/CSS/grid-column)）
-- `-webkit-grid-rows`（参见 [`grid-row)`](/zh-CN/docs/Web/CSS/grid-row)）
+- `-webkit-grid-rows`（参见 [`grid-row`](/zh-CN/docs/Web/CSS/grid-row)）
 - `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set`（参见 {{CSSxRef("image/image-set", "image-set")}}）
