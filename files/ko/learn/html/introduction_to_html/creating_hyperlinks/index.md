@@ -70,6 +70,7 @@ l10n:
 </a>
 <p>
   Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.
+</p>
 ```
 
 이렇게 하면 헤더를 링크로 바꿀 수 있습니다.
