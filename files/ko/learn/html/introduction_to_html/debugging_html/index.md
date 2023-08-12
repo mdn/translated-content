@@ -98,7 +98,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 
 5. 이제 소스 코드의 마크업이 아닌 브라우저에서 렌더링한 마크업을 살펴 보겠습니다. 이를 위해 브라우저 개발자 도구를 사용할 수 있습니다. 브라우저의 개발자 도구 사용법에 익숙하지 않은 경우 잠시 시간을 내어 다음을 검토하세요. [브라우저 개발자 도구 알아보기](/ko/docs/Learn/Discover_browser_developer_tools).
 6. DOM 검사기에서 렌더링된 마크업의 모양을 확인할 수 있습니다.: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
-7. DOM 검사기를 사용하여 코드를 자세히 살펴보고 브라우저가 HTML 오류를 어떻게 수정하려고 시도했는지 확인해 보겠습니다(Firefox에서 검토했습니다. 다른 최신 브라우저에서도 동일한 결과를 얻을 수 _있을 것_입니다).:
+7. DOM 검사기를 사용하여 코드를 자세히 살펴보고 브라우저가 HTML 오류를 어떻게 수정하려고 시도했는지 확인해 보겠습니다(Firefox에서 검토했습니다. 다른 최신 브라우저에서도 동일한 결과를 얻을 수 *있을 것*입니다).:
 
    - 단락과 목록 항목에 닫는 태그가 지정되었습니다.
    - 첫 번째 `<strong>`요소가 어디에서 닫혀야 하는지 명확하지 않기 때문에 브라우저는 문서 하단까지 각각의 개별 텍스트 블록을 자체 강력한 태그로 감쌌습니다!
