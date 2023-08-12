@@ -198,7 +198,7 @@ MDN 문서는 구어체의 격식체를 **권장**하고 있습니다. 하지만
 
 ## 따옴표
 
-둥근 따옴표(smart quotes)를 사용하지 않고, **일반 따옴표(normal quotes)를 사용**해야 합니다.
+둥근 따옴표(smart quotes)를 사용하지 않고, **일반 따옴표(normal quotes)를 사용**해야 합니다. ([ko: Replace smart quotes](https://github.com/mdn/translated-content/pull/14218) 참고)
 
 ### 나쁜 예시
 
