@@ -43,7 +43,7 @@ l10n:
 
 예를 들어, BBC 홈페이지에는 여러 뉴스 기사뿐만 아니라 사이트의 다양한 영역(내비게이션 기능), 로그인/등록 페이지(사용자 도구) 등을 가리키는 많은 링크가 포함되어 있습니다.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
+![front page of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
 
 ## 링크의 구조
 
