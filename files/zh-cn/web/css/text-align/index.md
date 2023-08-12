@@ -59,7 +59,7 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
 - `justify-all` {{experimental_inline}}
   - : 和 `justify` 一致，但是强制使最后一行两端对齐。
 - `match-parent`
-  - : 和 `inherit` 类似，区别在于`start`和`end`的值根据父元素的{{cssxref("direction")}}确定，并被替换为恰当的`left`或`right`。
+  - : 和 `inherit` 类似，区别在于 `start` 和 `end` 的值根据父元素的 {{cssxref("direction")}} 确定，并被替换为恰当的 `left` 或 `right` 值。
 - {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
   - : 应用在单元格时，指定单元格内容相对于哪个字符对齐。
 
