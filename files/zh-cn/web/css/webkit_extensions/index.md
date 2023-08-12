@@ -463,7 +463,7 @@ slug: Web/CSS/WebKit_Extensions
 - {{CSSxRef(":full-screen-document",":-webkit-full-screen-document")}}
 - {{CSSxRef(":full-screen-controls-hidden",":-webkit-full-screen-controls-hidden")}}
 
-\* 非标准。
+\* 现为标准。
 
 > **备注：** 如果在选择器的链或组中有一个无效的伪类，那么整个选择器列表都是无效的。
 
