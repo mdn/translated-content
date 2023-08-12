@@ -318,7 +318,6 @@ slug: Web/CSS/WebKit_Extensions
 
 ## 在 Firefox 中带 `-webkit-` 前缀支持
 
-The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see above.
 以下属性在 Firefox 中带 `-webkit-` 前缀支持。很多这些也不带前缀支持。参见上面的[曾经私有但是现在标准的属性](#曾经私有但是现在标准的属性)。
 
 > **备注：** 由于许多网站的旧版代码使用了以 -webkit- 为前缀的属性，Edge 和 Firefox 会将许多 -webkit- 为前缀的属性重定向到 -moz-、-ms- 和相应的没有前缀的等价属性上。
