@@ -1,5 +1,5 @@
 ---
-title: Multimedia and embedding
+title: 멀티미디어와 임베딩
 slug: Learn/HTML/Multimedia_and_embedding
 ---
 
