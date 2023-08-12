@@ -12,6 +12,15 @@
 [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 ```
 
+## 이미지 파일
+
+`translate-content` 저장소에서 더 이상 `mdn/content`의 이미지 파일들을 복사하지 않아도 됩니다.
+
+**참고 PR**
+
+- [deleted duplicated mdn/content images/assets #4545](https://github.com/mdn/translated-content/pull/5031)
+- [Remove unused assets](https://github.com/mdn/translated-content/pull/14664)
+
 ## Inline code
 
 원문의 인라인 코드는 번역하지 않습니다.
