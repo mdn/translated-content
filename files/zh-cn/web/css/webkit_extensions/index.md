@@ -503,7 +503,7 @@ slug: Web/CSS/WebKit_Extensions
 - {{CSSxRef("::-webkit-slider-runnable-track", "::-webkit-slider-runnable-track")}}
 - {{CSSxRef("::-webkit-slider-thumb", "::-webkit-slider-thumb")}}
 
-\* 非标准
+\* 现为标准
 
 > **备注：** 通常来说，如果在选择器的链或组中有一个无效的伪元素或者伪类，那么整个选择器列表都是无效的。如果伪元素（不是伪类）有 -webkit- 前缀，那么自 Firefox 版本 63 起，Blink、WebKit 和 Gecko 浏览器都假定其为有效的，不会使整个选择器列表无效。
 
