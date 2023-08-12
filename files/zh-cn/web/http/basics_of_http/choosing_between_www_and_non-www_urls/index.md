@@ -43,7 +43,7 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 当加入这个标签，在两个域名中提供相同的内容，会告诉搜索引擎哪个域名是规范的。以前面的例子为例，`http://www.example.org/whaddup` 将提供与 `http://example.org/whaddup` 相同的内容，但有一个额外的 {{HTMLElement("link")}} 头部元素：
 
 ```html
-<link href="http://example.org/whaddup" rel="canonical">
+<link href="http://example.org/whaddup" rel="canonical" />
 ```
 
 与前一种方法不同的是，在浏览器历史记录中非 www 和 www 的网址是独立的条目。
