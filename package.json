@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "fix:json": "prettier -w \"**/*.json\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2-fix \"**/ko/**/*.md\" && prettier -w \"**/ko/**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
