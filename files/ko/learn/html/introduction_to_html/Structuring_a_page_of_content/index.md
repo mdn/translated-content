@@ -15,7 +15,7 @@ CSS를 사용하여 콘텐츠 페이지를 레이아웃할 수 있도록 구조�
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        이 장에 참여하기 전에 
+        이 장에 참여하기 전에
         <a
           href="/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
           >문서 및 웹사이트 구조</a
