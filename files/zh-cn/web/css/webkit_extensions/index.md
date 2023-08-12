@@ -411,7 +411,7 @@ slug: Web/CSS/WebKit_Extensions
 
 - {{CSSxRef("user-select", "-webkit-user-select")}}
 
-\* 在 Firefox 中以 `-moz-` 和 `-webkit-` 前缀支持，但是没有前缀不支持。
+\* 在 Firefox 中支持有 `-moz-` 和 `-webkit-` 前缀的版本，但是不支持无前缀版本。
 \*\* 这些值是支持的，尽管不是标准的且也不在成为标准的轨道上。
 \*\*\* 应该使用 flex-box 属性。
 
