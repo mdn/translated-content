@@ -7,7 +7,7 @@ slug: Web/CSS/WebKit_Extensions
 
 基于 WebKit 或 Blink 的应用，例如 Safari 和 Chrome，支持一些特殊的 **[CSS](/zh-CN/docs/Web/CSS) WebKit 扩展**。这些扩展通常带有 `-webkit-` 前缀。大多数 `-webkit-` 前缀的属性通常也能够与 `-apple-` 前缀使用。少部分是有 `-epub-` 前缀的。
 
-## 仅 WebKit 的属性
+## 仅 WebKit 具有的属性
 
 > **备注：** 避免在网站上使用。这些属性仅在 WebKit 应用中可用。
 
