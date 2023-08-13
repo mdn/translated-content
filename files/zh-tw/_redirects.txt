@@ -408,7 +408,6 @@
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術	/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-TW/docs/Learn/HTML/Tables/基礎	/zh-TW/docs/Learn/HTML/Tables/Basics
 /zh-TW/docs/Learn/How_to_contribute	/zh-TW/docs/MDN/Contribute
-/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises
 /zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-TW/docs/Learn/JavaScript/Asynchronous
 /zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing
 /zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-TW/docs/Learn/JavaScript/Asynchronous

@@ -1170,10 +1170,6 @@
     "modified": "2020-07-22T04:08:45.043Z",
     "contributors": ["zcecil", "condal36", "edgar-chen"]
   },
-  "Learn/Server-side/Django/Deployment": {
-    "modified": "2020-07-16T22:37:43.781Z",
-    "contributors": ["edgar-chen"]
-  },
   "Learn/Server-side/Django/Forms": {
     "modified": "2020-11-13T23:21:29.124Z",
     "contributors": ["joshra", "condal36", "edgar-chen"]
@@ -1205,10 +1201,6 @@
     "modified": "2020-10-19T12:00:28.346Z",
     "contributors": ["hsiaocy", "condal36", "edgar-chen"]
   },
-  "Learn/Server-side/Django/Testing": {
-    "modified": "2020-07-16T22:37:39.988Z",
-    "contributors": ["edgar-chen"]
-  },
   "Learn/Server-side/Django/Tutorial_local_library_website": {
     "modified": "2020-07-16T22:36:50.916Z",
     "contributors": ["willynpi", "edgar-chen"]
@@ -1224,10 +1216,6 @@
   "Learn/Server-side/Django/skeleton_website": {
     "modified": "2020-07-16T22:36:55.864Z",
     "contributors": ["Yuehua-Liu", "Ericchen159", "LeonH", "edgar-chen"]
-  },
-  "Learn/Server-side/Django/web_application_security": {
-    "modified": "2020-07-16T22:37:47.653Z",
-    "contributors": ["edgar-chen"]
   },
   "Learn/Server-side/Express_Nodejs": {
     "modified": "2020-07-16T22:37:56.965Z",
@@ -1303,14 +1291,6 @@
   },
   "Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form": {
     "modified": "2020-07-16T22:38:46.419Z",
-    "contributors": ["edgar-chen"]
-  },
-  "Learn/Server-side/Express_Nodejs/forms/Create_author_form": {
-    "modified": "2020-07-16T22:38:44.881Z",
-    "contributors": ["edgar-chen"]
-  },
-  "Learn/Server-side/Express_Nodejs/forms/Create_book_form": {
-    "modified": "2020-07-16T22:38:45.325Z",
     "contributors": ["edgar-chen"]
   },
   "Learn/Server-side/Express_Nodejs/forms/Create_genre_form": {
@@ -3175,17 +3155,9 @@
     "modified": "2020-11-18T14:43:15.827Z",
     "contributors": ["chrisdavidmills", "linzging"]
   },
-  "Web/CSS/grid-row": {
-    "modified": "2020-10-15T21:53:10.432Z",
-    "contributors": ["fscholz", "1986slayer"]
-  },
   "Web/CSS/grid-template": {
     "modified": "2020-10-15T22:30:52.332Z",
     "contributors": ["blueanger31"]
-  },
-  "Web/CSS/grid-template-columns": {
-    "modified": "2020-10-15T21:53:17.222Z",
-    "contributors": ["fscholz", "1986slayer"]
   },
   "Web/CSS/height": {
     "modified": "2019-03-23T22:21:15.320Z",
@@ -3194,10 +3166,6 @@
   "Web/CSS/line-break": {
     "modified": "2020-10-15T22:24:02.776Z",
     "contributors": ["jsgao0"]
-  },
-  "Web/CSS/object-fit": {
-    "modified": "2019-03-23T22:27:58.659Z",
-    "contributors": ["gn00979905"]
   },
   "Web/CSS/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
@@ -3558,21 +3526,6 @@
       "foxbrush",
       "DESKTOP-H9V56N1"
     ]
-  },
-  "Web/HTTP/CORS/Errors": {
-    "modified": "2019-05-07T03:11:46.742Z"
-  },
-  "Web/HTTP/CORS/Errors/CORSDidNotSucceed": {
-    "modified": "2019-05-07T05:22:57.676Z",
-    "contributors": ["hms5232"]
-  },
-  "Web/HTTP/CORS/Errors/CORSMissingAllowOrigin": {
-    "modified": "2019-05-07T05:23:32.648Z",
-    "contributors": ["hms5232"]
-  },
-  "Web/HTTP/CORS/Errors/CORSNotSupportingCredentials": {
-    "modified": "2019-05-07T22:55:59.165Z",
-    "contributors": ["hms5232"]
   },
   "Web/HTTP/Caching": {
     "modified": "2019-09-07T05:43:44.819Z",

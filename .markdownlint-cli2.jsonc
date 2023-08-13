@@ -142,8 +142,8 @@
     // https://github.com/OnkarRuikar/markdownlint-rule-search-replace
     "search-replace": {
       "rules": [
-        // XXX Need to disable the next two rules for zh-cn due to grammatical accuracy
         {
+          // Does not apply to zh-cn
           "name": "curly-double-quotes",
           "message": "Don't use curly double quotes",
           "searchPattern": "/“|”/g",
@@ -151,6 +151,7 @@
           "searchScope": "text"
         },
         {
+          // Does not apply to zh-cn
           "name": "curly-single-quotes",
           "message": "Don't use curly single quotes",
           "searchPattern": "/‘|’/g",
@@ -164,10 +165,10 @@
           "replace": " ",
           "searchScope": "all"
         },
-        // XXX zh-cn/zh-tw prefers em-dash instead
         {
-          "name": "m-dash",
-          "message": "Don't use '--'. Use m-dash — instead",
+          // zh-cn/zh-tw prefers double em-dash instead
+          "name": "em-dash",
+          "message": "Don't use '--'. Use em-dash (—) instead",
           "search": " -- ",
           "replace": " — ",
           "searchScope": "text"

@@ -36,6 +36,7 @@ build/
 /files/ru/learn/html/introduction_to_html/the_head_metadata_in_html/index.md
 /files/ru/web/css/computed_value/index.md
 /files/ru/web/css/justify-content/index.md
+/files/ru/web/css/margin-top/index.md
 /files/ru/web/html/element/abbr/index.md
 /files/ru/web/javascript/guide/expressions_and_operators/index.md
 /files/zh-cn/learn/server-side/django/forms/index.md
@@ -46,21 +47,7 @@ build/
 # The following folders still need a full pass:
 
 # ja
-/files/ja/mdn/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
 /files/ja/web/javascript/**/*.md
-
-# ko
-/files/ko/web/css/**/*.md
-/files/ko/web/javascript/**/*.md
-
-# pt-br
-/files/pt-br/web/api/**/*.md
-/files/pt-br/web/css/**/*.md
-/files/pt-br/web/javascript/**/*.md
-
-# ru
-/files/ru/web/css/**/*.md
-/files/ru/web/javascript/**/*.md

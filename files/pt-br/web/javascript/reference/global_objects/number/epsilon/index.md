@@ -19,7 +19,7 @@ A propriedade `EPSILON` tem o valor de aproximadamente `2.2204460492503130808472
 
 ```js
 if (Number.EPSILON === undefined) {
-    Number.EPSILON = Math.pow(2, -52);
+  Number.EPSILON = Math.pow(2, -52);
 }
 ```
 
@@ -31,13 +31,13 @@ if (Number.EPSILON === undefined) {
 x = 0.2;
 y = 0.3;
 z = 0.1;
-equal = (Math.abs(x - y + z) < Number.EPSILON);
+equal = Math.abs(x - y + z) < Number.EPSILON;
 ```
 
 ## Especificações
 
-| Especificação                                                                        |
-| ------------------------------------------------------------------------------------ |
+| Especificação                                                    |
+| ---------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} |
 
 ## Compatibilidade com navegadores
