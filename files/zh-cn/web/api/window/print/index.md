@@ -31,6 +31,6 @@ print()
 
 ## 参见
 
-1. [Printing](/zh-CN/Web/Guide/Printing)
+1. [Printing](/zh-CN/docs/Web/Guide/Printing)
 2. [`beforeprint`](/zh-CN/docs/Web/API/Window/beforeprint_event)
 3. [`afterprint`](/zh-CN/docs/Web/API/Window/afterprint_event)
