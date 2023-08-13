@@ -13,7 +13,7 @@ l10n:
 
 ## 순회 가능 프로토콜
 
-**순회 가능 프로토콜**을 사용하면 JavaScript 객체를 {{jsxref("Statements/for...of", "for...of")}} 구조에서 반복되는 값과 같은 순회 동작을 정의하거나 사용자 지정할 수 있습니다. {{jsxref("Object")}}와는 달리 {{jsxref("Array")}} 또는 {{jsxref("Map")}}과 같은 일부 내장 유형은 기본 순회 동작이 있는 [내장 순회 가능](#built-in_iterables) 항목입니다.
+**순회 가능 프로토콜**을 사용하면 JavaScript 객체를 {{jsxref("Statements/for...of", "for...of")}} 구조에서 반복되는 값과 같은 순회 동작을 정의하거나 사용자 지정할 수 있습니다. {{jsxref("Object")}}와는 달리 {{jsxref("Array")}} 또는 {{jsxref("Map")}}과 같은 일부 내장 유형은 기본 순회 동작이 있는 [내장 순회 가능](#내장_순회_가능) 항목입니다.
 
 **순회 가능**이 되기위해 객체는 반드시 `@@iterator` 메서드를 구현해야 합니다. 즉, 객체(또는 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)의 객체 중 하나)에 상수 {{jsxref("Symbol.iterator")}}를 통해 이용할 수 있는 `@@iterator` 키가 있는 속성이 있어야 합니다.
 
