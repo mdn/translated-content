@@ -1,6 +1,6 @@
 ---
-title：层叠层
-slug：Learn/CSS/Building_blocks/Cascade_layers
+title: 层叠层
+slug: Learn/CSS/Building_blocks/Cascade_layers
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
