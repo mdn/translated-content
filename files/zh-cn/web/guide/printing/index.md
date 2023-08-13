@@ -54,7 +54,7 @@ slug: Web/Guide/Printing
 如果你希望在用户打印完 [弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本）的内容后自动关闭该窗口，你可以使用这样的代码：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
