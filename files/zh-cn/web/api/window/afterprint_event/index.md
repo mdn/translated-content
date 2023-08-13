@@ -1,5 +1,5 @@
 ---
-title: 'Window: afterprint event'
+title: "Window: afterprint event"
 slug: Web/API/Window/afterprint_event
 ---
 
