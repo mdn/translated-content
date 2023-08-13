@@ -89,7 +89,7 @@ title 속성은 그리고 마우스를 호버했을때에 툴팁에 대한 기�
 
 ```html
 <a href="https://www.mozilla.org/ko">
-  <img src="mozilla-image.png" alt="moailla 홈페이지의 mozilla 로고">
+  <img src="mozilla-image.png" alt="moailla 홈페이지의 mozilla 로고" />
 </a>
 ```
 
