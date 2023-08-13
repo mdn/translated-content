@@ -3,21 +3,34 @@
     "extends": "../../.markdownlint-cli2.jsonc",
     "search-replace": {
       "rules": [
-        // XXX Many instances still found in translated content
-        // {
-        //   "name": "curly-double-quotes",
-        //   "message": "Don't use curly double quotes",
-        //   "searchPattern": "/“(.*?)”/gm",
-        //   "replace": "「$1」",
-        //   "searchScope": "text"
-        // },
-        // {
-        //   "name": "double-quotes",
-        //   "message": "Don't use double quotes",
-        //   "searchPattern": "/‘(.*?)’/g",
-        //   "replace": "『$1』",
-        //   "searchScope": "text"
-        // },
+        {
+          "name": "curly-double-quotes-open",
+          "message": "Don't use curly double quotes",
+          "searchPattern": "/“/g",
+          "replace": "「",
+          "searchScope": "text"
+        },
+        {
+          "name": "curly-double-quotes-close",
+          "message": "Don't use curly double quotes",
+          "searchPattern": "/”/g",
+          "replace": "」",
+          "searchScope": "text"
+        },
+        {
+          "name": "curly-single-quotes-open",
+          "message": "Don't use curly single quotes",
+          "searchPattern": "/‘/g",
+          "replace": "『",
+          "searchScope": "text"
+        },
+        {
+          "name": "curly-single-quotes-close",
+          "message": "Don't use curly single quotes",
+          "searchPattern": "/’/g",
+          "replace": "』",
+          "searchScope": "text"
+        },
         {
           "name": "nbsp",
           "message": "Don't use no-break spaces",
@@ -25,21 +38,20 @@
           "replace": " ",
           "searchScope": "all"
         },
-        // XXX Many instances still found in translated content
-        // {
-        //   "name": "m-dash",
-        //   "message": "Don't use '--'. Use m-dash — instead",
-        //   "search": " -- ",
-        //   "replace": "——",
-        //   "searchScope": "text"
-        // },
-        // {
-        //   "name": "relative-link",
-        //   "message": "Internal links should start with '/'",
-        //   "searchPattern": "/([\\(\"])(en-US|zh-TW)\\/docs/gi",
-        //   "replace": "$1/$2/docs",
-        //   "searchScope": "text"
-        //},
+        {
+          "name": "double-em-dash",
+          "message": "Don't use '--'. Use double em-dash (——) instead",
+          "search": " -- ",
+          "replace": " —— ",
+          "searchScope": "text"
+        },
+        {
+          "name": "relative-link",
+          "message": "Internal links should start with '/'",
+          "searchPattern": "/([\\(\"])([\\w\\-]+)\\/docs/g",
+          "replace": "$1/$2/docs",
+          "searchScope": "text"
+        },
         {
           "name": "relative-link-path",
           "message": "Don't use relative paths",

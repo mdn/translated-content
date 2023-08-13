@@ -10,21 +10,20 @@
           "replace": " ",
           "searchScope": "all"
         },
-        // XXX Many instances still found in translated content
-        // {
-        //   "name": "m-dash",
-        //   "message": "Don't use '--'. Use m-dash — instead",
-        //   "search": " -- ",
-        //   "replace": "——",
-        //   "searchScope": "text"
-        // },
-        // {
-        //   "name": "relative-link",
-        //   "message": "Internal links should start with '/'",
-        //   "searchPattern": "/([\\(\"])(en-US|zh-CN)\\/docs/gi",
-        //   "replace": "$1/$2/docs",
-        //   "searchScope": "text"
-        // },
+        {
+          "name": "double-em-dash",
+          "message": "Don't use '--'. Use double em-dash (——) instead",
+          "search": " -- ",
+          "replace": " —— ",
+          "searchScope": "text"
+        },
+        {
+          "name": "relative-link",
+          "message": "Internal links should start with '/'",
+          "searchPattern": "/([\\(\"])([\\w\\-]+)\\/docs/g",
+          "replace": "$1/$2/docs",
+          "searchScope": "text"
+        },
         {
           "name": "relative-link-path",
           "message": "Don't use relative paths",
