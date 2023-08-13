@@ -13,11 +13,11 @@ SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD
 
 1. Wikipedia articles
 
-    1. [SLD](https://ja.wikipedia.org/wiki/セカンドレベルドメイン)
+   1. [SLD](https://ja.wikipedia.org/wiki/セカンドレベルドメイン)
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("DNS")}}
-    2. {{Glossary("Domain", "ドメイン")}}
-    3. {{Glossary("Domain name", "ドメイン名")}}
-    4. {{Glossary("TLD")}}
+   1. {{Glossary("DNS")}}
+   2. {{Glossary("Domain", "ドメイン")}}
+   3. {{Glossary("Domain name", "ドメイン名")}}
+   4. {{Glossary("TLD")}}

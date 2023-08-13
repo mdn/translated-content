@@ -116,7 +116,6 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
   <h2>Cabeçalho</h2>
   <img src="passaro.jpg" alt="pássaro" />
 </section>
-
 ```
 
 ## Especificações

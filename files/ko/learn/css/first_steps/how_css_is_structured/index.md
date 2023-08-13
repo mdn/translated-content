@@ -22,11 +22,11 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
           >CSS 작동 방식</a
         >
         이해
@@ -50,12 +50,12 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
 외부 스타일 시트는 CSS 확장자가 `.css` 인 별도의 파일로 작성되고, HTML `<link>` 요소에서 참조하는 경우입니다:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>나의 CSS 실험</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>헬로우 월드!</h1>
@@ -84,13 +84,13 @@ p {
 
 ```html
 <!-- 현재 폴더의 styles 라는 하위 폴더 안에 -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- 현재 폴더의 styles 라는 하위 폴더에 있는 general 이라는 하위 폴더 안에 -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- 상위 폴더로 올라간 다음, styles 라는 하위 폴더 내로 이동 -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### 내부 스타일 시트
@@ -100,10 +100,10 @@ p {
 따라서 HTML 은 다음과 같습니다:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>나의 CSS 실험</title>
     <style>
       h1 {
@@ -131,14 +131,16 @@ p {
 인라인 스타일은 `style` 속성 내에 포함된 한 요소에만 영향을 주는 CSS 선언입니다:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>나의 CSS 실험</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">헬로우 월드!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      헬로우 월드!
+    </h1>
     <p style="color:red;">이것은 나의 첫 번째 CSS 예제입니다</p>
   </body>
 </html>
@@ -155,17 +157,15 @@ p {
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>나의 CSS 실험</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>여기에 테스트용 HTML 을 작성하십시오</p>
-
   </body>
 </html>
 ```
@@ -251,7 +251,7 @@ p {
 
 가장 기본적인 수준에서, CSS 는 두 가지 요소로 구성됩니다:
 
-- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
+- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/font-size), [`width`](/ko/docs/Web/CSS/width), [`background-color`](/ko/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
 - **값 (Values)**: 지정된 각 속성에는 값이 지정되어 있으며, 이는 해당 스타일 기능을 변경하는 방법 (예: 글꼴, 너비 또는 배경색을 변경하려는 항목) 을 나타냅니다.
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.
@@ -319,7 +319,7 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }
 ```
 
@@ -335,10 +335,10 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/en-US/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 접하게 될 가장 일반적인 `@rules` 중 하나는 `@media` 입니다. 이는 특정 조건이 참일 때만 (예: 화면 해상도가 일정 폭 이상이거나 화면이 일정 폭 보다 넓을 때) CSS 를 적용할 수 있는 [미디어 쿼리](/ko/docs/Web/CSS/Media_Queries) 를 사용할 수 있습니다.
@@ -414,7 +414,10 @@ CSS 의 주석은 `/*` 로 시작하고 `*/` 로 끝납니다. 아래 코드 블
 /* 기본 요소 스타일링 처리 */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -429,11 +432,14 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* DOM 에 중첩된 특정 요소 처리  */
 /* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
   border-radius: 3px;
 }
@@ -448,7 +454,7 @@ div p + p {
 }
 ```
 
-주석은 테스트 목적으로 코드의 특정 부분을 일시적으로 ***주석 처리** *하는 경우에도 유용합니다. 예를 들어, 코드의 어느 부분에서 오류가 발생했는지 확인하려는 경우. 다음 예제에서는 `.special` 선택자에 대한 규칙을 주석 처리 했습니다.
+주석은 테스트 목적으로 코드의 특정 부분을 일시적으로 _주석 처리_ 하는 경우에도 유용합니다. 예를 들어, 코드의 어느 부분에서 오류가 발생했는지 확인하려는 경우. 다음 예제에서는 `.special` 선택자에 대한 규칙을 주석 처리 했습니다.
 
 ```css
 /*.special {
@@ -503,14 +509,37 @@ div p + p {
 ```
 
 ```css
-body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+body {
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
+@media (min-width: 70em) {
+  body {
+    font-size: 130%;
+  }
+}
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-div p, #id:first-line {background-color: red; border-radius: 3px;}
-div p {margin: 0; padding: 1em;}
-div p + p {padding-top: 0;}
+div p,
+#id:first-line {
+  background-color: red;
+  border-radius: 3px;
+}
+div p {
+  margin: 0;
+  padding: 1em;
+}
+div p + p {
+  padding-top: 0;
+}
 ```
 
 대부분의 공백을 제거한 상태에서 정확히 동일한 CSS 를 작성할 수 있습니다. 이것은 첫 번째 예제와 기능적으로 동일하지만 읽기가 다소 어렵다는 데 동의합니다.

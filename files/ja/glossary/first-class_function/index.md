@@ -14,7 +14,7 @@ l10n:
 ```js
 const foo = () => {
   console.log("foobar");
-}
+};
 foo(); // 変数を使用して呼び出し
 // foobar
 ```
@@ -47,7 +47,7 @@ greeting(sayHello, "JavaScript!");
 function sayHello() {
   return () => {
     console.log("Hello!");
-  }
+  };
 }
 ```
 

@@ -1,13 +1,6 @@
 ---
 title: Pseudo-éléments
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudo-éléments
 ---
 
 {{CSSRef}}
@@ -66,17 +59,14 @@ p::first-line {
 
 ```html
 <p>
-  C’était le Lapin Blanc qui revenait en trottinant,
-  et qui cherchait de tous côtés, d’un air inquiet,
-  comme s’il avait perdu quelque chose ; Alice
-  l’entendit qui marmottait : « La Duchesse ! La
-  Duchesse ! Oh ! mes pauvres pattes ; oh ! ma robe
-  et mes moustaches ! Elle me fera guillotiner aussi
-  vrai que des furets sont des furets ! Où pourrais-je
-  bien les avoir perdus ? » Alice devina tout de suite
-  qu’il cherchait l’éventail et la paire de gants paille,
-  et, comme elle avait bon cœur, elle se mit à les
-  chercher aussi ; mais pas moyen de les trouver.
+  C’était le Lapin Blanc qui revenait en trottinant, et qui cherchait de tous
+  côtés, d’un air inquiet, comme s’il avait perdu quelque chose ; Alice
+  l’entendit qui marmottait : « La Duchesse ! La Duchesse ! Oh ! mes pauvres
+  pattes ; oh ! ma robe et mes moustaches ! Elle me fera guillotiner aussi vrai
+  que des furets sont des furets ! Où pourrais-je bien les avoir perdus ? »
+  Alice devina tout de suite qu’il cherchait l’éventail et la paire de gants
+  paille, et, comme elle avait bon cœur, elle se mit à les chercher aussi ; mais
+  pas moyen de les trouver.
 </p>
 ```
 

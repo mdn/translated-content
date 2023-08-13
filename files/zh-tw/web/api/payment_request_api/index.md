@@ -23,7 +23,7 @@ Payment Request API 提供商家與用戶雙方一致的用戶體驗。它並不
 
 你可以在 [使用 Payment Request API](/zh-TW/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API) 文章看到完整教學。
 
-> **備註：** 此 API 只有在設定 {{htmlattrxref("allowpaymentrequest","iframe")}} 屬性下，才可支援跨域 {{htmlelement("iframe")}} 元素。
+> **備註：** 此 API 只有在設定 [`allowpaymentrequest`](/zh-TW/docs/Web/HTML/Element/iframe#allowpaymentrequest) 屬性下，才可支援跨域 {{htmlelement("iframe")}} 元素。
 
 ## 介面
 

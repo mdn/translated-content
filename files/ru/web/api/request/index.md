@@ -1,17 +1,6 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Fetch
-  - Fetch API
-  - Interface
-  - NeedsTranslation
-  - Networking
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
 
 {{APIRef("Fetch")}}
@@ -84,7 +73,7 @@ translation_of: Web/API/Request
 In the following snippet, we create a new request using the `Request()` constructor (for an image file in the same directory as the script), then return some property values of the request:
 
 ```js
-const request = new Request('https://www.mozilla.org/favicon.ico');
+const request = new Request("https://www.mozilla.org/favicon.ico");
 
 const URL = request.url;
 const method = request.method;
@@ -95,8 +84,8 @@ You could then fetch this request by passing the `Request` object in as a parame
 
 ```js
 fetch(request)
-  .then(response => response.blob())
-  .then(blob => {
+  .then((response) => response.blob())
+  .then((blob) => {
     image.src = URL.createObjectURL(blob);
   });
 ```
@@ -104,7 +93,10 @@ fetch(request)
 In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an api request which need a body payload:
 
 ```js
-const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+const request = new Request("https://example.com", {
+  method: "POST",
+  body: '{"foo": "bar"}',
+});
 
 const URL = request.url;
 const method = request.method;
@@ -118,26 +110,25 @@ const bodyUsed = request.bodyUsed;
 
 ```js
 fetch(request)
-  .then(response => {
+  .then((response) => {
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error('Что-то пошло не так на API сервере.');
+      throw new Error("Что-то пошло не так на API сервере.");
     }
   })
-  .then(response => {
+  .then((response) => {
     console.debug(response);
     // ...
-  }).catch(error => {
+  })
+  .catch((error) => {
     console.error(error);
   });
 ```
 
 ## Specifications
 
-| Specification                                                    | Status                   | Comment               |
-| ---------------------------------------------------------------- | ------------------------ | --------------------- |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Начальное определение |
+{{Specifications}}
 
 ## Browser compatibility
 

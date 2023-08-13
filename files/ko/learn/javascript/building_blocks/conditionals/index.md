@@ -1,7 +1,6 @@
 ---
 title: 판단 내리기 — 조건문
 slug: Learn/JavaScript/Building_blocks/conditionals
-original_slug: Learn/JavaScript/Building_blocks/조건문
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
@@ -118,24 +117,28 @@ if (shoppingDone === true) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
-  if (choice === 'sunny') {
-    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
-  } else if (choice === 'rainy') {
-    para.textContent = 'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.';
-  } else if (choice === 'snowing') {
-    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
-  } else if (choice === 'overcast') {
-    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  if (choice === "sunny") {
+    para.textContent =
+      "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+  } else if (choice === "rainy") {
+    para.textContent =
+      "Rain is falling outside; take a rain coat and a brolly, and don't stay out for too long.";
+  } else if (choice === "snowing") {
+    para.textContent =
+      "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+  } else if (choice === "overcast") {
+    para.textContent =
+      "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
   } else {
-    para.textContent = '';
+    para.textContent = "";
   }
 }
 ```
@@ -162,12 +165,12 @@ function setWeather() {
 몇 번이고 다시 만날 boolean(`true`/`false`)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든 `false`, `undefined`, `null`, `0`, `NaN`이나 빈 문자열(`''`)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 `true`를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:
 
 ```js
-let cheese = 'Cheddar';
+let cheese = "Cheddar";
 
 if (cheese) {
-  console.log('Yay! Cheese available for making cheese on toast.');
+  console.log("Yay! Cheese available for making cheese on toast.");
 } else {
-  console.log('No cheese on toast for you today.');
+  console.log("No cheese on toast for you today.");
 }
 ```
 
@@ -177,7 +180,8 @@ if (cheese) {
 let shoppingDone = false;
 let childsAllowance;
 
-if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습니다
+if (shoppingDone) {
+  // 명시적으로 '=== true'를 명시할 필요가 없습니다
   childsAllowance = 10;
 } else {
   childsAllowance = 5;
@@ -189,11 +193,17 @@ if (shoppingDone) { // 명시적으로 '=== true'를 명시할 필요가 없습�
 `if...else`문을 또 다른 문 앞에 (중첩하기 위하여) 넣는 것은 완벽하게 가능합니다. 예를 들어, 온도가 무엇인지에 따라 추가적인 선택의 옵션을 보여주기 위해 우리의 날씨 예보 어플리케이션을 업데이트 할 수 있습니다.
 
 ```js
-if (choice === 'sunny') {
+if (choice === "sunny") {
   if (temperature < 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+    para.textContent =
+      "It is " +
+      temperature +
+      " degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.";
   } else if (temperature >= 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.';
+    para.textContent =
+      "It is " +
+      temperature +
+      " degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.";
   }
 }
 ```
@@ -210,10 +220,16 @@ if (choice === 'sunny') {
 AND 예시를 위해서 앞의 예제 코드를 다음과 같이 재작성할 수 있습니다.
 
 ```js
-if (choice === 'sunny' && temperature < 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
-} else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.';
+if (choice === "sunny" && temperature < 86) {
+  para.textContent =
+    "It is " +
+    temperature +
+    " degrees outside — nice and sunny. Let's go out to the beach, or the park, and get an ice cream.";
+} else if (choice === "sunny" && temperature >= 86) {
+  para.textContent =
+    "It is " +
+    temperature +
+    " degrees outside — REALLY HOT! If you want to go outside, make sure to put some suncream on.";
 }
 ```
 
@@ -222,20 +238,20 @@ if (choice === 'sunny' && temperature < 86) {
 빠르게 OR 예시를 봅시다.
 
 ```js
-if (iceCreamVanOutside || houseStatus === 'on fire') {
-  console.log('You should leave the house quickly.');
+if (iceCreamVanOutside || houseStatus === "on fire") {
+  console.log("You should leave the house quickly.");
 } else {
-  console.log('Probably should just stay in then.');
+  console.log("Probably should just stay in then.");
 }
 ```
 
 논리 연산자의 마지막 유형인 `!` 연산자로 표현되는 NOT은 표현식을 부정(negate)하기 위해 사용될 수 있습니다. 위 OR 예시와 함께 봅시다.
 
 ```js
-if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
-  console.log('Probably should just stay in then.');
+if (!(iceCreamVanOutside || houseStatus === "on fire")) {
+  console.log("Probably should just stay in then.");
 } else {
-  console.log('You should leave the house quickly.');
+  console.log("You should leave the house quickly.");
 }
 ```
 
@@ -244,7 +260,7 @@ if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
 어떤 구조든지, 여러분이 원하는 만큼 많은 논리 문(statement)을 결합할 수 있습니다. 다음 예시는 오직 두 OR 문 모두가 true를 리턴하면 내부의 코드를 실행하는데, 이는 전체의 AND 문이 true를 리턴할 것임을 의미합니다.
 
 ```js
-if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
+if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === "Steve")) {
   // run the code
 }
 ```
@@ -260,7 +276,7 @@ if (x === 5 || 7 || 10 || 20) {
 이 경우에 `if(...)` 내부 조건은 7(또는 다른 0이 아닌 값)이 항상 true로 평가되므로, 항상 true로 평가될 것입니다. 이 조건은 실제로는 "만약 x가 5와 같거나, 7이 true면 — 이것은 항상 true다"라고 분명하게 말하고 있습니다. 이것은 논리적으로 우리가 원하는 것이 아닙니다! 이를 동작하게 하기 위해 우리는 각 OR 연산자의 양 측에서 완전한 테스트를 명시해야 합니다.
 
 ```js
-if (x === 5 || x === 7 || x === 10 ||x === 20) {
+if (x === 5 || x === 7 || x === 10 || x === 20) {
   // run my code
 }
 ```
@@ -318,30 +334,33 @@ switch (expression) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
-
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
   switch (choice) {
-    case 'sunny':
-      para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+    case "sunny":
+      para.textContent =
+        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
       break;
-    case 'rainy':
-      para.textContent = 'Rain is falling outside; take a rain coat and a brolly, and don\'t stay out for too long.';
+    case "rainy":
+      para.textContent =
+        "Rain is falling outside; take a rain coat and a brolly, and don't stay out for too long.";
       break;
-    case 'snowing':
-      para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+    case "snowing":
+      para.textContent =
+        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
       break;
-    case 'overcast':
-      para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+    case "overcast":
+      para.textContent =
+        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
       break;
     default:
-      para.textContent = '';
+      para.textContent = "";
   }
 }
 ```
@@ -361,7 +380,9 @@ function setWeather() {
 그러면 간단한 예를 봅시다:
 
 ```js
-let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+let greeting = isBirthday
+  ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+  : "Good morning Mrs. Smith.";
 ```
 
 `isBirthday` 라는 변수명이 여기 있습니다 — 만약 이것이 `true`라면, 우리는 게스트에게 생일 축하 메시지를 보냅니다; 만약 아니라면, 우리는 그녀에게 일반적인 인사를 보냅니다.
@@ -381,18 +402,20 @@ let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have 
 ```
 
 ```js
-const select = document.querySelector('select');
-const html = document.querySelector('html');
-document.body.style.padding = '10px';
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+document.body.style.padding = "10px";
 
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
 }
 
-select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white') : update('white','black');
-}
+select.onchange = function () {
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black");
+};
 ```
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
@@ -448,7 +471,9 @@ select.onchange = function() {
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
@@ -477,8 +502,8 @@ createCalendar(31,'January');
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -498,7 +523,7 @@ createCalendar(31,'January');
   border: 2px solid white;
   padding: 5px;
   height: 40px;
-  background-color: #4A2DB6;
+  background-color: #4a2db6;
   color: white;
 }
 
@@ -524,9 +549,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -534,38 +559,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nconst h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n const listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+const jsSolution =
+  "const select = document.querySelector('select');\nconst list = document.querySelector('ul');\nconst h1 = document.querySelector('h1');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === 'February') {\n days = 28;\n } else if(choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = '';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n const listItem = document.createElement('li');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,'January');";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -576,8 +602,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -589,10 +618,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -630,7 +659,9 @@ textarea.onkeyup = function(){
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 const select = document.querySelector('select');
@@ -645,11 +676,12 @@ select.onchange = function() {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea>
+}</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -676,9 +708,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -686,38 +718,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+const jsSolution =
+  "const select = document.querySelector('select');\nconst html = document.querySelector('.output');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case 'black':\n update('black','white');\n break;\n case 'white':\n update('white','black');\n break;\n case 'purple':\n update('purple','white');\n break;\n case 'yellow':\n update('yellow','darkgray');\n break;\n case 'psychedelic':\n update('lime','purple');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}";
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -728,8 +761,11 @@ textarea.onkeydown = function(e){
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -741,10 +777,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

@@ -53,8 +53,8 @@ If-Match: *
 
 ## Especificações
 
-| Especificação                                | Título                                                       |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| Especificação                      | Título                                                       |
+| ---------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "If-Match", "3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Compatibilidade com navegadores

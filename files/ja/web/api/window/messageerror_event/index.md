@@ -1,5 +1,5 @@
 ---
-title: 'Window: messageerror イベント'
+title: "Window: messageerror イベント"
 slug: Web/API/Window/messageerror_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
@@ -44,7 +44,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-`messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待待ち受けします。
+`messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待ち受けします。
 
 ```js
 window.addEventListener('messageerror', (event) => {

@@ -93,7 +93,7 @@ There are two multipart types:
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
-> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML’s strict parsing rules, [`<![CDATA[…]]>`](/zh-TW/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
+> **備註：** Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/zh-TW/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
 ### text/javascript
 
@@ -187,10 +187,15 @@ Content-Disposition: form-data; name="myField"
 The following `<form>`:
 
 ```html
-<form action="http://localhost:8000/" method="post" enctype="multipart/form-data">
-  <label>Name: <input name="myTextField" value="Test"></label>
-  <label><input type="checkbox" name="myCheckBox"> Check</label>
-  <label>Upload file: <input type="file" name="myFile" value="test.txt"></label>
+<form
+  action="http://localhost:8000/"
+  method="post"
+  enctype="multipart/form-data">
+  <label>Name: <input name="myTextField" value="Test" /></label>
+  <label><input type="checkbox" name="myCheckBox" /> Check</label>
+  <label
+    >Upload file: <input type="file" name="myFile" value="test.txt"
+  /></label>
   <button>Send the file</button>
 </form>
 ```

@@ -1,18 +1,6 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Advanced
-  - Cryptography
-  - Encryption
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - SubtleCrypto
-  - TopicStub
-  - Web Crypto API
-translation_of: Web/API/SubtleCrypto
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
@@ -107,28 +95,28 @@ The table below summarises which algorithms are suitable for which cryptographic
     <tr>
       <th scope="row"></th>
       <th scope="col">
-        <p><a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a></p>
-        <p><a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a></p>
+        <p><a href="/fr/docs/Web/API/SubtleCrypto/sign">sign()</a></p>
+        <p><a href="/fr/docs/Web/API/SubtleCrypto/verify">verify()</a></p>
       </th>
       <th scope="col">
-        <p><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></p>
-        <p><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></p>
+        <p><a href="/fr/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></p>
+        <p><a href="/fr/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></p>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a>
+        <a href="/fr/docs/Web/API/SubtleCrypto/digest">digest()</a>
       </th>
       <th scope="col">
         <p>
-          <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a>
+          <a href="/fr/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a>
         </p>
         <p>
-          <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a>
+          <a href="/fr/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a>
         </p>
       </th>
       <th scope="col">
-        <p><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a></p>
+        <p><a href="/fr/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a></p>
         <p>
-          <a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>
+          <a href="/fr/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>
         </p>
       </th>
     </tr>

@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 5: Displaying library data'
+title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
@@ -13,7 +13,7 @@ We're now ready to add the pages that display the [LocalLibrary](/pt-BR/docs/Lea
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete previous tutorial topics (including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes"
           >Express Tutorial Part 4: Routes and controllers</a
         >).
       </td>
@@ -69,15 +69,3 @@ In our next article we'll build on our knowledge, creating HTML forms and form h
 - [Moment](http://momentjs.com/docs/) (Moment docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## Neste módulo
-
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)

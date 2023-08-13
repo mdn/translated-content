@@ -1,11 +1,6 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
-tags:
-  - CSS
-  - Псевдо-класс
-  - Разметка
-translation_of: Web/CSS/:indeterminate
 ---
 
 {{CSSRef}}
@@ -21,8 +16,8 @@ input:indeterminate {
 
 Селектор находит следующие элементы:
 
-- Элементы [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), свойство `indeterminate` которых было установлено в `true` через [JavaScript](/ru/docs/Web/JavaScript)
-- Элементы [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
+- Элементы [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), свойство `indeterminate` которых было установлено в `true` через [JavaScript](/ru/docs/Web/JavaScript)
+- Элементы [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
 - Элементы {{HTMLElement("progress")}} в неопределённом состоянии
 
 ## Синтаксис
@@ -39,11 +34,11 @@ input:indeterminate {
 
 ```html
 <div>
-  <input type="checkbox" id="checkbox">
+  <input type="checkbox" id="checkbox" />
   <label for="checkbox">Эта метка будет зелёной.</label>
 </div>
 <div>
-  <input type="radio" id="radio">
+  <input type="radio" id="radio" />
   <label for="radio">Эта метка будет зелёной.</label>
 </div>
 ```
@@ -73,7 +68,7 @@ for (var i = 0; i < inputs.length; i++) {
 #### HTML
 
 ```html
-<progress>
+<progress></progress>
 ```
 
 #### CSS

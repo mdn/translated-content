@@ -32,6 +32,7 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
   - : 一個 {{jsxref("Boolean")}} 。用來表示在事件建立時， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ） 鍵是否執行中。
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}
+
   - : 一個 {{domxref("DOMString")}} ，返回鍵盤對應的字符。若是該鍵對應一個實際的字符，則其值為對應該字符的一個非空的 Unicode 字串；若沒對應的話，則返回一個空字串。
 
     > **備註：** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
@@ -39,6 +40,7 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
     > **警告：** 在 DOM Level 3 Events ，該 propertie 已被移除。現在只有 IE9+ 支持它。
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
+
   - : Returns a {{jsxref("Number")}} representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
 
     > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
@@ -52,11 +54,13 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
   - : 一個 {{domxref("DOMString")}} ，用來事件對應的按鍵的值（key value）。
 - {{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}
+
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
     > **警告：** 此 attribute 已被淘汰。如果可以，建議使用{{domxref("KeyboardEvent.key")}}。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
+
   - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
     > **備註：** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
@@ -70,34 +74,26 @@ _本介面（ interface）亦繼承其父，{{domxref("UIEvent")}} 和 {{domxref
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
   - : Returns a {{jsxref("Boolean")}} that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 - {{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}
+
   - : Returns a {{jsxref("Number")}} representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}} 。
+    > **警告：** 此 attribute 已被淘汰。如果可以，建議使用 {{domxref("KeyboardEvent.key")}}。
 
 ## 注意
 
-KeyboardEvent 有 `keydown` 、 `keypress` 、 `keyup` 三種事件。對大多數的按鍵而言， Gecko 觸發事件的順序如下：
+KeyboardEvent 有 `keydown`、`keypress`、`keyup` 三種事件。對大多數的按鍵而言，Gecko 觸發事件的順序如下：
 
-1. 當按鍵按下時，會送出 `keydown` event 。
-2. 當按鍵不是特殊鍵（ modifier key），例如
-
-    <kbd>Ctrl</kbd>
-
-    、
-
-    <kbd>Alt</kbd>
-
-    ……等等，會送出 `keypress` event 。
-
-3. 當按鍵放開時，會送出 `keyup` event 。
+1. 當按鍵按下時，會送出 `keydown` event。
+2. 當按鍵不是特殊鍵（modifier key），例如 <kbd>Ctrl</kbd>、<kbd>Alt</kbd>……等等，會送出 `keypress` event。
+3. 當按鍵放開時，會送出 `keyup` event。
 
 ### 特殊狀況
 
-某些按鍵，例如 <kbd>Caps Lock</kbd> 、 <kbd>Num Lock</kbd> 和 <kbd>Scroll Lock</kbd> 能切換鍵盤上的 LED 燈。在 Windows 和 Linux 系統上，這些按鍵只會觸發 `keydown` 和 `keyup` 事件。但是 Linux 上的 Firefox 12 或更早的版本亦會觸發 `keypress` 事件。
+某些按鍵，例如 <kbd>Caps Lock</kbd>、<kbd>Num Lock</kbd> 和 <kbd>Scroll Lock</kbd> 能切換鍵盤上的 LED 燈。在 Windows 和 Linux 系統上，這些按鍵只會觸發 `keydown` 和 `keyup` 事件。但是 Linux 上的 Firefox 12 或更早的版本亦會觸發 `keypress` 事件。
 
-而在 Mac 電腦則不同，<kbd>Caps Lock</kbd> 只會觸發 `keydown` 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援 <kbd>Num Lock</kbd>。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd> 並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd>，但是它會產生 `keypress` 事件。這個異常狀態是個 bug ，詳情可參考 [Firefox bug 602812](https://bugzil.la/602812)。
+而在 Mac 電腦則不同，<kbd>Caps Lock</kbd> 只會觸發 `keydown` 事件；而 <kbd>Num Lock</kbd> 則是只有舊版的 Mac 電腦（2007 或之前的版本）才有，現在的 Mac 即便使用外部鍵盤也不支援 <kbd>Num Lock</kbd>。雖說舊版的 Mac 電腦支援 <kbd>Num Lock</kbd> 鍵，但 <kbd>Num Lock</kbd> 並不會執行任何 KeyboardEvent；而 Gecko 瀏覽器在特殊情況（外接一個有 <kbd>F14</kbd> 的鍵盤）下能支援 <kbd>Scroll Lock</kbd>，但是它會產生 `keypress` 事件。這個異常狀態是個 bug，詳情可參考 [Firefox bug 602812](https://bugzil.la/602812)。
 
-### 自動迴圈（Auto-Repeat ）的執行
+### 自動迴圈（Auto-Repeat）的執行
 
 當按鍵按下去不放時，它會開始一個自動迴圈。並導致觸發一系列的相似事件，如下所示：
 
@@ -110,7 +106,7 @@ KeyboardEvent 有 `keydown` 、 `keypress` 、 `keyup` 三種事件。對大多�
 
 在 DOM Level 3 說明書有提及這問題是會發生的。其中所存在的問題如下說明：
 
-#### 部分 GTK 環境，例如 Ubuntu 9.4 ，的自動迴圈
+#### 部分 GTK 環境，例如 Ubuntu 9.4，的自動迴圈
 
 部分的 GTK-based 環境之中，自動迴圈在發生的過程中會自動觸發電腦本機的 key-up 事件。然而，對 Gecko 而言，並沒有方法可以分辨使用者重複點擊按鍵與自動迴圈（按鍵按住不放）的差異。在這類的環境下，按鍵按住不放會重複執行下列事件：
 

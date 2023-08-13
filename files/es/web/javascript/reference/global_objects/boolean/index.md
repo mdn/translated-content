@@ -1,7 +1,6 @@
 ---
 title: Booleano
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
 
 {{JSRef}}
@@ -35,18 +34,18 @@ if (x) {
 No utilices un objeto `Boolean` para convertir un valor no booleano en un valor booleano. Para realizar esta tarea, en su lugar, usa `Boolean` como función, o un [operador `NOT` doble](/es/docs/Web/JavaScript/Reference/Operators/Logical_NOT):
 
 ```js
-var x = Boolean(expression);     // usa esta...
-var x = !!(expression);          // ... o esta
+var x = Boolean(expression); // usa esta...
+var x = !!expression; // ... o esta
 var x = new Boolean(expression); // ¡no uses esta!
 ```
 
 Si especificas cualquier objeto, incluido un objeto `Boolean` cuyo valor es `false`, como valor inicial de un objeto `Boolean`, el nuevo objeto `Boolean` tiene un valor de `true`.
 
 ```js
-var myFalse = new Boolean(false);   // valor inicial de false
-var g = Boolean(myFalse);           // valor inicial de true
-var myString = new String('Hola');  // objeto string
-var s = Boolean(myString);          // valor inicial de true
+var myFalse = new Boolean(false); // valor inicial de false
+var g = Boolean(myFalse); // valor inicial de true
+var myString = new String("Hola"); // objeto string
+var s = Boolean(myString); // valor inicial de true
 ```
 
 No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
@@ -73,7 +72,7 @@ No utilices un objeto `Boolean` en lugar de un `Boolean` primitivo.
 var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
+var bEmptyString = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -81,9 +80,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
+var btrueString = new Boolean("true");
+var bfalseString = new Boolean("false");
+var bSuLin = new Boolean("Su Lin");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```

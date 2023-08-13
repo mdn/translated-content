@@ -1,12 +1,12 @@
 ---
 title: i
 slug: Web/HTML/Element/i
-original_slug: Web/HTML/Elemento/i
 ---
 
 ### Definición
 
 - Muestra el texto marcado con un estilo en cursiva o italica.
+
   - : **Sus etiquetas son**: \<i> y \</i> (Ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).

@@ -27,8 +27,8 @@ onafterprint = (event) => {};
 使用 `addEventListener()`:
 
 ```js
-window.addEventListener('afterprint', (event) => {
-  console.log('After print');
+window.addEventListener("afterprint", (event) => {
+  console.log("After print");
 });
 ```
 
@@ -36,7 +36,7 @@ window.addEventListener('afterprint', (event) => {
 
 ```js
 window.onafterprint = (event) => {
-  console.log('After print');
+  console.log("After print");
 };
 ```
 

@@ -1,16 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/format
 ---
 
 {{JSRef}}

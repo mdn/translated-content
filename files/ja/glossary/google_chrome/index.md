@@ -21,7 +21,7 @@ Google Chrome は Google が開発した無償の{{glossary("browser", "ブラ�
 
 ### Web 開発者へ
 
-もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁ににアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](http://goo.gl/CCPRW) でご確認ください。
+もし Chrome の最新機能が必要な場合は安定版より先にリリースされるものをインストールしてください。 Google は頻繁にアップデートをし、安定版とは別に動作するよう設計しています。最新情報については [Chrome Release Blog](http://goo.gl/CCPRW) でご確認ください。
 
 - [Android 版 Chrome Dev](https://play.google.com/store/apps/details?id=com.chrome.dev)
 - [デスクトップ版 Chrome Canary](https://www.google.com/chrome/browser/canary.html)

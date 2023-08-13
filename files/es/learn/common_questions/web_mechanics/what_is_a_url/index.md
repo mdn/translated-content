@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es una URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/What_is_a_URL
 ---
 
 Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué son y cómo se estructuran.
@@ -12,14 +11,14 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
       <th scope="row">Prerequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >Como funciona Internet</a
         >,
-        <a href="/en-US/docs/Learn/What_is_a_Web_server"
+        <a href="/es/docs/Learn/What_is_a_Web_server"
           >qué es un servidor Web</a
         >
         y
-        <a href="/en-US/docs/Learn/Understanding_links_on_the_web"
+        <a href="/es/docs/Learn/Understanding_links_on_the_web"
           >los conceptos detrás de los enlaces en la web</a
         >.
       </td>
@@ -33,9 +32,9 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
 
 ## Resumen
 
-Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicadon en la web.
+Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicado en la web.
 
-**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL valida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
+**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL válida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
 
 ## Active Learning
 
@@ -49,7 +48,7 @@ Aquí hay algunos ejemplos de URL:
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/es/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -109,12 +108,12 @@ Veamos algunos ejemplos para aclarar esto.
   <tbody>
     <tr>
       <td>URL Completa (la misma que usamos antes)</td>
-      <td><pre>https://developer.mozilla.org/en-US/docs/Learn</pre></td>
+      <td><pre>https://developer.mozilla.org/es/docs/Learn</pre></td>
     </tr>
     <tr>
       <td>Protocolo implícito</td>
       <td>
-        <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
+        <pre>//developer.mozilla.org/es/docs/Learn</pre>
         <p>
           En este caso, el navegador llamará a esa URL con el mismo protocolo
           que el utilizado para cargar el documento que aloja esa URL.
@@ -124,7 +123,7 @@ Veamos algunos ejemplos para aclarar esto.
     <tr>
       <td>Nombre de dominio implícito</td>
       <td>
-        <pre>/en-US/docs/Learn</pre>
+        <pre>/es/docs/Learn</pre>
         <p>
           Este es el caso de uso más común para una URL absoluta dentro de un
           documento HTML. El navegador utilizará el mismo protocolo y el mismo
@@ -143,7 +142,7 @@ Veamos algunos ejemplos para aclarar esto.
 
 #### Ejemplos de URL relativas
 
-Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan desde el documento ubicado en la siguiente URL: `https://developer.mozilla.org/en-US/docs/Learn`
+Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan desde el documento ubicado en la siguiente URL: `https://developer.mozilla.org/es/docs/Learn`
 
 <table>
   <tbody>
@@ -156,7 +155,7 @@ Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan
           intentará encontrar el documento en un subdirectorio del que contiene
           el recurso actual. Entonces, en este ejemplo, realmente queremos
           llegar a esta URL:
-          https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.
+          https://developer.mozilla.org/es/docs/Learn/Skills/Infrastructure/Understanding_URLs.
         </p>
       </td>
     </tr>
@@ -169,9 +168,9 @@ Para comprender mejor los siguientes ejemplos, supongamos que las URL se invocan
           heredada del mundo del sistema de archivos UNIX, para decirle al
           navegador que queremos subir desde un directorio. Aquí queremos
           llegar a esta URL:
-          https://developer.mozilla.org/en-US/docs/Learn/../CSS/display, que se
+          https://developer.mozilla.org/es/docs/Learn/../CSS/display, que se
           puede simplificar a:
-          https://developer.mozilla.org/en-US/docs/CSS/display.
+          https://developer.mozilla.org/es/docs/CSS/display.
         </p>
       </td>
     </tr>

@@ -1,6 +1,6 @@
 ---
 title: CSS 名前空間
-slug: Web/CSS/CSS_Namespaces
+slug: Web/CSS/CSS_namespaces
 ---
 
 {{CSSRef}}

@@ -1,24 +1,19 @@
 ---
-title: '<caption>: The Table Caption element'
+title: "<caption>: The Table Caption element"
 slug: Web/HTML/Element/caption
-tags:
-  - Выравнивание
-  - Заголовок
-  - Стилизация
-translation_of: Web/HTML/Element/caption
 ---
 
 {{HTMLSidebar}}
 
 **HTML** элемент заголовка таблицы (**`<caption>`**) определяет название (заголовок) таблицы. Если этот элемент используется, он _всегда_ должен быть первым вложенным элементом тэга {{HTMLElement("table")}}. Внешний вид и расположение заголовка по отношению к самой таблице может быть изменено с помощью стилей CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
-| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                               |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                  | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content).                               |
+| [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                  | [Потоковый контент](/ru/docs/HTML/Content_categories#Flow_content).                                 |
 | Пропуск тегов                                          | Конечный тег может быть пропущен, если элемент не следует сразу за ASCII пробелом или комментарием. |
-| Допустимые родители                                    | Элемент {{HTMLElement("table")}} как его первый потомок                                           |
-| Допустимые ARIA-роли                                   | Нет                                                                                               |
-| DOM-интерфейс                                          | {{domxref("HTMLTableCaptionElement")}}                                                            |
+| Допустимые родители                                    | Элемент {{HTMLElement("table")}} как его первый потомок                                             |
+| Допустимые ARIA-роли                                   | Нет                                                                                                 |
+| DOM-интерфейс                                          | {{domxref("HTMLTableCaptionElement")}}                                                              |
 
 ## Атрибуты
 
@@ -50,7 +45,9 @@ translation_of: Web/HTML/Element/caption
 
 ```html
 <table>
-  <caption>Example Caption</caption>
+  <caption>
+    Example Caption
+  </caption>
   <tr>
     <th>Login</th>
     <th>Email</th>
@@ -75,7 +72,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 ```

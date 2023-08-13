@@ -5,7 +5,7 @@ slug: Web/CSS/Class_selectors
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 {{htmlattrxref("class")}} 属性的内容匹配元素。
+[CSS](/zh-CN/docs/Web/CSS) **类选择器**根据 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 属性的内容匹配元素。
 
 ```css
 /* 所有含有 class="spacious" 类的元素 */
@@ -60,9 +60,7 @@ li.spacious.elegant {
 
 ```html
 <p class="red">这段文字是红色的。</p>
-<p class="red yellow-bg">
-  这段文字是红色的，背景是黄色的。
-</p>
+<p class="red yellow-bg">这段文字是红色的，背景是黄色的。</p>
 <p class="red fancy">这段文字是红色的，有“fancy”样式。</p>
 <p>这只是普通的段落。</p>
 ```
@@ -81,5 +79,5 @@ li.spacious.elegant {
 
 ## 参见
 
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)

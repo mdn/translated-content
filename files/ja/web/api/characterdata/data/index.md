@@ -1,6 +1,8 @@
 ---
-title: CharacterData.data
+title: "CharacterData: data プロパティ"
 slug: Web/API/CharacterData/data
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -19,13 +21,13 @@ slug: Web/API/CharacterData/data
 ### data を使用したコメントの読み取り
 
 ```html
-<!-- This is an HTML comment !-->
-<output id="Result"></output>
+<!-- これは HTML のコメントです -->
+<output id="result"></output>
 ```
 
 ```js
-let comment = document.body.childNodes[1];
-let output = document.getElementById("Result");
+const comment = document.body.childNodes[1];
+const output = document.getElementById("result");
 
 output.value = comment.data;
 ```
@@ -35,14 +37,14 @@ output.value = comment.data;
 ### data を使用してテキストノードの内容を設定
 
 ```html
-<span>Result: </span>Not set.
+<span>結果: </span>未設定
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
-textnode.data = "This text has been set using textnode.data."
+textnode.data = "このテキストは 'textnode.data' を使用して設定されました。";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

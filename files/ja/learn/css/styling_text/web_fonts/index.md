@@ -1,7 +1,6 @@
 ---
 title: ウェブフォント
 slug: Learn/CSS/Styling_text/Web_fonts
-original_slug: Learn/CSS/Styling_text/ウェブフォント
 l10n:
   sourceCommit: ffe4e4b49b540a18cc4c0e98d7cbd11795d8a360
 ---
@@ -140,8 +139,9 @@ html {
    ```css
    @font-face {
      font-family: "zantrokeregular";
-     src: url("fonts/zantroke-webfont.woff2") format("woff2"), url("fonts/zantroke-webfont.woff")
-         format("woff");
+     src:
+       url("fonts/zantroke-webfont.woff2") format("woff2"),
+       url("fonts/zantroke-webfont.woff") format("woff");
      font-weight: normal;
      font-style: normal;
    }
@@ -179,8 +179,9 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 ```css
 @font-face {
   font-family: "zantrokeregular";
-  src: url("zantroke-webfont.woff2") format("woff2"), url("zantroke-webfont.woff")
-      format("woff");
+  src:
+    url("zantroke-webfont.woff2") format("woff2"),
+    url("zantroke-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -203,11 +204,3 @@ Fontsquirrel によって生成された `@font-face` 構文を調べてみま�
 テキストの装飾の基本についての記事を読み終えたので、今度はモジュール「[コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)」の評価で理解度をテストします。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- **ウェブフォント**
-- [コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -79,7 +79,7 @@ function fetchVideo() {
 }
 ```
 
-> **メモ:** `abort()` が呼呼び出されると、`fetch()` のプロミスは `AbortError` で失敗します。
+> **メモ:** `abort()` が呼び出されると、`fetch()` のプロミスは `AbortError` で失敗します。
 
 You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
@@ -104,7 +104,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc."
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");

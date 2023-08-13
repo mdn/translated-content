@@ -34,7 +34,7 @@ A seguinte função retorna a tangente da variável `x`:
 
 ```js
 function getTan(x) {
-   return Math.tan(x);
+  return Math.tan(x);
 }
 ```
 
@@ -42,18 +42,18 @@ Como a função `Math.tan()` trabalha com radianos, mas normalment epe mais fác
 
 ```js
 function getTanDeg(deg) {
-   var rad = deg * Math.PI/180;
-   return Math.tan(rad);
+  var rad = (deg * Math.PI) / 180;
+  return Math.tan(rad);
 }
 ```
 
 ## Especificações
 
-| Especificação                                                        | Estado                   | Comentário         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| ECMAScript 1st Edition. Implementado em JavaScript 1.0               | Padrão                   | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.8.2.18', 'Math.tan')}} | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.tan', 'Math.tan')}}     | {{Spec2('ES6')}}     |                    |
+| Especificação                                          | Estado             | Comentário         |
+| ------------------------------------------------------ | ------------------ | ------------------ |
+| ECMAScript 1st Edition. Implementado em JavaScript 1.0 | Padrão             | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.8.2.18', 'Math.tan')}}    | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-math.tan', 'Math.tan')}}       | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

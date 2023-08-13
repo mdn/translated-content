@@ -2,30 +2,39 @@
 title: <color>
 slug: Web/CSS/color_value
 l10n:
-  sourceCommit: e3ec5a44e628e6a0b55dbaae41ab050c1fa57afb
+  sourceCommit: 8daba6d316e3b68f45e09c44da9b6942307ca555
 ---
 
 {{CSSRef}}
 
 **`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一つの色を表します。
-`<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)*透過値*を含むことがあり、この色を背景とどれだけ[合成](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
+`<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[合成](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
 
 `<color>` は以下の何れかの方法で定義することができます。
 
-- キーワードを使用すること (`blue` や `transparent` など)。既存のキーワードはすべて、[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色で定められています。
-- [RGB 立方体座標方式](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)の使用（# + 16 進数値や、`rgb()` や `rgba()` の関数記法による）。
-  これらは常に[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色で定められます。
-- [HSL 円筒座標系](https://ja.wikipedia.org/wiki/HSV%E8%89%B2%E7%A9%BA%E9%96%93) の使用（{{cssxref("color_value/hsl","hsl()")}} や {{cssxref("color_value/hsla","hsla()")}} の関数記法による）
-  これらは常に[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色で定められます。
-- [HWB 円筒座標系](https://en.wikipedia.org/wiki/HWB_color_model) の使用 （{{cssxref("color_value/hwb","hwb()")}} 関数記法による）。
-  これらは常に[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色で定められます。
-- [LCH 円筒座標系](https://ja.wikipedia.org/wiki/CIE_Luv%E8%89%B2%E7%A9%BA%E9%96%93#%E5%86%86%E7%AD%92%E5%BA%A7%E6%A8%99%E7%B3%BB%E3%81%AB%E3%82%88%E3%82%8B%E8%A1%A8%E7%8F%BE_(CIELCH))の使用 ({{cssxref("color_value/lch","lch()")}} 関数記法による）
-  これは任意の視覚可能な色を指定することができます。
-- [Lab 座標系](https://ja.wikipedia.org/wiki/Lab%E8%89%B2%E7%A9%BA%E9%96%93) ({{cssxref("color_value/lab","lab()")}} 関数記法による）
-  これは任意の視覚可能な色を指定することができます。
+- [sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB) の場合:
+
+  - 定義済みのキーワード（`blue` や `pink` など）（[`<named-color>` ページ](/ja/docs/Web/CSS/named-color)で説明しています）
+
+  - {{cssxref("color_value/rgb","rgb()")}} 関数記法または [`#` + 16 進数](/ja/docs/Web/CSS/hex-color)（[RGB 立方体座標](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系を使用）
+
+  - {{cssxref("color_value/hsl","hsl()")}} 関数記法（[HSL 円筒座標系](https://ja.wikipedia.org/wiki/HSV%E8%89%B2%E7%A9%BA%E9%96%93)を使用）
+
+  - {{cssxref("color_value/hwb","hwb()")}} 関数記法（[HWB 円筒座標系](https://en.wikipedia.org/wiki/HWB_color_model)を使用）
+
+- 以下の方法による任意の視覚可能な色:
+
+  - {{cssxref("color_value/lch","lch()")}} 関数記法（[LCH 円筒座標系](https://ja.wikipedia.org/wiki/CIE_Luv%E8%89%B2%E7%A9%BA%E9%96%93#%E5%86%86%E7%AD%92%E5%BA%A7%E6%A8%99%E7%B3%BB%E3%81%AB%E3%82%88%E3%82%8B%E8%A1%A8%E7%8F%BE_(CIELCH))を使用）
+
+  - {{cssxref("color_value/oklch","oklch()")}} 関数記法（[Oklch 円筒座標系](https://bottosson.github.io/posts/oklab/)を使用）
+
+  - {{cssxref("color_value/lab","lab()")}} 関数記法（[CIELAB](https://ja.wikipedia.org/wiki/Lab%E8%89%B2%E7%A9%BA%E9%96%93)を使用）
+
+  - {{cssxref("color_value/oklab","oklab()")}} 関数記法（[Oklab](https://bottosson.github.io/posts/oklab/) 色空間を使用）
+
 - {{cssxref("color_value/color","color()")}} 関数記法を使用して、様々な定義済みまたは独自の色空間で色を指定することができます。
 
-> **メモ:** この記事は `<color>` データ型の詳細を説明しています。 HTML での色の使い方について詳しくは、 [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_Colors/Applying_color)を参照してください。
+> **メモ:** これらの色の値は [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)のために使用することができます。
 
 ## 構文
 
@@ -37,7 +46,7 @@ l10n:
 
 色名は大文字と小文字の区別をしない識別子で、特定の色を表します。例えば `red`, `blue`, `black`, `lightseagreen` といったものです。色名は多少なりとそれぞれの色を説明していますが、ほとんどは基本的に人工的であり、名前の仕様について強い根拠はありません。
 
-このようなキーワードの完全なリストは[こちら](/ja/docs/Web/CSS/named-color)にあります。
+このようなキーワードの完全なリストは [`<named-color>` ページ](/ja/docs/Web/CSS/named-color)にあります。
 
 ### currentcolor キーワード
 
@@ -59,29 +68,26 @@ l10n:
 
 RGB 色モデルは赤、緑、青の成分によって指定された[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色を定義します。アルファ成分は任意で、色の透過性を表します。
 
-RGB 色は 16 進表記 (`#` の接頭辞つき) と関数記法 (`rgb()`, `rgba()`) の両方で表現することができます。
+RGB 色は 16 進表記（`#` の接頭辞つき）と関数記法 (`rgb()`, `rgba()`) の両方で表現することができます。
 
-- [16 進表記](/ja/docs/Web/CSS/hex-color): `#RGB[A]` または `#RRGGBB[AA]`
-  - : `R` (赤)、 `G` (緑)、 `B` (青) と `A` （アルファ） は 16 進数の文字 (0–9, A–F) です。 `A` は任意です。例えば、 `#ff0000` は `#ff0000ff` と同等です。 3 桁表記 (`#RGB`) は 6 桁形式 (`#RRGGBB`) を短縮したものです。例えば、 `#f09` は `#ff0099` と同じ色です。同様に、4 桁の RGB 表記 (`#RGBA`) は 8 桁形式 (`#RRGGBBAA`) を短縮したものです。例えば、 `#0f38` は `#00ff3388` と同じ色です。
-- [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) または [`rgba()`](/ja/docs/Web/CSS/color_value/rgba): `rgb[a](R, G, B[, A])` または `rgb[a](R G B[ / A])`
-  - : `R` (赤)、 `G` (緑)、 `B` (青) は {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} のどちらかで、`255` が `100%` に対応します。 `A` （アルファ） は `0` と `1` の間の {{cssxref("&lt;number&gt;")}} 、または {{cssxref("&lt;percentage&gt;")}} で、数値 `1` が `100%` (不透明) です。
+- [16 進記法](/ja/docs/Web/CSS/hex-color): `#RGB[A]` または `#RRGGBB[AA]`
+  - : `R`（赤）、`G`（緑）、`B`（青）と `A`（アルファ） は 16 進数の文字 (0–9, A–F) です。`A` は任意です。例えば、`#ff0000` は `#ff0000ff` と同等です。 3 桁記法 (`#RGB`) は 6 桁形式 (`#RRGGBB`) を短縮したものです。例えば、`#f09` は `#ff0099` と同じ色です。同様に、4 桁の RGB 記法 (`#RGBA`) は 8 桁形式 (`#RRGGBBAA`) を短縮したものです。例えば、`#0f38` は `#00ff3388` と同じ色です。
+- [`rgb()`](/ja/docs/Web/CSS/color_value/rgb)（または古い `rgba()`）: `rgb(R G B[ / A])` （または `rgb[a](R, G, B[, A])`）
+  - : `R`（赤）、`G`（緑）、`B`（青）は {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} のどちらかで、`255` が `100%` に対応します。 `A`（アルファ） は `0` と `1` の間の {{cssxref("&lt;number&gt;")}} 、または {{cssxref("&lt;percentage&gt;")}} で、数値 `1` が `100%`（不透明）です。
 
 ### HSL 色モデル
 
-HSL 色モデルは色相 (H)、彩度 (S)、明度 (L) の各成分によって与えられた[sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色を定義します。アルファ成分は任意で、色の透過性を表します。
+HSL 色モデルは色相 (H)、彩度 (S)、明度 (L) の各成分によって与えられた [sRGB 色空間](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%A9%BA%E9%96%93#RGB)内の色を定義します。アルファ成分は任意で、色の透過性を表します。
+
+- {{cssxref("color_value/hsl","hsl()")}}: `hsl(H S L [ / A])`（または古い `hsl(H, S, L [, A])`）
+  - : `H` は色相で、[色相環](/ja/docs/Web/CSS/color_value/hsl#値)の角度 ({{cssxref("&lt;angle&gt;")}}) を `deg`、 `rad`、 `grad`、 `turn` の単位で取ります。定義上は、赤は `0deg`、黄色は `60deg`、緑は `120deg`、青は `240deg`、マゼンタは `300deg` となります。単位のない {{cssxref("&lt;number&gt;")}} として書かれた場合、角度として解釈されます。`S` は彩度で `<percentage>` 値で表し、100% は完全に鮮やかな色で、0% は完全な無彩色（灰色）です。`L` は明度で `<percentage>` 値で表し、100% は白、0% は黒、50% は「普通」です。オプションの `A` はアルファ透過性で `<percentage>` 値または 0 と 1 の間の `<number>` で表し、数値 1 または 100% が完全に不透明、0 または 0% が完全に透過を表します。
 
 HSL は、色相、彩度、明度をそれぞれ独立して調整できるため、RGB よりも直感的であると感じるデザイナーが多いようです。また、HSL を使用することで、同じ色のセットを簡単に作成することができます （同じ色相で複数の影を作成する場合など）。
 しかし、HSL を使用して色のバリエーションを作成すると、[知覚的に均一ではない](https://ja.wikipedia.org/wiki/%E8%89%B2%E5%B7%AE#%E8%A8%B1%E5%AE%B9%E5%80%A4)ため、驚くような結果になることがあります。たとえば、 `hsl(240 100% 50%)` と `hsl(60 100% 50%)` は、明度が同じであるにもかかわらず、前者が後者よりもはるかに暗くなります。
 
-HSL 色は関数記法の `hsl()` および `hsla()` を通して表現されます。
+HSL 色は関数記法の {{cssxref("color_value/hsl", "hsl()")}} を通して表現されます。
 
-- [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) または [`hsla()`](/ja/docs/Web/CSS/color_value/hsla): `hsl[a](H, S, L[, A])` または `hsl[a](H S L[ / A])`
-
-  - : `H` （色相）は色相環の角度 ({{cssxref("&lt;angle&gt;")}}) を [CSS 色](https://drafts.csswg.org/css-color/#the-hsl-notation) で定義されている `deg`、 `rad`、 `grad`、 `turn` の単位で与えます。単位のない数値 ({{cssxref("&lt;number&gt;")}}) の場合は、 [CSS Color Level 3](https://drafts.csswg.org/css-color-3/#hsl-color) で定められている通り deg (度) として扱われます。定義では、赤=0deg=360deg であり、他の色は、緑=120deg、 青=240deg、 などのように色相環を回ります。 `<angle>` は暗黙的に周回するので、 -120deg=240deg、 480deg=120deg、 -1turn=1turn のようになります。
-
-    `S` （彩度）と `L` （明度）はパーセント値です。**彩度** `100%` は完全に鮮やかな色で、彩度`0%`は完全に色彩がない色（無彩色）です。**明度**`100%`は白で、明度`0%`は黒で、明度`50%`は「普通」です。
-
-    `A` （アルファ）は `0` と `1` の間の{{cssxref("&lt;number&gt;")}}、または {{cssxref("&lt;percentage&gt;")}} で、数値 `1` が`100%` （不透明）です。
+> **メモ:** 古い `hsla()` 構文は {{cssxref("color_value/hsl","hsl()")}} の別名であり、同じ引数を受け取り同じように動作します。
 
 ### HWB 色モデル
 
@@ -117,7 +123,7 @@ CSS Color 4 で Lab 色が導入されました。
 Lab 色は、{{cssxref("color_value/lab","lab()")}} 関数記法で指定します。
 Lab 色は、特定の色空間に限定されず、人間の視覚の全領域を表現することができます。
 
-### LCH 色
+### LCH 色モデル
 
 CSS Color 4 で LCH 色が導入されました。
 LCH 色は、{{cssxref("color_value/lch","lch()")}} という関数記法で指定します。
@@ -136,11 +142,13 @@ CSS Color 4 でこの表記が導入されました。
 
 ## 補間
 
-アニメーションや[グラデーション](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)において、 `<color>` の値は赤、緑、青の成分ごとに{{Glossary("interpolation", "補間")}}されます。それぞれの成分は浮動小数点の実数として補間されます。なお、予期しない灰色が現れるのを避けるため、色の補間は[アルファ乗算済み sRGBA 色空間](https://www.w3.org/TR/css-color-4/#interpolation-alpha)で行われます。アニメーションでは補間の速度はアニメーションと関連づけられた[タイミング関数](/ja/docs/Web/CSS/easing-function)によって決められます。
+アニメーションや[グラデーション](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)において、 `<color>` の値は赤、緑、青の成分ごとに{{Glossary("interpolation", "補間")}}されます。既定では、アニメーションは RGBA 色空間で行われ、CSS のトランジションやアニメーションでは[タイミング関数](/ja/docs/Web/CSS/easing-function)で補間の速度が決定されます。予期せぬ色が現れるのを防ぐために、[`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix) 関数記法を使用することを検討してください。
+
+色相角を受け入れる関数で 2 色の {{cssxref("&lt;hue&gt;")}} を補間することも可能です。詳しくは [`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix) 関数記法の記事で記述されています。
 
 ## アクセシビリティの考慮
 
-色を見分けることが難しい人がいます。[WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)をご覧ください。
+色を見分けることが難しい人がいます。[WCAG 2.0](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
 
 ## 形式文法
 
@@ -171,30 +179,38 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector('input');
-const divElem = document.querySelector('div');
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (stringToTest === "") { return false; }
-  if (stringToTest === "inherit") { return false; }
-  if (stringToTest === "transparent") { return false; }
+  if (stringToTest === "") {
+    return false;
+  }
+  if (stringToTest === "inherit") {
+    return false;
+  }
+  if (stringToTest === "transparent") {
+    return false;
+  }
 
   const image = document.createElement("img");
   image.style.color = "rgb(0, 0, 0)";
   image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  if (image.style.color !== "rgb(0, 0, 0)") {
+    return true;
+  }
   image.style.color = "rgb(255, 255, 255)";
   image.style.color = stringToTest;
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = '';
+    divElem.textContent = "";
   } else {
-    divElem.style.backgroundColor = 'white';
-    divElem.textContent = 'Invalid color value';
+    divElem.style.backgroundColor = "white";
+    divElem.textContent = "Invalid color value";
   }
 });
 ```
@@ -473,14 +489,14 @@ hwb(90 10% 10% / 50%)
 
 ### HSL の様々な透過度
 
-```css
-hsla(240, 100%, 50%, 0.05)    /*   5% 半透明の青 */
-hsla(240, 100%, 50%, 0.4)     /*  40% 半透明の青 */
-hsla(240, 100%, 50%, 0.7)     /*  70% 半透明の青 */
-hsla(240, 100%, 50%, 1)       /* 完全に不透明の青 */
+```css-nolint
+hsl(240 100% 50% / 0.05)    /*   5% 半透明の青 */
+hsl(240 100% 50% / 0.4)     /*  40% 半透明の青 */
+hsl(240 100% 50% / 0.7)     /*  70% 半透明の青 */
+hsl(240 100% 50% / 1)       /* 完全に不透明の青 */
 
-/* ホワイトスペース構文 */
-hsla(240 100% 50% / 0.05)     /*   5% 半透明の青 */
+/* カンマ構文 */
+hsl(240, 100%, 50%, 0.05)     /*   5% 半透明の青 */
 
 /* アルファのパーセント表記 */
 hsla(240 100% 50% / 5%)       /*   5% 半透明の青 */
@@ -497,5 +513,7 @@ hsla(240 100% 50% / 5%)       /*   5% 半透明の青 */
 ## 関連情報
 
 - {{Cssxref("opacity")}} プロパティは要素レベルで色の透明度を定義できます。
+- {{cssxref("&lt;hue&gt;")}} データ型は色を色相閣で表します。
 - このデータ型を使用するよく使われるプロパティ: {{Cssxref("color")}}, {{Cssxref("background-color")}}, {{Cssxref("border-color")}}, {{Cssxref("box-shadow")}}, {{Cssxref("outline-color")}}, {{Cssxref("text-shadow")}}
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_Colors/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
+- [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (May 3, 2023)

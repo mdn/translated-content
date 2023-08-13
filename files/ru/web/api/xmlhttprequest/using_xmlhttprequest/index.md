@@ -1,27 +1,15 @@
 ---
 title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-Это инструкция по использованию {{domxref("XMLHttpRequest")}} для обмена информацией между сайтом и сервером по [HTTP-протоколу](/en-US/docs/Web/HTTP).
+Это инструкция по использованию {{domxref("XMLHttpRequest")}} для обмена информацией между сайтом и сервером по [HTTP-протоколу](/ru/docs/Web/HTTP).
 
 Мы разберём как частые примеры использования `XMLHttpRequest`, так и более редкие.
 
-Для отправки HTTP-запроса нужно создать `XMLHttpRequest`-объект, указать URL и отправить запрос. В результате запроса мы получим от сервера объект с подробной информацией, вроде тела ответа и [HTTP-статуса](/en-US/docs/Web/HTTP/Status).
+Для отправки HTTP-запроса нужно создать `XMLHttpRequest`-объект, указать URL и отправить запрос. В результате запроса мы получим от сервера объект с подробной информацией, вроде тела ответа и [HTTP-статуса](/ru/docs/Web/HTTP/Status).
 
 ```js
 function reqListener() {
@@ -50,18 +38,18 @@ req.send();
 
 Если с помощью `XMLHttpRequest` загрузить XML-документ, в свойстве {{domxref("XMLHttpRequest.responseXML", "responseXML")}} будет DOM-объект, содержащий распарсенный XML-документ, работать напрямую с которым будет сложно. Есть четыре основных способа анализа этого документа:
 
-1. Использовать [XPath](/en-US/docs/Web/XPath) для обращения (или указания на) к части XML-документа.
+1. Использовать [XPath](/ru/docs/Web/XPath) для обращения (или указания на) к части XML-документа.
 2. Вручную [конвертировать XML](/ru/docs/Web/Guide/Parsing_and_serializing_XML) в строку или объект.
 3. Использовать {{domxref("XMLSerializer")}} для сериализации **DOM-дерева в строку**.
 4. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура документа. Возможно, потребуется удалить переносы строк из документа или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если XML-документ изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
-> **Обратите внимание:** Теперь с помощью {{domxref("XMLHttpRequest.responseXML", "responseXML")}} можно парсить HTML. Подробнее читайте в статье [HTML в XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+> **Обратите внимание:** Теперь с помощью {{domxref("XMLHttpRequest.responseXML", "responseXML")}} можно парсить HTML. Подробнее читайте в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 
 ### Получение HTML из responseText
 
 Если вы используете `XMLHttpRequest` для получения содержимого HTML-страницы, в свойстве {{domxref("XMLHttpRequest.responseText", "responseText")}} будет "сырой" HTML, работать с которым неудобно. Есть три способа упростить работу с этим "сырым" HTML:
 
-1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
 2. Вставить содержимое в [фрагмент](/ru/docs/Web/API/DocumentFragment) с помощью `fragment.body.innerHTML` и работать уже с содержимым фрагмента как с DOM-деревом.
 3. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура HTML. Возможно, потребуется удалить переносы строк из содержимого или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если HTML изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
@@ -170,9 +158,7 @@ req.open();
 req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  console.log(
-    "Передача данных завершена (но мы не знаем, успешно ли)."
-  );
+  console.log("Передача данных завершена (но мы не знаем, успешно ли).");
 }
 ```
 
@@ -220,7 +206,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
   The second line.
   ```
 
-- Метод: `POST`; тип кодирования: [`multipart/form-data`](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
+- Метод: `POST`; тип кодирования: [`multipart/form-data`](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data):
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -249,7 +235,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
 Всё это возможно благодаря браузеру и тегу {{HTMLElement("form")}}. Но если вам требуется выполнить все операции только с помощью JavaScript, вам придётся проинструктировать интерпретатор обо _всех_ выполняемых операциях. Отправка формы с помощью _чистого_ XHR слишком сложна, чтобы рассказать вам о ней во всех деталях. Поэтому мы решили опубликовать здесь **целый (пусть и учебный) фреймворк**, который поддерживает все четыре способа отправки и даже **загрузку файлов**:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -260,7 +246,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
 
       // :: XHR Form Submit Framework ::
       //
-      // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      // https://developer.mozilla.org/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
       //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -285,9 +271,9 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
               "get",
               data.receiver.replace(
                 /(?:\?.*)?$/,
-                data.segments.length > 0 ? `?${data.segments.join("&")}` : ""
+                data.segments.length > 0 ? `?${data.segments.join("&")}` : "",
               ),
-              true
+              true,
             );
             req.send(null);
           } else {
@@ -299,12 +285,12 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                 "---------------------------" + Date.now().toString(16);
               req.setRequestHeader(
                 "Content-Type",
-                `multipart\/form-data; boundary=${boundary}`
+                `multipart\/form-data; boundary=${boundary}`,
               );
               req.sendAsBinary(
                 `--${boundary}\r\n` +
                   data.segments.join(`--${boundary}\r\n`) +
-                  `--${boundary}--\r\n`
+                  `--${boundary}--\r\n`,
               );
             } else {
               // enctype is application/x-www-form-urlencoded or text/plain
@@ -382,7 +368,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                       file.name +
                       '"\r\nContent-Type: ' +
                       file.type +
-                      "\r\n\r\n"
+                      "\r\n\r\n",
                   );
                   this.status++;
                   segmReq.readAsBinaryString(file);
@@ -392,7 +378,7 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
                 // method is GET: files will not be sent!
                 for (const file of field.files) {
                   this.segments.push(
-                    `${filter(field.name)}=${filter(file.name)}`
+                    `${filter(field.name)}=${filter(file.name)}`,
                   );
                 }
               }
@@ -405,12 +391,12 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
               if (this.technique === 3) {
                 // enctype is multipart/form-data
                 this.segments.push(
-                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`
+                  `Content-Disposition: form-data; name="${field.name}"\r\n\r\n${field.value}\r\n`,
                 );
               } else {
                 // enctype is application/x-www-form-urlencoded or text/plain or method is GET
                 this.segments.push(
-                  `${filter(field.name)}=${filter(field.value)}`
+                  `${filter(field.name)}=${filter(field.value)}`,
                 );
               }
             }
@@ -439,7 +425,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
@@ -458,12 +445,9 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>First name:
-            <input type="text" name="firstname" />
-          </label><br />
-          <label>Last name:
-            <input type="text" name="lastname" />
-          </label>
+          <label>First name: <input type="text" name="firstname" /></label>
+          <br />
+          <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
           <input type="submit" value="Submit" />
@@ -481,12 +465,14 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label>Your name:
+          <label
+            >Your name:
             <input type="text" name="user" />
           </label>
         </p>
         <p>
-          <label>Your message:<br />
+          <label
+            >Your message:<br />
             <textarea name="message" cols="40" rows="8"></textarea>
           </label>
         </p>
@@ -506,7 +492,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Upload example</legend>
         <p>
-          <label>First name: <input type="text" name="firstname" /></label><br />
+          <label>First name: <input type="text" name="firstname" /></label
+          ><br />
           <label>Last name: <input type="text" name="lastname" /></label><br />
           Sex:
           <input id="sex_male" type="radio" name="sex" value="male" />
@@ -514,7 +501,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           <input id="sex_female" type="radio" name="sex" value="female" />
           <label for="sex_female">Female</label><br />
           Password: <input type="password" name="secret" /><br />
-          <label>What do you prefer:
+          <label
+            >What do you prefer:
             <select name="image_type">
               <option>Books</option>
               <option>Cinema</option>
@@ -523,7 +511,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           </label>
         </p>
         <p>
-          <label>Post your photos:
+          <label
+            >Post your photos:
             <input type="file" multiple name="photos[]" />
           </label>
         </p>
@@ -542,7 +531,8 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
           <label for="vehicle_car">I have a car</label>
         </p>
         <p>
-          <label>Describe yourself:<br />
+          <label
+            >Describe yourself:<br />
             <textarea name="description" cols="50" rows="8"></textarea>
           </label>
         </p>
@@ -602,11 +592,11 @@ user keyed data. The transmitted data is in the same format the form's
 `submit()` method uses to send data, if the form's encoding type were set to
 "multipart/form-data". FormData objects can be utilized in a number of ways with an
 `XMLHttpRequest`. For examples, and explanations of how one can utilize
-FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
+FormData with XMLHttpRequests, see the [Using FormData Objects](/ru/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
 `FormData` API**. Note the brevity of the code:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -747,7 +737,7 @@ FormData with XMLHttpRequests, see the [Using FormData Objects](/en-US/docs/Web/
 ```
 
 > **Note:** As we said, **{{domxref("FormData")}}
-> objects are not [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
+> objects are not [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) objects**. If you want to stringify a submitted data, use [the previous _pure_-AJAX example](#a_little_vanilla_framework). Note
 > also that, although in this example there are some `file` {{ HTMLElement("input") }} fields, **when you submit a form through the
 > `FormData` API you do not need to use the {{domxref("FileReader")}} API
 > also**: files are automatically loaded and uploaded.
@@ -762,7 +752,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // используется HEAD только если сервер требует заголовки
-  "yourpage.html"
+  "yourpage.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -775,7 +765,7 @@ Let's create two functions:
 ```js
 function getHeaderTime() {
   const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`)
+    window.localStorage.getItem(`lm_${this.filepath}`),
   );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -802,8 +792,8 @@ And to test:
 ifHasChanged("yourpage.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
-      nModified
-    ).toLocaleString()}!`
+      nModified,
+    ).toLocaleString()}!`,
   );
 });
 ```
@@ -857,8 +847,8 @@ req.send(null);
 ## Смотрите также
 
 - [AJAX. С чего начать](/ru/docs/Web/Guide/AJAX/Getting_Started)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-- [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP access control](/ru/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [Объект `XMLHttpRequest`: спецификация WHATWG](https://xhr.spec.whatwg.org/)

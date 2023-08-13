@@ -3,34 +3,46 @@ title: Patterns
 slug: Web/SVG/Tutorial/Patterns
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## 图案
 
-在我看来 patterns（图案）是 SVG 中用到的最让人混淆的填充类型之一。它的功能非常强大，所以我认为他们值得讨论一下并且我们应至少对他们有最基本的了解。跟渐变一样，{{SVGElement('pattern')}}需要放在 SVG 文档的 \<defs> 内部。
+在我看来 patterns（图案）是 SVG 中用到的最让人混淆的填充类型之一。它的功能非常强大，所以我认为他们值得讨论一下并且我们应至少对他们有最基本的了解。跟渐变一样，{{SVGElement('pattern')}} 需要放在 SVG 文档的 {{SVGElement("defs")}} 内部。
 
 ```html
 <?xml version="1.0" standalone="no"?>
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
     <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
+      <stop offset="5%" stop-color="white" />
+      <stop offset="95%" stop-color="blue" />
     </linearGradient>
     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
+      <stop offset="5%" stop-color="red" />
+      <stop offset="95%" stop-color="orange" />
     </linearGradient>
 
     <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+      <rect x="0" y="0" width="50" height="50" fill="skyblue" />
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)" />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="url(#Gradient1)"
+        fill-opacity="0.5" />
     </pattern>
-
   </defs>
 
-  <rect fill="url(#Pattern)" stroke="black" x="0" y="0" width="200" height="200"/>
+  <rect
+    fill="url(#Pattern)"
+    stroke="black"
+    x="0"
+    y="0"
+    width="200"
+    height="200" />
 </svg>
 ```
 

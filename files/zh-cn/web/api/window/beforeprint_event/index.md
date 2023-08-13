@@ -25,8 +25,8 @@ onbeforeprint = (event) => {};
 使用 `addEventListener()`:
 
 ```js
-window.addEventListener('beforeprint', (event) => {
-  console.log('Before print');
+window.addEventListener("beforeprint", (event) => {
+  console.log("Before print");
 });
 ```
 
@@ -34,7 +34,7 @@ window.addEventListener('beforeprint', (event) => {
 
 ```js
 window.onbeforeprint = (event) => {
-  console.log('Before print');
+  console.log("Before print");
 };
 ```
 

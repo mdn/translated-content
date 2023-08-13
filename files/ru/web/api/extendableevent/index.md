@@ -1,24 +1,11 @@
 ---
 title: ExtendableEvent
 slug: Web/API/ExtendableEvent
-tags:
-  - API
-  - Experimental
-  - ExtendableEvent
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-  - Workers
-translation_of: Web/API/ExtendableEvent
 ---
 
 {{APIRef("Service Workers API")}}
 
-The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
+The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/ru/docs/Web/API/ServiceWorkerGlobalScope/install) and [`activate`](/ru/docs/Web/API/ServiceWorkerGlobalScope/activate) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
 
 If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
@@ -44,7 +31,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 _Inherits methods from its parent,_ _{{domxref("Event")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
+  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/ru/docs/Web/API/ServiceWorkerGlobalScope/install) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/ru/docs/Web/API/ServiceWorkerGlobalScope/activate) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
 
 ## Examples
 
@@ -57,28 +44,38 @@ The code snippet also shows a best practice for versioning caches used by the se
 ```js
 var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+  prefetch: "prefetch-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
   var urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then(function(cache) {
-      return cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(function() {
-        console.log('All resources have been fetched and cached.');
-      });
-    }).catch(function(error) {
-      console.error('Pre-fetching failed:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then(function (cache) {
+        return cache
+          .addAll(
+            urlsToPrefetch.map(function (urlToPrefetch) {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(function () {
+            console.log("All resources have been fetched and cached.");
+          });
+      })
+      .catch(function (error) {
+        console.error("Pre-fetching failed:", error);
+      }),
   );
 });
 ```
@@ -87,9 +84,7 @@ self.addEventListener('install', function(event) {
 
 ## Specifications
 
-| Specification                                                                                | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#extendableevent', 'ExtendableEvent')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

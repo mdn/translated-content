@@ -93,10 +93,10 @@ function foo() {
 ```js
 async function foo() {
   const result1 = await new Promise((resolve) =>
-    setTimeout(() => resolve("1"))
+    setTimeout(() => resolve("1")),
   );
   const result2 = await new Promise((resolve) =>
-    setTimeout(() => resolve("2"))
+    setTimeout(() => resolve("2")),
   );
 }
 foo();
@@ -167,7 +167,7 @@ function concurrentPromise() {
     (messages) => {
       console.log(messages[0]); // slow
       console.log(messages[1]); // fast
-    }
+    },
   );
 }
 
@@ -220,10 +220,10 @@ setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", the
 ```js
 function getProcessedData(url) {
   return downloadData(url) // 返回一个 promise 对象
-    .catch(e => {
-      return downloadFallbackData(url)  // 返回一个 promise 对象
+    .catch((e) => {
+      return downloadFallbackData(url); // 返回一个 promise 对象
     })
-    .then(v => {
+    .then((v) => {
       return processDataInWorker(v); // 返回一个 promise 对象
     });
 }
@@ -243,18 +243,18 @@ async function getProcessedData(url) {
 }
 ```
 
-注意，在上述示例中，`return` 语句中没有 `await` 操作符，因为 `async function` 的返回值将被隐式地传递给 `{{jsxref("Promise.resolve")}}`。
+注意，在上述示例中，`return` 语句中没有 `await` 运算符，因为 `async function` 的返回值将被隐式地传递给 {{jsxref("Promise.resolve")}}。
 
-返回值`隐式的传递给`{{jsxref("Promise.resolve")}}，并不意味着`return await promiseValue;和 return promiseValue;`在功能上相同。
+返回值隐式地传递给 {{jsxref("Promise.resolve")}}，并不意味着 `return await promiseValue;` 和 `return promiseValue;` 在功能上相同。
 
-看下下面重写的上面代码，在`processDataInWorker`抛出异常时返回了 null：
+看下下面重写的上面代码，在 `processDataInWorker` 抛出异常时返回了 null：
 
 ```js
 async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
-  } catch(e) {
+  } catch (e) {
     v = await downloadFallbackData(url);
   }
   try {

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: list role'
+title: ARIA：list 角色
 slug: Web/Accessibility/ARIA/Roles/list_role
 ---
 
@@ -7,9 +7,9 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 ```html
 <section role="list">
-  <div role="listitem">List item 1</div>
-  <div role="listitem">List item 2</div>
-  <div role="listitem">List item 3</div>
+  <div role="listitem">列表项 1</div>
+  <div role="listitem">列表项 2</div>
+  <div role="listitem">列表项 3</div>
 </section>
 ```
 
@@ -28,29 +28,17 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 - [group](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : 相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。
 
-### 键盘交互
-
-无
-
-### 所需的 JavaScript 功能
-
-无
-
-## 示例
-
-[ARIA Lists](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — Scott O'Hara 的一些有用的例子和想法
-
 ## 最佳实践
 
 仅在必要时使用 `role="list"` 和 `role="listitem"`。例如，无法控制 HTML 但能够在之后动态使用 JavaScript 提升无障碍的时候。
 
-与 HTML {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 不同，ARIA `list` 角色不区分有序列表和无序列表。如果可能，您应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}})。例如，我们上面的例子应该改写如下：
+与 HTML {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 不同，ARIA `list` 角色不区分有序列表和无序列表。如果可能，您应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}}）。例如，我们上面的例子应该改写如下：
 
 ```html
 <ul>
-  <li>List item 1</li>
-  <li>List item 2</li>
-  <li>List item 3</li>
+  <li>列表项 1</li>
+  <li>列表项 2</li>
+  <li>列表项 3</li>
 </ul>
 ```
 
@@ -58,9 +46,9 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 ```html
 <ol>
-  <li>List item 1</li>
-  <li>List item 2</li>
-  <li>List item 3</li>
+  <li>列表项 1</li>
+  <li>列表项 2</li>
+  <li>列表项 3</li>
 </ol>
 ```
 
@@ -74,19 +62,16 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 {{Specifications}}
 
-## 屏幕阅读器支持
-
-TBD
-
 ## 参见
 
+- {{HTMLElement("ul")}} 元素
+- {{HTMLElement("ol")}} 元素
+- {{HTMLElement("li")}} 元素
+- [ARIA：listitem 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [ARIA：group 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html)——由 Scott O'Hara 撰写
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- {{HTMLElement("ul")}}
-- {{HTMLElement("ol")}}
-- {{HTMLElement("li")}}
-- [ARIA: listitem role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
-- [ARIA: group role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 
 <section id="Quick_links">
 

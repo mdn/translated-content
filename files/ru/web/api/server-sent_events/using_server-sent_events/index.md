@@ -1,7 +1,6 @@
 ---
 title: Using server-sent events
 slug: Web/API/Server-sent_events/Using_server-sent_events
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
@@ -19,19 +18,21 @@ const evtSource = new EventSource("ssedemo.php");
 Если файл с генератором событий размещён на другом домене, то должен быть создан новый объект `EventSource` в который следует передать помимо URI ещё и словарь опций. Например, если предположить, что клиентский скрипт находится на `example.com`:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
 Как только вы создали экземпляр `EventSource`, вы можете начать получать сообщения с сервера, добавив обработчик события {{event("message")}} :
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = function (event) {
   const newElement = document.createElement("li");
-  const eventList = document.getElementById('list');
+  const eventList = document.getElementById("list");
 
   newElement.innerHTML = "message: " + event.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Этот код обрабатывает входящие сообщения (то есть уведомления от сервера, на которых нет поля `event`) и добавляет текст сообщения в список в HTML-документе.
@@ -39,7 +40,7 @@ evtSource.onmessage = function(event) {
 Вы также можете обрабатывать события, используя `addEventListener()`:
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", function (event) {
   const newElement = document.createElement("li");
   const time = JSON.parse(event.data).time;
 
@@ -94,7 +95,7 @@ while (1) {
 Когда возникают проблемы (такие как тайм-аут ответа сети или проблемы, связанные с [контролем доступа](/ru/docs/HTTP/Access_control_CORS)), тогда генерируется событие `error`. Вы можете обработать это событие программно, реализовав метод `onerror` для объекта `EventSource`:
 
 ```js
-evtSource.onerror = function(error) {
+evtSource.onerror = function (error) {
   console.error("⛔ EventSource failed: ", error);
 };
 ```

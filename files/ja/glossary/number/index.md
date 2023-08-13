@@ -13,7 +13,7 @@ slug: Glossary/Number
 
 ### 技術リファレンス
 
-- JavaScript のデータ構造 : [Number](/ja/docs/Web/JavaScript/Data_structures#Number_type)
+- JavaScript のデータ構造 : [Number](/ja/docs/Web/JavaScript/Data_structures#数値型)
 - JavaScript のグローバルオブジェクト {{jsxref("Number")}}
 
 <!---->

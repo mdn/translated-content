@@ -13,9 +13,8 @@ MathML は、基部 'base expression) に対する後付け (postscripts) およ
 
 ```html
 <mmultiscripts>
-    base
-     (下付き文字 上付き文字)*
-     [ <mprescripts/> (前の下付き文字 前の上付き文字)* ]
+  base (下付き文字 上付き文字)* [ <mprescripts /> (前の下付き文字
+  前の上付き文字)* ]
 </mmultiscripts>
 ```
 
@@ -40,20 +39,21 @@ MathML は、基部 'base expression) に対する後付け (postscripts) およ
 
 ```html
 <math>
+  <mmultiscripts>
+    <mi>X</mi>
+    <!-- 基部 -->
 
-    <mmultiscripts>
+    <mi>d</mi>
+    <!-- 後の下付き文字-->
+    <mi>c</mi>
+    <!-- 後の上付き文字 -->
 
-        <mi>X</mi>      <!-- 基部 -->
-
-        <mi>d</mi>      <!-- 後の下付き文字-->
-        <mi>c</mi>      <!-- 後の上付き文字 -->
-
-        <mprescripts />
-        <mi>b</mi>      <!-- 前の下付き文字 -->
-        <mi>a</mi>      <!-- 前の上付き文字 -->
-
-    </mmultiscripts>
-
+    <mprescripts />
+    <mi>b</mi>
+    <!-- 前の下付き文字 -->
+    <mi>a</mi>
+    <!-- 前の上付き文字 -->
+  </mmultiscripts>
 </math>
 ```
 
@@ -67,20 +67,21 @@ MathML は、基部 'base expression) に対する後付け (postscripts) およ
 
 ```html
 <math>
+  <mmultiscripts>
+    <mi>X</mi>
+    <!-- 基部 -->
 
-    <mmultiscripts>
+    <none />
+    <!-- 後の下付き文字-->
+    <mi>c</mi>
+    <!-- 後の上付き文字 -->
 
-        <mi>X</mi>      <!-- 基部 -->
-
-        <none />        <!-- 後の下付き文字-->
-        <mi>c</mi>      <!-- 後の上付き文字 -->
-
-        <mprescripts />
-        <mi>b</mi>      <!-- 前の下付き文字 -->
-        <none />        <!-- 前の上付き文字 -->
-
-    </mmultiscripts>
-
+    <mprescripts />
+    <mi>b</mi>
+    <!-- 前の下付き文字 -->
+    <none />
+    <!-- 前の上付き文字 -->
+  </mmultiscripts>
 </math>
 ```
 

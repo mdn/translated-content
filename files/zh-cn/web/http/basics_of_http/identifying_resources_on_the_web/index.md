@@ -17,8 +17,8 @@ URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/zh-CN/docs/Learn/
+https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
 在浏览器的地址栏中输入上述任一地址，浏览器就会加载相应的网页（资源）。
@@ -50,18 +50,18 @@ urn:ietf:rfc:7230
 - ![Protocol](mdn-url-protocol@x2.png)
   - : `http://`告诉浏览器使用何种协议。对于大部分 Web 资源，通常使用 HTTP 协议或其安全版本，HTTPS 协议。另外，浏览器也知道如何处理其他协议。例如， `mailto:` 协议指示浏览器打开邮件客户端；`ftp:`协议指示浏览器处理文件传输。常见的方案有：
 
-| 方案        | 描述                                                                  |
-| ----------- | --------------------------------------------------------------------- |
-| data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                           |
-| file        | 指定主机上文件的名称                                                  |
-| ftp         | [文件传输协议](/zh-CN/docs/Glossary/FTP)                              |
+| 方案        | 描述                                                               |
+| ----------- | ------------------------------------------------------------------ |
+| data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                        |
+| file        | 指定主机上文件的名称                                               |
+| ftp         | [文件传输协议](/zh-CN/docs/Glossary/FTP)                           |
 | http/https  | [超文本传输 协议／安全的超文本传输协议](/zh-CN/docs/Glossary/HTTP) |
-| mailto      | 电子邮件地址                                                          |
-| ssh         | 安全 shell                                                            |
-| tel         | 电话                                                                  |
-| urn         | 统一资源名称                                                          |
-| view-source | 资源的源代码                                                          |
-| ws/wss      | （加密的）[WebSocket](/zh-CN/docs/WebSockets) 连接                    |
+| mailto      | 电子邮件地址                                                       |
+| ssh         | 安全 shell                                                         |
+| tel         | 电话                                                               |
+| urn         | 统一资源名称                                                       |
+| view-source | 资源的源代码                                                       |
+| ws/wss      | （加密的）[WebSocket](/zh-CN/docs/WebSockets) 连接                 |
 
 ### 主机
 
@@ -91,7 +91,7 @@ urn:ietf:rfc:7230
 ## 示例
 
 ```plain
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/zh-CN/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

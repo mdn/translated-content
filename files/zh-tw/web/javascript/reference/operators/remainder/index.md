@@ -1,5 +1,5 @@
 ---
-title: 餘數運算子 (%)
+title: 餘數運算子（%）
 slug: Web/JavaScript/Reference/Operators/Remainder
 ---
 
@@ -20,7 +20,7 @@ obtain a modulo in JavaScript, in place of `a % n`, use
 
 ## 語法
 
-```js
+```js-nolint
 x % y
 ```
 
@@ -29,33 +29,33 @@ x % y
 ### 除正數時的餘數
 
 ```js
- 13 % 5  //  3
- 1 % -2 //  1
- 1 % 2  //  1
- 2 % 3  //  2
-5.5 % 2 // 1.5
+13 % 5; //  3
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### 除負數時的餘數
 
 ```js
--13 % 5 // -3
--1 % 2  // -1
--4 % 2  // -0
+-13 % 5; // -3
+-1 % 2; // -1
+-4 % 2; // -0
 ```
 
 ### 除 `NaN` 時的餘數
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### 除無限 (Infinity) 時的餘數
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## 規範

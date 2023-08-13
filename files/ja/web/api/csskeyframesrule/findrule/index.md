@@ -1,23 +1,25 @@
 ---
-title: CSSKeyframesRule.findRule()
+title: "CSSKeyframesRule: findRule() メソッド"
 slug: Web/API/CSSKeyframesRule/findRule
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSSOM") }}
 
-**`findRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、して市荒れたキーフレームセレクターに一致する {{domxref("CSSKeyFrameRule")}} を検索します。
+**`findRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、指定されたキーフレームセレクターに一致する {{domxref("CSSKeyFrameRule")}} を検索します。
 
 ## 構文
 
-```js
-CSSKeyframesRule.findRule(select);
+```js-nolint
+findRule(select)
 ```
 
 ### 引数
 
 - `select`
 
-  - : {{domxref("CSSOMString")}} で、見つけるルールのキーフレームセレクターを指定します。次のどちらかになります。
+  - : 見つけるルールのキーフレームセレクターの入った文字列です。次のどちらかになります。
 
     - 0% から 100% までのパーセント値をカンマで区切ったリスト
     - または `from` か `to` のキーワード
@@ -48,7 +50,7 @@ CSSKeyframesRule.findRule(select);
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // CSSKeyframesRule
-console.log(keyframes.findRule('to'));  // CSSKeyframeRule オブジェクト
+console.log(keyframes.findRule("to")); // CSSKeyframeRule オブジェクト
 ```
 
 ## 仕様書

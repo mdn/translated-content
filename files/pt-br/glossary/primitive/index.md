@@ -1,7 +1,6 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-original_slug: Glossario/Primitivo
 ---
 
 ## Resumo

@@ -1,7 +1,6 @@
 ---
 title: React 新手入門
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -78,9 +77,11 @@ const header = (
 > **備註：** 前面程式碼中的括號`(`、`)`不是 JSX 獨有的，這對你的應用程式沒有任何影響。它們會向你（和你的電腦）發出訊號，表示括號其中的多行程式碼是同個表達式的一部分。你也可以像這樣編寫表達式：
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/zh-TW/docs/Web/HTML/Element/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
@@ -88,8 +89,10 @@ const header = (
 當然，若沒有其他的幫助，你的瀏覽器是無法直接讀取解析 JSX 的，當編譯完成（藉由使用像[Babel](https://babeljs.io/)或[Parcel](https://parceljs.org/)之類的工具），我們的 header 表達式看起來像這樣：
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -177,7 +180,7 @@ The **`src`** directory is where we'll spend most of our time, as it's where the
 
 The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/zh-TW/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The `public` directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
+The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
 
 The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
@@ -188,9 +191,9 @@ In React, a **component** is a reusable module that renders a part of our app. T
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -204,8 +207,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -222,9 +224,9 @@ The `App.js` file consists of three main parts: some [`import`](/zh-TW/docs/Web/
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 The first statement imports the React library itself. Because React turns the JSX we write into `React.createElement()`, all React components must import the `React` module. If you skip this step, your application will produce an error.
@@ -254,8 +256,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -278,9 +279,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -293,20 +292,20 @@ function App() {
 
 ## 查詢索引
 
-Let’s open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
+Let's open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -317,7 +316,7 @@ serviceWorker.unregister();
 
 As with `App.js`, the file starts by importing all the JS modules and other assets it needs to run. `src/index.css` holds global styles that are applied to our whole app. We can also see our `App` component imported here; it is made available for import thanks to the `export` statement at the bottom of `App.js`.
 
-Line 7 calls React’s `ReactDOM.render()` function with two arguments:
+Line 7 calls React's `ReactDOM.render()` function with two arguments:
 
 - The component we want to render, `<App />` in this case.
 - The DOM element inside which we want the component to be rendered, in this case the element with an ID of `root`. If you look inside `public/index.html`, you'll see that this is a `<div>` element just inside the `<body>`.
@@ -326,17 +325,17 @@ All of this tells React that we want to render our React application with the `A
 
 > **備註：** In JSX, React components and HTML elements must have closing slashes. Writing just `<App>` or just `<img>` will cause an error.
 
-[Service workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they’re not in scope for this article. You can delete line 5, as well as most of the code below it.
+[Service workers](/zh-TW/docs/Web/API/Service_Worker_API/Using_Service_Workers) are interesting pieces of code that help application performance and allow features of your web applications to work offline, but they're not in scope for this article. You can delete line 5, as well as most of the code below it.
 
 Your final `index.js` file should look like this:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables and props
@@ -362,9 +361,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -380,9 +377,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -397,12 +392,12 @@ function App() {
 
 A **prop** is any data passed into a React component. React props are comparable to HTML attributes. Where HTML elements have attributes, React components have props. Props are written inside component calls, and use the same syntax as HTML attributes — `prop="value"`. In React, dataflow is unidirectional: props can only be passed from Parent components down to Child components; and props are read-only.
 
-Let’s open `index.js` and give our `<App/>` call its first prop.
+Let's open `index.js` and give our `<App/>` call its first prop.
 
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):

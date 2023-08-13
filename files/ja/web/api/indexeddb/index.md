@@ -1,7 +1,6 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 l10n:
   sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
 ---

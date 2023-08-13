@@ -1,11 +1,6 @@
 ---
 title: Intl.NumberFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-tags:
-  - Internationalization
-  - JavaScript
-  - NumberFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ---
 
 {{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
@@ -105,28 +100,28 @@ console.log(new Intl.NumberFormat().format(number));
 var number = 123456.789;
 
 // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
-console.log(new Intl.NumberFormat('de-DE').format(number));
+console.log(new Intl.NumberFormat("de-DE").format(number));
 // → 123.456,789
 
 // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - пробел
-console.log(new Intl.NumberFormat('ru-RU').format(number));
+console.log(new Intl.NumberFormat("ru-RU").format(number));
 // → 123 456,789
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(new Intl.NumberFormat('ar-EG').format(number));
+console.log(new Intl.NumberFormat("ar-EG").format(number));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // В Индии используют разделители для тысяч/лакх/крор
-console.log(new Intl.NumberFormat('en-IN').format(number));
+console.log(new Intl.NumberFormat("en-IN").format(number));
 // → 1,23,456.789
 
 // Ключ расширения nu запрашивает систему нумерации, например, китайскую десятичную
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(number));
 // → 一二三,四五六.七八九
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(number));
 // → 123.456,789
 ```
 
@@ -138,18 +133,34 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 var number = 123456.789;
 
 // Запрашиваем формат валюты
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    number,
+  ),
+);
 // → 123.456,79 €
 
-console.log(new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(number));
+console.log(
+  new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB" }).format(
+    number,
+  ),
+);
 // → 123 456,79 руб.
 
 // Японская йена не использует младшие единицы
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number))
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    number,
+  ),
+);
 // → ￥123,457
 
 // Ограничиваем до трёх значащих цифр
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    number,
+  ),
+);
 // → 1,23,000
 ```
 

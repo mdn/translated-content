@@ -1,9 +1,6 @@
 ---
 title: Ширина
 slug: Web/SVG/Attribute/width
-tags:
-  - ширина
-translation_of: Web/SVG/Attribute/width
 ---
 
 {{SVGRef}}
@@ -13,15 +10,19 @@ translation_of: Web/SVG/Attribute/width
 Двадцать пять элементов используют эти атрибуты: {{SVGElement('feBlend')}}, {{SVGElement('feColorMatrix')}}, {{SVGElement('feComponentTransfer')}}, {{SVGElement('feComposite')}}, {{SVGElement('feConvolveMatrix')}}, {{SVGElement('feDiffuseLighting')}}, {{SVGElement('feDisplacementMap')}}, {{SVGElement('feDropShadow')}}, {{SVGElement('feFlood')}}, {{SVGElement('feGaussianBlur')}}, {{SVGElement('feImage')}}, {{SVGElement('feMerge')}}, {{SVGElement('feMorphology')}}, {{SVGElement('feOffset')}}, {{SVGElement('feSpecularLighting')}}, {{SVGElement('feTile')}}, {{SVGElement('feTurbulence')}}, {{SVGElement('filter')}}, {{SVGElement('foreignObject')}}, {{SVGElement('image')}}, {{SVGElement('mask')}}, {{SVGElement('pattern')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, and {{SVGElement('use')}}
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
   <!-- С шириной равной 0 или меньше, ничего не будет отображаться -->
-  <rect x="0" y="0" width="0" height="90"/>
-  <rect x="0" y="100" width="60" height="90"/>
-  <rect x="0" y="200" width="100%" height="90"/>
+  <rect x="0" y="0" width="0" height="90" />
+  <rect x="0" y="100" width="60" height="90" />
+  <rect x="0" y="200" width="100%" height="90" />
 </svg>
 ```
 
@@ -266,19 +267,19 @@ html,body,svg { height:100% }
 
 ## Спецификации
 
-| Specification                                                                                                | Status                           | Comment                                  |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------- |
-| {{ SpecName('Filters 1.0', '#element-attrdef-filter-width', 'width') }}             | {{Spec2('Filters 1.0')}} | Definition for `<filter>`                |
+| Specification                                                                     | Status                   | Comment                                  |
+| --------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------- |
+| {{ SpecName('Filters 1.0', '#element-attrdef-filter-width', 'width') }}           | {{Spec2('Filters 1.0')}} | Definition for `<filter>`                |
 | {{ SpecName('Filters 1.0', '#element-attrdef-filter-primitive-width', 'width') }} | {{Spec2('Filters 1.0')}} | Definition for filter primitives         |
-| {{SpecName("CSS Masks", "#element-attrdef-mask-width", 'width')}}                     | {{Spec2("CSS Masks")}}     | Definition for `<mask>`                  |
-| {{SpecName("SVG2", "geometry.html#Sizing", "width")}}                                     | {{Spec2("SVG2")}}         | Definition as a geometry property        |
-| {{SpecName("SVG2", "pservers.html#PatternElementWidthAttribute", "width")}}         | {{Spec2("SVG2")}}         | Definition for `<pattern>`               |
-| {{SpecName("SVG1.1", "extend.html#ForeignObjectElementWidthAttribute", "width")}} | {{Spec2("SVG1.1")}}         | Initial definition for `<foreignObject>` |
-| {{SpecName("SVG1.1", "pservers.html#PatternElementWidthAttribute", "width")}}     | {{Spec2("SVG1.1")}}         | Initial definition for `<pattern>`       |
-| {{SpecName("SVG1.1", "struct.html#ImageElementWidthAttribute", "width")}}             | {{Spec2("SVG1.1")}}         | Initial definition for `<image>`         |
-| {{SpecName("SVG1.1", "struct.html#SVGElementWidthAttribute", "width")}}             | {{Spec2("SVG1.1")}}         | Initial definition for `<svg>`           |
-| {{SpecName("SVG1.1", "struct.html#UseElementWidthAttribute", "width")}}             | {{Spec2("SVG1.1")}}         | Initial definition for `<use>`           |
-| {{SpecName("SVG1.1", "filters.html#FilterElementWidthAttribute", "width")}}         | {{Spec2("SVG1.1")}}         | Initial definition for `<filter>`        |
-| {{SpecName("SVG1.1", "filters.html#FilterPrimitiveWidthAttribute", "width")}}     | {{Spec2("SVG1.1")}}         | Initial definition for filter primitives |
-| {{SpecName("SVG1.1", "masking.html#MaskElementWidthAttribute", "width")}}             | {{Spec2("SVG1.1")}}         | Initial definition for `<mask>`          |
-| {{SpecName("SVG1.1", "shapes.html#RectElementWidthAttribute", "width")}}             | {{Spec2("SVG1.1")}}         | Initial definition for `<rect>`          |
+| {{SpecName("CSS Masks", "#element-attrdef-mask-width", 'width')}}                 | {{Spec2("CSS Masks")}}   | Definition for `<mask>`                  |
+| {{SpecName("SVG2", "geometry.html#Sizing", "width")}}                             | {{Spec2("SVG2")}}        | Definition as a geometry property        |
+| {{SpecName("SVG2", "pservers.html#PatternElementWidthAttribute", "width")}}       | {{Spec2("SVG2")}}        | Definition for `<pattern>`               |
+| {{SpecName("SVG1.1", "extend.html#ForeignObjectElementWidthAttribute", "width")}} | {{Spec2("SVG1.1")}}      | Initial definition for `<foreignObject>` |
+| {{SpecName("SVG1.1", "pservers.html#PatternElementWidthAttribute", "width")}}     | {{Spec2("SVG1.1")}}      | Initial definition for `<pattern>`       |
+| {{SpecName("SVG1.1", "struct.html#ImageElementWidthAttribute", "width")}}         | {{Spec2("SVG1.1")}}      | Initial definition for `<image>`         |
+| {{SpecName("SVG1.1", "struct.html#SVGElementWidthAttribute", "width")}}           | {{Spec2("SVG1.1")}}      | Initial definition for `<svg>`           |
+| {{SpecName("SVG1.1", "struct.html#UseElementWidthAttribute", "width")}}           | {{Spec2("SVG1.1")}}      | Initial definition for `<use>`           |
+| {{SpecName("SVG1.1", "filters.html#FilterElementWidthAttribute", "width")}}       | {{Spec2("SVG1.1")}}      | Initial definition for `<filter>`        |
+| {{SpecName("SVG1.1", "filters.html#FilterPrimitiveWidthAttribute", "width")}}     | {{Spec2("SVG1.1")}}      | Initial definition for filter primitives |
+| {{SpecName("SVG1.1", "masking.html#MaskElementWidthAttribute", "width")}}         | {{Spec2("SVG1.1")}}      | Initial definition for `<mask>`          |
+| {{SpecName("SVG1.1", "shapes.html#RectElementWidthAttribute", "width")}}          | {{Spec2("SVG1.1")}}      | Initial definition for `<rect>`          |

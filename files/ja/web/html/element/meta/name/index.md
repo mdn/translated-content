@@ -5,7 +5,7 @@ slug: Web/HTML/Element/meta/name
 
 {{HTMLSidebar}}
 
-{{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 {{htmlattrxref("name", "meta")}} 属性でメタデータ名を指定し、 {{htmlattrxref("content", "meta")}} 属性で値を指定します。
+{{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性でメタデータ名を指定し、 [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性で値を指定します。
 
 ### HTML 仕様書で定義されている標準メタデータ名
 
@@ -42,7 +42,7 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
 
   ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。 `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
 
-  `color-scheme` の {{htmlattrxref("content", "meta")}} プロパティは次のうちの一つになります。
+  `color-scheme` の [`content`](/ja/docs/Web/HTML/Element/meta#content)nt/meta#content) プロパティは次のうちの一つになります。
 
   - `normal`
     - : この文書は配色を意識していないので、既定のカラーパレットを使って描画する必要があります。
@@ -86,10 +86,6 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
 
 - [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
-
-##### 関連情報
-
-CSS の [`@viewport`](/ja/docs/Web/CSS/@viewport) アット規則
 
 ### その他のメタデータ名
 

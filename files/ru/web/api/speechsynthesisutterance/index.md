@@ -1,7 +1,6 @@
 ---
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
-translation_of: Web/API/SpeechSynthesisUtterance
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
@@ -56,40 +55,38 @@ _`SpeechSynthesisUtterance` ещё наследует свойства из ег
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector("input");
+var voiceSelect = document.querySelector("select");
 
 var voices = synth.getVoices();
 
-for(i = 0; i < voices.length ; i++) {
-  var option = document.createElement('option');
-  option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
-  option.setAttribute('data-lang', voices[i].lang);
-  option.setAttribute('data-name', voices[i].name);
+for (i = 0; i < voices.length; i++) {
+  var option = document.createElement("option");
+  option.textContent = voices[i].name + " (" + voices[i].lang + ")";
+  option.setAttribute("data-lang", voices[i].lang);
+  option.setAttribute("data-name", voices[i].name);
   voiceSelect.appendChild(option);
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

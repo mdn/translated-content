@@ -9,21 +9,21 @@ slug: Web/CSS/border-right
 
 {{EmbedInteractiveExample("pages/css/border-right.html")}}
 
-他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり・・・
+他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。つまり……
 
 ```css
 border-right-style: dotted;
 border-right: thick green;
 ```
 
-・・・は、実際には以下と同じです・・・
+……は、実際には以下と同じです……
 
 ```css
 border-right-style: dotted;
 border-right: none thick green;
 ```
 
-・・・そして、 `border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
+……そして、 `border-right` の前で設定された {{cssxref("border-right-style")}} の値は無視されます。 {{cssxref("border-right-style")}} の既定値は `none` なので、 `border-style` の部分の設定は境界線なしとなります。
 
 ## 構成要素のプロパティ
 

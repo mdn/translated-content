@@ -1,48 +1,51 @@
 ---
-title: NodeList.item
+title: "NodeList: item() メソッド"
+short-title: item()
 slug: Web/API/NodeList/item
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-## 概要
-
-[`NodeList`](/ja/docs/DOM/NodeList) 中の、引数に指定するインデックスの位置にあるノードを取得します。
+[`NodeList`](/ja/docs/Web/API/NodeList) からインデックスでノードを返します。このメソッドは引数を提供する限り例外を発生しません。インデックスが範囲外の場合は `null` という値が返され、引数が指定されなかった場合は {{jsxref("TypeError")}} が発生します。
 
 ## 構文
 
-```
-nodeItem = nodeList.item(index)
+```js-nolint
+item(index)
 ```
 
-- `nodeList` : `NodeList` 。これは [childNodes](/ja/docs/DOM/Node.childNodes) などの DOM プロパティやメソッドで取得可能。
-- `index` : 取得するノードのインデックス。最初のノードの _index_ は 0 となる。
-- `nodeItem` : `nodeList` 中の、`item` メソッドに指定した _index_ の位置にあるノード。
+JavaScript では、NodeList からインデックスでアイテムを取得するのに配列風の括弧構文も提供しています。
 
-JavaScript にはノードリスト中のアイテムの取得に以下のような構文を用いる事も可能です。
+```js
+nodeItem = nodeList[index];
+```
 
-```
-nodeItem = nodeList[index]
-```
+### 引数
+
+- `index` はノードを読み取るインデックスです。インデックスはゼロ基点です。
+
+### 返値
+
+`item` メソッドが返す `nodeList` 内の `index` 番目のノード。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : 引数が提供されなかった場合に発生します。
 
 ## 例
 
 ```js
-var tables = document.getElementsByTagName("table"); // DOM 中に含まれるすべての table 要素のノードリストを取得
-var secondTable = tables.item(1); // DOM 中の 2 番目の table 要素
-
-
-// tables[1] でも取得可能。即ちアイテムが存在した場合、以下は true となる
-alert( tables.item(1) === tables[1] );
+const tables = document.getElementsByTagName("table");
+const firstTable = tables.item(1); // または tables[1] - DOM 内の 2 番目の表を返す
 ```
-
-## 注記
-
-指定した _index_ が範囲外の場合、このメソッドは例外をスローするのではなく、`null` を返します。
-
-`item()` メソッドは {{domxref("Element")}} や {{domxref("Node")}} のメソッドではなく、 {{domxref("NodeList")}} のメソッドです。
 
 ## 仕様書
 
-- [DOM Level 1 Core: NodeList.item()](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item)
-- [DOM Level 2 Core: NodeList.item()](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

@@ -3,6 +3,8 @@ title: 開發者工具
 slug: Glossary/Developer_Tools
 ---
 
+{{GlossarySidebar}}
+
 開發者工具 (或"開發工具"或簡稱 "DevTools")是程式准許開發者執行創建、測試和{{Glossary("debug")}}的軟體。
 
 現在的瀏覽器都提供了完整的開發者工具，它被准許用來檢查網站。它們讓用戶檢查和 debug 頁面上的 {{Glossary("HTML")}}, {{Glossary("CSS")}} 和 {{Glossary("JavaScript")}}准許檢查引起的網路流量，并使測量性能成爲更多，以及其他。

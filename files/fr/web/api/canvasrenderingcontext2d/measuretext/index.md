@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-tags:
-  - API
-  - Canevas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 
 {{APIRef}}
@@ -40,10 +33,10 @@ Un objet {{domxref("TextMetrics")}}.
 vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
-var texte = ctx.measureText('foo'); // objet TextMetrics
+var texte = ctx.measureText("foo"); // objet TextMetrics
 texte.width; // 16;
 ```
 

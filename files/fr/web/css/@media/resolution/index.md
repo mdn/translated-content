@@ -1,11 +1,6 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/resolution
 ---
 
 {{CSSRef}}

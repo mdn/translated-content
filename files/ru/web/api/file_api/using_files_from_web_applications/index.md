@@ -1,8 +1,6 @@
 ---
 title: Использование файлов в веб приложениях
 slug: Web/API/File_API/Using_files_from_web_applications
-translation_of: Web/API/File/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 ---
 
 Используя File API, добавленный к DOM в HTML5, в веб-приложениях теперь можно запрашивать пользователя выбрать локальные файлы и затем читать содержимое этих файлов. Выбор файлов может осуществляться с помощью элемента {{ HTMLElement("input") }} или drag and drop.
@@ -14,7 +12,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 Рассмотрим следующий код:
 
 ```html
-<input type="file" id="input" multiple>
+<input type="file" id="input" multiple />
 ```
 
 File API делает возможным доступ к {{ domxref("FileList") }}, который содержит объекты {{ domxref("File") }}, которым соответствуют файлы, выбранные пользователем.
@@ -24,15 +22,15 @@ File API делает возможным доступ к {{ domxref("FileList") 
 Обращение к одному выбранному файлу с использованием классической DOM-модели:
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 Обращение к одному выбранному файлу через [jQuery](http://jquery.com/):
 
 ```js
-var selectedFile = $('#input').get(0).files[0];
+var selectedFile = $("#input").get(0).files[0];
 
-var selectedFile = $('#input')[0].files[0];
+var selectedFile = $("#input")[0].files[0];
 ```
 
 > **Примечание:** Ошибка "files is undefined" означает что был выбран не один HTML-элемент, а список элементов, возвращаемый jQuery. Необходимо уточнить, у какого именно элемента требуется вызвать метод "files"
@@ -52,7 +50,7 @@ function handleFiles() {
 Обработчик события `change` можно назначить атрибутом элемента:
 
 ```html
-<input type="file" id="input" onchange="handleFiles(this.files)">
+<input type="file" id="input" onchange="handleFiles(this.files)" />
 ```
 
 Когда пользователь выбирает файл, функция handleFiles() будет вызвана с объектом {{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.
@@ -90,37 +88,67 @@ for (var i = 0, numFiles = files.length; i < numFiles; i++) {
 Следующий пример показывает возможное использование свойства `size`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>File(s) size</title>
-<script>
-function updateSize() {
-  var nBytes = 0,
-      oFiles = document.getElementById("uploadInput").files,
-      nFiles = oFiles.length;
-  for (var nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  var sOutput = nBytes + " bytes";
-  // optional code for multiples approximation
-  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-  }
-  // end of optional code
-  document.getElementById("fileNum").innerHTML = nFiles;
-  document.getElementById("fileSize").innerHTML = sOutput;
-}
-</script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>File(s) size</title>
+    <script>
+      function updateSize() {
+        var nBytes = 0,
+          oFiles = document.getElementById("uploadInput").files,
+          nFiles = oFiles.length;
+        for (var nFileId = 0; nFileId < nFiles; nFileId++) {
+          nBytes += oFiles[nFileId].size;
+        }
+        var sOutput = nBytes + " bytes";
+        // optional code for multiples approximation
+        for (
+          var aMultiples = [
+              "KiB",
+              "MiB",
+              "GiB",
+              "TiB",
+              "PiB",
+              "EiB",
+              "ZiB",
+              "YiB",
+            ],
+            nMultiple = 0,
+            nApprox = nBytes / 1024;
+          nApprox > 1;
+          nApprox /= 1024, nMultiple++
+        ) {
+          sOutput =
+            nApprox.toFixed(3) +
+            " " +
+            aMultiples[nMultiple] +
+            " (" +
+            nBytes +
+            " bytes)";
+        }
+        // end of optional code
+        document.getElementById("fileNum").innerHTML = nFiles;
+        document.getElementById("fileSize").innerHTML = sOutput;
+      }
+    </script>
+  </head>
 
-<body onload="updateSize();">
-<form name="uploadForm">
-<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
-<p><input type="submit" value="Send file"></p>
-</form>
-</body>
+  <body onload="updateSize();">
+    <form name="uploadForm">
+      <p>
+        <input
+          id="uploadInput"
+          type="file"
+          name="myFiles"
+          onchange="updateSize();"
+          multiple />
+        selected files: <span id="fileNum">0</span>; total size:
+        <span id="fileSize">0</span>
+      </p>
+      <p><input type="submit" value="Send file" /></p>
+    </form>
+  </body>
 </html>
 ```
 
@@ -131,7 +159,13 @@ function updateSize() {
 Рассмотрим следующую разметку HTML:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 ```
 
@@ -141,12 +175,16 @@ function updateSize() {
 var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // предотвращает перемещение к "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // предотвращает перемещение к "#"
+  },
+  false,
+);
 ```
 
 Таким образом, вы можете стилизовать новую кнопку открытия диалога выбора файла так, как пожелаете.
@@ -158,7 +196,13 @@ fileSelect.addEventListener("click", function (e) {
 Рассмотрим следующую разметку HTML:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <label for="fileElem">Select some files</label>
 ```
 
@@ -220,7 +264,9 @@ function handleFiles(files) {
   for (var i = 0; i < files.length; i++) {
     var file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     var img = document.createElement("img");
     img.classList.add("obj");
@@ -228,7 +274,11 @@ function handleFiles(files) {
     preview.appendChild(img); // Предполагается, что "preview" это div, в котором будет отображаться содержимое.
 
     var reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (function (aImg) {
+      return function (e) {
+        aImg.src = e.target.result;
+      };
+    })(img);
     reader.readAsDataURL(file);
   }
 }
@@ -263,7 +313,13 @@ window.URL.revokeObjectURL(objectURL);
 HTML, который представляет интерфейс, выглядит так:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
@@ -278,15 +334,19 @@ HTML, который представляет интерфейс, выгляди
 window.URL = window.URL || window.webkitURL;
 
 var fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false,
+);
 
 function handleFiles(files) {
   if (!files.length) {
@@ -300,9 +360,9 @@ function handleFiles(files) {
       var img = document.createElement("img");
       img.src = window.URL.createObjectURL(files[i]);
       img.height = 60;
-      img.onload = function() {
+      img.onload = function () {
         window.URL.revokeObjectURL(this.src);
-      }
+      };
       li.appendChild(img);
       var info = document.createElement("span");
       info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
@@ -320,12 +380,12 @@ function handleFiles(files) {
 2. Этот новый элемент вставляется в блок {{ HTMLElement("div") }} с помощью вызова его метода {{ domxref("element.appendChild()") }}.
 3. Для каждого {{ domxref("File") }} в {{ domxref("FileList") }}, представляемого `files`:
 
-    1. Создаём новый элемент пункта списка ({{ HTMLElement("li") }}) и вставляем его в список.
-    2. Создаём новый элемент изображения ({{ HTMLElement("img") }}).
-    3. Устанавливаем источник изображения в новый URL объекта, представляющий файл, используя {{ domxref("window.URL.createObjectURL()") }} для создания URL на двоичный объект.
-    4. Устанавливаем высоту изображения в 60 пикселей.
-    5. Устанавливаем обработчик события загрузки изображения для освобождения URL объекта, т.к. после загрузки изображения он больше не нужен. Это делается вызовом метода {{ domxref("window.URL.revokeObjectURL()") }}, передавая в него строку URL объекта, которая указана в `img.src`.
-    6. Добавляем новый элемент в список.
+   1. Создаём новый элемент пункта списка ({{ HTMLElement("li") }}) и вставляем его в список.
+   2. Создаём новый элемент изображения ({{ HTMLElement("img") }}).
+   3. Устанавливаем источник изображения в новый URL объекта, представляющий файл, используя {{ domxref("window.URL.createObjectURL()") }} для создания URL на двоичный объект.
+   4. Устанавливаем высоту изображения в 60 пикселей.
+   5. Устанавливаем обработчик события загрузки изображения для освобождения URL объекта, т.к. после загрузки изображения он больше не нужен. Это делается вызовом метода {{ domxref("window.URL.revokeObjectURL()") }}, передавая в него строку URL объекта, которая указана в `img.src`.
+   6. Добавляем новый элемент в список.
 
 ## Пример: Загрузка файла, выбранного пользователем
 
@@ -359,21 +419,32 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    function (e) {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  xhr.upload.addEventListener(
+    "load",
+    function (e) {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = function (evt) {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -457,15 +528,15 @@ URL объектов могут быть использованы не толь�
 В Firefox, для того чтобы файл PDF появился в iframe и не предлагался для загрузки, нужно установить `pdfjs.disabled` в значение `false` {{non-standard_inline()}}.
 
 ```html
-<iframe id="viewer">
+<iframe id="viewer"></iframe>
 ```
 
 А здесь изменение атрибута `src`:
 
 ```js
 var obj_url = window.URL.createObjectURL(blob);
-var iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+var iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 window.URL.revokeObjectURL(obj_url);
 ```
 
@@ -474,10 +545,10 @@ window.URL.revokeObjectURL(obj_url);
 Вы можете таким же образом работать с файлами в других форматах. Ниже приведён пример как загружается видео:
 
 ```js
-var video = document.getElementById('video');
+var video = document.getElementById("video");
 var obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
-video.play()
+video.play();
 window.URL.revokeObjectURL(obj_url);
 ```
 

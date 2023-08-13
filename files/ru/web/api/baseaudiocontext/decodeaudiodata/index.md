@@ -1,10 +1,6 @@
 ---
 title: AudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
-tags:
-  - API
-translation_of: Web/API/BaseAudioContext/decodeAudioData
-original_slug: Web/API/AudioContext/decodeAudioData
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -49,10 +45,10 @@ The buttons in the example simply run `getData()` to load the track and start it
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
 
 // use XHR to load an audio track, and
 // decodeAudioData to decode it and stick it in a buffer.
@@ -62,41 +58,43 @@ function getData() {
   source = audioCtx.createBufferSource();
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
 
   request.send();
 }
 
 // wire up buttons to stop and play audio
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 
-stop.onclick = function() {
+stop.onclick = function () {
   source.stop(0);
-  play.removeAttribute('disabled');
-}
-
+  play.removeAttribute("disabled");
+};
 
 // dump script to pre element
 
@@ -106,8 +104,8 @@ pre.innerHTML = myScript.innerHTML;
 ### New promise-based syntax
 
 ```js
-ctx.decodeAudioData(compressedBuffer).then(function(decodedData) {
- // use the decoded data here
+ctx.decodeAudioData(compressedBuffer).then(function (decodedData) {
+  // use the decoded data here
 });
 ```
 
@@ -126,9 +124,7 @@ An {{domxref("AudioBuffer") }} representing the decoded PCM audio data.
 
 ## Specifications
 
-| Specification                                                                                                                                                                                                                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback', 'decodeAudioData()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

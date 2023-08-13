@@ -34,10 +34,10 @@ devtools 页面没有任何可见的 DOM，但可以包含使用\<script>标记�
 请注意，devtools 页面无法访问任何其他 WebExtension API，并且后台页面无法访问 devtools API。相反，devtools 页面和后台页面必须使用运行时消息传递 API 进行通信。这是一个例子：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
   <body>
     <script src="devtools.js"></script>
@@ -54,14 +54,16 @@ devtools 窗口中包含许多单独的工具-JavaScript 调试器，网络监�
 使用 devtools.panels.create（）API，可以在 devtools 窗口中创建自己的面板：
 
 ```js
-browser.devtools.panels.create(
-  "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(initialisePanel);
-  newPanel.onHidden.addListener(unInitialisePanel);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(initialisePanel);
+    newPanel.onHidden.addListener(unInitialisePanel);
+  });
 ```
 
 这需要三个必选参数：面板的标题，图标和内容。它返回一个 Promise，该 Promise 解析为代表新面板的 devtools.panels.ExtensionPanel 对象。
@@ -94,7 +96,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 window.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -104,7 +106,7 @@ window.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 
@@ -148,4 +150,4 @@ The following are not supported:
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use devtools panels:
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) use devtools panels:
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels) use devtools panels:

@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 
 你有时想将资源（如图片、HTML、CSS 或 JavaScript）与你的扩展应用合并打包，让网页能够访问它们。
 
-举个例子，[Beastify example extension](https://github.com/mdn/webextensions-examples/tree/master/beastify) 将用户选择的野兽图片来替换网页，这些图片与应用是经过合并打包的。该应用添加 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，其 `src` 指向图片，这样就使选中的图片可见了。网页要载入图片的话，这些图片就必须可经访问。
+举个例子，[Beastify example extension](https://github.com/mdn/webextensions-examples/tree/main/beastify) 将用户选择的野兽图片来替换网页，这些图片与应用是经过合并打包的。该应用添加 [`<img>`](/zh-CN/docs/Web/HTML/Element/img)，其 `src` 指向图片，这样就使选中的图片可见了。网页要载入图片的话，这些图片就必须可经访问。
 
 通过 `web_accessible_resources`，你列出资源，让它们可经网页访问。这些资源路径相对于 manifest.json 文件。
 

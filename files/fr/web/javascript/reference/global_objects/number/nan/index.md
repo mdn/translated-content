@@ -1,18 +1,11 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NaN
 ---
 
 {{JSRef}}
 
-La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais «&nbsp;*Not-A-Number*&nbsp;» qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
+La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais «&nbsp;_Not-A-Number_&nbsp;» qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
 
 {{EmbedInteractiveExample("pages/js/number-nan.html")}}
 

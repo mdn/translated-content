@@ -1,17 +1,8 @@
 ---
-title: 'Задание: DIY Django мини блог'
+title: "Задание: DIY Django мини блог"
 slug: Learn/Server-side/Django/django_assessment_blog
-tags:
-  - Аттестация
-  - Бэкенд
-  - Бэкенд программирование
-  - Django
-  - Изучение
-  - Начинающий
-  - блог
-  - скриптовый кодинг
-translation_of: Learn/Server-side/Django/django_assessment_blog
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 В этом задании вы будете оценивать знания Django, которые вы приобрели в [Django Web Framework (Python)](/ru/docs/Learn/Server-side/Django), чтобы создать очень простой блог.
@@ -270,10 +261,10 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 1. Создайте скелет проекта и веб-приложение для сайта (как описано в [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Django/skeleton_website)). Вы можете использовать «diyblog» для имени проекта и «blog» для имени приложения.
 2. Создавайте модели для записей в блогах, комментариев и любых других необходимых объектов.
 
-    - Каждый комментарий будет иметь только один блог, но блог может иметь много комментариев.
-    - Посты в блоге и комментарии должны быть отсортированы по дате поста.
-    - Не каждый пользователь обязательно будет автором блога, хотя любой пользователь может быть комментатором.
-    - Блог автора также должен включать информацию о себе.
+   - Каждый комментарий будет иметь только один блог, но блог может иметь много комментариев.
+   - Посты в блоге и комментарии должны быть отсортированы по дате поста.
+   - Не каждый пользователь обязательно будет автором блога, хотя любой пользователь может быть комментатором.
+   - Блог автора также должен включать информацию о себе.
 
 3. Запустите миграцию для новых моделей и создайте суперпользователя.
 4. Используйте админ панель, чтобы создать какой-нибудь пример блога и комментарии в блогах.
@@ -291,28 +282,28 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 2. Просмотр списка публикаций блога и блогеров, а также подробное представление для сообщений в блоге можно создать с помощью [generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views).
 3. Список постов в блоге конкретного автора может быть создан с помощью общего списка Blog list view и фильтрация для объекта блога, соответствующего указанному автору.
 
-    - Вам придётся реализовать `get_queryset(self)` для фильтрации (как и в нашем классе библиотеки `LoanedBooksAllListView`) и получить информацию об авторе из URL-адреса.
-    - Вам также необходимо передать имя автора на страницу в контексте. Чтобы сделать это в представлении на основе классов, вам необходимо реализовать `get_context_data()` (обсуждается ниже).
+   - Вам придётся реализовать `get_queryset(self)` для фильтрации (как и в нашем классе библиотеки `LoanedBooksAllListView`) и получить информацию об авторе из URL-адреса.
+   - Вам также необходимо передать имя автора на страницу в контексте. Чтобы сделать это в представлении на основе классов, вам необходимо реализовать `get_context_data()` (обсуждается ниже).
 
 4. Форма _добавления комментариев_ может быть создана с использованием функционального представления (и связанной модели и формы) или с использованием общего `CreateView`. Если вы используете `CreateView` (рекомендуется):
 
-    - Вам также нужно будет передать имя блога на страницу комментариев в контексте (реализовать `get_context_data()` как обсуждается ниже).
-    - Форма должна отображать только комментарий «описание» для записи пользователя (дата и связанная с ними запись в блоге не должны редактироваться). Поскольку они не будут в форме, ваш код должен будет установить автора комментария в `form_valid()` функцию, поэтому он может быть сохранён в модели ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). В этой же функции мы устанавливаем связанный блог. Возможная реализация показана ниже (`pk` это идентификатор блога, переданный из URL / URL конфигурации ).
+   - Вам также нужно будет передать имя блога на страницу комментариев в контексте (реализовать `get_context_data()` как обсуждается ниже).
+   - Форма должна отображать только комментарий «описание» для записи пользователя (дата и связанная с ними запись в блоге не должны редактироваться). Поскольку они не будут в форме, ваш код должен будет установить автора комментария в `form_valid()` функцию, поэтому он может быть сохранён в модели ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). В этой же функции мы устанавливаем связанный блог. Возможная реализация показана ниже (`pk` это идентификатор блога, переданный из URL / URL конфигурации ).
 
-      ```python
-          def form_valid(self, form):
-              """
-              Add author and associated blog to form data before setting it as valid (so it is saved to model)
-              """
-              #Add logged-in user as author of comment
-              form.instance.author = self.request.user
-              #Associate comment with blog based on passed id
-              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
-              # Call super-class form validation behaviour
-              return super(BlogCommentCreate, self).form_valid(form)
-      ```
+     ```python
+         def form_valid(self, form):
+             """
+             Add author and associated blog to form data before setting it as valid (so it is saved to model)
+             """
+             #Add logged-in user as author of comment
+             form.instance.author = self.request.user
+             #Associate comment with blog based on passed id
+             form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
+             # Call super-class form validation behaviour
+             return super(BlogCommentCreate, self).form_valid(form)
+     ```
 
-    - Для успешного перенаправления после проверки формы вам нужно будет указать URL-адрес; это должен быть оригинальный блог. Для этого вам нужно будет переопределить `get_success_url()` и «обратный» URL-адрес для исходного блога. Вы можете получить требуемый ID блога, используя `self.kwargs` атрибут, как показано в методе `form_valid()` выше.
+   - Для успешного перенаправления после проверки формы вам нужно будет указать URL-адрес; это должен быть оригинальный блог. Для этого вам нужно будет переопределить `get_success_url()` и «обратный» URL-адрес для исходного блога. Вы можете получить требуемый ID блога, используя `self.kwargs` атрибут, как показано в методе `form_valid()` выше.
 
 Мы кратко говорили о передаче контекста шаблону в представлении на основе классов в теме [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views). Для этого вам нужно переопределить `get_context_data()` (сначала получить существующий контекст, обновить его любыми дополнительными переменными, которые вы хотите передать шаблону, а затем вернуть обновлённый контекст). Например, фрагмент кода ниже показывает, как вы можете добавить объект blogger в контекст на основе его `BlogAuthor` id.
 

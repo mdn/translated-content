@@ -51,29 +51,34 @@ A propriedade `padding` pode ser utilizada usando um, dois, três ou todos os qu
 ## Exemplos
 
 ```css
- padding: 5%;                /* padding 5% em todos os lados */
+padding: 5%;
+/* padding 5% em todos os lados */
 ```
 
 ```css
- padding: 10px;              /* padding 10px em todos os lados */
+padding: 10px;
+/* padding 10px em todos os lados */
 ```
 
 ```css
- padding: 10px 20px;         /*  10px acima e abaixo  */
-                             /*  20px esquerda e direita  */
+padding: 10px 20px;
+/*  10px acima e abaixo  */
+/*  20px esquerda e direita  */
 ```
 
 ```css
- padding: 10px 3% 20px;      /*  10px acima          */
-                             /*  3% esquerda e direita */
-                             /*  20px abaixo       */
+padding: 10px 3% 20px;
+/*  10px acima          */
+/*  3% esquerda e direita */
+/*  20px abaixo       */
 ```
 
 ```css
- padding: 1em 3px 30px 5px;  /*  acima    1em  padding  */
-                             /*  direita  3px  padding  */
-                             /*  abaixo   30px padding  */
-                             /*  esquerda 5px  padding  */
+padding: 1em 3px 30px 5px;
+/*  acima    1em  padding  */
+/*  direita  3px  padding  */
+/*  abaixo   30px padding  */
+/*  esquerda 5px  padding  */
 ```
 
 border:outset; padding:5% 1em;
@@ -90,12 +95,12 @@ border:outset; padding:5% 1em;
 ### CSS
 
 ```css
-h4{
+h4 {
   background-color: green;
   padding: 50px 20px 20px 50px;
 }
 
-h3{
+h3 {
   background-color: blue;
   padding: 400px 50px 50px 400px;
 }
@@ -105,11 +110,11 @@ h3{
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Observações       |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding') }}             | {{ Spec2('CSS3 Box') }} | Sem alteração     |
-| {{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding') }} | {{ Spec2('CSS2.1') }}     | Sem alteração     |
-| {{ Specname('CSS1', '#padding', 'padding') }}                         | {{ Spec2('CSS1') }}         | Definição inicial |
+| Especificação                                                   | Status                  | Observações       |
+| --------------------------------------------------------------- | ----------------------- | ----------------- |
+| {{ SpecName('CSS3 Box', '#the-padding', 'padding') }}           | {{ Spec2('CSS3 Box') }} | Sem alteração     |
+| {{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding') }} | {{ Spec2('CSS2.1') }}   | Sem alteração     |
+| {{ Specname('CSS1', '#padding', 'padding') }}                   | {{ Spec2('CSS1') }}     | Definição inicial |
 
 ## Compatibilidade
 

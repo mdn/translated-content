@@ -1,5 +1,5 @@
 ---
-title: 'WebSocket: message イベント'
+title: "WebSocket: message イベント"
 slug: Web/API/WebSocket/message_event
 l10n:
   sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331

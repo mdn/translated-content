@@ -1,14 +1,8 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Общие сведения
@@ -59,8 +53,11 @@ Function.prototype.construct = function (aArgs) {
 > **Примечание:** метод {{jsxref("Object.create()")}}, использованный в этом примере, относительно новый. В качестве альтернативного способа можно рассмотреть возможность использования замыкания:
 >
 > ```js
-> Function.prototype.construct = function(aArgs) {
->   var fConstructor = this, fNewConstr = function() { fConstructor.apply(this, aArgs); };
+> Function.prototype.construct = function (aArgs) {
+>   var fConstructor = this,
+>     fNewConstr = function () {
+>       fConstructor.apply(this, aArgs);
+>     };
 >   fNewConstr.prototype = fConstructor.prototype;
 >   return new fNewConstr();
 > };
@@ -71,16 +68,16 @@ Function.prototype.construct = function (aArgs) {
 ```js
 function MyConstructor() {
   for (var nProp = 0; nProp < arguments.length; nProp++) {
-    this['property' + nProp] = arguments[nProp];
+    this["property" + nProp] = arguments[nProp];
   }
 }
 
-var myArray = [4, 'Привет, мир!', false];
+var myArray = [4, "Привет, мир!", false];
 var myInstance = MyConstructor.construct(myArray);
 
-alert(myInstance.property1);                // выведет 'Привет, мир!'
+alert(myInstance.property1); // выведет 'Привет, мир!'
 alert(myInstance instanceof MyConstructor); // выведет 'true'
-alert(myInstance.constructor);              // выведет 'MyConstructor'
+alert(myInstance.constructor); // выведет 'MyConstructor'
 ```
 
 > **Примечание:** этот неродной метод `Function.construct()` не будет работать с некоторыми родными конструкторами (вроде конструктора {{jsxref("Global_Objects/Date", "Date")}}, к примеру). В этих случаях вы можете использовать метод {{jsxref("Function.prototype.bind()")}} (например, представьте, что вы имеете следующий массив, который можно использовать с конструктором {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; в этом случае вы напишите что-то вроде: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — так или иначе, это не самый изящный способ и, вероятно, его не стоит использовать в рабочем окружении).
@@ -94,12 +91,15 @@ alert(myInstance.constructor);              // выведет 'MyConstructor'
 var numbers = [5, 6, 2, 3, 7];
 
 /* используем apply к Math.min/Math.max */
-var max = Math.max.apply(null, numbers); /* Это эквивалентно Math.max(numbers[0], ...)
+var max = Math.max.apply(
+  null,
+  numbers,
+); /* Это эквивалентно Math.max(numbers[0], ...)
                                             или Math.max(5, 6, ...) */
 var min = Math.min.apply(null, numbers);
 
 /* сравним с простым алгоритмом с циклом */
-max = -Infinity, min = +Infinity;
+(max = -Infinity), (min = +Infinity);
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -135,13 +135,13 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 ```js
 var originalfoo = someobject.foo;
-someobject.foo = function() {
+someobject.foo = function () {
   // Делаем что-то до вызова функции
   console.log(arguments);
   // Вызываем функцию так, как будто бы она была вызвана обычным образом:
   originalfoo.apply(this, arguments);
   // Делаем что-то после вызова функции.
-}
+};
 ```
 
 Этот метод особенно удобен, когда вам нужно отладить события, либо интерфейс с чем-то, что не имеет API, вроде различных событий `.on([event]...`, например, тех что используются в [Инспекторе инструментов разработчика](/ru/docs/Tools/Page_Inspector#Developer_API)).

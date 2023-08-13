@@ -5,7 +5,7 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-**`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 {{htmlattrxref("webkitdirectory", "input")}} 属性。
+**`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input#webkitdirectory) 属性。
 
 ## 语法
 
@@ -31,16 +31,20 @@ slug: Web/API/File/webkitRelativePath
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+document.getElementById("filepicker").addEventListener(
+  "change",
+  function (event) {
+    let output = document.getElementById("listing");
+    let files = event.target.files;
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+    for (let i = 0; i < files.length; i++) {
+      let item = document.createElement("li");
+      item.innerHTML = files[i].webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### 结果

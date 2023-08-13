@@ -1,8 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 Для того, чтобы объявить статический метод класса, необходимо использовать ключевое слово **static**.
@@ -26,10 +26,10 @@ static methodName() { ... }
 ```js
 class StaticMethodCall {
   static staticMethod() {
-    return 'Вызван статический метод';
+    return "Вызван статический метод";
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' из другого статического метода';
+    return this.staticMethod() + " из другого статического метода";
   }
 }
 StaticMethodCall.staticMethod();
@@ -54,7 +54,7 @@ class StaticMethodCall {
   }
 
   static staticMethod() {
-    return 'вызван статический метод.';
+    return "вызван статический метод.";
   }
 }
 ```
@@ -83,8 +83,8 @@ class BiggerTriple extends Triple {
   }
 }
 
-console.log(Triple.triple());        // 3
-console.log(Triple.triple(6));       // 18
+console.log(Triple.triple()); // 3
+console.log(Triple.triple(6)); // 18
 
 var tp = new Triple();
 

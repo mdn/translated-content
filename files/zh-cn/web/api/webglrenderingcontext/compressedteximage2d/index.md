@@ -150,15 +150,22 @@ None.
 ## Examples
 
 ```js
-var ext = (
-  gl.getExtension('WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
-);
+var ext =
+  gl.getExtension("WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("MOZ_WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc");
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGBA_S3TC_DXT5_EXT,
+  512,
+  512,
+  0,
+  textureData,
+);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 ```

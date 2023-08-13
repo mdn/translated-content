@@ -1,7 +1,6 @@
 ---
 title: 图片库
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: learn/JavaScript/Building_blocks/相片走廊
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -37,14 +36,12 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 该示例如下所示：
@@ -99,7 +96,7 @@ JavaScript 部分则需要实现：
 以下是实现上述 2、3 点所提功能的基本代码：
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -115,9 +112,9 @@ overlay.style.backgroundColor = xxx;
 1. 将你完成的内容放到在线、可分享的编辑器，如：[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
 2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) 中发贴寻求打分评估或帮助。你的贴子需要包含：
 
-    - 一个描述的标题，如：“Assessment wanted for Image gallery”。
-    - 你尝试的详细过程，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
-    - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
-    - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
+   - 一个描述的标题，如：“Assessment wanted for Image gallery”。
+   - 你尝试的详细过程，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
+   - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
+   - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

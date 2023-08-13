@@ -1,15 +1,6 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupGetter
 ---
 
 {{JSRef}} {{deprecated_header}}
@@ -19,7 +10,7 @@ La méthode **`__lookupGetter__`** renvoie la fonction liée comme accesseur d'u
 ## Syntaxe
 
 ```js
-obj.__lookupGetter__(sprop)
+obj.__lookupGetter__(sprop);
 ```
 
 ### Paramètres
@@ -42,15 +33,13 @@ Cette méthode ne doit plus être utilisée et il est possible de la remplacer d
 ```js
 var obj = {
   get toto() {
-    return Math.random() > 0.5 ? 'toto' : 'truc';
-  }
+    return Math.random() > 0.5 ? "toto" : "truc";
+  },
 };
 
-
 // Méthode non-standard et dépréciée
-obj.__lookupGetter__('toto');
+obj.__lookupGetter__("toto");
 // (function() { return Math.random() > 0.5 ? 'toto' : 'truc'; })
-
 
 // Méthode standard
 Object.getOwnPropertyDescriptor(obj, "toto").get;

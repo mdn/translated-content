@@ -1,12 +1,6 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - Entête de Réponse
-  - Entêtes HTTP
-  - HTTP
-  - Reference
-translation_of: Web/HTTP/Headers/Last-Modified
 ---
 
 {{HTTPSidebar}}

@@ -1,14 +1,8 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка
@@ -64,10 +58,10 @@ false                         // код ES6
 
 ## Спецификации
 
-| Спецификация                                                                                 | Статус                   | Комментарии                                              |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
+| Спецификация                                                           | Статус             | Комментарии                                              |
+| ---------------------------------------------------------------------- | ------------------ | -------------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}         | {{Spec2('ES5.1')}} | Изначальное определение. Реализована в JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ES6')}}     |                                                          |
+| {{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}} | {{Spec2('ES6')}}   |                                                          |
 
 ## Совместимость с браузерами
 

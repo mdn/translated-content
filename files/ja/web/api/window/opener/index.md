@@ -1,7 +1,6 @@
 ---
 title: window.opener
 slug: Web/API/Window/opener
-original_slug: Web/API/window.opener
 ---
 
 {{ApiRef}}

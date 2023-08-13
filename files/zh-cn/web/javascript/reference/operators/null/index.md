@@ -1,7 +1,6 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
-original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 
 {{jsSidebar("Objects")}}
@@ -23,12 +22,12 @@ null
 ```js
 // foo 不存在，它从来没有被定义过或者是初始化过：
 foo;
-"ReferenceError: foo is not defined"
+// ReferenceError: foo is not defined
 
 // foo 现在已经是知存在的，但是它没有类型或者是值：
 var foo = null;
 foo;
-null
+// null
 ```
 
 ### `null` 与 `undefined` 的不同点：
@@ -36,15 +35,15 @@ null
 当检测 `null` 或 `undefined` 时，注意[相等（==）与全等（===）两个操作符的区别](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) ，前者会执行类型转换：
 
 ```js
-typeof null        // "object" (因为一些以前的原因而不是'null')
-typeof undefined   // "undefined"
-null === undefined // false
-null  == undefined // true
-null === null // true
-null == null // true
-!null //true
-isNaN(1 + null) // false
-isNaN(1 + undefined) // true
+typeof null; // "object" (因为一些以前的原因而不是'null')
+typeof undefined; // "undefined"
+null === undefined; // false
+null == undefined; // true
+null === null; // true
+null == null; // true
+!null; //true
+isNaN(1 + null); // false
+isNaN(1 + undefined); // true
 ```
 
 ## 规范

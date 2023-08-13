@@ -105,15 +105,21 @@ API 使用一个或多个 [JavaScript objects](/zh-CN/docs/Learn/JavaScript/Obje
 - {{domxref("Coordinates")}}, 其中包含有关设备位置的大量有用数据，包括经纬度，高度，运动速度和运动方向等。
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
-  var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+navigator.geolocation.getCurrentPosition(function (position) {
+  var latlng = new google.maps.LatLng(
+    position.coords.latitude,
+    position.coords.longitude,
+  );
   var myOptions = {
     zoom: 8,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.TERRAIN,
-    disableDefaultUI: true
-  }
-  var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+    disableDefaultUI: true,
+  };
+  var map = new google.maps.Map(
+    document.querySelector("#map_canvas"),
+    myOptions,
+  );
 });
 ```
 
@@ -150,13 +156,18 @@ var myLatitude = position.coords.latitude;
 我们将 Geolocation API 与第三方 API（Google Maps API）相结合， — 我们正在使用它来绘制 Google 地图上由 `getCurrentPosition()`返回的位置。我们通过链接到页面上使这个 API 可用。 — 你会在 HTML 中找到这一行：
 
 ```html
-<script type="text/javascript" src="https://maps.google.com/maps/API/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<script
+  type="text/javascript"
+  src="https://maps.google.com/maps/API/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
 要使用该 API, 我们首先使用`google.maps.LatLng()`构造函数创建一个`LatLng`对象实例，该构造函数需要我们的地理定位 {{domxref("Coordinates.latitude")}} 和 {{domxref("Coordinates.longitude")}}值作为参数：
 
 ```js
-var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+var latlng = new google.maps.LatLng(
+  position.coords.latitude,
+  position.coords.longitude,
+);
 ```
 
 该对象实例被设置为 `myOptions`对象的`center`属性的值。然后我们通过调用`google.maps.Map()`构造函数创建一个对象实例来表示我们的地图，并传递它两个参数 — 一个参数是我们要渲染地图的 {{htmlelement("div")}} 元素的引用 (ID 为 `map_canvas`), 以及另一个参数是我们在上面定义的`myOptions`对象
@@ -166,8 +177,8 @@ var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true
-}
+  disableDefaultUI: true,
+};
 
 var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 ```
@@ -185,23 +196,23 @@ var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 文档对象模型 (DOM) API 有一个更简单的入口点 —它的功能往往被发现挂在 {{domxref("Document")}} 对象，或任何你想影响的 HTML 元素的实例，例如：
 
 ```js
-var em = document.createElement('em'); // create a new em element
-var para = document.querySelector('p'); // reference an existing p element
-em.textContent = 'Hello there!'; // give em some text content
+var em = document.createElement("em"); // create a new em element
+var para = document.querySelector("p"); // reference an existing p element
+em.textContent = "Hello there!"; // give em some text content
 para.appendChild(em); // embed em inside para
 ```
 
 其他 API 具有稍微复杂的入口点，通常涉及为要编写的 API 代码创建特定的上下文。例如，Canvas API 的上下文对象是通过获取要绘制的 {{htmlelement("canvas")}} 元素的引用来创建的，然后调用它的{{domxref("HTMLCanvasElement.getContext()")}}方法：
 
 ```js
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
 ```
 
 然后，我们想通过调用内容对象 (它是{{domxref("CanvasRenderingContext2D")}}的一个实例) 的属性和方法来实现我们想要对画布进行的任何操作，例如：
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -209,7 +220,7 @@ Ball.prototype.draw = function() {
 };
 ```
 
-> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
+> **备注：** 您可以在我们的[弹跳球演示中](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html)看到此代码的实际 [运行情况](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) （也可以参阅它 [现场运行](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)）。
 
 ### 它们使用事件来处理状态的变化
 
@@ -220,20 +231,21 @@ Ball.prototype.draw = function() {
 下面的代码提供了一个简单的例子来说明如何使用它：
 
 ```js
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
+request.open("GET", requestURL);
+request.responseType = "json";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
-> **备注：** 您可以在我们的[ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html)**示例中看到此代码** (或者 在线运行版本 [see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
+> **备注：** 您可以在我们的[ajax.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/ajax.html)**示例中看到此代码** (或者 在线运行版本 [see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
 
 前五行指定了我们要获取的资源的位置，使用`XMLHttpRequest()` 构造函数创建请求对象的新实例，打开 HTTP 的 `GET` 请求以取得指定资源，指定响应以 JSON 格式发送，然后发送请求。
 

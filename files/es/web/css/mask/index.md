@@ -1,7 +1,6 @@
 ---
-title: '-webkit-mask'
+title: "-webkit-mask"
 slug: Web/CSS/mask
-original_slug: Web/CSS/-webkit-mask
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -19,16 +18,19 @@ La propiedad `-webkit-mask` es una manera corta de establecer, en un único siti
 -webkit-mask: none;
 
 /* Valores de imágene */
--webkit-mask: url(mask.png);                       /* Imagen de pixel usado coo máscara */
--webkit-mask: url(masks.svg#star);                 /* Elemento dentro de un gráfico SVG usado como máscara */
--webkit-mask: linear-gradient(transparent, black); /* Gradiente usado como máscara */
+-webkit-mask: url(mask.png); /* Imagen de pixel usado coo máscara */
+-webkit-mask: url(masks.svg#star); /* Elemento dentro de un gráfico SVG usado como máscara */
+-webkit-mask: linear-gradient(
+  transparent,
+  black
+); /* Gradiente usado como máscara */
 
 /* Valores combinados */
--webkit-mask: url(masks.svg#star) 40px 20px;       /* Elemento dentro de un gráfico SVG usado como máscara y posicionado  40px desde la parte superior y 20px a la izquierda */
--webkit-mask: url(masks.svg#star) 0 0/50px 50px;   /* Elemento dentro de un gráfico SVG usado como máscara con una anchura y altura de 50px */
--webkit-mask: url(masks.svg#star) repeat-x;        /* Elemento dentro de un gráfico SVG usado como una máscara que se repite horizontalmente */
--webkit-mask: url(masks.svg#star) border;          /* Elemento dentro de un gráfico SVG usado como una máscara que sobrepasa la caja que rodea el borde */
--webkit-mask: url(masks.svg#star) text;            /* Elemento dentro de un gráfico SVG usado como una máscara que recorta el texto que contiene */
+-webkit-mask: url(masks.svg#star) 40px 20px; /* Elemento dentro de un gráfico SVG usado como máscara y posicionado  40px desde la parte superior y 20px a la izquierda */
+-webkit-mask: url(masks.svg#star) 0 0/50px 50px; /* Elemento dentro de un gráfico SVG usado como máscara con una anchura y altura de 50px */
+-webkit-mask: url(masks.svg#star) repeat-x; /* Elemento dentro de un gráfico SVG usado como una máscara que se repite horizontalmente */
+-webkit-mask: url(masks.svg#star) border; /* Elemento dentro de un gráfico SVG usado como una máscara que sobrepasa la caja que rodea el borde */
+-webkit-mask: url(masks.svg#star) text; /* Elemento dentro de un gráfico SVG usado como una máscara que recorta el texto que contiene */
 
 /* Valores globales */
 -webkit-mask: inherit;
@@ -59,7 +61,7 @@ La propiedad `-webkit-mask` es una manera corta de establecer, en un único siti
 
 ```css
 .example {
-  -webkit-mask: url('mask.png') no-repeat fixed 20px 20px padding padding;
+  -webkit-mask: url("mask.png") no-repeat fixed 20px 20px padding padding;
 }
 ```
 

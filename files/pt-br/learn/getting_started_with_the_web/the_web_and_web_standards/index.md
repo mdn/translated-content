@@ -1,7 +1,6 @@
 ---
 title: A web e seus padrões
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-original_slug: Aprender/Getting_started_with_the_web/A_web_e_seus_padrões
 ---
 
 {{learnsidebar}}
@@ -89,7 +88,7 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 
   <p>This is a paragraph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   Se adotássemos uma analogia com a construção de uma casa, o HTML seria como as fundações e paredes da casa, que lhe dão estrutura e a mantém unida.
@@ -97,7 +96,7 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 - Cascading Style Sheets ( **CSS** ) é uma linguagem baseada em regras usada para aplicar estilos ao seu HTML, por exemplo, definindo texto e cores de fundo, adicionando bordas, animando coisas ou fazendo o layout de uma página de uma determinada maneira. Como um exemplo simples, o código a seguir tornaria nosso parágrafo HTML em vermelho:
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -107,8 +106,8 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 - **JavaScript** é a linguagem de programação que usamos para adicionar interatividade aos sites, desde a troca de estilo dinâmico até a obtenção de atualizações do servidor, até gráficos 3D complexos. O seguinte JavaScript simples armazenará uma referência ao nosso parágrafo na memória e mudará o texto dentro dele:
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   Na analogia da casa, o JavaScript é como o fogão, a TV, o microondas ou o secador de cabelo - as coisas que fornecem funcionalidade útil à sua casa

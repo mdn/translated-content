@@ -1,12 +1,6 @@
 ---
 title: Concepts relatifs au viewport
 slug: Web/CSS/Viewport_concepts
-tags:
-  - CSS
-  - Guide
-  - viewport
-translation_of: Web/CSS/Viewport_concepts
-original_slug: Web/CSS/Concepts_viewport
 ---
 
 {{CSSRef}}
@@ -31,15 +25,15 @@ Pour résumer, la zone d'affichage est la zone du document actuellement visible 
 La largeur de la zone d'affichage n'est pas toujours la largeur de la fenêtre. Si vous accédez à la largeur et à la hauteur de la fenêtre et à celles du document avec Chrome ou Firefox, vous pourrez obtenir un résultat comme celui-ci :
 
 ```js
-document.documentElement.clientWidth /* 1200 */
-window.innerWidth /* 1200 */
-window.outerWidth /* 1200 */
+document.documentElement.clientWidth; /* 1200 */
+window.innerWidth; /* 1200 */
+window.outerWidth; /* 1200 */
 ```
 
 ```js
-document.documentElement.clientHeight /* 800 */
-window.innerHeight /* 800 */
-window.outerHeight /* 900 */
+document.documentElement.clientHeight; /* 800 */
+window.innerHeight; /* 800 */
+window.outerHeight; /* 900 */
 ```
 
 Il existe plusieurs propriétés du DOM qui permettent d'obtenir la taille de la zone d'affichage et certaines dimensions associées :
@@ -55,15 +49,15 @@ La zone contenu entre `innerHeight` et `innerWidth` correspond à **la zone d'af
 Lorsqu'on zoome, FIrefox et Chrome renvoient une nouvelle taille, en pixels CSS, pour `innerWidth` et `clientWidth`. Les valeurs renvoyées pour `outerWidth` et `outerHeight` dépendent du navigateur : Firefox rapporte la nouvelle valeur en pixels CSS et Chrome renvoie la longueur exprimée avec la taille par défaut d'un pixel. Lorsqu'on a zoomé, on pourra obtenir :
 
 ```js
-document.documentElement.clientWidth /* 800 */
-window.innerWidth /* 800 */
-window.outerWidth /* 800 dans Firefox, 1200 dans Chrome */
+document.documentElement.clientWidth; /* 800 */
+window.innerWidth; /* 800 */
+window.outerWidth; /* 800 dans Firefox, 1200 dans Chrome */
 ```
 
 ```js
-document.documentElement.clientHeight /* 533 */
-window.innerHeight /* 533 */
-window.outerHeight /* 596 dans Firefox, 900 dans Chrome */
+document.documentElement.clientHeight; /* 533 */
+window.innerHeight; /* 533 */
+window.outerHeight; /* 596 dans Firefox, 900 dans Chrome */
 ```
 
 La zone d'affichage mesurait initialement 1200 x 800 pixels. Après le zoom, la zone d'affichage mesure 800 x 533 pixels. C'est la zone d'affichage pour la disposition. Avec la feuille de style suivante, les hauts et pieds de page seront placés en haut et en bas de _la zone d'affichage pour la disposition_.
@@ -152,14 +146,13 @@ L'API [Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API) fournit des outils
 Il existe une grande variété de tailles et de proportions pour les appareils mobiles. La zone d'affichage d'un navigateur mobile est la zone de la fenêtre sur laquelle le contenu web peut être consulté et cette zone n'a pas nécessairement la même taille que la page affichée. Les navigateurs mobiles affichent les pages sur une zone d'affichage virtuelle (mesurant généralement 960px) plus large que l'écran puis réduisent le résultat afin que l'utilisateur puisse voir l'ensemle du document. L'utilisateur peut alors se déplacer ou zoomer au doigt pour accéder aux différentes zones de la page. Ainsi, si un appareil mobile a un écran large de 320px, un site web pourra être affiché selon une zone d'affichage virtuelle sur 960px puis réduit afin de pouvoir s'inscrire dans l'espace large de 320px. Le résultat ainsi obtenu risque peu d'être lisible. Pour indiquer à un navigateur mobile d'utiliser la largeur de la zone d'affichage réelle plutôt que la largeur virtuelle de 960px, on pourra placer la balise `<meta>` suivante :
 
 ```html
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 La propriété `width` contrôle la taille de la zone d'affichage et on l'utilisera généralement avec `device-width` qui correspond à la largeur de l'écran, exprimée en pixels CSS, avec un zoom de 100%. Il est possible d'utiliser d'autres propriétés comme `maximum-scale`, `minimum-scale` et `user-scalable` afin de contrôler si l'utilisateur peut zoomer/dézoomer sur la page mais les valeurs par défaut restent les meilleures en termes d'accessibilité et d'ergonomie et ne seront pas plus abordées ici par souci de concision.
 
 ## Voir aussi
 
-- [La règle @ `@viewport`](/fr/docs/Web/CSS/@viewport)
 - [L'API Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API)
 - L'élément {{HTMLElement("meta")}} et notamment `<meta name="viewport">`
 - [L'utilisation de la balise méta `viewport` afin de contrôler la disposition sur les navigateurs mobiles](/fr/docs/Mozilla/Mobile/Balise_meta_viewport)

@@ -1,7 +1,6 @@
 ---
 title: Selectores de hermanos adyacentes
 slug: Web/CSS/Adjacent_sibling_combinator
-original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
 
 {{CSSRef("Selectors")}}
@@ -45,8 +44,8 @@ img + span.caption {
 que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
 
 ```html
-<img src="photo1.jpg"><span class="caption">The first photo</span>
-<img src="photo2.jpg"><span class="caption">The second photo</span>
+<img src="photo1.jpg" /><span class="caption">The first photo</span>
+<img src="photo2.jpg" /><span class="caption">The second photo</span>
 ```
 
 ## Especificaciones

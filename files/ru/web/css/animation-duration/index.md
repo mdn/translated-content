@@ -1,8 +1,8 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-translation_of: Web/CSS/animation-duration
 ---
+
 {{CSSRef}} {{ SeeCompatTable() }}
 
 ## Описание

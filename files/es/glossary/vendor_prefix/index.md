@@ -46,4 +46,4 @@ Los prefijos para propiedades y métodos son minúsculas:
 
 - [Vendor prefix](https://es.wikipedia.org/wiki/CSS_hack#Browser_prefixes) on Wikipedia
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/es/docs/Glossary")}}

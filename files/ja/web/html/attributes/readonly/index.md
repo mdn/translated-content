@@ -1,5 +1,5 @@
 ---
-title: 'HTML 属性: readonly'
+title: "HTML 属性: readonly"
 slug: Web/HTML/Attributes/readonly
 ---
 

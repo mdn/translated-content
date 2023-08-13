@@ -1,7 +1,6 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
 
 {{jsSidebar("Statements")}}Директива **`let`** объявляет переменную с блочной областью видимости с возможностью инициализировать её значением.
@@ -33,19 +32,19 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 function varTest() {
   var x = 1;
   if (true) {
-    var x = 2;  // та же переменная!
-    console.log(x);  // 2
+    var x = 2; // та же переменная!
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   if (true) {
-    let x = 2;  // другая переменная
-    console.log(x);  // 2
+    let x = 2; // другая переменная
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
@@ -57,11 +56,11 @@ function letTest() {
 var list = document.getElementById("list");
 
 for (let i = 1; i <= 5; i++) {
-  let item = document.createElement('li');
-  item.appendChild(document.createTextNode('Item ' + i));
+  let item = document.createElement("li");
+  item.appendChild(document.createTextNode("Item " + i));
 
-  item.onclick = function(ev) {
-    console.log('Item ' + i + ' is clicked.');
+  item.onclick = function (ev) {
+    console.log("Item " + i + " is clicked.");
   };
   list.appendChild(item);
 }
@@ -73,11 +72,11 @@ for (var i = 1; i <= 5; i++) {
   var item = document.createElement("li");
   item.appendChild(document.createTextNode("Item " + i));
 
-    (function(i){
-        item.onclick = function(ev) {
-            console.log('Item ' + i + ' is clicked.');
-        };
-    })(i);
+  (function (i) {
+    item.onclick = function (ev) {
+      console.log("Item " + i + " is clicked.");
+    };
+  })(i);
   list.appendChild(item);
 }
 ```
@@ -87,8 +86,8 @@ for (var i = 1; i <= 5; i++) {
 На верхнем уровне скриптов и функций `let, в отличии от var, не создаёт свойства на глобальном объекте`. Например:
 
 ```js
-var x = 'global_x';
-let y = 'global_y';
+var x = "global_x";
+let y = "global_y";
 console.log(this.x); // 'global_x'
 console.log(this.y); // undefined
 ```
@@ -103,21 +102,20 @@ console.log(this.y); // undefined
 var SomeConstructor;
 
 {
-    let privateScope = {};
+  let privateScope = {};
 
-    SomeConstructor = function SomeConstructor() {
-        this.someProperty = 'foo';
-        privateScope.hiddenProperty = 'bar';
-    }
+  SomeConstructor = function SomeConstructor() {
+    this.someProperty = "foo";
+    privateScope.hiddenProperty = "bar";
+  };
 
-    SomeConstructor.prototype.showPublic = function() {
-        console.log(this.someProperty); // foo
-    }
+  SomeConstructor.prototype.showPublic = function () {
+    console.log(this.someProperty); // foo
+  };
 
-    SomeConstructor.prototype.showPrivate = function() {
-        console.log(privateScope.hiddenProperty); // bar
-    }
-
+  SomeConstructor.prototype.showPrivate = function () {
+    console.log(privateScope.hiddenProperty); // bar
+  };
 }
 
 var myInstance = new SomeConstructor();
@@ -141,7 +139,7 @@ if (x) {
 }
 ```
 
-В стандарте ECMAScript 2015 переменные, объявленные директивой let, переносятся в начало блока. Но если вы сошлётесь в блоке на переменную, до того как она объявлена директивой let, то это приведёт к выбросу исключения [`ReferenceError`](/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError), потому что переменная находится во "временной мёртвой зоне" с начала блока и до места её объявления. (В отличии от переменной, объявленной через `var`, которая просто будет содержать значение `undefined`)
+В стандарте ECMAScript 2015 переменные, объявленные директивой let, переносятся в начало блока. Но если вы сошлётесь в блоке на переменную, до того как она объявлена директивой let, то это приведёт к выбросу исключения [`ReferenceError`](/ru/docs/JavaScript/Reference/Global_Objects/ReferenceError), потому что переменная находится во "временной мёртвой зоне" с начала блока и до места её объявления. (В отличии от переменной, объявленной через `var`, которая просто будет содержать значение `undefined`)
 
 ```js
 function do_something() {
@@ -152,7 +150,7 @@ function do_something() {
 }
 ```
 
-Вы можете столкнуться с ошибкой в операторах блока [`switch`](/en-US/docs/JavaScript/Reference/Statements/switch), так как он имеет только один подблок.
+Вы можете столкнуться с ошибкой в операторах блока [`switch`](/ru/docs/JavaScript/Reference/Statements/switch), так как он имеет только один подблок.
 
 ```js
 switch (x) {
@@ -171,8 +169,8 @@ switch (x) {
 Вы можете использовать ключевое слово `let` для привязки переменных к локальной области видимости цикла `for`. Разница с использованием `var` в заголовке цикла `for`, заключается в том, что переменные объявленные `var`, будут видны во всей функции, в которой находится этот цикл.
 
 ```js
-var i=0;
-for ( let i=i ; i < 10 ; i++ ) {
+var i = 0;
+for (let i = i; i < 10; i++) {
   console.log(i);
 }
 ```
@@ -180,7 +178,7 @@ for ( let i=i ; i < 10 ; i++ ) {
 ### Правила области видимости
 
 ```js
-for (let expr1; expr2; expr3) statement
+for (let expr1; expr2; expr3) statement;
 ```
 
 В этом примере _expr2_, *expr3, statement *заключены в неявный блок, который содержит блок локальных переменных, объявленных конструкцией `let expr1`. Пример приведён выше.
@@ -199,8 +197,8 @@ if (a === 5) {
   let a = 4; // The scope is inside the if-block
   var b = 1; // The scope is inside the function
 
-  console.log(a);  // 4
-  console.log(b);  // 1
+  console.log(a); // 4
+  console.log(b); // 1
 }
 
 console.log(a); // 5
@@ -212,7 +210,7 @@ console.log(b); // 1
 Вы можете использовать ключевое слово `let` для привязки переменных к локальной области видимости цикла `for`, вместо того что бы использовать глобальные переменные (объявленные с помощью `var`).
 
 ```js
-for (let i = 0; i<10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i); // 0, 1, 2, 3, 4 ... 9
 }
 

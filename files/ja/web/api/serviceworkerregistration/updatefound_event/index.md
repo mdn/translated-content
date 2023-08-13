@@ -1,7 +1,8 @@
 ---
-title: 'ServiceWorkerRegistration: updatefound イベント'
+title: "ServiceWorkerRegistration: updatefound イベント"
 slug: Web/API/ServiceWorkerRegistration/updatefound_event
-original_slug: Web/API/ServiceWorkerRegistration/onupdatefound
+l10n:
+  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
 {{APIRef("Service Workers API")}}
@@ -13,9 +14,9 @@ original_slug: Web/API/ServiceWorkerRegistration/onupdatefound
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用したり、イベントハンドラープロパティに設定したりしてください。
 
 ```js
-addEventListener('updatefound', event => { });
+addEventListener("updatefound", (event) => {});
 
-onupdatefound = event => { };
+onupdatefound = (event) => {};
 ```
 
 ## イベント型
@@ -27,9 +28,9 @@ onupdatefound = event => { };
 ```js
 const registration = await navigator.serviceWorker.getRegistration();
 if (registration) {
-    registration.addEventListener('updatefound', () => {
-        console.log('サービスワーカーの更新版が見つかりました。');
-    });
+  registration.addEventListener("updatefound", () => {
+    console.log('サービスワーカーの更新版が見つかりました。');
+  });
 }
 ```
 

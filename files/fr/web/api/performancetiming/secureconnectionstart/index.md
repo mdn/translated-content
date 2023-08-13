@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.secureConnectionStart
 slug: Web/API/PerformanceTiming/secureConnectionStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - secureConnectionStart
-translation_of: Web/API/PerformanceTiming/secureConnectionStart
 ---
 
 {{APIRef("Navigation Timing")}}

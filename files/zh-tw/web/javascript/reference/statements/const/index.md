@@ -14,7 +14,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : 常數的名稱，可以是任何合法的 {{Glossary("identifier")}}。
 - `valueN`
-  - : 常數的值，可以是任何合法的 [expression](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions), 包括 function expression。
+  - : 常數的值，可以是任何合法的 expression，包括 function expression。
 
 ## 描述
 

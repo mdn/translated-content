@@ -50,15 +50,14 @@ x = Math.round(-20.51);
 // Retorna 1 (!)
 // Note o erro de arredondamento por causa da inacurácia de aritmética de ponto flutuante
 // Compare o exemplo abaixo com Math.round(1.005, -2)
-x = Math.round(1.005*100)/100;
+x = Math.round(1.005 * 100) / 100;
 ```
 
-### Exemplo: Arredondamento decimal.
+### Exemplo: Arredondamento decimal
 
 ```js
 // Closure
-(function(){
-
+(function () {
   /**
    * Ajuste decimal de um número.
    *
@@ -69,42 +68,41 @@ x = Math.round(1.005*100)/100;
    */
   function decimalAdjust(type, value, exp) {
     // Se exp é indefinido ou zero...
-    if (typeof exp === 'undefined' || +exp === 0) {
+    if (typeof exp === "undefined" || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
     // Se o valor não é um número ou o exp não é inteiro...
-    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
       return NaN;
     }
     // Transformando para string
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    value = value.toString().split("e");
+    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
     // Transformando de volta
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    value = value.toString().split("e");
+    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
   }
 
   // Arredondamento decimal
   if (!Math.round) {
-    Math.round = function(value, exp) {
-      return decimalAdjust('round', value, exp);
+    Math.round = function (value, exp) {
+      return decimalAdjust("round", value, exp);
     };
   }
   // Decimal arredondado para baixo
   if (!Math.floor) {
-    Math.floor = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
+    Math.floor = function (value, exp) {
+      return decimalAdjust("floor", value, exp);
     };
   }
   // Decimal arredondado para cima
   if (!Math.ceil) {
-    Math.ceil = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
+    Math.ceil = function (value, exp) {
+      return decimalAdjust("ceil", value, exp);
     };
   }
-
 })();
 
 // Round (arredondamento)
@@ -149,11 +147,11 @@ myNamespace.round(1234.5678, -1); // 1230
 
 ## Especificações
 
-| Especificação                                                            | Status                   | Comentário         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| ECMAScript 1ª Edição. Implementado em JavaScript 1.0.                    | Padrão                   | Definição inicial. |
+| Especificação                                         | Status             | Comentário         |
+| ----------------------------------------------------- | ------------------ | ------------------ |
+| ECMAScript 1ª Edição. Implementado em JavaScript 1.0. | Padrão             | Definição inicial. |
 | {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}     | {{Spec2('ES6')}}     |                    |
+| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}  | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

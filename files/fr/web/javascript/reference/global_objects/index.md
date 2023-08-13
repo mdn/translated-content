@@ -1,12 +1,6 @@
 ---
 title: Objets globaux
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - Aperçu
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
-original_slug: Web/JavaScript/Reference/Objets_globaux
 ---
 
 {{jsSidebar("Objects")}}
@@ -17,7 +11,7 @@ Le terme «&nbsp;objets globaux&nbsp;» (ou objets natifs standards) ne doit pas
 
 > **Note :** En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), la portée globale représentée par `this` sera {{jsxref("undefined")}}.
 
-Les autres objets de la portée globale sont [créés par les scripts utilisateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Cr.C3.A9er_de_nouveaux_objets) ou fournis par l'application hôte dans laquelle s'exécute JavaScript. Les objets mis à disposition par les navigateurs web sont documentés dans la [référence API](/fr/docs/Web/API). Pour plus d'informations sur la distinction entre le [DOM](/fr/docs/Web/API/R%C3%A9f%C3%A9rence_du_DOM_Gecko) et JavaScript, voir [l'aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+Les autres objets de la portée globale sont [créés par les scripts utilisateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Cr.C3.A9er_de_nouveaux_objets) ou fournis par l'application hôte dans laquelle s'exécute JavaScript. Les objets mis à disposition par les navigateurs web sont documentés dans la [référence API](/fr/docs/Web/API). Pour plus d'informations sur la distinction entre le [DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko) et JavaScript, voir [l'aperçu des technologies JavaScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ## Objets globaux standards (par catégorie)
 

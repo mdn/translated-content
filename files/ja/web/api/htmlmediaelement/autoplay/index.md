@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.autoplay`** プロパティは、 HTML の {{htmlattrxref("autoplay", "video")}} 属性を反映しています。これは、メディアが中断なく再生できるようになった時点で自動的に再生を開始するかどうかを示します。
+**`HTMLMediaElement.autoplay`** プロパティは、 HTML の [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性を反映しています。これは、メディアが中断なく再生できるようになった時点で自動的に再生を開始するかどうかを示します。
 
 ソースが {{domxref("MediaStream")}} で `autoplay` プロパティが `true` のメディア要素は、アクティブになると（つまり、{{domxref("MediaStream.active")}} が `true` になると）再生を開始します。
 

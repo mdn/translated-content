@@ -46,26 +46,36 @@ slug: Web/CSS/Specificity
 1. 更好地利用 CSS 级联属性
 2. 使用更具体的规则。在您选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
-    无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
+   无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
 
 3. 对于（2）的一种特殊情况，当您无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
-    ```css
-    #myId#myId span { color: yellow; }
-    .myClass.myClass span { color: orange; }
-    ```
+   ```css
+   #myId#myId span {
+     color: yellow;
+   }
+   .myClass.myClass span {
+     color: orange;
+   }
+   ```
 
 #### 什么的情况下可以使用 `!important`：
 
@@ -105,20 +115,28 @@ p.awesome {
 
 #### 怎样覆盖 `!important`
 
-A) 很简单，只需再添加一条 带 `!important` 的 CSS 规则，再给这个给选择器更高的优先级（添加一个标签，ID 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则比胜）。
+A) 很简单，只需再添加一条 带 `!important` 的 CSS 规则，再给这个给选择器更高的优先级（添加一个标签，ID 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则必胜）。
 
 一些拥有更高优先级的例子：
 
 ```css
-   table td { height: 50px !important; }
-.myTable td { height: 50px !important; }
-#myTable td { height: 50px !important; }
+table td {
+  height: 50px !important;
+}
+.myTable td {
+  height: 50px !important;
+}
+#myTable td {
+  height: 50px !important;
+}
 ```
 
 B) 或者使用相同的选择器，但是置于已有的样式之后：
 
 ```css
-td { height: 50px !important; }
+td {
+  height: 50px !important;
+}
 ```
 
 C) 或干脆改写原来的规则，以避免使用 `!important`。
@@ -208,8 +226,14 @@ div p {
 将其应用于以下的 HTML 时：
 
 ```html hidden
-<div id=no-where-support>
-⚠️ Your browser doesn't support the <code><a href="https://developer.mozilla.org/docs/Web/CSS/:where">:where()</a></code> pseudo-class.
+<div id="no-where-support">
+  ⚠️ Your browser doesn't support the
+  <code
+    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where"
+      >:where()</a
+    ></code
+  >
+  pseudo-class.
 </div>
 ```
 
@@ -327,10 +351,10 @@ h1 {
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

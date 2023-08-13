@@ -1,19 +1,6 @@
 ---
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
-tags:
-  - API
-  - Reference
-  - WebExtensions
-  - getManifest
-  - runtime
-  - Веб-расширения
-  - Дополнения
-  - Нестандартный
-  - Расширения
-  - Ссылка
-  - метод
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
 
 {{AddonSidebar()}}Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
@@ -21,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ## Синтаксис
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### Параметры

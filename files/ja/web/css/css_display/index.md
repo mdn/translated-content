@@ -1,6 +1,6 @@
 ---
 title: CSS 表示方法
-slug: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 ---
 
 {{CSSRef}}

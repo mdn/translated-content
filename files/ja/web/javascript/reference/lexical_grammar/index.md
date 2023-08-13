@@ -301,7 +301,7 @@ null
 
 ### 論理値リテラル
 
-詳細については[論理型](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)をご覧ください。
+詳細については[論理型](/ja/docs/Web/JavaScript/Data_structures#論理型)をご覧ください。
 
 ```js
 true
@@ -310,7 +310,7 @@ false
 
 ### 数値リテラル
 
-[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number) (Number) および[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint) (BigInt) が数値リテラルを使用します。
+[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型) (Number) および[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型) (BigInt) が数値リテラルを使用します。
 
 #### 10 進数
 
@@ -370,7 +370,7 @@ const m = 0o644; // 420
 
 #### 長整数リテラル
 
-[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
+[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
 
 ```js
 123456789123456789n     // 123456789123456789
@@ -392,7 +392,7 @@ const m = 0o644; // 420
 0o755n
 ```
 
-`BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures#長整数型_bigint)をご覧ください。
+`BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures#長整数型)をご覧ください。
 
 #### 数値の区切り文字
 
@@ -454,7 +454,7 @@ const o = { a: a, b: b, c: c };
 
 ### 文字列リテラル
 
-[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型_string)リテラルは、単一引用符または二重引用符に囲まれた零個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。
+[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)リテラルは、単一引用符または二重引用符に囲まれた零個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。
 
 - U+005C \ (バックスラッシュ)
 - U+000D \<CR>,
@@ -665,7 +665,7 @@ class A {
 - [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
 - [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- [論理型](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)
-- [数値型](/ja/docs/Web/JavaScript/Data_structures#数値型_number)
-- [文字列型](/ja/docs/Web/JavaScript/Data_structures#文字列型_string)
+- [論理型](/ja/docs/Web/JavaScript/Data_structures#論理型)
+- [数値型](/ja/docs/Web/JavaScript/Data_structures#数値型)
+- [文字列型](/ja/docs/Web/JavaScript/Data_structures#文字列型)
 - {{jsxref("RegExp")}}

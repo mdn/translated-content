@@ -1,5 +1,5 @@
 ---
-title: 'Window: hashchange event'
+title: "Window: hashchange event"
 slug: Web/API/Window/hashchange_event
 ---
 
@@ -35,16 +35,20 @@ slug: Web/API/Window/hashchange_event
 你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `hashchange` 事件：
 
 ```js
-window.addEventListener('hashchange', function() {
-  console.log('The hash has changed!')
-}, false);
+window.addEventListener(
+  "hashchange",
+  function () {
+    console.log("The hash has changed!");
+  },
+  false,
+);
 ```
 
 或使用 `onhashchange` 事件处理程序属性：
 
 ```js
 function locationHashChanged() {
-  if (location.hash === '#cool-feature') {
+  if (location.hash === "#cool-feature") {
     console.log("You're visiting a cool feature!");
   }
 }

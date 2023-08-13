@@ -7,7 +7,7 @@ slug: Web/JavaScript/Data_structures
 
 编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。
 
-[JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_Overview)提供了对常见数据类型的类似总结，但是和其他的语言有着更多的比较。
+[JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)提供了对常见数据类型的类似总结，但是和其他的语言有着更多的比较。
 
 ## 动态和弱类型
 
@@ -72,7 +72,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 {{jsxref("Boolean")}} 类型表示一个逻辑实体并且包括两个值：`true` 和 `false`。
 
-布尔值通常用于条件运算，包括[三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)、[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等。
+布尔值通常用于条件运算，包括[三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)、[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 等。
 
 ### Number 类型
 
@@ -96,9 +96,9 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}}（“**N**ot **a** **N**umber”）是一个特殊种类的数值，当算术运算的结果不表示数值时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
 
-虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[按位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)。当应用按位运算符时，number 首先转换为 32 位整数。
+虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)。当应用位运算符时，number 首先转换为 32 位整数。
 
-> **备注：** 尽管按位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
+> **备注：** 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
 
 可能有必要在非常受限的环境中使用此类技术，例如在试图应对本地存储的限制时，或在极端情况下（例如当网络上的每个位计数时）。只有当这项技术是优化尺寸的最后一项措施时，才应考虑这项技术。
 
@@ -119,7 +119,7 @@ x + 1n === x + 2n; // false because 9007199254740992n and 9007199254740993n are 
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because both are 9007199254740992
 ```
 
-你可以使用大多数运算符为 BigInt工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
+你可以使用大多数运算符为 BigInt 工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
 
 BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示分数，但是可以表示更准确的大整数。这两种类型都包含各自的类型，并且它们不能相互替代。如果 BigInt 值在算术表达式中与正则数值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 
@@ -212,7 +212,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 通常，可以通过直接在对象上设置属性或使用 `data-*` 属性，将绑定数据到 DOM 节点。然而缺陷是在任何的脚本内，数据都运行在同样的上下文中。`Map` 和 `WeakMap` 能够方便地将数据*私密*地绑定到一个对象。
 
-`WeakMap` 和 `WeakSet` 仅允许对象键，即使这些键留在集合中，也允许这些键被垃圾回收。它们专门用于[内存使用优化](/zh-CN/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management)。
+`WeakMap` 和 `WeakSet` 仅允许对象键，即使这些键留在集合中，也允许这些键被垃圾回收。它们专门用于[内存使用优化](/zh-CN/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management)。
 
 ### 结构化数据：JSON
 
@@ -224,12 +224,11 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 
 ## 强制类型转换
 
-如上所述，JavaScript 是一个[弱类型](#动态和弱类型)语言。这意味值你可以经常使用一种类型的值，而另一种类型是预期的，并且该语言将为你转换它为正确的类型。为此，JavaScript 定义了少数强制规则。
+如上所述，JavaScript 是一个[弱类型](#动态和弱类型)语言。这意味着你经常可以使用与预期类型不同类型的值，并且该语言将为你转换它为正确的类型。为此，JavaScript 定义了少数强制规则。
 
 ### 强制原始值转换
 
-在期望原始值的地方使用原始强制过程，但对实际类型应该是什么没有强烈的偏好。
-在期望原始值的地方使用[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)的过程，但对实际的类型并不是什么特殊的要求。这通常是当 [字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型) 相同可以接受的时候。
+[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)用于得到一个期望的原始值，但对实际类型应该是什么并没有强烈的偏好。通常情况下可以接受[字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型)。例如：
 
 - [`Date()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 构造函数，当它收到一个不是 `Date` 实例的参数时——字符串表示日期字符串，而数值表示时间戳。
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。
@@ -245,7 +244,7 @@ console.log({} + []); // "[object Object]"
 
 `{}` 和 `[]` 都没有 `[@@toPrimitive]()` 方法。`{}` 和 `[]` 都从 {{jsxref("Object.prototype.valueOf")}} 继承 `valueOf()`，其返回对象自身。因为返回值是一个对象，因此它被忽略。因此，调用 `toString()` 方法。[`{}.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 返回 `"[object Object]"`，而 [`[].toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 返回 `""`，因此这个结果是它们的串联：`"[object Object]"`。
 
-在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与强制 number 类型类似，因为优先调用 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)) 将 `"default"` hint 视为 `"string"`，而 [`Symbol.prototype[@@toPrimitive]()`]((/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)) 忽略 hint 并始终返回一个 symbol。
+在强制转换为任意的原始类型时，`[@@toPrimitive]()` 方法总是优先调用。原始值的强制转换的行为通常与强制 number 类型类似，因为优先调用 `valueOf()`；然而，有着自定义 `[@@toPrimitive]()` 方法的对象可以选择返回任意的原始值。{{jsxref("Date")}} 和 {{jsxref("Symbol")}} 对象是唯一重写 `[@@toPrimitive]()` 方法的对象。[`Date.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) 将 `"default"` hint 视为 `"string"`，而 [`Symbol.prototype[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) 忽略 hint 并始终返回一个 symbol。
 
 ### 强制数字类型转换
 

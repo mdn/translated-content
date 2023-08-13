@@ -3,6 +3,8 @@ title: Class（类）
 slug: Glossary/Class
 ---
 
+{{GlossarySidebar}}
+
 在面向对象编程中（{{glossary("OOP","object-oriented programming")}}）, 一个 _类_ 定义了一个对象（{{glossary("object","object's")}}）的特征。类是定义对象属性（{{glossary("property","properties")}}）和方法（{{glossary("method","methods")}}）的模板，是用来绘制具体对象实例的“蓝图”.
 
 ## 了解更多

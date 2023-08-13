@@ -22,7 +22,7 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} 标识了是否在 frame 之间创建边框。
 - {{domxref("HTMLIFrameElement.height")}}
-  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("height", "iframe")}} HTML 属性，标识了该 frame 的高度。
+  - : 一个 {{domxref("DOMString")}} 反映着 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#height) HTML 属性，标识了该 frame 的高度。
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} 包含着该 frame 的详细描述的 URI。
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
@@ -30,19 +30,19 @@ _继承了来自父类的属性，{{domxref("HTMLElement")}}。_
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} ，该 frame 的外边距宽度。
 - {{domxref("HTMLIFrameElement.name")}}
-  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("name", "iframe")}} HTML 属性，包含着用来引用该 frame 的名字。
+  - : 一个 {{domxref("DOMString")}} 反映着 [`name`](/zh-CN/docs/Web/HTML/Element/iframe#name) HTML 属性，包含着用来引用该 frame 的名字。
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
-  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("referrerPolicy", "iframe")}} HTML 属性，标识了获取关联资源时要使用哪个 referrer。
+  - : 一个 {{domxref("DOMString")}} 反映着 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) HTML 属性，标识了获取关联资源时要使用哪个 referrer。
 - {{domxref("HTMLIFrameElement.sandbox")}}
-  - : 一个 {{domxref("DOMSettableTokenList")}} 反映着 {{htmlattrxref("sandbox", "iframe")}} HTML 属性，指示着对嵌套内容额外的限制。
+  - : 一个 {{domxref("DOMSettableTokenList")}} 反映着 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) HTML 属性，指示着对嵌套内容额外的限制。
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
   - : 一个 {{domxref("DOMString")}} 指示着浏览器是否应该为该 frame 提供滚动条。
 - {{domxref("HTMLIFrameElement.src")}}
-  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("src", "iframe")}} HTML 属性，包含被嵌入内容的地址。
+  - : 一个 {{domxref("DOMString")}} 反映着 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) HTML 属性，包含被嵌入内容的地址。
 - {{domxref("HTMLIFrameElement.srcdoc")}}
   - : 一个 {{domxref("DOMString")}} ，表示该 frame 中要显示的内容。
 - {{domxref("HTMLIFrameElement.width")}}
-  - : 一个 {{domxref("DOMString")}} 反映着 {{htmlattrxref("width", "iframe")}} HTML 属性，标识着该 frame 的宽度。
+  - : 一个 {{domxref("DOMString")}} 反映着 [`width`](/zh-CN/docs/Web/HTML/Element/iframe#width) HTML 属性，标识着该 frame 的宽度。
 
 ## 方法
 

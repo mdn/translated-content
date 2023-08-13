@@ -25,14 +25,12 @@ HTML、CSS と画像および数行の JavaScript のコードが提供されて
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 例ではこのように見えます:
@@ -82,7 +80,7 @@ JavaScript に必要なもの:
 次のコードは上記の 2 と 3 で示された変更を行う基本的なものです。
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -96,13 +94,3 @@ overlay.style.backgroundColor = xxx;
 組織されたコースの一部としてこの評価を行う場合、採点のため先生/メンターにあなたの成果を提出してください。もし、自習なら、[このエクササイズに関するディスカッションのスレッド](https://discourse.mozilla.org/t/image-gallery-assessment/24687) や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャネルで尋ねれば、採点ガイドが簡単に得られるでしょう。まずエクササイズに挑戦してください。ーごまかしても何も得られません！
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

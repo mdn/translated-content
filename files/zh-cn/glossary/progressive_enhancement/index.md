@@ -3,6 +3,8 @@ title: 渐进增强
 slug: Glossary/Progressive_Enhancement
 ---
 
+{{GlossarySidebar}}
+
 **渐进增强**（Progressive enhancement）是一种设计理念，其核心是为尽可能多的用户提供基本内容和功能，同时进一步为现代化浏览器用户提供最佳体验，运行所有需要的代码。
 
 [特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)通常用于确定浏览器是否可以处理高级内容，而[polyfill](/zh-CN/docs/Glossary/Polyfill)通常用于使用 JavaScript 构建缺少的功能。

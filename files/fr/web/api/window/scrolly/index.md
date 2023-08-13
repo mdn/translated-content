@@ -1,7 +1,6 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-translation_of: Web/API/Window/scrollY
 ---
 
 {{APIRef}}
@@ -21,7 +20,7 @@ var y = window.scrollY;
 ```js
 // make sure and go down to the second page
 if (window.scrollY) {
-  window.scroll(0, 0);  // reset the scroll position to the top left of the document.
+  window.scroll(0, 0); // reset the scroll position to the top left of the document.
 }
 
 window.scrollByPages(1);
@@ -41,10 +40,18 @@ Pour une compatibilité multi-navigateur, utilisez `window.pageYOffset` à la pl
 
 ```js
 var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
 
-var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
-var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+var x = supportPageOffset
+  ? window.pageXOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollLeft
+  : document.body.scrollLeft;
+var y = supportPageOffset
+  ? window.pageYOffset
+  : isCSS1Compat
+  ? document.documentElement.scrollTop
+  : document.body.scrollTop;
 ```
 
 ## Spécifications

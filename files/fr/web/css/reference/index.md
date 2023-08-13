@@ -1,14 +1,6 @@
 ---
 title: Référence CSS
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - CSS Data Types
-  - I10n:priority
-  - Overview
-  - Reference
-  - Types CSS
-translation_of: Web/CSS/Reference
 ---
 
 {{CSSRef}}
@@ -51,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_syntaxe). Soyez conscient que n’importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l’invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_syntaxe). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
 ### Syntaxe des règles @
 
@@ -59,7 +51,7 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 ## Index des mots-clés
 
-> **Note :** Les noms de propriétés de cet index n’incluent **pas** les [noms de l’API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu’ils sont différents des noms standards CSS.
+> **Note :** Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
 
 {{CSS_Ref}}
 
@@ -67,15 +59,15 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_Selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
 
-### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_Selectors#les_s%c3%a9lecteurs_simples/fr/docs/web/css/s%c3%a9lecteurs_css)
+### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_Selectors#les_sélecteurs_simples/fr/docs/web/css/sélecteurs_css)
 
 Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
 
 - [Sélecteur de type](/fr/docs/Web/CSS/Type_selectors) `nomElement`
 - [Sélecteur de classe](/fr/docs/Web/CSS/Class_selectors) `.nomClasse`
-- [Sélecteur d’identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
+- [Sélecteur d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
 - [Sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) **`*`**, `ns|*`, **`*|*`**, **`|*`**
-- [Sélecteur d’attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
+- [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
 
 ### Sélecteur de groupe
 
@@ -90,12 +82,12 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit immédiatement celui sélectionné par `A`.
 - [Combinateur de voisin général](/fr/docs/Web/CSS/General_sibling_combinator) `A ~ B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit celui sélectionné par `A`, mais pas nécessairement immédiatement après lui.
-- [Combinateur d’enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
-  - : Indique que l’élément sélectionné par `B` est un enfant direct de l’élément sélectionné par `A`.
+- [Combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
+  - : Indique que l'élément sélectionné par `B` est un enfant direct de l'élément sélectionné par `A`.
 - [Combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator) `A B`
-  - : Indique que l’élément sélectionné par `B` est un descendant de l’élément sélectionné par `A`, mais n’en est pas nécessairement un enfant direct.
+  - : Indique que l'élément sélectionné par `B` est un descendant de l'élément sélectionné par `A`, mais n'en est pas nécessairement un enfant direct.
 - [Combinateur de colonne](/fr/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
-  - : Indique que l’élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s’étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
+  - : Indique que l'élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s'étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
 
 ### Pseudo
 
@@ -119,7 +111,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Descripteurs](</fr/docs/Glossary/Descriptor_(CSS)>)
 - [Héritage](/fr/docs/Web/CSS/inheritance)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
-- [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#sp%c3%a9cificit%c3%a9)
+- [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité)
 - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
 - [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
 

@@ -3,7 +3,7 @@ title: Webkit Extensions
 slug: Web/CSS/WebKit_Extensions
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 WebKit 支持大量的[CSS](/zh-CN/CSS)扩展，这种 css 属性的前缀`为-webkit-`.
 

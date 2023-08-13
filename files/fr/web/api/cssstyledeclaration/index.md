@@ -1,14 +1,6 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - Reference
-translation_of: Web/API/CSSStyleDeclaration
 ---
 
 {{ APIRef("CSSOM") }}
@@ -49,7 +41,7 @@ translation_of: Web/API/CSSStyleDeclaration
 var objStyle = document.styleSheets[0].cssRules[0].style;
 console.log(objStyle.cssText);
 
-for (var i = objStyle.length; i--;) {
+for (var i = objStyle.length; i--; ) {
   var chaineNom = objStyle[i];
   objStyle.removeProperty(chaineNom);
 }

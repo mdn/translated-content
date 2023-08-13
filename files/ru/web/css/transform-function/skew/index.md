@@ -1,8 +1,6 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-translation_of: Web/CSS/transform-function/skew()
-original_slug: Web/CSS/transform-function/skew()
 ---
 
 {{CSSRef}}
@@ -153,7 +151,7 @@ div {
 
 ## Поддержка браузеров
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/ru/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## Смотрите также
 

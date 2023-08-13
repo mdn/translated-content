@@ -1,14 +1,6 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/unscopables
 ---
 
 {{JSRef}}
@@ -32,7 +24,7 @@ Le code qui suit fonctionne bien pour ES5 et les versions antérieures. En revan
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 
@@ -46,15 +38,15 @@ On peut également manipuler `unscopables` sur ses propres objets :
 ```js
 var obj = {
   toto: 1,
-  truc: 2
+  truc: 2,
 };
 
 obj[Symbol.unscopables] = {
   toto: false,
-  truc: true
+  truc: true,
 };
 
-with(obj) {
+with (obj) {
   console.log(toto); // 1
   console.log(truc); // ReferenceError: truc is not defined
 }

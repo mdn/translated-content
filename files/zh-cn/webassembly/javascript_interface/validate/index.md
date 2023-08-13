@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
 {{WebAssemblySidebar}}
@@ -32,13 +31,14 @@ WebAssembly.validate(bufferSource);
 下面的例子（查看 validate.html [源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)，或者[在线预览](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)）通过 `fetch` 获取了一个 .wasm 模块并将其转换为一个 typed array。接下来用 `validate()` 方法来验证这个模块是否合法。
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("The given bytes are "
-    + (valid ? "" : "not ") + "a valid wasm module");
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then(function (bytes) {
+    var valid = WebAssembly.validate(bytes);
+    console.log(
+      "The given bytes are " + (valid ? "" : "not ") + "a valid wasm module",
+    );
+  });
 ```
 
 ## Specifications

@@ -46,8 +46,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -83,7 +83,9 @@ return new Promise.resolve(true);
 
 ```js
 // 这是合法的，但是没必要这么长：
-return new Promise((resolve, reject) => { resolve(true); })
+return new Promise((resolve, reject) => {
+  resolve(true);
+});
 
 // 用静态方法来代替：
 return Promise.resolve(true);

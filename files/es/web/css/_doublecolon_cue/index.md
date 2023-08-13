@@ -1,5 +1,5 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
 ---
 

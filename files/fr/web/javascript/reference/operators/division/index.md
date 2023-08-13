@@ -1,12 +1,6 @@
 ---
 title: Division (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.division
 ---
 
 {{jsSidebar("Operators")}}
@@ -18,7 +12,7 @@ L'opérateur de division (`/`) fournit le quotient de l'opérande gauche (le num
 ## Syntaxe
 
 ```js
-Opérateur : x / y
+Opérateur: x / y;
 ```
 
 ## Exemples
@@ -26,17 +20,17 @@ Opérateur : x / y
 ### Divisions simples
 
 ```js
-1 / 2             // 0.5
-Math.floor(3 / 2) // 1
-1.0 / 2.0         // 0.5
+1 / 2; // 0.5
+Math.floor(3 / 2); // 1
+1.0 / 2.0; // 0.5
 ```
 
 ### Division par zéro
 
 ```js
-2.0 / 0     // Infinity
-2.0 / 0.0   // Infinity, because 0.0 === 0
-2.0 / -0.0  // -Infinity
+2.0 / 0; // Infinity
+2.0 / 0.0; // Infinity, because 0.0 === 0
+2.0 / -0.0; // -Infinity
 ```
 
 ## Spécifications

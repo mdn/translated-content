@@ -36,7 +36,7 @@ Por `NEGATIVE_INFINITY` ser uma propriedade estática de {{jsxref("Number")}}, v
 No seguinte exemplo, a variável `smallNumber` é atribuída um valor que é menor que o valor mínimo. Quando o {{jsxref("Statements/if...else", "if")}} executa, `smallNumber` tem o valor `-Infinity`, então é colocado em `smallNumber` um valor mais manejável antes de continuar.
 
 ```js
-var smallNumber = (-Number.MAX_VALUE) * 2;
+var smallNumber = -Number.MAX_VALUE * 2;
 
 if (smallNumber === Number.NEGATIVE_INFINITY) {
   smallNumber = returnFinite();
@@ -45,8 +45,8 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Especificações
 
-| Especificação                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                        |
+| ------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} |
 
 ## Compatibilidade com navegadores

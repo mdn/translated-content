@@ -1,5 +1,5 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
 ---
 
@@ -45,8 +45,10 @@ slug: Web/CSS/:nth-child
 #### HTML
 
 ```html
-<h3><code>span:nth-child(2n+1)</code>, WITHOUT an
-   <code>&lt;em&gt;</code> among the child elements.</h3>
+<h3>
+  <code>span:nth-child(2n+1)</code>, WITHOUT an <code>&lt;em&gt;</code> among
+  the child elements.
+</h3>
 <p>Children 1, 3, 5, and 7 are selected.</p>
 <div class="first">
   <span>Span 1!</span>
@@ -58,13 +60,17 @@ slug: Web/CSS/:nth-child
   <span>Span 7!</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-child(2n+1)</code>, WITH an
-   <code>&lt;em&gt;</code> among the child elements.</h3>
-<p>Children 1, 5, and 7 are selected.<br>
-   3 is used in the counting because it is a child, but it isn't
-   selected because it isn't a <code>&lt;span&gt;</code>.</p>
+<h3>
+  <code>span:nth-child(2n+1)</code>, WITH an <code>&lt;em&gt;</code> among the
+  child elements.
+</h3>
+<p>
+  Children 1, 5, and 7 are selected.<br />
+  3 is used in the counting because it is a child, but it isn't selected because
+  it isn't a <code>&lt;span&gt;</code>.
+</p>
 <div class="second">
   <span>Span!</span>
   <span>Span</span>
@@ -76,15 +82,19 @@ slug: Web/CSS/:nth-child
   <span>Span</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-of-type(2n+1)</code>, WITH an
-   <code>&lt;em&gt;</code> among the child elements.</h3>
-<p>Children 1, 4, 6, and 8 are selected.<br>
-   3 isn't used in the counting or selected because it is an <code>&lt;em&gt;</code>,
-   not a <code>&lt;span&gt;</code>, and <code>nth-of-type</code> only selects
-   children of that type. The <code>&lt;em&gt;</code> is completely skipped
-   over and ignored.</p>
+<h3>
+  <code>span:nth-of-type(2n+1)</code>, WITH an <code>&lt;em&gt;</code> among the
+  child elements.
+</h3>
+<p>
+  Children 1, 4, 6, and 8 are selected.<br />
+  3 isn't used in the counting or selected because it is an
+  <code>&lt;em&gt;</code>, not a <code>&lt;span&gt;</code>, and
+  <code>nth-of-type</code> only selects children of that type. The
+  <code>&lt;em&gt;</code> is completely skipped over and ignored.
+</p>
 <div class="third">
   <span>Span!</span>
   <span>Span</span>
@@ -112,9 +122,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.first span:nth-child(2n+1),
-.second span:nth-child(2n+1),
-.third span:nth-of-type(2n+1) {
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```
