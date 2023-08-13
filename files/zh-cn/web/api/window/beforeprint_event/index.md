@@ -1,37 +1,28 @@
 ---
-title: beforeprint
+title: 'Window: beforeprint event'
 slug: Web/API/Window/beforeprint_event
 ---
 
-当相关联的文档即将打印或预览以进行打印时，将触发 beforeprint 事件。
+当相关联的文档即将打印或预览以进行打印时，将触发 **`beforeprint`** 事件。
 
-## 基本信息
+{{domxref("Window.afterprint_event", "afterprint")}} 和 `beforeprint` 事件允许页面在打印开始之前更改其内容（例如，也许是移除 banner）然后在打印完成还原这些更改。一般来说，你应该更倾向于使用 [`@media print`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queriess)CSS 规则，但在某些情况下可能有必要使用这些事件。
 
-- Specification
-  - : [HTML5](https://html.spec.whatwg.org/multipage/webappapis.html#printing)
-- Interface
-  - : Event
-- Bubbles
-  - : No
-- Cancelable
-  - : No
-- Target
-  - : DefaultView (`<window>`)
-- Default Action
-  - : None
+## 语法
 
-## 属性
+在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理属性。
 
-| 属性                                  | 类型                                 | 描述                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件目标 (DOM 树中的最顶层目标) |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 时间类型                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | 事件是否冒泡                    |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | 事件是否可取消                  |
+```js
+addEventListener('beforeprint', (event) => { });
+onbeforeprint = (event) => { };
+```
 
-## 样例
+## 事件类型
 
-使用 `addEventListener()`：
+一个通用的 {{domxref("Event")}}.
+
+## 例子
+
+使用 `addEventListener()`:
 
 ```js
 window.addEventListener('beforeprint', (event) => {
@@ -39,7 +30,7 @@ window.addEventListener('beforeprint', (event) => {
 });
 ```
 
-使用 `onbeforeprint` 事件监听属性：
+使用 `onbeforeprint` 事件处理属性：
 
 ```js
 window.onbeforeprint = (event) => {
@@ -55,6 +46,6 @@ window.onbeforeprint = (event) => {
 
 {{Compat}}
 
-## 相关事件
+## 参见
 
-- [afterprint](/zh-CN/docs/Web/Events/afterprint)
+- 相关事件：{{domxref("Window/afterprint_event", "afterprint")}}
