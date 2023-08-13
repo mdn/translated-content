@@ -14,8 +14,8 @@ slug: Web/API/Window/afterprint_event
 在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理属性。
 
 ```js
-addEventListener('afterprint', (event) => { });
-onafterprint = (event) => { };
+addEventListener("afterprint", (event) => {});
+onafterprint = (event) => {};
 ```
 
 ## 事件类型
