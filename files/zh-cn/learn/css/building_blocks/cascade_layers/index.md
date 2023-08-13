@@ -3,8 +3,7 @@ title：层叠层
 slug：Learn/CSS/Building_blocks/Cascade_layers
 ---
 
-{{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade) 和 [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity) 的基本概念之上。
 
