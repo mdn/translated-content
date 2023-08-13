@@ -234,9 +234,11 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
 여기서 사용할 수 있는 텍스트의 종류를 보려면 몇 가지 예를 살펴보세요.
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  세일즈 보고서 다운로드 (PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    세일즈 보고서 다운로드 (PDF, 10MB)
+  </a>
+</p>
 
 <p><a href="http://www.example.com/video-stream/">
   영상 보기 (분리된 탭에서 스트리밍 열기, HD 퀄리티)
