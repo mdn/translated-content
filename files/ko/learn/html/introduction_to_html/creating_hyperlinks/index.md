@@ -42,8 +42,9 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 A basic link is created by wrapping the text (or other content, see [Block level links](#block_level_links)) you want to turn into a link inside an {{htmlelement("a")}} element, and giving it an [`href`](/ko/docs/Web/HTML/Element/a#href) 속성은 (also known as a **target**) 사이트의 주소가 포함된 링크를 당신에게 줍니다.
 
 ```html
-<p>나는 링크를 만들었습니다.
-<a href="https://www.mozilla.org/ko/">Mozilla 홈페이지</a>.
+<p>
+  나는 링크를 만들었습니다.
+  <a href="https://www.mozilla.org/ko/">Mozilla 홈페이지</a>.
 </p>
 ```
 
