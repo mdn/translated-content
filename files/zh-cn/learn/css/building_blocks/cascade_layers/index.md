@@ -3,7 +3,8 @@ title：层叠层
 slug：Learn/CSS/Building_blocks/Cascade_layers
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade) 和 [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity) 的基本概念之上。
 
@@ -112,9 +113,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 层叠层允许创建嵌套层。每个层叠层可以包含嵌套层。
 
-例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的 [媒体查询中的层创建
-](#媒体查询中的层创建
-) 部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation) 来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
+例如，可以将组件库导入到 `components` 层中。常规层叠层将组件库添加到作者来源中，消除与其他作者样式的优先级冲突。在 `components` 层内部，开发人员可以选择定义各种主题，每个主题作为单独的嵌套层。这些嵌套层的顺序可以根据媒体查询（参见下面的[媒体查询中的层创建](#媒体查询中的层创建)部分），例如视口大小或[方向](/zh-CN/docs/Web/CSS/@media/orientation) 来定义。这些嵌套层提供了一种创建不基于优先级冲突的主题的方式。
 
 嵌套层的能力非常适用于开发组件库、框架、第三方小部件和主题的任何人。
 
@@ -145,7 +144,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 [`@layer`](/zh-CN/docs/Web/CSS/@layer) CSS 规则用于声明层叠层，并在存在多个层叠层时定义优先权顺序。以下规则按照列出的顺序声明了三个层：
 
 ```css
-@layer theme，layout，utilities；
+@layer theme，layout，utilities;
 ```
 
 通常，你需要在 CSS 的第一行声明这个`@layer`（当然要用对你的站点有意义的层名称），以便完全控制层的排序。
@@ -157,6 +156,7 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 可以使用块`@layer` 规则来创建层。如果一个`@layer` 规则后跟一个标识符和一块样式，则该标识符用于命名该层，该规则中的样式被添加到该层的样式中。如果具有指定名称的层不存在，则会创建一个新层。如果具有指定名称的层已经存在，则会将样式添加到先前存在的层中。如果在使用`@layer` 创建块样式时没有指定名称，则该规则中的样式将被添加到一个新的匿名层中。
 
 在下面的示例中，我们使用了四个块和一个内联的`@layer`规则。这个 CSS 按列出的顺序执行以下操作：
+
 1. 创建一个命名的 `layout` 层
 2. 创建一个未命名的匿名层
 3. 声明三个层的列表并只创建两个新层 `theme` 和 `utilities`, 因为 `layout` 已经存在
@@ -164,11 +164,11 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 5. 创建第二个未命名的匿名层
 
 ```css
-/* 文件：layers1.css */ 
+/* 文件：layers1.css */
 
 /* 未分层的样式 */
 body {
-  color: #333; 
+  color: #333;
 }
 
 /* 创建第一个层：`layout` */
@@ -182,12 +182,12 @@ body {
 @layer {
   body {
     margin: 0;
-  } 
+  }
 }
 
 /* 创建第三和第四个层：`theme` 和 `utilities` */
 @layer theme，layout，utilities；
-/* 向已经存在的 `layout` 层添加样式 */  
+/* 向已经存在的 `layout` 层添加样式 */
 @layer layout {
   main {
     color: #000;
@@ -279,7 +279,7 @@ body {
 让我们看下面的例子：
 
 ```css
-@import url("components-lib.css") layer(components); 
+@import url("components-lib.css") layer(components);
 @import url("narrowtheme.css") layer(components.narrow);
 ```
 
@@ -301,7 +301,7 @@ body {
 @layer example.layout {
   main {
     width: 50vw;
-  } 
+  }
 }
 ```
 
@@ -313,7 +313,7 @@ body {
 
 ```css
 @import url(A.css) layer(firstLayer);
-@import url(B.css) layer(secondLayer);  
+@import url(B.css) layer(secondLayer);
 @import url(C.css);
 ```
 
@@ -361,6 +361,7 @@ body {
 我们包含第一行的原因有两个：第一，这样你可以轻松编辑该行并切换顺序，第二，因为大多数时候你会发现首先声明顺序层是你的层顺序管理的最佳实践。
 
 总结：
+
 - 层的优先级顺序是创建层的顺序。
 - 一旦创建，就无法更改层顺序。
 - 普通样式的层优先级是创建层的顺序。
