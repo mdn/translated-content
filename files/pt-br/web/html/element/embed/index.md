@@ -35,15 +35,15 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 ## Exemplo
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## Especificações
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                                             | Status                   | Comment |
+| ----------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'the-iframe-element.html#the-embed-element', '&lt;embed&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '&lt;embed&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-embed-element', '&lt;embed&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
 
 ## Compatibilidade com navegadores
 

@@ -29,32 +29,34 @@ Em comparação com a função global {{jsxref("isFinite", "isFinite()")}}, esse
 ## Exemplos
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, teria sido true com a função
-                            // global isFinite('0')
-Number.isFinite(null);      // false, teria sido true com a função
-                            // global isFinite(null)
+Number.isFinite("0"); // false, teria sido true com a função
+// global isFinite('0')
+Number.isFinite(null); // false, teria sido true com a função
+// global isFinite(null)
 ```
 
 ## Polyfill
 
 ```js
-Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+Number.isFinite =
+  Number.isFinite ||
+  function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## Especificações
 
-| Specification                                                                            | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Initial definition. |
+| Specification                                                       | Status               | Comment             |
+| ------------------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

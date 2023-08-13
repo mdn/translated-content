@@ -52,7 +52,7 @@ Enquanto o {{jsxref("Object.assign()")}} método vai copiar somente o enumeráve
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -66,18 +66,15 @@ superclass.prototype = {
   // Define seu método e propriedades aqui
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Define seu método e propriedades aqui
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Define seu método e propriedades aqui
+});
 ```
 
 ## Especificações
 
-| Especificações                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
+| Especificações                                                                                       |
+| ---------------------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-object.getownpropertydescriptors', 'Object.getOwnPropertyDescriptors')}} |
 
 ## Compatibilidade com navegadores

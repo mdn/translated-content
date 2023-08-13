@@ -27,7 +27,7 @@ new MediaRecorder(stream, options)
   - : 以下のプロパティを含むことができる辞書オブジェクト。
 
     - `mimeType`
-      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs`引数](/en-US/docs/Web/Media/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
+      - : 生成されるメディアの形式を指定する MIME タイプです。コンテナー形式を指定することもできますし（ブラウザーは音声と映像のために好ましいコーデックを選択します）、 [`codecs`引数](/ja/docs/Web/Media/Formats/codecs_parameter)や `profiles` 引数を使って、どのコーデックを使い、どう設定するのかという詳細情報を提供することもできます。
         アプリケーションは `mimeType` が {{Glossary("user agent") }} で対応しているかどうかを事前に調べることができます。そのためには {{domxref("MediaRecorder.isTypeSupported()")}} を呼び出す必要があります。
     - `audioBitsPerSecond`
       - : メディアの音声コンポーネントに選択したビットレート。

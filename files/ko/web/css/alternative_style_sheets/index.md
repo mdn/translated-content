@@ -2,6 +2,7 @@
 title: Alternative style sheets
 slug: Web/CSS/Alternative_style_sheets
 ---
+
 Firefox는
 _대체 스타일시트_
 를 지원합니다. 대체 스타일시트를 제공하는 페이지에서는 **보기>페이지 스타일** 메뉴를 이용하여 페이지에 적용될 스타일을 선택할 수 있습니다. 따라서 사용자는 자신이 원하는 다양한 종류의 페이지를 볼 수 있게 됩니다.

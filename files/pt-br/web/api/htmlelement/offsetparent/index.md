@@ -13,12 +13,10 @@ parentObj = element.offsetParent;
 
 - _parentObj_ é uma referência de objeto ao elemento no qual o elemento corrente é offset.
 
-## Especificação
+## Especificações
 
-| Specification                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetparent', 'offsetParent')}} | {{Spec2('CSSOM View')}} |         |
+{{Specifications}}
 
-## Compatibilidade do Navegador
+## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetParent")}}
+{{Compat}}

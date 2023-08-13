@@ -15,7 +15,7 @@ slug: Web/HTTP/Status/502
 502 Bad Gateway
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

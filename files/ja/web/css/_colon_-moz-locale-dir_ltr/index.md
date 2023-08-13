@@ -14,7 +14,7 @@ slug: Web/CSS/:-moz-locale-dir_ltr
 ## 構文
 
 ```css
-:-moz-locale-dir(ltr)
+:-moz-locale-dir(ltr) {}
 ```
 
 ## 例

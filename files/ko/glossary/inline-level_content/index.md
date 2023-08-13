@@ -32,16 +32,6 @@ HTML(**Hypertext Markup Language**)의 요소는 역사적으로 ["블록 레벨
 
 {{EmbedLiveSample("인라인", 600, 80)}}
 
-<div class="hidden"><p>For looks, this CSS (not displayed in standard reading mode) is also used:</p><pre class="brush: css">body {
-  margin: 0;
-  padding: 4px;
-  border: 1px solid #333;
-}
-
-.highlight {
-background-color:#ee3;
-}</pre></div>
-
 ### 블록 레벨
 
 이제 아까 만든 `<span>`을 마치 {{htmlelement("p")}}처럼 블록 레벨인 요소로 바꿔보겠습니다.
@@ -53,16 +43,6 @@ background-color:#ee3;
   로, 영향 범위의 시작과 끝을 알 수 있도록 배경색을 지정했습니다.
 </div>
 ```
-
-<div class="hidden"><p>The CSS (not displayed in standard reading mode) is also used:</p><pre class="brush: css">body {
-  margin: 0;
-  padding: 4px;
-  border: 1px solid #333;
-}
-
-.highlight {
-background-color:#ee3;
-}</pre></div>
 
 아까와 같은 CSS를 사용했을 때, 결과는 다음과 같습니다.
 

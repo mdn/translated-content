@@ -73,10 +73,10 @@ Content-Encoding: gzip
 
 ## 仕様書
 
-| 仕様書                                                           | 題名                                                          |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| 仕様書                                           | 題名                                                          |
+| ------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7932", "Brotli Compressed Data Format")}} | Brotli 圧縮データ形式                                         |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}     | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 | {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
 
 ## ブラウザーの互換性

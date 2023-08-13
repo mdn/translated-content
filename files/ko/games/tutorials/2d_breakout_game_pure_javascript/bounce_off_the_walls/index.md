@@ -1,6 +1,8 @@
 ---
 title: 공을 벽에 튕기기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -18,7 +20,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 보다 계산을 쉽게 하기 위하여 `ballRadius` 변수를 만든 뒤 원의 반지름 값을 대입하여 계산하는데 사용합니다. 아래의 코드를 기존의 변수들 아래에 삽입하세요:
 
 ```js
-var ballRadius = 10;
+const ballRadius = 10;
 ```
 
 이제`drawBall()` func기능 안에 볼을 그리는 코드를 아래와 같이 수정하세요:
@@ -57,11 +59,11 @@ if (y + dy > canvas.height || y + dy < 0) {
 }
 ```
 
-둘 중 하나의 조건이라도 만족한다면, 공의 방향은 반대로 바뀝니다.
+둘 중 하나의 조건이라도 `true`를 만족한다면, 공의 방향은 반대로 바뀝니다.
 
 ### 좌우로 튕겨내기
 
-우리는 방금 상, 하단 모서리를 인식했으므로 이번엔 좌우 모서리를 생각해봅시다. 거의 같은 문제이므로 우리는 y 대신 x값을 대입하여 그대로 반복해주기만 하면 됩니다:
+우리는 방금 상, 하단 모서리를 인식했으므로 이번엔 좌우 모서리를 생각해봅시다. 거의 같은 문제이므로 우리는 `y` 대신 `x`값을 대입하여 그대로 반복해주기만 하면 됩니다:
 
 ```js
 if (x + dx > canvas.width || x + dx < 0) {
@@ -79,7 +81,7 @@ if (y + dy > canvas.height || y + dy < 0) {
 
 코드를 테스트해보세요. — 아마 캔버스 모서리에서 튕겨나오는 볼이 인상적이지 않나요? 하지만 또 다른 문제가 생겼습니다. — 공이 벽을 튕겨나와 방향이 바뀌기 전에 살짝 벽 안으로 숨어버리네요:
 
-![](ball-in-wall.png)
+![skyblue ball disappearing into the top of the white wall.](ball-in-wall.png)
 
 이 문제는 우리가 충돌을 감지할 때 그 기준을 공의 원점에 두고 계산했지만, 원의 둘레를 기준으로 계산을 해야 하기 때문입니다. 벽에 공이 절반쯤 지난 뒤가 아니라 닿자마자 튕겨나와야 합니다. 이에 맞게 코드를 조금 수정해봅시다. 여러분이 삽입한 코드를 아래와 같이 수정해보세요:
 
@@ -98,9 +100,9 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 자, 다시 여러분이 작성한 코드를 완성된 코드와 비교해보고 게임을 실행해보세요:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","370")}}
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
 
-> **참고:** **Exercise**: 공이 벽에 부딪힐 때마다 공의 색을 무작위로 변화시켜보세요.
+> **참고:** 공이 벽에 부딪힐 때마다 공의 색을 무작위로 변화시켜보세요.
 
 ## 다음 단계
 

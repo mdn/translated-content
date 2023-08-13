@@ -2,6 +2,7 @@
 title: border-right
 slug: Web/CSS/border-right
 ---
+
 {{CSSRef}}
 
 **`border-right`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 오른쪽 테두리를 설정합니다. {{cssxref("border-right-width")}}, {{cssxref("border-right-style")}}, {{cssxref("border-right-color")}}의 값을 지정합니다.
@@ -48,9 +49,7 @@ border-right: medium dashed green;
 ## 예제
 
 ```html
-<div>
-  오른쪽 테두리를 가진 요소입니다.
-</div>
+<div>오른쪽 테두리를 가진 요소입니다.</div>
 ```
 
 ```css

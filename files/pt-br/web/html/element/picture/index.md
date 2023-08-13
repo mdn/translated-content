@@ -67,8 +67,8 @@ O atributo `media` permite você especificar uma media query que o navegador ir�
 
 ```html
 <picture>
- <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
- <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -78,15 +78,15 @@ O atributo `type` lhe permite especificar um tipo MIME para o(s) recurso(s) forn
 
 ```html
 <picture>
- <source srcset="mdn-logo.svg" type="image/svg+xml">
- <img src="mdn-logo.png" alt="MDN">
+  <source srcset="mdn-logo.svg" type="image/svg+xml" />
+  <img src="mdn-logo.png" alt="MDN" />
 </picture>
 ```
 
 ## Especificações
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Specification                                                                              | Status                   | Comment            |
+| ------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
 | {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element','&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
 
 ## Compatibilidade com navegadores

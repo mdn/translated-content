@@ -20,7 +20,7 @@ l10n:
 ### エリアのリンクから検索文字列を取得
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
 const area = document.getElementById("myArea");
 area.search; // '?q=123' を返す
 ```

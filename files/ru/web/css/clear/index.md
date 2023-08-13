@@ -2,6 +2,7 @@
 title: clear
 slug: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 Свойство **`clear`** CSS указывает, может ли элемент быть рядом с плавающими [floating](/ru/docs/CSS/float) элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство `clear` применяется как к плавающим, так и к неплавающим элементам.
@@ -69,8 +70,15 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
-  <p class="red">Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="black">
+    Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
+    dui. Suspendisse eget dolor.
+  </p>
+  <p class="red">
+    Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit.
+  </p>
   <p class="left">Этот абзац очищается слева.</p>
 </div>
 ```
@@ -78,9 +86,9 @@ clear: unset;
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
   border: 1px solid black;
@@ -97,7 +105,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -112,8 +120,14 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="red">- Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="black">
+    Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit.
+  </p>
+  <p class="red">
+    - Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit.
+  </p>
   <p class="right">Этот абзац очищается справа.</p>
 </div>
 ```
@@ -121,9 +135,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
   border: 1px solid black;
@@ -134,13 +148,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -155,8 +169,16 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
-  <p class="red">Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor".</p>
+  <p class="black">
+    Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
+    dui. Suspendisse eget dolor.
+  </p>
+  <p class="red">
+    Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget
+    dolor".
+  </p>
   <p class="both">Этот абзац очищает оба.</p>
 </div>
 ```
@@ -164,9 +186,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
   border: 1px solid black;
@@ -177,13 +199,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 45%;
@@ -194,11 +216,11 @@ p {
 
 ## Характеристики
 
-| Спецификация                                                                                     | Статус                                           | Коммент                                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------- |
+| Спецификация                                                              | Статус                              | Коммент                                                 |
+| ------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------- |
 | {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Добавляет значения `inline-start` и `inline-end`.       |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Никаких существенных изменений, хотя детали уточняются. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Начальное определение                                   |
+| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}              | {{Spec2('CSS2.1')}}                 | Никаких существенных изменений, хотя детали уточняются. |
+| {{SpecName('CSS1', '#clear', 'clear')}}                                   | {{Spec2('CSS1')}}                   | Начальное определение                                   |
 
 {{cssinfo}}
 

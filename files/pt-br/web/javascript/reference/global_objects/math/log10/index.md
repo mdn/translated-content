@@ -37,10 +37,10 @@ Esta função é equivalente a Math.log(x) / Math.log(10). Para log10(e) use a c
 ### Usando `Math.log10()`
 
 ```js
-Math.log10(2);      // 0.3010299956639812
-Math.log10(1);      // 0
-Math.log10(0);      // -Infinity
-Math.log10(-2);     // NaN
+Math.log10(2); // 0.3010299956639812
+Math.log10(1); // 0
+Math.log10(0); // -Infinity
+Math.log10(-2); // NaN
 Math.log10(100000); // 5
 ```
 
@@ -49,16 +49,18 @@ Math.log10(100000); // 5
 Isso pode ser simulado a partir da seguinte função:
 
 ```js
-Math.log10 = Math.log10 || function(x) {
-  return Math.log(x) * Math.LOG10E;
-};
+Math.log10 =
+  Math.log10 ||
+  function (x) {
+    return Math.log(x) * Math.LOG10E;
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                                | Status                       | Comentário          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.log10', 'Math.log10')}}         | {{Spec2('ES6')}}         | Initial definition. |
+| Especificação                                            | Status               | Comentário          |
+| -------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.log10', 'Math.log10')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-math.log10', 'Math.log10')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

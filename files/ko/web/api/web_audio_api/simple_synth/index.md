@@ -392,13 +392,6 @@ noteFreq[6]["B"] = 1975.533205024496447;
 
 > **참고:** 위의 예시 표의 값들은 소숫점 둘째 자리까지 반올림되었습니다.
 
-<div class="hidden"><p>This polyfill stands in when <code>Object.entries()</code> doesn't exist.</p><pre class="brush: js">if (!Object.entries) {
-    Object.entries = function entries(O) {
-        return reduce(keys(O), (e, k) => concat(e, typeof k === 'string' &#x26;&#x26; isEnumerable(O, k) ? [[k, O[k]]] : []), []);
-    };
-}
-</pre></div>
-
 ### 키보드 만들기
 
 `setup()` 함수의 역할은 키보드를 만들고 앱이 음악을 재생하도록 준비하는 것입니다.
