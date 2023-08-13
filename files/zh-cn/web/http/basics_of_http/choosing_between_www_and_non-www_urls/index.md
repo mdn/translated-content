@@ -58,4 +58,4 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 ## 参见
 
-- [在地址栏输入内容的统计](http://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/) (2011)
+- [有关人们在地址栏中输入内容的统计信息](http://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/)（2011）
