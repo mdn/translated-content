@@ -258,8 +258,9 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
 Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=ko-KR"
-   download="firefox-39-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=ko-KR"
+  download="firefox-39-installer.exe">
   Windows를 위한 Firefox 39 다운로드
 </a>
 ```
