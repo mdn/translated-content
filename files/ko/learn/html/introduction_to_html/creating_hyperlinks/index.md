@@ -246,9 +246,9 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
   </a>
 </p>
 
-<p><a href="http://www.example.com/car-game">
-  자동차 게임 시작 (플래시 필요)
-</a></p>
+<p>
+  <a href="http://www.example.com/car-game"> 자동차 게임 시작 (플래시 필요) </a>
+</p>
 ```
 
 ### 다운로드 연결 시 download attribute 사용
