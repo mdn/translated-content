@@ -147,7 +147,10 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 예제:
 
 ```html
-<p>우리에게 메일을 보내고 싶나요? 그럼 <a href="contacts.html#Mailing_address">메일 주소</a>를 확인해주세요.</p>
+<p>
+  우리에게 메일을 보내고 싶나요? 그럼
+  <a href="contacts.html#Mailing_address">메일 주소</a>를 확인해주세요.
+</p>
 ```
 
 Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서의 다른 부분에 연결할 수 있습니다.
