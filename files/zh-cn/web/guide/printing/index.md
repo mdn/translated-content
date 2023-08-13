@@ -18,7 +18,7 @@ slug: Web/Guide/Printing
 
 ## 使用打印样式表
 
-将以下内容添加到你的 {{HTMLElement("head")}} 标签.
+将以下内容添加到你的 {{HTMLElement("head")}} 标签。
 
 ```html
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
@@ -54,7 +54,7 @@ slug: Web/Guide/Printing
 如果你希望在用户打印完 [弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本）的内容后自动关闭该窗口，你可以使用这样的代码：
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -65,12 +65,12 @@ slug: Web/Guide/Printing
         const my_window = window.open(
           "",
           "mywindow",
-          "status=1,width=350,height=150",
+          "status=1,width=350,height=150"
         );
         my_window.document.write("<html><head><title>Print Me</title></head>");
         my_window.document.write('<body onafterprint="self.close()">');
         my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>",
+          "<p>When you print this window, it will close afterward.</p>"
         );
         my_window.document.write("</body></html>");
       }
@@ -94,7 +94,7 @@ slug: Web/Guide/Printing
 如果你想在不打开弹窗的情况下打印外部页面，可以使用隐藏的 {{HTMLElement("iframe")}} 元素（请参阅：[HTMLIFrameElement](/zh-CN/docs/Web/API/HTMLIFrameElement)），在用户打印其内容后自动将其移除。下面是一个可能的示例，它将打印一个名为 `externalPage.html` 的文件：
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

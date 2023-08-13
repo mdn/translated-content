@@ -32,7 +32,7 @@ window.addEventListener("afterprint", (event) => {
 });
 ```
 
-使用 `onafterprint` 事件处理属性:
+使用 `onafterprint` 事件处理属性：
 
 ```js
 window.onafterprint = (event) => {
