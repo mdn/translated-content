@@ -85,7 +85,7 @@ title 속성은 그리고 마우스를 호버했을때에 툴팁에 대한 기�
 
 ### Block level 링크
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣기만 하면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/ko/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣기만 하면 됩니다.
 
 ```html
 <a href="https://www.mozilla.org/ko">
