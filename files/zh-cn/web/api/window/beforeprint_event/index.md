@@ -12,8 +12,8 @@ slug: Web/API/Window/beforeprint_event
 在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理属性。
 
 ```js
-addEventListener('beforeprint', (event) => { });
-onbeforeprint = (event) => { };
+addEventListener("beforeprint", (event) => {});
+onbeforeprint = (event) => {};
 ```
 
 ## 事件类型
