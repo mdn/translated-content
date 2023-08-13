@@ -65,7 +65,7 @@ slug: Web/Guide/Printing
         const my_window = window.open(
           "",
           "mywindow",
-          "status=1,width=350,height=150"
+          "status=1,width=350,height=150",
         );
         my_window.document.write("<html><head><title>Print Me</title></head>");
         my_window.document.write('<body onafterprint="self.close()">');
