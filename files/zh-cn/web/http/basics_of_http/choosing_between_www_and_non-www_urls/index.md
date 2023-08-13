@@ -56,6 +56,6 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 可以认为这是一个非常主观的 [bikeshedding](http://bikeshed.com/) 问题。如果你想更深入地阅读，有 [很多](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [文章](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) 可供你参考。
 
-## 相关链接
+## 参见
 
 - [在地址栏输入内容的统计](http://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/) (2011)
