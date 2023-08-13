@@ -240,9 +240,11 @@ PDF나 워드 문서와 같이 다운로드되거나 스트리밍되거나(비�
   </a>
 </p>
 
-<p><a href="http://www.example.com/video-stream/">
-  영상 보기 (분리된 탭에서 스트리밍 열기, HD 퀄리티)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/">
+    영상 보기 (분리된 탭에서 스트리밍 열기, HD 퀄리티)
+  </a>
+</p>
 
 <p><a href="http://www.example.com/car-game">
   자동차 게임 시작 (플래시 필요)
