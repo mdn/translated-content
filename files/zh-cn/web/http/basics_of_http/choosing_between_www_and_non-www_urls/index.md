@@ -31,7 +31,7 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 例如：
 
 1. 服务器收到向 `http://www.example.org/whaddup` 的请求（当规范域名是 example.org 时）。
-2. 服务器回应代码 {{HTTPStatus(301)}} ，以及头 `{{HTTPHeader("Location")}}: http://example.org/whaddup`。
+2. 服务器回应代码 {{HTTPStatus(301)}}，以及标头 `{{HTTPHeader("Location")}}: http://example.org/whaddup`。
 3. 该客户端向规范域名下的地址——`http://example.org/whaddup`——发送请求。
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) 中的一个例子演示了 [如何配置一台 Apache 服务器将一个域名重定向到另一个](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258)。
