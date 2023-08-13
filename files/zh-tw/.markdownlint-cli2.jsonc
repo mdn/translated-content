@@ -42,7 +42,7 @@
           "name": "double-em-dash",
           "message": "Don't use '--'. Use double em-dash (——) instead",
           "search": " -- ",
-          "replace": " —— ",
+          "replace": "——",
           "searchScope": "text"
         },
         {
