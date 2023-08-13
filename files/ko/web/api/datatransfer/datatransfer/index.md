@@ -6,7 +6,6 @@ l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer`** 생성자는 새로운 {{domxref("DataTransfer")}} 객체 인스턴스를 생성합니다.
