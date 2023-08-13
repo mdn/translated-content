@@ -59,9 +59,13 @@ A basic link is created by wrapping the text (or other content, see [Block level
 예제 코드 :
 
 ```html
-<p>나는 링크를 만들었습니다.
-<a href="https://www.mozilla.org/en-US/"
-   title="Mozilla의 사명과 기여 방법에 대한 정보를 찾을 수 있는 최고의 장소">Mozilla 홈페이지</a>.
+<p>
+  나는 링크를 만들었습니다.
+  <a
+    href="https://www.mozilla.org/en-US/"
+    title="Mozilla의 사명과 기여 방법에 대한 정보를 찾을 수 있는 최고의 장소"
+    >Mozilla 홈페이지</a
+  >.
 </p>
 ```
 
