@@ -199,9 +199,7 @@ Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서�
 _link test:_ [Download Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  Firefox 다운로드
-</a></p>
+<p><a href="https://firefox.com/"> Firefox 다운로드 </a></p>
 ```
 
 _**Bad** link text:_ [Click here](https://firefox.com/) to download Firefox
