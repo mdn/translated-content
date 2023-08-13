@@ -156,7 +156,10 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서의 다른 부분에 연결할 수 있습니다.
 
 ```html
-<p><a href="#Mailing_address">회사 메일 주소</a>는 페이지의 하단에서 찾을 수 있습니다.</p>
+<p>
+  <a href="#Mailing_address">회사 메일 주소</a>는 페이지의 하단에서 찾을 수
+  있습니다.
+</p>
 ```
 
 ### 절대 URL과 상대 URL
