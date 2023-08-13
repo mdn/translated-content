@@ -1,5 +1,5 @@
 ---
-title: Window: print() 方法
+title: print() 方法
 slug: Web/API/Window/print
 ---
 
