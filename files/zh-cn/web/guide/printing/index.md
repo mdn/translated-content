@@ -145,5 +145,5 @@ slug: Web/Guide/Printing
 - [`window.print`](/zh-cn/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
 - {{ domxref("window.afterprint_event", "afterprint") }} 事件
-- [Media queries](zh-cn/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/zh-cn/docs/Web/CSS/Media_Queries/Using_media_queries)
 - {{cssxref("@media")}}
