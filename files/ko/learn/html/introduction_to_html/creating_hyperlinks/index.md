@@ -205,10 +205,7 @@ _link test:_ [Download Firefox](https://firefox.com)
 _**Bad** link text:_ [Click here](https://firefox.com/) to download Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  여기
-</a>
-를 클릭하여 Firefox 다운로드</p>
+<p><a href="https://firefox.com/"> 여기 </a> 를 클릭하여 Firefox 다운로드</p>
 ```
 
 다른 팁:
