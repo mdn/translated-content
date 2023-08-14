@@ -25,35 +25,35 @@ JavaScript에서, 함수의 매개변수는 `{{jsxref("undefined")}}`가 기본�
 
 ```js
 function multiply(a, b) {
-  return a * b
+  return a * b;
 }
 
-multiply(5, 2)  // 10
-multiply(5)     // NaN !
+multiply(5, 2); // 10
+multiply(5); // NaN !
 ```
 
 이를 방지하기 위해서, 아래 두번째 줄과 같이 `multiply` 함수가 오직 한 개의 인수만 있다면 `b`를 `1`로 설정하는 방식을 사용하곤 했습니다.
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1
-  return a*b
+  b = typeof b !== "undefined" ? b : 1;
+  return a * b;
 }
 
-multiply(5, 2)   // 10
-multiply(5)      // 5
+multiply(5, 2); // 10
+multiply(5); // 5
 ```
 
 ES2015의 기본값 매개변수로 함수 내부 에서의 검사는 더 이상 필요치 않습니다. 이제, 간단히 함수 머리(head)에서 `b`의 기본값으로 `1` 로 설정할 수 있습니다:
 
 ```js
 function multiply(a, b = 1) {
-  return a*b
+  return a * b;
 }
 
-multiply(5, 2)          // 10
-multiply(5)             // 5
-multiply(5, undefined)  // 5
+multiply(5, 2); // 10
+multiply(5); // 5
+multiply(5, undefined); // 5
 ```
 
 ## 예제
@@ -64,15 +64,15 @@ multiply(5, undefined)  // 5
 
 ```js
 function test(num = 1) {
-  console.log(typeof num)
+  console.log(typeof num);
 }
 
-test()            // 'number' (num 은 1로 설정됨)
-test(undefined)   // 'number' (num 이 역시 1로 설정됨)
+test(); // 'number' (num 은 1로 설정됨)
+test(undefined); // 'number' (num 이 역시 1로 설정됨)
 
 // 다른 falsy values로 테스트 하기:
-test('')          // 'string' (num 은 ''로 설정됨)
-test(null)        // 'object' (num 은 null로 설정됨)
+test(""); // 'string' (num 은 ''로 설정됨)
+test(null); // 'object' (num 은 null로 설정됨)
 ```
 
 ### 호출 시 평가
@@ -81,29 +81,29 @@ test(null)        // 'object' (num 은 null로 설정됨)
 
 ```js
 function append(value, array = []) {
-  array.push(value)
-  return array
+  array.push(value);
+  return array;
 }
 
-append(1)  // [1]
-append(2)  // [2], [1, 2]가 아니라
+append(1); // [1]
+append(2); // [2], [1, 2]가 아니라
 ```
 
 이는 심지어 함수 및 변수에도 적용됩니다:
 
 ```js
 function callSomething(thing = something()) {
-  return thing
+  return thing;
 }
 
-let numberOfTimesCalled = 0
-function something(){
-  numberOfTimesCalled += 1
-  return numberOfTimesCalled
+let numberOfTimesCalled = 0;
+function something() {
+  numberOfTimesCalled += 1;
+  return numberOfTimesCalled;
 }
 
-callSomething()  // 1
-callSomething()  // 2
+callSomething(); // 1
+callSomething(); // 2
 ```
 
 ### 앞쪽 매개변수는 뒷쪽의 매개변수 기본값에 사용할 수 있습니다
@@ -111,30 +111,37 @@ callSomething()  // 2
 매개 변수가 여러개일 때 앞쪽에( 왼쪽 부분) 정의된 매개변수는 뒷쪽에 정의된 매개변수의 기본값에 바로 사용할 수 있습니다.
 
 ```js
-function greet(name, greeting, message = greeting + ' ' + name) {
-  return [name, greeting, message]
+function greet(name, greeting, message = greeting + " " + name) {
+  return [name, greeting, message];
 }
 
-greet('David', 'Hi')                      // ["David", "Hi", "HiDavid"]
-greet('David', 'Hi', 'Happy Birthday!')   // ["David", "Hi", "Happy Birthday!"]
+greet("David", "Hi"); // ["David", "Hi", "HiDavid"]
+greet("David", "Hi", "Happy Birthday!"); // ["David", "Hi", "Happy Birthday!"]
 ```
 
 이 기능은, 얼마나 많은 경계 조건(edge case)를 다룰수 있는지 보여주는, 아래 예제로 거의 설명 가능합니다.
 
 ```js
 function go() {
-  return ':P'
+  return ":P";
 }
 
 // 함수 정의가 간단해짐
-function withDefaults(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a,b,c,d,e,f,g]
+function withDefaults(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
 
 // 함수 정의가 길고 장황함
-function withoutDefaults(a, b, c, d, e, f, g){
-  switch(arguments.length){
+function withoutDefaults(a, b, c, d, e, f, g) {
+  switch (arguments.length) {
     case 0:
       a;
     case 1:
@@ -151,15 +158,15 @@ function withoutDefaults(a, b, c, d, e, f, g){
       g = this.value;
     default:
   }
-  return [a,b,c,d,e,f,g];
+  return [a, b, c, d, e, f, g];
 }
 
 // 아래와 같이 함수 호출하면 동일한 결과를 보임
 
-withDefaults.call({value:"=^_^="});
+withDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-withoutDefaults.call({value:"=^_^="});
+withoutDefaults.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -174,8 +181,11 @@ withoutDefaults.call({value:"=^_^="});
 아래 함수는 호출되면 `ReferenceError` 를 발생시킵니다. 매개변수 기본값이 함수 내부의 자식 유효범위를 참조할 수 없기 때문입니다.
 
 ```js example-bad
-function f(a = go()) { // `f`가 호출 되면 `ReferenceError` 발생
-  function go() { return ':P' }
+function f(a = go()) {
+  // `f`가 호출 되면 `ReferenceError` 발생
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -183,8 +193,8 @@ function f(a = go()) { // `f`가 호출 되면 `ReferenceError` 발생
 
 ```js example-bad
 function f(a, b = () => console.log(a)) {
-  var a = 1
-  b() // `undefined`를 인쇄하는데, 매개변수 기본값이 자체 스코프에 있기 때문입니다
+  var a = 1;
+  b(); // `undefined`를 인쇄하는데, 매개변수 기본값이 자체 스코프에 있기 때문입니다
 }
 ```
 
@@ -193,12 +203,12 @@ function f(a, b = () => console.log(a)) {
 매개변수는 여전히 왼쪽에서 오른쪽으로 설정됩니다. 아래 예제에서 뒷쪽에 기본값이 없는 매개변수가 있지만 기본값 매개변수를 덮어씁니다.
 
 ```js
-function f(x=1, y) {
+function f(x = 1, y) {
   return [x, y];
 }
 
-f()   // [1, undefined]
-f(2)  // [2, undefined]
+f(); // [1, undefined]
+f(2); // [2, undefined]
 ```
 
 ### 기본값 할당 있는 해체된 매개변수
@@ -206,11 +216,11 @@ f(2)  // [2, undefined]
 기본값 할당을 {{jsxref("Operators/Destructuring_assignment", "destructuring assignment", "", 1)}} 표기와 함께 사용할 수 있습니다:
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
-  return x + y + z
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
+  return x + y + z;
 }
 
-f()  // 6
+f(); // 6
 ```
 
 ## 명세서

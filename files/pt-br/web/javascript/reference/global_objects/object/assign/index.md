@@ -55,14 +55,14 @@ var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, target object itself is changed.
+console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
 ```
 
 ### Copiando propriedades Symbol
 
 ```js
 var o1 = { a: 1 };
-var o2 = { [Symbol('foo')]: 2 };
+var o2 = { [Symbol("foo")]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
@@ -71,15 +71,19 @@ console.log(obj); // { a: 1, [Symbol("foo")]: 2 }
 ### Propriedades herdadas e não enumeráveis não podem ser copiadas
 
 ```js
-var obj = Object.create({ foo: 1 }, { // foo is an inherit property.
-  bar: {
-    value: 2  // bar is a non-enumerable property.
+var obj = Object.create(
+  { foo: 1 },
+  {
+    // foo is an inherit property.
+    bar: {
+      value: 2, // bar is a non-enumerable property.
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz is an own enumerable property.
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz is an own enumerable property.
-  }
-});
+);
 
 var copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -88,10 +92,10 @@ console.log(copy); // { baz: 3 }
 ### Primitivas serão encapsuladas em objetos
 
 ```js
-var v1 = '123';
+var v1 = "123";
 var v2 = true;
 var v3 = 10;
-var v4 = Symbol('foo')
+var v4 = Symbol("foo");
 
 var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Primitives will be wrapped, null and undefined will be ignored.
@@ -102,20 +106,20 @@ console.log(obj); // { "0": "1", "1": "2", "2": "3" }
 ### Exceções irão interromper a tarefa de cópia em execução
 
 ```js
-var target = Object.defineProperty({}, 'foo', {
+var target = Object.defineProperty({}, "foo", {
   value: 1,
-  writeable: false
+  writeable: false,
 }); // target.foo is a read-only property
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // The Exception is thrown when assigning target.foo
 
-console.log(target.bar);  // 2, the first source was copied successfully.
+console.log(target.bar); // 2, the first source was copied successfully.
 console.log(target.foo2); // 3, the first property of the second source was copied successfully.
-console.log(target.foo);  // 1, exception is thrown here.
+console.log(target.foo); // 1, exception is thrown here.
 console.log(target.foo3); // undefined, assign method has finished, foo3 will not be copied.
-console.log(target.baz);  // undefined, the third source will not be copied either.
+console.log(target.baz); // undefined, the third source will not be copied either.
 ```
 
 ### Copiando acessores
@@ -125,7 +129,7 @@ var obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 var copy = Object.assign({}, obj);
@@ -134,11 +138,14 @@ console.log(copy);
 
 // This is an assign function which can copy accessors.
 function myAssign(target, ...sources) {
-  sources.forEach(source => {
-    Object.defineProperties(target, Object.keys(source).reduce((descriptors, key) => {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {}));
+  sources.forEach((source) => {
+    Object.defineProperties(
+      target,
+      Object.keys(source).reduce((descriptors, key) => {
+        descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
+        return descriptors;
+      }, {}),
+    );
   });
   return target;
 }
@@ -154,14 +161,14 @@ Este polyfill não suporta propriedades {{jsxref("Symbol")}}, visto que ES5 não
 
 ```js
 if (!Object.assign) {
-  Object.defineProperty(Object, 'assign', {
+  Object.defineProperty(Object, "assign", {
     enumerable: false,
     configurable: true,
     writable: true,
-    value: function(target) {
-      'use strict';
+    value: function (target) {
+      "use strict";
       if (target === undefined || target === null) {
-        throw new TypeError('Cannot convert first argument to object');
+        throw new TypeError("Cannot convert first argument to object");
       }
 
       var to = Object(target);
@@ -173,7 +180,11 @@ if (!Object.assign) {
         nextSource = Object(nextSource);
 
         var keysArray = Object.keys(Object(nextSource));
-        for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+        for (
+          var nextIndex = 0, len = keysArray.length;
+          nextIndex < len;
+          nextIndex++
+        ) {
           var nextKey = keysArray[nextIndex];
           var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
           if (desc !== undefined && desc.enumerable) {
@@ -182,15 +193,15 @@ if (!Object.assign) {
         }
       }
       return to;
-    }
+    },
   });
 }
 ```
 
 ## Especificações
 
-| Specification                                                                    | Status                   | Comment           |
-| -------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| Specification                                                 | Status              | Comment           |
+| ------------------------------------------------------------- | ------------------- | ----------------- |
 | {{SpecName('ES2015', '#sec-object.assign', 'Object.assign')}} | {{Spec2('ES2015')}} | Definição inicial |
 
 ## Compatibilidade com navegadores

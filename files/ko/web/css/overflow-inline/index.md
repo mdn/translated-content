@@ -71,18 +71,21 @@ overflow-inline: unset;
   </li>
 
   <li>
-    <code>overflow-inline: visible</code> (필요한 경우 박스 외부에 있는 텍스트를 표시합니다.)
+    <code>overflow-inline: visible</code> (필요한 경우 박스 외부에 있는 텍스트를
+    표시합니다.)
     <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: auto</code> (대부분의 브라우저에서 <code>scroll</code>
+    <code>overflow-inline: auto</code> (대부분의 브라우저에서
+    <code>scroll</code>
     과 동일합니다.)
     <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: clip</code> (오버플로우 클립 가장자리를 기준으로 박스 외부의 텍스트를 숨깁니다.)
+    <code>overflow-inline: clip</code> (오버플로우 클립 가장자리를 기준으로 박스
+    외부의 텍스트를 숨깁니다.)
     <code>clip</code>
     <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>

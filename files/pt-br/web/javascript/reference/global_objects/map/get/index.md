@@ -14,7 +14,7 @@ irá afetar o valor que está dentro do objeto `Map`.
 ## Sintaxe
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Parâmetros
@@ -33,10 +33,10 @@ a chave não puder ser encontrada no objeto `Map`.
 
 ```js
 let myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-myMap.get('bar');   // Returns "foo"
-myMap.get('baz');   // Returns undefined
+myMap.get("bar"); // Returns "foo"
+myMap.get("baz"); // Returns undefined
 ```
 
 ## Especificações

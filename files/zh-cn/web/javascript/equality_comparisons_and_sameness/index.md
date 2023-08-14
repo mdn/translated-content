@@ -208,7 +208,7 @@ function sameValueZero(x, y) {
 
 如果不考虑零的符号，依赖于 {{jsxref("Object.is")}} 可能会很危险。当意图区分 `-0` 和 `+0` 时，它当然会做到期望的效果。
 
-### 注意: Object.is() 和 NaN
+### 注意：Object.is() 和 NaN
 
 {{jsxref("Object.is")}} 规范将所有 {{jsxref("NaN")}} 的实例视为同一对象。然而，由于可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)，我们可以拥有 `NaN` 的不同浮点表示，这些表示在所有上下文中的行为不完全相同。例如：
 

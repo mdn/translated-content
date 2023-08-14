@@ -2,6 +2,7 @@
 title: async function 표현식
 slug: Web/JavaScript/Reference/Operators/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`async function`** 키워드는 표현식 내에서 `async` 함수를 정의하기 위해 사용됩니다.
@@ -39,11 +40,11 @@ slug: Web/JavaScript/Reference/Operators/async_function
 [arrow functions](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)를 사용해도 됩니다.
 
 ```js
-  async param => expression
+async (param) => expression;
 
-  async (param1, param2, ...paramN) => {
-    statements
-  }
+async (param1, param2, ...paramN) => {
+  statements;
+};
 ```
 
 ### 인수
@@ -64,34 +65,33 @@ slug: Web/JavaScript/Reference/Operators/async_function
 ### 간단한 예시
 
 ```js
-  function resolveAfter2Seconds(x) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(x);
-      }, 2000);
-    });
-  }
-
-  // async function 표현식을 변수에 할당
-  const add = async function(x) {
-    const a = await resolveAfter2Seconds(20);
-    const b = await resolveAfter2Seconds(30);
-    return x + a + b;
-  }
-
-  add(10).then((v) => {
-    console.log(v); // 4초 뒤에 60 출력 
-  })
-
-
-  // async function 표현식을 IIFE로 사용
-  (async function (x) {
-    const p1 = resolveAfter2Seconds(20);
-    const p2 = resolveAfter2Seconds(30);
-    return x + (await p1) + (await p2);
-  })(10).then((v) => {
-    console.log(v); // 2초 뒤에 60 출력
+function resolveAfter2Seconds(x) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
   });
+}
+
+// async function 표현식을 변수에 할당
+const add = async function (x) {
+  const a = await resolveAfter2Seconds(20);
+  const b = await resolveAfter2Seconds(30);
+  return x + a + b;
+};
+
+add(10).then((v) => {
+  console.log(v); // 4초 뒤에 60 출력
+});
+
+// async function 표현식을 IIFE로 사용
+(async function (x) {
+  const p1 = resolveAfter2Seconds(20);
+  const p2 = resolveAfter2Seconds(30);
+  return x + (await p1) + (await p2);
+})(10).then((v) => {
+  console.log(v); // 2초 뒤에 60 출력
+});
 ```
 
 ## 명세

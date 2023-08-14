@@ -14,7 +14,9 @@ Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemen
 Um exemplo típico de uma propriedade herdada é a propriedade {{ Cssxref("color") }}. Dadas as seguintes regras de estilo:
 
 ```css
-p { color: green }
+p {
+  color: green;
+}
 ```
 
 e o markup:
@@ -32,13 +34,15 @@ Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada
 Um exemplo típico de uma propriedade não herdada é a propriedade {{ Cssxref("border") }}. Dadas as seguintes regras de estilo:
 
 ```css
- p { border: medium solid }
+p {
+  border: medium solid;
+}
 ```
 
 e o markup
 
 ```html
-  <p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
+<p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
 ```
 
 As palavras "texto enfatizado" não vão ter uma borda (já que o valor inicial de {{ Cssxref("border-style") }} é `none`).

@@ -2,6 +2,7 @@
 title: 함수 선언
 slug: Web/JavaScript/Reference/Statements/function
 ---
+
 {{jsSidebar("Statements")}}
 
 **함수 선언**(**function declaration**)은 지정된 매개변수(parameter)를 갖는 함수를 정의합니다.
@@ -37,9 +38,15 @@ slug: Web/JavaScript/Reference/Statements/function
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (false) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -59,9 +66,15 @@ if (false) {
 
 ```js
 var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    hoisted ? "is" : "is not"
+  } hoisted. typeof foo is ${typeof foo}`,
+);
 if (true) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
@@ -94,8 +107,8 @@ function hoisted() {
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log("bar");
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -107,7 +120,7 @@ var notHoisted = function() {
 
 ```js
 function calc_sales(units_a, units_b, units_c) {
-   return units_a*79 + units_b * 129 + units_c * 699;
+  return units_a * 79 + units_b * 129 + units_c * 699;
 }
 ```
 
