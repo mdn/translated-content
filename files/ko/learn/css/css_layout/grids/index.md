@@ -382,7 +382,7 @@ body {
 
 이를 통해 시작 줄과 끝 줄을 슬래시 `/`로 구분하여 한 번에 지정할 수 있습니다.
 
-[착수 파일로 이 파일을 다운로드하세요.](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html) 또는 [여기 라이브로도 보세요.](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). 여기에는 정의된 그리드와 간단한 글의 개요가 있습니다. _auto-placement_가 각 항목을 그리드의 자체 셀에 배치하는 것을 볼 수 있습니다.
+[착수 파일로 이 파일을 다운로드하세요.](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html) 또는 [여기 라이브로도 보세요.](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). 여기에는 정의된 그리드와 간단한 글의 개요가 있습니다. *auto-placement*가 각 항목을 그리드의 자체 셀에 배치하는 것을 볼 수 있습니다.
 
 대신 그리드 라인을 사용하여 사이트의 모든 요소를 정렬해 보겠습니다. CSS 하단에 다음 규칙을 추가합니다.
 
