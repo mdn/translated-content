@@ -4,6 +4,7 @@ slug: Glossary/Callback_function
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
 {{GlossarySidebar}}
 
 콜백 함수는 전달인자로 다른 함수에 전달되는 함수입니다. 이는 일종의 루틴이나 동작을 완료하기 위해 외부 함수 내부에서 호출됩니다.
