@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 
 {{JSRef}}
 
-**`Math.ceil()`** 函数总是四舍五入并返回大于等于给定数字的最小整数。
+**`Math.ceil()`** 函数总是返回大于等于给定数字的最小整数。
 
 {{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
