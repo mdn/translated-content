@@ -1,7 +1,8 @@
 ---
 title: 호이스팅
 slug: Glossary/Hoisting
-page-type: glossary-definition
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{GlossarySidebar}}
