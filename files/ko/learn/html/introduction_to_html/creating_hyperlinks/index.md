@@ -12,7 +12,7 @@ l10n:
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">미리 알아두면 좋은 지식들:</th>
+      <th scope="row">사전 지식</th>
       <td>
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 시작하기</a
@@ -24,18 +24,17 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">목표:</th>
+      <th scope="row">목표</th>
       <td>
         <p>
-          하이퍼링크를 효과적으로 다루는 방법과 수많은 파일들을 함께 연결하는
-          방법을 배웁니다.
+          하이퍼링크를 효과적으로 다루는 방법과 수많은 파일들을 함께 연결하는 방법을 배웁니다.
         </p>
       </td>
     </tr>
   </tbody>
 </table>
 
-## 하이퍼링크란 무엇인가?
+## 하이퍼링크란
 
 하이퍼링크는 웹이 제공하는 가장 흥미로운 혁신 중 하나입니다. 하이퍼링크는 처음부터 웹의 기능이었으며 웹을 웹으로 만드는 요소입니다. 하이퍼링크를 사용하면 문서를 다른 문서나 리소스에 연결하거나, 문서의 특정 부분에 연결하거나, 웹 주소에서 앱을 사용할 수 있습니다. 클릭하거나 다른 방법으로 활성화된 웹 브라우저가 다른 웹 주소({{glossary("URL")}})로 이동하도록 거의 모든 웹 콘텐츠를 링크로 변환할 수 있습니다.
 
@@ -43,7 +42,7 @@ l10n:
 
 예를 들어, BBC 홈페이지에는 여러 뉴스 기사뿐만 아니라 사이트의 다양한 영역(내비게이션 기능), 로그인/등록 페이지(사용자 도구) 등을 가리키는 많은 링크가 포함되어 있습니다.
 
-![front page of bbc.co.uk, showing many news items, and navigation menu functionality](updated-bbc-website.png)
+![많은 뉴스 항목과 탐색 메뉴 기능을 보여주는 bbc.co.uk의 첫 페이지](updated-bbc-website.png)
 
 ## 링크의 구조
 
@@ -134,7 +133,7 @@ link target에 대해 완전히 이해하기 위해서, URL과 파일 path에 �
 
 URL, 혹은 Uniform Resource Locator은 단순히 무언가가 웹상의 어디에 위치하는지 결정하는 하나의 텍스트 문자열입니다. 예를 들면, Mozilla 영어 홈페이지는 `https://www.mozilla.org/en-US/`이죠.
 
-URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관심있어 하는 파일이 파일 시스템 어디에 있는지 구체적으로 명시하구요. 디렉토리 구조에 대한 예제를 보시죠. [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks) 디렉토리를 봅시다.
+URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관심있어 하는 파일이 파일 시스템 어디에 있는지 구체적으로 명시하구요. 디렉토리 구조에 대한 예제를 보시죠. ([하이퍼링크 만들기](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)를 보세요.)
 
 ![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
@@ -154,33 +153,33 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 - **하위 디렉토리로 하향 이동:** `projects/index.html`을 가리키는 하이퍼링크를 `index.html`(최상위 레벨 `index.html`)에 포함하려면 연결하려는 파일을 표시하기 전에 프로젝트 디렉토리로 내려가야 합니다. 이 작업은 디렉토리 이름, 그 다음 슬래시, 그 다음 파일 이름을 지정하여 수행되므로 사용할 URL은 `projects/index.html` 입니다.
 
 ```html
-<p>Visit my <a href="projects/index.html">project homepage</a>.</p>
+<p>저의 <a href="projects/index.html">프로젝트 홈페이지</a>에 방문해주세요.</p>
 ```
 
 - **부모 디렉토리로 상향 이동:** `pdfs/project-brief.pdf`를 가리키는 하이퍼링크를 `projects/index.html` 안에 포함하려면 디렉토리 레벨을 올린 다음 다시 pdf 디렉토리로 내려가야 합니다. "상위 디렉터리 이동"은 두 개의 점(`..`)을 사용하여 표시합니다. 따라서 사용할 URL은 `../pdfs/project-brief.pdf` 입니다.
 
 ```html
-<p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
+<p>나의 <a href="../pdfs/project-brief.pdf">프로젝트 개요</a> 링크입니다.</p>
 ```
 
 > **참고:** 필요한 경우 아래와 같이 상향 이동이나 하향 이동 기능을 이용해 여러 인스턴스를 복잡한 URL로 결합할 수 있습니다. `../../../complex/path/to/my/file.html`.
 
-### Document fragments(문서 조각)
+### 문서 조각
 
 문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 연결할 수 있습니다. 그러기 위해 먼저 여러분은 연결하고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성을 넣어주어야 합니다. 일반적으로는 아래와 같이 특정 헤드라인에 연결하는 것이 타당합니다.
 
 예제
 
 ```html
-<h2 id="Mailing_address">Mailing address</h2>
+<h2 id="Mailing_address">Mailing 주소</h2>
 ```
 
 그런 다음 해당 ID에 연결하려면 아래 예시와 같이 URL 끝에 해시/파운드 기호를 포함하면 됩니다.
 
 ```html
 <p>
-  Want to write us a letter? Use our
-  <a href="contacts.html#Mailing_address">mailing address</a>.
+  우리에게 메일을 보내고 싶나요? 그럼
+  <a href="contacts.html#Mailing_address">메일 주소</a>를 확인해주세요.
 </p>
 ```
 
@@ -188,8 +187,8 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 ```html
 <p>
-  The <a href="#Mailing_address">company mailing address</a> can be found at the
-  bottom of this page.
+  <a href="#Mailing_address">회사 메일 주소</a>는 페이지의 하단에서 찾을 수
+  있습니다.
 </p>
 ```
 
@@ -210,7 +209,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 물론, 여러분이 `index.html` 파일을 옮겼다고 해서 `project-brief.pdf` 파일과 `pdfs` 폴더의 위치가 갑자기 바뀌지는 않을 것입니다. 이것은 당신의 링크가 잘못된 곳을 가리키게 할 것이므로 클릭을 해도 제대로 작동하지 않을 것입니다. 주의하세요!
 
-## Link 실습하기
+## Link 실습
 
 링크를 작성할 때 따라야 할 몇 가지 좋은 관습이 있습니다. 지금부터 살펴보겠습니다.
 

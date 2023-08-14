@@ -212,7 +212,7 @@ The following screenshot provide an example of what the finished program should 
 
 以下說明實作的步驟。
 
-1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
+1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用『diyblog』作為專案名稱，『blog』作為 app 的名稱。
 2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
 
    - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
