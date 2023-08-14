@@ -94,7 +94,7 @@ slug: Web/Guide/Printing
 如果你想在不打开弹窗的情况下打印外部页面，可以使用隐藏的 {{HTMLElement("iframe")}} 元素（请参阅：[HTMLIFrameElement](/zh-CN/docs/Web/API/HTMLIFrameElement)），在用户打印其内容后自动将其移除。下面是一个可能的示例，它将打印一个名为 `externalPage.html` 的文件：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
