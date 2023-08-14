@@ -109,7 +109,7 @@ div {
 
 在使用角度的时候，`0deg` 代表渐变方向为从下到上，`90deg` 代表渐变方向为从左到右，诸如此类正角度都属于顺时针方向。而负角度意味着逆时针方向。
 
-![linear_redangles.png](/files/3811/linear_red_angles.png)
+![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
 
 ## 声明颜色和创建效果
 
