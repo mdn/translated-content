@@ -8,7 +8,7 @@ l10n:
 {{MDNSidebar}}
 
 MDN tiene un formato estándar para tablas que ilustran la compatibilidad de tecnologías compartidas en todos los navegadores, como DOM, HTML, CSS, JavaScript, SVG, etc.
-Para que estos datos estén disponibles en varios proyectos mediante programación, se crea un paquete de Node.js desde el [repositorio `browser-compat-data`](https://github.com/mdn/browser-compat-data) y se publica en npm .
+Para que estos datos estén disponibles en varios proyectos mediante programación, se crea un paquete de Node.js desde el [repositorio `browser-compat-data`](https://github.com/mdn/browser-compat-data) y se publica en npm.
 
 Para modificar los datos dentro de estas tablas, la documentación completa junto con los detalles más recientes de las convenciones y los esquemas JSON utilizados para representar los datos se pueden encontrar en la [guía de contribución](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) del repositorio, así como la [guía de pautas de datos](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md).
 Si tienes dudas o descubres problemas, te invitamos a [pedir ayuda](/es/docs/MDN/Community/Communication_channels).
