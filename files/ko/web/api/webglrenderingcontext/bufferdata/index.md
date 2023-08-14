@@ -6,7 +6,7 @@ slug: Web/API/WebGLRenderingContext/bufferData
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 의 **`WebGLRenderingContext.bufferData()`**  메서드는 버퍼 객체의 데이터 저장소를 초기화하고 생성합니다.
+[WebGL API](/en-US/docs/Web/API/WebGL_API) 의 **`WebGLRenderingContext.bufferData()`** 메서드는 버퍼 객체의 데이터 저장소를 초기화하고 생성합니다.
 
 ## 구문
 
