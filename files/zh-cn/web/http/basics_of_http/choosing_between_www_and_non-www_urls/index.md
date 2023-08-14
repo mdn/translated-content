@@ -1,11 +1,11 @@
 ---
-title: 选择 www 或非 www URL 作为域名
+title: 选择 www 或非 www URL
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
 
 {{HTTPSidebar}}
 
-网站所有者经常会问的一个问题是选择非 www 的还是 www 的网址。本文提供了选择建议。
+网站所有者经常会问的一个问题是选择非 www 的还是 www 的 URL。本文提供了选择建议。
 
 ## 什么是域名？
 
