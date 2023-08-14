@@ -20,7 +20,6 @@ String.fromCodePoint(num1, num2, /* …, */ numN)
 ### 参数
 
 - `numN`
-  - : An integer between `0` and `0x10FFFF` (inclusive) representing a Unicode code point.
   - : 一个介于 `0` 和 `0x10FFFF`（包括两者）之间的整数，表示一个 Unicode 码位。
 
 ### 返回值
@@ -69,7 +68,7 @@ String.fromCodePoint(NaN); // RangeError
 `String.fromCharCode()` 方法无法通过指定其码位来返回补充字符（即码位 `0x010000` 至 `0x10FFFF`）。相反，它需要使用 UTF-16 代理对来返回补充字符：
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303 “夜晚与星星” === “\uD83C\uDF03”
+String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303（夜晚与星星）=== "\uD83C\uDF03"
 String.fromCharCode(55356, 57091);
 ```
 
