@@ -1,11 +1,8 @@
 ---
 title: CSS counter styles
 slug: Web/CSS/CSS_counter_styles
-page-type: css-module
-browser-compat:
-  - css.at-rules.counter-style
-  - css.properties.counter-increment
-  - css.properties.counter-reset
+l10n:
+  sourceCommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
 ---
 
 {{CSSRef}}

@@ -1,8 +1,8 @@
 ---
 title: CSS Lists
 slug: Web/CSS/CSS_lists
-page-type: css-module
-spec-urls: https://drafts.csswg.org/css-lists/
+l10n:
+  sourceCommit: 1a3107dc1b77e3ece12b0a7d872dadbe95813956
 ---
 
 {{CSSRef}}
