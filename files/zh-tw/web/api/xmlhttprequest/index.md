@@ -95,6 +95,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 ### 非標準方法
 
 - {{domxref("XMLHttpRequest.init()")}}
+
   - : 使用 C++ 程式時，用來初始化這個物件。
 
     > **警告：** 請勿在 JavaScript 中呼叫這個方法。
@@ -116,7 +117,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 - MDN 上涵蓋 XMLHttpRequest 的相關教學：
 
-  - [Ajax — Getting Started](/zh-TW/docs/AJAX/Getting_Started)
+  - [Ajax](/zh-TW/docs/Web/Guide/AJAX)
   - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
   - [`FormData`](/zh-TW/docs/Web/API/FormData)

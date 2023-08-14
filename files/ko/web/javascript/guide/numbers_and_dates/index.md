@@ -15,32 +15,32 @@ JavaScript에서 모든 숫자는 [double-precision 64-bit binary format IEEE 75
 
 JavaScript에 최근 추가 된 것은 {{jsxref ( "BigInt")}}로, 매우 큰 정수를 나타낼 수 있습니다. `BigInt`를사용할땐 다음을 주의해야 합니다. 예를 들면, `BigInt`와 {{jsxref ( "Number")}} 값을 같은 연산으로 혼합하고 일치시킬 수는 없으며 {{jsxref ( "Math")}} 객체를 `BigInt`값과 함께 사용할 수 없습니다.
 
-JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures)를 참조하세요.
+JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/ko/docs/Web/JavaScript/Data_structures)를 참조하세요.
 
 여러분은 숫자 리터럴의 네 가지 유형을 사용할 수 있습니다: 10진수, 2진수, 8진수, 16진수
 
 ### 10진수
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // 앞에 0이 붙은 숫자를 조심하세요:
 
-0888 // 10진수 888로 해석됩니다.
-0777 // non-strict mode에서 10진수 511로 해석됩니다.
+0888; // 10진수 888로 해석됩니다.
+0777; // non-strict mode에서 10진수 511로 해석됩니다.
 ```
 
 10진수 리터럴도 영(`0`)으로 시작될 수 있다는 점에 유의하세요. 그러나 만약 영`0` 다음 숫자가 8보다 작으면, 그 숫자는 8진법으로 해석됩니다.
 
 ### 2진수
 
-2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
+2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### 8진수
@@ -55,17 +55,17 @@ var m = 0644; // 420
 ECMAScript 5의 Strict 모드는 8 진수 구문을 금지합니다. 8 진수 구문은 ECMAScript 5의 일부가 아니지만, `0644 === 420` 및 `"\ 045"=== "%"`의 8 진수에 접두사를 붙이면 모든 브라우저에서 지원됩니다. ECMAScript 2015에서는 접두어가 `0o`인 경우 8 진수가 지원됩니다 (예 :
 
 ```javascript
-    var a = 0o10; // ES2015: 8
+var a = 0o10; // ES2015: 8
 ```
 
 ### 16진수
 
-16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
+16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### 지수 계산
@@ -92,16 +92,16 @@ var notANum = Number.NaN;
 
 다음 표에서는 `Number` 객체의 속성이 요약되어 있습니다.
 
-| 특성                                                 | 묘사                                                                          |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | 표현가능한 가장 큰 수 (`±1.7976931348623157e+308`)                            |
-| {{jsxref("Number.MIN_VALUE")}}             | 표현가능한 가장 작은 수(`±5e-324`)                                            |
-| {{jsxref("Number.NaN")}}                     | "숫자가 아닌" 특수값                                                          |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | 음의 무한대값; 오버 플로로 반환됨.                                            |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | 양의 무한대 값; 오버 플로로 반환됨.                                           |
-| {{jsxref("Number.EPSILON")}}                 | 표현가능한 매우 작은 값{{jsxref("Number")}}.(`2.220446049250313e-16`) |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | 자바스크립트에서 안전한 최소의 정수.(−2^53 + 1, or `−9007199254740991`)       |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | 자바스크립트에서 안전한 최대의 정수.(+2^53 − 1, or `+9007199254740991`)       |
+| 특성                                   | 묘사                                                                    |
+| -------------------------------------- | ----------------------------------------------------------------------- |
+| {{jsxref("Number.MAX_VALUE")}}         | 표현가능한 가장 큰 수 (`±1.7976931348623157e+308`)                      |
+| {{jsxref("Number.MIN_VALUE")}}         | 표현가능한 가장 작은 수(`±5e-324`)                                      |
+| {{jsxref("Number.NaN")}}               | "숫자가 아닌" 특수값                                                    |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | 음의 무한대값; 오버 플로로 반환됨.                                      |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | 양의 무한대 값; 오버 플로로 반환됨.                                     |
+| {{jsxref("Number.EPSILON")}}           | 표현가능한 매우 작은 값{{jsxref("Number")}}.(`2.220446049250313e-16`)   |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | 자바스크립트에서 안전한 최소의 정수.(−2^53 + 1, or `−9007199254740991`) |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | 자바스크립트에서 안전한 최대의 정수.(+2^53 − 1, or `+9007199254740991`) |
 
 <table class="standard-table">
   <caption>
@@ -159,24 +159,24 @@ var notANum = Number.NaN;
 
 `Number` 프로토 타입은 다양한 형식의 `Number` 객체에서 정보를 검색하는 메소드를 제공합니다. 다음 표는 `Number.prototype`의 메소드를 요약 한 것입니다.
 
-| 방법                                                                     | Description                                                            |
-| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| 방법                                                  | Description                                                            |
+| ----------------------------------------------------- | ---------------------------------------------------------------------- |
 | {{jsxref("Number.toExponential", "toExponential()")}} | 지수표기법 안에서 번호를 나타내는 문자열을 반환합니다.                 |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | 문자열 고정 소수 점 표기법의 수를 나타내는 문자열을 반환합니다.        |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | 지정된 정밀에 고정 소수 점 표기법의 수를 나타내는 문자열을 반환합니다. |
+| {{jsxref("Number.toFixed", "toFixed()")}}             | 문자열 고정 소수 점 표기법의 수를 나타내는 문자열을 반환합니다.        |
+| {{jsxref("Number.toPrecision", "toPrecision()")}}     | 지정된 정밀에 고정 소수 점 표기법의 수를 나타내는 문자열을 반환합니다. |
 
 ## `Math` 객체
 
 내장 {{jsxref ( "Math")}} 객체는 수학 상수 및 함수에 대한 속성 및 메서드를 포함합니다. 예를 들어, `Math` 객체의 `PI` 속성에는 pi (3.141 ...) 값이 있습니다.이 값은 응용 프로그램에서 다음과 같이 사용합니다.
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 마찬가지로 표준 수학 함수도 `Math`의 함수입니다. 여기에는 삼각 함수, 로그 함수, 지수 함수 및 기타 함수가 포함됩니다. 예를 들어 삼각 함수 sine을 사용하려면 다음과 같이 작성합니다.
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 `Math`의 모든 삼각 함수에는 라디안으로 매게변수를 입력해야 합니다.
@@ -382,12 +382,11 @@ function JSClock() {
   var hour = time.getHours();
   var minute = time.getMinutes();
   var second = time.getSeconds();
-  var temp = "" + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
-    temp = "12";
-  temp += ((minute < 10) ? ":0" : ":") + minute;
-  temp += ((second < 10) ? ":0" : ":") + second;
-  temp += (hour >= 12) ? " P.M." : " A.M.";
+  var temp = "" + (hour > 12 ? hour - 12 : hour);
+  if (hour == 0) temp = "12";
+  temp += (minute < 10 ? ":0" : ":") + minute;
+  temp += (second < 10 ? ":0" : ":") + second;
+  temp += hour >= 12 ? " P.M." : " A.M.";
   return temp;
 }
 ```

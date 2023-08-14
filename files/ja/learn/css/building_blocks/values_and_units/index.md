@@ -24,7 +24,7 @@ CSS の仕様や MDN のプロパティページでは、`<color>` や `<length>
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -131,15 +131,15 @@ Relative length units (相対的な長さの単位) は、何かとの比較に�
     </tr>
     <tr>
       <td><code>svw, svh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>lvw, lvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>の幅と高さの 1%。</td>
     </tr>
     <tr>
       <td><code>dvw, dvh</code></td>
-      <td>それぞれ、<a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
+      <td>それぞれ、<a href="/ja/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>の幅と高さの 1%。</td>
     </tr>
   </tbody>
 </table>
@@ -315,24 +315,3 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 例えば、`<image>` でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう!
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

@@ -16,27 +16,29 @@ l10n:
 次の例ではグリッドコンテナーに 2 つのグリッドアイテムを含み、これらに {{cssxref("grid-area")}} プロパティで名前を付け、グリッド上に {{cssxref("grid-template-areas")}} を使ってレイアウトしています。これによりグリッドセルと 4 つ含むものと、2 つ含むものの 2 つのグリッド領域ができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100px 100px;
   grid-template-areas:
     "a a b"
@@ -52,8 +54,8 @@ l10n:
 
 ```html
 <div class="wrapper">
-   <div class="item1">Item</div>
-   <div class="item2">Item</div>
+  <div class="item1">Item</div>
+  <div class="item2">Item</div>
 </div>
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: CSS での画像スプライトの実装
-slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
+slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 ---
 
 {{CSSRef}}

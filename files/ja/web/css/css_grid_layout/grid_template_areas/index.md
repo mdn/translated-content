@@ -1,6 +1,6 @@
 ---
 title: グリッドテンプレート領域
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Drag & Drop archivo
 slug: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-original_slug: DragDrop/Drag_and_Drop/drag_and_drop_archivo
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -25,7 +24,10 @@ Es necesario configurar un evento [`drop`](/es/docs/Web/Reference/Events/drop) e
 Normalmente, una aplicación incluirá una función de gestión de eventos [`dragover`](/es/docs/Web/Reference/Events/dragover) en el elemento objetivo del arrastre y esa función desactivará el comportamiento de arrastre por defecto del browser. Para añadir esta función necesita incluir una función global {{domxref("GlobalEventHandlers.ondragover","ondragover")}}:
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Arrastra y suelta uno o más archivos a esta zona ...</p>
 </div>
 ```
@@ -35,7 +37,7 @@ Por último, puede que una aplicación quiera personalizar el estilo del element
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```
@@ -52,7 +54,7 @@ Nótese que en este ejemplo, cualquier item arrastrado que no sea un archivo es 
 
 ```js
 function dropHandler(ev) {
-  console.log('Fichero(s) arrastrados');
+  console.log("Fichero(s) arrastrados");
 
   // Evitar el comportamiendo por defecto (Evitar que el fichero se abra/ejecute)
   ev.preventDefault();
@@ -61,20 +63,22 @@ function dropHandler(ev) {
     // Usar la interfaz DataTransferItemList para acceder a el/los archivos)
     for (var i = 0; i < ev.dataTransfer.items.length; i++) {
       // Si los elementos arrastrados no son ficheros, rechazarlos
-      if (ev.dataTransfer.items[i].kind === 'file') {
+      if (ev.dataTransfer.items[i].kind === "file") {
         var file = ev.dataTransfer.items[i].getAsFile();
-        console.log('... file[' + i + '].name = ' + file.name);
+        console.log("... file[" + i + "].name = " + file.name);
       }
     }
   } else {
     // Usar la interfaz DataTransfer para acceder a el/los archivos
     for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+      console.log(
+        "... file[" + i + "].name = " + ev.dataTransfer.files[i].name,
+      );
     }
   }
 
   // Pasar el evento a removeDragData para limpiar
-  removeDragData(ev)
+  removeDragData(ev);
 }
 ```
 
@@ -84,7 +88,7 @@ El siguiente evento [`dragover`](/es/docs/Web/Reference/Events/dragover) llama a
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -97,7 +101,7 @@ Typically, an application may want to perform some cleanup by deleting the file 
 
 ```js
 function removeDragData(ev) {
-  console.log('Removing drag data')
+  console.log("Removing drag data");
 
   if (ev.dataTransfer.items) {
     // Use DataTransferItemList interface to remove the drag data

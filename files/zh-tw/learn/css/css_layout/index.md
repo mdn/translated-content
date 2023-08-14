@@ -26,7 +26,7 @@ slug: Learn/CSS/CSS_layout
 - [常規流](/zh-TW/docs/Learn/CSS/CSS_layout/Normal_Flow)
   - : 在我們做任何事之前，網頁上的元素會根據常規流自行排列。這篇文章解釋常規流的基礎知識，用來學習如何改變它。
 - [彈性盒子](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox)
-  - : [彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
+  - : [彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Using_flexbox_to_lay_out_web_applications)是一維空間的排版方式，用來讓項目以行或列的方式排列。項目會延展或限縮來符合較大或較小的空間。這篇文章會解釋基礎原理。
 - [網格](/zh-TW/docs/Learn/CSS/CSS_layout/Grids)
   - : CSS 網格排版是一個二維空間的網頁排版系統。它讓你將內容排入行與列中，且它有許多功能讓你在建立複雜的排版時變得簡單明瞭。這篇文章會告訴你全部。
 - [浮動](/zh-TW/docs/Learn/CSS/CSS_layout/Floats)

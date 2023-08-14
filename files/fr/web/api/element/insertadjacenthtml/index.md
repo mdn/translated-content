@@ -1,12 +1,6 @@
 ---
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
 
 {{APIRef("DOM")}}
@@ -26,7 +20,7 @@ element.insertAdjacentHTML(position, text);
 
 <!---->
 
-- `'beforebegin'` : Avant l'`element`  lui-même.
+- `'beforebegin'` : Avant l'`element` lui-même.
 - `'afterbegin'` : Juste à l'intérieur de l'`element` , avant son premier enfant.
 - `'beforeend'` : Juste à l'intérieur de l'`element` , après son dernier enfant.
 - `'afterend'` : Après `element` lui-même.
@@ -54,8 +48,8 @@ element.insertAdjacentHTML(position, text);
 
 ```js
 // <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // Ici la nouvelle structure est :
 // <div id="one">one</div><div id="two">two</div>

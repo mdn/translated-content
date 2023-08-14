@@ -1,7 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
@@ -38,12 +37,12 @@ Como ya explicamos en los artículos de HTML, los elementos pueden tener atribut
 
 Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo `href`) o a partir de varias coincidencias diferentes con respecto al valor del atributo.
 
-| Selector | Ejemplo | Descripción |
-| --- | --- | --- |
-| `[attr]` | `a[title]` | Relaciona elementos con un mismo nombre de atributo, _attr_ (el valor que se indica entre corchetes). |
-| `[attr=value]` | `a[href="https://example.com"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente el mismo, _value_ (la cadena de caracteres que se indica entre corchetes). |
-| `[attr~=value]` | `p[class~="special"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente _value_, o los elementos con un mismo atributo _attr_ que contiene uno o más valores de los cuales, al menos uno, coincide con _value_.<br><br> Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio. |
-| `[attr\|=value]` | `div[lang\|="zh"]` | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor puede ser exactamente _value_ o puede comenzar con _value_ seguido inmediatamente por un guion. |
+| Selector         | Ejemplo                         | Descripción                                                                                                                                                                                                                                                                                                                                             |
+| ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[attr]`         | `a[title]`                      | Relaciona elementos con un mismo nombre de atributo, _attr_ (el valor que se indica entre corchetes).                                                                                                                                                                                                                                                   |
+| `[attr=value]`   | `a[href="https://example.com"]` | Relaciona elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente el mismo, _value_ (la cadena de caracteres que se indica entre corchetes).                                                                                                                                                                                       |
+| `[attr~=value]`  | `p[class~="special"]`           | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor es exactamente _value_, o los elementos con un mismo atributo _attr_ que contiene uno o más valores de los cuales, al menos uno, coincide con _value_.<br><br> Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio. |
+| `[attr\|=value]` | `div[lang\|="zh"]`              | Relaciona los elementos con un mismo nombre de atributo, _attr_, cuyo valor puede ser exactamente _value_ o puede comenzar con _value_ seguido inmediatamente por un guion.                                                                                                                                                                             |
 
 En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
 
@@ -55,7 +54,7 @@ En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
 
 ## Selectores coincidentes con subcadenas
 
-Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases `box-warning` y `box-error` y quieres encontrar todos los elementos que empiezan con la cadena de caracteres “box-”, puedes seleccionarlas ambas con `[class^="box-"]`.
+Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases `box-warning` y `box-error` y quieres encontrar todos los elementos que empiezan con la cadena de caracteres "box-", puedes seleccionarlas ambas con `[class^="box-"]`.
 
 | Selector        | Ejemplo             | Descripción                                                                                                                                                  |
 | --------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

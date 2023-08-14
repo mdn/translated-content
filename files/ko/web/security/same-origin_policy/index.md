@@ -96,24 +96,24 @@ document.domain = "company.com";
 
 교차 출처에서 `Window`의 다음 항목에 접근할 수 있습니다.
 
-| 메서드                                       |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| 메서드                            |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| 속성                                     |            |
-| ---------------------------------------- | ---------- |
-| {{domxref("window.closed")}}     | 읽기 전용. |
-| {{domxref("window.frames")}}     | 읽기 전용. |
-| {{domxref("window.length")}}     | 읽기 전용. |
+| 속성                           |            |
+| ------------------------------ | ---------- |
+| {{domxref("window.closed")}}   | 읽기 전용. |
+| {{domxref("window.frames")}}   | 읽기 전용. |
+| {{domxref("window.length")}}   | 읽기 전용. |
 | {{domxref("window.location")}} | 읽기/쓰기. |
-| {{domxref("window.opener")}}     | 읽기 전용. |
-| {{domxref("window.parent")}}     | 읽기 전용. |
+| {{domxref("window.opener")}}   | 읽기 전용. |
+| {{domxref("window.parent")}}   | 읽기 전용. |
 | {{domxref("window.self")}}     | 읽기 전용. |
-| {{domxref("window.top")}}         | 읽기 전용. |
-| {{domxref("window.window")}}     | 읽기 전용. |
+| {{domxref("window.top")}}      | 읽기 전용. |
+| {{domxref("window.window")}}   | 읽기 전용. |
 
 일부 브라우저는 위의 항목보다 더 많은 접근을 허용할 수도 있습니다.
 
@@ -121,12 +121,12 @@ document.domain = "company.com";
 
 교차 출처에서 `Location`의 다음 항목에 접근할 수 있습니다.
 
-| 메서드                                   |
-| ---------------------------------------- |
+| 메서드                          |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| 속성                                 |            |
-| ------------------------------------ | ---------- |
+| 속성                         |            |
+| ---------------------------- | ---------- |
 | {{domxref("URLUtils.href")}} | 쓰기 전용. |
 
 일부 브라우저는 위의 항목보다 더 많은 접근을 허용할 수도 있습니다.

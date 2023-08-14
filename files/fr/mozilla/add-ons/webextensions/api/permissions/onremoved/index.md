@@ -1,15 +1,6 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Permissions
-  - Reference
-  - WebExtensions
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 
 {{AddonSidebar()}}
@@ -19,9 +10,9 @@ Activé lorsque certaines permissions sont supprimés de l'extension.
 ## Syntaxe
 
 ```js
-browser.permissions.onRemoved.addListener(listener)
-browser.permissions.onRemoved.removeListener(listener)
-browser.permissions.onRemoved.hasListener(listener)
+browser.permissions.onRemoved.addListener(listener);
+browser.permissions.onRemoved.removeListener(listener);
+browser.permissions.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

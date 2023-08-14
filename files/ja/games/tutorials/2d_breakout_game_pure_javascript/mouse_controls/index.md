@@ -1,7 +1,6 @@
 ---
 title: マウス操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
 {{GamesSidebar}}
@@ -28,7 +27,7 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 function mouseMoveHandler(e) {
   const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth/2;
+    paddleX = relativeX - paddleWidth / 2;
   }
 }
 ```

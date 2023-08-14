@@ -3,6 +3,8 @@ title: <display-internal>
 slug: Web/CSS/display-internal
 ---
 
+{{CSSRef}}
+
 一些布局模型，例如 `table` 和 `ruby`具有复杂的内部结构，具有他们的孩子和后代可以填充的几个不同的角色。此页面定义了那些“内部”显示值，这些值仅在该特定布局模式中具有意义。
 
 ## 语法

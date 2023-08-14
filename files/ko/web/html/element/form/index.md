@@ -9,8 +9,6 @@ slug: Web/HTML/Element/form
 
 {{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 `<form>` 요소를 꾸밀 땐, 모든 {{domxref("HTMLFormElement.elements", "elements")}}의 유효성을 나타내는 CSS {{cssxref(":valid")}}와 {{cssxref(":invalid")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용할 수 있습니다.
 
 <table class="properties">
@@ -67,12 +65,12 @@ slug: Web/HTML/Element/form
 
   - : A comma-separated list of content types that the server accepts.
 
-    > **참고:** **사용시 주의:** 이 속성은 HTML5에서 제거되고 더 이상 사용되서는 안됩니다. 대신에, {{HTMLElement("input")}} 요소의 {{htmlattrxref("accept", "input")}} 속성을 사용하세요.
+    > **참고:** **사용시 주의:** 이 속성은 HTML5에서 제거되고 더 이상 사용되서는 안됩니다. 대신에, {{HTMLElement("input")}} 요소의 [`accept`](/ko/docs/Web/HTML/Element/input#accept) 속성을 사용하세요.
 
 - {{htmlattrdef("accept-charset")}}
   - : 스페이스로 구분한, 서버가 허용하는 문자 인코딩의 목록. 브라우저는 목록을 순서대로 사용합니다. 기본값은 [페이지 인코딩](/ko/docs/Web/HTTP/Headers/Content-Encoding)과 같습니다.
 - {{htmlattrdef("action")}}
-  - : 양식 데이터를 처리할 프로그램의 {{glossary("URI")}}. {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 {{htmlattrxref("formaction", "button")}} 특성으로 재정의할 수 있습니다.
+  - : 양식 데이터를 처리할 프로그램의 {{glossary("URI")}}. {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formaction`](/ko/docs/Web/HTML/Element/button#formaction) 특성으로 재정의할 수 있습니다.
 - {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
 
   - : 양식 요소 내에서 영문을 입력할 때 자동으로 대문자 변환하는 방식. iOS Safari에서만 사용하는 비표준 특성입니다. 각 요소의 `autocapitalize` 특성이 `<form>`에 정의된 값을 재정의합니다.
@@ -97,7 +95,7 @@ slug: Web/HTML/Element/form
     - `multipart/form-data`: `<input type="file">`이 존재하는 경우 사용하세요.
     - `text/plain`: HTML 5에서 디버깅 용으로 추가된 값.
 
-    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 {{htmlattrxref("formenctype", "button")}} 특성으로 재정의할 수 있습니다.
+    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formenctype`](/ko/docs/Web/HTML/Element/button#formenctype) 특성으로 재정의할 수 있습니다.
 
 - {{htmlattrdef("method")}}
 
@@ -107,38 +105,40 @@ slug: Web/HTML/Element/form
     - `get`: [GET 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3). 양식 데이터를 `action` URL과 `?` 구분자 뒤에 이어 붙여서 전송합니다.
     - dialog: 양식이 {{htmlelement("dialog")}} 안에 위치한 경우, 제출과 함께 대화 상자를 닫습니다.
 
-    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 {{htmlattrxref("formmethod", "button")}} 특성으로 재정의할 수 있습니다.
+    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formmethod`](/ko/docs/Web/HTML/Element/button#formmethod) 특성으로 재정의할 수 있습니다.
 
 - {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : 양식의 이름. HTML 4부터 사용 중단됐습니다. {{htmlattrxref("id")}}를 사용하세요.
+  - : 양식의 이름. HTML 4부터 사용 중단됐습니다. [`id`](/ko/docs/Web/HTML/Global_attributes#id)를 사용하세요.
 - {{htmlattrdef("novalidate")}}
-  - : 지정한 경우 양식의 유효성 검증을 건너뜁니다. `novalidate` 특성을 지정하지 않은(양식의 검증을 수행하는) 경우에도 {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 {{htmlattrxref("formnovalidate", "button")}} 특성으로 재정의할 수 있습니다.
+  - : 지정한 경우 양식의 유효성 검증을 건너뜁니다. `novalidate` 특성을 지정하지 않은(양식의 검증을 수행하는) 경우에도 {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formnovalidate`](/ko/docs/Web/HTML/Element/button#formnovalidate) 특성으로 재정의할 수 있습니다.
 - {{htmlattrdef("target")}}
 
-  - : 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 {{htmlattrxref("target","form")}} 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
+  - : 양식 제출의 결과를 표시할 위치를 나타내는 표준 키워드 혹은 사용자 지정 이름. 가능한 값은 {{glossary("browsing context", "브라우징 맥락")}}(탭, 창, {{htmlelement("iframe")}})의 이름 또는 키워드입니다. 지정한 경우, 버튼의 양식 소유자가 가진 [`target`](/ko/docs/Web/HTML/Element/form#target) 특성보다 우선합니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
 
     - `_self`: 응답을 현재 브라우징 맥락에 표시합니다. 기본값.
     - `_blank`: 응답을 새로운 브라우징 맥락에 표시합니다. 보통 새 탭이지만, 사용자가 브라우저 설정을 통해 새 창으로 바꿀 수 있습니다.
     - `_parent`: 응답을 현재 브라우징 맥락의 부모에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
     - `_top`: 응답을 최상단 브라우징 맥락(현재 맥락의 부모면서 자신의 부모가 존재하지 않는, 제일 높은 맥락)에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
 
-    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 {{htmlattrxref("formtarget", "button")}} 특성으로 재정의할 수 있습니다.
+    {{HTMLElement("button")}}, [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit), [`<input type="image">`](/ko/docs/Web/HTML/Element/input/image) 요소의 [`formtarget`](/ko/docs/Web/HTML/Element/button#formtarget) 특성으로 재정의할 수 있습니다.
 
 ## 예제
 
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form>
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -147,7 +147,7 @@ slug: Web/HTML/Element/form
 <form method="post">
   <fieldset>
     <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <label><input type="radio" name="radio" /> Select me</label>
   </fieldset>
 </form>
 ```

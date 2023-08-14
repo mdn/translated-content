@@ -103,7 +103,6 @@ let myDOM;
 let xmlDoc;
 
 function init() {
-
   // On charge le fichier XSLT, example1.xsl
   let myXMLHTTPRequest = new XMLHttpRequest();
   myXMLHTTPRequest.open("GET", "example1.xsl", false);

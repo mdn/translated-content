@@ -1,6 +1,6 @@
 ---
 title: CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap
+slug: Web/CSS/CSS_scroll_snap
 ---
 
 {{CSSRef}}
@@ -44,8 +44,8 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 ## 指南
 
-- [CSS 滚动快照的基本概念](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
-- [浏览器兼容性和滚动快照](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/compat)
+- [CSS 滚动快照的基本概念](/zh-CN/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [浏览器兼容性和滚动快照](/zh-CN/docs/Web/CSS/CSS_scroll_snap/compat)
 
 ## 规范
 
@@ -53,4 +53,4 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 ## 浏览器兼容性
 
-The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. [Read the guide to browser compatibility](/zh-CN/docs/Web/CSS/CSS_Scroll_Snap/compat) for an overview of how to support both the old and new specification.
+The individual property pages detail the browser compatibility situation for Scroll Snap. Note that at the present time Firefox still implements an old version of the specification. [Read the guide to browser compatibility](/zh-CN/docs/Web/CSS/CSS_scroll_snap/compat) for an overview of how to support both the old and new specification.

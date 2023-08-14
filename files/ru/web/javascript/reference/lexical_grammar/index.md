@@ -1,13 +1,6 @@
 ---
 title: Лексический синтаксис
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - JavaScript
-  - Keyword
-  - Literal
-  - ключевые слова
-  - литералы
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 
 {{JsSidebar("More")}}
@@ -234,7 +227,7 @@ function import() {} // неправильно.
 Подробнее о `{{jsxref('Global_Objects/null','null')}}null`.
 
 ```js
-null
+null;
 ```
 
 ### Литерал Boolean
@@ -242,8 +235,8 @@ null
 Подробнее о `{{jsxref('Global_Objects/Boolean','Boolean')}}`.
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### Литералы чисел
@@ -251,13 +244,13 @@ false
 #### Decimal (десятичные числа)
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // Будьте осторожны с использованием нуля вначале числа:
 
-0888 // 888 распознается, как десятичное число
-0777 // распознается, как восьмеричное число, 511 - как десятичное число
+0888; // 888 распознается, как десятичное число
+0777; // распознается, как восьмеричное число, 511 - как десятичное число
 ```
 
 Имейте в виду, что литералы десятичных чисел могут начинаться с нуля (0), за которым следует другое десятичное число, но в случае, если число начинается с нуля и за ним идёт цифра меньше 8, то число будет распознано как восьмеричное. This won't throw in JavaScript, see {{bug(957513)}}. See also the page about `{{jsxref('Global_Objects/parseInt','parseInt()','Octal_interpretations_with_no_radix')}}`.
@@ -267,9 +260,9 @@ false
 Синтаксис двоичных чисел состоит из цифры ноль, за которой следует маленькая или большая латинская буква "B" (0b или 0B). Этот синтаксис новый и появился только в ECMAScript 2015, пожалуйста посмотрите таблицу совместимости с браузерами. Это может производить ошибку `{{jsxref('Global_Objects/SyntaxError','SyntaxError')}}`: "Missing binary digits after 0b", Если цифры не 0 или 1.
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### Octal (восьмеричные числа)
@@ -277,12 +270,12 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 Восьмеричный числовой синтаксис, который использует 0 с последующей, в нижнем или верхнем регистре, латинскую букву "О" (`0o` или `0O)`. Этот синтаксис появился в ECMAScript 2015, пожалуйста, посмотрите таблицу совместимости с браузерами. Это может производить ошибку `SyntaxError`: "Missing octal digits after 0o", если цифры не между 0 и 7.
 
 ```js
-var n = 0O755; // 493
+var n = 0o755; // 493
 var m = 0o644; // 420
 
 // Так же возможно с лидирующими нулями (см. заметку о десятичных дробях выше)
-0755
-0644
+0755;
+0644;
 ```
 
 #### Hexadecimal (шестнадцатеричные числа)
@@ -290,9 +283,9 @@ var m = 0o644; // 420
 Шестнадцатеричный числовой синтаксис, который использует 0 с последующей, в нижнем или верхнем регистре, латинскую букву "X" (`0x` или `0X)`. Если числа после 0x вне диапазона (0123456789ABCDEF), то может последовать за этим {{jsxref("SyntaxError")}}: "Identifier starts immediately after numeric literal".
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### Литерал Object (Объект)
@@ -303,8 +296,10 @@ var m = 0o644; // 420
 var o = { a: "foo", b: "bar", c: 42 };
 
 // сокращённая нотация. Появилась в ES2015
-var a = "foo", b = "bar", c = 42;
-var o = {a, b, c};
+var a = "foo",
+  b = "bar",
+  c = 42;
+var o = { a, b, c };
 // вместо
 var o = { a: a, b: b, c: c };
 ```
@@ -314,20 +309,20 @@ var o = { a: a, b: b, c: c };
 Смотрите также {{jsxref("Array")}} для получения более подробной информации.
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### Литерал String (Строка)
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 #### Экранирование шестнадцатеричной последовательности
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Экранирование Юникод символов
@@ -335,7 +330,7 @@ var o = { a: a, b: b, c: c };
 Для экранирования Юникод символов обязательно нужно указать по крайней мере 4 символа после \u.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Unicode code point escapes
@@ -345,10 +340,10 @@ var o = { a: a, b: b, c: c };
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // the same with simple Unicode escapes
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Литерал Регулярного выражения
@@ -369,14 +364,14 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 Смотрите также {{jsxref('template_strings','template strings')}} для получения более подробной информации.
 
 ```js
-`string text`
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag `string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## Автоматическая вставка "точки с запятой"
@@ -405,7 +400,7 @@ tag `string text ${expression} string text`
 
 Here `++` is not treated as a {{jsxref('Operators/Arithmetic_Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
-```js
+```js-nolint
 a = b
 ++c
 
@@ -424,7 +419,7 @@ a = b;
 - `yield`, `yield*`
 - `module`
 
-```js
+```js-nolint
 return
 a + b
 
@@ -446,7 +441,7 @@ a + b;
 
 - Prior to Firefox 5 (JavaScript 1.8.6), future reserved keywords could be used when not in strict mode. This ECMAScript violation was fixed in Firefox 5.
 
-## Смотрите также:
+## Смотрите также
 
 - [Jeff Walden: Двоичные и восьмеричные числа](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)

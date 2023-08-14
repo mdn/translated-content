@@ -1,18 +1,6 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - Same-origin
-  - Security
-  - TopicStub
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors
 ---
 
 {{HTTPSidebar}}
@@ -48,19 +36,19 @@ Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce m
 
 - [Raison: CORS désactivé](/fr/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [Raison: la requête CORS a échoué](/fr/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
-- [Raison: l'en-tête CORS ‘Origin’ ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
+- [Raison: l'en-tête CORS 'Origin' ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Raison: Requête CORS redirection externe non autorisée](/fr/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
 - [Raison: Requête CORS non http](/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
-- [Raison: En-tête CORS ‘Access-Control-Allow-Origin’ manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
-- [Raison: l'en-tête CORS ‘Access-Control-Allow-Origin’ ne correspond pas à ‘xyz’](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
-- [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS ‘Access-Control-Allow-Origin’ est ‘\*’](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
-- [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods’](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Raison: ‘true’ attendu dans l'en-tête CORS ‘Access-Control-Allow-Credentials’](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
+- [Raison: En-tête CORS 'Access-Control-Allow-Origin' manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
+- [Raison: l'en-tête CORS 'Access-Control-Allow-Origin' ne correspond pas à 'xyz'](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
+- [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS 'Access-Control-Allow-Origin' est '\*'](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
+- [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
+- [Raison: 'true' attendu dans l'en-tête CORS 'Access-Control-Allow-Credentials'](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
 - [Raison: Échec du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Raison: jeton ‘xyz’ non valide dans l'en-tête CORS ‘Access-Control-Allow-Methods’](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Raison: jeton ‘xyz’ non valide dans l'en-tête CORS ‘Access-Control-Allow-Headers’](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Raison: jeton ‘xyz’ manquant dans l'en-tête CORS ‘Access-Control-Allow-Headers’ du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
-- [Raison: plusieurs en-têtes CORS ‘Access-Control-Allow-Origin’ ne sont pas autorisés](/fr/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
+- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Headers'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
+- [Raison: jeton 'xyz' manquant dans l'en-tête CORS 'Access-Control-Allow-Headers' du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
+- [Raison: plusieurs en-têtes CORS 'Access-Control-Allow-Origin' ne sont pas autorisés](/fr/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
 
 ## Voir aussi
 

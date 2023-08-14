@@ -5,7 +5,7 @@ slug: Web/Accessibility/ARIA/ARIA_Techniques
 
 ## Roles（角色）
 
-### [Widget roles （局部組件）](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role)
+### Widget roles（局部組件）
 
 - [Button （按鈕）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role)
 - [Checkbox （複選核取方塊）](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role)
@@ -46,7 +46,7 @@ slug: Web/Accessibility/ARIA/ARIA_Techniques
 - Tree
 - Treegrid
 
-### [Document structure roles](https://www.w3.org/TR/wai-aria/roles#document_structure_roles)
+### Document structure roles
 
 - [Article](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_article_role)
 - Definition
@@ -64,7 +64,7 @@ slug: Web/Accessibility/ARIA/ARIA_Techniques
 - Separator
 - [Toolbar](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role)
 
-### [Landmark roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles)
+### Landmark roles
 
 - Application
 - [Banner](/zh-TW/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role)

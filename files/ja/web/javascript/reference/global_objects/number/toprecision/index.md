@@ -1,6 +1,8 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
+l10n:
+  sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 ## 構文
 
-```js
+```js-nolint
 toPrecision()
 toPrecision(precision)
 ```
@@ -29,30 +31,30 @@ toPrecision(precision)
 
 ## 例外
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : `precision` が 1 と 100 の間 (両端を含む) でない場合、 {{jsxref("RangeError")}} が発生します。実装上はこの範囲を超えた値にも対応できます。 ECMA-262 では 21 桁までの精度のみを要求しています。
+- {{jsxref("RangeError")}}
+  - : `precision` が `1` 以上 100 以下の範囲にない場合に発生します。
 
 ## 例
 
-### toPrecision の使用
+### `toPrecision` の使用
 
 ```js
-let numObj = 5.123456
+let num = 5.123456;
 
-console.log(numObj.toPrecision())    // '5.123456' と出力
-console.log(numObj.toPrecision(5))   // '5.1235' と出力
-console.log(numObj.toPrecision(2))   // '5.1' と出力
-console.log(numObj.toPrecision(1))   // '5' と出力
+console.log(num.toPrecision()); // '5.123456'
+console.log(num.toPrecision(5)); // '5.1235'
+console.log(num.toPrecision(2)); // '5.1'
+console.log(num.toPrecision(1)); // '5'
 
-numObj = 0.000123
+num = 0.000123;
 
-console.log(numObj.toPrecision())    // '0.000123' と出力
-console.log(numObj.toPrecision(5))   // '0.00012300' と出力
-console.log(numObj.toPrecision(2))   // '0.00012' と出力
-console.log(numObj.toPrecision(1))   // '0.0001' と出力
+console.log(num.toPrecision()); // '0.000123'
+console.log(num.toPrecision(5)); // '0.00012300'
+console.log(num.toPrecision(2)); // '0.00012'
+console.log(num.toPrecision(1)); // '0.0001'
 
 // なお、場合によっては指数表記が返されることがあります。
-console.log((1234.5).toPrecision(2)) // '1.2e+3' と出力
+console.log((1234.5).toPrecision(2)); // '1.2e+3'
 ```
 
 ## 仕様書

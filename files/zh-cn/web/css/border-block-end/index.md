@@ -3,52 +3,71 @@ title: border-block-end
 slug: Web/CSS/border-block-end
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`border-block-end`** 属性是一个简写属性，用于在样式表中的单个位置设置各个逻辑块结尾边界属性值。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-end`** 为[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，用于在样式表中的某处同时设置逻辑块末边框的各属性值。
 
 {{EmbedInteractiveExample("pages/css/border-block-end.html")}}
 
-## Syntax
+## 属性构成
+
+此属性为下列 CSS 属性的简写属性：
+
+- {{CSSXref("border-block-end-color")}}
+- {{CSSXref("border-block-end-style")}}
+- {{CSSXref("border-block-end-width")}}
+
+## 语法
 
 ```css
 border-block-end: 1px;
 border-block-end: 2px dotted;
 border-block-end: medium dashed blue;
+
+/* 全局值 */
+border-block-end: inherit;
+border-block-end: initial;
+border-block-end: revert;
+border-block-end: revert-layer;
+border-block-end: unset;
 ```
 
-`border-block-end` can be used to set the values for one or more of {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}}, and {{cssxref("border-block-end-color")}}. The physical border to which it maps depends on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+`border-block-end` 可用于设置 {{CSSXref("border-block-end-width")}}、{{CSSXref("border-block-end-style")}} 和 {{CSSXref("border-block-end-color")}} 中至少一个属性的值。此属性所对应的实体边框取决于元素的书写模式、行内方向和文本朝向。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top")}}、{{CSSXref("border-right")}}、{{CSSXref("border-bottom")}} 或 {{CSSXref("border-left")}} 属性。
 
-Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-inline-start")}}, and {{cssxref("border-inline-end")}}, which define the other borders of the element.
+与此相关的属性有 {{CSSXref("border-block-start")}}、{{CSSXref("border-inline-start")}} 和 {{CSSXref("border-inline-end")}}，这些属性定义了元素的其他边框。
 
-{{cssinfo}}
+### 取值
 
-### Values
-
-The `border-block-end` is specified with one or more of the following, in any order:
+`border-block-end` 属性可用下列值中的至少一个指定，次序任意：
 
 - `<'border-width'>`
-  - : The width of the border. See {{cssxref("border-width")}}.
+  - : 边框宽度。见 {{CSSXref("border-width")}}。
 - `<'border-style'>`
-  - : The line style of the border. See {{cssxref("border-style")}}.
+  - : 边框线型。见 {{CSSXref("border-style")}}。
 - `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+  - : 边框颜色。见 {{CSSXref("color")}}。
 
-### Formal syntax
+## 形式定义
 
-{{csssyntax}}
+{{CSSInfo}}
 
-## Example
+## 形式语法
 
-### HTML Content
+{{CSSSyntax}}
+
+## 示例
+
+### 竖排文本的边框
+
+#### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
-### CSS Content
+#### CSS
 
 ```css
 div {
@@ -63,17 +82,20 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Example", 140, 140)}}
+#### 结果
 
-## Specification
+{{EmbedLiveSample("竖排文本的边框", 140, 140)}}
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- 此属性对应的实体边框属性：{{CSSXref("border-top")}}、{{CSSXref("border-right")}}、{{CSSXref("border-bottom")}} 或 {{CSSXref("border-left")}}
+- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

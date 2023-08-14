@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/What_is_a_domain_name
 ---
 
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
@@ -12,7 +11,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona Internet</a
         >
         y entender
@@ -52,6 +51,7 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 <!-- -->
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
+
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
 
     **Etiqueta (o componente)**
@@ -62,7 +62,7 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 
 #### ¿Quién es propietario de un nombre de dominio?
 
-No se puede “comprar un nombre de dominio”. Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
+No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
@@ -116,7 +116,7 @@ Como se observa, el dominio no existe en la base de datos de `whois` (en el mome
 El proceso es bastante sencillo:
 
 1. Ir a un sitio de registro.
-2. Generalmente hay un letrero que llama la atención que dice “Get a domain name”. Hacer click en él.
+2. Generalmente hay un letrero que llama la atención que dice "Get a domain name". Hacer click en él.
 3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
 4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 

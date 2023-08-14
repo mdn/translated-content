@@ -2,7 +2,7 @@
 title: MediaStream 収録 API
 slug: Web/API/MediaStream_Recording_API
 l10n:
-  sourceCommit: 60c1df4b8b6ed30b2baec49ec3e21a1648a0ba86
+  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -57,7 +57,7 @@ function handleDataAvailable(event) {
 }
 function download() {
   const blob = new Blob(recordedChunks, {
-    type: "video/webm"
+    type: "video/webm",
   });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -89,8 +89,7 @@ setTimeout((event) => {
 このコードスニペットでは、`enumerateDevices()` を使用して使用可能な入力機器を調べ、音声入力機器であるものを見つけて、{{HTMLElement("option")}} 要素を作成し、それを入力ソースピッカーを表す {{HTMLElement("select")}} 要素に追加します。
 
 ```js
-navigator.mediaDevices.enumerateDevices()
-.then((devices) => {
+navigator.mediaDevices.enumerateDevices().then((devices) => {
   devices.forEach((device) => {
     const menu = document.getElementById("inputdevices");
     if (device.kind === "audioinput") {

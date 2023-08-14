@@ -1,5 +1,5 @@
 ---
-title: '<caption>: 표 설명 요소'
+title: "<caption>: 표 설명 요소"
 slug: Web/HTML/Element/caption
 ---
 
@@ -67,7 +67,7 @@ The following attributes are deprecated and should not be used. They are documen
     - `bottom`
       - : The caption is displayed below the table.
 
-    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/en-US/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
+    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/ko/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
 ## 사용 일람
 
@@ -81,7 +81,9 @@ The following attributes are deprecated and should not be used. They are documen
 
 ```html
 <table>
-  <caption>Example Caption</caption>
+  <caption>
+    Example Caption
+  </caption>
   <tr>
     <th>Login</th>
     <th>Email</th>
@@ -106,7 +108,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 ```

@@ -1,7 +1,8 @@
 ---
 title: CSS Text
-slug: Web/CSS/CSS_Text
+slug: Web/CSS/CSS_text
 ---
+
 {{CSSRef}}
 
 **CSS Text**는 줄 바꿈, 정돈 및 정렬, 공백 처리 및 텍스트 변환 같은 텍스트 조작을 수행하는 법을 정의하는 CSS 모듈입니다.

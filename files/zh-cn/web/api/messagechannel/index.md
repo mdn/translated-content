@@ -27,15 +27,15 @@ Channel Messaging API 的 **`MessageChannel`** 接口允许我们创建一个新
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -44,7 +44,7 @@ function handleMessage(e) {
 }
 ```
 
-一个完整的运行示例，可以在 GitHub 上查看 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+有关更完整的运行示例，可以在 GitHub 上查看 [channel messaging 基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行示例](https://mdn.github.io/dom-examples/channel-messaging-basic/)）。
 
 ## 规范
 

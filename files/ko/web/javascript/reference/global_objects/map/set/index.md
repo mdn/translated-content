@@ -2,7 +2,7 @@
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
@@ -36,11 +36,11 @@ set(key, value)
 const myMap = new Map();
 
 // map에 새로운 요소를 추가합니다
-myMap.set('bar', 'foo');
-myMap.set(1, 'foobar');
+myMap.set("bar", "foo");
+myMap.set(1, "foobar");
 
 // map에 요소를 업데이트 합니다
-myMap.set('bar', 'baz');
+myMap.set("bar", "baz");
 ```
 
 ### 연속으로 set() 사용
@@ -49,9 +49,7 @@ myMap.set('bar', 'baz');
 
 ```js
 // Add new elements to the map with chaining.
-myMap.set('bar', 'foo')
-  .set(1, 'foobar')
-  .set(2, 'baz');
+myMap.set("bar", "foo").set(1, "foobar").set(2, "baz");
 ```
 
 ## 명세서

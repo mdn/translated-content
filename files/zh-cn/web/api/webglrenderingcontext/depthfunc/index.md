@@ -56,6 +56,6 @@ gl.getParameter(gl.DEPTH_FUNC) === gl.NEVER;
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.enable()")}}

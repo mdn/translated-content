@@ -46,6 +46,6 @@ CSS 接口是一个工具接口，无法创建该类型的对象：其内部只�
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Components.utils.importGlobalProperties](/zh-CN/docs/Components.utils.importGlobalProperties)

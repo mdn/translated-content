@@ -13,10 +13,10 @@ El propósito de esta regla es permitir a las fuente ser segmentados, así el na
 
 ```css
 /* valores <unicode-range> */
-unicode-range: U+26;               /* un único código */
+unicode-range: U+26; /* un único código */
 unicode-range: U+0-7F;
-unicode-range: U+0025-00FF;        /* rango de códigos */
-unicode-range: U+4??;              /* rango por expresión */
+unicode-range: U+0025-00FF; /* rango de códigos */
+unicode-range: U+4??; /* rango por expresión */
 unicode-range: U+0025-00FF, U+4??; /* multiples valores */
 ```
 
@@ -41,8 +41,8 @@ En el CSS, puedes ver que en efecto estamos definiendo una separación completa 
 
 ```css
 @font-face {
-  font-family: 'Ampersand';
-  src: local('Times New Roman');
+  font-family: "Ampersand";
+  src: local("Times New Roman");
   unicode-range: U+26;
 }
 

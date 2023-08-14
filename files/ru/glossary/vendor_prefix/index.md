@@ -1,8 +1,6 @@
 ---
 title: Vendor Prefix
 slug: Glossary/Vendor_Prefix
-translation_of: Glossary/Vendor_Prefix
-original_slug: Глоссарий/Vendor_Prefix
 ---
 
 Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers' code during the standardization process. Developers should wait to include the unprefixed property until browser behavior is standardized.
@@ -55,15 +53,16 @@ The prefixes for properties and methods are lower-case:
 Sample usage:
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame ||
-                            window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame ||
-                            window.oRequestAnimationFrame ||
-                            window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 ```
 
 ## Learn more
 
 ### General knowledge
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/ru/docs/Glossary")}}

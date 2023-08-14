@@ -1,13 +1,6 @@
 ---
 title: Utiliser l'API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - Guide
-  - Stockage
-  - Stockage Web
-  - localStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 
 L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
@@ -17,9 +10,9 @@ L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peu
 Les objets de stockages sont de simples magasins clé-valeur, similaires aux objets, mais restant intacts après des chargements de page. La clé peut être une chaîne de caractères ou des entiers, mais la valeur sera toujours une chaîne. Vous pouvez accéder à ces valeurs comme pour un objet ou avec les méthodes getItem() et setItem(). Les trois lignes suivantes vont enregistrer la couleur de la même façon :
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
@@ -29,7 +22,7 @@ Les deux principaux mécanismes internes du Stockage Web sont :
 - `sessionStorage` qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
 - `localStorage` qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (plus précisément, dans les navigateurs web le supportant, l'objet `Window` implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
 Donc, par exemple, un appel initial de `localStorage` sur un document va retourner un objet {{domxref("Storage")}} ; un appel de `sessionStorage` sur un document va retourner un objet {{domxref("Storage")}} différent. Les deux peuvent se manipuler de la même façon, mais séparément.
 
@@ -45,37 +38,37 @@ Voici une fonction qui va détecter que localStorage est supporté mais aussi di
 
 ```js
 function storageAvailable(type) {
-    try {
-        var storage = window[type],
-            x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage.length !== 0;
-    }
+  try {
+    var storage = window[type],
+      x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 Et voici comment l'utiliser :
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Nous pouvons utiliser localStorage
-}
-else {
+} else {
   // Malheureusement, localStorage n'est pas disponible
 }
 ```
@@ -103,7 +96,7 @@ Nous avons aussi fournit une [page pour l'événement émis](https://mdn.github.
 Pour démarrer avec [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), nous allons tester que l'objet de stockage a bien été rempli (c-à-d, que l'on a déjà accédé à la page):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -120,17 +113,17 @@ Comme vu ci dessus, les valeurs peuvent être recupérées du stockage en utilis
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -142,9 +135,9 @@ Ici, les trois premières lignes vont chercher les valeurs dans le stockage loca
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -169,12 +162,12 @@ Les pages des autres domaines ne peuvent pas accéder aux mêmes objets de stock
 Sur la page d'événement (voir [events.js](https://github.com/mdn/web-storage-demo/blob/gh-pages/event.js)) le seul JavaScript est :
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = e.storageArea;
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = e.storageArea;
 });
 ```
 

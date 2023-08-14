@@ -1,7 +1,6 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-original_slug: Web/JavaScript/Referencia/Sentencias/continue
 ---
 
 {{jsSidebar("Statements")}}
@@ -39,10 +38,11 @@ El siguiente ejemplo muestra un bucle {{jsxref("Sentencias/while", "while")}} qu
 i = 0;
 n = 0;
 while (i < 5) {
-   i++;
-   if (i == 3)
-      continue;
-   n += i;
+  i++;
+  if (i == 3) {
+    continue;
+  }
+  n += i;
 }
 ```
 
@@ -53,17 +53,14 @@ En el siguiente ejemplo, una sentencia etiquetada `checkiandj` contiene una sent
 Si `continue` tuviese una etiqueta `checkiandj`, el programa continuaría hasta encima de la sentencia `checkiandj`.
 
 ```js
-checkiandj:
-while (i < 4) {
+checkiandj: while (i < 4) {
   document.write(i + "<br>");
   i += 1;
 
-  checkj:
-  while (j > 4) {
+  checkj: while (j > 4) {
     document.write(j + "<br>");
     j -= 1;
-    if ((j % 2) == 0)
-      continue checkj;
+    if (j % 2 == 0) continue checkj;
     document.write(j + " is odd.<br>");
   }
   document.write("i = " + i + "<br>");

@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/createProgram
 ---
 
 {{APIRef("WebGL")}}
@@ -41,9 +34,9 @@ gl.attachShader(programme, shaderDeFragment);
 
 gl.linkProgram(programme);
 
-if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
+if (!gl.getProgramParameter(programme, gl.LINK_STATUS)) {
   var info = gl.getProgramInfoLog(program);
-  throw 'Impossible de compiler le programme WebGL. \n\n' + info;
+  throw "Impossible de compiler le programme WebGL. \n\n" + info;
 }
 ```
 

@@ -71,9 +71,10 @@ text-shadow: unset;
 ```
 
 ```html
-<p class="red-text-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="red-text-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Simple_shadow', '660px', '90px')}}
@@ -82,16 +83,22 @@ text-shadow: unset;
 
 ```css
 .white-text-with-blue-shadow {
-  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
   color: white;
-  font: 1.5em Georgia, serif;
+  font:
+    1.5em Georgia,
+    serif;
 }
 ```
 
 ```html
-<p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
-    natus error sit voluptatem accusantium doloremque laudantium,
-    totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+<p class="white-text-with-blue-shadow">
+  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+</p>
 ```
 
 {{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}
@@ -106,7 +113,7 @@ text-shadow: unset;
 
 ### Quantum CSS のメモ
 
-- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ({{bug(726550)}})。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
+- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
 
 ## 関連情報
 

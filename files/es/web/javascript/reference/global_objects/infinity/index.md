@@ -1,30 +1,42 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Infinity
+l10n:
+  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
 {{jsSidebar("Objects")}}
 
-## Resumen
-
 La propiedad global **`Infinity`** es un valor numérico que representa el infinito.
 
-{{js_property_attributes(0,0,0)}}
+{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
-## Sintaxis
+## Valor
+
+El mismo valor numérico que {{jsxref("Number.POSITIVE_INFINITY")}}.
+
+{{js_property_attributes(0, 0, 0)}}
+
+## Descripción
+
+`Infinity` es una propiedad del _objeto global_. En otras palabras, es una variable de alcance global.
+
+El valor `Infinity` (infinito positivo) es mayor que cualquier otro número.
+
+Este valor se comporta de forma ligeramente diferente al infinito matemático; consulte {{jsxref("Number.POSITIVE_INFINITY")}} para obtener más información.
+
+## Ejemplos
+
+### Utilizando Infinity
 
 ```js
-Infinity
+console.log(Infinity); /* Infinity */
+console.log(Infinity + 1); /* Infinity */
+console.log(Math.pow(10, 1000)); /* Infinity */
+console.log(Math.log(0)); /* -Infinity */
+console.log(1 / Infinity); /* 0 */
+console.log(1 / 0); /* Infinity */
 ```
-
-## Description
-
-`Infinity` es una del objeto global, es decir, esta es una variable de alcance global.
-
-El valor inicial de `Infinity` es {{jsxref("Number.POSITIVE_INFINITY")}}. El valor de `Infinity` (infinito positivo) es mayor que cualquier otro numero incluido el mismo. Este valor se comporta matematicamente como el infinito matemático; por ejemplo, cualquier numero multiplicado por `Infinity` da como resultado `Infinity`, y cualquier numero divido por `Infinity` da como resultado cero.
-
-Para la especificación ECMAScript 5, `Infinity` es de solo lectura (implementado en JavaScript 1.8.5 / Firefox 4).
 
 ## Especificaciones
 
@@ -34,7 +46,8 @@ Para la especificación ECMAScript 5, `Infinity` es de solo lectura (implementad
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
 - {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite")}}

@@ -2,6 +2,7 @@
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 **`readAsText()`** 메서드는 지정된 {{domxref("Blob")}} 이나 {{domxref("File")}} 의 컨텐츠를 읽기 위해 사용합니다. 읽기 연산이 끝나면, {{domxref("FileReader.readyState","readyState")}} 가 `DONE`으로 바뀌고, {{event("loadend")}} 이벤트가 트리거 되고, {{domxref("FileReader.result","result")}} 프로퍼티는 파일의 내용을 텍스트 문자열로 가집니다.

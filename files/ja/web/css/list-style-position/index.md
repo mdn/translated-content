@@ -13,7 +13,7 @@ slug: Web/CSS/list-style-position
 
 > **メモ:** このプロパティはリスト項目に対して適用されます。つまり、 `{{cssxref("display")}}: list-item;` が指定された要素です。[既定では](https://www.w3.org/TR/html5/rendering.html#lists)、 {{HTMLElement("li")}} 要素が該当します。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリスト項目に適用することができます。
 
-なお、 `list-style-position: inside` を指定したリスト要素の中で最初にブロック要素が配置された場合、その動作はブラウザーによって異なります。 Chrome と Safari では、この要素はマーカーボックスと同じ行に配置されますが、 Firefox、 Internet Explorer、 Opera では次の行に配置されます。 詳細については {{bug(36854)}} をご覧ください。
+なお、 `list-style-position: inside` を指定したリスト要素の中で最初にブロック要素が配置された場合、その動作はブラウザーによって異なります。 Chrome と Safari では、この要素はマーカーボックスと同じ行に配置されますが、 Firefox、 Internet Explorer、 Opera では次の行に配置されます。 詳細については [Firefox バグ 36854](https://bugzil.la/36854) をご覧ください。
 
 ## 構文
 

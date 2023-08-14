@@ -1,15 +1,15 @@
 ---
 title: At-rules
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
+
 {{cssref}}
 
 **At-rules** это [CSS операторы](/ru/docs/Web/CSS/Синтаксис#CSS_statements), которые показывают CSS как себя вести. Они начинаются со знака at, '`@`' (`U+0040 КОММЕРЧЕСКОЕ AT`), сопровождается идентификатором, и включает в себя всё до следующей точки с запятой, '`;`' (`U+003B ТОЧКА С ЗАПЯТОЙ`), или до следующего [CSS блока](/ru/docs/Web/CSS/Синтаксис#Блоки_объявлений_CSS), в зависимости от того, что наступит раньше.
 
 ```css
 /* Общая структура */
-@ИДЕНТИФИКАТОР (ПРАВИЛО);
+@идентификатор (ПРАВИЛО);
 
 /* Пример: говорит браузеру использовать UTF-8 кодировку символов */
 @charset "utf-8";
@@ -28,7 +28,6 @@ translation_of: Web/CSS/At-rule
   - {{cssxref("@page")}} — Описывает аспект изменений макета, который будет применён при печати документа.
   - {{cssxref("@font-face")}} — Описывает аспект внешнего шрифта для загрузки.
   - {{cssxref("@keyframes")}} — Описывает аспект промежуточных шагов в последовательности анимации CSS.
-  - {{cssxref("@viewport")}} {{experimental_inline}} — Описывает аспекты области просмотра для устройств с маленьким экраном. (в настоящее время на стадии разработки проекта)
   - {{cssxref("@counter-style")}} — Определяет конкретные counter-styles, которые не являются частью предопределённого набора стилей.
   - {{cssxref("@font-feature-values")}} (плюс `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` и `@character-variant`)
     — Определите общие имена в {{cssxref("font-option-alternates")}} для функции, которая по-разному активируется в OpenType _(at the Candidate Recommendation stage, but only implemented in Gecko as of writing)_
@@ -45,10 +44,10 @@ translation_of: Web/CSS/At-rule
 
 ## Характеристики
 
-| Specification                                                            | Status                                   | Comment                               |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                             | {{Spec2('CSS3 Conditional')}} | Начальное определение                 |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}                 | Стандартизирует `@-webkit-keyframes`. |
+| Specification                                           | Status                        | Comment                               |
+| ------------------------------------------------------- | ----------------------------- | ------------------------------------- |
+| {{SpecName('CSS3 Conditional')}}                        | {{Spec2('CSS3 Conditional')}} | Начальное определение                 |
+| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}           | Стандартизирует `@-webkit-keyframes`. |
 
 ## Читайте также
 

@@ -1,8 +1,6 @@
 ---
 title: NavigatorPlugins.plugins
 slug: orphaned/Web/API/NavigatorPlugins/plugins
-translation_of: Web/API/NavigatorPlugins/plugins
-original_slug: Web/API/NavigatorPlugins/plugins
 ---
 
 {{APIRef("HTML DOM")}}
@@ -19,7 +17,7 @@ var plugins = navigator.plugins;
 
 `plugins` используется для доступа к объекту {{domxref("Plugin")}} или по имени, или как элемент массива..
 
-Возвращаемое значение не массив JavaScript, но оно имеет свойство размера и поддерживает доступ к индивидуальным элементам с использованием квадратных скобок (`plugins{{mediawiki.external(2)}}`), а также через пункт (индекс) и namedItem ("Name") методы.
+Возвращаемое значение не массив JavaScript, но оно имеет свойство размера и поддерживает доступ к индивидуальным элементам с использованием квадратных скобок (`plugins[2]`), а также через пункт (индекс) и namedItem ("Name") методы.
 
 ## Примеры
 

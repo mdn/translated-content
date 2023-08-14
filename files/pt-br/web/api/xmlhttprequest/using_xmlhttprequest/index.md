@@ -1,15 +1,14 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/Usando_XMLHttpRequest
 ---
 
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
 
 ```js
-function reqListener () {
+function reqListener() {
   console.log(this.responseText);
-};
+}
 
 var oReq = new XMLHttpRequest();
 oReq.onload = reqListener;
@@ -66,10 +65,10 @@ var oReq = new XMLHttpRequest();
 
 oReq.open("GET", url, true);
 oReq.responseType = "arraybuffer";
-oReq.onload = function(e) {
+oReq.onload = function (e) {
   var arraybuffer = oReq.response; // não é responseText
   /* ... */
-}
+};
 oReq.send();
 ```
 
@@ -94,7 +93,7 @@ oReq.open();
 // ...A transferência foi cancelada pelo usuário
 
 // progresso de transferências do servidor para o cliente (downloads)
-function updateProgress (oEvent) {
+function updateProgress(oEvent) {
   if (oEvent.lengthComputable) {
     var percentComplete = oEvent.loaded / oEvent.total;
     // ...
@@ -149,7 +148,9 @@ POde-se também detectar todas as três condições de fim de carga (`abort`, `l
 req.addEventListener("loadend", loadEnd, false);
 
 function loadEnd(e) {
-  alert("A transferência terminou (embora não sabemos se ele conseguiu ou não).");
+  alert(
+    "A transferência terminou (embora não sabemos se ele conseguiu ou não).",
+  );
 }
 ```
 
@@ -229,245 +230,331 @@ All these things are done automatically by the web browser whenever you submit a
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sending forms with pure AJAX &ndash; MDN</title>
-<script type="text/javascript">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Sending forms with pure AJAX &ndash; MDN</title>
+    <script type="text/javascript">
+      "use strict";
 
-"use strict";
+      /*\
+      |*|
+      |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
+      |*|
+      |*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
+      \*/
 
-/*\
-|*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
-|*|
-|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
-\*/
-
-if (!XMLHttpRequest.prototype.sendAsBinary) {
-  XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
-    for (var nIdx = 0; nIdx < nBytes; nIdx++) {
-      ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
-    }
-    /* send as ArrayBufferView...: */
-    this.send(ui8Data);
-    /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
-  };
-}
-
-/*\
-|*|
-|*|  :: AJAX Form Submit Framework ::
-|*|
-|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
-|*|
-|*|  This framework is released under the GNU Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
-|*|
-|*|  Syntax:
-|*|
-|*|   AJAXSubmit(HTMLFormElement);
-\*/
-
-var AJAXSubmit = (function () {
-
-  function ajaxSuccess () {
-    /* console.log("AJAXSubmit - Success!"); */
-    alert(this.responseText);
-    /* you can get the serialized data through the "submittedData" custom property: */
-    /* alert(JSON.stringify(this.submittedData)); */
-  }
-
-  function submitData (oData) {
-    /* the AJAX request... */
-    var oAjaxReq = new XMLHttpRequest();
-    oAjaxReq.submittedData = oData;
-    oAjaxReq.onload = ajaxSuccess;
-    if (oData.technique === 0) {
-      /* method is GET */
-      oAjaxReq.open("get", oData.receiver.replace(/(?:\?.*)?$/, oData.segments.length > 0 ? "?" + oData.segments.join("&") : ""), true);
-      oAjaxReq.send(null);
-    } else {
-      /* method is POST */
-      oAjaxReq.open("post", oData.receiver, true);
-      if (oData.technique === 3) {
-        /* enctype is multipart/form-data */
-        var sBoundary = "---------------------------" + Date.now().toString(16);
-        oAjaxReq.setRequestHeader("Content-Type", "multipart\/form-data; boundary=" + sBoundary);
-        oAjaxReq.sendAsBinary("--" + sBoundary + "\r\n" + oData.segments.join("--" + sBoundary + "\r\n") + "--" + sBoundary + "--\r\n");
-      } else {
-        /* enctype is application/x-www-form-urlencoded or text/plain */
-        oAjaxReq.setRequestHeader("Content-Type", oData.contentType);
-        oAjaxReq.send(oData.segments.join(oData.technique === 2 ? "\r\n" : "&"));
-      }
-    }
-  }
-
-  function processStatus (oData) {
-    if (oData.status > 0) { return; }
-    /* the form is now totally serialized! do something before sending it to the server... */
-    /* doSomething(oData); */
-    /* console.log("AJAXSubmit - The form is now serialized. Submitting..."); */
-    submitData (oData);
-  }
-
-  function pushSegment (oFREvt) {
-    this.owner.segments[this.segmentIdx] += oFREvt.target.result + "\r\n";
-    this.owner.status--;
-    processStatus(this.owner);
-  }
-
-  function plainEscape (sText) {
-    /* how should I treat a text/plain form encoding? what characters are not allowed? this is what I suppose...: */
-    /* "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2" */
-    return sText.replace(/[\s\=\\]/g, "\\$&");
-  }
-
-  function SubmitRequest (oTarget) {
-    var nFile, sFieldType, oField, oSegmReq, oFile, bIsPost = oTarget.method.toLowerCase() === "post";
-    /* console.log("AJAXSubmit - Serializing form..."); */
-    this.contentType = bIsPost && oTarget.enctype ? oTarget.enctype : "application\/x-www-form-urlencoded";
-    this.technique = bIsPost ? this.contentType === "multipart\/form-data" ? 3 : this.contentType === "text\/plain" ? 2 : 1 : 0;
-    this.receiver = oTarget.action;
-    this.status = 0;
-    this.segments = [];
-    var fFilter = this.technique === 2 ? plainEscape : escape;
-    for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
-      oField = oTarget.elements[nItem];
-      if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-      if (sFieldType === "FILE" && oField.files.length > 0) {
-        if (this.technique === 3) {
-          /* enctype is multipart/form-data */
-          for (nFile = 0; nFile < oField.files.length; nFile++) {
-            oFile = oField.files[nFile];
-            oSegmReq = new FileReader();
-            /* (custom properties:) */
-            oSegmReq.segmentIdx = this.segments.length;
-            oSegmReq.owner = this;
-            /* (end of custom properties) */
-            oSegmReq.onload = pushSegment;
-            this.segments.push("Content-Disposition: form-data; name=\"" + oField.name + "\"; filename=\""+ oFile.name + "\"\r\nContent-Type: " + oFile.type + "\r\n\r\n");
-            this.status++;
-            oSegmReq.readAsBinaryString(oFile);
+      if (!XMLHttpRequest.prototype.sendAsBinary) {
+        XMLHttpRequest.prototype.sendAsBinary = function (sData) {
+          var nBytes = sData.length,
+            ui8Data = new Uint8Array(nBytes);
+          for (var nIdx = 0; nIdx < nBytes; nIdx++) {
+            ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
           }
-        } else {
-          /* enctype is application/x-www-form-urlencoded or text/plain or method is GET: files will not be sent! */
-          for (nFile = 0; nFile < oField.files.length; this.segments.push(fFilter(oField.name) + "=" + fFilter(oField.files[nFile++].name)));
-        }
-      } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
-        /* field type is not FILE or is FILE but is empty */
-        this.segments.push(
-          this.technique === 3 ? /* enctype is multipart/form-data */
-            "Content-Disposition: form-data; name=\"" + oField.name + "\"\r\n\r\n" + oField.value + "\r\n"
-          : /* enctype is application/x-www-form-urlencoded or text/plain or method is GET */
-            fFilter(oField.name) + "=" + fFilter(oField.value)
-        );
+          /* send as ArrayBufferView...: */
+          this.send(ui8Data);
+          /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
+        };
       }
-    }
-    processStatus(this);
-  }
 
-  return function (oFormElement) {
-    if (!oFormElement.action) { return; }
-    new SubmitRequest(oFormElement);
-  };
+      /*\
+      |*|
+      |*|  :: AJAX Form Submit Framework ::
+      |*|
+      |*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      |*|
+      |*|  This framework is released under the GNU Public License, version 3 or later.
+      |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+      |*|
+      |*|  Syntax:
+      |*|
+      |*|   AJAXSubmit(HTMLFormElement);
+      \*/
 
-})();
+      var AJAXSubmit = (function () {
+        function ajaxSuccess() {
+          /* console.log("AJAXSubmit - Success!"); */
+          alert(this.responseText);
+          /* you can get the serialized data through the "submittedData" custom property: */
+          /* alert(JSON.stringify(this.submittedData)); */
+        }
 
-</script>
-</head>
-<body>
+        function submitData(oData) {
+          /* the AJAX request... */
+          var oAjaxReq = new XMLHttpRequest();
+          oAjaxReq.submittedData = oData;
+          oAjaxReq.onload = ajaxSuccess;
+          if (oData.technique === 0) {
+            /* method is GET */
+            oAjaxReq.open(
+              "get",
+              oData.receiver.replace(
+                /(?:\?.*)?$/,
+                oData.segments.length > 0 ? "?" + oData.segments.join("&") : "",
+              ),
+              true,
+            );
+            oAjaxReq.send(null);
+          } else {
+            /* method is POST */
+            oAjaxReq.open("post", oData.receiver, true);
+            if (oData.technique === 3) {
+              /* enctype is multipart/form-data */
+              var sBoundary =
+                "---------------------------" + Date.now().toString(16);
+              oAjaxReq.setRequestHeader(
+                "Content-Type",
+                "multipart\/form-data; boundary=" + sBoundary,
+              );
+              oAjaxReq.sendAsBinary(
+                "--" +
+                  sBoundary +
+                  "\r\n" +
+                  oData.segments.join("--" + sBoundary + "\r\n") +
+                  "--" +
+                  sBoundary +
+                  "--\r\n",
+              );
+            } else {
+              /* enctype is application/x-www-form-urlencoded or text/plain */
+              oAjaxReq.setRequestHeader("Content-Type", oData.contentType);
+              oAjaxReq.send(
+                oData.segments.join(oData.technique === 2 ? "\r\n" : "&"),
+              );
+            }
+          }
+        }
 
-<h1>Sending forms with pure AJAX</h1>
+        function processStatus(oData) {
+          if (oData.status > 0) {
+            return;
+          }
+          /* the form is now totally serialized! do something before sending it to the server... */
+          /* doSomething(oData); */
+          /* console.log("AJAXSubmit - The form is now serialized. Submitting..."); */
+          submitData(oData);
+        }
 
-<h2>Using the GET method</h2>
+        function pushSegment(oFREvt) {
+          this.owner.segments[this.segmentIdx] += oFREvt.target.result + "\r\n";
+          this.owner.status--;
+          processStatus(this.owner);
+        }
 
-<form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+        function plainEscape(sText) {
+          /* how should I treat a text/plain form encoding? what characters are not allowed? this is what I suppose...: */
+          /* "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2" */
+          return sText.replace(/[\s\=\\]/g, "\\$&");
+        }
 
-<h2>Using the POST method</h2>
-<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+        function SubmitRequest(oTarget) {
+          var nFile,
+            sFieldType,
+            oField,
+            oSegmReq,
+            oFile,
+            bIsPost = oTarget.method.toLowerCase() === "post";
+          /* console.log("AJAXSubmit - Serializing form..."); */
+          this.contentType =
+            bIsPost && oTarget.enctype
+              ? oTarget.enctype
+              : "application\/x-www-form-urlencoded";
+          this.technique = bIsPost
+            ? this.contentType === "multipart\/form-data"
+              ? 3
+              : this.contentType === "text\/plain"
+              ? 2
+              : 1
+            : 0;
+          this.receiver = oTarget.action;
+          this.status = 0;
+          this.segments = [];
+          var fFilter = this.technique === 2 ? plainEscape : escape;
+          for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
+            oField = oTarget.elements[nItem];
+            if (!oField.hasAttribute("name")) {
+              continue;
+            }
+            sFieldType =
+              oField.nodeName.toUpperCase() === "INPUT"
+                ? oField.getAttribute("type").toUpperCase()
+                : "TEXT";
+            if (sFieldType === "FILE" && oField.files.length > 0) {
+              if (this.technique === 3) {
+                /* enctype is multipart/form-data */
+                for (nFile = 0; nFile < oField.files.length; nFile++) {
+                  oFile = oField.files[nFile];
+                  oSegmReq = new FileReader();
+                  /* (custom properties:) */
+                  oSegmReq.segmentIdx = this.segments.length;
+                  oSegmReq.owner = this;
+                  /* (end of custom properties) */
+                  oSegmReq.onload = pushSegment;
+                  this.segments.push(
+                    'Content-Disposition: form-data; name="' +
+                      oField.name +
+                      '"; filename="' +
+                      oFile.name +
+                      '"\r\nContent-Type: ' +
+                      oFile.type +
+                      "\r\n\r\n",
+                  );
+                  this.status++;
+                  oSegmReq.readAsBinaryString(oFile);
+                }
+              } else {
+                /* enctype is application/x-www-form-urlencoded or text/plain or method is GET: files will not be sent! */
+                for (
+                  nFile = 0;
+                  nFile < oField.files.length;
+                  this.segments.push(
+                    fFilter(oField.name) +
+                      "=" +
+                      fFilter(oField.files[nFile++].name),
+                  )
+                );
+              }
+            } else if (
+              (sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") ||
+              oField.checked
+            ) {
+              /* field type is not FILE or is FILE but is empty */
+              this.segments.push(
+                this.technique === 3 /* enctype is multipart/form-data */
+                  ? 'Content-Disposition: form-data; name="' +
+                      oField.name +
+                      '"\r\n\r\n' +
+                      oField.value +
+                      "\r\n"
+                  : /* enctype is application/x-www-form-urlencoded or text/plain or method is GET */
+                    fFilter(oField.name) + "=" + fFilter(oField.value),
+              );
+            }
+          }
+          processStatus(this);
+        }
 
-<form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+        return function (oFormElement) {
+          if (!oFormElement.action) {
+            return;
+          }
+          new SubmitRequest(oFormElement);
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Sending forms with pure AJAX</h1>
 
-<h3>Enctype: text/plain</h3>
+    <h2>Using the GET method</h2>
 
-<form action="register.php" method="post" enctype="text/plain" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      Your name: <input type="text" name="user" />
-    </p>
-    <p>
-      Your message:<br />
-      <textarea name="message" cols="40" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h3>Enctype: multipart/form-data</h3>
+    <h2>Using the POST method</h2>
+    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-<form action="register.php" method="post" enctype="multipart/form-data" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Upload example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" /> <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" /> <label for="sex_female">Female</label><br />
-      Password: <input type="password" name="secret" /><br />
-      What do you prefer:
-      <select name="image_type">
-        <option>Books</option>
-        <option>Cinema</option>
-        <option>TV</option>
-      </select>
-    </p>
-    <p>
-      Post your photos:
-      <input type="file" multiple name="photos[]">
-    </p>
-    <p>
-      <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" /> <label for="vehicle_bike">I have a bike</label><br />
-      <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" /> <label for="vehicle_car">I have a car</label>
-    </p>
-    <p>
-      Describe yourself:<br />
-      <textarea name="description" cols="50" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-</body>
+    <h3>Enctype: text/plain</h3>
+
+    <form
+      action="register.php"
+      method="post"
+      enctype="text/plain"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>Your name: <input type="text" name="user" /></p>
+        <p>
+          Your message:<br />
+          <textarea name="message" cols="40" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+
+    <h3>Enctype: multipart/form-data</h3>
+
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" /><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          Password: <input type="password" name="secret" /><br />
+          What do you prefer:
+          <select name="image_type">
+            <option>Books</option>
+            <option>Cinema</option>
+            <option>TV</option>
+          </select>
+        </p>
+        <p>
+          Post your photos:
+          <input type="file" multiple name="photos[]" />
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          Describe yourself:<br />
+          <textarea name="description" cols="50" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
 </html>
 ```
 
@@ -511,118 +598,166 @@ The [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData) constructor lets you c
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sending forms with FormData &ndash; MDN</title>
-<script type="text/javascript">
-"use strict";
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Sending forms with FormData &ndash; MDN</title>
+    <script type="text/javascript">
+      "use strict";
 
-function ajaxSuccess () {
-  alert(this.responseText);
-}
-
-function AJAXSubmit (oFormElement) {
-  if (!oFormElement.action) { return; }
-  var oReq = new XMLHttpRequest();
-  oReq.onload = ajaxSuccess;
-  if (oFormElement.method.toLowerCase() === "post") {
-    oReq.open("post", oFormElement.action, true);
-    oReq.send(new FormData(oFormElement));
-  } else {
-    var oField, sFieldType, nFile, sSearch = "";
-    for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
-      oField = oFormElement.elements[nItem];
-      if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
-      if (sFieldType === "FILE") {
-        for (nFile = 0; nFile < oField.files.length; sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
-      } else if ((sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") || oField.checked) {
-        sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
+      function ajaxSuccess() {
+        alert(this.responseText);
       }
-    }
-    oReq.open("get", oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&/, "?")), true);
-    oReq.send(null);
-  }
-}
-</script>
-</head>
-<body>
 
-<h1>Sending forms with FormData</h1>
+      function AJAXSubmit(oFormElement) {
+        if (!oFormElement.action) {
+          return;
+        }
+        var oReq = new XMLHttpRequest();
+        oReq.onload = ajaxSuccess;
+        if (oFormElement.method.toLowerCase() === "post") {
+          oReq.open("post", oFormElement.action, true);
+          oReq.send(new FormData(oFormElement));
+        } else {
+          var oField,
+            sFieldType,
+            nFile,
+            sSearch = "";
+          for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
+            oField = oFormElement.elements[nItem];
+            if (!oField.hasAttribute("name")) {
+              continue;
+            }
+            sFieldType =
+              oField.nodeName.toUpperCase() === "INPUT"
+                ? oField.getAttribute("type").toUpperCase()
+                : "TEXT";
+            if (sFieldType === "FILE") {
+              for (
+                nFile = 0;
+                nFile < oField.files.length;
+                sSearch +=
+                  "&" +
+                  escape(oField.name) +
+                  "=" +
+                  escape(oField.files[nFile++].name)
+              );
+            } else if (
+              (sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") ||
+              oField.checked
+            ) {
+              sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
+            }
+          }
+          oReq.open(
+            "get",
+            oFormElement.action.replace(
+              /(?:\?.*)?$/,
+              sSearch.replace(/^&/, "?"),
+            ),
+            true,
+          );
+          oReq.send(null);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Sending forms with FormData</h1>
 
-<h2>Using the GET method</h2>
+    <h2>Using the GET method</h2>
 
-<form action="register.php" method="get" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="get"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h2>Using the POST method</h2>
-<h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+    <h2>Using the POST method</h2>
+    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
 
-<form action="register.php" method="post" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Registration example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
+    <form
+      action="register.php"
+      method="post"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Registration example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" />
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
 
-<h3>Enctype: text/plain</h3>
+    <h3>Enctype: text/plain</h3>
 
-<p>The text/plain encoding is not supported by the FormData API.</p>
+    <p>The text/plain encoding is not supported by the FormData API.</p>
 
-<h3>Enctype: multipart/form-data</h3>
+    <h3>Enctype: multipart/form-data</h3>
 
-<form action="register.php" method="post" enctype="multipart/form-data" onsubmit="AJAXSubmit(this); return false;">
-  <fieldset>
-    <legend>Upload example</legend>
-    <p>
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" /><br />
-      Sex:
-      <input id="sex_male" type="radio" name="sex" value="male" /> <label for="sex_male">Male</label>
-      <input id="sex_female" type="radio" name="sex" value="female" /> <label for="sex_female">Female</label><br />
-      Password: <input type="password" name="secret" /><br />
-      What do you prefer:
-      <select name="image_type">
-        <option>Books</option>
-        <option>Cinema</option>
-        <option>TV</option>
-      </select>
-    </p>
-    <p>
-      Post your photos:
-      <input type="file" multiple name="photos[]">
-    </p>
-    <p>
-      <input id="vehicle_bike" type="checkbox" name="vehicle[]" value="Bike" /> <label for="vehicle_bike">I have a bike</label><br />
-      <input id="vehicle_car" type="checkbox" name="vehicle[]" value="Car" /> <label for="vehicle_car">I have a car</label>
-    </p>
-    <p>
-      Describe yourself:<br />
-      <textarea name="description" cols="50" rows="8"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit" />
-    </p>
-  </fieldset>
-</form>
-
-</body>
+    <form
+      action="register.php"
+      method="post"
+      enctype="multipart/form-data"
+      onsubmit="AJAXSubmit(this); return false;">
+      <fieldset>
+        <legend>Upload example</legend>
+        <p>
+          First name: <input type="text" name="firstname" /><br />
+          Last name: <input type="text" name="lastname" /><br />
+          Sex:
+          <input id="sex_male" type="radio" name="sex" value="male" />
+          <label for="sex_male">Male</label>
+          <input id="sex_female" type="radio" name="sex" value="female" />
+          <label for="sex_female">Female</label><br />
+          Password: <input type="password" name="secret" /><br />
+          What do you prefer:
+          <select name="image_type">
+            <option>Books</option>
+            <option>Cinema</option>
+            <option>TV</option>
+          </select>
+        </p>
+        <p>
+          Post your photos:
+          <input type="file" multiple name="photos[]" />
+        </p>
+        <p>
+          <input
+            id="vehicle_bike"
+            type="checkbox"
+            name="vehicle[]"
+            value="Bike" />
+          <label for="vehicle_bike">I have a bike</label><br />
+          <input
+            id="vehicle_car"
+            type="checkbox"
+            name="vehicle[]"
+            value="Car" />
+          <label for="vehicle_car">I have a car</label>
+        </p>
+        <p>
+          Describe yourself:<br />
+          <textarea name="description" cols="50" rows="8"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
 </html>
 ```
 
@@ -648,7 +783,11 @@ You can automatically adjust URLs using the following code:
 ```js
 var oReq = new XMLHttpRequest();
 
-oReq.open("GET", url + ((/\?/).test(url) ? "&" : "?") + (new Date()).getTime(), true);
+oReq.open(
+  "GET",
+  url + (/\?/.test(url) ? "&" : "?") + new Date().getTime(),
+  true,
+);
 oReq.send(null);
 ```
 
@@ -665,16 +804,18 @@ If you end up with an XMLHttpRequest having `status=0` and `statusText=null`, it
 Instantiating `XMLHttpRequest` from a [JavaScript module](/pt-BR/docs/JavaScript_code_modules/Using) or an XPCOM component works a little differently; it can't be instantiated using the `XMLHttpRequest()` constructor. The constructor is not defined inside components and the code results in an error. The best way to work around this is to use the XPCOM component constructor.
 
 ```js
-const XMLHttpRequest = Components.Constructor("@mozilla.org/xmlextras/xmlhttprequest;1");
+const XMLHttpRequest = Components.Constructor(
+  "@mozilla.org/xmlextras/xmlhttprequest;1",
+);
 var oReq = XMLHttpRequest();
 ```
 
 Unfortunately in versions of Gecko prior to Gecko 16 there is a bug which can cause requests created this way to be cancelled for no reason. If you need your code to work on Gecko 15 or earlier, you can get the XMLHttpRequest constructor from the hidden DOM window like so.
 
 ```js
-const { XMLHttpRequest } = Components.classes["@mozilla.org/appshell/appShellService;1"]
-                                     .getService(Components.interfaces.nsIAppShellService)
-                                     .hiddenDOMWindow;
+const { XMLHttpRequest } = Components.classes[
+  "@mozilla.org/appshell/appShellService;1"
+].getService(Components.interfaces.nsIAppShellService).hiddenDOMWindow;
 var oReq = XMLHttpRequest();
 ```
 

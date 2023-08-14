@@ -22,8 +22,8 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ## Specification
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                            | Status                   | Comment |
+| ------------------------------------------------------------------------ | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## See also
@@ -31,9 +31,9 @@ To learn how to use server-sent events, see our article [Using server-sent event
 ### Tools
 
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
 - intercooler.js [declarative SSE support](http://intercoolerjs.org/docs.html#sse)
 
 ### Related Topics

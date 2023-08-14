@@ -1,7 +1,6 @@
 ---
-title: ':-moz-locale-dir(rtl)'
+title: ":-moz-locale-dir(rtl)"
 slug: Web/CSS/:-moz-locale-dir_rtl
-original_slug: Web/CSS/:-moz-locale-dir(rtl)
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -15,7 +14,7 @@ original_slug: Web/CSS/:-moz-locale-dir(rtl)
 ## 構文
 
 ```css
-:-moz-locale-dir(rtl)
+:-moz-locale-dir(rtl) {}
 ```
 
 ## 例

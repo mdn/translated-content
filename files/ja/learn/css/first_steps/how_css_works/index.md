@@ -8,9 +8,28 @@ slug: Learn/CSS/First_steps/How_CSS_works
 
 CSS の基本と目的、簡単なスタイルシートの書き方を学んできました。このレッスンでは、ブラウザーが CSS と HTML を実際にウェブページとして表示していくさまを見ていきます。
 
-| 前提条件: | 基本的なコンピューターリテラシー、 [基本的なソフトウェアがインストールされていること](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイルの操作方法](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)についての基本的な知識、HTML の基本 ([HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML)を学習のこと)。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | ブラウザーが CSS と HTML を解析する方法、およびブラウザーが解釈できない CSS に遭遇したときに何が起こるかを理解する。                                                                                                                                                                                                                              |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターリテラシー、<a
+          href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアがインストールされていること</a
+        >、基本的な<a
+          href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイルの操作方法</a
+        >に関する知識、 HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 概論</a
+        >を学習のこと）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>ブラウザーが CSS と HTML を解析する方法、およびブラウザーが解釈できない CSS に遭遇したときに何が起こるかを理解する。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## CSS は実際にはどう機能するのか？
 
@@ -66,7 +85,9 @@ P
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## DOM への CSS 適用
@@ -113,7 +134,7 @@ span {
 次の例では、色にイギリス英語のスペルを使用しているため、プロパティが正しくありません（訳注: color を誤って colour としてしまっている）。よって段落は青くなっていません。ただし、他の CSS はすべて適用されています。無効な行のみが無視されます。
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css
@@ -144,11 +165,3 @@ p {
 このモジュールはほぼ完了です。ただしもうひとつだけやっておいてほしいことがあります。次の記事の[新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)にて実際のスタイリングをとおして CSS の腕試しをおこないます。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS の構造化](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

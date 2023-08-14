@@ -18,9 +18,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ### 사용자 정의 에러 발생시키기
 
 ```js
-var e = new Error('Malformed input'); // e.name은 'Error'
+var e = new Error("Malformed input"); // e.name은 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString()은 'ParseError: Malformed input'을 반환합니다
 ```

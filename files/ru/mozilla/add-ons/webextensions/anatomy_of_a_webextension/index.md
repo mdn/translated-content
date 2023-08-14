@@ -1,10 +1,6 @@
 ---
 title: Анатомия Расширения
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - Расширение
-  - веб расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
 {{AddonSidebar}}
@@ -64,10 +60,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 **background-page.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script type="module" src="background-script.js"></script>
   </head>
 </html>
@@ -77,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### DOM APIs
 
-Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это даёт им доступ к глобальному [`window`](/en-US/docs/Web/API/Window) объекту, а так же ко всем его DOM APIs.
+Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это даёт им доступ к глобальному [`window`](/ru/docs/Web/API/Window) объекту, а так же ко всем его DOM APIs.
 
 #### WebExtension APIs
 
@@ -93,7 +89,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 #### Политика безопасности содержимого
 
-Фоновые скрипты ограничены в выполнении потенциально опасных операций, таких как [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), через политику безопасности содержимого. Подробнее см. [Content Security Policy](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
+Фоновые скрипты ограничены в выполнении потенциально опасных операций, таких как [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval), через политику безопасности содержимого. Подробнее см. [Content Security Policy](/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
 
 ## Боковые панели (sidebar), всплывающие окна (popup), страницы настроек
 
@@ -129,7 +125,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 - Использовать часть [API расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/API).
 - Обмениваться сообщениями с их фоновыми скриптами и таким образом иметь доступ ко всему WebExtension APIs.
 
-Встраиваемые скрипты не могут напрямую взаимодействовать с обычными скриптами на странице, но они могут обмениваться сообщениями с помощью стандартного [`window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) API.
+Встраиваемые скрипты не могут напрямую взаимодействовать с обычными скриптами на странице, но они могут обмениваться сообщениями с помощью стандартного [`window.postMessage()`](/ru/docs/Web/API/Window/postMessage) API.
 
 Обычно, когда мы говорим о встраиваемых скриптах, мы отсылаемся к JavaScript, но вы так же можете внедрить CSS в веб-страницы, используя этот же механизм.
 
@@ -139,6 +135,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 Веб-доступные ресурсы - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.
 
-Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить [`img`](/en-US/docs/Web/HTML/Element/img) тэги, которые будут ссылаться на эти изображения через `src` атрибут.
+Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить [`img`](/ru/docs/Web/HTML/Element/img) тэги, которые будут ссылаться на эти изображения через `src` атрибут.
 
 Подробнее см. [web_accessible_resources](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) секцию manifest.json.

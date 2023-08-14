@@ -24,18 +24,18 @@ Symbol.for('foo').description;
 ## 示例
 
 ```js
-Symbol('desc').toString();   // "Symbol(desc)"
-Symbol('desc').description;  // "desc"
-Symbol('').description;      // ""
-Symbol().description;        // undefined
+Symbol("desc").toString(); // "Symbol(desc)"
+Symbol("desc").description; // "desc"
+Symbol("").description; // ""
+Symbol().description; // undefined
 
 // 内置通用（well-known）symbol
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 
 // global symbols
-Symbol.for('foo').toString();  // "Symbol(foo)"
-Symbol.for('foo').description; // "foo"
+Symbol.for("foo").toString(); // "Symbol(foo)"
+Symbol.for("foo").description; // "foo"
 ```
 
 ## 规范
@@ -46,7 +46,7 @@ Symbol.for('foo').description; // "foo"
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Symbol.prototype.toString()")}}
 - Polyfill: <https://npmjs.com/symbol.prototype.description>

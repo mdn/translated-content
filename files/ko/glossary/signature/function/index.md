@@ -19,7 +19,7 @@ slug: Glossary/Signature/Function
 {{Glossary("JavaScript")}}는 _약한 타입_ 혹은 _동적_ 언어입니다. 이것은 여러분이 변수의 타입을 미리 선언하지 않아도 됨을 의미합니다. 타입은 프로그램이 실행되는 동안 자동으로 결정됩니다. 하지만 JavaScript에서의 시그니처는 여전히 여러분에게 메소드에 대한 몇 가지 정보를 제공해줄 수 있습니다:
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - 메소드는 `MyObject`라 불리는 {{Glossary("object")}}에 장착되어 있습니다.

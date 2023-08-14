@@ -1,9 +1,6 @@
 ---
 title: HTMLLinkElement.as
 slug: Web/API/HTMLLinkElement/as
-page-type: web-api-instance-property
-browser-compat: api.HTMLLinkElement.as
-translation_of: Web/API/HTMLLinkElement/as
 ---
 
 {{APIRef("HTML DOM")}}

@@ -90,7 +90,7 @@ As diretivas de Documento governam as propriedades de um documento ou ambiente [
 - {{CSP("plugin-types")}}
   - : Restringe o conjunto de _plugins_ que podem ser embutidos em um documento limitando pelos tipos de conteúdos que podem ser carregados.
 - {{CSP("sandbox")}}
-  - : Habilita o _sandbox_ para um recurso requisitado similar ao atributo {{htmlattrxref("sandbox", "iframe")}} de {{HTMLElement("iframe")}}.
+  - : Habilita o _sandbox_ para um recurso requisitado similar ao atributo [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) de {{HTMLElement("iframe")}}.
 
 ### {{Glossary("Navigation directive", "Navigation directives")}}
 
@@ -188,14 +188,14 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 
 ## Especificações
 
-| Especificação                                            | Status                                               | Comentários                                                                                                                                                  |
-| -------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{specName("CSP 3.0")}}                         | {{Spec2("CSP 3.0")}}                         | Adiciona `manifest-src`, `navigate-to`, `report-to`, `strict-dynamic`, `worker-src`. Desdeprecia `frame-src`. Deprecia `report-uri` em favor de `report-to`. |
-| {{specName("Mixed Content")}}                 | {{Spec2("Mixed Content")}}                 | Adiciona `block-all-mixed-content`.                                                                                                                          |
-| {{specName("Subresource Integrity")}}         | {{Spec2("Subresource Integrity")}}         | Adiciona `require-sri-for`.                                                                                                                                  |
+| Especificação                             | Status                                 | Comentários                                                                                                                                                  |
+| ----------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{specName("CSP 3.0")}}                   | {{Spec2("CSP 3.0")}}                   | Adiciona `manifest-src`, `navigate-to`, `report-to`, `strict-dynamic`, `worker-src`. Desdeprecia `frame-src`. Deprecia `report-uri` em favor de `report-to`. |
+| {{specName("Mixed Content")}}             | {{Spec2("Mixed Content")}}             | Adiciona `block-all-mixed-content`.                                                                                                                          |
+| {{specName("Subresource Integrity")}}     | {{Spec2("Subresource Integrity")}}     | Adiciona `require-sri-for`.                                                                                                                                  |
 | {{specName("Upgrade Insecure Requests")}} | {{Spec2("Upgrade Insecure Requests")}} | Adiciona `upgrade-insecure-requests`.                                                                                                                        |
-| {{specName("CSP 1.1")}}                         | {{Spec2("CSP 1.1")}}                         | Adiciona `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecia `frame-src`.                      |
-| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Define `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, `report-uri`, `sandbox`, `script-src`, e `style-src`.    |
+| {{specName("CSP 1.1")}}                   | {{Spec2("CSP 1.1")}}                   | Adiciona `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecia `frame-src`.                      |
+| {{specName("CSP 1.0")}}                   | {{Spec2("CSP 1.0")}}                   | Define `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, `report-uri`, `sandbox`, `script-src`, e `style-src`.    |
 
 ## Compatibilidade com navegadores
 

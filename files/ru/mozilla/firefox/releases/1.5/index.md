@@ -1,24 +1,6 @@
 ---
 title: Firefox 1.5 для разработчиков
 slug: Mozilla/Firefox/Releases/1.5
-tags:
-  - Add-ons
-  - CSS
-  - DOM
-  - Extensions
-  - HTML
-  - JavaScript
-  - NeedsTranslation
-  - RDF
-  - SVG
-  - TopicStub
-  - Web Development
-  - Web Standards
-  - XML
-  - XML Web Services
-  - XSLT
-  - XUL
-translation_of: Mozilla/Firefox/Releases/1.5
 ---
 
 {{FirefoxSidebar}}
@@ -32,7 +14,7 @@ Several tools and browser extensions are available to help developers support Fi
 - [DOM Inspector](/ru/docs/DOM_Inspector), a tool that allows developers to inspect and modify documents without having to edit the document directly. DOM Inspector is available as part of the Custom install option in Firefox 1.5 under Developer Tools.
 - JavaScript console, a tool to write and test JavaScript code as well as view JavaScript and CSS errors on a page.
 - View page source, with syntax highlighting and find features.
-- [Browser extensions](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) including the [FireBug](http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</ru/docs/Web_Developer_Extension_(external)> "en-US/docs/Web_Developer_Extension_(external)"), [Live HTTP Headers](</ru/docs/Live_HTTP_Headers_(external)> "en-US/docs/Live_HTTP_Headers_(external)"), [HTML Validator](</ru/docs/HTML_Validator_(external)> "en-US/docs/HTML_Validator_(external)") and many more.
+- [Browser extensions](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) including the [FireBug](http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</ru/docs/Web_Developer_Extension_(external)> "/en-US/docs/Web_Developer_Extension_(external)"), [Live HTTP Headers](</ru/docs/Live_HTTP_Headers_(external)> "/en-US/docs/Live_HTTP_Headers_(external)"), [HTML Validator](</ru/docs/HTML_Validator_(external)> "/en-US/docs/HTML_Validator_(external)") and many more.
 
 **Note:** Some extensions do not currently support Firefox 1.5, and will be automatically disabled.
 

@@ -1,14 +1,6 @@
 ---
 title: CSS Box Model
-slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Box_Model
+slug: Web/CSS/CSS_box_model
 ---
 
 {{CSSRef}}
@@ -68,8 +60,8 @@ translation_of: Web/CSS/CSS_Box_Model
 
 ## Specifications
 
-| Specification                                | Status                       | Comment            |
-| -------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} |                    |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                    |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Initial definition |
+| Specification                      | Status                | Comment            |
+| ---------------------------------- | --------------------- | ------------------ |
+| {{SpecName("CSS3 Box")}}           | {{Spec2("CSS3 Box")}} |                    |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}   |                    |
+| {{SpecName("CSS1")}}               | {{Spec2("CSS1")}}     | Initial definition |

@@ -1,15 +1,6 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - set
-translation_of: Web/API/FormData/set
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -51,15 +42,15 @@ var formData = new FormData(); // Actuellement vide
 Vous pouvez définir des paires clé/valeur à ce sujet en utilisant {{domxref("FormData.set")}} :
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("username", "Chris");
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 Si la valeur envoyée est différente de String ou Blob, elle sera automatiquement convertie en `String` :
 
 ```js
-formData.set('name', 72);
-formData.get('name'); // "72"
+formData.set("name", 72);
+formData.get("name"); // "72"
 ```
 
 ## Spécifications

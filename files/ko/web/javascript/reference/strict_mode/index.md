@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 2. JavaScript 엔진의 최적화 작업을 어렵게 만드는 실수들을 바로잡습니다. 가끔씩 엄격 모드의 코드는 비-엄격 모드의 동일한 코드보다 더 빨리 작동하도록 만들어집니다.
 3. 엄격 모드는 ECMAScript의 차기 버전들에서 정의 될 문법을 금지합니다.
 
-코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
+코드를 JavaScript의 변형이 제한된 환경에서 동작하도록 하고 싶다면, 엄격 모드로의 변환([transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode))을 참고하세요.
 
 ## 엄격모드 적용하기
 
@@ -27,7 +27,7 @@ slug: Web/JavaScript/Reference/Strict_mode
 
 ```js
 // 전체 스크립트 엄격 모드 구문
-'use strict';
+"use strict";
 var v = "Hi!  I'm a strict mode script!";
 ```
 
@@ -42,22 +42,26 @@ var v = "Hi!  I'm a strict mode script!";
 ```js
 function strict() {
   // 함수-레벨 strict mode 문법
-  'use strict';
-  function nested() { return "And so am I!"; }
+  "use strict";
+  function nested() {
+    return "And so am I!";
+  }
   return "Hi!  I'm a strict mode function!  " + nested();
 }
-function notStrict() { return "I'm not strict."; }
+function notStrict() {
+  return "I'm not strict.";
+}
 ```
 
 ### 모듈에 strict mode 적용
 
-ECMAScript 2015 는 [JavaScript 모듈](/en-US/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
+ECMAScript 2015 는 [JavaScript 모듈](/ko/docs/Web/JavaScript/Reference/Statements/export)을 소개했습니다. 따라서, 이는 엄격 모드를 적용할 수 있는 3번 째 방법입니다. JavaScript 모듈의 전체 컨텐츠는 엄격 모드 시작을 위한 구문 없이도 자동으로 엄격모드입니다.
 
 ```js
-    function strict() {
-        // 모듈이기때문에 기본적으로 엄격합니다
-    }
-    export default strict;
+function strict() {
+  // 모듈이기때문에 기본적으로 엄격합니다
+}
+export default strict;
 ```
 
 ## 엄격한 모드 변경
@@ -73,7 +77,7 @@ ECMAScript 2015 는 [JavaScript 모듈](/en-US/docs/Web/JavaScript/Reference/Sta
 
 ```js
 "use strict";
-                       // 전역 변수 mistypedVariable 이 존재한다고 가정
+// 전역 변수 mistypedVariable 이 존재한다고 가정
 mistypedVaraible = 17; // 변수의 오타때문에 이 라인에서 ReferenceError 를 발생시킴
 ```
 
@@ -92,7 +96,11 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // TypeError 발생
 
 // getter-only 프로퍼티에 할당
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // TypeError 발생
 
 // 확장 불가 객체에 새 프로퍼티 할당
@@ -120,7 +128,8 @@ var o = { p: 1, p: 2 }; // !!! 구문 에러
 다섯째로, 엄격모드는 유니크한 함수 파라미터 이름을 요구합니다. 일반 코드에서는 마지막으로 중복된 인수가 이전에 지정된 인수를 숨깁니다. 이러한 이전의 인수들은 `arguments[i]` 를 통해 여전히 남아 있을 수 있으므로, 완전히 접근 불가한 것이 아닙니다. 여전히, 이런 숨김 처리는 이치에 맞지 않으며 원했던 것이 아닐 수 있습니다(예를 들면 오타를 숨길 수도 있습니다). 따라서 엄격 모드에서는 중복 인수명은 구문 에러입니다.
 
 ```js
-function sum(a, a, c){ // !!! 구문 에러
+function sum(a, a, c) {
+  // !!! 구문 에러
   "use strict";
   return a + b + c; // 코드가 실행되면 잘못된 것임
 }
@@ -136,21 +145,21 @@ var a = 0o10; // ES6: 8진수
 
 ```js
 "use strict";
-var sum = 015 + // !!! 구문 에러
-          197 +
-          142;
+var sum =
+  015 + // !!! 구문 에러
+  197 +
+  142;
 ```
 
 일곱째로, ECMAScript 6 의 엄격모드는 {{Glossary("primitive")}} 값에 프로퍼티를 설정하는 것을 금지합니다. 엄격모드가 아닐 때에는 프로퍼티 설정이 간단하게 무시되지만(no-op), 엄격모드에서는 {{jsxref("TypeError")}} 를 발생시킵니다.
 
 ```js
-(function() {
-"use strict";
+(function () {
+  "use strict";
 
-false.true = "";         // TypeError
-(14).sailing = "home";   // TypeError
-"with".you = "far away"; // TypeError
-
+  false.true = ""; // TypeError
+  (14).sailing = "home"; // TypeError
+  "with".you = "far away"; // TypeError
 })();
 ```
 
@@ -163,8 +172,8 @@ false.true = "";         // TypeError
 ```js
 "use strict";
 var x = 17;
-with (obj) // !!! 구문 에러
-{
+with (obj) {
+  // !!! 구문 에러
   // 엄격모드가 아니라면, 이는 var x 가 되어야 하나요,
   // obj.x 가 되어야 하나요?
   // 일반적으로는 코드를 실행하지 않고 이를 말하는 것은 불가하므로,
@@ -187,16 +196,16 @@ console.assert(evalX === 42);
 이와 관련해서, `eval` 함수가 엄격모드 코드 내에서 `eval(...)` 형태의 표현으로 적용되었다면, 코드는 엄격모드 코드로 evaluated 됩니다. 코드는 명시적으로 엄격모드를 적용할 수 있지만, 필수적인 것은 아닙니다.
 
 ```js
-function strict1(str){
+function strict1(str) {
   "use strict";
   return eval(str); // str 은 엄격모드 코드로 다뤄짐
 }
-function strict2(f, str){
+function strict2(f, str) {
   "use strict";
   return f(str); // eval(...) 이 아님:
-                 // str 은 엄격모드를 적용한 경우에만 엄격함
+  // str 은 엄격모드를 적용한 경우에만 엄격함
 }
-function nonstrict(str){
+function nonstrict(str) {
   return eval(str); // str 은 엄격모드를 적용한 경우에만 엄격함
 }
 
@@ -232,19 +241,20 @@ eval("var y; delete y;"); // !!! syntax error
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
 둘째로, 엄격모드 코드는 `arguments` 객체가 생성한 프로퍼티를 앨리어스하지 않습니다. 함수의 첫 번째 인수가 `arg` 인 일반 코드에서는 `arg` 를 설정하는 것은 `arguments[0]` 를 설정하기도 하며, 그 반대도 그렇습니다(인수가 제공되지 않거나, `arguments[0]` 이 삭제된 경우는 제외). 엄격모드 함수의 `arguments` 객체는 함수가 호출될 때 원본 인수들을 저장합니다. `arguments[i]` 는 명명된 인수에 해당하는 값을 추적하지 않으며, 명명된 인수도 `arguments[i]` 에 해당하는 값을 추적하지 않습니다.
 
 ```js
-function f(a){
+function f(a) {
   "use strict";
   a = 42;
   return [a, arguments[0]];
@@ -258,7 +268,9 @@ console.assert(pair[1] === 17);
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // TypeError
 ```
 
@@ -270,7 +282,9 @@ f(); // TypeError
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.assert(fun() === undefined);
 console.assert(fun.call(2) === 2);
 console.assert(fun.apply(null) === null);
@@ -283,14 +297,12 @@ console.assert(fun.bind(true)() === true);
 둘째로, 엄격모드에서는 ECMAScript의 일반적으로 구현된 확장을 통해 자바스크립트 스택을 "걷는"것이 불가능합니다. 이러한 일반적인 확장 코드는, 함수 `fun` 이 호출되는 중간에, `fun.caller` 는 가장 최근에 `fun` 을 호출한 함수이고 `fun.arguments` 는 `fun`을 호출하기 위한 인수입니다. "권한있는"함수와 (잠재적으로 보안되지 않은) 인수에 접근을 허용하기때문에 두가지 확장 모두 자바스크립트의 "보안" 문제가 됩니다. `fun` 이 엄격모드인경우, both `fun.caller` 와 `fun.arguments` 모두 설정 또는 검색될때 삭제 불가능한 속성이 됩니다.
 
 ```js
-function restricted()
-{
+function restricted() {
   "use strict";
-  restricted.caller;    // throws a TypeError
+  restricted.caller; // throws a TypeError
   restricted.arguments; // throws a TypeError
 }
-function privilegedInvoker()
-{
+function privilegedInvoker() {
   return restricted();
 }
 privilegedInvoker();
@@ -300,8 +312,7 @@ privilegedInvoker();
 
 ```js
 "use strict";
-function fun(a, b)
-{
+function fun(a, b) {
   "use strict";
   var v = 12;
   return arguments.caller; //TypeError 가 발생.
@@ -316,18 +327,21 @@ fun(1, 2); // doesn't expose v (or a or b)
 첫번째로, 엄격 모드에서의 식별자 후보들은 예약어가 됩니다. 이 예약어들은 `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield`입니다. 그럼, 엄격 모드에서는 이 예약어와 똑같은 이름을 사용하거나, 변수명 또는 아규먼트명으로도 사용할 수 없습니다.
 
 ```js
-function package(protected){ // !!!
+function package(protected) {
+  // !!!
   "use strict";
   var implements; // !!!
 
-  interface: // !!!
-  while (true){
+  // !!!
+  interface: while (true) {
     break interface; // !!!
   }
 
-  function private() { } // !!!
+  function private() {} // !!!
 }
-function fun(static) { 'use strict'; } // !!!
+function fun(static) {
+  "use strict";
+} // !!!
 ```
 
 Mozilla의 특별 지시 두 가지 : 먼저, 코드가 JavaScript 1.7 또는 그보다 높고 (예를 들어, 크롬 코드 또는 `<script type="">` 를 바로 사용할 때) 엄격 모드의 코드라면, `let` 와 `yield`는 처음 소개되었을 때의 그 기능을 가진다. 그러나 웹에서의 엄격 모드 코드는, `<script src="">`나 `<script>...</script>`로 로딩되지, `let`/`yield`를 식별자로 사용할 수가 없을 것이다. 그리고 나서는, ES5 가 `class`, `enum`, `export`, `extends`, `import`, and `super` 와 같은 예약어들을 무조건 리저브함에도 불구하고, 먼저 Firefox 5 Mozilla 는 그것들을 엄격 모드에서만 리저브한다.
@@ -336,18 +350,19 @@ Mozilla의 특별 지시 두 가지 : 먼저, 코드가 JavaScript 1.7 또는 �
 
 ```js
 "use strict";
-if (true){
-  function f() { } // !!! syntax error
+if (true) {
+  function f() {} // !!! syntax error
   f();
 }
 
-for (var i = 0; i < 5; i++){
-  function f2() { } // !!! syntax error
+for (var i = 0; i < 5; i++) {
+  function f2() {} // !!! syntax error
   f2();
 }
 
-function baz(){ // kosher
-  function eit() { } // also kosher
+function baz() {
+  // kosher
+  function eit() {} // also kosher
 }
 ```
 
@@ -370,4 +385,4 @@ function baz(){ // kosher
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](http://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)

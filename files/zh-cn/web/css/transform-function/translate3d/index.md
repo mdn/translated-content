@@ -1,7 +1,6 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-original_slug: Web/CSS/transform-function/translate3d()
 ---
 
 {{CSSRef}}
@@ -80,7 +79,7 @@ p {
 }
 
 .transformed {
-  transform: perspective(500px) translate3d(10px,0px,0px);
+  transform: perspective(500px) translate3d(10px, 0px, 0px);
   /* equivalent to perspective(500px) translateX(10px)*/
   background-color: blue;
 }
@@ -110,7 +109,7 @@ p {
 }
 
 .transformed {
-  transform: perspective(500px) translate3d(10px,0px,100px);
+  transform: perspective(500px) translate3d(10px, 0px, 100px);
   background-color: blue;
 }
 ```

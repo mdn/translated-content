@@ -24,12 +24,12 @@ formData.keys();
 ```js
 // 先创建一个 FormData 对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // 输出所有的 key
 for (var key of formData.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

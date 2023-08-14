@@ -1,13 +1,6 @@
 ---
 title: Métaprogrammation
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-translation_of: Web/JavaScript/Guide/Meta_programming
-original_slug: Web/JavaScript/Guide/Métaprogrammation
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
@@ -20,9 +13,10 @@ Introduits avec ECMAScript 2015, les objets {{jsxref("Proxy")}} permettent d'int
 
 ```js
 var handler = {
-  get: function(cible, nom){
+  get: function (cible, nom) {
     return nom in cible ? cible[nom] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
@@ -364,20 +358,23 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
 La méthode {{jsxref("Proxy.revocable()")}} est utilisée pour créer un objet `Proxy` qui puisse être révoqué. Cela signifie que que le proxy pourra être révoqué avec la fonction `revoke` et arrêtera le proxy. Après cet arrêt, toute opération sur le proxy entraînera une exception {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(cible, nom) {
-    return "[[" + nom + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (cible, nom) {
+      return "[[" + nom + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.toto); // "[[toto]]"
 
 revocable.revoke();
 
 console.log(proxy.toto); // déclenche une TypeError
-proxy.toto = 1;          // une TypeError encore
-delete proxy.toto;       // toujours une TypeError
-typeof proxy             // "object", typeof ne déclenche aucune trappe
+proxy.toto = 1; // une TypeError encore
+delete proxy.toto; // toujours une TypeError
+typeof proxy; // "object", typeof ne déclenche aucune trappe
 ```
 
 ## Réflexion

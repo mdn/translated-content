@@ -11,7 +11,7 @@ slug: Web/API/ReadableStreamDefaultController/error
 
 ## 语法
 
-```js
+```js-nolint
 error(e)
 ```
 
@@ -40,3 +40,8 @@ error(e)
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

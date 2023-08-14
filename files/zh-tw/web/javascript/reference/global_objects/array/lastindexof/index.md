@@ -39,10 +39,10 @@ The following example uses `lastIndexOf` to locate values in an array.
 
 ```js
 var numbers = [2, 5, 9, 2];
-numbers.lastIndexOf(2);     // 3
-numbers.lastIndexOf(7);     // -1
-numbers.lastIndexOf(2, 3);  // 3
-numbers.lastIndexOf(2, 2);  // 0
+numbers.lastIndexOf(2); // 3
+numbers.lastIndexOf(7); // -1
+numbers.lastIndexOf(2, 3); // 3
+numbers.lastIndexOf(2, 2); // 0
 numbers.lastIndexOf(2, -2); // 0
 numbers.lastIndexOf(2, -1); // 3
 ```
@@ -53,12 +53,12 @@ The following example uses `lastIndexOf` to find all the indices of an element i
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
@@ -75,14 +75,15 @@ Note that we have to handle the case `idx == 0` separately here because the elem
 // Production steps of ECMA-262, Edition 5, 15.4.4.15
 // Reference: http://es5.github.io/#x15.4.4.15
 if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
+  Array.prototype.lastIndexOf = function (searchElement /*, fromIndex*/) {
+    "use strict";
 
     if (this === void 0 || this === null) {
       throw new TypeError();
     }
 
-    var n, k,
+    var n,
+      k,
       t = Object(this),
       len = t.length >>> 0;
     if (len === 0) {
@@ -94,8 +95,7 @@ if (!Array.prototype.lastIndexOf) {
       n = Number(arguments[1]);
       if (n != n) {
         n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
+      } else if (n != 0 && n != 1 / 0 && n != -(1 / 0)) {
         n = (n > 0 || -1) * Math.floor(Math.abs(n));
       }
     }

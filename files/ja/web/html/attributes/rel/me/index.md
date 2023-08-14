@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`me`** は {{HTMLAttrxRef("rel", "link")}} 属性のキーワードで、 {{HTMLElement("link")}} および {{HTMLElement("a")}} 要素で使用します。現在のリソースがリンク先の当事者によって表されていることを示します。この `me` 値は [XHTML Friends Network (XFN) 仕様書](https://gmpg.org/xfn/) で導入されたものです。
+**`me`** は [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性のキーワードで、 {{HTMLElement("link")}} および {{HTMLElement("a")}} 要素で使用します。現在のリソースがリンク先の当事者によって表されていることを示します。この `me` 値は [XHTML Friends Network (XFN) 仕様書](https://gmpg.org/xfn/) で導入されたものです。
 
 ```html
 <link rel="me" value="example.com" />

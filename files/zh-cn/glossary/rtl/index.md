@@ -3,6 +3,8 @@ title: RTL（从右到左）
 slug: Glossary/RTL
 ---
 
+{{GlossarySidebar}}
+
 **RTL**（**从右到左**，Right To Left）是{{Glossary("locale", "区域设置")}}的属性之一，用于指示语言从右到左的书写方向。
 
 举个例子，希伯来语（`he`）指定从右往左书写，而阿拉伯语（`ar`）也是另一种从右往左书写的常见语言。

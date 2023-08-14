@@ -15,31 +15,31 @@ Mesmo sendo convenientes para se usar, existem alguns casos que precisam ser ana
 
 1. Um valor que não especificado é setado seu valor inicial. Isso parece uma anedota, mas realmente significa que sobrescreve valores previamente setados. Por exemplo:
 
-    ```
-    background-color: red;
-    background: url(images/bg.gif) no-repeat top right;
-    ```
+   ```css
+   background-color: red;
+   background: url(images/bg.gif) no-repeat top right;
+   ```
 
-    não irá setar a cor do background para vermelho, mas para {{cssxref("background-color")}}'s padrão, transparente, como a segunda regra tem precedência.
+   não irá setar a cor do background para vermelho, mas para {{cssxref("background-color")}}'s padrão, transparente, como a segunda regra tem precedência.
 
 2. Apenas propriedades individuais são herdadas. Como valores que faltam são substituidos pelo seu valor inicial, é impossivel herdar valores individuais os omitindo. O valor `inherit` pode ser aplicado a uma propriedade, mas num total e não como uma palavra-chave para um valor ou outro. Isso significa que a unica forma de um valor específico ser herdado é usando a propriedade em longhand com o valor `inherit`.
 3. Propriedades shorthand tentam não forçar uma ordem específica para os valores das propriedades que elas substituem. Isso funciona bem quando essas propriedades usam valores de diferentes tipos, como a ordem não tem importância, isso funciona bem quando essas propriedades usam valores de diferentes tipos, como a ordem não tem importância, mas isso não funciona tão facilmente quando várias propriedades podem ter valores idênticos. O tratamento destes casos está agrupado em várias categorias:
 
-    1. Propriedades shorthand que lidam com valores da borda de um box, como {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, sempre usam um consistente 1-para-4 valor de sintaxe representando essas bordas:
+   1. Propriedades shorthand que lidam com valores da borda de um box, como {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, sempre usam um consistente 1-para-4 valor de sintaxe representando essas bordas:
 
-        | ![border1.png](/files/3646/border1.png) | _A sintaxe de um valor_: `border-width: 1em` — O valor único representa todas as bordas                                                                                                                                                                                                                                                     |
-        | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![border2.png](/files/3647/border2.png) | _As sintaxes de dois valores_: `border-width: 1em 2em` — O primeiro valor representa a vertical, isto é, as bordas superior e inferior, a segunda as horizontais, que é a esquerda e a direita.                                                                                                                                             |
-        | ![border3.png](/files/3648/border3.png) | _As sintaxes de três valores_: `border-width: 1em 2em 3em` — O primeiro valor representa a borda superior, a segunda, a horizontal, que é esquerda e direita, e o terceiro valor a borda inferior                                                                                                                                           |
-        | ![border4.png](/files/3649/border4.png) | _As sintaxes de quatro valores_: `border-width: 1em 2em 3em 4em` — Os quatro valores representam as margens superior, direita, inferior e esquerda, respectivamente, sempre nessa ordem, que é no sentido horário começando pelo topo (a letra inicial de Top-Right-Bottom-Left corresponde à ordem da consoante da palavra _trouble_: TRBL) |
+      | ![border1.png](/files/3646/border1.png) | _A sintaxe de um valor_: `border-width: 1em` — O valor único representa todas as bordas                                                                                                                                                                                                                                                      |
+      | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![border2.png](/files/3647/border2.png) | _As sintaxes de dois valores_: `border-width: 1em 2em` — O primeiro valor representa a vertical, isto é, as bordas superior e inferior, a segunda as horizontais, que é a esquerda e a direita.                                                                                                                                              |
+      | ![border3.png](/files/3648/border3.png) | _As sintaxes de três valores_: `border-width: 1em 2em 3em` — O primeiro valor representa a borda superior, a segunda, a horizontal, que é esquerda e direita, e o terceiro valor a borda inferior                                                                                                                                            |
+      | ![border4.png](/files/3649/border4.png) | _As sintaxes de quatro valores_: `border-width: 1em 2em 3em 4em` — Os quatro valores representam as margens superior, direita, inferior e esquerda, respectivamente, sempre nessa ordem, que é no sentido horário começando pelo topo (a letra inicial de Top-Right-Bottom-Left corresponde à ordem da consoante da palavra _trouble_: TRBL) |
 
-    2. Também parecido, shorthand que lidam com os cantos de um box {{cssxref("border-radius")}}, sempre usam 1-para-4-valor de sintaxe representando esses cantos:
+   2. Também parecido, shorthand que lidam com os cantos de um box {{cssxref("border-radius")}}, sempre usam 1-para-4-valor de sintaxe representando esses cantos:
 
-        | ![corner1.png](/files/3650/corner1.png) | _A sintaxe de um valor_: `border-radius: 1em` — O valor único representa todos os cantos                                                                                                                                                                                                  |
-        | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![corner2.png](/files/3651/corner2.png) | _As sintaxes de dois valores_: `border-radius: 1em 2em` — O primeiro valor representa o canto superior esquerdo e inferior direito, o segundo o superior direito e inferior esquerdo                                                                                                      |
-        | ![corner3.png](/files/3652/corner3.png) | _As sintaxes de três valores_: `border-radius: 1em 2em 3em` — O primeiro valor representa o canto superior esquerdo, o segundo o canto superior direito eo inferior esquerdo e o terceiro o canto inferior direito                                                                        |
-        | ![corner4.png](/files/3653/corner4.png) | _As sintaxes de quatro valores_: `border-radius: 1em 2em 3em 4em` — Os quatro valores representam os cantos superior esquerdo, superior direito, inferior direito e inferior esquerdo respectivamente, sempre nessa ordem, que é no sentido horário começando no canto superior esquerdo. |
+      | ![corner1.png](/files/3650/corner1.png) | _A sintaxe de um valor_: `border-radius: 1em` — O valor único representa todos os cantos                                                                                                                                                                                                  |
+      | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![corner2.png](/files/3651/corner2.png) | _As sintaxes de dois valores_: `border-radius: 1em 2em` — O primeiro valor representa o canto superior esquerdo e inferior direito, o segundo o superior direito e inferior esquerdo                                                                                                      |
+      | ![corner3.png](/files/3652/corner3.png) | _As sintaxes de três valores_: `border-radius: 1em 2em 3em` — O primeiro valor representa o canto superior esquerdo, o segundo o canto superior direito eo inferior esquerdo e o terceiro o canto inferior direito                                                                        |
+      | ![corner4.png](/files/3653/corner4.png) | _As sintaxes de quatro valores_: `border-radius: 1em 2em 3em 4em` — Os quatro valores representam os cantos superior esquerdo, superior direito, inferior direito e inferior esquerdo respectivamente, sempre nessa ordem, que é no sentido horário começando no canto superior esquerdo. |
 
 ## Propriedades de background
 

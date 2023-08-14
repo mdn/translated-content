@@ -1,5 +1,5 @@
 ---
-title: 'HTML の学習: ガイドとチュートリアル'
+title: "HTML の学習: ガイドとチュートリアル"
 slug: Learn/HTML
 ---
 

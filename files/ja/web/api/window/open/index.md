@@ -2,16 +2,16 @@
 title: Window.open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
+  sourceCommit: 72fb4be8b6c25b935d0d8709dfe2cf2c58004197
 ---
 
 {{APIRef}}
 
-**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 {{HTMLElement("iframe")}}、タブ) に読み込みます。
+**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [iframe](/ja/docs/Web/HTML/Element/iframe)、タブ) に読み込みます。
 
 ## 構文
 
-```js
+```js-nolint
 open()
 open(url)
 open(url, target)
@@ -20,48 +20,58 @@ open(url, target, windowFeatures)
 
 ### 引数
 
-- `url`
+- `url` {{optional_inline}}
+
   - : 文字列で、読み込むリソースの URL を示します。これは HTML ページ、画像ファイル、その他のブラウザーが対応しているリソースのパスまたは URL にすることができます。空文字列 (`""`) がこの時期数に指定されると、対象の閲覧コンテキストに空のページが開きます。
 
 - `target` {{optional_inline}}
-  - : ホワイトスペースのない文字列で、指定したリソースを読み込むための閲覧コンテキスト (ウィンドウ、 {{HTMLElement("iframe")}}、タブ) の[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Element/a#attr-target)である `_self`、`_blank`、`_parent`、`_top` も利用することができます。
 
-    この名前は [`<a>`](/ja/docs/Web/HTML/Element/a#attr-target) や [`<form>`](/ja/docs/Web/HTML/Element/form#attr-target) 要素の `target` 属性として使うことができます。
+  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Element/a#target)である `_self`、`_blank`、`_parent`、`_top` も利用することができます。
+
+    この名前は [`<a>`](/ja/docs/Web/HTML/Element/a#target) や [`<form>`](/ja/docs/Web/HTML/Element/form#target) 要素の `target` 属性として使うことができます。
 
 - `windowFeatures` {{optional_inline}}
+
   - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。これらの特性には、ウィンドウの既定値や位置、最小限のポップアップウィンドウを開くかどうか、などのオプションが記載されます。以下のようなオプションに対応しています。
+
     - `popup`
+
       - : この特性を有効にすると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。
 
         もし `popup` が有効でなく、ウィンドウ機能が宣言されていない場合、新しい閲覧コンテキストはタブになります。
 
-        > **メモ:** windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
+        > **メモ:** `windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
 
         この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`true` のいずれかに設定します。
 
         例: `popup=yes`, `popup=1`, `popup=true`, `popup` は同じ結果になります。
 
     - `width` または `innerWidth`
+
       - : スクロールバーを含むコンテンツ領域の幅を指定します。必要最小値は 100 です。
 
     - `height` または `innerHeight`
+
       - : スクロールバーを含むコンテンツ領域の高さを指定します。必要最小値は 100 です。
 
     - `left` または `screenX`
+
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の左側からの距離をピクセル単位で指定します。
 
     - `top` または `screenY`
+
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の上側からの距離をピクセル単位で指定します。
 
     - `noopener`
+
       - : この特性が設定されている場合、新しいウィンドウは [`Window.opener`](/ja/docs/Web/API/Window/opener) を介して元のウィンドウにアクセスすることはできず、 `null` を返します。
 
         `noopener` を使用した場合、 `_top`, `_self`, `_parent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_blank` と同様に扱われます。
 
     - `noreferrer`
-      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Link_types/noreferrer) を参照してください。
+      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) を参照してください。
 
-> **メモ:** 要求位置 (`top`, `left`)、要求寸法 (`width`, `height`) の値が`windowFeatures` で指定された場合、ブラウザーポップアップ全体をユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に位置することはできません。
+> **メモ:** 要求する位置 (`top`, `left`)、要求する寸法 (`width`, `height`) の値が `windowFeatures` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
 
 ### 返値
 
@@ -95,18 +105,21 @@ window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
 
 ```js
 const windowFeatures = "left=100,top=100,width=320,height=320";
-const handle = window.open("https://www.mozilla.org/", "mozillaWindow", windowFeatures);
+const handle = window.open(
+  "https://www.mozilla.org/",
+  "mozillaWindow",
+  windowFeatures
+);
 if (!handle) {
   // The window wasn't allowed to open
   // This is likely caused by built-in popup blockers.
-
   // …
 }
 ```
 
 ## プログレッシブエンハンスメント
 
-JavaScriptが無効または利用できない場合、`window.open()`が動作しないことがあります。この機能の有無だけに頼るのではなく、サイトやアプリケーションが機能するような代替策を提供してください。
+JavaScript が無効または利用できない場合、`window.open()` が動作しないことがあります。この機能の有無だけに頼るのではなく、サイトやアプリケーションが機能するような代替策を提供してください。
 
 ### JavaScript が無効な場合の代替手段を提供する
 
@@ -116,7 +129,8 @@ JavaScript のサポートが無効または存在しない場合、ユーザー
 
 ```html
 <a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
-  Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+  Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+  tab)
 </a>
 ```
 
@@ -129,36 +143,43 @@ function openRequestedTab(url, windowName) {
     windowObjectReference = window.open(url, windowName);
   } else {
     windowObjectReference.focus();
-  };
+  }
 }
 
 const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener("click", (event) => {
-  openRequestedTab(link.href);
-  event.preventDefault();
-  }, false);
+link.addEventListener(
+  "click",
+  (event) => {
+    openRequestedTab(link.href);
+    event.preventDefault();
+  },
+  false
+);
 ```
 
 上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
 
-> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Element/a#attr-target) または [`<form>`](/ja/docs/Web/HTML/Element/form#attr-target) を参照してください。
+> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Element/a#target) または [`<form>`](/ja/docs/Web/HTML/Element/form#target) を参照してください。
 
 ### 既存のウィンドウを再利用して `target="_blank"` を防止する
 
-target 属性の値として `"_blank"` を使用すると、ユーザーのデスクトップ上にリサイクルや再使用ができない新しい無名のウィンドウがいくつも作成されます。 `target` 属性に意味のある名前を提供し、ページ内で `target` 属性を再利用するようにしてください。そうすれば、別のリンクをクリックしたときに、すでに作成・表示されているウィンドウに参照先のリソースが読み込まれ（したがってユーザーの処理速度が速くなり）、最初に二番目のウィンドウを作成した理由（およびユーザーのシステムリソース、費やした時間）が正当化されることになります。単一の `target` 属性値を使用し、それをリンクで再利用することは、リサイクルされる単一のセカンダリウィンドウを作成するだけなので、よりユーザーリソースに優しい方法です。
+target 属性の値として `"_blank"` を使用すると、ユーザーのデスクトップ上にリサイクルや再使用ができない新しい無名のウィンドウがいくつも作成されます。 `target` 属性に意味のある名前を提供し、ページ内で `target` 属性を再利用するようにしてください。そうすれば、別のリンクをクリックしたときに、すでに作成・表示されているウィンドウに参照先のリソースが読み込まれ（したがってユーザーの処理速度が速くなり）、第二ウィンドウを作成した当初の理由（およびユーザーのシステムリソース、費やした時間）が正当化されることになります。単一の `target` 属性値を使用し、それをリンクで再利用することで、第二ウィンドウを一つだけ作成して再利用するので、よりユーザーリソースに優しくなります。
 
-ここでは、二番目のウィンドウを開いて、他のリンクに再利用する例を紹介します。
+ここでは、第二ウィンドウを開いて、他のリンクに再利用する例を紹介します。
 
 #### HTML
 
 ```html
 <p>
   <a href="https://www.wikipedia.org/" target="SingleSecondaryWindowName">
-    Wikipedia, a free encyclopedia (opens in another, possibly already existing, tab)
+    Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+    tab)
   </a>
 </p>
 <p>
-  <a href="https://support.mozilla.org/products/firefox" target="SingleSecondaryWindowName">
+  <a
+    href="https://support.mozilla.org/products/firefox"
+    target="SingleSecondaryWindowName">
     Firefox FAQ (opens in another, possibly already existing, tab)
   </a>
 </p>
@@ -181,24 +202,30 @@ function openRequestedSingleTab(url) {
     windowObjectReference.focus();
   } else {
     windowObjectReference.focus();
-  };
+  }
   previousURL = url;
   /* explanation: we store the current url in order to compare url
      in the event of another call of this function. */
 }
 
-const links = document.querySelectorAll("a[target='SingleSecondaryWindowName']");
+const links = document.querySelectorAll(
+  "a[target='SingleSecondaryWindowName']"
+);
 for (const link of links) {
-  link.addEventListener("click", (event) => {
-    openRequestedSingleTab(link.href);
-    event.preventDefault();
-  }, false);
+  link.addEventListener(
+    "click",
+    (event) => {
+      openRequestedSingleTab(link.href);
+      event.preventDefault();
+    },
+    false
+  );
 }
 ```
 
 ## 同一オリジンポリシー
 
-新しく開いた閲覧コンテキストが同じ[オリジン](/ja/docs/Glossary/Origin)でない場合、開いたスクリプトは閲覧コンテキストの内容と対話（読み書き）をすることができません。
+新しく開いた閲覧コンテキストが同じ[オリジン](/ja/docs/Glossary/Origin)でない場合、開いたスクリプトは閲覧コンテキストの内容とやり取り（読み書き）をすることができません。
 
 ```js example-bad
 // Script from example.com
@@ -254,7 +281,7 @@ console.log(sameOriginContext.origin);
 極端なコンテキストの変化が起こる前に、明示的に識別することができれば、ユーザーは先に進むかどうかを判断でき、変化に備えることができます。ユーザーは混乱したり方向感覚を失ったりしないだけでなく、経験豊富なユーザーであれば、そうしたリンクを開く方法（新しいウィンドウで開くかどうか、同じウィンドウ、新しいタブ、「バックグラウンド」かどうか）を適切に判断することができます。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / Understanding WCAG, Guideline 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -269,8 +296,8 @@ console.log(sameOriginContext.origin);
 ## 関連情報
 
 - `target` 属性のドキュメント:
-  - [`<a>`](/ja/docs/Web/HTML/Element/a#attr-target)
-  - [`<form>`](/ja/docs/Web/HTML/Element/form#attr-target)
+  - [`<a>`](/ja/docs/Web/HTML/Element/a#target)
+  - [`<form>`](/ja/docs/Web/HTML/Element/form#target)
 - [`window.close()`](/ja/docs/Web/API/Window/close)
 - [`window.closed`](/ja/docs/Web/API/Window/closed)
 - [`window.focus()`](/ja/docs/Web/API/Window/focus)

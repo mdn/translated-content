@@ -3,7 +3,7 @@ title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}}
 
 **append()** 是 {{domxref("URLSearchParams")}} 接口的一个方法。可以插入一个新搜索参数。
 
@@ -27,11 +27,11 @@ URLSearchParams.append(name, value)
 ## 例子
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search.slice(1));
 
 //添加第二个 foo 搜索参数。
-params.append('foo', 4);
+params.append("foo", 4);
 //查询字符串变成：'foo=1&bar=2&foo=4'
 ```
 

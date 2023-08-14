@@ -7,7 +7,7 @@ slug: Web/API/Element/transitionend_event
 
 {{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件的 [事件处理函数](/zh-CN/docs/Web/Events/Event_handlers)。
 
-`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 完成时触发。
+`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions) 完成时触发。
 
 > **备注：** 如果在 transition 完成前，该 transition 已从目标节点上移除，那么 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 将不会被触发。一种可能的情况是修改了目标节点的 {{cssxref("transition-property")}} 属性，另一种可能的情况是 {{cssxref("display")}} 属性被设为 `"none"`。
 
@@ -50,15 +50,23 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000FF;
-  color: #FFFFFF;
+  background-color: #0000ff;
+  color: #ffffff;
   padding: 20px;
-  font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  font:
+    bold 1.6em "Helvetica",
+    "Arial",
+    sans-serif;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s,
+    color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #ffcccc;
   color: #000000;
   width: 200px;
   height: 200px;
@@ -72,12 +80,12 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
 
 ```js
 let box = document.querySelector(".box");
-box.ontransitionrun = function(event) {
+box.ontransitionrun = function (event) {
   box.textContent = "Zooming...";
-}
-box.ontransitionend = function(event) {
+};
+box.ontransitionend = function (event) {
   box.textContent = "Done!";
-}
+};
 ```
 
 ### 效果

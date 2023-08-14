@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 
 {{WebAssemblySidebar}}
@@ -73,9 +72,9 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
+    },
   },
   env: {
     abort: () => {},
@@ -84,13 +83,10 @@ var importObject = {
 
 /* 2019-08-03：importObject 必须存在 env 对象以及 env 对象的 abort 方法 */
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports);
 ```
 
 > **备注：** 查看 GitHub([在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)) 的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的[`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1)库函数
@@ -102,13 +98,10 @@ fetch('simple.wasm').then(response =>
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 在线程中 (查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)) 我们定义了一个导入对象供模块使用，然后设置了一个事件处理函数来接收主线程发来的模块。当模块被接收到后，我们使用{{jsxref("WebAssembly.instantiate()")}} 方法创建一个实例并且调用它从内部导出的函数。
@@ -116,17 +109,17 @@ fetch('simple.wasm').then(response =>
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

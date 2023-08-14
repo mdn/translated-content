@@ -3,7 +3,7 @@ title: <samp>
 slug: Web/HTML/Element/samp
 ---
 
-## 概述
+{{HTMLSidebar}}
 
 \<samp> 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。
 
@@ -60,8 +60,6 @@ Regular text. `This is sample text.` Regular text.
 
 可以使用 CSS 选择器 `samp` 定义规则来覆盖浏览器的缺省字体。不过，用户设置的偏好可能会优先于指定的 CSS 使用。
 
-## 另请参阅
+## 参见
 
 - [HTML Code Element](/zh-CN/HTML/Element/code)
-
-{{HTMLSidebar}}

@@ -3,6 +3,8 @@ title: 全局对象
 slug: Glossary/Global_object
 ---
 
+{{GlossarySidebar}}
+
 一个全局对象是一个永远存在于 {{glossary("global scope")}} 的 {{glossary("object")}}.
 
 在 JavaScript 中，有一个永远被定义的全局对象。在一个 web 浏览器中，当脚本创建全局变量时，他们作为该全局对象的成员被创建。(在 {{Glossary("Node.js")}} 不是这样.) 全局对象的 {{Glossary("interface")}} 取决于脚本在其中运行的执行上下文。例如：
@@ -29,14 +31,14 @@ foo === window.foo; // Returns: true
 全局变量 `foo` 存储在 `window` 对象中，像这样：
 
 ```js
-foo: "foobar"
+foo: "foobar";
 ```
 
 ### 访问全局函数
 
 ```js
 function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 
 window.greeting(); // It is the same as the normal invoking: greeting();
@@ -50,7 +52,7 @@ window.greeting(); // It is the same as the normal invoking: greeting();
 
 ```js
 greeting: function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 ```
 

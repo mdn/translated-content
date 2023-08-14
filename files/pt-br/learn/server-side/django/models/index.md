@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 3: Usando models'
+title: "Tutorial Django Parte 3: Usando models"
 slug: Learn/Server-side/Django/Models
 ---
 
@@ -12,7 +12,7 @@ Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Criar um esqueleto de um site</a
         >.
       </td>
@@ -92,9 +92,9 @@ Nas seções abaixa, exploraremos detalhadamente cada um dos recursos dentro do 
 
 #### Campos (Fields)
 
-Um modelo pode ter um número árbitrário de campos, de qualquer tipo -- cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
+Um modelo pode ter um número árbitrário de campos, de qualquer tipo — cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
 
-```js
+```python
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
@@ -432,21 +432,3 @@ Neste ponto faremos um rápido desvio da criação do site para ver o _Django Ad
 - [Referência a QuerySet API](https://docs.djangoproject.com/en/2.1/ref/models/querysets/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

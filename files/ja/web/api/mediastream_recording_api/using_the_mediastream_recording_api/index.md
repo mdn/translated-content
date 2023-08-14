@@ -2,7 +2,7 @@
 title: MediaStream 収録 API の使用
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 l10n:
-  sourceCommit: 60c1df4b8b6ed30b2baec49ec3e21a1648a0ba86
+  sourceCommit: 6b1e3eebf22abf1b73bb219581335b1147b75d7a
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
@@ -50,8 +50,6 @@ header {
   overflow: scroll;
 }
 ```
-
-> **メモ:** `calc()` は、最近のブラウザーでも、 Internet Explorer 9 に戻っても十分にサポートされています。
 
 ### 表示/非表示のチェックボックスのハック
 
@@ -251,7 +249,7 @@ mediaRecorder.onstop = (e) => {
 </article>
 ```
 
-その後、録音した音声チャンクから結合された {{domxref("Blob")}} を作成し、それを指すオブジェクト URL を `window.URL.createObjectURL(blob)` を使用して作成します。 次に、{{HTMLElement("audio")}} 要素の {{htmlattrxref("src", "audio")}} 属性の値をオブジェクト URL に設定して、音声プレーヤーの再生ボタンが押されたときに `Blob` を再生するようにします。
+その後、録音した音声チャンクから結合された {{domxref("Blob")}} を作成し、それを指すオブジェクト URL を `window.URL.createObjectURL(blob)` を使用して作成します。 次に、{{HTMLElement("audio")}} 要素の [`src`](/ja/docs/Web/HTML/Element/audio#src) 属性の値をオブジェクト URL に設定して、音声プレーヤーの再生ボタンが押されたときに `Blob` を再生するようにします。
 
 最後に、削除ボタンに `onclick` ハンドラーを設定して、クリップの HTML 構造全体を削除する関数にします。
 

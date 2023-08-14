@@ -13,7 +13,7 @@ l10n:
 
 ## 構文
 
-```
+```js
 // 個々の機能をエクスポート
 export let name1, name2/*, … */; // var も
 export const name1 = 1, name2 = 2/*, … */; // var, let も

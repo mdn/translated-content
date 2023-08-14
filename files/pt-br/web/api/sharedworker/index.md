@@ -36,7 +36,7 @@ In our [Basic shared worker example](https://github.com/mdn/simple-shared-worker
 The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+var myWorker = new SharedWorker("worker.js");
 ```
 
 Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
@@ -48,46 +48,44 @@ myWorker.port.start();
 When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = function (e) {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 Inside the worker we use the {{domxref("SharedWorkerGlobalScope.onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{event("connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
-onconnect = function(e) {
+onconnect = function (e) {
   var port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
     port.postMessage(workerResult);
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+};
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                    | Status                           | Comment                                              |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#sharedworker", "SharedWorker")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SharedWorker")}}
+{{Compat}}
 
 ## See also
 

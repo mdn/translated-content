@@ -26,8 +26,10 @@ var isFullScreen = document.mozFullScreen || document.webkitIsFullScreen;
 ```js
 function isDocumentInFullScreenMode() {
   // 过去由 F11 触发的那种浏览器全屏模式和 HTML5 中内容的全屏模式是不一样的
-  return (document.fullscreenElement && document.fullscreenElement !== null) ||
-      (!document.mozFullScreen && !document.webkitIsFullScreen);
+  return (
+    (document.fullscreenElement && document.fullscreenElement !== null) ||
+    (!document.mozFullScreen && !document.webkitIsFullScreen)
+  );
 }
 ```
 

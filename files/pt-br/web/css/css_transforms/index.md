@@ -1,6 +1,6 @@
 ---
 title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
+slug: Web/CSS/CSS_transforms
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -26,6 +26,6 @@ slug: Web/CSS/CSS_Transforms
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| Specification                     | Status                         | Comment             |
+| --------------------------------- | ------------------------------ | ------------------- |
 | {{ SpecName('CSS3 Transforms') }} | {{ Spec2('CSS3 Transforms') }} | Initial definition. |

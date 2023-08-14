@@ -23,9 +23,9 @@ p {
 
 1. 打開 `index.html` 文件，然後將下面一行貼到 head，也就是 `<head>` 和 `</head>` 標籤之間。
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" type="text/css" />
+   ```
 
 2. 存檔 `index.html` 並且在瀏覽器載入。你應該可以看到下面的頁面。
 
@@ -69,7 +69,9 @@ p {
 你可以選擇數種元素（elements）並同時用在同一個 rule set 上。可以用逗號（,）包含數個選擇器，如：
 
 ```css
-p,li,h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -146,40 +148,44 @@ p,li,h1 {
 現在我們已經瀏覽過一些 CCS 的基礎，接下來我們開始增加更多的規則和資訊到我們的 style.css 檔案，讓我們範例中的字型和文字看起來更好.
 
 1. 第一步, 我們回到 [output from Google Fonts](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 找到你存的字體。 加上 `<link ... >` 這個元素在你的 `index.html`文件裡的 head 中（在 `<head>` 跟 `</head>` 任何位置中）。
-    這一段 code 將頁面連結到樣式表，將 Open Sans 字體系列與網頁一起下載，並讓你在 HTML 元素上使用自己的樣式表進行設置。 它看起來會像:
+   這一段 code 將頁面連結到樣式表，將 Open Sans 字體系列與網頁一起下載，並讓你在 HTML 元素上使用自己的樣式表進行設置。 它看起來會像:
 
-    ```html
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet"
+     type="text/css" />
+   ```
 
 2. 下一步, 刪除`style.css文件中`其他現有的字體。這是個很好的嘗試, 但紅色字體看起來真的有點醜。
 3. 把下面這行加在這個地方, 取代 placeholder line with the actual `font-family` line you got from Google 字體. (`font-family` 是指你想在文件中使用的字體.)
-    這規則
-    此規則首先為頁面設置整體的基本字體和字型(因 `<html>` 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
+   這規則
+   此規則首先為頁面設置整體的基本字體和字型(因 `<html>` 是整個頁面的父元素, 頁面中所有的元素會繼承同樣的字體和字型):
 
-    ```css
-    html {
-      font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
-      font-family: placeholder: this should be the rest of the output you got from Google fonts
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+     font-family: placeholder: this should be the rest of the output you got from Google fonts
+   }
+   ```
 
-    > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
+   > **備註：** 我已增加了對於 "px" 的說明在上面. 任何在 CSS document 中 `/*` `*/` 內的文字是 **CSS 說明**, 瀏覽器在編譯時會忽略掉. 這是一個可以用來說明你做了什麼的幫助訊息.
 
 4. 現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 你可以依自己喜好修改 `px` 的值。你目前的工作成果可能如下圖所示：
 
@@ -213,7 +219,7 @@ CSS 佈局主要基於「box 模型」。在頁面空間的每個 box 都有下�
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -225,7 +231,7 @@ html {
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -245,7 +251,7 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

@@ -27,7 +27,7 @@ slug: Web/CSS/Layout_cookbook/Card
 
 ## 所选方案
 
-尽管是单维布局，该卡片还是使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)技术进行布局，因为它可以为网格轨道使用内容大小。在设置单列网格时，我使用了以下方法：
+尽管是单维布局，该卡片还是使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)技术进行布局，因为它可以为网格轨道使用内容大小。在设置单列网格时，我使用了以下方法：
 
 ```css
 .card {
@@ -44,9 +44,9 @@ slug: Web/CSS/Layout_cookbook/Card
 
 ## 有用的后备措施或替代方法
 
-[弹性盒](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)可以用来布置卡片，在这种情况下，应该让内容区增长，而其他项目不增长。我略微倾向于能够从容器中控制轨道，而不需要为项目添加规则，这种布局卡片的方式更加合理。
+[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)可以用来布置卡片，在这种情况下，应该让内容区增长，而其他项目不增长。我略微倾向于能够从容器中控制轨道，而不需要为项目添加规则，这种布局卡片的方式更加合理。
 
-对于整体布局，你可以使用 flexbox，然而这将导致卡片在最后的 flex 行上伸展，因为那里的卡片数量少于上面的行。另外，你可以使用 [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_Columns)——这将导致卡片顺着列铺开，可能会导致问题。
+对于整体布局，你可以使用 flexbox，然而这将导致卡片在最后的 flex 行上伸展，因为那里的卡片数量少于上面的行。另外，你可以使用 [CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout)——这将导致卡片顺着列铺开，可能会导致问题。
 
 请参阅[多列布局方案](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)以了解这些布局方法的演示。
 

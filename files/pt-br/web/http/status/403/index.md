@@ -24,8 +24,8 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Especificações
 
-| Especificação                                            | Título                         |
-| -------------------------------------------------------- | ------------------------------ |
+| Especificação                             | Título                         |
+| ----------------------------------------- | ------------------------------ |
 | {{RFC("7231", "403 Proibido" , "6.5.3")}} | HTTP/1.1: Semântica e Conteúdo |
 
 ## Compatibilidade com navegadores

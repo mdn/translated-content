@@ -1,11 +1,14 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin プロパティ"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} インターフェイスの **`crossOrigin`** 属性は、画像を取得する際に使用する {{Glossary("CORS")}} (Cross-Origin Resource Sharing) 設定を指定するための文字列です。
+{{domxref("HTMLImageElement")}} インターフェイスの **`crossOrigin`** 属性は、画像を取得する際に使用するオリジン間リソース共有 ({{Glossary("CORS")}}) 設定を指定するための文字列です。
 
 ## 値
 
@@ -34,9 +37,7 @@ const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
-  image.addEventListener("load",
-    () => container.prepend(image)
-  );
+  image.addEventListener("load", () => container.prepend(image));
 
   image.addEventListener("error", () => {
     const errMsg = document.createElement("output");
@@ -56,7 +57,13 @@ loadImage(imageUrl);
 
 ```html
 <div class="container">
-  <p>ここに 1 つの段落があります。とても面白い段落です あなたはこの段落に魅了されています。この段落を読み続けてください。じゃあ、もうこの段落を読むのはやめていいよ。読んでくれてありがとう。</p>
+  <p>
+    ここに 1 つの段落があります。とても面白い段落です。
+    あなたはこの段落に魅了されています。
+    この段落を読み続けてください。
+    じゃあ、もうこの段落を読むのはやめていいよ。
+    読んでくれてありがとう。
+  </p>
 </div>
 ```
 
@@ -87,7 +94,7 @@ output {
 
 ### 結果
 
-{{EmbedLiveSample("Example", 600, 260)}}
+{{EmbedLiveSample("Examples", 600, 260)}}
 
 ## 仕様書
 

@@ -1,15 +1,9 @@
 ---
 title: Разрешение использования изображений из разных источников и canvas
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - Canvas
-  - HTML
-  - Reference
-  - Security
-translation_of: Web/HTML/CORS_enabled_image
 ---
-HTML предоставляет атрибут {{ htmlattrxref("crossorigin", "img") }} для изображений, которые в сочетании с соответствующим заголовком {{Glossary("CORS")}} позволяют использовать изображения, определённые элементом {{ HTMLElement("img") }}, загруженные из внешних источников, в {{HTMLElement("canvas")}} , как если бы они были загружены из текущего источника.
+
+HTML предоставляет атрибут [`crossorigin`](/ru/docs/Web/HTML/Element/img#crossorigin) для изображений, которые в сочетании с соответствующим заголовком {{Glossary("CORS")}} позволяют использовать изображения, определённые элементом {{ HTMLElement("img") }}, загруженные из внешних источников, в {{HTMLElement("canvas")}} , как если бы они были загружены из текущего источника.
 
 Дополнительные сведения об использовании атрибута `crossorigin` смотрите в разделе [атрибуты параметров CORS](/ru/docs/Web/HTML/CORS_settings_attributes).
 
@@ -58,7 +52,7 @@ HTML предоставляет атрибут {{ htmlattrxref("crossorigin", "i
 
 Теперь, когда сервер настроен так, чтобы разрешить извлечение изображений из разных источников, мы можем написать код, который позволяет пользователю сохранять их в [локальном хранилище](/ru/docs/Web/API/Web_Storage_API), как если бы они обслуживались из того же домена, на котором выполняется код.
 
-Ключевым моментом является использование атрибута {{htmlattrxref("crossorigin")}} путём установки {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} в элементе {{domxref("HTMLImageElement")}} , на который будет загружено изображение. Это даёт браузеру команду на запрос доступа к другому источнику при попытке загрузить данные изображения.
+Ключевым моментом является использование атрибута [`crossorigin`](/ru/docs/Web/HTML/Global_attributes#crossorigin) путём установки {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} в элементе {{domxref("HTMLImageElement")}} , на который будет загружено изображение. Это даёт браузеру команду на запрос доступа к другому источнику при попытке загрузить данные изображения.
 
 #### Запуск загрузки
 
@@ -66,9 +60,10 @@ HTML предоставляет атрибут {{ htmlattrxref("crossorigin", "i
 
 ```js
 function startDownload() {
-  let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+  let imageURL =
+    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
 
-  downloadedImg = new Image;
+  downloadedImg = new Image();
   downloadedImg.crossOrigin = "Anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.src = imageURL;
@@ -96,8 +91,7 @@ function imageReceived() {
 
   try {
     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  }
-  catch(err) {
+  } catch (err) {
     console.log("Error: " + err);
   }
 }
@@ -117,4 +111,4 @@ function imageReceived() {
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Веб хранилище (API)](/ru/docs/Web/API/Web_Storage_API)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/HTML/")}}

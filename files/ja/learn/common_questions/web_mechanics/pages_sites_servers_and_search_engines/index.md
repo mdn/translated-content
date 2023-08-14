@@ -1,7 +1,6 @@
 ---
 title: ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 この記事では、ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンなどのウェブに関係する色々な概念に関して解説します。これらの用語はウェブの初心者を混乱させたり、間違って使われたりしています。それぞれの意味を学びましょう。

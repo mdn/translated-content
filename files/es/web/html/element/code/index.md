@@ -1,12 +1,12 @@
 ---
 title: code
 slug: Web/HTML/Element/code
-original_slug: Web/HTML/Elemento/code
 ---
 
 ### Definición
 
 - Es el apropiado para marcar el código de un programa.
+
   - : **Sus etiquetas son**: \<code> y \</code> (ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).

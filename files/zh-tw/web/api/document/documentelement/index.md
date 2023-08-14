@@ -21,8 +21,8 @@ var firstTier = rootElement.childNodes;
 
 // firstTier is the NodeList of the direct children of the root element
 for (var i = 0; i < firstTier.length; i++) {
-   // do something with each direct kid of the root element
-   // as firstTier[i]
+  // do something with each direct kid of the root element
+  // as firstTier[i]
 }
 ```
 

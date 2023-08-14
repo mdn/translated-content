@@ -23,7 +23,7 @@ CORS 机制允许 Web 应用服务器进行跨源访问控制，从而使跨源�
 - Web 字体（CSS 中通过 `@font-face` 使用跨源字体资源），[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 使用 {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} 将图片或视频画面绘制到 canvas。
-- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 标头。
 
@@ -84,9 +84,9 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 
 ```js
 const xhr = new XMLHttpRequest();
-const url = 'https://bar.other/resources/public-data/';
+const url = "https://bar.other/resources/public-data/";
 
-xhr.open('GET', url);
+xhr.open("GET", url);
 xhr.onreadystatechange = someHandler;
 xhr.send();
 ```
@@ -147,11 +147,11 @@ Access-Control-Allow-Origin: https://foo.example
 
 ```js
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://bar.other/resources/post-here/');
-xhr.setRequestHeader('X-PINGOTHER', 'pingpong');
-xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.open("POST", "https://bar.other/resources/post-here/");
+xhr.setRequestHeader("X-PINGOTHER", "pingpong");
+xhr.setRequestHeader("Content-Type", "application/xml");
 xhr.onreadystatechange = handler;
-xhr.send('<person><name>Arun</name></person>');
+xhr.send("<person><name>Arun</name></person>");
 ```
 
 上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。
@@ -355,7 +355,7 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 请求中的 cookie（第 10 行）也可能在正常的第三方 cookie 策略下被阻止。因此，强制执行的 cookie 策略可能会使本节描述的内容无效（阻止你发出任何携带凭据的请求）。
 
-Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性控制。
+Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性控制。
 
 ## HTTP 响应标头字段
 

@@ -1,13 +1,15 @@
 ---
 title: 순수한 자바스크립트를 이용한 2D 벽돌깨기 게임
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기")}}
 
-이 튜토리얼을 차례차례 진행하면서 우리는 HTML5 {{htmlelement("canvas")}} 로 렌더되는 순수하게 JavaScript로만 쓰여진 간단한 MDN 벽돌깨기 게임을 만들 것입니다.
+이 튜토리얼을 차례차례 진행하면서 우리는 HTML5 {{htmlelement("canvas")}} 로 렌더되는 순수하게 JavaScript로만 쓰여진 간단한 **MDN 벽돌깨기** 게임을 만들 것입니다.
 
 모든 과정은 플레이 가능하고 편집가능한 라이브 샘플을 포함하고 있습니다. 이 샘플을 통해, 여러분은 중간 스테이지들이 어떻게 보여져야 하는지 확인할 수 있습니다. 여러분은 이미지의 렌더링과 움직임, 충돌 감지, 컨트롤 메카니즘들과 승리와 패배 상태와 같은 기본적인 게임 원리들을 구현하기 위해서, {{htmlelement("canvas")}}엘리먼트의 기본적인 사용 방법을 배우게 될 것입니다.
 

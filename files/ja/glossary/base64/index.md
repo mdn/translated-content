@@ -154,7 +154,7 @@ function base64EncArr(aBytes) {
         uint6ToB64((nUint24 >>> 18) & 63),
         uint6ToB64((nUint24 >>> 12) & 63),
         uint6ToB64((nUint24 >>> 6) & 63),
-        uint6ToB64(nUint24 & 63)
+        uint6ToB64(nUint24 & 63),
       );
       nUint24 = 0;
     }
@@ -204,7 +204,7 @@ function UTF8ArrToStr(aBytes) {
         : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
         ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
         : /* nPart < 127 ? */ /* one byte */
-          nPart
+          nPart,
     );
   }
   return sView;
@@ -316,12 +316,12 @@ alert(sMyOutput);
 ```js
 // "Base 64 \u2014 Mozilla Developer Network"
 const myArray = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
 );
 
 // "Base 64 \u2014 Mozilla Developer Network"
 const myBuffer = base64DecToArr(
-  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw=="
+  "QmFzZSA2NCDigJQgTW96aWxsYSBEZXZlbG9wZXIgTmV0d29yaw==",
 ).buffer;
 
 alert(myBuffer.byteLength);

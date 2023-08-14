@@ -1,182 +1,200 @@
 ---
 title: Node
 slug: Web/API/Node
+l10n:
+  sourceCommit: bb60fadaa7423d2195ae8727f197fa4361aa09df
 ---
 
 {{APIRef("DOM")}}
 
-**`Node`** es una interfaz en la cuál un número de objetos de tipo DOM API heredan. Esta interfaz permite que esos objetos sean tratados similarmente.
+La interfaz {{Glossary("DOM")}} **`Node`** es una clase base abstracta en la que se basan muchos otros objetos de la API DOM, lo que permite que esos tipos de objetos se usen de manera similar y, a menudo, intercambiable.
+Como clase abstracta, no existe tal cosa como un simple objeto `Node`. Todos los objetos que implementan la funcionalidad `Node` se basan en una de sus subclases. Los más notables son {{domxref("Document")}}, {{domxref("Element")}} y {{domxref("DocumentFragment")}}.
 
-Las siguientes interfaces todas heredan de los metodos y propiedades de `Node`: {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} (heredan el {{domxref("Text")}}, el {{domxref("Comment")}}, y {{domxref("CDATASection")}}), {{domxref("ProcessingInstruction")}}, {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}}, {{domxref("EntityReference")}}
+Además, cada tipo de nodo de DOM está representado por una interfaz basada en `Node`.
+Estos incluyen {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} (en los que {{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef ("CDATASection")}} y {{DOMxRef("ProcessingInstruction")}} están basados) y {{DOMxRef("DocumentType")}}.
 
-Estas interfaces pueden retornar null en casos particulares donde los métodos y las propiedades no son relevantes. Pueden retornar una excepción - por ejemplo cuando se agregan hijos a un tipo de node del cuál no puede existir hijos.
+En algunos casos, es posible que una característica particular de la interfaz base `Node` no se aplique a una de sus interfaces secundarias; en ese caso, el nodo heredero puede devolver `null` o generar una excepción, según las circunstancias. Por ejemplo, intentar agregar elementos secundarios a un tipo de nodo que no puede tener elementos secundarios generará una excepción.
 
-## Propiedades
+{{InheritanceDiagram}}
 
-_herendan propiedades de sus padres {{domxref("EventTarget")}}_.\[1]
+## Propiedades de instancia
 
-- {{domxref("Node.baseURI")}} {{readonlyInline}}
-  - : Retorna un {{domxref("DOMString")}} representando la base de la URL. El concepto de la base de la URL cambia de un lenguaje a otro; en HTML, le corresponde al protocolo, el nombre del dominio y la estructura del directorio, eso es todo hasta el último `'/'`.
-- {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
-  - : (Not available to web content.) The read-only `nsIURI` object representing the base URI for the element.
-- {{domxref("Node.childNodes")}} {{readonlyInline}}
-  - : Returns a live {{domxref("NodeList")}} containing all the children of this node. {{domxref("NodeList")}} being live means that if the children of the `Node` change, the {{domxref("NodeList")}} object is automatically updated.
-- {{domxref("Node.firstChild")}} {{readonlyInline}}
-  - : Returns a {{domxref("Node")}} representing the first direct child node of the node, or `null` if the node has no child.
-- {{domxref("Node.lastChild")}} {{readonlyInline}}
-  - : Returns a {{domxref("Node")}} representing the last direct child node of the node, or `null` if the node has no child.
-- {{domxref("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} representing the local part of the qualified name of an element. In Firefox 3.5 and earlier, the property upper-cases the local name for HTML elements (but not XHTML elements). In later versions, this does not happen, so the property is in lower case for both HTML and XHTML.
-    Though recent specifications require `localName` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
-- {{domxref("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : The namespace URI of this node, or `null` if it is no namespace. In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
-    Though recent specifications require `namespaceURI` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
-- {{domxref("Node.nextSibling")}} {{readonlyInline}}
-  - : Returns a {{domxref("Node")}} representing the next node in the tree, or `null` if there isn't such node.
-- {{domxref("Node.nodeName")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMString")}} containing the name of the `Node`. The structure of the name will differ with the name type. E.g. An {{domxref("HTMLElement")}} will contain the name of the corresponding tag, like `'audio'` for an {{domxref("HTMLAudioElement")}}, a {{domxref("Text")}} node will have the `'#text'` string, or a {{domxref("Document")}} node will have the `'#document'` string.
-- {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
-  - : A `nsIPrincipal` representing the node principal.
-- {{domxref("Node.nodeType")}}{{readonlyInline}}
+_Además de las propiedades a continuación, `Node` hereda propiedades de su padre, {{DOMxRef("EventTarget")}}._
 
-  - : Returns an `unsigned short` representing the type of the node. Possible values are:
+- {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
+  - : Devuelve una cadena que representa la URL base del documento que contiene el `Node`.
+- {{DOMxRef("Node.childNodes")}} {{ReadOnlyInline}}
+  - : Devuelve un {{DOMxRef("NodeList")}} en vivo que contiene todos los elementos secundarios de este nodo (incluidos elementos, texto y comentarios). Un {{DOMxRef("NodeList")}} en vivo significa que si los hijos de `Node` cambian, el objeto {{DOMxRef("NodeList")}} se actualiza automáticamente.
+- {{DOMxRef("Node.firstChild")}} {{ReadOnlyInline}}
+  - : Devuelve un `Node` que representa el primer nodo hijo directo del nodo, o `null` si el nodo no tiene ningún hijo.
+- {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
+  - : Un valor booleano que indica si el nodo está conectado o no (directa o indirectamente) al objeto de contexto, por ejemplo el objeto {{DOMxRef("Document")}} en el caso del DOM normal, o {{DOMxRef("ShadowRoot")}} en el caso de un DOM oculto.
+- {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
+  - : Devuelve un `Node` que representa el último nodo hijo directo del nodo, o `null` si el nodo no tiene ningún hijo.
+- {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
+  - : Devuelve un `Node` que representa el siguiente nodo en el árbol, o `null` si no existe tal nodo.
+- {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
+  - : Devuelve una cadena que contiene el nombre de `Node`. La estructura del nombre diferirá con el tipo de nodo. Por ejemplo, un {{DOMxRef("HTMLElement")}} contendrá el nombre de la etiqueta correspondiente, como `'audio'` para un {{DOMxRef("HTMLAudioElement")}}, un {{DOMxRef("Text")}} tendrá la cadena `'#text'`, o un nodo {{DOMxRef("Document")}} tendrá la cadena `'#document'`.
+- {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
 
-    | Name                                                     | Value |
-    | -------------------------------------------------------- | ----- |
-    | `ELEMENT_NODE`                                           | `1`   |
-    | `ATTRIBUTE_NODE` {{deprecated_inline()}}        | `2`   |
-    | `TEXT_NODE`                                              | `3`   |
-    | `CDATA_SECTION_NODE` {{deprecated_inline()}}    | `4`   |
-    | `ENTITY_REFERENCE_NODE` {{deprecated_inline()}} | `5`   |
-    | `ENTITY_NODE` {{deprecated_inline()}}           | `6`   |
-    | `PROCESSING_INSTRUCTION_NODE`                            | `7`   |
-    | `COMMENT_NODE`                                           | `8`   |
-    | `DOCUMENT_NODE`                                          | `9`   |
-    | `DOCUMENT_TYPE_NODE`                                     | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`                                 | `11`  |
-    | `NOTATION_NODE` {{deprecated_inline()}}         | `12`  |
+  - : Devuelve un `unsigned short` que representa el tipo del nodo. Los valores posibles son:
 
-- {{domxref("Node.nodeValue")}}
-  - : Is a {{domxref("DOMString")}} representing the value of an object. For most `Node` type, this returns `null` and any set operation is ignored. For nodes of type `TEXT_NODE` ({{domxref("Text")}} objects), `COMMENT_NODE` ({{domxref("Comment")}} objects), and `PROCESSING_INSTRUCTION_NODE` ({{domxref("ProcessingInstruction")}} objects), the value corresponds to the text data contained in the object.
-- {{domxref("Node.ownerDocument")}} {{readonlyInline}}
-  - : Returns the {{domxref("Document")}} that this node belongs to. If no document is associated with it, returns `null`.
-- {{domxref("Node.parentNode")}} {{readonlyInline}}
-  - : Returns a {{domxref("Node")}} that is the parent of this node. If there is no such node, like if this node is the top of the tree or if doesn't participate in a tree, this property returns `null`.
-- {{domxref("Node.parentElement")}} {{readonlyInline}}
-  - : Returns an {{domxref("Element")}} that is the parent of this node. If the node has no parent, or if that parent is not an {{domxref("Element")}}, this property returns `null`.
-- {{domxref("Node.prefix")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Is a {{domxref("DOMString")}} representing the namespace prefix of the node, or `null` if no prefix is specified.
-    Though recent specifications require `prefix` to be defined on the {{domxref("Element")}} interface, Gecko-based browsers still implement it on the {{domxref("Node")}} interface.
-- {{domxref("Node.previousSibling")}} {{readonlyInline}}
-  - : Returns a {{domxref("Node")}} representing the previous node in the tree, or `null` if there isn't such node.
-- {{domxref("Node.textContent")}}
-  - : Is a {{domxref("DOMString")}} representing the textual content of an element and all its descendants.
+    | Nombre                        | Valor |
+    | ----------------------------- | ----- |
+    | `ELEMENT_NODE`                | `1`   |
+    | `ATTRIBUTE_NODE`              | `2`   |
+    | `TEXT_NODE`                   | `3`   |
+    | `CDATA_SECTION_NODE`          | `4`   |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
+    | `COMMENT_NODE`                | `8`   |
+    | `DOCUMENT_NODE`               | `9`   |
+    | `DOCUMENT_TYPE_NODE`          | `10`  |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
 
-## Methods
+- {{DOMxRef("Node.nodeValue")}}
+  - : Devuelve/Establece el valor del nodo actual.
+- {{DOMxRef("Node.ownerDocument")}} {{ReadOnlyInline}}
+  - : Devuelve el {{DOMxRef("Document")}} al que pertenece este nodo. Si el nodo es en sí mismo un documento, devuelve `null`.
+- {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
+  - : Devuelve un `Node` que es el padre de este nodo. Si no existe tal nodo, como si este nodo es la parte superior del árbol o si no participa en un árbol, esta propiedad devuelve `null`.
+- {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
+  - : Devuelve un {{DOMxRef("Element")}} que es el padre de este nodo. Si el nodo no tiene padre, o si ese padre no es {{DOMxRef("Element")}}, esta propiedad devuelve `null`.
+- {{DOMxRef("Node.previousSibling")}} {{ReadOnlyInline}}
+  - : Devuelve un `Node` que representa el nodo anterior en el árbol, o `null` si no existe tal nodo.
+- {{DOMxRef("Node.textContent")}}
+  - : Devuelve/Establece el contenido textual de un elemento y todos sus descendientes.
 
-_Inherits methods from its parents {{domxref("EventTarget")}}_.\[1]
+## Métodos de instancia
 
-- {{domxref("Node.appendChild()")}}
-  - : Insert a {{domxref("Node")}} as the last child node of this element.
-- {{domxref("Node.cloneNode()")}}
-  - : Clone a {{domxref("Node")}}, and optionally, all of its contents. By default, it clones the content of the node.
-- {{domxref("Node.compareDocumentPosition()")}}
-  - : Empty
-- {{domxref("Node.contains()")}}
-  - : Empty
-- {{domxref("Node.getFeature()")}} {{deprecated_inline}}
-  - : ...
-- {{domxref("Node.getUserData()")}} {{deprecated_inline}}
-  - : Allows a user to get some {{domxref("DOMUserData")}} from the node.
-- {{domxref("Node.hasAttributes()")}} {{deprecated_inline}}
-  - : Returns a {{domxref("Boolean")}} indicating if the element has any attributes, or not.
-- {{domxref("Node.hasChildNodes()")}}
-  - : Returns a {{domxref("Boolean")}} indicating if the element has any child nodes, or not.
-- {{domxref("Node.insertBefore()")}}
-  - : Inserts the first {{domxref("Node")}} given in a parameter immediately before the second, child of this element, {{domxref("Node")}}.
-- {{domxref("Node.isDefaultNamespace()")}}
-  - : Empty
-- {{domxref("Node.isEqualNode()")}}
-  - : Empty
-- {{domxref("Node.isSameNode()")}} {{deprecated_inline}}
-  - : Empty
-- {{domxref("Node.isSupported()")}} {{deprecated_inline}}
-  - : Returns a [`Boolean`](/es/docs/Web/API/Boolean) flag containing the result of a test whether the DOM implementation implements a specific feature and this feature is supported by the specific node.
-- {{domxref("Node.lookupPrefix()")}}
-  - : Empty
-- {{domxref("Node.lookupNamespaceURI()")}}
-  - : Empty
-- {{domxref("Node.normalize()")}}
-  - : Clean up all the text nodes under this element (merge adjacent, remove empty).
-- {{domxref("Node.removeChild()")}}
-  - : Removes a child node from the current element, which must be a child of the current node.
-- {{domxref("Node.replaceChild()")}}
-  - : Replaces one child {{domxref("Node")}} of the current one with the second one given in parameter.
-- {{domxref("Node.setUserData()")}} {{deprecated_inline}}
-  - : Allows a user to attach, or remove, {{domxref("DOMUserData")}} to the node.
+_Además de los métodos a continuación, `Node` hereda métodos de su padre, {{DOMxRef("EventTarget")}}._
 
-## Examples
+- {{DOMxRef("Node.appendChild()")}}
+  - : Agrega el argumento `childNode` especificado como el último hijo del nodo actual. Si el argumento hace referencia a un nodo existente en el árbol DOM, el nodo se separará de su posición actual y se adjuntará a la nueva posición.
+- {{DOMxRef("Node.cloneNode()")}}
+  - : Clona un `Node` y, opcionalmente, todo su contenido. Por defecto, clona el contenido del nodo.
+- {{DOMxRef("Node.compareDocumentPosition()")}}
+  - : Compara la posición del nodo actual con otro nodo en cualquier otro documento.
+- {{DOMxRef("Node.contains()")}}
+  - : Devuelve el valor `true` o `false` que indica si un nodo es o no descendiente del nodo que llama.
+- {{DOMxRef("Node.getRootNode()")}}
+  - : Devuelve la raíz del objeto de contexto que, opcionalmente, incluye la raíz oculta si está disponible.
+- {{DOMxRef("Node.hasChildNodes()")}}
+  - : Devuelve un valor booleano que indica si el elemento tiene o no nodos secundarios.
+- {{DOMxRef("Node.insertBefore()")}}
+  - : Inserta un `Node` antes del nodo de referencia como hijo de un nodo principal especificado.
+- {{DOMxRef("Node.isDefaultNamespace()")}}
+  - : Acepta un URI de espacio de nombres como argumento y devuelve un valor booleano con un valor de `true` si el espacio de nombres es el espacio de nombres predeterminado en el nodo dado o `false` si no lo es.
+- {{DOMxRef("Node.isEqualNode()")}}
+  - : Devuelve un valor booleano que indica si dos nodos son o no del mismo tipo y todos los puntos de datos que los definen coinciden.
+- {{DOMxRef("Node.isSameNode()")}}
+  - : Devuelve un valor booleano que indica si los dos nodos son iguales o no (es decir, hacen referencia al mismo objeto).
+- {{DOMxRef("Node.lookupPrefix()")}}
+  - : Devuelve una cadena que contiene el prefijo para un URI de espacio de nombres dado, si está presente, y `null` si no lo está. Cuando son posibles varios prefijos, el resultado depende de la implementación.
+- {{DOMxRef("Node.lookupNamespaceURI()")}}
+  - : Acepta un prefijo y devuelve el URI del espacio de nombres asociado con él en el nodo dado si lo encuentra (y `null` si no). Proporcionar `null` para el prefijo devolverá el espacio de nombres predeterminado.
+- {{DOMxRef("Node.normalize()")}}
+  - : Limpia todos los nodos de texto debajo de este elemento (combina adyacentes, elimina vacíos).
+- {{DOMxRef("Node.removeChild()")}}
+  - : Elimina un nodo hijo del elemento actual, que debe ser uns hijo del nodo actual.
+- {{DOMxRef("Node.replaceChild()")}}
+  - : Reemplaza un `Node` hijo del actual con el segundo dado en el parámetro.
 
-### Browse all child nodes
+## Ejemplos
 
-The following function recursively cycles all child nodes of a node and executes a callback function upon them (and upon the parent node itself).
+### Eliminar todos los hijos anidados dentro de un nodo
+
+Esta función elimina cada primer hijo de un elemento, hasta que no quede ninguno.
 
 ```js
-function DOMComb (oParent, oCallback) {
-  if (oParent.hasChildNodes()) {
-    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
-      DOMComb(oNode, oCallback);
+function removeAllChildren(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+```
+
+El uso de esta función es una sola llamada. Aquí vaciamos el cuerpo del documento:
+
+```js
+removeAllChildren(document.body);
+```
+
+Una alternativa podría ser establecer `textContent` a una cadena vacía: `document.body.textContent = ""`.
+
+### Recursión a través de nodos hijos
+
+La siguiente función llama recursivamente a una función _callback_ para cada nodo contenido en un nodo raíz (incluida la propia raíz):
+
+```js
+function eachNode(rootNode, callback) {
+  if (!callback) {
+    const nodes = [];
+    eachNode(rootNode, (node) => {
+      nodes.push(node);
+    });
+    return nodes;
+  }
+
+  if (callback(rootNode) === false) {
+    return false;
+  }
+
+  if (rootNode.hasChildNodes()) {
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
+        return;
+      }
     }
   }
-  oCallback.call(oParent);
 }
 ```
 
-#### Syntax
+La función llama recursivamente a una función para cada nodo descendiente de `rootNode` (incluida la propia raíz).
 
-```
-DOMComb(parentNode, callbackFunction);
-```
+Si se omite `callback`, la función devuelve {{jsxref("Array")}} en su lugar, que contiene `rootNode` y todos los nodos contenidos dentro.
 
-#### Description
+Si se proporciona `callback` y devuelve `false` cuando se llama, el nivel de recurrencia actual se aborta y la función reanuda la ejecución en el nivel del último padre. Esto se puede usar para abortar bucles una vez que se ha encontrado un nodo (como buscar un nodo de texto que contiene una determinada cadena).
 
-Recursively cycle all child nodes of `parentNode` and `parentNode` itself and execute the `callbackFunction` upon them as [`this`](/es/docs/JavaScript/Reference/Operators/this) objects.
+La función tiene dos parámetros:
 
-#### Parameters
+- `rootNode`
+  - : El objeto `Node` cuyos descendientes serán recursivos.
+- `callback` {{optional_inline}}
+  - : Una [función](/es/docs/Web/JavaScript/Reference/Global_Objects/Function) _callback_ opcional que recibe un `Node` como único argumento. Si se omite, `eachNode` devuelve un {{jsxref("Array")}} de cada nodo contenido dentro de `rootNode` (incluida la propia raíz).
 
-- `parentNode`
-  - : The parent node (`Node Object`).
-- `callbackFunction`
-  - : The callback function ([`Function`](/es/docs/JavaScript/Reference/Global_Objects/Function)).
+Lo siguiente demuestra un uso real de la función `eachNode()`: buscar texto en una página web.
 
-#### Sample usage
-
-The following example send to the `console.log` the text content of the body:
+Usamos una función contenedora llamada `grep` para hacer la búsqueda:
 
 ```js
-function printContent () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function grep(parentNode, pattern) {
+  let matches = [];
+  let endScan = false;
+
+  eachNode(parentNode, (node) => {
+    if (endScan) {
+      return false;
+    }
+
+    // Ignora cualquier cosa que no sea un nodo de texto
+    if (node.nodeType !== Node.TEXT_NODE) {
+      return;
+    }
+
+    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+      matches.push(node);
+    } else if (pattern.test(node.textContent)) {
+      if (!pattern.global) {
+        endScan = true;
+        matches = node;
+      } else {
+        matches.push(node);
+      }
+    }
+  });
+
+  return matches;
 }
-
-onload = function () {
-  DOMComb(document.body, printContent);
-};
-```
-
-### Remove all children nested within a node
-
-```js
-Element.prototype.removeAll = function () {
-  while (this.firstChild) { this.removeChild(this.firstChild); }
-  return this;
-};
-```
-
-#### Sample usage
-
-```js
-/* ... an alternative to document.body.innerHTML = "" ... */
-document.body.removeAll();
 ```
 
 ## Especificaciones

@@ -1,15 +1,8 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Push
-  - Landing
-  - Сервис-воркеры
-  - Экспериментальная технология
-  - Уведомления
-  - Определение
 ---
+
 {{ApiRef("Push API")}}
 
 **Push API** предоставляет веб-приложениям возможность принимать сообщения с сервера независимо от того, запущено веб-приложение прямо сейчас или нет. Что в свою очередь позволяет разработчикам оперативно уведомлять пользователей, которые разрешили присылать себе уведомления о новом контенте.
@@ -34,7 +27,7 @@ tags:
 ## Интерфейсы
 
 - {{domxref("PushEvent")}}
-  - : Описывает действие, направленное в [глобальную область видимости](/en-US/docs/Web/API/ServiceWorkerGlobalScope) {{domxref("ServiceWorker", "сервис-воркера")}}. Включает информацию, переданную сервером {{domxref("PushSubscription", "подписчикам")}}.
+  - : Описывает действие, направленное в [глобальную область видимости](/ru/docs/Web/API/ServiceWorkerGlobalScope) {{domxref("ServiceWorker", "сервис-воркера")}}. Включает информацию, переданную сервером {{domxref("PushSubscription", "подписчикам")}}.
 - {{domxref("PushManager")}}
   - : Предоставляет возможность подписаться на сообщения от сторонних серверов и получить URL-адрес для отправки push-уведомлений.
 - {{domxref("PushMessageData")}}
@@ -79,6 +72,6 @@ tags:
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
 - [Web Push Notifications: Timely, Relevant, and Precise](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/), Joseph Medley
-- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Service Worker API](/ru/docs/Web/API/Service_Worker_API)
 
 {{DefaultAPISidebar("Push API")}}

@@ -1,7 +1,6 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
 ---
 
 {{JSRef}}
@@ -36,7 +35,7 @@ If the `radix` is smaller than `2` or bigger than `36`, and the first non-whites
 This method has the same functionality as the global {{jsxref("parseInt", "parseInt()")}} function:
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
 and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see {{jsxref("parseInt", "parseInt()")}} for more detail and examples.
@@ -45,7 +44,7 @@ and is part of ECMAScript 2015 (its purpose is modularization of globals). Pleas
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
+  Number.parseInt = window.parseInt;
 }
 ```
 

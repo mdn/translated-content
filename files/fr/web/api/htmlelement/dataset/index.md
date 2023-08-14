@@ -1,8 +1,6 @@
 ---
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
-translation_of: Web/API/HTMLElement/dataset
-browser-compat: api.HTMLElement.dataset
 ---
 
 {{APIRef("HTML DOM")}}
@@ -67,11 +65,13 @@ Un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap).
 ## Exemples
 
 ```html
-<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>John Doe</div>
+<div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth>
+  John Doe
+</div>
 ```
 
 ```js
-const el = document.querySelector('#user');
+const el = document.querySelector("#user");
 
 // el.id === 'user'
 // el.dataset.id === '1234567890'
@@ -79,7 +79,7 @@ const el = document.querySelector('#user');
 // el.dataset.dateOfBirth === ''
 
 // on définit un attribut de données
-el.dataset.dateOfBirth = '1960-10-03';
+el.dataset.dateOfBirth = "1960-10-03";
 // Résultat en JavaScript : el.dataset.dateOfBirth === '1960-10-03'
 // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
 
@@ -87,8 +87,8 @@ delete el.dataset.dateOfBirth;
 // Résultat en JavaScript : el.dataset.dateOfBirth === undefined
 // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
-if ('unAttrDonnee' in el.dataset === false) {
-  el.dataset.unAttrDonnee = 'mesdonnees';
+if ("unAttrDonnee" in el.dataset === false) {
+  el.dataset.unAttrDonnee = "mesdonnees";
   // Résultat en JS : 'unAttrDonnee' in el.dataset === true
   // Résultat en HTML : <div id="user" data-id="1234567890" data-user="johndoe" data-un-attr-donnee = "mesdonnees">John Doe</div>
 }

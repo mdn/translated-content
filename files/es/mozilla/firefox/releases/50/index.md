@@ -12,7 +12,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### HTML
 
 - El estilo por defecto {{HTMLElement("bdo")}} ahora asigna {{cssxref("unicode-bidi")}} con el valor `isolate-override` ([Error 1249497 en Firefox](https://bugzil.la/1249497)).
-- Asignar el atributo {{htmlattrxref("src", "track")}} del elemento {{HTMLElement("track")}} ahora funciona correctamente ([Error 1281418 en Firefox](https://bugzil.la/1281418)).
+- Asignar el atributo [`src`](/es/docs/Web/HTML/Element/track#src) del elemento {{HTMLElement("track")}} ahora funciona correctamente ([Error 1281418 en Firefox](https://bugzil.la/1281418)).
 - El atributo `referrerpolicy` en los elementos {{HTMLElement("area")}}, {{HTMLElement("a")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} y {{HTMLElement("link")}} ahora está disponible por defecto ([Error 1223838 en Firefox](https://bugzil.la/1223838), [Error 1264165 en Firefox](https://bugzil.la/1264165)).
 
 ### CSS
@@ -50,7 +50,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### Seguridad
 
-- El atributo {{htmlattrxref("ping", "a")}} del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ([Error 1100181 en Firefox](https://bugzil.la/1100181)).
+- El atributo [`ping`](/es/docs/Web/HTML/Element/a#ping) del elemento {{htmlelement("a")}} ahora se apega al [`connect-src`](/es/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/es/docs/Web/Security/CSP/CSP_policy_directives) ([Error 1100181 en Firefox](https://bugzil.la/1100181)).
 - Agregado soporte para la directiva [`sandbox`](/es/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/es/docs/Web/Security/CSP) ([Error 671389 en Firefox](https://bugzil.la/671389)).
 - Ahora es posible indicar una política [content security policy for workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy) ([Error 959388 en Firefox](https://bugzil.la/959388)).
 - El método {{domxref("Navigator.sendBeacon()")}} ya no lanza una excepción si los datos de la baliza (Beacon Data) no pudieron ser enviados devido a una política de restricción consentimiento method [Content Security Policy](/es/docs/Web/Security/CSP); en su lugar, retorna `false` como es esperado ([Error 1234813 en Firefox](https://bugzil.la/1234813)).
@@ -134,7 +134,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
     - {{domxref("FileSystemDirectoryEntry")}} (except for {{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}})
     - {{domxref("FileSystemDirectoryReader")}}
 
-  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the {{HTMLattrxref("webkitdirectory", "input")}} attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Error 1258489 en Firefox](https://bugzil.la/1258489)).
+  - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Error 1258489 en Firefox](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
   - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
   - See [File and Directory Entries API support in Firefox](/es/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.

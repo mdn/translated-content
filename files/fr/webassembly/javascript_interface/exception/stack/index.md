@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack
-browser-compat: javascript.builtins.WebAssembly.Exception.stack
 ---
 
 {{WebAssemblySidebar}}
@@ -51,21 +48,23 @@ Le code JavaScript qui suit définit une nouvelle balise `tag` et la fonction `t
 Une fois le fichier instancié, le code appelle la méthode WebAssembly `run1()`, qui déclenchera immédiatement l'exception. La pile d'appels est alors affichée dans la console dans l'instruction `catch`.
 
 ```js
-let tag = new WebAssembly.Tag( { parameters: ['i32']} );
+let tag = new WebAssembly.Tag({ parameters: ["i32"] });
 
 let throwExceptionWithStack = (param) => {
   // Note : on déclare l'exception avec '{traceStack: true}'
-  throw new WebAssembly.Exception(tag, [param], {traceStack: true});
+  throw new WebAssembly.Exception(tag, [param], { traceStack: true });
 };
 
 // Note : les propriétés d'importObject correspondent aux instructions d'import WebAssembly.
-const importObject = { "extmod": {"exttag": tag, "throwExnWithStack": throwExceptionWithStack} }
-WebAssembly.instantiateStreaming(fetch('exemple.wasm'), importObject )
-  .then(obj => {
-    console.log(obj.instance.exports.run1(12));  // On ne fait rien avec la valeur passée
+const importObject = {
+  extmod: { exttag: tag, throwExnWithStack: throwExceptionWithStack },
+};
+WebAssembly.instantiateStreaming(fetch("exemple.wasm"), importObject)
+  .then((obj) => {
+    console.log(obj.instance.exports.run1(12)); // On ne fait rien avec la valeur passée
   })
   .catch((e) => {
-    console.log(`stack : ${ e.stack }`);
+    console.log(`stack : ${e.stack}`);
   });
 
 // Affichera dans la console quelque chose comme :
@@ -77,7 +76,7 @@ WebAssembly.instantiateStreaming(fetch('exemple.wasm'), importObject )
 La partie la plus «&nbsp;intéressante&nbsp;» du code est ici la ligne où l'exception est créée&nbsp;:
 
 ```js
-new WebAssembly.Exception(tag, [param], {traceStack: true});
+new WebAssembly.Exception(tag, [param], { traceStack: true });
 ```
 
 En passant `{traceStack: true}`, on indique à la machine virtuelle WebAssembly qu'il faut attacher la pile d'appels à l'exception. Sans cette option, la propriété portant la pile aurait valu `undefined`.

@@ -1,13 +1,6 @@
 ---
 title: offset
 slug: Web/CSS/offset
-tags:
-  - CSS
-  - Draft
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/offset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -46,9 +46,11 @@ _该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
   - : 返回一个布尔值，如果生成键事件时 <kbd>Ctrl</kbd> 键处于激活状态，则为 `true`。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
+
   - : 返回一个布尔值，如果事件在 `compositionstart` 之后、`compositionend` 之前触发，则为 `true`。
 
 - {{domxref("KeyboardEvent.key")}} {{Readonlyinline}}
+
   - : 返回一个字符串，表示由事件表示的键的键值。
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
@@ -58,6 +60,7 @@ _该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
     > **备注：** 这并不描述正在输入的数据的区域设置。用户可能在使用一种键盘布局时在输入不同语言的文本。
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
+
   - : 返回一个数字，表示键在键盘或其他输入设备上的位置。标识位置的常量列表如上面的键盘位置部分所示。
 
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
@@ -65,6 +68,7 @@ _该接口还继承了其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
   - : 如果在生成按键事件时 <kbd>Meta</kbd> 键（在 Mac 键盘上是 <kbd>⌘ Command</kbd> 键，在 Windows 键盘上是 Windows 键（<kbd>⊞</kbd>））处于活动状态，则返回一个布尔值，该布尔值为 `true`。
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
+
   - : 如果该按键被按住并且正在生成自动重复事件，则此函数返回一个布尔值 `true`。
 
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
@@ -115,7 +119,7 @@ input.onkeypress = logKey;
 ## 参见
 
 - 事件同样也适用于 {{domxref("Document")}} 接口。
-- 相关事件:
+- 相关事件：
   - [`input`](/zh-cn/docs/Web/API/HTMLElement/input_event)
   - [`keydown`](/zh-cn/docs/Web/API/Element/keydown_event)
   - [`keyup`](/zh-cn/docs/Web/API/Element/keyup_event)

@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Table/grow
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
-  - table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 
 {{WebAssemblySidebar}}
@@ -40,15 +31,19 @@ Si l'opération `grow()` échoue, pour quelque raison que ce soit, une exception
 Dans l'exemple qui suit, on crée une instance de `Table` pour représenter un tableau WebAssembly avec une taille initiale de 2 et une taille maximale de 10.
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+var table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 On étend ensuite le tableau d'une unité en utilisant la méthode `grow()` :
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length); // "2"
+console.log(table.grow(1)); // "2"
+console.log(table.length); // "3"
 ```
 
 ## Spécifications

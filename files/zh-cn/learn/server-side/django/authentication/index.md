@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 8: 用户授权与许可'
+title: "Django 教程 8: 用户授权与许可"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -96,9 +96,9 @@ MIDDLEWARE = [
 3. 为测试用户输入适当的用户名（**Username）**和密码/密码确认**（Password/Password confirmation** ）
 4. 按 **SAVE** 创建用户。
 
-    管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（**username**），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志 **Active**）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。
+   管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（**username**），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志 **Active**）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。
 
-    ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
 5. 在“分组”（_Groups_）部分中，从“可用分组”（_Available groups_）列表中，选择“图书馆成员”分组 **Library Member**，然后点击这些框之间的**右箭头**，将其移动到“选择的分组”（_Chosen groups_）框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 我们不需要在此处执行任何其他操作，因此只需再次选择 **SAVE** ，即可转到用户列表。
@@ -185,45 +185,43 @@ TEMPLATES = [
 
 创建一个名为 **/locallibrary/templates/registration/login.html** 的新 HTML 文件。为它加入以下内容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
+  {% if next %}
     {% if user.is_authenticated %}
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
     {% else %}
     <p>Please login to see this page.</p>
     {% endif %}
-{% endif %}
+  {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
 
-<div>
-  <td>\{{ form.username.label_tag }}</td>
-  <td>\{{ form.username }}</td>
-</div>
-<div>
-  <td>\{{ form.password.label_tag }}</td>
-  <td>\{{ form.password }}</td>
-</div>
+    <div>
+      <td>\{{ form.username.label_tag }}</td>
+      <td>\{{ form.username }}</td>
+    </div>
+    <div>
+      <td>\{{ form.password.label_tag }}</td>
+      <td>\{{ form.password }}</td>
+    </div>
 
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="\{{ next }}" />
-</div>
-</form>
+    <div>
+      <input type="submit" value="login" />
+      <input type="hidden" name="next" value="\{{ next }}" />
+    </div>
+  </form>
 
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 {% endblock %}
 ```
 
@@ -248,13 +246,13 @@ LOGIN_REDIRECT_URL = '/'
 
 创建并打开 /**locallibrary/templates/registration/logged_out.html**。将下面的文字，复制到文档中：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<p>Logged out!</p>
+  <p>Logged out!</p>
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to login again.</a>
 {% endblock %}
 ```
 
@@ -272,16 +270,15 @@ LOGIN_REDIRECT_URL = '/'
 
 这是用于获取用户电子邮件地址的表单（用于发送密码重置电子邮件）。创建 **/locallibrary/templates/registration/password_reset_form.html**，并为其提供以下内容：
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<form action="" method="post">{% csrf_token %}
+  <form action="" method="post">{% csrf_token %}
     {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
-        <p>\{{ form.email }}</p>
+      <p>\{{ form.email }}</p>
     <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
-
+  </form>
 {% endblock %}
 ```
 
@@ -289,10 +286,14 @@ LOGIN_REDIRECT_URL = '/'
 
 收集您的电子邮件地址后，会显示此表单。创建 **/locallibrary/templates/registration/password_reset_done.html**，并为其提供以下内容：
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-<p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+  <p>
+    We've emailed you instructions for setting your password. If they haven't
+    arrived in a few minutes, check your spam folder.
+  </p>
 {% endblock %}
 ```
 
@@ -300,7 +301,7 @@ LOGIN_REDIRECT_URL = '/'
 
 此模板提供 HTML 电子邮件的文本，其中包含我们将发送给用户的重置链接。创建 **/locallibrary/templates/registration/password_reset_email.html**，并为其提供以下内容：
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -309,39 +310,37 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 点击密码重置电子邮件中的链接后，您可以在此页面输入新密码。创建 **/locallibrary/templates/registration/password_reset_confirm.html**，并为其提供以下内容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-            <div style="display:none">
-                <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken">
-            </div>
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
-
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+      <div style="display:none">
+        <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken">
+      </div>
+      <table>
+        <tr>
+          <td>\{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label></td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>\{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label></td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -349,13 +348,12 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 这是最后一个密码重置模板，显示该模板，以在密码重置成功时通知您。创建 **/locallibrary/templates/registration/password_reset_complete.html**，并为其提供以下内容：
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<h1>The password has been changed!</h1>
-<p><a href="{% url 'login' %}">log in again?</a></p>
-
+  <h1>The password has been changed!</h1>
+  <p><a href="{% url 'login' %}">log in again?</a></p>
 {% endblock %}
 ```
 
@@ -390,18 +388,18 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 打开基本模板（**/locallibrary/catalog/templates/base_generic.html**），并将以下文本，复制到侧边栏区块`sidebar`中，紧接在`endblock`模板标记之前。
 
-```html
-  <ul class="sidebar-nav">
+```django
+<ul class="sidebar-nav">
 
-    ...
+  ...
 
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
-   {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
-   {% endif %}
-  </ul>
+  {% if user.is_authenticated %}
+    <li>User: \{{ user.get_username }}</li>
+    <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+  {% else %}
+    <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+  {% endif %}
+</ul>
 ```
 
 如您所见，我们使用 `if`-`else`-`endif`模板标签，根据 `\{{ user.is_authenticated }}` 是否为 true，来有条件地显示文本。如果用户已通过身份验证，那么我们知道，我们拥有有效用户，因此我们会调用 **\\{{ user.get_username }}** ，来显示其名称。

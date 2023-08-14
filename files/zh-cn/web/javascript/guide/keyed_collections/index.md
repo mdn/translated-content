@@ -3,7 +3,7 @@ title: 带键的集合
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 这一章介绍由 key 值标记的数据容器；Map 和 Set 对象承载的数据元素可以按照插入时的顺序被迭代遍历。
 
@@ -17,17 +17,17 @@ ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一�
 
 ```js
 var sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -110,7 +110,7 @@ for (let item of mySet) console.log(item);
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### `Array`和`Set`的对比
@@ -141,4 +141,4 @@ mySet2 = new Set([1,2,3,4]);
 - `-0`和`+0`相等。
 - {{jsxref("NaN")}}与自身相等（与`===`有所不同）。
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_objects")}}

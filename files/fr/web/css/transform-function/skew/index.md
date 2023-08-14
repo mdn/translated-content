@@ -1,9 +1,6 @@
 ---
 title: skew()
 slug: Web/CSS/transform-function/skew
-translation_of: Web/CSS/transform-function/skew()
-original_slug: Web/CSS/transform-function/skew()
-browser-compat: css.types.transform-function.skew
 ---
 
 {{CSSRef}}
@@ -172,5 +169,5 @@ div {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`skewX()`](/fr/docs/Web/CSS/transform-function/skewX())
-- [`skewY()`](/fr/docs/Web/CSS/transform-function/skewY())
+- [`skewX()`](</fr/docs/Web/CSS/transform-function/skewX()>)
+- [`skewY()`](</fr/docs/Web/CSS/transform-function/skewY()>)

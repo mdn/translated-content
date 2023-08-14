@@ -1,13 +1,6 @@
 ---
 title: document.write
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Rérérence
-translation_of: Web/API/Document/write
 ---
 
 {{ ApiRef("DOM") }}
@@ -31,26 +24,24 @@ document.write(balisage);
 
 ```html
 <html>
+  <head>
+    <title>Exemple de document.write</title>
 
-<head>
-<title>Exemple de document.write</title>
+    <script type="text/javascript">
+      function nouveauContenu() {
+        alert("chargement du nouveau contenu");
+        document.open();
+        document.write(
+          "<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>",
+        );
+        document.close();
+      }
+    </script>
+  </head>
 
-<script type="text/javascript">
-
-function nouveauContenu()
-{
-alert("chargement du nouveau contenu");
-document.open();
-document.write("<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>");
-document.close();
-}
-
-</script>
-</head>
-
-<body onload="nouveauContenu();">
-<p>Ceci est le contenu original du document.</p>
-</body>
+  <body onload="nouveauContenu();">
+    <p>Ceci est le contenu original du document.</p>
+  </body>
 </html>
 ```
 
@@ -62,7 +53,7 @@ Si l'appel à `document.write()` est intégré directement dans le code HTML, il
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

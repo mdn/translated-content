@@ -10,7 +10,7 @@ l10n:
 **`inputmode`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、ユーザーが要素やその内容を編集する際に入力されるデータの型のヒントとなる[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 これにより、ブラウザーは適切な仮想キーボードを表示することができます。
 
-これは主に {{HTMLElement("input")}} 要素で使用されますが、 {{HTMLAttrxRef("contenteditable")}} モードの任意の要素で使用することができます。
+これは主に {{HTMLElement("input")}} 要素で使用されますが、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) モードの任意の要素で使用することができます。
 
 重要なことは、 `inputmode` 属性は入力に対していかなる有効性の要求も発生させないということです。入力が特定のデータ型に適合することを要求するには、適切な [`<input>` 要素型](/ja/docs/Web/HTML/Element/input#input_types) を選んでください。 {{HTMLElement("input")}} 型を選ぶ際の特定の指針については、[値](#値)の節を参照して下さい。
 

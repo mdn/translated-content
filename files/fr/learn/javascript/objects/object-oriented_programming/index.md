@@ -237,13 +237,3 @@ Dans cet article, nous avons vu les fonctionnalités de base offertes par la pro
 Dans le prochain article, nous verrons les fonctionnalités de JavaScript qui permettent de réaliser une programmation orientée objet basée sur des classes.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Notions de base sur les objets](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [Prototypes d'objet](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- **Concepts sur la programmation orientée objet**
-- [Classes en JavaScript](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Manipuler des données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Construire des objets en pratique](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajouter des fonctionnalités à notre démo de balles rebondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

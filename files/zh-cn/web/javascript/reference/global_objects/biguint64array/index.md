@@ -25,8 +25,6 @@ new BigUint64Array(buffer [, byteOffset [, length]]);
   - : 返回一个元素容量的数字值。`8` in the case of a `BigUint64Array`.
 - BigUint64Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "BigUint64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `BigUint64Array` type: "BigUint64Array".
 - {{jsxref("TypedArray.prototype", "BigUint64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
@@ -122,7 +120,7 @@ console.log(biguint64.length); // 2
 console.log(biguint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigUint64Array([21n,31n]);
+var arr = new BigUint64Array([21n, 31n]);
 console.log(arr[1]); // 31n
 
 // From another TypedArray
@@ -135,7 +133,9 @@ var buffer = new ArrayBuffer(32);
 var z = new BigUint64Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
+var iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 var biguint64 = new BigUint64Array(iterable);
 // BigUint64Array[1n, 2n, 3n]
 ```

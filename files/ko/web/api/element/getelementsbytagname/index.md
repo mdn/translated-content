@@ -14,7 +14,7 @@ Element.getElementsByTagName는 특정된 엘리먼트의 하위에 있는 엘�
 ## 문법
 
 ```js
-elements = element.getElementsByTagName(tagName)
+elements = element.getElementsByTagName(tagName);
 ```
 
 - `elements` is a _live_ {{domxref("HTMLCollection")}} of found elements in the order they appear in the sub-tree. If no elements were found, the `HTMLCollection` is empty.
@@ -31,10 +31,10 @@ elements = element.getElementsByTagName(tagName)
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
 for (var i = 0; i < cells.length; i++) {
-    var status = cells[i].getAttribute("data-status");
-    if ( status == "open" ) {
-        // grab the data
-    }
+  var status = cells[i].getAttribute("data-status");
+  if (status == "open") {
+    // grab the data
+  }
 }
 ```
 

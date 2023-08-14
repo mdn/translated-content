@@ -22,8 +22,8 @@ slug: WebAssembly/Reference/Control_flow/br
 )
 ```
 
-| 指令          | 二進制運算碼 |
-|-------------|--------------|
-| `br`        | `0x0c`        |
-| `br_if`     | `0x0d`        |
-| `br_table`  | `0x0e`        |
+| 指令       | 二進制運算碼 |
+| ---------- | ------------ |
+| `br`       | `0x0c`       |
+| `br_if`    | `0x0d`       |
+| `br_table` | `0x0e`       |

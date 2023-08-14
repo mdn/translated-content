@@ -1,8 +1,8 @@
 ---
-title: '<iframe>: インラインフレーム要素'
+title: "<iframe>: インラインフレーム要素"
 slug: Web/HTML/Element/iframe
 l10n:
-  sourceCommit: d4d89f0d396e69a758afe46875b37b4ff4580238
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-それぞれの閲覧コンテキストは、[セッション履歴](/ja/docs/Web/API/History)と[文書](/ja/docs/Web/API/Document)を持ちます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
+それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL ナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
 > **警告:** それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
 
@@ -23,7 +23,7 @@ l10n:
 
   - : [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
 
-      > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
+    > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
 
 - `allowfullscreen`
 
@@ -39,7 +39,7 @@ l10n:
 
 - `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
 
-  - : `true` に設定すると `<iframe>` を信用できないものにします。 つまり、そのコンテンツは新しい、一時的なコンテキストで読み込まれることになります。これはそのオリジンに関連するネットワーク、クッキー、ストレージデータへのアクセス権がありません。最上位の文書の存続期間に依存する新しいコンテキストを使用します。その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールは解除され、COEP を設定した文書はそうでない第三者の文書を埋め込むことができるようになります。詳しくは [信用できない iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
+  - : `true` に設定すると `<iframe>` を無信頼であることを示します。 つまり、そのコンテンツは新しい、一時的なコンテキストで読み込まれることになります。これはそのオリジンに関連するネットワーク、クッキー、ストレージデータへのアクセス権がありません。最上位の文書の存続期間に依存する新しいコンテキストを使用します。その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールは解除され、COEP を設定した文書はそうでない第三者の文書を埋め込むことができるようになります。詳しくは[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
 
 - `csp` {{experimental_inline}}
 
@@ -47,7 +47,7 @@ l10n:
 
 - `height`
   - : フレームの高さを CSS ピクセル数で示します。既定値は `150` です。
-- `loading` {{experimental_inline}}
+- `loading`
 
   - : ブラウザーが iframe をどのように読み込むかを示します。
 
@@ -71,7 +71,7 @@ l10n:
 
 - `sandbox`
 
-  - : フレーム内のコンテンツに追加の制約を適用します。この属性の値は、空にするとすべての制約を適用し、空白区切りのトークンにすると特定の制約を外します。
+  - : `<iframe>` に埋め込まれたコンテンツに適用される制限を制御します。フレーム内のコンテンツに追加の制約を適用します。この属性の値は、空にするとすべての制約を適用し、空白区切りのトークンにすると特定の制約を外します。
 
     - `allow-downloads`: [download](/ja/docs/Web/HTML/Element/a#download) 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を通して、またファイルのダウンロードにつながるナビゲーションを通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
     - `allow-downloads-without-user-activation` {{experimental_inline}}: ユーザーの操作なしでダウンロードが発生することを許可します。
@@ -84,7 +84,7 @@ l10n:
     - `allow-presentation`: リソースが[プレゼンテーションセッション](/ja/docs/Web/API/PresentationRequest)を開始できるようにします。
     - `allow-same-origin`: このトークンが使用されていない場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Same-origin_policy#オリジンをまたいだデータストレージアクセス)へのアクセスや一部の JavaScript API の使用を阻止することがあります）。
     - `allow-scripts`: ページがスクリプトを実行することを許可します（ただし、ポップアップウィンドウは作成しません）。このキーワードが使用されない場合、この操作は許可されません。
-    - `allow-storage-access-by-user-activation` {{experimental_inline}}: リソースが [Storage Access API](/ja/docs/Web/API/Storage_Access_API) で親のストレージ容量へのアクセスを要求できるようにします。
+    - `allow-storage-access-by-user-activation` {{experimental_inline}}: `<iframe>` で読み込んだ文書が{{domxref("Storage Access API", "ストレージアクセス API", "", "nocode")}} を使用して、分離されていないクッキーへのアクセスをリクエストできるようにします。
     - `allow-top-navigation`: リソースが最上位の閲覧コンテキスト（`_top` という名前のもの
     に移動できるようにします。
     - `allow-top-navigation-by-user-activation`: リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
@@ -165,7 +165,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ```html
 <iframe
-  title="アボガドのウィキペディアページ"
+  title="Wikipedia page for Avocados"
   src="https://en.wikipedia.org/wiki/Avocado"></iframe>
 ```
 

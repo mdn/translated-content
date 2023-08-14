@@ -1,8 +1,6 @@
 ---
 title: Mise en forme des tableaux
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
-original_slug: Apprendre/CSS/Building_blocks/Styling_tables
 l10n:
   sourceCommit: 916af5e72ce683c6f7795755830c11677ca0f529
 ---
@@ -32,7 +30,9 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
 
 ```html
 <table>
-  <caption>Récapitulatif des groupes punk les plus célèbres du Royaume-Uni</caption>
+  <caption>
+    Récapitulatif des groupes punk les plus célèbres du Royaume-Uni
+  </caption>
   <thead>
     <tr>
       <th scope="col">Groupe</th>
@@ -46,7 +46,9 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
       <th scope="row">Buzzcocks</th>
       <td>1976</td>
       <td>9</td>
-      <td><i lang="en">Ever fallen in love (with someone you shouldn't've)</i></td>
+      <td>
+        <i lang="en">Ever fallen in love (with someone you shouldn't've)</i>
+      </td>
     </tr>
     <tr>
       <th scope="row">The Clash</th>
@@ -73,7 +75,11 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
 </table>
 ```
 
-Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Element/th#attr-scope), [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), etc. Malheureusement, son apparence n'est pas terrible à l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
+### Résultat
+
+{{EmbedLiveSample('','100%','330')}}
+
+Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Element/th#attr-scope), [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), etc. Malheureusement, son apparence n'est pas assez bonne sur l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
 
 ![](table-unstyled.png)
 
@@ -89,9 +95,9 @@ Voyons ensemble comment mettre en forme ce tableau.
 4. Ensuite, créez un nouveau fichier nommé `style.css` et enregistrez‑le dans le même répertoire que les autres fichiers
 5. Liez le CSS au HTML en mettant la ligne suivante dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head)&nbsp;:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### Espacement et disposition
 
@@ -123,7 +129,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -151,7 +158,10 @@ Tout d'abord, nous avons trouvé une police sur [Google Fonts](https://www.googl
 D'abord, ajoutons l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) suivant dans l'élément HTML `head`, juste au‑dessus de l'élément `<link>` déjà présent&nbsp;:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Puis ajoutons le CSS suivant dans le fichier `style.css`, sous ce qui a déjà été ajouté&nbsp;:
@@ -160,11 +170,12 @@ Puis ajoutons le CSS suivant dans le fichier `style.css`, sous ce qui a déjà �
 /* typographie */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -204,14 +215,21 @@ Commençons par ajouter le CSS suivant à la fin du fichier `style.css`&nbsp;:
 ```css
 /* graphisme et couleurs */
 
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -264,7 +282,7 @@ Il nous reste une dernière chose à faire avec ce tableau&nbsp;: mettre en form
 /* légende */
 
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;
@@ -298,25 +316,3 @@ Nous voici à la fin de cet article, mais avez-vous mémorisé les informations 
 Maintenant que le sujet de la mise en forme des tableaux est réglé, voyons ce qui peut nous occuper ensuite. Dans le prochain article, nous verrons [le débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS) et comment résoudre des problèmes comme des dispositions qui n'ont pas l'aspect voulu ou des propriétés qui ne s'appliquent pas comme on le voudrait. Ce prochain guide contient des informations sur l'utilisation des outils de développement des navigateurs pour trouver des solutions à ces problèmes.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-- [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-  - [Sélecteurs de type, de classe et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinateur](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-- [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Gérer les différentes directions du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Dimensionner les objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Éléments pour les images, les médias, et les formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- Mettre en forme les tableaux
-- [Déboguer le CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organiser son CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)
-- [Compréhension des notions fondamentales de CSS](/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Créer une lettre à en-tête classe](/fr/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [Une boîte qui en impose](/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

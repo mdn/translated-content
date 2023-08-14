@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - loadEventEnd
-translation_of: Web/API/PerformanceTiming/loadEventEnd
 ---
 
 {{APIRef("Navigation Timing")}}

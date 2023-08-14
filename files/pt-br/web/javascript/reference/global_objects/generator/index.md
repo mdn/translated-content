@@ -33,10 +33,9 @@ var g = gen(); // "Generator { }"
 ### An infinite iterator
 
 ```js
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"
@@ -49,7 +48,7 @@ console.log(gen.next().value); // 2
 
 ## Objeto legacy generator
 
-Firefox (SpiderMonkey) também implementa a versão anterior do generator em [JavaScript 1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7), onde o asterisco (\*) na declaração da função não era necessário (somente era necessário usar a palavra reservada `yield` no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ({{bug(1083482)}}).
+Firefox (SpiderMonkey) também implementa a versão anterior do generator em [JavaScript 1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7), onde o asterisco (\*) na declaração da função não era necessário (somente era necessário usar a palavra reservada `yield` no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ([Erro do Firefox 1083482](https://bugzil.la/1083482)).
 
 ### Métodos legacy generator
 
@@ -71,18 +70,18 @@ function* fibonacci() {
 }
 
 var it = fibonacci();
-console.log(it);          // "Generator {  }"
-console.log(it.next());   // 1
+console.log(it); // "Generator {  }"
+console.log(it.next()); // 1
 console.log(it.send(10)); // 20
-console.log(it.close());  // undefined
-console.log(it.next());   // throws StopIteration (Como o generator está fechado)
+console.log(it.close()); // undefined
+console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 ```
 
 ## Especificações
 
-| Especificações                                                                               | Status                       | Comentário        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-generator-objects', 'Generator objects')}}     | {{Spec2('ES6')}}         | Definição Inicial |
+| Especificações                                                         | Status               | Comentário        |
+| ---------------------------------------------------------------------- | -------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-generator-objects', 'Generator objects')}}     | {{Spec2('ES6')}}     | Definição Inicial |
 | {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

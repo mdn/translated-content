@@ -70,12 +70,14 @@ Esse método foi adicionado à especificação do ECMAScript 6 e pode não estar
 
 ```js
 if (!Array.prototype.findIndex) {
-  Array.prototype.findIndex = function(predicate) {
+  Array.prototype.findIndex = function (predicate) {
     if (this === null) {
-      throw new TypeError('Array.prototype.findIndex called on null or undefined');
+      throw new TypeError(
+        "Array.prototype.findIndex called on null or undefined",
+      );
     }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
+    if (typeof predicate !== "function") {
+      throw new TypeError("predicate must be a function");
     }
     var list = Object(this);
     var length = list.length >>> 0;
@@ -95,9 +97,9 @@ if (!Array.prototype.findIndex) {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}}         | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificação                                                                          | Status               | Comentário         |
+| -------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-array.prototype.findIndex', 'Array.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

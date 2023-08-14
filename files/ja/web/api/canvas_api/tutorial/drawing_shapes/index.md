@@ -1,7 +1,6 @@
 ---
 title: キャンバスでの図形の描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

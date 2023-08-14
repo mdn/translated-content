@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ## 구문
 
 ```js
-str.toLowerCase()
+str.toLowerCase();
 ```
 
 ### 반환값
@@ -24,7 +24,7 @@ str.toLowerCase()
 ### `toLowerCase()`
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 명세

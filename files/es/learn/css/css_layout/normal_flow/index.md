@@ -1,7 +1,6 @@
 ---
 title: Flujo normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
-original_slug: Learn/CSS/CSS_layout/Flujo_normal
 ---
 
 {{LearnSidebar}}
@@ -53,13 +52,32 @@ Echemos un vistazo a un ejemplo sencillo que explica todo esto:
 ```html
 <h1>Flujo de los documentos básicos</h1>
 
-<p>Soy un elemento básico de nivel de bloque. Mis elementos de nivel de bloque adyacentes se encuentran en líneas nuevas debajo de mí.</p>
+<p>
+  Soy un elemento básico de nivel de bloque. Mis elementos de nivel de bloque
+  adyacentes se encuentran en líneas nuevas debajo de mí.
+</p>
 
-<p>Cubrimos por defecto el 100% del ancho de nuestro elemento principal, y somos tan altos como nuestro contenido secundario. Nuestro ancho y alto total es nuestro contenido + área de relleno + ancho/alto del borde.</p>
+<p>
+  Cubrimos por defecto el 100% del ancho de nuestro elemento principal, y somos
+  tan altos como nuestro contenido secundario. Nuestro ancho y alto total es
+  nuestro contenido + área de relleno + ancho/alto del borde.
+</p>
 
-<p>Estamos separados por nuestros márgenes. Debido al colapso del margen, estamos separados por el ancho de uno de nuestros márgenes, no por ambos.</p>
+<p>
+  Estamos separados por nuestros márgenes. Debido al colapso del margen, estamos
+  separados por el ancho de uno de nuestros márgenes, no por ambos.
+</p>
 
-<p>Los elementos en línea <span>como este</span> y <span>este otro</span> se ubican en la misma y la de los nodos de texto adyacentes, mientras hay espacio en la misma línea. Si un elemento en línea desborda, <span>sigue por la línea siguiente, si es posible (como la que contiene este texto)</span>, o simplemente pasa a una línea nueva, como hace esta imagen: <img src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow/long.jpg"></p>
+<p>
+  Los elementos en línea <span>como este</span> y <span>este otro</span> se
+  ubican en la misma y la de los nodos de texto adyacentes, mientras hay espacio
+  en la misma línea. Si un elemento en línea desborda,
+  <span
+    >sigue por la línea siguiente, si es posible (como la que contiene este
+    texto)</span
+  >, o simplemente pasa a una línea nueva, como hace esta imagen:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -69,8 +87,8 @@ body {
 }
 
 p {
-  background: rgba(255,84,104,0.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
 }

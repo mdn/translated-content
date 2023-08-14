@@ -1,14 +1,6 @@
 ---
 title: Алгоритм обработки текста двусторонней направленности (Юникод)
 slug: orphaned/Web/Guide/Unicode_Bidrectional_Text_Algorithm
-tags:
-  - Алгоритм
-  - Локализация
-  - Руководство
-  - Юникод
-  - направление
-translation_of: Web/Guide/Unicode_Bidrectional_Text_Algorithm
-original_slug: Web/Guide/Unicode_Bidrectional_Text_Algorithm
 ---
 
 **Алгоритм обработки текста двусторонней направленности** (Unicode® Bidirectional Algorithm или **BiDi** Algorithm) — раздел стандарта текста Unicode, описывающий в каком порядке раскладываются символы во время обработки страницы {{Glossary("агентом пользователя")}}.
@@ -67,7 +59,7 @@ Unicode provides a number of special control characters that make it possible to
       <td rowspan="2">U+202C</td>
       <td rowspan="2"><code>&#x26;#x202C;</code></td>
       <td>
-        Closing whatever opening tag used the {{htmlattrxref("dir")}}
+        Closing whatever opening tag used the <a href="/ru/docs/Web/HTML/Global_attributes#dir"><code>dir</code></a>
         attribute
       </td>
       <td>Used for RLE or LRE</td>
@@ -81,7 +73,7 @@ Unicode provides a number of special control characters that make it possible to
       <td>U+2069</td>
       <td><code>&#x26;#x2069;</code></td>
       <td>
-        Closing whatever opening tag used the {{htmlattrxref("dir")}}
+        Closing whatever opening tag used the <a href="/ru/docs/Web/HTML/Global_attributes#dir"><code>dir</code></a>
         attribute
       </td>
       <td>Used for RLI, LRI, or FSI</td>

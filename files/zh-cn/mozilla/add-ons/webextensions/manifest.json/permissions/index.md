@@ -137,8 +137,8 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 `unlimitedStorage` 权限：
 
-- 能使扩展突破{{WebExtAPIRef("storage.local")}} API 设定的 quota 限制
-- Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 ["persistent" IndexedDB database](/zh-CN/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics)
+- 能使扩展突破 {{WebExtAPIRef("storage.local")}} API 设定的 quota 限制
+- Firefox 浏览器中，无须提示用户授权，便可帮助扩展创建永久保存的 IndexedDB 数据库 ["persistent" IndexedDB database](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 
 ## 示例
 
