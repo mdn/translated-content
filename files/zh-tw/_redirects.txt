@@ -264,7 +264,6 @@
 /zh-TW/docs/Learn/CSS/Introduction_to_CSS/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /zh-TW/docs/Learn/CSS/Introduction_to_CSS/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /zh-TW/docs/Learn/CSS/Styling_boxes	/en-US/docs/Learn/CSS/Building_blocks
-/zh-TW/docs/Learn/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /zh-TW/docs/Learn/CSS/文字樣式	/zh-TW/docs/Learn/CSS/Styling_text
 /zh-TW/docs/Learn/CSS/樣式化容器	/en-US/docs/Learn/CSS/Building_blocks
 /zh-TW/docs/Learn/Common_questions/What_is_a_web_server	/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
@@ -431,9 +430,7 @@
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS
-/zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/zh-TW/docs/Web/CSS/CSS_Properties_Reference	/zh-TW/docs/Web/CSS/Reference#index
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_grid_layout
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
@@ -450,8 +447,6 @@
 /zh-TW/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /zh-TW/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /zh-TW/docs/Web/Guide/CSS/Getting_started/為什麼要用CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/zh-TW/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-TW/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
-/zh-TW/docs/Web/Guide/CSS/使用_多重_背景	/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
