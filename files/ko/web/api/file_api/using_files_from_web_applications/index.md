@@ -577,10 +577,6 @@ video.play();
 window.URL.revokeObjectURL(obj_url);
 ```
 
-## 명세서
-
-{{Specifications}}
-
 ## See also
 
 - {{DOMxRef("File")}}
