@@ -2,7 +2,7 @@
 title: 콜백 함수
 slug: Glossary/Callback_function
 l10n:
-  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 {{GlossarySidebar}}
 
