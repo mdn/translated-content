@@ -1,13 +1,13 @@
 ---
-title: "Window：beforeprint 事件"
+title: Window：beforeprint 事件
 slug: Web/API/Window/beforeprint_event
 ---
 
 {{APIRef}}
 
-当相关联的文档即将打印或预览以进行打印时，将触发 **`beforeprint`** 事件。
+当相关联的文档即将打印或关闭打印预览时，将触发 **`beforeprint`** 事件。
 
-{{domxref("Window.afterprint_event", "afterprint")}} 和 `beforeprint` 事件允许页面在打印开始之前更改其内容（例如，也许是移除 banner）然后在打印完成还原这些更改。一般来说，你应该更倾向于使用 [`@media print`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)CSS 规则，但在某些情况下可能有必要使用这些事件。
+{{domxref("Window.afterprint_event", "afterprint")}} 和 `beforeprint` 事件允许页面在打印开始之前更改其内容（例如，也许是移除 banner）然后在打印完成后还原这些更改。一般来说，你应该更倾向于使用 [`@media print`](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries) CSS at 规则，但在某些情况下可能有必要使用这些事件。
 
 ## 语法
 
@@ -24,11 +24,11 @@ onbeforeprint = (event) => {};
 
 ## 示例
 
-使用 `addEventListener()`:
+使用 `addEventListener()`：
 
 ```js
 window.addEventListener("beforeprint", (event) => {
-  console.log("Before print");
+  console.log("打印前");
 });
 ```
 
@@ -36,7 +36,7 @@ window.addEventListener("beforeprint", (event) => {
 
 ```js
 window.onbeforeprint = (event) => {
-  console.log("Before print");
+  console.log("打印前");
 };
 ```
 

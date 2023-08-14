@@ -26,7 +26,7 @@ slug: Web/Guide/Printing
 
 ## 使用媒体查询改善布局
 
-你可以使用 CSS {{cssxref("@media")}} 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` 选项可以设置打印内容时使用的样式。
+你可以使用 CSS {{cssxref("@media")}} at 规则为网页设置打印在纸上和显示在屏幕上时的不同外观。`print` 选项可以设置打印内容时使用的样式。
 
 将其添加到你的样式表末尾。请注意，特殊性和优先级规则仍然适用：
 
@@ -51,7 +51,7 @@ slug: Web/Guide/Printing
 
 ### 完成后打开并自动关闭弹出窗口
 
-如果你希望在用户打印完 [弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本）的内容后自动关闭该窗口，你可以使用这样的代码：
+如果你希望在用户打印完内容后自动关闭[弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本），你可以使用这样的代码：
 
 ```html
 <div>
@@ -80,9 +80,7 @@ function popuponclick() {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
-
-{{LiveSampleLink('Examples', '查看实时示例')}}
+[查看实时示例](https://mdn.dev/archives/media/samples/domref/printevents.html)
 
 ### 无需打开弹出窗口即可打印外部页面
 
@@ -90,11 +88,11 @@ function popuponclick() {
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>MDN Example</title>
+    <title>MDN 示例</title>
     <script>
       function closePrint() {
         document.body.removeChild(this.__container__);
@@ -104,7 +102,7 @@ function popuponclick() {
         this.contentWindow.__container__ = this;
         this.contentWindow.onbeforeunload = closePrint;
         this.contentWindow.onafterprint = closePrint;
-        this.contentWindow.focus(); // Required for IE
+        this.contentWindow.focus(); // IE 所必须的
         this.contentWindow.print();
       }
 
@@ -128,7 +126,7 @@ function popuponclick() {
       <span
         onclick="printPage('externalPage.html');"
         style="cursor:pointer;text-decoration:underline;color:#0000ff;">
-        Print external page!
+        打印外部页面！
       </span>
     </p>
   </body>
