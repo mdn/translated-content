@@ -62,7 +62,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.DYNAMIC_DRAW`
       - : 콘텐츠는 응용 프로그램에 의해 반복적으로 재지정되며, WebGL 그리기와 이미지 명세 명령의 소스로서 여러 번 사용됩니다.
     - `gl.STREAM_DRAW`
-      - :  콘텐츠는 응용 프로그램에 의해 한 번 지정되며, WebGL 그리기와 이미지 명세 명령의 소스로서 몇 번 사용됩니다.
+      - : 콘텐츠는 응용 프로그램에 의해 한 번 지정되며, WebGL 그리기와 이미지 명세 명령의 소스로서 몇 번 사용됩니다.
     - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}를 사용할 때 추가적으로 사용할 수 있는 값들은 다음과 같습니다.
 
       - `gl.STATIC_READ`
