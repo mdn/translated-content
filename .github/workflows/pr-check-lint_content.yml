@@ -12,6 +12,8 @@ permissions:
 
 jobs:
   lint-and-review-docs:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
