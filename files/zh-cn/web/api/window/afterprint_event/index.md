@@ -1,5 +1,5 @@
 ---
-title: "Window: afterprint event"
+title: "Window：afterprint 事件"
 slug: Web/API/Window/afterprint_event
 ---
 
@@ -20,9 +20,9 @@ onafterprint = (event) => {};
 
 ## 事件类型
 
-一个通用的 {{domxref("Event")}}.
+一个通用的 {{domxref("Event")}}。
 
-## 例子
+## 示例
 
 使用 `addEventListener()`:
 

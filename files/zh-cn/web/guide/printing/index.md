@@ -4,7 +4,7 @@ slug: Web/Guide/Printing
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
 </section>
 
 有时，你的网站或应用程序可能希望改善用户在打印内容时的体验。有几种可能的情况：
@@ -45,7 +45,7 @@ slug: Web/Guide/Printing
 
 浏览器发送 {{domxref("Window/beforeprint_event", "beforeprint")}} 和 {{domxref("Window/afterprint_event", "afterprint")}} 事件让内容确定打印何时发生。你可以用它来调整打印过程中显示的用户界面（例如在打印过程中显示或隐藏用户界面元素）。
 
-## 例子
+## 示例
 
 以下是一些常见示例。
 
@@ -54,47 +54,42 @@ slug: Web/Guide/Printing
 如果你希望在用户打印完 [弹出窗口](/zh-CN/docs/Web/API/Window/open)（例如文档的打印机友好版本）的内容后自动关闭该窗口，你可以使用这样的代码：
 
 ```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>JavaScript Window Close Example</title>
-    <script>
-      function popuponclick() {
-        const my_window = window.open(
-          "",
-          "mywindow",
-          "status=1,width=350,height=150",
-        );
-        my_window.document.write("<html><head><title>Print Me</title></head>");
-        my_window.document.write('<body onafterprint="self.close()">');
-        my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>",
-        );
-        my_window.document.write("</body></html>");
-      }
-    </script>
-  </head>
-  <body>
-    <p>
-      To try out the <code>afterprint</code> event, click the link below to open
-      the window to print. You can also try changing the code to use
-      <code>beforeprint</code> to see the difference.
-    </p>
-    <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
-  </body>
-</html>
+<div>
+  <p>
+    To try out the <code>afterprint</code> event, click the link below to open
+    the window to print. You can also try changing the code to use
+    <code>beforeprint</code> to see the difference.
+  </p>
+  <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
+</div>
 ```
 
-[查看实时示例](https://media.prod.mdn.mozit.cloud/samples/domref/printevents.html)
+```js
+function popuponclick() {
+  const my_window = window.open(
+    "",
+    "mywindow",
+    "status=1,width=350,height=150"
+  );
+  my_window.document.write("<html><head><title>Print Me</title></head>");
+  my_window.document.write('<body onafterprint="self.close()">');
+  my_window.document.write(
+    "<p>When you print this window, it will close afterward.</p>"
+  );
+  my_window.document.write("</body></html>");
+}
+```
+
+{{EmbedLiveSample('Examples')}}
+
+{{LiveSampleLink('Examples', '查看实时示例')}}
 
 ### 无需打开弹出窗口即可打印外部页面
 
 如果你想在不打开弹窗的情况下打印外部页面，可以使用隐藏的 {{HTMLElement("iframe")}} 元素（请参阅：[HTMLIFrameElement](/zh-CN/docs/Web/API/HTMLIFrameElement)），在用户打印其内容后自动将其移除。下面是一个可能的示例，它将打印一个名为 `externalPage.html` 的文件：
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -145,5 +140,5 @@ slug: Web/Guide/Printing
 - [`window.print`](/zh-CN/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
 - {{ domxref("window.afterprint_event", "afterprint") }} 事件
-- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@media")}}
