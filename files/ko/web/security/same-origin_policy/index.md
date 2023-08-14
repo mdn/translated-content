@@ -75,7 +75,7 @@ document.domain = "company.com";
 - {{htmlelement("img")}}로 표시하는 이미지.
 - {{htmlelement("video")}}와 {{htmlelement("audio")}}로 재생하는 미디어.
 - {{htmlelement("object")}}와 {{htmlelement("embed")}}로 삽입하는 외부 리소스.
-- {{cssxref("@font-face")}}로 적용하는 글씨체. 일부 브라우저는 교차 충처를 허용하지만, 다른 브라우드는 동일 출처를 요구할 수도 있습니다.
+- {{cssxref("@font-face")}}로 적용하는 글꼴. 일부 브라우저는 교차 충처를 허용하지만, 다른 브라우드는 동일 출처를 요구할 수도 있습니다.
 - {{htmlelement("iframe")}}으로 삽입하는 모든 것. 사이트는 {{httpheader("X-Frame-Options")}} 헤더를 사용하여 출처 간 프레이밍을 방지할 수 있습니다.
 
 ### 교차 출처 접근을 허용하는 방법
