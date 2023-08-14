@@ -89,8 +89,8 @@ bufferData(target, srcData, usage, srcOffset, length)
 
 ### 예외
 
-- 컨텍스트가 주어진 `size`로 데이터 저장소를 생성할 수 없는 경우 `gl.OUT_OF_MEMORY` 오류가 발생합니다. 
-- `size`가 음수인 경우 `gl.INVALID_VALUE` 오류가 발생합니다. 
+- 컨텍스트가 주어진 `size`로 데이터 저장소를 생성할 수 없는 경우 `gl.OUT_OF_MEMORY` 오류가 발생합니다.
+- `size`가 음수인 경우 `gl.INVALID_VALUE` 오류가 발생합니다.
 - `target` 또는 `usage`가 허용된 열거형 중 하나가 아닌 경우 `gl.INVALID_ENUM` 오류가 발생합니다.
 
 ## 예제
