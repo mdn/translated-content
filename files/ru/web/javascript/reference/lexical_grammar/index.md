@@ -371,7 +371,7 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 
 `string text ${expression} string text`;
 
-tag `string text ${expression} string text`;
+tag`string text ${expression} string text`;
 ```
 
 ## Автоматическая вставка "точки с запятой"

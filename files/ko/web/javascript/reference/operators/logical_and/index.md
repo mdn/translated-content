@@ -90,9 +90,9 @@ AND 연산자는 OR 연산자보다 높은 우선 순위를 가지며, 이는 `&
 ([연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)참고).
 
 ```js
-true || false && false; // returns true
+true || (false && false); // returns true
 true && (false || false); // returns false
-(2 === 3) || (4 < 0) && (1 === 1); // returns false
+2 === 3 || (4 < 0 && 1 === 1); // returns false
 ```
 
 ## 예제
