@@ -134,6 +134,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- 相关事件：{{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/beforeunload_event", "beforeunload")}}、{{domxref("Window/unload_event", "unload")}}
+- Document [readyState](/zh-CN/docs/Web/API/Document/readyState) API
+- 相关事件
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Window/beforeunload_event", "beforeunload")}}
+  - {{domxref("Window/unload_event", "unload")}}

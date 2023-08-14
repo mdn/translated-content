@@ -65,23 +65,22 @@ Here is a simple example of using the `<content>` element. It is an HTML file wi
 <html>
   <head></head>
   <body>
-  <!-- The original content accessed by <content> -->
-  <div>
-    <h4>My Content Heading</h4>
-    <p>My content text</p>
-  </div>
+    <!-- The original content accessed by <content> -->
+    <div>
+      <h4>My Content Heading</h4>
+      <p>My content text</p>
+    </div>
 
-  <script>
-  // Get the <div> above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the <div>
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the <p> tag.
-  shadowroot.innerHTML =
-   '<h2>Inserted Heading</h2> <content select="p"></content>';
-  </script>
-
+    <script>
+      // Get the <div> above.
+      var myContent = document.querySelector("div");
+      // Create a shadow DOM on the <div>
+      var shadowroot = myContent.createShadowRoot();
+      // Insert into the shadow DOM a new heading and
+      // part of the original content: the <p> tag.
+      shadowroot.innerHTML =
+        '<h2>Inserted Heading</h2> <content select="p"></content>';
+    </script>
   </body>
 </html>
 ```

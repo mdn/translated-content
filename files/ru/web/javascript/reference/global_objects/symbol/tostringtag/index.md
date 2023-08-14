@@ -10,19 +10,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 Многие Javascript типы имеют теги по умолчанию:
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... and more
 ```
 
 Другие имеют встроенный символ `toStringTag`:
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
@@ -41,7 +41,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 

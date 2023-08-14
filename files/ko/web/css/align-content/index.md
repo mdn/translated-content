@@ -16,11 +16,11 @@ slug: Web/CSS/align-content
 ```css
 /* Basic positional alignment */
 /* align-content does not take left and right values */
-align-content: center;     /* Pack items around the center */
-align-content: start;      /* Pack items from the start */
-align-content: end;        /* Pack items from the end */
+align-content: center; /* Pack items around the center */
+align-content: start; /* Pack items from the start */
+align-content: end; /* Pack items from the end */
 align-content: flex-start; /* Pack flex items from the start */
-align-content: flex-end;   /* Pack flex items from the end */
+align-content: flex-end; /* Pack flex items from the end */
 /* Normal alignment */
 align-content: normal;
 /* Baseline alignment */
@@ -31,12 +31,12 @@ align-content: last baseline;
 align-content: space-between; /* Distribute items evenly
                                  The first item is flush with the start,
                                  the last is flush with the end */
-align-content: space-around;  /* Distribute items evenly
+align-content: space-around; /* Distribute items evenly
                                  Items have a half-size space
                                  on either end */
-align-content: space-evenly;  /* Distribute items evenly
+align-content: space-evenly; /* Distribute items evenly
                                  Items have equal space around them */
-align-content: stretch;       /* Distribute items evenly
+align-content: stretch; /* Distribute items evenly
                                  Stretch 'auto'-sized items to fit
                                  the container */
 /* Overflow alignment */
@@ -96,7 +96,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -204,13 +204,13 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
-values.addEventListener('change', function (evt) {
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```

@@ -47,13 +47,13 @@ Os eixos registrados são os mais comumente encontrados - comuns o suficiente pa
 
 Aqui estão os eixos registrados, juntamente com suas propriedades CSS correspondentes:
 
-| Tag do Eixo    | Propriedade CSS                                     |
-| -------------- | --------------------------------------------------- |
-| "wght"         | {{cssxref("font-weight")}}                |
-| "wdth"         | {{cssxref("font-stretch")}}                |
+| Tag do Eixo    | Propriedade CSS                              |
+| -------------- | -------------------------------------------- |
+| "wght"         | {{cssxref("font-weight")}}                   |
+| "wdth"         | {{cssxref("font-stretch")}}                  |
 | "slnt" (slant) | {{cssxref("font-style")}}: `oblique + angle` |
 | "ital"         | {{cssxref("font-style")}}: `italic`          |
-| "opsz"         | {{cssxref("font-optical-sizing")}}        |
+| "opsz"         | {{cssxref("font-optical-sizing")}}           |
 
 Os eixos personalizados podem ser qualquer coisa que o designer da fonte deseje variar em sua fonte, por exemplo, alturas ascendentes ou descendentes, o tamanho das serifas ou qualquer outra coisa que possam imaginar. Qualquer eixo pode ser usado desde que seja dado um eixo exclusivo de 4 caracteres. Alguns acabam se tornando mais comuns e podem até se registrar com o tempo.
 
@@ -79,8 +79,8 @@ O CSS do exemplo a seguir pode ser editado para permitir que você mude os valor
 
 ## Especificações
 
-| Especificação                                                                                                                                                                        | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
+| Especificação                                                                                                                            | Status                  | Comentário         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
 | {{SpecName('CSS4 Fonts', '#low-level-font-variation-settings-control-the-font-variation-settings-property', 'font-variation-settings')}} | {{Spec2('CSS4 Fonts')}} | Initial definition |
 
 {{cssinfo}}

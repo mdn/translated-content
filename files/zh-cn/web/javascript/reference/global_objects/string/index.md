@@ -9,15 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ## 描述
 
-字符串对于保存以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度")}}，使用 [+ 和 += 字符串操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
+字符串对于保存可以以文本形式表示的数据很有用。一些最常用的字符串操作是检查它们的{{jsxref("String/length","长度", "", 1)}}，使用 [+ 和 += 字符串运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)来构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
 
 ### 创建字符串
 
-从字符串字面量将字符串创建为原始值或使用 {{jsxref("String/String", "String()")}} 构造函数将字符串创建为对象。
+字符串可以通过字符串字面量创建为原始值，也可以通过 {{jsxref("String/String", "String()")}} 构造函数创建为字符串对象：
 
-```js
+```js-nolint
 const string1 = "A string primitive";
-const string2 = "Also a string primitive";
+const string2 = 'Also a string primitive';
 const string3 = `Yet another string primitive`;
 ```
 
@@ -25,9 +25,9 @@ const string3 = `Yet another string primitive`;
 const string4 = new String("A String object");
 ```
 
-字符串原始值和字符串对象共享很多行为，但也有其他重要的区别和注意事项。请参阅下面的[字符串原始值和字符串对象](#字符串原始值和字符串对象)。
+字符串原始值和字符串对象共享很多行为，但也有其他重要的区别和注意事项。请参阅下面的“[字符串原始值和字符串对象](#字符串原始值和字符串对象)”。
 
-字符串字面量可以使用单引号或者双引号指定，它们的处理方式相同，或者使用反引号字符 <kbd>`</kbd>。最后一种形式指定了[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)：这种方式可以让你插入表达式。
+字符串字面量可以使用单引号或者双引号指定，它们的处理方式相同，或者使用反引号字符 <kbd>`</kbd>。最后一种形式指定了[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)，你可以在其中插入表达式。有关字符串字面量语法的更多信息，请参见[词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字符串字面量)。
 
 ### 访问字符
 
@@ -47,18 +47,18 @@ const string4 = new String("A String object");
 
 ### 比较字符串
 
-在 C 中，`strcmp()` 函数用于比较字符串。在 JavaScript 中，你只需要使用[小于和大于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)：
+使用[小于和大于运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)来比较字符串：
 
 ```js
 const a = "a";
 const b = "b";
 if (a < b) {
   // true
-  console.log(`${a} is less than ${b}`);
+  console.log(`${a} 小于 ${b}`);
 } else if (a > b) {
-  console.log(`${a} is greater than ${b}`);
+  console.log(`${a} 大于 ${b}`);
 } else {
-  console.log(`${a} and ${b} are equal.`);
+  console.log(`${a} 和 ${b} 相等`);
 }
 ```
 
@@ -78,11 +78,11 @@ const areEqualInUpperCase = (str1, str2) =>
 const areEqualInLowerCase = (str1, str2) =>
   str1.toLowerCase() === str2.toLowerCase();
 
-areEqualInUpperCase("ß", "ss"); // true; should be false
-areEqualInLowerCase("ı", "I"); // false; should be true
+areEqualInUpperCase("ß", "ss"); // true；应该为 false
+areEqualInLowerCase("ı", "I"); // false；应该为 true
 ```
 
-用于测试不区分大小写的相等性的区域感知且可靠的解决方案是使用 {{jsxref("Intl.Collator")}} API 或者字符串的 [`localeCompare()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) 方法——它们共享相同的接口——[`sensitivity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) 选项设置为 `"accent"` 或 `"base"`。
+用于测试不区分大小写的相等性的本地化（locale-aware）且可靠的解决方案是使用 {{jsxref("Intl.Collator")}} API 或者字符串的 [`localeCompare()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) 方法——它们共享相同的接口——[`sensitivity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) 选项设置为 `"accent"` 或 `"base"`。
 
 ```js
 const areEqual = (str1, str2, locale = "en-US") =>
@@ -92,19 +92,19 @@ areEqual("ß", "ss", "de"); // false
 areEqual("ı", "I", "tr"); // true
 ```
 
-`localeCompare()` 方法以与 `strcmp()` 类似的方式启用字符串比较——它允许以区域感知的方式进行对字符串进行排序。
+`localeCompare()` 方法使字符串比较可以像 `strcmp()` 函数一样进行——它允许以本地化的方式对字符串进行排序。
 
 ### 字符串原始值和字符串对象
 
-注意，JavaScript 区分 `String` 对象和{{Glossary("Primitive", "原始字符串")}}值（{{jsxref("Boolean")}} 和 {{jsxref("Global_Objects/Number", "Number")}} 也是如此）。
+注意，JavaScript 区分 `String` 对象和{{Glossary("Primitive", "原始字符串", "", 1)}}值（{{jsxref("Boolean")}} 和 {{jsxref("Global_Objects/Number", "Number")}} 也是如此）。
 
-字符串字面量（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在要对原始字符串调用方法或者发生属性查找的上下文中，JavaScript 将自动的包装原始字符串并调用方法或在包装对象上执行属性查找。
+字符串字面量（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在需要调用原始字符串的方法或进行属性查找的上下文中，JavaScript 将自动包装原始字符串并在包装对象上调用方法或执行属性查找。
 
 ```js
-const strPrim = "foo"; // A literal is a string primitive
-const strPrim2 = String(1); // Coerced into the string primitive "1"
-const strPrim3 = String(true); // Coerced into the string primitive "true"
-const strObj = new String(strPrim); // String with new returns a string wrapper object.
+const strPrim = "foo"; // 字面量是一个字符串原始值
+const strPrim2 = String(1); // 被强制转换为字符串原始值“1”
+const strPrim3 = String(true); // 被强制转换为字符串原始值“true”
+const strObj = new String(strPrim); // 使用 `new` 关键字调用 `String` 构造函数返回一个字符串包装对象。
 
 console.log(typeof strPrim); // "string"
 console.log(typeof strPrim2); // "string"
@@ -112,28 +112,28 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告：** 你应该发现你自己很少使用 `String` 构造函数。
+> **警告：** 你应该基本不会将 `String` 作为构造函数使用。
 
 使用 {{jsxref("Global_Objects/eval", "eval()")}} 时，字符串原始值和 `String` 对象也会给出不同的结果。传递给 `eval` 的原始值被当作源代码处理；而 `String` 对象则被当作对象处理，返回对象。例如：
 
 ```js
-const s1 = "2 + 2"; // creates a string primitive
-const s2 = new String("2 + 2"); // creates a String object
-console.log(eval(s1)); // returns the number 4
-console.log(eval(s2)); // returns the string "2 + 2"
+const s1 = "2 + 2"; // 创建一个字符串原始值
+const s2 = new String("2 + 2"); // 创建一个 String 对象
+console.log(eval(s1)); // 返回数字 4
+console.log(eval(s2)); // 返回字符串“2 + 2”
 ```
 
-由于上述原因，当一段代码在需要使用基本字符串的时候却使用了 `String` 对象就会导致执行失败（虽然一般情况下程序员们并不需要考虑这样的问题）。
+因此，当一段代码在期望使用字符串原始值的时候却使用了 `String` 对象是，可能会导致执行失败，虽然一般情况下，我们并不需要考虑这样的问题。
 
-`String` 对象始终可以使用 {{jsxref("String.prototype.valueOf()", "valueOf()")}} 方法将其转换为它的原始值（字面量）。
+`String` 对象始终可以使用 {{jsxref("String.prototype.valueOf()", "valueOf()")}} 方法将其转换为对应的原始值。
 
 ```js
-console.log(eval(s2.valueOf())); // returns the number 4
+console.log(eval(s2.valueOf())); // 返回数字 4
 ```
 
 ### 字符串强制转换
 
-许多期望字符串的内置操作首先将它们的参数强制转换为字符串（这也就是为什么 `String` 对象的行为类似于字符串原始值）。[这些操作](https://tc39.es/ecma262/#sec-tostring)可以总结为以下几点：
+许多内置操作首先将它们的参数强制转换为字符串（这就是为什么 `String` 对象的行为类似于字符串原始值的原因）。[这些操作](https://tc39.es/ecma262/#sec-tostring)可以总结为以下几点：
 
 - 字符串按原样返回。
 - [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 转换成 `"undefined"`。
@@ -142,7 +142,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 首先，对象通过依次调用 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
+- 对于对象，首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -152,59 +152,22 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 根据你使用的情况，你可能想要使用 `` `${x}` ``（模拟内置行为）或 `String(x)`（处理 symbol 值而不抛出错误），但你不应该使用 `"" + x`。
 
-### 转义序列
+### UTF-16 字符、Unicode 码位和字素簇
 
-可以使用转义序列对特殊字符进行编码：
+字符串基本上表示为 [UTF-16 码元](https://zh.wikipedia.org/wiki/UTF-16)的序列。在 UTF-16 编码中，每个码元都是 16 位长。这意味着最多有 2<sup>16</sup> 个或 65536 个可能的字符可表示为单个 UTF-16 码元。该字符集称为[基本多语言平面（BMP）](https://zh.wikipedia.org/wiki/Unicode字符平面映射)，包含最常见的字符，如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。每个码元都可以用以 `\u` 开头的 4 个十六进制数字写在一个字符串中。
 
-| 转义序列                                                                                                                                   | Unicode 代码流                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `\0`                                                                                                                                       | null 字符（U+0000 NULL）                                                                             |
-| `\'`                                                                                                                                       | 单引号（U+0027 APOSTROPHE）                                                                          |
-| `\"`                                                                                                                                       | 双引号（U+0022 QUOTATION MARK）                                                                      |
-| `\\`                                                                                                                                       | 反斜杠（U+005C REVERSE SOLIDUS）                                                                     |
-| `\n`                                                                                                                                       | 换行符（U+000A LINE FEED; LF）                                                                       |
-| `\r`                                                                                                                                       | 回车符（U+000D CARRIAGE RETURN; CR）                                                                 |
-| `\v`                                                                                                                                       | 垂直制表符（U+000B LINE TABULATION）                                                                 |
-| `\t`                                                                                                                                       | 制表符（U+0009 CHARACTER TABULATION）                                                                |
-| `\b`                                                                                                                                       | 退格键（U+0008 BACKSPACE）                                                                           |
-| `\f`                                                                                                                                       | 换页符（U+000C FORM FEED）                                                                           |
-| `\uXXXX` …其中 `XXXX` 恰好是 `0000`–`FFFF` 范围内的 4 个十六进制；例如，`\u000A` 与 `\n`（换行）相同；`\u0021` 是 `!`                      | `U+0000` 和 `U+FFFF` 之间的 Unicode 码位（Unicode 基于多平台语言）                                   |
-| `\u{X}`…`\u{XXXXXX}` …其中 `X`…`XXXXXX` 是 `0`–`10FFFF` 范围内的 1-6 个十六进制数字；例如，`\u{A}` 与 `\n`（换行符）相同； `\u{21}` 是 `!` | `U+0000` 和 `U+10FFFF` 之间的 Unicode 码位（整个 Unicode）                                           |
-| `\xXX` …其中 `XX` 恰好是 `00`–`FF` 范围内的 2 个十六进制数字；例如，`\x0A` 与 `\n`（换行符）相同；`\x21` 是 `!`                            | `U+0000` 和 `U+00FF` 之间的 Unicode 码位 （Basic Latin 和 Latin-1 Supplement 块；相当于 ISO-8859-1） |
+然而，整个 Unicode 字符集比 65536 大得多。额外的字符以*代理对*（surrogate pair）的形式存储在 UTF-16 中，代理对是一对 16 位码元，表示一个单个字符。为了避免起义，配对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于编码单码元字符。（更准确地说，前导代理，也称为高位代理，其值在 `0xD800` 和 `0xDBFF` 之间（含），而后尾代理，也称为低位代理，其值在 `0xDC00` 和 `0xDFFF` 之间（含）。）每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（code point）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
 
-### 长字符串文字
+“单独代理项（lone surrogate）”是指满足以下描述之一的 16 位码元：
 
-有时，你的代码将包含非常长的字符串。你可能希望在不影响实际字符串内容的情况下，在源代码中专门将字符串分成很多行，而不是无休止的继续下去，或者随编辑器的心血来潮换行。
+- 它在范围 `0xD800` 到 `0xDBFF` 内（含）（即为前导代理），但它是字符串中的最后一个码元，或者下一个码元不是后尾代理。
+- 它在范围 `0xDC00` 到 `0xDFFF` 内（含）（即为后尾代理），但它是字符串中的第一个码元，或者前一个码元不是前导代理。
 
-你可以使用 [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符去增加多行字符串，像这样：
+单独代理项不代表任何 Unicode 字符。尽管大多数 JavaScript 内置方法都可以正确处理它们，因为它们都是基于 UTF-16 码元工作的，但是在与其他系统交互时，单独代理项通常不是有效的值。例如，`encodeURI()` 会为单独代理项抛出 {{jsxref("URIError")}}，因为 URI 编码使用 UTF-8 编码，而 UTF-8 没有任何编码单独代理项的方法。不包含任何单独代理项的字符串称为*规范的*字符串，并且可以安全地与不处理 UTF-16 的函数一起使用，例如 `encodeURI()` 或 {{domxref("TextEncoder")}} 。你可以使用 {{jsxref("String/isWellFormed", "isWellFormed()")}} 方法检查字符串是否规范，或使用 {{jsxref("String/toWellFormed", "toWellFormed()")}} 方法清除单独代理项。
 
-```js
-const longString =
-  "This is a very long string which needs " +
-  "to wrap across multiple lines because " +
-  "otherwise my code is unreadable.";
-```
+除了 Unicode 字符之外，还有某些 Unicode 字符序列应视为一个视觉单元，被称为*字素簇*（grapheme cluster）。最常见的情况是 emoji：许多具有多种变体的 emoji 实际上是由多个 emoji 组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
-或者你可以在每行的末尾使用反斜杠字符（`\`）来指示该字符串将在下一行继续。确保没有空格或者任何其他字符在反斜杠或缩进之后，否则它将不工作。
-
-```js
-const longString =
-  "This is a very long string which needs \
-to wrap across multiple lines because \
-otherwise my code is unreadable.";
-```
-
-上述两种方法都会产生相同的字符串。
-
-### UTF-16 字符、Unicode 码位和字素簇（grapheme clusters）
-
-字符串基本上表示为 [UTF-16 码元](https://zh.wikipedia.org/wiki/UTF-16)的序列。在 UTF-16 编码中，每个码元都是 16 位长。这意味着最多有 2<sup>16</sup> 个或 65536 个可能的字符可表示为单个 UTF-16 码元。该字符集称为[基本多语言平面（BMP）](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>)，包含最常见的字符，如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。每个码元都可以写成一个字符串，其中 `\u` 之后跟四个十六进制数字。
-
-然而，整个 Unicode 字符集比 65536 大得多。额外的字符作为*代理对*（surrogate pairs）存储在 UTF-16 中，代理对是表示单个字符的 16 位码元对。为了避免起义，该对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于对单码元（single-code-unit）进行编码。因此，“单独的代理项”通常不是操作字符串的有效值——例如 [`encodeURI()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) 将为单独的代理项抛出 {{jsxref("URIError")}}。每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（codepoint）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
-
-在 Unicode 字符之上，有一些 Unicode 字符序列应该被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
-
-你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并强代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。在另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
+你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并将代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -240,6 +203,13 @@ otherwise my code is unreadable.";
 
 ## 实例属性
 
+这些属性在 `String.prototype` 上定义，由所有 `String` 实例共享。
+
+- {{jsxref("Object/constructor", "String.prototype.constructor")}}
+  - : 创建实例对象的构造函数。对于 `String` 实例，初始值是 {{jsxref("String/String", "String")}} 构造函数。
+
+这些属性是每个 `String` 实例的自有属性。
+
 - {{jsxref("String.prototype.length")}}
   - : 反映字符串的 `length`。只读。
 
@@ -255,12 +225,14 @@ otherwise my code is unreadable.";
   - : 返回一个非负整数值，它是从指定位置（`pos`）开始的 UTF-16 编码码位的码位值。
 - {{jsxref("String.prototype.concat()")}}
   - : 合并两个（或更多）字符串的文本并返回一个新字符串。
-- {{jsxref("String.prototype.includes()")}}
-  - : 确定调用字符串是否包含 `searchString`。
 - {{jsxref("String.prototype.endsWith()")}}
   - : 确定字符串是否以字符串 `searchString` 的字符结尾。
+- {{jsxref("String.prototype.includes()")}}
+  - : 确定调用字符串是否包含 `searchString`。
 - {{jsxref("String.prototype.indexOf()")}}
   - : 返回在调用 {{jsxref("String")}} 对象中第一次出现的 `searchValue` 的索引，如果未找到则返回 `-1`。
+- {{jsxref("String.prototype.isWellFormed()")}}
+  - : 返回一个布尔值，指示此字符串是否包含任何[单独代理项](#utf-16_字符、unicode_码位和字素簇)。
 - {{jsxref("String.prototype.lastIndexOf()")}}
   - : 返回在调用 {{jsxref("String")}} 对象中最后一次出现的 `searchValue` 的索引，如果未找到则返回 `-1`。
 - {{jsxref("String.prototype.localeCompare()")}}
@@ -307,17 +279,19 @@ otherwise my code is unreadable.";
 - {{jsxref("String.prototype.toLowerCase()")}}
   - : 返回转换为小写的调用字符串值。
 - {{jsxref("String.prototype.toString()")}}
-  - : 返回表示指定对象的字符串。覆盖 {{jsxref("Object.prototype.toString()")}} 方法。
+  - : 返回表示指定对象的字符串。重写 {{jsxref("Object.prototype.toString()")}} 方法。
 - {{jsxref("String.prototype.toUpperCase()")}}
   - : 返回转换为大写的调用字符串值。
+- {{jsxref("String.prototype.toWellFormed()")}}
+  - : 返回一个字符串，其中包含的所有[单独代理项](##utf-16_字符、unicode_码位和字素簇)都替换为 Unicode 替换字符 U+FFFD。
 - {{jsxref("String.prototype.trim()")}}
   - : 修剪字符串开头和结尾的空格。
-- {{jsxref("String.prototype.trimStart()")}}
-  - : 修剪字符串开头的空格。
 - {{jsxref("String.prototype.trimEnd()")}}
   - : 修剪字符串结尾的空格。
+- {{jsxref("String.prototype.trimStart()")}}
+  - : 修剪字符串开头的空格。
 - {{jsxref("String.prototype.valueOf()")}}
-  - : 返回指定对象的原始值。覆盖 {{jsxref("Object.prototype.valueOf()")}} 方法。
+  - : 返回指定对象的原始值。重写 {{jsxref("Object.prototype.valueOf()")}} 方法。
 - {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
   - : 返回一个新的迭代器对象，该对象迭代 String 值的码位，将每个码位作为 String 值返回。
 

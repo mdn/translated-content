@@ -2,6 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 ---
+
 {{JSRef}}
 
 JavaScript **`Array`** 클래스는 리스트 형태의 고수준 객체인 배열을 생성할 때 사용하는 전역 객체입니다.
@@ -17,19 +18,19 @@ JavaScript **`Array`** 클래스는 리스트 형태의 고수준 객체인 배�
 **배열 만들기**
 
 ```js
-let fruits = ['사과', '바나나']
+let fruits = ["사과", "바나나"];
 
-console.log(fruits.length)
+console.log(fruits.length);
 // 2
 ```
 
 **인덱스로 배열의 항목에 접근하기**
 
 ```js
-let first = fruits[0]
+let first = fruits[0];
 // 사과
 
-let last = fruits[fruits.length - 1]
+let last = fruits[fruits.length - 1];
 // 바나나
 ```
 
@@ -37,8 +38,8 @@ let last = fruits[fruits.length - 1]
 
 ```js
 fruits.forEach(function (item, index, array) {
-  console.log(item, index)
-})
+  console.log(item, index);
+});
 // 사과 0
 // 바나나 1
 ```
@@ -46,45 +47,45 @@ fruits.forEach(function (item, index, array) {
 **배열 끝에 항목 추가하기**
 
 ```js
-let newLength = fruits.push('오렌지')
+let newLength = fruits.push("오렌지");
 // ["사과", "바나나", "오렌지"]
 ```
 
 **배열 끝에서부터 항목 제거하기**
 
 ```js
-let last = fruits.pop() // 끝에있던 '오렌지'를 제거
+let last = fruits.pop(); // 끝에있던 '오렌지'를 제거
 // ["사과", "바나나"]
 ```
 
 **배열 앞에서부터 항목 제거하기**
 
 ```js
-let first = fruits.shift() // 제일 앞의 '사과'를 제거
+let first = fruits.shift(); // 제일 앞의 '사과'를 제거
 // ["바나나"]
 ```
 
 **배열 앞에 항목 추가하기**
 
 ```js
-let newLength = fruits.unshift('딸기') // 앞에 추가
+let newLength = fruits.unshift("딸기"); // 앞에 추가
 // ["딸기", "바나나"]
 ```
 
 **배열 안 항목의 인덱스 찾기**
 
 ```js
-fruits.push('망고')
+fruits.push("망고");
 // ["딸기", "바나나", "망고"]
 
-let pos = fruits.indexOf("바나나")
+let pos = fruits.indexOf("바나나");
 // 1
 ```
 
 **인덱스 위치에 있는 항목 제거하기**
 
 ```js
-let removedItem = fruits.splice(pos, 1) // 항목을 제거하는 방법
+let removedItem = fruits.splice(pos, 1); // 항목을 제거하는 방법
 
 // ["딸기", "망고"]
 ```
@@ -92,28 +93,28 @@ let removedItem = fruits.splice(pos, 1) // 항목을 제거하는 방법
 **인덱스 위치에서부터 여러개의 항목 제거하기**
 
 ```js
-let vegetables = ['양배추', '순무', '무', '당근']
-console.log(vegetables)
+let vegetables = ["양배추", "순무", "무", "당근"];
+console.log(vegetables);
 // ["양배추", "순무", "무", "당근"]
 
-let pos = 1
-let n = 2
+let pos = 1;
+let n = 2;
 
-let removedItems = vegetables.splice(pos, n)
+let removedItems = vegetables.splice(pos, n);
 // 배열에서 항목을 제거하는 방법
 // pos 인덱스부터 n개의 항목을 제거함
 
-console.log(vegetables)
+console.log(vegetables);
 // ["양배추", "당근"] (원 배열 vegetables의 값이 변함)
 
-console.log(removedItems)
+console.log(removedItems);
 // ["순무", "무"]
 ```
 
 **배열 복사하기**
 
 ```js
-let shallowCopySpread = [...fruits]
+let shallowCopySpread = [...fruits];
 // ["딸기", "망고"]
 ```
 
@@ -126,10 +127,10 @@ JavaScript 배열의 인덱스는 0부터 시작합니다. 즉, 배열 첫 번�
 잘못된 인덱스를 사용하면 `undefined`를 반환합니다.
 
 ```js
-let arr = ['첫 번째 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
-console.log(arr[0])              // '첫 번째 요소입니다'를 기록
-console.log(arr[1])              // '두 번째 요소입니다'를 기록
-console.log(arr[arr.length - 1]) // '마지막 요소입니다'를 기록
+let arr = ["첫 번째 요소입니다", "두 번째 요소입니다", "마지막 요소입니다"];
+console.log(arr[0]); // '첫 번째 요소입니다'를 기록
+console.log(arr[1]); // '두 번째 요소입니다'를 기록
+console.log(arr[arr.length - 1]); // '마지막 요소입니다'를 기록
 ```
 
 `toString`이 속성인 것과 마찬가지로 (정확히 하자면, `toString()`은 메서드입니다) 배열의 요소도 속성입니다. 하지만 배열 요소에 아래 코드처럼 접근하려고 하면, 속성 이름이 유효하지 않기 때문에 구문 오류가 발생합니다.
@@ -158,7 +159,7 @@ renderer['3d'].setTexture(model, 'character.png')  // 정상 작동
 `years[2]`의 `2`는 JavaScript 엔진이 암시적인 `toString` 변환을 사용해 문자열로 변환합니다. 그 결과로서 `'2'`와 `'02'`는 `years` 객체에서 서로 다른 칸을 가리키며, 다음 코드는 `true`가 될 수 있습니다.
 
 ```js
-console.log(years['2'] != years['02']);
+console.log(years["2"] != years["02"]);
 ```
 
 ### 배열 길이와 숫자형 속성의 관계
@@ -170,37 +171,37 @@ JavaScript 배열의 {{jsxref("Array.length", "length")}} 속성과 숫자형 �
 다른 메서드({{jsxref("Array.push", "push")}}, {{jsxref("Array.splice", "splice")}} 등) 또한 배열의 {{jsxref("Array.length", "length")}} 속성을 바꾸는 결과를 낳습니다.
 
 ```js
-const fruits = []
-fruits.push('바나나', '사과', '복숭아')
+const fruits = [];
+fruits.push("바나나", "사과", "복숭아");
 
-console.log(fruits.length) // 3
+console.log(fruits.length); // 3
 ```
 
 배열 인덱스로 유효한 속성을 JavaScript 배열에 설정할 때, 그 인덱스가 현재 배열의 경계 바깥에 있는 경우, JavaScript 엔진은 배열의 {{jsxref("Array.length", "length")}} 속성을 그에 맞춰 업데이트 합니다.
 
 ```js
-fruits[5] = 'mango'
-console.log(fruits[5])           // '망고'
-console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
-console.log(fruits.length)       // 6
+fruits[5] = "mango";
+console.log(fruits[5]); // '망고'
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 6
 ```
 
 {{jsxref("Array.length", "length")}}를 직접 늘려도 요소에 변화는 없습니다.
 
 ```js
-fruits.length = 10
-console.log(fruits)              // ['바나나', '사과', '복숭아', 비어 있음 x 2, '망고', 비어 있음 x 4]
-console.log(Object.keys(fruits)) // ['0', '1', '2', '5']
-console.log(fruits.length)       // 10
-console.log(fruits[8])           // undefined
+fruits.length = 10;
+console.log(fruits); // ['바나나', '사과', '복숭아', 비어 있음 x 2, '망고', 비어 있음 x 4]
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 10
+console.log(fruits[8]); // undefined
 ```
 
 하지만, {{jsxref("Array.length", "length")}} 속성을 감소시키면 요소가 지워집니다.
 
 ```js
-fruits.length = 2
-console.log(Object.keys(fruits)) // ['0', '1']
-console.log(fruits.length)       // 2
+fruits.length = 2;
+console.log(Object.keys(fruits)); // ['0', '1']
+console.log(fruits.length); // 2
 ```
 
 {{jsxref("Array.length")}} 문서에 더 자세한 설명이 있습니다.
@@ -216,8 +217,8 @@ console.log(fruits.length)       // 2
 // 일치한 b와 다음 d를 기억할 것
 // 대소문자 구분 없음
 
-const myRe = /d(b+)(d)/i
-const myArray = myRe.exec('cdbBdbsbz')
+const myRe = /d(b+)(d)/i;
+const myArray = myRe.exec("cdbBdbsbz");
 ```
 
 반환된 `myArray` 배열의 속성과 요소는 다음과 같습니다.
@@ -261,7 +262,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 배열을 새로운 변수에 할당해도 배열이 복사되지는 않습니다. 새로운 변수에는 원본 배열을 가리키는 참조만 할당되며, 원본 배열의 값을 바꾸면 새 변수에서도 그 변경점이 반영됩니다.
 
 ```js
-let array1 = [1,2,3]
+let array1 = [1, 2, 3];
 let array1Reference = array1;
 array1[1] = 9;
 console.log(array1Reference);
@@ -273,21 +274,21 @@ console.log(array1Reference);
 [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
 
 ```js
-let shallowCopySpread = [...fruits]
+let shallowCopySpread = [...fruits];
 // ["Strawberry", "Mango"]
 ```
 
 {{jsxref("Array.slice()")}}:
 
 ```js
-let shallowCopySlice = fruits.slice()
+let shallowCopySlice = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
 {{jsxref("Array.from()")}}:
 
 ```js
-let shallowCopyFrom = Array.from(fruits)
+let shallowCopyFrom = Array.from(fruits);
 // ["Strawberry", "Mango"]
 ```
 
@@ -402,12 +403,12 @@ let deepCopy = JSON.parse(JSON.stringify(fruits));
 아래 예제에서는 길이 0의 배열 `msgArray` 을 생성하고, `msgArray[0]` 와 `msgArray[99]` 에 값을 할당하여 배열의 길이를 100으로 변경합니다.
 
 ```js
-let msgArray = []
-msgArray[0] = 'Hello'
-msgArray[99] = 'world'
+let msgArray = [];
+msgArray[0] = "Hello";
+msgArray[99] = "world";
 
 if (msgArray.length === 100) {
-  console.log('길이가 100입니다.')
+  console.log("길이가 100입니다.");
 }
 ```
 
@@ -417,21 +418,22 @@ if (msgArray.length === 100) {
 
 ```js
 let board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ]
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(board.join('\n') + '\n\n')
+console.log(board.join("\n") + "\n\n");
 
 // 폰을 앞으로 두 칸 전진
-board[4][4] = board[6][4]
-board[6][4] = ' '
-console.log(board.join('\n'))
+board[4][4] = board[6][4];
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 결과는 다음과 같습니다.
@@ -459,14 +461,11 @@ r,n,b,q,k,b,n,r
 ### 배열을 사용하여 일련의 값을 테이블처럼 표시하기
 
 ```js
-const values = []
-for (let x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
+const values = [];
+for (let x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
 }
-console.table(values)
+console.table(values);
 ```
 
 결과는 다음과 같습니다.

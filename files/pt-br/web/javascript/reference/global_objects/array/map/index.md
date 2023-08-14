@@ -63,7 +63,7 @@ O código a seguir mostrar como o método `map` funciona quando a função `call
 
 ```js
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
+var doubles = numbers.map(function (num) {
   return num * 2;
 });
 // doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
@@ -75,7 +75,9 @@ Esse exemplo demonstra como usar o map em um {{jsxref("Global_Objects/String", "
 
 ```js
 var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
+var a = map.call("Hello World", function (x) {
+  return x.charCodeAt(0);
+});
 // a agora vale [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 ```
 
@@ -84,8 +86,8 @@ var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
 Esse exemplo demonstra como iterar sobre uma coleção de objetos recuperada através de querySelectorAll. Nesse caso, vamos pegar todos os options selecionados na tela e imprimir no console:
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = [].map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = [].map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -93,10 +95,13 @@ var values = [].map.call(elems, function(obj) {
 ### Exemplo: Usando `map` para inverter uma string
 
 ```js
-var str = '12345';
-[].map.call(str, function(x) {
-  return x;
-}).reverse().join('');
+var str = "12345";
+[].map
+  .call(str, function (x) {
+    return x;
+  })
+  .reverse()
+  .join("");
 
 // Output: '54321'
 // Bonus: utilize '===' para verificar se a string original e a nova string são palíndromos
@@ -110,7 +115,7 @@ var str = '12345';
 
 ```js
 // Considere:
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // Enquanto era de se esperar [1, 2, 3]
 // O resultado atual é [1, NaN, NaN]
 
@@ -124,11 +129,11 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // O resultado atual é um array de números (como esperado)
 
 // Bonus: Um jeito mais simples de conseguir o mesmo resultado sem nenhuma "pegadinha do Malandro":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 ```
 
 ## Polyfill
@@ -141,13 +146,11 @@ O método `map` foi introduzido ao padrão ECMA-262 na sua 5ª edição, o que s
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback, thisArg) {
-
+  Array.prototype.map = function (callback, thisArg) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError(' this is null or not defined');
+      throw new TypeError(" this is null or not defined");
     }
 
     //  1. Let O be the result of calling ToObject passing the |this|
@@ -161,8 +164,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -180,7 +183,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -190,7 +192,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];
@@ -231,10 +232,10 @@ if (!Array.prototype.map) {
 
 ## Especificações
 
-| Especificação                                                                                | Status                   | Comentário                                        |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
+| Especificação                                                          | Status             | Comentário                                        |
+| ---------------------------------------------------------------------- | ------------------ | ------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}         | {{Spec2('ES5.1')}} | Definição inicial implementada no JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}} | {{Spec2('ES6')}}     |                                                   |
+| {{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}} | {{Spec2('ES6')}}   |                                                   |
 
 ## Compatibilidade com os browsers
 

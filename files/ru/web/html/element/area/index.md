@@ -2,15 +2,16 @@
 title: <area>
 slug: Web/HTML/Element/area
 ---
+
 **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-| [Категории содержимого](/en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                       | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                        |
-| Пропуск тегов                                               | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                                  |
-| Допустимые родители                                         | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
-| Допустимые ARIA-роли                                        | Нет                                                                                                                                                                                                                       |
-| DOM-интерфейс                                               | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                  |
+| [Категории содержимого](/en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                        | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                                            |
+| Пропуск тегов                                                | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                            |
+| Допустимые родители                                          | Любой элемент, допускающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). У элемента `<area>` должен быть родитель {{HTMLElement("map")}}, но он не должен быть прямым родителем. |
+| Допустимые ARIA-роли                                         | Нет                                                                                                                                                                                                                 |
+| DOM-интерфейс                                                | {{domxref("HTMLAreaElement")}}                                                                                                                                                                                      |
 
 ## Атрибуты
 
@@ -61,10 +62,18 @@ slug: Web/HTML/Element/area
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
-  <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+  <area
+    shape="circle"
+    coords="75,75,75"
+    href="left.html"
+    alt="Click to go Left" />
+  <area
+    shape="circle"
+    coords="275,75,75"
+    href="right.html"
+    alt="Click to go Right" />
 </map>
-<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic" />
 ```
 
 ### Результат

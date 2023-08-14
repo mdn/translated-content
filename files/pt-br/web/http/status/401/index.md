@@ -27,8 +27,8 @@ WWW-Authenticate: Basic realm="Acesso intermediário ao site"
 
 ## Especificações
 
-| Especificação                                                | Título                 |
-| ------------------------------------------------------------ | ---------------------- |
+| Especificação                                 | Título                 |
+| --------------------------------------------- | ---------------------- |
 | {{RFC("7235", "401 Não autorizado" , "3.1")}} | HTTP/1.1: Autenticação |
 
 ## Compatibilidade com navegadores

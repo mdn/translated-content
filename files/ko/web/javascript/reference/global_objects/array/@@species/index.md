@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ## 구문
 
 ```js
-    Array[Symbol.species]
+Array[Symbol.species];
 ```
 
 ### 반환 값
@@ -34,7 +34,9 @@ Array[Symbol.species]; // function Array()
 ```js
 class MyArray extends Array {
   // MyArray species를 부모 Array 생성자로 재설정
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

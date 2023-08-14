@@ -64,12 +64,19 @@ function round(n, upperBound, lowerBound){
 На первый взгляд кажется, что скобки расставлены правильно, но обратите внимание, что `||` находится не в скобках. Необходимо заключить `||` в скобки:
 
 ```js example-good
-function round(n, upperBound, lowerBound){
-  if((n > upperBound) || (n < lowerBound)){
-    throw 'Число ' + String(n) + ' больше, чем ' + String(upperBound) + ', или меньше, чем ' + String(lowerBound);
-  }else if(n < ((upperBound + lowerBound)/2)){
+function round(n, upperBound, lowerBound) {
+  if (n > upperBound || n < lowerBound) {
+    throw (
+      "Число " +
+      String(n) +
+      " больше, чем " +
+      String(upperBound) +
+      ", или меньше, чем " +
+      String(lowerBound)
+    );
+  } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
-  }else{
+  } else {
     return upperBound;
   }
 }

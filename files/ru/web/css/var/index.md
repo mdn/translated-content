@@ -46,7 +46,10 @@ body {
 /* Резервное значение */
 /* Стили для элементов компонента: */
 .component .header {
-  color: var(--header-color, blue); /* header-color не существует, поэтому используется blue */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color не существует, поэтому используется blue */
 }
 
 .component .text {
