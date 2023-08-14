@@ -39,7 +39,7 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.COPY_READ_BUFFER`
       - : 한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼.
     - `gl.COPY_WRITE_BUFFER`
-      - :  한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼.
+      - : 한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼.
     - `gl.TRANSFORM_FEEDBACK_BUFFER`
       - : 변환 피드백 작업을 위한 버퍼.
     - `gl.UNIFORM_BUFFER`
