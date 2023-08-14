@@ -50,7 +50,7 @@ bufferData(target, srcData, usage, srcOffset, length)
       - : 픽셀 전송 작업을 위한 버퍼.
 
 - `size`
-  - : 버퍼 객체의 데이터 저장소의 크기를 바이트 단위로 설정하는  {{domxref("WebGL_API/Types", "GLsizeiptr")}}.
+  - : 버퍼 객체의 데이터 저장소의 크기를 바이트 단위로 설정하는 {{domxref("WebGL_API/Types", "GLsizeiptr")}}.
 - `srcData` {{optional_inline}}
   - : 데이터 저장소로 복사될 {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, {{jsxref("TypedArray")}} 혹은 {{jsxref("DataView")}}. `null`인 경우, 데이터 저장소는 여전히 생성되지만, 그 내용은 초기화되지 않고 정의되지 않습니다.
 - `usage`
