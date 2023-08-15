@@ -25,8 +25,8 @@ $1, ..., $9 プロパティは静的です。個々の正規表現オブジェ�
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+var str = "John Smith";
+str.replace(re, "$2, $1"); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```
@@ -34,8 +34,8 @@ RegExp.$2; // "Smith"
 次のスクリプトは、 {{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
 
 ```js
-var str = 'Test 24';
-var number = /(\d+)/.test(str) ? RegExp.$1 : '0';
+var str = "Test 24";
+var number = /(\d+)/.test(str) ? RegExp.$1 : "0";
 number; // "24"
 ```
 

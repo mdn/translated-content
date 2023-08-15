@@ -30,9 +30,9 @@ regexp[Symbol.search](str)
 このメソッドは、 {{jsxref("String.prototype.search()")}} の内部で呼び出されます。たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
-'abc'.search(/a/);
+"abc".search(/a/);
 
-/a/[Symbol.search]('abc');
+/a/[Symbol.search]("abc");
 ```
 
 このメソッドは、`RegExp` サブクラスで検索動作をカスタマイズするために存在しています。
@@ -45,9 +45,9 @@ regexp[Symbol.search](str)
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var result = re[Symbol.search](str);
-console.log(result);  // 4
+console.log(result); // 4
 ```
 
 ### サブクラスでの @@search の使用
@@ -57,7 +57,7 @@ console.log(result);  // 4
 ```js
 class MyRegExp extends RegExp {
   constructor(str) {
-    super(str)
+    super(str);
     this.pattern = str;
   }
   [Symbol.search](str) {
@@ -65,8 +65,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('a+b');
-var str = 'ab a+b';
+var re = new MyRegExp("a+b");
+var str = "ab a+b";
 var result = str.search(re); // String.prototype.search は再定義した [@@search] を呼び出す。
 console.log(result); // 3
 ```
