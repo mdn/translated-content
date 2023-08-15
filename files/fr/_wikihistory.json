@@ -27615,20 +27615,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Mozilla/Add-ons/WebExtensions": {
-    "modified": "2019-07-03T12:01:15.793Z",
-    "contributors": ["hellosct1"]
-  },
-  "conflicting/Web/API/Document/DOMContentLoaded_event": {
-    "modified": "2020-10-15T21:40:06.593Z",
-    "contributors": [
-      "Watilin",
-      "fscholz",
-      "zede-master",
-      "Gastonite",
-      "Shinze",
-      "jmh"
-    ]
   }
 }
