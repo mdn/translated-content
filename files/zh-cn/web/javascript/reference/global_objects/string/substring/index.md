@@ -5,8 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substring
 
 {{JSRef}}
 
-**`substring()`** 方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。
-
 {{jsxref("String")}} 的 **`substring()`** 方法返回该字符串从起始索引到结束索引（不包括）的部分，如果未提供结束索引，则返回到字符串末尾的部份。
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
@@ -144,7 +142,7 @@ replaceString("World", "Web", "Brave New World");
 
 请注意，如果 `oldS` 本身是 `newS` 的子字符串，这可能导致无限循环，例如，假如你尝试在此处用 '`OtherWorld`' 替换 '`World`'。
 
-替换字符串的更好方法如下:
+替换字符串的更好方法如下：
 
 ```js
 function replaceString(oldS, newS, fullS) {
