@@ -29,7 +29,7 @@ Symbol.keyFor(sym);
 ### keyFor() の使用
 
 ```js
-var globalSym = Symbol.for('foo'); // create a new global symbol
+var globalSym = Symbol.for("foo"); // create a new global symbol
 Symbol.keyFor(globalSym); // "foo"
 
 var localSym = Symbol();
@@ -37,7 +37,7 @@ Symbol.keyFor(localSym); // undefined
 
 // well-known symbols are not symbols registered
 // in the global symbol registry
-Symbol.keyFor(Symbol.iterator) // undefined
+Symbol.keyFor(Symbol.iterator); // undefined
 ```
 
 ## 仕様書
