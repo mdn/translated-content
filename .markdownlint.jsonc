@@ -140,23 +140,22 @@
   // https://github.com/OnkarRuikar/markdownlint-rule-search-replace
   "search-replace": {
     "rules": [
-      // XXX Many instances still found in translated content
-      // {
-      //   // Does not apply to zh-cn
-      //   "name": "curly-double-quotes",
-      //   "message": "Don't use curly double quotes",
-      //   "searchPattern": "/“|”/g",
-      //   "replace": "\"",
-      //   "searchScope": "text"
-      // },
-      // {
-      //   // Does not apply to zh-cn
-      //   "name": "curly-single-quotes",
-      //   "message": "Don't use curly single quotes",
-      //   "searchPattern": "/‘|’/g",
-      //   "replace": "'",
-      //   "searchScope": "text"
-      // },
+      {
+        // Does not apply to zh-cn
+        "name": "curly-double-quotes",
+        "message": "Don't use curly double quotes",
+        "searchPattern": "/“|”/g",
+        "replace": "\"",
+        "searchScope": "text"
+      },
+      {
+        // Does not apply to zh-cn
+        "name": "curly-single-quotes",
+        "message": "Don't use curly single quotes",
+        "searchPattern": "/‘|’/g",
+        "replace": "'",
+        "searchScope": "text"
+      },
       {
         "name": "nbsp",
         "message": "Don't use no-break spaces",
