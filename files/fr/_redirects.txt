@@ -3127,6 +3127,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+/fr/docs/Mozilla/Add-ons/WebExtensions/Tips	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
 /fr/docs/Mozilla/Add-ons/WebExtensions/What_next_	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
@@ -4044,6 +4045,7 @@
 /fr/docs/Web/API/Window.scrollTo	/fr/docs/Web/API/Window/scrollTo
 /fr/docs/Web/API/Window.setTimeout	/fr/docs/Web/API/setTimeout
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
+/fr/docs/Web/API/Window/DOMContentLoaded_event	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/Web/API/Window/URL	/fr/docs/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
 /fr/docs/Web/API/Window/content	/fr/docs/Web/API/Window
@@ -4623,7 +4625,7 @@
 /fr/docs/Web/CSS/Élément_remplacé	/fr/docs/Web/CSS/Replaced_element
 /fr/docs/Web/Demos_of_open_web_technologies	/fr/docs/Web/Demos
 /fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos
-/fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Window/DOMContentLoaded_event
+/fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/Web/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Events/abort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/Events/abort_(ProgressEvent)	/fr/docs/Web/API/XMLHttpRequest/abort_event
@@ -5066,6 +5068,8 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/paramètres_du_reste	/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/groupToMap	/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
@@ -6427,6 +6431,7 @@
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/DOMMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document
+/fr/docs/conflicting/Web/API/Document/DOMContentLoaded_event	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/conflicting/Web/API/Document/createEvent	/fr/docs/Web/API/Document/createEvent
 /fr/docs/conflicting/Web/API/Document/createNodeIterator	/fr/docs/Web/API/Document/createNodeIterator
 /fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada	/fr/docs/Web/API/Document/createNodeIterator
