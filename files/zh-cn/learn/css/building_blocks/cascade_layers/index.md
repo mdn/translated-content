@@ -403,7 +403,7 @@ body {
 
 因为无分层普通样式优先于分层普通样式，并且在层内，非嵌套样式优先于普通嵌套样式，所以 `red` 优先于其他 `theme` 颜色。
 
-对于重要样式，分层样式优先于无分层样式，并且早期声明的层中的重要样式优先于后来声明的层。在这个例子中，嵌套层的创建顺序是 `components.narrow`，然后是 `components.wide`，所以 `components.narrow` 中的重要样式优先于 `components.wide` 中的重要样式，这意味着`sans-serif`获胜。
+对于重要样式，分层样式优先于无分层样式，并且早期声明的层中的重要样式优先于后来声明的层。在这个例子中，嵌套层的创建顺序是 `components.narrow`，然后是 `components.wide`，所以 `components.narrow` 中的重要样式优先于 `components.wide` 中的重要样式，这意味着 `sans-serif` 获胜。
 
 ## 测试你的技能！
 
