@@ -59,7 +59,6 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 - www.netlify.com 上的[使用裸域名的选项](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains)（2020）
 - www.wpbeginner.com 上的 [WWW 和非 WWW——哪个更适合 WordPress 的 SEO？](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)（2023）
 
-
 ## 参见
 
 - [有关人们在地址栏中输入内容的统计信息](http://www.chrisfinke.com/2011/07/25/what-do-people-type-in-the-address-bar/)（2011）
