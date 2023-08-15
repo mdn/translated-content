@@ -2,7 +2,7 @@
 title: "멀티미디어: 비디오"
 slug: Learn/Performance/video
 i10n:
-  commitSource: 7b88296db961a6ed6d9927092eb637324a5dc3de
+  commitSource: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
@@ -27,7 +27,7 @@ i10n:
     <tr>
       <th scope="row">목표:</th>
       <td>
-        다양한 비디오 형식, 성능에 미치는 영향, 각 브라우저의 파일 형식 지원에 따라 가장 작은 동영상 파일 크기를 제공하면서 전체 페이지 로드 시간에 비디오가 미치는 영향을 줄이는 방법에 대해 학습합니다.
+        성능에 영향을 미치는 다양한 비디오 형식, 그리고 각 브라우저의 파일 형식 지원에 따라 가장 작은 동영상 파일 크기를 제공하면서 전체 페이지 로드 시간에 비디오가 미치는 영향을 줄이는 방법에 대해 학습합니다.
       </td>
     </tr>
   </tbody>
