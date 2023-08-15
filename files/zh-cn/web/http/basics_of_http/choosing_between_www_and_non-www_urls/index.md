@@ -54,7 +54,11 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 ## 根据情况决定
 
-可以认为这是一个非常主观的 [bikeshedding](http://bikeshed.com/) 问题。如果你想更深入地阅读，有 [很多](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains) [文章](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/) 可供你参考。
+可以认为这是一个非常主观的[自行车棚效应](http://bikeshed.com/)。如果你想更深入地阅读，这里有一些资源：
+
+- www.netlify.com 上的[使用裸域名的选项](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains)（2020）
+- www.wpbeginner.com 上的 [WWW 和非 WWW——哪个更适合 WordPress 的 SEO？](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)（2023）
+
 
 ## 参见
 
