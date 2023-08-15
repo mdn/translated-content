@@ -25,7 +25,7 @@ trimLeft()
 
 ### 别名
 
-在 {{jsxref("String/trim", "trim()")}} 标准化后，引擎也实现了非标准的 `trimLeft` 方法。然而，为了与 {{jsxref("String/padEnd", "padEnd()")}} 保持一致，在该方法标准化时，选择了 `trimStart` 作为其名称。出于 Web 兼容性的考虑，`trimLeft` 仍然作为 `trimStart` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
+在 {{jsxref("String/trim", "trim()")}} 标准化后，引擎也实现了非标准的 `trimLeft` 方法。然而，为了与 {{jsxref("String/padStart", "padStart()")}} 保持一致，在该方法标准化时，选择了 `trimStart` 作为其名称。出于 Web 兼容性的考虑，`trimLeft` 仍然作为 `trimStart` 的别名，它们引用的是完全相同的函数对象。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimLeft.name === "trimStart";
