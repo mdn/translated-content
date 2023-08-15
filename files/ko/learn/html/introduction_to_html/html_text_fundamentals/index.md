@@ -57,25 +57,24 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 ```html
 <h1>The Crushing Bore</h1>
 
-<p>By Chris Mills</p>
+<p>저자 크리스 밀리스</p>
 
-<h2>Chapter 1: The dark night</h2>
+<h2>1장: 어두운 밤</h2>
 
 <p>
-  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...
+  어두운 밤이었습니다. 어디선가, 부엉이가 울었습니다. 비가 세차게 쏟아졌습니다...
 </p>
 
-<h2>Chapter 2: The eternal silence</h2>
+<h2>2장: 영원한 침묵</h2>
 
 <p>
-  Our protagonist could not so much as a whisper out of the shadowy figure ...
+  우리의 주인공은 그림자에서 속삭이는 것만큼 속삭일 수 없었습니다...
 </p>
 
-<h3>The specter speaks</h3>
+<h3>망령이 말합니다</h3>
 
 <p>
-  Several more hours had passed, when all of a sudden the specter sat bolt
-  upright and exclaimed, "Please have mercy on my soul!"
+  몇 시간이 더 지났을 때, 갑자기 망령이 꼿꼿이 앉고 소리쳤습니다. "제발 내 영혼에 자비를 베풀어 주세요!"
 </p>
 ```
 
@@ -109,19 +108,19 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 실수를 하면 언제든 Reset 버튼을 눌러 리셋할 수 있습니다. 진행 중 막히면, Show solution 버튼을 눌러 답을 볼 수 있습니다.
 
 ```html hidden
-<h2>Input</h2>
+<h2>입력</h2>
 <textarea id="code" class="input">
-My short story
+나의 짧은 이야기
 
-I am a policewoman and my name is Trish.
+저는 경찰이고 저의 이름은 트리쉬입니다.
 
-My legs are made of cardboard and I am married to a fish.</textarea
+제 다리는 판지로 만들어졌고 저는 물고기와 결혼했습니다. </textarea
 >
-<h2>Output</h2>
+<h2>출력</h2>
 <div class="output"></div>
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
 </div>
 ```
 
@@ -179,7 +178,7 @@ Semantic(직역 : 의미를 담은, 의미론적인)은 우리 주변 어디에�
 비슷한 맥락에서, 우리는 정확한 요소를 사용하고 있는지, 우리의 컨텐츠에 정확한 의미, 기능, 모습을 담았는지 확실히 해야 합니다. 이 맥락에서 {{htmlelement("h1")}} 요소 또한 텍스트에 "내 페이지 최상위 heading"의 역할로 감싸는 semantic 요소입니다.
 
 ```html
-<h1>This is a top level heading</h1>
+<h1>이것은 최상위 heading입니다</h1>
 ```
 
 기본적으로, 브라우저는 이에 큰 사이즈의 폰트를 적용해 heading처럼 보이게 할 것입니다. (비록 당신이 CSS를 사용해 원하는 어떤 모습으로도 스타일 할 수 있지만 말입니다.) 더 중요하게, 이것의 의미론적인 가치는 다양한 방식으로 사용될 것입니다. 예를 들어 검색 엔진이나 screen reader들에서 말이죠. (위에서 서술한 것처럼.)
@@ -188,7 +187,7 @@ Semantic(직역 : 의미를 담은, 의미론적인)은 우리 주변 어디에�
 
 ```html
 <span style="font-size: 32px; margin: 21px 0;"
-  >Is this a top level heading?</span
+  >이것은 최상위 heading인가요?</span
 >
 ```
 
