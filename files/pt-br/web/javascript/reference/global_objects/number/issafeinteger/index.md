@@ -40,29 +40,33 @@ Um {{jsxref("Boolean")}} indica se o valor fornecido é um número seguro ou nã
 ## Exemplos
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53));      // false
-Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger('3');                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## Polyfill (caso não exista suporte)
 
 ```js
-Number.isSafeInteger = Number.isSafeInteger || function (value) {
-   return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
-};
+Number.isSafeInteger =
+  Number.isSafeInteger ||
+  function (value) {
+    return (
+      Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER
+    );
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                       | Coméntario        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ES2015')}}     | Definição inicial |
+| Especificação                                                                | Status               | Coméntario        |
+| ---------------------------------------------------------------------------- | -------------------- | ----------------- |
+| {{SpecName('ES2015', '#sec-number.issafeinteger', 'Number.isSafeInteger')}}  | {{Spec2('ES2015')}}  | Definição inicial |
 | {{SpecName('ESDraft', '#sec-number.issafeinteger', 'Number.isSafeInteger')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

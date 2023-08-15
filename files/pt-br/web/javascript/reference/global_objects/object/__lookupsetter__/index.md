@@ -36,17 +36,15 @@ Se o _setter_ foi definido para uma propriedade do objeto, não era possível re
 var obj = {
   set foo(value) {
     this.bar = value;
-  }
+  },
 };
 
-
 // Forma não padronizada e depreciada
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
-
 // Forma compatível padronizada
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 

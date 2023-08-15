@@ -51,11 +51,11 @@ Obama é presidente dos EUA
 
 ## Especificações
 
-| Especificação                                                                                                            | Estado                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
+| Especificação                                                                             | Estado                   | Comentário |
+| ----------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-abbr-element', '&lt;abbr&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-abbr-element.html#the-abbr-element', '&lt;abbr&gt;')}}         | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'the-abbr-element.html#the-abbr-element', '&lt;abbr&gt;')}}       | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

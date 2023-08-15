@@ -12,16 +12,18 @@ slug: Web/CSS/CSS_grid_layout
 아래 예제는 3개의 세로 열 트랙으로 이루어졌으며, 저절로 채워지며 생성되는 가로 행 트랙은 높이가 최소 100픽셀 이상, 콘텐츠 최대치까지 자동으로 늘어나는 구조의 그리드를 보여줍니다. 각 아이템은 그리드 라인을 기준으로 배치되었습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }

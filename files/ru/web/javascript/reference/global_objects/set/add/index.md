@@ -2,6 +2,7 @@
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 Метод **`add()`** добавляет новый элемент с заданным значением в конец объекта `Set`.
@@ -31,7 +32,7 @@ mySet.add(value);
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // можно делать цепочки
+mySet.add(5).add("some text"); // можно делать цепочки
 
 console.log(mySet);
 // Set [1, 5, "some text"]

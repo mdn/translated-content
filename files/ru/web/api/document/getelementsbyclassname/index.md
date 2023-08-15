@@ -57,27 +57,27 @@ var testDivs = Array.prototype.filter.call(
 ```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p class="test">hello word2</p>
-        <p >hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p class="test">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById("parent-id");
+      var parentDOM = document.getElementById("parent-id");
 
-        var test=parentDOM.getElementsByClassName("test");//test is not target element
-        console.log(test);//HTMLCollection[1]
+      var test = parentDOM.getElementsByClassName("test"); //test is not target element
+      console.log(test); //HTMLCollection[1]
 
-        var testTarget=parentDOM.getElementsByClassName("test")[0];//hear , this element is target
-        console.log(testTarget);//<p class="test">hello word2</p>
+      var testTarget = parentDOM.getElementsByClassName("test")[0]; //hear , this element is target
+      console.log(testTarget); //<p class="test">hello word2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 

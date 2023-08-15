@@ -35,9 +35,9 @@ Because `tanh()` is a static method of `Math`, you always use it as `Math.tanh()
 ### Using `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## Polyfill
@@ -45,17 +45,20 @@ Math.tanh(1);        // 0.7615941559557649
 This can be emulated with the help of the {{jsxref("Math.exp()")}} function:
 
 ```js
-Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
     return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+  };
 ```
 
 ## Specifications
 
-| Specification                                                            | Status                       | Comment             |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Specification                                          | Status               | Comment             |
+| ------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

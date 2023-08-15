@@ -119,7 +119,7 @@ x + 1n === x + 2n; // false because 9007199254740992n and 9007199254740993n are 
 Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true because both are 9007199254740992
 ```
 
-你可以使用大多数运算符为 BigInt工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
+你可以使用大多数运算符为 BigInt 工作，包括 `+`、`*`、`-`、`**` 和 `%`——唯一被禁止的是 [`>>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)。BigInt 并不是[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)有着相同数学值的 Number，但是它是[宽松的](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)。
 
 BigInt 值并不总是更精确的，也不总是比 number 精确，因为 BigInt 不能表示分数，但是可以表示更准确的大整数。这两种类型都包含各自的类型，并且它们不能相互替代。如果 BigInt 值在算术表达式中与正则数值混合，或者它们相互[隐式转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，则抛出 {{jsxref("TypeError")}}。
 

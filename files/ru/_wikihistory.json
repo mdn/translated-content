@@ -7367,16 +7367,6 @@
       "Roman_Pizhlakov"
     ]
   },
-  "Web/API/Window/DOMContentLoaded_event": {
-    "modified": "2019-04-30T14:28:01.901Z",
-    "contributors": [
-      "wbamberg",
-      "cashm0ney",
-      "fscholz",
-      "vittorio-tortugo",
-      "e-h-h"
-    ]
-  },
   "Web/API/Window/afterprint_event": {
     "modified": "2020-10-15T22:06:05.874Z",
     "contributors": ["Khich"]
@@ -16510,6 +16500,16 @@
   "conflicting/Web/API/Crypto/getRandomValues": {
     "modified": "2019-07-04T02:33:27.227Z",
     "contributors": ["freezer278", "Jeremie"]
+  },
+  "conflicting/Web/API/Document/DOMContentLoaded_event": {
+    "modified": "2019-04-30T14:28:01.901Z",
+    "contributors": [
+      "wbamberg",
+      "cashm0ney",
+      "fscholz",
+      "vittorio-tortugo",
+      "e-h-h"
+    ]
   },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-06-25T10:49:54.010Z",

@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent.initAnimationEvent()
 slug: conflicting/Web/API/AnimationEvent/AnimationEvent
-original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
 
 {{non-standard_header}}{{ apiref("Web Animations API") }}

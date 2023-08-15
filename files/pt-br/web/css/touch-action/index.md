@@ -90,11 +90,11 @@ html {
 
 ## Specifications
 
-| Specification                                                                                                | Status                                   | Comment                                                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                     | {{Spec2('Compat')}}                 | Added `pinch-zoom` property value.                                   |
+| Specification                                                                      | Status                        | Comment                                                              |
+| ---------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------- |
+| {{SpecName('Compat', '#touch-action', 'touch-action')}}                            | {{Spec2('Compat')}}           | Added `pinch-zoom` property value.                                   |
 | {{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events 2')}} | Added `pan-left`, `pan-right`, `pan-up`, `pan-down` property values. |
-| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events')}}     | Initial definition                                                   |
+| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}   | {{Spec2('Pointer Events')}}   | Initial definition                                                   |
 
 ## Compatibilidade com navegadores
 

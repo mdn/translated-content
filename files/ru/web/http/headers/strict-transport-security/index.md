@@ -2,6 +2,7 @@
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `Strict-Transport-Security`** - заголовок ответа (часто используется аббревиатура {{Glossary("HSTS")}}), позволяющий web-сайтам уведомить браузер о том, что доступ к ним должен быть осуществлён только посредством HTTPS вместо HTTP.
@@ -75,8 +76,8 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Specifications
 
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
+| Specification        | Status            | Comment            |
+| -------------------- | ----------------- | ------------------ |
 | {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | Initial definition |
 
 ## Browser compatibility

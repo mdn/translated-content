@@ -58,7 +58,7 @@ border-image-repeat: unset;
   padding: 1rem;
   border: 40px solid;
   border-image: url("border.png") 27;
-  border-image-repeat: stretch;  /* 라이브 샘플에서 바꿀 수 있습니다 */
+  border-image-repeat: stretch; /* 라이브 샘플에서 바꿀 수 있습니다 */
 }
 ```
 
@@ -78,7 +78,8 @@ border-image-repeat: unset;
 ```js hidden
 var repetition = document.getElementById("repetition");
 repetition.addEventListener("change", function (evt) {
-  document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
+  document.getElementById("bordered").style.borderImageRepeat =
+    evt.target.value;
 });
 ```
 

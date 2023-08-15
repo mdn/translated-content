@@ -37,11 +37,11 @@ O exemplos a seguir mostram o uso de `propertyIsEnumerable` em um objeto e um ar
 ```js
 var o = {};
 var a = [];
-o.prop = 'is enumerable';
-a[0] = 'is enumerable';
+o.prop = "is enumerable";
+a[0] = "is enumerable";
 
-o.propertyIsEnumerable('prop');   // returns true
-a.propertyIsEnumerable(0);        // returns true
+o.propertyIsEnumerable("prop"); // returns true
+a.propertyIsEnumerable(0); // returns true
 ```
 
 ### Objetos User-defined vs. built-in
@@ -49,57 +49,59 @@ a.propertyIsEnumerable(0);        // returns true
 Os exemplos a seguir demostram a enumerabilidade da propriedade user-defined vs. built-in :
 
 ```js
-var a = ['is enumerable'];
+var a = ["is enumerable"];
 
-a.propertyIsEnumerable(0);          // returns true
-a.propertyIsEnumerable('length');   // returns false
+a.propertyIsEnumerable(0); // returns true
+a.propertyIsEnumerable("length"); // returns false
 
-Math.propertyIsEnumerable('random');   // returns false
-this.propertyIsEnumerable('Math');     // returns false
+Math.propertyIsEnumerable("random"); // returns false
+this.propertyIsEnumerable("Math"); // returns false
 ```
 
 ### Propriedade Direct vs. inherited
 
 ```js
 var a = [];
-a.propertyIsEnumerable('constructor');         // returns false
+a.propertyIsEnumerable("constructor"); // returns false
 
 function firstConstructor() {
-  this.property = 'is not enumerable';
+  this.property = "is not enumerable";
 }
 
-firstConstructor.prototype.firstMethod = function() {};
+firstConstructor.prototype.firstMethod = function () {};
 
 function secondConstructor() {
-  this.method = function() { return 'is enumerable'; };
+  this.method = function () {
+    return "is enumerable";
+  };
 }
 
-secondConstructor.prototype = new firstConstructor;
+secondConstructor.prototype = new firstConstructor();
 secondConstructor.prototype.constructor = secondConstructor;
 
 var o = new secondConstructor();
-o.arbitraryProperty = 'is enumerable';
+o.arbitraryProperty = "is enumerable";
 
-o.propertyIsEnumerable('arbitraryProperty');   // returns true
-o.propertyIsEnumerable('method');              // returns true
-o.propertyIsEnumerable('property');            // returns false
+o.propertyIsEnumerable("arbitraryProperty"); // returns true
+o.propertyIsEnumerable("method"); // returns true
+o.propertyIsEnumerable("property"); // returns false
 
-o.property = 'is enumerable';
+o.property = "is enumerable";
 
-o.propertyIsEnumerable('property');            // returns true
+o.propertyIsEnumerable("property"); // returns true
 
 // These return false as they are on the prototype which
 // propertyIsEnumerable does not consider (even though the last two
 // are iteratable with for-in)
-o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
-o.propertyIsEnumerable('constructor'); // returns false
-o.propertyIsEnumerable('firstMethod'); // returns false
+o.propertyIsEnumerable("prototype"); // returns false (as of JS 1.8.1/FF3.6)
+o.propertyIsEnumerable("constructor"); // returns false
+o.propertyIsEnumerable("firstMethod"); // returns false
 ```
 
 ## Especificações
 
-| Specification                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Specification                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} |
 
 ## Compatibilidade com navegadores

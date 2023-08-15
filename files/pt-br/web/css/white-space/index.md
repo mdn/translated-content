@@ -60,10 +60,10 @@ code {
 
 ## Especificações
 
-| Especificação                                                                            | Estado                       | Comentário                                   |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Aumenta a precisão dos algoritmos de quebra. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Especificação inicial.                       |
+| Especificação                                                       | Estado                 | Comentário                                   |
+| ------------------------------------------------------------------- | ---------------------- | -------------------------------------------- |
+| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}    | {{Spec2('CSS3 Text')}} | Aumenta a precisão dos algoritmos de quebra. |
+| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}    | Especificação inicial.                       |
 
 ## Compatibilidade de Navegadores
 
@@ -74,8 +74,8 @@ O código a seguir permite quebras de linhas dentro de elementos pre:
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
+  word-wrap: break-word; /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  white-space: pre-wrap;      /* current browsers */
+  white-space: pre-wrap; /* current browsers */
 }
 ```

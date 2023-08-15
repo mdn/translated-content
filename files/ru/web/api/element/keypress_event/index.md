@@ -240,22 +240,19 @@ Chrome не запускает событие `keypress` для известны
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
+  <head>
+    <script>
+      "use strict";
 
-'use strict';
+      document.addEventListener("keypress", (event) => {
+        const keyName = event.key;
 
-document.addEventListener('keypress', (event) => {
-  const keyName = event.key;
-
-  alert('keypress event\n\n' + 'key: ' + keyName);
-});
-
-</script>
-</head>
-<body>
-</body>
+        alert("keypress event\n\n" + "key: " + keyName);
+      });
+    </script>
+  </head>
+  <body></body>
 </html>
 ```

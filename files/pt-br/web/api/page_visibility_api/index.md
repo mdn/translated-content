@@ -30,7 +30,8 @@ O exemplo, que pausa o video quando você troca para outra aba e volta a reprodu
 ```js
 // Configura o nome da propriedade hidden e o evento de mudança para visibilidade
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Suporte para Opera 12.10 e Firefox 18 em diante
+if (typeof document.hidden !== "undefined") {
+  // Suporte para Opera 12.10 e Firefox 18 em diante
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.mozHidden !== "undefined") {
@@ -57,34 +58,54 @@ function handleVisibilityChange() {
 }
 
 // Alerta se o navegador não suporta addEventListener ou a API de visibilidade da página
-if (typeof document.addEventListener === "undefined" ||
-  typeof document[hidden] === "undefined") {
-  alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+if (
+  typeof document.addEventListener === "undefined" ||
+  typeof document[hidden] === "undefined"
+) {
+  alert(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Manipula o evento de mudança da visibilidade da página
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // Reverte para o favicon existente para o site quando a página é fechada;
   // caso contrário, o favicon continua como paused.png
-  window.addEventListener("unload", function(){
-    favicon.change("/favicon.ico");
-  }, false);
+  window.addEventListener(
+    "unload",
+    function () {
+      favicon.change("/favicon.ico");
+    },
+    false,
+  );
 
   // Quando o video é pausado, configura o favicon.
   // Isso mostra a imagem paused.png
-  videoElement.addEventListener("pause", function(){
-    favicon.change("images/paused.png");
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      favicon.change("images/paused.png");
+    },
+    false,
+  );
 
   // Quando o video é reproduzido, configura o favicon.
-  videoElement.addEventListener("play", function(){
-    favicon.change("images/playing.png");
-  }, false);
+  videoElement.addEventListener(
+    "play",
+    function () {
+      favicon.change("images/playing.png");
+    },
+    false,
+  );
 
   // Configura o título da aba com o tempo atual do video
-  videoElement.addEventListener("timeupdate", function(){
-    document.title = Math.floor(videoElement.currentTime) + " segundo(s)";
-  }, false);
+  videoElement.addEventListener(
+    "timeupdate",
+    function () {
+      document.title = Math.floor(videoElement.currentTime) + " segundo(s)";
+    },
+    false,
+  );
 }
 ```
 
@@ -108,7 +129,7 @@ Retorna `true` se a página está escondida para o usuário, caso contrário, re
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -122,13 +143,11 @@ Os estados de visibilidade de {{HTMLElement("iframe")}} são os mesmos do docume
 
 ## Especificações
 
-| Especificação                                    | Estado                                       | Comentário |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## Veja também
 

@@ -78,14 +78,14 @@ function setupBigScreenEnvironment() {
 Объявление const создаёт ссылку только для чтения на значение. Это не означает, что значение, которое он содержит, является неизменяемым, просто идентификатор переменной не может быть переназначен. Например, если содержимое является объектом, это означает, что сам объект все ещё может быть изменён. Это означает, что нельзя изменить значение, хранящееся в переменной:
 
 ```js example-bad
-const obj = {foo: 'bar'};
-obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
+const obj = { foo: "bar" };
+obj = { foo: "baz" }; // TypeError: invalid assignment to const `obj'
 ```
 
 Но можно изменить свойства в переменной:
 
 ```js example-good
-obj.foo = 'baz';
+obj.foo = "baz";
 obj; // Object { foo: "baz" }
 ```
 

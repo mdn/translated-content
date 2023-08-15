@@ -32,10 +32,10 @@ delete(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.delete('bar')); // true를 반환합니다. 성공적으로 제거되었습니다.
-console.log(myMap.has('bar')); // false를 반환합니다. "bar" 요소는 더 이상 존재하지 않습니다.
+console.log(myMap.delete("bar")); // true를 반환합니다. 성공적으로 제거되었습니다.
+console.log(myMap.has("bar")); // false를 반환합니다. "bar" 요소는 더 이상 존재하지 않습니다.
 ```
 
 ## 명세서

@@ -1,63 +1,48 @@
 ---
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
+l10n:
+  sourceCommit: d91af249c51c398ee7c0f0280e6ae5b22f6478e5
 ---
 
 {{JSRef}}
 
-**`trim()`** メソッドは、文字列の両端の空白を削除します。このコンテクストでの空白には、空白文字（スペースやタブ、ノーブレークスペースなど）とすべての改行文字（LF や CR など）を含みます。
+**`trim()`** メソッドは、文字列の両端からホワイトスペースを取り除き、元の文字列を変更せずに新しい文字列を返す。
+
+一方の端からのみホワイトスペースを取り除いた新しい文字列を返したい場合は、{{jsxref("String.prototype.trimStart()", "trimStart()")}} または {{jsxref("String.prototype.trimEnd()", "trimEnd()")}} を使用してください。
 
 {{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
 ## 構文
 
+```js-nolint
+trim()
 ```
-str.trim()
-```
 
-### 戻り値
+### 返値
 
-呼び出し元の文字列の両端から空白を取り除いた新しい文字列です。
+`str` の先頭と末尾のホワイトスペースを取り除いた新しい文字列を表します。 ホワイトスペースは[ホワイトスペース](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ホワイトスペース)文字と[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)で定義します。
 
-## 説明
-
-`trim()` メソッドは両端の空白を取り除いた文字列を返します。`trim()` はその文字列自身の値には影響を与えません（非破壊メソッド）。
-
-## Polyfill
-
-ネイティブで使用できない場合、他のコードの前に次のコードを実行することにより `String.trim()` が使用可能になります。
-
-```js
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
-  };
-}
-```
+`str` の先頭にも末尾にもホワイトスペースがなかった場合でも、新しい文字列が返されます（基本的には `str` のコピー）。
 
 ## 例
 
-### `trim()` を使う
+### trim() の使用
 
-以下の例は小文字の文字列 `'foo'` を表示します。
+次の例は、`str` の両端からホワイトペースを取り除きます。
 
-```js
-var orig = '   foo  ';
-console.log(orig.trim()); // 'foo'
-
-// 片方からだけ空白を取り除く .trim() の例。
-
-var orig = 'foo    ';
-console.log(orig.trim()); // 'foo'
+```js-nolint
+const str = "   foo  ";
+console.log(str.trim()); // 'foo'
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.trim")}}
+{{Compat}}
 
 ## 関連情報
 

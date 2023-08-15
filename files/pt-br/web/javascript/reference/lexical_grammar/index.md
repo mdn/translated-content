@@ -353,7 +353,7 @@ Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_li
 
 `texto ${expressão} texto`;
 
-tag `texto ${expressão} texto`;
+tag`texto ${expressão} texto`;
 ```
 
 ## Inserção automática de ponto e vírgula

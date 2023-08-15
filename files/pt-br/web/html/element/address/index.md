@@ -32,27 +32,30 @@ Este elemento inclui somente os [atributos globais](/pt-BR/docs/HTML/Global_attr
 ## Exemplo
 
 ```html
-  <address>
-    Voce pode contatar o autor em <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br>
-    Se encontrar qualquer bug, por favor <a href="mailto:webmaster@somedomain.com">contate o administrador do site</a>.<br>
-    Você tambem pode querer nos visitar:<br>
-    Mozilla Foundation<br>
-    1981 Landings Drive<br>
-    Building K<br>
-    Mountain View, CA 94043-0801<br>
-    USA
-  </address>
+<address>
+  Voce pode contatar o autor em
+  <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.<br />
+  Se encontrar qualquer bug, por favor
+  <a href="mailto:webmaster@somedomain.com">contate o administrador do site</a
+  >.<br />
+  Você tambem pode querer nos visitar:<br />
+  Mozilla Foundation<br />
+  1981 Landings Drive<br />
+  Building K<br />
+  Mountain View, CA 94043-0801<br />
+  USA
+</address>
 ```
 
 Embora o elemento `address` exiba o texto com o mesmo estilo padrão que os elementos {{HTMLElement("i")}} ou {{HTMLElement("em")}}, ele é mais apropriado de ser usado quando se lida com informação de contato, já que ele fornece informação semântica adicional.
 
 ## Especificações
 
-| Especificação                                                                                                    | Estado                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                                       | Estado                   | Comentário |
+| ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'sections.html#the-address-element', '&lt;address&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'sections.html#the-address-element', '&lt;address&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}           | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

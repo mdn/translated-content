@@ -145,9 +145,9 @@ screen.addEventListener("orientationchange", function () {
 screen.lockOrientation("landscape");
 ```
 
-> **참고:** **Note:** 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
+> **참고:** 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
 
-## See also
+## 같이 보기
 
 - {{domxref("window.screen.orientation","screen.orientation")}}
 - {{domxref("window.screen.lockOrientation()","screen.lockOrientation()")}}

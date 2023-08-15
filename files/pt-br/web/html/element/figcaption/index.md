@@ -46,10 +46,10 @@ Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exempl
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+| Especificação                                                                                   | Status                   | Comentário |
+| ----------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-figcaption-element', '&lt;figcaption&gt;')}}      | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
 
 ## Compatibilidade com navegadores
 

@@ -55,20 +55,10 @@ _The `Performance` interface doesn't inherit any method_.
 - {{domxref("Performance.toJSON()")}}
   - : Is a jsonizer returning a json object representing the `Performance` object.
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                                                        | Status                                                   | Comment                                                                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON()')}}                                                             | {{Spec2('Highres Time Level 2')}}             | Defines `toJson()` method.                                                                                                  |
-| {{SpecName('Highres Time', '#the-performance-interface', 'Performance')}}                                                                     | {{Spec2('Highres Time')}}                         | Defines `now()` method.                                                                                                     |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance')}}                                                     | {{Spec2('Navigation Timing')}}                 | Defines `timing` and `navigation` properties.                                                                               |
-| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface', 'Performance extensions')}}             | {{Spec2('Performance Timeline Level 2')}} | Changes `getEntries()` interface.                                                                                           |
-| {{SpecName('Performance Timeline', '#sec-window.performance-attribute', 'Performance extensions')}}                                 | {{Spec2('Performance Timeline')}}             | Defines `getEntries()`, `getEntriesByType()` and `getEntriesByName()` methods.                                              |
-| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                                         | {{Spec2('Resource Timing')}}                     | Defines `clearResourceTimings()` and `setResourceTimingBufferSize()` methods and the `onresourcetimingbufferfull` property. |
-| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing Level 2')}}             | Clarifies `mark()`, `clearMark()`, `measure()` and `clearMeasure()` methods.                                                |
-| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                             | {{Spec2('User Timing')}}                         | Defines `mark()`, `clearMark()`, `measure()` and `clearMeasure()` methods.                                                  |
-| {{SpecName('Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Defines `clearFrameTimings()`, `setFrameTimingBufferSize()`, and `onframetimingbufferfull` methods.                         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Performance")}}
+{{Compat}}

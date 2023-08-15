@@ -31,11 +31,11 @@ Uma {{jsxref("String")}} de comprimento específico com uma string de preenchime
 ### Exemplos básicos
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
-'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
 ```
 
 ## Polyfill
@@ -46,28 +46,28 @@ Ao executar o seguinte código antes de qualquer outro código é criado o méto
 // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 if (!String.prototype.padStart) {
-    String.prototype.padStart = function padStart(targetLength, padString) {
-        targetLength = targetLength >> 0; //truncate if number, or convert non-number to 0;
-        padString = String(typeof padString !== 'undefined' ? padString : ' ');
-        if (this.length >= targetLength) {
-            return String(this);
-        } else {
-            targetLength = targetLength - this.length;
-            if (targetLength > padString.length) {
-                padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
-            }
-            return padString.slice(0, targetLength) + String(this);
-        }
-    };
+  String.prototype.padStart = function padStart(targetLength, padString) {
+    targetLength = targetLength >> 0; //truncate if number, or convert non-number to 0;
+    padString = String(typeof padString !== "undefined" ? padString : " ");
+    if (this.length >= targetLength) {
+      return String(this);
+    } else {
+      targetLength = targetLength - this.length;
+      if (targetLength > padString.length) {
+        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+      }
+      return padString.slice(0, targetLength) + String(this);
+    }
+  };
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário                               |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------- |
+| Especificação                                                                          | Status               | Comentário                               |
+| -------------------------------------------------------------------------------------- | -------------------- | ---------------------------------------- |
 | {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} | {{Spec2('ESDraft')}} | Implementação inical no ECMAScript 2017. |
-| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}         | {{Spec2('ES8')}}         |                                          |
+| {{SpecName('ES8', '#sec-string.prototype.padstart', 'String.prototype.padStart')}}     | {{Spec2('ES8')}}     |                                          |
 
 ## Compatibilidade com navegadores
 

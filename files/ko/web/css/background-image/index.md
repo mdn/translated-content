@@ -2,6 +2,7 @@
 title: background-image
 slug: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`background-image`** 속성은 요소의 배경 이미지를 한 개나 여러 개 지정합니다.
@@ -23,9 +24,11 @@ slug: Web/CSS/background-image
 여러 개의 배경 이미지를 지정하려면 쉼표로 구분한 다수의 값을 지정하세요.
 
 ```css
-background-image:
-  linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
-  url('catfront.png');
+background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 0, 0.5),
+    rgba(0, 0, 255, 0.5)
+  ), url("catfront.png");
 ```
 
 ### 값
@@ -60,13 +63,9 @@ background-image:
 
 ```html
 <div>
-  <p class="catsandstars">
-    This paragraph is full of cats<br />and stars.
-  </p>
+  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">
-    Here are more cats for you.<br />Look at them!
-  </p>
+  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -76,20 +75,17 @@ background-image:
 ```css
 p {
   font-size: 1.5em;
-  color: #FE7F88;
+  color: #fe7f88;
   background-image: none;
   background-color: transparent;
 }
 
 div {
-  background-image:
-      url("mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 .catsandstars {
-  background-image:
-      url("startransparent.gif"),
-      url("catfront.png");
+  background-image: url("startransparent.gif"), url("catfront.png");
   background-color: transparent;
 }
 ```

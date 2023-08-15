@@ -10,8 +10,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
 ## 구문
 
 <!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+
 ```js
-generatorObject.throw(exception)
+generatorObject.throw(exception);
 ```
 
 ## 매개변수
@@ -50,7 +51,7 @@ function* gen() {
     try {
       yield 42;
     } catch (e) {
-      console.log('Error caught!');
+      console.log("Error caught!");
     }
   }
 }
@@ -58,7 +59,7 @@ function* gen() {
 const g = gen();
 g.next();
 // { value: 42, done: false }
-g.throw(new Error('Something went wrong'));
+g.throw(new Error("Something went wrong"));
 // "Error caught!"
 // { value: 42, done: false }
 ```
