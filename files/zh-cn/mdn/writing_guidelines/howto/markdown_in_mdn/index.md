@@ -89,16 +89,17 @@ GFM 规范定义了两种基础的链接类型：
   - `yaml`——YAML
   - `toml`——TOML
   - `sql`——SQL 数据库
-  - `diff`——Diff 文件
   - `ignore`——Gitignore 文件
-  - `apacheconf` - Apache 配置文件
+  - `apacheconf` - Apache 配置
+  - `nginx`——NGINX 配置
 - 模板
   - `django`——Django 模板
   - `svelte`——Svelte 模板
   - `handlebars`——Handlebars 模板
-  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用)
+  - `pug`——[Pug 模板](https://pugjs.org/zh-cn/api/getting-started.html)（可以被 [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer) 使用）
 - 其他
   - `plain`——纯文本
+  - `diff`——Diff 文件
   - `http`——HTTP 标头
   - `regex`——正则表达式
   - `uri`——URI 和 URL
@@ -187,63 +188,63 @@ const greeting = "这是一个错误示例";
 #### 备注
 
 ```md
-> **备注：** This is how you write a note.
+> **备注：** 这就是编写备注的方式。
 >
-> It can have multiple lines.
+> 它可以有好几行。
 ```
 
 这将会产生以下 HTML：
 
 ```html
 <div class="notecard note">
-  <p><strong>备注：</strong> This is how you write a note.</p>
-  <p>It can have multiple lines.</p>
+  <p><strong>备注：</strong> 这就是编写备注的方式。</p>
+  <p>它可以有好几行。</p>
 </div>
 ```
 
 此 HTML 将渲染为高亮显示的框，例如：
 
-> **备注：** This is how you write a note.
+> **备注：** 这就是编写备注的方式。
 >
-> It can have multiple lines.
+> 它可以有好几行。
 
 #### 警告
 
 ```md
-> **警告：** This is how you write a warning.
+> **警告：** 这就是编写警告的方式。
 >
-> It can have multiple paragraphs.
+> 它可以有好几段。
 ```
 
 这将会产生以下 HTML：
 
 ```html
 <div class="notecard warning">
-  <p><strong>警告：</strong> This is how you write a warning.</p>
-  <p>It can have multiple paragraphs.</p>
+  <p><strong>警告：</strong> 这就是编写警告的方式。</p>
+  <p>它可以有好几段。</p>
 </div>
 ```
 
 此 HTML 将渲染为高亮显示的框，例如：
 
-> **警告：** This is how you write a warning.
+> **警告：** 这就是编写警告的方式。
 >
-> It can have multiple paragraphs.
+> 它可以有好几段。
 
 #### 标注
 
 ```md
-> **标注：** **This is how you write a callout.**
+> **标注：** **这就是编写标注的方式。**
 >
-> It can have multiple paragaphs.
+> 它可以有好几段。
 ```
 
 这将会产生以下 HTML：
 
 ```html
 <div class="callout">
-  <p><strong>This is how you write a callout.</strong></p>
-  <p>It can have multiple paragraphs.</p>
+  <p><strong>这就是编写标注的方式。</strong></p>
+  <p>它可以有好几段。</p>
 </div>
 ```
 
@@ -251,15 +252,15 @@ const greeting = "这是一个错误示例";
 
 > **标注：**
 >
-> **This is how you write a callout.**
+> **这就是编写标注的方式。**
 >
-> It can have multiple paragraphs.
+> 它可以有好几段。
 
 #### 警告的翻译
 
 因为文本“**备注：**”或“**警告：**”也会出现在渲染的输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须识别到它们表明了这些结构需要特殊处理。
 
-这些本地化内容以 JSON 文件的 [gettext](https://www.gnu.org/software/gettext/) 格式存储在 [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) 中。请参考这些文件以确定应使用什么字符串来表示特定语言环境的“备注：”和“警告：”。如果未定义区域设置文件，将自动回退到英文版本。
+这些本地化内容以 [gettext](https://www.gnu.org/software/gettext/) 格式存储在 [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) 的 JSON 文件中。请参考这些文件以确定应使用什么字符串来表示特定语言环境的“备注：”和“警告：”。如果未定义区域设置文件，将自动回退到英文版本。
 
 例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
 
