@@ -58,7 +58,7 @@ RegExp(pattern, flags)
 `RegExp(pattern)` は以下のすべてに該当すると、`pattern` を直接返します。
 
 - `RegExp()` が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) なしで呼び出された
-- [`pattern` が正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)
+- [`pattern` が正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正規表現の特殊な扱い)
 - `pattern.constructor === RegExp` （ふつうはサブクラスではないという意味）
 - `flags` が `undefined` である
 
