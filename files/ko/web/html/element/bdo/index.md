@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: 양방향 텍스트 재정의 요소'
+title: "<bdo>: 양방향 텍스트 재정의 요소"
 slug: Web/HTML/Element/bdo
 ---
 

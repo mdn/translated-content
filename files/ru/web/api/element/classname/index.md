@@ -1,7 +1,6 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
-translation_of: Web/API/Element/className
 ---
 
 {{APIRef("DOM")}}

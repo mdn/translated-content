@@ -1,8 +1,8 @@
 ---
 title: gamepadconnected
 slug: Web/API/Window/gamepadconnected_event
-translation_of: Web/API/Window/gamepadconnected_event
 ---
+
 Событие `gamepadconnected` вызывается, когда браузер обнаруживает подключение геймпада или первое использование кнопки/стика.
 
 ## Основная информация
@@ -22,23 +22,21 @@ translation_of: Web/API/Window/gamepadconnected_event
 
 ## Свойства
 
-| Свойство                              | Тип                                  | Описание                                                                          |
-| ------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
+| Свойство                        | Тип                        | Описание                                                                          |
+| ------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (самый верхний элемент DOM дерева).                                  |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Тип события.                                                                      |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Является ли событие всплывающим.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Является ли событие отменяемым.                                                   |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}         | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                                                      |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Является ли событие всплывающим.                                                  |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Является ли событие отменяемым.                                                   |
+| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |
 
 ## Пример
 
 ```js
 // Обратите внимание, что API всё ещё использует вендорные префиксы в браузерах, которые его реализуют
-window.addEventListener("gamepadconnected", function( event ) {
-
-    // Все значения кнопок и стиков доступны через:
-    event.gamepad;
-
+window.addEventListener("gamepadconnected", function (event) {
+  // Все значения кнопок и стиков доступны через:
+  event.gamepad;
 });
 ```
 

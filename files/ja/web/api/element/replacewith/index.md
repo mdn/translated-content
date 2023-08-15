@@ -2,7 +2,6 @@
 title: "Element: replaceWith() メソッド"
 short-title: replaceWith()
 slug: Web/API/Element/replaceWith
-original_slug: Web/API/ChildNode/replaceWith
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
@@ -54,7 +53,7 @@ console.log(div.outerHTML);
 `replaceWith()` メソッドは `with` 文でのスコープに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。
 
 ```js
-with(node) {
+with (node) {
   replaceWith("foo");
 }
 // ReferenceError: replaceWith is not defined

@@ -62,7 +62,7 @@ const getFileStream = async (url) => {
 
 ### 模块模式
 
-我们也可以使用 IIFE 来创建私有和公有变量、方法。对于模块模式的更复杂用法和 IIFE 的其他用途，你可以参考 Addy Osmani 的 《Learning JavaScript Design Patterns》这本书。
+我们也可以使用 IIFE 来创建私有和公有变量、方法。对于模块模式的更复杂用法和 IIFE 的其他用途，你可以参考 Addy Osmani 的《Learning JavaScript Design Patterns》这本书。
 
 ```js
 const makeWithdraw = (balance) => {

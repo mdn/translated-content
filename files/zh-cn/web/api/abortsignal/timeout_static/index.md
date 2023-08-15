@@ -1,7 +1,6 @@
 ---
 title: AbortSignal.timeout()
 slug: Web/API/AbortSignal/timeout_static
-original_slug: Web/API/AbortSignal/timeout
 ---
 
 {{APIRef("DOM")}}

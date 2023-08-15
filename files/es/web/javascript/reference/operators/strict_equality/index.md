@@ -1,7 +1,6 @@
 ---
 title: Igualdad Estricta (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
 
 {{jsSidebar("Operators")}}
@@ -37,41 +36,41 @@ La diferencia más notable entre este operador y el operador de [igualdad](/es/d
 ### Comparando operandos del mismo tipo
 
 ```js
-console.log("hello" === "hello");   // true
-console.log("hello" === "hola");    // false
+console.log("hello" === "hello"); // true
+console.log("hello" === "hola"); // false
 
-console.log(3 === 3);               // true
-console.log(3 === 4);               // false
+console.log(3 === 3); // true
+console.log(3 === 4); // false
 
-console.log(true === true);         // true
-console.log(true === false);        // false
+console.log(true === true); // true
+console.log(true === false); // false
 
-console.log(null === null);         // true
+console.log(null === null); // true
 ```
 
 ### Comparando operandos de distinto tipo
 
 ```js
-console.log("3" === 3);           // false
+console.log("3" === 3); // false
 
-console.log(true === 1);          // false
+console.log(true === 1); // false
 
-console.log(null === undefined);  // false
+console.log(null === undefined); // false
 ```
 
 ### Comparando objetos
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
 const object2 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
-console.log(object1 === object2);  // false
-console.log(object1 === object1);  // true
+console.log(object1 === object2); // false
+console.log(object1 === object1); // true
 ```
 
 ## Especificaciones

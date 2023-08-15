@@ -1,7 +1,6 @@
 ---
 title: Gestion de la concurrence et boucle des événements
 slug: Web/JavaScript/Event_loop
-translation_of: Web/JavaScript/EventLoop
 ---
 
 {{jsSidebar("Advanced")}}

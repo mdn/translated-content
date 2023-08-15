@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/pop
 ---
 
 {{JSRef}}
@@ -35,7 +34,7 @@ Si se llama a `pop()` en un array vacío, devuelve {{jsxref("undefined")}}.
 El siguiente código crea el array `myFish`, que contiene cuatro elementos, a continuación, elimina su último elemento.
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 

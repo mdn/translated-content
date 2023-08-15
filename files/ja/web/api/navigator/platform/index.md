@@ -1,7 +1,6 @@
 ---
 title: Navigator.platform
 slug: Web/API/Navigator/platform
-original_slug: Web/API/NavigatorID/platform
 ---
 
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}

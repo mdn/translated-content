@@ -1,7 +1,6 @@
 ---
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
-translation_of: Web/CSS/transform-function/scaleY()
 ---
 
 {{CSSRef}}

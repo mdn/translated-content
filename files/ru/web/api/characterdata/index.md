@@ -1,8 +1,8 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-translation_of: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 Абстрактный интерфейс **`CharacterData`** представляет собой объект {{domxref("Node")}}, который содержит символы. "Абстрактность" интерфейса означает то, что не существует объектов типа `CharacterData`: интерфейс **`CharacterData`** реализуется посредством других интерфейсов, таких как {{domxref("Text")}}, {{domxref("Comment")}}, или {{domxref("ProcessingInstruction")}}, которые не являются абстрактными.
@@ -41,12 +41,7 @@ _Наследует свойства родителя, {{domxref("Node")}}, ре
 
 ## Спецификации
 
-| Specification                                                                                    | Status                           | Comment                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#characterdata', 'CharacterData')}}                 | {{Spec2('DOM WHATWG')}} | Added implemention of the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}} interface. |
-| {{SpecName('DOM3 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM3 Core')}}     | Без изменений по сравнению с {{SpecName('DOM2 Core')}}.                                                                 |
-| {{SpecName('DOM2 Core', 'core.html#ID-FF21A306', 'CharacterData')}}         | {{Spec2('DOM2 Core')}}     | No change from {{SpecName('DOM1')}}.                                                                                   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-FF21A306', 'CharacterData')}} | {{Spec2('DOM1')}}         | Initial definition.                                                                                                            |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

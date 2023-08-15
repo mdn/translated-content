@@ -979,8 +979,9 @@ A cor da linha (uma div preenchida com cor) se adapta à cor de sua propriedade 
 
 ```html
 <div style="color:darkred">
-A cor deste texto é a mesma da linha:  <div style="background:currentcolor; height:1px"></div>
- Mais algum texto.
+  A cor deste texto é a mesma da linha:
+  <div style="background:currentcolor; height:1px"></div>
+  Mais algum texto.
 </div>
 ```
 
@@ -990,8 +991,9 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 ```html
 <div style="color:blue; border-bottom: 1px dashed currentcolor;">
-A cor deste texto é a mesma da linha:  <div style="background:currentcolor; height:1px"></div>
- Mais algum texto.
+  A cor deste texto é a mesma da linha:
+  <div style="background:currentcolor; height:1px"></div>
+  Mais algum texto.
 </div>
 ```
 
@@ -1291,12 +1293,12 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
 ## Specificações
 
-| Specificação                                                                                     | Estado                           | Comentário                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Added `rebeccapurple`, four- (`#RGBA`) and eight-digit (`#RRGGBBAA`) hexadecimal notations, `rgba()` and `hsla()` as aliases of `rgb()` and `hsl()` (both with identical parameter syntax), space-separated function parameters rather than commas, percentages for alpha values, and angles for the hue component in `hsl()` colors. |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Deprecated system-colors; added SVG colors; added `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                                    |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Added the `orange` color and the system-colors.                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                   |
+| Specificação                                                            | Estado                   | Comentário                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS4 Colors')}} | Added `rebeccapurple`, four- (`#RGBA`) and eight-digit (`#RRGGBBAA`) hexadecimal notations, `rgba()` and `hsla()` as aliases of `rgb()` and `hsl()` (both with identical parameter syntax), space-separated function parameters rather than commas, percentages for alpha values, and angles for the hue component in `hsl()` colors. |
+| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}             | {{Spec2('CSS3 Colors')}} | Deprecated system-colors; added SVG colors; added `rgba()`, `hsl()`, `hsla()` functional notation.                                                                                                                                                                                                                                    |
+| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}      | Added the `orange` color and the system-colors.                                                                                                                                                                                                                                                                                       |
+| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                   | {{Spec2('CSS1')}}        | Initial definition.                                                                                                                                                                                                                                                                                                                   |
 
 ## Compatibilidade com navegadores
 

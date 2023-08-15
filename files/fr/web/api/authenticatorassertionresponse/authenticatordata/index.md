@@ -1,7 +1,6 @@
 ---
 title: AuthenticatorAssertionResponse.authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
-translation_of: Web/API/AuthenticatorAssertionResponse/authenticatorData
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}

@@ -21,7 +21,7 @@ l10n:
 
 ## 例
 
-コード例については [`VRFieldOfView`](/en-US/docs/Web/API/VRFieldOfView#例) を参照してください。
+コード例については [`VRFieldOfView`](/ja/docs/Web/API/VRFieldOfView#例) を参照してください。
 
 ## 仕様書
 

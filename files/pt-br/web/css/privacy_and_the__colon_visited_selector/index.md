@@ -1,7 +1,6 @@
 ---
 title: Privacidade e o seletor :visited
 slug: Web/CSS/Privacy_and_the_:visited_selector
-original_slug: Web/CSS/Privacidade_e_o_seletor_:visited
 ---
 
 {{cssref}}
@@ -43,9 +42,9 @@ Aqui está um exemplo de como estilizar com as restrições acima mencionadas:
 }
 
 :visited {
-  outline-color: orange;    /* Links visitados tem contornos laranja */
-  background-color: green;  /* Links visitados tem um fundo verde */
-  color: yellow;            /* Links visitados tem texto amarelo */
+  outline-color: orange; /* Links visitados tem contornos laranja */
+  background-color: green; /* Links visitados tem um fundo verde */
+  color: yellow; /* Links visitados tem texto amarelo */
 }
 ```
 

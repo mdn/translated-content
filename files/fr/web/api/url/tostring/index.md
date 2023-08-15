@@ -1,7 +1,6 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
-translation_of: Web/API/URL/toString
 ---
 
 {{ApiRef("URL API")}}

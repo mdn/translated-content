@@ -25,11 +25,9 @@
     "single-title": {
       "front_matter_title": "^\\s*title\\s*[:=]"
     },
-    "no-trailing-punctuation": false,
-    // XXX Replace with the following when ready:
-    // "no-trailing-punctuation": {
-    //   "punctuation": ".,;:"
-    // },
+    "no-trailing-punctuation": {
+      "punctuation": ".,;:"
+    },
     // Consecutive Notes/Callouts currently don't conform with this rule
     "no-blanks-blockquote": false,
     // Force ordered numbering to catch accidental list ending from indenting
@@ -145,8 +143,8 @@
     "search-replace": {
       "rules": [
         // XXX Many instances still found in translated content
-        // XXX Need to disable this for zh-cn due to grammatical accuracy
         // {
+        //   // Does not apply to zh-cn
         //   "name": "curly-double-quotes",
         //   "message": "Don't use curly double quotes",
         //   "searchPattern": "/“|”/g",
@@ -154,6 +152,7 @@
         //   "searchScope": "text"
         // },
         // {
+        //   // Does not apply to zh-cn
         //   "name": "curly-single-quotes",
         //   "message": "Don't use curly single quotes",
         //   "searchPattern": "/‘|’/g",
@@ -167,10 +166,10 @@
           "replace": " ",
           "searchScope": "all"
         },
-        // XXX zh-cn/zh-tw prefers em-dash instead
         {
-          "name": "m-dash",
-          "message": "Don't use '--'. Use m-dash — instead",
+          // zh-cn/zh-tw prefers double em-dash instead
+          "name": "em-dash",
+          "message": "Don't use '--'. Use em-dash (—) instead",
           "search": " -- ",
           "replace": " — ",
           "searchScope": "text"

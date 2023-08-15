@@ -127,12 +127,12 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## Specifications
 
-| Specification                                                                                                | Status                                       | Comments                      |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}             | Adds the module type          |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}                 | {{Spec2('HTML5 W3C')}}                 |                               |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}         | {{Spec2('HTML4.01')}}                 |                               |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}     | {{Spec2('Subresource Integrity')}} | Adds the integrity attribute. |
+| Specification                                                                      | Status                             | Comments                      |
+| ---------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}           | Adds the module type          |
+| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}             | {{Spec2('HTML5 W3C')}}             |                               |
+| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}       | {{Spec2('HTML4.01')}}              |                               |
+| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}      | {{Spec2('Subresource Integrity')}} | Adds the integrity attribute. |
 
 ## Compatibilidade com navegadores
 

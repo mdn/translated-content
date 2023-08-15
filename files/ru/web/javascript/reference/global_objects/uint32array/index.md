@@ -1,8 +1,8 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
+
 {{JSRef}}
 
 Объект **`Uint32Array`** представляет типизированный массив 32-битных целых беззнаковых чисел с платформо-зависимым порядком байт. Если необходим контроль за порядком байт, то вместо этого объекта используйте [`DataView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView). Содержимое инициализируется значением `0`. Создав экземпляр **`Uint32Array`**, можно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации).
@@ -124,7 +124,7 @@ console.log(uint32.length); // 2
 console.log(uint32.BYTES_PER_ELEMENT); // 4
 
 // From an array
-var arr = new Uint32Array([21,31]);
+var arr = new Uint32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -137,17 +137,19 @@ var buffer = new ArrayBuffer(16);
 var z = new Uint32Array(buffer, 0, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uint32 = new Uint32Array(iterable);
 // Uint32Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment                                                                                                                         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                  |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                       |
+| Specification                                                   | Status                   | Comment                                                                                                                         |
+| --------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                  |
+| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                       |
 | {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Uint32Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
 
 ## Browser compatibility

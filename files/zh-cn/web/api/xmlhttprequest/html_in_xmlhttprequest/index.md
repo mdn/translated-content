@@ -55,7 +55,7 @@ function HTMLinXHR() {
 
 ### 方法 2
 
-在 {{domxref("XMLHttpRequest")}} 中准确检测一个浏览器是否支持 HTML 解析有两个挑战。首先，检测结果是以异步方式获得的，因为只有在异步模式下才有 HTML 支持。其次，你必须通过 HTTP 实际获取一个测试文档，因为用 `data:` URL进行测试，最终会同时测试 `data:` URL支持。
+在 {{domxref("XMLHttpRequest")}} 中准确检测一个浏览器是否支持 HTML 解析有两个挑战。首先，检测结果是以异步方式获得的，因为只有在异步模式下才有 HTML 支持。其次，你必须通过 HTTP 实际获取一个测试文档，因为用 `data:` URL 进行测试，最终会同时测试 `data:` URL 支持。
 
 因此，为了检测 HTML 支持，服务器上需要一个测试 HTML 文件。这个测试文件很小，其 XML 格式不是很完整：
 

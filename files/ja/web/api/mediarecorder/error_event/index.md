@@ -1,5 +1,5 @@
 ---
-title: 'MediaRecorder: error イベント'
+title: "MediaRecorder: error イベント"
 slug: Web/API/MediaRecorder/error_event
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219

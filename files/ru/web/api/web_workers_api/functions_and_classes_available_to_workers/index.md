@@ -1,7 +1,6 @@
 ---
 title: Функции и классы доступные веб-воркерам
 slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
-translation_of: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 ---
 
 {{DefaultAPISidebar("Web Workers API")}}

@@ -1,7 +1,6 @@
 ---
 title: 프로그레시브 웹 앱 소개
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
-original_slug: Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 ---
 
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}

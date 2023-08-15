@@ -32,13 +32,13 @@ Valores não podem ser alterados para propriedades de dados. As propriedades do 
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Novas propriedades podem ser adicionadas, propriedades existentes podem ser alteradas ou removidas
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 // Tanto o objeto que está sendo passado, bem como o objeto retornado será congelado.
@@ -49,50 +49,48 @@ o === obj; // true
 Object.isFrozen(obj); // === true
 
 // De agora em diante qualquer alteração irá falhar
-obj.foo = 'quux'; // silenciosamente não faz nada.
-obj.quaxxor = 'the friendly duck'; // silenciosamente não adiciona a propriedade
+obj.foo = "quux"; // silenciosamente não faz nada.
+obj.quaxxor = "the friendly duck"; // silenciosamente não adiciona a propriedade
 
 // ...e em modo strict tais tentativas irão lançar TypeErrors
-function fail(){
-  'use strict';
-  obj.foo = 'sparky'; // throws um TypeError
+function fail() {
+  "use strict";
+  obj.foo = "sparky"; // throws um TypeError
   delete obj.quaxxor; // throws um TypeError
-  obj.sparky = 'arf'; // throws um TypeError
+  obj.sparky = "arf"; // throws um TypeError
 }
 
 fail();
 
 // As tentativas de alteração através de Object.defineProperty também irão lançar
-Object.defineProperty(obj, 'ohai', { value: 17 }); // throws um TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // throws um TypeError
+Object.defineProperty(obj, "ohai", { value: 17 }); // throws um TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // throws um TypeError
 ```
 
 O exemplo a seguir mostra que valores do tipo objeto, em um objeto congelado, podem ser alterados (freeze é raso).
 
 ```js
 obj1 = {
-  internal: {}
+  internal: {},
 };
 
 Object.freeze(obj1);
-obj1.internal.a = 'aValue';
+obj1.internal.a = "aValue";
 
-obj1.internal.a // 'aValue'
+obj1.internal.a; // 'aValue'
 
 // Para fazer um obj completamente imutável, congele cada objeto em obj.
 // Para fazer isso, nós usamos essa função.
 function deepFreeze(obj) {
-
   // Recuperar os nomes de propriedade definidos em obj
   var propNames = Object.getOwnPropertyNames(obj);
 
   // Congelar as propriedades antes de congelar-se
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     var prop = obj[name];
 
     // Congele prop se for um objeto
-    if (typeof prop == 'object' && prop !== null)
-      deepFreeze(prop);
+    if (typeof prop == "object" && prop !== null) deepFreeze(prop);
   });
 
   // Congele-se (não faz nada se já estiver congelado)
@@ -100,11 +98,11 @@ function deepFreeze(obj) {
 }
 
 obj2 = {
-  internal: {}
+  internal: {},
 };
 
 deepFreeze(obj2);
-obj2.internal.a = 'anotherValue';
+obj2.internal.a = "anotherValue";
 obj2.internal.a; // undefined
 ```
 
@@ -122,10 +120,10 @@ TypeError: 1 is not an object // ES5 code
 
 ## Especificações
 
-| Especificações                                                                       | Status                       | Comentários                                          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}             | {{Spec2('ES5.1')}}     | Definição inicial. Implementado em JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}         | {{Spec2('ES6')}}         |                                                      |
+| Especificações                                                 | Status               | Comentários                                          |
+| -------------------------------------------------------------- | -------------------- | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}        | {{Spec2('ES5.1')}}   | Definição inicial. Implementado em JavaScript 1.8.5. |
+| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}     | {{Spec2('ES6')}}     |                                                      |
 | {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilidade com navegadores

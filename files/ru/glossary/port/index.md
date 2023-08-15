@@ -1,14 +1,6 @@
 ---
 title: Порт
 slug: Glossary/Port
-tags:
-  - Glossary
-  - Intro
-  - Security
-  - computer network
-  - port
-translation_of: Glossary/Port
-original_slug: Глоссарий/Порт
 ---
 
 Для подключённого к сети компьютера с {{Glossary("IP address")}}, **порт** – это конечная точка входа для коммуникаций. Порты обозначаются числами, и до 1024 каждому порту по умолчанию назначен некоторый протокол.

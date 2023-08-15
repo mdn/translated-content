@@ -75,7 +75,7 @@ function error() {
 const options = {
   enableHighAccuracy: true,
   maximumAge: 30000,
-  timeout: 27000
+  timeout: 27000,
 };
 
 const watchID = navigator.geolocation.watchPosition(success, error, options);
@@ -91,7 +91,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 ```js
 function success(position) {
-  const latitude  = position.coords.latitude;
+  const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
   // 위도와 경도를 사용해 작업 수행
@@ -109,7 +109,7 @@ function success(position) {
 ```js
 function errorCallback(error) {
   alert(`ERROR(${error.code}): ${error.message}`);
-};
+}
 ```
 
 ## 예제
@@ -119,11 +119,11 @@ function errorCallback(error) {
 ```css hidden
 body {
   padding: 20px;
-  background-color:#ffffc9
+  background-color: #ffffc9;
 }
 
 button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 ```
 

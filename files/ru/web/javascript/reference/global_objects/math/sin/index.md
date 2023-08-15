@@ -1,12 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -37,19 +31,19 @@ Math.sin(x)
 ### Пример: использование метода `Math.sin()`
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | {{Spec2('ES1')}}     | Изначальное определение. Реализована в JavaScript 1.0. |
+| Спецификация                                        | Статус             | Комментарии                                            |
+| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                             | {{Spec2('ES1')}}   | Изначальное определение. Реализована в JavaScript 1.0. |
 | {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}     |                                                        |
+| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}    | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

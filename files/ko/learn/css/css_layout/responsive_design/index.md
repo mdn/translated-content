@@ -1,7 +1,6 @@
 ---
 title: 반응형 디자인
 slug: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/반응형_디자인
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -262,7 +261,7 @@ h1 {
 응답형 페이지의 HTML 소스를 보면 일반적으로 문서의 `<head>`에서 다음과 같은 {{htmlelement("meta")}} 태그를 볼 수 있다.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 이 메타 태그는 뷰포트의 너비를 장치의 너비로 설정하여 문서를 의도한 크기의 100%로 확장해야 한다고 모바일 브라우저에게 알려줍니다. 이로써 여러분이 의도한 대로 모바일에 최적화된 크기로 문서를 표시합니다.

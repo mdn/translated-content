@@ -1,11 +1,6 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
 
 {{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
@@ -130,29 +125,29 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // America/Los_Angeles для локали США
 
 // В американском английском используется порядок месяц-день-год
-console.log(new Intl.DateTimeFormat('en-US').format(date));
+console.log(new Intl.DateTimeFormat("en-US").format(date));
 // → "12/19/2012"
 
 // В британском английском используется порядок день-месяц-год
-console.log(new Intl.DateTimeFormat('en-GB').format(date));
+console.log(new Intl.DateTimeFormat("en-GB").format(date));
 // → "20/12/2012"
 
 // В корейском используется порядок год-месяц-день
-console.log(new Intl.DateTimeFormat('ko-KR').format(date));
+console.log(new Intl.DateTimeFormat("ko-KR").format(date));
 // → "2012. 12. 20."
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(new Intl.DateTimeFormat('ar-EG').format(date));
+console.log(new Intl.DateTimeFormat("ar-EG").format(date));
 // → "٢٠‏/١٢‏/٢٠١٢"
 
 // В Японии приложения могут захотеть использовать японский календарь,
 // в котором 2012 год является 24-м годом эры Хейсей
-console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
+console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
 // → "24/12/20"
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
+console.log(new Intl.DateTimeFormat(["ban", "id"]).format(date));
 // → "20/12/2012"
 ```
 
@@ -164,31 +159,42 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Запрашиваем день недели вместе с длинным форматом даты
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-console.log(new Intl.DateTimeFormat('de-DE', options).format(date));
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+console.log(new Intl.DateTimeFormat("de-DE", options).format(date));
 // → "Donnerstag, 20. Dezember 2012"
 
 // Приложение может захотеть использовать UTC и показать это
-options.timeZone = 'UTC';
-options.timeZoneName = 'short';
-console.log(new Intl.DateTimeFormat('en-US', options).format(date));
+options.timeZone = "UTC";
+options.timeZoneName = "short";
+console.log(new Intl.DateTimeFormat("en-US", options).format(date));
 // → "Thursday, December 20, 2012, GMT"
 
 // Иногда нам нужна большая точность
 options = {
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
-  timeZoneName: 'short'
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  timeZoneName: "short",
 };
-console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
+console.log(new Intl.DateTimeFormat("en-AU", options).format(date));
 // → "2:00:00 pm AEDT"
 
 // Иногда даже в США нужен 24-часовой формат времени
 options = {
-  year: 'numeric', month: 'numeric', day: 'numeric',
-  hour: 'numeric', minute: 'numeric', second: 'numeric',
-  hour12: false
+  year: "numeric",
+  month: "numeric",
+  day: "numeric",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  hour12: false,
 };
-console.log(date.toLocaleString('en-US', options));
+console.log(date.toLocaleString("en-US", options));
 // → "12/19/2012, 19:00:00"
 ```
 

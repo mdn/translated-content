@@ -1,7 +1,6 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-translation_of: Web/CSS/display-internal
 ---
 
 {{CSSRef}}

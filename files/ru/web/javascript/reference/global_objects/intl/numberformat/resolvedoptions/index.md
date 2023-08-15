@@ -1,14 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - NeedsExample
-  - NumberFormat
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 ---
 
 {{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
@@ -61,8 +53,8 @@ numberFormat.resolvedOptions()
 
 ## Спецификации
 
-| Спецификация                                                                                                         | Статус                           | Комментарии              |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| Спецификация                                                                             | Статус                  | Комментарии              |
+| ---------------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
 | {{SpecName('ES Int 1.0', '#sec-11.3.3', 'Intl.NumberFormat.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
 
 ## Совместимость с браузерами

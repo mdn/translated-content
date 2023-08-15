@@ -1,7 +1,6 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 ---
 
 {{AddonSidebar}}

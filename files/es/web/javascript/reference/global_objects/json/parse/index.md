@@ -1,7 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
 
 {{JSRef("Global_Objects", "JSON")}}
@@ -36,11 +35,11 @@ Lanza una excepción {{jsxref("SyntaxError")}} si la cadena a transformar no es 
 ### Ejemplo: Usando `JSON.parse()`
 
 ```js
-JSON.parse('{}');              // {}
-JSON.parse('true');            // true
-JSON.parse('"foo"');           // "foo"
+JSON.parse("{}"); // {}
+JSON.parse("true"); // true
+JSON.parse('"foo"'); // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse('null');            // null
+JSON.parse("null"); // null
 ```
 
 ### Ejemplo: `Usando el parámetro reviver`
@@ -51,13 +50,13 @@ El `reviver` es llamada último con la cadena vacía y el valor más alto para p
 
 ```js
 JSON.parse('{"p": 5}', function (k, v) {
-    if(k === "") return v;     // if topmost value, return it,
-    return v * 2;              // else return v * 2.
-});                            // { p: 10 }
+  if (k === "") return v; // if topmost value, return it,
+  return v * 2; // else return v * 2.
+}); // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
-    console.log(k);            // log the current property name, the last is "".
-    return v;                  // return the unchanged property value.
+  console.log(k); // log the current property name, the last is "".
+  return v; // return the unchanged property value.
 });
 
 // 1
@@ -73,7 +72,7 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 
 ```js example-bad example-bad
 // ambos lanzarán un SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 ```
 

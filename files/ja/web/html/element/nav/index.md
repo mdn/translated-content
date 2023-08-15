@@ -1,5 +1,5 @@
 ---
-title: '<nav>: ナビゲーションセクション要素'
+title: "<nav>: ナビゲーションセクション要素"
 slug: Web/HTML/Element/nav
 ---
 

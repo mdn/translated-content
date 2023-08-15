@@ -1,7 +1,6 @@
 ---
 title: <picture>
 slug: Web/HTML/Element/picture
-original_slug: Web/HTML/Elemento/picture
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}

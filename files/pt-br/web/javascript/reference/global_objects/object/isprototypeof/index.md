@@ -57,13 +57,13 @@ const baz = new Baz();
 // foo: Foo <- Object
 // bar: Bar <- Foo <- Object
 // baz: Baz <- Bar <- Foo <- Object
-console.log(Baz.prototype.isPrototypeOf(baz));    // true
-console.log(Baz.prototype.isPrototypeOf(bar));    // false
-console.log(Baz.prototype.isPrototypeOf(foo));    // false
-console.log(Bar.prototype.isPrototypeOf(baz));    // true
-console.log(Bar.prototype.isPrototypeOf(foo));    // false
-console.log(Foo.prototype.isPrototypeOf(baz));    // true
-console.log(Foo.prototype.isPrototypeOf(bar));    // true
+console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
+console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
+console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
@@ -79,11 +79,11 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 
 ## Specificações
 
-| Especificação                                                                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Initial definition. |
-| {{SpecName('ES5.1', '#sec-15.2.4.6', 'Object.prototype.isPrototypeOf')}}                                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}     | {{Spec2('ES6')}}         |                     |
+| Especificação                                                                                    | Status               | Comment             |
+| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES3')}}                                                                              | {{Spec2('ES3')}}     | Initial definition. |
+| {{SpecName('ES5.1', '#sec-15.2.4.6', 'Object.prototype.isPrototypeOf')}}                         | {{Spec2('ES5.1')}}   |                     |
+| {{SpecName('ES6', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}}     | {{Spec2('ES6')}}     |                     |
 | {{SpecName('ESDraft', '#sec-object.prototype.isprototypeof', 'Object.prototype.isPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

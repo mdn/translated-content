@@ -1,7 +1,6 @@
 ---
 title: Valor inicial
 slug: Web/CSS/initial_value
-original_slug: Web/CSS/Valor_inicial
 ---
 
 << [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)

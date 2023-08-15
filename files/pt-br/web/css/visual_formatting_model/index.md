@@ -1,7 +1,6 @@
 ---
 title: Modelo de formatação visual
 slug: Web/CSS/Visual_formatting_model
-original_slug: Web/CSS/Modelo_Visual
 ---
 
 {{CSSRef}}
@@ -107,30 +106,36 @@ Inline-level elements generate _inline-level boxes_ that are defined as boxes pa
 > **Nota:** Atomic inline boxes cannot be split into several lines in an inline formatting context.
 >
 > ```css
->   span {
->     display:inline; /* default value*/
->   }
+> span {
+>   display: inline; /* default value*/
+> }
 > ```
 >
 > ```html
 > <div style="width:20em;">
->    The text in the span <span>can be split in several
->    lines as it</span> is an inline box.
+>   The text in the span <span>can be split in several lines as it</span> is an
+>   inline box.
 > </div>
-> ```which leads to:The text in the span can be split into several lines as it is an inline box.
+> ```
+>
+> which leads to:The text in the span can be split into several lines as it
+> is an inline box.
 >
 > ```css
->   span {
->     display:inline-block;
->   }
+> span {
+>   display: inline-block;
+> }
 > ```
 >
 > ```html
 > <div style="width:20em;">
->    The text in the span <span>cannot be split in several
->    lines as it</span> is an inline-block box.
+>   The text in the span <span>cannot be split in several lines as it</span> is
+>   an inline-block box.
 > </div>
-> ```which leads to:The text in the span cannot be split into several lines as it is an inline-block box.
+> ```
+>
+> which leads to:The text in the span cannot be split into several lines as
+> it is an inline-block box.
 
 #### Anonymous inline boxes
 

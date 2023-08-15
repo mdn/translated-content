@@ -35,11 +35,11 @@ Lança uma exceção {{jsxref("SyntaxError")}} se a string a ser analisada não 
 ### Usando `JSON.parse()`
 
 ```js
-JSON.parse('{}');              // {}
-JSON.parse('true');            // true
-JSON.parse('"foo"');           // "foo"
+JSON.parse("{}"); // {}
+JSON.parse("true"); // true
+JSON.parse('"foo"'); // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse('null');            // null
+JSON.parse("null"); // null
 ```
 
 ### Usando o parâmetro `reviver`
@@ -49,17 +49,19 @@ Se um `reviver` for especificado, o valor calculado pela análise será _transfo
 Se o `reviver` apenas transformar alguns valores e não outros, certifique-se de retornar todos os valores não transformados como estão, caso contrário, eles serão excluídos do objeto resultante.
 
 ```js
-JSON.parse('{"p": 5}', (key, value) =>
-  typeof value === 'number'
-    ? value * 2 // retorna o valor * 2 para números
-    : value     // retorna tudo sem alteração
+JSON.parse(
+  '{"p": 5}',
+  (key, value) =>
+    typeof value === "number"
+      ? value * 2 // retorna o valor * 2 para números
+      : value, // retorna tudo sem alteração
 );
 
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
   console.log(key); // mostra o nome da propriedade atual, o último é "".
-  return value;     // retorna o valor da propriedade inalterada.
+  return value; // retorna o valor da propriedade inalterada.
 });
 
 // 1
@@ -75,16 +77,16 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ```js example-bad example-bad
 // ambos retornarão um SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 ```
 
 ## Especificações
 
-| Especificações                                                               | Status                       | Comentário                                         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}         | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificações                                           | Status               | Comentário                                         |
+| -------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.2', 'JSON.parse')}}      | {{Spec2('ES5.1')}}   | Initial definition. Implemented in JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.parse', 'JSON.parse')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-json.parse', 'JSON.parse')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

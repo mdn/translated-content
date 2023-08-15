@@ -1,7 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-original_slug: Web/Guide/API/Vibration
 ---
 
 {{DefaultAPISidebar("Vibration API")}}

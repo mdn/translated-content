@@ -1,7 +1,6 @@
 ---
 title: Laços e iterações
 slug: Web/JavaScript/Guide/Loops_and_iteration
-original_slug: Web/JavaScript/Guide/Lacos_e_iteracoes
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
@@ -14,7 +13,7 @@ Você pode pensar em um laço de repetição como um jogo onde você manda o seu
 var passo;
 for (passo = 0; passo < 5; passo++) {
   // Executa 5 vezes, com os valores de passos de 0 a 4.
-  console.log('Ande um passo para o leste');
+  console.log("Ande um passo para o leste");
 }
 ```
 
@@ -54,7 +53,10 @@ A função a seguir contém uma declaração `for` que contará o número de op�
 ```html
 <form name="selectForm">
   <p>
-    <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão abaixo:</label>
+    <label for="tipoMusica"
+      >Escolha alguns tipos de música, em seguida, clique no botão
+      abaixo:</label
+    >
     <select id="tipoMusica" name="tipoMusica" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -68,20 +70,23 @@ A função a seguir contém uma declaração `for` que contará o número de op�
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numeroSelecionadas = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numeroSelecionadas++;
+  function howMany(selectObject) {
+    var numeroSelecionadas = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numeroSelecionadas++;
+      }
     }
+    return numeroSelecionadas;
   }
-  return numeroSelecionadas;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Total de opções selecionadas: ' + howMany(document.selectForm.tipoMusica))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Total de opções selecionadas: " +
+        howMany(document.selectForm.tipoMusica),
+    );
+  });
 </script>
 ```
 
@@ -171,9 +176,8 @@ Um label pode usar qualquer idenficador que não seja uma palavra reservada do J
 Neste exemplo, o label `markLoop` idenfica um laço `while`.
 
 ```js
-markLoop:
-while (theMark == true) {
-   facaAlgo();
+markLoop: while (theMark == true) {
+  facaAlgo();
 }
 ```
 
@@ -207,7 +211,7 @@ for (i = 0; i < a.length; i++) {
 
 ```js
 var x = 0;
-var z = 0
+var z = 0;
 labelCancelaLaco: while (true) {
   console.log("Laço exterior: " + x);
   x += 1;
@@ -259,22 +263,20 @@ Uma instrução label `checkiandj` contém uma instrução label `checkj`. Se o 
 Se o `continue` estivesse referenciando `checkiandj`, o programa deveria continuar do topo de `checkiandj`.
 
 ```js
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) == 0) {
-          continue checkj;
-        }
-        console.log(j + " é estranho.");
-      }
-      console.log("i = " + i);
-      console.log("j = " + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 == 0) {
+      continue checkj;
+    }
+    console.log(j + " é estranho.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `Declaração for...in`
@@ -306,8 +308,8 @@ function dump_props(obj, obj_name) {
 Para um objeto chamado `car` com propriedades `make` e `model`, o resultado será:
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### Arrays
@@ -331,11 +333,11 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs "3", "5", "7"
+  console.log(i); // logs "3", "5", "7"
 }
 ```
 

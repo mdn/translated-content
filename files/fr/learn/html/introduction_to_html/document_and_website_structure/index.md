@@ -1,7 +1,6 @@
 ---
 title: Structure de Site Web et de document
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
 {{LearnSidebar}}

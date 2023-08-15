@@ -1,12 +1,6 @@
 ---
 title: Асинхронный
 slug: Glossary/Asynchronous
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
-translation_of: Glossary/Asynchronous
-original_slug: Глоссарий/Asynchronous
 ---
 
 _Асинхронный_ относится к среде связи, где каждый участник получает и обрабатывает сообщение, когда это удобно, или возможно, а не сразу.

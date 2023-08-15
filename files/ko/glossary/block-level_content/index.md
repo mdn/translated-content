@@ -1,7 +1,6 @@
 ---
 title: 블록 레벨 요소
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 ---
 
 **HTML**(Hypertext Markup Language)의 요소는 역사적으로 "블록 레벨" 요소와 ["인라인" 요소](/ko/docs/Web/HTML/Inline_elements)로 분류됐습니다. 기본적으로 블록 레벨 요소는 부모 요소의 전체 공간을 차지하여 "블록"을 만듭니다. 이 글에서 자세한 설명을 읽을 수 있습니다.
@@ -17,13 +16,18 @@ original_slug: Web/HTML/Block-level_elements
 ### HTML
 
 ```html
-<p>이 문단은 블록 레벨 요소입니다. 부모 요소와 구분할 수 있도록 배경 색을 입혔습니다.</p>
+<p>
+  이 문단은 블록 레벨 요소입니다. 부모 요소와 구분할 수 있도록 배경 색을
+  입혔습니다.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{EmbedLiveSample('블록_레벨_요소')}}

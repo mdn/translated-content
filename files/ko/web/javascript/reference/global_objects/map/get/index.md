@@ -49,7 +49,7 @@ myMap.set("bar", arr);
 myMap.get("bar").push("foo");
 
 console.log(arr); // ["foo"]
-console.log(myMap.get('bar')); // ["foo"]
+console.log(myMap.get("bar")); // ["foo"]
 ```
 
 맵이 원본 객체에 대한 참조만 보유하고 있다는 것은 해당 객체가 가비지 콜렉션되지 않을 수 있으며 이로 인해 예측하지 못한

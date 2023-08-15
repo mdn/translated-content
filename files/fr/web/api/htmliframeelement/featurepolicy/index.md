@@ -1,7 +1,6 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
-translation_of: Web/API/HTMLIFrameElement/featurePolicy
 ---
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}

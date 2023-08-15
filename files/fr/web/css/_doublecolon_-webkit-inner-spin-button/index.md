@@ -1,7 +1,6 @@
 ---
 title: "::-webkit-inner-spin-button"
 slug: Web/CSS/::-webkit-inner-spin-button
-translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}

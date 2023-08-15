@@ -1,7 +1,6 @@
 ---
 title: Modèle 1
 slug: Web/API/WebGL_API/By_example/Boilerplate_1
-translation_of: Web/API/WebGL_API/By_example/Boilerplate_1
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}

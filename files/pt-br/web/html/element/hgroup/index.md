@@ -71,7 +71,7 @@ Para produzir alguma (não-abstrato) visualização não renderizada como um esb
 Considere o documento HTML a seguir:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <title>HTML Standard</title>
 <body>
   <hgroup id="document-title">
@@ -80,7 +80,9 @@ Considere o documento HTML a seguir:
   </hgroup>
   <p>Some intro to the document.</p>
   <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
+  <ol id="toc">
+    ...
+  </ol>
   <h2>First section</h2>
   <p>Some intro to the first section.</p>
 </body>
@@ -94,7 +96,7 @@ Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por d
 
 Ou, o esboço renderizado para aquele documento poderia ser como:
 
-![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
+![Rendered outline that includes an 'hgroup' element, with parens around the secondary heading](outline-paren.png)
 
 Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 
@@ -107,8 +109,8 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 </hgroup>
 ```
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                                      | Status                   | Comment |
+| ---------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilidade com navegadores

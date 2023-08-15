@@ -1,7 +1,6 @@
 ---
 title: image()
 slug: Web/CSS/image/image
-original_slug: Web/CSS/image/image()
 l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---

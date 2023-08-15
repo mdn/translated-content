@@ -2,6 +2,7 @@
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
+
 {{JSRef}}
 
 **`every()`** 메서드는 배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 테스트합니다. Boolean 값을 반환합니다.
@@ -72,7 +73,7 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 function isBigEnough(element, index, array) {
   return element >= 10;
 }
-[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 5, 8, 130, 44].every(isBigEnough); // false
 [12, 54, 18, 130, 44].every(isBigEnough); // true
 ```
 
@@ -81,7 +82,8 @@ function isBigEnough(element, index, array) {
 다음은 어떤 배열의 모든 요소가 또 다른 배열에 존재하는지 테스트를 하는 예제입니다.
 
 ```js
-const isSubset = (array1, array2) => array2.every((element) => array1.includes(element));
+const isSubset = (array1, array2) =>
+  array2.every((element) => array1.includes(element));
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
@@ -104,11 +106,11 @@ console.log([2, , 2].every((x) => x === 2)); // true
 // 요소 수정
 // ---------------
 let arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) => {
-  arr[index+1] -= 1
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 2
-})
+arr.every((elem, index, arr) => {
+  arr[index + 1] -= 1;
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 2;
+});
 
 // 3회 순회하지만 앞선 2회의 순회는 수정이 일어나지 않습니다.
 //
@@ -120,11 +122,11 @@ arr.every( (elem, index, arr) => {
 // 요소 추가
 // ---------------
 arr = [1, 2, 3];
-arr.every( (elem, index, arr) => {
-  arr.push('new')
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
-})
+arr.every((elem, index, arr) => {
+  arr.push("new");
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
+});
 
 // 새로운 요소가 추가된 후에도 3회 순회합니다.
 //
@@ -136,11 +138,11 @@ arr.every( (elem, index, arr) => {
 // 요소 삭제
 // ---------------
 arr = [1, 2, 3, 4];
-arr.every( (elem, index, arr) => {
-  arr.pop()
-  console.log(`[${arr}][${index}] -> ${elem}`)
-  return elem < 4
-})
+arr.every((elem, index, arr) => {
+  arr.pop();
+  console.log(`[${arr}][${index}] -> ${elem}`);
+  return elem < 4;
+});
 
 // 기존 요소가 `pop()` 됨에 따라 2회만 순회합니다.
 //

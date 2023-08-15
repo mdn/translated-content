@@ -39,8 +39,8 @@ Access-Control-Request-Method: POST
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                   | Comentários        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| Especificação                                                                                | Status             | Comentários        |
+| -------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
 | {{SpecName('Fetch','#http-access-control-request-method', 'Access-Control-Request-Method')}} | {{Spec2("Fetch")}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

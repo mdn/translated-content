@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
 
 {{JSRef}}
@@ -20,7 +19,7 @@ El valor de `size` es un entero que representa cuantas entradas tiene el objeto 
 var mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add("un texto")
+mySet.add("un texto");
 
 mySet.size; // 3
 ```

@@ -1,7 +1,6 @@
 ---
 title: Response.blob()
 slug: Web/API/Response/blob
-original_slug: Web/API/Body/blob
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---

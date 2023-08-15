@@ -1,10 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-tags:
-  - Формы
-  - прогресс
-translation_of: Web/HTML/Element/meter
 ---
 
 {{HTMLSidebar}}
@@ -16,10 +12,10 @@ translation_of: Web/HTML/Element/meter
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), контент, ассоциированный с label, явный контент. |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                  | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но среди его потомков не должно быть элемента `<meter>`.                                                                 |
-| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                            |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                                                                                 |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                         |
 | Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                                 |
-| DOM-интерфейс                                          | {{domxref("HTMLMeterElement")}}                                                                                                                                                            |
+| DOM-интерфейс                                          | {{domxref("HTMLMeterElement")}}                                                                                                                                                                     |
 
 ## Атрибуты
 
@@ -48,8 +44,9 @@ translation_of: Web/HTML/Element/meter
 #### HTML content
 
 ```html
-<p>Heat the oven to <meter min="200" max="500"
-  value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
 #### Output
@@ -67,8 +64,9 @@ translation_of: Web/HTML/Element/meter
 #### HTML content
 
 ```html
-<p>He got a <meter low="69" high="80" max="100"
-  value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
 #### Output
