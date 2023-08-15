@@ -1,16 +1,6 @@
 ---
 title: Utiliser les objets
 slug: Web/JavaScript/Guide/Working_with_objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Working_with_Objects
-original_slug: Web/JavaScript/Guide/Utiliser_les_objets
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -28,7 +18,7 @@ En JavaScript, un objet est une entité à part entière qui possède des propri
 Un objet JavaScript possède donc plusieurs propriétés qui lui sont associées. Une propriété peut être vue comme une variable attachée à l'objet. Les propriétés d'un objet sont des variables tout ce qu'il y a de plus classiques, exception faite qu'elles sont attachées à des objets. Les propriétés d'un objet représentent ses caractéristiques et on peut y accéder avec une notation utilisant le point « . », de la façon suivante :
 
 ```js
-nomObjet.nomPropriete
+nomObjet.nomPropriete;
 ```
 
 Comme pour les variables JavaScript en général, le nom de l'objet (qui peut être une variable) et le nom des propriétés sont sensibles à la casse (une lettre minuscule ne sera pas équivalente à une lettre majuscule). On peut définir une propriété en lui affectant une valeur. Ainsi, si on crée un objet `maVoiture` et qu'on lui donne les propriétés `fabricant`, `modèle`, et `année` :
@@ -44,9 +34,9 @@ L'exemple précédent peut également s'écrire avec **[la syntaxe littérale po
 
 ```js
 let maVoiture = {
-  make: 'Ford',
-  model: 'Mustang',
-  year: 1969
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
 };
 ```
 
@@ -73,12 +63,12 @@ let str = "maChaîne";
 let rand = Math.random();
 let obj = new Object();
 
-monObj.type              = "Syntaxe point";
-monObj["date created"]   = "Chaîne avec un espace";
-monObj[str]              = "Une valeur qui est une chaîne";
-monObj[rand]             = "Nombre aléatoire";
-monObj[obj]              = "Objet";
-monObj[""]               = "Une chaîne vide";
+monObj.type = "Syntaxe point";
+monObj["date created"] = "Chaîne avec un espace";
+monObj[str] = "Une valeur qui est une chaîne";
+monObj[rand] = "Nombre aléatoire";
+monObj[obj] = "Objet";
+monObj[""] = "Une chaîne vide";
 
 console.log(monObj);
 ```
@@ -102,7 +92,7 @@ function afficherProps(obj, nomObjet) {
   let resultat = "";
   for (let i in obj) {
     if (obj.hasOwnProperty(i)) {
-        resultat += `${nomObjet}.${i} = ${obj[i]}\n`;
+      resultat += `${nomObjet}.${i} = ${obj[i]}\n`;
     }
   }
   return resultat;
@@ -112,9 +102,9 @@ function afficherProps(obj, nomObjet) {
 Si on appelle la fonction avec `afficherProps(maVoiture, "maVoiture")`, cela affichera le contenu suivant dans la console :
 
 ```js
-maVoiture.fabricant = Ford
-maVoiture.modele = Mustang
-maVoiture.annee = 1969
+maVoiture.fabricant = Ford;
+maVoiture.modele = Mustang;
+maVoiture.annee = 1969;
 ```
 
 ## Lister les propriétés d'un objet
@@ -128,13 +118,15 @@ maVoiture.annee = 1969
 Avant ECMAScript 5, il n'existait aucune méthode native pour lister l'ensemble des propriétés d'un objet. Cependant, on pouvait utiliser le code suivant pour y parvenir :
 
 ```js
-function listerToutesLesProprietes(o){
+function listerToutesLesProprietes(o) {
   let objectToInspect;
   let resultat = [];
 
-  for(objectToInspect = o;
-      objectToInspect !== null;
-      objectToInspect = Object.getPrototypeOf(objectToInspect)){
+  for (
+    objectToInspect = o;
+    objectToInspect !== null;
+    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  ) {
     resultat = resultat.concat(Object.getOwnPropertyNames(objectToInspect));
   }
   return resultat;
@@ -155,11 +147,11 @@ La syntaxe utilisée avec les initialisateurs d'objets est la suivante :
 
 ```js
 let obj = {
-  propriete_1:   valeur_1,   // propriete_# peut être un identifiant
-            2:   valeur_2,   // ou un nombre
-            // ...,
-  "propriete n": valeur_n
-  }; // ou une chaîne
+  propriete_1: valeur_1, // propriete_# peut être un identifiant
+  2: valeur_2, // ou un nombre
+  // ...,
+  "propriete n": valeur_n,
+}; // ou une chaîne
 ```
 
 où on a `obj` le nom de l'objet qu'on souhaite créer et chaque `propriete_i` un identifiant (que ce soit un nom, un nombre ou une chaîne de caractères) et chaque `valeur_i` une expression dont la valeur sera affectée à la propriété `propriete_i`. S'il n'est pas nécessaire d'utiliser l'objet `obj` par la suite, il n'est pas nécessaire de réaliser l'affectation à une variable (attention alors à l'encadrer dans des parenthèses pour que le littéral objet soit bien interprété comme une instruction et non pas comme un bloc.)
@@ -180,8 +172,8 @@ let maHonda = {
   roue: 4,
   moteur: {
     cylindres: 4,
-    taille: 2.2
-  }
+    taille: 2.2,
+  },
 };
 ```
 
@@ -259,7 +251,7 @@ let voiture2 = new Voiture("Audi", "A3", 2005, morgan);
 On notera que le dernier argument n'est pas une chaîne de caractères ou une valeur numérique mais bien un objet. Les objets `max` et `morgan` sont passés en arguments pour représenter les propriétaires. Ainsi, si on veut obtenir le nom du propriétaire pour `voiture2`, on peut accéder à la propriété de la façon suivante :
 
 ```js
-voiture2.proprietaire.nom
+voiture2.proprietaire.nom;
 ```
 
 Il est toujours possible d'ajouter une propriété à un objet défini précédemment. Par exemple, on peut ajouter une propriété à l'objet `voiture1` avec l'instruction :
@@ -277,11 +269,12 @@ Les objets peuvent également être créés en utilisant la méthode [`Object.cr
 ```js
 // Propriétés pour animal et encapsulation des méthodes
 let Animal = {
-  type: "Invertébrés",        // Valeur par défaut value of properties
-  afficherType : function() {  // Une méthode pour afficher le type Animal
+  type: "Invertébrés", // Valeur par défaut value of properties
+  afficherType: function () {
+    // Une méthode pour afficher le type Animal
     console.log(this.type);
-  }
-}
+  },
+};
 
 // On crée un nouveau type d'animal, animal1
 let animal1 = Object.create(Animal);
@@ -386,35 +379,35 @@ Par exemple, supposons qu'on ait deux objets, `responsable` et `stagiaire`. Chaq
 
 ```js
 const responsable = {
- nom: "Jean",
- age: 27,
- poste: "Ingénieur logiciel"
+  nom: "Jean",
+  age: 27,
+  poste: "Ingénieur logiciel",
 };
 
 const stagiaire = {
- nom: "Ben",
- age: 21,
- poste: "Stagiaire ingénieur logiciel"
+  nom: "Ben",
+  age: 21,
+  poste: "Stagiaire ingénieur logiciel",
 };
 
 function direBonjour() {
- console.log('Bonjour, mon nom est', this.nom)
-};
+  console.log("Bonjour, mon nom est", this.nom);
+}
 
 // on ajoute direBonjour aux deux objets
 responsable.direBonjour = direBonjour;
 stagiaire.direBonjour = direBonjour;
 
 responsable.direBonjour(); // Bonjour, mon nom est John'
-stagiaire.direBonjour();   // Bonjour, mon nom est Ben'
+stagiaire.direBonjour(); // Bonjour, mon nom est Ben'
 ```
 
 Ici, `this` fait référence à l'objet courant. On peut également créer une fonction `direMonAge()` qui affiche une phrase indiquant l'age.
 
 ```js
-function direMonAge(){
+function direMonAge() {
   console.log("J'ai " + this.age + " ans.");
-};
+}
 
 responsable.direMonAge = direMonAge;
 responsable.direMonAge(); // J'ai 27 ans.
@@ -439,12 +432,12 @@ let o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
 console.log(o.a); // 7
 console.log(o.b); // 8 <-- À ce moment, la méthode get b() est invoquée
-o.c = 50;         //   <-- À ce moment, la méthode set c(x) est invoquée
+o.c = 50; //   <-- À ce moment, la méthode set c(x) est invoquée
 console.log(o.a); // 25
 ```
 
@@ -462,8 +455,16 @@ Les accesseurs et mutateurs peuvent également être ajoutés à un objet après
 let o = { a: 0 };
 
 Object.defineProperties(o, {
- 'b': { get: function() { return this.a + 1; } },
- 'c': { set: function(x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
 o.c = 10; // Exécute le mutateur qui affecte 10 / 2 (5) à la propriété 'a'
@@ -478,13 +479,13 @@ Il est possible de retirer des propriétés propres (celles qui ne sont pas hér
 
 ```js
 // On crée un nouvel objet, monObj, avec deux propriétés a et b.
-let monObj = new Object;
+let monObj = new Object();
 monObj.a = 5;
 monObj.b = 12;
 
 // On retire la propriété a, monObj a donc uniquement la propriété b
 delete monObj.a;
-console.log("a" in monObj) // produit "false"
+console.log("a" in monObj); // produit "false"
 ```
 
 Il est aussi possible de supprimer une propriété de l'objet global avec `delete` si aucun mot-clé comme `var`, `let` ou `const` n'avait été utilisé :
@@ -501,21 +502,21 @@ En JavaScript, les objets fonctionnent par référence. Deux objets distincts ne
 ```js
 // Deux variables avec deux objets distincts
 // qui ont les mêmes propriétés
-let fruit = {nom: "pomme"};
-let fruit2 = {nom: "pomme"};
+let fruit = { nom: "pomme" };
+let fruit2 = { nom: "pomme" };
 
-fruit == fruit2  // renvoie false
-fruit === fruit2 // renvoie false
+fruit == fruit2; // renvoie false
+fruit === fruit2; // renvoie false
 ```
 
 ```js
 // Deux variables référençant un même objet
-let fruit = {nom: "pomme"};
-let fruit2 = fruit;  // On affecte la même référence
+let fruit = { nom: "pomme" };
+let fruit2 = fruit; // On affecte la même référence
 
 // dans ce cas fruit et fruit2 pointent vers le même objet
-fruit == fruit2  // renvoie true
-fruit === fruit2 // renvoie true
+fruit == fruit2; // renvoie true
+fruit === fruit2; // renvoie true
 
 fruit.nom = "raisin";
 console.log(fruit2); // affiche {nom: "raisin"} et non {nom: "pomme"}

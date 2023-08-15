@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许您通过 JavaScript 访问其功能，并在您自己的站点上使用它。正如我们在 [API 介绍章节](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 所展示的，最显著的例子就是运用 [Google Maps APIs](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
 
-让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
+让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
 
 > **备注：** 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。
 
@@ -50,19 +50,24 @@ navigator.geolocation.getCurrentPosition(function(position) { ... });
 第三方 API，从某种角度讲，植根于第三方服务器上。要通过 JavaScript 获取它们，您首先需要链接到其功能接口上并使其在您的页面上生效。通常来说，这首先需要您通过一个 {{htmlelement("script")}} 元素连接到第三方服务器所开放的 JavaScript 库，如下所示：
 
 ```js
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<script
+  type="text/javascript"
+  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
 然后您便可使用该库中可用的对象了，如：
 
 ```js
-var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+var latlng = new google.maps.LatLng(
+  position.coords.latitude,
+  position.coords.longitude,
+);
 var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true
-}
+  disableDefaultUI: true,
+};
 
 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 ```
@@ -93,18 +98,18 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
 2. 接下来，用以下步骤获取你自己的开发者密钥：
 
-    1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
-    2. 如果你还没有新项目，请创建一个新项目。
-    3. 单击“启用 API”按钮。
-    4. 选择*Google Maps JavaScript API*.
-    5. 单击“启用”按钮。
-    6. 单击创建凭据，然后选择 API 密钥。
-    7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
+   1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
+   2. 如果你还没有新项目，请创建一个新项目。
+   3. 单击“启用 API”按钮。
+   4. 选择*Google Maps JavaScript API*.
+   5. 单击“启用”按钮。
+   6. 单击创建凭据，然后选择 API 密钥。
+   7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
-    > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
+   > **备注：** 获取 Google 相关 API 密钥可能会有一点困难——Google Cloud Platform API Manager 有许多不同的屏幕，并且工作流程可能因您是否设置账户而变得细微的不同。如果您在执行此步骤时遇到了困难，我们将很乐意为您提供帮助——[联系我们](/zh-CN/docs/Learn#Contact_us)。
 
 3. 打开你的 Google Maps 起始文件，找到`INSERT-YOUR-API-KEY-HERE`字符串，然后将其替换为你从 Google Cloud Platform API Manager dashboard 获取的实际 API 密钥。
 
@@ -114,34 +119,34 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 1. 在 `var map ...` 行下面添加下列代码：
 
-    ```js
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
-    });
-    ```
+   ```js
+   var marker = new google.maps.Marker({
+     position: latlng,
+     map: map,
+   });
+   ```
 
-    现在如果你刷新你的页面，你会看到地图中间弹出了一个小小的漂亮标记。这很酷，但是这并不是一个定制的标记图标 — 它使用了默认的标记图标。
+   现在如果你刷新你的页面，你会看到地图中间弹出了一个小小的漂亮标记。这很酷，但是这并不是一个定制的标记图标 — 它使用了默认的标记图标。
 
 2. 如果要使用定制化的图标，我们需要在创建标记时通过 URL 来明确说明。首先，在刚才添加的代码块之后添加下面的代码：
 
-    ```js
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    ```
+   ```js
+   var iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+   ```
 
-    这定义了所有 Google Maps 官方图标存储的 URL（如果你想的话你也可以使用你自己的图标存储位置）。
+   这定义了所有 Google Maps 官方图标存储的 URL（如果你想的话你也可以使用你自己的图标存储位置）。
 
 3. 图标的位置应当在选项对象的`icon` 属性中说明。更新 Constructor 并添加 icon 属性，如下：
 
-    ```js
-    var marker = new google.maps.Marker({
-      position: latlng,
-      icon: iconBase + 'flag_maps.png',
-      map: map
-    });
-    ```
+   ```js
+   var marker = new google.maps.Marker({
+     position: latlng,
+     icon: iconBase + "flag_maps.png",
+     map: map,
+   });
+   ```
 
-    这里我们用`iconBase` 加上图标的文件名，从而创建完整 URL 的方式阐明了 icon 属性。现在尝试重新加载你的例子，你会看到你的地图上显示了一个定制的标记！
+   这里我们用`iconBase` 加上图标的文件名，从而创建完整 URL 的方式阐明了 icon 属性。现在尝试重新加载你的例子，你会看到你的地图上显示了一个定制的标记！
 
 > **备注：** 访问 [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) 以查看更多信息。
 
@@ -153,29 +158,30 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 1. 首先，您需要指定一个包含 HTML 的 JavaScript 字符串，该字符串将定义弹出窗口的内容。这将由 API 注入弹出窗口，并且可以包含您想要的任何内容。在`google.maps.Marker()`构造函数定义下面添加以下行：
 
-    ```js
-    var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
-    ```
+   ```js
+   var contentString =
+     '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+   ```
 
 2. 然后，你需要使用`google.maps.InfoWindow()` 构造器，创建一个新的 info window object。在之前的代码下面，添加以下代码：
 
-    ```js
-    var infowindow = new google.maps.InfoWindow({
-      content: contentString
-    });
-    ```
+   ```js
+   var infowindow = new google.maps.InfoWindow({
+     content: contentString,
+   });
+   ```
 
-    还有其他可用的属性 (查看 [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), 但是在这里我们只具体说明指向内容源的`content` 属性。
+   还有其他可用的属性 (查看 [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), 但是在这里我们只具体说明指向内容源的`content` 属性。
 
 3. 最后，为了在单击标记 (marker) 时显示弹出窗口，我们使用了一个简单的点击事件处理器。在`google.maps.InfoWindow()`构造器代码下面，添加以下代码：
 
-    ```js
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-    ```
+   ```js
+   marker.addListener("click", function () {
+     infowindow.open(map, marker);
+   });
+   ```
 
-    在函数中，我们只需调用 infowindow 的 `open()` 函数，该函数将要显示它的地图和希望它显示在旁边的标记作为参数。
+   在函数中，我们只需调用 infowindow 的 `open()` 函数，该函数将要显示它的地图和希望它显示在旁边的标记作为参数。
 
 4. 现在尝试重新加载示例，然后单击标记！
 
@@ -187,11 +193,11 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 2. 现在撤销上一次更改。
 3. 通过使用指定单个 UI 功能的其他属性，可以更精细地显示或隐藏控件。尝试在 `disableDefaultUI: true` 的下面添加代码（请记住在 `disableDefaultUI: true` 之后输入逗号，否则将收到错误）：
 
-    ```js
-    zoomControl: true,
-    mapTypeControl: true,
-    scaleControl: true,
-    ```
+   ```js
+   zoomControl: true,
+   mapTypeControl: true,
+   scaleControl: true,
+   ```
 
 4. 现在尝试重新加载示例以查看这些属性的效果。您可以在 [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions)找到更多属性。
 
@@ -215,7 +221,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
 2. 从结果页面获取 API。
-3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
+3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
@@ -227,43 +233,43 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 1. 在代码中找到下面这行：
 
-    ```js
-    var key = 'INSERT-YOUR-API-KEY-HERE';
-    ```
+   ```js
+   var key = "INSERT-YOUR-API-KEY-HERE";
+   ```
 
-    把 `INSERT-YOUR-API-KEY-HERE` 替换为在上一节中获得的 API key.
+   把 `INSERT-YOUR-API-KEY-HERE` 替换为在上一节中获得的 API key.
 
 2. 添加下面这行代码到 JavaScript 代码中。添加到注释 "`// Event listeners to control the functionality`" 的下面。当表单提交时 (按钮按下时) 运行这个函数 `submitSearch()` .
 
-    ```js
-    searchForm.addEventListener('submit', submitSearch);
-    ```
+   ```js
+   searchForm.addEventListener("submit", submitSearch);
+   ```
 
 3. 添加 `submitSearch()` 和 `fetchResults()` 函数如下：
 
-    ```plain
-    function submitSearch(e) {
-      pageNumber = 0;
-      fetchResults(e);
-    }
+   ```plain
+   function submitSearch(e) {
+     pageNumber = 0;
+     fetchResults(e);
+   }
 
-    function fetchResults(e) {
-      // Use preventDefault() to stop the form submitting
-      e.preventDefault();
+   function fetchResults(e) {
+     // Use preventDefault() to stop the form submitting
+     e.preventDefault();
 
-      // Assemble the full URL
-      url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value + '&fq=document_type:("article")';
+     // Assemble the full URL
+     url = baseURL + '?api-key=' + key + '&page=' + pageNumber + '&q=' + searchTerm.value + '&fq=document_type:("article")';
 
-      if(startDate.value !== '') {
-        url += '&begin_date=' + startDate.value;
-      };
+     if(startDate.value !== '') {
+       url += '&begin_date=' + startDate.value;
+     };
 
-      if(endDate.value !== '') {
-        url += '&end_date=' + endDate.value;
-      };
+     if(endDate.value !== '') {
+       url += '&end_date=' + endDate.value;
+     };
 
-    }
-    ```
+   }
+   ```
 
 `submitSearch()` 设置起始页码为 0，然后调用 `fetchResults()` 函数。其中，先调用事件对象的 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 函数，阻止实际的表单提交事件 (会破坏应用，至于为什么可以自己试一试)。然后，处理字符串，构建完整的请求 URL。以下是几个必要的步骤：
 
@@ -293,11 +299,13 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 
 ```js
 // Use fetch() to make the request to the API
-fetch(url).then(function(result) {
-  return result.json();
-}).then(function(json) {
-  displayResults(json);
-});
+fetch(url)
+  .then(function (result) {
+    return result.json();
+  })
+  .then(function (json) {
+    displayResults(json);
+  });
 ```
 
 这段代码用于发起请求，把变量 `url` 作为 [`fetch()`](/zh-CN/docs/Web/API/fetch) 函数的参数，用 [`json()`](/zh-CN/docs/Web/API/Body/json) 函数把响应的结果转换为 JSON 格式，然后把 JSON 数据传递给 `displayResults()` 函数，数据就可以在 UI 中显示出来了。
@@ -309,30 +317,30 @@ OK，下面是显示数据的部分。把下面的函数添加到 `fetchResults(
 ```js
 function displayResults(json) {
   while (section.firstChild) {
-      section.removeChild(section.firstChild);
+    section.removeChild(section.firstChild);
   }
 
   var articles = json.response.docs;
 
-  if(articles.length === 10) {
-    nav.style.display = 'block';
+  if (articles.length === 10) {
+    nav.style.display = "block";
   } else {
-    nav.style.display = 'none';
+    nav.style.display = "none";
   }
 
-  if(articles.length === 0) {
-    var para = document.createElement('p');
-    para.textContent = 'No results returned.'
+  if (articles.length === 0) {
+    var para = document.createElement("p");
+    para.textContent = "No results returned.";
     section.appendChild(para);
   } else {
-    for(var i = 0; i < articles.length; i++) {
-      var article = document.createElement('article');
-      var heading = document.createElement('h2');
-      var link = document.createElement('a');
-      var img = document.createElement('img');
-      var para1 = document.createElement('p');
-      var para2 = document.createElement('p');
-      var clearfix = document.createElement('div');
+    for (var i = 0; i < articles.length; i++) {
+      var article = document.createElement("article");
+      var heading = document.createElement("h2");
+      var link = document.createElement("a");
+      var img = document.createElement("img");
+      var para1 = document.createElement("p");
+      var para2 = document.createElement("p");
+      var clearfix = document.createElement("div");
 
       var current = articles[i];
       console.log(current);
@@ -340,19 +348,19 @@ function displayResults(json) {
       link.href = current.web_url;
       link.textContent = current.headline.main;
       para1.textContent = current.lead_paragraph;
-      para2.textContent = 'Keywords: ';
-      for(var j = 0; j < current.keywords.length; j++) {
-        var span = document.createElement('span');
-        span.textContent += current.keywords[j].value + ' ';
+      para2.textContent = "Keywords: ";
+      for (var j = 0; j < current.keywords.length; j++) {
+        var span = document.createElement("span");
+        span.textContent += current.keywords[j].value + " ";
         para2.appendChild(span);
       }
 
-      if(current.multimedia.length > 0) {
-        img.src = 'http://www.nytimes.com/' + current.multimedia[0].url;
+      if (current.multimedia.length > 0) {
+        img.src = "http://www.nytimes.com/" + current.multimedia[0].url;
         img.alt = current.headline.main;
       }
 
-      clearfix.setAttribute('class','clearfix');
+      clearfix.setAttribute("class", "clearfix");
 
       article.appendChild(heading);
       heading.appendChild(link);
@@ -363,7 +371,7 @@ function displayResults(json) {
       section.appendChild(article);
     }
   }
-};
+}
 ```
 
 这一段有好多代码；下面一一解释：
@@ -386,34 +394,34 @@ function displayResults(json) {
 
 1. 下面的代码中，在 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 函数中添加这 2 个新事件，即把 `nextPage()` 和 `previousPage()` 函数链接到相应的按键点击事件上：
 
-    ```js
-    nextBtn.addEventListener('click', nextPage);
-    previousBtn.addEventListener('click', previousPage);
-    ```
+   ```js
+   nextBtn.addEventListener("click", nextPage);
+   previousBtn.addEventListener("click", previousPage);
+   ```
 
 2. 在上边代码的基础上，定义这 2 个函数 — 添加下面代码：
 
-    ```js
-    function nextPage(e) {
-      pageNumber++;
-      fetchResults(e);
-    };
+   ```js
+   function nextPage(e) {
+     pageNumber++;
+     fetchResults(e);
+   }
 
-    function previousPage(e) {
-      if(pageNumber > 0) {
-        pageNumber--;
-      } else {
-        return;
-      }
-      fetchResults(e);
-    };
-    ```
+   function previousPage(e) {
+     if (pageNumber > 0) {
+       pageNumber--;
+     } else {
+       return;
+     }
+     fetchResults(e);
+   }
+   ```
 
-    第一个函数很简单 — 增加 `pageNumber` 变量，然后再次运行 `fetchResults()` 函数 展示下一页的结果。
+   第一个函数很简单 — 增加 `pageNumber` 变量，然后再次运行 `fetchResults()` 函数 展示下一页的结果。
 
-    第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
+   第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
 
-> **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
+> **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
 
 ## YouTube 示例
 

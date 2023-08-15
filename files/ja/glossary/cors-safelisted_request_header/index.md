@@ -1,7 +1,6 @@
 ---
 title: CORS-safelisted request header (CORS セーフリストリクエストヘッダー)
 slug: Glossary/CORS-safelisted_request_header
-page-type: glossary-definition
 l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
@@ -22,7 +21,7 @@ l10n:
 CORS セーフリストリクエストヘッダーとなるためには、次の要件も満たさなければなりません:
 
 - {{HTTPHeader("Accept-Language")}} と {{HTTPHeader("Content-Language")}} については、値が次の文字のみで構成されていなければなりません: `0-9`・`A-Z`・`a-z`・空白・`*,-.;=`
-- {{HTTPHeader("Accept")}} と {{HTTPHeader("Content-Type")}} については、次の _CORS アンセーフリクエストヘッダーバイト_と呼ばれる文字を含んではいけません: `0x00-0x1F` (ただし、`0x09 (HT)` は含めても良い)・`"():<>?@[\]{}`・`0x7F (DEL)`.
+- {{HTTPHeader("Accept")}} と {{HTTPHeader("Content-Type")}} については、次の *CORS アンセーフリクエストヘッダーバイト*と呼ばれる文字を含んではいけません: `0x00-0x1F` (ただし、`0x09 (HT)` は含めても良い)・`"():<>?@[\]{}`・`0x7F (DEL)`.
 - {{HTTPHeader("Content-Type")}} について: 値をパースした結果（パラメーターを除く）が、`application/x-www-form-urlencoded` か、`multipart/form-data`、`text/plain` のうち、いずれかの MIME タイプでなければなりません。
 - すべてのヘッダーについて: 値の長さが128バイトを超えてはいけません。
 

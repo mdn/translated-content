@@ -2,6 +2,7 @@
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
+
 {{JSRef}}
 
 **`lastIndexOf()`** 메서드는 배열에서 주어진 값을 발견할 수 있는 마지막 인덱스를 반환하고, 요소가 존재하지 않으면 -1을 반환합니다. 배열 탐색은 `fromIndex`에서 시작하여 뒤로 진행합니다.
@@ -37,10 +38,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ```js
 var array = [2, 5, 9, 2];
-array.lastIndexOf(2);     // 3
-array.lastIndexOf(7);     // -1
-array.lastIndexOf(2, 3);  // 3
-array.lastIndexOf(2, 2);  // 0
+array.lastIndexOf(2); // 3
+array.lastIndexOf(7); // -1
+array.lastIndexOf(2, 3); // 3
+array.lastIndexOf(2, 2); // 0
 array.lastIndexOf(2, -2); // 0
 array.lastIndexOf(2, -1); // 3
 ```
@@ -51,12 +52,12 @@ array.lastIndexOf(2, -1); // 3
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.lastIndexOf(element);
 while (idx != -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);

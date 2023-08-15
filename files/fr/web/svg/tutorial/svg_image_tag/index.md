@@ -1,12 +1,6 @@
 ---
-title: 'SVG: Elément image'
+title: "SVG: Elément image"
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-tags:
-  - Débutant
-  - SVG
-  - Tutoriel
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
-original_slug: Web/SVG/Tutoriel/SVG_Image_Tag
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/polices_SVG", "Web/SVG/Tutoriel/Tools_for_SVG") }}

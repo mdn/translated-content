@@ -198,27 +198,20 @@ ls -l
 
 既然我们已经讨论了两个基本命令，那么稍微浏览一下您的目录，看看是否可以从一个位置导航到下一个位置。
 
-### 创建，复制，移动，删除
+### 创建、复制、移动、删除
 
 在使用终端时，您可能会经常使用其他一些基本实用程序命令。它们非常简单，所以我们不会像前一对那样详细地解释它们。
 
 在您创建的某个地方的测试目录中使用它们，这样您就不会意外地删除任何重要的内容，使用下面的示例命令作为指导
 
-- `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
-- `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
+- `mkdir`——这将在用户所在的当前目录中创建一个新目录，名称是在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
+- `rmdir`——删除指定目录，但仅当它为空时。例如 `rmdir my-awesome-website` 将删除我们在上面创建的目录。如果你希望删除一个非空的目录（并删除其中包含的所有内容），则可以使用 `-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容，因为它将永远消失。
+- `touch`——在当前目录中创建一个新的空文件。例如`touch mdn-example.md` 创建一个新的空文件叫做 `mdn-example.md`.
+- `mv`——将文件从第一个指定的文件位置移动到第二个指定的文件位置。例如，将文件从第一个指定的文件位置移动到第二个指定的文件位置 `mdn-example.md mdn-example.txt`（这些位置被写成文件路径）。此命令将当前目录中名为 `mdn-example.md` 的文件移动到当前目录中名为 `mdn-example.txt` 的文件。从技术上讲，文件正在被移动，但是从实际的角度来看，这个命令实际上是在重命名文件。
+- `cp`——类似于 `mv`, `cp`在指定的第一个位置和第二个位置创建文件的副本。例如 `cp mdn-example.txt mdn-example.txt.bak` 创建一个副本 `mdn-example.txt` 叫做 `mdn-example.txt.bak`（当然，如果你愿意，你也可以叫它别的名字）。
+- `rm`——删除指定的文件。例如，`rm mdn-example.txt` 删除单个文件叫做 `mdn-example.txt`。请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。
 
-  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ，因为它将永远消失。
-
-- `touch` —在当前目录中创建一个新的空文件。例如`touch mdn-example.md` 创建一个新的空文件叫做 `mdn-example.md`.
-- `mv` —
-
-  例如，将文件从第一个指定的文件位置移动到第二个指定的文件位置`mdn-example.md mdn-example.txt`(这些位置被写成文件路径)。此命令移动一个名为`mdn-example.md`在当前目录中调用一个文件`mdn-example.txt` in the current directory.从技术上讲，文件正在被移动，但是从实际的角度来看，这个命令实际上是在重命名文件。
-
-- `cp` — 类似于 `mv`, `cp`在指定的第一个位置和第二个位置创建文件的副本。例如
-  `cp mdn-example.txt mdn-example.txt.bak`创建一个副本`mdn-example.txt` 叫做 `mdn-example.txt.bak`（当然，如果你愿意，你也可以叫它别的名字)。
-- `rm` —删除指定的文件。例如，`rm mdn-example.txt` 删除单个文件叫做 `mdn-example.txt`.请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。
-
-> **备注：** 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子，`rm mdn-*` 将删除所有文件开头`mdn-`. `rm mdn-*.bak` 会删除所有文件的开头`mdn-` 结束 `.bak`.
+> **备注：** 许多终端命令允许你使用星号作为“通配符”字符，意思是“任何字符序列”。这允许你一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。例如，`rm mdn-*` 将删除所有以 `mdn-` 开头的文件。`rm mdn-*.bak` 会删除所有以 `mdn-` 开头，以 `.bak` 结束的文件。
 
 ## 考虑终端有害吗？
 
@@ -270,12 +263,12 @@ ls | wc -l
 
 让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
 因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。
@@ -292,9 +285,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 
 ```bash
 location: /en-US/docs/Web/API/fetch
-location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/fetch
 ```
 
 尽管有些做作，我们可以把这个结果做得更深入一点，并变换 `location:` 行内容，将基本的起点添加到每个起点的开始，这样我们就可以打印出完整的 url。为此，我们将在混合中添加 awk(它是一种类似于 JavaScript、Ruby 或 Python 的编程语言，只是要老得多 !)
@@ -308,9 +298,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | aw
 最终的输出应该是这样的
 
 ```bash
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
@@ -430,9 +417,13 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 我们可以在代码基上运行得更好，以检查我们的代码是否需要调整。cd 到您的目录中，并尝试运行此命令：

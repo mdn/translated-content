@@ -70,19 +70,19 @@ while (queue.waitForMessage()) {
 這裡有個示範此概念的例子（`setTimeout`在其計時器到期後不會立刻執行）：
 
 ```js
-  const s = new Date().getSeconds();
+const s = new Date().getSeconds();
 
-  setTimeout(function() {
-    // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-    console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
-  }, 500)
+setTimeout(function () {
+  // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
+  console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
+}, 500);
 
-  while (true) {
-    if (new Date().getSeconds() - s >= 2) {
-      console.log("Good, looped for 2 seconds")
-      break;
-    }
+while (true) {
+  if (new Date().getSeconds() - s >= 2) {
+    console.log("Good, looped for 2 seconds");
+    break;
   }
+}
 ```
 
 ### 零延遲（Zero delay）
@@ -91,22 +91,20 @@ while (queue.waitForMessage()) {
 在下面範例中，「this is just a message」會寫在 setTimeout 的回呼訊息被執行之前，因為該時間段參數是要求執行環境處理所需的最少等待時間，而非一個保證時間。
 
 ```js
-(function() {
-
-  console.log('this is the start');
+(function () {
+  console.log("this is the start");
 
   setTimeout(function cb() {
-    console.log('this is a msg from call back');
+    console.log("this is a msg from call back");
   });
 
-  console.log('this is just a message');
+  console.log("this is just a message");
 
   setTimeout(function cb1() {
-    console.log('this is a msg from call back1');
+    console.log("this is a msg from call back1");
   }, 0);
 
-  console.log('this is the end');
-
+  console.log("this is the end");
 })();
 
 // "this is the start"

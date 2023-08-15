@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
-tags:
-  - API
-  - Canvas
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
 
 {{APIRef}}
@@ -46,10 +41,10 @@ ctx.fillStyle = pattern;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -66,8 +61,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {
@@ -80,7 +75,7 @@ for (let i = 0; i < 6; i++) {
 }
 ```
 
-#### Результат:
+#### Результат
 
 {{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "canvas_fillstyle.png")}}
 
@@ -88,22 +83,9 @@ for (let i = 0; i < 6; i++) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
-
-В браузерах на основе WebKit и Blink реализован устаревший и нестандартный метод `ctx.setFillColor()` в дополнение к этому.
-
-### Особенности WebKit/Blink
-
-В браузерах на базе Webkit и Blink помимо этого свойства, также поддерживается нестандартный метод `ctx.setFillColor()`.
-
-```js
-setFillColor(color, optional alpha);
-setFillColor(grayLevel, optional alpha);
-setFillColor(r, g, b, a);
-setFillColor(c, m, y, k, a);
-```
 
 ## Смотрите также
 

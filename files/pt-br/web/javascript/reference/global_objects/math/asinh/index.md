@@ -35,8 +35,8 @@ Como `asinh()` é um métodos estático de `Math`, você deve sempre chamá-lo c
 ### Usando `Math.asinh()`
 
 ```js
-Math.asinh(1);  // 0.881373587019543
-Math.asinh(0);  // 0
+Math.asinh(1); // 0.881373587019543
+Math.asinh(0); // 0
 ```
 
 ## Polyfill
@@ -44,22 +44,24 @@ Math.asinh(0);  // 0
 Como uma solução simples a expressçao<math><semantics><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> pode ser usada diretamente para uma emulação grosseira pela seguinte função:
 
 ```js
-Math.asinh = Math.asinh || function(x) {
-  if (x === -Infinity) {
-    return x;
-  } else {
-    return Math.log(x + Math.sqrt(x * x + 1));
-  }
-};
+Math.asinh =
+  Math.asinh ||
+  function (x) {
+    if (x === -Infinity) {
+      return x;
+    } else {
+      return Math.log(x + Math.sqrt(x * x + 1));
+    }
+  };
 ```
 
 Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) ou[GNU Scientific Library](http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).
 
 ## Especificações
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}         | {{Spec2('ES6')}}         | Initial definition. |
+| Specification                                            | Status               | Comment             |
+| -------------------------------------------------------- | -------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}     | {{Spec2('ES6')}}     | Initial definition. |
 | {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

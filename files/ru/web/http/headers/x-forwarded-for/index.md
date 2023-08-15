@@ -1,12 +1,6 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-tags:
-  - Заголовок
-  - заголовок запроса
-  - оригинальный адрес
-translation_of: Web/HTTP/Headers/X-Forwarded-For
-original_slug: Web/HTTP/Заголовки/X-Forwarded-For
 ---
 
 {{HTTPSidebar}}

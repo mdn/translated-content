@@ -1,7 +1,6 @@
 ---
 title: Managing screen orientation
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-original_slug: WebAPI/Managing_screen_orientation
 ---
 
 {{SeeCompatTable}}
@@ -27,7 +26,12 @@ Screen orientation 은 [device orientation](/ko/docs/WebAPI/Detecting_device_ori
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 CSS 는 화면 방향에 따라 특정 스타일을 을 다루기 위해 orientation media query 에 의존한다
@@ -35,8 +39,9 @@ CSS 는 화면 방향에 따라 특정 스타일을 을 다루기 위해 orienta
 ```css
 /* First let's define some common styles */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -48,17 +53,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -68,7 +73,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -99,15 +104,15 @@ Once we have some common styles we can start defining a special case for the ori
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 실행 결과를 보자
 
-| Portrait                                                                                             | Landscape                                                                                            |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Portrait                                                                     | Landscape                                                                    |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }} | {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }} |
 
 > **참고:** orientation media query 는 실제로 브라우저 창 (또는 iframe) 의 방향에 따라 적용한다. 장치의 방향이 아니다.
@@ -137,12 +142,12 @@ screen.addEventListener("orientationchange", function () {
 {{domxref("window.screen.lockOrientation","screen.lockOrientation()")}} 는 적용 할 잠금의 종류를 정의하는 문자열 (또는 일련의 문자열) 을 수용한다. 수용하는 값들: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (각각의 값들에 대해 좀 더 알려면 {{domxref("window.screen.lockOrientation","lockOrientation")}} 를 보라).
 
 ```js
-screen.lockOrientation('landscape');
+screen.lockOrientation("landscape");
 ```
 
-> **참고:** **Note:** 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
+> **참고:** 화면 잠금은 웹 어플리케이션에 따라 다르다. 어플레케이션 A이 가로모드로 잠겨 있고 어플레케이션 B가 세로모드로 잠겨 있을 때, 어플리케이션을 A 에서 B 로 또는 B 에서 A 로 전환하면 {{domxref("Window.orientationchange_event", "orientationchange")}} 를 호출하지 않는다. 왜냐하면 각 어플리케이션은 각자의 방향을 유지 하기 때문이다.그러나, 만약 잠금요구를 만족하기 위해 방향이 바뀌어야한다면 화면잠금은 {{domxref("Window.orientationchange_event", "orientationchange")}} 이벤트를 호출 할 수 있다.
 
-## See also
+## 같이 보기
 
 - {{domxref("window.screen.orientation","screen.orientation")}}
 - {{domxref("window.screen.lockOrientation()","screen.lockOrientation()")}}

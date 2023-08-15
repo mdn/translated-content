@@ -18,7 +18,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dt>
             <a
               href="/ru/docs/Web/WebGL/Getting_started_with_WebGL"
-              title="en-US/docs/WebGL/Getting started with WebGL"
+              title="/en-US/docs/WebGL/Getting started with WebGL"
               >Начало работы с WebGL</a
             >
           </dt>
@@ -26,7 +26,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dt>
             <a
               href="/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context"
-              title="en-US/docs/WebGL/Adding 2D content to a WebGL context"
+              title="/en-US/docs/WebGL/Adding 2D content to a WebGL context"
               >Добавление 2D контента в контекст WebGL</a
             >
           </dt>
@@ -34,7 +34,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dt>
             <a
               href="/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL"
-              title="en-US/docs/WebGL/Using shaders to apply color in WebGL"
+              title="/en-US/docs/WebGL/Using shaders to apply color in WebGL"
               >Использование шейдеров для назначения цвета в WebGL</a
             >
           </dt>
@@ -42,7 +42,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dt>
             <a
               href="/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL"
-              title="en-US/docs/WebGL/Animating objects with WebGL"
+              title="/en-US/docs/WebGL/Animating objects with WebGL"
               >Анимация объектов с помощью WebGL</a
             >
           </dt>
@@ -52,8 +52,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Creating_3D_objects_using_WebGL"
-              title="en-US/docs/WebGL/Creating 3D objects using WebGL"
+              href="/ru/docs/WebGL/Creating_3D_objects_using_WebGL"
               >Создание 3D объектов с помощью WebGL</a
             >
           </dt>
@@ -63,24 +62,21 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Using_textures_in_WebGL"
-              title="en-US/docs/WebGL/Using textures in WebGL"
+              href="/ru/docs/WebGL/Using_textures_in_WebGL"
               >Использование текстур в WebGL</a
             >
           </dt>
           <dd>Демонстрирует как разместить текстуры на гранях объекта.</dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Lighting_in_WebGL"
-              title="en-US/docs/WebGL/Lighting in WebGL"
+              href="/ru/docs/WebGL/Lighting_in_WebGL"
               >Освещение в WebGL</a
             >
           </dt>
           <dd>Как имитировать эффекты освещения в контексте WebGL .</dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Animating_textures_in_WebGL"
-              title="en-US/docs/WebGL/Animating textures in WebGL"
+              href="/ru/docs/WebGL/Animating_textures_in_WebGL"
               >Анимация текстур в WebGL</a
             >
           </dt>
@@ -90,8 +86,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/WebGL_best_practices"
-              title="en-US/docs/WebGL/WebGL best practices"
+              href="/ru/docs/WebGL/WebGL_best_practices"
               >WebGL: советы по применению на практике</a
             >
           </dt>
@@ -101,8 +96,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Cross-Domain_Textures"
-              title="en-US/docs/WebGL/Cross-Domain Textures"
+              href="/ru/docs/WebGL/Cross-Domain_Textures"
               >Текстуры с других доменов</a
             >
           </dt>
@@ -112,8 +106,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           </dd>
           <dt>
             <a
-              href="/en-US/docs/WebGL/Using_Extensions"
-              title="en-US/docs/WebGL/Using_Extensions"
+              href="/ru/docs/WebGL/Using_Extensions"
               >Использование расширений</a
             >
           </dt>

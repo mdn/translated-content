@@ -31,7 +31,7 @@ Em comparação a função global {{jsxref("Global_Objects/isNaN", "isNaN")}}, N
 ```js
 Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0) // true
+Number.isNaN(0 / 0); // true
 
 // everything else: false
 Number.isNaN(undefined);
@@ -51,8 +51,8 @@ Number.isNaN("blabla"); // e.g. este teria sido true com isNaN
 
 ## Especificações
 
-| Especificação                                                                | Status               | Comentário         |
-| ---------------------------------------------------------------------------- | -------------------- | ------------------ |
+| Especificação                                            | Status           | Comentário         |
+| -------------------------------------------------------- | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

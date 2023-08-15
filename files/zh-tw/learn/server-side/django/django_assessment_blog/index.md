@@ -168,7 +168,7 @@ The following screenshot provide an example of what the finished program should 
 
 ### 列出所有的部落格文章
 
-這個頁面會列出所有部落格內的文章(可以從側邊選單的“所有文章”連結進入)。
+這個頁面會列出所有部落格內的文章(可以從側邊選單的「所有文章」連結進入)。
 幾項提醒：
 
 - 側邊選單也要列出目前登入的使用者。
@@ -180,7 +180,7 @@ The following screenshot provide an example of what the finished program should 
 
 ### 列出所有部落客(文章作者)
 
-可以由側邊選單的“所有部落客”進入此頁面，並於頁面上提供連結至每一位部落客。
+可以由側邊選單的「所有部落客」進入此頁面，並於頁面上提供連結至每一位部落客。
 從截圖可以發現到，並沒有任何一位使用者登入。
 
 ![List of all bloggers](diyblog_blog_allbloggers.png)
@@ -212,7 +212,7 @@ The following screenshot provide an example of what the finished program should 
 
 以下說明實作的步驟。
 
-1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
+1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用『diyblog』作為專案名稱，『blog』作為 app 的名稱。
 2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
 
    - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。

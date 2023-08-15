@@ -1,11 +1,6 @@
 ---
 title: name
 slug: Web/Manifest/name
-tags:
-  - Manifest
-  - Web
-  - name
-translation_of: Web/Manifest/name
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
@@ -48,12 +43,10 @@ translation_of: Web/Manifest/name
 "name": "!أنا من التطبيق"
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                    | Status                       | Comment             | Feedback                                                                         |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#name-member', 'name')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

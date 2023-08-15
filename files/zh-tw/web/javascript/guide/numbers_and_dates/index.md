@@ -22,13 +22,13 @@ slug: Web/JavaScript/Guide/Numbers_and_dates
 ### 十進制數值
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // 以零為開頭時要小心：
 
-0888 // 888 解析為 十進制數值
-0777 // 在 non-strict 模式下將解析成八進制 (等同於十進制的 511)
+0888; // 888 解析為 十進制數值
+0777; // 在 non-strict 模式下將解析成八進制 (等同於十進制的 511)
 ```
 
 請注意，十進位數字允許第一個數字設為零(`0`)的話，前提是後面接的數字必須要有一個數字大於 8(例如輸入 0888 結果會是 888，輸入 068 結果會是 68)，不然則會被轉成８進位(例如 0777 結果會是 511，輸入 063 結果會是 51)。
@@ -38,9 +38,9 @@ slug: Web/JavaScript/Guide/Numbers_and_dates
 二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (`0b` 或 `0B`)。如果 `0b` 後面接著的數字不是 0 或 1，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError): "Missing binary digits after 0b"。
 
 ```js
-var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### 八進制數值
@@ -63,17 +63,17 @@ var a = 0o10; // ES2015: 8
 十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(`0x` 或 `0X`)。如果 `0b` 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError):"Identifier starts immediately after numeric literal"。
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### 指數運算
 
 ```js
-1E3   // 1000
-2e6   // 2000000
-0.1e2 // 10
+1e3; // 1000
+2e6; // 2000000
+0.1e2; // 10
 ```
 
 ## `Number` 物件
@@ -94,67 +94,67 @@ You always refer to a property of the predefined `Number` object as shown above,
 
 `Number` **的屬性**
 
-| 屬性                                                 | 描述                                                                                                                      |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}             | 可表示的最大數值                                                                                                          |
-| {{jsxref("Number.MIN_VALUE")}}             | 可表示的最小數值                                                                                                          |
-| {{jsxref("Number.NaN")}}                     | 表示「非數值」（Not-A-Number）的數值                                                                                      |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                                     |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                                     |
-| {{jsxref("Number.EPSILON")}}                 | Difference between one and the smallest value greater than one that can be represented as a {{jsxref("Number")}}. |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}     | 可以在 JavaScript 中安全表示的最小數值。                                                                                  |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}     | 可以在 JavaScript 中安全表示的最大數值。                                                                                  |
+| 屬性                                   | 描述                                                                                                              |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.MAX_VALUE")}}         | 可表示的最大數值                                                                                                  |
+| {{jsxref("Number.MIN_VALUE")}}         | 可表示的最小數值                                                                                                  |
+| {{jsxref("Number.NaN")}}               | 表示「非數值」（Not-A-Number）的數值                                                                              |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                             |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                             |
+| {{jsxref("Number.EPSILON")}}           | Difference between one and the smallest value greater than one that can be represented as a {{jsxref("Number")}}. |
+| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最小數值。                                                                          |
+| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最大數值。                                                                          |
 
-| 方法                                             | 描述                                                                                                                                                                                                  |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | 字串轉換成浮點數。 等同於全域函式 {{jsxref("parseFloat", "parseFloat()")}} 。                                                                                                             |
-| {{jsxref("Number.parseInt()")}}         | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxref("parseInt", "parseInt()")}} 。                                                                                                     |
-| {{jsxref("Number.isFinite()")}}         | 判定給定的值是不是一個有限數。                                                                                                                                                                        |
-| {{jsxref("Number.isInteger()")}}     | 判定給定的值是不是一個整數                                                                                                                                                                            |
-| {{jsxref("Number.isNaN()")}}             | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                                                           |
+| 方法                                 | 描述                                                                                                                                                                      |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | 字串轉換成浮點數。 等同於全域函式 {{jsxref("parseFloat", "parseFloat()")}} 。                                                                                             |
+| {{jsxref("Number.parseInt()")}}      | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxref("parseInt", "parseInt()")}} 。                                                                                     |
+| {{jsxref("Number.isFinite()")}}      | 判定給定的值是不是一個有限數。                                                                                                                                            |
+| {{jsxref("Number.isInteger()")}}     | 判定給定的值是不是一個整數                                                                                                                                                |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 
-| 方法                                                                     | 描述                                                                                       |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| 方法                                                  | 描述                                                                                       |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxref("Number.toFixed", "toFixed()")}}             | Returns a string representing the number in fixed-point notation.                          |
+| {{jsxref("Number.toPrecision", "toPrecision()")}}     | Returns a string representing the number to a specified precision in fixed-point notation. |
 
 ## `Math` 物件
 
 The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 Similarly, standard mathematical functions are methods of `Math`. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 Note that all trigonometric methods of `Math` take arguments in radians.
 
 The following table summarizes the `Math` object's methods.
 
-| 方法                                                                                                                                                                                                                                                                                   | 描述                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                                                                               | 絕對值                                                                                                                                |
-| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                                                           | 三角函數; 引數以弳度表示                                                                                                              |
-| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                                             | 反三角函數; 回傳值以弳度表示                                                                                                          |
-| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                                                               | 雙曲函數; 引數以 hyperbolic angle 表示                                                                                                |
-| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                                                   | 反雙曲函數; 回傳值以 hyperbolic angle 表示                                                                                            |
+| 方法                                                                                                                                                                                                               | 描述                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                    | 絕對值                                                                                                                                |
+| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                  | 三角函數; 引數以弳度表示                                                                                                              |
+| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                       | 反三角函數; 回傳值以弳度表示                                                                                                          |
+| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                            | 雙曲函數; 引數以 hyperbolic angle 表示                                                                                                |
+| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                      | 反雙曲函數; 回傳值以 hyperbolic angle 表示                                                                                            |
 | {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | 指數及對數函式                                                                                                                        |
-| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                                                                         | 回傳小於等於/大於等於指定數字的最大/最小整數                                                                                          |
-| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                                                                     | Returns lesser or greater (respectively) of comma separated list of numbers arguments                                                 |
-| {{jsxref("Math.random", "random()")}}                                                                                                                                                                                                                                       | 回傳一個介於 0 到 1 之間的數值                                                                                                        |
-| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                                                  | Rounding and truncation functions.                                                                                                    |
-| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                                                           | Square root, cube root, Square root of the sum of square arguments.                                                                   |
-| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                                                                           | The sign of a number, indicating whether the number is positive, negative or zero.                                                    |
-| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                                                                         | Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments. |
+| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                             | 回傳小於等於/大於等於指定數字的最大/最小整數                                                                                          |
+| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                   | Returns lesser or greater (respectively) of comma separated list of numbers arguments                                                 |
+| {{jsxref("Math.random", "random()")}}                                                                                                                                                                              | 回傳一個介於 0 到 1 之間的數值                                                                                                        |
+| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                   | Rounding and truncation functions.                                                                                                    |
+| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                          | Square root, cube root, Square root of the sum of square arguments.                                                                   |
+| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                  | The sign of a number, indicating whether the number is positive, negative or zero.                                                    |
+| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                             | Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments. |
 
 Unlike many other objects, you never create a `Math` object of your own. You always use the built-in `Math` object.
 
@@ -204,7 +204,7 @@ With the "get" and "set" methods you can get and set seconds, minutes, hours, da
 舉例，假設你定義了一個日期如下：
 
 ```js
-var Xmas95 = new Date('December 25, 1995');
+var Xmas95 = new Date("December 25, 1995");
 ```
 
 那 `Xmas95.getMonth()` 將會回傳 11， `Xmas95.getFullYear()` 會回傳 1995。
@@ -228,7 +228,7 @@ The `parse` method is useful for assigning values from date strings to existing 
 
 ```js
 var IPOdate = new Date();
-IPOdate.setTime(Date.parse('Aug 9, 1995'));
+IPOdate.setTime(Date.parse("Aug 9, 1995"));
 ```
 
 ### 範例
@@ -241,12 +241,11 @@ function JSClock() {
   var hour = time.getHours();
   var minute = time.getMinutes();
   var second = time.getSeconds();
-  var temp = '' + ((hour > 12) ? hour - 12 : hour);
-  if (hour == 0)
-    temp = '12';
-  temp += ((minute < 10) ? ':0' : ':') + minute;
-  temp += ((second < 10) ? ':0' : ':') + second;
-  temp += (hour >= 12) ? ' P.M.' : ' A.M.';
+  var temp = "" + (hour > 12 ? hour - 12 : hour);
+  if (hour == 0) temp = "12";
+  temp += (minute < 10 ? ":0" : ":") + minute;
+  temp += (second < 10 ? ":0" : ":") + second;
+  temp += hour >= 12 ? " P.M." : " A.M.";
   return temp;
 }
 ```

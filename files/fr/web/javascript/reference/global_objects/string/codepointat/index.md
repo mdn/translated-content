@@ -1,16 +1,6 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/codePointAt
 ---
 
 {{JSRef}}
@@ -22,7 +12,7 @@ La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code
 ## Syntaxe
 
 ```js
-str.codePointAt(pos)
+str.codePointAt(pos);
 ```
 
 ### Paramètres
@@ -41,10 +31,10 @@ S'il n'y a pas d'élément à la position donnée, la valeur renvoyée sera {{js
 ## Exemples
 
 ```js
-'ABC'.codePointAt(1);          // 66
-'\uD800\uDC00'.codePointAt(0); // 65536
+"ABC".codePointAt(1); // 66
+"\uD800\uDC00".codePointAt(0); // 65536
 
-'XYZ'.codePointAt(42); // undefined
+"XYZ".codePointAt(42); // undefined
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -54,18 +44,18 @@ Le fragment de code suivant permet d'ajouter la méthode `codePointAt()` pour le
 ```js
 /*! https://mths.be/codepointat v0.2.0 by @mathias */
 if (!String.prototype.codePointAt) {
-  (function() {
-    'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function() {
+  (function () {
+    "use strict"; // needed to support `apply`/`call` with `undefined`/`null`
+    var defineProperty = (function () {
       // IE 8 only supports `Object.defineProperty` on DOM elements
       try {
         var object = {};
         var $defineProperty = Object.defineProperty;
         var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
+      } catch (error) {}
       return result;
-    }());
-    var codePointAt = function(position) {
+    })();
+    var codePointAt = function (position) {
       if (this == null) {
         throw TypeError();
       }
@@ -73,7 +63,8 @@ if (!String.prototype.codePointAt) {
       var size = string.length;
       // `ToInteger`
       var index = position ? Number(position) : 0;
-      if (index != index) { // better `isNaN`
+      if (index != index) {
+        // better `isNaN`
         index = 0;
       }
       // Account for out-of-bounds indices:
@@ -83,28 +74,31 @@ if (!String.prototype.codePointAt) {
       // Get the first code unit
       var first = string.charCodeAt(index);
       var second;
-      if ( // check if it’s the start of a surrogate pair
-        first >= 0xD800 && first <= 0xDBFF && // high surrogate
+      if (
+        // check if it’s the start of a surrogate pair
+        first >= 0xd800 &&
+        first <= 0xdbff && // high surrogate
         size > index + 1 // there is a next code unit
       ) {
         second = string.charCodeAt(index + 1);
-        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
+        if (second >= 0xdc00 && second <= 0xdfff) {
+          // low surrogate
           // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
+          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
       return first;
     };
     if (defineProperty) {
-      defineProperty(String.prototype, 'codePointAt', {
-        'value': codePointAt,
-        'configurable': true,
-        'writable': true
+      defineProperty(String.prototype, "codePointAt", {
+        value: codePointAt,
+        configurable: true,
+        writable: true,
       });
     } else {
       String.prototype.codePointAt = codePointAt;
     }
-  }());
+  })();
 }
 ```
 

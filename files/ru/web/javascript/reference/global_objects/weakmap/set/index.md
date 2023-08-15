@@ -1,8 +1,8 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
+
 {{JSRef}}
 
 Метод **`set()`** добавляет новый элемент с указанными ключом и значением в объект WeakMap.

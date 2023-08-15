@@ -3,6 +3,8 @@ title: 一級函式（First-class Function）
 slug: Glossary/First-class_Function
 ---
 
+{{GlossarySidebar}}
+
 當函式在那個語言中可以被視為跟其他的變數一樣時，我們稱那樣的程式語言擁有**一級函式**。例如，函式可以作為參數傳遞到另一個函式，可以被另一個函式作為回傳值且可以被當作值一樣指派到另一個變數。
 
 ## 範例 | 指定函式到一個變數

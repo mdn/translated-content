@@ -1,6 +1,6 @@
 ---
 title: CSS アニメーションの使用
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{CSSRef}}

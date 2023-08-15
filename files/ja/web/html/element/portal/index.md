@@ -1,8 +1,8 @@
 ---
-title: '<portal>: ポータル要素'
+title: "<portal>: ポータル要素"
 slug: Web/HTML/Element/portal
 l10n:
-  sourceCommit: f1a92fac204a75e5ceab49294734c5f2ddeed870
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -32,13 +32,13 @@ l10n:
 
 ## アクセシビリティの考慮
 
-`<portal>`が表示するプレビューは、操作が可能ではないため、入力イベントやフォーカスを受けません。そのため、ポータルの埋め込みコンテンツは、{{Glossary("accessibility tree", "アクセシビリティツリー")}}の要素として公開されません。ポータルは、ボタンのように移動してアクティブにすることができ、クリックしたときの既定の動作は、ポータルを有効にすることです。
+`<portal>` が表示するプレビューは、操作が可能ではないため、入力イベントやフォーカスを受けません。そのため、ポータルの埋め込みコンテンツは、{{Glossary("accessibility tree", "アクセシビリティツリー")}}の要素として公開されません。ポータルは、ボタンのように移動してアクティブにすることができ、クリックしたときの既定の動作は、ポータルを有効にすることです。
 
-ポータルには、埋め込まれたページのタイトルが既定のラベルが与えられます。タイトルがない場合は、プレビューで表示されるテキストが結合されてラベルが作成されます。 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用すると、これを上書きすることができます。
+ポータルには、埋め込まれたページのタイトルが既定のラベルが与えられます。タイトルがない場合は、プレビューで表示されるテキストが結合されてラベルが作成されます。[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用すると、これを上書きすることができます。
 
 事前レンダリングのためにポータルを使用する場合は、 HTML の hidden 属性または CSS の {{cssxref("display")}} プロパティの値を `none` にして非表示にしてください。
 
-ポータルがアクティブ化している間にアニメーションを使用する場合は、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#メディア特性を対象にする)を尊重してください。
+ポータルがアクティブ化している間にアニメーションを使用する場合は、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)を尊重してください。
 
 ## 技術的概要
 

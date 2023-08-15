@@ -67,7 +67,7 @@ slug: Web/Tutorials
 
 ### 高級
 
-- **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)**
+- **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)**
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - **[CSS transitions](/zh-TW/docs/CSS/CSS_transitions)**
   - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.

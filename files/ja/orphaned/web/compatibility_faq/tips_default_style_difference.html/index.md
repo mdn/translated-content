@@ -1,7 +1,6 @@
 ---
 title: ブラウザごとの表示の違い(User-Agent-Stylesheetによる表示差異)
 slug: orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
-original_slug: Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 ---
 
 ## 概要

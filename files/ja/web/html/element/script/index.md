@@ -1,8 +1,8 @@
 ---
-title: '<script>: スクリプト要素'
+title: "<script>: スクリプト要素"
 slug: Web/HTML/Element/script
 l10n:
-  sourceCommit: f2ad7c5bfe075511f5a5c2a040e54889a2158d3b
+  sourceCommit: 548324ee12e26876c9c0bab6a3102bdafce7d6b8
 ---
 
 {{HTMLSidebar}}
@@ -13,10 +13,10 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -30,7 +30,7 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
@@ -138,7 +138,7 @@ l10n:
         開発者はデータブロックを記述するために、 JavaScript の MIME タイプではない有効な MIME タイプを使用しなければなりません。
         他の属性は、`src` 属性も含めてすべて無視されます。
 
-- `blocking`
+- `blocking` {{Experimental_Inline}}
   - : この属性は、スクリプトのフェッチ時に特定の処理をブロックすることを明示的に示します。ブロックされる操作は、下記のブロッキング属性をスペースで区切って列挙したものでなければなりません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
@@ -151,9 +151,9 @@ l10n:
 
 ## メモ
 
-[`async`](/ja/docs/Web/HTML/Element/script#async), [`defer`](/ja/docs/Web/HTML/Element/script#defer), `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
+[`async`](#async), [`defer`](#defer), `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
 
-スクリプトは `text/javascript` の MIME タイプで提供するべきですが、ブラウザーは寛大であり、画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、`text/csv` のタイプで提供されたスクリプトに限りブロックします。スクリプトがブロックされると、 {{domxref("Element/error_event", "error")}} イベントがその要素に送られ、そうではない場合は {{domxref("Element/load_event", "load")}} イベントが送られます。
+スクリプトは `text/javascript` の MIME タイプで提供するべきですが、ブラウザーは寛大であり、画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、`text/csv` のタイプで提供されたスクリプトに限りブロックします。スクリプトがブロックされると、 {{domxref("HTMLElement/error_event", "error")}} イベントがその要素に送られ、そうではない場合は {{domxref("HTMLElement/load_event", "load")}} イベントが送られます。
 
 ## 例
 
@@ -175,7 +175,7 @@ l10n:
 
 ### モジュールの代替
 
- `module` の値を持つ [`type`](/ja/docs/Web/HTML/Element/script#type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
+ `module` の値を持つ [`type`](#type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
 
 ```html
 <script type="module" src="main.js"></script>
@@ -255,6 +255,5 @@ import { name as circleName } from "circle";
 ## 関連情報
 
 - {{domxref("document.currentScript")}}
-- [Ryan Grove's `<script>` and `<link>` node event compatibility chart](https://pie.gd/test/script-link-events/)
 - [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
 - [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)ガイド

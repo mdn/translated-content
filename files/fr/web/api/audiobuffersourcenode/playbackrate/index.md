@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode.playbackRate
 slug: Web/API/AudioBufferSourceNode/playbackRate
-translation_of: Web/API/AudioBufferSourceNode/playbackRate
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -36,7 +35,13 @@ Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est ut
 > **Note :** Voir l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```html
-<input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1">
+<input
+  class="playback-rate-control"
+  type="range"
+  min="0.25"
+  max="3"
+  step="0.05"
+  value="1" />
 <span class="playback-rate-value">1.0</span>
 ```
 
@@ -45,14 +50,16 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -60,32 +67,34 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Erreur lors du décodage des données " + e.err});
-
-  }
+      function (e) {
+        "Erreur lors du décodage des données " + e.err;
+      },
+    );
+  };
 
   request.send();
 }
 
 // wire up buttons to stop and play audio, and range slider control
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  playbackControl.removeAttribute('disabled');
-}
+  play.setAttribute("disabled", "disabled");
+  playbackControl.removeAttribute("disabled");
+};
 
-stop.onclick = function() {
+stop.onclick = function () {
   source.stop(0);
-  play.removeAttribute('disabled');
-  playbackControl.setAttribute('disabled', 'disabled');
-}
+  play.removeAttribute("disabled");
+  playbackControl.setAttribute("disabled", "disabled");
+};
 
-playbackControl.oninput = function() {
+playbackControl.oninput = function () {
   source.playbackRate.value = playbackControl.value;
   playbackValue.innerHTML = playbackControl.value;
-}
+};
 ```
 
 ## Spécifications

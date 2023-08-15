@@ -43,18 +43,18 @@ slug: Web/HTML/Element/embed
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - `height`
-  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - `src`
   - : 被嵌套的资源的 URL。
 - `type`
   - : 用于选择插件实例化的 MIME 类型。
 - `width`
-  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## 规范

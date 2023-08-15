@@ -67,8 +67,8 @@ slug: Web/HTML/Element/picture
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-  <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -78,8 +78,8 @@ slug: Web/HTML/Element/picture
 
 ```html
 <picture>
-  <source srcset="mdn-logo.svg" type="image/svg+xml">
-  <img src="mdn-logo.png" alt="MDN">
+  <source srcset="mdn-logo.svg" type="image/svg+xml" />
+  <img src="mdn-logo.png" alt="MDN" />
 </picture>
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: 座標系
-slug: Web/CSS/CSSOM_View/Coordinate_systems
+slug: Web/CSS/CSSOM_view/Coordinate_systems
 ---
 
 {{CSSRef}}

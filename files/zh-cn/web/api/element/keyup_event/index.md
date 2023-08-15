@@ -1,5 +1,5 @@
 ---
-title: 'Element: keyup event'
+title: "Element: keyup event"
 slug: Web/API/Element/keyup_event
 ---
 
@@ -36,7 +36,7 @@ slug: Web/API/Element/keyup_event
 从 Firefox 65 开始，`keyup` 和 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件在 IME 编辑时也会被触发，以提升 CJKT 用户的跨浏览器兼容性（[Firefox bug 354358](https://bugzil.la/354358)）。要忽略 IME 编辑时的所有 `keyup` 事件，请执行以下操作（229 是一个关于被 IME 加工过的事件的 `keyCode` 的特殊值）：
 
 ```js
-eventTarget.addEventListener("keyup", event => {
+eventTarget.addEventListener("keyup", (event) => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
@@ -51,15 +51,15 @@ eventTarget.addEventListener("keyup", event => {
 在这个例子中，每当你在 {{HtmlElement("input")}} 元素里松开一个键，将会打印 {{domxref("KeyboardEvent.code")}} 的值。
 
 ```html
-<input placeholder="Click here, then press and release a key." size="40">
+<input placeholder="Click here, then press and release a key." size="40" />
 <p id="log"></p>
 ```
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('keyup', logKey);
+input.addEventListener("keyup", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;

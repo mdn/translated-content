@@ -44,7 +44,7 @@ const MY_FAV = 7;
 MY_FAV = 20;
 
 // MY_FAV is 7
-console.log('my favorite number is: ' + MY_FAV);
+console.log("my favorite number is: " + MY_FAV);
 
 // 尝试重新声明会报错
 // Uncaught SyntaxError: Identifier 'MY_FAV' has already been declared
@@ -68,14 +68,14 @@ if (MY_FAV === 7) {
   let MY_FAV = 20;
 
   // MY_FAV 现在为 20
-  console.log('my favorite number is ' + MY_FAV);
+  console.log("my favorite number is " + MY_FAV);
 
   // 这被提升到全局上下文并引发错误
   var MY_FAV = 20;
 }
 
 // MY_FAV 依旧为 7
-console.log('my favorite number is ' + MY_FAV);
+console.log("my favorite number is " + MY_FAV);
 ```
 
 ### 常量要求一个初始值
@@ -92,23 +92,23 @@ const FOO;
 常量可以定义成对象和数组
 
 ```js
-const MY_OBJECT = {'key': 'value'};
+const MY_OBJECT = { key: "value" };
 
 // 重写对象和上面一样会失败
 // Uncaught TypeError: Assignment to constant variable.
-MY_OBJECT = {'OTHER_KEY': 'value'};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // 对象属性并不在保护的范围内
 // 下面这个声明会成功执行
-MY_OBJECT.key = 'otherValue'; // Use Object.freeze() to make object immutable
+MY_OBJECT.key = "otherValue"; // Use Object.freeze() to make object immutable
 
 // 也可以用来定义数组
 const MY_ARRAY = [];
 // 可以向数组填充数据
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 // 但是，将一个新数组赋给变量会引发错误
 // Uncaught TypeError: Assignment to constant variable.
-MY_ARRAY = ['B'];
+MY_ARRAY = ["B"];
 ```
 
 ## 规范

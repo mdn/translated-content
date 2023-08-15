@@ -1,7 +1,6 @@
 ---
 title: Sentencias
 slug: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Referencia/Sentencias
 ---
 
 {{jsSidebar("Statements")}}
@@ -77,6 +76,7 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 - {{jsxref("Sentencias/import", "import")}}
   - : Usada para permitir a un escript importar propiedades, funciones y objetos desde otro script firmado que ha exportado su información. Esta antigua funcionalidad de Netscape ha sido removida y será redefinida por los modulos de ECMAScript 6.
 - {{jsxref("Sentencias/label", "label")}}
+
   - : Provee una instrucción con un identificador que puedes referir usando una instrucción `break` o `continue` .
 
 - {{deprecated_inline()}} {{jsxref("Sentencias/with", "with")}}

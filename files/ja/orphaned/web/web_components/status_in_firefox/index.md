@@ -1,7 +1,6 @@
 ---
 title: Firefox での Web Components のサポート状況
 slug: orphaned/Web/Web_Components/Status_in_Firefox
-original_slug: Web/Web_Components/Status_in_Firefox
 ---
 
 {{DefaultAPISidebar("Web Components")}}{{SeeCompatTable}}

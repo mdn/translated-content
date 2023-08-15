@@ -57,7 +57,7 @@ tagFunction`string text ${expression} string text`
 使用普通字符串，可以通过下面的方式得到多行字符串：
 
 ```js
-console.log('string text line 1\n' + 'string text line 2');
+console.log("string text line 1\n" + "string text line 2");
 // "string text line 1
 // string text line 2"
 ```
@@ -283,7 +283,7 @@ console.log(identity`Hi\n${2 + 3}!`);
 ```js
 const html = (strings, ...values) => String.raw({ raw: strings }, ...values);
 // 一些格式化程序会将此字面量的内容格式化为 HTML
-const doc = html`<!DOCTYPE html>
+const doc = html`<!doctype html>
   <html lang="en-US">
     <head>
       <title>Hello</title>
@@ -294,14 +294,14 @@ const doc = html`<!DOCTYPE html>
   </html>`;
 ```
 
-### 带标签的模版字面量及转义序列
+### 带标签的模板字面量及转义序列
 
 在普通模板字面量中，字符串字面量中的转义序列都是允许的，任何其他格式不正确的转义序列都是语法错误，包括：
 
 - `\` 后跟 `0` 以外的任何十进制数字，或 `\0` 后跟一个十进制数字，例如 `\9` 和 `\07`（这是一种[已弃用的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#转义序列)）
 - `\x` 后跟两位以下十六进制数字，例如`\xz`
 - `\u` 后不跟 `{`，并且后跟四个以下十六进制数字，例如 `\uz`
-- `\u{}` 包含无效的 Unicode 码点——包含一个非十六进制数字，或者它的值大于10FFFF，例如 `\u{110000}` 和 `\u{z}`
+- `\u{}` 包含无效的 Unicode 码点——包含一个非十六进制数字，或者它的值大于 10FFFF，例如 `\u{110000}` 和 `\u{z}`
 
 > **备注：** `\` 后面跟着其他字符，虽然它们可能没有用，因为没有转义，但它们不是语法错误。
 
@@ -311,10 +311,10 @@ const doc = html`<!DOCTYPE html>
 
 ```js
 function latex(str) {
- return { "cooked": str[0], "raw": str.raw[0] }
+  return { cooked: str[0], raw: str.raw[0] };
 }
 
-latex`\unicode`
+latex`\unicode`;
 
 // { cooked: undefined, raw: "\\unicode" }
 ```

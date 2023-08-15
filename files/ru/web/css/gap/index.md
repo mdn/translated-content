@@ -1,18 +1,17 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
 ---
 
-Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт отступы ({{glossary("gutters")}}) между столбцами и строками, а не вдоль края контейнера сетки. Является сокращением для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}. {{CSSRef}}
+{{CSSRef}}
 
-The **`gap`** [CSS](/ru/docs/Web/CSS) property sets the gaps ({{glossary("gutters")}}) between rows and columns. It is a [shorthand](/ru/docs/Web/CSS/Shorthand_properties) for {{CSSxRef("row-gap")}} and {{CSSxRef("column-gap")}}.
+Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
-> **Примечание:** [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout) initially defined the `grid-gap` property. This prefixed property is being replaced by `gap`. However, in order to support browsers that implemented `grid-gap` and not `gap` for grid, you will need to use the prefixed property as in the interactive example above.
+Обратите внимание, что `grid-gap` является псевдонимом для этого свойства.
 
-## Syntax
+## Синтаксис
 
 ```css
 /* One <length> value */
@@ -42,27 +41,33 @@ gap: calc(20px + 10%) calc(10% - 5px);
 /* Global values */
 gap: inherit;
 gap: initial;
+gap: revert;
+gap: revert-layer;
 gap: unset;
 ```
 
-This property is specified as a value for `<'row-gap'>` followed optionally by a value for `<'column-gap'>`. If `<'column-gap'>` is omitted, it’s set to the same value as `<'row-gap'>`.
+Свойство задаёт значение для `<'row-gap'>`, за которым может следовать значение для `<'column-gap'>`. Если `<'column-gap'>` опущено, то оно устанавливается в то же значение, что и `<'row-gap'>`.
 
-`<'row-gap'>` and `<'column-gap'>` are each specified as a `<length>` or a `<percentage>`.
+`<'row-gap'>` и `<'column-gap'>` могут быть заданы как `<length>`, так и `<percentage>`.
 
-### Values
+### Значения
 
 - {{CSSxRef("&lt;length&gt;")}}
-  - : Is the width of the gutter separating the grid lines.
+  - : Размер отступа, разделяющего линии сетки.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : Is the width of the gutter separating the grid lines, relative to the dimension of the element.
+  - : Размер отступа, разделяющего линии сетки, относительно размера грид-элемента.
 
-### Formal syntax
+## Формальное определение
 
-{{CSSSyntax}}
+{{cssinfo}}
 
-## Examples
+## Формальный синтаксис
 
-### Flex layout
+{{csssyntax}}
+
+## Примеры
+
+### Флексбокс-раскладка
 
 #### HTML
 
@@ -93,15 +98,14 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-
 }
 ```
 
-#### Result
+#### Результат
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Флексбокс-раскладка", "auto", 250)}}
 
-### Grid layout
+### Грид-раскладка
 
 #### HTML
 
@@ -121,12 +125,6 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 #### CSS
 
-```css hidden
-#grid {
-  grid-gap: 20px 5px;
-}
-```
-
 ```css
 #grid {
   display: grid;
@@ -141,19 +139,18 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 }
 ```
 
-#### Result
+#### Результат
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Грид-раскладка", "auto", 250)}}
 
-### Multi-column layout
+### Многоколоночная раскладка
 
 #### HTML
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column
-  gap created with the CSS <code>gap</code> property.
-  Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a 40px column gap created with the CSS
+  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
 </p>
 ```
 
@@ -166,23 +163,19 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 }
 ```
 
-#### Result
+#### Результат
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                | Status                                   | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName("CSS3 Box Alignment", "#propdef-gap", "gap")}} | {{Spec2("CSS3 Box Alignment")}} | Initial definition |
+{{Specifications}}
 
-{{CSSInfo}}
-
-## Browser compatibility
+## Поддержка браузерами
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
-- Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

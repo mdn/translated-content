@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django: El Sitio Web de La Biblioteca Local'
+title: "Tutorial Django: El Sitio Web de La Biblioteca Local"
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 

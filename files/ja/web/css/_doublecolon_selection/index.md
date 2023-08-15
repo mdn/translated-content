@@ -1,5 +1,5 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
 ---
 

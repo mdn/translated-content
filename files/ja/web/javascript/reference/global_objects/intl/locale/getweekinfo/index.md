@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 ---
 
 {{JSRef}}

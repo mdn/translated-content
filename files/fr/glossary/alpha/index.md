@@ -1,7 +1,6 @@
 ---
 title: Alpha (canal alpha)
 slug: Glossary/Alpha
-translation_of: 'Glossary/Alpha'
 ---
 
 Les couleurs sont représentées sous forme numérique comme un ensemble de nombres, chacun représentant la force ou le niveau d'intensité d'un composant donné de la couleur. Chacun de ces composants est appelé un **canal**. Dans un fichier d'image typique, les canaux de couleur décrivent la quantité de rouge, de vert et de bleu utilisée pour composer la couleur finale. Pour représenter une couleur à travers laquelle le fond peut être vu dans une certaine mesure, un quatrième canal est ajouté à la couleur: le **canal alpha**. Le canal alpha spécifie le degré d'opacité de la couleur.

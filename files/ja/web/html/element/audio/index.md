@@ -1,8 +1,8 @@
 ---
-title: '<audio>: 埋め込み音声要素'
+title: "<audio>: 埋め込み音声要素"
 slug: Web/HTML/Element/audio
 l10n:
-  sourceCommit: 51ae6f3db6f360faf78fe7c69cf8254d8de0e2a9
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -220,7 +220,7 @@ l10n:
   </tbody>
 </table>
 
-## 使用上のメモ
+## 使用上の注意
 
 ブラウザーはすべてが同じ[ファイル形式](/ja/docs/Web/Media/Formats/Containers)や[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)に対応しているわけではありません。内部に含められた {{htmlelement("source")}} 要素で複数のソースを提供することができ、ブラウザーは理解できる最初のものを使用します。
 
@@ -243,6 +243,7 @@ l10n:
 - 音声コンテンツを詳細に制御できるように、 `HTMLMediaElement` はさまざまな[イベント](/ja/docs/Web/API/HTMLMediaElement#イベント)を発行します。これは音声の読み込みプロセスを監視する方法も提供するので、エラーを監視したり、再生や捜査を始めることができるようになったことを検出したりすることができます。
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用すると、既存の音声ファイルのストリーミングではなく、 JavaScript コードから音声ストリームを直接生成および操作することもできます。
 - `<audio>` 要素は `<video>` 要素と同じような方法で字幕を持つことができません。 Ian Devlin による [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) で、役立つ情報や作業があります。
+- この要素を対応しているブラウザーで代替コンテンツをテストするには、`<audio>` を `<notanaudio>` のような存在しない要素に置き換えることで行うことができます。
 
 HTML の `<audio>` 要素の使用に関する良い情報源として、[映像および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の初心者向けチュートリアルがあります。
 
@@ -376,22 +377,13 @@ elem.audioTrackList.onremovetrack = (event) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >、<a href="/ja/docs/HTML/Content_categories#埋め込みコンテンツ"
-          >埋め込みコンテンツ</a
-        >。 <a href="/ja/docs/Web/HTML/Element/audio#controls"><code>controls</code></a>
-        属性を持つ場合は、<a
-          href="/ja/docs/HTML/Content_categories#対話型コンテンツ"
-          >対話型コンテンツ</a
-        >と<a href="/ja/docs/HTML/Content_categories#知覚可能コンテンツ"
-          >知覚可能コンテンツ</a
-        >。
+        >、記述コンテンツ、埋め込みコンテンツ。<a href="/ja/docs/Web/HTML/Element/audio#controls"><code>controls</code></a>
+        属性がある場合は、対話型コンテンツと知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
@@ -427,7 +419,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

@@ -1,13 +1,6 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Experimental
-  - Reference
-  - WebGL
-  - WebGL2
-translation_of: Web/API/WebGL2RenderingContext
 ---
 
 {{APIRef("WebGL")}} {{SeeCompatTable}}
@@ -17,8 +10,8 @@ L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.
 Pour obtenir un objet de cette interface, appelez {{domxref ("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "webgl2" comme argument :
 
 ```js
-var canevas = document.getElementById('monCanevas');
-var gl = canevas.getContext('webgl2');
+var canevas = document.getElementById("monCanevas");
+var gl = canevas.getContext("webgl2");
 ```
 
 > **Note :** WebGL 2 est une extension de WebGL 1. L'interface `WebGL2RenderingContext` implémente tous les membres de l'interface {{domxref("WebGLRenderingContext")}}. Certaines méthodes du contexte WebGL 1 peuvent accepter des valeurs supplémentaires lorsqu'elles sont utilisées dans un contexte WebGL 2. Vous trouverez cette information sur les pages de référence WebGL 1.

@@ -2,6 +2,7 @@
 title: EventTarget
 slug: Web/API/EventTarget
 ---
+
 {{APIRef("DOM")}}
 
 **`EventTarget`** 인터페이스는 이벤트를 수신할 수 있고, 수신한 이벤트에 대한 수신기(listener)를 가질 수 있는 객체가 구현하는 인터페이스입니다. 즉, 이벤트의 대상이 될 수 있는 객체는 `EventTarget`의 세 메서드를 구현합니다.

@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
-translation_of: Web/API/DOMTokenList/entries
 ---
 
 {{APIRef("DOM")}}
@@ -35,8 +34,8 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.entries();
 
-for(var value of iterator) {
-  span.textContent += value + ' ++ ';
+for (var value of iterator) {
+  span.textContent += value + " ++ ";
 }
 ```
 

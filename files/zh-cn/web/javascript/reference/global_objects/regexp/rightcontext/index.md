@@ -28,9 +28,9 @@ RegExp["$'"]
 
 ```js
 var re = /hello/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.rightContext; // " world!"
-RegExp["$'"];       // " world!"
+RegExp["$'"]; // " world!"
 ```
 
 ## 规范

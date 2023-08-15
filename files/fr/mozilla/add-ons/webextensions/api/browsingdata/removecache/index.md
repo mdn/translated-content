@@ -1,16 +1,6 @@
 ---
 title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeCache
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
 {{AddonSidebar()}}
@@ -25,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeCache(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -55,8 +45,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCache({}).
-then(onRemoved, onError);
+browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

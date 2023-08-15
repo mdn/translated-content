@@ -1,13 +1,11 @@
 ---
 title: submit
 slug: Web/API/HTMLFormElement/submit_event
-translation_of: Web/API/HTMLFormElement/submit_event
-original_slug: Web/API/HTMLFormElement/submit_event_
 ---
 
-L’événement `submit` est émis lorsqu’un formulaire est soumis au serveur.
+L'événement `submit` est émis lorsqu'un formulaire est soumis au serveur.
 
-Notez que l’événement `submit` se déclenche **uniquement** sur [l’élement form](/fr-FR/docs/Web/HTML/Element/form), et pas sur les éléments [button](/fr-FR/docs/Web/HTML/Element/button) ou [input submit](/fr/docs/Web/HTML/Element/Input/submit). (Les formulaires sont soumis, pas les boutons.)
+Notez que l'événement `submit` se déclenche **uniquement** sur [l'élement form](/fr-FR/docs/Web/HTML/Element/form), et pas sur les éléments [button](/fr-FR/docs/Web/HTML/Element/button) ou [input submit](/fr/docs/Web/HTML/Element/Input/submit). (Les formulaires sont soumis, pas les boutons.)
 
 ## Informations générales
 
@@ -26,9 +24,9 @@ Notez que l’événement `submit` se déclenche **uniquement** sur [l’élemen
 
 ## Propriétés
 
-| Propriété                             | Type                                 | Description                                                        |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l’évènement (la cible la plus haute dans l’arbre DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type de l’évènement.                                            |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Si l’évènement bouillonne normalement ou non.                      |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Si l’évènement est annulable ou non.                               |
+| Propriété                       | Type                       | Description                                                        |
+| ------------------------------- | -------------------------- | ------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la cible la plus haute dans l'arbre DOM). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type de l'évènement.                                            |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si l'évènement bouillonne normalement ou non.                      |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si l'évènement est annulable ou non.                               |

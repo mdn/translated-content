@@ -1,7 +1,6 @@
 ---
 title: Usando la API de almacenamiento web
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-original_slug: Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -15,9 +14,9 @@ Este artículo proporciona una guía general de cómo usar esta tecnología.
 Los objetos de almacenamiento son simples almacenes de clave/valor, similares a objetos, pero que permanecen intactos cuando la página se recarga. Las claves y los valores siempre son cadenas de texto (fíjate que las claves con enteros se convierten automáticamente a cadenas, tal y como lo hacen los objetos). Puedes acceder a estos valores como un objeto, o con los métodos {{domxref("Storage.getItem()")}} y {{domxref("Storage.setItem()")}}. Estas tres líneas modifican el valor de colorSetting de la misma manera:
 
 ```js
-localStorage.colorSetting = '#a4509b';
-localStorage['colorSetting'] = '#a4509b';
-localStorage.setItem('colorSetting', '#a4509b');
+localStorage.colorSetting = "#a4509b";
+localStorage["colorSetting"] = "#a4509b";
+localStorage.setItem("colorSetting", "#a4509b");
 ```
 
 > **Nota:** Se recomiendo usar la API de almacenamiento web (`setItem`, `getItem`, `removeItem`, `key`, `length`) para prevenir las dificultades asociadas al uso de simples objetos como almacenes de valores llave/valor.
@@ -45,37 +44,37 @@ Esta función detecta si localStorage tiene soporte y está disponible:
 
 ```js
 function storageAvailable(type) {
-    try {
-        var storage = window[type],
-            x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage.length !== 0;
-    }
+  try {
+    var storage = window[type],
+      x = "__storage_test__";
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return (
+      e instanceof DOMException &&
+      // everything except Firefox
+      (e.code === 22 ||
+        // Firefox
+        e.code === 1014 ||
+        // test name field too, because code might not be present
+        // everything except Firefox
+        e.name === "QuotaExceededError" ||
+        // Firefox
+        e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      storage.length !== 0
+    );
+  }
 }
 ```
 
 Y aquí se muestra cómo usarla:
 
 ```js
-if (storageAvailable('localStorage')) {
+if (storageAvailable("localStorage")) {
   // Yippee! We can use localStorage awesomeness
-}
-else {
+} else {
   // Too bad, no localStorage for us
 }
 ```
@@ -101,7 +100,7 @@ También creamos una [página de salida del evento](https://mdn.github.io/dom-ex
 En el inicio de [main.js](https://github.com/mdn/dom-examples/blob/master/web-storage/main.js), probamos si el objeto ya tiene valores (es decir, si la página ya fue visitada):
 
 ```js
-if(!localStorage.getItem('bgcolor')) {
+if (!localStorage.getItem("bgcolor")) {
   populateStorage();
 } else {
   setStyles();
@@ -118,17 +117,17 @@ Como dijimos arriba, los valores se pueden recuperar de la memoria usando {{domx
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -140,9 +139,9 @@ Aquí, en las primeras tres líneas tomamos los valores del almacenamiento local
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-  localStorage.setItem('font', document.getElementById('font').value);
-  localStorage.setItem('image', document.getElementById('image').value);
+  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+  localStorage.setItem("font", document.getElementById("font").value);
+  localStorage.setItem("image", document.getElementById("image").value);
 
   setStyles();
 }
@@ -165,12 +164,14 @@ El evento {{domxref("StorageEvent")}} se dispara siempre que se hace un cambio a
 En la página de eventos (ver [events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js)) el único JavaScript es el siguiente:
 
 ```js
-window.addEventListener('storage', function(e) {
-  document.querySelector('.my-key').textContent = e.key;
-  document.querySelector('.my-old').textContent = e.oldValue;
-  document.querySelector('.my-new').textContent = e.newValue;
-  document.querySelector('.my-url').textContent = e.url;
-  document.querySelector('.my-storage').textContent = JSON.stringify(e.storageArea);
+window.addEventListener("storage", function (e) {
+  document.querySelector(".my-key").textContent = e.key;
+  document.querySelector(".my-old").textContent = e.oldValue;
+  document.querySelector(".my-new").textContent = e.newValue;
+  document.querySelector(".my-url").textContent = e.url;
+  document.querySelector(".my-storage").textContent = JSON.stringify(
+    e.storageArea,
+  );
 });
 ```
 

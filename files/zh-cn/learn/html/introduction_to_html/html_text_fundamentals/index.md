@@ -60,15 +60,21 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 
 <h2>第一回 宴桃园豪杰三结义 斩黄巾英雄首立功</h2>
 
-<p>话说天下大势，分久必合，合久必分。周末七国分争，并入于秦。及秦灭之后，楚、汉分争，又并入于汉……</p>
+<p>
+  话说天下大势，分久必合，合久必分。周末七国分争，并入于秦。及秦灭之后，楚、汉分争，又并入于汉……
+</p>
 
 <h2>第二回 张翼德怒鞭督邮 何国舅谋诛宦竖</h2>
 
-<p>且说董卓字仲颖，陇西临洮人也，官拜河东太守，自来骄傲。当日怠慢了玄德，张飞性发，便欲杀之……</p>
+<p>
+  且说董卓字仲颖，陇西临洮人也，官拜河东太守，自来骄傲。当日怠慢了玄德，张飞性发，便欲杀之……
+</p>
 
 <h3>却说张飞</h3>
 
-<p>却说张飞饮了数杯闷酒，乘马从馆驿前过，见五六十个老人，皆在门前痛哭。飞问其故，众老人答曰：“督邮逼勒县吏，欲害刘公；我等皆来苦告，不得放入，反遭把门人赶打！”……</p>
+<p>
+  却说张飞饮了数杯闷酒，乘马从馆驿前过，见五六十个老人，皆在门前痛哭。飞问其故，众老人答曰：“督邮逼勒县吏，欲害刘公；我等皆来苦告，不得放入，反遭把门人赶打！”……
+</p>
 ```
 
 所涉及的元素具体代表什么，完全取决于作者编辑的内容，只要层次结构是合理的。在创建此类结构时，只需要记住一些最佳实践：
@@ -143,10 +149,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -160,34 +166,34 @@ const htmlSolution = `<h1>静夜思</h1>
 
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -200,7 +206,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -210,10 +219,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -240,7 +249,9 @@ textarea.onkeyup = function(){
 在另一方面，你可以让任一元素看起来像一个顶级标题，考虑如下：
 
 ```html
-<span style="font-size: 32px; margin: 21px 0; display: block;">这是顶级标题吗？</span>
+<span style="font-size: 32px; margin: 21px 0; display: block;"
+  >这是顶级标题吗？</span
+>
 ```
 
 这是一个 {{htmlelement("span")}} 元素，它没有语义。当想要对它用 CSS（或者 JS）时，可以用它包裹内容，且不附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 CSS 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 HTML 元素来标记这个项目。
@@ -262,12 +273,12 @@ textarea.onkeyup = function(){
 
 每份无序的清单从 {{htmlelement("ul")}} 元素开始，需要包裹清单上所有被列出的项目：
 
-```html
+```html-nolint
 <ul>
-豆浆
-油条
-豆汁
-焦圈
+  豆浆
+  油条
+  豆汁
+  焦圈
 </ul>
 ```
 
@@ -293,7 +304,7 @@ textarea.onkeyup = function(){
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> 
+  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -332,10 +343,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -343,30 +354,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<ul>\n<li>豆浆</li>\n<li>油条</li>\n<li>豆汁</li>\n<li>焦圈</li>\n</ul>';
+const htmlSolution =
+  "<ul>\n<li>豆浆</li>\n<li>油条</li>\n<li>豆汁</li>\n<li>焦圈</li>\n</ul>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -374,7 +386,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -387,7 +399,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -400,7 +415,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -447,7 +462,7 @@ textarea.onkeyup = () => {
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> 
+  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
 
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
@@ -487,10 +502,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -507,27 +522,27 @@ const htmlSolution = `<ol>
 </ol>`;
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -535,7 +550,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -548,7 +563,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -561,7 +579,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -584,7 +602,7 @@ textarea.onkeyup = () => {
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> 
+  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
 </p>
 
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
@@ -616,7 +634,8 @@ textarea.onkeyup = () => {
 如果你在北方，可加入黄瓜丁、胡萝卜丁和花生米，翻炒后起锅。
 
 大千鸡
-张大千居加拿大期间，曾按自己喜好改变宫保鸡丁的做法，并传授当地厨师，厨师将之命名为“大千鸡”，以兹纪念。大千鸡与宫保鸡丁不同之处，是使用经细工去皮、出骨、剔膜的鸡腿肉，以干辣椒、豆瓣酱为味，而且不用花生。</textarea>
+张大千居加拿大期间，曾按自己喜好改变宫保鸡丁的做法，并传授当地厨师，厨师将之命名为“大千鸡”，以兹纪念。大千鸡与宫保鸡丁不同之处，是使用经细工去皮、出骨、剔膜的鸡腿肉，以干辣椒、豆瓣酱为味，而且不用花生。</textarea
+>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="重置" />
@@ -647,10 +666,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -693,27 +712,27 @@ const htmlSolution = `<h1>宫保鸡丁的做法</h1>
 <p>张大千居加拿大期间，曾按自己喜好改变宫保鸡丁的做法，并传授当地厨师，厨师将之命名为“大千鸡”，以兹纪念。大千鸡与宫保鸡丁不同之处，是使用经细工去皮、出骨、剔膜的鸡腿肉，以干辣椒、豆瓣酱为味，而且不用花生。</p>`;
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -721,7 +740,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -734,7 +753,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -747,7 +769,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -767,25 +789,42 @@ textarea.onkeyup = () => {
 
 ```html
 <ol>
-  <li>先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。</li>
-  <li>用酱油一大匙、淀粉水一大匙、糖半茶匙、盐四分之一茶匙、白醋一茶匙、蒜末半茶匙调拌均匀，调成“综合调味料”。</li>
-  <li>鸡丁腌好以后，色拉油下锅烧热，先将鸡丁倒入锅内，用大火快炸半分钟，炸到变色之后，捞出来沥干油汁备用。</li>
-  <li>在锅里留下约两大匙油，烧热后将切好的干辣椒下锅，用小火炒香后，再放入花椒粒和葱段一起爆香。随后鸡丁重新下锅，用大火快炒片刻后，再倒入“综合调味料”继续快炒。</li>
+  <li>
+    先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。
+  </li>
+  <li>
+    用酱油一大匙、淀粉水一大匙、糖半茶匙、盐四分之一茶匙、白醋一茶匙、蒜末半茶匙调拌均匀，调成“综合调味料”。
+  </li>
+  <li>
+    鸡丁腌好以后，色拉油下锅烧热，先将鸡丁倒入锅内，用大火快炸半分钟，炸到变色之后，捞出来沥干油汁备用。
+  </li>
+  <li>
+    在锅里留下约两大匙油，烧热后将切好的干辣椒下锅，用小火炒香后，再放入花椒粒和葱段一起爆香。随后鸡丁重新下锅，用大火快炒片刻后，再倒入“综合调味料”继续快炒。
+  </li>
   <li>如果你采用正宗川菜做法，最后只需加入花生米，炒拌几下就可以起锅了。</li>
   <li>如果你在北方，可加入黄瓜丁、胡萝卜丁和花生米，翻炒后起锅。</li>
- </ol>
+</ol>
 ```
 
 由于最后两项与它们的前一项非常密切相关（它们看起来更像该项的子项或选项），将它们编辑成无序列表，并嵌套在该项的子项中可能更合理。就像下面这样：
 
 ```html
 <ol>
-  <li>先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。</li>
-  <li>用酱油一大匙、淀粉水一大匙、糖半茶匙、盐四分之一茶匙、白醋一茶匙、蒜末半茶匙调拌均匀，调成“综合调味料”。</li>
-  <li>鸡丁腌好以后，色拉油下锅烧热，先将鸡丁倒入锅内，用大火快炸半分钟，炸到变色之后，捞出来沥干油汁备用。</li>
-  <li>在锅里留下约两大匙油，烧热后将切好的干辣椒下锅，用小火炒香后，再放入花椒粒和葱段一起爆香。随后鸡丁重新下锅，用大火快炒片刻后，再倒入“综合调味料”继续快炒。
+  <li>
+    先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。
+  </li>
+  <li>
+    用酱油一大匙、淀粉水一大匙、糖半茶匙、盐四分之一茶匙、白醋一茶匙、蒜末半茶匙调拌均匀，调成“综合调味料”。
+  </li>
+  <li>
+    鸡丁腌好以后，色拉油下锅烧热，先将鸡丁倒入锅内，用大火快炸半分钟，炸到变色之后，捞出来沥干油汁备用。
+  </li>
+  <li>
+    在锅里留下约两大匙油，烧热后将切好的干辣椒下锅，用小火炒香后，再放入花椒粒和葱段一起爆香。随后鸡丁重新下锅，用大火快炒片刻后，再倒入“综合调味料”继续快炒。
     <ul>
-      <li>如果你采用正宗川菜做法，最后只需加入花生米，炒拌几下就可以起锅了。</li>
+      <li>
+        如果你采用正宗川菜做法，最后只需加入花生米，炒拌几下就可以起锅了。
+      </li>
       <li>如果你在北方，可加入黄瓜丁、胡萝卜丁和花生米，翻炒后起锅。</li>
     </ul>
   </li>
@@ -808,7 +847,7 @@ textarea.onkeyup = () => {
 
 第一句话听起来真的像松了一口气因为没有迟到。相反，第二句话听起来具有讽刺性而且有隐含的攻击性，表达对一个人迟到的恼怒。
 
-在 HTML 中我们用 {{htmlelement("em")}}（emphasis）元素来标记这样的情况。这样做既可以让文档读起来更有趣，也可以被屏幕阅读器识别，并以不同的语调发出。浏览器默认样式为斜体，但你不应该纯粹为了获得斜体风格而使用这个标签。为了获得斜体样式，你应该使用 {{htmlelement("span")}} 元素和一些 CSS，或者是 {{htmlelement("i")}} 元素（见下文）。
+在 HTML 中我们用 {{htmlelement("em")}}（emphasis）元素来标记这样的情况。这样做既可以让文档读起来更有趣，也可以被屏幕阅读器识别，并以不同的语调发出。浏览器默认样式为斜体，但你不应该纯粹为了获得斜体风格而使用这个标签。如果仅仅为了获得斜体样式而不增加语义辅助，你应该使用 {{htmlelement("span")}} 元素和一些 CSS，或者是 {{htmlelement("i")}} 元素（见下文）。
 
 ```html
 <p>我很<em>庆幸</em>你没有<em>迟到</em>。</p>
@@ -822,7 +861,7 @@ textarea.onkeyup = () => {
 >
 > 就指望你了，千万**不要**迟到！
 
-在 HTML 中我们用 {{htmlelement("strong")}}（strong importance）元素来标记这样的情况。除了使文档更有用之外，也可以被屏幕阅读器识别，并以不同的语调发出。浏览器默认样式为粗体，但你不应该纯粹为了获得粗体风格而使用这个标签。为了获得粗体样式，你应该使用 {{htmlelement("span")}} 元素和一些 CSS，或者是 {{htmlelement("b")}} 元素（见下文）。
+在 HTML 中我们用 {{htmlelement("strong")}}（strong importance）元素来标记这样的情况。除了使文档更有用之外，也可以被屏幕阅读器识别，并以不同的语调发出。浏览器默认样式为粗体，但你不应该纯粹为了获得粗体风格而使用这个标签。如果仅仅为了获得粗体样式而不增加语义辅助，你应该使用 {{htmlelement("span")}} 元素和一些 CSS，或者是 {{htmlelement("b")}} 元素（见下文）。
 
 ```html
 <p>这杯液体<strong>毒性很大</strong>。</p>
@@ -833,7 +872,11 @@ textarea.onkeyup = () => {
 如有需要你可以将 strong 元素和 em 元素嵌套在其他的标签中：
 
 ```html
-<p>这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong>可能<em>会死</em></strong>。</p>
+<p>
+  这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong
+    >可能<em>会死</em></strong
+  >。
+</p>
 ```
 
 ### 主动学习：我们是重要的！
@@ -853,7 +896,8 @@ textarea.onkeyup = () => {
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
 AlphaGo 李世乭五番棋
 
-<p>2016 年 3 月 8 日到 3 月 15 日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。</p></textarea>
+<p>2016 年 3 月 8 日到 3 月 15 日，韩国职业棋士李世乭（이세돌）九段与由 Google DeepMind 开发的计算机围棋软件 AlphaGo 对弈的五局三胜制围棋比赛在韩国首尔举行。结果为 AlphaGo 以四胜一负的战绩击败李世乭。赛后韩国棋院授予 AlphaGo 荣誉九段的称号。</p></textarea
+>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="重置" />
@@ -884,10 +928,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -900,34 +944,34 @@ const htmlSolution = `<h1>AlphaGo 李世乭五番棋</h1>
 <p><strong>2016 年 3 月 8 日</strong>到<strong>3 月 15 日</strong>，韩国职业棋士<strong>李世乭（이세돌）<em>九段</em></strong>与由 Google DeepMind 开发的计算机围棋软件 <strong>AlphaGo</strong> 对弈的五局三胜制围棋比赛在韩国<strong>首尔</strong>举行。结果为 AlphaGo 以<strong>四胜一负</strong>的战绩击败李世乭。赛后韩国棋院授予 AlphaGo <strong>荣誉九段</strong>的称号。</p>`;
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '显示答案';
+  solution.value = "显示答案";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '显示答案') {
+solution.addEventListener("click", () => {
+  if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏答案';
+    solution.value = "隐藏答案";
   } else {
     textarea.value = userEntry;
-    solution.value = '显示答案';
+    solution.value = "显示答案";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -940,7 +984,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -953,7 +1000,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '显示答案') {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -965,15 +1012,15 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('主动学习：我们是重要的！', 700, 500) }}
 
-### 斜体字、粗体字、下划线...
+### 斜体字、粗体字、下划线
 
 到目前为止，我们所讨论的元素都有明确的相关语义。{{htmlelement("b")}}、{{htmlelement("i")}} 和 {{htmlelement("u")}} 的情况却有点复杂。它们出现于人们要在文本中使用粗体、斜体、下划线但 CSS 仍然不被完全支持的时期。像这样仅仅影响表象而且没有语义的元素，被称为**表象元素**（presentational elements）并且不应该再被使用。因为正如我们在之前看到的，语义对无障碍、SEO（搜索引擎优化）等非常重要。
 
-HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，增加了新的、有些混乱的语义角色。
+HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，赋予了它们新的但有点令人困惑的语义角色。
 
-这里是最好的经验法则：只有在没有更合适的元素时，才适合使用 `<b>`、`<i>` 或 `<u>` 来表达传统上用粗体、斜体或下划线表达的意思；而通常是有的。`<strong>`、`<em>`、`<mark>` 或 `<span>` 可能是更加合适的选择。
+最好的经验法则是：只有在没有更合适的元素时，才适合使用 `<b>`、`<i>` 或 `<u>` 来表达传统上用粗体、斜体或下划线表达的意思；而通常情况下是有更合适的元素可供使用的。`<strong>`、`<em>`、`<mark>` 或 `<span>` 可能是更加合适的选择。
 
-始终保持无障碍的心态。斜体的概念对使用屏幕阅读器的人或使用拉丁字母以外的书写系统的人没有什么帮助。
+始终保持无障碍的开发理念。斜体的概念对使用屏幕阅读器的人或使用拉丁字母以外的书写系统的人没有什么帮助。
 
 - {{HTMLElement('i')}} 被用来传达传统上用斜体表达的意义：外国文字，分类名称，技术术语，一种思想……
 - {{HTMLElement('b')}} 被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……
@@ -989,20 +1036,19 @@ HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，增加了新的、有些混乱�
 
 <!-- 舶来词 -->
 <p>
-  菜单上有好多舶来词汇，比如 <i lang="uk-latn">vatrushka</i>（东欧乳酪面包）、<i lang="id">nasi goreng</i>（印尼炒饭）以及 <i lang="fr">soupe à l'oignon</i>（法式洋葱汤）。
+  菜单上有好多舶来词汇，比如 <i lang="uk-latn">vatrushka</i>（东欧乳酪面包）、<i
+    lang="id"
+    >nasi goreng</i
+  >（印尼炒饭）以及 <i lang="fr">soupe à l'oignon</i>（法式洋葱汤）。
 </p>
 
 <!-- 已知的错误书写 -->
-<p>
-  总有一天我会改掉写<u class="spelling-error">措字</u>的毛病。
-</p>
+<p>总有一天我会改掉写<u class="spelling-error">措字</u>的毛病。</p>
 
 <!-- 在定义中，被定义的术语 -->
 <dl>
   <dt>语义化 HTML</dt>
-  <dd>
-    根据元素的<b>语义</b>意义而不是外观来使用它们。
-  </dd>
+  <dd>根据元素的<b>语义</b>意义而不是外观来使用它们。</dd>
 </dl>
 ```
 

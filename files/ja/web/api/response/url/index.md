@@ -1,15 +1,6 @@
 ---
 title: Response.url
 slug: Web/API/Response/url
-page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - URL
-browser-compat: api.Response.url
 ---
 
 {{APIRef("Fetch")}}
@@ -33,7 +24,7 @@ const myImage = document.querySelector('img');
 const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then((response) => {
-  console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
+  console.log(response.url); // returns https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
   response.blob().then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;

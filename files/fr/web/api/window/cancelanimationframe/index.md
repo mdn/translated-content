@@ -1,15 +1,6 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-tags:
-  - API
-  - Animation
-  - DOM
-  - Experimental
-  - Méthode
-  - Reference
-  - Window
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
 
 {{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
@@ -28,18 +19,22 @@ window.cancelAnimationFrame(requestID);
 ## Exemples
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+var cancelAnimationFrame =
+  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // Seulement supporté par Firefox. Les autre navigateurs peuvent utiliser quelque chose comme Date.now()..
+var start = window.mozAnimationStartTime; // Seulement supporté par Firefox. Les autre navigateurs peuvent utiliser quelque chose comme Date.now()..
 
 var myReq; // Déclarer la variable globalement avant de lancer l'animation
 
 function step(timestamp) {
   var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  d.style.left = Math.min(progress / 10, 200) + "px";
   if (progress < 2000) {
     // Ne pas oublier de récupérer l'identifiant à chaque appel de la fonction
     myReq = requestAnimationFrame(step);

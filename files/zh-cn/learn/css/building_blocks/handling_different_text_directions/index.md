@@ -1,7 +1,6 @@
 ---
 title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -108,7 +107,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
+对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)）查看所有映射属性。
 
 ### 逻辑值
 

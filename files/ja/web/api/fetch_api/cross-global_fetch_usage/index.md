@@ -23,7 +23,7 @@ l10n:
 以前は、例えば次のように、現在のグローバルに対して相対 URL を解決していました。
 
 ```js
-let absolute = new URL(relative, window.location.href)
+let absolute = new URL(relative, window.location.href);
 ```
 
 これ自体は問題ではありません。 この種の振る舞いを示すさまざまな API が仕様で定義されている振る舞いと矛盾してそれを実行しているだけであり、それがさらに問題を引き起こす可能性があります。
@@ -33,7 +33,7 @@ let absolute = new URL(relative, window.location.href)
 Firefox 60 以降では、 Mozilla は、使用している `fetch()` 関数を所有するグローバルに対して相対 URL を解決するようになりました（[Firefox バグ 1432272](https://bugzil.la/1432272) を参照）。 したがって、上記の場合、次のように、 iframe の位置に対して解決します。
 
 ```js
-let absolute = new URL(relative, frame.contentWindow.location.href)
+let absolute = new URL(relative, frame.contentWindow.location.href);
 ```
 
 今後の潜在的な問題を軽減するために、この振る舞いの変更に合わせた新しい仕様を取得することについて、多くの議論が進行中です。

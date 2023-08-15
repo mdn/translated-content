@@ -1,6 +1,8 @@
 ---
-title: 'HTMLElement: copy イベント'
+title: "HTMLElement: copy イベント"
 slug: Web/API/HTMLElement/copy_event
+l10n:
+  sourceCommit: 9aa9bda5722b3e1122210653ba4526eff1e05028
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,12 +11,12 @@ slug: Web/API/HTMLElement/copy_event
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
 
 ```js
-addEventListener('copy', event => { });
+addEventListener("copy", (event) => {});
 
-oncopy = event => { };
+oncopy = (event) => {};
 ```
 
 ## イベント型
@@ -27,7 +29,7 @@ oncopy = event => { };
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
 ## 例
@@ -38,7 +40,9 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ```html
 <h3>このテキストエリアで実行してみる</h3>
-<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+<textarea id="editor" rows="3">
+このフィールドにテキストをコピー＆ペーストしてみてください。
+</textarea>
 
 <h3>ログ:</h3>
 <p id="log"></p>
@@ -47,19 +51,19 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
 function logCopy(event) {
-  log.innerText = 'コピーがブロックされました。\n' + log.innerText;
+  log.innerText = `コピーがブロックされました。\n${log.innerText}`;
   event.preventDefault();
 }
 
 function logPaste(event) {
-  log.innerText = '貼り付けがブロックされました。\n' + log.innerText;
+  log.innerText = `貼り付けがブロックされました。\n${log.innerText}`;
   event.preventDefault();
 }
 
-const editor = document.getElementById('editor');
+const editor = document.getElementById("editor");
 
 editor.oncopy = logCopy;
 editor.onpaste = logPaste;

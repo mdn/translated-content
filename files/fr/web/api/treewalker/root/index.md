@@ -1,13 +1,6 @@
 ---
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/TreeWalker/root
 ---
 
 {{ APIRef("DOM") }}
@@ -24,10 +17,14 @@ root = TreeWalker.root;
 
 ```js
 var treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.root; // document.body dans ce cas
 ```

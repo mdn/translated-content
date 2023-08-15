@@ -16,7 +16,9 @@ selector1 > selector2 { style properties }
 ## Ejemplo
 
 ```css
-span { background-color: white; }
+span {
+  background-color: white;
+}
 div > span {
   background-color: DodgerBlue;
 }
@@ -24,7 +26,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, dentro del div.
+  <span
+    >Span #1, dentro del div.
     <span>Span #2, dentro del span que está en el div.</span>
   </span>
 </div>

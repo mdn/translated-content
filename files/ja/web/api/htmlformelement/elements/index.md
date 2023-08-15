@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements プロパティ"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 l10n:
-  sourceCommit: 03f91ed2e2c6123fbf711f1759c7e99a2dc63de6
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -43,9 +44,18 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 ```html
 <form id="my-form">
-  <input type="text" name="username" />
-  <input type="text" name="full-name" />
-  <input type="password" name="password" />
+  <label>
+    ユーザー名:
+    <input type="text" name="username" />
+  </label>
+  <label>
+    フルネーム:
+    <input type="text" name="full-name" />
+  </label>
+  <label>
+    パスワード:
+    <input type="password" name="password" />
+  </label>
 </form>
 ```
 

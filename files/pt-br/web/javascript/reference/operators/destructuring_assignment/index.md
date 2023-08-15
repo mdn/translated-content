@@ -1,7 +1,6 @@
 ---
 title: Atribuição via desestruturação (destructuring assignment)
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao
 ---
 
 {{jsSidebar("Operators")}}
@@ -21,12 +20,12 @@ console.log(a); // 1
 console.log(b); // 2
 console.log(rest); // [3, 4, 5]
 
-({a, b} = {a:1, b:2});
+({ a, b } = { a: 1, b: 2 });
 console.log(a); // 1
 console.log(b); // 2
 
 // ES2016 - não implementado em Firefox 47a01
-({a, b, ...rest} = {a:1, b:2, c:3, d:4});
+({ a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 });
 ```
 
 ## Descrição
@@ -80,7 +79,7 @@ Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado
 ```js
 var a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -134,7 +133,7 @@ console.log(b); // 3
 Você também pode ignorar todos os valores retornados:
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 ### Atribuindo o resto de um array para uma variável
@@ -167,8 +166,8 @@ console.log(protocol); // "https"
 ### Atribuição básica
 
 ```js
-var o = {p: 42, q: true};
-var {p, q} = o;
+var o = { p: 42, q: true };
+var { p, q } = o;
 
 console.log(p); // 42
 console.log(q); // true
@@ -181,7 +180,7 @@ Uma variável pode ter seu valor atribuído via desestruturação separadamente 
 ```js
 var a, b;
 
-({a, b} = {a:1, b:2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
 > **Nota:** Os parênteses `( ... )` ao redor da declaração de atribuição é uma sintaxe necessária quando se utiliza a atribuição via desestruturação de objeto literal sem uma declaração.
@@ -195,8 +194,8 @@ var a, b;
 Uma variável pode ser extraída de um objeto e atribuída a uma variável com um nome diferente da propriedade do objeto.
 
 ```js
-var o = {p: 42, q: true};
-var {p: foo, q: bar} = o;
+var o = { p: 42, q: true };
+var { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -207,7 +206,7 @@ console.log(bar); // true
 Uma variável pode ser atribuída de um padrão, no caso em que o valor retirado do objeto é undefined.
 
 ```js
-var {a=10, b=5} = {a: 3};
+var { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -220,7 +219,7 @@ console.log(b); // 5
 ```js
 function drawES5Chart(options) {
   options = options === undefined ? {} : options;
-  var size = options.size === undefined ? 'big' : options.size;
+  var size = options.size === undefined ? "big" : options.size;
   var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
   var radius = options.radius === undefined ? 25 : options.radius;
   console.log(size, cords, radius);
@@ -229,21 +228,25 @@ function drawES5Chart(options) {
 
 drawES5Chart({
   cords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
 #### Versão ES2015
 
 ```js
-function drawES2015Chart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
+function drawES2015Chart({
+  size = "big",
+  cords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, cords, radius);
   // do some chart drawing
 }
 
 drawES2015Chart({
   cords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 ```
 
@@ -251,23 +254,26 @@ drawES2015Chart({
 
 ```js
 var metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/pt-BR/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/pt-BR/docs/Tools/Scratchpad",
 };
 
-var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+var {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 ### For de iteração e desestruturação
@@ -279,22 +285,25 @@ var people = [
     family: {
       mother: "Jane Smith",
       father: "Harry Smith",
-      sister: "Samantha Smith"
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
     name: "Tom Jones",
     family: {
       mother: "Norah Jones",
       father: "Richard Jones",
-      brother: "Howard Jones"
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (var {name: n, family: { father: f } } of people) {
+for (var {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log("Name: " + n + ", Father: " + f);
 }
 
@@ -305,11 +314,11 @@ for (var {name: n, family: { father: f } } of people) {
 ### Extraindo campos de objetos passados como parâmetro de função
 
 ```js
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName: displayName, fullName: {firstName: name}}){
+function whois({ displayName: displayName, fullName: { firstName: name } }) {
   console.log(displayName + " is " + name);
 }
 
@@ -317,9 +326,9 @@ var user = {
   id: 42,
   displayName: "jdoe",
   fullName: {
-      firstName: "John",
-      lastName: "Doe"
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"
@@ -341,9 +350,9 @@ console.log(foo); // "bar"
 
 ## Especificações
 
-| Espeficiação                                                                                                     | Situação                     | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Espeficiação                                                                         | Situação             | Comentário         |
+| ------------------------------------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores
@@ -352,8 +361,8 @@ console.log(foo); // "bar"
 
 ## Notas específicas do Firefox
 
-- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40. Consulte {{bug (1083498)}}.
-- A partir do Gecko 41 e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e {{bug (1146136)}} para mais detalhes.
+- O Firefox forneceu uma extensão não-padronizada de linguagem em [JS1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7) para desestruturação. Esta extensão foi removida no Gecko 40. Consulte [Erro do Firefox 1083498](https://bugzil.la/1083498).
+- A partir do Gecko 41 e para cumprir com a especificação ES2015, padrões de desestruturação com parênteses, como `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, agora são considerados inválidos e lançarão um {{jsxref ( "SyntaxError")}}. Veja a postagem no blog de Jeff Walden e [Erro do Firefox 1146136](https://bugzil.la/1146136) para mais detalhes.
 
 ## Veja também
 

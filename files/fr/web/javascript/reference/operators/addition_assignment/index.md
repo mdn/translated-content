@@ -1,13 +1,6 @@
 ---
 title: Affectation après addition (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.addition_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,8 +12,8 @@ L'opérateur d'addition et d'affectation (`+=`) calcule la somme ou la concatén
 ## Syntaxe
 
 ```js
-Opérateur : x += y
-Signification :  x  = x + y
+Opérateur: x += y;
+Signification: x = x + y;
 ```
 
 ## Exemples
@@ -42,13 +35,13 @@ machin += 1; // 2
 machin += false; // 1
 
 // nombre + chaîne de caractères -> concaténation
-truc += 'toto'; // "5toto"
+truc += "toto"; // "5toto"
 
 // chaîne de caractères + booléen -> concaténation
-toto += false // "totofalse"
+toto += false; // "totofalse"
 
 // chaîne de caractères + chaîne de caractères -> concaténation
-toto += 'truc' // "tototruc"
+toto += "truc"; // "tototruc"
 ```
 
 ## Spécifications

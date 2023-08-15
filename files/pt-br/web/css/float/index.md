@@ -71,8 +71,14 @@ float: unset;
 ### CSS
 
 ```css
-div { border: solid red;  max-width: 70ex; }
-h4  { float: left;  margin: 0; }
+div {
+  border: solid red;
+  max-width: 70ex;
+}
+h4 {
+  float: left;
+  margin: 0;
+}
 ```
 
 ### HTML
@@ -80,10 +86,9 @@ h4  { float: left;  margin: 0; }
 ```html
 <div>
   <h4>HELLO!</h4>
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
-  This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
+  This is some text. This is some text. This is some text. This is some text.
 </div>
 ```
 
@@ -104,7 +109,9 @@ No exemplo abaixo, os elementos flutuantes são menores verticalmente que o bloc
 O jeito mais simples de limpar os floats neste exemplo é adicionar a propriedade {{Cssxref("clear")}} para o próximo cabeçalho que queremos assegurar que esteja alinhado à esquerda.
 
 ```css
-h2.secondHeading { clear: both; }
+h2.secondHeading {
+  clear: both;
+}
 ```
 
 Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso `H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear` irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
@@ -112,19 +119,22 @@ Porém, este método apenas funciona se não existirem outros elementos com o me
 Se limpar `floats` em um elemento não é uma opção, uma outra abordagem é limitar o contexto de formatação do bloco do containêr flutuante. Referindo-se ao exemplo acima novamente, aparentemente todos os três quadrados vermelhos possuem um elemento paragrafo `P` . Nós podemos atribuir a propiedade {{Cssxref("overflow")}} neste paragrafo para `hidden` ou `auto` para obrigá-lo a expandir para contê-los, porém não permitirá que os mesmos parágrafos pulem fora do limite inferior.
 
 ```css
-p.withRedBoxes { overflow: hidden; height: auto; }
+p.withRedBoxes {
+  overflow: hidden;
+  height: auto;
+}
 ```
 
 > **Nota:** Atribuir `overflow` para `scroll` irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height` como `auto` mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
 
 ## Especificações
 
-| Especificação                                                                                    | Situação                                         | Comentário                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                             | Situação                            | Comentário                                                                                                                                                           |
+| ------------------------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Adiciona os valores `inline-start` e `inline-end`.                                                                                                                   |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                                         | {{Spec2('CSS3 Box')}}                     | Muitos valores novos, nem todos claramente definidos ainda. Qualquer diferença em comportamento não relacionado a novas funções são involutárias; por favor informe. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}             | {{Spec2('CSS2.1')}}                         | Sem mudanças                                                                                                                                                         |
-| {{SpecName('CSS1', '#float', 'float')}}                                             | {{Spec2('CSS1')}}                         | Definição inicial                                                                                                                                                    |
+| {{SpecName('CSS3 Box', '#float', 'float')}}                               | {{Spec2('CSS3 Box')}}               | Muitos valores novos, nem todos claramente definidos ainda. Qualquer diferença em comportamento não relacionado a novas funções são involutárias; por favor informe. |
+| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}            | {{Spec2('CSS2.1')}}                 | Sem mudanças                                                                                                                                                         |
+| {{SpecName('CSS1', '#float', 'float')}}                                   | {{Spec2('CSS1')}}                   | Definição inicial                                                                                                                                                    |
 
 ## Compatibilidade com navegadores
 

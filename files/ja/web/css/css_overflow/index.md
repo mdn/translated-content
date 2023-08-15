@@ -1,6 +1,6 @@
 ---
 title: CSS オーバーフロー
-slug: Web/CSS/CSS_Overflow
+slug: Web/CSS/CSS_overflow
 ---
 
 {{CSSRef}}

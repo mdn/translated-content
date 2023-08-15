@@ -63,7 +63,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;

@@ -52,22 +52,22 @@ slug: Learn/JavaScript/First_steps/Math
 
 1. 首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
 
-    ```js
-    var myInt = 5;
-    var myFloat = 6.667;
-    myInt;
-    myFloat;
-    ```
+   ```js
+   var myInt = 5;
+   var myFloat = 6.667;
+   myInt;
+   myFloat;
+   ```
 
 2. 數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。
 3. 現在，來確認 Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
 
-    ```js
-    typeof myInt;
-    typeof myFloat;
-    ```
+   ```js
+   typeof myInt;
+   typeof myFloat;
+   ```
 
-    You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
+   You should get `"number"` returned in both cases — this makes things a lot easier for us than if different numbers had different data types, and we had to deal with them in different ways. Phew!
 
 ## 算術運算符
 
@@ -145,28 +145,28 @@ We probably don't need to teach you how to do basic math, but we would like to t
 
 1. First try entering some simple examples of your own, such as
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. Last for this section, try entering some more complex expressions, such as:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Some of this last set of sums might not give you quite the result you were expecting; the below section might well give the answer as to why.
 
@@ -313,18 +313,18 @@ We'll look at how to code such logic when we look at conditional statements in a
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Start machine') {
-    btn.textContent = 'Stop machine';
-    txt.textContent = 'The machine has started!';
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
   } else {
-    btn.textContent = 'Start machine';
-    txt.textContent = 'The machine is stopped.';
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
   }
 }
 ```

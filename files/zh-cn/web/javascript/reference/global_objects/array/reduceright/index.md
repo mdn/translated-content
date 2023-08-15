@@ -45,7 +45,7 @@ reduceRight(callbackFn, initialValue)
 
 与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 未处于严格模式，则该值将被替换为 `globalThis`。
 
-`reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
+`reduceRight()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当开始调用 `reduceRight()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -81,12 +81,12 @@ arr.reduceRight((accumulator, currentValue, index, array) => {
 
 一共会调用四次回调函数，每次调用的参数及返回值如下：
 
-|          | `accumulator` | `currentValue` | `index` | 返回值 |
-| -------- | ------------- | -------------- | ------- | ----- |
-| 第一次调用 | `4`           | `3`            | `3`     | `7`   |
-| 第二次调用 | `7`           | `2`            | `2`     | `9`   |
-| 第三次调用 | `9`           | `1`            | `1`     | `10`  |
-| 第四次调用 | `10`          | `0`            | `0`     | `10`  |
+|            | `accumulator` | `currentValue` | `index` | 返回值 |
+| ---------- | ------------- | -------------- | ------- | ------ |
+| 第一次调用 | `4`           | `3`            | `3`     | `7`    |
+| 第二次调用 | `7`           | `2`            | `2`     | `9`    |
+| 第三次调用 | `9`           | `1`            | `1`     | `10`   |
+| 第四次调用 | `10`          | `0`            | `0`     | `10`   |
 
 `array` 参数在整个过程中始终不变，始终为 `[0, 1, 2, 3, 4]`。`reduceRight` 返回的值将是最后一次回调函数调用的返回值（`10`）。
 
@@ -101,13 +101,13 @@ arr.reduceRight((accumulator, currentValue, index, array) => {
 );
 ```
 
-|          | `accumulator` | `currentValue` | `index` | 返回值 |
-| -------- | ------------- | -------------- | ------- | ----- |
-| 第一次调用 | `10`          | `4`            | `4`     | `14`  |
-| 第二次调用 | `14`          | `3`            | `3`     | `17`  |
-| 第三次调用 | `17`          | `2`            | `2`     | `19`  |
-| 第四次调用 | `19`          | `1`            | `1`     | `20`  |
-| 第五次调用 | `20`          | `0`            | `0`     | `20`  |
+|            | `accumulator` | `currentValue` | `index` | 返回值 |
+| ---------- | ------------- | -------------- | ------- | ------ |
+| 第一次调用 | `10`          | `4`            | `4`     | `14`   |
+| 第二次调用 | `14`          | `3`            | `3`     | `17`   |
+| 第三次调用 | `17`          | `2`            | `2`     | `19`   |
+| 第四次调用 | `19`          | `1`            | `1`     | `20`   |
+| 第五次调用 | `20`          | `0`            | `0`     | `20`   |
 
 这次，`reduceRight` 返回值为 `20`。
 
@@ -252,10 +252,10 @@ console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
 - [`core-js` 中 `Array.prototype.reduce` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
-- {{jsxref("Array.prototype.group()")}}
-- {{jsxref("Array.prototype.groupToMap()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

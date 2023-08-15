@@ -253,7 +253,7 @@ display: unset;
 
 要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
 
-要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、画面リーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用できます。
+要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用できます。
 
 ### display: contents
 

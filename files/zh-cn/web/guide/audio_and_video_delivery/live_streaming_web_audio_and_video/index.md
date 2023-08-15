@@ -59,7 +59,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 ```html
 <video src="rtsp://myhost.com/mymedia.format">
- <!-- Fallback here -->
+  <!-- Fallback here -->
 </video>
 ```
 

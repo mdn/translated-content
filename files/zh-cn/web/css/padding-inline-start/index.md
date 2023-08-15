@@ -90,6 +90,6 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - 对应的实体属性：{{CSSXref("padding-top")}}、{{CSSXref("padding-right")}}、{{CSSXref("padding-bottom")}} 和 {{CSSXref("padding-left")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

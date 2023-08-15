@@ -1,7 +1,6 @@
 ---
 title: Web Components
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -56,7 +55,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
   - : The following extensions are defined:
 
-    - O atributo HTML global {{htmlattrxref("is")}}: Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
+    - O atributo HTML global [`is`](/pt-BR/docs/Web/HTML/Global_attributes#is): Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
     - A opção "is" do método {{domxref("Document.createElement()")}}: Permite criar uma instância de um elemento HTML standard que se comporta como um determinado elemento built-in customizado registrado.
 
 - CSS pseudo-classes
@@ -72,7 +71,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
   - : Pseudo-elementos relacionados especificamente a elementos customizados:
 
-    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) que tenha um atributo {{HTMLAttrxRef("part")}} correspondente.
+    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Global_attributes#part) correspondente.
 
 ### Shadow DOM
 
@@ -134,23 +133,11 @@ Mais exemplos serão adicionados com o passar do tempo.
 
 ## Especificações
 
-| Especificação                                                                                                                | Status                           | Comentário                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}} | {{Spec2("HTML WHATWG")}} | Definição de {{HTMLElement("template")}}.                                                |
-| {{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}             | {{Spec2("HTML WHATWG")}} | Definição de [Elementos HTML Customizados](/pt-BR/docs/Web/Web_Components/Using_custom_elements). |
-| {{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}                                                 | {{Spec2("DOM WHATWG")}} | Definição de [Shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM).                       |
-| {{SpecName("HTML Imports", "", "")}}                                                                             | {{Spec2("HTML Imports")}} | Definição inicial de [HTML Imports](/pt-BR/docs/Web/Web_Components/HTML_Imports).                 |
-| {{SpecName("Shadow DOM", "", "")}}                                                                                 | {{Spec2("Shadow DOM")}} | Definição inicial de [Shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM).               |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-Em geral:
-
-- Web components são suportados por padrão pelo Firefox (versão 63), Chrome, e Opera.
-- Safari suporta muitas das funcionalidades de web component, porém menos do que os navegadores citados acima.
-- Edge está trabalhando na implementação.
-
-Para obter informações detalhadas sobre o suporte de funções específicas nos navegadores, você deve consultar as páginas de referência listadas abaixo.
+{{Compat}}
 
 ## Veja também
 

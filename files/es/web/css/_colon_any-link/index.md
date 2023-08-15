@@ -1,5 +1,5 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
 ---
 
@@ -21,8 +21,8 @@ slug: Web/CSS/:any-link
 ### HTML
 
 ```html
-<a href="https://example.com">Enlace externo</a><br>
-<a href="#">Enlace de destino interno</a><br>
+<a href="https://example.com">Enlace externo</a><br />
+<a href="#">Enlace de destino interno</a><br />
 <a>Enlace de marcador de posición (no se personalizará)</a>
 ```
 

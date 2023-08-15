@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplaypresentchange イベント'
+title: "Window: vrdisplaypresentchange イベント"
 slug: Web/API/Window/vrdisplaypresentchange_event
 l10n:
   sourceCommit: bb8221e061bba27dbdbe5a3698b6c69febf0bc70

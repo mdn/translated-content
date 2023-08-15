@@ -333,5 +333,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 更多資訊
 
-- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

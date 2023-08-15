@@ -73,41 +73,42 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
-        console.log('Found response in cache:', response);
+        console.log("Found response in cache:", response);
 
         return response;
       }
-      console.log('No response found in cache. About to fetch from network...');
+      console.log("No response found in cache. About to fetch from network...");
 
-      return fetch(event.request).then(function(response) {
-        console.log('Response from network is:', response);
+      return fetch(event.request).then(
+        function (response) {
+          console.log("Response from network is:", response);
 
-        return response;
-      }, function(error) {
-        console.error('Fetching failed:', error);
+          return response;
+        },
+        function (error) {
+          console.error("Fetching failed:", error);
 
-        throw error;
-      });
-    })
+          throw error;
+        },
+      );
+    }),
   );
 });
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Service Workers', '#serviceworkerglobalscope-interface', 'ServiceWorkerGlobalScope')}} | {{Spec2('Service Workers')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ServiceWorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

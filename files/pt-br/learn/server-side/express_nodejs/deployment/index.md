@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 7: Deploying to production'
+title: "Express Tutorial Part 7: Deploying to production"
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 
@@ -13,7 +13,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/pt-BR/docs/Learn/Serv
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete todos os tópicos anteriores do turotrial, inclusive o
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -110,21 +110,19 @@ Logging calls can have an impact on a high-traffic website. In a production envi
 One way to minimise "debug" logging in production is to use a module like [debug](https://www.npmjs.com/package/debug) that allows you to control what logging is performed by setting an environment variable. For example, the code fragment below shows how you might set up "author" logging. The debug variable is declared with the name 'author', and the prefix "author" will be automatically displayed for all logs from this object.
 
 ```js
-var debug = require('debug')('author');
+var debug = require("debug")("author");
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = function (req, res, next) {
+  req.sanitize("id").escape().trim();
+  Author.findById(req.params.id, function (err, author) {
+    if (err) {
+      debug("update error:" + err);
+      return next(err);
+    }
+    //On success
+    res.render("author_form", { title: "Update Author", author: author });
+  });
 };
 ```
 
@@ -250,10 +248,10 @@ There are a lot of ways of to work with git, but one of the easiest is to first 
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
-    - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
-    - Choose **Node** in the _Add .gitignore_ selection list.
-    - Choose your preferred license in the _Add license_ selection list.
-    - Check **Initialize this repository with a README**.
+   - Enter a new repository name (e.g. _express-locallibrary-tutorial_), and description (e.g. "Local Library website written in Express (Node)".
+   - Choose **Node** in the _Add .gitignore_ selection list.
+   - Choose your preferred license in the _Add license_ selection list.
+   - Check **Initialize this repository with a README**.
 
 4. Press **Create repository**.
 5. Click the green "**Clone or download**" button on your new repo page.
@@ -264,50 +262,50 @@ Now the repository ("repo") is created we are going to want to clone it on our l
 1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
 2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
+   ```
 
-    This will create the repository below the current point.
+   This will create the repository below the current point.
 
 3. Navigate into the new repo.
 
-    ```bash
-    cd express-locallibrary-tutorial
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   ```
 
 The final step is to copy in your application and then add the files to your repo using git:
 
 1. Copy your Express application into this folder (excluding **/node_modules**, which contains dependency files that you should fetch from NPM as needed).
 2. Open a command prompt/terminal and use the `add` command to add all files to git.
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 3. Use the status command to check all files that you are about to add are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            new file:   ...
-    ```
+           new file:   ...
+   ```
 
 4. When you're satisfied commit the files to your local repository:
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 5. Then synchronise your local repository to the Github website, using the following:
 
-    ```
-    git push origin master
-    ```
+   ```
+   git push origin master
+   ```
 
 When this operation completes, you should be able to go back to the page on Github where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repository as files change using this add/commit/push cycle.
 
@@ -352,13 +350,16 @@ So far in this tutorial we've used a single database that is hard coded into **a
 Open **app.js** and find the line that sets the mongoDB connection variable. It will look something like this:
 
 ```js
-var mongoDB = 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 Replace the line with the following code that uses `process.env.MONGODB_URI` to get the connection string from an environment variable named `MONGODB_URI` if has been set (use your own database URL instead of the placeholder below.)
 
 ```js
-var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  process.env.MONGODB_URI ||
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 #### Get dependencies and re-test

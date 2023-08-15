@@ -1,14 +1,8 @@
 ---
 title: Загрузка и запуск кода WebAssembly
 slug: WebAssembly/Loading_and_running
-tags:
-  - Fetch
-  - JavaScript
-  - WebAssembly
-  - XMLHttpRequest
-  - bytecode
-translation_of: WebAssembly/Loading_and_running
 ---
+
 {{WebAssemblySidebar}}
 
 Чтобы использовать WebAssembly в JavaScript, сначала нужно загрузить модуль в память перед компиляцией/созданием экземпляра. Эта статья содержит справочную информацию о различных механизмах, которые можно использовать для получения байт-кода WebAssembly, а также о том, как скомпилировать/создать экземпляр, а затем запустить его.
@@ -30,22 +24,22 @@ WebAssembly ещё не интегрирована с `<script type='module'>` �
 Самый быстрый и эффективный способ получить модуль wasm - использовать более новый метод {{jsxref("WebAssembly.instantiateStreaming()")}}, который может принять вызов `fetch()` в качестве первого аргумента и будет обрабатывать загрузку, компиляцию и создание экземпляра модуля за один шаг, получая доступ к необработанному байтовому коду при его потоковой передаче с сервера:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results => {
-  // Do something with the results!
-});
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (results) => {
+    // Do something with the results!
+  },
+);
 ```
 
 Если бы мы использовали более старый метод {{jsxref("WebAssembly.instantiate()")}}, который не работает в прямом потоке, нам потребовался бы дополнительный шаг преобразования преобразованного байт-кода в {{domxref("ArrayBuffer")}}, вот так:
 
 ```js
-fetch('module.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  // Do something with the results!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // Do something with the results!
+  });
 ```
 
 ### Помимо перегрузок instantiate()
@@ -54,12 +48,12 @@ fetch('module.wasm').then(response =>
 
 ```js
 {
-  module : Module // The newly compiled WebAssembly.Module object,
-  instance : Instance // A new WebAssembly.Instance of the module object
+  module: Module; // The newly compiled WebAssembly.Module object,
+  instance: Instance; // A new WebAssembly.Instance of the module object
 }
 ```
 
-> **Примечание:** Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
+> **Примечание:** Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
 
 > **Примечание:** Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
 
@@ -68,25 +62,26 @@ fetch('module.wasm').then(response =>
 Когда у вас есть экземпляр WebAssembly, доступный в вашем JavaScript, вы можете начать использовать его возможности, которые были экспортированы через свойство {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Ваш код может выглядеть примерно так:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj => {
-  // Call an exported function:
-  obj.instance.exports.exported_func();
+WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+  (obj) => {
+    // Call an exported function:
+    obj.instance.exports.exported_func();
 
-  // or access the buffer contents of an exported memory:
-  var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // or access the buffer contents of an exported memory:
+    var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
-  // or access the elements of an exported table:
-  var table = obj.instance.exports.table;
-  console.log(table.get(0)());
-})
+    // or access the elements of an exported table:
+    var table = obj.instance.exports.table;
+    console.log(table.get(0)());
+  },
+);
 ```
 
 > **Примечание:** Для получения дополнительной информации о том, как работает экспорт из модуля WebAssembly, ознакомьтесь с разделами [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API), и [Понимание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format).
 
 ## Используя XMLHttpRequest
 
-[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) несколько старше, чем Fetch, но всё же может успешно использоваться для получения типизированного массива. Опять же, если предположить, что наш модуль называется `simple.wasm`:
+[`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) несколько старше, чем Fetch, но всё же может успешно использоваться для получения типизированного массива. Опять же, если предположить, что наш модуль называется `simple.wasm`:
 
 1. Создайте новый экземпляр {{domxref("XMLHttpRequest()")}} и используйте его метод {{domxref("XMLHttpRequest.open","open()")}} для открытия запроса, задав для метода запроса значение `GET` и указав путь к файлу, который мы хотим получить.
 2. Ключевой частью этого является установка типа ответа `'arraybuffer'` с помощью свойства {{domxref("XMLHttpRequest.responseType","responseType")}}.
@@ -97,13 +92,13 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 ```js
 request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };

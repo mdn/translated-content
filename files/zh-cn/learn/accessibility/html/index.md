@@ -1,5 +1,5 @@
 ---
-title: 'HTML：无障碍的良好基础'
+title: HTML：无障碍的良好基础
 slug: Learn/Accessibility/HTML
 ---
 
@@ -83,11 +83,17 @@ slug: Learn/Accessibility/HTML
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think is more interesting than
+  the last one.
+</p>
 ```
 
 我们已经准备了一个更长的文本版本，供您试用于屏幕阅读器（请查看 [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)）。如果您尝试在此过程中导航，您将看到这非常容易导航：
@@ -100,25 +106,26 @@ slug: Learn/Accessibility/HTML
 人们有时会使用表现性 HTML 和换行符来编写标题，段落等，如下所示：
 
 ```html
-<font size="7">My heading</font>
-<br><br>
+<font size="7">My heading</font> <br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 1. Here is
-<br><br>
+<br /><br />
 2. a list for
-<br><br>
+<br /><br />
 3. you to read
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think is more interesting than
+the last one.
 ```
 
 如果你使用屏幕阅读器试用更长内容的版本（请查阅 [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)），你不会有一个很好的经验 — 屏幕阅读器没有任何东西可以用作路标，所以你无法检索有用的目录，整个页面被看作一个巨大的块，所以它只是一次读出所有的内容。
@@ -144,9 +151,7 @@ This is the second subsection of my content. I think is more interesting than th
   <!-- main heading row -->
   <tr id="heading">
     <td colspan="6">
-
       <h1 align="center">Header</h1>
-
     </td>
   </tr>
   <!-- nav menu row  -->
@@ -165,7 +170,7 @@ This is the second subsection of my content. I think is more interesting than th
     </td>
     <td width="300">
       <form width="300">
-        <input type="search" name="q" placeholder="Search query" width="300">
+        <input type="search" name="q" placeholder="Search query" width="300" />
       </form>
     </td>
     <td width="100">
@@ -174,28 +179,22 @@ This is the second subsection of my content. I think is more interesting than th
   </tr>
   <!-- spacer row -->
   <tr id="spacer" height="10">
-    <td>
-
-    </td>
+    <td></td>
   </tr>
   <!-- main content and aside row -->
   <tr id="main">
     <td id="content" colspan="4" bgcolor="#ffffff">
-
       <!-- main content goes here -->
     </td>
     <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
       <h2>Related</h2>
 
       <!-- aside content goes here -->
-
     </td>
   </tr>
   <!-- spacer row -->
   <tr id="spacer" height="10">
-    <td>
-
-    </td>
+    <td></td>
   </tr>
   <!-- footer row -->
   <tr id="footer" bgcolor="#ffffff">
@@ -223,7 +222,6 @@ This is the second subsection of my content. I think is more interesting than th
 
 <!-- Here is our page's main content -->
 <main>
-
   <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
@@ -236,7 +234,6 @@ This is the second subsection of my content. I think is more interesting than th
 
     <!-- aside content in here -->
   </aside>
-
 </main>
 
 <!-- And here is our main footer that is used across all the pages of our website -->
@@ -256,7 +253,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
-UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
+UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
 
 ![](button-focused-unfocused.png)
 
@@ -271,7 +268,10 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 <p>This is a link to <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
-<p>Another link, to the <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.</p>
+<p>
+  Another link, to the
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+</p>
 
 <h2>Buttons</h2>
 
@@ -286,11 +286,11 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <form>
   <div>
     <label for="name">Fill in your name:</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Enter your age:</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
   <div>
     <label for="mood">Choose your mood:</label>
@@ -318,11 +318,13 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 #### 重新建立键盘的无障碍
 
-重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
+重新添加这些优点需要一些工作（您可以在我们的 [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例中使用示例代码 - 另请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) ）。在这里，我们通过赋予每个 `<div>` 按钮属性`tabindex =“0”` 来使它能够被聚焦（包括通过选项卡）：
 
 ```html
 <div data-message="This is from the first button" tabindex="0">Click me!</div>
-<div data-message="This is from the second button" tabindex="0">Click me too!</div>
+<div data-message="This is from the second button" tabindex="0">
+  Click me too!
+</div>
 <div data-message="This is from the third button" tabindex="0">And me!</div>
 ```
 
@@ -334,8 +336,9 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 虽然上面的添加允许我们用 `tab` 选择按钮，但它不允许我们通过 `Enter / Return` 键来激活它们。要做到这一点，我们必须添加下面的 JS 小绝招（JavaScript trickery）：
 
 ```js
-document.onkeydown = function(e) {
-  if(e.keyCode === 13) { // The Enter/Return key
+document.onkeydown = function (e) {
+  if (e.keyCode === 13) {
+    // The Enter/Return key
     document.activeElement.onclick(e);
   }
 };
@@ -360,13 +363,19 @@ document.onkeydown = function(e) {
 确保您的标签在上下文中有意义，可以单独阅读，也可以在他们所在的段落的上下文中进行阅读。例如，下面显示了良好链接文本的示例：
 
 ```html
-<p>Whales are really awesome creatures. <a href="whales.html">Find out more about whales</a>.</p>
+<p>
+  Whales are really awesome creatures.
+  <a href="whales.html">Find out more about whales</a>.
+</p>
 ```
 
 但这是不好的链接文字：
 
 ```html
-<p>Whales are really awesome creatures. To find more out about whales, <a href="whales.html">click here</a>.</p>
+<p>
+  Whales are really awesome creatures. To find more out about whales,
+  <a href="whales.html">click here</a>.
+</p>
 ```
 
 > **备注：** 您可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。您还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
@@ -374,7 +383,7 @@ document.onkeydown = function(e) {
 表单标签也很重要，可以让您了解您需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
 ```html example-bad
-Fill in your name: <input type="text" id="name" name="name">
+Fill in your name: <input type="text" id="name" name="name" />
 ```
 
 但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
@@ -384,7 +393,7 @@ Fill in your name: <input type="text" id="name" name="name">
 ```html example-good
 <div>
   <label for="name">Fill in your name:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -427,7 +436,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 但是这有问题 - 屏幕阅读器用户无法将行或列作为数据分组关联在一起。要做到这一点，你需要知道标题行是什么，以及它们是否在行，列等标题上。这只能在上面的表中以可视化方式完成（参见 [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html) ，并自己尝试这个例子）。
 
-现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html) - 您可以在这里看到一些辅助工具（accessibility aids）：
+现在看看我们的 [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) - 您可以在这里看到一些辅助工具（accessibility aids）：
 
 - 表头使用 `{{htmlelement("th")}}` 元素定义 - 您还可以使用 `scope` 属性指定它们是行还是列的标题。这提供给了屏幕阅读器可以理解的完整数据组。
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
@@ -441,19 +450,23 @@ Fill in your name: <input type="text" id="name" name="name">
 我们编写了一个简单的例子， [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html) ，它具有相同图像的四个副本：
 
 ```html
-<img src="dinosaur.png">
+<img src="dinosaur.png" />
 
-<img src="dinosaur.png"
-      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
 
-<img src="dinosaur.png"
-      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-      title="The Mozilla red dinosaur">
+<img
+  src="dinosaur.png"
+  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
+  title="The Mozilla red dinosaur" />
 
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<img src="dinosaur.png" aria-labelledby="dino-label">
-
-<p id="dino-label">The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</p>
+<p id="dino-label">
+  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
+  a human, with small arms, and a large head with lots of sharp teeth.
+</p>
 ```
 
 第一张图片，当用屏幕阅读器查看时，并不真正为用户提供很多帮助 - 例如 VoiceOver 会读出“/dinosaur.png，image” 。它读出文件名以尝试提供一些帮助。在这个例子中，用户至少知道它是某种恐龙，但通常文件可以用机器生成的文件名（例如来自数码相机）上传，这些文件名可能不会提供图像内容的信息。
@@ -475,9 +488,9 @@ Fill in your name: <input type="text" id="name" name="name">
 我们再来看看第四种方法：
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
+<p id="dino-label">The Mozilla red Tyrannosaurus ...</p>
 ```
 
 在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
@@ -489,7 +502,7 @@ Fill in your name: <input type="text" id="name" name="name">
 图像还有其他机制可用于提供描述性文字。例如，有一个 `longdesc` 属性用于指向包含图像的扩展描述的单独 Web 文档，例如：
 
 ```html
-<img src="dinosaur.png" longdesc="dino-info.html">
+<img src="dinosaur.png" longdesc="dino-info.html" />
 ```
 
 这听起来像个好主意，尤其是对于像大图表这样的信息图，其中有很多信息可能可以表示为可访问的数据表（请参阅上一部分）。但是，屏幕阅读器不支持`longdesc`，非屏幕阅读器用户完全无法访问内容。将长描述包含在与图像相同的页面中，或者通过常规链接链接到它可能会更好。
@@ -498,8 +511,11 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus">
-  <figcaption>A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</figcaption>
+  <img src="dinosaur.png" alt="The Mozilla Tyrannosaurus" />
+  <figcaption>
+    A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a
+    human, with small arms, and a large head with lots of sharp teeth.
+  </figcaption>
 </figure>
 ```
 
@@ -509,7 +525,7 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 
 ```html
 <h3>
-  <img src="article-icon.png" alt="">
+  <img src="article-icon.png" alt="" />
   Tyrannosaurus Rex: the king of the dinosaurs
 </h3>
 ```

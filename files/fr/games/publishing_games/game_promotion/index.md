@@ -1,14 +1,6 @@
 ---
 title: Promouvoir un jeu
 slug: Games/Publishing_games/Game_promotion
-tags:
-  - Community
-  - Games
-  - JavaScript
-  - Online Games
-  - Promotion
-  - blog
-  - competitions
 ---
 
 {{GamesSidebar}}

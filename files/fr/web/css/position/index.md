@@ -1,8 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-translation_of: Web/CSS/position
-browser-compat: css.properties.position
 ---
 
 {{CSSRef}}
@@ -30,24 +28,29 @@ position: unset;
 ### Valeurs
 
 - `static`
+
   - : Comportement normal (par défaut). L'élément est alors positionné dans le flux avec sa position. Les propriétés [`top`](/fr/docs/Web/CSS/top), [`right`](/fr/docs/Web/CSS/right), [`bottom`](/fr/docs/Web/CSS/bottom), [`left`](/fr/docs/Web/CSS/left) et [`z-index`](/fr/docs/Web/CSS/z-index) ne s'appliquent pas.
 
 - `relative`
+
   - : L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par `top`, `right`, `bottom` et `left`. Le décalage n'a pas d'impact sur la position des éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec `static`.
 
     Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. L'effet de cette valeur n'est pas défini pour les éléments `table-*-group`, `table-row`, `table-column`, `table-cell` et `table-caption`.
 
 - `absolute`
+
   - : L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. La position finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
     Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. Les éléments positionnés de façon absolue peuvent avoir des marges, ces marges ne fusionnent pas avec les autres marges.
 
 - `fixed`
+
   - : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage (<i lang="en">viewport</i>), sauf si un des ancêtres a une propriété [`transform`](/fr/docs/Web/CSS/transform), [`perspective`](/fr/docs/Web/CSS/perspective) ou [`filter`](/fr/docs/Web/CSS/filter) qui est différente de `none` (voir [la spécification sur les transformations CSS](https://www.w3.org/TR/css-transforms-1/#propdef-transform))&nbsp;; dans ce cas, c'est l'élément ancêtre qui joue le rôle de bloc englobant. Cela empêche le défilement lorsque la page est parcourue (ou lors de l'impression, le positionne à cette position fixe pour _chaque page_). Cette valeur crée toujours un nouveau contexte d'empilement. Certaines incohérences existent entre les navigateurs quant au rôle de `perspective` et `filter` pour la définition du bloc englobant. La valeur finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
     Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). Pour les documents imprimés, cela se traduit par le placement de l'élément au même endroit pour _chacune des pages_.
 
 - `sticky`
+
   - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
 
     Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément «&nbsp;adhèrera&nbsp;» à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche&nbsp;: cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf. cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
@@ -140,12 +143,27 @@ Dans l'exemple qui suit, on n'a pas d'ancêtre positionné et la boîte «&nbsp;
 ```html
 <h1>Positionnement absolu</h1>
 
-<p>Un élément de bloc simple. Les éléments de bloc adjacents sont sur de nouvelles lignes en dessous.</p>
+<p>
+  Un élément de bloc simple. Les éléments de bloc adjacents sont sur de
+  nouvelles lignes en dessous.
+</p>
 
-<p class="positioned">Par défaut, on occupe 100% de la largeur de l'élément parent et on est aussi grand que notre contenu.</p>
-<p>Nous sommes séparés par nos marges (une seule marge en raison de la fusion des marges).</p>
+<p class="positioned">
+  Par défaut, on occupe 100% de la largeur de l'élément parent et on est aussi
+  grand que notre contenu.
+</p>
+<p>
+  Nous sommes séparés par nos marges (une seule marge en raison de la fusion des
+  marges).
+</p>
 
-<p>Les éléments <em>en ligne (inline)</em> <span>comme celui-ci</span> et <span>celui-là</span> se situent sur la même ligne avec également les nœuds texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette image <img src="long.jpg"></p>
+<p>
+  Les éléments <em>en ligne (inline)</em> <span>comme celui-ci</span> et
+  <span>celui-là</span> se situent sur la même ligne avec également les nœuds
+  texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent
+  <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette
+  image <img src="long.jpg" />
+</p>
 ```
 
 #### CSS
@@ -193,22 +211,30 @@ Le positionnement fixe est semblable au positionnement absolu sauf qu'ici, le bl
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-    Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
-    Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
-    Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-    Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
+    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
+    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
+    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
+    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
+    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
+    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
+    ultrices ultrices, tempor et tellus.
   </p>
   <div class="box" id="un">Un</div>
 </div>
@@ -309,16 +335,19 @@ Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/top) ou [`right
 }
 
 dl > div {
-  background: #FFF;
+  background: #fff;
   padding: 24px 0 0 0;
 }
 
 dt {
-  background: #B8C1C8;
-  border-bottom: 1px solid #989EA4;
-  border-top: 1px solid #717D85;
-  color: #FFF;
-  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -327,14 +356,17 @@ dt {
 }
 
 dd {
-  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
   margin: 0;
   padding: 0 0 0 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #CCC;
+  border-top: 1px solid #ccc;
 }
 ```
 

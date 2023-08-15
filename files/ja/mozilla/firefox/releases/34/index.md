@@ -13,7 +13,7 @@ Gecko 34 を搭載した Firefox 34 は、米国時間 2014 年 12 月 1 日に�
 
 - [Storage Inspector: Web ページが保存したデータを確認できる新ツール](/ja/docs/Tools/Storage_Inspector)
 - [Performance tool: プロファイラの UI の改良とフレームレートのタイムライン](/ja/docs/Tools/Performance)
-- [Frame switching: 開発ツールがページ内の特定の iframe を指すようにする](/ja/docs/tools/Working_with_iframes)
+- [Frame switching: 開発ツールがページ内の特定の iframe を指すようにする](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html)
 - [console.table をサポート](/ja/docs/Web/API/Console.table)
 - [インスペクタで jQuery のイベントの確認が可能](/ja/docs/Tools/Page_Inspector#Examining_event_listeners)
 

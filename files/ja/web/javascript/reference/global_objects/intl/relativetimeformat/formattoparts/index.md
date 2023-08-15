@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToPa
 ## 構文
 
 ```js
-RelativeTimeFormat.formatToParts(value, unit)
+RelativeTimeFormat.formatToParts(value, unit);
 ```
 
 ### 引数

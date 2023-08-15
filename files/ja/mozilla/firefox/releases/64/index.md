@@ -91,7 +91,7 @@ _変更なし。_
 #### メディア、Web Audio、WebRTC
 
 - {{domxref("PannerNode.refDistance")}}、{{domxref("PannerNode.maxDistance")}}、{{domxref("PannerNode.rolloffFactor")}}、{{domxref("PannerNode.coneOuterGain")}} プロパティが、受け入れ可能な範囲を超える値が設定されたときに、正しく例外を発生させるようになりました ([Firefox バグ 1487963](https://bugzil.la/1487963))。
-- {{domxref("RTCRtpSender.setParameters()")}} で変更した {{domxref("RTCRtpEncodingParameters")}} の設定は、呼び出し中にに更新されませんでした。これらが再ネゴシエーションなしで即座に更新するようになりました ([Firefox バグ 1253499](https://bugzil.la/1253499))。
+- {{domxref("RTCRtpSender.setParameters()")}} で変更した {{domxref("RTCRtpEncodingParameters")}} の設定は、呼び出し中に更新されませんでした。これらが再ネゴシエーションなしで即座に更新するようになりました ([Firefox バグ 1253499](https://bugzil.la/1253499))。
 - {{domxref("RTCIceCandidateStats.relayProtocol")}} を実装しました。これは {{domxref("RTCIceCandidateStats.mozLocalTransport")}} を標準化したものであり、こちらは非推奨になりました ([Firefox バグ 1435789](https://bugzil.la/1435789))。
 - 自動利得制御 (AGC) をデフォルトで有効にしました。これは設定項目 `media.getusermedia.agc_enabled` で変更できます ([Firefox バグ 1496714](https://bugzil.la/1496714))。
 
@@ -103,7 +103,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- シマンテックの CA を失効させる計画を実装しました ([Firefox バグ 1409257](https://bugzil.la/1409257) を参照。詳しくは [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) の議論もご覧ください)。
+- シマンテックの CA を失効させる計画を実装しました ([Firefox バグ 1409257](https://bugzil.la/1409257) を参照。詳しくは [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion) の議論もご覧ください)。
 - {{httpheader("Referrer-Policy")}} を、スタイルシートで読み込むリソースの制御で使用可能になりました ([Firefox バグ 1330487](https://bugzil.la/1330487))。詳しくは [CSS との統合](/ja/docs/Web/HTTP/Headers/Referrer-Policy#css_%E3%81%A8%E3%81%AE%E7%B5%B1%E5%90%88) をご覧ください。
 
 ### プラグイン

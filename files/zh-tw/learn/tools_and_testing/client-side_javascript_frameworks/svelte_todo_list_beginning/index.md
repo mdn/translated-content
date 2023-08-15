@@ -1,7 +1,6 @@
 ---
 title: 開始寫我們的 Svelte 待辦清單應用程式
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
 
 {{LearnSidebar}}
@@ -307,7 +306,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
   aria-labelledby="list-heading"></ul>
 ```
 
-`role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara’s 的「Fixing Lists」文章。
+`role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara 的「Fixing Lists」文章。
 
 `aria-labelledby` 屬性則告訴輔助技術，我們把 `<h2>` 且 `id` 為 `list-heading` 作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。
 
@@ -449,7 +448,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -548,7 +549,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

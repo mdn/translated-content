@@ -42,7 +42,11 @@ El siguiente ejemplo muestra como se crea un `AudioBuffer` y rellena con un soni
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // Fill the buffer with white noise;
 // just random values between -1.0 and 1.0

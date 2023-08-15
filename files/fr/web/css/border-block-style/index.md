@@ -1,8 +1,6 @@
 ---
 title: border-block-style
 slug: Web/CSS/border-block-style
-translation_of: Web/CSS/border-block-style
-browser-compat: css.properties.border-block-style
 ---
 
 {{CSSRef}}

@@ -113,4 +113,4 @@ p {
 
 ## See also
 
-- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

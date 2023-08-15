@@ -2,6 +2,7 @@
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} 인터페이스의 **`root`** 읽기 전용 속성은 {{glossary("bounding box", "바운딩 박스")}}를 주시 대상의 {{glossary("viewport", "뷰포트")}}로 취급하는 {{domxref("Element")}} 또는 {{domxref("Document")}}를 나타냅니다.

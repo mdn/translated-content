@@ -1,13 +1,6 @@
 ---
 title: La sécurité d'un site Web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Débutant
-  - Guide
-  - Sécurité
-  - Sécurité Web
-translation_of: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/Premiers_pas/Website_security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
@@ -64,7 +57,7 @@ Il y a deux manières principales pour demander au site de retourner un script i
 
 La meilleur défense contre les vulnérabilités XSS est de supprimer ou désactiver toutes les balises qui peuvent potentiellement contenir des instructions pour exécuter du code. Pour HTML cela inclut les tags comme `<script>`, `<object>`, `<embed>`, et `<link>`.
 
-Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé *input sanitization* en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
+Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé _input sanitization_ en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
 
 ### Injection SQL
 
@@ -82,7 +75,7 @@ Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un ut
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
 ```
 
-Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
+Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caractère_d%27échappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
 
 > **Note :** la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
 

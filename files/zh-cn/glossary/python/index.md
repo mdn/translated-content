@@ -3,6 +3,8 @@ title: Python
 slug: Glossary/Python
 ---
 
+{{GlossarySidebar}}
+
 **Python** 是一个高级通用编程语言。它使用多范式方法。这意味着它支持程序化、面向对象和一些功能性编程结构。
 
 它是由 _Guido van Rossum_ 创建的，作为 1985 年至 1990 年间的另一种语言（称为 ABC）的继任者。目前 Python 被用于大量的领域，如 Web 开发，作为其他应用程序的脚本语言和构建实际应用程序。

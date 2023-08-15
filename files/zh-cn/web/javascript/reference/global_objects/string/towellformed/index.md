@@ -31,7 +31,7 @@ JavaScript 中的字符串是 UTF-16 编码的。UTF-16 编码中有*代理对*�
 
 ```js
 const strings = [
-   // 单独的高位代理
+  // 单独的高位代理
   "ab\uD800",
   "ab\uD800c",
   // 单独的低位代理

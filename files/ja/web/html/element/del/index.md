@@ -1,28 +1,30 @@
 ---
-title: '<del>: 削除済み文字列要素'
+title: "<del>: 削除済みテキスト要素"
 slug: Web/HTML/Element/del
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<del>` 要素**は、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。 {{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
+**`<del>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。{{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
 
-一般的にこの要素は (必ずではありませんが) 打ち消し線のスタイルを伴って描画されます。
+一般的にこの要素は（必ずではありませんが）打ち消し線のスタイルを伴って描画されます。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -30,7 +32,7 @@ slug: Web/HTML/Element/del
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
         >
       </td>
@@ -42,7 +44,7 @@ slug: Web/HTML/Element/del
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -78,8 +80,7 @@ slug: Web/HTML/Element/del
 ## 例
 
 ```html
-<p><del>This text has been deleted</del>,
-here is the rest of the paragraph.</p>
+<p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del><p>This paragraph has been deleted.</p></del>
 ```
 
@@ -89,9 +90,9 @@ here is the rest of the paragraph.</p>
 
 ## アクセシビリティの考慮
 
-`del` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("::before")}} 及び {{cssxref("::after")}} 疑似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。
+`del` 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("content")}} プロパティを {{cssxref("::before")}} 及び {{cssxref("::after")}} 擬似要素と共に使うことでアナウンスさせることができます。
 
-```
+```css
 del::before,
 del::after {
   clip-path: inset(100%);
@@ -112,9 +113,9 @@ del::after {
 }
 ```
 
-読み上げソフトを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが削除されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
+スクリーンリーダーを使用する人によっては、特に冗長になるコンテンツのアナウンスを意図的に無効にしていることがあります。このため、この手法を悪用しないようにすることは重要であり、コンテンツが削除されていることを知らないと理解に影響するような場面でのみ使用するようにしてください。
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
+- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## 仕様書
@@ -123,7 +124,7 @@ del::after {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.del")}}
+{{Compat}}
 
 ## 関連情報
 

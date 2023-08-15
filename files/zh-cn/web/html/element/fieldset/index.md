@@ -3,7 +3,13 @@ title: <fieldset>
 slug: Web/HTML/Element/fieldset
 ---
 
-{{HTMLSidebar}}**HTML `<fieldset>` **元素用于对表单中的控制元素进行分组（也包括 label 元素）。{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
+{{HTMLSidebar}}
+
+[HTML](/zh-CN/docs/Web/HTML) **`<fieldset>`** 元素用于对表单中的控制元素进行分组（也包括 label 元素）。
+
+{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+
+如上述例子所示，`<fieldset>` 元素将一个 HTML 表单的一部分组成一组，内置了一个 {{htmlelement("legend")}} 元素作为 `fieldset` 的标题。这个元素有几个属性，最值得注意的是 `form`，其可以包含同一页面的 {{htmlelement("form")}} 元素的 `id`，以使 `<fieldset>` 成为这个 `<form>` 的一部分，即使 `<fieldset>` 不在其内。还有 `disabled` 属性，可将 `<fieldset>` 及其所有内容设置为不可用。
 
 ## 属性
 
@@ -14,6 +20,7 @@ slug: Web/HTML/Element/fieldset
 - `form`
   - : 将该值设为一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
 - `name`
+
   - : 元素分组的名称
 
     > **备注：** fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
@@ -30,7 +37,7 @@ slug: Web/HTML/Element/fieldset
 
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
-> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 
@@ -42,7 +49,7 @@ slug: Web/HTML/Element/fieldset
 <form action="#">
   <fieldset>
     <legend>Simple fieldset</legend>
-    <input type="radio" id="radio">
+    <input type="radio" id="radio" />
     <label for="radio">Spirit of radio</label>
   </fieldset>
 </form>
@@ -60,11 +67,11 @@ slug: Web/HTML/Element/fieldset
     <legend>Disabled fieldset</legend>
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris">
+      <input type="text" id="name" value="Chris" />
     </div>
     <div>
       <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie">
+      <input type="password" id="pwd" value="Wookie" />
     </div>
   </fieldset>
 </form>

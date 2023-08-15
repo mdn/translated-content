@@ -64,10 +64,10 @@ loop(food = 0; foodNeeded = 10) {
 让我们来看一个例子来完美地说明为什么循环是一件好事。假设我们想在{{htmlelement("canvas")}}元素上绘制 100 个随机圆（按更新按钮一次又一次地运行示例以查看不同的随机集）：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -92,41 +92,37 @@ loop(food = 0; foodNeeded = 10) {
     </style>
   </head>
   <body>
+    <button>Update</button>
 
-  <button>Update</button>
-
-  <canvas></canvas>
-
+    <canvas></canvas>
 
     <script>
-    var btn = document.querySelector('button');
-    var canvas = document.querySelector('canvas');
-    var ctx = canvas.getContext('2d');
+      var btn = document.querySelector("button");
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
 
-    var WIDTH = document.documentElement.clientWidth;
-    var HEIGHT = document.documentElement.clientHeight;
+      var WIDTH = document.documentElement.clientWidth;
+      var HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (var i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    btn.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (var i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      btn.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -138,7 +134,7 @@ loop(food = 0; foodNeeded = 10) {
 ```js
 for (var i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -153,7 +149,7 @@ for (var i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
+ctx.fillStyle = "rgba(255,0,0,0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -175,21 +171,21 @@ for (initializer; exit-condition; final-expression) {
 1. 关键字`for`，后跟一些括号。
 2. 在括号内，我们有三个项目，以分号分隔：
 
-    1. 一个**初始化器** - 这通常是一个设置为一个数字的变量，它被递增来计算循环运行的次数。它也有时被称为**计数变量**。
-    2. 一个**退出条件** - 如前面提到的，这个定义循环何时停止循环。这通常是一个表现为比较运算符的表达式，用于查看退出条件是否已满足的测试。
-    3. 一个**最终条件** - 这总是被判断（或运行），每个循环已经通过一个完整的迭代消失时间。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。
+   1. 一个**初始化器** - 这通常是一个设置为一个数字的变量，它被递增来计算循环运行的次数。它也有时被称为**计数变量**。
+   2. 一个**退出条件** - 如前面提到的，这个定义循环何时停止循环。这通常是一个表现为比较运算符的表达式，用于查看退出条件是否已满足的测试。
+   3. 一个**最终条件** - 这总是被判断（或运行），每个循环已经通过一个完整的迭代消失时间。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。
 
 3. 一些包含代码块的花括号 - 每次循环迭代时都会运行这个代码。
 
 我们来看一个真实的例子，所以我们可以看出这些做得更清楚。
 
 ```js
-var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-var info = 'My cats are called ';
-var para = document.querySelector('p');
+var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+var info = "My cats are called ";
+var para = document.querySelector("p");
 
 for (var i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+  info += cats[i] + ", ";
 }
 
 para.textContent = info;
@@ -198,40 +194,34 @@ para.textContent = info;
 这给我们以下输出：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Basic for loop example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    var info = 'My cats are called ';
-    var para = document.querySelector('p');
+      var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+      var info = "My cats are called ";
+      var para = document.querySelector("p");
 
-    for (var i = 0; i < cats.length; i++) {
-      info += cats[i] + ', ';
-    }
+      for (var i = 0; i < cats.length; i++) {
+        info += cats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
 
 {{ EmbedLiveSample('循环的标准', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
-> **备注：** 您可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
+> **备注：** 您可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
 
 这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：
 
@@ -239,9 +229,9 @@ para.textContent = info;
 2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`< cats.length` 仍然是真的，循环仍然运行。
 3. 在循环中，我们将当前的循环项（`cats[i]`是`cats[当前下标的任何东西]`）以及逗号和空格连接到`info`变量的末尾。所以：
 
-    1. 在第一次运行中，`i = 0`，所以 `cats[0] +', '` 将被连接到 `info("Bill")` 上。
-    2. 在第二次运行中，`i = 1`，所以 `cats[1] +', '` 将被连接到 `info("Jeff")` 上。
-    3. 等等。每次循环运行后，1 将被添加到 i（`i++`），然后进程将再次启动。
+   1. 在第一次运行中，`i = 0`，所以 `cats[0] +', '` 将被连接到 `info("Bill")` 上。
+   2. 在第二次运行中，`i = 1`，所以 `cats[1] +', '` 将被连接到 `info("Jeff")` 上。
+   3. 等等。每次循环运行后，1 将被添加到 i（`i++`），然后进程将再次启动。
 
 4. 当等于`cats.length`时，循环将停止，浏览器将移动到循环下面的下一个代码位。
 
@@ -258,14 +248,14 @@ para.textContent = info;
 ```js
 for (var i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
 
-> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
+> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
 
 > **警告：** 使用`for`- 与所有循环一样，您必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。
 
@@ -279,7 +269,7 @@ for (var i = 0; i < cats.length; i++) {
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -288,68 +278,70 @@ for (var i = 0; i < cats.length; i++) {
 然后是 JavaScript：
 
 ```js
-const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   let searchName = input.value.toLowerCase();
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(':');
+    let splitContact = contacts[i].split(":");
     if (splitContact[0].toLowerCase() === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent =
+        splitContact[0] + "'s number is " + splitContact[1] + ".";
       break;
     } else if (i === contacts.length - 1) {
-      para.textContent = 'Contact not found.';
+      para.textContent = "Contact not found.";
     }
   }
 });
 ```
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple contact search example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
 
-  <label for="search">Search by contact name: </label>
-  <input id="search" type="text">
-  <button>Search</button>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+      var para = document.querySelector('p');
+      var input = document.querySelector('input');
+      var btn = document.querySelector('button');
 
-    btn.addEventListener('click', function() {
-      var searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 0; i < contacts.length; i++) {
-        var splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
+      btn.addEventListener('click', function() {
+        var searchName = input.value;
+        input.value = '';
+        input.focus();
+        for (var i = 0; i < contacts.length; i++) {
+          var splitContact = contacts[i].split(':');
+          if (splitContact[0] === searchName) {
+            para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+            break;
+          } else if (i === contacts.length-1)
+                para.textContent = 'Contact not found.';
+          }
         }
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -361,13 +353,13 @@ btn.addEventListener('click', function() {
 3. 我们将输入的值输入到一个名为`searchName`的变量中，然后清空文本输入并重新对准它，准备进行下一个搜索。
 4. 现在有趣的部分，for 循环：
 
-    1. 我们的计数器开始时为在 0，直到计数器不再小于`contacts.length`，并在循环的每次迭代之后将`i`递增 1。
-    2. 在循环中，我们首先将当前联系人（`contacts [i]`）拆分为冒号字符，并将生成的两个值存储在名为`splitContact`的数组中。
-    3. 然后，我们使用条件语句来测试`splitContact [0]`（联系人姓名）是否等于输入的`searchName`。如果是，我们在段落中输入一个字符串来报告联系人的号码，并使用 break 来结束循环。
+   1. 我们的计数器开始时为在 0，直到计数器不再小于`contacts.length`，并在循环的每次迭代之后将`i`递增 1。
+   2. 在循环中，我们首先将当前联系人（`contacts [i]`）拆分为冒号字符，并将生成的两个值存储在名为`splitContact`的数组中。
+   3. 然后，我们使用条件语句来测试`splitContact [0]`（联系人姓名）是否等于输入的`searchName`。如果是，我们在段落中输入一个字符串来报告联系人的号码，并使用 break 来结束循环。
 
 5. 在`(contacts.length-1)` 迭代后，如果联系人姓名与输入的搜索不符，则段落文本设置为“未找到联系人”，循环继续迭代。
 
-> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html)或[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
+> **备注：** 您可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html)或[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
 
 ## 使用 continue 跳过迭代
 
@@ -384,52 +376,47 @@ for (var i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
 Here's the output:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Integer squares generator</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="text" />
+    <button>Generate integer squares</button>
 
-  <label for="number">Enter number: </label>
-  <input id="number" type="text">
-  <button>Generate integer squares</button>
-
-  <p>Output: </p>
-
+    <p>Output:</p>
 
     <script>
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      var num = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 1; i <= num; i++) {
-        var sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      btn.addEventListener("click", function () {
+        para.textContent = "Output: ";
+        var num = input.value;
+        input.value = "";
+        input.focus();
+        for (var i = 1; i <= num; i++) {
+          var sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -441,7 +428,7 @@ Here's the output:
 3. 如果平方根和四舍五入的平方根不相等（`!==`），则表示平方根不是整数，因此我们对此不感兴趣。在这种情况下，我们使用 continue 语句跳过当前循环而执行下一个循环迭代，而不在任何地方记录该数字。
 4. 如果平方根是一个整数，我们完全跳过 if 块，所以 continue 语句不被执行; 相反，我们将当前 i 值加上一个空格连接到段落内容的末尾。
 
-> **备注：** 您可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
+> **备注：** 您可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
 
 ## while 语句和 do ... while 语句
 
@@ -469,16 +456,16 @@ var i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
 }
 ```
 
-> **备注：** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
+> **备注：** This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 [do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
 
@@ -502,16 +489,16 @@ var i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
 } while (i < cats.length);
 ```
 
-> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
+> **备注：** 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
 > **警告：** 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。
 
@@ -537,10 +524,7 @@ do {
 如果您犯了错误，您可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。
 
 ```html hidden
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
-
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <textarea id="code" class="playable-code" style="height: 300px;">
 var output = document.querySelector('.output');
@@ -554,35 +538,36 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n  var para = document.createElement(\'p\');\n  if(i === 10) {\n    para.textContent = \'Countdown \' + i;\n  } else if(i === 0) {\n    para.textContent = \'Blast off!\';\n  } else {\n    para.textContent = i;\n  }\n\n  output.appendChild(para);\n\n  i--;\n}';
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n  var para = document.createElement('p');\n  if(i === 10) {\n    para.textContent = 'Countdown ' + i;\n  } else if(i === 0) {\n    para.textContent = 'Blast off!';\n  } else {\n    para.textContent = i;\n  }\n\n  output.appendChild(para);\n\n  i--;\n}";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('主动学习：启动倒计时！', '100%', 880) }}
@@ -611,8 +596,8 @@ window.addEventListener('load', updateCode);
 
 ```html hidden
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <textarea id="code" class="playable-code" style="height: 400px;">
@@ -631,35 +616,36 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 
 function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   updateCode();
 });
 
-solution.addEventListener('click', function() {
+solution.addEventListener("click", function () {
   textarea.value = jsSolution;
   updateCode();
 });
 
-var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nvar i = 0;\n\ndo {\n  if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n    refused.textContent += people[i] + \', \';\n  } else {\n    admitted.textContent += people[i] + \', \';\n  }\n  i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+var jsSolution =
+  "var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nvar admitted = document.querySelector('.admitted');\nvar refused = document.querySelector('.refused');\n\nvar i = 0;\n\ndo {\n  if(people[i] === 'Phil' || people[i] === 'Lola') {\n    refused.textContent += people[i] + ', ';\n  } else {\n    admitted.textContent += people[i] + ', ';\n  }\n  i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 ```
 
 {{ EmbedLiveSample('主动学习：填写来宾列表', '100%', 680) }}

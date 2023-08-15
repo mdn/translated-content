@@ -1,8 +1,6 @@
 ---
 title: Отзывчивый дизайн
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
@@ -227,7 +225,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/ru/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -244,7 +242,7 @@ This means that we only need to specify the font size for the heading once, rath
 If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the `<head>` of the document.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
@@ -266,8 +264,6 @@ There are other settings you can use with the viewport meta tag, however in gene
 - `user-scalable`: Prevents zooming if set to `no`.
 
 You should avoid using `minimum-scale`, `maximum-scale`, and in particular setting `user-scalable` to `no`. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.
-
-> **Примечание:** There is a CSS @ rule designed to replace the viewport meta tag — [@viewport](/ru/docs/Web/CSS/@viewport) — however, it has poor browser support. When both are used the meta tag overrides @viewport.
 
 ## Summary
 

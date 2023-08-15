@@ -25,15 +25,15 @@ C 언어같은 저수준 언어에서는 메모리 관리를 위해 [malloc()](h
 
 ```js
 var n = 123; // 정수를 담기 위한 메모리 할당
-var s = 'azerty'; // 문자열을 담기 위한 메모리 할당
+var s = "azerty"; // 문자열을 담기 위한 메모리 할당
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; // 오브젝트와 그 오브젝트에 포함된 값들을 담기 위한 메모리 할당
 
 // (오브젝트처럼) 배열과 배열에 담긴 값들을 위한 메모리 할당
-var a = [1, null, 'abra'];
+var a = [1, null, "abra"];
 
 function f(a) {
   return a + 2;
@@ -56,19 +56,19 @@ someElement.addEventListener(
 ```js
 var d = new Date(); // Date 개체를 위해 메모리를 할당
 
-var e = document.createElement('div'); // DOM 엘리먼트를 위해 메모리를 할당
+var e = document.createElement("div"); // DOM 엘리먼트를 위해 메모리를 할당
 ```
 
 메소드가 새로운 값이나 오브젝트를 할당하기도 합니다.
 
 ```js
-var s = 'azerty';
+var s = "azerty";
 var s2 = s.substr(0, 3); // s2는 새로운 문자열
 // 자바스크립트에서 문자열은 immutable 값이기 때문에,
 // 메모리를 새로 할당하지 않고 단순히 [0, 3] 이라는 범위만 저장합니다.
 
-var a = ['ouais ouais', 'nan nan'];
-var a2 = ['generation', 'nan nan'];
+var a = ["ouais ouais", "nan nan"];
+var a2 = ["generation", "nan nan"];
 var a3 = a.concat(a2);
 // a 와 a2 를 이어붙여, 4개의 원소를 가진 새로운 배열
 ```
@@ -106,31 +106,30 @@ var a3 = a.concat(a2);
 ```js
 var x = {
   a: {
-    b: 2
-  }
+    b: 2,
+  },
 };
 // 2개의 오브젝트가 생성되었습니다. 하나의 오브젝트는 다른 오브젝트의 속성으로 참조됩니다.
 // 나머지 하나는 'x' 변수에 할당되었습니다.
 // 명백하게 가비지 콜렉션 수행될 메모리는 하나도 없습니다.
 
+var y = x; // 'y' 변수는 위의 오브젝트를 참조하는 두 번째 변수입니다.
 
-var y = x;      // 'y' 변수는 위의 오브젝트를 참조하는 두 번째 변수입니다.
+x = 1; // 이제 'y' 변수가 위의 오브젝트를 참조하는 유일한 변수가 되었습니다.
 
-x = 1;          // 이제 'y' 변수가 위의 오브젝트를 참조하는 유일한 변수가 되었습니다.
+var z = y.a; // 위의 오브젝트의 'a' 속성을 참조했습니다.
+// 이제 'y.a'는 두 개의 참조를 가집니다.
+// 'y'가 속성으로 참조하고 'z'라는 변수가 참조합니다.
 
-var z = y.a;    // 위의 오브젝트의 'a' 속성을 참조했습니다.
-                // 이제 'y.a'는 두 개의 참조를 가집니다.
-                // 'y'가 속성으로 참조하고 'z'라는 변수가 참조합니다.
+y = "mozilla"; // 이제 맨 처음 'y' 변수가 참조했던 오브젝트를 참조하는 오브젝트는 없습니다.
+// (역자: 참조하는 유일한 변수였던 y에 다른 값을 대입했습니다)
+// 이제 오브젝트에 가비지 콜렉션이 수행될 수 있을까요?
+// 아닙니다. 오브젝트의 'a' 속성이 여전히 'z' 변수에 의해 참조되므로
+// 메모리를 해제할 수 없습니다.
 
-y = "mozilla";  // 이제 맨 처음 'y' 변수가 참조했던 오브젝트를 참조하는 오브젝트는 없습니다.
-                // (역자: 참조하는 유일한 변수였던 y에 다른 값을 대입했습니다)
-                // 이제 오브젝트에 가비지 콜렉션이 수행될 수 있을까요?
-                // 아닙니다. 오브젝트의 'a' 속성이 여전히 'z' 변수에 의해 참조되므로
-                // 메모리를 해제할 수 없습니다.
-
-z = null;       // 'z' 변수에 다른 값을 할당했습니다.
-                // 이제 맨 처음 'x' 변수가 참조했던 오브젝트를 참조하는
-                // 다른 변수는 없으므로 가비지 콜렉션이 수행됩니다.
+z = null; // 'z' 변수에 다른 값을 할당했습니다.
+// 이제 맨 처음 'x' 변수가 참조했던 오브젝트를 참조하는
+// 다른 변수는 없으므로 가비지 콜렉션이 수행됩니다.
 ```
 
 순환 참조를 다루는 일에는 한계가 있습니다. 다음 예제에서는 두 객체가 서로 참조하는 속성으로 생성되어 순환 구조를 생성합니다. 함수 호출이 완료되면 이 두 객체는 스코프를 벗어나게 될 것이며, 그 시점에서 두 객체는 불필요해지므로 할당된 메모리는 회수되어야 합니다. 그러나 두 객체가 서로를 참조하고 있으므로, 참조-세기 알고리즘은 둘 다 가비지 컬렉션의 대상으로 표시하지 않습니다. 이러한 순환 참조는 메모리 누수의 흔한 원인입니다.
@@ -139,8 +138,8 @@ z = null;       // 'z' 변수에 다른 값을 할당했습니다.
 function f() {
   var x = {};
   var y = {};
-  x.a = y;         // x는 y를 참조합니다.
-  y.a = x;         // y는 x를 참조합니다.
+  x.a = y; // x는 y를 참조합니다.
+  y.a = x; // y는 x를 참조합니다.
 
   return "azerty";
 }
@@ -184,7 +183,7 @@ node --expose-gc --inspect index.js
 
 ### WeakMaps과 WeakSets
 
-[`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)과 [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)은 각 non-weak에 대응되는 [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)의 API를 모방한 데이터 구조입니다. `WeakMap`은 키-값 쌍의 콜렉션을 제공하는 반면, `WeakSet`은 유일한 값들로 이뤄진 콜렉션을 제공합니다. 각각은 추가, 삭제, 조회 기능을 제공합니다.
+[`WeakMap`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)과 [`WeakSet`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)은 각 non-weak에 대응되는 [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)의 API를 모방한 데이터 구조입니다. `WeakMap`은 키-값 쌍의 콜렉션을 제공하는 반면, `WeakSet`은 유일한 값들로 이뤄진 콜렉션을 제공합니다. 각각은 추가, 삭제, 조회 기능을 제공합니다.
 
 `WeakMap`과 `WeakSet`의 이름은 _weakly held_ 값이라는 개념에서 따왔습니다. 만약 `x`가 `y`에 의해 weekly held되었다라는 의미는 비록 `x`를 `y`를 통해 접근할 수 있지만 표시하고-쓸기 알고리즘은 다른 것이 `x`를 _strongly hold_ 하고 있지 않은 이상 닿을 수 있는 것으로 간주하지 않습니다. 여기서 논의되고 있는 것을 제외한, 대부분의 데이터 구조는 전달된 오브젝트를 strongly hold하기에 오브젝트에 언제든 접근할 수 있습니다. `WeakMap`과 `WeakSet`의 키는 프로그램의 어떤 것도 키를 참조하지 않는다면 가비지 콜렉션될 수 있습니다 (`WeakMap`에서 값은 그이후 가비지 콜렉션될 수 있음). 이 부분은 아래 두 가지 특성을 통해 보장됩니다:
 
@@ -229,13 +228,13 @@ class MyWeakMap {
 
 위에서와 같이, `MyWeakMap`는 키 콜렉션을 실제로 보유하지 않습니다. `MyWeakMap`은 단순히 전달받은 각 오브젝트에 메타데이터를 추가합니다. 그 오브젝트는 이후 표시하기-쓸기를 통해 가비지 콜렉션 가능하게 됩니다. 그러므로, `WeakMap`의 키를 순회하거나 `WeakMap`의 키를 모두 지우는 것(clear)은 불가능합니다 (clear 역시도 전체 키 콜렉션 정보에 의존하기에).
 
-좀 더 상세한 API는 [keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) 가이드에서 확인하실 수 있습니다.
+좀 더 상세한 API는 [keyed collections](/ko/docs/Web/JavaScript/Guide/Keyed_collections) 가이드에서 확인하실 수 있습니다.
 
 ### WeakRefs와 FinalizationRegistry
 
-> **Note:** `WeakRef`와 `FinalizationRegistry`는 가비지 콜렉션 구조에 대한 직접적인 내부 탐색을 제공합니다. 런타임 시맨틱은 완전히 보장될 수 없기에 [사용을 안할 수 있다면 안하는 것](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)을 권장합니다.
+> **Note:** `WeakRef`와 `FinalizationRegistry`는 가비지 콜렉션 구조에 대한 직접적인 내부 탐색을 제공합니다. 런타임 시맨틱은 완전히 보장될 수 없기에 [사용을 안할 수 있다면 안하는 것](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)을 권장합니다.
 
-값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_ 로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
+값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_ 로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
 
 `WeakRef`의 한 가지 사용례는 문자열 URLs을 큰 오브젝트에 매핑하는 캐시시스템입니다. 이런 목적을 위해 `WeakMap`를 사용할 수는 없는데, 그 이유는 `WeakMap` 오브젝트는 weakly held인 _키_ 를 가지나 _값_ 은 그렇지 않기 때문입니다 - 만약 키에 접근하면, 항상 결정적으로 값을 얻습니다 (키에 접근할 수 있다는 것이 키가 아직 존재한다는 것을 의미하기 때문에). 이 부분에서 키에 접근 시 `undefined`를 얻는 것은 (만약 상응한 값도 메모리 상에 존재하지 않는다면) 다시 계산하면 되기에 괜찮으나, 우리는 닿을 수 없는 오브젝트가 캐시 상에서 존재하기는 원하지 않습니다. 이러한 경우에, 우리는 일반적인 `Map`에 각각의 값이 오브젝트의 실제값이 아닌 `WeakRef`이 되도록 구성할 수 있습니다.
 
@@ -256,7 +255,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
+[`FinalizationRegistry`](/ko/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
 
 ```js
 function cached(getter) {

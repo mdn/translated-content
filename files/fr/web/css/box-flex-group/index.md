@@ -1,8 +1,6 @@
 ---
 title: box-flex-group
 slug: Web/CSS/box-flex-group
-browser-compat: css.properties.box-flex-group
-translation_of: Web/CSS/box-flex-group
 ---
 
 {{CSSRef}}{{Non-standard_header}}

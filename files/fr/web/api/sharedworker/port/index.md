@@ -1,9 +1,6 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-page-type: web-api-instance-property
-translation_of: Web/API/SharedWorker/port
-browser-compat: api.SharedWorker.port
 l10n:
   sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
@@ -21,7 +18,7 @@ Un objet [`MessagePort`](/fr/docs/Web/API/MessagePort).
 L'exemple de code suivant montre la création d'un objet `SharedWorker` à l'aide du constructeur [`SharedWorker()`](/fr/docs/Web/API/SharedWorker/SharedWorker). Plusieurs scripts peuvent accéder au <i lang="en">worker</i> avec l'objet [`MessagePort`](/fr/docs/Web/API/MessagePort) accessible grâce à la propriété `SharedWorker.port`. Le port est ouvert avec la méthode `start()`.
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 

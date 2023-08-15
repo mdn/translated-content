@@ -15,6 +15,6 @@ slug: Web/HTTP/Status/422
 422 Unprocessable Entity
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}

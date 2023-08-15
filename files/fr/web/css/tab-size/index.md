@@ -1,12 +1,6 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/tab-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -50,6 +44,7 @@ tab-size: unset;
 ### HTML
 
 <!-- markdownlint-disable MD010 -->
+
 ```html
 <pre class="exemple">
 	print "tabulation avant"

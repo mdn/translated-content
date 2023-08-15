@@ -2,6 +2,7 @@
 title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 `local` 저장소 영역을 표현한다. `local` 저장소의 항목은 확장이 설치된 기기에 제한된다.
@@ -15,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 파이어폭스에서는 확장을 제거해도 local 저장소를 브라우저가 지우지 않도록 막을 수 있다. "about:config"에서 "keepUuidOnUninstall"와 "keepStorageOnUninstall" 두 브라우저 기본 설정을 `true`로 고치면 된다. 이 특징은 개발자가 확장을 테스트하는데 도움을 주려는 것이다. 확장 스스로 이 값들을 바꿀 수는 없다.
 
-이 API는 {{domxref("Window.localStorage")}}와 비슷하지만, 확장 코드가 확장 관련 데이터를 저장하는데 `Window.localStorage`를 사용하지 말 것을 권장한다. 사적이 이유로 사용자가 방문 기록이나 데이터를 지우는 다양한 상황에서 확장이 localStorage API로 저장된 데이터는 지워지지만, [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API로 저장한 데이터는 정확하게 유지된다.
+이 API는 {{domxref("Window.localStorage")}}와 비슷하지만, 확장 코드가 확장 관련 데이터를 저장하는데 `Window.localStorage`를 사용하지 말 것을 권장한다. 사적이 이유로 사용자가 방문 기록이나 데이터를 지우는 다양한 상황에서 확장이 localStorage API로 저장된 데이터는 지워지지만, [`storage.local`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) API로 저장한 데이터는 정확하게 유지된다.
 
 ## 메소드
 

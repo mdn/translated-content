@@ -1,7 +1,6 @@
 ---
 title: Contraste del color
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste
 ---
 
 El [contraste del color](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) entre el fondo y el contenido del primer plano (que suele ser texto) debe ser lo suficientemente alto como para garantizar la legibilidad.
@@ -52,9 +51,7 @@ Ambos fragmentos de texto tienen color negro por defecto.
 El `<div>` "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:
 
 ```html hidden
-    <div class="good">
-      Good contrast
-    </div>
+<div class="good">Good contrast</div>
 ```
 
 ```css hidden
@@ -81,9 +78,7 @@ div {
 El `<div>` "bad", por otro lado, tiene un color de fondo púrpura muy oscuro, lo que hace que el texto sea mucho más difícil de leer:
 
 ```html hidden
-    <div class="bad">
-      Bad contrast
-    </div>
+<div class="bad">Bad contrast</div>
 ```
 
 ```css hidden

@@ -1,13 +1,6 @@
 ---
 title: margin-trim
 slug: Web/CSS/margin-trim
-tags:
-  - CSS
-  - Draft
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-trim
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -2,6 +2,7 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** 속성의 초기 값은 {{jsxref("Array.prototype.values()", "values()")}} 속성의 초기 값과 같은 함수 객체입니다.
@@ -9,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ## 구문
 
 ```js
-arr[Symbol.iterator]()
+arr[Symbol.iterator]();
 ```
 
 ### 반환 값
@@ -21,7 +22,7 @@ arr[Symbol.iterator]()
 ### `for…of` 반복문을 이용한 순회
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 // your browser must support for..of loop
 // and let-scoped variables in for loops
@@ -34,7 +35,7 @@ for (let letter of eArr) {
 ### 다른 방법
 
 ```js
-var arr = ['w', 'y', 'k', 'o', 'p'];
+var arr = ["w", "y", "k", "o", "p"];
 var eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // w
 console.log(eArr.next().value); // y

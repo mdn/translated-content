@@ -1,10 +1,6 @@
 ---
 title: Paramètres des instructions de traitement
 slug: Web/XSLT/PI_Parameters
-tags:
-  - XSLT
-translation_of: Web/XSLT/PI_Parameters
-original_slug: Web/XSLT/Paramètres_des_instructions_de_traitement
 ---
 
 ### Présentation

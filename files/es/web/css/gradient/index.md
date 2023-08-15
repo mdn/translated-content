@@ -1,7 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-original_slug: Web/CSS/Gradiente
 ---
 
 {{CSSRef}}
@@ -28,11 +27,56 @@ A rainbow made from a gradient
 
 ```css
 body {
-background: -moz-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -webkit-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -ms-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: -o-linear-gradient(left,red,orange,yellow, green, blue,indigo,violet);
-background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,violet);
+  background: -moz-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -webkit-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -ms-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: -o-linear-gradient(
+    left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 ```
 
@@ -44,13 +88,13 @@ Generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. C
 
 ```html
 Radial gradient
-
 ```
 
 ```css
 body {
-background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll 0% 0% transparent;
-background: radial-gradient(red, yellow, rgb(30, 144, 255));
+  background: -moz-radial-gradient(red, yellow, rgb(30, 144, 255)) repeat scroll
+    0% 0% transparent;
+  background: radial-gradient(red, yellow, rgb(30, 144, 255));
 }
 ```
 
@@ -66,8 +110,20 @@ Repeating gradient
 
 ```css
 body {
-background: -moz-repeating-linear-gradient(top left -45deg, red, red 5px, white 5px, white 10px);
-background: repeating-linear-gradient(to top left, red, red 5px, white 5px, white 10px);
+  background: -moz-repeating-linear-gradient(
+    top left -45deg,
+    red,
+    red 5px,
+    white 5px,
+    white 10px
+  );
+  background: repeating-linear-gradient(
+    to top left,
+    red,
+    red 5px,
+    white 5px,
+    white 10px
+  );
 }
 ```
 

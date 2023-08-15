@@ -1,18 +1,6 @@
 ---
 title: GlobalFetch.fetch()
 slug: Web/API/fetch
-tags:
-  - API
-  - API Fetch
-  - Experimental
-  - Fetch
-  - GlobalFetch
-  - Méthode
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - requête
-translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
-original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch")}}
@@ -87,21 +75,21 @@ Une {{domxref("Promise")}} qui se résoud avec un object {{domxref("Response")}}
 Dans notre [exemple de requête avec fetch](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-request/)) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant `fetch()`. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.
 
 ```js
-const monImage = document.querySelector('img');
+const monImage = document.querySelector("img");
 
-let maRequete = new Request('fleurs.jpg');
+let maRequete = new Request("fleurs.jpg");
 
 fetch(maRequete)
-.then(function(reponse) {
-  if (!response.ok) {
-    throw new Error(`erreur HTTP! statut: ${reponse.status}`);
-  }
-  return reponse.blob();
-})
-.then(function(reponse) {
-  let URLobjet = URL.createObjectURL(reponse);
-  monImage.src = URLobjet;
-});
+  .then(function (reponse) {
+    if (!response.ok) {
+      throw new Error(`erreur HTTP! statut: ${reponse.status}`);
+    }
+    return reponse.blob();
+  })
+  .then(function (reponse) {
+    let URLobjet = URL.createObjectURL(reponse);
+    monImage.src = URLobjet;
+  });
 ```
 
 Dans notre [exemple fetch avec initialisation et requête](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode `fetch` :
@@ -127,20 +115,22 @@ fetch(maRequete, monInit).then(function(reponse) {
 Notez que vous pouvez aussi passer l'objet d'initialisation au constructeur de la requête pour obtenir le même effet, par exemple :
 
 ```js
-let maRequete = new Request('fleurs.jpg', monInit);
+let maRequete = new Request("fleurs.jpg", monInit);
 ```
 
 Vous pouvez aussi utiliser un objet litéral comme en-têtes dans votre objet d'initalisation.
 
 ```js
-const monInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+const monInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-let maRequete = new Request('fleurs.jpg', monInit);
+let maRequete = new Request("fleurs.jpg", monInit);
 ```
 
 ## Spécifications

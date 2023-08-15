@@ -495,7 +495,7 @@ email.addEventListener("input", (event) => {
 
 検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required` (入力必須) で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
-`<span>` 要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性は、画面リーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
+`<span>` 要素の中にエラーメッセージを表示させようとしています。 `<span>`にセットされた [`aria-live`](/ja/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性は、スクリーンリーダーのような支援技術を使用している人々を含む皆に、独自のエラーメッセージを提示するようにします。
 
 > **メモ:** ここでの要点は、フォームに `novalidate` 属性をつけると、フォームがエラーメッセージのバブルを表示するのを停止して、その代わり DOM 内にカスタムエラーメッセージを選択した方法で表示させられることです。
 

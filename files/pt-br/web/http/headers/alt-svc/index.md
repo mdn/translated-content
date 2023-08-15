@@ -37,8 +37,8 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## Especificações
 
-| Especificação    | Status   | Comentários        |
-| ---------------- | -------- | ------------------ |
+| Especificação | Status   | Comentários        |
+| ------------- | -------- | ------------------ |
 | {{RFC(7838)}} | IETF RFC | Definição inicial. |
 
 ## Compatibilidade com navegadores

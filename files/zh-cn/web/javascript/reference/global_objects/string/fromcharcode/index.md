@@ -5,60 +5,55 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 {{JSRef}}
 
-静态 **`String.fromCharCode()`** 方法返回由指定的 UTF-16 代码单元序列创建的字符串。
+**`String.fromCharCode()`** 静态方法返回由指定的 UTF-16 码元序列创建的字符串。
 
-{{EmbedInteractiveExample("pages/js/string-fromcharcode.html")}}
+{{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}
 
 ## 语法
 
-```plain
-String.fromCharCode(num1[, ...[, numN]])
+```js-nolint
+String.fromCharCode(num1)
+String.fromCharCode(num1, num2)
+String.fromCharCode(num1, num2, /* …, */ numN)
 ```
 
 ### 参数
 
-- `num1, ..., numN`
-  - : 一系列 UTF-16 代码单元的数字。范围介于 `0` 到 `65535`（`0xFFFF`）之间。大于 `0xFFFF` 的数字将被截断。不进行有效性检查。
+- `numN`
+  - : 一个介于 `0` 和 `65535`（`0xFFFF`）之间的数字，表示一个 UTF-16 码元。大于 `0xFFFF` 的数字会被截断为最后的 16 位。不进行有效性检查。
 
 ### 返回值
 
-一个长度为 `N` 的字符串，由 `N` 个指定的 UTF-16 代码单元组成。
+一个长度为 `N` 的字符串，由 `N` 个指定的 UTF-16 码元组成。
 
 ## 描述
 
-该方法返回一个字符串，而不是一个 {{jsxref("String")}} 对象。
+因为 `fromCharCode()` 是 `String` 的静态方法，所以始终使用 `String.fromCharCode()` 来调用它，而不是作为你创建的 `String` 值的方法。
 
-由于 `fromCharCode()` 是 {{jsxref("String")}} 的静态方法，所以应该像这样使用：`String.fromCharCode()`，而不是作为你创建的 {{jsxref("String")}} 对象的方法。
+Unicode 码位的范围是从 `0` 到 `1114111`（`0x10FFFF`）。`charCodeAt()` 总是返回一个小于 `65536` 的值，因为较高的码位由*一对* 16 位代理伪字符组成。因此，为了生成一个值大于 `65535` 的完整字符，需要提供两个码元（就好像操作一个包含两个字符的字符串）。有关 Unicode 的信息，请参阅 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
-### 返回补充字符
-
-在 UTF-16 中，绝大部分常用的字符可以用一个 16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual Plane (BMP)，是所有可寻址的 Unicode 码点的 1/17th。剩下的码点，从范围 `65536` (`0x010000`) 到 `1114111` (`0x10FFFF`) 被称之为补充字符。在 UTF-16 中，补充字符也叫代理（surrogates），用两个 16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。
-
-因为 `fromCharCode()` 只作用于 16 位的值 (跟 `\u` 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，`String.fromCharCode(0xD83C, 0xDF03)` 和 `\uD83C\uDF03` 返回码点 `U+1F303` "Night with Stars"。
-
-While there is a mathematical relationship between the supplementary code point value (e.g. `0x1F303`) and both surrogate values that represent it (e.g., `0xD83C` and `0xDF03`), it does require an extra step to either calculate or look up the surrogate pair values every time a supplementary code point is to be used. 因此，使用 {{jsxref("String.fromCodePoint()")}}（ES2015 标准下的一个方法）更方便，这个方法允许你基于真实的码点返回补充字符。例如 `String.fromCodePoint(0x1F303)` 返回码点 `U+1F303` "Night with Stars"。
+由于 `fromCharCode()` 仅适用于 16 位的值（与 `\u` 转义序列相同），因此需要使用代理对来返回补充字符。例如，`String.fromCharCode(0xd83c, 0xdf03)` 和 `"\ud83c\udf03"` 都返回码位 `U+1F303` "Night with Stars"。虽然补充码位值（例如 `0x1f303`）与表示它的两个代理值（例如 `0xd83c` 和 `0xdf03`）之间存在数学关系，但每次使用补充码位时都需要额外的步骤来计算或查找代理对值。出于这个原因，使用 {{jsxref("String.fromCodePoint()")}} 更方便，它可以根据实际的码位值返回补充字符。例如，`String.fromCodePoint(0x1f303)` 返回码位 `U+1F303` "Night with Stars"。
 
 ## 示例
 
-### 使用 `fromCharCode()`
+### 使用 fromCharCode()
 
-在 UTF-16 中，BMP 字符使用一个代码单元：
+在 UTF-16 中，BMP 字符使用单个码元：
 
 ```js
-String.fromCharCode(65, 66, 67);   // 返回 "ABC"
-String.fromCharCode(0x2014);       // 返回 "—"
-String.fromCharCode(0x12014);      // 也是返回 "—"; 数字 1 被剔除并忽略
-String.fromCharCode(8212);         // 也是返回 "—"; 8212 是 0x2014 的十进制表示
+String.fromCharCode(65, 66, 67); // 返回 "ABC"
+String.fromCharCode(0x2014); // 返回 "—"
+String.fromCharCode(0x12014); // 也返回 "—"；数字 1 被截断并忽略
+String.fromCharCode(8212); // 也返回 "—"；8212 是 0x2014 的十进制表示
 ```
 
-[完整的 UTF 16 表格](https://asecuritysite.com/coding/asc2).
-在 UTF-16 中，补充字符需要两个代码单元（即一个代理对）：
+在 UTF-16 中，补充字符需要两个码元（即一个代理对）：
 
 ```js
-String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(0xd83c, 0xdf03); // 码位 U+1F303 "Night with
+String.fromCharCode(55356, 57091); // Stars" == "\uD83C\uDF03"
 
-String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD834\uDF07"
+String.fromCharCode(0xd834, 0xdf06, 0x61, 0xd834, 0xdf07); // "\uD834\uDF06a\uD834\uDF07"
 ```
 
 ## 规范
@@ -69,9 +64,9 @@ String.fromCharCode(0xD834, 0xDF06, 0x61, 0xD834, 0xDF07); // "\uD834\uDF06a\uD8
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.fromCodePoint()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
 - {{jsxref("String.prototype.codePointAt()")}}

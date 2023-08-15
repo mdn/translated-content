@@ -87,10 +87,6 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
 - [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-##### 関連情報
-
-CSS の [`@viewport`](/ja/docs/Web/CSS/@viewport) アット規則
-
 ### その他のメタデータ名
 
 [WHATWG Wiki の MetaExtensions のページ](https://wiki.whatwg.org/wiki/MetaExtensions)には、まだ正式に受け入れられていない標準外のメタデータの名前が多数掲載されています。しかし、ここに掲載されている名前の中には、以下のように、すでに実際によく使われているものもあります。

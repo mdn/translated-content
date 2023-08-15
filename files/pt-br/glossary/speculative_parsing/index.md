@@ -1,7 +1,6 @@
 ---
 title: Optimizing your pages for speculative parsing
 slug: Glossary/Speculative_parsing
-original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 ---
 
 Traditionally in browsers the HTML parser has run on the main thread and has blocked after a `</script>` tag until the script has been retrieved from the network and executed. The HTML parser in Firefox 4 and later supports speculative parsing off the main thread. It parses ahead while scripts are being downloaded and executed. As in Firefox 3.5 and 3.6, the HTML parser starts speculative loads for scripts, style sheets and images it finds ahead in the stream. However, in Firefox 4 and later the HTML parser also runs the HTML tree construction algorithm speculatively. The upside is that when a speculation succeeds, there's no need to reparse the part of the incoming file that was already scanned for scripts, style sheets and images. The downside is that there's more work lost when the speculation fails.

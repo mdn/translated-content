@@ -1,19 +1,60 @@
 ---
-title: '<blockquote>: ブロック引用要素'
+title: "<blockquote>: ブロック引用要素"
 slug: Web/HTML/Element/blockquote
+l10n:
+  sourceCommit: 610522d12e27fc70bcfd67d183c7ab1f38956a62
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<blockquote>` 要素** _(HTML ブロック引用要素_) は、内包する要素の文字列が引用文であることを示します。通常、字下げを伴ってレンダリングされます (整形方法については[注意](#Usage_notes)の項を参照してください)。 **cite** 属性により引用元の文書の URL を、 {{HTMLElement("cite")}} 要素により引用元の文書のタイトルなどを明示可能です。
+**`<blockquote>`** は [HTML](/ja/docs/Web/HTML) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の URL は `cite` 属性により与えることができ、引用元のテキスト表現は {{HTMLElement("cite")}} 要素を用いて与えることができます。
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+
+- `cite`
+  - : 引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示すためのものです。
+
+## 使用上の注意
+
+引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。
+
+独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。
+
+## 例
+
+この例は {{RFC(1149)}}, A Standard for the Transmission of IP Datagrams on Avian Carriers からの文言を引用するために `<blockquote>` 要素を使用する例です。
+
+```html
+<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside early spring.
+    This is because of the 3D ether space available to the carriers, in contrast
+    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
+</blockquote>
+```
+
+以下のように出力されます。
+
+{{EmbedLiveSample("Examples", 640, 180)}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -60,50 +101,13 @@ slug: Web/HTML/Element/blockquote
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
-
-- `cite`
-  - : 引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示そうとするものです。
-
-## 使用上の注意
-
-引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。
-
-独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。
-
-## 例
-
-この例は {{RFC(1149)}}, A Standard for the Transmission of IP Datagrams on Avian Carriers からの文言を引用するために `<blockquote>` 要素を使用する例です。
-
-```html
-<blockquote cite="https://tools.ietf.org/html/rfc1149">
-  <p>Avian carriers can provide high delay, low
-  throughput, and low altitude service. The
-  connection topology is limited to a single
-  point-to-point path for each carrier, used with
-  standard carriers, but many carriers can be used
-  without significant interference with each other,
-  outside of early spring. This is because of the 3D
-  ether space available to the carriers, in contrast
-  to the 1D ether used by IEEE802.3. The carriers
-  have an intrinsic collision avoidance system, which
-  increases availability.</p>
-</blockquote>
-```
-
-以下のように出力されます。
-
-{{EmbedLiveSample("Example", 640, 180)}}
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 関連情報
 

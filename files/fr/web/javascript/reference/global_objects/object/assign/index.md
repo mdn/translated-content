@@ -1,15 +1,6 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/assign
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`Object.assign()`** est utilisée afin de copier les valeurs de to
 ## Syntaxe
 
 ```js
-Object.assign(cible, ...sources)
+Object.assign(cible, ...sources);
 ```
 
 ### Paramètres
@@ -66,7 +57,7 @@ var o3 = { c: 3 };
 
 var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, l'objet cible est aussi modifié
+console.log(o1); // { a: 1, b: 2, c: 3 }, l'objet cible est aussi modifié
 ```
 
 ### Fusionner des objets partageant des propriétés
@@ -86,7 +77,7 @@ Les propriétés communes sont surchargées selon l'ordre des paramètres.
 
 ```js
 var o1 = { a: 1 };
-var o2 = { [Symbol('toto')]: 2 };
+var o2 = { [Symbol("toto")]: 2 };
 
 var obj = Object.assign({}, o1, o2);
 console.log(obj); // { a: 1, [Symbol("toto")]: 2 }
@@ -98,15 +89,19 @@ console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(toto)]
 ### Les propriétés héritées et les propriétés non-énumérables ne peuvent être copiées
 
 ```js
-var obj = Object.create({ toto: 1 }, { // toto est héritée
-  truc: {
-    value: 2  // truc est non-enumerable (par défaut)
+var obj = Object.create(
+  { toto: 1 },
+  {
+    // toto est héritée
+    truc: {
+      value: 2, // truc est non-enumerable (par défaut)
+    },
+    bidule: {
+      value: 3,
+      enumerable: true, // bidule est une propriété propre et énumérable
+    },
   },
-  bidule: {
-    value: 3,
-    enumerable: true  // bidule est une propriété propre et énumérable
-  }
-});
+);
 
 var copie = Object.assign({}, obj);
 console.log(copie); // { bidule: 3 }
@@ -115,10 +110,10 @@ console.log(copie); // { bidule: 3 }
 ### Les types primitifs seront passés en objets
 
 ```js
-var v1 = 'abc';
+var v1 = "abc";
 var v2 = true;
 var v3 = 10;
-var v4 = Symbol('toto')
+var v4 = Symbol("toto");
 
 var obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // Les valeurs primitives seront converties, null et undefined seront ignorés.
@@ -129,20 +124,25 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### Les exceptions interrompent la copie
 
 ```js
-var target = Object.defineProperty({}, 'toto', {
+var target = Object.defineProperty({}, "toto", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.toto est en lecture seule
 
-Object.assign(target, { truc: 2 }, { toto2: 3, toto: 3, toto3: 3 }, { bidule: 4 });
+Object.assign(
+  target,
+  { truc: 2 },
+  { toto2: 3, toto: 3, toto3: 3 },
+  { bidule: 4 },
+);
 // TypeError: "toto" est en lecture seule
 // L'exception est levée lorsqu'on affecte target.toto
 
-console.log(target.truc);  // 2, le premier objet source est bien copié
+console.log(target.truc); // 2, le premier objet source est bien copié
 console.log(target.toto2); // 3, la première propriété du deuxième objet source est bien copiée
-console.log(target.toto);  // 1, on a une exception ici
+console.log(target.toto); // 1, on a une exception ici
 console.log(target.toto3); // undefined, assign est terminé toto3 ne sera pas copié
-console.log(target.bidule);// undefined, le troisième objet source ne sera pas copié non plus.
+console.log(target.bidule); // undefined, le troisième objet source ne sera pas copié non plus.
 ```
 
 ### Copier des accesseurs
@@ -152,7 +152,7 @@ var obj = {
   toto: 1,
   get truc() {
     return 2;
-  }
+  },
 };
 
 var copie = Object.assign({}, obj);
@@ -163,14 +163,14 @@ console.log(copie);
 // Voici une fonction qui copie les descripteurs
 // dans leur intégralité
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
     // Par défaut, Object.assign copie également
     // les symboles énumérables
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;

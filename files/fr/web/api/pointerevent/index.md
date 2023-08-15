@@ -1,16 +1,15 @@
 ---
 title: PointerEvent
 slug: Web/API/PointerEvent
-translation_of: Web/API/PointerEvent
 ---
 
 {{ APIRef("Pointer Events") }}
 
 L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.
 
-Un *pointeur* est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
+Un _pointeur_ est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
 
-Le *test de ciblage* d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
+Le _test de ciblage_ d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un évènement de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
 
 ## Constructeurs
 

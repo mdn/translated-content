@@ -1,10 +1,6 @@
 ---
 title: Attributs d'événements des SVG
 slug: Web/SVG/Attribute/Events
-tags:
-  - Event
-  - SVG
-translation_of: Web/SVG/Attribute/Events
 ---
 
 Tout attribut d'événement a un nom qui commence par "on" suivit du nom de l'événement auquel il est rattaché. Ces attributs spécifient quel script exécuter lorsque l'événement du type donné est déclenché sur l'élément.

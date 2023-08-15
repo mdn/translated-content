@@ -1,13 +1,6 @@
 ---
 title: Selection.type
 slug: Web/API/Selection/type
-tags:
-  - API
-  - Experimental
-  - Propriété
-  - Reference
-  - Type
-translation_of: Web/API/Selection/type
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -17,7 +10,7 @@ La propriété en lecture simple **`type`** de l'interface {{domxref("Selection"
 ## Syntaxe
 
 ```js
-value = sel.type
+value = sel.type;
 ```
 
 ### Value
@@ -35,8 +28,8 @@ Dans cet exemple le gestionnaire d'évènemenet est activé à chaque changement
 ```js
 var selection;
 
-document.onselectionchange = function() {
-  console.log('New selection made');
+document.onselectionchange = function () {
+  console.log("New selection made");
   selection = document.getSelection();
   console.log(selection.type);
 };

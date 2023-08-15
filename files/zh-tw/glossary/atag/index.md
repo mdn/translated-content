@@ -3,6 +3,8 @@ title: ATAG
 slug: Glossary/ATAG
 ---
 
+{{GlossarySidebar}}
+
 ATAG (編輯工具可訪問性{{glossary("Accessibility")}}指南)是一個{{Glossary("W3C")}} 為創建可訪問内容構建可訪問性編輯工具的建議。
 
 ## 了解更多

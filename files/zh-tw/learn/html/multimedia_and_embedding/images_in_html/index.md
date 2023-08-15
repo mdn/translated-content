@@ -1,7 +1,6 @@
 ---
 title: HTML中的圖片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -65,7 +64,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 > - 您已收到圖片所有者的白紙黑字認可。
 > - 您有充分的證據證明該圖片實際上是大家皆能使用。
 >
-> 侵犯版權是違法及不道德的。 此外，切勿將 src 屬性指向您未被授權的他人網站上的圖便。 這稱為“熱連結”。再次重申，竊取某人的頻寬是違法的，且這會減慢您網站的速度。此外當別人變更、移除或換上令人尷尬的內容時你將無法做出改變。
+> 侵犯版權是違法及不道德的。 此外，切勿將 src 屬性指向您未被授權的他人網站上的圖便。 這稱為「熱連結」。再次重申，竊取某人的頻寬是違法的，且這會減慢您網站的速度。此外當別人變更、移除或換上令人尷尬的內容時你將無法做出改變。
 
 我們上面的程式碼將有以下結果：
 
@@ -271,7 +270,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -457,7 +456,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;

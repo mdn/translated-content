@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ## 構文
 
 ```js
-Object.create(proto)
-Object.create(proto, propertiesObject)
+Object.create(proto);
+Object.create(proto, propertiesObject);
 ```
 
 ### 引数
@@ -87,9 +87,9 @@ _シンプルな共通デバッグ関数です。_
 
 ```js
 // 与えられたオブジェクトの最上位のプロパティ名と値の組を表示
-function ShowProperties(obj){
-  for(var prop in obj){
-    console.log(prop + ": " + obj[prop] + "\n" );
+function ShowProperties(obj) {
+  for (var prop in obj) {
+    console.log(prop + ": " + obj[prop] + "\n");
   }
 }
 ```
@@ -106,7 +106,7 @@ ob={}; ob.po=oco; ob.pn=ocn; // 上記のテストオブジェクトをプロパ
 最初のプロパティのみが表示されることに注意してください。
 ```
 
-_(しかし、同じオブジェクトが単に順番が違うだけで作成されている場合 -- 少なくともいくつかの実装では...)_
+_(しかし、同じオブジェクトが単に順番が違うだけで作成されている場合 — 少なくともいくつかの実装では...)_
 
 ```js
 ob={}; ob.pn=ocn; ob.po=oco; // 同じ複合オブジェクトを再度作成しますが、同じプロパティを異なる順序で作成します。
@@ -188,7 +188,7 @@ ob={}; ob.pn=ocn; ob.po=oco; // 複合オブジェクトを生成 (既出と同�
 しかし、ジェネリック**プロトタイプ**を新しいオブジェクトのプロトタイプとして設定すると、さらに効果的です。
 
 ```js
-ocn = Object.create( null );                  // "null" オブジェクトを生成 (既出と同じ)
+ocn = Object.create(null); // "null" オブジェクトを生成 (既出と同じ)
 Object.setPrototypeOf(ocn, Object.prototype); // 新しいオブジェクトのプロトタイプを (標準オブジェクトではなく) 「ジェネリック」オブジェクトに設定
 ```
 
@@ -218,10 +218,10 @@ function Shape() {
 }
 
 // スーパークラスのメソッド
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Shape moved.');
+  console.info("Shape moved.");
 };
 
 // Rectangle - サブクラス
@@ -239,8 +239,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle); // true
-console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
+console.log("Is rect an instance of Rectangle?", rect instanceof Rectangle); // true
+console.log("Is rect an instance of Shape?", rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
@@ -264,21 +264,23 @@ o = Object.create(Object.prototype, {
   foo: {
     writable: true,
     configurable: true,
-    value: 'hello'
+    value: "hello",
   },
   // bar はゲッターとセッター (アクセサー) によるプロパティです
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) {
-      console.log('Setting `o.bar` to', value);
-    }
-/* ES2015 のアクセサーでは、このようになります。
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Setting `o.bar` to", value);
+    },
+    /* ES2015 のアクセサーでは、このようになります。
     get() { return 10; },
     set(value) {
       console.log('Setting `o.bar` to', value);
     } */
-  }
+  },
 });
 
 function Constructor() {}
@@ -308,14 +310,17 @@ delete o.p;
 // false
 
 // ES3 プロパティを指定
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 /* 次のものと同じではありません。
 これはプロトタイプが {p: 42 } であるオブジェクトを生成します。
 o2 = Object.create({p: 42}) */

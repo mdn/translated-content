@@ -69,120 +69,127 @@ Si comete un error, siempre puede restablecerlo usando el botón _Restablecer_ .
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-<input id="reset" type="button" value="Reset">
-<input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```css hidden
 html {
-font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 h2 {
-font-size: 16px;
+  font-size: 16px;
 }
 
 .a11y-label {
-margin: 0;
-text-align: right;
-font-size: 0.7rem;
-width: 98%;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-margin: 10px;
-background: #f5f9fa;
+  margin: 10px;
+  background: #f5f9fa;
 }
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
 function updateCode() {
-output.innerHTML = textarea.value;
+  output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
-textarea.value = code;
-userEntry = textarea.value;
-solutionEntry = htmlSolution;
-solution.value = 'Show solution';
-updateCode();
+reset.addEventListener("click", function () {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Show solution";
+  updateCode();
 });
 
-solution.addEventListener('click', function() {
-if(solution.value === 'Show solution') {
-textarea.value = solutionEntry;
-solution.value = 'Hide solution';
-} else {
-textarea.value = userEntry;
-solution.value = 'Show solution';
-}
-updateCode();
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
 });
 
-var htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+var htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
-if (e.keyCode === 9) {
-e.preventDefault();
-insertAtCaret('\t');
-}
+textarea.onkeydown = function (e) {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
 
-if (e.keyCode === 27) {
-textarea.blur();
-}
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
-var scrollPos = textarea.scrollTop;
-var caretPos = textarea.selectionStart;
+  var scrollPos = textarea.scrollTop;
+  var caretPos = textarea.selectionStart;
 
-var front = (textarea.value).substring(0, caretPos);
-var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
-textarea.value = front + text + back;
-caretPos = caretPos + text.length;
-textarea.selectionStart = caretPos;
-textarea.selectionEnd = caretPos;
-textarea.focus();
-textarea.scrollTop = scrollPos;
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos = caretPos + text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
 }
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
-// We only want to save the state when the user code is being shown,
-// not the solution, so that solution is not saved over the user code
-if(solution.value === 'Show solution') {
-userEntry = textarea.value;
-} else {
-solutionEntry = textarea.value;
-}
+textarea.onkeyup = function () {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
 
-updateCode();
+  updateCode();
 };
 ```
 
@@ -195,28 +202,34 @@ Entonces, fue fácil y divertido ¿verdad? Los elementos {{htmlelement("iframe")
 Hay algunos serios [Security concerns](#security_concerns) a considerar con `<iframe>`s, también se discute a continuación, pero esto no significa que debas dejar de usarlos en tus sitios web — solo requiere un poco de conocimiento y pensar cuidadosamente. Vamos a explorar el código con un poco más de detalle. Supongamos que quieres incluir el glosario de MDN en una de tus páginas web — podrías intentar algo como esto:
 
 ```html
-<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-        width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox>
-  <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
-    Fallback link for browsers that don't support iframes
-  </a> </p>
+<iframe
+  src="https://developer.mozilla.org/es/docs/Glossary"
+  width="100%"
+  height="500"
+  frameborder="0"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="/es/docs/Glossary">
+      Fallback link for browsers that don't support iframes
+    </a>
+  </p>
 </iframe>
 ```
 
 Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
-- {{htmlattrxref('frameborder','iframe')}}
+- [`frameborder`](/es/docs/Web/HTML/Element/iframe#frameborder)
   - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/border)`: none;` en tu {{Glossary('CSS')}}.
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/es/docs/Web/HTML/Element/iframe#src)
   - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
-- {{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}
+- [`width`](/es/docs/Web/HTML/Element/iframe#width) and [`height`](/es/docs/Web/HTML/Element/iframe#height)
   - : Estos atributos especifican el ancho y la altura (width y height) que quieres que tenga el iframe.
 - **Contenido de reserva**
   - : De la misma manera que otros elementos similares [`<video>`](/es/docs/Web/HTML/Element/video), puedes incluir contenido alternativo entre las etiquetas de apertura y cierre `<iframe></iframe>` que aparecerán si el navegador no admite el `<iframe>`. En este caso hemos incluido un enlace a la página. Es poco probable que encuentres algún navegador que no admita `<iframe>`s en estos días.
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox)
   - : Este atributo, que funciona en navegadores un poco más modernos que el resto de la funciones de `<iframe>` (por ejemplo IE 10 y superior) solicita una mayor configuración de seguridad; bueno, hablaremos más sobre esto en la siguiente sección.
 
 > **Nota:** Para mejorar la velocidad, es una buena idea establecer el atributo `src` de iframes con JavaScript después de que se cargue el contenido principal. Esto hace que tu página pueda utilizarse antes y disminuye el tiempo de carga de tu página principal (an important {{Glossary("SEO")}}.)
@@ -229,7 +242,7 @@ Los creadores de navegadores y los desarrolladores web han aprendido por las mal
 
 > **Nota:** [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
 
-Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
+Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
 
 #### Solo incrusta cuando sea necesario
 
@@ -256,7 +269,7 @@ You want to give attackers as little power as you can to do bad things on your w
 
 Unsandboxed content can do way too much (executing JavaScript, submitting forms, popup windows, etc.) By default you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the {{htmlattrxref('sandbox','iframe')}} reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case the embedded content could bypass the same origin security policy that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
 > **Nota:** Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
 
@@ -276,24 +289,31 @@ However, you are unlikely to use these elements very much — Applets haven't be
 
 If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
 
-|                                                                                         | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                        | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
-| height and width (in CSS pixels) of the box controlled by the plugin                    | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
-| names and values, to feed the plugin as parameters                                      | ad hoc attributes with those names and values                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`             |
-| independent HTML content as fallback for an unavailable resource                        | not supported (`<noembed>` is obsolete)                                                   | contained within `<object>`, after `<param>` elements                                         |
+|                                                                            | {{htmlelement("embed")}}                                                                            | {{htmlelement("object")}}                                                                             |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} of the embedded content                                | [`src`](/es/docs/Web/HTML/Element/embed#src)                                                        | [`data`](/es/docs/Web/HTML/Element/object#data)                                                       |
+| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/es/docs/Web/HTML/Element/embed#type)                                                      | [`type`](/es/docs/Web/HTML/Element/object#type)                                                       |
+| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/es/docs/Web/HTML/Element/embed#height) [`width`](/es/docs/Web/HTML/Element/embed#width) | [`height`](/es/docs/Web/HTML/Element/object#height) [`width`](/es/docs/Web/HTML/Element/object#width) |
+| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                       | single-tag {{htmlelement("param")}} elements, contained within `<object>`                             |
+| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                             | contained within `<object>`, after `<param>` elements                                                 |
 
-> **Nota:** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the {{htmlattrxref('typemustmatch','object')}} attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
+> **Nota:** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/es/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 
 Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie (see this [live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html), and [check the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) too):
 
 ```html
-<embed src="whoosh.swf" quality="medium"
-       bgcolor="#ffffff" width="550" height="400"
-       name="whoosh" align="middle" allowScriptAccess="sameDomain"
-       allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer">
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
 ```
 
 Pretty horrible, isn't it. The HTML generated by the Adobe Flash tool tended to be even worse, using an `<object>` element with an `<embed>` element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.
@@ -301,9 +321,16 @@ Pretty horrible, isn't it. The HTML generated by the Adobe Flash tool tended to 
 Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch>
-  <p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="myfile.pdf">download the PDF file.</a>
+  </p>
 </object>
 ```
 
