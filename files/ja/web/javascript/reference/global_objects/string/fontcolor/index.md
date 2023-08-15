@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-fontcolor(color)
+fontcolor(color);
 ```
 
 ### 引数
