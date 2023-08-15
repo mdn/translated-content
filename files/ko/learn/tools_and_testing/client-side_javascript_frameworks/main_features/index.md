@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-각 주요 JavaScript 프레임워크에는 DOM 업데이트, 브라우저 이벤트 처리 및 즐거운 개발자 경험 제공에 대한 접근 방식이 다릅니다. 이 기사에서는 "빅 4" 프레임워크의 주요 기능을 살펴보고, 프레임워크 가 높은 수준에서 작동하는 경향과 프레임워크 간의 차이점을 살펴봅니다.
+주요 JavaScript 프레임워크는 DOM 업데이트하는 방식, 브라우저 이벤트 처리하는 법 그리고 즐거운 개발자 경험 제공을 제공하는 방식에 있어 차이가 있습니다. 이 기사에서는 "빅 4" 프레임워크의 주요 기능을 살펴보고, 프레임워크가 높은 수준에서 작용하는 방식과 프레임워크 간의 차이점을 살펴봅니다.
 
 <table>
   <tbody>
@@ -28,11 +28,11 @@ l10n:
 
 ## 도메인 특정 언어
 
-이 모듈에서 설명하는 모든 프레임워크는 JavaScript로 구동되며 모두 DSL(도메인별 언어)을 사용하여 애플리케이션을 구축할 수 있습니다. 특히 React는 컴포넌트 작성을 위해 **JSX** 사용을 대중화한 반면, Ember는 **Handlebars**를 활용합니다. HTML과 달리, 이러한 언어는 데이터 변수를 읽는 방법을 알고 있으며, 이 데이터를 사용하여 UI 작성 프로세스를 간소화할 수 있습니다.
+이 모듈에서 설명하는 모든 프레임워크는 JavaScript로 구동되며 모두 도메인별 언어(DSL, domain-specific language)을 사용하여 애플리케이션을 구축할 수 있습니다. 특히 React는 컴포넌트 작성을 위해 **JSX** 사용을 대중화한 반면, Ember는 **Handlebars**를 활용합니다. HTML과 달리, 이러한 언어는 데이터 변수를 읽는 방법을 알고 있으며, 이 데이터를 사용하여 UI 작성 프로세스를 간소화할 수 있습니다.
 
 Angular 앱은 종종 **TypeScript**를 많이 사용합니다. TypeScript는 사용자 인터페이스 작성과 관련이 없지만, 도메인 특정 언어이며, 일반 JavaScript와 상당한 차이가 있습니다.
 
-DSL은 브라우저에서 직접 읽을 수 없습니다. 먼저 JavaScript 또는 HTML로 변환해야 합니다. [변환은 개발 프로세스의 추가 단계](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#transformation)이지만, 일반적으로 프레임워크 도구에는 이 단계를 처리하는 데 필요한 도구가 포함하거나, 이 단계를 포함하도록 조정할 수 있습니다. 이러한 도메인별 언어를 사용하지 않고 프레임워크 앱을 구축할 수 있지만, 이를 수용하면 개발 프로세스가 간소화되고 해당 프레임워크 관련 커뮤니티에서 도움을 더 쉽게 찾을 수 있습니다.
+DSL은 브라우저에서 직접 읽을 수 없습니다. 먼저 JavaScript 또는 HTML로 변환해야 합니다. [변환은 개발 프로세스의 추가 단계](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#transformation)이지만, 일반적으로 프레임워크 도구는 이 단계를 처리하는 데 필요한 도구를 포함하거나 이 단계를 포함하도록 조정할 수 있습니다. 이러한 도메인별 언어를 사용하지 않고 프레임워크 앱을 구축할 수 있지만, 도메인별 언어를 활용하면 개발 프로세스가 간소화되고 해당 프레임워크 관련 커뮤니티에서 도움을 더 쉽게 찾을 수 있습니다.
 
 ### JSX
 
@@ -102,7 +102,7 @@ Handlebars는 다음과 같이 HTML을 빌드합니다.
 
 ### TypeScript
 
-[TypeScript](https://www.typescriptlang.org/)는 JavaScript의 상위집합입니다. 즉, JavaScript를 확장합니다. 모든 JavaScript 코드는 유효한 TypeScript이지만, 그 반대는 아닙니다. TypeScript는 개발자가 자신의 코드에 적용할 수 있는 엄격함 때문에 유용합니다. 예를 들어, 정수 `a`와 `b`를 취해 그 합계를 반환하는 함수 `add()`를 생각해 보세요.
+[TypeScript](https://www.typescriptlang.org/)는 JavaScript의 상위집합입니다. 즉, JavaScript를 확장합니다. 모든 JavaScript 코드는 유효한 TypeScript이지만, 그 반대는 아닙니다. TypeScript는 엄격한 방식으로 코드를 쓸 수 있어 유용합니다. 예를 들어, 정수 `a`와 `b`를 취해 그 합계를 반환하는 함수 `add()`를 생각해 보세요.
 
 JavaScript에서, 해당 함수는 다음과 같이 작성할 수 있습니다.
 
@@ -112,7 +112,7 @@ function add(a, b) {
 }
 ```
 
-이 코드는 JavaScript에 익숙한 사람에게는 사소할 수 있지만, 여전히 더 명확할 수 있습니다. JavaScript에서는 `+` 연산자를 사용하여 문자열을 함께 연결하므로, 이 함수는 `a`와 `b`가 문자열인 경우에도 기술적으로 여전히 작동합니다. 이것은 예상한 결과를 제공하지 않을 수 있습니다. 이 함수에 숫자만 전달되도록 하려면 어떻게 해야 할까요? TypeScript는 이를 가능하게 합니다.
+JavaScript에 익숙한 사람에게는 사소할 점일 수 있지만, 이 코드는 더 명확하게 쓸 수 있습니다. JavaScript에서는 `+` 연산자를 사용하여 문자열을 함께 연결하므로, 이 함수는 `a`와 `b`가 문자열인 경우에도 기술적으로 여전히 작동합니다.이 경우에는 이 코드가 예상한 결과를 제공하지 않을 수 있습니다. 이 함수에 숫자만 전달되도록 하려면 어떻게 해야 할까요? TypeScript는 이를 가능하게 합니다.
 
 ```ts
 function add(a: number, b: number) {
@@ -126,13 +126,13 @@ function add(a: number, b: number) {
 
 이전 장에서 언급했듯이, 대부분의 프레임워크에는 일종의 컴포넌트 모델이 있습니다. React 컴포넌트는 JSX, Handlebars가 있는 Ember 컴포넌트, HTML을 약간 확장하는 템플릿 구문이 있는 Angular 및 Vue 컴포넌트로 작성할 수 있습니다.
 
-컴포넌트를 작성하는 방법에 대한 의견에 관계없이 각 프레임워크의 컴포넌트는 필요할 수 있는 외부 속성, 컴포넌트가 관리해야 하는 내부 상태 및 사용자가 컴포넌트의 마크업에서 트리거할 수 있는 이벤트를 설명하는 방법을 제공합니다.
+컴포넌트를 어떻게 써야하는지와 관계없이, 각 프레임워크의 컴포넌트는 필요할 수도 있는 외부 속성, 컴포넌트가 관리해야 하는 내부 상태 및 사용자가 컴포넌트의 마크업에서 트리거할 수 있는 이벤트를 제공하는 방법을 제공합니다.
 
 이 섹션의 나머지 코드 조각은 React를 예로 사용하며 JSX로 작성됩니다.
 
 ### 속성(프로퍼티)
 
-속성 또는 **props**는 컴포넌트가 렌더링하기 위해 필요한 외부 데이터입니다. 온라인 잡지를 위한 웹 사이트를 구축중이고, 각각의 기고가가 자신의 작업에 대한 공로를 인정받고 있는지 확인해야 한다고 가정합니다. 각 기사와 함께 사용할 'AuthorCredit' 컴포넌트를 만들 수 있습니다. 이 컴포넌트는 작성자의 초상화와 저자에 대한 짧은 바이라인을 표시해야 합니다. 렌더링할 이미지와 인쇄할 작성자를 알기 위해 `AuthorCredit`은 일부 속성을 수락해야 합니다.
+속성 또는 **props**는 컴포넌트가 렌더링하기 위해 필요한 외부 데이터입니다. 온라인 잡지를 위한 웹 사이트를 구축중이고, 각각의 기고가가 자신의 작업에 대한 공로를 인정받고 있는지 확인해야 한다고 가정합니다. 각 기사와 함께 사용할 `AuthorCredit` 컴포넌트를 만들 수 있습니다. 이 컴포넌트는 작성자의 초상화와 저자에 대한 짧은 바이라인을 표시해야 합니다. 렌더링할 이미지와 인쇄할 작성자를 알기 위해 `AuthorCredit`은 일부 속성을 수락해야 합니다.
 
 이 `AuthorCredit` 컴포넌트의 React 표현은 다음과 같을 수 있습니다.
 
@@ -147,7 +147,7 @@ function AuthorCredit(props) {
 }
 ```
 
-`{props.src}`, `{props.alt}` 및 `{props.byline}`은 속성이 컴포넌트에 삽입되는 위치를 나타냅니다. 이 컴포넌트를 렌더링하려면,렌더링하려는 위치(아마도 다른 컴포넌트 내부에 있을 것임)에 다음과 같은 코드를 작성합니다.
+`{props.src}`, `{props.alt}` 및 `{props.byline}`은 속성이 컴포넌트에 삽입되는 위치를 나타냅니다. 이 컴포넌트를 렌더링하려면, 렌더링하려는 위치(아마도 다른 컴포넌트 내부에 있을 것임)에 다음과 같은 코드를 작성합니다.
 
 ```js
 <AuthorCredit
@@ -157,7 +157,7 @@ function AuthorCredit(props) {
 />
 ```
 
-그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Element/figure) 요소가 `AuthorCredit` 컴포넌트에 정의된 구조와 다음과 같은 내용으로 브라우저에 렌더링됩니다. `AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의되어 있습니다.
+그러면 궁극적으로 다음 [`<figure>`](/ko/docs/Web/HTML/Element/figure) 요소가 렌더링됩니다. 구조는 `AuthorCredit` 컴포넌트에 정의된 대로, 콘텐츠는`AuthorCredit` 컴포넌트 호출에 포함된 속성에 정의된 대로 표시됩니다.
 
 ```html
 <figure>
@@ -189,7 +189,7 @@ function CounterButton() {
 
 ### 이벤트
 
-대화형이 되려면, 컴포넌트가 브라우저 이벤트에 응답하는 방법이 필요하므로, 애플리케이션이 사용자에게 응답할 수 있습니다. 프레임워크는 각각 동등한 기본 브라우저 이벤트의 이름을 참조하는, 브라우저 이벤트를 수신하기 위한 자체 구문을 제공합니다.
+대화형이 되려면, 애플리케이션이 사용자에게 응답할 수 있도록 컴포넌트가 브라우저 이벤트에 응답하는 방법이 필요합니다. 프레임워크는 브라우저 이벤트를 수신하기 위한 자체 구문을 제공합니다. 이러한 구문은 같은 이름의 브라우저 이벤트를 참조합니다.
 
 React에서, [`click`](/ko/docs/Web/API/Element/click_event) 이벤트를 수신하려면 `onClick` 이라는 특수 속성이 필요합니다. 클릭 수를 계산할 수 있도록 위에서 `CounterButton` 코드를 업데이트 해 보겠습니다.
 
@@ -278,13 +278,13 @@ Angular는 이 과정을 [의존성 주입](https://angular.io/guide/dependency-
 
 ## 라우팅
 
-[이전 장에서 언급했던 라우팅](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)은 웹 경험의 중요한 부분입니다. 많은 View들이 포함된 충분히 복잡한 앱에서 중단된 경험을 방지하기 위해, 이 모듈에서 다루는 각 프레임워크는 개발자가 애플리케이션에서 클라이언트 측 라우팅을 구현하는 데 도움이 되는 라이브러리(또는 둘 이상의 라이브러리)를 제공합니다.
+[이전 장에서 언급했던 라우팅](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)은 웹 경험의 중요한 부분입니다. 많은 시각적인 요소가 포함되어 충분히 복잡한 앱에서 중단되는 경험을 방지하기 위해, 이 모듈에서 다루는 각 프레임워크는 개발자가 애플리케이션에서 클라이언트 측 라우팅을 구현하는 데 도움이 되는 라이브러리(또는 둘 이상의 라이브러리)를 제공합니다.
 
 ## 테스팅
 
 모든 응용 프로그램은 소프트웨어가 예상대로 계속 작동하도록 보장하는 테스트 범위의 이점을 누리며, 웹 응용 프로그램도 마찬가지입니다. 각 프레임워크의 에코시스템은 테스트 작성을 용이하게 하는 도구를 제공합니다. 테스트 도구는 프레임워크 자체에 내장되어 있지 않지만, 프레임워크 앱을 생성하는 데 사용되는 명령줄 인터페이스 도구를 통해 적절한 테스트 도구에 접근할 수 있습니다.
 
-각 프레임워크에는 단위 및 통합 테스트 기능이 모두 포함된 광범위한 도구가 각 프레임워크 생태계에 있습니다.
+단위 및 통합 테스트 기능이 모두 포함된 광범위한 도구가 각 프레임워크 생태계에 있습니다.
 
 [테스트 라이브러리](https://testing-library.com/)는 React, Vue 및 Angular를 비롯한 많은 JavaScript 환경용 도구가 포함된 테스트 유틸리티 모음입니다. Ember 문서는 [Ember 앱 테스트](https://guides.emberjs.com/release/testing/)를 다룹니다.
 
@@ -319,7 +319,7 @@ it("Increments the count when clicked", () => {
 
 ## 요약
 
-이 시점에서 프레임워크를 사용하여 애플리케이션을 만들 때, 사용할 실제 언어, 기능 및 도구에 대해 더 많은 아이디어가 있어야 합니다. 저는 당신이 열정적으로 시작하고 실제로 코딩을 할 것이라고 확신하며 그것이 당신이 다음에 할 일입니다! 이 시점에서 먼저 학습을 시작할 프레임워크를 선택할 수 있습니다.
+프레임워크를 사용하여 애플리케이션을 만들 때, 사용할 실제 언어, 기능 및 도구에 대해 아이디어가 좀 더 떠올랐나요? 지금부터 열정적으로 시작하고 실제로 코딩해보세요. 지금 학습을 시작할 프레임워크를 선택해보세요.
 
 - [React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 - [Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
