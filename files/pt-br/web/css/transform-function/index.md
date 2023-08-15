@@ -11,7 +11,7 @@ The **`<transform-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/doc
 
 Various coordinate models can be used to describe an HTML element's size and shape, as well as any transformations applied to it. The most common is the [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system), although [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) are also sometimes used.
 
-### [![](/files/3438/coord_in_R2.png)](/@api/deki/files/5796/=coord_in_R2.png)Cartesian coordinates
+### [![](/files/3438/coord_in_R2.png)](coord_in_r2.png)Cartesian coordinates
 
 In the Cartesian coordinate system, a two-dimensional point is described using two values: an x coordinate (abscissa) and a y coordinate (ordinate). This is represented by the vector notation `(x, y)`.
 
@@ -25,11 +25,11 @@ Transformation functions alter the appearance of an element by manipulating the 
 
 The function is applied to an element by using matrix multiplication. Thus, each coordinate changes based on the values in the matrix:
 
-[![](/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png?size=webview)](/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png)
+[![](transform_functions_generic_transformation_cart.png?size=webview)](transform_functions_generic_transformation_cart.png)
 
 It is even possible to apply several transformations in a row:
 
-[![](/@api/deki/files/5800/=transform_functions_transform_composition_cart.png?size=webview)](/@api/deki/files/5800/=transform_functions_transform_composition_cart.png)
+[![](transform_functions_transform_composition_cart.png?size=webview)](transform_functions_transform_composition_cart.png)
 
 With this notation, it is possible to describe, and therefore compose, most common transformations: rotations, scaling, or skewing. (In fact, all transformations that are linear functions can be described.) Composite transformations are effectively applied in order from right to left.
 

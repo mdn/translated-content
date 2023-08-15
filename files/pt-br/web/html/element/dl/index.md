@@ -40,7 +40,7 @@ Como todo elemento HTML, ele fornece os [attributos globais](/pt-BR/HTML/Global_
 
 Output:
 
-![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
+![Image:HTML-dl1.png](html-dl1.png)
 
 ### Múltiplos termos, definição única
 
@@ -60,7 +60,7 @@ Output:
 
 Saída:
 
-![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
+![Image:HTML-dl2.png](html-dl2.png)
 
 ### Termo único, múltiplas definições
 
@@ -82,7 +82,7 @@ Saída:
 
 Saída:
 
-![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
+![Image:HTML-dl3.png](html-dl3.png)
 
 ### Múltiplos termos e definições
 

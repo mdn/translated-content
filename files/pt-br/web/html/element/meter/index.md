@@ -49,7 +49,7 @@ Como todos os elementos HTML, esse elemento suporta [attributes](/pt-BR/HTML/Glo
 
 No Google Chrome, o medidor aparece como:
 
-![meter1.png](/@api/deki/files/4940/=meter1.png)
+![meter1.png](meter1.png)
 
 ### Exemplos de intervalos com High e Low
 
@@ -63,7 +63,7 @@ Note que nesse exemplo o atributo **min** foi omitido; isso é permitido, pois e
 
 No Google Chrome, o medidor aparece como:
 
-![meter2.png](/@api/deki/files/4941/=meter2.png)
+![meter2.png](meter2.png)
 
 ## Compatibilidade com navegadores
 

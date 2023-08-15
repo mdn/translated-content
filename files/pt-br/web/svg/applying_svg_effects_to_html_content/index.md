@@ -87,7 +87,7 @@ O exemplo acima pode rodar com uma máscara aplicadaa ele.
 
 ### Exemplo: Clipping
 
-Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](/@api/deki/files/3214/=clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
+Esse exemplo demonstra como usar SVG to recortar conteúdo HTML. Esse exemplo demonstra como usar SVG para recortar conteúdo HTML. Quando você ver a [demonstração](clipdemo.xhtml), não irá notar que as áreas quentes para links são recortes.
 
 ```html
 <p class="target" style="background:lime;">

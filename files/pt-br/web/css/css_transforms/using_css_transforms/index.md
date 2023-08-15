@@ -20,8 +20,8 @@ Duas propriedades principais são usadas para definir o CSS transforms: {{ cssxr
 
 Este exemplo cria um iframe que permite que a página inicial do Google seja utilizada com uma rotação de 90 graus a partir do canto inferior esquerdo
 
-[Veja um exemplo funcionando](/@api/deki/files/2921/=rotated-google-sample.html)
-[Veja uma foto do exemplo](/@api/deki/files/2920/=google-rotated.png)
+[Veja um exemplo funcionando](rotated-google-sample.html)
+[Veja uma foto do exemplo](google-rotated.png)
 
 ```html
 <div style="transform: rotate(90deg); transform-origin: bottom left;">
@@ -33,8 +33,8 @@ Este exemplo cria um iframe que permite que a página inicial do Google seja uti
 
 Este exemplo cria um iframe que permite que você use a página inicial do Google inclinada em 10 graus no eixo X.
 
-[Veja um exemplo funcionando](/@api/deki/files/2922/=skewed-google-sample.html)
-[View uma foto do exemplo](/@api/deki/files/2923/=skewed-google.png)
+[Veja um exemplo funcionando](skewed-google-sample.html)
+[View uma foto do exemplo](skewed-google.png)
 
 ```html
 <div

@@ -31,7 +31,7 @@ Each block-level box participates in a [block formatting context](/pt-BR/docs/CS
 
 The principal block-level box contains descendant-generated boxes and generated content. It is also the box involved in the [positioning scheme](/pt-BR/docs/CSS/Positioning_scheme).
 
-![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)A block-level box may also be a block container box. A _block container box_ is a box that contains only other block-level boxes, or creates an [inline formatting context](/pt-BR/docs/CSS/Inline_formatting_context), thus containing only inline boxes.
+![venn_blocks.png](venn_blocks.png)A block-level box may also be a block container box. A _block container box_ is a box that contains only other block-level boxes, or creates an [inline formatting context](/pt-BR/docs/CSS/Inline_formatting_context), thus containing only inline boxes.
 
 It is important to note that the notions of a block-level box and block container box are disjoined. The first, describes how the box behaves with its parents and sibling. The second, how it interacts with its descendants. Some block-level boxes, like tables, aren't block container boxes. Reciprocally, some block container boxes, like non-replaced inline blocks and non-replaced table cells, aren't block-level boxes.
 
@@ -55,7 +55,7 @@ If we take the following HTML code (with default styling applied to it, that is 
 
 Two anonymous block boxes are created: one for the text before the paragraph (`Some inline text`), and another for the text after it (`followed by more inline text`). This builds the following block structure:
 
-![anonymous_block-level_boxes.png](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
+![anonymous_block-level_boxes.png](anonymous_block-level_boxes.png)
 
 Leading to:
 
@@ -95,7 +95,7 @@ followed by more inline text.
 
 An element is said to be _inline-level_ when the calculated value of its {{ cssxref("display") }} CSS property is: `inline`, `inline-block` or `inline-table`. Visually, it doesn't constitute blocks of contents, but is distributed in lines with other inline-level content. Typically, the content of a paragraph with different formatting, like emphasis or images, is made from inline-level elements.
 
-![venn_inlines.png](/@api/deki/files/6008/=venn_inlines.png)
+![venn_inlines.png](venn_inlines.png)
 
 > **Warning:** This diagram uses outdated terminology; see note below. Besides that, it is incorrect because the yellow ellipsis on the right side is per definition either identical to the one on the left side, or bigger than that (it could be a mathematical superset), because the spec says "Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context", see CSS 2.2, chapter 9.2.2
 

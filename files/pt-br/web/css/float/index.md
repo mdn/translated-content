@@ -100,7 +100,7 @@ Como mencionado acima, quando um elemento é flutuado ele é retirado do seu flu
 
 Na imagem abaixo, existem 3 quadrados vermelho. Dois flutuando à esquerda e um flutuando à direita. Observe que o segundo quadrado vermelho à esquerda é posicionado à direita do primeiro. Quadrados adicionais poderiam continuar sendo empilhados à direita até que eles completassem o box, após isso eles iriam para próxima linha.
 
-![](/@api/deki/files/4927/=floats.png)
+![](floats.png)
 
 ### Limpando _floats_
 

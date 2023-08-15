@@ -15,7 +15,7 @@ These days, users can access the web on devices in a wide range of form factors,
 
 ### Goal #2 (Content)
 
-_"Adjust your content for mobile users."![alaska_air_mobile_and_desktop-300x225.png](/@api/deki/files/5892/=alaska_air_mobile_and_desktop-300x225.png)_
+_"Adjust your content for mobile users."![alaska_air_mobile_and_desktop-300x225.png](alaska_air_mobile_and_desktop-300x225.png)_
 
 Think about what your users want to do at your site if they are on a phone. A great example of this is [Alaska Air's website](http://www.alaskaair.com/). Their desktop site focuses on getting visitors to book trips. Mobile users, however, are probably more interested in checking-in for a flight or seeing if their flight is delayed. They've adjusted their site's content to reflect this, and it meets the needs of mobile users.
 
