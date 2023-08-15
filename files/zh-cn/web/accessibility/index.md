@@ -11,7 +11,7 @@ slug: Web/Accessibility
 
 对大多数人来说，技术让生活更便捷。而对于有障碍的人群，无论他们的身体情况、认知能力以及他们访问网络的方式是怎样的，技术让本不可能的事变为可能。
 
-"**Web 从根本上是为所有人设计的**，无论他们的硬件、软件、语言、位置或能力如何。当 web 达到这一目标时，具有不同听力、运动、视觉和认知能力的人就可以访问它。" [W3C - 无障碍](http://www.w3.org/standards/webdesign/accessibility)
+"**Web 从根本上是为所有人设计的**，无论他们的硬件、软件、语言、位置或能力如何。当 web 达到这一目标时，具有不同听力、运动、视觉和认知能力的人就可以访问它。" [W3C - 无障碍](https://www.w3.org/standards/webdesign/accessibility)
 
 ## 主要教程
 
@@ -36,7 +36,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
   - : 这组文章提供了快速解释，以帮助你了解需要采取的步骤，以符合 W3C web 内容辅助功能指南 2.0 的建议
 - [介绍色彩与无障碍](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 本文探讨了我们对于亮度和色彩的感知，并提供了如何在无障碍设计中使用色彩的基础知识，也演示了视觉与可读内容的最佳实践。
-- [可键盘浏览的 JavaScript 小部件](/zh-CN/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [可键盘浏览的 JavaScript 小部件](/zh-CN/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : 直到目前，网络开发人员仍缺乏合适的技术让基于 `<div>` 和 `<span>` 自定义组件无障碍化。**对键盘的无障碍性**是最基础的无障碍要求之一，开发者应当了解这一内容。
 - [ARIA](/zh-CN/docs/Accessibility/ARIA)
   - : 学习如何利用无障碍富网络应用（Accessible Rich Internet Application）使你的 HTML 文档进一步无障碍化的一组文章。
