@@ -1,6 +1,8 @@
 ---
 title: CSS 선택자
 slug: Learn/CSS/Building_blocks/Selectors
+l10n:
+  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -14,11 +16,11 @@ slug: Learn/CSS/Building_blocks/Selectors
       <td>
         기본 컴퓨터 활용 능력,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
@@ -51,7 +53,7 @@ CSS에서 선택자는 CSS 선택자 사양에 정의되어 있으며, CSS의 �
 
 ## 선택자 목록
 
-동일한 CSS를 사용하는 항목이 두 개 이상 있는 경우 개별 선택자를 _선택자 목록_으로 결합하여 규칙이 모든 개별 선택자에 적용되도록 할 수 있습니다. 예를 들어 `h1`에 대해 동일한 CSS와 `.special` 클래스가 있는 경우 이를 두 개의 개별 규칙으로 작성할 수 있습니다.
+동일한 CSS를 사용하는 항목이 두 개 이상 있는 경우 개별 선택자를 _선택자 목록_ 으로 결합하여 규칙이 모든 개별 선택자에 적용되도록 할 수 있습니다. 예를 들어 `h1`에 대해 동일한 CSS와 `.special` 클래스가 있는 경우 이를 두 개의 개별 규칙으로 작성할 수 있습니다.
 
 ```css
 h1 {
@@ -84,7 +86,7 @@ h1,
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
 
-이러한 방식으로 선택자를 그룹화할 때 선택기 중 구문적으로 유효하지 않은 선택자가 있으면 전체 규칙이 무시됩니다.
+이러한 방식으로 선택자를 그룹화할 때 선택자 중 구문적으로 유효하지 않은 선택자가 있으면 전체 규칙이 무시됩니다.
 
 다음 예제에서는 잘못된 클래스 선택자 규칙이 무시되지만 `h1`의 스타일은 계속 유지됩니다.
 
@@ -108,9 +110,9 @@ h1, ..special {
 
 ## 선택자의 유형
 
-선택기에는 몇 가지 다른 그룹이 있으며, 어떤 유형의 선택기가 필요한지 알면 작업에 적합한 도구를 찾는 데 도움이 됩니다. 이 글의 하위 문서에서는 다양한 선택자 그룹에 대해 더 자세히 살펴보겠습니다.
+선택자에는 몇 가지 다른 그룹이 있으며, 어떤 유형의 선택자가 필요한지 알면 작업에 적합한 도구를 찾는 데 도움이 됩니다. 이 글의 하위 문서에서는 다양한 선택자 그룹에 대해 더 자세히 살펴보겠습니다.
 
-### Type, class 및 ID 선택자
+### 유형, 클래스 및 ID 선택자
 
 이 그룹에는 `<h1>` 과 같은 HTML 요소를 대상으로 하는 선택자가 포함됩니다.
 
@@ -142,7 +144,7 @@ a[title] {
 }
 ```
 
-또는 특정 값을 가진 속성의 존재 여부를 기반으로 선택하십시오:
+또는 특정 값을 가진 속성의 존재 여부에 따라 선택할 수도 있습니다.
 
 ```css
 a[href="https://example.com"]
@@ -150,51 +152,35 @@ a[href="https://example.com"]
 }
 ```
 
-### Pseudo-classes 및 pseudo-elements
+### 의사 클래스 및 의사 요소
 
-이 선택자 그룹에는 요소의 특정 상태를 스타일링하는 pseudo-classes 가 포함됩니다. 예를 들어 `:hover` pseudo-class 는 마우스 포인터에 의해 요소를 가리킬 때만 요소를 선택합니다:
+이 선택자 그룹에는 요소의 특정 상태 스타일을 지정하는 의사 클래스가 포함됩니다. 예를 들어 `:hover` 의사 클래스는 마우스 포인터로 요소를 가리키고 있을 때만 요소를 선택합니다.
 
 ```css
 a:hover {
 }
 ```
 
-또한 요소 자체가 아닌 요소의 특정 부분을 선택하는 pseudo-elements 도 포함됩니다. 예를 들어, `::first-line` 은 항상 `<span>` 이 첫 번째 형식의 라인을 감싸는 것처럼 작동하여, 요소 내부의 첫 번째 텍스트 라인 (아래의 경우 `<p>`) 을 선택합니다.
+또한 요소 자체가 아닌 요소의 특정 부분을 선택하는 의사 요소도 포함됩니다. 예를 들어 `::first-line`은 항상 요소 내부의 첫 번째 텍스트 줄(아래 사례에서는 `<p>`)을 선택하며, 마치 형식이 지정된 첫 번째 줄을 `<span>`으로 감싼 다음 선택한 것처럼 작동합니다.
 
 ```css
 p::first-line {
 }
 ```
 
-### 결합자 (Combinators)
+### 결합자
 
-최종 선택자 그룹은 문서 내의 요소를 대상으로 하기 위해 다른 선택자를 결합합니다. 예를 들어 다음은 자식 결합자 (`>`) 를 사용하여 `<article>` 요소의 자식인 단락을 선택합니다:
+최종 선택자 그룹은 문서 내의 요소를 대상으로 하기 위해 다른 선택자를 결합합니다. 예를 들어 다음은 하위 결합자(`>`)를 사용하여 `<article>` 요소의 직접 자식인 단락을 선택합니다:
 
 ```css
 article > p {
 }
 ```
 
-## 다음 단계
+## 요약
 
-이 학습 섹션 또는 일반적으로 MDN 에서 다양한 유형의 선택자로 직접 연결되는 링크에 대해서는 아래의 선택자 참조 표를 참고하거나 [type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors) 에 대해 계속해서 여행을 시작하십시오.
+이 글에서는 특정 HTML 요소를 타겟팅할 수 있는 CSS 선택자를 소개했습니다. 다음에는 [타입, 클래스 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)에 대해 자세히 살펴보겠습니다.
+
+전체 선택자 목록은 [CSS 선택자 참조](/ko/docs/Web/CSS/CSS_selectors)를 참고하세요.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
-
-## 선택자 참조 표
-
-아래 표는 사용 가능한 선택자의 개요와 이 안내서의 페이지에 대한 링크와 함께 각 유형의 선택자 사용법을 보여줍니다. 브라우저 지원 정보를 확인할 수 있는 각 선택자의 MDN 페이지에 대한 링크도 포함되어 있습니다. 이 자료를 나중에 자료에서 선택자를 찾아 보거나, CSS 를 일반적으로 실험할 때 다시 참조할 수 있습니다.
-
-| 선택자                                                           | 예제                | CSS 자습서 배우기                                                                                                                    |
-| ---------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Type 선택자](/ko/docs/Web/CSS/Type_selectors)                   | `h1 { }`            | [Type selectors](/ko/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Type_selectors)                   |
-| [범용 선택자](/ko/docs/Web/CSS/Universal_selectors)              | `* { }`             | [The universal selector](/ko/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#The_universal_selector)   |
-| [Class 선택자](/ko/docs/Web/CSS/Class_selectors)                 | `.box { }`          | [Class selectors](/ko/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors)                 |
-| [id 선택자](/ko/docs/Web/CSS/ID_selectors)                       | `#unique { }`       | [ID selectors](/ko/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors)                       |
-| [속성 선택자](/ko/docs/Web/CSS/Attribute_selectors)              | `a[title] { }`      | [Attribute selectors](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Attribute_selectors)                                     |
-| [Pseudo-class 선택자](/ko/docs/Web/CSS/Pseudo-classes)           | `p:first-child { }` | [Pseudo-classes](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-class)    |
-| [Pseudo-element 선택자](/ko/docs/Web/CSS/Pseudo-elements)        | `p::first-line { }` | [Pseudo-elements](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-element) |
-| [하위 결합자](/ko/docs/Web/CSS/Descendant_combinator)            | `article p`         | [Descendant combinator](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Descendant_Selector)                       |
-| [자식 결합자](/ko/docs/Web/CSS/Child_combinator)                 | `article > p`       | [Child combinator](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator)                               |
-| [인접 형제 결합자](/ko/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [Adjacent sibling](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling)                               |
-| [일반 형제 결합자](/ko/docs/Web/CSS/General_sibling_combinator)  | `h1 ~ p`            | [General sibling](/ko/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling)                                 |
