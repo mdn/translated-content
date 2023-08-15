@@ -28,7 +28,7 @@ Symbol().toString()
 シンボルに対しては `toString()` を呼び出すことができるため、文字列への型変換はありません。
 
 ```js
-Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string
+Symbol("foo") + "bar"; // TypeError: Can't convert symbol to string
 ```
 
 ## 例
@@ -36,13 +36,13 @@ Symbol('foo') + 'bar'        // TypeError: Can't convert symbol to string
 ### toString() の使用
 
 ```js
-Symbol('desc').toString()    // "Symbol(desc)"
+Symbol("desc").toString(); // "Symbol(desc)"
 
 // ウェルノウンシンボル
-Symbol.iterator.toString()   // "Symbol(Symbol.iterator)
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
 
 // グローバルシンボル
-Symbol.for('foo').toString() // "Symbol(foo)"
+Symbol.for("foo").toString(); // "Symbol(foo)"
 ```
 
 ## 仕様書

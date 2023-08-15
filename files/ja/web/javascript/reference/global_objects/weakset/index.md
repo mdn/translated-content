@@ -26,31 +26,28 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 ```js
 // Execute a callback on everything stored inside an object
-function execRecursively(fn, subject, _refs = null){
-  if(!_refs)
-    _refs = new WeakSet();
+function execRecursively(fn, subject, _refs = null) {
+  if (!_refs) _refs = new WeakSet();
 
   // Avoid infinite recursion
-  if(_refs.has(subject))
-    return;
+  if (_refs.has(subject)) return;
 
   fn(subject);
-  if("object" === typeof subject){
+  if ("object" === typeof subject) {
     _refs.add(subject);
-    for(let key in subject)
-      execRecursively(fn, subject[key], _refs);
+    for (let key in subject) execRecursively(fn, subject[key], _refs);
   }
 }
 
 const foo = {
   foo: "Foo",
   bar: {
-    bar: "Bar"
-  }
+    bar: "Bar",
+  },
 };
 
 foo.bar.baz = foo; // Circular reference!
-execRecursively(obj => console.log(obj), foo);
+execRecursively((obj) => console.log(obj), foo);
 ```
 
 ここで、 `WeakSet` は最初の実行時に作成され、その後の関数呼び出しのたびに (内部の `_refs` 引数を使用して) 渡されます。
@@ -83,12 +80,12 @@ const bar = {};
 ws.add(foo);
 ws.add(bar);
 
-ws.has(foo);    // true
-ws.has(bar);    // true
+ws.has(foo); // true
+ws.has(bar); // true
 
 ws.delete(foo); // foo を set から削除
-ws.has(foo);    // false, foo は削除済み
-ws.has(bar);    // true, bar は残っている
+ws.has(foo); // false, foo は削除済み
+ws.has(bar); // true, bar は残っている
 ```
 
 `foo !== bar` であることに注意してください。これらは似たオブジェクトですが、_**まったく同じオブジェクト**ではありません_。したがって、両方のオブジェクトが set に追加されます。

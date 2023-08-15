@@ -30,7 +30,9 @@ RegExp[Symbol.species]; // function RegExp()
 ```js
 class MyRegExp extends RegExp {
   // MyRegExp の species を親である RegExp コンストラクタにオーバーライドします。
-  static get [Symbol.species]() { return RegExp; }
+  static get [Symbol.species]() {
+    return RegExp;
+  }
 }
 ```
 

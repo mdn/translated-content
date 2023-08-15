@@ -29,9 +29,9 @@ regexp[Symbol.matchAll](str)
 このメソッドは内部的に {{jsxref("String.prototype.matchAll()")}} を呼び出します。例えば、以下の 2 つの例は同じ結果を返します。
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 このメソッドは `matchAll()` の動作を {{jsxref('RegExp')}} のサブクラスの中でカスタマイズするために存在します。
@@ -44,10 +44,10 @@ regexp[Symbol.matchAll](str)
 
 ```js
 let re = /[0-9]+/g;
-let str = '2016-01-02';
+let str = "2016-01-02";
 let result = re[Symbol.matchAll](str);
 
-console.log(Array.from(result, x => x[0]));
+console.log(Array.from(result, (x) => x[0]));
 // ["2016", "01", "02"]
 ```
 
@@ -69,8 +69,8 @@ class MyRegExp extends RegExp {
   }
 }
 
-const re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)', 'g');
-const str = '2016-01-02|2019-03-07';
+const re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
+const str = "2016-01-02|2019-03-07";
 const result = str.matchAll(re);
 console.log(result[0]); // [ "2016-01-02", "2016", "01", "02" ]
 console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
