@@ -229,7 +229,7 @@ body {
 
 在宽屏上，`site` 层在第一行被声明，这意味着 `site` 的优先级低于 `page`。否则在窄屏上，`site` 的优先级高于 `page`, 因为它在后面被声明。如果不起作用，请将媒体查询中的 `50em` 改为 `10em` 或 `100em`。
 
-### 使用@import 将样式表导入命名层和匿名层
+### 使用 @import 将样式表导入命名层和匿名层
 
 [`@import`](/zh-CN/docs/Web/CSS/@import) 规则允许用户直接从其他样式表导入样式规则到 CSS 文件或 {{htmlelement('style')}} 元素中。
 
