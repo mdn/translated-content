@@ -225,7 +225,7 @@ select.addEventListener("change", (e) => {
 });
 ```
 
-{{EmbedLiveSample("行动", "100%", 350)}}
+{{EmbedLiveSample("试试看", "100%", 350)}}
 
 ## 规范
 
