@@ -1,8 +1,7 @@
 ---
 title: Array.prototype.group()
-slug: Web/JavaScript/Reference/Global_Objects/Array/group
-l10n:
-  sourceCommit: 50e0b640bbd975e1f21f16fa2ec7bd545b57081c
+slug: Web/JavaScript/Reference/Global_Objects/Object/groupBy
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/group
 ---
 
 {{JSRef}} {{SeeCompatTable}}

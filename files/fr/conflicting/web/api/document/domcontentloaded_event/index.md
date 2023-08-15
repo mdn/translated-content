@@ -1,6 +1,7 @@
 ---
 title: DOMContentLoaded
-slug: Web/API/Window/DOMContentLoaded_event
+slug: conflicting/Web/API/Document/DOMContentLoaded_event
+original_slug: Web/API/Window/DOMContentLoaded_event
 ---
 
 {{APIRef}}
