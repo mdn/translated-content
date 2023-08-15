@@ -86,7 +86,6 @@
 /fr/docs/Apprendre/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement	/fr/docs/Learn/CSS/CSS_layout/Positioning
 /fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods	/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods
-/fr/docs/Apprendre/CSS/CSS_layout/Media_queries	/fr/docs/Learn/CSS/CSS_layout/Media_queries
 /fr/docs/Apprendre/CSS/CSS_layout/Multiple-column_Layout	/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
 /fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow	/fr/docs/Learn/CSS/CSS_layout/Normal_Flow
 /fr/docs/Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs	/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers
@@ -3173,7 +3172,6 @@
 /fr/docs/Mozilla/Firefox/Versions/35	/fr/docs/Mozilla/Firefox/Releases/35
 /fr/docs/Mozilla/Firefox/Versions/4	/fr/docs/Mozilla/Firefox/Releases/4
 /fr/docs/Mozilla/Firefox/Versions/40	/fr/docs/Mozilla/Firefox/Releases/40
-/fr/docs/Mozilla/Firefox/Versions/41	/fr/docs/Mozilla/Firefox/Releases/41
 /fr/docs/Mozilla/Firefox/Versions/5	/fr/docs/Mozilla/Firefox/Releases/5
 /fr/docs/Mozilla/Firefox/Versions/6	/fr/docs/Mozilla/Firefox/Releases/6
 /fr/docs/Mozilla/Firefox/Versions/7	/fr/docs/Mozilla/Firefox/Releases/7
@@ -3901,7 +3899,6 @@
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-/fr/docs/Web/API/KeyboardEvent/key/Key_Values	/fr/docs/Web/API/UI_Events/Keyboard_event_key_values
 /fr/docs/Web/API/LocalFileSystem	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
@@ -3972,7 +3969,6 @@
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
-/fr/docs/Web/API/SharedWorkerGlobalScope/applicationCache	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/Web/API/StorageManager/estimate
@@ -4097,7 +4093,6 @@
 /fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
-/fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/console/time
@@ -4410,8 +4405,6 @@
 /fr/docs/Web/CSS/Concepts_viewport	/fr/docs/Web/CSS/Viewport_concepts
 /fr/docs/Web/CSS/Contexte_de_formatage_en_ligne	/fr/docs/Web/CSS/Inline_formatting_context
 /fr/docs/Web/CSS/Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors
-/fr/docs/Web/CSS/Couleurs_CSS/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
-/fr/docs/Web/CSS/Couleurs_CSS/Sélecteur_de_couleurs	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS	/fr/docs/Web/CSS/CSS_flexible_box_layout
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS/Boîtes_flexibles_pour_applications_web	/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS/Mises_en_page_avancees_avec_flexbox	/fr/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
@@ -4513,7 +4506,6 @@
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
 /fr/docs/Web/CSS/Tools	/fr/docs/Web/CSS
-/fr/docs/Web/CSS/Tools/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
 /fr/docs/Web/CSS/Type_color	/fr/docs/Web/CSS/color_value
 /fr/docs/Web/CSS/Type_position	/fr/docs/Web/CSS/position_value
 /fr/docs/Web/CSS/Types_CSS	/fr/docs/Web/CSS/CSS_Types
@@ -4966,7 +4958,6 @@
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/About	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/fr/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors
@@ -6083,13 +6074,11 @@
 /fr/docs/Web/XPath/Fonctions/true	/fr/docs/Web/XPath/Functions/true
 /fr/docs/Web/XPath/Fonctions/unparsed-entity-url	/fr/docs/Web/XPath/Functions/unparsed-entity-url
 /fr/docs/Web/XSLT/Index	/fr/docs/Web/XSLT
-/fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Les_liaisons_JavaScript_XSLT	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-/fr/docs/Web/XSLT/Interface_XSLT_JavaScript_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Exemple_basique	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
@@ -6489,7 +6478,6 @@
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
 /fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
-/fr/docs/conflicting/Web/API/SharedWorkerGlobalScope	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/conflicting/Web/API/StorageManager/estimate	/fr/docs/Web/API/StorageManager/estimate
 /fr/docs/conflicting/Web/API/URL	/fr/docs/Web/API/URL
 /fr/docs/conflicting/Web/API/WebRTC_API	/fr/docs/Web/API/WebRTC_API
