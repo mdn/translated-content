@@ -1,8 +1,8 @@
 ---
 title: WeakMap.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 ---
+
 {{JSRef}}
 
 Метод **`has()`** возвращает булевое значение, которое указывает на то существует элемент с таким ключом в объекте WeakMap или нет.
@@ -32,7 +32,7 @@ var wm = new WeakMap();
 wm.set(window, "foo");
 
 wm.has(window); // возвращает true
-wm.has("baz");  // возвращает false
+wm.has("baz"); // возвращает false
 ```
 
 ## Спецификация

@@ -7,7 +7,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 [`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 
-文字可以包括任何 Unicode 字元，即使用那些超出“基本多文種平面”的字元也可以。
+文字可以包括任何 Unicode 字元，即使用那些超出「基本多文種平面」的字元也可以。
 
 ## 方法概述
 
@@ -136,7 +136,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_text
 
 下圖展示了 textBaseline 屬性所支援的各種基線，感謝 [WHATWG](http://www.whatwg.org/).
 
-![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是“आ”）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
+![top of em squre（字元區塊頂部）大致在字型中所有字母的最頂部位置，hanging basline（懸掛基線）則是在一些特殊（較小的,像是「आ」）字母頂部，middle則是在top of em squre（字元區塊頂部和bottom of em squre（字元區塊底部）的中間，alphabetic（拼音文字）的基線位置則是在一般拼音字母如Á，ÿ，f，Ω的底線位置。ideographic（表意文字）的基線在字元的底部位置，bottom of em squre（字元區塊底部）則大致是字型中所有字母的最底部位置。而top and bottom of the bounding box（上下的區域範圍線）則比這些基線都來得更遠，基於字母的高度可能超過字元區塊頂部和底部的範圍。](http://www.whatwg.org/specs/web-apps/current-work/images/baselines.png)
 
 ## 方法
 
@@ -220,7 +220,7 @@ ctx.fillStyle = "Red";
 ctx.mozDrawText("Sample String");
 ```
 
-這個範例將文字“Sample String”繪製到畫布（canvas）上。
+這個範例將文字「Sample String」繪製到畫布（canvas）上。
 
 ### mozMeasureText()
 
@@ -282,7 +282,7 @@ ctx.fill();
 ctx.stroke();
 ```
 
-這個範例繪出文字“Sample String”，填充顏色是綠色，外框顏色是黑色。
+這個範例繪出文字「Sample String」，填充顏色是綠色，外框顏色是黑色。
 
 ### mozTextAlongPath()
 

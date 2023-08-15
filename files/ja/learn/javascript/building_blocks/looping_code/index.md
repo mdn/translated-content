@@ -66,30 +66,36 @@ button {
 こちらはこの例を実装している JavaScript コードです。
 
 ```js
-const btn = document.querySelector('button');
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const btn = document.querySelector("button");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
-})
+});
 
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
-    ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.arc(
+      random(canvas.width),
+      random(canvas.height),
+      random(50),
+      0,
+      2 * Math.PI,
+    );
     ctx.fill();
   }
 }
 
-btn.addEventListener('click',draw);
+btn.addEventListener("click", draw);
 ```
 
 ### ループありとループなし
@@ -99,8 +105,14 @@ btn.addEventListener('click',draw);
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
-  ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.arc(
+    random(canvas.width),
+    random(canvas.height),
+    random(50),
+    0,
+    2 * Math.PI,
+  );
   ctx.fill();
 }
 ```
@@ -115,8 +127,14 @@ for (let i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
-ctx.arc(random(canvas.width), random(canvas.height), random(50), 0, 2 * Math.PI);
+ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.arc(
+  random(canvas.width),
+  random(canvas.height),
+  random(50),
+  0,
+  2 * Math.PI,
+);
 ctx.fill();
 ```
 
@@ -134,7 +152,7 @@ ctx.fill();
 コレクションをループ処理する基本的なツールは {{jsxref("statements/for...of","for...of")}} ループです。
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -158,7 +176,7 @@ function toUpper(string) {
   return string.toUpperCase();
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const upperCats = cats.map(toUpper);
 
@@ -176,10 +194,10 @@ console.log(upperCats);
 
 ```js
 function lCat(cat) {
-  return cat.startsWith('L');
+  return cat.startsWith("L");
 }
 
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 const filtered = cats.filter(lCat);
 
@@ -198,9 +216,9 @@ console.log(filtered);
 関数式を使用すると、上の例をもっとコンパクトに書き直すことができます。
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-const filtered = cats.filter((cat) => cat.startsWith('L'));
+const filtered = cats.filter((cat) => cat.startsWith("L"));
 console.log(filtered);
 // [ "Leopard", "Lion" ]
 ```
@@ -225,7 +243,7 @@ for (初期化処理; 条件; 最後の式) {
    1. **初期化処理**: これはたいていの場合、繰り返し回数分増やしていく変数の初期化処理となります。
       この変数を**カウンター変数**と呼ぶことがあります。
    2. **条件**: これは、ループがいつ繰り返しをやめるかを定義します。
-    これはふつう、比較演算子を伴って、終了条件に達したかどうかを確認します。
+      これはふつう、比較演算子を伴って、終了条件に達したかどうかを確認します。
    3. **最後の式**: これはループの 1 回が終了する度に評価される（または実行される）コードです。
       通常、カウンター変数を増加させ（場合によっては減少させ）、条件が `true` ではなくなるポイントに近づけていきます。
 
@@ -242,21 +260,21 @@ for (初期化処理; 条件; 最後の式) {
 ```
 
 ```js
-const results = document.querySelector('#results');
+const results = document.querySelector("#results");
 
 function calculate() {
   for (let i = 1; i < 10; i++) {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += '\n完了!';
+  results.textContent += "\n完了!";
 }
 
-const calculateBtn = document.querySelector('#calculate');
-const clearBtn = document.querySelector('#clear');
+const calculateBtn = document.querySelector("#calculate");
+const clearBtn = document.querySelector("#clear");
 
-calculateBtn.addEventListener('click', calculate);
-clearBtn.addEventListener('click', () => results.textContent = '');
+calculateBtn.addEventListener("click", calculate);
+clearBtn.addEventListener("click", () => (results.textContent = ""));
 ```
 
 これは次のような出力結果となります。
@@ -285,7 +303,7 @@ clearBtn.addEventListener('click', () => results.textContent = '');
 上の `for...of` の例をもう一度見てみましょう。
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (const cat of cats) {
   console.log(cat);
@@ -295,7 +313,7 @@ for (const cat of cats) {
 このコードは次のように書き換えることができます。
 
 ```js
-const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
 for (let i = 0; i < cats.length; i++) {
   console.log(cats[i]);
@@ -317,12 +335,12 @@ JavaScript の初期のバージョンでは、`for...of` は存在しなかっ�
 例えば、以下のコードでは、猫の一覧をメッセージとして出力したい。
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (const cat of cats) {
-  myFavoriteCats += `${cat}, `
+  myFavoriteCats += `${cat}, `;
 }
 
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
@@ -343,19 +361,20 @@ My cats are called Pete, Biggles, and Jasmine.
 しかし、これを行うには、ループがいつ最後の反復処理に入ったかを知る必要があります。そのためには、`for` ループを使い、`i` の値を調べればよいのです。
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {   // 配列の最後にいる場合
-    myFavoriteCats += `and ${cats[i]}.`
+  if (i === cats.length - 1) {
+    // 配列の最後にいる場合
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    myFavoriteCats += `${cats[i]}, `
+    myFavoriteCats += `${cats[i]}, `;
   }
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 ## break でループを終了
@@ -370,7 +389,7 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 
 ```html
 <label for="search">連絡先の名前: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>検索</button>
 
 <p></p>
@@ -379,26 +398,32 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 現在の JavaScript では、
 
 ```js
-const contacts = ['クリス:2232322', 'サラ:3453456', 'ビル:7654322', 'メアリー:9998769', 'ダイアン:9384975'];
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const contacts = [
+  "クリス:2232322",
+  "サラ:3453456",
+  "ビル:7654322",
+  "メアリー:9998769",
+  "ダイアン:9384975",
+];
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   const searchName = input.value.toLowerCase();
-  input.value = '';
+  input.value = "";
   input.focus();
-  para.textContent = '';
+  para.textContent = "";
   for (const contact of contacts) {
-    const splitContact = contact.split(':');
+    const splitContact = contact.split(":");
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = `${splitContact[0]}の電話番号は${splitContact[1]}です。`;
       break;
     }
   }
-  if (para.textContent === '') {
-   para.textContent = '連絡先が見つかりません。';
- }
+  if (para.textContent === "") {
+    para.textContent = "連絡先が見つかりません。";
+  }
 });
 ```
 
@@ -409,8 +434,8 @@ btn.addEventListener('click', () => {
 3. テキスト入力欄に入力された値を `searchName` という変数に格納してから、次の検索に備え、入力欄をクリアし、フォーカスを設定しています。検索に大文字小文字を区別しないよう、文字列に [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を実行しているのに注意してください。
 4. ここからが本題の `for...of` ループです。
 
-    1. ループの中では、まず現在の連絡先をコロン文字で分割し、結果の 2 つの値を `splitContact` という配列に格納します。
-    2. それから、条件文を用いて、`splitContact[0]` （連絡先の名前）が入力された `searchName` にまた [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を使って小文字化したものと等しいかを判定します。
+   1. ループの中では、まず現在の連絡先をコロン文字で分割し、結果の 2 つの値を `splitContact` という配列に格納します。
+   2. それから、条件文を用いて、`splitContact[0]` （連絡先の名前）が入力された `searchName` にまた [`toLowerCase()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) を使って小文字化したものと等しいかを判定します。
       もし等しければ、文字列を段落に入れてその連絡先の電話番号を示し、`break` を使用してループを終了しています。
 
 5. ループの後、連絡先が設定されたかどうかをチェックし、設定されていない場合は段落テキストを「連絡先が見つかりません。」に設定しています。
@@ -435,14 +460,14 @@ HTML は基本的に前回の例と同じで、単純なテキスト入力と、
 JavaScript もほとんど同じですが、ループ自体が若干異なります。
 
 ```js
-const para = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
-  para.textContent = '出力: ';
+btn.addEventListener("click", () => {
+  para.textContent = "出力: ";
   const num = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (let i = 1; i <= num; i++) {
     let sqRoot = Math.sqrt(i);
@@ -490,9 +515,9 @@ while (条件) {
 猫のリストの例をもう一度見てみましょう。ただし、while ループを使うように書き直してみましょう。
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -506,7 +531,7 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **メモ:** これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)を見ることもできます）。
@@ -529,9 +554,9 @@ do {
 `do...while` ループを使用するように、猫のリストの例をもう一度書き直してみましょう。
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmine'];
+const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = 'My cats are called ';
+let myFavoriteCats = "My cats are called ";
 
 let i = 0;
 
@@ -545,7 +570,7 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **メモ:** こちらも、これは期待どおりに動作します。[GitHub でライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html)してみてください（[完全なソースコード](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)を見ることもできます）。
@@ -584,7 +609,8 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すと、コード領域からフォーカスを外すことができます（Tab はタブ文字を挿入します）。
+  Esc を押すと、コード領域からフォーカスを外すことができます（Tab
+  はタブ文字を挿入します）。
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
@@ -626,9 +652,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -636,21 +662,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '解答を表示';
+  solution.value = "解答を表示";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === '解答を表示') {
+solution.addEventListener("click", function () {
+  if (solution.value === "解答を表示") {
     textarea.value = solutionEntry;
-    solution.value = '解答を隠す';
+    solution.value = "解答を隠す";
   } else {
     textarea.value = userEntry;
-    solution.value = '解答を表示';
+    solution.value = "解答を表示";
   }
   updateCode();
 });
@@ -677,16 +703,16 @@ while (i >= 0) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -698,7 +724,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -713,7 +742,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '解答を表示') {
+  if (solution.value === "解答を表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -803,9 +832,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -813,7 +842,7 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
@@ -821,10 +850,10 @@ reset.addEventListener('click', function() {
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === "解答を表示") {
+solution.addEventListener("click", function () {
+  if (solution.value === "解答を表示") {
     textarea.value = solutionEntry;
-    solution.value = '解答を隠す';
+    solution.value = "解答を隠す";
   } else {
     textarea.value = userEntry;
     solution.value = "解答を表示";
@@ -854,16 +883,16 @@ admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -875,7 +904,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -890,7 +922,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === "解答を表示") {
+  if (solution.value === "解答を表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -969,6 +1001,6 @@ do {
 - [for...of のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — 高度なループのベストプラクティス
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — 高度なループのベストプラクティス
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

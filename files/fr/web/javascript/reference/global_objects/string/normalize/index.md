@@ -1,16 +1,6 @@
 ---
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/normalize
 ---
 
 {{JSRef}}
@@ -58,14 +48,12 @@ La méthode `normalize()` renvoie la forme normalisée Unicode de la chaîne de 
 // U+0323: COMBINING DOT BELOW
 var str = "\u1E9B\u0323";
 
-
 // Forme canonique composée (Canonically-composed form) (NFC)
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
 str.normalize("NFC"); // "\u1E9B\u0323"
 str.normalize(); // la même chaîne que précédemment
-
 
 // Forme canonique décomposée (Canonically-decomposed form) (NFD)
 
@@ -74,12 +62,10 @@ str.normalize(); // la même chaîne que précédemment
 // U+0307: COMBINING DOT ABOVE
 str.normalize("NFD"); // "\u017F\u0323\u0307"
 
-
 // Forme composée compatible (NFKC)
 
 // U+1E69: LATIN SMALL LETTER S WITH DOT BELOW AND DOT ABOVE
 str.normalize("NFKC"); // "\u1E69"
-
 
 // Forme décomposée compatible (NFKD)
 

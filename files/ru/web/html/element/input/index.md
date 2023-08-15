@@ -1,7 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Element/input
-translation_of: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
@@ -32,6 +31,7 @@ translation_of: Web/HTML/Element/input
 - {{htmlattrdef("type")}}
 
   - : Тип элемента для отображения. Если этот атрибут не указан, по умолчанию используется `text`. Возможными значениями являются:
+
     - `button`: Кнопка без предопределённого поведения.
     - `checkbox`: Флажок («чекбокс»). Следует использовать атрибут **value** для определения значения, которое будет отдано этим элементом. Используйте атрибут **checked**, чтобы указать, должен ли флажок быть выставлен. Можно также использовать атрибут **indeterminate**, чтобы указать, что флажок находится в неопределённом состоянии (на большинстве платформ при этом рисуется горизонтальная линия поперёк флажка).
     - `color`: Элемент управления цветом. Пользовательский интерфейс выбора цвета не имеет никаких других функций, кроме принятия простых цветов в виде текста ([больше информации](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
@@ -183,7 +183,9 @@ e.value = "foo";
 If you want Firefox to present a custom error message when a field fails to validate, you can use the `x-moz-errormessage` attribute to do so:
 
 ```html
-<input type="email" x-moz-errormessage="Please specify a valid email address.">
+<input
+  type="email"
+  x-moz-errormessage="Please specify a valid email address." />
 ```
 
 Note, however, that this is not standard and will not have an effect on other browsers.
@@ -194,7 +196,7 @@ Note, however, that this is not standard and will not have an effect on other br
 
 ```html
 <!-- A basic input -->
-<input type="text" name="input" value="Type here">
+<input type="text" name="input" value="Type here" />
 ```
 
 ### A common use-case scenario
@@ -202,10 +204,10 @@ Note, however, that this is not standard and will not have an effect on other br
 ```html
 <!-- A common form that includes input tags -->
 <form action="getform.php" method="get">
-    First name: <input type="text" name="first_name" /><br />
-     Last name: <input type="text" name="last_name" /><br />
-        E-mail: <input type="email" name="user_email" /><br />
-<input type="submit" value="Submit" />
+  First name: <input type="text" name="first_name" /><br />
+  Last name: <input type="text" name="last_name" /><br />
+  E-mail: <input type="email" name="user_email" /><br />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
@@ -223,11 +225,11 @@ The result is:
 
 ## Specifications
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                            | Status                   | Comment |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'the-input-element.html#the-input-element', '&lt;input&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}                 | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                         | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}               | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                   | {{Spec2('HTML4.01')}}    |         |
 
 ## Совместимость с браузерами
 

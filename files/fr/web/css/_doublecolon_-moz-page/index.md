@@ -1,12 +1,6 @@
 ---
-title: '::-moz-page'
+title: "::-moz-page"
 slug: Web/CSS/::-moz-page
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-page
 ---
 
 {{Non-standard_header}}{{CSSRef}}

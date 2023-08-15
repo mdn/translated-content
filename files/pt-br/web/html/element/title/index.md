@@ -1,5 +1,5 @@
 ---
-title: '<title>: O titulo do documento.'
+title: "<title>: O titulo do documento."
 slug: Web/HTML/Element/title
 ---
 
@@ -35,7 +35,9 @@ Uma técnica comum de navegação para usuários de tecnologias assistivas é le
 #### Exemplo
 
 ```html
-<title>Menu - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
+<title>
+  Menu - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!
+</title>
 ```
 
 Para ajudar o usuário, atualize o valor do `title` para refletir mudanças significativas no estado da página (como problemas de validação em formulários).
@@ -48,11 +50,11 @@ Para ajudar o usuário, atualize o valor do `title` para refletir mudanças sign
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                          | Status                   | Comentário |
+| -------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}       | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}                | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

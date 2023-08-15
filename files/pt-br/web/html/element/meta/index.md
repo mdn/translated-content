@@ -170,11 +170,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       > **Note:** **Notes:**- Somente robôs cooperativos seguirão as regras definidas pelo nome do robô. Não espere manter as colheitadeiras de e-mail à distância com isso.
       >
       > - O robô ainda precisa acessar a página para ler o valor meta. Se você quiser mantê-los sob controle, por exemplo, para evitar o consumo de largura de banda, use um arquivo robots.txt (ou em complemento).
-      >
       > - Se você quiser remover a página de um índice, a alteração do meta para `noindex` funcionará, mas somente quando o robô visitar a página novamente. Verifique se o arquivo robots.txt não está impedindo essas visitas. Alguns mecanismos de busca possuem ferramentas para desenvolvedores, permitindo uma remoção rápida de algumas páginas.
-      >
       > - Alguns valores possíveis são mutuamente exclusivos, como usar `index` e `noindex`, ou `follow` e `nofollow`, ao mesmo tempo. Nestes casos, o comportamento do robô é indefinido e pode variar de um para o outro. Então evite esses casos.
-      >
       > - Alguns robôs rastreadores de mecanismos de pesquisa, como os do Google, Yahoo Search ou Bing, suportam os mesmos valores em uma diretiva `HTTP, X-Robot-Tags`: isso permite que eles usem esses pragma em documentos não HTML, como imagens
 
     - `slurp`, qual é um sinônimo de `robots`, mas somente seguido por Slurp, o indexador crawler para Yahoo Search;
@@ -192,16 +189,13 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       | `minimum-scale` | um numero positivo entre `0.0` e `10.0`                 | define o valor mínimo do zoom; deve ser menor ou igual ao `maximum-scale` ou o comportamento sera indeterminado                                                           |
       | `user-scalable` | um valor booleano (`yes` ou `no`)                       | se setado `no`, o usuário não poderá usar zoom na página. o valor padrão é `yes`.                                                                                         |
 
-      | Specification                                                                                            | Status                           | Comment                                             |
-      | -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+      | Specification                                                                 | Status                   | Comment                                             |
+      | ----------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
       | {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Non-normatively describes the Viewport META element |
-
-      See also: {{cssxref("@viewport")}}
 
       > **Note:** **Notes:**- Embora não seja padronizado, esse atributo é usado por diferentes navegadores móveis, como o Safari Mobile, o Firefox para celular ou o Opera Mobile.
       >
       > - Os valores padrão podem mudar de um dispositivo e navegador para outro.
-      >
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
 - {{htmlattrdef("scheme")}}
@@ -224,20 +218,20 @@ Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:
 
 ```html
 <!-- In HTML5 -->
-<meta charset="utf-8">
+<meta charset="utf-8" />
 
 <!-- redireciona a página depois de 3 segundos -->
-<meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+<meta http-equiv="refresh" content="3;url=https://www.mozilla.org" />
 ```
 
 ## Especificações
 
-| Specification                                                                                                                    | Status                               | Comment                                              |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------- |
+| Specification                                                                                     | Status                       | Comment                                              |
+| ------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', '&lt;meta name="referrer"&gt;')}} | {{Spec2('Referrer Policy')}} | Define valores e semantica `<meta name="referrer">`. |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}                         | {{Spec2('HTML WHATWG')}}     | Adiciona o atributo `itemprop`                       |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}                 | {{Spec2('HTML5 W3C')}}         | Adiciona o atributo `charset`                        |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}                                 | {{Spec2('HTML4.01')}}         |                                                      |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-meta-element', '&lt;meta&gt;')}}                    | {{Spec2('HTML WHATWG')}}     | Adiciona o atributo `itemprop`                       |
+| {{SpecName('HTML5 W3C', 'document-metadata.html#the-meta-element', '&lt;meta&gt;')}}              | {{Spec2('HTML5 W3C')}}       | Adiciona o atributo `charset`                        |
+| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.4.2', '&lt;meta&gt;')}}                          | {{Spec2('HTML4.01')}}        |                                                      |
 
 ## Compatibilidade com navegadores
 

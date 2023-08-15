@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getFullYear
 ---
 
 {{JSRef}}
@@ -22,7 +14,7 @@ Cette méthode doit être utilisée à la place de {{jsxref("Date.prototype.getY
 ## Syntaxe
 
 ```js
-dateObj.getFullYear()
+dateObj.getFullYear();
 ```
 
 ### Valeur de retour

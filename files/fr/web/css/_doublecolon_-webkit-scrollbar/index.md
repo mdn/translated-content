@@ -1,12 +1,6 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-scrollbar
 ---
 
 {{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
@@ -30,7 +24,9 @@ You can use the following pseudo elements to customize various parts of the scro
 ## Exemples
 
 ```css
-.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -49,29 +45,32 @@ You can use the following pseudo elements to customize various parts of the scro
 }
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+  background: #000;
 }
 ```
 
 ```html
 <div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
-  Proin at nulla elementum, consectetur ex eget, commodo ante.
-  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
-  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
-  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
-  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
-  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
-  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
-  mattis cursus dolor. Pellentesque id pretium est. Quisque
-  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
+  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
+  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
+  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
+  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
+  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
+  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
+  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
+  Aliquam at enim ligula.
 </div>
-<div class="invisible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
-<div class="mostly-customized-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
-And pretty tall<br>
-thing with weird scrollbars.<br>
-Who thought scrollbars could be made weeeeird?</div>
+<div class="invisible-scrollbar">
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+</div>
+<div class="mostly-customized-scrollbar">
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
+  And pretty tall<br />
+  thing with weird scrollbars.<br />
+  Who thought scrollbars could be made weeeeird?
+</div>
 ```
 
 {{EmbedLiveSample('Exemples')}}

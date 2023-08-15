@@ -1,13 +1,13 @@
 ---
-title: React 앱을 컴포넌트화하기
+title: React 앱 컴포넌트화
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 l10n:
-  sourceCommit: db00d2bbab171a1c0dcd8c478b995fe6238aa23a
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-이 시점에서 우리의 앱은 단일체입니다. 우리는 이를 작동시키기 전에, 관리 가능하고, 기술적인 컴포넌트로 나눌 필요가 있습니다. React는 컴포넌트로 무엇이고 무엇이 아닌지에 대한 엄격한 규칙은 없으며, 당신에게 달려 있습니다! 이 글에서는 우리의 앱을 컴포넌트로 나누는 합리적인 방법을 보여줄 것입니다.
+이 시점에서 우리의 앱은 모놀리식입니다. 우리는 이를 작동시키기 전에, 관리 가능하고, 기술적인 컴포넌트로 나눌 필요가 있습니다. React는 컴포넌트로 무엇이고 무엇이 아닌지에 대한 엄격한 규칙은 없으며, 당신에게 달려 있습니다! 이 글에서는 우리의 앱을 컴포넌트로 나누는 합리적인 방법을 보여줄 것입니다.
 
 <table>
   <tbody>
@@ -22,7 +22,7 @@ l10n:
     <tr>
       <th scope="row">목표:</th>
       <td>
-        우리의 todo list 앱을 컴포넌트로 나누는 합리적인 방법을 보여주기.
+        할 일 목록 앱을 컴포넌트로 나누는 합리적인 방법을 보여주고자 합니다.
       </td>
     </tr>
   </tbody>
@@ -241,7 +241,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App tasks={DATA} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -294,7 +294,7 @@ const taskList = props.tasks.map((task) => (
 
 이제 React는 배열에서 할 일을 렌더링하므로, 올바르게 렌더링하려면 어떤 것이 어떤 것인지 추적해야 합니다. React는 추적을 위해 자체적으로 추측을 시도하지만, `<Todo />` 컴포넌트에 `key` prop을 전달하여 도움을 줄 수 있습니다. `key`는 React가 관리하는 특별한 prop입니다. 다른 용도로 `key`라는 단어를 사용할 수 없습니다.
 
-키는 고유해야 하므로, 각 할 일 객체의 `id`를 키로 다시 사용할 것입니다. `taskList` 상수를 다음과 같이 업데이트하세요.
+key는 고유해야 하므로, 각 task 객체의 `id`를 키로 재사용할 것입니다. `taskList` 상수를 다음과 같이 업데이트하세요.
 
 ```jsx
 const taskList = props.tasks.map((task) => (
@@ -316,7 +316,7 @@ const taskList = props.tasks.map((task) => (
 - `<Form/>`
 - `<FilterButton/>`
 
-두 컴포넌트가 필요하다는 것을 알기 때문에, 터미널 명령으로 일부 파일 생성 작업을 함께 묶을 수 있습니다. 앱의 루트 디렉터리에 있는지 확인하고 다음 명령을 터미널에서 실행하세요.
+두 컴포넌트가 필요하다는 것을 알기 때문에, 터미널 명령으로 일부 파일 생성 작업을 함께 일괄 처리할 수 있습니다. 앱의 루트 디렉터리에 있는지 확인하고 다음 명령을 터미널에서 실행하세요.
 
 ```bash
 touch src/components/Form.js src/components/FilterButton.js
@@ -326,12 +326,12 @@ touch src/components/Form.js src/components/FilterButton.js
 
 `components/Form.js`를 열고 다음을 수행하세요.
 
-- `Todo.js`에서 수행한 것처럼 파일 맨 위에 `React`를 가져옵니다.
+- `Todo.js`에서 수행한 것처럼 파일 상단에서 `React`를 가져옵니다.
 - `Todo()`와 동일한 기본 구조를 가진 새 `Form()` 컴포넌트를 만듭니다.
 - `App.js` 내부에서 `<form>` 태그와 그 사이의 모든 내용을 복사하여 `Form()`의 `return` 문 내부에 붙여넣습니다.
 - 파일 끝에서 `Form`을 내보냅니다.
 
-`Form.js` 파일은 다음과 같이 보여야 합니다.
+`Form.js` 파일은 다음과 같아야 합니다.
 
 ```jsx
 import React from "react";
@@ -341,7 +341,7 @@ function Form(props) {
     <form>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
-          What needs to be done?
+          무엇을 해야 합니까?
         </label>
       </h2>
       <input
@@ -352,7 +352,7 @@ function Form(props) {
         autoComplete="off"
       />
       <button type="submit" className="btn btn__primary btn__lg">
-        Add
+        추가
       </button>
     </form>
   );
@@ -363,7 +363,7 @@ export default Form;
 
 ### `<FilterButton />`
 
-`FilterButton.js`에서 `Form.js`를 만드는 데 사용한 것과 동일한 작업을 수행합니다. 하지만, 컴포넌트를 `FilterButton()`으로 호출하고 `App.js`의 `class`가 `filters`인 `<div>` 요소 내부의 첫 번째 버튼에 대한 HTML을 `return` 문으로 복사합니다.
+`FilterButton.js` 내부에서 `Form.js`를 만드는 데 사용한 것과 동일한 작업을 수행합니다. 하지만, 컴포넌트를 `FilterButton()`으로 호출하고 `App.js`의 `class`가 `filters`인 `<div>` 요소 내부의 첫 번째 버튼에 대한 HTML을 `return` 문으로 복사합니다.
 
 파일은 다음과 같이 보여야 합니다.
 
@@ -417,7 +417,7 @@ function App(props) {
         <FilterButton />
         <FilterButton />
       </div>
-      <h2 id="list-heading">3 tasks remaining</h2>
+      <h2 id="list-heading">3개의 작업이 남음</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
@@ -431,7 +431,7 @@ function App(props) {
 export default App;
 ```
 
-이렇게 하면 React 앱에서 상호 작용을 "거의" 처리할 준비가 되었습니다!
+이것으로, 우리는 React 앱에서 일부 상호작용을 다룰 준비가 거의 완료되었습니다!
 
 ## 요약
 

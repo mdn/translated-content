@@ -342,8 +342,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - : 当窗口、文档及其资源即将被卸载时，触发该事件。
-- {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : 当文档被完全加载和解析时触发该事件，不需要等待样式表、图像和子框架完成加载。
 - {{domxref("Window/load_event", "load")}}
   - : 当整个页面加载完毕时触发该事件，包括所有依赖资源，如样式表图片。
 - {{domxref("Window/unload_event", "unload")}}

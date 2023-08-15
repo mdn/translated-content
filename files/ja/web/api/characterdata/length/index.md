@@ -24,7 +24,9 @@ l10n:
 
 ```js
 const output = document.querySelector("output");
-const textnode = new Text("このテキストは 'textnode.data' を使用して設定されました。");
+const textnode = new Text(
+  "このテキストは 'textnode.data' を使用して設定されました。",
+);
 
 output.value = textnode.length;
 ```

@@ -2,43 +2,12 @@
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: 7594b50698a76ce79209b159835e615052915723
+  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`hidden`** 型は、フォームの送信時にユーザーが見たり変更したりすることができないデータをウェブ開発者が含めることができます。例えば、現在注文中又は編集中の ID や、一意のセキュリティトークンなどに利用できます。隠し入力欄はページの表示で完全に非表示になり、ページの中で表示させる方法はありません。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>
-        サーバーに送り返したい隠しデータの値を表す文字列です。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>なし。</td>
-    </tr>
-    <tr>
-      <td><strong>対応する共通属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし。</td>
-    </tr>
-  </tbody>
-</table>
 
 > **メモ:** {{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} の各イベントは、この入力型には適用されません。隠し入力欄は JavaScript (`hiddenInput.focus()` など) を使用してもフォーカスを与えることはできません。
 
@@ -86,7 +55,7 @@ l10n:
 
 ## 例
 
-以前に作成した編集フォーム ([編集された内容の追跡](#tracking_edited_content)を参照) に、隠し入力欄を使用して編集するレコードの ID を記憶する簡単なバージョンを実装する方法を見てみましょう。
+以前に作成した編集フォーム（[編集された内容の追跡](#tracking_edited_content)を参照）に、隠し入力欄を使用して編集するレコードの ID を記憶する簡単なバージョンを実装する方法を見てみましょう。
 
 編集フォームの HTML はこのようになっているかもしれません。
 
@@ -158,6 +127,43 @@ textarea {
 `title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
 隠し入力欄は全く表示されなくても、データは送信されています。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>
+        サーバーに送り返したい隠しデータの値を表す文字列です。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>なし。</td>
+    </tr>
+    <tr>
+      <td><strong>対応する共通属性</strong></td>
+      <td><a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし。</td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

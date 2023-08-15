@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ## 構文
 
 ```js
-get(index)
+get(index);
 ```
 
 ### 引数
@@ -35,11 +34,10 @@ _index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以�
 {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み取り、コンパイルしてインスタンス化しています。その後、エクスポートされたテーブルに格納された参照を取得します。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(function(obj) {
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
   var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
 });
 ```
 

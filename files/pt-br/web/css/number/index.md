@@ -41,12 +41,12 @@ Quando animado, os valores de `<number>` são interpolados como números reais e
 
 ## Especificações
 
-| Especificações                                                                       | Status                           | Comentário                    |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------- |
-| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS4 Values")}} | Nenhuma mudança significante. |
-| {{SpecName("CSS3 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS3 Values")}} | Nenhuma mudança significante. |
-| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;number&gt;")}} | {{Spec2("CSS2.1")}}         | Definição explícita.          |
-| {{SpecName("CSS1", "", "&lt;number&gt;")}}                             | {{Spec2("CSS1")}}         | Definição implícita..         |
+| Especificações                                                   | Status                   | Comentário                    |
+| ---------------------------------------------------------------- | ------------------------ | ----------------------------- |
+| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}        | {{Spec2("CSS4 Values")}} | Nenhuma mudança significante. |
+| {{SpecName("CSS3 Values", "#numbers", "&lt;number&gt;")}}        | {{Spec2("CSS3 Values")}} | Nenhuma mudança significante. |
+| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;number&gt;")}} | {{Spec2("CSS2.1")}}      | Definição explícita.          |
+| {{SpecName("CSS1", "", "&lt;number&gt;")}}                       | {{Spec2("CSS1")}}        | Definição implícita..         |
 
 ## Compatibilidade com navegadores
 

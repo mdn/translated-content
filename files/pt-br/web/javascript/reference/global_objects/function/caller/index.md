@@ -20,8 +20,16 @@ A propriedade especial `__caller__`, a qual retornou o objeto de ativação do c
 Note que no caso de recurção, você não pode reconstruir o stack de chamadas usando esta propriedade. Considere:
 
 ```js
-function f(n) { g(n - 1); }
-function g(n) { if (n > 0) { f(n); } else { stop(); } }
+function f(n) {
+  g(n - 1);
+}
+function g(n) {
+  if (n > 0) {
+    f(n);
+  } else {
+    stop();
+  }
+}
 f(2);
 ```
 
@@ -34,16 +42,16 @@ f(2) -> g(1) -> f(1) -> g(0) -> stop()
 O seguinte é true:
 
 ```js
-stop.caller === g && f.caller === g && g.caller === f
+stop.caller === g && f.caller === g && g.caller === f;
 ```
 
 então se você tentou recuperar o stack trace na função `stop()` assim:
 
 ```js
 var f = stop;
-var stack = 'Stack trace:';
+var stack = "Stack trace:";
 while (f) {
-  stack += '\n' + f.name;
+  stack += "\n" + f.name;
   f = f.caller;
 }
 ```
@@ -59,9 +67,9 @@ O código a seguir verifica o valor da propriedade `caller` de uma função.
 ```js
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 ```
@@ -76,4 +84,4 @@ Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.
 
 ## Ver também
 
-- Implementation bug for SpiderMonkey {{bug(65683)}}
+- Implementation bug for SpiderMonkey [Erro do Firefox 65683](https://bugzil.la/65683)

@@ -32,25 +32,28 @@ class WordCount extends HTMLParagraphElement {
     // 요소 부모의 단어 수 세기
     const wcParent = this.parentNode;
 
-    function countWords(node){
+    function countWords(node) {
       const text = node.innerText || node.textContent;
-      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
+      return text
+        .trim()
+        .split(/\s+/g)
+        .filter((a) => a.trim().length > 0).length;
     }
 
     const count = `Words: ${countWords(wcParent)}`;
 
     // 섀도 루트 생성
-    const shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({ mode: "open" });
 
     // 텍스트 노드 생성 후 단어 수로 채우기
-    const text = document.createElement('span');
+    const text = document.createElement("span");
     text.textContent = count;
 
     // 텍스트 노드를 섀도 루트에 추가
     shadow.appendChild(text);
 
     // 요소 콘텐츠가 바뀌면 단어 수 업데이트
-    setInterval(function() {
+    setInterval(function () {
       const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
     }, 200);
@@ -58,12 +61,12 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // 새로운 요소 정의
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 > **참고:** `CustomElementRegistry`는 {{domxref("Window.customElements")}} 속성으로 접근할 수 있습니다.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

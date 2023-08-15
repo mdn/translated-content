@@ -1,17 +1,6 @@
 ---
 title: Déboguer de l'HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-tags:
-  - Codage
-  - Débutant
-  - Erreur
-  - Guide
-  - HTML
-  - Validation
-  - débogage
-  - validateur
-translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
@@ -25,7 +14,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
       <td>
         Être familiarisé avec les bases du HTML, traitées aux pages
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML,</a
         >
         <a
@@ -33,7 +22,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
           >Fondamentaux du texte HTML </a
         >et
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks"
           >Création d'hyperliens</a
         >.
       </td>
@@ -52,7 +41,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 
 Quand on écrit du code , tout va généralement bien, jusqu'au moment redouté où une erreur se produit — vous avez fait quelque chose d'incorrect, donc votre code ne fonctionne pas — soit pas du tout, soit pas tout à fait comme vous l'aviez souhaité. Par exemple, ce qui suit montre une erreur signalée lors d'une tentative de {{glossary("compile","compilation")}} d'un programme simple écrit en Rust.
 
-![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est «&nbsp;erreur : guillemet double manquant dans la chaîne&nbsp;».](fr-erreur.png)Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
+![Console montrant le résultat de la compilation d'un programme Rust avec guillemet manquant dans une chaîne textuelle dans une instruction d'affichage. Le message signalé est « erreur : guillemet double manquant dans la chaîne ».](fr-erreur.png)Ici, le message d'erreur est relativement facile à comprendre — «&nbsp;unterminated double quote string&nbsp;» : il manque un guillemet double ouvrant ou fermant pour envelopper la chaîne. Si vous regardez le listage, vous verrez `println!(Salut, Ô Monde!");` il manque un guillemet double. Cependant, des messages d'erreur peuvent devenir plus complexes et plus abscons au fur et à mesure que le programme grossit et, même dans des cas simples devenir intimidants à quelqu'un qui ne connaît rien du Rust.
 
 Déboguer ne doit toutefois pas devenir un problème — la clé pour être à l'aise lors de l'écriture et du débogage d'un programme réside dans une bonne connaissance à la fois du langage et des outils.
 
@@ -79,58 +68,61 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
 2. Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
 3. Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
-    ```html
-    <h1>Exemple de HTML à déboguer</h1>
+   ```html
+   <h1>Exemple de HTML à déboguer</h1>
 
-    <p>Quelles sont les causes d'erreur en HTML ?
+   <p>Quelles sont les causes d'erreur en HTML ?
 
-    <ul>
-      <li>Éléments non fermés : si un élément n'est <strong>pas
-          fermé proprement, ses effets peuvent déborder sur des
-          zones que vous ne souhaitiez pas.
+   <ul>
+     <li>Éléments non fermés : si un élément n'est <strong>pas
+         fermé proprement, ses effets peuvent déborder sur des
+         zones que vous ne souhaitiez pas.
 
-      <li>Éléments incorrectement imbriqués : imbriquer des
-          éléments proprement est également très important pour
-          que le code se comporte correctement.
-          <strong>caractères gras <em>ou gras et italiques ?</strong>
-          qu'est‑ce ?</em>
+     <li>Éléments incorrectement imbriqués : imbriquer des
+         éléments proprement est également très important pour
+         que le code se comporte correctement.
+         <strong>caractères gras <em>ou gras et italiques ?</strong>
+         qu'est‑ce ?</em>
 
-      <li>Attributs non fermés : autre source courante de problèmes
-          en HTML. Voici un exemple: <a href="https://www.mozilla.org">
-          lien à la page d'accueil de Mozilla</a>
-    </ul>
-    ```
+     <li>Attributs non fermés : autre source courante de problèmes
+         en HTML. Voici un exemple: <a href="https://www.mozilla.org">
+         lien à la page d'accueil de Mozilla</a>
+   </ul>
+   ```
 
 4. Revoyons les problèmes&nbsp;:
 
-    - Les élements {{htmlelement("p")}} (paragraphe) et {{htmlelement("li")}} (élément de liste) n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
-    - Le premier élément {{htmlelement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
-    - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
-    - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
+   - Les élements {{htmlelement("p")}} (paragraphe) et {{htmlelement("li")}} (élément de liste) n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
+   - Le premier élément {{htmlelement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
+   - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
+   - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
-5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
+5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs).
 6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
 7. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 
-    - Les éléments `p` et `li` ont été pourvus de balises fermantes.
-    - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document&nbsp;!
-    - L'imbrication incorrecte a été corrigée ainsi&nbsp;:
+   - Les éléments `p` et `li` ont été pourvus de balises fermantes.
+   - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document&nbsp;!
+   - L'imbrication incorrecte a été corrigée ainsi&nbsp;:
 
-      ```html
-      <strong>caractères gras
-        <em>ou caractères gras et italiques&nbsp;?</em>
-      </strong>
-      <em> qu'est ce&nbsp;?</em>
-      ```
+     ```html
+     <strong
+       >caractères gras
+       <em>ou caractères gras et italiques&nbsp;?</em>
+     </strong>
+     <em> qu'est ce&nbsp;?</em>
+     ```
 
-    - Le lien avec les guillemets manquants a été illico détruit. Le dernier élément `li` ressemble à ceci&nbsp;:
+   - Le lien avec les guillemets manquants a été illico détruit. Le dernier élément `li` ressemble à ceci&nbsp;:
 
-      ```html
-      <li>
-        <strong>Attributs non fermés : autre source courante de problèmes
-      en HTML. Voici un exemple&nbsp;:</strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong
+         >Attributs non fermés : autre source courante de problèmes en HTML.
+         Voici un exemple&nbsp;:</strong
+       >
+     </li>
+     ```
 
 ### Validation d'un HTML
 

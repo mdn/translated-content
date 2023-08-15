@@ -1,20 +1,6 @@
 ---
-title: 'Raison: la requête CORS a échoué'
+title: "Raison: la requête CORS a échoué"
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-tags:
-  - CORS
-  - CORSDidNotSucceed
-  - Cross-Origin
-  - Erreur
-  - HTTP
-  - HTTPS
-  - Messages
-  - Raisons
-  - Sécurité
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSNAPasRéussi
 ---
 
 {{HTTPSidebar}}

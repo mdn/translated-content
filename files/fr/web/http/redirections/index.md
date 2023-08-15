@@ -1,11 +1,6 @@
 ---
 title: Redirections en HTTP
 slug: Web/HTTP/Redirections
-tags:
-  - Guide
-  - HTTP
-  - redirections
-translation_of: Web/HTTP/Redirections
 ---
 
 {{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
@@ -22,10 +17,10 @@ Il existe plusieurs types de redirections et elles se répartissent en trois cat
 
 Ces redirections sont faites pour durer éternellement. Elles impliquent que l'URL d'origine ne doit plus être utilisée et que la nouvelle URL est préférée. Les robots des moteurs de recherche déclenchent une mise à jour de l'URL associée à la ressource dans leurs index.
 
-| Code  | Texte                | Traitement des méthodes                                                                                                   | Cas d'utilisation typique                                        |
-| ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                        |
+| ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | `301` | `Moved Permanently`  | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | Réorganisation d'un site Web.                                    |
-| `308` | `Permanent Redirect` | Méthode et corps de la requête inchangés.                                                                                 | Réorganisation d'un site Web, avec des liens/opérations non-GET. |
+| `308` | `Permanent Redirect` | Méthode et corps de la requête inchangés.                                                                   | Réorganisation d'un site Web, avec des liens/opérations non-GET. |
 
 La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. `308` a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que `GET`.
 
@@ -33,11 +28,11 @@ La spécification n'avait pas l'intention de permettre des changements de métho
 
 Parfois, la ressource demandée ne peut pas être accédée à partir de son emplacement standard, mais elle peut l'être à partir d'un autre endroit. Dans ce cas, une redirection temporaire peut être utilisée. Les robots des moteurs de recherche ne mémorisent pas le nouveau lien temporaire. Les redirections temporaires sont également utilisées lors de la création, de la mise à jour et de la suppression de ressources pour présenter des pages de progression temporaires.
 
-| Code  | Texte                | Traitement des méthodes                                                                                                   | Cas d'utilisation typique                                                                                                                                                                                                                                    |
-| ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                                                                                                                                                                                                                    |
+| ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `302` | `Found`              | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens.                                                                                    |
-| `303` | `See Other`          | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres sont changées en `GET` (le corps est perdu).                 | Utilisé pour rediriger après un {{HTTPMethod("PUT")}} ou un {{HTTPMethod("POST")}} pour empêcher un rafraîchissement de la page qui redéclencherait l'opération.                                                                                |
-| `307` | `Temporary Redirect` | Méthodes et corps inchangés                                                                                               | La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens. Mieux que `302` lorsque des liens/opérations non-GET sont disponibles sur le site. |
+| `303` | `See Other`          | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres sont changées en `GET` (le corps est perdu).          | Utilisé pour rediriger après un {{HTTPMethod("PUT")}} ou un {{HTTPMethod("POST")}} pour empêcher un rafraîchissement de la page qui redéclencherait l'opération.                                                                                             |
+| `307` | `Temporary Redirect` | Méthodes et corps inchangés                                                                                 | La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens. Mieux que `302` lorsque des liens/opérations non-GET sont disponibles sur le site. |
 
 La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. `307` a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que `GET`
 
@@ -45,10 +40,10 @@ La spécification n'avait pas l'intention de permettre des changements de métho
 
 En plus de ces redirections habituelles, il existe deux redirections spécifiques. Le {{HTTPStatus("304")}} (Not Modified) redirige une page vers la copie mise en cache localement (qui était obsolète), et le {{HTTPStatus("300")}} (Multiple Choice) est une redirection manuelle : le corps, présenté par le navigateur comme une page Web, liste les redirections possibles et l'utilisateur clique sur une pour la sélectionner.
 
-| Code  | Texte             | Cas d'utilisation typique                                                                                                                             |
-| ----- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Code  | Texte             | Cas d'utilisation typique                                                                                                                      |
+| ----- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `300` | `Multiple Choice` | Pas beaucoup : les choix sont listés dans une page HTML dans le corps du texte. Pourrait être servi avec un {{HTTPStatus("200")}} `OK` status. |
-| `304` | `Not Modified`    | Rafraîchissement du cache : ceci indique que la valeur dans le cache est encore correcte et peut être utilisée.                                       |
+| `304` | `Not Modified`    | Rafraîchissement du cache : ceci indique que la valeur dans le cache est encore correcte et peut être utilisée.                                |
 
 ## Autre façon de spécifier les redirections
 

@@ -1,7 +1,6 @@
 ---
 title: <image>
 slug: Web/CSS/image
-original_slug: Web/CSS/imagem
 ---
 
 {{CSSRef}}
@@ -19,16 +18,16 @@ CSS pode lidar com os seguintes tipos de imagens:
 
 CCS determina um tamanho concreto do objeto usando (1) _suas dimensões intrínsecas;_ (2) _seu tamanho especificado,_ definido por propriedades CSS como {{cssxref("width")}}, {{cssxref("height")}}, ou {{cssxref("background-size")}}; e (3) _é o tamanho padrão,_ determinado pelo tipo de propriedade em que a imagem é usada:
 
-| Tipo de objeto                                                                                                                                                      | Tamanho do objeto padrão                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| {{cssxref("background-image")}}                                                                                                                            | O tamanho da área de posicionamento do fundo do elemento.                                          |
-| {{cssxref("list-style-image")}}                                                                                                                            | O tamanho de um carácter `1em`                                                                     |
-| {{cssxref("border-image")}}                                                                                                                                | O tamanho da área da imagem da borda do elemento                                                   |
-| {{cssxref("cursor")}}                                                                                                                                        | O tamanho definido pelo navegador correspondente ao tamanho normal do cursor no sistema do cliente |
-| {{cssxref("border-image-source")}}                                                                                                                        | ?                                                                                                  |
-| {{cssxref("mask-image")}}                                                                                                                                    | ?                                                                                                  |
-| {{cssxref("shape-outside")}}                                                                                                                                | ?                                                                                                  |
-| {{cssxref("mask-border-source")}}                                                                                                                        | ?                                                                                                  |
+| Tipo de objeto                                                                                                                                 | Tamanho do objeto padrão                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| {{cssxref("background-image")}}                                                                                                                | O tamanho da área de posicionamento do fundo do elemento.                                          |
+| {{cssxref("list-style-image")}}                                                                                                                | O tamanho de um carácter `1em`                                                                     |
+| {{cssxref("border-image")}}                                                                                                                    | O tamanho da área da imagem da borda do elemento                                                   |
+| {{cssxref("cursor")}}                                                                                                                          | O tamanho definido pelo navegador correspondente ao tamanho normal do cursor no sistema do cliente |
+| {{cssxref("border-image-source")}}                                                                                                             | ?                                                                                                  |
+| {{cssxref("mask-image")}}                                                                                                                      | ?                                                                                                  |
+| {{cssxref("shape-outside")}}                                                                                                                   | ?                                                                                                  |
+| {{cssxref("mask-border-source")}}                                                                                                              | ?                                                                                                  |
 | Substituí o conteúdo, como quando combinando {{cssxref("content")}} com um pseudo-elemento ({{cssxref("::after")}} ou {{cssxref("::before")}}) | Um 300px × 150px retângulo                                                                         |
 
 O tamanho do objeto concreto é calculado usando o seguinte algoritimo:
@@ -67,10 +66,10 @@ element(#fakeid)  /* Um elemento ID deve ser um ID existente na página. */
 
 ## Especificações
 
-| Especificações                                                                       | Status                           | Comentário                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Especificações                                                 | Status                   | Comentário                                                                                                                                                                |
+| -------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS4 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS4 Images')}} | Adiciona {{cssxref("element()")}}, {{cssxref("image()")}}, {{cssxref("conic-gradient()")}}, {{cssxref("repeating-conic-gradient()")}}, e {{cssxref("image-resolution")}}. |
-| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Definição inicial. Depois disso, não existe definição explicita do tipo de data `<image>`. Imagens podem ser somente definidas usando a notação funciona `url()` .                                                       |
+| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Definição inicial. Depois disso, não existe definição explicita do tipo de data `<image>`. Imagens podem ser somente definidas usando a notação funciona `url()` .        |
 
 ## Compatibilidade do navegador
 

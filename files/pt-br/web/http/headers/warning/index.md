@@ -71,8 +71,8 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 
 ## Especificações
 
-| Especificação                                | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
+| Especificação                     | Título                                          |
+| --------------------------------- | ----------------------------------------------- |
 | {{RFC("7234", "Warning", "5.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 
 ## Compatibilidade com navegadores

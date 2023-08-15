@@ -1,8 +1,6 @@
 ---
 title: Стили HTML форм
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
-original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
@@ -60,12 +58,12 @@ Search boxes are the only kind of text fields that can be a little tricky to sty
 
 ```html
 <form>
-  <input type="search">
+  <input type="search" />
 </form>
 ```
 
 ```css
-input[type=search] {
+input[type="search"] {
   border: 1px dotted #999;
   border-radius: 0;
 
@@ -82,9 +80,12 @@ As you can see on this screenshot of the search field on Chrome, the two fields 
 CSS font and text features can be used easily with any widget (and yes, you can use {{cssxref("@font-face")}} with form widgets). However, browsers' behaviors are often inconsistent. By default, some widgets do not inherit {{cssxref("font-family")}} and {{cssxref("font-size")}} from their parents. Many browsers use the system default appearance instead. To make your forms' appearance consistent with the rest of your content, you can add the following rules to your stylesheet:
 
 ```css
-button, input, select, textarea {
-  font-family : inherit;
-  font-size   : 100%;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -101,13 +102,16 @@ All text fields have complete support for every property related to the CSS box 
 **This is because each widget has their own rules for border, padding and margin.** So if you want to give the same size to several different widgets, you have to use the {{cssxref("box-sizing")}} property:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   margin: 0;
 
   -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-          box-sizing: border-box;
+  -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+  box-sizing: border-box;
 }
 ```
 
@@ -172,12 +176,12 @@ The HTML is only slightly more involved than the example we used in [the first a
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -216,38 +220,40 @@ First, we prepare the ground by defining our {{cssxref("@font-face")}} rules, al
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 21px sans-serif;
+  font: 21px sans-serif;
 
-  padding : 2em;
-  margin  : 0;
+  padding: 2em;
+  margin: 0;
 
-  background : #222;
+  background: #222;
 }
 
 form {
   position: relative;
 
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
 
-  background: #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 }
 ```
 
@@ -255,29 +261,31 @@ Now we can position our elements, including the title and all the form elements:
 
 ```css
 h1 {
-  position : absolute;
-  left : 415px;
-  top  : 185px;
+  position: absolute;
+  left: 415px;
+  top: 185px;
 
-  font : 1em "typewriter", sans-serif;
+  font:
+    1em "typewriter",
+    sans-serif;
 }
 
 #from {
   position: absolute;
-  left : 398px;
-  top  : 235px;
+  left: 398px;
+  top: 235px;
 }
 
 #reply {
   position: absolute;
-  left : 390px;
-  top  : 285px;
+  left: 390px;
+  top: 285px;
 }
 
 #message {
   position: absolute;
-  left : 20px;
-  top  : 70px;
+  left: 20px;
+  top: 70px;
 }
 ```
 
@@ -285,20 +293,25 @@ That's where we start working on the form elements themselves. First, let's ensu
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 The text fields require some common rules. Simply put, we remove their {{cssxref("border","borders")}} and {{cssxref("background","backgrounds")}}, and redefine their {{cssxref("padding")}} and {{cssxref("margin")}}:
 
 ```css
-input, textarea {
-  font    : .9em/1.5em "handwriting", sans-serif;
+input,
+textarea {
+  font:
+    0.9em/1.5em "handwriting",
+    sans-serif;
 
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 240px;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 240px;
 
   background: none;
 }
@@ -307,10 +320,11 @@ input, textarea {
 When one of these fields gains focus, we highlight them with a light grey, transparent, background. Note that it's important to add the {{cssxref("outline")}} property, in order to remove the default focus highlight added by some browsers:
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  outline      : none;
+  outline: none;
 }
 ```
 
@@ -320,8 +334,8 @@ The single-line text field needs some tweaks to render nicely in Internet Explor
 
 ```css
 input {
-    height: 2.5em; /* for IE */
-    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+  height: 2.5em; /* for IE */
+  vertical-align: middle; /* This is optional but it makes legacy IEs look better */
 }
 ```
 
@@ -329,14 +343,14 @@ input {
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 340px;
-  height  : 360px;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 340px;
+  height: 360px;
 
-  resize  : none;
+  resize: none;
   overflow: auto;
 }
 ```
@@ -345,24 +359,24 @@ The {{HTMLElement("button")}} element is really convenient with CSS; you can do 
 
 ```css
 button {
-  position     : absolute;
-  left         : 440px;
-  top          : 360px;
+  position: absolute;
+  left: 440px;
+  top: 360px;
 
-  padding      : 5px;
+  padding: 5px;
 
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
+  background: none;
 
-  cursor       : pointer;
+  cursor: pointer;
 
--webkit-transform: rotate(-1.5deg);
-   -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-     -o-transform: rotate(-1.5deg);
-        transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
 }
 
 button:after {
@@ -371,9 +385,9 @@ button:after {
 
 button:hover,
 button:focus {
-  outline   : none;
+  outline: none;
   background: #000;
-  color   : #FFF;
+  color: #fff;
 }
 ```
 

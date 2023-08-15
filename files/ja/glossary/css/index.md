@@ -16,7 +16,7 @@ p {
   color: yellow;
 
   /* "background-color" プロパティは背景の色を定義するもので、ここでは黒色に設定しています。*/
-  background-color: black
+  background-color: black;
 }
 ```
 

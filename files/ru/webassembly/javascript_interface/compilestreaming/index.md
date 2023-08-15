@@ -1,8 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
 
 {{WebAssemblySidebar}}
@@ -35,19 +33,19 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 Поскольку функция `compileStreaming()` принимает промис для объекта {{domxref("Response")}}, вы можете напрямую передать ему вызов {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, и он передаст ответ в выполняемую функцию.
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(module => WebAssembly.instantiate(module, importObject))
-.then(instance => instance.exports.exported_func());
+WebAssembly.compileStreaming(fetch("simple.wasm"))
+  .then((module) => WebAssembly.instantiate(module, importObject))
+  .then((instance) => instance.exports.exported_func());
 ```
 
 Затем создаётся полученный экземпляр модуля с помощью {{jsxref("WebAssembly.instantiate()")}} и вызывается экспортированная функция.
 
 ## Характеристики
 
-| Спецификация                                                                                                             | Статус                                       | Коммент                             |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------------- |
+| Спецификация                                                                                | Статус                             | Коммент                             |
+| ------------------------------------------------------------------------------------------- | ---------------------------------- | ----------------------------------- |
 | {{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Первоначальное определение проекта. |
 
 ## Совместимость с браузером

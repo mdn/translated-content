@@ -1,7 +1,6 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
 
 {{jsSidebar("Funciones")}}
@@ -18,6 +17,7 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 ### Parámetros
 
 - _`prop`_
+
   - : El nombre de la propiedad a asociar con la función dada.
 
 - _`val`_
@@ -47,12 +47,12 @@ var lenguaje = {
   set actual(mensaje) {
     this.log.push(mensaje);
   },
-  log: []
-}
-lenguaje.actual='ES';
+  log: [],
+};
+lenguaje.actual = "ES";
 console.log(lenguaje.log); // ['ES']
 
-lenguaje.actual='FR';
+lenguaje.actual = "FR";
 console.log(lenguaje.log); // ['ES', 'FR']
 ```
 
@@ -71,14 +71,16 @@ delete lenguaje.actual;
 Para añadir un setter a un objeto _existente_, use {{jsxref("Object.defineProperty()")}}
 
 ```js
-consr o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function (x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10; // Ejecuta el setter, el cual asigna 10 / 2 (5) a la propiedad 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Usando un nombre de propiedad computado
@@ -86,15 +88,17 @@ console.log(o.a) // 5
 > **Nota:** Propiedades computadas son 'experimental technology'_,_ parte de la propuesta para ECMAScript 6, y no está soportado en todos los navegadores. Dará error de sintaxis en entornos no soportados.
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 var obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // ejecuta el setter
+obj.foo = "baz"; // ejecuta el setter
 console.log(obj.baz); // "baz"
 ```
 

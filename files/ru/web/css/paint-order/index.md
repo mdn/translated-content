@@ -1,14 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/paint-order
-browser-compat: css.properties.paint-order
 ---
 
 {{CSSRef}}
@@ -40,7 +32,7 @@ paint-order: unset;
 
 Когда указано одно значение, то сначала отрисовывается оно, затем два других в обычном порядке друг относительно друга. Когда указано два значения, они будут отрисованы в указанном порядке, а затем будет отрисовано неопределённое значение.
 
-> **Note:** в контексте этого свойства, маркеры отрисовываются только при рисовании форм SVG, включающих использование свойств `marker-*` (например [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)) и элемента [`<marker>`](/en-US/docs/Web/SVG/Element/marker). Они не применяются к тексту HTML, в этом случае вы можете определить только порядок `stroke` и `fill`.
+> **Note:** в контексте этого свойства, маркеры отрисовываются только при рисовании форм SVG, включающих использование свойств `marker-*` (например [`marker-start`](/ru/docs/Web/SVG/Attribute/marker-start)) и элемента [`<marker>`](/ru/docs/Web/SVG/Element/marker). Они не применяются к тексту HTML, в этом случае вы можете определить только порядок `stroke` и `fill`.
 
 ### Значения
 

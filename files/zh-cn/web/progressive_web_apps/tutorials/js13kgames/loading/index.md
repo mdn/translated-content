@@ -1,7 +1,6 @@
 ---
 title: 渐进式加载
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
-original_slug: Web/Progressive_web_apps/Loading
 ---
 
 {{PWASidebar}} {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -33,8 +32,8 @@ original_slug: Web/Progressive_web_apps/Loading
 它们会等到文档解析完成之后再开始下载和执行，所以不会阻塞 HTML 页面的渲染。我们还可以拆分 CSS 文件并给它们加上 media 属性：
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 这种做法告诉浏览器，只有在条件满足的情况下才加载这些资源（例如指定了 print，则在打印环境下才会加载这些资源，译者注）。
@@ -52,7 +51,7 @@ original_slug: Web/Progressive_web_apps/Loading
 在 js13kPWA 示例中，我们可以通过 JavaScript 有选择地加载图片，而不是把所有的游戏截图路径都直接放进 `<img>` 标签的 `src` 属性里面，因为这会使浏览器自动下载所有的图片。在图片最终加载之前，示例页面会将图片的最终路径存放到 `data-src` 中。在这个阶段，应用会使用图片占位符来代替真正的图片，它更轻量级，体积更小（加载也更快，译者注）。
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 这些图片会在网站构建完 HTML 主体框架之后通过 JavaScript 进行加载。图片占位符被缩放到和真正的图片一样大小，所以它会占据同样的空间，在真正的图片完成加载后，也不会导致页面重绘。
@@ -62,11 +61,11 @@ original_slug: Web/Progressive_web_apps/Loading
 `app.js` 这个文件处理 `data-src` 属性的过程如下所示：
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -113,10 +112,10 @@ article img {
 这里有相关的代码示例：
 
 ```js
-if('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }

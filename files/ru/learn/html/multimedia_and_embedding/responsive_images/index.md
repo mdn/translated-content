@@ -1,7 +1,6 @@
 ---
 title: Адаптивные изображения
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
-translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -10,7 +9,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 | Требования: | Предполагается, что вы уже знакомы с [основами HTML](/ru/docs/Learn/HTML/Introduction_to_HTML) и умеете [добавлять статичные изображения на веб-страницу](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML). |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:       | Узнать, как использовать такие элементы, как [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и {{htmlelement("picture")}} чтобы обеспечить работу гибких изображения на веб-сайтах.                              |
+| Цель:       | Узнать, как использовать такие элементы, как [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и {{htmlelement("picture")}} чтобы обеспечить работу гибких изображения на веб-сайтах.                                    |
 
 ## Почему адаптивные изображения?
 
@@ -49,19 +48,23 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 Итак, какую проблему решают разные разрешения? В зависимости от устройства нужно отобразить одно и то же изображение, но разных размеров. Посмотрите на вторую картинку в примере. Стандартный элемент {{htmlelement("img")}} обычно позволяет указать только один путь к файлу:
 
 ```html
-<img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+<img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
 Однако есть два новых атрибута — [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes) — позволяющих добавить дополнительные изображения с пометками, чтобы браузер выбрал подходящее. Пример на Github: [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) (также смотри [источник кода](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)).
 
 ```html
-<img srcset="elva-fairy-320w.jpg 320w,
-             elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 320px) 280px,
+<img
+  srcset="
+    elva-fairy-320w.jpg 320w,
+    elva-fairy-480w.jpg 480w,
+    elva-fairy-800w.jpg 800w
+  "
+  sizes="(max-width: 320px) 280px,
             (max-width: 480px) 440px,
             800px"
-     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+  src="elva-fairy-800w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 Атрибуты `srcset` и `sizes` кажутся сложными, но они не так плохи, если вы отформатируете их как в примере выше: каждая часть значения атрибута с новой строки. Значение состоит из списка элементов через запятую, каждый из которых включает три части. Давайте рассмотрим эти значения:
@@ -72,13 +75,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. Пробел.
 3. **Актуальная ширина картинки** **в пикселах** (`480w`) — заметьте, что здесь используется `w` вместо `px`, как вы могли ожидать. Эта настоящая ширина изображения, которая может быть просмотрена в свойствах картинки на вашем компьютере (например, на Mac нужно открыть картинку в Finder и нажать&#x20;
 
-    <kbd>Cmd</kbd>
+   <kbd>Cmd</kbd>
 
-    &#x20;\+&#x20;
+   &#x20;\+&#x20;
 
-    <kbd>I</kbd>
+   <kbd>I</kbd>
 
-    &#x20;, чтобы вывести информацию на экран).
+   &#x20;, чтобы вывести информацию на экран).
 
 **`sizes`** определяет перечень медиавыражений (например, ширину экрана) и указывает предпочтительную ширину изображения, когда определённое медиавыражение истинно — это то, о чём мы говорили выше. В нашем случае, перед каждой запятой мы пишем:
 
@@ -118,10 +121,10 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 Если вы поддерживаете несколько разрешений экрана, но все видят ваше изображение в одном и том же размере на экране, вы можете позволить браузеру выбирать изображение с подходящим разрешением используя `srcset` с x-дескриптором и без `sizes` — более простой синтаксис! Найти пример как это выглядит можно здесь [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (смотрите также [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
-<img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)В данном примере, к изображению применяется CSS таким образом, что оно имеет ширину в 320 пикселей на экране (также называемое CSS-пикселями):
@@ -141,16 +144,16 @@ img {
 Возвращаясь к нашему оригинальному примеру [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), мы имеем изображение которое очень нуждается в художественном оформлении:
 
 ```html
-<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
 Давайте исправим это при помощи элемента {{htmlelement("picture")}}! Так же как [`<video>` и `<audio>`](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), элемент `<picture>` это обёртка содержащая некоторое количество элементов {{htmlelement("source")}} которые предоставляют браузеру выбор нескольких разных источников, в сопровождении крайне важного элемента {{htmlelement("img")}}. Код [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) выглядит так:
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 </picture>
 ```
 
@@ -160,7 +163,7 @@ img {
 
 Этот код позволяет нам выводить отзывчивое изображение и на широких, и на узких экранах, как показано ниже:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
 
 > **Примечание:** вам следует использовать атрибут `media` только при художественном оформлении; когда вы используете `media`, не применяйте медиа-условия с атрибутом `sizes`.
 
@@ -176,9 +179,11 @@ img {
 
 ```html
 <picture>
-  <source type="image/svg+xml" srcset="pyramid.svg">
-  <source type="image/webp" srcset="pyramid.webp">
-  <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
+  <source type="image/svg+xml" srcset="pyramid.svg" />
+  <source type="image/webp" srcset="pyramid.webp" />
+  <img
+    src="pyramid.png"
+    alt="regular pyramid built from four equilateral triangles" />
 </picture>
 ```
 

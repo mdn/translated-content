@@ -1,7 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-original_slug: Web/HTML/Elemento/xmp
 ---
 
 {{Deprecated_Header}}

@@ -249,7 +249,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
 
       // :: XHR Form Submit Framework ::
       //
-      // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      // https://developer.mozilla.org/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
       //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html

@@ -1,5 +1,5 @@
 ---
-title: 'Interactivité avec React : évènements et état'
+title: "Interactivité avec React : évènements et état"
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
 l10n:
   sourceCommit: 5e207965797b3672d3c06b65298de551d1eac515
@@ -33,9 +33,9 @@ Après avoir organisé nos composants, il est maintenant temps de faire évoluer
 Si vous n'avez pas utilisé de <i lang="en">framework</i> JavaScript jusqu'à présent, vous avez peut-être l'habitude de disposer d'un fichier JavaScript distinct, dans lequel vous interrogez certains nœuds du DOM et leur attachez des gestionnaires d'évènements. Par exemple&nbsp;:
 
 ```jsx
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   alert("coucou !");
 });
 ```
@@ -43,10 +43,7 @@ btn.addEventListener('click', () => {
 Avec React, nous écrivons des gestionnaires d'évènements directement sur les éléments de notre JSX, comme ceci&nbsp;:
 
 ```jsx
-<button
-  type="button"
-  onClick={() => alert("coucou !")}
->
+<button type="button" onClick={() => alert("coucou !")}>
   Dire coucou !
 </button>
 ```
@@ -69,7 +66,7 @@ Au début de la fonction du composant `Form()`, créez une fonction nommée `han
 ```jsx
 function handleSubmit(e) {
   e.preventDefault();
-  alert('Coucou le monde !');
+  alert("Coucou le monde !");
 }
 ```
 
@@ -139,7 +136,7 @@ Cela fait beaucoup de choses à assimiler d'un coup. Voyons ce que ça donne dan
 Écrivez ce qui suit au-dessus de votre fonction `handleSubmit()`, dans `Form()`&nbsp;:
 
 ```jsx
-const [name, setName] = useState('Utiliser les hooks !');
+const [name, setName] = useState("Utiliser les hooks !");
 ```
 
 Que se passe-t-il dans cette ligne de code&nbsp;?
@@ -166,7 +163,7 @@ Vous pouvez voir l'état `name` en action tout de suite. Ajoutez un attribut `va
 Changez «&nbsp;Utiliser les hooks&nbsp;» en une chaîne vide une fois que vous avez terminé. C'est ce que nous voulons pour notre état initial.
 
 ```jsx
-const [name, setName] = useState('');
+const [name, setName] = useState("");
 ```
 
 ### Lire ce qui a été saisi par la personne
@@ -188,7 +185,7 @@ function handleChange(e) {
   autoComplete="off"
   value={name}
   onChange={handleChange}
-/>
+/>;
 ```
 
 Actuellement, la valeur du champ ne changera pas lors de la saisie, mais votre navigateur affichera «&nbsp;Saisie en cours !&nbsp;» dans la console JavaScript. Cela nous permet de vérifier que notre gestionnaire d'évènements est bien attaché au champ. Afin de changer la valeur du champ, nous devons utiliser notre fonction `handleChange()` pour mettre à jour notre état `name`.
@@ -330,15 +327,15 @@ Assurez-vous d'être dans le répertoire racine de votre application, puis exéc
 
 - Si vous utilisez npm
 
-    ```bash
-    npm install nanoid
-    ```
+  ```bash
+  npm install nanoid
+  ```
 
 - Si vous utilisez yarn
 
-    ```bash
-    yarn add nanoid
-    ```
+  ```bash
+  yarn add nanoid
+  ```
 
 Maintenant, nous pouvons importer `nanoid` en haut de `App.js` afin de l'utiliser pour créer des identifiants uniques pour nos nouvelles tâches. Tout d'abord, incluez la ligne d'importation suivante au début du fichier `App.js`:
 
@@ -367,7 +364,8 @@ const headingText = `${taskList.length} tâches restantes`;
 C'est presque correct, mais si notre liste ne contient qu'une seule tâche, l'intitulé utilisera toujours le mot «&nbsp;tâches&nbsp;». Nous pouvons également en faire une variable. Mettez à jour le code que vous venez d'ajouter comme suit:
 
 ```jsx
-const tasksWords = taskList.length !== 1 ? 'tâches restantes' : 'tâche restante';
+const tasksWords =
+  taskList.length !== 1 ? "tâches restantes" : "tâche restante";
 const headingText = `${taskList.length} ${tasksWords}`;
 ```
 
@@ -391,7 +389,7 @@ Ajoutez ceci juste au-dessus de la déclaration de la constante `taskList`&nbsp;
 
 ```jsx
 function toggleTaskCompleted(id) {
-  console.log(tasks[0])
+  console.log(tasks[0]);
 }
 ```
 
@@ -400,11 +398,11 @@ Ensuite, nous allons ajouter `toggleTaskCompleted` aux <i lang="en">props</i> de
 ```jsx
 const taskList = tasks.map((task) => (
   <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-      toggleTaskCompleted={toggleTaskCompleted}
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
   />
 ));
 ```
@@ -439,10 +437,10 @@ function toggleTaskCompleted(id) {
   const updatedTasks = tasks.map((task) => {
     // si cette tâche possède le même identifiant que la tâche éditée
     if (id === task.id) {
-      // on utilise la décomposition objet afin 
-      // de construire un nouvel objet dont la 
+      // on utilise la décomposition objet afin
+      // de construire un nouvel objet dont la
       // propriété `completed` est l'inverse
-      return {...task, completed: !task.completed}
+      return { ...task, completed: !task.completed };
     }
     return task;
   });
@@ -464,7 +462,7 @@ Ici, nous allons commencer par écrire une fonction `deleteTask()` dans votre co
 
 ```jsx
 function deleteTask(id) {
-  console.log(id)
+  console.log(id);
 }
 ```
 
@@ -491,8 +489,7 @@ Mettez à jour le bouton "Supprimer" dans `Todo.js`, comme ceci&nbsp;:
 <button
   type="button"
   className="btn btn__danger"
-  onClick={() => props.deleteTask(props.id)}
->
+  onClick={() => props.deleteTask(props.id)}>
   Supprimer <span className="visually-hidden">{props.name}</span>
 </button>
 ```

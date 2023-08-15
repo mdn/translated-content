@@ -1,15 +1,6 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
-tags:
-  - API
-  - Client
-  - Méthode
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - postMessage
-translation_of: Web/API/Client/postMessage
 ---
 
 {{SeeCompatTable}}{{APIRef("Client")}}
@@ -41,16 +32,18 @@ Ce message est contenu dans une promesse qui se résolvera si la réponse ne con
 
 ```js
 function sendMessage(message) {
-  return new Promise(function(resolve, reject) {
-     var messageChannel = new MessageChannel();
-     messageChannel.port1.onmessage = function(event) {
-       if (event.data.error) {
-         reject(event.data.error);
-       } else {
-         resolve(event.data);
-       }
-     };
-    navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
+  return new Promise(function (resolve, reject) {
+    var messageChannel = new MessageChannel();
+    messageChannel.port1.onmessage = function (event) {
+      if (event.data.error) {
+        reject(event.data.error);
+      } else {
+        resolve(event.data);
+      }
+    };
+    navigator.serviceWorker.controller.postMessage(message, [
+      messageChannel.port2,
+    ]);
   });
 }
 ```

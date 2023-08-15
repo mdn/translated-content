@@ -1,7 +1,6 @@
 ---
 title: Организация CSS-кода
 slug: Learn/CSS/Building_blocks/Organizing
-translation_of: Learn/CSS/Building_blocks/Organizing
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
@@ -9,8 +8,8 @@ translation_of: Learn/CSS/Building_blocks/Organizing
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
 | Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To learn some tips and best practices for organizing stylesheets, and find out about some of the naming conventions and tools in common usage to help with CSS organization and team working.                                                                                                                                                                                                                                                                            |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To learn some tips and best practices for organizing stylesheets, and find out about some of the naming conventions and tools in common usage to help with CSS organization and team working.                                                                                                                                                                                                                  |
 
 ## Tips to keep your CSS tidy
 
@@ -33,8 +32,13 @@ Having a set of rules you always follow reduces the amount of mental overhead ne
 There are a couple of ways you will see CSS formatted. Some developers put all of the rules onto a single line, like so:
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 Other developers prefer to break everything onto a new line:
@@ -206,7 +210,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -216,7 +220,7 @@ If you are not taking an OOCSS approach you might create custom CSS for the diff
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -229,14 +233,14 @@ In OOCSS, you would create one pattern called `media` that would have all of the
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
 }
 ```
@@ -256,7 +260,7 @@ The list-item would have `media` and `list-item` applied:
 <ul>
   <li class="media list-item">
     <img />
-   <div class="content"></div>
+    <div class="content"></div>
   </li>
 </ul>
 ```
@@ -270,9 +274,7 @@ BEM stands for Block Element Modifier. In BEM a block is a standalone entity suc
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 
@@ -345,10 +347,10 @@ You should also now have the skills to explore the rest of the [MDN CSS](/ru/doc
 1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

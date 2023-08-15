@@ -20,10 +20,10 @@ var htmlCollection = document.images;
 ```js
 var ilist = document.images;
 
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-        // found the banner
-    }
+for (var i = 0; i < ilist.length; i++) {
+  if (ilist[i].src == "banner.gif") {
+    // found the banner
+  }
 }
 ```
 
@@ -33,6 +33,10 @@ for(var i = 0; i < ilist.length; i++) {
 
 `document.images` é parte do DOM HTML, e só trabalho com documentos HTML.
 
-## Especificação
+## Especificações
 
-- [DOM Level 2 HTML: HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

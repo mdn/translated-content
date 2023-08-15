@@ -1,17 +1,6 @@
 ---
 title: Table de compatibilité des propriétés pour les widgets de formulaire
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Avancé
-  - CSS
-  - Formulaires
-  - Guide
-  - HTML
-  - Indésirables
-  - Mises à jour
-  - Web
-translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
-original_slug: Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets
 ---
 
 {{learnsidebar}}
@@ -44,13 +33,13 @@ Pour chaque propriété il y a deux rendus possibles&nbsp;:
 
 ```css
 * {
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
   -webkit-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
   -moz-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
+  /* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
    y compris Opera, Internet Explorer et Firefox */
   background: none;
 }

@@ -24,15 +24,11 @@ Muitos disparadores de eventos (incluindo elements, documents, e windows) també
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-eventtarget', 'EventTarget')}}                         | {{Spec2('DOM WHATWG')}} | Sem mundanças.                                                                                |
-| {{SpecName('DOM3 Events', 'DOM3-Events.html#interface-EventTarget', 'EventTarget')}} | {{Spec2('DOM3 Events')}} | Alguns parâmetros agora são opcionais (`listener`), ou aceitam o valor `null` (`useCapture`). |
-| {{SpecName('DOM2 Events', 'events.html#Events-EventTarget', 'EventTarget')}}             | {{Spec2('DOM2 Events')}} | Definição inicial.                                                                            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
 ## Veja também
 

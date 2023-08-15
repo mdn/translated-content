@@ -43,17 +43,17 @@ CSS Fonts レベル 4 では、構文を拡張して 1 から 1000 までの任�
 
 `100` から `900` の数値は、おおよそ以下の太さの名前に対応します。
 
-| 値    | 太さの名前                |
-| ----- | ------------------------- |
-| 100   | Thin (Hairline)           |
-| 200   | Extra Light (Ultra Light) |
-| 300   | Light                     |
-| 400   | Normal                    |
-| 500   | Medium                    |
-| 600   | Semi Bold (Demi Bold)     |
-| 700   | Bold                      |
-| 800   | Extra Bold (Ultra Bold)   |
-| 900   | Black (Heavy)             |
+| 値  | 太さの名前                |
+| --- | ------------------------- |
+| 100 | Thin (Hairline)           |
+| 200 | Extra Light (Ultra Light) |
+| 300 | Light                     |
+| 400 | Normal                    |
+| 500 | Medium                    |
+| 600 | Semi Bold (Demi Bold)     |
+| 700 | Bold                      |
+| 800 | Extra Bold (Ultra Bold)   |
+| 900 | Black (Heavy)             |
 
 ### 可変フォント
 
@@ -85,8 +85,9 @@ TrueType や OpenType の可変フォントでは、 "wght" バリエーショ�
 ```css
 @font-face {
   font-family: "Open Sans";
-  src: local("Open Sans") format("woff2"),
-       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+  src:
+    local("Open Sans") format("woff2"),
+    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-weight: 400;
 }
 ```

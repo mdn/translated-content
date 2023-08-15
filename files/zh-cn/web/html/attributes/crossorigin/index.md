@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：crossorigin
 slug: Web/HTML/Attributes/crossorigin
-original_slug: Web/HTML/CORS_settings_attributes
 ---
 
 {{HTMLSidebar}}

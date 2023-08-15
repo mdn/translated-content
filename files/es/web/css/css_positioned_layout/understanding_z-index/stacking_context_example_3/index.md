@@ -1,7 +1,6 @@
 ---
 title: Ejemplo 3 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 ---
 
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
@@ -45,74 +44,73 @@ Este problema puede ser evitado al remover la superposición entre menus de dife
 ### Código fuente de ejemplo
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head><style type="text/css">
+  <head>
+    <style type="text/css">
+      div {
+        font: 12px Arial;
+      }
 
-div { font: 12px Arial; }
+      span.bold {
+        font-weight: bold;
+      }
 
-span.bold { font-weight: bold; }
+      div.lev1 {
+        width: 250px;
+        height: 70px;
+        position: relative;
+        border: 2px outset #669966;
+        background-color: #ccffcc;
+        padding-left: 5px;
+      }
 
-div.lev1 {
-   width: 250px;
-   height: 70px;
-   position: relative;
-   border: 2px outset #669966;
-   background-color: #ccffcc;
-   padding-left: 5px;
-}
+      #container1 {
+        z-index: 1;
+        position: absolute;
+        top: 30px;
+        left: 75px;
+      }
 
-#container1 {
-   z-index: 1;
-   position: absolute;
-   top: 30px;
-   left: 75px;
-}
+      div.lev2 {
+        opacity: 0.9;
+        width: 200px;
+        height: 60px;
+        position: relative;
+        border: 2px outset #990000;
+        background-color: #ffdddd;
+        padding-left: 5px;
+      }
 
-div.lev2 {
-   opacity: 0.9;
-   width: 200px;
-   height: 60px;
-   position: relative;
-   border: 2px outset #990000;
-   background-color: #ffdddd;
-   padding-left: 5px;
-}
+      #container2 {
+        z-index: 1;
+        position: absolute;
+        top: 20px;
+        left: 110px;
+      }
 
-#container2 {
-   z-index: 1;
-   position: absolute;
-   top: 20px;
-   left: 110px;
-}
+      div.lev3 {
+        z-index: 10;
+        width: 100px;
+        position: relative;
+        border: 2px outset #000099;
+        background-color: #ddddff;
+        padding-left: 5px;
+      }
+    </style>
+  </head>
 
-div.lev3 {
-   z-index: 10;
-   width: 100px;
-   position: relative;
-   border: 2px outset #000099;
-   background-color: #ddddff;
-   padding-left: 5px;
-}
+  <body>
+    <br />
 
-</style></head>
+    <div class="lev1">
+      <span class="bold">LEVEL #1</span>
 
-<body>
+      <div id="container1">
+        <div class="lev2">
+          <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
 
-<br />
-
-<div class="lev1">
-<span class="bold">LEVEL #1</span>
-
-   <div id="container1">
-
-      <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span>
-      <br />z-index: 1;
-
-         <div id="container2">
-
+          <div id="container2">
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
@@ -124,32 +122,28 @@ div.lev3 {
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
             <div class="lev3"><span class="bold">LEVEL #3</span></div>
+          </div>
+        </div>
 
-         </div>
-
+        <div class="lev2">
+          <br /><span class="bold">LEVEL #2</span> <br />z-index: 1;
+        </div>
       </div>
+    </div>
 
-      <div class="lev2">
-      <br /><span class="bold">LEVEL #2</span>
-      <br />z-index: 1;
-      </div>
+    <div class="lev1">
+      <span class="bold">LEVEL #1</span>
+    </div>
 
-   </div>
-</div>
+    <div class="lev1">
+      <span class="bold">LEVEL #1</span>
+    </div>
 
-<div class="lev1">
-<span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-<span class="bold">LEVEL #1</span>
-</div>
-
-<div class="lev1">
-<span class="bold">LEVEL #1</span>
-</div>
-
-</body></html>
+    <div class="lev1">
+      <span class="bold">LEVEL #1</span>
+    </div>
+  </body>
+</html>
 ```
 
 {{EmbedLiveSample('', '320', '330')}}

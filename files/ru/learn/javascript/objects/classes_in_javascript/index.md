@@ -1,12 +1,6 @@
 ---
 title: Наследование в JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - JavaScript
-  - Наследование
-  - ООП
-translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
@@ -31,19 +25,19 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
   this.interests = interests;
-};
+}
 ```
 
 _Все_ методы определены в прототипе конструктора. Например:
 
 ```js
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
+Person.prototype.greeting = function () {
+  alert("Hi! I'm " + this.name.first + ".");
 };
 ```
 
@@ -66,7 +60,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 }
 ```
 
-Это похоже на конструктор Person во многих отношениях, но здесь есть что-то странное, что мы не видели раньше - функцию [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Эта функция в основном позволяет вам вызывать функцию, определённую где-то в другом месте, но в текущем контексте. Первый параметр указывает значение [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), которое вы хотите использовать при выполнении функции, а остальные параметры - те, которые должны быть переданы функции при её вызове.
+Это похоже на конструктор Person во многих отношениях, но здесь есть что-то странное, что мы не видели раньше - функцию [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Эта функция в основном позволяет вам вызывать функцию, определённую где-то в другом месте, но в текущем контексте. Первый параметр указывает значение [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this), которое вы хотите использовать при выполнении функции, а остальные параметры - те, которые должны быть переданы функции при её вызове.
 
 Мы хотим, чтобы конструктор `Teacher()` принимал те же параметры, что и конструктор `Person()`, от которого он наследуется, поэтому мы указываем их как параметры в вызове `call()`.
 
@@ -78,7 +72,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
@@ -107,7 +101,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -119,21 +113,21 @@ function BlueGlassBrick() {
 
 1. Добавьте следующую строку ниже своего предыдущего добавления:
 
-    ```js
-    Teacher.prototype = Object.create(Person.prototype);
-    ```
+   ```js
+   Teacher.prototype = Object.create(Person.prototype);
+   ```
 
-    Здесь наш друг [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) снова приходит на помощь. В этом случае мы используем его для создания нового объекта и делаем его значением `Teacher.prototype`. Новый объект имеет свой прототип `Person.prototype` и, следовательно, наследует, если и когда это необходимо, все доступные методы `Person.prototype`.
+   Здесь наш друг [`create()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create) снова приходит на помощь. В этом случае мы используем его для создания нового объекта и делаем его значением `Teacher.prototype`. Новый объект имеет свой прототип `Person.prototype` и, следовательно, наследует, если и когда это необходимо, все доступные методы `Person.prototype`.
 
 2. Нам нужно сделать ещё одну вещь, прежде чем двигаться дальше. После добавления последней строки, `Teacher.prototype.constructor` стало равным `Person()`, потому что мы просто устанавливаем `Teacher.prototype` для ссылки на объект, который наследует его свойства от `Person.prototype`! Попробуйте сохранить код, загрузите страницу в браузере и введите `Teacher.prototype.constructor` в консоль для проверки.
 3. Это может стать проблемой, поэтому нам нужно сделать это правильно. Вы можете сделать это, вернувшись к исходному коду и добавив следующие строки внизу:
 
-    ```
-    Object.defineProperty(Teacher.prototype, 'constructor', {
-        value: Teacher,
-        enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
-        writable: true });
-    ```
+   ```
+   Object.defineProperty(Teacher.prototype, 'constructor', {
+       value: Teacher,
+       enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
+       writable: true });
+   ```
 
 4. Теперь, если вы сохраните и обновите, введите `Teacher.prototype.constructor`, чтобы вернуть `Teacher()`, плюс мы теперь наследуем `Person()`!
 
@@ -144,18 +138,36 @@ function BlueGlassBrick() {
 Самый простой способ сделать это - определить его на прототипе `Teacher()` - добавить в нижнюю часть кода следующее:
 
 ```js
-Teacher.prototype.greeting = function() {
+Teacher.prototype.greeting = function () {
   var prefix;
 
-  if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-    prefix = 'Mr.';
-  } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
-    prefix = 'Mrs.';
+  if (
+    this.gender === "male" ||
+    this.gender === "Male" ||
+    this.gender === "m" ||
+    this.gender === "M"
+  ) {
+    prefix = "Mr.";
+  } else if (
+    this.gender === "female" ||
+    this.gender === "Female" ||
+    this.gender === "f" ||
+    this.gender === "F"
+  ) {
+    prefix = "Mrs.";
   } else {
-    prefix = 'Mx.';
+    prefix = "Mx.";
   }
 
-  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+  alert(
+    "Hello. My name is " +
+      prefix +
+      " " +
+      this.name.last +
+      ", and I teach " +
+      this.subject +
+      ".",
+  );
 };
 ```
 
@@ -166,7 +178,14 @@ Teacher.prototype.greeting = function() {
 Теперь, когда вы ввели весь код, попробуйте создать экземпляр объекта из `Teacher()`, поставив ниже вашего JavaScript-кода (или что-то похожее по вашему выбору):
 
 ```js
-var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var teacher1 = new Teacher(
+  "Dave",
+  "Griffiths",
+  31,
+  "male",
+  ["football", "cookery"],
+  "mathematics",
+);
 ```
 
 Теперь сохраните, обновите, и попробуйте получить доступ к свойствам и методам вашего нового объекта `teacher1`, например:
@@ -201,7 +220,7 @@ teacher1.farewell();
 Подводя итог, вы в основном получили три типа свойств / методов, о которых нужно беспокоиться:
 
 1. Те, которые определены внутри функции-конструктора, которые присваиваются экземплярам объекта. Их довольно легко заметить - в вашем собственном коде они представляют собой элементы, определённые внутри конструктора, используя строки `this.x = x`; в встроенном коде браузера они являются членами, доступными только для экземпляров объектов (обычно создаются путём вызова конструктора с использованием ключевого слова `new`, например `var myInstance = new myConstructor ()`.
-2. Те, которые определяются непосредственно самим конструктором, которые доступны только для конструктора. Они обычно доступны только для встроенных объектов браузера и распознаются путём непосредственной привязки к конструктору, а не к экземпляру. Например, [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+2. Те, которые определяются непосредственно самим конструктором, которые доступны только для конструктора. Они обычно доступны только для встроенных объектов браузера и распознаются путём непосредственной привязки к конструктору, а не к экземпляру. Например, [`Object.keys()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
 3. Те, которые определены в прототипе конструктора, которые наследуются всеми экземплярами и наследуют классы объектов. К ним относятся любой член, определённый в свойстве прототипа конструктора, например. `myConstructor.prototype.x()`.
 
 Если вы не уверены, что это такое, не беспокойтесь об этом, пока вы ещё учитесь и знание придёт с практикой.

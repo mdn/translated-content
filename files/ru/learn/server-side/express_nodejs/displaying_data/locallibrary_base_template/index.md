@@ -1,14 +1,13 @@
 ---
 title: Базовый шаблон LocalLibrary
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
 
 Теперь, чтобы мы понимали как расширить шаблон с помощью Pug, давайте создадим базовый шаблон для проекта. У него будет боковая панель (sidebar)) со ссылками на страницы, которые мы надеемся создать на протяжении учебника (например, для отображения и создания книг, жанров, автор и т. д.) и основная область контента, которую мы переопределим на каждой из отдельных страниц.
 
 Откройте файл **/views/layout.pug** и замените его содержимое следующим.
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -58,9 +57,9 @@ html(lang='en')
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

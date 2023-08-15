@@ -18,15 +18,15 @@ slug: Web/JavaScript/Reference/Functions/arguments
 `arguments`对象是所有（非箭头）函数中都可用的**局部变量**。你可以使用`arguments`对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引 0 处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 参数也可以被设置：
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments`对象不是一个 {{jsxref("Array")}} 。它类似于`Array`，但除了 length 属性和索引元素之外没有任何`Array`属性。例如，它没有 [pop](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法。但是它可以被转换为一个真正的`Array`：
@@ -43,7 +43,8 @@ const args = [...arguments];
 > **警告：** 对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - [更多信息](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments))。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的`Array`构造函数作为一个函数：
 >
 > ```js
-> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> var args =
+>   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
 如果调用的参数多于正式声明接受的参数，则可以使用`arguments`对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 [`arguments.length`](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)来确定传递给函数参数的个数，然后使用`arguments`对象来处理每个参数。要确定函数[签名](/zh-CN/docs/Glossary/Signature/Function)中（输入）参数的数量，请使用[`Function.length`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)属性。
@@ -53,12 +54,12 @@ const args = [...arguments];
 typeof 参数返回 'object'。
 
 ```js
-console.log(typeof arguments);    // 'object'
+console.log(typeof arguments); // 'object'
 // arguments 对象只能在函数内使用
-function test(a){
-    console.log(a,Object.prototype.toString.call(arguments));
-    console.log(arguments[0],arguments[1]);
-    console.log(typeof arguments[0]);
+function test(a) {
+  console.log(a, Object.prototype.toString.call(arguments));
+  console.log(arguments[0], arguments[1]);
+  console.log(typeof arguments[0]);
 }
 test(1);
 /*
@@ -98,16 +99,16 @@ var args = [...arguments];
 
 ```js
 function add() {
-    var sum =0,
-        len = arguments.length;
-    for(var i=0; i<len; i++){
-        sum += arguments[i];
-    }
-    return sum;
+  var sum = 0,
+    len = arguments.length;
+  for (var i = 0; i < len; i++) {
+    sum += arguments[i];
+  }
+  return sum;
 }
-add()                           // 0
-add(1)                          // 1
-add(1,2,3,4);                   // 10
+add(); // 0
+add(1); // 1
+add(1, 2, 3, 4); // 10
 ```
 
 ### 定义连接字符串的函数
@@ -169,7 +170,7 @@ var listHTML = list("u", "One", "Two", "Three");
 function foo(...args) {
   return args;
 }
-foo(1, 2, 3);  // [1,2,3]
+foo(1, 2, 3); // [1,2,3]
 ```
 
 在严格模式下，[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)参数的存在不会改变 `arguments`对象的行为，但是在非严格模式下就有所不同了。
@@ -178,7 +179,7 @@ foo(1, 2, 3);  // [1,2,3]
 
 ```js
 function func(a) {
-  arguments[0] = 99;   // 更新了 arguments[0] 同样更新了 a
+  arguments[0] = 99; // 更新了 arguments[0] 同样更新了 a
   console.log(a);
 }
 func(10); // 99
@@ -188,7 +189,7 @@ func(10); // 99
 
 ```js
 function func(a) {
-  a = 99;              // 更新了 a 同样更新了 arguments[0]
+  a = 99; // 更新了 a 同样更新了 arguments[0]
   console.log(arguments[0]);
 }
 func(10); // 99

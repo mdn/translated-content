@@ -2,6 +2,7 @@
 title: 단축 속성
 slug: Web/CSS/Shorthand_properties
 ---
+
 {{cssref}}
 
 **단축 속성**은 서로 다른 여러 가지 CSS 속성의 값을 지정할 수 있는 CSS 속성입니다. 단축 속성을 사용하면 간결한 (그리고 읽기도 좋은) 스타일 시트를 작성해 시간과 체력을 아낄 수 있습니다.
@@ -14,31 +15,31 @@ CSS 명세는 같은 주제를 가진 여러 공통 속성을 묶기 위해 단�
 
 1. 단축 속성에 지정하지 않은 값은 초깃값이 됩니다. 별거 아닌 듯 보일 수 있지만, 사실 이전에 정의한 값도 초깃값으로 **재정의**합니다. 따라서,
 
-    ```css
-    background-color: red;
-    background: url(images/bg.gif) no-repeat top right;
-    ```
+   ```css
+   background-color: red;
+   background: url(images/bg.gif) no-repeat top right;
+   ```
 
-    을 적한 요소의 배경 색은 `red`가 아니라, {{cssxref("background-color")}}의 기본값인 `transparent`가 됩니다. 두 번째 규칙이 우선하기 때문입니다.
+   을 적한 요소의 배경 색은 `red`가 아니라, {{cssxref("background-color")}}의 기본값인 `transparent`가 됩니다. 두 번째 규칙이 우선하기 때문입니다.
 
 2. 개별 속성값만 상속할 수 있습니다. 빠진 값에는 초깃값을 대입하므로, 어떤 속성의 값을 상속받고자 단축 속성의 해당 부분을 비우는 것은 불가능합니다. `inherit` 키워드 역시 속성 값으로 온전히 사용해야 하며 값의 일부(`red inherit top right`처럼)로는 사용할 수 없습니다. 따라서 어떤 속성을 상속하고 싶다면 `inherit`을 지정한 본디 속성(longhand property)을 추가할 수밖에 없습니다.
 3. 단축 속성은 값의 순서를 되도록 제한하지 않습니다. 특히 각 값의 자료형이 서로 다르면 순서가 중요하지 않습니다. 하지만 일부 속성이 동일한 자료형의 값을 가질 수 있을 때는 잘 동작하지 않습니다. 이런 경우의 처리는 여러 범주로 나뉩니다:
 
-    1. {{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}처럼 박스의 모서리와 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 모서리를 가리키는 1\~4 값 구문을 사용합니다:
+   1. {{cssxref("border-style")}}, {{cssxref("margin")}}, {{cssxref("padding")}}처럼 박스의 모서리와 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 모서리를 가리키는 1\~4 값 구문을 사용합니다:
 
-        | ![border1.png](/files/3646/border1.png) | 1개 값 구문: `border-width: 1em` — 유일한 값이 모든 변을 나타냅니다.                                                                                     |
-        | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![border2.png](/files/3647/border2.png) | 2개 값 구문: `border-width: 1em 2em` — 첫 번째 값은 세로(상하)변을, 두 번째는 가로(좌우)변을 나타냅니다.                                                 |
-        | ![border3.png](/files/3648/border3.png) | 3개 값 구문: `border-width: 1em 2em 3em` — 첫 번째 값은 상변을, 두 번째는 가로변, 세 번째는 하변을 나타냅니다.                                           |
-        | ![border4.png](/files/3649/border4.png) | 4개 값 구문: `border-width: 1em 2em 3em 4em` — 네 값이 각각 상, 우, 하, 좌변을 나타냅니다. 상변에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
+      | ![border1.png](/files/3646/border1.png) | 1개 값 구문: `border-width: 1em` — 유일한 값이 모든 변을 나타냅니다.                                                                                     |
+      | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![border2.png](/files/3647/border2.png) | 2개 값 구문: `border-width: 1em 2em` — 첫 번째 값은 세로(상하)변을, 두 번째는 가로(좌우)변을 나타냅니다.                                                 |
+      | ![border3.png](/files/3648/border3.png) | 3개 값 구문: `border-width: 1em 2em 3em` — 첫 번째 값은 상변을, 두 번째는 가로변, 세 번째는 하변을 나타냅니다.                                           |
+      | ![border4.png](/files/3649/border4.png) | 4개 값 구문: `border-width: 1em 2em 3em 4em` — 네 값이 각각 상, 우, 하, 좌변을 나타냅니다. 상변에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
 
-    2. 비슷하게, {{cssxref("border-radius")}} 같은 박스의 꼭짓점과 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 꼭짓점을 가리키는 1-4-값 구문을 사용합니다:
+   2. 비슷하게, {{cssxref("border-radius")}} 같은 박스의 꼭짓점과 관련된 속성을 다루는 단축 속성은 항상 같은 쪽의 꼭짓점을 가리키는 1-4-값 구문을 사용합니다:
 
-        | ![corner1.png](/files/3650/corner1.png) | 1개 값 구문: `border-radius: 1em` — 유일한 값이 모든 귀를 나타냅니다.                                                                                                 |
-        | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | ![corner2.png](/files/3651/corner2.png) | 2개 값 구문: `border-radius: 1em 2em` — 첫 번째 값은 좌상 및 우하귀, 두 번째는 우상 및 좌하귀를 나타냅니다.                                                           |
-        | ![corner3.png](/files/3652/corner3.png) | 3개 값 구문: `border-radius: 1em 2em 3em` — 첫 번째 값은 좌상귀, 두 번째는 우상 및 좌하귀, 세 번째 값은 우하귀를 나타냅니다.                                          |
-        | ![corner4.png](/files/3653/corner4.png) | 4개 값 구문: `border-radius: 1em 2em 3em 4em` — 네 값은 각각 좌상, 우상, 우하 및 좌하귀를 나타냅니다. 좌상귀에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
+      | ![corner1.png](/files/3650/corner1.png) | 1개 값 구문: `border-radius: 1em` — 유일한 값이 모든 귀를 나타냅니다.                                                                                                 |
+      | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ![corner2.png](/files/3651/corner2.png) | 2개 값 구문: `border-radius: 1em 2em` — 첫 번째 값은 좌상 및 우하귀, 두 번째는 우상 및 좌하귀를 나타냅니다.                                                           |
+      | ![corner3.png](/files/3652/corner3.png) | 3개 값 구문: `border-radius: 1em 2em 3em` — 첫 번째 값은 좌상귀, 두 번째는 우상 및 좌하귀, 세 번째 값은 우하귀를 나타냅니다.                                          |
+      | ![corner4.png](/files/3653/corner4.png) | 4개 값 구문: `border-radius: 1em 2em 3em 4em` — 네 값은 각각 좌상, 우상, 우하 및 좌하귀를 나타냅니다. 좌상귀에서 시작하여 시계 방향으로, 항상 같은 순서를 사용합니다. |
 
 ## 배경 속성
 
@@ -68,7 +69,7 @@ background: #000 url(images/bg.gif) no-repeat top right;
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
@@ -76,7 +77,9 @@ font-family: Arial, sans-serif;
 다음처럼 단축할 수 있습니다.
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 이 단축 선언은 실제로 `font-variant: normal` 및 `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3)이 더해진 위 본디 속성과 같습니다.

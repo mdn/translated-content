@@ -17,8 +17,8 @@ Status
 
 ## Especificações
 
-| Specification                                                            | Title                                                         |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                          | Title                                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

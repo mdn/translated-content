@@ -25,7 +25,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 让我们简单回顾一下[上一章节的 HTML 文档](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#剖析html文档)：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -60,11 +60,11 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 1. 为了开始这个练习，我们希望你到我们的 GitHub 库中下载一份 [title-example.html 网页](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html)副本。要做到这一点，你可以选择下面两种操作之一：
 
    1. 使用你的代码编辑器，从页面中拷贝粘贴代码到一个新的文本文件中，然后将其保存到一个适当的地方。
-   2. 按下 GitHub 页面中的“Raw”按钮（可能会在浏览器新标签中显示源代码），从浏览器的菜单中选择 *另存为...*，然后选择一个地方来保存这个文件。
+   2. 按下 GitHub 页面中的“Raw”按钮（可能会在浏览器新标签中显示源代码），从浏览器的菜单中选择 _另存为..._，然后选择一个地方来保存这个文件。
 
 2. 在浏览器中打开文件，你会看到类似这样效果：
 
-   ![一个简单的 web 页面，在 \<title> 元素上设置了文档标题，在 \<h1> 元素上设置了页面标题](title-example.png)
+   ![一个简单的 web 页面，在 'title' 元素上设置了文档标题，在 'h1' 元素上设置了页面标题](title-example.png)
 
    现在很明显的可以看到 `<h1>` 和 `<title>` 出现的地方！
 
@@ -72,7 +72,7 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 
 `<title>` 元素也被以其他的方式使用着。比如说，如果你尝试为某个页面添加书签（在 Firefox 浏览器中，点击*书签 > 将当前标签页添加到书签*，或点击地址栏末尾的星标），你会看到 `<title>` 的内容被作为建议的书签名。
 
-![在 Firefox 浏览器中，一个网页被添加了书签；书签的名称已经自动填入了 \<title> 元素的内容。](bookmark-example.png)
+![在 Firefox 浏览器中，一个网页被添加了书签；书签的名称已经自动填入了 'title' 元素的内容。](bookmark-example.png)
 
 正如你即将在下面看到的那样，`<title>` 元素的内容也被用在搜索的结果中。
 
@@ -147,7 +147,7 @@ description 也被使用在搜索引擎显示的结果页中。下面通过一�
 
 4. 现在，在你喜欢的搜索引擎里搜索“MDN Web Docs”（下图展示的是在谷歌搜索里的情况）。你会看到 description `<meta>` 和 `<title>` 元素如何在搜索结果里显示——很值得这样做哦！
 
-    ![“MDN Web Docs”的搜索结果](mdn-search-result.png)
+   ![“MDN Web Docs”的搜索结果](mdn-search-result.png)
 
 > **备注：** 在谷歌搜索里，在主页面链接下面，你将看到一些相关子页面——这些是站点链接，可以在 [Google's webmaster tools](https://search.google.com/search-console/about) 配置——这是一种可以使你的站点对搜索引擎更友好的方式。
 

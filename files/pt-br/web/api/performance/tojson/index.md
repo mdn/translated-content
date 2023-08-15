@@ -32,10 +32,8 @@ console.log("json = " + JSON.stringify(js));
 
 ## Especificações
 
-| Specification                                                                                                            | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON() serializer')}} | {{Spec2('Highres Time Level 2')}} | Define `toJson()`. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Performance.toJSON")}}
+{{Compat}}

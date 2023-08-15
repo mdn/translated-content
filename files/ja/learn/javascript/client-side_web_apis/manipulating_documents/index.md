@@ -47,7 +47,7 @@ l10n:
 [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) にちょっとした例を作成しました（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)もどうぞ）。ブラウザーから開いてみてください。これはとても簡素なページで、{{htmlelement("section")}} 要素の中に画像が一つと、一つのリンクを含む一つの段落があります。HTML のソースはこんな感じです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -94,19 +94,19 @@ DOM 操作の学習を始めるにあたり、まずは実践的な例から始�
 3. DOM の中の要素を操作するため、まず DOM を選びだしてこれへの参照を変数に保存する必要があります。script 要素の中に、次の行を追加して下さい。
 
    ```js
-   const link = document.querySelector('a');
+   const link = document.querySelector("a");
    ```
 
 4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェース、さらにその汎化した親のインターフェース {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
 
    ```js
-   link.textContent = 'Mozilla Developer Network';
+   link.textContent = "Mozilla Developer Network";
    ```
 
 5. クリックされたときに間違った場所に行かないよう、リンクが指す先の URL も変えておくべきでしょう。また下に、以下の行を追加して下さい。
 
    ```js
-   link.href = 'https://developer.mozilla.org';
+   link.href = "https://developer.mozilla.org";
    ```
 
 JavaScript でよくあることですが、要素を選択し、その参照を変数に格納する方法はたくさんあることに注意してください。{{domxref("Document.querySelector()")}} は、現代の手法として推奨されています。CSS のセレクターを使用して要素を選択することができるので便利です。上記の `querySelector()` 呼び出しは、文書内に最初に現れる {{htmlelement("a")}} 要素を選択します。もし、複数の要素を選択して何かをしたいのであれば、 {{domxref("Document.querySelectorAll()")}} を使用することができます。これはセレクターに一致する文書内のすべての要素を選択し、それらへの参照を[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)風のオブジェクトである {{domxref("NodeList")}} に格納します。
@@ -125,14 +125,14 @@ JavaScript でよくあることですが、要素を選択し、その参照を
 1. 現在のの例題に戻って、 {{htmlelement("section")}} 要素を掴むところから始めましょう。すでに書いてあるスクリプトの下に次のコードを追加して下さい（この先の他の行についても、同じようにしてください）。
 
    ```js
-   const sect = document.querySelector('section');
+   const sect = document.querySelector("section");
    ```
 
 2. {{domxref("Document.createElement()")}} を使って新しい段落を作成し、先ほどと同じようにテキストコンテンツを与えてみましょう。
 
    ```js
-   const para = document.createElement('p');
-   para.textContent = 'We hope you enjoyed the ride.';
+   const para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
    ```
 
 3. この新しい段落は、セクションの最後に {{domxref("Node.appendChild()")}} を使って追加することができます。
@@ -144,13 +144,15 @@ JavaScript でよくあることですが、要素を選択し、その参照を
 4. 最後に、この部分のために、リンクがある段落にテキストノードを追加して、文章をきれいにまとめましょう。まず、 {{domxref("Document.createTextNode()")}}を使って、テキストノードを作成します。
 
    ```js
-   const text = document.createTextNode(' — the premier source for web development knowledge.');
+   const text = document.createTextNode(
+     " — the premier source for web development knowledge.",
+   );
    ```
 
 5. ここで、リンクが含まれている段落への参照を取得し、そこにテキストノードを追加します。
 
    ```js
-   const linkPara = document.querySelector('p');
+   const linkPara = document.querySelector("p");
    linkPara.appendChild(text);
    ```
 
@@ -199,11 +201,11 @@ linkPara.parentNode.removeChild(linkPara);
 1. 例として、作成中の例題に以下の行を追加してみて下さい。
 
    ```js
-   para.style.color = 'white';
-   para.style.backgroundColor = 'black';
-   para.style.padding = '10px';
-   para.style.width = '250px';
-   para.style.textAlign = 'center';
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
    ```
 
 2. ページを再読み込みすると、スタイルがその段落に適用されていることがわかります。その段落をブラウザーの[ページインスペクター/DOM インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)で見てみると、これらの行が確かに文書内のスタイルを追加していることがわかります。
@@ -237,7 +239,7 @@ linkPara.parentNode.removeChild(linkPara);
 3. 次に、一般的な HTML 操作に有用なメソッドである {{domxref("Element.setAttribute()")}} を紹介します。これは 2 つの引数、要素に設定したい属性、および設定する値を使用します。この例では、段落に highlight というクラス名を設定します。
 
    ```js
-   para.setAttribute('class', 'highlight');
+   para.setAttribute("class", "highlight");
    ```
 
 4. ページを更新すると、何も変化がないことがわかります。CSS は引き続き段落に適用されていますが、今回はインライン CSS スタイルではなく、CSS ルールによって選択されたクラスが与えられています。

@@ -1,12 +1,6 @@
 ---
 title: Être ou ne pas être dans le flux
 slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-original_slug: Web/CSS/CSS_Flow_Layout/Dans_le_flux_ou_en_dehors
 ---
 
 {{CSSRef}}

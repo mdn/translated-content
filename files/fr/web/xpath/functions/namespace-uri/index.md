@@ -1,10 +1,6 @@
 ---
 title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/namespace-uri
-original_slug: Web/XPath/Fonctions/namespace-uri
 ---
 
 {{ XsltRef() }}

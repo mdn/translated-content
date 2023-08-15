@@ -1,7 +1,6 @@
 ---
 title: Mutável
 slug: Glossary/Mutable
-original_slug: Glossario/Mutavel
 ---
 
 _Mutável_ é o tipo da variável que pode ser alterada. Em {{glossary("JavaScript")}}, somente {{Glossary("Object","objetos")}} e {{Glossary("Array","arrays")}} são mutáveis, {{Glossary("primitive", "valores primitivos")}} não.

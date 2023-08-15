@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type()'
+title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
 ---
 
@@ -46,7 +46,7 @@ Veja {{Cssxref(":nth-child")}} para uma explicação mais detalhada de sua sinta
 
 ```css
 /* Parágrafos ímpares */
-p:nth-of-type(2n+1) {
+p:nth-of-type(2n + 1) {
   color: red;
 }
 
@@ -67,8 +67,8 @@ p:nth-of-type(1) {
 
 ## Especificações
 
-| Especificação                                                                                | Sitação                              | Comentário                                                       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------------------------------------------------- |
+| Especificação                                                         | Sitação                     | Comentário                                                       |
+| --------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Não é necessário que os elementos correspondentes tenham um pai. |
 | {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial.                                               |
 

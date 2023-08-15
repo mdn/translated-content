@@ -1,14 +1,8 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Experimental
-  - Layoout
-  - Reference
-  - Псевдоэлементы
-translation_of: Web/CSS/::selection
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::selection`** позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).
@@ -38,7 +32,8 @@ translation_of: Web/CSS/::selection
 
 ```css
 /* синтаксис Firefox */
-::-moz-selection
+::-moz-selection {
+}
 ```
 
 {{csssyntax}}
@@ -84,8 +79,8 @@ p::selection {
 
 ## Спецификации
 
-| Спецификация                                                                                             | Статус                                       | Комментарий              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------ |
+| Спецификация                                                                  | Статус                            | Комментарий              |
+| ----------------------------------------------------------------------------- | --------------------------------- | ------------------------ |
 | {{SpecName('CSS4 Pseudo-Elements', '#selectordef-selection', '::selection')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Изначальное определение. |
 
 > **Примечание:** Хотя псевдоэлемент `::selection` присутствовал в черновиках стандарта CSS Selectors Level 3, он был убран в течение фазы Candidate Recommendation, так как его поведение было недостаточно проработано (особенно с вложенным элементами) и согласованность не была достигнута [(основываясь на обсуждении в списке рассылки W3C Style)](http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html). Этот псевдоэлемент был возвращён в [Pseudo-Elements Level 4](http://dev.w3.org/csswg/css-pseudo-4/).

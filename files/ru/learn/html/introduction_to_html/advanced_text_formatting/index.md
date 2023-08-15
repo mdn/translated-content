@@ -1,14 +1,6 @@
 ---
 title: Продвинутое форматирование текста
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Начинающий
-  - Руководство
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
@@ -41,11 +33,21 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 ```html
 <dl>
   <dt>Солилоквий</dt>
-  <dd>Драматическая речь, в которой персонаж разговаривает сам с собой, передавая свои ощущения и мысли публике (но не другим персонажам).</dd>
+  <dd>
+    Драматическая речь, в которой персонаж разговаривает сам с собой, передавая
+    свои ощущения и мысли публике (но не другим персонажам).
+  </dd>
   <dt>Монолог</dt>
-  <dd>Драматическая речь, в которой персонаж передаёт свои мысли публике и некоторым персонажам.</dd>
+  <dd>
+    Драматическая речь, в которой персонаж передаёт свои мысли публике и
+    некоторым персонажам.
+  </dd>
   <dt>Ремарка</dt>
-  <dd>В драме: речь персонажа, при которой делается замечание с юмористическим или драматическим эффектом; чаще всего это чувства, мысли или предпосылки к чему-либо.</dd>
+  <dd>
+    В драме: речь персонажа, при которой делается замечание с юмористическим или
+    драматическим эффектом; чаще всего это чувства, мысли или предпосылки к
+    чему-либо.
+  </dd>
 </dl>
 ```
 
@@ -75,11 +77,12 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 Бекон
@@ -88,11 +91,12 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 Скрепляют пироги вокруг.
 Кофе
 Рычаг, движущий планетами.
-Светло-коричневого цвета.</textarea>
+Светло-коричневого цвета.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -119,10 +123,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -130,38 +134,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<dl>\n <dt>Бекон</dt>\n <dd>Скрепляет мир вокруг.</dd>\n <dt>Яйца</dt>\n <dd>Скрепляют пироги вокруг.</dd>\n <dt>Кофе</dt>\n <dd>Рычаг, движущий планетами.</dd>\n <dd>Светло-коричневого цвета.</dd>\n</dl>';
+var htmlSolution =
+  "<dl>\n <dt>Бекон</dt>\n <dd>Скрепляет мир вокруг.</dd>\n <dt>Яйца</dt>\n <dd>Скрепляют пироги вокруг.</dd>\n <dt>Кофе</dt>\n <dd>Рычаг, движущий планетами.</dd>\n <dd>Светло-коричневого цвета.</dd>\n</dl>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -173,8 +178,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -185,10 +193,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -211,15 +219,23 @@ HTML также имеет функции, доступные для марки�
 Например, следующая разметка берётся из страницы элемента MDN **`<blockquote>`**:
 
 ```html
-<p><strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ. <em>HTML Block
-Quotation Element</em>) указывает на то, что заключённый в нём текст является развёрнутой цитатой.</p>
+<p>
+  <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+  <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в нём
+  текст является развёрнутой цитатой.
+</p>
 ```
 
 Чтобы превратить её в блочную цитату, мы просто делаем следующее:
 
 ```html
-<blockquote cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
-  <p><strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ. <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в нём текст является развёрнутой цитатой.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
+  <p>
+    <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+    <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в
+    нём текст является развёрнутой цитатой.
+  </p>
 </blockquote>
 ```
 
@@ -232,8 +248,12 @@ Quotation Element</em>) указывает на то, что заключённ�
 Строчные цитаты работают точно так же, за исключением того, что они используют элемент {{htmlelement ("q")}}. Например, следующий кусочек разметки содержит цитату из страницы `<q>` MDN:
 
 ```html
-<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">предназначен
-для коротких цитат, не требующих прерывания абзаца</q>.</p>
+<p>
+  Элемент цитирования — <code>&lt;q&gt;</code> —
+  <q cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q"
+    >предназначен для коротких цитат, не требующих прерывания абзаца</q
+  >.
+</p>
 ```
 
 Стиль браузера по умолчанию будет отображать это как обычный текст, заключённый в кавычки для обозначения цитаты, например:
@@ -245,18 +265,31 @@ Quotation Element</em>) указывает на то, что заключённ�
 Содержание атрибута [`cite`](/ru/docs/Web/HTML/Element/blockquote#cite) выглядит полезным, но, к сожалению, браузерам, программам чтения с экрана и т. д. оно на самом деле мало чем помогает. Невозможно заставить браузер отображать содержимое атрибута `cite` без написания собственного решения с использованием JavaScript или CSS. Если вы хотите, чтобы источник цитирования был доступен на странице, лучший способ его разметки - поместить элемент {{htmlelement ("cite")}} рядом с элементом цитаты (или внутри него). Это действительно будет означать то, что имя источника цитаты — то есть имя книги или имя человека, которое произвело цитату, — будет включено в текст. Нет причин, по которым вы не могли бы связать текст внутри `<cite>` с источником цитаты:
 
 ```html
-<p>Как указано в статье о <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
-<cite>блочных цитатах</cite></a>:
+<p>
+  Как указано в статье о
+  <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
+    <cite>блочных цитатах</cite></a
+  >:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p><strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ. <em>HTML Block
-  Quotation Element</em>) указывает на то, что заключённый в нем текст является развёрнутой цитатой.</p>
+<blockquote
+  cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
+  <p>
+    <strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ.
+    <em>HTML Block Quotation Element</em>) указывает на то, что заключённый в
+    нем текст является развёрнутой цитатой.
+  </p>
 </blockquote>
 
-<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">предназначен
-для коротких цитат, не требующих прерывания абзаца</q>. -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
-<cite>Строчные цитаты</cite></a>.</p>
+<p>
+  Элемент цитирования — <code>&lt;q&gt;</code> —
+  <q cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q"
+    >предназначен для коротких цитат, не требующих прерывания абзаца</q
+  >. --
+  <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q">
+    <cite>Строчные цитаты</cite></a
+  >.
+</p>
 ```
 
 По умолчанию цитаты стилизованы курсивом. Этот код можно увидеть в нашем примере [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html)
@@ -279,11 +312,12 @@ Quotation Element</em>) указывает на то, что заключённ�
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
 <p>Здравствуйте и добро пожаловать на мою страницу мотивации! Конфуций как-то сказал:</p>
@@ -292,8 +326,8 @@ Quotation Element</em>) указывает на то, что заключённ�
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -320,10 +354,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -331,38 +365,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>Здравствуйте и добро пожаловать на мою страницу мотивации! <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Конфуций</cite></a> как-то сказал:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>Не важно, с какой скоростью ты движешься к своей цели, — главное не останавливаться.</p>\n</blockquote>\n\n<p>Мне также нравится концепция позитивного мышления, и я считаю, каждый ощущает <q cite="http://www.affirmationsforpositivethinking.com/index.htm">Необходимость избавления от негативного внутреннего разговора</q> (как сказано в зарубежной статье <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+var htmlSolution =
+  '<p>Здравствуйте и добро пожаловать на мою страницу мотивации! <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Конфуций</cite></a> как-то сказал:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n <p>Не важно, с какой скоростью ты движешься к своей цели, — главное не останавливаться.</p>\n</blockquote>\n\n<p>Мне также нравится концепция позитивного мышления, и я считаю, каждый ощущает <q cite="http://www.affirmationsforpositivethinking.com/index.htm">Необходимость избавления от негативного внутреннего разговора</q> (как сказано в зарубежной статье <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -374,8 +409,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -386,10 +424,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -428,19 +466,20 @@ textarea.onkeyup = function(){
 ```html hidden
 <h2>Результат</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Редактируемый код</h2>
-<p class="a11y-label">Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).</p>
+<p class="a11y-label">
+  Нажмите Esc, чтобы выйти из поля ввода (Tab вставляет символ табуляции).
+</p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
 <p>Безусловно, NASA занимается классными вещами.</p>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Сбросить">
-  <input id="solution" type="button" value="Показать решение">
+  <input id="reset" type="button" value="Сбросить" />
+  <input id="solution" type="button" value="Показать решение" />
 </div>
 ```
 
@@ -467,10 +506,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -478,38 +517,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Показать решение';
+  solution.value = "Показать решение";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Показать решение') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Показать решение") {
     textarea.value = solutionEntry;
-    solution.value = 'Спрятать решение';
+    solution.value = "Спрятать решение";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Показать решение';
+    solution.value = "Показать решение";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>Безусловно, <abbr title="National Aeronautics and Space Administration">NASA</abbr> занимается классными вещами.</p>';
+var htmlSolution =
+  '<p>Безусловно, <abbr title="National Aeronautics and Space Administration">NASA</abbr> занимается классными вещами.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -521,8 +561,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -533,10 +576,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Показать решение') {
+  if (solution.value === "Показать решение") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -574,7 +617,10 @@ HTML имеет элемент для разметки контактных да
 
 ```html
 <p>Я просыпаюсь в 6<sup>35</sup> часов утра.</p>
-<p>Химическая формула кофеина: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  Химическая формула кофеина:
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>Если x<sup>2</sup> равно 9, x должен равняться 3 или -3.</p>
 ```
 
@@ -605,9 +651,15 @@ para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+<p>
+  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+<p>
+  In the above JavaScript example, <var>para</var> represents a paragraph
+  element.
+</p>
 
 <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
@@ -657,7 +709,9 @@ HTML также содержит элемент {{htmlelement ("time")}} для 
 <!-- Дата и время -->
 <time datetime="2020-01-20T19:30">7.30pm, 20 Января 2020</time>
 <!-- Дата и время со смещением по часовому поясу -->
-<time datetime="2020-01-20T19:30+01:00">7.30pm, 20 Января 2020, — это 8.30pm во Франции.</time>
+<time datetime="2020-01-20T19:30+01:00"
+  >7.30pm, 20 Января 2020, — это 8.30pm во Франции.</time
+>
 <!-- Вызов номера недели -->
 <time datetime="2020-W04">Четвёртая неделя 2020</time>
 ```

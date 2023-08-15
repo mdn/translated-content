@@ -1,13 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/style
-original_slug: Web/HTML/Attributs_universels/style
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -27,9 +20,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** conti
   Cette méthode n'est pas vraiment recommandée
 </p>
 
-<p class="toto">
-  Alors que ça, c'est mieux.
-</p>
+<p class="toto">Alors que ça, c'est mieux.</p>
 ```
 
 ### CSS

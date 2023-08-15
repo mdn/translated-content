@@ -1,7 +1,6 @@
 ---
 title: Arrays tipados no JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}Os arrays tipados do Javascript são objetos parecidos com arrays convencionais, e fornecem um mecanismo para lidar com dados binários em sua forma "bruta". Como você já deve saber, objetos do tipo {{jsxref("Array")}} aumentam e encolhem dinamicamente, e podem conter qualquer tipo de valor possível no Javascript. Os interpretadores Javascript realizam otimizações para que estes arrays sejam rápidos de se manipular. Todavia, à medida em que as aplicações web tornam-se mais e mais poderosas, adicionando recursos como manipulação de áudio e vídeo, acesso a dados brutos utilizando WebSockets, e assim por diante, tornou-se claro que há momentos em que seria útil ao código Javascript ser capaz de manipular dados binários "brutos" em arrays tipados, de forma rápida e fácil.Entretanto, os arrays tipados não devem ser confundidos com arrays convencionais, já que invocar o método {{jsxref("Array.isArray()")}} em um array tipado retornará `false`. Além disso, nem todos os métodos disponíveis para arrays normais são suportados pelos arrays tipados (ex. push e pop).
@@ -49,9 +48,9 @@ Neste ponto, nós temos um fragmento de memória cujos bytes estão todos pré-i
 
 ```js
 if (buffer.byteLength === 16) {
-  console.log('Sim, são 16 bytes.');
+  console.log("Sim, são 16 bytes.");
 } else {
-  console.log('Ah não, o tamanho não está certo!');
+  console.log("Ah não, o tamanho não está certo!");
 }
 ```
 
@@ -79,7 +78,7 @@ As coisas começar a ficar realmente interessantes quando você considera que é
 var int16View = new Int16Array(buffer);
 
 for (var i = 0; i < int16View.length; i++) {
-  console.log('Posição ' + i + ': ' + int16View[i]);
+  console.log("Posição " + i + ": " + int16View[i]);
 }
 ```
 
@@ -89,7 +88,7 @@ Você pode ir um pouco mais longe, no entanto. Considere isto:
 
 ```js
 int16View[0] = 32;
-console.log('Entra 0 na matriz de 32 bits agora é ' + int32View[0]);
+console.log("Entra 0 na matriz de 32 bits agora é " + int32View[0]);
 ```
 
 A saída disso é "Entrada 0 na matriz de 32 bits agora é 32". Em outras palavras, as duas matrizes são, na verdade, apenas vistas no mesmo buffer de dados, tratando-as como formatos diferentes. Você pode fazer isso com qualquer [tipo de visualização](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects).
@@ -130,17 +129,17 @@ Depois de processar uma array tipada, às vezes é útil convertê-la de volta e
 
 ```js
 var typedArray = new Uint8Array([1, 2, 3, 4]),
-    normalArray = Array.prototype.slice.call(typedArray);
+  normalArray = Array.prototype.slice.call(typedArray);
 normalArray.length === 4;
 normalArray.constructor === Array;
 ```
 
 ## Especificações
 
-| Especificações                                                                                   | Status                           | Comente                                 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------- |
-| {{SpecName('Typed Array')}}                                                             | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.          |
-| {{SpecName('ES2015', '#sec-typedarray-objects', 'TypedArray Objects')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. |
+| Especificações                                                           | Status                   | Comente                                 |
+| ------------------------------------------------------------------------ | ------------------------ | --------------------------------------- |
+| {{SpecName('Typed Array')}}                                              | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.          |
+| {{SpecName('ES2015', '#sec-typedarray-objects', 'TypedArray Objects')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. |
 | {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} | {{Spec2('ESDraft')}}     |                                         |
 
 ## Veja também

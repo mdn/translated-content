@@ -1,8 +1,6 @@
 ---
-title: ':future'
+title: ":future"
 slug: Web/CSS/:future
-translation_of: Web/CSS/:future
-browser-compat: css.selectors.future
 ---
 
 {{CSSRef}}
@@ -35,7 +33,12 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 <video controls preload="metadata">
   <source src="video.mp4" type="video/mp4" />
   <source src="video.webm" type="video/webm" />
-  <track label="Français" kind="subtitles" srclang="fr" src="subtitles.vtt" default>
+  <track
+    label="Français"
+    kind="subtitles"
+    srclang="fr"
+    src="subtitles.vtt"
+    default />
 </video>
 ```
 

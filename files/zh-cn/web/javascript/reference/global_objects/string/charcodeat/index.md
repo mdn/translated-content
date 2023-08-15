@@ -5,123 +5,79 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 
 {{JSRef}}
 
-**`charCodeAt()`** 方法返回 `0` 到 `65535` 之间的整数，表示给定索引处的 UTF-16 代码单元
+{{jsxref("String")}} 的 **`charCodeAt()`** 方法返回一个整数，表示给定索引处的 UTF-16 码元，其值介于 `0` 和 `65535` 之间。
+
+`charCodeAt()` 方法总是将字符串当作 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能返回单独代理项（lone surrogate）。如果要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
 
 {{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
 
-UTF-16 编码单元匹配能用一个 UTF-16 编码单元表示的 Unicode 码点。如果 Unicode 码点不能用一个 UTF-16 编码单元表示（因为它的值大于`0xFFFF`），则所返回的编码单元会是这个码点代理对的第一个编码单元) 。如果你想要整个码点的值，使用 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}}。
-
 ## 语法
 
-```plain
-str.charCodeAt(index)
+```js-nolint
+charCodeAt(index)
 ```
 
 ### 参数
 
 - `index`
-  - : 一个大于等于 `0`，小于字符串长度的整数。如果不是一个数值，则默认为 `0`。
+  - : 要返回的字符的索引，从零开始。将被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)——`undefined` 被转换为 0。
 
 ### 返回值
 
-指定 `index` 处字符的 UTF-16 代码单元值的一个数字；如果 `index` 超出范围，`charCodeAt()` 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。
+一个整数，介于 `0` 和 `65535` 之间，表示指定 `index` 处字符的 UTF-16 码元值。如果 `index` 超出了 `0` 到 `str.length - 1` 的范围，则 `charCodeAt()` 返回 {{jsxref("NaN")}}。
 
 ## 描述
 
-Unicode 码点（code points）的范围从 `0` 到 `1114111` `(0x10FFFF）`。开头的 128 个 Unicode 编码单元和 ASCII 字符编码一样。（关于 Unicode 的更多信息，可查看 [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode)。）
+字符串中的字符从左到右进行索引。第一个字符的索引为 `0`，而在名为 `str` 的字符串中，最后一个字符的索引为 `str.length - 1`。
 
-> **备注：** `charCodeAt` 总是返回一个小于 65,536 的值。这是因为高位编码单元（higher code point）使用一对（低位编码 lower valued）代理伪字符（"surrogate" pseudo-characters）来表示，从而构成一个真正的字符。
->
-> 因此，为了检查（或重现）`65536` 及以上编码字符的完整字符，需要在获取 `charCodeAt(i)` 的值的同时获取 `charCodeAt(i+1)` 的值（如同用两个字母操纵一个字符串），或者改为获取 `codePointAt(i)` 的值。参看下面例 2 和例 3。
-
-如果指定的 `index` 小于 `0` 、等于或大于字符串的长度，则 `charCodeAt` 返回 {{jsxref("Global_Objects/NaN", "NaN")}}。
-
-向后兼容：在历史版本中（如 JavaScript 1.2），`charCodeAt` 返回一个数字，表示给定 index 处字符的 ISO-Latin-1 编码值。ISO-Latin-1 编码集范围从 `0` 到 `255`。开头的 `0` 到 `127` 直接匹配 ASCII 字符集。
+Unicode 码位的范围是 `0` 到 `1114111`（`0x10FFFF`）。`charCodeAt()` 方法始终返回一个小于 `65536` 的值，因为更高的码位由*一对* 16 位代理伪字符（surrogate pseudo-character）来表示。因此，为了获取值大于 `65535` 的完整字符，不仅需要检索 `charCodeAt(i)`，而且还要使用 `charCodeAt(i + 1)`（就像操作具有两个字符的字符串一样），或者使用 {{jsxref("String/codePointAt", "codePointAt(i)")}} 方法。有关 Unicode 的信息，请参见 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
 ## 示例
 
-### 使用 `charCodeAt()`
+### 使用 charCodeAt()
 
-下例介绍了不同索引情况下返回的 Unicode 值：
+以下示例返回 `65`，即 A 的 Unicode 值。
 
 ```js
-"ABC".charCodeAt(0) // returns 65:"A"
-
-"ABC".charCodeAt(1) // returns 66:"B"
-
-"ABC".charCodeAt(2) // returns 67:"C"
-
-"ABC".charCodeAt(3) // returns NaN
+"ABC".charCodeAt(0); // 返回 65
 ```
 
-### 使用 `charCodeAt()` 修复字符串中出现的未知的非基本多语言范围（非 BMP，non-Basic-Multilingual-Plane）字符
-
-这段代码可以被用在 for 循环和其他类似语句中，当在指定引索之前不确定是否有非 BMP 字符存在时。
+`charCodeAt()` 可能会返回单独代理项，它们不是有效的 Unicode 字符。
 
 ```js
-function fixedCharCodeAt (str, idx) {
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
-    // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
-    idx = idx || 0;
-    var code = str.charCodeAt(idx);
-    var hi, low;
-
-    // High surrogate (could change last hex to 0xDB7F to treat high
-    // private surrogates as single characters)
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        if (isNaN(low)) {
-            throw 'High surrogate not followed by low surrogate in fixedCharCodeAt()';
-        }
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
-    }
-    if (0xDC00 <= code && code <= 0xDFFF) { // Low surrogate
-        // We return false to allow loops to skip this iteration since should have
-        // already handled high surrogate above in the previous iteration
-        return false;
-        /*hi = str.charCodeAt(idx-1);
-        low = code;
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;*/
-    }
-    return code;
-}
+const str = "𠮷𠮾";
+console.log(str.charCodeAt(0)); // 55362 或 d842，不是有效的 Unicode 字符
+console.log(str.charCodeAt(1)); // 57271 或 dfb7，不是有效的 Unicode 字符
 ```
 
-### 使用 `charCodeAt()` 修复字符串中出现的已知的非 BMP 字符
+要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
 
 ```js
-function knownCharCodeAt (str, idx) {
-    str += '';
-    var code,
-        end = str.length;
+const str = "𠮷𠮾";
+console.log(str.codePointAt(0)); // 134071
+```
 
-    var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-    while ((surrogatePairs.exec(str)) != null) {
-        var li = surrogatePairs.lastIndex;
-        if (li - 2 < idx) {
-            idx++;
-        }
-        else {
-            break;
-        }
-    }
+> **备注：** 避免使用 `charCodeAt()` 来重新实现 `codePointAt()`。从 UTF-16 代理到 Unicode 码位的转换相当复杂，而且 `codePointAt()` 可能更加高效，因为它直接使用字符串的内部表示形式。如果需要，可以安装一个 `codePointAt()` 的 polyfill。
 
-    if (idx >= end || idx < 0) {
-        return NaN;
-    }
+以下是将一对 UTF-16 码元转换为 Unicode 码位的可能算法，改编自 [Unicode 常问问题](https://unicode.org/faq/utf_bom.html#utf16-3)：
 
-    code = str.charCodeAt(idx);
+```js
+// 常量
+const LEAD_OFFSET = 0xd800 - (0x10000 >> 10);
+const SURROGATE_OFFSET = 0x10000 - (0xd800 << 10) - 0xdc00;
 
-    var hi, low;
-    if (0xD800 <= code && code <= 0xDBFF) {
-        hi = code;
-        low = str.charCodeAt(idx+1);
-        // Go one further, since one of the "characters" is part of a surrogate pair
-        return ((hi - 0xD800) * 0x400) + (low - 0xDC00) + 0x10000;
-    }
-    return code;
+function utf16ToUnicode(lead, trail) {
+  return (lead << 10) + trail + SURROGATE_OFFSET;
 }
+function unicodeToUTF16(codePoint) {
+  const lead = LEAD_OFFSET + (codePoint >> 10);
+  const trail = 0xdc00 + (codePoint & 0x3ff);
+  return [lead, trail];
+}
+
+const str = "𠮷";
+console.log(utf16ToUnicode(str.charCodeAt(0), str.charCodeAt(1))); // 134071
+console.log(str.codePointAt(0)); // 134071
 ```
 
 ## 规范

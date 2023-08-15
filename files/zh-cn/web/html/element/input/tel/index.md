@@ -14,7 +14,7 @@ slug: Web/HTML/Element/input/tel
 > **备注：** 不支持 `tel` 类型的浏览器会回退为标准 {{HTMLElement("input/text", "text")}} 类型输入。
 
 ```html
-<input id="telNo" type="tel">
+<input id="telNo" type="tel" />
 ```
 
 <table class="properties">
@@ -295,9 +295,7 @@ input:valid + span::after {
 ```html
 <form>
   <div>
-    <label for="telNo">
-      以 xxx-xxx-xxxx 格式输入一个电话号码：
-    </label>
+    <label for="telNo"> 以 xxx-xxx-xxxx 格式输入一个电话号码： </label>
     <input
       id="telNo"
       name="telNo"
@@ -349,7 +347,7 @@ input:valid + span::after {
 
 在这个示例中，我们展示了一个简单的界面，其中有一个 {{htmlelement("select")}} 元素，让用户选择他们所在的国家，还有一组 `<input type="tel">` 元素，让他们输入电话号码的每一部分；显然你应该有多个 `tel` 输入。
 
-每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label )属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
+每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
 
 ```html
 <form>
@@ -422,7 +420,7 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
@@ -444,13 +442,13 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   }
-}
+};
 ```
 
 示例的显示效果如下所示：

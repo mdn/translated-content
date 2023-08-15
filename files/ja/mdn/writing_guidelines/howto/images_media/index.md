@@ -1,7 +1,6 @@
 ---
 title: 画像やメディアの追加方法
 slug: MDN/Writing_guidelines/Howto/Images_media
-original_slug: MDN/Guidelines/Video
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
@@ -170,14 +169,14 @@ MDN 用の動画は以下のようにあるべきです。
 
 次の表は、良いスターターツールのお勧めをいくつか示しています。
 
-| ツール                      | OS                    | コスト   | 後処理機能 |
-| ------------------------- | --------------------- | ------ | ----------------------------------- |
-| Open Broadcaster Software | macOS, Windows, Linux | フリー   | あり                                 |
-| CamStudio                 | Windows               | フリー   | 限定的                             |
-| Camtasia                  | Windows, macOS        | 高   | あり                                 |
-| QuickTime Player          | macOS                 | フリー   | なし。単純に録画できるだけ    |
-| ScreenFlow                | macOS                 | 中 | あり                                 |
-| Kazam                     | Linux                 | フリー   | 最小限                             |
+| ツール                    | OS                    | コスト | 後処理機能                 |
+| ------------------------- | --------------------- | ------ | -------------------------- |
+| Open Broadcaster Software | macOS, Windows, Linux | フリー | あり                       |
+| CamStudio                 | Windows               | フリー | 限定的                     |
+| Camtasia                  | Windows, macOS        | 高     | あり                       |
+| QuickTime Player          | macOS                 | フリー | なし。単純に録画できるだけ |
+| ScreenFlow                | macOS                 | 中     | あり                       |
+| Kazam                     | Linux                 | フリー | 最小限                     |
 
 ### QuickTime Player のコツ
 
@@ -190,7 +189,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 4. _録画開始_ ボタンを押します。
 5. 録画したい動作をする。
 6. _停止_ ボタンを押す。
-7. メインメニューから_File_ > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
+7. メインメニューから*File* > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
 
 ### その他のリソース
 

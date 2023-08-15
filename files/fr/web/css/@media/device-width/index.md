@@ -1,12 +1,6 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
-tags:
-  - CSS
-  - Caractéristique média
-  - Déprécié
-  - Reference
-translation_of: Web/CSS/@media/device-width
 ---
 
 {{CSSRef}}{{deprecated_header}}
@@ -22,7 +16,10 @@ translation_of: Web/CSS/@media/device-width
 Ce code HTML applique une feuille de style pour pour les appareils plus étroits que 800 pixels.
 
 ```html
-<link rel="stylesheet" media="screen and (max-device-width: 799px)" href="http://toto.truc.com/narrow-styles.css" />
+<link
+  rel="stylesheet"
+  media="screen and (max-device-width: 799px)"
+  href="http://toto.truc.com/narrow-styles.css" />
 ```
 
 ## Spécifications

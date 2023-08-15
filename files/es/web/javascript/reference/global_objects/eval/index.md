@@ -1,7 +1,6 @@
 ---
 title: eval
 slug: Web/JavaScript/Reference/Global_Objects/eval
-original_slug: Web/JavaScript/Referencia/Objetos_globales/eval
 ---
 
 {{jsSidebar("Objects")}}
@@ -51,8 +50,9 @@ Si utiliza la función `eval()` _indirectamente_, invocándola a través de una 
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval("x + y"));  // Llamada directa, utiliza el ámbito local, el resultado es 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Llamada directa, utiliza el ámbito local, el resultado es 6
   var geval = eval;
   console.log(geval("x + y")); // Llamada indirecta, utiliza el ámbito global, através de ReferenceError por que `x` es indefinida
 }
@@ -86,9 +86,9 @@ Considere ahora este nuevo ejemplo, en donde la propiedad del objeto a ser acces
 
 ```js
 var obj = { a: 20, b: 30 };
-var nombreProp = obtenerNombreProp();  // devuelve "a" o "b"
+var nombreProp = obtenerNombreProp(); // devuelve "a" o "b"
 
-eval( "var resultado = obj." + nombreProp );
+eval("var resultado = obj." + nombreProp);
 ```
 
 Y con el uso de los [accesores de propiedades](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) (artículo en inglés), el cual es mucho más rápido y seguro, sería así:
@@ -96,16 +96,16 @@ Y con el uso de los [accesores de propiedades](/es/docs/Web/JavaScript/Reference
 ```js
 var obj = { a: 20, b: 30 };
 var nombreProp = obtenerNombreProp(); // devuelve "a" o "b"
-var resultado = obj[ nombreProp ];  //  obj[ "a" ] es el mismo que obj.a
+var resultado = obj[nombreProp]; //  obj[ "a" ] es el mismo que obj.a
 ```
 
 Puede incluso utilizar este método para acceder a las propiedades de los descendientes. Utilizando `eval()` esto sería de la siguiente forma:
 
 ```js
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
 
-eval( "var result = obj." + propPath );
+eval("var result = obj." + propPath);
 ```
 
 Evitando `eval()`, esto podría hacerse dividiendo la ruta de propiedad y haciendo un bucle a través de las diferentes propiedades:
@@ -113,14 +113,14 @@ Evitando `eval()`, esto podría hacerse dividiendo la ruta de propiedad y hacien
 ```js
 function getDescendantProp(obj, desc) {
   var arr = desc.split(".");
-  while(arr.length) {
+  while (arr.length) {
     obj = obj[arr.shift()];
   }
   return obj;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
 var result = getDescendantProp(obj, propPath);
 ```
 
@@ -129,15 +129,15 @@ Estableciendo una propiedad que funcione de modo similar:
 ```js
 function setDescendantProp(obj, desc, value) {
   var arr = desc.split(".");
-  while(arr.length > 1) {
+  while (arr.length > 1) {
     obj = obj[arr.shift()];
   }
   obj[arr[0]] = value;
 }
 
-var obj = {a: {b: {c: 0}}};
-var propPath = getPropPath();  // returns e.g. "a.b.c"
-var result = setDescendantProp(obj, propPath, 1);  // test.a.b.c will now be 1
+var obj = { a: { b: { c: 0 } } };
+var propPath = getPropPath(); // returns e.g. "a.b.c"
+var result = setDescendantProp(obj, propPath, 1); // test.a.b.c will now be 1
 ```
 
 ### Utilice funciones en lugar de evaluar fragmentos de código
@@ -202,12 +202,12 @@ document.write("<P>z es ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // devuelve 2
+var b = eval(str); // devuelve 2
 
 console.log("b is : " + b);
 
 a = false;
-b = eval(str);  // devuelve 3
+b = eval(str); // devuelve 3
 
 console.log("b is : " + b);
 ```
@@ -215,10 +215,10 @@ console.log("b is : " + b);
 ### `eval` como una cadena de caracteres (string) definiendo funciones requiere "(" y ")" como prefijo y sufijo
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // devuelve undefined
-var fct2 = eval(fctStr2)  // deuelve una función
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // devuelve undefined
+var fct2 = eval(fctStr2); // deuelve una función
 ```
 
 ## Especificaciones

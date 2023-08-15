@@ -67,4 +67,4 @@ console.log(num1); // 2
 
 - {{Glossary("Scope")}}
 - [Declaring variables in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Function scope in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [Function scope in the JavaScript Guide](/zh-TW/docs/Web/JavaScript/Guide/Functions#function_scope)

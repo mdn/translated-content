@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Parte 2: Criando a estrutura do website'
+title: "Express Tutorial Parte 2: Criando a estrutura do website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
@@ -15,7 +15,7 @@ Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
       <th scope="row">Pré-requisitos:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Preparar o ambiente de desenvolvimento do Node </a
         >. Revise o Tutorial Express.
       </td>
@@ -169,24 +169,24 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Then run the application.
 
-    - On Windows, use this command:
+   - On Windows, use this command:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - On macOS or Linux, use this command:
+   - On macOS or Linux, use this command:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Then load `http://localhost:3000/` in your browser to access the app.
 
@@ -347,7 +347,7 @@ The file **/bin/www** is the application entry point! The very first thing this 
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **Nota:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
@@ -370,18 +370,18 @@ Back in the **www** entry point file above, it is this `module.exports` object t
 Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including http-errors, _express_, _morgan_ and _cookie-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var createError = require("http-errors");
+var express = require("express");
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
 ```
 
 Then we `require()` modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **Nota:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
@@ -392,25 +392,25 @@ Next, we create the `app` object using our imported _express_ module, and then u
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
 
 ```js
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **Nota:** The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
@@ -419,19 +419,19 @@ The last middleware in the file adds handler methods for errors and HTTP 404 res
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -446,12 +446,12 @@ module.exports = app;
 The route file **/routes/users.js** is shown below (route files share a similar structure, so we don't need to also show **index.js**). First, it loads the _express_ module and uses it to get an `express.Router` object. Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -469,8 +469,8 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 ```
 

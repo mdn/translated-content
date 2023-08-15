@@ -13,7 +13,35 @@ slug: Web/SVG/Element/tspan
 
 ## 示例
 
-» [tspan.svg](/files/3338/tspan.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font: italic 12px serif;
+    }
+    tspan {
+      font: bold 10px sans-serif;
+      fill: red;
+    }
+  </style>
+
+  <text x="10" y="30" class="small">
+    你
+    <tspan>不是</tspan>
+    香蕉！
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample('示例', 100, '100%')}}
 
 ## 属性
 

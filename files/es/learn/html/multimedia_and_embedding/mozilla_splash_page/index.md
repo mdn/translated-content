@@ -13,7 +13,7 @@ En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técni
       <th scope="row">Requisitos previos:</th>
       <td>
         Antes de intentar esta evaluación, ya deberías conocer el módulo de
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding"
           >Multimedia e inserción</a
         >.
       </td>
@@ -95,9 +95,9 @@ Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
 1. Pon tu trabajo en un editor en línea para compartir, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). Glitch es probablemente el mejor para este ejemplo, porque permite cargar propiedades como imágenes, mientras que algunas de las otras herramientas no lo hacen.
 2. Escribe una publicación solicitando evaluación y/o ayuda en el foro [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Agrega la etiqueta "aprendizaje" a tu publicación para que podamos encontrarla más fácilmente. Tu publicación debe incluir:
 
-    - Un título descriptivo como "Evaluación para página de bienvenida de Mozilla".
-    - Detalles de lo que quiera que hagamos, por ejemplo, lo que ya has intentado, si estás atascado y necesitas ayuda.
-    - Un enlace al ejemplo que deseas evaluar o en el que necesitas ayuda, en un editor en línea. Ésta es una buena práctica: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
-    - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
+   - Un título descriptivo como "Evaluación para página de bienvenida de Mozilla".
+   - Detalles de lo que quiera que hagamos, por ejemplo, lo que ya has intentado, si estás atascado y necesitas ayuda.
+   - Un enlace al ejemplo que deseas evaluar o en el que necesitas ayuda, en un editor en línea. Ésta es una buena práctica: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
+   - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

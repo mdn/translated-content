@@ -5,10 +5,10 @@
 #
 # FROM-URL	TO-URL
 /fr/docs/AJAX	/fr/docs/Web/Guide/AJAX
-/fr/docs/AJAX/Communauté	/fr/docs/Web/Guide/AJAX/Community
-/fr/docs/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
-/fr/docs/AJAX:Communauté	/fr/docs/Web/Guide/AJAX/Community
-/fr/docs/AJAX:Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
+/fr/docs/AJAX/Communauté	/fr/docs/Web/Guide/AJAX
+/fr/docs/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX
+/fr/docs/AJAX:Communauté	/fr/docs/Web/Guide/AJAX
+/fr/docs/AJAX:Premiers_pas	/fr/docs/Web/Guide/AJAX
 /fr/docs/ARIA	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/ARIA/Accessible_Rich_Internet_Applications	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/ARIA/Applications_riches_Internet_accessibles	/fr/docs/Web/Accessibility/ARIA
@@ -86,14 +86,13 @@
 /fr/docs/Apprendre/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement	/fr/docs/Learn/CSS/CSS_layout/Positioning
 /fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods	/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods
-/fr/docs/Apprendre/CSS/CSS_layout/Media_queries	/fr/docs/Learn/CSS/CSS_layout/Media_queries
 /fr/docs/Apprendre/CSS/CSS_layout/Multiple-column_Layout	/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
 /fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow	/fr/docs/Learn/CSS/CSS_layout/Normal_Flow
 /fr/docs/Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs	/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers
 /fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/Apprendre/CSS/CSS_properties	/fr/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Comment	/fr/docs/Learn/CSS/Howto
-/fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/create_fancy_boxes
+/fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/Create_fancy_boxes
 /fr/docs/Apprendre/CSS/Comment/Generated_content	/fr/docs/Learn/CSS/Howto/Generated_content
 /fr/docs/Apprendre/CSS/Comment/Mettre_en_forme_du_texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Apprendre/CSS/Comment/personnaliser_une_liste	/fr/docs/Learn/CSS/Styling_text/Styling_lists
@@ -1213,7 +1212,7 @@
 /fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript	/fr/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /fr/docs/Extension_Firefox_Checky_(externe)	https://addons.mozilla.org/extensions/moreinfo.php?id=165
 /fr/docs/Extension_Firefox_EditCSS_(externe)	https://addons.mozilla.org/extensions/moreinfo.php?id=179
-/fr/docs/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
+/fr/docs/FAQ_sur_le_préchargement_des_liens	/fr/docs/Glossary/Prefetch
 /fr/docs/FAQ_sur_les_transformations_XLS_dans_Mozilla	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/FAQ_sur_les_transformations_XSL_dans_Mozilla	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/FUEL/Window/devicemotion_event	/fr/docs/Web/API/Window/devicemotion_event
@@ -3120,6 +3119,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts	/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 /fr/docs/Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils	/fr/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 /fr/docs/Mozilla/Add-ons/WebExtensions/Ajouter_une_page_de_paramètres	/fr/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
+/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_actions	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /fr/docs/Mozilla/Add-ons/WebExtensions/Compatibilité_navigateurs_API_JavaScript	/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 /fr/docs/Mozilla/Add-ons/WebExtensions/Differences_entre_les_implementations_api	/fr/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /fr/docs/Mozilla/Add-ons/WebExtensions/Exemples	/fr/docs/Mozilla/Add-ons/WebExtensions/Examples
@@ -3127,8 +3127,10 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+/fr/docs/Mozilla/Add-ons/WebExtensions/Tips	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
+/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
 /fr/docs/Mozilla/Add-ons/WebExtensions/construction_extension_cross_browser	/fr/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /fr/docs/Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement	/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 /fr/docs/Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
@@ -3140,10 +3142,11 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifests_native	/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests
 /fr/docs/Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 /fr/docs/Mozilla/Add-ons/WebExtensions/prise_en_charge_du_navigateur_pour_les_api_javascript	/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-/fr/docs/Mozilla/Add-ons/WebExtensions/que_faire_ensuite	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_
+/fr/docs/Mozilla/Add-ons/WebExtensions/que_faire_ensuite	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
 /fr/docs/Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles	/fr/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 /fr/docs/Mozilla/Add-ons/WebExtensions/travailler_avec_l_API_cookies	/fr/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Action_du_navigateur	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/barres_laterales	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/elements_menu_contextuel	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
@@ -3170,7 +3173,6 @@
 /fr/docs/Mozilla/Firefox/Versions/35	/fr/docs/Mozilla/Firefox/Releases/35
 /fr/docs/Mozilla/Firefox/Versions/4	/fr/docs/Mozilla/Firefox/Releases/4
 /fr/docs/Mozilla/Firefox/Versions/40	/fr/docs/Mozilla/Firefox/Releases/40
-/fr/docs/Mozilla/Firefox/Versions/41	/fr/docs/Mozilla/Firefox/Releases/41
 /fr/docs/Mozilla/Firefox/Versions/5	/fr/docs/Mozilla/Firefox/Releases/5
 /fr/docs/Mozilla/Firefox/Versions/6	/fr/docs/Mozilla/Firefox/Releases/6
 /fr/docs/Mozilla/Firefox/Versions/7	/fr/docs/Mozilla/Firefox/Releases/7
@@ -3898,7 +3900,6 @@
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Terminology
 /fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-/fr/docs/Web/API/KeyboardEvent/key/Key_Values	/fr/docs/Web/API/UI_Events/Keyboard_event_key_values
 /fr/docs/Web/API/LocalFileSystem	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
@@ -3969,7 +3970,6 @@
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
-/fr/docs/Web/API/SharedWorkerGlobalScope/applicationCache	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/Web/API/StorageManager/estimate
@@ -4045,6 +4045,7 @@
 /fr/docs/Web/API/Window.scrollTo	/fr/docs/Web/API/Window/scrollTo
 /fr/docs/Web/API/Window.setTimeout	/fr/docs/Web/API/setTimeout
 /fr/docs/Web/API/Window.showModalDialog	/fr/docs/Web/API/Window/showModalDialog
+/fr/docs/Web/API/Window/DOMContentLoaded_event	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/Web/API/Window/URL	/fr/docs/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/caches
 /fr/docs/Web/API/Window/content	/fr/docs/Web/API/Window
@@ -4084,6 +4085,7 @@
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /fr/docs/Web/API/Worker/onmessage	/fr/docs/Web/API/Worker/message_event
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/Web/API/DedicatedWorkerGlobalScope/close
+/fr/docs/Web/API/WorkerGlobalScope/console	/fr/docs/Web/API/console
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onerror	/fr/docs/Web/API/WorkerGlobalScope/error_event
 /fr/docs/Web/API/WorkerGlobalScope/onlanguagechange	/fr/docs/Web/API/WorkerGlobalScope/languagechange_event
@@ -4093,7 +4095,6 @@
 /fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
-/fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/console/time
@@ -4148,7 +4149,7 @@
 /fr/docs/Web/Apps/Build/Audio_and_video_manipulation	/fr/docs/Web/Guide/Audio_and_video_manipulation
 /fr/docs/Web/Apps/Build/User_input_methods	/fr/docs/Web/Guide/User_input_methods
 /fr/docs/Web/Apps/Progressive	/fr/docs/Web/Progressive_web_apps
-/fr/docs/Web/Apps/Progressive/Adaptative	/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
+/fr/docs/Web/Apps/Progressive/Adaptative	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/Web/Apps/Progressive/Identifiable	/fr/docs/Web/Progressive_web_apps
 /fr/docs/Web/Apps/Progressive/Independante_du_reseau	/fr/docs/Web/Progressive_web_apps
 /fr/docs/Web/Apps/Progressive/Installable	/fr/docs/Web/Progressive_web_apps
@@ -4204,6 +4205,7 @@
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/Web/CSS/mask-image
 /fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/:-moz-focusring	/fr/docs/Web/CSS/:focus-visible
 /fr/docs/Web/CSS/:-moz-list-bullet	/fr/docs/Web/CSS/::-moz-list-bullet
 /fr/docs/Web/CSS/:-moz-list-number	/fr/docs/Web/CSS/::-moz-list-number
 /fr/docs/Web/CSS/:-moz-locale-dir(ltr)	/fr/docs/Web/CSS/:-moz-locale-dir_ltr
@@ -4224,6 +4226,7 @@
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
 /fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
+/fr/docs/Web/CSS/@media/update-frequency	/fr/docs/Web/CSS/@media/update
 /fr/docs/Web/CSS/@scroll-timeline	/fr/docs/Web/CSS/scroll-timeline
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport	/fr/docs/Web/CSS
@@ -4364,7 +4367,7 @@
 /fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base	/fr/docs/Web/CSS/CSS_scroll_snap/Basic_concepts
 /fr/docs/Web/CSS/CSS_Scroll_Snap_Points	/fr/docs/Web/CSS/CSS_scroll_snap
 /fr/docs/Web/CSS/CSS_Scrollbars	/fr/docs/Web/CSS/CSS_scrollbars_styling
-/fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/fr/docs/Web/CSS/CSS_Selectors/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS	/fr/docs/Web/CSS/CSS_shapes/Overview_of_shapes
 /fr/docs/Web/CSS/CSS_Shapes/Créer_formes_boîtes	/fr/docs/Web/CSS/CSS_shapes/From_box_values
 /fr/docs/Web/CSS/CSS_Shapes/Formes_simples	/fr/docs/Web/CSS/CSS_shapes/Basic_shapes
@@ -4404,8 +4407,6 @@
 /fr/docs/Web/CSS/Concepts_viewport	/fr/docs/Web/CSS/Viewport_concepts
 /fr/docs/Web/CSS/Contexte_de_formatage_en_ligne	/fr/docs/Web/CSS/Inline_formatting_context
 /fr/docs/Web/CSS/Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors
-/fr/docs/Web/CSS/Couleurs_CSS/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
-/fr/docs/Web/CSS/Couleurs_CSS/Sélecteur_de_couleurs	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS	/fr/docs/Web/CSS/CSS_flexible_box_layout
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS/Boîtes_flexibles_pour_applications_web	/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /fr/docs/Web/CSS/Disposition_boîtes_flexibles_CSS/Mises_en_page_avancees_avec_flexbox	/fr/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
@@ -4469,9 +4470,10 @@
 /fr/docs/Web/CSS/Motion_Path	/fr/docs/Web/CSS/CSS_motion_path
 /fr/docs/Web/CSS/Média	/fr/docs/Web/CSS/@media
 /fr/docs/Web/CSS/Média/Visuel	/fr/docs/Web/CSS/@media
-/fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/Paged_Media
-/fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/Paged_Media
+/fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/CSS_paged_media
+/fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/CSS_paged_media
 /fr/docs/Web/CSS/Outils	/fr/docs/Web/CSS
+/fr/docs/Web/CSS/Paged_Media	/fr/docs/Web/CSS/CSS_paged_media
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/Web/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
 /fr/docs/Web/CSS/Redimensionnement_arrière-plans_SVG	/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds
@@ -4494,9 +4496,9 @@
 /fr/docs/Web/CSS/Syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs	/fr/docs/Web/CSS/Value_definition_syntax
 /fr/docs/Web/CSS/Sélecteur_de_voisin_direct	/fr/docs/Web/CSS/Adjacent_sibling_combinator
-/fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_Selectors
+/fr/docs/Web/CSS/Sélecteurs_CSS	/fr/docs/Web/CSS/CSS_selectors
 /fr/docs/Web/CSS/Sélecteurs_CSS/Comparison_with_XPath	/fr/docs/Web/XPath/Comparison_with_CSS_selectors
-/fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/fr/docs/Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un_selecteur	/fr/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /fr/docs/Web/CSS/Sélecteurs_d_ID	/fr/docs/Web/CSS/ID_selectors
 /fr/docs/Web/CSS/Sélecteurs_d_attribut	/fr/docs/Web/CSS/Attribute_selectors
 /fr/docs/Web/CSS/Sélecteurs_de_classe	/fr/docs/Web/CSS/Class_selectors
@@ -4506,7 +4508,6 @@
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
 /fr/docs/Web/CSS/Tools	/fr/docs/Web/CSS
-/fr/docs/Web/CSS/Tools/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_colors/Color_picker_tool
 /fr/docs/Web/CSS/Type_color	/fr/docs/Web/CSS/color_value
 /fr/docs/Web/CSS/Type_position	/fr/docs/Web/CSS/position_value
 /fr/docs/Web/CSS/Types_CSS	/fr/docs/Web/CSS/CSS_Types
@@ -4624,7 +4625,7 @@
 /fr/docs/Web/CSS/Élément_remplacé	/fr/docs/Web/CSS/Replaced_element
 /fr/docs/Web/Demos_of_open_web_technologies	/fr/docs/Web/Demos
 /fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos
-/fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Window/DOMContentLoaded_event
+/fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/Web/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Events/abort	/fr/docs/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/Events/abort_(ProgressEvent)	/fr/docs/Web/API/XMLHttpRequest/abort_event
@@ -4690,8 +4691,10 @@
 /fr/docs/Web/Events/touchend	/fr/docs/Web/API/Element/touchend_event
 /fr/docs/Web/Events/transitionend	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/Events/unload	/fr/docs/Web/API/Window/unload_event
-/fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX/Community
-/fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
+/fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX
+/fr/docs/Web/Guide/AJAX/Community	/fr/docs/Web/Guide/AJAX
+/fr/docs/Web/Guide/AJAX/Getting_Started	/fr/docs/Web/Guide/AJAX
+/fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX
 /fr/docs/Web/Guide/API/DOM	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/Guide/API/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/Web/Guide/API/Gamepad	/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
@@ -4876,7 +4879,7 @@
 /fr/docs/Web/HTTP/CORS/Errors/CORSNAPasRéussi	/fr/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed
 /fr/docs/Web/HTTP/Cache	/fr/docs/Web/HTTP/Caching
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
-/fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
+/fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Glossary/Prefetch
 /fr/docs/Web/HTTP/Feature_Policy	/fr/docs/Web/HTTP/Permissions_Policy
 /fr/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
 /fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/fr/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -4885,6 +4888,7 @@
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
 /fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /fr/docs/Web/HTTP/Index	/fr/docs/Web/HTTP
+/fr/docs/Web/HTTP/Link_prefetching_FAQ	/fr/docs/Glossary/Prefetch
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/Web/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
 /fr/docs/Web/HTTP/Méthode/DELETE	/fr/docs/Web/HTTP/Methods/DELETE
@@ -4956,7 +4960,6 @@
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/About	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/fr/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors
@@ -5065,6 +5068,8 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/paramètres_du_reste	/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/group	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/groupToMap	/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
@@ -5950,7 +5955,7 @@
 /fr/docs/Web/Media/Formats/Types_des_images	/fr/docs/Web/Media/Formats/Image_types
 /fr/docs/Web/Performance/Budgets_de_performance	/fr/docs/Web/Performance/Performance_budgets
 /fr/docs/Web/Privacy/Tracking_Protection	/fr/docs/Web/Privacy/Firefox_tracking_protection
-/fr/docs/Web/Progressive_web_apps/Adaptative	/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
+/fr/docs/Web/Progressive_web_apps/Adaptative	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/Web/Progressive_web_apps/Add_to_home_screen	/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /fr/docs/Web/Progressive_web_apps/App_structure	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /fr/docs/Web/Progressive_web_apps/Chargement	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
@@ -5958,7 +5963,7 @@
 /fr/docs/Web/Progressive_web_apps/Independante_du_reseau	/fr/docs/Web/Progressive_web_apps
 /fr/docs/Web/Progressive_web_apps/Installable	/fr/docs/Web/Progressive_web_apps
 /fr/docs/Web/Progressive_web_apps/Installable_PWAs	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/fr/docs/Web/Progressive_web_apps/Introduction	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/fr/docs/Web/Progressive_web_apps/Introduction	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /fr/docs/Web/Progressive_web_apps/Loading	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /fr/docs/Web/Progressive_web_apps/Offline_Service_workers	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /fr/docs/Web/Progressive_web_apps/Partageable	/fr/docs/Web/Progressive_web_apps
@@ -5967,7 +5972,9 @@
 /fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /fr/docs/Web/Progressive_web_apps/Responsive/Media_types	/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/Web/Progressive_web_apps/Securisee	/fr/docs/Web/Progressive_web_apps
+/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs	/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /fr/docs/Web/Reference	/fr/docs/Web
 /fr/docs/Web/Reference/API	/fr/docs/Web/API
@@ -6071,13 +6078,11 @@
 /fr/docs/Web/XPath/Fonctions/true	/fr/docs/Web/XPath/Functions/true
 /fr/docs/Web/XPath/Fonctions/unparsed-entity-url	/fr/docs/Web/XPath/Functions/unparsed-entity-url
 /fr/docs/Web/XSLT/Index	/fr/docs/Web/XSLT
-/fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Les_liaisons_JavaScript_XSLT	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-/fr/docs/Web/XSLT/Interface_XSLT_JavaScript_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Exemple_basique	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
@@ -6363,6 +6368,7 @@
 /fr/docs/conflicting/Learn/CSS/Building_blocks/Values_and_units	/fr/docs/Learn/CSS/Building_blocks/Values_and_units
 /fr/docs/conflicting/Learn/CSS/CSS_layout	/fr/docs/Learn/CSS/CSS_layout
 /fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction	/fr/docs/Learn/CSS/CSS_layout/Introduction
+/fr/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
 /fr/docs/conflicting/Learn/CSS/First_steps	/fr/docs/Learn/CSS/First_steps
 /fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_is_structured	/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc	/fr/docs/Learn/CSS/First_steps/How_CSS_works
@@ -6411,6 +6417,7 @@
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/menus/create	/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext	/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 /fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister	/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
+/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /fr/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
 /fr/docs/conflicting/Tools/Memory/Basic_operations	https://firefox-source-docs.mozilla.org/devtools-user/memory/basic_operations/index.html
@@ -6424,6 +6431,7 @@
 /fr/docs/conflicting/Web/API/Canvas_API/Tutorial	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/conflicting/Web/API/DOMMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/conflicting/Web/API/Document	/fr/docs/Web/API/Document
+/fr/docs/conflicting/Web/API/Document/DOMContentLoaded_event	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/conflicting/Web/API/Document/createEvent	/fr/docs/Web/API/Document/createEvent
 /fr/docs/conflicting/Web/API/Document/createNodeIterator	/fr/docs/Web/API/Document/createNodeIterator
 /fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada	/fr/docs/Web/API/Document/createNodeIterator
@@ -6475,7 +6483,6 @@
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
 /fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
-/fr/docs/conflicting/Web/API/SharedWorkerGlobalScope	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/conflicting/Web/API/StorageManager/estimate	/fr/docs/Web/API/StorageManager/estimate
 /fr/docs/conflicting/Web/API/URL	/fr/docs/Web/API/URL
 /fr/docs/conflicting/Web/API/WebRTC_API	/fr/docs/Web/API/WebRTC_API
@@ -6504,6 +6511,7 @@
 /fr/docs/conflicting/Web/API/XSLTProcessor	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa
+/fr/docs/conflicting/Web/API/console	/fr/docs/Web/API/console
 /fr/docs/conflicting/Web/API/origin	/fr/docs/Web/API/origin
 /fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3	/fr/docs/Web/API
 /fr/docs/conflicting/Web/Accessibility	/fr/docs/Web/Accessibility
@@ -6513,6 +6521,7 @@
 /fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/conflicting/Web/CSS	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS/::placeholder	/fr/docs/Web/CSS/::placeholder
+/fr/docs/conflicting/Web/CSS/:focus-visible	/fr/docs/Web/CSS/:focus-visible
 /fr/docs/conflicting/Web/CSS/:is	/fr/docs/Web/CSS/:is
 /fr/docs/conflicting/Web/CSS/:placeholder-shown	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/conflicting/Web/CSS/@font-face	/fr/docs/Web/CSS/@font-face
@@ -6535,6 +6544,7 @@
 /fr/docs/conflicting/Web/CSS/CSS_Fonts	/fr/docs/Web/CSS/CSS_fonts
 /fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95	/fr/docs/Web/CSS/CSS_fonts
 /fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap	/fr/docs/Web/CSS/CSS_scroll_snap
+/fr/docs/conflicting/Web/CSS/CSS_paged_media	/fr/docs/Web/CSS/CSS_paged_media
 /fr/docs/conflicting/Web/CSS/Filter_Effects	/fr/docs/Web/CSS/CSS_filter_effects
 /fr/docs/conflicting/Web/CSS/Mozilla_Extensions	/fr/docs/Web/CSS/Mozilla_Extensions
 /fr/docs/conflicting/Web/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
@@ -6565,6 +6575,8 @@
 /fr/docs/conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244	/fr/docs/Web/CSS
 /fr/docs/conflicting/Web/Guide	/fr/docs/Web/Guide
+/fr/docs/conflicting/Web/Guide/AJAX	/fr/docs/Web/Guide/AJAX
+/fr/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e	/fr/docs/Web/Guide/AJAX
 /fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
 /fr/docs/conflicting/Web/HTML	/fr/docs/Web/HTML
 /fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Attributes/rel

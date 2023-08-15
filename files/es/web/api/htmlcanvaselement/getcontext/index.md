@@ -31,9 +31,7 @@ canvas.getContext(contextType, contextAttributes);
   - : Puedes usar varios atributos al momento de crear tu contexto de renderizado. Por ejemplo:
 
     ```js
-    canvas.getContext('webgl',
-                     { antialias: false,
-                       depth: false });
+    canvas.getContext("webgl", { antialias: false, depth: false });
     ```
 
     Atributos del contexto 2d:
@@ -74,8 +72,8 @@ Dado este elemento {{HTMLElement("canvas")}}:
 Puedes obtener un contexto 2d del canvas con el código siguiente:
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { ... }
 ```
 

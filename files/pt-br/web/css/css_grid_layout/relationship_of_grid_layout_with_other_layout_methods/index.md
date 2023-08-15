@@ -1,7 +1,6 @@
 ---
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 O CSS Grid Layout foi projetado para funcionar junto com outras partes do CSS, como parte de um sistema completo para fazer o layout. Neste guia, explicarei como uma grade se encaixa com outras técnicas que você já pode estar usando.
@@ -19,7 +18,9 @@ Neste primeiro exemplo, estou usando o flexbox para criar um conjunto de caixas.
 Eu também defini a propriedade {{cssxref ("flex-wrap")}} para agrupar, de modo que, se o espaço no contêiner ficar muito estreito para manter a base flexível, os itens serão agrupados em uma nova linha.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -67,7 +68,9 @@ Uma questão comum, então, é como alinhar esses itens. É aqui que você desej
 Neste próximo exemplo, eu crio o mesmo layout usando Grid. Desta vez, temos três faixas de coluna 1fr. Não precisamos definir nada nos itens em si; eles se estabelecerão em cada célula da grade criada. Como você pode ver, eles ficam em uma grade rígida, alinhando-se em linhas e colunas. Com cinco itens, temos uma lacuna no final da segunda linha.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -122,12 +125,14 @@ The feature of flexbox that was most exciting to many of us was that it gave us 
 
 The alignment properties from the flexbox specification have been added to a new specification called [Box Alignment Level 3](https://drafts.csswg.org/css-align/). This means that they can be used in other specifications, including Grid Layout. In the future, they may well apply to other layout methods as well.
 
-In a later guide in this series, I’ll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
+In a later guide in this series, I'll be taking a proper look at Box Alignment and how it works in Grid Layout. For now, here is a comparison between simple examples of flexbox and grid.
 
 In the first example, which uses flexbox, I have a container with three items inside. The wrapper {{cssxref("min-height")}} is set, so it defines the height of the flex container. I have set {{cssxref("align-items")}} on the flex container to `flex-end` so the items will line up at the end of the flex container. I have also set the {{cssxref("align-self")}} property on `box1` so it will override the default and stretch to the height of the container and on `box2` so it aligns to the start of the flex container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -173,7 +178,9 @@ In the first example, which uses flexbox, I have a container with three items in
 This second example uses a grid to create the same layout. This time we are using the box alignment properties as they apply to a grid layout. So we align to `start` and `end` rather than `flex-start` and `flex-end`. In the case of a grid layout, we are aligning the items inside their grid area. In this case that is a single grid cell, but it could be an area made up of several grid cells.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -201,7 +208,7 @@ This second example uses a grid to create the same layout. This time we are usin
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
@@ -230,7 +237,9 @@ We can create a similar effect to flexbox, while still keeping the content arran
 In this next example, I have used the `auto-fill` keyword in place of an integer in the repeat notation and set the track listing to 200 pixels. This means that grid will create as many 200 pixels column tracks as will fit in the container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -266,10 +275,12 @@ In this next example, I have used the `auto-fill` keyword in place of an integer
 
 ### A flexible number of tracks
 
-This isn’t quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fill` and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
+This isn't quite the same as flexbox. In the flexbox example, the items are larger than the 200 pixel basis before wrapping. We can achieve the same in grid by combining `auto-fill` and the {{cssxref("minmax", "minmax()")}} function. In this next example, I create auto filled tracks with `minmax`. I want my tracks to be a minimum of 200 pixels, so I set the maximum to be `1fr`. Once the browser has worked out how many times 200 pixels will fit into the container–also taking account of grid gaps–it will treat the `1fr` maximum as an instruction to share out the remaining space between the items.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -316,7 +327,9 @@ To make the grid container a containing block you need to add the position prope
 In the below example I have a wrapper containing four child items. Item three is absolutely positioned and also placed on the grid using line-based placement. The grid container has `position: relative` and so becomes the positioning context of this item.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -338,7 +351,9 @@ In the below example I have a wrapper containing four child items. Item three is
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+    This block is absolutely positioned. In this example the grid container is
+    the containing block and so the absolute positioning offset values are
+    calculated in from the outer edges of the area it has been placed into.
   </div>
   <div class="box4">Four</div>
 </div>
@@ -347,7 +362,7 @@ In the below example I have a wrapper containing four child items. Item three is
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
   position: relative;
@@ -365,7 +380,7 @@ In the below example I have a wrapper containing four child items. Item three is
 
 {{ EmbedLiveSample('A_grid_container_as_containing_block', '500', '330') }}
 
-You can see that the item is taking the area from grid row line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usually for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn’t cause the additional row to be created to span to row line 3.
+You can see that the item is taking the area from grid row line 2 to 4, and starting after line 1. Then it is offset in that area using the top and left properties. However, it has been taken out of flow as is usually for absolutely positioned items and so the auto-placement rules now place items into the same space. The item also doesn't cause the additional row to be created to span to row line 3.
 
 If we remove `position: absolute` from the rules for `.box3` you can see how it would display without the positioning.
 
@@ -384,7 +399,9 @@ If the absolutely positioned item is nested inside a grid area then you can crea
 I have given `.box3` position relative and then positioned the sub-item with the offset properties. In this case, the positioning context is the grid area.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -405,9 +422,12 @@ I have given `.box3` position relative and then positioned the sub-item with the
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+      This block is absolutely positioned. In this example the grid area is the
+      containing block and so the absolute positioning offset values are
+      calculated in from the outer edges of the grid area.
     </div>
   </div>
   <div class="box4">Four</div>
@@ -417,7 +437,7 @@ I have given `.box3` position relative and then positioned the sub-item with the
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
 }
@@ -432,8 +452,8 @@ I have given `.box3` position relative and then positioned the sub-item with the
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -445,12 +465,14 @@ I have given `.box3` position relative and then positioned the sub-item with the
 
 A final interaction with another layout specification that is worth noting is the interaction between CSS Grid Layout and `display: contents`. The `contents` value of the display property is a new value that is described in the [Display specification](https://drafts.csswg.org/css-display/#box-generation) as follows:
 
-> “The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”
+> "The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree."
 
-If you set an item to `display: contents` the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don’t become part of the grid layout and so display using regular block layout.
+If you set an item to `display: contents` the box it would normally create disappears, and the boxes of the child elements appear as if they have risen up a level. This means that children of a grid item can become grid items. Sound odd? Here is a simple example. In the following markup, I have a grid and the first item on the grid is set to span all three column tracks. It contains three nested items. As these items are not direct children, they don't become part of the grid layout and so display using regular block layout.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -504,7 +526,9 @@ If you set an item to `display: contents` the box it would normally create disap
 If I now add `display: contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -558,7 +582,7 @@ If I now add `display: contents` to the rules for `box1`, the box for that item 
 
 This can be a way to get items nested into the grid to act as if they are part of the grid, and is a way around some of the issues that would be solved by subgrids once they are implemented. You can also use `display: contents` in a similar way with flexbox to enable nested items to become flex items.
 
-As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don’t be afraid to mix it with other methods of doing layout to get the different effects you need.
+As you can see from this guide, CSS Grid Layout is just one part of your toolkit. Don't be afraid to mix it with other methods of doing layout to get the different effects you need.
 
 ## See Also
 
@@ -570,47 +594,47 @@ As you can see from this guide, CSS Grid Layout is just one part of your toolkit
 3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
 4. **Guides**
 
-    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values, and writing modes](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+   2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+   3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+   4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+   5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+   6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+   7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+   8. [Grids, logical values, and writing modes](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+   9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+   11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 5. **Properties**
 
-    1. [grid](/pt-BR/docs/Web/CSS/grid)
-    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/pt-BR/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/pt-BR/docs/Web/CSS/grid-gap)
-    11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/pt-BR/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
+   1. [grid](/pt-BR/docs/Web/CSS/grid)
+   2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/pt-BR/docs/Web/CSS/grid-column-gap)
+   9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/pt-BR/docs/Web/CSS/grid-gap)
+   11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/pt-BR/docs/Web/CSS/grid-row-gap)
+   14. [grid-row-start](/pt-BR/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/pt-BR/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/pt-BR/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
 
-    1. [Grid](/pt-BR/docs/Glossary/Grid)
-    2. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-    5. [Grid areas](/pt-BR/docs/Glossary/Grid_areas)
-    6. [Gutters](/pt-BR/docs/Glossary/Gutters)
-    7. [Grid Axis](/pt-BR/docs/Glossary/Grid_Axis)
-    8. [Grid row](/pt-BR/docs/Glossary/Grid_rows)
-    9. [Grid column](/pt-BR/docs/Glossary/Grid_column)
+   1. [Grid](/pt-BR/docs/Glossary/Grid)
+   2. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
+   3. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
+   4. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
+   5. [Grid areas](/pt-BR/docs/Glossary/Grid_areas)
+   6. [Gutters](/pt-BR/docs/Glossary/Gutters)
+   7. [Grid Axis](/pt-BR/docs/Glossary/Grid_Axis)
+   8. [Grid row](/pt-BR/docs/Glossary/Grid_rows)
+   9. [Grid column](/pt-BR/docs/Glossary/Grid_column)

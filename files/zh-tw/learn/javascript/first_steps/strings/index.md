@@ -33,7 +33,7 @@ slug: Learn/JavaScript/First_steps/Strings
 剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)）。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -347,7 +347,7 @@ output = `I like the song "${song}". I gave it a score of ${
 let examScore = 45;
 let examHighestScore = 70;
 examReport = `You scored ${examScore}/${examHighestScore} (${Math.round(
-  (examScore / examHighestScore) * 100
+  (examScore / examHighestScore) * 100,
 )}%). ${
   examScore >= 49
     ? "Well done, you passed!"

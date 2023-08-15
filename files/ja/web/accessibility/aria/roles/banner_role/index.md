@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: banner ロール'
+title: "ARIA: banner ロール"
 slug: Web/Accessibility/ARIA/Roles/banner_role
 ---
 
@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/banner_role
 
 ```html
 <div role="banner">
-  <img src="companylogo.svg" alt="会社名"/>
+  <img src="companylogo.svg" alt="会社名" />
   <h1>タイトル</h1>
   <p>サブタイトル</p>
 </div>
@@ -43,8 +43,10 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ```html
 <div role="banner">
-  <a href="#nav" id="skipToMenu" class="skiptocontent">キーボードナビゲーションへ飛ぶ</a>
-  <img src="images/w3c.png" alt="W3C ロゴ">
+  <a href="#nav" id="skipToMenu" class="skiptocontent"
+    >キーボードナビゲーションへ飛ぶ</a
+  >
+  <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
 </div>
@@ -54,8 +56,10 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ```html
 <header>
-  <a href="#nav" id="skipToMenu" class="skiptocontent">キーボードナビゲーションへ飛ぶ</a>
-  <img src="images/w3c.png" alt="W3C ロゴ">
+  <a href="#nav" id="skipToMenu" class="skiptocontent"
+    >キーボードナビゲーションへ飛ぶ</a
+  >
+  <img src="images/w3c.png" alt="W3C ロゴ" />
   <h1>ARIA ランドマーク</h1>
   <p>容易なナビゲーションのためのページのサブセクションの特定</p>
 </header>

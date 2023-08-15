@@ -1,16 +1,6 @@
 ---
 title: proxy.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Proxy
-  - Reference
-  - WebExtensions
-  - unregister
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/unregister
 ---
 
 {{AddonSidebar()}}{{deprecated_header}}
@@ -26,7 +16,7 @@ C'est une fonction asynchrome qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var unregistering = browser.proxy.unregister()
+var unregistering = browser.proxy.unregister();
 ```
 
 ### Paramètres

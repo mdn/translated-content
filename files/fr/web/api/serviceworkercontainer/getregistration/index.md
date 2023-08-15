@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
-translation_of: Web/API/ServiceWorkerContainer/getRegistration
 ---
 
 {{APIRef("Service Workers API")}}
@@ -26,9 +25,10 @@ Une {{domxref("Promise")}} qui est résolue avec un objet {{domxref("ServiceWork
 ## Exemple
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then(function(registration) {
-  if(registration){
-    document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
+navigator.serviceWorker.getRegistration("/app").then(function (registration) {
+  if (registration) {
+    document.querySelector("#status").textContent =
+      "ServiceWorkerRegistration found.";
   }
 });
 ```

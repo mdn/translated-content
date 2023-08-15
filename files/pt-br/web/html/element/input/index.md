@@ -82,7 +82,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     Se o atributo **autocomplete** não está especificado num elemento `<input>`, o navegador usa o valor do atributo **autocomplete** do formulário dono do `<input>`. O formulário dono deste `<input>` é o elemento `<form>` que contém este `<input>` ou o elemento `<form>` cujo **id** é referenciado pelo atributo **form** do elemento `<input>`. Para mais informações, veja o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/form#autocomplete) no elemento {{HTMLElement("form")}}.
 
-    O atributo **autocomplete** também controla se o Firefox vai, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado e marcado (se aplicável)](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. A funcionalidade de persistir é habilitada por padrão. Definir o valor do atributo **autocomplete** para `off` desabilita esta funcionalidade; isto funciona mesmo quando o atributo **autocomplete** não se aplica ao {{HTMLElement("input")}} por causa de seu **type**. Veja {{bug(654072)}}.
+    O atributo **autocomplete** também controla se o Firefox vai, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado e marcado (se aplicável)](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. A funcionalidade de persistir é habilitada por padrão. Definir o valor do atributo **autocomplete** para `off` desabilita esta funcionalidade; isto funciona mesmo quando o atributo **autocomplete** não se aplica ao {{HTMLElement("input")}} por causa de seu **type**. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
 
 - {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -229,7 +229,9 @@ e.value = "foo";
 Se você quiser que o Firefox mostre uma mensagem de erro personalizada quando a validação de um campo falha, você pode usar o atributo `x-moz-errormessage` para isso:
 
 ```html
-<input type="email" x-moz-errormessage="Por favor, especifique um endereço de e-mail.">
+<input
+  type="email"
+  x-moz-errormessage="Por favor, especifique um endereço de e-mail." />
 ```
 
 Note, no entanto, que isso não é padronizado e não terá efeito em outros navegadores.
@@ -240,7 +242,7 @@ Note, no entanto, que isso não é padronizado e não terá efeito em outros nav
 
 ```html
 <!-- Um campo básico -->
-<input type="text" name="input" value="Digite aqui">
+<input type="text" name="input" value="Digite aqui" />
 ```
 
 ### Um caso de uso comum
@@ -248,10 +250,10 @@ Note, no entanto, que isso não é padronizado e não terá efeito em outros nav
 ```html
 <!-- Um formulário comum que inclui tags input -->
 <form action="getform.php" method="get">
-    Nome: <input type="text" name="nome" /><br />
-     Sobrenome: <input type="text" name="sobrenome" /><br />
-        E-mail: <input type="email" name="email_usuario" /><br />
-<input type="submit" value="Enviar" />
+  Nome: <input type="text" name="nome" /><br />
+  Sobrenome: <input type="text" name="sobrenome" /><br />
+  E-mail: <input type="email" name="email_usuario" /><br />
+  <input type="submit" value="Enviar" />
 </form>
 ```
 
@@ -265,11 +267,11 @@ Você pode usar o atributo [`mozactionhint`](/pt-BR/docs/Web/HTML/Element/input#
 
 ## Especificações
 
-| Especificação                                                                                                        | Estado                           | Comentários |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
+| Especificação                                                                            | Estado                   | Comentários |
+| ---------------------------------------------------------------------------------------- | ------------------------ | ----------- |
 | {{SpecName('HTML WHATWG', 'the-input-element.html#the-input-element', '&lt;input&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}                 | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                         | {{Spec2('HTML4.01')}}     |             |
+| {{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}               | {{Spec2('HTML5 W3C')}}   |             |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}                   | {{Spec2('HTML4.01')}}    |             |
 
 ## Compatibilidade com navegadores
 

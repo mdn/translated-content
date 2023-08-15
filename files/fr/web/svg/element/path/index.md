@@ -1,9 +1,6 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
-tags:
-  - SVG
-translation_of: Web/SVG/Element/path
 ---
 
 {{SVGRef}}

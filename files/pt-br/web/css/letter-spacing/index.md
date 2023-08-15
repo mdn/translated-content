@@ -18,7 +18,7 @@ letter-spacing: normal;
 /* <length> values */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
-letter-spacing: .3px;
+letter-spacing: 0.3px;
 
 /* Global values */
 letter-spacing: inherit;
@@ -52,11 +52,21 @@ letter-spacing: unset;
 ### CSS
 
 ```css
-.normal   { letter-spacing: normal; }
-.em-wide  { letter-spacing: 0.4em; }
-.em-wider { letter-spacing: 1em; }
-.em-tight { letter-spacing: -0.05em; }
-.px-wide  { letter-spacing: 6px; }
+.normal {
+  letter-spacing: normal;
+}
+.em-wide {
+  letter-spacing: 0.4em;
+}
+.em-wider {
+  letter-spacing: 1em;
+}
+.em-tight {
+  letter-spacing: -0.05em;
+}
+.px-wide {
+  letter-spacing: 6px;
+}
 ```
 
 ### Result
@@ -65,13 +75,13 @@ letter-spacing: unset;
 
 ## Specifications
 
-| Specification                                                                                        | Status                                   | Comment                                 |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| {{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}     | {{Spec2('CSS3 Text')}}             | No change.                              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}         | {{Spec2('CSS3 Transitions')}} | Defines `letter-spacing` as animatable. |
-| {{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}} | {{Spec2('CSS2.1')}}                 | No change.                              |
-| {{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}} | {{Spec2('SVG1.1')}}                 | Initial SVG definition.                 |
-| {{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}                         | {{Spec2('CSS1')}}                 | Initial definition.                     |
+| Specification                                                                | Status                        | Comment                                 |
+| ---------------------------------------------------------------------------- | ----------------------------- | --------------------------------------- |
+| {{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}      | {{Spec2('CSS3 Text')}}        | No change.                              |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}        | {{Spec2('CSS3 Transitions')}} | Defines `letter-spacing` as animatable. |
+| {{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}} | {{Spec2('CSS2.1')}}           | No change.                              |
+| {{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}}  | {{Spec2('SVG1.1')}}           | Initial SVG definition.                 |
+| {{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}                    | {{Spec2('CSS1')}}             | Initial definition.                     |
 
 {{cssinfo}}
 

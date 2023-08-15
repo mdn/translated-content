@@ -1,12 +1,6 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - JavaScript
-  - NeedsUpdate
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 
 {{JSRef("Global_Objects", "String")}}
@@ -61,13 +55,13 @@ new String(thing)
 Существует два способа добраться до конкретного символа в строке. В первом способе используется метод {{jsxref("String.prototype.charAt()", "charAt()")}}:
 
 ```js
-return 'кот'.charAt(1); // вернёт "о"
+return "кот".charAt(1); // вернёт "о"
 ```
 
 Другим способом (введённым в ECMAScript 5) является рассмотрение строки как массивоподобного объекта, в котором символы имеют соответствующие числовые индексы:
 
 ```js
-return 'кот'[1]; // вернёт "о"
+return "кот"[1]; // вернёт "о"
 ```
 
 При доступе к символам посредством нотации с квадратными скобками, попытка удалить символ, или присвоить значение числовому свойству закончится неудачей, поскольку эти свойства являются незаписываемыми и ненастраиваемыми. Смотрите документацию по методу {{jsxref("Object.defineProperty()")}} для дополнительной информации.
@@ -77,14 +71,15 @@ return 'кот'[1]; // вернёт "о"
 Разработчики на C имеют для сравнения строк функцию `strcmp()`. В JavaScript вы просто используете [операторы меньше и больше](/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F):
 
 ```js
-var a = 'a';
-var b = 'b';
-if (a < b) { // true
-  print(a + ' меньше чем ' + b);
+var a = "a";
+var b = "b";
+if (a < b) {
+  // true
+  print(a + " меньше чем " + b);
 } else if (a > b) {
-  print(a + ' больше чем ' + b);
+  print(a + " больше чем " + b);
 } else {
-  print(a + ' и ' + b + ' равны.');
+  print(a + " и " + b + " равны.");
 }
 ```
 
@@ -97,20 +92,20 @@ if (a < b) { // true
 Строковые литералы (обозначаемые двойными или одинарными кавычками) и строки, возвращённые вызовом `String` в неконструкторном контексте (то есть, без использования ключевого слова {{jsxref("Operators/new", "new")}}) являются строковыми примитивами. JavaScript автоматически преобразует примитивы в объекты `String`, так что на строковых примитивах возможно использовать методы объекта `String`. В контекстах, когда на примитивной строке вызывается метод или происходит поиск свойства, JavaScript автоматически оборачивает строковый примитив объектом и вызывает на нём метод или ищет в нём свойство.
 
 ```js
-var s_prim = 'foo';
+var s_prim = "foo";
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // выведет 'string'
-console.log(typeof s_obj);  // выведет 'object'
+console.log(typeof s_obj); // выведет 'object'
 ```
 
 Строковые примитивы и объекты `String` также дают разные результаты при использовании глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. Примитивы, передаваемые в `eval()`, трактуются как исходный код; объекты же `String` трактуются так же, как и все остальные объекты, а именно: возвращается сам объект. Например:
 
 ```js
-var s1 = '2 + 2';             // создаёт строковый примитив
-var s2 = new String('2 + 2'); // создаёт объект String
-console.log(eval(s1));        // выведет число 4
-console.log(eval(s2));        // выведет строку '2 + 2'
+var s1 = "2 + 2"; // создаёт строковый примитив
+var s2 = new String("2 + 2"); // создаёт объект String
+console.log(eval(s1)); // выведет число 4
+console.log(eval(s2)); // выведет строку '2 + 2'
 ```
 
 По этим причинам код может сломаться, если он получает объекты `String`, а ожидает строковые примитивы, хотя в общем случае вам не нужно беспокоиться о различиях между ними.
@@ -141,7 +136,7 @@ console.log(eval(s2.valueOf())); // выведет число 4
 
 ```js
 var num = 15;
-console.log(String.replace(num, /5/, '2'));
+console.log(String.replace(num, /5/, "2"));
 ```
 
 {{jsxref("Global_Objects/Array", "Общие методы", "#Array_generic_methods", 1)}} также доступны для объекта {{jsxref("Global_Objects/Array", "Array")}}.
@@ -152,8 +147,8 @@ console.log(String.replace(num, /5/, '2'));
 /*globals define*/
 // Предполагаем, что все требуемые методы экземпляров String уже присутствуют
 // (для них так же можно использовать полифилы, если их нет)
-(function() {
-  'use strict';
+(function () {
+  "use strict";
 
   var i,
     // Мы могли построить массив методов следующим образом, однако метод
@@ -162,16 +157,34 @@ console.log(String.replace(num, /5/, '2'));
     //   return typeof String[methodName] === 'function';
     // });
     methods = [
-      'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
-      'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
-      'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
-      'toLocaleUpperCase', 'localeCompare', 'match', 'search',
-      'replace', 'split', 'substr', 'concat', 'slice'
+      "quote",
+      "substring",
+      "toLowerCase",
+      "toUpperCase",
+      "charAt",
+      "charCodeAt",
+      "indexOf",
+      "lastIndexOf",
+      "startsWith",
+      "endsWith",
+      "trim",
+      "trimLeft",
+      "trimRight",
+      "toLocaleLowerCase",
+      "toLocaleUpperCase",
+      "localeCompare",
+      "match",
+      "search",
+      "replace",
+      "split",
+      "substr",
+      "concat",
+      "slice",
     ],
     methodCount = methods.length,
-    assignStringGeneric = function(methodName) {
+    assignStringGeneric = function (methodName) {
       var method = String.prototype[methodName];
-      String[methodName] = function(arg1) {
+      String[methodName] = function (arg1) {
         return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
       };
     };
@@ -179,7 +192,7 @@ console.log(String.replace(num, /5/, '2'));
   for (i = 0; i < methodCount; i++) {
     assignStringGeneric(methods[i]);
   }
-}());
+})();
 ```
 
 ## Примеры

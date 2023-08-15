@@ -1,17 +1,16 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
-translation_of: Web/HTML/Element/input/datetime-local
 ---
 
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} элемент типа **`datetime-local`** создаёт поля ввода, позволяющие легко ввести дату и время — год, месяц, день, часы и минуты.
 
-Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text).
+Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого [`<input type="text">`](/ru/docs/Web/HTML/Element/input/text).
 
 ```html
-<input id="datetime" type="datetime-local">
+<input id="datetime" type="datetime-local" />
 ```
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
@@ -26,12 +25,12 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 ![](datetime-local-picker-edge2.png)
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                            |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **события**                     | {{event("change")}} и {{event("input")}}.                                                                                                                                                                  |
-| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step).           |
-| **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                     |
-| **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}. |
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                          |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **события**                     | {{event("change")}} и {{event("input")}}.                                                                                                                                                                                   |
+| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step). |
+| **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                           |
+| **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.                                                             |
 
 ## Значение
 
@@ -39,7 +38,11 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
-<input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30">
+<input
+  id="party"
+  type="datetime-local"
+  name="partydate"
+  value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('Значение', 600, 60) }}
@@ -52,7 +55,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 ```js
 var dateControl = document.querySelector('input[type="datetime-local"]');
-dateControl.value = '2017-06-01T08:30';
+dateControl.value = "2017-06-01T08:30";
 ```
 
 ## Использование локальных входных данных datetime
@@ -67,8 +70,8 @@ dateControl.value = '2017-06-01T08:30';
 
 ```html
 <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate">
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input id="party" type="datetime-local" name="partydate" />
 </form>
 ```
 
@@ -79,10 +82,15 @@ dateControl.value = '2017-06-01T08:30';
 Вы можете использовать [`min`](/ru/docs/Web/HTML/Element/input#min) и [`max`](/ru/docs/Web/HTML/Element/input#max) атрибуты чтобы ограничить дату/время, которое может выбрать пользователь. В примере ниже мы устанавливает минимальные дату и время в `2017-06-01T08:30` и максимальные в `2017-06-30T16:30`:
 
 ```html
-  <form>
-    <label for="party">Enter a date and time for your party booking:</label>
-    <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30">
-  </form>
+<form>
+  <label for="party">Enter a date and time for your party booking:</label>
+  <input
+    id="party"
+    type="datetime-local"
+    name="partydate"
+    min="2017-06-01T08:30"
+    max="2017-06-30T16:30" />
+</form>
 ```
 
 {{ EmbedLiveSample('Установка_максимума_и_минимума_даты_и_времени', 600, 40) }}
@@ -100,27 +108,26 @@ dateControl.value = '2017-06-01T08:30';
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/en-US/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Element/input/datetime) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
-For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden) input type. For example:
+For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/ru/docs/Web/HTML/Element/input/hidden) input type. For example:
 
 ```html
-<input type="hidden" id="timezone" name="timezone" value="-08:00">
+<input type="hidden" id="timezone" name="timezone" value="-08:00" />
 ```
 
 On the other hand, if you were required to allow the user to enter a timezone along with a datetime entry, you could provide a means of inputting a timezone, such as a {{htmlelement("select")}} element:
 
 ```html
 <select name="timezone_offset" id="timezone-offset" class="span5">
-    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
-    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
-    <option value="-10:00">(GMT -10:00) Hawaii</option>
-    <option value="-09:50">(GMT -9:30) Taiohae</option>
-    <option value="-09:00">(GMT -9:00) Alaska</option>
-    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+  <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+  <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+  <option value="-10:00">(GMT -10:00) Hawaii</option>
+  <option value="-09:50">(GMT -9:30) Taiohae</option>
+  <option value="-09:00">(GMT -9:00) Alaska</option>
+  <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
 
   ...
-
 </select>
 ```
 
@@ -138,14 +145,23 @@ Let's look at an example — here we've set minimum and maximum datetimes, and a
 
 ```html
 <form>
-    <div>
-        <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-        <input id="party" type="datetime-local" name="partydate" min="2017-06-01T08:30" max="2017-06-30T16:30" required>
-        <span class="validity"></span>
-    </div>
-    <div>
-        <input type="submit" value="Book party!">
-    </div>
+  <div>
+    <label for="party"
+      >Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      required />
+    <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit" value="Book party!" />
+  </div>
 </form>
 ```
 
@@ -161,9 +177,9 @@ Here's the CSS used in the above example. Here we make use of the {{cssxref(":va
 
 ```css
 div {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -171,14 +187,14 @@ label {
   width: 300px;
 }
 
-input:invalid+span:after {
-    content: '✖';
-    padding-left: 5px;
+input:invalid + span:after {
+  content: "✖";
+  padding-left: 5px;
 }
 
-input:valid+span:after {
-    content: '✓';
-    padding-left: 5px;
+input:valid + span:after {
+  content: "✓";
+  padding-left: 5px;
 }
 ```
 
@@ -208,16 +224,24 @@ One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Element/input#patt
 ```html
 <form>
   <div>
-    <label for="party">Choose your preferred party date and time (required, June 1st 8.30am to June 30th 4.30pm):</label>
-    <input id="party" type="datetime-local" name="partydate"
-           min="2017-06-01T08:30" max="2017-06-30T16:30"
-           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required>
+    <label for="party"
+      >Choose your preferred party date and time (required, June 1st 8.30am to
+      June 30th 4.30pm):</label
+    >
+    <input
+      id="party"
+      type="datetime-local"
+      name="partydate"
+      min="2017-06-01T08:30"
+      max="2017-06-30T16:30"
+      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-    <input type="submit" value="Book party!">
+    <input type="submit" value="Book party!" />
   </div>
-  <input type="hidden" id="timezone" name="timezone" value="-08:00">
+  <input type="hidden" id="timezone" name="timezone" value="-08:00" />
 </form>
 ```
 
@@ -239,7 +263,7 @@ input:invalid + span {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
   position: absolute;
   right: -18px;
 }
@@ -249,7 +273,7 @@ input:valid + span {
 }
 
 input:valid + span:after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   right: -18px;
 }
@@ -269,7 +293,7 @@ The HTML looks like so:
 <form>
   <div class="nativeDateTimePicker">
     <label for="party">Choose a date and time for your party:</label>
-    <input type="datetime-local" id="party" name="bday">
+    <input type="datetime-local" id="party" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Choose a date and time for your party:</p>
@@ -277,8 +301,7 @@ The HTML looks like so:
     <div>
       <span>
         <label for="day">Day:</label>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
       </span>
       <span>
         <label for="month">Month:</label>
@@ -299,20 +322,17 @@ The HTML looks like so:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -335,15 +355,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -352,29 +372,29 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // define variables
-var nativePicker = document.querySelector('.nativeDateTimePicker');
-var fallbackPicker = document.querySelector('.fallbackDateTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+var nativePicker = document.querySelector(".nativeDateTimePicker");
+var fallbackPicker = document.querySelector(".fallbackDateTimePicker");
+var fallbackLabel = document.querySelector(".fallbackLabel");
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+var yearSelect = document.querySelector("#year");
+var monthSelect = document.querySelector("#month");
+var daySelect = document.querySelector("#day");
+var hourSelect = document.querySelector("#hour");
+var minuteSelect = document.querySelector("#minute");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
-test.type = 'date';
+var test = document.createElement("input");
+test.type = "date";
 // if it does, run the code inside the if() {} block
-if(test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the days and years dynamically
   // (the months are always the same, therefore hardcoded)
@@ -387,7 +407,7 @@ if(test.type === 'text') {
 function populateDays(month) {
   // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
@@ -395,19 +415,32 @@ function populateDays(month) {
   var dayNum;
 
   // 31 or 30 days?
-  if(month === 'January' | month === 'March' | month === 'May' | month === 'July' | month === 'August' | month === 'October' | month === 'December') {
+  if (
+    (month === "January") |
+    (month === "March") |
+    (month === "May") |
+    (month === "July") |
+    (month === "August") |
+    (month === "October") |
+    (month === "December")
+  ) {
     dayNum = 31;
-  } else if(month === 'April' | month === 'June' | month === 'September' | month === 'November') {
+  } else if (
+    (month === "April") |
+    (month === "June") |
+    (month === "September") |
+    (month === "November")
+  ) {
     dayNum = 30;
   } else {
-  // If month is February, calculate whether it is a leap year or not
+    // If month is February, calculate whether it is a leap year or not
     var year = yearSelect.value;
-    (year - 2016) % 4 === 0 ? dayNum = 29 : dayNum = 28;
+    (year - 2016) % 4 === 0 ? (dayNum = 29) : (dayNum = 28);
   }
 
   // inject the right number of new <option> elements into the day <select>
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
+  for (i = 1; i <= dayNum; i++) {
+    var option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -415,22 +448,22 @@ function populateDays(month) {
   // if previous day has already been set, set daySelect's value
   // to that day, to avoid the day jumping back to 1 when you
   // change the year
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // If the previous day was set to a high number, say 31, and then
     // you chose a month with less total days in it (e.g. February),
     // this part of the code ensures that the highest day available
     // is selected, rather than showing a blank daySelect
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -442,57 +475,57 @@ function populateYears() {
   var year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (var i = 0; i <= 100; i++) {
+    var option = document.createElement("option");
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 function populateHours() {
   // populate the hours <select> with the 24 hours of the day
-  for(var i = 0; i <= 23; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (var i = 0; i <= 23; i++) {
+    var option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     hourSelect.appendChild(option);
   }
 }
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (var i = 0; i <= 59; i++) {
+    var option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // when the month or year <select> values are changed, rerun populateDays()
 // in case the change affected the number of available days
-yearSelect.onchange = function() {
+yearSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
-monthSelect.onchange = function() {
+monthSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
 //preserve day selection
 var previousDay;
 
 // update what day has been set to previously
 // see end of populateDays() for usage
-daySelect.onchange = function() {
+daySelect.onchange = function () {
   previousDay = daySelect.value;
-}
+};
 ```
 
 ## Specifications
 
-| Specification                                                                                                                                                                | Status                           | Comments |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| Specification                                                                                                                    | Status                   | Comments |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('HTML WHATWG', 'forms.html#local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}     | {{Spec2('HTML5 W3C')}}     |          |
+| {{SpecName('HTML5 W3C', 'forms.html##local-date-and-time-state-(type=datetime-local)', '&lt;input type="datetime-local"&gt;')}}  | {{Spec2('HTML5 W3C')}}   |          |
 
 ## Browser compatibility
 
