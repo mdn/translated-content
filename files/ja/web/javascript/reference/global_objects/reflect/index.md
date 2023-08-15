@@ -50,16 +50,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ```js
 const duck = {
-  name: 'Maurice',
-  color: 'white',
-  greeting: function() {
+  name: "Maurice",
+  color: "white",
+  greeting: function () {
     console.log(`Quaaaack! My name is ${this.name}`);
-  }
-}
+  },
+};
 
-Reflect.has(duck, 'color');
+Reflect.has(duck, "color");
 // true
-Reflect.has(duck, 'haircut');
+Reflect.has(duck, "haircut");
 // false
 ```
 
@@ -73,7 +73,7 @@ Reflect.ownKeys(duck);
 ### オブジェクトへの新しいプロパティの追加
 
 ```js
-Reflect.set(duck, 'eyes', 'black');
+Reflect.set(duck, "eyes", "black");
 // 成功した場合は "true" を返します。
 // "duck" には "eyes: 'black'" プロパティが設定されました。
 ```
