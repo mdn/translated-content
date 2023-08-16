@@ -535,40 +535,40 @@ window.addEventListener("load", drawOutput);
 
 우리는 말을 하면서 특정 단어를 강세를 두고 발음하는 방법으로 의미를 다르게 표현합니다. 마찬가지로, 글에서는 단어에 강세를 두기 위해 이탤릭체로 표현하는 경향이 있습니다. 예를 들어, 다음 두 문장은 다른 의미를 가집니다.
 
-I am glad you weren't late.
+당신이 늦지 않아서 다행입니다.
 
-I am _glad_ you weren't _late_.
+당신이 _늦지_ 않아서 _다행_\입니다.
 
 첫 문장은 상대가 늦지 않은 것에 대해 진심으로 안도하는 것처럼 들립니다. 이와는 대조적으로, 두 번째 문장은 상대가 조금 늦게 도착한 것에대해 비꼬거나 짜증을 표현하는 것처럼 들립니다.
 
 HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("em")}} (emphasis) 요소를 사용합니다. 문서를 더 흥미롭게 읽게 될 뿐만 아니라, 화면판독기에 인식되면 다른 톤의 목소리로 표현됩니다. 브라우저에서는 기본적으로 이탤릭체로 스타일을 지정하지만, 단지 이탤릭체로 스타일링하기 위해 이 태그를 사용하는 것은 지양합니다. 스타일링을 위해서는{{htmlelement("span")}} 요소에 약간의 CSS를 더하거나 {{htmlelement("i")}}요소를 사용할 수 있습니다.(아래 참조).
 
 ```html
-<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+<p>당신이 <em>늦지</em> 않아서 <em>다행</em>입니다.</p>
 ```
 
 ### 강조(Strong importance)
 
 우리는 중요한 단어를 강조하기 위해 강세를 두고 말하거나 글자를 두껍게 표현합니다. 예를들면,
 
-This liquid is **highly toxic**.
+이 액체는 **독성이 강합니다**.
 
-I am counting on you. **Do not** be late!
+당신만 믿고 있어요. 늦지 **마세요**!
 
 HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("strong")}} (strong importance)요소를 사용합니다. 문서를 더 유용하게 만드는 것뿐만 아니라, 화면판독기에 인식되면 다른 톤의 목소리로 표현됩니다. 브라우저에서는 기본적으로 굵은 텍스트로 스타일을 지정하지만, 단지 굵게 스타일링하기 위해 이 태그를 사용하는 것은 지양합니다. 스타일링을 위해서는 {{htmlelement("span")}} 요소에 약간의 CSS를 더하거나 {{htmlelement("b")}} 요소를 사용할 수 있습니다.(아래 참조).
 
 ```html
-<p>This liquid is <strong>highly toxic</strong>.</p>
+<p>이 액체는 <strong>독성이 강합니다</strong>.</p>
 
-<p>I am counting on you. <strong>Do not</strong> be late!</p>
+<p>당신만 믿고 있어요. 늦지 <strong>마세요</strong>!</p>
 ```
 
 원한다면 각각의 태그가 서로의 안에 위치할 수 있습니다.
 
 ```html
 <p>
-  This liquid is <strong>highly toxic</strong> — if you drink it,
-  <strong>you may <em>die</em></strong
+  이 액체는 <strong>독성이 강합니다</strong>. 그것을 마시면,
+  <strong>당신은 <em>사망</em>할 수도 있습니다</strong
   >.
 </p>
 ```
@@ -659,27 +659,26 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 > **참고:** 밑줄에 대한 위험성 중 하나: **사람들은 밑줄을 하이퍼링크와 강하게 연관시킨다.** 따라서 웹에서는 링크에만 밑줄을 긋는 것이 가장 좋다. 의미론적으로 적합한 경우 `<u>` 요소를 사용하되, CSS를 사용하여 기본 밑줄을 웹에서 더 적합하게 변경할 수 있는지 고려한다. 그것이 어떻게 이루어질 수 있는지는 아래의 예에서 확인할 수 있다.
 
 ```html
-<!-- scientific names -->
+<!-- 학명 -->
 <p>
-  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
-  hummingbird in Eastern North America.
+  붉은목벌새 (<i>Archilochus colubris</i>)는 북아메리카 동부에서
+  가장 흔한 벌새입니다.
 </p>
 
-<!-- foreign words -->
+<!-- 외래어 -->
 <p>
-  The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,
-  <i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.
+  메뉴에는 <i lang="uk-latn">vatrushka</i>,
+  <i lang="id">nasi goreng</i>, 그리고 <i lang="fr">soupe à l'oignon</i>과 같은 이국적인 단어가 가득했습니다.
 </p>
 
-<!-- a known misspelling -->
-<p>Someday I'll learn how to <u>spel</u> better.</p>
+<!-- 알려진 철자 오류 -->
+<p>언젠가 <u>철자</u>를 더 잘 쓰는 방법을 배울 거예요.</p>
 
-<!-- Highlight keywords in a set of instructions -->
+<!-- 일련의 지침에서 키워드를 강조 표시합니다 -->
 <ol>
-  <li><b>Slice</b> two pieces of bread off the loaf.</li>
+  <li>빵 한 덩어리에서 빵 두 조각을 <b>자릅니다</b>.</li>
   <li>
-    <b>Insert</b> a tomato slice and a leaf of lettuce between the slices of
-    bread.
+    빵 조각 사이에 토마토 슬라이스와 상추 한 잎을 <b>넣습니다</b>.
   </li>
 </ol>
 ```
