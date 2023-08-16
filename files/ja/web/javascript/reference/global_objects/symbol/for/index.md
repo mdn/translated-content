@@ -42,23 +42,23 @@ Symbol.for(key);
 ### Symbol.for() の使用
 
 ```js
-Symbol.for('foo'); // create a new global symbol
-Symbol.for('foo'); // retrieve the already created symbol
+Symbol.for("foo"); // create a new global symbol
+Symbol.for("foo"); // retrieve the already created symbol
 
 // Same global symbol, but not locally
-Symbol.for('bar') === Symbol.for('bar'); // true
-Symbol('bar') === Symbol('bar'); // false
+Symbol.for("bar") === Symbol.for("bar"); // true
+Symbol("bar") === Symbol("bar"); // false
 
 // The key is also used as the description
-var sym = Symbol.for('mario');
+var sym = Symbol.for("mario");
 sym.toString(); // "Symbol(mario)"
 ```
 
 グローバルシンボルキーや他の (ライブラリコードの) グローバルシンボルとの名前の衝突を避けるために、シンボルの前に接頭辞をつけると良いかもしれません。
 
 ```js
-Symbol.for('mdn.foo');
-Symbol.for('mdn.bar');
+Symbol.for("mdn.foo");
+Symbol.for("mdn.bar");
 ```
 
 ## 仕様書

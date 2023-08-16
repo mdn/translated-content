@@ -21,9 +21,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
 
 ```js
 var re = /(hi)/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastParen; // "hi"
-RegExp['$+'];     // "hi"
+RegExp["$+"]; // "hi"
 ```
 
 ## 仕様書

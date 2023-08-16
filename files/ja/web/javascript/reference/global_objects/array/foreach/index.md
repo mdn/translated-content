@@ -15,19 +15,33 @@ l10n:
 
 ```js
 // アロー関数
-forEach((element) => { /* … */ })
-forEach((element, index) => { /* … */ })
-forEach((element, index, array) => { /* … */ })
+forEach((element) => {
+  /* … */
+});
+forEach((element, index) => {
+  /* … */
+});
+forEach((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-forEach(callbackFn)
-forEach(callbackFn, thisArg)
+forEach(callbackFn);
+forEach(callbackFn, thisArg);
 
 // インラインコールバック関数
-forEach(function(element) { /* … */ })
-forEach(function(element, index) { /* … */ })
-forEach(function(element, index, array){ /* … */ })
-forEach(function(element, index, array) { /* … */ }, thisArg)
+forEach(function (element) {
+  /* … */
+});
+forEach(function (element, index) {
+  /* … */
+});
+forEach(function (element, index, array) {
+  /* … */
+});
+forEach(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -132,7 +146,7 @@ console.log({ numCallbackRuns });
 ### for ループから forEach への変換
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copyItems = [];
 
 // before
@@ -150,7 +164,7 @@ items.forEach((item) => {
 
 > **メモ:** 配列の内容をコンソールに表示するために、配列の整形済みのバージョンを表示する {{domxref("Console/table", "console.table()")}} を使用することができます。
 >
->以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
+> 以下の例では同じことを `forEach()` を使用して行う他の方法を説明しています。
 
 次のコードは配列の要素ごとに、コンソールに 1 行ずつ要素の内容を出力します。
 
@@ -228,10 +242,10 @@ const obj2 = copy(obj1); // obj2 looks like obj1 now
 `forEach()` は反復処理の前に配列のコピーを生成しません。
 
 ```js
-const words = ['one', 'two', 'three', 'four'];
+const words = ["one", "two", "three", "four"];
 words.forEach((word) => {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift(); // 'one' が配列から削除される
   }
 }); // one // two // four
@@ -254,7 +268,7 @@ const flatten = (arr) => {
     }
   });
   return result;
-}
+};
 
 // 使用方法
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
