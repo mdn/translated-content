@@ -1,5 +1,5 @@
 ---
-title: HTML text fundamentals
+title: HTML 텍스트 기본
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
