@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substring
 
 {{JSRef}}
 
-{{jsxref("String")}} 的 **`substring()`** 方法返回该字符串从起始索引到结束索引（不包括）的部分，如果未提供结束索引，则返回到字符串末尾的部份。
+{{jsxref("String")}} 的 **`substring()`** 方法返回该字符串从起始索引到结束索引（不包括）的部分，如果未提供结束索引，则返回到字符串末尾的部分。
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 
@@ -29,7 +29,7 @@ substring(indexStart, indexEnd)
 
 ## 描述
 
-`substring()` 方法从 `indexStart` 开始提取字符，直到（但不包括）`indexEnd`。具体来说：
+`substring()` 方法从 `indexStart` 开始提取字符，直到（_但不包括_）`indexEnd`。具体来说：
 
 - 如果省略了 `indexEnd`，则 `substring()` 提取字符直到字符串的末尾。
 - 如果 `indexStart` 等于 `indexEnd`，则 `substring()` 返回一个空字符串。
@@ -43,7 +43,7 @@ substring(indexStart, indexEnd)
 
 ### 使用 substring()
 
-下例使用 `substring` 输出字符串 "`Mozilla`" 中的字符：
+下例使用 `substring` 输出字符串 `"Mozilla"` 中的字符：
 
 ```js
 const anyString = "Mozilla";
@@ -140,7 +140,7 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-请注意，如果 `oldS` 本身是 `newS` 的子字符串，这可能导致无限循环，例如，假如你尝试在此处用 '`OtherWorld`' 替换 '`World`'。
+请注意，如果 `oldS` 本身是 `newS` 的子字符串，这可能导致无限循环，例如，假如你尝试在此处用 `"OtherWorld"` 替换 `"World"`。
 
 替换字符串的更好方法如下：
 
@@ -150,7 +150,7 @@ function replaceString(oldS, newS, fullS) {
 }
 ```
 
-上面的代码仅作为子字符串操作的示例。如果你需要替换子字符串，大多数情况下你会想使用 `String.prototype.replace()` 函数。
+上面的代码仅作为子字符串操作的示例。如果你需要替换子字符串，大多数情况下你会想要使用 {{jsxref("String.prototype.replace()")}} 函数。
 
 ## 规范
 
