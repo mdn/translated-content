@@ -41,8 +41,8 @@ regexObj.compile(pattern, flags)
 次の例では、新しいパターンとフラグで正規表現を再コンパイルする方法を示します。
 
 ```js
-var regexObj = new RegExp('foo', 'gi');
-regexObj.compile('new foo', 'g');
+var regexObj = new RegExp("foo", "gi");
+regexObj.compile("new foo", "g");
 ```
 
 ## 仕様書

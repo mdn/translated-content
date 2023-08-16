@@ -31,9 +31,9 @@ regexp[Symbol.match](str)
 たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
-'abc'.match(/a/);
+"abc".match(/a/);
 
-/a/[Symbol.match]('abc');
+/a/[Symbol.match]("abc");
 ```
 
 このメソッドは、`RegExp` サブクラス内で一致の振る舞いをカスタマイズするために存在しています。
@@ -46,9 +46,9 @@ regexp[Symbol.match](str)
 
 ```js
 let re = /[0-9]+/g;
-let str = '2016-01-02';
+let str = "2016-01-02";
 let result = re[Symbol.match](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### サブクラスで @@match を使用
@@ -63,13 +63,13 @@ class MyRegExp extends RegExp {
     return {
       group(n) {
         return result[n];
-      }
+      },
     };
   }
 }
 
-let re = new MyRegExp('([0-9]+)-([0-9]+)-([0-9]+)');
-let str = '2016-01-02';
+let re = new MyRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
+let str = "2016-01-02";
 let result = str.match(re); // String.prototype.match calls re[@@match].
 console.log(result.group(1)); // 2016
 console.log(result.group(2)); // 01

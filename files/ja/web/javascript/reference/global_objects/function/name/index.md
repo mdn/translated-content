@@ -18,25 +18,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 次のようなソースコードは、
 
 ```js
-function Foo() {};
+function Foo() {}
 let foo = new Foo();
 
-if (foo.constructor.name === 'Foo') {
+if (foo.constructor.name === "Foo") {
   console.log("'foo' は 'Foo' のインスタンスである");
 } else {
-  console.log('おおっと！');
+  console.log("おおっと！");
 }
 ```
 
 このように圧縮されるかもしれません。
 
 ```js
-function a() {};
+function a() {}
 let b = new a();
-if (b.constructor.name === 'Foo') {
+if (b.constructor.name === "Foo") {
   console.log("'foo' は 'Foo' のインスタンスである");
 } else {
-  console.log('おおっと！');
+  console.log("おおっと！");
 }
 ```
 
@@ -58,7 +58,7 @@ doSomething.name; // "doSomething"
 構文 `new Function(...)` または単に `Function(...)` で関数を作成すると、 {{jsxref("Function")}} オブジェクトが作成され、その名前は "anonymous" になります。
 
 ```js
-(new Function).name; // "anonymous"
+new Function().name; // "anonymous"
 ```
 
 ### 無名関数式
@@ -66,7 +66,7 @@ doSomething.name; // "doSomething"
 `function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` (空文字列) になっています。
 
 ```js
-(function() {}).name; // ""
+(function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
@@ -75,9 +75,9 @@ doSomething.name; // "doSomething"
 変数とメソッドは、構文上の位置から無名関数の名前を推論できます (ECMAScript 2015 から)。
 
 ```js
-let f = function() {};
+let f = function () {};
 let object = {
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
 console.log(f.name); // "f"
@@ -88,23 +88,27 @@ console.log(object.someMethod.name); // "someMethod"
 
 ```js
 let object = {
-  someMethod: function object_someMethod() {}
+  someMethod: function object_someMethod() {},
 };
 console.log(object.someMethod.name); // "object_someMethod" と表示
 
-try { object_someMethod } catch(e) { console.log(e); }
+try {
+  object_someMethod;
+} catch (e) {
+  console.log(e);
+}
 // ReferenceError: object_someMethod is not defined
 ```
 
 name プロパティは読み取り専用であり、代入演算子で変更することはできません。
 
 ```js
- let object = {
+let object = {
   // anonymous
-  someMethod: function() {}
+  someMethod: function () {},
 };
 
-object.someMethod.name = 'otherMethod';
+object.someMethod.name = "otherMethod";
 console.log(object.someMethod.name); // someMethod
 ```
 
@@ -114,7 +118,7 @@ console.log(object.someMethod.name); // someMethod
 
 ```js
 var o = {
-  foo(){}
+  foo() {},
 };
 o.foo.name; // "foo";
 ```
@@ -124,7 +128,7 @@ o.foo.name; // "foo";
 {{jsxref("Function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
 
 ```js
-function foo() {};
+function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
@@ -134,8 +138,8 @@ foo.bind({}).name; // "bound foo"
 
 ```js
 let o = {
-  get foo(){},
-  set foo(x){}
+  get foo() {},
+  set foo(x) {},
 };
 
 var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
@@ -148,7 +152,7 @@ descriptor.set.name; // "set foo";
 `obj.constructor.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
 
 ```js
-function Foo() {}  // ES2015 構文の場合: class Foo {}
+function Foo() {} // ES2015 構文の場合: class Foo {}
 
 var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // "Foo" と表示
@@ -169,8 +173,8 @@ class Foo {
 
 ```js
 function Foo() {}
-Object.defineProperty(Foo, 'name', { writable: true });
-Foo.name = function() {};
+Object.defineProperty(Foo, "name", { writable: true });
+Foo.name = function () {};
 ```
 
 `fooInstance.constructor.name` で `fooInstance` のクラスを取得しようとしても、得られるのはクラス名ではなく静的メソッドへの参照です。例えば:
@@ -183,7 +187,7 @@ console.log(fooInstance.constructor.name); // 関数 name() を表示
 先ほどの ES5 の構文の例では、Chrome や Firefox での `Foo.name` の静的な定義の際に _writable_ を指定しています。このような独自の手法を用いなければ、デフォルトでは _read-only_ となります:
 
 ```js
-Foo.name = 'Hello';
+Foo.name = "Hello";
 console.log(Foo.name); // Foo が static name() を持つ場合は "Hello"、そうでなければ "Foo" と表示する。
 ```
 
@@ -197,8 +201,8 @@ console.log(Foo.name); // Foo が static name() を持つ場合は "Hello"、そ
 let sym1 = Symbol("foo");
 let sym2 = Symbol();
 let o = {
-  [sym1]: function(){},
-  [sym2]: function(){}
+  [sym1]: function () {},
+  [sym2]: function () {},
 };
 
 o[sym1].name; // "[foo]"
