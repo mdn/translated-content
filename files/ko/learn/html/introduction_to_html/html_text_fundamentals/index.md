@@ -86,7 +86,7 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 ### 왜 우리는 구조가 필요할까요?
 
-이 질문에 대답하기 위해, [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html) — 이 글에서 작동 원리를 보여주는 예시 첫 부분 (맛있는 hummus 레시피)- 을 봅시다. 이후 실습에서 필요하기 때문에 당신의 로컬 저장소에 이 파일의 복사본을 저장해야 합니다. 이 문서의 body는 다양한 컨텐츠 조각들을 가지고 있습니다. 이것들이 Marked up 된 것은 아니지만 줄바꿈으로 구분되어 있습니다. (다음 줄로 가기 위해 Enter/Return이 눌림)
+이 질문에 대답하기 위해, [text-start.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html) — 이 글에서 작동 원리를 보여주는 예시 첫 부분 (맛있는 후무스 레시피)- 을 봅시다. 이후 실습에서 필요하기 때문에 당신의 로컬 저장소에 이 파일의 복사본을 저장해야 합니다. 이 문서의 body는 다양한 컨텐츠 조각들을 가지고 있습니다. 이것들이 Marked up 된 것은 아니지만 줄바꿈으로 구분되어 있습니다. (다음 줄로 가기 위해 Enter/Return이 눌림)
 
 하지만, 당신이 브라우저에서 문서를 열어보았을 때 당신은 텍스트가 한 덩어리로 뭉쳐있는 것을 볼 것입니다!
 
@@ -105,7 +105,7 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 실제 예시에 바로 적용해 봅시다. 아래 예시에서, Input 부분에 있는 raw text에 요소를 더해서 Output 부분에 heading과 두 문단으로 나오도록 해 봅시다.
 
-실수를 하면 언제든 Reset 버튼을 눌러 리셋할 수 있습니다. 진행 중 막히면, Show solution 버튼을 눌러 답을 볼 수 있습니다.
+실수를 하면 언제든 초기화 버튼을 눌러 리셋할 수 있습니다. 진행 중 막히면, 해답 보기 버튼을 눌러 답을 볼 수 있습니다.
 
 ```html hidden
 <h2>입력</h2>
