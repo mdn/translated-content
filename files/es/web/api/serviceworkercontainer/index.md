@@ -53,7 +53,7 @@ if ("serviceWorker" in navigator) {
     .then((registration) => {
       console.log(
         "El registro del service worker se realizó correctamente:",
-        registration
+        registration,
       );
 
       // En este punto, opcionalmente puede hacer algo
@@ -72,7 +72,7 @@ if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
     console.log(
       "Esta página está actualmente controlada por: ",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   }
 
@@ -81,7 +81,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.oncontrollerchange = () => {
     console.log(
       "Esta página ahora está controlada por: ",
-      navigator.serviceWorker.controller
+      navigator.serviceWorker.controller,
     );
   };
 } else {
