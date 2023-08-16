@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 ## 構文
 
 ```js
-formatToParts(list)
+formatToParts(list);
 ```
 
 ### 引数
@@ -35,8 +35,11 @@ formatToParts(list)
 ### formatToParts の使用
 
 ```js
-const fruits = ['Apple', 'Orange', 'Pineapple'];
-const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
+const fruits = ["Apple", "Orange", "Pineapple"];
+const myListFormat = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "conjunction",
+});
 
 console.table(myListFormat.formatToParts(fruits));
 // [

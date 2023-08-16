@@ -26,7 +26,7 @@ toISOString()
 ### toISOString() の使用
 
 ```js
-const today = new Date('05 October 2011 14:48 UTC');
+const today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // 2011-10-05T14:48:00.000Z を返す
 ```

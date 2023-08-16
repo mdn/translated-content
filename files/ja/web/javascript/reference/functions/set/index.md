@@ -47,13 +47,13 @@ const language = {
   set current(name) {
     this.log.push(name);
   },
-  log: []
-}
+  log: [],
+};
 
-language.current = 'EN';
+language.current = "EN";
 console.log(language.log); // ['EN']
 
-language.current = 'FA';
+language.current = "FA";
 console.log(language.log); // ['EN', 'FA']
 ```
 
@@ -72,33 +72,37 @@ delete language.current;
 *既存の*オブジェクトにセッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', {
-  set: function(x) { this.a = x / 2; }
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
 });
 
 o.b = 10;
 // セッターを実行し、 10 / 2 (5) を 'a' プロパティに代入
 
-console.log(o.a)
+console.log(o.a);
 //  5
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  baz: 'bar',
-  set [expr](v) { this.baz = v; }
+  baz: "bar",
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz);
 //  "bar"
 
-obj.foo = 'baz';
+obj.foo = "baz";
 // セッターを実行
 
 console.log(obj.baz);
