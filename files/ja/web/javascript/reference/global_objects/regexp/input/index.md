@@ -19,12 +19,12 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 
 ```js
 var re = /hi/g;
-re.test('hi there!');
-RegExp.input;         // "hi there!"
-re.test('foo');       // new test, non-matching
-RegExp.$_;            // "hi there!"
-re.test('hi world!'); // new test, matching
-RegExp.$_;            // "hi world!"
+re.test("hi there!");
+RegExp.input; // "hi there!"
+re.test("foo"); // new test, non-matching
+RegExp.$_; // "hi there!"
+re.test("hi world!"); // new test, matching
+RegExp.$_; // "hi world!"
 ```
 
 ## 仕様書

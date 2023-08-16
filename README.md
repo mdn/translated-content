@@ -1,6 +1,6 @@
 # Contributing to the translated content of MDN Web Docs
 
-:tada: First of all, thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)’ translated content! :tada:
+:tada: First of all, thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)' translated content! :tada:
 
 The following is a set of guidelines for contributing to the [translated content of MDN Web Docs](https://github.com/mdn/translated-content), which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 

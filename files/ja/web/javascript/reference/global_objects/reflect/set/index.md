@@ -44,23 +44,23 @@ Reflect.set(target, propertyKey, value[, receiver])
 
 ```js
 // オブジェクト
-let obj = {}
-Reflect.set(obj, 'prop', 'value')  // true
-obj.prop  // "value"
+let obj = {};
+Reflect.set(obj, "prop", "value"); // true
+obj.prop; // "value"
 
 // 配列
-let arr = ['duck', 'duck', 'duck']
-Reflect.set(arr, 2, 'goose')  // true
-arr[2]  // "goose"
+let arr = ["duck", "duck", "duck"];
+Reflect.set(arr, 2, "goose"); // true
+arr[2]; // "goose"
 
 // 配列を切り詰められる。
-Reflect.set(arr, 'length', 1)  // true
-arr  // ["duck"]
+Reflect.set(arr, "length", 1); // true
+arr; // ["duck"]
 
 // 引数が1つだけだと、プロパティキーと値は "undefined" になる。
-let obj = {}
-Reflect.set(obj)  // true
-Reflect.getOwnPropertyDescriptor(obj, 'undefined')
+let obj = {};
+Reflect.set(obj); // true
+Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 

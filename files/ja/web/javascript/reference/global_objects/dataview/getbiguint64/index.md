@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 ## 構文
 
 ```js
-getBigUint64(byteOffset)
-getBigUint64(byteOffset, littleEndian)
+getBigUint64(byteOffset);
+getBigUint64(byteOffset, littleEndian);
 ```
 
 ### 引数

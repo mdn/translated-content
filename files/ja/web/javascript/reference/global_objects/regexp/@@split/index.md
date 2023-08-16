@@ -31,9 +31,9 @@ regexp[Symbol.split](str[, limit])
 このメソッドは {{jsxref("String.prototype.split()")}} の内部で、 `separator` 引数が `@@split` メソッドを持つオブジェクト、たとえば {{jsxref("RegExp")}} オブジェクトだった場合に呼び出されます。たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 このメソッドは、`RegExp` のサブクラスで `split()` の動作をカスタマイズするために存在します。
@@ -46,9 +46,9 @@ regexp[Symbol.split](str[, limit])
 
 ```js
 let re = /-/g;
-let str = '2016-01-02';
+let str = "2016-01-02";
 let result = re[Symbol.split](str);
-console.log(result);  // ["2016", "01", "02"]
+console.log(result); // ["2016", "01", "02"]
 ```
 
 ### サブクラスで @@split を使用する
@@ -59,12 +59,12 @@ console.log(result);  // ["2016", "01", "02"]
 class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {
     let result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map(x => "(" + x + ")");
+    return result.map((x) => "(" + x + ")");
   }
 }
 
-let re = new MyRegExp('-');
-let str = '2016-01-02';
+let re = new MyRegExp("-");
+let str = "2016-01-02";
 let result = str.split(re); // String.prototype.split calls re[@@split].
 console.log(result); // ["(2016)", "(01)", "(02)"]
 ```
