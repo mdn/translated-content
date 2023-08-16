@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ## 構文
 
 ```js
-parseInt(string)
-parseInt(string, radix)
+parseInt(string);
+parseInt(string, radix);
 ```
 
 ### 引数
@@ -71,15 +71,15 @@ parseInt(string, radix)
 ECMAScript 3 で非推奨となったものの、 ECMAScript 3 の多くの実装が `0` で始まる数字の文字列を 8 進数として解釈していました。以下の式は 8 進数とされることもあれば、 10 進数で扱われることもありました。
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // '8' は 8進数では用いられないため、0。
+parseInt("0e0"); // 0
+parseInt("08"); // '8' は 8進数では用いられないため、0。
 ```
 
 ECMAScript 5 仕様書において、 `parseInt` 関数は、`0` の文字で始まる文字列を 8 進数として扱うことを実装に認めなくなりました。 2021 年時点では、多くの実装がこの動作を採用しています。
 
 ```js
-parseInt('0e0')  // 0
-parseInt('08')   // 8
+parseInt("0e0"); // 0
+parseInt("08"); // 8
 ```
 
 ### より厳密な解析関数
@@ -91,20 +91,20 @@ parseInt('08')   // 8
 ```js
 function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
-    return Number(value)
+    return Number(value);
   } else {
-    return NaN
+    return NaN;
   }
 }
 
-console.log(filterInt('421'))                // 421
-console.log(filterInt('-421'))               // -421
-console.log(filterInt('+421'))               // 421
-console.log(filterInt('Infinity'))           // Infinity
-console.log(filterInt('421e+0'))             // NaN
-console.log(filterInt('421hop'))             // NaN
-console.log(filterInt('hop1.61803398875'))   // NaN
-console.log(filterInt('1.61803398875'))      // NaN
+console.log(filterInt("421")); // 421
+console.log(filterInt("-421")); // -421
+console.log(filterInt("+421")); // 421
+console.log(filterInt("Infinity")); // Infinity
+console.log(filterInt("421e+0")); // NaN
+console.log(filterInt("421hop")); // NaN
+console.log(filterInt("hop1.61803398875")); // NaN
+console.log(filterInt("1.61803398875")); // NaN
 ```
 
 ## 例
@@ -114,78 +114,78 @@ console.log(filterInt('1.61803398875'))      // NaN
 以下の例はいずれも `15` を返します。
 
 ```js
-parseInt('0xF', 16)
-parseInt('F', 16)
-parseInt('17', 8)
-parseInt(021, 8)
-parseInt('015', 10)    // ただし `parseInt(015, 10)` は 13 を返す
-parseInt(15.99, 10)
-parseInt('15,123', 10)
-parseInt('FXX123', 16)
-parseInt('1111', 2)
-parseInt('15 * 3', 10)
-parseInt('15e2', 10)
-parseInt('15px', 10)
-parseInt('12', 13)
+parseInt("0xF", 16);
+parseInt("F", 16);
+parseInt("17", 8);
+parseInt(021, 8);
+parseInt("015", 10); // ただし `parseInt(015, 10)` は 13 を返す
+parseInt(15.99, 10);
+parseInt("15,123", 10);
+parseInt("FXX123", 16);
+parseInt("1111", 2);
+parseInt("15 * 3", 10);
+parseInt("15e2", 10);
+parseInt("15px", 10);
+parseInt("12", 13);
 ```
 
 以下の例はいずれも `NaN` を返します。
 
 ```js
-parseInt('Hello', 8)  // まったく数字ではない
-parseInt('546', 2)    // 2 進数では 0 または 1 以外の数字は無効
+parseInt("Hello", 8); // まったく数字ではない
+parseInt("546", 2); // 2 進数では 0 または 1 以外の数字は無効
 ```
 
 以下の例はいずれも `-15` を返します。
 
 ```js
-parseInt('-F', 16)
-parseInt('-0F', 16)
-parseInt('-0XF', 16)
-parseInt(-15.1, 10)
-parseInt('-17', 8)
-parseInt('-15', 10)
-parseInt('-1111', 2)
-parseInt('-15e1', 10)
-parseInt('-12', 13)
+parseInt("-F", 16);
+parseInt("-0F", 16);
+parseInt("-0XF", 16);
+parseInt(-15.1, 10);
+parseInt("-17", 8);
+parseInt("-15", 10);
+parseInt("-1111", 2);
+parseInt("-15e1", 10);
+parseInt("-12", 13);
 ```
 
 以下の例はいずれも `4` を返します。
 
 ```js
-parseInt(4.7, 10)
-parseInt(4.7 * 1e22, 10)        // 非常に大きな数によって 4 になる
-parseInt(0.00000000000434, 10)  // 非常に小さな数によって 4 になる
+parseInt(4.7, 10);
+parseInt(4.7 * 1e22, 10); // 非常に大きな数によって 4 になる
+parseInt(0.00000000000434, 10); // 非常に小さな数によって 4 になる
 ```
 
 以下の例は 1e+21 以上か 1e-7 以下の場合は `1` を返します。(基数 10 を使用している場合)。
 
 ```js
-parseInt(0.0000001,10);
-parseInt(0.000000123,10);
-parseInt(1e-7,10);
-parseInt(1000000000000000000000,10);
-parseInt(123000000000000000000000,10);
-parseInt(1e+21,10);
+parseInt(0.0000001, 10);
+parseInt(0.000000123, 10);
+parseInt(1e-7, 10);
+parseInt(1000000000000000000000, 10);
+parseInt(123000000000000000000000, 10);
+parseInt(1e21, 10);
 ```
 
 以下の例は `224` を返します。
 
 ```js
-parseInt('0e0', 16)
+parseInt("0e0", 16);
 ```
 
 {{jsxref("BigInt")}} の値は精度が落ちます。
 
 ```js
-parseInt('900719925474099267n')
+parseInt("900719925474099267n");
 // 900719925474099300
 ```
 
 `parseInt` は[数字の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)は機能しません。
 
 ```js
-parseInt('123_456')
+parseInt("123_456");
 // 123
 ```
 
@@ -193,15 +193,21 @@ parseInt('123_456')
 
 ```js
 const obj = {
-  valueOf() {return 8}
+  valueOf() {
+    return 8;
+  },
 };
-parseInt('11', obj); // 9
+parseInt("11", obj); // 9
 
-obj.valueOf = function() {return 1};
-parseInt('11', obj); // NaN
+obj.valueOf = function () {
+  return 1;
+};
+parseInt("11", obj); // NaN
 
-obj.valueOf = function() {return Infinity};
-parseInt('11', obj); // 11
+obj.valueOf = function () {
+  return Infinity;
+};
+parseInt("11", obj); // 11
 ```
 
 ## 仕様書

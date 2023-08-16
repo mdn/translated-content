@@ -14,9 +14,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 このシンボルは {{jsxref("String.prototype.matchAll()")}}、特に {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}} で使用されます。以下の 2 つの例は同じ結果を返します。
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 このメソッドは、{{jsxref("RegExp")}} サブクラス内の一致動作をカスタマイズするために存在します。
@@ -29,13 +29,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 
 ```js
 let re = /[0-9]+/g;
-let str = '2016-01-02|2019-03-07';
+let str = "2016-01-02|2019-03-07";
 
 const numbers = {
-  *[Symbol.matchAll] (str) {
-    for (const n of str.matchAll(/[0-9]+/g))
-      yield n[0];
-  }
+  *[Symbol.matchAll](str) {
+    for (const n of str.matchAll(/[0-9]+/g)) yield n[0];
+  },
 };
 
 console.log(Array.from(str.matchAll(numbers)));

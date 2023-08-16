@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ### sticky フラグのついた正規表現の使用
 
 ```js
-var str = '#foo#';
+var str = "#foo#";
 var regex = /foo/y;
 
 regex.lastIndex = 1;
@@ -41,13 +41,13 @@ Firefox の SpiderMonkey エンジンのいくつかのバージョンでは `^`
 ```js
 var regex = /^foo/y;
 regex.lastIndex = 2;
-regex.test('..foo');   // false - index 2 is not the beginning of the string
+regex.test("..foo"); // false - index 2 is not the beginning of the string
 
 var regex2 = /^foo/my;
 regex2.lastIndex = 2;
-regex2.test('..foo');  // false - index 2 is not the beginning of the string or line
+regex2.test("..foo"); // false - index 2 is not the beginning of the string or line
 regex2.lastIndex = 2;
-regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
+regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 ```
 
 ## 仕様書

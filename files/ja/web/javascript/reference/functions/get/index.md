@@ -57,12 +57,12 @@ slug: Web/JavaScript/Reference/Functions/get
 
 ```js
 const obj = {
-  log: ['example','test'],
+  log: ["example", "test"],
   get latest() {
     if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
-  }
-}
+  },
+};
 console.log(obj.latest); // "test"
 ```
 
@@ -81,20 +81,26 @@ delete obj.latest;
 既存のオブジェクトに任意のタイミングでゲッターを追加するには、 {{jsxref("Object.defineProperty()")}} を使用します。
 
 ```js
-const o = {a: 0};
+const o = { a: 0 };
 
-Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
+Object.defineProperty(o, "b", {
+  get: function () {
+    return this.a + 1;
+  },
+});
 
-console.log(o.b) // getter を実行。a + 1 を算出する (結果は 1)
+console.log(o.b); // getter を実行。a + 1 を算出する (結果は 1)
 ```
 
 ### 算出されたプロパティ名の使用
 
 ```js
-const expr = 'foo';
+const expr = "foo";
 
 const obj = {
-  get [expr]() { return 'bar'; }
+  get [expr]() {
+    return "bar";
+  },
 };
 
 console.log(obj.foo); // "bar"
@@ -105,12 +111,12 @@ console.log(obj.foo); // "bar"
 ```js
 class MyConstants {
   static get foo() {
-    return 'foo';
+    return "foo";
   }
 }
 
 console.log(MyConstants.foo); // 'foo'
-MyConstants.foo = 'bar';
+MyConstants.foo = "bar";
 console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変更できません
 ```
 
@@ -118,7 +124,7 @@ console.log(MyConstants.foo); // 'foo' です。静的ゲッターの値は変�
 
 ゲッターはオブジェクトのプロパティを*定義*する手段を提供しますが、アクセスされるまでプロパティの値を*計算*しません。ゲッターは値を計算するコストを、値が必要になるまで先送りします。値が必要でなければ、そのコストを負担しません。
 
-プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、*スマート*（または *[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)*）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
+プロパティの値の計算を先送りしたり後のアクセスのためにキャッシュするための付加的な最適化技術が、_スマート_（または _[メモ化](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E5%8C%96)_）ゲッターです。初めてゲッターにアクセスされたときに、値を計算してキャッシュします。以降のアクセスでは再計算せずに、キャッシュした値を返します。これは次のような状況で役に立ちます。
 
 - プロパティの値の計算コストが高い場合 (大量の RAM や CPU 時間を使用する、ワーカースレッドを生成する、リモートのファイルを読み込むなど)。
 - 値がすぐに必要ではない場合。値を後で使用する、あるいはまったく使用しない場合がある状況。
@@ -146,7 +152,7 @@ get notifier() {
 ```js
 class Example {
   get hello() {
-    return 'world';
+    return "world";
   }
 }
 
@@ -154,13 +160,11 @@ const obj = new Example();
 console.log(obj.hello);
 // "world"
 
-console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
+console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
 // undefined
 
 console.log(
-  Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(obj), 'hello'
-  )
+  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
 );
 // { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
 ```

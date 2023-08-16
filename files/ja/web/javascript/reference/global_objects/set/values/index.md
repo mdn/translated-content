@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ## 構文
 
 ```js
-values()
+values();
 ```
 
 ### 返値
@@ -27,9 +27,9 @@ values()
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 
