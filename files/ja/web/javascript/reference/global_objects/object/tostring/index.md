@@ -75,7 +75,7 @@ function Dog(name, breed, color, sex) {
   this.sex = sex;
 }
 
-theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
+theDog = new Dog("Gabby", "Lab", "chocolate", "female");
 ```
 
 このカスタムオブジェクト上で `toString()` メソッドを呼び出した場合、メソッドは {{jsxref("Object")}} から継承された既定値を返します。
@@ -88,9 +88,17 @@ theDog.toString(); // [object Object] を返す
 
 ```js
 Dog.prototype.toString = function dogToString() {
-  const ret = 'Dog ' + this.name + ' is a ' + this.sex + ' ' + this.color + ' ' + this.breed;
+  const ret =
+    "Dog " +
+    this.name +
+    " is a " +
+    this.sex +
+    " " +
+    this.color +
+    " " +
+    this.breed;
   return ret;
-}
+};
 ```
 
 または、 ES6 の {{jsxref("Template_literals", "テンプレート文字列", "", 1)}}を使用した例です。
@@ -98,13 +106,13 @@ Dog.prototype.toString = function dogToString() {
 ```js
 Dog.prototype.toString = function dogToString() {
   return `Dog ${this.name} is a ${this.sex} ${this.color} ${this.breed}`;
-}
+};
 ```
 
 前者のコードの中で、 `theDog` が文字列の文脈で使用されるたびに、 JavaScript は自動的に `dogToString()` 関数を呼び出し、以下の文字列を返します。
 
 ```js
-"Dog Gabby is a female chocolate Lab"
+"Dog Gabby is a female chocolate Lab";
 ```
 
 ### toString() を使用したオブジェクトクラスの判別
@@ -116,25 +124,25 @@ Dog.prototype.toString = function dogToString() {
 ```js
 const toString = Object.prototype.toString;
 
-toString.call(new Date);    // [object Date]
-toString.call(new String);  // [object String]
-toString.call(Math);        // [object Math]
+toString.call(new Date()); // [object Date]
+toString.call(new String()); // [object String]
+toString.call(Math); // [object Math]
 
 // Since JavaScript 1.8.5
-toString.call(undefined);   // [object Undefined]
-toString.call(null);        // [object Null]
+toString.call(undefined); // [object Undefined]
+toString.call(null); // [object Null]
 ```
 
 このような `toString()` の使用は信頼できません。オブジェクトは `Object.prototype.toString()` の動作を {{jsxref("Symbol.toStringTag")}} プロパティを定義することで変更でき、それによって次のように予想外の動作になります。
 
 ```js
 const myDate = new Date();
-Object.prototype.toString.call(myDate);     // [object Date]
+Object.prototype.toString.call(myDate); // [object Date]
 
-myDate[Symbol.toStringTag] = 'myDate';
-Object.prototype.toString.call(myDate);     // [object myDate]
+myDate[Symbol.toStringTag] = "myDate";
+Object.prototype.toString.call(myDate); // [object myDate]
 
-Date.prototype[Symbol.toStringTag] = 'prototype polluted';
+Date.prototype[Symbol.toStringTag] = "prototype polluted";
 Object.prototype.toString.call(new Date()); // [object prototype polluted]
 ```
 

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 ## 構文
 
 ```js
-Atomics.or(typedArray, index, value)
+Atomics.or(typedArray, index, value);
 ```
 
 ### 引数
@@ -63,7 +63,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // returns 2, the old value
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## 仕様書
