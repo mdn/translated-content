@@ -577,22 +577,22 @@ HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("strong")}} 
 이 Active Learning 섹션에서는 편집 가능한 예시를 제공하였습니다. 이 안에서 여러분이 필요하다고 생각되는 단어에 강조와 중요성을 더해보며 연습할 수 있기를 바랍니다.
 
 ```html hidden
-<h2>Input</h2>
+<h2>입력</h2>
 <textarea id="code" class="input">
-<h1>Important notice</h1>
+<h1>중요한 공지</h1>
 
-<p>On Sunday January 9th 2010, a gang of goths were
-spotted stealing several garden gnomes from a shopping
-center in downtown Milwaukee. They were all wearing green
-jumpsuits and silly hats, and seemed to be having a whale
-of a time. If anyone has any information about this
-incident, please contact the police now.</p></textarea
+<p>2010년 1월 9일 일요일에, 밀워키 시내의 한 쇼핑 센터에서 고트족이
+정원 요정 여러 마리를 훔치는 장면이 목격되었습니다.
+그들은 모두 녹색 점프슈트와 우스꽝스러운 모자를 쓰고 있었고,
+즐거운 시간을 보내고 있는 것 같았습니다.
+이 사건에 대해 어떠한 정보가 있으신 분은
+지금 바로 경찰에 연락해 주세요.</p></textarea
 >
-<h2>Output</h2>
+<h2>출력</h2>
 <div class="output"></div>
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show suggestion" />
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="제안 보기" />
 </div>
 ```
 
@@ -633,7 +633,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
+    "<h1>중요한 공지</h1>\n<p><strong>2010년 1월 9일 일요일</strong>에, <strong>밀워키</strong> 시내의 한 쇼핑 센터에서 <em>고트</em>족이 <strong>정원 요정 <em>여러 마리</em></strong>를 훔치는 장면이 목격되었습니다. 그들은 모두 <em>녹색 점프슈트</em>와 <em>우스꽝스러운 모자</em>를 쓰고 있었고, 즐거운 시간을 보내고 있는 것 같았습니다. 이 사건에 대해 <strong>어떠한</strong> 정보가 있으신 분은 <strong>지금 바로</strong> 경찰에 연락해 주세요.</p>";
   drawOutput();
 });
 
