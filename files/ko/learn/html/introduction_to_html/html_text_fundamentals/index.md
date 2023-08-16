@@ -666,8 +666,8 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 
 <!-- 외래어 -->
 <p>
-  메뉴에는 <i lang="uk-latn">vatrushka</i>,
-  <i lang="id">nasi goreng</i>, 그리고 <i lang="fr">soupe à l'oignon</i>과 같은 이국적인 단어가 가득했습니다.
+  메뉴에는 <i lang="uk-latn">vatrushka</i>, <i lang="id">nasi goreng</i>, 그리고
+  <i lang="fr">soupe à l'oignon</i>과 같은 이국적인 단어가 가득했습니다.
 </p>
 
 <!-- 알려진 철자 오류 -->
