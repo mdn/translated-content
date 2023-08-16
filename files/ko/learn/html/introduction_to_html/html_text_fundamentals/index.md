@@ -568,8 +568,7 @@ HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("strong")}} 
 ```html
 <p>
   이 액체는 <strong>독성이 강합니다</strong>. 그것을 마시면,
-  <strong>당신은 <em>사망</em>할 수도 있습니다</strong
-  >.
+  <strong>당신은 <em>사망</em>할 수도 있습니다</strong>.
 </p>
 ```
 
