@@ -124,48 +124,48 @@ browser-compat: css.types.length
 
 - `vb`
 
-  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)のサイズの割合を表します。
+  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%A8%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3)のサイズの割合を表します。
 
     小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は `svb`、`lvb`、`dvb`です。
     `vb`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 - `vi`
 
-  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)のサイズの割合を表します。
+  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%A8%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3)のサイズの割合を表します。
 
     小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は `svi`、`lvi`、`dvi`です。
     `vi`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
-### Container query length units
+### コンテナクエリの長さの単位
 
-When applying styles to a container using container queries, you can use container query length units.
-These units specify a length relative to the dimensions of a query container.
-Components that use units of length relative to their container are more flexible to use in different containers without having to recalculate concrete length values.
-For more information, see [Container queries](/en-US/docs/Web/CSS/CSS_Container_Queries).
+コンテナクエリを使用してコンテナにスタイルを適用する場合、コンテナクエリの長さの単位を使用できます。
+これらの単位は、クエリコンテナの寸法に対する相対長を指定します。
+コンテナに対する相対長の単位を使用したコンポーネントは、具体的な長さの値を再計算する必要がなく、異なるコンテナでより柔軟に使用できます。
+より詳しい情報は [コンテナークエリ](/en-US/docs/Web/CSS/CSS_Container_Queries)を参照してください。
 
 - `cqw`
 
-  - : Represents a percentage of the width of the query container. `1cqw` is 1% of the query container's width. For example, if the query container's width is `800px`, then a value of `50cqw` on a property will be `400px`.
+  - : クエリコンテナの幅に対する割合を表します。 `1cqw` はクエリコンテナの幅の 1% です。例えば、クエリコンテナの幅が `800px` の場合、プロパティに `50cqw` を指定すると `400px` となります。
 
 - `cqh`
 
-  - : Represents a percentage of the height of the query container. `1cqh` is 1% of the query container's height. For example, if the query container's height is `300px`, then a value of `10cqh` on a property will be `30px`.
+  - : クエリコンテナの高さに対する割合を表します。`1cqh`はクエリコンテナの高さの1%です。例えば、クエリコンテナの高さが `300px` の場合、プロパティに `10cqh` を指定すると `30px` となります。
 
 - `cqi`
 
-  - : Represents a percentage of the inline size of the query container. `1cqi` is 1% of the query container's inline size. For example, if the query container's inline size is `800px`, then a value of `50cqi` on a property will be `400px`.
+  - : クエリコンテナのインラインサイズに対する割合を表します。`1cqi`はクエリコンテナのインラインサイズの1%です。例えば、クエリコンテナのインラインサイズが `800px` の場合、プロパティに `50cqi` を指定すると `400px` となります。
 
 - `cqb`
 
-  - : Represents a percentage of the block size of the query container. `1cqb` is 1% of the query container's block size. For example, if the query container's block size is `300px`, then a value of `10cqb` on a property will be `30px`.
+  - : クエリコンテナのブロックサイズに対する割合を表します。`1cqb`はクエリコンテナのブロックサイズの1%です。例えば、クエリコンテナのブロックサイズが `300px` の場合、プロパティに `10cqb` を指定すると `30px` となります。
 
 - `cqmin`
 
-  - : Represents a percentage of the smaller value of either the query container's inline size or block size. `1cqmin` is 1% of the smaller value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmin` on a property will be `150px`.
+  - : クエリコンテナのインラインサイズまたはブロックサイズのいずれか小さい方の値の割合を表します。`1cqmin` はクエリコンテナのインラインサイズまたはブロックサイズのいずれか小さい方の値の1%です。例えば、クエリコンテナのインラインサイズが `800px` で、ブロックサイズが `300px` の場合、プロパティに `50cqmin` を指定すると `150px` となります。
 
 - `cqmax`
 
-  - : Represents a percentage of the larger value of either the query container's inline size or block size. `1cqmax` is 1% of the larger value of either the query container's inline size or block size. For example, if the query container's inline size is `800px` and its block size is `300px`, then a value of `50cqmax` on a property will be `400px`.
+  - : クエリコンテナのインラインサイズまたはブロックサイズのいずれか大きい方の値の割合を表します。`1cqmax` はクエリコンテナのインラインサイズまたはブロックサイズのいずれか大きい方の値の1%です。例えば、クエリコンテナのインラインサイズが `800px` で、ブロックサイズが `300px` の場合、プロパティに `50cqmax` を指定すると `400px` となります。
 
 #### 絶対的な長さの単位
 
