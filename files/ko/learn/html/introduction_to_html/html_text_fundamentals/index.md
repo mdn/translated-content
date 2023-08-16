@@ -161,7 +161,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    "<h1>My short story</h1>\n<p>I am a policewoman and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>";
+    "<h1>나의 짧은 이야기</h1>\n<p>저는 경찰이고 저의 이름은 트리쉬입니다.</p>\n<p>제 다리는 판지로 만들어졌고 저는 물고기와 결혼했습니다.</p>";
   drawOutput();
 });
 
@@ -204,10 +204,10 @@ Semantic(직역 : 의미를 담은, 의미론적인)은 우리 주변 어디에�
 - 쇼핑 리스트 항목으로 예를 들어보자
 
 ```
-milk
-eggs
-bread
-hummus
+우유
+달걀
+빵
+후무스
 ```
 
 순서 없는 리스트를 정렬하기 위해 {{htmlelement("ul")}} element 를 이용해 감싸줍니다.
@@ -216,10 +216,10 @@ hummus
 
 ```html-nolint
 <ul>
-  milk
-  eggs
-  bread
-  hummus
+  우유
+  달걀
+  빵
+  후무스
 </ul>
 ```
 
@@ -227,10 +227,10 @@ hummus
 
 ```html
 <ul>
-  <li>milk</li>
-  <li>eggs</li>
-  <li>bread</li>
-  <li>hummus</li>
+  <li>우유</li>
+  <li>달걀</li>
+  <li>빵</li>
+  <li>후무스</li>
 </ul>
 ```
 
@@ -239,18 +239,18 @@ hummus
 HTML 순서 없는(unordered) 리스트를 만들기 위해 아래에 있는 샘플을 편집해보자.
 
 ```html hidden
-<h2>Input</h2>
+<h2>입력</h2>
 <textarea id="code" class="input">
-milk
-eggs
-bread
-hummus</textarea
+우유
+달걀
+빵
+후무스</textarea
 >
-<h2>Output</h2>
+<h2>출력</h2>
 <div class="output"></div>
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
 </div>
 ```
 
@@ -291,7 +291,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    "<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>";
+    "<ul>\n<li>우유</li>\n<li>달걀</li>\n<li>빵</li>\n<li>후무스</li>\n</ul>";
   drawOutput();
 });
 
@@ -308,22 +308,22 @@ window.addEventListener("load", drawOutput);
 예제:
 
 ```
-Drive to the end of the road
-Turn right
-Go straight across the first two roundabouts
-Turn left at the third roundabout
-The school is on your right, 300 meters up the road
+도로의 끝까지 운전합니다
+우회전합니다
+처음 두 개의 로터리를 가로질러 직진합니다
+세 번째 로터리에서 좌회전합니다
+길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다
 ```
 
 {{htmlelement("ul")}}태그가 아닌 {{htmlelement("ol")}} 태그로 감싸는것을 제외하고는 마크업 구조는 순서가 없는 리스트와 동일하다.
 
 ```html
 <ol>
-  <li>Drive to the end of the road</li>
-  <li>Turn right</li>
-  <li>Go straight across the first two roundabouts</li>
-  <li>Turn left at the third roundabout</li>
-  <li>The school is on your right, 300 meters up the road</li>
+  <li>도로의 끝까지 운전합니다</li>
+  <li>우회전합니다</li>
+  <li>처음 두 개의 로터리를 가로질러 직진합니다</li>
+  <li>세 번째 로터리에서 좌회전합니다</li>
+  <li>길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다</li>
 </ol>
 ```
 
@@ -332,19 +332,19 @@ The school is on your right, 300 meters up the road
 HTML 순서가 있는(ordered) 리스트를 만들기 위해 아래에 있는 샘플을 편집해보자.
 
 ```html hidden
-<h2>Input</h2>
+<h2>입력</h2>
 <textarea id="code" class="input">
-Drive to the end of the road
-Turn right
-Go straight across the first two roundabouts
-Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea
+도로의 끝까지 운전합니다
+우회전합니다
+처음 두 개의 로터리를 가로질러 직진합니다
+세 번째 로터리에서 좌회전합니다
+길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다</textarea
 >
-<h2>Output</h2>
+<h2>출력</h2>
 <div class="output"></div>
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
 </div>
 ```
 
@@ -385,7 +385,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    "<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>";
+    "<ol>\n<li>도로의 끝까지 운전합니다</li>\n<li>우회전합니다</li>\n<li>처음 두 개의 로터리를 가로질러 직진합니다</li>\n<li>세 번째 로터리에서 좌회전합니다</li>\n<li>길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다</li>\n</ol>";
   drawOutput();
 });
 
@@ -400,46 +400,46 @@ window.addEventListener("load", drawOutput);
 이제 우리는 레시피 페이지 예시를 만드는 데 필요한 모든 정보를 가지고 있습니다. text-start.html 시작 파일을 저장해 그곳에서 작업을 하셔도 좋고, 아래에 있는 편집 가능한 샘플에서 작업을 할 수도 있습니다. 따로 파일을 생성해서 작업을 하면 언제든지 편집이 가능합니다. 아래 샘플에서 작업을 하면 다음에 이 페이지를 열 때 작업 기록이 사라져 있을 것입니다. 이 두가지 방법은 장점과 단점 모두를 지니고 있습니다.
 
 ```html hidden
-<h2>Input</h2>
+<h2>입력</h2>
 <textarea id="code" class="input">
-Quick hummus recipe
+빠른 후무스 레시피
 
-    This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
+    이 레시피는 문제 없이 맛있는 후무스를 빠르게 만들 수 있습니다. 수년 동안 제가 읽은 레시피는 여러 가지 다른 레시피에서 변형한 것입니다.
 
-    Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.
+    후무스는 그리스와 중동 요리에 많이 사용되는 맛있고 두툼한 페이스트입니다. 샐러드, 구운 고기, 그리고 피타 빵과 함께 먹으면 매우 맛있습니다.
 
-    Ingredients
+    재료
 
-    1 can (400g) of chick peas (garbanzo beans)
-    175g of tahini
-    6 sundried tomatoes
-    Half a red pepper
-    A pinch of cayenne pepper
-    1 clove of garlic
-    A dash of olive oil
+    병아리콩(가르반조 콩) 1캔(400g)
+    타히니 175g
+    햇볕에 말린 토마토 6개
+    붉은 고추 반 개
+    카이엔 고추 약간
+    마늘 1쪽
+    올리브 오일 약간
 
-    Instructions
+    Instructions만드는 방법
 
-    Remove the skin from the garlic, and chop coarsely
-    Remove all the seeds and stalk from the pepper, and chop coarsely
-    Add all the ingredients into a food processor
-    Process all the ingredients into a paste.
-    If you want a coarse "chunky" hummus, process it for a short time
-    If you want a smooth hummus, process it for a longer time
+    마늘 껍질을 벗기고, 굵게 다집니다.
+    후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.
+    모든 재료를 푸드 프로세서에 넣습니다.
+    모든 재료를 페이스트 형태로 가공합니다.
+    거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.
+    부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.
 
-    For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.
+    색다른 맛을 원한다면, 레몬과 고수, 칠리고추, 라임과 치폴레, 하리사와 민트, 또는 시금치와 페타 치즈를 소량 섞어보세요. 실험을 통해 자신에게 맞는 조합을 찾아보세요.
 
-    Storage
+    보관
 
-    Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
+    완성된 후무스를 밀폐 용기에 담아 냉장 보관하세요. 만든 후 일주일 정도는 사용할 수 있습니다. 거품이 나기 시작하면, 반드시 버려야 합니다.
 
-    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
+    후무스는 냉동 보관에 적합하므로 해동 후 두 달 이내에 사용해야 합니다.</textarea
 >
-<h2>Output</h2>
+<h2>출력</h2>
 <div class="output"></div>
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
 </div>
 ```
 
@@ -480,7 +480,7 @@ reset.addEventListener("click", function () {
 
 solution.addEventListener("click", function () {
   textarea.value =
-    '<h1>Quick hummous recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
+    '<h1>빠른 후무스 레시피</h1>\n\n<p>이 레시피는 문제 없이 맛있는 후무스를 빠르게 만들 수 있습니다. 수년 동안 제가 읽은 레시피는 여러 가지 다른 레시피에서 변형한 것입니다.</p>\n\n<p>후무스는 그리스와 중동 요리에 많이 사용되는 맛있고 두툼한 페이스트입니다. 샐러드, 구운 고기, 그리고 피타 빵과 함께 먹으면 매우 맛있습니다.</p>\n\n<h2>재료</h2>\n\n<ul>\n<li>병아리콩(가르반조 콩) 1캔(400g)</li>\n<li>타히니 175g</li>\n<li>햇볕에 말린 토마토 6개</li>\n<li>붉은 고추 반 개</li>\n<li>카이엔 고추 약간</li>\n<li>마늘 1쪽</li>\n<li>올리브 오일 약간</li>\n</ul>\n\n<h2>만드는 방법</h2>\n\n<ol>\n<li>마늘 껍질을 벗기고, 굵게 다집니다.</li>\n<li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>\n<li>모든 재료를 푸드 프로세서에 넣습니다.</li>\n<li>모든 재료를 페이스트 형태로 가공합니다.</li>\n<li>거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.</li>\n<li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>\n</ol>\n\n<p>색다른 맛을 원한다면, 레몬과 고수, 칠리고추, 라임과 치폴레, 하리사와 민트, 또는 시금치와 페타 치즈를 소량 섞어보세요. 실험을 통해 자신에게 맞는 조합을 찾아보세요.</p>\n\n<h2>보관</h2>\n\n<p>완성된 후무스를 밀폐 용기에 담아 냉장 보관하세요. 만든 후 일주일 정도는 사용할 수 있습니다. 거품이 나기 시작하면, 반드시 버려야 합니다.</p>\n\n<p>후무스는 냉동 보관에 적합하므로 해동 후 두 달 이내에 사용해야 합니다.</p>';
   drawOutput();
 });
 
@@ -499,12 +499,12 @@ window.addEventListener("load", drawOutput);
 
 ```html
 <ol>
-  <li>Remove the skin from the garlic, and chop coarsely.</li>
-  <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
-  <li>Add all the ingredients into a food processor.</li>
-  <li>Process all the ingredients into a paste.</li>
-  <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
-  <li>If you want a smooth hummus, process it for a longer time.</li>
+  <li>마늘 껍질을 벗기고, 굵게 다집니다.</li>
+  <li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>
+  <li>모든 재료를 푸드 프로세서에 넣습니다.</li>
+  <li>모든 재료를 페이스트 형태로 가공합니다.</li>
+  <li>거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.</li>
+  <li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>
 </ol>
 ```
 
@@ -512,16 +512,16 @@ window.addEventListener("load", drawOutput);
 
 ```html
 <ol>
-  <li>Remove the skin from the garlic, and chop coarsely.</li>
-  <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
-  <li>Add all the ingredients into a food processor.</li>
+  <li>마늘 껍질을 벗기고, 굵게 다집니다.</li>
+  <li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>
+  <li>모든 재료를 푸드 프로세서에 넣습니다.</li>
   <li>
-    Process all the ingredients into a paste.
+    모든 재료를 페이스트 형태로 가공합니다.
     <ul>
       <li>
-        If you want a coarse "chunky" hummus, process it for a short time.
+        거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.
       </li>
-      <li>If you want a smooth hummus, process it for a longer time.</li>
+      <li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>
     </ul>
   </li>
 </ol>
