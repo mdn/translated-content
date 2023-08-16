@@ -1,5 +1,5 @@
 ---
-title: WebGL tutorial
+title: Tutoral de WebGL
 slug: Web/API/WebGL_API/Tutorial
 l10n:
   sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
