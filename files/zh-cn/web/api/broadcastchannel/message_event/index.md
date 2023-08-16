@@ -152,11 +152,11 @@ channel.addEventListener("message", (event) => {
 
 ### 结果
 
-{{ EmbedLiveSample('发送者', '100%', 220) }}
+{{ EmbedLiveSample('Sender', '100%', 220) }}
 
-{{ EmbedLiveSample('接收者 1', '100%', 160) }}
+{{ EmbedLiveSample('Receiver_1', '100%', 160) }}
 
-{{ EmbedLiveSample('接收者 2', '100%', 160) }}
+{{ EmbedLiveSample('Receiver_2', '100%', 160) }}
 
 ## 规范
 
