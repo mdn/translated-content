@@ -599,7 +599,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### 測試路由
 
-要測試路由，首先使用你通常的方法啟動網站
+要測試路由，首先使用你通常的方法啟動網站。
 
 - 預設方法
 
