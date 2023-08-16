@@ -2,7 +2,7 @@
 title: 웹어셈블리
 slug: WebAssembly
 l10n:
-  sourceCommit: 8bed414e44172a31b1793fe845abdf72f5087ffb
+  sourceCommit: 0cfdd279edb09f70fbeb52c67ecc2876da5ce32d
 ---
 
 {{WebAssemblySidebar}}
