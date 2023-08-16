@@ -67,19 +67,19 @@ Referrer-Policy: unsafe-url
 Você também pode colocar política de referência dentro do HTML. Por exemplo, você pode colocar uma política de referência para o documento inteiro com um elemento {{HTMLElement("meta")}} com um [nome](/pt-BR/docs/Web/HTML/Element/meta#attr-name) de `referrer`:
 
 ```html
-<meta name="referrer" content="origin">
+<meta name="referrer" content="origin" />
 ```
 
 Ou colocar ele para requisições individuais com o atributo `referrerpolicy` nos elementos {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, or {{HTMLElement("link")}}:
 
 ```html
-<a href="http://example.com" referrerpolicy="origin">
+<a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
 Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Link_types) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
 
 ```html
-<a href="http://example.com" rel="noreferrer">
+<a href="http://example.com" rel="noreferrer"></a>
 ```
 
 ## Integração com CSS

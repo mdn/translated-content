@@ -50,7 +50,7 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
       // 進捗表示を更新
       event.updateUI({ title: "Episode 5 ready to listen!" });
-    })()
+    })(),
   );
 });
 ```

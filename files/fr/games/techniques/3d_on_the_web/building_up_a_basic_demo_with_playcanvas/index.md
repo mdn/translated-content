@@ -1,7 +1,6 @@
 ---
 title: Building up a basic demo with PlayCanvas
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
-translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
 ---
 
 {{GamesSidebar}}

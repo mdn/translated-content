@@ -1,7 +1,6 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-original_slug: Web/CSS/image/image-set()
 l10n:
   sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
 ---

@@ -1,7 +1,6 @@
 ---
 title: page-break-inside
 slug: Web/CSS/page-break-inside
-translation_of: Web/CSS/page-break-inside
 ---
 
 {{CSSRef}}

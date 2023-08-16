@@ -24,8 +24,8 @@ l10n:
 
 ```js
 const re = /ab+c/i; // リテラル記法
-const re = new RegExp('ab+c', 'i'); // 最初の引数に文字列のパターンを渡したコンストラクター
-const re = new RegExp(/ab+c/, 'i'); // 最初の引数に正規表現リテラルを渡したコンストラクター
+const re = new RegExp("ab+c", "i"); // 最初の引数に文字列のパターンを渡したコンストラクター
+const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラルを渡したコンストラクター
 ```
 
 正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に一致を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://docs.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
@@ -45,7 +45,7 @@ const re = new RegExp(/ab+c/, 'i'); // 最初の引数に正規表現リテラ�
 ```js
 const re = /\w+/;
 // または
-const re = new RegExp('\\w+');
+const re = new RegExp("\\w+");
 ```
 
 ### 正規表現の特殊な扱い
@@ -148,14 +148,14 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### 正規表現を使用したデータ形式の変更
 
-以下のスクリプトは、{{jsxref("Global_Objects/String", "String")}} インスタンスの {{jsxref("String.prototype.replace()", "replace()")}} メソッドを使用して、 *名 姓* の形式の名前に一致させ、*姓, 名* の形式で出力します。
+以下のスクリプトは、{{jsxref("Global_Objects/String", "String")}} インスタンスの {{jsxref("String.prototype.replace()", "replace()")}} メソッドを使用して、 _名 姓_ の形式の名前に一致させ、_姓, 名_ の形式で出力します。
 
 スクリプトでは、置換テキスト中で `$1` と `$2` を使用して、それぞれ対応する正規表現パターンで一致する括弧がキャプチャした結果を指定しています。
 
 ```js
 const re = /(\w+)\s(\w+)/;
-const str = 'John Smith';
-const newstr = str.replace(re, '$2, $1');
+const str = "John Smith";
+const newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 ```
 
@@ -166,7 +166,7 @@ console.log(newstr);
 既定の改行文字は、プラットフォーム (Unix、Windows など) によって異なります。この例で実行する行分割は、あらゆるプラットフォームで動作します。
 
 ```js
-const text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end';
+const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
 const lines = text.split(/\r\n|\r|\n/);
 console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
@@ -176,7 +176,7 @@ console.log(lines); // logs [ 'Some text', 'And some more', 'And yet', 'This is 
 ### 複数行で正規表現を使用する
 
 ```js
-const s = 'Please yes\nmake my day!';
+const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // null を返す
@@ -190,14 +190,14 @@ s.match(/yes[^]*day/);
 {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} フラグは、正規表現の sticky 照合を実行することを示しており、対象文字列で {{jsxref("RegExp.prototype.lastIndex")}} の位置から照合を試みます。
 
 ```js
-const str = '#foo#';
+const str = "#foo#";
 const regex = /foo/y;
 
 regex.lastIndex = 1;
-regex.test(str)      // true
+regex.test(str); // true
 regex.lastIndex = 5;
-regex.test(str)      // false (sticky フラグがあるので lastIndex から始める)
-regex.lastIndex      // 0 (照合に失敗した後はリセット)
+regex.test(str); // false (sticky フラグがあるので lastIndex から始める)
+regex.lastIndex; // 0 (照合に失敗した後はリセット)
 ```
 
 ### sticky フラグと global フラグの違い
@@ -228,7 +228,7 @@ global フラグ `g` を付けると、 3 桁だけでなく、 6 桁すべて�
 この例は、文字列全体から Unicode 文字列だけを抜き出す方法を示しています。
 
 ```js
-const text = 'Образец text на русском языке';
+const text = "Образец text на русском языке";
 const regex = /[\u0400-\u04FF]+/g;
 
 const match = regex.exec(text);
@@ -256,10 +256,10 @@ console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx' と出力
 ### 動的な入力からの正規表現の構築
 
 ```js
-const breakfasts = ['bacon', 'eggs', 'oatmeal', 'toast', 'cereal'];
-const order = 'Let me get some bacon and eggs, please';
+const breakfasts = ["bacon", "eggs", "oatmeal", "toast", "cereal"];
+const order = "Let me get some bacon and eggs, please";
 
-order.match(new RegExp(`\\b(${breakfasts.join('|')})\\b`, 'g'));
+order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 // ['bacon', 'eggs'] を返す
 ```
 
@@ -277,13 +277,13 @@ Firefox 34 より、量指定子を伴うキャプチャグループが動作を
 
 ```js
 // Firefox 33 以前
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${JSON.stringify(group)}`);
 });
 // group: ""
 
 // Firefox 34 以降
-'x'.replace(/x(.)?/g, (m, group) => {
+"x".replace(/x(.)?/g, (m, group) => {
   console.log(`group: ${group}`);
 });
 // group: undefined

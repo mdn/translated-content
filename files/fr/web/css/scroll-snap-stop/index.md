@@ -1,7 +1,6 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
-translation_of: Web/CSS/scroll-snap-stop
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

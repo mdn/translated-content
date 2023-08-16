@@ -34,15 +34,21 @@ Antes de `globalThis`, a única maneira confiável de obter o objeto global para
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // sem setTimeout neste ambiente!
 }
 ```
@@ -50,7 +56,7 @@ if (typeof globals.setTimeout !== 'function') {
 Com `globalThis` disponível, a busca global adicional entre ambientes não é mais necessária:
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   // sem setTimeout neste ambiente!
 }
 ```

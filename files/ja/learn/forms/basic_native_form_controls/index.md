@@ -3,7 +3,6 @@ title: 基本的なネイティブフォームコントロール
 slug: Learn/Forms/Basic_native_form_controls
 l10n:
   sourceCommit: 25233e77fc3d3de84511203fd41eaddf361880ef
-original_slug: Learn/Forms/The_native_form_widgets
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}

@@ -1,7 +1,6 @@
 ---
 title: Time to interactive
 slug: Glossary/Time_to_interactive
-translation_of: Glossary/Time_to_interactive
 ---
 
 Le **Time to Interactive** (TTI) est une métrique non standardisée des performances web indiquant la «&nbsp;progression&nbsp;» du chargement. Elle correspond au moment où la dernière [tâche longue](/fr/docs/Web/API/Long_Tasks_API) s'est terminée et a été suivie de 5 secondes d'inactivité du réseau et du fil de chargement principal.

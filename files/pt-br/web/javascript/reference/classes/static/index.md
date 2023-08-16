@@ -26,10 +26,10 @@ Para chamar um método estático dentro de outro método estático da mesma clas
 ```js
 class ChamadaDoMetodoEstatico {
   static metodoEstatico() {
-    return 'O método estático foi chamado';
+    return "O método estático foi chamado";
   }
   static outroMetodoEstatico() {
-    return this.metodoEstatico() + ' de outro método estático';
+    return this.metodoEstatico() + " de outro método estático";
   }
 }
 ChamadaDoMetodoEstatico.metodoEstatico();
@@ -44,7 +44,7 @@ ChamadaDoMetodoEstatico.outroMetodoEstatico();
 Métodos estáticos não são diretamente acessíveis utilizando-se `this` a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
 
 ```js
-nomeDaClasse.nomeDoMetodoEstatico()
+nomeDaClasse.nomeDoMetodoEstatico();
 ```
 
 ou chamando o método como uma propriedade do construtor:
@@ -64,7 +64,7 @@ class ChamadaDoMetodoEstatico {
   }
 
   static MetodoEstatico() {
-    return 'O método estático foi chamado.';
+    return "O método estático foi chamado.";
   }
 }
 ```
@@ -96,8 +96,8 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 ## Especificações
 
-| Especificação                                                                                | Status                   | Comentário         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
+| Especificação                                                         | Status              | Comentário         |
+| --------------------------------------------------------------------- | ------------------- | ------------------ |
 | {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

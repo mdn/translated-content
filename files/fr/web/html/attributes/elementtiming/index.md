@@ -1,7 +1,6 @@
 ---
 title: "Attribut HTML : elementtiming"
 slug: Web/HTML/Attributes/elementtiming
-translation_of: Web/HTML/Attributes/elementtiming
 ---
 
 {{HTMLSidebar}}

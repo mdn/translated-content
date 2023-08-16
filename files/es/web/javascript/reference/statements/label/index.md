@@ -1,7 +1,6 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-original_slug: Web/JavaScript/Referencia/Sentencias/label
 ---
 
 {{jsSidebar("Statements")}}
@@ -19,6 +18,7 @@ etiqueta :sentencia
 ```
 
 - `etiqueta`
+
   - : Cualquier identificador JavaScript que no sea una palabra reservada.
 
 - `sentencia`

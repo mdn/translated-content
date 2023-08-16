@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/delete
 ---
 
 {{JSRef}}
@@ -34,7 +33,7 @@ mySet.add("foo");
 mySet.delete("bar"); // Retorna false. No hay elemento "bar" para ser removido.
 mySet.delete("foo"); // Retorna true.  Removido exitosamente.
 
-mySet.has("foo");    // Retorna false. El elemento "foo" ya no está presente.
+mySet.has("foo"); // Retorna false. El elemento "foo" ya no está presente.
 ```
 
 ## Especificaciones

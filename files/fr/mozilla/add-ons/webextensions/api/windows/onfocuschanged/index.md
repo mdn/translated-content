@@ -1,7 +1,6 @@
 ---
 title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
 
 {{AddonSidebar()}}

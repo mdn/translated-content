@@ -1,5 +1,5 @@
 ---
-title: '<code>: O Elemento Inline Code'
+title: "<code>: O Elemento Inline Code"
 slug: Web/HTML/Element/code
 ---
 
@@ -69,8 +69,10 @@ Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_a
 Um parágrafo que inlcui `<code>`:
 
 ```html
-<p>A função <code>selectAll()</code> destaca todo o texto no
-campo de entrada então o usuário pode, por exemplo, copiar ou deletar o texto.</p>
+<p>
+  A função <code>selectAll()</code> destaca todo o texto no campo de entrada
+  então o usuário pode, por exemplo, copiar ou deletar o texto.
+</p>
 ```
 
 A sainda gerada por esse trecho HTML se parece com isso:
@@ -85,11 +87,11 @@ Uma regra CSS pode ser definida para o seletor `code` para sobrescrever a fonte 
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-code-element', '&lt;code&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}                         | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                           | Status                   | Comentário |
+| --------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-code-element', '&lt;code&gt;')}}          | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-code-element', '&lt;code&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;code&gt;')}}                    | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

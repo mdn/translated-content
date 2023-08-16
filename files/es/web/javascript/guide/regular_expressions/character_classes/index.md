@@ -1,7 +1,6 @@
 ---
 title: Clases de caracteres
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
-original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
 
 {{JsSidebar("Guía de JavaScript")}}

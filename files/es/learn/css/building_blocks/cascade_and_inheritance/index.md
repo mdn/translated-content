@@ -1,7 +1,6 @@
 ---
 title: Cascada y herencia
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-original_slug: Learn/CSS/Building_blocks/Cascada_y_herencia
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}

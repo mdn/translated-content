@@ -1,7 +1,6 @@
 ---
 title: NavigatorID.userAgent
 slug: orphaned/Web/API/NavigatorID/userAgent
-original_slug: Web/API/NavigatorID/userAgent
 ---
 
 {{ApiRef("HTML DOM")}}

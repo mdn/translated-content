@@ -128,7 +128,7 @@ Alternativamente, uma função de ligação ([bound function](/pt-BR/docs/Web/Ja
 Uma _arrow function_ não tem seu próprio `this;` o valor `this` do contexto léxico encapsulado é usado. Ex: _Arrow functions_ seguem as regras normais de pesquisa de variáveis. Então, ao procurar por `this`, que não está no escopo atual elas acabam encontrando `this` no escopo encapsulado. Assim, no código a seguir, o `this` dentro da função que é passado para `setInterval` tem o mesmo valor do `this` na função lexicamente encapsulada:
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -144,7 +144,10 @@ var p = new Person();
 Considerando que `this` vem do contexto léxico envolvente, as regras do modo estrito (_[strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)_) em relação ao `this` são ignoradas.
 
 ```js
-var f = () => { 'use strict'; return this };
+var f = () => {
+  "use strict";
+  return this;
+};
 f() === window; // ou o objeto global
 ```
 
@@ -306,13 +309,7 @@ var func = (a, b, c)
 Entretanto, isto pode ser corrigido ao usar parênteses ou colocar a quebra de linha dentro dos argumentos como visto abaixo para garantir que o código permaneça bonito e leve.
 
 ```js
-var func = (
-  a,
-  b,
-  c
-) => (
-  1
-);
+var func = (a, b, c) => 1;
 // SyntaxError (erro de sintaxe) não é lançado
 ```
 
@@ -380,9 +377,9 @@ setTimeout( () => {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                                                                            | Status               | Comentário         |
+| ---------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

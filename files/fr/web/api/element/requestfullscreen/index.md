@@ -1,7 +1,6 @@
 ---
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
-translation_of: Web/API/Element/requestFullScreen
 ---
 
 {{APIRef("Fullscreen API")}}

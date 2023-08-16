@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 ---
 
 {{JSRef}} {{non-standard_header}}

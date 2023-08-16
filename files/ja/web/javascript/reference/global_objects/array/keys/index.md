@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-keys()
+keys();
 ```
 
 ### 返値
@@ -26,11 +26,11 @@ keys()
 ### 不連続を無視しないキーイテレーター
 
 ```js
-const arr = ['a', , 'c'];
+const arr = ["a", , "c"];
 const sparseKeys = Object.keys(arr);
 const denseKeys = [...arr.keys()];
 console.log(sparseKeys); // ['0', '2']
-console.log(denseKeys);  // [0, 1, 2]
+console.log(denseKeys); // [0, 1, 2]
 ```
 
 ## 仕様書

@@ -1,7 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-original_slug: Web/HTML/Elemento/label
 ---
 
 ## Resumen

@@ -19,8 +19,8 @@ Em casos onde você deseja que o método utilizado altere para {{HTTPMethod("GET
 
 ## Especificações
 
-| Especificação                                        | Título                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                          | Título                                                        |
+| -------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "302 Found" , "6.4.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

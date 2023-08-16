@@ -1,5 +1,5 @@
 ---
-title: 'Window: popstate イベント'
+title: "Window: popstate イベント"
 slug: Web/API/Window/popstate_event
 ---
 

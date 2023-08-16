@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Functions
 
 {{jsSidebar("Functions")}}
 
-一般的に言うと、関数とは外部 (再帰の場合は内部) から *呼び出す* ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (*function body*) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。
+一般的に言うと、関数とは外部 (再帰の場合は内部) から _呼び出す_ ことのできる「サブプログラム」です。プログラムそのもののように、関数は関数本体 (_function body_) と呼ばれる連続した文で構成されます。値を関数に*渡す*ことができ、関数は値を*返す*ことができます。
 
 JavaScript において、関数は第一級オブジェクトです。すなわち、関数はオブジェクトであり、他のあらゆるオブジェクトと同じように操作したり渡したりすることができます。具体的には、関数は [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) オブジェクトです。
 
@@ -17,7 +17,7 @@ JavaScript におけるすべての関数は、実際には `Function` オブジ
 
 初期値以外の値を返すためには、返す値を指定する [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文が関数内になくてはなりません。`return` 文を持たない関数は既定値を返します。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)が [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) キーワードとともに呼び出された場合、その `this` 引数が初期値となります。それ以外のすべての関数が既定で返す値は {{jsxref("undefined")}} です。
 
-関数の仮引数 (parameter) には、関数呼び出しにおいて実引数 (*argument*) が渡されます。実引数は、関数に*値渡し*されます。関数の中で引数の値を変更しても、その変更はグローバルスコープもしくは呼び出し元の関数内には反映されません。オブジェクト参照も「値」ですが、こちらは特別です。参照されているオブジェクトのプロパティを関数の中で変更すると、次の例にあるように、その変更を関数の外部から見ることができます。
+関数の仮引数 (parameter) には、関数呼び出しにおいて実引数 (_argument_) が渡されます。実引数は、関数に*値渡し*されます。関数の中で引数の値を変更しても、その変更はグローバルスコープもしくは呼び出し元の関数内には反映されません。オブジェクト参照も「値」ですが、こちらは特別です。参照されているオブジェクトのプロパティを関数の中で変更すると、次の例にあるように、その変更を関数の外部から見ることができます。
 
 ```js
 /* 関数 'myFunc' を宣言 */
@@ -33,7 +33,7 @@ function myFunc(theObject) {
 var mycar = {
   brand: "Honda",
   model: "Accord",
-  year: 1998
+  year: 1998,
 };
 
 /* 'Honda' を出力 */
@@ -92,17 +92,17 @@ function [name]([param[, param[, ... param]]]) {
 以下は**無名の**関数式の例です (`name` が使われていない)。
 
 ```js
-var myFunction = function() {
-    statements
-}
+var myFunction = function () {
+  statements;
+};
 ```
 
 定義の中で名前を提供することで、**名前付きの**関数式を作ることも可能です。
 
 ```js
-var myFunction = function namedFunction(){
-    statements
-}
+var myFunction = function namedFunction() {
+  statements;
+};
 ```
 
 名前付きの関数式を作ることの利点の 1 つは、エラーに遭遇したとき、スタックトレースがその関数の名前を含めるため、エラーの発生源をより容易に特定できるということです。
@@ -112,8 +112,8 @@ var myFunction = function namedFunction(){
 関数が一度だけ使われるとき、一般的なパターンが[即時実行関数式 (IIFE, Immediately Invoked Function Expression)](/ja/docs/Glossary/IIFE) です。
 
 ```js
-(function() {
-    statements
+(function () {
+  statements;
 })();
 ```
 
@@ -176,7 +176,7 @@ param =&gt; expression
 他のすべてのオブジェクトと同じように、`new` 演算子を使って {{jsxref("Function")}} オブジェクトを作成することができます。
 
 ```js
-new Function (arg1, arg2, ... argN, functionBody)
+new Function(arg1, arg2, ...argN, functionBody);
 ```
 
 - `arg1, arg2, ... argN`
@@ -195,7 +195,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 他のすべてのオブジェクトと同じように、 `new` 演算子を使って {{jsxref("GeneratorFunction")}} オブジェクトを作成することができます。
 
 ```js
-new GeneratorFunction (arg1, arg2, ... argN, functionBody)
+new GeneratorFunction(arg1, arg2, ...argN, functionBody);
 ```
 
 - `arg1, arg2, ... argN`
@@ -246,7 +246,7 @@ ECMAScript 2015 からは、独自のメソッドを、ゲッターとセッタ�
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -257,22 +257,22 @@ var obj = {
 `Function` *コンストラクター*によって定義され、変数 `multiply` に代入された関数です。
 
 ```js
-var multiply = new Function('x', 'y', 'return x * y');
+var multiply = new Function("x", "y", "return x * y");
 ```
 
 `multiply` と命名された関数の*関数宣言*です。
 
 ```js
 function multiply(x, y) {
-   return x * y;
+  return x * y;
 } // ここにセミコロンは必要ありません
 ```
 
 変数 `multiply` に代入された、無名関数の*関数式*です。
 
 ```js
-var multiply = function(x, y) {
-   return x * y;
+var multiply = function (x, y) {
+  return x * y;
 };
 ```
 
@@ -280,7 +280,7 @@ var multiply = function(x, y) {
 
 ```js
 var multiply = function func_name(x, y) {
-   return x * y;
+  return x * y;
 };
 ```
 
@@ -304,8 +304,7 @@ alert(x); // throws an error
 `new Function` によって定義された関数は関数名を持ちません。しかし、JavaScript エンジンの [SpiderMonkey](/ja/docs/Mozilla/Projects/SpiderMonkey) では、その関数をシリアライズされた形式にすると "anonymous" という名前を持っているかのように表示されます。例えば、`alert(new Function())` はこのように出力されます。
 
 ```js
-function anonymous() {
-}
+function anonymous() {}
 ```
 
 この関数は実際には名前を持っていないので、`anonymous` は関数内部でアクセスできる変数ではありません。例えば、次の文はエラーになります。
@@ -320,7 +319,7 @@ foo();
 ```js
 foo(); // FOO! とアラート表示
 function foo() {
-   alert('FOO!');
+  alert("FOO!");
 }
 ```
 
@@ -339,19 +338,19 @@ function foo() {
  */
 var p = 5;
 function myFunc() {
-    var p = 9;
+  var p = 9;
 
-    function decl() {
-        console.log(p);
-    }
-    var expr = function() {
-        console.log(p);
-    };
-    var cons = new Function('\tconsole.log(p);');
+  function decl() {
+    console.log(p);
+  }
+  var expr = function () {
+    console.log(p);
+  };
+  var cons = new Function("\tconsole.log(p);");
 
-    decl();
-    expr();
-    cons();
+  decl();
+  expr();
+  cons();
 }
 myFunc();
 
@@ -368,7 +367,9 @@ myFunc();
 ただし、`Function` コンストラクターの文字列を解析することで生成された関数内で入れ子にされている関数式や関数宣言は、繰り返し解析されないことに注意してください。例えば、
 
 ```js
-var foo = (new Function("var bar = \'FOO!\';\nreturn(function() {\n\talert(bar);\n});"))();
+var foo = new Function(
+  "var bar = 'FOO!';\nreturn(function() {\n\talert(bar);\n});",
+)();
 foo(); // 関数本体の文字列で "function() {\n\talert(bar);\n}" の部分は再解析されません
 ```
 
@@ -378,18 +379,21 @@ foo(); // 関数本体の文字列で "function() {\n\talert(bar);\n}" の部分
 - 関数またはスクリプト自体の「ソース要素 (source element)」でなくなったとき。「ソース要素」はスクリプトや関数本体の中で入れ子にされていない文のことです。
 
 ```js
-var x = 0;               // ソース要素
-if (x === 0) {           // ソース要素
-   x = 10;               // ソース要素ではない
-   function boo() {}     // ソース要素ではない
+var x = 0; // ソース要素
+if (x === 0) {
+  // ソース要素
+  x = 10; // ソース要素ではない
+  function boo() {} // ソース要素ではない
 }
-function foo() {         // ソース要素
-   var y = 20;           // ソース要素
-   function bar() {}     // ソース要素
-   while (y === 10) {    // ソース要素
-      function blah() {} // ソース要素ではない
-      y++;               // ソース要素ではない
-   }
+function foo() {
+  // ソース要素
+  var y = 20; // ソース要素
+  function bar() {} // ソース要素
+  while (y === 10) {
+    // ソース要素
+    function blah() {} // ソース要素ではない
+    y++; // ソース要素ではない
+  }
 }
 ```
 
@@ -400,24 +404,24 @@ function foo() {         // ソース要素
 function foo() {}
 
 // 関数式
-(function bar() {})
+(function bar() {});
 
 // 関数式
-x = function hello() {}
+x = function hello() {};
 
 if (x) {
-   // 関数式
-   function world() {}
+  // 関数式
+  function world() {}
 }
 
 // 関数宣言
 function a() {
-   // 関数宣言
-   function b() {}
-   if (0) {
-      // 関数式
-      function c() {}
-   }
+  // 関数宣言
+  function b() {}
+  if (0) {
+    // 関数式
+    function c() {}
+  }
 }
 ```
 
@@ -426,7 +430,7 @@ function a() {
 [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では ES2015 から、ブロック内の関数はそのブロックに新しいスコープを形成します。 ES2015 より前では、ブロックレベル関数は strict モードでは禁止されています。
 
 ```js
-'use strict';
+"use strict";
 
 function f() {
   return 1;
@@ -451,9 +455,10 @@ strict コード以外では、ブロック内の関数宣言は奇妙な動作�
 
 ```js
 if (shouldDefineZero) {
-   function zero() {     // 危険: 互換性リスク
-      console.log("This is zero.");
-   }
+  function zero() {
+    // 危険: 互換性リスク
+    console.log("This is zero.");
+  }
 }
 ```
 
@@ -466,9 +471,9 @@ ES2015 では `shouldDefineZero` が false の場合、このブロックが実�
 ```js
 var zero;
 if (shouldDefineZero) {
-   zero = function() {
-      console.log("This is zero.");
-   };
+  zero = function () {
+    console.log("This is zero.");
+  };
 }
 ```
 
@@ -481,12 +486,12 @@ if (shouldDefineZero) {
 ```js
 // この関数は先頭にゼロを足して固定長にした文字列を返す
 function padZeros(num, totalLen) {
-   var numStr = num.toString();             // 戻り値を文字列に初期化する
-   var numZeros = totalLen - numStr.length; // ゼロの数を計算する
-   for (var i = 1; i <= numZeros; i++) {
-      numStr = "0" + numStr;
-   }
-   return numStr;
+  var numStr = num.toString(); // 戻り値を文字列に初期化する
+  var numZeros = totalLen - numStr.length; // ゼロの数を計算する
+  for (var i = 1; i <= numZeros; i++) {
+    numStr = "0" + numStr;
+  }
+  return numStr;
 }
 ```
 
@@ -494,9 +499,9 @@ function padZeros(num, totalLen) {
 
 ```js
 var result;
-result = padZeros(42,4); // "0042" を返す
-result = padZeros(42,2); // "42" を返す
-result = padZeros(5,4);  // "0005" を返す
+result = padZeros(42, 4); // "0042" を返す
+result = padZeros(42, 2); // "42" を返す
+result = padZeros(5, 4); // "0005" を返す
 ```
 
 ### 関数が存在するかどうか確認する
@@ -504,11 +509,11 @@ result = padZeros(5,4);  // "0005" を返す
 `typeof` 演算子を使うと関数が存在するかどうかを確かめることができます。次の例では、`window` オブジェクトが `noFunc` という関数のプロパティを持つかどうかを確かめるためのテストが行われます。もし持っていたら、それが使われます。そうでなければ、他の行動が取られます。
 
 ```js
-if ('function' === typeof window.noFunc) {
-   // noFunc() を使う
- } else {
-   // 何か他のことをする
- }
+if ("function" === typeof window.noFunc) {
+  // noFunc() を使う
+} else {
+  // 何か他のことをする
+}
 ```
 
 `if` のテストの中で、`noFunc` への参照が使われているのに注目してください。関数名の後に括弧 "()" がないので、実際の関数は呼び出されません。

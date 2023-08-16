@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.generateCertificate()
 slug: Web/API/RTCPeerConnection/generateCertificate_static
-original_slug: Web/API/RTCPeerConnection/generateCertificate
 ---
 
 {{APIRef("WebRTC")}}
@@ -11,7 +10,7 @@ original_slug: Web/API/RTCPeerConnection/generateCertificate
 ## Syntax
 
 ```js
-var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm);
 ```
 
 ### 매개변수
@@ -29,12 +28,12 @@ var cert = RTCPeerConnection.generateCertificate(keygenAlgorithm)
 
 ```js
 RTCPeerConnection.generateCertificate({
-    name: 'RSASSA-PKCS1-v1_5',
-    hash: 'SHA-256',
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1])
-}).then(function(cert) {
-  var pc = new RTCPeerConnection({certificates: [cert]});
+  name: "RSASSA-PKCS1-v1_5",
+  hash: "SHA-256",
+  modulusLength: 2048,
+  publicExponent: new Uint8Array([1, 0, 1]),
+}).then(function (cert) {
+  var pc = new RTCPeerConnection({ certificates: [cert] });
 });
 ```
 

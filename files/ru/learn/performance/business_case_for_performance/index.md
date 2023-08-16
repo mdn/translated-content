@@ -1,7 +1,6 @@
 ---
 title: Производительность веб-приложений в бизнесе
 slug: Learn/Performance/business_case_for_performance
-translation_of: Learn/Performance/business_case_for_performance
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}

@@ -1,7 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-original_slug: Web/HTML/Elemento/input/email
 ---
 
 {{HTMLSidebar}}

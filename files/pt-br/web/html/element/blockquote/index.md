@@ -31,8 +31,7 @@ Para citações curtas, use o elemento {{HTMLElement("q")}}.
 
 ```html
 <blockquote cite="http://developer.mozilla.org">
-  <p>Esta é uma citação tirada da
-  Mozilla Developer Center.</p>
+  <p>Esta é uma citação tirada da Mozilla Developer Center.</p>
 </blockquote>
 ```
 
@@ -42,11 +41,11 @@ O código HTML acima vai resultar em:
 
 ## Especificação
 
-| Especificação                                                                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}         | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| Especificação                                                                                   | Status                   | Comentário |
+| ----------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-blockquote-element', '&lt;blockquote&gt;')}}      | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'grouping-content.html#the-blockquote-element', '&lt;blockquote&gt;')}} | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;blockquote&gt;')}}                      | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

@@ -2,6 +2,7 @@
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSidebar}}
 
 주소줄에 추가되는 버튼으로 사용자가 확장 프로그램과 상호작용하는 일명 [페이지 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) 을 말한다.

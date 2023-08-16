@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64
 ## 構文
 
 ```js
-setBigInt64(byteOffset, value)
-setBigInt64(byteOffset, value, littleEndian)
+setBigInt64(byteOffset, value);
+setBigInt64(byteOffset, value, littleEndian);
 ```
 
 ### 引数

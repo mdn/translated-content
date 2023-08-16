@@ -1,7 +1,6 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-translation_of: Web/API/WebVR_API
 ---
 
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}

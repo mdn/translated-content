@@ -1,7 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-translation_of: Web/CSS/time
 ---
 
 {{CSSRef}}

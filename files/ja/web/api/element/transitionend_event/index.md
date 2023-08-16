@@ -2,7 +2,6 @@
 title: "Element: transitionend イベント"
 short-title: transitionend
 slug: Web/API/Element/transitionend_event
-original_slug: Web/API/Document/transitionend_event
 l10n:
   sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---

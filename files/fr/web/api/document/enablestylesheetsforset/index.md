@@ -1,7 +1,6 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
-translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
 
 {{ APIRef("DOM") }}

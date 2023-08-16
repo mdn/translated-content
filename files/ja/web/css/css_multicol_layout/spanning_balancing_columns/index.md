@@ -1,7 +1,6 @@
 ---
 title: 段抜きと段の均衡
 slug: Web/CSS/CSS_multicol_layout/Spanning_balancing_columns
-original_slug: Web/CSS/CSS_Columns/Spanning_Columns
 ---
 
 {{CSSRef}}

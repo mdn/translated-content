@@ -1,13 +1,6 @@
 ---
 title: Доступность
 slug: Web/Accessibility
-tags:
-  - Accessibility
-  - Advanced
-  - Landing
-  - TopicStub
-  - Веб-разработка
-translation_of: Web/Accessibility
 ---
 
 Доступность (Accessibility, A11y в англоязычной среде) в веб-разработке — это обеспечение возможности использования сайтов как можно большим числом людей, включая тех, чьи способности как-либо ограничены.

@@ -1,7 +1,6 @@
 ---
 title: JavaScript のクラス
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Inheritance
 l10n:
   sourceCommit: ad3d16a5acd46253a4f5e2861fd4fba4e4497110
 ---

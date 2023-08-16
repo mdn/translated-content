@@ -1,7 +1,6 @@
 ---
 title: "<bdi> : l'élément d'isolation bidirectionnelle"
 slug: Web/HTML/Element/bdi
-translation_of: Web/HTML/Element/bdi
 ---
 
 {{HTMLSidebar}}

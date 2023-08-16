@@ -1,7 +1,6 @@
 ---
 title: runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
 
 {{AddonSidebar()}}

@@ -1,7 +1,6 @@
 ---
 title: Utiliser le rôle link
 slug: Web/Accessibility/ARIA/Roles/link_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 ---
 
 ### Description

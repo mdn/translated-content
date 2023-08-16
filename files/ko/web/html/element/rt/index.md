@@ -1,5 +1,5 @@
 ---
-title: '<rt>: 루비 텍스트 요소'
+title: "<rt>: 루비 텍스트 요소"
 slug: Web/HTML/Element/rt
 ---
 
@@ -57,10 +57,7 @@ slug: Web/HTML/Element/rt
 다음 예제는 {{htmlelement("ruby")}} 요소를 사용해 한자의 발음을 표기합니다.
 
 ```html
-<ruby>
-  漢 <rt>한</rt>
-  字 <rt>자</rt>
-</ruby>
+<ruby> 漢 <rt>한</rt> 字 <rt>자</rt> </ruby>
 ```
 
 ```css hidden

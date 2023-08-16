@@ -1,10 +1,6 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - Веб
-  - Лэндинг
-translation_of: Web/XSLT
 ---
 
 **XSLT** (_Extensible Stylesheet Language Transformations_) — является языком на основе XML, используемым вместе со специализированным программным обеспечением для преобразования [XML](http://ru.wikipedia.org/wiki/XML)-документов. Спецификация XSLT является рекомендацией [W3C](http://ru.wikipedia.org/wiki/W3C).

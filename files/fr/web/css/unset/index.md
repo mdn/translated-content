@@ -1,7 +1,6 @@
 ---
 title: unset
 slug: Web/CSS/unset
-translation_of: Web/CSS/unset
 ---
 
 {{CSSRef}}

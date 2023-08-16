@@ -1,7 +1,6 @@
 ---
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
-original_slug: Web/API/Body/arrayBuffer
 l10n:
   sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---

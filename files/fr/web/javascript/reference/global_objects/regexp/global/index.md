@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
 
 {{JSRef}}

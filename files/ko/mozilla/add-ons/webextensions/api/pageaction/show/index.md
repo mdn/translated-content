@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 
 ```js
 browser.pageAction.show(
-  tabId // integer
-)
+  tabId, // integer
+);
 ```
 
 ### 매개변수
@@ -43,10 +43,10 @@ A [`Promise`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 ```js
 browser.contextMenus.create({
   id: "show",
-  title: "Show page action"
+  title: "Show page action",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "show") {
     browser.pageAction.show(tab.id);
   }

@@ -92,25 +92,25 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 Затем добавим в `drawScene()` код, который свяжет массив нормалей с атрибутом шейдера. Таким образом шейдер сможет получить к нему доступ:
 
 ```js
-  // Указываем WebGL как извлекать нормали из
-  // буфера нормалей в атрибут vertexNormal.
-  {
-    const numComponents = 3;
-    const type = gl.FLOAT;
-    const normalize = false;
-    const stride = 0;
-    const offset = 0;
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.normal);
-    gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexNormal,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexNormal);
-  }
+// Указываем WebGL как извлекать нормали из
+// буфера нормалей в атрибут vertexNormal.
+{
+  const numComponents = 3;
+  const type = gl.FLOAT;
+  const normalize = false;
+  const stride = 0;
+  const offset = 0;
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.normal);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.vertexNormal,
+    numComponents,
+    type,
+    normalize,
+    stride,
+    offset,
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
+}
 ```
 
 В конце нужно обновить код, который строит матрицы для uniform-переменных, чтобы создать и передать в шейдер **матрицу нормалей**, которая используется для трансформации нормалей при расчёте ориентации куба относительно направления на источник света:
@@ -136,8 +136,8 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 
 Сначала обновим вершинный шейдер, чтобы он рассчитывал значение освещения для каждой вершины на основе окружающего и направленного света. Посмотрим на код:
 
-```html
-  const vsSource = `
+```js
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec3 aVertexNormal;
     attribute vec2 aTextureCoord;
@@ -178,7 +178,7 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 Фрагментный шейдер должен быть обновлён таким образом, чтобы он учитывал в значение освещения, рассчитанное в вершинном шейдере:
 
 ```js
-  const fsSource = `
+const fsSource = `
     varying highp vec2 vTextureCoord;
     varying highp vec3 vLighting;
 
@@ -197,20 +197,20 @@ slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 Осталось только посмотреть на определение атрибута `aVertexNormal` и uniform-переменной `uNormalMatrix`.
 
 ```js
-  const programInfo = {
-    program: shaderProgram,
-    attribLocations: {
-      vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
-      vertexNormal: gl.getAttribLocation(shaderProgram, 'aVertexNormal'),
-      textureCoord: gl.getAttribLocation(shaderProgram, 'aTextureCoord'),
-    },
-    uniformLocations: {
-      projectionMatrix: gl.getUniformLocation(shaderProgram, 'uProjectionMatrix'),
-      modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
-      normalMatrix: gl.getUniformLocation(shaderProgram, 'uNormalMatrix'),
-      uSampler: gl.getUniformLocation(shaderProgram, 'uSampler'),
-    },
-  };
+const programInfo = {
+  program: shaderProgram,
+  attribLocations: {
+    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
+    vertexNormal: gl.getAttribLocation(shaderProgram, "aVertexNormal"),
+    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
+  },
+  uniformLocations: {
+    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
+    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+    normalMatrix: gl.getUniformLocation(shaderProgram, "uNormalMatrix"),
+    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
+  },
+};
 ```
 
 И это всё!

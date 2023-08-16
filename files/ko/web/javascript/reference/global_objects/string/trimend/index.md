@@ -13,9 +13,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ## 구문
 
 ```js
-trimEnd()
+trimEnd();
 
-trimRight()
+trimRight();
 ```
 
 ### 반환값
@@ -39,13 +39,13 @@ String.prototype.trimRight.name === "trimEnd";
 다음 예제는 `'   foo'` 문자열을 표시합니다.
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimEnd();
 console.log(str.length); // 6
-console.log(str);        // '   foo'
+console.log(str); // '   foo'
 ```
 
 ## 명세

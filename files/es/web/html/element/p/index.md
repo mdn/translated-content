@@ -1,7 +1,6 @@
 ---
 title: p
 slug: Web/HTML/Element/p
-original_slug: Web/HTML/Elemento/p
 ---
 
 ### Definición

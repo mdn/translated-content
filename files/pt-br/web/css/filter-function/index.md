@@ -34,8 +34,8 @@ The `<filter-function>` data type is specified using one of the filter functions
 
 ## Specification
 
-| Specification                                                                                                    | Status                               | Comments            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
+| Specification                                                                        | Status                     | Comments            |
+| ------------------------------------------------------------------------------------ | -------------------------- | ------------------- |
 | {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
 
 ## See also

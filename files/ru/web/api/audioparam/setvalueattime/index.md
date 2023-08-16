@@ -1,7 +1,6 @@
 ---
 title: AudioParam.setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
-translation_of: Web/API/AudioParam/setValueAtTime
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -35,14 +34,14 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var targetAtTimePlus = document.querySelector('.set-target-at-time-plus');
-var targetAtTimeMinus = document.querySelector('.set-target-at-time-minus');
+var targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
+var targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
@@ -59,22 +58,20 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-targetAtTimePlus.onclick = function() {
+targetAtTimePlus.onclick = function () {
   currGain += 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 
-targetAtTimeMinus.onclick = function() {
+targetAtTimeMinus.onclick = function () {
   currGain -= 0.25;
   gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
-}
+};
 ```
 
 ## Specifications
 
-| Specification                                                                                                | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-audioparam-setvalueattime', 'setValueAtTime')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

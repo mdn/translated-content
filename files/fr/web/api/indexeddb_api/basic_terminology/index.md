@@ -1,7 +1,6 @@
 ---
 title: Caractéristiques clés et terminologie d'IndexedDB
 slug: Web/API/IndexedDB_API/Basic_Terminology
-translation_of: Web/API/IndexedDB_API/Basic_Terminology
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

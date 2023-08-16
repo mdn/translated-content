@@ -1,7 +1,6 @@
 ---
 title: <feColorMatrix>
 slug: Web/SVG/Element/feColorMatrix
-translation_of: Web/SVG/Element/feColorMatrix
 ---
 
 {{SVGRef}}

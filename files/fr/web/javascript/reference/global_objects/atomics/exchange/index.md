@@ -1,7 +1,6 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
 
 {{JSRef}}

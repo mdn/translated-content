@@ -1,7 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 
 {{JSSidebar("Operators")}}

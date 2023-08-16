@@ -1,7 +1,6 @@
 ---
 title: CSS スクロールバー
 slug: Web/CSS/CSS_scrollbars_styling
-original_slug: Web/CSS/CSS_Scrollbars
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

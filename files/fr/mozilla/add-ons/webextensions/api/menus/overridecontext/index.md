@@ -1,7 +1,6 @@
 ---
 title: overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
 
 {{AddonSidebar}}

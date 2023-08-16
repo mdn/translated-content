@@ -1,7 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-translation_of: Web/API/AnimationEvent
 ---
 
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
@@ -33,13 +32,11 @@ _Также наследуют методы от родителя {{domxref("Eve
 - {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
   - : Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                 | Статус                                   | Комментарий              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------ |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Определяет инициализацию |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

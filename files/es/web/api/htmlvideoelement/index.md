@@ -1,7 +1,6 @@
 ---
 title: Elementos HTML para Video
 slug: Web/API/HTMLVideoElement
-original_slug: Web/API/ElementosHTMLparaVideo
 ---
 
 {{APIRef("HTML DOM")}}
