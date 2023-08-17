@@ -39,7 +39,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 - [可键盘浏览的 JavaScript 小部件](/zh-CN/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : 直到目前，网络开发人员仍缺乏合适的技术让基于 `<div>` 和 `<span>` 自定义组件无障碍化。**对键盘的无障碍性**是最基础的无障碍要求之一，开发者应当了解这一内容。
 - [ARIA](/zh-CN/docs/Accessibility/ARIA)
-  - : 学习如何利用无障碍富网络应用（Accessible Rich Internet Application）使你的 HTML 文档进一步无障碍化的一组文章。
+  - : 学习如何利用无障碍富互联网应用（Accessible Rich Internet Application）使你的 HTML 文档进一步无障碍化的一组文章。
 - [移动无障碍化清单](/zh-CN/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : 本文档向移动应用开发者提供了实现无障碍化所需内容的简明清单。
 - [认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)
