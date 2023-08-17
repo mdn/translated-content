@@ -114,7 +114,7 @@ El método {{domxref("URL.toString", "toString()")}} de `URL` solo devuelve el v
 
 ```js
 const response = await fetch(
-  new URL("http://www.example.com/démonstration.html")
+  new URL("http://www.example.com/démonstration.html"),
 );
 ```
 
