@@ -7,9 +7,9 @@ slug: Web/Accessibility
   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
 </section>
 
-**无障碍**（Accessibility，常被缩写为**A11y**，因为它以 a 开头，后跟 11 个字母，以 y 结尾）在 web 开发中意味着使尽可能多的人能够使用网站，即使有些用户的能力有限。
+**无障碍**（Accessibility，常被缩写为 **A11y**，因为它以“a”开头，后跟 11 个字母，以“y”结尾）在 web 开发中意味着使尽可能多的人能够使用网站，即使有些用户的能力在某种程度上受限。
 
-对大多数人来说，技术让生活更便捷。而对于有障碍的人群，无论他们的身体情况、认知能力以及他们访问网络的方式是怎样的，技术让本不可能的事变为可能。
+对大多数人来说，技术让生活更便捷。而对于有障碍的人群，技术让本不可能的事变为可能。无障碍化意味着设计出尽可能没有使用障碍的内容，无论访问者的身体情况、认知能力以及他们访问网络的方式是怎样的，。
 
 “**Web 从根本上是为所有人设计的**，无论他们的硬件、软件、语言、位置或能力如何。当 web 达到这一目标时，具有不同听力、运动、视觉和认知能力的人都可以访问它。”（[W3C——无障碍](https://www.w3.org/standards/webdesign/accessibility)）
 
@@ -33,7 +33,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 ## 其他文章
 
 - [了解 Web 内容无障碍功能指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
-  - : 这组文章提供了快速解释，以帮助你了解需要采取的步骤，以符合 W3C web 内容辅助功能指南 2.0 的建议
+  - : 这组文章提供了快速解释，以帮助你了解需要采取的步骤，以符合 W3C web 内容无障碍指南 2.0（WCAG 2.0 或简称 WCAG，出于撰文需要）的建议。
 - [色彩与无障碍简介](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 本文探讨了我们对于亮度和色彩的感知，并提供了如何在无障碍设计中使用色彩的基础知识，也演示了视觉与可读内容的最佳实践。
 - [可通过键盘导航的 JavaScript 小部件](/zh-CN/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
@@ -49,5 +49,5 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 
 ## 参见
 
-- [WAI 利益团体](https://www.w3.org/WAI/about/groups/waiig/)
+- [WAI 兴趣组](https://www.w3.org/WAI/about/groups/waiig/)
 - [开发者指南](/zh-CN/docs/Web/Guide)
