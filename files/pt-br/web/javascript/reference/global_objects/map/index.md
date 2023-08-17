@@ -182,33 +182,33 @@ Definir propriedades no objeto também funciona em objetos `Map`, e pode causar 
 Portanto, isso aparenta funcionar de certa forma:
 
 ```js example-bad
-const wrongMap = new Map()
-wrongMap['bla'] = 'blaa'
-wrongMap['bla2'] = 'blaaa2'
+const wrongMap = new Map();
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 Mas esse jeito de definir propriedades não interage com a estrura de dados do `Map`. Dessa forma é usada a implementação genérica do objeto. O valor 'bla' não é armazenado no `Map` para queries. Outras operaçãoes nos dados irão falhar.
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 A maneira correta para armazenar dados dentro do `Map` é através do `set(key,value)`
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
 
 ## Construtor
@@ -232,7 +232,7 @@ console.log(contacts.size) // 1
   - : Remove todos os pares chave/valor do objeto `Map`.
 - {{jsxref("Map.delete", "Map.prototype.delete(<var>key</var>)")}}
   - : Retorna `true` se o elemento no objeto `Map` existia e tenha sido removido, ou `false`
-  se o elemento não existia. `Map.prototype.has(key)` irá retornar `false` após isso.
+    se o elemento não existia. `Map.prototype.has(key)` irá retornar `false` após isso.
 - {{jsxref("Map.get", "Map.prototype.get(<var>key</var>)")}}
   - : Retorna o valor associado à chave, ou `undefined` se não há nada.
 - {{jsxref("Map.has", "Map.prototype.has(<var>key</var>)")}}
@@ -260,28 +260,28 @@ console.log(contacts.size) // 1
 ### Usando o objeto Map
 
 ```js
-const myMap = new Map()
+const myMap = new Map();
 
-const keyString = 'a string'
-const keyObj    = {}
-const keyFunc   = function() {}
+const keyString = "a string";
+const keyObj = {};
+const keyFunc = function () {};
 
 // setting the values
-myMap.set(keyString, "value associated with 'a string'")
-myMap.set(keyObj, 'value associated with keyObj')
-myMap.set(keyFunc, 'value associated with keyFunc')
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
 
-myMap.size              // 3
+myMap.size; // 3
 
 // getting the values
-myMap.get(keyString)    // "valor associado a 'a string'"
-myMap.get(keyObj)       // "valor associado a keyObj"
-myMap.get(keyFunc)      // "valor associado a keyFunc"
+myMap.get(keyString); // "valor associado a 'a string'"
+myMap.get(keyObj); // "valor associado a keyObj"
+myMap.get(keyFunc); // "valor associado a keyFunc"
 
-myMap.get('a string')    // "valor associado a 'a string'"
-                         // porque keyString === 'a string'
-myMap.get({})            // undefined, porque keyObj !== {}
-myMap.get(function() {}) // undefined, porque keyFunc !== function () {}
+myMap.get("a string"); // "valor associado a 'a string'"
+// porque keyString === 'a string'
+myMap.get({}); // undefined, porque keyObj !== {}
+myMap.get(function () {}); // undefined, porque keyFunc !== function () {}
 ```
 
 ### Usando NaN como chaves de Map
@@ -289,14 +289,14 @@ myMap.get(function() {}) // undefined, porque keyFunc !== function () {}
 {{jsxref("NaN")}} também pode ser usado como chave. Apesar de todo o `NaN` não ser igual a ele mesmo (`NaN !== NaN`), o exemplo a seguir funciona porque não é possível distinguir um `NaN` de outros.
 
 ```js
-const myMap = new Map()
-myMap.set(NaN, 'not a number')
+const myMap = new Map();
+myMap.set(NaN, "not a number");
 
-myMap.get(NaN)
+myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo')
-myMap.get(otherNaN)
+const otherNaN = Number("foo");
+myMap.get(otherNaN);
 // "not a number"
 ```
 
@@ -305,30 +305,30 @@ myMap.get(otherNaN)
 `Maps` podem ser iterados usando um loop `for..of`:
 
 ```js
-const myMap = new Map()
-myMap.set(0, 'zero')
-myMap.set(1, 'one')
+const myMap = new Map();
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
-  console.log(key + ' = ' + value)
+  console.log(key + " = " + value);
 }
 // 0 = zero
 // 1 = um
 
 for (const key of myMap.keys()) {
-  console.log(key)
+  console.log(key);
 }
 // 0
 // 1
 
 for (const value of myMap.values()) {
-  console.log(value)
+  console.log(value);
 }
 // zero
 // one
 
 for (const [key, value] of myMap.entries()) {
-  console.log(key + ' = ' + value)
+  console.log(key + " = " + value);
 }
 // 0 = zero
 // 1 = one
@@ -340,9 +340,9 @@ for (const [key, value] of myMap.entries()) {
 método {{jsxref("Map.prototype.forEach", "forEach()")}}:
 
 ```js
-myMap.forEach(function(value, key) {
-  console.log(key + ' = ' + value)
-})
+myMap.forEach(function (value, key) {
+  console.log(key + " = " + value);
+});
 // 0 = zero
 // 1 = um
 ```
@@ -350,21 +350,24 @@ myMap.forEach(function(value, key) {
 ### Relação com Arrays
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']]
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // Use o construtor padrão do Map para transformar um array 2D chave-valor em um map
-const myMap = new Map(kvArray)
+const myMap = new Map(kvArray);
 
-myMap.get('key1') // retorna "value1"
+myMap.get("key1"); // retorna "value1"
 
 // Use o Array.from() para transformar um map em um Array bidimensional de chaves e valores
-console.log(Array.from(myMap)) // Irá exibir para você o mesmo Array como um Array chave-valor
+console.log(Array.from(myMap)); // Irá exibir para você o mesmo Array como um Array chave-valor
 
 // Uma forma sucinta de fazer o mesmo, utilizando a sintaxe spread
-console.log([...myMap])
+console.log([...myMap]);
 
 // Ou use os iteradores keys() ou values(), e os converta para um array
-console.log(Array.from(myMap.keys())) // ["key1", "key2"]
+console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 ```
 
 ### Clonando e mesclando Maps
@@ -372,14 +375,12 @@ console.log(Array.from(myMap.keys())) // ["key1", "key2"]
 Assim como `Arrays`, o map também pode ser clonado:
 
 ```js
-const original = new Map([
-  [1, 'um']
-])
+const original = new Map([[1, "um"]]);
 
-const clone = new Map(original)
+const clone = new Map(original);
 
-console.log(clone.get(1))       // um
-console.log(original === clone) // false (Útil para comparações superficiais)
+console.log(clone.get(1)); // um
+console.log(original === clone); // false (Útil para comparações superficiais)
 ```
 
 > **Nota:** Tenha em mente que _o dado em si_ não é clonado.
@@ -388,45 +389,45 @@ Maps podem ser mesclados, mantendo as chaves únicas:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
-])
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
-])
+  [1, "uno"],
+  [2, "dos"],
+]);
 
 // Mescla dois maps. A última chave a se repetir vence.
 // O operador spread essenciamente converte um Map para um Array
-const merged = new Map([...first, ...second])
+const merged = new Map([...first, ...second]);
 
-console.log(merged.get(1)) // uno
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // uno
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 Maps podem ser mesclados com array também:
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
-])
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos']
-])
+  [1, "uno"],
+  [2, "dos"],
+]);
 
 // Mescla maps com um array. A última chave a se repetir vence.
-const merged = new Map([...first, ...second, [1, 'eins']])
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
-console.log(merged.get(1)) // eins
-console.log(merged.get(2)) // dos
-console.log(merged.get(3)) // three
+console.log(merged.get(1)); // eins
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three
 ```
 
 ## Especificações

@@ -196,7 +196,7 @@ cake.addEventListener("touchstart", growAlice, false);
 - {{domxref("Animation.cancel()")}} 终止动画。
 - {{domxref("Animation.reverse()")}} 反向播放动画。相当于设置动画播放速度（{{domxref("Animation.playbackRate")}}）为负值，并播放。
 
-让我们先来看一下 playbackRate - 一个否定的播放速度将导致一个动画反向运行。当爱丽丝从瓶中喝酒时，她越来越小。这是因为瓶子将动画的播放速度从 1 更改为 -1：
+让我们先来看一下 playbackRate——一个负值的播放速度将导致一个动画反向播放。当爱丽丝从瓶中喝酒时，她越来越小。这是因为瓶子将动画的播放速度从 1 更改为 -1：
 
 ```js
 var shrinkAlice = function () {
@@ -208,9 +208,9 @@ bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);
 ```
 
-在[Through the Looking-Glass](https://en.wikipedia.org/wiki/Through_the_Looking-Glass)，爱丽丝旅行到一个世界，她必须跑步留在原地 - 运行两倍快速前进！在红女王比赛的例子中，爱丽丝和红女王正在跑步，留下来（查看 Codepen 上的全部代码[full code on Codepen](http://codepen.io/rachelnabors/pen/PNGGaV)）：
+在[爱丽丝镜中奇遇记](https://zh.wikipedia.org/wiki/愛麗絲鏡中奇遇)中，爱丽丝旅行到一个世界，她必须在场景中跑步——而且以两倍的速度快速前进！在红女王比赛的例子中，爱丽丝和红女王正在场景中跑步（查看 [Codepen 上的完整代码](https://codepen.io/rachelnabors/pen/PNGGaV)）：
 
-[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
+[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](https://codepen.io/rachelnabors/pen/PNGGaV)
 
 因为小孩子很容易疲惫不堪，不像自动机棋子，爱丽丝不断减速。我们已经通过在动画播放时设置了一个衰减代码：
 
@@ -272,25 +272,25 @@ var aliceChange = document
   );
 ```
 
-爱丽丝的动画让她的尺寸从一半到 8 秒的两倍。然后我们暂停她：
+爱丽丝的动画让她的尺寸在 8 秒内从一半到两倍。然后我们暂停她：
 
 ```js
 aliceChange.pause();
 ```
 
-如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！我们想把动画的“播放头”放在中间，所以她已经中途了。我们可以通过将她的 {{domxref("Animation.currentTime")}}设置为 4 秒，如下所示：
+如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！我们想把动画的“播放头”放在中间，这样她就在半途了。我们可以通过将她的 {{domxref("Animation.currentTime")}} 设置为 4 秒，如下所示：
 
 ```js
 aliceChange.currentTime = 4000;
 ```
 
-但是在制作这个动画的时候，我们可能会改变爱丽丝的持续时间。如果我们将动态时间设置为 timeTime，那么它不会更好吗？所以我们一次不必再做两个更新？我们实际上可以通过引用 aliceChange 的{{domxref("Animation.effect")}}属性来实现，该属性返回一个包含 Alice 上所有效果细节的对象：
+但是在制作这个动画的时候，我们可能会改变爱丽丝的持续时间。如果我们将她的 `currentTime` 设置为动态的，它不会更好吗？所以我们不必一次做两个更新？我们实际上可以通过引用 aliceChange 的 {{domxref("Animation.effect")}} 属性来实现，该属性返回一个包含 Alice 上所有效果细节的对象：
 
 ```js
 aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
 ```
 
-效果让我们访问动画的关键帧和时间对象 - aliceChange.effect.timing 指向 Alice 的时间对象（其类型为{{domxref("AnimationEffectTimingReadOnly")}}）- 这包含她的{{domxref("AnimationEffectTimingReadOnly.duration")}}。我们可以将她的持续时间分成两半，以获得她动画时间轴的中点，使她成为正常的高度。现在，我们可以在任何一个方向扭转和播放动画，使她变小或变大！
+`effect` 让我们能够访问动画的关键帧和时间对象——`aliceChange.effect.timing` 指向 Alice 的时间对象（其类型为 {{domxref("AnimationEffectTimingReadOnly")}}）——这包含她的 {{domxref("AnimationEffectTimingReadOnly.duration")}}。我们可以将她的持续时间分成两半，以获得她动画时间轴的中点，使她成为正常的高度。现在，我们可以在任何一个方向扭转和播放动画，使她变小或变大！
 
 当设置蛋糕和瓶子的持续时间时，我们可以做同样的事情：
 

@@ -60,15 +60,17 @@ Para fazer um elemento se tornar arrastável, é necessária a adição de um at
 
 ```js
 function dragstart_handler(ev) {
- console.log("dragStart");
- // Adiciona o id do elemento em questão ao objeto de transferência de dados (dataTransfer)
- ev.dataTransfer.setData("text/plain", ev.target.id);
+  console.log("dragStart");
+  // Adiciona o id do elemento em questão ao objeto de transferência de dados (dataTransfer)
+  ev.dataTransfer.setData("text/plain", ev.target.id);
 }
 ```
 
 ```html
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Este elemento é arrastável.</p>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    Este elemento é arrastável.
+  </p>
 </body>
 ```
 
@@ -101,7 +103,7 @@ function dragstart_handler(ev) {
   // NOTA: mude "example.gif" como uma imagem existente, caso contrário
   // ela não será criada e a imagem padrão será utilizada como padrão.
   var img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -139,19 +141,24 @@ Por padrão, o navegador previne tudo que possa acontecer ao soltar alguma coisa
 
 ```js
 function dragover_handler(ev) {
- ev.preventDefault();
- // Define o dropEffect para ser do tipo move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Define o dropEffect para ser do tipo move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Zona de Soltura (Drop Zone)</div>
-</body>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Zona de Soltura (Drop Zone)
+  </div>
+</body>;
 ```
 
 Note que cada manipulador chama {{domxref("Event.preventDefault","preventDefault()")}} para previnir o processamento adicional de eventos (como eventos touch ou eventos pointer).
@@ -166,25 +173,32 @@ O exemplo a seguir mostra o manipulador de soltura (drop handler) pegando o id d
 
 ```js
 function dragstart_handler(ev) {
- // Adiciona o id do elemento alvo para o objeto de transferência de dados
- ev.dataTransfer.setData("text/plain", ev.target.id);
- ev.dropEffect = "move";
+  // Adiciona o id do elemento alvo para o objeto de transferência de dados
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dropEffect = "move";
 }
 function dragover_handler(ev) {
- ev.preventDefault();
- // Define o dropEffect para ser do tipo move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Define o dropEffect para ser do tipo move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Este elemento é arrastável.</p>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Zona de Soltura (Drop Zone)</div>
-</body>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    Este elemento é arrastável.
+  </p>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Zona de Soltura (Drop Zone)
+  </div>
+</body>;
 ```
 
 Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drop).
