@@ -22,7 +22,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 - [HTML：无障碍性的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
   - : 只需确保以恰当的方式使用正确的 HTML 元素，很多 web 内容就能实现无障碍化。本文详细介绍如何使用 HTML 来实现最大程度的无障碍化。
 - [CSS 和 JavaScript 无障碍最佳做法](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : 当恰当使用 CSS 和 JavaScript 时，也能提供无障碍网络体验。倘若误用，无障碍性会明显受损。本文列出了一些 CSS 和 JavaScript 最佳实践，即使是复杂的内容，也能参考这些例子尽可能确保无障碍化。
+  - : 如果使用得当，CSS 和 JavaScript 也能提供无障碍的 web 体验。倘若误用，无障碍性会明显受损。本文列出了一些 CSS 和 JavaScript 最佳实践，即使是复杂的内容，也能尽可地确保无障碍。
 - [WAI-ARIA 基础知识](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : 如前文所述，在涉及无语义 HTML 和 JavaScript 动态更新的内容时，制作复杂的 UI 控件可能很困难。借助 WAI-ARIA 技术来添加额外的语义，使得浏览器和无障碍技术可以识别和使用这些控件，并让用户了解网页实际情况。这里我们将介绍这种技术的基础知识，并用它改善无障碍性。
 - [多媒体无障碍化](/zh-CN/docs/Learn/Accessibility/Multimedia)
