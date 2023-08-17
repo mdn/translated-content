@@ -14,8 +14,8 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffe
 ## 構文
 
 ```js
-new SharedArrayBuffer()
-new SharedArrayBuffer(length)
+new SharedArrayBuffer();
+new SharedArrayBuffer(length);
 ```
 
 ### 引数

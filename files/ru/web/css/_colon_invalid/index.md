@@ -2,6 +2,7 @@
 title: ":invalid"
 slug: Web/CSS/:invalid
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -22,7 +23,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:inval
 }
 
 :-moz-ui-invalid {
-  box-shadow:none;
+  box-shadow: none;
 }
 ```
 
@@ -45,7 +46,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:inval
   <br />
   <br />
   <label>Введите эл. почту:</label>
-  <input type="email" required/>
+  <input type="email" required />
 </form>
 ```
 

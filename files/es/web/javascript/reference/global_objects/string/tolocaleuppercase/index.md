@@ -38,12 +38,12 @@ El método `toLocaleUpperCase()` devuelve el valor de la cadena convertida en ma
 ### Usando `toLocaleUpperCase()`
 
 ```js
-'alphabet'.toLocaleUpperCase(); // 'ALPHABET'
+"alphabet".toLocaleUpperCase(); // 'ALPHABET'
 
-'i\u0307'.toLocaleUpperCase('lt-LT'); // 'I'
+"i\u0307".toLocaleUpperCase("lt-LT"); // 'I'
 
-let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
-'i\u0307'.toLocaleUpperCase(locales); // 'I'
+let locales = ["lt", "LT", "lt-LT", "lt-u-co-phonebk", "lt-x-lietuva"];
+"i\u0307".toLocaleUpperCase(locales); // 'I'
 ```
 
 ## Especificaciones

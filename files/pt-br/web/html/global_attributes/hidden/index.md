@@ -21,11 +21,11 @@ Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como bu
 
 ## Especificações
 
-| Specification                                                                                            | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Sem mudanças desde o último snapshot, {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Define o processamento padrão sugerido do atributo hidden usando CSS   |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Definição inicial do snapshot de {{SpecName('HTML WHATWG')}}  |
+| Specification                                                                  | Status                   | Comment                                                              |
+| ------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Sem mudanças desde o último snapshot, {{SpecName('HTML5.1')}}        |
+| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Define o processamento padrão sugerido do atributo hidden usando CSS |
+| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}         | {{Spec2('HTML5.1')}}     | Definição inicial do snapshot de {{SpecName('HTML WHATWG')}}         |
 
 ## Compatibilidade com navegadores
 

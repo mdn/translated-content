@@ -78,7 +78,7 @@ Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Voc
 
 ```html
 <label for="hora-cons">Escolha o horário da consulta: </label>
-<input id="hora-cons" type="time" name="hora-cons" value="13:30">
+<input id="hora-cons" type="time" name="hora-cons" value="13:30" />
 ```
 
 {{ EmbedLiveSample('value-sample1', 600, 60) }}
@@ -87,7 +87,7 @@ Você também pode obter e definir o valor do campo via JavaScript usando a prop
 
 ```js
 var campoHora = document.querySelector('input[type="time"]');
-campoHora.value = '15:30';
+campoHora.value = "15:30";
 ```
 
 ### Formato do valor do horário
@@ -101,10 +101,10 @@ Mas antes, vamos dar uma conferida no HTML. Ele é bem simpless, contando com la
 ```html
 <form>
   <label for="horaInicio">Hora de início: </label>
-  <input type="time" id="horaInicio">
+  <input type="time" id="horaInicio" />
   <p>
-    Valor do campo <code>time</code>: <code>
-            "<span id="value">n/a</span>"</code>.
+    Valor do campo <code>time</code>:
+    <code> "<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```
@@ -115,9 +115,13 @@ No código JavaScript, chamamos um método que monitora o evento {{event("input"
 var horaInicio = document.getElementById("horaInicio");
 var valueSpan = document.getElementById("value");
 
-startTime.addEventListener("input", function() {
-  valueSpan.innerText = startTime.value;
-}, false);
+startTime.addEventListener(
+  "input",
+  function () {
+    valueSpan.innerText = startTime.value;
+  },
+  false,
+);
 ```
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}
@@ -137,7 +141,7 @@ O caso de uso mais simples do `<input type="time">` envolve uma combinação bá
 ```html
 <form>
   <label for="hora-cons">Escolha o horário da consulta: </label>
-  <input id="hora-cons" type="time" name="hora-cons">
+  <input id="hora-cons" type="time" name="hora-cons" />
 </form>
 ```
 
@@ -158,7 +162,7 @@ O atributo recebe um valor igual ao número de segundos que você quer que o val
 ```html
 <form>
   <label for="hora-cons">Escolha o horário da consulta: </label>
-  <input id="hora-cons" type="time" name="hora-cons" step="2">
+  <input id="hora-cons" type="time" name="hora-cons" step="2" />
 </form>
 ```
 
@@ -182,9 +186,10 @@ Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [
 
 ```html
 <form>
-  <label for="hora-cons">Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>
-  <input id="hora-cons" type="time" name="hora-cons"
-         min="12:00" max="18:00">
+  <label for="hora-cons"
+    >Escolha o horário da consulta (aberto das 12:00 às 18:00):
+  </label>
+  <input id="hora-cons" type="time" name="hora-cons" min="12:00" max="18:00" />
   <span class="validacao"></span>
 </form>
 ```
@@ -207,15 +212,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -234,13 +239,20 @@ Vamos ver um exemplo. Nele, colocamos um horário mínimo e um máximo, além de
 ```html
 <form>
   <div>
-    <label for="hora-cons">Escolha o horário da consulta (aberto das 12:00 às 18:00): </label>
-    <input id="hora-cons" type="time" name="hora-cons"
-           min="12:00" max="18:00" required>
+    <label for="hora-cons"
+      >Escolha o horário da consulta (aberto das 12:00 às 18:00):
+    </label>
+    <input
+      id="hora-cons"
+      type="time"
+      name="hora-cons"
+      min="12:00"
+      max="18:00"
+      required />
     <span class="validacao"></span>
   </div>
   <div>
-      <input type="submit" value="Enviar formulário">
+    <input type="submit" value="Enviar formulário" />
   </div>
 </form>
 ```
@@ -276,14 +288,21 @@ One way around this is to put a [`pattern`](/pt-BR/docs/Web/HTML/Element/input#p
 ```html
 <form>
   <div>
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-    <input id="appt-time" type="time" name="appt-time"
-           min="12:00" max="18:00" required
-           pattern="[0-9]{2}:[0-9]{2}">
+    <label for="appt-time"
+      >Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required
+      pattern="[0-9]{2}:[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="Submit form" />
   </div>
 </form>
 ```
@@ -308,15 +327,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -334,23 +353,30 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeTimePicker">
-    <label for="appt-time">Choose an appointment time (opening hours 12:00 to 18:00): </label>
-      <input id="appt-time" type="time" name="appt-time"
-             min="12:00" max="18:00" required>
-      <span class="validity"></span>
-    </div>
-  <p class="fallbackLabel">Choose an appointment time (opening hours 12:00 to 18:00):</p>
+    <label for="appt-time"
+      >Choose an appointment time (opening hours 12:00 to 18:00):
+    </label>
+    <input
+      id="appt-time"
+      type="time"
+      name="appt-time"
+      min="12:00"
+      max="18:00"
+      required />
+    <span class="validity"></span>
+  </div>
+  <p class="fallbackLabel">
+    Choose an appointment time (opening hours 12:00 to 18:00):
+  </p>
   <div class="fallbackTimePicker">
     <div>
       <span>
         <label for="hour">Hour:</label>
-        <select id="hour" name="hour">
-        </select>
+        <select id="hour" name="hour"></select>
       </span>
       <span>
         <label for="minute">Minute:</label>
-        <select id="minute" name="minute">
-        </select>
+        <select id="minute" name="minute"></select>
       </span>
     </div>
   </div>
@@ -373,15 +399,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -390,26 +416,26 @@ The other part of the code that may be of interest is the feature detection code
 
 ```js
 // define variables
-var nativePicker = document.querySelector('.nativeTimePicker');
-var fallbackPicker = document.querySelector('.fallbackTimePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+var nativePicker = document.querySelector(".nativeTimePicker");
+var fallbackPicker = document.querySelector(".fallbackTimePicker");
+var fallbackLabel = document.querySelector(".fallbackLabel");
 
-var hourSelect = document.querySelector('#hour');
-var minuteSelect = document.querySelector('#minute');
+var hourSelect = document.querySelector("#hour");
+var minuteSelect = document.querySelector("#minute");
 
 // hide fallback initially
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
-test.type = 'time';
+var test = document.createElement("input");
+test.type = "time";
 // if it does, run the code inside the if() {} block
-if(test.type === 'text') {
+if (test.type === "text") {
   // hide the native picker and show the fallback
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // populate the hours and minutes dynamically
   populateHours();
@@ -418,8 +444,8 @@ if(test.type === 'text') {
 
 function populateHours() {
   // populate the hours <select> with the 6 open hours of the day
-  for(var i = 12; i <= 18; i++) {
-    var option = document.createElement('option');
+  for (var i = 12; i <= 18; i++) {
+    var option = document.createElement("option");
     option.textContent = i;
     hourSelect.appendChild(option);
   }
@@ -427,29 +453,29 @@ function populateHours() {
 
 function populateMinutes() {
   // populate the minutes <select> with the 60 hours of each minute
-  for(var i = 0; i <= 59; i++) {
-    var option = document.createElement('option');
-    option.textContent = (i < 10) ? ("0" + i) : i;
+  for (var i = 0; i <= 59; i++) {
+    var option = document.createElement("option");
+    option.textContent = i < 10 ? "0" + i : i;
     minuteSelect.appendChild(option);
   }
 }
 
 // make it so that if the hour is 18, the minutes value is set to 00
 // — you can't select times past 18:00
- function setMinutesToZero() {
-   if(hourSelect.value === '18') {
-     minuteSelect.value = '00';
-   }
- }
+function setMinutesToZero() {
+  if (hourSelect.value === "18") {
+    minuteSelect.value = "00";
+  }
+}
 
- hourSelect.onchange = setMinutesToZero;
- minuteSelect.onchange = setMinutesToZero;
+hourSelect.onchange = setMinutesToZero;
+minuteSelect.onchange = setMinutesToZero;
 ```
 
 ## Specifications
 
-| Specification                                                                                                                | Status                           | Comments |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
+| Specification                                                                                 | Status                   | Comments |
+| --------------------------------------------------------------------------------------------- | ------------------------ | -------- |
 | {{SpecName('HTML WHATWG', 'forms.html#time-state-(type=time)', '&lt;input type="time"&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
 
 ## Compatibilidade com navegadores

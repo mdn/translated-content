@@ -46,16 +46,23 @@ O método `finally()` é bastante similar a chamar `.then(quandoEstabelecida, qu
 ```js
 let carregando = true;
 
-fetch(minhaRequisicao).then(function(resposta) {
+fetch(minhaRequisicao)
+  .then(function (resposta) {
     var tipoConteudo = response.headers.get("content-type");
-    if(tipoConteudo && tipoConteudo.includes("application/json")) {
+    if (tipoConteudo && tipoConteudo.includes("application/json")) {
       return resposta.json();
     }
     throw new TypeError("Opa, isso não é JSON!");
   })
-  .then(function(json) { /* processamento do seu JSON */ })
-  .catch(function(erro) { console.log(erro); })
-  .finally(function() { carregando = false; });
+  .then(function (json) {
+    /* processamento do seu JSON */
+  })
+  .catch(function (erro) {
+    console.log(erro);
+  })
+  .finally(function () {
+    carregando = false;
+  });
 ```
 
 ## Especificações

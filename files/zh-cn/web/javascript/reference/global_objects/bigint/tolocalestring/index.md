@@ -64,6 +64,8 @@ console.log(bigint.toLocaleString());
 
 这个例子展示了本地化数字格式的一些变体。为了获得应用程序用户界面中使用的语言的格式，请确保使用 `locales` 参数指定该语言（可能还有一些回退语言）：
 
+<!-- autocorrect-disable -->
+
 ```js
 const bigint = 123456789123456789n;
 
@@ -88,6 +90,8 @@ console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 console.log(bigint.toLocaleString(["ban", "id"]));
 // 123.456.789.123.456.789
 ```
+
+<!-- autocorrect-enable -->
 
 ### 使用 `options`
 

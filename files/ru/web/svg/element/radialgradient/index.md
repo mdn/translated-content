@@ -44,17 +44,19 @@ slug: Web/SVG/Element/radialGradient
 ### SVG
 
 ```html
-<svg width="120" height="120" viewBox="0 0 120 120"
-   xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="exampleGradient">
-      <stop offset="10%" stop-color="gold"/>
-      <stop offset="95%" stop-color="green"/>
+      <stop offset="10%" stop-color="gold" />
+      <stop offset="95%" stop-color="green" />
     </radialGradient>
   </defs>
 
-  <circle fill="url(#exampleGradient)" cx="60" cy="60" r="50"/>
+  <circle fill="url(#exampleGradient)" cx="60" cy="60" r="50" />
 </svg>
 ```
 
@@ -64,9 +66,9 @@ slug: Web/SVG/Element/radialGradient
 
 ## Характеристики
 
-| Спецификация                                                                                                 | Статус                   | Коммент               |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
-| {{SpecName('SVG2', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}     | {{Spec2('SVG2')}} | Добавлен атрибут `fr` |
+| Спецификация                                                                      | Статус              | Коммент               |
+| --------------------------------------------------------------------------------- | ------------------- | --------------------- |
+| {{SpecName('SVG2', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}}   | {{Spec2('SVG2')}}   | Добавлен атрибут `fr` |
 | {{SpecName('SVG1.1', 'pservers.html#RadialGradients', '&lt;radialGradient&gt;')}} | {{Spec2('SVG1.1')}} | Начальное определение |
 
 ## Совместимость с браузером

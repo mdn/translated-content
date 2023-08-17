@@ -17,6 +17,8 @@ on:
 
 jobs:
   tests:
+    # do not run on PRs in forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}

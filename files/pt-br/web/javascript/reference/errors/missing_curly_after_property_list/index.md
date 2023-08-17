@@ -39,7 +39,7 @@ O código correto deve ser:
 var obj = {
   a: 1,
   b: { minhaProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

@@ -31,18 +31,16 @@ obj.__lookupSetter__(sprop)
 ```js
 var obj = {
   set foo(value) {
-    return this.bar = value;
-  }
+    return (this.bar = value);
+  },
 };
 
-
 // Нестандартный и устаревший способ
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
-
 // Способ, совместимый со стандартом
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 

@@ -2,6 +2,7 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 선언 (끝에 별표가 있는 `function` keyword) 은 _generator function_ 을 정의하는데, 이 함수는 {{jsxref("Global_Objects/Generator","Generator")}} 객체를 반환합니다.
@@ -38,10 +39,9 @@ Generator 함수는 호출되어도 즉시 실행되지 않고, 대신 함수를
 ### 간단한 예제
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(index < 3)
-    yield index++;
+  while (index < 3) yield index++;
 }
 
 var gen = idMaker();
@@ -62,7 +62,7 @@ function* anotherGenerator(i) {
   yield i + 3;
 }
 
-function* generator(i){
+function* generator(i) {
   yield i;
   yield* anotherGenerator(i);
   yield i + 10;
@@ -91,16 +91,16 @@ var gen = logGenerator();
 // the first call of next executes from the start of the function
 // until the first yield statement
 gen.next();
-gen.next('pretzel'); // pretzel
-gen.next('california'); // california
-gen.next('mayonnaise'); // mayonnaise
+gen.next("pretzel"); // pretzel
+gen.next("california"); // california
+gen.next("mayonnaise"); // mayonnaise
 ```
 
 ### Generator 는 생성자로서 사용될 수 없다
 
 ```js
-    function* f() {}
-    var obj = new f; // throws "TypeError: f is not a constructor"
+function* f() {}
+var obj = new f(); // throws "TypeError: f is not a constructor"
 ```
 
 ## 명세서

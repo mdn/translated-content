@@ -31,10 +31,10 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/HTML/Global_attri
 
 ## Especificações
 
-| Especificaçao                                                                                                                                     | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-aside-element', '&lt;aside&gt;')}}                                          | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'the-aside-element.html#the-aside-element', '&lt;aside&gt;')}} {{todo("brokenLink")}} | {{Spec2('HTML5 W3C')}}     |            |
+| Especificaçao                                                                                                 | Status                   | Comentario |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| {{SpecName('HTML WHATWG', 'sections.html#the-aside-element', '&lt;aside&gt;')}}                               | {{Spec2('HTML WHATWG')}} |            |
+| {{SpecName('HTML5 W3C', 'the-aside-element.html#the-aside-element', '&lt;aside&gt;')}} {{todo("brokenLink")}} | {{Spec2('HTML5 W3C')}}   |            |
 
 ## Compatibilidade com navegadores
 

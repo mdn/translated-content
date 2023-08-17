@@ -19,15 +19,15 @@ El siguiente ejemplo muestra un bloque de código donde ha sido insertada una se
 
 ```js
 function codigoPotencialmenteDefectuoso() {
-    debugger;
-    // realizar paso a paso o examinar código que contiene
-    // potenciales errores
+  debugger;
+  // realizar paso a paso o examinar código que contiene
+  // potenciales errores
 }
 ```
 
 Cuando el depurador es invocado, la ejecución se detiene en la sentencia debugger. Es como un punto de interrupción en el script.
 
-[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](<screen_shot_2014-02-07_at_9.14.35_am.png>)
+![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## Especificaciones
 

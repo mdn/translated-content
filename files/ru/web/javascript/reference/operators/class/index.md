@@ -22,7 +22,7 @@ Class expression имеет схожий синтаксис с {{jsxref("Stateme
 Так же, как и при использовании class declaration, тело класса у class expression будет исполняться в {{jsxref("Strict_mode", "строгом режиме", "", 1)}}.
 
 ```js
-'use strict';
+"use strict";
 var Foo = class {}; // свойство конструктора опционально
 var Foo = class {}; // повторное объявление разрешено
 
@@ -31,7 +31,7 @@ typeof class {}; // возвращает "function"
 
 Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}; // Throws TypeError, doesn't allow re-declaration
+class Foo {} // Throws TypeError, doesn't allow re-declaration
 ```
 
 ## Примеры
@@ -63,7 +63,7 @@ var Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo is not defined
@@ -72,9 +72,9 @@ Foo.name; // "NamedFoo"
 
 ## Спецификация
 
-| Спецификация                                                                                 | Статус                       | Комментарий                |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Первоначальное определение |
+| Спецификация                                                           | Статус               | Комментарий                |
+| ---------------------------------------------------------------------- | -------------------- | -------------------------- |
+| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}     | Первоначальное определение |
 | {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                            |
 
 ## Поддержка браузерами

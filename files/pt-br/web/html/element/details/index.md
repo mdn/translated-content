@@ -9,11 +9,11 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Contexto de uso
 
-| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/HTML/Content_categories#Flow_content) |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                                               |
-| Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                                                      |
-| Documento normativo       | [HTML5, section 4.11.1](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element)                              |
+| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/HTML/Content_categories#Flow_content)                   |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                  |
+| Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                         |
+| Documento normativo       | [HTML5, section 4.11.1](http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#the-details-element) |
 
 ## Atributos
 

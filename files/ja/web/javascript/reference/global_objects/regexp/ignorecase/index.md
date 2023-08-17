@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 ### ignoreCase の使用
 
 ```js
-var regex = new RegExp('foo', 'i');
+var regex = new RegExp("foo", "i");
 
 console.log(regex.ignoreCase); // true
 ```

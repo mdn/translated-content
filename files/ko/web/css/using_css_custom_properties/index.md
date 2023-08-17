@@ -263,10 +263,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## 브라우저 호환성
-
-{{Compat}}
-
 ## 같이 보기
 
 - {{cssxref("--*", "사용자 지정 속성")}}

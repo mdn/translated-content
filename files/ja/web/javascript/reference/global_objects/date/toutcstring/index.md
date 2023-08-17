@@ -42,7 +42,7 @@ UTC タイムゾーンに基づき、与えられた日付を表す文字列。
 ### toUTCString() の使用
 
 ```js
-const today = new Date('Wed, 14 Jun 2017 00:00:00 PDT');
+const today = new Date("Wed, 14 Jun 2017 00:00:00 PDT");
 const UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 ```
 

@@ -45,8 +45,8 @@ Para maiores informações veja:
 ## Exemplos
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
@@ -56,12 +56,12 @@ Executando o seguinte código antes de qualquer outro c\[odigo criará o `Array.
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
     // Or
     let vals = [];
-    for(let prop in arguments){
-        vals.push(arguments[prop]);
+    for (let prop in arguments) {
+      vals.push(arguments[prop]);
     }
     return vals;
   };
@@ -70,8 +70,8 @@ if (!Array.of) {
 
 ## Especificações
 
-| Especificação                                                    | Status               | Comentário         |
-| ---------------------------------------------------------------- | -------------------- | ------------------ |
+| Especificação                                    | Status           | Comentário         |
+| ------------------------------------------------ | ---------------- | ------------------ |
 | {{SpecName('ES6', '#sec-array.of', 'Array.of')}} | {{Spec2('ES6')}} | Definição inicial. |
 
 ## Compatibilidade com navegadores

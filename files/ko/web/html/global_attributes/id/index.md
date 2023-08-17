@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/id
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 > **경고:** `id` 특성의 값은 불투명 문자열(opaque string)입니다. 그 말은, 웹 작성자가 `id` 특성을 통해 사람이 읽을 수 있는 정보를 나타내서는 안된다는 것입니다. (코드 가독성 차원에서는 유용할 수 있습니다. `ticket-18569`와 `r45tgfe-freds&$@`을 비교해보세요.)
 
 `id` 특성의 값이 공백(스페이스나 탭 등)을 포함해서는 안됩니다. 공백으로 값을 구분하는 [`class`](/ko/docs/Web/HTML/Global_attributes#class) 속성과 달리, 하나의 요소는 하나의 ID만 가질 수 있습니다. 만약 ID에 공백을 넣는다면, 브라우저는 그 공백마저 ID의 일부로 취급합니다.

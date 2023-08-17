@@ -1,7 +1,6 @@
 ---
 title: Tornando mais fácil a programação assíncrona com async e await
 slug: conflicting/Learn/JavaScript/Asynchronous/Promises
-original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
