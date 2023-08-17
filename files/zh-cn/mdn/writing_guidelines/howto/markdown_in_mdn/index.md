@@ -108,7 +108,7 @@ GFM 规范定义了两种基础的链接类型：
 
 ````md
 ```js
-const greeting = "我会得到语法高亮";
+const greeting = "我会得到 JavaScript 语法高亮";
 ```
 ````
 
