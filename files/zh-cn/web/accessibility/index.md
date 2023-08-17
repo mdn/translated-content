@@ -41,7 +41,7 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 - [ARIA](/zh-CN/docs/Accessibility/ARIA)
   - : 学习如何利用无障碍富网络应用（Accessible Rich Internet Application）使你的 HTML 文档进一步无障碍化的一组文章。
 - [移动无障碍化清单](/zh-CN/docs/Web/Accessibility/Mobile_accessibility_checklist)
-  - : 本文档向移动应用开发者提供了实现无障碍化所需内容的简明清单
+  - : 本文档向移动应用开发者提供了实现无障碍化所需内容的简明清单。
 - [认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)
   - : 本文说明了如何确保你的网站内容对认知障碍群体是无障碍的。
 - [对癫痫症无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
