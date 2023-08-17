@@ -7,7 +7,7 @@
 name: PR Test
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
     paths:
@@ -20,6 +20,9 @@ jobs:
     # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
+    permissions: read-all
+    outputs:
+      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -74,6 +77,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
+        id: build-content
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
@@ -118,6 +122,9 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > ${{ env.BUILD_OUT_ROOT }}/NR
 
+          # Set the output variable so the next job could skip if there are no assets
+          echo "has_assets=true" >> "$GITHUB_OUTPUT"
+
       - name: Download the diff file
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
@@ -151,3 +158,9 @@ jobs:
           echo ${{ env.GIT_DIFF_FILES }}
 
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+  review:
+    needs: tests
+    if: ${{ needs.tests.outputs.has_assets }}
+    permissions: write-all
+    uses: ./.github/workflows/pr-review-companion.yml
