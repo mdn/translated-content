@@ -34,18 +34,18 @@ if (x) {
 オブジェクトを論理値でない値から論理値へ変換するために `new` を使って `Boolean()` コンストラクターを使わないでください。代わりに、 `Boolean()` を関数として使ったり、[二重否定](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT#二重否定_!!)を使用したりすることで同じことが行えます。
 
 ```js
-const good = Boolean(expression);    // これか、もしくは…
-const good2 = !!(expression);        // 　…これを使ってください
+const good = Boolean(expression); // これか、もしくは…
+const good2 = !!expression; // 　…これを使ってください
 const bad = new Boolean(expression); // これは使わないこと！！
 ```
 
 `Boolean` オブジェクトの初期値として何らかのオブジェクトを指定した場合、それが値 `false` を持つ `Boolean` オブジェクトであっても、新しい `Boolean` オブジェクトは値 `true` を持ちます。
 
 ```js
-const myFalse = new Boolean(false);   // Booleanオブジェクト: false
-const g = Boolean(myFalse);           // true
-const myString = new String('Hello'); // Stringオブジェクト
-const s = Boolean(myString);          // true
+const myFalse = new Boolean(false); // Booleanオブジェクト: false
+const g = Boolean(myFalse); // true
+const myString = new String("Hello"); // Stringオブジェクト
+const s = Boolean(myString); // true
 ```
 
 > **警告:** コンストラクターとして `Boolean` を使うことは滅多にありません。
@@ -77,10 +77,10 @@ JavaScriptで型強制と同じ効果を得るには、2つの方法がありま
 
 ```js
 if ([]) {
-  console.log("[] is truthy")
+  console.log("[] is truthy");
 }
 if ([] == false) {
-  console.log("[] == false")
+  console.log("[] == false");
 }
 // [] is truthy
 // [] == false
@@ -114,7 +114,7 @@ truthy な値が `true` と緩く等しくなる可能性はさらに低いで�
 const bNoParam = new Boolean();
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
-const bEmptyString = new Boolean('');
+const bEmptyString = new Boolean("");
 const bfalse = new Boolean(false);
 ```
 
@@ -122,9 +122,9 @@ const bfalse = new Boolean(false);
 
 ```js
 const btrue = new Boolean(true);
-const btrueString = new Boolean('true');
-const bfalseString = new Boolean('false');
-const bSuLin = new Boolean('Su Lin');
+const btrueString = new Boolean("true");
+const bfalseString = new Boolean("false");
+const bSuLin = new Boolean("Su Lin");
 const bArrayProto = new Boolean([]);
 const bObjProto = new Boolean({});
 ```

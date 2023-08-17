@@ -150,10 +150,6 @@ normalArray.length === 4;
 normalArray.constructor === Array;
 ```
 
-## 명세서
-
-{{Specifications}}
-
 ## 참조
 
 - [*Base64*로 인코딩된 문자열에서 `ArrayBuffer` 또는 형식화 배열 얻기](/ko/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)

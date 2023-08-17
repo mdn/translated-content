@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-shift()
+shift();
 ```
 
 ### 返値
@@ -38,17 +38,17 @@ shift()
 以下のコードは `myFish` 配列を、その最初の要素を取り除く前後で表示します。また、取り除いた要素も表示します。
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+const myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log('myFish before:', JSON.stringify(myFish));
+console.log("myFish before:", JSON.stringify(myFish));
 // myFish 処理前: ['angel', 'clown', 'mandarin', 'surgeon']
 
 const shifted = myFish.shift();
 
-console.log('myFish 処理後:', myFish);
+console.log("myFish 処理後:", myFish);
 // myFish 処理後: ['clown', 'mandarin', 'surgeon']
 
-console.log('取り除いた要素:', shifted);
+console.log("取り除いた要素:", shifted);
 // 取り除いた要素: angel
 ```
 
@@ -57,9 +57,9 @@ console.log('取り除いた要素:', shifted);
 shift() メソッドは時に、 while 文の条件内において用いられます。以下のコードでは、要素がすべて無くなるまで、反復処理のたびにその配列内の次の要素を取り除きます。
 
 ```js
-const names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+const names = ["Andrew", "Edward", "Paul", "Chris", "John"];
 
-while (typeof (i = names.shift()) !== 'undefined') {
+while (typeof (i = names.shift()) !== "undefined") {
   console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John

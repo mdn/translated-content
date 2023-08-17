@@ -14,10 +14,10 @@ l10n:
 ## 構文
 
 ```js
-concat()
-concat(value0)
-concat(value0, value1)
-concat(value0, value1, /* … ,*/ valueN)
+concat();
+concat(value0);
+concat(value0, value1);
+concat(value0, value1, /* … ,*/ valueN);
 ```
 
 ### 引数
@@ -47,7 +47,7 @@ concat(value0, value1, /* … ,*/ valueN)
 以下のコードは 2 つの配列を連結させます。
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
 
 const alphaNumeric = letters.concat(numbers);
@@ -75,7 +75,7 @@ console.log(numbers);
 以下のコードは配列に値を連結させます。
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 
 const alphaNumeric = letters.concat(1, [2, 3]);
 
