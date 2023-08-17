@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ### source の使用
 
 ```js
-var regex = /fooBar/ig;
+var regex = /fooBar/gi;
 
 console.log(regex.source); // "fooBar", /.../ と "ig" は含まれません。
 ```
@@ -26,8 +26,8 @@ ECMAScript 5 から、`source` プロパティは空の正規表現に対して�
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp('\n').source === '\n';  // ES5 以前で、true
-new RegExp('\n').source === '\\n'; // ES5 から、true
+new RegExp("\n").source === "\n"; // ES5 以前で、true
+new RegExp("\n").source === "\\n"; // ES5 から、true
 ```
 
 ## 仕様書

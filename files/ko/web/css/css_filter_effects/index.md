@@ -21,7 +21,3 @@ slug: Web/CSS/CSS_filter_effects
 ## 명세
 
 {{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}

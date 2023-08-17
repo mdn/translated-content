@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ### multiline の使用
 
 ```js
-var regex = new RegExp('foo', 'm');
+var regex = new RegExp("foo", "m");
 
 console.log(regex.multiline); // true
 ```

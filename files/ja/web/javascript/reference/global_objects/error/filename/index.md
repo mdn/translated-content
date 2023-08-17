@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ### fileName の使用
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 // e.fileName could look like "file:///C:/example.html"
 ```

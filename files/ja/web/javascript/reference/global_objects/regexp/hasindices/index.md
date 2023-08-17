@@ -22,18 +22,18 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ### `hasIndices` の使用
 
 ```js
-const str1 = 'foo bar foo';
+const str1 = "foo bar foo";
 
-const regex1 = new RegExp('foo', 'gd');
+const regex1 = new RegExp("foo", "gd");
 
 console.log(regex1.hasIndices); // 出力: true
 
 console.log(regex1.exec(str1).indices[0]); // 出力: Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // 出力: Array [8, 11]
 
-const str2 = 'foo bar foo';
+const str2 = "foo bar foo";
 
-const regex2 = new RegExp('foo');
+const regex2 = new RegExp("foo");
 
 console.log(regex2.hasIndices); // 出力: false
 

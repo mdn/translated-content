@@ -26,19 +26,33 @@ l10n:
 
 ```js
 // アロー関数
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
+findLast((element) => {
+  /* … */
+});
+findLast((element, index) => {
+  /* … */
+});
+findLast((element, index, array) => {
+  /* … */
+});
 
 // コールバック関数
-findLast(callbackFn)
-findLast(callbackFn, thisArg)
+findLast(callbackFn);
+findLast(callbackFn, thisArg);
 
 // インラインコールバック関数
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array){ /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
+findLast(function (element) {
+  /* … */
+});
+findLast(function (element, index) {
+  /* … */
+});
+findLast(function (element, index, array) {
+  /* … */
+});
+findLast(function (element, index, array) {
+  /* … */
+}, thisArg);
 ```
 
 ### 引数
@@ -98,10 +112,10 @@ findLast(function(element, index, array) { /* … */ }, thisArg)
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 }
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 // 在庫がない場合は真値を返す
@@ -119,10 +133,10 @@ console.log(inventory.findLast(isNotEnough));
 
 ```js
 const inventory = [
-  { name: 'apples', quantity: 2 },
-  { name: 'bananas', quantity: 0 },
-  { name: 'fish', quantity: 1 },
-  { name: 'cherries', quantity: 5 },
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "fish", quantity: 1 },
+  { name: "cherries", quantity: 5 },
 ];
 
 const result = inventory.findLast(({ quantity }) => quantity < 2);
