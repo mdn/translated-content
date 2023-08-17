@@ -44,8 +44,8 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
   - : 本文档向移动应用开发者提供了实现无障碍化所需内容的简明清单。
 - [认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)
   - : 本文说明了如何确保你的网站内容对认知障碍群体是无障碍的。
-- [对癫痫症无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
-  - : 对于伴有特定脑部缺陷的群体，网络上的某些视觉内容可能导致他们出现癫痫症状。本文可以帮助你理解哪一类内容会有这些问题，并提供了避开这些问题的策略与工具。
+- [对癫痫症患者的无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
+  - : 对于伴有特定脑部缺陷的群体，web 上的某些视觉内容可能导致他们出现癫痫症状。本文可以帮助你理解哪一类内容会有这些问题，并提供了避开这些问题的策略与工具。
 
 ## 参见
 
