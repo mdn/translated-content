@@ -433,7 +433,7 @@ function outside() {
   return inside;
 }
 
-console.log(outside()(10)); // 20（而不是 10 ）
+console.log(outside()(10)); // 20（而不是 10）
 ```
 
 命名冲突发生在语句 `return x * 2` 上，`inside` 的参数 `x` 和 `outside` 的变量 `x` 发生了冲突。这里的作用链域是 {`inside`、`outside`、全局对象}。因此 `inside` 的 `x` 优先于 `outside` 的 `x`，因此返回 `20`（`inside` 的 `x`）而不是 `10`（`outside` 的 `x`）。
@@ -719,9 +719,9 @@ JavaScript 语言有几个顶级的内置函数：
   - : **`encodeURI()`** 方法通过以表示字符的 UTF-8 编码的一个、两个、三个或四个转义序列替换统一资源标识符（URI）的某些字符来进行编码（对于由两个“代理（surrogate）”字符组成的字符，只会编码为四个转义序列）。
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : **`encodeURIComponent()`** 方法通过以表示字符的 UTF-8 编码的一个、两个、三个或四个转义序列替换统一资源标识符（URI）的某些字符来进行编码（对于由两个“代理”字符组成的字符，只会编码为四个转义序列）。
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-  - : **`escape()`** 方法生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。其为已弃用且非标准的方法，请使用 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} 代替。
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
-  - : **`unescape()`** 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像 {{jsxref("Global_Objects/escape", "escape")}} 介绍的一样。其为已弃用且非标准的方法，请使用 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} 或 {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}} 替代。
+- {{jsxref("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
+  - : **`escape()`** 方法生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。其已被弃用，请使用 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} 或 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} 代替。
+- {{jsxref("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - : **`unescape()`** 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像 {{jsxref("Global_Objects/escape", "escape")}} 介绍的一样。其已被弃用，请使用 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} 或 {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}} 替代。
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
