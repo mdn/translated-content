@@ -19,14 +19,14 @@ JavaScript 오류에는 문제 해결을 위한 추가 조언이 포함된 JavaS
 
 ## 2단계 - 기존 오류 문서 확인하기
 
-- 기존 [JavaScript 오류 참고서](/en-US/docs/Web/JavaScript/Reference/Errors)를 보고 오류가 어떻게 문서화되어 있는지 확인하십시오.
+- 기존 [JavaScript 오류 참고서](/ko/docs/Web/JavaScript/Reference/Errors)를 보고 오류가 어떻게 문서화되어 있는지 확인하십시오.
 - 작성하려는 오류의 유형에 따라 이 페이지를 자세히 살펴볼 수 있습니다.
 - 새 페이지를 작성하기 위해 기존 페이지의 콘텐츠를 복사할 수 있습니다.
 
 ## 3단계 – 새 오류 페이지 만들기
 
-- 모든 오류 페이지는 [/docs/Web/JavaScript/Reference/Errors](/en-US/docs/Web/JavaScript/Reference/Errors) 트리 아래에 있습니다.
-- 새 페이지를 만들려면 [페이지를 만드는 방법](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) 안내서의 지침을 참조하십시오.
+- 모든 오류 페이지는 [/docs/Web/JavaScript/Reference/Errors](/ko/docs/Web/JavaScript/Reference/Errors) 트리 아래에 있습니다.
+- 새 페이지를 만들려면 [페이지를 만드는 방법](/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) 안내서의 지침을 참조하십시오.
 
 ## 4단계 – 오류 문서화하기
 
