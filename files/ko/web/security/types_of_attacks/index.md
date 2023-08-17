@@ -2,7 +2,7 @@
 title: 공격 유형
 slug: Web/Security/Types_of_attacks
 l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+  sourceCommit: 9412721a88491da2c0303cce07f9b5a46c3d91ed
 ---
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}
