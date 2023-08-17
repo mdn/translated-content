@@ -39,28 +39,33 @@ Reflect.has(target, propertyKey)
 ### Reflect.has() の使用
 
 ```js
-Reflect.has({x: 0}, 'x')  // true
-Reflect.has({x: 0}, 'y')  // false
+Reflect.has({ x: 0 }, "x"); // true
+Reflect.has({ x: 0 }, "y"); // false
 
 // プロトタイプチェーンのプロパティがあるため、true が返る
-Reflect.has({x: 0}, 'toString')
+Reflect.has({ x: 0 }, "toString");
 
 // Proxy with .has() handler method
-obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door')  }
-});
-Reflect.has(obj, 'doorbell')  // true
-Reflect.has(obj, 'dormitory')  // false
+obj = new Proxy(
+  {},
+  {
+    has(t, k) {
+      return k.startsWith("door");
+    },
+  },
+);
+Reflect.has(obj, "doorbell"); // true
+Reflect.has(obj, "dormitory"); // false
 ```
 
 `Reflect.has` は継承されたプロパティについて `true` を返し、これは [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)と同様です。
 
 ```js
-const a = {foo: 123}
-const b = {__proto__: a}
-const c = {__proto__: b}
+const a = { foo: 123 };
+const b = { __proto__: a };
+const c = { __proto__: b };
 // The prototype chain is: c -> b -> a
-Reflect.has(c, 'foo') // true
+Reflect.has(c, "foo"); // true
 ```
 
 ## 仕様書
