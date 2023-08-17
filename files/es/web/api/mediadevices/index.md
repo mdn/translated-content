@@ -60,11 +60,11 @@ navigator.mediaDevices
   .catch((error) => {
     if (error.name === "OverconstrainedError") {
       console.error(
-        `La resolución ${constraints.video.width.exact}x${constraints.video.height.exact} px no es compatible con su dispositivo.`
+        `La resolución ${constraints.video.width.exact}x${constraints.video.height.exact} px no es compatible con su dispositivo.`,
       );
     } else if (error.name === "NotAllowedError") {
       console.error(
-        "Debe otorgar permiso a esta página para acceder a su cámara y micrófono."
+        "Debe otorgar permiso a esta página para acceder a su cámara y micrófono.",
       );
     } else {
       console.error(`getUserMedia error: ${error.name}`, error);
