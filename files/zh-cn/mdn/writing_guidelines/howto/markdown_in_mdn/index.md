@@ -577,7 +577,7 @@ GFM 表格语法的主要限制是：
 
 ## 网页摘要
 
-*网页摘要*是页面中的第一个“内容”段落——出现在页面元数据（front matter）以及任何[侧边栏和网页横幅宏](#kumascript)之后的第一段文本内容。
+*网页摘要*是页面中的第一个“内容”段落——出现在页面元数据（front matter）以及任何[侧边栏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#添加侧边栏)和[网页横幅](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#页面或章节头部的指示器)宏之后的第一段文本内容。
 
 此摘要用于搜索引擎优化（SEO），也被一些宏自动包含在网页列表旁。因此，第一段应即简洁又翔实。
 
