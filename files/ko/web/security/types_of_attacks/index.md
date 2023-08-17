@@ -52,7 +52,9 @@ CSRF(XSRF라고도 함)는 관련 클래스의 공격입니다. 공격자는 사
   <input type="hidden" name="for" value="mallory" />
 </form>
 <script>
-  window.addEventListener('DOMContentLoaded', () => { document.querySelector('form').submit(); }
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("form").submit();
+  });
 </script>
 ```
 
