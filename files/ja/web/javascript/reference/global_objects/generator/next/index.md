@@ -16,6 +16,7 @@ generatorObject.next(value)
 ### 引数
 
 - `value`
+
   - : ジェネレーターへ送る値です。
 
     この値は `yield` 式の結果として代入されます。例えば `variable = yield expression` の場合、 `.next()` 関数に渡された値は `variable` に代入されます。
@@ -25,9 +26,11 @@ generatorObject.next(value)
 以下の 2 つのプロパティを持った {{jsxref("Object")}} です。
 
 - `done` (boolean)
+
   - : イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの _返値_ を指定します。
 
     イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
+
 - `value`
   - : イテレーターが yield または return した、何らかの JavaScript の値です。
 
@@ -45,10 +48,10 @@ function* gen() {
 }
 
 const g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### リストでの next() の使用
@@ -61,12 +64,12 @@ function* getPage(list, pageSize = 1) {
     yield list.slice(index, index + pageSize);
   }
 }
-const list = [1, 2, 3, 4, 5, 6, 7, 8]
-const page = getPage(list, 3);            // Generator { }
-page.next();                              // { value: [1, 2, 3], done: false }
-page.next();                              // { value: [4, 5, 6], done: false }
-page.next();                              // { value: [7, 8], done: false }
-page.next();                              // { value: undefined, done: true }
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = getPage(list, 3); // Generator { }
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
 ```
 
 ### ジェネレーターへ値を送る

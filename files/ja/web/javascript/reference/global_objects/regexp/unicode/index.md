@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ### unicode プロパティの使用
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

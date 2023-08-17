@@ -36,7 +36,9 @@ JavaScript は `valueOf` メソッドを、オブジェクトをプリミティ�
 `MyNumberType` というオブジェクト型があって、それに `valueOf` メソッドを作りたいとしましょう。以下のコードはユーザー定義関数をオブジェクトの `valueOf` メソッドに代入しています。
 
 ```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
+MyNumberType.prototype.valueOf = function () {
+  return customPrimitiveValue;
+};
 ```
 
 上のコードにより、 `MyNumberType` 型のオブジェクトがプリミティブな値で表されるべき文脈では常に、 JavaScript は自動的に上のコードで定義された関数を呼び出します。
@@ -44,7 +46,7 @@ MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
 オブジェクトの `valueOf` メソッドはたいてい JavaScript によって実行されますが、あなた自身も以下のように実行できます。
 
 ```js
-myNumberType.valueOf()
+myNumberType.valueOf();
 ```
 
 > **メモ:** 文字列型の文脈にあるオブジェクトは {{jsxref("Object.toString", "toString()")}} メソッドを通じて変換されますが、これは {{jsxref("String")}} オブジェクトが `valueOf` を使って文字列型に変換されるのとは違います。すべてのオブジェクトは、 "`[object type]`" としか出力されないかもしれませんが、文字列変換できます。しかし多くのオブジェクトは数値や真偽値や関数には変換できません。
@@ -55,11 +57,11 @@ myNumberType.valueOf()
 
 ```js
 function MyNumberType(n) {
-    this.number = n;
+  this.number = n;
 }
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
 };
 
 var myObj = new MyNumberType(4);
@@ -69,21 +71,21 @@ myObj + 3; // 7
 ### 単項プラスの使用
 
 ```js
-+"5" // 5 (文字列から数値へ)
-+"" // 0 (文字列から数値へ)
-+"1 + 2" // NaN (評価不能)
-+new Date() // (new Date()).getTime() と同じ
-+"foo" // NaN (文字列から数値へ)
-+{} // NaN
-+[] // 0 (toString() は空の文字列リストを返す)
-+[1] // 1
-+[1,2] // NaN
-+new Set([1]) // NaN
-+BigInt(1) // Uncaught TypeError: Cannot convert a BigInt value to a number
-+undefined // NaN
-+null // 0
-+true // 1
-+false // 0
++"5"; // 5 (文字列から数値へ)
++""; // 0 (文字列から数値へ)
++"1 + 2"; // NaN (評価不能)
++new Date(); // (new Date()).getTime() と同じ
++"foo"; // NaN (文字列から数値へ)
++{}; // NaN
++[]; // 0 (toString() は空の文字列リストを返す)
++[1]; // 1
++[1,2]; // NaN
++new Set([1]); // NaN
++BigInt(1); // Uncaught TypeError: Cannot convert a BigInt value to a number
++undefined; // NaN
++null; // 0
++true; // 1
++false; // 0
 ```
 
 ## 仕様書

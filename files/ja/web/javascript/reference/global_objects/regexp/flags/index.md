@@ -20,19 +20,19 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 ### flags の使用
 
 ```js
-/foo/ig.flags;   // "gi"
-/bar/myu.flags;  // "muy"
+/foo/gi.flags; // "gi"
+/bar/muy.flags; // "muy"
 ```
 
 ## ポリフィル
 
 ```js
 if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, 'flags', {
+  Object.defineProperty(RegExp.prototype, "flags", {
     configurable: true,
-    get: function() {
+    get: function () {
       return this.toString().match(/[gimsuy]*$/)[0];
-    }
+    },
   });
 }
 ```
