@@ -161,7 +161,7 @@ customElement.prototype.getData = url => {
 ```js
 const messageQueue = [];
 
-let sendMessage = message => {
+let sendMessage = (message) => {
   messageQueue.push(message);
 
   if (messageQueue.length === 1) {
@@ -193,15 +193,14 @@ let sendMessage = message => {
 在这个简单的例子中，我们将看到入列一个微任务后，会引起其回调函数在顶层脚本完毕后运行。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 在下面的代码中，我们看到对 {{domxref("queueMicrotask()")}} 的一次调用被用来调度一个微任务以使其运行。这次调用包含了 `log()`，一个简单的向屏幕输出文字的自定义函数。
@@ -209,7 +208,7 @@ let log = s => logElem.innerHTML += s + "<br>";
 ```js
 log("Before enqueueing the microtask");
 queueMicrotask(() => {
-  log("The microtask has run.")
+  log("The microtask has run.");
 });
 log("After enqueueing the microtask");
 ```
@@ -223,15 +222,14 @@ log("After enqueueing the microtask");
 在这个例子中，一个 timeout 在 0 毫秒后被触发（或者 "尽可能快"）。这演示了当调用一个新任务（如通过使用 `setTimeout()`）时的“尽可能快”意味着什么，以及比之于使用一个微任务的不同。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 在下面的代码中，我们看到对 {{domxref("queueMicrotask()")}} 的一次调用被用来调度一个微任务以使其运行。这次调用包含了 `log()`，一个简单的向屏幕输出文字的自定义函数。
@@ -260,15 +258,14 @@ log("Main program exiting");
 这个例子通过增加一个完成同样工作的函数，略微地扩展了前一个例子。该函数使用 `queueMicrotask()` 调度一个微任务。此例的重要之处是微任务不在其所处的函数退出时，而是在主程序退出时被执行。
 
 ```html hidden
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 #### JavaScript
 
 ```js hidden
 let logElem = document.getElementById("log");
-let log = s => logElem.innerHTML += s + "<br>";
+let log = (s) => (logElem.innerHTML += s + "<br>");
 ```
 
 以下是主程序代码。这里的 `doWork()` 函数调用了 `queueMicrotask()`，但微任务仍在整个程序退出时才触发，因为那才是任务退出而执行栈上为空的时刻。
@@ -283,7 +280,7 @@ let doWork = () => {
 
   queueMicrotask(urgentCallback);
 
-  for (let i=2; i<=10; i++) {
+  for (let i = 2; i <= 10; i++) {
     result *= i;
   }
   return result;

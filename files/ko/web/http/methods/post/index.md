@@ -9,9 +9,9 @@ slug: Web/HTTP/Methods/POST
 
 {{httpmethod("PUT")}}과 `POST`의 차이는 {{glossary("idempotent", "멱등성")}}으로, `PUT`은 멱등성을 가집니다. `PUT`은 한 번을 보내도, 여러 번을 연속으로 보내도 같은 효과를 보입니다. 즉, 부수 효과(side effect)가 없습니다.
 
-`POST` 요청은 보통 [HTML 양식](/ko/docs/Learn/HTML/Forms)을 통해 서버에 전송하며, 서버에 변경사항을 만듭니다. 이 경우의 콘텐츠 유형(`Content-Type`)은 *{{HTMLElement("form")}} 요소의 {{htmlattrxref("enctype", "form")}} 특성이나 {{HTMLElement("input") }}, {{HTMLElement("button")}} *요소의 _{{htmlattrxref("formenctype", "input")}} 특성 안에 적당한 문자열을 넣어 결정합니다._
+`POST` 요청은 보통 [HTML 양식](/ko/docs/Learn/HTML/Forms)을 통해 서버에 전송하며, 서버에 변경사항을 만듭니다. 이 경우의 콘텐츠 유형(`Content-Type`)은 _{{HTMLElement("form")}} 요소의 [`enctype`](/ko/docs/Web/HTML/Element/form#enctype) 특성이나 {{HTMLElement("input") }}, {{HTMLElement("button")}}_ 요소의 _[`formenctype`](/ko/docs/Web/HTML/Element/input#formenctype) 특성 안에 적당한 문자열을 넣어 결정합니다._
 
-- `application/x-www-form-urlencoded`: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다. 영어 알파벳이 아닌 문자들은 {{glossary("percent encoded")}} 으로 인코딩됩니다. 따라서, 이 content type은 바이너리 데이터에 사용하기에는 적절치 않습니다. (바이너리 데이터에는 use `multipart/form-data` 를 사용해 주세요.)_
+- `application/x-www-form-urlencoded`: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다. 영어 알파벳이 아닌 문자들은 {{glossary("percent encoded")}} 으로 인코딩됩니다. 따라서, 이 content type은 바이너리 데이터에 사용하기에는 적절치 않습니다. (바이너리 데이터에는 use `multipart/form-data` 를 사용해 주세요.)\_
 - _`multipart/form-data`_
 - _`text/plain`_
 
@@ -64,7 +64,7 @@ POST /index.html
 
 다음은 `application/x-www-form-urlencoded` 콘텐츠 유형을 사용하는 간단한 형태의 양식 제출 예시입니다.
 
-```html
+```http
 POST / HTTP/1.1
 Host: foo.com
 Content-Type: application/x-www-form-urlencoded
@@ -75,7 +75,7 @@ say=Hi&to=Mom
 
 `multipart/form-data` 콘텐츠 유형을 사용하는 예시입니다.
 
-```
+```http
 POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"

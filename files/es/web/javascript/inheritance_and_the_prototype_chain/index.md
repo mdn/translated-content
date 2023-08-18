@@ -1,7 +1,6 @@
 ---
 title: Herencia y la cadena de prototipos
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Herencia_y_la_cadena_de_protipos
 ---
 
 {{jsSidebar("Advanced")}}
@@ -67,9 +66,9 @@ Cuando una función heredada se ejecuta, el valor de [`this`](/es/docs/Web/JavaS
 ```js
 var o = {
   a: 2,
-  m: function(b){
+  m: function (b) {
     return this.a + 1;
-  }
+  },
 };
 
 console.log(o.m()); // 3
@@ -92,13 +91,13 @@ Veamos lo que sucede detrás de escena detalladamente.
 En JavaScript, como se mencionó anteriormente, las funciones pueden tener propiedades. Todas las funciones tienen una propiedad especial llamada `prototype`. Por favor ten en cuenta que el siguiente código es autónomo (es seguro asumir que no hay otro JavaScript en la página web mas que el siguiente). Para la mejor experiencia de aprendizaje, es altamente recomendable que abras una consola (la cual, en Chrome y Firefox, se puede abrir presionando Ctrl+Shift+I), navegando hasta la pestaña "console", copiando y pegando el siguiente código JavaScript, y ejecutándolo presionando la tecla Enter/Return.
 
 ```js
-function hacerAlgo(){}
-console.log( hacerAlgo.prototype );
+function hacerAlgo() {}
+console.log(hacerAlgo.prototype);
 // No importa cómo declares la función, una
 // función en JavaScript siempre tendrá una
 // propiedad prototype predeterminada.
-var hacerAlgo = function(){};
-console.log( hacerAlgo.prototype );
+var hacerAlgo = function () {};
+console.log(hacerAlgo.prototype);
 ```
 
 Como acabamos de ver, `hacerAlgo()` tiene una propiedad `prototype` predeterminada, como lo demuestra la consola. Después de ejecutar este código, la consola debería haber mostrado un parecido a esto.
@@ -121,9 +120,9 @@ Como acabamos de ver, `hacerAlgo()` tiene una propiedad `prototype` predetermina
 Podemos añadir propiedades al prototipo de `hacerAlgo()`, como se muestra a continuación.
 
 ```js
-function hacerAlgo(){}
+function hacerAlgo() {}
 hacerAlgo.prototype.foo = "bar";
-console.log( hacerAlgo.prototype );
+console.log(hacerAlgo.prototype);
 ```
 
 El resultado:
@@ -149,11 +148,11 @@ Ahora podemos usar el operador `new` para crear una instancia de `hacerAlgo()` b
 Intenta el siguiente código:
 
 ```js
-function hacerAlgo(){}
+function hacerAlgo() {}
 hacerAlgo.prototype.foo = "bar"; // añadir una propiedad al prototipo
 var hacerUnaInstancia = new hacerAlgo();
 hacerUnaInstancia.prop = "un valor"; // añadir una propiedad al objeto
-console.log( hacerUnaInstancia );
+console.log(hacerUnaInstancia);
 ```
 
 El resultado es similar a lo siguiente:
@@ -188,7 +187,7 @@ Si la propiedad no es encontrada en el `__proto__` de el `__proto__` de `hacerUn
 Vamos a intentar introduciendo más código en la consola:
 
 ```js
-function hacerAlgo(){}
+function hacerAlgo() {}
 hacerAlgo.prototype.foo = "bar";
 var hacerUnaInstancia = new hacerAlgo();
 hacerUnaInstancia.prop = "un valor";
@@ -216,7 +215,7 @@ hacerAlgo.prototype.foo:     bar
 ### Objetos creados mediante estructuras sintácticas
 
 ```js
-var o = {a: 1};
+var o = { a: 1 };
 
 // El objeto recién creado o tiene Object.prototype como su [[Prototype]]
 // o no tiene ninguna propiedad llamada 'hasOwnProperty'
@@ -232,7 +231,7 @@ var a = ["yo", "whadup", "?"];
 // La cadena de prototipados sería:
 // a ---> Array.prototype ---> Object.prototype ---> null
 
-function f(){
+function f() {
   return 2;
 }
 
@@ -252,9 +251,9 @@ function Graph() {
 }
 
 Graph.prototype = {
-  addVertex: function(v){
+  addVertex: function (v) {
     this.vertices.push(v);
-  }
+  },
 };
 
 var g = new Graph();
@@ -267,7 +266,7 @@ var g = new Graph();
 ECMAScript 5 Introdujo un nuevo método: {{jsxref("Object.create()")}}. Llamando este método creas un nuevo objeto. El prototype de este objeto es el primer argumento de la función:
 
 ```js
-var a = {a: 1};
+var a = { a: 1 };
 // a ---> Object.prototype ---> null
 
 var b = Object.create(a);
@@ -340,42 +339,43 @@ La **única** buena razón para extender los pre-incorporados prototipos es modi
 `B` heredará de `A`:
 
 ```js
-function A(a){
+function A(a) {
   this.varA = a;
 }
 
 // Cual es el propósito de incluir varA en el prototipo si A.prototype.varA siempre va a ser la sombra de
 // this.varA, dada la definición de la función A arriba?
 A.prototype = {
-  varA : null,  // No deberíamos atacar varA desde el prototipo como haciendo nada?
-      // Tal vez intentando una optimización al asignar espacios ocultos en las clases?
-      // https://developers.google.com/speed/articles/optimizing-javascript#Initializing instanciar variables
-      // podría ser válido si varA no fuera inicializado únicamente por cada instancia.
-  doSomething : function(){
+  varA: null, // No deberíamos atacar varA desde el prototipo como haciendo nada?
+  // Tal vez intentando una optimización al asignar espacios ocultos en las clases?
+  // https://developers.google.com/speed/articles/optimizing-javascript#Initializing instanciar variables
+  // podría ser válido si varA no fuera inicializado únicamente por cada instancia.
+  doSomething: function () {
     // ...
-  }
-}
+  },
+};
 
-function B(a, b){
+function B(a, b) {
   A.call(this, a);
   this.varB = b;
 }
 B.prototype = Object.create(A.prototype, {
-  varB : {
+  varB: {
     value: null,
     enumerable: true,
     configurable: true,
-    writable: true
+    writable: true,
   },
-  doSomething : {
-    value: function(){ // override
+  doSomething: {
+    value: function () {
+      // override
       A.prototype.doSomething.apply(this, arguments); // call super
       // ...
     },
     enumerable: true,
     configurable: true,
-    writable: true
-  }
+    writable: true,
+  },
 });
 B.prototype.constructor = B;
 

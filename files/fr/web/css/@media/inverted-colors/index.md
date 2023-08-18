@@ -1,11 +1,6 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/inverted-colors
 ---
 
 {{CSSRef}}
@@ -27,14 +22,12 @@ Cette caractéristique est définie avec un des mots-clés parmi ceux qui suiven
 
 ```html
 <p>
-  Si vous utilisez les couleurs inversées, ce texte devrait
-  être bleu sur blanc (l'inverse de jaune sur noir). Sinon,
-  il devrait être rouge sur gris clair.
+  Si vous utilisez les couleurs inversées, ce texte devrait être bleu sur blanc
+  (l'inverse de jaune sur noir). Sinon, il devrait être rouge sur gris clair.
 </p>
 <p>
-  Si le texte est gris, cela indique que votre navigateur
-  ne prend pas en charge la caractéristique média
-  `inverted-colors`.
+  Si le texte est gris, cela indique que votre navigateur ne prend pas en charge
+  la caractéristique média `inverted-colors`.
 </p>
 ```
 

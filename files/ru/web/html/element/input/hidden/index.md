@@ -1,14 +1,6 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-page-type: html-element
-tags:
-  - Элемент
-  - Форма
-  - HTML
-  - input
-  - hidden
-translation_of: Web/HTML/Element/input/hidden
 ---
 
 {{HTMLSidebar}}

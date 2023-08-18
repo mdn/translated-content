@@ -1,7 +1,6 @@
 ---
 title: IndexedDB 浏览器存储限制和清理标准
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -57,9 +56,9 @@ original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteri
 
 **注意**：用户不应在其下添加自己的目录或文件到`<profile>/storage`下。这将导致存储初始化失败；例如，{{domxref("IDBFactory.open()","open()")}}会触发错误事件。
 
-### 储存限制
+### 数据储存限制
 
-浏览器的最大存储空间是动态的——它取决于您的硬盘大小。 **全局限制**为可用磁盘空间的 50％。在 Firefox 中，一个名为 Quota Manager 的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。
+浏览器的最大存储空间是动态的——它取决于您的硬盘大小。**全局限制**为可用磁盘空间的 50％。在 Firefox 中，一个名为 Quota Manager 的内部浏览器工具会跟踪每个源用尽的磁盘空间，并在必要时删除数据。
 
 因此，如果您的硬盘驱动器是 500GB，那么浏览器的总存储容量为 250GB。如果超过此范围，则会发起称为**源回收**的过程，删除整个源的数据，直到存储量再次低于限制。删除源数据没有只删一部分的说法——因为这样可能会导致不一致的问题。
 

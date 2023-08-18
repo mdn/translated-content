@@ -1,11 +1,6 @@
 ---
 title: Console.table()
 slug: Web/API/console/table
-tags:
-  - API
-  - Дебаг
-  - консоль
-translation_of: Web/API/Console/table
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -54,7 +49,11 @@ console.table(me);
 ```js
 // массив массивов
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+var people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 
@@ -135,6 +134,6 @@ console.table(data [, columns]);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

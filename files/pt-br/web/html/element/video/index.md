@@ -12,10 +12,10 @@ Para uma lista de formatos suportados veja [Media formats supported by the audio
 ## Contexto de uso
 
 | Conteúdo permitido          | [Transparent content](/pt-BR/HTML/Content_categories#transparent_content), contendo ou um atributo **src** ou um ou mais elementos {{ HTMLElement("source") }}, seguido por [flow content](/pt-BR/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) , sem `<video>` ou elementos {{ HTMLElement("audio") }}. |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/pt-BR/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                     |
-| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                 |
+| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/pt-BR/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content).                                                                                                                                                                    |
+| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                   |
 
 ## Atributos
 
@@ -75,15 +75,15 @@ O tempo de compensação (time offset) entre o áudio e o vídeo está especific
 ```html
 <!-- Exemplo simples de vídeo -->
 <video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg">
-  Desculpa, o seu navegador não suporta vídeos incorporados,
-  mas você pode <a href="videofile.ogg">baixá-lo</a>
+  Desculpa, o seu navegador não suporta vídeos incorporados, mas você pode
+  <a href="videofile.ogg">baixá-lo</a>
   e assistir pelo seu reprodutor de mídia favorito!
 </video>
 
 <!-- Vídeo com legendas -->
 <video src="foo.ogg">
-  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska">
+  <track kind="subtitles" src="foo.en.vtt" srclang="en" label="English" />
+  <track kind="subtitles" src="foo.sv.vtt" srclang="sv" label="Svenska" />
 </video>
 ```
 

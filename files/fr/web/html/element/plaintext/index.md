@@ -1,13 +1,6 @@
 ---
-title: '<plaintext> : l''élément de texte brut (déprécié)'
+title: "<plaintext> : l'élément de texte brut (déprécié)"
 slug: Web/HTML/Element/plaintext
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/plaintext
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

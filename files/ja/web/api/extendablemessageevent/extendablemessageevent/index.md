@@ -44,11 +44,13 @@ new ExtendableMessageEvent(type, options)
 ## 例
 
 ```js
-const options = { data : 'hello message',
-                  source : MessagePortReference,
-                  ports : MessagePortListReference };
+const options = {
+  data: "hello message",
+  source: MessagePortReference,
+  ports: MessagePortListReference,
+};
 
-const myEME = new ExtendableMessageEvent('message', init);
+const myEME = new ExtendableMessageEvent("message", init);
 ```
 
 ## 仕様書

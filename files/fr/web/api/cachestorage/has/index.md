@@ -1,16 +1,6 @@
 ---
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - has
-translation_of: Web/API/CacheStorage/has
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
@@ -41,13 +31,16 @@ Une {{jsxref("Promise", "Promesse")}} qui renvoie `true` si le cache existe.
 L'exemple suivant vérifie qu'un cache nommé 'v1' exists. Si c'est le cas, nous lui ajoutons une liste d'assets. Si non (la promesse `has()` est rejetée) alors nous exécutons une sorte d'initialisation du cache.
 
 ```js
-caches.has('v1').then(function() {
-  caches.open('v1').then(function(cache) {
+caches
+  .has("v1")
+  .then(function () {
+    caches.open("v1").then(function (cache) {
       return cache.addAll(myAssets);
+    });
+  })
+  .catch(function () {
+    someCacheSetupfunction();
   });
-}).catch(function() {
-  someCacheSetupfunction();
-});;
 ```
 
 ## Spécifications

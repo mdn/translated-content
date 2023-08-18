@@ -1,7 +1,6 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-original_slug: Aprender/JavaScript/Howto
 ---
 
 {{LearnSidebar}}
@@ -39,8 +38,8 @@ Um dos erros mais comuns é declarar a função, mas não chama-la em lugar nenh
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 Este código não fará nada a menos que você o chame, por exemplo com
@@ -71,9 +70,9 @@ This doesn't work in [Objects](/pt-BR/docs/Learn/JavaScript/Objects), however �
 
 ```js
 var myObject = {
-  name : 'Chris',
-  age : 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Definições básicas

@@ -1,8 +1,6 @@
 ---
 title: CORS settings attributes
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
-original_slug: Web/HTML/CORS_settings_attributes
 ---
 
 В HTML5 некоторые теги поддерживают [CORS](/ru/docs/HTTP/Access_control_CORS), например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут `crossorigin` (`crossOrigin` свойство), которое позволяет настроить CORS запросы для данных получаемых элементом. Эти атрибуты могут иметь следующие значения:
@@ -21,16 +19,17 @@ original_slug: Web/HTML/CORS_settings_attributes
 Используя тег {{HTMLElement("script")}} вы можете указать браузеру выполнять код `https://example.com/example-framework.js` без передачи user-credentials.
 
 ```html
-<script src="https://example.com/example-framework.js"
-        crossorigin="anonymous"></script>
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous"></script>
 ```
 
 ## Спецификации
 
-| Specification                                                                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                                           | Status                   | Comment |
+| ------------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                     | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}                | {{Spec2('HTML WHATWG')}} |         |
 
 ## Поддержка браузерами
 

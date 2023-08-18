@@ -26,13 +26,13 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 
 ## Propriedades
 
-| Property                              | Type                                 | Description                                        |
-| ------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| Property                        | Type                       | Description                                        |
+| ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The browsing context (`window`).                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                 |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.         |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.           |
-| `state` {{readonlyInline}}      | _any_                                | The current history entry's state object (if any). |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                 |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.         |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.           |
+| `state` {{readonlyInline}}      | _any_                      | The current history entry's state object (if any). |
 
 ## Compatiblidade com navegadores
 
@@ -43,15 +43,20 @@ Navegadores tendem a lidar com o evento `popstate` diferentemente no carregament
 Um página no `http://example.com/example.html roda o código abaixo e irá gerar os logs indicados`
 
 ```js
-window.onpopstate = function(event) {
-  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+window.onpopstate = function (event) {
+  console.log(
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
+  );
 };
-history.pushState({page: 1}, "title 1", "?page=1");
-history.pushState({page: 2}, "title 2", "?page=2");
-history.replaceState({page: 3}, "title 3", "?page=3");
+history.pushState({ page: 1 }, "title 1", "?page=1");
+history.pushState({ page: 2 }, "title 2", "?page=2");
+history.replaceState({ page: 3 }, "title 3", "?page=3");
 history.back(); // Logs "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // Logs "location: http://example.com/example.html, state: null
-history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
+history.go(2); // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
 ```
 
 Observe que mesmo que a entrada do histórico inicial(para `http://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate`é ainda disparado quando nós ativamos essa entrada após a segunda chamada para `history.back()`.

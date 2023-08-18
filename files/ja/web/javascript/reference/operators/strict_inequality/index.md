@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Strict_inequality
 ## 構文
 
 ```js
-x !== y
+x !== y;
 ```
 
 ## 解説
@@ -20,9 +20,9 @@ x !== y
 厳密不等価演算子は、オペランドが等しくないことを検査します。これは[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
 
 ```js
-x !== y
+x !== y;
 
-!(x === y)
+!(x === y);
 ```
 
 比較アルゴリズムの詳細については、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子のページを参照して下さい。
@@ -38,41 +38,41 @@ x !== y
 ### オペランドが同じ型である場合の比較
 
 ```js
-console.log("hello" !== "hello");   // false
-console.log("hello" !== "hola");    // true
+console.log("hello" !== "hello"); // false
+console.log("hello" !== "hola"); // true
 
-console.log(3 !== 3);               // false
-console.log(3 !== 4);               // true
+console.log(3 !== 3); // false
+console.log(3 !== 4); // true
 
-console.log(true !== true);         // false
-console.log(true !== false);        // true
+console.log(true !== true); // false
+console.log(true !== false); // true
 
-console.log(null !== null);         // false
+console.log(null !== null); // false
 ```
 
 ### オペランドが異なる型である場合の比較
 
 ```js
-console.log("3" !== 3);           // true
+console.log("3" !== 3); // true
 
-console.log(true !== 1);          // true
+console.log(true !== 1); // true
 
-console.log(null !== undefined);  // true
+console.log(null !== undefined); // true
 ```
 
 ### オブジェクトの比較
 
 ```js
 const object1 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
 const object2 = {
-  name: "hello"
-}
+  name: "hello",
+};
 
-console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false
+console.log(object1 !== object2); // true
+console.log(object1 !== object1); // false
 ```
 
 ## 仕様書

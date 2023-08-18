@@ -1,7 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 ---
 
 {{JSRef("Global_Objects", "Math")}}
@@ -35,22 +34,22 @@ Puesto que `pow()` es un método estático de `Math`, siempre se utiliza como `M
 
 ```js
 // simple
-Math.pow(7, 2);    // 49
-Math.pow(7, 3);    // 343
-Math.pow(2, 10);   // 1024
+Math.pow(7, 2); // 49
+Math.pow(7, 3); // 343
+Math.pow(2, 10); // 1024
 // exponentes fraccionales
-Math.pow(4, 0.5);  // 2 (raíz cuadrada de 4)
-Math.pow(8, 1/3);  // 2 (raíz cúbica de 8)
-Math.pow(2, 0.5);  // 1.412135623730951 (raíz cuadrada de 2)
-Math.pow(2, 1/3);  // 1.2599210498948732 (raíz cúbica de 2)
+Math.pow(4, 0.5); // 2 (raíz cuadrada de 4)
+Math.pow(8, 1 / 3); // 2 (raíz cúbica de 8)
+Math.pow(2, 0.5); // 1.412135623730951 (raíz cuadrada de 2)
+Math.pow(2, 1 / 3); // 1.2599210498948732 (raíz cúbica de 2)
 // exponentes con signo
-Math.pow(7, -2);   // 0.02040816326530612 (1/49)
-Math.pow(8, -1/3); // 0.5
+Math.pow(7, -2); // 0.02040816326530612 (1/49)
+Math.pow(8, -1 / 3); // 0.5
 // bases con signo
-Math.pow(-7, 2);   // 49 (los cuadrados son positivos)
-Math.pow(-7, 3);   // -343 (El cubo de una base negativa puede ser negativo)
+Math.pow(-7, 2); // 49 (los cuadrados son positivos)
+Math.pow(-7, 3); // -343 (El cubo de una base negativa puede ser negativo)
 Math.pow(-7, 0.5); // NaN (Los números negativos no tienen raíz cuadrada real)
-Math.pow(-7, 1/3); // NaN
+Math.pow(-7, 1 / 3); // NaN
 ```
 
 ## Especificaciones

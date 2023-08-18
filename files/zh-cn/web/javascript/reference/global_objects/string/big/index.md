@@ -30,17 +30,17 @@ str.big()
 下面的例子使用了字符串方法来改变一个字符串的字体大小：
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
 console.log(worldString.fontsize(7)); // <fontsize=7>Hello, world</fontsize>
 ```
 
 使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的 style 属性，比如：
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '2em';
+document.getElementById("yourElemId").style.fontSize = "2em";
 ```
 
 ## 规范

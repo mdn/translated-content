@@ -1,13 +1,6 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
-tags:
-  - API
-  - CSS
-  - DOM
-  - Interface
-  - StyleSheet
-translation_of: Web/API/StyleSheet
 ---
 
 {{APIRef("CSSOM")}}

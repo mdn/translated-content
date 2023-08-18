@@ -1,11 +1,6 @@
 ---
 title: <string>
 slug: Web/CSS/string
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/string
 ---
 
 {{CSSRef}}

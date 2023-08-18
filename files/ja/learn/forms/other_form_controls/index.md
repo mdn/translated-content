@@ -51,7 +51,7 @@ l10n:
 
 下記のスクリーンショットは macOS での Firefox 71 と Safari 13 、Windows10 での Edge 18, Yandex 14, Firefox 71, Chrome 79 における、それぞれ既定、フォーカス中、無効状態の `<textarea>` 要素を示しています。
 
-![Mac OSX の Firefox 71 と Safari 13、 Windows 10 の Edge 18、Yandex 14、Firefox、Chrome で、既定、フォーカス中、無効状態の \<textarea> 要素を示しています。](textarea_basic.png)
+![Mac OSX の Firefox 71 と Safari 13、 Windows 10 の Edge 18、Yandex 14、Firefox、Chrome で、既定、フォーカス中、無効状態の 'textarea' 要素を示しています。](textarea_basic.png)
 
 > **メモ:** 多少面白いテキストエリアの使用例は、このシリーズの最初の記事の[例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) が見つかります ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html))。
 
@@ -149,15 +149,15 @@ l10n:
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="野菜">
-     <option>バナナ</option>
-     <option selected>さくらんぼ</option>
-     <option>レモン</option>
-   </optgroup>
-   <optgroup label="野菜">
-     <option>人参</option>
-     <option>茄子</option>
-     <option>馬鈴薯</option>
-   </optgroup>
+    <option>バナナ</option>
+    <option selected>さくらんぼ</option>
+    <option>レモン</option>
+  </optgroup>
+  <optgroup label="野菜">
+    <option>人参</option>
+    <option>茄子</option>
+    <option>馬鈴薯</option>
+  </optgroup>
 </select>
 ```
 
@@ -181,7 +181,7 @@ l10n:
 
 ```html
 <label for="myFruit">好きな果物は何ですか？</label>
-<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
 <datalist id="mySuggestion">
   <option>リンゴ</option>
   <option>バナナ</option>
@@ -202,7 +202,7 @@ l10n:
 
 ```html
 <label for="myFruit">好きな果物は何ですか？（代替手段付き）</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList">
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
 
 <datalist id="fruitList">
   <label for="suggestion">または果物を選択</label>

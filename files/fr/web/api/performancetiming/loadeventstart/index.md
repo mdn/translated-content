@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.loadEventStart
 slug: Web/API/PerformanceTiming/loadEventStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - loadEventStart
-translation_of: Web/API/PerformanceTiming/loadEventStart
 ---
 
 {{APIRef("Navigation Timing")}}

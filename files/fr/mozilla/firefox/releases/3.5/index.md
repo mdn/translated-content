@@ -1,7 +1,6 @@
 ---
 title: Firefox 3.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.5
-translation_of: Mozilla/Firefox/Releases/3.5
 ---
 
 {{FirefoxSidebar}}
@@ -105,7 +104,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - [Utilisation de JSON dans Firefox](/fr/Utilisation_de_JSON_dans_Firefox)
   - : La gestion de [JSON](/fr/JSON) est à présent intégrée dans le DOM.
 - Nouvelles méthodes de nettoyage des espaces sur l'objet String
-  - : L'objet [`String`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/String) dispose à présent des méthodes [`trim()`](/fr/R%C3%A9f%C3%A9rence_de_JavaScript_1.5_Core/Objets_globaux/String/Trim), [`trimLeft()`](/fr/R%C3%A9f%C3%A9rence_de_JavaScript_1.5_Core/Objets_globaux/String/TrimLeft) et [`trimRight()`](/fr/R%C3%A9f%C3%A9rence_de_JavaScript_1.5_Core/Objets_globaux/String/TrimRight).
+  - : L'objet [`String`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/String) dispose à présent des méthodes [`trim()`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/String/Trim), [`trimLeft()`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/String/TrimLeft) et [`trimRight()`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/String/TrimRight).
 
 #### Réseau
 

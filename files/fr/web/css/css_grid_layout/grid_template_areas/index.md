@@ -1,8 +1,6 @@
 ---
 title: Définir des zones sur une grille
 slug: Web/CSS/CSS_grid_layout/Grid_template_areas
-translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 ---
 
 {{CSSRef}}
@@ -17,7 +15,7 @@ On a déjà utilisé la propriété {{cssxref("grid-area")}} précédemment. C'e
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 ```
 
@@ -66,7 +64,9 @@ Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de pl
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -118,7 +118,9 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -143,9 +145,9 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: minmax(100px, auto);
   grid-template-areas:
-      "hd hd hd hd   hd   hd   hd   hd   hd"
-      "sd sd sd main main main main main main"
-      ".  .  .  ft   ft   ft   ft   ft   ft";
+    "hd hd hd hd   hd   hd   hd   hd   hd"
+    "sd sd sd main main main main main main"
+    ".  .  .  ft   ft   ft   ft   ft   ft";
 }
 ```
 
@@ -184,7 +186,9 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -237,7 +241,9 @@ Pour ce faire, on définit les noms des zones en dehors de toute _media query_ a
 Pour la disposition vue précédemment, on définit ici une disposition par défaut sur une seule colonne pour les affichages étroits. On a donc une seule piste sur laquelle s'empilent les objets :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -329,7 +335,9 @@ Ici, la grille se compose de deux pistes en colonnes. La colonne pour l'image es
 Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` et pour le texte, on crée une seconde zone intitulée `content`. Ensuite, on utilise ces noms pour créer l'organisation via la propriété `grid-template-areas`.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
   border: 2px solid #f76707;
@@ -359,8 +367,7 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
 <div class="media">
   <div class="image"></div>
   <div class="text">
-    Dans cet exemple, on peut utiliser
-    grid-template-areas pour échanger les
+    Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
     places du texte et du media.
   </div>
 </div>
@@ -373,7 +380,9 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
 Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure `1fr` est en dernier et d'échanger les valeurs dans {{cssxref("grid-template-areas")}}.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .media {
   border: 2px solid #f76707;
@@ -408,8 +417,7 @@ Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une 
 <div class="media flipped">
   <div class="image"></div>
   <div class="text">
-    Dans cet exemple, on peut utiliser
-    grid-template-areas pour échanger les
+    Dans cet exemple, on peut utiliser grid-template-areas pour échanger les
     places du texte et du media.
   </div>
 </div>
@@ -441,12 +449,12 @@ Le fragment de code suivant crée une disposition identique à celle que nous av
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template:
-      "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
-      "sd sd sd main main main main main main" minmax(100px, auto)
-      "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-             / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  display: grid;
+  grid-template:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+    "sd sd sd main main main main main main" minmax(100px, auto)
+    "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 
@@ -471,11 +479,12 @@ On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais atte
 
 ```css
 .wrapper {
-    display: grid;
-    grid: "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
+  display: grid;
+  grid:
+    "hd hd hd hd   hd   hd   hd   hd   hd" minmax(100px, auto)
     "sd sd sd main main main main main main" minmax(100px, auto)
     "ft ft ft ft   ft   ft   ft   ft   ft" minmax(100px, auto)
-    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 ```
 

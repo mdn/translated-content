@@ -1,7 +1,6 @@
 ---
 title: 互換性一覧表とブラウザー互換性データリポジトリー (BCD)
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
-original_slug: MDN/Structures/Compatibility_tables
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---

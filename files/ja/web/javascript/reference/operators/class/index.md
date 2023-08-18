@@ -31,16 +31,16 @@ const MyClass = class [className] [extends otherClassName] {
 `constructor` メソッドは省略可能です。クラス式で生成されたクラスは、常に {{jsxref("Operators/typeof", "typeof")}} が "`function`" の値を返します。
 
 ```js
-'use strict';
-let Foo = class {};  // コンストラクタープロパティは省略可能
-Foo = class {};      // 再宣言が可能
+"use strict";
+let Foo = class {}; // コンストラクタープロパティは省略可能
+Foo = class {}; // 再宣言が可能
 
-typeof Foo;             // "function" を返す
-typeof class {};        // "function" を返す
+typeof Foo; // "function" を返す
+typeof class {}; // "function" を返す
 
-Foo instanceof Object;   // true
+Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言ができない)
+class Foo {} // SyntaxError が発生 (クラス宣言は再宣言ができない)
 ```
 
 ## 例
@@ -53,13 +53,13 @@ class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言が
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### 名前付きクラス式
@@ -72,11 +72,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## 仕様書

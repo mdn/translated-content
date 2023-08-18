@@ -1,8 +1,6 @@
 ---
 title: Valeurs et unités CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
-translation_of: Learn/CSS/Building_blocks/Values_and_units
-original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
@@ -20,10 +18,10 @@ Chaque propriété utilisée en CSS possède un type de valeur qui définit l'en
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée de
         <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
@@ -54,7 +52,7 @@ Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisan
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
-translation_of: Web/CSS/accent-color
-browser-compat: css.properties.accent-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

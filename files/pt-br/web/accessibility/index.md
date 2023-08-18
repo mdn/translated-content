@@ -1,7 +1,6 @@
 ---
 title: Acessibilidade
 slug: Web/Accessibility
-original_slug: Web/Acessibilidade
 ---
 
 Acessiblidade no desenvolvimento Web significa permitir que o máximo possível de pessoas possa acessar os sites da web mesmo quando suas habilidades são limitadas de alguma forma. Aqui nós fornecemos informações sobre o desenvolvimento de conteúdo acessível.

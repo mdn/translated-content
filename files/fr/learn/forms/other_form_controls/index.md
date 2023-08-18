@@ -1,7 +1,6 @@
 ---
 title: Les autres contrôles de formulaire
 slug: Learn/Forms/Other_form_controls
-translation_of: Learn/Forms/Other_form_controls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}

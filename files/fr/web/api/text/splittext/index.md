@@ -1,7 +1,6 @@
 ---
 title: Text.splitText()
 slug: Web/API/Text/splitText
-translation_of: Web/API/Text/splitText
 ---
 
 {{apiref("DOM")}}
@@ -17,7 +16,7 @@ Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l'
 ## Syntaxe
 
 ```js
-noeudRemplacant = noeudTexte.splitText(indice)
+noeudRemplacant = noeudTexte.splitText(indice);
 ```
 
 ## Exemple
@@ -29,15 +28,15 @@ Dans cet exemple, le nœud texte d'un {{HTMLElement("p")}} est séparé en deux 
   <p id="p">foobar</p>
 
   <script type="text/javascript">
-    var p = document.getElementById('p');
+    var p = document.getElementById("p");
     var noeudTexte = p.firstChild;
 
     // coupe entre foo et bar
     var noeudRemplacant = noeudTexte.splitText(3);
 
     // crée un span avec ' contenu du span '
-    var span = document.createElement('span');
-    span.appendChild(document.createTextNode(' contenu du span '));
+    var span = document.createElement("span");
+    span.appendChild(document.createTextNode(" contenu du span "));
 
     // ajoute le span avant 'bar'
     p.insertBefore(span, noeudRemplacant);

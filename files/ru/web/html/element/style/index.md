@@ -1,14 +1,6 @@
 ---
 title: <style> - элемент для указания стилей
 slug: Web/HTML/Element/style
-tags:
-  - HTML
-  - Reference
-  - Référence(2)
-  - Веб
-  - метаданные документа HTML
-  - элементы
-translation_of: Web/HTML/Element/style
 ---
 
 ## Краткое описание
@@ -42,9 +34,9 @@ This element includes the [global attributes](/ru/docs/Web/HTML/Global_attribute
 
 ```html
 <style type="text/css">
-body {
-  color:red;
-}
+  body {
+    color: red;
+  }
 </style>
 ```
 
@@ -52,12 +44,19 @@ body {
 
 ```html
 <article>
-  <div>Атрибут scoped позволяет включить элементы стиля в середине документа.
-   Внутренние правила применяются только внутри родительского элемента.</div>
-  <p>Этот текст должен быть чёрным. Если он красный, ваш браузер не поддерживает атрибут scoped.</p>
+  <div>
+    Атрибут scoped позволяет включить элементы стиля в середине документа.
+    Внутренние правила применяются только внутри родительского элемента.
+  </div>
+  <p>
+    Этот текст должен быть чёрным. Если он красный, ваш браузер не поддерживает
+    атрибут scoped.
+  </p>
   <section>
     <style scoped>
-      p { color: red; }
+      p {
+        color: red;
+      }
     </style>
     <p>Этот должен быть красным.</p>
   </section>

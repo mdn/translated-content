@@ -18,7 +18,7 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un t'el élément 
 ### Exemple 1
 
 ```html
-<input type="button" value="Bouton cliquer">
+<input type="button" value="Bouton cliquer" />
 ```
 
 {{EmbedLiveSample("Exemple_1", 650, 30)}}
@@ -28,7 +28,7 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un t'el élément 
 Si on n'indique aucune valeur, le bouton sera vide :
 
 ```html
-<input type="button">
+<input type="button" />
 ```
 
 {{EmbedLiveSample("Exemple_2", 650, 30)}}
@@ -43,24 +43,24 @@ Dans cet exemple, commençons par créer un bouton simple avec un gestionnaire d
 
 ```html
 <form>
-  <input type="button" value="Démarrer la machine">
+  <input type="button" value="Démarrer la machine" />
 </form>
 <p>La machine est arrêtée.</p>
 ```
 
 ```js
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === 'Démarrer la machine') {
-    btn.value = 'Arrêter la machine';
-    txt.textContent = 'La machine est démarrée !';
+  if (btn.value === "Démarrer la machine") {
+    btn.value = "Arrêter la machine";
+    txt.textContent = "La machine est démarrée !";
   } else {
-    btn.value = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
+    btn.value = "Démarrer la machine";
+    txt.textContent = "La machine est arrêtée.";
   }
 }
 ```
@@ -77,24 +77,24 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 
 ```html
 <form>
-  <input type="button" value="Démarrer la machine" accesskey="s">
+  <input type="button" value="Démarrer la machine" accesskey="s" />
 </form>
 <p>La machine est arrêtée.</p>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var txt = document.querySelector('p');
+var btn = document.querySelector("input");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.value === 'Démarrer la machine') {
-    btn.value = 'Arrêter la machine';
-    txt.textContent = 'La machine est démarrée !';
+  if (btn.value === "Démarrer la machine") {
+    btn.value = "Arrêter la machine";
+    txt.textContent = "La machine est démarrée !";
   } else {
-    btn.value = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
+    btn.value = "Démarrer la machine";
+    txt.textContent = "La machine est arrêtée.";
   }
 }
 ```
@@ -108,7 +108,7 @@ function updateBtn() {
 Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) :
 
 ```html
-<input type="button" value="Je suis désactivé" disabled>
+<input type="button" value="Je suis désactivé" disabled />
 ```
 
 Il est possible d'activer ou de désactiver des boutons lors de de l'utilisation de la page en modifiant l'attribut `disabled` de l'élément dans le DOM. Dans l'exemple qui suit, le bouton est initialement activé et si on appuie dessus : il devient désactivé (c'est ce que fait la ligne de code `btn.disabled = true`). La fonction {{domxref("WindowTimers.setTimeout","setTimeout()")}} est ensuite utilisée afin de réinitialiser le bouton après deux secondes.
@@ -116,20 +116,20 @@ Il est possible d'activer ou de désactiver des boutons lors de de l'utilisation
 #### Exemple 1
 
 ```html hidden
-<input type="button" value="Activé">
+<input type="button" value="Activé" />
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
+var btn = document.querySelector("input");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   btn.disabled = true;
-  btn.value = 'Désactivé';
-  window.setTimeout(function() {
+  btn.value = "Désactivé";
+  window.setTimeout(function () {
     btn.disabled = false;
-    btn.value = 'Activé';
+    btn.value = "Activé";
   }, 2000);
 }
 ```
@@ -144,22 +144,22 @@ C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précéden
 
 ```html hidden
 <fieldset>
-  <legend>Groupe de boutons </legend>
-  <input type="button" value="Bouton 1">
-  <input type="button" value="Bouton 2">
-  <input type="button" value="Bouton 3">
+  <legend>Groupe de boutons</legend>
+  <input type="button" value="Bouton 1" />
+  <input type="button" value="Bouton 2" />
+  <input type="button" value="Bouton 3" />
 </fieldset>
 ```
 
 ```js hidden
-var btn = document.querySelector('input');
-var fieldset = document.querySelector('fieldset');
+var btn = document.querySelector("input");
+var fieldset = document.querySelector("fieldset");
 
-btn.addEventListener('click', disableBtn);
+btn.addEventListener("click", disableBtn);
 
 function disableBtn() {
   fieldset.disabled = true;
-  window.setTimeout(function() {
+  window.setTimeout(function () {
     fieldset.disabled = false;
   }, 2000);
 }
@@ -179,9 +179,17 @@ Dans l'exemple qui suit, on montre une application de dessin très simple qui ut
 
 ```html
 <div class="toolbar">
-  <input type="color" aria-label="Sélectionner la couleur du crayon">
-  <input type="range" min="2" max="50" value="30" aria-label="Sélectionner la taille de la pointe du crayon"><span class="output">30</span>
-  <input type="button" value="Réinitialiser le canevas">
+  <input type="color" aria-label="Sélectionner la couleur du crayon" />
+  <input
+    type="range"
+    min="2"
+    max="50"
+    value="30"
+    aria-label="Sélectionner la taille de la pointe du crayon" /><span
+    class="output"
+    >30</span
+  >
+  <input type="button" value="Réinitialiser le canevas" />
 </div>
 
 <canvas class="myCanvas">
@@ -203,7 +211,8 @@ body {
   padding: 5px;
 }
 
-input[type="color"], input[type="button"] {
+input[type="color"],
+input[type="button"] {
   width: 90%;
   margin: 0 auto;
   display: block;
@@ -213,36 +222,36 @@ input[type="range"] {
   width: 70%;
 }
 
- span {
-   position: relative;
-   bottom: 5px;
- }
+span {
+  position: relative;
+  bottom: 5px;
+}
 ```
 
 ```js
-var canvas = document.querySelector('.myCanvas');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight-85;
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector(".myCanvas");
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight - 85);
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'rgb(0,0,0)';
-ctx.fillRect(0,0,width,height);
+ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillRect(0, 0, width, height);
 
 var colorPicker = document.querySelector('input[type="color"]');
 var sizePicker = document.querySelector('input[type="range"]');
-var output = document.querySelector('.output');
+var output = document.querySelector(".output");
 var clearBtn = document.querySelector('input[type="button"]');
 
 // On convertit des degrés en radians
 function degToRad(degrees) {
-  return degrees * Math.PI / 180;
-};
+  return (degrees * Math.PI) / 180;
+}
 
 // On met à jour la valeur pour le sélecteur
 // de taille
-sizePicker.oninput = function() {
+sizePicker.oninput = function () {
   output.textContent = sizePicker.value;
-}
+};
 
 // On enregistre les coordonnées du pointeur de la souris
 // emouse pointer coordinates, and whether the button is pressed
@@ -251,29 +260,46 @@ var curY;
 var pressed = false;
 
 // On met à jour les coordonnées du pointeur
-document.onmousemove = function(e) {
-  curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-  curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-}
+document.onmousemove = function (e) {
+  curX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  curY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
+};
 
-canvas.onmousedown = function() {
+canvas.onmousedown = function () {
   pressed = true;
 };
 
-canvas.onmouseup = function() {
+canvas.onmouseup = function () {
   pressed = false;
-}
+};
 
-clearBtn.onclick = function() {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
-}
+clearBtn.onclick = function () {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
+};
 
 function draw() {
-  if(pressed) {
+  if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 

@@ -1,7 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-original_slug: Web/HTML/Atributos_Globales/slot
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}

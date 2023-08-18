@@ -1,7 +1,6 @@
 ---
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 
 {{AddonSidebar()}}
@@ -16,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var searching = browser.bookmarks.search(
-  query                  // string or object
-)
+  query, // string or object
+);
 ```
 
 ### Paramètres
@@ -77,7 +76,7 @@ function onRejected(error) {
 }
 
 function checkActiveTab(tab) {
-  var searching = browser.bookmarks.search({url: tab.url});
+  var searching = browser.bookmarks.search({ url: tab.url });
   searching.then(onFulfilled, onRejected);
 }
 

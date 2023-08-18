@@ -10,11 +10,11 @@ O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi ge
 > **Aviso:** Note que `Date` é listado em [nomes de cabeçalhos proibidos](https://fetch.spec.whatwg.org/#forbidden-header-name) na especificação do fetch - então este código não enviará o cabeçalho `Date`:
 >
 > ```js
-> fetch('https://httpbin.org/get', {
->     'headers': {
->         'Date': (new Date()).toUTCString()
->     }
-> })
+> fetch("https://httpbin.org/get", {
+>   headers: {
+>     Date: new Date().toUTCString(),
+>   },
+> });
 > ```
 
 <table class="properties">
@@ -62,14 +62,14 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
 ```js
-new Date().toUTCString()
+new Date().toUTCString();
 // "Mon, 09 Mar 2020 08:13:24 GMT"
 ```
 
 ## Especificações
 
-| Especificação                                | Título                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                      | Título                                                        |
+| ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Date", "7.1.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

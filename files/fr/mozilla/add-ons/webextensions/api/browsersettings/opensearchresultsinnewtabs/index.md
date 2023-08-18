@@ -1,7 +1,6 @@
 ---
 title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
 
 {{AddonSidebar()}}
@@ -25,8 +24,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openSearchResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openSearchResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

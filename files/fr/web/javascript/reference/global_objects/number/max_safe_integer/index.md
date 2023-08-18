@@ -1,14 +1,6 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_SAFE_INTEGER
 ---
 
 {{JSRef}}
@@ -32,8 +24,8 @@ Dans ce contexte, « sûr » fait référence à la capacité à représenter ex
 ## Exemples
 
 ```js
-Number.MAX_SAFE_INTEGER // 9007199254740991
-Math.pow(2, 53) -1      // 9007199254740991
+Number.MAX_SAFE_INTEGER; // 9007199254740991
+Math.pow(2, 53) - 1; // 9007199254740991
 ```
 
 ## Spécifications

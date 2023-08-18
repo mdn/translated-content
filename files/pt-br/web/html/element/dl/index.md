@@ -9,10 +9,10 @@ O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos 
 
 ## Contexto de Uso
 
-| Conteúdo permitido     | Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}                                         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                               |
-| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content).                                     |
+| Conteúdo permitido     | Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                                           |
+| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content).                                                                              |
 | Documentação normativa | [HTML5, section 4.5.8](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](https://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
 
 ## Atributos
@@ -29,8 +29,10 @@ Como todo elemento HTML, ele fornece os [attributos globais](/pt-BR/HTML/Global_
 ```html
 <dl>
   <dt>Firefox</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
+  </dd>
 
   <!-- other terms and definitions -->
 </dl>
@@ -47,8 +49,10 @@ Output:
   <dt>Firefox</dt>
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
+  </dd>
 
   <!-- other terms and definitions -->
 </dl>
@@ -63,11 +67,14 @@ Saída:
 ```html
 <dl>
   <dt>Firefox</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
-  <dd>The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
-      is a mostly herbivorous mammal, slightly larger than a domestic cat
-      (60 cm long).</dd>
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
+  </dd>
+  <dd>
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
+  </dd>
 
   <!-- other terms and definitions -->
 </dl>

@@ -20,9 +20,9 @@ Dans certains cas où la largeur est sur-contrainte (autrement dit quand `width`
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-left: 10px;  /* Une longueur absolue */
-margin-left: 1em;   /* Une longueur absolue relative à la taille du texte */
-margin-left: 5%;    /* Une marge dont la taille est relative à la largeur
+margin-left: 10px; /* Une longueur absolue */
+margin-left: 1em; /* Une longueur absolue relative à la taille du texte */
+margin-left: 5%; /* Une marge dont la taille est relative à la largeur
                        du bloc englobant */
 
 /* Valeur avec un mot-clé */
@@ -147,20 +147,19 @@ Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en lig
 ### HTML
 
 ```html
-<p>Un grand rosier se trouvait à l'entrée du jardin&nbsp;;
-   les roses qu'il portait étaient blanches, mais
-   trois jardiniers étaient en train de les peindre
-   en rouge.
+<p>
+  Un grand rosier se trouvait à l'entrée du jardin&nbsp;; les roses qu'il
+  portait étaient blanches, mais trois jardiniers étaient en train de les
+  peindre en rouge.
 </p>
-<p class=exemple>
-  Alice s'avança pour les regarder, et, au moment où
-  elle approchait, elle en entendit un qui disait&nbsp;:
-  «&nbsp;Fais donc attention, Cinq, et ne m'éclabousse pas
-  ainsi avec ta peinture.&nbsp;»
+<p class="exemple">
+  Alice s'avança pour les regarder, et, au moment où elle approchait, elle en
+  entendit un qui disait&nbsp;: «&nbsp;Fais donc attention, Cinq, et ne
+  m'éclabousse pas ainsi avec ta peinture.&nbsp;»
 </p>
 <p>
-  «&nbsp;Ce n'est pas de ma faute,&nbsp;» dit Cinq d'un ton
-  bourru, «&nbsp;c'est Sept qui m'a poussé le coude.&nbsp;»
+  «&nbsp;Ce n'est pas de ma faute,&nbsp;» dit Cinq d'un ton bourru, «&nbsp;c'est
+  Sept qui m'a poussé le coude.&nbsp;»
 </p>
 ```
 

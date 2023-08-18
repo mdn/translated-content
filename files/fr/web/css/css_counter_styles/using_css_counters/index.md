@@ -1,12 +1,6 @@
 ---
 title: Compteurs CSS
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
-original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 
 {{CSSRef}}
@@ -39,11 +33,11 @@ Dans l'exemple qui suit, la feuille de style CSS préfixe chaque titre de niveau
 
 ```css
 body {
-  counter-reset: section;                    /* On initialise le compteur à 0 */
+  counter-reset: section; /* On initialise le compteur à 0 */
 }
 
 h3::before {
-  counter-increment: section;                /* On incrémente le compteur section */
+  counter-increment: section; /* On incrémente le compteur section */
   content: "Section " counter(section) " : "; /* On affiche le compteur */
 }
 ```
@@ -68,17 +62,17 @@ Un compteur CSS est particulièrement utile lorsqu'il s'agit de gérer les liste
 
 ```css
 ol {
-  counter-reset: section;                /* On crée une nouvelle instance du
+  counter-reset: section; /* On crée une nouvelle instance du
                                             compteur section avec chaque ol */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* On incrémente uniquement cette
+  counter-increment: section; /* On incrémente uniquement cette
                                             instance du compteur */
-  content: counters(section,".") " ";    /* On ajoute la valeur de toutes les
+  content: counters(section, ".") " "; /* On ajoute la valeur de toutes les
                                             instances séparées par ".". */
-                                         /* Si on doit supporter < IE8 il faudra
+  /* Si on doit supporter < IE8 il faudra
                                             faire attention à ce qu'il n'y ait
                                             aucun blanc après ',' */
 }
@@ -86,7 +80,7 @@ li::before {
 
 ### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

@@ -10,10 +10,10 @@ slug: Web/HTML/Element/object
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 
 - `[컨텐츠 범주](/ko/docs/HTML/Content_categories)` [플로우 컨텐츠](/ko/docs/HTML/Content_categories#Flow_content); [구문 컨텐츠](/ko/docs/HTML/Content_categories#Phrasing_content); [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content), palpable 컨텐츠; 만약 요소가 **usemap ** 속성을 가지고 있다면, [대화형 컨텐츠](/ko/docs/HTML/Content_categories#Interactive_content); [listed](/ko/docs/HTML/Content_categories#Form_listed), [submittable](/ko/docs/HTML/Content_categories#Form_submittable) [form-associated](/ko/docs/HTML/Content_categories#Form-associated_content) element.
-- `허용된 컨텐츠`  0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/HTML/Content_categories#Transparent_content_models).
-- `태그 생략`  {{no_tag_omission}}
+- `허용된 컨텐츠` 0개 이상의 {{HTMLElement("param")}} elements, then [Transparent content](/ko/docs/HTML/Content_categories#Transparent_content_models).
+- `태그 생략` {{no_tag_omission}}
 - `허용된 부모 요소` [포함된 컨텐츠](/ko/docs/HTML/Content_categories#Embedded_content)를 허용하는 모든 요소
-- `DOM 인터페이스`  {{domxref("HTMLObjectElement")}}
+- `DOM 인터페이스` {{domxref("HTMLObjectElement")}}
 
 ## 속성
 
@@ -48,7 +48,7 @@ slug: Web/HTML/Element/object
 - {{htmlattrdef("typemustmatch")}}
   - : **type**와 리소스의 실제 [컨텐츠 타입](/ko/docs/Glossary/Content_type)이 일치해야되는지를 나타내는 불리언 속성
 - {{htmlattrdef("usemap")}}
-  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 {{htmlattrxref("name", "map")}} 값이 붙음
+  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 [`name`](/ko/docs/Web/HTML/Element/map#name) 값이 붙음
 - {{htmlattrdef("width")}}
   - : 표시될 리소스의 가로 길이를 CSS 픽셀단위로 지정합니다.
 
@@ -62,7 +62,7 @@ slug: Web/HTML/Element/object
 
 <!-- Embed a flash movie with parameters -->
 <object data="move.swf" type="application/x-shockwave-flash">
-  <param name="foo" value="bar">
+  <param name="foo" value="bar" />
 </object>
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-translation_of: Web/HTTP/Status/501
-browser-compat: http.status.501
 ---
 
 {{HTTPSidebar}}

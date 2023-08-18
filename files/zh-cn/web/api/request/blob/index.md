@@ -9,7 +9,7 @@ slug: Web/API/Request/blob
 
 ## 语法
 
-```js
+```js-nolint
 blob()
 ```
 
@@ -24,15 +24,17 @@ blob()
 ## 示例
 
 ```js
-const obj = {hello: 'world'};
-const myBlob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const myBlob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: myBlob
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: myBlob,
+});
 
-request.blob().then(function(myBlob) {
+request.blob().then(function (myBlob) {
   // do something with the blob sent in the request
 });
 ```

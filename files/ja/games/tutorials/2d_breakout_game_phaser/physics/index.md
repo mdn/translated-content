@@ -1,7 +1,6 @@
 ---
 title: 物理演算
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-original_slug: Games/Workflows/2D_breakout_game_Phaser/Physics
 ---
 
 {{GamesSidebar}}
@@ -22,7 +21,7 @@ Phaser は Arcade Physics、P2、そして Ninja Physics と、3 つの異なる
 game.physics.startSystem(Phaser.Physics.ARCADE);
 ```
 
-標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、`create()`  の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：
+標準では Phaser オブジェクトは物理演算エンジンを利用しません。そのため、`create()` の末尾に次の行を追加して、ボールから物理演算エンジンを利用できるようにします：
 
 ```js
 game.physics.enable(ball, Phaser.Physics.ARCADE);
@@ -58,19 +57,18 @@ function preload() {
   game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
   game.scale.pageAlignHorizontally = true;
   game.scale.pageAlignVertically = true;
-  game.stage.backgroundColor = '#eee';
-  game.load.image('ball', 'img/ball.png');
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
   game.physics.startSystem(Phaser.Physics.ARCADE);
-  ball = game.add.sprite(50, 50, 'ball');
+  ball = game.add.sprite(50, 50, "ball");
   game.physics.enable(ball, Phaser.Physics.ARCADE);
   ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 `index.html` を再読み込みすると、ボールは 1 方向に進み続けます。現在、物理エンジンには重力加速度も摩擦係数も設定されていません。重力加速度を設定すれば、ボールは落下するようになります。また、摩擦係数を設定すれば、ボールが摩擦で停止するようになります。

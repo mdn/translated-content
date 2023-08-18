@@ -1,7 +1,6 @@
 ---
 title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 ---
 
 {{AddonSidebar()}}

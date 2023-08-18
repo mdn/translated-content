@@ -1,7 +1,6 @@
 ---
 title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.cookies.getAll(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -43,7 +42,7 @@ var getting = browser.cookies.getAll(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets   `{{WebExtAPIRef('cookies.Cookie')}}` correspondant aux propriétés données dans le paramètre `details`. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets `{{WebExtAPIRef('cookies.Cookie')}}` correspondant aux propriétés données dans le paramètre `details`. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.
 
 ## Compatibilité des navigateurs
 
@@ -61,7 +60,7 @@ function logCookies(cookies) {
 }
 
 var gettingAll = browser.cookies.getAll({
-  name: "favourite-colour"
+  name: "favourite-colour",
 });
 gettingAll.then(logCookies);
 ```

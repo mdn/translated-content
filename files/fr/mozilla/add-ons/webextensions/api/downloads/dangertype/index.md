@@ -1,7 +1,6 @@
 ---
 title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 ---
 
 {{AddonSidebar()}}

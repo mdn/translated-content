@@ -1,7 +1,6 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-translation_of: Web/CSS/hanging-punctuation
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -75,14 +74,11 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 
 ```html
 <p>
-   Lorem ipsum dolor sit amet, consectetur
-   adipiscing elit. Curabitur dignissim nunc
-   mauris, et sollicitudin est scelerisque
-   sed. Praesent laoreet tortor massa, sit
-   amet vulputate nulla pharetra ut. Proin
-   ornare commodo sodales. Class aptent
-   taciti sociosqu ad litora torquent per
-   conubia nostra, per inceptos himenaeos.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
+  massa, sit amet vulputate nulla pharetra ut. Proin ornare commodo sodales.
+  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+  inceptos himenaeos.
 </p>
 ```
 
@@ -91,7 +87,7 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 ```css
 p {
   hanging-punctuation: first;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: Entrées utilisateur et méthodes
 slug: Web/Guide/User_input_methods
-translation_of: Web/Guide/User_input_methods
 ---
 
 Les entrées utilisateur modernes vont au-delà du simple clavier et souris: pensez aux écrans tactiles par exemple. Cet article fournit des recommendations pour gérer les entrées utilisateur et implémenter les contrôles des Open Web Apps, ainsi que des FAQs, des exemples concrets, et des liens pour ceux qui ont besoin d'informations supplémentaires sur les technologies utilisées. Les APIs et événements abordés sont en autre [les événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [l'API Pointer Lock](/fr/docs/WebAPI/Pointer_Lock), [l'API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [l'API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode) et [Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop).
@@ -157,7 +156,7 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 - [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
 - [Drag & Drop de multiples éléments](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Opérations de glissement](/fr/docs/Web/API/API_HTML_Drag_and_Drop/Op%C3%A9rations_de_glissement)
+- [Opérations de glissement](/fr/docs/Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement)
 
 ## Référence
 

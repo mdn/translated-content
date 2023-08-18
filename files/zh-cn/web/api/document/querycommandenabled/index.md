@@ -35,7 +35,7 @@ var isEnabled = document.queryCommandEnabled(command);
 ```js
 var flg = document.queryCommandEnabled("SelectAll");
 
-if(flg) {
+if (flg) {
   document.execCommand("SelectAll", false, null); // command is enabled, run it
 }
 ```

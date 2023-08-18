@@ -1,7 +1,6 @@
 ---
 title: max()
 slug: Web/CSS/max
-original_slug: Web/CSS/max()
 ---
 
 {{CSSRef}}

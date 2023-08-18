@@ -24,19 +24,19 @@ slug: Web/API/MediaSession
 下面的例子创建了一个新的 media session，并且给其绑定了一些动作句柄：
 
 ```js
-if ('mediaSession' in navigator){
+if ("mediaSession" in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: "Podcast Episode Title",
     artist: "Podcast Host",
     album: "Podcast Name",
-    artwork: [{src: "podcast.jpg"}]
+    artwork: [{ src: "podcast.jpg" }],
   });
-  navigator.mediaSession.setActionHandler('play', function() {});
-  navigator.mediaSession.setActionHandler('pause', function() {});
-  navigator.mediaSession.setActionHandler('seekbackward', function() {});
-  navigator.mediaSession.setActionHandler('seekforward', function() {});
-  navigator.mediaSession.setActionHandler('previoustrack', function() {});
-  navigator.mediaSession.setActionHandler('nexttrack', function() {});
+  navigator.mediaSession.setActionHandler("play", function () {});
+  navigator.mediaSession.setActionHandler("pause", function () {});
+  navigator.mediaSession.setActionHandler("seekbackward", function () {});
+  navigator.mediaSession.setActionHandler("seekforward", function () {});
+  navigator.mediaSession.setActionHandler("previoustrack", function () {});
+  navigator.mediaSession.setActionHandler("nexttrack", function () {});
 }
 ```
 
@@ -46,17 +46,17 @@ if ('mediaSession' in navigator){
 var audio = document.querySelector("#player");
 audio.src = "song.mp3";
 
-navigator.mediaSession.setActionHandler('play', play);
-navigator.mediaSession.setActionHandler('pause', pause);
+navigator.mediaSession.setActionHandler("play", play);
+navigator.mediaSession.setActionHandler("pause", pause);
 
 function play() {
-   audio.play();
-   navigator.mediaSession.playbackState = "playing";
+  audio.play();
+  navigator.mediaSession.playbackState = "playing";
 }
 
 function pause() {
-   audio.pause();
-   navigator.mediaSession.playbackState = "Paused";
+  audio.pause();
+  navigator.mediaSession.playbackState = "Paused";
 }
 ```
 

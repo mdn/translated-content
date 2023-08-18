@@ -27,17 +27,17 @@ Void.
 ## 例子
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+var mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* the viewport is 600 pixels wide or less */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* the viewport is more than than 600 pixels wide */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 

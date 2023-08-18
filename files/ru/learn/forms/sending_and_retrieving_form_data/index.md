@@ -1,8 +1,6 @@
 ---
 title: Отправка данных формы
 slug: Learn/Forms/Sending_and_retrieving_form_data
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/HTML/Forms/Отправка_и_Получение_данных_формы
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
@@ -36,25 +34,25 @@ WEB основан на очень простой клиент-серверно�
 В этом примере данные отправляются на абсолютный URL — `http://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Здесь мы используем относительный URL - данные отправляются на другой URL на сервере:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Если атрибуты не указаны, как показано ниже, данные из формы {{HTMLElement("form")}} отправляются на ту же страницу, на которой размещается данная форма:
 
 ```html
-<form>
+<form></form>
 ```
 
 Многие старые страницы используют следующий синтаксис, чтобы указать, что данные должны быть отправлены на ту же страницу, которая содержит форму; это было необходимо, потому что до появления HTML5 атрибут [`action`](/ru/docs/Web/HTML/Element/form#action) был обязательным. Это больше не нужно.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **Примечание:** Можно указать URL, который использует протокол HTTPS (безопасный HTTP). Когда вы делаете это, данные шифруются вместе с остальной частью запроса, даже если сама форма размещается на небезопасной странице, доступ к которой осуществляется через HTTP. С другой стороны, если форма размещается на защищённой странице, но вы указываете небезопасный URL-адрес HTTP с атрибутом [`action`](/ru/docs/Web/HTML/Element/form#action), все браузеры выдают пользователю предупреждение о безопасности при каждой попытке отправки данных, поскольку данные не шифруются.
@@ -75,11 +73,11 @@ WEB основан на очень простой клиент-серверно�
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -113,11 +111,11 @@ Host: foo.com
 <form action="http://foo.com" method="post">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -246,7 +244,7 @@ if __name__ == "__main__":
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>

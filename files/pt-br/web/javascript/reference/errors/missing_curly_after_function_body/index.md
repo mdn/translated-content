@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
@@ -40,7 +40,7 @@ var charge = function() {
 Correct would be:
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -58,7 +58,7 @@ It can be more obscure when using [IIFE](/pt-BR/docs/Glossary/IIFE), [Closures](
 Oftentimes, indenting differently or double checking indentation helps to spot these errors.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

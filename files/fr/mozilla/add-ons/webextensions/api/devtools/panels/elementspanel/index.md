@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ElementsPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel
 ---
 
 {{AddonSidebar()}}

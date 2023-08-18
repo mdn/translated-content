@@ -1,15 +1,8 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
+
 {{JSRef}}
 
 Метод **`Array.from()`** создаёт новый экземпляр `Array` из массивоподобного или итерируемого объекта.
@@ -53,14 +46,14 @@ Array.from(arrayLike[, mapFn[, thisArg]])
 ### Массив из строки `String`
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // ['f', 'o', 'o']
 ```
 
 ### Массив из `Set`
 
 ```js
-var s = new Set(['foo', window]);
+var s = new Set(["foo", window]);
 Array.from(s);
 // ['foo', window]
 ```
@@ -68,7 +61,11 @@ Array.from(s);
 ### Массив из `Map`
 
 ```js
-var m = new Map([[1, 2], [2, 4], [4, 8]]);
+var m = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 ```
@@ -90,7 +87,7 @@ f(1, 2, 3);
 // Использование стрелочной функции в качестве функции отображения для
 
 // манипулирования элементами
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
 // Генерирования последовательности чисел
@@ -106,15 +103,19 @@ Array.from({ length: 5 }, (v, k) => k);
 // Шаги алгоритма ECMA-262, 6-е издание, 22.1.2.1
 // Ссылка: https://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.from
 if (!Array.from) {
-  Array.from = (function() {
+  Array.from = (function () {
     var toStr = Object.prototype.toString;
-    var isCallable = function(fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+    var isCallable = function (fn) {
+      return typeof fn === "function" || toStr.call(fn) === "[object Function]";
     };
     var toInteger = function (value) {
       var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
+      if (isNaN(number)) {
+        return 0;
+      }
+      if (number === 0 || !isFinite(number)) {
+        return number;
+      }
       return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
@@ -124,7 +125,7 @@ if (!Array.from) {
     };
 
     // Свойство length метода from равно 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
+    return function from(arrayLike /*, mapFn, thisArg */) {
       // 1. Положим C равным значению this.
       var C = this;
 
@@ -133,17 +134,21 @@ if (!Array.from) {
 
       // 3. ReturnIfAbrupt(items).
       if (arrayLike == null) {
-        throw new TypeError('Array.from requires an array-like object - not null or undefined');
+        throw new TypeError(
+          "Array.from requires an array-like object - not null or undefined",
+        );
       }
 
       // 4. Если mapfn равен undefined, положим mapping равным false.
       var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
-      if (typeof mapFn !== 'undefined') {
+      if (typeof mapFn !== "undefined") {
         // 5. иначе
         // 5. a. Если вызов IsCallable(mapfn) равен false, выкидываем исключение TypeError.
         if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
+          throw new TypeError(
+            "Array.from: when provided, the second argument must be a function",
+          );
         }
 
         // 5. b. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
@@ -169,7 +174,10 @@ if (!Array.from) {
       while (k < len) {
         kValue = items[k];
         if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+          A[k] =
+            typeof T === "undefined"
+              ? mapFn(kValue, k)
+              : mapFn.call(T, kValue, k);
         } else {
           A[k] = kValue;
         }
@@ -180,7 +188,7 @@ if (!Array.from) {
       // 20. Вернём A.
       return A;
     };
-  }());
+  })();
 }
 ```
 

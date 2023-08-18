@@ -1,7 +1,6 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
-translation_of: Web/API/HTMLUnknownElement
 ---
 
 {{APIRef("HTML DOM")}}

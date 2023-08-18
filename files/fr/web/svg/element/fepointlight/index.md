@@ -1,12 +1,6 @@
 ---
 title: <fePointLight>
 slug: Web/SVG/Element/fePointLight
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-  - SVG Light Source
-translation_of: Web/SVG/Element/fePointLight
 ---
 
 {{SVGRef}}

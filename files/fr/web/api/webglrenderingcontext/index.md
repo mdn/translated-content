@@ -1,8 +1,6 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext
 ---
 
 {{APIRef("WebGL")}}
@@ -12,8 +10,8 @@ L'interface **`WebGLRenderingContext`** fournit une interface pour le contexte d
 Pour obtenir un accès à un contexte WebGL pour le rendu graphique 2D et/ou 3D, on appellera [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur un élément `<canvas>` en fournissant la chaîne de caractères `webgl`&nbsp;:
 
 ```js
-let canvas = document.getElementById('myCanvas');
-let gl = canvas.getContext('webgl');
+let canvas = document.getElementById("myCanvas");
+let gl = canvas.getContext("webgl");
 ```
 
 Une fois le contexte de rendu WebGL obtenu pour le canevas, on peut l'utiliser pour le rendu graphique d'objets à l'intérieur de ce canevas. [Le tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) contient de plus amples informations, exemples et ressources pour débuter avec WebGL.

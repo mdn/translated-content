@@ -1,12 +1,6 @@
 ---
 title: Règles @
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/At-rule
-original_slug: Web/CSS/Règles_@
 ---
 
 {{cssref}}
@@ -15,7 +9,7 @@ Une **règle @** est une [expression CSS](/fr/Apprendre/CSS/Introduction_à_CSS/
 
 ```css
 /* Forme générique */
-@IDENTIFIANT (RÈGLE);
+@identifiant (RÈGLE);
 
 /* Exemple : indiquer au navigateur d'utiliser */
 /* UTF-8 comme jeu de caractères */

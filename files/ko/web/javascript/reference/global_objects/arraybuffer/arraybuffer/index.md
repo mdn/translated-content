@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 ## 구문
 
 ```js
-    new ArrayBuffer(length)
+new ArrayBuffer(length);
 ```
 
 ### 매개변수
@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 
 ```js
 var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+var view = new Int32Array(buffer);
 ```
 
 ## 명세

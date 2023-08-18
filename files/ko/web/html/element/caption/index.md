@@ -1,5 +1,5 @@
 ---
-title: '<caption>: 표 설명 요소'
+title: "<caption>: 표 설명 요소"
 slug: Web/HTML/Element/caption
 ---
 
@@ -81,7 +81,9 @@ The following attributes are deprecated and should not be used. They are documen
 
 ```html
 <table>
-  <caption>Example Caption</caption>
+  <caption>
+    Example Caption
+  </caption>
   <tr>
     <th>Login</th>
     <th>Email</th>
@@ -106,7 +108,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0px;
 }
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 ```

@@ -1,7 +1,6 @@
 ---
 title: Sérialisation
 slug: Glossary/Serialization
-translation_of: Glossary/Serialization
 ---
 
 Le processus par lequel un objet ou une structure de données est traduit dans un format approprié pour un transfert sur un réseau, ou un stockage (par exemple dans un tampon de tableau ou un format de fichier).

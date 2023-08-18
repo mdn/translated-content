@@ -1,14 +1,6 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-tags:
-  - API
-  - DOM
-  - Document
-  - Fragments
-  - Interface
-  - Noeuds
-translation_of: Web/API/DocumentFragment
 ---
 
 {{ ApiRef("DOM") }}

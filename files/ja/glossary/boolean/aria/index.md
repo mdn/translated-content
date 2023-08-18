@@ -1,7 +1,6 @@
 ---
 title: Boolean attribute (論理属性) (ARIA)
 slug: Glossary/Boolean/ARIA
-page-type: glossary-definition
 ---
 
 ARIA における **論理属性** (boolean attribute) とは、列挙されたリストの中に `true` (真) または `false` (偽) の含む [列挙型](/ja/docs/Glossary/Enumerated) の属性のことです。

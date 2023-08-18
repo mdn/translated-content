@@ -1,8 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-browser-compat: css.properties.background
-translation_of: Web/CSS/background
 ---
 
 {{CSSRef("CSS Background")}}
@@ -103,11 +101,11 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 
 ```html
 <p class="banniere">
-  Dessine-moi une étoile<br/>
-  Qui brille<br/>
+  Dessine-moi une étoile<br />
+  Qui brille<br />
   Dans le ciel.
 </p>
-<p class="attention">Voici un paragraphe !<p>
+<p class="attention">Voici un paragraphe !</p>
 ```
 
 ### CSS

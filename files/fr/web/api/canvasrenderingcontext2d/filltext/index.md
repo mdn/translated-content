@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
-translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
 
 {{APIRef}}
@@ -45,11 +44,11 @@ Ceci est seulement un fragment de code simple utilisant la méthode `fillText`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hello world', 50, 100);
+ctx.font = "48px serif";
+ctx.fillText("Hello world", 50, 100);
 ```
 
 Modifiez le code ci-dessous et voyez vos changements être mis à jour en temps réel dans le canevas :
@@ -64,7 +63,8 @@ Modifiez le code ci-dessous et voyez vos changements être mis à jour en temps 
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);</textarea>
+ctx.fillText("Hello world", 50, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -80,14 +80,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

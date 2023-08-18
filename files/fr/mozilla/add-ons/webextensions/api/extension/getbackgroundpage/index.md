@@ -1,7 +1,6 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 
 {{AddonSidebar()}}
@@ -13,7 +12,7 @@ Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 ## Syntaxe
 
 ```js
-var page = browser.extension.getBackgroundPage()
+var page = browser.extension.getBackgroundPage();
 ```
 
 ### Paramètres

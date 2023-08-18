@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getHours
 ---
 
 {{JSRef}}
@@ -25,7 +24,7 @@ Un número entero, entre 0 y 23, representando la hora de la fecha dada de acuer
 La segunda sentencia abajo asigna el valor 23 a la variable hours, basado en el valor del objeto {{jsxref("Global_Objects/Date", "Date")}} `Xmas95`.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var hours = Xmas95.getHours();
 
 console.log(hours); // 23

@@ -12,7 +12,7 @@ Devuelve una lista de elementos cuyo nombre pertenece a un determinado 'namespac
 ### Sintaxis
 
 ```js
-elements = document.getElementsByTagNameNS(namespace,name)
+elements = document.getElementsByTagNameNS(namespace, name);
 ```
 
 - `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
@@ -29,74 +29,77 @@ Para usar el siguiente ejemplo, copia y pega en un documento con la extensión x
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>ejemplo de getElementsByTagNameNS</title>
 
-<head>
-<title>ejemplo de getElementsByTagNameNS</title>
+    <script type="text/javascript">
+      function getAllParaElems() {
+        var allParas = document.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-<script type="text/javascript">
+        var num = allParas.length;
 
-function getAllParaElems()
-{
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+        alert("Hay " + num + " &lt;p&gt; elementos en este documento");
+      }
 
-  var num = allParas.length;
+      function div1ParaElems() {
+        var div1 = document.getElementById("div1");
+        var div1Paras = div1.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  alert("Hay " + num + " &lt;p&gt; elementos en este documento");
-}
+        var num = div1Paras.length;
 
+        alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
+      }
 
-function div1ParaElems()
-{
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+      function div2ParaElems() {
+        var div2 = document.getElementById("div2");
+        var div2Paras = div2.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  var num = div1Paras.length;
+        var num = div2Paras.length;
 
-  alert("Hay " + num + " &lt;p&gt; elementos en el elemento div1");
-}
+        alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
+      }
+    </script>
+  </head>
 
+  <body style="border: solid green 3px">
+    <p>Algo de texto exterior</p>
+    <p>Algo de texto exterior</p>
 
-function div2ParaElems()
-{
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    <div id="div1" style="border: solid blue 3px">
+      <p>Algo de texto en div1</p>
+      <p>Algo de texto en div1</p>
+      <p>Algo de texto en div1</p>
 
-  var num = div2Paras.length;
-
-  alert("Hay " + num + " &lt;p&gt; elementos en el elemento div2");
-}
-
-</script>
-</head>
-
-<body style="border: solid green 3px">
-<p>Algo de texto exterior</p>
-<p>Algo de texto exterior</p>
-
-  <div id="div1" style="border: solid blue 3px">
-    <p>Algo de texto en div1</p>
-    <p>Algo de texto en div1</p>
-    <p>Algo de texto en div1</p>
-
-    <div id="div2" style="border: solid red 3px">
-    <p>Algo de texto en div2</p>
-    <p>Algo de texto en div2</p>
+      <div id="div2" style="border: solid red 3px">
+        <p>Algo de texto en div2</p>
+        <p>Algo de texto en div2</p>
+      </div>
     </div>
-  </div>
 
-<p>Algo de texto exterior</p>
-<p>Algo de texto exterior</p>
+    <p>Algo de texto exterior</p>
+    <p>Algo de texto exterior</p>
 
-<button onclick="getAllParaElems();">
- muestra todos los elementos p en el documento</button><br />
+    <button onclick="getAllParaElems();">
+      muestra todos los elementos p en el documento</button
+    ><br />
 
-<button onclick="div1ParaElems();">
- muestra todos los elementos p en el div1</button><br />
+    <button onclick="div1ParaElems();">
+      muestra todos los elementos p en el div1</button
+    ><br />
 
-<button onclick="div2ParaElems();">
- muestra todos los elementos p en el div2</button>
-
-</body>
+    <button onclick="div2ParaElems();">
+      muestra todos los elementos p en el div2
+    </button>
+  </body>
 </html>
 ```
 

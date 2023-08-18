@@ -1,7 +1,8 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 CSS 의사 요소 `::-webkit-scrollbar` 는 요소에 `overflow:scroll;`이 설정되어 있을 때 해당 요소의 스크롤바 스타일에 영향을 끼칩니다.
@@ -27,7 +28,9 @@ WebKit 브라우저의 스크롤바의 다양한 부분을 커스터마이징하
 ### CSS
 
 ```css
-.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -56,28 +59,27 @@ WebKit 브라우저의 스크롤바의 다양한 부분을 커스터마이징하
 
 ```html
 <div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
-  Proin at nulla elementum, consectetur ex eget, commodo ante.
-  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
-  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
-  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
-  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
-  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
-  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
-  mattis cursus dolor. Pellentesque id pretium est. Quisque
-  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
+  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
+  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
+  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
+  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
+  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
+  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
+  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
+  Aliquam at enim ligula.
 </div>
 
 <div class="invisible-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
 </div>
 
 <div class="mostly-customized-scrollbar">
-Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
-And pretty tall<br>
-thing with weird scrollbars.<br>
-Who thought scrollbars could be made weeeeird?
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
+  And pretty tall<br />
+  thing with weird scrollbars.<br />
+  Who thought scrollbars could be made weeeeird?
 </div>
 ```
 

@@ -1,8 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{WebAssemblySidebar}}{{SeeCompatTable}}
@@ -52,19 +50,16 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Примечание:** Смотрите пример [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) на GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)), который использует наши [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) библиотечные функции.

@@ -1,7 +1,6 @@
 ---
 title: time
 slug: Web/HTML/Element/time
-original_slug: Web/HTML/Elemento/time
 ---
 
 El **elemento HTML `<time>`** representa un periodo específico en el tiempo. Puede incluir el atributo `datetime` para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en los motores de búsqueda o características personalizadas como recordatorios.
@@ -85,9 +84,11 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 ### Valores datetime válidos
 
 - una cadena válida de año
+
   - : `2011`
 
     `0001`
+
 - una cadena válida de mes
   - : `2011-11`
 - una cadena válida de fecha
@@ -97,16 +98,21 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 - una cadena de semana válida
   - : `2011-W47`
 - una cadena de hora válida
+
   - : `14:54`
 
     `14:54:39`
 
     `14:54:39.929`
+
 - una cadena de fecha y hora local válida
+
   - : `2011-11-18T14:54:39.929`
 
     `2011-11-18 14:54:39.929`
+
 - una cadena de fecha y hora global válida
+
   - : `2011-11-18T14:54:39.929Z`
 
     `2011-11-18T14:54:39.929-0400`
@@ -118,6 +124,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
     `2011-11-18 14:54:39.929-0400`
 
     `2011-11-18 14:54:39.929-04:00`
+
 - una cadena valida de duración
   - : `PT4H18M3S`
 
@@ -140,8 +147,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 #### HTML
 
 ```html
-<p>El concierto fué el <time
-  datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
+<p>El concierto fué el <time datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
 ```
 
 #### Output

@@ -1,15 +1,13 @@
 ---
 title: Ressources
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
-original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources
 ---
 
 1. [Introduction](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko)
 2. [Les liaisons JavaScript/XSLT](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Les_liaisons_JavaScript%2f%2fXSLT)
 3. [Exemple basique](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_basique)
-4. [Définition de paramètres](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/D%c3%a9finition_de_param%c3%a8tres)
-5. [Exemple avancé](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_avanc%c3%a9)
+4. [Définition de paramètres](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Définition_de_paramètres)
+5. [Exemple avancé](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_avancé)
 6. [Liste des interfaces](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Liste_des_interfaces)
 7. [Ressources](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Ressources)
 

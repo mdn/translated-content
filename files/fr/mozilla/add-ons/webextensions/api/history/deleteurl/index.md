@@ -1,7 +1,6 @@
 ---
 title: history.deleteUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 ---
 
 {{AddonSidebar()}}
@@ -14,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var deletingUrl = browser.history.deleteUrl(
-  details         // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -44,22 +43,22 @@ var urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
-    console.log(urlToRemove  + " was removed");
+    console.log(urlToRemove + " was removed");
   } else {
-    console.log(urlToRemove  + " was not removed");
+    console.log(urlToRemove + " was not removed");
   }
 }
 
 function onRemoved() {
   var searching = browser.history.search({
     text: urlToRemove,
-    startTime: 0
+    startTime: 0,
   });
 
   searching.then(onGot);
 }
 
-var deletingUrl = browser.history.deleteUrl({url: urlToRemove});
+var deletingUrl = browser.history.deleteUrl({ url: urlToRemove });
 
 deletingUrl.then(onRemoved);
 ```
@@ -78,14 +77,14 @@ browser.history.onVisitRemoved.addListener(onRemoved);
 function onGot(results) {
   if (results.length) {
     console.log("Removing: " + results[0].url);
-    browser.history.deleteUrl({url: results[0].url});
+    browser.history.deleteUrl({ url: results[0].url });
   }
 }
 
 var searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(onGot);

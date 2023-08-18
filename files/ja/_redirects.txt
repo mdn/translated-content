@@ -902,7 +902,7 @@
 /ja/docs/DOM/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/DOM/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM/window.alert-redirect-1	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM/window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/DOM/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/DOM/window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/atob
@@ -1130,7 +1130,7 @@
 /ja/docs/DOM:selection	/ja/docs/Web/API/Selection
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/DOM:window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/DOM:window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/DOM:window.atob	/ja/docs/Web/API/atob
 /ja/docs/DOM:window.back	/ja/docs/Web/API/Window/back
 /ja/docs/DOM:window.blur	/ja/docs/Web/API/Window/blur
@@ -2135,7 +2135,6 @@
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
 /ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data
-/ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
@@ -2269,6 +2268,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)	/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 /ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
+/ja/docs/Mozilla/Add-ons/WebExtensions/Tips	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/ja/docs/Mozilla/Add-ons/WebExtensions/API
 /ja/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /ja/docs/Mozilla/Add-ons/WebExtensions/What_next_	/ja/docs/Mozilla/Add-ons/WebExtensions/What_next
@@ -2726,7 +2726,6 @@
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
-/ja/docs/Web/API/EffectTiming	/ja/docs/Web/API/KeyframeEffect/KeyframeEffect
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -2764,6 +2763,7 @@
 /ja/docs/Web/API/FileReader/onload	/ja/docs/Web/API/FileReader/load_event
 /ja/docs/Web/API/FileSystemEntrySync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/File_Handle_API	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/File_System_Access_API	/ja/docs/Web/API/File_System_API
 /ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
@@ -3087,7 +3087,6 @@
 /ja/docs/Web/API/URL/createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/URL/revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/USVString	/ja/docs/Glossary/String
-/ja/docs/Web/API/User_Timing_API	/ja/docs/Web/API/Performance_API/User_timing
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
 /ja/docs/Web/API/VRDevice/cancelAnimationFrame	/ja/docs/Web/API/VRDisplay/cancelAnimationFrame
 /ja/docs/Web/API/VRDevice/capabilities	/ja/docs/Web/API/VRDisplay/capabilities
@@ -3130,11 +3129,13 @@
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API
 /ja/docs/Web/API/Window.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window.onafterprint	/ja/docs/Web/API/Window/afterprint_event
+/ja/docs/Web/API/Window/DOMContentLoaded_event	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/API/Window/URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/Window/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/Window/animationend_event	/ja/docs/Web/API/Element/animationend_event
 /ja/docs/Web/API/Window/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
+/ja/docs/Web/API/Window/applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
@@ -3207,6 +3208,7 @@
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
@@ -3325,7 +3327,7 @@
 /ja/docs/Web/API/window.URL.createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
-/ja/docs/Web/API/window.applicationCache	/ja/docs/Web/API/Window/applicationCache
+/ja/docs/Web/API/window.applicationCache	/ja/docs/orphaned/Web/API/Window/applicationCache
 /ja/docs/Web/API/window.arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/window.atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/window.back	/ja/docs/Web/API/Window/back
@@ -3509,6 +3511,7 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
+/ja/docs/Web/CSS/:-moz-focusring	/ja/docs/conflicting/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet
 /ja/docs/Web/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir_ltr
 /ja/docs/Web/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir_rtl
@@ -3782,7 +3785,7 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
-/ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
+/ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Events/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /ja/docs/Web/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
@@ -4190,6 +4193,8 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Array.prototype.map()	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/group	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/groupToMap	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -4441,7 +4446,7 @@
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
 /ja/docs/Web/Reference/Events	/ja/docs/Web/Events
-/ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
+/ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Reference/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
 /ja/docs/Web/Reference/Events/beforeunload	/ja/docs/Web/API/Window/beforeunload_event
 /ja/docs/Web/Reference/Events/blur	/ja/docs/Web/API/Element/blur_event
@@ -4681,7 +4686,6 @@
 /ja/docs/XPath:Functions:sum	/ja/docs/Web/XPath/Functions/sum
 /ja/docs/XPath:Functions:translate	/ja/docs/Web/XPath/Functions/translate
 /ja/docs/XPath:Functions:true	/ja/docs/Web/XPath/Functions/true
-/ja/docs/XPathResult	/ja/docs/Web/API/XPathResult
 /ja/docs/XSLT	/ja/docs/Web/XSLT
 /ja/docs/XSLT/Common_errors	/ja/docs/Web/XSLT/Common_errors
 /ja/docs/XSLT/Elements	/ja/docs/Web/XSLT/Element

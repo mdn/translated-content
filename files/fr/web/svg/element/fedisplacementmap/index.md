@@ -1,11 +1,6 @@
 ---
 title: <feDisplacementMap>
 slug: Web/SVG/Element/feDisplacementMap
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feDisplacementMap
 ---
 
 {{SVGRef}}

@@ -12,7 +12,7 @@ Cuando un documento HTML se ha cambiado a `designMode`, el objeto de documento e
 ## Sintaxis
 
 ```js
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Parámetros

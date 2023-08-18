@@ -1,7 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -46,6 +45,7 @@ original_slug: Web/Web_Components
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` 객체에 대한 참조를 반환합니다.
 - [라이프 사이클 콜백](/ko/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+
   - : 커스텀 엘리먼트의 클래스 정의 내에 정의되어 동작에 영향을 주는 특별한 콜백 함수입니다.
 
     - `connectedCallback`: 커스텀 엘리먼트가 처음으로 다큐먼트의 DOM 에 연결되었을 때 호출됩니다.
@@ -57,7 +57,7 @@ original_slug: Web/Web_Components
 
   - : The following extensions are defined:
 
-    - {{htmlattrxref("is")}} 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
+    - [`is`](/ko/docs/Web/HTML/Global_attributes#is) 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
     - {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
 
 - CSS 수도(pseudo) 클래스
@@ -105,6 +105,7 @@ original_slug: Web/Web_Components
 - [`slot`](/ko/docs/Web/HTML/Global_attributes/slot) 전역 HTML 어트리뷰트
   - : shadow DOM shadow 트리내의 slot을 엘리먼트로 할당합니다.
 - {{domxref("Slotable")}}
+
   - : {{domxref("Element")}} 와 {{domxref("Text")}} 노드로 구현된 믹스인입니다. {{htmlelement("slot")}} 엘리먼트의 컨텐츠로 만들기 위한 기능들을 정의합니다. 믹스인은 노드가 삽입된 슬롯의 참조를 반환하는 하나의 어트리뷰트 {{domxref("Slotable.assignedSlot")}} 을 정의합니다.
 
 - {{domxref("Element")}} 확장 기능

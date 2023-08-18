@@ -1,26 +1,27 @@
 ---
-title: 413 Payload Too Large
+title: 413 Content Too Large
 slug: Web/HTTP/Status/413
-original_slug: Web/HTTP/Status/8080
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`413 Payload Too Large`** response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
+El código de estado de respuesta HTTP **`413 Content Too Large`** indica que la entidad de solicitud es mayor que los límites definidos por el servidor; el servidor podría cerrar la conexión o devolver un campo de cabecera {{HTTPHeader("Retry-After")}}.
 
-## Status
+Antes del RFC 9110, la frase de respuesta para el estado era **`Payload Too Large`**. Ese nombre todavía se usa ampliamente.
 
+## Estado
+
+```http
+413 Content Too Large
 ```
-413 Payload Too Large
-```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                        | Title                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "413 Payload Too Large" , "6.5.11")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## See also
+## Véase también
 
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}

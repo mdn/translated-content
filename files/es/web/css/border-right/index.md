@@ -51,9 +51,7 @@ Los tres valores de la propiedad rápida pueden ser especificados en cualquier o
 ## Ejemplo
 
 ```html
-<div>
-  Esta caja tiene un borde en el lado derecho.
-</div>
+<div>Esta caja tiene un borde en el lado derecho.</div>
 ```
 
 ```css

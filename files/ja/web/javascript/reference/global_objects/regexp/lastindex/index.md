@@ -1,5 +1,5 @@
 ---
-title: 'RegExp: lastIndex'
+title: "RegExp: lastIndex"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
@@ -34,14 +34,14 @@ var re = /(hi)?/g;
 空文字列に一致します。
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 
 `["hi", "hi"]` を返し、 `lastIndex` は 2 になります。
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 

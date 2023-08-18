@@ -1,8 +1,6 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
-translation_of: Web/HTTP/Status/502
-browser-compat: http.status.502
 ---
 
 {{HTTPSidebar}}

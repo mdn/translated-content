@@ -1,7 +1,6 @@
 ---
 title: CSSStyleValue.parseAll()
 slug: Web/API/CSSStyleValue/parseAll_static
-original_slug: Web/API/CSSStyleValue/parseAll
 l10n:
   sourceCommit: 711f8d381b5a1b9c1cfcf6719c401d4f9853222f
 ---

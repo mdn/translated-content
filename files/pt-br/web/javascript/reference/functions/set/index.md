@@ -44,11 +44,11 @@ Vai definir um pseudo-property _current_ para este objeto, quando atribuido um v
 
 ```js
 var o = {
-  set current (str) {
+  set current(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 Observe que _current_ não está definido e qualquer tentativa de acesso irá resultar em _undefined_.
@@ -66,12 +66,16 @@ delete o.current;
 Para adicionar um _setter_ para um Object existentem mais tarde, use {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Usando um nome de propriedade computada
@@ -83,20 +87,22 @@ var expr = "foo";
 
 var obj = {
   baz: "bar",
-  set [expr](v) { this.baz = v; }
+  set [expr](v) {
+    this.baz = v;
+  },
 };
 
 console.log(obj.baz); // "bar"
-obj.foo = "baz";      // run the setter
+obj.foo = "baz"; // run the setter
 console.log(obj.baz); // "baz"
 ```
 
 ## Expecificações
 
-| Specification                                                                                    | Status                       | Comment                        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------ |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Initial definition.            |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Added computed property names. |
+| Specification                                                            | Status               | Comment                        |
+| ------------------------------------------------------------------------ | -------------------- | ------------------------------ |
+| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}               | {{Spec2('ES5.1')}}   | Initial definition.            |
+| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}     | Added computed property names. |
 | {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                |
 
 ## Compatibilidade com navegadores

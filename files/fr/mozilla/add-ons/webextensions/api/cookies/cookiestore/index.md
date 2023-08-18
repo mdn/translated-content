@@ -1,7 +1,6 @@
 ---
 title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
 {{AddonSidebar()}}
@@ -31,7 +30,7 @@ Dans l'extrait suivant, la méthode {{WebExtAPIRef("cookies.getAllCookieStores()
 
 ```js
 function logStores(cookieStores) {
-  for(store of cookieStores) {
+  for (store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
@@ -44,8 +43,10 @@ L'extrait de code suivant obtient tous les cookies stockés et enregistre ensuit
 
 ```js
 browser.cookies.getAllCookieStores().then((stores) => {
-  var incognitoStores = stores.map(store => store.incognito);
-  console.log(`Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`);
+  var incognitoStores = stores.map((store) => store.incognito);
+  console.log(
+    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`,
+  );
 });
 ```
 

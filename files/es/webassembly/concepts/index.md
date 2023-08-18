@@ -11,7 +11,7 @@ En este artículo se explica los conceptos detrás de cómo funciona WebAssembly
 
 WebAssembly es un nuevo tipo de código que puede ser ejecutado en navegadores modernos, y provee nuevas funcionalidades y mejoras en rendimiento. No está pensado para ser ser escrito a mano, si no que está diseñado par ser un objeto final de compilación para lenguajes de bajo nivel como C, C++, Rust, etc.
 
-Esto tiene enormes implicaciones para la plataforma web -- presenta un medio para ejecutar código escrito en múltiples lenguajes en la web, haciendo que una aplicación web, se ejecute casi a la misma velocidad de código nativo, algo que previamente se podía hacer.
+Esto tiene enormes implicaciones para la plataforma web — presenta un medio para ejecutar código escrito en múltiples lenguajes en la web, haciendo que una aplicación web, se ejecute casi a la misma velocidad de código nativo, algo que previamente se podía hacer.
 
 Lo que es más, no es necesario conocer como se crea código WebAssembly para usar sus ventajas. Los módulos de WebAssembly pueden importase en una aplicación web (o Node.js), exponiendo funciones de WebAssembly para ser usadas mediante Javascript. Los entornos de Javascript pueden usar WebAssembly para obtener grandes mejoras de rendimiento y nuevas funcionalidades y ser fácilmente disponibles por los desarrolladores Web.
 

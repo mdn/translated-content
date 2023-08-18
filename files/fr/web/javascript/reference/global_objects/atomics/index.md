@@ -1,12 +1,6 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics
 ---
 
 {{JSRef}}

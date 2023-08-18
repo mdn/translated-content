@@ -1,7 +1,6 @@
 ---
 title: notifications.onClosed
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
-translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé lorsqu'une notification est fermée, soit par le système, soit par l'uti
 ## Syntaxe
 
 ```js
-browser.notifications.onClosed.addListener(listener)
-browser.notifications.onClosed.removeListener(listener)
-browser.notifications.onClosed.hasListener(listener)
+browser.notifications.onClosed.addListener(listener);
+browser.notifications.onClosed.removeListener(listener);
+browser.notifications.onClosed.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -47,8 +46,8 @@ Les événements ont trois fonctions :
 Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
 
 ```js
-browser.notifications.onClosed.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' has closed.');
+browser.notifications.onClosed.addListener(function (notificationId) {
+  console.log("Notification " + notificationId + " has closed.");
 });
 ```
 

@@ -1,12 +1,6 @@
 ---
-title: '<html> : l''élément de racine du document HTML'
+title: "<html> : l'élément de racine du document HTML"
 slug: Web/HTML/Element/html
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/html
 ---
 
 {{HTMLSidebar}}
@@ -29,10 +23,14 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un document HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
@@ -46,7 +44,7 @@ L'utilisation d'un attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) [
 
 Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
 
-- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_%E2%80%94_Readable_Make_text_content_readable_and_understandable)
+- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_—_Readable_Make_text_content_readable_and_understandable)
 - _[Understanding Success Criterion 3.1.1 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)_
 
 ## Résumé technique

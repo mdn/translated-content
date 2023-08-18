@@ -80,33 +80,34 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 <!-- Form que envia uma requisição GET -->
 <form action="" method="get">
   <label for="GET-name">Name:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="GET-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Simple form which will send a POST request -->
 <form action="" method="post">
   <label for="POST-name">Name:</label>
-  <input id="POST-name" type="text" name="name">
-  <input type="submit" value="Save">
+  <input id="POST-name" type="text" name="name" />
+  <input type="submit" value="Save" />
 </form>
 
 <!-- Form with fieldset, legend, and label -->
 <form action="" method="post">
   <fieldset>
     <legend>Title</legend>
-    <input type="radio" name="radio" id="radio"> <label for="radio">Click me</label>
+    <input type="radio" name="radio" id="radio" />
+    <label for="radio">Click me</label>
   </fieldset>
 </form>
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Especificação                                                              | Status                   | Comment |
+| -------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'forms.html#the-form-element', '&lt;form&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'forms.html#the-form-element', '&lt;form&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.3', '&lt;form&gt;')}}         | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'forms.html#the-form-element', '&lt;form&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.3', '&lt;form&gt;')}}     | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade do navegador
 

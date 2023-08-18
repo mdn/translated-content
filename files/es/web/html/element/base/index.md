@@ -1,7 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-original_slug: Web/HTML/Elemento/base
 ---
 
 {{HTMLSidebar}}
@@ -83,8 +82,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 ## Ejemplos
 
 ```html
-<base href="http://www.example.com/page.html">
-<base target="_blank" href="http://www.example.com/page.html">
+<base href="http://www.example.com/page.html" />
+<base target="_blank" href="http://www.example.com/page.html" />
 ```
 
 ## Especificaciones

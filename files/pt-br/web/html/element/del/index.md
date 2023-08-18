@@ -34,11 +34,11 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| Specification                                                            | Status                   | Comment |
+| ------------------------------------------------------------------------ | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'edits.html#the-del-element', '&lt;del&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'edits.html#the-del-element', '&lt;del&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;del&gt;')}}         | {{Spec2('HTML4.01')}}     |         |
+| {{SpecName('HTML5 W3C', 'edits.html#the-del-element', '&lt;del&gt;')}}   | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;del&gt;')}}        | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade com navegadores
 

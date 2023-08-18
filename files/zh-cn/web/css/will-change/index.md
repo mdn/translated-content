@@ -29,7 +29,7 @@ will-change: unset;
 想要用好该属性可能有些棘手：
 
 - _不要将 will-change 应用于过多的元素_。浏览器已经尽力优化了所有东西。一些较强的优化可能与 `will-change` 相关联，它们可能会使用大量机器资源，当过度使用时会导致页面变慢或消耗大量资源。
-- _谨慎使用_。 浏览器进行的优化通常是在尽可能短的时间内删除优化并恢复到正常状态。但是，将 `will-change` 直接添加到样式表中意味着目标元素通常会在不久的将来发生变化，而浏览器会保留优化更长的时间。因此，最好的做法是在更改发生之前和之后使用脚本代码开启和关闭 `will-change`。
+- _谨慎使用_。浏览器进行的优化通常是在尽可能短的时间内删除优化并恢复到正常状态。但是，将 `will-change` 直接添加到样式表中意味着目标元素通常会在不久的将来发生变化，而浏览器会保留优化更长的时间。因此，最好的做法是在更改发生之前和之后使用脚本代码开启和关闭 `will-change`。
 - _不要为了过早优化而将 `will-change` 应用于元素_。如果你的页面表现良好，则不要仅仅为了提高一点速度而将 `will-change` 属性添加到元素中。`will-change` 旨在作为最后的手段使用，以尝试解决现有的性能问题。不应该用来预测性能问题。过度使用 `will-change` 将导致内存使用过多，并导致更复杂的渲染发生，因为浏览器试图为可能的更改做准备。这将导致更差的性能。
 - _要给它足够的时间来发挥作用_。该属性旨在为开发者提供一种方法，让用户代理提前了解可能会发生变化的属性。然后浏览器可以选择在实际属性更改之前应用所需的任何提前优化。因此，重要的是给浏览器一些时间来实际执行优化。找到一些方法，预测某些事情将会在稍微提前的时间内发生，并在那时设置 `will-change`。
 - _请注意_。当与创建[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)的属性值一起使用（例如 will-change: opacity）时，`will-change` 实际上可能会影响元素的视觉外观，因为层叠上下文是提前创建的。
@@ -78,8 +78,8 @@ will-change: unset;
 const el = document.getElementById("element");
 
 // 当鼠标移动到该元素上时给该元素设置 will-change 属性
-el.addEventListener('mouseenter', hintBrowser);
-el.addEventListener('animationEnd', removeHint);
+el.addEventListener("mouseenter", hintBrowser);
+el.addEventListener("animationEnd", removeHint);
 
 function hintBrowser() {
   // 将在动画关键帧块中发生变化的可优化属性
@@ -87,7 +87,7 @@ function hintBrowser() {
 }
 
 function removeHint() {
-  this.style.willChange = 'auto';
+  this.style.willChange = "auto";
 }
 ```
 

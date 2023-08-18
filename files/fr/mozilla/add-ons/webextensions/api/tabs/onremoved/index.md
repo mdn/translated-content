@@ -1,7 +1,6 @@
 ---
 title: tabs.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 ---
 
 {{AddonSidebar()}}
@@ -11,9 +10,9 @@ Lancé quand un onglet est fermé.
 ## Syntaxe
 
 ```js
-browser.tabs.onRemoved.addListener(callback)
-browser.tabs.onRemoved.removeListener(listener)
-browser.tabs.onRemoved.hasListener(listener)
+browser.tabs.onRemoved.addListener(callback);
+browser.tabs.onRemoved.removeListener(listener);
+browser.tabs.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

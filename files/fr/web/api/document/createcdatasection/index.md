@@ -1,16 +1,6 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Méthode
-  - Section
-  - XML
-  - données
-translation_of: Web/API/Document/createCDATASection
 ---
 
 {{APIRef("DOM")}}
@@ -20,7 +10,7 @@ translation_of: Web/API/Document/createCDATASection
 ## Syntaxe
 
 ```js
-CDATASectionNode = document.createCDATASection(data)
+CDATASectionNode = document.createCDATASection(data);
 ```
 
 - `CDATASectionNode` est un noeud de [Section CDATA](/fr/docs/Web/API/CDATASection).
@@ -29,11 +19,11 @@ CDATASectionNode = document.createCDATASection(data)
 ## Exemple
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
 
-var cdata = docu.createCDATASection('Some <CDATA> data & then some');
+var cdata = docu.createCDATASection("Some <CDATA> data & then some");
 
-docu.getElementsByTagName('xml')[0].appendChild(cdata);
+docu.getElementsByTagName("xml")[0].appendChild(cdata);
 
 alert(new XMLSerializer().serializeToString(docu));
 // Affiche : <xml><![CDATA[Some <CDATA> data & then some]]></xml>

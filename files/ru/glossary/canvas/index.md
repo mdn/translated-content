@@ -1,15 +1,8 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - CodingScripting
-  - Glossary
-  - Graphics
-  - HTML
-  - JavaScript
-translation_of: Glossary/Canvas
-original_slug: Глоссарий/Canvas
 ---
+
 {{Glossary("HTML")}} _{{HTMLElement("canvas")}}_ (англ. **canvas** — «холст», рус. **канва́с**) элемент предоставляет пустую графическую зону, на которой специальные {{Glossary("JavaScript")}} {{Glossary("API")}} могут рисовать (такие как Canvas 2D или {{Glossary("WebGL")}}).
 
 ## Смотрите также

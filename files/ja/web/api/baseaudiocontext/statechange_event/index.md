@@ -1,7 +1,6 @@
 ---
-title: 'BaseAudioContext: statechange イベント'
+title: "BaseAudioContext: statechange イベント"
 slug: Web/API/BaseAudioContext/statechange_event
-original_slug: Web/API/BaseAudioContext/onstatechange
 ---
 
 {{ APIRef("Web Audio API") }}

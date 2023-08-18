@@ -27,12 +27,12 @@ static methodName() { ... }
 
 ```js
 class StaticMethodCall {
-    static staticMethod() {
-        return 'Static method has been called';
-    }
-    static anotherStaticMethod() {
-        return this.staticMethod() + ' from another static method';
-    }
+  static staticMethod() {
+    return "Static method has been called";
+  }
+  static anotherStaticMethod() {
+    return this.staticMethod() + " from another static method";
+  }
 }
 StaticMethodCall.staticMethod();
 // 'Static method has been called'
@@ -47,15 +47,15 @@ StaticMethodCall.anotherStaticMethod();
 
 ```js
 class StaticMethodCall {
-    constructor() {
-        console.log(StaticMethodCall.staticMethod());
-        // 'static method has been called.'
-        console.log(this.constructor.staticMethod());
-        // 'static method has been called.'
-    }
-    static staticMethod() {
-        return 'static method has been called.';
-    }
+  constructor() {
+    console.log(StaticMethodCall.staticMethod());
+    // 'static method has been called.'
+    console.log(this.constructor.staticMethod());
+    // 'static method has been called.'
+  }
+  static staticMethod() {
+    return "static method has been called.";
+  }
 }
 ```
 
@@ -74,21 +74,19 @@ class Tripple {
   }
 }
 
-
 class BiggerTripple extends Tripple {
   static tripple(n) {
     return super.tripple(n) * super.tripple(n);
   }
 }
 
-
-console.log(Tripple.tripple());// 3
-console.log(Tripple.tripple(6));// 18
+console.log(Tripple.tripple()); // 3
+console.log(Tripple.tripple(6)); // 18
 
 let tp = new Tripple();
 
-console.log(BiggerTripple.tripple(3));// 81（不会受父类实例化的影响）
-console.log(tp.tripple());// 'tp.tripple 不是一个函数'.
+console.log(BiggerTripple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
 ```
 
 ## 规范

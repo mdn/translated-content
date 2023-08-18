@@ -1,12 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - Reference
-  - списки
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}

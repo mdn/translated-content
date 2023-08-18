@@ -1,7 +1,6 @@
 ---
 title: Construction d'une extension multi-navigateur
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-translation_of: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 ---
 
 {{AddonSidebar()}}

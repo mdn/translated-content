@@ -33,9 +33,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 このメソッドは {{jsxref("String.prototype.replace()")}} の中で、 `pattern` 引数が {{jsxref("RegExp")}} オブジェクトであった場合に内部的に呼び出されます。たとえば、次の 2 つの例は同じ結果を返します。
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
 このメソッドは、 `RegExp` サブクラスの置換動作をカスタマイズするために存在しています。
@@ -50,9 +50,9 @@ regexp[Symbol.replace](str, newSubStr|function)
 
 ```js
 var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+var str = "2016-01-01";
+var newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### サブクラスでの @@replace の使用
@@ -75,9 +75,9 @@ class MyRegExp extends RegExp {
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+var re = new MyRegExp("\\d", "", 3);
+var str = "01234567";
+var newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
 
 {{JSRef("Global_Objects", "Boolean")}}
@@ -42,11 +36,11 @@ myVar = x.valueOf(); // присваивает false переменной myVar
 
 ## Спецификации
 
-| Спецификация                                                                                                 | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}                     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}} | {{Spec2('ES6')}}     |                                                        |
+| Спецификация                                                                       | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}                | {{Spec2('ES5.1')}} |                                                        |
+| {{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}} | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

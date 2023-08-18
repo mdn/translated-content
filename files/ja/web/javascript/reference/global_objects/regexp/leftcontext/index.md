@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 
 ## 解説
 
-`leftContext` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.leftContext` または `` RegExp['$`'] `` として使用してください。
+`leftContext` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.leftContext` または ``RegExp['$`']`` として使用してください。
 
 `leftContext` プロパティの値は読み取り専用で、一致に成功するたびに変更されます。
 
@@ -21,9 +21,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
 
 ```js
 var re = /world/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.leftContext; // "hello "
-RegExp['$`'];       // "hello "
+RegExp["$`"]; // "hello "
 ```
 
 ## 仕様書

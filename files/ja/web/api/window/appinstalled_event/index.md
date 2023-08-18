@@ -1,5 +1,5 @@
 ---
-title: 'Window: appinstalled イベント'
+title: "Window: appinstalled イベント"
 slug: Web/API/Window/appinstalled_event
 l10n:
   sourceCommit: 266a565a634d1218995379e54e74bf9cc9504d83

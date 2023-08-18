@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
-translation_of: Web/API/HTMLElement/isContentEditable
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -11,7 +10,7 @@ La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un b
 ## Syntaxe
 
 ```js
-editable = element.isContentEditable
+editable = element.isContentEditable;
 ```
 
 ## Exemple
@@ -19,18 +18,20 @@ editable = element.isContentEditable
 ### JavaScript
 
 ```js
-document.getElementById("infoText1").innerHTML += document.getElementById("myText1").isContentEditable;
-document.getElementById("infoText2").innerHTML += document.getElementById("myText2").isContentEditable;
+document.getElementById("infoText1").innerHTML +=
+  document.getElementById("myText1").isContentEditable;
+document.getElementById("infoText2").innerHTML +=
+  document.getElementById("myText2").isContentEditable;
 ```
 
 ### HTML
 
 ```html
 <p id="myText1">Uneditable Paragraph</p>
-<p id="myText2" contentEditable="true">Editable Paragraph</p>
+<p id="myText2" contenteditable="true">Editable Paragraph</p>
 
-<p id="infoText1">Can edit the first paragraph? </p>
-<p id="infoText2">Can edit the second paragraph? </p>
+<p id="infoText1">Can edit the first paragraph?</p>
+<p id="infoText2">Can edit the second paragraph?</p>
 ```
 
 ### Résultat

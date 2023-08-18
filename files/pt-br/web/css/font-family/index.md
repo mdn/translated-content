@@ -148,46 +148,36 @@ body {
 
 ```css
 .exampleserif {
-    font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: Times, "Times New Roman", Georgia, serif;
 }
 
 .examplesansserif {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 .examplemonospace {
-    font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", Courier, monospace;
 }
 
 .examplecursive {
-    font-family: cursive;
+  font-family: cursive;
 }
 
 .examplefantasy {
-    font-family: fantasy;
+  font-family: fantasy;
 }
 ```
 
 ```html
-<div class="exampleserif">
-This is an example of a serif font.
-</div>
+<div class="exampleserif">This is an example of a serif font.</div>
 
-<div class="examplesansserif">
-This is an example of a sans-serif font.
-</div>
+<div class="examplesansserif">This is an example of a sans-serif font.</div>
 
-<div class="examplemonospace">
-This is an example of a monospace font.
-</div>
+<div class="examplemonospace">This is an example of a monospace font.</div>
 
-<div class="examplecursive">
-This is an example of a cursive font.
-</div>
+<div class="examplecursive">This is an example of a cursive font.</div>
 
-<div class="examplefantasy">
-This is an example of a fantasy font.
-</div>
+<div class="examplefantasy">This is an example of a fantasy font.</div>
 ```
 
 #### Live Sample
@@ -196,11 +186,11 @@ This is an example of a fantasy font.
 
 ## Specifications
 
-| Specification                                                                                    | Status                           | Comment               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}             | {{Spec2('CSS3 Fonts')}} | No significant change |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}} | {{Spec2('CSS2.1')}}         | No significant change |
-| {{SpecName('CSS1', '#font-family', 'font-familiy')}}                             | {{Spec2('CSS1')}}         | Initial definition    |
+| Specification                                                           | Status                  | Comment               |
+| ----------------------------------------------------------------------- | ----------------------- | --------------------- |
+| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}          | {{Spec2('CSS3 Fonts')}} | No significant change |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}} | {{Spec2('CSS2.1')}}     | No significant change |
+| {{SpecName('CSS1', '#font-family', 'font-familiy')}}                    | {{Spec2('CSS1')}}       | Initial definition    |
 
 ## Browser compatibility
 

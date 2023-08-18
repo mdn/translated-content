@@ -20,33 +20,32 @@ navigator.getUserMedia ( permissoes, callbackSucesso, callbackErro );
 Este é um exemplo de uso da função getUserMedia() com prefixos específicos dos navegadores.
 
 ```js
-navigator.getMedia = ( navigator.getUserMedia ||
-                       navigator.webkitGetUserMedia ||
-                       navigator.mozGetUserMedia ||
-                       navigator.msGetUserMedia);
+navigator.getMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia ||
+  navigator.msGetUserMedia;
 
-navigator.getMedia (
+navigator.getMedia(
+  // permissoes
+  {
+    video: true,
+    audio: true,
+  },
 
-   // permissoes
-   {
-      video: true,
-      audio: true
-   },
+  // callbackSucesso
+  function (localMediaStream) {
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(localMediaStream);
+    video.onloadedmetadata = function (e) {
+      // Faz algo com o vídeo aqui.
+    };
+  },
 
-   // callbackSucesso
-   function(localMediaStream) {
-      var video = document.querySelector('video');
-      video.src = window.URL.createObjectURL(localMediaStream);
-      video.onloadedmetadata = function(e) {
-         // Faz algo com o vídeo aqui.
-      };
-   },
-
-   // callbackErro
-   function(err) {
+  // callbackErro
+  function (err) {
     console.log("O seguinte erro ocorreu: " + err);
-   }
-
+  },
 );
 ```
 
@@ -72,14 +71,14 @@ Se o valor de um membro não estiver especificado no objeto, o valor padrão des
 
 A função getUserMedia invocará a função especificada em callbackSucesso com o objeto [LocalMediaStream](/pt-BR/docs/WebRTC/MediaStream_API#LocalMediaStream) que contém a fonte de mídia. Você pode associar este objeto com o elemento apropriado e trabalhar com ele, como mostrado no exemplo a seguir:
 
-```
+```js
 function(localMediaStream) {
    var video = document.querySelector('video');
    video.src = window.URL.createObjectURL(localMediaStream);
    video.onloadedmetadata = function(e) {
       // Faz algo com o vídeo aqui.
    };
-},
+}
 ```
 
 ### callbackErro
@@ -92,9 +91,13 @@ A função getUserMedia invocará a função especificada em callbackErro com um
 | NOT_SUPPORTED_ERROR         | Uma mídia especificada não é suportada pelo navegador.                                 |
 | MANDATORY_UNSATISFIED_ERROR | Nenhuma fonte de mídia do tipo especificado foi encontrada.                            |
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Navigator.getUserMedia")}}
+{{Compat}}
 
 ## Veja também
 
