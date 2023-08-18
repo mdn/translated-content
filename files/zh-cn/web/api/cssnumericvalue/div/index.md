@@ -1,6 +1,6 @@
 ---
 title: CSSNumericValue：div() 方法
-slug: /en-US/docs/Web/CSS/Specificity
+slug: Web/API/CSSNumericValue/div 
 ---
 
 {{APIRef("CSS Typed OM")}}
