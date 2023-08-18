@@ -195,4 +195,4 @@ str.normalize("NFKD"); // '\u0073\u0323\u0307'
 ## 参见
 
 - [Unicode 标准附件 #15，Unicode 规范化形式](https://www.unicode.org/reports/tr15/)
-- [Unicode 等价](https://en.wikipedia.org/wiki/Unicode_equivalence)
+- [Unicode 等价](https://zh.wikipedia.org/wiki/Unicode等價性)
