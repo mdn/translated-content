@@ -101,12 +101,7 @@ border-image: unset;
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* source */
-      27 /                    /* slice */
-      36px 28px 18px 8px /    /* width */
-      18px 14px 9px 4px       /* outset */
-      round;                  /* repeat */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px round;
 }
 ```
 
