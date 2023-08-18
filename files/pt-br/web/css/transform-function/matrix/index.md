@@ -123,8 +123,8 @@ div {
 
 ## Specifications
 
-| Specification                                                                                    | Status                               | Comment            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
+| Specification                                                            | Status                       | Comment            |
+| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
 | {{SpecName("CSS3 Transforms", "#funcdef-transform-matrix", "matrix()")}} | {{Spec2("CSS3 Transforms")}} | Initial definition |
 
 ## Compatibilidade com navegadores

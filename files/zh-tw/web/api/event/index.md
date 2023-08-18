@@ -123,7 +123,7 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 - {{domxref("Event.createEvent()")}} {{deprecated_inline}}
   - : Creates a new event, which must then be initialized by calling its `initEvent()` method.
 - {{domxref("Event.composedPath()")}}
-  - : Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.
+  - : Returns the event's path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : 初始化已經建立的事件。若該事件已經被處理過，這方法就不會執行任何東西。
 - {{domxref("Event.preventDefault()")}}

@@ -53,8 +53,12 @@ padding-right: unset;
 ### 右パディングをピクセル数とパーセント値で設定
 
 ```css
-.content { padding-right: 5%; }
-.sidebox { padding-right: 10px; }
+.content {
+  padding-right: 5%;
+}
+.sidebox {
+  padding-right: 10px;
+}
 ```
 
 ## 仕様書

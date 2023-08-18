@@ -42,11 +42,12 @@ if (condition);       // Caution, this "if" does nothing!
 
 다른 예 : 중괄호 ({})가없는 [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else) 문에서 `three`가 `true`이면 아무 일도 일어나지 않고 `four`를 건너 뛰고 else case의 launchRocket() 함수도 실행되지 않습니다.
 
-```js
+```js-nolint
 if (one) doOne();
 else if (two) doTwo();
 else if (three); // nothing here
-else if (four) doFour();
+else if (four)
+  doFour();
 else launchRocket();
 ```
 

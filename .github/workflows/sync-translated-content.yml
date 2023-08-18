@@ -9,7 +9,7 @@ on:
         default: ""
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "0 */24 * * *"
+    - cron: "0 1 * * *"
 
 jobs:
   build:

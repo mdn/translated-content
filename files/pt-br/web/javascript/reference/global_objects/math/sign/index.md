@@ -45,27 +45,27 @@ O argumento passado para esta função será implicitamente convertido para o ti
 ### Usando `Math.sign()`
 
 ```js
-Math.sign(3);     //  1
-Math.sign(-3);    // -1
-Math.sign('-3');  // -1
-Math.sign(0);     //  0
-Math.sign(-0);    // -0
-Math.sign(NaN);   // NaN
-Math.sign('foo'); // NaN
-Math.sign();      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Polyfill
 
 ```js
 if (!Math.sign) {
-  Math.sign = function(x) {
+  Math.sign = function (x) {
     // Se x é NaN, o resultado é NaN.
     // Se x é -0, o resultado é -0.
     // Se x é +0, o resultado é +0.
     // Se x é negativo e não -0, o resultado é -1.
     // Se x é positivo e não +0, o resultado é +1.
-    return ((x > 0) - (x < 0)) || +x;
+    return (x > 0) - (x < 0) || +x;
     // Uma representação mais estética é mostrada abaixo
     //
     // ( (x > 0) ? 1 : 0 )  // se x é positivo então mais um
@@ -82,9 +82,9 @@ No polyfill acima, nenhuma coerção de tipo extra é necessária para tornar nu
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}         | Definição inicial. |
+| Especificação                                          | Status               | Comentário         |
+| ------------------------------------------------------ | -------------------- | ------------------ |
+| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}     | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores
