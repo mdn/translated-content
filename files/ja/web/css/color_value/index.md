@@ -24,7 +24,7 @@ l10n:
 
 - 以下の方法による任意の視覚可能な色:
 
-  - {{cssxref("color_value/lch","lch()")}} 関数記法（[LCH 円筒座標系](https://ja.wikipedia.org/wiki/CIE_Luv%E8%89%B2%E7%A9%BA%E9%96%93#%E5%86%86%E7%AD%92%E5%BA%A7%E6%A8%99%E7%B3%BB%E3%81%AB%E3%82%88%E3%82%8B%E8%A1%A8%E7%8F%BE_(CIELCH))を使用）
+  - {{cssxref("color_value/lch","lch()")}} 関数記法（[LCH 円筒座標系](<https://ja.wikipedia.org/wiki/CIE_Luv%E8%89%B2%E7%A9%BA%E9%96%93#%E5%86%86%E7%AD%92%E5%BA%A7%E6%A8%99%E7%B3%BB%E3%81%AB%E3%82%88%E3%82%8B%E8%A1%A8%E7%8F%BE_(CIELCH)>)を使用）
 
   - {{cssxref("color_value/oklch","oklch()")}} 関数記法（[Oklch 円筒座標系](https://bottosson.github.io/posts/oklab/)を使用）
 

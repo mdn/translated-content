@@ -22,7 +22,10 @@ animation-name: sliding-vertically;
 
 /* 複数のアニメーション */
 animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+animation-name:
+  none,
+  -moz-specific,
+  sliding;
 
 /* グローバル値 */
 animation-name: initial;
