@@ -124,7 +124,7 @@ forEach(function (element, index, array) {
 
 ### 初期化されていない値については何もしない（不連続な配列）
 
-```js
+```js-nolint
 const arraySparse = [1, 3, /* 空 */, 7];
 let numCallbackRuns = 0;
 
