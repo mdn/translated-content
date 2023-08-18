@@ -59,20 +59,22 @@ let request = articleStore.index("tag").openCursor();
 let count = 0;
 let unreadList = [];
 request.onsuccess = (event) => {
-    let cursor = event.target.result;
-    if (!cursor) { return; }
-    let lastPrimaryKey = getLastIteratedArticleId();
-    if (lastPrimaryKey > cursor.primaryKey) {
-      cursor.continuePrimaryKey("javascript", lastPrimaryKey);
-      return;
-    }
-    // lastIteratedArticleId を更新する
-    setLastIteratedArticleId(cursor.primaryKey);
-    // unreadList に 5 本の記事を追加しておく
-    unreadList.push(cursor.value);
-    if (++count < 5) {
-      cursor.continue();
-    }
+  let cursor = event.target.result;
+  if (!cursor) {
+    return;
+  }
+  let lastPrimaryKey = getLastIteratedArticleId();
+  if (lastPrimaryKey > cursor.primaryKey) {
+    cursor.continuePrimaryKey("javascript", lastPrimaryKey);
+    return;
+  }
+  // lastIteratedArticleId を更新する
+  setLastIteratedArticleId(cursor.primaryKey);
+  // unreadList に 5 本の記事を追加しておく
+  unreadList.push(cursor.value);
+  if (++count < 5) {
+    cursor.continue();
+  }
 };
 ```
 
