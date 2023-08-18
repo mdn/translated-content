@@ -36,7 +36,7 @@ counter-set: unset;
 
 `counter-set` 属性可以指定为以下之一：
 
-- 一个命名计数器的 `<custom-ident>`，后面可选跟一个 `<integer>`。您可以指定要重置的计数器数量，每个名称或名称-数字对之间用空格分隔。
+- 一个命名计数器的 `<custom-ident>`，后面可选跟一个 `<integer>`。你可以指定要重置的计数器数量，每个名称或名称 - 数字对之间用空格分隔。
 - 关键字值 `none`。
 
 ### 值
@@ -63,8 +63,8 @@ counter-set: unset;
 ```css
 h1 {
   counter-set: chapter section 1 page;
-  /* 将章节和页面计数器设置为0，
-     将部分计数器设置为1 */
+  /* 将章节和页面计数器设置为 0，
+     将部分计数器设置为 1 */
 }
 ```
 
