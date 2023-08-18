@@ -13,11 +13,11 @@ slug: Web/CSS/padding-inline-start
 
 ```css
 /* <length> 値 */
-padding-inline-start: 10px;   /* 絶対的な長さ */
-padding-inline-start: 1em;    /* テキストの大きさに対する相対値 */
+padding-inline-start: 10px; /* 絶対的な長さ */
+padding-inline-start: 1em; /* テキストの大きさに対する相対値 */
 
 /* <percentage> 値 */
-padding-inline-start: 5%;     /* ブロックコンテナーの幅に対する割合のパディング */
+padding-inline-start: 5%; /* ブロックコンテナーの幅に対する割合のパディング */
 
 /* グローバル値 */
 padding-inline-start: inherit;
@@ -71,7 +71,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-inline-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
