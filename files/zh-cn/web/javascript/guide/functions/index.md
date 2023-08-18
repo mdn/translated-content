@@ -5,19 +5,17 @@ slug: Web/JavaScript/Guide/Functions
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
-函数是 JavaScript 中的基本组件之一。JavaScript 中的函数类似于过程——一组执行任务或计算值的语句。但要属于函数，这个过程应该接受输入并返回与输入存在某些明显关系的输出。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
+函数是 JavaScript 中的基本组件之一。JavaScript 中的函数类似于过程——一组执行任务或计算值的语句。但要成为函数，这个过程应该接受输入并返回与输入存在某些明显关系的输出。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
-一个 JavaScript 函数用 `function` 关键字定义，后面跟着函数名和圆括号。
-
-参见 [JavaScript 函数的详细参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions)，以了解详情。
+参见 [JavaScript 函数的详细参考章节](/zh-CN/docs/Web/JavaScript/Reference/Functions)，以了解详情。
 
 ## 定义函数
 
 ### 函数声明
 
-一个**函数定义**（也称为**函数声明**，或**函数语句**）由一系列的 [`function`](/zh-CN/docs/JavaScript/Reference/Statements/function) 关键字组成，依次为：
+一个**函数定义**（也称为**函数声明**，或**函数语句**）由 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function) 关键字，并跟随以下部分组成：
 
-- 函数的名称。
+- 函数名称。
 - 函数参数列表，包围在括号中并由逗号分隔。
 - 定义函数的 JavaScript 语句，用大括号括起来，`{ /* … */ }`。
 
@@ -29,11 +27,11 @@ function square(number) {
 }
 ```
 
-函数 `square` 接收一个名为 `number` 的参数。这个函数只有一个语句，其说明该函数将函数的参数（即 `number`）自乘后返回。函数的 [`return`](/zh-CN/docs/JavaScript/Reference/Statements/return) 语句指定了函数的返回值：`number * number`。
+函数 `square` 接收一个名为 `number` 的参数。这个函数只有一个语句，其表示该函数将函数的参数（即 `number`）自乘后返回。函数的 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句指定了函数的返回值：`number * number`。
 
-参数本质上是**按值**传递给函数的——因此，即使函数体的代码为传递给函数的参数赋了新值，**这个改变也不会反应到全局或调用函数中**。
+参数本质上是**按值**传递给函数的——因此，即使函数体的代码为传递给函数的参数赋了新值，**这个改变也不会反映到全局或调用该函数的代码中**。
 
-如果你传递一个对象作为参数，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示：
+如果你将对象作为参数传递，而函数改变了这个对象的属性，这样的改变对函数外部是可见的，如下面的例子所示：
 
 ```js
 function myFunc(theObject) {
@@ -51,7 +49,7 @@ myFunc(mycar);
 console.log(mycar.make); // "Toyota"
 ```
 
-如果你传递一个数组作为参数，而函数改变了这个数组的值，这样的改变对函数外部也同样可见，如下面的例子所示：
+如果你将数组作为参数传递，而函数改变了这个数组的值，这样的改变对函数外部也同样可见，如下面的例子所示：
 
 ```js
 function myFunc(theArr) {
@@ -79,7 +77,7 @@ const square = function (number) {
 console.log(square(4)); // 16
 ```
 
-然而，函数表达式*也可以*提供函数名，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中识别该函数：
+然而，*也可以*为函数表达式提供名称，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中识别该函数：
 
 ```js
 const factorial = function fac(n) {
@@ -179,7 +177,7 @@ console.log(factorial(5)); // 120
 
 ### 函数提升
 
-考虑以下示例
+考虑以下示例：
 
 ```js
 console.log(square(5)); // 25
@@ -200,7 +198,7 @@ function square(n) {
 console.log(square(5)); // 25
 ```
 
-函数提升仅适用于函数*声明*，而不适用于函数*表达式*。以下代码将不起作用：
+函数提升仅适用于函数*声明*，而不适用于函数*表达式*。以下代码无法运行：
 
 ```js example-bad
 console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
@@ -243,7 +241,7 @@ function getScore() {
 console.log(getScore()); // "Chamakh 的得分为 5"
 ```
 
-## 作用域和函数堆栈
+## 作用域和函数栈
 
 ### 递归
 
