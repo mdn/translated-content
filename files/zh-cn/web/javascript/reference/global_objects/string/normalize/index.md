@@ -135,7 +135,7 @@ console.log(string2.length); // 2
 string1 = string1.normalize("NFKD");
 string2 = string2.normalize("NFKD");
 
-console.log(string1); // ff <- visual appearance changed
+console.log(string1); // ff <- 视觉外观改变了
 console.log(string2); // ff
 console.log(string1 === string2); // true
 console.log(string1.length); // 2
