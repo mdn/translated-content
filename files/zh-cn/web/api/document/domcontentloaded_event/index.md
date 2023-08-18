@@ -8,7 +8,7 @@ slug: Web/API/Document/DOMContentLoaded_event
 
 当 HTML 文档完全解析，且所有延迟脚本（[`<script defer src="…">`](/zh-CN/docs/Web/HTML/Element/script#defer) 和 [`<script type="module">`](/zh-CN/docs/Web/HTML/Element/script#module)）下载和执行完毕后，会触发 **`DOMContentLoaded`** 事件。它不会等待图片、子框架和异步脚本等其他内容完成加载。
 
-`DOMContentLoaded` 不会等待样式表加载，但延迟脚本*会*等待样式表，而且 `DOMContentLoaded` 事件会在延迟脚本之后排队。此外，非延迟或异步的脚本（如 `<script>`）将等待已解析的样式表加载。
+`DOMContentLoaded` 不会等待样式表加载，但延迟脚本*会*等待样式表，而且 `DOMContentLoaded` 事件排在延迟脚本之后。此外，非延迟或异步的脚本（如 `<script>`）将等待已解析的样式表加载。
 
 另一个事件，{{domxref("Window/load_event", "load")}} 只能用于检测完全加载的页面。有一个常见的错误就是在 `DOMContentLoaded` 事件更合适时使用了 `load` 事件。
 
