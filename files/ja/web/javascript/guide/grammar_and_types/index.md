@@ -130,7 +130,7 @@ const x; // SyntaxError: Missing initializer in const declaration
 if (Math.random() > 0.5) {
   const y = 5;
 }
-console.log(y);  // ReferenceError: y is not defined
+console.log(y); // ReferenceError: y is not defined
 ```
 
 ただし、 `var` で生成された変数はブロックスコープにはならず、そのブロックが存在する _関数（またはグローバルスコープ）_ に局所的になります。
@@ -141,7 +141,7 @@ console.log(y);  // ReferenceError: y is not defined
 if (true) {
   var x = 5;
 }
-console.log(x);  // x は 5
+console.log(x); // x は 5
 ```
 
 ### 変数の巻き上げ
@@ -152,9 +152,9 @@ console.log(x);  // x は 5
 console.log(x === undefined); // true
 var x = 3;
 
-(function() {
+(function () {
   console.log(x); // undefined
-  var x = 'local value';
+  var x = "local value";
 })();
 ```
 
@@ -165,10 +165,10 @@ var x;
 console.log(x === undefined); // true
 x = 3;
 
-(function() {
+(function () {
   var x;
   console.log(x); // undefined
-  x = 'local value';
+  x = "local value";
 })();
 ```
 
@@ -208,7 +208,7 @@ const PI = 3.14;
 
 ```js example-bad
 // THIS WILL CAUSE AN ERROR
-function f() {};
+function f() {}
 const f = 5;
 
 // この場合もエラーが発生
@@ -223,15 +223,15 @@ function f() {
 しかし、`const` は _再代入_ を防止しますが、_変更_ は防止しません。定数が代入されたオブジェクトのプロパティは保護されず、以下の文は問題なく実行できます。
 
 ```js
-const MY_OBJECT = { key: 'value' };
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 また、配列の中身は保護されませんので、以下の文は問題なく実行できます。
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 ```
 
@@ -268,7 +268,7 @@ let answer = 42;
 その後、同じ変数に文字列を代入できます。
 
 ```js
-answer = 'Thanks for all the fish!';
+answer = "Thanks for all the fish!";
 ```
 
 JavaScript は動的型付け方式であるため、この代入を行ってもにエラーメッセージは表示されません。
@@ -278,16 +278,16 @@ JavaScript は動的型付け方式であるため、この代入を行っても
 数値と文字列を `+` 演算子で結合する式では、JavaScript は数値を文字列に変換します。以下の文を見てみましょう。
 
 ```js
-x = '答えは ' + 42 // "答えは 42"
-y = 42 + ' が答え' // "42 が答え"
-z = '37' + 7 // "377"
+x = "答えは " + 42; // "答えは 42"
+y = 42 + " が答え"; // "42 が答え"
+z = "37" + 7; // "377"
 ```
 
 それ以外の演算子がある式では、JavaScript は数値を文字列に変換*しません*。例えば以下のようになります。
 
 ```js
-'37' - 7 // 30
-'37' * 7 // 259
+"37" - 7; // 30
+"37" * 7; // 259
 ```
 
 ### 文字列から数値への変換
@@ -302,14 +302,14 @@ z = '37' + 7 // "377"
 > **メモ:** さらに、`parseInt` を使う最も良い方法は、常に基数を引数に含めるようにすることです。基数の引数は使用されている*基数*法を指定するのに使われます。
 
 ```js
-parseInt('101', 2) // 5
+parseInt("101", 2); // 5
 ```
 
 文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。
 
 ```js
-'1.1' + '1.1' // '1.11.1'
-(+'1.1') + (+'1.1') // 2.2
+'1.1' + '1.1'; // '1.11.1'
+(+'1.1') + (+'1.1'); // 2.2
 // 注: 括弧は明確さのために追加したもので、必須ではありません
 ```
 
@@ -331,7 +331,7 @@ JavaScript では値の表現に _リテラル_ を使います。これらは�
 以下の例では 3 つの要素を持ち、配列 `coffees` を長さ (`length`) 3 で作成します。
 
 ```js
-const coffees = ['French Roast', 'Colombian', 'Kona'];
+const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 最上位のスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
@@ -343,7 +343,7 @@ const coffees = ['French Roast', 'Colombian', 'Kona'];
 配列のリテラルでカンマを 2 つ並べた場合、配列は指定されていない要素のために空のスロットを残します。以下の例では、 `fish` 配列を作成しています。
 
 ```js
-const fish = ['Lion', , 'Angel'];
+const fish = ["Lion", , "Angel"];
 ```
 
 この配列をログ出力すると、次のようになります。
@@ -359,20 +359,20 @@ console.log(fish);
 
 次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
 
-```js
-const myList = ['home', , 'school', ];
+```js-nolint
+const myList = ["home", , "school", ];
 ```
 
 次の例では、配列の長さ (`length`) は 4 になります。`myList[0]` と `myList[2]` が抜けています。
 
 ```js
-const myList = [, 'home', , 'school'];
+const myList = [, "home", , "school"];
 ```
 
 次の例では、配列の長さ (`length`) は 4 です。`myList[1]` と `myList[3]` が抜けています。最後のカンマのみが無視されます。
 
 ```js
-const myList = ['home', , 'school', , ];
+const myList = ["home", , "school", ,];
 ```
 
 > **メモ:** [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
@@ -389,8 +389,8 @@ const myList = ['home', , 'school', , ];
 
 しかし、自分自身でコードを書くときには、足りない要素を明示的に `undefined` と宣言するか、少なくともその不在を強調するコメントを挿入する必要があります。そうすることで、コードがより明確になり、保守性も高まります。
 
-```js
-const myList = ['home', /* 空 */, 'school', /* 空 */, ];
+```js-nolint
+const myList = ["home", /* 空 */, "school", /* 空 */, ];
 ```
 
 ### 論理値リテラル
@@ -403,7 +403,7 @@ const myList = ['home', /* 空 */, 'school', /* 空 */, ];
 
 ### 数値リテラル
 
-JavaScript で数値リテラルには、様々な形の整数リテラルと、基数 10 の浮動小数点数`が含まれます。
+JavaScript で数値リテラルには、様々な形の整数リテラルと、基数 10 の浮動小数点数が含まれます。
 
 言語仕様では、数値リテラルは符号なしであることが要求されていることに注意してください。どのみち、`-123.4`のようなコードは、単項の `-` 演算子を数値リテラル `123.4` に適用したものとして解釈されるため、問題ありません。
 
@@ -448,10 +448,10 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 例えば以下の通りです。
 
 ```js
-3.1415926
-.123456789
-3.1E+12
-.1e-23
+3.1415926;
+0.123456789;
+3.1e12;
+0.1e-23;
 ```
 
 ### オブジェクトリテラル
@@ -463,23 +463,23 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 `"Saturn"` が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `(carTypes("Honda"))`; によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 
 ```js
-const sales = 'Toyota';
+const sales = "Toyota";
 
 function carTypes(name) {
-  return name === 'Honda' ? name : `Sorry, we don't sell ${name}.`;
+  return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
 }
 
-const car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 さらに、数値リテラルや文字列リテラルをプロパティ名に使用したり、オブジェクトを別のオブジェクトの入れ子にすることができます。以下の例では、これらの機能を使用しています。
 
 ```js
-const car = { manyCars: { a: 'Saab', b: 'Jeep' }, 7: 'Mazda' };
+const car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -501,8 +501,8 @@ console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
 代わりに、これらはブラケット記法 (`[]`) でアクセスする必要があります。
 
 ```js example-good
-console.log(unusualPropertyNames['']);  // 空文字列
-console.log(unusualPropertyNames['!']); // バン!
+console.log(unusualPropertyNames[""]); // 空文字列
+console.log(unusualPropertyNames["!"]); // バン!
 ```
 
 #### 拡張オブジェクトリテラル
@@ -520,11 +520,11 @@ const obj = {
   // メソッド
   toString() {
     // スーパークラスの呼び出し
-    return 'd ' + super.toString();
+    return "d " + super.toString();
   },
   // 計算による（動的な）プロパティ名
-  ['prop_' + (() => 42)()]: 42
-}
+  ["prop_" + (() => 42)()]: 42,
+};
 ```
 
 ### 正規表現リテラル
@@ -542,11 +542,11 @@ const re = /ab+c/;
 以下が文字列リテラルの例です。
 
 ```js
-'foo'
-"bar"
-'1234'
-'one line \n another line'
-"Joyo's cat"
+'foo';
+"bar";
+'1234';
+'one line \n another line';
+"Joyo's cat";
 ```
 
 特に `String` オブジェクトを使用する必要がない限り、文字列リテラルを使用してください。 `String` オブジェクトの詳細については、{{jsxref("String")}} を参照してください。
@@ -555,7 +555,7 @@ const re = /ab+c/;
 
 ```js
 // ホワイトスペースを含む文字列の文字の数を出力する。
-console.log("Joyo's cat".length)  // この場合は 10 が出力される。
+console.log("Joyo's cat".length); // この場合は 10 が出力される。
 ```
 
 [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)も利用することができます。テンプレートリテラルは、二重引用符や単一引用符の代わりに逆引用符 (`` ` ``) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) で囲まれたものです。
@@ -564,16 +564,16 @@ console.log("Joyo's cat".length)  // この場合は 10 が出力される。
 
 ```js
 // 基本的な文字列リテラルの作成
-`In JavaScript '\n' is a line-feed.`
+`In JavaScript '\n' is a line-feed.`;
 
 // 複数行の文字列
 `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // 文字列補完
 const name = 'Lev', time = 'today';
-`Hello ${name}, how are you ${time}?`
+`Hello ${name}, how are you ${time}?`;
 ```
 
 [タグ付きテンプレート](/ja/docs/Web/JavaScript/Reference/Template_literals#タグ付きテンプレート)は、テンプレートリテラルを指定するためのコンパクトな構文と、それを解釈するための「タグ」関数の呼び出しを組み合わせたものです。タグ付きテンプレートは、文字列と関連する値の集合を処理する関数を呼び出すための、より簡潔で意味づけされた方法にすぎません。以下の例では、テンプレートタグ関数の名前が `print` であり、テンプレートタグ関数の名前がテンプレートリテラルの前にあります。`print` 関数は引数を補間し、オブジェクトや配列をシリアライズするので、厄介な `[object Object]` になることを避けることができます。
@@ -590,7 +590,7 @@ const formatArg = (arg) => {
     return JSON.stringify(arg);
   }
   return arg;
-}
+};
 
 const print = (segments, ...args) => {
   // For any well-formed template literal, there will always be N args and
@@ -600,7 +600,7 @@ const print = (segments, ...args) => {
     message += formatArg(args[index]) + segment;
   });
   console.log(message);
-}
+};
 
 const todos = [
   "Learn JavaScript",
@@ -643,29 +643,29 @@ console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 文字列では、通常の文字に加えて特殊文字も使用できます。次の例をご覧ください。
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 ここで、JavaScript の文字列で使用できる特殊文字の表を示します。
 
-| 文字        | 意味                                                                                                                                                                                                         |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `\0`        | ヌル文字                                                                                                                                                                                                     |
-| `\b`        | バックスペース                                                                                                                                                                                               |
-| `\f`        | 改ページ                                                                                                                                                                                                     |
-| `\n`        | 改行                                                                                                                                                                                                         |
-| `\r`        | 復帰                                                                                                                                                                                                         |
-| `\t`        | タブ                                                                                                                                                                                                         |
-| `\v`        | 垂直タブ                                                                                                                                                                                                     |
-| `\'`        | アポストロフィまたは単一引用符                                                                                                                                                                               |
-| `\"`        | 二重引用符                                                                                                                                                                                                   |
-| `\\`        | バックスラッシュ (\\)                                                                                                                                                                                        |
-| `\XXX`      | `0` から `377` までの 3 桁の 8 進数 _XXX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\251` は著作権記号を示します。                                                                             |
-|             |                                                                                                                                                                                                              |
-| `\xXX`      | `00` から `FF` までの 2 桁の 16 進数 _XX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\xA9` は著作権記号を示します。                                                                             |
-|             |                                                                                                                                                                                                              |
+| 文字        | 意味                                                                                                                                                                                                        |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | ヌル文字                                                                                                                                                                                                    |
+| `\b`        | バックスペース                                                                                                                                                                                              |
+| `\f`        | 改ページ                                                                                                                                                                                                    |
+| `\n`        | 改行                                                                                                                                                                                                        |
+| `\r`        | 復帰                                                                                                                                                                                                        |
+| `\t`        | タブ                                                                                                                                                                                                        |
+| `\v`        | 垂直タブ                                                                                                                                                                                                    |
+| `\'`        | アポストロフィまたは単一引用符                                                                                                                                                                              |
+| `\"`        | 二重引用符                                                                                                                                                                                                  |
+| `\\`        | バックスラッシュ (\\)                                                                                                                                                                                       |
+| `\XXX`      | `0` から `377` までの 3 桁の 8 進数 _XXX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\251` は著作権記号を示します。                                                                            |
+|             |                                                                                                                                                                                                             |
+| `\xXX`      | `00` から `FF` までの 2 桁の 16 進数 _XX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\xA9` は著作権記号を示します。                                                                            |
+|             |                                                                                                                                                                                                             |
 | `\uXXXX`    | 4 桁の 16 進数 _XXXX_ で指定された Unicode 文字。 例えば、`\u00A9` は著作権記号を示します。[Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)をご覧ください。 |
-| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は単純な Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                      |
+| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は単純な Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                     |
 
 #### 文字のエスケープ
 
@@ -673,7 +673,7 @@ console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 
 バックスラッシュを直前につけることで、引用符を文字列に含めることができます。これは引用符の*エスケープ*と呼ばれます。例えば以下のようにします。
 
-```js
+```js-nolint
 const quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
@@ -687,17 +687,18 @@ He read "The Cremation of Sam McGee" by R.W. Service.
 文字列にバックスラッシュそのものを含めるには、バックスラッシュのエスケープが必要です。例えば、文字列に `c:\temp` というファイルパスを代入するには、以下のようにします。
 
 ```js
-const home = 'c:\\temp';
+const home = "c:\\temp";
 ```
 
 改行の直前にバックスラッシュを置くことで、改行をエスケープすることもできます。バックスラッシュと改行の両方が、文字列の値から取り除かれます。
 
 ```js
-const str = 'this string \
+const str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // この文字列は複数行にわたって分解されます。
+lines.";
+console.log(str); // この文字列は複数行にわたって分解されます。
 ```
 
 ## 関連情報
