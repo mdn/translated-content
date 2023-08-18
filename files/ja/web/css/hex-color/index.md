@@ -39,13 +39,17 @@ l10n:
 <p>Hexadecimal syntax for a fully opaque hot pink</p>
 
 #f09
-<div class="c1"></div><br />
+<div class="c1"></div>
+<br />
 #F09
-<div class="c2"></div><br />
+<div class="c2"></div>
+<br />
 #ff0099
-<div class="c3"></div><br />
+<div class="c3"></div>
+<br />
 #FF0099
-<div class="c4"></div><br />
+<div class="c4"></div>
+<br />
 ```
 
 ```css
