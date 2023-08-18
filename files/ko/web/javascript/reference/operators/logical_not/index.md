@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 - 빈 문자열 (`""` or `''` or ` `` `);
 - `undefined`.
 
-`!` 연산자는 불리언 값이 아닌 피연산자와 함께 사용될 수 있지만, 반환값이 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로 변환될 수 있기 때문에 여전히 불리언 연산자로 간주될 수 있습니다. 명시적으로 반환값을 (또는 일반적으로 어떤 표현식을) 대응하는 불리언 값으로 변환하기 위해서는 이중 NOT 연산자 (`!!`) 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.
+`!` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환값이 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로 변환될 수 있기 때문에 여전히 불리언 연산자로 간주할 수 있습니다. 명시적으로 반환값을 (또는 일반적으로 어떤 표현식을) 대응하는 불리언 값으로 변환하기 위해서는 이중 NOT 연산자 (`!!`) 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.
 
 ## 예제
 
@@ -55,7 +55,7 @@ NOT 연산자를 연속으로 2개 사용해서 명시적으로 어떤 값을 �
 ```js
 !!true; // !!truthy는 true를 반환합니다.
 !!{}; // !!truthy는 true를 반환합니다. 임의의 object는 참 같은 객체입니다.
-!!new Boolean(false); // .valueOf()로 false값을 가지는 불리언 객체 또한 참 같은 객체도요!
+!!new Boolean(false); // .valueOf()에서 false값을 가지는 불리언 객체도요!
 !!false; // !!falsy는 false를 반환합니다.
 !!""; // !!falsy는 false를 반환합니다.
 !!Boolean(false); // !!falsy는 false를 반환합니다.
