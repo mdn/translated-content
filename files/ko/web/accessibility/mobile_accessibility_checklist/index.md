@@ -29,7 +29,7 @@ l10n:
 - 활성화 가능한 모든 요소는 포커스가 가능해야 합니다.
 
   - 링크, 버튼 및 form 필드와 같은 표준 control들은 기본적으로 포커스가 가능합니다.
-  - 비표준 control들은 반드시 `버튼`, `링크` 또는 `체크박스`와 같은 적절한 [ARIA Role](/ko-KR/docs/Web/Accessibility/ARIA/Roles) 이 할당되어야 합니다.
+  - 비표준 control들은 반드시 `버튼`, `링크` 또는 `체크박스`와 같은 적절한 [ARIA Role](/ko/docs/Web/Accessibility/ARIA/Roles) 이 할당되어야 합니다.
 
 - 포커스는 논리적인 순서와 일관된 방식으로 다루어져야 합니다.
 
