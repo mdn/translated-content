@@ -43,17 +43,17 @@ l10n:
 ### JavaScript
 
 ```js
-let log = document.createTextNode('?');   // let log = new Text('?');
+let log = document.createTextNode("?"); // let log = new Text('?');
 
 function logButtons(e) {
-  log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
+  log.data = `${e.buttons} (${e.type})`; // log.nodeValue= `${e.buttons} (${e.type})`;
 }
 
-document.addEventListener('mouseup', logButtons);
-document.addEventListener('mousedown', logButtons);
+document.addEventListener("mouseup", logButtons);
+document.addEventListener("mousedown", logButtons);
 // document.addEventListener('mousemove', logButtons);
 
-document.querySelector('#log').appendChild(log)
+document.querySelector("#log").appendChild(log);
 ```
 
 ### 結果
