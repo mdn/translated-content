@@ -82,7 +82,7 @@ switch (NaN) {
    - 숫자를 BigInt로: 숫자 값으로 비교합니다. 숫자가 ±Infinity이거나 `NaN` 이면 `false`를 반환합니다.
    - 문자열을 BigInt로: [`BigInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 생성자와 동일한 알고리즘을 사용하여 문자열을 BigInt로 변환합니다. 변환에 실패하면 `false`를 반환합니다.
 
-전통적으로, 그리고 ECMAScript에 따르면 모든 원시 값과 객체는 `undefined`와 `null`과 느슨하게 동등하지 않습니다. 그러나 대부분의 브라우저는 특정 맥락에서 매우 좁은 객체 클래스(특히 모든 페이지의 `document.all` 객체)가 `undefined` 값을 에뮬레이트 하는 것을 허용합니다. 느슨한 동등성은 다음 맥락 중 하나입니다. `null == A`와 `undefined == A`는 A가 `undefined`로 에뮬레이트 하는 객체인 경우에만 `true`로 평가됩니다. 다른 모든 경우에는 객체가 `undefined` 또는 `null`과 느슨하게 동등하지 않습니다.
+전통적으로, 그리고 ECMAScript에 따르면 모든 원시 값과 객체는 `undefined`와 `null`과 느슨하게 동등하지 않습니다. 그러나 대부분의 브라우저는 특정한 클래스의 객체(특히 모든 페이지의 `document.all` 객체)가 일부 상황에서 마치 값 `undefined`을 모방하는 것처럼 동작하는 것을 허용합니다. 느슨한 동등성은 다음 맥락 중 하나입니다. `null == A`와 `undefined == A`는 A가 `undefined`로 에뮬레이트 하는 객체인 경우에만 `true`로 평가됩니다. 다른 모든 경우에는 객체가 `undefined` 또는 `null`과 느슨하게 동등하지 않습니다.
 
 대부분의 경우에서 느슨한 동등을 사용하는 것이 권장되지 않습니다. 엄격한 동등을 사용한 비교 결과는 예측하기 쉽고, 형식 강제가 없기 때문에 더 빨리 평가될 수 있습니다.
 
