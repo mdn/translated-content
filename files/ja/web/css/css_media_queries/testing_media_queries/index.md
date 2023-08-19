@@ -1,89 +1,87 @@
 ---
-title: プログラムによるメディアクエリーの評価
+title: Testing media queries programmatically
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
+page-type: guide
+browser-compat: api.MediaQueryList
 ---
 
 {{CSSRef}}
 
-{{Glossary("DOM")}} では、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)の結果を {{domxref("MediaQueryList")}} インターフェイスおよびそのメソッドやプロパティを用いてプログラムからで調べることができる機能を備えています。 `MediaQueryList` オブジェクトを作成すると、クエリーの結果を確認したり、結果が変化したときに自動的に通知を受け取ったりすることができます。
+The {{Glossary("DOM")}} provides features that can test the results of a [media query](/en-US/docs/Web/CSS/CSS_media_queries) programmatically, via the {{domxref("MediaQueryList")}} interface and its methods and properties. Once you've created a `MediaQueryList` object, you can check the result of the query or receive notifications when the result changes.
 
-## メディアクエリーリストの作成
+## Creating a media query list
 
-クエリーの結果を評価できるようにするのに先立ち、メディアクエリーを示す `MediaQueryList` オブジェクトを作成する必要があります。オブジェクトを作成するには、{{domxref("window.matchMedia")}} メソッドを用います。
+Before you can evaluate the results of a media query, you need to create the `MediaQueryList` object representing the query. To do this, use the {{domxref("window.matchMedia")}} method.
 
-例えば、端末が横置きか縦置きかを調べるクエリーリストを設定したい場合は、以下のようにします。
+For example, to set up a query list that determines if the device is in landscape or portrait orientation:
 
 ```js
 const mediaQueryList = window.matchMedia("(orientation: portrait)");
 ```
 
-## クエリーの結果の確認
+## Checking the result of a query
 
-メディアクエリーリストが作成されると、その `matches` プロパティの値を参照することで、クエリーの結果を確認することができます。このプロパティは、クエリーの結果を反映します。
+Once you've created your media query list, you can check the result of the query by looking at the value of its `matches` property:
 
 ```js
 if (mediaQueryList.matches) {
-  /* 現在ビューポートが縦長である */
+  /* The viewport is currently in portrait orientation */
 } else {
-  /* 現在ビューポートが縦長ではない、すなわち横長である */
+  /* The viewport is not currently in portrait orientation, therefore landscape */
 }
 ```
 
-## クエリーの通知の受信
+## Receiving query notifications
 
-クエリーの評価結果の変化を継続的に意識する必要がある場合は、クエリーの結果をポーリングするよりも[リスナー](/ja/docs/Web/API/EventTarget/addEventListener)を登録したことが効率的です。このためには、 `addListener()` メソッドを {{domxref("MediaQueryList")}} オブジェクトに対して呼び出し、メディアクエリーの状態が変化したとき (例えば、メディアクエリーの結果が `true` から `false` へ移行した場合) に呼び出されるコールバック関数を設定します。
+If you need to be aware of changes to the evaluated result of the query on an ongoing basis, it's more efficient to register a [listener](/en-US/docs/Web/API/EventTarget/addEventListener) than to poll the query's result. To do this, call the `addEventListener()` method on the {{domxref("MediaQueryList")}} object, with a callback function to invoke when the media query status changes (e.g., the media query test goes from `true` to `false`):
 
 ```js
-// クエリーリストを作成する。
+// Create the query list.
 const mediaQueryList = window.matchMedia("(orientation: portrait)");
 
-// イベントリスナーのコールバック関数を定義する。
+// Define a callback function for the event listener.
 function handleOrientationChange(mql) {
-  // ...
+  // …
 }
 
-// 向き変更時のハンドラーを一度実行する。
+// Run the orientation change handler once.
 handleOrientationChange(mediaQueryList);
 
-// コールバック関数をリスナーとしてクエリーリストに追加する。
-mediaQueryList.addListener(handleOrientationChange);
+// Add the callback function as a listener to the query list.
+mediaQueryList.addEventListener("change", handleOrientationChange);
 ```
 
-このコードでは端末の向き (orientation) を評価するメディアクエリーリストを作成し、次にリスナーを追加しています。リスナーを定義した後、そのリスナーを直接一度呼び出しています。これにより、リスナーが現在の端末の向きを基にして初期状態の調整を行うことができます (そうしないと、コードでは端末の初期状態が縦置きと想定しているが実際は横置きであるような場合に、不整合が発生します)。
+This code creates the orientation-testing media query list, then adds an event listener to it. After defining the listener, we also call the listener directly. This makes our listener perform adjustments based on the current device orientation; otherwise, our code might assume the device is in portrait mode at startup, even if it's actually in landscape mode.
 
-次の `handleOrientationChange()` メソッドで、クエリーの結果の確認や端末の向きが変わったときに必要な処理を行います。
+The `handleOrientationChange()` function would look at the result of the query and handle whatever we need to do on an orientation change:
 
 ```js
 function handleOrientationChange(evt) {
   if (evt.matches) {
-    /* 現在ビューポートが縦長 */
+    /* The viewport is currently in portrait orientation */
   } else {
-    /* 現在ビューポートが横長 */
+    /* The viewport is currently in landscape orientation */
   }
 }
 ```
 
-上記で、引数を `evt` — イベントオブジェクトとして定義しています。これは [`MediaQueryList` の新しい実装](/ja/docs/Web/API/MediaQueryList#browser_compatibility)がイベントリスナーを標準の方法で扱うのでお分かりでしょう。標準外の {{domxref("MediaQueryListListener")}} の機構はもう使われませんが、標準のイベントリスナーの設定では、 {{domxref("MediaQueryListEvent")}} 型の[イベントオブジェクト](/ja/docs/Web/API/Event)をコールバック関数の引数として渡します。
+Above, we define the parameter as `evt` — an event object of type {{domxref("MediaQueryListEvent")}} that also includes the {{domxref("MediaQueryListEvent.media","media")}} and {{domxref("MediaQueryListEvent.matches","matches")}} properties, so you can query these features of the `MediaQueryList` by directly accessing it, or accessing the event object.
 
-このイベントオブジェクトは {{domxref("MediaQueryListEvent.media","media")}} および {{domxref("MediaQueryListEvent.matches","matches")}} プロパティも含んでおり、 `MediaQueryList` のこれらの機能に直接アクセスしたり、イベントオブジェクトにアクセスしたりすることができます。
+## Ending query notifications
 
-## クエリーの通知の終了
-
-メディアクエリーの値の変化について通知を受ける必要がなくなったときは、 `removeListener()` メソッドを `MediaQueryList` オブジェクトに対して呼び出してください。
+To stop receiving notifications about changes to the value of your media query, call {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} on the `MediaQueryList`, passing it the name of the previously-defined callback function:
 
 ```js
-mediaQueryList.removeListener(handleOrientationChange);
+mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
 
-## ブラウザーの互換性
+## Browser compatibility
 
-### `MediaQueryList` インターフェイス
+{{Compat}}
 
-{{Compat("api.MediaQueryList")}}
+## See also
 
-## 関連情報
-
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListEvent")}}
