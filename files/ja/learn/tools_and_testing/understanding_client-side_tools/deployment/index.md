@@ -26,31 +26,31 @@ l10n:
   </tbody>
 </table>
 
-## Post development
+## 開発後
 
-There's potentially a large range of problems to be solved in this section of the project's lifecycle. As such, it's important to create a toolchain that handles these problems in a way that requires as little manual intervention as possible.
+プロジェクトのライフサイクルのこのセクションでは、解決すべき広範囲の問題が潜在的に存在します。 したがって、手動介入をできるだけ少なくする方法でこれらの問題を処理するツールチェーンを作成することが重要です。
 
-Here's just a few things to consider for this particular project:
+この特定のプロジェクトに関して考慮すべき点がいくつかあります。
 
-- Generating a production build: Ensuring files are minimized, chunked, have tree-shaking applied, and that versions are "cache busted".
-- Running tests: These can range from "is this code formatted properly?" to "does this thing do what I expect?", and ensuring failing tests prevent deployment.
-- Actually deploying the updated code to a live URL: Or potentially a staging URL so it can be reviewed first.
+- 実稼働ビルドの生成： ファイルが最小化され、チャンク化され、ツリーシェイクが適用され、バージョンが「キャッシュが無効化」されていることを確認します。
+- テストの実行： テストの範囲は、「このコードは適切にフォーマットされていますか?」などです。 「これは期待どおりの動作をするか?」ということを確認し、テストが失敗することを確認すると展開が妨げられます。
+- 更新されたコードを実際にライブデプロイした URL： または、最初に確認できるようにステージング URL にデプロイすることもできます。
 
-> **Note:** Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Parcel (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.
+> **メモ：** キャッシュ無効化は、このモジュールではこれまでに見たことのない新しい用語です。 これはブラウザ自体のキャッシュ メカニズムを破壊する戦略であり、ブラウザにコードの新しいコピーを強制的にダウンロードさせます。 Parcel (そして実際には他の多くのツール) は、新しいビルドごとに一意のファイル名を生成します。 この一意のファイル名はブラウザのキャッシュを「破棄」し、デプロイされたコードが更新されるたびにブラウザが新しいコードをダウンロードするようにします。
 
-The above tasks also break down into further tasks; note that most web development teams will have their own terms and processes for at least some part of the post-development phase.
+上記のタスクはさらに別のタスクに分割されます。 ほとんどのウェブ開発チームは、開発後のフェーズの少なくとも一部について独自の条件とプロセスを持っていることに注意してください。
 
-For this project, we're going to use [Netlify](https://www.netlify.com/)'s wonderful static hosting offering to host our project. Netlify gives us hosting or more specifically, a URL to view your project online and to share it with your friends, family, and colleagues.
+このプロジェクトでは、 [Netlify](https://www.netlify.com/) の素晴らしい静的ホスティングサービスを使用してプロジェクトをホストします。 Netlify は、プロジェクトをオンラインで表示し、友人、家族、同僚と共有するためのホスティング、つまり URL を提供します。
 
-Deploying to hosting tends to be at the tail-end of the project life cycle, but with services such as Netlify bringing down the cost of deployments (both in financial terms and also the time required to actually deploy) it's possible to deploy during development to either share work in progress or to have a pre-release for some other purpose.
+ホスティングへのデプロイはプロジェクトのライフサイクルの最後になる傾向がありますが、 Netlify などのサービスを使用すると、デプロイのコスト (金銭面と実際のデプロイに必要な時間の両方) が削減され、開発中にデプロイすることが可能になります。 進行中の作業を共有するか、他の目的でプレリリースするかのいずれかです。
 
-Netlify, amongst other things, also allows you to run pre-deployment tasks, which in our case means that all the production code build processes can be performed inside of Netlify and if the build is successful, the website changes will be deployed.
+Netlify では、特に、デプロイ前のタスクを実行することもできます。これは、この場合、すべての実稼働コードのビルド プロセスを Netlify 内で実行でき、ビルドが成功すると、Web サイトの変更がデプロイされることを意味します。
 
-Although Netlify offers a [drag and drop deployment service](https://app.netlify.com/drop), we are intending to trigger a new deployment to Netlify each time we push to a GitHub repo.
+Netlify は [ドラッグアンドドロップデプロイメントサービス](https://app.netlify.com/drop) を提供していますが、 GitHub リポジトリにプッシュするたびに Netlify への新しいデプロイメントをトリガーする予定です。
 
-It's exactly these kinds of connected services that we would encourage you to look for when deciding on your own build toolchain. We can commit our code and push to GitHub and the updated code will automatically trigger the entire build routine. If all is well, we get a live change deployed automatically. The _only_ action we need to perform is that initial "push".
+独自のビルドツールチェーンを決定する際に探すことをお勧めするのは、まさにこの種の接続されたサービスです。 コードをコミットして GitHub にプッシュすると、更新されたコードによってビルドルーチン全体が自動的にトリガーされます。 すべて問題がなければ、ライブ変更が自動的にデプロイされます。 実行する必要があるアクションは、最初の「プッシュ」だけです。
 
-However, we do have to set these steps up, and we'll look at that now.
+ただし、これらの手順を設定する必要があるので、それについてはこれから見ていきます。
 
 ## The build process
 
