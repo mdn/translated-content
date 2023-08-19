@@ -1,8 +1,6 @@
 ---
 title: 기본적인 텍스트 및 글꼴 스타일링
 slug: Learn/CSS/Styling_text/Fundamentals
-l10n:
-  sourceCommit: 7c483c257e6cf9666f9a7e439e420ef15d12a5af
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
