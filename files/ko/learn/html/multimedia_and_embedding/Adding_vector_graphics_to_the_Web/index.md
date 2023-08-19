@@ -119,10 +119,7 @@ SVG에는 지금까지 설명한 것 외에도 몇 가지 추가적인 이점이
 SVG를 지원하지 않는 브라우저(IE 8 이하, Android 2.3 이하)의 경우, `src` 속성에서 PNG 또는 JPG를 참조하고 [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) 속성(최신 브라우저만 인식)을 사용하여 SVG를 참조할 수 있습니다. 이 경우 지원 브라우저에서만 SVG를 로드하며, 이전 브라우저에서는 대신 PNG를 로드합니다:
 
 ```html
-<img
-  src="equilateral.png"
-  alt="변이 같은 삼각형"
-  srcset="equilateral.svg" />
+<img src="equilateral.png" alt="변이 같은 삼각형" srcset="equilateral.svg" />
 ```
 
 아래와 같이 SVG를 CSS 배경 이미지로 사용할 수도 있습니다. 아래 코드에서 구형 브라우저는 인식하는 PNG를 그대로 사용하지만 최신 브라우저는 SVG를 로드합니다:
