@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
-original_slug: Web/API/AudioContext/currentTime
 ---
 
 {{ APIRef("Web Audio API") }}

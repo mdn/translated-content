@@ -23,6 +23,11 @@
         "description": "URL path of the page",
         "type": "string"
       },
+      "original_slug": {
+        "title": "Original slug",
+        "description": "URL path of the page before it was moved to /conflicting or /orphaned (Note: this key should ONLY be present in those two folders)",
+        "type": "string"
+      },
       "l10n": {
         "title": "Localization info",
         "description": "Metadata about the localization",

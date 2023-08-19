@@ -1,7 +1,6 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
-translation_of: Web/API/PerformanceResourceTiming/secureConnectionStart
 ---
 
 {{APIRef("Resource Timing API")}}

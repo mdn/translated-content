@@ -1,14 +1,6 @@
 ---
 title: Event.stopPropagation()
 slug: Web/API/Event/stopPropagation
-tags:
-  - API
-  - DOM
-  - Gecko
-  - stopPropagation
-  - Событие
-  - метод
-translation_of: Web/API/Event/stopPropagation
 ---
 
 {{APIRef("DOM")}}

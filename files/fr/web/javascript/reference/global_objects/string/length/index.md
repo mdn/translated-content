@@ -1,7 +1,6 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 ---
 
 {{JSRef}}

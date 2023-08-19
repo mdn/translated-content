@@ -1,6 +1,7 @@
 ---
 title: Prerequisitos
 slug: orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
+original_slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
 
 Para desarrollar usando las APIs de WebExtension, debes seguir algunos pasos antes de comenzar.

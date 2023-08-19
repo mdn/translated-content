@@ -1,7 +1,6 @@
 ---
 title: Générer des textures avec du code
 slug: Web/API/WebGL_API/By_example/Textures_from_code
-translation_of: Web/API/WebGL_API/By_example/Textures_from_code
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex","Apprendre/WebGL/Par_exemple/Les_textures_vidéos")}}

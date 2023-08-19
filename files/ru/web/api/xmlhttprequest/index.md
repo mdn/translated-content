@@ -1,19 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - JavaScript
-  - MakeBrowserAgnostic
-  - NeedsMobileBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}

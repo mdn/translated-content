@@ -1,16 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - Domain
-  - HTML DOM
-  - Property
-  - Same Origin
-  - Same Origin Policy
-  - iframe
-translation_of: Web/API/Document/domain
 ---
 
 {{ApiRef}}

@@ -1,7 +1,6 @@
 ---
 title: HSTS
 slug: Glossary/HSTS
-original_slug: Glossario/HSTS
 ---
 
 **O HTTP Strict Transport Security** permite que um site informe ao navegador que ele nunca deve carregar o site usando HTTP e deve converter automaticamente todas as tentativas de acessar o site usando HTTP para solicitações HTTPS. Consiste em um cabeçalho HTTP [`Strict-Transport-Security`](/pt-BR/docs/Web/HTTP/Headers/Strict-Transport-Security), enviado de volta pelo servidor com o recurso.

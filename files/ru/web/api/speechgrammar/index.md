@@ -1,15 +1,6 @@
 ---
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
-tags:
-  - API
-  - Интерфейс
-  - Справка
-  - Экспериментальный
-  - грамматика речи
-  - распознавание
-  - речь
-translation_of: Web/API/SpeechGrammar
 ---
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}

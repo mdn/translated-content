@@ -1,7 +1,6 @@
 ---
 title: Sintexe do valor
 slug: Web/CSS/Value_definition_syntax
-original_slug: Web/CSS/Sintexe_valor
 ---
 
 {{CSSRef}}
@@ -378,8 +377,8 @@ But not:
 
 ## Specifications
 
-| Specification                                                                                                | Status                           | Comment                               |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------- |
-| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
-| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
-| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
+| Specification                                                                    | Status                   | Comment                               |
+| -------------------------------------------------------------------------------- | ------------------------ | ------------------------------------- |
+| {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}            | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
+| {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}       | {{Spec2("CSS2.1")}}      | Adds the double ampersand combinator. |
+| {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}        | Initial definition                    |

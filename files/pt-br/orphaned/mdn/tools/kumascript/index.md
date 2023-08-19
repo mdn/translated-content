@@ -1,7 +1,6 @@
 ---
 title: KumaScript
 slug: orphaned/MDN/Tools/KumaScript
-original_slug: MDN/Tools/KumaScript
 ---
 
 {{MDNSidebar}}

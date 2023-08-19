@@ -1,7 +1,6 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-translation_of: Web/CSS/border-top
 ---
 
 {{CSSRef}}

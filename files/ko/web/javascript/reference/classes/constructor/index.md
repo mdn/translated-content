@@ -2,6 +2,7 @@
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 **`constructor`** 메서드는 {{jsxref("Statements/class", "클래스", "", 1)}}의 인스턴스 객체를 생성하고 초기화하는 특별한 메서드입니다.
@@ -23,7 +24,6 @@ constructor(argument0, argument1, ... , argumentN) { ... }
 
 ```js
 class Person {
-
   constructor(name) {
     this.name = name;
   }
@@ -31,10 +31,9 @@ class Person {
   introduce() {
     console.log(`Hello, my name is ${this.name}`);
   }
-
 }
 
-const otto = new Person('Otto');
+const otto = new Person("Otto");
 
 otto.introduce();
 ```
@@ -57,21 +56,19 @@ constructor(...args) {
 
 ```js
 class ValidationError extends Error {
-
   printCustomerMessage() {
     return `Validation failed :-( (details: ${this.message})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // ValidationError가 아니라 Error!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -83,27 +80,25 @@ try {
 
 ```js
 class ValidationError extends Error {
-
   constructor(message) {
-    super(message);  // 부모 클래스의 생성자 호출
-    this.name = 'ValidationError';
-    this.code = '42';
+    super(message); // 부모 클래스의 생성자 호출
+    this.name = "ValidationError";
+    this.code = "42";
   }
 
   printCustomerMessage() {
-     return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
+    return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
   }
-
 }
 
 try {
   throw new ValidationError("Not a valid phone number");
 } catch (error) {
-   if (error instanceof ValidationError) {
+  if (error instanceof ValidationError) {
     console.log(error.name); // 이제 ValidationError!
     console.log(error.printCustomerMessage());
   } else {
-    console.log('Unknown error', error);
+    console.log("Unknown error", error);
     throw error;
   }
 }
@@ -122,7 +117,7 @@ class Square extends Polygon {
     super(length, length);
     // 참고: 파생 클래스에서, this를 사용하기 전에는 반드시 super()를 먼저 호출해야 합니다.
     // 그렇지 않으면 ReferenceError가 발생합니다.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -142,15 +137,15 @@ class Square extends Polygon {
 
 ```js
 class Polygon {
-    constructor() {
-        this.name = "Polygon";
-    }
+  constructor() {
+    this.name = "Polygon";
+  }
 }
 
 class Square extends Polygon {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
 
 class Rectangle {}

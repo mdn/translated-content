@@ -1,7 +1,6 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-translation_of: Web/API/Event/bubbles
 ---
 
 {{ ApiRef("DOM") }}
@@ -15,7 +14,7 @@ translation_of: Web/API/Event/bubbles
 ### Синтаксис
 
 ```js
-event.bubbles
+event.bubbles;
 ```
 
 Возвращает булево значение `true`, если событие является всплывающим внутри DOM.

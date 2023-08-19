@@ -1,18 +1,6 @@
 ---
 title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-page-type: guide
-tags:
-  - Advanced
-  - DOM
-  - Guide
-  - HTTP
-  - MakeBrowserAgnostic
-  - Tutorial
-  - XHR
-  - XML
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -457,14 +445,9 @@ HTML-форму {{ HTMLElement("form") }} можно отправить четы
       <fieldset>
         <legend>Registration example</legend>
         <p>
-          <label
-            >First name:
-            <input type="text" name="firstname" /> </label
-          ><br />
-          <label
-            >Last name:
-            <input type="text" name="lastname" />
-          </label>
+          <label>First name: <input type="text" name="firstname" /></label>
+          <br />
+          <label>Last name: <input type="text" name="lastname" /></label>
         </p>
         <p>
           <input type="submit" value="Submit" />

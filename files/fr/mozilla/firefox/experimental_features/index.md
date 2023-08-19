@@ -1,7 +1,6 @@
 ---
 title: Fonctionnalités expérimentales dans Firefox
 slug: Mozilla/Firefox/Experimental_features
-translation_of: Mozilla/Firefox/Experimental_features
 ---
 
 {{FirefoxSidebar}}

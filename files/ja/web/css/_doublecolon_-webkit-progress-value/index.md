@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-value'
+title: "::-webkit-progress-value"
 slug: Web/CSS/::-webkit-progress-value
 ---
 
@@ -12,7 +12,7 @@ slug: Web/CSS/::-webkit-progress-value
 ## 構文
 
 ```css
-::-webkit-progress-value
+::-webkit-progress-value {}
 ```
 
 ## 例
@@ -22,7 +22,7 @@ slug: Web/CSS/::-webkit-progress-value
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### CSS

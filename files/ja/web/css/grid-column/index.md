@@ -24,7 +24,7 @@ grid-column: auto;
 /* 線番号による */
 grid-column: 1;
 grid-column: 1 / 3;
-grid-column: 1 /  span 2;
+grid-column: 1 / span 2;
 
 /* 線の名称による */
 grid-column: main-start;

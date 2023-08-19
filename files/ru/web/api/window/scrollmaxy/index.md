@@ -1,12 +1,6 @@
 ---
 title: Window.scrollMaxY
 slug: Web/API/Window/scrollMaxY
-tags:
-  - API
-  - HTML DOM
-  - Window
-  - Свойство
-translation_of: Web/API/Window/scrollMaxY
 ---
 
 {{APIRef}} {{Non-standard_header}}

@@ -49,11 +49,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Especificações
 
-| Especificação                                                                                                                    | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                                                   | Status                   | Comentário |
+| ----------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'the-button-element.html#the-optgroup-element', '&lt;optgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'forms.html#the-optgroup-element', '&lt;optgroup&gt;')}}                | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;optgroup&gt;')}}                      | {{Spec2('HTML4.01')}}    |            |
 
 ## Compatibilidade com navegadores
 

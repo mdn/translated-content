@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-original_slug: Web/API/RTCConfiguration
 ---
 
 {{APIRef("WebRTC")}}
@@ -11,13 +10,14 @@ original_slug: Web/API/RTCConfiguration
 ## 構文
 
 ```js
-new RTCPeerConnection()
-new RTCPeerConnection(configuration)
+new RTCPeerConnection();
+new RTCPeerConnection(configuration);
 ```
 
 ### 引数
 
 - `configuration` {{optional_inline}}
+
   - : 新しい接続を構成するためのオプションを提供するオブジェクトです。
 
     - `bundlePolicy` {{optional_inline}}

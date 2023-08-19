@@ -1,7 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-translation_of: Web/API/Node/childNodes
 ---
 
 {{APIRef("DOM")}}
@@ -14,7 +13,7 @@ translation_of: Web/API/Node/childNodes
 var ndList = elementNodeReference.childNodes;
 ```
 
-_ndList_ — упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, *ndList* пуст.
+_ndList_ — упорядоченная коллекция объектов элементов, которые являются детьми данного элемента. Если у элемента нет детей, _ndList_ пуст.
 
 _ndList_ — переменная, хранящая список дочерних элементов. Тип этого списка — {{domxref("NodeList")}}.
 

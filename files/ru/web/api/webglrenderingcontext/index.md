@@ -1,7 +1,6 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext
 ---
 
 {{APIRef("WebGL")}}

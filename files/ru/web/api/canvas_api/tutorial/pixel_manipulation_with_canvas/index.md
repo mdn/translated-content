@@ -1,12 +1,6 @@
 ---
 title: Пиксельная манипуляция с холстом
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-tags:
-  - Графика
-  - Промежуточный
-  - Руководство
-  - Холст
-translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
@@ -266,11 +260,9 @@ function draw(img) {
 {{Domxref ("HTMLCanvasElement")}} предоставляет метод `toDataURL()`, который полезен при сохранении изображений. Он возвращает [data URI](/ru/docs/Web/HTTP/data_URIs), содержащий представление изображения в формате, заданном параметром `type` (по умолчанию используется в [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) ). Возвращаемое изображение имеет разрешение 96 точек на дюйм.
 
 - **Примечание:**
-  - : Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет **испорчен**, и его содержимое больше не будет считываться и сохраняться. Смотрите {{SectionOnPage ("/ru/docs/Web/HTML/CORS_enabled_image", "Безопасность и испорченные холсты")}}
+  - : Имейте в виду, что если холст содержит пиксели, полученные из другого {{Glossary ("origin")}} без использования CORS, холст будет **испорчен**, и его содержимое больше не будет считываться и сохраняться. Смотрите [Безопасность и испорченные холсты](/ru/docs/Web/HTML/CORS_enabled_image#безопасность_и_испорченные_холсты_canvas)
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
-
   - : Настройки по умолчанию. Создаёт изображение в формате PNG.
-
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Создаёт изображение в формате JPG. Дополнительно вы можете задать параметр "качество" (quality) в диапазоне от 0 до 1, причём единица задаёт лучшее качество и 0 - почти не распознаваемый, но небольшой по размеру файл.
 

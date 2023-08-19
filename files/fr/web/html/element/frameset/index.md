@@ -1,7 +1,6 @@
 ---
 title: "<frameset> : l'élément contenant des frames"
 slug: Web/HTML/Element/frameset
-translation_of: Web/HTML/Element/frameset
 ---
 
 {{HTMLSidebar}}

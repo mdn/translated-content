@@ -44,24 +44,24 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 값이 `NaN`인지 확인하려면, {{jsxref("Number.isNaN()")}} 또는 {{jsxref("Global_Objects/isNaN", "isNaN()")}}를 사용하여 값이 `NaN`인지 여부를 확인 할 수 있습니다. 또는 `NaN`은 자신과 같지 않다고 비교되는 유일한 값이므로 `x !== x`와 같은 자체 비교를 수행할 수 있습니다.
 
 ```js
-NaN === NaN;        // false
+NaN === NaN; // false
 Number.NaN === NaN; // false
-isNaN(NaN);         // true
-isNaN(Number.NaN);  // true
+isNaN(NaN); // true
+isNaN(Number.NaN); // true
 
 function valueIsNaN(v) {
   return v !== v;
 }
-valueIsNaN(1);          // false
-valueIsNaN(NaN);        // true
+valueIsNaN(1); // false
+valueIsNaN(NaN); // true
 valueIsNaN(Number.NaN); // true
 ```
 
 그러나 `isNaN()`과 `Number.isNaN()`의 차이를 유의해야 합니다. `isNaN`은 현재 값이 `NaN`이거나, 숫자로 변환했을 때 `NaN`이 되면 참을 반환하지만, `Number.isNaN`은 현재 값이 `NaN`이어야만 참을 반환합니다.
 
 ```js
-isNaN('hello world'); // true
-Number.isNaN('hello world'); // false
+isNaN("hello world"); // true
+Number.isNaN("hello world"); // false
 ```
 
 같은 이유로 BigInt 값을 사용하면 `Number.isNaN()`이 아닌 `isNaN()`에서 오류가 발생합니다.

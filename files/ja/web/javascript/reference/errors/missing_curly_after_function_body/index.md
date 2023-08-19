@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
@@ -40,7 +40,7 @@ var charge = function() {
 正しくは、次の通りです。
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -58,7 +58,7 @@ var charge = function() {
 多くの場合、インデントを変えるか、インデントをダブルチェックすると、これらのエラーを特定するのに役立ちます。
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

@@ -1,7 +1,6 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-translation_of: Web/CSS/@counter-style/prefix
 ---
 
 {{CSSRef}}

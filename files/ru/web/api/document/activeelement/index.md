@@ -1,15 +1,6 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
-translation_of_original: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
 
 {{ ApiRef() }}
@@ -39,7 +30,7 @@ var curElement = document.activeElement;
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <script type="text/javascript" charset="utf-8">

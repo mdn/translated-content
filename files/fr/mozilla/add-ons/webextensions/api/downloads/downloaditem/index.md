@@ -1,7 +1,6 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
 {{AddonSidebar()}}

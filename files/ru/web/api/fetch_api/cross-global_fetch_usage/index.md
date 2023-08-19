@@ -1,7 +1,6 @@
 ---
 title: Cross-global fetch usage
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
 ---
 
 Эта статья объясняет крайний случай, который случается с fetch (и потенциально с другими API, предоставляющими такой же способ получения данных). Когда cross-origin fetch, включающий относительный URL, инициируется из {{htmlelement("iframe")}}, относительный URL может использовать текущий глобальный location вместо того что задаётся в iframe.

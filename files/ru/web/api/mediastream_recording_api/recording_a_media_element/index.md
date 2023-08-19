@@ -1,7 +1,6 @@
 ---
 title: Запись медиа элемента
 slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
-translation_of: Web/API/MediaStream_Recording_API/Recording_a_media_element
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}

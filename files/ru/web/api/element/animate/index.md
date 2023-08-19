@@ -1,15 +1,6 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-tags:
-  - API
-  - Animation
-  - Element
-  - Experimental
-  - Method
-  - Reference
-  - web animation
-translation_of: Web/API/Element/animate
 ---
 
 {{APIRef('Web Animations')}} {{SeeCompatTable}}

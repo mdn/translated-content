@@ -1,7 +1,6 @@
 ---
 title: Dessin de texte avec canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}

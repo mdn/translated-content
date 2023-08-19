@@ -1,7 +1,6 @@
 ---
 title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
-translation_of: Web/API/WebVTT_API
 ---
 
 {{DefaultAPISidebar("WebVTT")}}

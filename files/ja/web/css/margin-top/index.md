@@ -15,9 +15,9 @@ slug: Web/CSS/margin-top
 
 ```css
 /* <length> 値 */
-margin-top: 10px;  /* 絶対的な寸法 */
-margin-top: 1em;   /* 文字の寸法からの相対 */
-margin-top: 5%;    /* 直近のブロックコンテナーの幅からの相対 */
+margin-top: 10px; /* 絶対的な寸法 */
+margin-top: 1em; /* 文字の寸法からの相対 */
+margin-top: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
 margin-top: auto;
@@ -53,10 +53,18 @@ margin-top: unset;
 ### 正と負の上マージンの設定
 
 ```css
-.content { margin-top:   5%; }
-.sidebox { margin-top: 10px; }
-.logo    { margin-top: -5px; }
-#footer  { margin-top:  1em; }
+.content {
+  margin-top: 5%;
+}
+.sidebox {
+  margin-top: 10px;
+}
+.logo {
+  margin-top: -5px;
+}
+#footer {
+  margin-top: 1em;
+}
 ```
 
 ## 仕様書

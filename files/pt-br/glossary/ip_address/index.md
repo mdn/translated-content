@@ -1,7 +1,6 @@
 ---
 title: Endereço IP
 slug: Glossary/IP_Address
-original_slug: Glossario/Endereco_IP
 ---
 
 Um endereço IP é um número atribuído a cada dispositivo conectado a uma rede que usa o protocolo de Internet.

@@ -1,7 +1,6 @@
 ---
 title: Usando XMLHttpRequest
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
-original_slug: Web/API/XMLHttpRequest/Usando_XMLHttpRequest
 ---
 
 [`XMLHttpRequest`](/pt-BR/docs/DOM/XMLHttpRequest) torna o envio de requisições HTTP muito fácil. Basta criar uma instância do objeto, abrir uma url e enviar uma requisição. O [status](/pt-BR/docs/HTTP/HTTP_response_codes) [HTTP](/pt-BR/docs/HTTP/HTTP_response_codes)do resultado assim como o seu conteúdo estarão disponíveis quando a transação for completada. Esta página descreve alguns casos comuns de uso desse poderoso objeto JavaScript.
@@ -237,12 +236,12 @@ All these things are done automatically by the web browser whenever you submit a
     <script type="text/javascript">
       "use strict";
 
-/*\
-|*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
-|*|
-|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
-\*/
+      /*\
+      |*|
+      |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polifyll ::
+      |*|
+      |*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()
+      \*/
 
       if (!XMLHttpRequest.prototype.sendAsBinary) {
         XMLHttpRequest.prototype.sendAsBinary = function (sData) {
@@ -257,19 +256,19 @@ All these things are done automatically by the web browser whenever you submit a
         };
       }
 
-/*\
-|*|
-|*|  :: AJAX Form Submit Framework ::
-|*|
-|*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
-|*|
-|*|  This framework is released under the GNU Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
-|*|
-|*|  Syntax:
-|*|
-|*|   AJAXSubmit(HTMLFormElement);
-\*/
+      /*\
+      |*|
+      |*|  :: AJAX Form Submit Framework ::
+      |*|
+      |*|  https://developer.mozilla.org/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      |*|
+      |*|  This framework is released under the GNU Public License, version 3 or later.
+      |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+      |*|
+      |*|  Syntax:
+      |*|
+      |*|   AJAXSubmit(HTMLFormElement);
+      \*/
 
       var AJAXSubmit = (function () {
         function ajaxSuccess() {

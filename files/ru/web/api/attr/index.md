@@ -1,7 +1,6 @@
 ---
 title: Attr
 slug: Web/API/Attr
-translation_of: Web/API/Attr
 ---
 
 {{APIRef("DOM")}}

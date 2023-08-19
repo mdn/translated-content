@@ -1,14 +1,6 @@
 ---
 title: IP Address
 slug: Glossary/IP_Address
-tags:
-  - Основы
-  - Глоссарий
-  - инфраструктура
-  - сеть
-  - терминология
-translation_of: Glossary/IP_Address
-original_slug: Глоссарий/IP_Address
 ---
 
 IP адрес - это число, назначенное каждому устройству, подключённому к сети, которая использует Интернет-протокол.

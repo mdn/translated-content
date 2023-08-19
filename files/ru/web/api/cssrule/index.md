@@ -1,7 +1,6 @@
 ---
 title: CSSRule
 slug: Web/API/CSSRule
-translation_of: Web/API/CSSRule
 ---
 
 {{APIRef("CSSOM")}}

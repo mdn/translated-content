@@ -1,7 +1,6 @@
 ---
-title: ':-moz-locale-dir(ltr)'
+title: ":-moz-locale-dir(ltr)"
 slug: Web/CSS/:-moz-locale-dir_ltr
-original_slug: Web/CSS/:-moz-locale-dir(ltr)
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -15,7 +14,7 @@ original_slug: Web/CSS/:-moz-locale-dir(ltr)
 ## 構文
 
 ```css
-:-moz-locale-dir(ltr)
+:-moz-locale-dir(ltr) {}
 ```
 
 ## 例

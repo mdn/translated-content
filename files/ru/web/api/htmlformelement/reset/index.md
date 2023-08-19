@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-translation_of: Web/API/HTMLFormElement/reset
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -13,13 +12,13 @@ translation_of: Web/API/HTMLFormElement/reset
 ## Синтаксис
 
 ```js
-HTMLFormElement.reset()
+HTMLFormElement.reset();
 ```
 
 ## Пример
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## Спецификации

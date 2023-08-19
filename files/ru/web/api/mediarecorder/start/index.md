@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.start()
 slug: Web/API/MediaRecorder/start
-translation_of: Web/API/MediaRecorder/start
 ---
 
 {{APIRef("Media Recorder API")}}

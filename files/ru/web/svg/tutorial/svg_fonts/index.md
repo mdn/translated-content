@@ -1,7 +1,6 @@
 ---
 title: SVG шрифты
 slug: Web/SVG/Tutorial/SVG_fonts
-translation_of: Web/SVG/Tutorial/SVG_fonts
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}

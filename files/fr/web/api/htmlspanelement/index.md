@@ -1,7 +1,6 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
-translation_of: Web/API/HTMLSpanElement
 ---
 
 {{ ApiRef() }}

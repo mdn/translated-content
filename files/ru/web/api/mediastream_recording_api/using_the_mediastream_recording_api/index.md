@@ -1,7 +1,6 @@
 ---
 title: Использование интерфейса записи медиапотока
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
-translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}

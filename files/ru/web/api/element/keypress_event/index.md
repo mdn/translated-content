@@ -1,8 +1,6 @@
 ---
 title: keypress
 slug: Web/API/Element/keypress_event
-translation_of: Web/API/Document/keypress_event
-original_slug: Web/API/Document/keypress_event
 ---
 
 Событие `keypress` происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
@@ -242,22 +240,19 @@ Chrome не запускает событие `keypress` для известны
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
+  <head>
+    <script>
+      "use strict";
 
-'use strict';
+      document.addEventListener("keypress", (event) => {
+        const keyName = event.key;
 
-document.addEventListener('keypress', (event) => {
-  const keyName = event.key;
-
-  alert('keypress event\n\n' + 'key: ' + keyName);
-});
-
-</script>
-</head>
-<body>
-</body>
+        alert("keypress event\n\n" + "key: " + keyName);
+      });
+    </script>
+  </head>
+  <body></body>
 </html>
 ```

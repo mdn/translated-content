@@ -1,7 +1,6 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
-translation_of: Web/API/Notification/badge
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

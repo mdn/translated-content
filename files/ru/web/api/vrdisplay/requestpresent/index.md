@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestPresent()
 slug: Web/API/VRDisplay/requestPresent
-translation_of: Web/API/VRDisplay/requestPresent
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}

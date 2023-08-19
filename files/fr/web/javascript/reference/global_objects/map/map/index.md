@@ -1,7 +1,6 @@
 ---
 title: Constructeur Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 ---
 
 {{JSRef}}

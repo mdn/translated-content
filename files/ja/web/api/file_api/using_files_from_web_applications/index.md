@@ -1,7 +1,6 @@
 ---
 title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 l10n:
   sourceCommit: b079d9c8113879d70c668fc94347d50c35fc2fac
 ---
@@ -25,7 +24,7 @@ l10n:
 旧来の DOM セレクターを使って、最初に選択されたファイルにアクセスします。
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 ### change イベントでの選択されたファイルへのアクセス
@@ -73,7 +72,7 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 次のコードは `size` プロパティを利用する例です。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja-JP">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +116,7 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
           ];
           const exponent = Math.min(
             Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1
+            units.length - 1,
           );
           const approx = numberOfBytes / 1024 ** exponent;
           const output =
@@ -127,10 +126,11 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
                   units[exponent]
                 } (${numberOfBytes} bytes)`;
 
-          document.getElementById("fileNum").textContent = uploadInput.files.length;
+          document.getElementById("fileNum").textContent =
+            uploadInput.files.length;
           document.getElementById("fileSize").textContent = output;
         },
-        false
+        false,
       );
     </script>
   </body>
@@ -150,7 +150,9 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
   multiple
   accept="image/*"
   style="display:none" />
-<button id="fileSelect" type="button">いくつかのファイルを選択してください。</button>
+<button id="fileSelect" type="button">
+  いくつかのファイルを選択してください。
+</button>
 ```
 
 `click` イベントを扱うコードは次のようなものです。
@@ -159,11 +161,15 @@ for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
 const fileSelect = document.getElementById("fileSelect");
 const fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false,
+);
 ```
 
 {{HTMLElement("button")}} は、好きなようにスタイル付けできます。
@@ -258,7 +264,9 @@ function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     const img = document.createElement("img");
     img.classList.add("obj");
@@ -266,7 +274,9 @@ function handleFiles(files) {
     preview.appendChild(img); // 「プレビュー」とは、コンテンツが表示される div 出力のことを想定しています。
 
     const reader = new FileReader();
-    reader.onload = (e) => { img.src = e.target.result; };
+    reader.onload = (e) => {
+      img.src = e.target.result;
+    };
     reader.readAsDataURL(file);
   }
 }
@@ -319,15 +329,19 @@ URL.revokeObjectURL(objectURL);
 
 ```js
 const fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", (e) => {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // "#" への移動を防ぐ
-}, false);
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // "#" への移動を防ぐ
+  },
+  false,
+);
 
 fileElem.addEventListener("change", handleFiles, false);
 
@@ -347,7 +361,7 @@ function handleFiles() {
       img.height = 60;
       img.onload = () => {
         URL.revokeObjectURL(img.src);
-      }
+      };
       li.appendChild(img);
       const info = document.createElement("span");
       info.innerHTML = `${this.files[i].name}: ${this.files[i].size} バイト`;
@@ -365,12 +379,12 @@ function handleFiles() {
 2. 新しいリスト要素は、{{HTMLElement("div")}} ブロックの中に {{DOMxRef("Node.appendChild()")}} メソッドを呼び出すことで挿入されます。
 3. `files` で表される {{DOMxRef("FileList")}} 内のそれぞれの {{DOMxRef("File")}} に対して次の処理を実行します。
 
-    1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
-    2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
-    3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
-    4. 画像の高さを 60 ピクセルに設定します。
-    5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
-    6. 新しいリスト項目をリストに追加する。
+   1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
+   2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
+   3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
+   4. 画像の高さを 60 ピクセルに設定します。
+   5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
+   6. 新しいリスト項目をリストに追加する。
 
 上のコードのライブデモはこちらです。
 
@@ -408,20 +422,31 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", (e) => {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    (e) => {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", (e) => {
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
+  xhr.upload.addEventListener(
+    "load",
+    (e) => {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {
     xhr.send(evt.target.result);
   };
@@ -431,19 +456,24 @@ function FileUpload(img, file) {
 function createThrobber(img) {
   const throbberWidth = 64;
   const throbberHeight = 6;
-  const throbber = document.createElement('canvas');
-  throbber.classList.add('upload-progress');
-  throbber.setAttribute('width', throbberWidth);
-  throbber.setAttribute('height', throbberHeight);
+  const throbber = document.createElement("canvas");
+  throbber.classList.add("upload-progress");
+  throbber.setAttribute("width", throbberWidth);
+  throbber.setAttribute("height", throbberHeight);
   img.parentNode.appendChild(throbber);
-  throbber.ctx = throbber.getContext('2d');
-  throbber.ctx.fillStyle = 'orange';
+  throbber.ctx = throbber.getContext("2d");
+  throbber.ctx.fillStyle = "orange";
   throbber.update = (percent) => {
-    throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
+    throbber.ctx.fillRect(
+      0,
+      0,
+      (throbberWidth * percent) / 100,
+      throbberHeight,
+    );
     if (percent === 100) {
-      throbber.ctx.fillStyle = 'green';
+      throbber.ctx.fillStyle = "green";
     }
-  }
+  };
   throbber.update(0);
   return throbber;
 }
@@ -534,8 +564,8 @@ Firefox では、 PDF が iframe 内に埋め込まれて表示されるよう�
 
 ```js
 const obj_url = URL.createObjectURL(blob);
-const iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+const iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 URL.revokeObjectURL(obj_url);
 ```
 
@@ -544,7 +574,7 @@ URL.revokeObjectURL(obj_url);
 他の形式のファイルも同じように操作できます。ここでは、アップロードされた動画をプレビューする方法を紹介します。
 
 ```js
-const video = document.getElementById('video');
+const video = document.getElementById("video");
 const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
 video.play();

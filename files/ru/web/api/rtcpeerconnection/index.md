@@ -1,7 +1,6 @@
 ---
 title: Интерфейс RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 
 {{APIRef('WebRTC')}}

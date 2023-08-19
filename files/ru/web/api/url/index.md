@@ -1,17 +1,6 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - URL API
-  - URL
-  - URI
-  - Address
-  - Hostname
-  - Domain
-  - Адрес
-  - Домен
-translation_of: Web/API/URL
 ---
 
 {{ApiRef("URL API")}}

@@ -1,12 +1,6 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - Обзор
-  - Справка
-translation_of: Web/API/Canvas_API
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

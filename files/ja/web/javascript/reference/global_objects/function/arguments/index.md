@@ -20,17 +20,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ### arguments オブジェクトの使用
 
 ```js
-function f(n) { g(n - 1) }
-
-function g(n) {
-  console.log('before: ' + g.arguments[0])
-  if (n > 0) { f(n) }
-  console.log('after: ' + g.arguments[0])
+function f(n) {
+  g(n - 1);
 }
 
-f(2)
+function g(n) {
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
+}
 
-console.log('returned: ' + g.arguments)
+f(2);
+
+console.log("returned: " + g.arguments);
 
 // Output
 

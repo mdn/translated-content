@@ -1,7 +1,6 @@
 ---
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
 
 {{AddonSidebar()}}

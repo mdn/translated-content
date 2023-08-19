@@ -1,7 +1,6 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-translation_of: Web/API/Document/createAttribute
 ---
 
 {{ ApiRef("DOM") }}

@@ -1,11 +1,6 @@
 ---
 title: Оператор new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - JavaScript
-  - Левосторонние выражения
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
 
 {{jsSidebar("Operators")}}
@@ -51,13 +46,13 @@ new constructor[([arguments])]
 function Car() {}
 car1 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
 Car.prototype.color = null;
-console.log(car1.color);    // null
+console.log(car1.color); // null
 
 car1.color = "black";
-console.log(car1.color);   // black
+console.log(car1.color); // black
 ```
 
 ## Примеры
@@ -128,7 +123,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 Вместо строковых или численных значений можно передать объект как параметр. Чтобы узнать имя владельца `car2`, получим доступ к свойству:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## Спецификации

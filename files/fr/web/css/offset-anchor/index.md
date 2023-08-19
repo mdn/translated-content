@@ -1,7 +1,6 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
-translation_of: Web/CSS/offset-anchor
 ---
 
 {{cssref}}{{seecompattable}}

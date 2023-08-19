@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -17,7 +16,8 @@ For the document body object, the measurement includes total linear content heig
 ## Syntax
 
 ```js
-var intElemOffsetHeight = document.getElementById(id_attribute_value).offsetHeight;
+var intElemOffsetHeight =
+  document.getElementById(id_attribute_value).offsetHeight;
 ```
 
 _intElemOffsetHeight_ is a variable storing an integer corresponding to the offsetHeight pixel value of the element. The offsetHeight property is readonly.

@@ -1,7 +1,6 @@
 ---
 title: Визуализация с Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 
 Одна из самых интересных фич Web Audio API — возможность извлекать частоту, форму волны и другие данные из звукового источника, которые могут быть использованы для создания визуализаций. Эта статья объясняет, как это можно сделать, и приводит несколько базовых примеров использования.

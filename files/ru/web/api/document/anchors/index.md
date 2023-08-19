@@ -1,14 +1,6 @@
 ---
 title: Document.anchors
 slug: Web/API/Document/anchors
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - id
-  - name
-  - Якоря
-translation_of: Web/API/Document/anchors
 ---
 
 {{APIRef("DOM")}}

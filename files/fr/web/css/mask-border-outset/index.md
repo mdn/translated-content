@@ -1,7 +1,6 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
-translation_of: Web/CSS/mask-border-outset
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

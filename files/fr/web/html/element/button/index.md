@@ -1,7 +1,6 @@
 ---
 title: "<button> : l'élément représentant un bouton"
 slug: Web/HTML/Element/button
-translation_of: Web/HTML/Element/button
 ---
 
 {{HTMLSidebar}}

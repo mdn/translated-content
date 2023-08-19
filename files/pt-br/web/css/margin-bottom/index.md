@@ -17,9 +17,9 @@ A propriedade não tem efeito em non-[replaced](/pt-BR/docs/Web/CSS/Replaced_ele
 
 ```css
 /* <length> values */
-margin-bottom: 10px;  /* Um tamanho absoluto */
-margin-bottom: 1em;   /* relativo ao tamanho do texto */
-margin-bottom: 5%;    /* relativo à largura do container do bloco mais próximo */
+margin-bottom: 10px; /* Um tamanho absoluto */
+margin-bottom: 1em; /* relativo ao tamanho do texto */
+margin-bottom: 5%; /* relativo à largura do container do bloco mais próximo */
 
 /* Keyword values */
 margin-bottom: auto;
@@ -51,9 +51,9 @@ A propriedade `margin-bottom` é especificada como a palavra chave `auto`, ou a 
 
 ```html
 <div class="container">
-<div class="box0">Box 0</div>
-<div class="box1">Box 1</div>
-<div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">Box 0</div>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box one's negative margin pulls me up</div>
 </div>
 ```
 
@@ -63,17 +63,17 @@ CSS para definir margin-bottom e height
 
 ```css
 .box0 {
-    margin-bottom:1em;
-    height:3em;
+  margin-bottom: 1em;
+  height: 3em;
 }
 .box1 {
-    margin-bottom:-1.5em;
-    height:4em;
+  margin-bottom: -1.5em;
+  height: 4em;
 }
 .box2 {
-    border:1px dashed black;
-    border-width:1px 0;
-    margin-bottom:2em;
+  border: 1px dashed black;
+  border-width: 1px 0;
+  margin-bottom: 2em;
 }
 ```
 
@@ -81,13 +81,13 @@ Algumas definições para container e divs, para que o os efeitos de margin poss
 
 ```css
 .container {
-    background-color:orange;
-    width:320px;
-    border:1px solid black;
+  background-color: orange;
+  width: 320px;
+  border: 1px solid black;
 }
 div {
-    width:320px;
-    background-color:gold;
+  width: 320px;
+  background-color: gold;
 }
 ```
 
@@ -95,12 +95,12 @@ div {
 
 ## Especificações
 
-| Especificação                                                                                | Status                                   | Comentário                                |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------- |
-| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}             | {{Spec2('CSS3 Box')}}             | Nenhuma mudança significativa             |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | Definir o `margin-bottom` como "animavel" |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | Remove seu efeito nos elementos in-line.  |
-| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Definição inicial                         |
+| Especificação                                                         | Status                        | Comentário                                |
+| --------------------------------------------------------------------- | ----------------------------- | ----------------------------------------- |
+| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}           | {{Spec2('CSS3 Box')}}         | Nenhuma mudança significativa             |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}}  | {{Spec2('CSS3 Transitions')}} | Definir o `margin-bottom` como "animavel" |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}           | Remove seu efeito nos elementos in-line.  |
+| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}               | {{Spec2('CSS1')}}             | Definição inicial                         |
 
 {{cssinfo}}
 

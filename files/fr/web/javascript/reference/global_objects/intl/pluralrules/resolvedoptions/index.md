@@ -1,7 +1,6 @@
 ---
 title: Intl.PluralRules.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 ---
 
 {{JSRef}}

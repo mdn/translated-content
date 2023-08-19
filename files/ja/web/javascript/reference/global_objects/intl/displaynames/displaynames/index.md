@@ -14,9 +14,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ## 構文
 
 ```js
-new Intl.DisplayNames()
-new Intl.DisplayNames(locales)
-new Intl.DisplayNames(locales, options)
+new Intl.DisplayNames();
+new Intl.DisplayNames(locales);
+new Intl.DisplayNames(locales, options);
 ```
 
 ### 引数
@@ -76,7 +76,7 @@ new Intl.DisplayNames(locales, options)
 ロケールを指定しない基本的な使用法では、既定のロケールと既定のオプションで書式化された文字列が返されます。
 
 ```js
-console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
+console.log(new Intl.DisplayNames([], { type: "language" }).of("US"));
 // 期待される出力: 'us'
 ```
 

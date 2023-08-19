@@ -102,24 +102,24 @@ Este exemplo mostra algumas variações de formatos de números localizados. A f
 var numero = 123456.789;
 
 // O alemão usa vírgula como separador de decimal e ponto para milhares
-console.log(new Intl.NumberFormat('de-DE').format(numero));
+console.log(new Intl.NumberFormat("de-DE").format(numero));
 // → 123.456,789
 
 // O árabe usa dígitos reais árabes em muitos países que falam árabe
-console.log(new Intl.NumberFormat('ar-EG').format(numero));
+console.log(new Intl.NumberFormat("ar-EG").format(numero));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // A Índia usa separadores de milhares/cem mil/dez milhões
-console.log(new Intl.NumberFormat('en-IN').format(numero));
+console.log(new Intl.NumberFormat("en-IN").format(numero));
 // → 1,23,456.789
 
 // A chave de extensão nu requer um sistema de numeração, ex. decimal chinês
-console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(numero));
+console.log(new Intl.NumberFormat("zh-Hans-CN-u-nu-hanidec").format(numero));
 // → 一二三,四五六.七八九
 
 // Quando informada uma língua sem suporte, como balinês,
 // inclua uma língua reseva, neste caso indonésio
-console.log(new Intl.NumberFormat(['ban', 'id']).format(numero));
+console.log(new Intl.NumberFormat(["ban", "id"]).format(numero));
 // → 123.456,789
 ```
 
@@ -131,24 +131,36 @@ Os resultados podem ser personalizados usando o argumento `options`:
 var numero = 123456.789;
 
 // informando um formato de moeda
-console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(numero));
+console.log(
+  new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
+    numero,
+  ),
+);
 // → 123.456,79 €
 
 // o yen japonês não tem uma unidade menor
-console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(numero));
+console.log(
+  new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" }).format(
+    numero,
+  ),
+);
 // → ￥123,457
 
 // limitando a três dígitos significativos
-console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(numero));
+console.log(
+  new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(
+    numero,
+  ),
+);
 // → 1,23,000
 ```
 
 ## Especificações
 
-| Especificação                                                                                        | Status                           | Comentário         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 1.0')}} | Definição inicial. |
-| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 2.0')}} |                    |
+| Especificação                                                              | Status                    | Comentário         |
+| -------------------------------------------------------------------------- | ------------------------- | ------------------ |
+| {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}               | {{Spec2('ES Int 1.0')}}   | Definição inicial. |
+| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}               | {{Spec2('ES Int 2.0')}}   |                    |
 | {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                    |
 
 ## Compatibilidade com navegadores

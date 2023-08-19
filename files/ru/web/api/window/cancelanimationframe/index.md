@@ -1,7 +1,6 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
 
 {{APIRef}}
@@ -48,13 +47,13 @@ myReq = requestAnimationFrame(step);
 cancelAnimationFrame(myReq);
 ```
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-- {{spec("https://www.w3.org/TR/html51/webappapis.html#animation-frames", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
 
 ## Смотрите также
 

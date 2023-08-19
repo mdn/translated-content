@@ -1,7 +1,6 @@
 ---
 title: update
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
 
 {{AddonSidebar()}}

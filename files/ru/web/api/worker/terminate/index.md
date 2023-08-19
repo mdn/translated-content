@@ -1,15 +1,6 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-tags:
-  - API
-  - Reference
-  - Web Workers
-  - Worker
-  - terminate
-  - Ссылка
-  - метод
-translation_of: Web/API/Worker/terminate
 ---
 
 {{APIRef("Web Workers API")}}

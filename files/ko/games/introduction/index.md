@@ -1,6 +1,8 @@
 ---
 title: 웹 게임 개발에 대해
 slug: Games/Introduction
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}

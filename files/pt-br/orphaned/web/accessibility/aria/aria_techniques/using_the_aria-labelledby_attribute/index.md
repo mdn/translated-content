@@ -1,8 +1,6 @@
 ---
 title: Usando o atributo aria-labelledby
-slug: >-
-  orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
+slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 ---
 
 ### Descrição

@@ -1,15 +1,6 @@
 ---
 title: BackgroundFetchRecord.responseReady
 slug: Web/API/BackgroundFetchRecord/responseReady
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - responseReady
-  - BackgroundFetchRecord
-  - Experimental
-browser-compat: api.BackgroundFetchRecord.responseReady
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}

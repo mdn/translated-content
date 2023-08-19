@@ -1,5 +1,5 @@
 ---
-title: 'Window: storage イベント'
+title: "Window: storage イベント"
 slug: Web/API/Window/storage_event
 ---
 

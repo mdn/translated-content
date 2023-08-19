@@ -1,7 +1,6 @@
 ---
 title: CSSNumericValue.parse()
 slug: Web/API/CSSNumericValue/parse_static
-original_slug: Web/API/CSSNumericValue/parse
 ---
 
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}

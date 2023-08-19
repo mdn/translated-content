@@ -1,17 +1,6 @@
 ---
 title: MediaError
 slug: Web/API/MediaError
-tags:
-  - API
-  - HTML DOM
-  - MediaError
-  - Видео
-  - Интерфейс
-  - Медиа
-  - Ошибки
-  - Справка
-  - аудио
-translation_of: Web/API/MediaError
 ---
 
 {{APIRef("HTML DOM")}}

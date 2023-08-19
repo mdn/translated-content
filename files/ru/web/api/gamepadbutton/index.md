@@ -1,7 +1,6 @@
 ---
 title: GamepadButton
 slug: Web/API/GamepadButton
-translation_of: Web/API/GamepadButton
 ---
 
 {{APIRef("Gamepad API")}}Интерфейс **`GamepadButton`** определяет отдельную кнопку геймпада или другого контроллера, позволяя получить доступ к текущему состоянию различных типов кнопок, доступных на устройстве

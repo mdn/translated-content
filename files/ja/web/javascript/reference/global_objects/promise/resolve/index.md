@@ -30,7 +30,7 @@ Promise.resolve(value)
 
 ## 解説
 
-`Promise.resolve()` はプロミスを *解決* します。これはプロミスを履行したり拒否したりすることとは異なります。用語の定義については、[プロミスの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#description)を参照してください。簡単に言うと、 `Promise.resolve()` は、最終的な状態が他のプロミス、 Thenable オブジェクト、または他の値に依存しているプロミスを返します。
+`Promise.resolve()` はプロミスを _解決_ します。これはプロミスを履行したり拒否したりすることとは異なります。用語の定義については、[プロミスの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#description)を参照してください。簡単に言うと、 `Promise.resolve()` は、最終的な状態が他のプロミス、 Thenable オブジェクト、または他の値に依存しているプロミスを返します。
 
 `Promise.resolve()` は汎用で、サブクラス化を対応しています。つまり、`Promise` のサブクラスで呼び出すことができ、その結果はサブクラス型のプロミスになります。これを行うには、サブクラスのコンストラクターは [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じ定義で実装する必要があります。引数として `resolve` と `reject` コールバックで呼び出すことができる単一の `executor` 関数を受け入れることができます。
 
@@ -39,7 +39,7 @@ Promise.resolve(value)
 解決ロジックの大部分は，実際には `Promise()` コンストラクターに渡される[リゾルバー関数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function)で実装されます。概要をまとめると、次のようになります。
 
 - [Thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) でない値が渡された場合，返されたプロミスはその値ですでに履行されたものとなります。
-Thenable が渡された場合、`then` メソッドを呼び出され、引数としてリゾルバー関数のペアを渡すことで、返されるプロミスはその Thenable の状態を採用することになります。（しかし、ネイティブのプロミスはラッパーを作成せずに直接 `Promise.resolve()` を通すので、ネイティブのプロミスでは `then` メソッドは呼ばれません）。リゾルバー関数が別の Thenable オブジェクトを受け取ると、それは再び解決されるので、最終的なプロミスの履行値は決して Thenable になることはないでしょう。
+  Thenable が渡された場合、`then` メソッドを呼び出され、引数としてリゾルバー関数のペアを渡すことで、返されるプロミスはその Thenable の状態を採用することになります。（しかし、ネイティブのプロミスはラッパーを作成せずに直接 `Promise.resolve()` を通すので、ネイティブのプロミスでは `then` メソッドは呼ばれません）。リゾルバー関数が別の Thenable オブジェクトを受け取ると、それは再び解決されるので、最終的なプロミスの履行値は決して Thenable になることはないでしょう。
 
 ## 例
 
@@ -93,7 +93,7 @@ const p1 = Promise.resolve({
     onFulfill("fulfilled!");
   },
 });
-console.log(p1 instanceof Promise) // true、オブジェクトが Promise にキャストされた
+console.log(p1 instanceof Promise); // true、オブジェクトが Promise にキャストされた
 
 p1.then(
   (v) => {

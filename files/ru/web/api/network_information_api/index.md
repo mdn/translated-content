@@ -1,7 +1,6 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-translation_of: Web/API/Network_Information_API
 ---
 
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
@@ -61,6 +60,5 @@ if (connection) {
 
 ## See also
 
-- {{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
 - [Online and offline events](/ru/docs/Online_and_offline_events)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

@@ -1,11 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - console
-  - Отладка
-translation_of: Web/API/Console_API
 ---
 
 {{DefaultAPISidebar("Console API")}}Console API обеспечивает функциональность, которая позволяет разработчикам выполнять задачи по отладке, такие как логирование сообщений или значений переменных в определённых местах кода, измерение времени, требуемое на выполнение задачи

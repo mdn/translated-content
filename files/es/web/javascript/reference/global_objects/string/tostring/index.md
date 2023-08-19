@@ -27,7 +27,7 @@ El siguiente ejemplo muestra el valor cadena de un objeto String:
 
 ```js
 cadena = new String("Hello world");
-alert(cadena.toString())      // Displays "Hello world"
+alert(cadena.toString()); // Displays "Hello world"
 ```
 
 ## Vea También

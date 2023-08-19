@@ -1,7 +1,6 @@
 ---
 title: box-direction
 slug: Web/CSS/box-direction
-translation_of: Web/CSS/box-direction
 ---
 
 {{CSSRef}}{{Non-standard_header}}

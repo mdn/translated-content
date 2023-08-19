@@ -1,7 +1,6 @@
 ---
 title: "Document: beforescriptexecute イベント"
 slug: Web/API/Document/beforescriptexecute_event
-original_slug: Web/API/Document/onbeforescriptexecute
 ---
 
 {{APIRef}}{{non-standard_header}}

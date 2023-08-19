@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
-translation_of: Web/API/ServiceWorkerRegistration/update
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

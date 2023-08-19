@@ -1,12 +1,6 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-tags:
-  - API
-  - Класс
-  - Коллекция
-  - Элемент
-translation_of: Web/API/Element/getElementsByClassName
 ---
 
 {{APIRef("DOM")}}

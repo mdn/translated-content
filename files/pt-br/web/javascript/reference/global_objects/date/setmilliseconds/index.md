@@ -39,8 +39,8 @@ theBigDay.setMilliseconds(100);
 
 ## Especificações
 
-| Especificação                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                                    |
+| ------------------------------------------------------------------------------------------------ |
 | {{SpecName('ESDraft', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}} |
 
 ## Compatibilidade com navegadores

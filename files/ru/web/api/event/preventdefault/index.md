@@ -1,12 +1,6 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-tags:
-  - DOM
-  - preventDefault
-  - метод
-  - события
-translation_of: Web/API/Event/preventDefault
 ---
 
 {{ apiRef("DOM") }}Метод preventDefault () интерфейса {{domxref ("Event")}} сообщает {{Glossary("User agent")}}, что если событие не обрабатывается явно, его действие по умолчанию не должно выполняться так, как обычно. Событие продолжает распространяться как обычно, до тех пор, пока один из его обработчиков не вызывает методы {{domxref ("Event.stopPropagation", " stopPropagation ()")}} или {{domxref (" Event.stopImmediatePropagation", " stopImmediatePropagation ()")}}, любой из которых сразу же прекращает распространение.Как отмечено ниже, вызов метода preventDefault () для события, не подлежащего отмене, например события, отправленного через {{domxref("EventTarget.dispatchEvent ()")}}, без указания cancelable: true не имеет эффекта.

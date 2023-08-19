@@ -1,7 +1,6 @@
 ---
 title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
-translation_of: Mozilla/Add-ons/WebExtensions/API/search
 ---
 
 {{AddonSidebar}}

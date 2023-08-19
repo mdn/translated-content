@@ -12,7 +12,7 @@ A função **`eval()`** computa um código JavaScript representado como uma stri
 ## Sintaxe
 
 ```js
-eval(string)
+eval(string);
 ```
 
 ### Parâmetros
@@ -36,7 +36,7 @@ Se o argumento de `eval()` não é uma string, `eval()` retorna o argumento inal
 
 ```js
 eval(new String("2 + 2")); // retorna um objeto String contendo "2 + 2"
-eval("2 + 2");             // retorna 4
+eval("2 + 2"); // retorna 4
 ```
 
 Você pode contornar esta limitação de forma genérica usando `toString()`.
@@ -50,11 +50,12 @@ Se você usar a função `eval` _indiretamente_, invocando-a por outra referênc
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval('x + y'));  // Chamada direta, usa o escopo local, resulta em 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Chamada direta, usa o escopo local, resulta em 6
   var geval = eval; // equivalente a chamar eval no escopo global
-  console.log(geval('x + y')); // Chamada indireta, usa o escopo global, lança uma exceção ReferenceError porque `x` não foi declarado
-  (0, eval)('x + y'); // outro exemplo de chamada indireta
+  console.log(geval("x + y")); // Chamada indireta, usa o escopo global, lança uma exceção ReferenceError porque `x` não foi declarado
+  (0, eval)("x + y"); // outro exemplo de chamada indireta
 }
 ```
 
@@ -72,17 +73,17 @@ Você não deve utilizar `eval()` para converter nomes de propriedades em propri
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  //retorna "a" ou "b"
+var propname = getPropName(); //retorna "a" ou "b"
 
-eval( "var result = obj." + propname );
+eval("var result = obj." + propname);
 ```
 
 No entanto, `eval()` não é necessário aqui. De fato, sua utilização não é recomendada. Ao invés disso, utilize os [operadores de acesso](/pt-BR/docs/Web/JavaScript/Reference/Operators/Member_Operators), que são mais rápidos e seguros:
 
 ```js
 var obj = { a: 20, b: 30 };
-var propname = getPropName();  //retorna "a" ou "b"
-var result = obj[ propname ];  //  obj[ "a" ] é o mesmo como obj.a
+var propname = getPropName(); //retorna "a" ou "b"
+var result = obj[propname]; //  obj[ "a" ] é o mesmo como obj.a
 ```
 
 ### Utilize funções ao invés de avaliar snippets de código
@@ -126,7 +127,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // returns 42
-eval(z);           // returns 42
+eval(z); // returns 42
 ```
 
 ### Exemplo: Using `eval` to evaluate a string of JavaScript statements
@@ -147,12 +148,12 @@ document.write("<P>z is ", eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // returns 2
+var b = eval(str); // returns 2
 
 alert("b is : " + b);
 
 a = false;
-b = eval(str);  // returns 3
+b = eval(str); // returns 3
 
 alert("b is : " + b);
 ```
@@ -160,19 +161,19 @@ alert("b is : " + b);
 ### Exemplo: avaliar uma string definindo a função necessária "(" and ")" como prefixo e sufixo
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // return undefined
-var fct2 = eval(fctStr2)  // return a function
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // return undefined
+var fct2 = eval(fctStr2); // return a function
 ```
 
 ## Especificações
 
-| Especificação                                                | Status                   | Comentário        |
-| ------------------------------------------------------------ | ------------------------ | ----------------- |
-| ECMAScript 1st Edition.                                      | Standard                 | Definição inicial |
+| Especificação                                  | Status             | Comentário        |
+| ---------------------------------------------- | ------------------ | ----------------- |
+| ECMAScript 1st Edition.                        | Standard           | Definição inicial |
 | {{SpecName('ES5.1', '#sec-15.1.2.1', 'eval')}} | {{Spec2('ES5.1')}} |                   |
-| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}     |                   |
+| {{SpecName('ES6', '#sec-eval-x', 'eval')}}     | {{Spec2('ES6')}}   |                   |
 
 ## Compatibilidade com navegadores
 

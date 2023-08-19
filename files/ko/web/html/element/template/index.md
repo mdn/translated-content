@@ -42,7 +42,7 @@ slug: Web/HTML/Element/template
       <th scope="row">가능한 부모 요소</th>
       <td>
         메타데이터 콘텐츠, 구문 콘텐츠, 또는 스크립트 지원 요소를 허용하는 모든
-        요소. 또한, {{htmlattrxref("span", "colgroup")}} 특성이 없는
+        요소. 또한, <a href="/ko/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 특성이 없는
         {{htmlelement("colgroup")}} 요소도 가능.
       </td>
     </tr>

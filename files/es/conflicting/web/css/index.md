@@ -1,6 +1,7 @@
 ---
 title: Herramientas
 slug: conflicting/Web/CSS
+original_slug: Web/CSS/Tools
 ---
 
 CSS ofrece una serie de características poderosas que puede ser difíciles de usar, o tener un gran número de parámetros, por lo que es muy útil visualizarlos mientras se trabaja en ellos. Esta página ofrece enlaces a una serie de herramientas que le ayudarán a construir sus estilos usando estas caracteristicas.

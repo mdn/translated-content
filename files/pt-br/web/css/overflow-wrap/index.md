@@ -1,7 +1,6 @@
 ---
 title: word-wrap
 slug: Web/CSS/overflow-wrap
-original_slug: Web/CSS/word-wrap
 ---
 
 {{CSSRef}} {{SeeCompatTable}}
@@ -30,21 +29,28 @@ word-wrap:  normal | break-word
 ## Exemplos
 
 ```css
-p { width: 13em; background: gold; }
+p {
+  width: 13em;
+  background: gold;
+}
 ```
 
 FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsgesetzes und straßenverkehrsrechtlicher Vorschriften)
 
 ```css
-p { width: 13em; background: gold; word-wrap: break-word; }
+p {
+  width: 13em;
+  background: gold;
+  word-wrap: break-word;
+}
 ```
 
 FStrPrivFinÄndG (Gesetz zur Änderung des Fernstraßenbauprivatfinanzierungsgesetzes und straßenverkehrsrechtlicher Vorschriften)
 
 ## Especificações
 
-| Especificação                                                        | Status                           | Comentário |
-| -------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                                        | Status                   | Comentário |
+| -------------------------------------------------------------------- | ------------------------ | ---------- |
 | [CSS Text Level 3](http://dev.w3.org/csswg/css3-text/#overflow-wrap) | {{ Spec2('CSS3 Text') }} |            |
 
 ## Compatibilidade com navegadores

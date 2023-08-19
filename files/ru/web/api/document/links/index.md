@@ -1,13 +1,6 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/Document/links
 ---
 
 {{ APIRef("DOM") }}

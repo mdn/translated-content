@@ -1,10 +1,6 @@
 ---
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
-tags:
-  - Свойство
-  - Экспериментально
-translation_of: Web/API/AbortSignal/aborted
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}

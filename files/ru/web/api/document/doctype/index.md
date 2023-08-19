@@ -1,13 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - DOM
-  - Документ
-  - Отсылка
-  - Свойство
-  - Справка
-translation_of: Web/API/Document/doctype
 ---
 
 {{ApiRef("DOM")}}

@@ -1,7 +1,6 @@
 ---
 title: Location
 slug: Web/HTTP/Headers/Location
-original_slug: Web/HTTP/Headers/Localização
 ---
 
 {{HTTPSidebar}}
@@ -51,8 +50,8 @@ Location: /index.html
 
 ## Especificações
 
-| Especificação                                    | Título                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| Especificação                        | Título                                                        |
+| ------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "Location", "7.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores

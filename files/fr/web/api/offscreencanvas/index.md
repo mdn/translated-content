@@ -1,7 +1,6 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
-translation_of: Web/API/OffscreenCanvas
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}

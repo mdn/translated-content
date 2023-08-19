@@ -1,7 +1,6 @@
 ---
 title: Window.mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
-translation_of: Web/API/Window/mozInnerScreenY
 ---
 
 {{APIRef}}

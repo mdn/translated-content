@@ -44,7 +44,7 @@ if ("serviceWorker" in navigator) {
       // 登録に失敗
       console.log(`登録に失敗しました: ${error}`);
     });
-};
+}
 ```
 
 ## 仕様書

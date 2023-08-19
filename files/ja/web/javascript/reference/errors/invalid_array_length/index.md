@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
@@ -41,26 +41,26 @@ RangeError: Array buffer allocation failed (Chromium-based)
 ### 不正なケース
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32)) //32 ビットシステム
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32)); //32 ビットシステム
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // length プロパティに -1 を設定
+a.length = a.length - 1; // length プロパティに -1 を設定
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // length プロパティに 2^32 を設定
+b.length = b.length + 1; // length プロパティに 2^32 を設定
 ```
 
 ### 有効な場合
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(Math.pow(2, 33))  // 64 ビットシステム、 Firefox 89 以降
-new ArrayBuffer(0)
+[ Math.pow(2, 40) ]; // [ 1099511627776 ]
+[ -1 ]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 33)); // 64 ビットシステム、 Firefox 89 以降
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

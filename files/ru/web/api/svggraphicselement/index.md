@@ -1,10 +1,6 @@
 ---
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
-tags:
-  - API
-  - SVG
-translation_of: Web/API/SVGGraphicsElement
 ---
 
 {{APIRef("SVG")}}

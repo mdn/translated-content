@@ -1,7 +1,6 @@
 ---
 title: Селектор потомков
 slug: Web/CSS/Descendant_combinator
-translation_of: Web/CSS/Descendant_combinator
 ---
 
 {{CSSRef("Selectors")}}
@@ -19,13 +18,18 @@ selector1 selector2 {стили }
 ## Пример
 
 ```css
-span { background-color: white; }
-div span { background-color: DodgerBlue; }
+span {
+  background-color: white;
+}
+div span {
+  background-color: DodgerBlue;
+}
 ```
 
 ```html
 <div>
-  <span>Span 1
+  <span
+    >Span 1
     <span>Span 2</span>
   </span>
 </div>

@@ -1,11 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
-translation_of: Web/API/FileList
 ---
 
 {{APIRef("File API")}}
@@ -86,7 +81,7 @@ for (var i = 0; i < files.length; i++) {
 Здесь пример посложнее.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head> </head>
   <body>

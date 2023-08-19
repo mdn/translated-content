@@ -54,12 +54,12 @@ try {
   var a = variavelNaoDefinida;
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "variavelNaoDefinida não está definida"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "Scratchpad/1"
-  console.log(e.lineNumber);                // 2
-  console.log(e.columnNumber);              // 6
-  console.log(e.stack);                     // "@Scratchpad/2:2:7\n"
+  console.log(e.message); // "variavelNaoDefinida não está definida"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 6
+  console.log(e.stack); // "@Scratchpad/2:2:7\n"
 }
 ```
 
@@ -67,25 +67,25 @@ try {
 
 ```js
 try {
-  throw new ReferenceError('Olá', 'arquivoQualquer.js', 10);
+  throw new ReferenceError("Olá", "arquivoQualquer.js", 10);
 } catch (e) {
   console.log(e instanceof ReferenceError); // true
-  console.log(e.message);                   // "Olá"
-  console.log(e.name);                      // "ReferenceError"
-  console.log(e.fileName);                  // "arquivoQualquer.js"
-  console.log(e.lineNumber);                // 10
-  console.log(e.columnNumber);              // 0
-  console.log(e.stack);                     // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Olá"
+  console.log(e.name); // "ReferenceError"
+  console.log(e.fileName); // "arquivoQualquer.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                                                                | Estado                       | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}         | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                                 | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}         |                    |
+| Especificação                                                                                             | Estado               | Comentário         |
+| --------------------------------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES3')}}                                                                                       | {{Spec2('ES3')}}     | Definição inicial. |
+| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                 | {{Spec2('ES5.1')}}   |                    |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}     |                    |
 | {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

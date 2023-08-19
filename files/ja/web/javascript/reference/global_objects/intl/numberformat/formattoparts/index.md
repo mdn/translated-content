@@ -30,8 +30,8 @@ Intl.NumberFormat.prototype.formatToParts(number)
 [
   { type: "integer", value: "3" },
   { type: "group", value: "." },
-  { type: "integer", value: "500" }
-]
+  { type: "integer", value: "500" },
+];
 ```
 
 可能なタイプは以下のとおりです。
@@ -73,9 +73,9 @@ Intl.NumberFormat.prototype.formatToParts(number)
 ```js
 var number = 3500;
 
-var formatter = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+var formatter = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
 formatter.format(number);
@@ -89,25 +89,30 @@ formatter.formatToParts(number);
 
 // 返値:
 [
-  { type: "integer",  value: "3"   },
-  { type: "group",    value: "."   },
-  { type: "integer",  value: "500" },
-  { type: "decimal",  value: ","   },
-  { type: "fraction", value: "00"  },
-  { type: "literal",  value: " "   },
-  { type: "currency", value: "€"   }
-]
+  { type: "integer", value: "3" },
+  { type: "group", value: "." },
+  { type: "integer", value: "500" },
+  { type: "decimal", value: "," },
+  { type: "fraction", value: "00" },
+  { type: "literal", value: " " },
+  { type: "currency", value: "€" },
+];
 ```
 
 これで情報は個別に利用可能となり、カスタマイズされた方法でフォーマットして連結することができます。例えば {{jsxref("Array.prototype.map()")}}, [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [switch 文](/ja/docs/Web/JavaScript/Reference/Statements/switch), [テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals), {{jsxref("Array.prototype.reduce()")}} を使います。
 
 ```js
-var numberString = formatter.formatToParts(number).map(({type, value}) => {
-  switch (type) {
-    case 'currency': return `<strong>${value}</strong>`;
-    default : return value;
-  }
-}).reduce((string, part) => string + part);
+var numberString = formatter
+  .formatToParts(number)
+  .map(({ type, value }) => {
+    switch (type) {
+      case "currency":
+        return `<strong>${value}</strong>`;
+      default:
+        return value;
+    }
+  })
+  .reduce((string, part) => string + part);
 ```
 
 上記は`formatToParts()`メソッドを使い、通貨を太字にします。

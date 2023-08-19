@@ -1,7 +1,6 @@
 ---
 title: MediaElementAudioSourceNode
 slug: Web/API/MediaElementAudioSourceNode
-translation_of: Web/API/MediaElementAudioSourceNode
 ---
 
 {{APIRef("Web Audio API")}}
