@@ -333,7 +333,7 @@ text-shadow: 4px 4px 5px red;
 
 1. 원본 텍스트에서 그림자의 수평 오프셋 — 사용 가능한 대부분의 CSS [길이 및 크기 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있지만 가장 일반적으로 px를 사용합니다. 이 값이 포함되어야 합니다.
 2. 원본 텍스트에서 그림자의 수직 오프셋. 그림자를 왼쪽/오른쪽이 아닌 위/아래로 이동한다는 점을 제외하면 기본적으로 수평 오프셋과 동일하게 동작합니다. 이 값이 포함되어야 합니다.
-3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
+3. 흐림 반경 - 값이 높을수록 그림자가 더 넓게 분산됩니다. 이 값이 포함되지 않은 경우 기본값은 0이며 이는 흐림이 없음을 의미합니다. 사용 가능한 대부분의 CSS [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
 4. 모든 CSS [색상 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)를 사용할 수 있는 그림자의 기본 색상입니다. 포함되지 않은 경우 기본적으로 `black`입니다.
 
 > **참고:** 양수 오프셋 값은 그림자를 오른쪽과 아래로 이동하지만 음수 오프셋 값을 사용하여 그림자를 왼쪽과 위쪽으로 이동할 수도 있습니다(예: `-1px -1px`).
