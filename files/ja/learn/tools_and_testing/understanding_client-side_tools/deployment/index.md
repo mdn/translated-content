@@ -52,20 +52,20 @@ Netlify は [ドラッグアンドドロップデプロイメントサービス]
 
 ただし、これらの手順を設定する必要があるので、それについてはこれから見ていきます。
 
-## The build process
+## ビルドプロセス
 
-Again, because we're using Parcel for development, the build option is extremely simple to add. Instead of running the server with `npx parcel src/index.html`, we can run it with `npx parcel build src/index.html` and Parcel will build everything ready for production instead of just running it for development and testing purposes. This includes doing minification and tree-shaking of code, and cache-busting on filenames.
+繰り返しになりますが、開発には Parcel を使用しているため、ビルドオプションの追加は非常に簡単です。 `npx parcel src/index.html` を使用してサーバーを実行する代わりに、 `npx parcel build src/index.html` を使用してサーバーを実行することができます。これにより、Parcel は、単に開発やテストの目的で実行するのではなく、本番環境に備えたすべてのものを構築します。 これには、コードの縮小とツリーシェイクの実行、およびファイル名のキャッシュ無効化が含まれます。
 
-The newly-created production code is placed in a new directory called `dist`, which contains _all_ the files required to run the website, ready for you to upload to a server.
+新しく作成された実稼働コードは、 `dist` という新しいディレクトリに配置されます。このディレクトリには、ウェブサイトを実行するために必要なすべてのファイルが含まれており、すぐにサーバーにアップロードできます。
 
-However, doing this step manually isn't our final aim — what we want is for the build to happen automatically and the result of the `dist` directory to be deployed live on our website.
+ただし、このステップを手動で実行することが最終的な目的ではありません。私たちが望んでいるのは、ビルドが自動的に行われ、 `dist` ディレクトリの結果がウェブサイトにライブでデプロイされることです。
 
-This is where our code, GitHub, and Netlify need to be set up to talk to one another, so that each time we update our GitHub code repository, Netlify will automatically pick up the changes, run the build tasks, and finally release a new update.
+GitHub のコードリポジトリを更新するたびに、 Netlify がその変更を自動的に拾い上げ、ビルドタスクを実行し、最終的に新しいアップデートをリリースします。
 
-We're going to add the build command to our `package.json` file as an npm script, so that the command `npm run build` will trigger the build process. This step isn't necessary, but it is a good best practice to get into the habit of setting up — across all our projects, we can then rely on `npm run build` to always do the complete build step, without needing to remember the specific build command arguments for each project.
+ビルドコマンドを npm スクリプトとして `package.json` ファイルに追加して、コマンド `npm run build` がビルド プロセスをトリガーするようにします。 このステップは必須ではありませんが、セットアップの習慣を身につけるのは良いベストプラクティスです。すべてのプロジェクトにわたって、 `npm run build` を利用して、覚えておく必要なく常に完全なビルドステップを実行できます。 各プロジェクトの特定のビルド コマンド引数。
 
-1. Open the `package.json` file in your project's root directory, and find the `scripts` property.
-2. We'll add a `build` command that we can run to build our code. Add the following line to your project now:
+1. プロジェクトのルート ディレクトリにある `package.json` ファイルを開き、 `scripts` プロパティを見つけます。
+2. コードをビルドするために実行できる `build` コマンドを追加します。 次の行をプロジェクトに追加します。
 
    ```json
    "scripts": {
@@ -74,7 +74,7 @@ We're going to add the build command to our `package.json` file as an npm script
    }
    ```
 
-   > **Note:** If the `scripts` property already has a command inside it, put a comma at the end of it. Keep the JSON valid.
+   > **メモ：** `scripts` プロパティ内にすでにコマンドが含まれている場合は、コマンドの末尾にカンマを入れます。 JSON を有効なままにしておきます。
 
 3. You should now be able to run the following command in the root of your project directory to run the production build step (first quit the running process with <kbd>Ctrl</kbd> + <kbd>C</kbd> if you need to):
 
