@@ -13,7 +13,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">필요 조건</th>
+      <th scope="row">필요한 사전 지식</th>
       <td>
         이 평가에 앞서 이 모듈의 모든 문서를 이미 작업해 보셨어야 합니다.
       </td>
