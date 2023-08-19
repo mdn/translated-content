@@ -49,7 +49,7 @@ console.log(obj === null); // false
 console.log(obj === undefined); // false
 ```
 
-엄격한 동등은 거의 항상 사용하는 올바른 비교 연산입니다. 숫자를 제외한 모든 값에 대해 "한 값은 자신과만 같다"라는 명백한 의미 체계를 사용합니다. 숫자의 경우 약간 다른 의미 체계를 사용하여 서로 다른 두 가지 경우를 처리합니다. 첫 번째는 부동 소수점 0이 양수 또는 음수로 부호화 된다는점입니다. 이는 특정 수학 솔루션을 나타내는 데 유용하지만, 대부분의 상황에서는 `+0`과 `-0`의 차이를 신경 쓰지 않으므로 엄격한 동등은 두 값을 동일한 값으로 취급합니다. 두 번째는 부동 소수점이 `NaN`이라는 숫자가 아닌 값의 개념을 포함하여 어떤 불분명한 수학 문제(예: 양의 무한대에 음의 무한대를 더함)에 대한 솔루션을 나타내는 경우입니다. 엄격한 동등은 `NaN`을 다른 모든 값과 같지 않은 것으로 취급합니다. (`(x !== x)`가 `true`인 유일한 경우는 `x`가 `NaN`일 때입니다.)
+엄격한 동등은 거의 항상 사용하는 올바른 비교 연산입니다. 숫자를 제외한 모든 값에 대해 "한 값은 자신과만 같다"라는 명백한 의미 체계를 사용합니다. 숫자의 경우 약간 다른 의미 체계를 사용하여 서로 다른 두 가지 경우를 처리합니다. 첫 번째는 부동 소수점 0이 양수 또는 음수로 부호화 된다는점입니다. 이는 특정 수학 해를 나타내는 데 유용하지만, 대부분의 상황에서는 `+0`과 `-0`의 차이를 신경 쓰지 않으므로 엄격한 동등은 두 값을 동일한 값으로 취급합니다. 두 번째는 부동 소수점이 `NaN`이라는 숫자가 아닌 값의 개념을 포함하여 어떤 불분명한 수학 문제(예: 양의 무한대에 음의 무한대를 더함)에 대한 해를 나타내는 경우입니다. 엄격한 동등은 `NaN`을 다른 모든 값과 같지 않은 것으로 취급합니다. (`(x !== x)`가 `true`인 유일한 경우는 `x`가 `NaN`일 때입니다.)
 
 `===` 외에도 엄격한 동등은 [`Array.prototype.indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), [`Array.prototype.lastIndexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf), [`TypedArray.prototype.indexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf), [`TypedArray.prototype.lastIndexOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf), 그리고 [`case`](/ko/docs/Web/JavaScript/Reference/Statements/switch) 일치를 포함한 인덱스 검색 메서드에서 사용됩니다. 즉, `indexOf(NaN)`을 사용하여 배열에서 `NaN` 값의 인덱스를 찾거나 `NaN`을 `switch` 문에서 `case` 값으로 사용하여 어떤 항목과 일치하도록 만들 수 없습니다.
 
