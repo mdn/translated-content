@@ -5,11 +5,11 @@ slug: Web/CSS/counter-set
 
 {{CSSRef}}
 
-**`counter-set`** [CSS](/zh-CN/docs/Web/CSS) 属性将 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)设置为给定值。它会操作现有计数器的值，并且只有在元素上没有给定名称的计数器时才会创建新计数器。
+**`counter-set`** [CSS](/zh-CN/docs/Web/CSS) 属性将 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)设置为给定值。它会操作现有计数器的值，并且只有在元素上没有给定名称的计数器时才会创建新计数器。
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **备注：** 计数器的值可以通过 {{cssxref("counter-increment")}} CSS 属性进行增加或减少。
+> **备注：** 计数器的值可以通过 {{cssxref("counter-increment")}} CSS 属性进行递增或递减。
 
 ## 语法
 
@@ -36,7 +36,7 @@ counter-set: unset;
 
 `counter-set` 属性可以指定为以下之一：
 
-- 一个命名计数器的 `<custom-ident>`，后面可选跟一个 `<integer>`。你可以指定要重置的计数器数量，每个名称或名称 - 数字对之间用空格分隔。
+- 一个命名计数器的 `<custom-ident>`，后面可跟一个 `<integer>`。你可以指定要重置的计数器数量，每个名称或名称 - 数字对之间用空格分隔。
 - 关键字值 `none`。
 
 ### 值
@@ -48,11 +48,11 @@ counter-set: unset;
 - `none`
   - : 不执行计数器设置。这可以用来覆盖在较不具体的规则中定义的 `counter-set`。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -78,7 +78,7 @@ h1 {
 
 ## 参见
 
-- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}
