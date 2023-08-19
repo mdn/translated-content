@@ -24,7 +24,7 @@ var myJson = PushEvent.data.json();
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var jsonObj = event.data.json();
 
   // JSON を使って何かを実行する
