@@ -456,7 +456,7 @@ p {
 
 ### 선 높이
 
-{{cssxref("line-height")}} 속성은 각 텍스트 줄의 높이를 설정합니다. 이 속성은 대부분의 [길이 및 크기 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있지만 승수 역할을 하고 일반적으로 최상의 옵션으로 간주되는 단위 없는 값을 사용할 수도 있습니다. {{cssxref("font-size")}}를 곱하여 `line-height`를 얻습니다. 본문 텍스트는 일반적으로 줄 간격이 떨어져 있을 때 더 보기 좋고 읽기 쉽습니다. 권장 줄 높이는 약 1.5–2(두 배 간격)입니다. 따라서 텍스트 줄을 글꼴 높이의 1.5배로 설정하려면 다음을 사용합니다.
+{{cssxref("line-height")}} 속성은 각 텍스트 줄의 높이를 설정합니다. 이 속성은 대부분의 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있지만 승수 역할을 하고 일반적으로 최상의 옵션으로 간주되는 단위 없는 값을 사용할 수도 있습니다. {{cssxref("font-size")}}를 곱하여 `line-height`를 얻습니다. 본문 텍스트는 일반적으로 줄 간격이 떨어져 있을 때 더 보기 좋고 읽기 쉽습니다. 권장 줄 높이는 약 1.5–2(두 배 간격)입니다. 따라서 텍스트 줄을 글꼴 높이의 1.5배로 설정하려면 다음을 사용합니다.
 
 ```css
 line-height: 1.5;
