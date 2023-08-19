@@ -35,7 +35,6 @@ slug: Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app
 PWA 具有网站的优势，包括：
 
 - PWA 是使用标准的 web 平台技术开发的，所以它们可以从单一代码库在多个操作系统和设备类上运行。
-
 - PWA 可以直接从网络访问。
 
 PWA 也具有平台特定应用程序的许多优势，包括：
@@ -43,27 +42,19 @@ PWA 也具有平台特定应用程序的许多优势，包括：
 - [**PWA 可以安装在设备上**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)。这意味着：
 
   - PWA 可以从平台的应用商店安装，也可以直接从网络安装。
-
   - PWA 可以像平台特定的应用程序一样安装，并可以自定义安装过程。
-
   - 一旦安装，PWA 会在设备上得到一个应用图标，与平台专属应用程序一样。
-
   - 一旦安装，PWA 可以作为独立的应用程序启动，而不是作为浏览器中的网站。
 
 - [**PWA 可以在后台与离线操作**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)：一个典型的网站只在被浏览器加载后才处于活动状态。PWA 可以：
 
   - 在设备没有网络连接时工作。
-
   - 在后台更新内容。
-
   - 对来自服务器的[推送消息](/zh-CN/docs/Web/API/Push_API)做出响应。
-
   - 使用操作系统的[通知](/zh-CN/docs/Web/API/Notifications_API)系统显示通知。
 
 - PWA 可以[使用整个屏幕](/zh-CN/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)，而不是在浏览器 UI 中运行。
-
 - PWA 可以与设备集成，注册为共享目标和来源，并访问设备功能。
-
 - PWA 可以在应用商店以及通过网络公开发布。
 
 ### PWA 和浏览器
@@ -108,7 +99,7 @@ PWA 必须有一个服务工作线程，并且服务工作线程必须实现至�
 
 ### 渐进式增强
 
-虽然 {{Glossary("Progressive Enhancement", "渐进式增强")}} 是大多数网站的一个可取属性，但对于 PWA 来说尤其重要，因为它们期望在广泛的设备上运行，并且通常使用可能不被所有浏览器支持的高级 Web API。
+虽然{{Glossary("Progressive Enhancement", "渐进式增强")}}是大多数网站的一个可取属性，但对于 PWA 来说尤其重要，因为它们期望在广泛的设备上运行，并且通常使用可能不被所有浏览器支持的高级 Web API。
 
 渐进增强的一个基本组成部分是，如果用户通过在浏览器中输入其 URL 的方式在网络上访问你的 PWA，则用户可以像访问普通网站一样与应用程序交互。但是如果浏览器可以安装它，则会提示用户安装它，并且该应用程序将作为设备上的新功能出现。
 
