@@ -1,7 +1,6 @@
 ---
 title: 멋지게 보이는 박스
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
-page-type: learn-module-assessment
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
