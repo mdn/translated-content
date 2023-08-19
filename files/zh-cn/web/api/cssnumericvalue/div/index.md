@@ -5,7 +5,7 @@ slug: Web/API/CSSNumericValue/div
 
 {{APIRef("CSS Typed OM")}}
 
-**`div()`** 方法是 {{domxref("CSSNumericValue")}} 接口的一部分，它将 `CSSNumericValue` 除以提供的值。
+{{domxref("CSSNumericValue")}} 接口的 **`div()`** 方法将 `CSSNumericValue` 除以提供的值。
 
 ## 语法
 
