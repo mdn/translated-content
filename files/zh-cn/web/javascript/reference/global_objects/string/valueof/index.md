@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 
 {{JSRef}}
 
-**`valueOf()`** 方法返回 {{jsxref("String")}} 对象的原始值。
+**`valueOf()`** 方法返回 {{jsxref("String")}} 对象的字符串值。
 
 {{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
