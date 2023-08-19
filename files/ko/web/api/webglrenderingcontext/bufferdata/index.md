@@ -2,6 +2,8 @@
 title: "WebGLRenderingContext: bufferData() 메서드"
 short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
@@ -115,7 +117,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
 gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 ```
 
-### 타입 배열의 크기 가져오기
+### 형식화 배열의 크기 가져오기
 
 타입 배열의 크기 매개변수를 계산합니다.
 
@@ -124,7 +126,7 @@ const dataArray = new Float32Array([1, 2, 3, 4]);
 const sizeInBytes = dataArray.length * dataArray.BYTES_PER_ELEMENT;
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

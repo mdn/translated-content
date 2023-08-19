@@ -2,6 +2,8 @@
 title: "WebGLRenderingContext: bindBuffer() 메서드"
 short-title: bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
+l10n:
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef("WebGL")}}
@@ -25,7 +27,7 @@ bindBuffer(target, buffer)
     - `gl.ELEMENT_ARRAY_BUFFER`
       - : 요소 인덱스를 위한 버퍼입니다.
 
-    {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 를 사용하면 추가로 다음의 값들이 가능합니다:
+    {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 를 사용하면 추가로 다음의 값들이 가능합니다.
 
     - `gl.COPY_READ_BUFFER`
       - : 한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼입니다.
@@ -51,7 +53,7 @@ bindBuffer(target, buffer)
 
 주어진 {{domxref("WebGLBuffer")}}에는 한 target만 바인딩할 수 있습니다. 버퍼를 다른 타겟에 바인딩하려는 시도는 `INVALID_OPERATION` 오류를 던지고 현재 버퍼 바인딩은 유지됩니다.
 
-{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}로 삭제로 표시된 {{domxref("WebGLBuffer")}}는 (재)바인딩할 수 없습니다. 시도할 경우 `INVALID_OPERATION` 오류를 던지고, 현재 바인딩은 그대로 유지됩니다.
+{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}로 삭제로 표시된 {{domxref("WebGLBuffer")}}는 (재)바인딩할 수 없습니다. 시도할 경우 `INVALID_OPERATION` 오류를 발생시키고, 현재 바인딩은 그대로 유지됩니다.
 
 ## 예제
 
