@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-ARIA의 **불리언 속성**은 열거 목록에 `true`ㄷ 또는 `false`를 포함하는 {{Glossary("Enumerated", "열거 속성")}}입니다.
+ARIA의 **불리언 속성**은 열거 목록에 `true` 또는 `false`를 포함하는 {{Glossary("Enumerated", "열거 속성")}}입니다.
 
 ARIA에서, 불리언은 `"true"` 및 `"false"` 문자열 형식으로만 제공됩니다.
 
