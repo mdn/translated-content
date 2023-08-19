@@ -190,7 +190,7 @@ p {
 
 ### 글꼴 크기
 
-이전 모듈의 [CSS 값 및 단위](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 기사에서 [길이 및 크기 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 검토했습니다. 글꼴 크기({{cssxref("font-size")}} 속성으로 설정)는 이러한 대부분의 단위(및 [백분율](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)과 같은 기타 단위)로 측정된 값을 가질 수 있지만 텍스트 크기를 조정하는 데 사용하는 가장 일반적인 단위는 다음과 같습니다.
+이전 모듈의 [CSS 값 및 단위](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units) 기사에서 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 검토했습니다. 글꼴 크기({{cssxref("font-size")}} 속성으로 설정)는 이러한 대부분의 단위(및 [백분율](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)과 같은 기타 단위)로 측정된 값을 가질 수 있지만 텍스트 크기를 조정하는 데 사용하는 가장 일반적인 단위는 다음과 같습니다.
 
 - `px` (픽셀): 원하는 텍스트 높이의 픽셀 수입니다. 이것은 절대 단위입니다. 거의 모든 상황에서 페이지의 글꼴에 대해 동일한 최종 계산 값을 생성합니다.
 - `em`s: 1em은 우리가 스타일링하고 있는 현재 요소의 부모 요소에 설정된 글꼴 크기와 같습니다(더 구체적으로는 부모 요소 안에 포함된 대문자 M의 너비). 서로 다른 글꼴 크기가 설정된 많은 중첩 요소가 있지만 아래에서 볼 수 있듯이 실행 가능합니다. 왜 귀찮게 할까요? 익숙해지면 매우 자연스럽고 `em`s를 사용하여 텍스트뿐만 아니라 모든 크기를 조정할 수 있습니다. ems를 사용하여 전체 웹 사이트 크기를 조정할 수 있으므로 유지 관리가 쉽습니다.
