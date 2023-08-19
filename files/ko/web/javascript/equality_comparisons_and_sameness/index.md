@@ -78,7 +78,7 @@ switch (NaN) {
    - 동일한 형식인 경우, 1단계를 사용하여 비교합니다.
    - 피연산자 중 하나가 Symbol이고 다른 피연산자는 아닌 경우, `false`를 반환합니다.
    - 피연산자 중 하나가 불리언이고 다른 피연산자는 아닌 경우, [불리언을 숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)합니다. `true`는 1로 변환되고 `false`는 0으로 변환됩니다. 그런 다음 두 피연산자를 다시 느슨하게 비교합니다.
-   - 숫자를 문자열로: [문자열을 숫자로 변환](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)합니다. 변환 실패로 인해 `NaN`이 발생하면 동등성이 `false` 임을 보장합니다.
+   - 숫자를 문자열로: [문자열을 숫자로 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)합니다. 변환 실패로 인해 `NaN`이 발생하면 동등성이 `false` 임을 보장합니다.
    - 숫자를 BigInt로: 숫자 값으로 비교합니다. 숫자가 ±Infinity이거나 `NaN` 이면 `false`를 반환합니다.
    - 문자열을 BigInt로: [`BigInt()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 생성자와 동일한 알고리즘을 사용하여 문자열을 BigInt로 변환합니다. 변환에 실패하면 `false`를 반환합니다.
 
