@@ -10,9 +10,9 @@ slug: Web/API/CanvasRenderingContext2D/fillText
 
 此方法会直接绘制到画布上，而不会修改当前路径，因此任何后续的 {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} 调用都不会对其产生影响。
 
-文本根据 {{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D. textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性所定义的字体和文本布局来渲染。
+文本根据 {{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}} 和 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性所定义的字体和文本布局来渲染。
 
-> **备注：** 如果需要对字符串进行描边，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
+> **备注：** 如果需要绘制字符串中字符的轮廓，需要调用其上下文的 {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} 方法。
 
 ## 语法
 
@@ -64,7 +64,7 @@ ctx.fillText("Hello world", 50, 90);
 
 这段代码获取 {{HTMLElement("canvas")}} 的引用，然后获取其 2D 图形上下文的引用。
 
-有了这些，我们将 {{domxref("CanvasRenderingContext2D.font", "font")}}} 设置为 50 像素高的“衬线体”（用户默认的[衬线](https://zh.wikipedia.org/wiki/衬线体)字体），然后调用 `fillText()` 从坐标 (50, 90) 开始绘制文本“Hello world”。
+有了这些，我们将 {{domxref("CanvasRenderingContext2D.font", "font")}} 设置为 50 像素高的“衬线体”（用户默认的[衬线](https://zh.wikipedia.org/wiki/衬线体)字体），然后调用 `fillText()` 从坐标 (50, 90) 开始绘制文本“Hello world”。
 
 #### 结果
 
