@@ -12,10 +12,10 @@ slug: Web/API/Notifications_API
 対応済みのプラットフォームでは、システム通知を表示するには、一般的に 2 つのことが必要です。まず、ユーザーが現在のオリジンに対してシステム通知を表示する許可を与える必要があります。これは一般的にアプリやサイトが初期化されたとき、 {{domxref("Notification.requestPermission()")}} を使用して行われます。これは、例えばボタンをクリックするなど、ユーザーの操作に反応して行う必要があります。
 
 ```js
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   let promise = Notification.requestPermission();
   // wait for permission
-})
+});
 ```
 
 これはベストプラクティスで、ユーザーが同意していない通知でユーザーに迷惑をかけるべきではありません。しかし、今後ブラウザーはユーザーの操作から起動されていない通知を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン 72 からすでにこれを行っています。
