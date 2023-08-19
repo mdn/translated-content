@@ -1,28 +1,26 @@
 ---
-title: Deploying our app
+title: アプリのデプロイ
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
-page-type: learn-module-chapter
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In the final article in our series, we take the example toolchain we built up in the previous article and add to it so that we can deploy our sample app. We push the code to GitHub, deploy it using Netlify, and even show you how to add a simple test into the process.
+シリーズの最後の記事では、前の記事で構築したサンプルツールチェーンを取り上げ、サンプルアプリをデプロイできるようにそれに追加します。 コードを GitHub にプッシュし、Netlify を使用してデプロイし、プロセスに簡単なテストを追加する方法も示します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件：</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的：</th>
       <td>
-        To finish working through our complete toolchain case study, focusing on
-        deploying the app.
+        アプリのデプロイに焦点を当てて、完全なツールチェーンのケーススタディの作業を完了します。
       </td>
     </tr>
   </tbody>
