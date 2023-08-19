@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('messageerror', (event) => { });
+addEventListener("messageerror", (event) => {});
 
-onmessageerror = (event) => { };
+onmessageerror = (event) => {};
 ```
 
 ## イベント型
@@ -47,8 +47,8 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 `messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待ち受けします。
 
 ```js
-window.addEventListener('messageerror', (event) => {
-    console.error(event);
+window.addEventListener("messageerror", (event) => {
+  console.error(event);
 });
 ```
 
@@ -56,7 +56,7 @@ window.addEventListener('messageerror', (event) => {
 
 ```js
 window.onmessageerror = (event) => {
-    console.error(event);
+  console.error(event);
 };
 ```
 
