@@ -42,35 +42,32 @@ slug: Web/API/Window/pageshow_event
 ### JavaScript
 
 ```js
-const events = [
-  "pagehide", "pageshow",
-  "unload", "load"
-];
+const events = ["pagehide", "pageshow", "unload", "load"];
 
-const eventLogger = event => {
+const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
       let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log('Event:', event.type, '-', isPersisted);
+      console.log("Event:", event.type, "-", isPersisted);
       break;
     default:
-      console.log('Event:', event.type);
+      console.log("Event:", event.type);
       break;
   }
 };
 
-events.forEach(eventName =>
-  window.addEventListener(eventName, eventLogger)
-);
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
 ### HTML
 
 ```html
-<p>コンソールを開き、このページに出入りしたときの出力を見てください。
-このタブに新しいページを読み込んだり、履歴で前後に移動したりして、
-イベントのログへの出力を見てください。</p>
+<p>
+  コンソールを開き、このページに出入りしたときの出力を見てください。
+  このタブに新しいページを読み込んだり、履歴で前後に移動したりして、
+  イベントのログへの出力を見てください。
+</p>
 ```
 
 ### 結果
