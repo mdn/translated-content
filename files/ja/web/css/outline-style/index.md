@@ -88,7 +88,10 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 結果
@@ -118,7 +121,10 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 結果
@@ -148,7 +154,10 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 結果
@@ -178,7 +187,10 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 結果
@@ -208,7 +220,10 @@ outline-style: unset;
 }
 
 /* デモを見やすく */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 #### 結果

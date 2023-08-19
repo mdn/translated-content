@@ -42,7 +42,7 @@ var obj = {
 var obj = {
   a: 1,
   b: { myProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

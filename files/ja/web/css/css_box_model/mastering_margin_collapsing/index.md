@@ -30,11 +30,18 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
 ```html
 <p>この段落の下端マージンは相殺されています …</p>
-<p>… この段落の上端マージンとの間で <code>1.2rem</code> のマージンになります。</p>
+<p>
+  … この段落の上端マージンとの間で <code>1.2rem</code> のマージンになります。
+</p>
 
-<div>この親要素には 2 つの段落があります。
-  <p>この段落には上のテキストとの間に <code>.4rem</code> のマージンがあります。</p>
-  <p>下端マージンは親と相殺され、下端マージンは <code>2rem</code> になります。</p>
+<div>
+  この親要素には 2 つの段落があります。
+  <p>
+    この段落には上のテキストとの間に <code>.4rem</code> のマージンがあります。
+  </p>
+  <p>
+    下端マージンは親と相殺され、下端マージンは <code>2rem</code> になります。
+  </p>
 </div>
 
 <p>上の要素から下に <code>2rem</code> の位置です。</p>
@@ -49,7 +56,7 @@ div {
 }
 
 p {
-  margin: .4rem 0 1.2rem 0;
+  margin: 0.4rem 0 1.2rem 0;
   background: yellow;
 }
 ```
