@@ -38,10 +38,7 @@ onselectionchange = (event) => {};
 
 ```html
 <div>
-  こちらにテキストを入力して選択してください:<br /><input
-    id="mytext"
-    rows="2"
-    cols="20" />
+  こちらにテキストを入力して選択してください:<br /><input id="mytext" rows="2" cols="20" />
 </div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
