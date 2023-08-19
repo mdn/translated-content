@@ -19,7 +19,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* グローバル値 */
 font-feature-settings: inherit;
@@ -38,7 +40,7 @@ font-feature-settings: unset;
   - : テキストは既定の設定で配置されます。
 - `<feature-tag-value>`
   - : テキストの描画時、 OpenType の特性タグ値のリストがテキストレイアウトエンジンに渡され、フォントの機能を有効化または無効化します。タグは常に 4 文字の ASCII 文字の {{cssxref("&lt;string&gt;")}} です。文字数がこれより少ないか多い場合、もしくはコードポイント U+20 - U+7E の範囲外の文字を含む場合、プロパティ全体が無効になります。<br>
- 値は正の整数です。キーワード `on` と `off` はそれぞれ `1` と `0` の別名です。値が設定されていなければ、既定値は `1` です。 論理値ではない OpenType 特性 (例: [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)) では、この値は選ばれる特定の字形を意味します。論理値の特性はオンとオフを切り替えます。
+    値は正の整数です。キーワード `on` と `off` はそれぞれ `1` と `0` の別名です。値が設定されていなければ、既定値は `1` です。 論理値ではない OpenType 特性 (例: [stylistic alternates](https://www.microsoft.com/typography/otspec/features_pt.htm#salt)) では、この値は選ばれる特定の字形を意味します。論理値の特性はオンとオフを切り替えます。
 
 ## 公式定義
 
@@ -54,29 +56,45 @@ font-feature-settings: unset;
 
 ```css
 /* スモールキャップ代替字形 */
-.smallcaps { font-feature-settings: "smcp" on; }
+.smallcaps {
+  font-feature-settings: "smcp" on;
+}
 
 /* 大文字と小文字の両方をスモールキャップに変換 (記号も) */
-.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
+}
 
 /* スラッシュのついたゼロを使用して "O" と区別する */
 
-.nicezero { font-feature-settings: "zero"; }
+.nicezero {
+  font-feature-settings: "zero";
+}
 
 /* 歴史的な書体を有効に */
-.hist { font-feature-settings: "hist"; }
+.hist {
+  font-feature-settings: "hist";
+}
 
 /* よくある合字を無効にする (既定ではオン) */
-.noligs { font-feature-settings: "liga" 0; }
+.noligs {
+  font-feature-settings: "liga" 0;
+}
 
 /* 表内の数字を有効にする (等幅) */
-td.tabular { font-feature-settings: "tnum"; }
+td.tabular {
+  font-feature-settings: "tnum";
+}
 
 /* 自動的に分数化する */
-.fractions { font-feature-settings: "frac"; }
+.fractions {
+  font-feature-settings: "frac";
+}
 
 /* 利用可能な2番目のスウォッシュ文字を使用 */
-.swash { font-feature-settings: "swsh" 2; }
+.swash {
+  font-feature-settings: "swsh" 2;
+}
 
 /* スタイリッシュセット 7 を有効にする */
 .fancystyle {

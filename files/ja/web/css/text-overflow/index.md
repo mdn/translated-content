@@ -71,25 +71,36 @@ text-overflow: unset;
 #### HTML
 
 ```html
-
 <div class="ltr">
   <h2>Left to right text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 
 <div class="rtl">
   <h2>Right to left text</h2>
   <pre>clip</pre>
-  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>ellipsis</pre>
-  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
   <pre>" [..]"</pre>
-  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p class="overflow-string">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </p>
 </div>
 ```
 
@@ -145,13 +156,21 @@ body {
 
 ```html
 <pre>clip clip</pre>
-<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>clip ellipsis</pre>
-<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-clip-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis ellipsis</pre>
-<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 <pre>ellipsis " [..]"</pre>
-<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-ellipsis-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 #### CSS
@@ -203,7 +222,7 @@ for (let para of paras) {
 
 {{Specifications}}
 
-以前の版のこのインターフェイスは *勧告候補* に達していました。いくつかの "at-risk" の記載のなかった機能を取り除く必要があったため、この仕様は *草案* レベルに下されたため、勧告候補の状態ではないこのプロパティが、接頭辞なしでブラウザーに実装されました。
+以前の版のこのインターフェイスは _勧告候補_ に達していました。いくつかの "at-risk" の記載のなかった機能を取り除く必要があったため、この仕様は _草案_ レベルに下されたため、勧告候補の状態ではないこのプロパティが、接頭辞なしでブラウザーに実装されました。
 
 ## ブラウザーの互換性
 
