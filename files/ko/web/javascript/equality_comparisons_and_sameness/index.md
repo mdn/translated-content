@@ -182,7 +182,7 @@ function sameValueZero(x, y) {
 
 ### 언제 Object.is()와 삼중 등호를 사용해야 할까?
 
-일반적으로 0에 대한 {{jsxref("Object.is")}}의 특별한 동작에 관심을 가질 수 있는 유일한 시간은 특정 메타 프로그래밍 체계를 추구할 때, 특히 속성 설명자와 관련하여 작업이 {{jsxref("Object.defineProperty")}}의 일부 특성을 반영하는 것이 바람직할때 입니다. 여러분의 사용 사례에 이것이 필요하지 않은 경우, {{jsxref("Object.is")}}를 피하고 대신 [`===`](/ko/docs/Web/JavaScript/Reference/Operators)를 사용하는 것이 좋습니다. 요구 사항에 두 {{jsxref("NaN")}} 값 간의 비교가 `true`로 평가되는 것이 포함되더라도, 일반적으로 {{jsxref("NaN")}} 검사(이전 버전의 ECMAScript에서 사용할 수 있는 {{jsxref("isNaN")}} 메서드 사용)를 특수한 경우로 지정하는 것이 비교에서 발생하는 0의 부호가 주변 계산에 어떻게 영향을 미칠 수 있는지 알아내는 것보다 쉽습니다.
+일반적으로 0에 대한 {{jsxref("Object.is")}}의 특별한 동작에 관심을 가질 수 있는 유일한 시간은 특정 메타 프로그래밍 체계를 추구할 때, 특히 속성 설명자와 관련하여 작업이 {{jsxref("Object.defineProperty")}}의 일부 특성을 반영하는 것이 바람직할 때 입니다. 여러분의 사용 사례에 이것이 필요하지 않은 경우, {{jsxref("Object.is")}}를 피하고 대신 [`===`](/ko/docs/Web/JavaScript/Reference/Operators)를 사용하는 것이 좋습니다. 요구 사항에 두 {{jsxref("NaN")}} 값 간의 비교가 `true`로 평가되는 것이 포함되더라도, 일반적으로 {{jsxref("NaN")}} 검사(이전 버전의 ECMAScript에서 사용할 수 있는 {{jsxref("isNaN")}} 메서드 사용)를 특수한 경우로 지정하는 것이 비교에서 발생하는 0의 부호가 주변 계산에 어떻게 영향을 미칠 수 있는지 알아내는 것보다 쉽습니다.
 
 다음은 코드에서 `-0`과 `+0`을 구분할 수 있는 내장 메서드와 연산자의 일부 목록입니다.
 
