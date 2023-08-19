@@ -97,7 +97,7 @@ SVG에는 지금까지 설명한 것 외에도 몇 가지 추가적인 이점이
 ```html
 <img
   src="equilateral.svg"
-  alt="triangle with all three sides equal"
+  alt="세 변이 모두 같은 삼각형"
   height="87"
   width="100" />
 ```
@@ -121,7 +121,7 @@ SVG를 지원하지 않는 브라우저(IE 8 이하, Android 2.3 이하)의 경�
 ```html
 <img
   src="equilateral.png"
-  alt="triangle with equal sides"
+  alt="변이 같은 삼각형"
   srcset="equilateral.svg" />
 ```
 
@@ -169,7 +169,7 @@ SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았�
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="세 변이 같지 않은 삼각형" />
 </iframe>
 ```
 
