@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Global_attributes#id) を持つ固有の要素（*ターゲット要素*）を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Global_attributes#id) を持つ固有の要素（_ターゲット要素_）を表します。
 
 ```css
 /* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
@@ -52,9 +52,7 @@ http://www.example.com/index.html#section2
   <li><a href="#p1">第 1 段落にジャンプ！</a></li>
   <li><a href="#p2">第 2 段落にジャンプ！</a></li>
   <li>
-    <a href="#nowhere">
-      このリンクは対象がないので、どこにも行きません。
-    </a>
+    <a href="#nowhere">このリンクは対象がないので、どこにも行きません。</a>
   </li>
 </ol>
 

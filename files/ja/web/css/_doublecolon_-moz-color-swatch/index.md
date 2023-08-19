@@ -24,7 +24,7 @@ slug: Web/CSS/::-moz-color-swatch
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }

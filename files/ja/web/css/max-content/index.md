@@ -33,7 +33,9 @@ max-content: unset;
 ```html
 <div id="container">
   <div class="item">Item</div>
-  <div class="item">Item with more text in it which will overflow the fixed width box.</div>
+  <div class="item">
+    Item with more text in it which will overflow the fixed width box.
+  </div>
 </div>
 ```
 
@@ -65,9 +67,7 @@ max-content: unset;
 ```html
 <div id="container">
   Item
-  <div>
-    Item with more text in it.
-  </div>
+  <div>Item with more text in it.</div>
   Flexible item
 </div>
 ```
