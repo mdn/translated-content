@@ -26,14 +26,14 @@ sup()
 下面的示例使用了 {{jsxref("String.prototype.sub()", "sub()")}} 和 `sup()` 方法来格式化字符串：
 
 ```js
-const superText = "superscript";
-const subText = "subscript";
+const superText = "上标";
+const subText = "下标";
 
-console.log(`This is what a ${superText.sup()} looks like.`);
-// "This is what a <sup>superscript</sup> looks like."
+console.log(`这就是${superText.sup()}的样子。`);
+// "这就是<sup>上标</sup>的样子。"
 
-console.log(`This is what a ${subText.sub()} looks like.`);
-// "This is what a <sub>subscript</sub> looks like."
+console.log(`这就是${subText.sub()}的样子。`);
+// "这就是<sub>下标</sub>的样子。"
 ```
 
 ## 规范
@@ -46,5 +46,5 @@ console.log(`This is what a ${subText.sub()} looks like.`);
 
 ## 参见
 
-- [Polyfill of `String.prototype.sup` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`core-js` 中 `String.prototype.sup` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.sub()")}}
