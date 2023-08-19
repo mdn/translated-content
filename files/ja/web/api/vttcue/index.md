@@ -44,8 +44,8 @@ _このインターフェイスは {{domxref("TextTrackCue")}} からもプロ�
 ## 例
 
 ```js
-var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
-var tracks = document.querySelector('video').textTracks;
+var cue = new VTTCue(2, 3, "かっこいい文章を表示する");
+var tracks = document.querySelector("video").textTracks;
 tracks[0].addCue(cue);
 ```
 
