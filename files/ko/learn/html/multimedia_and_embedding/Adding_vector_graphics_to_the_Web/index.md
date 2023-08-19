@@ -15,7 +15,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML의 기본 사항</a>
-        과 
+        과
         <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">문서에 이미지를 삽입하는 방법</a>
         을 알고 있어야 합니다.
       </td>
@@ -163,7 +163,7 @@ SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았�
 
 ### `iframe`을 사용하여 SVG를 삽입하는 방법
 
-웹페이지처럼 브라우저에서 SVG 이미지를 열 수 있습니다. 따라서 `<iframe>`으로 SVG 문서를 임베드하는 것은 [다른 임베딩 기술인 <object>에서 <iframe>으로](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)에서 공부한 것처럼 수행됩니다.
+웹페이지처럼 브라우저에서 SVG 이미지를 열 수 있습니다. 따라서 `<iframe>`으로 SVG 문서를 임베드하는 것은 [다른 임베딩 기술인 \<object>에서 \<iframe>으로](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)에서 공부한 것처럼 수행됩니다.
 
 간단히 살펴보세요.
 
@@ -184,7 +184,7 @@ SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았�
 
 이 능동적 학습 섹션에서는 몇 가지 SVG를 재미있게 사용해 보시기 바랍니다. 아래의 _입력_ 섹션에서 시작하는 데 도움이 되는 몇 가지 샘플을 이미 제공한 것을 확인할 수 있습니다. 또한 [SVG 요소 참조](/ko/docs/Web/SVG/Element)로 이동하여 SVG에서 사용할 수 있는 다른 장난감에 대한 자세한 내용을 찾아서 사용해 볼 수도 있습니다. 이 섹션은 여러분의 리서치 기술을 연습하고 재미를 느끼기 위한 것입니다.
 
-코드가 멈춰서 작동되지 않는 경우 언제든지 재설정 버튼을 사용하여 코드를 _재설정_할 수 있습니다.
+코드가 멈춰서 작동되지 않는 경우 언제든지 재설정 버튼을 사용하여 코드를 *재설정*할 수 있습니다.
 
 ```html hidden
 <h2>Live output</h2>
