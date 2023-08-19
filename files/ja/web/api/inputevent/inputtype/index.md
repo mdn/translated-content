@@ -40,9 +40,9 @@ l10n:
 ### JavaScript
 
 ```js
-const log = document.getElementById('log');
-const editable = document.querySelector('div[contenteditable]');
-editable.addEventListener('input', logInputType);
+const log = document.getElementById("log");
+const editable = document.querySelector("div[contenteditable]");
+editable.addEventListener("input", logInputType);
 
 function logInputType(event) {
   log.textContent = `入力種別: ${event.inputType}`;
