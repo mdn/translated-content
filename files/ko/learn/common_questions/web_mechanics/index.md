@@ -20,6 +20,6 @@ l10n:
 - [URL이란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
   - : {{Glossary("Hypertext")}} 및 {{Glossary("HTTP")}}에서, URL은 인터넷에 관한 핵심 개념입니다. URL은 {{Glossary("Browser","브라우저")}}가 웹에 게시된 리소스를 검색하는 데 사용하는 방식입니다.
 - [도메인 네임이란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-  - : 도메인 네임은 인터넷 인프라의 핵심 구성 요소입니다. 도메인 이름은 인터넷에서 사용할 수 있는 모든 웹 서버에 사람이 읽을 수 있는 주소를 제공합니다.
+  - : 도메인 네임은 인터넷 인프라의 핵심 구성 요소입니다. 도메인 네임은 인터넷에서 사용할 수 있는 모든 웹 서버에 사람이 읽을 수 있는 주소를 제공합니다.
 - [웹 서버란 무엇인가요?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
   - : "웹 서버"라는 용어는 웹을 통해 클라이언트에 웹 사이트를 제공하는 하드웨어 또는 소프트웨어, 또는 이 두 가지를 모두 의미할 수 있습니다. 이 글에서는 웹 서버의 작동 방식과 웹 서버가 중요한 이유에 대해 살펴봅니다.
