@@ -60,9 +60,13 @@ min-height: unset;
 ### min-height の設定
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## 仕様書

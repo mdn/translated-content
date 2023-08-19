@@ -58,7 +58,11 @@ text-align-last: unset;
 <h3 id="Justifying_the_last_line">最後の行を中央揃えにする</h3>
 
 ```html hidden
-<p>Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque. Nullam est eros, suscipit sed dictum quis, accumsan a ligula.</p>
+<p>
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+</p>
 ```
 
 #### CSS
