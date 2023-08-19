@@ -510,7 +510,7 @@ p {
 
 ### 문자 및 단어 간격
 
-{{cssxref("letter-spacing")}} 및 {{cssxref("word-spacing")}} 속성을 사용하면 텍스트에서 문자와 단어 사이의 간격을 설정할 수 있습니다. 자주 사용하지는 않지만 특정 모양을 얻거나 특히 조밀한 글꼴의 가독성을 향상시키는 용도를 찾을 수 있습니다. 대부분의 [길이 및 크기 단위](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
+{{cssxref("letter-spacing")}} 및 {{cssxref("word-spacing")}} 속성을 사용하면 텍스트에서 문자와 단어 사이의 간격을 설정할 수 있습니다. 자주 사용하지는 않지만 특정 모양을 얻거나 특히 조밀한 글꼴의 가독성을 향상시키는 용도를 찾을 수 있습니다. 대부분의 [길이 및 크기 단위](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)를 사용할 수 있습니다.
 
 예를 들어, 예제에서 {{htmlelement("p")}} 요소의 첫 번째 줄에 다음을 적용한 경우입니다.
 
