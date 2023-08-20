@@ -15,9 +15,9 @@ slug: Web/CSS/margin-right
 
 ```css
 /* <length> 値 */
-margin-right: 20px;  /* 絶対的な寸法 */
-margin-right: 1em;   /* 文字の寸法からの相対 */
-margin-right: 5%;    /* 直近のブロックコンテナーの幅からの相対 */
+margin-right: 20px; /* 絶対的な寸法 */
+margin-right: 1em; /* 文字の寸法からの相対 */
+margin-right: 5%; /* 直近のブロックコンテナーの幅からの相対 */
 
 /* キーワード値 */
 margin-right: auto;
@@ -137,9 +137,15 @@ margin-right: unset;
 ### ピクセル数とパーセント値を使用した右マージンの設定
 
 ```css
-.content { margin-right: 5%; }
-.sidebox { margin-right: 10px; }
-.logo    { margin-right: -5px; }
+.content {
+  margin-right: 5%;
+}
+.sidebox {
+  margin-right: 10px;
+}
+.logo {
+  margin-right: -5px;
+}
 ```
 
 ## 仕様書

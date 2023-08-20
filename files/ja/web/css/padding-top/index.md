@@ -55,8 +55,12 @@ padding-top: unset;
 ### 上パディングをピクセル数とパーセント値で設定
 
 ```css
-.content { padding-top: 5%; }
-.sidebox { padding-top: 10px; }
+.content {
+  padding-top: 5%;
+}
+.sidebox {
+  padding-top: 10px;
+}
 ```
 
 ## 仕様書

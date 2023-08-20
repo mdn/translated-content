@@ -27,7 +27,7 @@ The `@@unscopables` シンボル (`Symbol.unscopables`) は、 [`with`](/ja/docs
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -42,12 +42,12 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {

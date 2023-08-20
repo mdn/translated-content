@@ -151,36 +151,44 @@ JavaScript の日時は基本的に、 [ECMAScript 元期](https://tc39.es/ecma2
 > **メモ:** `Date` コンストラクター（および `Date.parse` と同等）で日付文字列を解釈する際には、常に入力が [ISO 8601 形式](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) であることを確認してください。他の形式で解釈した場合には、その挙動は実装によって定義されていて、すべてのブラウザーで動くとは限りません。多数の異なる形式に対応するためには、ライブラリーが役に立ちます。
 
 ```js
-const today = new Date()
-const birthday = new Date('December 17, 1995 03:24:00') // 避けてください。すべてのランタイムで動作するとは限りません。
-const birthday2 = new Date('1995-12-17T03:24:00')   // これは ISO8601 互換であり、動作が信頼できます
-const birthday3 = new Date(1995, 11, 17)            // 月は 0 起点です
-const birthday4 = new Date(1995, 11, 17, 3, 24, 0)
-const birthday5 = new Date(628021800000)            // 元期からのタイムスタンプ
+const today = new Date();
+const birthday = new Date("December 17, 1995 03:24:00"); // 避けてください。すべてのランタイムで動作するとは限りません。
+const birthday2 = new Date("1995-12-17T03:24:00"); // これは ISO8601 互換であり、動作が信頼できます
+const birthday3 = new Date(1995, 11, 17); // 月は 0 起点です
+const birthday4 = new Date(1995, 11, 17, 3, 24, 0);
+const birthday5 = new Date(628021800000); // 元期からのタイムスタンプ
 ```
 
 ### toString メソッドの返値の形式
 
 ```js
 const date = new Date("2020-05-12T23:50:21.817Z");
-date.toString()               // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
-date.toDateString()           // Tue May 12 2020
-date.toTimeString()           // 18:50:21 GMT-0500 (Central Daylight Time)
-date.toISOString()            // 2020-05-12T23:50:21.817Z
-date.toUTCString()            // Tue, 12 May 2020 23:50:21 GMT
-date.toGMTString()            // Tue, 12 May 2020 23:50:21 GMT
-date.toJSON()                 // 2020-05-12T23:50:21.817Z
-date.toLocaleString()         // 5/12/2020, 6:50:21 PM
-date.toLocaleDateString()     // 5/12/2020
-date.toLocaleTimeString()     // 6:50:21 PM
+date.toString(); // Tue May 12 2020 18:50:21 GMT-0500 (Central Daylight Time)
+date.toDateString(); // Tue May 12 2020
+date.toTimeString(); // 18:50:21 GMT-0500 (Central Daylight Time)
+date.toISOString(); // 2020-05-12T23:50:21.817Z
+date.toUTCString(); // Tue, 12 May 2020 23:50:21 GMT
+date.toGMTString(); // Tue, 12 May 2020 23:50:21 GMT
+date.toJSON(); // 2020-05-12T23:50:21.817Z
+date.toLocaleString(); // 5/12/2020, 6:50:21 PM
+date.toLocaleDateString(); // 5/12/2020
+date.toLocaleTimeString(); // 6:50:21 PM
 ```
 
 ### 年月日や時刻の取得
 
 ```js
 const date = new Date();
-const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
-const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+const [month, day, year] = [
+  date.getMonth(),
+  date.getDate(),
+  date.getFullYear(),
+];
+const [hour, minutes, seconds] = [
+  date.getHours(),
+  date.getMinutes(),
+  date.getSeconds(),
+];
 ```
 
 ### 2 桁の年の補完
@@ -189,12 +197,14 @@ const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSe
 
 ```js
 let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-date = new Date(22, 1);     // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
-date = new Date("2/1/22");  // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
+date = new Date(22, 1); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+date = new Date("2/1/22"); // Tue Feb 01 2022 00:00:00 GMT+0000 (GMT)
 
 // 古い方法。常に 2 桁の年の値を 1900 からの相対値として解釈する
-date.setYear(98); date.toString(); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
-date.setYear(22); date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
+date.setYear(98);
+date.toString(); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(22);
+date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
 西暦 0 年から 99 年までの間の年を生成および取得するには、{{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} メソッドと {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} メソッドを使用してください。
@@ -202,8 +212,10 @@ date.setYear(22); date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```js
 // 推奨されるメソッドです。どんな値でも相対オフセットではなく、そのまま
 // 年として解釈します。
-date.setFullYear(98); date.getFullYear(); // 98 (not 1998)
-date.setFullYear(22); date.getFullYear(); // 22 (not 1922, not 2022)
+date.setFullYear(98);
+date.getFullYear(); // 98 (not 1998)
+date.setFullYear(22);
+date.getFullYear(); // 22 (not 1922, not 2022)
 ```
 
 ### 経過時間の計算

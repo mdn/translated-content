@@ -34,6 +34,7 @@ _`ServiceWorker` インターフェイスは、親となる {{domxref("EventTarg
 ## イベント
 
 - {{domxref("ServiceWorker.statechange_event", "statechange")}}
+
   - : {{domxref("ServiceWorker.state")}} が変化したときに発生します。
 
 - {{domxref("ServiceWorker.error_event", "error")}}

@@ -1,29 +1,35 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
+l10n:
+  sourceCommit: d1edcbabf7431e9929c77e70b0c1bc741d887236
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{deprecated_header}}
 
-標準外の **rightContext** プロパティは静的かつ読み取り専用の正規表現のプロパティで、最新の一致に続く部分文字列が入ります。 `` RegExp.$` `` はこのプロパティのエイリアスです。
+> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+
+**`RegExp.rightContext`** は静的アクセサープロパティで、最新の一致に続く部分文字列が入ります。`RegExp["$'"]` はこのプロパティの別名です。
 
 ## 解説
 
-`rightContext` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.rightContext` または `RegExp["$'"]` として使用してください。
+`rightContext` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.rightContext` または ``RegExp["$'"]`` として使用してください。
 
-`rightContext` プロパティの値は読み取り専用で、一致に成功するたびに変更されます。
+`rightContext` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`rightContext` は空文字列になります。`rightContext` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
 
-ドットプロパティアクセサー (`RegExp.$'`) で短縮エイリアスを使用することはできません。その場合、パーサーは文字列の開始をを期待して {{jsxref("SyntaxError")}} が発生します。[プロパティへのアクセスにはブラケット表記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用してください。
+ドットプロパティアクセサー (`RegExp.$'`) で短縮エイリアスを使用することはできません。`'` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
+
+`$'` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、``RegExp["$'"]`` の古いプロパティとは関係ありません。
 
 ## 例
 
 ### rightContext と $' の使用
 
 ```js
-var re = /hello/g;
-re.test('hello world!');
+const re = /hello/g;
+re.test("hello world!");
 RegExp.rightContext; // " world!"
-RegExp["$'"];       // " world!"
+RegExp["$'"]; // " world!"
 ```
 
 ## 仕様書
@@ -32,7 +38,7 @@ RegExp["$'"];       // " world!"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.rightContext")}}
+{{Compat}}
 
 ## 関連情報
 
@@ -40,4 +46,4 @@ RegExp["$'"];       // " world!"
 - {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

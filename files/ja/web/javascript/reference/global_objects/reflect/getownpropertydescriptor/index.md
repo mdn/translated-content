@@ -39,13 +39,13 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ### Reflect.getOwnPropertyDescriptor() の使用
 
 ```js
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'x')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "x");
 // {value: "hello", writable: true, enumerable: true, configurable: true}
 
-Reflect.getOwnPropertyDescriptor({x: 'hello'}, 'y')
+Reflect.getOwnPropertyDescriptor({ x: "hello" }, "y");
 // undefined
 
-Reflect.getOwnPropertyDescriptor([], 'length')
+Reflect.getOwnPropertyDescriptor([], "length");
 // {value: 0, writable: true, enumerable: false, configurable: false}
 ```
 
@@ -54,10 +54,10 @@ Reflect.getOwnPropertyDescriptor([], 'length')
 このメソッドへの最初の引数がオブジェクトではない (プリミティブであった) 場合、 {{jsxref("TypeError")}} が発生します。 {{jsxref("Object.getOwnPropertyDescriptor")}} だと、非オブジェクトである最初の引数は強制的にオブジェクトに変換されます。
 
 ```js
-Reflect.getOwnPropertyDescriptor('foo', 0)
+Reflect.getOwnPropertyDescriptor("foo", 0);
 // TypeError: "foo" is not non-null object
 
-Object.getOwnPropertyDescriptor('foo', 0)
+Object.getOwnPropertyDescriptor("foo", 0);
 // { value: "f", writable: false, enumerable: true, configurable: false }
 ```
 

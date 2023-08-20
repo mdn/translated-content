@@ -12,7 +12,7 @@ slug: Web/API/MediaStreamTrack/label
 ## 構文
 
 ```js
-const label = track.label
+const label = track.label;
 ```
 
 ## 仕様書

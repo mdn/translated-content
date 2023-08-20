@@ -36,11 +36,11 @@ const gen = generator(); // "Generator { }"
 
 ```js
 function* infinite() {
-    let index = 0;
+  let index = 0;
 
-    while (true) {
-        yield index++;
-    }
+  while (true) {
+    yield index++;
+  }
 }
 
 const generator = infinite(); // "Generator { }"

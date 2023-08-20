@@ -39,13 +39,13 @@ JavaScript は、 `[@@toPrimitive]()` メソッドを呼び出してオブジェ
 const testDate = new Date(1590757517834);
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)"
 
-testDate[Symbol.toPrimitive]('string');
+testDate[Symbol.toPrimitive]("string");
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)" を返す
 
-testDate[Symbol.toPrimitive]('number');
+testDate[Symbol.toPrimitive]("number");
 // "1590757517834" を返す
 
-testDate[Symbol.toPrimitive]('default');
+testDate[Symbol.toPrimitive]("default");
 // "Date Fri May 29 2020 14:05:17 GMT+0100 (British Summer Time)" を返す
 ```
 

@@ -52,27 +52,49 @@ overflow-block: unset;
 
 ```html
 <ul>
-  <li><code>overflow-block:hidden</code> — ボックスの外側のテキストを隠す
-  <div id="div1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:hidden</code> — ボックスの外側のテキストを隠す
+    <div id="div1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:scroll</code> — 常にスクロールバーを表示
-  <div id="div2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:scroll</code> — 常にスクロールバーを表示
+    <div id="div2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:visible</code> — 必要に応じてテキストをボックスの外に表示
-  <div id="div3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:visible</code> —
+    必要に応じてテキストをボックスの外に表示
+    <div id="div3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:auto</code> — 多くのブラウザーでは <code>scroll</code> と同じ
-  <div id="div4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:auto</code> — 多くのブラウザーでは
+    <code>scroll</code> と同じ
+    <div id="div4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 </ul>
@@ -86,14 +108,26 @@ overflow-block: unset;
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-block: hidden; margin-bottom: 120px;}
-#div2 { overflow-block: scroll; margin-bottom: 120px;}
-#div3 { overflow-block: visible; margin-bottom: 120px;}
-#div4 { overflow-block: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-block: hidden;
+  margin-bottom: 120px;
+}
+#div2 {
+  overflow-block: scroll;
+  margin-bottom: 120px;
+}
+#div3 {
+  overflow-block: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-block: auto;
+  margin-bottom: 120px;
+}
 ```
 
 ### 結果
