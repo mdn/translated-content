@@ -1,7 +1,6 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: conflicting/Web/API/Window/hashchange_event
-original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 
 {{APIRef("HTML DOM")}}
