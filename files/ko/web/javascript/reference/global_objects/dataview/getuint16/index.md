@@ -25,7 +25,7 @@ getUint16(byteOffset, littleEndian)
   - : 데이터를 읽을 뷰의 시작 부분으로부터의 오프셋(바이트 단위)입니다.
 - `littleEndian` {{optional_inline}}
   - : 16비트 정수가 {{Glossary("Endianness", "리틀 엔디안 혹은 빅 앤디안")}} 형삭으로 저장되는지 여부를
-  나타냅니다. 만약 `false` 혹은 `undefined`라면 빅 엔디언 값을 읽습니다.
+    나타냅니다. 만약 `false` 혹은 `undefined`라면 빅 엔디언 값을 읽습니다.
 
 ### 반환 값
 
