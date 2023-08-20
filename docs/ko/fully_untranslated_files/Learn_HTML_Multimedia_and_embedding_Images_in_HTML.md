@@ -2,7 +2,7 @@
 title: HTML의 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 i10n:
-  commitSource: 8d0cbeacdc1872f7e4d966177151585c58fb879e
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
