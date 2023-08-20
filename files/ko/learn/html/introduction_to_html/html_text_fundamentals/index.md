@@ -596,3 +596,207 @@ textarea.onkeyup = () => {
 ```
 
 {{ EmbedLiveSample('Active_learning_Marking_up_an_ordered_list', 700, 500, "", "") }}
+
+### 활동적인 학습: 우리의 레시피 페이지를 만들어 보자
+
+이제 우리는 레시피 페이지 예시를 만드는 데 필요한 모든 정보를 가지고 있습니다. [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) 시작 파일의 로컬 사본을 저장해 거기에서 작업하거나 아래에 있는 편집 가능한 예제에서 작업을 할 수도 있습니다. 로컬에서 작업하면 진행 중인 작업을 저장할 수 있으므로 더 좋지만, 편집 가능한 예제에서 작업하면 다음에 이 페이지를 열 때 작업 기록이 손실됩니다. 이 두 가지 방법은 장점과 단점 모두를 지니고 있습니다.
+
+```html hidden
+<h2>입력</h2>
+
+```html hidden
+<h2>실시간 출력</h2>
+
+<div class="output" style="min-height: 50px;"></div>
+
+<h2>편집 가능한 코드</h2>
+<p class="a11y-label">
+  Esc 키를 눌러 코드 영역에서 초점을 멀리 이동합니다. (Tab 키를 누르면 탭 문자가
+  삽입됩니다.)
+</p>
+
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+빠른 후무스 레시피
+
+  이 레시피는 문제 없이 맛있는 후무스를 빠르게 만들 수 있습니다. 수년 동안 제가 읽은 레시피는 여러 가지 다른 레시피에서 변형한 것입니다.
+
+  후무스는 그리스와 중동 요리에 많이 사용되는 맛있고 두툼한 페이스트입니다. 샐러드, 구운 고기, 그리고 피타 빵과 함께 먹으면 매우 맛있습니다.
+
+  재료
+
+  병아리콩(가르반조 콩) 1캔(400g)
+  타히니 175g
+  햇볕에 말린 토마토 6개
+  붉은 고추 반 개
+  카이엔 고추 약간
+  마늘 1쪽
+  올리브 오일 간
+
+  만드는 방법
+
+  마늘 껍질을 벗기고, 굵게 다집니다.
+  후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.
+  모든 재료를 푸드 프로세서에 넣습니다.
+  모든 재료를 페이스트 형태로 가공합니다.
+  거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.
+  부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.
+
+  색다른 맛을 원한다면, 레몬과 고수, 칠리고추, 라임과 치폴레, 하리사와 민트, 또는 시금치와 페타 치즈를 소량 섞어보세요. 실험을 통해 자신에게 맞는 조합을 찾아보세요.
+
+  보관
+
+  완성된 후무스를 밀폐 용기에 담아 냉장 보관하세요. 만든 후 일주일 정도는 사용할 수 있습니다. 거품이 나기 시작하면, 반드시 버려야 합니다.
+
+  후무스는 냉동 보관에 적합하므로 해동 후 두 달 이내에 사용해야 합니다.
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+const htmlSolution =
+  '<h1>빠른 후무스 레시피</h1>\n\n<p>이 레시피는 문제 없이 맛있는 후무스를 빠르게 만들 수 있습니다. 수년 동안 제가 읽은 레시피는 여러 가지 다른 레시피에서 변형한 것입니다.</p>\n\n<p>후무스는 그리스와 중동 요리에 많이 사용되는 맛있고 두툼한 페이스트입니다. 샐러드, 구운 고기, 그리고 피타 빵과 함께 먹으면 매우 맛있습니다.</p>\n\n<h2>재료</h2>\n\n<ul>\n<li>병아리콩(가르반조 콩) 1캔(400g)</li>\n<li>타히니 175g</li>\n<li>햇볕에 말린 토마토 6개</li>\n<li>붉은 고추 반 개</li>\n<li>카이엔 고추 약간</li>\n<li>마늘 1쪽</li>\n<li>올리브 오일 약간</li>\n</ul>\n\n<h2>만드는 방법</h2>\n\n<ol>\n<li>마늘 껍질을 벗기고, 굵게 다집니다.</li>\n<li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>\n<li>모든 재료를 푸드 프로세서에 넣습니다.</li>\n<li>모든 재료를 페이스트 형태로 가공합니다.</li>\n<li>거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.</li>\n<li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>\n</ol>\n\n<p>색다른 맛을 원한다면, 레몬과 고수, 칠리고추, 라임과 치폴레, 하리사와 민트, 또는 시금치와 페타 치즈를 소량 섞어보세요. 실험을 통해 자신에게 맞는 조합을 찾아보세요.</p>\n\n<h2>보관</h2>\n\n<p>완성된 후무스를 밀폐 용기에 담아 냉장 보관하세요. 만든 후 일주일 정도는 사용할 수 있습니다. 거품이 나기 시작하면, 반드시 버려야 합니다.</p>\n\n<p>후무스는 냉동 보관에 적합하므로 해동 후 두 달 이내에 사용해야 합니다.</p>';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "해답 보기";
+  updateCode();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "해답 보기") {
+    textarea.value = solutionEntry;
+    solution.value = "해답 숨기기";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "해답 보기";
+  }
+  updateCode();
+});
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+
+textarea.onkeydown = (e) => {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = () => {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "해답 보기") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('Active_learning_Marking_up_our_recipe_page', 900, 620, "", "") }}
+
+위의 문제를 해결하는데 어려움을 겪고있다면, _해답 보기_ 버튼을 클릭하여 해답을 확인하거나, GitHub 레포지토리에 존재하는 [text-complete.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-complete.html) 파일을 확인해 주시길 바랍니다.
+
+### 리스트 내부의 리스트(Nesting lists)
+
+하나의 리스트 내부에 다른 리스트를 추가하는 것은 아무런 문제가 없습니다. 당신이 최상위 리스트 아이템의 내부에 다른 리스트를 추가하고 싶다면, 하단의 예제 중 두 번째 예제를 확인해 주세요.
+
+```html
+<ol>
+  <li>마늘 껍질을 벗기고, 굵게 다집니다.</li>
+  <li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>
+  <li>모든 재료를 푸드 프로세서에 넣습니다.</li>
+  <li>모든 재료를 페이스트 형태로 가공합니다.</li>
+  <li>거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.</li>
+  <li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>
+</ol>
+```
+
+마지막 두 개의 리스트 아이템은 `Process all the ingredients into a paste.`와 밀접한 관계가 있는 내용입니다. 그러므로 두 개의 리스트 아이템은 `Process all the ingredients into a paste.`의 내부에 중첩되어 나타나는 것이 더 좋을 것입니다. 하단과 같은 방법을 사용해서 말이죠.
+
+```html
+<ol>
+  <li>마늘 껍질을 벗기고, 굵게 다집니다.</li>
+  <li>후추에서 씨와 꼭지를 모두 제거하고, 굵게 다집니다.</li>
+  <li>모든 재료를 푸드 프로세서에 넣습니다.</li>
+  <li>
+    모든 재료를 페이스트 형태로 가공합니다.
+    <ul>
+      <li>
+        거친 후무스 "덩어리"를 원하시면, 짧은 시간 동안 가공합니다.
+      </li>
+      <li>부드러운 후무스를 원하신다면, 더 오래 가공해 주세요.</li>
+    </ul>
+  </li>
+</ol>
+```
+
+첫 번째의 예제로 돌아가, 두 번째의 예제처럼 변경하는 연습을 해보시길 바랍니다.
