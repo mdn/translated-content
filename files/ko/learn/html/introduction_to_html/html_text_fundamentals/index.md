@@ -795,3 +795,237 @@ textarea.onkeyup = () => {
 ```
 
 첫 번째의 예제로 돌아가, 두 번째의 예제처럼 변경하는 연습을 해보시길 바랍니다.
+
+## 중요와 강조
+
+우리는 문장의 의미를 바꾸거나 특정한 단어를 강조하기위해 종종 일반적인 방법과 다르게 표현하기도 합니다. HTML은 그런 경우를 표시할 수 있도록 다양한 의미 요소를 제공하며, 이 섹션에서는 가장 일반적인 몇 가지 요소를 살펴보기로 합니다.
+
+### 중요(Emphasis)
+
+우리는 말을 하면서 특정 단어를 강세를 두고 발음하는 방법으로 의미를 다르게 표현합니다. 마찬가지로, 글에서는 단어에 강세를 두기 위해 이탤릭체로 표현하는 경향이 있습니다. 예를 들어, 다음 두 문장은 다른 의미를 가집니다.
+
+> 당신이 늦지 않아서 다행입니다.
+>
+> 당신이 _늦지_ 않아서 _다행_\입니다.
+
+첫 문장은 상대가 늦지 않은 것에 대해 진심으로 안도하는 것처럼 들립니다. 이와는 대조적으로, 두 번째 문장은 상대가 조금 늦게 도착한 것에대해 비꼬거나 짜증을 표현하는 것처럼 들립니다.
+
+HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("em")}} (emphasis) 요소를 사용합니다. 문서를 더 흥미롭게 읽게 될 뿐만 아니라, 화면 낭독기에 인식되면 다른 톤의 목소리로 표현됩니다. 브라우저에서는 기본적으로 이탤릭체로 스타일을 지정하지만, 단지 이탤릭체로 스타일링하기 위해 이 태그를 사용하는 것은 지양합니다. 스타일링을 위해서는 {{htmlelement("span")}} 요소에 약간의 CSS를 더하거나 {{htmlelement("i")}} 요소를 사용할 수 있습니다. (아래 참조.)
+
+```html
+<p>당신이 <em>늦지</em> 않아서 <em>다행</em>입니다.</p>
+```
+
+### 강조(Strong importance)
+
+우리는 중요한 단어를 강조하기 위해 강세를 두고 말하거나 글자를 두껍게 표현합니다. 예를 들면 다음과 같습니다.
+
+> 이 액체는 **독성이 강합니다**.
+>
+> 당신만 믿고 있어요. 늦지 **마세요**!
+
+HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("strong")}} (strong importance) 요소를 사용합니다. 문서를 더 유용하게 만드는 것뿐만 아니라, 화면 낭독기에 인식되면 다른 톤의 목소리로 표현됩니다. 브라우저에서는 기본적으로 굵은 텍스트로 스타일을 지정하지만, 단지 굵게 스타일링하기 위해 이 태그를 사용하는 것은 지양합니다. 스타일링을 위해서는 {{htmlelement("span")}} 요소에 약간의 CSS를 더하거나 {{htmlelement("b")}} 요소를 사용할 수 있습니다. (아래 참조.)
+
+```html
+<p>이 액체는 <strong>독성이 강합니다</strong>.</p>
+
+<p>당신만 믿고 있어요. 늦지 <strong>마세요</strong>!</p>
+```
+
+원한다면 각각의 태그가 서로의 안에 위치할 수 있습니다.
+
+```html-nolint
+<p>이 액체는 <strong>독성이 강합니다</strong>. 그것을 마시면, <strong>당신은 <em>사망die</em>할 수도 있습니다</strong>.</p>
+```
+
+{{EmbedLiveSample('Strong importance')}}
+
+### 활동적인 학습: 중요한 부분을 표현해 보자
+
+이 활동적인 학습 섹션에서는 편집 가능한 예제를 제공했습니다. 이 안에서 여러분이 필요하다고 생각되는 단어에 강조와 중요성을 더해 보며 연습할 수 있기를 바랍니다.
+
+```html hidden
+<h2>실시간 출력</h2>
+
+<div class="output" style="min-height: 50px;"></div>
+
+<h2>편집 가능한 코드</h2>
+<p class="a11y-label">
+  Esc 키를 눌러 코드 영역에서 초점을 멀리 이동합니다. (Tab 키를 누르면 탭 문자가
+  삽입됩니다.)
+</p>
+
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>중요한 공지</h1>
+<p>2010년 1월 9일 일요일에, 밀워키 시내의 한 쇼핑 센터에서 고트족이
+  정원 요정 여러 마리를 훔치는 장면이 목격되었습니다.
+  그들은 모두 녹색 점프슈트와 우스꽝스러운 모자를 쓰고 있었고,
+  즐거운 시간을 보내고 있는 것 같았습니다.
+  이 사건에 대해 어떠한 정보가 있으신 분은
+   지금 바로 경찰에 연락해 주세요.</p>
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+const htmlSolution =
+  "<h1>중요한 공지</h1>\n<p><strong>2010년 1월 9일 일요일</strong>에, <strong>밀워키</strong> 시내의 한 쇼핑 센터에서 <em>고트</em>족이 <strong>정원 요정 <em>여러 마리</em></strong>를 훔치는 장면이 목격되었습니다. 그들은 모두 <em>녹색 점프슈트</em>와 <em>우스꽝스러운 모자</em>를 쓰고 있었고, 즐거운 시간을 보내고 있는 것 같았습니다. 이 사건에 대해 <strong>어떠한</strong> 정보가 있으신 분은 <strong>지금 바로</strong> 경찰에 연락해 주세요.</p>";
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "해답 보기";
+  updateCode();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "해답 보기") {
+    textarea.value = solutionEntry;
+    solution.value = "해답 숨기기";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "해답 보기";
+  }
+  updateCode();
+});
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+
+// Stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+textarea.onkeydown = (e) => {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = () => {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "해답 보기") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('Active_learning_Lets_be_important', 700, 520, "", "") }}
+
+### Italic, bold, underline…
+
+우리가 지금까지 얘기했던 요소들은 관련된 의미들을 명확히 구분했습니다. {{htmlelement("b")}}, {{htmlelement("i")}}, {{htmlelement("u")}}의 상황들은 좀 복잡하죠. 이 요소들은 CSS가 형편없이 지원되거나 완전히 지원되지 않는 경우에 이탤릭체 또는 밑줄 등을 표현할 수 있도록 고안되었습니다. 의미론적이 아닌 표현에만 영향을 주는 이와 같은 요소들은 **현재적 요소**로 알려져 있으며, 더 이상 사용되어서는 안됩니다. 앞에서 살펴본 바와 같이 의미론은 접근성, SEO 등에 매우 중요하기 때문이죠.
+
+HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로운 의미론적 역할로 재정립했습니다.
+
+기억할 수 있는 가장 좋은 규칙은 다음과 같습니다. 더 적합한 요소가 없다면, 과거로부터 줄곧 굵은 글씨, 이탤릭체를 쓰거나 밑줄을 치는 방법으로 표현했던 의미를 전달하기 위해 `<b>`, `<i>`, `<u>` 를 사용하는 것이 적절합니다. `<strong>`, `<em>`, `<mark>`, `<span>` 중 어느 것이 더 적절한지 고려해 보세요.
+
+항상 접근성에 관해 염두하세요. 이탤릭체의 개념은 화면 낭독기를 사용하는 사람이나 라틴 문자 체계 이외의 사용자에게는 별로 도움이 되지 않습니다.
+
+- {{HTMLElement('i')}} 요소는 과거로부터 줄곧 기울임 꼴로 전달되는 의미를 전달하기 위해 사용됩니다. 외래어, 분류학 명칭, 전문 용어, 생각, 등과 같은 것을 말입니다.
+- {{HTMLElement('b')}} 요소는 과거로부터 줄곧 굵은 글씨로 전달되는 의미를 전달할 때 사용합니다. 주요 단어, 제품 이름, 주요 문장, 등과 같은 것을 말입니다.
+- {{HTMLElement('u')}} 요소는 과거로부터 줄곧 밑줄을 치는 것으로 전달되는 의미를 전달할 때 사용합니다. 적절한 이름, 잘못된 철자, 등과 같은 것을 말입니다.
+
+> **참고:** 사람들은 밑줄을 하이퍼링크와 강하게 연관시킵니다. 따라서 웹에서는 링크에만 밑줄을 긋는 것이 가장 좋습니다. 의미론적으로 적합한 경우, `<u>` 요소를 사용하되 CSS를 사용하여 기본 밑줄을 웹에서 더 적합하게 변경할 수 있는지 고려합니다. 그것이 어떻게 이루어질 수 있는지는 아래의 예제에서 확인할 수 있습니다.
+
+```html
+<!-- 학명 -->
+<p>
+  붉은목벌새 (<i>Archilochus colubris</i>)는 북아메리카 동부에서 가장 흔한
+  벌새입니다.
+</p>
+
+<!-- 외래어 -->
+<p>
+  메뉴에는 <i lang="uk-latn">vatrushka</i>, <i lang="id">nasi goreng</i>, 그리고
+  <i lang="fr">soupe à l'oignon</i>과 같은 이국적인 단어가 가득했습니다.
+</p>
+
+<!-- 알려진 철자 오류 -->
+<p>
+  언젠가 <u class="spelling-error">철자</u>를 더 잘 쓰는 방법을 배울 거예요.
+</p>
+
+<!-- 정의에 사용될 때 정의되는 용어 -->
+<dl>
+  <dt>Semantic HTML</dt>
+  <dd>외형이 아닌 <b>의미론적</b> 의미에 따라 요소를 사용합니다.</dd>
+</dl>
+```
+
+{{EmbedLiveSample('Italic, bold, underline…','100%','270')}}
+
+## 실력을 테스트해 보세요!
+
+이 글을 끝까지 읽었지만, 가장 중요한 정보를 기억할 수 있나요? 다음 단계로 넘어가기 전에 이 정보를 기억하고 있는지 확인할 수 있는 몇 가지 추가 테스트가 있습니다. [Test your skills: HTML text basics](/ko/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics)를 보면 됩니다.
+
+## 요약
+
+여기까지입니다! 이 글에서는 HTML에서 텍스트를 표현하는 방법에 대해 좋은 아이디어를 제공했고, 이 영역에서 가장 중요한 요소 몇 가지를 소개했습니다. 이 영역에서 다뤄야 할 의미론적 요소는 훨씬 더 많으며 이 과정 후반의 [텍스트 조작 고급 기법](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) 글에서 더 자세히 살펴볼 것입니다. 다음 글에서는 웹에서 가장 중요한 요소인 [하이퍼링크를 만드는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)에 대해 자세히 살펴볼 것입니다.
+
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
