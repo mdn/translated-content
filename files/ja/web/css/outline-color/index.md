@@ -14,7 +14,7 @@ slug: Web/CSS/outline-color
 ```css
 /* <color> 値 */
 outline-color: #f92525;
-outline-color: rgb(30,222,121);
+outline-color: rgb(30, 222, 121);
 outline-color: blue;
 
 /* キーワード値 */
@@ -74,8 +74,8 @@ outline-color: unset;
 
 ```css
 p {
-  outline: 2px solid;      /* 輪郭線の幅と種類 */
-  outline-color: #0000FF;  /* 輪郭線を青にする */
+  outline: 2px solid; /* 輪郭線の幅と種類 */
+  outline-color: #0000ff; /* 輪郭線を青にする */
   margin: 5px;
 }
 ```

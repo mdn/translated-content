@@ -2,13 +2,13 @@
 title: DataView.prototype.getInt32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
 l10n:
-  sourceCommit: a1ab8a0d6e510d53989c6de9515cdf5654b904b7
+  sourceCommit: 3a006e92b14a2733e485a26d0dc3a1472968fd9b
 ---
 
 {{JSRef}}
 
-**`getInt32()`** 메서드는 {{jsxref("DataView")}}의 시작 부분에서 주어진 오프셋(바이트)만큼 떨어진 곳에서부터
-부호화된 32비트 정수(long)를 가져옵니다.
+{{jsxref("DataView")}} 인스턴스의 **`getInt32()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
+4바이트를 읽고 이를 32비트 부호 있는 정수로 해석합니다.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint32.html")}}
 
@@ -24,7 +24,7 @@ getInt32(byteOffset, littleEndian)
 - `byteOffset`
   - : 데이터를 읽을 데이터 뷰의 시작점으로부터의 오프셋(바이트).
 - `littleEndian` {{optional_inline}}
-  - : {{Glossary("Endianness", "little- or big-endian")}} 형식으로 32비트 정수를 저장할지
+  - : {{Glossary("Endianness", "리틀 엔디언 혹은 빅 엔디언")}} 형식으로 32비트 정수를 저장할지
     여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디안 값을 읽습니다.
 
 ### 반환 값

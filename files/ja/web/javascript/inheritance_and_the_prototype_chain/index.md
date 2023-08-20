@@ -105,7 +105,7 @@ const parent = {
   value: 2,
   method() {
     return this.value + 1;
-  }
+  },
 };
 
 console.log(parent.method()); // 3
@@ -137,9 +137,24 @@ console.log(child.method()); // 5
 
 ```js
 const boxes = [
-  { value: 1, getValue() { return this.value; } },
-  { value: 2, getValue() { return this.value; } },
-  { value: 3, getValue() { return this.value; } },
+  {
+    value: 1,
+    getValue() {
+      return this.value;
+    },
+  },
+  {
+    value: 2,
+    getValue() {
+      return this.value;
+    },
+  },
+  {
+    value: 3,
+    getValue() {
+      return this.value;
+    },
+  },
 ];
 ```
 
@@ -147,7 +162,9 @@ const boxes = [
 
 ```js
 const boxPrototype = {
-  getValue() { return this.value; },
+  getValue() {
+    return this.value;
+  },
 };
 
 const boxes = [
@@ -171,11 +188,7 @@ Box.prototype.getValue = function () {
   return this.value;
 };
 
-const boxes = [
-  new Box(1),
-  new Box(2),
-  new Box(3),
-];
+const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
 `new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
@@ -261,17 +274,17 @@ const regexp = new RegExp("abc");
 歴史的な理由により、いくつかの組み込みコンストラクターの `prototype` プロパティはインスタンスそのものであることに注目すると興味深いかもしれません。例えば、 `Number.prototype` は数字の 0、 `Array.prototype` は空の配列、 `RegExp.prototype` は `/(?:)/` となります。
 
 ```js
-Number.prototype + 1 // 1
-Array.prototype.map((x) => x + 1) // []
-String.prototype + "a" // "a"
-RegExp.prototype.source // "(?:)"
-Function.prototype() // Function.prototype はそれ自身では何もしない関数
+Number.prototype + 1; // 1
+Array.prototype.map((x) => x + 1); // []
+String.prototype + "a"; // "a"
+RegExp.prototype.source; // "(?:)"
+Function.prototype(); // Function.prototype はそれ自身では何もしない関数
 ```
 
 しかし、ユーザー定義されたコンストラクターや、 `Map` のような現代のコンストラクターでは、このようなことは起こりません。
 
 ```js
-Map.prototype.get(1)
+Map.prototype.get(1);
 // Uncaught TypeError: get method called on incompatible Map.prototype
 ```
 
@@ -293,10 +306,7 @@ function Base() {}
 function Derived() {}
 // `Derived.prototype` の `[[Prototype]]` を
 // `Base.prototype` に設定
-Object.setPrototypeOf(
-  Derived.prototype,
-  Base.prototype,
-);
+Object.setPrototypeOf(Derived.prototype, Base.prototype);
 
 const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
@@ -363,7 +373,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar';
+doSomething.prototype.foo = "bar";
 console.log(doSomething.prototype);
 ```
 
@@ -391,9 +401,9 @@ console.log(doSomething.prototype);
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar'; // プロトタイプにプロパティを追加
+doSomething.prototype.foo = "bar"; // プロトタイプにプロパティを追加
 const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = 'some value'; // オブジェクトにプロパティを追加
+doSomeInstancing.prop = "some value"; // オブジェクトにプロパティを追加
 console.log(doSomeInstancing);
 ```
 
@@ -430,15 +440,15 @@ console.log(doSomeInstancing);
 
 ```js
 function doSomething() {}
-doSomething.prototype.foo = 'bar';
+doSomething.prototype.foo = "bar";
 const doSomeInstancing = new doSomething();
-doSomeInstancing.prop = 'some value';
-console.log('doSomeInstancing.prop:     ', doSomeInstancing.prop);
-console.log('doSomeInstancing.foo:      ', doSomeInstancing.foo);
-console.log('doSomething.prop:          ', doSomething.prop);
-console.log('doSomething.foo:           ', doSomething.foo);
-console.log('doSomething.prototype.prop:', doSomething.prototype.prop);
-console.log('doSomething.prototype.foo: ', doSomething.prototype.foo);
+doSomeInstancing.prop = "some value";
+console.log("doSomeInstancing.prop:     ", doSomeInstancing.prop);
+console.log("doSomeInstancing.foo:      ", doSomeInstancing.foo);
+console.log("doSomething.prop:          ", doSomething.prop);
+console.log("doSomething.foo:           ", doSomething.foo);
+console.log("doSomething.prototype.prop:", doSomething.prototype.prop);
+console.log("doSomething.prototype.foo: ", doSomething.prototype.foo);
 ```
 
 この結果は以下のようになります。
@@ -464,7 +474,7 @@ const o = { a: 1 };
 // Object.prototype はプロトタイプが null です。
 // o ---> Object.prototype ---> null
 
-const b = ['yo', 'whadup', '?'];
+const b = ["yo", "whadup", "?"];
 // 配列は Array.prototype を継承します。
 // （indexOf, forEach, などのメソッドがあります。）
 // プロトタイプチェーンは次のようになります。
@@ -514,7 +524,7 @@ function Graph() {
 
 Graph.prototype.addVertex = function (v) {
   this.vertices.push(v);
-}
+};
 
 const g = new Graph();
 // g は自身のプロパティ 'vertices' と 'edges' を持つオブジェクトです。
@@ -675,8 +685,8 @@ Object.setPrototypeOf(obj, anotherObj);
 ```js
 const obj = {};
 // 使用しないでください。例示のためのものです。
-obj.__proto__ = { barProp: 'bar val' };
-obj.__proto__.__proto__ = { fooProp: 'foo val' };
+obj.__proto__ = { barProp: "bar val" };
+obj.__proto__.__proto__ = { fooProp: "foo val" };
 console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
@@ -705,28 +715,28 @@ console.log(obj.barProp);
 
 プロトタイプチェーンの上位にあるプロパティを参照する時間は、パフォーマンスにマイナスの影響を与える可能性があり、パフォーマンスが重要視されるコードでは、この影響は大きいかもしれません。さらに、存在しないプロパティにアクセスしようとすると、常にプロトタイプチェーンを完全に縦断することになります。
 
-また、オブジェクトのプロパティを反復処理するときに、プロトタイプチェーン上にある**すべての** 列挙可能なプロパティが列挙されることになります。オブジェクトがプロトタイプチェーンのどこかではなく、_自分自身に定義されたプロパティを持っているかどうかを調べるには、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) または [`Object.hasOwn`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) メソッドを使用しなければいけません。 `[[Prototype]]` として `null` を持つオブジェクトを除くすべてのオブジェクトは、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) を `Object.prototype` から継承ししています。ただし、プロトタイプチェーンのさらに下でオーバーライドされている場合を除きます。具体的な例を挙げるために、上記のグラフの例のようなコードを使って説明しましょう。
+また、オブジェクトのプロパティを反復処理するときに、プロトタイプチェーン上にある**すべての** 列挙可能なプロパティが列挙されることになります。オブジェクトがプロトタイプチェーンのどこかではなく、\_自分自身に定義されたプロパティを持っているかどうかを調べるには、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) または [`Object.hasOwn`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) メソッドを使用しなければいけません。 `[[Prototype]]` として `null` を持つオブジェクトを除くすべてのオブジェクトは、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) を `Object.prototype` から継承ししています。ただし、プロトタイプチェーンのさらに下でオーバーライドされている場合を除きます。具体的な例を挙げるために、上記のグラフの例のようなコードを使って説明しましょう。
 
 ```js
-console.log(g.hasOwnProperty('vertices'));
+console.log(g.hasOwnProperty("vertices"));
 // true
 
-console.log(Object.hasOwn(g, 'vertices'));
+console.log(Object.hasOwn(g, "vertices"));
 // true
 
-console.log(g.hasOwnProperty('nope'));
+console.log(g.hasOwnProperty("nope"));
 // false
 
-console.log(Object.hasOwn(g, 'nope'));
+console.log(Object.hasOwn(g, "nope"));
 // false
 
-console.log(g.hasOwnProperty('addVertex'));
+console.log(g.hasOwnProperty("addVertex"));
 // false
 
-console.log(Object.hasOwn(g, 'addVertex'));
+console.log(Object.hasOwn(g, "addVertex"));
 // false
 
-console.log(Object.getPrototypeOf(g).hasOwnProperty('addVertex'));
+console.log(Object.getPrototypeOf(g).hasOwnProperty("addVertex"));
 // true
 ```
 

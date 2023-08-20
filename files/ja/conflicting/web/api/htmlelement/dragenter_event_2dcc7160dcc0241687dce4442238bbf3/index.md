@@ -1,7 +1,6 @@
 ---
-title: 'Document: dragenter イベント'
-slug: >-
-  conflicting/Web/API/HTMLElement/dragenter_event_2dcc7160dcc0241687dce4442238bbf3
+title: "Document: dragenter イベント"
+slug: conflicting/Web/API/HTMLElement/dragenter_event_2dcc7160dcc0241687dce4442238bbf3
 original_slug: Web/API/Document/dragenter_event
 ---
 

@@ -12,7 +12,7 @@ l10n:
 ## 構文
 
 ```js
-generateKey(algorithm, extractable, keyUsages)
+generateKey(algorithm, extractable, keyUsages);
 ```
 
 ### 引数
@@ -34,10 +34,10 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `extractable`
   - : {{domxref("SubtleCrypto.exportKey()")}} や {{domxref("SubtleCrypto.wrapKey()")}}
-      を用いて鍵を取り出すことができるかを表す {{jsxref("Boolean")}} 値。
+    を用いて鍵を取り出すことができるかを表す {{jsxref("Boolean")}} 値。
 - `keyUsages`
   - : 新しく生成する鍵で何ができるかを表す {{jsxref("Array")}} 。
-      配列の要素として使用可能な値は以下の通りです。
+    配列の要素として使用可能な値は以下の通りです。
     - `encrypt`: 鍵をメッセージの {{domxref("SubtleCrypto.encrypt()", "暗号化")}} に用いてよい。
     - `decrypt`: 鍵をメッセージの {{domxref("SubtleCrypto.decrypt()", "復号")}} に用いてよい。
     - `sign`: 鍵をメッセージの {{domxref("SubtleCrypto.sign()", "署名")}} に用いてよい。
@@ -57,7 +57,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 - `SyntaxError` {{domxref("DOMException")}}
   - : 結果が、種類が `secret` または `private` である {{domxref("CryptoKey")}} であるが、
-      `keyUsages` が空である時発生します。
+    `keyUsages` が空である時発生します。
 - `SyntaxError` {{domxref("DOMException")}}
   - : 結果が {{domxref("CryptoKeyPair")}} であり、
     その `privateKey.usages` 属性が空である時発生します。
@@ -77,10 +77,10 @@ let keyPair = await window.crypto.subtle.generateKey(
     name: "RSA-OAEP",
     modulusLength: 4096,
     publicExponent: new Uint8Array([1, 0, 1]),
-    hash: "SHA-256"
+    hash: "SHA-256",
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 
@@ -93,10 +93,10 @@ let keyPair = await window.crypto.subtle.generateKey(
 let keyPair = await window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -109,10 +109,10 @@ let keyPair = await window.crypto.subtle.generateKey(
 let key = await window.crypto.subtle.generateKey(
   {
     name: "HMAC",
-    hash: {name: "SHA-512"}
+    hash: { name: "SHA-512" },
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -125,10 +125,10 @@ let key = await window.crypto.subtle.generateKey(
 let key = await window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
-    length: 256
+    length: 256,
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: WebAssembly JavaScript API の使用
 slug: WebAssembly/Using_the_JavaScript_API
-i10n:
+l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 

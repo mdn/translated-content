@@ -1,7 +1,6 @@
 ---
 title: Symbol (Символ)
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Symbol
-translation_of: Glossary/Symbol
 original_slug: Glossary/Symbol
 ---
 

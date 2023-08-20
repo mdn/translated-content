@@ -31,14 +31,17 @@ slug: Web/API/ResizeObserverEntry
 以下のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) （[ソースを参照](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)）の例から取ったものです。これは、ブラウザーが新しい `contentBoxSize` プロパティに対応しているかどうかを確認するための簡単な機能検出テストを使用します。もし対応していれば、それを使って必要なサイズデータを取得します。対応していない場合は、古い `contentRect` プロパティを使用します。
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+    if (entry.contentBoxSize) {
+      h1Elem.style.fontSize =
+        Math.max(1.5, entry.contentBoxSize.inlineSize / 200) + "rem";
+      pElem.style.fontSize =
+        Math.max(1, entry.contentBoxSize.inlineSize / 600) + "rem";
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+      h1Elem.style.fontSize =
+        Math.max(1.5, entry.contentRect.width / 200) + "rem";
+      pElem.style.fontSize = Math.max(1, entry.contentRect.width / 600) + "rem";
     }
   }
 });
