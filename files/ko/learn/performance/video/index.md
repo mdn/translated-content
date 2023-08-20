@@ -1,6 +1,8 @@
 ---
 title: "멀티미디어: 비디오"
 slug: Learn/Performance/video
+i10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
