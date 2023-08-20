@@ -13,7 +13,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">선결 사항:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML의 기초인 (<a
           href="/ko/docs/Learn/HTML/Introduction_to_HTML"
