@@ -12,7 +12,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 ```js
 for (let step = 0; step < 5; step++) {
   // 値が 0 から 4 まで計 5 回実行される
-  console.log('一歩西に歩く');
+  console.log("一歩西に歩く");
 }
 ```
 
@@ -57,7 +57,9 @@ for ([初期化式]; [条件式]; [加算式])
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -71,20 +73,22 @@ for ([初期化式]; [条件式]; [加算式])
 </form>
 
 <script>
-function howMany(selectObject) {
-  let numberSelected = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    let numberSelected = 0;
+    for (let i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function() {
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes));
-});
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Number of options selected: " + howMany(document.selectForm.musicTypes),
+    );
+  });
 </script>
 ```
 
@@ -159,7 +163,7 @@ while (n < 3) {
 ```js example-bad
 // 無限ループは悪!
 while (true) {
-  console.log('Hello, world!');
+  console.log("Hello, world!");
 }
 ```
 
@@ -181,9 +185,8 @@ while (true) {
 この例では、ラベル `markLoop` は `while` ループを指し示しています。
 
 ```js
-markLoop:
-while (theMark === true) {
-   doSomething();
+markLoop: while (theMark === true) {
+  doSomething();
 }
 ```
 
@@ -222,11 +225,11 @@ for (let i = 0; i < a.length; i++) {
 let x = 0;
 let z = 0;
 labelCancelLoops: while (true) {
-  console.log('外側のループ: ' + x);
+  console.log("外側のループ: " + x);
   x += 1;
   z = 1;
   while (true) {
-    console.log('内側のループ: ' + z);
+    console.log("内側のループ: " + z);
     z += 1;
     if (z === 10 && x === 10) {
       break labelCancelLoops;
@@ -267,13 +270,12 @@ while (i < 5) {
 }
 //1,3,7,12
 
-
 let i = 0;
 let n = 0;
 while (i < 5) {
   i++;
   if (i === 3) {
-     // continue;
+    // continue;
   }
   n += i;
   console.log(n);
@@ -290,22 +292,20 @@ while (i < 5) {
 ```js
 let i = 0;
 let j = 10;
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) === 0) {
-          continue checkj;
-        }
-        console.log(j + ' is odd.');
-      }
-      console.log('i = ' + i);
-      console.log('j = ' + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 === 0) {
+      continue checkj;
+    }
+    console.log(j + " is odd.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` 文
@@ -323,11 +323,11 @@ for (変数 in オブジェクト)
 
 ```js
 function dump_props(obj, obj_name) {
-  let result = '';
+  let result = "";
   for (let i in obj) {
-    result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+    result += obj_name + "." + i + " = " + obj[i] + "<br>";
   }
-  result += '<hr>';
+  result += "<hr>";
   return result;
 }
 ```
@@ -335,8 +335,8 @@ function dump_props(obj, obj_name) {
 `make` プロパティと `model` プロパティを持つ `car` オブジェクトに対し、`result` は下記のようになります :
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### 配列
@@ -358,14 +358,14 @@ for (変数 of オブジェクト)
 
 ```js
 const arr = [3, 5, 7];
-arr.foo = 'hello';
+arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // "0", "1", "2", "foo" が出力される
+  console.log(i); // "0", "1", "2", "foo" が出力される
 }
 
 for (let i of arr) {
-   console.log(i); // 3, 5, 7 が出力される
+  console.log(i); // 3, 5, 7 が出力される
 }
 ```
 

@@ -13,7 +13,7 @@ slug: Web/API/Screen/availHeight
 
 画面の利用可能な空間の高さを示す CSS ピクセル数を示す数値。これは、 {{DOMxRef("Screen.height", "window.screen.height")}} の値よりも大きくすることはできず、端末やユーザーエージェントがそれ自身のために垂直方向の空間を確保している場合は、より小さくなります。
 
-例えば、 Dock が画面の一番下（これが既定）にある Mac の場合、 `availHeight` の値は、下図のように、 `height`  (CSS ピクセル単位の画面全体の高さ) から Dock とメニューバーの高さを差し引いた値になります。
+例えば、 Dock が画面の一番下（これが既定）にある Mac の場合、 `availHeight` の値は、下図のように、 `height` (CSS ピクセル単位の画面全体の高さ) から Dock とメニューバーの高さを差し引いた値になります。
 
 [![Screen.availHeight が Screen.height と画面の内容にどのように関係しているかを示す図](availheight-diagram.svg)](availheight-diagram.svg)
 
@@ -23,7 +23,7 @@ slug: Web/API/Screen/availHeight
 
 メインウィンドウでは、パネルを開くときに以下のようなコードを使用します。
 
-```html
+```js
 let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
 ```
 

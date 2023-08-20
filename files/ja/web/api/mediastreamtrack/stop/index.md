@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/stop
 ## 構文
 
 ```js
-stop()
+stop();
 ```
 
 ### 引数
@@ -38,7 +38,7 @@ function stopStreamedVideo(videoElem) {
   const stream = videoElem.srcObject;
   const tracks = stream.getTracks();
 
-  tracks.forEach(function(track) {
+  tracks.forEach(function (track) {
     track.stop();
   });
 

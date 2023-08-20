@@ -62,15 +62,14 @@ new Request(input, options)
 
     ```js
     const oldRequest = new Request(
-      'https://github.com/mdn/content/issues/12959',
-      { headers: { 'From': 'webmaster@example.org' } },
+      "https://github.com/mdn/content/issues/12959",
+      { headers: { From: "webmaster@example.org" } },
     );
     oldRequest.headers.get("From"); // "webmaster@example.org"
-    const newRequest = new Request(
-      oldRequest,
-      { headers: { 'From': 'developer@example.org' } },
-    );
-    newRequest.headers.get('From'); // "developer@example.org"
+    const newRequest = new Request(oldRequest, {
+      headers: { From: "developer@example.org" },
+    });
+    newRequest.headers.get("From"); // "developer@example.org"
     ```
 
 ## エラー
@@ -97,9 +96,9 @@ new Request(input, options)
 [Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) ([Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/) を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("fetch()")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Response.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
 fetch(myRequest)
   .then((response) => response.blob())
@@ -112,19 +111,19 @@ fetch(myRequest)
 [Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-with-init-then-request) ([Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-with-init-then-request/) を参照) では、 `fetch()` を呼び出すときに初期化オブジェクトを渡している以外は同じです。
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 
 fetch(myRequest).then((response) => {
   // ...
@@ -143,15 +142,15 @@ fetch(myRequest, myOptions).then((response) => {
 
 ```js
 const myOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'Content-Type': 'image/jpeg',
+    "Content-Type": "image/jpeg",
   },
-  mode: 'cors',
-  cache: 'default',
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myOptions);
+const myRequest = new Request("flowers.jpg", myOptions);
 ```
 
 リクエストのコピーを作成するために、 {{domxref("Request")}} オブジェクトを `Request()` コンストラクターに渡すこともできます（これは {{domxref("Request.clone","clone()")}} メソッドを呼び出すのと似ています）。

@@ -388,7 +388,7 @@ import 文の指定子は変わらないので、これに依存する JavaScrip
 モジュールで定義した変数は、グローバルオブジェクトに明示的に割り当てられない限り、そのモジュールのスコープに属します。他にも、グローバル定義する変数は、モジュール内で利用できます。例えば、以下のコードが指定された場合は次のようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -696,6 +696,7 @@ import("./modules/myModule.js").then((module) => {
 
 > **メモ:** 動的インポートは、ブラウザー のメインスレッド、共有ワーカー、専用ワーカーで許可されています。
 > しかし、サービスワーカーやワークレットで `import()` を呼び出すと、例外が発生します。
+
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
 例を見てみましょう。[dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) ディレクトリーには、以前のクラスの例に基づいた別の使用例があります。しかし、今回は使用例が読み込まれたときにはキャンバスに何も描画しません。その代わり "Circle" (円)、"Square" (正方形)、"Triangle" (三角形) という 3 つのボタンを表示し、それらが押されたとき、対応した図形を描くために必要なモジュールを動的に読み込んで使用します。

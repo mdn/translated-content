@@ -27,13 +27,16 @@ grid-template-rows: masonry;
 
 /* <auto-track-list> 値 */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* グローバル値 */
 grid-template-rows: inherit;
@@ -60,7 +63,7 @@ grid-template-rows: unset;
   - : グリッドコンテナーのブロック方向の寸法に対する相対値で、負ではない {{cssxref("percentage", "&lt;percentage&gt;")}} です。グリッドコンテナーの寸法がトラックの寸法に依存する場合は、パーセント値を `auto` として扱う必要があります。
     トラックの内在的なサイズの寄与によって、グリッドコンテナーの寸法に合わせられ、パーセント値を尊重した結果、最小の大きさによってトラックの最終的な寸法を増加させる可能性があります。
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
-  - : `fr` の単位の付いた負の数ではない距離で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して共有します。    `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
+  - : `fr` の単位の付いた負の数ではない距離で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して共有します。 `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
 - {{cssxref("max-content")}}
   - : グリッドトラックを占有しているグリッドアイテムの中で、コンテンツ貢献度の最大値を表すキーワードです。
 - {{cssxref("min-content")}}

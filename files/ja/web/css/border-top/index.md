@@ -73,9 +73,7 @@ border-top: unset;
 #### HTML
 
 ```html
-<div>
-  このボックスには上側に境界線があります。
-</div>
+<div>このボックスには上側に境界線があります。</div>
 ```
 
 #### CSS
