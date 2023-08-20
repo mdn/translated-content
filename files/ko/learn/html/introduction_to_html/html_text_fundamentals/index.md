@@ -602,9 +602,6 @@ textarea.onkeyup = () => {
 이제 우리는 레시피 페이지 예시를 만드는 데 필요한 모든 정보를 가지고 있습니다. [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) 시작 파일의 로컬 사본을 저장해 거기에서 작업하거나 아래에 있는 편집 가능한 예제에서 작업을 할 수도 있습니다. 로컬에서 작업하면 진행 중인 작업을 저장할 수 있으므로 더 좋지만, 편집 가능한 예제에서 작업하면 다음에 이 페이지를 열 때 작업 기록이 손실됩니다. 이 두 가지 방법은 장점과 단점 모두를 지니고 있습니다.
 
 ```html hidden
-<h2>입력</h2>
-
-```html hidden
 <h2>실시간 출력</h2>
 
 <div class="output" style="min-height: 50px;"></div>
