@@ -37,7 +37,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   <tbody>
     <tr>
       <td>主页</td>
-      <td><code>/</code> and <code>/blog/</code></td>
+      <td><code>/</code> 和 <code>/blog/</code></td>
       <td>描述站点的索引页面。</td>
     </tr>
     <tr>
