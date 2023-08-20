@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
-_반응형 웹 설계_ 는 웹 페이지가 모든 화면 크기와 해상도에서 잘 렌더링되도록 하면서도 사용성을 보장하는 웹 디자인 접근 방식입니다. 멀티 디바이스 웹을 위한 디자인 방식입니다. 이 글에서는 이를 마스터하는 데 사용할 수 있는 몇 가지 기법에 대해 설명합니다.
+반응형 웹 설계 는 웹 페이지가 모든 화면 크기와 해상도에서 잘 렌더링되도록 하면서도 사용성을 보장하는 웹 디자인 접근 방식입니다. 멀티 디바이스 웹을 위한 디자인 방식입니다. 이 글에서는 이를 숙달하기 위해 사용할 수 있는 몇 가지 기술을 이해하는 데 도움이 될 것입니다.
 
 <table>
   <tbody>
