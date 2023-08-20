@@ -33,7 +33,7 @@ l10n:
 
 HTML 문서와 스타일시트를 컴퓨터의 디렉터리에 저장하고, 이미지를 `images`라는 폴더에 추가합니다. 브라우저에서 `index.html` 파일을 열면 기본 스타일은 있지만 레이아웃이 없는 페이지가 표시되며, 아래 이미지와 비슷하게 보일 것입니다.
 
-![Starting point of the layout task. The elements are not laid out neatly. There is a website title, above a black nav bar with 5 links flush left, followed by the blog post title and post content. Between the blog title and blog content there is a photo that is flush left.](layout-task-start.png)
+![레이아웃 작업의 시작점입니다. 요소가 깔끔하게 배치되지 않았습니다. 왼쪽에 5개의 링크가 있는 검은색 네비게이션 바 위에 웹 사이트 제목이 있고, 그 뒤에 블로그 글 제목과 글 내용이 있습니다. 블로그 제목과 블로그 내용 사이에는 왼쪽 끝에 맞춰진 사진이 있습니다.](layout-task-start.png)
 
 이 시작점에는 정상적인 흐름에서 브라우저에 표시되는 레이아웃의 모든 콘텐츠가 있습니다.
 
@@ -70,7 +70,7 @@ HTML 문서와 스타일시트를 컴퓨터의 디렉터리에 저장하고, 이
 
 다음 스크린샷은 완성된 디자인 레이아웃의 예제를 보여 줍니다.
 
-![Finished layout task website. The elements are laid out neatly. There is a website title, above a black nav bar containing 5 equally spaced links. Below the nav bar, there are two sections. On the left there is a blog post: A blog post title followed by the post content. The blog content wraps around a photo that is flush left. On the right side there is a 'photography' title about a group of images laid out in a two-image wide grid.](layout-task-complete.png)
+![웹 사이트 레이아웃 작업을 마쳤습니다. 요소가 깔끔하게 배치되었습니다. 동일한 간격의 링크 5개가 포함된 검은색 네비게이션 바 위에 웹 사이트 제목이 있습니다. 네비게이션 바 아래에는 두 개의 섹션이 있습니다. 왼쪽에는 블로그 글이 있습니다. 블로그 글 제목 다음에 글 내용이 표시됩니다. 블로그 내용은 왼쪽에 있는 사진을 감싸고 있습니다. 오른쪽에는 두 장의 이미지가 너비가 넓은 그리드에 배치된 이미지 그룹에 대한 'Photography' 제목이 있습니다.](layout-task-complete.png)
 
 ## 평가 또는 추가 도움말
 
