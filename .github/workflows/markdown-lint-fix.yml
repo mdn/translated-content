@@ -61,7 +61,7 @@ jobs:
         run: |
           yarn markdownlint-cli2-fix "**/${{ matrix.lang }}/**/*.md"
           yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
-          cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json --files "${{ github.workspace }}/files/${{ matrix.lang }}"
+          cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
 
       - name: Create PR with only fixable issues
         if: success()
