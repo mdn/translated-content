@@ -1,7 +1,7 @@
 ---
 title: 正規表現
-slug: Web/JavaScript/Reference/Regular_expressions
 short-title: 概要
+slug: Web/JavaScript/Reference/Regular_expressions
 l10n:
   sourceCommit: fc67640f3545c1a5db42c878d1f0de71313349bc
 ---

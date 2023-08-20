@@ -1,7 +1,6 @@
 ---
 title: ":-moz-focusring"
 slug: conflicting/Web/CSS/:focus-visible
-original_slug: Web/CSS/:-moz-focusring
 ---
 
 {{Non-standard_header}}{{CSSRef}}

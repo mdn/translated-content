@@ -1,7 +1,6 @@
 ---
 title: アラート
 slug: conflicting/Web/Accessibility/ARIA
-original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
 
 ## 問題点

@@ -1,7 +1,6 @@
 ---
 title: registration
 slug: conflicting/Web/API/SyncEvent
-original_slug: Web/API/SyncEvent/registration
 ---
 
 {{Non-standard_header}}{{APIRef("Service Workers API")}}

@@ -1,7 +1,6 @@
 ---
 title: GitHub 早見表
 slug: conflicting/MDN/Community/Issues
-original_slug: MDN/Contribute/GitHub_cheatsheet
 ---
 
 {{MDNSidebar}}

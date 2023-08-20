@@ -1,7 +1,6 @@
 ---
 title: 共有メモリーに関する変更予定
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
 ---
 {{JSRef}}
 

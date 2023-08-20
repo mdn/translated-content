@@ -1,7 +1,6 @@
 ---
 title: 全くの初心者のための GitHub
 slug: conflicting/MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/GitHub_beginners
 ---
 
 {{MDNSidebar}}

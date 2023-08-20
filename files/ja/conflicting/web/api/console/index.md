@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.console
 slug: conflicting/Web/API/console
-original_slug: Web/API/WorkerGlobalScope/console
 ---
 
 {{APIRef("Web Workers API")}}{{Non-standard_header}}

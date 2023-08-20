@@ -1,7 +1,6 @@
 ---
 title: ウィジェット
 slug: conflicting/Web/Accessibility/ARIA_229a3bbc8da83524de32990b14561155
-original_slug: Web/Accessibility/ARIA/widgets
 ---
 
 > **警告:** 更新が必要

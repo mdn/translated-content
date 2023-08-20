@@ -1,8 +1,6 @@
 ---
 title: WebAssembly コードの読み込みと実行
 slug: WebAssembly/Loading_and_running
-i10n:
-  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
 ---
 
 {{WebAssemblySidebar}}
