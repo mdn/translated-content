@@ -10,7 +10,7 @@ l10n:
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">사전 지식</th>
+      <th scope="row">필요한 사전 지식</th>
       <td>
         <p>
           이 장에 들어서기에 앞서 필요한 사전 지식에는
