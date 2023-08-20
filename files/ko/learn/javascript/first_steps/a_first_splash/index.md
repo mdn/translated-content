@@ -1,6 +1,8 @@
 ---
 title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
+l10n:
+  sourceCommit: eab7a9c4c0d4251829e19500fa94865f9b5f56c7
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
