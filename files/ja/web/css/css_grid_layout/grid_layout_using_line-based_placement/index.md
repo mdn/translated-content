@@ -18,37 +18,39 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ![開発ツールで強調表示されたグリッド](3_hilighted_grid.png)
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
@@ -60,10 +62,10 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 ```
 
@@ -72,59 +74,61 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 それぞれのアイテムに対応して、4 つのアイテムを行と列のトラックにまたがって配置します。なお、必要に応じてセルを空けておくこともできます。グリッドレイアウトの優れた点の 1 つは、余白を残したままのデザインが実現できることです。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-column-end: 2;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 3;
-   grid-row-start: 1;
-   grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
-   grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 ```
 
@@ -135,51 +139,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 ここでは、各アイテムを配置するためにかなり多くのコードを使用しています。当然ながら一括指定プロパティがあります。{{cssxref("grid-column-start")}} と {{cssxref("grid-column-end")}} のプロパティは併せて {{cssxref("grid-column")}} となり、{{cssxref("grid-row-start")}} と {{cssxref("grid-row-end")}} は併せて {{cssxref("grid-row")}} となります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 / 2;
-   grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 / 4;
-   grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 / 3;
-   grid-row: 1 /  2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 ```
 
@@ -194,54 +200,56 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 つまり、基本的な個別指定で例を表すと次のようになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: 1;
-   grid-row-start: 1;
-   grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 .box2 {
-   grid-column-start: 3;
-   grid-row-start: 1;
-   grid-row-end: 3;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 .box4 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
 }
 ```
 
@@ -252,51 +260,53 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 一括指定は以下のコードのようになります。スラッシュはなく、2 番目の値は 1 つのトラックにまたがるアイテムのみになります。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column: 1 ;
-   grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-   grid-column: 3 ;
-   grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-   grid-column: 2 ;
-   grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-   grid-column: 2 / 4;
-   grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 ```
 
@@ -312,47 +322,49 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 - grid-column-end
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 4 / 2;
 }
 .box2 {
-   grid-area: 1 / 3 / 3 / 4;
+  grid-area: 1 / 3 / 3 / 4;
 }
 .box3 {
-   grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .box4 {
-   grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 2 / 4 / 4;
 }
 ```
 
@@ -371,64 +383,66 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ## 逆に数える
 
-また、グリッドのブロックやイン線の端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。これらの線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。最後の線は、*明示的グリッド* (`grid-template-columns` と `grid-template-rows` で定義されるグリッド) の最後の線であり、その外で追加された*暗黙的グリッド*である行や列は考慮されないことに注意しましょう。
+また、グリッドのブロックやイン線の端から逆に数えることもできます。英語の場合は、右の列の線と最後の行の線になります。これらの線は `-1` として扱われ、そこから逆算することができます。つまり、最後から 2 行目は `-2` となります。最後の線は、_明示的グリッド_ (`grid-template-columns` と `grid-template-rows` で定義されるグリッド) の最後の線であり、その外で追加された*暗黙的グリッド*である行や列は考慮されないことに注意しましょう。
 
 次の例では、アイテムを配置する際に、グリッドの右と下から行うことで、それまでのレイアウトを反転させています。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-   grid-column-start: -1;
-   grid-column-end: -2;
-   grid-row-start: -1;
-   grid-row-end: -4;
+  grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -1;
+  grid-row-end: -4;
 }
 .box2 {
-   grid-column-start: -3;
-   grid-column-end: -4;
-   grid-row-start: -1;
-   grid-row-end: -3;
+  grid-column-start: -3;
+  grid-column-end: -4;
+  grid-row-start: -1;
+  grid-row-end: -3;
 }
 .box3 {
-   grid-column-start: -2;
-   grid-column-end: -3;
-   grid-row-start: -1;
-   grid-row-end: -2;
+  grid-column-start: -2;
+  grid-column-end: -3;
+  grid-row-start: -1;
+  grid-row-end: -2;
 }
 .box4 {
-   grid-column-start: -2;
-   grid-column-end: -4;
-   grid-row-start: -3;
-   grid-row-end: -4;
+  grid-column-start: -2;
+  grid-column-end: -4;
+  grid-row-start: -3;
+  grid-row-end: -4;
 }
 ```
 
@@ -440,7 +454,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ```css
 .item {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 ```
 
@@ -455,58 +469,60 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 ギャップはグリッドのトラック間にのみ現れ、コンテナーの上下左右に余白を追加することはありません。これらのプロパティをグリッドコンテナーに使用することで、先ほどの例にギャップを追加することができます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1 ;
-    grid-row: 1 / 4;
+  grid-column: 1;
+  grid-row: 1 / 4;
 }
 .box2 {
-    grid-column: 3 ;
-    grid-row: 1 / 3;
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 .box3 {
-    grid-column: 2 ;
-    grid-row: 1 ;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / 4;
-    grid-row: 3 ;
+  grid-column: 2 / 4;
+  grid-row: 3;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    column-gap: 20px;
-    row-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  column-gap: 20px;
+  row-gap: 1em;
 }
 ```
 
@@ -518,10 +534,10 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 1em 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  gap: 1em 20px;
 }
 ```
 
@@ -532,51 +548,53 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 先頭の線と末尾の線を番号で指定するだけでなく、先頭の線を指定してから領域をまたぐトラックの数を指定することもできます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .box1 {
-    grid-column: 1;
-    grid-row: 1 / span 3;
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 .box2 {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 .box3 {
-    grid-column: 2;
-    grid-row: 1;
+  grid-column: 2;
+  grid-row: 1;
 }
 .box4 {
-    grid-column: 2 / span 2;
-    grid-row: 3;
+  grid-column: 2 / span 2;
+  grid-row: 3;
 }
 ```
 
@@ -586,9 +604,9 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 3;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 3;
 }
 ```
 
@@ -596,9 +614,9 @@ CSS Grid 仕様書では、{{cssxref("column-gap")}} と {{cssxref("row-gap")}} 
 
 ```css
 .box1 {
-    grid-column-start: 1;
-    grid-row-start: span 3;
-    grid-row-end: 4;
+  grid-column-start: 1;
+  grid-row-start: span 3;
+  grid-row-end: 4;
 }
 ```
 

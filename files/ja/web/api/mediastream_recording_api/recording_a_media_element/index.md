@@ -54,7 +54,10 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -157,19 +160,13 @@ function startRecording(stream, lengthInMS) {
     recorder.onerror = (event) => reject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
-    () => {
-      if (recorder.state === "recording") {
-        recorder.stop();
-      }
-    },
-  );
+  let recorded = wait(lengthInMS).then(() => {
+    if (recorder.state === "recording") {
+      recorder.stop();
+    }
+  });
 
-  return Promise.all([
-    stopped,
-    recorded
-  ])
-  .then(() => data);
+  return Promise.all([stopped, recorded]).then(() => data);
 }
 ```
 
@@ -207,32 +204,42 @@ function stop(stream) {
 それでは、この例で最も複雑なコードを見てみましょう。 開始ボタンをクリックしたときのイベントハンドラーです。
 
 ```js
-startButton.addEventListener("click", () => {
-  navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
-  }).then((stream) => {
-    preview.srcObject = stream;
-    downloadButton.href = stream;
-    preview.captureStream = preview.captureStream || preview.mozCaptureStream;
-    return new Promise((resolve) => preview.onplaying = resolve);
-  }).then(() => startRecording(preview.captureStream(), recordingTimeMS))
-  .then ((recordedChunks) => {
-    let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-    recording.src = URL.createObjectURL(recordedBlob);
-    downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+startButton.addEventListener(
+  "click",
+  () => {
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true,
+      })
+      .then((stream) => {
+        preview.srcObject = stream;
+        downloadButton.href = stream;
+        preview.captureStream =
+          preview.captureStream || preview.mozCaptureStream;
+        return new Promise((resolve) => (preview.onplaying = resolve));
+      })
+      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
+      .then((recordedChunks) => {
+        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+        recording.src = URL.createObjectURL(recordedBlob);
+        downloadButton.href = recording.src;
+        downloadButton.download = "RecordedVideo.webm";
 
-    log(`Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`);
-  })
-  .catch((error) => {
-    if (error.name === "NotFoundError") {
-      log("Camera or microphone not found. Can't record.");
-    } else {
-      log(error);
-    }
-  });
-}, false);
+        log(
+          `Successfully recorded ${recordedBlob.size} bytes of ${recordedBlob.type} media.`,
+        );
+      })
+      .catch((error) => {
+        if (error.name === "NotFoundError") {
+          log("Camera or microphone not found. Can't record.");
+        } else {
+          log(error);
+        }
+      });
+  },
+  false,
+);
 ```
 
 {{domxref("Element/click_event", "click")}} イベントが発生すると、次のようになります。
@@ -259,9 +266,13 @@ startButton.addEventListener("click", () => {
 最後のコードでは、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して停止ボタンの {{domxref("Element/click_event", "click")}} イベントのハンドラーを追加します。
 
 ```js
-stopButton.addEventListener("click", () => {
-  stop(preview.srcObject);
-}, false);
+stopButton.addEventListener(
+  "click",
+  () => {
+    stop(preview.srcObject);
+  },
+  false,
+);
 ```
 
 これは先ほど説明した [`stop()`](#入力ストリームの停止) 関数を呼び出すだけです。

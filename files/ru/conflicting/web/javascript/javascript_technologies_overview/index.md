@@ -1,7 +1,6 @@
 ---
 title: Ресурсы по JavaScript
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-translation_of: Web/JavaScript/Language_Resources
 original_slug: Web/JavaScript/Language_Resources
 ---
 

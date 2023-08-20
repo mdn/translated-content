@@ -13,9 +13,9 @@ slug: Web/CSS/margin-block-end
 
 ```css
 /* <length> 値 */
-margin-block-end: 10px;  /* 絶対的な長さ */
-margin-block-end: 1em;   /* テキストの大きさに対する相対値 */
-margin-block-end: 5%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-end: 10px; /* 絶対的な長さ */
+margin-block-end: 1em; /* テキストの大きさに対する相対値 */
+margin-block-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-block-end: auto;

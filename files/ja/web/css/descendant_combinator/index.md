@@ -45,15 +45,15 @@ li li {
   <li>
     <div>Item 1</div>
     <ul>
-     - Subitem A
-     - Subitem B
+      <li>Subitem A</li>
+      <li>Subitem B</li>
     </ul>
   </li>
   <li>
     <div>Item 2</div>
     <ul>
-     - Subitem A
-     - Subitem B
+      <li>Subitem A</li>
+      <li>Subitem B</li>
     </ul>
   </li>
 </ul>

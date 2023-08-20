@@ -2,7 +2,7 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 l10n:
- sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}} {{deprecated_header}}

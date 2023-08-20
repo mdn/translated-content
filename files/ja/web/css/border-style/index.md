@@ -5,7 +5,7 @@ slug: Web/CSS/border-style
 
 {{CSSRef}}
 
- **`border-style`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
+**`border-style`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-style.html")}}
 
