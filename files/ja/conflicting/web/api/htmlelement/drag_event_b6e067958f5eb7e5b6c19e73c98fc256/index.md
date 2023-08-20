@@ -1,5 +1,5 @@
 ---
-title: 'Document: drag イベント'
+title: "Document: drag イベント"
 slug: conflicting/Web/API/HTMLElement/drag_event_b6e067958f5eb7e5b6c19e73c98fc256
 original_slug: Web/API/Document/drag_event
 ---

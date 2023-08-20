@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
 

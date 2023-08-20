@@ -108,7 +108,7 @@ if (condition) {
 
 例えば、このようにはコードを*書かない*でください。
 
-```js example-bad
+```js-nolint example-bad
 // "x == y" と読み間違えるおそれがある。
 if (x = y) {
   /* ここに文が来る */
@@ -156,8 +156,9 @@ function checkData() {
     return true;
   } else {
     alert(
-        'Enter exactly three characters. ' +
-        `${document.form1.threeChar.value} is not valid.`);
+      "Enter exactly three characters. " +
+        `${document.form1.threeChar.value} is not valid.`,
+    );
     return false;
   }
 }
@@ -203,26 +204,26 @@ JavaScript は上記の switch 文を次のように評価します。
 
 ```js
 switch (fruittype) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-    console.log('Mangoes are $0.56 a pound.');
+  case "Mangoes":
+    console.log("Mangoes are $0.56 a pound.");
     break;
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-   console.log(`Sorry, we are out of ${fruittype}.`);
+    console.log(`Sorry, we are out of ${fruittype}.`);
 }
 console.log("Is there anything else you'd like?");
 ```
@@ -252,10 +253,14 @@ throw expression;
 特定の型の式だけではなく、あらゆる式を投げることができます。下記のコードでは、さまざまな型の例外を投げています。
 
 ```js
-throw 'Error2';   // 文字列型
-throw 42;         // 数値型
-throw true;       // 論理型
-throw {toString: function() { return "これはオブジェクトです！"; } };
+throw "Error2"; // 文字列型
+throw 42; // 数値型
+throw true; // 論理型
+throw {
+  toString: function () {
+    return "これはオブジェクトです！";
+  },
+};
 ```
 
 > **メモ:** 例外を投げる際にオブジェクトを指定することができます。そして、`catch` ブロックでそのオブジェクトのプロパティを参照することができます。
@@ -264,17 +269,17 @@ throw {toString: function() { return "これはオブジェクトです！"; } }
 // UserException というオブジェクト型を作成
 function UserException(message) {
   this.message = message;
-  this.name = 'UserException';
+  this.name = "UserException";
 }
 
 // 文字列として使用されるとき（例 : エラーコンソール上）に
 // 例外を整形する
-UserException.prototype.toString = function() {
+UserException.prototype.toString = function () {
   return `${this.name}: "${this.message}"`;
-}
+};
 
 // UserException のインスタンスを作成し、それを投げる
-throw new UserException('Value too high');
+throw new UserException("Value too high");
 ```
 
 ### `try...catch` 文
@@ -290,20 +295,32 @@ throw new UserException('Value too high');
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // 月の数字を配列のインデックスに合わせる (1 = Jan, 12 = Dec)
-  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
-                'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // throw キーワードが使われている
+    throw "InvalidMonthNo"; // throw キーワードが使われている
   }
 }
 
-try { // 実行を試みる文
+try {
+  // 実行を試みる文
   monthName = getMonthName(myMonth); // この関数が例外を投げる場合がある
-}
-catch (e) {
-  monthName = 'unknown';
+} catch (e) {
+  monthName = "unknown";
   logMyErrors(e); // 例外オブジェクトをエラーハンドラーに渡す
 }
 ```
@@ -326,11 +343,10 @@ JavaScript は `catch` ブロックに入るときにこの識別子を作成し
 
 ```js
 try {
-  throw 'myException'; // 例外を生成
-}
-catch (err) {
+  throw "myException"; // 例外を生成
+} catch (err) {
   // ここには例外を扱う文が入る
-  logMyErrors(err);    // 例外オブジェクトをエラーハンドラに渡す
+  logMyErrors(err); // 例外オブジェクトをエラーハンドラに渡す
 }
 ```
 
@@ -350,7 +366,7 @@ catch (err) {
 openMyFile();
 try {
   writeMyFile(theData); // ここでエラーが投げられる可能性がある
-} catch(e) {
+} catch (e) {
   handleError(e); // エラーを受け取り、それを処理する
 } finally {
   closeMyFile(); // 常にリソースが閉じられる
@@ -363,19 +379,19 @@ try {
 function f() {
   try {
     console.log(0);
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log(1);
-    return true;    // この返値は、finally ブロックが
-                    // 完了するまで保留となる
+    return true; // この返値は、finally ブロックが
+    // 完了するまで保留となる
     console.log(2); // ここまで到達しない
   } finally {
     console.log(3);
-    return false;   // 直前の "return" が上書きされる
+    return false; // 直前の "return" が上書きされる
     console.log(4); // ここまで到達しない
   }
   // ここで "return false" が実行される
-  console.log(5);   // ここまで到達しない
+  console.log(5); // ここまで到達しない
 }
 console.log(f()); // 0, 1, 3, false
 ```
@@ -385,11 +401,11 @@ console.log(f()); // 0, 1, 3, false
 ```js
 function f() {
   try {
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // この throw 文は finally ブロックが
-             // 完了するまで保留になる
+    // 完了するまで保留になる
   } finally {
     return false; // 直前の "throw" が上書きされる
   }
@@ -398,7 +414,7 @@ function f() {
 
 try {
   console.log(f());
-} catch(e) {
+} catch (e) {
   // ここには到達しない
   // f() を実行した際、`finally` ブロックが false を返し、
   // 上記の `catch` の中にある `throw` を上書する

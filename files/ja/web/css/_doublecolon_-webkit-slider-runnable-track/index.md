@@ -10,7 +10,7 @@ slug: Web/CSS/::-webkit-slider-runnable-track
 ## 構文
 
 ```css
-::-webkit-slider-runnable-track
+::-webkit-slider-runnable-track {}
 ```
 
 ## 仕様書

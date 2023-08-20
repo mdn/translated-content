@@ -82,7 +82,7 @@ contain: unset;
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -113,11 +113,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```
@@ -146,11 +146,11 @@ article {
 <article>
   <h2>Heading of a nice article</h2>
   <p>Content here.</p>
-  <img src="i-just-showed-up.jpg" alt="social">
+  <img src="i-just-showed-up.jpg" alt="social" />
 </article>
 <article>
   <h2>Another heading of another article</h2>
-  <img src="graphic.jpg" alt="photo">
+  <img src="graphic.jpg" alt="photo" />
   <p>More content here.</p>
 </article>
 ```

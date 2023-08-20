@@ -12,7 +12,7 @@ slug: Web/API/Navigator/deviceMemory
 ## 構文
 
 ```js
-memoryAmount = navigator.deviceMemory
+memoryAmount = navigator.deviceMemory;
 ```
 
 ### 値
@@ -22,8 +22,8 @@ memoryAmount = navigator.deviceMemory
 ## 例
 
 ```js
-const memory = navigator.deviceMemory
-console.log (`この端末には ${memory}GiB 以上の RAM があります。`)
+const memory = navigator.deviceMemory;
+console.log(`この端末には ${memory}GiB 以上の RAM があります。`);
 ```
 
 ## 仕様書

@@ -85,7 +85,7 @@ masonry-auto-flow: unset;
 
 #item1 {
   background-color: lime;
-  height: 2em
+  height: 2em;
 }
 
 #item2 {
@@ -109,7 +109,7 @@ masonry-auto-flow: unset;
 ```
 
 ```js
-const selectElem = document.querySelector('select');
+const selectElem = document.querySelector("select");
 
 function changeMasonryFlow() {
   var grid = document.getElementById("grid");
@@ -119,7 +119,7 @@ function changeMasonryFlow() {
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }
 
-selectElem.addEventListener('change', changeMasonryFlow);
+selectElem.addEventListener("change", changeMasonryFlow);
 ```
 
 #### 結果
