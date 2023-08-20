@@ -1,7 +1,6 @@
 ---
 title: 반응형 디자인
 slug: Learn/CSS/CSS_layout/Responsive_Design
-page-type: learn-module-chapter
 l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
