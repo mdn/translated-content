@@ -473,7 +473,8 @@ textarea.onkeyup = () => {
 
 <h2>Editable code편집 가능한 코드</h2>
 <p class="a11y-label">
-  Esc 키를 눌러 코드 영역에서 초점을 멀리 이동합니다. (Tab 키를 누르면 탭 문자가 삽입됩니다.)
+  Esc 키를 눌러 코드 영역에서 초점을 멀리 이동합니다. (Tab 키를 누르면 탭 문자가
+  삽입됩니다.)
 </p>
 
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
