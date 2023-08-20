@@ -434,3 +434,165 @@ textarea.onkeyup = () => {
   updateCode();
 };
 ```
+
+{{ EmbedLiveSample('Active_learning_Marking_up_an_unordered_list', 700, 400, "", "") }}
+
+### Ordered (순서 있음)
+
+순서 있는 리스트는 항목의 순서가 _중요한_ 목록입니다. 길 찾기 목록을 예시로 들어보겠습니다.
+
+```plain
+도로의 끝까지 운전합니다
+우회전합니다
+처음 두 개의 로터리를 가로질러 직진합니다
+세 번째 로터리에서 좌회전합니다
+길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다
+```
+
+{{htmlelement("ul")}}태그가 아닌 {{htmlelement("ol")}} 태그로 감싸는것을 제외하고는 마크업 구조는 순서가 없는 리스트와 동일합니다.
+
+```html
+<ol>
+  <li>도로의 끝까지 운전합니다</li>
+  <li>우회전합니다</li>
+  <li>처음 두 개의 로터리를 가로질러 직진합니다</li>
+  <li>세 번째 로터리에서 좌회전합니다</li>
+  <li>길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다</li>
+</ol>
+```
+
+#### 활동적인 학습: 순서가 있는 리스트를 만들어 보자
+
+아래의 실시간 샘플을 편집하여 나만의 HTML 순서 있는 목록을 만들어 보세요.
+
+```html hidden
+<h2>Live output실시간 출력</h2>
+
+<div class="output" style="min-height: 50px;"></div>
+
+<h2>Editable code편집 가능한 코드</h2>
+<p class="a11y-label">
+  Esc 키를 눌러 코드 영역에서 초점을 멀리 이동합니다. (Tab 키를 누르면 탭 문자가
+  삽입됩니다.)
+</p>
+
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+도로의 끝까지 운전합니다
+우회전합니다
+처음 두 개의 로터리를 가로질러 직진합니다
+세 번째 로터리에서 좌회전합니다
+길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="초기화" />
+  <input id="solution" type="button" value="해답 보기" />
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+const htmlSolution =
+  "<ol>\n<li>도로의 끝까지 운전합니다</li>\n<li>우회전합니다</li>\n<li>처음 두 개의 로터리를 가로질러 직진합니다</li>\n<li>세 번째 로터리에서 좌회전합니다</li>\n<li>길을 따라 300미터 올라가면 오른쪽에 학교가 있습니다</li>\n</ol>";
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "해답 보기";
+  updateCode();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "해답 보기") {
+    textarea.value = solutionEntry;
+    solution.value = "해답 숨기기";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "해답 보기";
+  }
+  updateCode();
+});
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+
+textarea.onkeydown = (e) => {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = () => {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "해답 보기") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('Active_learning_Marking_up_an_ordered_list', 700, 500, "", "") }}
