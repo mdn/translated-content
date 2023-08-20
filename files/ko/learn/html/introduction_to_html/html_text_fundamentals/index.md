@@ -1,7 +1,6 @@
 ---
 title: HTML 텍스트 기본
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-page-type: learn-module-chapter
 l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
@@ -1028,7 +1027,7 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 
 ## 실력을 테스트해 보세요!
 
-이 글을 끝까지 읽었지만, 가장 중요한 정보를 기억할 수 있나요? 다음 단계로 넘어가기 전에 이 정보를 기억하고 있는지 확인할 수 있는 몇 가지 추가 테스트가 있습니다. [Test your skills: HTML text basics](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics)를 보면 됩니다.
+이 글을 끝까지 읽었지만, 가장 중요한 정보를 기억할 수 있나요? 다음 단계로 넘어가기 전에 이 정보를 기억하고 있는지 확인할 수 있는 몇 가지 추가 테스트가 있습니다. [Test your skills: HTML text basics](/ko/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics)를 보면 됩니다.
 
 ## 요약
 
