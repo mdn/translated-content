@@ -1,6 +1,9 @@
 ---
 title: 논리적 NOT (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
+l10n:
+  sourceCommit: 93d2d79c1c68af93f2730d27cdea9d527eee0d7a
+
 ---
 
 {{jsSidebar("Operators")}}
