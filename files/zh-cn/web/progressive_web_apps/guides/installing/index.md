@@ -25,7 +25,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 ### 添加到主屏幕
 
-2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和 title 添加到书签菜单(这是浏览器功能)，而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
+2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和 title 添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
 
 将非 PWA 网站添加到主屏幕不会在设备上安装该网站。相反，它会将开发者定义的图标添加到主屏幕，当点击图标时，会在默认浏览器中打开该书签链接。
 
@@ -87,9 +87,9 @@ Firefox 需要 [PWA 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/pwas-
 
 ![MS Edge 中的应用程序设置，包含卸载链接](remove.jpg)
 
-在 Edge 中，从打开的下拉菜单中选择应用设置，会打开 MS Edge 浏览器的 `edge://apps` 标签页。在那里，我们会看到已安装应用程序的列表，每个应用程序都有各种选项，包括“🗑️ 卸载”。确认卸载操作。就这么简单!
+在 Edge 中，从打开的下拉菜单中选择应用设置，会打开 MS Edge 浏览器的 `edge://apps` 标签页。在那里，我们会看到已安装应用程序的列表，每个应用程序都有各种选项，包括“🗑️ 卸载”。确认卸载操作。就这么简单！
 
-在 Edge 中，已安装的 PWA 会列在一个列表中，可以通过在Edge浏览器中访问 [`edge://apps`](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/) 来管理它们。在 Chrome 中，Google 应用和已安装的 PWA 的列表可以通过在 Chrome 浏览器中访问 `chrome://apps` 来查看和管理。
+在 Edge 中，已安装的 PWA 会列在一个列表中，可以通过在 Edge 浏览器中访问 [`edge://apps`](https://blogs.windows.com/msedgedev/2022/05/18/find-and-manage-your-installed-apps-and-sites/) 来管理它们。在 Chrome 中，Google 应用和已安装的 PWA 的列表可以通过在 Chrome 浏览器中访问 `chrome://apps` 来查看和管理。
 
 ## 参见
 
