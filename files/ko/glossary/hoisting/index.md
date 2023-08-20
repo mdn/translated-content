@@ -2,7 +2,7 @@
 title: 호이스팅
 slug: Glossary/Hoisting
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: 8fb5853ceee5db8ac6e1c564c6dda4b3f5ec86c5
 ---
 
 {{GlossarySidebar}}
