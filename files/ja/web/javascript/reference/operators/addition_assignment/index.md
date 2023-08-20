@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ## 構文
 
 ```js
-x += y // x = x + y
+x += y; // x = x + y
 ```
 
 ## 例
@@ -26,22 +26,22 @@ x += y // x = x + y
 //  baz = true
 
 // 数値 + 数値 -> 加算
-bar += 2 // 7
+bar += 2; // 7
 
 // 論理値 + 数値 -> 加算
-baz += 1 // 2
+baz += 1; // 2
 
 // 論理値 + 論理値 -> 加算
-baz += false // 1
+baz += false; // 1
 
 // 数値 + 文字列 -> 連結
-bar += 'foo' // "5foo"
+bar += "foo"; // "5foo"
 
 // 文字列 + 論理値 -> 連結
-foo += false // "foofalse"
+foo += false; // "foofalse"
 
 // 文字列 + 文字列 -> 連結
-foo += 'bar' // "foobar"
+foo += "bar"; // "foobar"
 ```
 
 ## 仕様書

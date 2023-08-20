@@ -48,11 +48,13 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 
 1. `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
 
-    ```css
-    font-variation-settings: 'wght' 375, 'GRAD' 88;
-    ```
+   ```css
+   font-variation-settings:
+     "wght" 375,
+     "GRAD" 88;
+   ```
 
-    `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
+   `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
 
 2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
 
@@ -65,7 +67,7 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 ```css
 font-weight: 375;
 
-font-variation-settings: 'wght' 375;
+font-variation-settings: "wght" 375;
 ```
 
 次のライブ例の CSS を編集することで、font-weight の値を操作することができます。
@@ -81,7 +83,7 @@ font-variation-settings: 'wght' 375;
 ```css
 font-stretch: 115%;
 
-font-variation-settings: 'wdth' 115;
+font-variation-settings: "wdth" 115;
 ```
 
 次のライブ例の CSS を編集することで、フォントの幅の値を変更することができます。
@@ -97,7 +99,7 @@ CSS では、{{cssxref("font-style")}} プロパティを使用して、イタ�
 ```css
 font-style: italic;
 
-font-variation-settings: 'ital' 1;
+font-variation-settings: "ital" 1;
 
 font-synthesis: none;
 ```
@@ -115,7 +117,7 @@ font-synthesis: none;
 ```css
 font-style: oblique 14deg;
 
-font-variation-settings: 'slnt' 14;
+font-variation-settings: "slnt" 14;
 ```
 
 次のライブ例の CSS を編集することで、フォントの斜体の値を変更することができます。
@@ -135,7 +137,7 @@ CSS で可変フォントに対応するために、{{cssxref("font-optical-sizi
 ```css
 font-optical-sizing: auto;
 
-font-variation-settings: 'opsz' 36;
+font-variation-settings: "opsz" 36;
 ```
 
 次のライブ例の CSS を編集することで、オプティカルサイズをを変更することができます。
@@ -151,7 +153,7 @@ font-variation-settings: 'opsz' 36;
 等級は書体デザインの歴史の中で知られており、より一般的なカスタム軸の一つになるかもしれません。ある書体の異なる等級をデザインすることは、使用目的や印刷技術に応じて行われることが多かったのです。'grade' という言葉は、書体デザインの相対的な太さや濃さを意味しますが、従来の「太さ」とは異なり、テキストが占める物理的な空間は変化しないため、テキストの等級を変えても、テキストやその周りの要素の全体的なレイアウトが変わることはありません。これにより、等級は、テキスト自体の再フローを引き起こすことなく、変化やアニメーションを行うことができるバリエーションの軸として有効です。
 
 ```css
-font-variation-settings: 'GRAD' 88;
+font-variation-settings: "GRAD" 88;
 ```
 
 次のライブ例の CSS を編集することで、等級の値をを変更することができます。
@@ -168,11 +170,11 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: normal;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
 }
 ```
 
@@ -180,11 +182,11 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -194,11 +196,11 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: italic;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
 }
 ```
 
@@ -206,11 +208,11 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 @font-face {
- font-family: 'MyVariableFontName';
- src: url('path/to/font/file/myvariablefont.woff2') format('woff2-variations');
- font-weight: 125 950;
- font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+  font-family: "MyVariableFontName";
+  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 12deg;
 }
 ```
 
@@ -224,13 +226,13 @@ font-variation-settings: 'GRAD' 88;
 
 ```css
 h1 {
- font-family: some-non-variable-font-family;
+  font-family: some-non-variable-font-family;
 }
 
-@supports (font-variation-settings: 'wdth' 115) {
- h1 {
+@supports (font-variation-settings: "wdth" 115) {
+  h1 {
     font-family: some-variable-font-family;
- }
+  }
 }
 ```
 

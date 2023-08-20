@@ -39,15 +39,15 @@ console.log(result); // 421
 
 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) を除くすべてのプリミティブ型には、対応するオブジェクトラッパー型があり、そのオブジェクトはプリミティブ値の操作を行うために有用なメソッドを提供しています。例えば、[`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトは [`toExponential()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) などのメソッドを提供しています。プリミティブ値に対してプロパティでアクセスすると、JavaScript は自動的に値を対応するラッパーオブジェクトにラップし、代わりにそのオブジェクトのプロパティにアクセスします。しかし、`null` や `undefined` のプロパティにアクセスすると `TypeError` 例外が発生するため、[オプショナルチェーン](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)演算子を導入する必要があります。
 
-| 型                         | `typeof` の返値 | オブジェクトラッパー        |
-| ---------------------------- | --------------------- | --------------------- |
-| [Null 型](#null_型)           | `"object"`            | なし                  |
-| [Undefined 型](#undefined_型) | `"undefined"`         | なし                  |
-| [論理型](#論理型)     | `"boolean"`           | {{jsxref("Boolean")}} |
-| [数値型](#数値型)       | `"number"`            | {{jsxref("Number")}}  |
-| [長整数型](#長整数型)       | `"bigint"`            | {{jsxref("BigInt")}}  |
-| [文字列型](#文字列型)       | `"string"`            | {{jsxref("String")}}  |
-| [シンボル型](#シンボル型)       | `"symbol"`            | {{jsxref("Symbol")}}  |
+| 型                            | `typeof` の返値 | オブジェクトラッパー  |
+| ----------------------------- | --------------- | --------------------- |
+| [Null 型](#null_型)           | `"object"`      | なし                  |
+| [Undefined 型](#undefined_型) | `"undefined"`   | なし                  |
+| [論理型](#論理型)             | `"boolean"`     | {{jsxref("Boolean")}} |
+| [数値型](#数値型)             | `"number"`      | {{jsxref("Number")}}  |
+| [長整数型](#長整数型)         | `"bigint"`      | {{jsxref("BigInt")}}  |
+| [文字列型](#文字列型)         | `"string"`      | {{jsxref("String")}}  |
+| [シンボル型](#シンボル型)     | `"symbol"`      | {{jsxref("Symbol")}}  |
 
 オブジェクトラッパークラスのリファレンスページには、プリミティブ型そのものの意味づけの詳細な説明だけでなく、それぞれの型で利用できるメソッドやプロパティの詳細な情報が掲載されています。
 

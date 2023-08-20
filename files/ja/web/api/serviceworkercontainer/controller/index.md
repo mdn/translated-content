@@ -16,15 +16,17 @@ l10n:
 ## 例
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // 1 回限りのチェックを行って、サービスワーカーが制御しているかどうかを確認します。
   if (navigator.serviceWorker.controller) {
-    console.log(`このページを現在制御しているもの: ${navigator.serviceWorker.controller}`);
+    console.log(
+      `このページを現在制御しているもの: ${navigator.serviceWorker.controller}`,
+    );
   } else {
-    console.log('このページは現在サービスワーカーによって制御されていません。');
+    console.log("このページは現在サービスワーカーによって制御されていません。");
   }
 } else {
-  console.log('サービスワーカーをサポートしていません。');
+  console.log("サービスワーカーをサポートしていません。");
 }
 ```
 

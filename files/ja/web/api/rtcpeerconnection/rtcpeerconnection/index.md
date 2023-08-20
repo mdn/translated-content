@@ -10,13 +10,14 @@ slug: Web/API/RTCPeerConnection/RTCPeerConnection
 ## 構文
 
 ```js
-new RTCPeerConnection()
-new RTCPeerConnection(configuration)
+new RTCPeerConnection();
+new RTCPeerConnection(configuration);
 ```
 
 ### 引数
 
 - `configuration` {{optional_inline}}
+
   - : 新しい接続を構成するためのオプションを提供するオブジェクトです。
 
     - `bundlePolicy` {{optional_inline}}

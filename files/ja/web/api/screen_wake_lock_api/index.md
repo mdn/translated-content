@@ -37,12 +37,12 @@ slug: Web/API/Screen_Wake_Lock_API
 このコードは、起動ロックに対応しているかどうかをチェックし、それに応じて UI を更新します。
 
 ```js
-if ('wakeLock' in navigator) {
+if ("wakeLock" in navigator) {
   isSupported = true;
-  statusElem.textContent = '起動ロック API に対応しています。';
+  statusElem.textContent = "起動ロック API に対応しています。";
 } else {
   wakeButton.disabled = true;
-  statusElem.textContent = 'このブラウザーは起動ロックに対応していません。';
+  statusElem.textContent = "このブラウザーは起動ロックに対応していません。";
 }
 ```
 
@@ -56,8 +56,8 @@ let wakeLock = null;
 
 // 非同期関数を作成して起動ロックをリクエスト
 try {
-  wakeLock = await navigator.wakeLock.request('screen');
-  statusElem.textContent = '起動ロックが有効です。';
+  wakeLock = await navigator.wakeLock.request("screen");
+  statusElem.textContent = "起動ロックが有効です。";
 } catch (err) {
   // 起動ロックのリクエストに失敗。ふつうはバッテリーなどのシステム関連
   statusElem.textContent = `${err.name}, ${err.message}`;
@@ -69,10 +69,9 @@ try {
 以下の例は、以前取得した起動ロックを開放する方法を示しています。
 
 ```js
-wakeLock.release()
-  .then(() => {
-    wakeLock = null;
-  });
+wakeLock.release().then(() => {
+  wakeLock = null;
+});
 ```
 
 ### 起動ロック解放の表示
@@ -80,9 +79,9 @@ wakeLock.release()
 この例では、何らかの方法で起動ロックが解放された場合（アクティブウィンドウやタブから移動した場合など）に UI を更新します。
 
 ```js
-wakeLock.addEventListener('release', () => {
+wakeLock.addEventListener("release", () => {
   // 起動ロックが解放
-  statusElem.textContent = '起動ロックが解放されました';
+  statusElem.textContent = "起動ロックが解放されました";
 });
 ```
 
@@ -91,9 +90,9 @@ wakeLock.addEventListener('release', () => {
 以下のコードは、文書の可視性が変化し、起動ロックが解除された場合に、起動ロックを再取得するものです。
 
 ```js
-document.addEventListener('visibilitychange', async () => {
-  if (wakeLock !== null && document.visibilityState === 'visible') {
-    wakeLock = await navigator.wakeLock.request('screen');
+document.addEventListener("visibilitychange", async () => {
+  if (wakeLock !== null && document.visibilityState === "visible") {
+    wakeLock = await navigator.wakeLock.request("screen");
   }
 });
 ```
@@ -115,7 +114,7 @@ document.addEventListener('visibilitychange', async () => {
 
 ## 仕様書
 
-| 仕様書                                                   |
+| 仕様書                                                          |
 | --------------------------------------------------------------- |
 | [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/) |
 
