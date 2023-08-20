@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
   </tbody>
 </table>
 
-## 項目概要
+## 项目概要
 
 下面列出了需要显示的页面、URL 和其他要求：
 
