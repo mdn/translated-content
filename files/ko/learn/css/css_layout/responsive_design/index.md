@@ -44,7 +44,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 반응형 웹 디자인은 별도의 기술이 아니라 하나의 접근 방식입니다. 콘텐츠를 보는 데 사용되는 모든 기기에 대응할 수 있는 레이아웃을 만드는 데 사용되는 일련의 모범 사례를 설명하는 데 사용되는 용어입니다.
 
-_반응형 디자인_ 이라는 용어는 [2010년 Ethan Marcotte가 만든 것](https://alistapart.com/article/responsive-web-design/)으로, Zoe Mickley Gillenwater의 저서 [Flexible Web Design](http://flexiblewebbook.com/)에서 설명한 대로 유동 그리드, 유동 이미지, 미디어 쿼리를 사용하여 반응형 콘텐츠를 만드는 것을 설명합니다.
+반응형 디자인이라는 용어는 [2010년 Ethan Marcotte가 만든 것](https://alistapart.com/article/responsive-web-design/)으로, Zoe Mickley Gillenwater의 저서 [Flexible Web Design](http://flexiblewebbook.com/)에서 설명한 대로 유동 그리드, 유동 이미지, 미디어 쿼리를 사용하여 반응형 콘텐츠를 만드는 것을 설명합니다.
 
 당시에는 레이아웃 및 미디어 쿼리에 CSS `float`를 사용하여 브라우저 너비를 쿼리하고 다양한 분기점에 대한 레이아웃을 생성하는 것이 권장되었습니다. Fluid 이미지는 컨테이너 너비를 초과하지 않도록 설정되며, `max-width` 속성이 `100%`로 설정되어 있습니다. Fluid 이미지는 포함 열이 좁아지면 축소되지만 열이 커질 때 고유 크기보다 커지지 않습니다. 이렇게 하면 컨테이너가 이미지보다 넓어져도 이미지가 넘치지 않고 콘텐츠에 맞게 축소되지만 더 커지거나 픽셀화되지 않습니다.
 
