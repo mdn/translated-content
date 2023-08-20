@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 
 {{jsxref("String")}} 值的 **`substr()`** 方法返回该字符串的一部分，从指定的索引开始，然后扩展到给定数量的字符。
 
-> **注释：** `substr()` 不是 ECMAScript 主要规范的一部分——它在[附件 B: Web 浏览器的附加 ECMAScript 功能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)中定义，这是非浏览器运行时的规范可选。因此，建议人们使用标准的 [`String.prototype.substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 和 [`String.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 方法，以便使他们的代码能够更好的、最大程度地跨平台。[`String.prototype.substring()` 页面](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr)对这三种方法进行了一些比较。
+> **注释：** `substr()` 不是 ECMAScript 主要规范的一部分——它在[附件 B: Web 浏览器的附加 ECMAScript 功能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)中定义，这是非浏览器运行时的规范可选。因此，建议人们使用标准的 [`String.prototype.substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 和 [`String.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 方法，以便使他们的代码能够更好的、最大程度地跨平台。[`String.prototype.substring()` 页面](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring#substring_和_substr_之间的区别)对这三种方法进行了一些比较。
 
 {{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
