@@ -1,14 +1,6 @@
 ---
 title: Error.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - Error
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
-original_slug: Web/JavaScript/Reference/Global_Objects/Error/toSource
 ---
 
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}

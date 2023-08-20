@@ -1,8 +1,6 @@
 ---
 title: HTML Импорты
 slug: conflicting/Web/Web_Components
-translation_of: Web/Web_Components/HTML_Imports
-original_slug: Web/Web_Components/HTML_Imports
 ---
 
 > **Предупреждение:** Firefox will not ship _HTML Imports_ in its current form. See this [status update](https://hacks.mozilla.org/2015/06/the-state-of-web-components/) for more information. Until there is a consensus on the standard or alternative mechanisms are worked out, you can use a polyfill such as Google's [`webcomponents.js`](https://github.com/webcomponents/webcomponentsjs).

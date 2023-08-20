@@ -1,12 +1,6 @@
 ---
 title: dir
 slug: conflicting/Web/Manifest
-tags:
-  - Manifest
-  - Web
-  - dir
-translation_of: Web/Manifest/dir
-original_slug: Web/Manifest/dir
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

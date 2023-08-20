@@ -1,10 +1,6 @@
 ---
 title: С чего начать
 slug: conflicting/Web/Guide/AJAX
-tags:
-  - AJAX
-translation_of: Web/Guide/AJAX/Getting_Started
-original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 В этой статье рассмотрены основные принципы работы AJAX и даны два простых примера, использующих эту технологию.

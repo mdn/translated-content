@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/toSource
 ---
 
 {{JSRef("Global_Objects", "RegExp")}} {{non-standard_header}}

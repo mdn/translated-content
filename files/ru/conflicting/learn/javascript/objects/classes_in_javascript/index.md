@@ -1,17 +1,6 @@
 ---
 title: Объектно-ориентированный JavaScript для начинающих
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Constructor
-  - Create
-  - JavaScript
-  - OOJS
-  - Object
-  - Новичку
-  - ООП
-  - экземпляр
-translation_of: Learn/JavaScript/Objects/Object-oriented_JS
-original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

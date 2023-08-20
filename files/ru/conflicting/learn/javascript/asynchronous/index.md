@@ -1,8 +1,6 @@
 ---
-title: 'Объединённый асинхронный JavaScript: Таймауты и интервалы'
+title: "Объединённый асинхронный JavaScript: Таймауты и интервалы"
 slug: conflicting/Learn/JavaScript/Asynchronous
-translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
-original_slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
