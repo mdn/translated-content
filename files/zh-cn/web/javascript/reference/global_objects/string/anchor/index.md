@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 
 {{JSRef}} {{deprecated_header}}
 
-{{jsxref("String")}} 的 **`anchor()`** 方法创建一个字符串，将该字符串嵌入到一个带有名称的 {{HTMLElement("a")}} 元素中（`<a name="...">str</a>`）。
+{{jsxref("String")}} 的 **`anchor()`** 方法创建一个带有名称的 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a name="...">str</a>`）。
 
-> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（比如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement) 作为代替。
+> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（比如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 >
 > HTML 规范不再允许 {{HTMLElement("a")}} 元素具有 `name` 属性，因此该方法甚至无法创建有效的标记。
 
@@ -20,11 +20,11 @@ anchor(name)
 ### 参数
 
 - `name`
-  - : 一个字符串，表示要生成的 `<a name="...">` 标签的 `name` 属性。
+  - : 一个字符串，表示要生成的 `<a name="...">` 开始标签的 `name` 属性。
 
 ### 返回值
 
-一个以 `<a name="name">` 开始标记开头的字符串（`name` 中的双引号被替换为 `&quot;`），然后是文本 `str`，最后是一个 `</a>` 结束标记。
+一个以 `<a name="name">` 开始标签开头的字符串（`name` 中的双引号被替换为 `&quot;`），然后是文本 `str`，最后是一个 `</a>` 结束标签。
 
 ## 示例
 
