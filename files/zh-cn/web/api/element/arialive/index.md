@@ -5,7 +5,7 @@ slug: Web/API/Element/ariaLive
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaLive`** 属性是 {{domxref("Element")}} 接口的一部分，它反映了 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)中期望的更新类型。
+{{domxref("Element")}} 接口的 **`ariaLive`** 属性反映了 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)中期望的更新类型。
 
 ## 值
 
@@ -14,7 +14,7 @@ slug: Web/API/Element/ariaLive
 - `"assertive"`
   - : 表示对该区域的更新具有最高优先级，并应立即呈现给用户。
 - `"off"`
-  - : 表示除非用户当前关注该区域，否则不应向用户呈现对该区域的更新。
+  - : 表示除非用户当前聚焦于该区域，否则不应向用户呈现对该区域的更新。
 - `"polite"`
   - : 表示应在下一个适当的机会（例如，在说完当前句子或用户暂停输入时）呈现对该区域的更新。
 
