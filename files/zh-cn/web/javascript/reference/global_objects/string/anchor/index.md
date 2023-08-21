@@ -3,51 +3,43 @@ title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}} {{deprecated_header}}
 
-## 概述
+{{jsxref("String")}} 的 **`anchor()`** 方法创建一个带有名称的 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a name="...">str</a>`）。
 
-> **警告：** 该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。
-
-**`anchor()`** 方法创建一个 {{HTMLElement("a")}} HTML 锚元素，被用作超文本靶标（hypertext target）。
+> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（比如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
+>
+> HTML 规范不再允许 {{HTMLElement("a")}} 元素具有 `name` 属性，因此该方法甚至无法创建有效的标记。
 
 ## 语法
 
-```plain
-str.anchor(name)
+```js-nolint
+anchor(name)
 ```
 
 ### 参数
 
 - `name`
-  - : 一个字符串，表示被创建的标签的 `name` 属性。
+  - : 一个字符串，表示要生成的 `<a name="...">` 开始标签的 `name` 属性。
 
 ### 返回值
 
-包含 {{HTMLElement("a")}} HTML 元素的一个字符串。
-
-## 描述
-
-使用 `anchor` 方法能够以编程方式在一个文档中创建和展现一个锚链接。
-
-语法上来讲，字符串表示你想让用户看到的文本。`name` 字符串参数表示 {{HTMLElement("a")}} 元素的 `name` 属性。
-
-使用 anchor 方法创建的锚点（anchors）将会成为 {{domxref("document.anchors")}} 数组的元素。
+一个以 `<a name="name">` 开始标签开头的字符串（`name` 中的双引号被替换为 `&quot;`），然后是文本 `str`，最后是一个 `</a>` 结束标签。
 
 ## 示例
 
-### 示例：使用 `anchor`
+### 使用 anchor()
 
 ```js
-var myString = "Table of Contents";
+const myString = "内容目录";
 
-document.body.innerHTML = myString.anchor("contents_anchor");
+document.body.innerHTML = myString.anchor("内容锚点");
 ```
 
 将会输出下面的 HTML：
 
 ```html
-<a name="contents_anchor">Table of Contents</a>
+<a name="内容锚点">内容目录</a>
 ```
 
 ## 规范
@@ -58,6 +50,7 @@ document.body.innerHTML = myString.anchor("contents_anchor");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `String.prototype.anchor` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.link()")}}
