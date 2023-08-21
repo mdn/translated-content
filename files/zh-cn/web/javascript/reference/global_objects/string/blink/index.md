@@ -23,7 +23,7 @@ blink()
 
 ### 使用 blink()
 
-下面的示例使用了字符串方法来修改字符串格式：
+以下示例使用已弃用的字符串方法来更改字符串的格式：
 
 ```js
 const worldString = "Hello, world";
