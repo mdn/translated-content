@@ -1,13 +1,6 @@
 ---
-title: '502'
+title: "502"
 slug: conflicting/Web/HTTP/Status/502
-tags:
-  - '502'
-  - Глоссарий
-  - Коды ошибок HTTP
-  - Инфраструктура
-  - Навигация
-translation_of: Glossary/502
 original_slug: Glossary/502
 ---
 

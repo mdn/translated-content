@@ -1,13 +1,6 @@
 ---
 title: Number.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Number/toSource
 ---
 
