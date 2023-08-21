@@ -197,8 +197,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 텍스트 영역의 밖에서 탭 키를 누르는 것을 멈추고
+// 대신 삽입 위치에 탭을 작성하도록 합니다.
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
@@ -227,10 +227,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자의 코드를 업데이트합니다.
 textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 해답이 아닌 사용자 코드가 표시될 때만 상태를 저장하고 싶으므로
+  // 해답이 사용자 코드를 덮어써서 저장되지 않도록 합니다.
   if (solution.value === "해답 보기") {
     userEntry = textarea.value;
   } else {
@@ -390,8 +390,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 텍스트 영역의 밖에서 탭 키를 누르는 것을 멈추고
+// 대신 삽입 위치에 탭을 작성하도록 합니다.
 
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
@@ -421,10 +421,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자의 코드를 업데이트합니다.
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 해답이 아닌 사용자 코드가 표시될 때만 상태를 저장하고 싶으므로
+  // 해답이 사용자 코드를 덮어써서 저장되지 않도록 합니다.
   if (solution.value === "해답 보기") {
     userEntry = textarea.value;
   } else {
@@ -550,8 +550,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 텍스트 영역의 밖에서 탭 키를 누르는 것을 멈추고
+// 대신 삽입 위치에 탭을 작성하도록 합니다.
 
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
@@ -581,10 +581,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자의 코드를 업데이트합니다.
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 해답이 아닌 사용자 코드가 표시될 때만 상태를 저장하고 싶으므로
+  // 해답이 사용자 코드를 덮어써서 저장되지 않도록 합니다.
   if (solution.value === "해답 보기") {
     userEntry = textarea.value;
   } else {
@@ -713,8 +713,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 텍스트 영역의 밖에서 탭 키를 누르는 것을 멈추고
+// 대신 삽입 위치에 탭을 작성하도록 합니다.
 
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
@@ -744,10 +744,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자의 코드를 업데이트합니다.
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 해답이 아닌 사용자 코드가 표시될 때만 상태를 저장하고 싶으므로
+  // 해답이 사용자 코드를 덮어써서 저장되지 않도록 합니다.
   if (solution.value === "해답 보기") {
     userEntry = textarea.value;
   } else {
@@ -931,8 +931,8 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// Stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 텍스트 영역의 밖에서 탭 키를 누르는 것을 멈추고
+// 대신 삽입 위치에 탭을 작성하도록 합니다.
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
@@ -961,10 +961,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 사용자가 텍스트 영역 코드를 업데이트할 때마다 저장된 사용자의 코드를 업데이트합니다.
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
+  // 해답이 아닌 사용자 코드가 표시될 때만 상태를 저장하고 싶으므로
+  // 해답이 사용자 코드를 덮어써서 저장되지 않도록 합니다.
   if (solution.value === "해답 보기") {
     userEntry = textarea.value;
   } else {
