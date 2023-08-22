@@ -1233,7 +1233,7 @@
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /es/docs/MDN/Contribute/Markdown_in_MDN	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Procesos	/es/docs/MDN/Contribute/Processes
-/es/docs/MDN/Contribute/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
+/es/docs/MDN/Contribute/Structures	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Contribute/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 /es/docs/MDN/Contribute/Structures/Macros	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /es/docs/MDN/Contribute/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
@@ -1248,7 +1248,7 @@
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/MDN/Kuma/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
-/es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
+/es/docs/MDN/Structures	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 /es/docs/MDN/Structures/Live_samples	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
@@ -2936,6 +2936,7 @@
 /es/docs/XSLT:when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/es/docs/conflicting/MDN/Writing_guidelines/Page_structures	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/conflicting/Web/API/CanvasRenderingContext2D	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/API/Geolocation/getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition

@@ -14360,10 +14360,6 @@
     "modified": "2020-09-30T15:28:55.816Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
   },
-  "conflicting/MDN/Writing_guidelines/Page_structures": {
-    "modified": "2020-09-30T09:06:15.403Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jswisher"]
-  },
   "conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692": {
     "modified": "2020-09-30T09:06:15.983Z",
     "contributors": [
