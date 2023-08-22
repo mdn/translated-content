@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 
 ![CSS 过渡告诉浏览器绘制初始和最终状态之间的中间状态，向用户展示一个平滑的过渡](transitionsprinciple.png)
 
-CSS 过渡可以决定哪些属性发生动画效果（通过[*明确地列出这些属性*](/zh-CN/docs/Web/CSS/transition-property)），何时开始（通过设置[*延时*](/zh-CN/docs/Web/CSS/transition-delay)），持续多久（通过设置[*时长*](/zh-CN/docs/Web/CSS/transition-duration)）以及如何动画（通过定义[*缓动函数*](/zh-CN/docs/Web/CSS/transition-timing-function)，比如线性或先快后慢）。
+CSS 过渡可以决定哪些属性发生动画效果（通过[_明确地列出这些属性_](/zh-CN/docs/Web/CSS/transition-property)），何时开始（通过设置[_延时_](/zh-CN/docs/Web/CSS/transition-delay)），持续多久（通过设置[_时长_](/zh-CN/docs/Web/CSS/transition-duration)）以及如何动画（通过定义[_缓动函数_](/zh-CN/docs/Web/CSS/transition-timing-function)，比如线性或先快后慢）。
 
 ## 哪些 CSS 属性可用于过渡？
 
@@ -66,7 +66,8 @@ div {
 ```html hidden
 <body>
   <p>
-    下面的盒子包含 width、height、background-color 和 rotate 的过渡效果。鼠标停留在盒子上以观察这些属性是如何变化的。
+    下面的盒子包含 width、height、background-color 和 rotate
+    的过渡效果。鼠标停留在盒子上以观察这些属性是如何变化的。
   </p>
   <div class="box">示例</div>
 </body>
@@ -82,7 +83,11 @@ div {
   width: 100px;
   height: 100px;
   background-color: #0000ff;
-  transition: width 2s, height 2s, background-color 2s, rotate 2s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    rotate 2s;
 }
 
 .box:hover {
@@ -145,7 +150,7 @@ CSS 的一个常见用途是当鼠标悬停在菜单上时高亮此菜单。很�
 <nav>
   <a href="#">主页</a>
   <a href="#">关于</a>
-  <a href="#">联系我们s</a>
+  <a href="#">联系我们</a>
   <a href="#">链接</a>
 </nav>
 ```
@@ -210,7 +215,7 @@ document.addEventListener(
     f.style.transform = `translateY(${ev.clientY - 25}px)`;
     f.style.transform += `translateX(${ev.clientX - 25}px)`;
   },
-  false
+  false,
 );
 ```
 

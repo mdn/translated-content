@@ -1,7 +1,6 @@
 ---
-title: '@scroll-timeline'
+title: "@scroll-timeline"
 slug: Web/CSS/scroll-timeline
-original_slug: Web/CSS/@scroll-timeline
 ---
 
 {{CSSRef}}
@@ -93,7 +92,9 @@ original_slug: Web/CSS/@scroll-timeline
 @scroll-timeline element-move {
   source: auto;
   orientation: vertical;
-  scroll-offsets: selector(#myElement) start 0, selector(#myElement) end 0;
+  scroll-offsets:
+    selector(#myElement) start 0,
+    selector(#myElement) end 0;
 }
 ```
 

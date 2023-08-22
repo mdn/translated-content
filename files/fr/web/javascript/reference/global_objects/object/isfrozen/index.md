@@ -1,7 +1,6 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.isFrozen()`** permet de déterminer si un objet est {{jsxr
 ## Syntaxe
 
 ```js
-Object.isFrozen(obj)
+Object.isFrozen(obj);
 ```
 
 ### Paramètres

@@ -1,13 +1,8 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Сводка
@@ -33,19 +28,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 и так далее */
-console.log((function(...args) {}).length); /* 0, остаточные параметры не считаются */
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 и так далее */
+console.log(
+  function (...args) {}.length,
+); /* 0, остаточные параметры не считаются */
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Статус                   | Комментарии                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
+| Спецификация                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Статус             | Комментарии                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
+| ECMAScript 1-е издание.                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
 | Свойство `length` конструктора {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}} Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}} Свойство `length` экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}} | {{Spec2('ES5.1')}} |                                                        |
-| Свойство `length` конструктора {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function.length', 'Function.length')}} Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}} Свойство `length` экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}                         | {{Spec2('ES6')}}     |                                                        |
+| Свойство `length` конструктора {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function.length', 'Function.length')}} Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}} Свойство `length` экземпляров объекта {{jsxref("Global_Objects/Function", "Function")}}: {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}                    | {{Spec2('ES6')}}   |                                                        |
 
 ## Совместимость с браузерами
 

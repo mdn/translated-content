@@ -1,15 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 
 {{JSRef("Global_Objects", "Object")}}
@@ -70,37 +61,37 @@ Object.defineProperty(obj, prop, descriptor)
 
 ```js
 // Использование __proto__
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   __proto__: null, // нет унаследованных свойств
-  value: 'static'  // по умолчанию
-                   // не перечисляется,
-                   // не настраивается и
-                   // не перезаписывается
+  value: "static", // по умолчанию
+  // не перечисляется,
+  // не настраивается и
+  // не перезаписывается
 });
 
 // Явное определение свойства
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // Переиспользование одного и того же объекта
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
+      value: null,
+    });
   d.value = value;
   return d;
 }
 // ... и ...
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // Если доступен метод freeze, предотвращаем добавление свойств
 // value, get, set, enumerable, writable и configurable
@@ -121,22 +112,26 @@ var o = {}; // Создаём новый объект
 
 // Пример добавления свойства к объекту через defineProperty()
 // с дескриптором данных
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // Свойство 'a' существует в объекте o и имеет значение, равное 37
 
 // Пример добавления свойства к объекту через defineProperty()
 // с дескриптором доступа
 var bValue = 38;
-Object.defineProperty(o, 'b', {
-  get: function() { return bValue; },
-  set: function(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get: function () {
+    return bValue;
+  },
+  set: function (newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // Свойство 'b' существует в объекте o и имеет значение, равное 38
@@ -144,9 +139,11 @@ o.b; // 38
 // пока свойство o.b не будет переопределено
 
 // Вы не можете смешать два этих подхода:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get: function() { return 0xdeadbeef; }
+  get: function () {
+    return 0xdeadbeef;
+  },
 });
 // Выкинет исключение TypeError: свойство value применимо только в
 // дескрипторах данных, свойство get применимо только в дескрипторах
@@ -168,14 +165,14 @@ Object.defineProperty(o, 'conflict', {
 ```js
 var o = {}; // Создаём новый объект
 
-Object.defineProperty(o, 'a', {
-  value : 37,
-  writable : false
+Object.defineProperty(o, "a", {
+  value: 37,
+  writable: false,
 });
 
 console.log(o.a); // Выведет 37
 o.a = 25; // Исключение не будет выброшено (будет выброшено только в
-          // строгом режиме, даже если значение будет тем же самым)
+// строгом режиме, даже если значение будет тем же самым)
 console.log(o.a); // Выведет 37. Присваивание не сработало.
 ```
 
@@ -187,13 +184,13 @@ console.log(o.a); // Выведет 37. Присваивание не срабо
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', { value: 1, enumerable: true });
-Object.defineProperty(o, 'b', { value: 2, enumerable: false });
+Object.defineProperty(o, "a", { value: 1, enumerable: true });
+Object.defineProperty(o, "b", { value: 2, enumerable: false });
 // Атрибут enumerable по умолчанию установлен в false
-Object.defineProperty(o, 'c', { value: 3 });
+Object.defineProperty(o, "c", { value: 3 });
 
 o.d = 4; // При создании свойства путём присваивания, атрибут enumerable
-         // по умолчанию устанавливается в true
+// по умолчанию устанавливается в true
 
 for (var i in o) {
   console.log(i);
@@ -202,9 +199,9 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
 ```
 
 #### Атрибут `configurable`
@@ -213,16 +210,22 @@ o.propertyIsEnumerable('c'); // false
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', { configurable: true }); // Выкинет TypeError
-Object.defineProperty(o, 'a', { enumerable: true }); // Выкинет TypeError
-Object.defineProperty(o, 'a', { set: function() {} }); // Выкинет TypeError (ранее свойство set дескриптора не было определено)
-Object.defineProperty(o, 'a', { get: function() { return 1; } }); // Выкинет TypeError (даже несмотря на то, что get делает то же, что и раньше)
-Object.defineProperty(o, 'a', { value: 12 }); // Выкинет TypeError
+Object.defineProperty(o, "a", { configurable: true }); // Выкинет TypeError
+Object.defineProperty(o, "a", { enumerable: true }); // Выкинет TypeError
+Object.defineProperty(o, "a", { set: function () {} }); // Выкинет TypeError (ранее свойство set дескриптора не было определено)
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+}); // Выкинет TypeError (даже несмотря на то, что get делает то же, что и раньше)
+Object.defineProperty(o, "a", { value: 12 }); // Выкинет TypeError
 
 console.log(o.a); // Выведет 1
 delete o.a; // Ничего не произойдёт
@@ -240,22 +243,21 @@ var o = {};
 
 o.a = 1;
 // Эквивалентно записи:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
-
 // С другой стороны,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // эквивалентно записи:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -268,18 +270,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();

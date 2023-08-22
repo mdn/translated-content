@@ -1,7 +1,6 @@
 ---
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-maMap.entries()
+maMap.entries();
 ```
 
 ### Valeur de retour

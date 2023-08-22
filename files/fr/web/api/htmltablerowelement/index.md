@@ -1,7 +1,6 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
-translation_of: Web/API/HTMLTableRowElement
 ---
 
 {{ APIRef("HTML DOM") }}

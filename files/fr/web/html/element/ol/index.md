@@ -1,7 +1,6 @@
 ---
 title: "<ol> : l'élément de liste ordonnée"
 slug: Web/HTML/Element/ol
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}

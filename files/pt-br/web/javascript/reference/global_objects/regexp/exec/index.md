@@ -34,8 +34,8 @@ Considere o exemplo abaixo:
 // Encontra combinações "quick brown" seguido de "jumps", ignorando caracteres entre eles
 // Relembra "brown" e "jumps"
 // Ignora caixa (maiúsculo e minúsculo)
-var re = /quick\s(brown).+?(jumps)/ig;
-var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
+var re = /quick\s(brown).+?(jumps)/gi;
+var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
 ```
 
 A tabela a seguir provê os resultados do script:
@@ -125,11 +125,11 @@ If your regular expression uses the "`g`" flag, you can use the `exec()` method 
 
 ```js
 var myRe = /ab*/g;
-var str = 'abbcdefabh';
+var str = "abbcdefabh";
 var myArray;
 while ((myArray = myRe.exec(str)) !== null) {
-  var msg = 'Found ' + myArray[0] + '. ';
-  msg += 'Next match starts at ' + myRe.lastIndex;
+  var msg = "Found " + myArray[0] + ". ";
+  msg += "Next match starts at " + myRe.lastIndex;
   console.log(msg);
 }
 ```
@@ -148,7 +148,7 @@ Nota: Do not place the regular expression literal (or {{jsxref("RegExp")}} const
 You can also use `exec()` without creating a {{jsxref("RegExp")}} object:
 
 ```js
-var matches = /(hello \S+)/.exec('This is a hello world!');
+var matches = /(hello \S+)/.exec("This is a hello world!");
 console.log(matches[1]);
 ```
 
@@ -156,11 +156,11 @@ This will log a message containing 'hello world!'.
 
 ## Especificações
 
-| Especificação                                                                                | Status                       | Comentário                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}         | {{Spec2('ES6')}}         |                                                    |
+| Especificação                                                        | Status               | Comentário                                         |
+| -------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                  | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}              | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

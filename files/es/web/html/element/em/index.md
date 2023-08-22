@@ -1,7 +1,6 @@
 ---
 title: em
 slug: Web/HTML/Element/em
-original_slug: Web/HTML/Elemento/em
 ---
 
 {{HTMLSidebar}}

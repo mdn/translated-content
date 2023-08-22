@@ -12,7 +12,7 @@ A função **`Math.exp()`** retorna `ex`, onde `x` é o argumento, e `e` é a [C
 ## Síntaxe
 
 ```js
-Math.exp(x)
+Math.exp(x);
 ```
 
 ### Parâmetros
@@ -30,17 +30,17 @@ Pelo fato de `exp` ser um método estático de `Math`, você sempre utiliza-o co
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## Especificações
 
-| Especificação                                                        | Status                   | Comentário         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| 1ª Edição ECMAScript 1st Edition. Implementado em JavaScript 1.0     | Padrão                   | Definição Inicial. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}     |                    |
+| Especificação                                                    | Status             | Comentário         |
+| ---------------------------------------------------------------- | ------------------ | ------------------ |
+| 1ª Edição ECMAScript 1st Edition. Implementado em JavaScript 1.0 | Padrão             | Definição Inicial. |
+| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}}               | {{Spec2('ES5.1')}} |                    |
+| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}                 | {{Spec2('ES6')}}   |                    |
 
 ## Compatibilidade com navegadores
 

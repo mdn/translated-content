@@ -13,11 +13,11 @@ l10n:
 
 書式化制御文字は、視覚的表現を有していないものの、テキストの解釈を制御するために使用されます。
 
-| コードポイント | 名前                  | 略語 | 説明                                                                                                                                                                                                                    |
-| ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| U+200C     | Zero width non-joiner | \<ZWNJ>      | 特定の言語において、合字に接合されることを防ぐために、文字の間に配置されます。([Wikipedia](https://ja.wikipedia.org/wiki/ゼロ幅非接合子))                                                                    |
-| U+200D     | Zero width joiner     | \<ZWJ>       | 特定の言語において、通常は接合されない文字を、接合した形を使用して文字を表示するために文字間に配置されます。 ([Wikipedia](https://ja.wikipedia.org/wiki/ゼロ幅接合子)) |
-| U+FEFF     | Byte order mark       | \<BOM>       | 記述の先頭において、 Unicode を使用することと、そのテキストのバイト順をマークします。 ([Wikipedia](https://ja.wikipedia.org/wiki/バイト順マーク)).                                                                                  |
+| コードポイント | 名前                  | 略語    | 説明                                                                                                                                                                   |
+| -------------- | --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| U+200C         | Zero width non-joiner | \<ZWNJ> | 特定の言語において、合字に接合されることを防ぐために、文字の間に配置されます。([Wikipedia](https://ja.wikipedia.org/wiki/ゼロ幅非接合子))                              |
+| U+200D         | Zero width joiner     | \<ZWJ>  | 特定の言語において、通常は接合されない文字を、接合した形を使用して文字を表示するために文字間に配置されます。 ([Wikipedia](https://ja.wikipedia.org/wiki/ゼロ幅接合子)) |
+| U+FEFF         | Byte order mark       | \<BOM>  | 記述の先頭において、 Unicode を使用することと、そのテキストのバイト順をマークします。 ([Wikipedia](https://ja.wikipedia.org/wiki/バイト順マーク)).                     |
 
 JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は識別子部分として扱われ、 \<BOM> （テキストの先頭にない場合はゼロ幅のノーブレークスペース \<ZWNBSP> とも呼ばれます）は空白部分として扱われます。
 
@@ -25,15 +25,15 @@ JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は識別子部�
 
 [ホワイトスペース](/ja/docs/Glossary/Whitespace)はソースのテキストの読みやすさを向上させ、トークンを互いに区別します。これらの文字は通常、コードの機能性には不要なものです。よく [Minification tools](https://en.wikipedia.org/wiki/Minification_%28programming%29) を使用して、転送する必要があるデータの量を削減するためにホワイトスペースを除去します。
 
-| コードポイント | 名前                           | 略語 | 説明                                                                                               | エスケープシーケンス |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | 文字単位のタブ           | \<TAB>        | 水平タブ                                                                                     | \t              |
-| U+000B     | 行単位のタブ                | \<VT>        | 垂直タブ                                                                                       | \v              |
-| U+000C     | フォームフィード                      | \<FF>        | 改ページの制御文字 ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))        | \f              |
-| U+0020     | 空白                          | \<SP>        | 通常の空白                                                                                              |                 |
-| U+00A0     | ノーブレークスペース                 | \<NBSP>      | 通常の空白だが、改行を行ってよい位置ではない                                         |                 |
-| U+FEFF     | ゼロ幅ノーブレークスペース      | \<ZWNBSP>    | When not at the start of a script, the BOM marker is a normal whitespace character.                |                 |
-| Others     | 他の Unicode の空白文字 | \<USP>       | ["Space_Separator" 一般カテゴリーの文字][space separator set]          |                 |
+| コードポイント | 名前                       | 略語      | 説明                                                                                | エスケープシーケンス |
+| -------------- | -------------------------- | --------- | ----------------------------------------------------------------------------------- | -------------------- |
+| U+0009         | 文字単位のタブ             | \<TAB>    | 水平タブ                                                                            | \t                   |
+| U+000B         | 行単位のタブ               | \<VT>     | 垂直タブ                                                                            | \v                   |
+| U+000C         | フォームフィード           | \<FF>     | 改ページの制御文字 ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)) | \f                   |
+| U+0020         | 空白                       | \<SP>     | 通常の空白                                                                          |                      |
+| U+00A0         | ノーブレークスペース       | \<NBSP>   | 通常の空白だが、改行を行ってよい位置ではない                                        |                      |
+| U+FEFF         | ゼロ幅ノーブレークスペース | \<ZWNBSP> | When not at the start of a script, the BOM marker is a normal whitespace character. |                      |
+| Others         | 他の Unicode の空白文字    | \<USP>    | ["Space_Separator" 一般カテゴリーの文字][space separator set]                       |                      |
 
 [space separator set]: https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BGeneral_Category%3DSpace_Separator%7D
 
@@ -47,12 +47,12 @@ JavaScriptのソーステキストでは、 \<ZWNJ> と \<ZWJ> は識別子部�
 
 以下の Unicode コードポイントのみが ECMAScript では改行文字として扱われ、他の改行文字はホワイトスペースとして扱われます (例えば、次の行、 NEL、 U+0085 はホワイトスペースと見なされます)。
 
-| コードポイント | 名前                | 略語 | 説明                                            | エスケープシーケンス |
-| ---------- | ------------------- | ------------ | ------------------------------------------------------ | --------------- |
-| U+000A     | ラインフィード      | \<LF>        | UNIX システムでの改行文字です。                    | \n              |
-| U+000D     | キャリッジリターン  | \<CR>        | コモドールと初期の Mac システムでの改行文字です。 | \r              |
-| U+2028     | ラインセパレーター  | \<LS>        | [ウィキペディア](https://ja.wikipedia.org/wiki/改行コード)     |                 |
-| U+2029     | 改段落              | \<PS>        | [ウィキペディア](https://ja.wikipedia.org/wiki/改行コード)     |                 |
+| コードポイント | 名前               | 略語  | 説明                                                       | エスケープシーケンス |
+| -------------- | ------------------ | ----- | ---------------------------------------------------------- | -------------------- |
+| U+000A         | ラインフィード     | \<LF> | UNIX システムでの改行文字です。                            | \n                   |
+| U+000D         | キャリッジリターン | \<CR> | コモドールと初期の Mac システムでの改行文字です。          | \r                   |
+| U+2028         | ラインセパレーター | \<LS> | [ウィキペディア](https://ja.wikipedia.org/wiki/改行コード) |                      |
+| U+2029         | 改段落             | \<PS> | [ウィキペディア](https://ja.wikipedia.org/wiki/改行コード) |                      |
 
 ## コメント
 
@@ -67,7 +67,7 @@ JavaScript には、コード内にコメントを割り当てる方法が 2 つ
 ```js
 function comment() {
   // This is a one line JavaScript comment
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -81,7 +81,7 @@ comment();
 ```js
 function comment() {
   /* This is a one line JavaScript comment */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -92,7 +92,7 @@ comment();
 function comment() {
   /* This comment spans multiple lines. Notice
      that we don't need to end the comment until we're done. */
-  console.log('Hello world!');
+  console.log("Hello world!");
 }
 comment();
 ```
@@ -101,9 +101,9 @@ comment();
 
 ```js
 function comment(x) {
-  console.log('Hello ' + x /* insert the value of x */ + ' !');
+  console.log("Hello " + x /* insert the value of x */ + " !");
 }
-comment('world');
+comment("world");
 ```
 
 また、コードをコメントで囲むことで、コードが実行されないよう無効にすることができます。
@@ -142,9 +142,10 @@ _識別子_ は、値と名前をリンクさせるために使用されます�
 ```js
 const decl = 1; // 変数宣言（`let` または `var` も可）
 function fn() {} // 関数宣言
-const obj = { key: 'value' }; // オブジェクトキー
-class C { // クラス宣言
-  #priv = 'value'; // プライベートプロパティ
+const obj = { key: "value" }; // オブジェクトキー
+class C {
+  // クラス宣言
+  #priv = "value"; // プライベートプロパティ
 }
 lbl: console.log(1); // ラベル
 ```
@@ -155,7 +156,7 @@ JavaScript では、識別子は一般的に英数字、アンダースコア (`
 
 また、JavaScript では、識別子の中で [Unicode エスケープシーケンス](#unicode_escape_sequences)を `\u0000` または `\u{000000}` という形式で使用することができ、これは実際の Unicode 文字と同じ文字列値をエンコードするものです。例えば、`你好` と `\u4f60\u597d` は同じ識別子です。
 
-```js
+```js-nolint
 const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
@@ -296,7 +297,7 @@ const els\u{65} = 1;
 詳細については [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) をご覧ください。
 
 ```js
-null
+null;
 ```
 
 ### 論理値リテラル
@@ -304,8 +305,8 @@ null
 詳細については[論理型](/ja/docs/Web/JavaScript/Data_structures#論理型)をご覧ください。
 
 ```js
-true
-false
+true;
+false;
 ```
 
 ### 数値リテラル
@@ -315,12 +316,12 @@ false
 #### 10 進数
 
 ```js
-1234567890
-42
+1234567890;
+42;
 
 // 先頭にゼロがあるものを使用する場合は注意してください
-0888 // 888 は 10 進数として解釈されます
-0777 // 8 進数として解釈され、 10 進数では 511 です。
+0888; // 888 は 10 進数として解釈されます
+0777; // 8 進数として解釈され、 10 進数では 511 です。
 ```
 
 なお、 10 進数リテラルはゼロ (`0`) から始め、他の 10 進数の数字を続けることができますが、 `0` に続く数字がすべて 8 より小さい場合は、その数値が 8 進数として解釈されることに注意してください。さらに、接頭辞 `0` を持つ数値リテラルは、 8 進数として解釈しても 10 進数として解釈しても、厳格モードでは構文エラーが発生します。ですから、代わりに `0o` 接頭辞を使用してください。
@@ -330,13 +331,13 @@ false
 10 進数の指数リテラルは、 `beN` の書式で指定します。ここで `b` は基数（整数または浮動小数点）、その後に `e` 文字（セパレーターまたは指数記号として機能）、そして `N` は*指数*または*べき乗数* - 符号付き整数です（2019 ECMA-262 仕様に従います）。
 
 ```js
-0e-5   // 0
-0e+5   // 0
-5e1    // 50
-175e-2 // 1.75
-1e3    // 1000
-1e-3   // 0.001
-1E3    // 1000
+0e-5; // 0
+0e5; // 0
+5e1; // 50
+175e-2; // 1.75
+1e3; // 1000
+1e-3; // 0.001
+1e3; // 1000
 ```
 
 #### 2 進数
@@ -344,9 +345,9 @@ false
 2進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "B" を使用します (`0b` または `0B`)。 `0b` の後の数字が 0 または 1 でない場合は、 {{jsxref("SyntaxError")}} が "Missing binary digits after 0b" の内容で発生します。
 
 ```js
-const FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+const FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 const FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
+const FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 ```
 
 #### 8 進数
@@ -354,7 +355,7 @@ const FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 8進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "O" を使用します (`0o` または `0O`)。 `0o` の後の数字が範囲 (01234567) 外の場合、 {{jsxref("SyntaxError")}} が "Missing octal digits after 0o" の内容で発生します。
 
 ```js
-const n = 0O755; // 493
+const n = 0o755; // 493
 const m = 0o644; // 420
 ```
 
@@ -363,9 +364,9 @@ const m = 0o644; // 420
 16 進数の構文は、先頭のゼロに続いて小文字または大文字のラテン文字 "X" を使用します (`0x` または `0X`)。 0x の後の数字が範囲 (0123456789ABCDEF) 外の場合、 {{jsxref("SyntaxError")}} が "Identifier starts immediately after numeric literal" の内容で発生します。
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 #### 長整数リテラル
@@ -373,10 +374,10 @@ const m = 0o644; // 420
 [長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
 
 ```js
-123456789123456789n     // 123456789123456789
-0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895
-0b11101001010101010101n // 955733
+123456789123456789n; // 123456789123456789
+0o777777777777n; // 68719476735
+0x123456789abcdefn; // 81985529216486895
+0b11101001010101010101n; // 955733
 ```
 
 なお、先頭がゼロだけの 8 進数は `BigInt` では動作しません。
@@ -389,7 +390,7 @@ const m = 0o644; // 420
 8 進数の `BigInt` 数値では、常にゼロの後に "o" (大文字でも小文字でも) を付けて使用してください。
 
 ```js example-good
-0o755n
+0o755n;
 ```
 
 `BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures#長整数型)をご覧ください。
@@ -400,20 +401,20 @@ const m = 0o644; // 420
 
 ```js
 // 10 進数の区切り文字
-1_000_000_000_000
-1_050.95
+1_000_000_000_000;
+1_050.95;
 
 // 2 進数の区切り文字
-0b1010_0001_1000_0101
+0b1010_0001_1000_0101;
 
 // 8 進数の区切り文字
-0o2_2_5_6
+0o2_2_5_6;
 
 // 16 進数の区切り文字
-0xA0_B0_C0
+0xa0_b0_c0;
 
 // BigInt の区切り文字
-1_000_000_000_000_000_000_000n
+1_000_000_000_000_000_000_000n;
 ```
 
 なお、以下の制限があります。
@@ -434,10 +435,12 @@ const m = 0o644; // 420
 詳細については、 {{jsxref("Object")}} と[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)をご覧ください。
 
 ```js
-const o = { a: 'foo', b: 'bar', c: 42 };
+const o = { a: "foo", b: "bar", c: 42 };
 
 // 短縮記法
-const a = 'foo', b = 'bar', c = 42;
+const a = "foo",
+  b = "bar",
+  c = 42;
 const o = { a, b, c };
 
 // 以前の表記
@@ -449,7 +452,7 @@ const o = { a: a, b: b, c: c };
 詳細については {{jsxref("Array")}} をご覧ください。
 
 ```js
-[1954, 1974, 1990, 2014]
+[1954, 1974, 1990, 2014];
 ```
 
 ### 文字列リテラル
@@ -462,7 +465,7 @@ const o = { a: a, b: b, c: c };
 
 すべてのコードポイントが、エスケープシーケンスの形で現れることができます。文字列リテラルは ECMAScript の文字列値として評価されます。これらの文字列の値を生成する際に、 Unicode コードポイントは UTF-16 エンコードされます。
 
-```js
+```js-nolint
 'foo';
 "bar";
 ```
@@ -472,7 +475,7 @@ const o = { a: a, b: b, c: c };
 16 進エスケープシーケンスは `\x` に続いてちょうど 2 桁の 16 進数から成り、 0x0000 から 0x00FF までのコード単位またはコードポイントを表します。
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Unicode エスケープシーケンス
@@ -482,7 +485,7 @@ Unicode エスケープシーケンスは `\u` に続いてちょうど 4 桁の
 See also {{jsxref("String.fromCharCode()")}} and {{jsxref("String.prototype.charCodeAt()")}}.
 
 ```js
-'\u00A9' // "©" (U+A9)
+"\u00A9"; // "©" (U+A9)
 ```
 
 #### Unicode コードポイントエスケープ
@@ -492,10 +495,10 @@ Unicode コードポイントエスケープは `\u{` に続いて 16 進数の�
 {{jsxref("String.fromCodePoint()")}} または {{jsxref("String.prototype.codePointAt()")}} もご覧ください。
 
 ```js
-'\u{2F804}' // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
+"\u{2F804}"; // CJK COMPATIBILITY IDEOGRAPH-2F804 (U+2F804)
 
 // 同じ文字をサロゲートペアで表したもの
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### 正規表現リテラル
@@ -516,14 +519,14 @@ Unicode コードポイントエスケープは `\u{` に続いて 16 進数の�
 詳細について、[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)をご覧ください。
 
 ```js
-`string text`
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag `string text ${expression} string text`
+tag `string text ${expression} string text`;
 ```
 
 ## 自動セミコロン挿入
@@ -541,7 +544,7 @@ tag `string text ${expression} string text`
 
 1\. 文法上許されないトークンに出会ったとき、それが前のトークンから少なくとも 1 つの[改行文字](#改行文字)で区切られているか、そのトークンが "}" であれば、その前にセミコロンが挿入されます。
 
-```js
+```js-nolint
 { 1
 2 } 3
 
@@ -559,14 +562,14 @@ tag `string text ${expression} string text`
 ```js
 do {
   // ...
-} while (condition) /* ; */ // ここで ASI
-const a = 1
+} while (condition); /* ; */ // ここで ASI
+const a = 1;
 ```
 
 2\. トークンの入力ストリームの末尾が検出され、パーサーが単一の入力ストリームを完全なプログラムとして解釈できない場合、末尾にセミコロンが挿入されます。
 
 ```js
-const a = 1 /* ; */ // ASI here
+const a = 1; /* ; */ // ASI here
 ```
 
 このルールは前回のルールを補完するもので、特に「問題のあるトークン」がなく、入力ストリームが終わっている場合を想定しています。
@@ -585,7 +588,7 @@ const a = 1 /* ; */ // ASI here
 
 ここで [`++`](/ja/docs/Web/JavaScript/Reference/Operators/Increment) は、変数 `b` に適用される後置演算子としては扱われません。というのも、改行文字が `b` と`++` の間にあるからです。
 
-```js
+```js-nolint
 a = b
 ++c
 
@@ -597,7 +600,7 @@ a = b;
 
 ここでは、 `return` 文は `undefined` を返し、 `a + b` は到達できない文になります。
 
-```js
+```js-nolint
 return
 a + b
 
@@ -609,7 +612,7 @@ a + b;
 
 ASI は、改行がなければ無効な構文を生成するようなトークンを区切った場合にのみ発生することに注意してください。次のトークンが有効な構文の一部として解釈できる場合は、セミコロンは挿入されません。例えば、
 
-```js example-bad
+```js-nolint example-bad
 const a = 1
 (1).toString()
 
@@ -619,7 +622,7 @@ const b = 1
 
 `()` は関数呼び出しと見なせるので、通常は ASI が発生しないでしょう。同様に、 `[]` はメンバーアクセスである可能性があります。上のコードは次のものと同等です。
 
-```js example-bad
+```js-nolint example-bad
 const a = 1(1).toString()
 
 const b = 1[1, 2, 3].forEach(console.log)

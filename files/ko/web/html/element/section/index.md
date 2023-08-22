@@ -1,5 +1,5 @@
 ---
-title: '<section>: 일반 구획 요소'
+title: "<section>: 일반 구획 요소"
 slug: Web/HTML/Element/section
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/section
 **HTML `<section>` 요소**는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다. 보통 `<section>`은 제목을 포함하지만, 항상 그런 것은 아닙니다.
 
 {{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 > **참고:** 요소의 콘텐츠를 외부와 구분하여 단독으로 묶는 것이 나아보인다면 {{htmlelement("article")}} 요소가 더 좋은 선택일 수 있습니다.
 

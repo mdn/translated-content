@@ -1,7 +1,6 @@
 ---
 title: 이건 MDN에 있나요?
 slug: MDN/Writing_guidelines/What_we_write
-original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 ---
 
 {{MDNSidebar}}

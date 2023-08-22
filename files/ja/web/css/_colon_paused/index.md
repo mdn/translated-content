@@ -1,5 +1,5 @@
 ---
-title: ':paused'
+title: ":paused"
 slug: Web/CSS/:paused
 ---
 
@@ -11,7 +11,6 @@ slug: Web/CSS/:paused
 
 ```css
 :paused {
-
 }
 ```
 

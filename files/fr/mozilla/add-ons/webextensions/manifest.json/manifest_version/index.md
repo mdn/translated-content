@@ -1,7 +1,6 @@
 ---
 title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
 
 {{AddonSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Assignement (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -13,7 +12,7 @@ L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'u
 ## Syntaxe
 
 ```js
-x = y
+x = y;
 ```
 
 ## Exemples

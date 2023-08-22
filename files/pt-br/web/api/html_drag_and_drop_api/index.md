@@ -1,7 +1,6 @@
 ---
 title: Arrastar e soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-original_slug: DragDrop/Drag_and_Drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -20,16 +19,16 @@ O drag and drop em HTML usa o {{domxref("Event","modelo de eventos DOM")}} e os 
 
 Todos os [tipos de evento drag](/pt-BR/docs/Web/API/DragEvent#Event_types) são associados a um [manipulador global de eventos](/pt-BR/docs/Web/API/DragEvent#GlobalEventHandlers). Cada tipo de evento drag e cada atributo drag global tem um documento de referência que o descreve. A tabela a seguir descreve brevemente os tipos de evento e um link de referência para seu documento.
 
-| Event                        | On Event Handler                                                                 | Description                                                                                                                                                                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{event('drag')}}     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                                              |
-| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragend).) |
-| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/DragDrop/Drag_Operations#droptargets).)             |
-| {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                                               |
-| {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                                      |
-| {{event('dragover')}} | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                                   |
-| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragstart).)                              |
-| {{event('drop')}}     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/DragDrop/Drag_Operations#drop).)                                    |
+| Event                  | On Event Handler                                             | Description                                                                                                                                                                                                     |
+| ---------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{event('drag')}}      | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                           |
+| {{event('dragend')}}   | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragend).) |
+| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/DragDrop/Drag_Operations#droptargets).)                    |
+| {{event('dragexit')}}  | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                            |
+| {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                   |
+| {{event('dragover')}}  | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                |
+| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragstart).)                                       |
+| {{event('drop')}}      | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/DragDrop/Drag_Operations#drop).)                                     |
 
 Note que eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo vindo do sistema operacional para o navegador.
 
@@ -59,15 +58,19 @@ Esta seção dispõe de um resumo das etapas básicas para adicionar a funcional
 
 Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes#draggable) além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
 
-```
+```js
 function dragstart_handler(ev) {
- console.log("dragStart");
- // Adiciona o id do elemento em questão ao objeto de transferência de dados (dataTransfer)
- ev.dataTransfer.setData("text/plain", ev.target.id);
+  console.log("dragStart");
+  // Adiciona o id do elemento em questão ao objeto de transferência de dados (dataTransfer)
+  ev.dataTransfer.setData("text/plain", ev.target.id);
 }
+```
 
+```html
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Este elemento é arrastável.</p>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    Este elemento é arrastável.
+  </p>
 </body>
 ```
 
@@ -79,7 +82,7 @@ A aplicação é livre para incluir qualquer quantidade de dados do item em uma 
 
 Cada {{domxref("DragEvent","evento drag")}} tem uma propriedade {{domxref("DragEvent.dataTransfer","dataTransfer")}} que _segura_ os dados do evento. Essa propridade (que é um objeto {{domxref("DataTransfer")}}) também tem um método para _gerenciar_ os dados do arraste (drag). O método {{domxref("DataTransfer.setData","setData()")}} é usado para adicionar um item aos dados do arraste, como demonstrado no exemplo a seguir.
 
-```
+```js
 function dragstart_handler(ev) {
   // Adiciona os dados do arraste (drag)
   ev.dataTransfer.setData("text/plain", ev.target.id);
@@ -94,13 +97,13 @@ Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como
 
 Por padrão, o navegador provê uma imagem que aparece por trás do ponteiro do mouse durante uma operação de arraste. Entretanto, uma aplicação pode definir uma imagem customizada utilizando o método {{domxref("DataTransfer.setDragImage","setDragImage()")}} como demonstrado no exemplo a seguir.
 
-```
+```js
 function dragstart_handler(ev) {
   // Cria uma imagem e então a utiliza como a "drag image".
   // NOTA: mude "example.gif" como uma imagem existente, caso contrário
   // ela não será criada e a imagem padrão será utilizada como padrão.
   var img = new Image();
-  img.src = 'example.gif';
+  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 }
 ```
@@ -123,7 +126,7 @@ Durante a operação de arraste, os efeitos do arraste (drag) podem ser modifica
 
 O exemplo a seguir mostra como utilizar essa propriedade.
 
-```
+```js
 function dragstart_handler(ev) {
   // Determina o efeito de arraste para copy
   ev.dataTransfer.dropEffect = "copy";
@@ -136,21 +139,26 @@ Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/Guide/HTML/Drag_operati
 
 Por padrão, o navegador previne tudo que possa acontecer ao soltar alguma coisa em um elemento HTML. Para mudar esse comportamento de forma que um elemento se torne uma zona de soltura (d*rop zone)* ou que seja soltável _(droppable)_, o elemento precisa ter ambos os atributos {{domxref("GlobalEventHandlers.ondragover","ondragover")}} e {{domxref("GlobalEventHandlers.ondrop","ondrop")}}. O exemplo a seguir mostra como utilizar esses atributos e inclui manipuladores básicos de evento para cada um.
 
-```
+```js
 function dragover_handler(ev) {
- ev.preventDefault();
- // Define o dropEffect para ser do tipo move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Define o dropEffect para ser do tipo move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Zona de Soltura (Drop Zone)</div>
-</body>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Zona de Soltura (Drop Zone)
+  </div>
+</body>;
 ```
 
 Note que cada manipulador chama {{domxref("Event.preventDefault","preventDefault()")}} para previnir o processamento adicional de eventos (como eventos touch ou eventos pointer).
@@ -163,27 +171,34 @@ O manipulador do evento {{event("drop")}} é livre para processar os dados do ar
 
 O exemplo a seguir mostra o manipulador de soltura (drop handler) pegando o id do elemento de origem atráves dos dados de drag (drag data) e então usando o id para mover o elemento de sua origem para o elemento de soltura (drop element).
 
-```
+```js
 function dragstart_handler(ev) {
- // Adiciona o id do elemento alvo para o objeto de transferência de dados
- ev.dataTransfer.setData("text/plain", ev.target.id);
- ev.dropEffect = "move";
+  // Adiciona o id do elemento alvo para o objeto de transferência de dados
+  ev.dataTransfer.setData("text/plain", ev.target.id);
+  ev.dropEffect = "move";
 }
 function dragover_handler(ev) {
- ev.preventDefault();
- // Define o dropEffect para ser do tipo move
- ev.dataTransfer.dropEffect = "move"
+  ev.preventDefault();
+  // Define o dropEffect para ser do tipo move
+  ev.dataTransfer.dropEffect = "move";
 }
 function drop_handler(ev) {
- ev.preventDefault();
- // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+  ev.preventDefault();
+  // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 <body>
- <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">Este elemento é arrastável.</p>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Zona de Soltura (Drop Zone)</div>
-</body>
+  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
+    Este elemento é arrastável.
+  </p>
+  <div
+    id="target"
+    ondrop="drop_handler(event);"
+    ondragover="dragover_handler(event);">
+    Zona de Soltura (Drop Zone)
+  </div>
+</body>;
 ```
 
 Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drop).

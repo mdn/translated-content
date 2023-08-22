@@ -9,8 +9,6 @@ slug: Web/HTML/Element/ol
 
 {{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -81,7 +79,7 @@ slug: Web/HTML/Element/ol
     - `'I'`는 대문자 로마 숫자,
     - `'1'` 는 숫자(기본값)을 나타냅니다.
 
-    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, {{htmlattrxref("type", "li")}} 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
+    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, [`type`](/ko/docs/Web/HTML/Element/li#type) 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
 
     > **참고:** 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
 
@@ -144,13 +142,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- closing </li> tag not here! -->
+  <li>
+    second item
+    <!-- closing </li> tag not here! -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- Here's the closing </li> tag -->
+  </li>
+  <!-- Here's the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```
@@ -162,13 +163,16 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+  <li>
+    second item
+    <!-- Look, the closing </li> tag is not placed here! -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>                <!-- Here is the closing </li> tag -->
+  </li>
+  <!-- Here is the closing </li> tag -->
   <li>third item</li>
 </ol>
 ```

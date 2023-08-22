@@ -55,12 +55,12 @@ Content-Type: multipart/form-data; boundary=something
 
 ### HTML フォームにおける `Content-Type`
 
- HTML フォームを送信する {{HTTPMethod("POST")}} リクエストでは、リクエストの `Content-Type` は {{HTMLElement("form")}} 要素の `enctype` 属性で指定します。
+HTML フォームを送信する {{HTTPMethod("POST")}} リクエストでは、リクエストの `Content-Type` は {{HTMLElement("form")}} 要素の `enctype` 属性で指定します。
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

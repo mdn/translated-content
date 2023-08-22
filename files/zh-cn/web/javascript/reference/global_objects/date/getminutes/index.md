@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 ## 语法
 
-```js
-dateObj.getMinutes()
+```js-nolint
+getMinutes()
 ```
 
 ### 参数

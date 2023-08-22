@@ -1,7 +1,6 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -11,8 +10,8 @@ La propriété non-standard **`lastMatch`** est une propriété statique en lect
 ## Syntaxe
 
 ```js
-RegExp.lastMatch
-RegExp['$&']
+RegExp.lastMatch;
+RegExp["$&"];
 ```
 
 ## Description
@@ -31,7 +30,7 @@ Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pou
 var re = /coucou/g;
 re.test("coucou toi!");
 RegExp.lastMatch; // "coucou"
-RegExp['$&'];     // "coucou"
+RegExp["$&"]; // "coucou"
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 ---
 
 {{JSRef}}
@@ -58,7 +57,7 @@ Le code ci-dessous affiche une ligne pour chaque élément du tableau typé :
 
 ```js
 function affichageContenuTableau(élément, index, tableau) {
-  console.log('a[' + index + '] = ' + élément);
+  console.log("a[" + index + "] = " + élément);
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);

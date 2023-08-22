@@ -1,7 +1,6 @@
 ---
 title: Document.origin
 slug: Web/API/origin
-original_slug: Web/API/Document/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -29,14 +28,11 @@ var origin = document.origin;
 
 ## Especificações
 
-| Especificação                                                                                                                                | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-origin', 'Document.origin')}}                                                 | {{Spec2('DOM WHATWG')}} | Definição inicial. |
-| {{SpecName('HTML WHATWG', '#concept-origin', 'origin for various objects (including Document objects)')}} | {{Spec2('HTML WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.origin")}}
+{{Compat}}
 
 ## Veja também
 

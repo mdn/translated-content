@@ -1,7 +1,6 @@
 ---
 title: SVG как изображение
 slug: Web/SVG/SVG_as_an_Image
-translation_of: Web/SVG/SVG_as_an_Image
 ---
 
 Изображения SVG могут использоваться как формат изображения в ряде контекстов. Многие браузеры поддерживают изображения SVG:
@@ -32,10 +31,10 @@ translation_of: Web/SVG/SVG_as_an_Image
 
 ## Спецификации
 
-| Specification                                                                                                                                        | Status                                   | Comment                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
-| {{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-img-element", "SVG within &lt;img&gt; element")}} | {{Spec2("HTML5 W3C")}}             | Defines the usage of SVG within {{HTMLElement("img")}} elements.                 |
-| {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}             | {{Spec2("CSS3 Backgrounds")}} | Defines the usage of SVG within the {{cssxref("background-image")}} property. |
+| Specification                                                                                                  | Status                        | Comment                                                                       |
+| -------------------------------------------------------------------------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------- |
+| {{SpecName("HTML5 W3C", "semantics-embedded-content.html#the-img-element", "SVG within &lt;img&gt; element")}} | {{Spec2("HTML5 W3C")}}        | Defines the usage of SVG within {{HTMLElement("img")}} elements.              |
+| {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}}        | {{Spec2("CSS3 Backgrounds")}} | Defines the usage of SVG within the {{cssxref("background-image")}} property. |
 
 ## Смотрите также
 

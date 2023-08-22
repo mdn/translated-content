@@ -1,10 +1,6 @@
 ---
 title: Анатомия Расширения
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - Расширение
-  - веб расширение
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
 {{AddonSidebar}}

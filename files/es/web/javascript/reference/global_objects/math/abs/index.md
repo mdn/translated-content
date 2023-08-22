@@ -1,7 +1,6 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/abs
 ---
 
 {{JSRef}}
@@ -36,16 +35,16 @@ Como `abs()` es un método estático de `Math`, deberías siempre usar `Math.abs
 Pasando un string no-numérico o una variable {{jsxref("undefined")}}/empty retorna {{jsxref("NaN")}}. Pasando {{jsxref("null")}} retorna 0.
 
 ```js
-Math.abs('-1');     // 1
-Math.abs(-2);       // 2
-Math.abs(null);     // 0
-Math.abs('');       // 0
-Math.abs([]);       // 0
-Math.abs([2]);      // 2
-Math.abs([1,2]);    // NaN
-Math.abs({});       // NaN
-Math.abs('string'); // NaN
-Math.abs();         // NaN
+Math.abs("-1"); // 1
+Math.abs(-2); // 2
+Math.abs(null); // 0
+Math.abs(""); // 0
+Math.abs([]); // 0
+Math.abs([2]); // 2
+Math.abs([1, 2]); // NaN
+Math.abs({}); // NaN
+Math.abs("string"); // NaN
+Math.abs(); // NaN
 ```
 
 ## Especificaciones

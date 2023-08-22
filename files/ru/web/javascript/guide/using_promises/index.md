@@ -1,13 +1,6 @@
 ---
 title: Использование промисов
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - JavaScript
-  - Асинхронность
-  - Гайд
-  - промис
-translation_of: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 ---
 
 {{jsSidebar("Руководство по JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
@@ -22,10 +15,10 @@ original_slug: Web/JavaScript/Guide/Ispolzovanie_promisov
 function doSomethingOldStyle(successCallback, failureCallback) {
   console.log("Готово.");
   // Успех в половине случаев.
-  if (Math.random() > .5) {
-    successCallback("Успех")
+  if (Math.random() > 0.5) {
+    successCallback("Успех");
   } else {
-    failureCallback("Ошибка")
+    failureCallback("Ошибка");
   }
 }
 
@@ -47,12 +40,12 @@ function doSomething() {
   return new Promise((resolve, reject) => {
     console.log("Готово.");
     // Успех в половине случаев.
-    if (Math.random() > .5) {
-      resolve("Успех")
+    if (Math.random() > 0.5) {
+      resolve("Успех");
     } else {
-      reject("Ошибка")
+      reject("Ошибка");
     }
-  })
+  });
 }
 
 const promise = doSomething();
@@ -101,40 +94,49 @@ let promise2 = doSomething().then(successCallback, failureCallback);
 Раньше выполнение нескольких асинхронных операций друг за другом приводило к классической "Вавилонской башне" колбэков:
 
 ```js
-doSomething(function(result) {
-  doSomethingElse(result, function(newResult) {
-    doThirdThing(newResult, function(finalResult) {
-      console.log('Итоговый результат: ' + finalResult);
-    }, failureCallback);
-  }, failureCallback);
+doSomething(function (result) {
+  doSomethingElse(
+    result,
+    function (newResult) {
+      doThirdThing(
+        newResult,
+        function (finalResult) {
+          console.log("Итоговый результат: " + finalResult);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
 В современных функциях мы записываем колбэки в возвращаемые промисы - формируем цепочку промисов:
 
 ```js
-doSomething().then(function(result) {
-  return doSomethingElse(result);
-})
-.then(function(newResult) {
-  return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-  console.log('Итоговый результат: ' + finalResult);
-})
-.catch(failureCallback);
+doSomething()
+  .then(function (result) {
+    return doSomethingElse(result);
+  })
+  .then(function (newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function (finalResult) {
+    console.log("Итоговый результат: " + finalResult);
+  })
+  .catch(failureCallback);
 ```
 
 Аргументы `then` необязательны, а `catch(failureCallback)` - это сокращение для `then(null, failureCallback)`. Вот как это выражено с помощью [стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js
 doSomething()
-.then(result => doSomethingElse(result))
-.then(newResult => doThirdThing(newResult))
-.then(finalResult => {
-  console.log(`Итоговый результат: ${finalResult}`);
-})
-.catch(failureCallback);
+  .then((result) => doSomethingElse(result))
+  .then((newResult) => doThirdThing(newResult))
+  .then((finalResult) => {
+    console.log(`Итоговый результат: ${finalResult}`);
+  })
+  .catch(failureCallback);
 ```
 
 **Важно:** Всегда возвращайте промисы в return, иначе колбэки не будут сцеплены и ошибки могут быть не пойманы (стрелочные функции неявно возвращают результат, если скобки {} вокруг тела функции опущены).

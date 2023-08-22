@@ -1,7 +1,6 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-translation_of: Web/API/WebGLProgram
 ---
 
 {{APIRef("WebGL")}}

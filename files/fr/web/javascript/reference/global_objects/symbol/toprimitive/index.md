@@ -1,7 +1,6 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
 
 {{JSRef}}
@@ -23,7 +22,7 @@ Dans l'exemple qui suit, on voit comment la propriété `Symbol.toPrimitive` peu
 ```js
 // Premier cas avec un objet sans Symbol.toPrimitive.
 let obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
 console.log(obj1 + ""); // "[object Object]"
 
@@ -37,9 +36,9 @@ var obj2 = {
       return "coucou";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10       -- hint vaut "number"
+console.log(+obj2); // 10       -- hint vaut "number"
 console.log(`${obj2}`); // "coucou" -- hint vaut "string"
 console.log(obj2 + ""); // true     -- hint vaut "default"
 ```

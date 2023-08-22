@@ -1,7 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`Object.getOwnPropertyDescriptor()`** renvoie un descripteur de la
 ## Syntaxe
 
 ```js
-Object.getOwnPropertyDescriptor(obj, prop)
+Object.getOwnPropertyDescriptor(obj, prop);
 ```
 
 ### Paramètres
@@ -51,7 +50,11 @@ Un descripteur de propriété est un enregistrement qui dispose des attributs su
 ```js
 var o, d;
 
-o = { get toto() { return 17; } };
+o = {
+  get toto() {
+    return 17;
+  },
+};
 d = Object.getOwnPropertyDescriptor(o, "toto");
 // d : {
 //       configurable: true,
@@ -71,9 +74,10 @@ d = Object.getOwnPropertyDescriptor(o, "truc");
 
 o = {};
 Object.defineProperty(o, "machin", {
-                                      value: 8675309,
-                                      writable: false,
-                                      enumerable: false });
+  value: 8675309,
+  writable: false,
+  enumerable: false,
+});
 d = Object.getOwnPropertyDescriptor(o, "machin");
 // d : {
 //        value: 8675309,

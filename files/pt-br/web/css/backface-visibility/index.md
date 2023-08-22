@@ -58,7 +58,10 @@ Esta propriedade tem dois valores (exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p> Todas as faces são transparentes e há três faces atrás que estão visíveis através das faces da frente.</p>
+        <p>
+          Todas as faces são transparentes e há três faces atrás que estão
+          visíveis através das faces da frente.
+        </p>
       </td>
       <td>
         <div class="container">
@@ -71,7 +74,10 @@ Esta propriedade tem dois valores (exclusivos):
             <div class="face bottom">6</div>
           </div>
         </div>
-        <p>Nenhuma face é opaca, mas as três faces de trás estarão sempre escondidas agora.</p>
+        <p>
+          Nenhuma face é opaca, mas as três faces de trás estarão sempre
+          escondidas agora.
+        </p>
       </td>
     </tr>
   </tbody>
@@ -153,7 +159,7 @@ Esta propriedade tem dois valores (exclusivos):
 .top {
   background: rgba(196, 196, 0, 0.7);
   transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px)
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
@@ -163,8 +169,10 @@ Esta propriedade tem dois valores (exclusivos):
 }
 
 /* Make the table a little nicer */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   margin: 0px;
   padding: 6px;
   font-family: sans-serif;
@@ -178,8 +186,8 @@ th, p, td {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                               | Comentário        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| Especificação                                                                           | Status                       | Comentário        |
+| --------------------------------------------------------------------------------------- | ---------------------------- | ----------------- |
 | {{SpecName('CSS3 Transforms', '#backface-visibility-property', 'backface-visibility')}} | {{Spec2('CSS3 Transforms')}} | Definição Inicial |
 
 ## Compatibilidade com navegadores

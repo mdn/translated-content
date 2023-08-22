@@ -31,15 +31,13 @@ var pc = new RTCPeerConnection(configuration);
 var connectionState = pc.connectionState;
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                                    | Status                           | Comment                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-connectionState', 'RTCPeerConnection.connectionState') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.RTCPeerConnection.connectionState")}}
+{{Compat}}
 
 ## See also
 

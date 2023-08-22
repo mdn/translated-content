@@ -34,7 +34,7 @@ var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "blob";
 
-oReq.onload = function(oEvent) {
+oReq.onload = function (oEvent) {
   var blob = oReq.response;
   // ...
 };
@@ -49,11 +49,11 @@ oReq.send();
 ```js
 function load_binary_resource(url) {
   var req = new XMLHttpRequest();
-  req.open('GET', url, false);
+  req.open("GET", url, false);
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType('text/plain; charset=x-user-defined');
+  req.overrideMimeType("text/plain; charset=x-user-defined");
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status != 200) return "";
   return req.responseText;
 }
 ```
@@ -83,9 +83,9 @@ oReq.onload = function (oEvent) {
 };
 
 var bb = new BlobBuilder(); // 需要合适的前缀：window.MozBlobBuilder 或者 window.WebKitBlobBuilder
-bb.append('abc123');
+bb.append("abc123");
 
-oReq.send(bb.getBlob('text/plain'));
+oReq.send(bb.getBlob("text/plain"));
 ```
 
 ## 将类型数组作为二进制数据发送
@@ -96,11 +96,11 @@ oReq.send(bb.getBlob('text/plain'));
 var myArray = new ArrayBuffer(512);
 var longInt8View = new Uint8Array(myArray);
 
-for (var i=0; i< longInt8View.length; i++) {
+for (var i = 0; i < longInt8View.length; i++) {
   longInt8View[i] = i % 255;
 }
 
-var xhr = new XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 xhr.open("POST", url, false);
 xhr.send(myArray);
 ```
@@ -133,24 +133,28 @@ req.sendAsBinary(aBody);
 
 ```js
 // 新建一个文件流。
-var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                       .createInstance(Components.interfaces.nsIFileInputStream);
+var stream = Components.classes[
+  "@mozilla.org/network/file-input-stream;1"
+].createInstance(Components.interfaces.nsIFileInputStream);
 stream.init(file, 0x04 | 0x08, 0644, 0x04); // file 是一个 nsIFile 对象实例
 
 // 设置文件的 MIME 类型
-var mimeType = "text\/plain";
+var mimeType = "text/plain";
 try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"]
-          .getService(Components.interfaces.nsIMIMEService);
+  var mimeService = Components.classes["@mozilla.org/mime;1"].getService(
+    Components.interfaces.nsIMIMEService,
+  );
   mimeType = mimeService.getTypeFromFile(file); // file 是一个 nsIFile 对象实例
+} catch (oEvent) {
+  /* 丢弃异常，使用默认的 text/plain 类型 */
 }
-catch (oEvent) { /* 丢弃异常，使用默认的 text/plain 类型 */ }
 
 // 发送
-var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-                    .createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open('PUT', url, false); // 同步模式！
-req.setRequestHeader('Content-Type', mimeType);
+var req = Components.classes[
+  "@mozilla.org/xmlextras/xmlhttprequest;1"
+].createInstance(Components.interfaces.nsIXMLHttpRequest);
+req.open("PUT", url, false); // 同步模式！
+req.setRequestHeader("Content-Type", mimeType);
 req.send(stream);
 ```
 

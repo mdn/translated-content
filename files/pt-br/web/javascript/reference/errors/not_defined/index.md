@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: "x" não está definido'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-original_slug: Web/JavaScript/Reference/Errors/Não_definido
 ---
 
 {{jsSidebar("Errors")}}
@@ -42,9 +41,9 @@ foo.substring(1); // "ar"
 Uma variável precisa estar disponível no atual contexto de execução. Variáveis definidas dentro de uma [function](/pt-BR/docs/Web/JavaScript/Reference/Functions) não podem ser acessadas de outros lugares fora da função, porque a variável é definida apenas no escopo da função
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -55,9 +54,9 @@ Entretanto, uma função pode acessar todas as variáveis e funções definidas 
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 

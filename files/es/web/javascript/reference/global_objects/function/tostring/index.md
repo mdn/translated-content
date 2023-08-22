@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 ---
 
 {{JSRef}}
@@ -30,7 +29,7 @@ El método `toString()` producirá una excepción {{jsxref("TypeError")}} ("Func
 ```js example-bad
 Function.prototype.toString.call("foo"); // TypeError
 
-var proxy = new Proxy(function() {}, {});
+var proxy = new Proxy(function () {}, {});
 Function.prototype.toString.call(proxy); // TypeError
 ```
 

@@ -22,9 +22,9 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ### 示例：使用 `global`
 
 ```js
-var regex = new RegExp("foo", "g")
+var regex = new RegExp("foo", "g");
 
-console.log(regex.global) // true
+console.log(regex.global); // true
 ```
 
 ## 规范

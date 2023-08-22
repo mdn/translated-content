@@ -1,21 +1,25 @@
 ---
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}} {{deprecated_header}}
 
-**`italics()`** メソッドは、文字列がイタリックになるように HTML の {{HTMLElement("i")}} 要素を生成します。
+**`italics()`** メソッドは、文字列を {{HTMLElement("i")}} 要素に埋め込んだ文字列 (`<i>str</i>`) を生成し、文字列がイタリック体で表示されるようにします。
+
+> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
 
 ## 構文
 
-```
-str.italics()
+```js-nolint
+italics()
 ```
 
 ### 返値
 
-HTML の {{HTMLElement("i")}} 要素を含む文字列です。
+開始タグ `<b>` で始まり、テキスト `str` が来て、終了タグ `</b>` が来る文字列です。
 
 ## 解説
 
@@ -28,11 +32,11 @@ HTML の {{HTMLElement("i")}} 要素を含む文字列です。
 以下の例では文字列のメソッドを使用して、文字列を整形しています。
 
 ```js
-var worldString = 'Hello, world';
-console.log(worldString.blink());  // <blink>Hello, world</blink>
-console.log(worldString.bold());  // <b>Hello, world</b>
+const worldString = "Hello, world";
+console.log(worldString.blink()); // <blink>Hello, world</blink>
+console.log(worldString.bold()); // <b>Hello, world</b>
 console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike());  // <strike>Hello, world</strike>
+console.log(worldString.strike()); // <strike>Hello, world</strike>
 ```
 
 ## 仕様書
@@ -41,10 +45,11 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.italics")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`String.prototype.italics` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.blink()")}}
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.strike()")}}

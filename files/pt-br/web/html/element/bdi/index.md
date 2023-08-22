@@ -24,15 +24,18 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 ## Exemplo
 
 ```html
-<p dir="ltr">Esta palavra arábica <bdi>ARABIC_PLACEHOLDER</bdi> é automaticamente voltada da direita</p>
+<p dir="ltr">
+  Esta palavra arábica <bdi>ARABIC_PLACEHOLDER</bdi> é automaticamente voltada
+  da direita
+</p>
 ```
 
 ## Especificações
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
+| Specification                                                                           | Status                   | Comment |
+| --------------------------------------------------------------------------------------- | ------------------------ | ------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}         | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML5 W3C', 'the-bdi-element.html#the-bdi-element', '&lt;bdi&gt;')}}        | {{Spec2('HTML5 W3C')}}   |         |
 
 ## Compatibilidade com navegadores
 

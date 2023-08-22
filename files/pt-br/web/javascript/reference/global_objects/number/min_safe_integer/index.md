@@ -22,14 +22,14 @@ Por `MIN_SAFE_INTEGER` ser uma propriedade estática de {{jsxref("Number")}}, vo
 ### Usando MIN_SAFE_INTEGER
 
 ```js
-Number.MIN_SAFE_INTEGER // -9007199254740991
--(Math.pow(2, 53) - 1)  // -9007199254740991
+Number.MIN_SAFE_INTEGER; // -9007199254740991
+-(Math.pow(2, 53) - 1); // -9007199254740991
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
+| Especificação                                                                      |
+| ---------------------------------------------------------------------------------- |
 | {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
-translation_of: Web/HTML/Element/input/image
 ---
 
 `<input type="image"> - это кнопка отправки в виде изображения. Вы можете использовать атрибут src, чтобы выбрать источник изображения и атрибут alt, чтобы добавить альтернативный текст. Атрибутами width и height можно указать размер изображения в пикселях.`
@@ -10,7 +9,7 @@ translation_of: Web/HTML/Element/input/image
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Необязательный закрывающийся тег  | Обязательно должен быть открывающийся тег, и обязательно отсутствует закрывающий.                                                 |
 | Разрешённые родительские элементы | Любой элемент, которому доступен фразообразующий контент ([phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content)). |
-| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                          |
+| DOM-интерфейс                     | {{domxref("HTMLInputElement")}}                                                                                                   |
 
 ## Атрибуты
 
@@ -53,7 +52,7 @@ translation_of: Web/HTML/Element/input/image
 ### Поле в виде логотипа Firefox
 
 ```html
-<input type="image" name="image" src="fxlogo.png" width="50">
+<input type="image" name="image" src="fxlogo.png" width="50" />
 ```
 
 #### Результат

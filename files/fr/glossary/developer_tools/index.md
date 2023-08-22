@@ -1,7 +1,6 @@
 ---
 title: Outils de développement
 slug: Glossary/Developer_Tools
-translation_of: Glossary/Developer_Tools
 ---
 
 Les outils de développement sont des programmes qui permettent à un développeur de créer, tester et {{Glossary("debug","déboguer")}} un logiciel.

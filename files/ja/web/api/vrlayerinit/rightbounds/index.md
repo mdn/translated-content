@@ -1,7 +1,6 @@
 ---
 title: VRLayerInit.rightBounds
 slug: Web/API/VRLayerInit/rightBounds
-original_slug: Web/API/VRLayer/rightBounds
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

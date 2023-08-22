@@ -1,8 +1,6 @@
 ---
 title: RenderingContext
 slug: orphaned/Web/API/RenderingContext
-translation_of: Web/API/RenderingContext
-original_slug: Web/API/RenderingContext
 ---
 
 {{APIRef("Canvas API")}}

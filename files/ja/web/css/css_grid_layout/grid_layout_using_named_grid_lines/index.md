@@ -1,7 +1,6 @@
 ---
 title: 名前付きグリッド線を使用したレイアウト
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 
 {{CSSRef}}
@@ -13,7 +12,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 グリッドを定義する際に、`grid-template-rows` と `grid-template-columns` のプロパティを使って、グリッド内の一部または全部の線に名前を割り当てることができます。ここでは、線ベースの配置のガイドで作成したシンプルなレイアウトを使って説明します。今回は、名前付きの線を使ってグリッドを作成します。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -91,7 +92,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 どのような名前でも良いのですが、上の例のように、領域を囲む行に `-start` と `-end` を追加すると、グリッドは主要部分で使用される名前の領域を作成します。上の例では、行と列の両方に `content-start` と `content-end` を付けています。つまり、`content`という名前のグリッド領域ができ、その領域に何かを配置することができるのです。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -160,7 +163,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 これらの暗黙に名づけられた線を使って `overlay` を配置することは、名づけた線を使ってアイテムを配置することと同じです。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -208,9 +213,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92,148,13);
-  background-color: rgba(92,148,13,.4);
-  color: rgb(92,148,13);
+  border: 4px solid rgb(92, 148, 13);
+  background-color: rgba(92, 148, 13, 0.4);
+  color: rgb(92, 148, 13);
   font-size: 150%;
 }
 ```
@@ -238,7 +243,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 次の例では、同じ幅の 12 列のグリッドを作成しています。 1fr の列トラックを定義する前に、線の名前を `[col-start]` と定義しています。つまり、幅が 1fr の列の前に、12 本の列の線名がすべて `col-start` となっているグリッドができあがるということです。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -266,7 +273,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5
+  grid-column: col-start / col-start 5;
 }
 ```
 
@@ -280,8 +287,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 ```html
 <div class="wrapper">
-  <div class="item1">col-start の線 1 から col-start の線 5 に配置されています</div>
-  <div class="item2">col-start の線 7 から線 3 本にまたがって配置されています</div>
+  <div class="item1">
+    col-start の線 1 から col-start の線 5 に配置されています
+  </div>
+  <div class="item2">
+    col-start の線 7 から線 3 本にまたがって配置されています
+  </div>
 </div>
 ```
 
@@ -305,7 +316,7 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 
 ```css
 .wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
@@ -313,14 +324,16 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
 トラックリストを使用している場合は、`span` キーワードを使用して、複数の行にまたがるだけでなく、特定の名前の複数の行にまたがることもできます。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -344,7 +357,7 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 }
 
 .item1 {
-  grid-column: col1-start / col2-start 2
+  grid-column: col1-start / col2-start 2;
 }
 
 .item2 {
@@ -355,8 +368,12 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 
 ```html
 <div class="wrapper">
-  <div class="item1">col1-start の線 1 から col2-start の線 2 に配置されています</div>
-  <div class="item2">col1-start の線 2 から col1-start と名付けられた線 2 本にまたがって配置されています</div>
+  <div class="item1">
+    col1-start の線 1 から col2-start の線 2 に配置されています
+  </div>
+  <div class="item2">
+    col1-start の線 2 から col1-start と名付けられた線 2 本にまたがって配置されています
+  </div>
 </div>
 ```
 
@@ -379,7 +396,9 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 そして、そのフレームワークを使って、ページをレイアウトすることができます。例えば、ヘッダーとフッターを持つ 3 列のレイアウトを作るには、次のようなマークアップが必要です。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -410,7 +429,7 @@ repeat 構文には、トラックリストを指定することもでき、繰�
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 

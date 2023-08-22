@@ -133,7 +133,6 @@ Na tabela acima, `ToNumber(A)` tenta converter seu argumento para um número ant
 Tradicionalmente, e de acordo com ECMAScript, todos os objetos são amplamente desiguais a `undefined` e `null`. Mas a maioria dos navegadores permitem uma classe muito limitada de objetos (especificamente, o objeto `document.all` para qualquer página), em alguns contextos, para agir como se eles _emulassem_ o valor `undefined`. Igualdade ampla é um desses contexto. Portanto, o método `IsFalsy(A)` é avaliada como verdadeira se, e somente se, A for um objeto que _emula_ `undefined`. Em todos os outros casos, um objeto não é amplamente igual a `undefined` ou `null`.
 
 ```js
-
 var num = 0;
 var obj = new String("0");
 var str = "0";
@@ -159,13 +158,15 @@ Alguns desenvolvedores consideram que nunca é uma boa idéia, praticamente, usa
 Igualdade de mesmo valor aborda um caso de uso final: determinar se dois valores são _funcionalmente idêntico_ em todos os contextos. (Este caso de uso demonstra uma instância de [Liskove substitution principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle). Princípio de substituição de Liskove.) Uma instância ocorre quando é feita uma tentativa de transformar uma propriedade imutável:
 
 ```js
-
 // Add an immutable NEGATIVE_ZERO property to the Number constructor.
-Object.defineProperty(Number, "NEGATIVE_ZERO",
-                      { value: -0, writable: false, configurable: false, enumerable: false });
+Object.defineProperty(Number, "NEGATIVE_ZERO", {
+  value: -0,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 
-function attemptMutation(v)
-{
+function attemptMutation(v) {
   Object.defineProperty(Number, "NEGATIVE_ZERO", { value: v });
 }
 ```
@@ -224,7 +225,7 @@ Aqui está uma lista exaustiva de métodos e operadores integrados que pode caus
   - : É óbvio que negando 0 produz -0. Mas a abstração de uma expressão pode causar -0 a fluência em quanto você não percebe isso. Por exemplo, considere:
 
     ```js
-    let stoppingForce = obj.mass * -obj.velocity
+    let stoppingForce = obj.mass * -obj.velocity;
     ```
 
     If obj.velocity is 0 (ou calcula para 0), um -0 é introduzido naquele lugar e propaga-se em stoppingForce.

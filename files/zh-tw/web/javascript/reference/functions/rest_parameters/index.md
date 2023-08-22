@@ -126,7 +126,7 @@ console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
 
 ## 參見
 
-- [Spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also 『`...`』)
 - [Arguments object](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)

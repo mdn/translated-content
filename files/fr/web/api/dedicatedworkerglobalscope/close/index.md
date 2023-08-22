@@ -1,7 +1,6 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
-translation_of: Web/API/DedicatedWorkerGlobalScope/close
 ---
 
 {{APIRef("Web Workers API")}}

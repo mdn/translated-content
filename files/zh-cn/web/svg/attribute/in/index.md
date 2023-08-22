@@ -15,10 +15,10 @@ in 属性标识输入的原语。
 
 ## Usage context
 
-| Categories | None                                                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Categories | None                                                                                                                                        |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Value      | `SourceGraphic` \| `SourceAlpha` \| `BackgroundImage` \| `BackgroundAlpha` \| `FillPaint` \| `StrokePaint` \| \<filter-primitive-reference> |
-| Animatable | Yes                                                                                                                                        |
+| Animatable | Yes                                                                                                                                         |
 
 - SourceGraphic
   - : 该关键词表示图形元素自身将作为{{SVGElement("filter")}}原语的原始输入。
@@ -41,27 +41,53 @@ in 属性标识输入的原语。
 
 ```html
 <div style="width: 420px; height: 220px;">
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="backgroundMultiply">
-      <!-- This will not work. -->
-      <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <image xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#backgroundMultiply);" />
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="backgroundMultiply">
+        <!-- This will not work. -->
+        <feBlend in="BackgroundImage" in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <image
+      xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png"
+      x="10%"
+      y="10%"
+      width="80%"
+      height="80%" />
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#backgroundMultiply);" />
+  </svg>
 
-<svg style="width:200px; height:200px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <filter id="imageMultiply">
-      <!-- This is a workaround. -->
-      <feImage xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png" x="10%" y="10%" width="80%" height="80%"/>
-      <feBlend in2="SourceGraphic" mode="multiply"/>
-    </filter>
-  </defs>
-  <circle cx="50%" cy="40%" r="40%" fill="#c00" style="filter:url(#imageMultiply);"/>
-</svg>
+  <svg
+    style="width:200px; height:200px; display: inline;"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="imageMultiply">
+        <!-- This is a workaround. -->
+        <feImage
+          xlink:href="https://developer.mozilla.org/files/6457/mdn_logo_only_color.png"
+          x="10%"
+          y="10%"
+          width="80%"
+          height="80%" />
+        <feBlend in2="SourceGraphic" mode="multiply" />
+      </filter>
+    </defs>
+    <circle
+      cx="50%"
+      cy="40%"
+      r="40%"
+      fill="#c00"
+      style="filter:url(#imageMultiply);" />
+  </svg>
 </div>
 ```
 

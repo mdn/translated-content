@@ -1,6 +1,8 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
+l10n:
+  sourceCommit: 5e98fd9cfbec6e28044a27c58bffca5ae464ec8b
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
@@ -11,11 +13,11 @@ slug: Web/API/Geolocation
 
 > **メモ:** セキュリティ上の理由により、ウェブページが位置情報にアクセスしようとする時、ユーザーにアクセス許可が求められます。その方法やポリシーはブラウザーによって異なることに注意してください。
 
-## プロパティ
+## インスタンスプロパティ
 
 _`Geolocation` インターフェイスが実装・継承しているプロパティはありません。_
 
-## メソッド
+## インスタンスメソッド
 
 _`Geolocation` インターフェイスが継承しているプロパティはありません。_
 

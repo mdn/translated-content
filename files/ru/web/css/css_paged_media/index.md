@@ -1,13 +1,6 @@
 ---
 title: Постраничные носители
 slug: Web/CSS/CSS_paged_media
-tags:
-  - CSS
-  - Руководство
-  - разрыв страницы
-  - справочник
-translation_of: Web/CSS/Paged_Media
-original_slug: Web/CSS/Paged_Media
 ---
 
 {{cssref}}

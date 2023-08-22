@@ -1,11 +1,6 @@
 ---
 title: Pixel
 slug: Glossary/Pixel
-tags:
-  - Glossary
-  - Graphics
-translation_of: Glossary/Pixel
-original_slug: Глоссарий/Pixel
 ---
 
 Пиксель (англ. Pixel) - маленький строительный блок графического дисплея экрана компьютера.

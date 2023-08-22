@@ -1,7 +1,6 @@
 ---
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
-translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
 {{AddonSidebar()}}

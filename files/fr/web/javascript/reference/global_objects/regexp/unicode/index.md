@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.unicode
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 ---
 
 {{JSRef}}
@@ -19,7 +18,7 @@ Cette propriété ne peut pas être modifiée directement.
 ## Exemples
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

@@ -2,6 +2,7 @@
 title: Web audio 공간화 기초
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Web Audio API의 사운드 프로세싱 (그리고 다른 것들) 의 광범위한 다양성이 마치 충분하지 않다는 것처럼, Web Audio API는 또한 리스너가 음원 주위에서 움직일 때 소리의 차이를 모방할 수 있게 하는 기능을 포함하고 있습니다. 그 예시로는 3D 게임에서 음원 주위에서 움직일 때의 패닝 기능을 들 수 있습니다. 이 기능에 대한 공식적인 용어는 **spatialization**(공간화)이고, 이 글은 어떻게 그런 시스템을 구현하는지에 대한 기초를 다룰 것입니다.
@@ -35,13 +36,13 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
-const posX = window.innerWidth/2;
-const posY = window.innerHeight/2;
+const posX = window.innerWidth / 2;
+const posY = window.innerHeight / 2;
 const posZ = 300;
 
 listener.positionX.value = posX;
 listener.positionY.value = posY;
-listener.positionZ.value = posZ-5;
+listener.positionZ.value = posZ - 5;
 ```
 
 `positionX`를 통해 리스너를 좌우로 움직이거나, `positionY`를 통해 위아래로 움직이거나, `positionZ`를 통해 방의 안팎으로 움직일 수 있습니다. 위 코드에서 리스너의 위치는 뷰포트의 중앙 그리고 라디오의 살짝 앞에 있는 것으로 설정되었습니다. 또한, 리스너가 향하고 있는 방향도 설정할 수 있습니다. 이 속성들의 기본 값이면 충분할 것입니다.
@@ -70,7 +71,7 @@ forward 속성은 리스너 앞 방향의 3D 좌표 위치를 나타냅니다 (�
 꽤 똑똑한 것이군요. `HRTF` 모델을 사용합시다!
 
 ```js
-const pannerModel = 'HRTF';
+const pannerModel = "HRTF";
 ```
 
 [`coneInnerAngle`](/ko/docs/Web/API/PannerNode/coneInnerAngle)과 [`coneOuterAngle`](/ko/docs/Web/API/PannerNode/coneOuterAngle) 속성은 어디서 볼륨이 발생되는지를 명시합니다. 둘 다 기본 값은 360도입니다. 이 예제의 라디오는 기본 값보다 작은 원뿔을 가지도록 정의될 것입니다. 내부 원뿔은 gain (볼륨) 이 항상 최대로 발생되는 곳이고 외부 원뿔은 gain이 줄어들기 시작하는 곳입니다. 이 gain은 [`coneOuterGain`](/ko/docs/Web/API/PannerNode/coneOuterGain)의 값에 의해 감소됩니다. 이 매개변수들의 값을 저장할 상수를 생성합시다.
@@ -84,7 +85,7 @@ const outerGain = 0.3;
 다음 매개변수는 [`distanceModel`](/ko/docs/Web/API/PannerNode/distanceModel)입니다. 이 매개변수는 오직 `linear`, `inverse`, 또는 `exponential`로만 설정될 수 있습니다. 이 값들은 각기 다른 알고리즘인데, 리스너로부터 멀어질 때 오디오 소스의 볼륨을 감소시키기 위해 사용됩니다. `linear`를 사용합시다. 간단하니까요.
 
 ```js
-const distanceModel = 'linear';
+const distanceModel = "linear";
 ```
 
 우리는 리스너와 음원 사이의 최대 거리 ([`maxDistance`](/ko/docs/Web/API/PannerNode/maxDistance)) 를 설정할 수 있습니다. 만약 음원이 이 지점으로부터 더 멀리 이동하면 볼륨은 더 이상 감소되지 않을 것입니다. 최대 거리 설정은 유용할 수 있습니다. 거리감을 흉내내고자 하나 볼륨이 꺼져 버린다면 곤란할 수 있겠죠. 최대 거리는 기본값으로 10,000 (단위없는 상대 값) 입니다. 아래와 같이 설정할 수 있습니다.
@@ -93,7 +94,7 @@ const distanceModel = 'linear';
 const maxDistance = 10000;
 ```
 
-또한 참조 거리 ([`refDistance`](/en-US/docs/Web/API/PannerNode/refDistance))가 있는데, 이는 거리 모델에 의해 사용됩니다. 이 또한 기본값 `1`로 설정할 수 있습니다.
+또한 참조 거리 ([`refDistance`](/ko/docs/Web/API/PannerNode/refDistance))가 있는데, 이는 거리 모델에 의해 사용됩니다. 이 또한 기본값 `1`로 설정할 수 있습니다.
 
 ```js
 const refDistance = 1;
@@ -123,21 +124,21 @@ z 방향의 음수 값에 주목하세요. 음수 값은 라디오가 우리를 
 
 ```js
 const panner = new PannerNode(audioCtx, {
-    panningModel: pannerModel,
-    distanceModel: distanceModel,
-    positionX: positionX,
-    positionY: positionY,
-    positionZ: positionZ,
-    orientationX: orientationX,
-    orientationY: orientationY,
-    orientationZ: orientationZ,
-    refDistance: refDistance,
-    maxDistance: maxDistance,
-    rolloffFactor: rollOff,
-    coneInnerAngle: innerCone,
-    coneOuterAngle: outerCone,
-    coneOuterGain: outerGain
-})
+  panningModel: pannerModel,
+  distanceModel: distanceModel,
+  positionX: positionX,
+  positionY: positionY,
+  positionZ: positionZ,
+  orientationX: orientationX,
+  orientationY: orientationY,
+  orientationZ: orientationZ,
+  refDistance: refDistance,
+  maxDistance: maxDistance,
+  rolloffFactor: rollOff,
+  coneInnerAngle: innerCone,
+  coneOuterAngle: outerCone,
+  coneOuterGain: outerGain,
+});
 ```
 
 ## 라디오 이동시키기
@@ -147,17 +148,19 @@ const panner = new PannerNode(audioCtx, {
 인터페이스에 대한 것들을 설정해 봅시다. 첫째로, 우리가 움직이기를 원하는 요소들에 대한 참조를 얻습니다. 그리고 나서 실제로 움직임을 수행하기 위해 [CSS transforms](/ko/docs/Web/CSS/CSS_Transforms)을 설정했을 때 변경될 값들에 대한 참조를 저장합니다. 마지막으로, 경계를 설정해 라디오가 어떠한 방향으로든 너무 멀리 가지 않도록 할 것입니다.
 
 ```js
-const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
-const boombox = document.querySelector('.boombox-body');
+const moveControls = document
+  .querySelector("#move-controls")
+  .querySelectorAll("button");
+const boombox = document.querySelector(".boombox-body");
 
 // css transforms를 위한 값들
 let transform = {
-    xAxis: 0,
-    yAxis: 0,
-    zAxis: 0.8,
-    rotateX: 0,
-    rotateY: 0
-}
+  xAxis: 0,
+  yAxis: 0,
+  zAxis: 0.8,
+  rotateX: 0,
+  rotateY: 0,
+};
 
 // 경계 설정
 const topBound = -posY;
@@ -174,32 +177,32 @@ const outerBound = 1.5;
 
 ```js
 function moveBoombox(direction) {
-    switch (direction) {
-        case 'left':
-            if (transform.xAxis > leftBound) {
-                transform.xAxis -= 5;
-                panner.positionX.value -= 0.1;
-            }
-        break;
-        case 'up':
-            if (transform.yAxis > topBound) {
-                transform.yAxis -= 5;
-                panner.positionY.value -= 0.3;
-            }
-        break;
-        case 'right':
-            if (transform.xAxis < rightBound) {
-                transform.xAxis += 5;
-                panner.positionX.value += 0.1;
-            }
-        break;
-        case 'down':
-            if (transform.yAxis < bottomBound) {
-                transform.yAxis += 5;
-                panner.positionY.value += 0.3;
-            }
-        break;
-    }
+  switch (direction) {
+    case "left":
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case "up":
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case "right":
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case "down":
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+  }
 }
 ```
 
@@ -228,15 +231,15 @@ break;
 // 회전 상수 설정
 const rotationRate = 60; // 더 큰 수일수록 소리 회전은 더 느려짐
 
-const q = Math.PI/rotationRate; // 회전 증가 (라디안)
+const q = Math.PI / rotationRate; // 회전 증가 (라디안)
 ```
 
 또한 이를 사용하여 회전된 각도를 계산할 수 있는데, 이는 CSS transform에 사용될 것입니다 (CSS transform을 위해 x축과 y축 모두가 필요하다는 것에 주목하세요).
 
 ```js
 // css를 위해 각도 얻기
-const degreesX = (q * 180)/Math.PI;
-const degreesY = (q * 180)/Math.PI;
+const degreesX = (q * 180) / Math.PI;
+const degreesY = (q * 180) / Math.PI;
 ```
 
 예제로써 좌회전을 살펴봅시다. y축을 주위로 이동하기 위해, 패너 좌표의 x방향과 z방향을 변경할 필요가 있습니다.
@@ -297,92 +300,119 @@ break;
 
 ```js
 function moveBoombox(direction, prevMove) {
-    switch (direction) {
-        case 'left':
-            if (transform.xAxis > leftBound) {
-                transform.xAxis -= 5;
-                panner.positionX.value -= 0.1;
-            }
-        break;
-        case 'up':
-            if (transform.yAxis > topBound) {
-                transform.yAxis -= 5;
-                panner.positionY.value -= 0.3;
-            }
-        break;
-        case 'right':
-            if (transform.xAxis < rightBound) {
-                transform.xAxis += 5;
-                panner.positionX.value += 0.1;
-            }
-        break;
-        case 'down':
-            if (transform.yAxis < bottomBound) {
-                transform.yAxis += 5;
-                panner.positionY.value += 0.3;
-            }
-        break;
-        case 'back':
-            if (transform.zAxis > innerBound) {
-                transform.zAxis -= 0.01;
-                panner.positionZ.value += 40;
-            }
-        break;
-        case 'forward':
-            if (transform.zAxis < outerBound) {
-                transform.zAxis += 0.01;
-                panner.positionZ.value -= 40;
-            }
-        break;
-        case 'rotate-left':
-            transform.rotateY -= degreesY;
+  switch (direction) {
+    case "left":
+      if (transform.xAxis > leftBound) {
+        transform.xAxis -= 5;
+        panner.positionX.value -= 0.1;
+      }
+      break;
+    case "up":
+      if (transform.yAxis > topBound) {
+        transform.yAxis -= 5;
+        panner.positionY.value -= 0.3;
+      }
+      break;
+    case "right":
+      if (transform.xAxis < rightBound) {
+        transform.xAxis += 5;
+        panner.positionX.value += 0.1;
+      }
+      break;
+    case "down":
+      if (transform.yAxis < bottomBound) {
+        transform.yAxis += 5;
+        panner.positionY.value += 0.3;
+      }
+      break;
+    case "back":
+      if (transform.zAxis > innerBound) {
+        transform.zAxis -= 0.01;
+        panner.positionZ.value += 40;
+      }
+      break;
+    case "forward":
+      if (transform.zAxis < outerBound) {
+        transform.zAxis += 0.01;
+        panner.positionZ.value -= 40;
+      }
+      break;
+    case "rotate-left":
+      transform.rotateY -= degreesY;
 
-            // '좌' 는 음수 각 증가를 가지는 y축에 대한 회전입니다
-            z = panner.orientationZ.value*Math.cos(q) - panner.orientationX.value*Math.sin(q);
-            x = panner.orientationZ.value*Math.sin(q) + panner.orientationX.value*Math.cos(q);
-            y = panner.orientationY.value;
+      // '좌' 는 음수 각 증가를 가지는 y축에 대한 회전입니다
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationX.value * Math.sin(q);
+      x =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationX.value * Math.cos(q);
+      y = panner.orientationY.value;
 
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-right':
-            transform.rotateY += degreesY;
-            // '우' 는 양수 각 증가를 가지는 y축에 대한 회전입니다
-            z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
-            x = panner.orientationZ.value*Math.sin(-q) + panner.orientationX.value*Math.cos(-q);
-            y = panner.orientationY.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-up':
-            transform.rotateX += degreesX;
-            // '상' 은 음수 각 증가를 가지는 x축에 대한 회전입니다
-            z = panner.orientationZ.value*Math.cos(-q) - panner.orientationY.value*Math.sin(-q);
-            y = panner.orientationZ.value*Math.sin(-q) + panner.orientationY.value*Math.cos(-q);
-            x = panner.orientationX.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-        case 'rotate-down':
-            transform.rotateX -= degreesX;
-            // '하' 는 양수 각 증가를 가지는 x축에 대한 회전입니다
-            z = panner.orientationZ.value*Math.cos(q) - panner.orientationY.value*Math.sin(q);
-            y = panner.orientationZ.value*Math.sin(q) + panner.orientationY.value*Math.cos(q);
-            x = panner.orientationX.value;
-            panner.orientationX.value = x;
-            panner.orientationY.value = y;
-            panner.orientationZ.value = z;
-        break;
-    }
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-right":
+      transform.rotateY += degreesY;
+      // '우' 는 양수 각 증가를 가지는 y축에 대한 회전입니다
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationX.value * Math.sin(-q);
+      x =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationX.value * Math.cos(-q);
+      y = panner.orientationY.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-up":
+      transform.rotateX += degreesX;
+      // '상' 은 음수 각 증가를 가지는 x축에 대한 회전입니다
+      z =
+        panner.orientationZ.value * Math.cos(-q) -
+        panner.orientationY.value * Math.sin(-q);
+      y =
+        panner.orientationZ.value * Math.sin(-q) +
+        panner.orientationY.value * Math.cos(-q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+    case "rotate-down":
+      transform.rotateX -= degreesX;
+      // '하' 는 양수 각 증가를 가지는 x축에 대한 회전입니다
+      z =
+        panner.orientationZ.value * Math.cos(q) -
+        panner.orientationY.value * Math.sin(q);
+      y =
+        panner.orientationZ.value * Math.sin(q) +
+        panner.orientationY.value * Math.cos(q);
+      x = panner.orientationX.value;
+      panner.orientationX.value = x;
+      panner.orientationY.value = y;
+      panner.orientationZ.value = z;
+      break;
+  }
 
-  boombox.style.transform = 'translateX('+transform.xAxis+'px) translateY('+transform.yAxis+'px) scale('+transform.zAxis+') rotateY('+transform.rotateY+'deg) rotateX('+transform.rotateX+'deg)';
+  boombox.style.transform =
+    "translateX(" +
+    transform.xAxis +
+    "px) translateY(" +
+    transform.yAxis +
+    "px) scale(" +
+    transform.zAxis +
+    ") rotateY(" +
+    transform.rotateY +
+    "deg) rotateX(" +
+    transform.rotateX +
+    "deg)";
 
   const move = prevMove || {};
   move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
-    return move;
+  return move;
 }
 ```
 
@@ -392,26 +422,30 @@ function moveBoombox(direction, prevMove) {
 
 ```js
 // 각각의 조종 버튼에 대해, 라디오를 움직이고 위치 값을 변경합니다
-moveControls.forEach(function(el) {
+moveControls.forEach(function (el) {
+  let moving;
+  el.addEventListener(
+    "mousedown",
+    function () {
+      let direction = this.dataset.control;
+      if (moving && moving.frameId) {
+        window.cancelAnimationFrame(moving.frameId);
+      }
+      moving = moveBoombox(direction);
+    },
+    false,
+  );
 
-    let moving;
-    el.addEventListener('mousedown', function() {
-
-        let direction = this.dataset.control;
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-        moving = moveBoombox(direction);
-
-    }, false);
-
-    window.addEventListener('mouseup', function() {
-        if (moving && moving.frameId) {
-            window.cancelAnimationFrame(moving.frameId);
-        }
-    }, false)
-
-})
+  window.addEventListener(
+    "mouseup",
+    function () {
+      if (moving && moving.frameId) {
+        window.cancelAnimationFrame(moving.frameId);
+      }
+    },
+    false,
+  );
+});
 ```
 
 ## 그래프 연결하기
@@ -426,7 +460,7 @@ HTML에는 패너 노드에 의해 영향을 받을 audio 요소가 있습니다
 
 ```js
 // audio 요소를 얻습니다
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // audio 요소를 오디오 컨텍스트에 전달합니다
 const track = audioContext.createMediaElementSource(audioElement);
@@ -446,25 +480,27 @@ track.connect(panner).connect(audioCtx.destination);
 
 ```js
 // 재생 버튼을 선택합니다
-const playButton = document.querySelector('button');
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
+playButton.addEventListener(
+  "click",
+  function () {
+    // 컨텍스트가 연기(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
+    }
 
-// 컨텍스트가 연기(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
-if (audioContext.state === 'suspended') {
-audioContext.resume();
-}
-
-// 상태에 따라 곡을 재생하거나 정지합니다
-if (this.dataset.playing === 'false') {
-audioElement.play();
-this.dataset.playing = 'true';
-} else if (this.dataset.playing === 'true') {
-audioElement.pause();
-this.dataset.playing = 'false';
-}
-
-}, false);
+    // 상태에 따라 곡을 재생하거나 정지합니다
+    if (this.dataset.playing === "false") {
+      audioElement.play();
+      this.dataset.playing = "true";
+    } else if (this.dataset.playing === "true") {
+      audioElement.pause();
+      this.dataset.playing = "false";
+    }
+  },
+  false,
+);
 ```
 
 오디오의 재생/제어와 오디오 그래프에 대한 더욱 자세한 정보는 [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)에서 찾아볼 수 있습니다.

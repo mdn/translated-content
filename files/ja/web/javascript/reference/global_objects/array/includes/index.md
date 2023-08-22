@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-includes(searchElement)
-includes(searchElement, fromIndex)
+includes(searchElement);
+includes(searchElement, fromIndex);
 ```
 
 ### 引数
@@ -45,12 +45,13 @@ includes(searchElement, fromIndex)
 ## 例
 
 ```js
-[1, 2, 3].includes(2)         // true
-[1, 2, 3].includes(4)         // false
-[1, 2, 3].includes(3, 3)      // false
-[1, 2, 3].includes(3, -1)     // true
-[1, 2, NaN].includes(NaN)     // true
-["1", "2", "3"].includes(3)   // false
+[1, 2, 3]
+  .includes(2) // true
+  [(1, 2, 3)].includes(4) // false
+  [(1, 2, 3)].includes(3, 3) // false
+  [(1, 2, 3)].includes(3, -1) // true
+  [(1, 2, NaN)].includes(NaN) // true
+  [("1", "2", "3")].includes(3); // false
 ```
 
 ### fromIndex が配列の長さと同じか大きい場合
@@ -58,10 +59,10 @@ includes(searchElement, fromIndex)
 `fromIndex` が配列の長さと同じか大きい場合は、配列を検索せずに `false` を返します。
 
 ```js
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('c', 3)    // false
-arr.includes('c', 100)  // false
+arr.includes("c", 3); // false
+arr.includes("c", 100); // false
 ```
 
 ### 計算された位置が 0 より小さい場合
@@ -73,12 +74,12 @@ arr.includes('c', 100)  // false
 // fromIndex は -100
 // 補正されたインデックスは 3 + (-100) = -97
 
-const arr = ['a', 'b', 'c'];
+const arr = ["a", "b", "c"];
 
-arr.includes('a', -100) // true
-arr.includes('b', -100) // true
-arr.includes('c', -100) // true
-arr.includes('a', -2)   // false
+arr.includes("a", -100); // true
+arr.includes("b", -100); // true
+arr.includes("c", -100); // true
+arr.includes("a", -2); // false
 ```
 
 ### 一般化メソッドとして使用される includes()
@@ -89,9 +90,9 @@ arr.includes('a', -2)   // false
 
 ```js
 (function () {
-  console.log(Array.prototype.includes.call(arguments, 'a')); // true
-  console.log(Array.prototype.includes.call(arguments, 'd')); // false
-})('a', 'b', 'c');
+  console.log(Array.prototype.includes.call(arguments, "a")); // true
+  console.log(Array.prototype.includes.call(arguments, "d")); // false
+})("a", "b", "c");
 ```
 
 ## 仕様書

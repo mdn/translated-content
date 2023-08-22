@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`setDate()`** définit le jour du mois (relatif au début du mois 
 ## Syntaxe
 
 ```js
-dateObj.setDate(valeurJour)
+dateObj.setDate(valeurJour);
 ```
 
 ### Paramètres
@@ -39,12 +38,12 @@ Si on fournit un nombre négatif, la date sera déterminée à rebours à partir
 
 ```js
 var theBigDay = new Date(1962, 6, 7); // 1962-07-06T23:00:00.000Z
-theBigDay.setDate(24);   // 1962-07-23T23:00:00.000Z
-theBigDay.setDate(32);   // 1962-07-31T23:00:00.000Z
-theBigDay.setDate(22);   // 1962-08-21T23:00:00.000Z
-theBigDay.setDate(0);    // 1962-07-30T23:00:00.000Z
-theBigDay.setDate(98);   // 1962-10-05T23:00:00.000Z
-theBigDay.setDate(-50);  // 1962-08-10T23:00:00.000Z
+theBigDay.setDate(24); // 1962-07-23T23:00:00.000Z
+theBigDay.setDate(32); // 1962-07-31T23:00:00.000Z
+theBigDay.setDate(22); // 1962-08-21T23:00:00.000Z
+theBigDay.setDate(0); // 1962-07-30T23:00:00.000Z
+theBigDay.setDate(98); // 1962-10-05T23:00:00.000Z
+theBigDay.setDate(-50); // 1962-08-10T23:00:00.000Z
 ```
 
 ## Spécifications

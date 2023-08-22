@@ -1,7 +1,6 @@
 ---
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
-translation_of: Web/API/HTMLBaseElement
 ---
 
 {{APIRef("HTML DOM")}}

@@ -5,64 +5,87 @@ slug: Web/JavaScript/Reference/Global_Objects/String/slice
 
 {{JSRef}}
 
-**`slice()`** 方法提取某个字符串的一部分，并返回一个新的字符串，且不会改动原字符串。
+**`slice()`** 方法提取字符串的一部分，并将其作为新字符串返回，而不修改原始字符串。
 
-{{EmbedInteractiveExample("pages/js/string-slice.html")}}
+{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
 
 ## 语法
 
-```plain
-str.slice(beginIndex[, endIndex])
+```js-nolint
+slice(indexStart)
+slice(indexStart, indexEnd)
 ```
 
 ### 参数
 
-- `beginIndex`
-  - : 从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 `strLength + beginIndex` 看待，这里的`strLength` 是字符串的长度（例如，如果 `beginIndex` 是 -3 则看作是：`strLength - 3`）
-- `endIndex`
-  - : 可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，`slice()` 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度 (例如，如果 endIndex 是 -3，则是，strLength - 3)。
+- `indexStart`
+  - : 要返回的子字符串中包含的第一个字符的索引。
+- `indexEnd` {{optional_inline}}
+  - : 要返回的子字符串中排除的第一个字符的索引。
 
 ### 返回值
 
-返回一个从原字符串中提取出来的新字符串
+一个包含提取的字符串片段的新字符串。
 
 ## 描述
 
-`slice()` 从一个字符串中提取字符串并返回新字符串。在一个字符串中的改变不会影响另一个字符串。也就是说，`slice` 不会修改原字符串（只会返回一个包含了原字符串中部分字符的新字符串）。
+`slice()` 方法从一个字符串中提取文本并返回一个新的字符串。对它们中的一个的文本进行的更改不会影响另一个字符串。
 
-`slice()` 提取的新字符串包括`beginIndex`但不包括 `endIndex`。下面有两个例子。
+`slice()` 方法提取直到但不包括 `indexEnd` 的文本。例如，`str.slice(1, 4)` 提取的是第二个字符到第四个字符（字符的索引为 `1`、`2` 和 `3`）。
 
-例 1：`str.slice(1, 4)` 提取第二个字符到第四个字符（被提取字符的索引值（index）依次为 1、2，和 3）。
-
-例 2：`str.slice(2, -1)` 提取第三个字符到倒数第一个字符。
+- 如果 `indexStart >= str.length`，则返回一个空字符串。
+- 如果 `indexStart < 0`，则索引从字符串末尾开始计数。更正式地说，在这种情况下，子字符串从 `max(indexStart + str.length, 0)` 开始。
+- 如果 `indexStart` 被省略、为 undefined，或无法转换为数字（使用 {{jsxref('Number', 'Number(indexStart)')}}），则将其视为 `0`。
+- 如果 `indexEnd` 被省略、为 undefined，或无法转换为数字（使用 {{jsxref('Number', 'Number(indexEnd)')}}），或者 `indexEnd >= str.length`，则 `slice()` 提取到字符串的末尾。
+- 如果 `indexEnd < 0`，则索引从字符串末尾开始计数。更正式地说，在这种情况下，子字符串在 `max(indexEnd + str.length, 0)` 处结束。
+- 在标准化负值后，如果 `indexEnd <= indexStart`（即 `indexEnd` 表示位于 `indexStart` 之前的字符），则返回一个空字符串。
 
 ## 示例
 
-### 使用 `slice()` 创建一个新的字符串
+### 使用 slice() 创建一个新的字符串
 
-下面例子使用 `slice()` 创建了一个新字符串。
+以下示例使用 `slice()` 创建了一个新字符串。
 
 ```js
-var str1 = 'The morning is upon us.', // str1 的长度 length 是 23。
-    str2 = str1.slice(1, 8),
-    str3 = str1.slice(4, -2),
-    str4 = str1.slice(12),
-    str5 = str1.slice(30);
-console.log(str2); // 输出：he morn
-console.log(str3); // 输出：morning is upon u
-console.log(str4); // 输出：is upon us.
-console.log(str5); // 输出：""
+const str1 = "The morning is upon us."; // str1 的长度是 23。
+const str2 = str1.slice(1, 8);
+const str3 = str1.slice(4, -2);
+const str4 = str1.slice(12);
+const str5 = str1.slice(30);
+console.log(str2); // he morn
+console.log(str3); // morning is upon u
+console.log(str4); // is upon us.
+console.log(str5); // ""
 ```
 
-### 给 `slice()` 传入负值索引
+### 使用负值索引调用 slice()
 
 下面的例子在使用 `slice()` 时传入了负值作为索引。
 
 ```js
-var str = 'The morning is upon us.';
-str.slice(-3);     // 返回 'us.'
-str.slice(-3, -1); // 返回 'us'
-str.slice(0, -1);  // 返回 'The morning is upon us'
+const str = "The morning is upon us.";
+str.slice(-3); // 'us.'
+str.slice(-3, -1); // 'us'
+str.slice(0, -1); // 'The morning is upon us'
+str.slice(4, -1); // 'morning is upon us'
+```
+
+这个例子通过从字符串末尾倒数 `11` 个字符来找到起始索引，并通过从字符串开头正数 `16` 个字符来找到结束索引。
+
+```js
+console.log(str.slice(-11, 16)); // "is u"
+```
+
+在这个例子中，它通过从字符串开头正数 `11` 个字符来找到起始索引，并通过从字符串末尾倒数 `7` 个字符来找到结束索引。
+
+```js
+console.log(str.slice(11, -7)); // " is u"
+```
+
+这些参数通过从字符串末尾倒数 `5` 个字符来找到起始索引，并通过从字符串末尾倒数 `1` 个字符来找到结束索引。
+
+```js
+console.log(str.slice(-5, -1)); // "n us"
 ```
 
 ## 规范
@@ -75,6 +98,6 @@ str.slice(0, -1);  // 返回 'The morning is upon us'
 
 ## 参见
 
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
+- {{jsxref("String.prototype.substr()")}}
 - {{jsxref("String.prototype.substring()")}}
 - {{jsxref("Array.prototype.slice()")}}

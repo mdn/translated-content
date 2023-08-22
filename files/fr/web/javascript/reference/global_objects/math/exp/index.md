@@ -1,7 +1,6 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e
 ## Syntaxe
 
 ```js
-Math.exp(x)
+Math.exp(x);
 ```
 
 ### Paramètres
@@ -35,8 +34,8 @@ L'exponentielle du nombre passé en argument (`e^x`).
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## Spécifications

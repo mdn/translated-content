@@ -1,12 +1,8 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript6
-  - JavaScript
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
+
 {{JSRef}}
 
 Метод **`then()`** возвращает {{jsxref("Promise")}}. Метод может принимать два аргумента: колбэк-функции для случаев выполнения и отклонения промиса.
@@ -41,17 +37,20 @@ p.then(value => {
 ### Использование метода `then`
 
 ```js
-var p1 = new Promise(function(resolve, reject) {
+var p1 = new Promise(function (resolve, reject) {
   resolve("Успех!");
   // или
   // reject("Ошибка!");
 });
 
-p1.then(function(value) {
-  console.log(value); // Успех!
-}, function(reason) {
-  console.log(reason); // Ошибка!
-});
+p1.then(
+  function (value) {
+    console.log(value); // Успех!
+  },
+  function (reason) {
+    console.log(reason); // Ошибка!
+  },
+);
 ```
 
 ### Соединение
@@ -59,18 +58,18 @@ p1.then(function(value) {
 Так как метод `then` возвращает промис (`Promise`), вы можете объединить несколько вызовов `then` в цепочку. Значения возвращаемые из колбэков onFulfilled или onRejected будут автоматически обёрнуты в промис.
 
 ```js
-var p2 = new Promise(function(resolve, reject) {
+var p2 = new Promise(function (resolve, reject) {
   resolve(1);
 });
 
-p2.then(function(value) {
+p2.then(function (value) {
   console.log(value); // 1
   return value + 1;
-}).then(function(value) {
+}).then(function (value) {
   console.log(value); // 2
 });
 
-p2.then(function(value) {
+p2.then(function (value) {
   console.log(value); // 1
 });
 ```
@@ -88,7 +87,7 @@ function fetch_current_data() {
     var j = response.json();
     // можем что-нибудь делать с j
     return j; // в случае выполнения промиса, значение
-              // передаётся в fetch_current_data().then()
+    // передаётся в fetch_current_data().then()
   });
 }
 ```
@@ -108,27 +107,33 @@ function rejectLater(resolve, reject) {
 }
 
 var p1 = Promise.resolve("foo");
-var p2 = p1.then(function() {
+var p2 = p1.then(function () {
   // Возвращает промис, который будет разрешен значением 10 через 1 секунду
   return new Promise(resolveLater);
 });
-p2.then(function(v) {
-  console.log("resolved", v);  // "resolved", 10
-}, function(e) {
-  // не вызвано
-  console.log("rejected", e);
-});
+p2.then(
+  function (v) {
+    console.log("resolved", v); // "resolved", 10
+  },
+  function (e) {
+    // не вызвано
+    console.log("rejected", e);
+  },
+);
 
-var p3 = p1.then(function() {
-// Возвращает промис, который будет отброшен значением 20 через 1 секунду
+var p3 = p1.then(function () {
+  // Возвращает промис, который будет отброшен значением 20 через 1 секунду
   return new Promise(rejectLater);
 });
-p3.then(function(v) {
-  // не
-  console.log("resolved", v);
-}, function(e) {
-  console.log("rejected", e); // "rejected", 20
-});
+p3.then(
+  function (v) {
+    // не
+    console.log("resolved", v);
+  },
+  function (e) {
+    console.log("rejected", e); // "rejected", 20
+  },
+);
 ```
 
 ## Спецификация

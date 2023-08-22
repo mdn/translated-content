@@ -1,5 +1,5 @@
 ---
-title: 'ServiceWorkerGlobalScope: sync イベント'
+title: "ServiceWorkerGlobalScope: sync イベント"
 slug: Web/API/ServiceWorkerGlobalScope/sync_event
 l10n:
   sourceCommit: ad50409e75b81d80e24c745cd033ee9f57fdb4ec
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('sync', (event) => { });
+addEventListener("sync", (event) => {});
 
-onsync = (event) => { };
+onsync = (event) => {};
 ```
 
 ## イベント型
@@ -41,8 +41,8 @@ _祖先である {{domxref("Event")}} からプロパティを継承していま
 以下の例は、サービスワーカーで同期イベントに応答する方法を示しています。
 
 ```js
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-messages') {
+self.addEventListener("sync", (event) => {
+  if (event.tag === "sync-messages") {
     event.waitUntil(sendOutboxMessages());
   }
 });

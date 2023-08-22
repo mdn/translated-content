@@ -153,6 +153,13 @@ const main = async () => {
           type: "string",
           default: "md",
           choices: ["md", "csv", "json"],
+        })
+        .option("expectedLocale", {
+          alias: "l",
+          describe: "The expected locale of the files",
+          type: "string",
+          default: "ENGLISH",
+          choices: LANGUAGES,
         });
     },
   );
@@ -184,7 +191,7 @@ const main = async () => {
     spinner.text = `${i}/${files.length}: ${file}...`;
 
     try {
-      data[file] = await getDocumentLanguages(file);
+      data[file] = await getDocumentLanguages(file, argv.expectedLocale);
 
       if (!data[file]) {
         spinner.fail(`${file}: Failed to identify language!`);

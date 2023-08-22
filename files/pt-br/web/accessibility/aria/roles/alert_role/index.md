@@ -1,7 +1,6 @@
 ---
 title: Utilizando a função "alerta"
 slug: Web/Accessibility/ARIA/Roles/alert_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 
 ### Descrição

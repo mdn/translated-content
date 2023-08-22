@@ -91,7 +91,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 Para incluir um stylesheet em uma página, use a seguinte syntax:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Fornecimento de stylesheets alternativas
@@ -101,9 +101,9 @@ Você também pode especificar [stylesheet alternativas](/pt-BR/docs/Web/CSS/Alt
 O usuário pode escolher qual stylesheet usar, escolhendo no View>Page Style menu. Isso fornece uma maneira para os usuários verem várias versões de uma página.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Stylesheet eventos carregados
@@ -112,16 +112,20 @@ Você pode determinar quando um stylesheet foi carregado observando um `load` ev
 
 ```html
 <script>
-function sheetLoaded() {
-  // Do something interesting; the sheet has been loaded
-}
+  function sheetLoaded() {
+    // Do something interesting; the sheet has been loaded
+  }
 
-function sheetError() {
-  alert("An error occurred loading the stylesheet!");
-}
+  function sheetError() {
+    alert("An error occurred loading the stylesheet!");
+  }
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+<link
+  rel="stylesheet"
+  href="mystylesheet.css"
+  onload="sheetLoaded()"
+  onerror="sheetError()" />
 ```
 
 > **Nota:** O `load` event é carregado quando a stylesheet e quando todo o conteúdo importado foi carregado e analisado, e imediatamente antes que styles comecem a ser aplicados ao conteúdo.
@@ -136,11 +140,11 @@ function sheetError() {
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}     |         |
+| Specification                                                                        | Status                   | Comment |
+| ------------------------------------------------------------------------------------ | ------------------------ | ------- |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}       | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}   |         |
+| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                 | {{Spec2('HTML4.01')}}    |         |
 
 ## Compatibilidade com navegadores
 

@@ -41,7 +41,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948734
+Math.cbrt(2); // 1.2599210498948734
 ```
 
 ## Polyfill
@@ -50,8 +50,8 @@ Para todo <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotat
 
 ```js
 if (!Math.cbrt) {
-  Math.cbrt = function(x) {
-    var y = Math.pow(Math.abs(x), 1/3);
+  Math.cbrt = function (x) {
+    var y = Math.pow(Math.abs(x), 1 / 3);
     return x < 0 ? -y : y;
   };
 }
@@ -59,9 +59,9 @@ if (!Math.cbrt) {
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário        |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-math.cbrt', 'Math.cbrt')}}     | {{Spec2('ES6')}}         | Definição inicial |
+| Especificação                                          | Status               | Comentário        |
+| ------------------------------------------------------ | -------------------- | ----------------- |
+| {{SpecName('ES6', '#sec-math.cbrt', 'Math.cbrt')}}     | {{Spec2('ES6')}}     | Definição inicial |
 | {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} | {{Spec2('ESDraft')}} |                   |
 
 ## Compatibilidade com navegadores

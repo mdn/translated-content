@@ -28,8 +28,9 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing
 此示例检索剪贴板的文本内容，并将返回的文本插入元素的内容中。
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.getElementById("outbox").innerText = clipText);
+navigator.clipboard
+  .readText()
+  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
 ```
 
 ## 规范

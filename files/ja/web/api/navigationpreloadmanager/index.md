@@ -23,13 +23,15 @@ slug: Web/API/NavigationPreloadManager
 #### ナビゲーションのプリロードの機能を検出して有効化
 
 ```js
-addEventListener('activate', event => {
-  event.waitUntil(async function() {
-    if (self.registration.navigationPreload) {
-      // ナビゲーションのプリロードを有効にします！
-      await self.registration.navigationPreload.enable();
-    }
-  }());
+addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async function () {
+      if (self.registration.navigationPreload) {
+        // ナビゲーションのプリロードを有効にします！
+        await self.registration.navigationPreload.enable();
+      }
+    })(),
+  );
 });
 ```
 
@@ -38,19 +40,21 @@ addEventListener('activate', event => {
 次の例は、プリロードされたレスポンスを使用する fetch イベントの実装を示しています。
 
 ```js
-addEventListener('fetch', event => {
-  event.respondWith(async function() {
-    // 可能なら、キャッシュから応答します
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
+addEventListener("fetch", (event) => {
+  event.respondWith(
+    (async function () {
+      // 可能なら、キャッシュから応答します
+      const cachedResponse = await caches.match(event.request);
+      if (cachedResponse) return cachedResponse;
 
-    // それがなく、プリロードされたレスポンスがあれば、それを使用します
-    const response = await event.preloadResponse;
-    if (response) return response;
+      // それがなく、プリロードされたレスポンスがあれば、それを使用します
+      const response = await event.preloadResponse;
+      if (response) return response;
 
-    // それもなければ、ネットワークを試します。
-    return fetch(event.request);
-  }());
+      // それもなければ、ネットワークを試します。
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

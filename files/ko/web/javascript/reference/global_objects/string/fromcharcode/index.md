@@ -2,6 +2,7 @@
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
+
 {{JSRef}}
 
 **`String.fromCharCode()`** 메서드는 UTF-16 코드 유닛의 시퀀스로부터 문자열을 생성해 반환합니다.
@@ -36,9 +37,9 @@ String.fromCharCode(num1[, ...[, numN]])
 다음 예제는 문자열 `"ABC"`를 반환합니다..
 
 ```js
-String.fromCharCode(65, 66, 67);  // "ABC"
-String.fromCharCode(0x2014)       // "—"
-String.fromCharCode(0x12014)      // 숫자 '1'은 무시해서 "—"
+String.fromCharCode(65, 66, 67); // "ABC"
+String.fromCharCode(0x2014); // "—"
+String.fromCharCode(0x12014); // 숫자 '1'은 무시해서 "—"
 ```
 
 ## 더 큰 값과 사용하기

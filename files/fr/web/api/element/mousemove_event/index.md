@@ -1,7 +1,6 @@
 ---
 title: "Element : évènement mousemove"
 slug: Web/API/Element/mousemove_event
-translation_of: Web/API/Element/mousemove_event
 ---
 
 {{APIRef}}

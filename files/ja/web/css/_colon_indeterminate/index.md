@@ -1,5 +1,5 @@
 ---
-title: ':indeterminate'
+title: ":indeterminate"
 slug: Web/CSS/:indeterminate
 ---
 
@@ -38,7 +38,7 @@ input:indeterminate {
 <fieldset>
   <legend>Checkbox</legend>
   <div>
-    <input type="checkbox" id="checkbox">
+    <input type="checkbox" id="checkbox" />
     <label for="checkbox">This checkbox label starts out lime.</label>
   </div>
 </fieldset>
@@ -46,11 +46,11 @@ input:indeterminate {
 <fieldset>
   <legend>Radio</legend>
   <div>
-    <input type="radio" id="radio1" name="radioButton">
+    <input type="radio" id="radio1" name="radioButton" />
     <label for="radio1">First radio label starts out lime.</label>
   </div>
   <div>
-    <input type="radio" id="radio2" name="radioButton">
+    <input type="radio" id="radio2" name="radioButton" />
     <label for="radio2">Second radio label also starts out lime.</label>
   </div>
 </fieldset>
@@ -66,15 +66,15 @@ input:indeterminate + label {
 
 ```css hidden
 fieldset {
-    padding: 1em 0.75em;
+  padding: 1em 0.75em;
 }
 
 fieldset:first-of-type {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 fieldset:not(:first-of-type) > div:not(:last-child) {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 ```
 
@@ -108,8 +108,8 @@ progress {
 }
 
 progress:indeterminate {
-  width:80vw;
-  height:20px;
+  width: 80vw;
+  height: 20px;
 }
 ```
 

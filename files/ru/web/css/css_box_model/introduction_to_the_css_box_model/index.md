@@ -1,12 +1,6 @@
 ---
 title: Блоковая модель (боксовая модель, box model)
 slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
-tags:
-  - CSS
-  - Guide
-  - Веб
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-original_slug: Web/CSS/box_model
 ---
 
 ## Описание
@@ -37,10 +31,10 @@ original_slug: Web/CSS/box_model
 
 ## Стандарты
 
-| Стандарт                                                                       | Статус                       | Примечание                                                 |
-| ------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------- |
+| Стандарт                                                                       | Статус                | Примечание                                                 |
+| ------------------------------------------------------------------------------ | --------------------- | ---------------------------------------------------------- |
 | [CSS Level 2 (revision 1)](http://www.w3.org/TR/CSS21/box.html#box-dimensions) | {{ Spec2('CSS2.1') }} | Though more precisely worded, there is no practical change |
-| [CSS Level 1](http://www.w3.org/TR/REC-CSS1/#formatting-model)                 | {{ Spec2('CSS1') }}     |                                                            |
+| [CSS Level 1](http://www.w3.org/TR/REC-CSS1/#formatting-model)                 | {{ Spec2('CSS1') }}   |                                                            |
 
 ## Смотрите также
 

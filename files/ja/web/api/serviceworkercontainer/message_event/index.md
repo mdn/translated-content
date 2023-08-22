@@ -50,7 +50,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 // サービスワーカー内
 async function messageClient(clientId) {
   const client = await clients.get(clientId);
-  client.postMessage('こんにちはクライアント！');
+  client.postMessage("こんにちはクライアント！");
 }
 
 addEventListener("fetch", (event) => {

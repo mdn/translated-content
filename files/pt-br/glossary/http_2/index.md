@@ -1,7 +1,6 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
-original_slug: Glossario/HTTP_2
 ---
 
 **HTTP/2** é a principal revisão do [protocolo de rede HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP). Os princiais objetivos do HTTP/2 são reduzir a latência, permitindo a multiplexação total das requisições e respostas, minimizar a sobrecarga do protocolo por meio da compactação eficiente dos campos do cabeçalho HTTP e adicionar suporte para priorização de requisições e notificações dos servidores.

@@ -1,14 +1,8 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internationalization
-  - JavaScript
-  - Method
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка
@@ -51,9 +45,9 @@ console.log(number.toLocaleString()); // Отобразит '3,500' в лока�
 function toLocaleStringSupportsLocales() {
   var number = 0;
   try {
-    number.toLocaleString('i');
+    number.toLocaleString("i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -67,28 +61,28 @@ function toLocaleStringSupportsLocales() {
 var number = 123456.789;
 
 // В Германии в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - точка
-console.log(number.toLocaleString('de-DE'));
+console.log(number.toLocaleString("de-DE"));
 // → 123.456,789
 
 // В России в качестве разделителя целой и дробной части используется запятая, а в качестве разделителя разрядов - пробел
-console.log(number.toLocaleString('ru-RU'));
+console.log(number.toLocaleString("ru-RU"));
 // → 123 456,789
 
 // В большинстве арабоговорящих стран используют настоящие арабские цифры
-console.log(number.toLocaleString('ar-EG'));
+console.log(number.toLocaleString("ar-EG"));
 // → ١٢٣٤٥٦٫٧٨٩
 
 // В Индии используют разделители для тысяч/лакх/крор
-console.log(number.toLocaleString('en-IN'));
+console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
 // Ключ расширения nu запрашивает систему нумерации, например, китайскую десятичную
-console.log(number.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 
 // Если запрашиваемый язык может не поддерживаться, например
 // балийский, откатываемся на запасной язык, в данном случае индонезийский
-console.log(number.toLocaleString(['ban', 'id']));
+console.log(number.toLocaleString(["ban", "id"]));
 // → 123.456,789
 ```
 
@@ -100,18 +94,24 @@ console.log(number.toLocaleString(['ban', 'id']));
 var number = 123456.789;
 
 // Запрашиваем формат валюты
-console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  number.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456,79 €
 
-console.log(number.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' }));
+console.log(
+  number.toLocaleString("ru-RU", { style: "currency", currency: "RUB" }),
+);
 // → 123 456,79 ₽
 
 // Японская йена не использует младшие единицы
-console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  number.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,457
 
 // Ограничиваем до трёх значащих цифр
-console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(number.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,000
 ```
 

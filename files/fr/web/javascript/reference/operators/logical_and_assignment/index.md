@@ -12,7 +12,7 @@ L'opérateur d'affectation après ET logique (`x &&= y`) n'affecte la valeur de 
 ## Syntaxe
 
 ```js
-expr1 &&= expr2
+expr1 &&= expr2;
 ```
 
 ## Description

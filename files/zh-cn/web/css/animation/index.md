@@ -20,7 +20,9 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;
 animation: 3s linear 1s slidein;
 
 /* two animations */
-animation: 3s linear slidein, 3s ease-out 5s slideout;
+animation:
+  3s linear slidein,
+  3s ease-out 5s slideout;
 ```
 
 `animation` 属性用来指定一组或多组动画，每组之间用逗号相隔。
@@ -63,9 +65,7 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 ```html
 <div class="view_port">
-  <div class="polling_message">
-    Listening for dispatches
-  </div>
+  <div class="polling_message">Listening for dispatches</div>
   <div class="cylon_eye"></div>
 </div>
 ```
@@ -86,20 +86,36 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 .cylon_eye {
   background-color: red;
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, .9) 25%,
-      rgba(0, 0, 0, .1) 50%,
-      rgba(0, 0, 0, .9) 75%);
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
   color: white;
   height: 100%;
   width: 20%;
 
   -webkit-animation: 4s linear 0s infinite alternate move_eye;
-          animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
 }
 
-@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
-        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
 ```
 
 {{EmbedLiveSample('赛隆人之眼')}}

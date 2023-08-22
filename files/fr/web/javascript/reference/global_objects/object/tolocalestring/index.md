@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La méthode **`toLocaleString()`** renvoie une chaine de caractères représenta
 ## Syntaxe
 
 ```js
-obj.toLocaleString()
+obj.toLocaleString();
 ```
 
 ### Valeur de retour

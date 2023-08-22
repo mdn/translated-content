@@ -5,42 +5,38 @@ slug: Web/JavaScript/Reference/Global_Objects/String/big
 
 {{JSRef}} {{deprecated_header}}
 
-**`big()`**方法的作用是创建一个使字符串显示大号字体的{{HTMLElement("big")}}标签。
+{{jsxref("String")}} 的 **`big()`** 方法创建一个字符串，将该字符串嵌入到一个 `<big>` 元素中（`<big>str</big>`），从而使该字符串以大字体显示。
 
-> **备注：** \<big> 元素在[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)中已经被移除了，不应该再使用它。取而代之的是 Web 开发人员应该使用[CSS](/zh-CN/docs/Web/CSS) 属性。
+> **备注：** 所有的 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。对于 `big()` 方法来说，在 [HTML5](/zh-CN/docs/Glossary/HTML5) 中已经移除了 `<big>` 元素，不应再使用它。Web 开发者应该使用 [CSS](/zh-CN/docs/Web/CSS) 属性来实现相应的效果。
 
 ## 语法
 
-```plain
-str.big()
+```js-nolint
+big()
 ```
 
 ### 返回值
 
-带有 {{HTMLElement("big")}}标签的字符串。
-
-## 描述
-
-`big()` 方法会将一个字符串嵌入到 `<big>` 标签中：`"<big>str</big>"`。
+一个以 `<big>` 开始标签开头的字符串，然后是文本 `str`，最后是 `</big>` 结束标签。
 
 ## 示例
 
-### 使用 `big()` 函数
+### 使用 big()
 
 下面的例子使用了字符串方法来改变一个字符串的字体大小：
 
 ```js
-var worldString = 'Hello, world';
+const worldString = "Hello, world";
 
-console.log(worldString.small());     // <small>Hello, world</small>
-console.log(worldString.big());       // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <fontsize=7>Hello, world</fontsize>
+console.log(worldString.small()); // <small>Hello, world</small>
+console.log(worldString.big()); // <big>Hello, world</big>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
-使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更加一般地获得和操作该元素的 style 属性，比如：
+使用 {{domxref("HTMLElement.style", "element.style")}} 对象，你能更通用地获得和操作该元素的 `style` 属性，例如：
 
 ```js
-document.getElementById('yourElemId').style.fontSize = '2em';
+document.getElementById("yourElemId").style.fontSize = "2em";
 ```
 
 ## 规范
@@ -51,7 +47,8 @@ document.getElementById('yourElemId').style.fontSize = '2em';
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [`core-js` 中 `String.prototype.big` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.fontsize()")}}
 - {{jsxref("String.prototype.small()")}}

@@ -62,7 +62,9 @@ const z = new BigUint64Array(buffer, 8, 4);
 console.log(z.byteOffset); // 8
 
 // 순회로부터
-const iterable = function*() { yield* [1n, 2n, 3n]; }();
+const iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
 const biguint64FromIterable = new BigUint64Array(iterable);
 console.log(biguint64FromIterable);
 // BigUint64Array [1n, 2n, 3n]

@@ -1,8 +1,8 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-original_slug: XHTML
 ---
+
 [HTML](/ko/docs/HTML)은 HTML 또는 XHTML이라는 XML문법으로 브라우저를 통해 네트워크에 접속할 수 있습니다.
 
 ## HTML5 와 HTML/XHTML

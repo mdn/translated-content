@@ -20,7 +20,8 @@ Storage Access API は、この問題を解決することを目的としてい�
 さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Element/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
 ```html
-<iframe sandbox="allow-storage-access-by-user-activation
+<iframe
+  sandbox="allow-storage-access-by-user-activation
                  allow-scripts
                  allow-same-origin">
   ...

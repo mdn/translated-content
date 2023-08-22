@@ -1,7 +1,6 @@
 ---
 title: Programmation de Sites Web côté serveur
 slug: Learn/Server-side
-translation_of: Learn/Server-side
 ---
 
 {{LearnSidebar}}

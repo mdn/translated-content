@@ -1,7 +1,6 @@
 ---
 title: TypedArray.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La propriété **`byteOffset`** est un accesseur qui représente le décalage, e
 ## Syntaxe
 
 ```js
-typedarray.byteOffset
+typedarray.byteOffset;
 ```
 
 ## Description

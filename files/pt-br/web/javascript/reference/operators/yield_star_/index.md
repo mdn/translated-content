@@ -58,7 +58,7 @@ Além de objetos generator, `yield*` também podem `yield` outros tipos de objet
 ```js
 function* g3() {
   yield* [1, 2];
-  yield* '34';
+  yield* "34";
   yield* Array.from(arguments);
 }
 
@@ -80,7 +80,7 @@ console.log(iterator.next()); // {value: undefined, done: true}
 ```js
 function* g4() {
   yield* [1, 2, 3];
-  return 'foo';
+  return "foo";
 }
 
 var result;
@@ -95,16 +95,16 @@ console.log(iterator.next()); // {value: 1, done: false}
 console.log(iterator.next()); // {value: 2, done: false}
 console.log(iterator.next()); // {value: 3, done: false}
 console.log(iterator.next()); // {value: undefined, done: true},
-                              // g4() returned {value: 'foo', done: true} nesse ponto
+// g4() returned {value: 'foo', done: true} nesse ponto
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## Especificações
 
-| Especificação                                    | Situação                     | Comentário         |
-| ------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#', 'Yield')}} | {{Spec2('ES2015')}}     | Definição inicial. |
+| Especificação                         | Situação             | Comentário         |
+| ------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#', 'Yield')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#', 'Yield')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

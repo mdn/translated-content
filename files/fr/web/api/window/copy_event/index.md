@@ -1,7 +1,6 @@
 ---
 title: "Window: copy event"
 slug: Web/API/Window/copy_event
-translation_of: Web/API/Window/copy_event
 ---
 
 {{APIRef}}

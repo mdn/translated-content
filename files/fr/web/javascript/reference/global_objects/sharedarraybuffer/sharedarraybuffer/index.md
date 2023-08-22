@@ -1,7 +1,6 @@
 ---
 title: Constructeur SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 ---
 
 {{JSRef}}
@@ -15,8 +14,8 @@ Le **constructeur `SharedArrayBuffer()`** permet de créer un objet [`SharedArra
 ## Syntaxe
 
 ```js
-new SharedArrayBuffer()
-new SharedArrayBuffer(longueur)
+new SharedArrayBuffer();
+new SharedArrayBuffer(longueur);
 ```
 
 ### Paramètres

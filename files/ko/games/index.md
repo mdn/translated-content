@@ -1,6 +1,8 @@
 ---
 title: 게임 개발
 slug: Games
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -32,31 +34,24 @@ slug: Games
 ## 같이 보기
 
 - [Build New Games](http://buildnewgames.com/)
-  - 수많은 오픈 웹 게임 개발 튜토리얼을 가지고 있는 협업 사이트입니다. 최근에는 활동이 많지 않지만 여전히 좋은 자료들을 가지고 있습니다.
+  - : 수많은 오픈 웹 게임 개발 튜토리얼을 가지고 있는 협업 사이트입니다. 최근에는 활동이 많지 않지만 여전히 좋은 자료들을 가지고 있습니다.
 - [Creative JS](http://creativejs.com/)
-  - 게임만 있는 것은 아니지만 꽤 인상적인 JavaScript 기술과 실험들의 모음집입니다. 최근에는 활동이 많지 않지만 여전히 좋은 자료들을 가지고 있습니다.
+  - : 게임만 있는 것은 아니지만 꽤 인상적인 JavaScript 기술과 실험들의 모음집입니다. 최근에는 활동이 많지 않지만 여전히 좋은 자료들을 가지고 있습니다.
 - [Game Programming Patterns](https://gameprogrammingpatterns.com/)
-  - Bob Nystrom이 작성한 책으로, 더욱 효과적이고 효율적인 코드를 개발하는 게임 개발자들에게 도움이 되도록 게임 개발에서의 프로그래밍 패턴에 대해 논하는 이북입니다.
+  - : Bob Nystrom이 작성한 책으로, 더욱 효과적이고 효율적인 코드를 개발하는 게임 개발자들에게 도움이 되도록 게임 개발에서의 프로그래밍 패턴에 대해 논하는 이북입니다.
 - [Gamedev.js Weekly](https://gamedevjsweekly.com/)
-  - HTML5 게임 개발을 주제로 하는 뉴스레터로, 매주 금요일에 보내줍니다. 최신 기사들과 튜토리얼, 툴 및 자료들을 담고 있습니다.
-- [HTML5 Game Devs Forum](https://www.html5gamedevs.com/)
-  - 게임 개발자, 프레임 워크 개발자, 출판사들을 위한 포럼입니다. 질문하고, 답변을 받고, 남들을 도와주세요.
-
-<!---->
-
+  - : HTML5 게임 개발을 주제로 하는 뉴스레터로, 매주 금요일에 보내줍니다. 최신 기사들과 튜토리얼, 툴 및 자료들을 담고 있습니다.
 - [HTML5 Game Engine](https://html5gameengine.com/)
-  - 평가, 기능 및 샘플을 기준으로 인기있는 HTML5 게임 프레임워크들의 목록입니다.
+  - : 평가, 기능 및 샘플을 기준으로 인기있는 HTML5 게임 프레임워크들의 목록입니다.
 - [JSBreakouts](https://jsbreakouts.org/)
-  - 여러 프레임워크에서의 JavaScript Breakout 클론들을 비교하여 본인에게 맞는 프레임워크를 골라보세요.
+  - : 여러 프레임워크에서의 JavaScript Breakout 클론들을 비교하여 본인에게 맞는 프레임워크를 골라보세요.
 - [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
-  - 일반적인 게임 개발에 대한 튜토리얼과 글이 올라옵니다.
+  - : 일반적인 게임 개발에 대한 튜토리얼과 글이 올라옵니다.
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
-  - 새로운 게임 개발자들을 위한 웹 주변의 다양하고 유용한 자료들에 대한 링크의 큐레이터 목록인 스타터입니다.
+  - : 새로운 게임 개발자들을 위한 웹 주변의 다양하고 유용한 자료들에 대한 링크의 큐레이터 목록인 스타터입니다.
 - [js13kGames](https://js13kgames.com/)
-  - 개발자들의 13 킬로바이트짜리 자바스크립트 코딩 공모전입니다. 제출된 게임들은 GitHub에 읽을 수 있는 형태로 올라옵니다.
+  - : 개발자들의 13 킬로바이트짜리 자바스크립트 코딩 공모전입니다. 제출된 게임들은 GitHub에 읽을 수 있는 형태로 올라옵니다.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
-  - Mozilla Hack 블로그의 게임 카테고리는 게임 개발과 관련된 흥미로운 기사들이 올라와 있습니다.
-
-## 같이 보기
-
+  - : Mozilla Hack 블로그의 게임 카테고리는 게임 개발과 관련된 흥미로운 기사들이 올라와 있습니다.
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
+  - : 플랫폼 게임에 대한 Mozilla의 참여에 대한 정보가 있는 위키 페이지입니다.

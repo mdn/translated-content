@@ -1,7 +1,6 @@
 ---
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
-translation_of: Web/SVG/Element/feSpotLight
 ---
 
 {{SVGRef}}

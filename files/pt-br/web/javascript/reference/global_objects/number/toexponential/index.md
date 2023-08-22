@@ -44,20 +44,20 @@ If a number has more digits than requested by the `fractionDigits` parameter, th
 ```js
 var numObj = 77.1234;
 
-console.log(numObj.toExponential());  // logs 7.71234e+1
+console.log(numObj.toExponential()); // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1
 console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log(77.1234.toExponential()); // logs 7.71234e+1
-console.log(77 .toExponential());     // logs 7.7e+1
+console.log((77.1234).toExponential()); // logs 7.71234e+1
+console.log((77).toExponential()); // logs 7.7e+1
 ```
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                       | Comment                                            |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}                                 | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}     | {{Spec2('ES6')}}         |                                                    |
+| Specification                                                                                    | Status               | Comment                                            |
+| ------------------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                              | {{Spec2('ES3')}}     | Initial definition. Implemented in JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}                         | {{Spec2('ES5.1')}}   |                                                    |
+| {{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}     | {{Spec2('ES6')}}     |                                                    |
 | {{SpecName('ESDraft', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}} | {{Spec2('ESDraft')}} |                                                    |
 
 ## Compatibilidade com navegadores

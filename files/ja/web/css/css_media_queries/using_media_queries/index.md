@@ -1,7 +1,6 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{CSSRef}}
@@ -23,6 +22,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 - [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)は、メディアクエリーを適用する機器の大まかな分類を `all`, `print`, `screen`, `speech` で定義します。
 
   種別は省略可能 (`all` と見なされる) ですが、 `not` や `only` 論理演算子を使用する場合は例外です。
+
 - [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。 {{cssxref("@media/any-hover", "any-hover")}}, {{cssxref("@media/any-pointer", "any-pointer")}}, {{cssxref("@media/aspect-ratio", "aspect-ratio")}}, {{cssxref("@media/color", "color")}}, {{cssxref("@media/color-gamut", "color-gamut")}}, {{cssxref("@media/color-index", "color-index")}}, {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}, {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}, {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}, {{cssxref("@media/display-mode", "display-mode")}}, {{cssxref("@media/forced-colors", "forced-colors")}}, {{cssxref("@media/grid", "grid")}}, {{cssxref("@media/height", "height")}}, {{cssxref("@media/hover", "hover")}}, {{cssxref("@media/inverted-colors", "inverted-colors")}}, {{cssxref("@media/monochrome", "monochrome")}}, {{cssxref("@media/orientation", "orientation")}}, {{cssxref("@media/overflow-block", "overflow-block")}}, {{cssxref("@media/overflow-inline", "overflow-inline")}}, {{cssxref("@media/pointer", "pointer")}}, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/resolution", "resolution")}}, {{cssxref("@media/scripting", "scripting")}}, {{cssxref("@media/update-frequency", "update")}}, {{cssxref("@media/width", "width")}} があります。
 
   例えば、{{cssxref("@media/hover", "hover")}} という機能では、端末が要素の上で停止したことを検出できるかどうかをクエリーで検査することができます。
@@ -94,7 +94,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 `only` 演算子は古いブラウザーでスタイルが適用されるのを防止します。
 
 > **メモ:** 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
-しかし、 `not` または `only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。
+> しかし、 `not` または `only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。
 
 ### 複数の種別または特性の組み合わせ
 
@@ -156,7 +156,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 
 ### 古いブラウザーとの互換性の維持
 
-`only` キーワードは、メディア特性がついたメディアクエリーに対応していない古いブラウザーで、そのスタイルが適用されるのを防ぎます。*最近のブラウザーでは効果がありません。*
+`only` キーワードは、メディア特性がついたメディアクエリーに対応していない古いブラウザーで、そのスタイルが適用されるのを防ぎます。_最近のブラウザーでは効果がありません。_
 
 ```css
 @media only screen and (color) { ... }
