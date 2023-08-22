@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 {{PWASidebar}}
 
-本指南介绍用户如何在其设备上安装和卸载渐进式 Web 应用（PWA）。如果你想了解如何将 Web 应用程序作为 PWA 安装，请参阅[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWA_installable)。
+本指南介绍用户如何在其设备上安装和卸载渐进式 Web 应用（PWA）。如果你想了解如何将 Web 应用程序作为 PWA 安装，请参阅[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)。
 
 ## Web 应用安装的历史
 
