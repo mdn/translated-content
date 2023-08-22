@@ -12,7 +12,7 @@ slug: Web/API/Navigator/appName
 ## 構文
 
 ```js
-appName = navigator.appName
+appName = navigator.appName;
 ```
 
 ### 値

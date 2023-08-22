@@ -18,19 +18,21 @@ const evtSource = new EventSource("ssedemo.php");
 イベントを生成するスクリプトが別のオリジンに存在する場合は、 新しい `EventSource` オブジェクトを作成し、 URI とオプション辞書の両方を指定する必要があります。例えば、クライアントスクリプトが `example.com` にある場合は次のようになります。
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
 イベントソースのインスタンスを起動したら、 {{domxref("EventSource.message_event", "message")}} イベントのハンドラーを取り付けて、サーバーからのメッセージを待ち受けすることができます。
 
 ```js
-evtSource.onmessage = function(event) {
+evtSource.onmessage = function (event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
 
   newElement.textContent = "message: " + event.data;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 このコードは入力メッセージ（すなわち `event` フィールドを持たない、サーバーからの通知）を受信して、メッセージのテキストを文書の HTML にあるリストへ追加します。
@@ -38,7 +40,7 @@ evtSource.onmessage = function(event) {
 `addEventListener()` を使用してイベントを待ち受けすることもできます。
 
 ```js
-evtSource.addEventListener("ping", function(event) {
+evtSource.addEventListener("ping", function (event) {
   const newElement = document.createElement("li");
   const eventList = document.getElementById("list");
   const time = JSON.parse(event.data).time;
@@ -101,7 +103,7 @@ while (true) {
 問題が発生した場合（ネットワークのタイムアウトや[アクセス制御](/ja/docs/Web/HTTP/CORS)に関する問題など）は、エラーイベントが生成されます。これをプログラムで処理するには、 `onerror` コールバックを `EventSource` に実装してください。
 
 ```js
-evtSource.onerror = function(err) {
+evtSource.onerror = function (err) {
   console.error("EventSource failed:", err);
 };
 ```
