@@ -45,7 +45,7 @@ await writer.abort("Manual abort!");
 
 ### `AbortSignal` を下層レイヤーへ移譲
 
-この例では、[フェッチ API](/ja-US/docs/Web/API/Fetch_API) を使用して、実際にメッセージをサーバーに送信しています。フェッチ API は {{domxref("AbortSignal")}} にも対応しています。 `fetch` メソッドと {{domxref("WritableStreamDefaultController")}} の両方に同じオブジェクトを使用することが可能です。
+この例では、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、実際にメッセージをサーバーに送信しています。フェッチ API は {{domxref("AbortSignal")}} にも対応しています。 `fetch` メソッドと {{domxref("WritableStreamDefaultController")}} の両方に同じオブジェクトを使用することが可能です。
 
 ```js
 const endpoint = "https://www.example.com/api"; // デモ用の架空の URL
