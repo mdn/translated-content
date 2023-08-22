@@ -83,7 +83,7 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **メモ:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)も参照してください。
+> **メモ:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)も参照してください。
 
 ### 名前付きキャプチャグループの使用
 
