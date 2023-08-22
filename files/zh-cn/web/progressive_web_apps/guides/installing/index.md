@@ -1,19 +1,19 @@
 ---
-title: 安装和卸载网络应用
+title: 安装和卸载 Web 应用
 slug: Web/Progressive_web_apps/Guides/Installing
 ---
 
 {{PWASidebar}}
 
-本指南介绍用户如何在其设备上安装和卸载渐进式网络应用（PWA）。如果你想了解如何将网络应用程序作为 PWA 安装，请参阅[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWA_installable)。
+本指南介绍用户如何在其设备上安装和卸载渐进式 Web 应用（PWA）。如果你想了解如何将 Web 应用程序作为 PWA 安装，请参阅[使 PWA 可安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWA_installable)。
 
-## 网络应用安装的历史
+## Web 应用安装的历史
 
 浏览器一直支持保存网站的快捷方式，称为“书签”。这些书签只是指向网站的链接。
 
-某些操作系统（OS）增强了书签功能，使用户可以将书签保存到常见位置，比如主屏幕或任务栏，并使用一个图标在操作系统的默认浏览器中启动该网站。对于许多网站而言，这也只是一个链接。如果网站是[渐进式网络应用程序（PWA）](/zh-CN/docs/Web/Progressive_web_apps)，将其保存到主屏幕上会在用户设备上安装 PWA，将其完全集成到操作系统中，就像大多数设备上的本机应用程序一样。PWA 可以被安装，它们也可以被卸载。
+某些操作系统（OS）增强了书签功能，使用户可以将书签保存到常见位置，比如主屏幕或任务栏，并使用一个图标在操作系统的默认浏览器中启动该网站。对于许多网站而言，这也只是一个链接。如果网站是[渐进式 Web 应用程序（PWA）](/zh-CN/docs/Web/Progressive_web_apps)，将其保存到主屏幕上会在用户设备上安装 PWA，将其完全集成到操作系统中，就像大多数设备上的原生应用程序一样。PWA 可以被安装，它们也可以被卸载。
 
-我们首先介绍先决条件 - 保存网站链接。
+我们首先介绍先决条件——保存网站链接。
 
 ### 保存网站链接
 
@@ -25,7 +25,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 ### 添加到主屏幕
 
-2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和 title 添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
+2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和标题添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
 
 将非 PWA 网站添加到主屏幕不会在设备上安装该网站。相反，它会将开发者定义的图标添加到主屏幕，当点击图标时，会在默认浏览器中打开该书签链接。
 
@@ -37,13 +37,13 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 ## 安装和卸载 PWA
 
-安装 PWA 只需几次点击，具体取决于 Web 应用程序的功能，安装 PWA 的结果通常远远超出了创建一个指向互联网页面的链接；安装 PWA 还会更深入地将网络应用程序集成到用户设备中。
+安装 PWA 只需几次点击，具体取决于 Web 应用程序的功能，安装 PWA 的结果通常远远超出了创建一个指向互联网页面的链接；安装 PWA 还会更深入地将 Web 应用程序集成到用户设备中。
 
 根据 PWA、设备，以及操作系统和浏览器的功能，安装 PWA 可能会启用类似本机应用程序的功能，例如为应用程序提供独立的窗口或将其注册为文件处理程序。这也意味着卸载 PWA，同样只需要几次点击，不仅仅是删除 PWA 的图标。
 
 ### 安装 PWA
 
-从 web 上安装 PWA 的用户界面因浏览器和平台的不同而异。
+从 Web 上安装 PWA 的用户界面因浏览器和平台的不同而异。
 
 安装 PWA 的用户界面因设备和操作系统的组合而异。在 iOS 的 Safari 上，用户界面“添加到主屏幕”会安装 PWA。其他浏览器，包括 Android 上的 Chrome，在浏览器设置菜单中包含应用程序安装命令。在桌面上的 Chrome 和 Edge 中，当用户导航到页面时，如果页面是 PWA，并且浏览器当前未安装该 PWA，URL 地址栏中将显示一个安装图标：
 
@@ -67,9 +67,9 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 Firefox 需要 [PWA 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/pwas-for-firefox/)。
 
-对于 PWA 来说，苹果是独特的：**除了** Safari 之外，可以从任何浏览器在 macOS 上安装 PWA。对于 iOS 16.4 之前的版本，情况恰好相反，PWA **只能**在 Safari 中安装。从任何支持的浏览器上可以在 iOS/iPadOS 16.4 或更高版本上安装 PWA。
+对于 PWA 来说，苹果是独特的：在 macOS 上，**除了** Safari 之外，可以从任何浏览器安装 PWA。对于 iOS 16.4 之前的版本，情况恰好相反，PWA **只能**在 Safari 中安装。在 iOS/iPadOS 16.4 或更高版本上，可以从任何支持的浏览器上安装 PWA。
 
-安装的 PWA 启动时，它可以显示在其自己的独立窗口中（无需完整的浏览器界面），但它仍然在浏览器窗口中运行，即使通常的浏览器界面元素（如地址栏或返回按钮）不可见。应用程序将出现在操作系统保存其他应用程序的位置，位于特定于浏览器的文件夹中。
+安装的 PWA 启动时，它可以显示在其自己的独立窗口中（没有完整的浏览器界面），但它仍然在浏览器窗口中运行，即使通常的浏览器界面元素（如地址栏或返回按钮）不可见。应用程序将出现在操作系统保存其他应用程序的位置，位于特定于浏览器的文件夹中。
 
 由浏览器安装的 PWA 仅针对该浏览器。这意味着用于安装 PWA 的浏览器是运行该 PWA 的浏览器。这还意味着你可以使用不同的浏览器安装相同的 PWA，并且这两个应用程序将作为两个不同的实例运行，并且不共享任何数据。
 
