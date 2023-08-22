@@ -282,7 +282,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 配列内で配列内の連続した要素を複写します。
 - {{jsxref("Array.prototype.entries()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
   - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
@@ -314,7 +314,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.join()")}}
   - : 配列のすべての要素を結合した文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 指定された値と等しい値を持つ最後の (添字の一番大きい) 要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.map()")}}
@@ -346,7 +346,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.unshift()")}}
   - : 配列の最初に 1 個以上の要素を追加し、配列の変更後の `length` を返します。
 - {{jsxref("Array.prototype.values()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
 - [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : 既定では [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 関数を返します。
 
@@ -362,17 +362,17 @@ f("a", "b"); // 'a+b'
 
 ```js
 // 'fruits' 配列が配列リテラル記法で作成されています。
-const fruits = ['りんご', 'バナナ'];
+const fruits = ["りんご", "バナナ"];
 console.log(fruits.length);
 // 2
 
 // 'fruits2' 配列が Array() コンストラクターで作成されています。
-const fruits2 = new Array('りんご', 'バナナ');
+const fruits2 = new Array("りんご", "バナナ");
 console.log(fruits2.length);
 // 2
 
 // 'fruits3' 配列が String.prototype.split() を使用して作成されています。
-const fruits3 = 'りんご, バナナ'.split(', ');
+const fruits3 = "りんご, バナナ".split(", ");
 console.log(fruits3.length);
 // 2
 ```
@@ -382,8 +382,8 @@ console.log(fruits3.length);
 この例では [`join()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/join) メソッドを使用して、配列 `fruits` から文字列を生成しています。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
-const fruitsString = fruits.join(', ');
+const fruits = ["りんご", "バナナ"];
+const fruitsString = fruits.join(", ");
 console.log(fruitsString);
 // "りんご, バナナ"
 ```
@@ -393,7 +393,7 @@ console.log(fruitsString);
 この例では配列 `fruits` 内の項目に、配列内の位置を示す添字を指定することでアクセスする方法を示しています。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
+const fruits = ["りんご", "バナナ"];
 
 // 配列の最初の要素の添字は必ず 0 です。
 fruits[0]; // りんご
@@ -415,8 +415,8 @@ fruits[99]; // undefined
 この例では [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドを使用して、文字列 `"バナナ"` の位置（添字）を配列 `fruits` の中から探します。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
-console.log(fruits.indexOf('バナナ'));
+const fruits = ["りんご", "バナナ"];
+console.log(fruits.indexOf("バナナ"));
 // 1
 ```
 
@@ -425,14 +425,14 @@ console.log(fruits.indexOf('バナナ'));
 この例では、配列 `fruits` が `"バナナ"` と `"さくらんぼ"` を含んでいるかどうかを確認する 2 つの方法を示しています。最初は [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドで、次に [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドで、添字の値が `-1` でないことを確認します。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
+const fruits = ["りんご", "バナナ"];
 
-fruits.includes('バナナ'); // true
-fruits.includes('さくらんぼ'); // false
+fruits.includes("バナナ"); // true
+fruits.includes("さくらんぼ"); // false
 
 // indexOf() が -1 を返さない場合、その配列はその項目を持っています。
-fruits.indexOf('バナナ') !== -1; // true
-fruits.indexOf('さくらんぼ') !== -1; // false
+fruits.indexOf("バナナ") !== -1; // true
+fruits.indexOf("さくらんぼ") !== -1; // false
 ```
 
 ### 配列に項目を追加
@@ -440,8 +440,8 @@ fruits.indexOf('さくらんぼ') !== -1; // false
 この例では、 [`push()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push) メソッドを使用して新しい文字列を配列 `fruits` に追加しています。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
-const newLength = fruits.push('みかん');
+const fruits = ["りんご", "バナナ"];
+const newLength = fruits.push("みかん");
 console.log(fruits);
 // ["りんご", "バナナ", "みかん"]
 console.log(newLength);
@@ -453,7 +453,7 @@ console.log(newLength);
 この例では、 [`pop()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) メソッドを使用して配列 `fruits` から最後の項目を取り除いています。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'みかん'];
+const fruits = ["りんご", "バナナ", "みかん"];
 const removedItem = fruits.pop();
 console.log(fruits);
 // ["りんご", "バナナ"]
@@ -468,7 +468,7 @@ console.log(removedItem);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` から最後の 3 つの項目を取り除いています。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'いちご', 'マンゴー', 'さくらんぼ'];
+const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
 const start = -3;
 const removedItems = fruits.splice(start);
 console.log(fruits);
@@ -482,7 +482,7 @@ console.log(removedItems);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドはを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'いちご', 'マンゴー', 'さくらんぼ'];
+const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
 const start = 2;
 const removedItems = fruits.splice(start);
 console.log(fruits);
@@ -496,7 +496,7 @@ console.log(removedItems);
 この例では [`shift()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) メソッドを使用して、最初の項目を配列 `fruits` から取り除きます。
 
 ```js
-const fruits = ['りんご', 'バナナ'];
+const fruits = ["りんご", "バナナ"];
 const removedItem = fruits.shift();
 console.log(fruits);
 // ["バナナ"]
@@ -511,7 +511,7 @@ console.log(removedItem);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` から先頭の 3 項目を取り除きます。
 
 ```js
-const fruits = ['りんご', 'いちご', 'さくらんぼ', 'バナナ', 'マンゴー'];
+const fruits = ["りんご", "いちご", "さくらんぼ", "バナナ", "マンゴー"];
 const start = 0;
 const deleteCount = 3;
 const removedItems = fruits.splice(start, deleteCount);
@@ -526,8 +526,8 @@ console.log(removedItems);
 この例では [`unshift()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) メソッドを使用して、配列 `fruits` の添字 `0` に新しい項目を追加します。これを配列の新しい先頭の項目にします。
 
 ```js
-const fruits = ['バナナ', 'マンゴー'];
-const newLength = fruits.unshift('いちご');
+const fruits = ["バナナ", "マンゴー"];
+const newLength = fruits.unshift("いちご");
 console.log(fruits);
 // ["いちご", "バナナ", "マンゴー"]
 console.log(newLength);
@@ -539,8 +539,8 @@ console.log(newLength);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字を指定します。
 
 ```js
-const fruits = ['いちご', 'バナナ', 'マンゴー'];
-const start = fruits.indexOf('バナナ');
+const fruits = ["いちご", "バナナ", "マンゴー"];
+const start = fruits.indexOf("バナナ");
 const deleteCount = 1;
 const removedItems = fruits.splice(start, deleteCount);
 console.log(fruits);
@@ -554,7 +554,7 @@ console.log(removedItems);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` および `"いちご"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字と共に、取り除く項目の総数を指定します。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'いちご', 'マンゴー'];
+const fruits = ["りんご", "バナナ", "いちご", "マンゴー"];
 const start = 1;
 const deleteCount = 2;
 const removedItems = fruits.splice(start, deleteCount);
@@ -569,10 +569,15 @@ console.log(removedItems);
 この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` 内の 2 つの項目を置き換えます。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'いちご'];
+const fruits = ["りんご", "バナナ", "いちご"];
 const start = -2;
 const deleteCount = 2;
-const removedItems = fruits.splice(start, deleteCount, 'マンゴー', 'さくらんぼ');
+const removedItems = fruits.splice(
+  start,
+  deleteCount,
+  "マンゴー",
+  "さくらんぼ",
+);
 console.log(fruits);
 // ["りんご", "マンゴー", "さくらんぼ"]
 console.log(removedItems);
@@ -584,7 +589,7 @@ console.log(removedItems);
 この例では [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用して配列 `fruits` を走査し、それぞれの項目をコンソールへログ出力します。
 
 ```js
-const fruits = ['りんご', 'マンゴー', 'さくらんぼ'];
+const fruits = ["りんご", "マンゴー", "さくらんぼ"];
 for (const fruit of fruits) {
   console.log(fruit);
 }
@@ -600,7 +605,7 @@ for (const fruit of fruits) {
 この例では [`forEach()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) メソッドを使用して、配列 `fruits` のそれぞれの要素に対して関数を呼び出しています。この関数ではそれぞれの項目を、その項目の添字の番号と共にコンソールへログ出力します。
 
 ```js
-const fruits = ['りんご', 'マンゴー', 'さくらんぼ'];
+const fruits = ["りんご", "マンゴー", "さくらんぼ"];
 fruits.forEach((item, index, array) => {
   console.log(item, index);
 });
@@ -614,8 +619,8 @@ fruits.forEach((item, index, array) => {
 この例では [`concat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) メソッドを使用して、配列 `fruits` を配列 `moreFruits` と結合子、新しい配列 `combinedFruits` を生成します。 `fruits` と `moreFruits` は変更されないことに注意してください。
 
 ```js
-const fruits = ['りんご', 'バナナ', 'いちご'];
-const moreFruits = ['マンゴー', 'さくらんぼ'];
+const fruits = ["りんご", "バナナ", "いちご"];
+const moreFruits = ["マンゴー", "さくらんぼ"];
 const combinedFruits = fruits.concat(moreFruits);
 console.log(combinedFruits);
 // ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"]
@@ -634,7 +639,7 @@ console.log(moreFruits);
 この例では、既存の配列 `fruits` から新しい配列を生成する方法を 3 通り示します。最初のものは[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用するもので、次は [`from()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/from) メソッドを使用するもの、その次は [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 円そっどを使用するものです。
 
 ```js
-const fruits = ['いちご', 'マンゴー'];
+const fruits = ["いちご", "マンゴー"];
 
 // スプレッド構文でコピーを作成します。
 const fruitsCopy = [...fruits];
@@ -657,15 +662,15 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の{{Glossary("transferable objects", "移譲可能オブジェクト")}}を、コピーするのではなく、新しいコピーに移譲できる利点があります。
 
-最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
+最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#_による厳密な等価性)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
 
 ```js
-const fruits = ['いちご', 'マンゴー'];
+const fruits = ["いちご", "マンゴー"];
 const fruitsAlias = fruits;
 // 'fruits' と 'fruitsAlias' は同じオブジェクトとなり、厳密等価になります。
-fruits === fruitsAlias // true
+fruits === fruitsAlias; // true
 // 配列 'fruits' を変更すると、 'fruitsAlias' も変化します。
-fruits.unshift('りんご', 'バナナ');
+fruits.unshift("りんご", "バナナ");
 console.log(fruits);
 // ['りんご', 'バナナ', 'いちご', 'マンゴー']
 console.log(fruitsAlias);
@@ -680,17 +685,17 @@ console.log(fruitsAlias);
 
 ```js
 const inventory = [
-  { name: 'アスパラガス', type: 'vegetables' },
-  { name: 'バナナ',  type: 'fruit' },
-  { name: '羊', type: 'meat' },
-  { name: 'さくらんぼ', type: 'fruit' },
-  { name: '魚', type: 'meat' },
+  { name: "アスパラガス", type: "vegetables" },
+  { name: "バナナ", type: "fruit" },
+  { name: "羊", type: "meat" },
+  { name: "さくらんぼ", type: "fruit" },
+  { name: "魚", type: "meat" },
 ];
 ```
 
 `group()` を使用するには、現在の要素、およびオプションで現在の添字と配列を指定して呼び出され、要素のグループを示す文字列を返すコールバック関数を指定します。
 
-以下のコードでは、アロー関数を使用してそれぞれの配列要素の `type` を返しています（これは、[関数引数のオブジェクト構造化構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter)を使用して、渡されたオブジェクトから型要素を展開するものです）。
+以下のコードでは、アロー関数を使用してそれぞれの配列要素の `type` を返しています（これは、[関数引数のオブジェクト構造化構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)を使用して、渡されたオブジェクトから型要素を展開するものです）。
 結果は、コールバックから返された一意の文字列を名前とするプロパティを持つオブジェクトになります。
 各プロパティには、グループ内の要素を含む配列が割り当てられます。
 
@@ -714,21 +719,22 @@ console.log(result.vegetables);
 
 ```js
 const board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ];
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(`${board.join('\n')}\n\n`);
+console.log(`${board.join("\n")}\n\n`);
 
 // キングの前のポーンを 2 つ前へ移動
 board[4][4] = board[6][4];
-board[6][4] = ' ';
-console.log(board.join('\n'));
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 出力を示します。
@@ -758,10 +764,7 @@ r,n,b,q,k,b,n,r
 ```js
 const values = [];
 for (let x = 0; x < 10; x++) {
-  values.push([
-    2 ** x,
-    2 * x ** 2,
-  ]);
+  values.push([2 ** x, 2 * x ** 2]);
 }
 console.table(values);
 ```
@@ -797,7 +800,7 @@ JavaScript の構文では、数字で始まるプロパティには[ブラケ�
 `years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
 
 ```js
-console.log(years['2'] !== years['02']);
+console.log(years["2"] !== years["02"]);
 ```
 
 `years['2']` だけが実際の配列の添字です。 `years['02']` は自由な文字列のプロパティであり、配列の反復処理では処理されません。
@@ -812,27 +815,27 @@ JavaScript の配列の {{jsxref("Array/length", "length")}} プロパティと�
 
 ```js
 const fruits = [];
-fruits.push('バナナ', 'りんご', 'もも');
+fruits.push("バナナ", "りんご", "もも");
 console.log(fruits.length); // 3
 ```
 
 JavaScript の配列で、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array/length", "length")}} プロパティを更新します。
 
 ```js
-fruits[5] = 'マンゴー';
-console.log(fruits[5]);            // 'マンゴー'
-console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
-console.log(fruits.length);        // 6
+fruits[5] = "マンゴー";
+console.log(fruits[5]); // 'マンゴー'
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
+console.log(fruits.length); // 6
 ```
 
 {{jsxref("Array/length", "length")}} を増加させてみます。
 
 ```js
 fruits.length = 10;
-console.log(fruits);              // ['バナナ', 'りんご', 'もも', 空 x 2, 'マンゴー', 空 x 4]
+console.log(fruits); // ['バナナ', 'りんご', 'もも', 空 x 2, 'マンゴー', 空 x 4]
 console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length);       // 10
-console.log(fruits[8]);           // undefined
+console.log(fruits.length); // 10
+console.log(fruits[8]); // undefined
 ```
 
 一方、 {{jsxref("Array/length", "length")}} プロパティの数を減らすと、要素が削除されます。
@@ -840,7 +843,7 @@ console.log(fruits[8]);           // undefined
 ```js
 fruits.length = 2;
 console.log(Object.keys(fruits)); // ['0', '1']
-console.log(fruits.length);       // 2
+console.log(fruits.length); // 2
 ```
 
 これらについては {{jsxref("Array/length")}} のページで詳しく解説します。
@@ -857,7 +860,7 @@ console.log(fruits.length);       // 2
 // 大文字小文字は区別しません
 
 const myRe = /d(b+)(d)/i;
-const execResult = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec("cdbBdbsbz");
 
 console.log(execResult.input); // 'cdbBdbsbz'
 console.log(execResult.index); // 1

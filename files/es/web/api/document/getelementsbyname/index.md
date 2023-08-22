@@ -10,7 +10,7 @@ Returns a nodelist collection with a given {{domxref("element.name","name")}} in
 ## Sintaxis
 
 ```js
-elements = document.getElementsByName(name)
+elements = document.getElementsByName(name);
 ```
 
 - `elements` es una colección existente de {{domxref("NodeList")}}
@@ -19,21 +19,21 @@ elements = document.getElementsByName(name)
 ## Ejemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- ...
-</head>
+  <head>
+    ...
+  </head>
 
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
+  <body>
+    <form name="up"><input type="text" /></form>
+    <div name="down"><input type="text" /></div>
 
-<script>
-var up_forms = document.getElementsByName("up");
-console.log(up_forms[0].tagName); // returns "FORM"
-</script>
-</body>
+    <script>
+      var up_forms = document.getElementsByName("up");
+      console.log(up_forms[0].tagName); // returns "FORM"
+    </script>
+  </body>
 </html>
 ```
 

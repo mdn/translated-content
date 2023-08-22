@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/uniform
 ---
 
 {{APIRef("WebGL")}}

@@ -89,7 +89,7 @@ JavaScript 文档描述了适合 JavaScript 程序员的语言方面。
 控制台的工作方式与 eval 完全相同：返回最后输入的表达式。为了简单起见，可以想象每次输入到控制台的东西实际上都被 console.log 所包围。
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### 多行模式
@@ -101,15 +101,14 @@ Web 控制台的单行模式非常适合用来测试单个的 JavaScript 表达�
 让我们用 Web 控制台的多行模式来写一个“Hello World"程序吧！JavaScript code:
 
 ```js
-(function(){
+(function () {
   "use strict";
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert("Hello " + yourName);
   }
 
-  greetMe('World');
+  greetMe("World");
 })();
-
 ```
 
 输入完成后，按下<kbd>Cmd</kbd>+<kbd>Enter</kbd>或者<kbd>Ctrl</kbd>+<kbd>Enter</kbd>(或者单击运行按钮) 就可以在浏览器中看到执行结果了！

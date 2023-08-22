@@ -96,8 +96,8 @@ Se o método requisitado não é suportado, o servidor irá responder com um err
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                   | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ----------------- |
+| Especificação                                                                              | Status             | Comentário        |
+| ------------------------------------------------------------------------------------------ | ------------------ | ----------------- |
 | {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definição inicial |
 
 ## Compatibilidade com navegadores

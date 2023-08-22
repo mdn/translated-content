@@ -1,5 +1,5 @@
 ---
-title: 'Window: load イベント'
+title: "Window: load イベント"
 slug: Web/API/Window/load_event
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 식별자
 slug: Glossary/Identifier
-original_slug: Glossary/식별자
 ---
 
 **식별자**는 코드 내의 {{glossary("variable", "변수")}}, {{glossary("function", "함수")}}, 혹은 {{glossary("property", "속성")}}을 식별하는 문자열입니다.

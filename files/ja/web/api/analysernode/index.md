@@ -82,7 +82,7 @@ _{{domxref("AudioNode")}}からメソッドを継承する_.
 
 ### Basic usage
 
-以下の例では、AudioContext から１つの AnalyserNode を作成しており、requestAnimationFrame と\<canvas>へ繰り返し時間波形データを繰り返し集め現入力を“オシロスコープスタイル”で出力し描画している。
+以下の例では、AudioContext から１つの AnalyserNode を作成しており、requestAnimationFrame と\<canvas>へ繰り返し時間波形データを繰り返し集め現入力を"オシロスコープスタイル"で出力し描画している。
 
 より多くのサンプルは 我々の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) デモにご覧頂けます。 (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 

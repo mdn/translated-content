@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setTime
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setTime
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`setTime()`** met l'objet {{jsxref("Date")}} à jour par rapport a
 ## Syntaxe
 
 ```js
-dateObj.setTime(valeurTemps)
+dateObj.setTime(valeurTemps);
 ```
 
 ### Paramètres

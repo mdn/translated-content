@@ -1,23 +1,23 @@
 ---
 title: "Element: animationend イベント"
+short-title: animationend
 slug: Web/API/Element/animationend_event
-original_slug: Web/API/Document/animationend_event
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
 
-**`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションが要素から削除されたりした場合、 `animationend` イベントは発生しません。
+**`animationend`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)が完了したときに発生します。アニメーションが完了前に中止された場合、例えば要素が DOM から削除されたりアニメーションが要素から削除されたりした場合、 `animationend` イベントは発生しません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('animationend', (event) => {});
+addEventListener("animationend", (event) => {});
 
-onanimationend = (event) => { };
+onanimationend = (event) => {};
 ```
 
 ## イベント型
@@ -42,20 +42,20 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 この例は、アニメーションする要素を取得し、 `animationend` イベントを待ち受けます。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
-animated.addEventListener('animationend', () => {
-  console.log('アニメーション終了');
+animated.addEventListener("animationend", () => {
+  console.log("アニメーション終了");
 });
 ```
 
 同様に、 `onanimationend` イベントハンドラープロパティを使用するとこうなります。
 
 ```js
-const animated = document.querySelector('.animated');
+const animated = document.querySelector(".animated");
 
 animated.onanimationend = () => {
-  console.log('アニメーション終了');
+  console.log("アニメーション終了");
 };
 ```
 
@@ -110,36 +110,42 @@ animated.onanimationend = () => {
 #### JavaScript
 
 ```js
-const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example>.event-log');
-const applyAnimation = document.querySelector('.animation-example>button.activate');
+const animation = document.querySelector("p.animation");
+const animationEventLog = document.querySelector(
+  ".animation-example>.event-log",
+);
+const applyAnimation = document.querySelector(
+  ".animation-example>button.activate",
+);
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () => {
+animation.addEventListener("animationstart", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () => {
+animation.addEventListener("animationiteration", () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () => {
+animation.addEventListener("animationend", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
-  animation.classList.remove('active');
+  animation.classList.remove("active");
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () => {
+animation.addEventListener("animationcancel", () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () => {
-  animation.classList.toggle('active');
-  animationEventLog.textContent = '';
+applyAnimation.addEventListener("click", () => {
+  animation.classList.toggle("active");
+  animationEventLog.textContent = "";
   iterationCount = 0;
-  const active = animation.classList.contains('active');
-  applyAnimation.textContent = active ? "Cancel animation" : "Activate animation";
+  const active = animation.classList.contains("active");
+  applyAnimation.textContent = active
+    ? "Cancel animation"
+    : "Activate animation";
 });
 ```
 
@@ -157,8 +163,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationend_event", "animationend")}}

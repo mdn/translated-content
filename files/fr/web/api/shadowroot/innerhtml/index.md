@@ -1,14 +1,6 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - innerHTML
-  - shadow dom
-translation_of: Web/API/ShadowRoot/innerHTML
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -18,8 +10,8 @@ La propriété **`innerHTML`**, rattachée à l'interface {{domxref("ShadowRoot"
 ## Syntaxe
 
 ```js
-var domString = shadowRoot.innerHTML
-shadowRoot.innerHTML = domString
+var domString = shadowRoot.innerHTML;
+shadowRoot.innerHTML = domString;
 ```
 
 ### Valeur
@@ -29,10 +21,10 @@ Une chaîne de caractères {{domxref("DOMString")}}.
 ## Exemples
 
 ```js
-let customElem = document.querySelector('mon-element-shadow-dom');
+let customElem = document.querySelector("mon-element-shadow-dom");
 let shadow = customElem.shadowRoot;
 
-shadow.innerHTML = '<strong>Cet élément devrait être plus important !</strong>';
+shadow.innerHTML = "<strong>Cet élément devrait être plus important !</strong>";
 ```
 
 ## Spécifications

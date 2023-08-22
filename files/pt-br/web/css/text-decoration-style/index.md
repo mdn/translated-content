@@ -35,13 +35,13 @@ text-decoration-style: unset;
 
   - : É uma das seguintes palavras-chave:
 
-    | Keyword                                       | Description         | Comment                                                                                   |
-    | --------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
-    | `solid`                                       | Draws a single line |                                                                                           |
-    | `double`                                      | Draws a double line |                                                                                           |
-    | `dotted`                                      | Draws a dotted line |                                                                                           |
-    | `dashed`                                      | Draws a dashed line |                                                                                           |
-    | `wavy`                                        | Draws a wavy line   |                                                                                           |
+    | Keyword                               | Description         | Comment                                                                        |
+    | ------------------------------------- | ------------------- | ------------------------------------------------------------------------------ |
+    | `solid`                               | Draws a single line |                                                                                |
+    | `double`                              | Draws a double line |                                                                                |
+    | `dotted`                              | Draws a dotted line |                                                                                |
+    | `dashed`                              | Draws a dashed line |                                                                                |
+    | `wavy`                                | Draws a wavy line   |                                                                                |
     | `-moz-none` {{ non-standard_inline }} | Do not draw a line  | **Do not use** **:** use {{ cssxref("text-decoration-line") }}`: none` instead |
 
 - `inherit`
@@ -55,20 +55,20 @@ text-decoration-style: unset;
 
 ```css
 .example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
+  -moz-text-decoration-line: underline;
+  -moz-text-decoration-style: wavy;
+  -moz-text-decoration-color: red;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  -webkit-text-decoration-color: red;
 }
 ```
 
 ```css
 .example {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: red;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
 }
 ```
 
@@ -80,8 +80,8 @@ text-decoration-style: unset;
 
 ## Especificações
 
-| Specification                                                                                                            | Status                                           | Comment                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Specification                                                                             | Status                              | Comment                                                                                    |
+| ----------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------ |
 | {{ SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style') }} | {{ Spec2('CSS3 Text Decoration') }} | Initial definition. The {{cssxref("text-decoration")}} property wasn't a shorthand before. |
 
 ## Browser compatíveis

@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 6: Generic list and detail views'
+title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn/Server-side/Django/Generic_views
 ---
 
@@ -68,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為“ the_model_name_list”），以訪問書本列表。
+就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
 
 > **備註：** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
@@ -124,19 +124,20 @@ class BookListView(generic.ListView):
 
 通用的 views 模板跟其他的模板沒有不同 (儘管傳遞給模板的內文/訊息當然可以不同). 與 index 模板一樣，我們在第一行中擴展了基本模板，然後更替名為 `content`的區塊。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Book List</h1>
   {% if book_list %}
-  <ul>
-    {% for book in book_list %}
+    <ul>
+      {% for book in book_list %}
       <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+        (\{{book.author}})
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
@@ -149,7 +150,7 @@ class BookListView(generic.ListView):
 
 我們使用 [`if`](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if), `else` 和 `endif` 模組標籤，以檢查`book_list` 是否已定義並且不為空。 如果 `book_list` 為空值, 則 `else` 子句回傳 text 說明沒有書可以列出. 如果`book_list`不是空值, 然後我們遍曆書籍清單。
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -163,9 +164,9 @@ The condition above only checks for one case, but you can test on additional con
 
 The template uses the [for](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below. Each iteration populates the `book` template variable with information for the current list item.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -369,27 +370,33 @@ The view first tries to get the specific book record from the model. If this fai
 
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Title: \{{ book.title }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+  <!-- author detail link not yet defined -->
   <p><strong>Summary:</strong> \{{ book.summary }}</p>
   <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
   <p><strong>Language:</strong> \{{ book.language }}</p>
-  <p><strong>Genre:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+  <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
   <div style="margin-left:20px;margin-top:20px">
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}
-    <hr>
-    <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">\{{ copy.get_status_display }}</p>
-    {% if copy.status != 'a' %}<p><strong>Due to be returned:</strong> \{{copy.due_back}}</p>{% endif %}
-    <p><strong>Imprint:</strong> \{{copy.imprint}}</p>
-    <p class="text-muted"><strong>Id:</strong> \{{copy.id}}</p>
+      <hr />
+      <p
+        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        \{{ copy.get_status_display }}
+      </p>
+      {% if copy.status != 'a' %}
+        <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
+      {% endif %}
+      <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
+      <p class="text-muted"><strong>Id:</strong> \{{ copy.id }}</p>
     {% endfor %}
   </div>
 {% endblock %}
@@ -416,7 +423,7 @@ The one interesting thing we haven't seen before is the function `book.bookinsta
 {% endfor %}
 ```
 
-需要這方法是因為我們僅在“一”那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在“多”那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為“reverse lookup”供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
+需要這方法是因為我們僅在「一」那側 model（Book）定義一個`ForeignKey` (一對多)字段的關聯，也因為沒有任何的關聯被定義在「多」那側 model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django 建立一個 function 取名為「reverse lookup」供使用。function 的名字以一對多關係中該 `ForeignKey` 被定義在的那個模型名稱小寫，再在字尾加上`_set`（因此在 `Book` 創建的 function 名是 `bookinstance_set()`）。
 
 > **備註：** 在這我們使用 `all()` 取得所有紀錄 (預設)，你無法直接在 template 做是因為你無法指定引數到 function，但你可用 `filter()` 方法取得一個紀錄的子集 。
 >
@@ -547,8 +554,11 @@ The code required for the URL mappers and the views should be virtually identica
 > - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.

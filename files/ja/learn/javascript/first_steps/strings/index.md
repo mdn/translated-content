@@ -39,11 +39,11 @@ l10n:
 1. 初めに、次の行を入力してみましょう。
 
    ```js
-   constt string = '革命はテレビでは放送されない。';
+   const string = "革命はテレビでは放送されない。";
    console.log(string);
    ```
 
-    数値のところでやったのと同じように、変数を宣言して、値を入れて初期化しています。そして値を返しています。ただ違うのは、文字列が引用符で囲まれて書かれていることです。
+   数値のところでやったのと同じように、変数を宣言して、値を入れて初期化しています。そして値を返しています。ただ違うのは、文字列が引用符で囲まれて書かれていることです。
 
 2. もし引用符で囲わななかったり、どちらか一方を書き忘れたりすると、エラーになります。
 
@@ -68,7 +68,7 @@ l10n:
 
 1. JavaScript では、文字列を囲む引用符として、単一引用符と二重引用符を使用することができます。以下のどちらの例も正しく動きます。
 
-   ```js
+   ```js-nolint
    const sgl = '単一引用符';
    const dbl = "二重引用符";
    console.log(sgl);
@@ -102,7 +102,7 @@ l10n:
 
 先ほどのコード行を直すには、問題となっている引用符をエスケープする必要があります。文字のエスケープとは、その文字が、コードではなく、文字列の一部であるとブラウザーに認識させる書き方です。JavaScript ではバックスラッシュ ( \ \[環境によっては円マーク (￥)]) を文字の前におくことでエスケープすることができます。
 
-```js
+```js-nolint example-good
 const bigmouth = 'I\'ve got no right to take my place…';
 console.log(bigmouth);
 ```
@@ -257,15 +257,3 @@ I gave it a score of 90%.
 ここまでが JavaScript での文字列の基礎になります。次の記事では、JavaScript で使える文字列操作の組み込み関数と、それを使って思い通りの形に文字列を変換する方法を、その基礎の上に建てていきましょう。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## このモジュール内
-
-- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
-- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
-- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
-- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

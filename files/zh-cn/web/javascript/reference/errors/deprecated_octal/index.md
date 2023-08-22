@@ -56,10 +56,9 @@ for octal literals use the \"0o\" prefix instead
 至于八进制转义序列，你可以使用十六进制转义序列来代替：
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
-## 相关内容
+## 参见
 
 - [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [警告：08/09 不是符合 ECMA-262 规范的八进制常量](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal)

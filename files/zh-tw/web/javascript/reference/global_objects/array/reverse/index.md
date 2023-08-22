@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 {{JSRef}}
 
-**`reverse()`** 方法會*[原地（in place）](https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)*反轉（reverses）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
+**`reverse()`** 方法會[_原地_（in place）](https://zh.wikipedia.org/wiki/原地算法)反轉（reverse）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
 ## 語法
 
-```plain
+```js-nolint
 a.reverse()
 ```
 
@@ -30,10 +30,10 @@ a.reverse()
 下列範例建立了一個包含三個元素的陣列 `a`，接著反轉此陣列。呼叫 `reverse()` 會回傳一個反轉後的原陣列 `a` 之參考。
 
 ```js
-var a = ['one', 'two', 'three'];
+var a = ["one", "two", "three"];
 var reversed = a.reverse();
 
-console.log(a);        // ['three', 'two', 'one']
+console.log(a); // ['three', 'two', 'one']
 console.log(reversed); // ['three', 'two', 'one']
 ```
 

@@ -30,7 +30,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         <p>
-          表示{{ htmlattrxref("autoplay", "video") }}的 HTML
+          表示[`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)的 HTML
           属性，表明在视频加载可用时是否不中断地自动播放资源
         </p>
       </td>
@@ -57,7 +57,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         映射在 HTML
-        标签。{{ htmlattrxref("controls", "video") }}属性控制是否显示用户播放界面的控制
+        标签。[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性控制是否显示用户播放界面的控制
         HTML
       </td>
     </tr>
@@ -95,7 +95,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>defaultMuted</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        映射在 HTML 标签上。 {{ htmlattrxref("muted", "video") }}
+        映射在 HTML 标签上。 [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
         属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用
         <code>muted</code> 属性
       </td>
@@ -144,7 +144,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>loop</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        会映射在 HTML 标签 {{ htmlattrxref("loop", "video") }} 属性
+        会映射在 HTML 标签 [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop) 属性
         , 决定该媒体是否循环播放。
       </td>
     </tr>
@@ -152,7 +152,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>mediaGroup</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        反映在 HTML {{ htmlattrxref("mediagroup", "video")}}
+        反映在 HTML [`mediagroup`](/zh-CN/docs/Web/HTML/Element/video#mediagroup)
         标签上。
         表示元素所归属的分组，同一组的媒体元素会共享同一个控制器（<code>controller</code>）。
       </td>
@@ -315,10 +315,10 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>preload</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("preload", "video") }} HTML
+        Reflects the [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload) HTML
         attribute, indicating what data should be preloaded, if any. Possible
         values are: <code>none</code>, <code>metadata</code>, <code>auto</code>.
-        See {{ htmlattrxref("preload", "video") }} attribute
+        See [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload) attribute
         documentation for details.
       </td>
     </tr>
@@ -413,7 +413,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>src</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("src", "video") }} HTML
+        Reflects the [`src`](/zh-CN/docs/Web/HTML/Element/video#src) HTML
         attribute, containing the URL of a media resource to use. Gecko
         implements a similar functionality for streams:
         <code>mozSrcObject</code>.

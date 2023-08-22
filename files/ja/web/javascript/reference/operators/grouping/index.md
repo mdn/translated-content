@@ -31,23 +31,23 @@ var b = 2;
 var c = 3;
 
 // default precedence
-a + b * c     // 7
+a + b * c; // 7
 // evaluated by default like this
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // now overriding precedence
 // addition before multiplication
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // which is equivalent to
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 これらの例では、評価の左から右への順序が維持されていることに注意してください。つまり、*演算子*の評価順序は変わっていますが、*オペランド*の評価順序は変わっていません。
 例えば次のコードを見てください。
 
 ```js
-a() * (b() + c())
+a() * (b() + c());
 ```
 
 関数 `a` は関数 `b` よりも前に、また関数 `b` は関数 `c` よりも前に呼び出されます。

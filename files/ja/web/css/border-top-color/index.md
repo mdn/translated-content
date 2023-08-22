@@ -50,9 +50,10 @@ border-top-color: unset;
 
 ```html
 <div class="mybox">
-  <p>これは周囲に境界線があるボックスです。
-     なお、ボックスのその辺が
-     <span class="redtext">赤</span>になっています。</p>
+  <p>
+    これは周囲に境界線があるボックスです。 なお、ボックスのその辺が
+    <span class="redtext">赤</span>になっています。
+  </p>
 </div>
 ```
 

@@ -5,37 +5,35 @@ slug: Web/JavaScript/Reference/Global_Objects/String/sup
 
 {{JSRef}} {{deprecated_header}}
 
-**`sup()`**方法创建 一个{{HTMLElement("sup")}}HTML 元素，使字符串显示为上标。
+{{jsxref("String")}} 值的 **`sup()`** 方法创建一个字符串，将该字符串嵌入到 {{HTMLElement("sup")}} 元素（`<sup>str</sup>`）中，这会导致该字符串显示为上标。
+
+> **备注：** 所有 [HTML 包装器方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法) 均已弃用，仅出于兼容性目的而进行标准化。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
 ## 语法
 
-```plain
-str.sup()
+```js-nolint
+sup()
 ```
 
 ### 返回值
 
-包含{{HTMLElement("sup")}} HTML 元素的字符串。
-
-## 描述
-
-`sup()` 方法将字符串嵌入 `<sup>` 标签中：`"<sup>str</sup>"`.
+以 `<sup>` 开始标记开头的字符串，然后是文本 `str`，最后是 `</sup>` 结束标记。
 
 ## 示例
 
-### 使用`sub()`和`sup()`方法
+### 使用 sub() 和 sup() 方法
 
-下面的示例使用了{{jsxref("String.prototype.sub()", "sub()")}}和`sup()`方法来格式化字符串：
+下面的示例使用了 {{jsxref("String.prototype.sub()", "sub()")}} 和 `sup()` 方法来格式化字符串：
 
 ```js
-var superText = 'superscript';
-var subText = 'subscript';
+const superText = "上标";
+const subText = "下标";
 
-console.log('This is what a ' + superText.sup() + ' looks like.');
-// "这就是<sup>superscript</sup>的样子。"
+console.log(`这就是${superText.sup()}的样子。`);
+// "这就是<sup>上标</sup>的样子。"
 
-console.log('This is what a ' + subText.sub() + ' looks like.');
-// "这就是<sub>subscript</sub>的样子。"
+console.log(`这就是${subText.sub()}的样子。`);
+// "这就是<sub>下标</sub>的样子。"
 ```
 
 ## 规范
@@ -46,6 +44,7 @@ console.log('This is what a ' + subText.sub() + ' looks like.');
 
 {{Compat}}
 
-## 另见
+## 参见
 
+- [`core-js` 中 `String.prototype.sup` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.sub()")}}

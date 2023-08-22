@@ -9,9 +9,9 @@ slug: Web/HTML/Attributes/autocomplete
 
 자동완성으로 제안할 값의 출처는 대개 브라우저가 선택합니다. 사전 정의된 값을 사용할 수도 있으나 보통 과거에 사용자가 입력했던 값을 사용합니다. 예를 들어 사용자가 입력한 이름, 주소, 전화번호, 이메일 주소를 브라우저에 저장할 방법을 제공하기도 하고, 신용카드 정보를 미리 암호화해 저장하고 인증절차 후 자동완성 값으로 쓸 수도 있습니다.
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소에 `autocomplete` 특성을 지정하지 않은 경우, 브라우저는 요소의 양식 소유자, 즉 조상 {{HTMLElement("form")}} 요소 또는 {{htmlattrxref("form", "input")}} 특성의 값을 `id` 특성으로 사용하는 `<form>` 요소의 `autocomplete` 특성을 사용합니다.
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소에 `autocomplete` 특성을 지정하지 않은 경우, 브라우저는 요소의 양식 소유자, 즉 조상 {{HTMLElement("form")}} 요소 또는 [`form`](/ko/docs/Web/HTML/Element/input#form) 특성의 값을 `id` 특성으로 사용하는 `<form>` 요소의 `autocomplete` 특성을 사용합니다.
 
-더 많은 정보는 {{HTMLElement("form")}} 요소의 {{htmlattrxref("autocomplete", "form")}} 특성을 참고하세요.
+더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) 특성을 참고하세요.
 
 > **참고:** `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
 >
@@ -143,7 +143,7 @@ slug: Web/HTML/Attributes/autocomplete
 ```html
 <div>
   <label for="cc-number">Enter your credit card number</label>
-  <input type="number" name="cc-number" id="cc-number" autocomplete="off">
+  <input type="number" name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```
 

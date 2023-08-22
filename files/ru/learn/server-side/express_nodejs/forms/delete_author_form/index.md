@@ -1,7 +1,6 @@
 ---
 title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
-translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 
 В этой статье показано, как определить страницу для удаления объектов `Author`.
@@ -14,24 +13,32 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 ```js
 // Отображать форму для удаления автора GET
-exports.author_delete_get = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.author==null) { // No results.
-            res.redirect('/catalog/authors');
-        }
-        // Удачно, значит рендерим.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_delete_get = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        res.redirect("/catalog/authors");
+      }
+      // Удачно, значит рендерим.
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    },
+  );
 };
 ```
 
@@ -53,32 +60,41 @@ exports.author_delete_get = function(req, res, next) {
 
 ```js
 // Обработчик удаления автора POST.
-exports.author_delete_post = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-          Author.findById(req.body.authorid).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.body.authorid }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        // Success
-        if (results.authors_books.length > 0) {
-            // Автор книги. Визуализация выполняется так же, как и для GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-            return;
-        }
-        else {
-            //У автора нет никаких книг. Удалить объект и перенаправить в список авторов.
-            Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
-                if (err) { return next(err); }
-                // Успех-перейти к списку авторов
-                res.redirect('/catalog/authors')
-            })
-        }
-    });
+exports.author_delete_post = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.body.authorid).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.body.authorid }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      // Success
+      if (results.authors_books.length > 0) {
+        // Автор книги. Визуализация выполняется так же, как и для GET route.
+        res.render("author_delete", {
+          title: "Delete Author",
+          author: results.author,
+          author_books: results.authors_books,
+        });
+        return;
+      } else {
+        //У автора нет никаких книг. Удалить объект и перенаправить в список авторов.
+        Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
+          if (err) {
+            return next(err);
+          }
+          // Успех-перейти к списку авторов
+          res.redirect("/catalog/authors");
+        });
+      }
+    },
+  );
 };
 ```
 
@@ -90,7 +106,7 @@ exports.author_delete_post = function(req, res, next) {
 
 Создайте **/views/author_delete.pug** и скопируйте текст ниже.
 
-```html
+```pug
 extends layout
 
 block content
@@ -134,7 +150,7 @@ block content
 
 Откройте **author_detail.pug** и добавьте следующие строки внизу.
 
-```html
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author

@@ -9,8 +9,6 @@ slug: Web/CSS/outline
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 ## 구성 속성
 
 `outline`은 단축 속성으로서 다음의 하위 속성을 포함합니다.

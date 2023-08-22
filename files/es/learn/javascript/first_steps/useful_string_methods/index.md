@@ -16,7 +16,7 @@ Ahora que hemos analizado los conceptos básicos de las cadenas, aumentemos la v
 Ya lo dijimos antes, y lo diremos de nuevo — _todo_ es un objeto en JavaScript. Cuando creas una cadena, por ejemplo, usando:
 
 ```js
-let string = 'This is my string';
+let string = "This is my string";
 ```
 
 Tu variable se convierte en una instancia del objeto cadena y, como resultado, tiene una gran cantidad de propiedades y métodos disponibles. Puedes ver esto si vas a la página de objeto {{jsxref("String")}} y miras la lista al costado de la página.
@@ -26,10 +26,10 @@ Tu variable se convierte en una instancia del objeto cadena y, como resultado, t
 Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes [abrir esta consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una ventana o pestaña por separado, o si prefieres usar la [consola de desarrolladores del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools)).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -37,7 +37,7 @@ Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamo
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -71,60 +71,55 @@ Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamo
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class', 'input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -136,7 +131,7 @@ Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamo
 Esto es fácil — simplemente usa la propiedad {{jsxref("String.prototype.length", "length")}} . Intenta ingresar las siguientes líneas:
 
 ```js
-let browserType = 'mozilla';
+let browserType = "mozilla";
 browserType.length;
 ```
 
@@ -153,7 +148,7 @@ browserType[0];
 ¡ Las computadoras cuentan desde 0, no desde 1! Para extraer el último caracter de _cualquier_ cadena, podríamos usar la siguiente línea, combinando esta técnica con la propiedad `length` que vimos arriba:
 
 ```js
-browserType[browserType.length-1];
+browserType[browserType.length - 1];
 ```
 
 El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posición del caracter es 6, por lo tanto, necesitamos `length-1`. Puedes usar esto para, por ejemplo, encontrar la primera letra de una serie de cadenas y ordenarlas alfabéticamente.
@@ -162,43 +157,43 @@ El largo de "mozilla" es 7, pero es porque el contador comienza en 0, la posici�
 
 1. Algunas veces querrás encontrar si hay una cadena más pequeña dentro de una más grande (generalmente decimos _si una subcadena está presente dentro de una cadena_). Esto se puede hacer utilizando el método {{jsxref("String.prototype.indexOf()", "indexOf()")}}, que toma un único [parámetro](/es/docs/Glossary/Parameter) — la subcadena que deseas buscar. Intenta esto:
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+   ```js
+   browserType.indexOf("zilla");
+   ```
 
-    Esto nos dá un resultado de 2, porque la subcadena "zilla" comienza en la posición 2 (0, 1, 2 — por tanto 3 caracteres en total) dentro de "mozilla". Tal código podría usarse para filtrar cadena. Por ejemplo, podemos tener una lista de direcciones web y solo queremos imprimir las que contienen "mozilla".
+   Esto nos dá un resultado de 2, porque la subcadena "zilla" comienza en la posición 2 (0, 1, 2 — por tanto 3 caracteres en total) dentro de "mozilla". Tal código podría usarse para filtrar cadena. Por ejemplo, podemos tener una lista de direcciones web y solo queremos imprimir las que contienen "mozilla".
 
 2. Esto se puede hacer de otra manera, que posiblemente sea aún más efectiva. Intenta lo siguiente:
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+   ```js
+   browserType.indexOf("vanilla");
+   ```
 
-    Esto debería darte un resultado de `-1` — Esto se devuelve cuando la subcadena, en este caso 'vanilla', no es encontrada en la cadena principal.
+   Esto debería darte un resultado de `-1` — Esto se devuelve cuando la subcadena, en este caso 'vanilla', no es encontrada en la cadena principal.
 
-    Puedes usar esto para encontrar todas las instancias de las cadenas que **no** contengan la subcadena 'mozilla', o **hacerlo,** si usas el operador de negación, como se muestra a continuación. Podrías hacer algo como esto:
+   Puedes usar esto para encontrar todas las instancias de las cadenas que **no** contengan la subcadena 'mozilla', o **hacerlo,** si usas el operador de negación, como se muestra a continuación. Podrías hacer algo como esto:
 
-    ```js
-    if(browserType.indexOf('mozilla') !== -1) {
-      // do stuff with the string
-    }
-    ```
+   ```js
+   if (browserType.indexOf("mozilla") !== -1) {
+     // do stuff with the string
+   }
+   ```
 
 3. Cuando sabes donde comienza una subcadena dentro de una cadena, y sabes hasta cuál caracter deseas que termine, puede usarse {{jsxref("String.prototype.slice()", "slice()")}} para extraerla. Prueba lo siguiente:
 
-    ```js
-    browserType.slice(0,3);
-    ```
+   ```js
+   browserType.slice(0, 3);
+   ```
 
-    Esto devuelve "moz" — El primer parámetro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído. Por lo tanto, el corte ocurre desde la primera posición en adelante, pero excluyendo la última posición. En este ejemplo, dado que el índice inicial es 0, el segundo parámetro es igual a la longitud de la cadena que se devuelve.
+   Esto devuelve "moz" — El primer parámetro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído. Por lo tanto, el corte ocurre desde la primera posición en adelante, pero excluyendo la última posición. En este ejemplo, dado que el índice inicial es 0, el segundo parámetro es igual a la longitud de la cadena que se devuelve.
 
 4. Además, si sabes que deseas extraer todos los caracteres restantes de una cadena después de cierto caracter, ¡no necesitas incluir el segundo parámetro! En cambio, solo necesitas incluir la posición del caracter desde donde deseas extraer los caracteres restante en la cadena. Prueba lo siguiente:
 
-    ```js
-    browserType.slice(2);
-    ```
+   ```js
+   browserType.slice(2);
+   ```
 
-    Esto devuelve "zilla" — debido a que la posición del caracter de 2 es la letra z, y como no incluiste un segundo parámetro, la subcadena que que se devolvío fué el resto de los caracteres de la cadena.
+   Esto devuelve "zilla" — debido a que la posición del caracter de 2 es la letra z, y como no incluiste un segundo parámetro, la subcadena que que se devolvío fué el resto de los caracteres de la cadena.
 
 > **Nota:** El segundo parámetro de `slice()` es opcional: si no lo incluyes, el corte termina al final de la cadena original. Hay otras opciones también; estudia la página {{jsxref("String.prototype.slice()", "slice()")}} para ver que mas puedes averiguar.
 
@@ -209,7 +204,7 @@ Los métodos de cadena {{jsxref("String.prototype.toLowerCase()", "toLowerCase()
 Intentemos ingresar las siguentes líneas para ver que sucede:
 
 ```js
-let radData = 'My NaMe Is MuD';
+let radData = "My NaMe Is MuD";
 radData.toLowerCase();
 radData.toUpperCase();
 ```
@@ -221,7 +216,7 @@ En una cadena puedes reemplazar una subcadena por otra usando el método {{jsxre
 Toma dos parámetros — la cadena que deseas reemplazar, y la cadena con la que deseas reemplazarla. Prueba este ejemplo:
 
 ```js
-browserType.replace('moz','van');
+browserType.replace("moz", "van");
 ```
 
 Ten en cuenta que para obtener realmente el valor actualizado reflejado en la variable `browserType` en un programa real, debes establecer que el valor de la variable sea el resultado de la operación; No solo actualiza el valor de la subcadena automáticamente. Así que tendrías que escribir esto: `browserType = browserType.replace('moz','van');`
@@ -244,15 +239,13 @@ En el primer ejercicio, comenzamos de manera simple — tenemos una matríz de m
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -277,8 +270,8 @@ for (var i = 0; i < greetings.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -305,9 +298,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -315,38 +308,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n \'Merry Christmas my love\',\n \'A happy Christmas to all the family\',\n \'You\\\'re all I want for Christmas\',\n \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n var result = input;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n 'Merry Christmas my love',\n 'A happy Christmas to all the family',\n 'You\\'re all I want for Christmas',\n 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Christmas') !== -1) {\n var result = input;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n }\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -358,8 +352,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -370,10 +367,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -400,15 +397,13 @@ En este ejercicio tenemos los nombres de las ciudades del Reino Unido, Pero las 
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -426,8 +421,8 @@ for(var i = 0; i < cities.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -454,9 +449,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -464,38 +459,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -507,8 +503,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -519,10 +518,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -560,15 +559,13 @@ Recomendamos hacerlo así:
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 125px;">
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -591,8 +588,8 @@ for (var i = 0; i < stations.length; i++) {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -619,9 +616,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -629,38 +626,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n \'GNF576746573fhdg4737dh4;Greenfield\',\n \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n \'SYB4f65hf75f736463;Stalybridge\',\n \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n 'GNF576746573fhdg4737dh4;Greenfield',\n 'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n 'SYB4f65hf75f736463;Stalybridge',\n 'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(';');\n var name = input.slice(semiC + 1);\n var result = code + ': ' + name;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -672,8 +670,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -684,10 +685,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

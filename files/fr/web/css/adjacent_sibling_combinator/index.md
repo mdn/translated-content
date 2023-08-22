@@ -1,12 +1,6 @@
 ---
 title: Combinateur de voisin direct
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Adjacent_sibling_combinator
-original_slug: Web/CSS/Combinateur_de_voisin_direct
 ---
 
 {{CSSRef("Selectors")}}

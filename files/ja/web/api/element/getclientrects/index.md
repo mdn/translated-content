@@ -1,5 +1,6 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() メソッド"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
 l10n:
   sourceCommit: 88ecc11b7d151365a93dad4536a350a832b14d20
@@ -7,9 +8,9 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
+**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
 
-多くの要素には、境界ボックスが 1 つずつしかありませんが、複数行の[インライン要素](/ja/docs/Web/HTML/Inline_elements) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には、行ごとに囲む境界ボックスがあります。
+多くの要素には、境界ボックスが 1 つずつしかありませんが、複数行の[インラインレベル要素](/ja/docs/Glossary/Inline-level_content) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には、行ごとに囲む境界ボックスがあります。
 
 ## 構文
 
@@ -23,7 +24,7 @@ getClientRects()
 
 ### 返値
 
-返される値は {{DOMxRef("DOMRect")}} オブジェクトのコレクションで、要素に関連付けられた CSS の境界ボックスごとに 1 つずつ用意されます。それぞれの {{DOMxRef("DOMRect")}} オブジェクトは、ビューポートの左上からの境界ボックスの座標をピクセル単位で表します。キャプションを持つ表の場合、キャプションは表のの境界ボックスの外側にあっても含まれます。外部の `<svg>` 以外の SVG 要素に対して呼び出された場合、結果として得られる矩形の相対的な「ビューポート」は、その要素の外部の `<svg>` が確立したビューポートになります（明確にするために、矩形は外部の `<svg>` の `viewBox` 変形によっても変換されます）。
+返される値は {{DOMxRef("DOMRect")}} オブジェクトのコレクションで、要素に関連付けられた CSS の境界ボックスごとに 1 つずつ用意されます。それぞれの {{DOMxRef("DOMRect")}} オブジェクトは、ビューポートの左上からの境界ボックスの座標をピクセル単位で表します。キャプションを持つ表の場合、キャプションは表の境界ボックスの外側にあっても含まれます。外部の `<svg>` 以外の SVG 要素に対して呼び出された場合、結果として得られる矩形の相対的な「ビューポート」は、その要素の外部の `<svg>` が確立したビューポートになります（明確にするために、矩形は外部の `<svg>` の `viewBox` 変形によっても変換されます）。
 
 矩形を計算する際には、ビューポート領域（またはその他のスクロール可能な要素）のスクロール量が考慮されます。
 

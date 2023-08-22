@@ -1,5 +1,5 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
 ---
 
@@ -34,18 +34,19 @@ simple-custom:defined {
 このデモでは、非常にシンプルで些細なカスタム要素を定義しています。
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 次に、この要素のコピーを、標準的な `<p>` と共に文書に挿入します。

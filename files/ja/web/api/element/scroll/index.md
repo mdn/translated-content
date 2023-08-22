@@ -1,6 +1,9 @@
 ---
-title: Element.scroll()
+title: "Element: scroll() メソッド"
+short-title: scroll()
 slug: Web/API/Element/scroll
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
@@ -9,9 +12,9 @@ slug: Web/API/Element/scroll
 
 ## 例
 
-```js
-element.scroll(x-coord, y-coord)
-element.scroll(options)
+```js-nolint
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### 引数
@@ -30,7 +33,14 @@ element.scroll(options)
     - `left`
       - : ウィンドウまたは要素をスクロールする X 軸方向のピクセル数を指定します。
     - `behavior`
-      - : スクロールをスムーズなアニメーションで行うか (`smooth`)、単一のジャンプで即座に行うか (`instant`)、ブラウザーの選択に任せるか (`auto`、既定値) を指定します。
+      - : スクロールを即座に行うか、滑らかにアニメーションさせるかを決定します。このオプションは文字列であり、以下のいずれかの値を取ります。
+        - `smooth`: スクロールをスムーズなアニメーションで行う
+        - `instant`: スクロールを単一のジャンプで即座に行う
+        - `auto`: スクロールの動作を {{cssxref("scroll-behavior")}} の計算値によって指定する
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -45,7 +55,7 @@ element.scroll(0, 1000);
 element.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

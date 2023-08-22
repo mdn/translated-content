@@ -1,7 +1,6 @@
 ---
 title: 异步 JavaScript
 slug: Learn/JavaScript/Asynchronous
-original_slug: learn/JavaScript/异步
 ---
 
 {{LearnSidebar}}

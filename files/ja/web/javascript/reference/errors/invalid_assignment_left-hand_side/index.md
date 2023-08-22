@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: invalid assignment left-hand side'
+title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
 
@@ -41,12 +41,10 @@ var str = 'Hello, '
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-var str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+var str = "Hello, " + "from the " + "other side!";
 ```
 
 ## 関連項目

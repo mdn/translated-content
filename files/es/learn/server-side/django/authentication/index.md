@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
+title: "Tutorial de Django Parte 8: Autenticación y permisos de Usuario"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -13,7 +13,7 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
       <th scope="row">Prerequisitos:</th>
       <td>
         Completa todos los temas del tutorial anterior, incluyendo:
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/es/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -71,13 +71,13 @@ Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Dj
 >
 > ```python
 > from django.contrib.auth.models import User
-> 
+>
 > # Create user and save to the database
-> 
+>
 > user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-> 
+>
 > # Update fields and then save again
-> 
+>
 > user.first_name = 'John'
 > user.last_name = 'Citizen'
 > user.save()
@@ -101,7 +101,7 @@ Ahora vamos a crear un usuario:
 3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
 4. Presiona **Save** "Guardar" para crear el usuario.
 
-    El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
+   El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
 5. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](admin_authentication_user_add_group.png)
@@ -136,15 +136,15 @@ Navega hasta la URL `http://127.0.0.1:8000/accounts/` (¡Nota la barra inclinada
 
 > **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
 >
-> ```
-> ^accounts/login/$ [name='login']
-> ^accounts/logout/$ [name='logout']
-> ^accounts/password_change/$ [name='password_change']
-> ^accounts/password_change/done/$ [name='password_change_done']
-> ^accounts/password_reset/$ [name='password_reset']
-> ^accounts/password_reset/done/$ [name='password_reset_done']
-> ^accounts/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$ [name='password_reset_confirm']
-> ^accounts/reset/done/$ [name='password_reset_complete']
+> ```python
+> accounts/ login/ [name='login']
+> accounts/ logout/ [name='logout']
+> accounts/ password_change/ [name='password_change']
+> accounts/ password_change/done/ [name='password_change_done']
+> accounts/ password_reset/ [name='password_reset']
+> accounts/ password_reset/done/ [name='password_reset_done']
+> accounts/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+> accounts/ reset/done/ [name='password_reset_complete']
 > ```
 
 Ahora intenta navegar a la URL de inicio de sesion "login"(`http://127.0.0.1:8000/accounts/login/`). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
@@ -172,15 +172,24 @@ Para este sitio pondremos nuestra pagina HTML en el directorio **"templates/regi
 >     |\_registration
 > ```
 
-Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**, y actualiza la seccion de **TEMPLATES** con la linea **'DIRS'** como se muestra a continuacion.
+Para hacer estos directorios visibles al cargador de plantillas (es decir introducir este directorio en el buscador de directorios de plantillas) abre el archivo de configuracion del proyecto setting.py (**/locallibrary/locallibrary/settings.py)**
+
+A continuación, importa el módulo `os` (añade la siguiente línea al principio del archivo).
 
 ```python
-TEMPLATES = [
-    {
-        ...
-        'DIRS': ['./templates',],
-        'APP_DIRS': True,
-        ...
+import os # necesario para el siguiente código
+```
+
+Actualiza la seccion de TEMPLATES con la linea 'DIRS' como se muestra a continuacion.
+
+```python
+    # …
+    TEMPLATES = [
+      {
+       # …
+       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+       'APP_DIRS': True,
+       # …
 ```
 
 ### Plantilla inicio de sesión "login"
@@ -189,44 +198,42 @@ TEMPLATES = [
 
 Crea un nuevo archivo HTML llamado /**locallibrary/templates/registration/login.html**. suministrado en el siguiente contenido :
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
 
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
 
-{% if next %}
+  {% if next %}
     {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
     {% else %}
-    <p>Please login to see this page.</p>
+      <p>Please login to see this page.</p>
     {% endif %}
-{% endif %}
+  {% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>\{{ form.username.label_tag }}</td>
+        <td>\{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>\{{ form.password.label_tag }}</td>
+        <td>\{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
+  </form>
 
-<div>
-  <td>\{{ form.username.label_tag }}</td>
-  <td>\{{ form.username }}</td>
-</div>
-<div>
-  <td>\{{ form.password.label_tag }}</td>
-  <td>\{{ form.password }}</td>
-</div>
-
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="\{{ next }}" />
-</div>
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
 ```
@@ -252,7 +259,7 @@ Si navegas a la url de cierre de sesión (`http://127.0.0.1:8000/accounts/logout
 
 Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**. Copia en él el siguiente texto:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -276,16 +283,18 @@ Las siguientes plantillas pueden usarse como un punto de partida.
 
 Este es el formulario para obtener la dirección del correo electrónico del usuario (para enviar el correo de reinicio de contraseña). Crea **/locallibrary/templates/registration/password_reset_form.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<form action="" method="post">{% csrf_token %}
-    {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
-        <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
-
+  <form action="" method="post">
+  {% csrf_token %}
+  {% if form.email.errors %}
+    \{{ form.email.errors }}
+  {% endif %}
+      <p>\{{ form.email }}</p>
+    <input type="submit" class="btn btn-default btn-lg" value="Reset password">
+  </form>
 {% endblock %}
 ```
 
@@ -293,7 +302,7 @@ Este es el formulario para obtener la dirección del correo electrónico del usu
 
 Este formulario es mostrado después de que tu dirección de correo electrónico haya sido recogida. Crea **/locallibrary/templates/registration/password_reset_done.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 <p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
@@ -304,7 +313,7 @@ Este formulario es mostrado después de que tu dirección de correo electrónico
 
 Esta plantilla suministra el texto HTML del correo electrónico, y contiene el enlace de reseteo que enviaremos a los usuarios. Crea **/locallibrary/templates/registration/password_reset_email.html**, y establece el siguiente contenido:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -313,7 +322,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Esta página es donde introduces una nueva contraseña después de pinchar el enlace en el correo electrónico de reinicio de contraseña. Crea **/locallibrary/templates/registration/password_reset_confirm.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -353,7 +362,7 @@ Esta página es donde introduces una nueva contraseña después de pinchar el en
 
 Este es el último paso de la plantilla de reinicio de contraseña, que es mostrada para notificarte cuando el reinicio de contraseña ha tenido éxito. Crea **/locallibrary/templates/registration/password_reset_complete.html**, y establece el siguiente contenido:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
@@ -376,7 +385,9 @@ Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enla
 
 > **Nota:** El sistema de reinicio de contraseña requiere que tu sitio web soporte envío de correo, que está más allá del ámbito de este artículo, por lo que esta parte **no funcionará todavía**. Para permitir el testeo, establece la siguiente línea al final de tu fichero settings.py. Esto registra en la consola cualquier envío de correo electrónico (y así puedes copiar el enlace de reinicio de contraseña desde dicha consola).
 >
-> `EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'`
+> ```python
+> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> ```
 >
 > Para más información, ver [Sending email](https://docs.djangoproject.com/en/1.10/topics/email/) (Django docs).
 
@@ -392,7 +403,7 @@ Es típico que primero pruebes con la variable de plantilla `\{{ user.is_authent
 
 Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y copia el siguiente texto en el bloque `sidebar`, justamente antes de la etiqueta de plantilla `endblock` .
 
-```html
+```django
   <ul class="sidebar-nav">
 
     ...
@@ -539,11 +550,11 @@ Para restringir nuestra consulta a solamente los objetos BookInstance del usuari
 
 ### Configuración URL para libros alquilados
 
-Ahora abre **/catalog/urls.py** y añade la url `url()` apuntando a la vista anterior (puedes simplemente copiar el texto de abajo al final del fichero).
+Ahora abre **/catalog/urls.py** y añade un `path()` apuntando a la vista anterior (puedes simplemente copiar el texto de abajo al final del fichero).
 
 ```python
 urlpatterns += [
-    url(r'^mybooks/$', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+    path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
 ]
 ```
 
@@ -551,7 +562,7 @@ urlpatterns += [
 
 Ahora todo lo que necesitamos hacer para esta página es añadir una plantilla. Primero, creamos el fichero plantilla **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** y establecemos el siguiente contenido en ella:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -583,7 +594,7 @@ El último paso es añadir un enlace para esta nueva página en la barra lateral
 
 Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y añade la línea en negrita a la barra lateral como se muestra.
 
-```html
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
@@ -627,7 +638,7 @@ Abre **catalog/models.py**, y añade el permiso como se muestra arriba. Necesita
 
 Los permisos del usuario actual están almacenados en una variable de plantilla llamada `\{{ perms }}`. Puedes comprobar si el usuario actual tiene un permiso particular usando el nombre de variable específico con la "app" asociada en Django — ej. `\{{ perms.catalog.can_mark_returned }}` será `True` (cierto) si el usuario tiene el permiso, y `False` (falso) en otro caso. De forma típica probamos el permiso usando la etiqueta de plantilla `{% if %}` como se muestra:
 
-```html
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->

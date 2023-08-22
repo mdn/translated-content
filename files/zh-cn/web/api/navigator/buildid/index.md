@@ -17,7 +17,7 @@ buildID = navigator.buildID;
 
 一个字符串，用来表示当前应用的构建标识。构建 ID 的格式为：`YYYYMMDDHHMMSS`。
 
-## **示例**
+## 示例
 
 ```js
 console.log(window.navigator.buildID);

@@ -1,6 +1,6 @@
 ---
 title: 色選択ツール
-slug: Web/CSS/CSS_Colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker_tool
 ---
 
 {{CSSRef}}

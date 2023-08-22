@@ -2,6 +2,7 @@
 title: Notifications API
 slug: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}
 
 Notifications API 는 웹 페이지가 일반 사용자에게 시스템 알림 표시를 제어할 수 있게 해줍니다. 이러한 알람은 최상단 브라우징 컨텍스트 뷰포트의 바깥에 위치하므로 사용자가 탭을 변경하거나 다른 앱으로 이동했을때에도 표시할 수 있습니다. 이 API 는 다양한 플랫폼에 존재하는 알림 시스템과 호환되도록 디자인되었습니다.

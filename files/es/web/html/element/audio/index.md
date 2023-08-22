@@ -1,7 +1,6 @@
 ---
 title: Audio
 slug: Web/HTML/Element/audio
-original_slug: Web/HTML/Elemento/audio
 ---
 
 El elemento `audio` se usa para insertar contenido de audio en un documento HTML o XHTML. El elemento `audio` se agregó como parte de HTML 5.
@@ -13,10 +12,10 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 ## Contexto de uso
 
 | Contenido permitido            | [Contenido transparente](/en/HTML/Content_categories#transparent_content), que contiene bien un atributo **src**, bien uno o más elementos {{ HTMLElement("source") }}, seguido de [contenido dinámico](/en/HTML/Content_categories#flow_content) o [contenido estático](/en/HTML/Content_categories#phrasing_content) , sin ningún elemento de {{ HTMLElement("video") }} o `<audio>`. |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre.                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                              |
-| Documento normativo            | [HTML5, sección 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre.                                                                                                                                                                                                                                                                                                        |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/en/HTML/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](/en/HTML/Content_categories#phrasing_content).                                                                                                                                                                                        |
+| Documento normativo            | [HTML5, sección 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                     |
 
 ## Atributos
 
@@ -56,8 +55,7 @@ Las compensaciones de tiempo se especifican como valores float que indican el n�
 ## Ejemplos
 
 ```html
-<audio src="audiotest_(1).ogg"
-       autoplay>
+<audio src="audiotest_(1).ogg" autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```

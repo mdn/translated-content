@@ -1,7 +1,6 @@
 ---
-title: '<nav>: El elemento de sección de navegación'
+title: "<nav>: El elemento de sección de navegación"
 slug: Web/HTML/Element/nav
-original_slug: Web/HTML/Elemento/nav
 ---
 
 {{HTMLSidebar}}
@@ -11,10 +10,10 @@ El **elemento** **HTML `<nav>`** representa una sección de una página cuyo pro
 | [Content categories](/es/docs/Web/Guide/HTML/categorias_de_contenido) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [sectioning content](/es/docs/HTML/Content_categories#Sectioning_content), palpable content. |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                                   | [Flow content](/es/docs/HTML/Content_categories#Flow_content).                                                                                              |
-| Omisión de etiquetas                                                  | {{no_tag_omission}}                                                                                                                                    |
+| Omisión de etiquetas                                                  | {{no_tag_omission}}                                                                                                                                         |
 | Elementos padres permitidos                                           | Cualquier elemento que acepte [flow content](/es/docs/HTML/Content_categories#Flow_content).                                                                |
 | Roles ARIA permitidos                                                 | Ninguno                                                                                                                                                     |
-| Interfaz DOM                                                          | {{domxref("HTMLElement")}}                                                                                                                        |
+| Interfaz DOM                                                          | {{domxref("HTMLElement")}}                                                                                                                                  |
 
 ## Atributos
 

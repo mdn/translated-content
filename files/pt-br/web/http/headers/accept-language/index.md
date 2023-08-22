@@ -61,10 +61,10 @@ Accept-Language: en-US,en;q=0.5
 
 ## Specifications
 
-| Specification                                            | Title                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
+| Specification                               | Title                                                         |
+| ------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Accept-Language", "5.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
-| [BCP 47](https://tools.ietf.org/html/bcp47)              | Tags for the Identification of Language                       |
+| [BCP 47](https://tools.ietf.org/html/bcp47) | Tags for the Identification of Language                       |
 
 ## Compatibilidade com navegadores
 

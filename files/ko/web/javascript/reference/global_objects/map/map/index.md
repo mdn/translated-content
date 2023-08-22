@@ -1,13 +1,13 @@
 ---
-title: Map() constructor
+title: Map() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 l10n:
-  sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`Map()`constructor(생성자)** 는 {{jsxref("Map")}} 객체를 생성합니다.
+**`Map()`** 생성자는 {{jsxref("Map")}} 객체를 생성합니다.
 
 ## 구문
 
@@ -32,9 +32,9 @@ new Map(iterable)
 
 ```js
 const myMap = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 ```
 

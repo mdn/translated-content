@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 ## 구문
 
 ```js
-    dateObj.getDate()
+dateObj.getDate();
 ```
 
 ### 반환 값
@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
 아래 코드의 두 번째 명령문은 `Xmas95`의 값에 기반하여 `day`에 2를 할당합니다.
 
 ```js
-var Xmas95 = new Date('December 25, 1995 23:15:30');
+var Xmas95 = new Date("December 25, 1995 23:15:30");
 var day = Xmas95.getDate();
 
 console.log(day); // 25

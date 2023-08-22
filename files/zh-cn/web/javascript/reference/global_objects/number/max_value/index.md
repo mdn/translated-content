@@ -19,15 +19,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 
 ## 示例
 
-### 例子：使用 `MAX_VALUE`
+### 示例：使用 `MAX_VALUE`
 
 下面的代码求两个数值的乘积。如果结果小于等于 `MAX_VALUE`，则调用 `func1` 函数；否则，调用 `func2` 函数。
 
 ```js
 if (num1 * num2 <= Number.MAX_VALUE) {
-   func1();
+  func1();
 } else {
-   func2();
+  func2();
 }
 ```
 

@@ -19,9 +19,9 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 - [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
 - [网络可访问资源](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
 
-![](webextension-anatomy.png)
+![Web 扩展的组件。manifest.JSON 是所有扩展里都必须存在的。它提供指向后台页面、内容脚本、浏览器动作、页面动作、选项页和 web 可访问资源的引用。后台页面由 HTML 和 JS 组成。内容脚本由 JS 和 CSS 组成。用户单击扩展图标能够触发浏览器动作和页面动作，由此产生的弹出窗口由 HTML、CSS 和 JS 组成。选项页由 HTML、CSS 和 JS 组成。](webextension-anatomy.png)
 
-浏览其他的详细信息请到 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 。
+参见 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 参考页以了解详情。
 
 除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 [Extension pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) 和支持的文件。
 
@@ -60,10 +60,10 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 **background-page.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script type="module" src="background-script.js"></script>
   </head>
 </html>

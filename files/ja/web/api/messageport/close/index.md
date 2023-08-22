@@ -28,10 +28,10 @@ port.close()
 次のコードブロックには、`handleMessage` ハンドラ関数があり、{{domxref("EventTarget.addEventListener")}} を使用してこのドキュメントにメッセージが返された時に実行されます。
 
 ```js
-channel.port1.addEventListener('message',handleMessage,false);
+channel.port1.addEventListener("message", handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
-  textInput.value = '';
+  textInput.value = "";
 }
 
 channel.port1.start();

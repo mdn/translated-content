@@ -19,9 +19,9 @@ A propriedade text-decoration desenha em elementos descendentes. Isso significa 
 
 ```css
 /* Valores Chave */
-text-decoration: none;                 /* Sem decoração */
-text-decoration: underline red;        /* Sublinhado vermelho */
-text-decoration: underline wavy red;   /* Sublinhado ondulado vermelho */
+text-decoration: none; /* Sem decoração */
+text-decoration: underline red; /* Sublinhado vermelho */
+text-decoration: underline wavy red; /* Sublinhado ondulado vermelho */
 
 /* Valores Globais */
 text-decoration: inherit;
@@ -41,31 +41,38 @@ A propriedade `text-decoration` é escrita de forma reduzida e pode usar os valo
 
 ```css
 h1.under {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 h1.over {
-    text-decoration: overline;
+  text-decoration: overline;
 }
 p.line {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 p.blink {
-    text-decoration: blink;
+  text-decoration: blink;
 }
 a.none {
-    text-decoration: none;
+  text-decoration: none;
 }
 p.underover {
-    text-decoration: underline overline;
+  text-decoration: underline overline;
 }
 ```
 
 ```html
 <h1 class="under">Underlined Header</h1>
 <p class="line">If you want to strike out text, use line-through.</p>
-<p class="blink">This text might blink for you - if you use Explorer, it will not.</p>
+<p class="blink">
+  This text might blink for you - if you use Explorer, it will not.
+</p>
 <h1 class="over">and now an overlined header.</h1>
-<p>This <a class="none" href="textdecoration.html">link will not be underlined</a>, as most links are by default. Be careful with removing the text decoration on links since most users depend on the underline to signify a hyperlink.</p>
+<p>
+  This
+  <a class="none" href="textdecoration.html">link will not be underlined</a>, as
+  most links are by default. Be careful with removing the text decoration on
+  links since most users depend on the underline to signify a hyperlink.
+</p>
 <p class="underover">This text has both underline and overline.</p>
 ```
 
@@ -73,11 +80,11 @@ p.underover {
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                                       | Comentários                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Especificação                                                                        | Status                            | Comentários                                                                                                     |
+| ------------------------------------------------------------------------------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformado em uma propriedade reduzida. Adicionado suporte para o valor {{cssxref('text-decoration-style')}}. |
-| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}             | {{Spec2('CSS2.1')}}                     | Sem mudanças significantes.                                                                                                 |
-| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                                 | {{Spec2('CSS1')}}                     | Definição inicial.                                                                                                          |
+| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}         | {{Spec2('CSS2.1')}}               | Sem mudanças significantes.                                                                                     |
+| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                          | {{Spec2('CSS1')}}                 | Definição inicial.                                                                                              |
 
 ## Compatibilidade com navegadores
 

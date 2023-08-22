@@ -42,6 +42,6 @@ console.log(obj.buffered.end(0));//第一个缓存结束的区域
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - The interface defining it, {{domxref("HTMLMediaElement")}}.

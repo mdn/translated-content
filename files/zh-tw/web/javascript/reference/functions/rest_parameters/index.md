@@ -43,9 +43,7 @@ function f(a, b) {
 
 // 現在可以寫成這樣
 
-function f(a, b, ...args) {
-
-}
+function f(a, b, ...args) {}
 ```
 
 ### 解構其餘參數 rest parameters
@@ -57,9 +55,9 @@ function f(...[a, b, c]) {
   return a + b + c;
 }
 
-f(1)          // NaN (b 和 c 都是 undefined)
-f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (第四個參數不會被解構，因為解構式只有三個定義好的變數名稱)
+f(1); // NaN (b 和 c 都是 undefined)
+f(1, 2, 3); // 6
+f(1, 2, 3, 4); // 6 (第四個參數不會被解構，因為解構式只有三個定義好的變數名稱)
 ```
 
 ## 範例
@@ -71,7 +69,7 @@ function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
-fun1();  // 0
+fun1(); // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
 ```
@@ -80,7 +78,7 @@ fun1(5, 6, 7); // 3
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function(element) {
+  return theArgs.map(function (element) {
     return multiplier * element;
   });
 }
@@ -128,7 +126,7 @@ console.log(sortArguments(5, 3, 7, 1)); // 顯示 1, 3, 5, 7
 
 ## 參見
 
-- [Spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Spread operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also 『`...`』)
 - [Arguments object](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)

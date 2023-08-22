@@ -1,156 +1,163 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}
 
-The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
+La interfaz **`CacheStorage`** representa el almacenamiento para objetos {{domxref("Cache")}}.
 
-The interface:
+La interfaz:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the [Service Workers](https://w3c.github.io/ServiceWorker/) spec defines it).
+- Proporciona un directorio maestro de todos los cachés con nombre a los que se puede acceder mediante un {{domxref("ServiceWorker")}} u otro tipo de trabajador o alcance de {{domxref("window")}} (no está limitado a usándolo solo con _service worker_).
+- Mantiene una asignación de nombres de cadenas a objetos {{domxref("Cache")}} correspondientes
 
-  > **Nota:** [Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
+Utilice {{domxref("CacheStorage.open()")}} para obtener una instancia de {{domxref("Cache")}}.
 
-- Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
+Usa {{domxref("CacheStorage.match()")}} para verificar si un {{domxref("Request")}} dado es una clave en cualquiera de los {{domxref("Cache")}} objetos que el objeto `CacheStorage` rastrea.
 
-Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance.
+Puede acceder a `CacheStorage` a través de la propiedad global {{domxref("caches")}}.
 
-Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
+> **Nota:** `CacheStorage` siempre rechaza con un `SecurityError` en orígenes que no son de confianza (es decir, aquellos que no usan HTTPS, aunque esta definición probablemente se volverá más compleja en el futuro). Al probar en Firefox, puede evitar esto marcando la opción **Activar service workers bajo HTTP (cuando la caja de herramientas esté abierta)** en el menú de opciones/engranaje de las Herramientas de desarrollador de Firefox. Además, debido a que `CacheStorage` requiere acceso al sistema de archivos, es posible que no esté disponible en modo privado en Firefox.
 
-You can access `CacheStorage` through the global {{domxref("caches", "caches")}} property.
+> **Nota:** {{domxref("CacheStorage.match()")}} es un método conveniente. Se puede implementar una funcionalidad equivalente para hacer coincidir una entrada de caché devolviendo una matriz de nombres de caché desde {{domxref("CacheStorage.keys()")}}, abriendo cada caché con {{domxref("CacheStorage.open()")}}, y haciendo coincidir el que quieras con {{domxref("Cache.match()")}}.
 
-> **Nota:** CacheStorage always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.
+{{AvailableInWorkers}}
 
-> **Nota:** {{domxref("CacheStorage.match()")}} is a convenience method. Equivalent functionality to match a cache entry can be implemented by returning an array of cache names from {{domxref("CacheStorage.keys()")}}, opening each cache with {{domxref("CacheStorage.open()")}}, and matching the one you want with {{domxref("Cache.match()")}}.
+{{securecontext_header}}
 
-## Methods
+## Métodos de instancia
 
 - {{domxref("CacheStorage.match()")}}
-  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
+  - : Comprueba si un objeto {{domxref("Request")}} dado es una clave en cualquiera de los objetos {{domxref("Cache")}} que rastrea el objeto {{domxref("CacheStorage")}} y devuelve un {{jsxref("Promise")}} que se resuelve en esa coincidencia.
 - {{domxref("CacheStorage.has()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to `true` if a {{domxref("Cache")}} object matching the `cacheName` exists.
+  - : Devuelve un {{jsxref("Promise")}} que se resuelve en `true` si existe un objeto {{domxref("Cache")}} que coincide con `cacheName`.
 - {{domxref("CacheStorage.open()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to the {{domxref("Cache")}} object matching the `cacheName` (a new cache is created if it doesn't already exist.)
+  - : Devuelve un {{jsxref("Promise")}} que se resuelve en el objeto {{domxref("Cache")}} que coincide con `cacheName` (se crea un nuevo caché si aún no existe).
 - {{domxref("CacheStorage.delete()")}}
-  - : Finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`. If no {{domxref("Cache")}} object is found, it resolves to `false`.
+  - : Encuentra el objeto {{domxref("Cache")}} que coincide con `cacheName` y, si lo encuentra, elimina el objeto {{domxref("Cache")}} y devuelve un {{jsxref("Promise")}} que se resuelve en `true`. Si no se encuentra ningún objeto {{domxref("Cache")}}, se resuelve como `false`.
 - {{domxref("CacheStorage.keys()")}}
-  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}}. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
+  - : Devuelve un {{jsxref("Promise")}} que se resolverá con una matriz que contiene cadenas correspondientes a todos los objetos {{domxref("Cache")}} nombrados rastreados por {{domxref("CacheStorage")}}. Utilice este método para iterar sobre una lista de todos los objetos {{domxref("Cache")}}.
 
-## Examples
+## Ejemplos
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/).) This service worker script waits for an {{domxref("InstallEvent")}} to fire, then runs {{domxref("ExtendableEvent.waitUntil","waitUntil")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.addAll")}} to add a series of assets to it.
+Este fragmento de código de MDN [ejemplo simple de _service worker_](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) (vea [simple _service worker_ ejecutándose en vivo](https://bncb2v.csb.app/).)
+Este código de _service worker_ espera que se active un {{domxref("InstallEvent")}}, luego ejecuta {{domxref("ExtendableEvent.waitUntil","waitUntil")}} para manejar el proceso de instalación de la aplicación. Esto consiste en llamar a {{domxref("CacheStorage.open")}} para crear un nuevo caché, luego usar {{domxref("Cache.addAll")}} para agregarle una serie de activos.
 
-In the second code block, we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response like so:
+En el segundo bloque de código, esperamos que se active un {{domxref("FetchEvent")}}. Construimos una respuesta personalizada así:
 
-1. Check whether a match for the request is found in the CacheStorage. If so, serve that.
-2. If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3. If this fails (e.g. because the network is down), return a fallback response.
+1. Compruebe si se encuentra una coincidencia para la solicitud en CacheStorage. Si es así, entrega eso.
+2. De lo contrario, obtenga la solicitud de la red, luego abra también el caché creado en el primer bloque y agregue un clon de la solicitud usando {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`).
+3. Si esto falla (por ejemplo, porque la red no funciona), devuelva una respuesta alternativa.
 
-Finally, return whatever the custom response ended up being equal to, using {{domxref("FetchEvent.respondWith")}}.
+Finalmente, devuelva lo que sea que la respuesta personalizada terminó siendo igual a, usando {{domxref("FetchEvent.respondWith")}}.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request).then(function(response) {
-    // caches.match() always resolves
-    // but in case of success response will have value
-    if (response !== undefined) {
-      return response;
-    } else {
-      return fetch(event.request).then(function (response) {
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        let responseClone = response.clone();
-
-        caches.open('v1').then(function (cache) {
-          cache.put(event.request, responseClone);
-        });
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // caches.match() siempre se resuelve,
+      // pero en caso de éxito, la respuesta tendrá valor
+      if (response !== undefined) {
         return response;
-      }).catch(function () {
-        return caches.match('/sw-test/gallery/myLittleVader.jpg');
-      });
-    }
-  }));
+      } else {
+        return fetch(event.request)
+          .then((response) => {
+            // la respuesta puede usarse solo una vez
+            // que necesitamos guardar el clon para poner
+            // una copia en caché y entregar la segunda
+            let responseClone = response.clone();
+
+            caches.open("v1").then((cache) => {
+              cache.put(event.request, responseClone);
+            });
+            return response;
+          })
+          .catch(() => caches.match("/gallery/myLittleVader.jpg"));
+      }
+    }),
+  );
 });
 ```
 
-This snippet shows how the API can be used outside of a service worker context, and uses the `await` operator for much more readable code.
+Este fragmento muestra cómo se puede usar la API fuera del contexto de un _service worker_ y usa el operador `await` para obtener un código mucho más legible.
 
 ```js
-// Try to get data from the cache, but fall back to fetching it live.
+// Intente obtener datos del caché, pero recurra a buscarlos en vivo.
 async function getData() {
-   const cacheVersion = 1;
-   const cacheName    = `myapp-${ cacheVersion }`;
-   const url          = 'https://jsonplaceholder.typicode.com/todos/1';
-   let cachedData     = await getCachedData( cacheName, url );
+  const cacheVersion = 1;
+  const cacheName = `myapp-${cacheVersion}`;
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  let cachedData = await getCachedData(cacheName, url);
 
-   if ( cachedData ) {
-      console.log( 'Retrieved cached data' );
-      return cachedData;
-   }
+  if (cachedData) {
+    console.log("Datos almacenados en caché recuperados");
+    return cachedData;
+  }
 
-   console.log( 'Fetching fresh data' );
+  console.log("Obtener datos nuevos");
 
-   const cacheStorage = await caches.open( cacheName );
-   await cacheStorage.add( url );
-   cachedData = await getCachedData( cacheName, url );
-   await deleteOldCaches( cacheName );
+  const cacheStorage = await caches.open(cacheName);
+  await cacheStorage.add(url);
+  cachedData = await getCachedData(cacheName, url);
+  await deleteOldCaches(cacheName);
 
-   return cachedData;
+  return cachedData;
 }
 
-// Get data from the cache.
-async function getCachedData( cacheName, url ) {
-   const cacheStorage   = await caches.open( cacheName );
-   const cachedResponse = await cacheStorage.match( url );
+// Obtener datos del caché.
+async function getCachedData(cacheName, url) {
+  const cacheStorage = await caches.open(cacheName);
+  const cachedResponse = await cacheStorage.match(url);
 
-   if ( ! cachedResponse || ! cachedResponse.ok ) {
-      return false;
-   }
+  if (!cachedResponse || !cachedResponse.ok) {
+    return false;
+  }
 
-   return await cachedResponse.json();
+  return await cachedResponse.json();
 }
 
-// Delete any old caches to respect user's disk space.
-async function deleteOldCaches( currentCache ) {
-   const keys = await caches.keys();
+// Elimine los cachés antiguos para respetar
+// el espacio en disco del usuario.
+async function deleteOldCaches(currentCache) {
+  const keys = await caches.keys();
 
-   for ( const key of keys ) {
-      const isOurCache = 'myapp-' === key.substr( 0, 6 );
-
-      if ( currentCache === key || ! isOurCache ) {
-         continue;
-      }
-
-      caches.delete( key );
-   }
+  for (const key of keys) {
+    const isOurCache = key.startsWith("myapp-");
+    if (currentCache === key || !isOurCache) {
+      continue;
+    }
+    caches.delete(key);
+  }
 }
 
 try {
-   const data = await getData();
-   console.log( { data } );
-} catch ( error ) {
-   console.error( { error } );
+  const data = await getData();
+  console.log({ data });
+} catch (error) {
+  console.error({ error });
 }
 ```
 
@@ -162,8 +169,9 @@ try {
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Uso de _Service Workers_](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("caches")}}
+- [Navegación privada / Modos de incógnito](/es/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)

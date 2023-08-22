@@ -3,7 +3,7 @@ title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 
-## 概述
+{{SVGRef}}
 
 本文及其相关示例展示了如何使用内联的 [SVG](/zh-CN/docs/SVG) 给一个表单提供背景图片，它展示了如何按照编写常规 XHTML 代码相同的方式来通过[JavaScript](/zh-CN/docs/JavaScript) 和 [CSS](/zh-CN/docs/CSS) 操作图片。注意，该示例仅在支持 XHTML（非 HTML）并集成了 SVG 的浏览器中正常工作。
 

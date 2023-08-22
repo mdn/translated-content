@@ -1,7 +1,6 @@
 ---
 title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
-original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 ---
 
 该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。Mozilla 实现了相当多的 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。
@@ -13,7 +12,13 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 此方法针对基于 [XML](/zh-CN/docs/Glossary/XML) 的文档（包括 HTML 文档）评估 XPath 表达式，并返回 [XPathResult](/zh-CN/docs/XPathResult) 对象，该对象可以是单个节点或一组节点。这个方法的现有文档位于 [document.evaluate](/zh-CN/docs/Web/API/Document.evaluate)，但是对于我们现在的需求来说它相当稀疏；下面将给出更全面的研究。
 
 ```js
-var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+var xpathResult = document.evaluate(
+  xpathExpression,
+  contextNode,
+  namespaceResolver,
+  resultType,
+  result,
+);
 ```
 
 ### 参数
@@ -40,14 +45,22 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 我们使用 document 对象的 `createNSResolver` 方法创建一个命名空间解析器。
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver(
+  contextNode.ownerDocument == null
+    ? contextNode.documentElement
+    : contextNode.ownerDocument.documentElement,
+);
 ```
 
 或者，也可以使用 `XPathEvaluator` 对象的 `createNSResolver` 方法。
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver(
+  contextNode.ownerDocument == null
+    ? contextNode.documentElement
+    : contextNode.ownerDocument.documentElement,
+);
 ```
 
 然后传递 `document.evaluate`，将 `nsResolver` 变量作为 `namespaceResolver` 参数。
@@ -81,17 +94,37 @@ var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null
 以下使用 XPath 表达式 [`count(//p)`](/zh-CN/docs/XPath/Functions/count) 来获取 HTML 文档中的 `<p>` 元素数：
 
 ```js
-var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
+var paragraphCount = document.evaluate(
+  "count(//p)",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 
-alert( 'This document contains ' + paragraphCount.numberValue + ' paragraph elements' );
+alert(
+  "This document contains " +
+    paragraphCount.numberValue +
+    " paragraph elements",
+);
 ```
 
 虽然 JavaScript 允许我们将数字转换为一个字符串进行显示，但 XPath 接口不会自动转换数字结果，如果 `stringValue` 属性被请求，所以下面的代码将**不**工作：
 
 ```js
-var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
+var paragraphCount = document.evaluate(
+  "count(//p)",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 
-alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elements' );
+alert(
+  "This document contains " +
+    paragraphCount.stringValue +
+    " paragraph elements",
+);
 ```
 
 相反，它将返回一个带有 `NS_DOM_TYPE_ERROR` 的异常。
@@ -118,18 +151,23 @@ alert( 'This document contains ' + paragraphCount.stringValue + ' paragraph elem
 但请注意，如果在迭代过程中，文档发生突变（文档树被修改），将使迭代无效，并且 `XPathResult` 的 `invalidIteratorState` 属性设置为 `true`，抛出 `NS_ERROR_DOM_INVALID_STATE_ERR` 异常。
 
 ```js
-var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+var iterator = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
+  null,
+);
 
 try {
   var thisNode = iterator.iterateNext();
 
   while (thisNode) {
-    alert( thisNode.textContent );
+    alert(thisNode.textContent);
     thisNode = iterator.iterateNext();
   }
-}
-catch (e) {
-  dump( 'Error: Document tree modified during iteration ' + e );
+} catch (e) {
+  dump("Error: Document tree modified during iteration " + e);
 }
 ```
 
@@ -145,11 +183,16 @@ catch (e) {
 快照不随文档突变而改变，因此与迭代器不同，快照不会变得无效，但是它可能不对应于当前文档，例如节点可能已被移动，它可能包含不再存在的节点，或新节点可能已添加。
 
 ```js
-var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+var nodesSnapshot = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+  null,
+);
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
-{
-  dump( nodesSnapshot.snapshotItem(i).textContent );
+for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
+  dump(nodesSnapshot.snapshotItem(i).textContent);
 }
 ```
 
@@ -165,9 +208,18 @@ for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
 请注意，对于无序子类型，返回的单个节点可能不是文档顺序中的第一个，但是对于有序子类型，保证以文档顺序获取第一个匹配的节点。
 
 ```js
-var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+var firstPhoneNumber = document.evaluate(
+  "//phoneNumber",
+  documentNode,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
 
-dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.textContent );
+dump(
+  "The first phone number found is " +
+    firstPhoneNumber.singleNodeValue.textContent,
+);
 ```
 
 #### ANY_TYPE 常量
@@ -187,7 +239,13 @@ dump( 'The first phone number found is ' + firstPhoneNumber.singleNodeValue.text
 要使用 XPath 提取 HTML 文档中的所有 `<h2>` 标题元素，`xpathExpression` 只是 `//h2`。其中，`//` 是递归下降运算符，在文档树中的任何位置将元素与 nodeName `h2` 相匹配。这个的完整代码是：link to introductory xpath doc
 
 ```js
-var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, null );
+var headings = document.evaluate(
+  "//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 请注意，由于 HTML 没有命名空间，因此我们为 `namespaceResolver` 参数传递了 `null`。
@@ -199,10 +257,10 @@ var headings = document.evaluate('//h2', document, null, XPathResult.ANY_TYPE, n
 ```js
 var thisHeading = headings.iterateNext();
 
-var alertText = 'Level 2 headings in this document are:\n'
+var alertText = "Level 2 headings in this document are:\n";
 
 while (thisHeading) {
-  alertText += thisHeading.textContent + '\n';
+  alertText += thisHeading.textContent + "\n";
   thisHeading = headings.iterateNext();
 }
 ```
@@ -241,9 +299,19 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver(
+  xmlDoc.ownerDocument == null
+    ? xmlDoc.documentElement
+    : xmlDoc.ownerDocument.documentElement,
+);
 
-var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+var personIterator = xmlDoc.evaluate(
+  "//person",
+  xmlDoc,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 ### 注意
@@ -251,7 +319,9 @@ var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult
 当未定义 XPathResult 对象时，可以使用 `Components.interfaces.nsIDOMXPathResult.ANY_TYPE` (`CI.nsIDOMXPathResult`) 在特权代码中检索常量。类似地，可以使用以下创建 XPathEvaluator：
 
 ```js
-Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)
+Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
+  Components.interfaces.nsIDOMXPathEvaluator,
+);
 ```
 
 ## 附录
@@ -271,8 +341,8 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
-    'mathml': 'http://www.w3.org/1998/Math/MathML'
+    xhtml: "http://www.w3.org/1999/xhtml",
+    mathml: "http://www.w3.org/1998/Math/MathML",
   };
   return ns[prefix] || null;
 }
@@ -281,7 +351,13 @@ function nsResolver(prefix) {
 我们对 `document.evaluate` 的调用将如下所示：
 
 ```js
-document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+document.evaluate(
+  "//xhtml:td/mathml:math",
+  document,
+  nsResolver,
+  XPathResult.ANY_TYPE,
+  null,
+);
 ```
 
 #### 为 XML 文档实现默认命名空间
@@ -303,9 +379,9 @@ document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.A
 
 ```js
 function resolver() {
-    return 'http://www.w3.org/2005/Atom';
+  return "http://www.w3.org/2005/Atom";
 }
-doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
+doc.evaluate("//myns:entry", doc, resolver, XPathResult.ANY_TYPE, null);
 ```
 
 请注意，如果文档使用多个命名空间，则需要更复杂的解析器。
@@ -329,7 +405,8 @@ doc.evaluate('//myns:entry', doc, resolver, XPathResult.ANY_TYPE, null)
 为了使用 XLink `@href` 属性（而不仅限于命名空间解析器中的预定义前缀）精确地抓取元素，可以按如下方式获取它们：
 
 ```js
-var xpathEls = 'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
+var xpathEls =
+  'someElements[@*[local-name() = "href" and namespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Grabs elements with any single attribute that has both the local name 'href' and the XLink namespace
 var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
 var thisitemEl = thislevel.iterateNext();
 ```

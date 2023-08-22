@@ -11,23 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 ## 语法
 
-```plain
-typedarray.some(callback[, thisArg])
+```js-nolint
+some(callbackFn)
+some(callbackFn, thisArg)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 一个测试每个元素的函数，有 3 个参数：
-
     - `currentValue`
       - : 在 typed array 中，正在被测试的元素。
     - `index`
       - : 在 typed array 中，正在被测试元素的索引。
     - `array`
       - : 正在被调用的 typed array 本身。
-
 - `thisArg`
   - : 可选的。`callback` 回调函数的 `this` 值 .
 
@@ -64,8 +62,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 [Arrow functions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions) 提供更段的语法做相同的测试。
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Polyfill
@@ -75,8 +73,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```
@@ -87,7 +85,7 @@ if (!Uint8Array.prototype.some) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

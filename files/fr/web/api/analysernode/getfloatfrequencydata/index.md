@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.getFloatFrequencyData()
 slug: Web/API/AnalyserNode/getFloatFrequencyData
-translation_of: Web/API/AnalyserNode/getFloatFrequencyData
 ---
 
 {{ APIRef("Web Audio API") }}

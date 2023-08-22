@@ -25,7 +25,7 @@ dateObj.getFullYear()
 
 `getFullYear()`返回的值是绝对数。对于 1000 到 9999 之间的日期，`getFullYear()`返回一个四位数字，如 1995。使用此函数确保在 2000 年后兼容。
 
-## 例子
+## 示例
 
 ### 使用`getFullYear()`
 

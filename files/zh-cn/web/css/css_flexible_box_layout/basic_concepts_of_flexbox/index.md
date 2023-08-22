@@ -1,13 +1,13 @@
 ---
 title: flex 布局的基本概念
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 ---
 
 {{CSSRef}}
 
 Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。
 
-我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)，可以同时处理行和列上的布局。
+我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)，可以同时处理行和列上的布局。
 
 ## flexbox 的两根轴线
 
@@ -93,7 +93,7 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
-在指南中您可以了解更多关于 `flex-wrap`的信息 [Mastering Wrapping of Flex Items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items).
+参见[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)指南，以了解更多有关弹性物件包装的信息。
 
 ## 简写属性 flex-flow
 
@@ -139,7 +139,7 @@ flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 
 
 `flex-grow`属性是处理 flex 元素在主轴上增加空间的问题，相反`flex-shrink`属性是处理 flex 元素收缩的问题。如果我们的容器中没有足够排列 flex 元素的空间，那么可以把 flex 元素`flex-shrink`属性设置为正整数来缩小它所占空间到`flex-basis`以下。与`flex-grow`属性一样，可以赋予不同的值来控制 flex 元素收缩的程度 —— 给`flex-shrink`属性赋予更大的数值可以比赋予小数值的同级元素收缩程度更大。
 
-在计算 flex 元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上 flex-shrink 属性可能会和 flex-grow 属性表现的不一致。因此，我们可以在文章《[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)》中更详细地看一下这个算法的原理。
+在计算 flex 元素收缩的大小时，它的最小尺寸也会被考虑进去，就是说实际上 flex-shrink 属性可能会和 flex-grow 属性表现的不一致。因此，我们可以在文章《[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)》中更详细地看一下这个算法的原理。
 
 > **备注：** 在给 `flex-grow` 和 `flex-shrink` 赋值时要注意比例。如果我们给所有 flex 元素的 flex 属性赋值为 `1 1 200px` ，并且希望其中一个元素可以增加到 2 倍，我们可以给该元素的 flex 属性赋值为`2 1 200px`。当然，你也可以选择赋值为 flex: `10 1 200px` 和 flex: `20 1 200px` 。
 
@@ -210,4 +210,4 @@ Flexbox 的一个关键特性是能够设置 flex 元素沿主轴方向和交叉
 
 ## 下一步
 
-在读完这篇文章之后，你应该掌握了 flexbox 的基本特性。在下一篇文章中，我们将会学习如何[与其他 CSS 一起使用](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)。
+在读完这篇文章之后，你应该掌握了 flexbox 的基本特性。在下一篇文章中，我们将会学习如何[与其他 CSS 一起使用](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)。

@@ -12,9 +12,9 @@ slug: Web/JavaScript/Data_structures
 JavaScript 是弱型別，也能說是動態的程式語言。這代表你不必特別宣告變數的型別。程式在運作時，型別會自動轉換。這也代表你可以以不同的型別使用同一個變數。
 
 ```js
-var foo = 42;    // foo 目前是數字
-var foo = 'bar'; // foo 目前是字串
-var foo = true;  // foo 目前是布林值
+var foo = 42; // foo 目前是數字
+var foo = "bar"; // foo 目前是字串
+var foo = true; // foo 目前是布林值
 ```
 
 ## 資料型別
@@ -147,7 +147,7 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 Additionally, arrays inherit from `Array.prototype`, which provides a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) searches a value in the array and [`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push) appends an element to the array. This makes Arrays a perfect candidate to represent ordered lists.
 
-[Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/zh-TW/docs/Web/JavaScript/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
+[Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 

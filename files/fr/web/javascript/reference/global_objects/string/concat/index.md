@@ -1,14 +1,6 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/concat
 ---
 
 {{JSRef}}
@@ -46,11 +38,11 @@ console.log(coucou.concat("Tristan,", " bonne journée."));
 
 /* Bonjour Tristan, bonne journée. */
 
-var salutation = ['Bonjour', ' ', 'Alfred', ' ', '!'];
+var salutation = ["Bonjour", " ", "Alfred", " ", "!"];
 "".concat(...salutation); // "Bonjour Alfred !"
 
-"".concat({});   // [object Object]
-"".concat([]);   // ""
+"".concat({}); // [object Object]
+"".concat([]); // ""
 "".concat(null); // "null"
 "".concat(true); // "true"
 "".concat(4, 5); // "45"

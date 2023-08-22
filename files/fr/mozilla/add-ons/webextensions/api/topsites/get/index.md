@@ -1,17 +1,6 @@
 ---
 title: topSites.get()
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - topSites
-translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
 
 {{AddonSidebar()}}
@@ -33,7 +22,7 @@ Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/Add-
 ## Syntaxe
 
 ```js
-var gettingTopSites = browser.topSites.get()
+var gettingTopSites = browser.topSites.get();
 ```
 
 ### Paramètres
@@ -99,7 +88,7 @@ function onError(error) {
 
 var gettingTopSites = browser.topSites.get({
   includeBlocked: true,
-  onePerDomain: false
+  onePerDomain: false,
 });
 
 gettingTopSites.then(logTopSites, onError);

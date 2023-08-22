@@ -1,7 +1,6 @@
 ---
 title: Utilizando data attributes
 slug: Learn/HTML/Howto/Use_data_attributes
-original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 
 O [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#attr-dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element.classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
@@ -16,7 +15,7 @@ A sintaxe é simples. Qualquer atributo de qualquer elemento no qual o nome do a
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -27,11 +26,11 @@ Ler os valores destes atributos via [JavaScript](/pt-BR/docs/Web/JavaScript) é 
 Para obter o atributo data através do objeto `dataset`, acesse a propriedade utilizando a parte do nome do atributo após o prefixo `data-` (note que o hífen é convertido para camelCase).
 
 ```js
-var article = document.getElementById('electriccars');
+var article = document.getElementById("electriccars");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 Cada propriedade é uma String e pode ser lida e escrita. No exemplo acima a atribuição `article.dataset.columns = 5` iria alterar esse atributo para "5".
@@ -49,10 +48,10 @@ article::before {
 Pode-se também usar os [seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) em CSS para alterar estilos de acordo com o atributo data:
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```

@@ -29,9 +29,11 @@ Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 ```html
 <p>
-  Este artigo descreve vários <b>níveis de texto</b>. Ele explica a utilização do elemento em um documento <b>HTML</b>.
+  Este artigo descreve vários <b>níveis de texto</b>. Ele explica a utilização
+  do elemento em um documento <b>HTML</b>.
 </p>
-Palavras-chave são exibidas com o estilo padrão do elemento <b>, provavelmente em negrito.
+Palavras-chave são exibidas com o estilo padrão do elemento
+<b>, provavelmente em negrito.</b>
 ```
 
 ### Resultado
@@ -42,11 +44,11 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 
 ## Especificações
 
-| Especificaçoes                                                                                                   | Estado                           | Comentário |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificaçoes                                                                      | Estado                   | Comentário |
+| ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-b-element', '&lt;b&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-b-element', '&lt;b&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-b-element', '&lt;b&gt;')}}   | {{Spec2('HTML5 W3C')}}   |            |
+| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}    |            |
 
 ## Navegadores Compatíveis
 

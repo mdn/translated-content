@@ -18,8 +18,8 @@ Esta é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/Jav
 
 ```js
 let removing = browser.browsingData.removeDownloads(
-  removalOptions            // objeto RemovalOptions
-)
+  removalOptions, // objeto RemovalOptions
+);
 ```
 
 ### Parâmetros
@@ -48,11 +48,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-let oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+let oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeDownloads(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeDownloads({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Remove todos os registros de objetos baixados:
@@ -66,8 +66,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);
+browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
 ## Compatibilidade com navegadores

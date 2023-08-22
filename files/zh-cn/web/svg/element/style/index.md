@@ -14,8 +14,11 @@ slug: Web/SVG/Element/style
 ## 示例
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg">
   <style>
     /* <![CDATA[ */
     circle {

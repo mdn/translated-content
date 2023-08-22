@@ -10,7 +10,7 @@ slug: Web/API/Clients/matchAll
 ## 语法
 
 ```js
-ServiceWorkerClients.matchAll(options).then(function(clients) {
+ServiceWorkerClients.matchAll(options).then(function (clients) {
   // do something with your clients list
 });
 ```
@@ -31,9 +31,9 @@ resolve 为一个 {{domxref("Client")}} 对象数组的 [`Promise`](/zh-CN/docs/
 ## 示例
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for (var i = 0 ; i < clients.length ; i++) {
-    if (clientList[i].url === 'index.html') {
+clients.matchAll(options).then(function (clientList) {
+  for (var i = 0; i < clients.length; i++) {
+    if (clientList[i].url === "index.html") {
       clients.openWindow(clientList[i]);
       // or do something else involving the matching client
     }

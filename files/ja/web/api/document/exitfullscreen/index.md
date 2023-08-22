@@ -30,13 +30,14 @@ exitFullscreen()
 ```js
 document.onclick = (event) => {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document
+      .exitFullscreen()
       .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err))
+      .catch((err) => console.error(err));
   } else {
     document.documentElement.requestFullscreen();
   }
-}
+};
 ```
 
 > **メモ:** もっと完全な例については、[`Element.requestFullscreen()` の例](/ja/docs/Web/API/Element/requestFullscreen#%E4%BE%8B)をご覧ください。
@@ -56,4 +57,4 @@ document.onclick = (event) => {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

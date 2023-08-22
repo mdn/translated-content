@@ -1,7 +1,6 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
 
 {{JSRef}}
@@ -14,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ## 構文
 
 ```js
-Atomics.notify(typedArray, index, count)
+Atomics.notify(typedArray, index, count);
 ```
 
 ### 引数
@@ -30,7 +29,7 @@ Atomics.notify(typedArray, index, count)
 
 - 起動したエージェントの数を返します。
 - 共有されていない {{jsxref("ArrayBuffer")}} オブジェクトが使用された場合は、 `0`
- を返します。
+  を返します。
 
 ### 例外
 

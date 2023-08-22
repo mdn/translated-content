@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 ---
 
@@ -10,7 +10,7 @@ slug: Web/CSS/::-webkit-slider-thumb
 ## 構文
 
 ```css
-::-webkit-slider-thumb
+::-webkit-slider-thumb {}
 ```
 
 ## 仕様書

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: complementary ロール'
+title: "ARIA: complementary ロール"
 slug: Web/Accessibility/ARIA/Roles/complementary_role
 ---
 
@@ -26,13 +26,25 @@ slug: Web/Accessibility/ARIA/Roles/complementary_role
 <div role="complementary">
   <h2>トレンド記事</h2>
   <ul>
-     <li><a href="#">あなたがすべての気分を感じさせる18のツイート</a></li>
-     <li><a href="#">私は完璧な昼食用の容器を見つけたので、それを探すのを停止する</a></li>
-     <li><a href="#">最終的に私たちがこれらの食品と呼ぶべきものを決定する時が来た</a></li>
-     <li><a href="#">Tumblr で今週見た17の本当に良い投稿</a></li>
-     <li><a href="#">10の親のハック、私たちはそれらを試したので、働くことを知っている</a></li>
-   </ul>
- </div>
+    <li><a href="#">あなたがすべての気分を感じさせる18のツイート</a></li>
+    <li>
+      <a href="#"
+        >私は完璧な昼食用の容器を見つけたので、それを探すのを停止する</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        >最終的に私たちがこれらの食品と呼ぶべきものを決定する時が来た</a
+      >
+    </li>
+    <li><a href="#">Tumblr で今週見た17の本当に良い投稿</a></li>
+    <li>
+      <a href="#"
+        >10の親のハック、私たちはそれらを試したので、働くことを知っている</a
+      >
+    </li>
+  </ul>
+</div>
 ```
 
 ## アクセシビリティに関する懸念

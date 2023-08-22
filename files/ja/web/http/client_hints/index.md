@@ -1,7 +1,6 @@
 ---
 title: HTTP クライアントヒント
 slug: Web/HTTP/Client_hints
-original_slug: Glossary/Client_hints
 l10n:
   sourceCommit: 48c0135f31d11eebde3e5bc3899811ddc69d2538
 ---

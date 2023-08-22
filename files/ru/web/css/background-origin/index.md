@@ -1,7 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-translation_of: Web/CSS/background-origin
 ---
 
 {{CSSRef}}
@@ -49,7 +48,7 @@ background-origin: unset;
 .example {
   border: 10px double;
   padding: 10px;
-  background: url('image.jpg');
+  background: url("image.jpg");
   background-position: center left;
   background-origin: content-box;
 }
@@ -59,7 +58,7 @@ background-origin: unset;
 #example2 {
   border: 4px solid black;
   padding: 10px;
-  background: url('image.gif');
+  background: url("image.gif");
   background-repeat: no-repeat;
   background-origin: border-box;
 }
@@ -67,8 +66,10 @@ background-origin: unset;
 
 ```css
 div {
-  background-image: url('logo.jpg'), url('mainback.png'); /* Applies two images to the background */
-  background-position: top right, 0px 0px;
+  background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-position:
+    top right,
+    0px 0px;
   background-origin: content-box, padding-box;
 }
 ```

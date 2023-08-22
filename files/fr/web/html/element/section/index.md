@@ -1,12 +1,6 @@
 ---
-title: '<section> : l''élément de section générique'
+title: "<section> : l'élément de section générique"
 slug: Web/HTML/Element/section
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}
@@ -42,7 +36,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("",'','130')}}
 
 ## Résumé technique
 

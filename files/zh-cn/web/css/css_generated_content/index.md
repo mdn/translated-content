@@ -1,6 +1,6 @@
 ---
 title: CSS 生成内容
-slug: Web/CSS/CSS_Generated_Content
+slug: Web/CSS/CSS_generated_content
 ---
 
 {{CSSRef}}
@@ -17,7 +17,3 @@ slug: Web/CSS/CSS_Generated_Content
 ## 规范
 
 {{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}

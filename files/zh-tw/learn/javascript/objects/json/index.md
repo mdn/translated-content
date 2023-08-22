@@ -44,37 +44,33 @@ JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.jso
 
 ```json
 {
-  "squadName" : "Super hero squad",
-  "homeTown" : "Metro City",
-  "formed" : 2016,
-  "secretBase" : "Super tower",
-  "active" : true,
-  "members" : [
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
     {
-      "name" : "Molecule Man",
-      "age" : 29,
-      "secretIdentity" : "Dan Jukes",
-      "powers" : [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
-      "name" : "Madame Uppercut",
-      "age" : 39,
-      "secretIdentity" : "Jane Wilson",
-      "powers" : [
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
         "Million tonne punch",
         "Damage resistance",
         "Superhuman reflexes"
       ]
     },
     {
-      "name" : "Eternal Flame",
-      "age" : 1000000,
-      "secretIdentity" : "Unknown",
-      "powers" : [
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
         "Immortality",
         "Heat Immunity",
         "Inferno",
@@ -89,14 +85,14 @@ JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.jso
 舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
 
 ```js
-superHeroes.hometown
-superHeroes["active"]
+superHeroes.hometown;
+superHeroes["active"];
 ```
 
 若要順著繼承往下存取資料，只要將必要的屬性名稱與陣列索引「鍊」在一起即可。舉例來說，如果要存取成員列表中的第二位英雄的第三項超能力，你必須：
 
 ```js
-superHeroes["members"][1]["powers"][2]
+superHeroes["members"][1]["powers"][2];
 ```
 
 1. 首先要有變數名稱 — `superHeroes`。
@@ -114,20 +110,16 @@ superHeroes["members"][1]["powers"][2]
 ```json
 [
   {
-    "name" : "Molecule Man",
-    "age" : 29,
-    "secretIdentity" : "Dan Jukes",
-    "powers" : [
-      "Radiation resistance",
-      "Turning tiny",
-      "Radiation blast"
-    ]
+    "name": "Molecule Man",
+    "age": 29,
+    "secretIdentity": "Dan Jukes",
+    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
   },
   {
-    "name" : "Madame Uppercut",
-    "age" : 39,
-    "secretIdentity" : "Jane Wilson",
-    "powers" : [
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secretIdentity": "Jane Wilson",
+    "powers": [
       "Million tonne punch",
       "Damage resistance",
       "Superhuman reflexes"
@@ -154,18 +146,16 @@ superHeroes["members"][1]["powers"][2]
 在開始之前，先複製我們的 [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) 與 [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) 到你的本端硬碟中。後者包含某些簡易的 CSS 可塑造網頁風格；前者則提供極簡單主體 HTML：
 
 ```html
-<header>
-</header>
+<header></header>
 
-<section>
-</section>
+<section></section>
 ```
 
 加上 {{HTMLElement("script")}} 元素，才能納入稍後會在此習題中寫出來的 JavaScript 程式碼。目前只有 2 行程式碼，用以取得 {{HTMLElement("header")}} 與 {{HTMLElement("section")}} 元素的參考，並將之儲存於變數之中：
 
 ```js
-var header = document.querySelector('header');
-var section = document.querySelector('section');
+var header = document.querySelector("header");
+var section = document.querySelector("section");
 ```
 
 你可到 GitHub 上找到此 JSON 資料：<https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json>。
@@ -180,43 +170,44 @@ var section = document.querySelector('section');
 
 1. 一開始，我們先針對要在變數中檢索的 JSON 檔案，將其網址儲存起來。把下列程式碼加到你 JavaScript 程式碼的最下方：
 
-    ```js
-    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    ```
+   ```js
+   var requestURL =
+     "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+   ```
 
 2. 為了建立請求，我們必須透過 `new` 關鍵字，先從 `XMLHttpRequest` 建構子建立新的請求物件實例。把下列加到最後一行：
 
-    ```js
-    var request = new XMLHttpRequest();
-    ```
+   ```js
+   var request = new XMLHttpRequest();
+   ```
 
 3. 現在用 [`open()`](/zh-TW/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
 
-    ```js
-    request.open('GET', requestURL);
-    ```
+   ```js
+   request.open("GET", requestURL);
+   ```
 
-    這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
+   這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
 
-    - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Methods/GET) 就可以。
-    - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
+   - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Methods/GET) 就可以。
+   - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 
 4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/zh-TW/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
 
-    ```js
-    request.responseType = 'json';
-    request.send();
-    ```
+   ```js
+   request.responseType = "json";
+   request.send();
+   ```
 
 5. 最後就是等待由伺服器所回傳的反應，再接著處理。把下列程式碼加入現有程式碼的最下方：
 
-    ```js
-    request.onload = function() {
-      var superHeroes = request.response;
-      populateHeader(superHeroes);
-      showHeroes(superHeroes);
-    }
-    ```
+   ```js
+   request.onload = function () {
+     var superHeroes = request.response;
+     populateHeader(superHeroes);
+     showHeroes(superHeroes);
+   };
+   ```
 
 在這裡，我們將所獲得的響應 (可到 [`response`](/zh-TW/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
 
@@ -228,12 +219,13 @@ var section = document.querySelector('section');
 
 ```js
 function populateHeader(jsonObj) {
-  var myH1 = document.createElement('h1');
-  myH1.textContent = jsonObj['squadName'];
+  var myH1 = document.createElement("h1");
+  myH1.textContent = jsonObj["squadName"];
   header.appendChild(myH1);
 
-  var myPara = document.createElement('p');
-  myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+  var myPara = document.createElement("p");
+  myPara.textContent =
+    "Hometown: " + jsonObj["homeTown"] + " // Formed: " + jsonObj["formed"];
   header.appendChild(myPara);
 }
 ```
@@ -246,24 +238,24 @@ function populateHeader(jsonObj) {
 
 ```js
 function showHeroes(jsonObj) {
-  var heroes = jsonObj['members'];
+  var heroes = jsonObj["members"];
 
-  for(i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement('article');
-    var myH2 = document.createElement('h2');
-    var myPara1 = document.createElement('p');
-    var myPara2 = document.createElement('p');
-    var myPara3 = document.createElement('p');
-    var myList = document.createElement('ul');
+  for (i = 0; i < heroes.length; i++) {
+    var myArticle = document.createElement("article");
+    var myH2 = document.createElement("h2");
+    var myPara1 = document.createElement("p");
+    var myPara2 = document.createElement("p");
+    var myPara3 = document.createElement("p");
+    var myList = document.createElement("ul");
 
     myH2.textContent = heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
-    myPara3.textContent = 'Superpowers:';
+    myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
+    myPara2.textContent = "Age: " + heroes[i].age;
+    myPara3.textContent = "Superpowers:";
 
     var superPowers = heroes[i].powers;
-    for(j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement('li');
+    for (j = 0; j < superPowers.length; j++) {
+      var listItem = document.createElement("li");
       listItem.textContent = superPowers[j];
       myList.appendChild(listItem);
     }
@@ -299,7 +291,7 @@ function showHeroes(jsonObj) {
 上述是存取 JSON 的簡易範例，因為我們設定要回傳響應的 XHR 已經是 JSON 格式。透過：
 
 ```js
-request.responseType = 'json';
+request.responseType = "json";
 ```
 
 但有時候沒這麼好運。我們有時會接收到文字字串格式的 JSON 資料，且必須將之轉換為物件。且當我們要以某種訊息傳送 JSON 資料時，也必須將之轉換為字串才能正確運作。還好，這 2 種問題在 Web 開發過程中甚為常見。內建的 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件很早就新增到瀏覽器之中，且包含下列 2 種函式：
@@ -310,25 +302,25 @@ request.responseType = 'json';
 你可到 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 XHR 要回傳 JSON 為文字，接著再使用 `parse()` 轉換為實際的 JSON 物件。關鍵程式碼片段如下：
 
 ```js
-request.open('GET', requestURL);
-request.responseType = 'text'; // now we're getting a string!
+request.open("GET", requestURL);
+request.responseType = "text"; // now we're getting a string!
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var superHeroesText = request.response; // get the string from the response
   var superHeroes = JSON.parse(superHeroesText); // convert it to an object
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 你可能會猜 `stringify()` 就是反過來運作了吧？可在瀏覽器的 JavaScript 主控台上輸入下列程式碼，看看其運作方式：
 
 ```js
-var myJSON = { "name" : "Chris", "age" : "38" };
-myJSON
+var myJSON = { name: "Chris", age: "38" };
+myJSON;
 var myString = JSON.stringify(myJSON);
-myString
+myString;
 ```
 
 這樣就建立了 JSON 物件了。接著檢查內容物之後，就可透過 `stringify()` 將之轉換為字串。將回傳值儲存到新變數之中，再檢查一次即可。

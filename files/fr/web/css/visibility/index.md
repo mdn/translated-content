@@ -1,11 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/visibility
 ---
 
 {{CSSRef}}
@@ -67,16 +62,12 @@ Les valeurs de visibilité peuvent être interpolées entre _visible_ et _masqu�
 
 ```html
 <p>
-  On peut dire tout ce qu'on veut ici,
-  ce ne sera pas lisible de toute façon.
+  On peut dire tout ce qu'on veut ici, ce ne sera pas lisible de toute façon.
 </p>
 <p class="coucou">
-  Alors que là, on a la bonne classe.
-  Coucou tout le monde :)
+  Alors que là, on a la bonne classe. Coucou tout le monde :)
 </p>
-<p>
-  Et on repasse en mode invisible.
-</p>
+<p>Et on repasse en mode invisible.</p>
 ```
 
 #### CSS

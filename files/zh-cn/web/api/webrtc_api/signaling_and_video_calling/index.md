@@ -36,7 +36,7 @@ function sendToOneUser(target, msgString) {
   var isUnique = true;
   var i;
 
-  for (i=0; i<connectionArray.length; i++) {
+  for (i = 0; i < connectionArray.length; i++) {
     if (connectionArray[i].username === target) {
       connectionArray[i].sendUTF(msgString);
       break;
@@ -59,7 +59,7 @@ if (sendToClients) {
   if (msg.target && msg.target !== undefined && msg.target.length !== 0) {
     sendToOneUser(msg.target, msgString);
   } else {
-    for (i=0; i<connectionArray.length; i++) {
+    for (i = 0; i < connectionArray.length; i++) {
       connectionArray[i].sendUTF(msgString);
     }
   }
@@ -160,15 +160,13 @@ if (sendToClients) {
 我们客户端的 HTML 需要一个视频显示位置。也就是视频框和挂断电话的按钮：
 
 ```html
-      <div class="flexChild" id="camera-container">
-        <div class="camera-box">
-          <video id="received_video" autoplay></video>
-          <video id="local_video" autoplay muted></video>
-          <button id="hangup-button" onclick="hangUpCall();" disabled>
-            Hang Up
-          </button>
-        </div>
-      </div>
+<div class="flexChild" id="camera-container">
+  <div class="camera-box">
+    <video id="received_video" autoplay></video>
+    <video id="local_video" autoplay muted></video>
+    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
+  </div>
+</div>
 ```
 
 此处定义的页面结构使用了 {{HTMLElement("div")}} 元素，通过启用 CSS，我们可以完全控制页面布局。我们将跳过本指南中的布局细节，但你可以[看看 GitHub 上的 CSS](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css)，了解如何处理它。注意这两个 {{HTMLElement("video")}} 元素，一个用于观看自己，一个用于连接，还有 {{HTMLElement("button")}} 元素。
@@ -231,7 +229,7 @@ function handleUserlistMsg(msg) {
 ```js
 var mediaConstraints = {
   audio: true, // We want an audio track
-  video: true // ...and we want a video track
+  video: true, // ...and we want a video track
 };
 
 function invite(evt) {
@@ -241,7 +239,9 @@ function invite(evt) {
     var clickedUsername = evt.target.textContent;
 
     if (clickedUsername === myUsername) {
-      alert("I'm afraid I can't let you talk to yourself. That would be weird.");
+      alert(
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
+      );
       return;
     }
 
@@ -249,12 +249,13 @@ function invite(evt) {
 
     createPeerConnection();
 
-    navigator.mediaDevices.getUserMedia(mediaConstraints)
-    .then(function(localStream) {
-      document.getElementById("local_video").srcObject = localStream;
-      myPeerConnection.addStream(localStream);
-    })
-    .catch(handleGetUserMediaError);
+    navigator.mediaDevices
+      .getUserMedia(mediaConstraints)
+      .then(function (localStream) {
+        document.getElementById("local_video").srcObject = localStream;
+        myPeerConnection.addStream(localStream);
+      })
+      .catch(handleGetUserMediaError);
   }
 }
 ```
@@ -281,10 +282,12 @@ function invite(evt) {
 
 ```js
 function handleGetUserMediaError(e) {
-  switch(e.name) {
+  switch (e.name) {
     case "NotFoundError":
-      alert("Unable to open your call because no camera and/or microphone" +
-            "were found.");
+      alert(
+        "Unable to open your call because no camera and/or microphone" +
+          "were found.",
+      );
       break;
     case "SecurityError":
     case "PermissionDeniedError":
@@ -358,18 +361,20 @@ function createPeerConnection() {
 
 ```js
 function handleNegotiationNeededEvent() {
-  myPeerConnection.createOffer().then(function(offer) {
-    return myPeerConnection.setLocalDescription(offer);
-  })
-  .then(function() {
-    sendToServer({
-      name: myUsername,
-      target: targetUsername,
-      type: "video-offer",
-      sdp: myPeerConnection.localDescription
-    });
-  })
-  .catch(reportError);
+  myPeerConnection
+    .createOffer()
+    .then(function (offer) {
+      return myPeerConnection.setLocalDescription(offer);
+    })
+    .then(function () {
+      sendToServer({
+        name: myUsername,
+        target: targetUsername,
+        type: "video-offer",
+        sdp: myPeerConnection.localDescription,
+      });
+    })
+    .catch(reportError);
 }
 ```
 
@@ -462,7 +467,7 @@ function handleICECandidateEvent(event) {
     sendToServer({
       type: "new-ice-candidate",
       target: targetUsername,
-      candidate: event.candidate
+      candidate: event.candidate,
     });
   }
 }
@@ -489,8 +494,7 @@ function handleICECandidateEvent(event) {
 function handleNewICECandidateMsg(msg) {
   var candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate)
-    .catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(reportError);
 }
 ```
 
@@ -534,7 +538,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-此代码从`"received_video"` {{HTMLElement("video")}}元素的 {{htmlattrxref("srcObject", "video")}} 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
+此代码从`"received_video"` {{HTMLElement("video")}}元素的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject) 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
 
 如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 `closeVideoCall()`结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 [结束通话](#结束通话) 了解 `closeVideoCall()` 的工作原理。
 
@@ -552,7 +556,7 @@ function hangUpCall() {
   sendToServer({
     name: myUsername,
     target: targetUsername,
-    type: "hang-up"
+    type: "hang-up",
   });
 }
 ```
@@ -579,11 +583,11 @@ function closeVideoCall() {
     myPeerConnection.onnegotiationneeded = null;
 
     if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach(track => track.stop());
+      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach(track => track.stop());
+      localVideo.srcObject.getTracks().forEach((track) => track.stop());
     }
 
     myPeerConnection.close();
@@ -607,7 +611,7 @@ function closeVideoCall() {
 3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
 4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
-然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 {{htmlattrxref("srcObject", "video")}}和{{htmlattrxref("src", "video")}} 属性。这就完成了流与视频元素的分离。
+然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
 
 最后，我们在"Hang Up"按钮上将{{domxref("HTMLElement.disabled", "disabled")}}属性设置为 `true`，使其在没有调用的情况下不可点击；然后我们将`targetUsername` 设置为 `null` ，因为我们不再与任何人交谈。这允许用户呼叫另一个用户，或接收来电。
 
@@ -621,7 +625,7 @@ function closeVideoCall() {
 
 ```js
 function handleICEConnectionStateChangeEvent(event) {
-  switch(myPeerConnection.iceConnectionState) {
+  switch (myPeerConnection.iceConnectionState) {
     case "closed":
     case "failed":
     case "disconnected":
@@ -638,13 +642,13 @@ function handleICEConnectionStateChangeEvent(event) {
 同样，我们监听 {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} 事件。如果信号状态变为 `closed`，我们同样关闭呼叫。
 
 ```js
-  myPeerConnection.onsignalingstatechange = function(event) {
-    switch(myPeerConnection.signalingState) {
-      case "closed":
-        closeVideoCall();
-        break;
-    }
-  };
+myPeerConnection.onsignalingstatechange = function (event) {
+  switch (myPeerConnection.signalingState) {
+    case "closed":
+      closeVideoCall();
+      break;
+  }
+};
 ```
 
 > **备注：** `closed`的信令状态已被弃用，取而代之的是 `closed`{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}。我们在这里监听它以增加一点向后兼容性。

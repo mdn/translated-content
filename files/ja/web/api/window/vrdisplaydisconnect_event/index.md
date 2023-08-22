@@ -1,5 +1,5 @@
 ---
-title: 'Window: vrdisplaydisconnect イベント'
+title: "Window: vrdisplaydisconnect イベント"
 slug: Web/API/Window/vrdisplaydisconnect_event
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b

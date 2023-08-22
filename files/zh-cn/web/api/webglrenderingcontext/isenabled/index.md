@@ -21,17 +21,17 @@ void gl.isEnabled(cap);
 
   - : {{domxref("GLenum")}} 指定待检测的 WebGL 功能项。可能的值有：
 
-    | Constant                      | Description                                                                                                                                       |
-    | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.BLEND`                    | Blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.                             |
-    | `gl.CULL_FACE`                | Culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.                                                        |
-    | `gl.DEPTH_TEST`               | Depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.                          |
-    | `gl.DITHER`                   | Dithering of color components before they get written to the color buffer.                                                                        |
-    | `gl.POLYGON_OFFSET_FILL`      | Adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Computation of a temporary coverage value determined by the alpha value.                                                                          |
-    | `gl.SAMPLE_COVERAGE`          | ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.   |
+    | Constant                      | Description                                                                                                                         |
+    | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.BLEND`                    | Blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.                               |
+    | `gl.CULL_FACE`                | Culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.                                                           |
+    | `gl.DEPTH_TEST`               | Depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.                            |
+    | `gl.DITHER`                   | Dithering of color components before they get written to the color buffer.                                                          |
+    | `gl.POLYGON_OFFSET_FILL`      | Adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                  |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Computation of a temporary coverage value determined by the alpha value.                                                            |
+    | `gl.SAMPLE_COVERAGE`          | ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.        |
     | `gl.SCISSOR_TEST`             | Scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
-    | `gl.STENCIL_TEST`             | Stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                      |
+    | `gl.STENCIL_TEST`             | Stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                          |
 
     当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 的时候，下列附加的值也是可选用的。
 

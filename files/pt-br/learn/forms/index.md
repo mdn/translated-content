@@ -1,7 +1,6 @@
 ---
 title: Formulários da Web - Trabalhando com dados do usuário
 slug: Learn/Forms
-original_slug: Web/Guide/HTML/Forms
 ---
 
 {{LearnSidebar}}

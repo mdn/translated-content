@@ -103,7 +103,7 @@ original_slug: Web/JavaScript/Language_Resources
         >
         y
         <a
-          href="/en-US/docs/JavaScript/ECMAScript_5_support_in_Mozilla"
+          href="/es/docs/JavaScript/ECMAScript_5_support_in_Mozilla"
           title="JavaScript/ECMAScript 5 support in Mozilla"
           >ECMAScript 5 soporte en Mozilla.</a
         >
@@ -119,7 +119,7 @@ original_slug: Web/JavaScript/Language_Resources
       </td>
       <td>Junio 2004</td>
       <td>
-        <a href="/en-US/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
+        <a href="/es/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
         >.<br />Vea también la
         <a
           class="link-https"

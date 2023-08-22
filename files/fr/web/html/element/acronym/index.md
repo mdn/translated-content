@@ -1,15 +1,6 @@
 ---
-title: '<acronym> : l''élément d''acronyme'
+title: "<acronym> : l'élément d'acronyme"
 slug: Web/HTML/Element/acronym
-tags:
-  - Element
-  - HTML
-  - HTML:Flow content
-  - Deprecated
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/acronym
-browser-compat: html.elements.acronym
 ---
 
 {{HTMLSidebar}}
@@ -30,14 +21,18 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 
 > **Note :** Jusqu'à Gecko 1.9.2 (inclus), Firefox implémente l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
 
-## Exemple
+## Exemples
 
 ```html
 <p>
-   Le <acronym title="World Wide Web" lang="en">WWW</acronym>
-   n'est qu'une facette d'Internet.
+  Le <acronym title="World Wide Web" lang="en">WWW</acronym>
+  n'est qu'une facette d'Internet.
 </p>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Style par défaut
 

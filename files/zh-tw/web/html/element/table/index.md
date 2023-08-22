@@ -66,6 +66,7 @@ slug: Web/HTML/Element/table
 ### 棄用屬性
 
 - `align` {{Deprecated_inline}}
+
   - : 這個枚舉屬性會指示表格中的文字要如何對齊。可用值如下：left：意思是表格應該顯示在文件的左方。
 
     - center：意思是表格應該顯示在文件的中間。
@@ -74,7 +75,7 @@ slug: Web/HTML/Element/table
 - `bgcolor` {{Deprecated_inline}}
   - : 定義表格的背景與內容顏色。它使用[六位十六進制 RGB code](/zh-TW/docs/Web/CSS/color_value#RGB_colors)，前缀需要加上 '`#`' 。也可以用[預先定義的顏色字串](/zh-TW/docs/Web/CSS/color_value#Color_keywords)可用。在 CSS 要得出類似效果，應該使用 {{cssxref("background-color")}} 屬性。
 - `border` {{Deprecated_inline}}
-  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 {{htmlattrxref("frame", "table")}} 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
+  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](/zh-TW/docs/Web/HTML/Element/table#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
 - `cellpadding` {{Deprecated_inline}}
   - : 這個屬性定義了元件與邊界線之間的空白，以及要不要顯示。如果輸入像素，像素長度的空白會套用到四個邊；如果輸入百分比，內容將居中、整體的垂直空間（上與下）會使用這個百分比表示。橫向空間（左與右）也適用這個規則。在 CSS 要得出類似效果，應該對 `<table>` 屬性使用 {{cssxref("border-collapse")}}；並對 {{HTMLElement("td")}} 使用 {{cssxref("padding")}}。
 - `cellspacing` {{Deprecated_inline}}
@@ -82,6 +83,7 @@ slug: Web/HTML/Element/table
 - `frame` {{Deprecated_inline}}
   - : 這個枚舉屬性定義圍繞在表格邊框的哪一邊要顯示。在 CSS 要得出類似效果，應該使用 {{cssxref("border-style")}} 與 {{cssxref("border-width")}} 屬性。
 - `rules` {{Deprecated_inline}}
+
   - : 這個枚舉屬性定義諸如線條之類的規則，要如何出現在表格。它擁有以下數值：`none`，代表沒有任何規則上的指示。這是預設值。
 
     - `groups`，只標示行群組和列群組（行群組由 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、和 {{HTMLElement("tfoot")}} 定義；列群組由 {{HTMLElement("col")}} 與 {{HTMLElement("colgroup")}} 定義）；
@@ -180,8 +182,8 @@ slug: Web/HTML/Element/table
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -197,7 +199,9 @@ slug: Web/HTML/Element/table
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -205,15 +209,15 @@ slug: Web/HTML/Element/table
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
 
@@ -232,13 +236,15 @@ border: 1px solid black;
 
 ### Scope 行列
 
-雖然在 HTML5 裡面 {{htmlattrxref("scope", "td")}} 屬性已經過時，但很多螢幕閱讀器會利用這屬性，複製不使用屏幕閱讀器的人的視覺關聯，以便推斷可能的視覺位置。
+雖然在 HTML5 裡面 [`scope`](/zh-TW/docs/Web/HTML/Element/td#scope) 屬性已經過時，但很多螢幕閱讀器會利用這屬性，複製不使用屏幕閱讀器的人的視覺關聯，以便推斷可能的視覺位置。
 
 #### 示例
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>
@@ -271,11 +277,11 @@ border: 1px solid black;
 
 ### 複雜的表格
 
-針對單格複雜到無法歸類於直向或橫向的表格，諸如螢幕閱讀器之類的輔助技術，可能就無法解析。在這種情況下，通常就需要 {{htmlattrxref("colspan", "td")}} 與 {{htmlattrxref("rowspan", "td")}} 屬性。
+針對單格複雜到無法歸類於直向或橫向的表格，諸如螢幕閱讀器之類的輔助技術，可能就無法解析。在這種情況下，通常就需要 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 與 [`rowspan`](/zh-TW/docs/Web/HTML/Element/td#rowspan) 屬性。
 
 理想情況下，可以考慮使用其他方式來呈現表格的內容，例如把表格切分到不必依賴 `colspan` 和 `rowspan` 屬性。除了幫助使用輔助技術的人了解表格的內容之外，這樣也會使認知障礙者受益，因為他們可能難以理解表格佈局描述的關聯。
 
-`如果表格無法切分，請結合 {{htmlattrxref("id")}} 與 {{htmlattrxref("headers", "td")}} 使用，以便程序化地關聯各表格單位與標題。`
+`如果表格無法切分，請結合 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 與 [`headers`](/zh-TW/docs/Web/HTML/Element/td#headers) 使用，以便程序化地關聯各表格單位與標題。`
 
 - [`MDN Tables for visually impaired users`](/zh-TW/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [`Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials`](https://www.w3.org/WAI/tutorials/tables/multi-level/)

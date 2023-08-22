@@ -2,6 +2,7 @@
 title: Window.alert()
 slug: Web/API/Window/alert
 ---
+
 {{APIRef}}
 
 **`Window.alert()`** 메서드는 확인 버튼을 가지며 메시지를 지정할 수 있는 경고 대화 상자를 띄웁니다.
@@ -26,7 +27,7 @@ alert("Hello world!");
 
 상기 두 코드의 동작은 모두 다음과 같습니다.
 
-![Image:AlertHelloWorld.png](/files/130/AlertHelloWorld.png)
+![Image:AlertHelloWorld.png](alerthelloworld.png)
 
 ## 참고
 

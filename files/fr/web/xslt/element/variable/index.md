@@ -1,10 +1,6 @@
 ---
 title: variable
 slug: Web/XSLT/Element/variable
-tags:
-  - Référence_XSLT
-translation_of: Web/XSLT/Element/variable
-original_slug: Web/XSLT/variable
 ---
 
 {{ XsltRef() }}

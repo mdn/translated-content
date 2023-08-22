@@ -1,69 +1,17 @@
 ---
-title: '<kbd>: キーボード入力要素'
+title: "<kbd>: キーボード入力要素"
 slug: Web/HTML/Element/kbd
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
 
-**HTML のキーボード入力要素** (**`<kbd>`**) はキーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。
+**`<kbd>`** は [HTML](/ja/docs/Web/HTML) の要素で、キーボード、音声入力、その他の入力端末からのユーザーによる文字入力を表す行内の文字列の区間を表します。慣習的に、{{Glossary("user agent", "ユーザーエージェント")}}は既定で `<kbd>` 要素の中身を等幅フォントで表示しますが、 HTML 標準で規定されているものではありません。
 
 {{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
 
-`<kbd>` は {{HTMLElement("samp")}} (サンプル出力) 要素の中で様々な組み合わせの入れ子が行われ、様々な形の入力や視覚的な合図に基づいた入力を表現します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >, 知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
-          >記述コンテンツ</a
-        >を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+`<kbd>` は {{HTMLElement("samp")}}（サンプル出力）要素の中で様々な組み合わせの入れ子が行われ、様々な形の入力や視覚的な合図に基づいた入力を表現します。
 
 ## 属性
 
@@ -73,9 +21,9 @@ slug: Web/HTML/Element/kbd
 
 他の要素 `<kbd>` と組み合わせることで、もっと具体的なシナリオを表現できる場合があります。
 
-- 他の `<kbd>` 要素の中で更に `<kbd>` 要素を使用すると、もっと大きい入力の中における、実際のキー入力またはその他の入力単位を表します。以下の[入力時のキー操作の表現](#representing_keystrokes_within_an_input)を参照してください。
-- {{HTMLElement("samp")}} 要素の中で `<kbd>` 要素を使用すると、システムからユーザーにエコーバックされた入力を表します。以下の[入力のエコーバック](#echoed_input)の例を参照してください。
-- 一方、 `<kbd>` 要素の中で `<samp>` 要素を使用すると、メニューやメニュー項目の名前、画面上に表示されているボタンの名前など、システムによって表示された文字列に基づく入力を表します。以下の[画面上に表示された入力の選択肢の表現](#representing_onscreen_input_options)を参照してください。
+- 他の `<kbd>` 要素の中で更に `<kbd>` 要素を使用すると、もっと大きい入力の中における、実際のキー入力またはその他の入力単位を表します。以下の[入力時のキー操作の表現](#入力時のキー操作の表現)を参照してください。
+- `<kbd>` 要素を {{HTMLElement("samp")}} 要素の中で使用すると、システムからユーザーにエコーバックされた入力を表します。以下の[入力のエコーバック](#入力のエコーバック)の例を参照してください。
+- 一方、 `<kbd>` 要素の中で `<samp>` 要素を使用すると、メニューやメニュー項目の名前、画面上に表示されているボタンの名前など、システムによって表示された文字列に基づく入力を表します。以下の[画面上に表示された入力の選択肢の表現](#画面上に表示された入力の選択肢の表現)を参照してください。
 
 > **メモ:** 専用のスタイルを定義して、 `<kbd>` 要素における既定のフォントの選択を上書きすることができますが、ユーザー設定によっては CSS より優先されることがあります。
 
@@ -84,9 +32,13 @@ slug: Web/HTML/Element/kbd
 ### 基本的な例
 
 ```html
-<p>コマンド "mycommand" のドキュメントを参照するには <kbd>help mycommand</kbd>
-コマンドを使用してください。</p>
+<p>
+  コマンド "mycommand" のドキュメントを参照するには <kbd>help mycommand</kbd>
+コマンドを使用してください。
+</p>
 ```
+
+#### 結果
 
 {{ EmbedLiveSample('Basic_example', 350, 80) }}
 
@@ -101,15 +53,17 @@ slug: Web/HTML/Element/kbd
 ##### HTML
 
 ```html
-<p>キーボードショートカットの
-<kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> を使用して新規文書を作成することもできます。</p>
+<p>
+  キーボードショートカットの
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> を使用して新規文書を作成することもできます。
+</p>
 ```
 
 ここでは外側の `<kbd>` 要素でキー入力操作全体を囲み、それぞれのキーの組み合わせを記述するために、それぞれのキーを囲んでいます。
 
 > **メモ:** 常にこのように囲む必要はありません。外側の `<kbd>` 要素を省略して簡略化しても構いません。言い換えれば、単に `<kbd>Ctrl</kbd>+<kbd>N</kbd>` と表現するのも完全に有効です。
 >
-> しかし、スタイルシートによっては、このように重ねて囲んだ方が便利だと感じられるかもしれません。
+> **メモ:** しかし、スタイルシートによっては、このように重ねて囲んだ方が便利だと感じられるかもしれません。
 
 ##### 結果
 
@@ -123,10 +77,10 @@ slug: Web/HTML/Element/kbd
 
 ##### CSS
 
-キーボードのキーを表示する際に適用できるスタイル、 `<kbd>` 要素の `key` を定義します。
+キーボードキーのレンダリング時に適用できる、入れ子になっている `<kbd>` 要素の新しいセレクター、`kbd>kbd` を追加します。
 
 ```css
-kbd.key {
+kbd > kbd {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -138,7 +92,10 @@ kbd.key {
 それから HTML を更新して、このクラスを出力中のキーに使用するように表現します。
 
 ```html
-<p><kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd> を押して新規文書を作成することもできます。</p>
+<p>
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>
+  を押して新規文書を作成することもできます。
+</p>
 ```
 
 ##### 結果
@@ -149,15 +106,19 @@ kbd.key {
 
 ### 入力のエコーバック
 
-{{HTMLElement("samp")}} 要素内で `<kbd>` 要素を使用すると、システムからエコーバックされた入力を表現することができます。
+`<kbd>` 要素を {{HTMLElement("samp")}} 要素内で使用すると、システムからエコーバックされた入力を表現することができます。
 
 ```html
-<p>構文エラーが発生すると、このツールは確認のために
-あなたが入力したコマンドを出力します。</p>
+<p>
+  構文エラーが発生すると、このツールは確認のために
+  あなたが入力したコマンドを出力します。
+</p>
 <blockquote>
   <samp><kbd>custom-git ad my-new-file.cpp</kbd></samp>
 </blockquote>
 ```
+
+##### 結果
 
 {{EmbedLiveSample("Echoed_input", 650, 100)}}
 
@@ -167,20 +128,69 @@ kbd.key {
 
 例えば、「ファイル」メニューの中の「新規文書」を選択する方法を HTML で表現すると、このようになります。
 
-```html
-<p>新規ファイルを作成するには、メニューの
-<kbd><kbd><samp>ファイル</samp></kbd>⇒<kbd><samp>新規文書</samp></kbd></kbd>
-を選択して下さい。</p>
+```html-nolint
+<p>
+  新規ファイルを作成するには、メニューの <kbd><kbd><samp>ファイル</samp></kbd>
+  ⇒<kbd><samp>新規文書</samp></kbd></kbd> を選択して下さい。
+</p>
 
-<p>新しいファイルの名前を入力したら、 <kbd><samp>OK</samp></kbd>
-ボタンを押して確認することを忘れないでください。</p>
+<p>
+  新しいファイルの名前を入力したら、 <kbd><samp>OK</samp></kbd>
+  ボタンを押して確認することを忘れないでください。
+</p>
 ```
 
-これはいくらか興味深い組み合わせです。メニューの選択肢を記述するために、入力全体を `<kbd>` 要素で囲んでいます。それからその中で、メニューとメニュー項目の名前を `<kbd>` 及び `<samp>` の中に入れ、画面上の部品を選択する入力であることを示しています。
+これはいくらか興味深い組み合わせです。メニューの選択肢を記述するために、入力全体を `<kbd>` 要素で囲んでいます。それからその中で、メニューとメニュー項目の名前を `<kbd>` および `<samp>` の中に入れ、画面上の部品を選択する入力であることを示しています。
 
 #### 結果
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -188,7 +198,7 @@ kbd.key {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## 関連情報
 

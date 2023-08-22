@@ -3,11 +3,11 @@ title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`edgeMode`属性确定了当核心位于输入图像的边缘或贴近输入图像的边缘时，如何取用颜色值用于扩展输入图像，从而可以应用矩阵操作。
+`edgeMode` 属性确定了当核心位于输入图像的边缘或贴近输入图像的边缘时，如何取用颜色值用于扩展输入图像，从而可以应用矩阵操作。
 
-如果没有指定`edgeMode`属性，等效于值被指定为`duplicate`。
+如果没有指定 `edgeMode` 属性，等效于值被指定为 `duplicate`。
 
 ## 用法
 

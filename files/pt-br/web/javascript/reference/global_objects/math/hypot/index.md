@@ -45,13 +45,13 @@ Com apenas um parâmetro, `Math.hypot()` se comporta como `Math.abs()`.
 ### Usando `Math.hypot()`
 
 ```js
-Math.hypot(3, 4);        // 5
-Math.hypot(3, 4, 5);     // 7.0710678118654755
-Math.hypot();            // 0
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, 'foo'); // NaN, +'foo' => NaN
-Math.hypot(3, 4, '5');   // 7.0710678118654755, +'5' => 5
-Math.hypot(-3);          // 3, the same as Math.abs(-3)
+Math.hypot(3, 4); // 5
+Math.hypot(3, 4, 5); // 7.0710678118654755
+Math.hypot(); // 0
+Math.hypot(NaN); // NaN
+Math.hypot(3, 4, "foo"); // NaN, +'foo' => NaN
+Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
+Math.hypot(-3); // 3, the same as Math.abs(-3)
 ```
 
 ## Polyfill
@@ -59,25 +59,27 @@ Math.hypot(-3);          // 3, the same as Math.abs(-3)
 O comportamento de `Math.hypot()` pode ser emulado com a seguinte função:
 
 ```js
-Math.hypot = Math.hypot || function() {
-  var y = 0;
-  var length = arguments.length;
+Math.hypot =
+  Math.hypot ||
+  function () {
+    var y = 0;
+    var length = arguments.length;
 
-  for (var i = 0; i < length; i++) {
-    if (arguments[i] === Infinity || arguments[i] === -Infinity) {
-      return Infinity;
+    for (var i = 0; i < length; i++) {
+      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
+        return Infinity;
+      }
+      y += arguments[i] * arguments[i];
     }
-    y += arguments[i] * arguments[i];
-  }
-  return Math.sqrt(y);
-};
+    return Math.sqrt(y);
+  };
 ```
 
 ## Especificações
 
-| Specification                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Definição inicial. |
+| Specification                                            | Status               | Comment            |
+| -------------------------------------------------------- | -------------------- | ------------------ |
+| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
 | {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                    |
 
 ## Compatibilidade com navegadores

@@ -65,14 +65,14 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 現在在元件 template 裡面新增一個空的 `<div>` 。
 2. 在這個 `<div>` 裡面，新增一個 checkbox 和一個相對應的 label。在 checkbox 加上一個 `id` 屬性，並在 label 加上 `for` 屬性，使 checkbox 對應到 label 。如下所示。
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" checked="false" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```html
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" checked="false" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### 在我們的應用程式裡使用 TodoItem
 
@@ -81,22 +81,22 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 再一次打開 `App.vue` 。
 2. 在 `<script>` 標籤的頂端，加上以下內容來匯入 `ToDoItem` 元件：
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. 在元件物件裡面添加 `components` 屬性，然後在它裡面添加 `ToDoItem` 元件來註冊它。
 
 現在你的 `<script>` 內容應該會像這樣：
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
@@ -146,13 +146,13 @@ export default {
 3. 在 `props` 物件中加入兩個屬性，分別是 `label` 和 `done`
 4. `label` 的值是一個物件帶有兩個屬性
 
-    1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
-    2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
+   1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
+   2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
 
 5. 接著是 `done` 這個 prop
 
-    1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
-    2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
+   1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
+   2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
 
 你的物件現在看起來應該要像是這樣：
 
@@ -216,7 +216,7 @@ If you change the value of the `label` prop passed into the `<to-do-item></to-do
 
 To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/zh-TW/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
-To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
+To work around this, we can manage the `done` state using Vue's `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 
 ```js
 data() {
@@ -230,7 +230,7 @@ You'll note that the `data` property is a function. This is to keep the data val
 
 You use `this` to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.
 
-> **備註：** Because of the way that `this` works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don’t use an arrow function for the `data` property.
+> **備註：** Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
 
 So let's add a `data` property to our `ToDoItem` component. This will return an object containing a single property that we'll call `isDone`, whose value is `this.done`.
 
@@ -240,17 +240,17 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
-Vue does a little magic here — it binds all of your props directly to the component instance, so we don’t have to call `this.props.done`. It also binds other attributes (`data`, which you’ve already seen, and others like `methods`, `computed`, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our `data` attribute `isDone` instead of `done`.
+Vue does a little magic here — it binds all of your props directly to the component instance, so we don't have to call `this.props.done`. It also binds other attributes (`data`, which you've already seen, and others like `methods`, `computed`, etc.) directly to the instance. This is, in part, to make them available to your template. The down-side to this is that you need to keep the keys unique across these attributes. This is why we called our `data` attribute `isDone` instead of `done`.
 
 So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
@@ -295,7 +295,7 @@ Great! We now have a working checkbox where we can set the state programmaticall
 
 We can use the [lodash](https://www.npmjs.com/package/lodash) package's `uniqueid()` method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component `id`s unique.
 
-Let’s add the package to our project with npm; stop your server and enter the following command into your terminal:
+Let's add the package to our project with npm; stop your server and enter the following command into your terminal:
 
 ```bash
 npm install --save lodash.uniqueid
@@ -303,32 +303,32 @@ npm install --save lodash.uniqueid
 
 > **備註：** If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
 
-We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`’s `<script>` element:
+We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 
-Next, bind the `id` to both our checkbox’s `id` attribute and the label’s `for` attribute, updating the existing `id` and `for` attributes as shown:
+Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
 ```html
 <template>

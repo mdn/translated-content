@@ -14,7 +14,8 @@ a[title] {
 }
 
 /* href が "https://example.org" と一致する <a> 要素 */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -169,7 +170,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML 順序付きリスト
 
-HTML 仕様書では、 {{htmlattrxref("type", "input")}} 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の {{htmlattrxref("type", "ol")}} 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
+HTML 仕様書では、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の [`type`](/ja/docs/Web/HTML/Element/ol#type) 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
 
 #### CSS
 

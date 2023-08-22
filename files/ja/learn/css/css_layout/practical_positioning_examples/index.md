@@ -36,17 +36,32 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -132,7 +147,8 @@ body {
 最後に、このセクションでは、リンク状態にいくつかのスタイルを設定します。 最初に、フォーカス時やホバー時にタブの状態が異なるように {{cssxref(":focus")}} と {{cssxref(":hover")}} の状態を設定し、ユーザーに視覚的なフィードバックを提供します。 次に、タブの 1 つに `active` のクラスが存在する場合、それに同じスタイルを設定する規則を設定します。 これをタブがクリックされたときに JavaScript を使用して設定します。 次の CSS を他のスタイルの下に配置します。
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -237,14 +253,30 @@ function setTabHandler(tab, tabPos) {
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -376,7 +408,7 @@ aside {
 追加する CSS の最後の部分がもう 1 つあります。 CSS の下部に次のコードを追加してください。
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
@@ -388,18 +420,3 @@ input[type=checkbox]:checked + aside {
 ## まとめ
 
 それでは、位置指定の見方を締めくくります — これまでのところ、基本的な仕組みがどのように機能するのか、またこれらを適用して興味深い UI 機能を構築する方法を理解しているはずです。 これをすぐに理解できなくても心配しないでください — 位置指定はかなり高度なトピックであり、理解を助けるために記事をいつでも再び参照することができます。 次の話題はフレックスボックスです。
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

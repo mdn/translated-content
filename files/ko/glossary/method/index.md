@@ -18,4 +18,4 @@ slug: Glossary/Method
 
 - [List of JavaScript built-in methods](/ko/docs/Web/JavaScript/Reference/Methods_Index)
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a><ul><li>{{Glossary("function")}}</li><li>{{Glossary("object")}}</li><li>{{Glossary("property")}}</li><li>{{Glossary("static method")}}</li></ul></li><li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">Defining a method in JavaScript</a></li></ul></section>
+<section id="Quick_links"><ul><li><a href="/ko/docs/Glossary">MDN Web Docs Glossary</a><ul><li>{{Glossary("function")}}</li><li>{{Glossary("object")}}</li><li>{{Glossary("property")}}</li><li>{{Glossary("static method")}}</li></ul></li><li><a href="/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions">Defining a method in JavaScript</a></li></ul></section>

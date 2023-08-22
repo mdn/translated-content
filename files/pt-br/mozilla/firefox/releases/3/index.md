@@ -109,7 +109,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Simplified add-on installation.** You can now install extensions from third-party download sites in fewer clicks, thanks to the removal of the add-on download site whitelist.
 - **New Download Manager.** The download manager makes it easier to locate your downloaded files.
 - **Resumable downloads.** You can now resume downloads after restarting the browser or resetting your network connection.
-- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages -- this scales not just the text but the layout and images as well.
+- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages — this scales not just the text but the layout and images as well.
 - **Tab scrolling and quickmenu.** Tabs are easier to locate with the new tab scrolling and tab quickmenu features.
 - **Save what you were doing.** Firefox 3 prompts you to see if you'd like to save your current tabs when you exit Firefox.
 - **Optimized Open in Tabs behavior.** Opening a folder of bookmarks in tabs now appends the new tabs instead of replacing the existing ones.
@@ -127,7 +127,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
 - **Web-based protocol handlers.** Web applications, such as your favorite web mail provider, can now be used instead of desktop applications for handling `mailto:` links from other sites. Similar support is provided for other protocols as well. (Note that web applications do have to register themselves with Firefox before this will work.)
 - **Easy to use Download Actions.** A new Applications preferences pane provides an improved user interface for configuring handlers for various file types and protocol schemes.
 - **Improved look and feel.** Graphics and font handling have been improved to make web sites look better on your screen, including sharper text rendering and better support for fonts with ligatures and complex scripts. In addition, Mac and Linux (Gnome) users will find that Firefox feels more like a native application for their platform than ever, with a new, native, look and feel.
-- **Color management support.** By setting the `gfx.color_management.enabled` preference in `{{mediawiki.external('about:config')}}`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
+- **Color management support.** By setting the `gfx.color_management.enabled` preference in `about:config`, you can ask Firefox to use the color profiles embedded in images to adjust the colors to match your computer's display.
 - **Offline support.** Web applications can take advantage of new features to support being used even when you don't have an Internet connection.
 
 ### Security and privacy

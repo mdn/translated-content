@@ -1,7 +1,6 @@
 ---
 title: ¿Qué software necesito para construir un sitio web?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 En este artículo se explican cuales componentes de software necesita para editar, cargar, o visualizar un sitio web.
@@ -12,7 +11,7 @@ En este artículo se explican cuales componentes de software necesita para edita
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías conocer acerca de
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >la diferencia entre páginas web, sitios web, servidores web, y
           moteres de búsqueda.</a
         >
@@ -259,9 +258,9 @@ Como ya sabe, necesita un navegador para ver los sitios web. Existen [docenas](h
 - [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari](http://www.apple.com/safari/)
 
-Si su sitio está destinado a un grupo específico (por ejemplo, una plataforma técnica o país), puede que tenga que probar el sitio con navegadores adicionales, como [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), o [UC Browser](http://www.ucweb.com/ucbrowser/).
+Si su sitio está destinado a un grupo específico (por ejemplo, una plataforma técnica o país), puede que tenga que probar el sitio con navegadores adicionales, como [Opera](http://www.opera.com/) o [Konqueror](http://www.konqueror.org/).
 
-Sin embargo las pruebas se dificultan debido a que algunos navegadores sólo funcionan en determinados sistemas operativos. Apple Safari se ejecuta en iOS y Mac OS, mientras Internet Explorer corre solamente en Windows. Lo mejor es aprovechar los servicios como [Browsershots](http://browsershots.org/) o [Browserstack](http://www.browserstack.com/). Browsershots proporciona capturas de pantallas de tu sitio web en diferentes navegadores. Browserstack realmente te otorga acceso remoto a máquinas virtuales de modo que puedes probar tu sitio en los entornos más comunes. De manera alternativa, puedes instalar tu propia máquina virtual, pero se necesita algo de experiencia. ( Si escoge este camino, Microsoft tiene algunas herramientas para desarrolladores incluso una máquina virtual lista para utilizar en [modern.ie](https://modern.ie).)
+Sin embargo las pruebas se dificultan debido a que algunos navegadores sólo funcionan en determinados sistemas operativos. Apple Safari se ejecuta en iOS y Mac OS, mientras Internet Explorer corre solamente en Windows. Lo mejor es aprovechar los servicios como [Browsershots](http://browsershots.org/) o [Browserstack](http://www.browserstack.com/). Browsershots proporciona capturas de pantallas de tu sitio web en diferentes navegadores. Browserstack realmente te otorga acceso remoto a máquinas virtuales de modo que puedes probar tu sitio en los entornos más comunes. De manera alternativa, puedes instalar tu propia máquina virtual, pero se necesita algo de experiencia. (Si escoge este camino, Microsoft tiene algunas herramientas para desarrolladores incluso una [máquina virtual lista para utilizar](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)).
 
 Sin falta ejecute algunas pruebas en dispositivos reales, especialmente en dispositivos móviles reales. Simulación de dispositivos móviles es una tecnología nueva, en evolución y menos confiable que la simulación de escritorio. Desde luego, los dispositivos móviles son costosos, por lo que le sugerimos echar un vistazo a [la inictiva de Laboratorios de dispositivos abiertos](http://opendevicelab.com/). Puede además compartir dispositivos quiere probar en diferentes plataformas sin gastar mucho.
 

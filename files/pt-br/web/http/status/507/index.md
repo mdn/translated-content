@@ -17,6 +17,6 @@ Isso indica que o método não pode ser executado porque o servidor não pode sa
 
 ## Especificações
 
-| Especificação                                                        | Título                                   |
-| -------------------------------------------------------------------- | ---------------------------------------- |
+| Especificação                                        | Título                                   |
+| ---------------------------------------------------- | ---------------------------------------- |
 | {{RFC("4918", "507 Insufficient Storage" , "11.5")}} | Web Distributed Authoring and Versioning |

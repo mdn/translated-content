@@ -5,7 +5,7 @@ slug: Web/API/Streams_API
 
 {{DefaultAPISidebar("Streams")}}
 
-Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流，并且允许开发人员根据需要处理它们。
+Stream API 允许 JavaScript 以编程方式访问从网络接收的数据流，并且允许开发人员根据需要处理它们。
 
 {{AvailableInWorkers}}
 
@@ -43,11 +43,11 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 ### 可写流
 
 - {{domxref("WritableStream")}}
-  - : 提供了将流写入目标这个过程的标准抽象表示，称为 sink。内置了背压和队列机制。
+  - : 为将流写入目的地（称为接收器）的过程，提供了一个标准抽象。内置了背压和队列机制。
 - {{domxref("WritableStreamDefaultWriter")}}
   - : 表示默认 writer，用于将分块的数据写入可写流中。
 - {{domxref("WritableStreamDefaultController")}}
-  - : 表示一个 controller，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 `WritableStream` 时，对应的 `WritableStreamDefaultController` 实例会被提供给底层的 sink 供其操作。
+  - : 表示一个 controller，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 `WritableStream` 时，对应的 `WritableStreamDefaultController` 实例会被提供给底层的接收器供其操作。
 
 ### 转换流
 
@@ -77,16 +77,16 @@ Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流�
 - {{domxref("ReadableByteStreamController")}}
   - : 表示一个 controller，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节流 controller 用于处理字节流。
 - {{domxref("ReadableStreamBYOBRequest")}}
-  - : 表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。
+  - : 表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB 拉取请求。
 
 ## 示例
 
-我们创建了流的示例目录，以配合 Streams API 文档——参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
+我们创建了流的示例目录，以配合 Stream API 文档——参见 [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams)。示例如下：
 
 - [简单的流 pump](https://mdn.github.io/dom-examples/streams/simple-pump/)：此示例展示了如何消费流并且传递它的数据进入另一个。
 - [转换一个 PNG 到灰度](https://mdn.github.io/dom-examples/streams/grayscale-png/)：这个示例展示了如何使用可读流将 PNG 转换到灰度。
 - [简单随机流](https://mdn.github.io/dom-examples/streams/simple-random-stream/)：这个示例展示了如何使用一个自定义流去生成随机字符串，并将将它们排入分块，然后重新读取它们。
-- [简单 tee 示例](https://mdn.github.io/dom-examples/streams/simple-tee-example/)：这个示例由简单随机流扩展，展示了一个流如何被拷贝为两个并且生成的流可以被独立的读取。
+- [简单拷贝示例](https://mdn.github.io/dom-examples/streams/simple-tee-example/)：这个示例由简单随机流扩展，展示了一个流如何被拷贝为两个并且生成的流可以被独立的读取。
 - [简单 writer](https://mdn.github.io/dom-examples/streams/simple-writer/)：这个示例展示了如何写入可写流，然后解码流并将流内容写入 UI。
 - [解压 PNG 分块](https://mdn.github.io/dom-examples/streams/png-transform-stream/)：此示例展示了如何使用 [`pipeThrough()`](/zh-CN/docs/Web/API/ReadableStream/pipeThrough) 通过将 PNG 文件的数据转换为 PNG 分块流来将 ReadableStream 转换为其他数据类型的流。
 

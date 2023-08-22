@@ -1,7 +1,6 @@
 ---
 title: 문법과 자료형
 slug: Web/JavaScript/Guide/Grammar_and_types
-original_slug: Web/JavaScript/Guide/Values,_variables,_and_literals
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/소개", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -93,18 +92,18 @@ ISO 8859-1 혹은 Unicode 문자(가령 `å` 나 `ü`)도 식별자에 사용할
 
 ```js
 var a;
-console.log('a 값은 ' + a); // a 값은 undefined
+console.log("a 값은 " + a); // a 값은 undefined
 
-console.log('b 값은 ' + b); // b 값은 undefined
+console.log("b 값은 " + b); // b 값은 undefined
 var b;
 // 이것은 아래의 '변수 호이스팅'을 읽기 전에는 혼란스러울 수 있음
 
-console.log('c 값은 ' + c); // Uncaught ReferenceError: c is not defined
+console.log("c 값은 " + c); // Uncaught ReferenceError: c is not defined
 
 let x;
-console.log('x 값은 ' + x); // x 값은 undefined
+console.log("x 값은 " + x); // x 값은 undefined
 
-console.log('y 값은 ' + y); // Uncaught ReferenceError: y is not defined
+console.log("y 값은 " + y); // Uncaught ReferenceError: y is not defined
 let y;
 ```
 
@@ -112,7 +111,7 @@ let y;
 
 ```js
 var input;
-if(input === undefined) {
+if (input === undefined) {
   doThis();
 } else {
   doThat();
@@ -177,14 +176,13 @@ console.log(y); // ReferenceError: y is not defined
 console.log(x === undefined); // true
 var x = 3;
 
-
 /**
  * Example 2
  */
 // undefined 값을 반환함.
 var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
   var myvar = "local value";
 })();
@@ -203,12 +201,12 @@ x = 3;
 /**
  * Example 2
  */
-var myvar = 'my value';
+var myvar = "my value";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
-  myvar = 'local value';
+  myvar = "local value";
 })();
 ```
 
@@ -231,15 +229,15 @@ let x = 3;
 foo(); // "bar"
 
 function foo() {
-  console.log('bar');
+  console.log("bar");
 }
 
 /* 함수 표현식 */
 
 baz(); // TypeError: baz is not a function
 
-var baz = function() {
-  console.log('bar2');
+var baz = function () {
+  console.log("bar2");
 };
 ```
 
@@ -269,7 +267,7 @@ const PI = 3.14;
 
 ```js
 // 오류가 발생합니다
-function f() {};
+function f() {}
 const f = 5;
 
 // 역시 오류가 발생합니다
@@ -284,15 +282,15 @@ function f() {
 그러나, 상수에 할당된 객체의 속성은 보호되지 않아서 다음의 문은 문제없이 실행됩니다.
 
 ```js
-const MY_OBJECT = {'key': 'value'};
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 또한, 배열의 내용도 보호되지 않아서 다음의 문도 문제없이 실행됩니다.
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 ```
 
@@ -329,7 +327,7 @@ var answer = 42;
 그리고 나중에, 동일한 변수에 문자열 값을 할당할 수도 있습니다. 아래와 같이,
 
 ```js
-answer = 'Thanks for all the fish...';
+answer = "Thanks for all the fish...";
 ```
 
 JavaScript는 동적 형지정 언어이므로, 이 할당은 오류 메시지가 발생하지 않습니다.
@@ -339,15 +337,15 @@ JavaScript는 동적 형지정 언어이므로, 이 할당은 오류 메시지�
 숫자와 문자열 값 사이에 `+` 연산자를 포함한 식에서, JavaScript는 숫자 값을 문자열로 변환합니다. 예를 들어, 아래와 같은 문이 있습니다.
 
 ```js
-x = 'The answer is ' + 42 // "The answer is 42"
-y = 42 + ' is the answer' // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 다른 연산자를 포함한 식의 경우, JavaScript는 숫자 값을 문자열로 변환하지 않습니다. 예를 들면,
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### 문자열을 숫자로 변환하기
@@ -362,14 +360,14 @@ y = 42 + ' is the answer' // "42 is the answer"
 > **참고:** 게다가 `parseInt`를 잘 사용하기 위해서는 항상 진법(Radix) 매개변수를 포함해야 합니다. 진법 매개변수는 변환에 사용될 진법을 지정하는데 사용됩니다.
 
 ```js
-parseInt('101', 2) // 5
+parseInt("101", 2); // 5
 ```
 
 문자열을 숫자로 변환하는 대안은 `+` (단항 더하기) 연산자입니다.
 
-```js
-'1.1' + '1.1' // '1.11.1'
-(+'1.1') + (+'1.1') // 2.2
+```js-nolint
+'1.1' + '1.1'; // '1.11.1'
+(+'1.1') + (+'1.1'); // 2.2
 // 참고: 괄호는 명확성을 위해 추가, 필요한 것은 아닙니다.
 ```
 
@@ -392,7 +390,7 @@ JavaScript에서 값을 나타내기 위해 리터럴을 사용합니다. 이는
 아래 예제는 요소가 3개로 `length`가 3인 `coffees` 배열을 만듭니다.
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona'];
+let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > **참고:** 배열 리터럴은 일종의 객체 초기자(initializer) 입니다. [객체 초기자 사용하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#객체_초기자_사용하기) 참고.
@@ -406,7 +404,7 @@ let coffees = ['French Roast', 'Colombian', 'Kona'];
 배열 리터럴에서 모든 요소를 지정할 필요는 없습니다. 만약 잇달아 두 개의 쉼표를 두면, 배열은 지정되지 않은 요소를 `undefined`로 채웁니다. 다음 예제는 `fish` 배열을 만듭니다.
 
 ```js
-let fish = ['Lion', , 'Angel'];
+let fish = ["Lion", , "Angel"];
 ```
 
 이 배열은 값이 있는 두 요소와 빈 요소 하나를 가집니다.
@@ -421,20 +419,20 @@ let fish = ['Lion', , 'Angel'];
 
 > **참고:** 후행 쉼표는 구버전 브라우저에서 오류를 유발할 수 있으므로 제거하는게 최선입니다.
 
-```js
-var myList = ['home', , 'school', ];
+```js-nolint
+var myList = ["home", , "school", ];
 ```
 
 아래 예제에서, 배열의 `length`는 4이며, `myList[0]`과 `myList[2]`는 값이 빠졌습니다.
 
 ```js
-var myList = [ , 'home', , 'school'];
+var myList = [, "home", , "school"];
 ```
 
 아래 예제에서, 배열의 `length`는 4이며, `myList[1]`과 `myList[3]`은 값이 빠졌습니다. **마지막 쉼표는 무시됩니다.**
 
 ```js
-var myList = ['home', , 'school', , ];
+var myList = ["home", , "school", ,];
 ```
 
 추가 쉼표의 동작을 이해하는 것은 JavaScript를 언어로서 이해하는데 중요합니다.
@@ -511,27 +509,27 @@ JavaScript 숫자 리터럴은 다른 진법의 정수 리터럴과 10진수의 
 아래는 객체 리터럴의 예제입니다. `car` 객체의 첫째 요소는 `myCar` 속성을 정의하고 문자열 `"Saturn"`을 할당합니다. 반면 둘째 요소인 `getCar` 속성은 함수 `(carTypes("Honda"))`을 호출한 결과가 즉시 할당됩니다. 셋째 요소 `special` 속성은 기존 변수 (`sales`)를 사용합니다.
 
 ```js
-var sales = 'Toyota';
+var sales = "Toyota";
 
 function carTypes(name) {
-  if (name === 'Honda') {
+  if (name === "Honda") {
     return name;
   } else {
     return "Sorry, we don't sell " + name + ".";
   }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+var car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 게다가, 속성명으로 숫자나 문자열 리터럴을 사용하거나 또다른 객체 리터럴 내부에 객체를 중첩할 수도 있습니다. 아래 예제는 이 옵션을 사용합니다.
 
 ```js
-var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -560,17 +558,17 @@ ES2015에서, 객체 리터럴은 구성에서 프로토타입 설정, `foo: foo
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // ‘handler: handler’의 단축 표기
-    handler,
-    // Methods
-    toString() {
-     // Super calls
-     return 'd ' + super.toString();
-    },
-    // Computed (dynamic) property names
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // ‘handler: handler’의 단축 표기
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return "d " + super.toString();
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
@@ -588,12 +586,12 @@ var re = /ab+c/;
 
 아래는 문자열 리터럴의 예제입니다.
 
-```js
-'foo'
-"bar"
-'1234'
-'one line \n another line'
-"John's cat"
+```js-nolint
+'foo';
+"bar";
+'1234';
+'one line \n another line';
+"John's cat";
 ```
 
 꼭 `String` 객체를 사용할 필요가 없는 경우 문자열 리터럴을 사용해야 합니다. `String` 객체에 대해 자세한 사항은 {{jsxref("String")}}을 참고하세요.
@@ -602,7 +600,7 @@ var re = /ab+c/;
 
 ```js
 // 공백을 포함한 문자열 내 심볼 갯수가 출력됩니다.
-console.log("John's cat".length)// 여기서는, 10.
+console.log("John's cat".length); // 여기서는, 10.
 ```
 
 [템플릿 리터럴](/ko/docs/Web/JavaScript/Reference/Template_literals)도 사용할 수 있습니다. 템플릿 리터럴은 큰 따옴표나 작은 따옴표 대신 백틱 (`` ` ``) ([억음 부호](https://ko.wikipedia.org/wiki/%EC%96%B5%EC%9D%8C_%EB%B6%80%ED%98%B8)) 으로 문자를 감쌉니다.
@@ -611,24 +609,25 @@ console.log("John's cat".length)// 여기서는, 10.
 
 ```js
 // 기본적인 문자열 리터럴 생성
-`In JavaScript '\n' is a line-feed.`
+`In JavaScript '\n' is a line-feed.`;
 
 // 여러 줄 문자열
 `In JavaScript, template strings can run
  over multiple lines, but double and single
- quoted strings cannot.`
+ quoted strings cannot.`;
 
 // 문자열 삽입
-var name = 'Bob', time = 'today';
-`Hello ${name}, how are you ${time}?`
+var name = "Bob",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 ```
 
 [Tagged templates](/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_templates)은 구문 분석을 위한 "태그" 함수에 대한 호출과 함께 템플릿 리터럴을 지정하기 위한 간결한 구문입니다. 템플릿 태그 함수의 이름은 아래 예제에서 `myTag` 가 템플릿 태그 함수 이름인 것과 같이 템플릿 리터럴 앞에 옵니다.
 
 ```js
 let myTag = (str, name, age) => `${str[0]}${name}${str[1]}${age}${str[2]}`;
-let [name, age] = ['Mika', 28];
-myTag`Participant "${ name }" is ${ age } years old.`;
+let [name, age] = ["Mika", 28];
+myTag`Participant "${name}" is ${age} years old.`;
 // Participant "Mika" is 28 years old.
 ```
 
@@ -637,7 +636,7 @@ myTag`Participant "${ name }" is ${ age } years old.`;
 보통 문자에 더해서, 문자열에 아래 예제와 같이 특수 문자도 포함할 수 있습니다.
 
 ```js
-'one line \n another line'
+"one line \n another line";
 ```
 
 다음 표는 JavaScript 문자열에 사용할 수 있는 특수 문자 목록입니다.
@@ -730,7 +729,7 @@ myTag`Participant "${ name }" is ${ age } years old.`;
 
 전행 백슬래시와 함께 문자열 안에 따옴표를 사용할 수 있습니다. 이것을 따옴표 이스케이프라고 합니다. 예를 들어,
 
-```js
+```js-nolint
 var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
@@ -744,37 +743,37 @@ He read "The Cremation of Sam McGee" by R.W. Service.
 백슬래시를 문자열 내에 포함시키기 위해서는, 백슬래시 문자를 이스케이프 해야 합니다. 예를 들어, 파일 경로 `c:\temp`를 문자열에 할당하기 위해서는 아래와 같이 사용합니다.
 
 ```js
-var home = 'c:\\temp';
+var home = "c:\\temp";
 ```
 
 또한 줄바꿈 역시 전행 백슬래시로 이스케이프할 수 있습니다. 백슬래시와 줄바꿈 모두 문자열 값에서는 사라집니다.
 
 ```js
-var str = 'this string \
+var str =
+  "this string \
 is broken \
 across multiple \
-lines.'
-console.log(str);   // this string is broken across multiple lines.
+lines.";
+console.log(str); // this string is broken across multiple lines.
 ```
 
 JavaScript에는 "heredoc" 구문은 없지만, 줄바꿈 이스케이프와 각 줄 끝 이스케이프된 줄바꿈을 추가하여 흉내낼 수 있습니다.
 
 ```js
 var poem =
-'Roses are red,\n\
+  "Roses are red,\n\
 Violets are blue.\n\
 Sugar is sweet,\n\
-and so is foo.'
+and so is foo.";
 ```
 
 ECMAScript 2015에서는 [**템플릿 리터럴**](/ko/docs/Web/JavaScript/Reference/Template_literals)이라는 새로운 리터럴이 소개되었습니다. 이것은 다중 문자열을 포함한 많은 새로운 기능을 가지고 있습니다!
 
 ```js
-var poem =
-`Roses are red,
+var poem = `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.`
+and so is foo.`;
 ```
 
 ## 추가 정보

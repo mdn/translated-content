@@ -1,7 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
 
 {{JSRef}}
@@ -16,28 +15,28 @@ Los _arrays_ son objetos similares a una lista cuyo prototipo proporciona métod
 **Crear un Array**
 
 ```js
-let frutas = ["Manzana", "Banana"]
+let frutas = ["Manzana", "Banana"];
 
-console.log(frutas.length)
+console.log(frutas.length);
 // 2
 ```
 
 **Acceder a un elemento de Array mediante su índice**
 
 ```js
-let primero = frutas[0]
+let primero = frutas[0];
 // Manzana
 
-let ultimo = frutas[frutas.length - 1]
+let ultimo = frutas[frutas.length - 1];
 // Banana
 ```
 
 **Recorrer un Array**
 
 ```js
-frutas.forEach(function(elemento, indice, array) {
-    console.log(elemento, indice);
-})
+frutas.forEach(function (elemento, indice, array) {
+  console.log(elemento, indice);
+});
 // Manzana 0
 // Banana 1
 ```
@@ -45,38 +44,38 @@ frutas.forEach(function(elemento, indice, array) {
 **Añadir un elemento al final de un Array**
 
 ```js
-let nuevaLongitud = frutas.push('Naranja') // Añade "Naranja" al final
+let nuevaLongitud = frutas.push("Naranja"); // Añade "Naranja" al final
 // ["Manzana", "Banana", "Naranja"]
 ```
 
 **Eliminar el último elemento de un Array**
 
 ```js
-let ultimo = frutas.pop() // Elimina "Naranja" del final
+let ultimo = frutas.pop(); // Elimina "Naranja" del final
 // ["Manzana", "Banana"]
 ```
 
 **Añadir un elemento al principio de un Array**
 
 ```js
-let nuevaLongitud = frutas.unshift('Fresa') // Añade "Fresa" al inicio
+let nuevaLongitud = frutas.unshift("Fresa"); // Añade "Fresa" al inicio
 // ["Fresa" ,"Manzana", "Banana"]
 ```
 
 **Eliminar el primer elemento de un Array**
 
 ```js
-let primero = frutas.shift() // Elimina "Fresa" del inicio
+let primero = frutas.shift(); // Elimina "Fresa" del inicio
 // ["Manzana", "Banana"]
 ```
 
 **Encontrar el índice de un elemento del Array**
 
 ```js
-frutas.push('Fresa')
+frutas.push("Fresa");
 // ["Manzana", "Banana", "Fresa"]
 
-let pos = frutas.indexOf('Banana') // (pos) es la posición para abreviar
+let pos = frutas.indexOf("Banana"); // (pos) es la posición para abreviar
 // 1
 ```
 
@@ -86,7 +85,7 @@ let pos = frutas.indexOf('Banana') // (pos) es la posición para abreviar
   - : Eliminamos "Banana" del _array_ pasándole dos parámetros: la posición del primer elemento que se elimina y el número de elementos que queremos eliminar. De esta forma, `.splice(pos, 1)` empieza en la posición que nos indica el valor de la variable `pos` y elimina 1 elemento. En este caso, como `pos` vale 1, elimina un elemento comenzando en la posición 1 del _array,_ es decir "Banana".
 
 ```js
-let elementoEliminado = frutas.splice(pos, 1)
+let elementoEliminado = frutas.splice(pos, 1);
 // ["Manzana", "Fresa"]
 ```
 
@@ -96,16 +95,17 @@ let elementoEliminado = frutas.splice(pos, 1)
   - : Con `.splice()` no solo se puede eliminar elementos del array, si no que también podemos extraerlos guardándolo en un nuevo array. ¡Ojo! que al hacer esto estaríamos modificando el array de origen.
 
 ```js
-let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
-console.log(vegetales)
+let vegetales = ["Repollo", "Nabo", "Rábano", "Zanahoria"];
+console.log(vegetales);
 // ["Repollo", "Nabo", "Rábano", "Zanahoria"]
 
-let pos = 1, numElementos = 2
+let pos = 1,
+  numElementos = 2;
 
-let elementosEliminados = vegetales.splice(pos, numElementos)
+let elementosEliminados = vegetales.splice(pos, numElementos);
 // ["Nabo", "Rábano"] ==> Lo que se ha guardado en "elementosEliminados"
 
-console.log(vegetales)
+console.log(vegetales);
 // ["Repollo", "Zanahoria"] ==> Lo que actualmente tiene "vegetales"
 ```
 
@@ -123,10 +123,14 @@ Los índices de los _arrays_ de JavaScript comienzan en cero, es decir, el índi
 Si se utiliza un número de índice no válido, se obtendrá `undefined`.
 
 ```js
-let arr = ['este es el primer elemento', 'este es el segundo elemento', 'este es el último elemento']
-console.log(arr[0])              // escribe en consola 'este es el primer elemento'
-console.log(arr[1])              // escribe en consola 'este es el segundo elemento'
-console.log(arr[arr.length - 1]) // escribe en consola 'este es el último elemento'
+let arr = [
+  "este es el primer elemento",
+  "este es el segundo elemento",
+  "este es el último elemento",
+];
+console.log(arr[0]); // escribe en consola 'este es el primer elemento'
+console.log(arr[1]); // escribe en consola 'este es el segundo elemento'
+console.log(arr[arr.length - 1]); // escribe en consola 'este es el último elemento'
 ```
 
 Los elementos de un _array_ pueden considerarse propiedades del objeto tanto como `toString` (sin embargo, para ser precisos, `toString()` es un método). Sin embargo, se obtendrá un error de sintaxis si se intenta acceder a un elemento de un _array_ de la forma siguiente, ya que el nombre de la propiedad no sería válido:
@@ -155,7 +159,7 @@ Obsérvese que, en el último ejemplo, ha sido necesario poner `'3d'` entre comi
 El motor de JavaScript transforma en un string el 2 de `decadas[2]` a través de una conversión implícita mediante `toString`. Por tanto, `'2'` y `'02'` harían referencia a dos posiciones diferentes en el objeto `decadas`, y el siguiente ejemplo podría dar `true` como resultado:
 
 ```js
-console.log(decadas['2'] != decadas['02'])
+console.log(decadas["2"] != decadas["02"]);
 ```
 
 ### Relación entre `length` y las propiedades numéricas
@@ -167,37 +171,37 @@ Varios de los métodos propios de un _array_ (p. ej., `join()`, `slice()`, `inde
 Otros métodos (p. ej., `push()`, `splice()`, etc.) modifican la propiedad `length` de un array.
 
 ```js
-const frutas = []
-frutas.push('banana', 'manzana', 'pera')
+const frutas = [];
+frutas.push("banana", "manzana", "pera");
 
-console.log(frutas.length) // 3
+console.log(frutas.length); // 3
 ```
 
 Cuando se le da a una propiedad de un _array_ JavaScript un valor que corresponda a un índice válido para el _array_ pero que se encuentre fuera de sus límites, el motor actualizará el valor de la propiedad `length` como corresponda:
 
 ```js
-frutas[5] = 'fresa'
-console.log(frutas[5])           // 'fresa'
-console.log(Object.keys(frutas)) // ['0', '1', '2', '5']
-console.log(frutas.length)       // 6
+frutas[5] = "fresa";
+console.log(frutas[5]); // 'fresa'
+console.log(Object.keys(frutas)); // ['0', '1', '2', '5']
+console.log(frutas.length); // 6
 ```
 
 Si se aumenta el valor de `length`:
 
 ```js
-frutas.length = 10
-console.log(frutas)              // ['banana', 'manzana', 'pera', <2 empty items>, 'fresa', <4 empty items>]
-console.log(Object.keys(frutas)) // ['0', '1', '2', '5']
-console.log(frutas.length)       // 10
-console.log(frutas[8])           // undefined
+frutas.length = 10;
+console.log(frutas); // ['banana', 'manzana', 'pera', <2 empty items>, 'fresa', <4 empty items>]
+console.log(Object.keys(frutas)); // ['0', '1', '2', '5']
+console.log(frutas.length); // 10
+console.log(frutas[8]); // undefined
 ```
 
 Si se disminuye el valor de la propiedad `length` pueden eliminarse elementos:
 
 ```js
-frutas.length = 2
-console.log(Object.keys(frutas)) // ['0', '1']
-console.log(frutas.length)       // 2
+frutas.length = 2;
+console.log(Object.keys(frutas)); // ['0', '1']
+console.log(frutas.length); // 2
 ```
 
 Hay más información sobre este tema en la página sobre [`Array.length`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length).
@@ -213,14 +217,14 @@ El siguiente ejemplo, y la tabla que le sigue, pueden ayudar a comprender mejor 
 // Recordar las b y la d final
 // No distinguir mayúsculas y minúsculas
 
-const miRe = /d(b+)(d)/i
-const miArray = miRe.exec('cdbBdbsbz')
+const miRe = /d(b+)(d)/i;
+const miArray = miRe.exec("cdbBdbsbz");
 ```
 
 Las propiedades y elementos que se obtienen de esta búsqueda son los siguientes:
 
-| Propiedad/Elemento                     | Descripción                                                                                                                                                                                            | Ejemplo              |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| Propiedad/Elemento               | Descripción                                                                                                                                                                                            | Ejemplo              |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
 | `input` {{ReadOnlyInline}}       | El string original sobre el que se ha realizado la búsqueda con la expresión regular                                                                                                                   | `"cdbBdbsbz"`        |
 | `index` {{ReadOnlyInline}}       | El índice de la correspondencia en el string, siendo cero el de la primera posición.                                                                                                                   | `1`                  |
 | `[0]` {{ReadOnlyInline}}         | Los últimos caracteres que cumplen la correspondencia                                                                                                                                                  | `"dbBd"`             |
@@ -327,7 +331,7 @@ mensajes[0] = "Hola";
 mensajes[99] = "mundo";
 
 if (mensajes.length === 100) {
-   console.log("La longitud es de 100.");
+  console.log("La longitud es de 100.");
 }
 ```
 
@@ -337,21 +341,22 @@ El siguiente ejemplo crea una matriz bidimensional que representa un tablero de 
 
 ```js
 let tablero = [
-  ['T','C','A','D','R','A','C','T'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['t','c','a','d','r','a','c','t'] ]
+  ["T", "C", "A", "D", "R", "A", "C", "T"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["t", "c", "a", "d", "r", "a", "c", "t"],
+];
 
-console.log(tablero.join('\n') + '\n\n')
+console.log(tablero.join("\n") + "\n\n");
 
 // Adelantar dos posiciones el peón de rey
-tablero[4][4] = tablero[6][4]
-tablero[6][4] = ' '
-console.log(tablero.join('\n'))
+tablero[4][4] = tablero[6][4];
+tablero[6][4] = " ";
+console.log(tablero.join("\n"));
 ```
 
 Este es el resultado:
@@ -378,14 +383,11 @@ t,c,a,d,r,a,c,t
 ### Uso de un array para tabular un conjunto de valores
 
 ```js
-valores = []
-for (let x = 0; x < 10; x++){
-  valores.push([
-  2 ** x,
-  2 * x ** 2
-  ])
+valores = [];
+for (let x = 0; x < 10; x++) {
+  valores.push([2 ** x, 2 * x ** 2]);
 }
-console.table(valores)
+console.table(valores);
 ```
 
 da como resultado:

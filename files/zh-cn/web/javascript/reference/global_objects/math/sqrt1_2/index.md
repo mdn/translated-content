@@ -19,16 +19,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 
 ## 示例
 
-### 例子：使用 `SQRT1_2`
+### 示例：使用 `SQRT1_2`
 
 下面的函数返回 1/2 的平方根：
 
 ```js
 function getRoot1_2() {
-   return Math.SQRT1_2
+  return Math.SQRT1_2;
 }
 
-getRoot1_2() // 0.7071067811865476
+getRoot1_2(); // 0.7071067811865476
 ```
 
 ## 规范

@@ -1,24 +1,24 @@
 ---
 title: MDN at 10
 slug: MDN/At_ten
-original_slug: MDN_at_ten
 ---
+
 당신의 웹을 문서화 하는 것의 10주년을 기념하세요.
 
 ## MDN의 역사
 
 2005년, 이상주의자들로 이루어진 작은 팀은 웹 개발자들을 위한 새롭고 무료이며 협력으로 만들어진 온라인 리소스를 만들었습니다. 그들의 뛰어난, 그러나 색다른 아이디어는 오늘날의 오픈 웹 기술자들을 위한 최고의 리소스인 Mozilla 개발자 네트워크로 성장되었습니다. 10년뒤, 우리의 세계적 커뮤니티는 역대 최고이며, 우리는 여전히 함께 문서를 만들고 코드를 작성하며 오픈 웹을 현재와 같이 강력하게 만들어주는 CSS, HTML, 자바스크립트 등과 같은 오픈 웹 기술자들을 위한 리소스들을 배웁니다.
 
-[더 알아보기 about the history](/en-US/docs/MDN/At_ten/History_of_MDN)
+[더 알아보기 about the history](/ko/docs/MDN/At_ten/History_of_MDN)
 
 ## MDN에 공헌하기
 
 10년동안 MDN 커뮤니티는 오픈 웹을 기록해왔습니다. 간단한 오탈자 수정에서부터 새로운 API의 전체를 작성하는 것까지, 모두가 무언가를 제공했고, 어떠한 기여도 적지 않았습니다. 우리는 Mozillians의 뛰어난 맴버들이 작성하거나 번역한 9만 페이지 이상의 자료들이 있습니다. 당신도 그중 하나가 될 수 있습니다.
 
-[더 알아보기 about contributing](/en-US/docs/MDN/Contribute)
+[더 알아보기 about contributing](/ko/docs/MDN/Contribute)
 
 {{TenthCampaignQuote}}
 
 ## 추가정보
 
-- MDN의 역사](/en-US/docs/MDN/At_ten/History_of_MDN)
+- [MDN의 역사](/ko/docs/MDN/At_ten/History_of_MDN)

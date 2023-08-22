@@ -1,12 +1,6 @@
 ---
 title: document.createComment
 slug: Web/API/Document/createComment
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
-translation_of: Web/API/Document/createComment
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +10,7 @@ translation_of: Web/API/Document/createComment
 ## Syntaxe
 
 ```js
-CommentNode = document.createComment(data)
+CommentNode = document.createComment(data);
 ```
 
 ### Paramètres
@@ -27,10 +21,10 @@ CommentNode = document.createComment(data)
 ## Exemple
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml");
-var comment = docu.createComment('Voici un commentaire pas très bien caché');
+var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+var comment = docu.createComment("Voici un commentaire pas très bien caché");
 
-docu.getElementsByTagName('xml')[0].appendChild(comment);
+docu.getElementsByTagName("xml")[0].appendChild(comment);
 
 alert(new XMLSerializer().serializeToString(docu));
 // Affiche: <xml><!--Voici un commentaire pas très bien caché--></xml>

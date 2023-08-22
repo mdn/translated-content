@@ -11,11 +11,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 
 ## Syntax
 
-```plain
+```js
 p.finally(onFinally);
 
-p.finally(function() {
-   // settled（fulfilled 或 rejected)
+p.finally(function () {
+  // settled（fulfilled 或 rejected)
 });
 ```
 
@@ -40,34 +40,41 @@ p.finally(function() {
   - 與 `Promise.resolve(2).then(() => {}, () => {})`（將被 resolved 為`undefined`）不同，`Promise.resolve(2).finally(() => {})` 將被 resolved 為`2`。
   - 同樣的，與 `Promise.reject(3).then(() => {}, () => {})`（將 fulfilled 為`undefined`）不同，`Promise.reject(3).finally(() => {})` 將被 rejected 為`3`。
 
-> **備註：** 在 finally 回呼中使用 throw （或回傳 rejected promise）會導致新的 promise 被 reject ， reject 的原因則是呼叫 throw() 時所指定的值。
+> **備註：** 在 finally 回呼中使用 throw（或回傳 rejected promise）會導致新的 promise 被 reject，reject 的原因則是呼叫 throw() 時所指定的值。
 
-## Examples
+## 範例
 
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); })
-  .finally(function() { isLoading = false; });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.prototype.then()")}}

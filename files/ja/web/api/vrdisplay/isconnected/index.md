@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.isConnected
 slug: Web/API/VRDisplay/isConnected
-original_slug: Web/API/VRDevice/isConnected
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

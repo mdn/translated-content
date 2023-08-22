@@ -1,11 +1,6 @@
 ---
 title: <mn>
 slug: Web/MathML/Element/mn
-tags:
-  - MathML
-  - MathML:Token Elements
-  - Числовой литерал
-translation_of: Web/MathML/Element/mn
 ---
 
 {{MathMLRef}}
@@ -112,7 +107,6 @@ translation_of: Web/MathML/Element/mn
 
 ```html
 <math>
-
   <mn> 0 </mn>
 
   <mn> 1.337 </mn>
@@ -122,7 +116,6 @@ translation_of: Web/MathML/Element/mn
   <mn> XVI </mn>
 
   <mn> 2e10 </mn>
-
 </math>
 ```
 
@@ -133,7 +126,3 @@ translation_of: Web/MathML/Element/mn
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенности ядра Gecko
-
-- Некоторые значения `mathvariant` реализованы только начиная с Gecko 28.0 и требуют соответствующих [математических шрифтов](/ru/docs/Mozilla/MathML_Project/Fonts).

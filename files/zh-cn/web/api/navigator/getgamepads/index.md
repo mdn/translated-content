@@ -16,11 +16,15 @@ slug: Web/API/Navigator/getGamepads
 ## 样例
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  gp.index, gp.id,
-  gp.buttons.length, gp.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 
@@ -32,7 +36,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Using the Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
 - [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)

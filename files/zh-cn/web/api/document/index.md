@@ -413,13 +413,13 @@ HTML 文档的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，�
 ### 过渡事件
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)取消时触发。
+  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)取消时触发。
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)完成时触发。
+  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成时触发。
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)第一次创建时触发。
+  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)第一次创建时触发。
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)实际开始时触发。
+  - : 在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)实际开始时触发。
 
 ## 规范
 

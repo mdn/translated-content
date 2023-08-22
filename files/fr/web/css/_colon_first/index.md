@@ -1,11 +1,6 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:first
 ---
 
 {{CSSRef}}
@@ -59,7 +54,7 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").addEventListener('click', () => {
+document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```

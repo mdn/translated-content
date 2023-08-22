@@ -30,9 +30,11 @@ numberFormat.resolvedOptions()
 - `notation`
   - : `options` 引数でこのプロパティに指定された値、または既定として設定される `standard` です。
 - `compactDisplay`
+
   - : `options` 引数でこのプロパティに指定された値、または既定として設定される `short` です。
 
     このプロパティは `notation` が "compact" に設定されている場合のみ存在します。
+
 - `signDisplay`
   - : `options` 引数でこのプロパティに指定された値、または既定として設定される `auto` です。
 - `useGrouping`
@@ -43,6 +45,7 @@ numberFormat.resolvedOptions()
 次の２つのプロパティのグループのうちどちらかのみが含まれています。:
 
 - `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
+
   - : `options` 引数でプロパティに対して提供されるか既定で設定される値。 `minimumSignificantDigits` または `maximumSignificantDigits` が `options` 引数で提供されなかった場合のみ、これらのプロパティは存在しています。
 
 - `minimumSignificantDigits`, `maximumSignificantDigits`
@@ -53,18 +56,18 @@ numberFormat.resolvedOptions()
 ### resolvedOptions メソッドの使用
 
 ```js
-var de = new Intl.NumberFormat('de-DE');
+var de = new Intl.NumberFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOptions.notation;              // "standard"
-usedOptions.signDisplay;           // "auto"
-usedOption.style;                  // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOptions.notation; // "standard"
+usedOptions.signDisplay; // "auto"
+usedOption.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## 仕様書

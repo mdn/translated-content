@@ -3,7 +3,7 @@ title: border-radius
 slug: Web/CSS/border-radius
 ---
 
-{{ CSSRef("CSS Borders") }}
+{{CSSRef("CSS Borders")}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-radius`** 允许你设置元素的外边框圆角。当使用一个半径时确定一个圆形，当使用两个半径时确定一个椭圆。这个（椭）圆与边框的交集形成圆角效果。
 
@@ -51,10 +51,10 @@ border-radius: 1em/5em;
 
 /* 等价于： */
 
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
@@ -62,10 +62,10 @@ border-radius: 4px 3px 6px / 2px 4px;
 
 /* 等价于： */
 
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## 形式定义
@@ -79,39 +79,46 @@ border-bottom-left-radius:  3px 4px;
 ## 示例
 
 ```html hidden
-  <pre id="example-1">
+<pre id="example-1">
 border: solid 10px;
 border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
+  </pre
+>
+<pre id="example-2">
 border: groove 1em red;
 border-radius: 2em;
-  </pre>
-  <pre id="example-3">
+  </pre
+>
+<pre id="example-3">
 background: gold;
 border: ridge gold;
 border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
+  </pre
+>
+<pre id="example-4">
 border: none;
 border-radius: 40px 10px;
 background: gold;
-  </pre>
-  <pre id="example-5">
+  </pre
+>
+<pre id="example-5">
 border: none;
 border-radius: 50%;
 background: burlywood;
-  </pre>
-  <pre id="example-6">
+  </pre
+>
+<pre id="example-6">
 border: dotted;
 border-width: 10px 4px;
 border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
+  </pre
+>
+<pre id="example-7">
 border: dashed;
 border-width: 2px 4px;
 border-radius: 40px;
-  </pre>
+  </pre
+>
 ```
 
 ```css hidden

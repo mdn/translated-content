@@ -1,5 +1,5 @@
 ---
-title: ':nth-child()'
+title: ":nth-child()"
 slug: Web/CSS/:nth-child
 ---
 
@@ -44,7 +44,7 @@ li:nth-child(2) {
     - `B` は整数の加算値です。
     - `n` はすべての正の整数で、 0 から始まります。
 
-    リスト中の *An+B* 番目の要素として読むことができます。
+    リスト中の _An+B_ 番目の要素として読むことができます。
 
 ## 例
 
@@ -67,6 +67,7 @@ li:nth-child(2) {
 - `p:nth-child(n)`
   - : 兄弟要素のグループの中ですべての `<p>` 要素を表します。これは単純な `p` セレクターと同じ要素を選択します (但し、詳細度はより高くなります)。
 - `p:nth-child(1)` または `p:nth-child(0n+1)`
+
   - : 兄弟要素のグループの中で最初の `<p>` 要素すべてを表します。これは {{cssxref(":first-child")}} セレクターと同じです (詳細度も同じです)。
 
 - `p:nth-child(n+8):nth-child(-n+15)`
@@ -75,8 +76,10 @@ li:nth-child(2) {
 ### 詳細な例
 
 ```html
-<h3><code>span:nth-child(2n+1)</code> で、子要素の間に
-   <code>&lt;em&gt;</code> がない場合</h3>
+<h3>
+  <code>span:nth-child(2n+1)</code> で、子要素の間に
+  <code>&lt;em&gt;</code> がない場合
+</h3>
 <p>子要素 1, 3, 5, 7 が選択されます。</p>
 <div class="first">
   <span>Span 1!</span>
@@ -88,13 +91,17 @@ li:nth-child(2) {
   <span>Span 7!</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-child(2n+1)</code> で、子要素の間に
-   <code>&lt;em&gt;</code> がある場合</h3>
-<p>子要素 1, 5, 7 が選択されます。<br>
-   3 は子要素などでカウントに入りますが、
-   <code>&lt;span&gt;</code> ではないので選択されません。</p>
+<h3>
+  <code>span:nth-child(2n+1)</code> で、子要素の間に
+  <code>&lt;em&gt;</code> がある場合
+</h3>
+<p>
+  子要素 1, 5, 7 が選択されます。<br />
+  3 は子要素などでカウントに入りますが、
+  <code>&lt;span&gt;</code> ではないので選択されません。
+</p>
 <div class="second">
   <span>Span!</span>
   <span>Span</span>
@@ -106,14 +113,19 @@ li:nth-child(2) {
   <span>Span</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-of-type(2n+1)</code> で、子要素の間に
-   <code>&lt;em&gt;</code> がある場合</h3>
-<p>子要素 1, 4, 6, 8 が選択されます。<br>
-   3 は <code>&lt;em&gt;</code> であり、
-   <code>&lt;span&gt;</code> ではないのでカウントに入りません。 <code>nth-of-type</code>
-   はこの型の子のみを選択します。 <code>&lt;em&gt;</code> は完全に飛ばされ、無視されます。</p>
+<h3>
+  <code>span:nth-of-type(2n+1)</code> で、子要素の間に
+  <code>&lt;em&gt;</code> がある場合
+</h3>
+<p>
+  子要素 1, 4, 6, 8 が選択されます。<br />
+  3 は <code>&lt;em&gt;</code> であり、
+  <code>&lt;span&gt;</code> ではないのでカウントに入りません。
+  <code>nth-of-type</code> はこの型の子のみを選択します。
+  <code>&lt;em&gt;</code> は完全に飛ばされ、無視されます。
+</p>
 <div class="third">
   <span>Span!</span>
   <span>Span</span>
@@ -141,9 +153,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.first span:nth-child(2n+1),
-.second span:nth-child(2n+1),
-.third span:nth-of-type(2n+1) {
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```

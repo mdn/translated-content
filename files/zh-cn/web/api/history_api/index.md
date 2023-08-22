@@ -48,7 +48,7 @@ window.history.go(1);
 您可以通过查看长度属性的值来确定的历史堆栈中页面的数量：
 
 ```js
- let numberOfEntries = window.history.length;
+let numberOfEntries = window.history.length;
 ```
 
 > **备注：** IE 支持传递 URLs 作为参数给 go()；这在 Gecko 是不标准且不支持的。
@@ -64,12 +64,12 @@ HTML5 引入了 [history.pushState()](/zh-CN/docs/Web/API/History/pushState) 和
 假设在 `http://mozilla.org/foo.html` 页面的 console 中执行了以下 JavaScript 代码：
 
 ```js
-window.onpopstate = function(e) {
-   alert(2);
-}
+window.onpopstate = function (e) {
+  alert(2);
+};
 
 let stateObj = {
-    foo: "bar",
+  foo: "bar",
 };
 
 history.pushState(stateObj, "page 2", "bar.html");
@@ -125,7 +125,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 ```js
 let stateObj = {
-    foo: "bar",
+  foo: "bar",
 };
 
 history.pushState(stateObj, "page 2", "bar.html");
@@ -154,11 +154,11 @@ history.replaceState(stateObj, "page 3", "bar2.html");
 你可以读取当前历史记录项的状态对象 state，而不必等待`popstate` 事件，只需要这样使用`history.state` 属性：
 
 ```js
-  // 尝试通过 pushState 创建历史条目，然后再刷新页面查看 state 状态对象变化;
-  window.addEventListener('load',() => {
-    let currentState = history.state;
-    console.log('currentState',currentState);
-  })
+// 尝试通过 pushState 创建历史条目，然后再刷新页面查看 state 状态对象变化;
+window.addEventListener("load", () => {
+  let currentState = history.state;
+  console.log("currentState", currentState);
+});
 ```
 
 ## 例子

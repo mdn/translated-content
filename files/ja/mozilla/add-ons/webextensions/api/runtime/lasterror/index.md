@@ -41,10 +41,7 @@ function logCookie(c) {
   }
 }
 
-browser.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 同じ処理内容ですが、 `setCookie()` の結果を扱うプロミスを使う例です。
@@ -58,9 +55,9 @@ function logError(e) {
   console.error(e);
 }
 
-const setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+const setCookie = browser.cookies.set({
+  url: "https://developer.mozilla.org/",
+});
 
 setCookie.then(logCookie, logError);
 ```

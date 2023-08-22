@@ -1,8 +1,8 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-original_slug: Web/API/Window/crypto
 ---
+
 {{APIRef}}
 
 **`Window.crypto`**속성은 전역 객체인 {{domxref("Crypto")}} 객체를 반환합니다. `Crypto` 객체는 웹 페이지가 특정 암호학적 서비스에 접근할 수 있는 경로입니다. `crypto` 속성 자체는 읽기 전용이지만, 모든 메서드(와 자식 객체 {{domxref("SubtleCrypto")}})의 메서드)는 읽기 전용이 아니므로 {{glossary("polyfill", "폴리필")}}을 통한 공격에 취약합니다.
@@ -25,18 +25,20 @@ genRandomNumbers = function getRandomNumbers() {
   window.crypto.getRandomValues(array);
 
   var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
+  randText.innerHTML = "The random numbers are: ";
   for (var i = 0; i < array.length; i++) {
     randText.innerHTML += array[i] + " ";
   }
-}
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">The random numbers are: </p>
-<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+<p id="myRandText">The random numbers are:</p>
+<button type="button" onClick="genRandomNumbers()">
+  Generate 10 random numbers
+</button>
 ```
 
 ### 결과

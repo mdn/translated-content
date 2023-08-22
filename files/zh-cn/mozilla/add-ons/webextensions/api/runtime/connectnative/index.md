@@ -11,8 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 
 ```js
 var port = browser.runtime.connectNative(
-  application // 这是一个字符串
-)
+  application, // 这是一个字符串
+);
 ```
 
 ### 参数

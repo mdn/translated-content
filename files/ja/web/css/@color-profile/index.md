@@ -1,5 +1,5 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
 ---
 
@@ -11,7 +11,7 @@ slug: Web/CSS/@color-profile
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -41,10 +41,10 @@ slug: Web/CSS/@color-profile
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 .header {
-  background-color:   color(--swop5c 0% 70% 20% 0%);
+  background-color: color(--swop5c 0% 70% 20% 0%);
 }
 ```
 

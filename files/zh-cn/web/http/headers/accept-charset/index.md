@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/Accept-Charset
 
 > **备注：** 在早期版本的 HTTP/1.1 协议中，规定了一个默认的字符集 (ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 句法
 
@@ -43,18 +43,9 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5
 Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 ```
 
-## 规范
-
-| Specification                                            | Title                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Charset", "5.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
-
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - HTTP [内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)
-- 用来表示内容协商结果的消息头：{{HTTPHeader("Content-Type")}}
-- 其他类似消息头：{{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
+- [不要再用 Accept-Charset 了](https://hsivonen.fi/accept-charset/)
+- 用来表示内容协商结果的标头：{{HTTPHeader("Content-Type")}}
+- 其他类似的标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}}

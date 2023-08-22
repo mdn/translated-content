@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-group()
-group(label)
+group();
+group(label);
 ```
 
 ### 引数

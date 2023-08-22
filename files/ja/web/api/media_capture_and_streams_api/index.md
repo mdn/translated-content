@@ -1,7 +1,6 @@
 ---
 title: メディアキャプチャとストリーム API (メディアストリーム)
 slug: Web/API/Media_Capture_and_Streams_API
-original_slug: Web/API/Media_Streams_API
 l10n:
   sourceCommit: b70c84579e286a8faf5d2da15bd2978893d448c6
 ---

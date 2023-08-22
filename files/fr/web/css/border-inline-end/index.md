@@ -1,12 +1,6 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

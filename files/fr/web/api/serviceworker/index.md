@@ -1,15 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - hors-ligne
-translation_of: Web/API/ServiceWorker
 ---
 
 {{APIRef("Service Workers API")}}
@@ -36,7 +27,7 @@ _L'interface `ServiceWorker` hérite des propriétés de son parent, le {{domxre
 
 ## Méthodes
 
-L'interface du *`ServiceWorker` hérite des méthodes de son parent, {{domxref("Worker")}}, avec l'exception de {{domxref("Worker.terminate")}}, qui ne doit pas être accessible depuis le service worker.*
+L'interface du _`ServiceWorker` hérite des méthodes de son parent, {{domxref("Worker")}}, avec l'exception de {{domxref("Worker.terminate")}}, qui ne doit pas être accessible depuis le service worker._
 
 ## Exemples
 

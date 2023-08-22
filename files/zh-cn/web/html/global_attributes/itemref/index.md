@@ -17,11 +17,11 @@ slug: Web/HTML/Global_attributes/itemref
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -96,8 +96,8 @@ slug: Web/HTML/Global_attributes/itemref
 - [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局属性
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)

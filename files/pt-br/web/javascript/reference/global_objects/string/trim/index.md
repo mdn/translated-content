@@ -1,6 +1,6 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
 
 {{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
@@ -26,13 +26,13 @@ Os exemplos a seguir retornam o valor de `'foo'` sem espaços em branco:
 ```js
 //.trim() removendo whitespace de ambos os lados
 
-var str = '   foo  ';
+var str = "   foo  ";
 console.log(str.trim()); // retorna 'foo'
 
 // Outro exemplo de .trim() removendo whitespace de
 // apenas um lado.
 
-var str= 'foo    ';
+var str = "foo    ";
 console.log(str.trim()); // retorna 'foo'
 ```
 
@@ -43,17 +43,17 @@ Executar o seguinte código antes antes de qualquer código irá criar o método
 ```js
 if (!String.prototype.trim) {
   String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
   };
 }
 ```
 
 ## Especificações
 
-| Specification                                                                                        | Status                   | Comment                                              |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}     |                                                      |
+| Specification                                                              | Status             | Comment                                              |
+| -------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}           | {{Spec2('ES5.1')}} | Definição inicial. Implementado no JavaScript 1.8.1. |
+| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}   |                                                      |
 
 ## Navegadores compatíveis
 

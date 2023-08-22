@@ -2,6 +2,7 @@
 title: Polyfill
 slug: Glossary/Polyfill
 ---
+
 polyfill은 기본적으로 지원하지 않는 이전 브라우저에서 최신 기능을 제공하는 데 필요한 코드 (일반적으로 웹의 JavaScript)입니다.
 
 예를 들어, Silverlight 플러그인을 사용하여 Microsoft Internet Explorer 7에서 HTML Canvas 요소의 기능을 모방하거나 CSS rem 단위 또는 {{cssxref("text-shadow")}}를 모방하는 등 필요한 모든 것에 polyfill을 사용할 수 있습니다.

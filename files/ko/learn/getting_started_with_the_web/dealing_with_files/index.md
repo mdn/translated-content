@@ -1,7 +1,6 @@
 ---
 title: 파일 다루기
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -42,18 +41,18 @@ original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 1. `images`폴더 안에 여러분이 선택한 이미지를 복사해 넣으세요.
 2. `index.html` 파일을 열고, 아래의 코드를 보이는 그대로 집어 넣습니다. 지금은 이 모든게 무슨 뜻인지 걱정할 필요가 없습니다 — 본 시리즈에서 나중에 이 구조에 대해 더 자세히 살펴볼 겁니다.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>My test page</title>
-      </head>
-      <body>
-        <img src="" alt="My test image">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>My test page</title>
+     </head>
+     <body>
+       <img src="" alt="My test image" />
+     </body>
+   </html>
+   ```
 
 3. `<img src="" alt="My test image">`라는 줄은 페이지 안으로 이미지를 삽입하는 HTML 코드 입니다. 우리는 이미지가 어디에 있는지에 대해 HTML에게 말해줄 필요가 있습니다. 이미지는 _images라는_ 폴더 안에 있는데, 이것은 `index.html` 파일과 같은 폴더에 있습니다. `index.html`파일에서 우리 이미지 파일로 파일 구조를 이동하기 위해, 우리가 필요한 파일 경로는 `images/your-image-filename`입니다. 예를 들어, 우리 이미지가 `firefox-icon.png`라면, 파일 경로는 `images/firefox-icon.png`가 됩니다.
 4. 여러분의 HTML 코드 중 src="" 의 쌍따옴표 사이에 파일 경로를 입력하세요.

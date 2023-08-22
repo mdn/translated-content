@@ -249,7 +249,7 @@ html {{ HTMLElement("form") }} は、次の４つの方法で送ることがで�
 
       // :: XHR Form Submit Framework ::
       //
-      // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+      // https://developer.mozilla.org/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
       //
       // This framework is released under the GNU Public License, version 3 or later.
       // https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -821,7 +821,7 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## ワーカー
 
-overrideMimeType を設定すると、 {{domxref("Worker")}} では動作しません。詳しくは {{bug(678057)}} を参照してください。他のブラウザーは扱いが異なるかもしれません。
+overrideMimeType を設定すると、 {{domxref("Worker")}} では動作しません。詳しくは [Firefox バグ 678057](https://bugzil.la/678057) を参照してください。他のブラウザーは扱いが異なるかもしれません。
 
 ## 仕様書
 
