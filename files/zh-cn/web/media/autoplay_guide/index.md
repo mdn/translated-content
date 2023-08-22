@@ -26,8 +26,8 @@ audioElement.play();
 
 以下网络功能和 API 可能会受到阻止自动播放的影响：
 
-- The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements
-- The [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- {{Glossary("HTML")}} {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素
+- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
 
 从用户的角度来看，网页或应用程序自动地发出噪音而没有警告可能会令人讨厌、不便或令人反感。因此，浏览器通常仅允许在特定情况下进行自动播放。
 
@@ -38,7 +38,7 @@ audioElement.play();
 - 音频被静音或其音量设置为 0
 - 用户和网页已有交互行为（包括点击、触摸、按下某个键等等）
 - 网站已被列入白名单；如果浏览器确定用户经常与媒体互动，这可能会自动发生，也可能通过首选项或其他用户界面功能手动发生
-- 自动播放策略应用到 {{HTMLElement("iframe")}} 或者其文档上
+- 自动播放[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)被应用于 {{HTMLElement("iframe")}} 或者其文档上，从而获得了自动播放的权限。
 
 否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。
 
@@ -58,7 +58,7 @@ audioElement.play();
 - 媒体元素已在页面加载期间创建
 - 假设网络性能或带宽没有显着变化，且已收到足够的媒体流并已开始播放，继续播放直至媒体结束而不会中断。
 
-#### 例子 1: autoplay 属性
+#### 示例 1: autoplay 属性
 
 使用 `autoplay` 属性的 {{HTMLElement("audio")}} 元素就像如下：
 
@@ -68,21 +68,21 @@ audioElement.play();
 </audio>
 ```
 
-#### 例子 2：检测自动播放失败
+#### 示例 2：检测自动播放失败
 
 如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于 [`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay) 属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
-如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的 [`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event) 事件来轻松实现此目的。
+如果你能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。你可以通过侦听要在媒体元素上触发的 [`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event) 事件来轻松实现此目的。
 
 当媒体暂停后恢复时以及发生自动播放时都会发送 `play` 事件。这意味着第一次触发 `play` 事件时，您知道您的媒体是在页面打开后第一次启动的。
 
-考虑以下 HTML 作为媒体元素：
+考虑以下 HTML 媒体元素：
 
 ```html
-<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
+<video src="myvideo.mp4" id="video" autoplay></video>
 ```
 
-这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
+这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.play_event", "play")}} 事件处理器；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
 
 `handleFirstPlay()` 看起来像这样：
 
