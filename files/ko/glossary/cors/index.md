@@ -36,6 +36,6 @@ l10n:
 
 ## 같이 보기
 
-- [교차 출처 리소스 공유 (CORS)](/en-US/docs/Web/HTTP/CORS) on MDN
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS) on MDN
 - 위키피디아의 [교차 출처 리소스 공유](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 - [Fetch 명세](https://fetch.spec.whatwg.org)
