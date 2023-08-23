@@ -107,8 +107,7 @@ slug: Web/HTML/Element/u
 #### HTML
 
 ```html
-<p>This paragraph includes a <u class="spelling">wrnogly</u>
-spelled word.</p>
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
 この HTML では、 `<u>` にクラス `spelling` を付けて、 "wrongly" という語の綴りミスを示すために使用しているのが分かります。
@@ -141,7 +140,7 @@ u.spelling {
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 
