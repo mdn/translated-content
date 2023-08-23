@@ -14515,10 +14515,6 @@
       "Nukeador"
     ]
   },
-  "conflicting/Web/API/Window/hashchange_event": {
-    "modified": "2019-03-23T22:49:36.790Z",
-    "contributors": ["AlePerez92", "daesnorey"]
-  },
   "conflicting/Web/API/Window/load_event": {
     "modified": "2019-03-23T23:33:14.527Z",
     "contributors": ["fscholz", "khalid32", "ehecatl"]

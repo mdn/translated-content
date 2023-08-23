@@ -1729,7 +1729,7 @@
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
-/es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
+/es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
@@ -2940,6 +2940,7 @@
 /es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/API/Geolocation/getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/conflicting/Web/API/Window/beforeunload_event	/es/docs/Web/API/Window/beforeunload_event
+/es/docs/conflicting/Web/API/Window/hashchange_event	/es/docs/Web/API/Window/hashchange_event
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/Web/CSS/outline	/es/docs/Web/CSS/outline
 /es/docs/conflicting/Web/HTML/Element/audio	/es/docs/Web/HTML/Element/audio
