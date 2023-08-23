@@ -2713,13 +2713,13 @@
     "contributors": ["chrisdavidmills", "Nachec"]
   },
   "MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-01-16T19:10:19.469Z",
+    "modified": "2020-09-30T09:06:15.983Z",
     "contributors": [
+      "chrisdavidmills",
       "wbamberg",
-      "javierdp",
-      "gpadilla",
-      "RoxPulido",
-      "LeoHirsch"
+      "emanuelvega",
+      "LUISTGMDN",
+      "elihro"
     ]
   },
   "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
@@ -14359,16 +14359,6 @@
   "conflicting/MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:28:55.816Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692": {
-    "modified": "2020-09-30T09:06:15.983Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "emanuelvega",
-      "LUISTGMDN",
-      "elihro"
-    ]
   },
   "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
     "modified": "2020-09-30T09:06:16.658Z",
