@@ -321,7 +321,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for [`keypress`](/es/docs/Web/Reference/Events/keypress) events on the window.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : An event handler property for [`keyup`](/es/docs/Web/Reference/Events/keyup) events on the window.
-- {{domxref("WindowEventHandlers.onlanguagechange")}}
+- {{domxref("Window/languagechange_event","languagechange")}}
   - : An event handler property for [`languagechange`](/es/docs/Web/Reference/Events/languagechange) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An event handler property for window loading.
@@ -337,13 +337,13 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for mouseup events on the window.
 - {{domxref("Window.onmozbeforepaint")}}
   - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
-- {{domxref("WindowEventHandlers.onpageshow")}}
+- {{domxref("Window/pageshow_event","pageshow")}}
   - : An event handler property for pageshow events on the window.
-- {{domxref("WindowEventHandlers.onpagehide")}}
+- {{domxref("Window/pagehide_event","pagehide")}}
   - : An event handler property for pagehide events on the window.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
-- {{domxref("WindowEventHandlers.onpopstate")}}
+- {{domxref("Window/popstate_event","popstate")}}
   - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : An event handler property for reset events on the window.

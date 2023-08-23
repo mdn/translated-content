@@ -1,5 +1,5 @@
 ---
-title: WindowEventHandlers.onpopstate
+title: onpopstate
 slug: Web/API/Window/popstate_event
 ---
 
