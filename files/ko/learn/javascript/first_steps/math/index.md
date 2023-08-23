@@ -1,6 +1,8 @@
 ---
 title: JavaScript의 기본적인 연산 - 숫자와 연산자
 slug: Learn/JavaScript/First_steps/Math
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
