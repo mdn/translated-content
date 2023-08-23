@@ -361,7 +361,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 }
 ```
 
-```html
+```html-nolint
 <div class="media">
   <div class="image"></div>
   <div class="text">
