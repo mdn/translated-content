@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/italics
 
 {{jsxref("String")}} 值的 **`italics()`** 方法会创建一个 {{HTMLElement("i")}} 元素字符串，将调用字符串嵌入其中（`<i>str</i>`），从而使该字符串以斜体显示。
 
-> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用[DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
+> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
 ## 语法
 
@@ -17,7 +17,7 @@ italics()
 
 ### 返回值
 
-一个以 `<i>` 开始标记、然后是文本 `str`，最后是 `</i>` 结束标记的字符串。
+一个以 `<i>` 开始标签，然后是文本 `str`，最后是 `</i>` 结束标签的字符串。
 
 ## 示例
 
