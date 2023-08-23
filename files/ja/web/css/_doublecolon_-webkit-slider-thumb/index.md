@@ -9,7 +9,7 @@ slug: Web/CSS/::-webkit-slider-thumb
 
 ## 構文
 
-```css
+```css-nolint
 ::-webkit-slider-thumb {}
 ```
 

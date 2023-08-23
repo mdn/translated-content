@@ -18,7 +18,7 @@ maxlength が指定されなかった場合、または無効な値が指定さ�
 ## 例
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}

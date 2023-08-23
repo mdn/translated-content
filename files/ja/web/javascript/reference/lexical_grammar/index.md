@@ -526,7 +526,7 @@ Unicode コードポイントエスケープは `\u{` に続いて 16 進数の�
 
 `string text ${expression} string text`;
 
-tag `string text ${expression} string text`;
+tag`string text ${expression} string text`;
 ```
 
 ## 自動セミコロン挿入

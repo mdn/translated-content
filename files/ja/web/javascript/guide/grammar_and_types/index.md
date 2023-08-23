@@ -307,9 +307,9 @@ parseInt("101", 2); // 5
 
 文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。
 
-```js
-'1.1' + '1.1'; // '1.11.1'
-(+'1.1') + (+'1.1'); // 2.2
+```js-nolint
+"1.1" + "1.1"; // "1.11.1"
+(+"1.1") + (+"1.1"); // 2.2
 // 注: 括弧は明確さのために追加したもので、必須ではありません
 ```
 
@@ -541,7 +541,7 @@ const re = /ab+c/;
 
 以下が文字列リテラルの例です。
 
-```js
+```js-nolint
 'foo';
 "bar";
 '1234';
@@ -572,7 +572,8 @@ console.log("Joyo's cat".length); // この場合は 10 が出力される。
  quoted strings cannot.`;
 
 // 文字列補完
-const name = 'Lev', time = 'today';
+const name = "Lev",
+  time = "today";
 `Hello ${name}, how are you ${time}?`;
 ```
 
