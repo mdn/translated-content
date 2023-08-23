@@ -26,7 +26,7 @@ Por ejemplo, la página en `http://example.com/example.html` ejecutando el códi
 ```js
 window.onpopstate = function (event) {
   alert(
-    "location: " + document.location + ", state: " + JSON.stringify(event.state)
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
   );
 };
 
