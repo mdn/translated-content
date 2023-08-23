@@ -9,7 +9,7 @@ slug: Web/CSS/::-webkit-slider-runnable-track
 
 ## 構文
 
-```css
+```css-nolint
 ::-webkit-slider-runnable-track {}
 ```
 

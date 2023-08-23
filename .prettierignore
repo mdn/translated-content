@@ -48,6 +48,5 @@ build/
 
 # ja
 /files/ja/web/api/**/*.md
-/files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
 /files/ja/web/javascript/**/*.md
