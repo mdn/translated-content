@@ -13721,6 +13721,10 @@
       "javichito"
     ]
   },
+  "Web/Progressive_web_apps/Guides": {
+    "modified": "2020-09-20T03:25:40.381Z",
+    "contributors": ["Deng_C1"]
+  },
   "Web/Progressive_web_apps/Guides/Installing": {
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": ["Nachec"]
@@ -15803,10 +15807,6 @@
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
     "modified": "2020-10-15T22:24:00.271Z",
     "contributors": ["nachofelpete"]
-  },
-  "orphaned/Web/Progressive_web_apps/Developer_guide": {
-    "modified": "2020-09-20T03:25:40.381Z",
-    "contributors": ["Deng_C1"]
   },
   "orphaned/Web/Reference": {
     "modified": "2019-03-23T23:21:27.898Z",

@@ -1,6 +1,6 @@
 ---
 title: PWA developer guide
-slug: orphaned/Web/Progressive_web_apps/Developer_guide
+slug: Web/Progressive_web_apps/Guides
 original_slug: Web/Progressive_web_apps/Developer_guide
 ---
 
