@@ -57,14 +57,14 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考文档</a>（/Web/HTML/Element）</td>
+      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考</a>（/Web/HTML/Element）</td>
       <td><code>\{{HTMLElement("select")}}</code> 会生成 {{HTMLElement("select")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考文档</a>（/Web/JavaScript/Reference）</td>
+      <td><a href="/zh-CN/docs/Web/JavaScript/Reference">JavaScript 参考</a>（/Web/JavaScript/Reference）</td>
       <td><code>\{{JSxRef("Promise")}}</code> 会生成 {{JSxRef("Promise")}}。</td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应代码</a>（/Web/HTTP/Status）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应状态码</a>（/Web/HTTP/Status）</td>
       <td><code>\{{HTTPStatus("404")}}</code> 会生成 {{HTTPStatus("404")}}。</td>
     </tr>
   </tbody>
@@ -105,7 +105,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 ### 多页面间的导航栏
 
-[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 这几个宏可以在页面中创建导航控件，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。对于 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs)，需要的两个参数是相应文章的 wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
+[`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs) 和 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) 为序列中的文章提供导航控件。对于单向的模板，唯一需要的参数是序列中的上一篇或下一篇文章的 wiki 位置。对于 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs)，需要的两个参数是相应文章的 wiki 位置。第一个参数用于上一篇文章，第二个参数用于下一篇文章。
 
 ## 代码示例
 
@@ -115,7 +115,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 - [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中所述。
 - [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 提供了一种新的运行实例编写和使用方式，你可以在 [Github 在线实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_在线实例)中了解更多信息。
 
-## 生成侧边栏
+## 侧边栏生成
 
 几乎每个大型页面集合都有模板。它们通常会链接回参考/指南/教程的主页（这通常是需要的，因为我们的面包屑有时无法做到这一点）并将文章放入适当的类别中。
 
@@ -129,11 +129,11 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 [`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) 和 [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) 被用于 API 文档，通常在描述对象的属性列表或函数的参数时使用。
 
-用法：`\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
+用法：`\{{Optional_Inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
 - `isCustomObject` {{ReadOnlyInline}}
   - : 如果此项值为 `true`，表明该对象是一个自定义对象。
-- `parameterX` {{optional_inline}}
+- `parameterX` {{Optional_Inline}}
   - : 参数描述
 
 ## 状态和兼容性指示器
@@ -180,16 +180,16 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 ### 页面或章节头部的指示器
 
-下列指示器的含义，类似于上述的行内指示器。这些组件应直接放置在技术参考页面的标题（或面包屑导航栏）下，也可以用于标记页面上的某个小节。
+这些模板与上述的行内指示器具有相同的语义。这些模板应直接放置在参考页面的主页标题（或面包屑导航栏，如果有的话）下，也可以用于标记页面上的某个部分。
 
-- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) 语法：`\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) 对于一些介绍[实验性功能](/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental)的内容，应当在这些内容前放置此指示器。语法：`\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs)：`\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) 应该用于记录[实验性特性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的页面。示例：`\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs)：应该用于界面页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。语法：`\{{SecureContext_Header}}` {{SecureContext_Header}}
+- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs)：应该用于接口页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。示例：`\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### 表明某个功能在 Web Worker 中可用的指示器
+### 表明某个特性在 Web Worker 中可用的指示器
 
-[`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 宏插入一个本地化的注释框，表明一个功能在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。它还有一个可选参数，当带有 `notservice` 时，表示该功能在 Web Worker 中可用但在 Servcie Worker 中不可用。
+[`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 宏插入一个本地化的注释框，表明一个特性在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。它还有一个可选参数，当带有 `notservice` 时，表示该特性在 Web Worker 中可用但在 Servcie Worker 中不可用。
 
 ##### 语法
 
