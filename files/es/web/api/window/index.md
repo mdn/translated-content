@@ -289,7 +289,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
+- {{domxref("Window/beforeunload_event","beforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : An event handler property for blur events on the window.
