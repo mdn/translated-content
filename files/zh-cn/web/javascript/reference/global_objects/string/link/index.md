@@ -5,11 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/link
 
 {{JSRef}} {{deprecated_header}}
 
-The **`link()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element (`<a href="...">str</a>`), to be used as a hypertext link to another URL.
-
 {{jsxref("String")}} 值的 **`link()`** 方法创建一个 {{HTMLElement("a")}} 元素字符串，将调用字符串嵌入其中（`<a href="...">str</a>`），用作指向另一个 URL 的超文本链接。
 
-> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用[DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
+> **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
 ## 语法
 
@@ -24,7 +22,7 @@ link(url)
 
 ### 返回值
 
-一个以 `<a href="url">` 开始标签开始（`url`中的双引号被替换为`&quot;`），接着是文本 `str`，最后是 `</a>` 结束标签的字符串。
+一个以 `<a href="url">` 开始标签开始（`url` 中的双引号被替换为 `&quot;`），接着是文本 `str`，最后是 `</a>` 结束标签的字符串。
 
 ## 示例
 
