@@ -115,7 +115,7 @@ input:invalid {
 それから入力欄の最小値を 7.2 と定義し、 step 属性は省略しているので、既定値が 1 になります。
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 `step` の既定値は 1 なので、有効な値は `7.2`, `8.2`, `9.2`, などになります。 8 の値は有効ではありません。無効な値が入っているので、対応しているブラウザーは値が無効であることを表示します。

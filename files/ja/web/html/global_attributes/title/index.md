@@ -30,8 +30,11 @@ l10n:
 ```html
 <p>
   Newlines in <code>title</code> should be taken into account, like
-  <span title="This is a
-multiline title" >example</span>.
+  <span
+    title="This is a
+multiline title"
+    >example</span
+  >.
 </p>
 ```
 

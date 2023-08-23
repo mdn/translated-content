@@ -1,9 +1,6 @@
 ---
 title: Руководства
 slug: conflicting/MDN/Writing_guidelines
-tags:
-  - Руководства
-translation_of: MDN/Guidelines
 original_slug: MDN/Guidelines
 ---
 
