@@ -2,52 +2,57 @@
 title: 얕은 복사
 slug: Glossary/Shallow_copy
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 1c285cab12ee953a74d38a0800951126b48e1a81
 ---
 
 {{GlossarySidebar}}
 
-객체의 **얕은 복사**는 복사본의 속성이 복사본이 만들어진 원본 객체와 같은 [참조](/ko/docs/Glossary/Object_reference) (같은 기본 값을 가리킴)를 공유하는 복사입니다. 따라서 원본이나 복사본을 변경하면 다른 객체 또한 변경될 수 있으므로 의도치 않게 원본이나 복사본이 변경될 수 있습니다. 이러한 동작은 원본과 복사본이 완전히 독립적인 [깊은 복사](/ko/docs/Glossary/Deep_copy)의 동작과 대조적입니다.
+객체의 **얕은 복사**는 복사본의 속성이 복사본이 만들어진 원본 객체와 같은 [참조](/ko/docs/Glossary/Object_reference) (메모리 내의 같은 값을 가리킴)를 공유하는 복사입니다. 따라서 원본이나 복사본을 변경하면, 다른 객체 또한 변경될 수 있습니다. 이러한 동작은 원본과 복사본이 완전히 독립적인 [깊은 복사](/ko/docs/Glossary/Deep_copy)의 동작과 대조적입니다.
 
-얕은 복사의 경우, 객체 기존 요소의 속성 값을 선택적으로 변경하는 것은 기존 요소에 완전히 새로운 값을 할당하는 것과 다르다는 것을 이해하는 것이 중요합니다.
+더 공식적으로, 다음과 같은 경우 두 객체 `o1`과 `o2`는 얕은 복사입니다.
 
-예를 들어, `copy` 라는 배열 객체의 얕은 복사본에서 `copy[0]` 요소의 값이 `{"list":["butter","flour"]}` 일 때, `copy[0].list = ["oil","flour"]`를 실행하면 원본 객체의 해당 요소 또한 변경될 것입니다. 원본 객체와 얕은 복사본이 공유하고 있는 객체의 속성을 선택적으로 변경했기 때문입니다.
+1. 두 객체는 같은 객체가 아닙니다 (`o1 !== o2`).
+2. `o1`과 `o2`의 속성은 같은 이름과 순서입니다.
+3. 두 객체의 속성 값은 동일합니다.
+4. 두 객체의 프로토타입 체인은 동일합니다.
 
-그러나 대신 `copy[0] = {"list":["oil","flour"]}`를 실행하면, 원본 객체의 해당 요소는 **변경되지 않을 것입니다**. 이 경우에는 얕은 복사본이 원본 객체와 공유하고 있는 기존 배열 요소의 속성을 선택적으로 변경하지 않고, 얕은 복사본에서 `copy[0]` 배열 요소에 완전히 새로운 값을 할당하고 있기 때문입니다.
+[구조상 동일한 정의](/ko/docs/Glossary/Deep_copy) 또한 참고하세요.
+
+속성이 모두 원시 값인 객체의 복사는 [깊은 복사](/ko/docs/Glossary/Deep_copy)와 얕은 복사의 정의에 모두 부합합니다. 그렇지만 중첩된 속성이 없기 때문에 이런 복사의 깊이에 대해 이야기하는 것은 다소 쓸모가 없습니다. 보통 중첩된 속성을 변경하는 맥락에서 깊은 복사하는 것에 대해 이야기합니다.
+
+얕은 복사의 경우, 중첩된 객체의 값이 아닌 최상위 속성만 복사합니다. 그러므로,
+
+- 복사본의 최상위 속성을 재할당해도 원본 객체에는 영향을 끼치지 않습니다.
+- 복사본의 중첩 객체 속성을 재할당하면 원본 객체에 영향을 끼칩니다.
 
 JavaScript에서, 모든 표준 내장 객체의 복사 작업([전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), [`Object.create()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/create))은 깊은 복사가 아닌 얕은 복사본을 생성합니다.
 
-## 예제
-
-`ingredients_list` 배열 객체가 생성된 다음, `ingredients_list`를 복사하여 생성된 `ingredients_list_copy` 객체가 있는 다음 예제를 살펴보세요.
+`ingredientsList` 배열 객체가 생성된 다음, `ingredientsList`를 복사하여 생성된 `ingredientsListCopy` 객체가 있는 다음 예제를 살펴보세요.
 
 ```js
-let ingredients_list = ["noodles", { list: ["eggs", "flour", "water"] }];
+const ingredientsList = ["noodles", { list: ["eggs", "flour", "water"] }];
 
-let ingredients_list_copy = Array.from(ingredients_list);
-console.log(JSON.stringify(ingredients_list_copy));
+const ingredientsListCopy = Array.from(ingredientsList);
+console.log(ingredientsListCopy);
 // ["noodles",{"list":["eggs","flour","water"]}]
 ```
 
-`ingredients_list_copy`의 `list` 속성 값을 변경하면 원본 객체 `ingredients_list`의 `list` 속성 또한 변경됩니다.
+중첩된 속성 값을 재할당하면 두 객체 모두에서 볼 수 있습니다.
 
 ```js
-ingredients_list_copy[1].list = ["rice flour", "water"];
-console.log(ingredients_list[1].list);
+ingredientsListCopy[1].list = ["rice flour", "water"];
+console.log(ingredientsList[1].list);
 // Array [ "rice flour", "water" ]
-console.log(JSON.stringify(ingredients_list));
-// ["noodles",{"list":["rice flour","water"]}]
 ```
 
-`ingredients_list_copy`의 첫 번째 요소에 완전히 새로운 값을 할당해도 원본 객체 `ingredients_list`의 첫 번째 요소에는 어떠한 변경도 일어나지 않습니다.
+최상위 속성 값(인덱스가 `0`인 경우)을 재할당하면 변경된 객체에서만 볼 수 있습니다.
 
 ```js
-ingredients_list_copy[0] = "rice noodles";
-console.log(ingredients_list[0]);
-// noodles
-console.log(JSON.stringify(ingredients_list_copy));
+ingredientsListCopy[0] = "rice noodles";
+console.log(ingredientsList[0]); // noodles
+console.log(JSON.stringify(ingredientsListCopy));
 // ["rice noodles",{"list":["rice flour","water"]}]
-console.log(JSON.stringify(ingredients_list));
+console.log(JSON.stringify(ingredientsList));
 // ["noodles",{"list":["rice flour","water"]}]
 ```
 
