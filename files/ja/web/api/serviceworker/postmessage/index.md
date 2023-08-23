@@ -28,6 +28,7 @@ postMessage(message, transfer)
     `message` 引数は必須です。ワーカーに渡すデータが重要でない場合は、`null` または `undefined` を明示的に渡す必要があります。
 
 - `options` {{optional_inline}}
+
   - : オプションのオブジェクトで、`transfer` フィールドに所有権を移譲するための[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)を格納したものです。
 
 - `transfer` {{optional_inline}}
@@ -56,7 +57,7 @@ navigator.serviceWorker.register("service-worker.js");
 
 navigator.serviceWorker.ready.then((registration) => {
   registration.active.postMessage(
-    "Test message sent immediately after creation"
+    "Test message sent immediately after creation",
   );
 });
 ```
@@ -65,7 +66,7 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ```js
 // これは `service-worker.s`` になる
-addEventListener("message", (event) => 
+addEventListener("message", (event) =>
   console.log(`Message received: ${event.data}`);
 );
 ```

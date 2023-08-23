@@ -32,12 +32,12 @@ slug: Web/API/MediaStreamTrack/enabled
 この例では、一時停止ボタンの {{domxref("Element/click_event", "click")}} イベントハンドラーの使用例を示しています。
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = function (evt) {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 これは、現在の `enabled` の値と逆の値である `newState` という変数を作成し、それを使用して、一時停止ボタンの要素の新しい {{domxref("Element.innerHTML", "innerHTML")}} として "play" アイコンまたは "pause" アイコン用の絵文字を選択するものです。

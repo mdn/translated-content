@@ -66,24 +66,24 @@ JavaScript は _二項演算子_ や _単項演算子_ を実装しており、�
 
 次の表にまとめられているように、演算子を省略表記した複合代入演算子もあります。
 
-| 名前                                                                                                              | 略記演算子 | 意味          |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
-| [代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`        |
-| [加算代入](/ja/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + f()`      |
-| [減算代入](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - f()`      |
-| [乗算代入](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * f()`      |
-| [除算代入](/ja/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`         | `x = x / f()`      |
-| [剰余代入](/ja/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= f()`         | `x = x % f()`      |
-| [べき乗代入](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= f()`        | `x = x ** f()`     |
-| [左シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`        | `x = x << f()`     |
-| [右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= f()`        | `x = x >> f()`     |
-| [符号なし右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`       | `x = x >>> f()`    |
-| [ビット論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= f()`         | `x = x & f()`      |
-| [ビット排他的論理和 (XOR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= f()`         | `x = x ^ f()`      |
-| [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
-| [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
-| [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
-| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)     | `x ??= f()`        | `x ?? (x = f())`   |
+| 名前                                                                                                | 略記演算子    | 意味               |
+| --------------------------------------------------------------------------------------------------- | ------------- | ------------------ |
+| [代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)                                      | `x = f()`     | `x = f()`          |
+| [加算代入](/ja/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`    | `x = x + f()`      |
+| [減算代入](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                      | `x -= f()`    | `x = x - f()`      |
+| [乗算代入](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)                   | `x *= f()`    | `x = x * f()`      |
+| [除算代入](/ja/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`    | `x = x / f()`      |
+| [剰余代入](/ja/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                        | `x %= f()`    | `x = x % f()`      |
+| [べき乗代入](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)                 | `x **= f()`   | `x = x ** f()`     |
+| [左シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                   | `x <<= f()`   | `x = x << f()`     |
+| [右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                  | `x >>= f()`   | `x = x >> f()`     |
+| [符号なし右シフト代入](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`  | `x = x >>> f()`    |
+| [ビット論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)       | `x &= f()`    | `x = x & f()`      |
+| [ビット排他的論理和 (XOR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment) | `x ^= f()`    | `x = x ^ f()`      |
+| [ビット論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)         | `x \|= f()`   | `x = x \| f()`     |
+| [論理積 (AND) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)             | `x &&= f()`   | `x && (x = f())`   |
+| [論理和 (OR) 代入](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)               | `x \|\|= f()` | `x \|\| (x = f())` |
+| [Null 合体代入](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### プロパティへの代入
 
@@ -236,14 +236,14 @@ x[f()] = g();
    2. 内側の配列リテラル `[ f(), x = g() ]` の評価が始まります。
       1. 関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
       2. 代入式 `x = g()` の評価が始まります。
-          1. この代入の左辺にある `x` は、 `x` という名前の変数への参照として評価されます。
-          2. 関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
-          3. `3` が `g()` の結果となり `x` に代入されます。
+         1. この代入の左辺にある `x` は、 `x` という名前の変数への参照として評価されます。
+         2. 関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
+         3. `3` が `g()` の結果となり `x` に代入されます。
       3. 代入式 `x = g()` の評価が終わりました。
-        その結果は、 `x` の新しい値、すなわち `3` です。
-        この `3` の結果は、内側の配列リテラルの次の要素になります（`f()` の `2` の後です）。
+         その結果は、 `x` の新しい値、すなわち `3` です。
+         この `3` の結果は、内側の配列リテラルの次の要素になります（`f()` の `2` の後です）。
    3. 内側の配列リテラル `[ f(), x = g() ]` の評価が終わりました。
-       結果は 2 つの値を持つ配列、 `[ 2, 3 ]` です。
+      結果は 2 つの値を持つ配列、 `[ 2, 3 ]` です。
    4. その配列 `[ 2, 3 ]` が `y`
 2. 代入式 `y = [ f(), x = g() ]` の評価が終わりました。
    結果として `y` が新しい値、 `[ 2, 3 ]` になります。
@@ -257,14 +257,14 @@ x[f()] = g();
 オブジェクトについて詳しくは、[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)をお読みください。
 
 1. 代入式 `x[f()] = g()` の評価が始まります。
-    1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。
-        1. このプロパティアクセスの `x` は、 `x` という名前の変数への参照として評価されます。
-        2. そして、関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
-    2. この代入における `x[f()]` プロパティアクセスの評価が終わりました。
-       結果は変数プロパティ参照である `x[2]` です。
-    3. そして、関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
-    4. `3` が `x[2]` に代入されます。
-       （この過程は `x` に[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)が代入されているときのみ成功します。）
+   1. この代入における代入の左辺の `x[f()]` プロパティアクセスの評価が始まります。
+      1. このプロパティアクセスの `x` は、 `x` という名前の変数への参照として評価されます。
+      2. そして、関数呼び出し `f()` でコンソールに "F!" と表示し、次に数値 `2` と評価されます。
+   2. この代入における `x[f()]` プロパティアクセスの評価が終わりました。
+      結果は変数プロパティ参照である `x[2]` です。
+   3. そして、関数呼び出し `g()` でコンソールに "G!" と表示し、次に数値 `3` と評価されます。
+   4. `3` が `x[2]` に代入されます。
+      （この過程は `x` に[オブジェクト](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)が代入されているときのみ成功します。）
 2. 代入式 `x[f()] = g()` の評価が終わりました。
    返値は `x[2]` の新しい値– ここでは `3` です。
    `x[2]` には `3` が代入され、コンソールには "F!" に続いて "G!" が表示されます。
@@ -502,15 +502,15 @@ const var2 = 4;
 
 次の表は JavaScript のビット演算子の概要です。
 
-| 演算子                                                                                     | 使用法     | 説明                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ビット論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) (AND)                    | `a & b`   | オペランドの対応するビットがともに 1 である各ビットについて 1 を返します。                                                                          |
-| [ビット論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) (OR)                      | `a \| b`  | オペランドの対応するビットがともに 0 である各ビットについて 0 を返します。                                                                        |
-| [ビット排他的論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) (XOR)                    | `a ^ b`   | オペランドの対応するビットが同じ各ビットについて 0 を返します。 [オペランドの対応するビットが異なる各ビットについて 1 を返します。] |
-| [ビット否定](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT) (NOT)                    | `~ a`     | オペランドの各ビットを反転します。                                                                                                                                        |
-| [左シフト](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)                      | `a << b`  | 2 進表現の `a` を `b` ビット分だけ左にシフトします。右から 0 で詰めます。                                                                             |
-| [符号維持右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)   | `a >> b`  | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄します。                                                                                 |
-| [ゼロ埋め右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b` | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄し、左から 0 で詰めます。                                            |
+| 演算子                                                                               | 使用法    | 説明                                                                                                                                |
+| ------------------------------------------------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| [ビット論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND) (AND)        | `a & b`   | オペランドの対応するビットがともに 1 である各ビットについて 1 を返します。                                                          |
+| [ビット論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) (OR)          | `a \| b`  | オペランドの対応するビットがともに 0 である各ビットについて 0 を返します。                                                          |
+| [ビット排他的論理和](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) (XOR)  | `a ^ b`   | オペランドの対応するビットが同じ各ビットについて 0 を返します。 [オペランドの対応するビットが異なる各ビットについて 1 を返します。] |
+| [ビット否定](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT) (NOT)          | `~ a`     | オペランドの各ビットを反転します。                                                                                                  |
+| [左シフト](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift)                   | `a << b`  | 2 進表現の `a` を `b` ビット分だけ左にシフトします。右から 0 で詰めます。                                                           |
+| [符号維持右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)          | `a >> b`  | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄します。                                                      |
+| [ゼロ埋め右シフト](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) | `a >>> b` | 2 進表現の `a` を `b` ビット分だけ右にシフトします。溢れたビットは破棄し、左から 0 で詰めます。                                     |
 
 #### ビット論理演算子
 
@@ -531,13 +531,13 @@ const var2 = 4;
 例えば 9 の 2 進表現は 1001 で、15 の 2 進表現は 1111 です。
 したがって、ビット演算子がこれらの値に適用されたときの結果は以下のようになります。
 
-| 式         | 結果   | 2 進数での説明                                    |
-| ---------- | ------ | ------------------------------------------------- |
-| `15 & 9`   | `9`    | `1111 & 1001 = 1001`                              |
-| `15 \| 9`  | `15`   | `1111 \| 1001 = 1111`                             |
-| `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                              |
-| `~15`      | `-16`  | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
-| `~9`       | `-10`  | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
+| 式        | 結果  | 2 進数での説明                                    |
+| --------- | ----- | ------------------------------------------------- |
+| `15 & 9`  | `9`   | `1111 & 1001 = 1001`                              |
+| `15 \| 9` | `15`  | `1111 \| 1001 = 1111`                             |
+| `15 ^ 9`  | `6`   | `1111 ^ 1001 = 0110`                              |
+| `~15`     | `-16` | `~ 0000 0000 … 0000 1111 = 1111 1111 … 1111 0000` |
+| `~9`      | `-10` | `~ 0000 0000 … 0000 1001 = 1111 1111 … 1111 0110` |
 
 なお、ビット否定演算子を使うと 32 ビットすべてが反転し、その値の最上位（最も左）のビットは（2 の補数表現で）負の数を表す 1 に設定されることに注意してください。 `~x` は `-x - 1` と同じ値に評価されます。
 

@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onmousedown
 slug: conflicting/Web/API/Element/mousedown_event
-translation_of: Web/API/GlobalEventHandlers/onmousedown
 original_slug: Web/API/GlobalEventHandlers/onmousedown
 ---
 

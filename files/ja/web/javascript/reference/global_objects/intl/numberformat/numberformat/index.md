@@ -121,9 +121,9 @@ console.log(new Intl.NumberFormat().format(amount));
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'decimal'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "decimal" }).format(amount);
 // → '3,500'
-new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "percent" }).format(amount);
 // → '350,000%'
 ```
 
@@ -134,10 +134,14 @@ new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
 ```js
 let amount = 3500;
 
-new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "unit", unit: "liter" }).format(amount);
 // → '3,500 L'
 
-new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long'}).format(amount);
+new Intl.NumberFormat("en-US", {
+  style: "unit",
+  unit: "liter",
+  unitDisplay: "long",
+}).format(amount);
 // → '3,500 liters'
 ```
 
@@ -147,20 +151,22 @@ new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long
 
 ```js
 let amount = -3500;
-new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
+new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
+  amount,
+);
 // → '-$3,500.00'
 
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencyDisplay: 'name'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencyDisplay: "name",
 }).format(amount);
 // →  '-3,500.00 US dollars'
 
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencySign: 'accounting'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
 }).format(amount);
 // →  '($3,500.00)'
 ```
@@ -170,30 +176,30 @@ new Intl.NumberFormat('bn', {
 科学の短縮表記は `notation` オプションで表すことができ、以下のようになります。
 
 ```js
-new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("en-US", { notation: "scientific" }).format(987654321);
 // → 9.877E8
 
-new Intl.NumberFormat('pt-PT', { notation: "scientific" }).format(987654321);
+new Intl.NumberFormat("pt-PT", { notation: "scientific" }).format(987654321);
 // → 9,877E8
 
-new Intl.NumberFormat('en-GB', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("en-GB", { notation: "engineering" }).format(987654321);
 // → 987.654E6
 
-new Intl.NumberFormat('de', { notation: "engineering" }).format(987654321);
+new Intl.NumberFormat("de", { notation: "engineering" }).format(987654321);
 // → 987,654E6
 
-new Intl.NumberFormat('zh-CN', { notation: "compact" }).format(987654321);
+new Intl.NumberFormat("zh-CN", { notation: "compact" }).format(987654321);
 // → 9.9亿
 
-new Intl.NumberFormat('fr', {
+new Intl.NumberFormat("fr", {
   notation: "compact",
-  compactDisplay: "long"
+  compactDisplay: "long",
 }).format(987654321);
 // → 988 millions
 
-new Intl.NumberFormat('en-GB', {
+new Intl.NumberFormat("en-GB", {
   notation: "compact",
-  compactDisplay: "short"
+  compactDisplay: "short",
 }).format(987654321);
 // → 988M
 ```
@@ -204,8 +210,8 @@ new Intl.NumberFormat('en-GB', {
 
 ```js
 new Intl.NumberFormat("en-US", {
-    style: "percent",
-    signDisplay: "exceptZero"
+  style: "percent",
+  signDisplay: "exceptZero",
 }).format(0.55);
 // → '+55%'
 ```
@@ -213,11 +219,11 @@ new Intl.NumberFormat("en-US", {
 なお、通貨の符号が "accounting" である場合、負号の代わりに括弧が使用されることがあります。
 
 ```js
-new Intl.NumberFormat('bn', {
-  style: 'currency',
-  currency: 'USD',
-  currencySign: 'accounting',
-  signDisplay: 'always'
+new Intl.NumberFormat("bn", {
+  style: "currency",
+  currency: "USD",
+  currencySign: "accounting",
+  signDisplay: "always",
 }).format(-3500);
 
 // → '($3,500.00)'

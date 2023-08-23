@@ -14,10 +14,9 @@ slug: Web/API/MediaStream_Image_Capture_API
 まず、{{domxref("MediaDevices.getUserMedia()")}} を呼び出してデバイスへの参照を取得します。`getUserMedia()` メソッドではより詳細な機能を要求できますが、以下の例では単に利用可能な任意のビデオデバイスを要求しています。このメソッドは、{{domxref("MediaStream")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 
 ```js
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(mediaStream => {
-    // ストリームについて何らかの処理を行う
-  })
+navigator.mediaDevices.getUserMedia({ video: true }).then((mediaStream) => {
+  // ストリームについて何らかの処理を行う
+});
 ```
 
 次に、メディアストリームから映像部分を分離します。これは、{{domxref("MediaStream.getVideoTracks()")}} を呼ぶことで行います。これは {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。以下のコードでは、`MediaStreamTrack` の配列の最初のアイテムが使いたいものだと仮定しています。`MediaStreamTrack` オブジェクトのプロパティを用いて使いたいものを選ぶことができます。
@@ -29,13 +28,13 @@ const track = mediaStream.getVideoTracks()[0];
 この時点で、映像を取得する前にデバイスの機能の設定をしたいかもしれません。これは、他の操作をする前にトラックオブジェクトの {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} を呼ぶことでできます。
 
 ```js
-let zoom = document.querySelector('#zoom');
+let zoom = document.querySelector("#zoom");
 const capabilities = track.getCapabilities();
 // ズームに対応しているかをチェックする
-if(!capabilities.zoom) {
+if (!capabilities.zoom) {
   return;
 }
-track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
+track.applyConstraints({ advanced: [{ zoom: zoom.value }] });
 ```
 
 最後に、`MediaStreamTrack` オブジェクトを {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} コンストラクターに渡します。`MediaStream` にはいくつかのトラックの種類があり、それらを取得する複数の方法を提供していますが、`ImageCapture` コンストラクターは {{domxref("MediaStreamTrack.kind")}} が `"video"` でない場合、種類が `NotSupportedError` である {{domxref("DOMException")}} を投げます。
