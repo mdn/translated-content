@@ -1727,7 +1727,7 @@
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
-/es/docs/Web/API/WindowEventHandlers	/es/docs/orphaned/Web/API/WindowEventHandlers
+/es/docs/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
@@ -2961,6 +2961,7 @@
 /es/docs/orphaned/Web/API/NavigatorOnLine	/es/docs/Web/API/Navigator
 /es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/es/docs/Web/API/Navigator/onLine
 /es/docs/orphaned/Web/API/NavigatorOnLine/onLine	/es/docs/Web/API/Navigator/onLine
+/es/docs/orphaned/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /es/docs/orphaned/Web/XPath/Axes/ancestor	/es/docs/web/xpath/axes#ancestor

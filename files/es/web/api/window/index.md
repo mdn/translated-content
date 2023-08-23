@@ -36,7 +36,7 @@ Ver también [DOM Interfaces](/es/docs/DOM/DOM_Reference).
 
 ## Propiedades
 
-_Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prototipos de los elementos built-in) son descritos en una sección separada más abajo.
 
@@ -164,7 +164,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
 
 ## Methods
 
-_Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implementa metodos {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implementa metodos {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Registra un controlador de eventos a un tipo de evento especifico en la ventana.
@@ -279,11 +279,11 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.updateCommands()")}}
   - : Updates the state of commands of the current chrome window (UI).
 
-## Controlador de Eventos
+## Eventos
 
 Estas son propiedades del objeto ventana que pueden ser fijadas para establecer controladores de eventos para las diversar cosas que pueden pasar en la ventana que podria ser de interes.
 
-_Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 > **Nota:** Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
 
