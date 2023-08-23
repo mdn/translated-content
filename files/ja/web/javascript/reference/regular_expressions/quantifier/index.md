@@ -44,14 +44,14 @@ atom{min,max}?
 
 数量詞は[アトム](/ja/docs/Web/JavaScript/Reference/Regular_expressions#アトム)の後に置かれ、そのアトムを一定回数繰り返します。単独で現れることはありません。それぞれの数量詞は、パターンが繰り返されなければならない最小数と最大数を指定することができます。
 
-| 数量詞  | 最小値 | 最大値  |
-| ----------- | ------- | -------- |
-| `?`         | 0       | 1        |
-| `*`         | 0       | 無限大 |
-| `+`         | 1       | 無限大 |
-| `{count}`   | `count` | `count`  |
-| `{min,}`    | `min`   | 無限大 |
-| `{min,max}` | `min`   | `max`    |
+| 数量詞      | 最小値  | 最大値  |
+| ----------- | ------- | ------- |
+| `?`         | 0       | 1       |
+| `*`         | 0       | 無限大  |
+| `+`         | 1       | 無限大  |
+| `{count}`   | `count` | `count` |
+| `{min,}`    | `min`   | 無限大  |
+| `{min,max}` | `min`   | `max`   |
 
 `{count}`、`{min,}`、`{min,max}` の構文では、数値の周りに空白を入れることはできません。そうしないと[リテラル](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)のパターンになります。
 
