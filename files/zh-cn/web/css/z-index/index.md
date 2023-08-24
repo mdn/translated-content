@@ -41,13 +41,19 @@ z-index: unset;
 - `<integer>`
   - : 盒子在当前层叠上下文的层叠等级就是 {{cssxref("&lt;integer&gt;")}} 的值。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
 
-### 格式化语法
+## 形式定义
 
-{{csssyntax("z-index")}}
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-### HTML
+### 视觉上的分层元素
+
+#### HTML
 
 ```html
 <div class="wrapper">
@@ -57,7 +63,7 @@ z-index: unset;
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .wrapper {
@@ -92,9 +98,9 @@ z-index: unset;
 }
 ```
 
-### 结果
+#### 结果
 
-{{ EmbedLiveSample('示例', '550', '200', '') }}
+{{ EmbedLiveSample('视觉上的分层元素', '550', '200') }}
 
 ## 规范
 
@@ -107,4 +113,4 @@ z-index: unset;
 ## 参阅
 
 - CSS {{Cssxref("position")}} 属性
-- [理解 CSS z-indexes](/zh-CN/docs/CSS/Understanding_z-index)
+- [理解 CSS z-index](Web/CSS/CSS_positioned_layout/Understanding_z-index)
