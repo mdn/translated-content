@@ -9,9 +9,9 @@ slug: Web/CSS/z-index
 
 {{EmbedInteractiveExample("pages/css/z-index.html")}}
 
-对于定位元素（即 `position` 属性值非 `static` 的元素），`z-index` 属性指定：
+对于定位元素（即 `position` 属性值非 `static` 的元素），`z-index` 属性会指定：
 
-1. 盒子在当前[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)中的层叠等级。
+1. 盒子在当前 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) 中的层叠等级。
 2. 盒子是否会创建局部层叠上下文。
 
 ## 语法
@@ -39,7 +39,7 @@ z-index: unset;
 - `auto`
   - : 盒子不会创建一个新的局部层叠上下文。盒子在当前层叠上下文的层叠等级是 `0`。
 - `<integer>`
-  - : 盒子在当前层叠上下文的层叠等级就是 {{cssxref("&lt;integer&gt;")}}。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
+  - : 盒子在当前层叠上下文的层叠等级就是 {{cssxref("&lt;integer&gt;")}} 的值。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
 
 ### 格式化语法
 
