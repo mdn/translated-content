@@ -58,20 +58,20 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 基于 Chromium 的浏览器，包括 Google Chrome、Samsung Internet 和 Microsoft Edge，要求清单包含以下成员：
 
-- [`name`](/zh_CN/docs/Web/Manifest/name)
-- [`icons`](/zh_CN/docs/Web/Manifest/icons)
-- [`start_url`](/zh_CN/docs/Web/Manifest/start_url)
-- [`display`](/zh_CN/docs/Web/Manifest/display) 和/或 [`display_override`](/zh_CN/docs/Web/Manifest/display_override)
+- [`name`](/zh-CN/docs/Web/Manifest/name)
+- [`icons`](/zh-CN/docs/Web/Manifest/icons)
+- [`start_url`](/zh-CN/docs/Web/Manifest/start_url)
+- [`display`](/zh-CN/docs/Web/Manifest/display) 和/或 [`display_override`](/zh-CN/docs/Web/Manifest/display_override)
 
-有关每个成员的完整描述，请参阅 [Web 应用清单参考文档](/zh_CN/docs/Web/Manifest)。
+有关每个成员的完整描述，请参阅 [Web 应用清单参考文档](/zh-CN/docs/Web/Manifest)。
 
 ### 安全上下文
 
-要使 Web 应用程序可安装，它必须在[安全上下文](/zh_CN/docs/Web/Progressive_web_apps)中提供。通常意味着它必须通过 HTTPS 提供。本地资源，如 localhost、`127.0.0.1` 和 `file://` 也被视为安全。
+要使 Web 应用程序可安装，它必须在[安全上下文](/zh-CN/docs/Web/Progressive_web_apps)中提供。通常意味着它必须通过 HTTPS 提供。本地资源，如 localhost、`127.0.0.1` 和 `file://` 也被视为安全。
 
 ### 服务工作线程
 
-要使 Web 应用程序可安装，它必须包括一个[服务工作线程](/zh_CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh_CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
+要使 Web 应用程序可安装，它必须包括一个[服务工作线程](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
 
 ## 从应用商店安装
 
@@ -99,7 +99,7 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 当用户选择该图标时，浏览器会显示一个提示框询问他们是否要安装 PWA，如果他们接受，PWA 将被安装。
 
-该提示框显示的是 PWA 的名称和图标，取自 渐进式 Web 应用清单的 [`name`](/zh_CN/docs/Web/Manifest/name) 和 [`icons`](/zh_CN/docs/Web/Manifest/icons) 成员。
+该提示框显示的是 PWA 的名称和图标，取自 渐进式 Web 应用清单的 [`name`](/zh-CN/docs/Web/Manifest/name) 和 [`icons`](/zh-CN/docs/Web/Manifest/icons) 成员。
 
 ### 浏览器支持
 
@@ -122,18 +122,18 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 PWA 可以提供自己的页面内用户界面，供用户打开安装提示，而不是依赖浏览器默认提供的用户界面。这使得 PWA 可以提供一些上下文和用户安装 PWA 的理由，并有助于使安装用户流程更易于发现。
 
-这种技术依赖于 [`beforeinstallprompt`](/zh_CN/docs/Web/API/Window/beforeinstallprompt_event) 事件，该事件在全局的 [`Window`](/zh_CN/docs/Web/API/Window) 对象上触发，一旦浏览器确定 PWA 可以安装。此事件具有一个 [`prompt()`](/zh_CN/docs/Web/API/BeforeInstallPromptEvent/prompt) 方法，用于显示安装提示。因此，PWA 可以：
+这种技术依赖于 [`beforeinstallprompt`](/zh-CN/docs/Web/API/Window/beforeinstallprompt_event) 事件，该事件在全局的 [`Window`](/zh-CN/docs/Web/API/Window) 对象上触发，一旦浏览器确定 PWA 可以安装。此事件具有一个 [`prompt()`](/zh-CN/docs/Web/API/BeforeInstallPromptEvent/prompt) 方法，用于显示安装提示。因此，PWA 可以：
 
 - 添加自己的“安装”按钮
 - 监听 `beforeinstallprompt` 事件
-- 通过调用 [`preventDefault()`](/zh_CN/docs/Web/API/Event/preventDefault) 取消事件的默认行为
-- 在自己的“安装”按钮的事件处理程序中，调用 [`prompt()`](/zh_CN/docs/Web/API/BeforeInstallPromptEvent/prompt)。
+- 通过调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 取消事件的默认行为
+- 在自己的“安装”按钮的事件处理程序中，调用 [`prompt()`](/zh-CN/docs/Web/API/BeforeInstallPromptEvent/prompt)。
 
 这在 iOS 上不受支持。
 
 ### 自定义安装提示
 
-默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh_CN/docs/Web/Manifest/description) 和 [`screenshots`](/zh_CN/docs/Web/Manifest/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
+默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh-CN/docs/Web/Manifest/description) 和 [`screenshots`](/zh-CN/docs/Web/Manifest/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
 
 下面的屏幕截图显示了在运行在 Android 上的 Google Chrome 上的 [PWAmp 演示](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) 的安装提示的外观：
 
@@ -143,9 +143,9 @@ PWA 可以提供自己的页面内用户界面，供用户打开安装提示，�
 
 一旦安装了 PWA，它的图标将显示在设备上，与用户安装的其他应用程序一起显示，并且点击图标将启动应用程序。
 
-你可以使用渐进式 Web 应用清单的成员 [`display`](/zh_CN/docs/Web/Manifest/display) 来控制 PWA 的显示模式，即 PWA 启动时的外观。具体而言：
+你可以使用渐进式 Web 应用清单的成员 [`display`](/zh-CN/docs/Web/Manifest/display) 来控制 PWA 的显示模式，即 PWA 启动时的外观。具体而言：
 
 - `"standalone"` 表示 PWA 应该看起来和感觉上像特定于平台的应用程序，没有浏览器的用户界面元素。
 - `"browser"` 表示 PWA 应该作为一个新的浏览器标签页或窗口打开，就像普通网站一样。
 
-如果浏览器不支持给定的显示模式，`display` 将会根据预定义的顺序回退到支持的显示模式。[`display_override`](/zh_CN/docs/Web/Manifest/display_override) 允许你重新定义回退顺序。
+如果浏览器不支持给定的显示模式，`display` 将会根据预定义的顺序回退到支持的显示模式。[`display_override`](/zh-CN/docs/Web/Manifest/display_override) 允许你重新定义回退顺序。
