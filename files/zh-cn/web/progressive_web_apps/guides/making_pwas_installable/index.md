@@ -135,7 +135,7 @@ PWA 可以提供自己的页面内用户界面，供用户打开安装提示，�
 
 默认情况下，安装提示中包含 PWA 的名称和图标。如果你为 [`description`](/zh-CN/docs/Web/Manifest/description) 和 [`screenshots`](/zh-CN/docs/Web/Manifest/screenshots) 这两个渐进式 Web 应用清单的成员提供值，则仅限于 Android，在安装提示中将显示这些值，为用户提供额外的上下文和安装 PWA 的动机。
 
-下面的屏幕截图显示了在运行在 Android 上的 Google Chrome 上的 [PWAmp 演示](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp) 的安装提示的外观：
+下面的屏幕截图显示了在运行在 Android 上的 Google Chrome 上的 [PWAmp 演示](https://github.com/MicrosoftEdge/Demos/tree/main/pwamp)的安装提示的外观：
 
 ![Android 上的 PWAmp 安装提示](pwamp-install-prompt-android.png)
 
