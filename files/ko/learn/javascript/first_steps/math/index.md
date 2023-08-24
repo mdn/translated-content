@@ -77,7 +77,7 @@ l10n:
 
 JavaScript에서 모든 표준 숫자를 나타내는 [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 객체에는 숫자를 조작하는 데 사용할 수 있는 많은 유용한 메서드가 있습니다. 간단한 소개만 하기 위해 이 문서에서는 이러한 메서드에 대해 자세히 설명하지 않고 기본적인 내용만 다룹니다. 하지만 객체 참조 페이지를 방문해서 사용 가능한 메서드에 대해 더 알아볼 가치는 있습니다.
 
-예를 들어, 숫자를 고정된 소수점 자리수로 반올림하려면 [`toFixed()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 메서드를 사용합니다. 다음 코드를 브라우저  [콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에서 실행시켜 보세요.
+예를 들어, 숫자를 고정된 소수점 자리수로 반올림하려면 [`toFixed()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 메서드를 사용합니다. 다음 코드를 브라우저 [콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에서 실행시켜 보세요.
 
 ```js
 const lotsOfDecimal = 1.766584958675746364;
@@ -167,9 +167,9 @@ myNumber = Number(myNumber) + 3;
 num2 + num1 / 8 + 2;
 ```
 
-아마 *"50 더하기 10은 60이고, 8 더하기 2는 10이니, 60 나누기 10은 6이다."* 라고 계산했을 겁니다.
+아마 _"50 더하기 10은 60이고, 8 더하기 2는 10이니, 60 나누기 10은 6이다."_ 라고 계산했을 겁니다.
 
-하지만 브라우저는 *"10 나누기 8은 1.25이고, 50 더하기 1.25 더하기 2는 53.25이다."* 라고 계산합니다.
+하지만 브라우저는 _"10 나누기 8은 1.25이고, 50 더하기 1.25 더하기 2는 53.25이다."_ 라고 계산합니다.
 
 이것은 **연산자 우선순위** 때문입니다. 연산자 우선순위는 어떤 연산자를 먼저 계산할지 결정합니다. JavaScript에서의 연산자 우선순위는 학교 수학 수업에서 배웠던 것과 같습니다. 곱하기와 나누기는 먼저 계산되고, 더하기와 빼기는 나중에 계산됩니다. 합은 항상 왼쪽에서 오른쪽으로 계산됩니다.
 
