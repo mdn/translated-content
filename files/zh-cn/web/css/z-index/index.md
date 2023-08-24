@@ -113,4 +113,4 @@ z-index: unset;
 ## 参阅
 
 - CSS {{Cssxref("position")}} 属性
-- [理解 CSS z-index](Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [理解 CSS z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
