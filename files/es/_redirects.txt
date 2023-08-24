@@ -2733,7 +2733,7 @@
 /es/docs/Web/MathML/Elemento/math	/es/docs/Web/MathML/Element/math
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/App_structure	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide
+/es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/Web/Progressive_web_apps/Guides
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Installable_PWAs	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
@@ -2968,6 +2968,7 @@
 /es/docs/orphaned/Web/API/WindowEventHandlers	/es/docs/Web/API/Window#eventos
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-label
 /es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
+/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide	/es/docs/Web/Progressive_web_apps/Guides
 /es/docs/orphaned/Web/XPath/Axes/ancestor	/es/docs/web/xpath/axes#ancestor
 /es/docs/orphaned/Web/XPath/Axes/ancestor-or-self	/es/docs/web/xpath/axes#ancestor-or-self
 /es/docs/orphaned/Web/XPath/Axes/attribute	/es/docs/web/xpath/axes#attribute
