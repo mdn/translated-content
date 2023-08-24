@@ -80,7 +80,7 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 如果你的应用符合可安装的先决条件，你可以将其打包并通过应用商店进行分发。该过程针对每个应用商店有所不同：
 
 - [如何将 PWA 发布到 Google Play 商店](https://chromeos.dev/en/publish/pwa-in-play)
-- [如何将 PWA 发布到 Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
+- [如何将 PWA 发布到 Microsoft Store](https://learn.microsoft.com/zh-cn/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
 - [如何将 PWA 发布到 Meta Quest Store](https://developer.oculus.com/documentation/web/pwa-submit-app/)
 
 [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) 是一个工具，可简化将 PWA 打包和发布到各种应用商店的过程。它支持 Google Play 商店、Microsoft Store、Meta Quest Store 和 iOS App Store。
