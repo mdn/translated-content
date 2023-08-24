@@ -5,19 +5,19 @@ slug: Web/CSS/z-index
 
 {{CSSRef}}
 
-`z-index` 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。
+`z-index` 属性设置定位元素及其后代元素或 flex 项目的 Z 轴顺序，在发生重叠的元素之间，`z-index` 的较大者会覆盖较小者。
 
 {{EmbedInteractiveExample("pages/css/z-index.html")}}
 
-对于一个已经定位的盒子（即其 `position` 属性值不是 `static`，这里要注意的是 CSS 把元素看作盒子），`z-index` 属性指定：
+对于定位元素（即 `position` 属性值非 `static` 的元素），`z-index` 属性指定：
 
-1. 盒子在当前堆叠上下文中的堆叠层级。
-2. 盒子是否创建一个本地堆叠上下文。
+1. 盒子在当前[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)中的层叠等级。
+2. 盒子是否会创建局部层叠上下文。
 
 ## 语法
 
 ```css
-/* 字符值 */
+/* 关键字值 */
 z-index: auto;
 
 /* 整数值 */
@@ -32,14 +32,14 @@ z-index: initial;
 z-index: unset;
 ```
 
-`z-index` 属性可以被设定为关键词 [`auto`](/zh-CN/docs/Web/CSS/z-index#auto) 或 [`<integer>`](/zh-CN/docs/Web/CSS/z-index#integer)。
+`z-index` 属性可以被设置为关键字 `auto` 或 `<integer>`。
 
 ### 取值
 
 - `auto`
-  - : 盒子不会创建一个新的本地堆叠上下文。在当前堆叠上下文中生成的盒子的堆叠层级和父级盒子相同。
+  - : 盒子不会创建一个新的局部层叠上下文。盒子在当前层叠上下文的层叠等级是 `0`。
 - `<integer>`
-  - : {{cssxref("&lt;integer&gt;")}}（整型数字）是生成的盒子在当前堆叠上下文中的堆叠层级。此盒子也会创建一个堆叠层级为 0 的本地堆叠上下文。这意味着后代（元素）的 z-indexes 不与此元素的外部元素的 z-indexes 进行对比。
+  - : 盒子在当前层叠上下文的层叠等级就是 {{cssxref("&lt;integer&gt;")}}。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
 
 ### 格式化语法
 
