@@ -13,13 +13,13 @@ l10n:
 
 ## 解説
 
-`rightContext` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.rightContext` または ``RegExp["$'"]`` として使用してください。
+`rightContext` は {{jsxref("RegExp")}} の静的プロパティですので、作成した `RegExp` オブジェクトのプロパティとしてではなく、常に `RegExp.rightContext` または `RegExp["$'"]` として使用してください。
 
 `rightContext` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが照合に成功するたびに更新されます。照合が行われていない場合、または直近の正規表現にキャプチャグループが格納されていない場合、`rightContext` は空文字列になります。`rightContext` の設定アクセサーは `undefined` なので、このプロパティを直接変更することはできません。
 
 ドットプロパティアクセサー (`RegExp.$'`) で短縮エイリアスを使用することはできません。`'` は識別子の一部として有効ではないので、{{jsxref("SyntaxError")}} が発生します。代わりに[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用してください。
 
-`$'` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、``RegExp["$'"]`` の古いプロパティとは関係ありません。
+`$'` は {{jsxref("String.prototype.replace()")}} の置換文字列でも使用できますが、`RegExp["$'"]` の古いプロパティとは関係ありません。
 
 ## 例
 
