@@ -24,7 +24,7 @@ slug: Web/API/Web_components/Using_templates_and_slots
 これはページ上に表示されず、以下のようなコードで JavaScript で参照を取得し、 DOM に追加することで表示されます。
 
 ```js
-let template = document.getElementById('my-paragraph');
+let template = document.getElementById("my-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -38,17 +38,19 @@ document.body.appendChild(templateContent);
 同様に `<my-paragraph>` と呼ぶことにします。
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        templateContent.cloneNode(true),
+      );
     }
-  }
+  },
 );
 ```
 
@@ -145,19 +147,43 @@ HTML 文書に次のように追加するだけで利用できるようになり
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
       <span>
-        <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+        <code class="name"
+          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+        >
         <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
       </span>
     </summary>
@@ -166,7 +192,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -187,17 +213,19 @@ HTML 文書に次のように追加するだけで利用できるようになり
 これは、先ほどの簡単な例で見たのとまったく同じパターンを使っています。
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
+      const template = document.getElementById(
+        "element-details-template",
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true),
+      );
     }
-  }
+  },
 );
 ```
 
@@ -208,10 +236,10 @@ customElements.define('element-details',
 ```html
 <element-details>
   <span slot="element-name">slot</span>
-  <span slot="description">A placeholder inside a web
-    component that users can fill with their own markup,
-    with the effect of composing different DOM trees
-    together.</span>
+  <span slot="description"
+    >A placeholder inside a web component that users can fill with their own
+    markup, with the effect of composing different DOM trees together.</span
+  >
   <dl slot="attributes">
     <dt>name</dt>
     <dd>The name of the slot.</dd>
@@ -220,10 +248,11 @@ customElements.define('element-details',
 
 <element-details>
   <span slot="element-name">template</span>
-  <span slot="description">A mechanism for holding client-
-    side content that is not to be rendered when a page is
-    loaded but may subsequently be instantiated during
-    runtime using JavaScript.</span>
+  <span slot="description"
+    >A mechanism for holding client- side content that is not to be rendered
+    when a page is loaded but may subsequently be instantiated during runtime
+    using JavaScript.</span
+  >
 </element-details>
 ```
 
@@ -238,14 +267,26 @@ customElements.define('element-details',
 最後に若干の CSS スタイルを、文書中の {{HTMLElement("dl")}}、{{HTMLElement("dt")}}、{{HTMLElement("dd")}} の各要素に追加ししす。
 
 ```css
-  dl { margin-left: 6px; }
-  dt { font-weight: bold; color: #217ac0; font-size: 110% }
-  dt { font-family: Consolas, "Liberation Mono", Courier }
-  dd { margin-left: 16px }
+dl {
+  margin-left: 6px;
+}
+dt {
+  font-weight: bold;
+  color: #217ac0;
+  font-size: 110%;
+}
+dt {
+  font-family: Consolas, "Liberation Mono", Courier;
+}
+dd {
+  margin-left: 16px;
+}
 ```
 
 ```css hidden
-body { margin-top: 47px }
+body {
+  margin-top: 47px;
+}
 ```
 
 ### 結果

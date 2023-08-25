@@ -26,16 +26,14 @@ var videoTrackLabel = VideoTrack.label;
 ```js
 function getTrackList(el) {
   var trackList = [];
-  const wantedKinds = [
-    "main", "alternative", "commentary"
-  ];
+  const wantedKinds = ["main", "alternative", "commentary"];
 
-  el.videoTracks.forEach(function(track) {
+  el.videoTracks.forEach(function (track) {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

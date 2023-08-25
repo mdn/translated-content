@@ -10,7 +10,7 @@ slug: Web/API/Window/statusbar
 ## 構文
 
 ```js
-objRef = window.statusbar
+objRef = window.statusbar;
 ```
 
 ## 例
@@ -18,22 +18,23 @@ objRef = window.statusbar
 次の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティを利用する方法を示しています。既存のウィンドウのあらゆるバーの visible プロパティを書き換えるには、権限が必要です。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>様々な DOM テスト</title>
 
-<script>
-     // 存在するウィンドウのバーの状態を変更します
-    netscape.security.PrivilegeManager.
-        enablePrivilege("UniversalBrowserWrite");
-    window.statusbar.visible=!window.statusbar.visible;
-  </script>
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
+    <script>
+      // 存在するウィンドウのバーの状態を変更します
+      netscape.security.PrivilegeManager.enablePrivilege(
+        "UniversalBrowserWrite",
+      );
+      window.statusbar.visible = !window.statusbar.visible;
+    </script>
+  </head>
+  <body>
+    <p>様々な DOM テスト</p>
+  </body>
 </html>
 ```
 

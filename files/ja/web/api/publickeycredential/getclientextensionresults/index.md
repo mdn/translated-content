@@ -35,33 +35,35 @@ mapArrayBuffer = publicKeyCredential.getClientExtensionResults()
 var publicKey = {
   // Here are the extensions (as "inputs")
   extensions: {
-    "loc": true, // This extension has been defined to include location information in attestation
-    "uvi": true  // user verification index: how the user was verified
+    loc: true, // This extension has been defined to include location information in attestation
+    uvi: true, // user verification index: how the user was verified
   },
   challenge: new Uint8Array(16) /* from the server */,
   rp: {
     name: "Example CORP",
-    id  : "login.example.com"
+    id: "login.example.com",
   },
   user: {
     id: new Uint8Array(16) /* from the server */,
     name: "jdoe@example.com",
-    displayName: "John Doe"
+    displayName: "John Doe",
   },
   pubKeyCredParams: [
     {
       type: "public-key",
-      alg: -7
-    }
-  ]
+      alg: -7,
+    },
+  ],
 };
 
-navigator.credentials.create({ publicKey })
+navigator.credentials
+  .create({ publicKey })
   .then(function (newCredentialInfo) {
     var myBuffer = newCredentialInfo.getClientExtensionResults();
     // myBuffer will contain the result of any of the processing of the "loc" and "uvi" extensions
-  }).catch(function (err) {
-     console.error(err);
+  })
+  .catch(function (err) {
+    console.error(err);
   });
 ```
 
