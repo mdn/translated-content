@@ -136,7 +136,7 @@ Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以�
 
 ### 更复杂的内存示例
 
-让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在这里[memory.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm)找到示例。
+让我们通过看一个更复杂的内存示例——一个对整数数组进行求和的 WebAssembly 模块——来明确上面的概念。你可以在 [memory.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/memory.wasm) 中找到示例。
 
 1. 像前面那样在相同的目录下复制一份 memory.wasm。
 
@@ -188,7 +188,7 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 ### 表格示例
 
-让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在[table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm)中找到该示例。
+让我们看一个简单的表格示例——一个 WebAssembly 模块，该模块创建并导出了一个带有两个元素的表格：元素 0 返回 13，元素 1 返回 42。你可以在 [table.wasm](https://raw.githubusercontent.com/mdn/webassembly-examples/master/js-api-examples/table.wasm) 中找到该示例。
 
 1. 在一个新的目录中复制一份 table.wasm。
 
