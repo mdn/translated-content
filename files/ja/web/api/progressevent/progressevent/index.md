@@ -20,7 +20,7 @@ new ProgressEvent(type, options)
 
 - `type`
   - : このイベントの名前の文字列です。
-  大文字小文字を区別し、ブラウザーは `loadstart`, `progress`, `abort`, `error`, `load`, `timeout`, `loadend` の何れかを設定します。
+    大文字小文字を区別し、ブラウザーは `loadstart`, `progress`, `abort`, `error`, `load`, `timeout`, `loadend` の何れかを設定します。
 - `options` {{optional_inline}}
   - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
     - `lengthComputable` {{optional_inline}}

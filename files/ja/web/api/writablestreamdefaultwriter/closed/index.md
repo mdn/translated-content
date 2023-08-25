@@ -16,19 +16,21 @@ l10n:
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+const writableStream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {
+      // ...
+    },
+    close(controller) {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  write(chunk, controller) {
-    // ...
-  },
-  close(controller) {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 
@@ -38,8 +40,8 @@ const writer = writableStream.getWriter();
 
 // ストリームが閉じているかどうかを確認します
 writer.closed.then(() => {
-  console.log('writer closed');
-})
+  console.log("writer closed");
+});
 ```
 
 ## 仕様書

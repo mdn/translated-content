@@ -53,7 +53,8 @@ JavaScript をもう少し詳しく見てみましょう。
 ```js
 const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
-const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+const SpeechRecognitionEvent =
+  window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 ```
 
 #### 文法
@@ -61,8 +62,20 @@ const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechReco
 コードの次の部分では、アプリが認識する文法を定義します。次の変数は文法を保持するために定義されています。
 
 ```js
-const colors = [ 'aqua', 'azure', 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', /* … */ ];
-const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(' | ')};`
+const colors = [
+  "aqua",
+  "azure",
+  "beige",
+  "bisque",
+  "black",
+  "blue",
+  "brown",
+  "chocolate",
+  "coral" /* … */,
+];
+const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
+  " | ",
+)};`;
 ```
 
 使用されている文法形式は [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) です — それについての詳細はリンク先の仕様書を参照してください。しかし、今のところは手っ取り早く実行してみましょう。
@@ -97,7 +110,7 @@ speechRecognitionList.addFromString(grammar, 1);
 ```js
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 ```
@@ -107,11 +120,11 @@ recognition.maxAlternatives = 1;
 出力先の {{htmlelement("div")}} と HTML 要素への参照を取得（診断メッセージを出力したり、後でアプリの背景色を更新したりできるようにするため）した後、画面がタップ/クリックされたときに音声認識サービスが開始されるように onclick ハンドラーを実装します。これは {{domxref("SpeechRecognition.start()")}} を呼び出すことで実現しています。 `forEach()` メソッドは何色を言っているかを示す色付きインジケーターを出力するために使われています。
 
 ```js
-const diagnostic = document.querySelector('.output');
-const bg = document.querySelector('html');
-const hints = document.querySelector('.hints');
+const diagnostic = document.querySelector(".output");
+const bg = document.querySelector("html");
+const hints = document.querySelector(".hints");
 
-let colorHTML = '';
+let colorHTML = "";
 colors.forEach((color, i) => {
   console.log(color, i);
   colorHTML += `<span style="background-color:${color};"> ${color} </span>`;
@@ -120,7 +133,7 @@ hints.innerHTML = `Tap or click then say a color to change the background color 
 
 document.body.onclick = () => {
   recognition.start();
-  console.log('Ready to receive a color command.');
+  console.log("Ready to receive a color command.");
 };
 ```
 
@@ -134,7 +147,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(`Confidence: ${event.results[0][0].confidence}`);
-}
+};
 ```
 
 ここの 2 行目はちょっと複雑そうなので、順を追って説明していきましょう。{{domxref("SpeechRecognitionEvent.results")}}プロパティは、 {{domxref("SpeechRecognitionResult")}} オブジェクトを含む {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。これはゲッターを持っているので配列のようにアクセスでき、最初の `[0]` は 0 の位置にある `SpeechRecognitionResult` を返します。各 `SpeechRecognitionResult` オブジェクトには、個々に認識された単語を含む {{domxref("SpeechRecognitionAlternative")}} オブジェクトが含まれています。これらは配列のようにアクセスできるようにゲッターも持っています — 2 番目の `[0]` は、したがって位置 0 の `SpeechRecognitionAlternative` を返します。次に、その `transcript` プロパティを返して個々の認識結果を含む文字列を文字列として取得し、背景色をその色に設定し、認識された色を UI の診断メッセージとして報告します。
@@ -144,7 +157,7 @@ recognition.onresult = (event) => {
 ```js
 recognition.onspeechend = () => {
   recognition.stop();
-}
+};
 ```
 
 #### エラーや認識されない発話のハンドリング
@@ -154,7 +167,7 @@ recognition.onspeechend = () => {
 ```js
 recognition.onnomatch = (event) => {
   diagnostic.textContent = "I didn't recognize that color.";
-}
+};
 ```
 
 {{domxref("SpeechRecognition.error_event", "error")}} は、認識に成功して実際にエラーが発生したケースを処理します — {{domxref("SpeechRecognitionErrorEvent.error")}} プロパティには、返された実際のエラーが含まれます。
@@ -162,7 +175,7 @@ recognition.onnomatch = (event) => {
 ```js
 recognition.onerror = (event) => {
   diagnostic.textContent = `Error occurred in recognition: ${event.error}`;
-}
+};
 ```
 
 ## 音声合成
@@ -228,14 +241,14 @@ HTMLとCSSは、タイトル、使用されるためのいくつかの指示、�
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('.txt');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector(".txt");
+const voiceSelect = document.querySelector("select");
 
-const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('.pitch-value');
-const rate = document.querySelector('#rate');
-const rateValue = document.querySelector('.rate-value');
+const pitch = document.querySelector("#pitch");
+const pitchValue = document.querySelector(".pitch-value");
+const rate = document.querySelector("#rate");
+const rateValue = document.querySelector(".rate-value");
 
 const voices = [];
 ```
@@ -251,15 +264,15 @@ function populateVoiceList() {
   voices = synth.getVoices();
 
   for (const voice of voices) {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.textContent = `${voice.name} (${voice.lang})`;
 
     if (voice.default) {
-      option.textContent += ' — DEFAULT';
+      option.textContent += " — DEFAULT";
     }
 
-    option.setAttribute('data-lang', voice.lang);
-    option.setAttribute('data-name', voice.name);
+    option.setAttribute("data-lang", voice.lang);
+    option.setAttribute("data-name", voice.name);
     voiceSelect.appendChild(option);
   }
 }
@@ -301,12 +314,12 @@ inputForm.onsubmit = (event) => {
 ハンドラーの最後の部分では、 {{domxref("SpeechSynthesisUtterance.pause_event", "pause")}} イベントを記述して、 {{domxref("SpeechSynthesisEvent")}} がいかに有益な用途で使用できるかを示しています。 {{domxref("SpeechSynthesis.pause()")}} が呼び出されると、音声が一時停止された文字番号と名前を報告するメッセージを返します。
 
 ```js
-   utterThis.onpause = (event) => {
-    const char = event.utterance.text.charAt(event.charIndex);
-    console.log(
-      `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
-    );
-  }
+utterThis.onpause = (event) => {
+  const char = event.utterance.text.charAt(event.charIndex);
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 ```
 
 最後に、テキスト入力に対して [blur()](/ja/docs/Web/API/HTMLElement/blur) を呼び出しています。これは主に Firefox OS 上でキーボードを隠すためのものです。
@@ -323,9 +336,9 @@ inputForm.onsubmit = (event) => {
 ```js
 pitch.onchange = () => {
   pitchValue.textContent = pitch.value;
-}
+};
 
 rate.onchange = () => {
   rateValue.textContent = rate.value;
-}
+};
 ```

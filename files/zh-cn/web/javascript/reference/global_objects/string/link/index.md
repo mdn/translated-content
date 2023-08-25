@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/link
 
 {{JSRef}} {{deprecated_header}}
 
-{{jsxref("String")}} 值的 **`link()`** 方法创建一个 {{HTMLElement("a")}} 元素字符串，将调用字符串嵌入其中（`<a href="...">str</a>`），用作指向另一个 URL 的超文本链接。
+{{jsxref("String")}} 值的 **`link()`** 方法创建一个 {{HTMLElement("a")}} 元素字符串，其中嵌入了调用的字符串（`<a href="...">str</a>`），用作指向另一个 URL 的超文本链接。
 
 > **备注：** 所有 [HTML 包装方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法)都已被弃用，并且仅为了兼容性而标准化。请使用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)（例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)）代替。
 
