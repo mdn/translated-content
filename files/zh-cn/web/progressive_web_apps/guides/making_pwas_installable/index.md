@@ -71,7 +71,7 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 ### Service worker
 
-要使 Web 应用程序可安装，它必须包括一个[service worker](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
+要使 Web 应用程序可安装，它必须包括一个 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
 
 ## 从应用商店安装
 
