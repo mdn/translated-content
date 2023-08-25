@@ -28,11 +28,11 @@ _{{domxref("Event")}} から継承したプロパティもあります。_
 この例では、`connect` イベントと `disconnect` イベントにイベントリスナーを登録します。そして、コンソールに {{domxref("HIDDevice.productName")}} を出力します。
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
+navigator.hid.addEventListener("connect", ({ device }) => {
   console.log(`HID が接続されました : ${device.productName}`);
 });
 
-navigator.hid.addEventListener('disconnect', ({device}) => {
+navigator.hid.addEventListener("disconnect", ({ device }) => {
   console.log(`HID が切断されました : ${device.productName}`);
 });
 ```

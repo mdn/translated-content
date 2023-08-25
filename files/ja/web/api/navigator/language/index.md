@@ -10,7 +10,7 @@ slug: Web/API/Navigator/language
 ## 構文
 
 ```js
-const lang = navigator.language
+const lang = navigator.language;
 ```
 
 ### 値

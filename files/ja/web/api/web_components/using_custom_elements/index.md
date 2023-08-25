@@ -81,7 +81,7 @@ class PopupInfo extends HTMLElement {
 // シャドウルートを生成
 this.attachShadow({ mode: "open" }); // 'this.shadowRoot' を設定して返す
 
-// （内部の）span 要素を生成
+//（内部の）span 要素を生成
 const wrapper = document.createElement("span");
 wrapper.setAttribute("class", "wrapper");
 const icon = wrapper.appendChild(document.createElement("span"));
@@ -152,7 +152,7 @@ shadow.appendChild(linkElem);
 
 ここで、もう 1 つの組み込み要素の例を見てみましょう。 [expanding-list](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) です。（[ライブでも確認してください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)） これにより番号なしリストが展開・収納するメニューになります。
 
- まず始めに、これまでと同様の方法でクラス要素を定義します。
+まず始めに、これまでと同様の方法でクラス要素を定義します。
 
 ```js
 class ExpandingList extends HTMLUListElement {
@@ -167,7 +167,7 @@ class ExpandingList extends HTMLUListElement {
 
 ここでは要素の詳細な機能については説明しませんが、ソースコードからどのように動作するのか確認することができます。これまでと唯一違う点は、 {{domxref("HTMLUListElement")}} インターフェースを継承しており、 {{domxref("HTMLElement")}} ではないことです。そのため、独立した要素ではなく、 {{htmlelement("ul")}} 要素の特徴を備えた上に、定義した機能を持ちます。これこそが、自律カスタム要素ではなくカスタマイズされた組み込み要素である理由です。
 
- 次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
+次に、以前と同様に `define()` を用いて要素を登録しますが、今回はこのカスタム要素がどの要素から継承したのかという情報をオプションとして渡しています。
 
 ```js
 customElements.define("expanding-list", ExpandingList, { extends: "ul" });

@@ -34,12 +34,12 @@ includes(key)
 ## 例
 
 ```js
-const keyRangeValue = IDBKeyRange.bound('A', 'K', false, false);
+const keyRangeValue = IDBKeyRange.bound("A", "K", false, false);
 
-keyRangeValue.includes('F');
+keyRangeValue.includes("F");
 // true を返します
 
-keyRangeValue.includes('W');
+keyRangeValue.includes("W");
 // false を返します
 ```
 

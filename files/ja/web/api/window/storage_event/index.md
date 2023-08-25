@@ -45,8 +45,8 @@ slug: Web/API/Window/storage_event
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('storage', (event) => { });
-onstorage = (event) => { };
+addEventListener("storage", (event) => {});
+onstorage = (event) => {};
 ```
 
 ## イベント型
@@ -83,10 +83,10 @@ onstorage = (event) => { };
 `storage` イベントが発生した時、項目 `sampleList` をコンソールに記録します。
 
 ```js
-window.addEventListener('storage', () => {
+window.addEventListener("storage", () => {
   // ローカルストレージが変更された時、
   // リストをコンソールに書き出す。
-  console.log(JSON.parse(window.localStorage.getItem('sampleList')));
+  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
 });
 ```
 
@@ -96,7 +96,7 @@ window.addEventListener('storage', () => {
 window.onstorage = () => {
   // ローカルストレージが変更された時、
   // リストをコンソールに書き出す。
-  console.log(JSON.parse(window.localStorage.getItem('sampleList')));
+  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
 };
 ```
 

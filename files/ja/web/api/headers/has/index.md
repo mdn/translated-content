@@ -37,9 +37,9 @@ const myHeaders = new Headers(); // Currently empty
 これに {{domxref("Headers.append")}} を使用してヘッダーを追加し、`has()` を使用してヘッダーが存在するかどうかをテストすることができます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.has('Content-Type'); // Returns true
-myHeaders.has('Accept-Encoding'); // Returns false
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.has("Content-Type"); // Returns true
+myHeaders.has("Accept-Encoding"); // Returns false
 ```
 
 ## 仕様書

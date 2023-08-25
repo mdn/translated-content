@@ -35,17 +35,20 @@ abort(reason)
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 
@@ -56,7 +59,7 @@ const writer = writableStream.getWriter();
 // 必要に応じてストリームを中止します
 writer.abort.then((reason) => {
   console.log(reason);
-})
+});
 ```
 
 ## 仕様書
