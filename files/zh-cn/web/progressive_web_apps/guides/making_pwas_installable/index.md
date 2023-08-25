@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
 
 {{PWASidebar}}
 
-PWA 的一个定义特征是它可以在设备上安装，并且对用户来说就像一个特定平台的应用程序，它们可以直接从操作系统中启动，就像任何其他应用程序一样。
+PWA 的一个定义特征是它可以安装在设备上，然后以平台特定的应用程序的形式出现在用户面前，成为用户设备的一个永久功能，用户可以像启动其他任何应用程序一样直接从操作系统启动它。
 
 我们可以将其总结如下：
 
@@ -69,9 +69,9 @@ web 应用清单是一个 JSON 文件，它告诉浏览器 PWA 应该如何在�
 
 要使 Web 应用程序可安装，它必须在[安全上下文](/zh-CN/docs/Web/Progressive_web_apps)中提供。通常意味着它必须通过 HTTPS 提供。本地资源，如 localhost、`127.0.0.1` 和 `file://` 也被视为安全。
 
-### 服务工作线程
+### Service worker
 
-要使 Web 应用程序可安装，它必须包括一个[服务工作线程](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
+要使 Web 应用程序可安装，它必须包括一个[service worker](/zh-CN/docs/Web/API/Service_Worker_API)，其中包含一个提供基本离线体验的 [`fetch` 事件处理程序](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)。
 
 ## 从应用商店安装
 
@@ -143,7 +143,7 @@ PWA 可以提供自己的页面内用户界面，供用户打开安装提示，�
 
 一旦安装了 PWA，它的图标将显示在设备上，与用户安装的其他应用程序一起显示，并且点击图标将启动应用程序。
 
-你可以使用渐进式 Web 应用清单的成员 [`display`](/zh-CN/docs/Web/Manifest/display) 来控制 PWA 的显示模式，即 PWA 启动时的外观。具体而言：
+你可以使用应用清单的成员 [`display`](/zh-CN/docs/Web/Manifest/display) 来控制 PWA 的*显示模式*，即 PWA 启动时的外观。具体而言：
 
 - `"standalone"` 表示 PWA 应该看起来和感觉上像特定于平台的应用程序，没有浏览器的用户界面元素。
 - `"browser"` 表示 PWA 应该作为一个新的浏览器标签页或窗口打开，就像普通网站一样。
