@@ -375,8 +375,11 @@ Las cuatro propiedades son las siguientes:
 Puedes aplicar diversas sombras al mismo texto incluyendo múltiples valores de sombra separados por comas, por ejemplo:
 
 ```css
-text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
-  4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo _Tommy el gato_, obtenemos esto:
@@ -404,8 +407,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa, 0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7), 0px 0px 3px rgba(0, 0, 0, 0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -461,8 +467,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa, 0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7), 0px 0px 3px rgba(0, 0, 0, 0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -512,8 +521,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa, 0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7), 0px 0px 3px rgba(0, 0, 0, 0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -569,8 +581,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa, 0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7), 0px 0px 3px rgba(0, 0, 0, 0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -638,7 +653,10 @@ Se debe colocar una barra inclinada (_slash_) entre las propiedades {{cssxref("f
 Un ejemplo completo se vería así:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Aprendizaje activo: Jugar a aplicar estilos

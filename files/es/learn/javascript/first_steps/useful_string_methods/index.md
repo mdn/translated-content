@@ -26,7 +26,7 @@ Tu variable se convierte en una instancia del objeto cadena y, como resultado, t
 Ingresemos algunos ejemplos en una nueva consola. A continuación, proporcionamos uno (también puedes [abrir esta consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una ventana o pestaña por separado, o si prefieres usar la [consola de desarrolladores del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -356,7 +356,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -508,7 +508,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -676,7 +676,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;

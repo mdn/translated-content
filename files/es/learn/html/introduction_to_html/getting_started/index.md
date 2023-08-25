@@ -168,7 +168,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -392,7 +392,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -504,7 +504,7 @@ Así que tendrás que hacer esto:
 Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -667,7 +667,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;

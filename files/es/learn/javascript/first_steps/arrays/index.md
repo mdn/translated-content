@@ -22,7 +22,7 @@ Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variab
 Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -430,7 +430,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -632,7 +632,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
