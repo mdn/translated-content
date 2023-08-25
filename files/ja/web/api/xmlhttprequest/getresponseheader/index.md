@@ -46,7 +46,7 @@ client.onreadystatechange = () => {
       client.abort();
     }
   }
-}
+};
 ```
 
 ## 仕様書

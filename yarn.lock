@@ -524,10 +524,10 @@ markdownlint-rule-helpers@0.21.0:
   dependencies:
     markdownlint-micromark "0.1.2"
 
-markdownlint-rule-search-replace@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.1.1.tgz#59942195ded99337159556f53efb0f840e8f2774"
-  integrity sha512-NzCR2hQ1PVv9YLVra7uCgpCxBF4jSm8ggn7rxXo8SRKF680V3aGRTFtAJBt0K8WaFiVejQbdliyY7+Kq/ECOtA==
+markdownlint-rule-search-replace@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/markdownlint-rule-search-replace/-/markdownlint-rule-search-replace-1.2.0.tgz#18b59555b6eeb442619f22fc7edfdaa1973eb7a1"
+  integrity sha512-l2eeVjb0ijxO+dO1ZrODcht+qnJ0VuiAAdBx1J8oa2kAugXl3NhxAGjfNuTfEJae5OQbdSGT+NjMczyzBXvWMA==
   dependencies:
     markdownlint-rule-helpers "0.21.0"
 

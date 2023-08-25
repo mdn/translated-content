@@ -28,7 +28,7 @@ onselect = (event) => {};
 ### 選択範囲をログ出力
 
 ```html
-<input value="この要素のテキストの一部を選択してみてください。">
+<input value="この要素のテキストの一部を選択してみてください。" />
 <p id="log"></p>
 ```
 
@@ -37,7 +37,7 @@ function logSelection(event) {
   const log = document.getElementById("log");
   const selection = event.target.value.substring(
     event.target.selectionStart,
-    event.target.selectionEnd
+    event.target.selectionEnd,
   );
   log.textContent = `You selected: ${selection}`;
 }

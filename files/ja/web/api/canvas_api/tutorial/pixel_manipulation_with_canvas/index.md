@@ -25,7 +25,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 例えば画像の 50 行目の 200 列目にあるピクセルから青色成分の値を読み取るには、以下のようにします。
 
 ```js
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 座標（X と Y）が与えられると、次のようなことをすることになるかもしれません。
@@ -112,16 +112,16 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var hoveredColor = document.getElementById('hovered-color');
-var selectedColor = document.getElementById('selected-color');
+var hoveredColor = document.getElementById("hovered-color");
+var selectedColor = document.getElementById("selected-color");
 
 function pick(event, destination) {
   var x = event.layerX;
@@ -129,18 +129,18 @@ function pick(event, destination) {
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
 
-    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-    destination.style.background = rgba;
-    destination.textContent = rgba;
+  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+  destination.style.background = rgba;
+  destination.textContent = rgba;
 
-    return rgba;
+  return rgba;
 }
 
-canvas.addEventListener('mousemove', function(event) {
-    pick(event, hoveredColor);
+canvas.addEventListener("mousemove", function (event) {
+  pick(event, hoveredColor);
 });
-canvas.addEventListener('click', function(event) {
-    pick(event, selectedColor);
+canvas.addEventListener("click", function (event) {
+  pick(event, selectedColor);
 });
 ```
 
@@ -172,57 +172,57 @@ ctx.putImageData(myImageData, 0, 0);
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-img.onload = function() {
-    ctx.drawImage(img, 0, 0);
+img.onload = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var original = function() {
-    ctx.drawImage(img, 0, 0);
+var original = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var invert = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        data[i]     = 255 - data[i];     // red
-        data[i + 1] = 255 - data[i + 1]; // green
-        data[i + 2] = 255 - data[i + 2]; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var invert = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    data[i] = 255 - data[i]; // red
+    data[i + 1] = 255 - data[i + 1]; // green
+    data[i + 2] = 255 - data[i + 2]; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-var grayscale = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-        data[i]     = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var grayscale = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = avg; // red
+    data[i + 1] = avg; // green
+    data[i + 2] = avg; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-const inputs = document.querySelectorAll('[name=color]');
+const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
-        switch (evt.target.value) {
-            case "inverted":
-                return invert();
-            case "grayscale":
-                return grayscale();
-            default:
-                return original();
-        }
-    });
+  input.addEventListener("change", function (evt) {
+    switch (evt.target.value) {
+      case "inverted":
+        return invert();
+      case "grayscale":
+        return grayscale();
+      default:
+        return original();
+    }
+  });
 }
 ```
 
@@ -239,49 +239,65 @@ for (const input of inputs) {
 マウスカーソルの位置を取得して、そこから上下左右に 5 ピクセルの範囲の画像を切り取ります。そして切り取った画像を別のキャンバスにコピーして、望むサイズにリサイズします。ズーム用のキャンバスでは、元のキャンバスから切り取った 10×10 ピクセルの画像を 200×200 ピクセルにリサイズしています。
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.min(Math.max(0, x - 5), img.width - 10),
-                  Math.min(Math.max(0, y - 5), img.height - 10),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.min(Math.max(0, x - 5), img.width - 10),
+  Math.min(Math.max(0, y - 5), img.height - 10),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200,
+);
 ```
 
 ズームの例です。
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-img.onload = function() {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
 
-  var smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
+  var smoothedZoomCtx = document
+    .getElementById("smoothed-zoom")
+    .getContext("2d");
   smoothedZoomCtx.imageSmoothingEnabled = true;
   smoothedZoomCtx.mozImageSmoothingEnabled = true;
   smoothedZoomCtx.webkitImageSmoothingEnabled = true;
   smoothedZoomCtx.msImageSmoothingEnabled = true;
 
-  var pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
+  var pixelatedZoomCtx = document
+    .getElementById("pixelated-zoom")
+    .getContext("2d");
   pixelatedZoomCtx.imageSmoothingEnabled = false;
   pixelatedZoomCtx.mozImageSmoothingEnabled = false;
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
-  var zoom = function(ctx, x, y) {
-    ctx.drawImage(canvas,
-        Math.min(Math.max(0, x - 5), img.width - 10),
-        Math.min(Math.max(0, y - 5), img.height - 10),
-        10, 10,
-        0, 0,
-        200, 200);
+  var zoom = function (ctx, x, y) {
+    ctx.drawImage(
+      canvas,
+      Math.min(Math.max(0, x - 5), img.width - 10),
+      Math.min(Math.max(0, y - 5), img.height - 10),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200,
+    );
   };
 
-  canvas.addEventListener('mousemove', function(event) {
+  canvas.addEventListener("mousemove", function (event) {
     const x = event.layerX;
     const y = event.layerY;
     zoom(smoothedZoomCtx, x, y);

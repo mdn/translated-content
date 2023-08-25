@@ -56,11 +56,11 @@ pipeTo(destination, options)
 
 ```js
 // 元の画像を読み取る
-fetch('png-logo.png')
-// その body を ReadableStream として取得
-.then((response) => response.body)
-.then((body) => body.pipeThrough(new PNGTransformStream()))
-.then((rs) => rs.pipeTo(new FinalDestinationStream()))
+fetch("png-logo.png")
+  // その body を ReadableStream として取得
+  .then((response) => response.body)
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => rs.pipeTo(new FinalDestinationStream()));
 ```
 
 ## 仕様書

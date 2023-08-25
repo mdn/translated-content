@@ -15,6 +15,10 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 blink()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
 一个以 `<blink>` 开始标签开头的字符串，接着是文本 `str`，然后是 `</blink>` 结束标签。

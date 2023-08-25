@@ -27,7 +27,7 @@ req.onload = (event) => {
 req.send(null);
 ```
 
- `responseType` プロパティに `"blob"` という文字列を設定すると、バイナリーファイルを {{domxref("Blob")}} として読み取ることもできます。
+`responseType` プロパティに `"blob"` という文字列を設定すると、バイナリーファイルを {{domxref("Blob")}} として読み取ることもできます。
 
 ```js
 const req = new XMLHttpRequest();

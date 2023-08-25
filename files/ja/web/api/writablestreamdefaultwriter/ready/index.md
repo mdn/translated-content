@@ -22,7 +22,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter は WritableStreamDefaultWriter 型です
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, {stream: true});
+  const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     // ストリームとそのライターがデータを
     // 受信できることを確認します。

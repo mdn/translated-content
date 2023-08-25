@@ -35,11 +35,11 @@ WebVTT（メディアプレゼンテーションに関するテキストトラ�
 
 ```js
 var region = new VTTRegion();
-region.width = 50;  // 動画幅の50%を使用し、
-region.lines = 4;  // 高さは4行を使用します。
-region.viewportAnchorX = 25;  // 領域が左から25%で始まるようにします。
-var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
-cue.region = region;  // このキューはこの領域内にのみ描かれます。
+region.width = 50; // 動画幅の50%を使用し、
+region.lines = 4; // 高さは4行を使用します。
+region.viewportAnchorX = 25; // 領域が左から25%で始まるようにします。
+var cue = new VTTCue(2, 3, "かっこいい文章を表示する");
+cue.region = region; // このキューはこの領域内にのみ描かれます。
 ```
 
 ## 仕様
