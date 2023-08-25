@@ -191,14 +191,14 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 宏插入一个本地化的注释框，表明一个特性在 [Web worker](/zh-CN/docs/Web/API/Web_Workers_API) 上下文中可用。它还有一个可选参数，当带有 `notservice` 时，表示该特性在 Web Worker 中可用但在 Servcie Worker 中不可用。
 
-##### 语法
+#### 语法
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### 示例
+#### 示例
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}
