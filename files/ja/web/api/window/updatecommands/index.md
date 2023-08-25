@@ -12,7 +12,7 @@ slug: Web/API/Window/updateCommands
 ## 構文
 
 ```js
-updateCommands("sCommandName")
+updateCommands("sCommandName");
 ```
 
 ### 引数
