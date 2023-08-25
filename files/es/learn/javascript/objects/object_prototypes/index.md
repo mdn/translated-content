@@ -82,7 +82,7 @@ La respuesta es que los heredados son los que están definidos en la propiedad `
 
 Así que `Object.prototype.watch()`, `Object.prototype.valueOf()`, etc., están disponibles para cualquier tipo de objeto que herede de `Object.prototype`, incluyendo nuevas instancias de objeto creadas desde el constructor.
 
-[`Object.is()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/is), [`Object.keys()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys), y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().
+[`Object.is()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), y otros miembros no definidos dentro del prototipo del repositorio(bucket) no son heredados por instancias de objeto o tipos de objeto que heredan de Object.prototype. Sino que son métodos/propiedades disponibles sólo en el propio constructor Object().
 
 > **Nota:** Esto parece extraño - ¿cómo se puede tener un método definido en un constructor, que en sí mismo es una función? Bueno, una función es también un tipo de objeto - vea la referencia del constructor de Function() si no nos cree.
 
@@ -182,11 +182,11 @@ person1.constructor.name;
 
 Vamos a echar un vistazo a un ejemplo para modificar la propiedad `prototype` de una función constructor (los métodos añadidos a la propiedad prototipo están disponibles en todas las instancias de los objetos creados a partir del constructor).
 
-1. Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
+1. Regresemos a nuestro ejemplo [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) y creemos una copia local del [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Debajo del código JavaScript existente, agrega el siguiente código, el cuál añade un nuevo método a la propiedad `prototype` del constructor:
 
    ```js
    Person.prototype.farewell = function () {
-     alert(this.name.first + " has left the building. Bye for now!");
+     alert(this.name.first + " ha dejado el edificio. ¡Adiós por ahora!");
    };
    ```
 
@@ -203,20 +203,20 @@ Piensa sobre esto por un momento. En nuestro código definimos el constructor, l
 ```js
 function Person(first, last, age, gender, interests) {
 
-  // property and method definitions
+  // definiciones de propiedades y métodos
 
 }
 
 var person1 = new Person('Tammi', 'Smith', 32, 'neutral', ['music', 'skiing', 'kickboxing']);
 
 Person.prototype.farewell = function() {
-  alert(this.name.first + ' has left the building. Bye for now!');
+  alert(this.name.first + ' ha dejado el edificio. ¡Adiós por ahora!');
 };.
 ```
 
 Pero el método `farewell()` aún se encuentra disponible en la instancia `person1`, su funcionalidad disponible ha sido automáticamente actualizada incluído en método recién definido `farewell()`.
 
-> **Nota:** Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> **Nota:** Si estás teniendo problemas haciendo funcionar este ejemplo, echa un vistazo en nuestro ejemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) ([míralo ejecutarse en tiempo real](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
 
 Raramente verás propiedades definidas en la propiedad `prototype`, ya no son muy flexibles cuando son definidas de esta forma. Por ejemplo, puedes añadir una propiedad como esta:
 
@@ -235,17 +235,17 @@ Sin embargo esto no funciona, ya que `this` estará referenciando al scope globa
 De hecho, un patrón bastante común para la mayoría de definiciones de objetos es declarar las propiedades dentro del constructor, y los métodos en el prototipo. Esto hace el código más fácil de leer, ya que el constructor sólo contiene las definiciones de propiedades, y los métodos están en bloques separados. Por ejemplo:
 
 ```js
-// Constructor with property definitions
+// Constructor con definiciones de propiedades
 
 function Test(a, b, c, d) {
-  // property definitions
+  // definiciones de propiedad
 }
 
-// First method definition
+// Definición del primer método
 
 Test.prototype.x = function() { ... };
 
-// Second method definition
+// Definición del segundo método
 
 Test.prototype.y = function() { ... };
 
