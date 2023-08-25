@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.ready
+title: "WritableStreamDefaultWriter: ready プロパティ"
+short-title: ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef("Streams")}}

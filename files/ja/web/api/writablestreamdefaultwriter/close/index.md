@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.close()
+title: "WritableStreamDefaultWriter: close() メソッド"
+short-title: close()
 slug: Web/API/WritableStreamDefaultWriter/close
 l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -44,7 +45,9 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => defaultWriter.write(chunk))
+      .then(() => {
+        defaultWriter.write(chunk);
+      })
       .then(() => {
         console.log("Chunk written to sink.");
       })
