@@ -2,7 +2,7 @@
 title: "LockManager: request() メソッド"
 slug: Web/API/LockManager/request
 l10n:
-  sourceCommit: 37e753ed4186b528326752a655600a81bb43f1ca
+  sourceCommit: bcf59ab11a8c254ab4c2616943b1bd48f9f35784
 ---
 
 {{APIRef("Web Locks")}}
