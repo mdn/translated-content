@@ -16,9 +16,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -31,37 +31,48 @@ onerror = (event) => { };
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.addEventListener('upgradeneeded', (event) => {
+DBOpenRequest.addEventListener("upgradeneeded", (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラーが発生しました');
+    console.log("データベースの作成中にエラーが発生しました");
   };
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 });
 
-DBOpenRequest.addEventListener('success', (event) => {
+DBOpenRequest.addEventListener("success", (event) => {
   const db = DBOpenRequest.result;
 
   // 読み書き用のデータベーストランザクションを開き、データを追加する準備をします
-  const transaction = db.transaction(['toDoList'], 'readwrite');
-  const objectStore = transaction.objectStore('toDoList');
-  const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2020 };
+  const transaction = db.transaction(["toDoList"], "readwrite");
+  const objectStore = transaction.objectStore("toDoList");
+  const newItem = {
+    taskTitle: "my task",
+    hours: 10,
+    minutes: 10,
+    day: 10,
+    month: "January",
+    year: 2020,
+  };
 
   const objectStoreRequest = objectStore.add(newItem);
-  objectStoreRequest.addEventListener('error', () => {
-    console.log(`新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`);
+  objectStoreRequest.addEventListener("error", () => {
+    console.log(
+      `新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`,
+    );
   });
 });
 ```
@@ -70,37 +81,48 @@ DBOpenRequest.addEventListener('success', (event) => {
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラーが発生しました');
+    console.log("データベースの作成中にエラーが発生しました");
   };
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   const db = DBOpenRequest.result;
 
   // 読み書き用のデータベーストランザクションを開き､データを追加する準備をします
-  const transaction = db.transaction(['toDoList'], 'readwrite');
-  const objectStore = transaction.objectStore('toDoList');
-  const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2020 };
+  const transaction = db.transaction(["toDoList"], "readwrite");
+  const objectStore = transaction.objectStore("toDoList");
+  const newItem = {
+    taskTitle: "my task",
+    hours: 10,
+    minutes: 10,
+    day: 10,
+    month: "January",
+    year: 2020,
+  };
 
   const objectStoreRequest = objectStore.add(newItem);
   objectStoreRequest.onerror = () => {
-    console.log(`新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`);
+    console.log(
+      `新規アイテムの追加中にエラーが発生しました: ${newItem.taskTitle}`,
+    );
   };
 };
 ```

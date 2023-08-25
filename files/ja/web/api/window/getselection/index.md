@@ -12,7 +12,7 @@ l10n:
 ## 構文
 
 ```js
-getSelection()
+getSelection();
 ```
 
 ### 引数
@@ -31,10 +31,10 @@ A {{domxref("Selection")}} オブジェクト。
 
 ```js
 function foo() {
-    const selObj = window.getSelection();
-    alert(selObj);
-    const selRange = selObj.getRangeAt(0);
-    // 以下、取得した選択文字列に対して何らかの処理を行う
+  const selObj = window.getSelection();
+  alert(selObj);
+  const selRange = selObj.getRangeAt(0);
+  // 以下、取得した選択文字列に対して何らかの処理を行う
 }
 ```
 

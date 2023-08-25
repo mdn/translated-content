@@ -29,7 +29,7 @@ var type = sentinel.type;
 
 ```js
 const requestWakeLock = async () => {
-  wakeLock = await navigator.wakeLock.request('screen');
+  wakeLock = await navigator.wakeLock.request("screen");
   console.log(wakeLock.type); // 'screen' と出力
 };
 

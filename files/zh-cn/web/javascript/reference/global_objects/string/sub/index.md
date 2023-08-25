@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/sub
 
 {{JSRef}} {{deprecated_header}}
 
-{{jsxref("String")}} 值的 **`sub()`** 方法创建一个字符串，将该字符串嵌入到 {{HTMLElement("sub")}} 元素（`<sub>str</sub>`）中，这会导致该字符串显示为下标。
+{{jsxref("String")}} 值的 **`sub()`** 方法创建一个 {{HTMLElement("sub")}} 元素字符串，其中嵌入了调用的字符串（`<sub>str</sub>`），这会导致该字符串显示为下标。
 
 > **备注：** 所有 [HTML 包装器方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#html_包装器方法) 均已弃用，仅出于兼容性目的而进行标准化。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
@@ -14,6 +14,10 @@ slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ```js-nolint
 sub()
 ```
+
+### 参数
+
+无。
 
 ### 返回值
 

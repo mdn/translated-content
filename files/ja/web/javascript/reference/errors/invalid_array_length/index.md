@@ -56,8 +56,8 @@ b.length = b.length + 1; // length プロパティに 2^32 を設定
 ### 有効な場合
 
 ```js example-good
-[ Math.pow(2, 40) ]; // [ 1099511627776 ]
-[ -1 ]; // [ -1 ]
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
 new ArrayBuffer(Math.pow(2, 32) - 1);
 new ArrayBuffer(Math.pow(2, 33)); // 64 ビットシステム、 Firefox 89 以降
 new ArrayBuffer(0);
