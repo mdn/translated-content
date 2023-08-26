@@ -30,7 +30,7 @@ ReferenceError: 'x' is not defined (Chrome)
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -43,11 +43,11 @@ test();
 Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово `let` и таким образом избавиться от повторного объявления.
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```

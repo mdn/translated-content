@@ -14,10 +14,10 @@ l10n:
 ## 構文
 
 ```js
-splice(start)
-splice(start, deleteCount)
-splice(start, deleteCount, item1)
-splice(start, deleteCount, item1, item2, itemN)
+splice(start);
+splice(start, deleteCount);
+splice(start, deleteCount, item1);
+splice(start, deleteCount, item1, item2, itemN);
 ```
 
 ### 引数
@@ -64,8 +64,8 @@ splice(start, deleteCount, item1, item2, itemN)
 ### 2 の位置の手前から 0 個の要素を削除して "drum" を挿入
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-const removed = myFish.splice(2, 0, 'drum');
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum");
 
 // myFish は ["angel", "clown", "drum", "mandarin", "sturgeon"]
 // removed は [] であり、どの要素も取り除かれていない
@@ -74,8 +74,8 @@ const removed = myFish.splice(2, 0, 'drum');
 ### 2 の位置の手前から 0 個の要素を削除して、"drum" と "guitar" を挿入
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-const removed = myFish.splice(2, 0, 'drum', 'guitar');
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish は ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed は [] であり、どの要素も取り除かれていない
@@ -84,7 +84,7 @@ const removed = myFish.splice(2, 0, 'drum', 'guitar');
 ### 3 の位置から 1 つ取り除く
 
 ```js
-const myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
 const removed = myFish.splice(3, 1);
 
 // removed は ["mandarin"]
@@ -94,8 +94,8 @@ const removed = myFish.splice(3, 1);
 ### 2 の位置から 1 つ取り除いて "trumpet" を挿入
 
 ```js
-const myFish = ['angel', 'clown', 'drum', 'sturgeon'];
-const removed = myFish.splice(2, 1, 'trumpet');
+const myFish = ["angel", "clown", "drum", "sturgeon"];
+const removed = myFish.splice(2, 1, "trumpet");
 
 // myFish は ["angel", "clown", "trumpet", "sturgeon"]
 // removed は ["drum"]
@@ -104,8 +104,8 @@ const removed = myFish.splice(2, 1, 'trumpet');
 ### 0 の位置から 2 つ取り除き、そこへ "parrot" と "anemore" と "blue" を挿入
 
 ```js
-const myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
-const removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+const myFish = ["angel", "clown", "trumpet", "sturgeon"];
+const removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
 
 // myFish は ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
 // removed は ["angel", "clown"]
@@ -114,7 +114,7 @@ const removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 ### 2 の位置から 2 つ取り除く
 
 ```js
-const myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+const myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
 const removed = myFish.splice(2, 2);
 
 // myFish は ["parrot", "anemone", "sturgeon"]
@@ -124,7 +124,7 @@ const removed = myFish.splice(2, 2);
 ### -2 の位置から 1 つ取り除く
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(-2, 1);
 
 // myFish は ["angel", "clown", "sturgeon"]
@@ -134,7 +134,7 @@ const removed = myFish.splice(-2, 1);
 ### 2 の位置からすべての要素を取り除く
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2);
 
 // myFish は ["angel", "clown"]

@@ -31,7 +31,7 @@ var s = "azerty"; // aloca memória para uma string
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; // aloca memória para um objeto e seus valores contidos
 
 // (assim como o objeto) aloca memória para o vetor e
@@ -43,9 +43,13 @@ function f(a) {
 } // aloca uma função (que é um objeto que pode ser chamado)
 
 // expressões de funções também alocam um objeto
-someElement.addEventListener('click', function(){
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function () {
+    someElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### Alocação via chamada de uma função
@@ -55,7 +59,7 @@ Algumas funções quando chamadas resultam na alocação de um objeto.
 ```js
 var d = new Date();
 // aloca um elemento do DOM
-var e = document.createElement('div');
+var e = document.createElement("div");
 ```
 
 Alguns métodos alocam novos valores ou objetos:
@@ -103,32 +107,31 @@ Este é o algoritmo mais ingênuo de garbage collection. este algoritmo reduz a 
 ```js
 var o = {
   a: {
-    b:2
-  }
+    b: 2,
+  },
 };
 // 2 objetos são criados. Um é referenciado pelo outro como uma de suas propriedades.
 // O outro é referenciado pelo fato de ser atribuído à variável 'o'.
 // Obviamente, nenhum pode ser coletado pelo garbage collector
 
-
 var o2 = o; // a varável 'o2' é a segunda coisa que tem
-            // uma referência ao objeto
-o = 1;      // agora, o objeto que estava originalmente no 'o'
-            // tem uma referência única
-            // encorporada pela variável 'o2'
+// uma referência ao objeto
+o = 1; // agora, o objeto que estava originalmente no 'o'
+// tem uma referência única
+// encorporada pela variável 'o2'
 
 var oa = o2.a; // Referência para a propriedade 'a' do objeto.
-               // Este objeto agora tem 2 referências: uma como uma propriedade,
-               // a outra como a variável 'oa'
+// Este objeto agora tem 2 referências: uma como uma propriedade,
+// a outra como a variável 'oa'
 
 o2 = "yo"; // O objeto que estava originalmente em 'o' agora não tem
-           // nenhuma referência para ele.
-           // Ele poderia ser coletado pelo garbage collector.
-           // Entretanto o que era sua propriedade 'a' continua sendo referenciada
-           // pela variável 'oa', então ele não pode ser coletado.
+// nenhuma referência para ele.
+// Ele poderia ser coletado pelo garbage collector.
+// Entretanto o que era sua propriedade 'a' continua sendo referenciada
+// pela variável 'oa', então ele não pode ser coletado.
 
 oa = null; // O que era a propriedade 'a' do objeto original em 'o'
-           // não tem mais refêrencia para ele. Então pode ser coletado.
+// não tem mais refêrencia para ele. Então pode ser coletado.
 ```
 
 #### Limitação : ciclos
@@ -136,7 +139,7 @@ oa = null; // O que era a propriedade 'a' do objeto original em 'o'
 Esse algoritmo ingênuo tem a limitação de que objetos que referenciam um ao outro (e formam um ciclo), podem ser "não mais necessários" e ainda assim não serem coletados.
 
 ```js
-function f(){
+function f() {
   var o = {};
   var o2 = {};
   o.a = o2; // o referencia o2
@@ -160,7 +163,7 @@ Internet Explorer 6 e 7 são conhecidos por terem um coletor com contador de ref
 
 ```js
 var div;
-window.onload = function(){
+window.onload = function () {
   div = document.getElementById("minhaDiv");
   div.referenciaCircular = div;
   div.muitosDados = new Array(10000).join("*");

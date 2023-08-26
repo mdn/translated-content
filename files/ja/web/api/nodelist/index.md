@@ -47,6 +47,7 @@ console.log(childNodes.length); // "3" が出力される
   - : 指定されたインデックスに対応するリスト内の要素を返します。インデックスが範囲外の場合は `null` を返します。
 
     `nodeList[i]` のアクセスの代替手段です（この場合、`i` が範囲外の時には `undefined` が返ります）。これは JavaScript 以外の言語による DOM の実装で便利です。
+
 - {{domxref("NodeList.entries()")}}
   - : {{jsxref("Iteration_protocols","イテレーター")}}を返し、これによってコードが集合に含まれているキーと値のペアを走査することができます。 (この場合、キーは 0 から始まる数値で値はノードです。)
 - {{domxref("NodeList.forEach()")}}
@@ -66,7 +67,7 @@ for (let i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-**リストの要素について処理を回すために [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) を使用しないでください。`NodeList` のプロパティである要素に加えて、 `length` や `item` プロパティについても処理が適用されるため、 {{domxref("element")}} オブジェクトのみ処理すべきスクリプトではエラーが生じます。また、`for...in` で取得されるプロパティの順番は保証されていません。
+リストの要素について処理を回すために [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) を使用しないでください。`NodeList` のプロパティである要素に加えて、 `length` や `item` プロパティについても処理が適用されるため、 {{domxref("element")}} オブジェクトのみ処理すべきスクリプトではエラーが生じます。また、`for...in` で取得されるプロパティの順番は保証されていません。
 
 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループであれば、`NodeList` オブジェクトを正しく扱うことができます。
 

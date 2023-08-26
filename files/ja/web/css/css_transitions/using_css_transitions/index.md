@@ -40,7 +40,7 @@ CSS トランジションは一括指定の {{cssxref("transition")}} プロパ�
 
 ```css
 div {
-    transition: <property> <duration> <timing-function> <delay>;
+  transition: <property> <duration> <timing-function> <delay>;
 }
 ```
 
@@ -67,8 +67,11 @@ div {
 
 ```html hidden
 <body>
-    <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
-    <div class="box">Sample</div>
+  <p>
+    The box below combines transitions for: width, height, background-color,
+    transform. Hover over the box to see these properties animated.
+  </p>
+  <div class="box">Sample</div>
 </body>
 ```
 
@@ -76,20 +79,24 @@ div {
 
 ```css
 .box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000ff;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 2s,
+    transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    transform: rotate(180deg);
+  background-color: #ffcccc;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
 ```
 
@@ -199,11 +206,15 @@ a:focus {
 JavaScript を使用して、ある場所にボールを移動させる効果を作ることができます。
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.transform = "translateY(" + (ev.clientY - 25) + "px)";
+    f.style.transform += "translateX(" + (ev.clientX - 25) + "px)";
+  },
+  false,
+);
 ```
 
 CSS により余分な努力をせずに、上記の効果をスムーズにさせることができます。単に要素へトランジションを追加すると、変化がスムーズに発生するようになります。

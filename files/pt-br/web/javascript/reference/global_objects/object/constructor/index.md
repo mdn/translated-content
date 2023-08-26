@@ -35,8 +35,8 @@ function Tree(name) {
   this.name = name;
 }
 
-var theTree = new Tree('Redwood');
-console.log('theTree.constructor is ' + theTree.constructor);
+var theTree = new Tree("Redwood");
+console.log("theTree.constructor is " + theTree.constructor);
 ```
 
 Esse exemplo apresenta a seguinte saída:
@@ -52,34 +52,38 @@ theTree.constructor is function Tree(name) {
 O exemplo a seguir apresenta como modificar o valor do construtor de um objeto genérico. Apenas `true`, `1` e `"test"` não serão afetados sendo que eles tem `construtores` _read-only_ nativos. Esse exemplo apresenta que nem sempre é seguro depender da propriedade `constructor` de um objeto.
 
 ```js
-function Type () {}
+function Type() {}
 
 var types = [
   new Array(),
   [],
   new Boolean(),
-  true,             // remains unchanged
+  true, // remains unchanged
   new Date(),
   new Error(),
   new Function(),
   function () {},
   Math,
   new Number(),
-  1,                // remains unchanged
+  1, // remains unchanged
   new Object(),
   {},
   new RegExp(),
   /(?:)/,
   new String(),
-  'test'            // remains unchanged
+  "test", // remains unchanged
 ];
 
 for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
-  types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
+  types[i] = [
+    types[i].constructor,
+    types[i] instanceof Type,
+    types[i].toString(),
+  ];
 }
 
-console.log(types.join('\n'));
+console.log(types.join("\n"));
 ```
 
 Esse exemplo apresenta a seguinte saída:
@@ -114,11 +118,11 @@ function String() {
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1ª Edição.                                                                                                | Padrão                   | Definição inicial. Implementado no JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                         | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}     |                                                    |
+| Especificação                                                                            | Status             | Comentário                                         |
+| ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
+| ECMAScript 1ª Edição.                                                                    | Padrão             | Definição inicial. Implementado no JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                   | {{Spec2('ES5.1')}} |                                                    |
+| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}   |                                                    |
 
 ## Compatibilidade de Browser
 

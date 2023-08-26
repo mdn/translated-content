@@ -36,7 +36,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 다음 코드에서 `bigNumber`는 JavaScript의 최댓값보다 큰 값을 할당받습니다. {{jsxref("Statements/if...else", "if")}} 문이 실행되면, `bigNumber`의 값이 `Infinity`이므로 `bigNumber`는 계산에 좀 더 적합한 유한값을 다시 할당합니다.
 
 ```js
-var bigNumber = (Number.MAX_VALUE) * 2;
+var bigNumber = Number.MAX_VALUE * 2;
 
 if (bigNumber === Number.POSITIVE_INFINITY) {
   bigNumber = returnFinite();

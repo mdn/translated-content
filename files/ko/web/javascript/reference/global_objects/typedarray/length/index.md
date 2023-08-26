@@ -2,6 +2,7 @@
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 ---
+
 {{JSRef}}
 
 **`length`** 접근자(accessor) 속성(property)은 형식화 배열의 (요소) 길이를 나타냅니다.

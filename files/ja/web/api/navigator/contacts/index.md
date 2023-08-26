@@ -18,7 +18,7 @@ l10n:
 以下のコードは、連絡先ピッカー API に対応しているかどうかを調べるものです。
 
 ```js
-const supported = ('contacts' in navigator && 'ContactsManager' in window);
+const supported = "contacts" in navigator && "ContactsManager" in window;
 ```
 
 ## 仕様書

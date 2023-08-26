@@ -30,7 +30,7 @@ trim()
 아래 예제는 `str` 양 끝의 공백을 제거합니다.
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 console.log(str.trim()); // 'foo'
 ```
 

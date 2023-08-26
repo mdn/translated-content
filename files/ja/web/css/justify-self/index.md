@@ -26,15 +26,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* 位置による配置 */
-justify-self: center;     /* 中央付近にアイテムを集める */
-justify-self: start;      /* 開始側にアイテムを集める */
-justify-self: end;        /* 終端側にアイテムを集める */
+justify-self: center; /* 中央付近にアイテムを集める */
+justify-self: start; /* 開始側にアイテムを集める */
+justify-self: end; /* 終端側にアイテムを集める */
 justify-self: flex-start; /* 開始側にフレックスアイテムを集める */
-justify-self: flex-end;   /* 終端側にフレックスアイテムを集める */
+justify-self: flex-end; /* 終端側にフレックスアイテムを集める */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* 左側にアイテムを集める */
-justify-self: right;      /* 右側にアイテムを集める */
+justify-self: left; /* 左側にアイテムを集める */
+justify-self: right; /* 右側にアイテムを集める */
 
 /* ベースラインの配置 */
 justify-self: baseline;
@@ -152,11 +152,11 @@ span:nth-child(2) {
 }
 
 span:nth-child(3) {
-justify-self: center;
+  justify-self: center;
 }
 
 span:nth-child(4) {
-justify-self: end;
+  justify-self: end;
 }
 
 article span {
@@ -166,7 +166,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

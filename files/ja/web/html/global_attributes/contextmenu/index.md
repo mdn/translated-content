@@ -29,8 +29,8 @@ l10n:
       Twitter や Facebook に、このページを共有できます。
     </li>
     <li contextmenu="changeFont" id="fontSizing">
-      このリスト項目で、コンテキストメニューの
-      "Increase/Decrease font" を使用してテキストのサイズを変更できます。
+      このリスト項目で、コンテキストメニューの "Increase/Decrease font"
+      を使用してテキストのサイズを変更できます。
     </li>
     <menu type="context" id="changeFont">
       <menuitem label="Increase Font" onclick="incFont()"></menuitem>
@@ -58,14 +58,14 @@ l10n:
 function shareViaTwitter() {
   window.open(
     "https://twitter.com/intent/tweet?text=" +
-      "Hurray! I am learning ContextMenu from MDN via Mozilla"
+      "Hurray! I am learning ContextMenu from MDN via Mozilla",
   );
 }
 
 function shareViaFacebook() {
   window.open(
     "https://facebook.com/sharer/sharer.php?u=" +
-      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus"
+      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus",
   );
 }
 

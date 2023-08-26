@@ -65,10 +65,8 @@ z>0 である三次元要素はより大きく、 z<0 である三次元要素�
 <table>
   <tbody>
     <tr>
-      <th><code>perspective: 250px;</code>
-      </th>
-      <th><code>perspective: 350px;</code>
-      </th>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
     </tr>
     <tr>
       <td>
@@ -97,10 +95,8 @@ z>0 である三次元要素はより大きく、 z<0 である三次元要素�
       </td>
     </tr>
     <tr>
-      <th><code>perspective: 500px;</code>
-      </th>
-      <th><code>perspective: 650px;</code>
-      </th>
+      <th><code>perspective: 500px;</code></th>
+      <th><code>perspective: 650px;</code></th>
     </tr>
     <tr>
       <td>
@@ -216,8 +212,10 @@ z>0 である三次元要素はより大きく、 z<0 である三次元要素�
 }
 
 /* テーブルの見栄えをよくする */
-th, p, td {
-  background-color: #EEEEEE;
+th,
+p,
+td {
+  background-color: #eeeeee;
   padding: 10px;
   font-family: sans-serif;
   text-align: left;

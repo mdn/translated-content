@@ -1,139 +1,137 @@
 ---
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
+l10n:
+  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
 {{JSRef}}
 
-**`indexOf()`** メソッドは、呼び出す {{jsxref("String")}} オブジェクト中で、 `fromIndex` から検索を始め、指定された値が最初に現れたインデックスを返します。値が見つからない場合は `-1` を返します。
+**`indexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最初に出現するインデックスを返します。 オプションで開始位置を取り、指定した数値以上のインデックスで指定した部分文字列が最初に出現するインデックスを返します。
 
 {{EmbedInteractiveExample("pages/js/string-indexof.html")}}
 
-> **メモ:** 配列メソッドについては {{jsxref("Array.prototype.indexOf()")}} を参照してください。
-
 ## 構文
 
-```
-str.indexOf(searchValue [, fromIndex])
+```js-nolint
+indexOf(searchString)
+indexOf(searchString, position)
 ```
 
 ### 引数
 
-- `searchValue`
+- `searchString`
 
-  - : 検索する値を表す文字列です。
+  - : 検索する値を表す文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`indexOf()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 
-    文字列が明示的に提供されなかった場合は、 [_searchValue_ は "`undefined`" となり](https://tc39.github.io/ecma262/#sec-tostring)、この値が `str` の中から検索されます。
+- `position` {{optional_inline}}
 
-    ですから、例えば `'undefined'.indexOf()` は `undefined` が `undefined` という文字列の中の `0` の位置に見つかるため、 `0` を返します。しかし、 `'undefine'.indexOf()` は `undefined` が `undefine` という文字列の中で見つからないため、 `-1` を返します。
+  - : このメソッドは、`position`（既定値は `0`）以上の位置で、指定した部分文字列が最初に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列をまったく検索しません。`position` が 0 以上の場合、このメソッドは `0` と同じように動作します。
 
-- _`fromIndex`_ {{optional_inline}}
+    - `'hello world hello'.indexOf('o', -5)` は `4` を返します。これは第 2 引数が `0` であるかのように動作し、`o` が `0` 以上の位置で最初に現れるのが `4` だからです。
 
-  - : 整数値で、検索を始める位置を表します。既定値は `0` です。
+  - `'hello world hello'.indexOf('world', 12)` は `-1` を返します。実際に部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `12` 以上ではないからです。
 
-    _`fromIndex`_ の値が `0` より小さい場合や `str.length` より大きい場合は、それぞれ `0` の位置、 `str.length` の位置から検索を始めます。
-
-    例えば、 `'hello world'.indexOf('o', -5)` は、 `0` の位置から検索を始め、 `o` が `4` の位置にあるので `4` を返します。一方、 `'hello world'.indexOf('o', 11)` (および `fromIndex` の値が `11` よりも大きな場合) は、 `11` が文字列の末尾よりも*後*の位置であるため、 `-1` を返します。
+  - `'hello world hello'.indexOf('o', 99)` は `-1` を返します。`99` が `hello world hello` の長さよりも大きいため、メソッドが全く文字列を検索しなくなるからです。
 
 ### 返値
 
-`searchValue` が初めて出現した位置です。見つからなかった場合は、 **-1** になります。
+`searchString` が最初に見つかったインデックス、または見つからなかった場合は `-1` です。
 
-`searchValue` が空文字列であった場合は奇妙な結果になります。 `fromIndex` の値がなかった場合や、 `fromIndex` の値が文字列の `length` よりも小さかった場合は、返値は `fromIndex` と同じになります。
+#### 空の検索文字列を使用した場合の返値
 
-```js
-'hello world'.indexOf('') // 0 を返す
-'hello world'.indexOf('', 0) // 0 を返す
-'hello world'.indexOf('', 3) // 3 を返す
-'hello world'.indexOf('', 8) // 8 を返す
-```
-
-しかし、 `fromIndex` の値が文字列の `length` 以上であった場合、返値は文字列の `length` になります。
+空の検索文字列で検索すると、奇妙な結果になります。第 2 引数がなかった場合や、第 2 引数の値が呼び出した文字列の長さよりも小さかった場合、返値は第 2 引数と同じになります。
 
 ```js
-'hello world'.indexOf('', 11) // 11 を返す
-'hello world'.indexOf('', 13) // 11 を返す
-'hello world'.indexOf('', 22) // 11 を返す
+"hello world".indexOf(""); // 0 を返す
+"hello world".indexOf("", 0); // 0 を返す
+"hello world".indexOf("", 3); // 3 を返す
+"hello world".indexOf("", 8); // 8 を返す
 ```
 
-前者の例では、 JS は指定された位置の直後に空文字列を見つけているようです。後者の例では、 JS は検索される文字列の末尾で空文字列を見つけているようです。
+しかし、第 2 引数の値が文字列の長さ以上であった場合、返値は文字列の長さになります。
+
+```js
+"hello world".indexOf("", 11); // 11 を返す
+"hello world".indexOf("", 13); // 11 を返す
+"hello world".indexOf("", 22); // 11 を返す
+```
+
+前者の例では、メソッドは第 2 引数で指定した位置の直後に空文字列を見つけたかのように動作します。 後者の例では、メソッドは呼び出した文字列の終わりに空文字列を見つけたかのように動作します。
 
 ## 解説
 
-文字列における文字は左から右にインデックス化されます。一番最初の文字の位置は `0` で、 `stringName` として呼び出された文字列における一番最後の文字は `stringName.length - 1` です。
+文字列は 0 基点です。文字列の最初の文字のインデックスは `0` で、文字列の最後の文字のインデックスは文字列の長さから 1 を引いたものになります。
 
 ```js
-'Blue Whale'.indexOf('Blue')      // 0 を返します
-'Blue Whale'.indexOf('Blute')     // -1 を返します
-'Blue Whale'.indexOf('Whale', 0)  // 5 を返します
-'Blue Whale'.indexOf('Whale', 5)  // 5 を返します
-'Blue Whale'.indexOf('Whale', 7)  // -1 を返します
-'Blue Whale'.indexOf('')          // 0 を返します
-'Blue Whale'.indexOf('', 9)       // 9 を返します
-'Blue Whale'.indexOf('', 10)      // 10 を返します
-'Blue Whale'.indexOf('', 11)      // 10 を返します
+"Blue Whale".indexOf("Blue"); // 0 を返す
+"Blue Whale".indexOf("Blute"); // -1 を返す
+"Blue Whale".indexOf("Whale", 0); // 5 を返す
+"Blue Whale".indexOf("Whale", 5); // 5 を返す
+"Blue Whale".indexOf("Whale", 7); // -1 を返す
+"Blue Whale".indexOf(""); // 0 を返す
+"Blue Whale".indexOf("", 9); // 9 を返す
+"Blue Whale".indexOf("", 10); // 10 を返す
+"Blue Whale".indexOf("", 11); // 10 を返す
 ```
 
 `indexOf()` メソッドは大文字と小文字を区別します。例えば、以下の式は `-1` を返します。
 
 ```js
-'Blue Whale'.indexOf('blue')  // -1 を返します
+"Blue Whale".indexOf("blue"); // -1 を返す
 ```
 
 ### 出現のチェック
 
-`0` は `true` と評価されず、 `-1` は `false` と評価されないことに注意してください。そのため、特定の文字列がほかの文字列に含まれているかをチェックする正確な方法は次のようになります。
+文字列の中に特定の部分文字列があるかどうかを調べる場合、返値が `-1` であるかどうかを調べるのが正しい方法です。
 
 ```js
-'Blue Whale'.indexOf('Blue') !== -1  // true
-'Blue Whale'.indexOf('Bloe') !== -1  // false
-~('Blue Whale'.indexOf('Bloe')) // 0, which is falsy
+"Blue Whale".indexOf("Blue") !== -1; // true。'Blue' が 'Blue Whale' の中で見つかった
+"Blue Whale".indexOf("Bloe") !== -1; // false。 'Bloe' が 'Blue Whale' の中で見つからなかった
 ```
 
 ## 例
 
-### `indexOf()` を使う
+### indexOf() の使用
 
-以下の例は、`"Brave new world"` という文字列において、与えられた値の位置を求めるために、`indexOf()` を使用しています。
+以下の例は `indexOf()` を使用して、`"Brave new world"` という文字列において指定された値の位置を求めています。
 
 ```js
-const str = 'Brave new world'
+const str = "Brave new world";
 
-console.log('Index of first w from start is ' + str.indexOf('w'))   // 8 を表示
-console.log('Index of "new" from start is ' + str.indexOf('new'))   // 6 を表示
+console.log(str.indexOf("w")); // 8
+console.log(str.indexOf("new")); // 6
 ```
 
-### `indexOf()` と 大文字と小文字の区別
+### indexOf() と 大文字と小文字の区別
 
 以下の例は 2 つの文字列の変数を定義しています。
 
-それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、 `indexOf()` メソッドは大文字と小文字を区別するので、 "`cheddar`" という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
+それらの変数は、2 番目の文字列が大文字を含んでいることを除けば、同じ文字列を含んでいます。1 番目の {{domxref("console.log()")}} メソッドは `19` を表示します。しかし、`indexOf()` メソッドは大文字と小文字を区別するので、`"cheddar"` という文字列は `myCapString` では見つけられません。ですから、 `console.log()` メソッドは `-1` を表示します。
 
 ```js
-const myString    = 'brie, pepper jack, cheddar'
-const myCapString = 'Brie, Pepper Jack, Cheddar'
+const myString = "brie, pepper jack, cheddar";
+const myCapString = "Brie, Pepper Jack, Cheddar";
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'))
-// 19 を表示します
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'))
-// -1 を表示します
+console.log(myString.indexOf("cheddar")); // 19
+console.log(myCapString.indexOf("cheddar")); // -1
 ```
 
-### `indexOf()` を使って文字列中である文字が現れる回数を数える
+### indexOf() を使って文字列中である文字が現れる回数を数える
 
 以下の例は、 `count` に、 `str` という文字列中で `e` という文字が出現する回数を設定します。
 
 ```js
-const str = 'To be, or not to be, that is the question.'
-let count = 0
-let position = str.indexOf('e')
+const str = "To be, or not to be, that is the question.";
+let count = 0;
+let position = str.indexOf("e");
 
 while (position !== -1) {
-  count++
-  position = str.indexOf('e', position + 1)
+  count++;
+  position = str.indexOf("e", position + 1);
 }
 
-console.log(count)  // 4 を表示
+console.log(count); // 4
 ```
 
 ## 仕様書
@@ -142,7 +140,7 @@ console.log(count)  // 4 を表示
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.indexOf")}}
+{{Compat}}
 
 ## 関連情報
 

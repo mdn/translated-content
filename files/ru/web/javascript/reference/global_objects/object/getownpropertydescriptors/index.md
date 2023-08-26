@@ -52,7 +52,7 @@ Object.getOwnPropertyDescriptors(obj)
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -66,12 +66,9 @@ superclass.prototype = {
   // Определите ваши методы и свойства здесь
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // Определите ваши методы и свойства здесь
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // Определите ваши методы и свойства здесь
+});
 ```
 
 ## Спецификации

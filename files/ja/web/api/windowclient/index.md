@@ -28,25 +28,28 @@ _`WindowClient` は、親インターフェースである {{domxref("Client")}}
 ## 例
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", function (event) {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // これは、クライアントが既に開いているかどうかを確認し、
   // 開いている場合にフォーカスを合わせます
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client) {
-        client.focus();
-        break;
-      }
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+          var client = clientList[i];
+          if (client.url == "/" && "focus" in client) {
+            client.focus();
+            break;
+          }
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

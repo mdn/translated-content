@@ -36,11 +36,11 @@ Esta função é equivalente a `Math.log(x)/Math.log(2)`. Para log2(e) use a con
 ### Usando `Math.log2()`
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 
@@ -49,16 +49,18 @@ Math.log2(1024); // 10
 Este Polyfill simula a função `Math.log2`. Note que é retornado um valor não prcesiso Observe que é retornado valores imprecisos em algumas entradas (like 1 << 29), envolva em {{jsxref("Math.round()")}} se estiver trabalhando com máscaras de bits.
 
 ```js
-Math.log2 = Math.log2 || function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
+Math.log2 =
+  Math.log2 ||
+  function (x) {
+    return Math.log(x) * Math.LOG2E;
+  };
 ```
 
 ## Especificações
 
-| Especificação                                                            | Status                       | Comentário          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ES2015')}}     | Initial definition. |
+| Especificação                                          | Status               | Comentário          |
+| ------------------------------------------------------ | -------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}}  | {{Spec2('ES2015')}}  | Initial definition. |
 | {{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilidade com navegadores

@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeypress
 slug: conflicting/Web/API/Element/keypress_event
-translation_of: Web/API/GlobalEventHandlers/onkeypress
 original_slug: Web/API/GlobalEventHandlers/onkeypress
 ---
 

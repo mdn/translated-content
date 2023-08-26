@@ -22,10 +22,6 @@ slug: Glossary/Origin
 | `http://example.com` `http://www.example.com` `http://myapp.example.com` | 다른 호스트 |
 | `http://example.com` `http://example.com:8080`                           | 다른 포트   |
 
-## 명세
-
-{{Specifications}}
-
 ## 더 알아보기
 
 - [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)

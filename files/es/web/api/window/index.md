@@ -36,7 +36,7 @@ Ver también [DOM Interfaces](/es/docs/DOM/DOM_Reference).
 
 ## Propiedades
 
-_Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interface hereda propiedades de {{domxref("EventTarget")}} interface e implementa propiedades de {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prototipos de los elementos built-in) son descritos en una sección separada más abajo.
 
@@ -164,7 +164,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
 
 ## Methods
 
-_Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implementa metodos {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implementa metodos {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Registra un controlador de eventos a un tipo de evento especifico en la ventana.
@@ -279,17 +279,17 @@ _Esta interfaz hereda metodos de la interfaz {{domxref("EventTarget")}} e implem
 - {{domxref("Window.updateCommands()")}}
   - : Updates the state of commands of the current chrome window (UI).
 
-## Controlador de Eventos
+## Eventos
 
 Estas son propiedades del objeto ventana que pueden ser fijadas para establecer controladores de eventos para las diversar cosas que pueden pasar en la ventana que podria ser de interes.
 
-_Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, y {{domxref("WindowEventHandlers")}}._
+_Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTarget")}} e implementa controladores de eventos desde {{domxref("WindowTimers")}} y {{domxref("WindowBase64")}}._
 
 > **Nota:** Empezando en Gecko 9.0, se puede usar el sintaxis `if ("onabort" in window)` para determinar si existe una propiedad dada de controlador de eventos o no. Esto es porque interfazes de controlador de eventos han sido actualizadas al respectivo web IDL interfaz. Ver [DOM event handlers](/es/docs/DOM/DOM_event_handlers) para mas detalles.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.
-- {{domxref("WindowEventHandlers.onbeforeunload")}}
+- {{domxref("Window/beforeunload_event","beforeunload")}}
   - : An event handler property for before-unload events on the window.
 - {{domxref("GlobalEventHandlers.onblur")}}
   - : An event handler property for blur events on the window.
@@ -313,7 +313,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for [`error`](/es/docs/Web/Reference/Events/error) events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : An event handler property for [`focus`](/es/docs/Web/Reference/Events/focus) events on the window.
-- {{domxref("WindowEventHandlers.onhashchange")}}
+- {{domxref("Window/hashchange_event","hashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
   - : An event handler property for [`keydown`](/es/docs/Web/Reference/Events/keydown) events on the window.
@@ -321,7 +321,7 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for [`keypress`](/es/docs/Web/Reference/Events/keypress) events on the window.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
   - : An event handler property for [`keyup`](/es/docs/Web/Reference/Events/keyup) events on the window.
-- {{domxref("WindowEventHandlers.onlanguagechange")}}
+- {{domxref("Window/languagechange_event","languagechange")}}
   - : An event handler property for [`languagechange`](/es/docs/Web/Reference/Events/languagechange) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An event handler property for window loading.
@@ -337,13 +337,13 @@ _Esta interfaz hereda controladores de eventos de la interfaz {{domxref("EventTa
   - : An event handler property for mouseup events on the window.
 - {{domxref("Window.onmozbeforepaint")}}
   - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
-- {{domxref("WindowEventHandlers.onpageshow")}}
+- {{domxref("Window/pageshow_event","pageshow")}}
   - : An event handler property for pageshow events on the window.
-- {{domxref("WindowEventHandlers.onpagehide")}}
+- {{domxref("Window/pagehide_event","pagehide")}}
   - : An event handler property for pagehide events on the window.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
-- {{domxref("WindowEventHandlers.onpopstate")}}
+- {{domxref("Window/popstate_event","popstate")}}
   - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : An event handler property for reset events on the window.

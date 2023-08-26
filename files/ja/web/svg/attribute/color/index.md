@@ -36,7 +36,9 @@ slug: Web/SVG/Attribute/color
 <h2 id="Example">例</h2>
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -45,7 +47,13 @@ html, body, svg {
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <g color="green">
     <rect width="50" height="50" fill="currentcolor" />
-    <circle r="25" cx="70" cy="70" stroke="currentcolor" fill="none" stroke-width="5" />
+    <circle
+      r="25"
+      cx="70"
+      cy="70"
+      stroke="currentcolor"
+      fill="none"
+      stroke-width="5" />
   </g>
 </svg>
 ```

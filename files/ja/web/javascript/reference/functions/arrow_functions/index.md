@@ -89,12 +89,12 @@ function (a, b){
 
 ```js
 // 従来の関数
-function bob (a){
+function bob(a) {
   return a + 100;
 }
 
 // アロー関数
-let bob = a => a + 100;
+let bob = (a) => a + 100;
 ```
 
 ## 構文
@@ -104,31 +104,31 @@ let bob = a => a + 100;
 引数が単一の場合。単純な式ならば return は不要です。
 
 ```js
-param => expression
+(param) => expression;
 ```
 
 引数が複数の場合は括弧が必要です。単純な式ならば return は不要です。
 
 ```js
-(param1, paramN) => expression
+(param1, paramN) => expression;
 ```
 
 複数行の文ならば、本体の中括弧と return が必要です。
 
 ```js
-param => {
+(param) => {
   let a = 1;
   return a + param;
-}
+};
 ```
 
 引数が複数の場合は括弧が必要です。複数行の文ならば、本体の中括弧と return が必要です。
 
 ```js
 (param1, paramN) => {
-   let a = 1;
-   return a + param1 + paramN;
-}
+  let a = 1;
+  return a + param1 + paramN;
+};
 ```
 
 ### 高度な構文
@@ -136,25 +136,25 @@ param => {
 オブジェクトリテラル式を返す場合は、式の周りに括弧が必要です。
 
 ```js
-params => ({foo: "a"}) // オブジェクト {foo: "a"} を返す
+(params) => ({ foo: "a" }); // オブジェクト {foo: "a"} を返す
 ```
 
 [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)に対応しています。
 
 ```js
-(a, b, ...r) => expression
+(a, b, ...r) => expression;
 ```
 
 [デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)に対応しています。
 
 ```js
-(a=400, b=20, c) => expression
+(a = 400, b = 20, c) => expression;
 ```
 
 引数の[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)に対応しています。
 
 ```js
-([a, b] = [10, 20]) => a + b;  // result is 30
+([a, b] = [10, 20]) => a + b; // result is 30
 ({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
 ```
 
@@ -165,15 +165,16 @@ params => ({foo: "a"}) // オブジェクト {foo: "a"} を返す
 前に述べたように、アロー関数式は非メソッド型の関数に最もよく合っています。これをメソッドとして使った時のことを見てみましょう。
 
 ```js
-'use strict';
+"use strict";
 
-var obj = { // 新しいスコープを作成しない
+var obj = {
+  // 新しいスコープを作成しない
   i: 10,
   b: () => console.log(this.i, this),
-  c: function() {
+  c: function () {
     console.log(this.i, this);
-  }
-}
+  },
+};
 
 obj.b(); // undefined, Window {...} (or the global object) と表示
 obj.c(); // 10, Object {...} と表示
@@ -182,23 +183,23 @@ obj.c(); // 10, Object {...} と表示
 アロー関数は自身の `this` を持ちません。{{jsxref("Object.defineProperty()")}} を使った他の例です。
 
 ```js
-'use strict';
+"use strict";
 
 var obj = {
-  a: 10
+  a: 10,
 };
 
-Object.defineProperty(obj, 'b', {
+Object.defineProperty(obj, "b", {
   get: () => {
     console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
-  }
+  },
 });
 ```
 
 ### call、apply、bind
 
-[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) の各メソッドは、アロー関数には**ふさわしくありません**。これらは異なるスコープ内でメソッドを実行できるようにするために設計されているものです。*アロー関数は、そのアロー関数が定義されているスコープに基づいて "this" を確立するからです。*
+[`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) の各メソッドは、アロー関数には**ふさわしくありません**。これらは異なるスコープ内でメソッドを実行できるようにするために設計されているものです。_アロー関数は、そのアロー関数が定義されているスコープに基づいて "this" を確立するからです。_
 
 [`call`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) は、従来の関数ではそれぞれのメソッドにスコープを確立するので、期待通りに動作します。
 
@@ -208,8 +209,8 @@ Object.defineProperty(obj, 'b', {
 // ----------------------
 // 単純化されたオブジェクトで "this" を持つ
 var obj = {
-    num: 100
-}
+  num: 100,
+};
 
 // "num" を window に設定し、使用されていないことを表す。
 window.num = 2020; // yikes!
@@ -217,20 +218,20 @@ window.num = 2020; // yikes!
 // 単純な従来の関数で "this" を運用する
 var add = function (a, b, c) {
   return this.num + a + b + c;
-}
+};
 
 // call
-var result = add.call(obj, 1, 2, 3) // "obj" としてスコープを確立
-console.log(result) // result 106
+var result = add.call(obj, 1, 2, 3); // "obj" としてスコープを確立
+console.log(result); // result 106
 
 // apply
-const arr = [1, 2, 3]
-var result = add.apply(obj, arr) // "obj" としてスコープを確立
-console.log(result) // result 106
+const arr = [1, 2, 3];
+var result = add.apply(obj, arr); // "obj" としてスコープを確立
+console.log(result); // result 106
 
 // bind
-var result = add.bind(obj) // "obj" としてスコープを確立
-console.log(result(1, 2, 3)) // result 106
+var result = add.bind(obj); // "obj" としてスコープを確立
+console.log(result(1, 2, 3)); // result 106
 ```
 
 アロー関数では、 `add` 関数は基本的に `window` (グローバル) スコープで作成されているので、 `this` は window だと仮定されます。
@@ -242,8 +243,8 @@ console.log(result(1, 2, 3)) // result 106
 
 // 単純化されたオブジェクトで "this" を持つ
 var obj = {
-    num: 100
-}
+  num: 100,
+};
 
 // "num" を window に設定し、どのように扱われるかを見る。
 window.num = 2020; // yikes!
@@ -252,15 +253,15 @@ window.num = 2020; // yikes!
 var add = (a, b, c) => this.num + a + b + c;
 
 // call
-console.log(add.call(obj, 1, 2, 3)) // result 2026
+console.log(add.call(obj, 1, 2, 3)); // result 2026
 
 // apply
-const arr = [1, 2, 3]
-console.log(add.apply(obj, arr)) // result 2026
+const arr = [1, 2, 3];
+console.log(add.apply(obj, arr)); // result 2026
 
 // bind
-const bound = add.bind(obj)
-console.log(bound(1, 2, 3)) // result 2026
+const bound = add.bind(obj);
+console.log(bound(1, 2, 3)); // result 2026
 ```
 
 おそらくアロー関数を使う最大の利点は、 DOM レベルのメソッド (`setTimeout`, `setInterval`, `addEventListener`) で、通常は何らかのクロージャ、call、apply、bind を使用して、関数が適切なスコープで実行されることを確認する必要があることです。
@@ -269,14 +270,15 @@ console.log(bound(1, 2, 3)) // result 2026
 
 ```js
 var obj = {
-    count : 10,
-    doSomethingLater : function (){
-        setTimeout(function(){ // 関数を window スコープで実行
-            this.count++;
-            console.log(this.count);
-        }, 300);
-    }
-}
+  count: 10,
+  doSomethingLater: function () {
+    setTimeout(function () {
+      // 関数を window スコープで実行
+      this.count++;
+      console.log(this.count);
+    }, 300);
+  },
+};
 
 obj.doSomethingLater(); // コンソールに "NaN" と表示。 "count" プロパティは window スコープではないため。
 ```
@@ -285,19 +287,19 @@ obj.doSomethingLater(); // コンソールに "NaN" と表示。 "count" プロ�
 
 ```js
 var obj = {
-    count : 10,
-    doSomethingLater : function(){
-      // 従来の関数は "this" を "obj" コンテキストに結びつける
-        setTimeout( () => {
-            // アロー関数はそれ自身のバインディングを持たず、
-            // setTimeout （関数呼び出しとして）はバインディング
-            // 自体を作成しないので、従来の関数の "obj" コンテキスト
-            // が中で使用されることになります。
-            this.count++;
-            console.log(this.count);
-        }, 300);
-    }
-}
+  count: 10,
+  doSomethingLater: function () {
+    // 従来の関数は "this" を "obj" コンテキストに結びつける
+    setTimeout(() => {
+      // アロー関数はそれ自身のバインディングを持たず、
+      // setTimeout （関数呼び出しとして）はバインディング
+      // 自体を作成しないので、従来の関数の "obj" コンテキスト
+      // が中で使用されることになります。
+      this.count++;
+      console.log(this.count);
+    }, 300);
+  },
+};
 
 obj.doSomethingLater();
 ```
@@ -360,10 +362,12 @@ console.log(Foo.prototype); // undefined
 簡潔文体においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック文体においては、自動的に return はされないので、明示的に `return` 文を使用する必要があります。
 
 ```js
-var func = x => x * x;
+var func = (x) => x * x;
 // 簡潔構文の場合、暗黙の "return" があります
 
-var func = (x, y) => { return x + y; };
+var func = (x, y) => {
+  return x + y;
+};
 // ブロック文体では、明示的な "return" が必要です
 ```
 
@@ -400,22 +404,15 @@ var func = (a, b, c)
 しかし、矢印の後に改行を入れたり、以下のように括弧や中括弧を使用して、コードがきれいで滑らかになるように修正することができます。また、引数同士の間にも改行を入れることができます。
 
 ```js
-var func = (a, b, c) =>
-  1;
+var func = (a, b, c) => 1;
 
-var func = (a, b, c) => (
-  1
-);
+var func = (a, b, c) => 1;
 
 var func = (a, b, c) => {
-  return 1
+  return 1;
 };
 
-var func = (
-  a,
-  b,
-  c
-) => 1;
+var func = (a, b, c) => 1;
 
 // SyntaxError は発生しない
 ```
@@ -443,15 +440,15 @@ callback = callback || (() => {});    // ok
 // 空のアロー関数は undefined を返します
 let empty = () => {};
 
-(() => 'foobar')();
+(() => "foobar")();
 // "foobar" を返します
 // (これは、即時起動型の関数式です。)
 
-var simple = a => a > 15 ? 15 : a;
+var simple = (a) => (a > 15 ? 15 : a);
 simple(16); // 15
 simple(10); // 10
 
-let max = (a, b) => a > b ? a : b;
+let max = (a, b) => (a > b ? a : b);
 
 // 簡単な配列のフィルターリング、マッピング等
 
@@ -460,25 +457,27 @@ var arr = [5, 6, 13, 0, 1, 18, 23];
 var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v => v % 2 == 0);
+var even = arr.filter((v) => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v => v * 2);
+var double = arr.map((v) => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // さらに簡潔な promise チェーン
-promise.then(a => {
-  // ...
-}).then(b => {
-  // ...
-});
+promise
+  .then((a) => {
+    // ...
+  })
+  .then((b) => {
+    // ...
+  });
 
 // 見た目に解析が簡単な引数なしのアロー関数
-setTimeout( () => {
-  console.log('I happen sooner');
-  setTimeout( () => {
+setTimeout(() => {
+  console.log("I happen sooner");
+  setTimeout(() => {
     // deeper code
-    console.log('I happen later');
+    console.log("I happen later");
   }, 1);
 }, 1);
 ```
