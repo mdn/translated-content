@@ -1,6 +1,8 @@
 ---
 title: Silly story generator
 slug: Learn/JavaScript/First_steps/Silly_story_generator
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
