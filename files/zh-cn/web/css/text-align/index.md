@@ -38,9 +38,11 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-{{cssinfo}}
+`text-align` 属性可以按照以下方式之一来指定：
 
-text-align 属性指定为从以下值列表中选择的单个关键字。
+- 使用 `start`、`end`、`left`、`right`、`center`、`justify`、`justify-all` 或 `match-parent` 关键字值。
+- 仅使用单个 `<string>` 值，此时另外一个值默认为 `right`。
+- 同时使用关键字值和 [`<string>`](#string) 值。
 
 ### 值
 
@@ -70,9 +72,13 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
 - [MDN 了解 WCAG，准则 1.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [理解成功标准 1.4.8 | 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-### 形式语法
+## 形式定义
 
-{{csssyntax("text-align")}}
+{{CSSInfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
@@ -161,4 +167,4 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
 
 ## 参见
 
-- {{Cssxref("margin","margin:auto")}}, {{Cssxref("margin-left","margin-left:auto")}}, {{Cssxref("vertical-align")}}
+- {{Cssxref("margin","margin:auto")}}、{{Cssxref("margin-left","margin-left:auto")}}、{{Cssxref("vertical-align")}}
