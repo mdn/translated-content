@@ -25,7 +25,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 
 作为一名贡献者，你可以通过参与以下活动来参与该项目：
 
-- 在[交流渠道](/zh-CN/docs/MDN/Community/Communication_channels)中参与社区讨论。
+- 在[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)中参与社区讨论。
 - 帮助其他贡献者处理拉取请求和问题，或指导新贡献者。
 - 提交缺陷报告。查看 MDN [`content`](https://github.com/mdn/content) 仓库中[你可以提出议题的类型](https://github.com/mdn/content/issues/new/choose)。如果你发现了平台的缺陷，你可以在 MDN 的 `yari` 仓库中[提出议题](https://github.com/mdn/yari/issues/new/choose)。
 - 对问题发表评论，推动对话取得丰硕成果。
@@ -138,7 +138,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 
 ### 杰出贡献者
 
-杰出贡献者是那些对 MDN Web 文档做出了卓越贡献的人。他们的贡献形式包括：提出拉取请求以改进项目；在各种[交流渠道](/zh-CN/docs/MDN/Community/Communication_chanels)或学习论坛上帮助社区成员；或就 GitHub 问题和拉取请求提供反馈。
+杰出贡献者是那些对 MDN Web 文档做出了卓越贡献的人。他们的贡献形式包括：提出拉取请求以改进项目；在各种[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)或学习论坛上帮助社区成员；或就 GitHub 问题和拉取请求提供反馈。
 
 我们每月在 [MDN 网站](/zh-CN/)上介绍一位杰出贡献者。请参见[流程](#提名杰出贡献者)，提名某人为杰出贡献者。
 
@@ -185,7 +185,7 @@ MDN Web 文档项目的成功和发展在很大程度上要归功于我们的贡
 - 确定并协助实施自动化，以提高项目的可持续性。
 - 会见并确保与贡献者和合作伙伴保持健康的关系。
 - 在适当的情况下，协助问题分流和拉动请求审查。
-- 监控所有[交流渠道](/zh-CN/docs/MDN/Community/Communication_channels)。
+- 监控所有[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)。
 - 表彰工作出色和/或为 MDN 项目做出贡献的贡献者。
 
 ## 过程
