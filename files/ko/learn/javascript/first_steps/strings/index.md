@@ -67,7 +67,7 @@ console.log(badString);
 
 JavaScript에서는 작은따옴표(`'`), 큰따옴표(`"`) 또는 백틱(`` ` ``)을 선택하여 문자열을 래핑할 수 있습니다. 다음 모두 사용할 수 있습니다.
 
-```js
+```js-nolint
 const single = 'Single quotes';
 const double = "Double quotes";
 const backtick = `Backtick`;
@@ -79,7 +79,7 @@ console.log(backtick);
 
 문자열의 시작과 끝에 같은 문자를 사용해야 하며 그렇지 않으면 오류가 발생합니다.
 
-```js example-bad
+```js-nolint example-bad
 const badQuotes = 'This is not allowed!";
 ```
 
@@ -203,7 +203,7 @@ const goodQuotes1 = 'She said "I think so!"';
 const goodQuotes2 = `She said "I'm not going in there!"`;
 ```
 
-또 다른 옵션은 문제가 있는 따옴표를 _이스케이프_하는 것입니다. 문자를 이스케이프 처리한다는 것은 문자가 코드의 일부가 아닌 텍스트로 인식되도록 문자에 어떤 조치를 취한다는 뜻입니다. JavaScript에서는 문자 바로 앞에 백슬래시를 넣어 이 작업을 수행합니다. 이렇게 해보세요.
+또 다른 옵션은 문제가 있는 따옴표를 *이스케이프*하는 것입니다. 문자를 이스케이프 처리한다는 것은 문자가 코드의 일부가 아닌 텍스트로 인식되도록 문자에 어떤 조치를 취한다는 뜻입니다. JavaScript에서는 문자 바로 앞에 백슬래시를 넣어 이 작업을 수행합니다. 이렇게 해보세요.
 
 ```js-nolint
 const bigmouth = 'I\'ve got no right to take my place…';
