@@ -65,7 +65,7 @@ const textString = "I love MDN";
 ctx.fillText(textString, x, y);
 ```
 
-[![retina 디스플레이에 표시된 이미지에 대한 다른 devicePixelRatio 값의 효과를 나란히 비교합니다.](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
+[![retina 디스플레이에 표시된 이미지에 대한 다른 devicePixelRatio 값의 효과를 나란히 비교합니다.](devicepixelratio_diff.png)](devicepixelratio_diff.png)
 
 ### 화면 해상도 혹은 줌 레벨 변경 모니터링
 
