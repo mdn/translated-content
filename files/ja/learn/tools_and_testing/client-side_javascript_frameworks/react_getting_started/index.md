@@ -116,7 +116,7 @@ create-react-app を使用するには、 [Node.js](https://nodejs.org/en/) を�
 
 Windows を使用している場合、このチュートリアルで言及されている端末コマンドを使用するには、Unix / macOS 端末と同等のソフトウェアをインストールする必要があります。 **Gitbash** （[git for Windows のツールセット](https://gitforwindows.org/)の一部として提供）または **[Linux 用の Windows サブシステム](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) の両方が適しています。これら、および一般的な端末コマンドの詳細については、[コマンドライン短期集中講座](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)を参照してください。
 
-また、React と ReactDOM は、かなり近代的な一連のブラウザー（IE9 以降）でのみ機能するアプリを生成することにも注意してください。これらのチュートリアルを実行するときは、Firefox、Safari、Chrome などの最新のブラウザーを使用することをお勧めします。
+また、React と ReactDOM は、かなり近代的な一連のブラウザー（IE9 以降）でのみ機能するアプリを生成することにも注意してください。これらのチュートリアルを実行するときは、Firefox、Microsoft Edge、Safari、Chrome などの最新のブラウザーを使用することをお勧めします。
 
 詳細については、以下も参照してください。
 
@@ -453,7 +453,6 @@ function App(props) {
 
 保存すると、アプリは「Hello、Clarice！」と挨拶するはずです。`index.js` に戻り、`subject` の値を編集して保存すると、テキストが変更されます。
 なお、この変更を通して `Hello` の行を残したければ、JSX 変数を `{props.subject}` に更新することもできます。
-
 
 ## まとめ
 
