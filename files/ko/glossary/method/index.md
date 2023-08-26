@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**메소드**(**method**)는 {{glossary("object","객체")}}의 {{glossary("property", "속성")}}인 {{glossary("function", "함수")}}입니다. 객체 인스턴스에 의해 수행되는 작업인 내장된 인스턴스 메서드 또는 객체 생성자에서 직접 호출되는 작업인 "{{Glossary("static method", "정적 메서드")}}" 2가지 종류의 메서드가 있습니다.
+**메서드**(**method**)는 {{glossary("object","객체")}}의 {{glossary("property", "속성")}}인 {{glossary("function", "함수")}}입니다. 객체 인스턴스에 의해 수행되는 작업인 내장된 인스턴스 메서드 또는 객체 생성자에서 직접 호출되는 작업인 "{{Glossary("static method", "정적 메서드")}}" 2가지 종류의 메서드가 있습니다.
 
 > **참고:** 자바스크립트 함수 자체는 객체이므로, 해당 맥락에서 메서드는 실제로 함수에 대한 객체 {{glossary("object reference", "참조")}}입니다.
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 같이 보기
 
-- Wikipedia의 [(computer programming) 메서드](<https://en.wikipedia.org/wiki/Method_(computer_programming)>)
-- [JavaScript에서 메서드의 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparison of the traditional syntax and the new shorthand)
+- 위키백과의 [(computer programming) 메서드](<https://en.wikipedia.org/wiki/Method_(computer_programming)>)
+- [JavaScript에서 메서드의 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions) (전통적인 구문과 새로운 약어의 비교)
 - [JavaScript 내장 메서드 목록](/ko/docs/Web/JavaScript/Reference)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
 
