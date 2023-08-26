@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('vrdisplaydisconnect', (event) => { });
+addEventListener("vrdisplaydisconnect", (event) => {});
 
-onvrdisplaydisconnect = (event) => { };
+onvrdisplaydisconnect = (event) => {};
 ```
 
 ## イベント型
@@ -43,8 +43,8 @@ _`VRDisplayEvent` は親オブジェクトである {{domxref("Event")}} から�
 > **メモ:** このイベントは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
 ```js
-window.addEventListener('vrdisplaydisconnect', () => {
-  info.textContent = 'Display disconnected.';
+window.addEventListener("vrdisplaydisconnect", () => {
+  info.textContent = "Display disconnected.";
   reportDisplays();
 });
 ```
@@ -53,7 +53,7 @@ window.addEventListener('vrdisplaydisconnect', () => {
 
 ```js
 window.onvrdisplaydisconnect = () => {
-  info.textContent = 'Display disconnected.';
+  info.textContent = "Display disconnected.";
   reportDisplays();
 };
 ```

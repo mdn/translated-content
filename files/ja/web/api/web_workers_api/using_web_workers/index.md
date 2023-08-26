@@ -46,7 +46,7 @@ if (window.Worker) {
 新しいワーカーは簡単に生成できます。必要なことは、ワーカースレッドで実行するスクリプトの URI を指定した {{domxref("Worker.Worker", "Worker()")}} コンストラクターを呼び出すことだけです ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js))。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 ```
 
 ### 専用ワーカーとのメッセージのやりとり
@@ -56,13 +56,13 @@ const myWorker = new Worker('worker.js');
 ```js
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 2 つの {{htmlelement("input")}} 要素があり、それぞれ変数 `first` と `second` で表されています。どちらかの値が変化すると、 `myWorker.postMessage([first.value,second.value])` を使用して、双方の値を配列としてワーカーに送信します。メッセージでは、おおむねどのようなものでも送信できます。
@@ -71,11 +71,11 @@ second.onchange = () => {
 
 ```js
 onmessage = (e) => {
-  console.log('Message received from main script');
+  console.log("Message received from main script");
   const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log('Posting message back to main script');
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 `onmessage` ハンドラーにより、メッセージを受け取ったときになんらかののコードを実行できます。メッセージ自体は、`message` イベントの `data` 属性で手に入ります。ここでは 2 つの数値で乗算を行った後、再び `postMessage()` を使用して計算結果をメインスレッドに返しています。
@@ -85,8 +85,8 @@ onmessage = (e) => {
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 ここではメッセージイベントからデータを取り出して、結果の段落の `textContent` へ格納しています。よって、ユーザーは計算結果を見ることができます。
@@ -129,10 +129,12 @@ myWorker.terminate();
 Worker スレッドはグローバル関数や、スクリプトをインポートするための `importScripts()` にアクセスできます。これはインポートするリソースの URI を 0 個以上、引数として受け入れます。以下の例はすべて有効です。
 
 ```js
-importScripts();                         /* 何もインポートしない */
-importScripts('foo.js');                 /* "foo.js" をインポート */
-importScripts('foo.js', 'bar.js');       /* 2 つのスクリプトをインポート */
-importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプトをインポートすることができる */
+importScripts(); /* 何もインポートしない */
+importScripts("foo.js"); /* "foo.js" をインポート */
+importScripts("foo.js", "bar.js"); /* 2 つのスクリプトをインポート */
+importScripts(
+  "//example.com/hello.js",
+); /* 他のオリジンのスクリプトをインポートすることができる */
 ```
 
 ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は `NETWORK_ERROR` を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード（{{domxref("setTimeout()")}} で繰り延べされているコードを含みます）は動作します。`importScripts()` メソッドより**後方**にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。
@@ -154,7 +156,7 @@ importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプト
 新しい共有ワーカーの生成方法は 専用ワーカー の場合とほとんど同じですが、コンストラクター名が異なります（[index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) および [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html) をご覧ください）。それぞれのページで、以下のようなコードを使用してワーカーを立ち上げます。
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 ```
 
 共有ワーカーの大きな違いのひとつが、 `port` オブジェクトを通して通信しなければならないことです。スクリプトがワーカーと通信するために使用できる、明示的なポートが開きます (これは、 専用ワーカーでも暗黙的に開いています)。
@@ -170,8 +172,8 @@ const myWorker = new SharedWorker('worker.js');
 ```js
 squareNumber.onchange = () => {
   myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 ワーカーに移ります。こちらは若干複雑さが増しています ([worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/worker.js)):
@@ -183,8 +185,8 @@ onconnect = (e) => {
   port.onmessage = (e) => {
     const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-}
+  };
+};
 ```
 
 始めに、ポートへの接続が発生したとき（すなわち、親スレッドで `onmessage` イベントをセットアップしたときや親スレッドで `start()` メソッドを明示的に呼び出したとき）にコードを実行するため `onconnect` ハンドラーを使用します。
@@ -198,8 +200,8 @@ onconnect = (e) => {
 ```js
 myWorker.port.onmessage = (e) => {
   result2.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 ポートを通してワーカーからメッセージが戻ったときは、結果のデータ型を確認してから適切な段落に計算結果を挿入します。
@@ -248,13 +250,13 @@ console.log(typeof example2); // boolean
 console.log(typeof emulateMessage(example2)); // boolean
 
 // テスト #3
-const example3 = new String('Hello World');
+const example3 = new String("Hello World");
 console.log(typeof example3); // object
 console.log(typeof emulateMessage(example3)); // string
 
 // テスト #4
 const example4 = {
-  name: 'John Smith',
+  name: "John Smith",
   age: 43,
 };
 console.log(typeof example4); // object
@@ -265,7 +267,7 @@ function Animal(type, age) {
   this.type = type;
   this.age = age;
 }
-const example5 = new Animal('Cat', 3);
+const example5 = new Animal("Cat", 3);
 alert(example5.constructor); // Animal
 alert(emulateMessage(example5).constructor); // Object
 ```
@@ -275,13 +277,13 @@ alert(emulateMessage(example5).constructor); // Object
 **example.html** （メインページ）
 
 ```js
-const myWorker = new Worker('my_task.js');
+const myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = (event) => {
   console.log(`Worker said : ${event.data}`);
 };
 
-myWorker.postMessage('ali');
+myWorker.postMessage("ali");
 ```
 
 **my_task.js** （ワーカー）
@@ -312,15 +314,17 @@ function QueryableWorker(url, defaultListener, onError) {
 
   this.defaultListener = defaultListener ?? (() => {});
 
-  if (onError) { worker.onerror = onError; }
+  if (onError) {
+    worker.onerror = onError;
+  }
 
   this.postMessage = (message) => {
     worker.postMessage(message);
-  }
+  };
 
   this.terminate = () => {
     worker.terminate();
-  }
+  };
 }
 ```
 
@@ -329,11 +333,11 @@ function QueryableWorker(url, defaultListener, onError) {
 ```js
 this.addListeners = (name, listener) => {
   listeners[name] = listener;
-}
+};
 
 this.removeListeners = (name) => {
   delete listeners[name];
-}
+};
 ```
 
 ここでは、説明のためにワーカーに 2 つの簡単な操作をさせてみましょう。 2 つの数値の差を取得することと、 3 秒後にアラートを出すことです。これを実現するために、まず最初に `sendQuery` メソッドを実装します。これは、ワーカーが実際に対応するメソッドを持っているかどうかを問い合わせるものです。
@@ -343,13 +347,15 @@ this.removeListeners = (name) => {
 // Then we can pass in the arguments that the method needs.
 this.sendQuery = (queryMethod, ...queryMethodArguments) => {
   if (!queryMethod) {
-    throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
-    }
-    worker.postMessage({
-        'queryMethod': arguments[0],
-        'queryArguments': Array.prototype.slice.call(arguments, 1)
-    });
-}
+    throw new TypeError(
+      "QueryableWorker.sendQuery takes at least one argument",
+    );
+  }
+  worker.postMessage({
+    queryMethod: arguments[0],
+    queryArguments: Array.prototype.slice.call(arguments, 1),
+  });
+};
 ```
 
 `QueryableWorker` を `onmessage` メソッドで終了させます。問い合わせたメソッドに対応するワーカーがあれば、対応するリスナーの名前と必要な引数を返してくれるはずなので、あとは `listeners` の中を探すだけです。
@@ -358,14 +364,17 @@ this.sendQuery = (queryMethod, ...queryMethodArguments) => {
 worker.onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethodListener') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethodListener") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+    listeners[event.data.queryMethodListener].apply(
+      instance,
+      event.data.queryMethodArguments,
+    );
   } else {
     this.defaultListener.call(instance, event.data);
   }
-}
+};
 ```
 
 次にワーカーです。まず、 2 つの簡単な操作を行うためのメソッドが必要です。
@@ -373,18 +382,18 @@ worker.onmessage = (event) => {
 ```js
 const queryableFunctions = {
   getDifference(a, b) {
-    reply('printStuff', a - b);
+    reply("printStuff", a - b);
   },
   waitSomeTime() {
     setTimeout(() => {
-      reply('doAlert', 3, 'seconds');
+      reply("doAlert", 3, "seconds");
     }, 3000);
-  }
-}
+  },
+};
 
 function reply(queryMethodListener, ...queryMethodArguments) {
   if (!queryMethodListener) {
-    throw new TypeError('reply - takes at least one argument');
+    throw new TypeError("reply - takes at least one argument");
   }
   postMessage({
     queryMethodListener,
@@ -404,15 +413,17 @@ function defaultReply(message) {
 onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethod') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    queryableFunctions[event.data.queryMethod]
-      .apply(self, event.data.queryMethodArguments);
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments,
+    );
   } else {
     defaultReply(event.data);
   }
-}
+};
 ```
 
 ここでは、完全な実装を紹介します。
@@ -423,8 +434,8 @@ onmessage = (event) => {
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Queryable worker</title>
     <script type="text/javascript">
       // QueryableWorker instances methods:
@@ -442,69 +453,90 @@ onmessage = (event) => {
 
         this.defaultListener = defaultListener ?? (() => {});
 
-        if (onError) { worker.onerror = onError; }
+        if (onError) {
+          worker.onerror = onError;
+        }
 
         this.postMessage = (message) => {
           worker.postMessage(message);
-        }
+        };
 
         this.terminate = () => {
           worker.terminate();
-        }
+        };
 
         this.addListener = (name, listener) => {
           listeners[name] = listener;
-        }
+        };
 
         this.removeListener = (name) => {
           delete listeners[name];
-        }
+        };
 
         // This functions takes at least one argument, the method name we want to query.
         // Then we can pass in the arguments that the method needs.
         this.sendQuery = (queryMethod, ...queryMethodArguments) => {
           if (!queryMethod) {
-            throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
+            throw new TypeError(
+              "QueryableWorker.sendQuery takes at least one argument",
+            );
           }
           worker.postMessage({
             queryMethod,
             queryMethodArguments,
           });
-        }
+        };
 
         worker.onmessage = (event) => {
           if (
             event.data instanceof Object &&
-            Object.hasOwn(event.data, 'queryMethodListener') &&
-            Object.hasOwn(event.data, 'queryMethodArguments')
+            Object.hasOwn(event.data, "queryMethodListener") &&
+            Object.hasOwn(event.data, "queryMethodArguments")
           ) {
-            listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
+            listeners[event.data.queryMethodListener].apply(
+              instance,
+              event.data.queryMethodArguments,
+            );
           } else {
             this.defaultListener.call(instance, event.data);
           }
-        }
+        };
       }
 
       // 独自の「照会可能な」 worker
-      const myTask = new QueryableWorker('my_task.js');
+      const myTask = new QueryableWorker("my_task.js");
 
       // 独自の「リスナー」
-      myTask.addListener('printStuff', (result) => {
-        document.getElementById('firstLink')
-          .parentNode
-          .appendChild(document.createTextNode(`The difference is ${result}!`));
+      myTask.addListener("printStuff", (result) => {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(`The difference is ${result}!`),
+          );
       });
 
-      myTask.addListener('doAlert', (time, unit) => {
+      myTask.addListener("doAlert", (time, unit) => {
         alert(`Worker waited for ${time} ${unit} :-)`);
       });
     </script>
   </head>
   <body>
     <ul>
-      <li><a id="firstLink" href="javascript:myTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-      <li><a href="javascript:myTask.sendQuery('waitSomeTime');">Wait 3 seconds</a></li>
-      <li><a href="javascript:myTask.terminate();">terminate() the Worker</a></li>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:myTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.sendQuery('waitSomeTime');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.terminate();">terminate() the Worker</a>
+      </li>
     </ul>
   </body>
 </html>
@@ -516,13 +548,15 @@ onmessage = (event) => {
 const queryableFunctions = {
   // 例 #1: 2 つの値の差を得る
   getDifference(minuend, subtrahend) {
-    reply('printStuff', minuend - subtrahend);
+    reply("printStuff", minuend - subtrahend);
   },
 
   // 例 #2: 3 秒待つ
   waitSomeTime() {
-    setTimeout(() => { reply('doAlert', 3, 'seconds'); }, 3000);
-  }
+    setTimeout(() => {
+      reply("doAlert", 3, "seconds");
+    }, 3000);
+  },
 };
 
 // システム関数
@@ -534,7 +568,7 @@ function defaultReply(message) {
 
 function reply(queryMethodListener, ...queryMethodArguments) {
   if (!queryMethodListener) {
-    throw new TypeError('reply - not enough arguments');
+    throw new TypeError("reply - not enough arguments");
   }
   postMessage({
     queryMethodListener,
@@ -545,10 +579,13 @@ function reply(queryMethodListener, ...queryMethodArguments) {
 onmessage = (event) => {
   if (
     event.data instanceof Object &&
-    Object.hasOwn(event.data, 'queryMethod') &&
-    Object.hasOwn(event.data, 'queryMethodArguments')
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
   ) {
-    queryableFunctions[event.data.queryMethod].apply(self, event.data.queryMethodArguments);
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments,
+    );
   } else {
     defaultReply(event.data);
   }
@@ -574,11 +611,11 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ワーカーのコードをウェブページに埋め込むための、通常のスクリプトを {{HTMLElement("script")}} 要素で埋め込むような「公式な」方法はありません。しかし、 {{HTMLElement("script")}} 要素が `src` 属性を持たず、また `type` 属性が実行可能な MIME タイプを示していない場合は、 JavaScript が使用できるデータブロック要素であると判断されます。「データブロック」はほとんどのテキストデータを持つことができる、 HTML の一般的な機能です。よって、以下の方法でワーカーを埋め込むことができます。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>MDN Example - Embedded worker</title>
     <script type="text/js-worker">
       // MIME タイプが text/js-worker であるため、このスクリプトは JS エンジンに解釈されません。
@@ -591,8 +628,8 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
         // フラグメントを使用します。ブラウザーのレンダリングや再フローを 1 回だけにします。
         const frag = document.createDocumentFragment();
         frag.appendChild(document.createTextNode(sMsg));
-        frag.appendChild(document.createElement('br'));
-        document.querySelector('#logDisplay').appendChild(frag);
+        frag.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(frag);
       }
     </script>
     <script type="text/js-worker">
@@ -608,7 +645,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
       // 以前は blob を構築していましたが、現在は Blob を使用します。
       const blob = new Blob(Array.prototype.map.call(
         document.querySelectorAll("script[type='text\/js-worker']"),
-        (script) => script.textContent, 
+        (script) => script.textContent,
         { type: 'text/javascript' }
       );
 
@@ -635,8 +672,8 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ```js
 function fn2workerURL(fn) {
-  const blob = new Blob([`(${fn.toString()})()`], { type: 'text/javascript' })
-  return URL.createObjectURL(blob)
+  const blob = new Blob([`(${fn.toString()})()`], { type: "text/javascript" });
+  return URL.createObjectURL(blob);
 }
 ```
 
@@ -656,12 +693,12 @@ function fn2workerURL(fn) {
 self.onmessage = (e) => {
   const userNum = Number(e.data);
   fibonacci(userNum);
-}
+};
 
-function fibonacci(num){
+function fibonacci(num) {
   let a = 1;
   let b = 0;
-  while (num >= 0){
+  while (num >= 0) {
     [a, b] = [a + b, a];
     num--;
   }
@@ -675,17 +712,18 @@ function fibonacci(num){
 #### HTML コード
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8" />
     <title>Fibonacci number generator</title>
     <style>
       body {
         width: 500px;
       }
 
-      div, p {
+      div,
+      p {
         margin-bottom: 20px;
       }
     </style>
@@ -693,21 +731,25 @@ function fibonacci(num){
   <body>
     <form>
       <div>
-        <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
-        <input type="number" id="number">
+        <label for="number"
+          >Enter a number that is an index position in the fibonacci sequence to
+          see what number is in that position (e.g. enter 5 and you'll get a
+          result of 8 — fibonacci index position 5 is 8).</label
+        >
+        <input type="number" id="number" />
       </div>
       <div>
-        <input type="submit">
+        <input type="submit" />
       </div>
     </form>
 
     <p id="result"></p>
 
     <script>
-      const form = document.querySelector('form');
+      const form = document.querySelector("form");
       const input = document.querySelector('input[type="number"]');
-      const result = document.querySelector('p#result');
-      const worker = new Worker('fibonacci.js');
+      const result = document.querySelector("p#result");
+      const worker = new Worker("fibonacci.js");
 
       worker.onmessage = (event) => {
         result.textContent = event.data;
@@ -722,8 +764,8 @@ function fibonacci(num){
       form.onsubmit = (e) => {
         e.preventDefault();
         worker.postMessage(input.value);
-        input.value = '';
-      }
+        input.value = "";
+      };
     </script>
   </body>
 </html>

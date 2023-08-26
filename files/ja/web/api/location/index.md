@@ -116,7 +116,7 @@ document.body.addEventListener("click", (event) => {
 - {{domxref("Location.protocol")}}
   - : 末尾の `':'` を含む、URL のプロトコルスキームを収めた文字列です。
 - {{domxref("Location.host")}}
-  - : URL のホスト (すなわち*ホスト名*、`':'`、*ポート番号*) を収めた文字列です。
+  - : URL のホスト (すなわち*ホスト名*、`':'`、_ポート番号_) を収めた文字列です。
 - {{domxref("Location.hostname")}}
   - : URL のドメインを収めた文字列です。
 - {{domxref("Location.port")}}

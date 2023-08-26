@@ -143,7 +143,11 @@ l10n:
     <title>Document title</title>
   </head>
   <body>
-    <p>The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.</p>
+    <p>
+      The <code>&lt;body&gt;</code> HTML element represents the content of an
+      HTML document. There can be only one <code>&lt;body&gt;</code> element in
+      a document.
+    </p>
   </body>
 </html>
 ```

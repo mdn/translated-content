@@ -2709,13 +2709,13 @@
     "contributors": ["chrisdavidmills", "Nachec"]
   },
   "MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-01-16T19:10:19.469Z",
+    "modified": "2020-09-30T09:06:15.983Z",
     "contributors": [
+      "chrisdavidmills",
       "wbamberg",
-      "javierdp",
-      "gpadilla",
-      "RoxPulido",
-      "LeoHirsch"
+      "emanuelvega",
+      "LUISTGMDN",
+      "elihro"
     ]
   },
   "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
@@ -13359,6 +13359,10 @@
       "javichito"
     ]
   },
+  "Web/Progressive_web_apps/Guides": {
+    "modified": "2020-09-20T03:25:40.381Z",
+    "contributors": ["Deng_C1"]
+  },
   "Web/Progressive_web_apps/Guides/Installing": {
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": ["Nachec"]
@@ -13990,16 +13994,6 @@
     "modified": "2020-09-30T15:28:55.816Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Jeremie", "LeoHirsch"]
   },
-  "conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692": {
-    "modified": "2020-09-30T09:06:15.983Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "emanuelvega",
-      "LUISTGMDN",
-      "elihro"
-    ]
-  },
   "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
     "modified": "2020-09-30T09:06:16.658Z",
     "contributors": ["chrisdavidmills", "Nachec", "wbamberg"]
@@ -14140,14 +14134,6 @@
       "Superruzafa",
       "Nukeador"
     ]
-  },
-  "conflicting/Web/API/Window/beforeunload_event": {
-    "modified": "2019-03-23T23:22:06.132Z",
-    "contributors": ["fscholz", "AshfaqHossain", "jota1410"]
-  },
-  "conflicting/Web/API/Window/hashchange_event": {
-    "modified": "2019-03-23T22:49:36.790Z",
-    "contributors": ["AlePerez92", "daesnorey"]
   },
   "conflicting/Web/API/Window/load_event": {
     "modified": "2019-03-23T23:33:14.527Z",

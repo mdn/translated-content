@@ -42,15 +42,15 @@ const myHeaders = new Headers(); // Currently empty
 {{domxref("Headers.append")}} を使用して、これにヘッダーを追加できます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 その後、再度削除することができます。
 
 ```js
-myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+myHeaders.delete("Content-Type");
+myHeaders.get("Content-Type"); // Returns null, as it has been deleted
 ```
 
 ## 仕様書

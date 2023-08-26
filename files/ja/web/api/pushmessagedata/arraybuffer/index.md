@@ -24,7 +24,7 @@ var myArrayBuffer = PushEvent.data.arrayBuffer();
 ## 例
 
 ```js
-self.addEventListener('push', function(event) {
+self.addEventListener("push", function (event) {
   var buffer = event.data.arrayBuffer();
 
   // array buffer を使用して何かを実行する。

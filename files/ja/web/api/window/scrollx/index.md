@@ -27,7 +27,7 @@ var x = window.scrollX;
 
 ```js
 if (window.scrollX > 400) {
-  window.scroll(0,0);
+  window.scroll(0, 0);
 }
 ```
 
@@ -42,13 +42,17 @@ window.pageXOffset == window.scrollX; // 常に true
 クロスブラウザー互換性のため、`window.scrollX` ではなく `window.pageXOffset` を使用します。_さらに_、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。
 
 ```js
-var x = (window.pageXOffset !== undefined)
-  ? window.pageXOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+var x =
+  window.pageXOffset !== undefined
+    ? window.pageXOffset
+    : (document.documentElement || document.body.parentNode || document.body)
+        .scrollLeft;
 
-var y = (window.pageYOffset !== undefined)
-  ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+var y =
+  window.pageYOffset !== undefined
+    ? window.pageYOffset
+    : (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
 ```
 
 ## 仕様
