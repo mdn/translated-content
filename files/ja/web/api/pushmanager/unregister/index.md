@@ -38,14 +38,14 @@ var request = navigator.push.unregister(pushEndpoint);
 ```js
 var req = navigator.push.unregister(pushEndpoint);
 
-req.onsuccess = function(e) {
+req.onsuccess = function (e) {
   var endpoint = req.result;
-  debug("Unregistered endpoint: " + endpoint );
-}
+  debug("Unregistered endpoint: " + endpoint);
+};
 
-req.onerror = function(e) {
+req.onerror = function (e) {
   debug("Error unregistering the endpoint: " + JSON.stringify(e));
-}
+};
 ```
 
 ## 仕様書

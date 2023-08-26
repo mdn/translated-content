@@ -10,7 +10,7 @@ slug: Web/API/Range/intersectsNode
 ## 構文
 
 ```js
-intersectsNode( referenceNode )
+intersectsNode(referenceNode);
 ```
 
 ### 引数
@@ -28,7 +28,9 @@ intersectsNode( referenceNode )
 const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-const intersectingNode = range.intersectsNode(document.getElementsByTagName("p").item(0));
+const intersectingNode = range.intersectsNode(
+  document.getElementsByTagName("p").item(0),
+);
 ```
 
 ## 仕様書

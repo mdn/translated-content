@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('exit', (event) => { })
+addEventListener("exit", (event) => {});
 
-onexit = (event) => { }
+onexit = (event) => {};
 ```
 
 ## イベント型
@@ -28,8 +28,8 @@ onexit = (event) => { }
 以下の例では、 `cue1` がアクティブなキューとして表示されなくなったときに、コンソールに表示されます。
 
 ```js
-cue1.addEventListener('enter', (event) => {
-  console.log('Cue 1 has left the building.');
+cue1.addEventListener("enter", (event) => {
+  console.log("Cue 1 has left the building.");
 });
 ```
 

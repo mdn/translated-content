@@ -16,9 +16,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('blocked', (event) => { });
+addEventListener("blocked", (event) => {});
 
-onblocked = (event) => { };
+onblocked = (event) => {};
 ```
 
 ## イベント型
@@ -42,35 +42,36 @@ _親の {{domxref("Event")}} インターフェイスからもプロパティを
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラー発生');
+    console.log("データベースの作成中にエラー発生");
   };
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   // 同じデータベースをより高いバージョンで開いてみましょう
-  const req2 = indexedDB.open('toDoList', 5);
+  const req2 = indexedDB.open("toDoList", 5);
 
   // この場合、onblocked ハンドラーが実行されます
-  req2.addEventListener('blocked', () => {
-    console.log('要求がブロックされました');
+  req2.addEventListener("blocked", () => {
+    console.log("要求がブロックされました");
   });
-
 };
 ```
 
@@ -78,35 +79,36 @@ DBOpenRequest.onsuccess = (event) => {
 
 ```js
 // データベースを開きます
-const DBOpenRequest = window.indexedDB.open('toDoList', 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = () => {
-    console.log('データベースの作成中にエラー発生');
+    console.log("データベースの作成中にエラー発生");
   };
 
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に保存するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 DBOpenRequest.onsuccess = (event) => {
   // 同じデータベースをより高いバージョンで開いてみましょう
-  const req2 = indexedDB.open('toDoList', 5);
+  const req2 = indexedDB.open("toDoList", 5);
 
   // この場合､onblocked ハンドラーが実行されます
   req2.onblocked = () => {
-    console.log('要求がブロックされました');
+    console.log("要求がブロックされました");
   };
-
 };
 ```
 
